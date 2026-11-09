@@ -1,0 +1,1536 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Kieli: Sukulaisia kaukaa pohjoisesta] Tuhansia vuosia — Unkari ei kuulu indoeurooppalaisiin kieliin kuten sen naapurit, vaan uralilaisiin kieliin. Samaan joukkoon kuuluvat suomi, viro ja saame sekä joukko pienempiä kieliä Uralin molemmin puolin. Sukulaisuus on kaukainen: unkarilainen ja suomalainen eivät ymmärrä toisiaan lainkaan. Yhteiset sanat näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun kansat erosivat toisistaan tuhansia vuosia sitten.
+AIEMPI KYSYMYS: Mitkä sanat ovat yhteisiä suomessa ja unkarissa?
+AIEMPI VASTAUS (Livia):
+No niin. Tämä on kielellinen aarre. Unkari kuuluu [[uralilaisiin kieliin]] samoin kuin suomi, viro ja [[saame]], mutta sukulaisuus on kaukainen: tuhansia vuosia sitten erkaantuneet kielet eivät ole ymmärrettäviä toisilleen. Silti vanhimmat sanat vastaavat: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Kyyhky ymmärtää molempia aika huonosti.
+KYSYMYS: Kerro lisää: saame
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+AIEMPI KYSYMYS: Mikä on Hortobágy ja mitä siellä näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hortobágy on Itä-Unkarin laaja ruohotasanko eli [[puszta]], jossa horisontti näyttää loputtomalta. Alue on kansallispuisto ja kuuluu Unescon maailmanperintökohteisiin. Perinteisesti siellä on laidunnettu harmaita pitkäsarvisia nautoja ja villakarvaisia lampaita, ja paimenia kutsutaan nimellä [[csikós]]. Lisäksi siellä on lintuja, sillä alueella pysähtyy muuttolintuja. Tasaisuus on kyyhkylle ihanne, ei haittaa.
+KYSYMYS: Kerro lisää: puszta
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+AIEMPI KYSYMYS: Mikä on Hortobágy ja mitä siellä näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hortobágy on Itä-Unkarin laaja ruohotasanko eli [[puszta]], jossa horisontti näyttää loputtomalta. Alue on kansallispuisto ja kuuluu Unescon maailmanperintökohteisiin. Perinteisesti siellä on laidunnettu harmaita pitkäsarvisia nautoja ja villakarvaisia lampaita, ja paimenia kutsutaan nimellä [[csikós]]. Lisäksi siellä on lintuja, sillä alueella pysähtyy muuttolintuja. Tasaisuus on kyyhkylle ihanne, ei haittaa.
+KYSYMYS: Kerro lisää: csikós
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Keksijältä meni kuukausi omaan pulmaansa] Ernő Rubik opetti arkkitehtuuria Budapestin taideteollisessa korkeakoulussa ja rakensi vuonna 1974 oppilailleen havaintovälineen: 26 pientä palikkaa, jotka pyörivät piilossa olevan keskiosan ympäri hajoamatta. Kun hän värjäsi sivut ja sekoitti ne, hän tajusi tehneensä pulman — ja tarvitsi kokonaisen kuukauden ratkaistakseen sen itse. Unkarissa lelu myytiin nimellä bűvös kocka, taikakuutio. Asentoja on yli 43 triljoonaa, mutta jokaisesta pääsee maaliin enintään 20 kierrolla.
+AIEMPI KYSYMYS: Miten Rubikin kuutio liittyy Unkariin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on sinänsä pieni mutta tunnettu keksintö. Unkarilainen [[Ernő Rubik]], Budapestissa asunut arkkitehtuurin opettaja, keksi kuution vuonna 1974 opetusvälineeksi kolmiulotteisen ajattelun harjoitteluun. Aluksi sitä kutsuttiin taikakuutioksi, ja kansainvälisesti se alkoi myydä vuosikymmenen lopulla. Tänään sitä on myyty kymmeniä miljoonia kappaleita, ehkä satoja miljoonia, [[Budapestin]] kaupungista maailmalle. Itse en ole saanut yhtäkään sivua yhteen.
+KYSYMYS: Kerro lisää: Ernő Rubik
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Lipusta leikattiin keskusta pois] 1956 — Lokakuussa 1956 Budapestin kaduille nousi kansannousu maata hallinnutta neuvostojärjestelmää vastaan. Mielenosoittajat ottivat tunnuksekseen maan lipun, jonka keskeltä oli leikattu vaakuna pois: jäljelle jäi puna-valko-vihreä lippu ja siinä reikä. Nousu kesti runsaat kaksi viikkoa, ja se kukistettiin marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä nostetaan salkoon joka lokakuu.
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Unkari — maalehti / Menovinkit] Unkari on avannut oman muistinsa: kaksisataatuhatta valokuvaa ilmaiseksi, Budapestin kartat neljältä eri vuodelta, Bartókin äänittämät kansanlaulut ja kameroita, joista näkee haikaran pesään juuri nyt.
+AIEMPI KYSYMYS: Miten Rubikin kuutio liittyy Unkariin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämä on sinänsä pieni mutta tunnettu keksintö. Unkarilainen [[Ernő Rubik]], Budapestissa asunut arkkitehtuurin opettaja, keksi kuution vuonna 1974 opetusvälineeksi kolmiulotteisen ajattelun harjoitteluun. Aluksi sitä kutsuttiin taikakuutioksi, ja kansainvälisesti se alkoi myydä vuosikymmenen lopulla. Tänään sitä on myyty kymmeniä miljoonia kappaleita, ehkä satoja miljoonia, [[Budapestin]] kaupungista maailmalle. Itse en ole saanut yhtäkään sivua yhteen.
+KYSYMYS: Kerro lisää: Budapestin
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+AIEMPI KYSYMYS: Kuka rakennutti Budapestin Ketjusillan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on kaupungin tunnetuin silta. Aloite tuli kreivi [[István Széchenyiltä]], ja sillan suunnitteli englantilainen insinööri [[William Tierney Clark]]. Silta avattiin vuonna 1849, ja se oli ensimmäinen pysyvä yhteys Budan ja Pestin välillä [[Tonavan]] yli. Toisessa maailmansodassa kaikki Tonavan sillat tuhoutuivat, ja Ketjusilta rakennettiin uudelleen sodan jälkeen. Isoisäsi ylitti sen vielä maksua vastaan.
+KYSYMYS: Kerro lisää: István Széchenyiltä
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+AIEMPI KYSYMYS: Kuka rakennutti Budapestin Ketjusillan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on kaupungin tunnetuin silta. Aloite tuli kreivi [[István Széchenyiltä]], ja sillan suunnitteli englantilainen insinööri [[William Tierney Clark]]. Silta avattiin vuonna 1849, ja se oli ensimmäinen pysyvä yhteys Budan ja Pestin välillä [[Tonavan]] yli. Toisessa maailmansodassa kaikki Tonavan sillat tuhoutuivat, ja Ketjusilta rakennettiin uudelleen sodan jälkeen. Isoisäsi ylitti sen vielä maksua vastaan.
+KYSYMYS: Kerro lisää: William Tierney Clark
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Kuka rakennutti Budapestin Ketjusillan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on kaupungin tunnetuin silta. Aloite tuli kreivi [[István Széchenyiltä]], ja sillan suunnitteli englantilainen insinööri [[William Tierney Clark]]. Silta avattiin vuonna 1849, ja se oli ensimmäinen pysyvä yhteys Budan ja Pestin välillä [[Tonavan]] yli. Toisessa maailmansodassa kaikki Tonavan sillat tuhoutuivat, ja Ketjusilta rakennettiin uudelleen sodan jälkeen. Isoisäsi ylitti sen vielä maksua vastaan.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+AIEMPI KYSYMYS: Mikä on Széchenyin kylpylä Budapestissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Siellä istutaan vedessä pelaamassa shakkia. Széchenyin kylpylä on suuri kylpylä Pestin puolella [[Városligetin]] puistossa, keltaisessa uusbarokkirakennuksessa, joka valmistui 1900-luvun alussa. Siinä on sisä- ja ulkoaltaita, ja ulkoaltaissa kylvetään pakkasellakin. Budapestin kylpyläperinne on peräisin [[ottomaanien]] ajoilta, ja kaupungissa on yli sata lämmintä lähdettä. Kyyhky ei kyllä mahtuisi shakkipöytään.
+KYSYMYS: Kerro lisää: Városligetin
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Budapest — kaupunkilehti / Budapest: Gulyás on keitto, ei pata] Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja suuressa kauppahallissa sitä myydään makeasta tuliseen. Halli vihittiin 15. helmikuuta 1897, sen suunnitteli Samu Pecz, ja katto katettiin Pécsin Zsolnay-laatoilla. Pinta-alaa on 10 000 neliötä kolmessa kerroksessa: alimmasta löytyvät kalakauppiaat ja suolakurkut, kadun tasalta liha, leipä ja mausteet.
+AIEMPI KYSYMYS: Mikä on Széchenyin kylpylä Budapestissa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Siellä istutaan vedessä pelaamassa shakkia. Széchenyin kylpylä on suuri kylpylä Pestin puolella [[Városligetin]] puistossa, keltaisessa uusbarokkirakennuksessa, joka valmistui 1900-luvun alussa. Siinä on sisä- ja ulkoaltaita, ja ulkoaltaissa kylvetään pakkasellakin. Budapestin kylpyläperinne on peräisin [[ottomaanien]] ajoilta, ja kaupungissa on yli sata lämmintä lähdettä. Kyyhky ei kyllä mahtuisi shakkipöytään.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Maanalainen] Kaupunki, jota ei ollut isoisäsi tullessa, kasvoi nopeammin kuin yksikään toinen Euroopassa — ja kahdenkymmenen vuoden päästä se rakensi jotain, mitä oli ennen nähty vain Lontoossa. Millenniumin maanalainen valmistui 1896, ja se oli Manner-Euroopan ensimmäinen sähköistetty maanalainen rata; maailmassa vanhempi oli vain Lontoon metro, jonka isoisäsi ehti nähdä. Valtiopäivät olivat hyväksyneet suunnitelman jo 1870, mutta työ alkoi vasta 1894, ja Siemens & Halsken unkarilainen tytäryhtiö sai sen valmiiksi alle kahdessa vuodessa kahdentuhannen miehen voimin. Tunnelia ei porattu syvälle: se kaivettiin kadun pinnasta auki ja katettiin takaisin, ja siksi rata kulkee aivan jalkakäytävän alla. Syy o…
+AIEMPI KYSYMYS: Miksi Budapestin vanha metro on erikoinen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on liikennehistoriaa. Budapestin ensimmäinen metrolinja avattiin vuonna 1896 Unkarin tuhatvuotisjuhlien kunniaksi, ja se oli Manner-Euroopan ensimmäinen sähköllä kulkeva metro. Linja kulkee kadun alla [[Andrássy-kadun]] suuntaisesti, ja pienet asemat ovat matalia, kaakeloituja ja lähellä katutasoa. Katu kuuluu osana [[Unescon]] maailmanperintökohteisiin. Tämä vaunu kulkee yhä, ja se on tosi suloinen.
+KYSYMYS: Kerro lisää: Andrássy-kadun
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+AIEMPI KYSYMYS: Miksi Budapestin vanha metro on erikoinen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on liikennehistoriaa. Budapestin ensimmäinen metrolinja avattiin vuonna 1896 Unkarin tuhatvuotisjuhlien kunniaksi, ja se oli Manner-Euroopan ensimmäinen sähköllä kulkeva metro. Linja kulkee kadun alla [[Andrássy-kadun]] suuntaisesti, ja pienet asemat ovat matalia, kaakeloituja ja lähellä katutasoa. Katu kuuluu osana [[Unescon]] maailmanperintökohteisiin. Tämä vaunu kulkee yhä, ja se on tosi suloinen.
+KYSYMYS: Kerro lisää: Unescon
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+AIEMPI KYSYMYS: Mitä ovat Budapestin raunakapakat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on nykykaupungin erikoisuus. Raunakapakat ovat baareja, jotka alkoivat 2000-luvun alussa avautua ränsistyneisiin taloihin ja sisäpihoille Pestin vanhassa [[juutalaiskorttelissa]]. Sisustus on kerätty eri paikoista, kuten vanhoja huonekaluja ja kierrätettyjä esineitä, ja tunnetuin on [[Szimpla]]. Niistä on tullut osa kaupungin yöelämää ja matkailua. Iltaisin ne ovat hyvin täynnä.
+KYSYMYS: Kerro lisää: juutalaiskorttelissa
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+AIEMPI KYSYMYS: Mitä ovat Budapestin raunakapakat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on nykykaupungin erikoisuus. Raunakapakat ovat baareja, jotka alkoivat 2000-luvun alussa avautua ränsistyneisiin taloihin ja sisäpihoille Pestin vanhassa [[juutalaiskorttelissa]]. Sisustus on kerätty eri paikoista, kuten vanhoja huonekaluja ja kierrätettyjä esineitä, ja tunnetuin on [[Szimpla]]. Niistä on tullut osa kaupungin yöelämää ja matkailua. Iltaisin ne ovat hyvin täynnä.
+KYSYMYS: Kerro lisää: Szimpla
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Parlamenttitalo] 1885–1904 Unkarin parlamenttitalo on niin valtava, että siinä on 691 huonetta, 29 porrashuonetta ja peräti 13 hissiä. Arkkitehti Imre Steindl otti mallia Lontoon parlamenttitalosta ja suunnitteli rakennuksen 96 metrin korkuiseksi — luku viittaa vuoteen 896, jolloin unkarilaiset asettuivat nykyiselle alueelleen. Rakentamiseen käytettiin 40 miljoonaa tiiltä ja lähes 40 kiloa kultaa koristeisiin. Työt alkoivat vuonna 1885 ja valmistuivat vuonna 1904, mutta Steindl itse ei ehtinyt nähdä lopputulosta: hän sokeutui ja kuoli juuri ennen valmistumista. Rakennuksen keskeisessä kuusitoistakulmaisessa salissa säilytetään nykyään Unkarin pyhää kruunua, jota vartioi aina kaksi sotilasta.
+AIEMPI KYSYMYS: Millainen rakennus Unkarin parlamenttitalo on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on kaunis. Parlamenttitalo on uusgoottilainen jättiläinen Tonavan Pestin puoleisella rannalla, ja sen suunnitteli arkkitehti [[Imre Steindl]]. Rakentaminen kesti kymmeniä vuosia, ja talo valmistui 1900-luvun alussa. Sen kupolihallissa säilytetään [[Pyhän Tapanin kruunu]], Unkarin perinteistä kruunua. Rakennus näkyy hyvin joen toiselta puolelta, ja siipikarjakin sen huomaa.
+KYSYMYS: Kerro lisää: Imre Steindl
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+AIEMPI KYSYMYS: Millainen rakennus Unkarin parlamenttitalo on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on kaunis. Parlamenttitalo on uusgoottilainen jättiläinen Tonavan Pestin puoleisella rannalla, ja sen suunnitteli arkkitehti [[Imre Steindl]]. Rakentaminen kesti kymmeniä vuosia, ja talo valmistui 1900-luvun alussa. Sen kupolihallissa säilytetään [[Pyhän Tapanin kruunu]], Unkarin perinteistä kruunua. Rakennus näkyy hyvin joen toiselta puolelta, ja siipikarjakin sen huomaa.
+KYSYMYS: Kerro lisää: Pyhän Tapanin kruunu
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Aurinko käy sisällä kerran vuodessa] 3200 eaa — Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain parillekymmenelle.
+AIEMPI KYSYMYS: Mikä on Newgrange ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on iäkäs paikka. Newgrange on [[Boynen]] mutkassa sijaitseva ruohoinen kumpu, joka on kivikautinen käytävähauta noin vuodelta 3200 eaa. Se on siis yli viisituhatta vuotta vanha ja vanhempi kuin Egyptin pyramidit. Sisäänkäynnin yläpuolella on aukko, jonka kautta [[talvipäivänseisauksen]] aamuaurinko valaisee hautakammion muutaman minuutin ajan. Alue kuuluu Unescon maailmanperintökohteisiin. Vanhin tuntemani asuinpaikka, jossa ei ole yhtään ikkunaa.
+KYSYMYS: Kerro lisää: Boynen
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Aurinko käy sisällä kerran vuodessa] 3200 eaa — Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain parillekymmenelle.
+AIEMPI KYSYMYS: Mikä on Newgrange ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on iäkäs paikka. Newgrange on [[Boynen]] mutkassa sijaitseva ruohoinen kumpu, joka on kivikautinen käytävähauta noin vuodelta 3200 eaa. Se on siis yli viisituhatta vuotta vanha ja vanhempi kuin Egyptin pyramidit. Sisäänkäynnin yläpuolella on aukko, jonka kautta [[talvipäivänseisauksen]] aamuaurinko valaisee hautakammion muutaman minuutin ajan. Alue kuuluu Unescon maailmanperintökohteisiin. Vanhin tuntemani asuinpaikka, jossa ei ole yhtään ikkunaa.
+KYSYMYS: Kerro lisää: talvipäivänseisauksen
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Trinity College] 1592 Trinity College on Irlannin vanhin yliopisto. Sen perusti kuningatar Elisabet I kuninkaallisella peruskirjalla vuonna 1592, entisen luostarin paikalle keskelle Dublinia. Sen ensimmäinen rehtori nimesi sen Cambridgen Trinity Collegen mukaan. Yliopiston kirjaston kuuluisin aarre on Kellsin kirja, upeasti kuvitettu käsin kirjoitettu evankeliumikirja, joka on säilytetty Trinityssä vuodesta 1661. Kirjaa säilytetään Long Room -nimisessä valtavassa kirjastosalissa, jossa käy yli 900 000 vierasta vuodessa. Trinitystä on valmistunut monia kuuluisia kirjailijoita, kuten Jonathan Swift, Oscar Wilde ja Samuel Beckett. Naiset pääsivät opiskelemaan Trinityyn vasta vuonna 1904, mutta nykyään yliopist…
+- [Dublin — kaupunkilehti / Tiede: Luento, joka johti dna:n jäljille] Irlannin pääministeri Éamon de Valera oli koulutukseltaan matematiikan opettaja. Vuonna 1940 hän perusti Dublinin tutkimusinstituutin ja kutsui sen fysiikan johtajaksi itävaltalaisen Erwin Schrödingerin, joka oli paennut natseja. Helmikuussa 1943 Schrödinger piti Trinity Collegessa kolme yleisöluentoa otsikolla Mitä elämä on? Saliin mahtui 150 kuulijaa mutta tulijoita oli 400, joten luennot pidettiin kahteen kertaan. Watson ja Crick kertoivat molemmat, että luennoista tehty kirja pani heidät dna:n jäljille.
+AIEMPI KYSYMYS: Miksi harppu on Irlannin valtiontunnus?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Harppu on ollut Irlannin tunnus keskiajalta asti, ja Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva säilytetään [[Trinity Collegen]] kirjastossa: 1300- tai 1400-luvulla tehty harppu, jota sanotaan [[Brian Borun]] harpuksi, vaikka kuningas Brian kuoli vuonna 1014, satoja vuosia ennen kuin soitin veistettiin. Kolikoiden harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on leveämpi.
+KYSYMYS: Kerro lisää: Trinity Collegen
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki: Kolikon harppu on väärän muotoinen] 1300-luku — Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva seisoo Trinity Collegen kirjastossa: 1300- tai 1400-luvulla tehty harppu, jonka kaulassa on messinkitapit 29 kielelle. Sitä sanotaan Brian Borun harpuksi, vaikka kuningas Brian kuoli vuonna 1014 — satoja vuosia ennen kuin soitin veistettiin. Kolikoihin painettu harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on paljon leveämpi.
+AIEMPI KYSYMYS: Miksi harppu on Irlannin valtiontunnus?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Harppu on ollut Irlannin tunnus keskiajalta asti, ja Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva säilytetään [[Trinity Collegen]] kirjastossa: 1300- tai 1400-luvulla tehty harppu, jota sanotaan [[Brian Borun]] harpuksi, vaikka kuningas Brian kuoli vuonna 1014, satoja vuosia ennen kuin soitin veistettiin. Kolikoiden harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on leveämpi.
+KYSYMYS: Kerro lisää: Brian Borun
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+AIEMPI KYSYMYS: Puhutaanko Irlannissa vielä iirin kieltä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyllä puhutaan, mutta erilaisessa roolissa. Iiri on Irlannin perustuslaissa ensimmäinen virallinen kieli, ja sitä opetetaan kouluissa, mutta arjen pääkieli on englanti. Iirin kielen tiiviit puhuma-alueet eli [[Gaeltacht]]-alueet ovat enimmäkseen länsirannikolla, esimerkiksi [[Connemarassa]]. Kyltit ovat yleensä kaksikielisiä, ja television ja radion ohjelmia tehdään iiriksi. Kuulin sen vasta ylhäältä.
+KYSYMYS: Kerro lisää: Gaeltacht
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+AIEMPI KYSYMYS: Puhutaanko Irlannissa vielä iirin kieltä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyllä puhutaan, mutta erilaisessa roolissa. Iiri on Irlannin perustuslaissa ensimmäinen virallinen kieli, ja sitä opetetaan kouluissa, mutta arjen pääkieli on englanti. Iirin kielen tiiviit puhuma-alueet eli [[Gaeltacht]]-alueet ovat enimmäkseen länsirannikolla, esimerkiksi [[Connemarassa]]. Kyltit ovat yleensä kaksikielisiä, ja television ja radion ohjelmia tehdään iiriksi. Kuulin sen vasta ylhäältä.
+KYSYMYS: Kerro lisää: Connemarassa
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+AIEMPI KYSYMYS: Kuinka korkeat ovat Moherin kalliot?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Moherin kalliot nousevat suoraan Atlantista Clairen länsirannikolla, ja ne ovat korkeimmillaan noin kaksisataa metriä. Kallioseinä on noin 14 kilometriä pitkä. Kallioilla pesii lintuja, esimerkiksi [[lunneja]], ja [[Claren]] kreivikunnan maisema on suosittu matkailukohde. Kalliot kuuluvat tärkeimpiin retkikohteisiin Irlannissa, ja tuuli on voimakas. Kyyhky pitää tuulesta, mutta ei tuosta.
+KYSYMYS: Kerro lisää: lunneja
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+AIEMPI KYSYMYS: Kuinka korkeat ovat Moherin kalliot?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Moherin kalliot nousevat suoraan Atlantista Clairen länsirannikolla, ja ne ovat korkeimmillaan noin kaksisataa metriä. Kallioseinä on noin 14 kilometriä pitkä. Kallioilla pesii lintuja, esimerkiksi [[lunneja]], ja [[Claren]] kreivikunnan maisema on suosittu matkailukohde. Kalliot kuuluvat tärkeimpiin retkikohteisiin Irlannissa, ja tuuli on voimakas. Kyyhky pitää tuulesta, mutta ei tuosta.
+KYSYMYS: Kerro lisää: Claren
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+AIEMPI KYSYMYS: Miksi Irlannissa juhlitaan Pyhän Patrickin päivää?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on vihreä juhla. Päivää vietetään 17. maaliskuuta Irlannin suojeluspyhimyksen kunniaksi. Perinteen mukaan Patrick toi kristinuskon saarelle 400-luvulla, ja hänen kerrotaan käyttäneen [[apilan]] lehteä apuna opettaessaan kolminaisuutta. Armagh on perinteinen Irlannin kirkon keskus, joten [[Armaghin]] kaupunki liittyy vahvasti Patrickin muistoon. Päivänä pidetään paraateja Irlannissa ja ulkomailla, ja kaikki pukeutuvat vihreään. Minä jään harmaaksi.
+KYSYMYS: Kerro lisää: apilan
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+AIEMPI KYSYMYS: Miksi Irlannissa juhlitaan Pyhän Patrickin päivää?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on vihreä juhla. Päivää vietetään 17. maaliskuuta Irlannin suojeluspyhimyksen kunniaksi. Perinteen mukaan Patrick toi kristinuskon saarelle 400-luvulla, ja hänen kerrotaan käyttäneen [[apilan]] lehteä apuna opettaessaan kolminaisuutta. Armagh on perinteinen Irlannin kirkon keskus, joten [[Armaghin]] kaupunki liittyy vahvasti Patrickin muistoon. Päivänä pidetään paraateja Irlannissa ja ulkomailla, ja kaikki pukeutuvat vihreään. Minä jään harmaaksi.
+KYSYMYS: Kerro lisää: Armaghin
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Trinity College] 1592 Trinity College on Irlannin vanhin yliopisto. Sen perusti kuningatar Elisabet I kuninkaallisella peruskirjalla vuonna 1592, entisen luostarin paikalle keskelle Dublinia. Sen ensimmäinen rehtori nimesi sen Cambridgen Trinity Collegen mukaan. Yliopiston kirjaston kuuluisin aarre on Kellsin kirja, upeasti kuvitettu käsin kirjoitettu evankeliumikirja, joka on säilytetty Trinityssä vuodesta 1661. Kirjaa säilytetään Long Room -nimisessä valtavassa kirjastosalissa, jossa käy yli 900 000 vierasta vuodessa. Trinitystä on valmistunut monia kuuluisia kirjailijoita, kuten Jonathan Swift, Oscar Wilde ja Samuel Beckett. Naiset pääsivät opiskelemaan Trinityyn vasta vuonna 1904, mutta nykyään yliopist…
+- [Dublin — kaupunkilehti / Tiede: Luento, joka johti dna:n jäljille] Irlannin pääministeri Éamon de Valera oli koulutukseltaan matematiikan opettaja. Vuonna 1940 hän perusti Dublinin tutkimusinstituutin ja kutsui sen fysiikan johtajaksi itävaltalaisen Erwin Schrödingerin, joka oli paennut natseja. Helmikuussa 1943 Schrödinger piti Trinity Collegessa kolme yleisöluentoa otsikolla Mitä elämä on? Saliin mahtui 150 kuulijaa mutta tulijoita oli 400, joten luennot pidettiin kahteen kertaan. Watson ja Crick kertoivat molemmat, että luennoista tehty kirja pani heidät dna:n jäljille.
+AIEMPI KYSYMYS: Mikä on Kellsin kirja ja miksi se on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on aarre. Kellsin kirja on noin vuodelta 800 peräisin oleva kuvitettu käsikirjoitus, jossa on latinankieliset evankeliumit. Sitä on koristeltu monimutkaisilla kuvioilla, eläinhahmoilla ja väreillä, ja sen tekemiseen meni luultavasti vuosia. Kirja säilytetään [[Trinity Collegen]] kirjastossa, jonka kuuluisa [[Long Room]] -sali on myös nähtävyys. Sivuja käännetään ajoittain, jotta kirja säilyisi. Kyyhky ei kyllä uskaltaisi koskea.
+KYSYMYS: Kerro lisää: Trinity Collegen
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Trinity College] 1592 Trinity College on Irlannin vanhin yliopisto. Sen perusti kuningatar Elisabet I kuninkaallisella peruskirjalla vuonna 1592, entisen luostarin paikalle keskelle Dublinia. Sen ensimmäinen rehtori nimesi sen Cambridgen Trinity Collegen mukaan. Yliopiston kirjaston kuuluisin aarre on Kellsin kirja, upeasti kuvitettu käsin kirjoitettu evankeliumikirja, joka on säilytetty Trinityssä vuodesta 1661. Kirjaa säilytetään Long Room -nimisessä valtavassa kirjastosalissa, jossa käy yli 900 000 vierasta vuodessa. Trinitystä on valmistunut monia kuuluisia kirjailijoita, kuten Jonathan Swift, Oscar Wilde ja Samuel Beckett. Naiset pääsivät opiskelemaan Trinityyn vasta vuonna 1904, mutta nykyään yliopist…
+- [Hanoi — kohdekartta / Kohdekartta: Long Biênin silta] 1899–1902 Long Biênin silta ylittää Punaisenjoen ja yhdistää Hoàn Kiếmin ja Long Biênin kaupunginosat. Se rakennettiin vuosina 1899–1902 pariisilaisen Daydé & Pillén piirustusten mukaan ja avattiin liikenteelle vuonna 1903. Nimi tulee Long Biênistä, joka on yksi kaupungin vanhimmista nimistä ja tarkoittaa toisiinsa kietoutuvia lohikäärmeitä. Ensimmäiset vuosikymmenensä silta kantoi kenraalikuvernöörin nimeä ja oli Paul Doumerin silta. Rakenne on terästä ja tyypiltään ulokepalkkisilta: yhdeksäntoista jännettä, leveyttä 13,5 metriä ja korkeutta 43,5 metriä. Pituudesta Wikipedia antaa kaksi lukua, infoboksin 2 290 metriä ja leipätekstin 2,4 kilometriä, mutta kummallakin luvulla se oli valmistu…
+AIEMPI KYSYMYS: Mikä on Kellsin kirja ja miksi se on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on aarre. Kellsin kirja on noin vuodelta 800 peräisin oleva kuvitettu käsikirjoitus, jossa on latinankieliset evankeliumit. Sitä on koristeltu monimutkaisilla kuvioilla, eläinhahmoilla ja väreillä, ja sen tekemiseen meni luultavasti vuosia. Kirja säilytetään [[Trinity Collegen]] kirjastossa, jonka kuuluisa [[Long Room]] -sali on myös nähtävyys. Sivuja käännetään ajoittain, jotta kirja säilyisi. Kyyhky ei kyllä uskaltaisi koskea.
+KYSYMYS: Kerro lisää: Long Room
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kaupunkilehti / Dublin: Romaani, joka kestää yhden päivän] James Joycen romaani Odysseus kertoo yhden ainoan päivän: torstain 16. kesäkuuta 1904 Dublinissa. Joyce valitsi juuri sen päivän, koska silloin hän oli ollut ensi kertaa kävelyllä tulevan vaimonsa Nora Barnaclen kanssa. Nyt joka 16. kesäkuuta dublinilaiset pukeutuvat vuoden 1904 vaatteisiin ja kulkevat kirjan reitit läpi. Ensimmäinen sellainen retki tehtiin 1954 vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 tuntia.
+AIEMPI KYSYMYS: Mikä on Bloomsday?
+AIEMPI VASTAUS (Livia):
+Ai se. Se on kirjailijan juhla. Bloomsday on Dublinissa vuosittain 16. kesäkuuta vietettävä päivä, jolloin muistetaan [[James Joycen]] romaania Ulysses. Kirja kertoo yhden päivän, 16. kesäkuuta 1904, tapahtumista, ja sen päähenkilö on [[Leopold Bloom]]. Ihmiset pukeutuvat 1900-luvun alun tyyliin, lukevat otteita ja kulkevat kirjan reittejä pitkin kaupunkia. Kyyhky ei ole lukenut kuin sivun tai kaksi.
+KYSYMYS: Kerro lisää: James Joycen
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+AIEMPI KYSYMYS: Mikä on Bloomsday?
+AIEMPI VASTAUS (Livia):
+Ai se. Se on kirjailijan juhla. Bloomsday on Dublinissa vuosittain 16. kesäkuuta vietettävä päivä, jolloin muistetaan [[James Joycen]] romaania Ulysses. Kirja kertoo yhden päivän, 16. kesäkuuta 1904, tapahtumista, ja sen päähenkilö on [[Leopold Bloom]]. Ihmiset pukeutuvat 1900-luvun alun tyyliin, lukevat otteita ja kulkevat kirjan reittejä pitkin kaupunkia. Kyyhky ei ole lukenut kuin sivun tai kaksi.
+KYSYMYS: Kerro lisää: Leopold Bloom
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Guinness-panimo] 1759 Guinnessin panimo Dublinissa on yksi maailman kuuluisimmista oluttehtaista. Sen perusti Arthur Guinness vuonna 1759, kun hän allekirjoitti St. James's Gate -panimon tontista vuokrasopimuksen, joka on voimassa peräti 9000 vuotta! Panimo valmistaa tummaa stout-olutta vain neljästä aineesta: vedestä, ohrasta, humalasta ja hiivasta. Nykyinen vierailukeskus Guinness Storehouse avautui yleisölle vuonna 2000 rakennuksessa, joka valmistui jo vuonna 1902 panimon käymistehtaaksi. Sen keskellä kohoaa lasinen aula, joka on muotoiltu valtavan olutlasin näköiseksi — rakennus on peräti seitsemän kerrosta korkea. Ylimmässä kerroksessa sijaitsee Gravity Bar, josta näkee kauas Dublinin ylle. Vuoteen 202…
+- [Dublin — kaupunkilehti / Historia: Vuokrasopimus yhdeksäksitoista vuosisadaksi] Uudenvuodenaattona 1759 Arthur Guinness allekirjoitti vuokrasopimuksen käyttämättömästä panimosta St James’s Gaten portin luona. Vuokra oli 45 puntaa vuodessa, tontti neljä eekkeriä ja sopimuskausi yhdeksäntuhatta vuotta. Kun Benjamin Lee Guinness kuoli 1868, sama tontti oli kasvanut yli kuudenkymmenenneljän eekkerin laajuiseksi ja yritys oli yli miljoonan punnan arvoinen. Panimo myi vuonna 1868 kolmesataaviisikymmentätuhatta tynnyriä ja vuonna 1876 jo seitsemänsataaseitsemänkymmentäyhdeksäntuhatta. Yhdeksäntuhatta vuotta ei kuitenkaan tullut täyteen: yhtiö osti tontin lopulta omakseen, ja sopimus raukesi.
+AIEMPI KYSYMYS: Miten Guinness liittyy Dubliniin?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tuoksuva aihe. [[Arthur Guinness]] vuokrasi St. James's Gaten panimon vuonna 1759 yhdeksäksituhanneksi vuodeksi, ja siitä on tullut yksi kaupungin tunnetuimmista yrityksistä. Panimo tekee tummaa olutta, jonka maku perustuu paahdettuun ohraan. Alueella on vierailukeskus Guinness Storehouse, jossa kerrotaan oluen valmistuksesta. Panimo sijaitsee [[St. James's Gate]] -alueella, ja Guinness on osa dublinilaisen pubin arkea.
+KYSYMYS: Kerro lisää: Arthur Guinness
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: St James’s Gate] Uudenvuodenaattona 1759 Arthur Guinness allekirjoitti vuokrasopimuksen käyttämättömästä panimosta St James’s Gaten portin luona. Vuokra oli 45 puntaa vuodessa, tontti neljä eekkeriä ja sopimuskausi yhdeksäntuhatta vuotta. Se ei ole kirjoitusvirhe: laske itse, niin päädyt vuoteen 10 759. Kun Benjamin Lee Guinness kuoli 1868, sama tontti oli kasvanut yli kuudenkymmenenneljän eekkerin laajuiseksi ja yritys oli yli miljoonan punnan arvoinen. Ja juuri niihin vuosiin isoisäsi osui: panimo myi vuonna 1868 kolmesataaviisikymmentätuhatta tynnyriä ja vuonna 1876 jo seitsemänsataaseitsemänkymmentäyhdeksäntuhatta. Isoisäsi seisoi rannalla näiden kahden luvun välissä, ja juuri sen hän merkitsi muistiin:…
+AIEMPI KYSYMYS: Miten Guinness liittyy Dubliniin?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tuoksuva aihe. [[Arthur Guinness]] vuokrasi St. James's Gaten panimon vuonna 1759 yhdeksäksituhanneksi vuodeksi, ja siitä on tullut yksi kaupungin tunnetuimmista yrityksistä. Panimo tekee tummaa olutta, jonka maku perustuu paahdettuun ohraan. Alueella on vierailukeskus Guinness Storehouse, jossa kerrotaan oluen valmistuksesta. Panimo sijaitsee [[St. James's Gate]] -alueella, ja Guinness on osa dublinilaisen pubin arkea.
+KYSYMYS: Kerro lisää: St. James's Gate
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Fe — kohdekartta / Kohdekartta: Georgia O'Keeffen museo] 1997 Museo avattiin 17. heinäkuuta 1997, yksitoista vuotta Georgia O'Keeffen kuoleman jälkeen, ja se on omistettu hänen taiteelliselle perinnölleen ja amerikkalaiselle modernismille. Päärakennuksen suunnitteli arkkitehti Richard Gluckman yhdessä santafelaisen Allegretti Architectsin kanssa; Gluckmanin muita töitä ovat Whitney-museon kokoelmasiipi New Yorkissa ja Andy Warhol -museo Pittsburghissa. Museo on itse asiassa monta paikkaa kahdessa kaupungissa. Santa Fessä ovat näyttelygalleriat, tutkimuskeskuksen kirjasto ja arkisto historiallisessa A. M. Bergeren talossa sekä opetustilat; Abiquiússa taiteilijan oma koti ja ateljee sekä vierailukeskus. Abiquiún talo oli O'Keeffen päävakinainen kot…
+AIEMPI KYSYMYS: Mitä viuhkaikkuna on ja miksi se kuuluu Dubliniin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on pieni yksityiskohta. Viuhkaikkuna on oven yläpuolella oleva puolipyöreä ikkuna, joka päästää valoa sisään. Dublinin 1700-luvun [[georgiaaniset]] talot ovat tiiliriviä, joiden julkisivut ovat tasaisia ja ovet usein kirkkaanvärisiä, ja ikkunat ovat tämän tyylin tunnusmerkki. Hyviä esimerkkejä on [[Merrion Squaren]] ympärillä. Ovien värien syistä kerrotaan tarinoita, mutta en ole varma, mikä niistä pitää paikkansa.
+KYSYMYS: Kerro lisää: georgiaaniset
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+AIEMPI KYSYMYS: Mitä viuhkaikkuna on ja miksi se kuuluu Dubliniin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on pieni yksityiskohta. Viuhkaikkuna on oven yläpuolella oleva puolipyöreä ikkuna, joka päästää valoa sisään. Dublinin 1700-luvun [[georgiaaniset]] talot ovat tiiliriviä, joiden julkisivut ovat tasaisia ja ovet usein kirkkaanvärisiä, ja ikkunat ovat tämän tyylin tunnusmerkki. Hyviä esimerkkejä on [[Merrion Squaren]] ympärillä. Ovien värien syistä kerrotaan tarinoita, mutta en ole varma, mikä niistä pitää paikkansa.
+KYSYMYS: Kerro lisää: Merrion Squaren
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+AIEMPI KYSYMYS: Mitä viikingit saivat aikaan Dublinissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Se on pitkä tarina. Viikingit perustivat Liffey-joen rantaan kauppasataman 800-luvulla, ja siitä kehittyi [[Dyflinn]], norjalais-gaelilainen kaupunki, jossa käytiin kauppaa laajasti. Jokiranta oli viikinkien laivojen paikka, ja kaupunginnimi tulee tummasta vuorovesialtaasta. Lähellä käytiin vuonna 1014 [[Clontarfin]] taistelu, jossa Brian Boru kuoli. Vanhin kerros on sitä, mitä arkeologit löytävät.
+KYSYMYS: Kerro lisää: Dyflinn
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+AIEMPI KYSYMYS: Mitä viikingit saivat aikaan Dublinissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Se on pitkä tarina. Viikingit perustivat Liffey-joen rantaan kauppasataman 800-luvulla, ja siitä kehittyi [[Dyflinn]], norjalais-gaelilainen kaupunki, jossa käytiin kauppaa laajasti. Jokiranta oli viikinkien laivojen paikka, ja kaupunginnimi tulee tummasta vuorovesialtaasta. Lähellä käytiin vuonna 1014 [[Clontarfin]] taistelu, jossa Brian Boru kuoli. Vanhin kerros on sitä, mitä arkeologit löytävät.
+KYSYMYS: Kerro lisää: Clontarfin
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oman — maalehti / Historia: Kivihaudat seisovat jonossa harjanteella] Bat, Al-Khutm ja Al-Ayn muodostavat hauta-alueen kolmannelta vuosituhannelta ennen ajanlaskun alkua. Haudat on ladottu litteistä kivistä ilman laastia, ja ne kapenevat ylöspäin kuin mehiläispesät — siitä nimi. Al-Aynissa niitä seisoo rivissä harjanteella sahalaitaisen vuoren edessä. Batissa hautoja on satakunta, ja siellä on myös noin kahdenkymmenen metrin levyisiä pyöreitä rakennuksia, joiden käyttötarkoitus on yhä auki: niissä ei ole ainuttakaan aukkoa ulos, joten ne saattoivat olla varastoja tai vesisäiliöitä. Alue otettiin maailmanperintöluetteloon vuonna 1988.
+AIEMPI KYSYMYS: Miksi Islannissa on niin paljon tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Islanti sijaitsee [[Keski-Atlantin harjanteella]], jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan. Laattojen väliin nousee kuumaa kiveä, minkä vuoksi saarella on toistasataa tulivuorta ja [[kuumia lähteitä]]. Maanalainen lämpö on myös arjen voimavara, sillä se lämmittää yhä lähes kaikki talot. Kyl minä katolta ton höyryn tunnistan.
+KYSYMYS: Kerro lisää: Keski-Atlantin harjanteella
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Exmouth — kaupunkilehti / Exmouth: Muinainen riutta nousi vuoriksi] Exmouthin niemimaan selkärankana kohoava Cape Range ei ole tavallinen kukkulajono, vaan miljoonien vuosien takainen koralliriutta, joka on työntynyt ilmaan. Kalkkikivi syntyi meren pohjalle kertyneistä koralli- ja simpukkajäänteistä, ja kun Australian ja Aasian mannerlaatat alkoivat myöhäisellä mioseenikaudella puristua toisiaan vasten, alue kohosi hitaasti merestä kukkuloiksi. Vuosimiljoonien sadevedet ovat sittemmin uurtaneet kalkkikiveen syviä rotkoja, joiden seinämistä voi yhä löytää muinaisten riutaneliöiden fossiileja. Cape Range onkin Australian ainoa esimerkki näin vuorenpoimutuksen nostamasta karstialueesta.
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, ”lakikalliolla”, josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+- [Islanti — kaupunkilehti / Islanti: Käräjät kahden mantereen välissä] Þingvellirissä islantilaiset kokoontuivat käräjille vuodesta 930 alkaen: lait luettiin ääneen kalliolta, koska niitä ei ollut kirjoitettu mihinkään. Paikka sattuu olemaan kohdassa, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat — rotko levenee pari senttiä vuodessa.
+AIEMPI KYSYMYS: Miksi Islannissa on niin paljon tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Islanti sijaitsee [[Keski-Atlantin harjanteella]], jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan. Laattojen väliin nousee kuumaa kiveä, minkä vuoksi saarella on toistasataa tulivuorta ja [[kuumia lähteitä]]. Maanalainen lämpö on myös arjen voimavara, sillä se lämmittää yhä lähes kaikki talot. Kyl minä katolta ton höyryn tunnistan.
+KYSYMYS: Kerro lisää: mannerlaatat
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+- [Kenia — maalehti / Luonto: Miljoona lintua yhdellä järvellä] Nakuru-, Elementaita- ja Bogoria-järvet olivat kymmenentuhatta vuotta sitten yksi syvä makean veden järvi; kun se kuivui, jäljelle jäi kolme emäksistä altaan pohjaa. Vesi ruokkii sinileviä, sinilevä ruokkii pikkuflamingoja, ja parhaimmillaan Nakurun pinta katoaa kokonaan liikkuvan vaaleanpunaisen maton alle. Linnut vaihtavat järveä ravinnon mukaan: kun Nakurun vesi nousi 2013, parvet siirtyivät Bogorialle, jonka rannalla purkautuu kuumia lähteitä. Unesco otti kolmikon maailmanperintöluetteloon 2011.
+AIEMPI KYSYMYS: Miksi Islannissa on niin paljon tulivuoria?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Islanti sijaitsee [[Keski-Atlantin harjanteella]], jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan. Laattojen väliin nousee kuumaa kiveä, minkä vuoksi saarella on toistasataa tulivuorta ja [[kuumia lähteitä]]. Maanalainen lämpö on myös arjen voimavara, sillä se lämmittää yhä lähes kaikki talot. Kyl minä katolta ton höyryn tunnistan.
+KYSYMYS: Kerro lisää: kuumia lähteitä
+
+### 600
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+AIEMPI KYSYMYS: Miten islantilaiset kaatoivat hallituksensa vuonna 2009?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lokakuussa 2008 Islannin kolme suurta [[pankkia]] kaatui muutamassa päivässä, ja koko maan talous romahti. Ihmiset alkoivat kokoontua joka lauantai [[Alþingin]] eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: mukana oli kattiloita, pannuja ja kauhoja, joita hakattiin niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai nimen [[kattilakumous]], ja hallitus erosi parin viikon sisällä. Myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan. Ei ihme, että parlamentin kyyhkyset lähtivät lentoon.
+KYSYMYS: Kerro lisää: pankkia
+
+### 601
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+AIEMPI KYSYMYS: Miten islantilaiset kaatoivat hallituksensa vuonna 2009?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lokakuussa 2008 Islannin kolme suurta [[pankkia]] kaatui muutamassa päivässä, ja koko maan talous romahti. Ihmiset alkoivat kokoontua joka lauantai [[Alþingin]] eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: mukana oli kattiloita, pannuja ja kauhoja, joita hakattiin niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai nimen [[kattilakumous]], ja hallitus erosi parin viikon sisällä. Myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan. Ei ihme, että parlamentin kyyhkyset lähtivät lentoon.
+KYSYMYS: Kerro lisää: Alþingin
+
+### 602
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+AIEMPI KYSYMYS: Miten islantilaiset kaatoivat hallituksensa vuonna 2009?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lokakuussa 2008 Islannin kolme suurta [[pankkia]] kaatui muutamassa päivässä, ja koko maan talous romahti. Ihmiset alkoivat kokoontua joka lauantai [[Alþingin]] eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: mukana oli kattiloita, pannuja ja kauhoja, joita hakattiin niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai nimen [[kattilakumous]], ja hallitus erosi parin viikon sisällä. Myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan. Ei ihme, että parlamentin kyyhkyset lähtivät lentoon.
+KYSYMYS: Kerro lisää: kattilakumous
+
+### 603
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Miksi Islanti ja Britannia riitelivät kalastusrajoista?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä tarina. Kun Islanti laajensi kalastusrajaansa vuosina 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian [[troolarit]] eivät suostuneet väistymään, eikä Britannian laivasto liioin. Kolmessa niin sanotussa [[turskasodassa]] Islannin [[rannikkovartioston]] pienet alukset ajoivat troolareiden perässä ja leikkasivat verkkoketjut irti erityisillä leikkureilla. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä, ja vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan. Verkonleikkuri, kyyhkyn silmin ihan outo ase.
+KYSYMYS: Kerro lisää: troolarit
+
+### 604
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Miksi Islanti ja Britannia riitelivät kalastusrajoista?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä tarina. Kun Islanti laajensi kalastusrajaansa vuosina 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian [[troolarit]] eivät suostuneet väistymään, eikä Britannian laivasto liioin. Kolmessa niin sanotussa [[turskasodassa]] Islannin [[rannikkovartioston]] pienet alukset ajoivat troolareiden perässä ja leikkasivat verkkoketjut irti erityisillä leikkureilla. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä, ja vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan. Verkonleikkuri, kyyhkyn silmin ihan outo ase.
+KYSYMYS: Kerro lisää: turskasodassa
+
+### 605
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Miksi Islanti ja Britannia riitelivät kalastusrajoista?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä tarina. Kun Islanti laajensi kalastusrajaansa vuosina 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian [[troolarit]] eivät suostuneet väistymään, eikä Britannian laivasto liioin. Kolmessa niin sanotussa [[turskasodassa]] Islannin [[rannikkovartioston]] pienet alukset ajoivat troolareiden perässä ja leikkasivat verkkoketjut irti erityisillä leikkureilla. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä, ja vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan. Verkonleikkuri, kyyhkyn silmin ihan outo ase.
+KYSYMYS: Kerro lisää: rannikkovartioston
+
+### 606
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Angola — kaupunkilehti / Savanni ja sen joet: Ylänkö, josta viisi jokea saa alkunsa] Angolan keskiosaa hallitsee Bié-ylänkö, laaja ja sateinen tasanko noin 1500–1800 metrin korkeudessa merenpinnasta. Sen savannien alta kumpuavat viiden Afrikan suuren joen latvavedet: Kongo, Sambesi, Kuanza, Okavango ja Cunene. Tutkijat kutsuvat aluetta osuvasti Angolan ylängön vesitorniksi, sillä se on ainoa Okavango-suistoon virtaavan veden lähde – suisto tunnetaan nykyään Unescon maailmanperintökohteena Botswanassa. Sadekausi kestää syyskuusta huhtikuuhun, ja juuri tuolloin ylängön purot muuttuvat jokien alkulähteiksi.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Maailman suurin vesiverho] Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+AIEMPI KYSYMYS: Miksi Islannin sisämaassa ei ole kyliä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Islannin keskusta on korkeaa, ruskeaa [[ylänköä]], jossa ei ole kyliä lainkaan, ja sen päällä on [[jäätiköitä]]. Suurin niistä on kaakon [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä. Asutus on siksi keskittynyt kapealle kehälle rantojen tuntumaan, jossa korkokartallakin näkyy vihreää. Ylhäältä katsottuna se on kyl aika valkoinen maa.
+KYSYMYS: Kerro lisää: ylänköä
+
+### 607
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Luonto: Jääkenttä, joka ruokkii kymmeniä jäätiköitä] Eteläinen Patagonian jääkenttä on maailman toiseksi suurin yhtenäinen jääkenttä napa-alueiden ulkopuolella: noin 350 kilometriä pitkä ja 16 480 neliökilometriä, josta 14 200 on Chilen puolella. Se ruokkii kymmeniä jäätiköitä, joista Pío XI on 1 265 neliökilometrillään eteläisen pallonpuoliskon suurin Antarktiksen ulkopuolella. Reunalla on Torres del Painen kansallispuisto, perustettu 1959. Nimi on tehuelchen kieltä ja tarkoittaa sinistä; kävijöitä on noin 252 000 vuodessa, ja heistä yli puolet tulee ulkomailta.
+AIEMPI KYSYMYS: Miksi Islannin sisämaassa ei ole kyliä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Islannin keskusta on korkeaa, ruskeaa [[ylänköä]], jossa ei ole kyliä lainkaan, ja sen päällä on [[jäätiköitä]]. Suurin niistä on kaakon [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä. Asutus on siksi keskittynyt kapealle kehälle rantojen tuntumaan, jossa korkokartallakin näkyy vihreää. Ylhäältä katsottuna se on kyl aika valkoinen maa.
+KYSYMYS: Kerro lisää: jäätiköitä
+
+### 608
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+AIEMPI KYSYMYS: Miksi Islannin sisämaassa ei ole kyliä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Islannin keskusta on korkeaa, ruskeaa [[ylänköä]], jossa ei ole kyliä lainkaan, ja sen päällä on [[jäätiköitä]]. Suurin niistä on kaakon [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä. Asutus on siksi keskittynyt kapealle kehälle rantojen tuntumaan, jossa korkokartallakin näkyy vihreää. Ylhäältä katsottuna se on kyl aika valkoinen maa.
+KYSYMYS: Kerro lisää: Vatnajökull
+
+### 609
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, ”lakikalliolla”, josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+AIEMPI KYSYMYS: Mitä Þingvellirissä tapahtui vuonna 930?
+AIEMPI VASTAUS (Livia):
+Ai se. Þingvellirin rotkossa kokoontui vuonna 930 [[Alþingi]], islantilaisten yhteinen kansankokous, jonka perinne elää nykyisessä parlamentissa. Kokouspaikka sijaitsee alueella, jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan, joten rotko on syntynyt maankuoren liikkeistä. Nykyään parlamentti istuu [[Reykjavikissa]]. Parlamentti rotkossa, minusta ihan järkevä paikka.
+KYSYMYS: Kerro lisää: Alþingi
+
+### 610
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+AIEMPI KYSYMYS: Mitä Þingvellirissä tapahtui vuonna 930?
+AIEMPI VASTAUS (Livia):
+Ai se. Þingvellirin rotkossa kokoontui vuonna 930 [[Alþingi]], islantilaisten yhteinen kansankokous, jonka perinne elää nykyisessä parlamentissa. Kokouspaikka sijaitsee alueella, jossa Pohjois-Amerikan ja Euraasian [[mannerlaatat]] erkanevat toisistaan, joten rotko on syntynyt maankuoren liikkeistä. Nykyään parlamentti istuu [[Reykjavikissa]]. Parlamentti rotkossa, minusta ihan järkevä paikka.
+KYSYMYS: Kerro lisää: Reykjavikissa
+
+### 611
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti: Kieli, joka ei liikkunut] Islannin kieli on muuttunut niin vähän, että koululainen voi lukea 1200-luvun saagoja alkukielellä. Uusille asioille ei lainata sanoja vaan tehdään omat: tietokone on tölva, ”lukujen ennustaja”, ja kaikille islantilaisille tuttu sana yhtä lailla.
+AIEMPI KYSYMYS: Onko islannin kieli oikeasti muuttumaton tuhat vuotta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Islannin kieli on muuttunut poikkeuksellisen vähän: lähteiden mukaan se ei ole muuttunut tuhanteen vuoteen, ja nykyislantilaiset pystyvät lukemaan keskiaikaisia [[saagoja]] verraten vaivattomasti. Siihen on vaikuttanut saaren eristyneisyys sekä aktiivinen [[kielenhuolto]], jossa uusille asioille luodaan sanat mieluummin vanhoista aineksista kuin lainataan vieraita. Täysin muuttumattomasta kielestä ei silti voi puhua, sillä esimerkiksi ääntäminen on vaihtunut. Tuhat vuotta ja yhä samat sanat, siinä on kyl kyyhkyllekin opittavaa.
+KYSYMYS: Kerro lisää: saagoja
+
+### 612
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Kielen ja väen paluu] Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.
+- [Myanmar — maalehti / Kirjallisuus: Kivi, joka avasi kadonneen kielen] 1113 — Myazedin piirtokirjoitus vuodelta 1113 kertoo saman julistuksen neljällä kielellä: muinaisburmaksi, paliksi, muinaismoniksi ja pyuksi. Sveitsiläinen palintutkija Emanuel Forchhammer löysi kaksi lähes samanlaista pilaria 1886–1887 Myinkabasta Baganin liepeiltä; toinen niistä on 142 senttiä korkea, ja siinä on 39 riviä muinaisburmaa, 41 riviä palia, 33 riviä muinaismonia ja 26 riviä pyuta. Juuri tämä kivi avasi pyun kielen ja kirjoituksen tutkijoille. Teksti on lahjoitus, toivomus ja kirous: joka kohtelee kaltoin lahjoitettuja palvelijoita, ei saa nähdä tulevaa Buddhaa.
+AIEMPI KYSYMYS: Onko islannin kieli oikeasti muuttumaton tuhat vuotta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Islannin kieli on muuttunut poikkeuksellisen vähän: lähteiden mukaan se ei ole muuttunut tuhanteen vuoteen, ja nykyislantilaiset pystyvät lukemaan keskiaikaisia [[saagoja]] verraten vaivattomasti. Siihen on vaikuttanut saaren eristyneisyys sekä aktiivinen [[kielenhuolto]], jossa uusille asioille luodaan sanat mieluummin vanhoista aineksista kuin lainataan vieraita. Täysin muuttumattomasta kielestä ei silti voi puhua, sillä esimerkiksi ääntäminen on vaihtunut. Tuhat vuotta ja yhä samat sanat, siinä on kyl kyyhkyllekin opittavaa.
+KYSYMYS: Kerro lisää: kielenhuolto
+
+### 613
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+AIEMPI KYSYMYS: Miksi Islannissa julkaistaan niin paljon kirjoja?
+AIEMPI VASTAUS (Livia):
+Kato, kirjat on tässä maassa vakava asia. Lähteiden mukaan Islannissa julkaistaan kirjoja enemmän asukasta kohti kuin missään muualla, ja taustalla on vahva kertomaperinne, jonka juuret ovat keskiaikaisissa [[saagoissa]]. Tunnettu tapa on [[Jólabókaflóð]], jouluinen kirjatulva, jossa kirjoja annetaan lahjaksi jouluna ja uutuudet ilmestyvät syksyllä. En ole varma kaikista tavan yksityiskohdista. Kukaan ei tosin koskaan lahjoita minulle pullaa, vaan aina vain kirjoja.
+KYSYMYS: Kerro lisää: saagoissa
+
+### 614
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Kirjat: Joulun kirjatulva] Islannissa suurin osa vuoden kirjoista ilmestyy syksyllä, ja marraskuussa joka kotiin jaetaan luettelo, jossa ne kaikki ovat. Ilmiötä sanotaan nimellä jólabókaflóð, joulun kirjatulva. Kirja on tavallisin joululahja, ja se avataan jouluaattona — moni jää samana iltana lukemaan sängyssä suklaan kanssa. Asukasta kohti Islannissa julkaistaan enemmän kirjoja kuin missään muussa maassa, ja sanotaan että joka kymmenes islantilainen julkaisee elämänsä aikana kirjan.
+AIEMPI KYSYMYS: Miksi Islannissa julkaistaan niin paljon kirjoja?
+AIEMPI VASTAUS (Livia):
+Kato, kirjat on tässä maassa vakava asia. Lähteiden mukaan Islannissa julkaistaan kirjoja enemmän asukasta kohti kuin missään muualla, ja taustalla on vahva kertomaperinne, jonka juuret ovat keskiaikaisissa [[saagoissa]]. Tunnettu tapa on [[Jólabókaflóð]], jouluinen kirjatulva, jossa kirjoja annetaan lahjaksi jouluna ja uutuudet ilmestyvät syksyllä. En ole varma kaikista tavan yksityiskohdista. Kukaan ei tosin koskaan lahjoita minulle pullaa, vaan aina vain kirjoja.
+KYSYMYS: Kerro lisää: Jólabókaflóð
+
+### 615
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+AIEMPI KYSYMYS: Miten Islannissa lämmitetään talot?
+AIEMPI VASTAUS (Livia):
+Mmm— Islannissa suurin osa taloista lämmitetään [[geotermisellä energialla]] eli maanalaisella lämmöllä, ja kuumaa vettä johdetaan putkia pitkin suoraan taloihin. Taustalla on se, että saarella on toistasataa tulivuorta ja kuumia lähteitä, koska se sijaitsee mannerlaattojen rajalla. Osa sähköstäkin tuotetaan samalla [[maanalaisella lämmöllä]], ja perinteisesti kuumissa lähteissä on pesty myös pyykkiä. Lämmin talo, lämmin kyyhky, siinä on kyl tavoite.
+KYSYMYS: Kerro lisää: geotermisellä energialla
+
+### 616
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bagdad — kohdekartta / Kohdekartta: Abbasidipalatsi] Tigrisin itärannalla al-Rusafassa seisoo tiilirakennus, joka ajoitetaan 1100-luvun lopulle tai 1200-luvun alkuun. Sen käyttötarkoituksesta ei ole yksimielisyyttä. Osa tutkijoista, muun muassa irakilaiset Mustafa Jawad ja Yaqub Sarkis, pitää sitä kalifi al-Nasirin palatsina: andalusialainen matkaaja Ibn Jubayr kertoi nähneensä al-Nasirin nousevan veneestä palatsiinsa Tigrisin itärannan yläpäässä, ja vanhan kaupunginmuurin perustukset ovat yhä rakennuksen seinässä. Toiset lukevat sen madrasaksi, Sharabiyya-kouluksi, koska molemmissa kerroksissa on sivuhuoneita, jotka riittäisivät luokiksi. Kaiverrettua todistetta palatsista ei ole löytynyt, eivätkä aikalaislähteet mainitse koulua. Pohjakaava …
+- [Sudan — maalehti / Ruoka: Papuja, jotka on hauduttu yön yli] Nimi tarkoittaa haudattuja papuja: härkäpavut kiehuvat matalalla lämmöllä koko yön isossa metallikannussa, josta ne myös tarjoillaan aamulla. Päälle kaadetaan öljyä ja kuminaa ja lisätään maun mukaan valkosipulia, sipulia, sitruunaa, persiljaa tai chiliä. Ruoka on vanha: Nasaretin lähistön kivikautiselta paikalta on kaivettu esiin 2 600 kuivattua härkäpapua, ja Jerusalemin Talmud tuntee ruoan jo 300-luvulla. Keskiajan Kairossa fulin keitto oli erään korttelin asukkaiden yksinoikeus. Sudanissa se on aamiainen, joka syödään yhdessä samalta vadilta.
+- [male — kaupunkilehti / Satamasta teepöytään: Kirkas liemi ja tumma tahna] Garudhiya on kirkas kalaliemi, joka tehdään tavallisesti tonnikalasta. Rihaakuru taas on paksu, ruskea kastike, jota syntyy kalan käsittelyn yhteydessä liemen tiivistyessä. Niiden nimet kannattaa erottaa: sama tärkeä raaka-aine voi päätyä sekä juoksevaksi liemeksi että vahvaksi tahnaksi. Rihaakurua kuumennetaan miedolla lämmöllä, kunnes haihtuminen jättää jäljelle paksun seoksen.
+AIEMPI KYSYMYS: Miten Islannissa lämmitetään talot?
+AIEMPI VASTAUS (Livia):
+Mmm— Islannissa suurin osa taloista lämmitetään [[geotermisellä energialla]] eli maanalaisella lämmöllä, ja kuumaa vettä johdetaan putkia pitkin suoraan taloihin. Taustalla on se, että saarella on toistasataa tulivuorta ja kuumia lähteitä, koska se sijaitsee mannerlaattojen rajalla. Osa sähköstäkin tuotetaan samalla [[maanalaisella lämmöllä]], ja perinteisesti kuumissa lähteissä on pesty myös pyykkiä. Lämmin talo, lämmin kyyhky, siinä on kyl tavoite.
+KYSYMYS: Kerro lisää: maanalaisella lämmöllä
+
+### 617
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Saaren suurin nisäkäs on lammas] Kyproksenmufloni on villilammas, jota ei tavata missään muualla. Se on elänyt saarella yli 8 000 vuotta, ja sen uskotaan polveutuvan kotieläimestä, jonka saaren ensimmäiset asukkaat toivat mukanaan. Uros painaa jopa viisikymmentä kiloa ja naaras noin kolmekymmentäviisi, ja sirppimäiset sarvet kasvavat vain uroksille. Kun mesopotamiankuusipeura hävisi saarelta, muflonista tuli suurin maalla elävä nisäkäs. Vuonna 1930 eläimiä oli kahdessa laumassa runsaat kaksikymmentä kummassakin, ja vuonna 1937 toinen laumoista katosi kokonaan. Metsästyslakia tiukennettiin 1938 ja Pafoksen metsä rauhoitettiin. Kanta on siitä lähtien noussut, ja viranomaiset ilmoittavat nyt yli kolmetuhatta yksilöä — tarkin …
+- [Algeria — maalehti / Luonto: Lammas, joka hyppää kaksi metriä] Harjalammas eli aoudad on Pohjois-Afrikan vuorten oma sorkkaeläin, jota tavataan Algeriasta Egyptiin ja etelään Malin ja Nigerin puolelle. Säkäkorkeus on 75–110 senttimetriä ja paino 30–145 kiloa; sarvet kaartuvat ulos, taakse ja sisään ja voivat kasvaa yli seitsemänkymmenen sentin mittaisiksi. Nimensä se on saanut kurkusta ja rinnasta riippuvasta pitkästä karvatupsusta. Eläin saa tarvitsemansa veden ravinnosta, lepää päivän kuumuudessa ja liikkuu aamuin illoin, ja vaaran uhatessa se pakenee ylämäkeen — paikaltaan se hyppää yli kahden metrin korkeuteen.
+AIEMPI KYSYMYS: Mitä Islannissa syödään perinteisesti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Islannin perinteiseen ruokaan kuuluvat kala ja [[lammas]], ja tunnettuja erikoisuuksia ovat [[skyr]], paksu hapanmaitotuote, sekä [[hákarl]], hapatettu ja kuivattu hai. Hákarl on makuasia, ja monet vierailijat pitävät sitä haastavana. En ole varma kaikista alueellisista eroista. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: lammas
+
+### 618
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+AIEMPI KYSYMYS: Mitä Islannissa syödään perinteisesti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Islannin perinteiseen ruokaan kuuluvat kala ja [[lammas]], ja tunnettuja erikoisuuksia ovat [[skyr]], paksu hapanmaitotuote, sekä [[hákarl]], hapatettu ja kuivattu hai. Hákarl on makuasia, ja monet vierailijat pitävät sitä haastavana. En ole varma kaikista alueellisista eroista. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: skyr
+
+### 619
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+AIEMPI KYSYMYS: Mitä Islannissa syödään perinteisesti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Islannin perinteiseen ruokaan kuuluvat kala ja [[lammas]], ja tunnettuja erikoisuuksia ovat [[skyr]], paksu hapanmaitotuote, sekä [[hákarl]], hapatettu ja kuivattu hai. Hákarl on makuasia, ja monet vierailijat pitävät sitä haastavana. En ole varma kaikista alueellisista eroista. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: hákarl
+
+### 620
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Rivi tulivuoria luultiin kaivosjätteeksi] 1750-luku — Auvergnessa kohoaa neljänkymmenen kilometrin matkalla yli seitsemänkymmentä tulivuorta peräkkäin: 48 kuonakartiota, kahdeksan laavakupolia ja viisitoista räjähdyskraatteria. Korkein on Puy de Dôme, 1 465 metriä. Vielä 1700-luvun puoliväliin asti kummuista kiisteltiin: monet pitivät niitä ihmisen kasaamina kaivoskasoina tai roomalaisten sulattouuneina, kunnes tutkijat tunnistivat ne tulivuoriksi. Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. Alue pääsi Unescon maailmanperintöluetteloon 2018.
+- [Guatemala — maalehti / Luonto: Väli-Amerikan korkein vuoristo ilman tulivuoria] Sierra de los Cuchumatanes Länsi-Guatemalassa on Väli-Amerikan korkein vuoristo, jossa ei ole yhtään tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja kattaa noin 16 350 neliökilometriä; siitä 1 500 neliökilometriä on yli kolmen kilometrin korkeudessa, mikä tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on karstia ja sedimenttikiveä mesotsooiselta liitukaudelta. Nimi tulee mamin sanoista cuchuj ja matán, ”se joka koottiin ylivoimalla”.
+AIEMPI KYSYMYS: Miksi Islantia kutsutaan tulen ja jään maaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimitys johtuu siitä, että samalla saarella on sekä [[tulivuoria]] että [[jäätiköitä]]. Saarella on toistasataa tulivuorta ja kuumaa lähdettä, koska se istuu mannerlaattojen rajalla, ja kaakossa kohoaa [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta. Tuli ja jää asuvat siis lähes vierekkäin. Tuli ja jää, ja minä siinä välissä ilman villapaitaa.
+KYSYMYS: Kerro lisää: tulivuoria
+
+### 621
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Luonto: Jääkenttä, joka ruokkii kymmeniä jäätiköitä] Eteläinen Patagonian jääkenttä on maailman toiseksi suurin yhtenäinen jääkenttä napa-alueiden ulkopuolella: noin 350 kilometriä pitkä ja 16 480 neliökilometriä, josta 14 200 on Chilen puolella. Se ruokkii kymmeniä jäätiköitä, joista Pío XI on 1 265 neliökilometrillään eteläisen pallonpuoliskon suurin Antarktiksen ulkopuolella. Reunalla on Torres del Painen kansallispuisto, perustettu 1959. Nimi on tehuelchen kieltä ja tarkoittaa sinistä; kävijöitä on noin 252 000 vuodessa, ja heistä yli puolet tulee ulkomailta.
+AIEMPI KYSYMYS: Miksi Islantia kutsutaan tulen ja jään maaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimitys johtuu siitä, että samalla saarella on sekä [[tulivuoria]] että [[jäätiköitä]]. Saarella on toistasataa tulivuorta ja kuumaa lähdettä, koska se istuu mannerlaattojen rajalla, ja kaakossa kohoaa [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta. Tuli ja jää asuvat siis lähes vierekkäin. Tuli ja jää, ja minä siinä välissä ilman villapaitaa.
+KYSYMYS: Kerro lisää: jäätiköitä
+
+### 622
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+AIEMPI KYSYMYS: Miksi Islantia kutsutaan tulen ja jään maaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimitys johtuu siitä, että samalla saarella on sekä [[tulivuoria]] että [[jäätiköitä]]. Saarella on toistasataa tulivuorta ja kuumaa lähdettä, koska se istuu mannerlaattojen rajalla, ja kaakossa kohoaa [[Vatnajökull]], joka peittää noin kahdeksan prosenttia maasta. Tuli ja jää asuvat siis lähes vierekkäin. Tuli ja jää, ja minä siinä välissä ilman villapaitaa.
+KYSYMYS: Kerro lisää: Vatnajökull
+
+### 623
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Milloin Italia yhdistyi yhdeksi valtioksi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on lyhyt vastaus. Yhtenäinen Italia syntyi vuonna 1861, kun maa yhdistyi kuningaskunnaksi. Sitä ennen niemimaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja [[kaupunkivaltioita]]. Yhdistymisessä keskeinen hahmo oli punapaitainen sissipäällikkö [[Giuseppe Garibaldi]], joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen kuninkaalle. Alle kaksi sataa vuotta on kyl lyhyt aika Rooman rinnalla.
+KYSYMYS: Kerro lisää: kaupunkivaltioita
+
+### 624
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+AIEMPI KYSYMYS: Milloin Italia yhdistyi yhdeksi valtioksi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on lyhyt vastaus. Yhtenäinen Italia syntyi vuonna 1861, kun maa yhdistyi kuningaskunnaksi. Sitä ennen niemimaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja [[kaupunkivaltioita]]. Yhdistymisessä keskeinen hahmo oli punapaitainen sissipäällikkö [[Giuseppe Garibaldi]], joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen kuninkaalle. Alle kaksi sataa vuotta on kyl lyhyt aika Rooman rinnalla.
+KYSYMYS: Kerro lisää: Giuseppe Garibaldi
+
+### 625
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Miksi Italiassa puhutaan niin monia murteita?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuosisatoja maa oli itsenäisten [[kaupunkivaltioiden]] ja pienten valtioiden joukko, ja jokaisella seudulla kehittyi oma puhetapansa. Kun yhtenäinen Italia syntyi vuonna 1861, vain harva osasi yhteistä italiaa, ja kieli opittiin vasta koulusta, radiosta ja televisiosta. Edelleen [[murteet]], ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Kyyhky kuulee ne kaikki, mutta ymmärtää vain osan.
+KYSYMYS: Kerro lisää: kaupunkivaltioiden
+
+### 626
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+AIEMPI KYSYMYS: Miksi Italiassa puhutaan niin monia murteita?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuosisatoja maa oli itsenäisten [[kaupunkivaltioiden]] ja pienten valtioiden joukko, ja jokaisella seudulla kehittyi oma puhetapansa. Kun yhtenäinen Italia syntyi vuonna 1861, vain harva osasi yhteistä italiaa, ja kieli opittiin vasta koulusta, radiosta ja televisiosta. Edelleen [[murteet]], ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Kyyhky kuulee ne kaikki, mutta ymmärtää vain osan.
+KYSYMYS: Kerro lisää: murteet
+
+### 627
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Miltä Italian pohjoisosa näyttää verrattuna etelään?
+AIEMPI VASTAUS (Livia):
+No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot, tehtaat ja suurin osa sateista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja saappaan kärjessä [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.
+KYSYMYS: Kerro lisää: Alpeilta
+
+### 628
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [null — kohdekartta / Kohdekartta: Djoué-joen suu] Luonnonympäristö Djoué on Kongojoen oikeanpuoleinen sivujoki, joka kulkee Brazzavillen länsiosassa. Se laskee Kongoon Kintamon koskien luona. Jokisuun ympäristö kuuluu Congo-Djouén kosteikkoalueeseen. Kosteikkoihin kuuluu pysyviä ja tilapäisiä vesiuomia, soita ja metsäisiä saaria. Ne tarjoavat lisääntymisympäristöjä kaloille ja selkärangattomille. Alueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä.
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Miltä Italian pohjoisosa näyttää verrattuna etelään?
+AIEMPI VASTAUS (Livia):
+No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot, tehtaat ja suurin osa sateista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja saappaan kärjessä [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.
+KYSYMYS: Kerro lisää: Po-joen
+
+### 629
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [null — kohdekartta / Kohdekartta: Monte Titano] UNESCO 2008 Monte Titano on Apenniinien kalkkikivinen kallioharjanne noin 10–13 kilometrin päässä Adrianmerestä. Vuoren korkeus on noin 740 metriä. Sillä on kolme huippua, ja kullakin on torni. San Marino: Historic Centre and Mount Titano merkittiin UNESCOn maailmanperintöluetteloon vuonna 2008. Alueen koko on 55 hehtaaria ja suoja-alueen 167 hehtaaria. Perusteluna on vapaan tasavallan jatkuvuus keskiajalta. UNESCO-asemaa ei vuonna 1873 vielä ollut. Rinteiltä on löydetty kalojen ja erityisesti haiden hampaiden fossiileja, osa mioseenikaudelta. Kasvillisuuteen kuuluvat kastanja, tammi, sypressi ja pihta, ja eläimiä ovat metsäkauris, villisika, jänis ja kettu. Italialaiset kutsuvat huippua Mo…
+AIEMPI KYSYMYS: Miltä Italian pohjoisosa näyttää verrattuna etelään?
+AIEMPI VASTAUS (Livia):
+No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot, tehtaat ja suurin osa sateista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja saappaan kärjessä [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.
+KYSYMYS: Kerro lisää: Apenniinien
+
+### 630
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Sahara: Sammuneet tulivuoret keskellä aavikkoa] Keskellä Algerian aavikkoa kohoaa Ahaggarin eli Hoggarin vuoristo, jonka huippu Tahat nousee 2 908 metriin – Algerian korkein kohta. Osa jyrkistä huipuista, kuten Ilamen, on sammuneiden tulivuorten eroosion paljastamia syöttökanavia, ja peruskallio on lähes kaksi miljardia vuotta vanhaa. Yöt ovat vuoristossa kylmiä, toisinaan pakkasen puolella, vaikka ympäröivä aavikko hehkuu päivällä kuumuudesta. Alue on vuosisatoja ollut Kel Ahaggar -tuaregien kotiseutua ja yksi Saharan harvoista paikoista, joissa erikoistunut linnusto on säilynyt muuttuvassa ilmastossa.
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele] Havaijin saaret ovat syntyneet keskellä Tyynenmeren laattaa kytevän kuuman pisteen työstä, ja saariketjun eteläisin jättiläinen pursuaa yhä tulista kiveä – paikka, jossa vanhat havaijilaiset tarinat ja nykyinen geologia kohtaavat.
+- [Managua — kaupunkilehti / Järvi ja tulivuoret] Managuan ympärillä maa on elossa: kaupunki lepää järven rannalla ja tulivuorten varjossa, ja sen alla kytee sama voima, joka tasaisin väliajoin ravistelee sitä. Täältä löytyvät järvi, kraatteri ja kaksi tulivuorta.
+- [Kamtšatka — kaupunkilehti / Tulivuoret] Kamtšatkalla on satoja tulivuoria, ja niistä yli kaksikymmentä on toimivia. Niemimaa kuuluu Tyynenmeren tulirenkaaseen: Tyynenmeren laatta painuu täällä Euraasian laatan alle noin kahdeksan senttimetriä vuodessa.
+AIEMPI KYSYMYS: Miltä Italian pohjoisosa näyttää verrattuna etelään?
+AIEMPI VASTAUS (Livia):
+No jopas. Pohjoisessa maa alkaa [[Alpeilta]] ja laskeutuu laakeaan [[Po-joen]] laaksoon, jossa sijaitsevat maan pellot, tehtaat ja suurin osa sateista. Sieltä etelään kulkee [[Apenniinien]] vuoristoselkäranka aina Sisiliaan asti, ja saappaan kärjessä [[tulivuoret]] ovat yhä hereillä. Myös murteet, ruoat ja tavat vaihtuvat laaksosta toiseen. Ylhäältä se näyttää kyl yhdeltä saappaalta.
+KYSYMYS: Kerro lisää: tulivuoret
+
+### 631
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Supplì soi kuin puhelin] 1847 — Supplì on soikea riisikroketti: tomaattista risottoa, mozzarellan pala keskellä, korppujauhoa ympärillä ja kiehuvaa öljyä. Kun kuuman supplìn katkaisee kahtia, sulanut juusto venyy puolikkaiden väliin pitkäksi langaksi. Se muistutti roomalaisia vanhan puhelimen johdosta, ja siitä tuli nimi supplì al telefono. Sana supplì itsessään on väännös ranskan sanasta surprise, yllätys, ja roomalaiselta ruokalistalta se löytyy jo vuodelta 1847.
+AIEMPI KYSYMYS: Mitä Italian ruoasta kannattaa tietää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Italiassa ruoka vaihtelee alueittain, sillä maa oli vuosisatoja pienten valtioiden tilkkutäkki, ja jokaisella seudulla on omat erikoisuutensa. Pohjoisessa suositaan esimerkiksi [[risottoa]], ja pizzan kotikaupunkina pidetään [[Napolia]]. Leivonnaisten puolella tunnetaan jouluna syötävä [[panettone]] sekä Roomassa suosittu maritozzo. Pullaksi sanon vain, että maritozzo on minun suosikkini.
+KYSYMYS: Kerro lisää: risottoa
+
+### 632
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+AIEMPI KYSYMYS: Mitä Italian ruoasta kannattaa tietää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Italiassa ruoka vaihtelee alueittain, sillä maa oli vuosisatoja pienten valtioiden tilkkutäkki, ja jokaisella seudulla on omat erikoisuutensa. Pohjoisessa suositaan esimerkiksi [[risottoa]], ja pizzan kotikaupunkina pidetään [[Napolia]]. Leivonnaisten puolella tunnetaan jouluna syötävä [[panettone]] sekä Roomassa suosittu maritozzo. Pullaksi sanon vain, että maritozzo on minun suosikkini.
+KYSYMYS: Kerro lisää: Napolia
+
+### 633
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+AIEMPI KYSYMYS: Mitä Italian ruoasta kannattaa tietää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Italiassa ruoka vaihtelee alueittain, sillä maa oli vuosisatoja pienten valtioiden tilkkutäkki, ja jokaisella seudulla on omat erikoisuutensa. Pohjoisessa suositaan esimerkiksi [[risottoa]], ja pizzan kotikaupunkina pidetään [[Napolia]]. Leivonnaisten puolella tunnetaan jouluna syötävä [[panettone]] sekä Roomassa suosittu maritozzo. Pullaksi sanon vain, että maritozzo on minun suosikkini.
+KYSYMYS: Kerro lisää: panettone
+
+### 634
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Historia: Vatikaanin vanki] Rooman valtaus kesti yhden aamupäivän. Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870, ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko Porta Pian viereen; siitä joukot virtasivat kaupunkiin, ja Pietarinkirkon kupoliin nostettiin valkoinen lippu. Paaville tarjottiin omaa pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin eikä poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen vuotta 1929. Pietarinaukiolle …
+- [Rooma — kohdekartta / Kohdekartta: Vatikaanin palatsi] Rooman valtaus kesti yhden aamupäivän. Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870, ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko Porta Pian viereen; siitä joukot virtasivat kaupunkiin, ja Pietarinkirkon kupoliin nostettiin valkoinen lippu. Paaville tarjottiin omaa pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin eikä poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen vuotta 1929. Pietarinaukiolle …
+- [Rooma — kaupunkilehti / Historian hetki] Vatikaanin kappelin holvin alla seisoi vuonna 1510 kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti päivän laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.
+AIEMPI KYSYMYS: Mitkä valtiot ovat Italian rajojen sisällä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Italian rajojen sisäpuolella on kaksi omaa valtiota, [[Vatikaani]] ja [[San Marino]]. Vatikaani sijaitsee Rooman keskellä, ja San Marino sijaitsee Apenniinien rinteillä. Italiassa on lisäksi enemmän [[Unescon]] maailmanperintökohteita kuin missään muussa maassa. Kaksi valtiota yhden sisällä, ja minä lennän niiden yli kysymättä lupaa.
+KYSYMYS: Kerro lisää: Vatikaani
+
+### 635
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [sanmarino — kaupunkilehti / San Marino] San Marinon kaupunki nojaa Monte Titanon rinteeseen, ja vuoren kolmea huippua kruunaavat tornit näkyvät kaupungin yli. Pienen tasavallan pääkaupunki on perimätiedon mukaan perustettu vuonna 301, ja sen historiallinen keskusta kuuluu UNESCOn maailmanperintöön.
+AIEMPI KYSYMYS: Mitkä valtiot ovat Italian rajojen sisällä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Italian rajojen sisäpuolella on kaksi omaa valtiota, [[Vatikaani]] ja [[San Marino]]. Vatikaani sijaitsee Rooman keskellä, ja San Marino sijaitsee Apenniinien rinteillä. Italiassa on lisäksi enemmän [[Unescon]] maailmanperintökohteita kuin missään muussa maassa. Kaksi valtiota yhden sisällä, ja minä lennän niiden yli kysymättä lupaa.
+KYSYMYS: Kerro lisää: San Marino
+
+### 636
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+AIEMPI KYSYMYS: Mitkä valtiot ovat Italian rajojen sisällä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Italian rajojen sisäpuolella on kaksi omaa valtiota, [[Vatikaani]] ja [[San Marino]]. Vatikaani sijaitsee Rooman keskellä, ja San Marino sijaitsee Apenniinien rinteillä. Italiassa on lisäksi enemmän [[Unescon]] maailmanperintökohteita kuin missään muussa maassa. Kaksi valtiota yhden sisällä, ja minä lennän niiden yli kysymättä lupaa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 637
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Lagos: Savilautanen, joka upposi laguuniin] Laguunin vanhimmat asukkaat olivat kalastajia, ja aworit saapuivat 1400-luvulla Ogun-jokea alas sotaa pakoon. Perimätiedon mukaan heidän hallitsijansa Olofin sai Oduduwalta savilautasen ja ohjeen laskea se jokeen ja asettua sinne, mihin se uppoaa; lautanen ajelehti alavirtaan ja upposi Lagosin laguuniin. Olofin jakoi saaren kymmenen poikansa kesken, ja yksi heistä, Aromire, istutti viereiselle saarelle pippuria. Samalle paikalle rakennettiin myöhemmin Lagosin oban palatsi, ja siksi sen nimi Iga Idunganran tarkoittaa kirjaimellisesti pippuripellon palatsia. Kaupan painopiste siirtyi Isheristä Ebute-Mettaan, sitten Iddoon ja lopulta Ekon saarelle.
+AIEMPI KYSYMYS: Miten Venetsia on rakennettu veden päälle?
+AIEMPI VASTAUS (Livia):
+Ai tota. Venetsia on rakennettu 126 saarelle matalaan [[laguuniin]], ja talot seisovat pohjamutaan lyötyjen [[puupaalujen]] varassa. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin. Paalujen kestävyys selitetään yleensä sillä, että ne ovat vedessä, jossa happea on vähän, mutta en ole varma kaikista yksityiskohdista. Minä en kyl nostaisi taloa veteen, mutta ei minulta kysytty.
+KYSYMYS: Kerro lisää: laguuniin
+
+### 638
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Luonto: Turvetta kaivaessa löytyi kokonainen kivikausi] 1875 — Kaksi vuotta isoisän matkan jälkeen, vuonna 1875, suomologi Karel Dežman löysi Ljubljanan suolta ensimmäiset merkit paalukylistä turvetta kaivaessaan. Myöhemmät kaivaukset paljastivat, että ihmiset olivat asuttaneet suon reunoja jo noin 4600–2000 eaa.: he rakensivat mökkinsä puupaalujen varaan veden ja kosteuden yläpuolelle. Ljubljanan suon paalukylät kuuluvat nykyään Unescon Alppien ympäristön esihistoriallisten paalukylien maailmanperintökohteeseen yhdessä satojen muiden löytöpaikkojen kanssa kuudessa maassa.
+- [Amsterdam — kohdekartta / Kohdekartta: Herengracht 537] Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.
+- [Amsterdam — kaupunkilehti / Vesi] Koko kaupunki seisoo puupaalujen varassa mudassa — ja monet talot kallistuvat kadulle, koska laki vaati sitä.
+AIEMPI KYSYMYS: Miten Venetsia on rakennettu veden päälle?
+AIEMPI VASTAUS (Livia):
+Ai tota. Venetsia on rakennettu 126 saarelle matalaan [[laguuniin]], ja talot seisovat pohjamutaan lyötyjen [[puupaalujen]] varassa. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin. Paalujen kestävyys selitetään yleensä sillä, että ne ovat vedessä, jossa happea on vähän, mutta en ole varma kaikista yksityiskohdista. Minä en kyl nostaisi taloa veteen, mutta ei minulta kysytty.
+KYSYMYS: Kerro lisää: puupaalujen
+
+### 639
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+AIEMPI KYSYMYS: Millainen valtio Venetsian tasavalta oli?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä riittää kerrottavaa. Venetsia oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, siis lähes vuosituhannen, ja siitä käytettiin nimeä [[La Serenissima]]. Sen laivat hallitsivat idänkauppaa, ja vauraus näkyy yhä Pyhän Markuksen torilla basilikan kultamosaiikeissa ja [[dogen palatsin]] kaaririvistössä. Itsenäisyys päättyi [[Napoleoniin]], ja vuonna 1866 Venetsiasta tuli osa Italiaa. Tuhat vuotta tasavaltaa, siinä on kyl kyyhkyllekin sulateltavaa.
+KYSYMYS: Kerro lisää: La Serenissima
+
+### 640
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Dogen palatsi] Kun isoisäsi käveli täällä, kaupunki oli ollut Italiaa seitsemän vuotta. Sitä ennen se oli ollut Itävallan keisarikunnan osa vuodesta 1815 asti, ja vaihdos tapahtui papereilla: elokuussa 1866 Itävalta luovutti alueen Ranskalle sillä ehdolla, että Ranska luovuttaa sen Italian kuninkaalle sitten kun asukkailta on kysytty. Kysyminen tapahtui sunnuntaina 21. ja maanantaina 22. lokakuuta 1866. Äänet laskettiin viikkoa myöhemmin dogen palatsin laskuhuoneessa, ja tulos luettiin ensin salissa ja sitten palatsin parvekkeelta. Sen jälkeen alkoi se osa, joka olisi pitänyt isoisäsi hereillä. Kaikkia ääniä ei ollut ehditty laskea: Rovigon piirin kunnista puuttui yli viisituhatta ääntä ja siirtolaisilta …
+AIEMPI KYSYMYS: Millainen valtio Venetsian tasavalta oli?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä riittää kerrottavaa. Venetsia oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, siis lähes vuosituhannen, ja siitä käytettiin nimeä [[La Serenissima]]. Sen laivat hallitsivat idänkauppaa, ja vauraus näkyy yhä Pyhän Markuksen torilla basilikan kultamosaiikeissa ja [[dogen palatsin]] kaaririvistössä. Itsenäisyys päättyi [[Napoleoniin]], ja vuonna 1866 Venetsiasta tuli osa Italiaa. Tuhat vuotta tasavaltaa, siinä on kyl kyyhkyllekin sulateltavaa.
+KYSYMYS: Kerro lisää: dogen palatsin

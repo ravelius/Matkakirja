@@ -1,0 +1,1475 @@
+### 1041
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Tornin kulmassa on sarvikuono] Belémin torni valmistui 1519 vartioimaan joensuuta. Sen vartiotornien juurella on kiveen hakattuja eläimenpäitä, ja yksi niistä on sarvikuono — sitä pidetään ensimmäisenä sarvikuonoveistoksena Länsi-Euroopan taiteessa. Malli oli elävä: Intiasta tuotu sarvikuono saapui Lissaboniin 20. toukokuuta 1515. Kuningas Manuel I lähetti sen lahjaksi paaville, mutta laiva haaksirikkoutui Italian rannikolla ja kannelle kahlittu eläin hukkui. Albrecht Dürer teki siitä kuuluisan puupiirroksen näkemättä eläintä koskaan.
+- [Granada — kohdekartta / Kohdekartta: Manuel de Fallan talo] 1921–1939 Aivan Alhambran kupeessa seisoo vaatimaton huvila, josta avautuu näkymä koko Granadaan. Siellä asui vuosina 1921–1939 säveltäjä Manuel de Falla, yksi Espanjan tunnetuimmista muusikoista - ja juuri tässä talossa hän sävelsi osan kuuluisimmista teoksistaan. Vuonna 1922 Falla järjesti Concurso de Cante Jondo -nimisen laulukilpailun, joka nosti Andalusian perinteisen flamencolaulun suuren yleisön tietoisuuteen. Falla asui talossa koko tämän luovan kautensa ajan, kunnes Espanjan sisällissota pakotti hänet lähtemään maasta vuonna 1939 - hän ei koskaan palannut Granadaan. Fallan lähdön jälkeen hänen huvilansa säilytettiin sellaisena kuin hän sen jätti, ja siitä tehtiin museo, joka kertoo…
+AIEMPI KYSYMYS: Miksi Belémin tornin kulmassa on kivinen sarvikuono?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Belémin torni valmistui 1500-luvun alussa Tejo-joen rannalle, ja sen yhteydessä mainitaan usein [[kuningas Manuel I]]. Tornin kulmaan on veistetty sarvikuono, joka muistuttaa vuoden 1515 tapahtumasta: Manuel sai Intiasta elävän sarvikuonon ja lähetti sen paaville lahjaksi, ja eläin hukkui laivan haaksirikossa. [[Albrecht Dürerin]] puupiirros eläimestä levisi Euroopassa laajalle, vaikka Dürer ei tiettävästi koskaan nähnyt sitä itse. Yksityiskohdat vaihtelevat lähteittäin, joten en lupaa kaikkea. Sarvikuono on kai ainoa kivinen vieras, jonka minä jaksan katsoa pitkään.
+KYSYMYS: Kerro lisää: kuningas Manuel I
+
+### 1042
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Tornin kulmassa on sarvikuono] Belémin torni valmistui 1519 vartioimaan joensuuta. Sen vartiotornien juurella on kiveen hakattuja eläimenpäitä, ja yksi niistä on sarvikuono — sitä pidetään ensimmäisenä sarvikuonoveistoksena Länsi-Euroopan taiteessa. Malli oli elävä: Intiasta tuotu sarvikuono saapui Lissaboniin 20. toukokuuta 1515. Kuningas Manuel I lähetti sen lahjaksi paaville, mutta laiva haaksirikkoutui Italian rannikolla ja kannelle kahlittu eläin hukkui. Albrecht Dürer teki siitä kuuluisan puupiirroksen näkemättä eläintä koskaan.
+AIEMPI KYSYMYS: Miksi Belémin tornin kulmassa on kivinen sarvikuono?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Belémin torni valmistui 1500-luvun alussa Tejo-joen rannalle, ja sen yhteydessä mainitaan usein [[kuningas Manuel I]]. Tornin kulmaan on veistetty sarvikuono, joka muistuttaa vuoden 1515 tapahtumasta: Manuel sai Intiasta elävän sarvikuonon ja lähetti sen paaville lahjaksi, ja eläin hukkui laivan haaksirikossa. [[Albrecht Dürerin]] puupiirros eläimestä levisi Euroopassa laajalle, vaikka Dürer ei tiettävästi koskaan nähnyt sitä itse. Yksityiskohdat vaihtelevat lähteittäin, joten en lupaa kaikkea. Sarvikuono on kai ainoa kivinen vieras, jonka minä jaksan katsoa pitkään.
+KYSYMYS: Kerro lisää: Albrecht Dürerin
+
+### 1043
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+AIEMPI KYSYMYS: Miksi Lissabonin keltaiset raitiovaunut ovat niin kuuluisia?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nämä tunnistaa kyllä ylhäältä. Lissabon on rakennettu jyrkille kukkuloille, joten pienet keltaiset raitiovaunut kulkevat kapeita ja mäkisiä katuja, esimerkiksi vanhassa [[Alfamassa]]. Raitiotieliikenne alkoi kaupungissa hevosvetoisena 1870-luvulla, ja sähköraitiovaunut tulivat myöhemmin. Kuuluisin on [[linja 28]], joka kiipeää ja laskeutuu kaupungin vanhimpien kortteleiden läpi ja on suosittu matkailijoiden keskuudessa. Hevosista vaunuihin on pitkä matka, mutta siitä ei tarvitse itkeä. Meikäläisen kannalta paras kyyti on siivin.
+KYSYMYS: Kerro lisää: Alfamassa
+
+### 1044
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+AIEMPI KYSYMYS: Miksi Lissabonin keltaiset raitiovaunut ovat niin kuuluisia?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nämä tunnistaa kyllä ylhäältä. Lissabon on rakennettu jyrkille kukkuloille, joten pienet keltaiset raitiovaunut kulkevat kapeita ja mäkisiä katuja, esimerkiksi vanhassa [[Alfamassa]]. Raitiotieliikenne alkoi kaupungissa hevosvetoisena 1870-luvulla, ja sähköraitiovaunut tulivat myöhemmin. Kuuluisin on [[linja 28]], joka kiipeää ja laskeutuu kaupungin vanhimpien kortteleiden läpi ja on suosittu matkailijoiden keskuudessa. Hevosista vaunuihin on pitkä matka, mutta siitä ei tarvitse itkeä. Meikäläisen kannalta paras kyyti on siivin.
+KYSYMYS: Kerro lisää: linja 28
+
+### 1045
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+AIEMPI KYSYMYS: Miksi Lissabonin suuri silta on nimetty 25. huhtikuuta mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Silta ylittää Tejo-joen, ja se avattiin 1960-luvulla, jolloin sillä oli toinen nimi. Silta sai nykyisen nimensä 25. huhtikuuta 1974 tapahtuneen vallankumouksen mukaan, jolloin sotilaat kaatoivat pitkään jatkuneen diktatuurin. Vallankumousta kutsutaan [[neilikkavallankumoukseksi]], koska ihmiset ja sotilaat kiinnittivät neilikoita aseidensa piippuihin. Sillan toisella puolella kohoaa [[Cristo Rei]] -patsas. Tarkat päivämäärät olen tarkistanut kahdesti, ja kyl ne täsmää.
+KYSYMYS: Kerro lisää: neilikkavallankumoukseksi
+
+### 1046
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lissabon
+Maa, jossa pelaaja on: Portugali
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lissabon (kaupunki)
+Tietoruudun teksti: Lissabon on Portugalin pääkaupunki ja Manner-Euroopan läntisin. Se on rakennettu kukkuloille Tejo-joen pohjoisrannalle kohtaan, jossa joki levenee lähes merenlahdeksi mutta avomerelle on vain viitisentoista kilometriä; juuri siksi kaupunki on tässä, sillä satama oli suojaisa. Asukkaita on noin 550 000 ja koko seudulla lähes kolme miljoonaa.
+
+Lissabon oli purjehdusten pääkaupunki: Vasco da Gama lähti täältä 1497 ja avasi eurooppalaisille meritien Afrikan ympäri Intiaan. Jokisatamaan purettiin sadan vuoden ajan pippuria, kanelia ja kultaa, ja samoilla laivoilla tuotiin Afrikasta orjuutettuja ihmisiä. Kaikki muuttui 1. marraskuuta 1755, kun maanjäristys, hyökyaalto ja tulipalo hävittivät suurimman osan keskustasta.
+
+Uusi alakaupunki Baixa vedettiin viivoittimella ruudukkoon, ja talojen sisään piilotettiin puinen ristikkohäkki, joka joustaa järistyksessä. Ruudukon molemmin puolin kadut kiip…
+Isoisän matkakirjamerkintä: Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Tasainen maa loppuu yhdeksässä kilometrissä] Dili on Timorin pohjoisrannikolla pienellä tasaisen maan alueella, jota vuoret ympäröivät. Kaupungin ydin on alle sadan metrin korkeudessa. Kaupunkialue ulottuu neljään hallintopostiin — Cristo Rei, Dom Aleixo, Nain Feto ja Vera Cruz — ja niiden kahdeksantoista kaupunkimaisen sucon yhteispinta-ala on 17 862 hehtaaria. Siitä vain noin 37 prosenttia eli 6 698 hehtaaria on riittävän tasaista rakentamiseen, ja vuoteen 2014 mennessä siitä oli rakennettu neljännes. Comoro-joki virtaa kaupungin länsiosan läpi, ja sen valuma-alue ulottuu yhdeksän kilometrin päähän sisämaahan, missä vuoret ovat jo yhdeksänsataa metriä korkeita. Joen yli vie koko kaupungissa kaksi ajoneuvosiltaa.
+AIEMPI KYSYMYS: Miksi Lissabonin suuri silta on nimetty 25. huhtikuuta mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Silta ylittää Tejo-joen, ja se avattiin 1960-luvulla, jolloin sillä oli toinen nimi. Silta sai nykyisen nimensä 25. huhtikuuta 1974 tapahtuneen vallankumouksen mukaan, jolloin sotilaat kaatoivat pitkään jatkuneen diktatuurin. Vallankumousta kutsutaan [[neilikkavallankumoukseksi]], koska ihmiset ja sotilaat kiinnittivät neilikoita aseidensa piippuihin. Sillan toisella puolella kohoaa [[Cristo Rei]] -patsas. Tarkat päivämäärät olen tarkistanut kahdesti, ja kyl ne täsmää.
+KYSYMYS: Kerro lisää: Cristo Rei
+
+### 1047
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+AIEMPI KYSYMYS: Miksi romanian kieli polveutuu latinasta slaavilaisten keskellä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Roomalaiset valloittivat Dacian vuonna 106 keisari [[Trajanuksen]] aikana ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi alueelle. Romania onkin Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta, ja se on yhä latinan saareke keskellä slaavin ja unkarin puhujia. Alueen entinen nimi oli [[Dacia]], ja nykyinen kieli säilytti romaanisen perustansa vuosisatojen vaihdoksista huolimatta. Kielen tarkat kehitysvaiheet ovat tutkijoille edelleen keskustelun aihe. Olen sentään sukua roomalaisille.
+KYSYMYS: Kerro lisää: Trajanuksen
+
+### 1048
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+AIEMPI KYSYMYS: Miksi romanian kieli polveutuu latinasta slaavilaisten keskellä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Roomalaiset valloittivat Dacian vuonna 106 keisari [[Trajanuksen]] aikana ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi alueelle. Romania onkin Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta, ja se on yhä latinan saareke keskellä slaavin ja unkarin puhujia. Alueen entinen nimi oli [[Dacia]], ja nykyinen kieli säilytti romaanisen perustansa vuosisatojen vaihdoksista huolimatta. Kielen tarkat kehitysvaiheet ovat tutkijoille edelleen keskustelun aihe. Olen sentään sukua roomalaisille.
+KYSYMYS: Kerro lisää: Dacia
+
+### 1049
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+AIEMPI KYSYMYS: Mitä erikoista on Tonavan suistossa Romanian itäosassa?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä kuuluu lintujen ääntä. Tonava kulkee koko Romanian eteläisen rajan ja leviää kartan itälaidassa suistoksi, jonka takana on [[Mustameri]]. Suisto on laaja kosteikko, jossa on ruovikkoa, kanavia ja saaria, ja siellä pesii ja levähtää suuri joukko lintuja, muun muassa [[pelikaaneja]]. Alue on suojeltu ja kuuluu [[UNESCOn]] maailmanperintöön. Tarkkoja lajimääriä en muista, mutta lintujen määrä on valtava. Sinne minä lentäisin kyl mielelläni.
+KYSYMYS: Kerro lisää: Mustameri
+
+### 1050
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Kylmä virta ja sen linnut] Aavikkorannikko elättää yllättävän paljon: Humboldtin virta nostaa pinnalle kylmää ja ravinteikasta vettä, ja siksi kalaa riittää. La Portadan kalliot ovat guanolintujen tarkkailupaikka. Siellä nähdään perunsuula, inkatiira ja guanokormorantti sekä kolme lokkilajia — etelänharmaalokki, harmaalokkeihin kuuluva Larus modestus ja Belcherinlokki — sekä pelikaaneja. Toisinaan näkyy myös eteläkarvahylje tai delfiini. Kaupungin edustalla kohoaa Morro Morenon kansallispuisto, yksi Chilen kuudesta sumukeitaasta: 1 100 metrin korkuinen niemi, joka on usein pilvessä ja jossa elää kotoperäisiä lajeja juuri siksi.
+- [Kreikka — maalehti / Luonto] Kreikan luonto on hajallaan tuhansilla saarilla ja jyrkillä vuorilla: samassa maassa elää maailman harvinaisimpia hylkeitä, jättimäisiä pelikaaneja ja vuohi, jota ei tavata muualla.
+AIEMPI KYSYMYS: Mitä erikoista on Tonavan suistossa Romanian itäosassa?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä kuuluu lintujen ääntä. Tonava kulkee koko Romanian eteläisen rajan ja leviää kartan itälaidassa suistoksi, jonka takana on [[Mustameri]]. Suisto on laaja kosteikko, jossa on ruovikkoa, kanavia ja saaria, ja siellä pesii ja levähtää suuri joukko lintuja, muun muassa [[pelikaaneja]]. Alue on suojeltu ja kuuluu [[UNESCOn]] maailmanperintöön. Tarkkoja lajimääriä en muista, mutta lintujen määrä on valtava. Sinne minä lentäisin kyl mielelläni.
+KYSYMYS: Kerro lisää: pelikaaneja
+
+### 1051
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+AIEMPI KYSYMYS: Mitä erikoista on Tonavan suistossa Romanian itäosassa?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä kuuluu lintujen ääntä. Tonava kulkee koko Romanian eteläisen rajan ja leviää kartan itälaidassa suistoksi, jonka takana on [[Mustameri]]. Suisto on laaja kosteikko, jossa on ruovikkoa, kanavia ja saaria, ja siellä pesii ja levähtää suuri joukko lintuja, muun muassa [[pelikaaneja]]. Alue on suojeltu ja kuuluu [[UNESCOn]] maailmanperintöön. Tarkkoja lajimääriä en muista, mutta lintujen määrä on valtava. Sinne minä lentäisin kyl mielelläni.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 1052
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Viina, joka poltetaan syksyisin] Loka–joulukuu — Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. Perinne ulottuu keskiajalle asti, ja poltto ajoittuu yhä samaan aikaan kuin ennen: luumut korjataan syksyllä, ja mäski käy 6–8 viikkoa suurissa tynnyreissä ennen tislausta loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy juuri țuican valmistukseen. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja juomaa tarjotaan vieraille heti kynnyksellä, häissä, kasteissa ja pääsiäisenä — pieni lasi kirkasta juomaa on Romaniassa vieraanvaraisuuden merkki.
+AIEMPI KYSYMYS: Mitä on țuică ja milloin sitä poltetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. [[Luumut]] korjataan syksyllä, mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja pieni lasi tarjotaan vieraalle heti kynnyksellä, [[häissä]] ja pääsiäisenä. Pöydässä on yleensä myös [[sarmale]], kaalikääryleitä. Kyl se on vieraanvaraisuuden merkki.
+KYSYMYS: Kerro lisää: Luumut
+
+### 1053
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Viina, joka poltetaan syksyisin] Loka–joulukuu — Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. Perinne ulottuu keskiajalle asti, ja poltto ajoittuu yhä samaan aikaan kuin ennen: luumut korjataan syksyllä, ja mäski käy 6–8 viikkoa suurissa tynnyreissä ennen tislausta loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy juuri țuican valmistukseen. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja juomaa tarjotaan vieraille heti kynnyksellä, häissä, kasteissa ja pääsiäisenä — pieni lasi kirkasta juomaa on Romaniassa vieraanvaraisuuden merkki.
+- [Afganistan — maalehti / Ruoka: Nyytit, joita ei tarjota häissä] Afganistanilaisia nyyttejä sanotaan yhteisnimellä khameerbob, ja niitä harvoin nähdään suurissa juhlissa: ne ovat kotiruokaa, jonka tekeminen vie aikaa. Mantu höyrytetään sipulin ja jauhelihan täytteellä ja peitetään tomaattikastikkeella ja jogurtilla, jonka sekaan on hienonnettu valkosipuli ja halkaistut kikherneet; päälle ripotellaan kuivattua minttua. Aushakin täyte on purjoa, ja se on Kabulin oma ruoka. Kastikkeessa käytetään usein qoroot-palloja, jotka tehdään voinkirnuamisen jälkeen jäävästä piimästä suolaamalla, keittämällä ja puristamalla kovaksi ja hyvin happamaksi juustoksi.
+AIEMPI KYSYMYS: Mitä on țuică ja milloin sitä poltetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. [[Luumut]] korjataan syksyllä, mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja pieni lasi tarjotaan vieraalle heti kynnyksellä, [[häissä]] ja pääsiäisenä. Pöydässä on yleensä myös [[sarmale]], kaalikääryleitä. Kyl se on vieraanvaraisuuden merkki.
+KYSYMYS: Kerro lisää: häissä
+
+### 1054
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mitä on țuică ja milloin sitä poltetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Țuică on luumuista poltettu paloviina, jota pidetään Romanian kansallisjuomana. [[Luumut]] korjataan syksyllä, mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa. Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan. Monella maaseutuperheellä on oma reseptinsä ja usein oma tislauslaitteensakin, ja pieni lasi tarjotaan vieraalle heti kynnyksellä, [[häissä]] ja pääsiäisenä. Pöydässä on yleensä myös [[sarmale]], kaalikääryleitä. Kyl se on vieraanvaraisuuden merkki.
+KYSYMYS: Kerro lisää: sarmale
+
+### 1055
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Musiikki: Hora staccato oli koulutyö] 1906 — Angheluș Dinicun tyttärenpoika Grigoraș syntyi Bukarestissa vuonna 1889 — samana vuonna, jona isoisä soitti Pariisissa. Hän opiskeli kaupungin konservatoriossa ja kirjoitti vuonna 1906 päättötyökseen Hora staccaton: parin minuutin kappaleen, jossa jousi napsuttaa kieltä niin tiheästi, että sävelet putoavat kuin rakeet. Wienin konservatorion stipendi jäi käyttämättä, koska romania ei päästetty lähtemään. Kappaleesta tuli viulistien näytösnumero kaikkialla maailmassa.
+AIEMPI KYSYMYS: Kuka sävelsi Hora staccaton ja miksi se on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä pidän. Hora staccaton sävelsi vuonna 1906 [[Grigoraș Dinicu]], joka oli syntynyt Bukarestissa vuonna 1889. Hän kirjoitti sen päättötyökseen [[Bukarestin konservatoriossa]]. Kappale on parin minuutin mittainen, ja siinä jousi napsuu kieltä niin tiheästi, että sävelet putoavat kuin rakeet, joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Wienin konservatorion stipendi jäi hänellä käyttämättä, koska romania ei päästetty lähtemään. Nopeasti soitettu, nopeasti kuultu.
+KYSYMYS: Kerro lisää: Grigoraș Dinicu
+
+### 1056
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Musiikki: Hora staccato oli koulutyö] 1906 — Angheluș Dinicun tyttärenpoika Grigoraș syntyi Bukarestissa vuonna 1889 — samana vuonna, jona isoisä soitti Pariisissa. Hän opiskeli kaupungin konservatoriossa ja kirjoitti vuonna 1906 päättötyökseen Hora staccaton: parin minuutin kappaleen, jossa jousi napsuttaa kieltä niin tiheästi, että sävelet putoavat kuin rakeet. Wienin konservatorion stipendi jäi käyttämättä, koska romania ei päästetty lähtemään. Kappaleesta tuli viulistien näytösnumero kaikkialla maailmassa.
+AIEMPI KYSYMYS: Kuka sävelsi Hora staccaton ja miksi se on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä pidän. Hora staccaton sävelsi vuonna 1906 [[Grigoraș Dinicu]], joka oli syntynyt Bukarestissa vuonna 1889. Hän kirjoitti sen päättötyökseen [[Bukarestin konservatoriossa]]. Kappale on parin minuutin mittainen, ja siinä jousi napsuu kieltä niin tiheästi, että sävelet putoavat kuin rakeet, joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Wienin konservatorion stipendi jäi hänellä käyttämättä, koska romania ei päästetty lähtemään. Nopeasti soitettu, nopeasti kuultu.
+KYSYMYS: Kerro lisää: Bukarestin konservatoriossa
+
+### 1057
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto] Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan sisällä.
+AIEMPI KYSYMYS: Mikä Transilvania on ja miksi sitä pidetään erityisenä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Transilvania on [[Karpaattien]] kaaren sisään jäävä ylätasanko Romanian keskiosassa, ja nimi tulee latinasta, suunnilleen "metsän takana". Alueella on asunut romanialaisten lisäksi unkarilaisia ja [[transilvaniansaksalaisia]], ja se näkyy kaupungeissa, kielissä ja rakennuksissa. Tunnettuja kaupunkeja ovat esimerkiksi [[Brașov]] ja Sibiu. Alueen maisemat ovat vuoristoisia ja metsäisiä. Linnaromantiikka on ihan oma lukunsa, mutta siihen en syvenny.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 1058
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+AIEMPI KYSYMYS: Mikä Transilvania on ja miksi sitä pidetään erityisenä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Transilvania on [[Karpaattien]] kaaren sisään jäävä ylätasanko Romanian keskiosassa, ja nimi tulee latinasta, suunnilleen "metsän takana". Alueella on asunut romanialaisten lisäksi unkarilaisia ja [[transilvaniansaksalaisia]], ja se näkyy kaupungeissa, kielissä ja rakennuksissa. Tunnettuja kaupunkeja ovat esimerkiksi [[Brașov]] ja Sibiu. Alueen maisemat ovat vuoristoisia ja metsäisiä. Linnaromantiikka on ihan oma lukunsa, mutta siihen en syvenny.
+KYSYMYS: Kerro lisää: transilvaniansaksalaisia
+
+### 1059
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Romania (maa)
+Tietoruudun teksti: Romania on Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta. Roomalaiset valloittivat Dacian vuonna 106 ja luopuivat siitä 165 vuotta myöhemmin, mutta kieli jäi — ja on yhä latinan saareke keskellä slaavin ja unkarin puhujia.
+
+Kartan hallitseva muoto on Karpaattien kaari. Vuoret tulevat pohjoisesta alas, kääntyvät Brașovin kohdalla länteen ja nousevat takaisin luoteeseen, niin että ne piirtävät maan keskelle lähes suljetun renkaan. Renkaan sisällä on Transilvanian ylätasanko, ja korkein huippu Moldoveanu nousee kaaren eteläreunassa 2 544 metriin. Vuorten ulkopuolella maa on tasaista: lännessä Bánátin lakeus, etelässä leveä Valakian tasanko ja idässä Moldavian loivempi ylänkö.
+
+Tonava kulkee koko eteläisen rajan ja levittäytyy kartan itälaidassa vaaleaksi viuhkaksi — suistoksi, jonka takana on Mustameri. Ennen suistoa joki on kuitenkin joutunut puhkaisemaan vuoret: maan louna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Mikä Transilvania on ja miksi sitä pidetään erityisenä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Transilvania on [[Karpaattien]] kaaren sisään jäävä ylätasanko Romanian keskiosassa, ja nimi tulee latinasta, suunnilleen "metsän takana". Alueella on asunut romanialaisten lisäksi unkarilaisia ja [[transilvaniansaksalaisia]], ja se näkyy kaupungeissa, kielissä ja rakennuksissa. Tunnettuja kaupunkeja ovat esimerkiksi [[Brașov]] ja Sibiu. Alueen maisemat ovat vuoristoisia ja metsäisiä. Linnaromantiikka on ihan oma lukunsa, mutta siihen en syvenny.
+KYSYMYS: Kerro lisää: Brașov
+
+### 1060
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella ”Anna yksi leu Ateneumille!”, ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Miksi Bukarestia sanottiin aikoinaan Pikku-Pariisiksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, hauska kysymys. Bukarestia rakennettiin 1800-luvun lopulla Pariisin malliin, ja kaupunkiin tuli leveitä bulevardeja, puistoja ja ranskalaisia arkkitehteja. Siltä ajalta on [[Romanian ateneum]], konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella "anna yksi leu Ateneumille". Vanhin puisto, [[Cișmigiun]] puutarha, avattiin jo vuonna 1847. Nimitys Pikku-Pariisi on vakiintunut puhetapa, ei virallinen titteli. Ainakin kahvilat kyl pärjäsivät.
+KYSYMYS: Kerro lisää: Romanian ateneum
+
+### 1061
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Cișmigiun puutarha] 1847 Cișmigiun puutarha on Bukarestin vanhin ja suurin keskustan puisto. Se avattiin yleisölle syyskuussa vuonna 1847 paikalla, jossa oli aiemmin ollut kalastuslampi nimeltä Dura. Saksalainen puutarhasuunnittelija Carl Meyer suunnitteli puiston järven ympärille, ja puisto on kooltaan lähes 15 hehtaaria. Meyer toi puistoon puita ympäri Eurooppaa ja rakensi mutkittelevia polkuja ja pieniä kanavia. Puistoon saatiin sähkövalot jo vuonna 1882, mikä oli tuohon aikaan harvinaista. Puiston järvellä ui edelleen mustia joutsenia ja sinisorsia. Puistossa on myös Kirjailijoiden rotunda, jonka ympärillä on kaksitoista kivistä rintakuvaa kuuluisista romanialaisista kirjailijoista. Puisto on innostanut mo…
+AIEMPI KYSYMYS: Miksi Bukarestia sanottiin aikoinaan Pikku-Pariisiksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, hauska kysymys. Bukarestia rakennettiin 1800-luvun lopulla Pariisin malliin, ja kaupunkiin tuli leveitä bulevardeja, puistoja ja ranskalaisia arkkitehteja. Siltä ajalta on [[Romanian ateneum]], konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella "anna yksi leu Ateneumille". Vanhin puisto, [[Cișmigiun]] puutarha, avattiin jo vuonna 1847. Nimitys Pikku-Pariisi on vakiintunut puhetapa, ei virallinen titteli. Ainakin kahvilat kyl pärjäsivät.
+KYSYMYS: Kerro lisää: Cișmigiun
+
+### 1062
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Parlamenttipalatsi] 1984–1997 Parlamenttipalatsi on yksi maailman valtavimmista rakennuksista. Sen rakennutti Romanian diktaattori Nicolae Ceaușescu, joka halusi näyttävän hallintorakennuksen. Rakennustyöt alkoivat vuonna 1984, ja niiden piti kestää vain kaksi vuotta, mutta todellisuudessa rakentaminen kesti 13 vuotta ja valmistui vasta vuonna 1997. Rakennusta varten purettiin kokonainen vanha kaupunginosa, ja noin 40 000 ihmistä joutui muuttamaan pois kodeistaan. Palatsissa on 1100 huonetta, ja se ulottuu 92 metriä maan alle, jonne rakennettiin jopa ydinpommisuoja 1,5 metriä paksuine betoniseinineen. Työmaalla saattoi olla samaan aikaan jopa 100 000 työntekijää kolmessa vuorossa. Palatsi on maailman raskain r…
+- [Bukarest — kaupunkilehti / Bukarest: Maailman painavin rakennus] Parlamenttipalatsin rakentaminen alkoi vuonna 1984 Nicolae Ceaușescun määräyksestä. Pääarkkitehti oli Anca Petrescu, ja hänen kanssaan piirsi noin 700 muuta arkkitehtia. Lattiapinta-alaa on 365 000 neliömetriä ja painoa noin 4,1 miljoonaa tonnia — enemmän kuin missään muussa rakennuksessa maailmassa. Tieltä purettiin kokonainen vanha kaupunginosa, ja kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa kokoontuu Romanian parlamentti, mutta noin 70 prosenttia huoneista on yhä tyhjillään.
+AIEMPI KYSYMYS: Mikä on Parlamentin palatsi ja miksi se on niin valtava?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tuo on iso juttu. Parlamentin palatsi on Bukarestin keskustaan rakennettu valtava rakennus, jonka rakennuttamisesta vastasi maan silloinen johtaja [[Nicolae Ceaușescu]]. Maaliskuussa 1977 kaupunkia ravisteli [[Vrancean maanjäristys]], jonka jälkeen hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja suuren palatsin. Rakennus on yksi maailman suurimmista hallintorakennuksista, ja sitä kutsutaan joskus maailman painavimmaksi taloksi. Vanhan keskustan menetys on edelleen romanialaisille herkkä asia. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: Nicolae Ceaușescu
+
+### 1063
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+AIEMPI KYSYMYS: Mikä on Parlamentin palatsi ja miksi se on niin valtava?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tuo on iso juttu. Parlamentin palatsi on Bukarestin keskustaan rakennettu valtava rakennus, jonka rakennuttamisesta vastasi maan silloinen johtaja [[Nicolae Ceaușescu]]. Maaliskuussa 1977 kaupunkia ravisteli [[Vrancean maanjäristys]], jonka jälkeen hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja suuren palatsin. Rakennus on yksi maailman suurimmista hallintorakennuksista, ja sitä kutsutaan joskus maailman painavimmaksi taloksi. Vanhan keskustan menetys on edelleen romanialaisille herkkä asia. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: Vrancean maanjäristys
+
+### 1064
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+AIEMPI KYSYMYS: Miten kokonaisia kirkkoja siirrettiin Bukarestissa kiskoilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bukarestin vanhan keskustan purkamisen aikana 1980-luvulla osa kirkoista pelastettiin siirtämällä ne kokonaisina uuteen paikkaan, kiskoille rakennetun alustan päällä. Yksi esimerkki on [[Mihai Vodăn luostari]], jonka kirkko siirrettiin tuolloin, mutta tarkkoja mittoja en muista. Siirtotyö oli tekninen saavutus, ja monet seurakunnat pitivät sitä parempana kuin purkua. Samaan aikaan [[Ceaușescun]] hallinto purki laajoja alueita kaupungin keskustasta. Kiskoilla kulkenut kirkko on aika kuva ajan oudoista ratkaisuista.
+KYSYMYS: Kerro lisää: Mihai Vodăn luostari
+
+### 1065
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Maailman painavin rakennus] Parlamenttipalatsin rakentaminen alkoi vuonna 1984 Nicolae Ceaușescun määräyksestä. Pääarkkitehti oli Anca Petrescu, ja hänen kanssaan piirsi noin 700 muuta arkkitehtia. Lattiapinta-alaa on 365 000 neliömetriä ja painoa noin 4,1 miljoonaa tonnia — enemmän kuin missään muussa rakennuksessa maailmassa. Tieltä purettiin kokonainen vanha kaupunginosa, ja kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa kokoontuu Romanian parlamentti, mutta noin 70 prosenttia huoneista on yhä tyhjillään.
+AIEMPI KYSYMYS: Miten kokonaisia kirkkoja siirrettiin Bukarestissa kiskoilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bukarestin vanhan keskustan purkamisen aikana 1980-luvulla osa kirkoista pelastettiin siirtämällä ne kokonaisina uuteen paikkaan, kiskoille rakennetun alustan päällä. Yksi esimerkki on [[Mihai Vodăn luostari]], jonka kirkko siirrettiin tuolloin, mutta tarkkoja mittoja en muista. Siirtotyö oli tekninen saavutus, ja monet seurakunnat pitivät sitä parempana kuin purkua. Samaan aikaan [[Ceaușescun]] hallinto purki laajoja alueita kaupungin keskustasta. Kiskoilla kulkenut kirkko on aika kuva ajan oudoista ratkaisuista.
+KYSYMYS: Kerro lisää: Ceaușescun
+
+### 1066
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+AIEMPI KYSYMYS: Mikä on Romanian ateneum ja miten se rahoitettiin?
+AIEMPI VASTAUS (Livia):
+No niin. Romanian ateneum on Bukarestin tunnettu konserttitalo, joka rakennettiin 1800-luvun lopulla Pariisin mallin mukaan ja johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Rakennus on edelleen konserttikäytössä, ja siellä esiintyy [[George Enescun]] mukaan nimetty [[filharmoninen orkesteri]]. Ateneumin sisätilat ovat tunnettuja koristeellisuudestaan, vaikka tarkkoja yksityiskohtia en muista. Rahankeruu on harvinaisen kaunis esimerkki yhteisestä hankkeesta. Pienestä kolikosta tuli paljon musiikkia.
+KYSYMYS: Kerro lisää: George Enescun
+
+### 1067
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+AIEMPI KYSYMYS: Mikä on Romanian ateneum ja miten se rahoitettiin?
+AIEMPI VASTAUS (Livia):
+No niin. Romanian ateneum on Bukarestin tunnettu konserttitalo, joka rakennettiin 1800-luvun lopulla Pariisin mallin mukaan ja johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Rakennus on edelleen konserttikäytössä, ja siellä esiintyy [[George Enescun]] mukaan nimetty [[filharmoninen orkesteri]]. Ateneumin sisätilat ovat tunnettuja koristeellisuudestaan, vaikka tarkkoja yksityiskohtia en muista. Rahankeruu on harvinaisen kaunis esimerkki yhteisestä hankkeesta. Pienestä kolikosta tuli paljon musiikkia.
+KYSYMYS: Kerro lisää: filharmoninen orkesteri
+
+### 1068
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mitä on mici ja muita perinteisiä ruokia Bukarestissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mici on grillattuja jauhelihamakkaroita, joita syödään usein sinapin ja leivän kanssa, ja ne ovat suosittuja grilleillä ja festivaaleilla. Romanialaiseen pöytään kuuluvat myös [[sarmale]], kaalikääryleet, sekä [[mămăligaa]], maissipuuroa, jota tarjotaan lisukkeena. Täsmälliset reseptit vaihtelevat alueittain ja perheittäin, joten en ala vannomaan yksityiskohdista. Bukarestin tarjonta on monipuolinen, ja kaupungin kahviloissa tarjotaan myös leivonnaisia. Kyl pulla kiinnostaisi, mutta nimeä en tiedä.
+KYSYMYS: Kerro lisää: sarmale
+
+### 1069
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bukarest (kaupunki)
+Tietoruudun teksti: Bukarest on Romanian pääkaupunki ja Balkanin suurimpia kaupunkeja: asukkaita on noin 1,8 miljoonaa. Se on keskellä Valakian tasankoa Dâmbovița-joen varrella, eikä sitä suojaa vuori eikä meri — kaupunki on aina ollut kauppareittien risteys. Ensimmäisen kerran nimi mainitaan vuonna 1459 asiakirjassa, jonka allekirjoitti Valakian ruhtinas Vlad III; Romanian pääkaupungiksi Bukarest tuli 1862.
+
+1800-luvun lopulla kaupunkia rakennettiin Pariisin malliin: leveitä bulevardeja, ranskalaisia arkkitehteja ja puistoja. Siltä ajalta on Romanian ateneum, konserttitalo, johon kerättiin rahaa tavallisilta ihmisiltä tunnuslauseella anna yksi leu Ateneumille. Puistoista vanhin, Cișmigiun puutarha, avattiin jo 1847.
+
+Maaliskuussa 1977 kaupunkia ravisteli maanjäristys, jossa romahti noin 33 suurta kerrostaloa. Sitä seuranneina vuosina hallinto purki vanhaa keskustaa ja rakensi tilalle betonikortteleita ja …
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+AIEMPI KYSYMYS: Mitä on mici ja muita perinteisiä ruokia Bukarestissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mici on grillattuja jauhelihamakkaroita, joita syödään usein sinapin ja leivän kanssa, ja ne ovat suosittuja grilleillä ja festivaaleilla. Romanialaiseen pöytään kuuluvat myös [[sarmale]], kaalikääryleet, sekä [[mămăligaa]], maissipuuroa, jota tarjotaan lisukkeena. Täsmälliset reseptit vaihtelevat alueittain ja perheittäin, joten en ala vannomaan yksityiskohdista. Bukarestin tarjonta on monipuolinen, ja kaupungin kahviloissa tarjotaan myös leivonnaisia. Kyl pulla kiinnostaisi, mutta nimeä en tiedä.
+KYSYMYS: Kerro lisää: mămăligaa
+
+### 1070
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Miksi Venäjällä on yksitoista aikavyöhykettä?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on helppo. Venäjä on pinta-alaltaan maailman suurin maa, ja se ulottuu Itämereltä Tyynellemerelle, vaikkapa [[Kaliningradin]] alueelta aina Kamtšatkalle asti. Koska maa on niin pitkä itä-länsisuunnassa, aikavyöhykkeitä tarvitaan yksitoista, ja kun Moskovassa istutaan aamiaisella, Kamtšatkalla on jo ilta. Kolme neljästä asukkaasta asuu kuitenkin [[Uralvuorten]] länsipuolella. Ylhäältä katsottuna se on aika pitkä lento, mikä on sanottava.
+KYSYMYS: Kerro lisää: Kaliningradin
+
+### 1071
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Miksi Venäjällä on yksitoista aikavyöhykettä?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on helppo. Venäjä on pinta-alaltaan maailman suurin maa, ja se ulottuu Itämereltä Tyynellemerelle, vaikkapa [[Kaliningradin]] alueelta aina Kamtšatkalle asti. Koska maa on niin pitkä itä-länsisuunnassa, aikavyöhykkeitä tarvitaan yksitoista, ja kun Moskovassa istutaan aamiaisella, Kamtšatkalla on jo ilta. Kolme neljästä asukkaasta asuu kuitenkin [[Uralvuorten]] länsipuolella. Ylhäältä katsottuna se on aika pitkä lento, mikä on sanottava.
+KYSYMYS: Kerro lisää: Uralvuorten
+
+### 1072
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Miksi Volga on Venäjälle niin tärkeä joki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volga on Euroopan pisin joki, noin 3 500 kilometriä, ja se kaartuu Venäjän halki Kaspianmerelle, joka ei laske mihinkään. Jokivarren isoja kaupunkeja ovat muun muassa [[Nižni Novgorod]], [[Kazan]] ja [[Volgograd]], ja patoaltaat näkyvät kartalla leveinä sinisinä järvinä. Joki on vuosisatojen ajan ollut tärkeä kulkureitti kauppatavaroille, ja se kuljettaa edelleen laivaliikennettä. Tarkkoja pituuslukuja lähteet antavat hieman eri tavoin. Ylhäältä se näyttää hopealangalta.
+KYSYMYS: Kerro lisää: Nižni Novgorod
+
+### 1073
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+- [Uzbekistan — maalehti / Ruoka: Kattila, josta syö tuhat vierasta] Plov eli osh on maan kansallisruoka: lampaanlihaa, suikaloitua porkkanaa, sipulia ja pitkäjyväistä riisiä kazan-padassa avotulella. Pohjaksi tehdään zirvak, lihan ja kasvisten paistos, jonka päälle riisi ladotaan höyrystymään sekoittamatta — siksi jyvät pysyvät erillään. Juhliin padan tekee oshpaz, plov-mestari, jonka taito siirtyy mestarilta oppipojalle, ja yhdestä padasta voidaan tarjota jopa tuhannelle vieraalle. Häiden aamuna syödään nahor oshi, aamuplov, kello kuuden ja yhdeksän välillä, ja vanhimmat aloittavat ensin. Unesco otti plovin luetteloonsa 2016.
+AIEMPI KYSYMYS: Miksi Volga on Venäjälle niin tärkeä joki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volga on Euroopan pisin joki, noin 3 500 kilometriä, ja se kaartuu Venäjän halki Kaspianmerelle, joka ei laske mihinkään. Jokivarren isoja kaupunkeja ovat muun muassa [[Nižni Novgorod]], [[Kazan]] ja [[Volgograd]], ja patoaltaat näkyvät kartalla leveinä sinisinä järvinä. Joki on vuosisatojen ajan ollut tärkeä kulkureitti kauppatavaroille, ja se kuljettaa edelleen laivaliikennettä. Tarkkoja pituuslukuja lähteet antavat hieman eri tavoin. Ylhäältä se näyttää hopealangalta.
+KYSYMYS: Kerro lisää: Kazan
+
+### 1074
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Miksi Volga on Venäjälle niin tärkeä joki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volga on Euroopan pisin joki, noin 3 500 kilometriä, ja se kaartuu Venäjän halki Kaspianmerelle, joka ei laske mihinkään. Jokivarren isoja kaupunkeja ovat muun muassa [[Nižni Novgorod]], [[Kazan]] ja [[Volgograd]], ja patoaltaat näkyvät kartalla leveinä sinisinä järvinä. Joki on vuosisatojen ajan ollut tärkeä kulkureitti kauppatavaroille, ja se kuljettaa edelleen laivaliikennettä. Tarkkoja pituuslukuja lähteet antavat hieman eri tavoin. Ylhäältä se näyttää hopealangalta.
+KYSYMYS: Kerro lisää: Volgograd
+
+### 1075
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Millainen maa Venäjän keisarikunta oli 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vähän pitkä juttu. Venäjän keisarikunta oli 1800-luvulla valtava monikansallinen maa, jonka pääkaupunki oli [[Pietari]]. Vuoden 1873 tienoilla keisarina oli [[Aleksanteri II]], joka lakkautti maaorjuuden vuonna 1861. Myös Suomi kuului keisarikuntaan autonomisena [[suuriruhtinaskuntana]]. Maa oli suuri mutta yhteiskunta eli suurten muutosten aikaa: rautatiet yleistyivät ja kaupungit kasvoivat. Isoisän matkakirjan aikaan tämä kaikki oli siis täyttä totta, kyl minä sen muistan.
+KYSYMYS: Kerro lisää: Pietari
+
+### 1076
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Millainen maa Venäjän keisarikunta oli 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vähän pitkä juttu. Venäjän keisarikunta oli 1800-luvulla valtava monikansallinen maa, jonka pääkaupunki oli [[Pietari]]. Vuoden 1873 tienoilla keisarina oli [[Aleksanteri II]], joka lakkautti maaorjuuden vuonna 1861. Myös Suomi kuului keisarikuntaan autonomisena [[suuriruhtinaskuntana]]. Maa oli suuri mutta yhteiskunta eli suurten muutosten aikaa: rautatiet yleistyivät ja kaupungit kasvoivat. Isoisän matkakirjan aikaan tämä kaikki oli siis täyttä totta, kyl minä sen muistan.
+KYSYMYS: Kerro lisää: Aleksanteri II
+
+### 1077
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Millainen maa Venäjän keisarikunta oli 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vähän pitkä juttu. Venäjän keisarikunta oli 1800-luvulla valtava monikansallinen maa, jonka pääkaupunki oli [[Pietari]]. Vuoden 1873 tienoilla keisarina oli [[Aleksanteri II]], joka lakkautti maaorjuuden vuonna 1861. Myös Suomi kuului keisarikuntaan autonomisena [[suuriruhtinaskuntana]]. Maa oli suuri mutta yhteiskunta eli suurten muutosten aikaa: rautatiet yleistyivät ja kaupungit kasvoivat. Isoisän matkakirjan aikaan tämä kaikki oli siis täyttä totta, kyl minä sen muistan.
+KYSYMYS: Kerro lisää: suuriruhtinaskuntana
+
+### 1078
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Ruoka: Borssi sai kiireellisen suojelun] 2022 — Borssi on punajuuresta keitetty hapan keitto, jonka päälle tulee lusikallinen smetanaa ja viereen valkosipulisämpylä. Unesco otti ukrainalaisen borssinkeiton kulttuurin kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. Samalla se muistutti, että borssia keitetään monessa maassa eikä merkintä tee siitä kenenkään yksinomaista omaisuutta.
+AIEMPI KYSYMYS: Mitä venäläiset syövät ja juovat arkena ja juhlassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Venäläisessä pöydässä on perinteisesti [[borssi]], punajuurella ja kaalilla valmistettu keitto, jota syödään myös Ukrainassa, sekä [[pelmenit]], lihalla täytetyt taikinataskut. Juhlissa tarjotaan [[blinejä]] eli ohukaisia, erityisesti ennen paastoa vietettävän laskiaisviikon aikaan. Teetä juodaan paljon, ja perinteisesti sitä keitetään [[samovaarissa]]. Piirakat kuuluvat sekä arkeen että juhlaan, mutta tarkkoja reseptejä en lupaa. Pöytä on varmasti täynnä, ja lintu on aina valmis maistamaan.
+KYSYMYS: Kerro lisää: borssi
+
+### 1079
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Mitä venäläiset syövät ja juovat arkena ja juhlassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Venäläisessä pöydässä on perinteisesti [[borssi]], punajuurella ja kaalilla valmistettu keitto, jota syödään myös Ukrainassa, sekä [[pelmenit]], lihalla täytetyt taikinataskut. Juhlissa tarjotaan [[blinejä]] eli ohukaisia, erityisesti ennen paastoa vietettävän laskiaisviikon aikaan. Teetä juodaan paljon, ja perinteisesti sitä keitetään [[samovaarissa]]. Piirakat kuuluvat sekä arkeen että juhlaan, mutta tarkkoja reseptejä en lupaa. Pöytä on varmasti täynnä, ja lintu on aina valmis maistamaan.
+KYSYMYS: Kerro lisää: pelmenit
+
+### 1080
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Mitä venäläiset syövät ja juovat arkena ja juhlassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Venäläisessä pöydässä on perinteisesti [[borssi]], punajuurella ja kaalilla valmistettu keitto, jota syödään myös Ukrainassa, sekä [[pelmenit]], lihalla täytetyt taikinataskut. Juhlissa tarjotaan [[blinejä]] eli ohukaisia, erityisesti ennen paastoa vietettävän laskiaisviikon aikaan. Teetä juodaan paljon, ja perinteisesti sitä keitetään [[samovaarissa]]. Piirakat kuuluvat sekä arkeen että juhlaan, mutta tarkkoja reseptejä en lupaa. Pöytä on varmasti täynnä, ja lintu on aina valmis maistamaan.
+KYSYMYS: Kerro lisää: blinejä
+
+### 1081
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Laskiaisviikolla syödään aurinkoja] Laskiaisviikolla — Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon suurta paastoa, ja sen ruoka on blini: ohut lettu, joka esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on vuoden mittaan loukannut.
+AIEMPI KYSYMYS: Mitä venäläiset syövät ja juovat arkena ja juhlassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Venäläisessä pöydässä on perinteisesti [[borssi]], punajuurella ja kaalilla valmistettu keitto, jota syödään myös Ukrainassa, sekä [[pelmenit]], lihalla täytetyt taikinataskut. Juhlissa tarjotaan [[blinejä]] eli ohukaisia, erityisesti ennen paastoa vietettävän laskiaisviikon aikaan. Teetä juodaan paljon, ja perinteisesti sitä keitetään [[samovaarissa]]. Piirakat kuuluvat sekä arkeen että juhlaan, mutta tarkkoja reseptejä en lupaa. Pöytä on varmasti täynnä, ja lintu on aina valmis maistamaan.
+KYSYMYS: Kerro lisää: samovaarissa
+
+### 1082
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+AIEMPI KYSYMYS: Miksi venäjää kirjoitetaan kyrillisillä aakkosilla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, hyvä kysymys. Kyrilliset aakkoset on nimetty veljesten [[Kyrilloksen ja Methodiuksen]] mukaan, jotka työskentelivät 800-luvulla slaavien parissa Bysantin lähettiläinä. Aakkoset muotoutuivat varsinaisesti slaavilaisessa maailmassa sen jälkeen, muun muassa [[Bulgariassa]], ja levisivät sieltä muille slaavikansoille, myös venäläisille. Tarkat yksityiskohdat, kuten kuka muotoili minkäkin kirjaimen, ovat tutkijoiden kiistelemiä. Nykyisin kyrilliset aakkoset ovat käytössä Venäjän lisäksi monessa muussa maassa. Minä pysyn latinassa, kiitos.
+KYSYMYS: Kerro lisää: Kyrilloksen ja Methodiuksen
+
+### 1083
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venäjä (maa)
+Tietoruudun teksti: Venäjä on pinta-alaltaan maailman suurin maa: se ulottuu Itämereltä Tyynellemerelle ja kattaa yksitoista aikavyöhykettä. Kun Moskovassa istutaan aamiaisella, Kamtšatkan niemimaalla on jo ilta. Silti kolme neljästä asukkaasta asuu Uralin länsipuolella.
+
+Juuri se puoli on tässä kartassa — koko maa ei mahtuisi sivulle järkevästi. Kartta on melkein kokonaan tasaista vihreää: Itä-Euroopan tasanko jatkuu Vienanmereltä Mustallemerelle ilman ainuttakaan vuorijonoa. Oikeaan reunaan piirtyy kapea ruskea nauha pohjoisesta etelään — Uralvuoret, joita on tavan mukaan pidetty Euroopan ja Aasian rajana, vaikka korkein huippu jää alle kahden kilometrin.
+
+Keskeltä kaartuu alas Volga, Euroopan pisin joki, ja sen patoaltaat näkyvät leveinä sinisinä järvinä matkalla Kaspianmerelle, joka ei laske mihinkään. Alalaidassa Mustanmeren ja Kaspianmeren väliin nousee jyrkkä valkohuippuinen muuri, Kaukasus. Vasemma…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Ratsastaja jyrkänteellä] 700-luku — Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä korkea kalliojyrkänne, johon on veistetty 700-luvulla ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä hakattu kreikankielisiä kirjoituksia, jotka kertovat ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon maailmanperintöluetteloon 1979.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Bulgaria — maalehti / Menovinkit] Bulgariassa moni museo on skannattu kolmiulotteiseksi, joten kirkon holviin ja arkeologian saliin pääsee kotoa käsin. Verkossa on myös vanhoja valokuvia, traakialaisten kultaa ja suoria kameroita lintujen pesillä.
+AIEMPI KYSYMYS: Miksi venäjää kirjoitetaan kyrillisillä aakkosilla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, hyvä kysymys. Kyrilliset aakkoset on nimetty veljesten [[Kyrilloksen ja Methodiuksen]] mukaan, jotka työskentelivät 800-luvulla slaavien parissa Bysantin lähettiläinä. Aakkoset muotoutuivat varsinaisesti slaavilaisessa maailmassa sen jälkeen, muun muassa [[Bulgariassa]], ja levisivät sieltä muille slaavikansoille, myös venäläisille. Tarkat yksityiskohdat, kuten kuka muotoili minkäkin kirjaimen, ovat tutkijoiden kiistelemiä. Nykyisin kyrilliset aakkoset ovat käytössä Venäjän lisäksi monessa muussa maassa. Minä pysyn latinassa, kiitos.
+KYSYMYS: Kerro lisää: Bulgariassa
+
+### 1084
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse ”ikkunaksi Eurooppaan”. Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+AIEMPI KYSYMYS: Miksi Moskovan Kremlin suuri kello ei ole koskaan soinut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämän minä tiedän. Kremlin suuri kello tunnetaan nimellä [[Tsaarinkello]], ja se valettiin 1700-luvulla, mutta tulipalon aikana siihen osui vettä ja siihen tuli halkeama. Kellosta irtosi iso pala, ja kello jäi soimatta. Se on maailman suurin kello, painoltaan noin kaksisataa tonnia, ja nykyään se seisoo Kremlin pihalla. Vieressä on [[Tsaaritykki]], jota ei ole koskaan ammuttu. Suuri mutta äänetön, pienet kellot pärjäävät paremmin.
+KYSYMYS: Kerro lisää: Tsaarinkello
+
+### 1085
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse ”ikkunaksi Eurooppaan”. Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+AIEMPI KYSYMYS: Miksi Moskovan Kremlin suuri kello ei ole koskaan soinut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämän minä tiedän. Kremlin suuri kello tunnetaan nimellä [[Tsaarinkello]], ja se valettiin 1700-luvulla, mutta tulipalon aikana siihen osui vettä ja siihen tuli halkeama. Kellosta irtosi iso pala, ja kello jäi soimatta. Se on maailman suurin kello, painoltaan noin kaksisataa tonnia, ja nykyään se seisoo Kremlin pihalla. Vieressä on [[Tsaaritykki]], jota ei ole koskaan ammuttu. Suuri mutta äänetön, pienet kellot pärjäävät paremmin.
+KYSYMYS: Kerro lisää: Tsaaritykki
+
+### 1086
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Sara Braunin hautausmaa] 1894 Avenida Bulnesin varrella on neljän hehtaarin hautausmaa, jolla on kolme porttia. Se vihittiin 9. huhtikuuta 1894 kuvernööri Manuel Señoretin aikana ja korvasi vanhan hautausmaan, joka oli nykyisen Lautaron aukion paikalla. Maan lahjoitti Sara Braun, ja insinööri Fortunato Circutti suunnitteli portit ja muurit 1919. Alue täyttyi jo kauan sitten, ja sen tilalle on tullut uudempi hautausmaa pohjoisempana; vanha on säilyttänyt asemansa monumenttihautausmaana. CNN on listannut sen maailman kauneimpien hautausmaiden joukkoon, ja se on ollut Chilen kansallismonumentti vuodesta 2012. Käytävien varrella ovat kaupungin suurten sukujen kappelit: Menéndez-Behety, Braun Hamburger, Blanchard, Green…
+- [Uluru — kaupunkilehti / Uluru: Ensimmäiset kalliolla] Löydettyään kallion Gosse ei tyytynyt vain katselemaan sitä kaukaa. Hän kiipesi afgaanilaisen kamelinajajansa Kamranin kanssa loivaa, sileää kalliokylkeä pitkin yli 300 metriä ylös ja seisoi ensimmäisenä eurooppalaisena kallion laella. Nousu ilman köysiä tai muita apuvälineitä vaati tasapainoa: kalliopinta on paikoin niin loiva, että sillä pystyy kävelemään, mutta tuulisella säällä sileä, hiekkakivinen pinta muuttuu liukkaaksi ja vaaralliseksi. Huipulta avautui näkymä satojen kilometrien päähän tasaiselle, punaiselle aavikolle joka suuntaan — maisema, jota kukaan eurooppalainen ei ollut ennen nähnyt.
+- [Kalgoorlie — kaupunkilehti / Kalgoorlie] Kalgoorlie nousi Länsi-Australian punaiselle aavikolle kultaryntäyksen mukana 1893, mutta seutu oli asuttua kauan ennen sitä: wongatha-kansa tunsi joka vesipaikan ikivanhalla kultakalliolla.
+AIEMPI KYSYMYS: Millainen on Pyhän Vasilin katedraali ja kuka sen rakennutti?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on komea. Pyhän Vasilin katedraali valmistui [[Punaiselle torille]] vuonna 1561, ja sen rakennutti tsaari [[Iivana IV]]. Kirkossa on yhdeksän värikästä kupolia, joista jokaisella on oma muotonsa ja värityksensä. Rakennus on Venäjän tunnetuimpia nähtävyyksiä, ja se kohoaa kreml-muurin vieressä. Sen tarkkoja rakennustarinoita on useita, ja osa on pelkkiä legendoja. Värit ovat kuin leivonnaisia, ja nälkä iskee heti.
+KYSYMYS: Kerro lisää: Punaiselle torille
+
+### 1087
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Millainen on Pyhän Vasilin katedraali ja kuka sen rakennutti?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on komea. Pyhän Vasilin katedraali valmistui [[Punaiselle torille]] vuonna 1561, ja sen rakennutti tsaari [[Iivana IV]]. Kirkossa on yhdeksän värikästä kupolia, joista jokaisella on oma muotonsa ja värityksensä. Rakennus on Venäjän tunnetuimpia nähtävyyksiä, ja se kohoaa kreml-muurin vieressä. Sen tarkkoja rakennustarinoita on useita, ja osa on pelkkiä legendoja. Värit ovat kuin leivonnaisia, ja nälkä iskee heti.
+KYSYMYS: Kerro lisää: Iivana IV
+
+### 1088
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+AIEMPI KYSYMYS: Miksi Moskovan metroasemat ovat kuin palatseja?
+AIEMPI VASTAUS (Livia):
+Mmm—, tämän näkee vain alhaalta. Moskovan metron asemia on koristeltu kattokruunuin, mosaiikein ja marmorein, ja ne on tarkoituksella tehty komeiksi, jotta metro tuntuisi kansan palatsilta. Metro avattiin 1930-luvulla Stalinin aikana, ja syvimmät asemat sijaitsevat kymmenien metrien syvyydessä. [[Komsomolskajan]] ja [[Majakovskajan]] asemat ovat erityisen kuuluisia. Asemien koristelu valittiin näyttämään ajan ihanteita. Kyyhkynä kyllä pidän ylhäällä pysymisestä.
+KYSYMYS: Kerro lisää: Komsomolskajan
+
+### 1089
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kaupunkilehti / Arki ja tavat: Maanalainen palatsi] Majakovskajan metroasema avattiin syyskuussa 1938, ja se on 33 metriä maan alla. Pylväät on päällystetty ruostumattomalla teräksellä ja vaaleanpunaisella rodoniitilla, ja katon soikeissa kuopissa on 34 mosaiikkia, joiden sarjan nimi on Vuorokausi neuvostotaivaalla. Aseman suunnittelija Aleksei Dushkin sai New Yorkin maailmannäyttelyn pääpalkinnon vuonna 1939. Sodan aikana asemalla suojauduttiin pommituksilta, ja marraskuussa 1941 sen keskushallissa pidettiin suuri kokous.
+AIEMPI KYSYMYS: Miksi Moskovan metroasemat ovat kuin palatseja?
+AIEMPI VASTAUS (Livia):
+Mmm—, tämän näkee vain alhaalta. Moskovan metron asemia on koristeltu kattokruunuin, mosaiikein ja marmorein, ja ne on tarkoituksella tehty komeiksi, jotta metro tuntuisi kansan palatsilta. Metro avattiin 1930-luvulla Stalinin aikana, ja syvimmät asemat sijaitsevat kymmenien metrien syvyydessä. [[Komsomolskajan]] ja [[Majakovskajan]] asemat ovat erityisen kuuluisia. Asemien koristelu valittiin näyttämään ajan ihanteita. Kyyhkynä kyllä pidän ylhäällä pysymisestä.
+KYSYMYS: Kerro lisää: Majakovskajan
+
+### 1090
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+AIEMPI KYSYMYS: Mitä Moskovassa tapahtui vuonna 1812, kun Napoleon saapui?
+AIEMPI VASTAUS (Livia):
+Kääk, nyt mennään raskaampaan. Syyskuussa 1812 Napoleonin armeija saapui Moskovaan [[Borodinon]] taistelun jälkeen, ja kaupungissa syttyi suuri tulipalo, joka tuhosi suuren osan puurakennuksista. Napoleon odotti rauhanneuvotteluja, mutta niitä ei tullut, ja hänen oli lähdettävä vetäytymään talven lähestyessä. Kenraali [[Kutuzov]] johti Venäjän armeijaa. Tulipalon syttymissyystä historiantutkijat ovat esittäneet eri näkemyksiä. Tapahtumasta on kulunut yli kaksisataa vuotta, ja Moskova on kasvanut moninkertaiseksi. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Borodinon
+
+### 1091
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Mitä Moskovassa tapahtui vuonna 1812, kun Napoleon saapui?
+AIEMPI VASTAUS (Livia):
+Kääk, nyt mennään raskaampaan. Syyskuussa 1812 Napoleonin armeija saapui Moskovaan [[Borodinon]] taistelun jälkeen, ja kaupungissa syttyi suuri tulipalo, joka tuhosi suuren osan puurakennuksista. Napoleon odotti rauhanneuvotteluja, mutta niitä ei tullut, ja hänen oli lähdettävä vetäytymään talven lähestyessä. Kenraali [[Kutuzov]] johti Venäjän armeijaa. Tulipalon syttymissyystä historiantutkijat ovat esittäneet eri näkemyksiä. Tapahtumasta on kulunut yli kaksisataa vuotta, ja Moskova on kasvanut moninkertaiseksi. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Kutuzov
+
+### 1092
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+AIEMPI KYSYMYS: Miten moskovalaiset pukeutuvat talvipakkasilla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Moskovan talvi on pitkä ja kylmä, ja kaupunkilaiset pukeutuvat kerroksittain: paksu takki, villakaulaliina ja lämmin lakki. Perinteinen päähine on [[ushanka]], korvaläpillinen turkislakki, ja maaseudulla ja vanhemmilla sukupolvilla yleinen jalkine on [[valenki]], huopasaapas. Sisätiloissa ja metrossa on lämmintä, joten ihmiset riisuvat kerroksia kulkiessaan. Kerron havaintona, en ohjeena, sillä pukeutuminen vaihtelee. Pää pysyy lämpimänä, kyl se on tärkeintä.
+KYSYMYS: Kerro lisää: ushanka
+
+### 1093
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moskova (kaupunki)
+Tietoruudun teksti: Moskova on Venäjän pääkaupunki ja Euroopan väkirikkain kaupunki: asukkaita on noin kolmetoista miljoonaa. Se mainittiin kirjoituksissa ensi kerran vuonna 1147 ja syntyi kukkulalle Moskova-joen mutkaan: niemekettä oli helppo puolustaa, ja sen kärkeen rakennettiin puinen linnoitus eli kreml. Kaupunki kasvoi renkaina, ja purettujen muurien paikoille jäivät leveät kehäkadut.
+
+Kremlin nykyiset muurit muurattiin 1480- ja 1490-luvulla italialaisten arkkitehtien johdolla: punatiiltä riittää 2 235 metriä. Sisäpuolella on viisi palatsia ja neljä katedraalia, pihalla maailman suurin kello ja tykki, jota ei ole koskaan ammuttu. Muurin ulkopuolelle Punaiselle torille valmistui 1561 Pyhän Vasilin katedraali yhdeksine värikkäine kupoleineen.
+
+Pietari Suuri siirsi pääkaupungin Pietariin 1712, ja Moskova jäi toiseksi kaupungiksi kahdeksi vuosisadaksi; vuodesta 1918 se on taas ollut pääkaupunki. Metro av…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+AIEMPI KYSYMYS: Miten moskovalaiset pukeutuvat talvipakkasilla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Moskovan talvi on pitkä ja kylmä, ja kaupunkilaiset pukeutuvat kerroksittain: paksu takki, villakaulaliina ja lämmin lakki. Perinteinen päähine on [[ushanka]], korvaläpillinen turkislakki, ja maaseudulla ja vanhemmilla sukupolvilla yleinen jalkine on [[valenki]], huopasaapas. Sisätiloissa ja metrossa on lämmintä, joten ihmiset riisuvat kerroksia kulkiessaan. Kerron havaintona, en ohjeena, sillä pukeutuminen vaihtelee. Pää pysyy lämpimänä, kyl se on tärkeintä.
+KYSYMYS: Kerro lisää: valenki
+
+### 1094
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Pietari: Kaupunki rakennettiin suolle] Vuonna 1703 Nevan suistossa ei ollut kaupunkia, vain matalia soisia saaria ja hävitetyn ruotsalaislinnoituksen paikka. Pietari Suuri aloitti rakentamisen linnoituksesta ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg — ei itsensä vaan apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten ja kauppiaiden muuttaa Moskovasta tänne rakentamaan uudet talonsa. Nimi on vaihtunut sen jälkeen kolmesti: Petrograd 1914, Leningrad 1924, Pietari taas 1991.
+AIEMPI KYSYMYS: Mitä nimiä Pietari on kantanut vuosien varrella?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimiä on ollu useampi. Kaupunki perustettiin nimellä Sankt Pieterburg, ja vuonna 1914, ensimmäisen maailmansodan alettua, saksalaiselta kuulostanut nimi muutettiin muotoon [[Petrograd]]. Vuonna 1924 kaupunki nimettiin [[Leningradiksi]] Leninin kuoleman jälkeen, ja vuonna 1991 kansanäänestys palautti vanhan nimen, kun Neuvostoliitto oli hajoamassa. Isoisän matkavuonna 1873 se oli vielä [[Venäjän keisarikunnan]] pääkaupunki. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Petrograd
+
+### 1095
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Pietari: Kaupunki rakennettiin suolle] Vuonna 1703 Nevan suistossa ei ollut kaupunkia, vain matalia soisia saaria ja hävitetyn ruotsalaislinnoituksen paikka. Pietari Suuri aloitti rakentamisen linnoituksesta ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg — ei itsensä vaan apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten ja kauppiaiden muuttaa Moskovasta tänne rakentamaan uudet talonsa. Nimi on vaihtunut sen jälkeen kolmesti: Petrograd 1914, Leningrad 1924, Pietari taas 1991.
+AIEMPI KYSYMYS: Mitä nimiä Pietari on kantanut vuosien varrella?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimiä on ollu useampi. Kaupunki perustettiin nimellä Sankt Pieterburg, ja vuonna 1914, ensimmäisen maailmansodan alettua, saksalaiselta kuulostanut nimi muutettiin muotoon [[Petrograd]]. Vuonna 1924 kaupunki nimettiin [[Leningradiksi]] Leninin kuoleman jälkeen, ja vuonna 1991 kansanäänestys palautti vanhan nimen, kun Neuvostoliitto oli hajoamassa. Isoisän matkavuonna 1873 se oli vielä [[Venäjän keisarikunnan]] pääkaupunki. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Leningradiksi
+
+### 1096
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mitä nimiä Pietari on kantanut vuosien varrella?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimiä on ollu useampi. Kaupunki perustettiin nimellä Sankt Pieterburg, ja vuonna 1914, ensimmäisen maailmansodan alettua, saksalaiselta kuulostanut nimi muutettiin muotoon [[Petrograd]]. Vuonna 1924 kaupunki nimettiin [[Leningradiksi]] Leninin kuoleman jälkeen, ja vuonna 1991 kansanäänestys palautti vanhan nimen, kun Neuvostoliitto oli hajoamassa. Isoisän matkavuonna 1873 se oli vielä [[Venäjän keisarikunnan]] pääkaupunki. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 1097
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+- [Pietari — kaupunkilehti / Pietari: Museon virkakissat] Talvipalatsin kellareissa asuu kissoja, joiden työ on pitää hiiret poissa taidekokoelmien kimpusta. Keisarinna Elisabet määräsi vuonna 1745 tuomaan palatsiin kissoja Kazanista, jonka hiirenpyytäjiä pidettiin maan parhaina. Nykyään kissoja on noin 60, niillä on kolme hoitajaa, ja museossa on lehdistösihteeri pelkästään kissoja varten.
+AIEMPI KYSYMYS: Mitä Eremitaašin museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on iso aihe. Eremitaaši toimii [[Talvipalatsissa]] ja sen viereisissä rakennuksissa, ja kokoelma sai alkunsa, kun [[Katariina Suuri]] alkoi vuonna 1764 ostaa taidetta Euroopasta. Nykyään museossa on useita miljoonia esineitä, kuten maalauksia, veistoksia, antiikin esineitä ja koruja, eikä niitä ehdi nähdä yhdellä käynnillä. Rakennuksen komeat juhlasalit ovat nähtävyys jo sinänsä. Pitkä käytävä, mutta ei pidempi kuin minun lentoni Pariisiin.
+KYSYMYS: Kerro lisää: Talvipalatsissa
+
+### 1098
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mitä Eremitaašin museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on iso aihe. Eremitaaši toimii [[Talvipalatsissa]] ja sen viereisissä rakennuksissa, ja kokoelma sai alkunsa, kun [[Katariina Suuri]] alkoi vuonna 1764 ostaa taidetta Euroopasta. Nykyään museossa on useita miljoonia esineitä, kuten maalauksia, veistoksia, antiikin esineitä ja koruja, eikä niitä ehdi nähdä yhdellä käynnillä. Rakennuksen komeat juhlasalit ovat nähtävyys jo sinänsä. Pitkä käytävä, mutta ei pidempi kuin minun lentoni Pariisiin.
+KYSYMYS: Kerro lisää: Katariina Suuri
+
+### 1099
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Ruoka: Borssi sai kiireellisen suojelun] 2022 — Borssi on punajuuresta keitetty hapan keitto, jonka päälle tulee lusikallinen smetanaa ja viereen valkosipulisämpylä. Unesco otti ukrainalaisen borssinkeiton kulttuurin kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. Samalla se muistutti, että borssia keitetään monessa maassa eikä merkintä tee siitä kenenkään yksinomaista omaisuutta.
+AIEMPI KYSYMYS: Mitä pietarilaiset syövät ja juovat arkena?
+AIEMPI VASTAUS (Livia):
+No niin, ruokapöytään. Venäläiseen arkiruokaan kuuluvat esimerkiksi punajuurikeitto [[borssi]], taikinataskut eli [[pelmenit]] sekä ohuet [[blinit]], joita tarjotaan smetanan kanssa. Teetä juodaan paljon, perinteisesti [[samovaarista]], ja leipä on useimmiten tummaa ruisleipää. Pietarissa on myös pitkä kahvilaperinne, ja kahvilat ovat ahkerassa käytössä pitkän talven aikana. Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: borssi
+
+### 1100
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+AIEMPI KYSYMYS: Mitä pietarilaiset syövät ja juovat arkena?
+AIEMPI VASTAUS (Livia):
+No niin, ruokapöytään. Venäläiseen arkiruokaan kuuluvat esimerkiksi punajuurikeitto [[borssi]], taikinataskut eli [[pelmenit]] sekä ohuet [[blinit]], joita tarjotaan smetanan kanssa. Teetä juodaan paljon, perinteisesti [[samovaarista]], ja leipä on useimmiten tummaa ruisleipää. Pietarissa on myös pitkä kahvilaperinne, ja kahvilat ovat ahkerassa käytössä pitkän talven aikana. Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: pelmenit
+
+### 1101
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Laskiaisviikolla syödään aurinkoja] Laskiaisviikolla — Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon suurta paastoa, ja sen ruoka on blini: ohut lettu, joka esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on vuoden mittaan loukannut.
+AIEMPI KYSYMYS: Mitä pietarilaiset syövät ja juovat arkena?
+AIEMPI VASTAUS (Livia):
+No niin, ruokapöytään. Venäläiseen arkiruokaan kuuluvat esimerkiksi punajuurikeitto [[borssi]], taikinataskut eli [[pelmenit]] sekä ohuet [[blinit]], joita tarjotaan smetanan kanssa. Teetä juodaan paljon, perinteisesti [[samovaarista]], ja leipä on useimmiten tummaa ruisleipää. Pietarissa on myös pitkä kahvilaperinne, ja kahvilat ovat ahkerassa käytössä pitkän talven aikana. Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: blinit
+
+### 1102
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+AIEMPI KYSYMYS: Mitä pietarilaiset syövät ja juovat arkena?
+AIEMPI VASTAUS (Livia):
+No niin, ruokapöytään. Venäläiseen arkiruokaan kuuluvat esimerkiksi punajuurikeitto [[borssi]], taikinataskut eli [[pelmenit]] sekä ohuet [[blinit]], joita tarjotaan smetanan kanssa. Teetä juodaan paljon, perinteisesti [[samovaarista]], ja leipä on useimmiten tummaa ruisleipää. Pietarissa on myös pitkä kahvilaperinne, ja kahvilat ovat ahkerassa käytössä pitkän talven aikana. Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: samovaarista
+
+### 1103
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Pietari: Kaupunki rakennettiin suolle] Vuonna 1703 Nevan suistossa ei ollut kaupunkia, vain matalia soisia saaria ja hävitetyn ruotsalaislinnoituksen paikka. Pietari Suuri aloitti rakentamisen linnoituksesta ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg — ei itsensä vaan apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten ja kauppiaiden muuttaa Moskovasta tänne rakentamaan uudet talonsa. Nimi on vaihtunut sen jälkeen kolmesti: Petrograd 1914, Leningrad 1924, Pietari taas 1991.
+- [Pietari — kaupunkilehti / Historian hetki] Nevan suiston soisella saarella mitattiin toukokuussa 1703 kuuden bastionin linnoitusta ruotsalaisia vastaan — kukaan lapiomiehistä ei tiennyt seisovansa tulevan pääkaupungin keskustassa.
+- [Pietari — kaupunkilehti / Pietari] Kaupunkia ei ollut vielä vuonna 1703: se rakennettiin tyhjästä Nevan soisille saarille, vaihtoi nimeä kolme kertaa ja pitää yhä kuuttakymmentä kissaa töissä.
+AIEMPI KYSYMYS: Mitä ovat valkeat yöt ja milloin ne koetaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, tost minä osaan kertoo. Pietari on noin 60. leveysasteella, joten kesä-heinäkuun vaihteessa aurinko laskee vain hetkeksi ja taivas pysyy yölläkin vaaleana. Ilmiö alkaa touko-kesäkuussa ja kestää heinäkuulle, ja ihmiset kävelevät öisin pitkin [[Nevan]] rantoja. Yöllä laivojen päästämiseksi joen kautta avataan nostosiltoja, joista tunnetuin on [[Palatsisilta]]. Ylhäältä katsottuna se on kaunista, mutta minä nukun silti huonosti.
+KYSYMYS: Kerro lisää: Nevan
+
+### 1104
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mitä ovat valkeat yöt ja milloin ne koetaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, tost minä osaan kertoo. Pietari on noin 60. leveysasteella, joten kesä-heinäkuun vaihteessa aurinko laskee vain hetkeksi ja taivas pysyy yölläkin vaaleana. Ilmiö alkaa touko-kesäkuussa ja kestää heinäkuulle, ja ihmiset kävelevät öisin pitkin [[Nevan]] rantoja. Yöllä laivojen päästämiseksi joen kautta avataan nostosiltoja, joista tunnetuin on [[Palatsisilta]]. Ylhäältä katsottuna se on kaunista, mutta minä nukun silti huonosti.
+KYSYMYS: Kerro lisää: Palatsisilta
+
+### 1105
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Miksi Pietarin metro on niin syvällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pietari seisoo Nevan suiston pehmeällä ja märällä maalla, joten tunnelit on rakennettu syvälle kiinteämpiin maakerroksiin. [[Pietarin metro]] avattiin vuonna 1955 silloisessa [[Leningradissa]], ja sen syvimmät asemat, kuten [[Admiraltejskaja]], ovat yli 80 metrin syvyydessä. Liukuportaat ovat siksi pitkiä, ja matka pinnalle kestää useita minuutteja. Minä pysyn mieluummin katolla.
+KYSYMYS: Kerro lisää: Pietarin metro
+
+### 1106
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Pietari: Sinfonia piiritetyssä kaupungissa] Dmitri Šostakovitš aloitti seitsemännen sinfoniansa Leningradissa 1941, kun kaupunki oli saarrettu. Teos esitettiin siellä 9. elokuuta 1942. Kaupungin radio-orkesterista oli jäljellä vain 15 soittajaa, joten muita haettiin rintamalta. Esitys kuului kaiuttimista kaduilla ja kaupungin ulkopuolelle asti. Sinfonia kestää noin 80 minuuttia.
+AIEMPI KYSYMYS: Miksi Pietarin metro on niin syvällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pietari seisoo Nevan suiston pehmeällä ja märällä maalla, joten tunnelit on rakennettu syvälle kiinteämpiin maakerroksiin. [[Pietarin metro]] avattiin vuonna 1955 silloisessa [[Leningradissa]], ja sen syvimmät asemat, kuten [[Admiraltejskaja]], ovat yli 80 metrin syvyydessä. Liukuportaat ovat siksi pitkiä, ja matka pinnalle kestää useita minuutteja. Minä pysyn mieluummin katolla.
+KYSYMYS: Kerro lisää: Leningradissa
+
+### 1107
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pietari
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pietari (kaupunki)
+Tietoruudun teksti: Pietari on Venäjän toiseksi suurin kaupunki, ja siellä asuu noin 5,6 miljoonaa ihmistä. Sitä ei ollut olemassa ennen vuotta 1703: Nevan suistossa oli vain matalia soisia saaria, kun Pietari Suuri aloitti rakentamisen ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten muuttaa Moskovasta tänne.
+
+Maa oli niin märkää, että kaduille kaivettiin ensin ojia veden johtamiseksi pois; ojista tuli kanavia ja kanavista kaupungin tuntomerkki. Arkkitehdit palkattiin Italiasta ja Ranskasta, ja jälki näkyy yhä suorina bulevardeina ja vaaleanvihreiksi, keltaisiksi ja turkooseiksi maalattuina palatseina. Keisarinna Elisabet rakennutti Talvipalatsin 1750-luvulla, ja Katariina Suuri alkoi 1764 ostaa siihen taidetta Euroopasta — kokoelmasta kasvoi Eremitaaši.
+
+Kaupunki seisoo suiston saarilla,…
+Isoisän matkakirjamerkintä: Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.
+AIEMPI KYSYMYS: Miksi Pietarin metro on niin syvällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pietari seisoo Nevan suiston pehmeällä ja märällä maalla, joten tunnelit on rakennettu syvälle kiinteämpiin maakerroksiin. [[Pietarin metro]] avattiin vuonna 1955 silloisessa [[Leningradissa]], ja sen syvimmät asemat, kuten [[Admiraltejskaja]], ovat yli 80 metrin syvyydessä. Liukuportaat ovat siksi pitkiä, ja matka pinnalle kestää useita minuutteja. Minä pysyn mieluummin katolla.
+KYSYMYS: Kerro lisää: Admiraltejskaja
+
+### 1108
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Milloin Serbia irtautui Ottomaanien vallasta?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Serbia sai ottomaanien alaisuudessa autonomian 1800-luvun alkupuolella, ja kansannousun johtajana tunnetaan [[Karađorđe]], joka aloitti kapinan vuonna 1804. Kansainvälisesti tunnustettu täysi itsenäisyys vahvistettiin vasta [[Berliinin kongressissa]] vuonna 1878. Siihen asti maa oli nimellisesti [[Ottomaanien valtakunnan]] vasallivaltio, kuten isoisän matkavuoden 1873 Belgradissa. En ole varma kaikista välivaiheista, mutta nämä ovat tärkeimmät. Kyllä sen kestää kuulla.
+KYSYMYS: Kerro lisää: Karađorđe
+
+### 1109
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historia: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee ”olen Berliinin porvarien sinetti”. Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee ”olen Berliinin porvarien sinetti”. Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Milloin Serbia irtautui Ottomaanien vallasta?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Serbia sai ottomaanien alaisuudessa autonomian 1800-luvun alkupuolella, ja kansannousun johtajana tunnetaan [[Karađorđe]], joka aloitti kapinan vuonna 1804. Kansainvälisesti tunnustettu täysi itsenäisyys vahvistettiin vasta [[Berliinin kongressissa]] vuonna 1878. Siihen asti maa oli nimellisesti [[Ottomaanien valtakunnan]] vasallivaltio, kuten isoisän matkavuoden 1873 Belgradissa. En ole varma kaikista välivaiheista, mutta nämä ovat tärkeimmät. Kyllä sen kestää kuulla.
+KYSYMYS: Kerro lisää: Berliinin kongressissa
+
+### 1110
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Milloin Serbia irtautui Ottomaanien vallasta?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Serbia sai ottomaanien alaisuudessa autonomian 1800-luvun alkupuolella, ja kansannousun johtajana tunnetaan [[Karađorđe]], joka aloitti kapinan vuonna 1804. Kansainvälisesti tunnustettu täysi itsenäisyys vahvistettiin vasta [[Berliinin kongressissa]] vuonna 1878. Siihen asti maa oli nimellisesti [[Ottomaanien valtakunnan]] vasallivaltio, kuten isoisän matkavuoden 1873 Belgradissa. En ole varma kaikista välivaiheista, mutta nämä ovat tärkeimmät. Kyllä sen kestää kuulla.
+KYSYMYS: Kerro lisää: Ottomaanien valtakunnan
+
+### 1111
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Millaisia luostareita Serbiassa on nähtävänä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on mieluisa aihe. Serbian ortodoksiluostarit ovat maan tärkeimpiä nähtävyyksiä. [[Studenica]] perustettiin 1100-luvun lopulla [[Stefan Nemanjan]] toimesta, ja se kuuluu UNESCOn maailmanperintökohteisiin. Pohjoisessa [[Fruška Goran]] vuoristossa on lukuisia pieniä luostareita, joista monet ovat peräisin keskiajalta tai sen jälkeiseltä ajalta. Seinämaalaukset ovat tunnettuja väreistään. Pitkä lista, mutta minä muistin sen kauniisti.
+KYSYMYS: Kerro lisää: Studenica
+
+### 1112
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Millaisia luostareita Serbiassa on nähtävänä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on mieluisa aihe. Serbian ortodoksiluostarit ovat maan tärkeimpiä nähtävyyksiä. [[Studenica]] perustettiin 1100-luvun lopulla [[Stefan Nemanjan]] toimesta, ja se kuuluu UNESCOn maailmanperintökohteisiin. Pohjoisessa [[Fruška Goran]] vuoristossa on lukuisia pieniä luostareita, joista monet ovat peräisin keskiajalta tai sen jälkeiseltä ajalta. Seinämaalaukset ovat tunnettuja väreistään. Pitkä lista, mutta minä muistin sen kauniisti.
+KYSYMYS: Kerro lisää: Stefan Nemanjan
+
+### 1113
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+AIEMPI KYSYMYS: Millaisia luostareita Serbiassa on nähtävänä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on mieluisa aihe. Serbian ortodoksiluostarit ovat maan tärkeimpiä nähtävyyksiä. [[Studenica]] perustettiin 1100-luvun lopulla [[Stefan Nemanjan]] toimesta, ja se kuuluu UNESCOn maailmanperintökohteisiin. Pohjoisessa [[Fruška Goran]] vuoristossa on lukuisia pieniä luostareita, joista monet ovat peräisin keskiajalta tai sen jälkeiseltä ajalta. Seinämaalaukset ovat tunnettuja väreistään. Pitkä lista, mutta minä muistin sen kauniisti.
+KYSYMYS: Kerro lisää: Fruška Goran
+
+### 1114
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Ruoka: Kymmenen pientä makkaraa yhdellä leivällä] nykyaika — Ćevapi on Bosnian tunnetuin ruokalaji: pieniä, sormen mittaisia jauhelihapihvejä, yleensä naudan- ja lampaanlihasta, jotka grillataan hiilellä ja tarjoillaan tuoreessa, pehmeässä somun-leivässä. Annos tulee yleensä kymmenessä kappaleessa, mukana raakaa sipulia ja usein kajmakia, paksua kermaista juustoa. Sarajevolainen versio on pieni ja niitä syödään monta, kun taas Banja Lukassa ćevapi ovat isompia ja niitä tarjoillaan harvempi ranskalaisten kera. Ruoan juuret ovat Ottomaanien ajan lihapullaperinteessä.
+AIEMPI KYSYMYS: Mitä serbialaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.
+KYSYMYS: Kerro lisää: ćevapi
+
+### 1115
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+AIEMPI KYSYMYS: Mitä serbialaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.
+KYSYMYS: Kerro lisää: pljeskavica
+
+### 1116
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+AIEMPI KYSYMYS: Mitä serbialaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.
+KYSYMYS: Kerro lisää: sarma
+
+### 1117
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgrad — kohdekartta / Kohdekartta: Tasavallan aukio] 1860-luvulta; nykyasu 1882– Tasavallan aukion paikalla oli Stambolin portti, joka purettiin vuonna 1866. Portti oli kaupungin kauneimpana pidetty, ja sen nimi tuli Istanbulin tieltä. Kansallisteatteri valmistui vuonna 1869, ja se oli yli 30 vuotta aukion ainoa suuri rakennus. Aukio tunnettiin nimellä Pozorišni trg, teatteriaukio, kommunistiaikaan asti, ja siellä pidettiin myös maalaismarkkinoita, joilla myytiin sian- ja lampaanlihaa, pekonia ja kajmakia. Ruhtinas Mihailon ratsastajapatsas, jonka teki Enrico Pazzi, pystytettiin joulukuussa 1882. Josimovićin vuoden 1867 vihreän vyöhykkeen suunnitelmasta toteutui aukion osalta vain osa. Isoisän matkavuonna 1873 aukiota ei vielä ollut kaupunkit…
+- [Bosnia ja Hertsegovina — maalehti / Ruoka: Kymmenen pientä makkaraa yhdellä leivällä] nykyaika — Ćevapi on Bosnian tunnetuin ruokalaji: pieniä, sormen mittaisia jauhelihapihvejä, yleensä naudan- ja lampaanlihasta, jotka grillataan hiilellä ja tarjoillaan tuoreessa, pehmeässä somun-leivässä. Annos tulee yleensä kymmenessä kappaleessa, mukana raakaa sipulia ja usein kajmakia, paksua kermaista juustoa. Sarajevolainen versio on pieni ja niitä syödään monta, kun taas Banja Lukassa ćevapi ovat isompia ja niitä tarjoillaan harvempi ranskalaisten kera. Ruoan juuret ovat Ottomaanien ajan lihapullaperinteessä.
+AIEMPI KYSYMYS: Mitä serbialaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.
+KYSYMYS: Kerro lisää: kajmakia
+
+### 1118
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+AIEMPI KYSYMYS: Mitä serbialaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt tuli nälkä. Serbialaisessa keittiössä grillattu liha on vahvasti esillä: [[ćevapi]] ovat pieniä grillattuja lihaleipiä tai makkaroita, ja [[pljeskavica]] on suuri jauhelihapihvi. Kaalikääryleet eli [[sarma]] kuuluvat juhlapöytään, ja leivän päälle levitetään usein [[kajmakia]], kermamaista maitotuotetta. Juomaksi tarjotaan perinteisesti hedelmätisleistä [[rakijaa]]. Leipä on nimeltään somun, ja se on minun suosikkini.
+KYSYMYS: Kerro lisää: rakijaa
+
+### 1119
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Musiikki: Kaupunki sävelsi oman jokensa] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Millaisia luonnonnähtävyyksiä Serbiassa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on vastaus. Pohjoisessa Vojvodinan tasangoilla virtaa [[Tonava]], joka kaivautuu idässä Romanian rajalla kapeaan [[Rautaporttien]] rotkoon, jota pidetään yhtenä Euroopan vaikuttavimmista jokirotkoista. Länsiosassa [[Taran]] kansallispuiston vuoristometsät ovat tunnettuja karhuistaan ja syvistä kanjoneistaan. Etelässä vuoret nousevat yli kahden kilometrin korkeuteen. Näkymät ovat parhaita ylhäältä, minä tiedän.
+KYSYMYS: Kerro lisää: Tonava
+
+### 1120
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Serbia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Serbia (maa)
+Tietoruudun teksti: Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 prosenttia asukkaista.
+AIEMPI KYSYMYS: Millaisia luonnonnähtävyyksiä Serbiassa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on vastaus. Pohjoisessa Vojvodinan tasangoilla virtaa [[Tonava]], joka kaivautuu idässä Romanian rajalla kapeaan [[Rautaporttien]] rotkoon, jota pidetään yhtenä Euroopan vaikuttavimmista jokirotkoista. Länsiosassa [[Taran]] kansallispuiston vuoristometsät ovat tunnettuja karhuistaan ja syvistä kanjoneistaan. Etelässä vuoret nousevat yli kahden kilometrin korkeuteen. Näkymät ovat parhaita ylhäältä, minä tiedän.
+KYSYMYS: Kerro lisää: Rautaporttien

@@ -15,6 +15,10 @@ Jokaisesta sinulle annetusta erästä N tehdään vastaukset tiedostoon:
    2–5 eri [[käsite]]-merkintää (ilman pystyviivaa), sitten rivi "JATKOT:" ja täsmälleen kaksi jatkokysymystä omilla riveillään
    (kumpikin ≤ 70 merkkiä, päättyy kysymysmerkkiin; paikkarivi vain, jos kehote sitä edellyttää). Enintään 900 tokenia.
    Käytä ensisijaisesti kontekstin aineistoa, älä keksi faktoja äläkä viittaa kontekstiin tai ohjeisiin.
+   **TARKISTA JOKAINEN VASTAUS ENNEN KIRJOITTAMISTA: siinä on VÄHINTÄÄN 2 ja ENINTÄÄN 5 eri [[käsite]]-merkintää.**
+   Aiemmissa erissä kolmasosassa vastauksista oli 0–1 merkintää, ja ne kirjoitetaan uudelleen. Merkitse [[ ]]-sulkein
+   vastauksessa mainitut nimet, paikat, henkilöt, tapahtumat tai ilmiöt, joista pelaaja voisi haluta kuulla lisää.
+   Uusi kysymys on ENINTÄÄN 70 merkkiä (laske), muuten se hylätään.
 4. Tiedostomuoto: rivi "### n.i", rivi "KYSYMYS: <kysymys sanatarkasti>", sitten vastaus. Ei muuta tekstiä tiedostoon.
    Kirjoita erä KAHTENA tiedostona (lyhyet Write-kutsut): K/KAUMAA/vastaukset-1-N-a.txt = erän kolme ensimmäistä kohtaa,
    K/KAUMAA/vastaukset-1-N-b.txt = loput kohdat. Kaikki ### n.i -paikat on kirjoitettava (5 per kohta).

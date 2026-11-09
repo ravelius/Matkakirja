@@ -1,0 +1,1519 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — maalehti / Musiikki: Laulu, joka teki kantonista popkielen] 1971–1978 — 1960-luvulla kantoninkielistä musiikkia pidettiin Hongkongissa vanhanaikaisena tai kouluttamattomana, kun taas brittiläinen ja amerikkalainen musiikki merkitsi sivistystä. Noin 1971 Sandra Lang, joka ei ollut laulanut kantoninkielistä poppia lainkaan, kutsuttiin laulamaan ensimmäinen kantoninkielinen tv-sarjan tunnuslaulu; sen tekivät säveltäjä Joseph Koo ja sanoittaja Yip Siu-dak, ja se nousi listojen kärkeen. Sam Huin ensimmäinen kantoninkielinen albumi Games Gamblers Play myi 1974 kaksisataatuhatta kappaletta. Sanan Cantopop otti käyttöön 1978 Billboardin kirjeenvaihtaja Hans Ebert.
+AIEMPI KYSYMYS: Miten Sveitsin kansanäänestykset toimivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sveitsissä kansalaiset äänestävät [[kansanäänestys]]ten avulla suorista kysymyksistä noin neljä kertaa vuodessa, ja päätökset koskevat sekä koko maata että yksittäisiä kantoneja. Maassa on 26 [[kantoni]]a, ja jokaisella on oma perustuslakinsa, koulujärjestelmänsä ja verotuksensa. Yhteinen päätöksentekotapa pitää koossa maata, jossa puhutaan neljää virallista kieltä: saksaa, ranskaa, italiaa ja retoromaania. Tarkkoja äänestysmenettelyn yksityiskohtia, kuten allekirjoitusmääriä, en ole varma luettelemaan. Sveitsiläiset äänestävät niin usein, että minä jo melkein kadehdin.
+KYSYMYS: Kerro lisää: kantoni
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+- [Sveitsi — maalehti / Vuoret: Juna kulkee vuoren alitse] 2016 — Gotthardin pohjatunneli avattiin 1. kesäkuuta 2016, ja se on 57 kilometriä pitkä — maailman pitkin rautatietunneli. Louhinta kesti seitsemäntoista vuotta, ja paksimmillaan kalliota on tunnelin päällä yli kaksi kilometriä. Vanha rata kiipesi vuoren rinteitä mutkitellen, mutta pohjatunneli menee suoraan ja lähes vaakasuoraan, joten junat kulkevat siellä nopeammin kuin ennen vuoren yli. Kiveä louhittiin niin paljon, että siitä olisi saanut viisi Kheopsin pyramidia.
+AIEMPI KYSYMYS: Mikä on Gotthardin pohjatunneli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Gotthardin pohjatunneli]] on Sveitsin Alppien läpi kaivettu rautatietunneli, jonka pituus on 57 kilometriä ja jota pidetään maailman pisimpänä rautatietunnelina. Se kulkee vuoren juuren alitse, joten junat voivat ylittää [[Alpit]] tasaisella radalla ilman jyrkkiä nousuja. Tunneli avattiin vuonna 2016. Suunnittelu ja rakentaminen vaativat vuosikymmeniä ja valtavasti työtä, ja sen avulla matkustajat ja tavarat pääsevät pohjoisen ja etelän välillä nopeammin. Ei paha kyyhkyltä, että muistin tämän.
+KYSYMYS: Kerro lisää: Gotthardin pohjatunneli
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+AIEMPI KYSYMYS: Mikä on Gotthardin pohjatunneli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Gotthardin pohjatunneli]] on Sveitsin Alppien läpi kaivettu rautatietunneli, jonka pituus on 57 kilometriä ja jota pidetään maailman pisimpänä rautatietunnelina. Se kulkee vuoren juuren alitse, joten junat voivat ylittää [[Alpit]] tasaisella radalla ilman jyrkkiä nousuja. Tunneli avattiin vuonna 2016. Suunnittelu ja rakentaminen vaativat vuosikymmeniä ja valtavasti työtä, ja sen avulla matkustajat ja tavarat pääsevät pohjoisen ja etelän välillä nopeammin. Ei paha kyyhkyltä, että muistin tämän.
+KYSYMYS: Kerro lisää: Alpit
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+AIEMPI KYSYMYS: Miksi Sveitsi on puolueeton maa?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vakava juttu. Sveitsi on ollut puolueeton vuodesta 1815, jolloin Euroopan suurvallat tunnustivat sen [[puolueettomuus]]aseman Wienin kongressissa. Puolueettomuus tarkoittaa, ettei maa ota osaa muiden valtioiden sotiin eikä liity sotilasliittoihin. Maa liittyi Yhdistyneisiin kansakuntiin vasta vuonna 2002, eikä se ole Euroopan unionin jäsen. Puolueettomuudesta on tullut osa [[Sveitsin]] identiteettiä, vaikka maalla onkin oma armeijansa ja kansalaisia kutsutaan asepalvelukseen. Siinä on kyyhkyllekin ihailtavaa rauhaa.
+KYSYMYS: Kerro lisää: puolueettomuus
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Miksi Sveitsi on puolueeton maa?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vakava juttu. Sveitsi on ollut puolueeton vuodesta 1815, jolloin Euroopan suurvallat tunnustivat sen [[puolueettomuus]]aseman Wienin kongressissa. Puolueettomuus tarkoittaa, ettei maa ota osaa muiden valtioiden sotiin eikä liity sotilasliittoihin. Maa liittyi Yhdistyneisiin kansakuntiin vasta vuonna 2002, eikä se ole Euroopan unionin jäsen. Puolueettomuudesta on tullut osa [[Sveitsin]] identiteettiä, vaikka maalla onkin oma armeijansa ja kansalaisia kutsutaan asepalvelukseen. Siinä on kyyhkyllekin ihailtavaa rauhaa.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+AIEMPI KYSYMYS: Mitä ruokia Sveitsissä syödään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sveitsiläisessä keittiössä juusto on keskeinen raaka-aine, ja tunnetuimpia ruokia ovat [[fondue]], jossa leipäpaloja kastetaan sulaan juustoon, sekä [[raclette]], jossa sulatettua juustoa kaavitaan perunoiden päälle. Myös perunasta paistettu [[rösti]] on laajalle levinnyt ruoka, ja Sveitsi tunnetaan lisäksi suklaasta. Ruokaperinteet vaihtelevat kielialueittain, sillä saksan-, ranskan- ja italiankielisillä seuduilla on omat erikoisuutensa. Pullaan en löydä tähän yhtä selvää nimeä, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto riittää kyllä minullekin.
+KYSYMYS: Kerro lisää: fondue
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+AIEMPI KYSYMYS: Mitä ruokia Sveitsissä syödään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sveitsiläisessä keittiössä juusto on keskeinen raaka-aine, ja tunnetuimpia ruokia ovat [[fondue]], jossa leipäpaloja kastetaan sulaan juustoon, sekä [[raclette]], jossa sulatettua juustoa kaavitaan perunoiden päälle. Myös perunasta paistettu [[rösti]] on laajalle levinnyt ruoka, ja Sveitsi tunnetaan lisäksi suklaasta. Ruokaperinteet vaihtelevat kielialueittain, sillä saksan-, ranskan- ja italiankielisillä seuduilla on omat erikoisuutensa. Pullaan en löydä tähän yhtä selvää nimeä, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto riittää kyllä minullekin.
+KYSYMYS: Kerro lisää: raclette
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+AIEMPI KYSYMYS: Mitä ruokia Sveitsissä syödään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sveitsiläisessä keittiössä juusto on keskeinen raaka-aine, ja tunnetuimpia ruokia ovat [[fondue]], jossa leipäpaloja kastetaan sulaan juustoon, sekä [[raclette]], jossa sulatettua juustoa kaavitaan perunoiden päälle. Myös perunasta paistettu [[rösti]] on laajalle levinnyt ruoka, ja Sveitsi tunnetaan lisäksi suklaasta. Ruokaperinteet vaihtelevat kielialueittain, sillä saksan-, ranskan- ja italiankielisillä seuduilla on omat erikoisuutensa. Pullaan en löydä tähän yhtä selvää nimeä, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto riittää kyllä minullekin.
+KYSYMYS: Kerro lisää: rösti
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+AIEMPI KYSYMYS: Missä retoromaania puhutaan ja millainen kieli se on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiinnostava. [[Retoromaani]] on romaaninen kieli, joka on kehittynyt latinasta [[Alppien]] laaksoissa, ja sitä puhutaan Sveitsissä lähinnä [[Graubündenin]] kantonissa. Se on yksi maan neljästä virallisesta kielestä, vaikka sen puhujien osuus asukkaista on vain noin puoli prosenttia. Kieltä kirjoitetaan useina alueellisina muunnelmina, ja yhteisen kirjakielen rinnalla on vahvoja paikallisia muotoja. Suku on vanhaa roomalaista, joten latinan perillinen kuulostaa minun korvaani kotoisalta.
+KYSYMYS: Kerro lisää: Retoromaani
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Missä retoromaania puhutaan ja millainen kieli se on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiinnostava. [[Retoromaani]] on romaaninen kieli, joka on kehittynyt latinasta [[Alppien]] laaksoissa, ja sitä puhutaan Sveitsissä lähinnä [[Graubündenin]] kantonissa. Se on yksi maan neljästä virallisesta kielestä, vaikka sen puhujien osuus asukkaista on vain noin puoli prosenttia. Kieltä kirjoitetaan useina alueellisina muunnelmina, ja yhteisen kirjakielen rinnalla on vahvoja paikallisia muotoja. Suku on vanhaa roomalaista, joten latinan perillinen kuulostaa minun korvaani kotoisalta.
+KYSYMYS: Kerro lisää: Alppien
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+AIEMPI KYSYMYS: Missä retoromaania puhutaan ja millainen kieli se on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiinnostava. [[Retoromaani]] on romaaninen kieli, joka on kehittynyt latinasta [[Alppien]] laaksoissa, ja sitä puhutaan Sveitsissä lähinnä [[Graubündenin]] kantonissa. Se on yksi maan neljästä virallisesta kielestä, vaikka sen puhujien osuus asukkaista on vain noin puoli prosenttia. Kieltä kirjoitetaan useina alueellisina muunnelmina, ja yhteisen kirjakielen rinnalla on vahvoja paikallisia muotoja. Suku on vanhaa roomalaista, joten latinan perillinen kuulostaa minun korvaani kotoisalta.
+KYSYMYS: Kerro lisää: Graubündenin
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern] Bern on Sveitsin liittokaupunki, jonka vanhakaupunki nousee Aare-joen mäkiniemelle ja jossa hiekkakivinen keskiaika on säilynyt ehjänä. Täällä on liittovaltion hallituksen ja parlamentin kotipaikka, ja kaupungin kilvessä kävelee karhu.
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+AIEMPI KYSYMYS: Onko Bern Sveitsin pääkaupunki?
+AIEMPI VASTAUS (Livia):
+No niin, tähän pitää vastata tarkasti. Sveitsin perustuslaki ei nimeä virallista pääkaupunkia, vaan [[Bern]] on liittokaupunki eli hallituksen ja parlamentin kotipaikka. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28. marraskuuta 1848. Kaupungissa asuu noin 147 000 ihmistä, ja hallitus sekä [[parlamentti]] istuvat samassa rakennuksessa, [[liittopalatsi]]ssa. Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.
+KYSYMYS: Kerro lisää: Bern
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Historia: Parlamentti, joka valmistui isoisän ympärillä] Uuden siirtokunnan parlamentti kokoontui ensimmäisen kerran 22. toukokuuta 1860 entisessä vankibarakissa, ja kunnollisen talon suunnittelukilpailu meni kahdesti uusiksi ennen kuin siirtokunnan arkkitehdin Charles Tiffinin ehdotus valittiin. Peruskiven laski kuvernööri George Bowen 14. heinäkuuta 1865, ja George Streetin julkisivu avattiin elokuussa 1868 ranskalaisen renessanssin tyyliin. Isoisän matkan aikaan rakennus oli siis käytössä mutta yhä kesken: kaarikäytävät ja pylväiköt valmistuivat vasta 1878 ja Alice Streetin siipi 1889. Rakentaja Joshua Jeays louhi hiekkakiven omista louhoksistaan.
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, ”lakikalliolla”, josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+AIEMPI KYSYMYS: Onko Bern Sveitsin pääkaupunki?
+AIEMPI VASTAUS (Livia):
+No niin, tähän pitää vastata tarkasti. Sveitsin perustuslaki ei nimeä virallista pääkaupunkia, vaan [[Bern]] on liittokaupunki eli hallituksen ja parlamentin kotipaikka. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28. marraskuuta 1848. Kaupungissa asuu noin 147 000 ihmistä, ja hallitus sekä [[parlamentti]] istuvat samassa rakennuksessa, [[liittopalatsi]]ssa. Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.
+KYSYMYS: Kerro lisää: parlamentti
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern: Pääkaupunki, jota ei nimetty] Liittokokouksen edustajien enemmistö valitsi 28.11.1848 Bernin Sveitsin hallituksen kotipaikaksi Zürichin ja Luzernin edelle. Lähteen mukaan syinä olivat se, ettei valta keskittyisi talousvoimalle Zürichille, että katolinen ja konservatiivinen Luzern oli ollut Sonderbundissa ja että Bern sijaitsi keskeisemmin ja lähempänä ranskankielisiä kantoneja. Perustuslaki ei silti nimeä Berniä virallisesti pääkaupungiksi. Ensimmäinen liittopalatsi, nykyinen Bundeshaus West, rakennettiin 1852–1857 kaupungin kustannuksella. Isoisän matkavuonna 1873 se oli vasta kuusitoista vuotta vanha.
+AIEMPI KYSYMYS: Onko Bern Sveitsin pääkaupunki?
+AIEMPI VASTAUS (Livia):
+No niin, tähän pitää vastata tarkasti. Sveitsin perustuslaki ei nimeä virallista pääkaupunkia, vaan [[Bern]] on liittokaupunki eli hallituksen ja parlamentin kotipaikka. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28. marraskuuta 1848. Kaupungissa asuu noin 147 000 ihmistä, ja hallitus sekä [[parlamentti]] istuvat samassa rakennuksessa, [[liittopalatsi]]ssa. Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.
+KYSYMYS: Kerro lisää: liittopalatsi
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Kuvia kivessä, lasissa ja värissä: Viimeinen tuomio kivessä] Münsterin päätuloportaalin yllä on lähteen mukaan yksi Euroopan täydellisimmistä myöhäisgoottilaisista veistoskokoelmista. Aiheena on viimeinen tuomio: jumalattomat ovat oikealla, vanhurskaat vasemmalla, ja keskellä seisovat Oikeus ja arkkienkeli Mikael. Veistokset teki pääosin Erhard Küng Westfalenin Stadtlohnista, ja ne on veistetty 1400-luvun jälkipuoliskolla; keskellä seisovan Oikeuden on veistänyt Daniel Heintz. Portaalin suuret, vapaasti seisovat patsaat (47) ovat nykyään jäljennöksiä, ja alkuperäiset säilytetään Bernin historiallisessa museossa. Veistokset olivat ainoat Münsterin patsaat, jotka säilyivät reformaation ikonoklasmista.
+- [Bern — kohdekartta / Kohdekartta: Bernin tuomiokirkko] 1421–1893 Bernin tuomiokirkon, Münsterin, rakentaminen aloitettiin 11.3.1421 Matthäus Ensingerin johdolla. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1500-luvun lopulla, ja noin 100 metrin torni valmistui lopulta 1893. Urut rakennettiin ja laajennettiin 1700-luvulla. Suurin kello painaa noin 10 tonnia, ja kellot soivat päivittäin. Sisätilassa on säilynyt lasimaalauksia 1440-luvulta ja kuoripenkit, vaikka reformaation myötä 1528 poistettiin sivualttarit. Isoisän matkavuonna 1873 tornista puuttui vielä huippu: kello- ja tornityö valmistui vasta 1893, ja lähteen mukaan torni on Sveitsin korkein kirkontorni.
+AIEMPI KYSYMYS: Miksi Bernin vaakunassa on karhu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karhu on ollut [[Bernin]] sinetissä ja vaakunassa ainakin 1200-luvulta lähtien, ja se on kaupungin tunnetuin tunnus. Perimätiedon mukaan herttua [[Berchtold V]] perusti kaupungin vuonna 1191 ja nimesi sen metsästämänsä karhun mukaan, sillä saksan kielen sana Bär tarkoittaa karhua. Tämä on kuitenkin kertomus, jonka historiantutkijat voivat nähdä useasta näkökulmasta, enkä ole varma sen tarkasta alkuperästä. Nykyään [[karhu]] on kaupungissa kaikkialla: sen patsaita, kuvia ja vaakunoita löytyy katujen varsilta, ja kaupungin kilvessä kävelee karhu. Kyyhkynä toivon vaan, ettei se ala seurata minua.
+KYSYMYS: Kerro lisää: Bernin
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern: Karhu vai rako] Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1200-luvulta, ja kaupunkia on leikillä kutsuttu myös Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.
+AIEMPI KYSYMYS: Miksi Bernin vaakunassa on karhu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karhu on ollut [[Bernin]] sinetissä ja vaakunassa ainakin 1200-luvulta lähtien, ja se on kaupungin tunnetuin tunnus. Perimätiedon mukaan herttua [[Berchtold V]] perusti kaupungin vuonna 1191 ja nimesi sen metsästämänsä karhun mukaan, sillä saksan kielen sana Bär tarkoittaa karhua. Tämä on kuitenkin kertomus, jonka historiantutkijat voivat nähdä useasta näkökulmasta, enkä ole varma sen tarkasta alkuperästä. Nykyään [[karhu]] on kaupungissa kaikkialla: sen patsaita, kuvia ja vaakunoita löytyy katujen varsilta, ja kaupungin kilvessä kävelee karhu. Kyyhkynä toivon vaan, ettei se ala seurata minua.
+KYSYMYS: Kerro lisää: Berchtold V
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern: Karhu vai rako] Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1200-luvulta, ja kaupunkia on leikillä kutsuttu myös Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.
+AIEMPI KYSYMYS: Miksi Bernin vaakunassa on karhu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karhu on ollut [[Bernin]] sinetissä ja vaakunassa ainakin 1200-luvulta lähtien, ja se on kaupungin tunnetuin tunnus. Perimätiedon mukaan herttua [[Berchtold V]] perusti kaupungin vuonna 1191 ja nimesi sen metsästämänsä karhun mukaan, sillä saksan kielen sana Bär tarkoittaa karhua. Tämä on kuitenkin kertomus, jonka historiantutkijat voivat nähdä useasta näkökulmasta, enkä ole varma sen tarkasta alkuperästä. Nykyään [[karhu]] on kaupungissa kaikkialla: sen patsaita, kuvia ja vaakunoita löytyy katujen varsilta, ja kaupungin kilvessä kävelee karhu. Kyyhkynä toivon vaan, ettei se ala seurata minua.
+KYSYMYS: Kerro lisää: karhu
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kohdekartta / Kohdekartta: Einsteinhaus] 1903–1905 Einsteinhaus on Kramgasse 49:ssä, ja Albert Einstein asui talon toisessa kerroksessa vaimonsa Mileva Marićin ja poikansa Hansin kanssa 1903–1905. Annus mirabilis -artikkelit kirjoitettiin tässä talossa. Samaan aikaan Einstein työskenteli liittovaltion henkisen omaisuuden toimistossa. Nykyisin talossa on museo. Toisessa kerroksessa on aikakauden kalusteilla sisustettu asunto, ja kolmannessa kerroksessa kerrotaan Einsteinin elämäkerta. Pienempi näyttely on Bernin historiallisessa museossa. Isoisän matkavuonna 1873 Einsteinin asuminen talossa ei ollut vielä alkanut: se tapahtui vasta 1903–1905.
+AIEMPI KYSYMYS: Mitä Albert Einstein teki Bernissä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Albert Einstein]] työskenteli Bernin [[patenttivirasto]]ssa kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Hänen palkkansa elätti vaimo Milevan ja pienen Hans Albertin, ja hän ajatteli fysiikan kysymyksiä iltaisin työpäivän jälkeen. Ystävä ja työtoveri Michele Besso kuului harvoihin, joiden kanssa hän pohdiskeli niitä ääneen, ja iltaisin hän tapasi tuttavia, jotka kutsuivat itseään leikillään [[Olympia-akatemia]]ksi. Virastoon hän päätyi, koska yksikään haettu opettajanpaikka ei auennut. Meikäläinen postityö ja patenttityö kuulostavat kyllä hämmentävän samanlaisilta.
+KYSYMYS: Kerro lisää: Albert Einstein
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+AIEMPI KYSYMYS: Mitä Albert Einstein teki Bernissä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Albert Einstein]] työskenteli Bernin [[patenttivirasto]]ssa kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Hänen palkkansa elätti vaimo Milevan ja pienen Hans Albertin, ja hän ajatteli fysiikan kysymyksiä iltaisin työpäivän jälkeen. Ystävä ja työtoveri Michele Besso kuului harvoihin, joiden kanssa hän pohdiskeli niitä ääneen, ja iltaisin hän tapasi tuttavia, jotka kutsuivat itseään leikillään [[Olympia-akatemia]]ksi. Virastoon hän päätyi, koska yksikään haettu opettajanpaikka ei auennut. Meikäläinen postityö ja patenttityö kuulostavat kyllä hämmentävän samanlaisilta.
+KYSYMYS: Kerro lisää: patenttivirasto
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+AIEMPI KYSYMYS: Mitä Albert Einstein teki Bernissä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Albert Einstein]] työskenteli Bernin [[patenttivirasto]]ssa kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Hänen palkkansa elätti vaimo Milevan ja pienen Hans Albertin, ja hän ajatteli fysiikan kysymyksiä iltaisin työpäivän jälkeen. Ystävä ja työtoveri Michele Besso kuului harvoihin, joiden kanssa hän pohdiskeli niitä ääneen, ja iltaisin hän tapasi tuttavia, jotka kutsuivat itseään leikillään [[Olympia-akatemia]]ksi. Virastoon hän päätyi, koska yksikään haettu opettajanpaikka ei auennut. Meikäläinen postityö ja patenttityö kuulostavat kyllä hämmentävän samanlaisilta.
+KYSYMYS: Kerro lisää: Olympia-akatemia
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern: Pääkaupunki, jota ei nimetty] Liittokokouksen edustajien enemmistö valitsi 28.11.1848 Bernin Sveitsin hallituksen kotipaikaksi Zürichin ja Luzernin edelle. Lähteen mukaan syinä olivat se, ettei valta keskittyisi talousvoimalle Zürichille, että katolinen ja konservatiivinen Luzern oli ollut Sonderbundissa ja että Bern sijaitsi keskeisemmin ja lähempänä ranskankielisiä kantoneja. Perustuslaki ei silti nimeä Berniä virallisesti pääkaupungiksi. Ensimmäinen liittopalatsi, nykyinen Bundeshaus West, rakennettiin 1852–1857 kaupungin kustannuksella. Isoisän matkavuonna 1873 se oli vasta kuusitoista vuotta vanha.
+- [Bern — kaupunkilehti / Kuvia kivessä, lasissa ja värissä: Viimeinen tuomio kivessä] Münsterin päätuloportaalin yllä on lähteen mukaan yksi Euroopan täydellisimmistä myöhäisgoottilaisista veistoskokoelmista. Aiheena on viimeinen tuomio: jumalattomat ovat oikealla, vanhurskaat vasemmalla, ja keskellä seisovat Oikeus ja arkkienkeli Mikael. Veistokset teki pääosin Erhard Küng Westfalenin Stadtlohnista, ja ne on veistetty 1400-luvun jälkipuoliskolla; keskellä seisovan Oikeuden on veistänyt Daniel Heintz. Portaalin suuret, vapaasti seisovat patsaat (47) ovat nykyään jäljennöksiä, ja alkuperäiset säilytetään Bernin historiallisessa museossa. Veistokset olivat ainoat Münsterin patsaat, jotka säilyivät reformaation ikonoklasmista.
+AIEMPI KYSYMYS: Mitä ovat Bernin holvikäytävät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Bernin vanhakaupunki]] on rakennettu hiekkakivestä, ja talojen edessä kulkee kadun varrella noin kuuden kilometrin verran [[holvikäytäviä]], joiden alla voi kävellä sateella kuivin jaloin. [[Vuoden 1405 suurpalo]] tuhosi suurimman osan kaupungin puutaloista, ja tilalle nousi vähitellen kivikaupunki. Käytävien alla sijaitsevat kauppoja, kahviloita ja kellariravintoloita, ja niiden ansiosta vanhakaupunki on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983. Isoisä kirjoitti kulkeneensa niissä kuivin jaloin, ja sen kyllä uskon. Minä pysyn mieluummin ylhäällä.
+KYSYMYS: Kerro lisää: Bernin vanhakaupunki
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: Wheat Creekin holvi] 1861 Keskustan alla virtaa puro. Wheat Creek eli Big Creek sai alkunsa nykyisen Brisbane Grammar Schoolin tienoilta, kulki Roma Streetin ratapihan kohdalta lammikkona Georgen ja Roman katujen väliin, jatkoi vinosti Adelaiden ja Albertin katujen risteyksen poikki ja laski jokeen nykyisen Creek Streetin päässä. Kadun nimi on ainoa asia, joka purosta näkyy kartalla — mutta uoman pohja erottuu yhä Adelaide Streetin huoltokujilla. Vuonna 1859 perustettu kaupunki oli harjanteita ja soita, joita ei saanut kuivatuksi, ja korkea nousuvesi teki maasta sateella kulkukelvotonta. Viemäröinti oli siis uuden kunnanvaltuuston kiireellisimpiä töitä. Ratkaisu oli munanmuotoinen viemäri, jonka John Phillips o…
+- [Sudan — maalehti / Kuvataide: Holvi, joka muurataan ilman muottia] Nubialaisten kirkkojen huomattavin rakennuspiirre on savitiilestä muurattu holvi. Sen erikoisuus on siinä, ettei se tarvitse puista tukimuottia: tiilet ladotaan vinoon riviin päätyseinää vasten, ja jokainen uusi rivi nojaa edelliseen, kunnes katto sulkeutuu. Puuta ei siis kulu lainkaan, mikä on aavikon reunalla ratkaiseva etu. Egyptiläinen arkkitehti Hassan Fathy löysi tekniikan uudelleen nubialaisesta Abu al-Richen kylästä ja teki siitä 1900-luvulla oman rakennustapansa perustan. Sitä pidetään yhä yhtenä ekologisimmista rakennustavoista.
+AIEMPI KYSYMYS: Mitä ovat Bernin holvikäytävät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Bernin vanhakaupunki]] on rakennettu hiekkakivestä, ja talojen edessä kulkee kadun varrella noin kuuden kilometrin verran [[holvikäytäviä]], joiden alla voi kävellä sateella kuivin jaloin. [[Vuoden 1405 suurpalo]] tuhosi suurimman osan kaupungin puutaloista, ja tilalle nousi vähitellen kivikaupunki. Käytävien alla sijaitsevat kauppoja, kahviloita ja kellariravintoloita, ja niiden ansiosta vanhakaupunki on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983. Isoisä kirjoitti kulkeneensa niissä kuivin jaloin, ja sen kyllä uskon. Minä pysyn mieluummin ylhäällä.
+KYSYMYS: Kerro lisää: holvikäytäviä
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern: Tulipalo, joka teki kaupungista hiekkakiveä] Vuoden 1405 suurpalo tuhosi suurimman osan Bernin puurakennuksista. Puutalojen tilalle rakennettiin vähitellen ensin ristikkotaloja ja sitten hiekkakivitaloja, ja ne ovat vanhankaupungin tunnusmerkki. Holvikäytävät syntyivät 1400-luvulla, kun talojen yläkerrat laajenivat kadun päälle. Käytäviä on yhteensä noin kuusi kilometriä, ja lähteen mukaan ne muodostavat yhden Euroopan pisimmistä katetuista ostoskaduista. Unesco perustelee vanhankaupungin maailmanperintölistausta muun muassa poikkeuksellisen johdonmukaisella kaavoituksella.
+AIEMPI KYSYMYS: Mitä ovat Bernin holvikäytävät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Bernin vanhakaupunki]] on rakennettu hiekkakivestä, ja talojen edessä kulkee kadun varrella noin kuuden kilometrin verran [[holvikäytäviä]], joiden alla voi kävellä sateella kuivin jaloin. [[Vuoden 1405 suurpalo]] tuhosi suurimman osan kaupungin puutaloista, ja tilalle nousi vähitellen kivikaupunki. Käytävien alla sijaitsevat kauppoja, kahviloita ja kellariravintoloita, ja niiden ansiosta vanhakaupunki on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983. Isoisä kirjoitti kulkeneensa niissä kuivin jaloin, ja sen kyllä uskon. Minä pysyn mieluummin ylhäällä.
+KYSYMYS: Kerro lisää: Vuoden 1405 suurpalo
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+AIEMPI KYSYMYS: Millainen on Bernin vanhakaupunki?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Bernin [[vanhakaupunki]] nousee Aare-joen ympäröimälle mäkiniemelle, ja se on säilynyt keskiaikaisena kokonaisuutena. Se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983. Tuomiokirkon [[Berner Münster]] torni on kaupungin tunnetuimpia maamerkkejä, ja isoisän aikaan sen torni oli yhä vailla huippuaan. Aare kiertää vanhakaupunkia kolmelta puolelta, mikä on antanut kaupungille sen erottuvan muodon. Pelkän katon katsominen ei tähän riitä, mutta sen verran minä ylhäältä näen.
+KYSYMYS: Kerro lisää: vanhakaupunki
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+AIEMPI KYSYMYS: Millainen on Bernin vanhakaupunki?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Bernin [[vanhakaupunki]] nousee Aare-joen ympäröimälle mäkiniemelle, ja se on säilynyt keskiaikaisena kokonaisuutena. Se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983. Tuomiokirkon [[Berner Münster]] torni on kaupungin tunnetuimpia maamerkkejä, ja isoisän aikaan sen torni oli yhä vailla huippuaan. Aare kiertää vanhakaupunkia kolmelta puolelta, mikä on antanut kaupungille sen erottuvan muodon. Pelkän katon katsominen ei tähän riitä, mutta sen verran minä ylhäältä näen.
+KYSYMYS: Kerro lisää: Berner Münster
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monte Carlon kasino] 1863, laajennettu 1878–81 Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863. Isoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier…
+- [Monaco — kaupunkilehti / Monaco: Luolista Monte Carloksi] Ajatus kasinosta tuli ruhtinatar Carolinelta, ja tarkoituksena oli pelastaa Grimaldit velkaantumiselta. Lähteen mukaan ensimmäinen kasino avattiin La Condamine -alueen Villa Bellevuessa 14. joulukuuta 1856, vaikka muut lähteet ajoittavat avauksen 1858 tai 1862. Nykyiselle paikalle Spélugues-alueelle, jonka nimi tarkoittaa luolia, rakennettiin vuodesta 1858, ja rakennus valmistui 1863. François Blanc otti toiminnan haltuunsa 50 vuoden toimiluvalla, ja alue sai nimekseen Monte Carlo ruhtinas Charlesin mukaan. Rautatie saapui 1867–68 ja toi kävijät. Englantilainen Joseph Jagger sai julkisuutta rikottuaan pankin: hän oli huomannut rulettipyörän vinoutuman.
+AIEMPI KYSYMYS: Kuinka korkea Mont Blanc on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Mont Blanc]] on Alppien korkein huippu, ja sen korkeus on noin 4 800 metriä merenpinnan yläpuolella. Tarkka luku vaihtelee mittauksen mukaan, sillä huipun korkeutta määrittää lumi- ja jääkerroksen paksuus, joka muuttuu vuosittain. Se sijaitsee Ranskan ja Italian rajalla, ja sen ympärillä on laajoja jäätiköitä. [[Alpeilla]] on yli neljän kilometrin huippuja 82, ja Mont Blanc on niistä korkein. Kaukaa katsottuna se näyttää ihan kiltiltä, mutta minä pysyn mieluummin matalammalla.
+KYSYMYS: Kerro lisää: Mont Blanc
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Kuinka korkea Mont Blanc on?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Mont Blanc]] on Alppien korkein huippu, ja sen korkeus on noin 4 800 metriä merenpinnan yläpuolella. Tarkka luku vaihtelee mittauksen mukaan, sillä huipun korkeutta määrittää lumi- ja jääkerroksen paksuus, joka muuttuu vuosittain. Se sijaitsee Ranskan ja Italian rajalla, ja sen ympärillä on laajoja jäätiköitä. [[Alpeilla]] on yli neljän kilometrin huippuja 82, ja Mont Blanc on niistä korkein. Kaukaa katsottuna se näyttää ihan kiltiltä, mutta minä pysyn mieluummin matalammalla.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mitä tarkoittaa karjan vienti alppilaitumille?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Alppien]] vuoristoviljelyssä lehmät viedään keväällä ylös [[alppilaitumet]]ille ja tuodaan syksyllä takaisin laaksoon, koska laaksonpohjan heinä halutaan säästää talveksi. Kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen mutta maito ei. Tämä rytmi on muovannut laaksojen elämää satojen vuosien ajan, ja siitä ovat syntyneet monet perinteet, kuten [[karjan paluujuhlat]] syksyllä. Vuorilaitumet pitävät maiseman avoimena, ja laidunnus on osa tapaa, jolla vuoristo on asuttu. Minä en kaipaa lehmien seuraa, mutta juustoa kyllä.
+KYSYMYS: Kerro lisää: Alppien
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+AIEMPI KYSYMYS: Mitä tarkoittaa karjan vienti alppilaitumille?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Alppien]] vuoristoviljelyssä lehmät viedään keväällä ylös [[alppilaitumet]]ille ja tuodaan syksyllä takaisin laaksoon, koska laaksonpohjan heinä halutaan säästää talveksi. Kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen mutta maito ei. Tämä rytmi on muovannut laaksojen elämää satojen vuosien ajan, ja siitä ovat syntyneet monet perinteet, kuten [[karjan paluujuhlat]] syksyllä. Vuorilaitumet pitävät maiseman avoimena, ja laidunnus on osa tapaa, jolla vuoristo on asuttu. Minä en kaipaa lehmien seuraa, mutta juustoa kyllä.
+KYSYMYS: Kerro lisää: alppilaitumet
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Biisonien paluu sukupuuton partaalta] Yellowstone on ainoa paikka Yhdysvalloissa, jossa villejä biisoneja on elänyt yhtäjaksoisesti esihistoriallisista ajoista lähtien. Se ei silti taannut turvaa: 1800-luvun lopun laajamittainen metsästys ajoi Pohjois-Amerikan biisonikannan lähes sukupuuttoon, ja Yellowstonen villi lauma kutistui vuosien 1896 ja 1912 välillä vain 25–50 yksilöön. Puiston tiukka suojelu ja pieni siirtokarjan tuoma lisäys pelastivat kannan häviämiseltä. Elpyminen on ollut niin voimakasta, että nykyisin puistossa laiduntaa noin 5 900 biisonia — yksi harvoista laumoista, joiden perimässä ei ole lainkaan kesyn karjan geenejä.
+AIEMPI KYSYMYS: Mitä tarkoittaa karjan vienti alppilaitumille?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Alppien]] vuoristoviljelyssä lehmät viedään keväällä ylös [[alppilaitumet]]ille ja tuodaan syksyllä takaisin laaksoon, koska laaksonpohjan heinä halutaan säästää talveksi. Kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen mutta maito ei. Tämä rytmi on muovannut laaksojen elämää satojen vuosien ajan, ja siitä ovat syntyneet monet perinteet, kuten [[karjan paluujuhlat]] syksyllä. Vuorilaitumet pitävät maiseman avoimena, ja laidunnus on osa tapaa, jolla vuoristo on asuttu. Minä en kaipaa lehmien seuraa, mutta juustoa kyllä.
+KYSYMYS: Kerro lisää: karjan paluujuhlat
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+AIEMPI KYSYMYS: Mihin alppitorvea käytettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Alppitorvi]] on pitkä puinen torvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon vuoristossa, jossa ääni kantaa pitkälle kallioseinämien välissä. Se kuuluu samoihin laaksoihin, joissa on eletty karjan ehdoilla ja joissa on opittu myös lumivyöryjen hallinnan taito. Unesco lisäsi [[lumivyöryjen hallinta]]n kulttuuriperintöluetteloonsa vuonna 2018. Viestinviejänä minä arvostan kyllä kaikkia, jotka saavat sanomansa perille ilman siipiä, vaikka ääni onkin aika rankka.
+KYSYMYS: Kerro lisää: Alppitorvi
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+AIEMPI KYSYMYS: Mihin alppitorvea käytettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Alppitorvi]] on pitkä puinen torvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon vuoristossa, jossa ääni kantaa pitkälle kallioseinämien välissä. Se kuuluu samoihin laaksoihin, joissa on eletty karjan ehdoilla ja joissa on opittu myös lumivyöryjen hallinnan taito. Unesco lisäsi [[lumivyöryjen hallinta]]n kulttuuriperintöluetteloonsa vuonna 2018. Viestinviejänä minä arvostan kyllä kaikkia, jotka saavat sanomansa perille ilman siipiä, vaikka ääni onkin aika rankka.
+KYSYMYS: Kerro lisää: lumivyöryjen hallinta
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+AIEMPI KYSYMYS: Miten Alppien jäätiköt ovat muuttuneet?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Alppien]] jäätiköt ovat sulaneet ja vetäytyneet viimeisten vuosikymmenten aikana, ja tämä kehitys on ollut yksi ilmaston lämpenemisen selvimmistä merkeistä vuoristossa. Jäätiköt ovat ohentuneet ja lyhentyneet, ja monin paikoin jään tilalle on jäänyt kivikkoa tai pieniä järviä. Tarkkoja lukuja jäämäärän vähenemisestä en ole varma antamaan, koska ne vaihtelevat jäätiköittäin. Isoisä kirjoitti [[Grindelwaldin]] [[jäätikkö]]ön sinisestä jäästä, joka liikkuu, ja jään liike on yhä todellinen. Onpas siit onneksi pitkä aika, ja silti jääkin on lähtenyt liikkeelle.
+KYSYMYS: Kerro lisää: Grindelwaldin
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Miten Alppien jäätiköt ovat muuttuneet?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Alppien]] jäätiköt ovat sulaneet ja vetäytyneet viimeisten vuosikymmenten aikana, ja tämä kehitys on ollut yksi ilmaston lämpenemisen selvimmistä merkeistä vuoristossa. Jäätiköt ovat ohentuneet ja lyhentyneet, ja monin paikoin jään tilalle on jäänyt kivikkoa tai pieniä järviä. Tarkkoja lukuja jäämäärän vähenemisestä en ole varma antamaan, koska ne vaihtelevat jäätiköittäin. Isoisä kirjoitti [[Grindelwaldin]] [[jäätikkö]]ön sinisestä jäästä, joka liikkuu, ja jään liike on yhä todellinen. Onpas siit onneksi pitkä aika, ja silti jääkin on lähtenyt liikkeelle.
+KYSYMYS: Kerro lisää: jäätikkö
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+AIEMPI KYSYMYS: Millaisia tunneleita Alppien läpi on kaivettu?
+AIEMPI VASTAUS (Livia):
+No jopas. Alppien solat ovat olleet kauppateitä kivikaudelta asti, mutta tunnelit ovat avanneet reitin vuoren läpi myös junille. Isoisän aikaan [[Fréjus-tunneli]] avattiin syyskuussa 1871, ja se yhdisti Ranskan ja Italian rautateitse. Sveitsissä [[Gotthardin pohjatunneli]] on 57 kilometriä pitkä ja maailman pisin rautatietunneli. Tunnelit lyhentävät matkaa, mutta eivät poista vuoren vaikutusta: ilmasto, lumi ja korkeus vaikuttavat yhä liikenteeseen. Sata viisikymmentä vuotta sitten vuoren läpi pääsi jo junalla, ja isoisä oli oikeassa nähdessään sen ihmeenä.
+KYSYMYS: Kerro lisää: Fréjus-tunneli
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+- [Sveitsi — maalehti / Vuoret: Juna kulkee vuoren alitse] 2016 — Gotthardin pohjatunneli avattiin 1. kesäkuuta 2016, ja se on 57 kilometriä pitkä — maailman pitkin rautatietunneli. Louhinta kesti seitsemäntoista vuotta, ja paksimmillaan kalliota on tunnelin päällä yli kaksi kilometriä. Vanha rata kiipesi vuoren rinteitä mutkitellen, mutta pohjatunneli menee suoraan ja lähes vaakasuoraan, joten junat kulkevat siellä nopeammin kuin ennen vuoren yli. Kiveä louhittiin niin paljon, että siitä olisi saanut viisi Kheopsin pyramidia.
+AIEMPI KYSYMYS: Millaisia tunneleita Alppien läpi on kaivettu?
+AIEMPI VASTAUS (Livia):
+No jopas. Alppien solat ovat olleet kauppateitä kivikaudelta asti, mutta tunnelit ovat avanneet reitin vuoren läpi myös junille. Isoisän aikaan [[Fréjus-tunneli]] avattiin syyskuussa 1871, ja se yhdisti Ranskan ja Italian rautateitse. Sveitsissä [[Gotthardin pohjatunneli]] on 57 kilometriä pitkä ja maailman pisin rautatietunneli. Tunnelit lyhentävät matkaa, mutta eivät poista vuoren vaikutusta: ilmasto, lumi ja korkeus vaikuttavat yhä liikenteeseen. Sata viisikymmentä vuotta sitten vuoren läpi pääsi jo junalla, ja isoisä oli oikeassa nähdessään sen ihmeenä.
+KYSYMYS: Kerro lisää: Gotthardin pohjatunneli
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+AIEMPI KYSYMYS: Mikä on Kyproksen Troodos-vuoristo?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Troodos]] on Kyproksen suuri vuoristo saaren keskiosassa, ja sen kivilajit eivät muistuta minkään naapurivuoriston kiviä. Tutkijat pitävät sitä tunnettuna esimerkkinä muinaisesta merenpohjan kivikerroksesta, joka on kohonnut maalle. Korkein huippu nousee noin kahteen kilometriin, ja vuorilla on viileämpää kuin rannikolla. Tarkkoja lukuja en ole varma antamaan. Siellä on myös erikoisia kasveja ja eläimiä, sillä [[Kypros]] on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Ylhäältä se näyttää tosi karulta kivimaisemalta.
+KYSYMYS: Kerro lisää: Troodos
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto] Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saarella on myös vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä.
+AIEMPI KYSYMYS: Mikä on Kyproksen Troodos-vuoristo?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Troodos]] on Kyproksen suuri vuoristo saaren keskiosassa, ja sen kivilajit eivät muistuta minkään naapurivuoriston kiviä. Tutkijat pitävät sitä tunnettuna esimerkkinä muinaisesta merenpohjan kivikerroksesta, joka on kohonnut maalle. Korkein huippu nousee noin kahteen kilometriin, ja vuorilla on viileämpää kuin rannikolla. Tarkkoja lukuja en ole varma antamaan. Siellä on myös erikoisia kasveja ja eläimiä, sillä [[Kypros]] on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Ylhäältä se näyttää tosi karulta kivimaisemalta.
+KYSYMYS: Kerro lisää: Kypros
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Nikosia — kaupunkilehti / Nikosia: Tulkin talo vaihtoi omistajaa kahdesti] Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 sulttaani Selim III nimitti hänet virkaan elinikäisesti. Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 kuruşilla; nuorin poika osti sen takaisin vuonna 1830. Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.
+AIEMPI KYSYMYS: Mitä erikoisia lajeja Kyproksella elää?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen, eli saarella on lajeja, joita ei tavata muualla. Tunnetuin esimerkki on [[kyproksenmuflon]], saaren vuoristossa elävä villilammas. Myös kasveja on, jotka ovat ominaisia vain tälle saarelle. Tarkkoja lajimääriä en ole varma antamaan, joten tiedot kannattaa tarkistaa erikseen. [[Troodos]]in vuoristo tarjoaa elinympäristöjä, joissa moni laji on säilynyt. Minä seuraan mieluummin merelle laskeutuvia lokkeja.
+KYSYMYS: Kerro lisää: kyproksenmuflon
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+AIEMPI KYSYMYS: Miten vanhaa asutusta Kyproksella on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyproksen kaivauskohteissa aika on kerroksittain: alimpana on kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta, sillä kylät ja kaupungit on rakennettu meren äärelle mutta hiukan sen yläpuolelle. Tunnetuin kivikautinen kylä on Khirokitia, jonka ikää pidetään useiden tuhansien vuosien mittaisena, mutta tarkasta ajoituksesta en ole varma. [[Kypros]] on ollut tärkeä paikka muinaisessa merenkulussa, ja sen [[arkeologia]] kertoo tuhansien vuosien asutuksesta. Pitkä aika, ja lintu on siinä pieni piste.
+KYSYMYS: Kerro lisää: arkeologia
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+AIEMPI KYSYMYS: Mitä ruokia Kyproksella syödään?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyproksen keittiö on Välimeren ruokaa, jossa käytetään oliiviöljyä, vihanneksia, lihaa ja kalaa. Tunnetuin kyproslainen tuote on [[halloumi]], kirkas ja kiinteä juusto, jota paistetaan tai grillataan. Perinteisessä [[meze]]-aterioinnissa pöytään tuodaan pieniä annoksia, joita jaetaan yhdessä pitkän ruokailun aikana. Muita arkisia aineksia ovat kikherneet, sitrus ja yrtit. Leivonnaisista ei kyproslaisia nimiä tähän sopivasti heti tule mieleen, ja täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto riittää minulle, vaikka lintu ei sitä oikeasti tarvitse.
+KYSYMYS: Kerro lisää: halloumi
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+AIEMPI KYSYMYS: Mitä ruokia Kyproksella syödään?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyproksen keittiö on Välimeren ruokaa, jossa käytetään oliiviöljyä, vihanneksia, lihaa ja kalaa. Tunnetuin kyproslainen tuote on [[halloumi]], kirkas ja kiinteä juusto, jota paistetaan tai grillataan. Perinteisessä [[meze]]-aterioinnissa pöytään tuodaan pieniä annoksia, joita jaetaan yhdessä pitkän ruokailun aikana. Muita arkisia aineksia ovat kikherneet, sitrus ja yrtit. Leivonnaisista ei kyproslaisia nimiä tähän sopivasti heti tule mieleen, ja täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto riittää minulle, vaikka lintu ei sitä oikeasti tarvitse.
+KYSYMYS: Kerro lisää: meze
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kirjoitus: Rosetta 1799 — musta kivi muurin sisästä] heinäkuu 1799 — Ranskalaiset sotilaat purkavat vanhaa muuria Fort Julienin linnoituksessa Niilin suistossa, kun lapio kolahtaa kiveen, joka ei ole tavallinen. Se on musta, sileäksi hiottu paasi, ja sen pintaan on kaiverrettu kolme erilaista kirjoitusta päällekkäin: ylinnä hieroglyfejä, keskellä tuntemattomia kursiivimerkkejä, alinna kreikkaa. Pioneeriupseeri Pierre-François Bouchard ymmärtää heti, että kreikkalainen teksti voi olla avain kahteen muuhun, ja kivi lähetetään Napoleonin tutkijoille Kairoon. Egyptin retkikunnan oma lehti Courier de l'Égypte kertoo löydöstä syyskuussa 1799. Kivi ei jää ranskalaisille: kun Britannia voittaa vuonna 1801, se siirtyy antautumissopimuksen ehtona Lonto…
+- [Persepolis — kohdekartta / Kohdekartta: Kolmen oven sali] Dareios I aloitti, Xerxes I sai valmiiksi Dareios I tilasi Persepolikseen kolme asiaa: Apadanan, keisarillisen aarrekammion ympäristöineen ja tämän salin. Kaikki kolme valmistuivat vasta hänen poikansa Xerxes I:n aikana. Sali on näistä pienin ja vähiten tunnettu, mutta se kuuluu siis terassin alkuperäiseen suunnitelmaan eikä ole myöhempi lisäys. Nimiä on kaksi, eikä kumpikaan ole rakennuksen oma. Englanninkielinen Wikipedia kutsuu salia sekä neuvostosaliksi että nimellä Tripylon, joka on kreikkaa ja tarkoittaa kolmea porttia — suomeksi siis kolmen oven sali. Nimi kuvaa rakennusta eikä sen käyttöä: mitä salissa tehtiin, ei ole säilynyt missään tekstissä. Persepoliksen rakennukset jakautuvat …
+AIEMPI KYSYMYS: Mitä kieliä Kyproksella puhutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kyproksella puhutaan pääasiassa [[kreikkaa]] ja [[turkkia]], sillä saaren kaksi suurinta yhteisöä ovat kreikankielinen ja turkinkielinen. Kreikka ja turkki ovat saaren virallisia kieliä, ja englantia ymmärretään laajasti, sillä Kypros oli pitkään Britannian hallinnassa. Saarella puhutaan myös omia paikallisia murteita, jotka eroavat mantereen kielestä. Tarkkoja puhujamääriä en ole varma antamaan. Arkielämässä kielet kuuluvat eri yhteisöissä eri tavoin, joten saaren kielimaisema on monikerroksinen. No olipas siin pitkä lista.
+KYSYMYS: Kerro lisää: kreikkaa
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kypros (maa)
+Tietoruudun teksti: Kyproksen kaivauskohteissa aika on kerroksittain: alimpana kivikautinen kylä, jossa savea ei vielä poltettu, ja päällä roomalaisia lattioita. Yhteistä niille on paikanvalinta — meren äärellä mutta hiukan sen yläpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Labrador — kaupunkilehti / Labrador: Turkkia kruunulle] Hudson's Bay -yhtiö perusti kauppapaikan Rigolet'in kylään vuonna 1836 ostaakseen inuiteilta ja rannikon asukkailta turkiksia – erityisesti kettua, saukkoa ja nahkiaishylkeen taljaa – brittiläisten hattutehtaiden tarpeisiin. Postille rakennettiin varastoja, asuinrakennuksia ja lopulta myös verkkovaja, ja se pysyi seudun tärkeimpänä kauppapaikkana vuosikymmenien ajan. Isoisän matkavuonna 1873 tällaiset postit olivat rannikon ainoa yhteys ulkomaailman rahatalouteen: turkiksilla maksettiin jauhoista, ammuksista ja työkaluista, käteistä nähtiin harvoin.
+AIEMPI KYSYMYS: Mitä kieliä Kyproksella puhutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kyproksella puhutaan pääasiassa [[kreikkaa]] ja [[turkkia]], sillä saaren kaksi suurinta yhteisöä ovat kreikankielinen ja turkinkielinen. Kreikka ja turkki ovat saaren virallisia kieliä, ja englantia ymmärretään laajasti, sillä Kypros oli pitkään Britannian hallinnassa. Saarella puhutaan myös omia paikallisia murteita, jotka eroavat mantereen kielestä. Tarkkoja puhujamääriä en ole varma antamaan. Arkielämässä kielet kuuluvat eri yhteisöissä eri tavoin, joten saaren kielimaisema on monikerroksinen. No olipas siin pitkä lista.
+KYSYMYS: Kerro lisää: turkkia
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Nikosia] Nikosia on Kyproksen hallinnon ja rahan kaupunki: saaren kaikkien pankkien pääkonttorit ovat täällä, samoin viisi yliopistoa ja saaren vanhin ja suurin arkeologinen museo.
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+AIEMPI KYSYMYS: Millainen on Nikosian venetsialainen muuri?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Venetsialaiset rakensivat vuosina 1567–1570 [[Nikosia]]n vanhankaupungin ympärille noin viiden kilometrin muurikehän, ja siihen kuului yksitoista viisikulmaista [[bastioni]]a. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurikehä antoi vanhallekaupungille sen pyöreän muodon, ja se näkyy edelleen kartalla selvästi. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle. Ylhäältä katsottuna se on tosi siisti tähti.
+KYSYMYS: Kerro lisää: Nikosia
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kaupunkilehti / Rakennukset: Ainoa bastioni, joka jäi kaupunginmuureista] Pyövelin bastioni on puolipyöreä puolustusrakennus, jossa on kahdeksan tykkikammiota. Se pystytettiin noin vuonna 1500, ja nimensä se sai keskiaikaisen pyövelin talon läheisyydestä. Kaupungin muurit purettiin vähitellen 1800-luvun alusta vuoteen 1856, ja bastioni on muurinpätkien ohella ainoa osa linnoituksista, joka jäi pystyyn. Vuosina 1920–1930 se sovitettiin Itä-Slovakian museon käyttöön, ja pihalla on Ferenc II Rákóczin maanpakotalon jäljennös.
+AIEMPI KYSYMYS: Millainen on Nikosian venetsialainen muuri?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Venetsialaiset rakensivat vuosina 1567–1570 [[Nikosia]]n vanhankaupungin ympärille noin viiden kilometrin muurikehän, ja siihen kuului yksitoista viisikulmaista [[bastioni]]a. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurikehä antoi vanhallekaupungille sen pyöreän muodon, ja se näkyy edelleen kartalla selvästi. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle. Ylhäältä katsottuna se on tosi siisti tähti.
+KYSYMYS: Kerro lisää: bastioni
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+AIEMPI KYSYMYS: Mitä Nikosiassa tapahtui vuonna 1878?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on historiaa. Heinäkuun 12. päivänä 1878 saaren hallinto siirtyi Britannialle, ja [[Union Jack]] nostettiin Nikosiassa vara-amiraali Lord John Hayn läsnä ollessa. Britannia ja [[Osmanien valtakunta]] olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyi muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtui. Ensimmäinen korkea komissaari [[Garnet Wolseley]] saapui Nikosiaan 31. heinäkuuta ja ryhtyi kokoamaan hallintoa. Kaupustelijat tuskin ehtivät huomata, että heidän maansa hallitsija oli vaihtunut.
+KYSYMYS: Kerro lisää: Union Jack
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mitä Nikosiassa tapahtui vuonna 1878?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on historiaa. Heinäkuun 12. päivänä 1878 saaren hallinto siirtyi Britannialle, ja [[Union Jack]] nostettiin Nikosiassa vara-amiraali Lord John Hayn läsnä ollessa. Britannia ja [[Osmanien valtakunta]] olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyi muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtui. Ensimmäinen korkea komissaari [[Garnet Wolseley]] saapui Nikosiaan 31. heinäkuuta ja ryhtyi kokoamaan hallintoa. Kaupustelijat tuskin ehtivät huomata, että heidän maansa hallitsija oli vaihtunut.
+KYSYMYS: Kerro lisää: Osmanien valtakunta
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+AIEMPI KYSYMYS: Mitä Nikosiassa tapahtui vuonna 1878?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on historiaa. Heinäkuun 12. päivänä 1878 saaren hallinto siirtyi Britannialle, ja [[Union Jack]] nostettiin Nikosiassa vara-amiraali Lord John Hayn läsnä ollessa. Britannia ja [[Osmanien valtakunta]] olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyi muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtui. Ensimmäinen korkea komissaari [[Garnet Wolseley]] saapui Nikosiaan 31. heinäkuuta ja ryhtyi kokoamaan hallintoa. Kaupustelijat tuskin ehtivät huomata, että heidän maansa hallitsija oli vaihtunut.
+KYSYMYS: Kerro lisää: Garnet Wolseley
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+AIEMPI KYSYMYS: Mikä on Nikosian puskurivyöhyke?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, vaikka aihe on vakava. [[Nikosia]] on nykyään jaettu kahteen osaan, ja niiden välissä kulkee [[puskurivyöhyke]], jota on vartioitu 1970-luvulta lähtien. Vyöhykkeen perusta on saaren jakautuminen vuonna 1974, ja sitä valvovat [[Yhdistyneiden kansakuntien rauhanturvaajat]]. Kysymyksessä on aidosti kiistanalainen asia, jossa kreikkalaiskyproslaisten ja turkkilaiskyproslaisten näkemykset eroavat, enkä valitse puolta. Tarkoista rajoista ja viimeisimmästä tilanteesta en ole varma, joten tiedot kannattaa tarkistaa ajantasaisesta lähteestä. Vyöhyke on nähnyt jo monta vuosikymmentä, ja onneksi yhteyksiä on kehitetty.
+KYSYMYS: Kerro lisää: puskurivyöhyke
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Palace Hotel] 1875–1909 Hotellin rakennutti pankkiiri William Chapman Ralston, ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. lokakuuta 1875, siinä oli 755 huonetta ja se oli Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen Grand Court, jonne vaunut ajoivat sisään ja jota ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. Hisseinä oli punapuupaneloituja hydraulisia ”nousuhuoneita”, ja joka huoneessa oli oma kylpyhuone ja sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä ollut — se avattiin kaksi vuotta myöhemmi…
+AIEMPI KYSYMYS: Mikä on Nikosian puskurivyöhyke?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, vaikka aihe on vakava. [[Nikosia]] on nykyään jaettu kahteen osaan, ja niiden välissä kulkee [[puskurivyöhyke]], jota on vartioitu 1970-luvulta lähtien. Vyöhykkeen perusta on saaren jakautuminen vuonna 1974, ja sitä valvovat [[Yhdistyneiden kansakuntien rauhanturvaajat]]. Kysymyksessä on aidosti kiistanalainen asia, jossa kreikkalaiskyproslaisten ja turkkilaiskyproslaisten näkemykset eroavat, enkä valitse puolta. Tarkoista rajoista ja viimeisimmästä tilanteesta en ole varma, joten tiedot kannattaa tarkistaa ajantasaisesta lähteestä. Vyöhyke on nähnyt jo monta vuosikymmentä, ja onneksi yhteyksiä on kehitetty.
+KYSYMYS: Kerro lisää: Yhdistyneiden kansakuntien rauhanturvaajat
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+AIEMPI KYSYMYS: Mitä Nikosian arkeologisessa museossa on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Nikosiassa]] sijaitsee saaren vanhin ja suurin [[arkeologinen museo]], joka kertoo [[Kyproksen]] asutuksen vaiheista aikojen ajalta. Museon esineistön tarkkaa sisältöä en ole varma kuvaamaan, mutta kokoelmat sisältävät Kyproksen eri aikakausien arkeologisia löytöjä. Nikosia on myös saaren hallinnon ja rahan kaupunki: täällä ovat kaikkien pankkien pääkonttorit ja viisi yliopistoa. Museo on helppo ymmärtää avaimeksi saaren pitkään menneisyyteen. Menneisyydestä minulla riittäisi kerrottavaa pidempäänkin.
+KYSYMYS: Kerro lisää: Nikosiassa
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Nikosia] Nikosia on Kyproksen hallinnon ja rahan kaupunki: saaren kaikkien pankkien pääkonttorit ovat täällä, samoin viisi yliopistoa ja saaren vanhin ja suurin arkeologinen museo.
+- [Porto Alegre — kohdekartta / Kohdekartta: Joaquim Felizardon museo] 1845–1853 Kaupungin historiallinen museo asuu Lopo Gonçalvesin kartanossa, joka rakennettiin vuosina 1845–1853 maatilalle Cidade Baixan kaupunginosaan. Se oli kauppias ja kahdesti kaupunginvaltuutettuna toiminut Lopo Gonçalves Bastosin perheen kesähuvila — 1800-luvulla Cidade Baixa oli vielä kaupungin rajojen ulkopuolella ja laskettiin maaseuduksi. Lopo kuoli 1872 ja hänen vaimonsa 1876, minkä jälkeen talosta tuli tyttären Maria Luisan ja hänen miehensä vakituinen koti. Maria Luisa laajensi taloa: sisäpiha, torni ja purettu vanha huone ovat hänen jäljiltään. Talon korkeaa kivijalkaa pidettiin pitkään orjien asuintilana. Nykyään sitä ei enää uskota: kivijalka nosti talon tulvan yläpuolelle, …
+AIEMPI KYSYMYS: Mitä Nikosian arkeologisessa museossa on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Nikosiassa]] sijaitsee saaren vanhin ja suurin [[arkeologinen museo]], joka kertoo [[Kyproksen]] asutuksen vaiheista aikojen ajalta. Museon esineistön tarkkaa sisältöä en ole varma kuvaamaan, mutta kokoelmat sisältävät Kyproksen eri aikakausien arkeologisia löytöjä. Nikosia on myös saaren hallinnon ja rahan kaupunki: täällä ovat kaikkien pankkien pääkonttorit ja viisi yliopistoa. Museo on helppo ymmärtää avaimeksi saaren pitkään menneisyyteen. Menneisyydestä minulla riittäisi kerrottavaa pidempäänkin.
+KYSYMYS: Kerro lisää: arkeologinen museo
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Nikosia — kaupunkilehti / Nikosia: Tulkin talo vaihtoi omistajaa kahdesti] Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 sulttaani Selim III nimitti hänet virkaan elinikäisesti. Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 kuruşilla; nuorin poika osti sen takaisin vuonna 1830. Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.
+AIEMPI KYSYMYS: Mitä Nikosian arkeologisessa museossa on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Nikosiassa]] sijaitsee saaren vanhin ja suurin [[arkeologinen museo]], joka kertoo [[Kyproksen]] asutuksen vaiheista aikojen ajalta. Museon esineistön tarkkaa sisältöä en ole varma kuvaamaan, mutta kokoelmat sisältävät Kyproksen eri aikakausien arkeologisia löytöjä. Nikosia on myös saaren hallinnon ja rahan kaupunki: täällä ovat kaikkien pankkien pääkonttorit ja viisi yliopistoa. Museo on helppo ymmärtää avaimeksi saaren pitkään menneisyyteen. Menneisyydestä minulla riittäisi kerrottavaa pidempäänkin.
+KYSYMYS: Kerro lisää: Kyproksen
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Arki: Saaren pisin joki kulkee kuivana] Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa Troodoksen Machairas-metsästä samannimisen luostarin läheltä, virtaa koilliseen Mesaorian tasangon poikki Nikosian halki ja kääntyy sitten itään kohti Famagustan lahtea. Uoma on siirretty pois vanhankaupungin vierestä 1500-luvulla. Suurin osa saaren 35 joesta ja purosta on tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 kilometrin matkalta.
+AIEMPI KYSYMYS: Miksi Nikosia ei sijaitse rannikolla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Nikosia]] on [[Mesaorian tasangon]] keskellä noin 220 metrin korkeudessa, ja se on saaren suurista kaupungeista ainoa, joka ei kasvanut [[sataman]] ympärille. Tasangon nimi tarkoittaa vuorten välistä, ja se sijaitsee saaren kahden vuoriston välissä. Sisämaan sijainti on antanut kaupungille hallinnollisen ja kaupallisen aseman, joka ei ole kiinni rannasta. Syytä paikan alkuperäiseen valintaan en ole varma, joten jätän sen auki. Rannikko on kyyhkylle tutumpi, mutta tasangolta näkee kauas.
+KYSYMYS: Kerro lisää: Mesaorian tasangon
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Nikosia
+Maa, jossa pelaaja on: Kypros
+Näkymä: kartta
+Pelaaja katsoo kartalla: Nikosia (kaupunki)
+Tietoruudun teksti: Nikosia on Kyproksen pääkaupunki ja saaren suurista kaupungeista ainoa, joka ei kasvanut sataman ympärille. Se on Mesaorian tasangon keskellä 220 metrin korkeudessa; tasangon nimi tarkoittaa vuorten välistä. Täällä ovat saaren pankkien pääkonttorit, viisi yliopistoa ja Kyproksen vanhin arkeologinen museo.
+
+Vanhankaupungin muodon päättivät venetsialaiset, jotka rakensivat vuosina 1567–1570 sen ympärille noin viiden kilometrin muurikehän ja siihen yksitoista viisikulmaista bastionia. Samassa työssä Pedieos-joki käännettiin kaupungin ohi, jotta vallihauta saataisiin täytettyä; hauta on nyt puistoja ja urheilukenttiä. Muurien ulkopuolelle kasvettiin vasta brittihallinnon alettua 1878, kun kehään puhkaistiin aukkoja liikenteelle: vuonna 1881 asukkaita oli 11 536 ja vuonna 1960 jo 45 629.
+
+Nykyään kaupunki on kahdessa osassa, ja niiden välissä kulkee puskurivyöhyke. Eteläpuolen kunnassa asuu …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Miksi Nikosia ei sijaitse rannikolla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Nikosia]] on [[Mesaorian tasangon]] keskellä noin 220 metrin korkeudessa, ja se on saaren suurista kaupungeista ainoa, joka ei kasvanut [[sataman]] ympärille. Tasangon nimi tarkoittaa vuorten välistä, ja se sijaitsee saaren kahden vuoriston välissä. Sisämaan sijainti on antanut kaupungille hallinnollisen ja kaupallisen aseman, joka ei ole kiinni rannasta. Syytä paikan alkuperäiseen valintaan en ole varma, joten jätän sen auki. Rannikko on kyyhkylle tutumpi, mutta tasangolta näkee kauas.
+KYSYMYS: Kerro lisää: sataman
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Mikä on Pravčická brána?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Pravčická brána]] on Tšekin luoteiskulman hiekkakivialueella sijaitseva luonnonkiviportti, ja sitä pidetään Euroopan suurimpana luonnon kiviporttina. Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Portti sijaitsee [[Böömin]] kansallispuiston alueella, ja se on suosittu retkikohde. Tarkkoja mittoja en ole varma antamaan, joten ne kannattaa tarkistaa erikseen. Tuuli ja vesi ovat tehneet kaiken ilman yhtään siipeä.
+KYSYMYS: Kerro lisää: Pravčická brána
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Mikä on Pravčická brána?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Pravčická brána]] on Tšekin luoteiskulman hiekkakivialueella sijaitseva luonnonkiviportti, ja sitä pidetään Euroopan suurimpana luonnon kiviporttina. Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Portti sijaitsee [[Böömin]] kansallispuiston alueella, ja se on suosittu retkikohde. Tarkkoja mittoja en ole varma antamaan, joten ne kannattaa tarkistaa erikseen. Tuuli ja vesi ovat tehneet kaiken ilman yhtään siipeä.
+KYSYMYS: Kerro lisää: Böömin
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Musiikki: Polkka, joka soi kahdessa tahtilajissa yhtä aikaa] Polca paraguaya kehittyi Böömistä levinneestä polkasta, mutta se ei kuulosta siltä. Eurooppalainen polkka on kaksijakoinen, kun taas paraguaylainen yhdistää kolmi- ja kaksijakoisen rytmin samanaikaisesti, jolloin korva kuulee kaksi eri aikaa päällekkäin. Muunnelmia on kymmeniä, ja jokaisella on oma nimensä — galopa, polka valseada, polka popó, polka jekutu, polka kyre’y, polka syryry ja valittava purahéi jahe’o. Maaseudulla polkkaa tanssitaan yhä enemmän kuin guaraniaa.
+AIEMPI KYSYMYS: Mitä ovat Böömi, Määri ja Tšekin Sleesia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tšekki koostuu kolmesta vanhasta maakunnasta: [[Böömistä]] lännessä, [[Määristä]] idässä ja pienestä Tšekin Sleesiasta koillisessa. Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas, johon maan joet kerääntyvät. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret. Maakunnat eivät ole nykyään hallinnollisia yksiköitä, mutta ne elävät yhä kulttuurissa ja nimissä. Kolme maakuntaa, ja kaikki mahtuivat yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Böömistä
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Mitä ovat Böömi, Määri ja Tšekin Sleesia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tšekki koostuu kolmesta vanhasta maakunnasta: [[Böömistä]] lännessä, [[Määristä]] idässä ja pienestä Tšekin Sleesiasta koillisessa. Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas, johon maan joet kerääntyvät. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret. Maakunnat eivät ole nykyään hallinnollisia yksiköitä, mutta ne elävät yhä kulttuurissa ja nimissä. Kolme maakuntaa, ja kaikki mahtuivat yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Määristä
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Mitä tšekit syövät ja juovat perinteisesti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tšekkiläinen perinneruoka on täyttävää, ja siihen kuuluvat usein [[knedlíky]], eli höyrytetyt tai keitetyt taikinapallot, sekä liha- ja kastikeruoat. Tunnettu esimerkki on svíčková, jossa naudanlihaa tarjotaan smetanakastikkeen kanssa. Maa tunnetaan myös [[oluesta]], jota valmistetaan ja juodaan paljon, mutta tarkkoja kulutustilastoja en ole varma antamaan. Leivonnaisten puolella täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Ruokaperinteet vaihtelevat alueittain. Hyvä paikka haaveilla pullasta.
+KYSYMYS: Kerro lisää: knedlíky
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Mitä tšekit syövät ja juovat perinteisesti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tšekkiläinen perinneruoka on täyttävää, ja siihen kuuluvat usein [[knedlíky]], eli höyrytetyt tai keitetyt taikinapallot, sekä liha- ja kastikeruoat. Tunnettu esimerkki on svíčková, jossa naudanlihaa tarjotaan smetanakastikkeen kanssa. Maa tunnetaan myös [[oluesta]], jota valmistetaan ja juodaan paljon, mutta tarkkoja kulutustilastoja en ole varma antamaan. Leivonnaisten puolella täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Ruokaperinteet vaihtelevat alueittain. Hyvä paikka haaveilla pullasta.
+KYSYMYS: Kerro lisää: oluesta
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miten Tšekkoslovakia jakautui kahdeksi maaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itsenäinen Tšekkoslovakia syntyi vuonna 1918, kun Itävalta-Unkarin valtakunta hajosi, ja Praha oli sen pääkaupunki. Valtio jakautui rauhanomaisesti kahdeksi maaksi, Tšekiksi ja Slovakiaksi, vuoden 1993 alussa, ja tapahtumaa on kutsuttu sametiksi eroksi. Jaosta päättivät maan poliitikot sopimalla, ja sen jälkeen molemmat maat ovat kehittyneet omaan suuntaansa. Tšekki on edelleen sisämaavaltio, jonka naapureita ovat [[Saksa]], [[Puola]], [[Slovakia]] ja [[Itävalta]]. Hyvin sujui, vaikka erot ovat aina vaikeita.
+KYSYMYS: Kerro lisää: Saksa
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Miten Tšekkoslovakia jakautui kahdeksi maaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itsenäinen Tšekkoslovakia syntyi vuonna 1918, kun Itävalta-Unkarin valtakunta hajosi, ja Praha oli sen pääkaupunki. Valtio jakautui rauhanomaisesti kahdeksi maaksi, Tšekiksi ja Slovakiaksi, vuoden 1993 alussa, ja tapahtumaa on kutsuttu sametiksi eroksi. Jaosta päättivät maan poliitikot sopimalla, ja sen jälkeen molemmat maat ovat kehittyneet omaan suuntaansa. Tšekki on edelleen sisämaavaltio, jonka naapureita ovat [[Saksa]], [[Puola]], [[Slovakia]] ja [[Itävalta]]. Hyvin sujui, vaikka erot ovat aina vaikeita.
+KYSYMYS: Kerro lisää: Puola
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Miten Tšekkoslovakia jakautui kahdeksi maaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itsenäinen Tšekkoslovakia syntyi vuonna 1918, kun Itävalta-Unkarin valtakunta hajosi, ja Praha oli sen pääkaupunki. Valtio jakautui rauhanomaisesti kahdeksi maaksi, Tšekiksi ja Slovakiaksi, vuoden 1993 alussa, ja tapahtumaa on kutsuttu sametiksi eroksi. Jaosta päättivät maan poliitikot sopimalla, ja sen jälkeen molemmat maat ovat kehittyneet omaan suuntaansa. Tšekki on edelleen sisämaavaltio, jonka naapureita ovat [[Saksa]], [[Puola]], [[Slovakia]] ja [[Itävalta]]. Hyvin sujui, vaikka erot ovat aina vaikeita.
+KYSYMYS: Kerro lisää: Slovakia
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Miten Tšekkoslovakia jakautui kahdeksi maaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itsenäinen Tšekkoslovakia syntyi vuonna 1918, kun Itävalta-Unkarin valtakunta hajosi, ja Praha oli sen pääkaupunki. Valtio jakautui rauhanomaisesti kahdeksi maaksi, Tšekiksi ja Slovakiaksi, vuoden 1993 alussa, ja tapahtumaa on kutsuttu sametiksi eroksi. Jaosta päättivät maan poliitikot sopimalla, ja sen jälkeen molemmat maat ovat kehittyneet omaan suuntaansa. Tšekki on edelleen sisämaavaltio, jonka naapureita ovat [[Saksa]], [[Puola]], [[Slovakia]] ja [[Itävalta]]. Hyvin sujui, vaikka erot ovat aina vaikeita.
+KYSYMYS: Kerro lisää: Itävalta
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Union Station] 1911 Main Streetin varrella oleva Union Station avattiin 1911, ja sen suunnitteli newyorkilainen toimisto Warren and Wetmore. Beaux-arts-tyylisessä talossa on kolme laituria ja kahdeksan raidetta, ja siitä lähtevät yhä Kanadan halki kulkevat kaukojunat. Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja sen tunnetuin kappale on Countess of Dufferin — ensimmäinen höyryveturi, joka on kulkenut Kanadan preeriamaakunnissa. Baldwin Locomotive Works rakensi sen 1872 Northern Pacific Railwaylle, ja 1877 se myytiin 9 700 dollarilla rautatieurakoitsija Joseph Whiteheadille. Veturi lastattiin proomulle Minnesotassa ja hinattiin Punaistajokea pohjoiseen; se saapui St. Bonifaceen 9. lokakuuta 1877…
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+AIEMPI KYSYMYS: Mitä rahaa Tšekissä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai se. Tšekissä käytetään kruunua eli korunaa, ei euroa, vaikka maa kuuluu [[Euroopan unioniin]]. Rahayksikkö on [[Tšekin koruna]], ja [[euroon]] siirtymisestä on keskusteltu mutta päätöstä ei ole tehty. Tarkkoja kurssilukuja en ole varma antamaan, sillä ne vaihtelevat päivittäin. Matkailijan kannattaa tarkistaa käytännöt etukäteen, sillä eurolla maksaminen onnistuu vain joissakin paikoissa. Kruunu on kaunis nimi rahalle, ja kyyhkyn silmin kolikot kiiltävät kivasti.
+KYSYMYS: Kerro lisää: Euroopan unioniin
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Mitä rahaa Tšekissä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai se. Tšekissä käytetään kruunua eli korunaa, ei euroa, vaikka maa kuuluu [[Euroopan unioniin]]. Rahayksikkö on [[Tšekin koruna]], ja [[euroon]] siirtymisestä on keskusteltu mutta päätöstä ei ole tehty. Tarkkoja kurssilukuja en ole varma antamaan, sillä ne vaihtelevat päivittäin. Matkailijan kannattaa tarkistaa käytännöt etukäteen, sillä eurolla maksaminen onnistuu vain joissakin paikoissa. Kruunu on kaunis nimi rahalle, ja kyyhkyn silmin kolikot kiiltävät kivasti.
+KYSYMYS: Kerro lisää: Tšekin koruna
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tšekki (maa)
+Tietoruudun teksti: Tšekki on sisämaan valtio Keski-Euroopan keskellä, ja sillä on neljä naapuria: Saksa, Puola, Slovakia ja Itävalta. Maa koostuu kolmesta vanhasta maakunnasta: Böömistä lännessä, Määristä idässä ja pienestä Tšekin Sleesiasta koillisessa.
+
+Böömiä ympäröivät joka suunnalta vuoret, ja niiden sisään jää laaja allas. Sinne kerääntyvät maan joet: Vltava kiertää Prahan mutkien läpi ja laskee Labeen, joka vie vedet pohjoiseen Saksan puolelle ja edelleen Pohjanmerelle. Idässä maasto laskee Määrin avoimiin laaksoihin, ja itärajalla kohoavat Beskidit, Karpaattien läntisimmät vuoret.
+
+Vuorikehän luoteiskulma ei ole tavallista kalliota vaan hiekkakiveä, jonka vesi ja tuuli ovat veistäneet torneiksi ja porteiksi. Suurin niistä on Pravčická brána, Euroopan suurin luonnon kiviportti.
+AIEMPI KYSYMYS: Mitä rahaa Tšekissä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai se. Tšekissä käytetään kruunua eli korunaa, ei euroa, vaikka maa kuuluu [[Euroopan unioniin]]. Rahayksikkö on [[Tšekin koruna]], ja [[euroon]] siirtymisestä on keskusteltu mutta päätöstä ei ole tehty. Tarkkoja kurssilukuja en ole varma antamaan, sillä ne vaihtelevat päivittäin. Matkailijan kannattaa tarkistaa käytännöt etukäteen, sillä eurolla maksaminen onnistuu vain joissakin paikoissa. Kruunu on kaunis nimi rahalle, ja kyyhkyn silmin kolikot kiiltävät kivasti.
+KYSYMYS: Kerro lisää: euroon
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kaupunkilehti / Tiede: Prahan hevoset] Przewalskin hevonen on mongolialainen villihevonen, jolla on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei siis ole karannut kesyhevonen vaan oma lajinsa. Toisen maailmansodan jälkeen niitä oli jäljellä vain kahdessa eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla koko maailman eläintarhoissa oli enää kaksitoista yksilöä. Vuonna 1959 Prahan eläintarhalle uskottiin lajin kansainvälisen kantakirjan pito. Luonnosta laji hävisi kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.
+AIEMPI KYSYMYS: Miten Prahan tähtitieteellinen kello toimii?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Prahan tähtitieteellinen kello]] asennettiin raatihuoneen seinään vuonna 1410, ja se käy edelleen. Kello näyttää kellonajan lisäksi auringon ja kuun paikan taivaalla, ja täysinä tunteina sen ikkunoissa kulkee apostolien kulkue, jonka aikana luurankohahmo soittaa kelloa. Isoisäkin jäi katsomaan sitä niin pitkäksi aikaa, ettei muistanut verrata sitä taskukelloonsa. Koneiston yksityiskohdista en ole varma kertomaan enempää. Kello on osa [[Vanhankaupungin tori]]n nähtävyyksiä ja suosittu matkailukohde.
+KYSYMYS: Kerro lisää: Prahan tähtitieteellinen kello
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miten Prahan tähtitieteellinen kello toimii?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Prahan tähtitieteellinen kello]] asennettiin raatihuoneen seinään vuonna 1410, ja se käy edelleen. Kello näyttää kellonajan lisäksi auringon ja kuun paikan taivaalla, ja täysinä tunteina sen ikkunoissa kulkee apostolien kulkue, jonka aikana luurankohahmo soittaa kelloa. Isoisäkin jäi katsomaan sitä niin pitkäksi aikaa, ettei muistanut verrata sitä taskukelloonsa. Koneiston yksityiskohdista en ole varma kertomaan enempää. Kello on osa [[Vanhankaupungin tori]]n nähtävyyksiä ja suosittu matkailukohde.
+KYSYMYS: Kerro lisää: Vanhankaupungin tori
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Kaarlensilta] 1357–1402 Kaarlensillan rakensi keisari Kaarle IV vuonna 1357 korvaamaan vanhan Judit-sillan, jonka tulva oli tuhonnut. Legendan mukaan rakennustyöt aloitettiin tarkalleen kello 5.31 aamulla 9. heinäkuuta 1357 — päivämäärä ja kellonaika muodostavat yhdessä palindromin, ja Kaarle IV uskoi tämän erikoisen lukusarjan tekevän sillasta vahvemman. Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. Vuosina 1683–1714 sillan kaiteille pystytettiin 30 barokkipatsasta pyhimyksistä — nykyään sillalla nähtävät patsaat ovat kuitenkin kopioita, sillä alkuperäiset siirrettiin talteen museoon vuodesta 1965 lähtien sään ja saasteiden vaurioittamina. Kaarlensilta oli Vltava-joen ainoa ylityspaikka aina…
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mikä on Kaarlen silta?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Kaarlen silta]] on Prahan kivisilta [[Vltavan]] yli, jonka rakentaminen aloitettiin 1300-luvulla keisari [[Kaarle IV:n]] aikana. Kaarle IV teki Prahasta keisarikunnan pääkaupungin ja perusti Keski-Euroopan ensimmäisen yliopiston, ja silta kuuluu saman kauden suuriin rakennushankkeisiin. Siltaa koristavat patsaat, jotka on lisätty myöhemmin, ja se on nykyään jalankulkijoiden käytössä. Tarkkaa valmistumisvuotta en ole varma antamaan. Vltava kiertää kaupunkia mutkissa, ja silta yhdistää sen rantoja. Minä ylitän sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Kaarlen silta
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Musiikki: Kuuro mies sävelsi joen] Bedřich Smetana menetti kuulonsa kokonaan lokakuussa 1874. Alle kaksi kuukautta myöhemmin, 20. marraskuuta ja 8. joulukuuta välisenä aikana, hän sävelsi Vltavan — teoksen, joka seuraa jokea kahdesta pienestä lähteestä Prahaan asti. Matkalla kuuluu metsästystorvia, häätanssi ja kuutamo, kunnes joki jyrisee koskessa. Hän ei kuullut teostaan koskaan. Vuodesta 1952 Prahan kevät -festivaali on alkanut joka 12. toukokuuta juuri tällä musiikilla.
+- [Praha — kaupunkilehti / Praha: Golem nukkuu ullakolla] Prahan juutalaiskorttelin vanhinta synagogaa sanotaan Vanhaksiuudeksi. Se valmistui 1200-luvulla ja on yhä käytössä. Tarinan mukaan rabbi Löw muovasi 1500-luvulla Vltavan savesta Golemin, ihmisen kokoisen apurin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon synagogan ullakolle. Sinne ei tarinan mukaan saa nousta.
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mikä on Kaarlen silta?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Kaarlen silta]] on Prahan kivisilta [[Vltavan]] yli, jonka rakentaminen aloitettiin 1300-luvulla keisari [[Kaarle IV:n]] aikana. Kaarle IV teki Prahasta keisarikunnan pääkaupungin ja perusti Keski-Euroopan ensimmäisen yliopiston, ja silta kuuluu saman kauden suuriin rakennushankkeisiin. Siltaa koristavat patsaat, jotka on lisätty myöhemmin, ja se on nykyään jalankulkijoiden käytössä. Tarkkaa valmistumisvuotta en ole varma antamaan. Vltava kiertää kaupunkia mutkissa, ja silta yhdistää sen rantoja. Minä ylitän sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Vltavan
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mikä on Kaarlen silta?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Kaarlen silta]] on Prahan kivisilta [[Vltavan]] yli, jonka rakentaminen aloitettiin 1300-luvulla keisari [[Kaarle IV:n]] aikana. Kaarle IV teki Prahasta keisarikunnan pääkaupungin ja perusti Keski-Euroopan ensimmäisen yliopiston, ja silta kuuluu saman kauden suuriin rakennushankkeisiin. Siltaa koristavat patsaat, jotka on lisätty myöhemmin, ja se on nykyään jalankulkijoiden käytössä. Tarkkaa valmistumisvuotta en ole varma antamaan. Vltava kiertää kaupunkia mutkissa, ja silta yhdistää sen rantoja. Minä ylitän sen mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Kaarle IV:n
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Golem nukkuu ullakolla] Prahan juutalaiskorttelin vanhinta synagogaa sanotaan Vanhaksiuudeksi. Se valmistui 1200-luvulla ja on yhä käytössä. Tarinan mukaan rabbi Löw muovasi 1500-luvulla Vltavan savesta Golemin, ihmisen kokoisen apurin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon synagogan ullakolle. Sinne ei tarinan mukaan saa nousta.
+AIEMPI KYSYMYS: Mikä on Prahan golem?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Golem]] on savesta tehty jättiläinen, jonka kerrotaan olevan Prahan kuuluisimpia tarinoita. Legendan mukaan juutalaisen yhteisön rabbi loi sen suojelemaan yhteisöä, ja jättiläinen kätkettiin ullakolle. Kertomus on kansantarina eikä historiallinen tapahtuma, ja sen yksityiskohdat vaihtelevat kertojan mukaan. Tarkkaa rabbia tai ullakkoa en ole varma nimeämään. Tarinan hahmo on levinnyt kirjallisuuteen ja elokuviin, ja [[Praha]] pitää sitä yhtenä tunnetuimmista kaupunkimyyteistään. Savesta tehty jättiläinen kuulostaa minusta liian raskaalta kantaa.
+KYSYMYS: Kerro lisää: Golem
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha] Sata tornia, kello joka näyttää auringon paikan taivaalla — ja savesta tehty jättiläinen ullakolla.
+AIEMPI KYSYMYS: Mikä on Prahan golem?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Golem]] on savesta tehty jättiläinen, jonka kerrotaan olevan Prahan kuuluisimpia tarinoita. Legendan mukaan juutalaisen yhteisön rabbi loi sen suojelemaan yhteisöä, ja jättiläinen kätkettiin ullakolle. Kertomus on kansantarina eikä historiallinen tapahtuma, ja sen yksityiskohdat vaihtelevat kertojan mukaan. Tarkkaa rabbia tai ullakkoa en ole varma nimeämään. Tarinan hahmo on levinnyt kirjallisuuteen ja elokuviin, ja [[Praha]] pitää sitä yhtenä tunnetuimmista kaupunkimyyteistään. Savesta tehty jättiläinen kuulostaa minusta liian raskaalta kantaa.
+KYSYMYS: Kerro lisää: Praha
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kaupunkilehti / Tiede: Prahan hevoset] Przewalskin hevonen on mongolialainen villihevonen, jolla on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei siis ole karannut kesyhevonen vaan oma lajinsa. Toisen maailmansodan jälkeen niitä oli jäljellä vain kahdessa eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla koko maailman eläintarhoissa oli enää kaksitoista yksilöä. Vuonna 1959 Prahan eläintarhalle uskottiin lajin kansainvälisen kantakirjan pito. Luonnosta laji hävisi kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.
+AIEMPI KYSYMYS: Mikä oli Prahan kevät vuonna 1968?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on vakavaa. [[Prahan kevät]] oli vuoden 1968 uudistusyritys [[Tšekkoslovakiassa]], jossa pyrittiin lisäämään sananvapautta ja uudistamaan järjestelmää. Elokuussa 1968 [[Varsovan liiton]] joukot saapuivat maahan ja pysäyttivät uudistukset, ja maa pysyi kommunistisen hallinnon alaisena yli kaksikymmentä vuotta. Sama aihe on tänäänkin tärkeä tšekeille ja slovakeille, eivätkä historioitsijat ole yksimielisiä kaikista yksityiskohdista, joten niitä en ala luetella. Tapahtumasta on kulunut yli viisikymmentä vuotta, ja onneksi maa on sittemmin päässyt eteenpäin.
+KYSYMYS: Kerro lisää: Prahan kevät
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Kaksi tuntia, jolloin kaikki pysähtyi] 1989 — Marraskuun 17. päivänä 1989 mellakkapoliisi hajotti opiskelijoiden mielenosoituksen Prahassa. Kolmessa päivässä kadulle tuli jo puoli miljoonaa ihmistä, ja noiden päivien tunnukseksi tuli ääni: mielenosoittajat nostivat avaimensa ilmaan ja helisyttivät niitä. Ratkaisu tuli 27. marraskuuta, kun koko Tšekkoslovakiassa pidettiin kahden tunnin yleislakko. Seuraavana päivänä kommunistinen puolue ilmoitti luopuvansa yksinvallastaan. Vuoden viimeisinä päivinä presidentiksi valittiin näytelmäkirjailija Václav Havel, joka oli saman vuoden alussa istunut vankilassa.
+AIEMPI KYSYMYS: Mikä oli Prahan kevät vuonna 1968?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on vakavaa. [[Prahan kevät]] oli vuoden 1968 uudistusyritys [[Tšekkoslovakiassa]], jossa pyrittiin lisäämään sananvapautta ja uudistamaan järjestelmää. Elokuussa 1968 [[Varsovan liiton]] joukot saapuivat maahan ja pysäyttivät uudistukset, ja maa pysyi kommunistisen hallinnon alaisena yli kaksikymmentä vuotta. Sama aihe on tänäänkin tärkeä tšekeille ja slovakeille, eivätkä historioitsijat ole yksimielisiä kaikista yksityiskohdista, joten niitä en ala luetella. Tapahtumasta on kulunut yli viisikymmentä vuotta, ja onneksi maa on sittemmin päässyt eteenpäin.
+KYSYMYS: Kerro lisää: Tšekkoslovakiassa
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Kansallismuseo] 1885–1891 Prahan kansallismuseo perustettiin jo vuonna 1818, mutta nykyinen komea rakennus Vaclavin aukion päässä valmistui vasta vuosina 1885–1891 arkkitehti Josef Schulzin suunnitelmien mukaan. Museon kokoelmissa on nykyään noin 14 miljoonaa esinettä — kivennäisistä ja eläimistä keskiaikaisiin käsikirjoituksiin. Elokuussa 1968, kun Varsovan liiton joukot miehittivät Tšekkoslovakian, museon julkisivuun ammuttiin lukuisia luoteja neuvostosotilaiden konekivääreistä. Reiät paikattiin, mutta koska korjauksiin käytettiin hieman vaaleampaa hiekkakiveä kuin alkuperäisessä julkisivussa, luodinreikien paikat erottuvat seinästä yhä tänäkin päivänä. Vuosina 2011–2018 koko museo remontoitiin perusteel…
+AIEMPI KYSYMYS: Mikä oli Prahan kevät vuonna 1968?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on vakavaa. [[Prahan kevät]] oli vuoden 1968 uudistusyritys [[Tšekkoslovakiassa]], jossa pyrittiin lisäämään sananvapautta ja uudistamaan järjestelmää. Elokuussa 1968 [[Varsovan liiton]] joukot saapuivat maahan ja pysäyttivät uudistukset, ja maa pysyi kommunistisen hallinnon alaisena yli kaksikymmentä vuotta. Sama aihe on tänäänkin tärkeä tšekeille ja slovakeille, eivätkä historioitsijat ole yksimielisiä kaikista yksityiskohdista, joten niitä en ala luetella. Tapahtumasta on kulunut yli viisikymmentä vuotta, ja onneksi maa on sittemmin päässyt eteenpäin.
+KYSYMYS: Kerro lisää: Varsovan liiton
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Praha (kaupunki)
+Tietoruudun teksti: Praha on Tšekin pääkaupunki ja noin 1,4 miljoonan asukkaan kaupunki Vltavan mutkissa. Joki kiertää täällä jyrkän kallioharjanteen, jonka päälle nousi 800-luvulla linna; vastarannan tasangolle kasvoivat kauppiaiden korttelit. Neljä erillistä kaupunkia liitettiin yhdeksi vasta vuonna 1784.
+
+Mahtinsa Praha sai 1300-luvulla, kun Kaarle IV teki siitä keisarikunnan pääkaupungin, perusti Keski-Euroopan ensimmäisen yliopiston ja aloitti kivisillan rakentamisen Vltavan yli. Raatihuoneen seinään asennettiin vuonna 1410 tähtitieteellinen kello, joka käy edelleen. Sitten seurasi kolmisensataa vuotta Habsburgien hallintoa ja saksankielisiä virastoja, kunnes Prahasta tuli vuonna 1918 itsenäisen Tšekkoslovakian pääkaupunki.
+
+Toinen maailmansota jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja jugendtalo. Vuoden 1968 uudistusyritys eli Prahan k…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Zimbabwe — maalehti / Ruoka: Sama jauho, kaksi ateriaa] Maissijauhosta keitetään sadza, ndebeleksi isitshwala: jauho ja vesi sekoitetaan, ja kun seos on kiehunut muutaman minuutin, sekaan lisätään lisää jauhoa, kunnes taikina on paksua. Se syödään lounaaksi ja päivälliseksi kastikkeen, papujen, lehtivihannesten tai lihan kanssa, usein myös hapanmaidon eli lacton kera. Samasta jauhosta keitetään aamiaiseksi ohuempi bota, joka maustetaan maapähkinävoilla, maidolla, voilla tai hillolla. Siirtomaa-ajalta on jäänyt teetauko kello kymmenen ja toinen kello neljä.
+- [Asunción — kaupunkilehti / Arki ja perintö: Rantabulevardi, joka syntyi juhlavuodesta] Kun Paraguay vietti itsenäisyytensä kaksisataavuotisjuhlaa toukokuussa 2011, Asunción avasi samalla noin kolmentoista hehtaarin rantapuiston. Se yhdistää vanhan keskustan rakennukset joen rantaan: Palacio de los López, Cabildo ja katedraali ovat nyt kävelymatkan päässä vedestä. Hankkeen ensimmäinen vaihe valmistui loppuvuodesta 2019 pyöräkaistoineen, kulkureitteineen ja kuntoiluvälineineen; toinen vaihe lisää siltoja ja liikuntapaikkoja. Tieltä siirtyneille perheille rakennettiin 144 uutta asuntoa.
+AIEMPI KYSYMYS: Miksi Prahaa sanotaan sadan tornin kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Prahassa on todella paljon torneja ja kupoleita, ja siksi sitä on kutsuttu sadan tornin kaupungiksi. Nimitys ei ole tarkka luku vaan kuvaus siitä, millaisena kaupunki näyttää kaukaa: kirkontornit, linnan huiput ja raatihuoneen torni täyttävät siluetin. [[Toinen maailmansota]] jätti keskustan lähes ehjäksi, ja siksi samassa korttelissa voi seistä keskiaikainen talo, barokkikirkko ja [[jugendtalo]]. Tornien tarkkaa lukumäärää en ole varma antamaan. [[Praha]] on kuitenkin yksi Euroopan tunnetuimmista kaupunkimaisemista. Ylhäältä se on kyyhkyn silmin hurja torniviidakko.
+KYSYMYS: Kerro lisää: Toinen maailmansota

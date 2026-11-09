@@ -1,0 +1,954 @@
+### 1281
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Hotel Tequendama] 1953 Hotelli rakennettiin 1950–51 osaksi kymmenennen valtakadun levennystä, ja se vihittiin 17. toukokuuta 1953 juhlaillallisella, jolla oli läsnä tasavallan presidentti Roberto Urdaneta Arbeláez. Suunnittelijoina olivat yhdysvaltalaiset Holabird & Root ja John Burgee sekä kolumbialainen Cuéllar Serrano Gómez. Talo oli 1950-luvulla kaupungin korkein uudisrakennus ja Centro Internacional Tequendaman ensimmäinen rakennus — se aloitti kokonaisen kaupunginosan. Tontilla on ollut ennen hotellia neljä muuta laitosta: San Diegon luostari, sotakorkeakoulu, kadettikoulu ja puolustusministeriö. Vuosina 1967–1970 hotelliin rakennettiin samassa tyylissä laajennus, joka kaksinkertaisti sen koon, siirsi …
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Millainen ilmasto Ankarassa on ja miksi talvet ovat kylmiä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ankara sijaitsee Anatolian ylätasangolla noin yhdeksänsadan metrin korkeudessa, kaukana merestä, joten ilmasto on mannerilmasto. Tammikuun keskilämpötila on noin yksi aste ja elokuun 24,6, joten talvi on kylmä ja kesä kuuma. Kaupungin eteläpuolella on suuri suolajärvi [[Tuz-järvi]], ja kuiva maasto muodostaa avaran [[Anatolian ylätasangon]] maiseman. Kyllä siellä lämmin takki kelpaa.
+KYSYMYS: Kerro lisää: Anatolian ylätasangon
+
+### 1282
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+AIEMPI KYSYMYS: Miten Kappadokian maanalaiset kaupungit rakennettiin ja miksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maanalaiset kaupungit louhittiin pehmeään [[tuffiin]], jota pystyy kaivamaan yksinkertaisin työkaluin. [[Derinkuyu]] ulottuu noin 85 metrin syvyyteen ja siinä on viisi kerrosta, ja sen käytävät voitiin sulkea suurilla kivilaatoilla, jotka aukesivat vain sisältä. Kaupungit toimivat suojapaikkoina vaaran uhatessa, ja niissä oli tiloja asumiseen, ruoan säilytykseen ja ilmanvaihtoon. Alla on kyllä enemmän tilaa kuin pinnalla.
+KYSYMYS: Kerro lisää: tuffiin
+
+### 1283
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Keijujen savupiiput] 1963 — Kappadokian maaperä on tulivuorten tuhkaa, joka on painunut pehmeäksi kiveksi. Sade ja tuuli syövät sitä helposti, mutta siellä missä pehmeän kiven päällä on kovempi lohkare, kiveä jää jäljelle kapeaksi torniksi. Näitä torneja kutsutaan turkiksi nimellä peribacaları, keijujen savupiiput. Pehmeään kiveen on ollut helppo kaivaa: alueella on satoja kallioon hakattuja asuntoja ja kirkkoja sekä kokonaisia maanalaisia kaupunkeja. Derinkuyun maanalainen kaupunki laskeutuu kahdeksassa kerroksessa noin 85 metrin syvyyteen. Se löydettiin uudestaan vuonna 1963, kun talon seinän takaa paljastui käytävä.
+- [Kappadokia — kaupunkilehti / Historia: Kahdeksankymmentäviisi metriä alaspäin] Derinkuyun maanalainen kaupunki ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen. Tilaa oli arvioiden mukaan jopa kahdellekymmenelletuhannelle ihmiselle karjoineen ja ruokavarastoineen — luku on lähteissä yläraja-arvio eikä laskettu määrä. Kolmannen ja neljännen kerroksen välistä lähtevät portaat vievät alimman kerroksen kirkkoon. Ilmanvaihto oli suunniteltu: pystykuiluja on runsaasti, ja pääkuilun aukot on porrastettu niin, etteivät kahden kerroksen aukot ole koskaan päällekkäin.
+AIEMPI KYSYMYS: Miten Kappadokian maanalaiset kaupungit rakennettiin ja miksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maanalaiset kaupungit louhittiin pehmeään [[tuffiin]], jota pystyy kaivamaan yksinkertaisin työkaluin. [[Derinkuyu]] ulottuu noin 85 metrin syvyyteen ja siinä on viisi kerrosta, ja sen käytävät voitiin sulkea suurilla kivilaatoilla, jotka aukesivat vain sisältä. Kaupungit toimivat suojapaikkoina vaaran uhatessa, ja niissä oli tiloja asumiseen, ruoan säilytykseen ja ilmanvaihtoon. Alla on kyllä enemmän tilaa kuin pinnalla.
+KYSYMYS: Kerro lisää: Derinkuyu
+
+### 1284
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+AIEMPI KYSYMYS: Mitä kallioon louhituista kirkoista Göremessä tiedetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa, ja ne on koristeltu [[freskoilla]], joissa on kuvattu Raamatun tapahtumia. Tunnettu on esimerkiksi [[Karanlık kilise]], jonka maalaukset ovat säilyneet hyvin, koska sinne pääsee vain vähän valoa. Alue kuuluu [[Unescon]] maailmanperintöluetteloon. Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus. Sisältä ne ovat yllättävän värikkäitä.
+KYSYMYS: Kerro lisää: freskoilla
+
+### 1285
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+AIEMPI KYSYMYS: Mitä kallioon louhituista kirkoista Göremessä tiedetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa, ja ne on koristeltu [[freskoilla]], joissa on kuvattu Raamatun tapahtumia. Tunnettu on esimerkiksi [[Karanlık kilise]], jonka maalaukset ovat säilyneet hyvin, koska sinne pääsee vain vähän valoa. Alue kuuluu [[Unescon]] maailmanperintöluetteloon. Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus. Sisältä ne ovat yllättävän värikkäitä.
+KYSYMYS: Kerro lisää: Karanlık kilise
+
+### 1286
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+AIEMPI KYSYMYS: Mitä kallioon louhituista kirkoista Göremessä tiedetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa, ja ne on koristeltu [[freskoilla]], joissa on kuvattu Raamatun tapahtumia. Tunnettu on esimerkiksi [[Karanlık kilise]], jonka maalaukset ovat säilyneet hyvin, koska sinne pääsee vain vähän valoa. Alue kuuluu [[Unescon]] maailmanperintöluetteloon. Kirkot rakennettiin 500-luvun ja 800-luvun välillä, kun alue oli kristinuskon keskus. Sisältä ne ovat yllättävän värikkäitä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 1287
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Maisema on kovettunutta tuhkaa] Kappadokian muodot ovat tulivuorten työtä. Erciyes, Hasan ja Göllüdağ purkautuivat toistuvasti noin yhdeksän ja kolmen miljoonan vuoden välillä ja peittivät ylätasangon paksuilla tuhkakerroksilla. Niistä kovettui ignimbriittiä ja tuffia, jota tuuli ja vesi ovat sittemmin syöneet piikeiksi ja pilareiksi. Turkiksi ne ovat peribacalar, keijupiiput. Kansainvälinen geologian liitto valitsi Kappadokian mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan geologisen perintökohteen joukkoon.
+AIEMPI KYSYMYS: Miksi Kappadokiassa lennetään ilmapalloilla?
+AIEMPI VASTAUS (Livia):
+Mmm— Kappadokian ilma on aamuisin yleensä tyyni, ja avoin maisema mahdollistaa lennot auringonnousun aikaan. Ylhäältä näkyvät [[keijupiiput]], laaksot ja kalliokylät, ja kauimpana siintää [[Erciyes]]-tulivuori. Ilmapallolennot ovat tuoneet alueelle paljon matkailijoita, ja sadat pallot värittävät taivasta aamuisin. Minä katson ne mieluummin omilla siivilläni.
+KYSYMYS: Kerro lisää: keijupiiput
+
+### 1288
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Maisema on kovettunutta tuhkaa] Kappadokian muodot ovat tulivuorten työtä. Erciyes, Hasan ja Göllüdağ purkautuivat toistuvasti noin yhdeksän ja kolmen miljoonan vuoden välillä ja peittivät ylätasangon paksuilla tuhkakerroksilla. Niistä kovettui ignimbriittiä ja tuffia, jota tuuli ja vesi ovat sittemmin syöneet piikeiksi ja pilareiksi. Turkiksi ne ovat peribacalar, keijupiiput. Kansainvälinen geologian liitto valitsi Kappadokian mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan geologisen perintökohteen joukkoon.
+AIEMPI KYSYMYS: Miksi Kappadokiassa lennetään ilmapalloilla?
+AIEMPI VASTAUS (Livia):
+Mmm— Kappadokian ilma on aamuisin yleensä tyyni, ja avoin maisema mahdollistaa lennot auringonnousun aikaan. Ylhäältä näkyvät [[keijupiiput]], laaksot ja kalliokylät, ja kauimpana siintää [[Erciyes]]-tulivuori. Ilmapallolennot ovat tuoneet alueelle paljon matkailijoita, ja sadat pallot värittävät taivasta aamuisin. Minä katson ne mieluummin omilla siivilläni.
+KYSYMYS: Kerro lisää: Erciyes
+
+### 1289
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Kyyhkysten lanta maalasi kirkot] Uçhisarin ja Göremen väliin jäävän laakson seiniin on louhittu satoja kyyhkyslakkoja: pieniä kammioita, joiden sisällä on orsia ja koloja pesiä varten. Ne eivät ole koristeita vaan maataloutta. Kyyhkysten lantaa käytettiin peltojen lannoitteena aina 1970-luvulle asti, ja samaa ainetta sekoitettiin luolakirkkojen maaleihin kirkastamaan värejä. Laakson yllä kohoaa Uçhisarin kuusikymmenmetrinen kalliolinnake, jonka sisään louhittuihin huoneisiin arvellaan mahtuneen tuhatkunta ihmistä.
+AIEMPI KYSYMYS: Miksi kyyhkyslakkoja on louhittu kallioon?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä aiheesta minä pidän. Kyyhkysten lanta oli arvokasta lannoitetta, jota käytettiin Kappadokian pelloilla ja viinitarhoissa, joten lakkoja louhittiin kallioon runsaasti. Esimerkiksi [[Uçhisarin]] ja [[Kyyhkyslaakson]] seudulla näkee kallioseinissä satoja pieniä reikiä. Lakat koristeltiin joskus punaisin ja valkoisin kuvioin, ja ne ovat tuffiin kaiverrettuja. Sukulaiseni ovat siis tehneet töitä tämänkin maiseman eteen.
+KYSYMYS: Kerro lisää: Uçhisarin
+
+### 1290
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+AIEMPI KYSYMYS: Miksi kyyhkyslakkoja on louhittu kallioon?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä aiheesta minä pidän. Kyyhkysten lanta oli arvokasta lannoitetta, jota käytettiin Kappadokian pelloilla ja viinitarhoissa, joten lakkoja louhittiin kallioon runsaasti. Esimerkiksi [[Uçhisarin]] ja [[Kyyhkyslaakson]] seudulla näkee kallioseinissä satoja pieniä reikiä. Lakat koristeltiin joskus punaisin ja valkoisin kuvioin, ja ne ovat tuffiin kaiverrettuja. Sukulaiseni ovat siis tehneet töitä tämänkin maiseman eteen.
+KYSYMYS: Kerro lisää: Kyyhkyslaakson
+
+### 1291
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+AIEMPI KYSYMYS: Mitä ruokaa ja käsitöitä Kappadokiassa tunnetaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Alueen tunnetuimpia ruokia on [[testikebab]], joka kypsytetään savikannussa ja avataan murtamalla kannu pöydässä. Punaisen [[Kızılırmak]]-joen rannalla sijaitseva [[Avanos]] tunnetaan keramiikasta, jota tehdään joen savesta. Kappadokiassa viljellään myös viiniä, ja viininvalmistus on vanhaa perinnettä. Kannu on kaunis, mutta paras osa on sisältö.
+KYSYMYS: Kerro lisää: testikebab
+
+### 1292
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+AIEMPI KYSYMYS: Mitä ruokaa ja käsitöitä Kappadokiassa tunnetaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Alueen tunnetuimpia ruokia on [[testikebab]], joka kypsytetään savikannussa ja avataan murtamalla kannu pöydässä. Punaisen [[Kızılırmak]]-joen rannalla sijaitseva [[Avanos]] tunnetaan keramiikasta, jota tehdään joen savesta. Kappadokiassa viljellään myös viiniä, ja viininvalmistus on vanhaa perinnettä. Kannu on kaunis, mutta paras osa on sisältö.
+KYSYMYS: Kerro lisää: Kızılırmak
+
+### 1293
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kappadokia
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kappadokia (kaupunki)
+Tietoruudun teksti: Kappadokia ei ole kaupunki eikä maakunta vaan historiallinen alue Keski-Anatolian ylätasangolla yli tuhannen metrin korkeudessa. Maisema on tulivuorten työtä: Erciyes, Hasan ja Göllüdağ peittivät tasangon tuhkaan, joka kovettui tuffiksi, ja tuuli ja vesi ovat syöneet siitä piikkejä ja pilareita — turkiksi keijupiippuja.
+
+Sama pehmeys teki maiseman ja asunnot. Tuffia jaksaa kaivaa lapiolla, joten täällä ei ole rakennettu vaan louhittu: taloja, talleja ja kirkkoja on kaiverrettu kallioon, ja monessa kylässä asuttiin luolissa vielä 1900-luvulla. Maan alle mahtui kokonaisia kaupunkeja — Derinkuyu ulottuu noin kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen, ja sen käytävät suljettiin kivilaatoilla, jotka aukesivat vain sisältä.
+
+Alue oli kristinuskon keskuksia 500-luvulta 800-luvulle, ja Göremen ympäristössä on noin neljäsataa kallioon louhittua kirkkoa. Kansallispuisto ja alueen k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+AIEMPI KYSYMYS: Mitä ruokaa ja käsitöitä Kappadokiassa tunnetaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Alueen tunnetuimpia ruokia on [[testikebab]], joka kypsytetään savikannussa ja avataan murtamalla kannu pöydässä. Punaisen [[Kızılırmak]]-joen rannalla sijaitseva [[Avanos]] tunnetaan keramiikasta, jota tehdään joen savesta. Kappadokiassa viljellään myös viiniä, ja viininvalmistus on vanhaa perinnettä. Kannu on kaunis, mutta paras osa on sisältö.
+KYSYMYS: Kerro lisää: Avanos
+
+### 1294
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Miksi Ukrainan musta multa on niin hedelmällistä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ukrainan peltojen alla on [[tšernozjomia]], mustaa multaa, jossa on paksu humuskerros, paikoin jopa metrin verran. Se syntyi aroruohojen vuosisatojen aikana lahonneista juurista, ja siksi maa pidättää hyvin vettä ja ravinteita. Maassa viljellään paljon [[vehnää]] ja [[auringonkukkaa]], ja neljännes maailman mustasta mullasta on Ukrainassa. Ei oo huono multa, eikä pulla sillä kasva.
+KYSYMYS: Kerro lisää: tšernozjomia
+
+### 1295
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Trinity Church] 1839–1846 Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui 1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, jossa George Washington kävi jumalanpalveluksessa virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, kun talven 1838–1839 lumet olivat heikentäneet sen rakenteita. Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin helatorstaina 1. toukokuuta 1846. Torni ristiineen y…
+- [Mandalay — kohdekartta / Kohdekartta: Zegyo-tori] perustettu 1860-luvulla Zegyo on kaupungin vanhin ja tärkein tori. Se perustettiin Mindonin hallituskaudella ja on ollut siitä asti samalla paikalla 84. kadulla 24. ja 26. kadun välissä. Aluetta on kaksitoista eekkeriä eli vajaat viisi hehtaaria. Torin kautta kulki Ylä-Burman maatalous: papuja, sitrushedelmiä, puuvillaa, pähkinöitä, sipulia, riisiä, tupakkaa ja vehnää. Se oli samalla seudun tärkein korujen ja käsityön markkinapaikka, ja erityisesti hopea- ja kultakirjonta myytiin täällä. Tavarapaljous selittää kaupungin kaksoisroolin: Mandalay on ollut kuninkaankaupunki mutta ennen kaikkea Ylä-Burman kauppapaikka. Rakennus on vaihtunut kolmesti. Tori paloi vuonna 1897, ja tilalle nousi 1903…
+AIEMPI KYSYMYS: Miksi Ukrainan musta multa on niin hedelmällistä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ukrainan peltojen alla on [[tšernozjomia]], mustaa multaa, jossa on paksu humuskerros, paikoin jopa metrin verran. Se syntyi aroruohojen vuosisatojen aikana lahonneista juurista, ja siksi maa pidättää hyvin vettä ja ravinteita. Maassa viljellään paljon [[vehnää]] ja [[auringonkukkaa]], ja neljännes maailman mustasta mullasta on Ukrainassa. Ei oo huono multa, eikä pulla sillä kasva.
+KYSYMYS: Kerro lisää: vehnää
+
+### 1296
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon pyhä saari] Auringon saareksi kutsuttu Isla del Sol on Titicacan suurin saari ja oli inkoille tärkein pyhiinvaelluskohde. Saarella on yli 80 rauniota, joista suurin osa ajoittuu 1400-luvulle ja inkavallan huippukauteen: kivisiä temppeleitä, labyrinttimäinen Chinkana-rakennus sekä jyrkkiä viljelysterasseja, jotka yhä kannattelevat maissi- ja perunapeltoja. Saarella ei ole moottoriajoneuvoja lainkaan, vaan kapeat polut kulkevat kylästä toiseen kukkuloiden yli. Nykyään saarella asuu noin 800 perhettä maanviljelystä, kalastuksesta ja yhä enemmän matkailusta – veneet Copacabanan rannalta tuovat vierailijoita rantaan, jota pidettiin kerran auringon syntysijana.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon lapset nousevat järvestä] Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.
+AIEMPI KYSYMYS: Miksi Ukrainan musta multa on niin hedelmällistä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ukrainan peltojen alla on [[tšernozjomia]], mustaa multaa, jossa on paksu humuskerros, paikoin jopa metrin verran. Se syntyi aroruohojen vuosisatojen aikana lahonneista juurista, ja siksi maa pidättää hyvin vettä ja ravinteita. Maassa viljellään paljon [[vehnää]] ja [[auringonkukkaa]], ja neljännes maailman mustasta mullasta on Ukrainassa. Ei oo huono multa, eikä pulla sillä kasva.
+KYSYMYS: Kerro lisää: auringonkukkaa
+
+### 1297
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Millainen vuoristo Karpaatit ovat Ukrainassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ukrainan osuus vuoristosta on maan lounaisosassa, ja sen korkein huippu on [[Hoverla]], 2 061 metriä. Vuoristossa asuu perinteisesti [[huculit]], jotka tunnetaan omista puvuistaan, karjanhoidostaan ja kansanmusiikistaan. Alueella on metsiä, laidunniittyjä ja matkailukeskuksia, ja osa vuoriston vanhoista [[pyökkimetsistä]] kuuluu Unescon maailmanperintöön. Tasangon jälkeen vuoret ovat varmasti kiva vaihtelu.
+KYSYMYS: Kerro lisää: Hoverla
+
+### 1298
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Millainen vuoristo Karpaatit ovat Ukrainassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ukrainan osuus vuoristosta on maan lounaisosassa, ja sen korkein huippu on [[Hoverla]], 2 061 metriä. Vuoristossa asuu perinteisesti [[huculit]], jotka tunnetaan omista puvuistaan, karjanhoidostaan ja kansanmusiikistaan. Alueella on metsiä, laidunniittyjä ja matkailukeskuksia, ja osa vuoriston vanhoista [[pyökkimetsistä]] kuuluu Unescon maailmanperintöön. Tasangon jälkeen vuoret ovat varmasti kiva vaihtelu.
+KYSYMYS: Kerro lisää: huculit
+
+### 1299
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Millainen vuoristo Karpaatit ovat Ukrainassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ukrainan osuus vuoristosta on maan lounaisosassa, ja sen korkein huippu on [[Hoverla]], 2 061 metriä. Vuoristossa asuu perinteisesti [[huculit]], jotka tunnetaan omista puvuistaan, karjanhoidostaan ja kansanmusiikistaan. Alueella on metsiä, laidunniittyjä ja matkailukeskuksia, ja osa vuoriston vanhoista [[pyökkimetsistä]] kuuluu Unescon maailmanperintöön. Tasangon jälkeen vuoret ovat varmasti kiva vaihtelu.
+KYSYMYS: Kerro lisää: pyökkimetsistä
+
+### 1300
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Mitä Ukrainan suuri joki on merkinnyt maan historialle?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Dnepr]] on virrannut Ukrainan läpi pohjoisesta etelään, ja sen varrella on sijainnut monia keskeisiä kaupunkeja, kuten [[Kiova]]. Keskiajalla jokea pitkin kulki kauppareitti pohjoisen ja etelän välillä. Koskien takana asuivat myöhemmin [[kasakat]], jotka tunnettiin Zaporižžjan alueen kasakkoina. Joen varrelle rakennettiin 1900-luvulla voimalaitoksia, joiden patoaltaat näkyvät kartalla leveinä järvinä. Joki kantaa edelleen paljon historiaa.
+KYSYMYS: Kerro lisää: Dnepr
+
+### 1301
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova] Kaupunki, jonka kirkonseiniin kirjoitettiin tuhat vuotta sitten ja jonka metroon lasketaan yli sata metriä maan alle.
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Mitä Ukrainan suuri joki on merkinnyt maan historialle?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Dnepr]] on virrannut Ukrainan läpi pohjoisesta etelään, ja sen varrella on sijainnut monia keskeisiä kaupunkeja, kuten [[Kiova]]. Keskiajalla jokea pitkin kulki kauppareitti pohjoisen ja etelän välillä. Koskien takana asuivat myöhemmin [[kasakat]], jotka tunnettiin Zaporižžjan alueen kasakkoina. Joen varrelle rakennettiin 1900-luvulla voimalaitoksia, joiden patoaltaat näkyvät kartalla leveinä järvinä. Joki kantaa edelleen paljon historiaa.
+KYSYMYS: Kerro lisää: Kiova
+
+### 1302
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+AIEMPI KYSYMYS: Mitä Ukrainan suuri joki on merkinnyt maan historialle?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Dnepr]] on virrannut Ukrainan läpi pohjoisesta etelään, ja sen varrella on sijainnut monia keskeisiä kaupunkeja, kuten [[Kiova]]. Keskiajalla jokea pitkin kulki kauppareitti pohjoisen ja etelän välillä. Koskien takana asuivat myöhemmin [[kasakat]], jotka tunnettiin Zaporižžjan alueen kasakkoina. Joen varrelle rakennettiin 1900-luvulla voimalaitoksia, joiden patoaltaat näkyvät kartalla leveinä järvinä. Joki kantaa edelleen paljon historiaa.
+KYSYMYS: Kerro lisää: kasakat
+
+### 1303
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Miten ukrainalaiset koristelevat pääsiäismunia?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perinteinen tapa on [[pysankat]], jotka koristellaan vahalla ja värjäyksellä: kuvio piirretään vahalla munan pintaan, muna kastetaan väriin, ja vaha sulatetaan lopuksi pois. Työkaluna käytetään pientä [[kistka]]-vahakynää. Kuvioilla on perinteisiä merkityksiä, ja ne vaihtelevat alueittain. Länsi-Ukrainassa [[Kolomyjassa]] on pääsiäismunan muotoinen pysankamuseo. Hieno taito, ja varmasti kärsivällisyyttä vaativa.
+KYSYMYS: Kerro lisää: pysankat
+
+### 1304
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Miten ukrainalaiset koristelevat pääsiäismunia?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perinteinen tapa on [[pysankat]], jotka koristellaan vahalla ja värjäyksellä: kuvio piirretään vahalla munan pintaan, muna kastetaan väriin, ja vaha sulatetaan lopuksi pois. Työkaluna käytetään pientä [[kistka]]-vahakynää. Kuvioilla on perinteisiä merkityksiä, ja ne vaihtelevat alueittain. Länsi-Ukrainassa [[Kolomyjassa]] on pääsiäismunan muotoinen pysankamuseo. Hieno taito, ja varmasti kärsivällisyyttä vaativa.
+KYSYMYS: Kerro lisää: kistka
+
+### 1305
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Miten ukrainalaiset koristelevat pääsiäismunia?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perinteinen tapa on [[pysankat]], jotka koristellaan vahalla ja värjäyksellä: kuvio piirretään vahalla munan pintaan, muna kastetaan väriin, ja vaha sulatetaan lopuksi pois. Työkaluna käytetään pientä [[kistka]]-vahakynää. Kuvioilla on perinteisiä merkityksiä, ja ne vaihtelevat alueittain. Länsi-Ukrainassa [[Kolomyjassa]] on pääsiäismunan muotoinen pysankamuseo. Hieno taito, ja varmasti kärsivällisyyttä vaativa.
+KYSYMYS: Kerro lisää: Kolomyjassa
+
+### 1306
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Ruoka: Borssi sai kiireellisen suojelun] 2022 — Borssi on punajuuresta keitetty hapan keitto, jonka päälle tulee lusikallinen smetanaa ja viereen valkosipulisämpylä. Unesco otti ukrainalaisen borssinkeiton kulttuurin kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. Samalla se muistutti, että borssia keitetään monessa maassa eikä merkintä tee siitä kenenkään yksinomaista omaisuutta.
+AIEMPI KYSYMYS: Mikä keitto kuuluu Ukrainan ruokakulttuurin ytimeen?
+AIEMPI VASTAUS (Livia):
+No niin. Se on [[borssi]], keitto, jonka pohjana on tavallisesti punajuuri ja johon lisätään kaalia, perunaa ja usein lihaa; reseptit vaihtelevat alueittain ja perheittäin. Keiton kanssa syödään usein valkosipulilla maustettuja [[pampuškeja]]. Vuonna 2022 [[Unesco]] kirjasi ukrainalaisen borssinkeiton kulttuurin kiireellisesti suojeltavaan luetteloon. Pampuški on kyllä juuri sellainen pulla, josta minä haaveilen.
+KYSYMYS: Kerro lisää: borssi
+
+### 1307
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+AIEMPI KYSYMYS: Mikä keitto kuuluu Ukrainan ruokakulttuurin ytimeen?
+AIEMPI VASTAUS (Livia):
+No niin. Se on [[borssi]], keitto, jonka pohjana on tavallisesti punajuuri ja johon lisätään kaalia, perunaa ja usein lihaa; reseptit vaihtelevat alueittain ja perheittäin. Keiton kanssa syödään usein valkosipulilla maustettuja [[pampuškeja]]. Vuonna 2022 [[Unesco]] kirjasi ukrainalaisen borssinkeiton kulttuurin kiireellisesti suojeltavaan luetteloon. Pampuški on kyllä juuri sellainen pulla, josta minä haaveilen.
+KYSYMYS: Kerro lisää: pampuškeja
+
+### 1308
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ukraina (maa)
+Tietoruudun teksti: Ukraina on suurin kokonaan Euroopassa sijaitseva maa, 603 550 neliökilometriä. Yli puolet siitä on peltoa, ja pellon alla on mustaa multaa: tšernozjomia, jonka humuskerros on paikoin metrin paksuinen. Neljäsosa maailman mustasta mullasta on Ukrainassa.
+
+Sen näkee kartalta: se on lähes kauttaaltaan vaaleaa vihreää, ja tasanko jatkuu laidasta laitaan ilman korkeuseroja. Ruskeaa on vain lounaassa, missä Karpaatit kaartuvat maan halki — Hoverla nousee siellä 2 061 metriin, koko maan korkeimpana kohtana. Keskeltä pohjoisesta etelään laskee Dnepr, ja sen patoaltaat näkyvät sarjana leveitä sinisiä järviä.
+
+Etelässä maa liukuu Mustaanmereen ja Asovanmereen, ja Krimin niemimaa roikkuu kartan alalaidassa oman kapean vuorijononsa kanssa. Pohjoisessa vihreä tummenee: siellä ovat Polissjan suot. Lännessä on vielä yksi joki, joka on tehnyt jotain omituista — se kiertää melkein täyden lenkin ja jättää…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mikä keitto kuuluu Ukrainan ruokakulttuurin ytimeen?
+AIEMPI VASTAUS (Livia):
+No niin. Se on [[borssi]], keitto, jonka pohjana on tavallisesti punajuuri ja johon lisätään kaalia, perunaa ja usein lihaa; reseptit vaihtelevat alueittain ja perheittäin. Keiton kanssa syödään usein valkosipulilla maustettuja [[pampuškeja]]. Vuonna 2022 [[Unesco]] kirjasi ukrainalaisen borssinkeiton kulttuurin kiireellisesti suojeltavaan luetteloon. Pampuški on kyllä juuri sellainen pulla, josta minä haaveilen.
+KYSYMYS: Kerro lisää: Unesco
+
+### 1309
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Mitä Pyhän Sofian katedraalissa on nähtävää?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Katedraali valmistui ilmeisesti vuonna 1037, kun [[Jaroslav Viisas]] oli Kiovan ruhtinas. Sen seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma, esimerkiksi apsiksessa [[Oranta]]-neitsyen kuva. Seinillä on myös yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta, ja kohde kuuluu [[Unescon]] maailmanperintöön vuodesta 1990. Seinät ovat siis vanhaa ruhtinaiden ja pyhiinvaeltajien kirjoituskirjaa.
+KYSYMYS: Kerro lisää: Jaroslav Viisas
+
+### 1310
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Mitä Pyhän Sofian katedraalissa on nähtävää?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Katedraali valmistui ilmeisesti vuonna 1037, kun [[Jaroslav Viisas]] oli Kiovan ruhtinas. Sen seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma, esimerkiksi apsiksessa [[Oranta]]-neitsyen kuva. Seinillä on myös yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta, ja kohde kuuluu [[Unescon]] maailmanperintöön vuodesta 1990. Seinät ovat siis vanhaa ruhtinaiden ja pyhiinvaeltajien kirjoituskirjaa.
+KYSYMYS: Kerro lisää: Oranta
+
+### 1311
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Mitä Pyhän Sofian katedraalissa on nähtävää?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Katedraali valmistui ilmeisesti vuonna 1037, kun [[Jaroslav Viisas]] oli Kiovan ruhtinas. Sen seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma, esimerkiksi apsiksessa [[Oranta]]-neitsyen kuva. Seinillä on myös yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta, ja kohde kuuluu [[Unescon]] maailmanperintöön vuodesta 1990. Seinät ovat siis vanhaa ruhtinaiden ja pyhiinvaeltajien kirjoituskirjaa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 1312
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+AIEMPI KYSYMYS: Miksi Kiovan metroasema on yli sata metriä maan alla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Arsenalna]] on Kiovan metron asema, jota pidetään yleisesti maailman syvimpänä, noin 105 metrin syvyydessä. Kaupunki seisoo Dneprin korkealla rannalla, ja asema sijaitsee kukkulan alla, joten syvyys liittyy osin maastoon; en ole varma kaikista syistä. [[Kiovan metro]] avattiin vuonna 1960, ja yksi ainoa pitkä liukuportaikko vie matkustajat alas. Minä menen mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Arsenalna
+
+### 1313
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Miksi Kiovan metroasema on yli sata metriä maan alla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Arsenalna]] on Kiovan metron asema, jota pidetään yleisesti maailman syvimpänä, noin 105 metrin syvyydessä. Kaupunki seisoo Dneprin korkealla rannalla, ja asema sijaitsee kukkulan alla, joten syvyys liittyy osin maastoon; en ole varma kaikista syistä. [[Kiovan metro]] avattiin vuonna 1960, ja yksi ainoa pitkä liukuportaikko vie matkustajat alas. Minä menen mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Kiovan metro
+
+### 1314
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Millainen luostari Dneprin rinteessä on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kyse on [[Luolaluostarista]], joka sai alkunsa 1000-luvun puolivälissä, kun munkit alkoivat kaivaa luolia Dneprin rinteeseen. Luostari kasvoi vuosisatojen mittaan suureksi kirkkojen ja rakennusten kokonaisuudeksi, ja se on yksi kristinuskon tärkeimmistä kohteista Itä-Euroopassa. Se kuuluu [[Unescon]] maailmanperintöön yhdessä Pyhän Sofian katedraalin kanssa. Alueella on kirkkoja, kellotorni ja maanalaisia käytäviä. [[Kiovan Rusin]] aikana se oli kulttuurin ja oppineisuuden keskus.
+KYSYMYS: Kerro lisää: Luolaluostarista
+
+### 1315
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Millainen luostari Dneprin rinteessä on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kyse on [[Luolaluostarista]], joka sai alkunsa 1000-luvun puolivälissä, kun munkit alkoivat kaivaa luolia Dneprin rinteeseen. Luostari kasvoi vuosisatojen mittaan suureksi kirkkojen ja rakennusten kokonaisuudeksi, ja se on yksi kristinuskon tärkeimmistä kohteista Itä-Euroopassa. Se kuuluu [[Unescon]] maailmanperintöön yhdessä Pyhän Sofian katedraalin kanssa. Alueella on kirkkoja, kellotorni ja maanalaisia käytäviä. [[Kiovan Rusin]] aikana se oli kulttuurin ja oppineisuuden keskus.
+KYSYMYS: Kerro lisää: Kiovan Rusin
+
+### 1316
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Onko Kiovan muurin portti alkuperäinen vai jälleenrakennus?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Kultainen portti]] rakennettiin vuosina 1017–1024 Jaroslav Viisaan aikana, ja nimi ja malli tulivat [[Konstantinopolin]] Kultaisesta portista. Vuonna 1240 mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin, ja seuraavina vuosisatoina se rapistui lähes raunioksi. Nykyinen rakennus on jälleenrakennus 1900-luvulta; muistaakseni se valmistui vuonna 1982, ja sen tarkkuudesta on keskusteltu. Vanha portti oli siis tarinoiden mukaan upeampi.
+KYSYMYS: Kerro lisää: Kultainen portti
+
+### 1317
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Onko Kiovan muurin portti alkuperäinen vai jälleenrakennus?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Kultainen portti]] rakennettiin vuosina 1017–1024 Jaroslav Viisaan aikana, ja nimi ja malli tulivat [[Konstantinopolin]] Kultaisesta portista. Vuonna 1240 mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin, ja seuraavina vuosisatoina se rapistui lähes raunioksi. Nykyinen rakennus on jälleenrakennus 1900-luvulta; muistaakseni se valmistui vuonna 1982, ja sen tarkkuudesta on keskusteltu. Vanha portti oli siis tarinoiden mukaan upeampi.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 1318
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Funikulaari] avattu 1962 Vladivostokin joukkoliikenne alkoi raiteilta: ensimmäinen raitiolinja avattiin Svetlanskajalle kesäkuussa 1908, ja lokakuussa 1912 liikenteeseen tulivat Belgiassa rakennetut puukoriset vaunut. Kaupungin erikoisin raide on kuitenkin lyhin: Kotkanpesän rinnettä kiipeävä funikulaari, joka avattiin toukokuussa 1962 Hruštšovin ajan suuren rakennuskauden hankkeena. Rataa on 183 metriä, nousua 66 ja puoli, ja matka kestää puolitoista minuuttia. Lyhyys ei tee siitä turhaa. Kukkulakaupungissa suora nousu on kävelijälle raskain, ja funikulaari korvaa satojen portaiden pätkän; samalla se on kaupungin rakastetuimpia laitteita, kahden vastapainona toisiaan kohtaavan vaunun pieni teatteri. Yl…
+AIEMPI KYSYMYS: Miten ylä- ja alakaupunki on yhdistetty toisiinsa Kiovassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaupungin jyrkkää rinnettä pitkin kulkee [[funikulaari]], joka yhdistää ylä- ja alakaupungin ja avattiin vuonna 1905. Alakaupunki on [[Podil]], joka sijaitsee joen rannalla, ja sinne laskeutuvat myös jyrkät rinnekadut. Ylätasanteelta näkee kauas Dneprille, ja sieltä alas pääsee muutamassa minuutissa. Minä pidän tästä enemmän kuin portaista.
+KYSYMYS: Kerro lisää: funikulaari
+
+### 1319
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kiova (kaupunki)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja sen suurin kaupunki: asukkaita on noin kolme miljoonaa. Se on rakennettu Dnepr-joen jyrkälle länsirannalle, ja maasto jakoi kaupungin kahteen kerrokseen: ylhäällä kirkkojen ja porttien yläkaupunki, alhaalla joen rannassa Podil eli alakaupunki.
+
+Keskiajalla Kiova johti Kiovan Rusia, joka ulottui Itämereltä Mustallemerelle, ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin eli Kultaisen portin sekä Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Katedraalin seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma sekä yli 7 000 kiveen raapustettua piirrosta ja kirjoitusta. Se ja Dneprin rinteen Luolaluostari kuuluvat Unescon maailmanperintöön vuodesta 1990.
+
+1800-luvulla teollistuminen kasvatti Kiovasta yhden keisarikunnan suurimmista kaupungeista. Arsenalnan metroasema…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Kiova — kohdekartta / Kohdekartta: Kontraktovan aukio] 1817 Podilin kaupunginosassa Kiovassa on ollut vilkas kauppapaikka jo Kiovan-Venäjän ajoista lähtien, mutta Kontraktovan aukio sai nykyisen nimensä vasta vuonna 1817, kun sille valmistui Kontraktitalo eli sopimustalo. Taustalla oli vuosi 1798, jolloin Venäjän keisari Paavali I päätti siirtää suuret vuotuiset kauppamessut Dubnon kaupungista Kiovaan – ja pian aukiosta tuli koko seudun vilkkain kauppapaikka. 1820-luvulla aukiolla vaihtoi omistajaa niin viljasäkkejä kuin kokonaisia kartanoitakin, ja kauppiaat sopivat messuilla myös palvelusväen palkkaamisesta. Iltaisin aukiolla pidettiin balleja, konsertteja ja teatteriesityksiä. Aukion vanhin rakennus on Samson-suihkulähde vuosilta 1748–1749: …
+AIEMPI KYSYMYS: Miten ylä- ja alakaupunki on yhdistetty toisiinsa Kiovassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaupungin jyrkkää rinnettä pitkin kulkee [[funikulaari]], joka yhdistää ylä- ja alakaupungin ja avattiin vuonna 1905. Alakaupunki on [[Podil]], joka sijaitsee joen rannalla, ja sinne laskeutuvat myös jyrkät rinnekadut. Ylätasanteelta näkee kauas Dneprille, ja sieltä alas pääsee muutamassa minuutissa. Minä pidän tästä enemmän kuin portaista.
+KYSYMYS: Kerro lisää: Podil
+
+### 1320
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Potjomkin-portaat] Kun isoisäsi nousi rannasta kaupunkiin, portaikko oli kolmekymmentäkaksivuotias ja täysin tuntematon maailmalla. Se rakennettiin vuosina 1837–1841, ja sen teetti ruhtinas Mihail Vorontsov: virallisesti lahjaksi vaimolleen Elżbietalle, käytännössä myös siksi, että kaupungin varakkain väki asui törmän päällä ja pääsi satamaan vain kiemurtelevia polkuja ja karkeita puuportaita pitkin. Hinta oli kahdeksansataatuhatta ruplaa. Piirustukset teki Francesco Boffo kahden muun kanssa, ja työmaata valvoi englantilainen insinööri John Upton. Nimiä portaikolla oli isoisäsi aikaan kolme, eikä yksikään niistä ollut nykyinen: sitä sanottiin Bulevardin portaiksi, Richelieun portaiksi ja useimmiten yksinkerta…
+- [Odessa — kohdekartta / Kohdekartta: Potjomkinin portaat] 1837–1841 Odessan kuuluisin nähtävyys on jättiläismäinen kivinen porrasrivistö, joka johtaa satamasta ylös kaupungin keskustaan. Portaat rakennettiin vuosina 1837–1841 sveitsiläisen arkkitehti Francesco Boffon suunnitelmien mukaan, ja niiden rakentamista valvoi englantilainen insinööri John Upton. Alun perin portaissa oli 200 askelmaa, mutta ajan myötä osa niistä hautautui maan alle – nykyään portaissa lasketaan 192 askelmaa kymmenen tasanteen välissä. Portaissa on hauska temppu: ne on rakennettu niin, että yläpää on kapeampi (12,5 metriä) ja alapää leveämpi (yli 21 metriä). Kun seisoo alhaalla ja katsoo ylös, portaat näyttävät paljon lyhyemmiltä kuin ne todellisuudessa ovat, sillä tasantee…
+AIEMPI KYSYMYS: Millaiset portaat johtavat Odessan satamaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Portaat rakennettiin vuosina 1837–1841, ja niissä on 192 askelmaa. Ne tunnetaan optisesta harhasta: ylhäältä katsottuna näkyvät vain tasanteet, alhaalta vain portaat. Portaat tulivat maailmankuuluiksi [[Sergei Eisenstein]]in elokuvasta [[Panssarilaiva Potemkin]] vuodelta 1925. Ne ovat nykyisin yksi kaupungin tunnetuimmista paikoista. Hyvä, ettei minun tarvitse kävellä.
+KYSYMYS: Kerro lisää: Sergei Eisenstein
+
+### 1321
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Potjomkinin portaat] 1837–1841 Odessan kuuluisin nähtävyys on jättiläismäinen kivinen porrasrivistö, joka johtaa satamasta ylös kaupungin keskustaan. Portaat rakennettiin vuosina 1837–1841 sveitsiläisen arkkitehti Francesco Boffon suunnitelmien mukaan, ja niiden rakentamista valvoi englantilainen insinööri John Upton. Alun perin portaissa oli 200 askelmaa, mutta ajan myötä osa niistä hautautui maan alle – nykyään portaissa lasketaan 192 askelmaa kymmenen tasanteen välissä. Portaissa on hauska temppu: ne on rakennettu niin, että yläpää on kapeampi (12,5 metriä) ja alapää leveämpi (yli 21 metriä). Kun seisoo alhaalla ja katsoo ylös, portaat näyttävät paljon lyhyemmiltä kuin ne todellisuudessa ovat, sillä tasantee…
+AIEMPI KYSYMYS: Millaiset portaat johtavat Odessan satamaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Portaat rakennettiin vuosina 1837–1841, ja niissä on 192 askelmaa. Ne tunnetaan optisesta harhasta: ylhäältä katsottuna näkyvät vain tasanteet, alhaalta vain portaat. Portaat tulivat maailmankuuluiksi [[Sergei Eisenstein]]in elokuvasta [[Panssarilaiva Potemkin]] vuodelta 1925. Ne ovat nykyisin yksi kaupungin tunnetuimmista paikoista. Hyvä, ettei minun tarvitse kävellä.
+KYSYMYS: Kerro lisää: Panssarilaiva Potemkin
+
+### 1322
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa: Kaupunki seisoo oman louhoksensa päällä] Odessan talot on rakennettu simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta. Käytäviä kertyi arviolta 2 500 kilometriä — enemmän kuin minkään muun kaupungin alle maailmassa — ja syvimmillään ne ulottuvat 60 metriä merenpinnan alapuolelle. Louhoksia on käytävistä 95 prosenttia, eikä koko verkostoa ole koskaan kartoitettu. Toisen maailmansodan aikana käytävissä piileskeli partisaaneja, jotka nousivat maan alta ja katosivat takaisin.
+AIEMPI KYSYMYS: Mitä Odessan kaupungin alla piilee?
+AIEMPI VASTAUS (Livia):
+No niin. Odessan alla on laaja käytäväverkosto, jonka synnytti kaupungin talojen rakennusmateriaalin louhinta. Talot muurattiin [[simpukkakalkkikivestä]], jota otettiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä. Näitä käytäviä kutsutaan [[katakombeiksi]], vaikka ne eivät ole hautoja vaan louhoskäytäviä. Osia käytetään nykyään opastettuihin kierroksiin. Sinne ei minun siipeni sovi.
+KYSYMYS: Kerro lisää: simpukkakalkkikivestä
+
+### 1323
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+AIEMPI KYSYMYS: Mitä Odessan kaupungin alla piilee?
+AIEMPI VASTAUS (Livia):
+No niin. Odessan alla on laaja käytäväverkosto, jonka synnytti kaupungin talojen rakennusmateriaalin louhinta. Talot muurattiin [[simpukkakalkkikivestä]], jota otettiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä. Näitä käytäviä kutsutaan [[katakombeiksi]], vaikka ne eivät ole hautoja vaan louhoskäytäviä. Osia käytetään nykyään opastettuihin kierroksiin. Sinne ei minun siipeni sovi.
+KYSYMYS: Kerro lisää: katakombeiksi
+
+### 1324
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+AIEMPI KYSYMYS: Kenen mukaan Odessan pääkatu on nimetty?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pääkatu on [[Deribasivska]], ja se on nimetty amiraali [[José de Ribasin]] mukaan. De Ribas syntyi Napolissa ja palveli Venäjän keisarikunnan laivastossa; hän oli mukana Odessan perustamisen aikaan vanhan linnoituksen valtaamisessa. Satamakaupungin perustamiskäskyn antoi vuonna 1794 keisarinna [[Katariina]]. Katu on nykyään kävelykatu, jonka varrella on kahviloita ja puistoja. Pitkä nimi lyhyelle kadulle.
+KYSYMYS: Kerro lisää: Deribasivska
+
+### 1325
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa: Perustaja tuli Napolista] Odessan perusti sotilas nimeltä José de Ribas. Hän syntyi Napolissa espanjalaisen konsulin poikana, siirtyi Venäjän palvelukseen ja valtasi vuonna 1789 Hadžibein turkkilaisen linnakkeen — koko taistelu kesti puoli tuntia. Rauhan tultua de Ribas ehdotti keisarinna Katariina II:lle, että samalle rantatörmälle rakennettaisiin satama. Käsky annettiin 27. toukokuuta 1794, ja siitä lasketaan kaupungin ikä. Vilkkain kävelykatu on yhä Derybasivska eli de Ribasin katu.
+AIEMPI KYSYMYS: Kenen mukaan Odessan pääkatu on nimetty?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pääkatu on [[Deribasivska]], ja se on nimetty amiraali [[José de Ribasin]] mukaan. De Ribas syntyi Napolissa ja palveli Venäjän keisarikunnan laivastossa; hän oli mukana Odessan perustamisen aikaan vanhan linnoituksen valtaamisessa. Satamakaupungin perustamiskäskyn antoi vuonna 1794 keisarinna [[Katariina]]. Katu on nykyään kävelykatu, jonka varrella on kahviloita ja puistoja. Pitkä nimi lyhyelle kadulle.
+KYSYMYS: Kerro lisää: José de Ribasin
+
+### 1326
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa: Perustaja tuli Napolista] Odessan perusti sotilas nimeltä José de Ribas. Hän syntyi Napolissa espanjalaisen konsulin poikana, siirtyi Venäjän palvelukseen ja valtasi vuonna 1789 Hadžibein turkkilaisen linnakkeen — koko taistelu kesti puoli tuntia. Rauhan tultua de Ribas ehdotti keisarinna Katariina II:lle, että samalle rantatörmälle rakennettaisiin satama. Käsky annettiin 27. toukokuuta 1794, ja siitä lasketaan kaupungin ikä. Vilkkain kävelykatu on yhä Derybasivska eli de Ribasin katu.
+AIEMPI KYSYMYS: Kenen mukaan Odessan pääkatu on nimetty?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pääkatu on [[Deribasivska]], ja se on nimetty amiraali [[José de Ribasin]] mukaan. De Ribas syntyi Napolissa ja palveli Venäjän keisarikunnan laivastossa; hän oli mukana Odessan perustamisen aikaan vanhan linnoituksen valtaamisessa. Satamakaupungin perustamiskäskyn antoi vuonna 1794 keisarinna [[Katariina]]. Katu on nykyään kävelykatu, jonka varrella on kahviloita ja puistoja. Pitkä nimi lyhyelle kadulle.
+KYSYMYS: Kerro lisää: Katariina
+
+### 1327
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Arki ja tavat: Aprillipäivänä kaupunki pukeutuu naamiaisiin] Odessalaiset ovat ylpeitä huumoristaan, ja aprillipäivänä siitä tulee koko kaupungin juhla. Humorina keksittiin vuonna 1972, kun suosittu televisiosta tuttu pilailukilpailu lakkautettiin ja odessalainen joukkue päätti järjestää oman naurun päivänsä. Ensimmäinen juhla vietettiin 1973. Väkeä tuli lopulta niin paljon, että viranomaiset kielsivät koko jutun, mutta 1990-luvulla se palasi. Kulkueessa marssivat vuodesta toiseen myös Darth Vader ja avaruussotilaat.
+AIEMPI KYSYMYS: Mitä Odessassa tehdään aprillipäivänä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: täällä pidetään [[Humorina]]-festivaali. Aprillipäivänä 1. huhtikuuta kadut täyttyvät naamiaisasuisista ihmisistä, kulkueesta ja esiintyjistä; perinne alkoi vuonna 1973. Odessan huumori syntyi kaupungin monikulttuurisesta väestöstä, ja sen ympärillä on oma puhetapansa. Kaupungista on lähtöisin tunnettuja huumoristeja, esimerkiksi satiirikko [[Mihail Žvanetski]]. Aika hyvä päivä pelleillä.
+KYSYMYS: Kerro lisää: Humorina
+
+### 1328
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+AIEMPI KYSYMYS: Mitä Odessassa tehdään aprillipäivänä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: täällä pidetään [[Humorina]]-festivaali. Aprillipäivänä 1. huhtikuuta kadut täyttyvät naamiaisasuisista ihmisistä, kulkueesta ja esiintyjistä; perinne alkoi vuonna 1973. Odessan huumori syntyi kaupungin monikulttuurisesta väestöstä, ja sen ympärillä on oma puhetapansa. Kaupungista on lähtöisin tunnettuja huumoristeja, esimerkiksi satiirikko [[Mihail Žvanetski]]. Aika hyvä päivä pelleillä.
+KYSYMYS: Kerro lisää: Mihail Žvanetski
+
+### 1329
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Odessan oopperatalo] 1810–1887 Odessan ensimmäinen oopperatalo avattiin jo vuonna 1810, mutta se tuhoutui tulipalossa vuonna 1873. Sen tilalle rakennettiin uusi, vieläkin komeampi talo, jonka suunnittelivat itävaltalaiset arkkitehdit Ferdinand Fellner ja Hermann Helmer. Uusi oopperatalo avasi ovensa lokakuussa 1887, ja sen julkisivua koristavat kuuluisien venäläisten kirjailijoiden ja säveltäjien, kuten Gogolin ja Pushkinin, kuvapatsaat. Talon sisällä on hevosenkengän muotoinen katsomosali, jonka akustiikka on niin hyvä, että näyttelijän kuiskauskin kuuluu selvästi viimeiselle riville asti. Sali oli aikanaan myös tekniikan ihme: se oli ensimmäinen rakennus koko Odessassa, jossa oli sähkövalot. Kesäisin salia vi…
+AIEMPI KYSYMYS: Millainen on Odessan oopperatalo?
+AIEMPI VASTAUS (Livia):
+Mmm— Odessan oopperatalo valmistui vuonna 1887, ja sen suunnitteli wieniläinen arkkitehtitoimisto [[Fellner ja Helmer]], joka suunnitteli teattereita ympäri Euroopan. Edeltäjä, kaupungin ensimmäinen teatteri, tuhoutui tulipalossa muistaakseni vuonna 1873, joten uusi rakennus syntyi sen jälkeen. Tyyli on barokin ja rokokoon sävyttämä, ja sali on koristeellinen. Teatteri on tärkeä osa [[Wienin]] ja Odessan yhteistä kulttuuriperintöä. Aika näyttävä paikka kyyhkyn silmin.
+KYSYMYS: Kerro lisää: Fellner ja Helmer
+
+### 1330
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Odessa
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Pelaaja katsoo kartalla: Odessa (kaupunki)
+Tietoruudun teksti: Odessa on Ukrainan suurin satamakaupunki Mustanmeren rannalla, ja siellä asuu noin miljoona ihmistä. Kaupunki on nuori ja suunniteltu: satamalle annettiin käsky vuonna 1794 vanhan Hadžibein linnoituksen paikalle, ja ruutukaavan piirsi ranskalainen insinööri F. de Volan. Rannikko päättyy täällä jyrkkään törmään, jonka alla on jäätymätön lahti ja jonka päällä tasainen aro.
+
+Vapaasatamana Odessa eli lähes neljäkymmentä vuotta vuodesta 1819: tullittomuus veti kauppaa ja väkeä, ja sadassa vuodessa kaupungista kasvoi keisarikunnan neljänneksi suurin Moskovan, Pietarin ja Varsovan jälkeen. Väkeä muutti kymmenistä maista, ja sekoituksesta syntyi oma puhetapa ja oma huumori. Talot muurattiin simpukkakalkkikivestä, jota louhittiin suoraan kaupungin alta, ja käytäviä kertyi arviolta 2 500 kilometriä.
+
+Merestä keskustaan nousevat Potjomkinin portaat rakennettiin vuosina 1837–1841; niiden 192 askelm…
+Isoisän matkakirjamerkintä: Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Millainen on Odessan oopperatalo?
+AIEMPI VASTAUS (Livia):
+Mmm— Odessan oopperatalo valmistui vuonna 1887, ja sen suunnitteli wieniläinen arkkitehtitoimisto [[Fellner ja Helmer]], joka suunnitteli teattereita ympäri Euroopan. Edeltäjä, kaupungin ensimmäinen teatteri, tuhoutui tulipalossa muistaakseni vuonna 1873, joten uusi rakennus syntyi sen jälkeen. Tyyli on barokin ja rokokoon sävyttämä, ja sali on koristeellinen. Teatteri on tärkeä osa [[Wienin]] ja Odessan yhteistä kulttuuriperintöä. Aika näyttävä paikka kyyhkyn silmin.
+KYSYMYS: Kerro lisää: Wienin

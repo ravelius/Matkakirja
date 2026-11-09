@@ -1,0 +1,1556 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+AIEMPI KYSYMYS: Mitä Skotlannissa syödään Burnsin yönä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on makuasia. Burnsin yötä vietetään 25. tammikuuta skotlantilaisen runoilijan [[Robert Burns]]in syntymän muistoksi. Juhlan pääruoka on [[haggis]], perinteinen annos, joka valmistetaan lampaan sisäelimistä, kaurasta ja mausteista, ja sitä tarjoillaan kasvisten, perunan ja lanttumuhennoksen kanssa. Illallisella luetaan runoja, ja ruoan kanssa nautitaan usein [[whisky]]ä. Haggis kuulostaa oudolta, mutta siitä pidetään Skotlannissa laajalti. Pullaa ei tähän tilaisuuteen kuulu, mikä on minusta suuri puute.
+KYSYMYS: Kerro lisää: whisky
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Kiinalaiskaupunki] 1890-luku Montrealin kiinalaiskaupunki on De la Gauchetière -kadun ympärillä, ja ennen kiinalaisia siellä asuivat juutalaiset: vuosina 1890–1920 alueelle asettui tuhansia jiddišinkielisiä siirtolaisia osana Saint Laurent -bulevardin ympärille syntynyttä juutalaiskorttelia. Ensimmäiset kiinalaiset siirtolaiset saapuivat Montrealiin maaliskuussa 1877 — neljä vuotta isoisän matkan jälkeen. Kiinalaiskaupunki muodostui 1890-luvulla, ja se rakentui sukuryhmien varaan: Chan, Hom eli Tam, Lee ja Wong. Moni tulija oli kotoisin Taishanista ja seurasi Leungin sukua; he olivat töissä rautateillä, ja alue oli sijainniltaan sopiva. Ensimmäisiä asukkaita oli Jos Song Long, joka avasi pesulan Craig-kadulle…
+AIEMPI KYSYMYS: Miksi Edinburghissa on vanhakaupunki ja uusikaupunki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on rakennushistoriaa. Vanhakaupunki kasvoi kapealle harjanteelle linnan alapuolelle, ja kun tilaa ei ollut sivusuunnassa, talot rakennettiin korkeiksi ja kadut jäivät ahtaiksi. Pääkatuna on [[Royal Mile]], jonka varrella on kapeita sivukujia. 1760-luvulla alettiin rakentaa notkon toiselle puolelle suunniteltua uuttakaupunkia, jonka kadut ovat suoria ja aukiot avaria, ja sen suunnitelman laati [[James Craig]]. Kaksi hyvin erilaista kaupunginosaa on yhdessä [[Unescon]] maailmanperintökohde. Hyvä esimerkki siitä, että kaupunki voi kasvaa kahteen suuntaan.
+KYSYMYS: Kerro lisää: James Craig
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+AIEMPI KYSYMYS: Miksi Edinburghissa on vanhakaupunki ja uusikaupunki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on rakennushistoriaa. Vanhakaupunki kasvoi kapealle harjanteelle linnan alapuolelle, ja kun tilaa ei ollut sivusuunnassa, talot rakennettiin korkeiksi ja kadut jäivät ahtaiksi. Pääkatuna on [[Royal Mile]], jonka varrella on kapeita sivukujia. 1760-luvulla alettiin rakentaa notkon toiselle puolelle suunniteltua uuttakaupunkia, jonka kadut ovat suoria ja aukiot avaria, ja sen suunnitelman laati [[James Craig]]. Kaksi hyvin erilaista kaupunginosaa on yhdessä [[Unescon]] maailmanperintökohde. Hyvä esimerkki siitä, että kaupunki voi kasvaa kahteen suuntaan.
+KYSYMYS: Kerro lisää: Unescon
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+AIEMPI KYSYMYS: Ketkä Skotlannin valistuksen ajattelijat asuivat Edinburghissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Edinburghin kaduilla kävelivät 1700-luvulla filosofi [[David Hume]], taloustieteilijä [[Adam Smith]] ja geologi [[James Hutton]]. Hume kirjoitti tiedosta ja ihmisluonnosta, Smith tunnetaan teoksestaan Kansojen varallisuus, ja Hutton päätteli kallioita tutkimalla, että maapallo on paljon vanhempi kuin tuolloin yleisesti uskottiin. Aikaa kutsutaan Skotlannin valistukseksi, ja yliopisto, joka perustettiin 1582, oli keskeinen paikka. Samoilla kaduilla ajateltiin siis maailmaa uusiksi. Kyyhky ei ole kirjoittanut kirjaa, mutta on kantanut monta.
+KYSYMYS: Kerro lisää: David Hume
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Charlotte Square] 1791–1820 Charlotte Square on yksi Edinburghin uuden kaupunginosan, New Townin, komeimmista aukioista. Arkkitehti Robert Adam suunnitteli sen vuonna 1791. Aukiosta tuli koko New Townin rakennushankkeen viimeinen ja hitain osa — se ”valmistui” vasta vuonna 1820, ja sen luoteiskulma jopa vasta vuonna 1990. Talossa numero 6, nimeltään Bute House, asuu nykyään Skotlannin pääministeri. Aukion kulmassa syntyi puhelimen keksijä Alexander Graham Bell. Puiston keskellä ratsastaa pronssinen prinssi Albert — patsaan paljasti itse kuningatar Victoria vuonna 1876. Elokuisin aukiolla pystytettiin vuosikymmenten ajan Edinburghin kirjallisuusfestivaalin valkoisia telttoja.
+AIEMPI KYSYMYS: Ketkä Skotlannin valistuksen ajattelijat asuivat Edinburghissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Edinburghin kaduilla kävelivät 1700-luvulla filosofi [[David Hume]], taloustieteilijä [[Adam Smith]] ja geologi [[James Hutton]]. Hume kirjoitti tiedosta ja ihmisluonnosta, Smith tunnetaan teoksestaan Kansojen varallisuus, ja Hutton päätteli kallioita tutkimalla, että maapallo on paljon vanhempi kuin tuolloin yleisesti uskottiin. Aikaa kutsutaan Skotlannin valistukseksi, ja yliopisto, joka perustettiin 1582, oli keskeinen paikka. Samoilla kaduilla ajateltiin siis maailmaa uusiksi. Kyyhky ei ole kirjoittanut kirjaa, mutta on kantanut monta.
+KYSYMYS: Kerro lisää: Adam Smith
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+AIEMPI KYSYMYS: Ketkä Skotlannin valistuksen ajattelijat asuivat Edinburghissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Edinburghin kaduilla kävelivät 1700-luvulla filosofi [[David Hume]], taloustieteilijä [[Adam Smith]] ja geologi [[James Hutton]]. Hume kirjoitti tiedosta ja ihmisluonnosta, Smith tunnetaan teoksestaan Kansojen varallisuus, ja Hutton päätteli kallioita tutkimalla, että maapallo on paljon vanhempi kuin tuolloin yleisesti uskottiin. Aikaa kutsutaan Skotlannin valistukseksi, ja yliopisto, joka perustettiin 1582, oli keskeinen paikka. Samoilla kaduilla ajateltiin siis maailmaa uusiksi. Kyyhky ei ole kirjoittanut kirjaa, mutta on kantanut monta.
+KYSYMYS: Kerro lisää: James Hutton
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Mikä on Kreikan korkein vuori ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on tuttu jo ylhäältä päin. Kreikan korkein vuori on [[Olympos]], jonka huippu kohoaa noin 2 900 metriin. Antiikin kreikkalaiset uskoivat, että jumalat asuivat sen laella ja että [[Zeus]] hallitsi heitä sieltä käsin. Nykyään vuori on kansallispuisto, ja sinne vaelletaan kesäisin muun muassa [[Litochoron]] kaupungista. Pilvissä se tosin piileskelee usein.
+KYSYMYS: Kerro lisää: Olympos
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Mikä on Kreikan korkein vuori ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on tuttu jo ylhäältä päin. Kreikan korkein vuori on [[Olympos]], jonka huippu kohoaa noin 2 900 metriin. Antiikin kreikkalaiset uskoivat, että jumalat asuivat sen laella ja että [[Zeus]] hallitsi heitä sieltä käsin. Nykyään vuori on kansallispuisto, ja sinne vaelletaan kesäisin muun muassa [[Litochoron]] kaupungista. Pilvissä se tosin piileskelee usein.
+KYSYMYS: Kerro lisää: Zeus
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Jumalten vuorelle noustiin vasta 1913] 1913 — Antiikin kreikkalaiset sijoittivat kahdentoista jumalan kodin Olympokselle, Kreikan korkeimmalle vuorelle. Sen ylin huippu Mytikas on 2 917 metriä korkea, ja nimi tarkoittaa nenää. Vuori kohoaa lähes kolmeen kilometriin vain 18 kilometrin päässä Litochoron kaupungista. Huipulla ei silti käynyt kukaan ennen 2. elokuuta 1913. Silloin sinne kiipesivät sveitsiläiset Frédéric Boissonnas ja Daniel Baud-Bovy sekä litochorolainen vuohenmetsästäjä Christos Kakkalos, joka tunsi vuoren parhaiten ja nousi kolmikosta ensimmäisenä huipulle. Olympoksesta tuli 1938 Kreikan ensimmäinen kansallispuisto.
+AIEMPI KYSYMYS: Mikä on Kreikan korkein vuori ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on tuttu jo ylhäältä päin. Kreikan korkein vuori on [[Olympos]], jonka huippu kohoaa noin 2 900 metriin. Antiikin kreikkalaiset uskoivat, että jumalat asuivat sen laella ja että [[Zeus]] hallitsi heitä sieltä käsin. Nykyään vuori on kansallispuisto, ja sinne vaelletaan kesäisin muun muassa [[Litochoron]] kaupungista. Pilvissä se tosin piileskelee usein.
+KYSYMYS: Kerro lisää: Litochoron
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Mitä oikeaan kreikkalaiseen salaattiin kuuluu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Kreikkalainen salaatti eli [[horiátiki]] koostuu kypsistä tomaateista, kurkusta, punasipulista ja oliiveista, ja päällä on iso lohko [[fetaa]] sekä oliiviöljyä ja oreganoa. Lehtisalaattia siinä ei perinteisesti ole. Feta tehdään lampaanmaidosta tai seoksesta, jossa on enintään 30 prosenttia vuohenmaitoa, ja nimi on suojattu EU:ssa. Ei se salaatti kyl ilman fetaa ole salaatti.
+KYSYMYS: Kerro lisää: horiátiki
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Juusto, josta käytiin oikeutta] 2002 — Feta tehdään lampaanmaidosta tai seoksesta, jossa on lampaanmaidon lisäksi enintään 30 prosenttia vuohenmaitoa. Juusto kypsyy isoina lohkoina suolavedessä, ja siitä tulee murea ja rakeinen. Kreikka pyysi EU:lta nimisuojaa fetalle vuonna 1994. Tanska, Ranska ja Saksa, joissa valmistettiin omaa fetaa, veivät asian EU:n tuomioistuimeen ja saivat ensimmäisen päätöksen kumotuksi. Vuonna 2002 nimi suojattiin lopullisesti: fetaksi saa kutsua vain Manner-Kreikassa ja Lesboksella perinteiseen tapaan tehtyä juustoa.
+AIEMPI KYSYMYS: Mitä oikeaan kreikkalaiseen salaattiin kuuluu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Kreikkalainen salaatti eli [[horiátiki]] koostuu kypsistä tomaateista, kurkusta, punasipulista ja oliiveista, ja päällä on iso lohko [[fetaa]] sekä oliiviöljyä ja oreganoa. Lehtisalaattia siinä ei perinteisesti ole. Feta tehdään lampaanmaidosta tai seoksesta, jossa on enintään 30 prosenttia vuohenmaitoa, ja nimi on suojattu EU:ssa. Ei se salaatti kyl ilman fetaa ole salaatti.
+KYSYMYS: Kerro lisää: fetaa
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Miten Kreikan itsenäisyyssota ottomaaneja vastaan alkoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se on kuitenkin raskaampi tarina. Kreikkalaisten kansannousu ottomaanien valtaa vastaan alkoi vuonna 1821, kun kapina syttyi sekä [[Peloponnesoksella]] että Tonavan ruhtinaskunnissa. Taistelut jatkuivat vuosia, ja ratkaisevaa oli suurvaltojen väliintulo: Britannia, Ranska ja Venäjä tukivat kreikkalaisia, ja vuonna 1827 ottomaanien ja egyptiläinen laivasto tuhoutui [[Navarinon]] meritaistelussa. Itsenäinen Kreikka tunnustettiin vaiheittain, ja sen ensimmäiseksi kuninkaaksi tuli baijerilainen [[Otto]]. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Peloponnesoksella
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Miten Kreikan itsenäisyyssota ottomaaneja vastaan alkoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se on kuitenkin raskaampi tarina. Kreikkalaisten kansannousu ottomaanien valtaa vastaan alkoi vuonna 1821, kun kapina syttyi sekä [[Peloponnesoksella]] että Tonavan ruhtinaskunnissa. Taistelut jatkuivat vuosia, ja ratkaisevaa oli suurvaltojen väliintulo: Britannia, Ranska ja Venäjä tukivat kreikkalaisia, ja vuonna 1827 ottomaanien ja egyptiläinen laivasto tuhoutui [[Navarinon]] meritaistelussa. Itsenäinen Kreikka tunnustettiin vaiheittain, ja sen ensimmäiseksi kuninkaaksi tuli baijerilainen [[Otto]]. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Navarinon
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Skopje — kaupunkilehti / Skopje: Üsküb ja rautatie 1873] Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, ja samana vuonna valmistui Skopje–Salonika-rautatie. Asema rakennettiin Vardarin eteläpuolelle, ja rata toi lähteiden mukaan lisää matkustajia. 1800-luvun alkupuolella Bitola ja Štip olivat Skopjea suurempia, mutta vuosisadan puolivälin jälkeen kaupunki alkoi toipua. 1800-luvun lopulla Skopjesta tuli Kosovon vilayetin pääkaupunki. Vuosisadan vaihteessa Skopjen kaupungissa oli noin 30 000 asukasta. 1900-luvun alussa talouden perustana olivat värjäys, kankaankudonta, nahkurintyö, rautatyö sekä viini- ja jauhotuotanto.
+AIEMPI KYSYMYS: Miten Kreikan itsenäisyyssota ottomaaneja vastaan alkoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se on kuitenkin raskaampi tarina. Kreikkalaisten kansannousu ottomaanien valtaa vastaan alkoi vuonna 1821, kun kapina syttyi sekä [[Peloponnesoksella]] että Tonavan ruhtinaskunnissa. Taistelut jatkuivat vuosia, ja ratkaisevaa oli suurvaltojen väliintulo: Britannia, Ranska ja Venäjä tukivat kreikkalaisia, ja vuonna 1827 ottomaanien ja egyptiläinen laivasto tuhoutui [[Navarinon]] meritaistelussa. Itsenäinen Kreikka tunnustettiin vaiheittain, ja sen ensimmäiseksi kuninkaaksi tuli baijerilainen [[Otto]]. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Otto
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Mitä ovat Meteoran luostarit ja miten niihin pääsi?
+AIEMPI VASTAUS (Livia):
+Ai se. Siellä kyyhky tuntee olonsa kotoisaksi. [[Meteora]] on Thessalian laidalla kohoava joukko kalliopylväitä, joiden laelle munkit rakensivat luostareita keskiajalta alkaen, noin 1300-luvulta. Ylös päästiin pitkään vain tikkaita, köysiä ja verkkoja pitkin, ja tarvikkeet nostettiin laelle korilla, ennen kuin kallioon hakattiin portaat. Toiminnassa on nykyään enää kourallinen luostareita, ja [[Thessalian]] lakeudelta kalliot näkyvät kauas. Korkealla on hyvä rukoilla ja vielä parempi lentää.
+KYSYMYS: Kerro lisää: Meteora
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+AIEMPI KYSYMYS: Mitä ovat Meteoran luostarit ja miten niihin pääsi?
+AIEMPI VASTAUS (Livia):
+Ai se. Siellä kyyhky tuntee olonsa kotoisaksi. [[Meteora]] on Thessalian laidalla kohoava joukko kalliopylväitä, joiden laelle munkit rakensivat luostareita keskiajalta alkaen, noin 1300-luvulta. Ylös päästiin pitkään vain tikkaita, köysiä ja verkkoja pitkin, ja tarvikkeet nostettiin laelle korilla, ennen kuin kallioon hakattiin portaat. Toiminnassa on nykyään enää kourallinen luostareita, ja [[Thessalian]] lakeudelta kalliot näkyvät kauas. Korkealla on hyvä rukoilla ja vielä parempi lentää.
+KYSYMYS: Kerro lisää: Thessalian
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Musiikki: Rebetiko — sataman blues] 1920-luku — Pireuksen satamakortteleissa syntyi 1920- ja 1930-luvulla rebetiko: pakolaisten ja köyhien laulu. Soittimena oli bouzouki ja sen pikkuveli baglamas, joka on niin pieni, että sen sai tehdyksi vankilassa ja piilotetuksi poliisilta. Diktaattori Metaxasin sensuuri kävi laulujen sanojen kimppuun vuodesta 1937, mutta musiikki jäi henkiin. Unesco otti rebetikon ihmiskunnan kulttuuriperinnön luetteloon vuonna 2017.
+AIEMPI KYSYMYS: Miksi kreikkalaiset ovat merenkulun suurvalta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyl minä sen tiedän. Kreikkalaiset omistavat maailman suurimman kauppalaivaston, ja syyt ovat maantieteessä ja historiassa. Maa on vuoristoinen, viljelymaata on vähän, ja rannikko sekä tuhannet saaret pakottivat jo antiikissa katsomaan merelle; [[Pireuksen]] satama on ollut Ateenan portti vuosisatoja. Laivanvarustajasuvut ovat siirtäneet alaa sukupolvelta toiselle, ja suuri osa laivoista kulkee usein muun maan lipun alla. Siinä [[kauppalaivasto]] kasvoi, ja kyyhky vain lensi.
+KYSYMYS: Kerro lisää: Pireuksen
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreikka (maa)
+Tietoruudun teksti: Kreikka on vuoristoinen maa Balkanin niemimaan eteläkärjessä. Sillä on yli 6 000 saarta, joista vain parisataa on asuttuja, ja rannikkoa on enemmän kuin useimmilla paljon suuremmilla mailla.
+
+Kartalla maa näyttää repeytyneeltä. Pohjoisesta etelään kulkee Píndos-vuoristo, joka jakaa mantereen kahtia ja jatkuu Peloponnesoksen halki; sen jälkeen se sukeltaa mereen ja nousee taas saarina, kunnes Kreeta sulkee Egeanmeren etelästä. Tasaista maata on vähän: Thessalian lakeus vuoriston itäpuolella ja kapeat rannikkokaistaleet.
+
+Kreikka oli ottomaanien vallan alla lähes neljäsataa vuotta ja itsenäistyi vaiheittain vuodesta 1821 — nuori valtio, jolla on hyvin vanha historia. Se elää merestä: kreikkalaiset omistavat maailman suurimman kauppalaivaston. Vuorilla on omat aarteensa: Thessalian laidalla kohoaa joukko kalliopylväitä, joiden laelle rakennettiin luostareita, joihin ei päässyt kuin nostoko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [castries — kaupunkilehti / Castries: Höyrylaivan ostoslista] Höyrylaivan oli saatava matkan varrella lisää hiiltä, ja Castriesin sataman historiaan kuuluu juuri tämä kauppa. Kaupunkiin rakennettiin läntinen laituri hiililiikennettä varten, ja satamassa alettiin vastaanottaa höyrylaivoja. Nyt Castriesiin tullaan myös risteilyaluksilla, jotka käyttävät Pointe Seraphinen satama-aluetta lahden pohjoispuolella. Varhaiseen höyrylaivaliikenteeseen kuului RMS Solway -alus.
+AIEMPI KYSYMYS: Miksi kreikkalaiset ovat merenkulun suurvalta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyl minä sen tiedän. Kreikkalaiset omistavat maailman suurimman kauppalaivaston, ja syyt ovat maantieteessä ja historiassa. Maa on vuoristoinen, viljelymaata on vähän, ja rannikko sekä tuhannet saaret pakottivat jo antiikissa katsomaan merelle; [[Pireuksen]] satama on ollut Ateenan portti vuosisatoja. Laivanvarustajasuvut ovat siirtäneet alaa sukupolvelta toiselle, ja suuri osa laivoista kulkee usein muun maan lipun alla. Siinä [[kauppalaivasto]] kasvoi, ja kyyhky vain lensi.
+KYSYMYS: Kerro lisää: kauppalaivasto
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Kallimarmaro] 144 jaa. – 1896 Kallimarmaro tarkoittaa ”kauniisti marmoroitua” — se on maailman ainoa stadion, joka on kokonaan valkoista marmoria. Rikas roomalainen Herodes Atticus rakennutti sen vanhan juoksuradan paikalle, ja se valmistui noin vuonna 144 jaa. mahtuen istumaan 50 000 katsojaa. Vuosisatojen ajan unohduksissa maannut stadion kaivettiin esiin ja kunnostettiin, kun Ateenassa järjestettiin ensimmäiset nykyaikaiset olympialaiset vuonna 1896. Avajaisia seurasi paikan päällä noin 60 000 katsojaa. Kallimarmaro näkyy vuodesta 2004 lähtien jokaisessa olympiamitalissa, ja katsomon penkkien joukossa on kaiverrettuina pöllöjä, Athenan pyhiä lintuja.
+AIEMPI KYSYMYS: Mikä Parthenon oli alun perin ja mitä sille on tapahtunut?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on isoin kaikista. Parthenon rakennettiin 400-luvulla eaa. jumalatar [[Athenan]] temppeliksi [[Akropoliin]] laelle, ja se valmistui vuonna 432 eaa. Myöhemmin rakennus toimi kirkkona ja ottomaanien aikana moskeijana. Venetsiläisten piirityksessä vuonna 1687 siellä säilytetty ruutivarasto räjähti, ja katto sekä suuri osa seinistä tuhoutui. Rauniot ovat silti yksi Euroopan tunnetuimmista kohteista. Siivin katsottuna se on vielä komeampi kuin kuvissa.
+KYSYMYS: Kerro lisää: Athenan
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Puolet Parthenonin veistoksista lähti laivalla] Thomas Bruce, seitsemäs Elginin jaarli, oli Britannian suurlähettiläänä Konstantinopolissa vuodesta 1799. Hänen miehensä irrottivat vuosina 1801–1812 noin puolet Parthenonin säilyneistä veistoksista sekä paloja Propylaiasta ja Erekhtheionista. Lupa perustui osmanihallinnon kirjeeseen, jonka alkuperäistä ei ole löytynyt: jäljellä on vain italiankielinen käännös, ja juuri siitä kiistellään yhä. Yksi kuljetuslaivoista upposi Kytheran edustalla 1802, ja laatikot nostettiin merestä kahden vuoden työllä. Elginin varat loppuivat, ja parlamentti osti kokoelman 1816 British Museumille 35 000 punnalla. Akropoliin museo avattiin 2009, ja siinä on sali valmiina veistosten paluuta varten.
+- [Ateena — kohdekartta / Kohdekartta: Niken temppeli] Kiipeä Propylaian ohi Akropoliin lounaiskulmaan, niin löydät pienimmän mutta ehkä ovelimman temppelin: Athena Niken pyhäkön. Sen sisällä seisoi puinen jumalatar-patsas ilman siipiä — ateenalaiset kutsuivat sitä siivettömäksi Voitoksi, Nike Apterokseksi — vaikka temppelin kaiteen kuvissa Voitot lentävät siivet levällään. Myöhemmät ateenalaiset selittivät asian omalla tavallaan: Voitto ei koskaan saisi lentää pois heidän kaupungistaan, joten patsas tehtiin siivettömäksi. Isoisäsi ei taida mainita tätä matkakirjassaan — hän kirjoitti enemmän toreista kuin temppeleistä — mutta veikkaan, että hänkin pysähtyi tähän kulmaan hetkeksi.
+AIEMPI KYSYMYS: Mikä Parthenon oli alun perin ja mitä sille on tapahtunut?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on isoin kaikista. Parthenon rakennettiin 400-luvulla eaa. jumalatar [[Athenan]] temppeliksi [[Akropoliin]] laelle, ja se valmistui vuonna 432 eaa. Myöhemmin rakennus toimi kirkkona ja ottomaanien aikana moskeijana. Venetsiläisten piirityksessä vuonna 1687 siellä säilytetty ruutivarasto räjähti, ja katto sekä suuri osa seinistä tuhoutui. Rauniot ovat silti yksi Euroopan tunnetuimmista kohteista. Siivin katsottuna se on vielä komeampi kuin kuvissa.
+KYSYMYS: Kerro lisää: Akropoliin
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+AIEMPI KYSYMYS: Miten demokratia toimi antiikin Ateenassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä on kirjoitettu enemmän kuin yhdestäkään toisesta kaupungista. Ateenan demokratia kehittyi 500-luvulla eaa., ja sen uudistajana pidetään [[Kleisthenesta]]. Päätökset teki [[kansankokous]], joka kokoontui usein Pnyx-kukkulalla, ja moniin virkoihin valittiin kansalaisia arvalla. Äänioikeus oli kuitenkin vain aikuisilla miespuolisilla kansalaisilla, eivät naisilla, orjilla tai ulkomaalaisilla. Pidemmälle kuin toisella vuosisadalla tuo järjestelmä ei sellaisenaan kestänyt. Lopulta se jäi muistiin, vaikka kokoukset olivat varmasti pitkiä.
+KYSYMYS: Kerro lisää: Kleisthenesta
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Miten demokratia toimi antiikin Ateenassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä on kirjoitettu enemmän kuin yhdestäkään toisesta kaupungista. Ateenan demokratia kehittyi 500-luvulla eaa., ja sen uudistajana pidetään [[Kleisthenesta]]. Päätökset teki [[kansankokous]], joka kokoontui usein Pnyx-kukkulalla, ja moniin virkoihin valittiin kansalaisia arvalla. Äänioikeus oli kuitenkin vain aikuisilla miespuolisilla kansalaisilla, eivät naisilla, orjilla tai ulkomaalaisilla. Pidemmälle kuin toisella vuosisadalla tuo järjestelmä ei sellaisenaan kestänyt. Lopulta se jäi muistiin, vaikka kokoukset olivat varmasti pitkiä.
+KYSYMYS: Kerro lisää: kansankokous
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historian hetki: Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä] 10.4.1896 — Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hop…
+- [Ateena — kohdekartta / Kohdekartta: Louis 1896] Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hopeamaljan. Kr…
+AIEMPI KYSYMYS: Kuka voitti ensimmäisen olympiamaratonin Ateenassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on mukava tarina. Nykyajan ensimmäisissä olympialaisissa Ateenassa vuonna 1896 maratonin voitti kreikkalainen [[Spyridon Louis]], joka oli ammatiltaan vesikantaja. Matka juostiin [[Marathonin]] kaupungista Ateenaan, ja maali oli marmorisella [[Panathinaikon stadionilla]]. Katsojat ottivat voittajan vastaan innoissaan, sillä kreikkalaisille kisojen ensimmäinen kotivoitto oli erityisen tärkeä. Vesikantajan ura osoittautui hyväksi harjoitukseksi.
+KYSYMYS: Kerro lisää: Spyridon Louis
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historian hetki: Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä] 10.4.1896 — Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hop…
+- [Ateena — kohdekartta / Kohdekartta: Louis 1896] Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hopeamaljan. Kr…
+AIEMPI KYSYMYS: Kuka voitti ensimmäisen olympiamaratonin Ateenassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on mukava tarina. Nykyajan ensimmäisissä olympialaisissa Ateenassa vuonna 1896 maratonin voitti kreikkalainen [[Spyridon Louis]], joka oli ammatiltaan vesikantaja. Matka juostiin [[Marathonin]] kaupungista Ateenaan, ja maali oli marmorisella [[Panathinaikon stadionilla]]. Katsojat ottivat voittajan vastaan innoissaan, sillä kreikkalaisille kisojen ensimmäinen kotivoitto oli erityisen tärkeä. Vesikantajan ura osoittautui hyväksi harjoitukseksi.
+KYSYMYS: Kerro lisää: Marathonin
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historian hetki: Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä] 10.4.1896 — Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hop…
+- [Ateena — kaupunkilehti / Historia: Maratonin kolmas tuli osan matkaa kärryillä] Ensimmäisten nykyajan olympialaisten maraton juostiin 10. huhtikuuta 1896 Marathonin kylästä Panathinaikon-stadionille, noin neljäkymmentä kilometriä. Voittajaksi tuli Spyridon Louis ja toiseksi Kharilaos Vasilakos; kolmantena maaliin saapui Spyridon Belokas, jolloin kreikkalaiset olivat vieneet koko palkintopallin. Neljänneksi tullut unkarilainen Gyula Kellner teki heti vastalauseen: Belokas oli kulkenut osan reitistä hevoskärryillä. Belokas myönsi asian, hänet suljettiin pois tuloksista ja kolmas sija siirtyi Kellnerille. Matkaan lähteneistä seitsemästätoista juoksijasta yhdeksän pääsi perille.
+AIEMPI KYSYMYS: Kuka voitti ensimmäisen olympiamaratonin Ateenassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on mukava tarina. Nykyajan ensimmäisissä olympialaisissa Ateenassa vuonna 1896 maratonin voitti kreikkalainen [[Spyridon Louis]], joka oli ammatiltaan vesikantaja. Matka juostiin [[Marathonin]] kaupungista Ateenaan, ja maali oli marmorisella [[Panathinaikon stadionilla]]. Katsojat ottivat voittajan vastaan innoissaan, sillä kreikkalaisille kisojen ensimmäinen kotivoitto oli erityisen tärkeä. Vesikantajan ura osoittautui hyväksi harjoitukseksi.
+KYSYMYS: Kerro lisää: Panathinaikon stadionilla
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Arki ja tavat: Souvlaki syödään seisaaltaan] Souvlaki on grillattua lihaa vartaassa, ja ateenalainen ostaa sen useimmiten luukulta käärittynä: pitaleivän sisään ladotaan liha, tomaatti, sipuli, tzatziki ja ranskalaiset, kääre kiedotaan paperiin ja ateria syödään kadulla kävellen. Jos istuu pöytään ja tilaa merídan, sama ruoka tulee lautasella osissa. Vartaan oma nimi on Ateenassa kalamáki, pikkuruoko.
+AIEMPI KYSYMYS: Mitä ateenalaiset syövät kadulla pikapurtavaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nälkäinen kyyhky on hyvä asiantuntija. Ateenan kaduilla syödään tavallisesti [[souvlakia]], eli grillattuja lihavartaita, joita tarjotaan pitaleivän kanssa, sekä [[gyrosta]], jossa viipaloitua lihaa kääritään pitaan tomaatin, sipulin ja jogurttikastikkeen kanssa. Aamulla moni ostaa kojulta [[koulourin]], eli seesamin peittämän leipärenkaan. Turkissa vastaava on simit. Koulouri on lähin asia pullaan, minkä kadulta saa.
+KYSYMYS: Kerro lisää: souvlakia
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+AIEMPI KYSYMYS: Mitä ateenalaiset syövät kadulla pikapurtavaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nälkäinen kyyhky on hyvä asiantuntija. Ateenan kaduilla syödään tavallisesti [[souvlakia]], eli grillattuja lihavartaita, joita tarjotaan pitaleivän kanssa, sekä [[gyrosta]], jossa viipaloitua lihaa kääritään pitaan tomaatin, sipulin ja jogurttikastikkeen kanssa. Aamulla moni ostaa kojulta [[koulourin]], eli seesamin peittämän leipärenkaan. Turkissa vastaava on simit. Koulouri on lähin asia pullaan, minkä kadulta saa.
+KYSYMYS: Kerro lisää: gyrosta
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+AIEMPI KYSYMYS: Mitä ateenalaiset syövät kadulla pikapurtavaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nälkäinen kyyhky on hyvä asiantuntija. Ateenan kaduilla syödään tavallisesti [[souvlakia]], eli grillattuja lihavartaita, joita tarjotaan pitaleivän kanssa, sekä [[gyrosta]], jossa viipaloitua lihaa kääritään pitaan tomaatin, sipulin ja jogurttikastikkeen kanssa. Aamulla moni ostaa kojulta [[koulourin]], eli seesamin peittämän leipärenkaan. Turkissa vastaava on simit. Koulouri on lähin asia pullaan, minkä kadulta saa.
+KYSYMYS: Kerro lisää: koulourin
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+AIEMPI KYSYMYS: Miksi Ateenan metroasemilla on museoesineitä?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on yllättävän hyvä. Kun Ateenan uusia metrolinjoja rakennettiin 1990-luvun lopulla, kaivauksissa löytyi tuhansia antiikin esineitä: kaivoja, pajoja, hautoja ja arkipäivän tavaroita. Kun kaupunki on asuttu yli kolmetuhatta vuotta, joka kaivinkone osuu johonkin vanhaan. Löydöt eivät päätyneet vain varastoon, vaan joillakin asemilla niitä esitellään vitriineissä ja lasin alla, kuten [[Syntagman]] asemalla. Niin [[metro]] on osittain myös museo.
+KYSYMYS: Kerro lisää: Syntagman
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ateena (kaupunki)
+Tietoruudun teksti: Ateena on Euroopan vanhimpia yhtäjaksoisesti asuttuja kaupunkeja: samalla paikalla on eletty yli kolmetuhatta vuotta. Kaupunki syntyi kallion ympärille — Akropolis kohoaa noin 90 metriä ympäröivän tasangon yli, ja sen laella seisoo Parthenon, joka valmistui vuonna 432 eaa. Meri jäi kauas: Pireuksen satama on kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa jokea.
+
+Antiikin Ateenassa kehitettiin demokratia, kirjoitettiin ensimmäiset näytelmät ja perustettiin filosofian koulut. Sitten kaupunki hiipui roomalaisten, bysanttilaisten ja ottomaanien vallan alla, ja Parthenonista tehtiin vuorollaan kirkko, moskeija ja ruutivarasto, joka räjähti vuonna 1687.
+
+Kun Ateenasta tuli Kreikan pääkaupunki vuonna 1834, se oli noin neljänsadan talon kylä Akropoliin juurella, ja valinta tehtiin historian eikä koon perusteella. Nykyään seudulla asuu noin kolme ja puoli miljoonaa ihmistä. Metrotun…
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kaupunkilehti / Arki: Kevytmetro ensin, metro seuraavana vuonna] Ankaran ensimmäinen raidelinja oli kevytmetro Ankaray, jonka rakensi Siemensin johtama ryhmä neljässä vuodessa 1992–96. Se avattiin 30. elokuuta 1996 ja kulkee linja-autoaseman AŞTİ:n ja Dikimevin väliä 8,53 kilometriä, josta 6,68 kilometriä on tunnelissa; asemia on yksitoista. Varsinainen metro alkoi 29. joulukuuta 1997, kun M1 avattiin Kızılayn ja Batıkentin välille. Vuonna 2025 linjoilla tehtiin 173,2 miljoonaa matkaa. Arkipäivänä ankaralainen viettää joukkoliikenteessä keskimäärin 71 minuuttia ja odottaa pysäkillä 16 minuuttia.
+- [Iso-Britannia — maalehti / Historia: Maailman ensimmäinen metro] Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna tehtiin 9,5 miljoonaa matkaa. Nyt asemia on 272 ja rataa 400 kilometriä.
+- [islamabad — kaupunkilehti / Islamabad: Metro kulkee renkailla] Islamabadin Metrobus ei ole maanalainen juna vaan nopea bussiyhteys. Osa linjoista kulkee omalla väylällään, ja yksi keskeinen yhteys jatkuu naapuriin Rawalpindiin. Lentoaseman suuntaan on oma yhteytensä. Punainen linja ulottuu Islamabadin Pak Secretariatista Rawalpindin Saddariin. Lentoasemayhteys lähtee Peshawar Morrin liittymästä. Järjestelmässä käytetään sähköisiä lippuja.
+- [Riad — kaupunkilehti / Arki ja metro] Riadin metrossa junat kulkevat ilman kuljettajaa. Verkko avattiin osissa joulukuun 2024 ja tammikuun 2025 välillä, ja ensimmäisen viikon aikana matkustajia oli 1,9 miljoonaa.
+AIEMPI KYSYMYS: Miksi Ateenan metroasemilla on museoesineitä?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on yllättävän hyvä. Kun Ateenan uusia metrolinjoja rakennettiin 1990-luvun lopulla, kaivauksissa löytyi tuhansia antiikin esineitä: kaivoja, pajoja, hautoja ja arkipäivän tavaroita. Kun kaupunki on asuttu yli kolmetuhatta vuotta, joka kaivinkone osuu johonkin vanhaan. Löydöt eivät päätyneet vain varastoon, vaan joillakin asemilla niitä esitellään vitriineissä ja lasin alla, kuten [[Syntagman]] asemalla. Niin [[metro]] on osittain myös museo.
+KYSYMYS: Kerro lisää: metro
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Historia: Valtaistuinhuone, jota kukaan ei enää istu] Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka keskellä seisoo yhä paikoillaan alabasterinen tuoli — Euroopan vanhin säilynyt valtaistuin, veistetty noin 1400-luvulla eaa. Evans nimesi huoneen valtaistuinhuoneeksi ja uskoi tuolissa istuneen legendaarisen kuningas Minoksen, vaikka nykytutkijat epäilevät huoneen olleen ennemmin kulttikäytössä kuin hallitsijan istuinsalina. Seiniä koristavat kopiot alkuperäisistä griffinfreskoista, ja Evans myös jälleenrakensi osia palatsista betonilla omien tulkintojensa mukaan — ratkaisu, jota myöhemmät arkeologit ovat arvostelleet liian vapaaksi.
+AIEMPI KYSYMYS: Mitä Knossoksen palatsista tiedetään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä riittäisi juttua pitkäksi aikaa. Knossoksen palatsi oli minolaisen kulttuurin keskus noin neljätuhatta vuotta sitten, ja siinä oli satoja huoneita, valokuiluja ja viemäreitä. Brittiläinen arkeologi [[Arthur Evans]] kaivoi paikkaa 1900-luvun alusta lähtien ja rekonstruoi osia siitä, mikä on aiheuttanut myös kiistaa. Hallinnon savitauluissa on [[lineaari A]] -kirjoitusta, jota ei ole vieläkään pystytty lukemaan. Palatsin sokkeloisuudesta on kerrottu myös myyttiä [[Minotauroksesta]]. Eksyisin siellä heti.
+KYSYMYS: Kerro lisää: Arthur Evans
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Mitä Knossoksen palatsista tiedetään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä riittäisi juttua pitkäksi aikaa. Knossoksen palatsi oli minolaisen kulttuurin keskus noin neljätuhatta vuotta sitten, ja siinä oli satoja huoneita, valokuiluja ja viemäreitä. Brittiläinen arkeologi [[Arthur Evans]] kaivoi paikkaa 1900-luvun alusta lähtien ja rekonstruoi osia siitä, mikä on aiheuttanut myös kiistaa. Hallinnon savitauluissa on [[lineaari A]] -kirjoitusta, jota ei ole vieläkään pystytty lukemaan. Palatsin sokkeloisuudesta on kerrottu myös myyttiä [[Minotauroksesta]]. Eksyisin siellä heti.
+KYSYMYS: Kerro lisää: lineaari A
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Mitä Knossoksen palatsista tiedetään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä riittäisi juttua pitkäksi aikaa. Knossoksen palatsi oli minolaisen kulttuurin keskus noin neljätuhatta vuotta sitten, ja siinä oli satoja huoneita, valokuiluja ja viemäreitä. Brittiläinen arkeologi [[Arthur Evans]] kaivoi paikkaa 1900-luvun alusta lähtien ja rekonstruoi osia siitä, mikä on aiheuttanut myös kiistaa. Hallinnon savitauluissa on [[lineaari A]] -kirjoitusta, jota ei ole vieläkään pystytty lukemaan. Palatsin sokkeloisuudesta on kerrottu myös myyttiä [[Minotauroksesta]]. Eksyisin siellä heti.
+KYSYMYS: Kerro lisää: Minotauroksesta
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Lippu, joka voitti äänin 14–11] 1985 — Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna 1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama kuvio. Seura oli vanhempi, ja se antoi luvan.
+- [Marokko — maalehti / Käsityö: Altaat, joissa väri on kasvia] Chouara on Fèsin vanhimman kaupunginosan suurin parkitsemo. Vuodat liotetaan ensin valkoisissa liuoksissa, joissa on lehmänvirtsaa, kyyhkynulosteita, poltettua kalkkia, suolaa ja vettä; se kestää kahdesta kolmeen vuorokautta ja tekee nahasta pehmeän ja väriä imevän. Sitten tulevat värialtaat: unikko antaa punaisen, indigo sinisen ja henna oranssin. Lopuksi nahat kuivataan auringossa. Koneita ei käytetä lainkaan. Kronikoitsija al-Jazna'in mukaan kaupungissa oli almohadien aikana 86 parkitsemoa, ja nahkaa vietiin Bagdadiin asti.
+AIEMPI KYSYMYS: Millainen on Samarian rotko Kreetalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tämä on vaelluskohde, jota moni ei unohda. Samarian rotko sijaitsee saaren lounaisosassa [[Valkoisissa vuorissa]], ja sen läpi kävellään useita tunteja kansallispuiston poluilla Agia Roumelin rannalle. Rotko on avoinna vain lämpimänä aikana, sillä talvella tulvat tekevät reitistä vaarallisen. Rotkon vuoristossa elää harvinainen villivuohi [[kri-kri]]. Lopulta pääsee mereen, ja jalat kiittävät.
+KYSYMYS: Kerro lisää: Valkoisissa vuorissa
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Millainen on Samarian rotko Kreetalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tämä on vaelluskohde, jota moni ei unohda. Samarian rotko sijaitsee saaren lounaisosassa [[Valkoisissa vuorissa]], ja sen läpi kävellään useita tunteja kansallispuiston poluilla Agia Roumelin rannalle. Rotko on avoinna vain lämpimänä aikana, sillä talvella tulvat tekevät reitistä vaarallisen. Rotkon vuoristossa elää harvinainen villivuohi [[kri-kri]]. Lopulta pääsee mereen, ja jalat kiittävät.
+KYSYMYS: Kerro lisää: kri-kri
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Miksi kreetalaista lyraa soitetaan polvella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pienet asiat sen ovat. Kreetalainen lyra on kolmikielinen jousisoitin, jota pidetään pystyasennossa soittajan polvella tai reiden päällä eikä olkapäällä. Soittaja painaa kieliä kynnellä sivusta, eikä sormenpäällä päältä. Lyran kanssa soitetaan usein [[laoutoa]], pitkäkaulaista luuttua, ja musiikki säestää tansseja kuten [[pentozalista]] sekä lauluja, joita kutsutaan [[mantinadoiksi]]. Mahtaako kyyhky pitää sellaista polvellaan.
+KYSYMYS: Kerro lisää: laoutoa
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Miksi kreetalaista lyraa soitetaan polvella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pienet asiat sen ovat. Kreetalainen lyra on kolmikielinen jousisoitin, jota pidetään pystyasennossa soittajan polvella tai reiden päällä eikä olkapäällä. Soittaja painaa kieliä kynnellä sivusta, eikä sormenpäällä päältä. Lyran kanssa soitetaan usein [[laoutoa]], pitkäkaulaista luuttua, ja musiikki säestää tansseja kuten [[pentozalista]] sekä lauluja, joita kutsutaan [[mantinadoiksi]]. Mahtaako kyyhky pitää sellaista polvellaan.
+KYSYMYS: Kerro lisää: pentozalista
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Miksi kreetalaista lyraa soitetaan polvella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pienet asiat sen ovat. Kreetalainen lyra on kolmikielinen jousisoitin, jota pidetään pystyasennossa soittajan polvella tai reiden päällä eikä olkapäällä. Soittaja painaa kieliä kynnellä sivusta, eikä sormenpäällä päältä. Lyran kanssa soitetaan usein [[laoutoa]], pitkäkaulaista luuttua, ja musiikki säestää tansseja kuten [[pentozalista]] sekä lauluja, joita kutsutaan [[mantinadoiksi]]. Mahtaako kyyhky pitää sellaista polvellaan.
+KYSYMYS: Kerro lisää: mantinadoiksi
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Ruoka: Liha, joka kypsyy maan alla] Lammas on Libyan syödyin liha, ja etelässä syödään myös kamelia. Gideed on ikivanha säilöntätapa: lampaan- tai kamelinlihapalat suolataan, kuivataan auringossa ja pannaan oliiviöljyyn odottamaan kylmiä kuukausia tai aikaa, jolloin tuoretta lihaa ei ole; sitä lisätään keittoihin, kuskusiin ja patoihin. Juhlien ruoka on bourdeem, jossa lammas kypsyy hitaasti maahan kaivetussa kuopassa hehkuvien hiilten päällä sipulien, tomaattien ja perunoiden kanssa; tulos on savuinen ja niin mureaa, että liha hajoaa sormissa. Kolmas tapa on shwaya, grillaus vartaassa tai pienen avotulen päällä — sekin kuuluu erityisesti uhrijuhlaan.
+- [Damaskos — kaupunkilehti / Arki ja tavat: Hedelmä keitetään levyksi ja kuivataan auringossa] Qamar al-din tarkoittaa uskon kuuta, ja se on aprikoosista tehty kuivattu levy. Aprikoosit ja sokeri keitetään, massa siivilöidään oliiviöljyyn kastetun puusiivilän läpi ja levitetään kuivumaan suoraan aurinkoon. Levy on paksumpi ja maultaan voimakkaampi kuin tavallinen hedelmälevy. Juomaksi se muuttuu, kun sekaan sekoitetaan ruusuvettä tai appelsiininkukkavettä ja jäitä; levyä syödään myös sellaisenaan, usein saksanpähkinän ympärille käärittynä. Lajike, josta levy tehdään, kasvoi ensimmäisenä Damaskoksen ympäristön viljelyksillä. Reseptin kirjasi lääkäri Dawud al-Antaki vuonna 1599.
+AIEMPI KYSYMYS: Mitä kreetalaiseen ruokavalioon kuuluu?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: ruoka on mieluisin aihe. Kreetalainen ruoka perustuu [[oliiviöljyyn]], vihanneksiin, palkokasveihin, villiyrtteihin, kalaan ja vähäiseen lihaan sekä juustoon. Tunnettu on [[dakos]], eli kova ohraruskoleipä, jonka päällä on tomaattia ja pehmeää juustoa. Ruokavaliota on tutkittu paljon, koska sen on kuvattu olevan terveellinen. Tislattua [[rakia]] tarjotaan usein aterian päätteeksi. Pulla jäi nyt vähälle huomiolle.
+KYSYMYS: Kerro lisää: oliiviöljyyn
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Mitä kreetalaiseen ruokavalioon kuuluu?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: ruoka on mieluisin aihe. Kreetalainen ruoka perustuu [[oliiviöljyyn]], vihanneksiin, palkokasveihin, villiyrtteihin, kalaan ja vähäiseen lihaan sekä juustoon. Tunnettu on [[dakos]], eli kova ohraruskoleipä, jonka päällä on tomaattia ja pehmeää juustoa. Ruokavaliota on tutkittu paljon, koska sen on kuvattu olevan terveellinen. Tislattua [[rakia]] tarjotaan usein aterian päätteeksi. Pulla jäi nyt vähälle huomiolle.
+KYSYMYS: Kerro lisää: dakos
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Pihapiirin oma viina] Syyskuu — Rakia on hedelmistä tislattu viina, ja lähes jokaisella bulgarialaisella maaseutuperheellä on oma reseptinsä. Yleisimmin sitä valmistetaan luumuista tai rypäleistä: syksyllä hedelmät murskataan ja niiden annetaan käydä tynnyrissä viikkoja, minkä jälkeen mäski tislataan kuparisessa keittimessä, jota naapurit usein lainaavat vuorotellen toisilleen. Kotitekoisen rakian vahvuus voi nousta yli viidenkymmenen prosentin, kun kaupan pulloissa se on tavallisesti neljäkymmentä. Kuuluisinta luumurakiaa tehdään Troyanin seudulla, ja lasillinen tarjotaan lähes aina ensimmäisenä tervetulomaljana vieraalle.
+AIEMPI KYSYMYS: Mitä kreetalaiseen ruokavalioon kuuluu?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: ruoka on mieluisin aihe. Kreetalainen ruoka perustuu [[oliiviöljyyn]], vihanneksiin, palkokasveihin, villiyrtteihin, kalaan ja vähäiseen lihaan sekä juustoon. Tunnettu on [[dakos]], eli kova ohraruskoleipä, jonka päällä on tomaattia ja pehmeää juustoa. Ruokavaliota on tutkittu paljon, koska sen on kuvattu olevan terveellinen. Tislattua [[rakia]] tarjotaan usein aterian päätteeksi. Pulla jäi nyt vähälle huomiolle.
+KYSYMYS: Kerro lisää: rakia
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Keltainen talo] 1874 Kuvernööri Juan de Pimentelin noin vuonna 1578 piirtämässä Caracasin kartassa tontilla on vaatimaton savi- ja pystypuurakenteinen talo. Vuonna 1689 kaupunginvaltuusto osti osan tontista Antonio de Tovarin perillisiltä uutta vankilaa varten, ja vankila avattiin 1696. Eteläosa siirtyi valtuustolle 1704 maanvaihdossa, ja sille valmistui joulukuussa 1750 valtuuston oma talo. Juuri sen parvekkeelta kaniikki José Cortés de Madariaga antoi 19. huhtikuuta 1810 caracasilaisille merkin, jolla kenraalikapteeni Vicente Emparán julistettiin syrjäytetyksi — Venezuelan itsenäistymisen ensimmäinen askel. Vuoden 1812 maanjäristys jätti talon raunioiksi vuosikymmeniksi, ja korjaus kesti neljä vuotta. Vu…
+- [Kathmandu — kohdekartta / Kohdekartta: Kathmandun Durbar-aukio] nykyiset rakennukset 1500–1700-luvuilta Durbar tarkoittaa palatsien paikkaa, ja niitä on laaksossa kolme. Kathmandun aukiolla seisovat neljän kuningaskunnan — Kantipurin, Lalitpurin, Bhaktapurin ja Kirtipurin — perintörakennukset, ja aukio jakautuu kahteen nelikulmioon. Ulommassa ovat Kasthamandap, Kumari Ghar ja Shivan ja Parvatin temppeli, sisemmässä Hanuman Dhokan palatsi. Temppeleitä on kaikkiaan viisikymmentä, ja useimmat ovat 1500-luvun Malla-kuninkaiden aikaisia. Hanuman Dhoka on nimetty portin vieressä istuvan Hanuman-patsaan mukaan, joka on vuodelta 1672; dhoka on nepaliksi ovi. Palatsi kattaa viisi eekkeriä, ja sen vanhin osa on 1500-luvun puolivälistä. Kuningas Pratap Malla laaje…
+AIEMPI KYSYMYS: Miksi muinainen Falassarnan satama on nykyään kuivalla maalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on aito geologinen ihme. Kreetan länsirannikko kohosi vuoden 365 tienoilla voimakkaassa [[maanjäristyksessä]] useita metrejä, ja muinainen satama jäi kuivalle maalle. Falassarna oli antiikissa [[Polyrrhenian]] kaupungin satama, ja sen kivilaiturit ja altaat näkyvät yhä kaukana nykyisestä rannasta. Tapahtuma ajoittuu aikaan, jolloin Rooman valtakunta oli vielä yhtenä valtiona, noin 1650 vuotta sitten. Mielenkiintoista, mitä rannikko muistaa.
+KYSYMYS: Kerro lisää: maanjäristyksessä
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kreeta
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kreeta (kaupunki)
+Tietoruudun teksti: Kreeta on Kreikan suurin saari ja Välimeren viidenneksi suurin: 8 450 neliökilometriä ja 260 kilometriä idästä länteen, mutta pohjois–eteläsuunnassa kapea. Rantaviivaa on runsaat tuhat kilometriä, ja selkärankana kulkee kuusi vuoristoryhmää, joiden korkein huippu yltää lähes 2 500 metriin. Asukkaita on yli 600 000 — enemmän kuin millään muulla Kreikan saarella.
+
+Pohjoisrannalla Knossoksessa kukoisti neljätuhatta vuotta sitten minolainen kulttuuri, Euroopan vanhin kaupunkikulttuuri. Se rakensi palatseja, joissa oli valokuiluja, juokseva vesi ja viemärit, ja kirjoitti kahdella merkistöllä, joista toista ei ole vieläkään pystytty lukemaan. Kulttuuri katosi noin 1450 eaa., ehkä Santorinin purkauksen ja sen tsunamien jäljiltä.
+
+Sen jälkeen saari on ollut vuorollaan roomalaisten, bysanttilaisten, venetsialaisten ja ottomaanien hallussa, ja Kreikkaan se liittyi vasta vuonna 1913. Nykyään saari…
+Isoisän matkakirjamerkintä: Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.
+AIEMPI KYSYMYS: Miksi muinainen Falassarnan satama on nykyään kuivalla maalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on aito geologinen ihme. Kreetan länsirannikko kohosi vuoden 365 tienoilla voimakkaassa [[maanjäristyksessä]] useita metrejä, ja muinainen satama jäi kuivalle maalle. Falassarna oli antiikissa [[Polyrrhenian]] kaupungin satama, ja sen kivilaiturit ja altaat näkyvät yhä kaukana nykyisestä rannasta. Tapahtuma ajoittuu aikaan, jolloin Rooman valtakunta oli vielä yhtenä valtiona, noin 1650 vuotta sitten. Mielenkiintoista, mitä rannikko muistaa.
+KYSYMYS: Kerro lisää: Polyrrhenian
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+AIEMPI KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kato, tämän näkee kyllä ylhäältä. Syy on maaston muodossa: [[Dinaarien Alppien]] selänteet kulkevat rannikon suuntaisesti, ja viimeisen [[jääkauden]] jälkeen merenpinta nousi ja tulvi ruhjelaaksot. Vedenpinnan yläpuolelle jääneet harjanteet muodostavat nyt pitkiä ja kapeita saaria, joita on yli tuhat. Siksi rannikko on kivinen ja jyrkkä, ja saaret asettuvat jonoon [[Adrianmeren]] pintaan. Kyyhkylle se on mainio välilaskupaikkojen ketju.
+KYSYMYS: Kerro lisää: Dinaarien Alppien
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kato, tämän näkee kyllä ylhäältä. Syy on maaston muodossa: [[Dinaarien Alppien]] selänteet kulkevat rannikon suuntaisesti, ja viimeisen [[jääkauden]] jälkeen merenpinta nousi ja tulvi ruhjelaaksot. Vedenpinnan yläpuolelle jääneet harjanteet muodostavat nyt pitkiä ja kapeita saaria, joita on yli tuhat. Siksi rannikko on kivinen ja jyrkkä, ja saaret asettuvat jonoon [[Adrianmeren]] pintaan. Kyyhkylle se on mainio välilaskupaikkojen ketju.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kato, tämän näkee kyllä ylhäältä. Syy on maaston muodossa: [[Dinaarien Alppien]] selänteet kulkevat rannikon suuntaisesti, ja viimeisen [[jääkauden]] jälkeen merenpinta nousi ja tulvi ruhjelaaksot. Vedenpinnan yläpuolelle jääneet harjanteet muodostavat nyt pitkiä ja kapeita saaria, joita on yli tuhat. Siksi rannikko on kivinen ja jyrkkä, ja saaret asettuvat jonoon [[Adrianmeren]] pintaan. Kyyhkylle se on mainio välilaskupaikkojen ketju.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+AIEMPI KYSYMYS: Mikä on glagoliittinen kirjoitus?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on harvinainen aakkosto. Glagoliittinen kirjoitus on vanhin tunnettu slaavilainen aakkosto, ja sen luomisen kerrotaan alkaneen 800-luvulla [[Kyrilloksen]] ja Metodioksen lähetystyön yhteydessä. Kroatiassa sitä käytettiin kirkollisissa teksteissä pitkään, jopa 1900-luvulle asti, erityisesti Adrianmeren rannikolla ja saarilla. Tunnetuimpia säilyneitä esimerkkejä on noin vuodelta 1100 peräisin oleva [[Baškan tauluksi]] kutsuttu kivilaatta Krkin saarelta. Kirjaimet näyttävät minusta koristeilta, ei kirjoitukselta.
+KYSYMYS: Kerro lisää: Kyrilloksen
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Taulu, jossa katsoja on mallina] Diego Velázquez maalasi 1656 taulun, jossa hän seisoo itse vasemmalla valtavan kankaan takana ja katsoo ulos kuvasta. Keskellä on viisivuotias infanta Margarita hovinaisineen. Mutta ketä maalari oikeastaan maalaa? Takaseinän peilistä näkyvät kuningas ja kuningatar — he seisovat siinä, missä katsoja seisoo. Taulu kääntää katseen ympäri: se katsoo sinua takaisin ja panee sinut mallin paikalle. Pradossa se on oma huoneensa, ja sen edessä seisotaan joka päivä jonossa.
+AIEMPI KYSYMYS: Mikä on glagoliittinen kirjoitus?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on harvinainen aakkosto. Glagoliittinen kirjoitus on vanhin tunnettu slaavilainen aakkosto, ja sen luomisen kerrotaan alkaneen 800-luvulla [[Kyrilloksen]] ja Metodioksen lähetystyön yhteydessä. Kroatiassa sitä käytettiin kirkollisissa teksteissä pitkään, jopa 1900-luvulle asti, erityisesti Adrianmeren rannikolla ja saarilla. Tunnetuimpia säilyneitä esimerkkejä on noin vuodelta 1100 peräisin oleva [[Baškan tauluksi]] kutsuttu kivilaatta Krkin saarelta. Kirjaimet näyttävät minusta koristeilta, ei kirjoitukselta.
+KYSYMYS: Kerro lisää: Baškan tauluksi
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Mitä ovat fritule ja milloin niitä syödään?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä pidän. Fritule ovat pieniä, uppopaistettuja taikinapalloja, joihin on yleensä sekoitettu rusinoita ja sitruunan tai appelsiinin kuorta sekä pieni määrä rommia tai grappaa. Päällä on tomusokeria. Niitä syödään erityisesti adventin ja joulun aikaan [[Dalmatian]] ja Istrian rannikolla, ja myös [[karnevaalin]] aikaan. Kroatia on siis pullan ystävälle varsin hyvä maa.
+
+Fritulen pitäisi olla lämpimiä. Minä en edes osaa sanoa, montako mahtuu kyyhkyn nokkaan.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / Musiikki: Karnevaali jonka värit valittiin 1872] Ensimmäinen tunnettu Mardi Gras -juhla Louisianassa pidettiin 2. maaliskuuta 1699 Mississippin suulla, mutta järjestäytynyt katukarnevaali alkoi vasta 1856, kun kaksikymmentäyksi liikemiestä perusti Mistick Krewe of Comuksen; sen ensimmäinen soihtukulkue nähtiin 1857. Rex perustettiin 1872 venäläisen suurruhtinaan Aleksei Aleksandrovitšin vierailun kunniaksi, ja se kehotti jo ensimmäisen kulkueensa alla verhoamaan parvekkeet violettiin, vihreään ja kultaan — samat värit ovat yhä karnevaalin tunnusvärit. Zulu-seuran kultamaalatut kookospähkinät ojennetaan katsojille kädestä: heittäminen kiellettiin loukkaantumisvaaran vuoksi 1988.
+AIEMPI KYSYMYS: Mitä ovat fritule ja milloin niitä syödään?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä pidän. Fritule ovat pieniä, uppopaistettuja taikinapalloja, joihin on yleensä sekoitettu rusinoita ja sitruunan tai appelsiinin kuorta sekä pieni määrä rommia tai grappaa. Päällä on tomusokeria. Niitä syödään erityisesti adventin ja joulun aikaan [[Dalmatian]] ja Istrian rannikolla, ja myös [[karnevaalin]] aikaan. Kroatia on siis pullan ystävälle varsin hyvä maa.
+
+Fritulen pitäisi olla lämpimiä. Minä en edes osaa sanoa, montako mahtuu kyyhkyn nokkaan.
+KYSYMYS: Kerro lisää: karnevaalin
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Onko kravatti tosiaan lähtöisin Kroatiasta?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Aika lailla kyllä. Sana kravatti on ranskan cravate, joka johtuu kroaattien nimestä. Usein kerrotun mukaan [[kolmikymmenvuotisen sodan]] aikaan 1600-luvulla Ranskan palveluksessa olleet kroatialaiset sotilaat kantoivat kaulaliinoja, ja [[Ludvig XIV:n]] hovi omaksui muodin. Historioitsijat keskustelevat yksityiskohdista, mutta sanan alkuperä on yleisesti hyväksytty. Kroatiassa kravattia muistetaan omana päivänään lokakuussa.
+KYSYMYS: Kerro lisää: kolmikymmenvuotisen sodan
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+AIEMPI KYSYMYS: Onko kravatti tosiaan lähtöisin Kroatiasta?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Aika lailla kyllä. Sana kravatti on ranskan cravate, joka johtuu kroaattien nimestä. Usein kerrotun mukaan [[kolmikymmenvuotisen sodan]] aikaan 1600-luvulla Ranskan palveluksessa olleet kroatialaiset sotilaat kantoivat kaulaliinoja, ja [[Ludvig XIV:n]] hovi omaksui muodin. Historioitsijat keskustelevat yksityiskohdista, mutta sanan alkuperä on yleisesti hyväksytty. Kroatiassa kravattia muistetaan omana päivänään lokakuussa.
+KYSYMYS: Kerro lisää: Ludvig XIV:n
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Iranin kansallismuseo] Kansallismuseo on kaksi taloa vierekkäin. Muinaisen Iranin museo on tiiltä, ja julkisivun keskellä on soikea sasanidiholvi, jonka esikuva on Ktesifonin Taq Kasra pienemmässä mitassa. Sen piirsi ranskalainen André Godard; muurarimestarit olivat Morad Tabrizi ja Abbas Ali Memar. Tiili oli kotimaista; ulkoa tuotiin vain vitriinit ja osa metalliosista. Talo vihittiin 1937, ja kerrosalaa on noin 11 000 neliömetriä. Naapuritalo, islamilaisen ajan museo, on valkoista travertiinia ja pohjakaavaltaan Bishapurin mukainen kahdeksankulmainen risti. Vuosiluvut hajoavat: rakennus ajoitetaan vuosiin 1944–1950 tai 1958, perustamisvuodeksi merkitään 1972, ja museona se avattiin 1996. Seitsemässä salissa on …
+- [null — kohdekartta / Kohdekartta: Kaskadi] 1970-luku–2009 Kaskadi on portaikkokompleksi, joka yhdistää keskustan Kanaker-Zeytunin kukkuloihin ja kuuluu Tamanianin kaupunkisuunnitelmassa määriteltyyn akseliin. Siinä on useita terasseja, satoja askelmia noin 300 metrin matkalla ja sisäpuolella liukuportaat. Rakenne on maidonvalkoista tuffia ja travertiinia, ja koristeissa on khachkar-ristikivien, viiniköynnösten, granaattiomenoiden ja elämänpuun aiheita. Arkkitehdit Jim Torosyan, Sargis Gurzadyan ja Aslan Mkhitaryan alkoivat suunnitella portaikkoa 1970-luvun alussa. Rakentaminen alkoi lähteiden mukaan 1970- tai 1980-luvulla, ja se keskeytyi 1980-luvun lopulla; hallitus päätti 2000-luvun alussa saattaa kompleksin loppuun, ja sisälle av…
+AIEMPI KYSYMYS: Mikä tekee Plitvicen järvistä erikoisia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tämä on kaunis vastaus. Plitvicen järvet ovat kansallispuisto, jossa on noin kuusitoista pääjärveä porrasmaisena sarjana, ja niiden välillä vesi putoaa putouksina. Vesi saostaa kalkkia, joka muodostaa luonnollisia padotuksia eli [[travertiinia]], ja nämä padot kasvavat hitaasti. Veden väri vaihtelee turkoosista vihreään ja harmaaseen riippuen mineraaleista ja valosta. Alue kuuluu [[Unescon maailmanperintölistalle]]. Tuolta ylhäältä näkyy kuin helminauha.
+KYSYMYS: Kerro lisää: travertiinia
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Kroatia (maa)
+Tietoruudun teksti: Kroatia on hevosenkengän muotoinen maa Adrianmeren rannalla. Sen rannikolla on yli tuhat saarta, ja sisämaassa levittäytyvät tasangot ja metsät. Maa itsenäistyi 1991 ja liittyi EU:hun 2013.
+
+Kartalla muoto näkyy heti. Luoteesta kaakkoon kulkee Dinaarien Alppien selkä, ja se painuu suoraan mereen: rannikko on kivinen ja jyrkkä, eikä sen ja vuorten väliin jää juuri tasankoa. Rannikon edustalla on rivistö pitkiä ja kapeita saaria, jotka kulkevat samansuuntaisesti vuorijonon kanssa. Vuorten pohjoispuolella väri vaihtuu vihreäksi ja maasto tasoittuu — siellä alkaa Pannonian tasanko, jonka halki virtaavat Sava ja Drava.
+
+Luoteessa mereen työntyy Istrian kolmiomainen niemimaa, ja kartan itäkulma eli Slavonia on tasaista peltomaata — rannikon täydellinen vastakohta. Etelässä hevosenkengän kärki kapenee ohueksi kaistaleeksi kohti Dubrovnikia, ja juuri ennen sitä kartalla on outo aukko, joka ei k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä tekee Plitvicen järvistä erikoisia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tämä on kaunis vastaus. Plitvicen järvet ovat kansallispuisto, jossa on noin kuusitoista pääjärveä porrasmaisena sarjana, ja niiden välillä vesi putoaa putouksina. Vesi saostaa kalkkia, joka muodostaa luonnollisia padotuksia eli [[travertiinia]], ja nämä padot kasvavat hitaasti. Veden väri vaihtelee turkoosista vihreään ja harmaaseen riippuen mineraaleista ja valosta. Alue kuuluu [[Unescon maailmanperintölistalle]]. Tuolta ylhäältä näkyy kuin helminauha.
+KYSYMYS: Kerro lisää: Unescon maailmanperintölistalle
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kohdekartta / Kohdekartta: Zagrebin tuomiokirkko] 1217, 1880-luvulta alkaen Zagrebin tuomiokirkon virallinen nimi on Neitsyt Marian taivaaseenottamisen ja pyhien Tapanin ja Ladislauksen katedraali. Piispanistuin perustettiin 1094, ja ensimmäinen katedraali valmistui ja vihittiin 1217. Lähteen mukaan se on Kroatian korkein sakraalirakennus. Tataarit tuhosivat Kaptolin 1242, ja piispa Timotej jälleenrakensi kirkon 1263–1287. Isoisän matkavuonna 1873 tuomiokirkko oli vielä keskiajan ja barokin sekoitus ilman kaksoistorneja. Vuoden 1880 maanjäristys romahdutti päälaivan, ja arkkitehti Hermann Bollén johtama uusgoottilainen kunnostus kesti 1880-luvulta 1900-luvun alkuun. Tornit rakennettiin 1889–1899, ja ne ovat noin 105–108 metriä korkeat. Jär…
+- [Zagreb — kaupunkilehti / Zagreb: Kaupunki, joka rakennettiin uusiksi] Maanjäristys 9.11.1880 oli voimakkuudeltaan noin 6,3, ja sen episentrumi oli Medvednicalla. Vahingot olivat mittavat. Tuomiokirkon päälaiva romahti ja yksi torni vaurioitui korjauskelvottomaksi. Kirkko kunnostettiin uusgoottilaiseen asuun arkkitehti Hermann Bollén johdolla 1880-luvulta 1900-luvun alkuun, ja tornit rakennettiin 1889–1899. Myös Pyhän Markuksen kirkko, jonka laaja kunnostus oli jo käynnissä, sai silloin uusgoottilaisen ilmeensä. Järistyksen jälkeen 1800-luvun lopulla ja 1900-luvun alussa kaupunki sai nykyisen asemakaavansa, ja Alakaupunki sai säännöllisen korttelirakenteen.
+AIEMPI KYSYMYS: Miksi vuoden 1880 maanjäristys muutti Zagrebin ilmeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä oli raskas hetki kaupungille. Zagrebin maanjäristys marraskuussa 1880 vaurioitti tuomiokirkkoa ja monia muita rakennuksia, ja sen jälkeen kaupunkia kunnostettiin laajasti. Kirkon kaksoistornit valmistuivat vasta 1889–1899 uusgoottilaisessa asussa arkkitehti [[Hermann Bollén]] suunnitelmien mukaan, ja uusi rakentaminen muokkasi myös [[Alakaupungin]] ilmettä. Siitä on onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Hermann Bollén
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kohdekartta / Kohdekartta: Zrinjevac] 1800-luvun alkupuoli Zrinjevac eli virallisesti Nikola Šubić Zrinski -aukio on 12 540 neliömetrin puisto-aukio Alakaupungissa. Karjamarkkina siirrettiin sen paikalle 1800-luvun alkupuolella. Isoisän matkavuonna 1873 puiston musiikkipaviljonkia ei vielä ollut, sillä se tuli 1891 Eduard Pristerin lahjoituksena. Aukio kuuluu Lenucin vihreään hevosenkenkään, Alakaupungin aukioiden ketjuun. Lähteen mukaan ketjussa on seitsemän aukiota. Eteläosassa on merkittävien kroatialaisten rintakuvat, muiden muassa Julije Klovićin ja Ivan Mažuranićin. Aukion ympärillä on arkeologinen museo lännessä, Kroatian tiedeakatemia ja Strossmayerin vanhojen mestarien galleria etelässä sekä korkein oikeus pohjoisessa.…
+- [Zagreb — kaupunkilehti / Zagreb: Karjatori, josta tuli puisto] Karjamarkkina siirrettiin 1800-luvun alkupuolella nykyisen Zrinjevacin paikalle, ja puisto-aukio syntyi vähitellen sen tilalle. Virallisesti Nikola Šubić Zrinski -aukio on 12 540 neliömetrin laajuinen ja kuuluu Lenucin vihreään hevosenkenkään, Alakaupungin aukioiden ketjuun. Lähteen mukaan ketjussa on seitsemän aukiota. Puiston keskellä on musiikkipaviljonki vuodelta 1891, Eduard Pristerin lahjoitus kaupungille. Eteläosassa on merkittävien kroatialaisten rintakuvat, muiden muassa Julije Klovićin ja Ivan Mažuranićin. Aukion ympärillä ovat arkeologinen museo, Kroatian tiedeakatemia ja Strossmayerin vanhojen mestarien galleria.
+AIEMPI KYSYMYS: Miksi vuoden 1880 maanjäristys muutti Zagrebin ilmeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä oli raskas hetki kaupungille. Zagrebin maanjäristys marraskuussa 1880 vaurioitti tuomiokirkkoa ja monia muita rakennuksia, ja sen jälkeen kaupunkia kunnostettiin laajasti. Kirkon kaksoistornit valmistuivat vasta 1889–1899 uusgoottilaisessa asussa arkkitehti [[Hermann Bollén]] suunnitelmien mukaan, ja uusi rakentaminen muokkasi myös [[Alakaupungin]] ilmettä. Siitä on onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Alakaupungin
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kohdekartta / Kohdekartta: Kivinen portti] 1200-luku Kivinen portti on ainoa säilynyt Gradecin neljästä kaupunginportista; muut olivat Mesnička, Opatička ja Dverce. Se rakennettiin 1200-luvulla osana Gradecin muureja, ja nykyilmeensä se sai myöhemmin. Isoisän matkavuonna 1873 portti oli yhä kaupunginportti Yläkaupungin itälaidalla. Toukokuun lopussa 1731 syttyi tulipalo Pyhän Joosefin seminaarissa, ja se levisi Yläkaupunkiin ja Kaptoliin. Kolmantena päivänä raunioista löytyi vahingoittumaton Neitsyt Marian maalaus, josta vain puinen kehys oli palanut. Hurskas leski rakennutti maalaukselle pienen alttarin portin holvin alle. Kivinen portti esiintyy August Šenoan romaanissa Zlatarevo zlato, ja holvin syvennyksessä on Dora Krupićin pie…
+- [Minsk — kaupunkilehti / Minsk: Tulipalo 1835 ja Yläkaupungin kivitalot] Minskin rakennukset olivat 1600-luvun alussa puuta, ja palot olivat jatkuvia. Pahin niistä riehui 1835 ja tuhosi osan keskustan rakennuksista. Samalla vuosikymmenellä pääkadut ja aukiot päällystettiin kivellä, ja palokunta aloitti 1837. Kaupunki kasvoi, ja 1860 asukkaita oli lähteistä riippuen 27 000–30 000. Yläkaupunkiin rakennettiin kaksi- ja kolmikerroksisia tiili- ja kivitaloja. Pyhän Hengen katedraali palautettiin itäkirkon käyttöön 1860 ja kunnostettiin 1869–70. Kaupungissa oli teattereita, sanomalehtiä ja kouluja sekä kirkkoja, synagogia ja moskeija.
+AIEMPI KYSYMYS: Mikä on Zagrebin funikulaari?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Lyhyt reitti, mutta tärkeä. Funikulaari on köysirata, joka yhdistää Alakaupungin ja [[Yläkaupungin]], ja se avattiin vuonna 1890. Matka kestää alle minuutin, ja rata on yksi maailman lyhimmistä julkisista kulkuneuvoista. Yläkaupungissa sijaitsee [[Lotrščak-torni]], jonka tykki laukaistaan joka päivä puolenpäivän aikaan. Minä menen mieluummin siivillä.
+KYSYMYS: Kerro lisää: Yläkaupungin
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kohdekartta / Kohdekartta: Lotrščakin torni] 1200-luku Lotrščakin torni rakennettiin osana Gradecin muureja, jotka valmistuivat 1260-luvulla, puolustamaan eteläistä Dverce-porttia. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello. Kello soi merkiksi porttien sulkemisesta, ja Dverce-portti purettiin 1812 eteläisen kävelykadun tieltä. Vuonna 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta ja puinen palotähystys. Isoisän matkavuonna 1873 nämä lisäykset olivat jo paikallaan, mutta tykkiä ei vielä ollut. Kaupunki päätti hankkia sen myöhemmin 1800-luvulla, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus toimi merkkinä kirkonkellojen soittajille. Tykki ammutaan neljännen kerroksen eteläikkunasta. Lauk…
+AIEMPI KYSYMYS: Mikä on Zagrebin funikulaari?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Lyhyt reitti, mutta tärkeä. Funikulaari on köysirata, joka yhdistää Alakaupungin ja [[Yläkaupungin]], ja se avattiin vuonna 1890. Matka kestää alle minuutin, ja rata on yksi maailman lyhimmistä julkisista kulkuneuvoista. Yläkaupungissa sijaitsee [[Lotrščak-torni]], jonka tykki laukaistaan joka päivä puolenpäivän aikaan. Minä menen mieluummin siivillä.
+KYSYMYS: Kerro lisää: Lotrščak-torni
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+AIEMPI KYSYMYS: Mitä on štrukli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on makea tai suolainen, ja tuoksuu hyvältä. Štrukli on [[Zagorjen]] alueen perinteinen ruoka, jossa ohut taikina täytetään tuorejuustolla ja kermalla ja sitten joko keitetään tai uunitetaan. Zagrebin kahviloissa ja ravintoloissa se on suosittu ruoka. Tuorejuuston ansiosta täyte on pehmeä, ja päälle tulee rapea kuori. Pulla se ei ole, mutta [[tuorejuusto]] tekee siitä silti perso-kelpoisen.
+KYSYMYS: Kerro lisää: Zagorjen
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Pähkinärulla joka kiertää] 1575 — Potica on juhlaleivonnainen, jossa ohueksi kaulittu hiivataikina sivellään täytteellä, kääritään rullaksi ja kierretään usein renkaaksi. Yleisin täyte on pähkinä, mutta käytössä ovat myös rakuuna, rusina, tuorejuusto ja unikonsiemen. Vanhimmat tunnetut maininnat ovat reformaattori Primož Trubarin teksteistä vuosilta 1575 ja 1577, jolloin leivonnaista kutsuttiin nimellä povitica, käärittävä. Johann Weikhard von Valvasor kuvasi hunajaisen pähkinärullan jo vuonna 1689. Perinteisesti potica paistetaan potičnik-vuoassa, jonka keskellä on piippu, ja sitä syödään pääsiäisenä ja jouluna.
+AIEMPI KYSYMYS: Mitä on štrukli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on makea tai suolainen, ja tuoksuu hyvältä. Štrukli on [[Zagorjen]] alueen perinteinen ruoka, jossa ohut taikina täytetään tuorejuustolla ja kermalla ja sitten joko keitetään tai uunitetaan. Zagrebin kahviloissa ja ravintoloissa se on suosittu ruoka. Tuorejuuston ansiosta täyte on pehmeä, ja päälle tulee rapea kuori. Pulla se ei ole, mutta [[tuorejuusto]] tekee siitä silti perso-kelpoisen.
+KYSYMYS: Kerro lisää: tuorejuusto
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kaupunkilehti / Zagreb] Zagreb on Kroatian pääkaupunki, joka kasvoi kahdesta kukkulasta ja jonka nykyinen ilme syntyi vuoden 1880 maanjäristyksen jälkeen. Isoisän matkavuonna 1873 kaupunki oli vielä entisellään: raitiotietä ja tuomiokirkon kaksoistorneja ei ollut, mutta rautatie ja Ban Jelačićin patsas jo olivat.
+AIEMPI KYSYMYS: Mikä on Dolacin tori Zagrebissa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on kaupungin suurin ruokatori. Dolac on Zagrebin pääkauppatori [[Jelačićin aukion]] yläpuolella [[Yläkaupungin]] juurella, ja siellä myydään tuoreita vihanneksia, hedelmiä, juustoa ja kukkia. Torin tunnistaa punaisista sateenvarjoista, jotka suojaavat kauppiaiden kojuja. Torilla kauppaa on käyty jo 1900-luvun alkupuolelta. Kyyhkynä tykkään torista: murusia on aina.
+KYSYMYS: Kerro lisää: Jelačićin aukion
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+AIEMPI KYSYMYS: Mikä on Särkyneiden suhteiden museo?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on yllättävä museo. Särkyneiden suhteiden museo Zagrebissa perustettiin 2000-luvun alussa, ja sen perustajina olivat taiteilijat [[Olinka Vištica]] ja [[Dražen Grubišić]]. Näyttelyesineet ovat ihmisten lahjoittamia esineitä päättyneistä suhteista, ja jokaisen vieressä on kertomus. Museo sijaitsee [[Yläkaupungissa]], ja se on kiertänyt myös muualla maailmassa. Toivottavasti kukaan ei lahjoita kirjekyyhkyn lintua.
+KYSYMYS: Kerro lisää: Olinka Vištica
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+AIEMPI KYSYMYS: Mikä on Särkyneiden suhteiden museo?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on yllättävä museo. Särkyneiden suhteiden museo Zagrebissa perustettiin 2000-luvun alussa, ja sen perustajina olivat taiteilijat [[Olinka Vištica]] ja [[Dražen Grubišić]]. Näyttelyesineet ovat ihmisten lahjoittamia esineitä päättyneistä suhteista, ja jokaisen vieressä on kertomus. Museo sijaitsee [[Yläkaupungissa]], ja se on kiertänyt myös muualla maailmassa. Toivottavasti kukaan ei lahjoita kirjekyyhkyn lintua.
+KYSYMYS: Kerro lisää: Dražen Grubišić
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Zagreb
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Zagreb (kaupunki)
+Tietoruudun teksti: Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin Kaptol perustettiin 1094, ja Gradec sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1800-luvun puolivälissä.
+
+Isoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit ja raitiotie puuttuivat vielä: tornit rakennettiin vasta vuoden 1880 maanjäristyksen jälkeisessä kunnostuksessa 1889–1899 ja ensimmäinen raitiolinja avattiin 1891. Alakaupungin nykyinen asemakaava syntyi pääosin 1800-luvun lopun ja 1900-luvun alun rakennuskaudella.
+
+Nykyään Zagrebin kaupungissa (Grad Zagreb, ei metropolialuetta) asuu 777 744 ihmistä (DZS:n arvio vuoden …
+Isoisän matkakirjamerkintä: Zagreb, toukokuussa 1873. Kroatia on viisi vuotta sitten sovittu Unkarin kruunun maihin, mutta torilla ratsastaa silti ban Jelačić; hänen patsaansa pystytettiin vasta seitsemän vuotta sitten. Kivisen portin holvissa palaa kynttilöitä Neitsyt Marian maalauksen edessä. Se löytyi vahingoittumattomana tuhkasta, kun vuoden 1731 palo tuhosi Yläkaupungin, ja ihmiset ovat polvistuneet sen eteen siitä asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zagreb — kaupunkilehti / Taidetta hevosenkengän sisällä: Naivistit ja Mimaran lahjoitus] Kroatialaisen naivistisen taiteen museo on lähteen mukaan yksi maailman ensimmäisistä naivistimuseoista. Se toimii 1700-luvun Raffayn palatsissa Yläkaupungissa, ja kokoelmassa on yli 1 500 teosta. Mimara-museo perustettiin Ante Topić Mimaran lahjoituksesta ja avattiin yleisölle 1987. Sen noin 3 700 teoksen joukossa on Rubensin, Velázquezin, Renoirin ja Goyan töitä, ja museo toimii 1800-luvun lopun uusrenessanssipalatsissa. Strossmayerin vanhojen mestarien galleria Zrinjevacin laidalla esittelee eurooppalaista maalausta 1300-luvulta 1800-luvulle.
+AIEMPI KYSYMYS: Mikä on Särkyneiden suhteiden museo?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on yllättävä museo. Särkyneiden suhteiden museo Zagrebissa perustettiin 2000-luvun alussa, ja sen perustajina olivat taiteilijat [[Olinka Vištica]] ja [[Dražen Grubišić]]. Näyttelyesineet ovat ihmisten lahjoittamia esineitä päättyneistä suhteista, ja jokaisen vieressä on kertomus. Museo sijaitsee [[Yläkaupungissa]], ja se on kiertänyt myös muualla maailmassa. Toivottavasti kukaan ei lahjoita kirjekyyhkyn lintua.
+KYSYMYS: Kerro lisää: Yläkaupungissa
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+AIEMPI KYSYMYS: Kuinka pitkä Dubrovnikin muuri on ja saako sillä kävellä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sieltä näkee kauas. Muuri kiertää vanhankaupungin ympäri noin kahden kilometrin matkan, ja sen päällä saa kävellä koko kierroksen. Se on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea, ja linnoitustorneista tunnetuin on [[Minčetan]] torni. Meren puolella kohoaa [[Lovrijenacin]] linnake, joka vartioi kaupunkia vuosisatojen ajan. Kävelyyn kannattaa varata aikaa, ja kierroksella käy vuodessa noin 1,2 miljoonaa ihmistä. Kaikki kävelevät, minä lensin.
+KYSYMYS: Kerro lisää: Minčetan
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Lovrijenacin linnake] 1301 Tarinan mukaan Dubrovnikin asukkaat rakensivat Lovrijenacin linnakkeen vain kolmessa kuukaudessa, kun he kuulivat Venetsian aikovan pystyttää oman linnoituksensa samalle kalliolle kaupungin länsipuolelle. Kun venetsialaiset laivat lopulta saapuivat tuomaan rakennustarvikkeita, linnake seisoi jo valmiina - ja laivat käännytettiin takaisin merelle. Ensimmäinen kirjallinen maininta linnakkeesta on vuodelta 1301. Linnake kohoaa 37 metrin korkeudessa meren yllä, ja sen pohjapiirros on kolmion muotoinen. Merta kohti osoittavat muurit ovat lähes 12 metriä paksut, mutta kaupunkiin päin katsovat seinät vain noin 60 senttimetriä - dubrovnikilaiset luottivat siihen, ettei heidän oma kaupunkinsa k…
+AIEMPI KYSYMYS: Kuinka pitkä Dubrovnikin muuri on ja saako sillä kävellä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sieltä näkee kauas. Muuri kiertää vanhankaupungin ympäri noin kahden kilometrin matkan, ja sen päällä saa kävellä koko kierroksen. Se on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea, ja linnoitustorneista tunnetuin on [[Minčetan]] torni. Meren puolella kohoaa [[Lovrijenacin]] linnake, joka vartioi kaupunkia vuosisatojen ajan. Kävelyyn kannattaa varata aikaa, ja kierroksella käy vuodessa noin 1,2 miljoonaa ihmistä. Kaikki kävelevät, minä lensin.
+KYSYMYS: Kerro lisää: Lovrijenacin
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+AIEMPI KYSYMYS: Mitä Libertas tarkoitti Dubrovnikin historiassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on latinaa, siis suvun kieltä. Libertas tarkoittaa vapautta, ja se oli [[Ragusan tasavallan]] tunnuslause ja lipun teksti. [[Lovrijenacin]] linnakkeen portin yläpuolella on latinankielinen kirjoitus, jonka mukaan vapautta ei myydä koko maailman kullalla. Tasavalta pysyi itsenäisenä vuosisatojen ajan neuvottelemalla ja maksamalla veroa naapureilleen, kunnes [[Napoleonin]] ajan Ranska lakkautti sen vuonna 1808.
+
+Latina on meidän sukumme kieltä, joten tuo kirjoitus kolahtaa kyyhkyyn erityisen lujaa. Vapaus kannattaa pitää, vaikka kulta kimaltelisi.
+KYSYMYS: Kerro lisää: Ragusan tasavallan
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mitä Libertas tarkoitti Dubrovnikin historiassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on latinaa, siis suvun kieltä. Libertas tarkoittaa vapautta, ja se oli [[Ragusan tasavallan]] tunnuslause ja lipun teksti. [[Lovrijenacin]] linnakkeen portin yläpuolella on latinankielinen kirjoitus, jonka mukaan vapautta ei myydä koko maailman kullalla. Tasavalta pysyi itsenäisenä vuosisatojen ajan neuvottelemalla ja maksamalla veroa naapureilleen, kunnes [[Napoleonin]] ajan Ranska lakkautti sen vuonna 1808.
+
+Latina on meidän sukumme kieltä, joten tuo kirjoitus kolahtaa kyyhkyyn erityisen lujaa. Vapaus kannattaa pitää, vaikka kulta kimaltelisi.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik: Euroopan vanhin apteekki] Fransiskaaniluostarin apteekki avattiin vuonna 1317 ja palvelee yhä asiakkaita — se on Euroopan vanhin yhtäjaksoisesti toiminut apteekki. Munkit valmistivat voiteita yrteistä, ja osa resepteistä on yhä käytössä.
+AIEMPI KYSYMYS: Mitä Dubrovnikin vanhasta apteekista tiedetään?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Ragusan tasavalta oli edelläkävijä kansanterveydessä. [[Fransiskaaniluostarin]] apteekki avattiin vuonna 1317, ja lähteiden mukaan se toimii yhä, mikä tekisi siitä Euroopan vanhimpiin kuuluvan. Munkit valmistivat siellä rohtoja yrteistä, ja nykyään myydään yhä perinteisiä voiteita. Samassa hengessä tasavalta määräsi jo vuonna 1377, että kulkutautialueilta saapuvien oli odotettava erillään, ennen kuin pääsivät kaupunkiin; niin syntyi [[karanteenin]] varhainen muoto. Tuntuu, että kaupunki oli ajastaan edellä.
+KYSYMYS: Kerro lisää: Fransiskaaniluostarin
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [null — kohdekartta / Kohdekartta: Santa Marian luoto] tuliperäinen luoto, 1800-luvun käyttö Santa Marian luoto on Santiagon rannan edustalla, Praian lahden suulla Gamboan rantaa vastapäätä. Tuliperäinen luoto tunnetaan myös vanhalla englanninkielisellä nimellä Quail Island. Luodolle rakennettiin 1800-luvun puolivälissä tullitalo ja varastoja. Rakennuksia käytettiin karanteeniin, joka siirtyi myöhemmin Ponta Temerosaan. Luoto ja varhaiset rakennukset olivat olemassa vuonna 1873; karanteenin toiminta vaihtui myöhemmin toiseen paikkaan.
+AIEMPI KYSYMYS: Mitä Dubrovnikin vanhasta apteekista tiedetään?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Ragusan tasavalta oli edelläkävijä kansanterveydessä. [[Fransiskaaniluostarin]] apteekki avattiin vuonna 1317, ja lähteiden mukaan se toimii yhä, mikä tekisi siitä Euroopan vanhimpiin kuuluvan. Munkit valmistivat siellä rohtoja yrteistä, ja nykyään myydään yhä perinteisiä voiteita. Samassa hengessä tasavalta määräsi jo vuonna 1377, että kulkutautialueilta saapuvien oli odotettava erillään, ennen kuin pääsivät kaupunkiin; niin syntyi [[karanteenin]] varhainen muoto. Tuntuu, että kaupunki oli ajastaan edellä.
+KYSYMYS: Kerro lisää: karanteenin
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+AIEMPI KYSYMYS: Mitä on rozata, Dubrovnikin jälkiruoka?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä pidän. Rozata on dubrovnikilaisen keittiön jälkiruoka, joka muistuttaa kreemikaramellia: se tehdään kananmunasta, maidosta ja sokerista, ja päällä on karamellikastike. Erikoisuutena on ruusulikööri [[rozulin]], jolla vanukas maustetaan. Se tarjoillaan kylmänä, ja se on tunnettu [[Dalmatian]] herkku. Muistan, että pullaa täällä on omana versionaan, mutta nimeä en tiedä.
+KYSYMYS: Kerro lisää: rozulin
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Mitä on rozata, Dubrovnikin jälkiruoka?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä pidän. Rozata on dubrovnikilaisen keittiön jälkiruoka, joka muistuttaa kreemikaramellia: se tehdään kananmunasta, maidosta ja sokerista, ja päällä on karamellikastike. Erikoisuutena on ruusulikööri [[rozulin]], jolla vanukas maustetaan. Se tarjoillaan kylmänä, ja se on tunnettu [[Dalmatian]] herkku. Muistan, että pullaa täällä on omana versionaan, mutta nimeä en tiedä.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [saintjohns — kaupunkilehti / Saint John's: Sataman kauppa ja torin ruoka] Redcliffe Quay ja Heritage Quay ovat Saint John’sin risteilymatkailun kauppapaikkoja. Redcliffe on historiallisempi alue, Heritage uudempi ostosympäristö. Kaupungin lounaisreunalla toimii myös tori, jossa myydään tuoreita kasviksia, lihaa ja kalaa. Heritage Quay ja Redcliffe Quay sijoittuvat risteilyalusten sataman yhteyteen. Keskustaan saapuva liikenne kokoaa myös hallinnon ja koulutuksen palveluja.
+AIEMPI KYSYMYS: Miten turismi on muuttanut Dubrovnikin vanhaakaupunkia?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on noin 500 metriä pitkä, ja kunnassa asuu noin 42 000 ihmistä, mutta pelkästään muureilla kävelee vuodessa noin 1,2 miljoonaa. [[Risteilyalusten]] päiväkävijät täyttävät pääkadun [[Stradunin]] ruuhkaksi, ja viranomaiset ovat rajoittaneet kävijämääriä ja laivojen saapumista. Alue kuuluu [[Unescon]] maailmanperintökohteisiin. Monet paikalliset ovat muuttaneet vanhastakaupungista pois, koska asuntoja on muutettu majoitukseksi.
+KYSYMYS: Kerro lisää: Risteilyalusten
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+AIEMPI KYSYMYS: Miten turismi on muuttanut Dubrovnikin vanhaakaupunkia?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on noin 500 metriä pitkä, ja kunnassa asuu noin 42 000 ihmistä, mutta pelkästään muureilla kävelee vuodessa noin 1,2 miljoonaa. [[Risteilyalusten]] päiväkävijät täyttävät pääkadun [[Stradunin]] ruuhkaksi, ja viranomaiset ovat rajoittaneet kävijämääriä ja laivojen saapumista. Alue kuuluu [[Unescon]] maailmanperintökohteisiin. Monet paikalliset ovat muuttaneet vanhastakaupungista pois, koska asuntoja on muutettu majoitukseksi.
+KYSYMYS: Kerro lisää: Stradunin
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+AIEMPI KYSYMYS: Miten turismi on muuttanut Dubrovnikin vanhaakaupunkia?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on noin 500 metriä pitkä, ja kunnassa asuu noin 42 000 ihmistä, mutta pelkästään muureilla kävelee vuodessa noin 1,2 miljoonaa. [[Risteilyalusten]] päiväkävijät täyttävät pääkadun [[Stradunin]] ruuhkaksi, ja viranomaiset ovat rajoittaneet kävijämääriä ja laivojen saapumista. Alue kuuluu [[Unescon]] maailmanperintökohteisiin. Monet paikalliset ovat muuttaneet vanhastakaupungista pois, koska asuntoja on muutettu majoitukseksi.
+KYSYMYS: Kerro lisää: Unescon
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miksi Unkarissa on niin paljon kylpylöitä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vastaus on maan alla. Unkari sijaitsee [[Karpaattien altaan]] pohjalla, jossa maankuori on ohut ja kuuma vesi nousee helposti pintaan; lämpimiä lähteitä on yli tuhat. Kylpeminen on vanhaa perua: roomalaiset käyttivät lähteitä, ja [[ottomaanien]] hallinnon aikana rakennettiin kupolikattoisia kylpylöitä. Nykyään kylpylät ovat osa arkea, ja niissä istutaan pakkasellakin. Tunnettu on esimerkiksi [[Hévíz]]-järvi Balatonin lähellä. Kyyhky pitäisi lämpimästä lähteestä.
+KYSYMYS: Kerro lisää: Karpaattien altaan
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Podgorica — kaupunkilehti / Podgorica: Ottomaanien kaupunki joen rannalla] Ottomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat siihen suuren linnoituksen sekä torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Stara Varoš oli sen ydin 1400–1800-luvuilla. Sahat kula -kellotorni valmistui vuonna 1667 Hadži-paša Osmanagićin rakennuttamana. Vuonna 1864 Podgoricasta tuli Skutarin vilajetin kaza. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878, jolloin siellä oli arvioiden mukaan noin 8 000 asukasta.
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+AIEMPI KYSYMYS: Miksi Unkarissa on niin paljon kylpylöitä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vastaus on maan alla. Unkari sijaitsee [[Karpaattien altaan]] pohjalla, jossa maankuori on ohut ja kuuma vesi nousee helposti pintaan; lämpimiä lähteitä on yli tuhat. Kylpeminen on vanhaa perua: roomalaiset käyttivät lähteitä, ja [[ottomaanien]] hallinnon aikana rakennettiin kupolikattoisia kylpylöitä. Nykyään kylpylät ovat osa arkea, ja niissä istutaan pakkasellakin. Tunnettu on esimerkiksi [[Hévíz]]-järvi Balatonin lähellä. Kyyhky pitäisi lämpimästä lähteestä.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+AIEMPI KYSYMYS: Miksi Unkarissa on niin paljon kylpylöitä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vastaus on maan alla. Unkari sijaitsee [[Karpaattien altaan]] pohjalla, jossa maankuori on ohut ja kuuma vesi nousee helposti pintaan; lämpimiä lähteitä on yli tuhat. Kylpeminen on vanhaa perua: roomalaiset käyttivät lähteitä, ja [[ottomaanien]] hallinnon aikana rakennettiin kupolikattoisia kylpylöitä. Nykyään kylpylät ovat osa arkea, ja niissä istutaan pakkasellakin. Tunnettu on esimerkiksi [[Hévíz]]-järvi Balatonin lähellä. Kyyhky pitäisi lämpimästä lähteestä.
+KYSYMYS: Kerro lisää: Hévíz
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+- [Izmir — kaupunkilehti / Arki: Sämpylä sai nimensä muodostaan] Kumru on turkiksi kyyhkynen, ja voileipä on saanut nimensä muodostaan. Alkuperäinen kumru oli renkaan muotoinen ja kokonaan seesaminsiementen peitossa. Nykyinen versio syntyi İzmirissä 1900-luvun puolivälissä ja levisi nopeasti muualle. Väliin pannaan juustoa, tomaattia ja sucukia eli tulista makkaraa, ja osa myyjistä lisää suolakurkkua, tulista paprikaa, majoneesia ja ketsuppia. Leipä on pehmeää, ja osa leipomoista ja ravintoloista nostattaa taikinan kikhernejuurella. Kumrua myydään katuruokana.
+AIEMPI KYSYMYS: Mitä eroa on unkarilaisella gulyásilla ja pörköltillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on kuuluisa väärinkäsitys. Unkarissa gulyás on keitto, jossa on lientä, naudanlihaa, perunaa ja [[paprikaa]], ja se syödään lusikalla. Muualla Euroopassa gulassiksi kutsuttu paksu pata on Unkarissa pörkölt. Sana gulyás tarkoittaa karjapaimenta, sillä keitto keitettiin alun perin padassa laitumella. Paprika tuli maahan [[ottomaanien]] mukana 1500-luvulla. Eli kaikki kauppahallista.
+KYSYMYS: Kerro lisää: paprikaa
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Kieli: Sukulaisia kaukaa pohjoisesta] Tuhansia vuosia — Unkari ei kuulu indoeurooppalaisiin kieliin kuten sen naapurit, vaan uralilaisiin kieliin. Samaan joukkoon kuuluvat suomi, viro ja saame sekä joukko pienempiä kieliä Uralin molemmin puolin. Sukulaisuus on kaukainen: unkarilainen ja suomalainen eivät ymmärrä toisiaan lainkaan. Yhteiset sanat näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun kansat erosivat toisistaan tuhansia vuosia sitten.
+AIEMPI KYSYMYS: Mitkä sanat ovat yhteisiä suomessa ja unkarissa?
+AIEMPI VASTAUS (Livia):
+No niin. Tämä on kielellinen aarre. Unkari kuuluu [[uralilaisiin kieliin]] samoin kuin suomi, viro ja [[saame]], mutta sukulaisuus on kaukainen: tuhansia vuosia sitten erkaantuneet kielet eivät ole ymmärrettäviä toisilleen. Silti vanhimmat sanat vastaavat: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Kyyhky ymmärtää molempia aika huonosti.
+KYSYMYS: Kerro lisää: uralilaisiin kieliin
