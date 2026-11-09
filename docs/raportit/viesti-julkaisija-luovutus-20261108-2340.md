@@ -150,3 +150,24 @@ Seuranta: tail -f jonoloki | grep " AJO \|LOPPU\|VIKA" (Monitor).
   CJ NUI opas-m 6ce1efd49 iphone + ipad (sk-m2) → NUI katsoo m2-saapui; rivi NUI:lle.
   CL PK 1d-alkuvarjo0/1 5ed43b793 iphone → lokit/pk-1d-alkuvarjo{0,1}-5ed43b793 → kuvat + kehysajat (jos lokissa) PK:lle.
 - Monitor: tail -n 0 -f jonoloki | grep -E " AJO [A-Z+]+ |LOPPU|VIKA" – käynnistä HETI aloituksessa ja tarkista jonolokista luovutuksen jälkeen valmistuneet (BS jäi minulta 11.48 väliin).
+
+## LISÄYS 9.11. 13.5x (TUOREIN; konteksti 25 % → nollaus)
+- JUNA 223 = c11314ade PAIKALLISESTI (b0c6957c2 + VS vesi ff; PT kuittasi, OMISTAJA 13.51 "Kelpaa"); testit AJOSSA (T/juna223-vesi-*.txt, sh T/juna223-vesi-testit.sh).
+  Vihreänä: git -C /Users/Shared/Claude/wt/julkaisija-juna-221 push natiivi-backup HEAD:julkaisija/juna-223 → nohup zsh T/pieni-juna.zsh c11314ade → rivi PT:lle (build + mitä muuttui selkokielellä).
+  Pushattu kärki nyt b0c6957c2 = 82c26c097 + NUI versiorivi 4ab1852b2 + NUI opas-m 6ce1efd49 + KS nostot-kysymykset 2c44703fe + PK sauva aina ff0318ba2 + Lontoo oikea koko c0d5fda05.
+- PIENI iPAD (OMISTAJA 13.03, PT): pysyvä linja – jokainen PT:n kuittaama kokonaisuus → heti pieni iPad + rivi VAIN PT:lle (PT kertoo KK:lle). Asennettu nyt c0260c5eb (13.23).
+  Uudempi kärki → tapa odottava pieni-juna (vain jos lapsi pelkkä sleep) ja aja uusin. ☰-kuva (versiorivi) PT:lle SEURAAVAN asennuksen yhteydessä, ei kesken omistajan pelin
+  (PT 13.2x: "ei nyt"); vaatii ipad-skenaario.zsh-tyyppisen ajon pienellä iPadilla (U=00008142-0019686E02F3801C), ei poistolippua.
+- OPPI 9: linjoilla EI jonojärjestystä (vapaa/portti pollaavat) → vanha odottaja voi nälkiintyä yli tunnin (CF, CL 61 min). Korjaus: kill -STOP uudemmat
+  mac-yleis-odottajat (vain jos lapsi pelkkä sleep, EI kun lapsena portin `sleep 60`-aliprosessi = juuri alkamassa) ja CONT kun vanha alkanut (T/etuajo-*.zsh).
+  NUI palkki-aina-2-ipad-pysty (pid 40363) odottanut 13.12 alkaen → anna etuajo, jos ei pian ala.
+- Kopiointikilpa: CS maisemakaari-1 "kuvia 0/4" vaikka kuvat otettiin → kuvat löytyivät lokit/esikatselu-<aika>/ ja kopioitiin käsin. Tarkista aina kansio, jos kuvia 0.
+- Raportoitu tällä jaksolla: CP ipad, CQ, CR versiorivi (Macilla vain "v0.1.0" = odotettu), CS, CU (mb-2 kohokuva ok), CV (p-5a terävä lähellä → NUI hyväksyi), CJ, CH+CI+DA → KS,
+  DC → PK, CF → VS, CL → PK (kehysajat vain peitto 20 ms), pulu-lahteet-iphone → PK (ipad jonossa).
+- AJOSSA / JONOSSA (nohup, omat, T/jono-<x>.zsh):
+  CX NUI palkki-aina-2 74e72a4a4: iphone/ipad/vaaka valmiit (iphone ilmoitettu NUI:lle), ipad-pysty odottaa → kaikki 4 katsottuna NUI:lle.
+  DB NUI paikkapalkki-1 fb77e12b1 iphone/vaaka/ipad CX:n jälkeen → NUI. CM VS kohoaurinko4 cd74573cd iphone → VS.
+  CY PK napit-kuulto 620425fb7 x3, CZ PK tappi-kierto e0f57e42c x2, DE PK pulu-lahteet e51b66a98 ipad → PK.
+  DD NS lentokorkeus-1 1e55e642a: iphone valmis 13.43, ipad jonossa → molemmat täysikokoisena katsottuna NS:lle (kerroin 4 vs 2, vuoret lennolla).
+  CW peruttu (ipad), CT katkaistu (tilalle CX).
+- Monitor: tail -n 0 -f jonoloki | grep -E " AJO [A-Z+0-9]+ |LOPPU|VIKA|pieni iPad".
