@@ -1,0 +1,118 @@
+{
+  "createdAt": "2026-11-09T12:32:59.724714+00:00",
+  "taskNumbers": [
+    2201,
+    2202
+  ],
+  "ownerInstruction": "tee tuosta viimeisimmästä drone-versiosta pysty- ja vaakakoot niin että ne sopivat myös peliin ja lähetä Cloudelle.",
+  "scope": "latest owner-selected v10 daylight sea cliff, banked black drone facing cliff; no visible sun",
+  "sourceImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-dji-flycart-20261109/drone-merikallio-kallistus-mukautuva-varjo-v10.png",
+  "sourceSha256": "f368c986e4f87e0f8b4b73e29393123632f1a86ee24d81d9eb4aaa9a6648fb5f",
+  "technicalOrder": {
+    "path": "posti/paatoimittaja-codex-kuvat-drone-vastavalo-puhelinmuodot-20261109.md",
+    "commit": "85c59f2eedac046bc76f32b314886bb2798af0a9",
+    "blob": "61a076609801cab3bb4fb0288aa07e17030e208a"
+  },
+  "scopeOverride": "Direct owner instruction resumed the held format tasks and selected latest v10 sea-cliff scene instead of the older snow/mountain reference. Prior snow delivery remains unchanged.",
+  "mode": "built-in image_gen; full new reference-based composition per selected variant",
+  "generationCalls": 3,
+  "generationHistory": [
+    {
+      "kind": "landscape",
+      "status": "generated",
+      "startedAt": "2026-11-09T12:26:09.906207+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-77b1a43b-d3db-41f7-a567-9828637b33aa.png",
+      "localOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/generated-vaaka.png",
+      "nativeDimensions": [
+        1847,
+        851
+      ],
+      "selected": true
+    },
+    {
+      "variant": "portrait",
+      "status": "generated",
+      "startedAt": "2026-11-09T12:28:47.822844+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-3dea173d-c28e-4ad3-adc6-6a6676747378.png",
+      "localOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/generated-pysty.png",
+      "nativeDimensions": [
+        784,
+        2007
+      ],
+      "selected": false,
+      "qaNote": "Portrait composition too close to horizontal margins; preserve candidate, regenerate with wider safety margins."
+    },
+    {
+      "kind": "portrait-v2",
+      "status": "generated",
+      "startedAt": "2026-11-09T12:30:00.480103+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-6ff5bccc-f0ca-4fbe-9adf-361709ac6174.png",
+      "localOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/generated-pysty-v2.png",
+      "nativeDimensions": [
+        784,
+        2007
+      ],
+      "selected": true
+    }
+  ],
+  "selectedPrompts": "PROMPTS.txt",
+  "technicalExports": [
+    {
+      "source": "generated-vaaka.png",
+      "destination": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/package/drone-merikallio-vaaka-2622x1206.png",
+      "nativeDimensions": [
+        1847,
+        851
+      ],
+      "resampledDimensions": [
+        2622,
+        1208
+      ],
+      "finalDimensions": [
+        2622,
+        1206
+      ],
+      "method": "macOS sips proportional width resample followed by centred height crop; no creative pixel editing, no AI upscaling"
+    },
+    {
+      "source": "generated-pysty-v2.png",
+      "destination": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/package/drone-merikallio-pysty-1206x2622.png",
+      "nativeDimensions": [
+        784,
+        2007
+      ],
+      "resampledDimensions": [
+        1206,
+        3087
+      ],
+      "finalDimensions": [
+        1206,
+        2622
+      ],
+      "method": "macOS sips proportional width resample followed by centred height crop; no creative pixel editing, no AI upscaling"
+    }
+  ],
+  "imageAlteration": "Only proportional macOS sips resampling and centered crop after generation. No local creative retouching or AI upscaling. Generated originals preserved locally.",
+  "finalFiles": [
+    {
+      "file": "drone-merikallio-vaaka-2622x1206.png",
+      "dimensions": [
+        2622,
+        1206
+      ],
+      "mode": "RGB",
+      "bytes": 4433699,
+      "sha256": "a9f1bb560899b6888a714244b8221a304360fc9561934638fd43c90fe199596c"
+    },
+    {
+      "file": "drone-merikallio-pysty-1206x2622.png",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "mode": "RGB",
+      "bytes": 4117850,
+      "sha256": "debf3bcd052da2b950b846d7cbdb10f7896eff25af35f0b7be1d468d24c602be"
+    }
+  ]
+}

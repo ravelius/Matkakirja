@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-11-09T12:32:59.724714+00:00",
+  "status": "PASS",
+  "files": [
+    {
+      "file": "drone-merikallio-vaaka-2622x1206.png",
+      "dimensions": [
+        2622,
+        1206
+      ],
+      "mode": "RGB",
+      "bytes": 4433699,
+      "sha256": "a9f1bb560899b6888a714244b8221a304360fc9561934638fd43c90fe199596c"
+    },
+    {
+      "file": "drone-merikallio-pysty-1206x2622.png",
+      "dimensions": [
+        1206,
+        2622
+      ],
+      "mode": "RGB",
+      "bytes": 4117850,
+      "sha256": "debf3bcd052da2b950b846d7cbdb10f7896eff25af35f0b7be1d468d24c602be"
+    }
+  ],
+  "checks": {
+    "exactRequestedPixelDimensions": true,
+    "pngDecodesSuccessfully": true,
+    "fullDroneAndRotorDiscsInsideFrame": true,
+    "portraitHorizontalMarginsAtLeastFivePercent": true,
+    "landscapeVerticalMarginsAtLeastFivePercent": true,
+    "centeredLandscapeIpadFourByThreeCropInspected": true,
+    "noPeopleTextLogosOrUI": true,
+    "noVisibleSun": true,
+    "bankedRearThreeQuarterDroneFacingCliff": true,
+    "referenceColourAndMaterialDirectionPreserved": true
+  },
+  "visualReviewMethod": "Assistant inspected both final exported PNGs and the separate centered 1608x1206 landscape iPad crop. Margins are conservative visual estimates, not automatic aircraft segmentation.",
+  "approximateNativeSubjectBounds": {
+    "landscape": [
+      450,
+      140,
+      1350,
+      560
+    ],
+    "portrait": [
+      65,
+      725,
+      695,
+      1080
+    ]
+  },
+  "minimumEstimatedHorizontalMarginPortraitPercent": 8.2,
+  "minimumEstimatedHorizontalMarginIpadCropPercent": 8.2,
+  "shadowAssessment": "Shadow is broken and stretched over visible cliff relief. Artistic photographic review only; no physically simulated light/geometry proof.",
+  "technicalExport": [
+    {
+      "source": "generated-vaaka.png",
+      "destination": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/package/drone-merikallio-vaaka-2622x1206.png",
+      "nativeDimensions": [
+        1847,
+        851
+      ],
+      "resampledDimensions": [
+        2622,
+        1208
+      ],
+      "finalDimensions": [
+        2622,
+        1206
+      ],
+      "method": "macOS sips proportional width resample followed by centred height crop; no creative pixel editing, no AI upscaling"
+    },
+    {
+      "source": "generated-pysty-v2.png",
+      "destination": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/drone-merikallio-pelimuodot-20261109/package/drone-merikallio-pysty-1206x2622.png",
+      "nativeDimensions": [
+        784,
+        2007
+      ],
+      "resampledDimensions": [
+        1206,
+        3087
+      ],
+      "finalDimensions": [
+        1206,
+        2622
+      ],
+      "method": "macOS sips proportional width resample followed by centred height crop; no creative pixel editing, no AI upscaling"
+    }
+  ],
+  "runtimeChecked": false,
+  "gameIntegrated": false,
+  "published": false,
+  "receiverAcceptance": "pending",
+  "ownerSelectedSourceAndAuthorizedDelivery": true,
+  "separateOwnerReviewOfTheseTwoExports": "not separately requested or recorded"
+}
