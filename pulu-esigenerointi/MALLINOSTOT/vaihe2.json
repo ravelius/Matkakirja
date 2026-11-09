@@ -1,0 +1,377 @@
+[
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "Seinen",
+  "kysymys": "Kerro lisää: Seinen",
+  "vastaus": "Seine on Ranskan merkittävimpiä jokia: se saa alkunsa Burgundin ylängöltä, virtaa Pariisin halki ja laskee Englannin kanaaliin. Pariisin keskustassa joessa on saari nimeltä [[Île de la Cité]], joka on kaupungin vanhin ydin ja jolla sijaitsevat muun muassa [[Notre-Dame]] ja Sainte-Chapelle. Joen kaiteisiin on pultattu vihreitä peltilaatikoita, joissa myydään käytettyjä [[kirjoja]]. Kauppiaita on runsaat kaksisataa ja laatikoita lähes yhdeksänsataa kolmen kilometrin matkalla. Kaupunki päättää säännöt: yksi myyjä saa kahdeksan metriä kaidetta ja enintään neljä laatikkoa.",
+  "linkit": [
+   "Île de la Cité",
+   "Notre-Dame",
+   "kirjoja"
+  ],
+  "jatkot": [
+   "Mikä Île de la Cité on?",
+   "Miksi Seinen kirjalaatikot ovat vihreitä?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "Britannia",
+  "kysymys": "Kerro lisää: Britannia",
+  "vastaus": "Britannia tarkoittaa tässä yhteydessä Ison-Britannian valtiota, joka oli Ranskan pitkäaikainen kilpailija [[Napoleonin sotien]] aikana. [[Waterloon taistelun]] jälkeen vuonna 1815 britit veivät hänet Atlantilla sijaitsevalle Saint Helenan saarelle, missä hän kuoli vuonna 1821. Vuonna 1840 Britannian hallitus suostui luovuttamaan jäännökset Ranskalle, jota hallitsi tuolloin kuningas [[Ludvig Filippus]]. Jäännökset tuotiin laivalla Pariisiin Invalideihin, ja kupolin alle valmistuneeseen hautaan ne siirrettiin vuonna 1861.",
+  "linkit": [
+   "Napoleonin sotien",
+   "Waterloon taistelun",
+   "Ludvig Filippus"
+  ],
+  "jatkot": [
+   "Miksi Napoleon oli Saint Helenan saarella?",
+   "Mikä oli Waterloon taistelu?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "kupolikirkon",
+  "kysymys": "Kerro lisää: kupolikirkon",
+  "vastaus": "Kupolikirkko eli Dôme des Invalides on Invalidien sotilaskodin yhteyteen rakennettu kuninkaan oma kirkko. Sen suunnitteli arkkitehti [[Jules Hardouin-Mansart]], ja se rakennettiin [[Ludvig XIV:n]] aikana. Kullattu kupoli nousee 107 metriin. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin [[krypta]], jonka keskellä sarkofagi lepää.",
+  "linkit": [
+   "Jules Hardouin-Mansart",
+   "Ludvig XIV:n",
+   "krypta"
+  ],
+  "jatkot": [
+   "Millainen Napoleonin hautakrypta on?",
+   "Mitä muuta Invalidien alueella on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "Sarkofagi",
+  "kysymys": "Kerro lisää: Sarkofagi",
+  "vastaus": "Sarkofagi on Napoleonin hautamonumentti Invalidien kupolin alle kaivetun [[kryptan]] keskellä. Krypta on avoin, joten sarkofagia katsotaan ylhäältä kaiteen yli. Hautamonumentin suunnitteli arkkitehti [[Louis Visconti]], ja sarkofagi on veistetty punaisesta [[kvartsiitista]]. Napoleonin ruumis lepää sen sisällä useiden sisäkkäisten arkkujen suojassa.",
+  "linkit": [
+   "kryptan",
+   "Louis Visconti",
+   "kvartsiitista"
+  ],
+  "jatkot": [
+   "Miksi Napoleon oli Saint Helenan saarella?",
+   "Mitä Invalidien alueella on muuta nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "Institution nationale des Invalides",
+  "kysymys": "Kerro lisää: Institution nationale des Invalides",
+  "vastaus": "Institution nationale des Invalides on valtion laitos, jonka juuret ovat [[Ludvig XIV:n]] vuonna 1670 antamassa määräyksessä rakentaa koti haavoittuneille ja vanhentuneille sotilaille. [[Libéral Bruantin]] suunnittelemaan taloon muuttivat ensimmäiset asukkaat vuonna 1674, ja parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki, jossa oli oma sairaala ja kirkko. Nykyisin laitos jatkaa hoivatehtäväänsä, ja samassa rakennuskompleksissa toimii [[Musée de l'Armée]].",
+  "linkit": [
+   "Ludvig XIV:n",
+   "Libéral Bruantin",
+   "Musée de l'Armée"
+  ],
+  "jatkot": [
+   "Mitä asukkaat tekivät Invalidien verstaissa?",
+   "Miten Invalidien hoitotyö on muuttunut?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "sotaveteraaneja",
+  "kysymys": "Kerro lisää: sotaveteraaneja",
+  "vastaus": "Sotaveteraaneilla tarkoitetaan entisiä sotilaita, jotka ovat palvelleet sodassa. Invalidien tapauksessa kyse oli alun perin [[Ludvig XIV:n]] sotien haavoittuneista ja vanhentuneista sotilaista, jotka kerjäsivät Pariisin kaduilla, kunnes kuningas määräsi heille rakennettavaksi kodin vuonna 1670. Asukkaat tekivät verstaissa kenkiä, univormuja ja [[kuvakudoksia]]. Kuninkaalle rakennettiin lisäksi oma kirkko, [[Dôme des Invalides]]. Nykyisin laitos hoitaa vakavasti vammautuneita veteraaneja.",
+  "linkit": [
+   "Ludvig XIV:n",
+   "kuvakudoksia",
+   "Dôme des Invalides"
+  ],
+  "jatkot": [
+   "Miksi kuvakudoksia valmistettiin Invalideissa?",
+   "Kuka suunnitteli Invalidien alkuperäisen rakennuksen?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Invalidit",
+  "kasite": "armeijamuseota",
+  "kysymys": "Kerro lisää: armeijamuseota",
+  "vastaus": "Musée de l'Armée on Invalidien suuri armeijamuseo, joka esittelee aseita, [[haarniskoita]], univormuja ja muita sotahistoriallisia esineitä keskiajalta [[toiseen maailmansotaan]]. Museo täyttää suuren osan Invalidien rakennuskompleksista, jossa toimii samalla edelleen sotilaskoti. Samassa kokonaisuudessa on myös [[Musée des Plans-Reliefs]], jonka kokoelmaan kuuluu linnoituskaupunkien pienoismalleja. Invalidien asevarastosta kansanjoukko otti heinäkuussa 1789 lähes 30 000 kivääriä.",
+  "linkit": [
+   "haarniskoita",
+   "toiseen maailmansotaan",
+   "Musée des Plans-Reliefs"
+  ],
+  "jatkot": [
+   "Mitä Musée des Plans-Reliefs esittelee?",
+   "Mitä Invalidien asevarastolle tapahtui vuonna 1789?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "Orjantappurakruunu",
+  "kysymys": "Kerro lisää: Orjantappurakruunu",
+  "vastaus": "Orjantappurakruunu on pyhäinjäännös, jota pidettiin Kristuksen päähän pantuna kruununa. Kuningas Ludvig IX osti sen vuonna 1239 [[Konstantinopolin]] keisarilta [[Baldwin II:lta]] hintaan 135 000 livreä. Säilytystä varten rakennettiin kappeli [[Île de la Citén]] kuninkaanpalatsin pihalle, ja se vihittiin huhtikuussa 1248. Vallankumouksessa pyhäinjäännökset vietiin kappelista pois.",
+  "linkit": [
+   "Konstantinopolin",
+   "Baldwin II:lta",
+   "Île de la Citén"
+  ],
+  "jatkot": [
+   "Millainen Sainte-Chapelle on sisältä?",
+   "Miksi Baldwin II myi kruunun?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "Pariisista",
+  "kysymys": "Kerro lisää: Pariisista",
+  "vastaus": "Pariisi on Ranskan pääkaupunki, ja se sijaitsee [[Seinen]] varrella. Kaupungin vanhin ydin on joessa sijaitseva [[Île de la Cité]], jolla ovat kuninkaanpalatsi ja Sainte-Chapelle. Ludvig IX:n aikana 1200-luvulla Pariisista tuli pyhäinjäännöstensä ansiosta kristikunnan merkittävä keskus. Heinäkuussa 1789 kansa valtasi [[Bastiljin]], ja 1800-luvulla paroni [[Haussmannin]] johtamat työt avasivat kaupunkiin leveät bulevardit.",
+  "linkit": [
+   "Seinen",
+   "Île de la Cité",
+   "Bastiljin",
+   "Haussmannin"
+  ],
+  "jatkot": [
+   "Mitä Haussmannin uudistus muutti Pariisissa?",
+   "Mitä Bastiljin valtauksessa tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "Ludvig IX:stä",
+  "kysymys": "Kerro lisää: Ludvig IX:stä",
+  "vastaus": "Ludvig IX oli Ranskan kuningas 1200-luvulla, ja hänet kanonisoitiin pyhimykseksi, joten hänet tunnetaan myös nimellä Pyhä Ludvig. Hän osti vuonna 1239 [[orjantappurakruunun]] ja rakennutti sen säilytykseen [[Sainte-Chapellen]]. Hän lähti [[ristiretkelle]] Egyptiin ja kuoli myöhemmin ristiretkellä Pohjois-Afrikassa vuonna 1270.",
+  "linkit": [
+   "orjantappurakruunun",
+   "Sainte-Chapellen",
+   "ristiretkelle"
+  ],
+  "jatkot": [
+   "Miksi Ludvig IX kanonisoitiin pyhimykseksi?",
+   "Mitä ristiretket olivat?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "livreä",
+  "kysymys": "Kerro lisää: livreä",
+  "vastaus": "Livre oli Ranskan vanha rahayksikkö ja laskentayksikkö, jonka nimi tulee latinan sanasta libra, joka tarkoittaa puntaa. Se oli käytössä vuosisatoja, kunnes vallankumouksen jälkeen [[frangi]] korvasi sen. Sen mittakaavasta kertoo, että pyhäinjäännöksestä maksettu 135 000 livreä oli yli kolminkertainen kappelin hintaan nähden. Vuonna 1785 kardinaali [[de Rohan]] osti hovin jalokivikauppiaiden kokoaman 647 timantin kaulanauhan hintaan 1,6 miljoonaa livreä, vaikka kuningatar [[Marie Antoinette]] ei ollut sitä tilannut.",
+  "linkit": [
+   "frangi",
+   "de Rohan",
+   "Marie Antoinette"
+  ],
+  "jatkot": [
+   "Mikä oli kaulakorujuttu vuonna 1785?",
+   "Milloin frangi otettiin käyttöön Ranskassa?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "Ranskan vallankumouksen",
+  "kysymys": "Kerro lisää: Ranskan vallankumouksen",
+  "vastaus": "Ranskan vallankumous alkoi vuonna 1789, kun Pariisin kansa valtasi [[Bastiljin]] 14. heinäkuuta. Samana aamuna väkijoukko oli hakenut kiväärit Invalidien asevarastosta, mutta ruutia ei löytynyt. Vallankumous kaatoi monarkian, ja kuningas [[Ludvig XVI]] teloitettiin vuonna 1793. Samana vuonna elokuussa [[Louvre]] avattiin kaikille kansalaisille museona, ja Sainte-Chapellesta pyhäinjäännökset vietiin pois.",
+  "linkit": [
+   "Bastiljin",
+   "Ludvig XVI",
+   "Louvre"
+  ],
+  "jatkot": [
+   "Miten Louvresta tuli museo?",
+   "Mitä Bastiljin valtauksen jälkeen tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "restauroinnissa",
+  "kysymys": "Kerro lisää: restauroinnissa",
+  "vastaus": "Sainte-Chapellen restaurointi 1800-luvulla oli laaja työ, jossa ikkunat korjattiin, puuttuvia lasin osia tehtiin uudelleen ja kappeli sai uuden tornin. Työtä johtivat arkkitehdit [[Félix Duban]] ja [[Jean-Baptiste Lassus]], ja myöhemmin työhön osallistui [[Eugène Viollet-le-Duc]]. Lassus ja Viollet-le-Duc restauroivat samoihin aikoihin myös [[Notre-Damen]] kirkkoa. Restauroinnin ansiosta noin kaksi kolmasosaa lasimaalauksista on yhä alkuperäisiä 1200-luvulta.",
+  "linkit": [
+   "Félix Duban",
+   "Jean-Baptiste Lassus",
+   "Eugène Viollet-le-Duc",
+   "Notre-Damen"
+  ],
+  "jatkot": [
+   "Kuka oli Eugène Viollet-le-Duc?",
+   "Millainen Sainte-Chapellen torni on?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
+  "kasite": "lasimaalauksista",
+  "kysymys": "Kerro lisää: lasimaalauksista",
+  "vastaus": "Lasimaalaukset ovat Sainte-Chapellen tunnetuin piirre. [[Yläkappelin]] seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat [[Raamatun]] kohtausta, jotka on koottu värillisistä lasipaloista lyijyllä toisiinsa liitettyinä. Noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Rakennusta pidetään [[gotiikan]] merkkiteoksena, jossa seinä on muuttunut valoa läpäiseväksi kehykseksi.",
+  "linkit": [
+   "Yläkappelin",
+   "Raamatun",
+   "gotiikan"
+  ],
+  "jatkot": [
+   "Mitä kohtauksia ikkunat esittävät?",
+   "Miten keskiajan lasimaalauksia tehtiin?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "maailmannäyttelyn",
+  "kysymys": "Kerro lisää: maailmannäyttelyn",
+  "vastaus": "Maailmannäyttely on suuri kansainvälinen näyttely, jossa maat esittelevät teollisuuttaan, tekniikkaansa ja taidettaan. Lontoossa vuonna 1851 järjestetyn näyttelyn hallina oli lasista ja raudasta rakennettu [[Kristallipalatsi]]. Pariisi isännöi näyttelyitä muun muassa vuosina 1855 ja 1900, ja vuoden 1889 näyttelyä varten rakennettiin [[Eiffel-torni]]. Vuoden 1900 näyttelyyn valmistuivat Grand Palais ja Aleksanteri III:n silta.",
+  "linkit": [
+   "Kristallipalatsi",
+   "Eiffel-torni"
+  ],
+  "jatkot": [
+   "Mikä oli Kristallipalatsi Lontoossa?",
+   "Miksi Eiffel-torni rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "Palais de l'Industrie",
+  "kysymys": "Kerro lisää: Palais de l'Industrie",
+  "vastaus": "Palais de l'Industrie oli vuoden 1855 maailmannäyttelyä varten rakennettu suuri lasi- ja rautahalli [[Champs-Élysées'n]] läheisyydessä. Näyttelyn järjesti keisari [[Napoleon III:n]] Ranska. Halli purettiin vuoden 1900 näyttelyn tieltä, ja sen paikalle nousi [[Grand Palais]]. Uusi palatsi sai kivijulkisivun, mutta sen taakse kätkeytyi teräsrunkoinen halli.",
+  "linkit": [
+   "Champs-Élysées'n",
+   "Napoleon III:n",
+   "Grand Palais"
+  ],
+  "jatkot": [
+   "Miksi Palais de l'Industrie purettiin?",
+   "Mitä Grand Palais'ssa on pidetty?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "Aleksanteri III:n silta",
+  "kysymys": "Kerro lisää: Aleksanteri III:n silta",
+  "vastaus": "Aleksanteri III:n silta on Seinen ylittävä teräskaarisilta, joka valmistui vuoden 1900 maailmannäyttelyyn. Se nimettiin Venäjän tsaarin [[Aleksanteri III:n]] mukaan Ranskan ja Venäjän liittolaisuuden merkiksi, ja sen peruskiven laski tsaari [[Nikolai II]] vuonna 1896. Silta on koristeltu kullatuin veistoksin ja koristeellisin lyhdyin, ja se johtaa suoraan Grand Palais'n eteen sekä toiseen suuntaan kohti [[Invalidien]] aluetta.",
+  "linkit": [
+   "Aleksanteri III:n",
+   "Nikolai II",
+   "Invalidien"
+  ],
+  "jatkot": [
+   "Millaisia koristeita Aleksanteri III:n sillassa on?",
+   "Mitä Invalidien edustalla on?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "Petit Palais",
+  "kysymys": "Kerro lisää: Petit Palais",
+  "vastaus": "Petit Palais on Grand Palais'n vastapäätä sijaitseva palatsi, joka rakennettiin vuoden 1900 maailmannäyttelyyn. Sen suunnitteli arkkitehti [[Charles Girault]]. Rakennuksessa toimii nykyisin Pariisin kaupungin taidemuseo, ja pysyvät kokoelmat ovat maksutta nähtävillä. Pienen ja suuren palatsin välinen katu johtaa [[Aleksanteri III:n sillalle]] ja sen yli Invalidien suuntaan.",
+  "linkit": [
+   "Charles Girault",
+   "Aleksanteri III:n sillalle"
+  ],
+  "jatkot": [
+   "Mitä taidetta Petit Palais'ssa on esillä?",
+   "Miksi Grand Palais ja Petit Palais rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "lasikatto",
+  "kysymys": "Kerro lisää: lasikatto",
+  "vastaus": "Grand Palais'n lasikatto peittää päähallin teräsrungon, ja sitä on usein kutsuttu Euroopan suurimmaksi lasikatoksi; sen pinta-ala on noin 13 500 neliömetriä. Ohut teräsrunko kantaa laajan katon ja päästää valon sisään, mikä teki lasi- ja rautarakenteista suosittuja 1800-luvulla esimerkiksi [[maailmannäyttely]]jen halleissa ja [[rautatieasemilla]]. Katto vaatii jatkuvaa huoltoa, sillä [[ruoste]] ja vesivuodot heikentävät rakennetta, ja se kunnostettiin perusteellisesti ennen vuoden 2024 [[olympialaisia]].",
+  "linkit": [
+   "maailmannäyttely",
+   "rautatieasemilla",
+   "ruoste",
+   "olympialaisia"
+  ],
+  "jatkot": [
+   "Mitä Grand Palais'ssa on pidetty?",
+   "Miksi Grand Palais'n lasikatto ruostui?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "niitti",
+  "kysymys": "Kerro lisää: niitti",
+  "vastaus": "Niitti on metallinen kiinnitystappi, jolla teräs- ja rautaosat liitetään toisiinsa. Se kuumennetaan hehkuvaksi, työnnetään reikään ja takotaan päästä leveäksi, jolloin se jäähtyessään vetää osat tiukasti yhteen. [[Eiffel-tornin]] rakentamisessa niittejä käytettiin 2,5 miljoonaa. Jokainen tornin 18 038 osasta piirrettiin [[Levallois-Perret'n]] konepajalla kymmenesosamillin tarkkuudella, joten reikiä ei porattu paikan päällä.",
+  "linkit": [
+   "Eiffel-tornin",
+   "Levallois-Perret'n"
+  ],
+  "jatkot": [
+   "Miten Eiffel-torni koottiin?",
+   "Miksi niitit korvattiin myöhemmin hitsauksella?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Grand Palais",
+  "kasite": "olympialaisissa",
+  "kysymys": "Kerro lisää: olympialaisissa",
+  "vastaus": "Olympialaiset ovat suuri kansainvälinen urheilutapahtuma. Nykyaikaiset kisat elvytti ranskalainen [[Pierre de Coubertin]], ja vuoden 1896 kisat pidettiin [[Ateenassa]]. Pariisi isännöi kisoja vuosina 1900, 1924 ja 2024. Vuoden 1900 kisat järjestettiin samaan aikaan maailmannäyttelyn kanssa, jota varten Grand Palais valmistui, ja vuonna 2024 [[miekkailu]] ja taekwondo käytiin Grand Palais'n lasikaton alla.",
+  "linkit": [
+   "Pierre de Coubertin",
+   "Ateenassa",
+   "miekkailu"
+  ],
+  "jatkot": [
+   "Miten Pierre de Coubertin elvytti olympialaiset?",
+   "Miksi miekkailu on olympialaji?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Tour Montparnasse",
+  "kasite": "Montparnassen rautatieasema",
+  "kysymys": "Kerro lisää: Montparnassen rautatieasema",
+  "vastaus": "Montparnassen rautatieasema oli Pariisin länsipuolen junayhteyksien päätepysäkki. Lokakuussa 1895 [[Granvillesta]] saapunut juna ei pysähtynyt ajoissa, ja veturi syöksyi aseman seinän läpi kadulle. Onnettomuudesta otettu valokuva kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Nykyinen asema palvelee muun muassa [[TGV]]-junia [[Bretagneen]] ja Atlantin rannikolle.",
+  "linkit": [
+   "Granvillesta",
+   "TGV",
+   "Bretagneen"
+  ],
+  "jatkot": [
+   "Miksi juna ei pysähtynyt ajoissa?",
+   "Mitä Bretagnessa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Tour Montparnasse",
+  "kasite": "veturi",
+  "kysymys": "Kerro lisää: veturi",
+  "vastaus": "Veturi on raiteilla kulkeva voimakone, joka vetää junan vaunuja. Varhaiset veturit kulkivat höyryllä: kattilassa poltettiin hiiltä tai puuta, ja syntynyt höyry liikutti mäntiä. [[Höyryveturit]] yleistyivät 1800-luvulla, ja englantilaisen [[George Stephensonin]] ja hänen poikansa rakentama Rocket voitti kilpa-ajon vuonna 1829. Myöhemmin höyryn korvasivat dieselveturit ja [[sähköveturit]].",
+  "linkit": [
+   "Höyryveturit",
+   "George Stephensonin",
+   "sähköveturit"
+  ],
+  "jatkot": [
+   "Miten höyryveturi toimii?",
+   "Milloin höyryveturit korvattiin sähkövetureilla?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Tour Montparnasse",
+  "kasite": "Haussmannin",
+  "kysymys": "Kerro lisää: Haussmannin",
+  "vastaus": "Georges-Eugène Haussmann oli Seinen departementin prefekti eli Pariisia hallinnut korkea virkamies vuosina 1853–1870, ja hän toteutti keisari [[Napoleon III:n]] tilaaman kaupunkiuudistuksen. Ahtaita keskiaikaisia katuja purettiin, ja tilalle rakennettiin leveitä [[bulevardeja]], uusia puistoja ja viemäriverkosto. Uudet talot saivat yhtenäiset julkisivut ja suunnilleen samat korkeudet. Haussmann osoitti myös oopperataloa varten tontin, jolle nousi [[Palais Garnier]].",
+  "linkit": [
+   "Napoleon III:n",
+   "bulevardeja",
+   "Palais Garnier"
+  ],
+  "jatkot": [
+   "Mitä Haussmannin leveät bulevardit muuttivat?",
+   "Kuka suunnitteli Palais Garnierin?"
+  ]
+ },
+ {
+  "kohde": "kohdekartta:pariisi:Tour Montparnasse",
+  "kasite": "La Défenseen",
+  "kysymys": "Kerro lisää: La Défenseen",
+  "vastaus": "La Défense on Pariisin länsipuolella, kaupungin rajan ulkopuolella sijaitseva liikekeskus, jossa on korkeita toimistotaloja. Se sijaitsee Pariisin historiallisella akselilla, joka kulkee [[Louvren]] kautta Champs-Élysées'tä pitkin [[Arc de Triomphen]] luo ja siitä eteenpäin. Alueen päätteenä on [[Grande Arche]], suuri kuutiomainen portti, joka valmistui vuonna 1989. Nimi tulee patsaasta, joka muistuttaa Pariisin puolustamisesta vuosien 1870–1871 sodassa.",
+  "linkit": [
+   "Louvren",
+   "Arc de Triomphen",
+   "Grande Arche"
+  ],
+  "jatkot": [
+   "Miksi Grande Arche on kuution muotoinen?",
+   "Mikä on Pariisin historiallinen akseli?"
+  ]
+ }
+]

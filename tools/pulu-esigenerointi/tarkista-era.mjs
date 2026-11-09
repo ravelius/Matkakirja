@@ -47,7 +47,7 @@ if (vaihe === 'vaihe1') {
   syote.forEach((k, ki) => {
     const n = ki + 1;
     const kysytyt = new Set();
-    for (let i = 1; i <= 5; i += 1) {
+    for (let i = 1; i <= (k.maara ?? 5); i += 1) {   // maara: vain annetut kysymykset (MALLINOSTOT 9.11.)
       const tunnus = `${n}.${i} ${k.kohta}`;
       const raaka = vastaukset.get(`${n}.${i}`);
       if (raaka == null) { virheet.push(`${tunnus}: puuttuu`); continue; }

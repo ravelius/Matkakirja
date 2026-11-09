@@ -1,0 +1,43 @@
+{
+ "_kuvaus": "KS 9.11.2026 (OMISTAJAN PÄÄTÖS 16.23): 2 kysymystä/kohde Pariisin 3D-mallien nostoihin. Vastaukset neutraalina faktana; Pulun murre ja muoto Pulun v2-putken omistajalta. HUOM: PuluValmiitLataus.Kohta tuntee vain karttavalot (kohde:/nosto:), kohdekartan nostoille (kohdekartta:pariisi:<nimi>) ei ole paikkaa. PK 9.11.: Sainte-Chapelle 1–2, Grand Palais 2 ja Montparnasse 2 tarkennettu (hinta, arkisto, korkeusraja 25/37 m).",
+ "kohdekartta:pariisi:Invalidit": [
+  {
+   "kysymys": "Miksi Napoleon on haudattu juuri Invalideihin?",
+   "vastaus": "Napoleon toivoi testamentissaan lepäävänsä Seinen rannalla Ranskan kansan keskellä. Kun Britannia luovutti jäännökset 1840, hallitus valitsi sotilaiden kodin kupolikirkon, koska se oli jo armeijan kunniapaikka; sarkofagi valmistui 1861."
+  },
+  {
+   "kysymys": "Asuuko Invalideissa vielä sotilaita?",
+   "vastaus": "Kyllä, pieni määrä: Institution nationale des Invalides hoitaa yhä vakavasti vammautuneita sotaveteraaneja. Suurin osa rakennuksesta on kuitenkin armeijamuseota."
+  }
+ ],
+ "kohdekartta:pariisi:Sainte-Chapelle": [
+  {
+   "kysymys": "Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?",
+   "vastaus": "Orjantappurakruunu oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki Pariisista kristikunnan keskuksen ja Ludvig IX:stä sen suojelijan. Ludvig maksoi jäännöksestä 135 000 livreä, yli kolme kertaa enemmän kuin sen säilytykseen rakennettu kappeli maksoi."
+  },
+  {
+   "kysymys": "Miten lasit selvisivät vallankumouksesta?",
+   "vastaus": "Vallankumouksen jälkeen kappeli muutettiin oikeuslaitoksen arkistoksi: ikkunoiden alaosia poistettiin, ja asiakirjakaapit peittivät seinien alaosat. 1840–1860-lukujen restauroinnissa ikkunat korjattiin ja puuttuvat osat tehtiin uudelleen; noin kaksi kolmasosaa laseista on silti 1200-luvulta."
+  }
+ ],
+ "kohdekartta:pariisi:Grand Palais": [
+  {
+   "kysymys": "Mitä Grand Palais'n paikalla oli ennen?",
+   "vastaus": "Vuoden 1855 maailmannäyttelyn Palais de l'Industrie, suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä."
+  },
+  {
+   "kysymys": "Miksi halli suljettiin 1990-luvulla?",
+   "vastaus": "Lasikatto oli ruostunut ja vuotanut vuosikymmeniä, ja kun katosta putosi niitti 1993, päähalli suljettiin turvallisuussyistä. Se avattiin uudelleen korjausten jälkeen 2000-luvun puolivälissä."
+  }
+ ],
+ "kohdekartta:pariisi:Tour Montparnasse": [
+  {
+   "kysymys": "Mitä tornin paikalla oli ennen?",
+   "vastaus": "Vanha Montparnassen rautatieasema, josta veturi syöksyi seinän läpi kadulle vuonna 1895. Asema purettiin 1960-luvulla ja uusi rakennettiin etelämmäs."
+  },
+  {
+   "kysymys": "Miksi Pariisiin ei rakennettu lisää pilvenpiirtäjiä?",
+   "vastaus": "Vuonna 1973 valmistunut 210-metrinen torni herätti pariisilaisissa niin paljon vastustusta, että kaupunki rajasi pian sen jälkeen uusien rakennusten korkeuden: keskustassa noin 25 metriin ja reuna-alueilla noin 31–37 metriin. Korkeat toimistotalot sijoitettiin La Défenseen kaupungin rajan ulkopuolelle."
+  }
+ ]
+}
