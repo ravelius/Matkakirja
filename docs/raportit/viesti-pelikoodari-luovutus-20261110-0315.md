@@ -24,8 +24,8 @@ Pulu-työpuu /Users/Shared/Claude/wt/pulu-kaupungit-maat (haara pelikoodari/pulu
 ## JONO
 1. JU:n vaihe2 0a/1a/0b/1b (3a3011bb8, lämmin) ja muisti-2 (3a3011bb8; talot tila 0 juoksussa, paluun kuvat
    muisti2-paluu-a/b/c) → lokit/pelikoodari-vaihe2-* ja pelikoodari-muisti-2: lohkot, latausaika, muistihuippu → rivi PT:lle (+ muisti-2 kuvat KK:lle).
-2. KYLMÄ jatko (jos PT haluaa marginaalia): glb:t samaan esihakuun (hakemiston juoksupeli/*.glb taustalle kuten kuvat; JuoksuHahmot.Hae
-   lukee välimuistista) → LOD0/LOD1-kierrosten 74 s verkko-odotus pois. Mittaus sk-ipad-kylma-2.txt uudelleen.
+2. KYLMÄ jatko — PT:n KYLLÄ 03.1x (115,5 vs 122 s on mittausvirheen sisällä; tavoite kylmä SELVÄSTI < vanha, 2 ajoa): glb:t samaan esihakuun (hakemiston juoksupeli/*.glb taustalle kuten kuvat; JuoksuHahmot.Hae
+   lukee välimuistista) → LOD0/LOD1-kierrosten 74 s verkko-odotus pois. Mittaus sk-ipad-kylma-2.txt KAHDESTI (JU), tulos PT:lle. TEE TÄMÄ ENSIN.
 3. PULU v6: KK:n luku → korjaukset (MUUTOKSET-*.md-muoto, korjaa-faktat.py) → PT:n kuittaus → JU vie pulu/vastaukset/v6/ (vie-paketti vaatii
    nimen *-vienti-*, JU kopioi). Natiivin polku v4 → v6: NUI (PuluValmiitLataus.Juuri). Korttien epätarkkuudet PT:lle välitetty (Sisältökirjuri).
 4. Kaupunki/maa-erä (1 870) lähdetarkistukseen vasta myöhemmin (PT kirjaa työlistaan).
