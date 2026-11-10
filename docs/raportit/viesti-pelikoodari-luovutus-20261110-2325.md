@@ -33,3 +33,6 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/seinat-taso1/ (nimet/,
 3. P1-ehdotus PT:lle kuvan kanssa.
 4. B1 bottijumi (−85; 500) ja eteläosan kartoitus: lähtö suoraan maalin aukion lähelle tai `ui juoksupeli tarkastelu kierros 40 400 20`.
 5. Huomenna isolla iPadilla: aukiovideo (lähtö −68,−368 i), renkaiden uusinta (191aaeaf2) – ennallaan edellisestä luovutuksesta.
+
+## LISÄYS 23.3x
+- LAV kuittasi M1:n: sokkelin ja seinän kohdistusvika kk-tausta-1-4 lod0:ssa (v129 = v131, v131 ei korjaa) → LAV:n muurin juuri -jono yhdessä E4:n kanssa; E1 ja E2 LAV:n lattiajonoon; M7 poistettu LAV:n jonosta (meidän). Meille jäävät M7, P1, P2, B1 ja eteläosa.
