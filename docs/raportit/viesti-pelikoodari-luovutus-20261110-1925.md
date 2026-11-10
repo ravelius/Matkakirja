@@ -68,7 +68,7 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - Jonossa myös (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
 - 20.5x JU: esitäyttö nyt pysyvä kaikissa JU:n Mac-ajoissa (julkaisija-tyokalut/esikatselu-rungolla.zsh; ESIKATSELU_KYLMA=1 ohittaa) → oma vahti tarpeeton.
 
-## LISÄYS 21.1x: OSA 5 AUKIOT (uusin; aloita tästä)
+## LISÄYS 20.5x (toinen): OSA 5 AUKIOT (uusin; aloita tästä)
 - OSA 5 kokeena b744c680b (natiivi-backup pelikoodari/osa5-aukiot; pohja juna-224 3c214599d + osat 6/11 aae0ab729 + osa 8 3eb33531c,
   JU ei ollut vielä yhdistänyt MR31/osa 8 junaan), 911/911, unity 0. Aukiolla (yli AukioM 8 m) enintään 5 kaistaa samasta 1,6 m:n ruudukosta
   (JuoksuV4Reitti.AukioLinjat, V4Osa.KaistaMaara/Aukio); napautus JuoksuV4Saanto.AukioKohde: kaista kerrallaan kohti lähintä omenaa (30 m),
