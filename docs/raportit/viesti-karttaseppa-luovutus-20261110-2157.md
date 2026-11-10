@@ -49,3 +49,12 @@ D) KK:n kysymys (ei kiire; vastaus PT:lle ≤ 8 riviä), luonnos /Users/Shared/C
 
 ## Vahdit (uusi sessio virittää)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min).
+
+## LISÄYS 21.5x: KK RATKAISI JÄRJESTYKSEN (suoraan KS:lle)
+1) ENSIN 224.42:n kolme (omistaja 21.56): Notre-Damen korvaustalot päälle ja raivaus uuden mallin jalanjälkeen, Riemukaari ja Eiffel tarkistus → kuva ennen | jälkeen
+   KK:lle, seuraavaan versioon; kerro myös, missä kunnossa niiden ympäristö on 224.42:ssa (+ PT:lle m²-luvut raivausala vs. jalanjälki).
+2) Sitten Panthéon (heikoin: katot ja kupoli siniharmaiksi, pääty) → Invalidit → Opéra → Louvren piha ja pyramidi → Sacré-Cœur → Sainte-Chapelle.
+   Jokainen KK:lle yhtenä täysikokoisena rajauksena Tripo | koodi + kuva kaukaa, raivaus mallin jalanjäljen kokoisena.
+   KK:n vertailurajaukset: proto-3d/_tyo/keskustelukanava/tyyliohje/ (kj4-ruudukko-tripo.jpg | -koodi.jpg, kj4-in-dome.jpg, kj5-ruudukko.jpg).
+3) Korjaukset UUDELLEENKÄYTETTÄVINÄ OSINA (kupoli, rumpu, pylväspääty, mansardi, tukipilari) → osakirjasto muille kaupungeille (euroopan-kaupungit-tyonkulku.md).
+Järjestyskysymys PT:lle (21.57) on näin vastattu.
