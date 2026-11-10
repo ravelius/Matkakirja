@@ -112,3 +112,4 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - PT 224.44.pt-ok kärjelle 6+11+8+5 (b744c680b), JU vie. Tummat omenat e-ajossa = mädät (PT:lle vastattu).
 - "Peukalorenkaat suuremmiksi": lähde ja koko tuntemattomat; PT kysyi KK:lta. EI muutoksia ennen KK:n vastausta. JONO TYHJÄ siihen asti (PT hyväksyi).
 - Huomenna isolla iPadilla: aukiovideo (lähtö -68,-368 i), renkaiden uusinta (191aaeaf2).
+- 21.2x PT/KK: renkaat-rivi oli vanha (omistaja kelpuutti 6.11. 17.16, ae161fdb6), SULJETTU – ei renkaatyötä. Lepo, kunnes iso iPad (huomenna) tai uusi työ KK:n listalta.
