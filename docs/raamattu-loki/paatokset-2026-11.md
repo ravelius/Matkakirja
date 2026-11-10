@@ -1172,7 +1172,7 @@ Toteutus (KK:n tavoite, PT 08.0x JU:lle jarj 0): sivun alkuosa ennallaan; alle 1
 
 Kortti (Pariisi-pino 5) "Jatketaanko kokeilua, jossa Pariisin tarkempi alue poistetaan, jotta kartta on yhtä tarkka koko näkymässä?" → "Jatketaan uutena työnä" (selite: uusi yritys, jossa laite hakee karttaa vain rajatun määrän kerrallaan; menee jonoon). Omistaja näki parin 5-tarkka-alue-pari-z12.jpg ja perustelut; suositus oli Ei. KUMOAA 7.11. 14.2x "SEIS" -tilan.
 Tavoite (KK): kartta yhtä tarkka koko näkymässä ilman suoraa rajaa niin, että Pariisi pysyy terävänä (pikkukadut, puistot, Seine), iso iPad ei kaadu kallistettuna eikä nipistys hyppää. Koe; junaan vain kortilla kuvista (7.11. 11.21). Ei Pariisi valmis -kortin este (7.11. 10.53). Työlista: NS, kärki Tekninen kunto, jarj 6 (ISS-muistin jälkeen).
-=======
+
 ## Siirretty Raamatusta 10.11.2026 (kohdat 2.177, 2.204, 2.210, 2.213, 2.215)
 
 Omistajan päätös 9.11.2026 klo 23.13 (Raamattu 7.49): kohdat tiivistettiin kärkien mukana; nykytila docs/moduulit/juoksupeli.md ja docs/moduulit/kaupungit.md. Alla kunkin kohdan koko teksti sellaisenaan ennen tiivistystä (Raamattu commitissa 229cc209e).
