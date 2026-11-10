@@ -2159,8 +2159,9 @@ export const SKANDAALIT = {
         + 'peukalonjäljen suojalasiin, ja hänen sormenjälkensä olivat poliisin '
         + 'kortistossa, mutta hänen nimensä unohtui vertailtavien listalta. Etsivä '
         + 'kävi asunnossa ja kirjoitti raporttinsa nojaten pöytään, jonka alla '
-        + 'olevassa kolossa taulu oli. Pablo Picasso ja runoilija Guillaume '
-        + 'Apollinaire ehdittiin pidättää.\n\n'
+        + 'olevassa kolossa taulu oli. Runoilija Guillaume Apollinaire '
+        + 'ehdittiin pidättää, ja hänen ystäväänsä Pablo Picassoa '
+        + 'kuulusteltiin.\n\n'
         + 'Kaksi vuotta myöhemmin Peruggia vei taulun junalla Firenzeen ja tarjosi '
         + 'sitä nimellä Leonardo V taidekauppias Alfredo Gerille. Uffizin johtaja '
         + 'Giovanni Poggi tunnisti teoksen, ja poliisi haki miehen hotellista '
@@ -2325,7 +2326,7 @@ export const SKANDAALIT = {
         tiedosto: 'Pascal à Galileo.jpg',
         lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
         selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
-          + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1639, 15-vuotiaana — yksi Chaslesin ostamista kirjeistä.',
+          + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
         lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
       },
       visa: {
