@@ -34,3 +34,6 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. HUOM zsh: `$c:A…`/`$C:r…` 
 - SACRÉ-CŒUR: sc15-koodi-lahi tyhjä (kamera mäen sisällä, aja 0.0022). Raivaus: alueilla sacre-coeur 169 taloa (palat-lv.log) → pienennä 1:1-maskiin.
 - AVOIMET -0010:stä yhä: NUI:n paisunta-haaran katselmointi (natiivi-ui/nahtavyys-paisuu 714266606 + 7b1605f21; kuittaus NUI:lle), Panthéonin
   KK-huomiot (kiveys, pylväsvälit), palojen ketju v6 → invalides v27.
+
+## LISÄYS 01.1x
+- NUI: c032134e7 ajettu, eletila "lähin 0.620 km" ND ja RK ✓; kuvat KK:lle 00.57. NUI kertoo KK:n vastauksen → KS vie junaan (PT:lle junaehdokas c032134e7).
