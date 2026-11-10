@@ -1347,3 +1347,19 @@ Omistaja 21.58 KK:lle: "Tehdäänkö kaikki nyt oikeassa mittasuhteessa ilman li
 ## Nähtävyys paisuu hetkeksi kohteena, koe (omistaja 10.11. 22.01) (10.11.2026 klo 22.0x)
 
 Omistaja KK:lle sanatarkasti: "Ja voisiko rakennusta vain paisuttaa hetkellisesti joka suuntaan jos se on kohteena? Silloin se ei mahtuisi paikalleen mutta jos se on vain väliaikainen ja animoitu liike niin se voisi toimia". KK:n tavoitekuva suunnitelmat/20261110-nahtavyys-paisuu-kohteena.md (ponnahduskirja: kartta 1:1, valittu kasvaa ~0,5 s pohjan keskipisteestä, naapurit väistyvät, paluu valinnan päättyessä). Koe videona, ei junaan; tekijä NUI (PT 22.0x), KS:n 1:1-työ edellä; karkea ND-video suoraan KK:lle.
+
+## Omistajalle kokeiltavaksi vain peliin jäävää (omistaja 22.31) (10.11.2026 klo 22.33)
+
+Omistaja KK:n kautta 10.11.2026 klo 22.31 sanatarkasti (vastaus 224.45:n "kokeilu, ei lopullinen"): "En testaa asioita jotka eivät jää peliin". Voimassa heti: 1) omistajalle kokeiltavaksi vain peliin jääväksi tarkoitettu; kokeet ja välivaiheet KK ratkaisee kuvista ja videoista (21.38); niistä ei "kokeiltava"-riviä eikä Uutta-tekstiin sanaa kokeilu. 2) JU vie asennussivulle kuten ennen (roolien ja KK:n tarkistuksiin), mutta KK:lle "kokeiltava: …" vain jäävistä ja rivillä kerrotaan, mikä versiossa jää. KK kertoo omistajalle versiot koottuna. 3) KK:n päätös: VS:n erottuvuus kaukaa (v3) JÄÄ, omistajalta ei kysytä (korvaa 20.51:n "KK kysyy, jääkö"). Seuraava omistajalle kerrottava kokonaisuus: Pariisin nähtävyydet 1:1 + raivaus mallin pohjaan + vaaleampi kivi (RK, ND; KS d36a7c7a2) + erottuvuus säädettynä 1:1:lle, kaikki KK:n katsomina samassa versiossa. PT välitti JU:lle 22.33.
+
+## Vapaan kameran lähin 2,7× lähemmäs (KK 23.1x) (10.11.2026 klo 23.15)
+
+KK:n päätös NUI:n parista paisunta-5-pari-lahin-nyt-vs-2-7x.jpg (selvitys a3f374468): vapaan kameran lähin 2,7× lähemmäs (PiirrosKerros IsoisaLahinLeveys 0,525 → noin 0,2), jotta 1:1-Notre-Dame on noin neljännes ruudun leveydestä; maan piirroksen pehmeneminen (2,48 m/px) hyväksytty hinnaksi. Tekijä KS ennen Invalidien korjauksia; avaa VS:n kynän ja 1:1-viivan sekä NUI:n kyltit. Jatkorivi VS:lle: pehmeän maan parannus läheltä. Samalla 23.0x: 224.46 ilman 1:1-koodimallien ääriviivaa (VS aea72af54), väri ja kyltti riittävät erottuvuuteen.
+
+## Nähtävyyden paisuminen peliin (omistaja 23.29) (10.11.2026 klo 23.30)
+
+Omistajan kortti KK:ssa 10.11.2026 klo 23.29: "Otetaanko nähtävyyden paisuminen peliin (video: Notre-Dame kasvaa, kun se valitaan, ja palaa kokoonsa)?" = "Kyllä, peliin (Suositus)". Paisuminen kaikille nähtävyyksille (suunnitelmat/20261110-nahtavyys-paisuu-kohteena.md; NUI), junaan NUI:n kylttikorjauksen 7b1605f21 kanssa, kun KK on katsonut ajon, jossa kyltti ei jää mallin alle. Omistajalle kerrottava kokonaisuus ("tämä jää"): nähtävyydet 1:1, vaalea kivi, lähin kamera 2,7×, paisuminen.
+
+## Ei tilinvaihtoa, kevennys aamulla (omistaja 11.11. 00.07) (11.11.2026 klo 00.08)
+
+Omistaja KK:n kautta 11.11.2026 klo 00.07 sanatarkasti: "Ei tehdä tilin vaihtoa sillä sain ilmaisen resetin. Menen kuitenkin kohta nukkumaan joten voit tehdä nollauksen ilman lupaa. Tehdään raamattu juttu vasta aamulla. Resetin kun prosentit alkaa loppua". 1) Ei tilinvaihtoa; omistaja nollaa viikkorajan itse: kun viikko lähestyy 99 %:a, PT/Postivahti rivi KK:lle, ei tilinvaihtoa eikä luovutuksia sen takia. 2) Raamatun kevennys (luvut 12 ja 7, KK) aamulla 11.11. ilman tilinvaihtoa. 3) Yön säännöt voimassa.
