@@ -53,3 +53,5 @@ Ei muuta NUI:n jonossa (PT:n -1246-jono: otsikkovärit → Lontoo, molemmat teht
 2) Työ: "Museon latausilmaisin" (Tekninen kunto, jarj 1; ks. -1222-luovutuksen museo-ilmaisin-kohta).
 3) Sitten "Nostomerkit näkyvät valikon läpi" + "…nostoluettelon päälle tai läpi" yhtenä työnä (Kaupungit).
 Parit PT:lle.
+
+- JU 13.4x: välilehtivärit 91feac3b2 = MR16 → linkki 224.26 (MR15:n jälkeen), koeyhdistys puhdas.
