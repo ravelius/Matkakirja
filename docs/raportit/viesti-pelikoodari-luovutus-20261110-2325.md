@@ -37,3 +37,4 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/seinat-taso1/ (nimet/,
 ## LISÄYS 23.3x
 - LAV kuittasi M1:n: sokkelin ja seinän kohdistusvika kk-tausta-1-4 lod0:ssa (v129 = v131, v131 ei korjaa) → LAV:n muurin juuri -jono yhdessä E4:n kanssa; E1 ja E2 LAV:n lattiajonoon; M7 poistettu LAV:n jonosta (meidän). Meille jäävät M7, P1, P2, B1 ja eteläosa.
 - 23.3x KK valitsi M7:lle 18 → TEHTY 1bfc5c206 (natiivi pelikoodari/seinat-taso1, unity 0), PT:lle pt-ok-pyyntö. KK:n lisätoive: portaan viereinen pitkä beige penkere samaan harmaaseen kiveen = ERI TYÖ (pysyi beigenä kaikissa pinnoissa) → SEURAAJA: selvitä lähde (mika rungon kohdalta, pursotukset vai paketti); jos paketti → LAV:lle.
+- 23.30 PT antoi pt-ok 1bfc5c206 (junaan 224.47:n jälkeen). 23.3x P1-ehdotus PT:lle ja KK:lle: proto-3d/_tyo/pelikoodari/seinat-taso1/P1-EHDOTUS.txt + p1-ovi-kivijalan-edessa.png → odottaa linjausta. Seuraajan jono: P2-lähde, penkere, B1 botti + eteläosa.
