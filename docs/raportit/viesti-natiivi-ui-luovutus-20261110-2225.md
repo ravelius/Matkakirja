@@ -35,3 +35,16 @@ UUSI TYÖTAPA (omistaja 21.38, PT välitti, KOE): näkyvän työn (merkit, ilme,
 ## JONO
 1 = YKKÖSTYÖ (PT 22.2x KK:n kautta: 1:1:ssä pieni kohde RK/ND lähes katoaa kaukaa, paisunta antaa koon hetkeksi): RK + Eiffel HETI KK:n ND-palautteen jälkeen.
 2 (huomenna), 3 (Codexin jälkeen).
+
+## LISÄYS 22.3x: KK:N PALAUTE paisunta-3:sta (KK → NUI suoraan; ei vielä omistajalle). Periaate oikea (pehmeä kasvu pohjasta, paluu). Seuraava karkea video:
+1. KOKO RUUDUN MUKAAN, ei metreistä: paisunut kohde selvästi näkymän suurin rakennus, tavoite ~1/3 ruudun korkeudesta esittelyn kameraetäisyydellä,
+   katto 3×; ND noin 2,5. (Toteutus: Paisunta.Aloita laskee kertoimen esittelyn h:sta + kuvakulmasta: näkyvä korkeus / ruudun korkeus → kerroin; tai
+   aluksi TavoiteM ylös ja Min 2,0 kokeena.)
+2. TÄYSI KARTTA: Cité oli tyhjä ja pohja vaalea → aja kohta, jossa talot ja kartta ladattuina. RIEMUKAARI ENSIN (tiheät korttelit Étoilen ympärillä,
+   kerroin 3): näkyykö talojen litistyminen rauhallisena vai levottomana. Tarkista ennen kuvaa `komento talot tila` (palat > 0).
+3. KAMERAN RAJA: korjaa vanhan mallin 620 m:n rajat, jotta esittelyn lento pysähtyy 1:1-koodimallille oikealle etäisyydelle (NahtavyysEsittely.Mitat/Rajat:
+   koodimallilla mitat piirtyvän koodimallin verkosta, kuten Paisunta.Mitat; Kartta-tiedostoihin vain KS:n luvalla). b-videossa myös PALUU
+   (palkin sulku: etsi komento, tai `ui paisunta lopeta` skenaariossa).
+4. a-video LÄHEMPÄÄ: malli ennen kasvua ≥ 1/5 ruudun korkeudesta (ylitys ja naapurit näkyviin).
+5. Sitten EIFFEL: ×1,2 voi jäädä huomaamatta → kokeile korkeille muu ele (pieni nousu + valo).
+Järjestys: paisunta ennen tarinamerkkejä (KK).
