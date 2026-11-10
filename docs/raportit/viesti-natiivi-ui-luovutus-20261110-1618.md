@@ -39,3 +39,14 @@ vaihtoehtoa RAUKEAVAT; katto-koe ef774d9fd turha (revert tai oletus 0 ennen MR:�
 ei näy (ei kytketty, ei lataudu vai hidas verkko)? Selvitys PT:n jaon mukaan (NUI:n ehdotus PT:lle 16.5x: NS). fb16ab5de junaan vasta,
 kun Marseille + toinen kaupunki näyttävät striimikartan isolla iPadilla. Vihjeet: iPad-ajon konsolissa pallo 57,9 % koko 20 s ja
 "elävä kartta … yhteensä piirretty 0" koko ajon; Barcelona (Mac) näytti katuverkon, Marseille (Mac ja iPad) ei.
+
+## LISÄYS 16.3x: PT:N LOPULLINEN LINJA TOTEUTETTU (korvaa kohdan 1 "Tee" ja lisäyksen 16.2x junaehdon)
+- PT 16.2x + KK: nimen napautus zoomaa KAIKISSA kaupungeissa, kortti pois (omistaja 10.34 + 16.17). Poikkeus Marseille kortilla, kunnes NS
+  korjaa laatta-aukon (lista helposti poistettava). Katto pois. Ehto ennen junaa: yksi iPad-kuva Barcelonasta, katuverkko näkyy.
+- Tehty: 461aee4dd (revert ef774d9fd) + 3e8796b49 PeliOhjain.KorttiKaupungit = {marseille}; unity-tarkistus 0, kaanna.sh 893/893,
+  merge-tree juna-224 09e517768 puhdas. Pushattu natiivi-backup natiivi-ui/kaupunkinimi-zoomaus.
+- JU:lla: sk-kaupunkinimi-zoomaus-4-mac (Pariisi zoomaa, Marseille kortti, Barcelona zoomaa) ja -4-ipad (EHTO: Barcelona b-1/b-2, Marseille m-1)
+  → lokit/nui-kaupunkinimi-zoomaus-4-{mac,ipad}-3e8796b49.
+- Tee: katso iPad-kuvat (b-1/b-2 katuverkko?) → valmis-rivi PT:lle (3e8796b49, polut) → PT kirjoittaa pt-ok:n → MR JU:lle, Uutta:
+  "Kaupungin nimen napautus vie kaupunkiin kortin sijaan." Versionumero (linkki) KK:lle. Jos Barcelona tyhjä iPadilla → PT:lle + KK:lle, ei MR:ää.
+- Kun NS:n Marseille-korjaus näkyy isolla iPadilla: poista "marseille" listasta (oma commit), lyhyt iPad-kuva → PT.
