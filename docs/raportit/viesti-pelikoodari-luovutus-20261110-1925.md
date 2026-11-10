@@ -88,3 +88,10 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - SEURAAVAKSI: kun JU:n Mac-pari valmis (lokit/pk-osa5-aukio-mac-b744c680b ja -pois; sk-md5:t dac74b23a24d / 78254e71594f): katso k1–k9 vs e1–e9
   täysikoossa + lokin "aukio kaista N omena|keski" → pari PT:lle + "kokeiltava"-rivi aukioista → PT antaa yhden pt-ok kärjelle 6+11+5 (b744c680b).
 - Natiivityöpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu haarassa pelikoodari/osa5-aukiot (puhdas).
+
+## LISÄYS 21.02 (uusin; aloita tästä)
+- JU ajoi osan 5 Mac-parin v1 (lokit/pk-osa5-aukio-mac-b744c680b, -pois): EI KELPAA, sk-virheeni: napautukset osuivat avaukseen (Macilla
+  OhjausPelaajalle t 41,1 s; paikka-rivit aika 0–3 s; k9/e9 avausta). PT:lle kerrottu.
+- v2 JU:lla samalla b744c680b: proto-3d/_tyo/pelikoodari/osa5-aukiot/sk-mac-osa5-aukio-v2.txt (5c7f2a0ebde5) → lokit/pk-osa5-aukio-mac-b744c680b-v2
+  ja sk-mac-osa5-aukio-pois-v2.txt (e485ffa644de) → ...-v2-pois. Katso: paikka-rivit pihalla (x −141…−178) ja aika > 0, lokissa
+  "juoksupeli: aukio kaista N omena|keski" (aukio 1), k3–k9 vs e3–e9 täysikoossa → pari + kokeiltava-rivi PT:lle → pt-ok kärjelle 6+11+5.
