@@ -25,3 +25,5 @@ Korvaa -1023:n JUNA-, ODOTTAA- ja MUUT-kohdat; LINJAT voimassa (kolme kärkeä, 
 - LAV: v131 yllä; sitten työlistalta seuraava (Juoksupeli).
 - VS: Eiffel yllä; a51260865 (vain kommentti) seuraavan haaran mukana, ei omaa MR:ää. Saumat/varjostus odottaa KK:n suunnitelmaa.
 - Postivahti nollautuu usein (3×/h); aloitusviesti sille PT:ltä, kun se pyytää.
+
+LISÄYS 12.1x: VIE-sana v131 annettu (JU + PK; uudet kansiot) → laitekäännös 8d22f34e4 + iPad → kuvat PT → junaan kuittauksella. KS u3 Mac 43 (ND + Palais de Justice) valmis /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodimallit/kuvat/u3/; KK-korttiin: Tripo-Sainte-Chapelle nyt isompi kuin oikean kokoinen Notre-Dame.
