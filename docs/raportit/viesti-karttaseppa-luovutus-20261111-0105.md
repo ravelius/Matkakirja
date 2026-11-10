@@ -48,3 +48,5 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. HUOM zsh: `$c:A…`/`$C:r…` 
   "keskeneräiseksi puistoksi" → VIHJE: kolmio on todennäköisesti ND:n itäpuolen puisto (Square Jean-XXIII) junan vanhassa tilassa; vertaa 224.47-kuvaa ja
   KJ17:n nd17-*-kuvia: jos 0aad16c3f korvaa kolmion, puisto ratkaisee ehdon (kerro PT:lle ja KK:lle yhdellä rivillä).
 - JU 01.2x: 224.51 = 29768b6cb (lähin c032134e7) LINKISSÄ – lähin-kohta SULJETTU. ND-puisto 0aad16c3f → 224.52 testeissä (pt-ok odottaa KK:n vastausta PT:lle).
+- JU 01.3x: KJ19 Invalidit + maa VALMIS → lokit/karttaseppa-invalidit-kj19-1c5ddb667 (6/6), KATSOMATTA: ENSIMMÄINEN TYÖ – pari in11-tripo | in19-koodi KK:lle
+  (kupoli: lyhty, risti; portikko; seinien sävy vs Opéra; nurmet; majat poissa; "haalea varjolaikku"). KJ20 Louvre ajossa seuraavaksi.
