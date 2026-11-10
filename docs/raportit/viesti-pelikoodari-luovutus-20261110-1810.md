@@ -46,3 +46,7 @@ video PT:lle. Jatka osat 1–3." → ENSIN: skenaario osan 9 haaralle b7f0d62de 
 aukio, vasemmalla matala harmaa muuri + punainen seinä, edessä keltakattoiset hallit; ehdokas 长春宫:n pihat (-167; 374) tai v129:n rajakohdat
 (-2.6; 77.2) 中和殿 / (-96.3; 218.6) 膳房, ks. v129/rajakohdat.json) → JU:lle (ajo isolla iPadilla heti juoksupeli-kopion jälkeen) → video PT:lle.
 Sitten osat 1–3 jatkuvat (kohta 1).
+- 18.1x tarkistettu: vapaassa maailmassa EI ole QA-komentoa lähtöpaikalle (LuoVapaaTaso käyttää aina JuoksuTaso.Alku; `palatsi alku` koskee vain
+  vanhaa peliä). Skenaario vaatii pienen komennon osan 9 haaraan, esim. `ui juoksupeli lahto x,z [suunta]` → JuoksuTaso-alun ohitus seuraavaan
+  juoksuun (JuoksuV4.Vapaa.cs LuoVapaaTaso + JuoksupeliNakyma.cs komennot ~2184). Vaihtoehto ilman käännöstä: `ui juoksupeli tarkastelu kamera x y z
+  yaw pitch fov` (vain pysäytyskuva, ks. juoksu-leivottu/sk-ipad-tausta-v131.txt). JU:lle kerrottu, että skenaario tulee nollauksen jälkeen.
