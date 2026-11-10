@@ -1235,3 +1235,75 @@ Kortti "Jääkö maalattu taivas lopulliseksi Pariisin kallistettuun karttaan?" 
 12.06: "Kelpaako maan pienoiskartta vasemmassa alakulmassa tällaisena junaan (kuvassa oikealla)?" = "Kyllä, junaan (Suositus)" (NUI 224e8ea23).
 12.05: Lehti- ja Turisti-info-napit nimikilven "Pariisi ▾" alle oikeaan yläreunaan = "Kyllä, nimikilven alle (Suositus)" (KK:n suunnitelma 20261110-kartan-kohteet-kolme-lajia.md osa 2; NUI).
 12.06 omistajan sanat: "et voi kysyä ennen kuin remote on kytketty päälle, en muuten näe sinua" (sääntö jo KK:n aloitus.md kohta 2).
+
+## Striimikartta kaikissa kaupungeissa (omistaja 16.14) (10.11.2026 klo 16.15)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.14: "eikö kaikissa kaupungeissa pitäisi olla kuitenkin striimikartta käytössä?" Vahvistaa 2.204 (2.11. 22.08). Marseillen tyhjä pohja isolla iPadilla on vika: NS selvittää (latauspaikkavuoto, Lontoo, verkko) ja korjaa. NUI:n nimizoom-katto ef774d9fd perutaan; nimen napautus fb16ab5de junaan vasta kun Marseille + yksi muu piirrokseton näyttää striimikartan isolla iPadilla. JU:n katto-Mac-ajo peruttu. KK:n kortin vaihtoehdot rauenneet.
+
+## Pariisin koodinähtävyydet: maltillinen korostus (omistaja 16.17) (10.11.2026 klo 16.17)
+
+Omistajan kortti KK:ssa 10.11.2026 klo 16.17 (iPad-parit Eiffel, Riemukaari, Notre-Dame): "Maltillinen korostus" – kaikki nähtävyydet samassa suhteessa hieman todellista suurempina, erottuvat yhdellä vilkaisulla, eivät peitä kortteleita; uudet kuvat ennen junaa. Tarkentaa 09.36. Yksi yhteinen kerroin (KS vetää, VS Eiffel), Eiffel korkein, Sainte-Chapelle ei ND:tä isompi, kyltti ei peitä mallia. Uudet iPad-parit kolmesta kulmasta + lähikuvat (ND:n tornit) KK:lle korttiin kelpaako junaan.
+
+## Pariisin nimen napautus zoomaa, junaan heti (omistaja 16.17) (10.11.2026 klo 16.17)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.17 (kaappaus pariisin-nimikortti-pois-1617.png): "Tämän voisi tosiaan poistaa ja korvata sillä, että pelit zoomautuisi Pariisiin, kun painan Pariisin nimeä kartalla." Vahvistaa 10.34. NUI fb16ab5de Pariisin osalta junaan heti; muut kaupungit pitävät kortin, kunnes striimikarttakorjaus (16.14) näkyy isolla iPadilla, sitten zoomaus laajenee ilman uutta korttia.
+
+## Nimen napautus: lopullinen linja (KK 16.2x) (10.11.2026 klo 16.18)
+
+Korvaa 16.14/16.17 välivaiheet: zoomaus kaikissa kaupungeissa, kortti pois (omistaja 10.34 + 16.17). Barcelona näyttää katuverkon ilman piirroskarttaa (NUI Mac-ajo ef774d9fd), joten Marseillen tyhjä pohja on Marseillen oma laatta-aukko. Marseille pitää kortin kunnes NS korjaa aukon (ja tarkistaa muut aukkokaupungit). Ehto ennen junaa: iso iPad, Barcelona katuverkko näkyy.
+
+## Pariisin raivaus palautetaan maltilliseen kokoon (omistaja 16.18) (10.11.2026 klo 16.18)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.18: "pariisista on siivottu tripokohteiden ympäriltä tilaa liioitelluille malleille. ne varmaan kannattaa nyt palauttaa, jotta ei jää liikaa tyhjää tilaa". KS palauttaa talot ja korttelit; raivaus vain korostetun mallin peittämä ala; samaan iPad-pariin kuin 16.17 koko. Samalla 16.18: omistaja epäilee Marseillen tyhjää pohjaa latausongelmaksi ja kokeilee puhelimella omalla verkolla; NS selvittää aukko vai lataus.
+
+## Latausjumi hitaalla verkolla: kestävä lataus (omistaja 16.25) (10.11.2026 klo 16.27)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.25: "iPad simu on juuttunut viimeisen keisarin latauskuvaan, sama mitä kävi kun itse testasin sitä aiemmin päivällä." JU 16.27: Puyin malli ja leivotut kuvat 121 aikakatkaisua isolla iPadilla, Macilla 0,45 s. PK: uudelleenyritys ja jatko, todellinen palkki, suomenkielinen viesti hitaasta yhteydestä, Poistu aina; suositus välttämättömistä sovelluksen mukana/välimuistissa. NS: sama periaate kartoille; tarkistetaan myös samanaikaisten hakujen tulva.
+
+## Striimikartta ei lataudu varmasti myös Macilla (PT 16.4x) (10.11.2026 klo 16.32)
+
+NUI 3e8796b49 Mac-ajo: Barcelona tyhjä paperi 17 s zoomauksen jälkeen, edellisellä ajolla latautui. Satunnainen latausvika, ei vain Marseillen aukko eikä hidas verkko. NS:n Tekninen kunto -ykköstyö; OK = Barcelona + Marseille katuverkko toistuvasti Macilla ja isolla iPadilla. Nimen napautus (3e8796b49) ei junaan ennen korjausta.
+
+## Latausruudun hitaan yhteyden teksti (omistaja 16.36) (10.11.2026 klo 16.36)
+
+Omistajan kortti KK:ssa 10.11.2026 klo 16.36: "Yhteys on hidas. Lataus jatkuu siitä, mihin se jäi. Voit myös palata kartalle Poistu-napista." = "Kyllä, kelpaa (Suositus)". PK käyttää sanatarkasti. Samalla omistaja 16.36: "en näe tekstiä. vaihdoin koneen nyt puhelimen kautta nettiin niin pitäisi toimia nopeammin" – Mac puhelinverkossa, isot ulospäin suuntautuvat siirrot lykätään kunnes verkko palaa.
+
+## Telian kuituvika: verkko 4 Mb/s klo 9 alkaen (omistaja 16.38) (10.11.2026 klo 16.38)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.38: "tänään verkko on ollut todella hidas klo 9:00 alkaen suurinpiirtein. ennen 950mb/s, nyt vain 4mb/s. vaihdoin nyt myös ipadit puhelimeni verkkoon joka toimii nopeammin. telialla on valokuidun kanssa jokin isompi ongelma ja siksi verkko äärimmäisen hidas". Seuraus: tämän päivän laitehavainnot klo 9 jälkeen (Lontoon tyhjä kartta, Britannian laatat, panorointi, juoksupelin jumi, Marseille/Barcelona tyhjä, error 22?) hitaassa verkossa; NS/PK/JU erottavat syyn uusinnalla; kestävyyskorjaukset pysyvät. PT:n työtapa: lataus- ja karttamuutokset kokeillaan myös hitaalla verkolla (pakotettu hidastus/katko). Pysyvä Raamattu-sääntö vaatisi omistajan kortin (7.45).
+
+## Ei hitaan verkon testejä nyt (omistaja 16.42) (10.11.2026 klo 16.43)
+
+Omistajan vastaus KK:n korttiin 10.11.2026 klo 16.42: "en usko että kannattaa alkaa testaamaan muutoksia vielä hitaalla yhteydellä. voidaan joskus myöhemmin ennen kaupallista julkistusta testata. pääsin nyt pelaamaan ipadilla juoksupeliä, eli vika oli varmaan hitaassa nettiyhteydessä". Kumoaa PT:n 16.38 työtavan. Latausjumin syy verkko; PK c62818943 junaan tavallisilla testeillä, Pekingin hahmoesihaku peruttu. NS uusii striimikartan, Britannian laatat ja panoroinnin nopeassa verkossa, korjaa vain toistuvat. Hitaan verkon testaus idealistaan ennen kaupallista julkistusta.
+
+## Tyhjä striimikartta = hidas verkko (NS 16.5x) (10.11.2026 klo 16.44)
+
+NS: puhelinverkossa (f2fe729b1) Marseille ja Barcelona katuverkko 5 s:ssa, 0 virhettä; 4 Mb/s:llä epäonnistunut haku jätti pysyvän beigen. Pieni korjaus 94303946d (3× uusinta) tavalliseen junaan ilman hitaan verkon testejä (omistaja 16.42); verhon välähdys idealistaan. Nimen napautus laajenee kaikkiin kaupunkeihin (NUI erillinen commit) ilman uutta korttia, Marseillen poikkeus pois.
+
+## Juoksupelin linjat ja omenat: KK suunnittelee (omistaja 16.48) (10.11.2026 klo 16.50)
+
+Omistajan pyyntö 10.11.2026 klo 16.48 (KK:n kautta): omenat aina jommallakummalla kahdesta linjasta, oikea ohjain valitsee automaattisesti, käännökset 90° jompaankumpaan linjaan, isoilla aukioilla kaista kerrallaan kohti omenaa; koko juoksupelin piirto ja logiikka tarkastetaan. Iso muutos (7.48): KK:n suunnitelma ensin, PK ei tee linja-/omenamuutoksia ennen sitä.
+
+## Juoksupelin suunnitelma jaettu (omistaja 16.59 ja 17.04) (10.11.2026 klo 17.05)
+
+KK:n suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261110-juoksupeli-linjat-ja-tarkastus.md. Omistaja 16.59: ovet kiinni tasolla 1 jos ei iso työ, pysähdysvika aukiolla, tavoite näkyviin, opastettu alku. Kortit 17.04: omenat "niitä voisi olla sekä että, mutta alussa ilman hyppyä"; aukiot kokeena linjojen jälkeen (kumoaa 21.10. vain kaksi kaistaa); tavoite täyttyvä palkki ja portti. Jako: PK 9 → 1–3 → 8 (koko ensin) → 6 → 10 (NUI ulkoasu) → 11 (KK:n tekstit); 5 kokeena; NS osa 7 piirto (mittaus ensin) usvarajauksen jälkeen.
+
+## Kuvakyltti junaan (omistaja 10.11. 17.08) (10.11.2026 klo 17.09)
+
+KK välitti: NUI kuvakyltti-koe 9f7f40611 (kuva ja nimi yhtenä kylttinä tähden alla, saman paikan toinen nimi pois) = 'Kyllä, junaan'. PT antaa pt-ok:n heti JU:n numeroinnin jälkeen. Juoksupelin kiinni-teksti ei vielä hyväksytty (KK:n 11 opasteen lista omistajalla); PK ei vaihda tekstiä ennen päätöstä.
+
+## Juoksupelin aineisto isolle iPadille johdolla (omistaja 10.11. 17.31) (10.11.2026 klo 17.32)
+
+Kortti 'Kyllä, kopioidaan': poikkeus vain isolle iPadille ja vain juoksupelin aineistolle, kopio kokonaisena; latausta mittaavat ajot (latausruutu, latausjumi) eivät päde isolla iPadilla kopion jälkeen, latauksen toimivuus omistajan kotitesteillä (pieni iPad, puhelin). Samalla 17.30: varjojen piirtoetäisyys työlistaan (NS, ei kiire).
+
+## Pariisin maltillinen korostus junaan (omistaja 10.11. 17.45) (10.11.2026 klo 17.45)
+
+Kortti 'Kyllä, junaan': KS c1a15236d (nähtävyysmallit 2× todellinen, vaaka enint. +150 m, Riemukaari vähintään 150 m, raivatut talot palautettu, koodirakennukset oikeassa koossa). Seuraava vaihe (ei junan ehto): Riemukaari sulautuu taloihin värin takia, Sacré-Cœur lähes katoaa yleiskuvassa; mallien ulkonäkö ja ND:n tornit koon jälkeen (16.17).
+
+## Juoksupelin opastetekstit 1–11 hyväksytty (omistaja 10.11. 17.52) (10.11.2026 klo 17.52)
+
+Kortit KK:ssa: tekstit sellaisinaan (scratchpad/keskustelukanava/suunnitelmat/20261110-juoksupeli-linjat-ja-tarkastus.md osa 11). Kohta 1 'Pakene vartijoita, kunnes palkki täyttyy ja portti aukeaa.' (NUI:n 'Pysy jaloillasi…' ei käyttöön); sana KAISTA; kohta 11 'Vartija sai kiinni! Napauta nopeasti'; liuku- ja aarreopaste pois tasolta 1. Toteutus PK (osa 11) ja NUI (palkki+portti, osa 10).
+
+## Oppi: karttamuutos iPadilla oletustilassa ennen linkkiä (PT 10.11. 19.1x) (10.11.2026 klo 19.10)
+
+224.36 (Pariisin korostus) meni linkkiin vain Mac-ajoilla, joissa talot/elävä kartta kytkettiin komennoilla ja talot paikallisesta kansiosta; laitteella korostuksen pohja peitti laajat alat beigellä (omistaja 18.53). Korostus peruttu junasta 191aaeaf2, linkki 224.35. Jatkossa kartan/talojen muutokset: Mac-ajo myös oletustilassa (ei komentoja, talot ämpäristä) ja iPad-ajo ennen pt-ok:ta. PT tulkitsi beigen horisontin virheellisesti hitaaksi verkoksi.
