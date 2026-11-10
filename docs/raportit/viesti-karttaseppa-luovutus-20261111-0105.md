@@ -44,3 +44,6 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. HUOM zsh: `$c:A…`/`$C:r…` 
   Seuraavaan kierrokseen: 1) puiston nurmella irtonainen kapea talo pois; 2) parvisin hakasen muotoiset tummat jäljet + etelärannan sumea vihreä kaista:
   YKSI rivi KK:lle (piirroskartan pohjaa vai varjoja, voiko siistiä); 3) ND-lähikuva rajaa tornit pois → Opéran resepti hieman kauempaa.
 - JU: KJ17 valmis (lokit/karttaseppa-nd-puisto-kj17-0aad16c3f), KJ19 seuraavaksi, sitten KJ20.
+- PT 01.1x: c032134e7 pt-ok annettu (224.51). ND-puisto 0aad16c3f: PT kysyi KK:lta, saako mennä ennen kolmion selvitystä – KK kutsui kolmiota
+  "keskeneräiseksi puistoksi" → VIHJE: kolmio on todennäköisesti ND:n itäpuolen puisto (Square Jean-XXIII) junan vanhassa tilassa; vertaa 224.47-kuvaa ja
+  KJ17:n nd17-*-kuvia: jos 0aad16c3f korvaa kolmion, puisto ratkaisee ehdon (kerro PT:lle ja KK:lle yhdellä rivillä).
