@@ -93,7 +93,7 @@
   "kohde": "kohdekartta:pariisi:Invalidit",
   "kasite": "armeijamuseota",
   "kysymys": "Kerro lisää: armeijamuseota",
-  "vastaus": "Musée de l'Armée on Invalidien suuri armeijamuseo, joka esittelee aseita, [[haarniskoita]], univormuja ja muita sotahistoriallisia esineitä keskiajalta [[toiseen maailmansotaan]]. Museo täyttää suuren osan Invalidien rakennuskompleksista, jossa toimii samalla edelleen sotilaskoti. Samassa kokonaisuudessa on myös [[Musée des Plans-Reliefs]], jonka kokoelmaan kuuluu linnoituskaupunkien pienoismalleja. Invalidien asevarastosta kansanjoukko otti heinäkuussa 1789 lähes 30 000 kivääriä.",
+  "vastaus": "Musée de l'Armée on Invalidien suuri armeijamuseo, joka esittelee aseita, [[haarniskoita]], univormuja ja muita sotahistoriallisia esineitä muinaisajoista [[toiseen maailmansotaan]] ja nykypäivään asti. Museo täyttää suuren osan Invalidien rakennuskompleksista, jossa toimii samalla edelleen sotilaskoti. Samassa kokonaisuudessa on myös [[Musée des Plans-Reliefs]], jonka kokoelmaan kuuluu linnoituskaupunkien pienoismalleja. Invalidien asevarastosta kansanjoukko otti heinäkuussa 1789 noin 30 000 kivääriä.",
   "linkit": [
    "haarniskoita",
    "toiseen maailmansotaan",
@@ -123,7 +123,7 @@
   "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
   "kasite": "Pariisista",
   "kysymys": "Kerro lisää: Pariisista",
-  "vastaus": "Pariisi on Ranskan pääkaupunki, ja se sijaitsee [[Seinen]] varrella. Kaupungin vanhin ydin on joessa sijaitseva [[Île de la Cité]], jolla ovat kuninkaanpalatsi ja Sainte-Chapelle. Ludvig IX:n aikana 1200-luvulla Pariisista tuli pyhäinjäännöstensä ansiosta kristikunnan merkittävä keskus. Heinäkuussa 1789 kansa valtasi [[Bastiljin]], ja 1800-luvulla paroni [[Haussmannin]] johtamat työt avasivat kaupunkiin leveät bulevardit.",
+  "vastaus": "Pariisi on Ranskan pääkaupunki, ja se sijaitsee [[Seinen]] varrella. Kaupungin vanhin ydin on joessa sijaitseva [[Île de la Cité]], jolla ovat entinen kuninkaanpalatsi ja Sainte-Chapelle. Ludvig IX:n aikana 1200-luvulla Pariisista tuli pyhäinjäännöstensä ansiosta kristikunnan merkittävä keskus. Heinäkuussa 1789 kansa valtasi [[Bastiljin]], ja 1800-luvulla paroni [[Haussmannin]] johtamat työt avasivat kaupunkiin leveät bulevardit.",
   "linkit": [
    "Seinen",
    "Île de la Cité",
@@ -169,7 +169,7 @@
   "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
   "kasite": "Ranskan vallankumouksen",
   "kysymys": "Kerro lisää: Ranskan vallankumouksen",
-  "vastaus": "Ranskan vallankumous alkoi vuonna 1789, kun Pariisin kansa valtasi [[Bastiljin]] 14. heinäkuuta. Samana aamuna väkijoukko oli hakenut kiväärit Invalidien asevarastosta, mutta ruutia ei löytynyt. Vallankumous kaatoi monarkian, ja kuningas [[Ludvig XVI]] teloitettiin vuonna 1793. Samana vuonna elokuussa [[Louvre]] avattiin kaikille kansalaisille museona, ja Sainte-Chapellesta pyhäinjäännökset vietiin pois.",
+  "vastaus": "Ranskan vallankumous alkoi vuonna 1789, ja sen tunnetuin hetki oli 14. heinäkuuta, kun Pariisin kansa valtasi [[Bastiljin]]. Samana aamuna väkijoukko oli hakenut kiväärit Invalidien asevarastosta, mutta ruutia ei löytynyt. Vallankumous kaatoi monarkian, ja kuningas [[Ludvig XVI]] teloitettiin vuonna 1793. Samana vuonna elokuussa [[Louvre]] avattiin kaikille kansalaisille museona, ja Sainte-Chapellen pyhäinjäännökset oli viety kappelista pois jo vallankumouksen alkuvuosina.",
   "linkit": [
    "Bastiljin",
    "Ludvig XVI",
@@ -184,7 +184,7 @@
   "kohde": "kohdekartta:pariisi:Sainte-Chapelle",
   "kasite": "restauroinnissa",
   "kysymys": "Kerro lisää: restauroinnissa",
-  "vastaus": "Sainte-Chapellen restaurointi 1800-luvulla oli laaja työ, jossa ikkunat korjattiin, puuttuvia lasin osia tehtiin uudelleen ja kappeli sai uuden tornin. Työtä johtivat arkkitehdit [[Félix Duban]] ja [[Jean-Baptiste Lassus]], ja myöhemmin työhön osallistui [[Eugène Viollet-le-Duc]]. Lassus ja Viollet-le-Duc restauroivat samoihin aikoihin myös [[Notre-Damen]] kirkkoa. Restauroinnin ansiosta noin kaksi kolmasosaa lasimaalauksista on yhä alkuperäisiä 1200-luvulta.",
+  "vastaus": "Sainte-Chapellen restaurointi 1800-luvulla oli laaja työ, jossa ikkunat korjattiin, puuttuvia lasin osia tehtiin uudelleen ja kappeli sai uuden tornin. Työtä johtivat arkkitehdit [[Félix Duban]] ja [[Jean-Baptiste Lassus]], ja alkuvaiheessa nuorena apulaisena työskenteli myös [[Eugène Viollet-le-Duc]]. Lassus ja Viollet-le-Duc restauroivat samoihin aikoihin myös [[Notre-Damen]] kirkkoa. Restauroinnin ansiosta noin kaksi kolmasosaa lasimaalauksista on yhä alkuperäisiä 1200-luvulta.",
   "linkit": [
    "Félix Duban",
    "Jean-Baptiste Lassus",
@@ -273,7 +273,7 @@
   "kohde": "kohdekartta:pariisi:Grand Palais",
   "kasite": "lasikatto",
   "kysymys": "Kerro lisää: lasikatto",
-  "vastaus": "Grand Palais'n lasikatto peittää päähallin teräsrungon, ja sitä on usein kutsuttu Euroopan suurimmaksi lasikatoksi; sen pinta-ala on noin 13 500 neliömetriä. Ohut teräsrunko kantaa laajan katon ja päästää valon sisään, mikä teki lasi- ja rautarakenteista suosittuja 1800-luvulla esimerkiksi [[maailmannäyttely]]jen halleissa ja [[rautatieasemilla]]. Katto vaatii jatkuvaa huoltoa, sillä [[ruoste]] ja vesivuodot heikentävät rakennetta, ja se kunnostettiin perusteellisesti ennen vuoden 2024 [[olympialaisia]].",
+  "vastaus": "Grand Palais'n lasikatto peittää päähallin teräsrungon, ja Grand Palais'n lasikatto peittää päähallin teräsrungon, ja sitä on usein kutsuttu Euroopan suurimmaksi lasikatoksi; sen alla olevan päähallin lattiaa on noin 13 500 neliömetriä. Ohut teräsrunko kantaa laajan katon ja päästää valon sisään, mikä teki lasi- ja rautarakenteista suosittuja 1800-luvulla esimerkiksi [[maailmannäyttely]]jen halleissa ja [[rautatieasemilla]]. Katto vaatii jatkuvaa huoltoa, sillä [[ruoste]] ja vesivuodot heikentävät rakennetta, ja se kunnostettiin perusteellisesti ennen vuoden 2024 [[olympialaisia]].",
   "linkit": [
    "maailmannäyttely",
    "rautatieasemilla",
@@ -289,7 +289,7 @@
   "kohde": "kohdekartta:pariisi:Grand Palais",
   "kasite": "niitti",
   "kysymys": "Kerro lisää: niitti",
-  "vastaus": "Niitti on metallinen kiinnitystappi, jolla teräs- ja rautaosat liitetään toisiinsa. Se kuumennetaan hehkuvaksi, työnnetään reikään ja takotaan päästä leveäksi, jolloin se jäähtyessään vetää osat tiukasti yhteen. [[Eiffel-tornin]] rakentamisessa niittejä käytettiin 2,5 miljoonaa. Jokainen tornin 18 038 osasta piirrettiin [[Levallois-Perret'n]] konepajalla kymmenesosamillin tarkkuudella, joten reikiä ei porattu paikan päällä.",
+  "vastaus": "Niitti on metallinen kiinnitystappi, jolla teräs- ja rautaosat liitetään toisiinsa. Se kuumennetaan hehkuvaksi, työnnetään reikään ja takotaan päästä leveäksi, jolloin se jäähtyessään vetää osat tiukasti yhteen. [[Eiffel-tornin]] rakentamisessa niittejä käytettiin 2,5 miljoonaa. Jokainen tornin 18 038 osasta piirrettiin tarkasti etukäteen, ja osat valmistettiin [[Levallois-Perret'n]] konepajalla niin, että reikiä ei tarvinnut porata paikan päällä.",
   "linkit": [
    "Eiffel-tornin",
    "Levallois-Perret'n"
