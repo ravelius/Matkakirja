@@ -47,3 +47,6 @@ Yllä oleva "AJOSSA JU:LLA" -kohta on tehty; jäljellä data 083410e11 PR + vien
 ## LISÄYS (PT 13.0x): PK:n vastaus PR 6557:stä tulee NUI:lle suoraan
 PK vahvistaa, ettei vienti muuta julkaistuja TF:iä (≤ 224.16) ilman natiivia. OK → yhdistä PR 6557, kun checks pass, ja natiivi-MR samaan junaan.
 EI → ehdota PT:lle kytkin tai odotus junaan. Jos vastaus tuli edelliselle NUI-sessiolle, kysy PK:lta uudelleen.
+
+## LISÄYS: MR-sha vaihtui (JU 13.2x konflikti d11281908:n kanssa)
+Junaan menee 4fa068fbf (natiivi-backup natiivi-ui/kaupungin-luettelo-lajit-2 = 40a735533 + merge d11281908; UiKomennot molemmat casit; unity 0 virhettä), ei 40a735533. JU:lle ilmoitettu.
