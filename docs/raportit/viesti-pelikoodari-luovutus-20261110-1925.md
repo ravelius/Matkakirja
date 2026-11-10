@@ -102,3 +102,8 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - v3 JU:lla (pyydetty 21.1x): sk-mac-osa5-aukio-v3.txt (47b92e095d46) → lokit/pk-osa5-aukio-mac-b744c680b-v3 ja -pois-v3.txt (678e6e01ec50) → ...-v3-pois.
   Lähtö -68,-368 itään (iso piha; simu: aukiota s 25–163, "aukio kaista 3 omena, 2 keski …"), odotus 36 s. Katso k3–k9 vs e3–e9 + lokin aukio-rivit
   → pari + kokeiltava-rivi PT:lle → pt-ok kärjelle 6+11+5. Hakutesti (ei committiin): scratchpad ZzAukioLahtoHaku.cs (Reitille = Pohjaan-lambdan käänteis).
+
+## LISÄYS 21.21 (uusin; aloita tästä)
+- OSA 5 Mac-pari v3 KATSOTTU ja PT:lle lähetetty 21.2x (pari + kokeiltava-rivi): proto-3d/_tyo/pelikoodari/osa5-aukiot/pari-v3/ (LUE.txt).
+  k: "aukio kaista 3 omena, 2 keski, 3 keski …" pihalla; e: pari seinän vieressä. Odottaa PT:n pt-ok:ta kärjelle 6+11+5 (b744c680b).
+- Jonossa (KK): iso iPad -video aukiolta (huomenna; käytä lähtöä -68,-368 i), peukalorenkaat suuremmiksi, renkaiden uusinta isolla iPadilla (191aaeaf2).
