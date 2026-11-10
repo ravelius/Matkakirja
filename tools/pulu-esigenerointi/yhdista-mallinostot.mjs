@@ -52,7 +52,7 @@ for (const m of Object.keys(uudet).sort()) {
   if (JSON.stringify(tarkistus) !== ennen) throw new Error(`${m}: vanhat kohdat muuttuivat`);
   p.vastauksia = (p.vastauksia ?? 0) + lisatty;
   p.luotu = luotu;
-  p.kohdekarttaNostot = { lisatty: luotu, kohdat: Object.keys(uudet[m]) };
+  p[process.env.PULU_MERKINTA ?? 'kohdekarttaNostot'] = { lisatty: luotu, kohdat: Object.keys(uudet[m]) };   // HETKET 10.11.: PULU_MERKINTA=hetket (ei ylikirjoita v3/v4:n merkintää)
   fs.writeFileSync(path.join(ulos, `${m}.json`), JSON.stringify(p));
   hakemisto.maat[m] = versio;
   console.log(`${m}: +${Object.keys(uudet[m]).length} kohtaa (${Object.keys(uudet[m]).join(', ')}), +${lisatty} vastausta, versio ${versio}`);

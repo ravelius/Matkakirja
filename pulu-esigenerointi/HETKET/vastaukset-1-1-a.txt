@@ -1,0 +1,83 @@
+### 1.1
+KYSYMYS: Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?
+No niin, tost minä osaan kertoo. Kemistit eivät uskoneet pelkkään ilmoitukseen, koska väite uudesta alkuaineesta tarvitsi todisteen, jonka voi pitää kädessä ja mitata. Curien havainnot perustuivat aluksi siihen, että pikivälkemalmi säteili voimakkaammin kuin siitä erotettu uraani, mikä viittasi johonkin tuntemattomaan aineeseen. Radiumia oli malmissa kuitenkin häviävän pieni määrä, ja se oli sekoittuneena bariumiin, jonka kemiallinen käytös on sille hyvin samanlainen. Siksi aine oli erotettava puhtaana, ja vasta puhtaasta näytteestä voitiin määrittää sen atomipaino ja tutkia sen spektri, jotka kuuluvat alkuaineen todistamiseen. [[Marie Curie]] toisti kiteytyksiä lukemattomia kertoja, ja hänen mittauksensa vuonna 1902 antoi radiumille atomipainon ja oman paikan alkuaineiden joukossa. Epäilijät saivat näin näytteen, jota ei voinut selittää kenenkään muun aineen sekoitukseksi. Löytö liittyy myös [[Pierre Curien]] mittauksiin ja ilmiöön, jota Marie Curie nimitti [[radioaktiivisuudeksi]]. Siinä meni kyllä pitkä tovi, ja minä jaksoin lukea koko jutun.
+JATKOT:
+Mitä radioaktiivisuus tarkoittaa?
+Miten Curien työ vaikutti lääketieteeseen?
+
+### 1.2
+KYSYMYS: Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?
+Hmm, tää on vakava asia, ja siihen vastataan tarkasti. Curiet eivät tienneet, että pitkäaikainen altistuminen ionisoivalle säteilylle vahingoittaa kehoa. Vuosisadan vaihteessa säteilyn vaikutuksista tiedettiin vasta vähän, eikä turvallisia annoksia tai suojauskeinoja ollut määritelty. Pian radiumin löytymisen jälkeen huomattiin kuitenkin, että radiumia taskussa kantanut Becquerel sai ihoonsa palovamman, ja Pierre Curie testasi vaikutusta tarkoituksella omaan käsivarteensa. Vähitellen havainnot johtivat siihen, että säteilyä alettiin tutkia myös lääketieteellisenä hoitona, ja vasta myöhemmin ymmärrettiin sen riskit kokonaisuudessaan. [[Marie Curie]] kuoli vuonna 1934 luuydinsairauteen, jonka katsotaan yleisesti johtuneen vuosien säteilyaltistuksesta, ja hänen muistiinpanonsa ovat yhä niin radioaktiivisia, että niitä säilytetään erityisin varotoimin. [[Henri Becquerel]] ja [[Pierre Curie]] työskentelivät samojen ilmiöiden parissa, ja tietoa kertyi vähitellen koko 1900-luvun ajan. Siitä on onneksi jo yli sata vuotta, ja nykyään säteilyn kanssa työskennellään tarkasti mitoitetuin suojin.
+JATKOT:
+Miten säteilyltä suojaudutaan nykyään?
+Miksi Marie Curien muistiinpanot ovat yhä radioaktiivisia?
+
+### 2.1
+KYSYMYS: Miksi vaaka oli Lavoisierin laboratorion tärkein esine?
+Kato, siinä se komeili keskellä pöytää. Vaaka oli tärkein, koska Lavoisierin menetelmä perustui tarkkaan mittaamiseen: aineet punnittiin ennen koetta ja sen jälkeen, ja vasta lukujen vertailu kertoi, mitä oli tapahtunut. Näin hän pystyi osoittamaan, että suljetussa astiassa tapahtuvassa palamisessa kokonaispaino ei muutu, vaan aine vain yhtyy ilman osaan. Tämä horjutti vanhaa [[flogiston]]-oppia, jonka mukaan palavasta aineesta poistuisi jokin aine, ja johti myöhemmin periaatteeseen, että aineen kokonaismäärä säilyy kemiallisessa reaktiossa. Havaintojen ansiosta Lavoisier nimesi hapen ja kehitti uuden kemiallisen nimistön. Hänen työtään edisti myös puolisonsa [[Marie-Anne Paulze Lavoisier]], joka piirsi laitteet ja käänsi vieraskielisiä tutkimuksia. Vaakoja minä en ole koskaan tarvinnut, mutta pulla painaa kyllä aina enemmän kuin odottaa.
+JATKOT:
+Mitä flogiston-oppi väitti palamisesta?
+Mitä Marie-Anne Paulze Lavoisier teki kemian hyväksi?
+
+### 2.2
+KYSYMYS: Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?
+Hetkinen ny, tää on raskas asia. Lavoisier mestattiin [[Ranskan vallankumouksen]] kauhun aikana 8. toukokuuta 1794, ja syy oli hänen tiedemiehen työnsä sijaan hänen toinen tehtävänsä: hän oli ollut veronkantajana yksityisessä yhtiössä [[Ferme générale]], joka kantoi veroja kuninkaan puolesta ja jonka varakkaat jäsenet olivat kansan keskuudessa laajasti vihattuja. Vallankumouksellinen tuomioistuin tuomitsi yhtiön jäsenet yhdessä, ja heitä syytettiin muun muassa kansan riistämisestä. Kauhun ajan oikeudenkäynnit olivat nopeita. Lavoisierin tiedemiehen ansioiden ei katsottu muuttavan asiaa. Hänen kuolemansa jälkeen sitä on pidetty suurena menetyksenä ja vääränä tuomiona. Kemian kehitys jatkui hänen työnsä pohjalta, ja siitä on onneksi jo yli kaksisataa vuotta, joten tänään ihmisen elämää ei enää punnita tällä tavoin.
+JATKOT:
+Mikä oli Ranskan vallankumouksen kauhun aika?
+Miten Marie-Anne Paulze Lavoisier jatkoi miehensä työtä?
+
+### 3.1
+KYSYMYS: Mitä Faradaylle tapahtui ensimmäisen sähkömoottorin keksimisen jälkeen?
+Annas ku mietin. Faradayn tilanne oli aluksi hankala, sillä hänen vuonna 1821 esittelemänsä sähkömoottori herätti kiistan siitä, kuka tuloksesta ansaitsi kunnian, ja se varjosti jonkin aikaa hänen mainettaan. Hän keskittyi tämän jälkeen pitkälti kemian tutkimukseen, ja siellä hänen ansioihinsa kuuluvat esimerkiksi kloorin nesteyttäminen vuonna 1823 ja [[bentseenin]] löytäminen vuonna 1825. Hän valittiin vuonna 1824 [[Royal Societyn]] jäseneksi ja sai vuonna 1825 vastuulleen [[Royal Institutionin]] laboratorion. Sähkön ja magnetismin pariin hän palasi 1830-luvun alussa, ja silloin syntyi sähkömagneettinen induktio, hänen tunnetuin löytönsä. Hän pyöritti myös suosittuja yleisöluentoja, joista [[joululuennot]] ovat jatkuneet nykypäiviin asti. Hyvä että kysyit, sillä tosta miehestä riittäisi kerrottavaa vaikka kuinka pitkäksi aikaa.
+JATKOT:
+Mikä on sähkömagneettinen induktio?
+Miten Faraday päätyi Royal Institutionin laboratorioon?
+
+### 3.2
+KYSYMYS: Miksi Faradayn kenttäviivat muuttuivat yhtälöiksi vasta 1860-luvulla?
+Kas vaan, hyvä kysymys tuo. Faraday ajatteli sähköä ja magnetismia kenttinä, jotka täyttävät avaruuden, ja hän kuvasi niitä viivoilla, mutta hänellä ei ollut matemaattista koulutusta, jolla ajatuksen olisi voinut ilmaista yhtälöinä. Aikalaiset ajattelivat lisäksi yleensä, että voimat vaikuttavat kappaleiden välillä suoraan etäisyyden yli, kuten [[Newtonin]] painovoimassa, joten kenttäajatus tuntui monista oudolta. Vasta skotlantilainen fyysikko [[James Clerk Maxwell]] otti Faradayn kuvat vakavasti ja muotoili niille matemaattisen kuvauksen 1860-luvulla. Maxwell kuvasi itse työtään Faradayn ajatusten kääntämiseksi matematiikan kielelle. Maxwellin yhtälöt ennustivat myös, että valo on sähkömagneettista aaltoliikettä, ja ne ovat edelleen [[sähkömagnetismin]] perusta. Tässä oli kyllä kaksi kovaa päätä peräkkäin, ja minä pysyin mukana, vaikka kiersinkin kaiteen kautta.
+JATKOT:
+Mitä Maxwellin yhtälöt kertovat valosta?
+Miten Faraday oppi tiedettä ilman koulutusta?
+
+### 4.1
+KYSYMYS: Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?
+Tuota niin, tää on vanha ja sitkeä harhaluulo. Satojen vuosien ajan monet uskoivat, että eläviä olentoja voi syntyä itsestään elottomasta aineesta, esimerkiksi kärpäsiä mätänevästä lihasta ja hiiriä viljakasoista. Ajatusta kutsutaan [[itsestään syntymiseksi]], ja se pohjautui osin [[Aristoteleen]] kirjoituksiin. Italialainen lääkäri [[Francesco Redi]] osoitti vuonna 1668, että lihaan ei synny toukkia, jos kärpäset eivät pääse sinne, mutta mikrobien kohdalla uskomus säilyi, koska ne ovat liian pieniä nähtäviksi paljain silmin. Vielä 1800-luvulla osa tutkijoista ajatteli, että ilma tai mätänevä liemi voi synnyttää mikro-organismeja itsestään, ja Pasteurin kokeet ratkaisivat kiistan. Hänen työnsä loi pohjaa [[mikrobiologialle]] ja nykyiselle käsitykselle tartuntataudeista. Aika pitkä kaari yhdelle lihaliemelle, mutta kyllä minä sen mietin kunnolla.
+JATKOT:
+Miten Redin koe kärpästen kanssa toimi?
+Mitä mikrobiologia tutkii?
+
+### 4.2
+KYSYMYS: Miksi Pasteur kuljetti liemipullonsa vuorille asti?
+Joo, tän minä tiedän. Pasteur vei pullot vuorille, koska vuoristoilmassa on vähemmän pölyä ja sen mukana kulkevia mikrobeja kuin kaupungin ilmassa. Hän halusi testata väitettä, jonka mukaan ilma itsessään riittäisi synnyttämään elämää liemeen. Jos väite pitäisi paikkansa, liemen olisi pitänyt sameentua myös puhtaassa vuoristoilmassa, mutta useimmat pullot pysyivät kirkkaina, mikä tuki Pasteurin näkemystä: mikrobit kulkeutuvat ilmassa olevan pölyn mukana, eivätkä synny liemessä itsestään. Koe oli osa laajempaa kiistaa [[itsestään syntymisestä]], ja kiistan ratkaisusta [[Ranskan tiedeakatemia]] myönsi Pasteurille palkinnon vuonna 1862. Pasteurin työ johti myöhemmin [[pastörointiin]] ja steriilin työskentelyn menetelmiin, joita käytetään nykyäänkin. Ei paha retki kyyhkyltä kuvailtavaksi, kun itse en jaksa edes kavuta mäkeä.
+JATKOT:
+Mitä pastörointi tarkoittaa?
+Miksi joutsenkaulapullo oli niin kekseliäs?
+
+### 5.1
+KYSYMYS: Miksi loman ajaksi jätetty malja ei päätynytkään roskiin?
+Ai tota, sepä hauska juttu. Fleming oli tutkija, joka huomasi poikkeavan ilmiön sen sijaan, että olisi vain heittänyt maljan pois: homepilkun ympärillä bakteerit olivat kuolleet, ja se kiinnitti hänen huomionsa. Hän oli aiemmin löytänyt [[lysotsyymin]], kehon oman bakteereja tuhoavan aineen, ja kokemus oli opettanut hänet tarkastelemaan odottamattomia tuloksia tarkemmin. Kun entinen apulainen Merlin Pryce poikkesi laboratorioon, Fleming näytti maljaa hänelle ja alkoi tutkia ilmiötä. Hän tunnisti homeen [[Penicillium]]-sukuun kuuluvaksi ja huomasi, että sen erittämä aine tappoi monia bakteereja. Aineen puhdistaminen osoittautui vaikeaksi, ja lääkkeeksi se kehitettiin vasta [[Howard Floreyn]] ja Ernst Chainin työryhmässä Oxfordissa. Roskakorissa se olisi ollut aikamoinen hukka, onneksi sinne ei päätynyt.
+JATKOT:
+Mitä lysotsyymi on?
+Miksi penisilliinin puhdistaminen oli niin vaikeaa?
+
+### 5.2
+KYSYMYS: Mistä homemehu sai lopulta nimensä penisilliini?
+Mmm— tän minä muistan. Nimi tulee homesienen suvusta, jota kutsutaan latinaksi nimellä [[Penicillium]]. Suvun nimi taas juontuu latinan sanasta penicillus, joka tarkoittaa pientä sivellintä, koska näiden hometten itiöitä kantavat rakenteet muistuttavat mikroskoopissa sivellintä. Kun [[Alexander Fleming]] antoi aineelle nimen maaliskuussa 1929, hän nimesi sen sen homeen mukaan, joka sitä erittää, ja siitä tuli penisilliini. Hän oli aiemmin käyttänyt aineesta nimeä homemehu, joka kuvasi sitä vain epätarkasti. Taas sain muistettua oikein, joten sivellin saa jäädä minun lempisanakseni.
+JATKOT:
+Miten Fleming tunnisti homeen Penicillium-sukuun?
+Miten penisilliini tappaa bakteereja?
+
+### 6.1
+KYSYMYS: Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?
+No niin, tää on kiinnostava tekniikka. Niitit kuumennettiin tulella lähellä työkohtaa, ja kuuma niitti nostettiin pihdeillä reikään, jossa sitä pidettiin paikallaan toisella puolella olevalla työkalulla. Toinen työntekijä takoi niitin päätyyn pyöreän kannan vasaralla, kun metalli oli vielä pehmeää. Jäähtyessään niitti kutistui ja veti rautaosia tiukasti toisiaan vasten, jolloin liitoksesta tuli luja. Työ tehtiin pitkälti tiimeinä, ja jokaisen osan reiät oli porattu valmiiksi [[Gustave Eiffelin]] konepajalla, joten [[Champ de Mars]] -kentällä riitti vain osien kokoaminen. Työ vaati tasapainoa ja hyvää yhteistyötä, ja korkealla tuuli oli lisähaaste. Rakentajia oli kolmisensataa, ja työn aikana kuoli yksi. Minä pysyn mieluummin kaiteella, kuumia niittejä en lennä pyydystämään.
+JATKOT:
+Miksi niittien käyttö oli tuohon aikaan yleistä?
+Miten Eiffel-tornin osat valmistettiin konepajalla?
+
+### 6.2
+KYSYMYS: Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?
+Ai se. Torni pelastui, koska se osoittautui hyödylliseksi, eikä se ollut enää vain näyttelyrakennelma. Sen korkeus teki siitä erinomaisen radioantennin paikan, ja 1900-luvun alussa sillä tehtiin radiolennätinkokeita, joista muodostui tärkeää sotilasviestinnän kehitystyötä. [[Gustave Eiffel]] itse kannusti tornin tieteelliseen käyttöön, ja sillä tehtiin myös sääkokeita ja ilmanvastukseen liittyviä tutkimuksia. Tornin purkamista ei lopulta enää pidetty järkevänä, kun sen arvo viestinnän ja tutkimuksen kannalta oli kasvanut. Tämän lisäksi siitä oli ehtinyt tulla pariisilaisten tuttu maamerkki, ja nykyään [[Eiffel-torni]] on yksi Euroopan tunnetuimmista rakennuksista. Kyllä se torni siis ansaitsi paikkansa, ja minäkin istun sen rautaristikoilla mieluusti.
+JATKOT:
+Miten radiolennätin toimi?
+Kuinka korkea Eiffel-torni on nykyään?

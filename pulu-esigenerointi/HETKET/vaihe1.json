@@ -1,0 +1,329 @@
+[
+ {
+  "kohde": "hetki:marie-curie-hangaari-1898",
+  "kysymys": "Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?",
+  "uusi": false,
+  "vastaus": "No niin, tost minä osaan kertoo. Kemistit eivät uskoneet pelkkään ilmoitukseen, koska väite uudesta alkuaineesta tarvitsi todisteen, jonka voi pitää kädessä ja mitata. Curien havainnot perustuivat aluksi siihen, että pikivälkemalmi säteili voimakkaammin kuin siitä erotettu uraani, mikä viittasi johonkin tuntemattomaan aineeseen. Radiumia oli malmissa kuitenkin häviävän pieni määrä, ja se oli sekoittuneena bariumiin, jonka kemiallinen käytös on sille hyvin samanlainen. Siksi aine oli erotettava puhtaana, ja vasta puhtaasta näytteestä voitiin määrittää sen atomipaino ja tutkia sen spektri, jotka kuuluvat alkuaineen todistamiseen. [[Marie Curie]] toisti kiteytyksiä lukemattomia kertoja, ja hänen mittauksensa vuonna 1902 antoi radiumille atomipainon ja oman paikan alkuaineiden joukossa. Epäilijät saivat näin näytteen, jota ei voinut selittää kenenkään muun aineen sekoitukseksi. Löytö liittyy myös [[Pierre Curien]] mittauksiin ja ilmiöön, jota Marie Curie nimitti [[radioaktiivisuudeksi]]. Siinä meni kyllä pitkä tovi, ja minä jaksoin lukea koko jutun.",
+  "linkit": [
+   "Marie Curie",
+   "Pierre Curien",
+   "radioaktiivisuudeksi"
+  ],
+  "jatkot": [
+   "Mitä radioaktiivisuus tarkoittaa?",
+   "Miten Curien työ vaikutti lääketieteeseen?"
+  ]
+ },
+ {
+  "kohde": "hetki:marie-curie-hangaari-1898",
+  "kysymys": "Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?",
+  "uusi": false,
+  "vastaus": "Hmm, tää on vakava asia, ja siihen vastataan tarkasti. Curiet eivät tienneet, että pitkäaikainen altistuminen ionisoivalle säteilylle vahingoittaa kehoa. Vuosisadan vaihteessa säteilyn vaikutuksista tiedettiin vasta vähän, eikä turvallisia annoksia tai suojauskeinoja ollut määritelty. Pian radiumin löytymisen jälkeen huomattiin kuitenkin, että radiumia taskussa kantanut Becquerel sai ihoonsa palovamman, ja Pierre Curie testasi vaikutusta tarkoituksella omaan käsivarteensa. Vähitellen havainnot johtivat siihen, että säteilyä alettiin tutkia myös lääketieteellisenä hoitona, ja vasta myöhemmin ymmärrettiin sen riskit kokonaisuudessaan. [[Marie Curie]] kuoli vuonna 1934 luuydinsairauteen, jonka katsotaan yleisesti johtuneen vuosien säteilyaltistuksesta, ja hänen muistiinpanonsa ovat yhä niin radioaktiivisia, että niitä säilytetään erityisin varotoimin. [[Henri Becquerel]] ja [[Pierre Curie]] työskentelivät samojen ilmiöiden parissa, ja tietoa kertyi vähitellen koko 1900-luvun ajan. Siitä on onneksi jo yli sata vuotta, ja nykyään säteilyn kanssa työskennellään tarkasti mitoitetuin suojin.",
+  "linkit": [
+   "Marie Curie",
+   "Henri Becquerel",
+   "Pierre Curie"
+  ],
+  "jatkot": [
+   "Miten säteilyltä suojaudutaan nykyään?",
+   "Miksi Marie Curien muistiinpanot ovat yhä radioaktiivisia?"
+  ]
+ },
+ {
+  "kohde": "hetki:lavoisier-laboratorio-1780",
+  "kysymys": "Miksi vaaka oli Lavoisierin laboratorion tärkein esine?",
+  "uusi": false,
+  "vastaus": "Kato, siinä se komeili keskellä pöytää. Vaaka oli tärkein, koska Lavoisierin menetelmä perustui tarkkaan mittaamiseen: aineet punnittiin ennen koetta ja sen jälkeen, ja vasta lukujen vertailu kertoi, mitä oli tapahtunut. Näin hän pystyi osoittamaan, että suljetussa astiassa tapahtuvassa palamisessa kokonaispaino ei muutu, vaan aine vain yhtyy ilman osaan. Tämä horjutti vanhaa [[flogiston]]-oppia, jonka mukaan palavasta aineesta poistuisi jokin aine, ja johti myöhemmin periaatteeseen, että aineen kokonaismäärä säilyy kemiallisessa reaktiossa. Havaintojen ansiosta Lavoisier nimesi hapen ja kehitti uuden kemiallisen nimistön. Hänen työtään edisti myös puolisonsa [[Marie-Anne Paulze Lavoisier]], joka piirsi laitteet ja käänsi vieraskielisiä tutkimuksia. Vaakoja minä en ole koskaan tarvinnut, mutta pulla painaa kyllä aina enemmän kuin odottaa.",
+  "linkit": [
+   "flogiston",
+   "Marie-Anne Paulze Lavoisier"
+  ],
+  "jatkot": [
+   "Mitä flogiston-oppi väitti palamisesta?",
+   "Mitä Marie-Anne Paulze Lavoisier teki kemian hyväksi?"
+  ]
+ },
+ {
+  "kohde": "hetki:lavoisier-laboratorio-1780",
+  "kysymys": "Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tää on raskas asia. Lavoisier mestattiin [[Ranskan vallankumouksen]] kauhun aikana 8. toukokuuta 1794, ja syy oli hänen tiedemiehen työnsä sijaan hänen toinen tehtävänsä: hän oli ollut veronkantajana yksityisessä yhtiössä [[Ferme générale]], joka kantoi veroja kuninkaan puolesta ja jonka varakkaat jäsenet olivat kansan keskuudessa laajasti vihattuja. Vallankumouksellinen tuomioistuin tuomitsi yhtiön jäsenet yhdessä, ja heitä syytettiin muun muassa kansan riistämisestä. Kauhun ajan oikeudenkäynnit olivat nopeita. Lavoisierin tiedemiehen ansioiden ei katsottu muuttavan asiaa. Hänen kuolemansa jälkeen sitä on pidetty suurena menetyksenä ja vääränä tuomiona. Kemian kehitys jatkui hänen työnsä pohjalta, ja siitä on onneksi jo yli kaksisataa vuotta, joten tänään ihmisen elämää ei enää punnita tällä tavoin.",
+  "linkit": [
+   "Ranskan vallankumouksen",
+   "Ferme générale"
+  ],
+  "jatkot": [
+   "Mikä oli Ranskan vallankumouksen kauhun aika?",
+   "Miten Marie-Anne Paulze Lavoisier jatkoi miehensä työtä?"
+  ]
+ },
+ {
+  "kohde": "hetki:faraday-luento-1831",
+  "kysymys": "Mitä Faradaylle tapahtui ensimmäisen sähkömoottorin keksimisen jälkeen?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Faradayn tilanne oli aluksi hankala, sillä hänen vuonna 1821 esittelemänsä sähkömoottori herätti kiistan siitä, kuka tuloksesta ansaitsi kunnian, ja se varjosti jonkin aikaa hänen mainettaan. Hän keskittyi tämän jälkeen pitkälti kemian tutkimukseen, ja siellä hänen ansioihinsa kuuluvat esimerkiksi kloorin nesteyttäminen vuonna 1823 ja [[bentseenin]] löytäminen vuonna 1825. Hän valittiin vuonna 1824 [[Royal Societyn]] jäseneksi ja sai vuonna 1825 vastuulleen [[Royal Institutionin]] laboratorion. Sähkön ja magnetismin pariin hän palasi 1830-luvun alussa, ja silloin syntyi sähkömagneettinen induktio, hänen tunnetuin löytönsä. Hän pyöritti myös suosittuja yleisöluentoja, joista [[joululuennot]] ovat jatkuneet nykypäiviin asti. Hyvä että kysyit, sillä tosta miehestä riittäisi kerrottavaa vaikka kuinka pitkäksi aikaa.",
+  "linkit": [
+   "bentseenin",
+   "Royal Societyn",
+   "Royal Institutionin",
+   "joululuennot"
+  ],
+  "jatkot": [
+   "Mikä on sähkömagneettinen induktio?",
+   "Miten Faraday päätyi Royal Institutionin laboratorioon?"
+  ]
+ },
+ {
+  "kohde": "hetki:faraday-luento-1831",
+  "kysymys": "Miksi Faradayn kenttäviivat muuttuivat yhtälöiksi vasta 1860-luvulla?",
+  "uusi": false,
+  "vastaus": "Kas vaan, hyvä kysymys tuo. Faraday ajatteli sähköä ja magnetismia kenttinä, jotka täyttävät avaruuden, ja hän kuvasi niitä viivoilla, mutta hänellä ei ollut matemaattista koulutusta, jolla ajatuksen olisi voinut ilmaista yhtälöinä. Aikalaiset ajattelivat lisäksi yleensä, että voimat vaikuttavat kappaleiden välillä suoraan etäisyyden yli, kuten [[Newtonin]] painovoimassa, joten kenttäajatus tuntui monista oudolta. Vasta skotlantilainen fyysikko [[James Clerk Maxwell]] otti Faradayn kuvat vakavasti ja muotoili niille matemaattisen kuvauksen 1860-luvulla. Maxwell kuvasi itse työtään Faradayn ajatusten kääntämiseksi matematiikan kielelle. Maxwellin yhtälöt ennustivat myös, että valo on sähkömagneettista aaltoliikettä, ja ne ovat edelleen [[sähkömagnetismin]] perusta. Tässä oli kyllä kaksi kovaa päätä peräkkäin, ja minä pysyin mukana, vaikka kiersinkin kaiteen kautta.",
+  "linkit": [
+   "Newtonin",
+   "James Clerk Maxwell",
+   "sähkömagnetismin"
+  ],
+  "jatkot": [
+   "Mitä Maxwellin yhtälöt kertovat valosta?",
+   "Miten Faraday oppi tiedettä ilman koulutusta?"
+  ]
+ },
+ {
+  "kohde": "hetki:pasteur-pullot-1862",
+  "kysymys": "Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tää on vanha ja sitkeä harhaluulo. Satojen vuosien ajan monet uskoivat, että eläviä olentoja voi syntyä itsestään elottomasta aineesta, esimerkiksi kärpäsiä mätänevästä lihasta ja hiiriä viljakasoista. Ajatusta kutsutaan [[itsestään syntymiseksi]], ja se pohjautui osin [[Aristoteleen]] kirjoituksiin. Italialainen lääkäri [[Francesco Redi]] osoitti vuonna 1668, että lihaan ei synny toukkia, jos kärpäset eivät pääse sinne, mutta mikrobien kohdalla uskomus säilyi, koska ne ovat liian pieniä nähtäviksi paljain silmin. Vielä 1800-luvulla osa tutkijoista ajatteli, että ilma tai mätänevä liemi voi synnyttää mikro-organismeja itsestään, ja Pasteurin kokeet ratkaisivat kiistan. Hänen työnsä loi pohjaa [[mikrobiologialle]] ja nykyiselle käsitykselle tartuntataudeista. Aika pitkä kaari yhdelle lihaliemelle, mutta kyllä minä sen mietin kunnolla.",
+  "linkit": [
+   "itsestään syntymiseksi",
+   "Aristoteleen",
+   "Francesco Redi",
+   "mikrobiologialle"
+  ],
+  "jatkot": [
+   "Miten Redin koe kärpästen kanssa toimi?",
+   "Mitä mikrobiologia tutkii?"
+  ]
+ },
+ {
+  "kohde": "hetki:pasteur-pullot-1862",
+  "kysymys": "Miksi Pasteur kuljetti liemipullonsa vuorille asti?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Pasteur vei pullot vuorille, koska vuoristoilmassa on vähemmän pölyä ja sen mukana kulkevia mikrobeja kuin kaupungin ilmassa. Hän halusi testata väitettä, jonka mukaan ilma itsessään riittäisi synnyttämään elämää liemeen. Jos väite pitäisi paikkansa, liemen olisi pitänyt sameentua myös puhtaassa vuoristoilmassa, mutta useimmat pullot pysyivät kirkkaina, mikä tuki Pasteurin näkemystä: mikrobit kulkeutuvat ilmassa olevan pölyn mukana, eivätkä synny liemessä itsestään. Koe oli osa laajempaa kiistaa [[itsestään syntymisestä]], ja kiistan ratkaisusta [[Ranskan tiedeakatemia]] myönsi Pasteurille palkinnon vuonna 1862. Pasteurin työ johti myöhemmin [[pastörointiin]] ja steriilin työskentelyn menetelmiin, joita käytetään nykyäänkin. Ei paha retki kyyhkyltä kuvailtavaksi, kun itse en jaksa edes kavuta mäkeä.",
+  "linkit": [
+   "itsestään syntymisestä",
+   "Ranskan tiedeakatemia",
+   "pastörointiin"
+  ],
+  "jatkot": [
+   "Mitä pastörointi tarkoittaa?",
+   "Miksi joutsenkaulapullo oli niin kekseliäs?"
+  ]
+ },
+ {
+  "kohde": "hetki:fleming-malja-1928",
+  "kysymys": "Miksi loman ajaksi jätetty malja ei päätynytkään roskiin?",
+  "uusi": false,
+  "vastaus": "Ai tota, sepä hauska juttu. Fleming oli tutkija, joka huomasi poikkeavan ilmiön sen sijaan, että olisi vain heittänyt maljan pois: homepilkun ympärillä bakteerit olivat kuolleet, ja se kiinnitti hänen huomionsa. Hän oli aiemmin löytänyt [[lysotsyymin]], kehon oman bakteereja tuhoavan aineen, ja kokemus oli opettanut hänet tarkastelemaan odottamattomia tuloksia tarkemmin. Kun entinen apulainen Merlin Pryce poikkesi laboratorioon, Fleming näytti maljaa hänelle ja alkoi tutkia ilmiötä. Hän tunnisti homeen [[Penicillium]]-sukuun kuuluvaksi ja huomasi, että sen erittämä aine tappoi monia bakteereja. Aineen puhdistaminen osoittautui vaikeaksi, ja lääkkeeksi se kehitettiin vasta [[Howard Floreyn]] ja Ernst Chainin työryhmässä Oxfordissa. Roskakorissa se olisi ollut aikamoinen hukka, onneksi sinne ei päätynyt.",
+  "linkit": [
+   "lysotsyymin",
+   "Penicillium",
+   "Howard Floreyn"
+  ],
+  "jatkot": [
+   "Mitä lysotsyymi on?",
+   "Miksi penisilliinin puhdistaminen oli niin vaikeaa?"
+  ]
+ },
+ {
+  "kohde": "hetki:fleming-malja-1928",
+  "kysymys": "Mistä homemehu sai lopulta nimensä penisilliini?",
+  "uusi": false,
+  "vastaus": "Mmm— tän minä muistan. Nimi tulee homesienen suvusta, jota kutsutaan latinaksi nimellä [[Penicillium]]. Suvun nimi taas juontuu latinan sanasta penicillus, joka tarkoittaa pientä sivellintä, koska näiden hometten itiöitä kantavat rakenteet muistuttavat mikroskoopissa sivellintä. Kun [[Alexander Fleming]] antoi aineelle nimen maaliskuussa 1929, hän nimesi sen sen homeen mukaan, joka sitä erittää, ja siitä tuli penisilliini. Hän oli aiemmin käyttänyt aineesta nimeä homemehu, joka kuvasi sitä vain epätarkasti. Taas sain muistettua oikein, joten sivellin saa jäädä minun lempisanakseni.",
+  "linkit": [
+   "Penicillium",
+   "Alexander Fleming"
+  ],
+  "jatkot": [
+   "Miten Fleming tunnisti homeen Penicillium-sukuun?",
+   "Miten penisilliini tappaa bakteereja?"
+  ]
+ },
+ {
+  "kohde": "hetki:eiffel-torni-1888",
+  "kysymys": "Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?",
+  "uusi": false,
+  "vastaus": "No niin, tää on kiinnostava tekniikka. Niitit kuumennettiin tulella lähellä työkohtaa, ja kuuma niitti nostettiin pihdeillä reikään, jossa sitä pidettiin paikallaan toisella puolella olevalla työkalulla. Toinen työntekijä takoi niitin päätyyn pyöreän kannan vasaralla, kun metalli oli vielä pehmeää. Jäähtyessään niitti kutistui ja veti rautaosia tiukasti toisiaan vasten, jolloin liitoksesta tuli luja. Työ tehtiin pitkälti tiimeinä, ja jokaisen osan reiät oli porattu valmiiksi [[Gustave Eiffelin]] konepajalla, joten [[Champ de Mars]] -kentällä riitti vain osien kokoaminen. Työ vaati tasapainoa ja hyvää yhteistyötä, ja korkealla tuuli oli lisähaaste. Rakentajia oli kolmisensataa, ja työn aikana kuoli yksi. Minä pysyn mieluummin kaiteella, kuumia niittejä en lennä pyydystämään.",
+  "linkit": [
+   "Gustave Eiffelin",
+   "Champ de Mars"
+  ],
+  "jatkot": [
+   "Miksi niittien käyttö oli tuohon aikaan yleistä?",
+   "Miten Eiffel-tornin osat valmistettiin konepajalla?"
+  ]
+ },
+ {
+  "kohde": "hetki:eiffel-torni-1888",
+  "kysymys": "Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?",
+  "uusi": false,
+  "vastaus": "Ai se. Torni pelastui, koska se osoittautui hyödylliseksi, eikä se ollut enää vain näyttelyrakennelma. Sen korkeus teki siitä erinomaisen radioantennin paikan, ja 1900-luvun alussa sillä tehtiin radiolennätinkokeita, joista muodostui tärkeää sotilasviestinnän kehitystyötä. [[Gustave Eiffel]] itse kannusti tornin tieteelliseen käyttöön, ja sillä tehtiin myös sääkokeita ja ilmanvastukseen liittyviä tutkimuksia. Tornin purkamista ei lopulta enää pidetty järkevänä, kun sen arvo viestinnän ja tutkimuksen kannalta oli kasvanut. Tämän lisäksi siitä oli ehtinyt tulla pariisilaisten tuttu maamerkki, ja nykyään [[Eiffel-torni]] on yksi Euroopan tunnetuimmista rakennuksista. Kyllä se torni siis ansaitsi paikkansa, ja minäkin istun sen rautaristikoilla mieluusti.",
+  "linkit": [
+   "Gustave Eiffel",
+   "Eiffel-torni"
+  ],
+  "jatkot": [
+   "Miten radiolennätin toimi?",
+   "Kuinka korkea Eiffel-torni on nykyään?"
+  ]
+ },
+ {
+  "kohde": "hetki:brunel-thames-tunnel-1827",
+  "kysymys": "Miten Brunelin tunnelikilpi suojasi kaivajia joen alla?",
+  "uusi": false,
+  "vastaus": "Ai se. Tost minä tiedän vähän, vaikken koskaan lentänyt sinne sisään. Tunnelikilpi oli valurautainen runko, joka jakoi tunnelin etuseinän 36 lokeroon, ja jokaisessa lokerossa yksi mies kaivoi omaa osuuttaan. Lokeron edessä oli tukilautoja, jotka pitivät maan paikallaan: kaivaja irrotti yhden laudan, kaivoi sen takaa vähän maata ja asetti laudan takaisin, joten edessä oleva maa ei päässyt valumaan työmaalle. Kun kaikki lokerot oli kaivettu, ruuvitunkit työnsivät koko kilven eteenpäin ja muurarit muurasivat seinän sen perään. Kilpi suojasi siis kaivajia maan sortumiselta, mutta se ei pitänyt jokea poissa: vesi murtautui tunneliin sekä toukokuussa 1827 että tammikuussa 1828, ja jälkimmäisessä tulvassa kuoli kuusi miestä. Tunnelin suunnitteli [[Marc Isambard Brunel]], työmaata johti hänen poikansa [[Isambard Kingdom Brunel]], ja tunneli [[Rotherhithen]] ja [[Wappingin]] välillä avattiin lopulta vuonna 1843. Maan alla lentäminen ei ole minun lajini, mutta vaikuttava kaivu se oli.",
+  "linkit": [
+   "Marc Isambard Brunel",
+   "Isambard Kingdom Brunel",
+   "Rotherhithen",
+   "Wappingin"
+  ],
+  "jatkot": [
+   "Miksi Thamesin alle ylipäätään rakennettiin tunneli?",
+   "Mihin Thamesin alittavaa tunnelia käytetään nykyään?"
+  ]
+ },
+ {
+  "kohde": "hetki:brunel-thames-tunnel-1827",
+  "kysymys": "Mitä vaaroja kaivajat kohtasivat Thamesin pohjan alla?",
+  "uusi": false,
+  "vastaus": "Mmm— tämä on vakavampi aihe. Katsotaas, mitä tiedän. Suurin vaara oli vesi: tunneli kulki ohuen savikerroksen alla, ja joki saattoi tunkeutua sisään tihkuvana vetenä tai äkillisenä tulvana. Näin kävi 18. toukokuuta 1827, kun joki murtautui tunneliin, ja tammikuussa 1828 toinen tulva tappoi kuusi miestä. Toinen vaara oli ilma: joen jätevesi tihkui tunneliin, ja siitä vapautuva [[metaani]] saattoi syttyä lampuista. Lisäksi miehet sairastuivat pahassa ilmassa ja kosteudessa. Ensimmäisen tulvan korjaamiseen [[Isambard Kingdom Brunel]] laskeutui [[sukelluskellolla]] tukkimaan reikää savisäkeillä. Työ keskeytyi pitkäksi aikaa, ja tunneli avattiin vasta vuonna 1843, yli 180 vuotta sitten. Onpas siit onneksi jo pitkä aika.",
+  "linkit": [
+   "metaani",
+   "Isambard Kingdom Brunel",
+   "sukelluskellolla"
+  ],
+  "jatkot": [
+   "Miten tunnelin rakentaminen lopulta saatiin valmiiksi?",
+   "Miten joen alle kaivetaan tunneleita nykyään?"
+  ]
+ },
+ {
+  "kohde": "hetki:lontoon-palo-1666",
+  "kysymys": "Miksi leipomosta alkanut tuli levisi niin laajalle?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tää on raskas aihe, joten kerron vain olennaisen. Tulipalon laajuuteen vaikutti moni asia yhtä aikaa. Lontoo oli tuolloin puukaupunki, jonka kadut olivat kapeita ja jossa talot olivat tiiviisti toisissaan kiinni. Kesä oli ollut kuiva, ja voimakas itätuuli kuljetti liekkejä talosta toiseen. Lisäksi pormestari Thomas Bloodworth ei antanut purkaa taloja tulen tieltä, vaikka tuliaukeaa olisi voitu näin saada aikaan. Palo alkoi yöllä Thomas Farrinerin leipomosta [[Pudding Lanella]] sunnuntaina 2. syyskuuta 1666, ja se tavoitti tiistaina [[Pyhän Paavalin katedraalin]], jonka korjaustelineet syttyivät. Palossa tuhoutui 13 200 taloa ja 87 kirkkoa, ja tuuli laantui vasta keskiviikkona. Tapahtumaa seurasi joelta käsin muun muassa [[Samuel Pepys]], joka kirjasi sen päiväkirjaansa. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Pudding Lanella",
+   "Pyhän Paavalin katedraalin",
+   "Samuel Pepys"
+  ],
+  "jatkot": [
+   "Kuinka monta ihmistä Lontoon palossa kuoli?",
+   "Miten Lontoo rakennettiin uudelleen palon jälkeen?"
+  ]
+ },
+ {
+  "kohde": "hetki:lontoon-palo-1666",
+  "kysymys": "Miksi isoisä ei enää nähnyt Lontoon vanhaa puukaupunkia?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tästä on meikäläisillä oma lukunsa. Isoisä tuli paikalle yli kaksisataa vuotta liian myöhään. Lontoon keskiaikainen puukaupunki tuhoutui suurimmaksi osaksi vuoden 1666 tulipalossa, joka kesti syyskuun alussa useita päiviä. Palossa tuhoutui tuhansia taloja ja kymmeniä kirkkoja. Uudelleenrakennuksessa kaupunkiin tuli säädöksiä, jotka vaativat talojen rakentamista tiilestä ja kivestä, ja katuja levennettiin. Arkkitehti [[Christopher Wren]] suunnitteli useita uusia kirkkoja, ja hänen suunnittelemansa uusi [[Pyhän Paavalin katedraali]] valmistui 1700-luvun alussa. Kaikki vanha ei kuitenkaan kadonnut, sillä esimerkiksi [[Towerin]] linnoitus säilyi. Isoisän aikaan, vuonna 1873, kaupunki oli siis tiilinen ja kivinen, ja se oli jo kasvanut valtavaksi. Kyllä se kaupunki siitä nousi, tuhkasta asti.",
+  "linkit": [
+   "Christopher Wren",
+   "Pyhän Paavalin katedraali",
+   "Towerin"
+  ],
+  "jatkot": [
+   "Millaisia taloja Lontoossa rakennettiin palon jälkeen?",
+   "Mitä muuta Christopher Wren suunnitteli?"
+  ]
+ },
+ {
+  "kohde": "hetki:shakespeare-globe-1599",
+  "kysymys": "Miten Globen pihayleisö käyttäytyi näytelmän aikana?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tästä pidän, koska siellä oli kunnon meteliä. Pihalla seisova yleisö, jota kutsuttiin [[penniyleisöksi]], seisoi näyttämön ympärillä taivasalla. Se ei istunut hiljaa: katsojat söivät pähkinöitä, joivat olutta ja huusivat näyttelijöille. Siksi näyttelijöiden oli puhuttava yleisön äänen yli, ja naisrooleja esittivät äänenmurroksen kynnyksellä olevat pojat. Katsojia mahtui [[Southwarkissa]] sijainneeseen teatteriin noin 3 000. Baselilaisen Thomas Platterin vierailu 21. syyskuuta 1599 on ensimmäinen varma tieto Globen esityksestä: hän näki siellä näytelmän [[Julius Caesar]] ja sen jälkeen tanssin. Teatterissa esitettiin myöhemmin monia [[William Shakespearen]] näytelmiä. Kyyhkynä minä olisin viihtynyt pihalla, pähkinänmurut kun eivät mene koskaan hukkaan.",
+  "linkit": [
+   "penniyleisöksi",
+   "Southwarkissa",
+   "Julius Caesar",
+   "William Shakespearen"
+  ],
+  "jatkot": [
+   "Millainen oli Globe-teatterin rakenne?",
+   "Miksi naisrooleja esittivät pojat?"
+  ]
+ },
+ {
+  "kohde": "hetki:shakespeare-globe-1599",
+  "kysymys": "Miten Globe-teatteri paloi kesken näytelmän vuonna 1613?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tämä on hyvä tarina. Kerron sen ihan asiallisesti. Globe paloi 29. kesäkuuta 1613 kesken [[Henrik VIII:n]] esityksen. Näytelmässä ammuttiin tykki, ja laukaus sytytti teatterin olkikaton. Palo levisi nopeasti, ja puinen rakennus tuhoutui lyhyessä ajassa. Henkilövahinko oli vain yhden miehen palavat housut, jotka sammutettiin oluella. Henrik VIII -näytelmän kirjoittajina pidetään yleisesti [[William Shakespearea]] ja John Fletcheriä. Teatteri rakennettiin pian uudelleen, ja uudessa rakennuksessa oli olkikaton sijaan tiilikatto. Nykyisin [[Southwarkissa]] seisoo Globen jäljennös, joka on rakennettu 1990-luvulla. Hyvä, että oluesta oli tuolloin vielä jotain hyötyä.",
+  "linkit": [
+   "Henrik VIII:n",
+   "William Shakespearea",
+   "Southwarkissa"
+  ],
+  "jatkot": [
+   "Miksi Globe-teatteri lopulta suljettiin?",
+   "Milloin Globen jäljennös avattiin Lontoossa?"
+  ]
+ },
+ {
+  "kohde": "hetki:ranskan-vallankumous-bastilji-1789",
+  "kysymys": "Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?",
+  "uusi": false,
+  "vastaus": "Odotas vähän, tämä vaatii hetken ajattelua. Isoisän matkakirja on vuodelta 1873, joten väliä on yli kahdeksankymmentä vuotta. Bastilji oli keskiaikainen linnoitus ja vankila, ja sen valtaus 14. heinäkuuta 1789 oli yksi [[Ranskan vallankumouksen]] tunnetuimmista käännekohdista. Linnoitus purettiin seuraavien kuukausien aikana, koska sitä pidettiin kuninkaallisen vallan symbolina. Kivistä tehtiin muistoesineitä, ja osa niistä päätyi muualle. Paikalla on nykyään aukio nimeltä [[Place de la Bastille]], jonka keskellä seisoo [[Heinäkuun pylväs]], joka muistuttaa vuoden 1830 vallankumouksesta. Valtauspäivä, 14. heinäkuuta, on nykyisin Ranskan kansallispäivä. Onpas siit jo yli kaksisataa vuotta.",
+  "linkit": [
+   "Ranskan vallankumouksen",
+   "Place de la Bastille",
+   "Heinäkuun pylväs"
+  ],
+  "jatkot": [
+   "Mitä Bastiljissa oli ollut ennen vallankumousta?",
+   "Miten Ranska viettää kansallispäiväänsä?"
+  ]
+ },
+ {
+  "kohde": "hetki:ranskan-vallankumous-bastilji-1789",
+  "kysymys": "Miten Ranskan sinivalkopunainen trikolori syntyi?",
+  "uusi": false,
+  "vastaus": "No niin, tästä kuuluu kertoa kunnolla. Trikolorin alkuna oli kokardi eli hattuun kiinnitettävä tunnus. Pariisin kaupungin värit olivat sininen ja punainen, ja niistä tuli vallankumouksen tunnus kesällä 1789. Kolme päivää Bastiljin valtauksen jälkeen kuningas [[Ludvig XVI]] saapui Versailles'sta Pariisin kaupungintalolle ja kiinnitti hattuunsa sinipunaisen kokardin. [[Lafayette]] lisäsi siihen valkoisen värin, jota pidetään yleisesti kuninkaallisen Bourbon-suvun värinä. Näin syntyi sinivalkopunainen kokardi, joka oli trikolorin pohja. Nykyisen kaltaiseksi pystyraidalliseksi lipuksi se vahvistettiin vuonna 1794. Kolme väriä on helppo muistaa, vaikka minun suvussani riittäisi harmaa.",
+  "linkit": [
+   "Ludvig XVI",
+   "Lafayette"
+  ],
+  "jatkot": [
+   "Mitä trikolorin kolme väriä merkitsevät?",
+   "Milloin trikolorista tuli virallinen kansallislippu?"
+  ]
+ },
+ {
+  "kohde": "hetki:lumiere-elokuva-1895",
+  "kysymys": "Mitä Grand Cafén kellarissa näytettiin Lumièren veljesten ensimmäisessä maksullisessa näytöksessä?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Kahvila ja elokuva, siinä on hyvä yhdistelmä. Ensimmäinen maksullinen näytös pidettiin 28. joulukuuta 1895 Grand Cafén kellarisalissa Pariisissa, ja lippu maksoi frangin. Ohjelmassa oli kymmenen lyhyttä filmiä, joiden yhteiskesto oli noin kaksikymmentä minuuttia. Ensimmäisenä nähtiin työläisten ulosmeno Lumièren tehtaan portilta [[Lyonissa]], 46 sekuntia pitkä kuva, jossa kulkivat naiset hameissaan, pyörä ja koira. Ohjelmaan kuului myös puutarhuri, joka kastelee itsensä letkulla, ja sitä pidetään ensimmäisenä elokuvavitsinä. Laitteen nimi oli [[Cinématographe]], ja se sekä kuvasi, kopioi että heijasti filmiä. Yleisössä istui taikuri [[Georges Méliès]], joka yritti ostaa laitteen, mutta Lumièret kieltäytyivät. Kahvilan kellarissa, ja minä en saanut edes pullaa.",
+  "linkit": [
+   "Lyonissa",
+   "Cinématographe",
+   "Georges Méliès"
+  ],
+  "jatkot": [
+   "Miten Georges Méliès sai tehtyä omia elokuviaan?",
+   "Kuinka monta katsojaa ensimmäisessä näytöksessä oli?"
+  ]
+ },
+ {
+  "kohde": "hetki:lumiere-elokuva-1895",
+  "kysymys": "Kuinka pitkiä ensimmäiset Pariisissa näytetyt elokuvat olivat?",
+  "uusi": false,
+  "vastaus": "Katotaas. Tässä pitää olla tarkka. Ensimmäiset Lumièren veljesten maksulliset elokuvat olivat hyvin lyhyitä, alle minuutin mittaisia. Esimerkiksi tehtaan portilta lähtevistä työläisistä kertova filmi oli 46 sekuntia pitkä. Laitteen filmirullaan mahtui vain lyhyt pätkä, ja siksi jokainen filmi oli lyhyt. Näytös 28. joulukuuta 1895 koostui kymmenestä filmistä, ja koko ohjelma kesti yhteensä noin kaksikymmentä minuuttia. Filmit esitettiin peräkkäin, ja niiden aiheina olivat arkiset hetket kuten työläiset ja kastelutilanne. Filmien takana olivat [[Lyonista]] kotoisin olleet veljekset Auguste ja Louis Lumière, ja heidän [[Cinématographe]]-laitettaan pyöritettiin käsin. Lyhyydestä huolimatta yleisö oli lumoutunut, ja viikon kuluttua ovella jonotti satoja. Ei paha kyyhkyltä, että muistin tämän kaiken.",
+  "linkit": [
+   "Lyonista",
+   "Cinématographe"
+  ],
+  "jatkot": [
+   "Milloin elokuviin tuli ääni mukaan?",
+   "Miksi veljekset epäilivät keksintönsä tulevaisuutta?"
+  ]
+ }
+]
