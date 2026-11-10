@@ -40,3 +40,7 @@ Haara natiivi-backup `natiivi-ui/nahtavyys-paisuu`, worktree /Users/Shared/Claud
 5. TARINAMERKIT: odottaa Codexin toimitusta (_review-tarinamerkit-20261110/ origin/claude/postilaatikko). Kierros 2 KK:lle (kopio PT).
 
 Tunnettu: ajon alussa "ESIKATSELU POIKKEUS ArgumentOutOfRangeException" (myös paisunta-3:ssa, ei paisunnasta).
+
+## LISÄYS 23.1x (JU)
+Kaikki kolme ajoa ovat JU:n jonossa järjestyksessä paisunta-5 → paisunta-6 → kyltit-1-1-1 (lokit/nui-kyltit-1-1-1-7b1605f21). JU:n sivusessio luovuttaa:
+tulosrivit ovat jonolokissa /Users/Shared/Claude/julkaisija-tyokalut/jono-20261103-ilta.txt (rivit "AJO NUI …"). Odota valmistumista: ls lokit/<ajo>/b1-lopuksi.png tai kuva kyltti-eiffel-lahelta.png.
