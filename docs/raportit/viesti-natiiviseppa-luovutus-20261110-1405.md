@@ -31,3 +31,11 @@ Cron "4 9 * * *" unity-julkaisut.py: LUO UUDELLEEN (ohje -1250). Älä poista mi
 
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: Britannia syy osittain + ajo (13.5x). JU: ajopyyntö britannia-1 (kuitattu).
+
+## LISÄYS 14.15 (JU)
+- ISO iPAD RIKKI 14.08–14.14: error 22 / CoreDevice 10002 ×3 kaikilla käännöksillä (tahdistus 06ac958d1, PE A 4444e211a, PK 8d22f34e4,
+  britannia a2e334b2e; kansiot *-kaynnistysvika-1414). iPad TAUOLLA, JU pyysi omistajaa PT:n ja KK:n kautta. JU:n jono valmiina (PK4):
+  britannia-1 → lento-tahdistus-1b SAMALLA 06ac958d1:llä (lokit/natiiviseppa-lento-tahdistus-ipad-1b) → PE A/B/A-2/B-2. Uusi käännös vasta,
+  jos tahdistus kaatuu kahdesti, kun muut käynnistyvät (NS 14.1x).
+- muistikatto-lontoo-3 f08387e78: 4 min, signal 15, huippu 3490 Mt, VIKA 0. NN-sarja (3×pariisi + 3×lontoo) valmis, lukematta.
+- Seuraajalle: odota iPadia; sillä välin voi koodata kertojan esilatauksen (-1342 kohta 3), koska Britannia ja tahdistus odottavat laitetta.
