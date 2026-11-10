@@ -25,3 +25,11 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
    kiinni K", pari + rajaluku 0/663 PT:lle. Jos timeout taas → kuitujonoon (KK:n sana).
 4. Renkaiden uusinta v2-sk:lla JU:lla (1745 kohta 2) ja 18.4x:n palkkikysymys (NUI:n t-3-loppu.png, vaalea palkki kujan lattialla) → rivi PT:lle.
 5. Jonossa ei muuta PT:n järjestyksestä; tyhjänä "JONO TYHJÄ: Pelikoodari" PT:lle.
+
+## LISÄYS 19.3x (luovutuksen jälkeen; tämä on viimeisin)
+- OSA 11 kärki nyt aae0ab729: lähtölause ("Pakene vartijoita…") vain NUI:n tavoitepalkissa (308cd1d16, MR29 → 224.39), ei kehotekaistalla
+  (JuoksuOhje.Lahto poistettu; tieto-ohjeena vain Voimat). NUI ja PT kuittaavat. NUI yhdisti osan 10 (93a4f77f2) → 308cd1d16.
+- OSA 6 iPad-bottiajo JU:lla (uudelleenkäynnistyksen jälkeen; iPad TAUKO, error 22): skenaario proto-3d/_tyo/pelikoodari/osa6/
+  sk-ipad-osa6-logiikkaviat.txt (md5 7c07989e266a) → lokit/pk-osa6-4df0ce2a3-ipad. Katso o1–o4 ja lokista "ulkoesineet peliin, N kpl"
+  ennen 1. juoksua → rivi PT:lle.
+- OSA 8 ovet-2 Mac-ajo JU:lla käynnissä 19.17 (ipad-koko, raja 40 min) → lokit/pk-osa8-ovet-mac-3eb33531c-2 (kohta 1.3).
