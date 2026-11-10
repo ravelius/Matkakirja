@@ -1149,3 +1149,107 @@ Omistaja 06.38: "Saako versio numeron jatkossa lyhyemmäksi" (asennuslinkin 335d
 - 06.59 asennussivu: "Tässä riittäisi kun näkyisi version alla uudet jutut ranskalaisilla viivoilla sekä edellisen version uudet jutut. Sekä latauksen koko. Muut tekstit voi ottaa pois" → JU:n pysyvä linkkiohje 224.8:sta (Matkakirja, iso 224.N, Uutta, Edellisessä, Asenna, koko; sha ja ohjeet pois). Manifestin title "Matkakirja 224.N" joka linkissä.
 - 07.36 kortti "Kelpaavatko Lontoon nostojen tekstit (18 kysymystä ja 15 kuvaselitettä)?" → "Kyllä ja jatkossa sinä saat päättää tällaiset asiat koska osaat minua paremmin nämä asiat". Lontoon A 16 + B 2 (KK:n sanamuoto: 18 "saksanhirven urosten") + C 15 kelpaavat.
 - PYSYVÄ VALTUUS 07.36: nostojen ja juttujen sisältötekstien (Kysy pululta -kysymykset, kuvaselitteet ja vastaavat faktatekstit) hyväksyntä on KK:n, ei omistajan korttia. KK:n kapea tulkinta: ei koske ääniä, kuvia, malleja, generointilupia, julkaisua eikä huutoja/käsikirjoituksia. Roolit tuovat tekstit PT:n kautta KK:lle; KK kertoo omistajalle lopputuloksen rivillä.
+
+## Striimikartta kaikissa kaupungeissa (omistaja 16.14) (10.11.2026 klo 16.15)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.14: "eikö kaikissa kaupungeissa pitäisi olla kuitenkin striimikartta käytössä?" Vahvistaa 2.204 (2.11. 22.08). Marseillen tyhjä pohja isolla iPadilla on vika: NS selvittää (latauspaikkavuoto, Lontoo, verkko) ja korjaa. NUI:n nimizoom-katto ef774d9fd perutaan; nimen napautus fb16ab5de junaan vasta kun Marseille + yksi muu piirrokseton näyttää striimikartan isolla iPadilla. JU:n katto-Mac-ajo peruttu. KK:n kortin vaihtoehdot rauenneet.
+
+## Pariisin koodinähtävyydet: maltillinen korostus (omistaja 16.17) (10.11.2026 klo 16.17)
+
+Omistajan kortti KK:ssa 10.11.2026 klo 16.17 (iPad-parit Eiffel, Riemukaari, Notre-Dame): "Maltillinen korostus" – kaikki nähtävyydet samassa suhteessa hieman todellista suurempina, erottuvat yhdellä vilkaisulla, eivät peitä kortteleita; uudet kuvat ennen junaa. Tarkentaa 09.36. Yksi yhteinen kerroin (KS vetää, VS Eiffel), Eiffel korkein, Sainte-Chapelle ei ND:tä isompi, kyltti ei peitä mallia. Uudet iPad-parit kolmesta kulmasta + lähikuvat (ND:n tornit) KK:lle korttiin kelpaako junaan.
+
+## Pariisin nimen napautus zoomaa, junaan heti (omistaja 16.17) (10.11.2026 klo 16.17)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.17 (kaappaus pariisin-nimikortti-pois-1617.png): "Tämän voisi tosiaan poistaa ja korvata sillä, että pelit zoomautuisi Pariisiin, kun painan Pariisin nimeä kartalla." Vahvistaa 10.34. NUI fb16ab5de Pariisin osalta junaan heti; muut kaupungit pitävät kortin, kunnes striimikarttakorjaus (16.14) näkyy isolla iPadilla, sitten zoomaus laajenee ilman uutta korttia.
+
+## Nimen napautus: lopullinen linja (KK 16.2x) (10.11.2026 klo 16.18)
+
+Korvaa 16.14/16.17 välivaiheet: zoomaus kaikissa kaupungeissa, kortti pois (omistaja 10.34 + 16.17). Barcelona näyttää katuverkon ilman piirroskarttaa (NUI Mac-ajo ef774d9fd), joten Marseillen tyhjä pohja on Marseillen oma laatta-aukko. Marseille pitää kortin kunnes NS korjaa aukon (ja tarkistaa muut aukkokaupungit). Ehto ennen junaa: iso iPad, Barcelona katuverkko näkyy.
+
+## Pariisin raivaus palautetaan maltilliseen kokoon (omistaja 16.18) (10.11.2026 klo 16.18)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.18: "pariisista on siivottu tripokohteiden ympäriltä tilaa liioitelluille malleille. ne varmaan kannattaa nyt palauttaa, jotta ei jää liikaa tyhjää tilaa". KS palauttaa talot ja korttelit; raivaus vain korostetun mallin peittämä ala; samaan iPad-pariin kuin 16.17 koko. Samalla 16.18: omistaja epäilee Marseillen tyhjää pohjaa latausongelmaksi ja kokeilee puhelimella omalla verkolla; NS selvittää aukko vai lataus.
+
+## Latausjumi hitaalla verkolla: kestävä lataus (omistaja 16.25) (10.11.2026 klo 16.27)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.25: "iPad simu on juuttunut viimeisen keisarin latauskuvaan, sama mitä kävi kun itse testasin sitä aiemmin päivällä." JU 16.27: Puyin malli ja leivotut kuvat 121 aikakatkaisua isolla iPadilla, Macilla 0,45 s. PK: uudelleenyritys ja jatko, todellinen palkki, suomenkielinen viesti hitaasta yhteydestä, Poistu aina; suositus välttämättömistä sovelluksen mukana/välimuistissa. NS: sama periaate kartoille; tarkistetaan myös samanaikaisten hakujen tulva.
+
+## Striimikartta ei lataudu varmasti myös Macilla (PT 16.4x) (10.11.2026 klo 16.32)
+
+NUI 3e8796b49 Mac-ajo: Barcelona tyhjä paperi 17 s zoomauksen jälkeen, edellisellä ajolla latautui. Satunnainen latausvika, ei vain Marseillen aukko eikä hidas verkko. NS:n Tekninen kunto -ykköstyö; OK = Barcelona + Marseille katuverkko toistuvasti Macilla ja isolla iPadilla. Nimen napautus (3e8796b49) ei junaan ennen korjausta.
+
+## Latausruudun hitaan yhteyden teksti (omistaja 16.36) (10.11.2026 klo 16.36)
+
+Omistajan kortti KK:ssa 10.11.2026 klo 16.36: "Yhteys on hidas. Lataus jatkuu siitä, mihin se jäi. Voit myös palata kartalle Poistu-napista." = "Kyllä, kelpaa (Suositus)". PK käyttää sanatarkasti. Samalla omistaja 16.36: "en näe tekstiä. vaihdoin koneen nyt puhelimen kautta nettiin niin pitäisi toimia nopeammin" – Mac puhelinverkossa, isot ulospäin suuntautuvat siirrot lykätään kunnes verkko palaa.
+
+## Telian kuituvika: verkko 4 Mb/s klo 9 alkaen (omistaja 16.38) (10.11.2026 klo 16.38)
+
+Omistaja KK:n kautta 10.11.2026 klo 16.38: "tänään verkko on ollut todella hidas klo 9:00 alkaen suurinpiirtein. ennen 950mb/s, nyt vain 4mb/s. vaihdoin nyt myös ipadit puhelimeni verkkoon joka toimii nopeammin. telialla on valokuidun kanssa jokin isompi ongelma ja siksi verkko äärimmäisen hidas". Seuraus: tämän päivän laitehavainnot klo 9 jälkeen (Lontoon tyhjä kartta, Britannian laatat, panorointi, juoksupelin jumi, Marseille/Barcelona tyhjä, error 22?) hitaassa verkossa; NS/PK/JU erottavat syyn uusinnalla; kestävyyskorjaukset pysyvät. PT:n työtapa: lataus- ja karttamuutokset kokeillaan myös hitaalla verkolla (pakotettu hidastus/katko). Pysyvä Raamattu-sääntö vaatisi omistajan kortin (7.45).
+
+## Ei hitaan verkon testejä nyt (omistaja 16.42) (10.11.2026 klo 16.43)
+
+Omistajan vastaus KK:n korttiin 10.11.2026 klo 16.42: "en usko että kannattaa alkaa testaamaan muutoksia vielä hitaalla yhteydellä. voidaan joskus myöhemmin ennen kaupallista julkistusta testata. pääsin nyt pelaamaan ipadilla juoksupeliä, eli vika oli varmaan hitaassa nettiyhteydessä". Kumoaa PT:n 16.38 työtavan. Latausjumin syy verkko; PK c62818943 junaan tavallisilla testeillä, Pekingin hahmoesihaku peruttu. NS uusii striimikartan, Britannian laatat ja panoroinnin nopeassa verkossa, korjaa vain toistuvat. Hitaan verkon testaus idealistaan ennen kaupallista julkistusta.
+
+## Tyhjä striimikartta = hidas verkko (NS 16.5x) (10.11.2026 klo 16.44)
+
+NS: puhelinverkossa (f2fe729b1) Marseille ja Barcelona katuverkko 5 s:ssa, 0 virhettä; 4 Mb/s:llä epäonnistunut haku jätti pysyvän beigen. Pieni korjaus 94303946d (3× uusinta) tavalliseen junaan ilman hitaan verkon testejä (omistaja 16.42); verhon välähdys idealistaan. Nimen napautus laajenee kaikkiin kaupunkeihin (NUI erillinen commit) ilman uutta korttia, Marseillen poikkeus pois.
+
+## Juoksupelin linjat ja omenat: KK suunnittelee (omistaja 16.48) (10.11.2026 klo 16.50)
+
+Omistajan pyyntö 10.11.2026 klo 16.48 (KK:n kautta): omenat aina jommallakummalla kahdesta linjasta, oikea ohjain valitsee automaattisesti, käännökset 90° jompaankumpaan linjaan, isoilla aukioilla kaista kerrallaan kohti omenaa; koko juoksupelin piirto ja logiikka tarkastetaan. Iso muutos (7.48): KK:n suunnitelma ensin, PK ei tee linja-/omenamuutoksia ennen sitä.
+
+## Juoksupelin suunnitelma jaettu (omistaja 16.59 ja 17.04) (10.11.2026 klo 17.05)
+
+KK:n suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261110-juoksupeli-linjat-ja-tarkastus.md. Omistaja 16.59: ovet kiinni tasolla 1 jos ei iso työ, pysähdysvika aukiolla, tavoite näkyviin, opastettu alku. Kortit 17.04: omenat "niitä voisi olla sekä että, mutta alussa ilman hyppyä"; aukiot kokeena linjojen jälkeen (kumoaa 21.10. vain kaksi kaistaa); tavoite täyttyvä palkki ja portti. Jako: PK 9 → 1–3 → 8 (koko ensin) → 6 → 10 (NUI ulkoasu) → 11 (KK:n tekstit); 5 kokeena; NS osa 7 piirto (mittaus ensin) usvarajauksen jälkeen.
+
+## Kuvakyltti junaan (omistaja 10.11. 17.08) (10.11.2026 klo 17.09)
+
+KK välitti: NUI kuvakyltti-koe 9f7f40611 (kuva ja nimi yhtenä kylttinä tähden alla, saman paikan toinen nimi pois) = 'Kyllä, junaan'. PT antaa pt-ok:n heti JU:n numeroinnin jälkeen. Juoksupelin kiinni-teksti ei vielä hyväksytty (KK:n 11 opasteen lista omistajalla); PK ei vaihda tekstiä ennen päätöstä.
+
+## Juoksupelin aineisto isolle iPadille johdolla (omistaja 10.11. 17.31) (10.11.2026 klo 17.32)
+
+Kortti 'Kyllä, kopioidaan': poikkeus vain isolle iPadille ja vain juoksupelin aineistolle, kopio kokonaisena; latausta mittaavat ajot (latausruutu, latausjumi) eivät päde isolla iPadilla kopion jälkeen, latauksen toimivuus omistajan kotitesteillä (pieni iPad, puhelin). Samalla 17.30: varjojen piirtoetäisyys työlistaan (NS, ei kiire).
+
+## Pariisin maltillinen korostus junaan (omistaja 10.11. 17.45) (10.11.2026 klo 17.45)
+
+Kortti 'Kyllä, junaan': KS c1a15236d (nähtävyysmallit 2× todellinen, vaaka enint. +150 m, Riemukaari vähintään 150 m, raivatut talot palautettu, koodirakennukset oikeassa koossa). Seuraava vaihe (ei junan ehto): Riemukaari sulautuu taloihin värin takia, Sacré-Cœur lähes katoaa yleiskuvassa; mallien ulkonäkö ja ND:n tornit koon jälkeen (16.17).
+
+## Juoksupelin opastetekstit 1–11 hyväksytty (omistaja 10.11. 17.52) (10.11.2026 klo 17.52)
+
+Kortit KK:ssa: tekstit sellaisinaan (scratchpad/keskustelukanava/suunnitelmat/20261110-juoksupeli-linjat-ja-tarkastus.md osa 11). Kohta 1 'Pakene vartijoita, kunnes palkki täyttyy ja portti aukeaa.' (NUI:n 'Pysy jaloillasi…' ei käyttöön); sana KAISTA; kohta 11 'Vartija sai kiinni! Napauta nopeasti'; liuku- ja aarreopaste pois tasolta 1. Toteutus PK (osa 11) ja NUI (palkki+portti, osa 10).
+
+## Oppi: karttamuutos iPadilla oletustilassa ennen linkkiä (PT 10.11. 19.1x) (10.11.2026 klo 19.10)
+
+224.36 (Pariisin korostus) meni linkkiin vain Mac-ajoilla, joissa talot/elävä kartta kytkettiin komennoilla ja talot paikallisesta kansiosta; laitteella korostuksen pohja peitti laajat alat beigellä (omistaja 18.53). Korostus peruttu junasta 191aaeaf2, linkki 224.35. Jatkossa kartan/talojen muutokset: Mac-ajo myös oletustilassa (ei komentoja, talot ämpäristä) ja iPad-ajo ennen pt-ok:ta. PT tulkitsi beigen horisontin virheellisesti hitaaksi verkoksi.
+
+## Työlistan järjestys ja suunnitelma KK:lle (omistaja 10.11. 20.13) (10.11.2026 klo 20.13)
+
+Omistaja KK:n kautta sanatarkasti: "Mutta onhan siellä paljon muitakin asioita kuin mitä minä pyydän. Ja sinähän suunnittelit ison listan asioita jo aiemmin. Sinunhan pitäisi pitää järjestys ja suunnitelma". KK:n ehdotus "vain omistajan pyynnöt sivulle" peruttu. Työnjako: KK pitää työlistan järjestyksen ja suunnitelman (rivit, kärki, jarj, osiin jako, uudet pyynnöt listaan välittäessään); PT ja roolit kirjaavat tilan (tilanne, valmis, este), PT kuittaa laadun. Viestillä jaettu työ: listan rivi tai rivi KK:lle. Asennussivun työosio päivittyy itsestään (tyo-osio.py-vahti, 15 s). Raamatun kohta 7.4/7.39 päivitetään seuraavassa Raamattu-erässä.
+
+## Pariisi vaihtuu koodimalleihin, Tripo-mallit 224.35-koossa siihen asti (omistaja 10.11. 20.19) (10.11.2026 klo 20.19)
+
+Omistaja KK:n kautta sanatarkasti: "mutta eikö ne ole tarkoitus vaihtaa niihin uusiin malleihin?" (2× kutisti vanhat Tripo-mallit 224.36:ssa). KK: kortit 09.36 ja 16.17 koskivat koodimalleja; 18.0x ok välitilalle oli KK:n virhe, ja PT 17.4x jätti koodimallit junasta pois niiden "koe, ei junaan" -merkinnän takia (PT:n virhe). Järjestys: (0) laitevika (pieni iPad: talot/mallit puuttuvat, jättinimet, ND puuttuu 224.35) iPad-ajolla ensin; (1) RK, ND, Eiffel koodimalleina maltillisella korostuksella, Tripo talteen; (2) Louvre, SC, Panthéon, Invalides, Opéra, Sainte-Chapelle koodimalleiksi, parit KK:lle; (3) ympäristöt. Vaihtamattomat Tripo-mallit 224.35:n koossa (KS b8971b839). Tripo-koosta ei korttia.
+
+## Omistaja testaa itse, kunnes iso iPad toimii (omistaja 10.11. 20.23) (10.11.2026 klo 20.23)
+
+Omistaja KK:n kautta sanatarkasti: "Minä voin testata asioita siihen asti, kunnes iPad saadaan huomenna toimintaan." Kunnes iso iPad on käynnistetty: laiteajoa odottavat muutokset linkkiin Mac-tarkistuksella (oletustila, PT katsoo) ilman ison iPadin ajoa; Uutta-tekstiin tai JU:n viestiin rivi "kokeiltava: …"; vika → linkki heti edelliseen. Koskee Pariisin koodimalliversiota ja PK:n osia 6, 8, 11. Ei muisti- ja nopeusmittauksia (vain iso iPad) eikä TF:ää.
+
+## Raamatun kevennys luvut 12 ja 7: KK tekee tilinvaihdon jälkeen (omistaja 10.11. 20.30) (10.11.2026 klo 20.30)
+
+Omistaja kysyi 20.26 "Milloin se raamatun kevennys kannattaa tehdä?"; KK suositteli tilinvaihdon yhteyteen, luku 12 ensin, sitten 7. Omistaja 20.30 sanatarkasti: "Haluan että sinä teet sen tilinvaihdon jälkeen." Tekijä KK heti tilinvaihdon jälkeen: omistajan poikkeus sääntöön "Raamatun kohdat kirjoittaa vain Päätoimittaja" tälle työlle. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261110-raamatun-kevennys-luvut-12-ja-7.md (säännöt ennallaan, taustat aihesivuille, kokotesti ja checks, PR per luku). PT: kertoo KK:lle heti vaihdon jälkeen; muut roolit käynnistetään vasta luvun 12 yhdistämisen jälkeen, jos odotus on lyhyt; ohjeiden koe (7.47 C2) kerran kevennyksen jälkeen; KK ilmoittaa PT:lle ennen kumpaakin yhdistämistä.
+
+## Nähtävyyksien erottuvuus kaukaa kokeiltavaksi (omistaja 10.11. 20.51) (10.11.2026 klo 20.51)
+
+Kortti KK:ssa (4 kuvaa: pari-rk-viisto, rajaus-rk, pari-yleis, rajaus-nd): "Kyllä, kokeiltavaksi (Suositus)". VS 593d09722 (pieni nähtävyys vaalenee hieman, ohut tumma ääriviiva; läheltä ei muutosta; Eiffel ei) asennusversioon koodimallien kanssa, ei lopullinen: omistaja arvioi pienellä iPadilla, KK kysyy sitten, jääkö. Huomiot VS:lle: viiva paikoin rosoinen/katkonainen Macin rajauksissa, Louvre haalistuu yleiskuvassa, Riemukaari hieman litteä.
+
+## Omistajalle kokeiltavaksi vain peliin jäävää (omistaja 22.31) (10.11.2026 klo 22.33)
+
+Omistaja KK:n kautta 10.11.2026 klo 22.31 sanatarkasti (vastaus 224.45:n "kokeilu, ei lopullinen"): "En testaa asioita jotka eivät jää peliin". Voimassa heti: 1) omistajalle kokeiltavaksi vain peliin jääväksi tarkoitettu; kokeet ja välivaiheet KK ratkaisee kuvista ja videoista (21.38); niistä ei "kokeiltava"-riviä eikä Uutta-tekstiin sanaa kokeilu. 2) JU vie asennussivulle kuten ennen (roolien ja KK:n tarkistuksiin), mutta KK:lle "kokeiltava: …" vain jäävistä ja rivillä kerrotaan, mikä versiossa jää. KK kertoo omistajalle versiot koottuna. 3) KK:n päätös: VS:n erottuvuus kaukaa (v3) JÄÄ, omistajalta ei kysytä (korvaa 20.51:n "KK kysyy, jääkö"). Seuraava omistajalle kerrottava kokonaisuus: Pariisin nähtävyydet 1:1 + raivaus mallin pohjaan + vaaleampi kivi (RK, ND; KS d36a7c7a2) + erottuvuus säädettynä 1:1:lle, kaikki KK:n katsomina samassa versiossa. PT välitti JU:lle 22.33.
+
+## Vapaan kameran lähin 2,7× lähemmäs (KK 23.1x) (10.11.2026 klo 23.15)
+
+KK:n päätös NUI:n parista paisunta-5-pari-lahin-nyt-vs-2-7x.jpg (selvitys a3f374468): vapaan kameran lähin 2,7× lähemmäs (PiirrosKerros IsoisaLahinLeveys 0,525 → noin 0,2), jotta 1:1-Notre-Dame on noin neljännes ruudun leveydestä; maan piirroksen pehmeneminen (2,48 m/px) hyväksytty hinnaksi. Tekijä KS ennen Invalidien korjauksia; avaa VS:n kynän ja 1:1-viivan sekä NUI:n kyltit. Jatkorivi VS:lle: pehmeän maan parannus läheltä. Samalla 23.0x: 224.46 ilman 1:1-koodimallien ääriviivaa (VS aea72af54), väri ja kyltti riittävät erottuvuuteen.
+
+## Nähtävyyden paisuminen peliin (omistaja 23.29) (10.11.2026 klo 23.30)
+
+Omistajan kortti KK:ssa 10.11.2026 klo 23.29: "Otetaanko nähtävyyden paisuminen peliin (video: Notre-Dame kasvaa, kun se valitaan, ja palaa kokoonsa)?" = "Kyllä, peliin (Suositus)". Paisuminen kaikille nähtävyyksille (suunnitelmat/20261110-nahtavyys-paisuu-kohteena.md; NUI), junaan NUI:n kylttikorjauksen 7b1605f21 kanssa, kun KK on katsonut ajon, jossa kyltti ei jää mallin alle. Omistajalle kerrottava kokonaisuus ("tämä jää"): nähtävyydet 1:1, vaalea kivi, lähin kamera 2,7×, paisuminen.
