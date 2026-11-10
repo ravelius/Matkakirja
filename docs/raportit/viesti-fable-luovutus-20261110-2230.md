@@ -1,4 +1,4 @@
-# PT:n luovutus 10.11.2026 klo 22.30 (PT local_8d8ebf72; konteksti ~30 %, viikko 90 % → tilinvaihto lähellä)
+# PT:n luovutus 10.11.2026 klo 22.30 (PT local_8d8ebf72; konteksti 30 %; tallenne /Users/Shared/Claude/keskustelut/Paatoimittaja-2026-11-10-klo-2059-2228.md)
 
 Korvaa -2100:n. LINJAT voimassa: kolme kärkeä; Asemataulu jäädytetty (työlista tyolista.py:llä, tiedosto scratchpad/asemataulu/data/talo/tyolista.json);
 mittaukset vain isolla iPadilla; omistaja testaa itse linkistä kunnes iso iPad toimii (20.23). Date ennen aikaleimaa.
@@ -28,6 +28,7 @@ Päätösloki 21.12–22.01 ja Raamattu 2.204 mainissa (PR 6559, 05e205f1b). Id:
 - PK (luovuttanut 2b021b3f2): rivi "Juoksupeli: puuttuvat seinät ja rakenteet (omistaja 17.30)" – kartoitus 1 _tyo/pelikoodari/seinat-taso1/kartoitus/LISTA.txt
   (M1–M8 LAV:lle, P1 ovikehys + P2 puut ilman latvusta PK:lle, eteläosa kartoittamatta).
 - LAV: M1–M8 + oma jono (muurin juuri, lattia). JU: MR-ketju; levy siivottu (141 Gi vapaana; deltavälimuisti NAS valimuistit-20261110).
-- ODOTTAA OMISTAJAA: ison iPadin uudelleenkäynnistys (huomenna); tilinvaihto (viikko 90 %, raja 92 %; KK kysyy).
+- ODOTTAA OMISTAJAA: ison iPadin uudelleenkäynnistys (huomenna). VIIKKO: käytössä koodaustili, raja 99 % (hälytys 96 %); 92 %:n raja koskee vain päätiliä (KK 22.3x).
+- AVOIN: KS:n ND:n eteläpuolen vaalea K 2 -kenttä + RK/ND sävyt → jos sha ennen 224.46-käännöstä, korvaa 098f9f05c:n (JU:lle).
 - PT:n opit: Postivahti nollaa usein → tarkista luovutuksesta, että viimeisin käskysi on mukana, ja lähetä tarvittaessa uudelle sessiolle.
   du /Users/Shared/Claude jumittuu → mittaa kansio kerrallaan taustalla tai Sonnet-agentilla.
