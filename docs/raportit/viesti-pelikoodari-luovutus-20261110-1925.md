@@ -48,3 +48,11 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - Palkkikysymys (18.4x) VASTATTU PT:lle: palatsimallin rakennusjalustan reunakivi, ei koodin kappale; kuvat proto-3d/_tyo/pelikoodari/palkki-t3/.
 - Renkaiden uusinta pyydetty JU:lta 224.37-linkillä 191aaeaf2 → lokit/pk-renkaat-191aaeaf2-ipad (iPad; odottaa isoa iPadia).
 - Linkit: 224.37 = 191aaeaf2 (osa 9), 224.38 = 271e46fd9 (osat 1–3).
+
+## LISÄYS 20.4x (uusin)
+- Mac-latausjumin syy: esikatselu.sh:65 TMPDIR=/tmp/mke.* joka ajolle → juoksupelin välimuisti kylmä, 1,2 Gt verkosta. Vahti
+  proto-3d/_tyo/pelikoodari/mac-valimuisti/esitayta-valimuisti.sh <sha…> kloonaa peilin juoksu-ipad-peili-v3/juoksupeli-mallit ajon TMPDIR:iin
+  (vain annetut sha:t). Pysyvä korjaus ehdotettu PT:lle (NS/JU:n alue).
+- OSAT 6+11 aae0ab729 Mac katsottu (p6/p7/p19) → PT 224.41.pt-ok, MR31 JU:lla. Ulkoesineet eivät näy Macilla (StreamingAssets vain käännöksessä).
+- OSA 8 ovet-3 3eb33531c Mac katsottu (kiinni 245 → 0), pari proto-3d/_tyo/pelikoodari/osa8-ovet/pari-ovet-3/ PT:lle + rajaluku 0/663 → odottaa pt-ok.
+- Jäljellä: renkaiden uusinta (iPad, 191aaeaf2) isolla iPadilla, kun se toimii (omistaja: huomenna).
