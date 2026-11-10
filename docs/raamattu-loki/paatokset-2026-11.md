@@ -1229,7 +1229,7 @@ KK:n suunnitelma 10.52: scratchpad/keskustelukanava/suunnitelmat/20261110-kartan
 
 Kortti "Jääkö maalattu taivas lopulliseksi Pariisin kallistettuun karttaan?" = "Kyllä, lopulliseksi (Recommended)"; kuvaus: "Maalattu taivas jää Pariisiin ja menee junaan." Vain Pariisi, muualla liukuväri. Jo junan 224 pohjassa oletuksena: linkissä 224.13 (e46b3f251) alkaen.
 
-## MUISTIRAJA OSUUTENA, PIENOISKARTTA JA LEHTI/INFO-NAPIT (omistaja 10.11.2026 klo 12.05–12.06, KK:n välittämä) (10.11.2026 klo 12.15)
+## MUISTIRAJA OSUUTENA, PIENOISKARTTA JA LEHTI/INFO-NAPIT (omistaja 10.11.2026 klo 12.05–12.06, KK:n välittämä) (10.11.2026 klo 12.06)
 
 12.06: "Otetaanko pelin muistiraja junaan osuutena laitteen antamasta muistista (isolla iPadilla 6553 Mt entisen 4080 Mt:n sijaan)?" = "Kyllä, junaan (Suositus)"; rajoitus kerrottu: käytös lähellä 6553:a mittaamatta (NS efdb68d93).
 12.06: "Kelpaako maan pienoiskartta vasemmassa alakulmassa tällaisena junaan (kuvassa oikealla)?" = "Kyllä, junaan (Suositus)" (NUI 224e8ea23).
