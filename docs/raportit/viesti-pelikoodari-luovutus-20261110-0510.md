@@ -38,3 +38,12 @@ Vahti: lokit/pelikoodari-*.ajo.log VALMIS-rivit (Monitor, 30 min, uudelleen tarv
 
 ## LISÄYS 05.1x
 - PT 05.1x: 28c92a109 KUITATTU junaan 224 (JU poimii) → jonon kohta 3 tehty PT:n osalta. Jatka: kulkupari + 1e-tahdistuspari (JU-jono).
+
+## LISÄYS 05.5x (jatkovuoro)
+- Kulkupari 0|1 (28c92a109): keisari keltainen molemmissa, piikkiä ei kummassakaan (autopilotin reitit erkanivat ~60 s:ssa;
+  taso päättyi 4:00 ennen maalikuvaa) → ei leivontaeroa; piikki = rakennusmalli (aiempi piikkipari). TULOS-kulkupari.md (kulkukartta/).
+- Tahdistus rebasattu junan 224 päälle: a59334e25 (natiivi-backup pelikoodari/juoksu-tahdistus; vanha f82399238 haarassa
+  pelikoodari/juoksu-tahdistus-f8239). Pari a (f82399238, ilman 28c92a109:ää) VIKA 4095 → uusinta b a59334e25:llä:
+  1b alkulento p50 tasan 25,0 kaikissa ikkunoissa, 0b hyppii 16,7↔25; VIKA 0. PT KUITTASI a59334e25 junaan 224 05.5x (JU poimii).
+  TULOS-tahdistus.md + kaavio-tahdistus-b.png (juoksu-tahdistus/).
+- JONO TYHJÄ 05.5x: paketti-v4 odottaa LAV:n lattiaa ämpäriin (LAV 04.06: lattia4 paras, lattia5 etsinnässä); kaupunki/maa-erä PT:n kirjauksella myöhemmin.
