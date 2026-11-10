@@ -10,7 +10,7 @@
 - LEVY 36 Gi (oli 5): NAS:lle julkaisija-laite 36 kpl, lokit-20261110-e 206 kansiota, jako-vanhat-2 (19 ipaa, käynnissä); wt julkaisija-muutosloki-221 poistettu (pushattu). PT: muiden työtiloihin ei kosketa (PT pyytää rooleja).
 - 16.5x KORJAUS (PK, ETUSIJA PT 16.3x): Mac PJ5 PK latausruutu d57afd0c3 pieni-pysty AJOSSA (sk T/sk-taysi/pk-latausruutu-d57afd0c3.txt, md5 fe1af21cd4b9) → lokit/pk-latausruutu-d57afd0c3 → rivi PK:lle. Pienen iPadin laiteajo nyt d57afd0c3:lla (EI 87a9d0e69), vasta PK:n ok:n ja iPad-sk:n jälkeen.
 - 16.5x MAC lisää: NS marseille-mac-1 f2fe729b1 (KÄRKI) ajossa → NS; NUI kuvakyltti-4-diag-mac 753093617 PJ5:n jälkeen → vain unity.log-polku NUI:lle.
-- 16.5x PIENI iPad PJ6 (jono-pj6-pieni-d57afd0c3.zsh, ipad-pieni-kiire.zsh = kiire-kopio pienelle, oma lukko) odottaa PK:n ok:ta Mac PJ5:lle: kun PK sanoo ok → `touch T/pk-ok-d57afd0c3` → käännös + ajo (sk md5 3064164605f0) → lokit/pk-latausruutu-d57afd0c3-ipad → PK.
+- 16.5x PIENI iPad PJ6 (jono-pj6-pieni-d57afd0c3.zsh, ipad-pieni-kiire.zsh = kiire-kopio pienelle, oma lukko) KÄÄNNÖS e429f450f (PK 16.4x, kansio ennallaan), odottaa PK:n ok:ta Mac PJ5:lle: kun PK sanoo ok → `touch T/pk-ok-d57afd0c3` → käännös + ajo (sk md5 3064164605f0) → lokit/pk-latausruutu-d57afd0c3-ipad → PK.
 - 16.4x: levy 42 Gi (siirrot valmiit). OMISTAJA 16.36: Mac verkossa PUHELIMEN kautta → vältä isoja latauksia/vientejä (NAS-siirrot, media-vienti) kunnes verkko palaa; iPadit voivat olla yhä hitaalla wifillä (v131-uusinta vasta normaalilla verkolla). NUI kaupunkinimi-5-mac effce09e2 (etusija) ajossa → NUI; -4-ipad vain tiedoksi.
 - Postivahdin 15.0x aloitusviesti tuli ilman nollausta; vastattu (ei koske).
 
