@@ -1208,3 +1208,14 @@ Asennussivun osio (KK 08.1x): "Odottaa sinua" vain omistajan päätöksiä tai t
 
 9.11. 16.13 (oli vain koodin kommentissa, KaupunkiNostovalikko.cs): "onko nähtävyyksissä myös unohdetut aarteet, vaikka niillä olisi myös oma osio. Ne täytyy erotella normaaleista nähtävyyksistä erilleen." → kadonneet ihmeet (★-kyltti, leike tai hahmotelma-nosto) vain omassa Kadonneet ihmeet -osiossaan, eivät Nähtävyyksissä.
 10.11. 09.57 pyyntö ja 10.06 kortit: (1) maan luettelon ensimmäinen rivi "Kaupungit (määrä) ›" → kaupungit nostomäärineen → kaupungin kategoriat; (2) "Tehdäänkö luetteloon sama kiinteä järjestys kaikkialle, Kadonneet ihmeet toisena?" → "Kyllä (Recommended)": Nähtävyydet, Kadonneet ihmeet, sitten muut samassa järjestyksessä maassa ja kaupungissa; (3) "Luokitellaanko Muut-ryhmän kohteet oikeisiin kategorioihin?" → "Kyllä, minä luokittelen (Recommended)": KK Sisältökirjurin kanssa. Toteutus NUI; vika (kadonneet Nähtävyyksissä, kaksoiskappaleet) ohi jonon.
+
+## MUISTIRAJA OSUUDEKSI LAITTEEN ANTAMASTA, KOE (omistaja 10.11.2026 klo 10.23) (10.11.2026 klo 10.36)
+
+Kortti "Muistiraja osuudeksi laitteen antamasta (koe)": NS tekee, lähtö 80 % laitteen antamasta, jarrun tasot samaan suhteeseen; iPad-mittaus ennen junaa, junaan vasta tuloksen ja uuden kortin jälkeen.
+
+## NOSTOLUETTELO: AIHEETON NÄHTÄVYYS VAIN NÄHTÄVYYKSISSÄ, KAUPUNGIN NIMI ZOOMAA (omistaja 10.11.2026 klo 10.34, KK:n välittämä, aamulista kohta 59) (10.11.2026 klo 10.36)
+
+(1) "eikö kaikki rakennukset kuulu ennemmin nähtävyyksiin?" → KK:n Muut-luokittelu (PR 6553) pitoon; tilalle sääntö: aiheeton nähtävyys näkyy vain Nähtävyyksissä eikä Muut-ryhmässä (ei datamuutosta). Kumoaa 10.06:n kohdan (3) tältä osin.
+(2) "poistaa pariisin nimen klikkauksesta kaikki nykyiset (siitä nousee kortti jossa nämä ovat) ja korjata pariisin ja muiden kaupunkien nimien klikkaus sillä että peli zoomaa kaupunkiin sisään."
+(3) Kaupunkilehti ja turisti-info "pitäisi muuten turisti infon kanssa nostaa selkeämmin näkyville kaupungissa" → NUI:n ehdotus kuvana KK:lle (kaksi selkeää nappia kaupungin nimen yhteyteen, sovitus 09.28 pienoiskarttaan ja nimikilpeen).
+(4) Lehden jutut vs. kartan kohteet (omat 3D-merkit kuten kadonneiden tähti): odottaa KK:n suunnitelmaa ja korttia. Toteutus (1)–(3) NUI.
