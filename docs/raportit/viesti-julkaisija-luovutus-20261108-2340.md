@@ -8,6 +8,7 @@
 - MAC AJOSSA: KS korostus-44 93ba52043 (pistekerroin 0.465, 24 kuvaa) → KS: tarkistusrivit "MATKAKIRJA korostus: 1.50/2.00/2.50", "korostus 1.50 Louvre: …", "talot tila: palat" > 0 (ajopyynto.md _tyo/karttaseppa/korostus). NUI -4-mac 3e8796b49 ajettu, EI lähetetä (NUI perui). NUI kuvakyltti-3 + kaupunkinimi-3 raportoitu.
 - ERROR 22 (iso iPad) 13.17/14.08/14.54–16.00: syy auki (ei käännös, ei profiili, ei lukko), toipui itse 16.00; omistaja: toimiston verkko hidas. T/error22-selvitys-20261110.md. ipad-yleis-kiire: nyt dot_clean + codesign --deep --strict ennen asennusta (VIKA-rivi → PT). Toistuu → TAUKO: T/ipad-tauko-pitaja.zsh (elävä pid), PT:lle, käynnistystesti ennen purkua.
 - LEVY 36 Gi (oli 5): NAS:lle julkaisija-laite 36 kpl, lokit-20261110-e 206 kansiota, jako-vanhat-2 (19 ipaa, käynnissä); wt julkaisija-muutosloki-221 poistettu (pushattu). PT: muiden työtiloihin ei kosketa (PT pyytää rooleja).
+- 16.5x KORJAUS (PK, ETUSIJA PT 16.3x): Mac PJ5 PK latausruutu d57afd0c3 pieni-pysty AJOSSA (sk T/sk-taysi/pk-latausruutu-d57afd0c3.txt, md5 fe1af21cd4b9) → lokit/pk-latausruutu-d57afd0c3 → rivi PK:lle. Pienen iPadin laiteajo nyt d57afd0c3:lla (EI 87a9d0e69), vasta PK:n ok:n ja iPad-sk:n jälkeen.
 - Postivahdin 15.0x aloitusviesti tuli ilman nollausta; vastattu (ei koske).
 
 ## LISÄYS 10.11. 14.27 (TUOREIN; korvaa 13.2x:n jonon; konteksti 25 % → nollaus)
