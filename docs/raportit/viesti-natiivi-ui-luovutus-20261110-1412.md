@@ -29,3 +29,5 @@ Edellinen (historia): `git show 782de8122:docs/raportit/viesti-natiivi-ui-luovut
 ## JONO
 Kohtien 1 ja 2 jälkeen: rivi PT:lle "JONO TYHJÄ: natiivi-ui" (`python3 -I /Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tyolista.py
 --kansio /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo seuraava NUI`).
+
+- JU 14.2x: nimizoom-2 iPad jonossa (laitekäännös ensin); iso iPad error 22 taas 14.08 alkaen (JU selvittää) → viive mahdollinen. Kuvakyltti-2 Mac ajossa.
