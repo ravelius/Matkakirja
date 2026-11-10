@@ -35,3 +35,26 @@
 - kohdekartta:lontoo:Westminsterin palatsi / Kerro lisää: Westminster Hall (vastaus; PK käsin)
   ENNEN: Westminster Hall valmistui vuonna 1097, ja se on Westminsterin palatsin vanhin osa.
   JÄLKEEN: Westminster Hallin rakentaminen alkoi vuonna 1097, ja se on Westminsterin palatsin vanhin osa.
+
+## faktat-2.md
+- kohdekartta:lontoo:Albert Memorial / Mitä Albert pitää sylissään? (vastaus; faktat-2.md)
+  ENNEN: kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla [[Hyde Parkissa]].
+  JÄLKEEN: Prinssi oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla Kensington Gardensissa, lähellä paikkaa, jossa näyttely aikoinaan pidettiin [[Hyde Parkissa]].
+- kohdekartta:lontoo:Royal Observatory / Miksi observatorion aikapallo pudotetaan kello 13? (vastaus; faktat-2.md)
+  ENNEN: Aikapallo pudotetaan, jotta [[Thamesin]] laivat voivat asettaa kellonsa tarkasti.
+  JÄLKEEN: Aikapallo pudotetaan kello 13 eikä keskipäivällä, koska keskipäivällä tähtitieteilijät olivat kiireisiä mitatessaan auringon kulkua ja asettaessaan kellojaan. Pallon pudotessa [[Thamesin]] laivat saattoivat asettaa kellonsa tarkasti.
+- kohdekartta:lontoo:Victoria Memorial / Mitä kuningas teki kuvanveistäjälle paljastuspäivänä? (vastaus; faktat-2.md)
+  ENNEN: Kuningas [[Yrjö V]] kutsui kuvanveistäjä [[Thomas Brockin]] luokseen ja löi hänet ritariksi paikan päällä, kun muistomerkki paljastettiin 1911.
+  JÄLKEEN: Kuningas [[Yrjö V]] päätti muistomerkin paljastuspäivänä 1911, että kuvanveistäjä [[Thomas Brockin]] tehdään ritariksi, ja tarinan mukaan hän pyysi miekan ja löi Brockin ritariksi saman tien.
+- kohdekartta:lontoo:Royal Observatory / Mitä Greenwichin observatorion piti alun perin ratkaista? (vastaus; faktat-2.md)
+  ENNEN: [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, mutta lopulta sen ratkaisi [[John Harrison]] tarkoilla [[merikelloillaan]].
+  JÄLKEEN: [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, ja lopulta ongelma ratkesi kahdella tavalla: observatorion tähtitaulukoilla, ja [[John Harrison]] ratkaisi sen tarkoilla [[merikelloillaan]].
+- kohdekartta:lontoo:Victoria Memorial / Kerro lisää: Buckinghamin palatsin (vastaus; faktat-2.md)
+  ENNEN: Syyskuussa 1940 palatsiin osui pommi, ja [[kuningatar Elisabet]] kommentoi tapausta itsensä ja Lontoon kärsivän samassa asemassa.
+  JÄLKEEN: Syyskuussa 1940 palatsiin osui pommi, ja kuningas Yrjö VI:n puoliso [[kuningatar Elisabet]] sanoi olevansa iloinen, että nyt hän pystyi katsomaan pommitettua Itä-Lontoota silmiin.
+- kohdekartta:lontoo:Royal Observatory / Kerro lisää: John Harrison (vastaus; PK käsin)
+  ENNEN: joista viimeinen, [[H4]], oli taskukellon
+  JÄLKEEN: joista tunnetuin, [[H4]], oli taskukellon
+- kohdekartta:lontoo:Royal Observatory / Kerro lisää: merikelloillaan (vastaus; PK käsin)
+  ENNEN: jotka toimivat merellä; viimeinen niistä oli [[H4]].
+  JÄLKEEN: jotka toimivat merellä; tunnetuin niistä on [[H4]].

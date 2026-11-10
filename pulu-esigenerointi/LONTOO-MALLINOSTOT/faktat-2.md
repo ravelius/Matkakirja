@@ -33,7 +33,7 @@ Tarkistaja: riippumaton agentti 10.11.2026. Kohteet: Victoria Memorial, Royal Al
 - Väite: "[[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, mutta lopulta sen ratkaisi [[John Harrison]] tarkoilla [[merikelloillaan]]."
 - Ongelma: Lause antaa ymmärtää, että observatorion tähtimenetelmä epäonnistui. Pituusasteongelmaan syntyi kaksi toimivaa ratkaisua: Harrisonin merikello ja Greenwichin tähtitieteilijän Nevil Maskelynen Nautical Almanac -taulukoihin (1767 alkaen) perustuva kuuetäisyysmenetelmä, joka oli 1700-luvun lopulla laivoilla jopa yleisempi kuin kronometri. Kronometrit syrjäyttivät sen vasta 1800-luvun alkupuolella. [EPÄTARKKA]
 - Lähde: https://en.wikipedia.org/wiki/History_of_longitude ("produced two workable solutions": lunar distances and the marine chronometer)
-- Korjausehdotus: "[[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, ja lopulta ongelma ratkesi kahdella tavalla: observatorion tähtitaulukoilla sekä niillä, joita [[John Harrison]] rakensi, tarkoilla [[merikelloillaan]]."
+- Korjausehdotus: "[[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, ja lopulta ongelma ratkesi kahdella tavalla: observatorion tähtitaulukoilla, ja [[John Harrison]] ratkaisi sen tarkoilla [[merikelloillaan]]."
 
 ### Victoria Memorial / Kerro lisää: Buckinghamin palatsin (rivi 227)
 - Väite: "Syyskuussa 1940 palatsiin osui pommi, ja [[kuningatar Elisabet]] kommentoi tapausta itsensä ja Lontoon kärsivän samassa asemassa."

@@ -687,7 +687,7 @@
   "kohde": "kohdekartta:lontoo:Victoria Memorial",
   "kasite": "Buckinghamin palatsin",
   "kysymys": "Kerro lisää: Buckinghamin palatsin",
-  "vastaus": "Buckinghamin palatsi oli alun perin kaupunkitalo, jonka Buckinghamin herttua rakennutti 1703. Kuningas [[Yrjö III]] osti talon 1761 vaimolleen, ja kuningatar Viktoria oli ensimmäinen hallitsija, joka asettui sinne asumaan, 1837. Palatsissa on 775 huonetta. Tunnettu tapaus on [[Edward Jones]], joka murtautui palatsiin useita kertoja 1838–1841. Syyskuussa 1940 palatsiin osui pommi, ja [[kuningatar Elisabet]] kommentoi tapausta itsensä ja Lontoon kärsivän samassa asemassa.",
+  "vastaus": "Buckinghamin palatsi oli alun perin kaupunkitalo, jonka Buckinghamin herttua rakennutti 1703. Kuningas [[Yrjö III]] osti talon 1761 vaimolleen, ja kuningatar Viktoria oli ensimmäinen hallitsija, joka asettui sinne asumaan, 1837. Palatsissa on 775 huonetta. Tunnettu tapaus on [[Edward Jones]], joka murtautui palatsiin useita kertoja 1838–1841. Syyskuussa 1940 palatsiin osui pommi, ja kuningas Yrjö VI:n puoliso [[kuningatar Elisabet]] sanoi olevansa iloinen, että nyt hän pystyi katsomaan pommitettua Itä-Lontoota silmiin.",
   "linkit": [
    "Yrjö III",
    "Edward Jones",
@@ -973,7 +973,7 @@
   "kohde": "kohdekartta:lontoo:Royal Observatory",
   "kasite": "John Harrison",
   "kysymys": "Kerro lisää: John Harrison",
-  "vastaus": "John Harrison oli englantilainen puuseppä, josta tuli aikansa etevin kellonvalmistaja. Hän rakensi useita merikronometrejä, joista viimeinen, [[H4]], oli taskukellon kaltainen ja osoittautui riittävän tarkaksi [[pituusasteen]] määrittämiseen merellä. Ongelman ratkaisemiseksi oli luvattu suuri palkinto, mutta sen myöntäminen venyi vuosikymmeniä. Harrisonin työtä pidetään yhtenä merenkulun tärkeimmistä keksinnöistä.",
+  "vastaus": "John Harrison oli englantilainen puuseppä, josta tuli aikansa etevin kellonvalmistaja. Hän rakensi useita merikronometrejä, joista tunnetuin, [[H4]], oli taskukellon kaltainen ja osoittautui riittävän tarkaksi [[pituusasteen]] määrittämiseen merellä. Ongelman ratkaisemiseksi oli luvattu suuri palkinto, mutta sen myöntäminen venyi vuosikymmeniä. Harrisonin työtä pidetään yhtenä merenkulun tärkeimmistä keksinnöistä.",
   "linkit": [
    "H4",
    "pituusasteen"
@@ -987,7 +987,7 @@
   "kohde": "kohdekartta:lontoo:Royal Observatory",
   "kasite": "merikelloillaan",
   "kysymys": "Kerro lisää: merikelloillaan",
-  "vastaus": "Merikello eli kronometri on tarkka kello, joka pitää kotisataman, esimerkiksi Greenwichin, ajan koko matkan ajan. Laivalla havaitaan paikallinen keskipäivä auringosta, ja kellon osoittaman ajan ero kertoo pituusasteen: yhden tunnin ero vastaa viittätoista pituusastetta. Tavalliset heilurikellot eivät pysyneet tarkkoina keinuvalla laivalla, ja siksi [[John Harrison]] rakensi kellot, jotka toimivat merellä; viimeinen niistä oli [[H4]]. [[Greenwichin observatorio]] oli yrittänyt ratkaista saman ongelman tähtien avulla.",
+  "vastaus": "Merikello eli kronometri on tarkka kello, joka pitää kotisataman, esimerkiksi Greenwichin, ajan koko matkan ajan. Laivalla havaitaan paikallinen keskipäivä auringosta, ja kellon osoittaman ajan ero kertoo pituusasteen: yhden tunnin ero vastaa viittätoista pituusastetta. Tavalliset heilurikellot eivät pysyneet tarkkoina keinuvalla laivalla, ja siksi [[John Harrison]] rakensi kellot, jotka toimivat merellä; tunnetuin niistä on [[H4]]. [[Greenwichin observatorio]] oli yrittänyt ratkaista saman ongelman tähtien avulla.",
   "linkit": [
    "John Harrison",
    "H4",
