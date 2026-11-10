@@ -1122,3 +1122,7 @@ Omistaja 23.26: "Miten sen saa muutettua että jatkossa olet aina fable?" → KK
 ## KESKUSTELUKANAVAN OLETUSTASO KOHTALAISEKSI (omistaja 10.11.2026 klo 06.10) (10.11.2026 klo 06.10)
 
 Omistaja 06.0x: "Sinulle voisi muuttaa oletus effort tasoksi kohtalainen, se oli jäänyt maksimiin. Nostan sitten itse sitä aina tarvittaessa kun pitää miettiä jokin isompi asia." Kortti 06.10 "Vaihdanko Keskustelukanavan oletustasoksi kohtalaisen?" → "Kyllä, kohtalainen". PT asetti KK:n (local_d5f31591) tason medium 06.10; osoitekirja päivitetty.
+
+## PARIISIN NOSTOJEN KYSYMYKSET JA KUVASELITTEET (omistaja 10.11.2026 klo 06.12) (10.11.2026 klo 06.13)
+
+Kortti "Hyväksytkö Pariisin nostojen 22 kysymystä ja 15 kuvaselitettä?" → "Kyllä, selite 12 korjaten". Näytetty kysymykset-pariisi-luonnos.md (22), commons-kuvat-pariisi/selitteet-luonnos.md (15, 01-a uusi kirjeselite) ja arkki pariisi-kuvat-2000.jpg. Selite 12 (07-bastiljin-valtaus-a.jpg): "Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; siitä tuli Ranskan vallankumouksen tunnetuin hetki." KS vie dataan; Lontoon tekstit omalla kortillaan.
