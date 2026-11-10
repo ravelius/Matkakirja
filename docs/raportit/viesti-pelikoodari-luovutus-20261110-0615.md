@@ -1,4 +1,4 @@
-# Pelikoodari: luovutus 10.11.2026 klo 06.25
+# Pelikoodari: luovutus 10.11.2026 klo 06.15
 
 Korvaa kaikki aiemmat. Edellinen: `git show bc34e4a77:docs/raportit/viesti-pelikoodari-luovutus-20261110-0510.md` (hoidettu, ks. alla).
 Kuvat ≤ 1000 px, laajat haut Sonnet-agenteilla. Viestit send_messagella session-id:llä. Unity-työpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu
