@@ -55,3 +55,6 @@ astcm, lontoo*). Omia valmiita worktreejä ei ollut (vain aktiivinen proto-pelik
 - JU:lle OK: PJ6 pieni iPad c62818943:lla, sk-ipad-pieni-latausruutu-d57afd0c3.txt → lokit/pk-latausruutu-d57afd0c3-ipad. Tulos → pari PT:lle.
 - 16.45: Telian kuituvika (omistaja 16.38), Mac ja iPadit puhelinverkossa. PJ6-sk muutettu pakotetuksi katkoksi (ajo 1: katko 3, viive 2,
   latausraja 30; md5 939c1cdc4b2e, 57 r). PJ6 (c62818943) ja v131-uusinta (8d22f34e4, ei latausjumikorjausta) odottavat JU:n kuitulippua (PT).
+- 16.5x OMISTAJAN PÄÄTÖS 16.42 (PT): ei hitaan verkon testejä nyt (ennen kaupallista julkistusta joskus); omistaja pääsi pelaamaan iPadilla →
+  jumi oli hidas verkko. c62818943 junaan tavallisilla testeillä. PEKINGIN HAHMOESIHAKU PERUTTU. PJ6-sk tavalliseksi (lämmin, ei katkoa/viivettä/
+  tyhjennystä; 34 r, md5 0a8622f3ef4b). PJ6-tulos katsottuna → valmis-rivi PT:lle (c62818943, kuvat) → pt-ok → MR JU:lle junaan.
