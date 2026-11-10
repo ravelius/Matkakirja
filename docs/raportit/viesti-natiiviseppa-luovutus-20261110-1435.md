@@ -53,3 +53,6 @@ PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös 
 - 15.06 JU: PE 4444e211a ja 0421af91a kaatuivat 5/5 käynnistystä error 22 (0 kuvaa; myös 13.18/13.20), muut käännökset käynnistyvät → epäily PE-appit
   (allekirjoitus/._-tiedostot): NS ehdotti codesign --verify ja uudelleenkäännöstä. Uusinnat peruttu; seuraaja: varmista JU:lta PE:n uusi käännös + ajo.
   Ajovahti pysäytetty (toisti HILJAA-rivejä): käynnistä uudelleen seuraajana.
+- 15.10 JU: 0421af91a allekirjoitus rikki (153 ._-tiedostoa) → dot_clean, --strict ok; 4444e211a allekirjoitus kunnossa, error 22 syy auki.
+  PK7:n jälkeen JU ajaa 0421 + 4444 + (NS:n pyyntö, PT 15.0x) sama PE-skenaario nykyisellä juna-224-käännöksellä → lokit/natiiviseppa-kehys-pe-juna224-1
+  (korvaa 4444:n, jos se kaatuu). SEURAAJA LUKEE: lue.py/ikkunat.py _tyo/natiiviseppa/vieritys-pe/ (ohje -1250 LISÄYS kohta 2; -1342 kohta 2).
