@@ -75,3 +75,7 @@ piirroksettomia, sama kuin Lontoon tyhjä kartta / hidas verkko? KORJAA. OK = Ma
 iPadilla (JU:n vuorolla), myös hidastetulla verkolla. Syy + korjausversio PT:lle 3 rivillä. NUI odottaa korjausta nimizoomiin.
 - 16.17 JU pysäytti vanhalla lukolla olleet OX (yksi-tarkkuus a2 a4fd9ad6b), OC (pdg ennen-2/jalkeen-2 44b7cbd17), OC2 (pdg ennen-1/jalkeen-1);
   NS: tarvitaan, PK9:n perään matalimmalla prioriteetilla (britannia-2-kylma ja kertoja-esilataus ensin). Lue kun ajettu (-1342 kohta 5, -1152/-1105).
+- KÄRKI-lisätieto PT 16.2x: NUI Mac-ajo ef774d9fd: Barcelona (ei kattoa) näyttää striimikartan katuverkon (b-0), Marseille jää maan kartan tasolle +
+  merellä karkeampi suorakulmio (m-1) → todennäköisesti MARSEILLEN OMA laatta-aukko (data/alue/rajaus), ei kaikkien piirroksettomien. Kuvat
+  lokit/nui-kaupunkinimi-zoomaus-3-mac-ef774d9fd/{m-1-marseille-1,b-0-barcelona-pois}.png. Aloita Macilla: Marseillen striimialueen määrittely/laatat
+  vs Barcelona. OK-ehto ennallaan (Marseille + yksi muu isolla iPadilla).
