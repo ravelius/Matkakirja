@@ -12,7 +12,8 @@ Syy: konteksti pehmeällä rajalla. Agentit vain Opus tai Sonnet. Työkansio /Us
   (friisi 4,8, räystäs 5,1–5,7) ja puhkaisevat katon; päätykolmion kärki 8,40 > katto 8,15. PT:lle raportoitu. Korjaus lattian jälkeen tausta-v130:aan (KORJAUS.md 06.0x).
 - Apuskriptit muuri/lattia-uusi/apu-20261110/: kamera.py ja kamera2.py (kuvan pikselisäteet; tarkastelukameran x z = glb x z, maa 0), paallekkain.py, ohuet.py, kolmiot.py, lmkartta3.py, venyneet.py.
 
-## Seuraava
+## Seuraava (PT 06.2x: lattia7 katsottu, Kelpaa-kortti KK:lla; vienti vasta Kelpaan jälkeen; SILLÄ VÄLIN piikki ENSIN)
+0. ALOITA TÄSTÄ: piikin korjaus kk-tausta-1-3:een (uusi koejuuri lattia7:n päälle, ei vientiä), pari ennen/jälkeen piikki1-a-kameralla (sk lokit/../juoksu-leivottu/sk-ipad-piikki-1.txt mallina, Mac-ajona JU:lla), pari PT:lle.
 1. KK:n Kelpaa lattia7:lle -> SUUNNITELMA.md vaiheet 5–6: vienti kielletty-tausta-v130 lattia7:stä (+ esto PK:lla), PK:lle kansionimet. Ei vientiä ilman PT:tä.
 2. Piikin korjaus samaan tausta-v130:aan (pala 1-3: seinien yläkärjet friisin alle, päätykärki katon alle), pari ennen/jälkeen piikki1-a-kameralla JU:lla.
 
