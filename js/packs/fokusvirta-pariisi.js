@@ -1386,11 +1386,11 @@ export const FOKUSVIRTA_PARIISI = {
           lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
         },
         {
-          tiedosto: 'Denis Vrain-Lucas.jpg',
-          lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
-          selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
-            + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
-          lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+          tiedosto: 'Pascal à Galileo.jpg',
+          lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
+          selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
+            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1639, 15-vuotiaana — yksi Chaslesin ostamista kirjeistä.',
+          lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
         },
       ],
       kysymykset: [
