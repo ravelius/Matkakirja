@@ -2715,6 +2715,20 @@ export const NAHTAVYYSJUTUT = {
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
         + 'sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
         + 'nimi seisoo yhä Threadneedle Streetin kulmassa.',
+      kuvat: [
+        {
+          tiedosto: 'Allegorie op de neergang van de South Sea Company, RP-P-OB-18.742.jpg',
+          selite: 'Vuonna 1720 Etelämeren yhtiön osakkeet nousivat huimaan hintaan '
+            + 'ja romahtivat; moni menetti kaiken.',
+          lahde: 'Tuntematon tekijä n. 1750, Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'The Bubblers Medley, or a Sketch of the Times- Being Europe\'s Memorial for the Year 1720 (BM 1867,0309.729).jpg',
+          selite: 'Tämä pilkkapiirros vuodelta 1720 näyttää, miten ihmiset '
+            + 'hullaantuivat osakkeisiin ja uskoivat nopeaan rikastumiseen.',
+          lahde: 'Tuntematon tekijä 1720, British Museum, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Cheapsiden kätkö': {
@@ -2795,6 +2809,15 @@ export const NAHTAVYYSJUTUT = {
         + '1577–1579 nostosillan torni korvattiin Nonsuch Housella, '
         + 'kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin '
         + 'julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.',
+      kuvat: [
+        {
+          tiedosto: '‘Old London Bridge - sketched on the spot’, William Alfred Delamotte - 30 March 1832.jpg',
+          selite: 'William Delamotte piirsi vanhan sillan maaliskuussa 1832, kun '
+            + 'sitä jo purettiin; uusi silta oli avattu viereen edellisenä '
+            + 'kesänä.',
+          lahde: 'William Alfred Delamotte 1832, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
@@ -2819,6 +2842,20 @@ export const NAHTAVYYSJUTUT = {
         + 'ensimmäisen generaattorin. Faraday ei osaa matematiikkaa juuri '
         + 'lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell yhtälöiksi '
         + 'vasta 1860-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Henry William Pickersgill (1782-1875) - Michael Faraday (1791–1867) - RIIC 0280 - Royal Institution.jpg',
+          selite: 'Michael Faraday oli tutkija Royal Institutionissa; vuonna 1831 '
+            + 'hän keksi, miten magneetilla saa aikaan sähköä.',
+          lahde: 'Henry William Pickersgill 1830, Royal Institution, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Michael Faraday lecturing at the Royal Institution; Prince A Wellcome V0013854.jpg',
+          selite: 'Faraday esitteli kokeitaan Royal Institutionin yleisöluennoilla, '
+            + 'joille tulivat kuuntelemaan niin lapset kuin prinssitkin.',
+          lahde: 'Alexander Blaikleyn maalauksen mukaan 1856, Wellcome Collection, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Fleming 1928': {
       nosto: 'hetki-fleming-malja-1928',
@@ -2837,6 +2874,20 @@ export const NAHTAVYYSJUTUT = {
         + 'ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja '
         + 'Ernst Chainin ryhmä Oxfordissa tekee siitä lääkkeen 1940-luvun alussa, '
         + 'ja kolmikko jakaa lääketieteen Nobelin 1945.',
+      kuvat: [
+        {
+          tiedosto: 'Professor Alexander Fleming at work in his laboratory at St Mary\'s Hospital, London, during the Second World War. D17801.jpg',
+          selite: 'Alexander Fleming työskenteli St Mary\'sin sairaalassa, jossa hän '
+            + 'huomasi vuonna 1928 homeen tappavan bakteereja.',
+          lahde: 'Ministry of Information Photo Division, Imperial War Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'First page of Alexander Fleming\'s paper on penicillin Wellcome L0007150.jpg',
+          selite: 'Tässä on Flemingin vuoden 1929 artikkelin ensimmäinen sivu, '
+            + 'jossa hän kertoi penisilliinistä ensimmäistä kertaa.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
     },
     'Tunneli 1827': {
       nosto: 'hetki-brunel-thames-tunnel-1827',
@@ -2858,6 +2909,20 @@ export const NAHTAVYYSJUTUT = {
         + 'reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
         + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta 25. '
         + 'maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen alittajana.',
+      kuvat: [
+        {
+          tiedosto: 'The Thames Tunnel (BM 1880,1113.1690).jpg',
+          selite: 'Tämä vanha mainos näyttää tunnelin joen alla; sisään pääsi '
+            + 'tutustumaan yhdellä shillingillä.',
+          lahde: 'Teape & Son 1843, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Penny Magazine 1832 341 Shield used in the Excavation of the Thames Tunnel.jpg',
+          selite: 'Tämä rautakilpi suojasi kaivajia, kun Thamesin alle tehtiin '
+            + 'tunnelia vuosina 1825–1843.',
+          lahde: 'Penny Magazine 1832, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Palo 1666': {
       nosto: 'hetki-lontoon-palo-1666',
@@ -2877,6 +2942,20 @@ export const NAHTAVYYSJUTUT = {
         + 'yönä tuuli laantuu. Palo '
         + 'tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain '
         + 'kourallinen — luku, jota epäillään yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Great Fire London.jpg',
+          selite: 'Vuonna 1666 tuli levisi puutaloista toiseen ja poltti suuren '
+            + 'osan vanhasta Lontoosta.',
+          lahde: 'Tuntematon hollantilainen taidemaalari n. 1675, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'The Great Fire of London, with Ludgate and Old St. Paul\'s.JPG',
+          selite: 'Palon aikana liekit nousivat vanhan Pyhän Paavalin katedraalin '
+            + 'ja Ludgaten portin ympärillä, ja katedraali tuhoutui.',
+          lahde: 'Tuntematon hollantilainen taidemaalari n. 1670, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Globe 1599': {
       nosto: 'hetki-shakespeare-globe-1599',
@@ -2897,6 +2976,21 @@ export const NAHTAVYYSJUTUT = {
         + 'Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken '
         + 'Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan '
         + 'oluella.',
+      kuvat: [
+        {
+          tiedosto: 'The Globe Theatre from the Long Antwerp View of London.jpg',
+          selite: 'Vuoden 1616 kaiverruksessa Globe seisoo Thamesin etelärannalla '
+            + 'lippu katollaan; piirtäjä teki lähes pyöreästä puuteatterista '
+            + 'kulmikkaan.',
+          lahde: 'Claes Jansz. Visscher 1616, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Wenceslaus-Hollar-The-second-Globe-playhouse-detail.png',
+          selite: 'Hollar luonnosteli toisen Globen vähän ennen kuin se purettiin '
+            + '1644; sen jälkeen teatteria ei enää ollut.',
+          lahde: 'Wenceslaus Hollar 1640-luku, Wikimedia Commons (PD)',
+        },
+      ],
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -2943,6 +3037,28 @@ export const NAHTAVYYSJUTUT = {
         + 'ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien '
         + 'lahjonnan, ja valtiovarainministeri John Aislabie erotettiin '
         + 'alahuoneesta ja suljettiin Toweriin.',
+      kuvat: [
+        {
+          tiedosto: 'William Hogarth, The South Sea Scheme, 1721, NGA 30435.jpg',
+          lyhyt: 'Hogarthin pilakuva vuodelta 1721 kuvaa Etelämeren-kuplan uhreja karusellissa kohti tuhoa.',
+          selite: 'William Hogarthin pilakuva Etelämeren-kuplasta (1721) kuvaa '
+            + 'keinottelijoita ratsastamassa karusellissa kohti perikatoa, kun '
+            + 'paisunut osake romahtaa ja Exchange Alleyn kahvilat jäävät tyhjiksi.',
+          lahde: 'William Hogarth 1721, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Jonathan\'s Coffee House or an Analysis of Change Alley With a Group of Characters from the Life - Inscribed to Jacob Henriques (BM 1868,0808.4311).jpg',
+          selite: 'Jonathan\'s-kahvilassa Exchange Alleyllä miehet kävivät kauppaa '
+            + 'osakkeilla ja puhuivat uutisista kahvikuppien ääressä.',
+          lahde: 'Jefferyes Hamett O\'Neale -teoksen mukaan 1763, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Garraway\'s Coffee House.jpg',
+          selite: 'Garraway\'s oli kahvila Exchange Alleyllä, jossa myytiin kahvia '
+            + 'ja teetä ja huutokaupattiin tavaroita.',
+          lahde: 'George Walter Thornbury, Old and New London 1873, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Canaletto Lontoossa': {
