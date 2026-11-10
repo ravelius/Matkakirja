@@ -52,3 +52,5 @@ JU: ajopyyntö marseille-mac-1 (16.33). PT: ei vielä (kärjen syy ei valmis).
   kertoja ovat iPad-jonossa. Vahti (marseille-kuvio) käynnistetty uudelleen 16.4x.
 - Seuraajan ensimmäinen työ: lue marseille-mac-1 (tilarivit: jääkö "elävä kesken/näkyviä" > 0 ja piirto vapaana = 0 → semafori/jumi; mvt jonossa
   kasvaa → verkkopaikat; ei pyyntöjä ollenkaan → Cesium ei pyydä), toista 3× ja korjaa.
+- PT 16.4x: Macin verkko vaihdettu puhelimen kautta ~16.3x → marseille-mac-1 ja myöhemmät Mac-ajot ERI verkossa kuin aiemmat (hidas/mobiili);
+  vältä isoja tarpeettomia latauksia. Barcelonan tyhjä paperi (zoomaus-4-mac) tuli ENNEN vaihtoa = vika myös nopealla verkolla.
