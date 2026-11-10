@@ -1,0 +1,27 @@
+# Pelikoodari: luovutus 10.11.2026 klo 19.25 (konteksti 25 %, pehmeä raja)
+
+Edellinen: viesti-pelikoodari-luovutus-20261110-1828.md (LISÄYS 18.5x:n osan 8 kuvapari ja 18.4x:n palkkikysymys yhä voimassa).
+Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa pelikoodari/osa11-opasteet (remote natiivi-backup).
+
+## 0. TEHTY TÄLLÄ VUOROLLA (kaikki pushattu natiivi-backupiin, PT:lle ilmoitettu)
+- OSA 6 pienet logiikkaviat 4df0ce2a3 (pelikoodari/osa6-logiikkaviat, osien 1–3 e59ed43e9 päälle), 898/898, unity 0.
+  KK:n tarkastus (Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261110-juoksupeli-tarkastus-logiikka.md luku 5):
+  2 ulkoesineet latauskuvan alla (JuoksuV4Maailma: yield EsineetPeliin) · 4 V4Osa.KaistaAuki/Kaistalle/AukiJollain/AvoinKaista: aukot
+  kaistoittain, seinän edessä keisari siirtyy aukon kaistalle (KaistaAukolle, tapahtuma "kaista aukolle") · 5 heitto ei odottavaan eunukkiin
+  loputtomassa reitissä (Heitettava) · 6 HeitaTaakse vain AjajaHeitettavissa (≥ 1 m kirinyt) · 7 KarttaJatka jatkaa kesken jääneen liu'un
+  · 9 SamallaKadulla keruussa. Kohdat 1 ja 3 = osat 1–3; kohta 8 = osa 10.
+- OSA 10 TasoAika 93a4f77f2 (pelikoodari/osa10-tasoaika, NUI:n fb3f19f31 päälle), 894/894, unity 0. TasoAika kasvaa vain !Pidetty && !Esittelyssa,
+  tason ehto ja V4Kierros.TasoOsuus TasoAikasta, IJuoksuKierros.TasoOsuus (Ruudukko NaN). Sha NUI:lle annettu (JuoksupeliNakyma:1981 heidän).
+- OSA 11 opastetekstit 92e50fb68 (pelikoodari/osa11-opasteet, osan 6 päälle), 899/899, unity 0. JuoksuOpetus: uudet Lahto, Omena, HeittoTaakse,
+  Voimat, Seina, HyppyOmena (enumin loppuun); Kaista-teksti, KiinniTeksti (V4Kierros.Kehote); liuku ei tasolla 1; tieto-ohjeet (lähtö, voimat)
+  ilman peukaloa/hidastusta 4 s, alin etusija, toimintaohje keskeyttää. JuoksupeliNakyma (pieni): opetus.Avaus = AvausKaynnissa, HyppyOmena →
+  ylös-osoitin, tieto-ohje ohjekaistan pohjalle → KERRO NUI:lle (tiedosto heidän alueellaan), jos PT ei jo kertonut.
+
+## 1. SEURAAVAKSI
+1. Osan 11 valmis-rivi PT:lle (jos ei lähtenyt): 92e50fb68. Näyttö: iPad-video tasolta 1 (lähtö, omena, kulma, heitto) JU:n vuorolla PT → KK, kun PT sanoo.
+2. HAAROJEN JÄRJESTYS JUNAAN: osat 1–3 e59ed43e9 → osa 6 4df0ce2a3 → osa 11 92e50fb68 (ketju); osa 8 3eb33531c ja osa 10 93a4f77f2 erillisiä
+   (5f8780605/fb3f19f31-pohjalla). Osa 10 ja osa 6 koskevat JuoksuV4.cs:ää eri kohdista; osa 11 ei sisällä osan 10 TasoAikaa.
+3. OSA 8 KUVAPARI: lokit/pk-osa8-ovet-mac-3eb33531c-2 yhä TYHJÄ 19.23 (JU). Kun kuvat tulevat: k1/k2 vs a1/a2 täysikoossa, "ovet: mallit valmis …
+   kiinni K", pari + rajaluku 0/663 PT:lle. Jos timeout taas → kuitujonoon (KK:n sana).
+4. Renkaiden uusinta v2-sk:lla JU:lla (1745 kohta 2) ja 18.4x:n palkkikysymys (NUI:n t-3-loppu.png, vaalea palkki kujan lattialla) → rivi PT:lle.
+5. Jonossa ei muuta PT:n järjestyksestä; tyhjänä "JONO TYHJÄ: Pelikoodari" PT:lle.
