@@ -58,3 +58,14 @@ D) KK:n kysymys (ei kiire; vastaus PT:lle ≤ 8 riviä), luonnos /Users/Shared/C
    KK:n vertailurajaukset: proto-3d/_tyo/keskustelukanava/tyyliohje/ (kj4-ruudukko-tripo.jpg | -koodi.jpg, kj4-in-dome.jpg, kj5-ruudukko.jpg).
 3) Korjaukset UUDELLEENKÄYTETTÄVINÄ OSINA (kupoli, rumpu, pylväspääty, mansardi, tukipilari) → osakirjasto muille kaupungeille (euroopan-kaupungit-tyonkulku.md).
 Järjestyskysymys PT:lle (21.57) on näin vastattu.
+
+## LISÄYS 22.0x: OMISTAJAN PÄÄTÖS 21.59 (KK:n kautta, kortti) – KORVAA K 2:N
+"Kyllä, oikea mittasuhde": kaikki nähtävyydet kaikissa kaupungeissa todellisessa koossa ja muodossa (korvaa kortit 16.17 ja 17.45, K 2 → 1:1); raivattu tila
+palautetaan mallin oman pohjan kokoiseksi. KS:lle: koodimallit 1:1 (korkeus ja pohja todelliset), raivaus mallin omaan pohjaan, talot, pihat ja puut takaisin.
+Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksytyllä koodimallilla).
+- ENSIN 224.42:n kolme (Riemukaari, Notre-Dame, Eiffel): pari nykyinen K 2 | 1:1 kaukaa ja läheltä KK:lle, sitten PT:n kautta seuraavaan versioon.
+- Sitten kuuden korjaukset tyyliohjeen mukaan suoraan 1:1-koossa (tyyliohjeen kohta 4 päivitetty).
+- VAIKUTUS TEHTYYN: Louvren talomaski tehtiin V = 1,2235:llä → aja uudelleen `tee-maski.py 1 4` + aja-palat.sh (tyhjennä/uudelleennimeä tyo/ ja ulos/ ensin:
+  skripti vaatii tyhjät) → uusi kansio palat-v25-louvre-1-1 (versioitu, ei ylikirjoitusta). 96374758b:n pihakaistat (haamujälkien peitto) 1:1:ssä tarpeettomia
+  mutta harmittomia; Cour Napoléonin kiveys voi jäädä. KJ6:n kuvat ovat vielä K 2 -koossa → älä vie KK:lle valmiina, korkeintaan värien karkeana näyttönä.
+- Korostuksen kytkin: Korostus.Kerroin (Oletus) ja OhjelmaKohteet.KorostusKoko; selvitä, miten 1:1 asetetaan koodimalleille koskematta Tripoon (MallitEnnallaan = true jo).
