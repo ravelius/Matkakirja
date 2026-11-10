@@ -1,4 +1,5 @@
 ## LISÄYS 10.11. 21.1x (TUOREIN; korvaa 20.1x:n jonot; konteksti 25 % → nollaus)
+- 21.1x JÄLKEEN: KJ4 käännös nyt 261067f00 (16 kuvaa, jono-kj4-ks-sacre.zsh); VS erottuvuus-v3 61780e8be Mac jonossa → VS AJETTU; PK osa5 aukio-v2 ✓ 9/9, aukio-pois-v2 ajossa → rivi PK:lle molemmista (EI vielä lähetetty); NUI tarinamerkki-2 → NUI AJETTU (ei vielä lähetetty).
 - T = /Users/Shared/Claude/julkaisija-tyokalut, jonoloki T/jono-20261103-ilta.txt. Monitor: tail -n 0 -F jonoloki | grep -E "LINKKI|AJO .* rc |LOPPU|VIKA|PUSHATTU|EIVÄT LÄPI|ALKOI|TAUKO". Jonot: `ps -axo pid,command | grep -E "zsh (jono-|mac-yleis|ipad-tauko)"`.
 - OMISTAJAN PÄÄTÖS 20.23 (KK): iso-iPadia odottavat muutokset linkkiin Mac-tarkistus + PT:n pt-ok riittää (ei mittauksia/TF). Jokaisesta linkistä KK:lle rivi "224.N klo HH.MM: <Uutta>. kokeiltava: …" (PT antaa kokeiltavan). Vika → linkki heti edelliseen. Iso iPad huomenna (omistajan sana), TAUKO pid 32561 ennallaan.
 - LINKIT tällä vuorolla: 224.40 = 3c214599d (20.29, NUI tapit; KK + NUI ilmoitettu).
