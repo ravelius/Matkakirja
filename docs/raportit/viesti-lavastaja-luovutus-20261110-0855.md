@@ -22,3 +22,7 @@ PIL/numpy: omat skriptit `python3` ilman -I:tä (numpy ei löydy -I:llä).
 
 ## Voimassa
 Asemataulu jäädytetty. Blender ja Mac vain JU:n vuorolla (JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd). PT local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31, viestit ≤ 3 riviä.
+
+## Lisäys 08.5x (PT luovutuksen jälkeen)
+OMISTAJA 08.52 KELPAA lattia7 (KK). PT teki vaiheen 5 paketin: _valmiit/juoksupeli-kk-lavastaja-tausta-v130-vienti-20261110 (koejuuri-piikki1, SHA256SUMS bf1a07f51742, muuri/lattia-uusi/v130/paketoi.zsh, KORJAUS 08.53).
+PK tarkistaa eston, vienti JU:lla PT:n kuittauksella. Seuraava 0 hoidettu PT:llä: lattiarivi `tehty` vasta kun v130 viety. ALOITA kohdasta 1 (raja3-rivi) heti (PT).
