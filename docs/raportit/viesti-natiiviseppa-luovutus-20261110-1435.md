@@ -81,3 +81,5 @@ iPadilla (JU:n vuorolla), myös hidastetulla verkolla. Syy + korjausversio PT:ll
   vs Barcelona. OK-ehto ennallaan (Marseille + yksi muu isolla iPadilla).
 - KÄRKI LOPULLINEN (PT/KK 16.3x): korjaa Marseillen striimikartan laatta-aukko + tarkista muut aukkokaupungit (ei yleistä piirroksettomien vikaa).
   OK = Marseille näyttää katuverkon isolla iPadilla → NUI poistaa Marseillen korttipoikkeuksen (ilmoita NUI:lle + PT:lle).
+- OMISTAJA 16.18 (PT): "näkymättömyys voi olla myös se download ongelma", kokeilee puhelimella omalla netillä (tulos KK:n kautta; EI iPhone-mittauksia meiltä).
+  Sama tyhjä pohja studion iPadilla (fb16ab5de) ja NUI:n Macilla (m-1) → selvitä kumpi: laatta-aukko vai lataus (vertaa Barcelonan pyyntöihin samassa ajossa).
