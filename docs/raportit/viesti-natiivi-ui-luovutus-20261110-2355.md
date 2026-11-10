@@ -34,3 +34,8 @@ TYÖTAPA: näkyvän työn kuvat/videot suoraan KK:lle, PT kopiona; junaan vasta 
 
 Tunnettu: ajon alussa "ESIKATSELU POIKKEUS ArgumentOutOfRangeException" (ei paisunnasta). Paisuneen ND:n kyltti on mallin edessä etelärannalla
 (KK: kelpaa). Seinen puuttuminen tallenteen alussa = latausjärjestys, ei tämä työ.
+
+## LISÄYS 23.5x
+Eiffel-valo valmis (lokit/nui-eiffel-valo-be4e976b9), vertailu _tyo/natiivi-ui/paisunta/eiffel-valo-0-045-10-20.jpg lähetetty KK:lle suosituksella 1,0.
+KK:n valinnan jälkeen: Paisunta.ValoVoima-oletus (UI/Paisunta.cs, nyt 0.45f) → valittu arvo commitiksi haaraan natiivi-ui/nahtavyys-paisuu,
+cherry-pick junan kärkeen, unity-tarkistus, sha PT:lle pt-ok:ta varten. Jos KK sanoo "pois": ValoVoima = 0.
