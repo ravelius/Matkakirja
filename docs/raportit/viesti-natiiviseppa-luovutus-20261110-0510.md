@@ -14,6 +14,12 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/iso/ (skenaariot sk-*
   224 d7a8cdc19; laitekäännös ok, ladattava 295 Mt, asennettu 645 Mt. PT:lle raportoitu.
 - VALKOISET TALOT savu3/savu5 = testiajon ionin varadata ("automaattiajo True → Ion", OSM Buildings pinnaton), EI regressio. PT hyväksyi.
 
+## UUSI TILAUS (PT 05.0x, ENSIMMÄISENÄ)
+Tee omaan haaraan jo nyt (testit, EI junaan): (a) kartan purku ennen Cesium-kaupunkia ja ISS:ää (talot, nähtävyysalueet, elävän kartan
+laatat, kuvat; palautus sulkiessa), (b) ISS:n yövalojen pakkaus (maailma-z3-0-3 4096² × 4 paikkaa; tarkista muoto). Yhdistä 98974a244:n
+kanssa ja aja iPadilla YHTENÄ ajona A/B-ajojen jälkeen. JUNAEHTO: Cesium + ISS ilman muistivahdin VIKAA, kuvat otettu, paluu kartalle
+ehjä → pari PT:lle. Pohja: d7a8cdc19 / natiiviseppa/laattapalvelin-jono.
+
 ## ODOTTAA (JU:n jono, iso iPad; tulokset lokit/<nimi>-<sha>)
 1. cesium-muisti A/B (KT): 85d3bab39 (juna 223) | d7a8cdc19, sk-cesium-muisti-ipad.txt → vertaa VIKA-Mt ja muisti-tarkka huippu.
    PT:n kysymys: oliko Cesiumin > 4080 Mt jo 223:ssa? Sama → Tekninen kunto -työ; 224 isompi → TF-este, ehdota korjaus (kartan purku).
