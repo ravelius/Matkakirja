@@ -35,3 +35,6 @@ bash 3.2: merkkitiedostot, ei assosiatiivisia taulukoita.
 
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: a2-05 hylätty 12.05, Lontoo syy+korjaus 12.4x (kuitattu 13.1x lupa). JU: ajopyyntö-6 (OX kuitattu), iPad a2-05 peruttu, toisto 2 (jonossa, pid 4096), MR 9d5be8823.
+
+## JU 12.55 (luovutuksen jälkeen)
+Toisto 2 (lontoo-opas 0421af91a) EI toistanut: Lontoossa purku pois, pallo päällä, talot 63→109, jarru 0, huippu 3327, kartta näkyi (M3, M5). Saapuessa GBR-laattoja ladattiin vain 1. Sama ajo 9d5be8823:lla tulossa. Seuraavat ehdokkaat: ISS/raketti, juoksupeli, pitkä istunto/taustalle vienti (kuuntelijat). PT:lle ilmoitettu 12.5x.
