@@ -56,3 +56,9 @@ PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös 
 - 15.10 JU: 0421af91a allekirjoitus rikki (153 ._-tiedostoa) → dot_clean, --strict ok; 4444e211a allekirjoitus kunnossa, error 22 syy auki.
   PK7:n jälkeen JU ajaa 0421 + 4444 + (NS:n pyyntö, PT 15.0x) sama PE-skenaario nykyisellä juna-224-käännöksellä → lokit/natiiviseppa-kehys-pe-juna224-1
   (korvaa 4444:n, jos se kaatuu). SEURAAJA LUKEE: lue.py/ikkunat.py _tyo/natiiviseppa/vieritys-pe/ (ohje -1250 LISÄYS kohta 2; -1342 kohta 2).
+- 16.3x PT: SAMA VIKA EPÄILTY MARSEILLESSA (NUI lokit/nui-kaupunkinimi-zoomaus-2-ipad-fb16ab5de-u): pallo 57,9 % 20 s, elävä kartta 0 → ota
+  britannia-2-kylma-analyysiin; syy KK:lle samassa viestissä Britannian kanssa (PT:n kautta).
+  NS:n ensikatsaus (VARTIJA-rivit): "katto 20007 ms, aste 57,9 %, palvelin käynnissä 27 (kohde 0, kiire 9, tausta 0, saapuminen 0) jono 26 … nälkä163b 35"
+  ja aiemmin "käynnissä 16 (kohde 0, kiire 0, tausta 0, saapuminen 0) … nälkä163b 30". Käynnissä-luku ≫ luokkien summa = VUOTAVAT PAIKAT? (paikat varattuina
+  ilman luokkaa → jono 26 odottaa). Britannia-1 (onnistui): käynnissä 13 (kiire 9), nälkä 4. Tarkista Laattapalvelin: käynnissä-laskurin vapautus
+  (keskeytys/aikaraja/peruminen) ja nälkä163b-merkitys; vertaa omistajan 9d5be8823-lokin "palvelin käynnissä 20 (kiire 20)".
