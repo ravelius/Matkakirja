@@ -24,3 +24,4 @@ Id:t /Users/Shared/Claude/osoitekirja.md. NS local_0f7f169f-2ceb-43d2-8fb4-223dd
 - NS: juoksu-piirto mittaus (varjot avauslennolla mukana; omistaja 17.30 varjojen piirtoetäisyys työlistassa, ei kiire); usvarajaus A/B JU:lla.
 - Viikkokiintiö 82 % (5 vrk jäljellä) 19.31 – KK:lle tiedoksi.
 - ODOTTAA OMISTAJAA: ison iPadin uudelleenkäynnistys.
+- LISÄYS 19.3x: VS erottuvuus uusi suositus 2d02dfc2b (Mac 12/12, kerma 35 % + 4 px musteviiva), parit proto-3d/_tyo/linssiseppa2/erottuvuus/parit-2d02dfc2b/ – PT ei ole katsonut; katso ennen KK:ta. KS: ND puuttuu laitteella 224.35:ssä, tiedostot ehjät → laiteloki (KS luovutus 4bc11ded3).

@@ -52,6 +52,12 @@ kärjestä (7.49). Muut kaupunkikohdat (2.136–2.140, 2.161, 2.205, 2.206, 2.20
 
 ## 3. Nähtävyydet ja vesi
 
+- OIKEA MITTASUHDE (omistajan kortti 10.11.2026 klo 21.59 "Kyllä, oikea mittasuhde", korvaa 16.17 maltillisen korostuksen
+  ja 17.45 K 2:n sekä alla ja kohdassa 2 olevat liioittelusäännöt): kaikki nähtävyydet kaikissa kaupungeissa todellisessa
+  koossa ja muodossa (korkeus ja pohja), ei kaksinkertaista korkeutta; erottuvuus kaukaa värillä, ääriviivalla ja
+  kylteillä. Raivattu tila palautetaan mallin oman pohjan kokoiseksi ja talot, piha ja puut takaisin. Tripo-mallit
+  pysyvät 224.35-koossa, kunnes KK:n hyväksymä koodimalli korvaa ne; Tripoa ei skaalata uudelleen. Lontoo jo oikeassa
+  koossa (9.11.).
 - Mikään nähtävyys ei mene veden päälle, ja joki näkyy kokonaan; liioittelu tehdään ylöspäin (korkeus, tornit) ja
   maalla; pääkadun ja rantakadun saa peittää. (omistaja 3.11.2026 klo 21.29 "Ei se voi noin mennä veden päälle",
   21.30)

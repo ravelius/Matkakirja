@@ -1307,3 +1307,43 @@ Kortit KK:ssa: tekstit sellaisinaan (scratchpad/keskustelukanava/suunnitelmat/20
 ## Oppi: karttamuutos iPadilla oletustilassa ennen linkkiä (PT 10.11. 19.1x) (10.11.2026 klo 19.10)
 
 224.36 (Pariisin korostus) meni linkkiin vain Mac-ajoilla, joissa talot/elävä kartta kytkettiin komennoilla ja talot paikallisesta kansiosta; laitteella korostuksen pohja peitti laajat alat beigellä (omistaja 18.53). Korostus peruttu junasta 191aaeaf2, linkki 224.35. Jatkossa kartan/talojen muutokset: Mac-ajo myös oletustilassa (ei komentoja, talot ämpäristä) ja iPad-ajo ennen pt-ok:ta. PT tulkitsi beigen horisontin virheellisesti hitaaksi verkoksi.
+
+## Työlistan järjestys ja suunnitelma KK:lle (omistaja 10.11. 20.13) (10.11.2026 klo 20.13)
+
+Omistaja KK:n kautta sanatarkasti: "Mutta onhan siellä paljon muitakin asioita kuin mitä minä pyydän. Ja sinähän suunnittelit ison listan asioita jo aiemmin. Sinunhan pitäisi pitää järjestys ja suunnitelma". KK:n ehdotus "vain omistajan pyynnöt sivulle" peruttu. Työnjako: KK pitää työlistan järjestyksen ja suunnitelman (rivit, kärki, jarj, osiin jako, uudet pyynnöt listaan välittäessään); PT ja roolit kirjaavat tilan (tilanne, valmis, este), PT kuittaa laadun. Viestillä jaettu työ: listan rivi tai rivi KK:lle. Asennussivun työosio päivittyy itsestään (tyo-osio.py-vahti, 15 s). Raamatun kohta 7.4/7.39 päivitetään seuraavassa Raamattu-erässä.
+
+## Pariisi vaihtuu koodimalleihin, Tripo-mallit 224.35-koossa siihen asti (omistaja 10.11. 20.19) (10.11.2026 klo 20.19)
+
+Omistaja KK:n kautta sanatarkasti: "mutta eikö ne ole tarkoitus vaihtaa niihin uusiin malleihin?" (2× kutisti vanhat Tripo-mallit 224.36:ssa). KK: kortit 09.36 ja 16.17 koskivat koodimalleja; 18.0x ok välitilalle oli KK:n virhe, ja PT 17.4x jätti koodimallit junasta pois niiden "koe, ei junaan" -merkinnän takia (PT:n virhe). Järjestys: (0) laitevika (pieni iPad: talot/mallit puuttuvat, jättinimet, ND puuttuu 224.35) iPad-ajolla ensin; (1) RK, ND, Eiffel koodimalleina maltillisella korostuksella, Tripo talteen; (2) Louvre, SC, Panthéon, Invalides, Opéra, Sainte-Chapelle koodimalleiksi, parit KK:lle; (3) ympäristöt. Vaihtamattomat Tripo-mallit 224.35:n koossa (KS b8971b839). Tripo-koosta ei korttia.
+
+## Omistaja testaa itse, kunnes iso iPad toimii (omistaja 10.11. 20.23) (10.11.2026 klo 20.23)
+
+Omistaja KK:n kautta sanatarkasti: "Minä voin testata asioita siihen asti, kunnes iPad saadaan huomenna toimintaan." Kunnes iso iPad on käynnistetty: laiteajoa odottavat muutokset linkkiin Mac-tarkistuksella (oletustila, PT katsoo) ilman ison iPadin ajoa; Uutta-tekstiin tai JU:n viestiin rivi "kokeiltava: …"; vika → linkki heti edelliseen. Koskee Pariisin koodimalliversiota ja PK:n osia 6, 8, 11. Ei muisti- ja nopeusmittauksia (vain iso iPad) eikä TF:ää.
+
+## Raamatun kevennys luvut 12 ja 7: KK tekee tilinvaihdon jälkeen (omistaja 10.11. 20.30) (10.11.2026 klo 20.30)
+
+Omistaja kysyi 20.26 "Milloin se raamatun kevennys kannattaa tehdä?"; KK suositteli tilinvaihdon yhteyteen, luku 12 ensin, sitten 7. Omistaja 20.30 sanatarkasti: "Haluan että sinä teet sen tilinvaihdon jälkeen." Tekijä KK heti tilinvaihdon jälkeen: omistajan poikkeus sääntöön "Raamatun kohdat kirjoittaa vain Päätoimittaja" tälle työlle. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261110-raamatun-kevennys-luvut-12-ja-7.md (säännöt ennallaan, taustat aihesivuille, kokotesti ja checks, PR per luku). PT: kertoo KK:lle heti vaihdon jälkeen; muut roolit käynnistetään vasta luvun 12 yhdistämisen jälkeen, jos odotus on lyhyt; ohjeiden koe (7.47 C2) kerran kevennyksen jälkeen; KK ilmoittaa PT:lle ennen kumpaakin yhdistämistä.
+
+## Nähtävyyksien erottuvuus kaukaa kokeiltavaksi (omistaja 10.11. 20.51) (10.11.2026 klo 20.51)
+
+Kortti KK:ssa (4 kuvaa: pari-rk-viisto, rajaus-rk, pari-yleis, rajaus-nd): "Kyllä, kokeiltavaksi (Suositus)". VS 593d09722 (pieni nähtävyys vaalenee hieman, ohut tumma ääriviiva; läheltä ei muutosta; Eiffel ei) asennusversioon koodimallien kanssa, ei lopullinen: omistaja arvioi pienellä iPadilla, KK kysyy sitten, jääkö. Huomiot VS:lle: viiva paikoin rosoinen/katkonainen Macin rajauksissa, Louvre haalistuu yleiskuvassa, Riemukaari hieman litteä.
+
+## Tarinamerkit: lisää vaihtoehtoja ja tarinat näkyviin (omistaja 10.11. 21.12) (10.11.2026 klo 21.12)
+
+Kortti KK:ssa (tiimalasi / huutomerkki / raunio, NUI e59888f0b): omistaja sanatarkasti "Keksi lisää. Mitä tarinoita noissa on esimerkiksi" → ei valintaa, tiimalasia ei lukita. NUI:n toinen kierros samasta kohdasta samalla rajauksella (koe): avoin matkakirja (KK:n suositus), sulkakynä + mustepullo, isoisän taskukello, lyhty, tiimalasi vertailuksi; sepia, yksi merkki/paikka, tähti voittaa (2bdd4d55f); selitteessä jokaisen merkin tarina, kuvan ulkopuolella. Kuvakkeet pelistä tai Codexin kuvat-sessiolta (7.15).
+
+## Tarinamerkit yksinkertaisiksi (omistaja 10.11. 21.27) (10.11.2026 klo 21.27)
+
+Omistaja KK:n kautta sanatarkasti: "Pitää olla yksinkertainen jotta toimii". KK:n tavoite: merkin tunnistaa yhdellä vilkaisulla pienenäkin kuten kultatähden; yksi täytetty siluetti, ei yksityiskohtia, ei sädekehää, ei kahta esinettä. Ehdokkaat: avoin kirja (KK:n suositus), taskukello, sulka, lyhty yhtenä muotona, tiimalasi yksinkertaistettuna. Sama rajaus + kauempaa otettu kuva. Kuvakkeet Codexilta (7.15), NUI täydentää tilauksen.
+
+## Näkyvä työ KK:n katsottavaksi ennen junaa, kokeena (omistaja 10.11. 21.38) (10.11.2026 klo 21.4x)
+
+Omistaja KK:n kautta sanatarkasti: "Sinun olisi hyvä tarkastaa itse visuaaliset jutut ja ottaa ohjat jos opuksen tekemät asiat eivät vastaa sinun tasoa. … Pitää ehkä miettiä sinun ja päätoimittajan työnjakoa. … Esim. nuo kartan 3d kohteet tarvitsevat ehkä sinun ohjausta tai tekemistä". KK:n tulkinta, heti voimaan kokeena (Pariisin 3D-kohteet, tarinamerkit): 1) näkyvä työ (3D-kohteet, merkit, kartan ilme, valikot, valo) ei junaan eikä omistajalle ennen KK:n katsomista; pt-ok = toimii teknisesti, KK = näyttää oikealta; PT ei anna ulkonäkösuositusta omistajalle vietäväksi. 2) KK antaa tavoitekuvan ennen työtä ja palautteen suoraan tekijälle (KS, NUI, VS, LAV), PT kopiona; ensimmäinen karkea kuva KK:lle ennen hiomista. 3) PT:llä ennallaan jonot KK:n järjestyksestä, junat, testit, vikojen syyt, muisti ja nopeus, yövuoro, kirjaukset. Pysyvä sääntö vasta omistajan kortilla (KK:n suunnitelma 20261110-kk-pt-tyonjako.md); Raamattuun ei vielä.
+
+## Nähtävyydet oikeassa mittasuhteessa kaikissa kaupungeissa (omistaja 10.11. 21.59) (10.11.2026 klo 21.59)
+
+Omistaja 21.58 KK:lle: "Tehdäänkö kaikki nyt oikeassa mittasuhteessa ilman liioittelua? Se olisi varmaan järkevintä. Mitä olet mieltä?" Kortti 21.59 "Tehdäänkö kaikki nähtävyydet kaikissa kaupungeissa oikeassa mittasuhteessa (ei enää kaksinkertaista korkeutta)? Erottuvuus kaukaa hoidetaan värillä, ääriviivalla ja kylteillä. Tämä korvaisi korttisi 16.17 maltillisen korostuksen." = "Kyllä, oikea mittasuhde (Suositus)" ("Kaikki nähtävyydet todellisessa koossa ja muodossa; raivattu tila palautetaan mallin oman pohjan kokoiseksi."). Korvaa 16.17 ja 17.45 (K 2). Toteutus: KS koodimallit 1:1 ja raivaus mallin pohjaan, ensin 224.42:n RK, ND, Eiffel → pari K 2 | 1:1 KK:lle → seuraava versio; Tripo-mallit 224.35-koossa kunnes korvataan, ei uudelleenskaalausta; VS säätää erottuvuuden 1:1-koolle, 224.45 kokeiltavaksi sellaisenaan; Lontoo jo oikeassa koossa. Raamattu 2.204 ja kaupungit.md kohta 3 päivitetty. Samalla omistaja 21.56: raivaus isompi kuin mallit → kuuluu jokaisen mallin kierrokseen.
+
+## Nähtävyys paisuu hetkeksi kohteena, koe (omistaja 10.11. 22.01) (10.11.2026 klo 22.0x)
+
+Omistaja KK:lle sanatarkasti: "Ja voisiko rakennusta vain paisuttaa hetkellisesti joka suuntaan jos se on kohteena? Silloin se ei mahtuisi paikalleen mutta jos se on vain väliaikainen ja animoitu liike niin se voisi toimia". KK:n tavoitekuva suunnitelmat/20261110-nahtavyys-paisuu-kohteena.md (ponnahduskirja: kartta 1:1, valittu kasvaa ~0,5 s pohjan keskipisteestä, naapurit väistyvät, paluu valinnan päättyessä). Koe videona, ei junaan; tekijä NUI (PT 22.0x), KS:n 1:1-työ edellä; karkea ND-video suoraan KK:lle.
