@@ -38,3 +38,7 @@ Pino: … 261067f00 Invalidit → 613d32f16 Opéra → 939dde71a Sainte-Chapelle
 
 ## Vahdit (uusi sessio virittää)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
+
+## LISÄYS 21.4x
+- JU kuittasi KJ5:n vielä käännöksellä 939dde71a (viestini 21.30); 21.33:n päivitys f979c8d59 toimitettu JU:lle myöhemmin. Tarkista, kumpi ajettiin (loki -939dde71a vai -f979c8d59);
+  jos 939dde71a, pyramidi (lv-*) puuttuu → uusi pieni pyyntö f979c8d59:lle.
