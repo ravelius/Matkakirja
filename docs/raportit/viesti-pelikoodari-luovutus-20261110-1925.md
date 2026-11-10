@@ -36,3 +36,5 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - 19.4x: JU:lle KÄRKI aae0ab729 (ei 92e50fb68). Osan 11 sk proto-3d/_tyo/pelikoodari/osa11/sk-ipad-osa11-opasteet.txt (md5 a4fb9faa2d77, kuvat p1–p23)
   → lokit/pk-osa11-aae0ab729-ipad; osan 6 sk samalla käännöksellä → lokit/pk-osa6-aae0ab729-ipad. Iso iPad heti uudelleenkäynnistyksen jälkeen.
   Katso kuvat (ohjeteksti + peukalon syke, lähtölause vain palkissa) ja lokin "opetus X → Y" -rivit → rivi PT:lle.
+- 19.3x: OSA 8 ovet-2 EI KELPAA (katsottu: kaikki 4 kuvaa sama latauskuva, Request timeout) → kuitujonossa JU:lla (ovet-3, KK:n sana valokuidusta).
+  PT:lle kerrottu. Kun ovet-3 tulee: k1/k2 vs a1/a2 täysikoossa, "kiinni K" lokista, pari + rajaluku 0/663 PT:lle.
