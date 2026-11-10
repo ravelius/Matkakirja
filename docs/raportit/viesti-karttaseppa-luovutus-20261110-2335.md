@@ -90,3 +90,4 @@ KJ13 (Opéra) on jo JU:n jonossa; Invalidien korjausten pari ajetaan sen jälkee
    TaloKivi × 1,12 → ero ei ole värivakiossa: tarkista InVarjo/Sauma/AO tai valaistus; vertaa kuvia), kupolin lyhty + kärki (uusi kuva koko kupolista),
    etukentän kaksi irtonaista pikkutaloa pois (raivaus), haalea varjolaikku kentällä. Ei junaan ennen uutta kuvaa.
 Järjestys KK: (0 juna) → lähin 2,7× tarkistus → ND:n puiden mittakaava → Invalidit. KJ14–16 (4eed281af) ajossa JU:lla.
+- PT 23.4x vahvisti 0):n ENSIMMÄISEKSI TYÖKSI: uusi sha = Panthéon b8fed770e + pariisi.json (v3 1:1 RK/ND/Eiffel + Panthéon) juna-224:n kärjen 7b5a45561 päälle; paketti uutena versiona v5 + palat-ok; lahin-2-7x b5ef8b0c9 rebasattuna sen päälle. Sha PT:lle ja JU:lle (local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd).
