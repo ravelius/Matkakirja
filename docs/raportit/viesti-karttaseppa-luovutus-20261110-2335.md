@@ -47,3 +47,13 @@ JU:lle sanottu: KJ13–16 voi ajaa yhdellä käännöksellä 4eed281af → lokik
 ## Vahdit (uusi sessio virittää)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min).
 - OSM-hakua ei enää käynnissä.
+
+## LISÄYS 23.4x: KK:n palaute KJ11 Invalidit (EI junaan; korjaa ENNEN Opérata, KK: "uusi pari näiden jälkeen; sitten Opéra")
+1) Seinät liian tummat (ruskea kuin talot) → sama vaalea kalkkikivi kuin ND:ssä: InKivi = NahtavyysKivi.Seina (nyt TaloKivi × 1,12), varjo samassa suhteessa
+   (Tripo-version kermanvaalea on oikea sävy). Huom: KK sanoo "kuin Panthéonissa" – Panthéon on TaloKivi × 1,12; tarkista, ettei Panthéonkin näytä ruskealta.
+2) Kupoli tynkä → lyhty + risti huippuun, kupoli hieman korkeammaksi rumpuun nähden; kupolikirkon (Dôme) eteen pylväspääty OhjelmaKohdeOsat.OsaPylvasPaaty.
+3) Maa: Tripo-pohjan pois jättäminen (PohjaPoisKoodilla) jätti haalean sumean laikun, nurmet katosivat, etelässä tumma lammikkoläiskä → nurmet ja käytävät
+   takaisin kuten Tripo-kuvassa (esim. ND-puiston tapaan OSM-nurmet palana vain koodilla: tee-puisto.py-resepti, alue invalides, leisure/landuse=grass).
+4) Lähikuva epäonnistui taas → YKSI toimiva lähikuvaresepti kaikkiin kohteisiin: kohde keskellä, noin puolet ruudusta, katto näkyy, viistosti etuviistosta.
+   Testaa kerran (esim. Invalidit) ja käytä sitten kaikissa. KJ12–16:n lahizoomi-kuvat voivat epäonnistua samoin → älä vie niitä KK:lle ennen katsomista.
+KJ13 (Opéra) on jo JU:n jonossa; Invalidien korjausten pari ajetaan sen jälkeen, ja KK katsoo Invalidit ennen Opérata.
