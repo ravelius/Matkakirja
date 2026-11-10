@@ -23,6 +23,7 @@ Kuva ennen: /Users/Shared/Claude/Matkakirja-fable/docs/raportit/kaappaukset/omis
 3+4) 423e02931 (edellinen luovutus): tarkista pystykuvassa, ettei otsikko osu vasemman katon koristeisiin.
 5) LEIMAN ÄÄNI f45192f8e: laskeutuminen-1 pois (LeimaAaniUrl null = ei ääntä). TILATTU Äänittäjältä (local_726ba209…) 13.0x: kengän
    tömähdys Soundly/Sonniss (5.27) → kun url tulee: JuoksupeliNakyma.LeimaAaniUrl = "<url>" (kenttä rivillä ~281).
+   PT 13.1x: VAIN VALMIISTA PANKISTA; jos Äänittäjän tarjoama ääni on uusi generointi, se odottaa KK:n lupaa (omistajan ehto) – ei kytketä ilman.
 6) MUSIIKKI f45192f8e: Avaa (v4) → avausMusiikki + SoitaAvausKappale("latausruutu"); LentoAlkaa ei aloita uudelleen ("musiikki avaus
    jatkuu (lento)" lokissa). TARKISTA: soiko latausruudulla (mykistys/PohjaLahde latauksen aikana?), ei katkoa lennon alussa.
 SEURAAVAKSI: Mac-esikatselu (JU:n vuorolla): kylmä välimuisti (`juoksupeli palatsi valimuisti tyhjenna`) + `verkko viive 8` +
