@@ -79,3 +79,5 @@ iPadilla (JU:n vuorolla), myös hidastetulla verkolla. Syy + korjausversio PT:ll
   merellä karkeampi suorakulmio (m-1) → todennäköisesti MARSEILLEN OMA laatta-aukko (data/alue/rajaus), ei kaikkien piirroksettomien. Kuvat
   lokit/nui-kaupunkinimi-zoomaus-3-mac-ef774d9fd/{m-1-marseille-1,b-0-barcelona-pois}.png. Aloita Macilla: Marseillen striimialueen määrittely/laatat
   vs Barcelona. OK-ehto ennallaan (Marseille + yksi muu isolla iPadilla).
+- KÄRKI LOPULLINEN (PT/KK 16.3x): korjaa Marseillen striimikartan laatta-aukko + tarkista muut aukkokaupungit (ei yleistä piirroksettomien vikaa).
+  OK = Marseille näyttää katuverkon isolla iPadilla → NUI poistaa Marseillen korttipoikkeuksen (ilmoita NUI:lle + PT:lle).
