@@ -37,3 +37,10 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. HUOM zsh: `$c:A…`/`$C:r…` 
 
 ## LISÄYS 01.1x
 - NUI: c032134e7 ajettu, eletila "lähin 0.620 km" ND ja RK ✓; kuvat KK:lle 00.57. NUI kertoo KK:n vastauksen → KS vie junaan (PT:lle junaehdokas c032134e7).
+- KK 01.0x: lähin c032134e7 hyväksytty junaan (JU: MR44 → 224.51 testeissä; PT:lle pt-ok-pyyntö lähetetty). KK:N EHTO: ND:n itäpuolen kellertävä
+  läpikuultava kolmio (NUI: proto-3d/_tyo/natiivi-ui/paisunta/lahin-2-7x-4-pari-nd-vanha-uusi.jpg oikea puoli) ei saa tulla mukaan – NUI: tulee jo
+  224.47-pohjasta (440d3e8d6), ei c032134e7:stä. SELVITÄ mikä se on (kartta-asia); jos vika, erillinen korjaus.
+- KK 01.0x: KJ17 ND-puisto 0aad16c3f NÄYTTÄÄ OIKEALTA → junaan (PT:lle junaehdokas lähetetty; nd-puisto-2 on 440d3e8d6:n päällä ilman Opéraa → JU yhdistää).
+  Seuraavaan kierrokseen: 1) puiston nurmella irtonainen kapea talo pois; 2) parvisin hakasen muotoiset tummat jäljet + etelärannan sumea vihreä kaista:
+  YKSI rivi KK:lle (piirroskartan pohjaa vai varjoja, voiko siistiä); 3) ND-lähikuva rajaa tornit pois → Opéran resepti hieman kauempaa.
+- JU: KJ17 valmis (lokit/karttaseppa-nd-puisto-kj17-0aad16c3f), KJ19 seuraavaksi, sitten KJ20.
