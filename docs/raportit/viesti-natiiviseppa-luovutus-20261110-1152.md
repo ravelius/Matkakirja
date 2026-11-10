@@ -30,3 +30,6 @@ PT 12.0x: jatka kertojan viiveellä ja ISS-kello/kupoli-iPad-parilla.
 
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: a 11.10, tärinä+kupoli 11.5x, muistiosuus 11.5x, ISS C 12.0x, a2-1 12.1x (kaikki kuitattu/toimitettu). JU: ajopyyntö-5 (OP kuitattu), iss ajopyyntö-3 (OS kuitattu).
+
+## PT 12.1x (luovutuksen jälkeen)
+a2-1 pari katsottu ja hyväksytty (sama tyyli, vain tarkentuminen). Jatka a2-05 → iPad-muisti; jos muisti < 4080 (tai osuusrajan alla, jos muistiosuus-kortti menee) → pari + luvut PT:lle → KK:n kortti.
