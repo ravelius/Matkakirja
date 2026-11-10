@@ -45,3 +45,7 @@ Tulokset 1 (pysty-2), 2 (kontrasti-pari), 3 (tapit-pari); sitten rivi PT:lle "JO
 - KS yhdistää 71c52a6c0 (karttaseppa/luomalli-kestava, LuoOsat kestäväksi) + 033ba90b5 yhdeksi kärjeksi; JU ajaa sen ensimmäisenä isolla iPadilla
   (Pariisi + loki). JU:lle pyydetty poistamaan nui-ipad-nimet-kontrasti-1 (sk kelpaa yhdistelmälle). pt-ok vasta laitelokin jälkeen.
 - Tee: kun yhdistelmän loki tulee, katso nimet + ND + kirja/Liiku → PT:lle. Mac-kontrastipari sk-kontrasti-1 yhä JU:lla → PT.
+
+## LISÄYS 19.5x/3 (PT)
+- KS yhdistää f4ddf1655:n haaraan karttaseppa/luomalli-kestava (9c1f51eb6:ssä oli vain 2592bf839); uusi kärki = JU:n iPad-ajo (Pariisi-sk + sk-ipad-nimet-kontrasti-1).
+- PT:lle menevään kuvapariin MYÖS kirja + Liiku -rajaus (sama rajaus ennen/jälkeen; kirja ylävasen, Liiku alakeskellä), sekä Mac- että iPad-parista.
