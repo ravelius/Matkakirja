@@ -1331,3 +1331,7 @@ Kortti KK:ssa (4 kuvaa: pari-rk-viisto, rajaus-rk, pari-yleis, rajaus-nd): "Kyll
 ## Tarinamerkit: lisää vaihtoehtoja ja tarinat näkyviin (omistaja 10.11. 21.12) (10.11.2026 klo 21.12)
 
 Kortti KK:ssa (tiimalasi / huutomerkki / raunio, NUI e59888f0b): omistaja sanatarkasti "Keksi lisää. Mitä tarinoita noissa on esimerkiksi" → ei valintaa, tiimalasia ei lukita. NUI:n toinen kierros samasta kohdasta samalla rajauksella (koe): avoin matkakirja (KK:n suositus), sulkakynä + mustepullo, isoisän taskukello, lyhty, tiimalasi vertailuksi; sepia, yksi merkki/paikka, tähti voittaa (2bdd4d55f); selitteessä jokaisen merkin tarina, kuvan ulkopuolella. Kuvakkeet pelistä tai Codexin kuvat-sessiolta (7.15).
+
+## Tarinamerkit yksinkertaisiksi (omistaja 10.11. 21.27) (10.11.2026 klo 21.27)
+
+Omistaja KK:n kautta sanatarkasti: "Pitää olla yksinkertainen jotta toimii". KK:n tavoite: merkin tunnistaa yhdellä vilkaisulla pienenäkin kuten kultatähden; yksi täytetty siluetti, ei yksityiskohtia, ei sädekehää, ei kahta esinettä. Ehdokkaat: avoin kirja (KK:n suositus), taskukello, sulka, lyhty yhtenä muotona, tiimalasi yksinkertaistettuna. Sama rajaus + kauempaa otettu kuva. Kuvakkeet Codexilta (7.15), NUI täydentää tilauksen.
