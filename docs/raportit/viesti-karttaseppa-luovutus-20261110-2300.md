@@ -49,3 +49,4 @@ Worktree: /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna (remote natiivi-ba
   tarkista poistettujen talojen varjot/pohjat (talot poisto 1); 2) toinen kulma OIKEASTI eri suunnasta (b-kuvat olivat samat), kamera niin korkealla, että katto näkyy.
 - Kyltit irti 1:1-mallista: NUI tekee (OhjelmaKohteet.KoodiMalli + Kylttikohde.TRajat, haara natiivi-ui/nahtavyys-paisuu) → KS katsoo ennen junaa.
   Sainte-Chapellen koko tiedossa (Tripo K 2), ei korjata.
+- 23.0x: JU vei paketin v4 ämpäriin ja kirjoitti 224.47.palat-ok itse (tarkistettu) → palat-ok-kohta SULJETTU.
