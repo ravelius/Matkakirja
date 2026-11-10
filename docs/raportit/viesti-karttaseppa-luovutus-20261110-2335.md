@@ -57,3 +57,17 @@ JU:lle sanottu: KJ13–16 voi ajaa yhdellä käännöksellä 4eed281af → lokik
 4) Lähikuva epäonnistui taas → YKSI toimiva lähikuvaresepti kaikkiin kohteisiin: kohde keskellä, noin puolet ruudusta, katto näkyy, viistosti etuviistosta.
    Testaa kerran (esim. Invalidit) ja käytä sitten kaikissa. KJ12–16:n lahizoomi-kuvat voivat epäonnistua samoin → älä vie niitä KK:lle ennen katsomista.
 KJ13 (Opéra) on jo JU:n jonossa; Invalidien korjausten pari ajetaan sen jälkeen, ja KK katsoo Invalidit ennen Opérata.
+
+## LISÄYS 23.4x (2): viestit nollauksen odottaessa
+- KAMERA LÄHIN 2,7× TEHTY (KK 23.1x, PT): b5ef8b0c9 natiivi-backup karttaseppa/lahin-2-7x = 321324163 + IsoisaLahinLeveys 0,525 → 0,195 (~0,65 km),
+  PiirrosLahinTestit 0,55–0,75 km. Kartta 753/753, unity 0. Sha NUI:lle ja PT:lle lähetetty. NUI ajaa KK:n tarkistuskuvat (pari kuten
+  _tyo/natiivi-ui/paisunta/paisunta-5-pari-lahin-nyt-vs-2-7x.jpg Mac-kuvana + Riemukaari lähimmästä) → KK, kopio PT. Seuraa KK:n vastausta; junaan PT:n kautta.
+- KK 23.3x: KATOT yksi yhteinen liuskekiven sävy kaikille kohteille = Panthéonin katto (PnKatto 0x8E979D); Invalidien katot nyt liian siniset/kirkkaat
+  → hieman tummemmiksi ja harmaammiksi samaan sävyyn. Tarkista samalla Louvre (LvLiuske 0x838A92 / LvSinkki 0x979CA1) ja Opéra → sama sävy.
+- JÄRJESTYS (KK/PT): kameramuutos (tehty) → Invalidien korjaukset (LISÄYS 23.4x 1–4 + katot) → uusi pari KK:lle → sitten Opéra.
+- NUI: OMISTAJAN PÄÄTÖS 23.29: nähtävyyden paisuminen PELIIN kaikille kylttikorjauksen kanssa. KS:N KATSOTTAVA ennen junaa: natiivi-backup
+  natiivi-ui/nahtavyys-paisuu (kärki 714266606): kylttikorjaus 7b1605f21 (OhjelmaKohteet.KoodiMalli, Nahtavyysalue.Kylttikohde) + PaisuntaTila.cs.
+  NUI:lle sanottu: otsikon "KOE, ei junaan" saa muuttaa itse. Kuittaus NUI:lle (local_4b84cd90-123f-46c5-bc07-75760ed4c80b) katsomisen jälkeen.
+- NUMEROINTI (PT): 224.47 = Panthéon 321324163 (MR39b), 224.48 = PK koneportaat (MR40). ND-puisto saa seuraavan vapaan numeron KK:n katsottua (JU antaa).
+- JU: KJ12 ajossa (5f00b2ee6), KJ13 f9daa9b32:lla, KJ14–16 kaikki 4eed281af:llä → lokit/karttaseppa-{louvre-kj14,sacre-coeur-kj15,sainte-chapelle-kj16}-4eed281af.
+  JU-sivusessio nollautuu; tulosrivit JU:n jonolokissa ("AJO KS …").
