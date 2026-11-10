@@ -43,3 +43,13 @@ käännöksellä, jossa latausruutuketju on mukana (rebase d57afd0c3:n päälle)
 _tyo/pelikoodari: paketti-v1–v4, pariisi-nimet-20261109, juoksu-223 (~6 G) siirretty NAS:lle
 Matkakirja-arkisto/pelikoodari/_tyo-20261110 (rsync --remove-source-files; kaikki 5550 tiedostoa siirtyivät, lähteeseen jäi 0; NAS:n luvut ~2× = ._-tiedostot). Aktiiviset jäävät (paketti-v5, lahde,
 astcm, lontoo*). Omia valmiita worktreejä ei ollut (vain aktiivinen proto-pelikoodari-juoksu). PT 16.3x: levy jo 55 Gi, tavoite täytetty; siirto ajettiin silti loppuun (ei kiire).
+
+## LISÄYS 16.4x (kärki nyt c62818943)
+- e429f450f: HidasTeksti OMISTAJAN PÄÄTÖS 16.36 sanatarkasti "Yhteys on hidas. Lataus jatkuu siitä, mihin se jäi. Voit myös palata kartalle
+  Poistu-napista." (KK-hyväksyntää ei enää tarvita tekstille).
+- PJ5 Mac d57afd0c3 katsottu (lokit/pk-latausruutu-d57afd0c3): Puyin osat jatkuivat kohdasta (7168/8778 kt), viesti näkyi 20 s:n kohdalla (l1-viesti:
+  pieni teksti palkin alla taivaalla – luettavuus omistajan kuvasta), maailma valmis, Poistu → kartta. VIKA: JuoksuHahmot.Hae haki myös maailman
+  tiedostot (kivi.jpg 22 uusintaa / 195 s, json) osissa → c62818943: osissa vain Valttamaton (/hahmot-). unity 0.
+- Avoin: maailma valmistui ennen kuin puyi.glb oli valmis (viimeinen uusinta riviltä 3142 latauksen loputtua 2975) → tarkista, mihin puyi.glb
+  vaikuttaa (alkulento ilman Puyita? vai puyi-perus käytössä) laiteajon kuvista.
+- JU:lle OK: PJ6 pieni iPad c62818943:lla, sk-ipad-pieni-latausruutu-d57afd0c3.txt → lokit/pk-latausruutu-d57afd0c3-ipad. Tulos → pari PT:lle.
