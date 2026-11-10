@@ -45,6 +45,6 @@ Museon latausilmaisin 37eba712e, kerronnan tauko a8bfc9d3e, maan pienoiskartta 5
 
 LISÄTIETO kohtaan 2 (klikattavat, 11.0x koodista): ajossa Pariisin merkeissä oli vain kohdenostoja. Tavallinen nosto (karttavalo, kaupunki null, pääkartalla)
 on NostoKerroksen Naytettavat-listassa vain, jos se ei ole jo kohdenosto (Kohdenostona = linkitetty kohdekartan kohteeseen, esim. Mona Lisa → Louvre).
-Pariisin 19 aihepisteestä 14 on linkitetty kohdekartan kohteeseen (ks. A:n lista), joten ne näkyvät kohdenostoina; 5 maalehti-nostoa (Braille, Meister,
-Tour 1903, Roland Garros, Bouquinistes) ovat ainoat tavalliset. Tarkista seuraavaksi, näkyvätkö ne kaupunkizoomissa (muste/salaisuus, taso, katto).
+Pariisin 19 aihepisteestä 14 on linkitetty kohdekartan kohteeseen (ks. A:n lista; kolme kartalla olevaan, 11 tarinakohteeseen) – EI VARMISTETTU, piilottaako
+Kohdenostona (NostoKerros.cs 695/801) myös tarinakohteisiin linkitetyt; 5 maalehti-nostoa (Braille, Meister, Tour 1903, Roland Garros, Bouquinistes) eivät ole linkitettyjä. Tarkista seuraavaksi, näkyvätkö ne kaupunkizoomissa (muste/salaisuus, taso, katto).
 Kohteet saattavat muuttua KK:n luokittelussa (osa 3), joten kysy PT:ltä ennen uutta ajoa.
