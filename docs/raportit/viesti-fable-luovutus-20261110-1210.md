@@ -27,3 +27,4 @@ Korvaa -1023:n JUNA-, ODOTTAA- ja MUUT-kohdat; LINJAT voimassa (kolme kärkeä, 
 - Postivahti nollautuu usein (3×/h); aloitusviesti sille PT:ltä, kun se pyytää.
 
 LISÄYS 12.1x: VIE-sana v131 annettu (JU + PK; uudet kansiot) → laitekäännös 8d22f34e4 + iPad → kuvat PT → junaan kuittauksella. KS u3 Mac 43 (ND + Palais de Justice) valmis /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodimallit/kuvat/u3/; KK-korttiin: Tripo-Sainte-Chapelle nyt isompi kuin oikean kokoinen Notre-Dame.
+LISÄYS 12.2x: NUI Lehti/Turisti-info d11281908 katsottu (ipad-yla), MR11 JU:lle MR10:n jälkeen; pt-ok, kun JU kertoo numeron (uutta "Kaupungissa nimikilven alla Lehti- ja Turisti-info-napit"). VS Eiffel Mac-parit valmiit parit-mac2-20fed45ff (koodi oikeassa koossa pieni Tripon 2,4× rinnalla), iPad KS:n I3:n jälkeen.
