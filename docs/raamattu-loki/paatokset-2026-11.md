@@ -1126,3 +1126,7 @@ Omistaja 06.0x: "Sinulle voisi muuttaa oletus effort tasoksi kohtalainen, se oli
 ## PARIISIN NOSTOJEN KYSYMYKSET JA KUVASELITTEET (omistaja 10.11.2026 klo 06.12) (10.11.2026 klo 06.13)
 
 Kortti "Hyväksytkö Pariisin nostojen 22 kysymystä ja 15 kuvaselitettä?" → "Kyllä, selite 12 korjaten". Näytetty kysymykset-pariisi-luonnos.md (22), commons-kuvat-pariisi/selitteet-luonnos.md (15, 01-a uusi kirjeselite) ja arkki pariisi-kuvat-2000.jpg. Selite 12 (07-bastiljin-valtaus-a.jpg): "Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; siitä tuli Ranskan vallankumouksen tunnetuin hetki." KS vie dataan; Lontoon tekstit omalla kortillaan.
+
+## JUOKSUPELIN ALKULENNON VARJOT KELPAA (omistaja 10.11.2026 klo 06.19) (10.11.2026 klo 06.20)
+
+Pyyntö 1d (8.11. 22.32 "Voisiko ne piirtyä jo kauempaa?"). Kortti "Kelpaavatko juoksupelin alkulennon varjot näin?" → "Kelpaa"; näytetty pari-1d-224-c98-ennen-nyt-a-4s.png. 1e ja 1f junassa 224; omistaja näkee ne uudesta asennuslinkistä (JU vie kärjen).
