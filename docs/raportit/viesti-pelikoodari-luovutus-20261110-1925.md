@@ -67,3 +67,16 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   sitä ennen Mac-pari + esitäyttövahti mac-valimuisti/esitayta-valimuisti.sh <sha>).
 - Jonossa myös (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
 - 20.5x JU: esitäyttö nyt pysyvä kaikissa JU:n Mac-ajoissa (julkaisija-tyokalut/esikatselu-rungolla.zsh; ESIKATSELU_KYLMA=1 ohittaa) → oma vahti tarpeeton.
+
+## LISÄYS 21.1x: OSA 5 AUKIOT (uusin; aloita tästä)
+- OSA 5 kokeena b744c680b (natiivi-backup pelikoodari/osa5-aukiot; pohja juna-224 3c214599d + osat 6/11 aae0ab729 + osa 8 3eb33531c,
+  JU ei ollut vielä yhdistänyt MR31/osa 8 junaan), 911/911, unity 0. Aukiolla (yli AukioM 8 m) enintään 5 kaistaa samasta 1,6 m:n ruudukosta
+  (JuoksuV4Reitti.AukioLinjat, V4Osa.KaistaMaara/Aukio); napautus JuoksuV4Saanto.AukioKohde: kaista kerrallaan kohti lähintä omenaa (30 m),
+  muuten kohti keskikaistaa, liikuttaa aina; vaihdon aikana napautus jonoon. Sivuvartija kattaa oman puolen puolikkaan (OmaPuoli), esine
+  lähimmälle kaistalle, botti napauttaa aukiolla, opetuksen omenaohje N kaistalle. QA `ui juoksupeli aukio 0|1` (JuoksupeliNakyma, NUI:lle kerrottu).
+  Uudet testit Peli-testit/Testit/JuoksuAukioTestit.cs. Oikealla kartalla botti: omena 119 → 87 m välein, läpi 12/12.
+- Yhdistetyllä pohjalla ilman osaa 5 LinjatOikeallaKartalla punainen (ajelehti 1/9); osan 5 jälkeen vihreä (PT:lle kerrottu).
+- Mac-pari JU:lla: proto-3d/_tyo/pelikoodari/osa5-aukiot/sk-mac-osa5-aukio.txt (c4e6b681a3a9) → lokit/pk-osa5-aukio-mac-b744c680b ja
+  -pois.txt (a43734804d2a) → ...-pois. Lähtö lahto -97,363.2 l (osan 9 piha). Katso k1–k9 vs e1–e9 täysikoossa + lokin "aukio kaista N omena|keski"
+  → pari PT:lle. Sen jälkeen iso iPad -video aukiolta (huomenna).
+- Jonossa yhä (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
