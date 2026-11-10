@@ -66,3 +66,4 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   Pohja: 224.41/224.42-ketjun kärki natiivi-backupista (osat 1–3, 6, 9, 10, 11 ja 8). Näyttö: oma video aukiolta (iso iPad huomenna;
   sitä ennen Mac-pari + esitäyttövahti mac-valimuisti/esitayta-valimuisti.sh <sha>).
 - Jonossa myös (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
+- 20.5x JU: esitäyttö nyt pysyvä kaikissa JU:n Mac-ajoissa (julkaisija-tyokalut/esikatselu-rungolla.zsh; ESIKATSELU_KYLMA=1 ohittaa) → oma vahti tarpeeton.
