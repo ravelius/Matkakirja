@@ -69,3 +69,4 @@ Parit PT:lle.
   iso lataus tyhjenna ei peru esilataajan ryhmiä.) Ajo -3 (sk-museo-ilmaisin-3-mac, vain paikallinen ämpäri, tyhjennys juuri ennen avausta)
   JU:lla 13.5x → lokit/nui-museo-ilmaisin-3-mac-37eba712e (j-1 palkki, j-2 lähestymiskuva). Katso → pari PT:lle → MR-pyyntö PT:n sanalla.
 - 14.0x: museo -3 katsottu (kuvat 1.0 s, ilmaisin pois 1.1 s, Louvren lähestyminen; PUUTE 2 = oleta-ajoitus). Kolmikko _tyo/natiivi-ui/museo-ilmaisin-odotus-taytto-perilla.png PT:lle 14.01, kysytty MR; Uutta-ehdotus "Museon kuvia ladattaessa näkyy museon nimi ja latauspalkki." PT:n OK → MR-pyyntö JU:lle (37eba712e). Sitten jono: aiheeton/Kaupungit-kohta/klikattavat tehty kun 224.24.
+- 14.0x: PT OK museo-ilmaisimelle → MR-pyyntö JU:lle (37eba712e, merge-tree puhdas), rivi tehty. Ei KK-paria (PT:n rivi, ei omistajan). Seuraa JU:n MR-numeroa.
