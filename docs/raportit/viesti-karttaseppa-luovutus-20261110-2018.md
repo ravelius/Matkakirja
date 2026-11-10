@@ -10,7 +10,17 @@ Yksityiskohdat: `korostus/oletus-tulos.md` (lisäykset 19.4x–20.2x, luettava k
 - Talojen aukko yleiskuvassa = talot v2:n 18 palaa vielä latautumassa (täyttyy). PT katsoi parit 20.2x, samaa mieltä.
 - PT: KK:lle kysymys, suositus "Tripo-mallit 224.35:n kokoon, muu korostus säilyy".
 
-## LISÄYS 20.4x (PT KORJAUS, sitova)
+## ETUSIJA 1: PT 20.5x UUSI LINJA (omistaja 20.19 KK:n kautta: "eikö ne ole tarkoitus vaihtaa niihin uusiin malleihin?") – Pariisi koodimalleihin
+Tee JUNAHAARA (proto, natiivi-backup), yhdistä:
+1. 0f0f950a6 (kaatuvan mallin suoja + NUI 2592bf839 + kontrasti f4ddf1655; haara karttaseppa/luomalli-kestava)
+2. b8971b839 (Tripo-mallit 224.35-koossa, MallitEnnallaan; haara karttaseppa/korostus-mallit-ennallaan) – PT: "peruutus koski vain erillistä kokokysymystä", käyttöön tässä
+3. RK/ND/Eiffel-koodimallit maltillisella korostuksella (205649e5f…20fed45ff, 1281fef9e) Tripo-mallien tilalle (Tripo talteen)
+4. VS c1e811eed (koodimallin kyltti)
+Huom: b8971b839 on 561a944af:n (korostus) päällä, 0f0f950a6 juna-224 271e46fd9:n (jossa korostus peruttu 191aaeaf2) päällä → korostus tulee takaisin b8971b839:n mukana; tarkista ristiriidat Nahtavyysalue.cs:ssä.
+Sitten Mac OLETUSTILASSA (ei komentoja, talot ämpäristä) yleis + lähi → pari PT:lle; iso iPad JU:lla ennen pt-ok:ta (korvaa 0f0f950a6:n JU:n jonossa).
+Seuraavaksi (KK:n lista): Louvre, Sacré-Cœur, Panthéon, Invalides, Opéra, Sainte-Chapelle koodimalleiksi.
+
+## LISÄYS 20.4x (PT KORJAUS; 20.5x linja yllä ohittaa b8971b839:n peruutuksen)
 - KK: koko on omistajan päätös (16.17 + 17.45) → b8971b839 PERUTTU (JU:n ajo peruttu). Kutistus EI selitä laiteoiretta; syy auki.
 - Koodista (KS 20.4x): talot ja mallit haetaan palvelimelta ilman latausmerkkiä (SaapumisOdotus vain karttalaatat ≤ 30 s). Puuttuva mallitiedosto → alue odottaa
   kokonaan (ei pohjaa). 19.30 ND:n pohja näkyi ilman mallia → vain LuoMalli-kaatuminen (71c52a6c0-polku). 18.53 ei taloja = hidas ensihaku (219 palaa 96 Mt)?
