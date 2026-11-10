@@ -57,3 +57,14 @@ Parit PT:lle.
 - JU 13.4x: välilehtivärit 91feac3b2 = MR16 → linkki 224.26 (MR15:n jälkeen), koeyhdistys puhdas.
 - OMISTAJAN PÄÄTÖS 13.40 (KK): välilehtivärit 91feac3b2 "Kyllä, junaan", ei muutoksia. PT:lle kerrottu.
 - NS 13.5x: 9d5be8823-toisto, "KameranJalkeen-kuuntelija heitti" 0, fps 30 = laitteen kuumakatto (thermal 2) → ei toimenpiteitä NUI:lle. Trailerijumin syy edelleen toistamatta; f319b2bae suojaa.
+
+## LISÄYS 14.0x (uusi NUI-sessio, PT:n jono 13.4x)
+- 1) Työlista siivottu: "Kaupunkilehti ja turisti-info" tehty (d11281908 = 224.21); "Muut-kohteet aiheisiin" tehty = KUMOTTU; "aiheeton nähtävyys"
+  ja "Kaupungit-kohta" tilanne (761535b9e/ad96c30df sisältyvät 4fa068fbf = MR13 → 224.24, ei vielä junassa; linkki 224.22); "Kaikki klikattavat"
+  este = odottaa 224.24. Kun 224.24 valmis → `tehty` näille kolmelle + klikattavat.
+- 3) Nostomerkit valikon läpi (2 riviä) tehty: jo korjattu e059d4f62 (224.18). Pari _tyo/natiivi-ui/nostomerkit-lapi-ennen-jalkeen.png PT:lle.
+- 2) Museon ilmaisin 37eba712e: -2 todistaa ilmaisimen (i-1 40 %, i-2 tyhjä palkki). Kierroksen 2 "VIKA 79/79" = testin artefakti:
+  127.0.0.1-kierroksen haut olivat yhä esilataajan ryhmissä iso-<sha>; EsilataajaTiedostot.Pyyda ottaa saman polun ryhmään kerran → uudet
+  file://-pyynnöt sulautuivat vanhoihin → epäonnistuivat → IsoSisalto.epaonnistui 60 s = museon aikaraja. (Huomio NS:lle tarvittaessa:
+  iso lataus tyhjenna ei peru esilataajan ryhmiä.) Ajo -3 (sk-museo-ilmaisin-3-mac, vain paikallinen ämpäri, tyhjennys juuri ennen avausta)
+  JU:lla 13.5x → lokit/nui-museo-ilmaisin-3-mac-37eba712e (j-1 palkki, j-2 lähestymiskuva). Katso → pari PT:lle → MR-pyyntö PT:n sanalla.
