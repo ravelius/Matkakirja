@@ -40,11 +40,11 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   keisarin oikealla (Puyi reitti (215,9; −706,1), t 86,8 s, "portin alla"). PT:lle sanottu: ei logiikan este, todennäköisesti mallin korotettu polku/
   reunakivi, VARMISTAMATTA → tarkista (mikä malli/osa, onko tarkoituksellinen; myös linjavideon kuvista) ja rivi PT:lle.
 
-## LISÄYS 18.5x (aukioajo 1 katsottu)
+## LISÄYS 18.35 (aukioajo 1 katsottu)
 - JU ajoi 711192245:n 18.27–18.32 (lokit/pk-aukio-v129d-711192245). LOGIIKKA OK: v129d-kartalla (kulkukartta/v129d/peliin/JuoksuKulku.bytes)
   0/12 pistettä ulkona; keisari juoksi −120 → −178 (58 m) ja pysähtyi täsmälleen siihen, missä kuljettava alue päättyy (rakennuksen seinä ja ovi,
   a3/a4). Vanhalla kartalla raja oli −141. Skenaarion arvio "76 m" oli väärä. JU:n "ulkona 10" johtui tarkistimen oletuskartasta (natiivipuu
   osan 8 haarassa), "EI TODISTETTU" myös pysähdyksestä (eri metriruutuja 4 ≤ 5).
 - VIDEO EI KELPAA: ylitys tapahtui alkulennon aikana (keisari juoksee lennolla itse ~45 m ennen lähtölaskentaa; v01 ilmasta, v02 sukellus,
   v03 jo seinällä "3" ja rajaviesti). Uusinta: kulkukartta/sk-ipad-aukio-v129d-2.txt (lähtö −97; 363.2, suora kuljettava kaista −94…−178),
-  JU:lle annettu, kansio lokit/pk-aukio2-v129d-711192245. PT:lle ilmoitettu 18.5x. Katso kuvat ja aja tarkistin v129d-kartalla.
+  JU:lle annettu, kansio lokit/pk-aukio2-v129d-711192245. PT:lle ilmoitettu 18.3x. Katso kuvat ja aja tarkistin v129d-kartalla.
