@@ -1,3 +1,19 @@
+## LISÄYS 10.11. 04.3x (TUOREIN; korvaa 03.1x:n jonon; konteksti 25 % → nollaus)
+- JUNA 224 = 77b1641de PUSHATTU 04.17 (natiivi-backup julkaisija/juna-224, wt /Users/Shared/Claude/wt/julkaisija-juna-221): d7a8cdc19 + NUI hetki-pulu 5 committia (cherry-pick, b74bdcd31 03.39) + NUI pulu-kupla-translate 7ff4dc67a (997fcfaff 04.05) + 795bada02 (77b1641de). Testit T/juna224-x-*: 733/2285/889, unity 0. PT ja NUI ilmoitettu. JUNA AUKI.
+- VIETY: Pulu v6 03.27 (pulu/vastaukset/v6/, 44, _valmiit/pulu-v6-skandaalit-vienti-20261110-3) ✓ PT+PK. PK leivottu-v3 (juoksupeli/leivottu-v3/, 1056 obj, vienti-leivottu-v3.zsh) ✓ PK. Sisältövienti = main-pushin automaattiajo (46724b191 oli in_progress 03.4x; tarkista gh run list --workflow vie-sisalto.yml).
+- PT-PÄÄTÖKSET: muistivahdin ohitus EI junaan; juoksukuva PK muisti-3:sta (lähetetty PT:lle); 4085 Mt = junaehto ennen TF:ää (PK korjaa). Savu3 S6c valkoiset Cesium-talot = PT:n TF-este; NS: automaattiajon Ion-varadata (OSM Buildings pinnaton). Savu5 ILMAN google-riviä (PT 04.3x, kiintiö).
+- RAPORTOITU: JR (PK kylma-2/vaihe2/muisti-2), JX (PK kylma-3a/3b 36,1/35,3 s), KF muisti-3 (huippu 3842, VIKA 0), JW LAV lattia4, KS 22–23/24/25–29/30–31 (kaikki), NUI pulu-v6-1, kupla-translate-1/-2, kupla-avaus-1/-2/-3, savu2 ✗ (VIKA juoksussa) ja savu3 1/2 (VIKA Cesiumissa) PT:lle. "kaatui 1 VIKA 1" PK-riveillä = signal 15 + muistivahdin käynnistysrivi (ei vika).
+- AJOSSA (kaikki nohup, jonoloki T/jono-20261103-ilta.txt; raportoi valmistuttua, T = /Users/Shared/Claude/julkaisija-tyokalut):
+  JL2: NS nd-pohjat 69cd72344 ✓ 04.31 (5 kuvaa, kaatui 1 tarkista), 7a9c1a971 iPad-lukossa → molemmat NS:lle (local_0f7f169f…).
+  KM: PK muisti-3b LÄMMIN 28c92a109 → lokit/pelikoodari-muisti-3b → PK (local_d3bb1f78…; huomauta "puuttui"-luvusta, savu3/4 asensivat d7a8:n väliin).
+  KN: PK yhd-1 28c92a109 KM:n jälkeen (sk-ipad-yhd-1, kylmä+lämmin) → lokit/pelikoodari-yhd-1 → PK.
+  KQ: savu4 ISS yksin d7a8cdc19 → lokit/ju-savu4-pariisi-d7a8cdc19 (S7d) → KATSO → PT.
+  KR: käännös 77b1641de → savu5 Cesium yksin → lokit/ju-savu5-pariisi-77b1641de (S6e) + kokorivi jonolokissa → KATSO → PT.
+  KS: NS cesium-google-ipad d7a8cdc19 (1 Google-istunto) → lokit/natiiviseppa-cesium-google-ipad-d7a8cdc19 (G6c) → NS (KIIRE, TF-este).
+  KT: käännös 85d3bab39 → NS cesium-muisti A/B 85d3bab39 | d7a8cdc19 (muisti-tarkka 100) → lokit/natiiviseppa-cesium-muisti-ipad-<sha>, tulosrivissä VIKA-Mt + huippu → NS.
+  KP: LAV lattia6 leivonta (Blender, alkoi 04.2x, ~50 min) → aja-lattia6.zsh 1 b804a87d6 → kuvat-lattia6-uusi + 404.txt → LAV (local_f12c9179…).
+- AUKI: laitekäännökset 0b94205f1/96ec56672/544dd537c/3a3011bb8/318b4a3d0/ccd8531d2/e2c3be586 (raportoitu) → NAS (T/siirto-laite-nas-3.zsh mallina); 28c92a109 KN:n jälkeen; levy 37 Gi 03.2x. Jonoloki-vahti: Monitor tail -f | grep "LOPPU|AJETTU|AJO |VIKA|PUSHATTU".
+
 ## LISÄYS 10.11. 03.1x (TUOREIN; korvaa 01.55:n jonon; konteksti 26 % → nollaus)
 - JUNA 224 = d7a8cdc19 PUSHATTU 02.39 (natiivi-backup julkaisija/juna-224, wt /Users/Shared/Claude/wt/julkaisija-juna-221): b6ffa01a4 + NS koodikoko osa 4 313e146eb/ac3ffc238 (cd3eb1b6b) + NUI nostopalkki fcac5c135 (76e933afe, vain Pinnaus.cs) + NS laite-astc-polku 69cd72344. Testit T/juna224-u-*: 733/2282/889, unity 0. PT kuittasi d7a8cdc19. JUNA AUKI.
   ASENNUSKOKO d7a8cdc19: ladattava 295 Mt | asennettu 645 | fw 158 (ennen 834/2028/249) → PT:lle ilmoitettu. Laitekäännös oli rikki f2d51ae43…cd3eb1b6b (4b332e927 siirsi astc/ Palvelimelta/:hin, Rakennus.cs tarkisti Resources/) → NS korjasi 69cd72344.
