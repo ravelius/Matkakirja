@@ -35,3 +35,10 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/iso/. Repo natiivi-ba
 ## EDELLISESTÄ (ennallaan)
 TOP 10 jatko (Museo 50,7, KavelyKerrokset 16,9, IssPaneeli 15,7 + Raketti 14,2; iso-kuvat-astc.py) ja VS-viestit (tulivuoret palvelimella;
 Revontulet.PaivitaNakyvyys:207 MissingReference, tarkista NUI:n ajot ensin): ks. edellinen luovutus.
+
+## LISÄYS 06.2x (PT 06.1x: onko tyhjä ND pelin vai skenaarion vika?) — TF-ESTE-EPÄILY lähetetty PT:lle
+- Pelaajan reitti savu4 d7a8cdc19 (ja savu5 77b1641de): "iso sisältö: osa nahtavyydet v1, 36 tiedostoa, 67 Mt … kesken, puuttuu 36 (0/36)",
+  "ämpäri media … virheitä 72", "notre-dame: odottaa mallien tiedostoja palvelimelta", ei "koe luotu" → nähtävyysosa ei latau mediasta.
+  Selvitä: onko osa nahtavyydet v1 viety mediaan (IsoSisalto-polku vs. ämpäri), kuka vie (JU/PK), sitten savu-uusinta.
+- nd-pohjat-ipad-2: tiedostot tulivat paikallisesta koeämpäristä ("mallien tiedostot levyllä" r. 2014), silti ei rakennusta → myös
+  skenaariovika (tarkista ElavaTyyli.Striimi "komento elavakartta" -vaihdon jälkeen ja korkeus LahiKaari). Viimeksi rakentui: lokit/pelikoodari-tf219-8c7163c44.
