@@ -113,3 +113,4 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - "Peukalorenkaat suuremmiksi": lähde ja koko tuntemattomat; PT kysyi KK:lta. EI muutoksia ennen KK:n vastausta. JONO TYHJÄ siihen asti (PT hyväksyi).
 - Huomenna isolla iPadilla: aukiovideo (lähtö -68,-368 i), renkaiden uusinta (191aaeaf2).
 - 21.2x PT/KK: renkaat-rivi oli vanha (omistaja kelpuutti 6.11. 17.16, ae161fdb6), SULJETTU – ei renkaatyötä. Lepo, kunnes iso iPad (huomenna) tai uusi työ KK:n listalta.
+- 22.09 JU: kärki 6+11+8+5 b744c680b linkissä 224.44 (juna d428ae14d), kokeiltava KK:lle viety. Worktreet: natiivi-nimiaanet-yhd ja natiivi-pulu-v4 poistettu; pulu-kaupungit-maat jäi (seuraamaton KM/).
