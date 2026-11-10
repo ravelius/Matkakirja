@@ -56,3 +56,4 @@ Parit PT:lle.
 
 - JU 13.4x: välilehtivärit 91feac3b2 = MR16 → linkki 224.26 (MR15:n jälkeen), koeyhdistys puhdas.
 - OMISTAJAN PÄÄTÖS 13.40 (KK): välilehtivärit 91feac3b2 "Kyllä, junaan", ei muutoksia. PT:lle kerrottu.
+- NS 13.5x: 9d5be8823-toisto, "KameranJalkeen-kuuntelija heitti" 0, fps 30 = laitteen kuumakatto (thermal 2) → ei toimenpiteitä NUI:lle. Trailerijumin syy edelleen toistamatta; f319b2bae suojaa.
