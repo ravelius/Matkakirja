@@ -50,3 +50,6 @@ PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös 
 - 14.5x PT: "junaan vain tahdistus" → PUHDAS HAARA natiiviseppa/lento-tahdistus-puhdas d834e0623 (wt /Users/Shared/Claude/wt/proto-selvittaja-tahdistus-puhdas;
   juna-224 6087868bf + af969f31a-kello (välttämätön: RakettiLaukaisu.Kello) + 06ac958d1 + abf0d5328; 739/739, unity 0). Pois 50bab43fc, 941dd597f.
   MR19 korvaus JU:lle ja PT:lle lähetetty (jonossa). Odottaa PT:n pt-okia; tarkista JU:lta, että MR19 = d834e0623.
+- 15.06 JU: PE 4444e211a ja 0421af91a kaatuivat 5/5 käynnistystä error 22 (0 kuvaa; myös 13.18/13.20), muut käännökset käynnistyvät → epäily PE-appit
+  (allekirjoitus/._-tiedostot): NS ehdotti codesign --verify ja uudelleenkäännöstä. Uusinnat peruttu; seuraaja: varmista JU:lta PE:n uusi käännös + ajo.
+  Ajovahti pysäytetty (toisti HILJAA-rivejä): käynnistä uudelleen seuraajana.
