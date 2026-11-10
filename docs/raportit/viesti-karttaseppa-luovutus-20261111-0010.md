@@ -1,2 +1,3 @@
 - JU 00.1x: 224.49 = 069be563b linkissä (MR42 Panthéon + talot v5), testit läpi. MR43 Opéra → 224.50 käynnissä; v6-paketin polku muistutettu JU:lle.
 - JU: v6 ämpärissä 00.06 (virheitä 0), 224.50.palat-ok kirjoitettu. Pakettikohta SULJETTU.
+- JU 00.2x: 224.50 = adccf01fa linkissä (MR43 Opéra + talot v6), testit läpi. MR43 SULJETTU.
