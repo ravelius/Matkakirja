@@ -25,6 +25,15 @@ Syy: konteksti 27 % (hook), pehmeä raja, luonteva tauko (odotan PT:tä ja JU:ta
    (alle 3 % ilman lupaa, PK:n manifesti + kytkentä kuten Pariisi; Kaupungit-taulukkoon lontoo-rivi).
 
 ## TYÖN ALLA / JONO
+0. **PT 06.1x, OMISTAJAN PÄÄTÖS 06.12 (KK:n kortti): Pariisin 22 kysymystä (`$B/kysymykset-pariisi-luonnos.md`) ja 15 kuvaselitettä
+   (`$B/commons-kuvat-pariisi/selitteet-luonnos.md`, 01-a uusi kirjeselite) HYVÄKSYTTY, selite 12 korjaten.** Selite 12
+   (07-bastiljin-valtaus-a.jpg) uudeksi SANATARKASTI: "Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; siitä tuli
+   Ranskan vallankumouksen tunnetuin hetki." Tee: kysymykset + selitteet dataan (kysymykset: -0201 kohta b, historian-hetket.js
+   `kysymykset` → vienti; selitteet: Pariisin juttujen kuvat kuten PR 6536 Lontoossa, skripti scratchpadin lisaa_kuvat.py-mallilla,
+   muista tests/nostokortti-media: nosto-*-jutun kuvat myös noston kortille) → commit (SHA git logista) → Mac-kuva noston selitteestä 12
+   ja yhdestä kysymyksestä PT:lle (`$B/pelinakyma/juttukuvat.mjs` avaa jutut suoraan) → PT kuittaa junaan. Lontoon tekstit sen jälkeen omalle KK-kortilleen PT:n kautta.
+00. **PR 6536 HYVÄKSYTTY (PT 06.2x)**: yhdistä squashilla, kun testit-check pass (KS:n taustavahti odotti 06.3x); valmis-rivi PT:lle sha:lla.
+   Lontoon aloituslento ja 8 kuvan paikat: EI NYT (PT: uusi ominaisuus KK:n kautta) → kohta d pois.
 a. **iPad-pari koe6/koe7** (JU I1–I2; klo 05.58 lokeja ei vielä): ks. -0457 kohta a. Sen jälkeen PR haarasta karttaseppa/katot-koe7.
 b. **PR 6536**: PT:n kuittaus parista → checks pass → squash-merge (kaava) → valmis-rivi PT:lle sha:lla.
 c. **Nimiotto**: KK:n vastaus (PT:n kautta) → PK:lle otto/manifesti tai itse PK:n tavalla (selvitä PK:lta).
