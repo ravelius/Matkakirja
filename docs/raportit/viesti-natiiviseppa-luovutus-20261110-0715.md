@@ -11,7 +11,7 @@ ILMAN -I:tä; UUSI-rivit → PT "UNITY UUSI: …"). Repo natiivi-backup (remote 
 - ND-pohjat 7a9c1a971 (natiiviseppa/nd-pohjat-astc, 10 pohjaa ASTC): iPad-pari, tekstuurit −74 Mt, ulkoasu sama → PT KUITTASI → JU junaan.
 - Orbit-tappi 183e4bfbf (natiiviseppa/orbit-tappi, baf73a110:n päällä; OMISTAJA 06.54 "orbit kierto loppuu jos säädän kulmaa oik
   tapilla"): kierron aikana TappiPysayta ei pysäytä, TappiOhjaa → ajon kallistusSiirto/suuntimaSiirto + ajoLiikeSiirto. Mac-pari
-  OK (kierto jatkuu, juna pysähtyy) → PARI PT:LLÄ 07.1x, ODOTTAA KUITTAUSTA (_tyo/natiiviseppa/orbit-tappi/).
+  OK (kierto jatkuu, juna pysähtyy) → PT KUITTASI 07.1x → JU junaan (_tyo/natiiviseppa/orbit-tappi/).
 
 ## ODOTTAA JU:LTA
 - LO-uusinta kartan-purku c31e0eb9e (natiiviseppa/kartan-purku = 95c02d6bc + yövalojen natiivi R8), sk-kartan-purku-ipad.txt →
