@@ -38,3 +38,17 @@ PT: a2-05 hylätty 12.05, Lontoo syy+korjaus 12.4x (kuitattu 13.1x lupa). JU: aj
 
 ## JU 12.55 (luovutuksen jälkeen)
 Toisto 2 (lontoo-opas 0421af91a) EI toistanut: Lontoossa purku pois, pallo päällä, talot 63→109, jarru 0, huippu 3327, kartta näkyi (M3, M5). Saapuessa GBR-laattoja ladattiin vain 1. Sama ajo 9d5be8823:lla tulossa. Seuraavat ehdokkaat: ISS/raketti, juoksupeli, pitkä istunto/taustalle vienti (kuuntelijat). PT:lle ilmoitettu 12.5x.
+
+## LISÄYS 13.12 (välivuoro 13.0x–13.12, ennen nollausta) – SEURAAJALLE ENSIMMÄISENÄ
+1. NUI kuitattu: kuva + toistotapa + selvitys lähetetty. NUI:n korjaus f319b2bae (nativi-backup natiivi-ui/lontoo-saapuminen): SaapumisOdotus odottaa trailerin loppua,
+   KameranJalkeen-kuuntelijat try/catchissa. NUI pyysi: jos 9d5be8823-toiston konsolissa "KameranJalkeen-kuuntelija heitti" tai matala fps → kerro NUI:lle.
+   0421af91a-ajoissa ei heittoja (fps 30 = kuuma-katto).
+2. PT 13.0x TEHTÄVÄ (Tekninen kunto, omistaja 13.00): Pariisin vieritys tökkii. Korjaus + kehysaikavertailu PT:lle; syy ja korjausversio KK:lle.
+   - JU ajaa PE:n isolla iPadilla lontoo-opas-9d5be8823:n jälkeen: 4444e211a (224.14), 0421af91a (224.16), 4444e211a-2, 0421af91a-2
+     → lokit/natiiviseppa-kehys-pe-<sha>[-2]. JU ilmoittaa A/B-parin valmistumisen; korjausehdokas C sha JU:lle sen jälkeen.
+   - Skenaario + lukijat: /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/vieritys-pe/ (sk-vieritys-pe-ipad.txt; lue.py <kansio...> vaiheittain;
+     ikkunat.py <konsoli.txt> 5 s ikkunat; vahti.sh Monitorille). S0 = uusi alue (laattalataus), S1 oletus, S2 filmi pois, S3 + pilvet pois, S4 takaisin.
+   - ALUSTAVA (NN muistikatto-pariisi-1, 224.18, ei vielä A/B): normaalilämmössä Pariisin gpuMs 22–66 (kallista 60 kierto 58–66),
+     liike p50 31–42 ms, max 60–140 ms; Kuuma-tilassa (skaala 0,7, MSAA pois) gpuMs ~9,5 ja tasainen 33. Lämpö heiluu Serious↔Nominal kesken ajon.
+     Ultra_RPAsset: MSAA 4, depth+opaque texture jo päällä → pilvien Depth-vaatimus tuskin lisää; filmi = MSAA-värin kopio + blit joka kehys
+     (KarttaFilmi.Kevytvaihe, requiresIntermediateTexture). Syy auki ennen A/B-lukuja.
