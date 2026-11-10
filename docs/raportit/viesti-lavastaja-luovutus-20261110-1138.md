@@ -23,3 +23,9 @@ HUOM: /Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu on POISTETTU; aja-*.z
    paaty1: kuvat-paaty1-perus | -uusi (piikki1-a + paaty-maasta).
 2. Raja3/päätyrivit `tehty` vasta PT:n kuittauksella. Ei vientiä, ei junaa ilman PT:tä.
 3. "Juoksupeli: tason 1 kulkualue" odottaa lukittua juurta.
+
+## Lisäys 11.4x (JU luovutuksen jälkeen)
+- RAJA3A AJETTU 11.22 (JU): kuvat muuri/lattia-uusi/raja3/kuvat-raja3a-uusi (40 png). 404: 12 (lattia7: 4). Samat 4 + 8 uutta, kaikki media:-polkuja
+  (hahmot-v6 eunukki/puyi/vartija, esteet kaaro-v2 kaaretaulut, ovi-v1 ovi-lehti-vasen): ajon runko/media, EI koejuuren tiedostoja -> ei vaikuta taustaan;
+  mainitse PT:lle parin yhteydessä (eri worktree proto-lavastaja-esto-kivisivu). Parit katsomatta -> Seuraava 1 alkaa näistä.
+- PAATY1 alkoi Macilla L1 11.38 (JU), PAATY1 AJETTU -rivi JU:lta tulossa.
