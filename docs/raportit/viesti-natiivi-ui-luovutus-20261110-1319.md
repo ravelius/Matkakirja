@@ -71,3 +71,9 @@ Parit PT:lle.
 - 14.0x: museo -3 katsottu (kuvat 1.0 s, ilmaisin pois 1.1 s, Louvren lähestyminen; PUUTE 2 = oleta-ajoitus). Kolmikko _tyo/natiivi-ui/museo-ilmaisin-odotus-taytto-perilla.png PT:lle 14.01, kysytty MR; Uutta-ehdotus "Museon kuvia ladattaessa näkyy museon nimi ja latauspalkki." PT:n OK → MR-pyyntö JU:lle (37eba712e). Sitten jono: aiheeton/Kaupungit-kohta/klikattavat tehty kun 224.24.
 - 14.0x: PT OK museo-ilmaisimelle → MR-pyyntö JU:lle (37eba712e, merge-tree puhdas), rivi tehty. Ei KK-paria (PT:n rivi, ei omistajan). Seuraa JU:n MR-numeroa.
 - JU 14.0x: museo-ilmaisin 37eba712e = MR18 → linkki 224.28 (MR17:n jälkeen). Odottaa PT:n vastausta: "Kaupungin nimen napautus" NUI vai PK.
+- PT 14.0x: "Kaupungin nimen napautus zoomaa kaupunkiin" NUI:lle (ei PK), sitten kuvakyltin tähtien väistö.
+  - Nimen napautus: koodi oli jo b6cf108aa (10.59, ajamatta; wt /Users/Shared/Claude/wt/proto-nui-nimizoom, haara natiivi-ui/kaupunkinimi-zoomaus)
+    → merge juna-224 = fb16ab5de, unity 0 virhettä. JU:lla sk-kaupunkinimi-zoomaus-1-mac pari 633c4b973 | fb16ab5de (ipad) → z-1..z-5 katso → pari PT + KK.
+  - Tähtien väistö: dce3d6ae0 (wt /Users/Shared/Claude/wt/proto-nui-tauko, haara natiivi-ui/kuvakyltti-tahdet = 153602c0f + juna-224 + Kohdelaatikot
+    lisää ★:n worldBoundin). JU:lla sk-kuvakyltti-2-mac → lokit/nui-kuvakyltti-2-mac-dce3d6ae0; pari ennen lokit/nui-kuvakyltti-1-mac-153602c0f 1b/2b/3b
+    → PT → KK (koe, ei junaan ilman korttia).
