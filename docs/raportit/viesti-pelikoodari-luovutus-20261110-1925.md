@@ -107,3 +107,8 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - OSA 5 Mac-pari v3 KATSOTTU ja PT:lle lähetetty 21.2x (pari + kokeiltava-rivi): proto-3d/_tyo/pelikoodari/osa5-aukiot/pari-v3/ (LUE.txt).
   k: "aukio kaista 3 omena, 2 keski, 3 keski …" pihalla; e: pari seinän vieressä. Odottaa PT:n pt-ok:ta kärjelle 6+11+5 (b744c680b).
 - Jonossa (KK): iso iPad -video aukiolta (huomenna; käytä lähtöä -68,-368 i), peukalorenkaat suuremmiksi, renkaiden uusinta isolla iPadilla (191aaeaf2).
+
+## LISÄYS 21.3x (uusin; aloita tästä)
+- PT 224.44.pt-ok kärjelle 6+11+8+5 (b744c680b), JU vie. Tummat omenat e-ajossa = mädät (PT:lle vastattu).
+- "Peukalorenkaat suuremmiksi": lähde ja koko tuntemattomat; PT kysyi KK:lta. EI muutoksia ennen KK:n vastausta. JONO TYHJÄ siihen asti (PT hyväksyi).
+- Huomenna isolla iPadilla: aukiovideo (lähtö -68,-368 i), renkaiden uusinta (191aaeaf2).
