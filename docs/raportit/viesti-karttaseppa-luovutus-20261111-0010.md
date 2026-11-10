@@ -49,3 +49,6 @@ Testit: `sh Kartta-testit/kaanna.sh` (753) ja `sh Peli-testit/kaanna.sh` (911), 
 
 ## Vahdit (uusi sessio virittää)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min).
+
+## LISÄYS 00.1x
+- NUI vastasi: lähimmän 2,7× tarkistusajo JU:n jonossa eiffel-valon jälkeen shalla ea9e6c633 (nui-lahin-2-7x-2-ea9e6c633; skenaario korjattu aja 0,0012). NUI-kohta SULJETTU; kuvat tulevat NUI:n kautta KK:lle.
