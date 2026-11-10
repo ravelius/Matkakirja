@@ -96,3 +96,5 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
   ElavaKerros -varjostimiin, katson ennen junaa).
 - JONO sen jälkeen: Invalidit → Opéra → Louvren piha + pyramidi → Sacré-Cœur → Sainte-Chapelle (kukin 1:1, raivaus resepti tee-maskit.py, osat OhjelmaKohdeOsat).
   D) KK:n kysymys (parametriset osat) yhä vastaamatta; OhjelmaKohdeOsat.cs on vastauksen alku.
+- 22.2x: NUI 7d4e5b2b6 (natiivi-ui/nahtavyys-paisuu, 098f9f05c:n päällä: Kartta/PaisuntaTila.cs, _nahtavyysPiilo TaloKerroksessa, kerroin myös Tripo-skaalaan)
+  → KATSO ennen junaa; puiden varjostin = Linssit/Resources/Varjostimet/KaupunkiPuu.shader (kerrottu NUI:lle). KJ7 ajettiin uudelleen 22.1x (JU:n L2-vika), KJ8 sen jälkeen.
