@@ -66,3 +66,10 @@ PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös 
   ennen kuittausta; hidas verkko ei saa jättää näkymää tyhjäksi/jumiin (vuotavat paikat = koodivika joka tapauksessa). TESTAA MYÖS VERKON
   HIDASTUKSELLA (esim. Macin Network Link Conditioner / iPadin kehittäjäasetus "Network Link Conditioner" – tarkista Raamatusta/JU:lta, mikä on
   sallittu ja kuka kytkee; ei asetusmuutoksia itse ilman lupaa) + britannia-2-kylma.
+
+## KÄRKI (PT 16.2x, Tekninen kunto) – SEURAAJAN ENSIMMÄINEN TYÖ
+OMISTAJA 16.14 (KK): "eikö kaikissa kaupungeissa pitäisi olla kuitenkin striimikartta käytössä?" Päätös 2.11. 22.08 / Raamattu 2.204: striimikartta
+pohjana kaikissa Euroopan kaupungeissa. Marseillen tyhjä pohja isolla iPadilla (lokit/nui-kaupunkinimi-zoomaus-2-ipad-fb16ab5de-u/m-2-marseille-20s.png,
+20 s jälkeenkin) = VIKA. Selvitä syy latauspaikkavuoto-epäilyn osana (yllä 16.3x: käynnissä ≫ luokkien summa, nälkä163b 30–35): koskeeko kaikkia
+piirroksettomia, sama kuin Lontoon tyhjä kartta / hidas verkko? KORJAA. OK = Marseille + yksi muu piirrokseton kaupunki näyttää striimikartan isolla
+iPadilla (JU:n vuorolla), myös hidastetulla verkolla. Syy + korjausversio PT:lle 3 rivillä. NUI odottaa korjausta nimizoomiin.
