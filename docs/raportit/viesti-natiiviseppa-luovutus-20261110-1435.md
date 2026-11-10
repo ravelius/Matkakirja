@@ -62,3 +62,7 @@ PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös 
   ja aiemmin "käynnissä 16 (kohde 0, kiire 0, tausta 0, saapuminen 0) … nälkä163b 30". Käynnissä-luku ≫ luokkien summa = VUOTAVAT PAIKAT? (paikat varattuina
   ilman luokkaa → jono 26 odottaa). Britannia-1 (onnistui): käynnissä 13 (kiire 9), nälkä 4. Tarkista Laattapalvelin: käynnissä-laskurin vapautus
   (keskeytys/aikaraja/peruminen) ja nälkä163b-merkitys; vertaa omistajan 9d5be8823-lokin "palvelin käynnissä 20 (kiire 20)".
+- 16.1x PT (KK/omistaja 16.12): omistajan verkko tänään hyvin hidas = osasyy Britanniaan (12.26) ja panorointiin (13.00). EROTA verkko koodiviasta
+  ennen kuittausta; hidas verkko ei saa jättää näkymää tyhjäksi/jumiin (vuotavat paikat = koodivika joka tapauksessa). TESTAA MYÖS VERKON
+  HIDASTUKSELLA (esim. Macin Network Link Conditioner / iPadin kehittäjäasetus "Network Link Conditioner" – tarkista Raamatusta/JU:lta, mikä on
+  sallittu ja kuka kytkee; ei asetusmuutoksia itse ilman lupaa) + britannia-2-kylma.
