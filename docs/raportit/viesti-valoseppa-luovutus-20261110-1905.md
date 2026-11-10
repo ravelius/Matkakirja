@@ -1,0 +1,26 @@
+# Valosepän luovutus 10.11.2026 klo 19.05. Itsenäinen: vanhoja ei tarvitse lukea (korvaa 20261110-1648:n)
+
+Syy: konteksti 25 % (pehmeä raja). Tili sami.reivinen@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Worktreet: k31 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k31` (`linssiseppa2/vesi-taytto-tausta-224b` 0829caa4e, puhdas, pushattu), k32 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k32` (`linssiseppa2/nahtavyys-erottuvuus` 0c214dd6d, puhdas, pushattu). Kuvat vain JU:n vuorolla. Id:t: PT `local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31` ≤ 3 riviä; JU `local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd`; KK `local_d5f31591-21fa-4cb0-bab3-bcd3435d075a`; KS `local_7b57e35a-3a8e-4943-aba1-c960b9eb4671`; Postivahti `local_1f31f830-9df5-41c1-8992-172e100af57f`. Viestit `mcp__ccd_session_mgmt__send_message` id:llä. JU:n jonoloki `/Users/Shared/Claude/julkaisija-tyokalut/jono-20261103-ilta.txt` (Monitor: `tail -n 0 -F … | grep -E --line-buffered 'vesit|VS |erottuv'`). Lokikansiot `/Users/Shared/Claude/proto-3d/lokit/`.
+
+## ERÄ A: NÄHTÄVYYKSIEN EROTTUVUUS KAUKAA (PT 18.4x omistajan huomiosta 17.45; kärki Kaupungit) – MAC-AJO 4 JU:LLA
+- Tavoite (PT): pelaaja huomaa RK:n, SC:n ja ND:n yleisnäkymästä ilman vertailua; ei koon muutosta (koko hyväksytty 224.36). Yksi suositus + Mac-parit yleis / RK viisto / SC → PT, lisäksi TÄYSIKOKOINEN RAJAUS kohteesta (PT 19.1x).
+- Toteutus (pohja juna-224 ac292ac12; junassa RK/SC/ND ovat Tripo-malleja, varjostin NotreDameKirkko): kolmas passi "Aariviiva" (UniversalForwardOnly): musteviiva #46331f ulkohahmoon (takapinnat levennettynä ruudulla normaalin suuntaan, syvyys 60 % mallin korkeudesta taakse + Offset 0, 4 → ei sisäreunoja). KaukoVoima (NotreDameKirkkoYhteinen.hlsl): 1 kun malli < 10 % ruudun korkeudesta, 0 yli 25 % → lähikuvat ennallaan. Nahtavyysalue: _Aariviiva 1 + _Korkeus nimetyille päämalleille paitsi Eiffel (ristikko) ja mäki/portaat. Komento `aariviiva 0|1`.
+- Historia: 0edb37167 (viiva peitti koko hahmon viistoilla pinnoilla) → 9d684dd84 (takapinnat; SC sai sisäreunat) → adca8fc66 (vain ulkohahmo, 2,3 px; PT 19.1x: ero ei erotu koko ruudussa) → **0c214dd6d**: viiva 0,0020 × ruudun korkeus (~4 px), peitto 0,9 + malli kaukaa 55 % kohti kermaa #f6ead0 (vaalea ja lämmin talojen keskiruskeaa vasten).
+- AVOIN: JU:lla Mac-ajo erottuvuus-4 0c214dd6d → `lokit/linssiseppa2-erottuvuus-0c214dd6d` (skenaario `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/erottuvuus/sk-mac-erottuvuus.txt`, 6 näkymää × pois|viiva). Tee parit kuten `_tyo/linssiseppa2/erottuvuus/parit-adca8fc66/` (täysikoko rinnakkain 24 px välillä, LUE.md) + UUDET täysikokoiset rajaukset kohteesta (RK rk-viistosta noin x 440–560/1000, y 230–370; SC sc-kaukaa ja yleis-pohjoiseen; ND yleis noin x 640–720, y 260–320 – tarkista paikat kuvasta). Arvioi itse ennen PT:tä: erottuuko ilman vertailua? Jos ei → vahvempi vaalennus (0,55 → 0,7) tai pohjan vaalennus (NotreDamePohja), ei kokoa. Sitten PT:lle 3 riviä (sha, kansio).
+- EI JUNAAN ennen kuin 224.36:n laitteen puuttuvat talot/mallit on selvitetty (PT 19.1x). iPad-GPU-mittaus tekemättä (iso iPad error 22 -ongelmat).
+- Horisontin beiget raidat Mac-kuvissa = hidas verkko (KS), molemmissa puolissa, ei viivasta.
+
+## ERÄ B: VEDEN PILARIREIKIEN TÄYTTÖ TAUSTALLE – iPAD-MITTAUS JU:LLA
+- Korjaus c346c2c57 siirretty juna-224 ac292ac12:n päälle: **0829caa4e** (`linssiseppa2/vesi-taytto-tausta-224b`, unity 0), koska c346 (pohja 6087868bf) kaatui käynnistykseen error 22 kahdesti 5/5 (18.17, 18.54; muut käännökset käynnistyivät). JU 19.1x: uusi käännös + iso iPad 224.36 Pariisi-ajon jälkeen → `lokit/linssiseppa2-vesitaytto-ipad-0829caa4e`. Jos taas error 22 → JU:n mukaan vika käynnistyksessä/asetuksissa, ei laitteessa: selvitä JU:n kanssa (koodimuutos koskee vain yhtä vesi-C#-tiedostoa).
+- Tulos: grep "pilarireiät täytetty" (nyt "taustalla X ms, pääsäikeessä Y ms") + kehysajat (jsonl "MATKAKIRJA kehysajat") kierroksen alussa. Hyväksyntä: pääsäikeessä ≤ 20 ms, ei > 100 ms ruutua täytön kohdalla → PT:lle 3 riviä + MR-pyyntö JU:lle (PT päättää junan). Perustelut `_tyo/linssiseppa2/vesitaytto/LUE.md`. Mac ei kelpaa (vesi ei lataudu).
+
+## VALMIIT TÄNÄÄN (16.48 jälkeen)
+Eiffel K=2 (KS 7f0a42222 + c1e811eed) Mac 45b ja RK 150 m (c1a15236d) Mac 46 tarkistettu: jalat raivatulla alueella, kyltit eivät peitä; KS:lle kuitattu, KS kokosi parit PT:lle. Korostus junassa 224 ilman koodimalleja (561a944af/ac292ac12).
+
+## MUUT AVOIMET (ennallaan)
+- Työlistassa odottaa: Pariisin saumat ja mäkien varjostus (KK: suunnitelma tekotavasta).
+- Merenpohjan syvyyden puristus 97b4f29a9 KS:n koelaatoilla, kun JU on vienyt ne. Kohokartan aurinko (cd74573cd junassa 223): syvyyskuva laiteajossa.
+- Remote Control: ei tehdä. Asemataulu jäädytetty (hookin "päivitä junat.json" -kehotus ohitetaan).
+
+## TEKNIIKKA
+PIL `/opt/homebrew/bin/python3 -I`; parit: scratch-skripti (pois|viiva rinnakkain 24 px, jpg q92). Mac-kuvat 2752×2064 (1000 px:n kopiossa kerroin 2,752). `sh Peli-testit/unity-tarkistus.sh` (sh). Mac: "kuva X", talot kansio palat-v23-k2b. URP 17.7: passijärjestys SRPDefaultUnlit → UniversalForward → UniversalForwardOnly. Muokkaukset python-skriptillä (.tmp + os.replace + copymode). Luovutus plumbingilla origin/mainin päälle omaan haaraan.
