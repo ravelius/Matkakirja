@@ -1130,3 +1130,11 @@ Kortti "Hyväksytkö Pariisin nostojen 22 kysymystä ja 15 kuvaselitettä?" → 
 ## JUOKSUPELIN ALKULENNON VARJOT KELPAA (omistaja 10.11.2026 klo 06.19) (10.11.2026 klo 06.20)
 
 Pyyntö 1d (8.11. 22.32 "Voisiko ne piirtyä jo kauempaa?"). Kortti "Kelpaavatko juoksupelin alkulennon varjot näin?" → "Kelpaa"; näytetty pari-1d-224-c98-ennen-nyt-a-4s.png. 1e ja 1f junassa 224; omistaja näkee ne uudesta asennuslinkistä (JU vie kärjen).
+
+## IPHONEN KYTKENTÄ JUOKSUN LATAUSMITTAUKSEEN: EI NYT (omistaja 10.11.2026 klo 06.34) (10.11.2026 klo 06.38)
+
+Kortti iPhonen kytkemisestä juoksupelin latausmittaukseen (PK:n luvut ennen 77b1641de / jälkeen 930eaae96) → "Ei nyt". Ajo jää JU:n jonoon; omistajaa ei muistuteta, hän kytkee kun sopii. 77b1641de säilytetään paikallisesti vertailua varten.
+
+## LONTOON NIMIÄÄNET: KOKO OTTO (omistaja 10.11.2026 klo 06.36) (10.11.2026 klo 06.38)
+
+PK:n ääntämistesti (8 nimeä, ElevenLabs 1 otto, 61 krediittiä; lontoo-nimet-testi-20261110.mp4) → "Kelpaa, koko otto": 99 nimeä samalla äänellä ja tavalla. KK välitti PK:lle suoraan.
