@@ -10,7 +10,15 @@ Yksityiskohdat: `korostus/oletus-tulos.md` (lisäykset 19.4x–20.2x, luettava k
 - Talojen aukko yleiskuvassa = talot v2:n 18 palaa vielä latautumassa (täyttyy). PT katsoi parit 20.2x, samaa mieltä.
 - PT: KK:lle kysymys, suositus "Tripo-mallit 224.35:n kokoon, muu korostus säilyy".
 
-## ODOTTAA: versio "mallit ennallaan" b8971b839 (EI JUNAAN ennen KK:n vastausta)
+## LISÄYS 20.4x (PT KORJAUS, sitova)
+- KK: koko on omistajan päätös (16.17 + 17.45) → b8971b839 PERUTTU (JU:n ajo peruttu). Kutistus EI selitä laiteoiretta; syy auki.
+- Koodista (KS 20.4x): talot ja mallit haetaan palvelimelta ilman latausmerkkiä (SaapumisOdotus vain karttalaatat ≤ 30 s). Puuttuva mallitiedosto → alue odottaa
+  kokonaan (ei pohjaa). 19.30 ND:n pohja näkyi ilman mallia → vain LuoMalli-kaatuminen (71c52a6c0-polku). 18.53 ei taloja = hidas ensihaku (219 palaa 96 Mt)?
+  Jättinimet = kaatumispolku. iPad-loki (0f0f950a6) ratkaisee.
+- Pariisi-pino 7: kirkon (Saint-Germain-l'Auxerrois) poistoa EI tehty; jatkotyö auki (kortti 09.3x "Kirkko jää pois").
+- JU:n vertailu: /Users/Shared/Claude/proto-3d/lokit/julkaisija-om1853-22436-ac292ac12/vertailu-22435.txt (Mac ei toista puuttuvia taloja).
+
+## (PERUTTU) versio "mallit ennallaan" b8971b839
 - proto, haara karttaseppa/korostus-mallit-ennallaan (561a944af:n päällä; worktree /Users/Shared/Claude/wt/proto-karttaseppa-korostus-juna).
   Korostus.MallitEnnallaan = true → Nahtavyysalue.Korosta ei skaalaa kärkiä; pohjat -k2 ja talot v2 säilyvät. unity-tarkistus sh 0 virhettä.
 - JU:lta pyydetty 20.2x (jonossa): om1853-toisto (1) ac292ac12 uudelleen (v2-palat levyllä → pari ilman aukkoa, PT haluaa ennen junaa)
