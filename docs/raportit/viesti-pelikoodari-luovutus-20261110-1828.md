@@ -54,3 +54,10 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - OSA 8 = 3eb33531c (pelikoodari/osa8-ovet-kiinni): OvetKiinni-tasolla ei kynnysviestiä lainkaan (myös "raja" pois; aukion viesti oli raja
   x −178, räystäslinja oven vieressä). 893/893, unity 0. PT:lle kerrottu, myös sivuvaikutus (näkymätön raja ilman selitystä tasolla 1).
   Kuvapari (kohta 1.1) yhä tekemättä.
+
+## LISÄYS 18.4x (PT: rajaluku ja kuvapari)
+- PT: tason 1 kynnysviestin poisto hyväksyttävä vain, jos rajat ovat näkyviä seiniä. v129d rajakohdat.json: avoimen taivaan alla 0/663
+  (kate 1,0 kaikilla), mutta talo = 0 171:llä (katon alla, rakennuksen pohjan ulkopuolella). Lähetetty PT:lle.
+- Kuvapari: proto-3d/_tyo/pelikoodari/osa8-ovet/sk-mac-ovet-kiinni-auki.txt (Mac, 3eb33531c; 储秀宫:n ovi; k1/k2 taso 1 kiinni,
+  a1/a2 taso 0 + `ovikoe koe` auki) → JU:lle annettu, kansio lokit/pk-osa8-ovet-mac-3eb33531c. Katso pari täysikoossa ja lähetä PT:lle.
+  Jos lehdet eivät ole umpeen: kierto OviMallitPaikoilleen (suljettu ? 0f : …) → 180/−180 ja uusi pari.
