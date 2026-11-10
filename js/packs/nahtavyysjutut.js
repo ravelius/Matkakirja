@@ -5391,6 +5391,20 @@ export const NAHTAVYYSJUTUT = {
         + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
         + 'todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut '
         + 'aivan yhtä ilahtunut.',
+      kuvat: [
+        {
+          tiedosto: 'Pascal à Galileo.jpg',
+          selite: 'Vrain-Lucas väärensi tämän kirjeen, jossa yhdeksänvuotias Blaise '
+            + 'Pascal muka kirjoittaa Galileille vuonna 1633.',
+          lahde: 'Denis Vrain-Lucasin väärennös 1860-luvulta, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Charlemagne à Alcuin (Vrain-Lucas).jpg',
+          selite: 'Tämä "Kaarle Suuren kirje" on väärennös; oikeus tuomitsi '
+            + 'Vrain-Lucasin petoksesta vuonna 1870.',
+          lahde: 'Denis Vrain-Lucasin väärennös 1860-luvulta, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Impressionistit': {
@@ -5655,6 +5669,20 @@ export const NAHTAVYYSJUTUT = {
         + '279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi '
         + 'linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. '
         + 'Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Le Chasteau de la Bastille de Paris, hors la Porte Sainct Antoine. G.285.jpg',
+          selite: 'Näin Bastiljin linnoitus kohosi Pariisin itälaidalla '
+            + '1600-luvulla; nykyään sen paikalla on aukio.',
+          lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'The Bastille in the first days of its demolition, by Hubert Robert.jpg',
+          selite: 'Heinäkuussa 1789 Bastiljia alettiin purkaa kivi kerrallaan; '
+            + 'maalari Hubert Robert näki työn läheltä.',
+          lahde: 'Hubert Robert 1789, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
@@ -5677,6 +5705,20 @@ export const NAHTAVYYSJUTUT = {
         + 'ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan '
         + 'Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
         + 'vuonna 1911 saa kemian palkinnon yksin.',
+      kuvat: [
+        {
+          tiedosto: 'Maria Skłodowska-Curie i Pierre Curie w laboratorium (1900).jpg',
+          selite: 'Marie ja Pierre Curie tekivät tutkimustaan vaatimattomassa '
+            + 'laboratoriossa ja löysivät kaksi uutta alkuainetta.',
+          lahde: 'Tuntematon valokuvaaja n. 1900, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Marie Curie c. 1898.jpg',
+          selite: 'Marie Curie löysi miehensä Pierren kanssa vuonna 1898 poloniumin '
+            + 'ja radiumin, joita kukaan ei ollut ennen tuntenut.',
+          lahde: 'Tuntematon valokuvaaja n. 1898, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Lavoisier 1780': {
       nosto: 'hetki-lavoisier-laboratorio-1780',
@@ -5696,6 +5738,15 @@ export const NAHTAVYYSJUTUT = {
         + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
         + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
         + 'vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+      kuvat: [
+        {
+          tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
+          selite: 'Lavoisier mittasi laboratoriossaan, paljonko ihminen kuluttaa '
+            + 'ilmaa hengittäessään; vaaka ja mittarit olivat hänen tärkeimmät '
+            + 'työkalunsa.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
     },
     'Pasteur 1862': {
       nosto: 'hetki-pasteur-pullot-1862',
@@ -5715,6 +5766,20 @@ export const NAHTAVYYSJUTUT = {
         + '1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
         + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny '
         + 'itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+      kuvat: [
+        {
+          tiedosto: 'Swan-necked flask used by Pasteur. Wellcome M0012521.jpg',
+          selite: 'Pasteurin joutsenkaulapullossa ilma pääsi sisään mutta pöly ei, '
+            + 'joten liemi pysyi pilaantumatta.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
+          selite: 'Suomalainen Albert Edelfelt maalasi Louis Pasteurin '
+            + 'laboratoriossaan 1885; pastörointi on nimetty Pasteurin mukaan.',
+          lahde: 'Albert Edelfelt 1885, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Torni 1888': {
       nosto: 'hetki-eiffel-torni-1888',
@@ -5734,6 +5799,20 @@ export const NAHTAVYYSJUTUT = {
         + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. '
         + 'Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, '
         + 'koska sen huipulle sopii radioantenni.',
+      kuvat: [
+        {
+          tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
+          selite: 'Marraskuussa 1888 Eiffel-torni oli vielä keskeneräinen '
+            + 'rautarunko, korkeampi kuin mikään Pariisissa ennen.',
+          lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Construction de la tour Eiffel, 7ème arrondissement, Paris. 14 septembre 1888, PH9114-12.jpg',
+          selite: 'Elokuun ja syyskuun 1888 kuvista näkee, paljonko torni kasvoi '
+            + 'kuukaudessa; se valmistui maailmannäyttelyyn 1889.',
+          lahde: 'Théophile Feau 1888, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
     },
     'Bastilji 1789': {
       nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
@@ -5757,6 +5836,20 @@ export const NAHTAVYYSJUTUT = {
         + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
         + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
         + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+      kuvat: [
+        {
+          tiedosto: 'Anonyme - Prise de la Bastille, le 14 juillet 1789 (P707-1) - P707-1 - Musée Carnavalet.jpg',
+          selite: 'Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; '
+            + 'siitä tuli Ranskan vallankumouksen tunnetuin hetki.',
+          lahde: 'Tuntematon tekijä 1784–1794, Musée Carnavalet, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Jean-Baptiste Lallemand - La prise de la Bastille, le 14 juillet 1789 - P1718 - Musée Carnavalet.jpg',
+          selite: 'Maalauksessa väkijoukko hyökkää Bastiljiin, joka oli ollut '
+            + 'vuosisatoja kuninkaan vallan merkki.',
+          lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Lumière 1895': {
       nosto: 'hetki-lumiere-elokuva-1895',
@@ -5778,6 +5871,21 @@ export const NAHTAVYYSJUTUT = {
         + 'temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le '
         + 'Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva '
         + 'on.',
+      kuvat: [
+        {
+          tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',
+          selite: 'Tällaisella julisteella Lumièren veljekset kutsuivat ihmisiä '
+            + 'katsomaan liikkuvia kuvia, jotka olivat silloin ihme.',
+          lahde: 'Cinématographe Lumièren mainos 1895, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Plaque Lumière.jpg',
+          selite: 'Laatta Boulevard des Capucinesilla kertoo, että Lumièren '
+            + 'veljesten elokuvakone näytti täällä liikkuvia kuvia yleisölle '
+            + 'ensimmäisen kerran 28.12.1895.',
+          lahde: 'Tan 2009, Wikimedia Commons (PD)',
+        },
+      ],
     },
   },
   /*
