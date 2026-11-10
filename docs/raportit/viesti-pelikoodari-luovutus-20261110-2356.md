@@ -30,3 +30,9 @@ Natiivityöpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu haarassa **pelik
 2. Penger M7:n vieressä (KK: pitkä beige kivijalka samaan harmaaseen): lähde selvittämättä – mika rungon kohdalta, pursotukset vai paketti; paketti → LAV.
 3. B1 bottijumi (−85; 500) ja eteläosan kartoitus (ennallaan).
 4. Huomenna isolla iPadilla: aukiovideo, renkaiden uusinta (ennallaan).
+
+## LISÄYS 00.1x
+- 1. P1-ajo (JU 00.07) VIALLINEN: skenaario ei odottanut `oleta 300 juoksupeli tarkastelu: alku` → jälkeen-kuvissa vain ovi+portaat tasangolla
+  (palatsi lataamatta), ennen-kuvissa kamera seinässä ja peliohjaimet. Siirretty p1/ajo1-viallinen/. sk-p1.txt korjattu (lahto pois,
+  tarkastelu kansio + oleta alku kuten nimet-ajo). JU:lta pyydetty uusi ajo 00.1x. Tarkista seuraavasta ajosta ensin, että rakennukset näkyvät
+  ja ennen-lokissa on "ovet koe" (1. ennen-lokista puuttui). Huom: jälkeen-kuvassa portaat 3 askelmaa ja ovi seinässä näkyivät oikein.
