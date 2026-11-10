@@ -41,3 +41,10 @@ c. Nimiotto Lontoolle: KK:n vastaus (PT:n kautta) → PK:lle (ennallaan -0625 c)
 ## Vahdit (viritä uudelleen)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, re-arm).
 - Monitor tappaa komennon 30 min kohdalla: pitkät ajot `run_in_background`-Bashilla, ei Monitorilla.
+
+## LISÄYS 07.5x (PT, tuli nollauksen aikana) — TEE ENNEN [210]:n kuvaa
+- **KK:n Pariisi-pino, kysymys 5**: "Pariisin tarkka alue ylhäältä ilman lohkon rajoja (koe 7.11. 11.3x) – jatketaanko?"
+  Korttiaineisto tuotantopohjan `kysymys-omistajalle.md` mukaan tiedostoon
+  `/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/kuvat/pariisi-pino-20261110/5-tarkka-alue.md`
+  + YKSI pari (≤ 2000 px, laitekuva), luvut, aiemmat päätökset, suositus. VAIN olemassa olevista kuvista (ei uusia ajoja).
+  ("Lontoon 2 kysymystä ensin" = PR 6541, jo mainissa 55fd2d1ab.) Työlistalla "odottaa: Pariisin tarkka alue neliöksi?".
