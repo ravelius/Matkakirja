@@ -37,3 +37,15 @@ ILMAN -I:tä; UUSI-rivit → PT "UNITY UUSI: …").
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: V/2a-varmistus, muistivaihe 3 pito → raukesi, muistikatto kirjattu, yksi tarkkuus linja (yllä). JU: muistikatto kuitattu, yksi tarkkuus Mac valmis 09.52, yritys 2 pyydetty.
 KK: V/2a-rivi.
+
+## LISÄYS 10.1x (luovutuksen jälkeen; LUE ENSIN)
+- Yritys 2 pito d550fdbb0 Mac AJETTU ja luettu: EI poistanut hyppyä (766 / yli 100: 53 vs yritys 1 757 / 76); pito päättyi 0,2 s "ladattu" →
+  karkea liikevalinta itse on hyppy. Ks. _tyo/natiiviseppa/yksi-tarkkuus/tulos.md loppu.
+- PT 10.1x: VALITSE b2 = tarkat palat koko eleen ajan (kokeile "maasto yksitaso pito 5"; tarvittaessa koodiin: ei "ladattu"-ehtoa, vain lepo/korkeus/jarru).
+  iPad-muisti JU:lla (JU:n laitekäännökset nyt lisämuistiluvalla, raja 8191 Mt, mutta hyväksymisraja 4080 kunnes omistaja päättää). Jos b2 > 4080 → (a).
+  Pari lepo + ele PT:lle.
+- Pont du Gard -toisto AJETTU (JU 10.01): lokit/natiiviseppa-pontdugard-1, 12/12 kuvaa – katso (A/B/C, ks. -0930 kohta 3).
+- UUSIA JONOON (omistaja 09.59/10.01, Tekninen kunto, Pont du Gardin ja Yksi tarkkuuden rinnalla; syy ensin mittaamalla Macilla, iPad vain muistiin;
+  korjausehdotus + muistin hinta PT:lle ja KK:lle; koe C 630e6bc31 ei saa heikentää terävyyttä):
+  1. "ISS: laukaisuanimaatio tärisee": nopeaa edestakaista zoomausta koko laukaisun ajan → etsi kaksi vuorotellen kameraa ohjaavaa asiaa (origo? kierto?).
+  2. "ISS: kupoli liian matalalla tarkkuudella": koe C / muistijarru taso 1 / tekstuurin koko?
