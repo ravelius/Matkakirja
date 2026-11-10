@@ -42,3 +42,8 @@ Asemataulu jäädytetty: hookin "päivitä junat.json" ohitetaan.
 
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös (14.35). JU: ajopyynnöt kertoja-esilataus, britannia-2-kylma (kuitattu), iss-ipad-1 vastaus.
+
+## LISÄYS 14.4x (PT 14.3x)
+- Tahdistus KUITATTU: MR JU:lle natiiviseppa/lento-tahdistus abf0d5328 → juna-224 (puhdas; tuo myös 50bab43fc, af969f31a, 941dd597f – PT:lle kerrottu,
+  voi estää 941dd597f:n). Uutta: "Raketin ja kuumailmapallon lento etenee tasaisesti ilman edestakaista zoomausta." Syy + versio PT:lle KK:ta varten. Kohdan 2 1c-uusinta ei enää ehto.
+- Veden pilarireikien täyttö → Valoseppä (PT). Panorointi (PE ×4, -1342 kohta 2) seuraajalle: lue PE-ajot kun JU ajaa (vahdin kuvio kehys-pe-*).
