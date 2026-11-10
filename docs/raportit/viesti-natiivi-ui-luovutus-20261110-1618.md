@@ -50,3 +50,13 @@ kun Marseille + toinen kaupunki näyttävät striimikartan isolla iPadilla. Vihj
 - Tee: katso iPad-kuvat (b-1/b-2 katuverkko?) → valmis-rivi PT:lle (3e8796b49, polut) → PT kirjoittaa pt-ok:n → MR JU:lle, Uutta:
   "Kaupungin nimen napautus vie kaupunkiin kortin sijaan." Versionumero (linkki) KK:lle. Jos Barcelona tyhjä iPadilla → PT:lle + KK:lle, ei MR:ää.
 - Kun NS:n Marseille-korjaus näkyy isolla iPadilla: poista "marseille" listasta (oma commit), lyhyt iPad-kuva → PT.
+
+## LISÄYS 16.4x: KUVAKYLTTI-3 753093617 KATSOTTU — EI TOIVOTTUA VAIKUTUSTA (ei MR:ää, koe)
+- lokit/nui-kuvakyltti-3-mac-753093617 1b/2b vs -2-mac-dce3d6ae0: "Temple" ja "Place de la Bastille" näkyvät yhä tähden/kyltin vieressä ja
+  alla; 2b (ylhäältä): Temple-tornin medaljonki peittää 3D-tähden alaosan, lokissa "kuvakyltti alas" vain 0–0,9 (riittämätön).
+- Päätelmä: nämä nimet EIVÄT tottele Kohdelaatikot-varauksia (elävä nimi maahan projisoituna / laattaan poltettu? tai Pakko). Seuraava askel:
+  `ui nimet laske` / Nimikerros-diagnostiikka 1b-näkymässä: mistä kerroksesta "Temple" tulee (Nimikerros.LisaaElavat vai ElavaTyyli-laatan
+  teksti). Jos laatan tekstiä → piilotus vaatii NS/KS:n (tyylin POI-nimi pois kuvakyltin paikoilla); jos Nimikerros → miksi varaus ei estä.
+- Medaljonki tähden päällä: KuvakyltitTahtienAlle käyttää 3D-tähden ruutulaatikkoa × 0,66; 2b:ssä tähti medaljongin takana → laske alas
+  medaljongin yläreunasta (KuvakylttiVali ei riitä) tai käytä koko tauluruutua (Tahti3DNakyvaOsuus 1,0).
+- PT:lle kerrottu 16.4x. Ei kiireellinen (koe, oletus pois); nimizoom ensin.
