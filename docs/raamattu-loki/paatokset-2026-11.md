@@ -1143,7 +1143,7 @@ PK:n ääntämistesti (8 nimeä, ElevenLabs 1 otto, 61 krediittiä; lontoo-nimet
 
 Omistaja 06.38: "Saako versio numeron jatkossa lyhyemmäksi" (asennuslinkin 335da402f). Kortti → "224.7" -muoto: junan numero + linkin juokseva järjestysnumero; asennussivulla, sovelluksessa ja viesteissä, commit-tunniste vain sisäisesti (asennussivulla pienellä). Viestit KK:lle muodossa "224.N (sha)". JU numeroi ipa-arkiston mukaan: 224.1 39204416d … 224.6 335da402f; seuraava 224.7. NUI 14877fa07: MATKAKIRJA_LYHYT → ☰ alin rivi, Mitä uutta, matkalaukku.
 
-## ASENNUSSIVU JA LONTOON TEKSTIT; SISÄLTÖTEKSTIT KK:N PÄÄTETTÄVIKSI (omistaja 10.11.2026 klo 06.54–07.36) (10.11.2026 klo 07.45)
+## ASENNUSSIVU JA LONTOON TEKSTIT; SISÄLTÖTEKSTIT KK:N PÄÄTETTÄVIKSI (omistaja 10.11.2026 klo 06.54–07.36) (10.11.2026 klo 07.37)
 
 - 06.54 kaksi pyyntöä: "Automaattinen orbit kierto loppuu jos säädän kulmaa oik tapilla. Saisi jatkua." (NS 183e4bfbf → 224.10) ja "Kuvan napit näkyvät huonosti kun pois päältä" (NUI 038bbc716 → 224.9).
 - 06.59 asennussivu: "Tässä riittäisi kun näkyisi version alla uudet jutut ranskalaisilla viivoilla sekä edellisen version uudet jutut. Sekä latauksen koko. Muut tekstit voi ottaa pois" → JU:n pysyvä linkkiohje 224.8:sta (Matkakirja, iso 224.N, Uutta, Edellisessä, Asenna, koko; sha ja ohjeet pois). Manifestin title "Matkakirja 224.N" joka linkissä.
