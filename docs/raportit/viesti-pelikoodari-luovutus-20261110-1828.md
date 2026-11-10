@@ -61,3 +61,12 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - Kuvapari: proto-3d/_tyo/pelikoodari/osa8-ovet/sk-mac-ovet-kiinni-auki.txt (Mac, 3eb33531c; 储秀宫:n ovi; k1/k2 taso 1 kiinni,
   a1/a2 taso 0 + `ovikoe koe` auki) → JU:lle annettu, kansio lokit/pk-osa8-ovet-mac-3eb33531c. Katso pari täysikoossa ja lähetä PT:lle.
   Jos lehdet eivät ole umpeen: kierto OviMallitPaikoilleen (suljettu ? 0f : …) → 180/−180 ja uusi pari.
+
+## TILA NOLLAUKSESSA 18.4x (PT käski nollauksen; tämä luovutus + lisäykset ovat voimassa)
+- Osa 8 VALMIS koodina 3eb33531c (natiivi-backup pelikoodari/osa8-ovet-kiinni): ovet kiinni tasolla 1, kynnysviesti pois kokonaan.
+- Rajaluku LÄHETETTY PT:lle 18.4x (0/663 avointa; 171 talo = 0). PT halusi luvun kuvaparin yhteydessä → toista se kuvaparin rivissä.
+- KUVAPARI auki/kiinni TEKEMÄTTÄ: JU:n Mac-vuorolla (sk-mac-ovet-kiinni-auki.txt → lokit/pk-osa8-ovet-mac-3eb33531c). Katso k1/k2 vs a1/a2
+  täysikoossa ja tarkista lokista "kiinni K"; sitten pari + rajaluku PT:lle. 
+- JU:lla: aukio2-video 711192245 (lokit/pk-aukio2-v129d-711192245, vain todisteeksi KK:lle; 224.37 jo pt-ok) ja linjavideo e59ed43e9
+  uusintana (lokit/pk-linjat-osa1-3-e59ed43e9; 1. yritys käynnistysvika). Katso kuvat ja tarkistin (aukio: v129d-kartta) → rivi PT:lle.
+- Sen jälkeen jono kohdassa 1.2 (osa 6 → osa 10 → osa 11, renkaiden uusinta) ja 18.4x:n palkkikysymys.
