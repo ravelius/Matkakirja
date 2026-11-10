@@ -49,3 +49,8 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. Tila myös: /Users/Shared/Clau
   ilman latausmerkkiä (omistajan 18.53?). PT:lle ja JU:lle kerrottu.
 - KJ1b (sk-mac-oletus-koodi-2.txt: om-yleis + om-lahi + KJ1:n 9, odota 300) korvaa KJ1:n, jos KJ1:ssä 219/219 tuli kuvien jälkeen. Tarkista KJ1:n loki ensin.
 - Mahdollinen jatko (PT päättää): talojen latausmerkki tai odotus ensihaussa (SaapumisOdotus koskee vain karttalaattoja).
+
+## LISÄYS 21.0x
+- KJ1 (lokit/karttaseppa-koodijuna-mac-599b0150d) ajettu: PT katsoi ja hyväksyi → 224.42.pt-ok (JU:n MR33; omistaja testaa). KJ1:ssäkin 219/219 vasta 3 kuvan jälkeen
+  (rivi 3749), joten JU ajaa KJ1b:n (om-kulmat) ja heti KJ3:n (jono-kj1b-kj3.zsh, ei 224.35-ajoja väliin). Latausmerkki ensihakuun on NS:n rivillä (PT).
+- PT 21.0x: "Jatka Louvreen" → katso KJ3-pari (lokit/karttaseppa-louvre-koodi-c735240ae), täysikoko KK:lle.
