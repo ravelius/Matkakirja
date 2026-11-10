@@ -122,3 +122,9 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
   ei raivaus; todellisuudessa aukio + Square Jean-XXIII + ranta. KORJAUS 224.47:ään: pohja puistoksi (vihreä + OSM-puut) ja 2 irtotalon OSM-tunnistus
   (sakaristo voi olla oikea). KK:lle ja PT:lle kerrottu.
 - SEURAAVAKSI: KJ8 (Panthéon) kuvat → KK; KJ9 kuvat → pari KJ7 11-* | kivi-* + lahi-* KK:lle (kopio PT); sitten ND-eteläpohja; sitten Invalidit…
+
+## LISÄYS 22.4x (2): KJ8 KATSOTTU → PANTHÉON-KORJAUS f34ae4717, KJ10 JU:lla
+- KJ8 (b357fdfc1) karkea KK:lle + PT: _tyo/karttaseppa/koodijuna/parit-kj8-b357fdfc1/. Viat: Tripo-pohja r8-k2 peitti palaavat talot (iso tyhjä aukio), kivi katosi kaukaa.
+- f34ae4717 (nahtavyydet-1-1 = b357fdfc1 + cherry-pick d36a7c7a2 [950bb8555] + Panthéon PohjaPoisKoodilla "pantheon:Panthéon" + PnKivi NahtavyysKivi), pushattu, 753/753, unity 0.
+  OPPI: jokaiselle uudelle koodimallille, jonka alueella on Tripo-pohja (Invalidit, Opéra, Grand Palais…), PohjaPoisKoodilla = sen avain, muuten talot jäävät pohjan alle.
+- KJ10 (sk-mac-pantheon-kj10.txt, 5 kuvaa pn10-*, sis. lahizoomi 8 lähikuva) JU:lla KJ9:n jälkeen → lokit/karttaseppa-pantheon-kj10-f34ae4717 → pari pn8-koodi | pn10 KK:lle.
