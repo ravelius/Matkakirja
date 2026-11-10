@@ -24,7 +24,8 @@ Ketju: 93ba52043 korostus K → c1e811eed VS kyltti → 3c3c12be6 vaakakatto →
   iPad I4 16/22 (u6; aikaraja). PT 17.0x: Invalidit, ND ja saari hyvät; RK katosi viistosta ja Pompidou/HdV hallitsivat → c1a15236d.
 
 ## KESKEN
-1. **Mac 46 JU:lla** (c1a15236d, sk-mac-korostus-k2b → lokit/karttaseppa-korostus-k2b-c1a15236d, 22 kuvaa) ajossa 17.4x. Katso täysikoossa:
+1. **TEHTY 17.4x: Mac 46 katsottu** (u7-korostus-k2b, 11 paria PT:lle): RK 150 m erottuu viistosta, ND hallitsee, Pompidou/HdV oikeassa koossa; 22/22, 0 virhettä.
+   Odottaa PT/KK-korttia. Alkuperäinen kohta: **Mac 46 JU:lla** (c1a15236d, sk-mac-korostus-k2b → lokit/karttaseppa-korostus-k2b-c1a15236d, 22 kuvaa) ajossa 17.4x. Katso täysikoossa:
    RK viisto/lähin-70 (150 m erottuu?), nd-lahin (Pompidou/HdV oikeassa koossa, ND hallitsee?), Invalidit. Parit u7 → PT ≤ 3 riviä. VS katsoo RK-kyltin.
 2. **iPad I4 uusinta** JU:lla (PK:n latausruudun jälkeen, 30 min raja) 7f0a42222 → lokit/karttaseppa-korostus-k2-ipad-b-7f0a42222 (PT 17.12: I4 vanhalla).
    c1a15236d iPadille vasta PT:n pyynnöstä (tarvitsee laitekäännöksen + Documents/talopalat-pariisi-v23-k2b).
