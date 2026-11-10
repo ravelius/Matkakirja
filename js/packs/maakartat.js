@@ -5382,10 +5382,10 @@ export const KAUPUNKIKARTAT = {
        * pitäisi hakea valmiiksi jo nostoiksi"; PT, KS): mallin kyltti hakee nyt tiedot Tietokortit-striimistä,
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
-      { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
-      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
-      { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
-      { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
+      { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides', aihe: 'historia' },
+      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', aihe: 'historia' },
+      { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais', aihe: 'kulttuuri' },
+      { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse', aihe: 'kauppa' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -6067,20 +6067,20 @@ export const KAUPUNKIKARTAT = {
        * kyltti3d = pelin 3D-mallin kyltti (natiivi OhjelmaKohteet): saa olla julisteen reunuksessa lepotilan rajauksen ulkopuolella
        * (Kensingtonin neljä; tests/karttareunus.test.mjs), koska verkon lehti ei piirrä niitä (ei miniatyyriä eikä numeroympyrää).
        */
-      { nimi: 'Westminster Abbey', lat: 51.499406, lon: -0.127429, wiki: 'Westminster Abbey', kyltti3d: true },
-      { nimi: 'Westminsterin palatsi', lat: 51.4995, lon: -0.1248, wiki: 'Westminsterin palatsi', kyltti3d: true },
-      { nimi: 'Westminster Bridge', lat: 51.50076, lon: -0.1199, wiki: 'Westminsterin silta', kyltti3d: true },
-      { nimi: 'Cutty Sark', lat: 51.482834, lon: -0.009572, wiki: 'Cutty Sark', kyltti3d: true },
-      { nimi: 'Lontoon Tower', lat: 51.5081, lon: -0.0762, wiki: 'Lontoon Tower', kyltti3d: true },
-      { nimi: 'British Museum', lat: 51.5194, lon: -0.127, wiki: 'British Museum', kyltti3d: true },
-      { nimi: 'Natural History Museum', lat: 51.4965, lon: -0.1758, wiki: 'Natural History Museum', kyltti3d: true },
-      { nimi: 'Victoria Memorial', lat: 51.50184, lon: -0.14059, wiki: 'Victoria Memorial (Lontoo)', kyltti3d: true },
-      { nimi: 'Royal Albert Hall', lat: 51.501021, lon: -0.177405, wiki: 'Royal Albert Hall', kyltti3d: true },
-      { nimi: 'Albert Memorial', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial', kyltti3d: true },
-      { nimi: 'Kensingtonin palatsi', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi', kyltti3d: true },
-      { nimi: 'Royal Observatory', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio', kyltti3d: true },
-      { nimi: 'Old Royal Naval College', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true },
-      { nimi: 'Queen\'s House', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House', kyltti3d: true },
+      { nimi: 'Westminster Abbey', lat: 51.499406, lon: -0.127429, wiki: 'Westminster Abbey', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'Westminsterin palatsi', lat: 51.4995, lon: -0.1248, wiki: 'Westminsterin palatsi', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'Westminster Bridge', lat: 51.50076, lon: -0.1199, wiki: 'Westminsterin silta', kyltti3d: true, aihe: 'kauppa' },
+      { nimi: 'Cutty Sark', lat: 51.482834, lon: -0.009572, wiki: 'Cutty Sark', kyltti3d: true, aihe: 'kauppa' },
+      { nimi: 'Lontoon Tower', lat: 51.5081, lon: -0.0762, wiki: 'Lontoon Tower', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'British Museum', lat: 51.5194, lon: -0.127, wiki: 'British Museum', kyltti3d: true, aihe: 'kulttuuri' },
+      { nimi: 'Natural History Museum', lat: 51.4965, lon: -0.1758, wiki: 'Natural History Museum', kyltti3d: true, aihe: 'luonto' },
+      { nimi: 'Victoria Memorial', lat: 51.50184, lon: -0.14059, wiki: 'Victoria Memorial (Lontoo)', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'Royal Albert Hall', lat: 51.501021, lon: -0.177405, wiki: 'Royal Albert Hall', kyltti3d: true, aihe: 'kulttuuri' },
+      { nimi: 'Albert Memorial', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'Kensingtonin palatsi', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'Royal Observatory', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio', kyltti3d: true, aihe: 'kauppa' },
+      { nimi: 'Old Royal Naval College', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true, aihe: 'historia' },
+      { nimi: 'Queen\'s House', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House', kyltti3d: true, aihe: 'kulttuuri' },
       {
         nimi: 'Buckinghamin palatsi',
         lat: 51.5014,

@@ -455,6 +455,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
           nimi: kohde.nimi, tyyppi: kohteenTyyppi(kohde), kartalla: kohdeKartalla(kohde), lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
           wiki: kohde.wiki ?? null, nosto: kohde.nosto ?? null, nimio: kohde.nimio ?? null, nimiPuoli: kohde.nimiPuoli ?? null,
           siirto: kohde.siirto ?? null, aika: kohde.aika ?? null, teksti: kohde.teksti ?? null,
+          // Datan oma aihe (KK 10.11.2026, omistajan päätös 10.06 kohta 3: Muut-ryhmän kohteet aiheisiin);
+          // rikastaKohdekartat antaa linkin aiheen etusijalle.
+          aihe: kohde.aihe ?? null,
           kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
           kuvat: (kohde.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
         };

@@ -392,14 +392,15 @@ export function rikastaKohdekartat(kohdekartat, haeKohde, luokitteleTunnus) {
         return { tunnus, laji: lahde, aihe, kategoria, nimi: k?.nimi ?? null };
       });
       // Liuska ja pääkartan karsinta käyttävät ensimmäistä tunnusta.
-      kohde.aihe = kohde.linkit[0]?.aihe ?? null;
+      // Linkitön kohde: datan oma aihe (maakartat.js aihe, KK 10.11.2026), muuten null (= natiivin Muut).
+      kohde.aihe = kohde.linkit[0]?.aihe ?? kohde.aihe ?? null;
     }
   }
   kohdekartat.kuvaus = kohdekartat.kuvaus.replace('nosto = nähtävyysjutun tunniste (nahtavyydet-kokoelma)',
     'nosto = karttanoston tunnus (merkkijono tai lista; nähtävyysjuttu haetaan kaupunki + nimi -avaimella nahtavyydet-kokoelmasta)')
     + ' Skeema 1.24: linkit = nosto-tunnukset tyypitettyinä [{ tunnus, laji (fokuskohde | skandaalit | historianHetket | '
     + 'syvennys | takynosto | maalehtinosto), aihe (karttavalon aihe kuten webin kaupunkiliuskassa: kohteenKategoria → '
-    + 'nostosymPaakategoria), kategoria (symboli), nimi }], aihe = ensimmäisen linkin aihe (null = ei linkkiä). Sama nosto on '
+    + 'nostosymPaakategoria), kategoria (symboli), nimi }], aihe = ensimmäisen linkin aihe, linkittömällä kohteella datan oma aihe (null = ei kumpaakaan). Sama nosto on '
     + 'karttavalot-kokoelmassa (tunnus; paakartalla false, jos se on vain kohdekartalla).';
   return { linkkeja, aiheellisia };
 }
