@@ -37,3 +37,9 @@ oppaan 3D-kaupungin jälkeen tai liftauksella. Pyydä NS:ltä/JU:lta kuva ja toi
 ## LISÄYS 12.5x: klikattavat-2 KATSOTTU OK (lokit/nui-klikattavat-2-pariisi-mac-3e1bf8acb, 6/6, KUOLLUT 0)
 Klikattavat samat kuin -1, ei aihepisteitä kaupungissa; Torni 1888 lento 3,1 km + juttu auki. Pari _tyo/natiivi-ui/klikattavat-2-torni-1888-juttu-paikka.png PT:llä.
 Yllä oleva "AJOSSA JU:LLA" -kohta on tehty; jäljellä data 083410e11 PR + vienti PT:n sanalla (PK vahvistaa), sitten natiivi MR.
+
+## LISÄYS 12.5x (PT 13.2x lupa)
+- Data-PR https://github.com/ravelius/Matkakirja/pull/6557 auki, EI yhdistetty: main-merge = vie-sisalto.yml = vienti ämpäriin. Yhdistä vasta,
+  kun PK:n viittausvahvistus on tullut ja checks pass (PT:lle kerrottu).
+- Natiivin MR-pyyntö JU:lle: natiivi-ui/kaupungin-luettelo-lajit 40a735533 (+ pohjan nostoluettelo-kaupungit-commitit), riippuvuus PR 6557:n vientiin.
+- SEURAAVA: otsikkovärit (yllä), sitten Lontoo-saapuminen.
