@@ -36,3 +36,8 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. Tila myös: /Users/Shared/Clau
 
 ## Vahdit (uusi sessio virittää)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
+
+## LISÄYS 20.4x (PT: OMISTAJAN PÄÄTÖS 20.23)
+- Kunnes iso iPad toimii, Pariisin koodimalliversio (599b0150d) saa linkkiin Mac-oletustilan parilla (KJ1) ILMAN iPad-ajoa; omistaja testaa itse.
+- KJ1-parin mukana PT:lle yksi rivi omistajalle "kokeiltava: …" (mitä omistaja katsoo laitteella: RK, ND ja Eiffel koodimalleina oletustilassa,
+  korostus K 2, talot ämpäristä; Tripo-vertailu komennolla koodimallit kaikki 0). KJ2 (iPad) ei ole linkin ehto.
