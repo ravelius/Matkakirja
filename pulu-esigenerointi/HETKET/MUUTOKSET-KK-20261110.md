@@ -69,3 +69,11 @@
 - hetki:lumiere-elokuva-1895 / Kerro lisää: Lyonista (vastaus)
   ENNEN: filmi kuvattiin maaliskuussa 1895.
   JÄLKEEN: filmi kuvattiin ensimmäisen kerran keväällä 1895, ja siitä tehtiin myöhemmin useita versioita.
+
+## faktat-2-jatko (10.11. 02.5x)
+- hetki:lontoon-palo-1666 / Kerro lisää: Christopher Wren (vastaus)
+  ENNEN: Hän oli koulutukseltaan tähtitieteilijä ja toimi professorina [[Oxfordin yliopistossa]], ennen kuin
+  JÄLKEEN: Hän oli alun perin tähtitieteen professori, ensin Lontoossa ja sitten [[Oxfordin yliopistossa]], ennen kuin
+- hetki:brunel-thames-tunnel-1827 / Kerro lisää: sukelluskellolla (vastaus)
+  ENNEN: [[Edmond Halley]] kehitti vuonna 1690 version
+  JÄLKEEN: [[Edmond Halley]] kehitti 1690-luvun alussa version
