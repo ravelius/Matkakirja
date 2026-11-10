@@ -80,3 +80,11 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   -pois.txt (78254e71594f) → ...-pois. Lähtö lahto -97,363.2 l (osan 9 piha). Katso k1–k9 vs e1–e9 täysikoossa + lokin "aukio kaista N omena|keski"
   → pari PT:lle. Sen jälkeen iso iPad -video aukiolta (huomenna).
 - Jonossa yhä (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
+
+## LISÄYS 21.1x: NOLLAUS (tämä on viimeisin; aloita tästä)
+- PT 21.1x: osat 6+11 tulevat junaan osan 5 b744c680b mukana (JU:n MR31 juna224 + aae0ab729 punainen: LinjatOikeallaKartalla ajelehti 1/9;
+  syy aukion kiinteä pari vaihtoi paria 1,5 m:n kappaleella, 1,8 m; osa 5 korvaa aukion parin kaistaruudukolla → vihreä). JU:lle kerrottu, ettei
+  MR31:tä ajeta aae0ab729:lla. Aukio-kytkimen oletus pelaajalla PÄÄLLÄ (PT:lle kerrottu).
+- SEURAAVAKSI: kun JU:n Mac-pari valmis (lokit/pk-osa5-aukio-mac-b744c680b ja -pois; sk-md5:t dac74b23a24d / 78254e71594f): katso k1–k9 vs e1–e9
+  täysikoossa + lokin "aukio kaista N omena|keski" → pari PT:lle + "kokeiltava"-rivi aukioista → PT antaa yhden pt-ok kärjelle 6+11+5 (b744c680b).
+- Natiivityöpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu haarassa pelikoodari/osa5-aukiot (puhdas).
