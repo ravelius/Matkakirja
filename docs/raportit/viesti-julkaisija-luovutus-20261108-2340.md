@@ -1,3 +1,7 @@
+## LISÄYS 10.11. 06.17 (TUOREIN, päivittää 06.1x:n)
+- NÄHTÄVYYDET v1 VIETY 06.16 (PK VAHVISTETTU, 37/0 virhettä, curl 200); jonolokissa "JU NAHTAVYYDET VIETY" → LK savu6 lähtee LD:n jälkeen → KATSO ND-kuva → PT (+ kuvat S8-louvre/eiffel/grand-palais).
+- LL: juna 224 merge PK juoksu-mac-kuvat c98ad61e6 (PT 06.2x kuittasi) = 930eaae96, testit T/juna224-aa-* → push automaattisesti jos läpi → rivi PT + PK.
+
 ## LISÄYS 10.11. 06.1x (TUOREIN; korvaa 04.3x:n jonon; konteksti 25 % → nollaus)
 - JUNA 224 = acd29110e PUSHATTU 06.02 (natiivi-backup julkaisija/juna-224, wt /Users/Shared/Claude/wt/julkaisija-juna-221): 77b1641de + PK juoksu-kylma 28c92a109 (sis. 544dd537c, PT A) + revert ccd8531d2 (muistivahdin ohitus EI junaan) = ad820c1dd 05.14 + PK juoksu-tahdistus a59334e25 = acd29110e. Testit T/juna224-z-*: 733/2285/893, unity 0. PT+PK+KS ilmoitettu. JUNA AUKI.
 - KIIRE (PT 06.1x, TF-este): iso-osat vs media: iss 2318 ✓, tulivuoret 32 ✓, talot ✓; NÄHTÄVYYDET v1 (36 + hakemisto) EI KOSKAAN VIETY → savuissa ND/Louvre/Eiffel/GP "odottaa mallien tiedostoja palvelimelta".
