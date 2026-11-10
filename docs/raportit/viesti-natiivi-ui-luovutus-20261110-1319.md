@@ -35,5 +35,11 @@ PT:n lisäys (Postivahti 12.5x): PR 6557:n yhdistää ja JU:lle viennistä ilmoi
   Seuraa JU:n MR-numeroa/linkkiä.
 - NS kuittasi; NS:n 9d5be8823-toisto (karttakorjaus) kesken: jos siinä "KameranJalkeen-kuuntelija heitti" tai matala fps → tieto tähän.
 
+## LISÄYS 13.3x
+- Lontoo f319b2bae = MR15 → linkki 224.25 (JU 13.21). Iso iPad error 22 (JU:lla): kaupungit-4 iPad odottaa.
+- Välilehtivärit: ajo 17e7601ef katsottu → Pelit-punainen (mark 22/30) jäi beigeksi → 91feac3b2 (mark 30/45 %), uusi ajo JU:lla
+  → lokit/nui-valilehtivarit-1-91feac3b2. Katso, tee rajausparit kuten _tyo/natiivi-ui/valilehtivarit-1-v-*-ennen-jalkeen.png
+  (ennen = lokit/nui-otsikkovarit-2-pysty-e557d6419, rajaus x 62–100 %, y 3–62 %) → KK, PT:lle tieto, MR JU:lle.
+
 ## JONO TÄMÄN JÄLKEEN
 Ei muuta NUI:n jonossa (PT:n -1246-jono: otsikkovärit → Lontoo, molemmat tehty). Kun 2 ja 3 kuitattu: rivi PT:lle "JONO TYHJÄ: natiivi-ui".
