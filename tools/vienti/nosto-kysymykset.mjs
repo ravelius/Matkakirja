@@ -11,7 +11,9 @@
  *   kohde:<id>  moduulin fokuskohteet-/maastokohteet-/hahmotelma-<maa>
  *               alkion `kysymykset` (tunnuksen ~2-pääte pois)
  *   nosto:<id>  kokoelman takynostot alkion `kysymykset`
- *   muut        skandaalit, historian hetket, eläintäyt, syvennykset ja
+ *   hetki:<id>  kokoelman historianHetket alkion data.kysymykset (natiivi
+ *               NostoSisalto.Hetki, NUI 2b7f2e7b7; KS 10.11.2026)
+ *   muut        skandaalit, eläintäyt, syvennykset ja
  *               napakohteet ilman maata: ei kysymyskenttää → 0
  *
  * Tests/nosto-kysymykset.test.mjs vertaa tulosta poikkeuslistaan
@@ -34,6 +36,7 @@ export function nostojenKysymykset(tiedostot) {
   const lue = (polku) => (tiedostot.has(polku) ? JSON.parse(tiedostot.get(polku)) : null);
   const valot = lue('kokoelmat/karttavalot.json').alkiot;
   const taky = new Map(lue('kokoelmat/takynostot.json').alkiot.map((x) => [x.id, x]));
+  const hetket = new Map((lue('kokoelmat/historianHetket.json')?.alkiot ?? []).map((x) => [x.id, x.data]));
   const moduulit = new Map();
   const moduuli = (laji, iso) => {
     const avain = `${laji}-${iso.toLowerCase()}`;
@@ -60,6 +63,8 @@ export function nostojenKysymykset(tiedostot) {
       kirjoitetut = tekstit(kohde?.kysymykset);
     } else if (laji === 'nosto') {
       kirjoitetut = tekstit(taky.get(tunnus)?.kysymykset);
+    } else if (laji === 'hetki') {
+      kirjoitetut = tekstit(hetket.get(tunnus)?.kysymykset);
     }
     return { id: v.id, laji, maa, kirjoitetut, nimi: v.nimi ?? '' };
   });

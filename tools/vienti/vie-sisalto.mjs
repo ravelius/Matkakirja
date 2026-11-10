@@ -291,7 +291,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        sinne pieneksi kuvaksi. Avain = kuvan osoitteen tiedostonimi (trailerin avauskuvat/kansikuvat ja Pariisin C1–C4);
  *        piste ≥ 25 m nostoista ja maalla (tools/sisalto/esittelypaikat.mjs). Puuttuva kuva = keskusta. Vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.69';
+/*
+ *   1.70 historianHetket.kysymykset (valinnainen, ['kysymys', …]; Karttaseppä 10.11.2026, KK:n lista, PT 03.1x): hetken kortin
+ *        "Kysy pululta" -kysymykset (2 per hetki; Pariisi ja Lontoo ensin). Natiivi NostoSisalto.Hetki lukee ≤ 3 (NUI 2b7f2e7b7);
+ *        Pulun valmiit vastaukset avaimella hetki:<id>. Vanhat buildit ohittavat kentän.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.70';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
