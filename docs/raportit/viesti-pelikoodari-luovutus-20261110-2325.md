@@ -38,3 +38,10 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/seinat-taso1/ (nimet/,
 - LAV kuittasi M1:n: sokkelin ja seinän kohdistusvika kk-tausta-1-4 lod0:ssa (v129 = v131, v131 ei korjaa) → LAV:n muurin juuri -jono yhdessä E4:n kanssa; E1 ja E2 LAV:n lattiajonoon; M7 poistettu LAV:n jonosta (meidän). Meille jäävät M7, P1, P2, B1 ja eteläosa.
 - 23.3x KK valitsi M7:lle 18 → TEHTY 1bfc5c206 (natiivi pelikoodari/seinat-taso1, unity 0), PT:lle pt-ok-pyyntö. KK:n lisätoive: portaan viereinen pitkä beige penkere samaan harmaaseen kiveen = ERI TYÖ (pysyi beigenä kaikissa pinnoissa) → SEURAAJA: selvitä lähde (mika rungon kohdalta, pursotukset vai paketti); jos paketti → LAV:lle.
 - 23.30 PT antoi pt-ok 1bfc5c206 (junaan 224.47:n jälkeen). 23.3x P1-ehdotus PT:lle ja KK:lle: proto-3d/_tyo/pelikoodari/seinat-taso1/P1-EHDOTUS.txt + p1-ovi-kivijalan-edessa.png → odottaa linjausta. Seuraajan jono: P2-lähde, penkere, B1 botti + eteläosa.
+- 23.3x KK:N LINJAUS P1 (kopio PT): EHDOTUS HYVÄKSYTTY → SEURAAJAN ENSIMMÄINEN TYÖ. Ovi ja karmi seinään kivijalan päälle (kynnys kivijalan
+  korkeudelle), harmaat reunuskiviportaat (pinta 18, nyt oletus 1bfc5c206) kivijalan reunalta maahan; ei uusia malleja. "Irti seinästä seisova ovi on vika, ei tyyli."
+  EHDOT: 1) portaat eivät tule esteeksi juoksukaistalle eivätkä muuta kulkukarttaa (matalat, kivijalan levyiset, enintään nykyiset 0,6 m kujalle;
+  törmäys kuten kivijalalla); 2) avautuvat ovet (alun lähin ovi, tason ovet) toimivat: hahmo yli kynnyksen ilman nykäystä;
+  3) KK:lle pari ennen|jälkeen samasta kohdasta (pelikuva r49, P1 −240,2; 504,3 ovi 敬胜斋) + yksi avautuva ovi ENNEN junaa.
+  Toteutus: tyokalut/kulkukartta.py rivi() "kivijalan eteen" -silmukka (e ≤ 0,6): e=0 ja y = kivijalan taso + portaat (ps=0, pl, pn) → ovet.json
+  uudelleen (Resources/JuoksuOvet.json); tarkista tsy-täyte ja Ulkoesineet-mallin paikka (OviPaikat), ovien avaus (JuoksuTaso.OvetKiinni, osa 8).
