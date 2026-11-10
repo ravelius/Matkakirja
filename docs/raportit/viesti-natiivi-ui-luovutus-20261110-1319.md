@@ -78,3 +78,4 @@ Parit PT:lle.
     lisää ★:n worldBoundin). JU:lla sk-kuvakyltti-2-mac → lokit/nui-kuvakyltti-2-mac-dce3d6ae0; pari ennen lokit/nui-kuvakyltti-1-mac-153602c0f 1b/2b/3b
     → PT → KK (koe, ei junaan ilman korttia).
 - JU 14.07: linkki 224.24 = 35271aade (4fa068fbf mukana, tarkistettu) → tehty: aiheeton nähtävyys, Kaupungit-kohta, Kaikki klikattavat.
+- 14.1x: nimizoom-pari katsottu (lokit/nui-kaupunkinimi-zoomaus-1-mac-{633c4b973,fb16ab5de}); parit _tyo/natiivi-ui/kaupunkinimi-zoomaus-1-{pariisi,marseille}-ennen-jalkeen.png PT + KK. Marseillen tyhjä pohja = Mac-data (myös ennen-kortissa). PT:n OK → MR JU:lle (fb16ab5de), Uutta-ehdotus "Kaupungin nimen napautus vie kaupunkiin kortin sijaan."
