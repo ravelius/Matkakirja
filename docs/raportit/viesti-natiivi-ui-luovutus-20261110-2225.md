@@ -33,4 +33,5 @@ UUSI TYÖTAPA (omistaja 21.38, PT välitti, KOE): näkyvän työn (merkit, ilme,
    kierros 2 nyt KK:lle (kopio PT), uusi työtapa.
 
 ## JONO
-1 (KK:n palaute → RK + Eiffel), 2 (huomenna), 3 (Codexin jälkeen).
+1 = YKKÖSTYÖ (PT 22.2x KK:n kautta: 1:1:ssä pieni kohde RK/ND lähes katoaa kaukaa, paisunta antaa koon hetkeksi): RK + Eiffel HETI KK:n ND-palautteen jälkeen.
+2 (huomenna), 3 (Codexin jälkeen).
