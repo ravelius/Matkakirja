@@ -76,7 +76,7 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   lähimmälle kaistalle, botti napauttaa aukiolla, opetuksen omenaohje N kaistalle. QA `ui juoksupeli aukio 0|1` (JuoksupeliNakyma, NUI:lle kerrottu).
   Uudet testit Peli-testit/Testit/JuoksuAukioTestit.cs. Oikealla kartalla botti: omena 119 → 87 m välein, läpi 12/12.
 - Yhdistetyllä pohjalla ilman osaa 5 LinjatOikeallaKartalla punainen (ajelehti 1/9); osan 5 jälkeen vihreä (PT:lle kerrottu).
-- Mac-pari JU:lla: proto-3d/_tyo/pelikoodari/osa5-aukiot/sk-mac-osa5-aukio.txt (c4e6b681a3a9) → lokit/pk-osa5-aukio-mac-b744c680b ja
-  -pois.txt (a43734804d2a) → ...-pois. Lähtö lahto -97,363.2 l (osan 9 piha). Katso k1–k9 vs e1–e9 täysikoossa + lokin "aukio kaista N omena|keski"
+- Mac-pari JU:lla: proto-3d/_tyo/pelikoodari/osa5-aukiot/sk-mac-osa5-aukio.txt (dac74b23a24d) → lokit/pk-osa5-aukio-mac-b744c680b ja
+  -pois.txt (78254e71594f) → ...-pois. Lähtö lahto -97,363.2 l (osan 9 piha). Katso k1–k9 vs e1–e9 täysikoossa + lokin "aukio kaista N omena|keski"
   → pari PT:lle. Sen jälkeen iso iPad -video aukiolta (huomenna).
 - Jonossa yhä (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
