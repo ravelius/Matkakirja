@@ -106,3 +106,10 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
 - ND: 18 taloa palasi, mutta eteläpuolelle jää K 2 -maapohjan vaalea kenttä + 2 yksittäistä taloa → KORJAA -k2-maapohja 1:1-raivauksen kokoiseksi.
 - Eiffel ok (4 taloa palasi; joen puolella vaalea kiveys jää, käy aukioksi).
 - Odottaa: KK:n vastaus pareihin; KJ8 (Panthéon) JU:lla.
+
+## LISÄYS 22.3x: KJ7 HYVÄKSYTTY (PT pt-ok 224.46 098f9f05c), KIVI d36a7c7a2, KJ9 JU:lla
+- KK/PT 22.3x: RK ja ND katoavat 1:1:ssä kaukaa → d36a7c7a2 (proto karttaseppa/kivi-1-1 = 098f9f05c + kivi, natiivi-backup): OhjelmaKohdeGeometria.NahtavyysKivi
+  0xF6F0E3 (osakirjaston kivi muillekin), RK holvi 0,5, ND lyijykatto 0x484C51, flèche 0x3C3F44. Testit 747/747, unity 0. PT:lle sha (korvaa 224.46:ssa jos ehtii), VS:lle sha.
+- KJ9 (sk-mac-kivi-kj9.txt, 11 kuvaa: kivi-* = KJ7:n 11-* kulmat, lahi-* lahizoomilla 25/12 RK, 10/6 ND, 3 Eiffel) JU:lla KJ8:n jälkeen
+  → lokit/karttaseppa-kivi-kj9-d36a7c7a2 → pari KJ7 11-* | kivi-* + lähikuvat KK:lle, kopio PT:lle. Lähikuvista tarkista raivauksen reuna (ND:n eteläpuolen kenttä).
+- HUOM: Panthéon (b357fdfc1, nahtavyydet-1-1) ei sisällä kiveä; rebase/poiminta d36a7c7a2 nahtavyydet-1-1:een ennen seuraavaa Panthéon-ajoa.
