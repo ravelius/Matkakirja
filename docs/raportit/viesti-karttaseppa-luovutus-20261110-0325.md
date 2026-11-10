@@ -25,6 +25,7 @@ a. **Saumat jatkuu**: JU:lla ajot 22–23 (tA1 = talot 1–5, tA2 = 6–10; `$K/
    Työkalu: tee-palat-luuranko.py ymmärtää nyt `KATOT_EI_YKSINK="osm-id ..."` (vaiheet 1 ja 3).
 b. Pelikuvat: Lontoon 02-a ja 07-b pelinäkymässä katsomatta (Vrain-Lucas-kohta tehty).
 c. Sisäkulmien rypyt (13 %) vasta saumojen jälkeen, jos tarvitaan.
+e. Seuraavan js-muutoksen mukana (PT 03.3x, ei omaa PR:ää): kommentti js/packs/kulttuuri-kategoriat.js:571 "omenan kokoinen ontoksi" → kellonkuori yhdestä smaragdista (kuten PR 6534), myös fokusvirta-lontoo.js:454 "omenankokoinen".
 d. Nimiäänet Lontoolle vasta Pariisin oton jälkeen (KK 01.0x); nimilista 43 (sijainnit.json lontoo:*).
 
 ## Tiedoksi
