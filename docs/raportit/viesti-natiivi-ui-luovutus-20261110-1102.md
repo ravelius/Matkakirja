@@ -48,3 +48,9 @@ on NostoKerroksen Naytettavat-listassa vain, jos se ei ole jo kohdenosto (Kohden
 Pariisin 19 aihepisteestä 14 on linkitetty kohdekartan kohteeseen (ks. A:n lista; kolme kartalla olevaan, 11 tarinakohteeseen) – EI VARMISTETTU, piilottaako
 Kohdenostona (NostoKerros.cs 695/801) myös tarinakohteisiin linkitetyt; 5 maalehti-nostoa (Braille, Meister, Tour 1903, Roland Garros, Bouquinistes) eivät ole linkitettyjä. Tarkista seuraavaksi, näkyvätkö ne kaupunkizoomissa (muste/salaisuus, taso, katto).
 Kohteet saattavat muuttua KK:n luokittelussa (osa 3), joten kysy PT:ltä ennen uutta ajoa.
+
+## LISÄYS 11.1x (luovutuksen jälkeen)
+- B lopullisesti PK:lla: pelikoodari/nimi-zoomaus-224 = b3dd1bb3f (PK:n + NUI:n PiilotaKortti), JU ajaa PK:n parin. NUI:n b6cf108aa ja sen JU-ajo peruttu.
+- Museon latausilmaisin 37eba712e: JU:n Mac-ajo 10.54 rc 0, kuvia 4/4, mutta PUUTE 5 (oleta-aikarajat: "lähtökysymys: Louvre" ×2, "museo: odottaa
+  palvelimen kuvia", "museo: (…levyllä)", "museo: (…valmiina|…|VIKA)") → lokit/nui-museo-ilmaisin-1-mac-37eba712e/loki.txt. KATSO kuvat ja selvitä,
+  ovatko odotusrivit skenaarion virhe vai ilmaisimen vika.
