@@ -21,7 +21,11 @@ TYÖLISTA ON JONO: T=/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tyol
    yhd-1: lokit/pelikoodari-yhd-1) → `tehty "Juoksupeli: uusi yhtenäinen lattia"` (jos rivi PK:lla) → junaan 224 PT:n kuittauksella.
 2. Montparnasse (jonossa [1]): torni EI piirry napin päälle (UI on jo päällä, rajaus l2-peru täysikoossa) vaan tumma torni alakeskellä
    heikentää läpinäkyvän Liikun luettavuutta, myös aloitusnäkymässä l0. PT:ltä kysytty 10.0x: suositus aloitusnäkymän rajauksen siirto
-   (NS/KS kameratyö), ei nappityylin muutosta (omistajan valinta). Odota PT:n vastausta ennen koodia.
+   (NS/KS kameratyö), ei nappityylin muutosta (omistajan valinta).
+   PT 10.0x PÄÄTÖS: TEE ITSE (aloituslento on PK:n, työlistan rivi "Pariisin aloituslento"): aloitusnäkymän LOPPURAJAUS niin, ettei
+   Montparnasse jää alakeskelle Liiku-napin taakse; muu kuva (Eiffel, Louvre, Notre-Dame, Seine) ennallaan, lento ja kierto ennallaan,
+   nappityyli ennallaan. Mac-pari l0 nyky (lokit/pk-liiku-napautus-korjaus3-ipad-369bcfa8c/l0-pariisi.png) | uusi → PT:lle → KK hyväksyy
+   (ei omistajan korttia, ellei KK pyydä). Mac-ajo JU:n vuorolla, koko ipad (nappi 690,980 → Liiku alakeskellä).
 3. Juoksupelin lataus nopeammaksi: odottaa (omistajan iPhone), sk _tyo/pelikoodari/juoksu-leivottu/sk-iphone-lataus-224.txt.
 4. Peukalorenkaat [60]: odottaa yhteisajoa/oikeaa laitetta, ei koodattavaa.
 
