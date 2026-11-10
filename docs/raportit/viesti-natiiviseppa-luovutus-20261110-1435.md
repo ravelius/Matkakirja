@@ -1,0 +1,44 @@
+# Natiivisepän luovutus 10.11.2026 klo 14.35
+
+Edellinen: -1405 (2636d7b2f, sis. -1342): käsitelty alla. Syy: kontekstivahti 27 % (7.37). Kansio Matkakirja-3d-selvittaja. Älä poista mitään.
+Työkansio /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/, lokit /Users/Shared/Claude/proto-3d/lokit/. Repo proto-3d/Matkakirja-proto, remote natiivi-backup.
+Cron "4 9 * * *" unity-julkaisut.py: LUO UUDELLEEN (ohje -1250: /opt/homebrew/bin/python3.14 …/natiiviseppa-skriptit/unity-julkaisut.py ILMAN -I:tä;
+UUSI-rivit → PT "UNITY UUSI: …"). Vahti: Monitor `_tyo/natiiviseppa/ajovahti/vahti.sh` (britannia-ipad-*, tahdistus-1b*, kehys-pe-*, yksi-tarkkuus-a2*:
+ALKOI/VALMIS/HILJAA >60 s/KAYNNISTYSVIKA) → LISÄÄ kuvioihin natiiviseppa-kertoja-esilataus-ipad-* ja tahdistus-1c, jos ajetaan.
+Iso iPad toimii taas (JU 14.2x). JU:n jono (PT): KS I3 → PE ×4 → NUI → PK ×2 → britannia-2-kylma → kertoja-esilataus.
+Asemataulu jäädytetty: hookin "päivitä junat.json" ohitetaan.
+
+## 1. BRITANNIAN MAAKARTTA (-1405 kohta 0) – britannia-1 LUETTU: EI TOISTUNUT; KYLMÄ UUSINTA JONOSSA
+- lokit/natiiviseppa-britannia-ipad-1-a2e334b2e: VARTIJA "saapuminen GBR valmis 7978 ms, aste 100 %"; matkalla karkeat ≤ 4 (omistajalla 4–10, ~30 > 10 s);
+  B4 (3 s) ja B7 (55 s) täysikoon rajauksissa maa terävä, ei saumoja (JU sama B5:stä). Syy-ehdokas: laitteen laattavälimuisti lämmin (GBR levyllä).
+- Ero omistajaan myös: iPad vaaka ja kauempaa; omistaja pysty (1668×2420) lähempää.
+- AJO britannia-2-kylma: _tyo/natiiviseppa/britannia-saumat/ajopyynto-2.md + laheta-kylma/laatat-kylma.txt (Laattapalvelin.KylmaValimuisti: tyhjä
+  välimuisti 1 istunto) → lokit/natiiviseppa-britannia-ipad-2-kylma. LUE: konsolissa "KYLMÄ välimuisti tälle istunnolle", VARTIJA GBR aste/aika,
+  "matkaseuranta lontoo" karkeat/puuttuu, B4/B5/B7 täysikoossa. Toistuu → hypoteesi (a) kiire-jono / (b) z9 (-1405); korjaushaara
+  /Users/Shared/Claude/wt/proto-selvittaja-britannia (natiiviseppa/britannia-saumat, ei committeja). Ei toistu → PT:lle "ei toistu kylmänäkään".
+- PT tietää (14.3x).
+
+## 2. TAHDISTUS-1b LUETTU; LISÄKORJAUS abf0d5328 (natiiviseppa/lento-tahdistus, wt proto-selvittaja-lentotahdistus)
+- Kirjaus _tyo/natiiviseppa/lento-tahdistus/tulos-1b.md. A raketti: vuorottelu 16,7/25/33 ms (p50 22–25, p95 27–32). B pallo: 40 → 30 fps,
+  33,2–33,5 ms, myöhässä 0. Lämpö Kuuma (30 fps:n katto) sotki B-raketin ja A-pallon.
+- abf0d5328: pysähdyksen (> 3 × tavoite) jälkeen 15 ruutua ei lasketa (veden 5,3 s pysähdys laski pallon 30 → 24 loppulennoksi). 739/739, unity 0.
+- AVOIN: uusinta tahdistus-1c abf0d5328:lla VIILEÄLLÄ iPadilla (puhdas A/B) → pari/luvut PT:lle; syy + versio KK:lle PT:n kautta. Ei junaan ilman paria.
+- LÖYDÖS PT:lle annettu: "kaupunki: vesi: varadatan pilarireiät täytetty (… 5007 ms)" (6406b2f9d, junassa) = 5,3 s kuvan pysähdys pallokierroksessa.
+  PT päättää tekijän; jos NS:lle: siirrä täyttö taustasäikeeseen / ruuduille.
+
+## 3. KERTOJAN ESILATAUS – KOODATTU cbaaf1d34 (natiiviseppa/kertoja-esilataus, wt /Users/Shared/Claude/wt/proto-selvittaja-kertoja-esilataus, juna-224 dd21d2eee:n päällä)
+- UI/KertojanEsilataus.cs (uusi) + UiNakymat (JoutilasKaupungissa) + Puhe.EsilataaValmis: joutilaana kaupungissa kohdekartan nähtävyysjuttujen
+  (Nahtavyysarkki.JutunLuettavat) ja kadonneiden ihmeiden (Nostokortti.LuennanTekstit) 1. ja 2. palan VALMIIT mp3:t levylle, Taso.TamaKaupunki
+  (väistää laattakiirettä). Ei palavirtaa. Loki "MATKAKIRJA kertojan esilataus: <kaupunki> jutut N, kadonneet M: esiladataan, levyllä, ei valmista".
+  Yhteyden lämmitystä EI tehty (manifesti haetaan jo käynnistyksessä samalta palvelimelta) – lisää, jos mittaus näyttää kylmän ensihaun.
+- AJO JU:n jonon lopussa: _tyo/natiiviseppa/kertoja-viive/ajopyynto-2.md + sk-kertoja-esilataus-ipad.txt (90 s lepo, Riemukaari, Invalidit, Notre-Dame)
+  → lokit/natiiviseppa-kertoja-esilataus-ipad-1. LUE: esilatausrivi + "puhe: alkoi X ms (välimuisti)" (vertailu kertoja-viive-1 Louvre 5263 ms verkko).
+  Hyvä → PT:lle sha junaan.
+
+## 4. MUUT
+- iss-ipad-1 (941dd597f): signal 15 klo 14.18.13 ulkoinen (ei poikkeusta/muistivaroitusta), JU:lle kuitattu: ei uusintaa (tahdistus korvaa).
+- PdG ennen/jälkeen -ajot katkesivat JU:n käynnistystestiin; JU ajaa uudelleen (OC2). -1342 kohdat 2 (panorointi PE, JU:n jonossa), 5 (yksi tarkkuus a2) ennallaan.
+- NN-sarja (muistikatto pariisi ×3 + lontoo ×3, f08387e78) yhä lukematta; tarkista PT:ltä, kenen tehtävä (ei -1342:ssa).
+
+## VIESTIT TÄLLÄ VUOROLLA
+PT: aloitus+esilataus (14.21), britannia-1 (14.3x), tahdistus-1b + vesilöydös (14.35). JU: ajopyynnöt kertoja-esilataus, britannia-2-kylma (kuitattu), iss-ipad-1 vastaus.
