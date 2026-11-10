@@ -39,3 +39,10 @@ KarttaSivuLiuku ≈ 0) → koko Peli-testit → commit → valmis-rivi PT:lle + 
 ## 2. JONO (PT:n järjestys 1724-luovutuksesta)
 osat 1–3 (yllä) → osa 8 ovet kiinni tasolla 1 (arvioi koko → rivi PT:lle) → osa 6 pienet logiikkaviat → osa 10 TasoAika (NUI fb3f19f31, ks. 1724 kohta 3)
 → osa 11 opastetekstit (hyväksytty 17.52). Renkaiden uusinta v2-sk:lla JU:lla (1745 kohta 2) osan 9 jälkeen.
+
+## LISÄYS 18.1x: PT:n käsky (tuli luovutuksen jälkeen)
+"Junaan iPad-videon jälkeen: anna JU:lle skenaario omistajan pysähdyspaikalle (aukio, taso 1), ajo isolla heti juoksupeli-kopion jälkeen;
+video PT:lle. Jatka osat 1–3." → ENSIN: skenaario osan 9 haaralle b7f0d62de (pysähdyspaikka: KK:n kuvaus suunnitelman kohdassa 9, avoin kivetty
+aukio, vasemmalla matala harmaa muuri + punainen seinä, edessä keltakattoiset hallit; ehdokas 长春宫:n pihat (-167; 374) tai v129:n rajakohdat
+(-2.6; 77.2) 中和殿 / (-96.3; 218.6) 膳房, ks. v129/rajakohdat.json) → JU:lle (ajo isolla iPadilla heti juoksupeli-kopion jälkeen) → video PT:lle.
+Sitten osat 1–3 jatkuvat (kohta 1).
