@@ -172,7 +172,7 @@ alle minuutin video; 3) omistaja pelaa, hionta; 4) LR ja VS palasarja yhteisin l
 ja liikkeet; 6) NUI pelinäyttö UI-pohjilla; 7) SS ja Äänittäjä äänet ja faktakortit (luvat kortilla); 8) Pelaa-valinta
 omistajan hyväksynnällä. (omistaja 17.10.2026)
 
-## Avoimet tulkinnat (PT 10.11.2026; KK tarkistaa, ei omistajan päätöksiä)
+## Tulkinnat (KK tarkistanut 10.11. klo 08.47; eivät ole omistajan päätöksiä)
 
 - Kamera: 24.10. kuvakulma (havainnekuvan 810 kulma, kattojen yläpuolella) ja 4.11. "kamera laskeutuu ahtaassa ja kulkee ovesta sisään" ovat molemmat voimassa; tarkentuuko yläkulma ahtaissa kohdissa 4.11. säännöllä?
 - Aloitus: 27.10. "kamera kiertää kasvojen edestä keisarin taakse" katsottu korvatuksi 9.11. järjestyksellä (keisari ovesta vasemmalle kohti kameraa, kamera perään, 3-2-1).
