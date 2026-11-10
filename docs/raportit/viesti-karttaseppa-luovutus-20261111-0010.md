@@ -2,3 +2,4 @@
 - JU: v6 ämpärissä 00.06 (virheitä 0), 224.50.palat-ok kirjoitettu. Pakettikohta SULJETTU.
 - JU 00.2x: 224.50 = adccf01fa linkissä (MR43 Opéra + talot v6), testit läpi. MR43 SULJETTU.
 - NUI 00.45: lahin-2-7x ei lähentynyt – striimikartalla piirros pois, lähin = ElavaLahinLeveys 0,625 (ea9e6c633 ei vaikuttanut). Korjaus 684895857 (karttaseppa/lahin-striimi, pohja ea9e6c633; testit 754/754, unity 0) NUI:lle uusintaan, odotus 640×480 lähin 0,524 km. Ei vielä junassa.
+- PT 01.0x: lähin 0,231 (= KK:n pari, striimin 0,625/2,7) → c032134e7 (karttaseppa/lahin-striimi, korvaa 684895857; 754/754). NUI uusii, odotus lähin 0,620 km / leveys ~0,78 km. Junaan vasta NUI:n kuvien jälkeen.
