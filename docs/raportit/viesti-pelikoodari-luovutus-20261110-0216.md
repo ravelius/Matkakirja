@@ -32,7 +32,8 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-leivottu/: SUUN
    (glb-tavut/CPU-kopiot ennen kopiot+lepo-vaihetta), Kartan jäänteet (talot 60–108 palaa, piirroslaatat, elävä kartta; KartanMuisti
    vapauttaa vain Pallo-tilesetin; talot = Karttasepän alue → kysy KS:ltä/PT:ltä). ASTC 6x6 (−290 Mt) muuttaa ulkoasua → vain PT:n luvalla.
    Tulos rivinä PT:lle ja KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a). Sitten kuvapari + piikki + kylmä lataus uudelleen (PT).
-3. Vaihe 2a A/B iPadilla, kun v2 viety. Seuraavaksi LOD0 (EsihakuN 3 → ? muistin kanssa), valmiit verkot vasta jos rakenna pullonkaula.
+3. PT 02.2x: v2 EI vientiin ennen muistiehtoa (korjaus voi muuttaa pakettia → vienti kerran: v2 tai v3). Vaihe 2 jatkuu Macilla;
+   vaihe 2a:n iPad-A/B vasta viennin jälkeen. Seuraavaksi LOD0 (EsihakuN 3 → ? muistin kanssa), valmiit verkot vasta jos rakenna pullonkaula.
 4. LAV:n uusi lattia + valo (omistaja 22.56): kun LAV ilmoittaa → paketti-v3 (uusi kansio, Palvelin leivottu-v3, SHA256SUMS, vienti-skripti).
    ÄLÄ muokkaa lattian geometriaa tai valoa.
 5. JUNAAN vasta PT:n kuittauksella (kuvapari + sekunnit + muistihuippu).
