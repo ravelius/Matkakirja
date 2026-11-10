@@ -95,3 +95,10 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - v2 JU:lla samalla b744c680b: proto-3d/_tyo/pelikoodari/osa5-aukiot/sk-mac-osa5-aukio-v2.txt (5c7f2a0ebde5) → lokit/pk-osa5-aukio-mac-b744c680b-v2
   ja sk-mac-osa5-aukio-pois-v2.txt (e485ffa644de) → ...-v2-pois. Katso: paikka-rivit pihalla (x −141…−178) ja aika > 0, lokissa
   "juoksupeli: aukio kaista N omena|keski" (aukio 1), k3–k9 vs e3–e9 täysikoossa → pari + kokeiltava-rivi PT:lle → pt-ok kärjelle 6+11+5.
+
+## LISÄYS 21.15 (uusin; aloita tästä)
+- Mac-pari v2 (lokit/pk-osa5-aukio-mac-b744c680b-v2) EI KELPAA: lähtö -97,363.2 länteen päättyi kujan seinään s 78.7 ("seinan edessa v0 z79",
+  pohja −175.8; 363.7), ei aukio → napautukset vaihtoivat vain paria. Simu (oikea kartta, siemen 1843514439) toistaa täsmälleen. Koodissa ei vikaa.
+- v3 JU:lla (pyydetty 21.1x): sk-mac-osa5-aukio-v3.txt (47b92e095d46) → lokit/pk-osa5-aukio-mac-b744c680b-v3 ja -pois-v3.txt (678e6e01ec50) → ...-v3-pois.
+  Lähtö -68,-368 itään (iso piha; simu: aukiota s 25–163, "aukio kaista 3 omena, 2 keski …"), odotus 36 s. Katso k3–k9 vs e3–e9 + lokin aukio-rivit
+  → pari + kokeiltava-rivi PT:lle → pt-ok kärjelle 6+11+5. Hakutesti (ei committiin): scratchpad ZzAukioLahtoHaku.cs (Reitille = Pohjaan-lambdan käänteis).
