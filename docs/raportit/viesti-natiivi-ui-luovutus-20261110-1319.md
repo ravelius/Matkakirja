@@ -45,3 +45,11 @@ PT:n lisäys (Postivahti 12.5x): PR 6557:n yhdistää ja JU:lle viennistä ilmoi
 Ei muuta NUI:n jonossa (PT:n -1246-jono: otsikkovärit → Lontoo, molemmat tehty). Kun 2 ja 3 kuitattu: rivi PT:lle "JONO TYHJÄ: natiivi-ui".
 
 ## LISÄYS 13.4x: välilehtivärit 91feac3b2 katsottu (lokit/nui-valilehtivarit-1-91feac3b2), parit KK:lle, MR pyydetty JU:lta (Uutta "Valikon välilehdet omilla väreillään: Pelit punainen, Kartta ruskea."). JONO TYHJÄ ilmoitettu PT:lle. Jäljellä vain KK:n mahdolliset huomiot (jatkokorjaus samaan junaan) ja JU:n MR-numero.
+
+## JONO PT 13.4x (KORVAA "JONO TYHJÄ") — ALOITTAMATTA, tee järjestyksessä
+1) Työlistan siivous (tools/asemataulu/tyolista.py, ei käsin): rivit, jotka kartan kohteet osa 4 hoiti — Nostoluettelo: aiheeton nähtävyys vain
+   Nähtävyyksissä / Kaupungit-kohta ja jaottelu / Muut-kohteet aiheisiin / "Kaikki klikattavat paikat avautuvat esittelynä" → tehty, jos koodissa ja
+   junassa (kaupungin luettelo 4fa068fbf = linkki 224.24, klikattavat 3e1bf8acb: tarkista JU:lta, onko junassa); muuten tilanne-kenttään.
+2) Työ: "Museon latausilmaisin" (Tekninen kunto, jarj 1; ks. -1222-luovutuksen museo-ilmaisin-kohta).
+3) Sitten "Nostomerkit näkyvät valikon läpi" + "…nostoluettelon päälle tai läpi" yhtenä työnä (Kaupungit).
+Parit PT:lle.
