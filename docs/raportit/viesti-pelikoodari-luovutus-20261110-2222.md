@@ -19,3 +19,6 @@ Natiivityöpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu haarassa pelikoo
    Järjestelmällinen aukkomittaus: `ui juoksupeli tarkastelu kierros 40 400 20` (JuoksuTarkastelu; LAV käyttää, kansio-komento lokeihin).
 5. Lista + kuvat PT:lle ensin, sitten korjaukset; ennen|jälkeen-arkki KK:lle tiedoksi.
 6. Huomenna isolla iPadilla: aukiovideo (lähtö -68,-368 i), renkaiden uusinta (191aaeaf2).
+
+## LISÄYS 22.2x
+- PT katsoi kartoituksen: r20, r29, r49, r52 aitoja vikoja; suunnitelma ok (M1–M8 LAV:lle, P1/P2 + eteläosa seuraajalle).
