@@ -77,3 +77,11 @@
 - hetki:brunel-thames-tunnel-1827 / Kerro lisää: sukelluskellolla (vastaus)
   ENNEN: [[Edmond Halley]] kehitti vuonna 1690 version
   JÄLKEEN: [[Edmond Halley]] kehitti 1690-luvun alussa version
+
+## Wren vanhoissa kohdissa (KK 02.57; vain paketti pulu-v5-hetket-20261110-4 GBR.json + lähteet KAUMAA ja LONTOO-MALLINOSTOT vaihe2.json)
+- kaupunki:lontoo / Kerro lisää: Pyhän Paavalin katedraali
+  ENNEN: uuden suunnitteli Christopher Wren, joka oli koulutukseltaan tähtitieteilijä.
+  JÄLKEEN: uuden suunnitteli Christopher Wren, joka oli alun perin tähtitieteen professori.
+- kohdekartta:lontoo:Kensingtonin palatsi / Kerro lisää: Christopher Wren
+  ENNEN: Christopher Wren oli englantilainen arkkitehti, joka oli koulutukseltaan tähtitieteilijä ja vasta myöhemmin ryhtyi arkkitehdiksi.
+  JÄLKEEN: Christopher Wren oli englantilainen arkkitehti, joka oli alun perin tähtitieteen professori ja ryhtyi vasta myöhemmin arkkitehdiksi.
