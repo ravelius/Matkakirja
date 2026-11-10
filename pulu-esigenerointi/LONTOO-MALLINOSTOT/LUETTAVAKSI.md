@@ -1,6 +1,6 @@
 # Pulun valmiit vastaukset: korjattu 10.11.
 
-PK 10.11.2026. 28 kysymystä + 81 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110).
+PK 10.11.2026. 28 kysymystä + 81 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-2).
 
 ## Westminster Abbey (Lontoo) (kohdekartta:lontoo:Westminster Abbey)
 
@@ -212,7 +212,7 @@ Jatkot: Kuka oli kuningatar Viktoria? / Miksi Buckinghamin palatsin julkisivu mu
 
 **Mitä kuningas teki kuvanveistäjälle paljastuspäivänä?**
 
-No niin, tän minä tiedän. Kuningas [[Yrjö V]] päätti muistomerkin paljastuspäivänä 1911, että kuvanveistäjä [[Thomas Brockin]] tehdään ritariksi, ja tarinan mukaan hän pyysi miekan ja löi Brockin ritariksi saman tien. Muistomerkki valmistui kokonaan vasta 1924, ja se seisoo [[Buckinghamin palatsin]] edessä. Ritariksi saman tien, ei paha päivä.
+No niin, tän minä tiedän. Kuningas [[Yrjö V]] päätti muistomerkin paljastuspäivänä 1911 lyödä kuvanveistäjä [[Thomas Brockin]] ritariksi, ja tarinan mukaan hän pyysi miekan ja teki sen saman tien. Muistomerkki valmistui kokonaan vasta 1924, ja se seisoo [[Buckinghamin palatsin]] edessä. Ritariksi saman tien, ei paha päivä.
 
 Jatkot: Mitä ritariksi lyöminen tarkoittaa? / Miksi The Mallista tehtiin juhlakulkutie?
 
@@ -264,7 +264,7 @@ Jatkot: Mitä ovat Promsit? / Miten Royal Albert Hallin kaikua vaimennettiin?
 
 **Mitä Albert pitää sylissään?**
 
-Hetkinen ny. Albert pitää sylissään vuoden 1851 [[maailmannäyttelyn]] luetteloa. Prinssi oli näyttelyn tärkein puuhamies, ja Prinssi oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla Kensington Gardensissa, lähellä paikkaa, jossa näyttely aikoinaan pidettiin [[Hyde Parkissa]]. Kirja sylissä, kuten minulla kirje siivessä.
+Hetkinen ny. Albert pitää sylissään vuoden 1851 [[maailmannäyttelyn]] luetteloa. Prinssi oli näyttelyn tärkein puuhamies, ja kullattu patsas istuu [[George Gilbert Scottin]] suunnitteleman goottilaisen katoksen alla Kensington Gardensissa, lähellä paikkaa, jossa näyttely aikoinaan pidettiin [[Hyde Parkissa]]. Kirja sylissä, kuten minulla kirje siivessä.
 
 Jatkot: Mitä muuta Albert Memorialin jalustalla on? / Miksi Albert Memorialin patsas maalattiin kerran mustaksi?
 

@@ -1,12 +1,12 @@
 # Pulun valmiit vastaukset: korjattu 10.11.
 
-PK 10.11.2026. 16 kysymystä + 48 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110).
+PK 10.11.2026. 16 kysymystä + 48 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-2).
 
 ## Mona Lisan varkaus (skandaali:mona-lisan-varkaus-1911)
 
 **Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?**
 
-Kato, tää on kyl hyvä juttu. [[Vincenzo Peruggia]] oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä, joten hän tunsi talon ja tiesi, miten taulun suojakotelo avataan. Maanantaina 21. elokuuta 1911 hän astui museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa, ja päivä oli kesäkauden sulkupäivä, jolloin talo oli tyhjä. [[Salon Carrésta]] hän nosti taulun seinältä, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon työntekijäksi. Varkaus huomattiin vasta seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän seinän [[Louvressa]]. Työtakki päällä vaan kävelemään, ja minä kun luulin kyyhkyjen olevan se huomaamaton osapuoli.
+Kato, tää on kyl hyvä juttu. [[Vincenzo Peruggia]] oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä, joten hän tunsi talon ja tiesi, miten taulun suojakotelo avataan. Maanantaina 21. elokuuta 1911 hän astui museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa, ja maanantai oli museon viikoittainen sulkupäivä, jolloin talo oli tyhjä. [[Salon Carrésta]] hän nosti taulun seinältä, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle. Ulos hän pääsi huolto-ovesta, jonka putkimies avasi luullen häntä museon työntekijäksi. Varkaus huomattiin vasta seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän seinän [[Louvressa]]. Työtakki päällä vaan kävelemään, ja minä kun luulin kyyhkyjen olevan se huomaamaton osapuoli.
 
 Jatkot: Miten taulu löytyi Firenzestä kahden vuoden jälkeen? / Miksi runoilija Apollinaire pidätettiin Mona Lisan katoamisen vuoksi?
 
@@ -190,7 +190,7 @@ Jatkot: Millainen lupa mudlarkingiin tarvitaan nykyään? / Mitä Lontoon museo 
 
 ### Kerro lisää (4)
 
-- **Mudlarkit:** Mudlarkit olivat alun perin köyhiä lontoolaisia, usein lapsia, jotka etsivät Thamesin mudasta ja rantakivikosta myytävää tavaraa, kuten hiiltä, köyttä ja rautaa. Heistä kirjoitti 1800-luvulla [[Henry Mayhew]] teoksessaan London Labour and the London Poor. Nykyään mudlarkaus on harrastus, johon tarvitaan lupa, ja lupia myy [[Lontoon satamaviranomainen]]. Kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022; se avattiin uudelleen 2024, ja lupia jaetaan enintään 4 000. Arkeologisesti kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat esineet, on ilmoitettava [[Lontoon museolle]], jossa toimii löytöjen kirjaamisesta vastaava yhteyshenkilö. Thames on vuorovesijoki [[Teddingtonin sulkuun]] asti. (Jatkot: Mitä Henry Mayhew kirjoitti Lontoon köyhistä? / Kuinka paljon Thamesin vuorovesi vaihtelee keskustassa?)
+- **Mudlarkit:** Mudlarkit olivat alun perin köyhiä lontoolaisia, usein lapsia, jotka etsivät Thamesin mudasta ja rantakivikosta myytävää tavaraa, kuten hiiltä, köyttä ja rautaa. Heistä kirjoitti 1800-luvulla [[Henry Mayhew]] teoksessaan London Labour and the London Poor. Nykyään mudlarkaus on harrastus, johon tarvitaan lupa, ja lupia myy [[Lontoon satamaviranomainen]]. Kun lupia oli kertynyt noin 5 000, myynti keskeytettiin vuonna 2022; se avattiin uudelleen 2024, ja lupia jaetaan enintään 4 000. Arkeologisesti kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat esineet, on ilmoitettava [[Lontoon museolle]], jossa toimii löytöjen kirjaamisesta vastaava yhteyshenkilö. Thames on vuorovesijoki [[Teddingtonin sulkuun]] asti. (Jatkot: Mitä Henry Mayhew kirjoitti Lontoon köyhistä? / Kuinka paljon Thamesin vuorovesi vaihtelee keskustassa?)
 
 - **savipiippuja:** Savipiippu on tupakointiin tarkoitettu halpa, savesta valettu pitkä piippu. Tupakan käyttö levisi Englantiin 1500-luvun lopulla, ja perinteisesti sen yleistymistä liitetään [[Walter Raleighiin]], vaikka tarina on osin legendaa. Savipiiput olivat niin halpoja ja hauraita, että ne heitettiin pois rikkoutuessaan, ja siksi niitä on [[Thamesin]] mudassa valtavasti. Piipunpäiden muoto ja valmistajan merkit auttavat ajoittamaan löydön, sillä mallit muuttuivat vuosikymmenten saatossa. Piipunvarret ovat tavallisimpia löytöjä, koska ne katkesivat usein. Savipiippujen tuotannon keskuksia oli Englannin lisäksi Alankomaissa, esimerkiksi [[Goudassa]]. (Jatkot: Miten savipiippuja ajoitetaan? / Miten tupakointi levisi Euroopassa?)
 

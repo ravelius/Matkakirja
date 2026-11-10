@@ -1,6 +1,6 @@
 # Pulun valmiit vastaukset: korjattu 10.11.
 
-PK 10.11.2026. 8 kysymystä + 25 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110).
+PK 10.11.2026. 8 kysymystä + 25 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-2).
 
 ## Invalidit (Pariisi) (kohdekartta:pariisi:Invalidit)
 
@@ -86,7 +86,7 @@ Jatkot: Mitä Grand Palais'ssa on nykyään esillä? / Miksi miekkailu pidettiin
 
 - **Petit Palais:** Petit Palais on Grand Palais'n vastapäätä sijaitseva palatsi, joka rakennettiin vuoden 1900 maailmannäyttelyyn. Sen suunnitteli arkkitehti [[Charles Girault]]. Rakennuksessa toimii nykyisin Pariisin kaupungin taidemuseo, ja pysyvät kokoelmat ovat maksutta nähtävillä. Pienen ja suuren palatsin välinen katu johtaa [[Aleksanteri III:n sillalle]] ja sen yli Invalidien suuntaan. (Jatkot: Mitä taidetta Petit Palais'ssa on esillä? / Miksi Grand Palais ja Petit Palais rakennettiin?)
 
-- **lasikatto:** Grand Palais'n lasikatto peittää päähallin teräsrungon, ja Grand Palais'n lasikatto peittää päähallin teräsrungon, ja sitä on usein kutsuttu Euroopan suurimmaksi lasikatoksi; sen alla olevan päähallin lattiaa on noin 13 500 neliömetriä. Ohut teräsrunko kantaa laajan katon ja päästää valon sisään, mikä teki lasi- ja rautarakenteista suosittuja 1800-luvulla esimerkiksi [[maailmannäyttely]]jen halleissa ja [[rautatieasemilla]]. Katto vaatii jatkuvaa huoltoa, sillä [[ruoste]] ja vesivuodot heikentävät rakennetta, ja se kunnostettiin perusteellisesti ennen vuoden 2024 [[olympialaisia]]. (Jatkot: Mitä Grand Palais'ssa on pidetty? / Miksi Grand Palais'n lasikatto ruostui?)
+- **lasikatto:** Grand Palais'n lasikatto peittää päähallin teräsrungon, ja sitä on usein kutsuttu Euroopan suurimmaksi lasikatoksi; sen alla olevan päähallin lattiaa on noin 13 500 neliömetriä. Ohut teräsrunko kantaa laajan katon ja päästää valon sisään, mikä teki lasi- ja rautarakenteista suosittuja 1800-luvulla esimerkiksi [[maailmannäyttely]]jen halleissa ja [[rautatieasemilla]]. Katto vaatii jatkuvaa huoltoa, sillä [[ruoste]] ja vesivuodot heikentävät rakennetta, ja se kunnostettiin perusteellisesti ennen vuoden 2024 [[olympialaisia]]. (Jatkot: Mitä Grand Palais'ssa on pidetty? / Miksi Grand Palais'n lasikatto ruostui?)
 
 - **niitti:** Niitti on metallinen kiinnitystappi, jolla teräs- ja rautaosat liitetään toisiinsa. Se kuumennetaan hehkuvaksi, työnnetään reikään ja takotaan päästä leveäksi, jolloin se jäähtyessään vetää osat tiukasti yhteen. [[Eiffel-tornin]] rakentamisessa niittejä käytettiin 2,5 miljoonaa. Jokainen tornin 18 038 osasta piirrettiin tarkasti etukäteen, ja osat valmistettiin [[Levallois-Perret'n]] konepajalla niin, että reikiä ei tarvinnut porata paikan päällä. (Jatkot: Miten Eiffel-torni koottiin? / Miksi niitit korvattiin myöhemmin hitsauksella?)
 
