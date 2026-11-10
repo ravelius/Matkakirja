@@ -32,3 +32,9 @@ Työlista on jono: `python3 -I /Users/Shared/Claude/Matkakirja-fable/tools/asema
 ## Vahdit
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min). 08.2x: VAHTI-VIRHE
   "fetch epäonnistui 5 kertaa" → viritä uudelleen; jos toistuu, rivi PT:lle.
+
+## LISÄYS 08.5x (PT, KK:n pyyntö) — ENNEN pino 7:ää, jono jarj 1 "Sacré-Cœurin koko puisto: koeajo ja pari"
+Pino 6 tarvitsee PELIKUVAPARIN: nykyinen (r8b) | koko puisto pelistä (ei vanhaa pohjapiirrosta). Valmistele koko puiston pohja KOKEENA
+(sama rajaus kuin nykyinen kuvakulma; lähde: koko puiston vanha pohja 24p, Resources/NotreDameKoe/sacre-coeur-pohja.png tai -r6 ja
+arkisto NotreDameKoe-arkisto/, tarkista kumpi on 436 m; Nahtavyysalue.cs rivi ~232 Pohja = …) koehaaraan + skenaario JU:lle (Mac,
+ylhäältä ja 45°, sama kamera molemmissa). Pari → lisää 6-sacre-coeur-puisto.md:hen ja PT:lle. Ei junaan. Sitten pino 7, Seine-katsaus.
