@@ -32,3 +32,9 @@ Uudelleenajo käynnissä taustalla 09.0x (`/Users/Shared/Claude/proto-3d/_tyo/ka
 
 ## Vahdit
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min, viritä uudelleen).
+
+## LISÄYS 09.2x: PT:n vastaus tuli (korvaa SEURAAVAKSI-kohdan 0)
+- Sacré-Cœur: suositus hyväksytty → pohja rajataan oikeaan puiston rajaan (OSM-puisto) + uusi koe, ei omistajalle ennen.
+- Louvre pino 7: PT katsoi, vie md:n ja kuvat KK:lle. KS:lle ei tehtävää.
+- BM: koe10 = harjat rivin suuntaan (kohta 1), bm-pari PT:lle; Lontoo ei junaan ennen iPad-paria.
+- NAS-siirto VALMIS: 9 worktreetä, 9,3 Gt (loki "VALMIS"); rivi PT:lle lähetetty.
