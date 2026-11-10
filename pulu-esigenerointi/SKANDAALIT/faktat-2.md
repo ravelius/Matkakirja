@@ -1,0 +1,49 @@
+# Faktantarkistus 2: LUETTAVAKSI.md rivit 119–228 (4 syvennystä)
+
+Tarkistaja: riippumaton agentti 10.11.2026. Vertailu: pelin korttitekstit tiedostosta syote.json (syvennys:pariisi-kyyhkyposti, syvennys:pariisi-impressionistit, syvennys:lontoo-vuorovesi, syvennys:lontoo-cheapside).
+
+## Löydökset (vakavimmat ensin)
+
+### Cheapsiden kätkö / Kerro lisää: smaragdi (rivi 223)
+- Väite: "Siksi 1600-luvun alun lontoolaisessa korukätkössä oleva kolumbialainen smaragdi on ajallisesti uskottava löytö."
+- Ongelma: Kätkö ei ole 1600-luvun alusta. Saman kohdan ensimmäinen vastaus (rivi 205) ja kortti ajoittavat kätkemisen sinettikiven perusteella vuosien 1640 ja 1666 välille, ja Wikipedian mukaan korut ovat 1500-luvun lopulta ja 1600-luvun alusta. Lause sekoittaa korujen iän ja kätkemisen ajan ja on ristiriidassa rivin 205 kanssa. [RISTIRIITA]
+- Lähde: https://en.wikipedia.org/wiki/Cheapside_Hoard ("a hoard of jewellery from the late 16th and early 17th centuries"; "dating the burial of the hoard between his ennoblement in November 1640 and the Great Fire of London in September 1666")
+- Korjausehdotus: "Siksi kolumbialainen smaragdi on ajallisesti uskottava löytö lontoolaisessa kätkössä, jonka korut ovat 1500-luvun lopulta ja 1600-luvun alkupuolelta ja joka kätkettiin vuosien 1640 ja 1666 välillä."
+
+### Cheapsiden kätkö / Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen? (rivi 211)
+- Väite: "Oudoin esine oli omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 [[sveitsiläinen kellokoneisto]]."
+- Ongelma: Valmis esine ei ole omenan kokoinen. Wikipedian mukaan smaragdi oli "alun perin" omenan kokoinen, eli raakakivi oli iso, mutta London Museumin luettelon mukaan valmiin smaragdikotelon mitat ovat noin 3,2 × 2,4 × 2,1 cm, eli se on pähkinän kokoinen. Lause antaa lapselle väärän kuvan esineen koosta. Sama virhe on pelin kortissa ("Oudoin esine on omenan kokoinen kolumbialainen smaragdi"), joten kortti on korjattava erikseen. [EPÄTARKKA]
+- Lähde: https://www.londonmuseum.org.uk/collections/v/object-117832/hexagonal-emerald-cased-verge-watch/ (koko 31,57 × 24,09 × 21,15 mm, c. 1600–1610); https://en.wikipedia.org/wiki/Cheapside_Hoard ("originally the size of an apple")
+- Korjausehdotus: "Oudoin esine oli kellonkuori, joka oli koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin vuoden 1600 [[sveitsiläinen kellokoneisto]]."
+
+### Thamesin laskuvesiranta / Mitä mudlarkit etsivät (rivi 181), Miksi Thamesin rannalla ei saa etsiä aarteita vapaasti? (rivi 187), Kerro lisää: Mudlarkit (rivi 193) ja Lontoon museolle (rivi 197)
+- Väite: "Löytöjä ei kuitenkaan saa pitää ihan vapaasti: yli kolmesataa vuotta vanhat esineet on ilmoitettava [[Lontoon museolle]]." (samoin rivit 187, 193 ja 197: "Thamesin rantaluvan ehtona on, että yli kolmesataa vuotta vanhat löydöt ilmoitetaan museolle")
+- Ongelma: Luvan ehdoissa ei ole kolmensadan vuoden rajaa. Port of London Authorityn vuoden 2024 lupaehtojen mukaan kaikki löydöt kirjataan ja ilmoitetaan muinaislöytöjen ilmoitusjärjestelmään (Portable Antiquities Scheme), ja London Museumin mukaan ilmoitettava on kaikki, mikä voi kiinnostaa arkeologisesti. Kolmensadan vuoden raja on London Museumin mukaan esimerkki siitä, mitä järjestelmä kattaa ("more than 300 years old or of significant historical interest"). Ilmoitus tehdään museossa toimivalle löytöjen yhteyshenkilölle (Finds Liaison Officer). Yksinkertaistus ei ole vakava, mutta sääntönä esitettynä se on epätarkka. Sama on kortissa. [EPÄTARKKA, vähäinen]
+- Lähde: https://pla.co.uk/sites/default/files/2024-10/Standard-foreshore-permits-terms-and-conditions.pdf (kohta 15: "All finds must be recorded and reported through the Portable Antiquities Scheme"); https://londonmuseum.org.uk/collections/london-stories/what-is-mudlarking ("Mudlarks must report any and all objects which could be of archaeological interest"); https://www.londonmuseum.org.uk/blog/what-does-finds-liaison-officer-do-london-mudlarks/
+- Korjausehdotus (rivit 181, 187 ja 193): "Arkeologisesti kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat esineet, on ilmoitettava [[Lontoon museolle]], jossa toimii löytöjen kirjaamisesta vastaava yhteyshenkilö." Rivillä 197 ilman linkkiä: "Thamesin rantaluvan ehtona on, että arkeologisesti kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat esineet, ilmoitetaan museossa toimivalle löytöjen yhteyshenkilölle, joka kirjaa ne ja tarvittaessa tutkii ne."
+
+### Piiritetyn Pariisin kyyhkyposti / Kerro lisää: René Dagron (rivi 139)
+- Väite: "Hän lähti kaupungista [[ilmapallolla]] ja jatkoi lähteiden mukaan työtään [[Toursissa]], josta viestit lähetettiin kyyhkyjen mukana Pariisiin."
+- Ongelma: Puutteellinen. Dagron lähti 12.11.1870 Niépce-pallolla, joka laskeutui miehitetylle alueelle; hän pakeni preussilaisilta ja pääsi Toursiin, jossa hän neuvotteli noin viikon. Varsinaiset filmit hän teki pääosin Bordeaux'ssa, minne hallituksen valtuuskunta siirtyi joulukuussa; ensimmäiset Bordeaux'n filmit ovat 15.12.1870. Kyyhkyt päästettiin lentoon Toursista ja myöhemmin Poitiersista. [EPÄTARKKA]
+- Lähde: https://fr.wikipedia.org/wiki/Ren%C3%A9_Dagron ; https://en.wikipedia.org/wiki/Pigeon_post
+- Korjausehdotus: "Hän lähti kaupungista [[ilmapallolla]] ja jatkoi työtään ensin [[Toursissa]] ja joulukuusta alkaen Bordeaux'ssa, ja valmiit filmit lähetettiin kyyhkyjen mukana Pariisiin."
+
+### Thamesin laskuvesiranta / Miksi Thamesin rannalla ei saa etsiä aarteita vapaasti? (rivi 187) ja Kerro lisää: Mudlarkit (rivi 193)
+- Väite: "Kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022."
+- Ongelma: Port of London Authorityn tiedotteen mukaan lupia oli vuonna 2022 noin 5 000 ("to 5,000 in 2022"), ei yli 5 000. Muut luvut täsmäävät: hakemukset keskeytettiin 2022, odotuslista avattiin 2.10.2024 ja enimmäismäärä on 4 000. Sama on kortissa. [EPÄTARKKA, vähäinen]
+- Lähde: https://pla.co.uk/port-london-authority-launches-new-foreshore-mudlark-permit-scheme
+- Korjausehdotus: "Kun lupia oli kertynyt noin 5 000, myynti keskeytettiin vuonna 2022."
+
+### Piiritetyn Pariisin kyyhkyposti / Kerro lisää: preussilaiset (rivi 135)
+- Väite: "Rauhansopimuksessa Ranska menetti osia Alsacesta ja Lorrainesta Saksalle ja joutui maksamaan suuren sotakorvauksen."
+- Ongelma: Alsacesta Ranska menetti lähes kaiken: koko Bas-Rhinin ja Haut-Rhinin departementin Belfortia lukuun ottamatta. Lorrainesta menetettiin osa (lähes koko Moselle ja osia muista). "Osia Alsacesta" vähättelee menetystä. [EPÄTARKKA, vähäinen]
+- Lähde: https://en.wikipedia.org/wiki/Treaty_of_Frankfurt_(1871)
+- Korjausehdotus: "Rauhansopimuksessa Ranska menetti lähes koko Alsacen ja osan Lorrainea Saksalle ja joutui maksamaan suuren sotakorvauksen."
+
+## Yhteenveto
+
+- Tarkistettuja väitteitä noin 140, joista verkkolähteestä haettu noin 60: lennätinlankojen ja Seinen kaapelin katkaisupäivät, Dagronin syntymä- ja kuolinvuosi, patentti 1859, sopimus 11.11.1870 ja hinta, pienennyssuhde, filmin paino, 20 filmiä kyyhkyä kohti, Niépce-pallo, Tours ja Bordeaux, taikalyhty, haukat, ilmapallojen määrä, Gambetta, Ville d'Orléans; Salon des Refusés -anomukset 1867 ja 1872, yhdistyksen perustaminen joulukuussa 1873 ja Salonista luopuminen, ensimmäinen näyttely ja 30 taiteilijaa, Leroyn juttu, kahdeksan näyttelyä; PLA:n lupamäärät, keskeytys ja uudelleenavaus, ilmoitusvelvollisuus, PLA:n perustaminen ja vastuualueen pituus, mudlarkit ja Mayhew; Cheapsiden löytövuosi, osoite, kappalemäärä, Staffordin sinettikivi ja ajoitus, jalokivien alkuperämaat, smaragdikello ja sen koko, William Howardin arvonimi ja teloitus, Cheapsiden nimen alkuperä. Loput luettiin läpi ja verrattiin korttiin ja yleistietoon.
+- Löydöksiä 6: [RISTIRIITA] 1, [EPÄTARKKA] 5 (niistä 3 vähäisiä). [VIRHE], [KIISTELTY], [EI VASTAA KYSYMYKSEEN] ja [SÄVY]: 0.
+- Kortin omat virheet: Cheapsiden kortin "omenan kokoinen kolumbialainen smaragdi" (sama korjaus kuin rivillä 211). Thamesin kortin "yli 5 000" ja kolmensadan vuoden sääntö ovat samat vähäiset epätarkkuudet kuin vastauksissa.
+- Ei huomautettavaa: Kyyhkyposti Q1 (lennätin 19.9. ja Seinen kaapeli 27.9. vastaavat Wikipediaa, 20 filmiä vastaa Dagronin artikkelia) ja Q2 (yli nelikymmenkertainen pienennys ja noin 0,05 g vastaavat Wikipediaa; haukat mainitaan Pigeon post -artikkelissa); Kerro lisää ilmapalloilla (lähteissä 66–67 palloa, joten "noin" riittää; Gambetta 7.10.1870, Ville d'Orléans Norjan Lifjelliin), René Dagron muilta osin (1819–1900 vastaa ranskankielistä Wikipediaa ja Wikidataa; englanninkielinen Wikipedia antaa 1817, mutta 1819 on tavallisin), mikrofilmillä, taikalyhdyllä, haukkoja; Impressionistit Q1 ja Q2 kokonaan; Kerro lisää Salon, Monet, Renoir, Pissarro, Louis Leroy, Impression, soleil levant (1872, ryöstö 1985, löytyi 1990 Korsikalta), impressionismista; Thames Q1 muilta osin; Kerro lisää savipiippuja, satamaviranomaiselta (PLA:n laki on vuodelta 1908 ja toiminta alkoi 31.3.1909; noin 150 km vastaa Wikipediaa); Cheapside Q1 kokonaan (1912, 30–32 Cheapside, yli 400 kappaletta, sinettikivi marraskuu 1640 ja suurpalo 1666); Q2 muilta osin (alkuperämaat vastaavat Wikipediaa sanasta sanaan); Kerro lisää Cheapside, Staffordin viscountin (arvonimi marraskuussa 1640, teloitus Tower Hillillä 29.12.1680), Lontoon suurpalossa, sveitsiläinen kellokoneisto (London Museumin luettelossa smaragdikellon tekijä on tyhjä, joten "Tekijän nimeä ei tunneta varmasti" on oikein; Wikipedian maininta G. Ferlitesta koskee museon mukaan toista kätkön kelloa), Cheapsiden kätkön.
+- Saman kohdan vastausten välillä ainoa ristiriita on smaragdikappaleen "1600-luvun alun" kätkö. Kerro lisää -kappaleiden väliset toistot (lupamäärät, Teddingtonin sulku, 20 filmiä, 0,05 g) ovat yhteneväiset. Lapselle sopimatonta tai oudon sävyistä ei löytynyt.

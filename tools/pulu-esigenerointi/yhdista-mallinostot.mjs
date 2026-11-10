@@ -38,11 +38,18 @@ const versio = luotu.replace(/[^0-9]/g, '').slice(0, 12);
 for (const m of Object.keys(uudet).sort()) {
   const vanhaTeksti = fs.readFileSync(path.join(vanhat, `${m}.json`), 'utf8');
   const p = JSON.parse(vanhaTeksti);
-  const ennen = JSON.stringify(p.kohdat);
+  // PULU_KORVAA=1 (PK 10.11.2026, lähdetarkistuksen korjaukset): olemassa olevan kohdan saa korvata korjatulla; muut vanhat ennallaan.
+  const korvaa = process.env.PULU_KORVAA === '1';
+  const vertailu = { ...p.kohdat };
+  if (korvaa) for (const kohta of Object.keys(uudet[m])) delete vertailu[kohta];
+  const ennen = JSON.stringify(vertailu);
+  let korvattu = 0;
   if (p.maa !== m) throw new Error(`${m}: paketin maa ${p.maa}`);
   let lisatty = 0;
   for (const [kohta, k] of Object.entries(uudet[m])) {
-    if (p.kohdat[kohta]) throw new Error(`${m}: ${kohta} on jo paketissa`);
+    const vanha = p.kohdat[kohta];
+    if (vanha && !korvaa) throw new Error(`${m}: ${kohta} on jo paketissa`);
+    if (vanha) { korvattu += 1; lisatty -= vanha.kysymykset.length + Object.keys(vanha.lisaa ?? {}).length; }
     p.kohdat[kohta] = k;
     lisatty += k.kysymykset.length + Object.keys(k.lisaa).length;
   }
@@ -52,10 +59,11 @@ for (const m of Object.keys(uudet).sort()) {
   if (JSON.stringify(tarkistus) !== ennen) throw new Error(`${m}: vanhat kohdat muuttuivat`);
   p.vastauksia = (p.vastauksia ?? 0) + lisatty;
   p.luotu = luotu;
-  p[process.env.PULU_MERKINTA ?? 'kohdekarttaNostot'] = { lisatty: luotu, kohdat: Object.keys(uudet[m]) };   // HETKET 10.11.: PULU_MERKINTA=hetket (ei ylikirjoita v3/v4:n merkintää)
+  if (!korvaa) p[process.env.PULU_MERKINTA ?? 'kohdekarttaNostot'] = { lisatty: luotu, kohdat: Object.keys(uudet[m]) };
+  else (p.korjaukset ??= []).push({ korjattu: luotu, kohdat: Object.keys(uudet[m]) });   // HETKET 10.11.: PULU_MERKINTA=hetket (ei ylikirjoita v3/v4:n merkintää)
   fs.writeFileSync(path.join(ulos, `${m}.json`), JSON.stringify(p));
   hakemisto.maat[m] = versio;
-  console.log(`${m}: +${Object.keys(uudet[m]).length} kohtaa (${Object.keys(uudet[m]).join(', ')}), +${lisatty} vastausta, versio ${versio}`);
+  console.log(`${m}: +${Object.keys(uudet[m]).length} kohtaa (${Object.keys(uudet[m]).join(', ')}), +${lisatty} vastausta, korvattu ${korvattu}, versio ${versio}`);
 }
 fs.writeFileSync(path.join(ulos, 'maat.json'), JSON.stringify(hakemisto, null, 1));
 console.log(`${v1.length} kysymysvastausta, ${nV2} linkkivastausta → ${ulos}`);
