@@ -128,3 +128,12 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
 - f34ae4717 (nahtavyydet-1-1 = b357fdfc1 + cherry-pick d36a7c7a2 [950bb8555] + Panthéon PohjaPoisKoodilla "pantheon:Panthéon" + PnKivi NahtavyysKivi), pushattu, 753/753, unity 0.
   OPPI: jokaiselle uudelle koodimallille, jonka alueella on Tripo-pohja (Invalidit, Opéra, Grand Palais…), PohjaPoisKoodilla = sen avain, muuten talot jäävät pohjan alle.
 - KJ10 (sk-mac-pantheon-kj10.txt, 5 kuvaa pn10-*, sis. lahizoomi 8 lähikuva) JU:lla KJ9:n jälkeen → lokit/karttaseppa-pantheon-kj10-f34ae4717 → pari pn8-koodi | pn10 KK:lle.
+
+## LISÄYS 22.5x: KK HYVÄKSYI PANTHÉONIN MUODON, b8fed770e, KJ10 JU:lla — NOLLAUS (konteksti 26 %)
+- KK 22.5x: Panthéon KJ8 "MALLI KELPAA", taso muille viidelle. Korjattava: raivaus mallin 1:1-pohjaan + korttelit (tehty f34ae4717: PohjaPoisKoodilla),
+  kivi "aavistuksen vaaleampi kuin viereiset talot" (b8fed770e: PnKivi = TaloKivi × 1,12; RK/ND pysyvät NahtavyysKivellä, KK pyysi niille "selvästi").
+  Osat kirjastoon: OhjelmaKohdeOsat.cs + OsaPylvasPaaty, OsaRumpu (Panthéon käyttää; kärkiä sama 10 116). KK:n sääntö: palauta KK:lle vasta, kun ympäristö on täynnä.
+- b8fed770e (karttaseppa/nahtavyydet-1-1, pushattu), 753/753, unity 0. KJ10 käännös vaihdettu JU:lle → lokit/karttaseppa-pantheon-kj10-b8fed770e (ajopyyntö PÄIVITYS 22.5x).
+- AVOIMET (uusi sessio): 1) KJ9 (d36a7c7a2) kuvat → pari KJ7 11-* | kivi-* kaukaa + lahi-* KK:lle (kopio PT), ND:n eteläpuoli mukana; KK ei kerro omistajalle 224.46:sta ennen sitä.
+  2) KJ10 kuvat → tarkista ympäristö täynnä → pari pn8-koodi | pn10 KK:lle. 3) KK:n työnkulkukysymys (asemat 1–2, parametriset osat) KJ9-parin jälkeen (PT 22.4x).
+  4) ND-eteläpohja puistoksi (224.47). 5) Invalidit → Opéra → Louvre → Sacré-Cœur → Sainte-Chapelle (PohjaPoisKoodilla + osakirjasto + raivaus 1:1).
