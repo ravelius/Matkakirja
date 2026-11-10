@@ -59,3 +59,12 @@ JU: 7491ded20 + skenaarion polku, museo-syy + uusinta. PT: 7491ded20, tilanneriv
   tarvittaessa AsetaNimi myös odotuksen jälkeen / UiSisalto.Lataa(…) ennen avausta. Muut erot parissa 17–33 % = lähestymiskuvan vaihtuminen?
   Katso A3/L1–L4 ennen pari PT:lle.
 - sk-museo-1.txt korjattu: oleta-rivit pelkkinä osamerkkijonoina (työkalu ei tue (a|b), JU).
+
+## LISÄYS 08.5x: PT:N KAKSI KYSYMYSTÄ ENNEN MUSEON VIENTIÄ (ENSIMMÄINEN TYÖSI, ennen Yksi tarkkuutta)
+PT 08.5x: "korjaus/selitys → minulle, sitten vienti + junaan".
+(1) A2/A1 Rijksmuseum: otsikosta puuttuu maa – palvelimen museo.json vai koodi? (ks. yllä: museo.json ei sisällä otsikoita; lähde
+    UiSisalto.Maa("NLD"), MuseoSovitin.Kuvalahestyminen.cs AsetaNimi rivi ~653 ja rakentaja ~711, Latauskuva.NimiJaMaa.)
+(2) L3 näyttely: oikea kuva keskellä ristihäivytystä (kaksi kuvaa päällekkäin) – hitaampi lataus palvelimelta vai kuvaushetki?
+    Mittaa kuvan saapumisaika ennen | jälkeen (lokit natiiviseppa-museo-1-6fc74dc14 vs -91bc37c4b-2; MuseoKuvasarja, sarjaSeur;
+    jälkeen-puolella seuraava ladataan synkronisesti MuseoKuvat.Lataa:lla eikä Resources.LoadAsyncilla → ajoitus voi siirtyä).
+LEVYSIIRTO: siirto-wt-0835.log oli kesken (koodikoko 08.45) nollaushetkellä; nollaus voi katkaista sen → aja uudelleen taustalla.
