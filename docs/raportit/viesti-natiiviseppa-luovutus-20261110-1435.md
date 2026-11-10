@@ -73,3 +73,5 @@ pohjana kaikissa Euroopan kaupungeissa. Marseillen tyhjä pohja isolla iPadilla 
 20 s jälkeenkin) = VIKA. Selvitä syy latauspaikkavuoto-epäilyn osana (yllä 16.3x: käynnissä ≫ luokkien summa, nälkä163b 30–35): koskeeko kaikkia
 piirroksettomia, sama kuin Lontoon tyhjä kartta / hidas verkko? KORJAA. OK = Marseille + yksi muu piirrokseton kaupunki näyttää striimikartan isolla
 iPadilla (JU:n vuorolla), myös hidastetulla verkolla. Syy + korjausversio PT:lle 3 rivillä. NUI odottaa korjausta nimizoomiin.
+- 16.17 JU pysäytti vanhalla lukolla olleet OX (yksi-tarkkuus a2 a4fd9ad6b), OC (pdg ennen-2/jalkeen-2 44b7cbd17), OC2 (pdg ennen-1/jalkeen-1);
+  NS: tarvitaan, PK9:n perään matalimmalla prioriteetilla (britannia-2-kylma ja kertoja-esilataus ensin). Lue kun ajettu (-1342 kohta 5, -1152/-1105).
