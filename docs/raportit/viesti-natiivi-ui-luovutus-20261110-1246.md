@@ -50,3 +50,6 @@ EI → ehdota PT:lle kytkin tai odotus junaan. Jos vastaus tuli edelliselle NUI-
 
 ## LISÄYS: MR-sha vaihtui (JU 13.2x konflikti d11281908:n kanssa)
 Junaan menee 4fa068fbf (natiivi-backup natiivi-ui/kaupungin-luettelo-lajit-2 = 40a735533 + merge d11281908; UiKomennot molemmat casit; unity 0 virhettä), ei 40a735533. JU:lle ilmoitettu.
+
+## LISÄYS (JU 13.3x): 4fa068fbf jonossa MR13 → linkki 224.23 (MR12:n jälkeen), koeyhdistys MR9–13 puhdas
+Lähtö odottaa NUI:n ilmoitusta JU:lle: kun PR 6557 on yhdistetty JA vie-sisalto.yml on vienyt kokoelmat → viesti JU:lle (local_2a7d6c96-…), JU kirjoittaa data OK -rivin, joka laukaisee MR13:n.
