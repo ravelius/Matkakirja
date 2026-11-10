@@ -29,3 +29,12 @@ omistaja: **"Keksi lisää."** Tarvitaan siis uusia merkkiaiheita kuvina, joista
 `_review-tarinamerkit-20261110/` (5 PNG + arkki) ja kuittaus `posti/codex-natiivi-ui-tarinamerkit-20261110-*.md` (SHA256 ja kutsumäärät).
 **Vain claude/postilaatikko.** Generointi: Codexin kuvien pysyvä lupa (Raamattu 7.15), 5 aihetta, enintään 2 ottoa per aihe.
 Natiivi-UI ajaa kuvat pelissä samaan Pariisin kohtaan (koehaara natiivi-ui/tarinamerkki-koe) → PT → KK → omistajan valinta.
+
+## TÄYDENNYS 10.11.2026 klo 21.3x (omistaja 21.27 KK:n ja PT:n kautta: "Pitää olla yksinkertainen jotta toimii")
+Korvaa yllä olevan aiheluettelon ja tyylin yksityiskohdat:
+- Merkin pitää tunnistaa **yhdellä vilkaisulla pienenäkin kuten kultatähti**: **yksi selkeä täytetty siluetti** (tumma seepia,
+  ohut vaalea pergamenttireuna erottamaan kartasta), **ei pikkuyksityiskohtia, ei sädekehää, ei kahta esinettä samassa kuvassa**.
+- Aiheet (5): `tarina-kirja` avoin kirja (KK:n suositus), `tarina-taskukello`, `tarina-sulka` (**ilman mustepulloa**),
+  `tarina-lyhty` (yksi yksinkertainen muoto), `tarina-tiimalasi` (yksinkertaistettu).
+- Muuten ennallaan: RGBA 256², aihe ≈ 170 px, liikkumaton, arkki 48 px:n koossa kartalla tähden rinnalla, toimitus `_review-tarinamerkit-20261110/`.
+- Natiivi-UI tekee sillä välin pelin sisäisen kokeen omilla yksinkertaisilla muodoilla (PT:n lupa); Codexin versiot korvaavat ne.
