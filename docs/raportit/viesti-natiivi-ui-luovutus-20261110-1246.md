@@ -43,3 +43,7 @@ Yllä oleva "AJOSSA JU:LLA" -kohta on tehty; jäljellä data 083410e11 PR + vien
   kun PK:n viittausvahvistus on tullut ja checks pass (PT:lle kerrottu).
 - Natiivin MR-pyyntö JU:lle: natiivi-ui/kaupungin-luettelo-lajit 40a735533 (+ pohjan nostoluettelo-kaupungit-commitit), riippuvuus PR 6557:n vientiin.
 - SEURAAVA: otsikkovärit (yllä), sitten Lontoo-saapuminen.
+
+## LISÄYS (PT 13.0x): PK:n vastaus PR 6557:stä tulee NUI:lle suoraan
+PK vahvistaa, ettei vienti muuta julkaistuja TF:iä (≤ 224.16) ilman natiivia. OK → yhdistä PR 6557, kun checks pass, ja natiivi-MR samaan junaan.
+EI → ehdota PT:lle kytkin tai odotus junaan. Jos vastaus tuli edelliselle NUI-sessiolle, kysy PK:lta uudelleen.
