@@ -1193,3 +1193,13 @@ Kortti 4 (08.11) "Näytetäänkö kartalla oletuksena vain nähtävyyksien ja t�
 Kortti 1 (08.13) "Viedäänkö Pariisin kartan kevyt filmi (lämmin tummempi sävy, reunojen tummennus, terävöinti, hento rae) junaan?" → "Kyllä, junaan (Recommended)" (iPad +21 Mt, huippu 3 979 < 4 080 Mt, iPhone mittaamatta).
 Kortti 2 (08.13) "Viedäänkö Pariisin kartan liukuvat pilvien varjot junaan filmin lisäksi?" → "Kyllä, junaan (Recommended)" (+25 Mt). Pallon elämä kokonaisuutena (filmi, terävöinti, pilvien varjot) junaan; raitiovaunut pysyvät pois (7.11. 16.43). KUMOAA 7.11. 19.02 "Ei junaan" (muisti nyt rajan alla).
 Asennussivun osio (KK 08.1x): "Odottaa sinua" vain omistajan päätöksiä tai toimia ("SINÄ:"-este), KK:n odottamat erikseen ("KK:"), teksti omistajan kielellä.
+
+## LATTIA7, PIENOISKARTTA, MUISTIKATOT, EI IPHONE-MITTAUKSIA JA PARIISIN NÄHTÄVYYDET KOODILLA (omistaja 10.11.2026 klo 08.52–09.36) (10.11.2026 klo 09.45)
+
+08.52 juoksupelin uusi yhtenäinen lattia "Kelpaa" + 08.53 "Pysyy" (kolme uutta vikaa korjataan erikseen) → kielletty-tausta-v130 viety 08.58, PK:n kulku OK; sokkelikivi, loota2, oja4, valo1 ja L-kehys LAV:n jonossa.
+09.19 pyynnöt: maakartalta avattu kohde jää sumeaksi (NS), ensimmäisen luennan viive (NS, mittaus ensin), kerronnan tauko pysäyttää kierron ja jatko jatkaa (NUI).
+09.22 maakartan 3D-kohteet: koe Ranskassa kaupunkien tyyppimallien jälkeen; KK suunnittelee kolmen tason hierarkian.
+09.28 "Kyllä, kartta korvaa napin": Palaa näkymään -nappi korvautuu maan pienoiskartalla vasemmassa alakulmassa (NUI); "Kyllä": jokaisella näkymällä oma muistikatto (KK:n muistisuunnitelma, PÄIVITYS 10.11.).
+09.31 Saint-Germain-l'Auxerrois "Kirkko jää pois" – RAUKESI 09.36:n myötä (kirkko palaa oikean kokoisen Louvren viereen).
+09.32 ei koskaan mittauksia iPhonella, vain iso iPad (Raamattu 12.26 kohta 4).
+09.34 Riemukaari koodilla vertailuun "Kyllä"; 09.36 "Tehdäänkö Pariisi ensin loppuun koodilla piirretyillä nähtävyyksillä, Tripo-mallit talteen?" → "Kyllä, Pariisi ensin (Recommended)": nähtävyydet koodilla oikeassa koossa, Tripo-mallit ja kuvat talteen levylle ja kytkimen taakse (ei poistoja), kolme ensimmäistä (Riemukaari, Notre-Dame, Eiffel) kuvapareina ennen loppuja. KORVAA 9.11. 22.42 "Pariisin tehdyt jäävät" ja G-liioittelun lähtökohtana Pariisissa (liioittelu vain kortilla). Raukesivat: Sacré-Cœurin puiston koe, Louvren kirkon kaista, Riemukaaren Codex-korjaus, mallien kuvien pakkaus (muistivaihe 3), lähialueen 25 m:n sääntö ja mallimaskit. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261110-pariisin-nahtavyydet-koodilla.md.
