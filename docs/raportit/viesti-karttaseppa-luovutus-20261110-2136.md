@@ -42,3 +42,5 @@ Pino: … 261067f00 Invalidit → 613d32f16 Opéra → 939dde71a Sainte-Chapelle
 ## LISÄYS 21.4x
 - JU kuittasi KJ5:n vielä käännöksellä 939dde71a (viestini 21.30); 21.33:n päivitys f979c8d59 toimitettu JU:lle myöhemmin. Tarkista, kumpi ajettiin (loki -939dde71a vai -f979c8d59);
   jos 939dde71a, pyramidi (lv-*) puuttuu → uusi pieni pyyntö f979c8d59:lle.
+- 21.4x: LEVY TEHTY: PT:n/Postivahdin 21.3x käskyllä 6 vanhaa worktreeta pois (git worktree remove; kaikki puhtaita, haarat etäpalvelimella), noin 7 Gt; NAS-kopio keskeytetty (NAS:lla katot-koe7 kokonaan, beauvoir osittain). Jäljellä vain proto-karttaseppa-koodijuna.
+- 21.39: LOUVRE KK:n 1)–3) tehty 5a01b0324 (katot LvLiuske 0x7D8996, lämmin kivi); KJ5 nyt 5a01b0324 (loki -5a01b0324). PT:lle vastattu a) korostus K 2 -säännöllä (korkeus ×2, jalanjälki +150 m) b) vaalea raivaus ei palaudu itsestään → rajattava mallin jalanjälkeen (16.18): SEURAAJAN TYÖ, selvitä mekanismi (pohja/talojen raivaus Louvre-alueella).
