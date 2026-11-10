@@ -40,3 +40,8 @@ Tulokset 1 (pysty-2), 2 (kontrasti-pari), 3 (tapit-pari); sitten rivi PT:lle "JO
   nähtävyyslataus|Exception", kuvat n1/n2 → pari PT:lle (+ KS:lle loki).
 - KS:lle lähetetty: ND:n mallin luonti laitteella (normaalikartta/ASTC-epäily), LuoMalliin try/catch + loki. Selvitä KS:n kanssa suoraan.
 - Mac-kontrastipari (sk-kontrasti-1) → PT kun valmis.
+
+## LISÄYS 19.5x/2 (PT): EI erillistä 033ba90b5-iPad-paria
+- KS yhdistää 71c52a6c0 (karttaseppa/luomalli-kestava, LuoOsat kestäväksi) + 033ba90b5 yhdeksi kärjeksi; JU ajaa sen ensimmäisenä isolla iPadilla
+  (Pariisi + loki). JU:lle pyydetty poistamaan nui-ipad-nimet-kontrasti-1 (sk kelpaa yhdistelmälle). pt-ok vasta laitelokin jälkeen.
+- Tee: kun yhdistelmän loki tulee, katso nimet + ND + kirja/Liiku → PT:lle. Mac-kontrastipari sk-kontrasti-1 yhä JU:lla → PT.
