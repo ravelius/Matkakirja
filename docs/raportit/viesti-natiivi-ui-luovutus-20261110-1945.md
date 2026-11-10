@@ -49,3 +49,6 @@ Tulokset 1 (pysty-2), 2 (kontrasti-pari), 3 (tapit-pari); sitten rivi PT:lle "JO
 ## LISÄYS 19.5x/3 (PT)
 - KS yhdistää f4ddf1655:n haaraan karttaseppa/luomalli-kestava (9c1f51eb6:ssä oli vain 2592bf839); uusi kärki = JU:n iPad-ajo (Pariisi-sk + sk-ipad-nimet-kontrasti-1).
 - PT:lle menevään kuvapariin MYÖS kirja + Liiku -rajaus (sama rajaus ennen/jälkeen; kirja ylävasen, Liiku alakeskellä), sekä Mac- että iPad-parista.
+
+## LISÄYS 19.5x/4
+- KS:n yhdistelmäkärki = 0f0f950a6 (karttaseppa/luomalli-kestava): sisältää 2592bf839 + f4ddf1655 + 71c52a6c0 (tarkistettu merge-base). JU ajaa sillä → lokit/nui-ipad-nimet-kontrasti-1-0f0f950a6 (kärjen lyhyt sha voi poiketa).
