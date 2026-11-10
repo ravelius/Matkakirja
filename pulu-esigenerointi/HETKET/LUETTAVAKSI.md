@@ -2,6 +2,9 @@
 
 PK 10.11.2026. 22 kysymystä + 58 "Kerro lisää" -vastausta. Paketti v5, ei viety.
 
+HUOM 10.11. 03.0x: KK:n tarkistuksen 23 korjausta ovat vaihe1.json/vaihe2.json:ssa ja paketissa pulu-v5-hetket-20261110-2;
+tämä luettava teksti on korjauksia edeltävä. Muutokset ennen/jälkeen: MUUTOKSET-KK-20261110.md.
+
 ## Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia (hetki:marie-curie-hangaari-1898)
 
 **Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?**
