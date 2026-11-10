@@ -33,3 +33,6 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   sk-ipad-osa6-logiikkaviat.txt (md5 7c07989e266a) → lokit/pk-osa6-4df0ce2a3-ipad. Katso o1–o4 ja lokista "ulkoesineet peliin, N kpl"
   ennen 1. juoksua → rivi PT:lle.
 - OSA 8 ovet-2 Mac-ajo JU:lla käynnissä 19.17 (ipad-koko, raja 40 min) → lokit/pk-osa8-ovet-mac-3eb33531c-2 (kohta 1.3).
+- 19.4x: JU:lle KÄRKI aae0ab729 (ei 92e50fb68). Osan 11 sk proto-3d/_tyo/pelikoodari/osa11/sk-ipad-osa11-opasteet.txt (md5 a4fb9faa2d77, kuvat p1–p23)
+  → lokit/pk-osa11-aae0ab729-ipad; osan 6 sk samalla käännöksellä → lokit/pk-osa6-aae0ab729-ipad. Iso iPad heti uudelleenkäynnistyksen jälkeen.
+  Katso kuvat (ohjeteksti + peukalon syke, lähtölause vain palkissa) ja lokin "opetus X → Y" -rivit → rivi PT:lle.
