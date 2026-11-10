@@ -1327,3 +1327,7 @@ Omistaja kysyi 20.26 "Milloin se raamatun kevennys kannattaa tehdä?"; KK suosit
 ## Nähtävyyksien erottuvuus kaukaa kokeiltavaksi (omistaja 10.11. 20.51) (10.11.2026 klo 20.51)
 
 Kortti KK:ssa (4 kuvaa: pari-rk-viisto, rajaus-rk, pari-yleis, rajaus-nd): "Kyllä, kokeiltavaksi (Suositus)". VS 593d09722 (pieni nähtävyys vaalenee hieman, ohut tumma ääriviiva; läheltä ei muutosta; Eiffel ei) asennusversioon koodimallien kanssa, ei lopullinen: omistaja arvioi pienellä iPadilla, KK kysyy sitten, jääkö. Huomiot VS:lle: viiva paikoin rosoinen/katkonainen Macin rajauksissa, Louvre haalistuu yleiskuvassa, Riemukaari hieman litteä.
+
+## Tarinamerkit: lisää vaihtoehtoja ja tarinat näkyviin (omistaja 10.11. 21.12) (10.11.2026 klo 21.12)
+
+Kortti KK:ssa (tiimalasi / huutomerkki / raunio, NUI e59888f0b): omistaja sanatarkasti "Keksi lisää. Mitä tarinoita noissa on esimerkiksi" → ei valintaa, tiimalasia ei lukita. NUI:n toinen kierros samasta kohdasta samalla rajauksella (koe): avoin matkakirja (KK:n suositus), sulkakynä + mustepullo, isoisän taskukello, lyhty, tiimalasi vertailuksi; sepia, yksi merkki/paikka, tähti voittaa (2bdd4d55f); selitteessä jokaisen merkin tarina, kuvan ulkopuolella. Kuvakkeet pelistä tai Codexin kuvat-sessiolta (7.15).
