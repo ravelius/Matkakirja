@@ -35,3 +35,20 @@
 - 10 FRA skandaali:mona-lisan-varkaus-1911 / kysymykset / 0: epätarkka (1)
   ENNEN: ja päivä oli kesäkauden sulkupäivä, jolloin talo oli tyhjä.
   JÄLKEEN: ja maanantai oli museon viikoittainen sulkupäivä, jolloin talo oli tyhjä.
+
+# KK 10.11. 03.24: osa A kelpaa; osa B (ehdotukset) samaan pakettiin (-3)
+- B1 FRA skandaali:vrain-lucas-kirjevaarennokset / kysymykset / 1 (1)
+  ENNEN: Väittely jatkui vuoteen 1868, ja seuraavana vuonna väärentäjä pidätettiin.
+  JÄLKEEN: Väittely jatkui pari vuotta, ja vuonna 1869 väärentäjä pidätettiin.
+- B2 FRA skandaali:vrain-lucas-kirjevaarennokset / kysymykset / 0 (1)
+  ENNEN: jotta sisältö kuulostaisi uskottavalta, ja kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi vesileimatulle paperille.
+  JÄLKEEN: jotta sisältö kuulostaisi uskottavalta. Silti kaikki kirjeet olivat hänen oman aikansa ranskaa, mikä olisi voinut paljastaa ne heti.
+- B3 GBR skandaali:etelameren-kupla / kysymykset / 0 (1)
+  ENNEN: lähes liikkeeseenlaskuhintaan
+  JÄLKEEN: lähes lähtöhintaansa
+- B4 GBR kohdekartta:lontoo:Royal Observatory / kysymykset / 0 (1)
+  ENNEN: ratkesi kahdella tavalla: observatorion tähtitaulukoilla, ja [[John Harrison]] ratkaisi sen tarkoilla [[merikelloillaan]].
+  JÄLKEEN: ratkesi kahdella tavalla: observatorio laati tähtitaulukot, ja [[John Harrison]] ratkaisi sen tarkoilla [[merikelloillaan]].
+- B5 GBR kohdekartta:lontoo:Westminster Bridge / lisaa / ylähuoneen (1)
+  ENNEN: viimeisetkin perinnöllisinä jäseninä istuneet poistettiin
+  JÄLKEEN: viimeisetkin perinnölliset paikat lakkautettiin

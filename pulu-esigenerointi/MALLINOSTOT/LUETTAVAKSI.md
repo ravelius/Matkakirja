@@ -1,6 +1,6 @@
 # Pulun valmiit vastaukset: korjattu 10.11.
 
-PK 10.11.2026. 8 kysymystä + 25 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-2).
+PK 10.11.2026. 8 kysymystä + 25 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-3).
 
 ## Invalidit (Pariisi) (kohdekartta:pariisi:Invalidit)
 

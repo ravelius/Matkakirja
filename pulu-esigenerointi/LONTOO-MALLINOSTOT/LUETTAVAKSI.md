@@ -1,6 +1,6 @@
 # Pulun valmiit vastaukset: korjattu 10.11.
 
-PK 10.11.2026. 28 kysymystä + 81 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-2).
+PK 10.11.2026. 28 kysymystä + 81 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-3).
 
 ## Westminster Abbey (Lontoo) (kohdekartta:lontoo:Westminster Abbey)
 
@@ -86,7 +86,7 @@ Jatkot: Mitä eroa on alahuoneella ja ylähuoneella? / Milloin Lambeth Bridge ra
 
 - **Lambeth Bridge:** Lambeth Bridge on Thamesin ylittävä silta Westminsterin palatsin toisessa päässä. Nykyinen teräskaarisilta avattiin vuonna 1932, ja se on maalattu punaiseksi kuten ylähuoneen penkit. Sillan nimi tulee Lambethin kaupunginosasta, jossa sijaitsee [[Lambeth Palace]], [[Canterburyn arkkipiispan]] Lontoon-asunto. Sitä edelsi 1860-luvulla rakennettu riippusilta. (Jatkot: Mikä Lambeth Palace on? / Kuka on Canterburyn arkkipiispa?)
 
-- **ylähuoneen:** Ylähuone eli House of Lords on Yhdistyneen kuningaskunnan parlamentin toinen kamari. Sen jäsenet eivät ole kansan valitsemia: suurin osa on elinikäisiä lordeja, jotka nimitetään tehtävään, ja mukana on myös [[Englannin kirkon]] piispoja. Pitkään suuri osa jäsenistä oli [[perinnöllisiä ylhäisöjä]], mutta vuonna 1999 heidän määränsä leikattiin noin yhdeksäänkymmeneen, ja vuonna 2026 viimeisetkin perinnöllisinä jäseninä istuneet poistettiin. Ylähuone tarkastelee alahuoneen hyväksymiä lakeja ja voi ehdottaa niihin muutoksia. Ennen vuotta 2009 se toimi myös maan ylimpänä tuomioistuimena. (Jatkot: Miten lordit nimitetään? / Voiko ylähuone estää lakeja?)
+- **ylähuoneen:** Ylähuone eli House of Lords on Yhdistyneen kuningaskunnan parlamentin toinen kamari. Sen jäsenet eivät ole kansan valitsemia: suurin osa on elinikäisiä lordeja, jotka nimitetään tehtävään, ja mukana on myös [[Englannin kirkon]] piispoja. Pitkään suuri osa jäsenistä oli [[perinnöllisiä ylhäisöjä]], mutta vuonna 1999 heidän määränsä leikattiin noin yhdeksäänkymmeneen, ja vuonna 2026 viimeisetkin perinnölliset paikat lakkautettiin. Ylähuone tarkastelee alahuoneen hyväksymiä lakeja ja voi ehdottaa niihin muutoksia. Ennen vuotta 2009 se toimi myös maan ylimpänä tuomioistuimena. (Jatkot: Miten lordit nimitetään? / Voiko ylähuone estää lakeja?)
 
 ## Cutty Sark (Lontoo) (kohdekartta:lontoo:Cutty Sark)
 
@@ -312,7 +312,7 @@ Jatkot: Milloin Viktoriasta tuli kuningatar? / Mikä Kensington Gardens on?
 
 **Mitä Greenwichin observatorion piti alun perin ratkaista?**
 
-Hyvä kysymys tuo. Observatorion piti ratkaista pituusasteen määrittäminen merellä. Leveysasteen laiva sai auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, ja lopulta ongelma ratkesi kahdella tavalla: observatorion tähtitaulukoilla, ja [[John Harrison]] ratkaisi sen tarkoilla [[merikelloillaan]]. Kyyhky löytää kotiin ilman kelloa.
+Hyvä kysymys tuo. Observatorion piti ratkaista pituusasteen määrittäminen merellä. Leveysasteen laiva sai auringosta, mutta pituusastetta ei osattu laskea, ja laivoja ajoi karille. [[Kaarle II]] perusti observatorion 1675 ratkaisemaan ongelman tähtien avulla, ja lopulta ongelma ratkesi kahdella tavalla: observatorio laati tähtitaulukot, ja [[John Harrison]] ratkaisi sen tarkoilla [[merikelloillaan]]. Kyyhky löytää kotiin ilman kelloa.
 
 Jatkot: Kuka oli John Harrison? / Mikä on nollameridiaani?
 

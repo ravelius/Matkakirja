@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 V=/Users/Shared/Claude/proto-3d/_valmiit
-U=$V/${PULU_PAKETTI:-pulu-v6-skandaalit-20261110-2}   # -2: KK:n luku 10.11. 03.20 (MUUTOKSET-KK.md)
+U=$V/${PULU_PAKETTI:-pulu-v6-skandaalit-20261110-3}   # -2: KK:n luku 10.11. 03.20 osa A; -3: + osa B 03.24 (MUUTOKSET-KK.md)
 W=/Users/Shared/Claude/wt/pulu-kaupungit-maat
 Y=$W/tools/pulu-esigenerointi/yhdista-mallinostot.mjs
 D=$U/pulu/vastaukset/v6
@@ -22,7 +22,7 @@ Sisältö: v5 (pulu-v5-hetket-20261110-4, ämpärissä) + 8 korttia kohdissa ska
 16 kysymysvastausta + 48 "Kerro lisää" (Sonnet-agentit; PK faktatarkistus 8 korjausta; kaksi Opus-lähdetarkistajaa faktat-1/2.md, 14 korjausta).
 Lisäksi korvattu korjatuilla: Pariisin kohdekartta (v3, 4 kohdetta, 10 korjausta MALLINOSTOT/faktat-1.md) ja Lontoon kohdekartta (v4, 14 kohdetta,
 18 korjausta LONTOO-MALLINOSTOT/faktat-1/2.md). Muutokset ennen/jälkeen: kunkin kansion MUUTOKSET-FAKTAT.md.
-KK:n luku 10.11. 03.20 (osa A, 10 kohtaa: kaksi kahdennusta, kielivirhe, kirjoitusasu, vanhojen muotojen jäänteet): SKANDAALIT/MUUTOKSET-KK.md. Muut kohdat tavulleen v5:n mukaiset.
+KK:n luku 10.11. 03.20 (osa A, 10 kohtaa: kaksi kahdennusta, kielivirhe, kirjoitusasu, vanhojen muotojen jäänteet) ja osa B 03.24 (5 sanamuotoa): SKANDAALIT/MUUTOKSET-KK.md. Muut kohdat tavulleen v5:n mukaiset.
 Lähde: Matkakirja pelikoodari/pulu-kaupungit-maat (pulu-esigenerointi/SKANDAALIT, MALLINOSTOT, LONTOO-MALLINOSTOT). Natiivi: PuluValmiitLataus.Kohta
 skandaali:/syvennys: (NUI a970b0d1c); version polku v4 → v6 natiivissa vielä tekemättä.
 T

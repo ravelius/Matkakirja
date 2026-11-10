@@ -1,6 +1,6 @@
 # Pulun valmiit vastaukset: korjattu 10.11.
 
-PK 10.11.2026. 16 kysymystä + 48 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-2).
+PK 10.11.2026. 16 kysymystä + 48 "Kerro lisää" -vastausta. Paketti v6 (pulu-v6-skandaalit-20261110-3).
 
 ## Mona Lisan varkaus (skandaali:mona-lisan-varkaus-1911)
 
@@ -34,13 +34,13 @@ Jatkot: Mitä Peruggialle tapahtui oikeudessa? / Miten Mona Lisa päätyi alun p
 
 **Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?**
 
-Ai tota. Tää oli kyl taitava huijari. Denis Vrain-Lucas hankki aikakauden mukaista paperia ja valmisti musteensa itse. Kirjeiden yksityiskohdat hän keräsi [[keisarillisesta kirjastosta]], jotta sisältö kuulostaisi uskottavalta, ja kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi vesileimatulle paperille. Menestys nojasi kuitenkin yhtä paljon ostajaan: matemaatikko ja keräilijä [[Michel Chasles]] halusi uskoa kirjeisiin, joissa [[Blaise Pascal]] ilmoitti keksineensä painovoiman lait ennen Newtonia. Vasta kun Chasles vei kirjeet [[tiedeakatemialle]] vuonna 1867, käsiala ja ajankuvaan sopimattomat yksityiskohdat alkoivat paljastaa väärennökset. Musteen keittäminen itse, siin on omistautumista.
+Ai tota. Tää oli kyl taitava huijari. Denis Vrain-Lucas hankki aikakauden mukaista paperia ja valmisti musteensa itse. Kirjeiden yksityiskohdat hän keräsi [[keisarillisesta kirjastosta]], jotta sisältö kuulostaisi uskottavalta. Silti kaikki kirjeet olivat hänen oman aikansa ranskaa, mikä olisi voinut paljastaa ne heti. Menestys nojasi kuitenkin yhtä paljon ostajaan: matemaatikko ja keräilijä [[Michel Chasles]] halusi uskoa kirjeisiin, joissa [[Blaise Pascal]] ilmoitti keksineensä painovoiman lait ennen Newtonia. Vasta kun Chasles vei kirjeet [[tiedeakatemialle]] vuonna 1867, käsiala ja ajankuvaan sopimattomat yksityiskohdat alkoivat paljastaa väärennökset. Musteen keittäminen itse, siin on omistautumista.
 
 Jatkot: Miten tiedeakatemia paljasti kirjeet vääriksi? / Kuka Michel Chasles oli ja miksi hän uskoi kirjeisiin?
 
 **Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne?**
 
-Annas ku mietin. Kun [[tiedeakatemia]] huomautti anakronismeista eli ajankuvaan sopimattomista yksityiskohdista, Vrain-Lucas ei myöntänyt virheitään vaan väärensi lisää kirjeitä, joiden oli tarkoitus selittää edelliset. Jo silloin, kun [[Michel Chasles]] vei kirjeet akatemialle vuonna 1867, huomattiin, ettei käsiala vastannut [[Pascalin]] varmoja kirjeitä. Väittely jatkui vuoteen 1868, ja seuraavana vuonna väärentäjä pidätettiin. Helmikuussa 1870 Pariisin tuomioistuin antoi hänelle kaksi vuotta vankeutta ja 500 frangin sakon, eikä Chasles saanut rahojaan takaisin. Yksi valhe vaatii aina toisen, sen minäkin tiedän.
+Annas ku mietin. Kun [[tiedeakatemia]] huomautti anakronismeista eli ajankuvaan sopimattomista yksityiskohdista, Vrain-Lucas ei myöntänyt virheitään vaan väärensi lisää kirjeitä, joiden oli tarkoitus selittää edelliset. Jo silloin, kun [[Michel Chasles]] vei kirjeet akatemialle vuonna 1867, huomattiin, ettei käsiala vastannut [[Pascalin]] varmoja kirjeitä. Väittely jatkui pari vuotta, ja vuonna 1869 väärentäjä pidätettiin. Helmikuussa 1870 Pariisin tuomioistuin antoi hänelle kaksi vuotta vankeutta ja 500 frangin sakon, eikä Chasles saanut rahojaan takaisin. Yksi valhe vaatii aina toisen, sen minäkin tiedän.
 
 Jatkot: Mitä Vrain-Lucasille tapahtui tuomion jälkeen? / Miksi Chasles maksoi kirjeistä niin paljon?
 
@@ -62,7 +62,7 @@ Jatkot: Mitä Vrain-Lucasille tapahtui tuomion jälkeen? / Miksi Chasles maksoi 
 
 **Miten yhtiö itse paisutti oman osakkeensa hintaa?**
 
-Nyt muistan: tää oli se kuuluisa kupla. [[South Sea Companyn]] osakkeen hinta nousi vuonna 1720 noin sadasta punnasta lähes tuhanteen, ja yhtiö vauhditti nousua itse. Se osti omia osakkeitaan, lainasi ostajille rahaa samoja osakkeita vastaan ja lahjoi poliitikkoja, ja johtajat kävivät kauppaa etukäteistiedolla. Kesäkuussa säädetty [[Bubble Act]] kielsi osakeyhtiöiden perustamisen ilman kuninkaan lupaa, ja se nosti kurssia entisestään. Sen jälkeen kurssi romahti lähes liikkeeseenlaskuhintaan, ja [[parlamentin]] tutkinta nöyryytti joukon poliitikkoja. Kyl kuplat kiehtovat, kunhan ne pysyy kaukana omasta pesästä.
+Nyt muistan: tää oli se kuuluisa kupla. [[South Sea Companyn]] osakkeen hinta nousi vuonna 1720 noin sadasta punnasta lähes tuhanteen, ja yhtiö vauhditti nousua itse. Se osti omia osakkeitaan, lainasi ostajille rahaa samoja osakkeita vastaan ja lahjoi poliitikkoja, ja johtajat kävivät kauppaa etukäteistiedolla. Kesäkuussa säädetty [[Bubble Act]] kielsi osakeyhtiöiden perustamisen ilman kuninkaan lupaa, ja se nosti kurssia entisestään. Sen jälkeen kurssi romahti lähes lähtöhintaansa, ja [[parlamentin]] tutkinta nöyryytti joukon poliitikkoja. Kyl kuplat kiehtovat, kunhan ne pysyy kaukana omasta pesästä.
 
 Jatkot: Mikä oli Englannin Pankin rooli Etelämeren kuplan jälkeen? / Mikä on pörssikupla ja miten se syntyy?
 
