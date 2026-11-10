@@ -1118,3 +1118,15 @@ Siirretty Raamatusta sanatarkasti (7.39 ja 7.47 lyhennetty samalla): omistaja 20
 ## KK:N PYSYVÄ MALLI FABLE 5.2 (9.11.2026 klo 23.27)
 
 Omistaja 23.26: "Miten sen saa muutettua että jatkossa olet aina fable?" → KK:n kortti "Asettaako Päätoimittaja Fablen tämän keskustelun pysyväksi malliksi nyt?" = "Kyllä, nyt (Suositus)". PT asetti set_session_model local_d5f31591 → claude-fable-5-2 (tulos: "will use claude-fable-5-2 from its next turn on"). Koskee vain KK:ta; agenttisääntö (1.1) ennallaan. Samana iltana: pelin koko osa 3 / nähtävyydet NS 380bd41cc kuitattu junaan 224; tärinäkorjaus 3580eb0f2:n päälle ⚙-kytkimellä yön kehitysversioon (koe, ei junaan).
+
+## KESKUSTELUKANAVAN OLETUSTASO KOHTALAISEKSI (omistaja 10.11.2026 klo 06.10) (10.11.2026 klo 06.10)
+
+Omistaja 06.0x: "Sinulle voisi muuttaa oletus effort tasoksi kohtalainen, se oli jäänyt maksimiin. Nostan sitten itse sitä aina tarvittaessa kun pitää miettiä jokin isompi asia." Kortti 06.10 "Vaihdanko Keskustelukanavan oletustasoksi kohtalaisen?" → "Kyllä, kohtalainen". PT asetti KK:n (local_d5f31591) tason medium 06.10; osoitekirja päivitetty.
+
+## PARIISIN NOSTOJEN KYSYMYKSET JA KUVASELITTEET (omistaja 10.11.2026 klo 06.12) (10.11.2026 klo 06.13)
+
+Kortti "Hyväksytkö Pariisin nostojen 22 kysymystä ja 15 kuvaselitettä?" → "Kyllä, selite 12 korjaten". Näytetty kysymykset-pariisi-luonnos.md (22), commons-kuvat-pariisi/selitteet-luonnos.md (15, 01-a uusi kirjeselite) ja arkki pariisi-kuvat-2000.jpg. Selite 12 (07-bastiljin-valtaus-a.jpg): "Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; siitä tuli Ranskan vallankumouksen tunnetuin hetki." KS vie dataan; Lontoon tekstit omalla kortillaan.
+
+## JUOKSUPELIN ALKULENNON VARJOT KELPAA (omistaja 10.11.2026 klo 06.19) (10.11.2026 klo 06.20)
+
+Pyyntö 1d (8.11. 22.32 "Voisiko ne piirtyä jo kauempaa?"). Kortti "Kelpaavatko juoksupelin alkulennon varjot näin?" → "Kelpaa"; näytetty pari-1d-224-c98-ennen-nyt-a-4s.png. 1e ja 1f junassa 224; omistaja näkee ne uudesta asennuslinkistä (JU vie kärjen).
