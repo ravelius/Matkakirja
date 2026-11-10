@@ -77,3 +77,4 @@ Parit PT:lle.
   - Tähtien väistö: dce3d6ae0 (wt /Users/Shared/Claude/wt/proto-nui-tauko, haara natiivi-ui/kuvakyltti-tahdet = 153602c0f + juna-224 + Kohdelaatikot
     lisää ★:n worldBoundin). JU:lla sk-kuvakyltti-2-mac → lokit/nui-kuvakyltti-2-mac-dce3d6ae0; pari ennen lokit/nui-kuvakyltti-1-mac-153602c0f 1b/2b/3b
     → PT → KK (koe, ei junaan ilman korttia).
+- JU 14.07: linkki 224.24 = 35271aade (4fa068fbf mukana, tarkistettu) → tehty: aiheeton nähtävyys, Kaupungit-kohta, Kaikki klikattavat.
