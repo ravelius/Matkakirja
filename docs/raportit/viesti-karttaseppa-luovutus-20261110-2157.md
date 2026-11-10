@@ -98,3 +98,11 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
   D) KK:n kysymys (parametriset osat) yhä vastaamatta; OhjelmaKohdeOsat.cs on vastauksen alku.
 - 22.2x: NUI 7d4e5b2b6 (natiivi-ui/nahtavyys-paisuu, 098f9f05c:n päällä: Kartta/PaisuntaTila.cs, _nahtavyysPiilo TaloKerroksessa, kerroin myös Tripo-skaalaan)
   → KATSO ennen junaa; puiden varjostin = Linssit/Resources/Varjostimet/KaupunkiPuu.shader (kerrottu NUI:lle). KJ7 ajettiin uudelleen 22.1x (JU:n L2-vika), KJ8 sen jälkeen.
+
+## LISÄYS 22.27: KJ7 KATSOTTU, PARIT KK:LLE
+- KJ7 (JU 22.25, 12/12, talot palat-v25-kolme-1-1 219/219) katsottu täysikokoisena → parit K 2 | 1:1 KK:lle ja kopio PT:lle 22.27:
+  proto-3d/_tyo/karttaseppa/koodijuna/parit-kj7-098f9f05c/ (pari-*-kaukaa|lahelta.jpg, rajaus-*.jpg).
+- RK 1:1: etelästä näkyy kapea 22 m sivu (mitat oikein, K 2:ssa leveys venytetty) → kaukaa heikko; ehdotettu väri + aukko, ei kokoa.
+- ND: 18 taloa palasi, mutta eteläpuolelle jää K 2 -maapohjan vaalea kenttä + 2 yksittäistä taloa → KORJAA -k2-maapohja 1:1-raivauksen kokoiseksi.
+- Eiffel ok (4 taloa palasi; joen puolella vaalea kiveys jää, käy aukioksi).
+- Odottaa: KK:n vastaus pareihin; KJ8 (Panthéon) JU:lla.
