@@ -113,3 +113,12 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
 - KJ9 (sk-mac-kivi-kj9.txt, 11 kuvaa: kivi-* = KJ7:n 11-* kulmat, lahi-* lahizoomilla 25/12 RK, 10/6 ND, 3 Eiffel) JU:lla KJ8:n jälkeen
   → lokit/karttaseppa-kivi-kj9-d36a7c7a2 → pari KJ7 11-* | kivi-* + lähikuvat KK:lle, kopio PT:lle. Lähikuvista tarkista raivauksen reuna (ND:n eteläpuolen kenttä).
 - HUOM: Panthéon (b357fdfc1, nahtavyydet-1-1) ei sisällä kiveä; rebase/poiminta d36a7c7a2 nahtavyydet-1-1:een ennen seuraavaa Panthéon-ajoa.
+
+## LISÄYS 22.4x: 224.46 = 6d82a050c, PALAT-OK, ND-ETELÄPOHJA SEURAAVAAN
+- 6d82a050c (karttaseppa/kivi-1-1 = d36a7c7a2 + Assets/StreamingAssets/talot/pariisi.json v3). Paketti _tyo/karttaseppa/koodijuna/talot-paketti-pariisi-v3
+  (tyokalut/talot_paketti.py, v2 → v3: 6 palaa 3,8 Mt, SHA256SUMS ok). julkaisija-tyokalut/linkki-224-uutta/224.46.palat-ok kirjoitettu 22.33; JU:lle ja PT:lle sha.
+- KK 22.3x pyysi: 1) ND:n eteläpohja, 2) RK kivi + aukko, 3) ND kivi + tumma katto; pari ennen | jälkeen kaukaa + aito lähikuva (malli ~1/3 ruudusta).
+  2 ja 3 = d36a7c7a2. 1 SELVITETTY: kenttä = Citén piirroskartta (Nahtavyysalue notre-dame PohjaPoisKoodilla: Tripon pohja-ranta-vesi1 + pyyhitty saari pois),
+  ei raivaus; todellisuudessa aukio + Square Jean-XXIII + ranta. KORJAUS 224.47:ään: pohja puistoksi (vihreä + OSM-puut) ja 2 irtotalon OSM-tunnistus
+  (sakaristo voi olla oikea). KK:lle ja PT:lle kerrottu.
+- SEURAAVAKSI: KJ8 (Panthéon) kuvat → KK; KJ9 kuvat → pari KJ7 11-* | kivi-* + lahi-* KK:lle (kopio PT); sitten ND-eteläpohja; sitten Invalidit…
