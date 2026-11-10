@@ -30,3 +30,12 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 2. Jono PT:n järjestyksessä: osa 6 pienet logiikkaviat → osa 10 TasoAika (NUI fb3f19f31, 1724 kohta 3) → osa 11 opastetekstit (hyväksytty 17.52,
    ks. 1810 kohta 0). Renkaiden uusinta v2-sk:lla JU:lla (1745 kohta 2).
 3. Odottaa JU:lta: aukiovideo ja osien 1–3 video → PT.
+
+## LISÄYS 18.4x (luovutuksen jälkeen)
+- PT: "lisää toinen lähtö omistajan pysähdyspaikasta, jos kaappaus tunnistettavissa" → kaappausta EI ole (Matkakirja-fable/docs/raportit/kaappaukset/
+  omistaja-20261110/: ei juoksupelikuvaa 12.47 jälkeen) → PT:lle ja JU:lle kerrottu; ei toista lähtöä. JU:lle: osan 9 kärki 224.37:ään = 711192245.
+- JU ajaa molemmat videot kuvasarjana (iPadilta ei ruututallennetta): aukio → lokit/pk-aukio-v129d-711192245, linjat → lokit/pk-linjat-osa1-3-e59ed43e9.
+  Katso kuvat (v01–…, a1–a4 / l1–l4) ja aja tarkista_kulku.py konsolille, kun JU ilmoittaa; rivi PT:lle.
+- AVOIN PT:n kysymys: NUI:n kuva proto-3d/lokit/nui-juoksu-tavoitepalkki-2-ipad-ed91e2081/t-3-loppu.png: pitkä vaalea litteä palkki kujan lattialla
+  keisarin oikealla (Puyi reitti (215,9; −706,1), t 86,8 s, "portin alla"). PT:lle sanottu: ei logiikan este, todennäköisesti mallin korotettu polku/
+  reunakivi, VARMISTAMATTA → tarkista (mikä malli/osa, onko tarkoituksellinen; myös linjavideon kuvista) ja rivi PT:lle.
