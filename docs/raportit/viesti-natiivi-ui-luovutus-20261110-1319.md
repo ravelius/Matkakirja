@@ -43,3 +43,5 @@ PT:n lisäys (Postivahti 12.5x): PR 6557:n yhdistää ja JU:lle viennistä ilmoi
 
 ## JONO TÄMÄN JÄLKEEN
 Ei muuta NUI:n jonossa (PT:n -1246-jono: otsikkovärit → Lontoo, molemmat tehty). Kun 2 ja 3 kuitattu: rivi PT:lle "JONO TYHJÄ: natiivi-ui".
+
+## LISÄYS 13.4x: välilehtivärit 91feac3b2 katsottu (lokit/nui-valilehtivarit-1-91feac3b2), parit KK:lle, MR pyydetty JU:lta (Uutta "Valikon välilehdet omilla väreillään: Pelit punainen, Kartta ruskea."). JONO TYHJÄ ilmoitettu PT:lle. Jäljellä vain KK:n mahdolliset huomiot (jatkokorjaus samaan junaan) ja JU:n MR-numero.
