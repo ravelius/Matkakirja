@@ -1389,7 +1389,7 @@ export const FOKUSVIRTA_PARIISI = {
           tiedosto: 'Pascal à Galileo.jpg',
           lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
           selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
-            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1639, 15-vuotiaana — yksi Chaslesin ostamista kirjeistä.',
+            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
           lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
         },
       ],
