@@ -70,3 +70,13 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - JU:lla: aukio2-video 711192245 (lokit/pk-aukio2-v129d-711192245, vain todisteeksi KK:lle; 224.37 jo pt-ok) ja linjavideo e59ed43e9
   uusintana (lokit/pk-linjat-osa1-3-e59ed43e9; 1. yritys käynnistysvika). Katso kuvat ja tarkistin (aukio: v129d-kartta) → rivi PT:lle.
 - Sen jälkeen jono kohdassa 1.2 (osa 6 → osa 10 → osa 11, renkaiden uusinta) ja 18.4x:n palkkikysymys.
+
+## LISÄYS 18.5x (nollauksen jälkeinen tila; tämä on viimeisin)
+- AUKIO2 VALMIS: lokit/pk-aukio2-v129d-711192245 katsottu (lähtölaskenta x −144,7 → pihan poikki seinälle −178; v129d-kartalla 0/12 ulkona).
+  PT kuittasi 18.4x ja vie KK:lle. Ei jatkotoimia.
+- LINJAVIDEO VALMIS: lokit/pk-linjat-osa1-3-e59ed43e9 katsottu (1053 m / 154 s, linjalla, 5 omenaa, käännökset suoraan linjalle,
+  kiinniotto vasta ajajapidon poiston jälkeen). Rivi PT:lle lähetetty 18.5x.
+- OSA 8 KUVAPARI: 1. Mac-ajo käyttökelvoton (latausruutu 4/4, Request timeout, oleta 240 ylittyi). Skenaarioon oleta 600;
+  JU ajaa uudelleen → lokit/pk-osa8-ovet-mac-3eb33531c-2. Jos taas timeout → kuitujonoon (KK:n sana). Kun kuvat tulevat:
+  k1/k2 vs a1/a2 täysikoossa, "ovet: mallit valmis … kiinni K" lokista, pari + rajaluku (0/663) PT:lle.
+- Jäljellä: jono 1.2 (osa 6 → osa 10 → osa 11, renkaiden uusinta) ja 18.4x:n palkkikysymys.
