@@ -13,7 +13,9 @@
  *   nosto:<id>  kokoelman takynostot alkion `kysymykset`
  *   hetki:<id>  kokoelman historianHetket alkion data.kysymykset (natiivi
  *               NostoSisalto.Hetki, NUI 2b7f2e7b7; KS 10.11.2026)
- *   muut        skandaalit, eläintäyt, syvennykset ja
+ *   skandaali:<id>  kokoelman skandaalit alkion kysymykset (NUI a970b0d1c)
+ *   syvennys:<kaupunki>-<täky>  kokoelman fokusvirrat kaupungin takyt[] (NUI a970b0d1c)
+ *   muut        eläintäyt ja
  *               napakohteet ilman maata: ei kysymyskenttää → 0
  *
  * Tests/nosto-kysymykset.test.mjs vertaa tulosta poikkeuslistaan
@@ -37,6 +39,14 @@ export function nostojenKysymykset(tiedostot) {
   const valot = lue('kokoelmat/karttavalot.json').alkiot;
   const taky = new Map(lue('kokoelmat/takynostot.json').alkiot.map((x) => [x.id, x]));
   const hetket = new Map((lue('kokoelmat/historianHetket.json')?.alkiot ?? []).map((x) => [x.id, x.data]));
+  const skandaalit = new Map((lue('kokoelmat/skandaalit.json')?.alkiot ?? []).map((x) => [x.id, x]));
+  const virrat = new Map((lue('kokoelmat/fokusvirrat.json')?.alkiot ?? []).map((x) => [x.id, x]));
+  // Syvennys: tunnus <kaupunki>-<täky>, kaupunkitunnuksissa ei viivaa (= natiivin NostoSisalto).
+  const syvennys = (tunnus) => {
+    const e = tunnus.indexOf('-');
+    const v = e > 0 ? virrat.get(tunnus.slice(0, e)) : null;
+    return (v?.takyt ?? v?.virta?.takyt ?? []).find((t) => t?.id === tunnus.slice(e + 1));
+  };
   const moduulit = new Map();
   const moduuli = (laji, iso) => {
     const avain = `${laji}-${iso.toLowerCase()}`;
@@ -65,6 +75,10 @@ export function nostojenKysymykset(tiedostot) {
       kirjoitetut = tekstit(taky.get(tunnus)?.kysymykset);
     } else if (laji === 'hetki') {
       kirjoitetut = tekstit(hetket.get(tunnus)?.kysymykset);
+    } else if (laji === 'skandaali') {
+      kirjoitetut = tekstit(skandaalit.get(tunnus)?.kysymykset);
+    } else if (laji === 'syvennys') {
+      kirjoitetut = tekstit(syvennys(tunnus)?.kysymykset);
     }
     return { id: v.id, laji, maa, kirjoitetut, nimi: v.nimi ?? '' };
   });

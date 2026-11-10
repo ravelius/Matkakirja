@@ -48,10 +48,11 @@
   "1.67": "32f04df5cff5f6ac",
   "1.68": "8844dc7d886507a7",
   "1.69": "1c7cd698b15b30bb",
-  "1.70": "8ec628ed344c74e6"
+  "1.70": "8ec628ed344c74e6",
+  "1.71": "2874b8c02c3b2135"
  },
  "uusin": {
-  "skeemaversio": "1.70",
+  "skeemaversio": "1.71",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -760,6 +761,7 @@
     "kortti",
     "kuva",
     "kuvat",
+    "kysymykset",
     "lahde",
     "lat",
     "lon",

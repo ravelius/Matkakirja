@@ -63,6 +63,8 @@ export const VAATIMUKSET = {
   '1.69': ['kaupungit.esittelypaikat'],
   // Karttaseppä 10.11.2026: historian hetkien Pulu-kysymykset (KK, PT 03.1x; natiivi NUI 2b7f2e7b7).
   '1.70': ['historianHetket.kysymykset'],
+  // Karttaseppä 10.11.2026: skandaalien ja syvennysten Pulu-kysymykset (PT; natiivi NUI a970b0d1c).
+  '1.71': ['skandaalit.kysymykset'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

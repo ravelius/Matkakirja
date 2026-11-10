@@ -291,6 +291,10 @@ export const FOKUSVIRTA_PARIISI = {
        *     esittää palatsin rakentamista takaisin.
        */
       id: 'tuileriat',
+      kysymykset: [
+        'Mitä isoisä näki, kun hän kulki palatsin raunioiden ohi?',
+        'Minne puretun palatsin kivet ja palat päätyivät?',
+      ],
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
       otsikko: 'Tuileriain rauniot',
       teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu '
@@ -387,6 +391,10 @@ export const FOKUSVIRTA_PARIISI = {
        * palloilla, eikä sitä sekoiteta tähän.
        */
       id: 'kyyhkyposti',
+      kysymykset: [
+        'Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?',
+        'Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua?',
+      ],
       nappi: 'Kyyhkyt, jotka kantoivat kokonaisen kaupungin postin',
       otsikko: 'Piiritetyn Pariisin kyyhkyposti',
       teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun '
@@ -445,6 +453,10 @@ export const FOKUSVIRTA_PARIISI = {
        * juuri Louvren Salon oli se ovi, jonka nämä maalarit kiersivät.
        */
       id: 'impressionistit',
+      kysymykset: [
+        'Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?',
+        'Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?',
+      ],
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
       otsikko: 'Nimi, joka oli alun perin pilkkaa',
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '

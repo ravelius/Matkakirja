@@ -2129,6 +2129,10 @@ export const SKANDAALIT = {
      */
     {
       id: 'mona-lisan-varkaus-1911',
+      kysymykset: [
+        'Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?',
+        'Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?',
+      ],
       otsikko: 'Mona Lisan varkaus',
       nimio: 'Mona Lisan varkaus',
       vuosi: '1911–1913',
@@ -2280,6 +2284,10 @@ export const SKANDAALIT = {
      */
     {
       id: 'vrain-lucas-kirjevaarennokset',
+      kysymykset: [
+        'Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?',
+        'Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne?',
+      ],
       otsikko: 'Vrain-Lucasin 27 000 väärennettyä kirjettä',
       nimio: 'Vrain-Lucas',
       vuosi: '1861–1870',
@@ -2412,6 +2420,10 @@ export const SKANDAALIT = {
      */
     {
       id: 'etelameren-kupla',
+      kysymykset: [
+        'Miten yhtiö itse paisutti oman osakkeensa hintaa?',
+        'Mitä Etelämeren kuplasta jäi Lontooseen nykypäivään asti?',
+      ],
       otsikko: 'Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’',
       nimio: 'Etelämeren kupla',
       vuosi: '1720',
