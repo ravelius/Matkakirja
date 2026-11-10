@@ -1167,3 +1167,8 @@ Omistaja 07.47: "Ei kannata vielä liikaa rajoittaa. Voitte tehdä täysillä. K
 
 Omistaja 07.5x: "Asennus sivulle voisi tehdä loppuun otsikon työn alla niin voisin sitä kautta seurata missä mennään ja mitä on tekeillä. Korvaisi entistä asemataulua. Mitä olet mieltä?" Kortti 07.58 "Mitä asennussivun loppuun lisättävä Työn alla -osio näyttää?" → "Kolme osaa (Recommended)": Odottaa sinua, Työn alla ja Seuraavaksi; päivittyy jonosta itsestään ja näyttää päivitysajan.
 Toteutus (KK:n tavoite, PT 08.0x JU:lle jarj 0): sivun alkuosa ennallaan; alle 1) Odottaa sinua (rivit, joiden este on omistaja tai KK:n kortti), 2) Työn alla (rooli + rivi, yksi per rooli), 3) Seuraavaksi (roolin seuraava jonorivi), lopuksi "Päivitetty klo". Selkokieli, roolien koko nimet, ei sha:ta eikä lyhenteitä. Pelkkä skripti tyolista.json:sta (ei mallia), uudelleenluonti aina kun tyolista.py kirjoittaa; sivu vain tailnetissä. Asemataulu pysyy jäädytettynä (7.39).
+
+## YKSI TARKKUUS KOKO NÄKYMÄÄN: JATKETAAN UUTENA TYÖNÄ (omistaja 10.11.2026 klo 08.00) (10.11.2026 klo 08.01)
+
+Kortti (Pariisi-pino 5) "Jatketaanko kokeilua, jossa Pariisin tarkempi alue poistetaan, jotta kartta on yhtä tarkka koko näkymässä?" → "Jatketaan uutena työnä" (selite: uusi yritys, jossa laite hakee karttaa vain rajatun määrän kerrallaan; menee jonoon). Omistaja näki parin 5-tarkka-alue-pari-z12.jpg ja perustelut; suositus oli Ei. KUMOAA 7.11. 14.2x "SEIS" -tilan.
+Tavoite (KK): kartta yhtä tarkka koko näkymässä ilman suoraa rajaa niin, että Pariisi pysyy terävänä (pikkukadut, puistot, Seine), iso iPad ei kaadu kallistettuna eikä nipistys hyppää. Koe; junaan vain kortilla kuvista (7.11. 11.21). Ei Pariisi valmis -kortin este (7.11. 10.53). Työlista: NS, kärki Tekninen kunto, jarj 6 (ISS-muistin jälkeen).
