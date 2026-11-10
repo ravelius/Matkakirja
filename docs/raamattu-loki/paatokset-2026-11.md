@@ -1194,7 +1194,7 @@ Kortti 1 (08.13) "Viedäänkö Pariisin kartan kevyt filmi (lämmin tummempi sä
 Kortti 2 (08.13) "Viedäänkö Pariisin kartan liukuvat pilvien varjot junaan filmin lisäksi?" → "Kyllä, junaan (Recommended)" (+25 Mt). Pallon elämä kokonaisuutena (filmi, terävöinti, pilvien varjot) junaan; raitiovaunut pysyvät pois (7.11. 16.43). KUMOAA 7.11. 19.02 "Ei junaan" (muisti nyt rajan alla).
 Asennussivun osio (KK 08.1x): "Odottaa sinua" vain omistajan päätöksiä tai toimia ("SINÄ:"-este), KK:n odottamat erikseen ("KK:"), teksti omistajan kielellä.
 
-## LATTIA7, PIENOISKARTTA, MUISTIKATOT, EI IPHONE-MITTAUKSIA JA PARIISIN NÄHTÄVYYDET KOODILLA (omistaja 10.11.2026 klo 08.52–09.36) (10.11.2026 klo 09.45)
+## LATTIA7, PIENOISKARTTA, MUISTIKATOT, EI IPHONE-MITTAUKSIA JA PARIISIN NÄHTÄVYYDET KOODILLA (omistaja 10.11.2026 klo 08.52–09.36) (10.11.2026 klo 09.37)
 
 08.52 juoksupelin uusi yhtenäinen lattia "Kelpaa" + 08.53 "Pysyy" (kolme uutta vikaa korjataan erikseen) → kielletty-tausta-v130 viety 08.58, PK:n kulku OK; sokkelikivi, loota2, oja4, valo1 ja L-kehys LAV:n jonossa.
 09.19 pyynnöt: maakartalta avattu kohde jää sumeaksi (NS), ensimmäisen luennan viive (NS, mittaus ensin), kerronnan tauko pysäyttää kierron ja jatko jatkaa (NUI).
