@@ -8,7 +8,8 @@
   JR (jono-jr-pk-kylma.zsh): PK 3a3011bb8 (korvasi 0b94205f1/96ec56672/544dd537c-ajot): kylma-2 → vaihe2-0a/1a/0b/1b → muisti-2 (muisti-tarkka 100) → lokit/pelikoodari-{kylma-2,vaihe2-*,muisti-2} → yksi koontiviesti PK:lle (local_d3bb1f78…). Vanha 0a sivussa lokit/pelikoodari-vaihe2-0a-0b94205f1-kylma. JR kirjoittaa lopuksi rivin, jossa "JU JN LOPPU" (JL2 odottaa sitä).
   JL2 (jono-jl2-ns-ndpohjat.zsh): NS nd-pohjat iPad 69cd72344 | 7a9c1a971 (käännökset valmiit) JR:n jälkeen → lokit/natiiviseppa-nd-pohjat-ipad-* (P1–P5) → NS (local_0f7f169f…).
   JW (jono-jw-lattia4.zsh): LAV lattia4 leivonta (Blender, alkoi 03.0x, ~50 min) → aja-lattia4.zsh 1 b804a87d6 → "LATTIA4 AJETTU" + polku lattia-uusi/kuvat-lattia4-uusi LAV:lle (local_f12c9179…), 404.txt mukaan.
-  JV: KS katot-a 19–21 tA/tB/tC (b804a87d6, ipad, 0.465) → lokit/karttaseppa-katot-a-pariisi-t{A,B,C} → KS (local_7b57e35a…), ei arviota. (Jos nollaus katkaisi: aja zsh T/jono-jv-ks-t.zsh uudelleen.)
+  JX (jono-jx-pk-kylma3.zsh): PK 318b4a3d0 (juoksu-kylma, glb-esihaku; PT KYLLÄ 03.1x): käännös → JR:n jälkeen sk-ipad-kylma-3 ×2 → lokit/pelikoodari-kylma-3a/-3b → PK: "latauksen ositus" (vanha 122, kylma-2 115,5), "glb-esihaku valmis". Huom. JR vaihe2-0a jonolokissa "kaatui 1 VIKA 1": tarkista (kaatui voi olla oma signal 15) ennen PK-raporttia.
+  JV KS 19–21 tA/tB/tC ✓ raportoitu KS:lle 03.2x.
 - AUKI: laitekäännökset 0b94205f1, 96ec56672, 544dd537c, cd3eb1b6b? (kaatui), 0ac55dc35 (kaatui) → NAS, kun ei tarvita; ccd8531d2/e2c3be586 NAS:lle (IX/JB/JD raportoitu). Levy 57 Gi (02.3x).
 - OPPI: esikatselun tuloskansio ajon omasta tulosrivistä (${R##* }), ei ls -td (rinnakkaisajot). vie-paketti vaatii kansionimen *-vienti-* (kopio, ei siirtoa).
 
