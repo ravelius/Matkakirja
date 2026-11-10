@@ -53,3 +53,5 @@ astcm, lontoo*). Omia valmiita worktreejä ei ollut (vain aktiivinen proto-pelik
 - Avoin: maailma valmistui ennen kuin puyi.glb oli valmis (viimeinen uusinta riviltä 3142 latauksen loputtua 2975) → tarkista, mihin puyi.glb
   vaikuttaa (alkulento ilman Puyita? vai puyi-perus käytössä) laiteajon kuvista.
 - JU:lle OK: PJ6 pieni iPad c62818943:lla, sk-ipad-pieni-latausruutu-d57afd0c3.txt → lokit/pk-latausruutu-d57afd0c3-ipad. Tulos → pari PT:lle.
+- 16.45: Telian kuituvika (omistaja 16.38), Mac ja iPadit puhelinverkossa. PJ6-sk muutettu pakotetuksi katkoksi (ajo 1: katko 3, viive 2,
+  latausraja 30; md5 939c1cdc4b2e, 57 r). PJ6 (c62818943) ja v131-uusinta (8d22f34e4, ei latausjumikorjausta) odottavat JU:n kuitulippua (PT).
