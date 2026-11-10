@@ -37,4 +37,4 @@ Korvaa yllä olevan aiheluettelon ja tyylin yksityiskohdat:
 - Aiheet (5): `tarina-kirja` avoin kirja (KK:n suositus), `tarina-taskukello`, `tarina-sulka` (**ilman mustepulloa**),
   `tarina-lyhty` (yksi yksinkertainen muoto), `tarina-tiimalasi` (yksinkertaistettu).
 - Muuten ennallaan: RGBA 256², aihe ≈ 170 px, liikkumaton, arkki 48 px:n koossa kartalla tähden rinnalla, toimitus `_review-tarinamerkit-20261110/`.
-- Natiivi-UI tekee sillä välin pelin sisäisen kokeen omilla yksinkertaisilla muodoilla (PT:n lupa); Codexin versiot korvaavat ne.
+- Kuvat tekee vain Codex (Raamattu 7.15); Natiivi-UI ajaa pelikierroksen, kun toimitus tulee.
