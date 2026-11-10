@@ -455,6 +455,8 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
           nimi: kohde.nimi, tyyppi: kohteenTyyppi(kohde), kartalla: kohdeKartalla(kohde), lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
           wiki: kohde.wiki ?? null, nosto: kohde.nosto ?? null, nimio: kohde.nimio ?? null, nimiPuoli: kohde.nimiPuoli ?? null,
           siirto: kohde.siirto ?? null, aika: kohde.aika ?? null, teksti: kohde.teksti ?? null,
+          // KK 10.11.2026 12.24: tarinapaikka (natiivin kaupungin luettelon Tarinapaikat); muut tarinakohteet vain lehdessä.
+          tarinapaikka: !kohdeKartalla(kohde) && kohde.tarinapaikka === true,
           kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
           kuvat: (kohde.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
         };
@@ -609,7 +611,8 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla. '
       + 'kohteet[].tyyppi (löydös 178) = rakennus | aukio | luonto | taide | esine | henkilo | ilmio; kartalla = piirretäänkö '
       + 'kartalle (vain rakennus, aukio, luonto; aukio ja luonto kevyellä merkillä). kartalla: false = tarinakohde, jolla on '
-      + 'karttanosto: se on kaupungin nostoissa (kaupunkiliuska), ei kartalla. Kartan kohteet ensin, joten niiden järjestys = webin numerointi.',
+      + 'karttanosto: se on kaupungin nostoissa (kaupunkiliuska), ei kartalla. Kartan kohteet ensin, joten niiden järjestys = webin numerointi. '
+      + 'tarinapaikka = KK:n valitsema tarinakohde (tarkka paikka + havainnekuva): natiivin kaupungin luettelon Tarinapaikat; muut tarinakohteet vain lehdessä.',
     { kaupunki: 'kaupungit' }, kohdekartat);
   // Skeema 1.24: rakentajat (R.kuva) saapumisteksteille (tools/vienti/saapumiset.mjs).
   return R;

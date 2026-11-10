@@ -5634,16 +5634,8 @@ export const NAHTAVYYSJUTUT = {
           + 'päiväyksen aikaan lapsi. Chasles piti kokoelmastaan kiinni '
           + 'vuosia, mutta väärentäjä tuomittiin helmikuussa 1870 kahdeksi '
           + 'vuodeksi vankeuteen.',
-      kuvat: [
-        {
-          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785.jpg',
-          lyhyt: 'Jalokivikauppiaat esittelevät kaulanauhaa kardinaalille, joka uskoo ostavansa kuningattarelle.',
-          selite: 'Jalokivikauppiaat esittelevät 647 timantin kaulanauhaa '
-            + 'kardinaali de Rohanille, joka uskoi ostavansa sen '
-            + 'kuningattaren puolesta.',
-          lahde: 'Matkakirjan havainnekuva: kaulanauha luovutetaan kardinaalille',
-        },
-      ],
+      // Kaulanauhajutun havainnekuva pois (KK 10.11.2026 12.24: kuva kuuluu vain kaulanauhajuttuun).
+      kuvat: [],
       lahde: 'Wikipedia',
     },
     /*

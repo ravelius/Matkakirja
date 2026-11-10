@@ -5347,7 +5347,8 @@ export const KAUPUNKIKARTAT = {
        * Panthéonin fi-artikkelilla ei ole koordinaatteja;
        * 48,8462/2,3464 on rakennuksen tunnettu sijainti.
        */
-      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
+      // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: 'nosto-pariisin-72-nimea' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
@@ -5359,7 +5360,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Luxembourgin puisto', tyyppi: 'luonto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
       { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
       { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
-      { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
+      // Notre-Damen kukko on katedraalin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
+      { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali', nosto: 'nosto-notre-damen-kukko' },
       /*
        * KOLME LISÄKOHDETTA (paketti O4, omistajan linjaus 16.8.2026:
        * "Nähtävyyksiä voi olla 6–15 per kaupunki"). Listan lopussa,
@@ -5403,13 +5405,13 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Carmenin ensi-ilta', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
       },
       {
-        nimi: 'Kirahvin kävelymatka', tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
+        nimi: 'Kirahvin kävelymatka', tarinapaikka: true, tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
-        nimi: 'Torni romuraudaksi', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
-        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'vasen',
-        siirto: { x: -6, y: -25 },
+        // KK 10.11.2026 12.24: ei samaan pisteeseen Eiffel-tornin kanssa; tornin itäisen jalan juurelle (Torni 1888 läntisen).
+        nimi: 'Torni romuraudaksi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85826, lon: 2.2957,
+        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'oikea',
       },
       {
         nimi: 'Vrain-Lucas', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
@@ -5471,35 +5473,35 @@ export const KAUPUNKIKARTAT = {
        */
       // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
       {
-        nimi: 'Curie 1898', tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
+        nimi: 'Curie 1898', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
         nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
       },
       // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
       {
-        nimi: 'Lavoisier 1780', tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
+        nimi: 'Lavoisier 1780', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
         nosto: 'hetki-lavoisier-laboratorio-1780',
       },
       // École normale supérieure, rue d'Ulm.
       {
-        nimi: 'Pasteur 1862', tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
+        nimi: 'Pasteur 1862', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
       },
-      // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
+      // Tornin läntisen jalan juurelle (KK 10.11.2026 12.24: Eiffelin merkit eivät päällekkäin; Torni romuraudaksi itäisen).
       {
-        nimi: 'Torni 1888', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
+        nimi: 'Torni 1888', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
         nosto: 'hetki-eiffel-torni-1888',
-        nimiPuoli: 'oikea', siirto: { x: 6, y: 25 },
+        nimiPuoli: 'vasen',
       },
       // sama piste kuin kohde Bastilji: nimiö oikealle.
       {
-        nimi: 'Bastilji 1789', tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
+        nimi: 'Bastilji 1789', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
       {
-        nimi: 'Lumière 1895', tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
+        nimi: 'Lumière 1895', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
         nosto: 'hetki-lumiere-elokuva-1895',
         nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
@@ -5515,13 +5517,7 @@ export const KAUPUNKIKARTAT = {
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
        */
-      // Eiffel-tornin neljäs merkki: torni, Torni romuraudaksi ja
-      // Torni 1888 ovat samassa pisteessä, joten nimiö suoraan vasemmalle.
-      {
-        nimi: '72 nimeä', tyyppi: 'esine', lat: 48.85822, lon: 2.2945,
-        nosto: 'nosto-pariisin-72-nimea',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
+      // 72 nimeä: Eiffel-tornin nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
       // Abbesses'n asema, yksi jäljellä olevista Guimardin
       // sisäänkäynneistä (48,8844 N / 2,3382 E). Oma piste, ei naapureita.
       // Karttanimi `nimio` (PT 30.10.2026 klo 23.5x): "Metron sisäänkäynti"
@@ -5532,12 +5528,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Metron sisäänkäynti', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
         nosto: 'nosto-guimardin-metro',
       },
-      // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.
-      {
-        nimi: 'Notre-Damen kukko', tyyppi: 'esine', lat: 48.853, lon: 2.3499,
-        nosto: 'nosto-notre-damen-kukko',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
-      },
+      // Notre-Damen kukko: Notre-Damen nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
       // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
       // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
       {
@@ -6184,28 +6175,28 @@ export const KAUPUNKIKARTAT = {
        */
       // Royal Institution, Albemarle Street.
       {
-        nimi: 'Faraday 1831', tyyppi: 'henkilo', lat: 51.5098, lon: -0.1425,
+        nimi: 'Faraday 1831', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5098, lon: -0.1425,
         nosto: 'hetki-faraday-luento-1831',
       },
       // St Mary's, Praed Street — kartan länsireunassa, nimiö oikealle.
       {
-        nimi: 'Fleming 1928', tyyppi: 'henkilo', lat: 51.5174, lon: -0.172,
+        nimi: 'Fleming 1928', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5174, lon: -0.172,
         nosto: 'hetki-fleming-malja-1928', nimiPuoli: 'oikea',
       },
       // Rotherhithen kuilu (Brunel Museum).
       {
-        nimi: 'Tunneli 1827', tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
+        nimi: 'Tunneli 1827', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
         nosto: 'hetki-brunel-thames-tunnel-1827',
       },
       // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
       // oikealle.
       {
-        nimi: 'Palo 1666', tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
+        nimi: 'Palo 1666', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
         nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
       },
       // alkuperäisen Globen tontti Southwarkissa.
       {
-        nimi: 'Globe 1599', tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
+        nimi: 'Globe 1599', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
         nosto: 'hetki-shakespeare-globe-1599',
       },
       /*
@@ -21902,6 +21893,12 @@ export function kaupunkikartanKohteet(kartta) {
  * syvennys, nosto), ei ole kartalla vaan kaupunkiliuskassa — kaupungin kortti
  * kokoaa kaikki kaupungin nostot, joten kaupunkikatto ei enää rajoita.
  * Ei-paikat ilman nostoa odottavat Sisältökirjuria (museo, tarina-osio).
+ */
+/*
+ * TARINAPAIKKA (omistajan kortti 10.11.2026 klo 10.36: kartan kohteet kolmeen lajiin; KK:n luokittelu 12.24,
+ * suunnitelma 20261110-kartan-kohteet-osa3-luokittelu.md): tarinakohde, jolla on tarkka tapahtumapaikka,
+ * havainnekuva ja KK:n valinta, merkitään `tarinapaikka: true`. Natiivin kaupungin luettelossa ovat vain
+ * Nähtävyydet, Kadonneet ihmeet ja Tarinapaikat; muut tarinakohteet ovat vain lehdessä.
  */
 export function kaupunginTarinakohteet(kartta) {
   return (kartta?.kohteet ?? []).filter((k) => !kohdeKartalla(k) && k.nosto);
