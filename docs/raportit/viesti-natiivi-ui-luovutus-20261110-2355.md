@@ -39,3 +39,5 @@ Tunnettu: ajon alussa "ESIKATSELU POIKKEUS ArgumentOutOfRangeException" (ei pais
 Eiffel-valo valmis (lokit/nui-eiffel-valo-be4e976b9), vertailu _tyo/natiivi-ui/paisunta/eiffel-valo-0-045-10-20.jpg lähetetty KK:lle suosituksella 1,0.
 KK:n valinnan jälkeen: Paisunta.ValoVoima-oletus (UI/Paisunta.cs, nyt 0.45f) → valittu arvo commitiksi haaraan natiivi-ui/nahtavyys-paisuu,
 cherry-pick junan kärkeen, unity-tarkistus, sha PT:lle pt-ok:ta varten. Jos KK sanoo "pois": ValoVoima = 0.
+LISÄYS 00.0x: KK valitsi valon 1,0 → 92be0bfde (nahtavyys-paisuu) / 782949b26 (paisunta-juna = 89001e066 + valo), unity 0, pt-ok pyydetty PT:ltä.
+Lahin-uusinta ajossa: lokit/nui-lahin-2-7x-2-ea9e6c633 (JU vaihtoi sha:n). Jäljellä vain sen käsittely (kohta 2 yllä).
