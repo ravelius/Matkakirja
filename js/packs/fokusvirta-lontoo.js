@@ -322,6 +322,10 @@ export const FOKUSVIRTA_LONTOO = {
        * täky kertoo sen isoisän merkinnän kulmasta.
        */
       id: 'vuorovesi',
+      kysymykset: [
+        'Mitä mudlarkit etsivät Thamesin kivirannalta laskuveden aikaan?',
+        'Miksi Thamesin rannalla ei saa etsiä aarteita vapaasti?',
+      ],
       nappi: 'Ranta, joka paljastuu kahdesti päivässä',
       otsikko: 'Thamesin laskuvesiranta',
       teksti: 'Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole '
@@ -460,6 +464,10 @@ export const FOKUSVIRTA_LONTOO = {
        * arveluksi, joten sitä EI kerrota.
        */
       id: 'cheapside',
+      kysymykset: [
+        'Miten yksi pieni sinettikivi paljasti, milloin laatikko kätkettiin?',
+        'Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen?',
+      ],
       nappi: 'Laatikko, joka odotti kellarissa kolmesataa vuotta',
       otsikko: 'Cheapsiden kätkö',
       teksti: 'Isoisäsi sääntö sai Lontoossa todisteen — vain '
