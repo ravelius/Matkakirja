@@ -29,3 +29,7 @@ HUOM: /Users/Shared/Claude/wt/proto-pelikoodari-tarkastelu on POISTETTU; aja-*.z
   (hahmot-v6 eunukki/puyi/vartija, esteet kaaro-v2 kaaretaulut, ovi-v1 ovi-lehti-vasen): ajon runko/media, EI koejuuren tiedostoja -> ei vaikuta taustaan;
   mainitse PT:lle parin yhteydessä (eri worktree proto-lavastaja-esto-kivisivu). Parit katsomatta -> Seuraava 1 alkaa näistä.
 - PAATY1 alkoi Macilla L1 11.38 (JU), PAATY1 AJETTU -rivi JU:lta tulossa.
+- 11.5x LAV: PAATY1 katsottu (PT ok): kolmio pois, jäi kultalevy (kk-tausta-1-3 lod0 V4_gold 13 kolm., y 4,5, seinän edessä). paaty1b = koejuuri-paaty1b (tee_paaty1b.py),
+  ajo zsh muuri/paaty1/aja-paaty1b.zsh 1 b804a87d6 JU:n Mac-jonossa -> kuvat-paaty1b; vertailu kuvat-paaty1-uusi (paaty-maasta, piikki-etela). Pari PT:lle.
+- 12.0x PT: RAJA3A kelpaa. Kun paaty1b kelpaa: YKSI paketti v130:n päälle (raja3a + paaty1b): PK polut/viittaukset, SHA256SUMS, iso iPad JU:lla -> PT -> vienti/MR. Ei vientiä ennen PT:n sanaa.
+- 11.57 LAV: yhdistelmä valmiina katot-v125/koejuuri-raja3a-paaty1b = koejuuri-raja3a + paaty1b:n kk-tausta-1-3 lod0/lod1, reunatekselit ajettu uudelleen 1-3-lod0:aan; mitattu: levy poissa, seinäkärjet kuten paaty1.
