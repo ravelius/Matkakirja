@@ -3134,9 +3134,11 @@ export const HISTORIAN_HETKET = [
       + 'kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa '
       + 'toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: '
       + 'kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, '
-      + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on '
-      + 'kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit '
-      + 'muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom '
+      + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun kehyksen '
+      + 'lokerot on kaivettu tyhjiksi, ruuvit työntävät sen kehyksen '
+      + 'eteenpäin; kehyksiä siirretään vuorotellen, jotta osa niistä tukee '
+      + 'maata koko ajan, ja muurarit muuraavat perässä. Työmaata johtaa '
+      + 'Marcin poika Isambard Kingdom '
       + 'Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. '
       + 'Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen '
       + 'jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet '
@@ -3711,8 +3713,9 @@ export const HISTORIAN_HETKET = [
       + 'parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli '
       + 'tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
       + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan '
-      + 'varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli '
-      + 'laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja '
+      + 'varastoidut kirjakauppiaiden varastot palavat. Tiistain ja '
+      + 'keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi 13 200 taloa '
+      + 'ja 87 kirkkoa, mutta kirjattuja '
       + 'kuolleita on vain kourallinen — luku, jota epäillään yhä.',
     kysymykset: [
       'Miksi leipomosta alkanut tuli levisi niin laajalle?',
@@ -3781,7 +3784,8 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 0,
       fakta: 'Palo alkoi Thomas Farrinerin leipomosta sunnuntaina 2. '
-        + 'syyskuuta; keskiviikkona tuuli laantui ja palo sammui.',
+        + 'syyskuuta; tiistain ja keskiviikon välisenä yönä tuuli laantui, '
+        + 'ja palo saatiin hallintaan.',
     },
   },
   /*
@@ -4078,8 +4082,9 @@ export const HISTORIAN_HETKET = [
       + 'yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat '
       + 'siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu '
       + 'noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta '
-      + 'nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on '
-      + 'ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä '
+      + 'nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin '
+      + 'ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on '
+      + 'vanhimpia sen esityksistä. Naisia ei näyttämöllä '
       + 'ole — Portian, Calpurnian ja Kleopatran roolit puhuvat '
       + 'äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. '
       + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; '
@@ -4352,9 +4357,11 @@ export const HISTORIAN_HETKET = [
       + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
       + 'kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
       + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-      + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
-      + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja '
-      + 'siitä tulee trikolori.',
+      + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
+      + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
+      + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
+      + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
+      + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
     kysymykset: [
       'Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?',
       'Miten Ranskan sinivalkopunainen trikolori syntyi?',
