@@ -29,3 +29,7 @@ Lue ensin -1222 (`git show 69367875f:docs/raportit/viesti-natiivi-ui-luovutus-20
 "Otsikkovärit voisi parantaa. Näkyvät epäselvästi": kuva docs/raportit/kaappaukset/omistaja-20261110/valikko-otsikkovarit-epaselvat-1245.png
 (Pelit-valikko, iPad 224.16). Tavoite: välilehtien LINSSIT/PELIT/KARTTA teksti ja ryhmäotsikot LAUTAPELIT/VIDEOPELIT/KESKENERÄISET luettavissa
 yhdellä vilkaisulla; tumma teksti, pergamenttityyli ja välilehtien tunnusvärit pohjassa jäävät. Pari ennen | jälkeen täysikoossa KK:lle, PT:lle tieto.
+
+## LISÄYS 13.1x (PT): JONOSSA OTSIKKOVÄRIEN JÄLKEEN — ALOITTAMATTA
+Lontoo-saapuminen (NS:n vikaselvitys, omistajan kuva): saapumisnäkymässä päällekkäiset otsikot ja ruutuun jäävä kortti, kun Lontooseen tullaan
+oppaan 3D-kaupungin jälkeen tai liftauksella. Pyydä NS:ltä/JU:lta kuva ja toistotapa ennen koodia.
