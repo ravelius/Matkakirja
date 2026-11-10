@@ -69,3 +69,13 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
   skripti vaatii tyhjät) → uusi kansio palat-v25-louvre-1-1 (versioitu, ei ylikirjoitusta). 96374758b:n pihakaistat (haamujälkien peitto) 1:1:ssä tarpeettomia
   mutta harmittomia; Cour Napoléonin kiveys voi jäädä. KJ6:n kuvat ovat vielä K 2 -koossa → älä vie KK:lle valmiina, korkeintaan värien karkeana näyttönä.
 - Korostuksen kytkin: Korostus.Kerroin (Oletus) ja OhjelmaKohteet.KorostusKoko; selvitä, miten 1:1 asetetaan koodimalleille koskematta Tripoon (MallitEnnallaan = true jo).
+
+## LISÄYS 22.1x (uusi sessio, PT:n viesti 21.59-päätöksestä): 1:1 TEHTY, KJ7 JU:lla
+- 098f9f05c (proto karttaseppa/koodimallit-1-1 = 599b0150d + Korostus.KoodimallitTodellinen = true; komento "korostus koodit 0|1" vertailuun). Testit 747/747, unity 0.
+- Talot 1:1: _tyo/karttaseppa/koodijuna/raivaus-1-1/ (LUEMINUT.md: resepti + m²-taulukko). palat-v25-kolme-1-1 (RK, ND, Eiffel) ja palat-v25-louvre-1-1
+  (+ Louvre V 1, korvaa v24:n kokeissa). m² PT:lle lähetetty.
+- KJ7 (sk-mac-1-1-kolme.txt, 12 kuvaa k2-*/11-*) JU:lle 22.09, loki lokit/karttaseppa-1-1-kolme-098f9f05c → katso täysikokoisena → pari k2 | 11 kaukaa
+  ja läheltä KK:lle (koodijuna/pari.py), kopio PT:lle. Tarkista myös -k2-maapohjat palaavien talojen alla.
+- Kokeet 1:1:n päällä: f4468f6ed (haara karttaseppa/nahtavyydet-1-1 = 96374758b + 1:1), pushattu. Kartta-testeissä 752/753: LouvrenMitat "Cour Napoléon
+  tukossa" kaatuu jo 96374758b:ssä (pihakaistat) → korjaa ennen Louvren seuraavaa kuvaa.
+- SEURAAVAKSI: Panthéon tyyliohjeen mukaan 1:1:nä nahtavyydet-1-1:n päälle (VS odottaa haaraa + sha).
