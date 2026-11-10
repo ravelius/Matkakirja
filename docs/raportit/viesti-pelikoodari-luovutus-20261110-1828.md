@@ -48,3 +48,9 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - VIDEO EI KELPAA: ylitys tapahtui alkulennon aikana (keisari juoksee lennolla itse ~45 m ennen lähtölaskentaa; v01 ilmasta, v02 sukellus,
   v03 jo seinällä "3" ja rajaviesti). Uusinta: kulkukartta/sk-ipad-aukio-v129d-2.txt (lähtö −97; 363.2, suora kuljettava kaista −94…−178),
   JU:lle annettu, kansio lokit/pk-aukio2-v129d-711192245. PT:lle ilmoitettu 18.3x. Katso kuvat ja aja tarkistin v129d-kartalla.
+
+## LISÄYS 18.38
+- PT 18.32: 224.37 pt-ok (= 711192245, pysyy; aukio2-video JU:lla vain todisteeksi KK:lle, jonossa linjavideon jälkeen).
+- OSA 8 = 3eb33531c (pelikoodari/osa8-ovet-kiinni): OvetKiinni-tasolla ei kynnysviestiä lainkaan (myös "raja" pois; aukion viesti oli raja
+  x −178, räystäslinja oven vieressä). 893/893, unity 0. PT:lle kerrottu, myös sivuvaikutus (näkymätön raja ilman selitystä tasolla 1).
+  Kuvapari (kohta 1.1) yhä tekemättä.
