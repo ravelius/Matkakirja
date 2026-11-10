@@ -568,8 +568,8 @@ export const KULTTUURI_KATEGORIAT = {
        * maailmaa, smaragdi Kolumbiasta, topaasi Brasiliasta, timantti
        * Intiasta, rubiini Burmasta, turkoosi Persiasta — kaikki
        * vastineessa, joka luettelee lisäksi lapislatsulin Afganistanista ja
-       * helmet Bahrainista; 5) oudoin esine on omenan kokoinen ontoksi
-       * koverrettu smaragdi, jonka sisällä on noin vuoden 1600
+       * helmet Bahrainista; 5) oudoin esine on kellonkuori, joka on
+       * koverrettu yhdestä smaragdista ja jonka sisällä on noin vuoden 1600
        * sveitsiläinen kellokoneisto — vastineessa sanasta sanaan (lisäksi
        * "kolumbialainen"); 6) yksi sinettikivi ajoittaa kätkennän
        * marraskuun 1640 ja syyskuun 1666 suurpalon väliin — vastineessa

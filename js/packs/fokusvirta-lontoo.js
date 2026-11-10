@@ -451,8 +451,8 @@ export const FOKUSVIRTA_LONTOO = {
        *     "Hoard" ja "London Museum"): löytö 1912, kirvesmiehet
        *     kellarissa osoitteessa 30–32 Cheapside Friday Streetin
        *     kulmassa, puinen laatikko, yli 400 esinettä, kivet ympäri
-       *     maailmaa, omenankokoinen kolumbialainen smaragdi jonka
-       *     sisään oli sovitettu noin vuoden 1600 sveitsiläinen
+       *     maailmaa, yhdestä kolumbialaisesta smaragdista koverrettu
+       *     kellonkuori, jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen
        *     kellokoneisto (signeeraus G. Ferlite), Staffordin
        *     viscountin sinettikivi ajoittaa kätkennän marraskuun 1640
        *     ja syyskuun 1666 väliin, ostajana panttilainaaja George
