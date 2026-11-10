@@ -24,7 +24,9 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/. Repo natiivi-backup
 Mikään ei johdu lähiorigosta (tärinäkoe); kaikki myös junassa 930eaae96.
 - 3) KORJATTU f8cb3ac61: kiertopiste/tähtäin olivat ellipsoidilla h = 0 → PalloKierto.KiertoKorkeus (MaanPinta.Hae × (1 − piirros)).
 - 2) 3D-tähti on UI-elementti (NostotKartalla.AsetaTahti3D, merkin maapisteen yllä −34 px) → ei peity, liukuu perspektiivin mukana.
-  Ehdotettu: 3D-taulu (Graphics.RenderMesh, syvyystesti) kohteen paikalle. KYSYTTY PT:ltä: tekeekö NS vai NUI → odota vastaus.
+  PT 06.4x: TÄHTI (2 ja 1) = NUI; havainnot lähetetty NUI:lle 06.5x. NS ei koske tähteen.
+- PT 06.4x: omistajan ehto täyttyi (tähdet eivät johdu lähiorigosta) → tarina-224 (1a6bdd8fa) junaan JU:lle (PT kuittasi).
+  f8cb3ac61:n Mac-pari → SEURAAVALLE PT:lle (PT nollautui 06.4x).
 - 1) Valkoinen neliö: arvio = kadonneen kyltin ★-laatta, kunnes 72 tähtiruutua (PiirrosKerros.Tahdet, 256² RGBA, alfa ok) latautuvat;
   myös hehku asetetaan vain luonnissa (AsetaTahti3D: jos hehku ei vielä ladattu, jää ilman). Varmista Mac-parin t-0:sta. Korjaus:
   ruudut esiladataan Pariisiin tullessa + hehku asetetaan myöhemmin.
