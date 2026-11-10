@@ -41,3 +41,11 @@ HUOM kello: aja `date` ennen jokaista aikaleimaa. Tila myös: /Users/Shared/Clau
 - Kunnes iso iPad toimii, Pariisin koodimalliversio (599b0150d) saa linkkiin Mac-oletustilan parilla (KJ1) ILMAN iPad-ajoa; omistaja testaa itse.
 - KJ1-parin mukana PT:lle yksi rivi omistajalle "kokeiltava: …" (mitä omistaja katsoo laitteella: RK, ND ja Eiffel koodimalleina oletustilassa,
   korostus K 2, talot ämpäristä; Tripo-vertailu komennolla koodimallit kaikki 0). KJ2 (iPad) ei ole linkin ehto.
+
+## LISÄYS 20.5x: PT:n este "beige aukko Panthéonin ympärillä" (om1853-2 ac292ac12) = LATAUSAJOITUS, EI PAKETTI
+- Paketti v2 (talot-paketti-pariisi-v2 = palat-v23-k2b) täydellinen: 219 palaa, 21 muuttunutta ei tyhjiä (Panthéonin 16597/11273–11274 kasvoivat).
+- Ajossa -2: om-yleis rivillä 2595, "talot lataus: pariisi kokonaan levyllä, 219/219" vasta rivillä 2841; alussa "21 vanhaa palaa pois" =
+  224.35- ja 224.36-ajot vuorottelevat samassa Mac-välimuistissa ja hakevat 21 palaa joka kerta uudelleen. Laitteella sama kerran ensihaussa
+  ilman latausmerkkiä (omistajan 18.53?). PT:lle ja JU:lle kerrottu.
+- KJ1b (sk-mac-oletus-koodi-2.txt: om-yleis + om-lahi + KJ1:n 9, odota 300) korvaa KJ1:n, jos KJ1:ssä 219/219 tuli kuvien jälkeen. Tarkista KJ1:n loki ensin.
+- Mahdollinen jatko (PT päättää): talojen latausmerkki tai odotus ensihaussa (SaapumisOdotus koskee vain karttalaattoja).
