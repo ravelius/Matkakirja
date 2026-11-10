@@ -37,3 +37,5 @@ Kohdan 1 jälkeen: rivi PT:lle "JONO TYHJÄ: natiivi-ui" (työlista: tyolista.py
 - OMISTAJAN PÄÄTÖS 17.08 (KK): kuvakyltti junaan → 5ce11c0c5 (natiivi-ui/kuvakyltti-tahdet, Kuvakyltti = true oletuksena), valmis-rivi PT:lle
   17.2x, lause KK:lle. Tee: kun JU vie MR:n, versionumero (linkki) KK:lle. JATKOHUOMIO (KK, ei estä): ylhäältä-kuvassa 2b Bastiljin kyltti jäi
   ruudun alareunan alle (vain tähti näkyi) → kyltti pysyköön ruudussa reunan lähellä (NostotKartalla: kuvakyltin ruudun reunarajaus).
+- PK 17.2x: tekee haaran natiivi-ui/juoksu-tavoitepalkki päälle osa 9:n jälkeen S.TasoAika (ei kasva kiinnioton/esittelyn aikana; tason ehto ja
+  TasoOsuus käyttävät sitä; TasoOsuus myös IJuoksuKierrokseen) ja ilmoittaa sha:n. Valmis-rivi PT:lle vasta PK:n sha:n päälle (palkki + TasoAika yhdessä).
