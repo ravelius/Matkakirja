@@ -55,3 +55,4 @@ Ei muuta NUI:n jonossa (PT:n -1246-jono: otsikkovärit → Lontoo, molemmat teht
 Parit PT:lle.
 
 - JU 13.4x: välilehtivärit 91feac3b2 = MR16 → linkki 224.26 (MR15:n jälkeen), koeyhdistys puhdas.
+- OMISTAJAN PÄÄTÖS 13.40 (KK): välilehtivärit 91feac3b2 "Kyllä, junaan", ei muutoksia. PT:lle kerrottu.
