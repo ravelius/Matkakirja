@@ -33,3 +33,7 @@ yhdellä vilkaisulla; tumma teksti, pergamenttityyli ja välilehtien tunnusväri
 ## LISÄYS 13.1x (PT): JONOSSA OTSIKKOVÄRIEN JÄLKEEN — ALOITTAMATTA
 Lontoo-saapuminen (NS:n vikaselvitys, omistajan kuva): saapumisnäkymässä päällekkäiset otsikot ja ruutuun jäävä kortti, kun Lontooseen tullaan
 oppaan 3D-kaupungin jälkeen tai liftauksella. Pyydä NS:ltä/JU:lta kuva ja toistotapa ennen koodia.
+
+## LISÄYS 12.5x: klikattavat-2 KATSOTTU OK (lokit/nui-klikattavat-2-pariisi-mac-3e1bf8acb, 6/6, KUOLLUT 0)
+Klikattavat samat kuin -1, ei aihepisteitä kaupungissa; Torni 1888 lento 3,1 km + juttu auki. Pari _tyo/natiivi-ui/klikattavat-2-torni-1888-juttu-paikka.png PT:llä.
+Yllä oleva "AJOSSA JU:LLA" -kohta on tehty; jäljellä data 083410e11 PR + vienti PT:n sanalla (PK vahvistaa), sitten natiivi MR.
