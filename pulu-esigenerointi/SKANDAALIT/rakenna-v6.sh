@@ -16,7 +16,7 @@ python3 $W/tools/pulu-esigenerointi/korjaa-paketti.py $W/pulu-esigenerointi/SKAN
 cd "$U"
 cat > LAHTEET.md <<'T'
 Lisenssi: oma teksti (Matkakirja, tekoälyllä esigeneroitu ja tarkistettu).
-# Pulun valmiit vastaukset v6 (PK 10.11.2026; skandaalien ja syvennysten Pulu-kysymykset #6532 ca7406df9 + lähdetarkistuksen korjaukset v3/v4-kohtiin; EI VIENTIÄ ennen KK:n lukua)
+# Pulun valmiit vastaukset v6 (PK 10.11.2026; skandaalien ja syvennysten Pulu-kysymykset #6532 ca7406df9 + lähdetarkistuksen korjaukset v3/v4-kohtiin; KK:n luku 10.11. 03.20–03.26: KELPAA JUNAAN, -3 = vietävä)
 Vienti: kaikki tiedostot polkuun pulu/vastaukset/v6/. Tarkistus: shasum -a 256 -c SHA256SUMS.
 Sisältö: v5 (pulu-v5-hetket-20261110-4, ämpärissä) + 8 korttia kohdissa skandaali:<id> (FRA 2, GBR 1) ja syvennys:<kaupunki>-<täky> (pariisi 3, lontoo 2):
 16 kysymysvastausta + 48 "Kerro lisää" (Sonnet-agentit; PK faktatarkistus 8 korjausta; kaksi Opus-lähdetarkistajaa faktat-1/2.md, 14 korjausta).
