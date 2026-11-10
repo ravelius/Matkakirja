@@ -27,3 +27,4 @@ Asemataulu jäädytetty. Blender ja Mac vain JU:n vuorolla (JU local_2a7d6c96-c6
 OMISTAJA 08.52 KELPAA lattia7 (KK). PT teki vaiheen 5 paketin: _valmiit/juoksupeli-kk-lavastaja-tausta-v130-vienti-20261110 (koejuuri-piikki1, SHA256SUMS bf1a07f51742, muuri/lattia-uusi/v130/paketoi.zsh, KORJAUS 08.53).
 PK tarkistaa eston, vienti JU:lla PT:n kuittauksella. Seuraava 0 hoidettu PT:llä: lattiarivi `tehty` vasta kun v130 viety. ALOITA kohdasta 1 (raja3-rivi) heti (PT).
 PT 09.0x: omistaja 08.53 "Pysyy": v130 etenee 3 uudesta viasta huolimatta; EI muutoksia v130-pakettiin. Raja3-riviin lisätty myös t-LK:n L-viivan kehys.
+PT 10.4x: raja3-rivi (jarj 4) nyt: mittaus ensin (väri vai valo), korjaus koejuureen, pari samasta kohdasta täysikoossa PT:lle; ei vientiä, ei junaa. Sitten päätykolmio (jarj 5) samoin. Mac/iPad-ajot JU:n vuorolla.
