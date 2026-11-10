@@ -1142,3 +1142,10 @@ PK:n ääntämistesti (8 nimeä, ElevenLabs 1 otto, 61 krediittiä; lontoo-nimet
 ## LYHYT VERSIONUMERO 224.N (omistaja 10.11.2026 klo 06.39) (10.11.2026 klo 06.42)
 
 Omistaja 06.38: "Saako versio numeron jatkossa lyhyemmäksi" (asennuslinkin 335da402f). Kortti → "224.7" -muoto: junan numero + linkin juokseva järjestysnumero; asennussivulla, sovelluksessa ja viesteissä, commit-tunniste vain sisäisesti (asennussivulla pienellä). Viestit KK:lle muodossa "224.N (sha)". JU numeroi ipa-arkiston mukaan: 224.1 39204416d … 224.6 335da402f; seuraava 224.7. NUI 14877fa07: MATKAKIRJA_LYHYT → ☰ alin rivi, Mitä uutta, matkalaukku.
+
+## ASENNUSSIVU JA LONTOON TEKSTIT; SISÄLTÖTEKSTIT KK:N PÄÄTETTÄVIKSI (omistaja 10.11.2026 klo 06.54–07.36) (10.11.2026 klo 07.45)
+
+- 06.54 kaksi pyyntöä: "Automaattinen orbit kierto loppuu jos säädän kulmaa oik tapilla. Saisi jatkua." (NS 183e4bfbf → 224.10) ja "Kuvan napit näkyvät huonosti kun pois päältä" (NUI 038bbc716 → 224.9).
+- 06.59 asennussivu: "Tässä riittäisi kun näkyisi version alla uudet jutut ranskalaisilla viivoilla sekä edellisen version uudet jutut. Sekä latauksen koko. Muut tekstit voi ottaa pois" → JU:n pysyvä linkkiohje 224.8:sta (Matkakirja, iso 224.N, Uutta, Edellisessä, Asenna, koko; sha ja ohjeet pois). Manifestin title "Matkakirja 224.N" joka linkissä.
+- 07.36 kortti "Kelpaavatko Lontoon nostojen tekstit (18 kysymystä ja 15 kuvaselitettä)?" → "Kyllä ja jatkossa sinä saat päättää tällaiset asiat koska osaat minua paremmin nämä asiat". Lontoon A 16 + B 2 (KK:n sanamuoto: 18 "saksanhirven urosten") + C 15 kelpaavat.
+- PYSYVÄ VALTUUS 07.36: nostojen ja juttujen sisältötekstien (Kysy pululta -kysymykset, kuvaselitteet ja vastaavat faktatekstit) hyväksyntä on KK:n, ei omistajan korttia. KK:n kapea tulkinta: ei koske ääniä, kuvia, malleja, generointilupia, julkaisua eikä huutoja/käsikirjoituksia. Roolit tuovat tekstit PT:n kautta KK:lle; KK kertoo omistajalle lopputuloksen rivillä.
