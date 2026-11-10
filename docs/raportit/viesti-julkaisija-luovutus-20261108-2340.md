@@ -13,6 +13,7 @@
 - 16.5x PIENI iPad PJ6 (jono-pj6-pieni-d57afd0c3.zsh, ipad-pieni-kiire.zsh = kiire-kopio pienelle, oma lukko) KÄÄNNÖS e429f450f (PK 16.4x, kansio ennallaan), odottaa PK:n ok:ta Mac PJ5:lle: kun PK sanoo ok → `touch T/pk-ok-d57afd0c3` → käännös + ajo (sk md5 3064164605f0) → lokit/pk-latausruutu-d57afd0c3-ipad → PK.
 - 16.4x: levy 42 Gi (siirrot valmiit). OMISTAJA 16.36: Mac verkossa PUHELIMEN kautta → vältä isoja latauksia/vientejä (NAS-siirrot, media-vienti) kunnes verkko palaa; iPadit voivat olla yhä hitaalla wifillä (v131-uusinta vasta normaalilla verkolla). NUI kaupunkinimi-5-mac effce09e2 (etusija) ajossa → NUI; -4-ipad vain tiedoksi.
 - 16.4x: OMISTAJA 16.38: verkko 4 Mb/s klo 9 alkaen (Telian vika) → error 22 ja latausjumit todennäköisesti verkko; nyt Mac + iPadit puhelimen verkossa (ei tarpeettomia isoja siirtoja). v131-uusinta: kysytty PT:ltä, oletus odota valokuitua. Mac PJ5 d57afd0c3 ✓ PK:lle 16.38.
+- 16.4x PT: uusinnat nopeammassa (puhelin)verkossa etusijalla; isot ulosviennit lykätty. ISO iPad nyt PK12 (jono-pk12-ipad-ketju.zsh, korvaa PK11): NUI-4-ipad (ajossa, vain tiedoksi) → PK v131 UUSINTA 8d22f34e4 → lokit/pelikoodari-tausta-v131-uusinta → PK+LAV+PT → VS vesitäyttö → PE ×3 → "JU PK5 LOPPU (PK12)" → PV → PN. AJO-rivit merkitään [verkko …] tiedostosta T/verkko.txt (päivitä, kun verkko vaihtuu).
 - Postivahdin 15.0x aloitusviesti tuli ilman nollausta; vastattu (ei koske).
 
 ## LISÄYS 10.11. 14.27 (TUOREIN; korvaa 13.2x:n jonon; konteksti 25 % → nollaus)
