@@ -5,6 +5,7 @@
 - error 22: 14.08–14.14 neljä käännöstä kaatui käynnistykseen, laite toipui itse 14.15 (ei lukossa, passcodeRequired false). ipad-skenaario-f1.zsh nyt 5 yritystä 60 s välein + lukkotila riville. KK:lle ja PT:lle kerrottu, ettei omistajaa tarvita. OPPI: TAUKO-lukkoon elävä pid (muuten ipad-lukko.sh poistaa); launch-testi vain omalla lukolla.
 - KORJATTU: mac-yleis.zsh tyhjensi syötteen, kun sk oli jo sk-taysi/<kansio>.txt → nyt -kerros.txt. ipad-yleis-kiire.zsh: LISAKOPIO="a b" kopioi $K/laheta/<f> Documentsiin.
 - 14.3x AJOSSA Mac PJ4: PK latausruutu 87a9d0e69 (jono-pj4, sk-taysi/pk-latausruutu-87a9d0e69.txt 1930 t) → lokit/pk-latausruutu-87a9d0e69 → rivi PK:lle. Pienen iPadin laiteajo VASTA PK:n ok:n jälkeen (sha 87a9d0e69).
+- 14.4x: LINKKI 224.26 = 6087868bf (14.33) KK+PT+NUI ilmoitettu. MR19 NS lento-tahdistus abf0d5328 → 224.29 MR18:n jälkeen (testit ay, Uutta valmis, pt-ok PT:ltä). PJ4 ✓ PK:lle (pieni iPad odottaa PK:n ok). Tahdistus-1b ✓ NS:lle. KS I3 ajossa 14.33 (PK5).
 - RAPORTOITU tällä vuorolla: VS 304ef710b tarkistus, NUI museo-ilmaisin-3 (PUUTE 2), PQ kaupunkinimi-pari, PR kuvakyltti-2, NS NN muistikatto 6/6, NS britannia-1 (9/9), NS iss-ipad-1 (SIGTERM, NS: ei uusintaa), PK PJ3 latausruutu (10/10, PUUTE 2), PK tausta-v131 + PE A + tahdistus-1 käynnistysvika (kansiot -kaynnistysvika-1414, uusinnat PK5:ssä).
 
 ## LISÄYS 10.11. 13.2x (TUOREIN; korvaa 12.2x:n jonon; konteksti 26 % → nollaus)
