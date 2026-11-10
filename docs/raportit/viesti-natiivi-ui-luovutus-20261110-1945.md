@@ -33,3 +33,10 @@ Juna 224 kärki nyt 271e46fd9 (191aaeaf2 perui KS:n korostuksen ac292ac12 = 224.
 
 ## JONO
 Tulokset 1 (pysty-2), 2 (kontrasti-pari), 3 (tapit-pari); sitten rivi PT:lle "JONO TYHJÄ: Natiivi-UI". Avoin (vain pyydettäessä): kuvakyltin reunarajaus.
+
+## LISÄYS 19.5x (PT: "hyvä"; ND puuttui omistajalla myös 224.35:ssä → todennäköisesti ND:n LuoMalli kaatuu laitteella = jättinimien juurisyy)
+- Yhdistelmä 033ba90b5 natiivi-ui/nimet-ja-kontrasti (2592bf839 + f4ddf1655). iPad-pari JU:lla kun iso iPad palaa: sk-ipad-nimet-kontrasti-1.txt
+  (_tyo/natiivi-ui) 271e46fd9 vs 033ba90b5 konsolilokilla → lokit/nui-ipad-nimet-kontrasti-1-<sha>. Tee: grep "esteet ohitettu|estevirheitä|
+  nähtävyyslataus|Exception", kuvat n1/n2 → pari PT:lle (+ KS:lle loki).
+- KS:lle lähetetty: ND:n mallin luonti laitteella (normaalikartta/ASTC-epäily), LuoMalliin try/catch + loki. Selvitä KS:n kanssa suoraan.
+- Mac-kontrastipari (sk-kontrasti-1) → PT kun valmis.
