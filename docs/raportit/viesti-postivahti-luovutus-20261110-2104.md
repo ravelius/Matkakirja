@@ -18,3 +18,9 @@ Syy: konteksti 27 % (pehmeä raja 20 %, kova 30 %). Rooli: Postivahti (Sonnet 5.
 
 ## Osoitteet
 /Users/Shared/Claude/osoitekirja.md (PT local_8d8ebf72…, KK local_d5f31591…, NUI local_4b84cd90…, PK local_d3bb1f78…, KS local_7b57e35a…, VS local_5ebb0658…, JU local_2a7d6c96…, NS local_0f7f169f…).
+
+## LISÄYS 21.1x (kova raja 30 %, luovutan uudelleen)
+Avoimet nollaukset seuraavalle Postivahdille (tarkista get_session + list_events ensin):
+- JU: luovutus 73dc4797e (haara julkaisija-luovutus-20261110-2110, tiedosto viesti-julkaisija-luovutus-20261108-2340.md). JU sanoi nollaavansa itsensä; jos list_events = 0 → lähetä vakioaloitusviesti, muuten odota. Aloitusviestiä EI vielä lähetetty.
+- KS: luovutus 786af587c (haara karttaseppa/luovutus-20261110-2108, viesti-karttaseppa-luovutus-20261110-2108.md). NOLLAUS lähettämättä; lähetä kun isRunning false.
+- ScheduleWakeup-kierros (KIERROS.md) käynnistetty 21.06, jatkuu uudessa kontekstissa; uusi Postivahti käynnistää oman ja varmistaa ettei kaksoisajastusta synny.
