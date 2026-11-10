@@ -1,3 +1,18 @@
+## LISÄYS 10.11. 09.09 (TUOREIN; korvaa 08.0x:n jonon; konteksti 25 % → nollaus)
+- T = /Users/Shared/Claude/julkaisija-tyokalut. Jonoloki T/jono-20261103-ilta.txt. Monitor: tail -F jonoloki | grep -E "AJO |JU M|JU N|LOPPU|VIKA|ESTE|LINKKI|PUSHATTU".
+- JUNA 224 = 3bbe27523 PUSHATTU 09.00 (68d365e65 + NS olennaiset nimet 7491ded20; testit ah 733/2285/893, unity 0). Juna.py: nimet valmiina, museo työn alla.
+- LINKKIKETJU (kaikilla PT:n Uutta + pt-ok-lippu valmiina linkki-224-uutta/224.1{2,3,4}.pt-ok):
+  MR2 (jono-mr2-juna-22412.zsh): käännös 3bbe27523 → linkki 224.12. MR3 (jono-mr3-juna-22413.zsh) odottaa MR2:n LINKKI/LOPPU: + NS museo 91bc37c4b (iso-museo-v1 VIETY 09.03, 210, curl 200) testit ai → push → 224.13.
+  MR4 (jono-mr4-juna-22414.zsh) odottaa MR3: + VS paletti 4d3b91842 (testit aj) → 224.14. Ristiriidattomuus tarkistettu. JOKAISESTA LINKISTÄ versionumero + sha KK:lle (local_d5f31591… osoitekirjasta) ja PT:lle.
+- iPad (lukko /tmp/matkakirja-ipad.lukko; T/ipad-yleis.zsh <sha> <nimi> <sk> <kansio> = käännös tarvittaessa + vahti + muisti-tarkka, runko 68d365e65):
+  MW (jono-mw-vs-uusinta.zsh): VS mr224b 62e148dae (filmi vain Pariisi, EI vielä junaan: VS pyytää MR:n tuloksen jälkeen) → lokit/linssiseppa2-mr224b-ipad-62e148dae; sitten pino3 22e601e76 → linssiseppa2-pino3-ipad-22e601e76 → VS (local_5ebb0658…). Aiemmat yritykset -kaannosvika-0835 / -kaatui-0837 / -kaatui-0810 (error 22 = launch; käsin toimi 08.43).
+  NA (jono-na-ns-iss-c.zsh): NS ISS koe C 630e6bc31 → lokit/natiiviseppa-iss-muisti-c-630e6bc31 → NS.
+  NB (jono-nb-pk-tausta130.zsh): PK tausta v130 66b550331 → lokit/pelikoodari-tausta-v130 → PK katsoo kuvat, sitten MR junaan (PT-kuittaus). leivottu-v4 VIETY 09.07 (1057 objektia, s3 ls).
+- Mac: MZ KS 35 sc-koko 2c7f80081 (6 kuvaa, tarkista "koepohja: sacre-coeur … sacre-coeur-pohja-koko" ilman "ei kuvaa") + 36 koe9 → KS (local_7b57e35a…). NC PK liiku-napautus-2 622a81b4d → lokit/pk-liiku-napautus-korjaus2-ipad-622a81b4d, odotus "mk-liiku__nappi" + "ui liiku: loitonnus pariisi" → PK.
+- RAPORTOITU: LAV lattia9, KS nyt8/koe8/koe8gw (gw: 2 kuvaa md5 samat), NS museo-1 (ensin ämpärivika, uusinta ✓ parit-2, PT kuittasi), NS olennaiset nimet iPad ✓, VS paletti-pari (ero 0–0,45 %, kerrottu PT:lle), LAV v130 viety 08.58, museo-paketti, leivottu-v4.
+- 6c648af87 EI junaan (KK: filmi vain Pariisi); käännös keskeytetty 08.19 → T7-kopion jäämät (SimulaattorinMallit) siirretty /Volumes/T7 4TB/koodaus/ju-jaamat-20261110-0840 (OPPI: älä tapa laite-sha-käännöstä kesken SimulaattorinMallitSivuun-vaiheen; jos pakko, siirrä Assets/Matkakirja/Kartta/SimulaattorinMallit pois ennen seuraavaa).
+- TYÖ-OSIO: T/tyo-osio.py vahti pid 68641 (SINÄ:/KK:-jako). Työlista: "Levytilan vapautus" yhä NYT (43 Gi vapaana, siirto-lokit-nas-20261110.zsh pid 36382 ajossa → kun valmis: df + tyolista.py tehty).
+
 ## LISÄYS 10.11. 08.0x (TUOREIN; korvaa 07.0x:n jonon; konteksti 27 % → nollaus)
 - TYÖLISTA ON JONO (omistaja 07.40, PT): T2=/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tyolista.py; `python3 -I $T2 seuraava JU` / `tehty "OTSIKKO" "…"` / `este "OTSIKKO" "syy"`. TEHTY: "Asennuslinkki 224.10", "Asennussivulle Työn alla -osio". NYT: "Levytilan vapautus aamun tasolle" (tavoite ~35 Gi; ajossa siirto-lokit-nas-20261110.zsh: yli 12 h vanhat lokit/-kansiot 537 kpl ~31 Gi → NAS Matkakirja-arkisto/lokit-20261110, loki T/siirto-lokit-nas-20261110.log → kun valmis: df + `tehty`/`tilanne`). Ajojono pysyy omana (jonoloki).
 - JUNA 224 (wt /Users/Shared/Claude/wt/julkaisija-juna-221): f0da68576 = 224.8 (07.08) → 6fc74dc14 = 224.9 (07.22, NS 7a9c1a971 + NUI 038bbc716) → 87e99a09a = 224.10 (07.43, NS 183e4bfbf). LINKKI 224.10. Laskuri T/linkki-224-numero.txt.
