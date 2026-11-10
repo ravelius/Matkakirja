@@ -1220,11 +1220,11 @@ Kortti "Muistiraja osuudeksi laitteen antamasta (koe)": NS tekee, lähtö 80 % l
 (3) Kaupunkilehti ja turisti-info "pitäisi muuten turisti infon kanssa nostaa selkeämmin näkyville kaupungissa" → NUI:n ehdotus kuvana KK:lle (kaksi selkeää nappia kaupungin nimen yhteyteen, sovitus 09.28 pienoiskarttaan ja nimikilpeen).
 (4) Lehden jutut vs. kartan kohteet (omat 3D-merkit kuten kadonneiden tähti): odottaa KK:n suunnitelmaa ja korttia. Toteutus (1)–(3) NUI.
 
-## KARTAN KOHTEET KOLMEEN LAJIIN: NÄHTÄVYYDET, KADONNEET IHMEET, TARINAPAIKAT (omistaja 10.11.2026 klo 10.36, KK:n välittämä, aamulista kohdat 59–60) (10.11.2026 klo 11.05)
+## KARTAN KOHTEET KOLMEEN LAJIIN: NÄHTÄVYYDET, KADONNEET IHMEET, TARINAPAIKAT (omistaja 10.11.2026 klo 10.36, KK:n välittämä, aamulista kohdat 59–60) (10.11.2026 klo 10.52)
 
 Kortti "Jaetaanko kartan kohteet kolmeen lajiin: Nähtävyydet, Kadonneet ihmeet ja Tarinapaikat?" = "Kyllä, suunnittele (Recommended)"; kuvaus: "Tärkeimmät paikkaan sidotut jutut kartalle yhdellä omalla 3D-merkillä; muut jutut vain lehdessä. Merkit kuvina ennen päätöstä."
-KK:n suunnitelma 10.52: scratchpad/keskustelukanava/suunnitelmat/20261110-kartan-kohteet-kolme-lajia.md (osat 1–7; laajuus kaupungit, maatason aihevalot ennallaan). Korvaa 10.06:n aihejärjestyksen kaupungin luettelossa (Kaupungit-rivi pysyy). Jako PT 11.0x: NUI (lista KK:lle, nimen napautus PK:n kanssa, napit kuvana, luettelo luokittelun jälkeen), merkki NUI + VS myöhemmin.
+KK:n suunnitelma 10.52: scratchpad/keskustelukanava/suunnitelmat/20261110-kartan-kohteet-kolme-lajia.md (osat 1–7; laajuus kaupungit, maatason aihevalot ennallaan). Korvaa 10.06:n aihejärjestyksen kaupungin luettelossa (Kaupungit-rivi pysyy). Jako PT 10.5x: NUI (lista KK:lle, nimen napautus PK:n kanssa, napit kuvana, luettelo luokittelun jälkeen), merkki NUI + VS myöhemmin.
 
-## PARIISIN MAALATTU TAIVAS LOPULLISEKSI (omistaja 10.11.2026 klo 10.45, KK:n välittämä, aamulista kohta 61) (10.11.2026 klo 11.05)
+## PARIISIN MAALATTU TAIVAS LOPULLISEKSI (omistaja 10.11.2026 klo 10.45, KK:n välittämä, aamulista kohta 61) (10.11.2026 klo 10.52)
 
 Kortti "Jääkö maalattu taivas lopulliseksi Pariisin kallistettuun karttaan?" = "Kyllä, lopulliseksi (Recommended)"; kuvaus: "Maalattu taivas jää Pariisiin ja menee junaan." Vain Pariisi, muualla liukuväri. Jo junan 224 pohjassa oletuksena: linkissä 224.13 (e46b3f251) alkaen.
