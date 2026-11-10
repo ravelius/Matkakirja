@@ -79,3 +79,20 @@ Tripo-malleja EI skaalata (pysyvät ennallaan, kunnes kukin korvataan hyväksyty
 - Kokeet 1:1:n päällä: f4468f6ed (haara karttaseppa/nahtavyydet-1-1 = 96374758b + 1:1), pushattu. Kartta-testeissä 752/753: LouvrenMitat "Cour Napoléon
   tukossa" kaatuu jo 96374758b:ssä (pihakaistat) → korjaa ennen Louvren seuraavaa kuvaa.
 - SEURAAVAKSI: Panthéon tyyliohjeen mukaan 1:1:nä nahtavyydet-1-1:n päälle (VS odottaa haaraa + sha).
+
+## LISÄYS 22.2x (konteksti 25 %, hook): PANTHÉON TEHTY, KJ7 JA KJ8 JU:lla
+- KJ6 (Louvre K 2) valmis 22.02, katsottu 1000 px: haamujäljet poissa, talot palanneet; K 2 -kokoinen → EI KK:lle. Louvre kuvataan uudelleen omalla vuorollaan 1:1:nä
+  (palat-v25-louvre-1-1).
+- KJ7 käynnissä JU:lla (JU 22.1x) → lokit/karttaseppa-1-1-kolme-098f9f05c: katso täysikokoisena → ruudukko k2 | 11 (kaukaa + läheltä, RK/ND/Eiffel) KK:lle,
+  kopio PT:lle (koodijuna/pari.py). Kerro samalla, missä kunnossa ympäristö on (talot, -k2-maapohjat).
+- PANTHÉON b357fdfc1 (haara karttaseppa/nahtavyydet-1-1, pushattu): harjakatot, seinärytmi + friisi, lyijykupoli rivoin + lyhty, tumma varjo pylväiden
+  takana; OSAKIRJASTO Assets/Matkakirja/Kartta/OhjelmaKohdeOsat.cs (OsaHarjakatto, OsaKupoli, OsaSeinaRytmi) → käytä Invalideissa, Opérassa, SC:ssä, S-C:ssä.
+  LouvrenMitat-testi korjattu (753/753), unity 0. VS:lle sha lähetetty 22.1x (kynäkoe efa695dbb rebasataan).
+- Panthéonin raivaus 1:1: koodijuna/raivaus-1-1-pantheon/ (jalanjälki 6 079 m², raivaus 7 698 m², K 2 68 155 m²; 15 → 1 taloa poistossa, 14 palaa)
+  → palat-v25-pantheon-1-1 VALMIS (k2b + 9 palaa: kolme + Panthéon).
+- KJ8 (koodijuna/sk-mac-pantheon-kj8.txt, 6 kuvaa pn8-*) JU:lle 22.2x → lokit/karttaseppa-pantheon-kj8-b357fdfc1.
+  Kuvista karkea ruudukko Tripo | koodi + kaukaa KK:lle, kopio PT:lle.
+- NUI:n paisuntakoe: vastattu 22.1x (Paisunta.Kerroin-rivi OhjelmaKohteet.Paivita:han NUI:n haarassa 098f9f05c:n päällä; uusi _nahtavyysPiilo TaloKerros +
+  ElavaKerros -varjostimiin, katson ennen junaa).
+- JONO sen jälkeen: Invalidit → Opéra → Louvren piha + pyramidi → Sacré-Cœur → Sainte-Chapelle (kukin 1:1, raivaus resepti tee-maskit.py, osat OhjelmaKohdeOsat).
+  D) KK:n kysymys (parametriset osat) yhä vastaamatta; OhjelmaKohdeOsat.cs on vastauksen alku.
