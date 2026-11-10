@@ -35,3 +35,6 @@ OPPI: KS:n talotiedosto (pariisi.json vN) pitää tehdä junan kärjen päälle,
 - Päätösloki: tämä haara (fable-luovutus-0150) sisältää 22.33–00.08 → PR ja yhdistä checks pass -jälkeen. PR 6560 (vanha haara
   pt-loki-20261110-2330) ristiriidassa → sulje, korvattu tällä.
 - Main-checkoutissa paikallisia muutoksia (paatokset, tyolista.json, osoitteet.md) – ei PT:n tämän vuoron, älä commitoi sokkona.
+
+## LISÄYS 01.5x
+- KK 01.50: Louvre (KJ22) + Invalidit (KJ23), käännös 8f647a8d4 → SAAVAT MENNÄ JUNAAN, kun KS tuo junaehdokkaat (junan kärjen päälle, talot-paketti + palat-ok). Louvren F-jalanjälki Rivolin varrella seuraavaan kierrokseen, ei estä. pt-ok: tarkista git log <kärki>..<sha> ja ettei koodi-Louvre ole oletuksessa ilman KK:n lupaa (KK hyväksyi nyt Louvren koodimallin kuvista KJ22 → jos KS lisää louvren Oletukseen, se on KK:n hyväksymä).
