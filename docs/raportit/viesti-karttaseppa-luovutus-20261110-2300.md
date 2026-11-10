@@ -38,3 +38,14 @@ Worktree: /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna (remote natiivi-ba
 ## Vahdit (uusi sessio virittää)
 - Postilaatikko: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaatikko-vahti.sh` (30 min).
 - OSM-haku: odota `grep tiet nd-puisto/hae.log` (pid 1408; jos kuollut ilman riviä, aja uudelleen taustalle: `node hae-cite.mjs cite-osm.json > hae.log 2>&1`).
+
+## LISÄYS 23.1x (viestit nollauksen odottaessa)
+- KJ9: KK hyväksyi vaalean kiven (224.46). KJ10 Panthéon: KK "näyttää oikealta → junaan"; PT: 224.47 = 321324163 (haara karttaseppa/pantheon-224-47 =
+  b8fed770e + StreamingAssets/talot/pariisi.json v4). Paketti _tyo/karttaseppa/koodijuna/talot-paketti-pariisi-v4 (219 palaa, v3→v4 5 palaa 3,2 Mt, SHA256SUMS ok)
+  JU:lle. AVOIN: kun JU kertoo paketin olevan ämpärissä → kirjoita /Users/Shared/Claude/julkaisija-tyokalut/linkki-224-uutta/224.47.palat-ok (kuten 224.46).
+  HUOM: Invalidien palat (palat-v25-invalides-1-1) ovat Panthéonin päällä → Invalidien paketti on v5, --edellinen = v4 (321324163:n pariisi.json).
+- KK:n Panthéon-huomiot seuraavaan kierrokseen (ei estä): aukiolle kevyt kiveys/reunaviiva; pylväiden välit mustat laatikot → tummanruskea seinä + yksi ovi.
+- KK:n ND-ottoon (224.47-puisto): 1) aukiolla irtovarjoja ilman rakennusta (E/C-muoto, varjokaista) ja talon pohjan katkoviiva maassa (lahi-nd-b) →
+  tarkista poistettujen talojen varjot/pohjat (talot poisto 1); 2) toinen kulma OIKEASTI eri suunnasta (b-kuvat olivat samat), kamera niin korkealla, että katto näkyy.
+- Kyltit irti 1:1-mallista: NUI tekee (OhjelmaKohteet.KoodiMalli + Kylttikohde.TRajat, haara natiivi-ui/nahtavyys-paisuu) → KS katsoo ennen junaa.
+  Sainte-Chapellen koko tiedossa (Tripo K 2), ei korjata.
