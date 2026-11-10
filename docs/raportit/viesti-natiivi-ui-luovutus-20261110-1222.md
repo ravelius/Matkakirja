@@ -30,3 +30,10 @@ Kuvat sips -Z 1000 / PIL-rajauksina scratchpadiin; parit _tyo/natiivi-ui/-kansio
 - Klikattavat (3edc0a5e5): PT 11.0x: uusi ajo vasta KK:n luokittelun (osa 3) ja osan 4 jälkeen. Koodilöydös: Kohdenostot.Linkitetty piilottaa vain kartalla
   olevien kohteiden nostot (ei Tarinakohteita) → _tyo/natiivi-ui/klikattavat-tavalliset-selvitys-20261110.md.
 - D) osa 4 kaupungin luettelo KK:n luokittelun jälkeen. Muut jonossa: kuvakyltti 153602c0f (koe). Lyhyt versio 14877fa07: JU:n iPad-☰-kuva katsomatta.
+
+## LISÄYS 12.3x: museo-ilmaisin-2 ajettu (lokit/nui-museo-ilmaisin-2-mac-37eba712e, rc 0, kuvia 4/4, PUUTE 2)
+- Kierros 1 (ämpäri ei vastaa) OK: lähtökysymys Louvre, "odottaa palvelimen kuvia", ilmaisin esiin (LOUVRE, RANSKA).
+- Kierros 2 (paikallinen ämpäri …/museo-v1/julisteet/iso): "linssit: museo: odottaa palvelimen kuvia 79/79" toistuu 5 s välein, kuvat eivät tule;
+  ilmaisin pois vasta aikarajalla 60.3 s, sitten näyttelyvalinta. PUUTE 2 = "kuvat levyllä/valmiina|VIKA" -rivejä ei tullut.
+  Selvitä: (a) onko ämpärin polku oikea (NS:n raportti-museo.md; ehkä museo-v1/iso eikä julisteet/iso), (b) pitäisikö aikarajalla kirjata VIKA-rivi.
+  Kuvia i-3/i-4 ei katsottu. Ilmaisin itse (esiin/pois, testikomento) toimii. Pienoiskartta-1 iphone 5d01e2c25 vanhentunut (junaan meni 224e8ea23).
