@@ -37,3 +37,18 @@ britannia-2-kylma, kertoja-esilataus, PE (0421, 4444, kehys-pe-juna224-1) PK7:n 
 
 ## VIESTIT TÄLLÄ VUOROLLA
 JU: ajopyyntö marseille-mac-1 (16.33). PT: ei vielä (kärjen syy ei valmis).
+
+## LISÄYS 16.4x (PT 16.3x–16.4x + JU)
+- PT TÄRKEÄ: striimikartta ei lataudu varmasti MYÖSKÄÄN MACILLA nopealla verkolla: Barcelona tyhjä 17 s zoomauksen jälkeen
+  (lokit/nui-kaupunkinimi-zoomaus-4-mac-3e8796b49/b-1-barcelona.png), kun -3-mac-ef774d9fd/b-0 latautui. → SATUNNAINEN LATAUSVIKA, ei Marseillen
+  aukko eikä vain hidas verkko. NS:n tarkistus: -4-mac-lokissa 0 "palvelin virhe" -riviä, saapumisrauha ESP 2,6 s / 32 laattaa, ei elävä-virheitä
+  (sama oire kuin iPadin Marseille: hiljainen jumi). Tekninen kunto -kärjen YKKÖSTYÖ.
+- OK-EHTO (PT): Barcelona + Marseille katuverkko TOISTUVASTI (esim. 3 ajoa) Macilla JA isolla iPadilla; myös hidas/katkeava verkko ei saa jättää
+  tyhjää karttaa tai vajaita laattoja (uudelleenyritys + täydennys, omistaja KK:n kautta). Syy + korjausversio PT:lle 3 rivillä; NUI poistaa
+  Marseillen korttipoikkeuksen (3e8796b49 KorttiKaupungit = {marseille}), kun Marseille toimii isolla iPadilla.
+- JU 16.27 (PT): juoksupelin latausjumissa isolla iPadilla 121 aikakatkaisua, Macilla sama tiedosto 0,45 s. PK korjaa juoksupelin puolen; sopikaa
+  yhteisestä latauskoodista PK:n kanssa, jos sama syy.
+- JU 16.4x: marseille-mac-1 f2fe729b1 KÄYNNISSÄ Macilla kärkenä → lokit/natiiviseppa-marseille-mac-1-f2fe729b1 (tulos NS:lle). Britannia-2-kylma ja
+  kertoja ovat iPad-jonossa. Vahti (marseille-kuvio) käynnistetty uudelleen 16.4x.
+- Seuraajan ensimmäinen työ: lue marseille-mac-1 (tilarivit: jääkö "elävä kesken/näkyviä" > 0 ja piirto vapaana = 0 → semafori/jumi; mvt jonossa
+  kasvaa → verkkopaikat; ei pyyntöjä ollenkaan → Cesium ei pyydä), toista 3× ja korjaa.
