@@ -1,0 +1,30 @@
+# Valosepän luovutus 10.11.2026 klo 13.55. Itsenäinen: vanhoja ei tarvitse lukea (korvaa 20261110-1340:n)
+
+Syy: PT:n nollauspyyntö 13.5x; tarkistusajo JU:n seuraajan jonossa. Tili sami.reivinen@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup`. Worktreet: k31 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k31` (`linssiseppa2/varatalot-vari-224` 304ef710b, puhdas, pushattu), k32 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k32` (`linssiseppa2/eiffel-koodi-kivi` 20fed45ff, puhdas, pushattu). Kuvat vain JU:n vuorolla. Id:t: PT `local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31` ≤ 3 riviä; JU `local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd`; KK `local_d5f31591-21fa-4cb0-bab3-bcd3435d075a`; KS `local_7b57e35a-3a8e-4943-aba1-c960b9eb4671`; Postivahti `local_1f31f830-9df5-41c1-8992-172e100af57f`. Työlista: `python3 -I /Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tyolista.py seuraava VS`.
+
+## ERÄ 1: VALKOISET RAKENNUKSET KUUMAILMAPALLONÄKYMÄSSÄ (PT 13.1x, omistajan havainto 13.14) – SÄVY VALITTU, TARKISTUSAJO JU:N SEURAAJALLA
+- SYY (todennettu, PT:lle ja KK:lle kerrottu): Mac-esikatselu on automaattiajo → ionin varadata → OSM-talot 96188 ilman väriä = valkoiset laatikot. PELAAJA EI NÄE VARATALOJA KOSKAAN (PT:lle 13.48): Googlen 429/401/403 ja kytkin pois → vara ilman OSM-taloja (`GoogleKiellossa` / `pyydetty == Google`); talot vain editorissa, simulaattorissa (`Kaynti.Testiymparisto`), komentoajoissa ja kehittäjäkomennoilla (`opas data ion`, `kaupunki google 0`, `varatalot 1`).
+- Vaiheet: c0b51a7e4 kartan ruskea #b79474 → ajo `lokit/linssiseppa2-valkoiset-c0b51a7e4-b`: ei valkoisia, mutta PT 13.5x: ruskeat erottuvat ilmakuvan harmaista katoista → sävy ilmakuvan katoista, ei kartasta. 6ab535da0 = testikomento `kaupunki varatalovari RRGGBB` (myös ladatuille laatoille; scenariossa `linssi kaupunki varatalovari …`) + oletus d0d6e0. Sävyajo `lokit/linssiseppa2-varatalovari-6ab535da0` (skenaario `_tyo/linssiseppa2/valkoiset/sk-varatalovari-pariisi-mac.txt`): a0a6b0 → (96,108,137) liian tumma, b8bec8 → (144,156,180) vaalea/laventeli, d0d6e0 → (205,219,236) lähes valkoinen; ilmakuvan katot ≈ (125,135,150). Jyrkkä valotus + sininen sävy → interpoloitu **#acb2b4 = 304ef710b** (natiivi-backup `linssiseppa2/varatalot-vari-224`, pushattu; sisältää myös taivas eb0d76199 = ERÄ 3). unity-tarkistus 0 virhettä (6ab535da0; 304ef710b vain vakio).
+- Ennen|jälkeen ruskea -parit (vanhentuneet sävyltään): `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/valkoiset/pari-c0b51a7e4-b/`; parityökalu `_tyo/linssiseppa2/valkoiset/pari.py` (ja pistemittari `nayte.py`) (PIL, 2× 1032 px rinnakkain) – tee uudelleen samoin.
+- AVOIN: JU:n seuraaja ajaa ensimmäisenä Mac-ajona 304ef710b:n -b-skenaariolla (`/Users/Shared/Claude/julkaisija-tyokalut/sk-taysi/linssiseppa2-valkoiset-c0b51a7e4-b.txt`) → `lokit/linssiseppa2-valkoiset-304ef710b`, rivi tulee sinulle. Sitten: katso p-1 ja p-4 (Curl 28 → tarkista ilmakuva latautunut). Jos talot sulautuvat ilmakuvaan → pari ennen `-b85f0f8b9/p-1-heti` | jälkeen `-304ef710b/p-1-heti` (sama rajaus) PT:lle + MR-pyyntö JU:lle haarasta (304ef710b). Jos eivät: säädä vakiota mitatusta suunnasta (valotus jyrkkä: ~±10 perusarvossa ≈ ±25 renderöitynä) ja pyydä uusi ajo, PT:lle rivi.
+
+## ERÄ 2: EIFFEL KOODILLA (omistaja 09.36) – MAC-PARIT PT:LLÄ, iPAD JONOSSA
+- **20fed45ff** (natiivi-backup `linssiseppa2/eiffel-koodi-kivi`) = KS:n 1281fef9e (kytkin Koodimallit.cs, Riemukaari, ND, TaloKivi 7bb48f690) + paletti + Eiffel. Kohde.Korvaa = "eiffel", komento `koodimallit eiffel 0|1` (vanha `ohjelmakohteet eiffel` = alias). Kivijalat TaloKivi.Kerro(0,92); ristikko pronssinruskea 0x6B5948→0x8E7C66 (PT: verrataan oikeaan torniin, ei Tripoon). Testit 27/27, portti ok, unity 0.
+- Mac-parit valmiit, PT:lle 12.3x: `/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/eiffel/parit-mac2-20fed45ff/` (4 paria + LUE.md). Koodi 10 352 kolmiota / ~2,9 Mt verkko, ei tekstuuria; Tripo 97 184 kolmiota + 2048² ASTC + normaali. Tripo 2,4× liioiteltu (pohja 300 m, korkeus 795 m) → koodimalli oikeassa koossa näyttää pieneltä; korttiin valinta (Kohde.Koko-kerroin tarvittaessa).
+- AVOIN: iso iPad `sk-eiffel-ipad.txt` → `lokit/linssiseppa2-eiffel-ipad-20fed45ff` JU:n OM-jonossa KS:n I3:n jälkeen samalla laitekäännöksellä 20fed45ff. Sitten: kuvat (lähin 45, lähin 70, viisto) pareiksi täysikokoisina PT:lle, muisti (`muisti-tarkka.log`, skripti mallina: ms = (aika − ALKU), N-rivi kenttä 4 = fp, 12 = gfx) ja kehysajat (konsoli "kehysajat" p50/p95, gpuMs) tripo vs koodi. PT kokoaa yhden yhteisen KK-kortin (Riemukaari + ND + Eiffel). Ei junaan ennen KK:n korttia.
+- Vanhat haarat `linssiseppa2/eiffel-koodi` (013bf46dd) ja `-kytkin` (12cd6317e) jäävät, ei käytössä.
+
+## ERÄ 3: TAIVAAN KOMMENTTI a51260865 – MUKANA 304ef710b:n HAARASSA (eb0d76199)
+- Ei omaa MR:ää; menee junaan ERÄ 1:n haaran mukana.
+
+## VALMIIT TÄNÄÄN (työlistassa valmis)
+Paletti 4d3b91842 junassa 224 (4444e211a); Pallon elämä 62e148dae junassa (0421af91a, MR6, iso iPad huippu 3052 Mt); Pariisi-pino kortti 3 (`/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/kuvat/pariisi-pino-20261110/3-maalattu-taivas*`); taivas lopulliseksi.
+
+## MUUT AVOIMET (ennallaan)
+- Työlistassa odottaa: Pariisin saumat ja mäkien varjostus (KK: suunnitelma tekotavasta).
+- Merenpohjan syvyyden puristus 97b4f29a9 KS:n koelaatoilla, kun JU on vienyt ne. KS:lle avoin: kohokartan poltetun varjostuksen suunta 315°?
+- Kohokartan aurinko (cd74573cd junassa 223): syvyyskuva varmistettava laiteajossa.
+- Remote Control: ei tehdä. Asemataulu jäädytetty.
+
+## TEKNIIKKA
+Numpy/cv2: venv-rembg puuttuu (siirretty?) → mittaukset pelkällä PIL:llä; PIL `/opt/homebrew/bin/python3 -I`. `sh Peli-testit/unity-tarkistus.sh` (sh, ei zsh); `sh Kartta-testit/kaanna.sh OhjelmaKohde`; paletti `…/venv-rembg/bin/python -I tyokalut/karttapaletti_koodi.py tarkista`. zsh: `$J:A…` ja `$t:A…` rikkovat polun → `"${J}:polku"`. Mac-esikatselussa kaari alle lähimmän (1,68 km; lahizoomi 3 → 560 m) ei liiku. Muokkaukset python-skriptillä (.tmp + os.replace + copymode). Luovutus plumbingilla origin/mainin päälle omaan haaraan.
