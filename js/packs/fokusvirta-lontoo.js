@@ -948,6 +948,20 @@ export const FOKUSVIRTA_LONTOO = {
           + 'paisunut osake romahtaa ja Exchange Alleyn kahvilat jäävät tyhjiksi.',
         lahde: 'William Hogarth 1721, Wikimedia Commons (CC0)',
       },
+      galleria: [
+        {
+          tiedosto: 'Jonathan\'s Coffee House or an Analysis of Change Alley With a Group of Characters from the Life - Inscribed to Jacob Henriques (BM 1868,0808.4311).jpg',
+          selite: 'Jonathan\'s-kahvilassa Exchange Alleyllä miehet kävivät kauppaa '
+            + 'osakkeilla ja puhuivat uutisista kahvikuppien ääressä.',
+          lahde: 'Jefferyes Hamett O\'Neale -teoksen mukaan 1763, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Garraway\'s Coffee House.jpg',
+          selite: 'Garraway\'s oli kahvila Exchange Alleyllä, jossa myytiin kahvia '
+            + 'ja teetä ja huutokaupattiin tavaroita.',
+          lahde: 'George Walter Thornbury, Old and New London 1873, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
         'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',
