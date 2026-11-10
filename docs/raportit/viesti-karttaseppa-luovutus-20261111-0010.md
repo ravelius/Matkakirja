@@ -52,3 +52,7 @@ Testit: `sh Kartta-testit/kaanna.sh` (753) ja `sh Peli-testit/kaanna.sh` (911), 
 
 ## LISÄYS 00.1x
 - NUI vastasi: lähimmän 2,7× tarkistusajo JU:n jonossa eiffel-valon jälkeen shalla ea9e6c633 (nui-lahin-2-7x-2-ea9e6c633; skenaario korjattu aja 0,0012). NUI-kohta SULJETTU; kuvat tulevat NUI:n kautta KK:lle.
+- JU/PT 00.1x: talot v5 ämpärissä + palat-ok kirjoitettu (JU). pt-ok: 224.49 = 440d3e8d6 (MR42), 224.50 = Opéra 15c8e4f93 (paketti v6 → ämpäriin + palat-ok, JU).
+  PT/KK: Louvren 3 committia saavat mennä (Louvre ei oletuksessa). Koodi-Louvre oletukseen vasta, kun KK on nähnyt parin Tripo | koodi 1:1 Opéran lähikuvareseptillä.
+- KJ14 Louvre → lokit/karttaseppa-louvre-kj14-4eed281af (10/10) ja KJ15 SC → lokit/karttaseppa-sacre-coeur-kj15-4eed281af (7/7) VALMIIT, katsomatta.
+  KJ19 korvasi KJ18:n; jonossa KJ16 → KJ17 → KJ19.
