@@ -30,3 +30,10 @@ testit `sh Peli-testit/kaanna.sh` (893/893) worktreessa. Edellinen: `git show 9c
 
 ## JONO
 Kohdan 1 jälkeen: rivi PT:lle "JONO TYHJÄ: natiivi-ui" (työlista: tyolista.py seuraava NUI).
+
+## LISÄYS 17.2x
+- PK 17.1x: TasoOsuus-rajapinta hyväksytty; maalissa 1 tehty fb3f19f31 (haara natiivi-ui/juoksu-tavoitepalkki; iPad-skenaarion sha 1b5ef12dc
+  riittää kuviin). PK pysäyttää S.Aika:n kiinnioton/esittelyn ajaksi omassa JuoksuV4.cs:ssään. Valmis-rivissä PT:lle sha fb3f19f31.
+- OMISTAJAN PÄÄTÖS 17.08 (KK): kuvakyltti junaan → 5ce11c0c5 (natiivi-ui/kuvakyltti-tahdet, Kuvakyltti = true oletuksena), valmis-rivi PT:lle
+  17.2x, lause KK:lle. Tee: kun JU vie MR:n, versionumero (linkki) KK:lle. JATKOHUOMIO (KK, ei estä): ylhäältä-kuvassa 2b Bastiljin kyltti jäi
+  ruudun alareunan alle (vain tähti näkyi) → kyltti pysyköön ruudussa reunan lähellä (NostotKartalla: kuvakyltin ruudun reunarajaus).
