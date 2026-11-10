@@ -19,6 +19,7 @@
 - 16.5x PT: PJ6 SAA ajaa puhelinverkossa (sk md5 0a8622f3ef4b tavallinen). T/kuitu-ok kirjoitettu VAIN PJ6:lle — kuitu EI ole palannut, v131 ja muut isot odottavat KK:n sanaa. PJ6 odottaa ensin c62818943-käännöstä (pid 54119), sitten ajo → PK + valmis-rivi PT:lle (pt-ok). 87a9d0e69-käännös turha, menee loppuun.
 - 16.5x MAC: NS marseille-mac-2 94303946d ajossa (sk-taysi-kopio lyhennetty 4 kuvaan; jos > 4 kuvaa → pysäytä b-2:n jälkeen) → NS. KS Mac 45 korostus-k2 7f0a42222 ajossa → KS (tarkistus ajopyynto.md LISÄYS 16.47). ISO iPad KS I4: jono-om2-ks-korostus-i4.zsh (käännös → kaari-lukko → palat-v23-k2 → 18 kuvaa → runko) → KS. NUI kaupunkinimi-5 + kuvakyltti-4-diag ✓ NUI.
 - 17.0x MR21 (jono-mr21-juna-22431.zsh): NUI effce09e2 → 224.31 MR20:n jälkeen, Uutta 224.31.txt kirjoitettu, odottaa 224.31.pt-ok (PT). LINKIN jälkeen RIVI KK:lle. Mac: NUI kaupunkinimi-6 796969586 + kuvakyltti-5 9f7f40611 ajossa → NUI; NS mac-2 ✓.
+- 17.0x MR22 (jono-mr22-juna-22432.zsh): NS 94303946d karttahaun uusinta → 224.32 MR21:n jälkeen, Uutta 224.32.txt, odottaa 224.32.pt-ok. Linkin jälkeen RIVI KK:lle (+NS, PT).
 - Postivahdin 15.0x aloitusviesti tuli ilman nollausta; vastattu (ei koske).
 
 ## LISÄYS 10.11. 14.27 (TUOREIN; korvaa 13.2x:n jonon; konteksti 25 % → nollaus)
