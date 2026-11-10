@@ -22,3 +22,4 @@ Natiivityöpuu /Users/Shared/Claude/wt/proto-pelikoodari-juoksu haarassa pelikoo
 
 ## LISÄYS 22.2x
 - PT katsoi kartoituksen: r20, r29, r49, r52 aitoja vikoja; suunnitelma ok (M1–M8 LAV:lle, P1/P2 + eteläosa seuraajalle).
+- 22.2x LAV otti kaikki M1–M8 (M2/M3/M6 = yhtenäinen lattia, M4/M8 = muurin juuri jo jonossa; M1, M5, M7 uusia). LAV mittaa M1:n (kallellaan oleva seinälohko) ja M7:n (portaat ilman tekstuuria) lähteen ja ilmoittaa, jos vika onkin pelin puolella. 224.44:n tausta v129 (LAV:lle kerrottu; v131 korjaa raja3:n ja päädyn).
