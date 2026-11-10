@@ -38,3 +38,4 @@ OPPI: KS:n talotiedosto (pariisi.json vN) pitää tehdä junan kärjen päälle,
 
 ## LISÄYS 01.5x
 - KK 01.50: Louvre (KJ22) + Invalidit (KJ23), käännös 8f647a8d4 → SAAVAT MENNÄ JUNAAN, kun KS tuo junaehdokkaat (junan kärjen päälle, talot-paketti + palat-ok). Louvren F-jalanjälki Rivolin varrella seuraavaan kierrokseen, ei estä. pt-ok: tarkista git log <kärki>..<sha> ja ettei koodi-Louvre ole oletuksessa ilman KK:n lupaa (KK hyväksyi nyt Louvren koodimallin kuvista KJ22 → jos KS lisää louvren Oletukseen, se on KK:n hyväksymä).
+- KK 01.5x TARKENNUS (korvaa yllä olevan Louvren osalta): Invalidit junaan HETI kun KS:n junaehdokas tulee. Louvre VASTA kun KS on rajannut raivauksen Rivolin eteläpuolelle (F-jalanjäljen syy löytyi) ja KK on katsonut yhden tarkistuskuvan.
