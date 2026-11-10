@@ -56,3 +56,13 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
 - OSAT 6+11 aae0ab729 Mac katsottu (p6/p7/p19) → PT 224.41.pt-ok, MR31 JU:lla. Ulkoesineet eivät näy Macilla (StreamingAssets vain käännöksessä).
 - OSA 8 ovet-3 3eb33531c Mac katsottu (kiinni 245 → 0), pari proto-3d/_tyo/pelikoodari/osa8-ovet/pari-ovet-3/ PT:lle + rajaluku 0/663 → odottaa pt-ok.
 - Jäljellä: renkaiden uusinta (iPad, 191aaeaf2) isolla iPadilla, kun se toimii (omistaja: huomenna).
+
+## LISÄYS 20.5x: NOLLAUS (tämä on viimeisin; aloita tästä)
+- Osa 8 ovet: PT 224.42.pt-ok 20.42 (JU). Osat 6+11: 224.41.pt-ok (MR31 JU). KK:n jarjestys.md:n JONO (PK) "8 → 6 → 11" on siis TEHTY.
+- SEURAAVAKSI: OSA 5 AUKIOT kokeena (KK:n suunnitelma Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/
+  20261110-juoksupeli-linjat-ja-tarkastus.md, kohta 5 ja omistajan kortti 17.04 "Kokeena linjojen jälkeen"): aukiolla useampi kaista;
+  napautus = yksi kaista kohti lähintä omenaa (~30 m), muuten yksi kaista kohti aukion keskikaistaa (napautus liikuttaa aina);
+  eunukit, ulkoesineet ja testibotti useammalle kaistalle. Kumoaa aukioilla 21.10.:n "vain kaksi kaistaa" (JuoksuV4.cs:57).
+  Pohja: 224.41/224.42-ketjun kärki natiivi-backupista (osat 1–3, 6, 9, 10, 11 ja 8). Näyttö: oma video aukiolta (iso iPad huomenna;
+  sitä ennen Mac-pari + esitäyttövahti mac-valimuisti/esitayta-valimuisti.sh <sha>).
+- Jonossa myös (KK): peukalorenkaat suuremmiksi; renkaiden uusinta isolla iPadilla (191aaeaf2).
