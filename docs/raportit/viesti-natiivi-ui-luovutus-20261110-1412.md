@@ -31,3 +31,4 @@ Kohtien 1 ja 2 jälkeen: rivi PT:lle "JONO TYHJÄ: natiivi-ui" (`python3 -I /Use
 --kansio /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo seuraava NUI`).
 
 - JU 14.2x: nimizoom-2 iPad jonossa (laitekäännös ensin); iso iPad error 22 taas 14.08 alkaen (JU selvittää) → viive mahdollinen. Kuvakyltti-2 Mac ajossa.
+- 14.2x: kuvakyltti-2 dce3d6ae0 katsottu: EI vaikutusta. Näkyvä ★ = PiirrosKerroksen 3D-tähti (Tahti3DNimi), ei UI-★; "Temple"/"Place de la Bastille" = piirroskartan nimet (eivät väisty). Pari _tyo/natiivi-ui/kuvakyltti-2-tahdet-1b-ennen-jalkeen.png PT:lle, kysytty KK:lta mitä "tähdet väistöön" tarkoittaa. dce3d6ae0 ei haitallinen, mutta ei tarpeen ennen tulkintaa. JU: iso iPad tauolla (error 22), nimizoom-2 käännös valmiina.
