@@ -48,3 +48,14 @@ Kaksi yritystä; jos ei ratkea, rivi PT:lle (tulos.md:n linja).
 
 ## VIESTIT TÄLLÄ VUOROLLA
 JU: 7491ded20 + skenaarion polku, museo-syy + uusinta. PT: 7491ded20, tilannerivi (kirjoitin vahingossa "08.4x", oikea aika 08.1x–08.2x).
+
+## LISÄYS 08.5x: MUSEO-1 UUSINTA KATSOTTU (lokit/natiiviseppa-museo-1-91bc37c4b-2, parit lokit/natiiviseppa-museo-1-parit-2)
+- Kuvat tulevat: A1 ja A2 katsottu täysikoossa, sama kuva ja rajaus kuin ennen. unity.log: "odottaa palvelimen kuvia 93/93",
+  "valmiina 0.5 s", "puuttuu → ohitetaan" 0.
+- AVOIN EROTUS (ei vielä PT:lle hyväksyttäväksi): lähestymisen otsikko ennen "RIJKSMUSEUM, ALANKOMAAT", jälkeen "RIJKSMUSEUM".
+  Otsikko = Latauskuva.NimiJaMaa(otsikko, MuseonMaa()), MuseonMaa = UiSisalto.Maa("NLD")?.Nimi. Ennen-lokissa "lähestyminen nimi
+  Rijksmuseum" tulee rakentajan jälkeen (maa valmistui myöhemmin ja otsikko vaihtui); jälkeen-lokissa riviä ei ole → maa null koko ajan.
+  91bc:n diffi ei koske UiSisaltoa; syy selvittämättä (ajoitus? UiSisalto.Lataa-kutsuja museon avauksessa?). Ennen junaa: selvitä,
+  tarvittaessa AsetaNimi myös odotuksen jälkeen / UiSisalto.Lataa(…) ennen avausta. Muut erot parissa 17–33 % = lähestymiskuvan vaihtuminen?
+  Katso A3/L1–L4 ennen pari PT:lle.
+- sk-museo-1.txt korjattu: oleta-rivit pelkkinä osamerkkijonoina (työkalu ei tue (a|b), JU).
