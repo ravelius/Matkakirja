@@ -53,3 +53,7 @@ Junaan menee 4fa068fbf (natiivi-backup natiivi-ui/kaupungin-luettelo-lajit-2 = 4
 
 ## LISÄYS (JU 13.3x): 4fa068fbf jonossa MR13 → linkki 224.23 (MR12:n jälkeen), koeyhdistys MR9–13 puhdas
 Lähtö odottaa NUI:n ilmoitusta JU:lle: kun PR 6557 on yhdistetty JA vie-sisalto.yml on vienyt kokoelmat → viesti JU:lle (local_2a7d6c96-…), JU kirjoittaa data OK -rivin, joka laukaisee MR13:n.
+
+## LISÄYS: PK KUITTASI PR 6557:n OK (PK local_d3bb1f78-…)
+PK: vanha natiivi ohittaa tarinapaikka-kentän; ainoa näkyvä ero on kaksi numeroitua merkkiä vähemmän, tarkoituksella.
+Tila 13.3x: tarkistus reitti pass, testit pending. Kun testit pass → gh pr merge 6557 → vie-sisalto.yml ajaa viennin (tarkista ajo ja uusi versio uusin.json:sta) → viesti JU:lle, data OK → MR13 4fa068fbf lähtee. PT:lle tieto.
