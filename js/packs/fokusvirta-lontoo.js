@@ -390,6 +390,10 @@ export const FOKUSVIRTA_LONTOO = {
        * vuosina, joina hän kulki Lontoon läpi.
        */
       id: 'hirvet',
+      kysymykset: [
+        'Miksi Richmond Parkin laumasta kaadetaan eläimiä joka talvi?',
+        'Miksi saksanhirven urosten karjunta kuuluu syksyllä puiston laidalle asti?',
+      ],
       nappi: 'Kuusisataa hirveä tiiliaidan sisällä',
       otsikko: 'Richmond Parkin lauma',
       teksti: 'Sumun ja kivihiilen kaupungissa on kulman takana toinen '
