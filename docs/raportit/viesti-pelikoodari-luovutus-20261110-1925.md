@@ -38,3 +38,13 @@ Natiivityöpuu: /Users/Shared/Claude/wt/proto-pelikoodari-juoksu, NYT haarassa p
   Katso kuvat (ohjeteksti + peukalon syke, lähtölause vain palkissa) ja lokin "opetus X → Y" -rivit → rivi PT:lle.
 - 19.3x: OSA 8 ovet-2 EI KELPAA (katsottu: kaikki 4 kuvaa sama latauskuva, Request timeout) → kuitujonossa JU:lla (ovet-3, KK:n sana valokuidusta).
   PT:lle kerrottu. Kun ovet-3 tulee: k1/k2 vs a1/a2 täysikoossa, "kiinni K" lokista, pari + rajaluku 0/663 PT:lle.
+
+## LISÄYS 20.1x (uusin)
+- OMISTAJAN PÄÄTÖS 20.23 (PT 20.5x): osat 6, 11 ja 8 linkkiin Mac-tarkistuksella ILMAN ison iPadin ajoa (iPad-sk:t osa6/osa11 pois jonosta).
+  JU:lle pyydetty: aae0ab729 Mac, sk proto-3d/_tyo/pelikoodari/osa11/sk-mac-osa6-11-aae0ab729.txt (md5 42acce9ae3fe, kuvat p1–p23)
+  → lokit/pk-osa6-11-mac-aae0ab729; osa 8 ovet-3 3eb33531c (osa8-ovet/sk-mac-ovet-kiinni-auki.txt). Kun kuvat tulevat: katso, rivi PT:lle → pt-ok.
+  "kokeiltava"-rivi PT:lle lähetetty 20.1x.
+- ESTE: Macin v4-lataus jumissa 18.4x alkaen (ovet-2: 58 × Request timeout leivottu-v3:sta; klo 16.38 ajossa 0; curl puyi.glb 9 Mt 19 s).
+- Palkkikysymys (18.4x) VASTATTU PT:lle: palatsimallin rakennusjalustan reunakivi, ei koodin kappale; kuvat proto-3d/_tyo/pelikoodari/palkki-t3/.
+- Renkaiden uusinta pyydetty JU:lta 224.37-linkillä 191aaeaf2 → lokit/pk-renkaat-191aaeaf2-ipad (iPad; odottaa isoa iPadia).
+- Linkit: 224.37 = 191aaeaf2 (osa 9), 224.38 = 271e46fd9 (osat 1–3).
