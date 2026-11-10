@@ -32,3 +32,4 @@ Päätösloki 21.12–22.01 ja Raamattu 2.204 mainissa (PR 6559, 05e205f1b). Id:
 - AVOIN: KS:n ND:n eteläpuolen vaalea K 2 -kenttä + RK/ND sävyt → jos sha ennen 224.46-käännöstä, korvaa 098f9f05c:n (JU:lle).
 - PT:n opit: Postivahti nollaa usein → tarkista luovutuksesta, että viimeisin käskysi on mukana, ja lähetä tarvittaessa uudelle sessiolle.
   du /Users/Shared/Claude jumittuu → mittaa kansio kerrallaan taustalla tai Sonnet-agentilla.
+- LISÄYS 22.3x (JU): 224.45 linkissä 22.28. MR37 (224.46) odottaa tiedostoa /Users/Shared/Claude/julkaisija-tyokalut/linkki-224-uutta/224.46.palat-ok – luo (touch), kun KS vahvistaa palat-v25-kolme-1-1 palvelimella. KJ8 Panthéon b357fdfc1 ja NUI paisunta-3 ff2b1c5c2 ajossa.
