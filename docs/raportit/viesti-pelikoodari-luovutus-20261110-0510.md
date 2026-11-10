@@ -35,3 +35,6 @@ Työkansiot /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/{juoksu-leivottu,juok
 
 Testit: `sh Peli-testit/unity-tarkistus.sh` ja `sh Peli-testit/kaanna.sh Juoksu` (työpuussa, sh ei zsh).
 Vahti: lokit/pelikoodari-*.ajo.log VALMIS-rivit (Monitor, 30 min, uudelleen tarvittaessa).
+
+## LISÄYS 05.1x
+- PT 05.1x: 28c92a109 KUITATTU junaan 224 (JU poimii) → jonon kohta 3 tehty PT:n osalta. Jatka: kulkupari + 1e-tahdistuspari (JU-jono).
