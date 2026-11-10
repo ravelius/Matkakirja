@@ -32,3 +32,10 @@ Edellinen (historia): `git show b7cf30714:docs/raportit/viesti-natiivi-ui-luovut
 Kohtien 1 ja 2 jälkeen: rivi PT:lle "JONO TYHJÄ: natiivi-ui" (`python3 -I /Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tyolista.py
 --kansio /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo seuraava NUI`; nyt NYT nimizoom, seuraava kuvakyltti-koe).
 - JU 14.33: linkki 224.26 = 6087868bf (välilehtivärit); museon latausilmaisin MR18 → 224.28 (ei NUI-toimia).
+
+## LISÄYS 16.2x: KK → NUI, OMISTAJA 16.14 nimen napautuksen korttiin
+"eikö kaikissa kaupungeissa pitäisi olla kuitenkin striimikartta käytössä?" → KK: oikeassa (2.11. 22.08, Raamattu 2.204). Kortin kaksi
+vaihtoehtoa RAUKEAVAT; katto-koe ef774d9fd turha (revert tai oletus 0 ennen MR:ää). Marseillen tyhjä paperi = VIKA: miksi striimikartta
+ei näy (ei kytketty, ei lataudu vai hidas verkko)? Selvitys PT:n jaon mukaan (NUI:n ehdotus PT:lle 16.5x: NS). fb16ab5de junaan vasta,
+kun Marseille + toinen kaupunki näyttävät striimikartan isolla iPadilla. Vihjeet: iPad-ajon konsolissa pallo 57,9 % koko 20 s ja
+"elävä kartta … yhteensä piirretty 0" koko ajon; Barcelona (Mac) näytti katuverkon, Marseille (Mac ja iPad) ei.
