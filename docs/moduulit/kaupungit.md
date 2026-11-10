@@ -229,7 +229,7 @@ mitoissa"; kortit ja kumottu järjestys lokissa)
   kuuntelee uudet äänet (223 lausetta ja tervehdys) Pariisin TF:stä; pienelle iPadille ei asenneta. (omistaja 5.11.
   klo 19.26; 6.11.2026 klo 20.27)
 
-## Avoimet tulkinnat (PT 10.11.2026; KK tarkistaa, ei omistajan päätöksiä)
+## Tulkinnat (KK tarkistanut 10.11. klo 08.47; eivät ole omistajan päätöksiä)
 
 - Aloitus: 2.204:n uuden pelin aloitus (2.11. 09.12: aloituslento → erillinen zoomaus keskustaan) on yleissääntö; Pariisista aloittavalla 2.210:n aloituslento (5.11. 20.20) menee edelle.
 - Tyyli (2.11. matkailijan kartta) ja kulma (3.11. yläviisto, malli G) ovat rinnakkain voimassa.
