@@ -1138,3 +1138,7 @@ Kortti iPhonen kytkemisestä juoksupelin latausmittaukseen (PK:n luvut ennen 77b
 ## LONTOON NIMIÄÄNET: KOKO OTTO (omistaja 10.11.2026 klo 06.36) (10.11.2026 klo 06.38)
 
 PK:n ääntämistesti (8 nimeä, ElevenLabs 1 otto, 61 krediittiä; lontoo-nimet-testi-20261110.mp4) → "Kelpaa, koko otto": 99 nimeä samalla äänellä ja tavalla. KK välitti PK:lle suoraan.
+
+## LYHYT VERSIONUMERO 224.N (omistaja 10.11.2026 klo 06.39) (10.11.2026 klo 06.42)
+
+Omistaja 06.38: "Saako versio numeron jatkossa lyhyemmäksi" (asennuslinkin 335da402f). Kortti → "224.7" -muoto: junan numero + linkin juokseva järjestysnumero; asennussivulla, sovelluksessa ja viesteissä, commit-tunniste vain sisäisesti (asennussivulla pienellä). Viestit KK:lle muodossa "224.N (sha)". JU numeroi ipa-arkiston mukaan: 224.1 39204416d … 224.6 335da402f; seuraava 224.7. NUI 14877fa07: MATKAKIRJA_LYHYT → ☰ alin rivi, Mitä uutta, matkalaukku.
