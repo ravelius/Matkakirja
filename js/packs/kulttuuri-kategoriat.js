@@ -757,8 +757,9 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 1,
         fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla saa '
-          + 'etsiä vain satamaviranomaisen luvalla, ja yli kolmesataa vuotta '
-          + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
+          + 'etsiä vain satamaviranomaisen luvalla, ja arkeologisesti '
+          + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat '
+          + 'esineet, on ilmoitettava Lontoon museolle.',
       },
     },
     /*

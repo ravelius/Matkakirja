@@ -337,10 +337,11 @@ export const FOKUSVIRTA_LONTOO = {
         + 'etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan '
         + 'mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei '
         + 'silti ole vapaata riistaa: lupa on ostettava '
-        + 'satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, '
+        + 'satamaviranomaiselta, ja kun lupia oli kertynyt noin 5 000, '
         + 'myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, '
-        + 'mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta '
-        + 'vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, '
+        + 'mutta lupia jaetaan enintään 4 000. Arkeologisesti kiinnostavat '
+        + 'löydöt, kuten yli kolmesataa vuotta vanhat esineet, on '
+        + 'ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
       lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
         + '(GBR/luonto). Tarkistettu 1.9.2026.',
@@ -367,9 +368,9 @@ export const FOKUSVIRTA_LONTOO = {
         ],
         oikea: 1,
         fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla '
-          + 'saa etsiä vain satamaviranomaisen luvalla, ja yli '
-          + 'kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
-          + 'museolle.',
+          + 'saa etsiä vain satamaviranomaisen luvalla, ja arkeologisesti '
+          + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat '
+          + 'esineet, on ilmoitettava Lontoon museolle.',
       },
     },
     {
@@ -479,8 +480,8 @@ export const FOKUSVIRTA_LONTOO = {
         + 'ja kameoita. Kivet olivat ympäri maailmaa — smaragdi '
         + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
         + 'Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, '
-        + 'helmet Bahrainista. Oudoin esine on omenan kokoinen '
-        + 'kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka '
+        + 'helmet Bahrainista. Oudoin esine on kellonkuori, joka oli '
+        + 'koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka '
         + 'sisään oli sovitettu noin vuoden 1600 sveitsiläinen '
         + 'kellokoneisto. Yksi pieni sinettikivi kertoo, milloin '
         + 'laatikko pantiin maahan: siinä on Staffordin viscountin '
