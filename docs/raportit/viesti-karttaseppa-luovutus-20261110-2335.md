@@ -71,3 +71,22 @@ KJ13 (Opéra) on jo JU:n jonossa; Invalidien korjausten pari ajetaan sen jälkee
 - NUMEROINTI (PT): 224.47 = Panthéon 321324163 (MR39b), 224.48 = PK koneportaat (MR40). ND-puisto saa seuraavan vapaan numeron KK:n katsottua (JU antaa).
 - JU: KJ12 ajossa (5f00b2ee6), KJ13 f9daa9b32:lla, KJ14–16 kaikki 4eed281af:llä → lokit/karttaseppa-{louvre-kj14,sacre-coeur-kj15,sainte-chapelle-kj16}-4eed281af.
   JU-sivusessio nollautuu; tulosrivit JU:n jonolokissa ("AJO KS …").
+
+## LISÄYS 23.5x (3): KIIREELLISIN ENSIN
+0) JUNA KAATUI (JU, MR39b 224.47): 321324163 ei sisällä junan talot v3:a (6d82a050c, palat-v25-kolme-1-1) → ristiriita StreamingAssets/talot/pariisi.json;
+   juna palautettu 7b5a45561:een (julkaisija/juna-224). TEE: talot v4 junan päälle (merge/rebase julkaisija/juna-224 7b5a45561; pariisi.json = kolme 1:1
+   + Panthéon eli palat-v25-pantheon-1-1, joka on kolme-1-1:n päällä), uusi paketti ämpäriin (--edellinen = junan v3) ja uusi sha JU:lle.
+   TARKISTA ämpärin v4-paketti (23.04, talot-paketti-pariisi-v4): tehty ilman v3:a → puuttuuko RK/ND/Eiffel-raivaus. Kirjoita uusi palat-ok vasta korjatusta.
+   Rebasettaa myös b5ef8b0c9 (lähin 2,7×, yksi vakio) junan päälle tarvittaessa; sha NUI:lle, VS:lle (local_5ebb0658-96f6-434d-8a38-b122eb53032f) ja PT:lle lähetetty.
+   PT: lähimmän tarkistuskuvat ajaa NUI (sovittu 23.38): pari Mac-kuvana + Riemukaari lähimmästä → KK. Varmista NUI:lta, että ajo on JU:n jonossa.
+1) OPÉRA (KJ13 f9daa9b32): KK "NÄYTTÄÄ OIKEALTA → saa mennä junaan", paras koodimalli, taso muille. Junaan PT:n/JU:n kautta (Opéra-koodi + raivaus-1-1-opera
+   -palat; huom. talojen ketju pitää rakentaa junan v3/v4:n päälle, ei invalides-ketjun). op13-koodi-lahi = LÄHIKUVARESEPTI kaikille kohteille
+   (lahizoomi 8, kallista 45 → hieman ylemmäs eli kallista ~40, etäisyys 0,0025, suunta etuviistosta), ettei kupolin huippu rajaudu.
+2) ND-PUISTO (KJ12 5f00b2ee6) EI junaan: a) PUUT LIIAN ISOT 1:1-katedraalin vieressä → puu ≤ ~15–20 m (tornit 69 m); sama tarkistus muiden 1:1-kohteiden
+   puihin (Eiffelin juuri KJ9). Etsi puun koko (koko 0,80–0,92 tee-puisto.py:ssä; mikä mittakaava = metrit?) ja pienennä KoodiPuut. b) Parvis (länsi)
+   avoimeksi: puut vain etelä- ja itäpuoleen (Square Jean-XXIII); rajaa tee-puisto.py:ssä x > julkisivun linja. c) E-muotoinen irtovarjo yhä aukiolla
+   (lahi-lansi alareuna) → poistettujen talojen varjot/pohjat (talot poisto 1). d) lähikuvat reseptillä 1).
+3) INVALIDIT (in13-koodi-lahi-dome): katot nyt oikean harmaat. Vielä: seinät samaan vaaleaan kuin Opérassa (nyt hiekanruskeat; HUOM InKivi = OpKivi =
+   TaloKivi × 1,12 → ero ei ole värivakiossa: tarkista InVarjo/Sauma/AO tai valaistus; vertaa kuvia), kupolin lyhty + kärki (uusi kuva koko kupolista),
+   etukentän kaksi irtonaista pikkutaloa pois (raivaus), haalea varjolaikku kentällä. Ei junaan ennen uutta kuvaa.
+Järjestys KK: (0 juna) → lähin 2,7× tarkistus → ND:n puiden mittakaava → Invalidit. KJ14–16 (4eed281af) ajossa JU:lla.
