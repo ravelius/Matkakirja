@@ -179,3 +179,4 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - SEURAAJAN JONO: 1) KJ47 kuvat + piirtotilasto-rivit → KK (kopio PT); jos puita ei näy JÄLKEEN-kuvissa → instansointivariantti karsittu (tarkista unity.log Shader).
   2) PdJ yllä olevalla tavalla. 3) Montmartre KJ43 maaston 01.00-viennin jälkeen.
 - JU 18.2x: KJ47 alkaa (lokit/ks-kj47-puut-{ennen-797404a3c,jalkeen-9f26843a1}, MUISTI.txt = piirtotilasto + Shader-virheet). PALLO a0384240a ei mergeytynyt (ristiriita NUI:n KaupunkiPallot.cs/UiKomennot.cs) → NUI tekee pallo+kyltin juna-224:n päälle → 224.81 (224.79 muste, 224.80 NUI). KS:ltä ei toimia; seuraa LINKKI 224.81 ja katso köydet junan kuvista (KK).
+- NUI 18.2x: pallo+kyltti natiivi-ui/pallo-kyltti-224 652653bc7 (merge a0384240a + 9c6a6f864, Oletus kuumailmapallo mukana), unity 0, 763/763 → JU MR75 = 224.81. KS:ltä ei toimia.
