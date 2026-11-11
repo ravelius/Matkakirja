@@ -36,4 +36,10 @@ TEKEMÄTTÄ (suunnitelma, rajaus ≤ 30 riviä):
   ja komentolohkoon `case "kamera" when o.Length >= 2 && (o[1] == "uusi" || o[1] == "vanha")`.
 - Todiste Macilla (sama botti, rata, siemen; 60 s kummastakin + 3 × 10 s), ei iPadia.
 
+## LISÄYS 13.2x (PT, KK 13.0x, kärki Tekninen kunto): JONOON v133c:n jälkeen
+"Kohdekartta: kuvahaut ilman kattoa": NS:n löydös – Esilataajan Nakyva-taso ohittaa kuuden katon; KohdekarttaNakyma.cs:237 ja
+NostotKartalla.cs:2991 (Kuvat.Hae → Taso.Nakyva) voivat laukaista kohdekartan avauksessa monta kuvahakua kerralla. Ei mitattu.
+Järjestys: ensin toisto Macilla rajoitetulla nopeudella, sitten korjausehdotus KK:lle ENNEN koodia. Tiedot
+/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vastaus-ii.md. v133c ensin loppuun (luovutus -1230 kohta 2).
+
 Ei agentteja käynnissä. Ei uusia lupia.
