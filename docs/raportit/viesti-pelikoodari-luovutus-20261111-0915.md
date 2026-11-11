@@ -31,3 +31,8 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/seinat-taso1/. Kuvat i
 5. ENNALLAAN: isolla iPadilla aukiovideo (kulkukartta/sk-ipad-aukio-v129d-2.txt, vanha backup osa9-kulku-v129) ja renkaiden uusinta.
 
 Ei uusia lupia. Asemataulu jäädytetty (ei päivitetty).
+
+## LISÄYS 09.3x
+- A-ajo TEHTY (JU 09.18): vinokuvista 13 varmaa + 3 ehkä kansilaattaa → LAV:lle 09.3x, lav-kohdat/VAHVISTETUT.txt. JONON KOHTA 2 POIS.
+- JU: P-ajo L1:llä LAV:n m-ajon jälkeen. JU mainitsi myös "p11d/p11e iPad vapautettu (PT), tulevat sinulle" – en tunnista
+  p11d/p11e:tä tästä luovutuksesta; jos tulevat, kysy PT:ltä, mitä ne ovat, ennen toimia.
