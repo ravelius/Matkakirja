@@ -30,3 +30,6 @@ PaivitaKappaleet vain uusille → pari + ruutuaika PT:lle. Varjo leivotuille vai
 
 ## VIESTIT TÄLLÄ VUOROLLA
 JU: mac-2 + ipad-muisti ajopyynnöt. KK: korjaukset 1–4 + vastaus 5 + UI-sumennusriski. PT: 3 riviä (saapumiskoe 2 jonossa).
+
+## LISÄYS 09.2x
+JU: mac-2 (1c92f7cea) jonossa Macilla, video koko ajosta. iPad-muisti-1/-2 siirtyi seuraavalle JU-sessiolle (JU:n luovutus 09.15), ajetaan mac-2:n jälkeen.
