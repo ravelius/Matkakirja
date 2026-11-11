@@ -43,10 +43,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--aja', action='store_true')
     ap.add_argument('--kansio', default=WT)
+    ap.add_argument('--ohita', nargs='*', default=[])
     a = ap.parse_args()
     poistettu = 0
     for nimi in sorted(os.listdir(a.kansio)):
         p = os.path.join(a.kansio, nimi)
+        if nimi in a.ohita:
+            print(f'JÄÄ {nimi}: --ohita'); continue
         if not os.path.isdir(p) or not os.path.isfile(os.path.join(p, '.git')):
             continue  # päächeckoutit (.git-kansio) ja tavalliset tiedostot jäävät
         rc, haara, _ = git(p, 'rev-parse', '--abbrev-ref', 'HEAD')
@@ -62,7 +65,17 @@ def main():
         if rc2 == 0:
             tila, nro = 'MERGED', 'main'
         elif not pushattu:
-            print(f'JÄÄ {nimi}: pushaamatta tai ei ylävirtaa ({haara})'); continue
+            # Ilman ylävirtaa: kelpaa, jos HEAD on jossain etähaarassa ja kopioon ei ole koskettu 48 h:iin.
+            _, etä, _ = git(p, 'branch', '-r', '--contains', 'HEAD')
+            if not etä:
+                print(f'JÄÄ {nimi}: pushaamatta ({haara})'); continue
+            _, ct, _ = git(p, 'log', '-1', '--format=%ct')
+            tuore = subprocess.run(['find', p, '-newermt', '-48 hours', '-not', '-name', '.git', '-print', '-quit'],
+                                   capture_output=True, text=True).stdout.strip()
+            ika = 0 if tuore else time.time() - int(ct or 0)
+            if ika < 48 * 3600:
+                print(f'JÄÄ {nimi}: käytetty alle 48 h sitten ({haara})'); continue
+            tila, nro = 'ETÄHAARASSA', etä.split()[0]
         elif 'luovutus' in haara:
             # luovutuskopio: sisältö on originissa; alle 6 h vanha jää (rooli voi vielä lisätä siihen)
             _, ts, _ = git(p, 'log', '-1', '--format=%ct')
@@ -71,7 +84,7 @@ def main():
             tila, nro = 'LUOVUTUS', 'pushattu'
         else:
             tila, nro = pr_tila(p, haara)
-        if tila not in ('MERGED', 'CLOSED', 'LUOVUTUS'):
+        if tila not in ('MERGED', 'CLOSED', 'LUOVUTUS', 'ETÄHAARASSA'):
             print(f'JÄÄ {nimi}: PR {tila or "ei"} ({haara})'); continue
         mt = koko_mt(p)
         if not a.aja:
