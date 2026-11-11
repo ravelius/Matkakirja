@@ -28,3 +28,10 @@ Viestit: SendMessage-raja täyttyy (20 / omistajan viesti) → mcp__ccd_session_
 - VS: jono tyhjä (muste 224.79); seuraava KK:lta.
 - LAV: leivonta v5 v133c-lähteellä (sisäinen levy), sitten osasarja, 1-2-korjaus, sali; pala 3 KK:lta.
 - Äänittäjä: nollattu; vain kenkäleima (odottaa T7-tilaa + omistajaa).
+
+## LISÄYS 18.00 (17.22 jälkeen)
+- KS ympäristöt 90b66a261: EI junaan. KJ46 valmis 17.51: Mac-muisti 7730 → 8251 Mt (+6,7 % > raja +5 %). KS:lle ohjattu ehdon mukaan kevyempi puu + varjot läheltä, EI harvennusta; luvut ja valinta KK:lle ennen toteutusta. Ehto KS:n luovutuksessa (LISÄYS 12e, 77aa03d24) ja Postivahdin aloitusviestissä; KS nollattu.
+- NUI pallon kyltti 9c6a6f864: KK hyväksyi 17.5x → MR70 = 224.78 KS-pallon a0384240a kanssa.
+- 224.76 LINKKI 17.58 (f82854d29, MR68 PK v133c).
+- NS latausjono 7b7c06396 (KK:n päätökset 1–4 + 18b a; 18b b tekemättä). JU ajaa latausjono-3:n rajalla 1000 s; aiemmat "seis" olivat JU:n hiljaisuusvahti, ei peli (NS:lle kerrottu). Tulos KK:lle + PT.
+- NUI lehti-junakuvat 224.74 2882f055a 6/6 → KK:lle 17.3x.
