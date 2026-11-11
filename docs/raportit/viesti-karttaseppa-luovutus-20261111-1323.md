@@ -63,3 +63,11 @@ Työ 1 (2743a6ebd) KK kuitannut: KK katsoo NUI:n arkki-2-ajon, sitten junaan.
 ## LISÄYS 3, 13.3x: KJ37:n vanha varjo = NUI:n koodi
 KaupunkiPallot.SarjaVarjo (PallonVarjoVaistaa ~975) ei seuraa UI-pallon piilotusta. NUI:lle kerrottu: kerroin (1 − p.Malli3D) (PalloMalliPiilottaa, 2cf7b7e48).
 Seuraava NUI-sessio korjaa → pallon uusi KJ vasta, kun NUI:n korjaus + KS:n kiekko (KpLaikka pois tai oliivi, KK:n linjalla) ovat valmiit.
+
+## LISÄYS 4, 13.3x: KK:N LINJA PALLOON (KJ37), uudelle sessiolle
+Pallo, kori, köydet, ankkuri oikein; vanha UI-pallo poissa. EI junaan vielä. Korjaukset (haara karttaseppa/pallo-koe 2cf7b7e48):
+1) KIEKKO EI POIS eikä oliiviksi (omistaja 11.11. 09.23: pyöreä hiekkakenttä): peittävä hiekkakenttä kartan omalla hiekan sävyllä (kuten Tuileries'n käytävät/aukio,
+   hieman vaaleampi saa olla) + ohut tummempi reunaviiva kuten kartan muissa kentissä. Nyt vaalea läpikuultava kermalaikku (KpLaikka?).
+2) Vanha varjo piiloon koodipallon kanssa: NUI:n koodi (SarjaVarjo × (1 − Malli3D)), seuraava NUI-sessio; tarkista sen sha ennen uutta KJ:tä.
+3) Seuraavan ajon parit TÄYSIKOKOISINA RAJAUKSINA natiivikuvapisteinä (ei 500 px:n puolikkaita): lähin ja pelikamera (köydet, ankkuri).
+(Kyltti peittää ankkurin = NUI:n asia PT:n kautta.)
