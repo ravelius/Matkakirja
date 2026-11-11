@@ -38,3 +38,4 @@ Ei uusia lupia tarvittu. Asemataulu jäädytetty (ei päivitetty).
 ## LISÄYS 08.1x
 - v132 ämpärissä varmistettu 100/100 sha256 = SHA256SUMS (PK), PT ja JU tietävät.
 - JU 08.07: porraskivi2 2e7b93cf6 JUNASSA 224, linkki 224.59 (a4ef0d609) – VALMIS. Tausta v132 f7a8e14e7 pt-ok, menossa 224.60:aan.
+- JU 08.21: tausta v132 f7a8e14e7 JUNASSA 224, linkki 224.60 (f4811cf75) – VALMIS (tehtävä A).
