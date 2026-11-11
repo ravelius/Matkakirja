@@ -459,7 +459,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   Koe: scratch siltatagit.py (ajetaan otteet-63:sta). SEURAAVAKSI: sillat.py lukee alueen bridge:structure → laji (arch→kaari, beam→PALKKI uusi laji rakentajaan, truss→metalli),
   aukot tukien määrästä alueen sisällä, sitten Pariisin Seinen siltojen korjaustaulu (nimi → tyyppi, materiaali, aukot, lähde), viimeisenä pituusoletus.
 
-## LISÄYS 33 (23.11): KK 23.08 JÄRJESTYS (KK:n päätös) + ketjusta KK haluaa nähdä — KORVAA aiemmat jonot
+## LISÄYS 33 (23.10): KK 23.08 JÄRJESTYS (KK:n päätös) + ketjusta KK haluaa nähdä — KORVAA aiemmat jonot
 - JÄRJESTYS: 1) KJ49b-kuvat → KK. 2) Pariisin lukittu lista: Montmartren parit KJ43 HETI 01.00:n maastoviennin jälkeen (nykyinen kumpu | kartan oma mäki; KK ratkaisee itse,
   ei korttia) + Notre-Damen aukion haamut (ympäristöerä 2/2; LISÄYS 29 (a)/(b)). 3) Ketjun pysähdykset ja näyte (alla). 4) Sillan tyyppi + kannen sävy (KJ49c; LISÄYS 30/32).
   5) Pitkät monikulmiot (LISÄYS 32), 3D-puun sävy.
