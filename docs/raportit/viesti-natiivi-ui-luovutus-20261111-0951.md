@@ -42,3 +42,11 @@ Commitit 0910:n jälkeen: af1f62bd4 ★-isäntä (alla), 569de90bb työ E, d5c00
 ## SEURAAVA
 1) pallo-maa-1 tulokset → KK. 2) matkaopas-1 kuvat → KK. 3) katse-2 → KK. 4) KK:n palaute. Sitten saapumisen intro (NS johtaa, NUI auttaa:
 Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-saapuminen-kaupunkiin.md). Myöhemmin iso iPad 0f0f950a6 / KS 599b0150d JU:n vuorolla.
+
+## LISÄYS 09.5x (ennen nollausta)
+- KS kuittasi ankkurin (sama piste kentälle, korille, köydelle). Pyynnöstä ee1c731cd (natiivi-ui/pallo-maa, bd7f0ea44:n päällä): julkiset vakiot
+  KaupunkiPalloMitat.TuileriesLat/TuileriesLon, PallonMaapiste viittaa niihin; ei toiminnan muutosta → pallo-maa-1:n bd7f0ea44-ajo pätee, junaan ee1c731cd.
+- KS ehdotti: UI-pallo piiloon niillä zoomeilla, joilla KS:n 3D-pallo näkyy, napautus ennallaan. NUI vastasi: sopii periaatteessa, KK päättää kuvasta;
+  KS lähettää näkyvyysrajan, kun malli valmis → tee kytkimellä (`ui kaupunkipallot …`) ja kuva KK:lle. TEKEMÄTTÄ.
+- katse-2: JU:n mukaan 569de90bb ei sisältänyt talot v12:ta → merge juna-224 79b04e870 napautus-lentoon = 2c75bcf22 (Kartta 757, Peli 912, unity 0).
+  JU ajaa katse-2:n sha 2c75bcf22 pallo-maa-1:n jälkeen → lokit/nui-napautus-katse-2-2c75bcf22. (af1f62bd4-ajo peruttu.)
