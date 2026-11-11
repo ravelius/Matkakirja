@@ -84,3 +84,8 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
 - 13.2x: PILVIVARJO 51e33fb4f junaan Mac-todisteella (KK 13.0x; PT pt-ok 224.72); MR lähetetty JU:lle. Laiteluku KK:n iPad-erässä ennen versiota.
   Varmista, että se on junassa. NS vastasi striimikartasta (Z17 kovakoodattu katto ElavaTyyli.cs:16 / Laattapalvelin.cs:857; Z18 +10–15 Mt,
   Z19 +45–60 Mt arvio; data z14) → välitetty KK:lle. KK: PK:n "5× lähemmäs" ei päätetty, älä mitoita sen mukaan.
+- 13.1x KK: tosiasiat kuitattu. EI toteutusta kallistettuun: KK päättää kerroksesta (piirros kallistuksessa vs. Z12/Z13-pohja) seuraavassa
+  istunnossaan yhdessä saumat- ja mäet-suunnitelman kanssa. SEURAAVA ISTUNTO TEKEE VAIN: (a) Cesiumin todellinen taso kallistetussa kuvassa
+  Mac-ajosta (lisää skenaarioon elävä-tila-/laattataso-loki, ks. Laattapalvelin.Elava.cs:139; pyydä JU:lta Mac-ajo) ja (b) maa-a-3/-a-4-parit +
+  mittaukset (±1 % viivattomalta alueelta, laskeutumisen välähdys/raja). Lähetä KK:lle vasta, kun MOLEMMAT ovat valmiit (KK nollautui 13.1x).
+  Pilvivarjo MR66 → 224.72 JU:n jonossa (13.01), LINKKI-rivi tulee.
