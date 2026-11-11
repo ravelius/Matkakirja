@@ -33,3 +33,13 @@ UUSI SÄÄNTÖ (omistaja 12.21, Raamattu 12.26.5): kaikki ajot Macilla (esikatse
 - VS kysyi lähintä (Pariisin piirros): vastattu, KS:n c032134e7 IsoisaLahinLeveys 0.231 (~0,78 km), ei NUI-muutosta.
 - KK:n huomio (ei estä): pienellä iPadilla noston valokuva peittää Concorden aukion kyltin alun.
 - Remote Control: kytketty (Postivahdin aloitusohje).
+
+## LISÄYS 14.0x: KK:n uusi työ – RAJAUS PÄÄRAKENNUKSEN RUNGOSTA (ei aloitettu)
+- KK 14.0x (kopio PT): Sacré-Cœurin pienuuden syy EI ole mäki vaan koodimallin rajat: Muoto = sylinteri koko verkon boundsista
+  (NahtavyysEsittely: Muoto/Mitat/Rajat koodimallille), SC:n koodimallissa 118 askelmaa ~147 m rinnettä → sylinteri kasvaa, kirkko ~60 %.
+- KORJAUS (yleinen sääntö): esittelyn rajaus, Naytteet-mittaus ja Paisunta lasketaan päärakennuksen RUNGOSTA. KS lisää koodimalleihin
+  rungon rajalaatikon (ilman portaita, terasseja, pihoja, aukiota, maata); rajapinnan nimi sovitaan KS:n kanssa suoraan (KS local_7b57e35a-…).
+  Ilman rungon rajoja: nykyinen. Oma muutos junahaaran kokonaisuuden PÄÄLLE; junahaaran Mac-kuvat ensin (kohta 1).
+- Näyttö: arkki-2:n 12 kohdetta uudelleen Macilla (sk-kohteet-arkki-2 pohjaksi); SC:n kirkko 45–67 % kuvan korkeudesta lähin-kuvassa;
+  muut muuttuvat ≤ 5 %, paitsi pihalliset/portaalliset (listaa muuttuneet).
+- Tausta: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-saumat-ja-maet.md luku 4 C ja luku 5 osa 1.
