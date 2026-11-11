@@ -247,3 +247,9 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - NS 21.3x: PiirtoTilasto yhteiseksi (NS 67860bf8a, natiiviseppa/tyokalu3-rivit; c1841699a NakyvatKolmiot public). KUN ymparistot-haara viedään junaan: ota c1841699a mukaan.
 - SEURAAJAN JONO: 1) KJ47c → KK (LISÄYS 17), 2) KJ48 → KK, 3) Montmartre KJ43 (01.00 jälkeen), 4) väleissä työkalu 1: korkeuden varatiet (lähde osm) tee_palat.py:hyn,
   Wienin kuiva-ajo T/otteet-3/wien:llä, EUBUCCO-selvitys, uusi-kaupunki-ketju; työkalu 2: luonnoskuvat KK:lle ensin.
+- KK 21.05 PÄÄTÖS (vastaus otteisiin, PT kopiona): 1) otteet gzipattuina (osm, muut, puut, pisteet .json.gz); ote.json pakkaamatta; ketjun työkalut (tee_palat.py,
+  vakiokuvat.py, uusi-kaupunki) lukevat .json.gz:n suoraan, ei purkua levylle. 2) KAUPUNKILISTA = pelin oma kaupunkiluettelo, Euroopan saapumispaikat (61, jotka peli laskee
+  etsittäviksi; mm. Granada, Sevilla, Luxemburg, Košice, Valletta, Dubrovnik, Rovaniemi, Tromssa), EI Suurkaupungit.json. Etsi luettelo pelikoodista (saapumispaikat / etsittävät).
+  3) Aluerivit (Alpit, Sisilia, Kreeta, Islanti…) samalla säännöllä 16 × 16 km pelin pisteen ympäriltä; tyhjät hoitaa uusi-kaupunki-komennon pysäyttävä tarkistus.
+  4) Lisäkaupunki myöhemmin = uusi läpikäynti, ei varastoa. Planeetta pysyy T7:llä toistaiseksi. KUN OTTEET TEHTY: YKSI RIVI KK:lle (koko + kaupunkimäärä).
+  → SEURAAJAN JONON KOHTA 4 ALKAA TÄSTÄ: gzip-kirjoitus planeettaote.mjs:ään (zlib, puskuroitu), .gz-luku tee_palat.py:hyn ja vakiokuvat.py:hyn, ajo 61 kaupungille.
