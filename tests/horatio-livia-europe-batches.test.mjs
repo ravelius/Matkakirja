@@ -135,9 +135,9 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
   ];
   const images = cities.flatMap((city) => {
     const pack = FOKUSVIRRAT[city];
-    return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];
+    return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])].filter(Boolean);
   });
-  assert.equal(images.length, 106); // Pariisin pulun kuva vaihdettu 11.11.2026 (sama lukumäärä)
+  assert.equal(images.length, 105); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (i1/i2 → isoisa-pariisi, KK 12.11.)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2, image.osoite);
   }
@@ -159,9 +159,9 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
 test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauksen', () => {
   const images = combined.cities.flatMap(({ city }) => {
     const pack = FOKUSVIRRAT[city];
-    return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];
+    return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])].filter(Boolean);
   });
-  assert.equal(images.length, 149); // Pariisin pulun kuva vaihdettu 11.11.2026 (sama lukumäärä)
+  assert.equal(images.length, 148); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (KK 12.11.)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
       `${image.osoite}: pitkän selitteen pitää olla kaksi sisältölausetta`);
