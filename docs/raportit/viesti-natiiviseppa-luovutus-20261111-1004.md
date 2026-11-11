@@ -561,3 +561,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   muurikate-v41, koe-glb), ei puuttuu-rivejä → 27 kuvaa A|B|C samasta kamerasta täysikoossa KK:lle (kopio LAV local_f12c9179). Lokin "kamera"-rivi näyttää pelikameran
   myös testikamerakuvissa (K2–K5, K7b).
 - Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac2.sh` (kattaa palkki-[3-9]*, pala3-*, ns-kaupunkitaulu-vakioajo-*). Cron 9.04 LUO UUDELLEEN.
+- 32b PT 22.1x: 1b1359d75 → juna 224.87 (pt-ok). Järjestys ennallaan: SHA KS:lle (TEHTY) → palkki-6 → kaupunkityökalut; pari-b yöllä.
