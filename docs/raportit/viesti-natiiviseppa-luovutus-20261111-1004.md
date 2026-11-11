@@ -342,3 +342,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   pohjan kehyksessä (−136; 360/340/300/460), K2 toistettava `testikamera 2.7 7.1 12 29`) JU:n jonossa pala3-luettelo-1:n perässä samalla 0f851ddbd:llä
   → lokit/natiiviseppa-juoksu-pala3-koekamera-1. LAV:lle kerrottu (paikka-rivin kamera maailmassa → Pohjaan; "Puyi pohja" = reitin piste, ei sijoitus).
   TEE kun valmis: vertaa K1/K1b V2-elava.png:hen, anna LAV:lle K-kuvien kameran pohja (x; z).
+- 21f (19.3x) LATAUSJONO3 1–5 LUETTU (lue.py): 5/5 oleta OK, mallit 439/439, pakollinen VIRHE 0, pisin etenemätön 4,3–9,2 s, puuttuu 4 (tunnetut 404),
+  palkki d4fc36645:llä yhä 0,883 ~100 s (korjaus 363f3ce4b = palkki-1). KATKO-1 AITO VIKA: K2-uudelleenavaus ei hakenut MITÄÄN 10 min (palkki 0,020,
+  latausjono 0/0/0): pysäytetyn korutiinin finally ei aja → JuoksuLeivottu.haetaan jäi true + kesken jääneet glb-työt Valmis = false. KORJAUS a58b3f4ec
+  (natiivi-backup natiiviseppa/latausjono, 926/926, unity 0): JuoksuLeivottu.Peru (JuoksuVerkko.Peru:sta) + sukupolvi. K2-odotus 600 → 900 s
+  (kylmä lataus ~750 s). JU: ajopyynto-mac-katko-2.md palkki-1:n jälkeen ennen pala3-luettelo-1:tä → lokit/natiiviseppa-juoksu-latausjono3-katko-2.
+  KK-VIESTI (kopio PT) vasta kun palkki-1 + katko-2 luettu; junaehdokas sitten a58b3f4ec (tai uudempi) → pt-ok-pyyntö PT:lle.
