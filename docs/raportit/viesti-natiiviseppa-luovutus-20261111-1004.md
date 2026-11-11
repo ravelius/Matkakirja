@@ -372,3 +372,19 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   → muurikatteen aikana ei valmistu pakollisiakaan; lohko odottaa jotain muuta (CPU, levy tai taustan glb-työ). SEURAAVA: muurikatteen alavaiheiden kestot lokiin
   (Hae glb / Lue / C3-json / C3-malli / C2 / vanha kate) + Hanta(0, x) niiden väliin; vaihe 0 (0,080) ja vaihe 3 alku (0,161) samoin. Ei kelloa.
   Jono JU:lla: NUI HETI (KK) → katko-3 ee10425ff → pala3-luettelo-1 → koekamera-1.
+
+## LISÄYS 23 (11.11. 20.4x, uusi sessio local_0f7f169f): katko-3 luettu → jumi korjattu; palkin alavaiheet tehty
+- KATKO-3 (ee10425ff) SYY: sulun jälkeen myöhästynyt kutsu aloitti leivotun hakemiston haun (sukupolvi 1) juoksun korutiinissa → korutiini pysähtyi
+  ilman finallya → JuoksuLeivottu.haetaan true → uudelleenavauksen Valmistele odotti 15 min ("Valmistele odottaa hakemistoa > 5 s (sukupolvi 1)").
+  KORJAUS 393acb884: HaeHakemisto ajetaan Latausjono.Aja:lla (pysyvä omistaja, finally aina); jos uusi avaus perui jonon kesken haun
+  (Latausjono.Sukupolvi muuttui, JuoksuLeivottu ei suljettu) → haetaan uudelleen uuteen jonoon. Sulku (JuoksuLeivottu.Peru) päättää kuten ennen.
+- PALKKI (22b): 92df2f2cd: hännän lohko 0 alavaiheiksi (HantaAla: kaukopuut 0–0,08, muurikate haku/luku, C3-json, C3-malli, C2, vanha kate,
+  rakennus + A3/A5), kukin osituksen lohko ("latauksen ositus" -rivi → kestot, mitoita painot niistä); sokkelon häntä Vaihe0Ala + Ali × Vaihe0Kesken
+  (rakennukset 0–0,2, korttelit mallikohtaisesti 0,2–0,85, rengas); avoimen mallin haku keskeneräisenä = käyttäjähuoneiden määrä (juhlasali).
+  Ali nollautuu alavaiheen vaihtuessa (avain + Alavaihe). Palkki-2:n syy: kaukopuiden aikana valmistuneet pakolliset täyttivät Alin koko lohkolle.
+  Huom: "jonossa pakollisia 1" muurikatteessa = tauolla oleva uusinta (koekatko); valinnaiset eivät ala sinä aikana (pakollinen odottaa) → vapaita paikkoja.
+- natiivi-backup natiiviseppa/latausjono = 393acb884 (926/926, unity 0; tarkista.sh päivittää tyylikirjan → palauta Tyylikirja.uss/.cs/json, ei committiin).
+- JU: _tyo/natiiviseppa/latausjono/ajopyynto-mac-katko4-palkki3.md (katko-4 → lokit/…-latausjono3-katko-4, palkki-3 → …-latausjono-palkki-3), sitten
+  pala3-luettelo-1 → koekamera-1. LUE katko-4: K2 "kulkukartta ladattu" + K1/K1b/K2-kuvat; palkki-3: lue.py pisin sama arvo ≤ 15 s + ositusrivin alavaihekestot.
+  → KK-VIESTI (kopio PT): 3-1…5 OK (21f) + katko + palkki → junaehdokas 393acb884 (tai uudempi) → pt-ok-pyyntö PT:lle.
+- Vahti: Monitor vahti-mac2.sh (katko-3/4, palkki-3, pala3-*; "valmis N s" = valmis). Cron 9.04 luotu.
