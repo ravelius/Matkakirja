@@ -596,3 +596,14 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - TALOT (talot.py, Pariisi palat-v41-pp): 6 552 878 kolmiota, vaakasärmä > 30 m 230 234 (3,5 %), > 50 m 63 529, > 100 m 7 206, pisin 616 m; 30 m:n jako ≈ +4,9 % kolmioita
   (≈ +320k). Talot ovat Pythonin paketteja → jako = tee_palat.py:n sääntö + UUDET talopaketit kaikille (ämpäri, 8 Mt:n raja). Vaihtoehto: pelin lataaja jakaa ladattaessa (ei pakettimuutosta,
   latausaika). Suositus: tee_palat.py:hyn ja mukaan seuraavaan talopakettiin (Montmartre v17 odottaa jo korttia). KK PÄÄTTÄÄ.
+
+## LISÄYS 42 (00.3x): NOLLAUS (konteksti 26 %)
+- LEVY: siirra-koho.zsh käynnissä taustalla tämän session alla (00.14; kohteessa ~30/37 Gi 00.3x). Nollaus voi katkaista → tarkista: jos
+  /Users/Shared/Claude/proto-3d/_tyo/karttaseppa-kohokartta-raaka ei ole symlinkki, aja uudelleen: zsh /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-karttaseppa/5e2c9543-dcb3-4f1a-be58-04725ba7f1e6/scratchpad/siirra-koho.zsh
+  (rsync jatkaa, cmp ennen poistoa). Valmis → rivi PT:lle (ja vapautunut tila).
+- JU:LLA (pyydetty, valmisrivi KS:lle): KJ50 parvis + Amsterdam, KJ49c, KJ51 Petit Palais, KJ52 pitkät monikulmiot. KK:lle lähetetty: KJ49b Lontoo + PP:n syy (00.2x).
+- 3D-PUUN VALO (KK 21.38, jonon viimeinen): EI ALOITETTU. Selvitetty: kevyet puut = puuAineKevyt (NotreDameKirkko.shader, Nahtavyysalue.cs ~r. 1413/2438, komento `puut savy`).
+  Ehdotus: uusi ominaisuus _ValoEro (oletus 1 = ennallaan) → nl = lerp(0.5, nl, _ValoEro) vain puuAineKevyt-aineelle + komento `puut valoero x`; karkea kuva KK:lle ENNEN junaa (Näkyvä työ).
+- SEURAAJAN JONO: 1) KJ50 + Amsterdam → KK. 2) KJ49c → KK. 3) KJ51 Petit Palais → KK. 4) KJ52 + talojen päätös → KK (LISÄYS 41). 5) Näyte 6 kaupunkia + Ateena (LISÄYS 37 k. 3).
+  6) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 7) GHSL-kalibrointi (näytteen jälkeen), 3D-puun valo.
+  Työpuut: pp-lasi = /Users/Shared/Claude/wt/proto-karttaseppa-pp-lasi (karttaseppa/petit-palais-lasi), pitkät = wt/proto-karttaseppa-pitkat (karttaseppa/pitkat-monikulmiot); muut ennallaan (LISÄYS 37).
