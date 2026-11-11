@@ -392,3 +392,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   + TYÖKALU 1 (kaupunkitaulu) — /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md (LUE).
   Myöhemmin D:n esilataus (suunnitelmat/20261111-aarrekysymys-saapuessa.md). ENNEN ALOITUSTA yksi viesti KK:lle (local_d5f31591-…) + PT: mikä mahdotonta/kalliimpaa.
   EI ALOITETTU (nollaus 25 %). JU:n jono 20.4x: NUI intro-nimet-1 → petit-palais-3 → sivukuva-1 (omistaja 20.31) → [katko-4 + palkki-3, pyydetty] → pala3-luettelo-1 → koekamera-1.
+- 23c (20.5x) JU TYÖKALU 3 -tarkennus: vakioajon skenaario /Users/Shared/Claude/julkaisija-tyokalut/vakioajo/sk-vakioajo.txt odottaa NS:ltä kaksi riviä:
+  1) "kaupunki valmis <id> <N> s" (id = uusi-peli-argumentti, esim. pariisi; alku = peli alkaa/saapuminen, loppu = maa, talot, merkkirakennukset, puut ladattu);
+  2) komento `mittari <tunniste>` → yksi rivi "MITTARI <tunniste> tekstuuri <Mt> varattu <Mt> mono <Mt> talopalat <n> <Mt> kolmiot <n> piirrot <n>"
+  (arkki.py jäsentää avainsana-arvo-parit; KS:n näkökartiomittari kolmioihin). Kerro JU:lle (local_2a7d6c96-…) sha/haara, kun valmis.
