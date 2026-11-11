@@ -67,3 +67,11 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Jos PUUTE (botti ei salissa 600 s) → kiinteä kamera (tarkastelu keisari x z yaw ei liikuta salin aurinkoa: tarkista ennen).
 - LAV: varjostajalista lähetetty (lahipuut-v17/puut.json 5759 puuta + taustan V4_puukortit kaukoalueelle; ruukut/kalusteet vain QA `esinekoe`; lehvästön alfa leivontaan, KK 4).
 - Cron (unity-julkaisut.py, polku /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/) ja vahti luotu uudelleen tähän sessioon.
+
+## LISÄYS 5 (10.5x): OMISTAJA 10.15 → KK PERUI SALIN POIKKEUKSEN: sali leivotaan salin valosta, elävä vain pelaajalla (ei poikkeuksia)
+- 450ae41d7 PERUTTU 690fb3ce7 (ovirivi 84b5c1f0e jää). salinovi-ajo JU:n jonosta pois → ovipari vasta LAV:n salileivonnan jälkeen (sk-juoksu-salinovi.txt käy sellaisenaan).
+- KK:lle vastattu: kohta 1 (yksi leivonta salin valosta) riittää; vaihto näkyy ruudulla (0,5 s, koko aurinko kääntyy), mutta leivottuna vaihtuvat vain pelaajan varjo
+  ja piirretyt valojuovat (osuus); katto varjostaa lattian molemmissa valoissa. Jos oviparissa oviaukon valo hyppää → kohta 2 (kaksi karttaa + ristihäivytys, NS).
+  Linjattavaksi KK:lle: salin esteiden häivytys (sermi/pylväät) jättää leivotun varjon lattiaan. ODOTTAA KK:ta.
+- LAV:lle: SaliAurinko 45°/70° salin kehyksessä (ValoKohteet.cs:260, Valopohja.SaliAurinko), yksi leivonta juhlasali.glb:n kehyksessä kaikille kopioille,
+  katto + palkisto varjostajiksi, juovat ei leivontaan. LAV aloittaa v133:n jälkeen.
