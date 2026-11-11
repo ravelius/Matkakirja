@@ -19,3 +19,6 @@ Wien #7 (Amerlinghaus), Istanbul #6 (näköala Galatan tornista: sääntö 5, ei
 4. Ateena #6 (Akropolis Hymettokselta) ja #7 (Areiopagos): nimet "Akropolis" ja "Areiopagos" ilman vuotta (sääntö 5).
 5. Regent's Canal · 1820 (Lontoo #5): kaivettu kanava, avausvuosi yksiselitteinen (sääntö 4 poikkeus); Čertovka ilman vuotta (kaivuuvuosi epävarma).
 6. Sininen moskeija (Istanbul #8): KK:n nimi, mutta tiedostonimessä/kuvatekstissä "Sulttaani Ahmedin moskeija".
+
+## KK:n lisäpäätökset 20.3x (tehty JSONiin)
+Berliini #8 "Voitonpylväs" ilman vuotta; Ateena #5 "Näkymä Akropoliilta"; Madrid #9 ilman vuotta; Amsterdam #7 "Prinsengracht". Sääntö 5 tarkennus: jos näköalapaikan nimi olisi sama kuin saman kaupungin toisen kuvan rivi, muoto on "Näkymä + paikka". Kuusi katsomatonta pysyy poissa pelistä, kunnes kuvat on katsottu mediasta.
