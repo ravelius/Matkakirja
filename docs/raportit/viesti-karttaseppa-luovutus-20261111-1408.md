@@ -489,3 +489,6 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   ajetaan vakiokuvat.py uudelleen. Näytteen piirtotapa: tarkista latautuuko ketjun tulos pelissä kehittäjän juuresta (TaloKerros.LueKansio / kehittäjän kansio) → KK:lle kumpi.
 - JONO: 1) KJ49b → KK. 2) Montmartre KJ43 01.00:n jälkeen + parvis (odottaa sanaa a). 3) ketju: GHSL-virhemittaus Pariisi/Lontoo (a), näyte 6 kaupunkia (b), pala (odottaa).
   4) Siltatyyppi + kannen sävy + KJ49c (Alma 120 m). 5) Pitkät monikulmiot, 3D-puun sävy.
+- 23.2x KK:lle (ketju a + näytteen piirto): GHSL-talot kerroksina (3,2 m): mediaani Lontoo 0,8 / Pariisi 1,5 kerrosta, pahin kymmenys > 2,4 / 3,4; keskusta harha −2,2 / −2,6 m
+  (T/mittaus/tulos-*.json, kerroin 0,8). Pelikelpoisuus = KK:n päätös, ODOTTAA. Näyte: pelin piirto `talot kansio <abs polku palat>` (MT02 sijaintiriippumaton) — ehdotettu
+  JU:lle ensin YKSI koekuva Amsterdamista (tarkista, ettei kaupungin oma rakennuskerros peitä); jos ei toimi → luonnos + vesi. Ei vielä pyydetty JU:lta (odottaa KK:n vastausta).
