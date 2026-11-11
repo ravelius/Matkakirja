@@ -302,3 +302,29 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   3-1:n aikajanalla (palkkirivit 10 s välein), sitten yksi erillinen Mac-ajo palkille (sk-juoksu-latausjono.txt), ei koko sarjaa uudelleen.
 - KK:lle palkista kerrotaan sarjan tuloksen yhteydessä (mitä seisoi ja korjaus tulossa).
 - Cron 9.04 (unity-julkaisut.py) + Monitor vahti-mac.sh LUO UUDELLEEN.
+
+## LISÄYS 21 — NOLLAUS TÄSTÄ (11.11. 18.24, kontekstivahti 26 %). JATKA NÄISTÄ:
+- LATAUSJONO (1. kärki): JU ajaa latausjono3-2…5 + 3-katko-1 (d4fc36645), sitten palkki-1 (363f3ce4b), sitten pala3-luettelo-1. 3-1 LUETTU: oleta OK,
+  mallit 439/439, pisin etenemätön 5,6 s, valinnaisia luovutettu 5 (eunukki-3.glb ym. taustan esihaku: etuala hakee pakollisena uudelleen
+  JuoksuLeivottu.HaeGlb + Logiikka.Pyyda :72 → ei hiljaa vajaa), puuttuu 4 = aitoja 404:iä (kielletty-c2-v34 a3-baoding-lod1, a5-marmorikaide-pylvas-lod1,
+  osasarja-v15 pursotukset.glb, QA kala-allas). "LATAUS EPÄONNISTUI/latausvirhe näkyy" -osumat = skenaarion oleta-rivin kaiku, ei vika.
+- KUVAT: "komento kuva X" ei tallenna batch-ajossa (JU) → sk-juoksu-latausjono.txt ja sk-juoksu-latausjono-katko-3.txt korjattu "kuva X" (JU:lle kerrottu).
+  Tarkista katko-1:stä, että K1-virhe/K1b-valikko-poistu/K2-uudelleen-kuvat syntyivät.
+- PALKKI KORJATTU 363f3ce4b (natiivi-backup natiiviseppa/latausjono, 926/926, unity 0): JuoksuLatausEdistyminen.Ali (keskeneräinen = tavuosuus,
+  jokainen yksikön aikana valmistunut tiedosto −30 % jäljellä olevasta), vaihe 0 moduulit + 1, palatsin häntä HantaOsuus 0,4 painoin 0,38/0,06/0,03/0,07/0,46
+  (muurikate/osasarja/kaiteet/C1/ulkorengas, 3-1:n kestot 66/11/5/12/80 s), Hanta()-kutsut Palatsi.cs:ssä, LatausKeskenYksikot. Ajo: _tyo/natiiviseppa/latausjono/
+  ajopyynto-mac-palkki.md → lokit/natiiviseppa-juoksu-latausjono-palkki-1 → lue.py: "pisin sama arvo" ≤ 15 s (palkkirivit 10 s välein → enintään 1 sama peräkkäin).
+  Aikajana: scratchpad-skripti katosi nollauksessa; lue.py riittää. Jos yhä seisoo: katso mikä lohko (JuoksuLatausMittari.Lohko-rivit / "latauksen ositus").
+- SARJAN TULOS → yksi viesti KK:lle (kopio PT): 5/5 + uusinnat + K1/K1b/K2-kuvat + palkki-1 (pisin sama arvo). Junaehdokas sen jälkeen: natiiviseppa/latausjono
+  (363f3ce4b tai uudempi) → pt-ok-pyyntö PT:lle.
+- KK 18.15 PALA 3 (pintojen leivonta): tehtävänanto /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-pintojen-leivonta-pala3-tehtavananto.md
+  (LUE KOKONAAN), LAV:n tila _tyo/linnanrakentaja/leivonta-v5-tyo/VASTAUS-KK-1806.md. JÄRJESTYS: latausjono → 3.0 → 3.3 pilotti (laji 2 pihan/kujan lattia kuvaksi
+  työkalulla + uusi varjostinpolku kytkimen `pinnat uusi|vanha` takana) → lattian ruutuvalon lataus (LAV 3.1b) → 3.2 (EI ennen tarkkaa leivottua valoa versiossa).
+  Rajaus-/poikkeusehdotukset KK:lle ENNEN toteutusta. Ei kameraa, sääntöjä, reittejä.
+- 3.0 TEHTY 0f851ddbd (natiivi-backup natiiviseppa/pala3-pinnat juna 224 bd9a95a9d:stä, wt /Users/Shared/Claude/wt/proto-natiiviseppa-pala3, unity 0):
+  JuoksuV4Maailma.Luettelo.cs, QA `valo luettelo <kansio>` → globaalit.txt (98 varjostinglobaalia, Valopohja.JuoksuK4…K24 C#-kytkimet, avainsanat)
+  + piirtajat.tsv (MeshRenderer × materiaali: juuri, varjostin, laji, leivottu, UV1, kärkiväri, aktiivinen, koko). Ajo: _tyo/natiiviseppa/pala3/ajopyynto-mac-luettelo.md
+  (sk-juoksu-pala3-luettelo.txt) → lokit/natiiviseppa-juoksu-pala3-luettelo-1. LUE → tiivistys KK:lle (kopio PT): K-kytkinten arvot, mitkä lajit (_Laji) käytössä
+  (V4_tile/V4_stone/V4_capstone?), ilman leivottua valoa materiaaleittain + pinta-ala-arvio. KK:lle kerrottu (viesti 18.2x).
+- Työlista: "Juoksupeli pala 3: pintojen kuvat (luettelot, pilotti pihan lattia)" tilanne päivitetty.
+- Cron 9.04 (unity-julkaisut.py) + Monitor vahti-mac.sh LUO UUDELLEEN.
