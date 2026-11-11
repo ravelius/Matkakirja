@@ -43,3 +43,12 @@ katso P*-kuvat täysikoossa (kopio0 = perus?), sitten -2010 kohta 3:n korjaukset
 ## VIESTIT TÄLLÄ VUOROLLA
 NUI: introkomponentti (vastasi: Introesitys suoraan). JU: saapumiskoe-ajo + sha-päivitys. Äänittäjä: ottopyyntö (jonossa). PT: saapumiskoe +
 muistipiikin korjaus + luovutus tulossa. PT 08.5x: tavoitekuva (luettu, aloituslento lisätty sen mukaan).
+
+## LISÄYS 09.0x (PT: sana annettu muistimittaukselle)
+- SSE-MITTAUS JU:n jonossa (saapumiskokeen jälkeen): _tyo/natiiviseppa/laattalataus/ajopyynto-ipad-1.md + sk-ipad-sse-1.txt (iso iPad, 2 kylmää,
+  80° staattinen ilman kiertoa, `komento maasto sse` 16→32→64→16, 45 s / taso) → lokit/natiiviseppa-laattalataus-sse-{1,2}.
+  Luenta: N-rivien fp/malloc + A-rivien iogpu + U-rivin Pallo per taso (aikaleimat L-riveistä "maasto sse"); horisonttikuvat h80-* PT:lle
+  samalla rajauksella. Tavoite huippu < 3200 Mt ilman näkyvää eroa horisontissa.
+- KAUKORAJA 80°:ssa: valmista komentoa EI ole (Komennot.cs: vain maasto sse / maasto lataus / usva). Seuraaja: pieni QA-komento (esim. Cesiumin
+  fog culling / culledScreenSpaceError tai kameran kaukoraja), käännös + 2. iPad-ajo. PT tietää.
+- Saapumistallenne KK:lle, kopio PT:lle (PT 09.0x vahvisti).
