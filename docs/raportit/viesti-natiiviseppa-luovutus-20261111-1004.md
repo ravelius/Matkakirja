@@ -135,3 +135,18 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - RUUTUNOPEUS: ENNEN EI KELPAA (peli ei alkanut: avoimet glb Request timeout, latauskuva 15 min). JÄLKEEN pelasi (Taso läpi 4:00): fps-konsolista mediaani 40,
   huonoin 28,5, gpuMs 34,8 / p95 50,5. JU: ajopyynto-ruutunopeus-ennen-2.md → lokit/natiiviseppa-juoksu-ruutunopeus-ennen-2 → vertailu KK:lle (kopio PT).
 - Cron (unity-julkaisut 9.04) ja ajovahti luotu tähän sessioon. Turhatyo-1 ALKOI 11.3x (vahti).
+
+## LISÄYS 13 — NOLLAUS TÄSTÄ (11.11. 12.00, kontekstivahti 25 %). JATKA NÄISTÄ:
+- SAAPUMINEN: mac-5 (b67f370b0) välähdys pienempi (118 → 192 → 161) muttei pois → KORJAUS 2 ef53afe7a (natiiviseppa/saapuminen-pariisi; Introesitys.PysaytysEsiS 0,3 s:
+  pysäytyskuva häipyy ensin peitteen alla, sitten peite 1 s; sävy nollataan vasta lopussa; kamera seisoo PehmeaKokoS 1,3 s) + NUI 05d55e239 Ohitan paikka (cherry-pick 201f9fffa).
+  JU: mac-6 ef53afe7a → lokit/natiiviseppa-saapuminen-mac-6: KIRKKAUS häivytyksen yli yhteen suuntaan (kehykset saapuminen-koko/k-*.jpg joka 3., magick -resize 64x
+  -colorspace Gray -format '%[fx:mean*255]'; mac-5:ssä häivytys k-1785…1835) → KK (kopio PT). Tarkista myös s5b/s6/s7: Ohita kompassin alla (NUI 6a), luentapalkki (6b): jos näkyy, kehys NUI:lle.
+- iPad MUISTI-3 (b8e641712): odotus 16,1/16,3 s (oli 28), huippu 3280 Mt (muisti-tarkka.log; muistivahti-tulos.txt VANHA, älä käytä). Syy 28 s:iin ei selvinnyt (ei syyriviä).
+  JU: muisti-4 ef53afe7a → odotus < 25 s? (KK:n junaehto: mac-6 kirkkaus yhteen suuntaan + iPad-odotus < 25 s). KK:lle kerrottu.
+- RUUTUNOPEUS: julkaistu runko jää latauskuvaan iPadilla 3/3 (Curl 28 15 s: taivas.png, avoimet-v52/juhlasali.glb; PT:lle HUOM lähetetty). ENNEN = ennen-3 rungosta
+  79b04e870 (juna-224 ennen NS:n muutoksia; ajopyynto-ruutunopeus-ennen-3.md) → fps-konsolista.py → vertaa JÄLKEEN (a61a98089: mediaani 40, huonoin 28,5, gpu 34,8/50,5) → KK + PT.
+- TURHATYÖ-1 (367ea7f0a): kappaleläpikäynti kaikki 262–755 ms/jakso, pisin 54–101 ms → uudet 15–22 ms, pisin ~3 ms (yksi 20050 uutta: 115/56 ms). H1/H2-kuvat (6) JU hakee iPadilta
+  → lokit/natiiviseppa-juoksu-turhatyo-1: vertaa heijastus 200|400|200b (magick compare) → jos ei eroa, junaehdokas PT:lle; jos ero, KK.
+- HAHMOVARJO-1: 9 kuvaa pikselilleen samat (ei hahmoja ruudussa) → hahmovarjo-2 (_tyo/natiiviseppa/varjot/sk-juoksu-hahmovarjo-2.txt: eunukki kurkistaa / huutavat / vartijan kehote)
+  JU:n iPad-jonossa → kolmikot KK:lle (kopio PT).
+- Cron (unity-julkaisut 9.04) ja ajovahti (Monitor vahti.sh) LUO UUDELLEEN.
