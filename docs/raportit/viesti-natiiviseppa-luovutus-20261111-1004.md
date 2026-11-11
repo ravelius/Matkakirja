@@ -28,6 +28,11 @@ ero → B-luokkaa, KK:n sana (PT 10.0x). Kustannus: kaikki vs. uudet ms PT:lle.
 
 ## 3. RUUTUNOPEUS ennen|jälkeen (JU käynnistänyt uudelleen 09.5x; ennen-ajo kaatui allekirjoitukseen, korjattu): lokit/natiiviseppa-juoksu-ruutunopeus-{ennen,jalkeen}
 → python3 -I _tyo/natiiviseppa/juoksu-piirto/fps.py <konsoli.txt> → yksi luku KK:lle (mediaani ruutua/s ennen | jälkeen + huonoin 5 s), kopio PT.
+- ENNEN VALMIS (JU 10.10, iso iPad, 15 min, R1 1, NRE 0). Laitteen kehysajat.jsonl EI kopioitunut (vanha 09.53) → käytä kehysajat-konsolista.jsonl
+  (JU poimii saman myös jälkeen-ajosta). Luenta: python3 -I _tyo/natiiviseppa/juoksu-piirto/fps-konsolista.py <kansio>/kehysajat-konsolista.jsonl
+  → ENNEN: 60 ruutua/s mediaani, huonoin 5 s 29,8 (lataus t 25–80 s), alle 30: 3 %, alle 20: 0 %, gpuMs mediaani 8,4 / p95 24,2, lämpö Normaali, akku 95→95
+  (lokit/…-ennen/yhteenveto-ns.txt). Liike-kehysajat vain alussa (151 ruutua, 37 nykäystä, max 215 ms) → nykäyksiä ei voi verrata. "kulkukartta ladattu → PUUTE"
+  10.03 = vanhassa rungossa ei riviä. SEURAAVA: jälkeen (224.65) samalla skriptillä → yksi luku KK:lle, kopio PT.
 
 ## 4. SAAPUMINEN: korjaukset 1–4 TEHTY c31deb71d (natiiviseppa/saapuminen-pariisi, wt proto-natiiviseppa-saapuminen), KK:lle kerrottu.
 Syy 36,9–37,9 s vaaleaan: yläkuva 1,35 × korkeudella → Cesium valitsi karkeammat laatat. Nyt KoeYlhaaltaKerroin 1,0, KoeYlaKallistus 15°, odotus jyrkässä
