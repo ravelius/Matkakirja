@@ -517,3 +517,13 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 30b (22.5x) JU: T1-vakioajo ajetaan koeyhdistelmällä 37c7d3b75 (= 210c842ad + cfe3324a3, natiivi-backup julkaisija/koe-kaupunkitaulu-vakioajo, ei junaan;
   T3-rivit + NUI:n "ui vakio" mukana) → lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3 (pariisi, lontoo + *-ennen-210c842ad). Palkki-5:n kuittauksen loppurivi
   "JU NS palkki-5 valmis".
+
+## LISÄYS 31 (11.11. 21.5x, uusi sessio local_0f7f169f nollauksen jälkeen)
+- PT/KK 21.47 LINJAUS: latausjonoerän (palkki-5) JÄLKEEN NS siirtyy KOKONAAN KAUPUNKITYÖKALUIHIN (T1 kaupunkitaulu → KK, T3, mono-selvitys ym.).
+  Juoksupelin palat 4–9 EIVÄT ala ennen omistajan "Pariisi valmis" -korttia.
+- NUI 21.5x: kaupunkitaulun muutokset KaupunkiPallot.cs:1162 / NostotKartalla.cs:709–714 kerrottu; NUI: ei ristiriitaa avoimiin NUI-haaroihin → junaan sellaisinaan.
+- PALA3-KOEKAMERA-1 (0f851ddbd) LUETTU: K1/K1b eivät toista V2-elava.png:tä (kujan keskeltä; V2 = kujan suu aukiolle). Lokin kamera-rivi näyttää PELIKAMERAN
+  myös testikamera-kuvissa (K2–K6; testikamera jäi päälle K5:stä K6:een). LAV:lle kameran pohjat + korjaus lähetetty.
+  LAV:n uudet pisteet → sk-juoksu-pala3-koekamera-2.txt (K6 −136 425 suunta 0 pelikamera; K7 −136 336 180 peli; K7b + testikamera 2.7 7.1 12 29).
+  JU: ajopyynto-mac-koekamera-2.md palkki-5:n + T1-vakioajon jälkeen → lokit/natiiviseppa-juoksu-pala3-koekamera-2 → kuvat LAV:lle (kameran pohjat K6/K7).
+- Monitor vahti-mac2.sh (kuvio + ns-kaupunkitaulu-vakioajo-*) ja cron 9.04 luotu tähän sessioon.
