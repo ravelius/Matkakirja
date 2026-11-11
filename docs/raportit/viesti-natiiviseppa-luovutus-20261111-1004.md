@@ -411,3 +411,8 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Nahtavyysalue Aseta(...)) → poimi sieltä valmiusosat (ei saapumiskoetta). Mittari: Komennot.Aja (Kartta/Komennot.cs:1881) uusi case "mittari";
   muistit kuten CesiumKaupunki.Muisti (:1268), talopalat TaloKerros.PalojaNyt/TavujaNyt; kolmiot = KS:n PiirtoTilasto (karttaseppa/ymparistot) NakyvatKolmiot.
 - Vahti: Monitor vahti-mac2.sh (nyt katko-[3-9], palkki-3, pala3-*). Cron 9.04 luotu.
+- 24b (21.3x) TYÖKALU 3 -RIVIT TEHTY d088ca46a (natiivi-backup natiiviseppa/tyokalu3-rivit, wt proto-natiiviseppa-tyokalu3, unity 0): Kartta/KaupunkiMittari.cs
+  (Seuraa uusi-peli:stä, "kaupunki valmis <id> N s" / katto 300 s "kaupunki EI valmis", komento mittari → MITTARI-rivi) + KaupunkiValmius talot/
+  Nahtavyysalue/OhjelmaKohteet (saapumishaarasta) + Nahtavyysalue.ValmiusYhteenveto. JU:lle kerrottu (koe Pariisilla latausjonon ja pala3-ajojen jälkeen).
+  LUE vakioajon 1. ajo: tuliko rivi, aika järkevä, talopalat > 0; MITTARI-arvot ≠ -1 (piirrot -1 = ei Development/editori).
+- KAUPUNKITAULU odottaa KK:n vastausta (1b–1f).
