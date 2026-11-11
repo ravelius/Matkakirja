@@ -42,3 +42,9 @@ worktreet, tarkistukset, A:n tila, KK:n ehdot. Tämä tiedosto kertoo vain, mit�
 intro-nimet-3 katso → KK; pulu-rajaus-2 katso → KK; taitto-1 katso → KK; petit-palais-5 katso → KK; vakioajon arkit → KK;
 sitten OHJAUSSAUVAT (KK 19.22: ensin mitat + ehdotus KK:lle; tehtävänanto KK:n viestissä 19.22 / -2053) → D (aarrekysymys, -2053).
 Worktree /Users/Shared/Claude/wt/nui-vakio (natiivi-ui/vakioajo) uusi; /Users/Shared/Claude/wt/nui-sk-vienti voi poistaa (git worktree remove), kun pulu-rajaus-2 katsottu.
+
+## LISÄYS 21.4x (JU:n kuittaukset)
+- JU:n jono kuitattu: intro-nimet-3 (L1, käynnissä) → pulu-rajaus-2 ec3aaa575 (lokit/nui-pulu-rajaus-2-ec3aaa575) → taitto-1 ec3aaa575
+  (lokit/nui-taitto-1-ec3aaa575) → petit-palais-5 a0c49d779 (ääni päällä) → vakioajo 210c842ad Pariisi + Lontoo
+  (lokit/vakioajo-{pariisi,lontoo}-210c842ad/arkki.png). JU lähettää vakioajon arkit + yhteenvetorivit suoraan KK:lle ja PT:lle, kopio NUI:lle;
+  NUI katsoo PUUTE-rivit ja korjaa. JU nollautuu pian; seuraava JU jatkaa JU:n luovutuksesta.
