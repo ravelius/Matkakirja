@@ -39,3 +39,6 @@ KARKEA ESIKATSELU (uusi, toimii): `OHJELMAKOHTEET_VIENTI=<kansio> sh Kartta-test
    jonka kohta on mallin ruuturajauksen sisällä (sama sääntö kuin Tripolle), ei vika. Tarkista unity.logista/koodista ja kerro KK:lle samalla GP-parilla.
 5) PT 09.0x jonoon Montparnassen jälkeen: "Overture Maps: yhden kaupungin mittaus" (height / num_floors / roof_shape -osuudet lähteittäin vs. talokoneen OSM; yksi päivä, yksi kaupunki).
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty. Ämpärin versionumeroa ei käytetä uudelleen.
+
+## LISÄYS 09.2x
+- KK 09.2x: KJ33 SC-lovi OK → mukaan talot v12:een (palat v36 tai uudempi). GP: KK odottaa KJ35-paria (sama kulma kuin KJ32 + lähikuva pylväiköstä + lähin pelikamera) ennen junaa; sitten Orsay-pari ja Montparnasse.
