@@ -514,3 +514,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   T3-kokeessa mono 632 → 1584 Mt / 20 s) + toistuuko ennen kaupungin latausta → yksi viesti KK:lle; ei korjauksia.
 - tarkista.sh-ANSA: se päivittää Tyylikirja.uss/.cs/json mainista; PALAUTA ne ennen seuraavaa ajoa (muuten Lasipohja CS0117 HarmaaTummaLasi).
 - Monitor vahti-mac2.sh + cron 9.04 LUO UUDELLEEN (kuvio kattaa palkki-[3-9]*, katko-[3-9]*, ns-tyokalu3-koe-*; lisää ns-kaupunkitaulu-vakioajo-*).
+- 30b (22.5x) JU: T1-vakioajo ajetaan koeyhdistelmällä 37c7d3b75 (= 210c842ad + cfe3324a3, natiivi-backup julkaisija/koe-kaupunkitaulu-vakioajo, ei junaan;
+  T3-rivit + NUI:n "ui vakio" mukana) → lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3 (pariisi, lontoo + *-ennen-210c842ad). Palkki-5:n kuittauksen loppurivi
+  "JU NS palkki-5 valmis".
