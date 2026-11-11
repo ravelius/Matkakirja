@@ -4,7 +4,7 @@ Syy: konteksti (pehmeä raja 25 %). Tili sami.reivinen@vvi.fi. Kotikansio /Users
 
 ## LINJAT
 - Näkyvä työ (3D, merkit, ilme, valikot, VALO): kuva ensin KK:lle, PT kopiona; junaan vasta KK:n sanalla. KK katsoo itse ja vaatii todisteen, joka näyttää itse asian; kerro puutteet suoraan.
-- JU:n RUUTUVIKA (11.11.): Mac-esikatselussa pelin ruutu jää ensimmäisen tallenteen jälkeen kokoon 321×531. Tallenteen jälkeen otetut Mac-kuvat ovat epäluotettavia (lista julkaisija-tyokalut/tallenne-ruutuvika-20261111.txt). Korjaus (Esikatselu.cs) on JU:lla. Siihen asti kuvat ennen tallennetta tai iPadilla.
+- JU:n RUUTUVIKA (11.11.) KORJATTU juna-224 17fbf3e35: jos Mac-kuvia otetaan tallenteen jälkeen, yhdistä f2511a80f omaan haaraan. Ennen sitä tallenteen jälkeen otetut kuvat ovat epäluotettavia (lista julkaisija-tyokalut/tallenne-ruutuvika-20261111.txt). Todiste-5:n uusinta (1851ecf69) pyydetty peruttavaksi, koska 51e33fb4f korvaa sen.
 
 ## 1. PILVIEN VARJOT: levossa seis, iPad-todiste JU:lla
 - KK 11.31: kello seis koko levon ajan. Ehto: varjot jatkavat samasta kohdasta, ja liike lähtee ja pysähtyy pehmeästi (~0,5 s:n liuku). Todiste iPadilta: lepo 10 s (varjot paikallaan) + liikutus + pysäytys, ilman tallennetta. Sitten MR JU:lle PT:n kuittauksella (pt-ok PT:ltä).
