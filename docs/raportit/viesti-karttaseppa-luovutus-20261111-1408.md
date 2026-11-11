@@ -93,3 +93,4 @@ KK merkitsi valmiiksi: loput ylisuuret 1:1, loput koodimalleiksi, oikea mittasuh
 3) PARIISI VALMIS: SEINE JA SILLAT -katsaus: koko Seine kuvina kaupungin läpi (vesi, rannat, sillat), Austerlitzin ja Iénan korjausten tila, puutelista.
 4) OVERTURE-MITTAUS Lontoosta (rivi olemassa; Pariisin mittaus 621b77e8d mallina), pohjaksi Lontoon aloitukselle.
 Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan korttia.
+- 16.42 AJO A KATSOTTU, parit KK:lle (kopio PT): K/parit-kj44/ (pari-sv44-1…8, arkki-kj44-a.jpg). Eiffelin 1. kerroksen alapinnan sirpaleet (taivaslaikut, irtopalkki) poissa jälkeen-kuvissa; Riemukaari 90/130 m ennallaan ehjä. Odottaa: NUI:n B + KK:n päätös → junaehdokas 03ad357fb.
