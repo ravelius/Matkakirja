@@ -557,3 +557,15 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   Mirabeau 3 teräskaarta + ei kiilaa (32), Iéna 5 kivikaarta (39), kansi kartan kadun sävyssä yleiskuvissa, levein/pisin. KK:lle lähetetty 00.1x tulos + mistä tyyppi tulee.
 - SEURAAJAN JONO: 1) KJ49b Lontoo → KK heti (junasana). 2) KJ50 + Amsterdam → KK. 3) KJ49c → KK. 4) Näyte 6 kaupunkia + Ateena ennen|jälkeen (LISÄYS 37 k. 3).
   5) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 6) Pitkät monikulmiot muissa rakentajissa (LISÄYS 32 (2): pilkonta yhteiseen apufunktioon; Rakentaja.Pilkko on nyt ruudukko), GHSL-kalibrointi, 3D-puun sävy.
+
+## LISÄYS 39 (00.1x): KK 00.06 PETIT PALAIS -VIKA (JONO MUUTTUU) + levysiirto
+- KK 00.06: julkaistussa 224.89:ssä Petit Palais'n esittelyn lähikuvassa lasikaton vaaleansininen, vihreäraitainen kaista näkyy pääjulkisivun SEINÄN LÄPI ikkunakaarien
+  yläosan kohdalla koko siiven pituudelta ja pistää ulos vasemman pyöreän tornin vierestä. Kuva /Users/Shared/Claude/proto-3d/lokit/nui-petit-palais-juna-1-8459237ec/14-petit-palais-6-lahin.png,
+  rajaus ffmpeg crop=iw*0.36:ih*0.22:iw*0.26:ih*0.50. SELVITÄ GEOMETRIASTA: pitkän monikulmion syvyysveto (LISÄYS 32 (2); OhjelmaKohde.shader SyvyysVeto lasketaan kärjissä,
+  Rakentaja.Pilkko ruudukko 300c6b99d vain silloilla) vai mallin oma pinta seinän edessä (OhjelmaKohdePariisiPetitPalais*.cs: lasikatto vs julkisivun syvyys). Korjaa.
+  NÄYTTÖPARI samasta kamerasta KK:lle; ei junaan ennen KK:n sanaa. JÄRJESTYS: HETI KJ49c:n jälkeen, ennen kuuden kaupungin näytettä.
+- SEURAAJAN JONO (korvaa LISÄYS 38:n): 1) KJ49b Lontoo → KK heti. 2) KJ50 + Amsterdam → KK. 3) KJ49c → KK. 4) PETIT PALAIS (yllä). 5) Näyte 6 kaupunkia + Ateena.
+  6) Montmartre KJ43 01.00-viennin jälkeen. 7) Pitkät monikulmiot, GHSL-kalibrointi, 3D-puun sävy.
+- LEVY (PT 00.1x, omistaja 23.34): _tyo/karttaseppa-kohokartta-raaka 37 Gi → /Volumes/T7 4TB/koodaus/karttaseppa/karttaseppa-kohokartta-raaka + symlinkki vanhaan polkuun,
+  ajo scratchpad siirra-koho.zsh (rsync + cmp, lähde pois vasta samana). Jos symlinkkiä ei ole: siirto kesken/katkesi → tarkista, aja uudelleen (rsync jatkaa). Rivi PT:lle valmiina.
+  Työpuut koodijuna/parvis/sillat EIVÄT valmiita (PT:lle kerrottu), ei poistettu.
