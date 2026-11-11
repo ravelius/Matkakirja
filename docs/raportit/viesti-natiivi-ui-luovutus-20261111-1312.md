@@ -132,9 +132,18 @@ Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-par
 - 17.14 (JU): 224.74 = 2882f055a (Lehti + Matkaopas) LINKISSÄ. Junan Mac-kuvat sk-juna-lehti-1 → proto-3d/lokit/nui-lehti-junakuvat-2882f055a
   → KATSOTTU 17.3x (6/6 ok, arkki-1000.png) ja viety KK:lle. Seuraava työ: LISÄYS 4.
 
-## LISÄYS 13 (nollauksen jälkeen 17.5x): LISÄYS 4 tehty koodina → 9c6a6f864 (natiivi-backup natiivi-ui/pallo-kyltti, KS pallo-juna-pp a0384240a:n päällä, unity 0)
+## LISÄYS 13 (nollauksen jälkeen 17.39): LISÄYS 4 tehty koodina → 9c6a6f864 (natiivi-backup natiivi-ui/pallo-kyltti, KS pallo-juna-pp a0384240a:n päällä, unity 0)
 - KaupunkiPallot.KylttiKentanViereen: 3D-pallon näkyessä kyltti kentän (KpKentta + 0,5) ruutulaatikon oikealle puolelle ankkurin korkeudelle,
   tilan loppuessa vasemmalle (hystereesi), siirtymä Malli3D:n mukaan. Vertailu `ui kaupunkipallot kyltti 0|1`; tila: kyltti-kentän-oikea/vasen.
 - AJO JU:lla: sk-pallo-kyltti-1.txt (proto-3d/_tyo/natiivi-ui) → lokit/nui-pallo-kyltti-1-9c6a6f864: 4 kameraa (KJ37:n lähin itä/pohjoinen, lähi, kauko) × a ennen / b jälkeen.
   SEURAAVAKSI: katso täysikokoisina (b: ankkuri ja kentän etureuna näkyvät, kyltti ei ruudun reunan yli) → pari KK:lle, PT kopio. Junaan vain KK:n sanalla,
   yhdessä KS:n pallo-juna-pp:n kanssa (ei NUI:n omaa junaa).
+
+## LISÄYS 14 (17.4x): SULKU-KATSE (kohta 2) – sulku-katse-1 MITATTU: korjaus ae72a1a4e EI TOIMINUT
+- lokit/nui-sulku-katse-1-ae72a1a4e: a 23,86 s ero 3,13 (ympärillä 0,02; kamera ~0,2 % lähennyshyppy), b 24,20 s 2,33 (kaukaiset talot vaihtuivat kerralla).
+  Loki "katse 0 m → 128 m / 274 m sulun aikana" = SulkuKatse ei liukunut: ehto "EsitysKatse NaN" ei täyty sulun aikana (NahtavyysEsittely nollaa vasta
+  KiertoSulkeutuu-silmukan jälkeen) → PudotaEsitysKatse yhdessä kehyksessä kuten ennen.
+- KORJAUS e0f7d6a7d (natiivi-backup natiivi-ui/sulku-katse-2 = napautus-224 d520120aa + cherry-pick ae72a1a4e (8b906efd1) + korjaus; unity 0):
+  SulkuKatse aina; PaivitaEsitysKatse ei koske sulun aikana; sulun lopussa EsitysKatse NaN heti.
+- AJO JU:lla pallo-kyltti-1:n jälkeen: sk-sulku-katse-2.txt → lokit/nui-sulku-katse-2-e0f7d6a7d. Mittaa: python3 (ei -I, numpy) _tyo/natiivi-ui/kehysero.py
+  <kansio> 18 27; piikki pois a ~23,9 s ja b ~24,2 s; lokissa "→ 0 m". OK → KK:lle mittaus; junaan KK:n sanalla (napautus-224:n jälkeen).
