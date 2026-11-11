@@ -527,3 +527,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   LAV:n uudet pisteet → sk-juoksu-pala3-koekamera-2.txt (K6 −136 425 suunta 0 pelikamera; K7 −136 336 180 peli; K7b + testikamera 2.7 7.1 12 29).
   JU: ajopyynto-mac-koekamera-2.md palkki-5:n + T1-vakioajon jälkeen → lokit/natiiviseppa-juoksu-pala3-koekamera-2 → kuvat LAV:lle (kameran pohjat K6/K7).
 - Monitor vahti-mac2.sh (kuvio + ns-kaupunkitaulu-vakioajo-*) ja cron 9.04 luotu tähän sessioon.
+- 31b (21.5x) PALA 3 ODOTTAA (PT: KK:lle ehdotettu, että pala 3 odottaa kuten 4–9): LAV:n 3.1b B -pariajo EI ALOITETTU. Pyyntö: koe-glb
+  /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-v5-tyo/koe-b/ulos-{6.25,12.5}/kk-tausta-1-3-lod0.glb (valo_rgbm 4096², UV1 uusi; korvaa vain
+  kk-tausta-1-3, kuja-1-3 pysyy v5) → pari vanha `valo elava kaikki` | koe `valo elava pelaaja`, K1–K5 + K6 (−136 425 0) + K7 (−136 336 180), molemmat
+  tarkkuudet, täysikoossa KK:lle (kopio LAV). Vaatii glb-korvauskytkimen. KOEKAMERA-2 PIDÄTETTY JU:n jonosta. Molemmat vasta KK:n sanalla. LAV:n luovutus 8b58e158c.
