@@ -285,3 +285,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   (uudet rivit: palkin pisin muuttumaton jakso ≤ 15 s, pisin etenemätön < 30 s, mallit 439). → yksi viesti KK:lle (kopio PT): 5/5 + uusinnat + K1/K1b-kuvat.
 - 18b b (osittainen tiedosto levylle + If-Range) oma rivi, EI tehty. Vahti: Monitor vahti-mac.sh (kattaa latausjono3-*). Cron 9.04 luotu.
 - JONO sen jälkeen: tyhjä (piirroksen ennakko 18c: ei jatkotöitä).
+- 19b (17.5x): JU:n latausjono2-1 (9fb80c825) JUMI LOD1:ssä (haussa 0, pakollisia 0, valinnaisia 7, > 6 min). Syy: JuoksuLeivottu.HaeKuvat ohitti taustan
+  aloittamat kuvat (valinnaisia, tauolla latausrajan jälkeen). KORJAUS d4fc36645: Latausjono.Nosta(KuvaUrl) + Vahdi: jumissa oleva valinnainenkin → Virhe
+  (tyhjä jono ei). 925/925, unity 0. Mac-sarja -3 nyt d4fc36645:llä (JU:lle kerrottu; 7b7c06396 ei kelpaa).
