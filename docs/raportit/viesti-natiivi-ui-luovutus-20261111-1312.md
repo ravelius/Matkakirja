@@ -112,3 +112,5 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
   (Riemukaari lahitaso 0 / 1 samoista kulmista; täydennä sha otsikkoon) → JU. Kytkin `ui nahtavyysesittely lahitaso 0|1` on jo koodissa.
 - Jos kaari ehjä katto pois → poista EsitysLahitaso/EsitysRajaSade/kytkin haarasta (LahinRajoista palaa? päätä: 63 m:n veto ei enää rajaa lähintä
   KS:n muutoksella → palauta vanha r + LahitasoM). lukonVersio jää joka tapauksessa.
+- 16.3x: B-ehdokas 2f4c0a80f (napautus-224 = 41b9c5965 + merge KS 03ad357fb, vain varjostimet) pushattu; ajo B JU:lla samaan Mac-ajoon KS:n A:n
+  kanssa → lokit/nui-napautus-224-2-b-2f4c0a80f. Ajo 1 (41b9c5965) käynnissä 16.26 → lokit/nui-napautus-224-1-41b9c5965 (katso, kuvat KK:lle).
