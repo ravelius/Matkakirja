@@ -49,3 +49,20 @@ M = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/montmartre-maasto, K = /Users
 - JU 14.5x: MR70 a0384240a → 224.76 MR69:n jälkeen PT:n pt-ok:lla; linkin jälkeen JU ottaa pallon lähirajauksen + pelikameran lähimmän junan käännöksellä → katso ja välitä KK:lle (köydet).
 - JU 15.53: LINKKI 224.73 = df0f36c4b (Petit Palais koodina + talot v16), testit läpi, manifest 200. PP VALMIS.
 - PT 16.1x: pallo a0384240a pt-ok → 224.77 (ei 224.76). Appi kaatui ~16.08; KS nollaa itsensä tästä luovutuksesta. Seuraaja: Grand Palais (KK 14.46), sitten Montmartre talot v17.
+
+## LISÄYS 8 (16.2x, uusi sessio 16.13)
+- GRAND PALAIS: jo valmis (koodimalli 1:1 linkissä 224.63, 77e2a7d72, KK OK 09.2x); kaikilla Pariisin Tripo-alueilla on koodimalli. PT:lle kerrottu, kysytty, tarkoittiko KK uutta GP-korjausta. Jonossa nyt Montmartre.
+- 1a TALOT v17-EHDOKAS koottu: K/raivaus-1-1-montmartre/palat-v42-mm (= palat-v41-pp + 18 Montmartren palaa 16595–16599 × 11267–11270).
+  Ketju: aja-palat-v42.sh → tee-talot-mm.py (kääre tee-talot-sc-pohja.py:n päälle; korvaa tee-palat.py:n pohjarivin) → kokoa-v42-mm.py.
+  Reiän taloille (keskipiste ≤ 1450 m pisteestä 48.8867 2.3431; 10 908 taloa) pohja = 90 + (h − 48,6) − 2·(palamaa + 15), h = RGE ALTI -maan minimi
+  kehän kärjistä + keskipisteestä (bilineaarinen z14). Varjostin y = P + a·b·(90 − P) → keskellä 90 + (h − 48,6), reunalla 90 + (1 − b)(h − 48,6) = kartta.
+  Mitat (mitat-v42.json): RGE − IGN altitude_minimale_sol mediaani 0,01 m (p5 −4,1, p95 4,4); kvantisointi ≤ 0,5 m; ei leikkauksia ±127.
+  Ämpäripaketti K/talot-paketti-pariisi-v17 VASTA KK:n ja omistajan kortin jälkeen.
+- 1b SACRÉ-CŒUR 4115be46b (natiivi-backup karttaseppa/montmartre): MaaH 130,5 → 123,9 (RGE-maan ylin terassin alalla), sokkeli 6 m,
+  portaat RGE-profiilista 2,5 m välein (askelma päättyy maan laskettua 0,4 m tai 1,25 m:n jälkeen; kansi ≤ 0,7 m maan yläpuolella; z −63…−65,5 7 m:n tukimuuri jyrkkänä osuutena).
+  Testi: kansi ≤ 1 m maasta 0,5 m välein. 759/759, unity 0. Mittaus K/raivaus-1-1-montmartre/sc-taulu.py (+ sc-taulu.json).
+- 1c MAC-PARIT valmiina JU:lle: K/sk-mac-montmartre-kj43-ennen.txt (nykyinen juna, talot palat-v41-pp) | K/sk-mac-montmartre-kj43-jalkeen.txt
+  (käännös 4115be46b, talot palat-v42-mm). Pyydä JU:lta VASTA aamun rivin jälkeen (maasto 2026-11-11-montmartre ämpärissä).
+  Katso: esityskamera 4 suuntaa (kirkko ~1/4 korkeudesta), Saint-Pierre ylös, 5 km, lähin portaat + länsirinne. Mitat raporttiin, parit KK:lle (kopio PT).
+- Avoimet: nimet ja merkit (MontmartreKorkeus RGE:stä bdccb177e) tarkistetaan pareista; jos rinteessä särmiä tai reunalla porras → raportti KK:lle, ei paikata mallilla.
+- JONO: 1) odota JU:n aamun rivi → KJ43 JU:lle. 2) Sillä välin: PT:n/KK:n vastaus GP:stä. Jos ei muuta, rivi PT:lle "JONO TYHJÄ (odottaa maaston vientiä)".
