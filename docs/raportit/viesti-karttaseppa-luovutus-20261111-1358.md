@@ -40,3 +40,7 @@ K = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodijuna. Testit: `sh Kartta
 3. GRAND PALAIS (KK 13.44: Montmartren jälkeen).
 
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty, talot-paketti-pariisi-v15-v39-ALA-VIE. Seuraava vapaa talot-versio v17.
+
+## LISÄYS 14.0x
+- PT 13.5x pyysi PP-ehdokkaan: vastattu b8d7c913e + pakettipolku (jo tehty). JU 13.47: talot v16 ämpärissä; MR67 b8d7c913e → 224.73 lähtee PT:n pt-ok:lla, LINKKI-rivi KS:lle.
+- NUI: pallon varjokorjaus 81ac33721 (natiivi-backup natiivi-ui/pallo-varjo, a20c6cb98:n päällä). JU:lle pyydetty KJ tästä (rajaukset täysikokoisina + esityskamera ≥ 1/3). Katso kuvat, parit KK:lle (kopio PT).
