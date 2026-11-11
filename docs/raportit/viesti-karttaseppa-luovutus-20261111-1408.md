@@ -220,7 +220,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   Skriptit: Pariisi _tyo/natiiviseppa/pariisi-talot/tee-palat.py (554 r.), Lontoo _tyo/pelikoodari/lontoo/a/tee-palat-lontoo.py (471 r.), planeettalukija hae-planeetasta.mjs.
   ODOTTAA KK:n vastausta ennen aloitusta.
 
-## LISÄYS 17 (21.2x): NOLLAUS. Loppulista JU:lla, työkalut 1–2 (+ vakiokuvat) seuraajalle
+## LISÄYS 17 (20.42): NOLLAUS. Loppulista JU:lla, työkalut 1–2 (+ vakiokuvat) seuraajalle
 - KK:n päätökset työkaluihin: tehtävänanto (polku LISÄYS 16) kohdat "TARKENNUKSET 21.1x" ja "21.2x", LUE NE ENSIN. Lyhyesti: yhteinen tee-palat,
   jossa Pariisin maskit, korvaus- ja siisti-tiedostot ovat Pariisin rivin vanha syöte (yleinen syöte, ei "jos pariisi" -haaraa). NÄYTTÖ: Pariisin ja Lontoon paketti
   tavulleen sama kuin nykyinen, erot lueteltuna. OSM: YKSI planeetan läpikäynti → ote jokaisesta Euroopan pelikaupungista (16 × 16 km; talot, puut, uskonnolliset,
@@ -229,7 +229,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   kolmiota. Luonnokset: kirjasto komentorivillä → OBJ → Blender, tasavärit, neutraali valo, 45° + edestä, tavallinen talo mittakaavaksi.
 - UUSI (PT 21.1x): `vakiokuvat-<kaupunki>.json` työkalun 1 yhteydessä: 3 tavallista katua nyt, 6 tyypitettyä merkkirakennusta työkalun 2 jälkeen;
   paikka, suunta ja etäisyys; kiinteä siemen kaupungin tunnisteesta. NUI tekee komennon "vakiokuva <i>".
-- LOPPULISTA (edellä): KJ47c JU:n jonossa (LISÄYS 16). KJ48 Seine-katsaus pyydetty JU:lta 21.2x: K/sk-mac-seine-kj48.txt (tee-seine-kj48.py, 23 kuvaa)
+- LOPPULISTA (edellä): KJ47c JU:n jonossa (LISÄYS 16). KJ48 Seine-katsaus pyydetty JU:lta 20.41: K/sk-mac-seine-kj48.txt (tee-seine-kj48.py, 23 kuvaa)
   → lokit/ks-kj48-seine-<sha>. KUN TULEE: arkki (ymparistot-kj47b/arkki.py), puutelista: vesi, rannat, sillat, Iénan ja Austerlitzin tila, Conciergerie joelta
   → KK (kopio PT). Montmartre KJ43 maaston 01.00-viennin jälkeen (JU:n aamurivi).
 - SEURAAJAN JONO: 1) KJ47c → KK (näkyvät kolmiot ennen|jälkeen, Champ-de-Mars peli|orto (rinnakkain.py + orto/merkit-v3-eiffel.jpg), viistoparit Eiffel + Invalidit,
