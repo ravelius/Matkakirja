@@ -1390,3 +1390,7 @@ JU: error 22 ei johtunut laitteesta eikä wifistä, vaan nohup-jono peri nollauk
 ## PILVET: ENTINEN NOPEUS, PYSÄHTYVÄT 1 RUUTU/S -TILASSA (omistaja 11.11.2026 klo 09.52, KK) (11.11.2026 klo 09.56)
 
 Omistaja: "voisiko pilvet liikkua yhtä nopeasti kuin ennen ja pehmeästi, kun ruutua päivitetään, mutta kun päivitys laskee yhteen ruutuun sekunnissa, niin pilvet voisivat silloin myös pysähtyä kokonaan paikalleen. Eli ne jatkaisivat liikettä vasta, kun ruudun päivitys nostetaan." VS: kellon pysäytys levossa pysyy, tuuli takaisin alkuperäiseen (noin 6 m/s), paikka joka ruudussa; Mac + iso iPad KK:lle ennen junaa. Työlista "Pilvien varjot: pehmeä liike ilman hyppyjä".
+
+## JUOKSUPELIN VARJOT LEIVOTTUINA, ELÄVÄ VAIN PELAAJALLA (omistaja 11.11.2026 klo 09.54, KK) (11.11.2026 klo 09.59)
+
+Omistaja: "Eikö juoksupeliin kannattaisi leipoa kaikki varjot paikalleen? Se on todella ärsyttävän näköistä esimerkiksi aloituslennossa, kun varjot piirtyvät pikkuhiljaa näytölle jo piirrettyjen varjojen päälle. Eli siellä on tavallaan tuplavarjot. ainoastaan pelaajan varjo kannattaa piirtää pelin aikana." KK suositteli kyllä; Juoksupeli-kärjen jonon alkuun. Tavoite: paikallaan pysyvä varjo vain leivonnasta, ei ilmestymistä eikä tuplia, puiden läikkä pehmeä. NS johtaa (selvitys 1–5 KK:lle ensin), LAV leivonta, PK hahmot ja ovet; hahmojen läikkä KK:n parilla.
