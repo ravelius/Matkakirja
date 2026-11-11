@@ -135,3 +135,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   RAJAT: muisti ≤ +5 %, piirretyt kolmiot yleisnäkymässä ≤ ~+10 %. YLITYS → EI harvennusta (28 m näyttää aukkoiselta), vaan kevyt massapuu ≤ ~250 kolmiota + varjot vain lähellä
   (ND:n puiston puut ennalleen); KERRO LUVUT JA VALINTA KK:lle ENNEN TOTEUTUSTA. Kohta 3 (Palais de Justice) ennallaan jonossa, parit KJ45:n kulmista.
 - PT (KK:n linjaus 17.3x), SANATARKASTI: "ympäristöt-erä 90b66a261 EI junaan ennen KJ46:n kuvia ja lukuja. Ehto: 598 puuta × 1000 kolmiota → instansointi; yleisnäkymän kolmiot enintään noin +10 %, muisti +5 %; jos ylittyy → kevyempi puu ja varjot vain läheltä, EI harvennusta. Palais de Justice siirtyy seuraajallesi."
+- JU 17.51: KJ46 VALMIS, molemmat rc 0, 14/14, Shader/NRE/PUUTE 0 → lokit/ks-kj46-ymparistot-ennen-96e9eb2fa ja -jalkeen-90b66a261 (MUISTI.txt + muisti-naytteet.txt).
+  MUISTI (footprint sis. ~5 Gt editoria): ENNEN M1 5327 / M2 7454 / huippu 7730 Mt; JÄLKEEN M1 4974 / M2 8251 / huippu 8251 Mt (+797 Mt M2, +521 Mt huippu).
+  HUOM: M1 on jälkeen PIENEMPI → kohinaa; 598 puuta jakavat 4 verkkoa, joten satoja Mt ei selity puilla. Selvitä näytesarjasta (muisti-naytteet.txt) samat kohdat kuvien mukaan
+  ennen KK-arviota; tarvittaessa toisto. 'kartta muisti tila' ei tulosta riviä ja 'koodimallit tila' = TUNTEMATON KOMENTO (oikea komento selvitettävä, Komennot.cs).
+  JU katsoi ym46-01-b: jälkeen puistopuut + allas Eiffelin kentällä näkyvät.
