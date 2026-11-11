@@ -353,3 +353,18 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   KORJAUS 34b73284a (= a58b3f4ec + LatausjonoLogiikka.PakollisiaValmiina → JuoksuV4Maailma.LatausOsuus; 926/926, unity 0). EI kelloa (suunnitteluperiaate).
   JU: katko-2 34b73284a:llä (tai a58b3f4ec, jos käännös jo alkoi) → palkki-2 (ajopyynto-mac-palkki-2.md) samalla käännöksellä → pala3-luettelo-1 → koekamera-1.
   Jos palkki-2 yhä seisoo > 15 s: muurikatteen alavaiheille Hanta(0, x) (glb, Lue, C3-json, C3-malli, C2-mallit, vanha kate) ja vaihe 0/3 alku vastaavasti.
+
+## LISÄYS 22 — NOLLAUS TÄSTÄ (11.11. 20.0x, kontekstivahti 25 %). JATKA NÄISTÄ:
+- KATKO-2 (a58b3f4ec) JUMI YHÄ: uudelleenavaus (K2) 900 s palkki 0,020, EI YHTÄÄN latausjonon pyyntöä (ei tila-rivejä = jono tyhjä). a58b3f4ec:n teoria
+  (haetaan-lippu jäi true) EI ollut syy: vanha Valmistele eli ja päättyi sulun jälkeen ("hakemisto puuttuu → alkuperäiset glb:t", rivi 2942 katko-2 unity.log).
+  Jumi on ennen ensimmäistä hakua: JuoksuV4Maailma.Lataa → sokkelo.Lataa → JuoksuHahmot.Hae → JuoksuLeivottu.Valmistele (?) — ei todennettu.
+  a58b3f4ec + 34b73284a SÄILYVÄT (oikeita korjauksia muutenkin: glb-työt, sukupolvi; palkki vain pakolliset).
+- DIAGNOOSI ee10425ff (natiivi-backup natiiviseppa/latausjono, 926/926, unity 0, ei toiminnallisia muutoksia): lokit "maailman lataus alkaa",
+  "sokkelo hakee ensimmäisen moduulin", "leivottu hakemisto haetaan (sukupolvi)", "Valmistele odottaa hakemistoa > 5 s", "glb-työ odottaa > 10 s".
+  JU: palkki-2 + katko-3 (ajopyynto-mac-katko-3.md → lokit/natiiviseppa-juoksu-latausjono3-katko-3) ee10425ff:llä (tai palkki-2 34b73284a:llä, jos alkoi).
+  LUE katko-3: mikä diagnoosirivi on viimeinen K2-avauksen jälkeen → siitä jumin kohta. Muista: sulku = JuoksuV4Maailma.Tuhoa (JuoksuVerkko.Peru) → Juuri
+  tuhotaan → Hahmot-korutiinit (Lataa, Esihae) pysähtyvät ilman finallya; Latausjono.Aja- ja muut pysyvät omistajat jatkavat.
+- PALKKI-2: lue.py "pisin sama arvo" ≤ 15 s? Jos ei: muurikatteen alavaiheille Hanta(0, x) (21g).
+- KK-VIESTI (kopio PT) vasta kun katko-3 + palkki-2 luettu: 3-1…5 OK (21f), palkki ja katko tila. Junaehdokas sen jälkeen.
+- JONO JU:lla sen jälkeen: pala3-luettelo-1 (0f851ddbd) → koekamera-1 (LAV, 21e). LAV:lle kameran pohja K-kuvista, kun valmis.
+- Vahdit sessiokohtaisia: luo Monitorit uudelleen (latausjono-palkki-2, -katko-3, pala3-luettelo-1, pala3-koekamera-1; "valmis N s" = valmis). Cron 9.04 LUO UUDELLEEN.
