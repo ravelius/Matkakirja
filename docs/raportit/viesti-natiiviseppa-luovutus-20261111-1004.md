@@ -348,3 +348,8 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   (natiivi-backup natiiviseppa/latausjono, 926/926, unity 0): JuoksuLeivottu.Peru (JuoksuVerkko.Peru:sta) + sukupolvi. K2-odotus 600 → 900 s
   (kylmä lataus ~750 s). JU: ajopyynto-mac-katko-2.md palkki-1:n jälkeen ennen pala3-luettelo-1:tä → lokit/natiiviseppa-juoksu-latausjono3-katko-2.
   KK-VIESTI (kopio PT) vasta kun palkki-1 + katko-2 luettu; junaehdokas sitten a58b3f4ec (tai uudempi) → pt-ok-pyyntö PT:lle.
+- 21g (19.5x) PALKKI-1 (363f3ce4b) LUETTU: lataus OK (439/439, pisin etenemätön 5,1 s), palkki EI täytä ≤ 15 s: 0,757 ~60 s (muurikate), 0,079 ja 0,161 ~30 s.
+  Syy: Ali laski KAIKKI valmistuneet tiedostot → taustan valinnaiset (890 → 926 muurikatteen aikana) veivät osuuden 0,99-kattoon sekunneissa.
+  KORJAUS 34b73284a (= a58b3f4ec + LatausjonoLogiikka.PakollisiaValmiina → JuoksuV4Maailma.LatausOsuus; 926/926, unity 0). EI kelloa (suunnitteluperiaate).
+  JU: katko-2 34b73284a:llä (tai a58b3f4ec, jos käännös jo alkoi) → palkki-2 (ajopyynto-mac-palkki-2.md) samalla käännöksellä → pala3-luettelo-1 → koekamera-1.
+  Jos palkki-2 yhä seisoo > 15 s: muurikatteen alavaiheille Hanta(0, x) (glb, Lue, C3-json, C3-malli, C2-mallit, vanha kate) ja vaihe 0/3 alku vastaavasti.
