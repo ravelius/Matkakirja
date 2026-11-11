@@ -47,3 +47,9 @@ Taustat: -1143 (esittelyn rajaus, NS kohta 6), -1125, -1027 (haarat natiivi-ui/l
 - Sulun liikahdus: KK HYVÄKSYI korjauslinjan (kohta 4). Todiste: KK:n mittaus kummastakin videosta – sulun lopussa yksikään näyte-ero ei ylitä
   edeltävää eikä kirkkaus hyppää. Tee omaan haaraan napautus-juna-haarasta; tallenne vaatii korjatun esikatselun (juna-224 kärjessä mukana).
 - matkaopas-3 JU:lla napautus-juna-1:n rinnalla.
+
+## LISÄYS 2, 12.1x: matkaopas-3 katsottu → matkaopas-4
+- matkaopas-3 (lokit/nui-matkaopas-3-cccae5d87, arkki-matkaopas-3-1600.jpg): alasivu TOIMII (Lehden paperi, otsikko MATKAOPAS, paluu 1300 → 1300, m1 = m5).
+  VIKA: etusivun kuvana yhä Eiffel ja oppaan jaksoista puuttuivat kuvat → päätason jaksoissa kuvat ovat avaimella "kuvat", jäsennin luki vain "kuva".
+- Korjattu 23f6f6d07 (natiivi-ui/matkaopas-3 kärki, LehtiSisalto.Opas), unity 0. JU:lla matkaopas-4 (sk-matkaopas-4.txt) → lokit/nui-matkaopas-4-23f6f6d07.
+  SEURAAVAKSI: tarkista etusivun kuva (Pariisissa Tour Saint-Jacques, vaaka) ja jaksojen kuvat oppaassa → KK:lle kuvat (m1, m2, m4, m5), PT kopio.
