@@ -220,3 +220,15 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 16g PT 15.4x (KK 15.38): SAAPUMISKOE PYSÄYTETTY (0651a87bb…204a54ecd, ei junaan; omistaja hyväksyi 224.71:n vanhan saapumisen, intron kuvamuutos peruttu).
   Haara natiivi-backup natiiviseppa/saapuminen-pariisi = 204a54ecd (tarkistettu). JU:lle kerrottu: saapumisajot pois jonosta. mac-7:ää EI lueta.
   JONO NYT: 1) latausvian Mac-todiste 5/5 täydellä mallimäärällä (439) → KK; 2) piirroskerroksen purku -selvitys (16c) → KK + PT.
+
+## LISÄYS 17 — NOLLAUS TÄSTÄ (11.11. 16.3x, kontekstivahti 33 %; appi kaatui 16.08, PT herätti). JATKA NÄISTÄ:
+- LATAUSVIAN MAC-TODISTE TILATTU: JU jonossa NUI napautus-224-1:n jälkeen. Ajopyyntö + skenaariot /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/
+  (ajopyynto-mac-latausjono.md, sk-juoksu-latausjono.txt: välimuisti tyhjä, verkko viive 1.5 + katko 7; sk-juoksu-latausjono-katko.txt: katko 1 → virhe, katko 0 → uudelleen).
+  → lokit/natiiviseppa-juoksu-latausjono-1…5 + -katko-1. Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-latausjono.sh` tai vahti.sh (kattaa natiiviseppa-juoksu-*).
+- LUENTA (KK:n ehto 5/5 täydellä mallimäärällä 439): kustakin -1…5 konsoli.txt: "OK oleta" + "kulkukartta ladattu", EI "LUOVUTETTU"/"LATAUS EPÄONNISTUI"/
+  "latausvirhe näkyy"; "verkko lataus X s … latausjono … valmiita N, puuttuu M, uusintoja U" -rivi; mallimäärä: Tila "sokkelo Ladattu/Mallit" ei lokissa →
+  laske "palatsi v2 … puuttuu"/"puuttuu (" -rivit = 0 ja vertaa hakemiston glb-määrää (JuoksuLeivottu "leivottu paketti palvelimelta N tiedostoa").
+  Jos 439 ei näy suoraan lokista: lisää yksi lokirivi (latausmalleja ladattu/odotettu) haaraan natiiviseppa/latausjono ja tilaa uusinta. Katko-1: K1-virhe-kuvassa
+  viesti + Yritä uudelleen (näytä KK:lle kuva), K2-uudelleen täysi maailma. → yksi viesti KK:lle (kopio PT): 5/5 + uusinnat + kuva.
+- Jonossa sen jälkeen: piirroskerroksen purku -selvitys (16c). VS:n tileset 1efd29cb4 katsottu (16e). Saapuminen pysäytetty (16g).
+- Cron 9.04 + vahti LUO UUDELLEEN.
