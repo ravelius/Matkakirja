@@ -53,3 +53,13 @@ PIL `/opt/homebrew/bin/python3 -I`; numpy/scipy ilman -I. Mac-skenaariot: `kalli
 talot `talot kansio /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/palat-v20-ryhma4` + `talot 1`. Lähin: `aja <lat> <lon> 0.0012 3` +
 `pallo kerros pakota taysi`. Mac-batchissa Screen 640×480 (3D-kuva 2752×2064): älä käytä Screen-kokoa ruutumittoihin. iPad: `komento …` + `odota 3`,
 kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovutus plumbingilla origin/mainin päälle omaan haaraan.
+
+## LISÄYS 12.3x (KK 12.22 ja NUI)
+- KK VALITSI v2 (8693823d2); v3 hylätty. KK hyväksyi 12.12-selityksen (A tarpeen, teksel 6–7 px). EHDOT ennen iPadia: (1) A ei muuta maan
+  keskikirkkautta eikä kylläisyyttä yli ±1 % viivattomalta alueelta; jäljitelmästä mitattu ND +0,16 % / RK −0,06 %, kylläisyys −0,2 % (KK:lle
+  lähetetty) – mittaa sama pelikuvista (a3/b-kuvat, maski |ero| < 0,04 → keskiarvot L ja max−min). (2) Mac-todiste: neljä paria + 10 s
+  laskeutuminen kaukaa lähimmälle ND:llä: ei rajaa, välähdystä eikä sävyhyppyä. KK mittaa itse. iPad vasta KK:n sanalla.
+- JU:lla: maa-a-3 (`sk-mac-maa-a-2.txt`, parit + panorointi) ja maa-a-4 (`sk-mac-maa-a-4.txt`, b1–b4 + laskeutumistallenne 0,006 → 0,0012 8 s),
+  molemmat 8693823d2, kallistus 0 / suunta 0. Tarkista ja lähetä KK:lle polut + mittaukset + puutteet.
+- NUI: lähin ei muuttunut (KS c032134e7 IsoisaLahinLeveys 0,231 ≈ 0,78 km). PK:n cd0edaa29 "5× lähemmäs" (vasen tappi) mainittu KK:lle, ei tarkistettu.
+- KK ei ole vielä vastannut 12.20-löydökseen (kallistettu kamera = striimikartta); jos KK haluaa A:n myös kallistettuun, se on eri kerros (Cesium).
