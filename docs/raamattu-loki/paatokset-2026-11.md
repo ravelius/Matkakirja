@@ -1425,3 +1425,8 @@ KK: yksi yhteinen kameran käsiala koko Matkakirjaan (juoksupeli → peruskartta
 
 Omistaja 12.15: "ison ipadin juoksupelin ajot kannattaa varmaan lopettaa toistaiseksi? ne pyörivät kokoajan."
 KK 12.16: kyllä. Iso iPad on omistajan käytössä ja Pariisin ajoille; juoksupeli rakennetaan uudelleen, joten vanhan rakenteen laiteajot eivät ole nyt arvokkaita. Käynnissä ollut NS:n varjoajo pysäytetty, juoksupelin iPad-ajot pois jonosta (JU); muut iPad-ajot ja juoksupelin Mac-ajot jatkuvat. Juoksupelin iPad-todisteita ei tilata; iPad-ajoa odottavat juoksupelin rivit tilaan "odottaa KK:n iPad-erää". Latausvian (NS) syy haetaan olemassa olevista lokeista ja Macilla; iPad-todiste vasta korjaukselle KK:n sanalla. NS, PK ja LAV ohjattu (PT 12.2x).
+
+## JUOKSUPELIN VANHAA KOODIA EI MITATA EIKÄ NOPEUTETA (omistaja 11.11.2026 klo 12.20, KK 12.21) (11.11.2026 klo 12.2x)
+
+Omistaja 12.20: "ei varmaan kannata mitata mitään mikä tulee poistumaan joka tapauksena, esim. ne kattojen häivytykset. mitataan vasta sitten kun juoksupeli on koodattu uudestaan jos jotain tarvitsee kehittää"
+KK 12.21: (1) juoksupelin vanhan koodin mittauksia ja profilointeja (ruutunopeus, piirron mittaus isolla iPadilla, joka ruudun työn kustannus) ei tilata eikä jatketa; rivit tilaan "odottaa juoksupelin uudelleenkoodausta". NS:n valmis ENNEN/JÄLKEEN-tulos (37,5 → 40,0 ruutua/s) on lähtötaso. (2) Uusia nopeutuksia ei tehdä juoksupelin koodiin, joka vaihtuu (kamera, pelisilmukka, säännöt, maailman päivitys); jäävä aineistotyö (leivotut varjot, lattia, seinät, mallit) jatkuu. Kesken olevista koodinopeutuksista KK päättää erikseen (PT: NS 367ea7f0a pidätetty JU:lla KK:n päätökseen).
