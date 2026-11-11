@@ -38,3 +38,6 @@ Vanhat: muuri/apu-20261111/ lahella.py, hylly.py, rak.py, m1.py.
 ## Muuta
 - Worktreet: proto-lavastaja-esto-kivisivu (JU:n aja-*-runko, käytössä), proto-lavastaja-havainne – ei poisteta. wt/lavastaja-luovutus-0653 tätä luovutusta varten.
 - Checkout Matkakirja-linnanrakentaja = koti/Matkakirja-linnanrakentaja; luovutukset lavastaja/luovutus-*-haaraan.
+
+## LISÄYS 06.55
+KK 06.5x hyväksyi penger2 → TAUSTA-V132 paketoitu: _valmiit/juoksupeli-kk-lavastaja-tausta-v132-vienti-20261111 (SHA256SUMS 48b3d06c3486, 100 tiedostoa, muuri/v132/paketoi.zsh). PT:lle junaehdokkaana; odottaa PT:n kuittausta → PK TaustaKansio → JU iso iPad → vienti. Kohta 1 yllä siis tehty paketointiin asti.
