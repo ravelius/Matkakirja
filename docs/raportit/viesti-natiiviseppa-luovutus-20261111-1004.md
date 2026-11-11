@@ -396,3 +396,18 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   1) "kaupunki valmis <id> <N> s" (id = uusi-peli-argumentti, esim. pariisi; alku = peli alkaa/saapuminen, loppu = maa, talot, merkkirakennukset, puut ladattu);
   2) komento `mittari <tunniste>` → yksi rivi "MITTARI <tunniste> tekstuuri <Mt> varattu <Mt> mono <Mt> talopalat <n> <Mt> kolmiot <n> piirrot <n>"
   (arkki.py jäsentää avainsana-arvo-parit; KS:n näkökartiomittari kolmioihin). Kerro JU:lle (local_2a7d6c96-…) sha/haara, kun valmis.
+
+## LISÄYS 24 (11.11. 21.1x, uusi sessio local_0f7f169f): katko-4 luettu; työkalut 3+1 kysely lähetetty; T3-rivit aloitettu
+- KATKO-4 (393acb884): K2 uudelleenavaus OK ("kulkukartta ladattu" 90 s, mallit 439/439, pisin etenemätön 3,4 s) = jumi korjattu. MUTTA K1-virhe-kuvassa
+  virheviesti + Yritä uudelleen EIVÄT näy (loki "latausvirhe näkyy"): piilotettu hidas-teksti (opacity 0, ~5 riviä palkin levyssä) työnsi ne ruudun alle.
+  KORJAUS 2edb6edeb (natiivi-backup natiiviseppa/latausjono, unity 0): hidasViesti display None virheen ajaksi, virheViesti leveys 300, laatikko nostetaan
+  turva-alueelle vain virheen aikana. JU: ajopyynto-mac-katko5.md → lokit/natiiviseppa-juoksu-latausjono3-katko-5 (palkki-3 samalla käännöksellä, jos ei alkanut).
+  LUE: K1-virhe-kuvassa viesti + kultainen nappi (rajaus alaosasta täysikoossa), K1b valikko, K2 täysi maailma (katko-4:ssä ok).
+- PALKKI-3 yhä odottaa (393acb884 tai 2edb6edeb) → lue.py pisin sama arvo ≤ 15 s + ositusrivin alavaihekestot.
+- KK-VIESTI (kopio PT) kun katko-5 + palkki-3 luettu → junaehdokas 2edb6edeb (tai uudempi) → pt-ok-pyyntö PT:lle.
+- TYÖKALUT 3+1: "mikä kalliimpaa" LÄHETETTY KK:lle + PT:lle (21.0x): /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/tyokalut/vastaus-kk-ennen-aloitusta.md.
+  Kaupunkitaulu ODOTTAA KK:n vastausta (1b–1f). T3-rivit aloitettu: wt /Users/Shared/Claude/wt/proto-natiiviseppa-tyokalu3 (haara natiiviseppa/tyokalu3-rivit
+  juna-224 53171fed0:sta, ei committeja vielä). POHJA: pysäytetyn saapumishaaran natiiviseppa/saapuminen-pariisi KaupunkiValmius (talot/ohjelmakohteet/
+  Nahtavyysalue Aseta(...)) → poimi sieltä valmiusosat (ei saapumiskoetta). Mittari: Komennot.Aja (Kartta/Komennot.cs:1881) uusi case "mittari";
+  muistit kuten CesiumKaupunki.Muisti (:1268), talopalat TaloKerros.PalojaNyt/TavujaNyt; kolmiot = KS:n PiirtoTilasto (karttaseppa/ymparistot) NakyvatKolmiot.
+- Vahti: Monitor vahti-mac2.sh (nyt katko-[3-9], palkki-3, pala3-*). Cron 9.04 luotu.
