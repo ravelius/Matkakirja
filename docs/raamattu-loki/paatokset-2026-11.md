@@ -1347,3 +1347,126 @@ Omistaja 21.58 KK:lle: "Tehdäänkö kaikki nyt oikeassa mittasuhteessa ilman li
 ## Nähtävyys paisuu hetkeksi kohteena, koe (omistaja 10.11. 22.01) (10.11.2026 klo 22.0x)
 
 Omistaja KK:lle sanatarkasti: "Ja voisiko rakennusta vain paisuttaa hetkellisesti joka suuntaan jos se on kohteena? Silloin se ei mahtuisi paikalleen mutta jos se on vain väliaikainen ja animoitu liike niin se voisi toimia". KK:n tavoitekuva suunnitelmat/20261110-nahtavyys-paisuu-kohteena.md (ponnahduskirja: kartta 1:1, valittu kasvaa ~0,5 s pohjan keskipisteestä, naapurit väistyvät, paluu valinnan päättyessä). Koe videona, ei junaan; tekijä NUI (PT 22.0x), KS:n 1:1-työ edellä; karkea ND-video suoraan KK:lle.
+
+## Ei tilinvaihtoa, kevennys aamulla (omistaja 11.11. 00.07) (11.11.2026 klo 00.08)
+
+Omistaja KK:n kautta 11.11.2026 klo 00.07 sanatarkasti: "Ei tehdä tilin vaihtoa sillä sain ilmaisen resetin. Menen kuitenkin kohta nukkumaan joten voit tehdä nollauksen ilman lupaa. Tehdään raamattu juttu vasta aamulla. Resetin kun prosentit alkaa loppua". 1) Ei tilinvaihtoa; omistaja nollaa viikkorajan itse: kun viikko lähestyy 99 %:a, PT/Postivahti rivi KK:lle, ei tilinvaihtoa eikä luovutuksia sen takia. 2) Raamatun kevennys (luvut 12 ja 7, KK) aamulla 11.11. ilman tilinvaihtoa. 3) Yön säännöt voimassa.
+
+## Lähin kamera hyväksytty (KK 11.11. noin klo 01.0x) (11.11.2026 klo 07.1x)
+
+KK hyväksyi NUI:n lähimmän kameran c032134e7 11.11. noin klo 01.0x (kuvat lokit/nui-lahin-2-7x-4-c032134e7, KS b5ef8b0c9): lähin leveys 0,231 = 0,620 km. Linkissä 224.51 (29768b6cb). Lähde: KS:n luovutus -0105, LISÄYS 01.1x; merkintä puuttui lokista, KK pyysi lisäämään 07.1x. VS:n kynäkoe ja uusi 1:1-viiva jatkuvat tällä kameralla.
+
+## Nostoesityksen kierto täytenä ympyränä samaan suuntaan (omistaja 11.11. 08.35) (11.11.2026 klo 08.4x)
+
+Omistaja KK:n kautta sanatarkasti: "ei kaupungissa ole näkyvissä painettuja nimiä ja orbit-kierto pitää olla koko ajan samaan suuntaan ja tehdä täysi ympyrä. Mutta sitä voi miettiä, pitäisikö kiertosuuntaa vuorotella jokaisen noston välillä. Mutta jos se on hankalaa, niin kierto voi myös olla aina samaan suuntaan." KK: muuttaa 9.11. klo 11.43 linjan (kierto kaistalla ±90°) nostoesityksen osalta: kaista pois, täysi ympyrä samaan suuntaan; suunnan vuorottelu nostojen välillä vapaaehtoinen. Toteuttaja NUI (nähtävyyden napautus, työ A, 50565c427). PT: ±90°-linjaa ei ollut kirjattu Raamattuun eikä tähän lokiin, joten Raamatun kohtaa ei muuteta.
+
+## Saapuminen uudistetaan, kaupunkien nimet kertojan äänellä (omistaja 11.11. 08.34–08.50) (11.11.2026 klo 09.1x)
+
+- 08.34 + 08.37: kaupunkiin saapuminen uudistetaan, Pariisi ensin kokeena: zoomaus ilman näkyvää striimikarttaa → introkuvat liukuen pehmennetyn taustan päällä (oikealta sisään, vasemmalta ulos) → nimi + iskulause kertojan (William) äänellä → häivytys kaupunkiin → ylhäältä noin 45°:een ja hidas kierto → matkakirjan luenta vain muualta saavuttaessa (5.11. 21.02 "ei luentoa aloituskaupungissa" pysyy). Nimien väärä asento tai rakennuksen peitto kierron aikana ei ole vika. Korvaa 2.210:n nousevat kuvat ja rivit "Saapumisen kuvat nousevat kaupungista", "Pariisin saapumisen nousukuvat", "Pariisi: ei tyhjää pohjaa saapuessa". Tekijä NS, tavoitekuva scratchpad/keskustelukanava/suunnitelmat/20261111-saapuminen-kaupunkiin.md.
+- 08.34: kaikki Euroopan kaupunkien nimet ja iskulauseet uudelleen kertoja Williamin äänellä, suomi pakotettuna, alkuun muutama suomenkielinen lause, koko lista YHTENÄ OTTONA, leikkaus jälkeenpäin; isoisän äänellä tehdyt 45 saapumispuhetta (15.9.) vaihdetaan. Uusinta = uusi lupa.
+- 08.50 kortti: 16 uutta iskulausetta (Bryssel–Valletta, KK:n sanamuoto) "Kyllä, kaikki" → otto 61 riviä. Nollauskortti KK:lle: "Ei vielä".
+- 08.11 + 08.19 + 08.21: nähtävyyden napautus yhtenä lentona kiertoon, kohde keskelle; Turisti-info Lehden sisälle sivuna "Matkaopas"; Lehden nappi nostopalkin vasemmalle (koe); ohjaussauvat isommiksi ja vähemmän herkiksi; nostoesityksessä kamera lukittu kohteeseen (vasen sauva vain ylös–alas). 08.11:n valikkosiirto korvattu 08.19:llä. Tekijä NUI.
+
+## Äänitykset KK:n vastuulle, suomi alkuun (omistaja 11.11. 08.51) (11.11.2026 klo 09.2x)
+
+Omistaja KK:n kautta sanatarkasti: "Saat aina tehdä kaikki äänitykset ja niitä ei tarvitse tuoda minulle tarkastettavaksi kunhan on huolehdittu että äänitys tehdään äskeisen ohjeeni mukaan tai jos pidempiä kappaleita niin silloin voi tehdä omina äänityksinä. Täytyy vain huolehtia että alussa on varmasti selkeästi suomen kieltä. Jos jokin nimi niin alkuun pitää laittaa hieman suomen kielistä tekstiä jotta nimi ääntyy oikein ja poistaa se sitten vain äänitteen alusta". Pysyvä työtapa: lupa ja tarkastus KK:lla, ei näytteitä eikä korttia omistajalle; korvaa äänitysten "uusinta = uusi kortti". Raamattu 5.1 ja 7.27 päivitetty.
+
+## ÄÄNITYSOHJE YHDEKSI, KILPAILEVAT POIS (omistaja 11.11. klo 08.58, KK:n välitys) (11.11.2026 klo 09.02)
+
+Omistaja: "Kirjaa äänitys ohje raamattuun ja tarkista että siellä ei ole kilpailevia ohjeita." 5.1 kirjoitettu yhdeksi voimassa olevaksi säännöksi (puheäänitykset: alle 3 % KK:n lupa ja tarkastus, yli 3 % omistajan kortti, uudet luettavat tekstit omistajalle listana; tekotapa; näyte vain pyydettäessä). 5.2 rajattu yli 3 %:n ajoon, 5.4 esiteksti, 5.12 kertojan otot, 5.28 vain pyydettäessä, 7.27 ÄÄNET uudelleen, 7.14 äänigenerointi Äänittäjällä (fakta), 7.15/11.x/12.23 viittaukset 5.1:een. Musiikki (Lyria) ja tekoälyn tehosteet ennallaan omistajan luvalla. Pohjat: kertojan-teksti-ja-aani, tuotannonohjaus, kysymys-omistajalle, tekotavat/aani, taidemuseon-maa, kuumailmapallokierros.
+
+## ISON IPADIN JUMIN TAKAPORTTI KÄYTÖSSÄ (KK 11.11. 09.1x, omistajan havainto 09.12) (11.11.2026 klo 09.29)
+
+Omistaja 09.12: "miten tuohon saisi takaportin jotta iPad ei jäisi jatkossa jumiin? eikö peliä voi vain tappaa ja käynnistää uudestaan". JU otti käyttöön A–C (ipad-takaportti.zsh, ipad-skenaario-f1.zsh, C-raja 360 s), ei pelin koodia. Raamattu 12.26 ja 7.41.
+
+## JUOKSUPELIN PIIRRON KEVENNYS: PERIAATE A/B (omistaja 11.11.2026 klo 09.38, KK) (11.11.2026 klo 09.47)
+
+Omistaja 09.38: "mutta varmasti järkevää optimoida, niin pyörii paremmin tai sitten voidaan lisätä muuta grafiikkaa ja tehosteita, kun ei käytetä laskentatehoa turhaan". KK purki 09.4x juoksuvipujen pysäytyksen osittain: A) turha työ pois (kuva ei muutu) junaan PT:n kuittauksella ilman KK:ta; B) kuvaa muuttavat (MSAA, varjot, varjomatka, tarkkuus, lehvästö) vain parilla ja KK:n sanalla. 224.65 = NS 41bbbc320 (kuvan kopio + leivottujen varjo pois, −5,7 ms, KK katsoi parin). Raamattu 2.177.
+
+## IPADIN ERROR 22 = PERITTY STDIN (JU 11.11. 09.43) (11.11.2026 klo 09.53)
+
+JU: error 22 ei johtunut laitteesta eikä wifistä, vaan nohup-jono peri nollauksessa suljetun sessiosoketin stdin:ksi ja devicectl --console kaatui. Korjaus: </dev/null jonoihin, exec </dev/null iPad-skripteihin; vianhaussa ensin lsof -d 0. Työlistan "iPad ilman wifiä" valmis. Raamattu 12.26.
+
+## PILVET: ENTINEN NOPEUS, PYSÄHTYVÄT 1 RUUTU/S -TILASSA (omistaja 11.11.2026 klo 09.52, KK) (11.11.2026 klo 09.56)
+
+Omistaja: "voisiko pilvet liikkua yhtä nopeasti kuin ennen ja pehmeästi, kun ruutua päivitetään, mutta kun päivitys laskee yhteen ruutuun sekunnissa, niin pilvet voisivat silloin myös pysähtyä kokonaan paikalleen. Eli ne jatkaisivat liikettä vasta, kun ruudun päivitys nostetaan." VS: kellon pysäytys levossa pysyy, tuuli takaisin alkuperäiseen (noin 6 m/s), paikka joka ruudussa; Mac + iso iPad KK:lle ennen junaa. Työlista "Pilvien varjot: pehmeä liike ilman hyppyjä".
+
+## JUOKSUPELIN VARJOT LEIVOTTUINA, ELÄVÄ VAIN PELAAJALLA (omistaja 11.11.2026 klo 09.54, KK) (11.11.2026 klo 09.59)
+
+Omistaja: "Eikö juoksupeliin kannattaisi leipoa kaikki varjot paikalleen? Se on todella ärsyttävän näköistä esimerkiksi aloituslennossa, kun varjot piirtyvät pikkuhiljaa näytölle jo piirrettyjen varjojen päälle. Eli siellä on tavallaan tuplavarjot. ainoastaan pelaajan varjo kannattaa piirtää pelin aikana." KK suositteli kyllä; Juoksupeli-kärjen jonon alkuun. Tavoite: paikallaan pysyvä varjo vain leivonnasta, ei ilmestymistä eikä tuplia, puiden läikkä pehmeä. NS johtaa (selvitys 1–5 KK:lle ensin), LAV leivonta, PK hahmot ja ovet; hahmojen läikkä KK:n parilla.
+
+## SALIN VARJOT LEIVOTAAN; KK AJATTELEE MUUTOSTYÖN ENSIN ITSE (omistaja 11.11.2026 klo 10.15, KK) (11.11.2026 klo 10.17)
+
+Omistaja: "Salin varjot voi myös laskea suoraan valmiiksi, koska ne eivät näy muulloin kuin silloin, kun keisari tulee sisään, joten ne voidaan suoraan laskea eri valon suunnasta valmiiksi etukäteen. sinun pitää ajatella jatkossa paremmin. Voiko olla, että nojaat liikaa muiden sessioiden palautteeseen tällaisissa tavallaan muutostöissä? Sinun itse kannattaa ajatella asia aina läpi jos kyse on muutostyöstä ja sitten laittaa vasta sessio tekemään työtä, eikä toisinpäin."
+- Sali: KK perui salipoikkeuksen; sali leivotaan omasta valon suunnastaan (oma valokartta, tarvittaessa kaksi + ristihäivytys), elävä varjo vain pelaajalla. NS vaihto, LAV leivonta v133:n jälkeen.
+- Työtapa: Raamattu 7.4 KK:n riville "MUUTOSTYÖSSÄ KK AJATTELEE ENSIN ITSE LÄPI" (KK:n sanamuoto).
+
+## KOODIMALLIEN HYVÄKSYNTÄ ESITYSKAMERALTA (KK 11.11.2026 klo 10.2x) (11.11.2026 klo 10.27)
+
+NUI:n napautuslento (katse-2, 2c75bcf22) on kunnossa, mutta ei junaan yksin: esityskamera menee 110–145 m:iin (4–5 × lähemmäs kuin lähin vapaa kamera) ja paljastaa Sainte-Chapellessa mallivikoja (tornin kärki, apsiksen katto, talo apsiksen sisällä, vinot seinälevyt). Järjestys: NUI esitysarkit kaikista 12 Pariisin nähtävyydestä (4 kuvaa/kohde, pysyvä tarkistus) → KS korjaa (Sainte-Chapelle heti, ennen palloa) → KK katsoo → lento ja korjatut mallit junaan yhdessä. Uusi hyväksyntäehto koodimalleille: esityskameran kuvat 4 suunnasta. Raamattu 2.204.
+
+## JUOKSUPELIN PERUSKORJAUS KK:LLE; KK KIRJOITTAA RAAMATTUA (omistaja 11.11.2026 klo 10.26, KK) (11.11.2026 klo 10.28)
+
+Omistajan koko teksti: scratchpad/keskustelukanava/suunnitelmat/20261111-juoksupelin-peruskorjaus.md. Ydin: "opus sessiot eivät ole osanneet rakentaa juoksupeliä oikein, joten siinä on paljon valuvikoja. sinun kannattaa käydä pelin koodi ja arkkitehtuuri läpi kohta kohdalta." Drone/kamera ajatellaan uudelleen ammattimaiseksi ja realistiseksi ("kameran käyttö on matkakirjapelissä yksi tärkeimmistä osa-alueista"); "et saa luottaa mihinkään mitä peliin on tähän asti tehty"; työ auttaa myös tulevia 3D-pelejä; "voit jo nyt tehdä muutoksia itse raamattuun aina kun sellaisia tulee vastaan"; "tätä korkeamman tason ajattelua ei kannata ulkoistaa muille sessioille"; KK ehdottaa etenemistavan ja järjestyksen; KK:n effort nostetaan toistaiseksi.
+- Kirjattu: Raamattu 7.4 (KK kirjoittaa omat kohtansa omalla PR:llä, ilmoittaa PT:lle etukäteen; PT päätösloki ja junat; KK:n vastuulle koodin, arkkitehtuurin ja työtapojen puhdistus). CLAUDE.md:n "kohdat kirjoittaa vain Päätoimittaja" korjataan omistajan omalla viestillä/kortilla (KK).
+- Etenemistä ei vielä päätetty: KK:n ehdotus omistajalle (ydin: ei uusia juoksupelin ominaisuuksia ennen tavoiterakennetta; v133 ja varjojen leivonta loppuun; kaupungit jatkuvat PT:n johdolla; ensimmäinen uudelleenrakennettava pala kamera/drone). Työlistarivi KK "Juoksupelin peruskorjaus".
+
+## JUOKSUPELIN PERUSKORJAUS ALKAA KK:N EHDOTUKSEN MUKAAN (omistaja 11.11.2026 klo 11.09, kortti) (11.11.2026 klo 11.12)
+
+Kortti "Juoksupelin peruskorjaus: aloitanko aamulla ehdottamallani tavalla?" → "Kyllä, aloita näin". Juoksupelin kesken olevat (v133 lattia ja rakenteet, varjojen leivonta) tehdään loppuun; uusia juoksupelin ominaisuuksia ei aloiteta; KK lukee koodin itse (vaihe 1 nyt: drone ja kamera), sitten tavoiterakenne ja työtavat; ensimmäinen uusittava pala kamera/drone; kaupungit jatkuvat rinnalla. Kamera- ja drone-töitä rooleille vain KK:n määrittelyllä. Suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261111-juoksupelin-peruskorjaus.md.
+
+## KAMERAN KÄSIALA: ELOKUVAKAMERA, KEVYT KALLISTUS, EI NIIAUSTA (omistaja 11.11.2026 klo 11.15 ja 11.17, KK) (11.11.2026 klo 11.24)
+
+Omistaja 11.15 (juoksupelin drone, myöhemmin kaikki kamerat): "dronen "niiausta" kiihdytyksessä ja jarrutuksessa ei välttämättä tarvitse imitoida, se voi näyttää häiritsevältä. mutta kallistelu todennäköisesti parantaa tunnelmaa ja sitä voisi kokeilla myös peruskartan kameran liikkeisiin sitten kun olet saanut juoksupelin osalta kuntoon. dronemainen kallistus ja liike on käytössä myös taidenäyttelyissä, tosin siellä sivukallistus on vain kevyenä. dronen liike saa olla muutenkin ehkä parempaa kuin mitä FPV droneissa näkee, enemmän niin, että liike on kuin elokuvasta jossa käytetään kallistusta pienenä tehokeinona elävöittämään, mutta että kameran kiihdytys ja jarrutus ovat todella harkittuja kuin parhaissa elokuvissa. oli kameran ajo toteutettu sitten dronella, helikopterilla, jibillä tai muulla vastaavalla. saatko kiinni?"
+Omistaja 11.17: "ja sitten voidaan säädellä kameran liikkeen tyyliä hieman tilanteen mukaan. pelissä vauhdikkaampaa ja taidemuseossa rauhallisempaa, mutta perusidea saisi olla kuitenkin sama, etenkin pehmeys ja ja jatkuva liike mieluiten useammalla eri kameran akselilla, mikä elävöittää liikkuvaa kuvaa eniten."
+KK: yksi yhteinen kameran käsiala koko Matkakirjaan (juoksupeli → peruskartta → museot), luonne säädettävissä tilanteen mukaan; liike lähtee ja pysähtyy harkitusti, kallistus kevyt mauste kaarteissa, ei nyökkäystä. KK kirjoittaa määrittelyn (scratchpad/keskustelukanava/suunnitelmat/20261111-juoksupelin-peruskorjaus.md); roolit eivät tee kameraan muutoksia ilman sitä. Työlista (KK): "Peruskartan kamera: kevyt kallistus (koe juoksupelin dronen jälkeen)".
+
+## ISON IPADIN JUOKSUPELIAJOT LOPETETAAN TOISTAISEKSI (omistaja 11.11.2026 klo 12.15, KK 12.16) (11.11.2026 klo 12.2x)
+
+Omistaja 12.15: "ison ipadin juoksupelin ajot kannattaa varmaan lopettaa toistaiseksi? ne pyörivät kokoajan."
+KK 12.16: kyllä. Iso iPad on omistajan käytössä ja Pariisin ajoille; juoksupeli rakennetaan uudelleen, joten vanhan rakenteen laiteajot eivät ole nyt arvokkaita. Käynnissä ollut NS:n varjoajo pysäytetty, juoksupelin iPad-ajot pois jonosta (JU); muut iPad-ajot ja juoksupelin Mac-ajot jatkuvat. Juoksupelin iPad-todisteita ei tilata; iPad-ajoa odottavat juoksupelin rivit tilaan "odottaa KK:n iPad-erää". Latausvian (NS) syy haetaan olemassa olevista lokeista ja Macilla; iPad-todiste vasta korjaukselle KK:n sanalla. NS, PK ja LAV ohjattu (PT 12.2x).
+
+## JUOKSUPELIN VANHAA KOODIA EI MITATA EIKÄ NOPEUTETA (omistaja 11.11.2026 klo 12.20, KK 12.21) (11.11.2026 klo 12.2x)
+
+Omistaja 12.20: "ei varmaan kannata mitata mitään mikä tulee poistumaan joka tapauksena, esim. ne kattojen häivytykset. mitataan vasta sitten kun juoksupeli on koodattu uudestaan jos jotain tarvitsee kehittää"
+KK 12.21: (1) juoksupelin vanhan koodin mittauksia ja profilointeja (ruutunopeus, piirron mittaus isolla iPadilla, joka ruudun työn kustannus) ei tilata eikä jatketa; rivit tilaan "odottaa juoksupelin uudelleenkoodausta". NS:n valmis ENNEN/JÄLKEEN-tulos (37,5 → 40,0 ruutua/s) on lähtötaso. (2) Uusia nopeutuksia ei tehdä juoksupelin koodiin, joka vaihtuu (kamera, pelisilmukka, säännöt, maailman päivitys); jäävä aineistotyö (leivotut varjot, lattia, seinät, mallit) jatkuu. Kesken olevista koodinopeutuksista KK päättää erikseen (PT: NS 367ea7f0a pidätetty JU:lla KK:n päätökseen).
+
+## ISOLLA IPADILLA VAIN VALMIS KOKONAISUUS (omistaja 11.11.2026 klo 12.21–12.22, KK 12.22) (11.11.2026 klo 12.3x)
+
+Omistaja 12.21: "kannattaa varmaan ohjeistaa että ipadilla ei kannata ajaa mitään ennenkuin lopullinen suunniteltu versio on valmis. nyt siellä pyörii joku ajo vaikka suunnitelma ei ole vielä valmis koodissa" ja 12.22: "siis peruskartan ajo pyörii".
+KK 12.22: JU pysäytti käynnissä olevan ajon ja tyhjensi ison iPadin jonon (laattamuisti-2, pilvivarjo-todiste-2, saapuminen-muisti-4). Iso iPad näyttää omistajalle vain valmista: iPadilla ajetaan vain KK:n nimeämä valmis kokonaisuus (suunnitelma koodissa valmis + KK:n hyväksymät Mac-kuvat) viimeisenä tarkistuksena ennen versiota; kokeet, välivaiheet ja mittaukset Macilla; rooli ei tilaa iPad-ajoa itse. Junaan menee Mac-tarkistettu, iPad-erä ennen kuin versio annetaan omistajalle. Kirjattu Raamattu 12.26 kohta 5; työlistan iPad-todistetta odottavat rivit tilaan "odottaa KK:n iPad-erää".
+
+## ISOISÄN KUVAT POIS ALKUINTROSTA, TEKSTIT LYHYEMMIKSI; LEHTI OMAKSI PAINIKKEEKSI (omistaja 11.11.2026 klo 15.3x, KK) (11.11.2026 klo 19.2x)
+
+Omistaja 15.3x (224.71:n saapumisen jälkeen): saapuminen kelpaa, intron kohteiden kuvat jäävät; isoisän kuvat pois kaupungin alkuintrosta, kartalle isoisän tekstin kanssa, isoisältä yksi kuva; isoisän ja pulun tekstit ja kuvat lyhyemmiksi ja harkiten missä tarvitaan. Lehti omana painikkeena ja Matkaopas Lehden sisään kiireellä.
+- KK:n suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261111-isoisa-ja-pulu-lyhennys.md (esimerkkiparit omistajalla; roolit vasta omistajan sanalla). Lehti + Matkaopas junassa 224.74. NS:n saapumiskoe ei junaan.
+
+## T7-LEVYLTÄ TILAA ENSIN (omistaja 11.11.2026 klo 16.07) (11.11.2026 klo 19.2x)
+
+Omistaja 16.07: "vapauttakaa ensin t7 levyltä tilaa". JU siirsi ei-aktiivista NAS:lle (ei poistoja): vapaa 134,9 → 228,6 Gi (18.5x); loput seuraavalla JU-vuorolla.
+
+## SOUNDLY-HAKU HUOMENNA (omistaja 11.11.2026 klo 18.37 ja 18.44, KK) (11.11.2026 klo 19.2x)
+
+Omistaja 18.37 "Voin painaa etänä", 18.44 "En pääse. Kokeillaan huomenna": kenkäleiman äänen Soundly-haku siirtyy 12.11.; KK kysyy. Työlista: "Kenkäleiman ääni Soundlysta" (este: odottaa omistajaa).
+
+## PARIISIN LOPPULISTA LUKITAAN; UUDET LÖYDÖT TOISELLE KIERROKSELLE (omistaja 11.11.2026 klo 19.16, kortti, KK) (11.11.2026 klo 19.2x)
+
+Kortti: "Lukitaanko Pariisin loppulista nyt? Listalle jäävät vain sovitut kohdat (puistot, Montmartre, Seine ja sillat, kymmenen kohdan lista); uudet löydöt siirtyvät toiselle kierrokselle eivätkä viivästytä Pariisi valmis -päätöstä." → "Lukitaan".
+- PT kokoaa lukitun loppulistan (scratchpad/keskustelukanava/suunnitelmat/20261111-pariisi-lukittu-loppulista.md), KK lukitsee; sen jälkeen uusi löytö KK:n listalle "toinen kierros" (jarjestys.md), ei Pariisiin. Raamattu 2.215.
+
+## KAUPUNKIEN KOLME TYÖKALUA ENNEN LONTOOTA; LONTOO MITTAUKSENA (omistaja 11.11.2026 klo 19.16, kortti, KK) (11.11.2026 klo 19.2x)
+
+Kortti: "Rakennetaanko ennen Lontoota kolme työkalua (uuden kaupungin pohja yhdellä komennolla, kirkkojen ja palatsien automaattinen rakentaminen valmiista osista, sama kuva-arkki ja muistimittaus joka kaupungista), ja tehdäänkö Lontoo niillä mittauksena?" → "Työkalut ensin".
+- Työlista: "Kaupunkien kolme työkalua ennen Lontoota: odottaa KK:n suunnitelmaa" (pohja suunnitelmat/20261110-euroopan-kaupungit-tyonkulku.md). Roolit eivät aloita ennen KK:n tehtävänantoja; Lontoon rinnakkaiskoe odottaa työkaluja. Raamattu 2.215.
+
+## ISOISÄN JA PULUN TEKSTIOHJEET RAAMATTUUN NYKYISTEN TILALLE (omistaja 11.11.2026 klo 19.58 ja 20.11, KK) (11.11.2026 klo 20.2x)
+
+Omistaja 19.58: uudet ohjeet isoisän ja pulun teksteille + "Nämä pitäisi kirjoittaa ylös raamattuun nykyisten tilalle." 20.11: "Tuo mitä ei enää ole on hyvä lisä noihin ohjeisiin."
+- Raamattu 3.6 korvattu ohjeilla sanatarkasti + lisäys "mitä ei enää ole"; Grimshaw/revitty sivu/aarre-kaanon säilyy. KK:n muut ehdotukset (pituusrajat ym.) eivät ole omistajan päätöksiä: pituus kortilla.
+- Pariisin tekstit uusiksi (KK), muut kaupungit eivät vielä. Lähde: scratchpad/keskustelukanava/suunnitelmat/20261111-omistaja-1958-saapuminen-ja-tekstit.md.
+
+## ISOISÄN JA PULUN TEKSTIEN PITUUSRAJAT; PARIISIN UUSI AIHE (omistaja 11.11.2026 klo 20.17, kortit, KK) (11.11.2026 klo 20.2x)
+
+"Lyhyemmät rajat": isoisän teksti enintään noin 250 merkkiä, pulun enintään noin 150 (Raamattu 3.6).
+"Kelpaa": Pariisin uusi aihe (kirjekyyhky lentää takaisin myyjälleen); KK tarkistaa faktat ja tuo lopulliset tekstit omistajalle ennen äänitystä.
+"Kyllä, nollaa nyt": KK nollasi itsensä 20.17, Postivahti aloitusviestin.

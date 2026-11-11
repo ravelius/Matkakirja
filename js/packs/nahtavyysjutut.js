@@ -5237,6 +5237,37 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    'Petit Palais': {
+      aika: '1897–1900',
+      teksti: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn '
+          + 'Champs-Élysées’n tuntumaan, Grand Palais’ta vastapäätä. '
+          + 'Arkkitehti Charles Girault aloitti työn 10. lokakuuta 1897, ja '
+          + 'rakennus valmistui huhtikuussa 1900. Toisin kuin monet '
+          + 'näyttelyn rakennukset, sen oli alusta asti tarkoitus jäädä '
+          + 'pysyväksi taidemuseoksi.'
+        + '\n\n'
+        + 'Vuonna 1902 siitä tuli Pariisin kaupungin kuvataidemuseo. Samana '
+          + 'vuonna museolle tuli Dutuitin veljesten lahjoittama keskiajan ja '
+          + 'renessanssin teosten kokoelma. Julkisivun päätyä koristaa '
+          + 'Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
+        + '\n\n'
+        + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, '
+          + 'joka avautuu puutarhaan. Sen pylväät ovat vaaleanpunaista '
+          + 'Vosgesien graniittia, ja koristeissa on kullattua pronssia. '
+          + 'Koristemaalaukset ja -veistokset valmistuivat vasta vuosina '
+          + '1903–1925, ja rakennus on ollut suojeltu historiallinen '
+          + 'monumentti vuodesta 1975.',
+      kuvat: [
+        {
+          tiedosto: 'Petit Palais, Paris 8th 003.JPG',
+          lyhyt: 'Petit Palais valmistui huhtikuussa 1900 maailmannäyttelyn rakennukseksi.',
+          selite: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn ja '
+            + 'on sittemmin toiminut Pariisin kaupungin kuvataidemuseona.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     'Tour Montparnasse': {
       aika: '1969–1973',
       teksti: 'Tornin paikalla seisoi vanha Montparnassen rautatieasema. '
