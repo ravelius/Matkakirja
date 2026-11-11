@@ -101,3 +101,11 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - EI uusia juoksupelin ominaisuuksia, EI mitään kameraan/droneen ilman KK:n määrittelyä. Siksi kohdan 1 "SEURAAVAKSI":
   VainPelaaja oletukseksi vain varjojen osalta; AlkuVarjoMatka (alkulennon varjomatka) jää ennalleen, kunnes KK määrittelee.
   Aloituslento ennen|jälkeen -pari otetaan vain kuvana (ei kamera-/lentokoodia); 3 pelikameraparia nykyisellä kameralla.
+
+## LISÄYS 9 (11.11. 11.1x): saapuminen iPad MUISTI-2 (c31deb71d) LUETTU → KK:lle viesti
+- Muistihuiput muisti-tarkka.logista: muisti-1 3253 Mt, muisti-2 3398 Mt (alle katon 3940). KORJAUS lisäykseen 7: "3940" tuli vanhasta
+  muistivahti-tulos.txt:stä (klo 09.53 molemmissa kansioissa) → ei rajalla. JU:lle kerrottu.
+- Odotus 28,05 s (kylmä) ja 28,15 s (napautus): "lopullinen näkymä EI valmis (katto)", lähinäkymä kesken, kesken "-"; jyrkkä alkunäkymä EI valmis 3 s
+  (pallo 45,7 % / 99,7 %, piirros puuttuu 0/28). Talojen muistikatto ei kasva odotuksen aikana (talot muisti -rivit vasta myöhemmin) → epäily muistikatosta heikko;
+  ei kylmän verkkolatauksen syy (napautuksessakin 28 s).
+- SEURAAVAKSI: JU ajaa _tyo/natiiviseppa/saapuminen/ajopyynto-ipad-muisti-3.md (b8e641712, syyrivi) → korjaus syyn mukaan → KK. Saapuminen = Kaupungit-kärki, ei juoksupeliä.
