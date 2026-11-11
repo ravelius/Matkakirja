@@ -31,3 +31,4 @@ B1 bottijumi (−85; 500), eteläosan kartoitus; isolla iPadilla aukiovideo ja r
 - porraskivi: seinat-taso1/porraskivi/pari-*.png, kuvio = penger, mutta portaat vaaleammat (ei leivottua valoa). Ehdotettu KK:lle tummennus
   (oviPorrasKivi _BaseColor ≈ pengerin leivottu sävy, mittaa kuvasta) + uusi pari säästön jälkeen PT:n luvalla. Odottaa KK:n vastausta.
 - 03.20 JU: P1 3199b079a JUNASSA 224 (476ea9d97), linkki 224.55 – P1 VALMIS.
+- 06.51 JU: P1B (028ec1d6f) KÄYNNISSÄ L2:lla, JU ilmoittaa "P1B AJETTU" → katso e1–e7 + j1/j2 ja vie KK:lle (kohta 3 yllä).
