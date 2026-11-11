@@ -217,3 +217,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 16f LÖYDÖS (PT/KK 14.52, EI TYÖTÄ ennen KK:n sanaa): elävän kartan lähikuva sumenee laskussa 8,24 s:ssa, kun tarkka laatta vaihtuu karkeampaan
   (ilman mustetta). Kuva proto-3d/lokit/linssiseppa2-muste-2-tallenne-1a3081001/vs/pois-sumenee-k411-k413.jpg. Epäily (tarkistamatta): Cesiumin
   SSE/tason valinta laskeutuessa tai Laattapalvelimen elävä pala ei ehdi → vanhempi taso; tarkista lokista Elava-tilarivit samalta hetkeltä.
+- 16g PT 15.4x (KK 15.38): SAAPUMISKOE PYSÄYTETTY (0651a87bb…204a54ecd, ei junaan; omistaja hyväksyi 224.71:n vanhan saapumisen, intron kuvamuutos peruttu).
+  Haara natiivi-backup natiiviseppa/saapuminen-pariisi = 204a54ecd (tarkistettu). JU:lle kerrottu: saapumisajot pois jonosta. mac-7:ää EI lueta.
+  JONO NYT: 1) latausvian Mac-todiste 5/5 täydellä mallimäärällä (439) → KK; 2) piirroskerroksen purku -selvitys (16c) → KK + PT.
