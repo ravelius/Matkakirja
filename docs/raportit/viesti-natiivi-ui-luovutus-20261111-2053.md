@@ -78,3 +78,6 @@ saapumistestit läpi muuttumattomina. (b) Testikytkin vain kehityskäännöksess
 paikassa, EI skriptien muokkausta; pelissä kysymys aina päällä. (c) Kysymys: nappulan alla, muuten kaupungin kohdalla, muuten alhaalla keskellä.
 Rasti: ei noppaa, vapaa kartta, Liiku-napista itse (omistaja 20.47).
 JÄRJESTYS: A:n kaksi korjausta → pulun pyöreä rajaus → B-arkki → työkalu 3 → ohjaussauvat → D (PT:n järjestys: loppulista ja A edellä).
+- SK 21.2x: ERÄN 2 introrivit ffd9b02db (koti/Matkakirja-sisaltokirjuri) docs/raportit/saapumisintro-rivit-era2-20261111.json: 103 kuvaa
+  (kaupunki/nro/kuva/rivi/tila); IntroNimet-taulukkoon VAIN tila=valmis (98); 5 odottaa-katselua (Lissabon #5/#8/#9, Rooma #9/#11) ei peliin.
+  Tee kuten erä 1 (7377430b3). Lisäksi SK 7d4896367: isoisän ääni datassa (aanite = kaupunki-intro-v3/isoisa-pariisi.mp3, reaktiot tyhjä).
