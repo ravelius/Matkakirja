@@ -237,3 +237,13 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   (ensin diff Pariisi ↔ Lontoo-skripti, tavulleen sama -testi molempien nykyisillä syötteillä) + planeettaote (hae-planeetasta.mjs pohjaksi) + vakiokuvat-json;
   työkalu 2: luonnoskuvat KK:lle ensin.
 - JU 20.4x: KJ48 jonossa KJ47c:n perään, sha 53171fed0 (juna 224.82) → lokit/ks-kj48-seine-53171fed0; JU ilmoittaa KS + PT.
+
+## LISÄYS 18 (21.0x): työkalu 1 osat 1–3 tehty, NOLLAUS (konteksti 25 %)
+- Raportti docs/raportit/karttaseppa-tyokalu1-tila-20261111.md (LUE ENSIN). Haara natiivi-backup karttaseppa/tyokalu-1 (f32f976a6, 203231d1c; worktree
+  /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna on NYT tässä haarassa, ymparistot-haara pushattu ennallaan). Työkansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tyokalu-1.
+- tee_palat.py (yhteinen) tavulleen sama: Lontoo 242/242, Pariisin v41-ketju 219/219; pelin palat-v41-pp:stä eroaa vain 15_16594_11273 (vanha ulos-in2-kopio paketissa).
+- planeettaote.mjs: 3 kaupunkia 242 s, 163–271 Mt/kaupunki JSONina; 181 kaupunkia ~15–20 Gt (gzip ~3 Gt), sisäisellä 39 Gt vapaana → KK:lle: gzip + kaupunkilista.
+- vakiokuvat.py + vakiokuvat-{pariisi,lontoo}.json (3 katua, merkit tyhjä) → NUI:n "vakiokuva <i>".
+- NS 21.3x: PiirtoTilasto yhteiseksi (NS 67860bf8a, natiiviseppa/tyokalu3-rivit; c1841699a NakyvatKolmiot public). KUN ymparistot-haara viedään junaan: ota c1841699a mukaan.
+- SEURAAJAN JONO: 1) KJ47c → KK (LISÄYS 17), 2) KJ48 → KK, 3) Montmartre KJ43 (01.00 jälkeen), 4) väleissä työkalu 1: korkeuden varatiet (lähde osm) tee_palat.py:hyn,
+  Wienin kuiva-ajo T/otteet-3/wien:llä, EUBUCCO-selvitys, uusi-kaupunki-ketju; työkalu 2: luonnoskuvat KK:lle ensin.
