@@ -35,3 +35,10 @@ K = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodijuna (T7-symlinkki: find
 4) Overture-mittaus (ks. -1027/-0926).
 Koehaarat (ei junaan sellaisenaan): karttaseppa/sc-osm-paikka 35c1dd1a1, karttaseppa/kohteet-arkki-syvyys 42e9543f7, karttaseppa/pallo-koe 2cf7b7e48, karttaseppa/petit-palais 182edf30c.
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty, talot-paketti-pariisi-v15-v39-ALA-VIE. Ämpärin versionumeroa ei käytetä uudelleen (seuraava = v16).
+
+## LISÄYS 12.0x
+- JU 12.0x: KJ42 jonossa KJ37:n jälkeen (Mac, ipad 0.465) → lokit/karttaseppa-petit-palais-kj42-182edf30c.
+- KK 12.0x: sanallinen tavoite KELPAA. Luonnoskuvan KK katsoo oman nollauksensa jälkeen ja vastaa muodosta ja mittasuhteista.
+  "Tee sillä välin talot v16 ja pelikuvat esityskameralla; älä hio yksityiskohtia ennen palautettani."
+  → Talojen raivaus on tehty (palat-v41-pp). Paketti talot-paketti-pariisi-v16 kootaan talot_paketti.py:llä kuten v15 (palat-v41-pp), mutta ämpäriin vasta KK:n OK:lla.
+  Pelikuvat = KJ42 (JU). Älä muuta mallia ennen KK:n palautetta.
