@@ -582,3 +582,17 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - LEVY: edellinen siirra-koho katkesi alussa (kohde 0 B, ei rsynciä) → käynnistetty uudelleen 00.14 (scratchpad 5e2c9543…/siirra-koho.zsh, loki siirra-koho.log). Jos symlinkkiä ei ole, aja uudelleen.
 - SEURAAJAN JONO: 1) KJ50 + Amsterdam (JU) → KK. 2) KJ49c (JU) → KK. 3) KJ51 Petit Palais → KK. 4) Näyte 6 kaupunkia + Ateena (LISÄYS 37 k. 3). 5) Montmartre KJ43 01.00-viennin jälkeen.
   6) Pitkät monikulmiot, GHSL-kalibrointi, 3D-puun sävy.
+
+## LISÄYS 41 (00.4x): PITKÄT MONIKULMIOT koodikohteissa tehty, KJ52 JU:lla, talot → KK:n päätös
+- MITTAUS (K/pitkat-monikulmiot/: mittaa.py OBJ-viennistä, tulos-koodikohteet.txt): koodikohteissa 350 157 kolmiota, särmä > 30 m 11 900, > 50 m 4 542; pisimmät Louvre 256 m
+  (piha/kiveys y 0,1), Tower Bridge 251, Grand Palais 235, Westminster 210, Montparnasse 205, Orsay 189, Pompidou 173 m. (Petit Palais'n vika EI tätä, ks. LISÄYS 40.)
+- TEHTY ced23df14 (natiivi-backup karttaseppa/pitkat-monikulmiot = sillat 300c6b99d + 1; työpuu /Users/Shared/Claude/wt/proto-karttaseppa-pitkat): Rakentaja.Kolmio → Jaa:
+  särmä > SarmaRaja (PitkaSarma 30 m) puolitetaan keskeltä vain oman pituutensa perusteella ((p+q)/2) → yhteinen särmä jakautuu naapureissa samoin, ei T-saumoja;
+  AO-väri alkuperäisistä kärjistä interpoloiden (sävy sama). Koodikohteet 350 157 → 422 524 (+20,7 %, > 50 m 0; jäljelle 58 kpl ≤ 32,6 m concorde-esineissä, ne luetaan
+  valmiista tiedostosta), sillat 137 788 → 146 338. Tarkista(): pisin särmä ≤ 30 m kaikille; Kolmioraja + Louvre 40 000 → 70 000 (Louvre 65 402). 778/778, unity 0.
+  Raja 50 m:llä olisi +7,4 % (arvio.py).
+- KJ52 pyydetty JU:lta 00.4x KJ51:n jälkeen: K/pitkat-monikulmiot/sk-mac-pitkat-kj52-{pariisi,lontoo}.txt (6 + 4), ENNEN 300c6b99d | JÄLKEEN ced23df14 → lokit/ks-kj52-pitkat-*.
+  KUN TULEE: parit → K/parit-kj52/, kolmioluvut lokista (ohjelmakohteet: luotu) → KK yhdessä viestissä TALOJEN PÄÄTÖKSEN kanssa:
+- TALOT (talot.py, Pariisi palat-v41-pp): 6 552 878 kolmiota, vaakasärmä > 30 m 230 234 (3,5 %), > 50 m 63 529, > 100 m 7 206, pisin 616 m; 30 m:n jako ≈ +4,9 % kolmioita
+  (≈ +320k). Talot ovat Pythonin paketteja → jako = tee_palat.py:n sääntö + UUDET talopaketit kaikille (ämpäri, 8 Mt:n raja). Vaihtoehto: pelin lataaja jakaa ladattaessa (ei pakettimuutosta,
+  latausaika). Suositus: tee_palat.py:hyn ja mukaan seuraavaan talopakettiin (Montmartre v17 odottaa jo korttia). KK PÄÄTTÄÄ.
