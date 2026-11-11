@@ -15,3 +15,11 @@ Korvaa -0132:n; taustat ja työkalut: `git show 91be273d8:docs/raportit/viesti-k
   palat ulos-sc1:stä (korvaus-11:n Invalidi-maski vanha → ÄLÄ ota Invalidien paloja) → Mac-ajo KK:lle.
 - Louvren F-jalanjälki (KK: ei estä junaa, erillinen pieni korjaus): 1:1-maski "relation/3262297 + 4 m + koskevat talot" poistaa Rivolin pohjoispuolen talot
   (louvre-tarkistus.jpg). Rajaa maski Rivolin eteläpuolelle → uudet Louvren palat.
+
+## LISÄYS 02.09
+- 73e4fa159 = 224.53 (PT pt-ok 02.04, talot v7 = Louvre+Invalidit ämpärissä 02.03). Pidätysviestini myöhästyi; peruttu.
+  _tyo/.../talot-paketti-pariisi-v7 = ämpärin v7 (v28-palat). talot-paketti-pariisi-invalidit-vain-hylatty = käyttämätön, ÄLÄ vie.
+- F-jalanjälki: EI raivaus (1:1-maski ei ylitä Rivolia; tarkistus.jpg:n oranssi = vanha K 2). Kaikki OSM-talot alueella paloissa (scratchpad puuttuvat.py),
+  F näkyy myös KJ20:ssä (v6-palat) → vanha rakennustaso/3D-ero. KK:lta kysytty 02.3x: saako Louvre jäädä 224.53:een (suositus kyllä).
+- SC KSC=1: ulos-sc1 valmis (exit 0). Seuraavaksi v29 = v28 + vain Citén palat ulos-sc1:stä → Mac-ajo.
+- KJ24 Sacré-Cœur JU:n jonossa.
