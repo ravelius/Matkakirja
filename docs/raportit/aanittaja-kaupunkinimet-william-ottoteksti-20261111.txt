@@ -1,0 +1,245 @@
+Hyvää päivää. Tervetuloa matkalle halki Euroopan. Nyt kuulet kaupunkien nimet ja niiden omat iskulauseet, yksi kerrallaan.
+
+Ateena.
+
+Missä keskustelu keksittiin.
+
+Sofia.
+
+Kuumat lähteet keskellä kaupunkia.
+
+Istanbul.
+
+Kaupunki kahdella mantereella.
+
+Rooma.
+
+Kaikki tiet, yhä.
+
+Bukarest.
+
+Idän ja lännen kohtauspaikka.
+
+Sarajevo.
+
+Vuorten sylissä, kuparin kaikua.
+
+Madrid.
+
+Ylätasangon kirkas pääkaupunki.
+
+Viin.
+
+Valssin ja kahvilan kaupunki.
+
+Pariisi.
+
+Valojen kaupunki Seinen rannalla.
+
+Berliini.
+
+Kaupunki, joka rakentaa itsensä uudelleen.
+
+Lontoo.
+
+Temsin varrella, maailman rytmissä.
+
+Budapest.
+
+Kaksi rantaa, yksi kaupunki.
+
+Dubrovnik.
+
+Muurien kaupunki Adrianmerellä.
+
+Praha.
+
+Sadan tornin kaupunki.
+
+Tukholma.
+
+Neljätoista saarta ja meri.
+
+Kööpenhamina.
+
+Pyöräilijöiden ja satujen kaupunki.
+
+Helsinki.
+
+Valkoinen kaupunki meren äärellä.
+
+Tallinna.
+
+Keskiajan muurit, uusi aika.
+
+Sevilla.
+
+Appelsiinipuiden ja flamencon kaupunki.
+
+Bergen.
+
+Seitsemän vuoren satama.
+
+Amsterdam.
+
+Kanavien ja kapeiden talojen kaupunki.
+
+Dublin.
+
+Tarinoiden ja tumman oluen kaupunki.
+
+Edinburg.
+
+Kallion ja kahden kaupungin pääkaupunki.
+
+Lissabon.
+
+Seitsemän kukkulaa, yksi joki.
+
+Riika.
+
+Laulun ja jugendin kaupunki.
+
+Barcelona.
+
+Meren ja Gaudin kaupunki.
+
+Firentse.
+
+Renessanssin syntykaupunki Arnon rannalla.
+
+Venetsia.
+
+Kaupunki, jonka kadut ovat vettä.
+
+Marsei.
+
+Välimeren vanhin satama.
+
+Oslo.
+
+Vuonon päässä, metsän reunalla.
+
+Tampere.
+
+Kosken kaupunki kahden järven välissä.
+
+Vilna.
+
+Barokin ja pihojen kaupunki.
+
+Granada.
+
+Alhambran ja veden kaupunki.
+
+Kiova.
+
+Kultaisten kupolien kaupunki Dneprillä.
+
+Krakova.
+
+Torvensoiton ja torin kaupunki.
+
+Moskova.
+
+Kremlin muurien kaupunki.
+
+Odessa.
+
+Portaiden kaupunki Mustanmeren rannalla.
+
+Pietari.
+
+Valkoisten öiden kaupunki.
+
+Varsova.
+
+Uudelleen rakennettu vanha kaupunki.
+
+Kreeta.
+
+Saari, jolla myytit syntyivät.
+
+Sisilia.
+
+Kolmen kulttuurin kultainen saari.
+
+Islanti.
+
+Tulen ja jään saari.
+
+Alpit.
+
+Jäätikön ja vuorten laakso.
+
+Rovaniemi.
+
+Kahden joen ja revontulten kaupunki.
+
+Tromssa.
+
+Pohjoisen portti ja napapiirin valo.
+
+Bryssel.
+
+Suuren torin ja sarjakuvien kaupunki.
+
+Košitse.
+
+Katedraalin ja pitkän pääkadun kaupunki.
+
+Ljubljana.
+
+Lohikäärmeiden ja siltojen kaupunki.
+
+Luxemburg.
+
+Linnoitus rotkojen reunalla.
+
+Minsk.
+
+Leveiden puistokatujen kaupunki.
+
+Kišinjov.
+
+Viiniköynnösten ja puistojen kaupunki.
+
+Belgrad.
+
+Linnoitus kahden joen kohtauspaikassa.
+
+Vaduts.
+
+Linna vuoren rinteellä, Rein laaksossa.
+
+Monako.
+
+Ruhtinaskunta kallion ja meren välissä.
+
+Skopje.
+
+Kivisillan ja vanhan basaarin kaupunki.
+
+Tirana.
+
+Värikkäiden talojen kaupunki vuorten juurella.
+
+Zagreb.
+
+Yläkaupungin kujat, alakaupungin puistot.
+
+Bern.
+
+Karhujen ja kellotornin kaupunki.
+
+Bratislava.
+
+Linna Tonavan yllä.
+
+Podgoritsa.
+
+Jokien kaupunki vuorten juurella.
+
+Valletta.
+
+Ritarien linnoituskaupunki.
