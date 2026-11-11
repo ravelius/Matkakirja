@@ -81,3 +81,6 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
 - 13.1x: KS vastasi (omistaja KS; pohja Z10 101 m/px + elävä Z11–Z17 vektorit data Z14; Z17 0,79 m/px; Z18 ei auta; Z12/Z13-esipoltto tai
   piirros kallistuksessa terävöittäisi, Pariisin ±1° Z12 ~790 / Z13 ~3 150 jpg (KS:n korjaus); muisti +35–70 Mt/taso arvio). Viisi riviä lähetetty KK:lle. AVOIN: Cesiumin todellinen taso kallistetussa
   kuvassa (Laattapalvelin.Elava.cs:139 elävä-tilarivi) Mac-ajosta; NS:n vastaus odottaa. Odota KK:n linjaa ennen työtä.
+- 13.2x: PILVIVARJO 51e33fb4f junaan Mac-todisteella (KK 13.0x; PT pt-ok 224.72); MR lähetetty JU:lle. Laiteluku KK:n iPad-erässä ennen versiota.
+  Varmista, että se on junassa. NS vastasi striimikartasta (Z17 kovakoodattu katto ElavaTyyli.cs:16 / Laattapalvelin.cs:857; Z18 +10–15 Mt,
+  Z19 +45–60 Mt arvio; data z14) → välitetty KK:lle. KK: PK:n "5× lähemmäs" ei päätetty, älä mitoita sen mukaan.
