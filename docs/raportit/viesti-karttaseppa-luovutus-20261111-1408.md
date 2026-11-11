@@ -128,3 +128,9 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - Montmartre KJ43 ennallaan (maaston vienti 01.00, sitten JU:lle).
 - JU 17.29: LINKKI 224.75 = 96e9eb2fa (syvyysveto 03ad357fb junassa), manifest 200. SYVYYSVETO VALMIS.
 - JU 17.35: KJ46 ALKOI (ennen → jälkeen). Muisti: lokit/ks-kj46-ymparistot-{ennen-96e9eb2fa,jalkeen-90b66a261}/MUISTI.txt + muisti-naytteet.txt (phys_footprint 3 s välein, MUISTI-1/-2 + huippu). Macin batch-Unity sisältää editorin (~5 Gt pohja): vertaa ERO ennen↔jälkeen ja suhteuta iPadin Pariisin muistiin (ei Macin kokonaislukuun) ennen 5 %:n arviota.
+- KK 17.3x (SEURAAJALLE): istutustapa (3D-puut OSM:stä kuten ND:n puisto) HYVÄKSYTTY; lasi 0x4C4741 ja parvis katsotaan kuvista. EHTO ENNEN JUNAA, raportoi KJ46:n kanssa:
+  (a) instansoidaanko puut: EI — koodista (Nahtavyysalue.LuoPuut ~r. 1980): jokainen puu oma GameObject + MeshRenderer ja lisäksi KovaVarjo-olio, jaettu verkko ja materiaali
+  (NotreDameKirkko-varjostin), ei GPU-instansointia → 598 puuta = ~1 200 piirto-oliota. (b) Pariisin yleisnäkymän PIIRRETYT KOLMIOT ennen/jälkeen samasta kamerasta: KJ46 ei mittaa
+  → selvitä komento/tilasto (esim. kehityskomento ruudun kolmioista tai UnityStats Mac-ajossa) ja pyydä JU:lta lisäajo yleisnäkymästä. (c) Macin muistiero (MUISTI.txt).
+  RAJAT: muisti ≤ +5 %, piirretyt kolmiot yleisnäkymässä ≤ ~+10 %. YLITYS → EI harvennusta (28 m näyttää aukkoiselta), vaan kevyt massapuu ≤ ~250 kolmiota + varjot vain lähellä
+  (ND:n puiston puut ennalleen); KERRO LUVUT JA VALINTA KK:lle ENNEN TOTEUTUSTA. Kohta 3 (Palais de Justice) ennallaan jonossa, parit KJ45:n kulmista.
