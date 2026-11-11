@@ -492,3 +492,25 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   itse ennen KK-viestiä; näyttö vakioajon arkki Pariisi + Lontoo ennen|jälkeen (JU).
 - KATKO-6 (246e99d91) JU:lla (järjestys PT 21.2x: KS KJ47c → katko-6 → KJ48 → koekamera-1).
 - JU: MR78 = 224.83 vie 2edb6edeb:n junaan; LINKKI-rivi tulossa NS:lle.
+
+## LISÄYS 30 — NOLLAUS TÄSTÄ (11.11. 22.4x, kontekstivahti 30 %). JATKA NÄISTÄ:
+- LATAUSJONOERÄ (KK: yksi erä junaan KK:n sanalla): katko-6 HYVÄKSYTTY (virhelevy + nappi, KK 21.3x). 2edb6edeb junassa 224.83 (JU MR78; LINKKI-rivi tulossa).
+  PALKKI-5: 1b1359d75 (natiivi-backup natiiviseppa/latausjono; 3l cde7eb38e = palkki taulusta + 3m uusinta näkyy 0,0012; Peli-testit 929/929, unity 0).
+  Taulu: _tyo/natiiviseppa/latausjono/palkkitaulu-5.md (31 lohkoa; "–" = alle 1 s:n hetkelliset, kerro KK:lle niin; ennuste palkki-4:n kestoilla:
+  pisin sama 0 s, suurin hyppy 0,009). Uusi lokirivi "palkkilohko <nimi> alkaa, palkki a → b (taulu x–y, t s)".
+  JU: ajopyynto-mac-palkki-5.md, kaksi ajoa → lokit/natiiviseppa-juoksu-latausjono-palkki-5 (hidas) ja …-palkki-5-nopea. LUE molemmista lue.py
+  (pisin sama arvo; suurin hyppy = suurin ero peräkkäisissä "latauspalkki"-riveissä) + palkkilohko-rivit vs taulu → YKSI KK-viesti (kopio PT):
+  taulu + hitaan pisin sama + suurin hyppy + nopean pisin sama. KK:n ehto: ei tyhjää lähdettä ja pisin ≤ 15 s → KK:n sana → pt-ok PT:lle (1b1359d75).
+  Jäännösriski (agentti): täysin hiljainen pakollinen haku seisoo kunnes katkaisu 15 s → voi näkyä 2 samana näytteenä (~10–20 s).
+- T1 KAUPUNKITAULU VALMIS cfe3324a3 (natiivi-backup natiiviseppa/kaupunkitaulu; dd370eab6 agentin työ + muokkaustilan lataus PalloKierto.OnEnable →
+  KaupunkitauluLataus.Varmista; Kartta-testit 771/771, Linssit-testit 2293/2293, unity 0). 37 puukaupunkia (ei 35), järjestys = vanha PuuRuudukko.
+  Käytöksen erot vain rajoilla (inklusiivinen, 200 000 pistettä ei eroa), OhjelmaKohteet palaa Pariisin listaan vasta Pariisin kamera-alueella,
+  `talot alue` -komento valitsee rivin kamera-alueesta (ennen la0 > 50). OfflineSilta.MaanKaupungit (FRA/GBR) yhä kovakoodattu (ei määrittelyssä).
+  NUI:n tiedostot: KaupunkiPallot:1162, NostotKartalla:709–714 (OnPariisissa poistettu) → KERRO NUI:lle (local_4b84cd90-…), EI VIELÄ KERROTTU.
+  JU: vakioajo Pariisi + Lontoo cfe3324a3 palkki-5:n jälkeen → lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3; ennen = JU:n 210c842ad-ajo. LUE arkit
+  ennen|jälkeen (sama kuva, palamäärät) → KK (kopio PT) + junaehdokas. KS:lle SHA kerrottu (tee_palat.py lukee generaattori + talot).
+- T3-RIVIT c1841699a: KK 21.37 JUNAAN KYLLÄ → pt-ok-pyyntö PT:lle LÄHETETTY 22.3x.
+- MONO-SELVITYS (KK 21.37): latausjonoerän JÄLKEEN, vain mittaus Macilla: valmiin jälkeisten 20 s:n kolme suurinta varaajaa kutsupaikkoineen (Mt/s;
+  T3-kokeessa mono 632 → 1584 Mt / 20 s) + toistuuko ennen kaupungin latausta → yksi viesti KK:lle; ei korjauksia.
+- tarkista.sh-ANSA: se päivittää Tyylikirja.uss/.cs/json mainista; PALAUTA ne ennen seuraavaa ajoa (muuten Lasipohja CS0117 HarmaaTummaLasi).
+- Monitor vahti-mac2.sh + cron 9.04 LUO UUDELLEEN (kuvio kattaa palkki-[3-9]*, katko-[3-9]*, ns-tyokalu3-koe-*; lisää ns-kaupunkitaulu-vakioajo-*).
