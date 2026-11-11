@@ -59,3 +59,11 @@ PT: A-luokka c28e4adb0; varjoselvitys + kysymys v133/leivonta. KK: saapuminen 1�
 Näyttö: aloituslento ennen | jälkeen + 3 pelikameraparia isolla iPadilla.
 PT 10.1x vahvisti: v133 ensin, uusintaleivonta LAV:n seuraava työ; kytkin + hahmoläikkäpari ok, oletus vasta leivonnan kanssa.
 JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), hahmovarjo-1 samalla käännöksellä heti perään, laattamuisti niiden jälkeen.
+
+## LISÄYS 4 (10.4x, sama sessio jatkaa: nollaus ei mennyt läpi, jonossa oli viesti)
+- KK 2) SALIN RAJAUS TEHTY 450ae41d7 + salin ovi -lokirivi 84b5c1f0e (natiiviseppa/juoksu-turhatyo, unity 0, oletukset ennallaan): JuoksuV4Maailma.SaliJuuret
+  (LisaaAvoimenKatto rekisteröi juhlasalit) → VainPelaaja ei koske salia; tila-rivillä "vain pelaajalla + salit N". Pari: _tyo/natiiviseppa/varjot/ajopyynto-salinovi.md
+  (sk-juoksu-salinovi.txt: oleta "salin ovi sisään|ulos" → S1/S2 kaikki|pelaaja) JU:lla hahmovarjo-1:n perään → lokit/natiiviseppa-juoksu-salinovi-1 → pari KK:lle (kopio PT).
+  Jos PUUTE (botti ei salissa 600 s) → kiinteä kamera (tarkastelu keisari x z yaw ei liikuta salin aurinkoa: tarkista ennen).
+- LAV: varjostajalista lähetetty (lahipuut-v17/puut.json 5759 puuta + taustan V4_puukortit kaukoalueelle; ruukut/kalusteet vain QA `esinekoe`; lehvästön alfa leivontaan, KK 4).
+- Cron (unity-julkaisut.py, polku /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/) ja vahti luotu uudelleen tähän sessioon.
