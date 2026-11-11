@@ -30,3 +30,17 @@ Vahti: Monitor `/bin/zsh /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/postilaa
 ## Jono
 KJ26-kuvat → KK → (OK) junaehdokas · F-korjaus KK:n vastauksen mukaan · jono sen jälkeen tyhjä → "JONO TYHJÄ: Karttaseppä" PT:lle.
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty. Ämpärin versionumeroa ei käytetä uudelleen (seuraava paketti v9).
+
+## LISÄYS 02.58 (sama sessio)
+- KJ26 ajettu (JU 02.53, 7/7; kansio latautui, unity.log r. 2649). Katsottu: portaat kiinni terassissa ja mäen pinnalla, Tripo-portaat poissa, OK.
+  VIKA: terassi z −30…19 x −30…27 ulottui laen reunan yli ja leijui → b8aaa83fa (z −8…19, x −24…21; 754/754, unity 0). sc26-ylhaalta epäonnistui (kallista 80 = lähes vaaka).
+  Rinteen korttelit ovat datassa, mutta Tripon mäki (75 m) peittää ne: mäen asia, KK: ei nyt.
+- KK 02.5x KYLLÄ F-korjaukselle + "poista samat 6.11. väistöt muiden 1:1-nähtävyyksien ympäriltä ja luettele". Tehty: raivaus-1-1-sacre-coeur/siisti-v31.json
+  = palat-v22-lahi-syote/siisti.json − _leikkaa (Palais-Royal relation/3300400) − _pois Panthéon way/56799487, way/56799509, way/98024961 ja Opéra way/69226799
+  (6.11. v14 "irtotalot" Tripo-raivauksessa, tee-palat-v14/v15-*.zsh). ND, Sainte-Chapelle, Invalidit: ei väistöjä (Invalidien lähin _pois way/230227015 + 64959941 on
+  Grand Palais'n kohdalla, jätetty). EIFFEL (1:1, ei KK:n listalla): 8 väistöä _pois-listalla (v11 "etujalan kortteli" way/69034120/126/149/153/173, v12 way/54108364,
+  54108369, 54031857) – EI muutettu, kerro KK:lle ja kysy. tee-talot-nd-k.py: uusi SIISTI-ympäristömuuttuja. aja-palat-v31.sh → ulos-v31; kokoa-v31.py →
+  palat-v31-vaistot-pois-1-1 = v30 + 3 palaa (16596_11272 Palais-Royal, 16596_11270, 16597_11274). Palais-Royal tarkistettu: koko relaatio 3D:nä.
+- KJ27 JU:lle (b8aaa83fa, sk-mac-vaistot-kj27.txt, 2 kuvaa lv27-koodi-lahi-lansi + sc27-koodi-lahi-006-keski) → lokit/karttaseppa-vaistot-kj27-b8aaa83fa.
+  Katso: F poissa (Palais-Royalin eteläsiivet), terassi laella. Sitten KK:lle: lv22 | lv27 -pari + sc27 + lista väistöistä (yllä) + Eiffel-kysymys; kopio PT:lle.
+  KK:n OK → junaehdokas: b8aaa83fa:n Sacré-Cœur oletukseen + talopaketti v9 = palat-v31 (--edellinen v8).
