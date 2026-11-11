@@ -59,3 +59,7 @@ Lue /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelm
 - Maastoputki: Rakennus.MaastoUrl julisteet/maasto/2026-10-29-maailma (quantized-mesh, EPSG:4326, octvertexnormals, maxzoom 12, available-listat layer.jsonissa);
   Montmartren z12-laatta 12/4149/3160 (336 kärkeä). Tarkemmat tasot = uusi maastoversio ämpäriin (JU) + layer.json available z13–15 vain alueelle (MaastoLaatat.cs:63–100 lukee available).
 Työ 1 (2743a6ebd) KK kuitannut: KK katsoo NUI:n arkki-2-ajon, sitten junaan.
+
+## LISÄYS 3, 13.3x: KJ37:n vanha varjo = NUI:n koodi
+KaupunkiPallot.SarjaVarjo (PallonVarjoVaistaa ~975) ei seuraa UI-pallon piilotusta. NUI:lle kerrottu: kerroin (1 − p.Malli3D) (PalloMalliPiilottaa, 2cf7b7e48).
+Seuraava NUI-sessio korjaa → pallon uusi KJ vasta, kun NUI:n korjaus + KS:n kiekko (KpLaikka pois tai oliivi, KK:n linjalla) ovat valmiit.
