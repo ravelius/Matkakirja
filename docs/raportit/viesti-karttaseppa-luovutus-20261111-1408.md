@@ -277,3 +277,17 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - JU 21.34: KJ48 Seine alkaa KJ47c:n jälkeen → lokit/ks-kj48-seine-53171fed0 → arkki + puutelista KK:lle (LISÄYS 17).
 - SEURAAJAN JONO: 1) KJ48 kun tulee. 2) GHSL-luvut + Wienin vakiokuva-arkki KK:lle. 3) KK:n sana KJ47c:stä → junaehdokas. 4) Montmartre KJ43 maaston 01.00-viennin jälkeen.
   5) työkalu 1: kaupunkitaulun luku (NS:n SHA), otepolut sisäiseen; työkalu 2 luonnokset KK:lle.
+
+## LISÄYS 20 (21.5x): KJ47c junaehdokas, GHSL-luvut + Wien KK:lle, NOLLAUS
+- KK 21.38 HYVÄKSYI KJ47c:n junaan yhtenä eränä. JUNAEHDOKAS 707331562 (natiivi-backup karttaseppa/ymparistot-juna = juna-224 a63615592 + 5f44f5325 + NS c1841699a;
+  PiirtoTilasto-ristiriita = vain `public`, NS:n versio). 766/766, unity 0. PT:ltä pyydetty pt-ok, JU:lle ilmoitettu. ODOTA LINKKI-riviä; lukitun loppulistan kohta 1 valmis, kun linkissä.
+  KK toiselle kierrokselle (ei tähän erään): 3D-puun valoisa puoli vaaleampi/keltaisempi kuin maalattu puusto → valon ja varjon eroa pienemmäksi, ei keskisävyä.
+- Työpuu /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna on NYT haarassa karttaseppa/ymparistot-juna (puhdas). Työkalu 1 jatkuu haarasta karttaseppa/tyokalu-1 (09693116f).
+- GHSL-mittaus kertoimella 0,8 VAHVISTETTU ajolla (T/mittaus/tulos-*.json): Lontoo 2,1 / p90 6,5 (keskusta 2,7 / 9,3, reuna 2,0 / 5,7); Pariisi 3,3 / 9,9 (keskusta 3,1 / 8,7, reuna 3,4 / 10,2).
+  Wien uusi_kaupunki.py:llä VALMIS (T/uudet/wien/yhteenveto.json, heikko 0,15, 428 palaa). Vakiokuva-arkki T/uudet/wien/kuvat/wien-vakiokuva-arkki.jpg (vakiokuva_render.py toimii;
+  kuvassa 0 Schneiderhangassen toinen puoli tyhjä → TARKISTA otteesta/ortosta, onko aukea vai puuttuvia taloja). Luvut + arkki lähetetty KK:lle 21.4x; ODOTTAA KK:n vastausta (KK 21.28 kohta 5).
+- NS 21.4x: kaupunkitaulu cfe3324a3 (natiivi-backup natiiviseppa/kaupunkitaulu), Assets/Matkakirja/Kartta/Resources/kaupungit.json { "kaupungit": [ {id, talot (= raja), generaattori (= kaupungit-talot.json-rivi), …} ] },
+  37 kaupunkia. TEHTÄVÄ: tee_palat.py + uusi_kaupunki.py lukemaan tätä (rivi id:llä, generaattori + talot); osm/GHSL-korkeuslähde generaattori-kenttään omassa haarassa.
+- SEURAAJAN JONO: 1) LINKKI-rivi 707331562:lle (JU) → kohta 1 valmis. 2) KJ48 Seine (JU ajaa KJ47c:n jälkeen) → arkki + puutelista KK:lle. 3) KK:n vastaus GHSL:stä/Wienistä.
+  4) Kaupunkitaulun luku (NS cfe3324a3), otepolut sisäiseen (_tyo/karttaseppa-otteet), Lontoon tavulleen-sama-tarkistus 09693116f:n jälkeen (T/aja-lontoo-2.zsh). 5) Montmartre KJ43 maaston 01.00-viennin jälkeen.
+  6) Työkalu 2: luonnoskuvat KK:lle ensin.
