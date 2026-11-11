@@ -20,9 +20,10 @@ lokin lepo-rivistä, pinona (`OUT=x.png python3 -I pino.py <ajokansio> <tallenne
 5. NS:lle luennan viive (2,1 s) kirjattavaksi hänen riviinsä (KK 22.19).
 
 ## SEURAAVA (järjestys)
-A. VAKIOAJO 210c842ad JU:lla käynnissä 22.47 → "VAKIO PUUTE" -rivit, korjaa (Pariisissa 14 kohdetta). SAMALLA katso jokaisen esittelyn
-   lähikuvista, näkyykö kadonneen rakennuksen 3D-tähti isona (B:n näyttö "sama muissa esittelyissä") → KK.
-B. KK 22.51 ERILLINEN LÖYDÖS (luvattu KK:lle 22.5x): esittelyn lähikuvassa viereisen KADONNEEN rakennuksen 3D-TÄHTI (Palais de l'Industrie,
+A. VAKIOAJO 210c842ad JU:lla käynnissä 22.47 → "VAKIO PUUTE" -rivit, korjaa (Pariisissa 14 kohdetta). (3D-tähden tarkistusta EI tarvita, ks. B.)
+B. ~~PERUTTU~~ — KK 22.53: ÄLÄ TOTEUTA. Omistaja 10.11. 06.0x halusi tähden pysyvän kierrossa paikallaan esineenä kartalla;
+   lähikuvan iso tähti on sen seuraus, ei vika. Muiden merkkien häivytystä esittelyn ajaksi ei tehdä ilman omistajan sanaa. (Alkuperäinen:)
+   KK 22.51 ERILLINEN LÖYDÖS (luvattu KK:lle 22.5x): esittelyn lähikuvassa viereisen KADONNEEN rakennuksen 3D-TÄHTI (Palais de l'Industrie,
    PiirrosKerros.Tahdet.cs: 48 m:n taulu, b630c2ef7 juna 224:ssä 10.11. alkaen = omistajan versiossa) kasvaa ~15 %:iin ruudusta ja kulkee
    Liiku-sauvan alta (petit-palais-5: 14-petit-palais-3-90.png oikea ala, tallenne ~9 s ja ~33 s). KK:N LINJA: esittelyn ajaksi MUIDEN kohteiden
    merkit häivytetään pois, palaavat esittelyn loputtua. Toteutus: NostotKartalla.JulkaiseTahdet3D tyhjä lista esittelyn ajaksi (paitsi
