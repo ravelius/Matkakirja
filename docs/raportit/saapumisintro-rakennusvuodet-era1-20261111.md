@@ -94,6 +94,21 @@ Agentit tulkitsivat rajaa eri tavoin (5 / 10 / 12 v). **Ehdotus: enintään 12 v
 | | 10, 12 | Bosporin lautta; Bosporinsalmi (ei vuotta) | katsottava kuvat |
 | | 11 | Eminönü (ei vuotta) | |
 
+## 1b. KATSOTUT KUVAT (SK 11.11. klo 20.2x, KK:n pyyntö 20.17)
+
+Katsottu silmin paikallisista kopioista (Matkakirja 3D -sovelluksen kuvavälimuisti) tai Commonsin kuvausten kautta. Merkintä "EI NÄHTY" = kuvaa ei ole paikallisesti eikä sitä ladattu; kohde päätelty.
+
+| Kuva | Mitä kuvassa on | Vaikutus riviin |
+|---|---|---|
+| Lontoo #4 (asuintalojen arki) | Kostea katu, ruskeatiilisiä Georgian-rivitaloja, mustat rautaportit, kolme kävelijää | "Lontoon rivitalot" ok, ei vuotta |
+| Lontoo #7 (asuinkadun ilta) | Märkä katu hämärässä, Georgian-rivitalot, yksi katulamppu, kaksi kävelijää | EI Pall Mall (ei klubirakennuksia): rivi "Lontoon asuinkatu"; kuvateksti kaasulampuista Pall Mallilla ei liity kuvaan |
+| Praha #8 (Tatra T3) | Punavalkoinen raitiovaunu kiskoilla sillalla, taustalla Prahan linnan rinteet ja Hradčanyn rakennukset, ylijohdot | Rivi "Tatra T3 -raitiovaunu" ok; silta ei ole pääkohde, joten Mánesin silta ei tule riviksi; kuvatekstin "Mánesin sillalla" ei varmistu kuvasta |
+| Berliini #10 (Berliner Dom, 170409) | Tuomiokirkon kupoli Spree-joen toisella puolella, etualalla kolonnadi (Museosaaren rakennuksen pylväskäytävä), peilikuva vedessä | Pääkohde Dom: rivi "Berliinin tuomiokirkko · 1905" (sama kuin #3, kuvat samaa kohdetta); kuvateksti Vanhasta kansallisgalleriasta väärä, kolonnadi on sivuosassa |
+| Madrid #10 (Palacio Real y Catedral) | Kuninkaanlinnan pitkä julkisivu keskellä, Almudenan kupoli oikealla taustalla, kaupunki ympärillä | Rivi "Madridin kuninkaanlinna · 1738–1755" sopii; Almudena sivuosassa (kuvatekstissä mainittu) |
+| Ateena #5 (Atenas, 03) | EI NÄHTY; Commons: "näkymä Akropolilta luoteeseen kohti Agoraa" | Hefaistoksen temppeli ei välttämättä pääkohde: suositus "Antiikin agora" ilman vuotta. Vertailukuva (Hefaistoksen temppeli agoralta, sovelluksen kuva) kuvaa temppelin selvästi |
+| Tukholma #6 (Stockholm 15103231170) | EI NÄHTY; Commons-luokat Views of Stockholm + Strandvägen, ei kohdetta | "Strandvägen" ilman vuotta, kun kuva katsotaan |
+| Istanbul #9–12, Venetsia #7, Wien #7 | EI NÄHTY (Commons-tiedostoja ja hero/intro-kuvia, ei paikallisesti) | rivit pelkkä nimi, päätelty tiedostonimistä |
+
 ## 2. Löydetyt kuvatekstin virheet (KK:lle, eivät kuulu tähän tehtävään mutta vaikuttavat tekstien korjaukseen)
 
 - Praha #3: Tyko Brahen hauta on Týnin kirkon keskilaivassa, ei kuorissa.
