@@ -338,3 +338,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   QA-kameran. Lokissa EI tarkkaa paikkaa (botti, jäädytys t 21,7 s); lähin Puyi maailmassa (124,7; −738,1) ~4 s ennen, kamera 7,1 m / 2,7 m / 29°. LAV:lle vastattu.
   TEE: lyhyt Mac-ajo (pala3-pinnat-käännös): ui juoksupeli valo sijoita 124.7 -738.1 [suunta] → jaady 1 → ui juoksupeli paikka (kuvan kamera pohja) + kuva,
   vertaa V2-elava.png:hen; anna LAV:lle pohjan x;z ja skenaariorivit (tai LAV:n valitsema piste).
+- 21e (18.4x, uusi NS-sessio) LAV:n koekamera TILATTU: _tyo/natiiviseppa/pala3/ajopyynto-mac-koekamera.md (sk-juoksu-pala3-koekamera.txt, kuva3d K1–K6, `valo sijoita`
+  pohjan kehyksessä (−136; 360/340/300/460), K2 toistettava `testikamera 2.7 7.1 12 29`) JU:n jonossa pala3-luettelo-1:n perässä samalla 0f851ddbd:llä
+  → lokit/natiiviseppa-juoksu-pala3-koekamera-1. LAV:lle kerrottu (paikka-rivin kamera maailmassa → Pohjaan; "Puyi pohja" = reitin piste, ei sijoitus).
+  TEE kun valmis: vertaa K1/K1b V2-elava.png:hen, anna LAV:lle K-kuvien kameran pohja (x; z).
