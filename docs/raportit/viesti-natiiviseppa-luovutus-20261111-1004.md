@@ -532,3 +532,10 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   kk-tausta-1-3, kuja-1-3 pysyy v5) → pari vanha `valo elava kaikki` | koe `valo elava pelaaja`, K1–K5 + K6 (−136 425 0) + K7 (−136 336 180), molemmat
   tarkkuudet, täysikoossa KK:lle (kopio LAV). Vaatii glb-korvauskytkimen. KOEKAMERA-2 PIDÄTETTY JU:n jonosta. Molemmat vasta KK:n sanalla. LAV:n luovutus 8b58e158c.
 - 31c (21.5x) JU: 224.83 LINKISSÄ = a63615592 (latausjonokorjaus 2edb6edeb). T3-rivit c1841699a → 224.84. Palkki-5 1b1359d75 yhä odottaa ajoa.
+- 31d (22.0x) PT/KK 21.54 JÄRJESTYS: 1) palkki-5-erä 2) kaupunkitaulun SHA KS:lle (vahvistettu uudelleen cfe3324a3) 3) LAV:n 3.1b B -pari (yöllä, vain tämä pari)
+  4) kaupunkityökalut. Pala 3.2–3.5 odottaa Pariisi valmis -korttia (kuten 4–9). → 31b:n pidätys PURETTU parin osalta.
+  TEHTY 9a78cd26b (natiivi-backup natiiviseppa/pala3-pinnat, unity 0): QA `palatsi korvaa <avain> <kohde>` / `korvaa pois` (JuoksuHahmot.Korvaukset, pisin avain
+  ensin; Hae käyttää korvaajaa, Palatsi.Esihae ohittaa korvatut). Skenaario _tyo/natiiviseppa/pala3/sk-juoksu-pala3-pari-b.txt: A vanha (tausta-v133c/ → v134 levyltä,
+  elava kaikki) | B koe 6,25 (+ kk-tausta-1-3-lod0.glb koe-b/ulos-6.25, elava pelaaja) | C koe 12,5; kamerat K1–K7b → 27 kuvaa. JU: ajopyynto-mac-pari-b.md YÖLLÄ
+  palkki-5:n jälkeen → lokit/natiiviseppa-juoksu-pala3-pari-b (KORVAA koekamera-2:n). LUE: unity.log "korvaus"-rivit + kuvat A|B|C samasta kamerasta → KK (kopio LAV),
+  kuvat täysikoossa. LAV:lle kerrottu: muut paketit ennallaan (rakennukset v127 ym.), kysytty haluaako muut v5-kansiot.
