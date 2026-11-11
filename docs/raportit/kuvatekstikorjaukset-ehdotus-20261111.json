@@ -1,0 +1,530 @@
+[
+ {
+  "kaupunki": "lontoo",
+  "nro": 8,
+  "luokka": "C",
+  "vika": "'kiitää' vs lähde 'lähestyy'",
+  "lyhyt": "Thames Clippersin jokibussi Hurricane Clipper lähestyy Tower Bridgeä Thamesilla Lontoossa.",
+  "selite": null
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 6,
+  "luokka": "B",
+  "vika": "Thamesin, Tower Bridgen ja Towerin näkyminen terassilta ei vahvistunut lähteistä",
+  "lyhyt": "Sky Gardenista Lontoossa avautuu näkymä Thamesin yli kaupunkiin.",
+  "selite": "Sky Garden on julkinen puutarha ja näköalapaikka 20 Fenchurch Street -pilvenpiirtäjän ylimmissä kerroksissa. Ulkoterassilta avautuu näkymä Thamesin yli Lontooseen."
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 7,
+  "luokka": "C",
+  "vika": "kuva on yleinen asuinkatu (ei Pall Mall), teksti puhuu Pall Mallista",
+  "lyhyt": "Lontoossa kaasukatuvalot yleistyivät 1800-luvun alussa; Pall Mall valaistiin kaasulla 1807.",
+  "selite": null
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 2,
+  "luokka": "C",
+  "vika": "Big Ben 'on lyönyt tunteja vuodesta 1859' on yksinkertaistus (kello halkesi 1859, tunnit lyötiin pienemmällä kellolla n. kolme vuotta)",
+  "lyhyt": "Westminsterin palatsin kellotornin Big Ben soi ensi kerran 1859.",
+  "selite": "Westminsterin palatsi rakennettiin uudelleen vuoden 1834 palon jälkeen, ja sen kellotornin Big Ben soi ensi kerran 1859."
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 1,
+  "luokka": "C",
+  "vika": "peruskiven laski Johannes Luxemburgilainen; Kaarle IV oli hankkeen alullepanija",
+  "lyhyt": "Pyhän Vituksen katedraalin rakentaminen alkoi 1344 Kaarle IV:n aloitteesta ja valmistui vasta 1929.",
+  "selite": "Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 Kaarle IV:n aloitteesta Matias Arraslaisen ja Peter Parlerin johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929."
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 3,
+  "luokka": "A",
+  "vika": "Tyko Brahen hauta on keskilaivassa, ei kuorissa; nimi Týnin",
+  "lyhyt": "Týnin kirkkoon, 1300-luvulta rakennettuun, haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.",
+  "selite": "Týnin kirkkoa rakennettiin 1300-luvulta lähtien vanhankaupungin pääkirkoksi, ja sinne haudattiin tähtitieteilijä Tyko Brahe vuonna 1601."
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 5,
+  "luokka": "C",
+  "vika": "kanava kulkee Kampan saaren ja Malá Stranan välissä, ei 'läpi'",
+  "lyhyt": "Čertovka-kanava kulkee Prahan Malá Stranassa vesimyllyn ohi.",
+  "selite": null
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 8,
+  "luokka": "B",
+  "vika": "Mánesin sillan nimi vain Commons-luokasta pääteltyä, ei varmistettu",
+  "lyhyt": "Tatra T3 -raitiovaunu ajaa Prahan linnan edessä.",
+  "selite": "Tatra T3 -vaunuja valmistettiin Prahan Smíchovissa vuosina 1960–1997 lähes 14 000."
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "'Euroopan korkeimpia' ei vahvistu lähteistä (136,4–136,7 m)",
+  "lyhyt": "Stephansdomin etelätorni (1433) kohoaa noin 136 metriin; katossa on yli 230 000 laattaa.",
+  "selite": "Stephansdomin etelätorni valmistui 1433 ja kohoaa noin 136 metriin; kirkon kirjava tiilikatto on ladottu yli 230 000 laatasta."
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 2,
+  "luokka": "B",
+  "vika": "'rakennettiin kilpailemaan Versailles'n kanssa' liioittelua: ensimmäinen suunnitelma jäi liian kalliiksi, rakennettu versio pienempi",
+  "lyhyt": "Schönbrunnin 1441 huonetta ja puutarhat tekivät siitä Versailles'n itävaltalaisen vastineen.",
+  "selite": "Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 huonetta ja puutarhat tekivät siitä Versailles'n itävaltalaisen vastineen."
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 3,
+  "luokka": "B",
+  "vika": "'esiintynyt lähes joka ilta' löyhä, selitteen 'joka ilta … kymmenen vuoden tauolla' epäselvä",
+  "lyhyt": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan ja esittää yli 350 esitystä vuodessa.",
+  "selite": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan; pommitukset tuhosivat sen 1945, ja talo avattiin uudelleen 1955. Nykyään siellä on yli 350 esitystä vuodessa."
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "'ainoa Espanjan katedraali, jonka paavi on vihkinyt' ei löydy yhdestäkään lähteestä",
+  "lyhyt": "Almudenan katedraalin (1883–1993) vihki paavi Johannes Paavali II 1993.",
+  "selite": "Almudenan katedraalin rakentaminen alkoi 1883 markiisi Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993, ja se on käännetty poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa vastapäätä."
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 9,
+  "luokka": "A",
+  "vika": "kuva on otettu talon katolta, teksti kuvaa taloa",
+  "lyhyt": "Círculo de Bellas Artesin katolta näkee Madridin keskustan; vuonna 1880 perustetun kulttuurijärjestön talo valmistui 1926.",
+  "selite": "Círculo de Bellas Artes on vuonna 1880 perustettu kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema talo valmistui 1926. Talon katolta avautuu näkymä Madridin keskustaan."
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 11,
+  "luokka": "A",
+  "vika": "Cerro del Tío Pío on tekokukkula (1980-luvun puisto slummin raunioiden päällä), ei luonnollinen laidan kukkula",
+  "lyhyt": "Cerro del Tío Pío on 1980-luvulla slummin raunioille rakennettu puisto, jonka kukkuloilta näkee Madridin.",
+  "selite": "Cerro del Tío Pío eli Parque de las Siete Tetas rakennettiin 1980-luvulla entisen slummin raunioiden päälle, ja sen kukkuloilta näkee yli Madridin Kastilian ylätasangolle."
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 12,
+  "luokka": "A",
+  "vika": "köysirata suljettu vuodesta 2022/2023 (uusitaan), teksti preesensissä",
+  "lyhyt": "Madridin köysiradan siniset gondolit kulkivat puiden ja kattojen yllä Casa de Campon suuntaan.",
+  "selite": "Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdisti Parque del Oesten Casa de Campon puistoon. Gondolit kulkivat noin 40 metrin korkeudessa; rata on suljettu uusittavaksi."
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 7,
+  "luokka": "C",
+  "vika": "'kääntöympyrä' epätarkka: vähimmäispiha 5,34 × 5,34 m, jotta paloruisku mahtui kääntymään",
+  "lyhyt": "Berliinin vuokrakasarmien sisäpihojen kokoon vaikutti paloruiskun kääntötila.",
+  "selite": null
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 8,
+  "luokka": "A",
+  "vika": "kuva (Berlin Panorama von der Siegessäule) on näkymä pylväältä, teksti kuvaa pylvästä",
+  "lyhyt": "Siegessäulen tasanteelta otetussa panoraamassa näkyy kaupunki; pylväs vihittiin 1873 voitoista Tanskasta, Itävallasta ja Ranskasta.",
+  "selite": "Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt voitoilla Itävallasta ja Ranskasta. Kuva on otettu pylvään näköalatasolta."
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 9,
+  "luokka": "C",
+  "vika": "kuvassa Humboldt Forum; julkisivun uudelleenrakennus voi tulla esiin",
+  "lyhyt": "Humboldt Forumin julkisivu on 2020 valmistunut jäljennös Berliinin kaupunkilinnasta, joka purettiin 1950.",
+  "selite": "Berliinin kaupunkilinna oli hallitsijoiden pääasunto 1443–1918, Itä-Saksa purki sen maan tasalle 1950, ja julkisivu rakennettiin uudelleen 2013–2020 Humboldt Forumia varten."
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 10,
+  "luokka": "A",
+  "vika": "kuvassa Berliinin tuomiokirkko (Berliner Dom), teksti Vanhasta kansallisgalleriasta",
+  "lyhyt": "Berliinin tuomiokirkko (1905) kuuluu Museosaareen, Unescon maailmanperintöön vuodesta 1999.",
+  "selite": "Berliinin tuomiokirkko valmistui 1905, ja koko Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999."
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "julkisivun hevoset ovat kopioita (alkuperäiset sisällä vuodesta 1974)",
+  "lyhyt": "Markuksenkirkon pronssihevoset tuotiin Konstantinopolista, ja julkisivulla ovat nykyään kopiot.",
+  "selite": "Markuksenkirkon pääportaalin yllä seisovat hevoset ovat kopioita; Konstantinopolista 1204 tuodut alkuperäiset ovat sisällä vuodesta 1974. Kampanilen nykyinen torni on vuoden 1902 sortuman jälkeinen jälleenrakennus."
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 2,
+  "luokka": "A",
+  "vika": "Rialton silta on Istrian kiveä, ei marmoria",
+  "lyhyt": "Rialton silta valmistui 1591 yhtenä kivikaarena, ja sen päällä kulkee kaksi myymäläriviä.",
+  "selite": "Rialton silta valmistui 1591 Antonio da Ponten suunnittelemana yhtenä kivikaarena, ja sen päällä kulkee kaksi myymäläriviä."
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 3,
+  "luokka": "B",
+  "vika": "'yli miljoona puupaalua' epävarma (it.wikipedia: n. 100 000)",
+  "lyhyt": "Santa Maria della Saluten kahdeksankulmainen runko lepää puupaalujen varassa.",
+  "selite": "Santa Maria della Salute rakennettiin kiitokseksi vuoden 1630 ruton päättymisestä, ja sen kahdeksankulmainen runko lepää puupaalujen varassa."
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 4,
+  "luokka": "C",
+  "vika": "'maailman ensimmäinen ghetto' lähteistä vain 'ghetto-sanan lähtöpaikka'",
+  "lyhyt": "Cannaregioon perustettiin 1516 Venetsian ghetto, josta sana ghetto on lähtöisin.",
+  "selite": null
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 7,
+  "luokka": "C",
+  "vika": "lähteet: 'yli 400' siltaa",
+  "lyhyt": "Venetsia rakentuu noin 118 saarelle, joita yhdistää yli 400 siltaa.",
+  "selite": null
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "1754 = käyttöönotto (virallisesti valmis 1771); 'suurimpia yhä virkakäytössä olevia' ei löydy sanatarkasti",
+  "lyhyt": "Tukholman kuninkaanlinna (1754) on yli 600 huoneellaan yksi Euroopan suurimmista.",
+  "selite": "Tukholman kuninkaanlinna otettiin käyttöön 1754 palaneen Tre Kronorin paikalle, ja yli 600 huoneellaan se on yksi Euroopan suurimmista kuninkaanlinnoista."
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 2,
+  "luokka": "A",
+  "vika": "Nobel-illallinen syödään Sinisessä salissa, ei tanssita juhlasalissa; 'lähes' kahdeksan miljoonaa tiiltä",
+  "lyhyt": "Tukholman kaupungintalo (1923) tornin huipulla kimaltaa kolme kruunua; Sinisessä salissa syödään Nobel-illallinen.",
+  "selite": "Tukholman kaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta tiilestä, ja sen 106-metrisen tornin huipulla kimaltavat kolme kruunua — Sinisessä salissa syödään Nobel-illallinen."
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 6,
+  "luokka": "C",
+  "vika": "3,6 milj. on pääkaupunkiseutu, ei kaupunkialue (urban area 3,06 milj.)",
+  "lyhyt": "Ateenan pääkaupunkiseudulla asuu yli 3,6 miljoonaa, vaikka varsinaisessa kunnassa vain runsaat 640 000.",
+  "selite": "Ateenan pääkaupunkiseudulla asuu yli 3,6 miljoonaa ihmistä, vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000."
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 7,
+  "luokka": "B",
+  "vika": "'Manner-Euroopan kuumin kaupunki' ei löydy mistään lähteestä",
+  "lyhyt": "Ateena nimitti ensimmäisenä eurooppalaisena kaupunkina virkamiehen hoitamaan hellejaksoja.",
+  "selite": "Ateena nimitti 2021 ensimmäisenä eurooppalaisena kaupunkina erillisen virkamiehen hoitamaan hellejaksoja."
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 2,
+  "luokka": "B",
+  "vika": "lähteet ristiriidassa: mforamsterdam: kruunu ei ole Maximilianin; 'lahjoittama' ei kestä",
+  "lyhyt": "Westerkerkin torni (1638), Amsterdamin korkein, kantaa keisarillista kruunua.",
+  "selite": "Westerkerkin torni valmistui 1638 ja on Amsterdamin korkein kirkontorni — sen huipulla kimaltaa keisarillinen kruunu."
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 8,
+  "luokka": "B",
+  "vika": "nimeäminen Maksimilian I:n mukaan varmistamaton (en-wiki merkitsee lähteen epäluotettavaksi)",
+  "lyhyt": "Keizersgracht eli keisarinkanava on keskustan levein kanava.",
+  "selite": "Keizersgracht eli keisarinkanava on keskustan levein kanava; sen risteävä Reguliersgracht kaivettiin vuonna 1658."
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 9,
+  "luokka": "B",
+  "vika": "'vierailluin valtakunnanmonumentti' vain en-wikissä ilman viitettä",
+  "lyhyt": "Cuypersin johdolla suunniteltu Amsterdam Centraal (1889) on Alankomaiden toiseksi vilkkain asema.",
+  "selite": "Pierre Cuypersin johdolla suunniteltu Amsterdam Centraal avattiin vuonna 1889, ja se on Alankomaiden toiseksi vilkkain rautatieasema Utrechtin jälkeen."
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 3,
+  "luokka": "C",
+  "vika": "torni oli Galatan linnoituksen pääkohde, vartiotorni toissijainen",
+  "lyhyt": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen kärkeen Kultaisen sarven pohjoisrannalle.",
+  "selite": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen pääkohteeksi, ja se hallitsi Kultaisen sarven pohjoisrantaa vuosisatoja."
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 6,
+  "luokka": "C",
+  "vika": "sama 'vartiotorni' kuin #3",
+  "lyhyt": "Galatan tornin tasanteelta näkyvät Kultainen sarvi, Hagia Sofia ja Sininen moskeija.",
+  "selite": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen torniksi. Sen huipulta avautuu näkymä Kultaiselle sarvelle, Bosporille ja Istanbulin historialliselle niemimaalle."
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 9,
+  "luokka": "A",
+  "vika": "lyhyt kuvateksti puuttuu",
+  "lyhyt": "Süleymaniyen moskeija kohoaa vanhankaupungin kolmannella kukkulalla Kultaisen sarven yllä.",
+  "selite": null
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 10,
+  "luokka": "B",
+  "vika": "'halvin näköalapaikka' todentamaton",
+  "lyhyt": "Lautta on Istanbulissa tavallinen kulkuneuvo ja edullinen tapa nähdä kaupunki mereltä.",
+  "selite": "Lautta on Istanbulissa yhtä tavallinen kulkuneuvo kuin raitiovaunu, ja matka tarjoaa edullisen näkymän kaupunkiin mereltä."
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 11,
+  "luokka": "A",
+  "vika": "kuvassa Uusi moskeija ja Galatan silta, teksti balık ekmek -veneistä (todennäköisesti vanhentunut)",
+  "lyhyt": "Eminönön rannalta näkyvät Uusi moskeija ja Galatan silta.",
+  "selite": "Eminönün rannassa kohoaa Uusi moskeija eli Yeni Cami, ja Galatan silta yhdistää rannan Kultaisen sarven toiselle puolelle."
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "'ensimmäisenä jalankulkusiltana' ei vahvistu (Liffeyn ainoa jalankulkusilta 2000 asti)",
+  "lyhyt": "Ha'penny Bridge avattiin 1816 jalankulkusiltana, ja nimensä silta sai puolen pennyn tiemaksusta.",
+  "selite": "Ha’penny Bridge avattiin 1816, sen valurautainen 43 metrin kaari valettiin Coalbrookdalessa, ja nimensä silta sai puolen pennyn tiemaksusta, jota perittiin vuoteen 1919."
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 2,
+  "luokka": "A",
+  "vika": "valmistumisvuosi 1854 (kaksi lähdettä), ei 1853",
+  "lyhyt": "Trinity Collegen kellotorni (1854) on graniittia ja Portlandin kiveä, juurellaan neljä veistosta.",
+  "selite": "Trinity Collegen kellotorni valmistui 1854 Charles Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin kiveä, ja kellohuoneen juurella istuu neljä veistosta — jumaluusoppi, tiede, lääketiede ja laki."
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 3,
+  "luokka": "A",
+  "vika": "1191 on perustamisvuosi, ei nykyrakennuksen; 'suurin kirkko' → 'suurin katedraali'",
+  "lyhyt": "Pyhän Patrickin katedraali (n. 1220–1260) on Irlannin suurin katedraali, torninhuippu nostettiin vasta 1749.",
+  "selite": "Pyhän Patrickin katedraali perustettiin 1191, nykyinen rakennus on n. 1220–1260, ja ulkoa 91 metriä pitkänä se on Irlannin suurin katedraali — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan."
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 9,
+  "luokka": "A",
+  "vika": "1902 on aloitusvuosi (valmis 1904/05); 'ensimmäinen' → 'ensimmäisiä'; kuva on näköalakuva Guinness-tornista",
+  "lyhyt": "Guinness Storehousen käymislaitos oli Irlannin ensimmäisiä monikerroksisia teräsrunkoisia rakennuksia.",
+  "selite": "Guinnessin panimon käymislaitos rakennettiin 1902–1904 ja oli yksi Irlannin ensimmäisistä monikerroksisista teräsrunkoisista rakennuksista. Kuva on otettu Guinness Storehousen näköalatasanteelta."
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 10,
+  "luokka": "C",
+  "vika": "'nyt korkeimman oikeuden talo' yksinkertaistus (talossa myös High Court, Court of Appeal ym.)",
+  "lyhyt": "Four Courts sai nimensä neljästä alkuperäisestä oikeusistuimestaan, ja talossa toimii yhä Irlannin tuomioistuimia.",
+  "selite": "Four Courts sai nimensä neljästä alkuperäisestä ylimmästä oikeusistuimestaan, ja talossa toimii yhä Irlannin tuomioistuimia."
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 11,
+  "luokka": "A",
+  "vika": "kuva on Liffeyn ranta auringonlaskussa, tullitaloa ei näy (sama aihe kuin #8)",
+  "lyhyt": "Liffey virtaa Dublinin halki Dublin Bayhin ja jakaa kaupungin pohjois- ja eteläpuoleen.",
+  "selite": "Liffey-joki virtaa Dublinin halki Dublin Bayhin ja jakaa kaupungin pohjois- ja eteläpuoleen."
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 3,
+  "luokka": "C",
+  "vika": "'rakastettiin rauniona' on tulkinta, lempinimi 'Edinburghin häpeä' lähteistetty",
+  "lyhyt": "Calton Hillin kansallismonumentti jäi kesken 1829, ja keskeneräinen maamerkki tunnetaan lempinimellä Edinburghin häpeä.",
+  "selite": "Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — ”Edinburghin häpeäksi” kutsutusta raunioista tuli tunnettu maamerkki."
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 9,
+  "luokka": "A",
+  "vika": "lyhyt kuvateksti puuttuu",
+  "lyhyt": "Edinburghin linnan muureilta näkyy uusikaupunki, jonka rakentaminen alkoi 1767.",
+  "selite": null
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 2,
+  "luokka": "A",
+  "vika": "valmistumisvuosi: työt päättyivät 1893 (1896 = basilikaksi korotus); peruskiven laski Louis-Napoléon, ei vielä keisari",
+  "lyhyt": "Marseillen La Majorin katedraalin peruskiven laski Louis-Napoléon 1852, ja työt päättyivät 1893.",
+  "selite": "Marseillen La Majorin katedraalin peruskiven laski 26.9.1852 prinssi-presidentti Louis-Napoléon, myöhempi Napoleon III; bysanttilaista ja romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 ja korotettiin basilikaksi 1896."
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "'korkeimmalla kukkulalla' ei vahvistu lähteistä",
+  "lyhyt": "São Jorgen linna on seisonut Lissabonin kukkulalla maurien ajoista, valloitettu 1147.",
+  "selite": "São Jorgen linna on seisonut Lissabonin kukkulalla maurien 1000-luvulta asti, Afonso Henriques valtasi kaupungin 1147, ja linna oli kuninkaan asuntona 1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, jonka kujia kiipeää raitiolinja 28."
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 2,
+  "luokka": "C",
+  "vika": "tykkien määrä: en-wiki 17, pt-wiki 16 reikää",
+  "lyhyt": "Belémin torni (1519) vartioi Tejon suuta, ja sen bastioniin mahtui noin seitsemäntoista tykkiä.",
+  "selite": "Belémin torni valmistui 1519 vartioimaan Tejon suuta: nelikerroksinen torni nousee 30 metriin, ja sen bastionin ampuma-aukoista mahtui tulittamaan noin seitsemäntoista tykkiä."
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 5,
+  "luokka": "A",
+  "vika": "kuvateksti (pombalinen puuhäkki) ei vastaa kuvaa (katot, linna, silta); häkkifakta sopii Kauppatori-kuvaan #4",
+  "lyhyt": "Lissabonin terrakottakattojen yllä kohoaa São Jorgen linnan kukkula, ja kaukana siintää 25 de Abril -silta.",
+  "selite": "Kuvassa näkyvät Lissabonin terrakottakatot, vasemmalla São Jorgen linnan kukkula ja kaukana Tejon yli kulkeva 25 de Abril -silta."
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 8,
+  "luokka": "A",
+  "vika": "kuvateksti (metro) ei vastaa kuvaa (keskustan katukuva, silta kaukana); metrofakta ok mutta väärä kuva",
+  "lyhyt": "Lissabonin keskustan kadut laskeutuvat kohti Tejoa, ja kaukana vasemmalla näkyy 25 de Abril -silta.",
+  "selite": "Lissabonin keskustan kadut laskeutuvat kohti Tejoa; kaukana vasemmalla erottuu 25 de Abril -silta."
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 9,
+  "luokka": "B",
+  "vika": "kuva on yönäkymä keskustan ja sillan yli (Alfama ei erotu); 'tiheässä fado-baareja' tarkistamatta",
+  "lyhyt": "Linnan kukkulalta näkee Lissabonin keskustan valot ja Tejon sinisenä hetkenä.",
+  "selite": "Näkymä São Jorgen linnan kukkulalta Lissabonin keskustan ja Tejon yli sinisenä hetkenä."
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 1,
+  "luokka": "A",
+  "vika": "'nousee' vanhentunut: Jeesuksen torni valmis 2026; Gaudí tuli vetäjäksi 1883, ei 1882",
+  "lyhyt": "Sagrada Famílian rakentaminen alkoi 1882; Jeesuksen torni valmistui 2026 ja on 172,5 metriä korkea.",
+  "selite": "Sagrada Famílian rakentaminen alkoi 19. maaliskuuta 1882, ja Gaudí otti työn johtoonsa 1883 ja johti sitä kuolemaansa 1926 asti — kahdeksastatoista tornista korkein eli Jeesuksen torni valmistui 2026 ja on 172,5 metriä korkea; kirkko vihittiin käyttöön 2010."
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 8,
+  "luokka": "A",
+  "vika": "kuva on Eixamplesta (Rambla de Catalunya), teksti Ciutat Vellasta",
+  "lyhyt": "Barcelonan muurit purettiin 1850-luvulla, ja Eixamplen ruudukko kasvoi vanhan kaupungin ympärille.",
+  "selite": "Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä; muurien purku määrättiin 1854, ja Eixamplen ruudukko rakennettiin vanhan kaupungin ympärille."
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 2,
+  "luokka": "A",
+  "vika": "'valmistui 1727–1764' väärä muoto (välillä rakennettiin); 'perustettiin 1506' vs rakentaminen 1516 lähteet eri mieltä",
+  "lyhyt": "Granadan kartusiaaniluostari La Cartuja rakennettiin 1500-luvulta kolmisensataa vuotta; sakaristo tehtiin 1727–1764.",
+  "selite": "Granadan kartusiaaniluostarin rakentaminen alkoi 1500-luvun alussa ja jatkui kolmisensataa vuotta; sakaristo rakennettiin 1727–1764 ja on espanjalaisen churriguerismin mestariteoksia."
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 3,
+  "luokka": "B",
+  "vika": "'ainoa nasridiajalta säilynyt' liian laaja; vain ainoa säilynyt nasridiajan funduq/majatalo",
+  "lyhyt": "Corral del Carbón on 1300-luvun funduq eli kauppiaiden majatalo, Granadan ainoa säilynyt nasridiajan majatalo.",
+  "selite": "Corral del Carbón on 1300-luvun alkupuolelta säilynyt funduq eli kauppiaiden majatalo ja viljavarasto — ainoa nasridiajalta säilynyt lajissaan."
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 1,
+  "luokka": "B",
+  "vika": "96 m on koko rakennuksen korkeus (en-wiki), ei kupolin (hu-wiki leipäteksti 93 m)",
+  "lyhyt": "Unkarin parlamenttitalo valmistui 1904, ja se on 96 metriä korkea viitaten vuoteen 896.",
+  "selite": "Unkarin parlamenttitalo valmistui 1904 Imre Steindlin piirustuksin: uusgoottilainen palatsi on 268 metriä pitkä ja 96 metriä korkea — luku viittaa vuoden 896 maahantuloon."
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 2,
+  "luokka": "C",
+  "vika": "'ensimmäinen pysyvä silta Tonavan yli' → Budapestissa/Unkarissa",
+  "lyhyt": "Széchenyin ketjusilta valmistui 1849 Budapestin ensimmäisenä pysyvänä siltana Tonavan yli.",
+  "selite": null
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 3,
+  "luokka": "C",
+  "vika": "seitsemän tornia = seitsemän heimon päämiestä",
+  "lyhyt": "Kalastajanlinnakkeen seitsemän tornia muistuttaa unkarilaisheimojen päämiehistä; terassi valmistui 1902 kirkon viereen.",
+  "selite": "Kalastajanlinnakkeen seitsemän suippotornia muistuttavat unkarilaisten seitsemästä heimopäämiehestä — näköalaterassi valmistui 1902 Matthias-kirkon viereen, eikä se ole koskaan ollut puolustusrakennelma."
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 3,
+  "luokka": "B",
+  "vika": "'Rooman korkein rakennelma' ei vahvistu (basilika 'toiseksi korkein', kupoli 136,6 m)",
+  "lyhyt": "Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli nousee 136 metriin.",
+  "selite": "Pietarinkirkkoa rakennettiin yli sata vuotta (1506–1626), ja Michelangelon kupoli nousee 136 metriin."
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 9,
+  "luokka": "C",
+  "vika": "kuva on näköala Castel Sant'Angelolta; teksti ei mainitse sitä",
+  "lyhyt": "Castel Sant'Angelon terassilta näkee Rooman katot ja kupolit.",
+  "selite": "Rooma on kasattu kerroksittain, ja saman korttelin sisällä voi olla antiikin pylväs, keskiaikainen torni ja barokkikirkko. Kuva on otettu Castel Sant'Angelolta."
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 1,
+  "luokka": "A",
+  "vika": "viimeinen kruunajaiset Wawelissa 1734 (August III); 1764 pidettiin Varsovassa",
+  "lyhyt": "Wawelin kukkulan katedraali vihittiin 1364, siellä kruunattiin kuninkaat vuoteen 1734 asti.",
+  "selite": "Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan kuninkaat vuoteen 1734 asti."
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 3,
+  "luokka": "C",
+  "vika": "palo 1555, renessanssikunnostus 1556–1559",
+  "lyhyt": "Sukiennice sai renessanssiasunsa 1555 palon jälkeen vuosina 1556–1559, irvinaamat reunustavat sen räystäslistaa.",
+  "selite": "Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen vuosina 1556–1559, ja kiviset irvinaamat reunustavat sen räystäslistaa."
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 9,
+  "luokka": "A",
+  "vika": "kiellon antoi Pikku-Puolan aluevaltuusto (voimaan 1.9.2019), ei kaupunki",
+  "lyhyt": "Krakovan laaksossa kivihiilen poltto pilasi talvi-ilmaa, kunnes alueen kielto tuli voimaan 2019.",
+  "selite": "Krakova sijaitsee laaksossa, ja kivihiilen poltto teki talvi-ilmasta ajoittain Euroopan huonointa — Pikku-Puolan aluevaltuuston kielto kotitalouksien kivihiililämmitykselle tuli voimaan 2019."
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 2,
+  "luokka": "A",
+  "vika": "KK 20.4x päätös: kuvateksti kertoo tuhon ja jälleenrakennuksen; rivi '1619, uudelleen 1984'",
+  "lyhyt": "Varsovan kuninkaanlinna valmistui 1619, tuhoutui 1944 ja rakennettiin uudelleen 1971–1984.",
+  "selite": "Varsovan kuninkaanlinnan barokkiasu valmistui 1619, saksalaiset tuhosivat sen syyskuussa 1944, ja se rakennettiin uudelleen 1971–1984 vanhojen piirustusten mukaan — Sigismundin torni nousee 60 metriin ja tiilijulkisivu on 90 metriä pitkä."
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 7,
+  "luokka": "B",
+  "vika": "1791 on Sejmin päätös; varsinainen liittäminen 1794",
+  "lyhyt": "Praga oli Varsovan vastarannalla erillinen kaupunki, ennen kuin sen liittäminen Varsovaan päätettiin 1791.",
+  "selite": "Praga sai kaupunkioikeudet 1600-luvun puolivälissä, ja sen liittäminen Varsovaan päätettiin vuonna 1791."
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 8,
+  "luokka": "B",
+  "vika": "1764–1795 ei tue lähteitä (1764 = ostovuosi, lähteet 1772/1784–1795)",
+  "lyhyt": "Saaripalatsi rakennettiin kylpypaviljongiksi ja muutettiin 1700-luvun lopulla uusklassiseksi kesäpalatsiksi.",
+  "selite": "Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta 1683 ja valmistui 1689, ja Domenico Merlini muutti sen 1700-luvun lopulla uusklassiseksi kesäpalatsiksi 76 hehtaarin Łazienki-puistoon."
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 9,
+  "luokka": "B",
+  "vika": "'tyhjästä' ja Prahan 'ehjänä' liioittelua",
+  "lyhyt": "Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, itäpuolen Praga säilyi paljon vähemmän tuhoutuneena.",
+  "selite": "Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, ja itäpuolen Praga säilyi paljon vähemmän tuhoutuneena."
+ }
+]
