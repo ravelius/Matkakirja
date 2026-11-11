@@ -194,9 +194,22 @@ export const FOKUSVIRTA_PARIISI = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * PULUN SAAPUMISKUVA (KK 11.11.2026): vanha tuolikuva (p1) pois; uusi kuva (kiinnitetty pallo Pariisin yllä)
-     * lisätään `kuvat`-listaan, kun KK on katsonut sen.
+     * PULUN SAAPUMISKUVA (KK 11.11.2026 klo 20.5x, omistaja 20.31): kiinnitetty pallo Pariisin yllä nykyään; vanha tuolikuva (p1) pois.
+     * Commonsin valokuva, tiedostosivulta tarkistettu 11.11.2026: tekijä Aero4 (oma työ), lisenssi CC BY-SA 4.0, kuvattu 21.8.2013,
+     * https://commons.wikimedia.org/wiki/File:Ballon_Generali_and_the_Eiffel_Tower.jpg. Kuvaa itseään ei muokata.
+     * RAJAUS pyöreään kehykseen (natiivi): pallo ja joki, Eiffel jää pois. `rajaus`: kehyksen keskipiste kuvan leveyden ja korkeuden
+     * suhteina [x, y] ja halkaisija kuvan leveyden suhteena (5760×3840 / 1280×853 -esikatselu: keskipiste noin (950, 430) px, halkaisija 660 px).
+     * Selitteet ovat SK:n luonnos, KK katsoo (vain kuva on hyväksytty).
      */
+    kuvat: [
+      {
+        tiedosto: 'Ballon Generali and the Eiffel Tower.jpg',
+        lyhyt: 'Pariisi: pallo kohoaa yhä kaupungin ylle.',
+        selite: 'Kiinnitetty ilmapallo kohoaa Seinen rannalta Pariisin ylle. Matkustajat näkevät sieltä koko kaupungin.',
+        lahde: 'Aero4, Wikimedia Commons (CC BY-SA 4.0)',
+        rajaus: { keskipiste: [0.742, 0.504], halkaisija: 0.52 },
+      },
+    ],
     /* KUPLA: KK:n lopullinen teksti 2 (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"). Sanasta sanaan. 144 merkkiä. */
     kommentti: ["Voi isoisä! Me kirjekyyhkyt osaamme vain kotiin. Siksi meidät vietiin Pariisista ensin ilmapallolla. Katso ylös: pallo nousee Pariisin ylle yhä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
