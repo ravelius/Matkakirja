@@ -66,3 +66,17 @@ KORJATTAVAT (KK:lle luvattu):
 3. Pysäytyskuvan peite lähes musta (TraileriTausta sävy) – kysy KK:lta kelpaako.
 4. Skenaarion oleta-rajat: "nimi" 30 → 60, "kierto 45" 15 → 40.
 Sitten uusi Mac-ajo → KK, ja iPad-muistimittaus (KK:n ehto) ennen junaa.
+
+## LISÄYS 3, 09.2x: KK:N PALAUTE saapuminen-mac-1:stä (sitova työjärjestys; EI junaan)
+Järjestys oikea, zoomaus maakartalla ilman striimiä toimii; kuvien liuku ja 45°-kierto oikein. Korjattavat tärkeysjärjestyksessä:
+1) KESKENERÄINEN KARTTA (ydin): valmius LOPULLISESTA lähinäkymästä (talot ja nähtävyydet paikalla), viimeinen kuva pysyy siihen asti (lisäys 2 kohta 1).
+2) TAUSTA: ei mustaa eikä kovaa leikkausta. Zoomauksen loppukuva (maakartta) pehmenee paikallaan, jää kuvien taakse sumeana ja hieman
+   tummennettuna. Nyt Introesitys sumeaTausta → TraileriTausta sävy 0,9 peitto (musta) ja kuvat tummanruskealla kehyksellä koko ruudun:
+   kokeile Aloita(avoinTausta …)/himmennys kevyt + oma sumennus, tai pyydä NUI:lta tila "sumea kartta ilman sävypeitettä" (pysäytyskuva näkyviin).
+3) NIMI + ISKULAUSE + WILLIAM alkavat ENSIMMÄISEN kuvan aikana ja pysyvät kuvien vaihtuessa; iskulause ei näkynyt lainkaan → nimi isolla,
+   iskulause alla (tarkista UiSisalto.Kaupunki("pariisi").Iskulause tyhjä? / Introesitys.Nimi iskulause-luokka).
+4) NAPAUTUS: peite vasta lähellä kaupunkia (lisäys 2 kohta 2).
+5) KK kysyy: 56–58 s maakartan päällä valokuva kahdesta ihmisestä puiston penkillä – mikä (nosto/Lehden juttu)? Ei saa näkyä saapumisen aikana.
+   Selvitä videosta/lokista ja vastaa KK:lle.
+William: Äänittäjällä 61 nimeä + iskulausetta, kytke (KoeWilliamUrl / kaupunkikohtainen) kun vienti tehty.
+Seuraavaksi KK:lle: Mac-tallenne korjausten 1–4 jälkeen (leikkaamaton, ≥ 10 s kiertoa) + ison iPadin muistihuippu.
