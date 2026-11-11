@@ -8,7 +8,7 @@ Tilaus: PT (KK 20.21). Muoto kuten Pariisin muilla kohteilla (js/packs/nahtavyys
     'Petit Palais': {
       aika: '1897–1900',
       teksti: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn '
-          + 'Champs-Élysées’n varrelle Grand Palais’n vastapäätä. '
+          + 'Champs-Élysées’n tuntumaan, Grand Palais’ta vastapäätä. '
           + 'Arkkitehti Charles Girault aloitti työn 10. lokakuuta 1897, ja '
           + 'rakennus valmistui huhtikuussa 1900. Toisin kuin monet '
           + 'näyttelyn rakennukset, sen oli alusta asti tarkoitus jäädä '
@@ -20,14 +20,26 @@ Tilaus: PT (KK 20.21). Muoto kuten Pariisin muilla kohteilla (js/packs/nahtavyys
           + 'Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
         + '\n\n'
         + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, '
-          + 'jossa on vaaleanpunaisia Vosgesien graniittipylväitä ja '
-          + 'kullattua pronssia ja joka avautuu puutarhaan. Koristemaalaukset '
-          + 'ja -veistokset valmistuivat vasta vuosina 1903–1925, ja rakennus '
-          + 'on ollut suojeltu historiallinen monumentti vuodesta 1975.',
-      kuvat: [],
+          + 'joka avautuu puutarhaan. Sen pylväät ovat vaaleanpunaista '
+          + 'Vosgesien graniittia, ja koristeissa on kullattua pronssia. '
+          + 'Koristemaalaukset ja -veistokset valmistuivat vasta vuosina '
+          + '1903–1925, ja rakennus on ollut suojeltu historiallinen '
+          + 'monumentti vuodesta 1975.',
+      kuvat: [
+        {
+          tiedosto: 'Petit Palais, Paris 8th 003.JPG',
+          lyhyt: 'Petit Palais valmistui huhtikuussa 1900 maailmannäyttelyn rakennukseksi.',
+          selite: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn ja '
+            + 'on sittemmin toiminut Pariisin kaupungin kuvataidemuseona.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
 ```
+
+## KK:n hyväksyntä 20.26 ja korjaukset tehty
+Hyväksytty kahdella korjauksella (tuntumaan / partitiivi; viimeinen kappale kahdeksi virkkeeksi): tehty yllä. Introrivi "Petit Palais · 1900". Teksti luetaan kertojan äänellä: PT tilaa äänityksen. Kuva: Commons "Petit Palais, Paris 8th 003.JPG", julkisivu, tekijä Moonik, CC BY-SA 3.0, 3046×2096 (Commonsin kuvauksen mukaan julkisivukuva; SK ei ole nähnyt kuvaa silmin, koska ei ladattu: KK/NUI katsoo ennen käyttöä).
 
 ## Lähteet (2, luettu 11.11.2026)
 
