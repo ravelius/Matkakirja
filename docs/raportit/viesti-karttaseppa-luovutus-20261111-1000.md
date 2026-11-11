@@ -32,3 +32,5 @@ HUOM: _tyo/karttaseppa on symlinkki T7:lle → `find` tarvitsee polun "/Volumes/
 2) Petit Palais (KK: Grand Palais'n vieressä tavallinen ruskea talomassa) pallon jälkeen.
 3) Overture-mittaus (yksi kaupunki: height / num_floors / roof_shape -osuudet lähteittäin vs. talokoneen OSM), ks. -0926.
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty. Ämpärin versionumeroa ei käytetä uudelleen.
+
+LISÄYS 10.0x: JU 09.59: talot v14 ämpärissä (virheitä 0); MR60 jonossa: a4f6cd17b → 224.67 MR59:n (224.66) linkin jälkeen; LINKKI-rivi tulee KS:lle ja PT:lle.
