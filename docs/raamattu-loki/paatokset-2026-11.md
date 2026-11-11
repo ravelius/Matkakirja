@@ -1400,3 +1400,7 @@ Omistaja: "Eikö juoksupeliin kannattaisi leipoa kaikki varjot paikalleen? Se on
 Omistaja: "Salin varjot voi myös laskea suoraan valmiiksi, koska ne eivät näy muulloin kuin silloin, kun keisari tulee sisään, joten ne voidaan suoraan laskea eri valon suunnasta valmiiksi etukäteen. sinun pitää ajatella jatkossa paremmin. Voiko olla, että nojaat liikaa muiden sessioiden palautteeseen tällaisissa tavallaan muutostöissä? Sinun itse kannattaa ajatella asia aina läpi jos kyse on muutostyöstä ja sitten laittaa vasta sessio tekemään työtä, eikä toisinpäin."
 - Sali: KK perui salipoikkeuksen; sali leivotaan omasta valon suunnastaan (oma valokartta, tarvittaessa kaksi + ristihäivytys), elävä varjo vain pelaajalla. NS vaihto, LAV leivonta v133:n jälkeen.
 - Työtapa: Raamattu 7.4 KK:n riville "MUUTOSTYÖSSÄ KK AJATTELEE ENSIN ITSE LÄPI" (KK:n sanamuoto).
+
+## KOODIMALLIEN HYVÄKSYNTÄ ESITYSKAMERALTA (KK 11.11.2026 klo 10.3x) (11.11.2026 klo 10.33)
+
+NUI:n napautuslento (katse-2, 2c75bcf22) on kunnossa, mutta ei junaan yksin: esityskamera menee 110–145 m:iin (4–5 × lähemmäs kuin lähin vapaa kamera) ja paljastaa Sainte-Chapellessa mallivikoja (tornin kärki, apsiksen katto, talo apsiksen sisällä, vinot seinälevyt). Järjestys: NUI esitysarkit kaikista 12 Pariisin nähtävyydestä (4 kuvaa/kohde, pysyvä tarkistus) → KS korjaa (Sainte-Chapelle heti, ennen palloa) → KK katsoo → lento ja korjatut mallit junaan yhdessä. Uusi hyväksyntäehto koodimalleille: esityskameran kuvat 4 suunnasta. Raamattu 2.204.
