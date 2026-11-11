@@ -334,3 +334,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   3.3:n varjostinrunko kerrosjaolla jo pilotissa (saa käyttää nykyistä yhdistettyä valoa, kunnes LAV:n kerrokset valmiit). Lattiaruutujen lataus suunnitellaan
   vasta, kun LAV:n koepari on hyväksytty. LAV voi kysyä NS:ltä.
 - 21c: latausjono3-2 valmis 745 s (palkki 1.00) mutta ei L1-kuvaa: alkoi 18.12 ennen skenaarion kuvarivikorjausta. Vahti-mac.sh ei tunnista "valmis N s" -riviä (HILJAA = väärä hälytys).
+- 21d (18.4x) LAV (pala 3.1b koe, KK 18.31) pyysi V2-elava.png:n (lokit/natiiviseppa-juoksu-hahmovarjo-1) kameran + Puyin paikan POHJAN kehyksessä + toistettavan
+  QA-kameran. Lokissa EI tarkkaa paikkaa (botti, jäädytys t 21,7 s); lähin Puyi maailmassa (124,7; −738,1) ~4 s ennen, kamera 7,1 m / 2,7 m / 29°. LAV:lle vastattu.
+  TEE: lyhyt Mac-ajo (pala3-pinnat-käännös): ui juoksupeli valo sijoita 124.7 -738.1 [suunta] → jaady 1 → ui juoksupeli paikka (kuvan kamera pohja) + kuva,
+  vertaa V2-elava.png:hen; anna LAV:lle pohjan x;z ja skenaariorivit (tai LAV:n valitsema piste).
