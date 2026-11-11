@@ -41,3 +41,6 @@ Karkeat tallenteet/kuvat KK:lle (kopio PT) ennen junaa. A, B ja C samaa kamerako
 
 Huom: tyokalut/tarkista.sh päivittää tyylikirjan (Tyylikirja.uss/.cs, tyylikirja.json) → palauta git checkoutilla ennen committia; POHJAVAHTI-
 ja LIIKEVAHTI-rivit (Kartta.uss, Matkakirja.uss, Pinnaus.cs 2) ovat pohjassa jo ennestään.
+
+## LISÄYS 08.2x
+Työ D: omistaja 08.21 (PT): sivun nimi "Matkaopas" (etusivun noston linkki ja sivun otsikko).
