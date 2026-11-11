@@ -184,3 +184,22 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   EI tehdä (37,5 → 40 lähtötaso); aineistotyö (leivotut varjot) jatkuu. ISON IPADIN AJOT vain KK:n nimeämille valmiille kokonaisuuksille: muisti-ipad-4 POIS jonosta,
   laattamuisti-ipad-2 pysäytetty. Mac-ajot jatkuvat (mac-7 jonossa). PT:lle vastattu: muuta juoksukoodin nopeutusta ei kesken (c28e4adb0 ⊂ 367ea7f0a).
 - PT 13.2x (Raamattu 12.26.5): iPad VAIN KK:n nimeämä valmis kokonaisuus viimeisenä tarkistuksena ennen versiota; NS ei tilaa iPad-ajoja. Latausvika: korjaus + todiste MACILLA.
+
+## LISÄYS 16 — NOLLAUS TÄSTÄ (11.11. iltapäivä, kontekstivahti 26 %). JATKA NÄISTÄ:
+- PT (KK 13.0x): 367ea7f0a JUNAAN 224.71. LATAUSVIKA hyväksytty, jonon kärki, ehdot: (i) latausjono omana moduulinaan, (ii) vastaa ensin koskeeko
+  karttaa, (iii) ei hiljaa vajaata/vanhaa sokkeloa: "Lataus ei onnistunut. Tarkista verkkoyhteys ja yritä uudelleen." + "Yritä uudelleen",
+  (iv) todiste MACILLA rajoitetulla nopeudella 5/5 käynnistystä, 439/439 mallia. Lähtötasoa 37,5 → 40 ei käytetä, uutta ei mitata.
+- (ii) VASTATTU KK:lle + PT:lle: EI koske karttaa (Laattapalvelin + Esilataaja jo jonoissa) → /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vastaus-ii.md
+- (i)+(iii) TEHTY 31f66a2c3 (natiivi-backup natiiviseppa/latausjono juna-224:n 17fbf3e35:stä, wt /Users/Shared/Claude/wt/proto-natiiviseppa-latausjono;
+  Peli-testit 920/920, unity-tarkistus 0): Peli/Lataus/LatausjonoLogiikka.cs (puhdas, LatausjonoTestit 8) + Scripts/Peli/Latausjono.cs (ajuri: Range-osat,
+  kuuntelijat, Peru, Nosta, Aja, QA KoeKatko). Kaikki juoksun haut jonossa (JuoksuHahmot.Hae, JuoksuLeivottu hakemisto/HaeGlb/kuvajono, osasarjan atlas).
+  JuoksuVerkko: Ohita/Suojatut/HaeOsissa/Valttamaton POIS, katkaistun latauksen abort pois; LatausAlkaa → Latausjono.Peru + koukut (Odota, TaustaTauolla).
+  JuoksuV4Maailma.LatausVirhe + Kelpaamaton (verkko / palatsi puuttuu / VapaaValmis false) → ei Valmista. JuoksupeliNakyma: virheViesti + uudelleenNappi
+  (mk-nappi--kulta, palkin alla) → YritaUudelleen = Sulje + Avaa samoilla. Nappityyli NUI:n tarkistettavaksi kuvasta.
+- SEURAAVAKSI (iv): Mac-käännös 31f66a2c3 JU:lta (ajopyyntö _tyo/natiiviseppa/latausjono/) → rajoitettu nopeus (QA "juoksupeli palatsi verkko viive S"
+  + "verkko katko N" tai Network Link Conditioner, jos käytössä) → 5 kylmää käynnistystä (välimuisti tyhjäksi), lokista "latausjono: … valmiita"
+  ja malleja 439/439, ei "LUOVUTETTU"/"LATAUS EPÄONNISTUI". Lisäksi 1 ajo verkko poikki → viesti + nappi näkyy (kuva) → nappi → lataus jatkuu.
+  Tulos KK:lle + PT:lle. Ei iPad-ajoja (vain KK:n sanalla).
+- SAAPUMINEN: mac-7 (204a54ecd) yhä JU:n Mac-jonossa → lue (lisäys 14) → KK.
+- VS:lle vastattu striimikartasta (laatat KS:n, Z17 katto ElavaTyyli.Viimeinen, m/px ja muistiarvio).
+- Cron (unity-julkaisut 9.04) ja ajovahti (Monitor vahti.sh) LUO UUDELLEEN.
