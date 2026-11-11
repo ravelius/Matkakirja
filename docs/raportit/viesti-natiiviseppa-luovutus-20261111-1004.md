@@ -445,3 +445,8 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   POIKKEUS ArgumentOutOfRange "ui konsoli pois" -kohdassa on myös katko-3/4:ssä = ajokehyksen, ei 2edb6edeb:n.
 - PALKKI-3 (L1) kansio tyhjä 20.48 alkaen → odottaa. KK-VIESTI (kopio PT) kun palkki-3 luettu → junaehdokas 2edb6edeb → pt-ok PT:lle.
 - Vahti: Monitor vahti-mac2.sh käynnissä (bgd50uf1x). Cron 9.04 EI vielä luotu tässä sessiossa.
+- PALKKI-3 LUETTU (21.05): pisin sama 0,177 ~40 s (osamallit 31 s + lähipuut 20 s olivat 1 yksikkö ~940:stä), 0,164 ~30 s (avoimet 57 s).
+  KORJAUS 116d4b240 (natiivi-backup natiiviseppa/latausjono, unity 0; pohjavahti punainen UI-tiedostoissa jo pohjalla, ei tästä): EtuPainot 0,10/0,054/0,034,
+  EtuAlku/Etu/EtuLoppu, Ali-kerroin 0,95 etuvaiheissa. JU: ajopyynto-mac-palkki-4.md → lokit/natiiviseppa-juoksu-latausjono-palkki-4 (pala3-luettelo-1:n jälkeen).
+- KK-VIESTI LÄHETETTY 21.06 (kopio PT): junaehdokas 2edb6edeb, virhetekstin tausta -ehdotus. Odota KK:n sana → pt-ok PT:lle.
+- Cron 9.04 luotu (38595728). Seuraavaksi T1 kaupunkitaulu.
