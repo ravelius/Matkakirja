@@ -78,3 +78,4 @@ M = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/montmartre-maasto, K = /Users
   (cherry-pick 03ad357fb juna-224:n kärkeen) JU:lle PT:n pt-ok:lla.
 - Työpuu /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna on nyt haarassa karttaseppa/syvyysveto-2 (puhdas). Montmartre jatkuu haarasta karttaseppa/montmartre (4115be46b).
 - JONO: 1) syvyysvedon kuvat (A + B) → KK. 2) Montmartre KJ43 JU:lle maaston 01.00-viennin jälkeen (ks. LISÄYS 8).
+- NUI 16.28: 03ad357fb yhdistetty, B-ehdokas 2f4c0a80f (natiivi-ui/napautus-224); ajo B (sk-napautus-224-2-b.txt) JU:lla samaan Mac-ajoon A:n kanssa.
