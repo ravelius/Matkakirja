@@ -150,3 +150,16 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   (b) muisti NS:n tila-rivin laskureilla (tekstuuri- ja varattu muisti), EI prosessin näytteillä (±700 Mt); (c) parit KJ45:n kulmista + lähikuva kevyestä puusta ~100 m:stä
   ND:n puiston puun rinnalla; (d) varjoraja 400 m liikkeessä: kaksi kuvaa rajan molemmin puolin samasta puurivistä (ei näkyvää poksahdusta). Junaan KK:n sanalla kuvista ja luvuista.
 - SEURAAJAN JONO: 1) kevyt puu + instansointi + lähivarjot haaraan karttaseppa/ymparistot (90b66a261:n päälle), testit, näyttö a–d JU-ajolla → KK. 2) Palais de Justice talot. 3) Montmartre KJ43 (01.00 jälkeen).
+
+## LISÄYS 13 (18.1x, uusi sessio): KEVYET PUUT TEHTY, KJ47 JU:lla
+- Kevyet puut: Blender 5.2 decimate (saumat yhteen ensin, normaalit alkuperäisestä) K/ymparistot-kj45/puut/kevyt/kevenna.py → puu-1..4-kevyt 250 kolmiota, sama atlas (vertaa.png: ylä alkuperäinen, ala kevyt).
+- Koodi haarassa karttaseppa/ymparistot (natiivi-backup): aa942ed74 + 797404a3c mittari `komento puut tilasto <nimi>` (PiirtoTilasto.cs: ruudun Render-laskurit
+  kolmiot/kärjet/piirtokutsut/erät/setpass 30 kehyksen ka + muisti varattu/tekstuurit/gfx/verkot + puut/varjot/puukutsut/lähin kevyt puu);
+  c0e77572c + 9f26843a1 puut: Nahtavyysalue piirtää kaikki puut Graphics.RenderMeshInstanced (yksi kutsu per alue ja verkko 0–7; ei GameObjectia per puu),
+  KoodiPuutKevyet (Eiffel, GP, Invalidit, Louvre) → kevyt verkko, varjo kutistuu 300 → 400 m (VarjoTaysi/VarjoRaja), ND täysi puu + varjo aina.
+  Varjostimet NotreDameKirkko(+Yhteinen.hlsl) ja KovaVarjo: multi_compile_instancing; Resources/NahtavyyspuuInstansoitu.mat ja KovaVarjoInstansoitu.mat pitävät variantin (Strip Unused).
+  758/758, unity 0. ENNEN-mittauskäännös: karttaseppa/ymparistot-mittari-ennen 797404a3c (= 96e9eb2fa + mittari).
+- KJ47 pyydetty JU:lta 18.1x (kopio PT): K/sk-mac-puut-kj47.txt, 22 kuvaa: (a) yleis viisto/ylhäältä 0.05 + keski 0.015 tilastoineen, (c) KJ45-parit + lähikuvat
+  kevyt (esplanadi) | ND:n puisto kaari 0.0011, (d) varjoraja esplanadin rivi kaari 0.0028/0.0034/0.0040/0.0048 + liikkeessä, (b) muisti alku/loppu.
+  KUN TULEE: tarkista Shader-virheet (instansointi), puut näkyvät (jos puuttuvat → variantti karsittu), luvut: kolmiot ≤ ~+10 % yleis, muisti; parit + luvut KK:lle (kopio PT).
+- JONO: 1) KJ47 → KK. 2) Palais de Justice talot (aloitettu 18.1x). 3) Montmartre KJ43 (01.00 jälkeen).
