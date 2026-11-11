@@ -80,3 +80,16 @@ M = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/montmartre-maasto, K = /Users
 - JONO: 1) syvyysvedon kuvat (A + B) → KK. 2) Montmartre KJ43 JU:lle maaston 01.00-viennin jälkeen (ks. LISÄYS 8).
 - NUI 16.28: 03ad357fb yhdistetty, B-ehdokas 2f4c0a80f (natiivi-ui/napautus-224); ajo B (sk-napautus-224-2-b.txt) JU:lla samaan Mac-ajoon A:n kanssa.
 - JU 16.28: KJ44 A jonossa Macilla → /Users/Shared/Claude/proto-3d/lokit/ks-kj44-a-ennen-2882f055a ja ks-kj44-a-jalkeen-03ad357fb (kansiot KS + KK + PT valmistuttua); B NUI:n sha:lla (2f4c0a80f).
+
+## LISÄYS 10: KK 16.30 JONO (korvaa aiemman järjestyksen)
+KK merkitsi valmiiksi: loput ylisuuret 1:1, loput koodimalleiksi, oikea mittasuhde, Sainte-Chapelle.
+1) SYVYYSVETO: tehty 03ad357fb, sha NUI:lle ja PT:lle lähetetty; näyttö ajoissa A (JU, lokit/ks-kj44-a-*) ja B (NUI 2f4c0a80f) → parit KK:lle.
+2) PARIISI: NÄHTÄVYYKSIEN YMPÄRISTÖT TAKAISIN, katselmus kaikista 13 kohteesta (omistaja 10.11. 21.56 kysyi raivatusta tilasta).
+   TAVOITE: kartta jatkuu katkeamatta kohteen seiniin; oikeat naapurit (talot, nimetyt rakennukset, puisto, puut) paikallaan; vanhan Tripo-pohjan kohdalla
+   ei litteää vaaleaa kaistaa eikä tyhjää suorakaidetta; striimikartan talo ei työnny mallin läpi.
+   NÄYTTÖ: jokaisesta kohteesta 2 kuvaa samalla rajauksella: suoraan ylhäältä ~400 m leveä + viisto 45° etelästä. ENSIN NYKYTILA yhtenä arkkina + puutelista
+   kohteittain KK:lle ENNEN korjauksia (KK päättää rajaukset); sitten korjaukset YHTENÄ talot-eränä + parit. Vertaa oikeaan paikkaan (ilmakuva/kartta).
+   (Pohjat: Nahtavyysalue.cs Pohja/PohjaPoisKoodilla/PuutPoisKoodilla, talot palat-v42-mm / v41-pp, raivaus-1-1-*-kansiot.)
+3) PARIISI VALMIS: SEINE JA SILLAT -katsaus: koko Seine kuvina kaupungin läpi (vesi, rannat, sillat), Austerlitzin ja Iénan korjausten tila, puutelista.
+4) OVERTURE-MITTAUS Lontoosta (rivi olemassa; Pariisin mittaus 621b77e8d mallina), pohjaksi Lontoon aloitukselle.
+Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan korttia.
