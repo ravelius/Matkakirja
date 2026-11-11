@@ -436,3 +436,12 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   matka jatkuu Liiku-napista); suunnitelmat/20261111-aarrekysymys-saapuessa.md kohta 4.
 - Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac2.sh` (katko-[3-9], palkki-3, pala3-*; lisää ns-tyokalu3-koe-*).
   Cron 9.04 unity-julkaisut.py LUO UUDELLEEN.
+
+## LISÄYS 26 (11.11. 21.00, uusi sessio nollauksen jälkeen): katko-5 luettu = OK
+- KATKO-5 (2edb6edeb, JU 20.59, rc 0, PUUTE 0): K1-virhe-kuvassa NYT näkyvät palkki + "Lataus ei onnistunut. Tarkista verkkoyhteys ja yritä uudelleen."
+  + kultainen "Yritä uudelleen" (rajaus alaosasta täysikoossa katsottu). K1b: ☰-valikko latauskuvan päällä (Säännöt, tarina, Kertoja/Tekstitys/Musiikki,
+  Poistu) OK. K2: uudelleenavaus "kulkukartta ladattu" 139 s, täysi maailma (Kielletty kaupunki) OK; latausjono valmiita 1146, puuttuu 3 (404:t, vanhat).
+  Sivuhuomio KK-viestiin: virheteksti vaalea ohut fontti vaalealla kivellä ilman taustaa → heikosti luettava (ehdotus: tumma puolihimmeä tausta tai varjo).
+  POIKKEUS ArgumentOutOfRange "ui konsoli pois" -kohdassa on myös katko-3/4:ssä = ajokehyksen, ei 2edb6edeb:n.
+- PALKKI-3 (L1) kansio tyhjä 20.48 alkaen → odottaa. KK-VIESTI (kopio PT) kun palkki-3 luettu → junaehdokas 2edb6edeb → pt-ok PT:lle.
+- Vahti: Monitor vahti-mac2.sh käynnissä (bgd50uf1x). Cron 9.04 EI vielä luotu tässä sessiossa.
