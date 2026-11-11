@@ -147,3 +147,4 @@ Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-par
   SulkuKatse aina; PaivitaEsitysKatse ei koske sulun aikana; sulun lopussa EsitysKatse NaN heti.
 - AJO JU:lla pallo-kyltti-1:n jälkeen: sk-sulku-katse-2.txt → lokit/nui-sulku-katse-2-e0f7d6a7d. Mittaa: python3 (ei -I, numpy) _tyo/natiivi-ui/kehysero.py
   <kansio> 18 27; piikki pois a ~23,9 s ja b ~24,2 s; lokissa "→ 0 m". OK → KK:lle mittaus; junaan KK:n sanalla (napautus-224:n jälkeen).
+- 17.5x: pallo-kyltti-1 katsottu (1–3 ok, kauko ennallaan) → KK HYVÄKSYI 9c6a6f864 junaan; PT vie KS:n pallon kanssa. Työlistarivin tilanne kirjattu. LISÄYS 4 VALMIS.
