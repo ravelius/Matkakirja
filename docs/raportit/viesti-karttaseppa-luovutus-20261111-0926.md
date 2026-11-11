@@ -57,3 +57,4 @@ Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8
   Testaa seuraavassa KJ-ajossa, jossa GP-koodi päällä (cherry-pick af1f62bd4 koehaaraan; KJ35-kuvissa nimi "Grand Palais" näkyi mallin alla, joten pitäisi toimia).
   Jos ★ "Palais de l'Industrie" ei silti näy → kerro NUI:lle (tekee isännäksi koodimallin rajat). Ei estä junaa.
 - JU 09.3x: 224.63 = 79b04e870 LINKISSÄ (Grand Palais + talot v12 77e2a7d72). GP valmis; seuraava paketti v13.
+LISÄYS 09.42: NUI bd7f0ea44 (natiivi-ui/pallo-maa, juna-224 79b04e870 + 1): pallon ankkuri 48.8646, 2.3268, maa KaupunkiPalloMitat.MaaTuileriesM = 78 m (KorkeusKerroin.Sovita(78)). Kenttä, kori ja köysi TÄHÄN, viittaa vakioihin. Pyydetty NUI:lta: lat/lon julkisiksi KaupunkiPalloMitat-vakioiksi (PallonMaapiste on UI:n yksityinen) + UI-pallo piiloon 3D-pallon zoomeilla, napautus ennallaan – odottaa vastausta.
