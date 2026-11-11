@@ -19,7 +19,7 @@ Mac-ajot käyttävät nyt JU:n välimuistikäärettä (julkaisija-tyokalut/esika
    KK:n katsottua pt-ok-pyyntö 77128fef8 (sisältää d63a93686).
 2. porraskivi: seinat-taso1/porraskivi/aja-porraskivi.zsh (ennen 77128fef8 | jälkeen b6cceaeb7, LAV:n sk-penger2 + koejuuri-penger2).
    unity.log: "ovien portaat kujakiveksi" jälkeen-ajossa. Pari penger-* KK:lle, kopio PT:lle ja LAV:lle.
-3. P1B: seinat-taso1/p1b/aja-p1b.zsh 2 028ec1d6f (ennen b6cceaeb7). e1–e7 = 7 ennalleen jäänyttä ovea (taso 1) → PAHIN YKSI KUVA KK:lle päätettäväksi;
+3. P1B (EI JONOSSA: JU 03.1x säästön takia, ajetaan vasta PT:n luvalla – pyydä PT:ltä säästön jälkeen): seinat-taso1/p1b/aja-p1b.zsh 2 028ec1d6f (ennen b6cceaeb7). e1–e7 = 7 ennalleen jäänyttä ovea (taso 1) → PAHIN YKSI KUVA KK:lle päätettäväksi;
    j1/j2 吉云楼 auki ennen|jälkeen → KK:lle.
 Parikuvat: scratchpadin pari.py-tapa (vierekkäin, ≤ 2000 px), itse katsottaessa sips -Z 1000.
 
