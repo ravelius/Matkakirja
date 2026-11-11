@@ -31,3 +31,6 @@ K = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodijuna (T7-symlinkki: find
 4) Overture-mittaus (ks. -1027/-0926).
 Koehaarat (ei junaan sellaisenaan): karttaseppa/sc-osm-paikka 35c1dd1a1, karttaseppa/kohteet-arkki-syvyys 42e9543f7, karttaseppa/pallo-koe 2cf7b7e48, karttaseppa/petit-palais eab6f7ad2.
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty, talot-paketti-pariisi-v15-v39-ALA-VIE. Ämpärin versionumeroa ei käytetä uudelleen (seuraava = v16).
+
+## LISÄYS 12.24 (PT, omistaja 12.21–12.22)
+Isolla iPadilla vain KK:n nimeämä valmis kokonaisuus viimeisenä ennen versiota. Kokeet, välivaiheet ja mittaukset Macilla (KJ37/KJ42 ovat Mac-ajoja, ok). KS ei tilaa iPad-ajoa itse.
