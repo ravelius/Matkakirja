@@ -126,3 +126,12 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   s4 (ristihäivytys), s4b (kallistus levosta), n1 (yksi Ohita) → KK:lle video + arkki (kopio PT). 2) iPad muisti-3 b8e641712 → syyrivi "kesken …" → korjaus.
   3) Ruutunopeus JÄLKEEN (MR58 = 224.65 a61a98089 linkissä 11.24) → fps-konsolista.py → KK (ENNEN 60 / huonoin 29,8).
 - Juoksupeli: omistajan päätös 11.09 (lisäys 8) — vain kesken olevat varjotyöt, ei kamera/drone-muutoksia.
+
+## LISÄYS 12 (11.11. 11.36, uusi sessio local_0f7f169f): mac-4 + ruutunopeus JÄLKEEN luettu
+- MAC-4 (d7a60539d): kohdat 1–5 ok (UI häipyy/palaa, kallistus 15,0° → 45,0° 3,02 s levosta, odotus 15,6 s, kartta terävä). VIKA: ristihäivytyksen keskellä
+  vaalea välähdys (kirkkaus 129 → 220 → 161; vanha sumea pysäytyskuva häipyi hitaammin kuin peite) → KORJATTU b67f370b0 (HaivytaPysaytys: peitto = peitteen peitto²,
+  unity 0). KK:lle tallenne + lokit/natiiviseppa-saapuminen-mac-4/arkki-ns.jpg + vaalea-valahdys-ns.jpg (kopio PT). JU: ajopyynto-mac-5.md → lue s4 + video
+  (kirkkaus k-*.jpg monotoninen häivytyksessä: magick … -format '%[fx:mean*255]').
+- RUUTUNOPEUS: ENNEN EI KELPAA (peli ei alkanut: avoimet glb Request timeout, latauskuva 15 min). JÄLKEEN pelasi (Taso läpi 4:00): fps-konsolista mediaani 40,
+  huonoin 28,5, gpuMs 34,8 / p95 50,5. JU: ajopyynto-ruutunopeus-ennen-2.md → lokit/natiiviseppa-juoksu-ruutunopeus-ennen-2 → vertailu KK:lle (kopio PT).
+- Cron (unity-julkaisut 9.04) ja ajovahti luotu tähän sessioon. Turhatyo-1 ALKOI 11.3x (vahti).
