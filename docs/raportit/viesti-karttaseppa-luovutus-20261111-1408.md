@@ -301,3 +301,4 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   4) Pariisi ja Lontoo pysyvät omalla mitatulla aineistollaan (ign / ea-lidar); lukittuihin taloihin ei kosketa.
 - ENSIN (KK): Wienin vakiokuva 0 (Schneiderhangasse 48.167581 16.323504, suunta vakiokuvat-wien.json) tyhjä kadunpuoli → varmista ortokuvasta tai otteen rajasta:
   aukea / otteen raja / puuttuvat talot → YKSI RIVI KK:lle ennen kuin ketjua käytetään edelleen.
+- JU 21.4x: puistopuut KJ47c (5f44f5325 sis. 90b66a261 + dedc50853) junassa 224.85 (MR80, PT pt-ok), 224.84:n (NS työkalu 3) jälkeen; PiirtoTilasto NS:n versio. Odota LINKKI 224.85.
