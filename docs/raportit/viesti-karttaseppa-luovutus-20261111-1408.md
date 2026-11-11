@@ -471,3 +471,6 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   d) MITÄÄN ketjun tuloksista ei peliin eikä jakeluun ennen KK:n sanaa.
 - Huom: KK:n 23.08 kirjoitettu ennen KS:n 23.09 ehdotusta; Helsingin syy jo mitattu (vain 1 residential-katu ≥ 12 taloa/40 m, pedestrian 9) → valintasääntö ei osu
   Helsingin isoihin kortteleihin; tarkennus KK:n linjalla vaiheessa 3.
+- PARVIS MITATTU → KK (suositus a, odottaa sanaa): skripti parvis-saanto/vaihtoehdot.py <ote>. (a) leisure=garden < 120 m², ei ≥ 1000 m²:n puiston/nurmen sisällä, ei sisäpiha
+  (≥ 6/8 sädettä osuu taloon ≤ 40 m): parvis 3/3, Pariisi 680/1453, Lontoo 1708/8520 poistuu. (b) aukio tai pedestrian ≤ 15 m: parvis 0/3 (lähin pedestrian 15–38 m; footway 3–10 m)
+  → ei. Toteutus sanalla ElavaTyyli.cs:n landcover-silmukkaan (OMT: garden-alueen ala + building-taso sisäpihatestiin), näyttö KJ46 ym46-03-a + ND-esittelyn loppu.
