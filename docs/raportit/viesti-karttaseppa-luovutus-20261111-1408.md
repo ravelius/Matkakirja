@@ -105,7 +105,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - Työlista: tilanne kirjattu riville "Pariisi: nähtävyyksien ympäristöt takaisin" (rivi "ylisuuret 1:1" on jo valmis).
 - SEURAAVAKSI: kuvat → arkki + puutelista kohteittain KK:lle (kopio PT) ENNEN korjauksia; KK päättää rajaukset → korjaukset yhtenä talot-eränä + parit.
 
-## LISÄYS 12 (18.0x): KK:n rajaukset 17.3x, erä 1–2 tehty, NOLLAUS (konteksti 30 %)
+## LISÄYS 12 (17.34): KK:n rajaukset 17.3x, erä 1–2 tehty, NOLLAUS (konteksti 30 %)
 - 17.26 nykytila + puutelista KK:lle: docs/raportit/karttaseppa-kj45-ymparistot-nykytila-20261111.md (e084a93aa), arkit K/ymparistot-kj45/kj45-arkki-1..4.jpg.
 - KK 17.3x RAJAUKSET (yksi erä): 1) Eiffel: Tripo-pohja pois, kartan Champ-de-Mars jalkoihin, puut jalkojen molemmin puolin, ei tornin alle. 2) Puusto: GP+PP-puutarhat,
   Invalidien esplanadi ja puutarhat, Louvren Carrousel + Tuileries (pallon hiekkakenttä vapaa). 3) PALAIS DE JUSTICE tavallisina 3D-taloina talokoneella oikeassa korkeudessa,
@@ -118,7 +118,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   90b66a261: KoodiPuut 598 puuta (Eiffel 164, GP 100, Invalidit 140, Louvre 194) = 598 000 kolmiota + varjot, 2 GameObjectia/puu; vain koodimallin kanssa.
   Tekijä K/ymparistot-kj45/puut/tee-puut.py (OSM natural=tree T7-planeetasta hae-puut.mjs → osm-puut.json; puistopolygonit +3 m; väli 20 m; Eiffel R 80 m, pallo R 45 m).
   ISTUTUSTAPA: kaupungin muut puut ovat maalattuina piirroskartassa (ei koodia); 3D-puut = ND:n koodipuiston tapa (KK 10.11.). Kerro KK:lle tämä tulkinta pareissa.
-- KJ46 JU:lla (pyydetty 18.0x): K/sk-mac-ymparistot-kj46.txt, 14 kuvaa, ENNEN 96e9eb2fa | JÄLKEEN 90b66a261 + MUISTI-1/2 (phys_footprint). Kuvat lokit/ks-kj46-ymparistot-*.
+- KJ46 JU:lla (pyydetty 17.3x): K/sk-mac-ymparistot-kj46.txt, 14 kuvaa, ENNEN 96e9eb2fa | JÄLKEEN 90b66a261 + MUISTI-1/2 (phys_footprint). Kuvat lokit/ks-kj46-ymparistot-*.
   KUN TULEE: katso 1000 px (IGN rinnalle K/ymparistot-kj45/orto, sama ala), tarkista: Eiffelin alla ei maalattua tornia/outoa jäännöstä pohjan alta, puut eivät
   seiso talojen/koodimallien katoilla, pallon kenttä vapaa, lasi ei lue reikänä. Muistiero > 5 % → KK:lle ennen junaa (vaihtoehto: väli 28 m ≈ puolet puista).
 - JÄLJELLÄ: 3) PALAIS DE JUSTICE talot. Talot poistettiin Tripo-aikana Citéltä (ND-alue "Talot samalla maskilla: palat-v4-nd-ranta", saari-pohja). Tee talot-erä
