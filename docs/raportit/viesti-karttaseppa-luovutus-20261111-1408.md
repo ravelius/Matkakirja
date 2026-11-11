@@ -374,3 +374,10 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   OBJ: Kartta-testeihin testi, joka kutsuu Tarkista(v, nimi) → Vie() kirjoittaa OBJ:n (kärkiväri v-rivillä), ajo OHJELMAKOHTEET_VIENTI=<kansio> sh Kartta-testit/kaanna.sh <testin nimi>.
   Blender: tee render-skripti vakiokuva_render.py:n mallilla (EEVEE, aurinko 50°/35°, taivas, väri kärkiattribuutista; OBJ-tuonti bpy.ops.wm.obj_import, Unity (x,y,z) → Blender (x, z, y)).
   Pohjaksi haara karttaseppa/sillat (työpuu /Users/Shared/Claude/wt/proto-karttaseppa-sillat) tai uusi haara juna-224:n kärjestä; ei koske ikonien verkkoihin.
+
+## LISÄYS 26 (22.2x): 224.85 linkissä, parvis-haamut → KK:n linja
+- JU: 224.85 = 4df73d409 (puistopuut KJ47c 707331562 + erä 1/2) linkissä, testit läpi → lukitun loppulistan kohta 1 VALMIS. Työlistan ympäristöt-rivi: tilanne päivitetty (auki parvis + SC).
+- PARVIS: KJ46 ym46-03-a ennen|jälkeen (dedc50853 mukana) → iso vihreä laikku poistui, pystypalkki ja kaksi π-muotoa jäivät haaleina (K/parit-kj47c/parvis-ennen-jalkeen-dedc50853.jpg).
+  KK 22.24 LINJA (ympäristöerän 2/2 osaksi): SELVITÄ LÄHDE ENSIN. Jos pieniä istutus-/pensasaitamonikulmioita → YLEINEN SÄÄNTÖ työkaluun 1 (kivetyllä aukiolla alle sovitun
+  pinta-alan kasvillisuuslaikkuja ei piirretä; raja luvuista, kaikille kaupungeille), EI käsipoistoa. Jos lähde on piirroskartan valmis kuva → lähde + vaihtoehdot KK:lle ennen korjausta.
+  NÄYTTÖ: sama pari samasta kulmasta (KJ46 ym46-03-a) + yksi kuva pelin kamerasta Notre-Damen esittelyn lopusta. KK:lle ei vastausta tähän linjaan.
