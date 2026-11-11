@@ -131,3 +131,10 @@ ennen junaa; KK katsoo junan Mac-kuvan Riemukaaren lähimmästä kierrosta. KK:n
 Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-pari KK:lle).
 - 17.14 (JU): 224.74 = 2882f055a (Lehti + Matkaopas) LINKISSÄ. Junan Mac-kuvat sk-juna-lehti-1 → proto-3d/lokit/nui-lehti-junakuvat-2882f055a
   → KATSOTTU 17.3x (6/6 ok, arkki-1000.png) ja viety KK:lle. Seuraava työ: LISÄYS 4.
+
+## LISÄYS 13 (nollauksen jälkeen 17.5x): LISÄYS 4 tehty koodina → 9c6a6f864 (natiivi-backup natiivi-ui/pallo-kyltti, KS pallo-juna-pp a0384240a:n päällä, unity 0)
+- KaupunkiPallot.KylttiKentanViereen: 3D-pallon näkyessä kyltti kentän (KpKentta + 0,5) ruutulaatikon oikealle puolelle ankkurin korkeudelle,
+  tilan loppuessa vasemmalle (hystereesi), siirtymä Malli3D:n mukaan. Vertailu `ui kaupunkipallot kyltti 0|1`; tila: kyltti-kentän-oikea/vasen.
+- AJO JU:lla: sk-pallo-kyltti-1.txt (proto-3d/_tyo/natiivi-ui) → lokit/nui-pallo-kyltti-1-9c6a6f864: 4 kameraa (KJ37:n lähin itä/pohjoinen, lähi, kauko) × a ennen / b jälkeen.
+  SEURAAVAKSI: katso täysikokoisina (b: ankkuri ja kentän etureuna näkyvät, kyltti ei ruudun reunan yli) → pari KK:lle, PT kopio. Junaan vain KK:n sanalla,
+  yhdessä KS:n pallo-juna-pp:n kanssa (ei NUI:n omaa junaa).
