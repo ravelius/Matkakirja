@@ -199,3 +199,12 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   sävy: aja savy.py-tapaan 3D vs maalattu (ym47b-41/42), valitse 42/43/44:stä lähin maalattuun ja kerro arvot; varjoraja 30–35 (lähin m lokista, ei poksahdusta);
   kolmiot: NÄKYVÄT ennen → jälkeen yleisnäkymissä, raja ~+10 %. Luvut + parit KK:lle (kopio PT). Junaan VAIN KK:n sanalla.
 - SEURAAJAN JONO: 1) KJ47b → KK. 2) Montmartre KJ43 maaston 01.00-viennin jälkeen (JU:n aamun rivi). 3) Seine ja sillat -katsaus (LISÄYS 10 kohta 3, + Conciergerie).
+
+## LISÄYS 16 (20.3x): KJ47b katsottu → KK, KJ47c JU:lla
+- KJ47b: raportti docs/raportit/karttaseppa-kj47b-puut-20261111.md, parit K/parit-kj47b/. Muisti +1,5 %, varjoraja ok, piirtokutsut +16–19 %.
+  Mittarivika: NÄKYVÄT kolmiot 0 (isVisible epätosi) → näkökartiotesti 872ad9249 / ennen a6927dd47. Champ-de-Mars katkesi puolivälissä → tee-puut-v3.py
+  (Eiffel 466, yht. 1033), sävy 1.45 1.4 1.25 → 5f44f5325 (karttaseppa/ymparistot, 758/758, unity 0).
+- KJ47c pyydetty JU:lta 20.3x (kopio PT, KK:lle tiedoksi): K/sk-mac-puut-kj47c.txt → lokit/ks-kj47c-puut-{ennen-a6927dd47,jalkeen-5f44f5325}.
+  KUN TULEE: NÄKYVÄT kolmiot ennen → jälkeen yleisnäkymissä (raja ~+10 %), Champ-de-Mars 40 orton (orto/merkit-v3-eiffel.jpg) rinnalle, sävy 42/43
+  (savy-kj47b.py-tapaan, nyt maalattu katupuusto kuvassa) → KK (kopio PT). Junaan VAIN KK:n sanalla.
+- JONO: 1) KJ47c → KK. 2) Montmartre KJ43 (01.00 jälkeen). 3) Seine ja sillat -katsaus (+ Conciergerie).
