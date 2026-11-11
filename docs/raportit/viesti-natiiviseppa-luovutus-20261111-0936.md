@@ -37,3 +37,18 @@ Ajon 3 voi perua: touch /Users/Shared/Claude/julkaisija-tyokalut/ns-laattamuisti
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: SSE-1-luenta; kopio pois + jätetyt; junaehdokas 474fb5642; vipuparit (kopio); mac-2 (kopio).
 JU: laattamuisti 1–3 ajopyyntö; varjomatka-ajopyyntö. KK: vipuparit; mac-2-tallenne + avoin 37–38 s.
+
+## LISÄYS 09.4x: KK:n valinnat (kaksi viestiä 09.4x)
+JUOKSUPELI: 1) leivotut eivät heitä elävää varjoa → TEHTY 41bbbc320 (natiiviseppa/juoksu-kopio-ehdokas = 474fb5642 + LeivotutHeittavat false, unity 0)
+= UUSI JUNAEHDOKAS, PT:lle pt-ok:ta varten. 2) varjot kokonaan pois EI; odottaa varjomatka 80/40 -paria (peruste: hahmon ja lähipuiden varjot säilyvät,
+kaukana ei pelaajan mukana kulkevaa rajaa). 3) MSAA: (a) 2× samasta kehyksestä → lisätty sk-juoksu-varjomatka.txt:hen (P1/P2-msaa2, -msaa0; JU ajaa 41bbbc320:llä),
+(b) AVOIN: 8 s juoksutallenne MSAA pois | 4× (sama reitti, iPad tai Mac iPad-koossa) – kattotiilien/saumojen välke liikkeessä. KK: 2×, jos yli puolet säästöstä, muuten pois.
+4) vastattu KK:lle: tavoite 33 ms; seuraavat vivut (piirtotarkkuus 0,80→0,70, lehvästön ylipiirto, taivas/kaukomaa) vasta parien ja KK:n sanan jälkeen.
+SAAPUMINEN ennen junaa (KK, mac-2 katsottu: selvä parannus), TEE wt proto-natiiviseppa-saapuminen (1c92f7cea):
+ 1) häivytys vasta LOPULLISESSA ulkoasussa (tarkka piirros + talot ruudulla; 36,9–38,1 s vaalea/latistunut → tarkka kerralla = ydinvika pienempänä). EI pehmennystä:
+    viimeinen kuva pysyy, kunnes lopullinen tila; jos tilaa ei voi tunnistaa luotettavasti, kerro KK:lle mitä puuttuu. (Epäily: piirroksen lähitaso/talot vasta
+    kameran 20°→AjaKeskustaanKiertaen-ajossa; valmius mitataan ennen ajoa → mittaa valmius ajon loppunäkymästä tai aja kamera loppuasentoon peitteen alla.)
+ 2) odotuksessa kuvat jatkavat kiertoa samalla liu'ulla alusta (nyt viimeinen kuva liikkumatta 31–36 s), ruutu ei saa jäätyä.
+ 3) iskulause ~1/3 nimen korkeudesta, sama fontti (nyt hiusviiva).
+ 4) näkyvä rauhallinen ~3 s kallistus jyrkemmästä (niin jyrkästä kuin valmis alue sallii) 45°:een ja suoraan kiertoon (omistaja: "liukua suoraan ylhäältä ~45°").
+ Sitten mac-3 (korjaa myös n-sarjan oleta-rivit kuten iPad-skenaariossa) + iPadin muistihuippu KK:lle.
