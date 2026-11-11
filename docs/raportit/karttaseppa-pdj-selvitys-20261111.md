@@ -17,3 +17,7 @@ Rajaus: "Palais de Justice tavallisina 3D-taloina talokoneella oikeassa korkeude
 ## Ehdotus
 Ei talot-erää Palais de Justicelle: rajaus täyttyy jo. Jos KK haluaa korkeuseroja (esim. Conciergerien tornit), se on käsin mallinnusta
 (arvio valokuvista), ei datakorjaus → KK päättää. Työkalu: K/raivaus-1-1-pdj/tutki.py (K = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodijuna).
+
+## KK:n päätös 18.34
+EI talot-erää; 23,4 m lähteestä riittää, käsin arvioituja korkeuseroja ei tehdä nyt. SEINE JA SILLAT -katsaukseen (LISÄYS 10 kohta 3) yksi katsottava
+kohta: Conciergerien jokijulkisivu — näkyykö tornien puute joelta katsottuna. Ei työtä ennen katsausta.
