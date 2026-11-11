@@ -1,0 +1,26 @@
+# Valosepän luovutus 11.11.2026 klo 10.54. Itsenäinen: vanhoja ei tarvitse lukea (korvaa 20261111-0924:n)
+
+Syy: konteksti (pehmeä raja 25 %). Tili sami.reivinen@vvi.fi. Natiivirepo `/Users/Shared/Claude/proto-3d/Matkakirja-proto`, etä `natiivi-backup` (natiivin "main" = `julkaisija/juna-224`). Ainoa worktree k33 = `/Users/Shared/Claude/wt/proto-linssiseppa2-k33`, nyt haarassa `linssiseppa2/kyna-v4` ea0bee3ce, puhdas ja pushattu. Kuvat ja ajot vain JU:n vuorolla. Id:t: PT `local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31` ≤ 3 riviä; KK `local_d5f31591-21fa-4cb0-bab3-bcd3435d075a`; JU `local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd`; KS `local_7b57e35a-3a8e-4943-aba1-c960b9eb4671`; Postivahti `local_1f31f830-9df5-41c1-8992-172e100af57f`. Viestit mcp__ccd_session_mgmt__send_message id:llä (SendMessage pysähteli). JU:n jonoloki `/Users/Shared/Claude/julkaisija-tyokalut/jono-20261103-ilta.txt`.
+
+## LINJAT
+- Näkyvä työ (3D, merkit, ilme, valikot, VALO): kuva ensin KK:lle, PT kopiona; junaan vasta KK:n sanalla. KK katsoo itse ja vaatii todisteen, joka näyttää itse asian (ei pelkkiä keskiarvoja); kerro puutteet suoraan.
+
+## 1. PILVIEN VARJOT – Mac-osa KK:n hyväksymä, iPad-osa JU:lla
+- OMISTAJAN PÄÄTÖS 09.52 (KK:n kautta): pilvet yhtä nopeasti kuin ennen ja pehmeästi täydellä päivityksellä; harvassa piirrossa (1 ruutu/s) seis, jatkavat kun tahti nousee.
+- Haara `linssiseppa2/pilvivarjo-pehmea` (juna-224 494595623 +4, unity 0): 75ab1c7de jatkuva paikka joka kehys · 2813294de PAIKALLAAN/KERROS: kello seis · 13c211af8 kello lokiin ("MATKAKIRJA karttapilvet: kello seis (Kerros)|jatkuu, kello X s, siirto Y m"; tila-rivillä myös) · fa0978bad tuuli takaisin 1 (6,3 m/s).
+- Mac todiste-5 (lokit/linssiseppa2-pilvivarjo-todiste-5-fa0978bad; kooste `_tyo/linssiseppa2/pilvivarjo/todiste-5/LUE.md`): KK 10.1x KELPAA (varjo siirtyi 20 s:ssa 132 m, ruutuerot tasaiset, kello jatkaa samasta arvosta). Puutteet kirjattu: aja ei siirtänyt kameraa (4 näytettä Concordelta), 2°:n kierto kääntää näkymää, tallenne kiinteällä askeleella (≈3 s tuulta).
+- ODOTTAA: iso iPad `sk-ipad-pilvivarjo-todiste.txt` fa0978bad → lokit/linssiseppa2-pilvivarjo-todiste-ipad-fa0978bad (JU:n jono-vs-pilvivarjo-todiste-5.zsh). Tarkista: i-lepo-0 vs i-lepo-10 (ero aukiolla ~0, tila-rivien kello sama), i-vieritys-1..3 (kello nousee, varjo siirtyy), lopun lepo (kello seis samaan arvoon), konsolin seis/jatkuu-rivit. Erokuvat: `/opt/homebrew/bin/python3 <skripti> a.png b.png ulos.png 6` (numpy, ilman -I; skriptit _tyo/linssiseppa2/pilvivarjo/tyokalut/: ero.py a b ulos kerroin, erot.py kehyskansiot…, pari.py, arkki3.py). Lähetä KK:lle polut + puutteet; KK:n sanalla MR JU:lle (pt-ok PT:ltä).
+
+## 2. KYNÄ v4 – kysymys KK:lla, iPad-hinta JU:lla
+- `linssiseppa2/kyna-v4` ea0bee3ce (juna-224 494595623 + 3, unity 0): globaali `_KynaPois` (asettamatta = päällä, komento kyna 0|1), akselikärki ei levene, Aariviiva-passissa `Stencil { Ref 8 ReadMask 8 WriteMask 8 Comp NotEqual Pass Replace }` (bitit 64 ja 128 muiden käytössä).
+- Mac-ajo lokit/linssiseppa2-kyna-v4-ea0bee3ce (18/18). Kooste `_tyo/linssiseppa2/kyna/v4/LUE.md`: reunaviiva tasainen (RK:n tumma kohta korjattu). Panthéonin PIIKKI EI POISTUNUT: se on huippuneula (OhjelmaKohdeOsat.OsaKupoli → r.Piikki, säde 0,44 m), jonka molemmat sivut saavat viivan. Varjostin ei tiedä osan paksuutta; korjaus vaatisi merkinnän verkkoon (Verkko.Syvyys/kärkivärin alfa on jo syvyyslisäys 0…1, joten esim. erillinen kanava tai Piikki-osien rajaus). KK:lta kysytty 10.54: hyväksyykö neulan vai tilaako merkinnän.
+- ODOTTAA: iPad-hinta `_tyo/linssiseppa2/kyna/v4/sk-ipad-kyna-hinta.txt` (muisti-tarkka.txt = 100) → lokit/linssiseppa2-kyna-hinta-ipad-ea0bee3ce, pilvivarjojen iPad-ajon jälkeen. Jaksot L-riveistä "MATKAKIRJA kyna: pois|päällä"; N-rivit footprint, U-rivit kehysväli. Yli 30 Mt tai näkyvä ruutuaikaero → KK:lle ennen junaa. Muuten (ja KK:n neulavastauksen jälkeen) MR JU:lle, pt-ok PT:ltä.
+
+## 3. VESITÄYTTÖ (erä B) 0829caa4e – ennallaan JU:lla
+- Ajo 3 JU:n luovutuksessa: asenna 0829caa4e, lue UUID konsolista, vasta sitten Documents/kaupunki-vesi.txt; kansio lokit/linssiseppa2-vesitaytto-ipad-3-0829caa4e; lopuksi txt tyhjäksi. Hyväksyntä: "pilarireiät täytetty" pääsäikeessä ≤ 20 ms, ei > 100 ms ruutua → PT + MR. Ohje `_tyo/linssiseppa2/vesitaytto/LUE.md`.
+
+## MUUT (ennallaan)
+- Pariisin saumat ja mäkien varjostus (KK:n tavoite). Merenpohjan puristus 97b4f29a9 KS:n koelaatoilla. Kohokartan aurinko cd74573cd: syvyyskuva laiteajossa. Hyllyvalo suljettu.
+
+## TEKNIIKKA
+PIL `/opt/homebrew/bin/python3 -I`; numpy-skriptit ilman -I. Parirajaus kynä: `_tyo/linssiseppa2/kyna/v4/rajaa.py <lokikansio> <ulos> nimi x0 y0 x1 y1 …` (1000 px × 2,752). Mac-skenaariot: `kallista`+`suunta` ennen `aja`; HUOM todiste-5:ssä peräkkäiset `aja`-komennot eivät siirtäneet kameraa (syy selvittämättä; v3/v4-kynäskenaariossa toimivat – ero: välissä `kierra` ja tallenne). Täysi tahti Macilla paikallaan: hidas `kierra 2 20`. Tallenne (`tallenne-alku nimi 30 1376`) etenee 0,02 s:n askelin: peliaika ≈ 1/5 seinäajasta, myös unscaledDeltaTime. `komento ruutu liike tila` kirjaa Ruudunpaivityksen tilan unity.logiin. iPad: `komento …` + `odota 3` väleihin, kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh`. Luovutus plumbingilla origin/mainin päälle omaan haaraan.
