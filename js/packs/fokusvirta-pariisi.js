@@ -128,43 +128,11 @@ export const FOKUSVIRTA_PARIISI = {
      * Hiljaiset osuudet: "Paluumatkalla seurasin kaksi korttelia miestä"
      * (kuljetus kohtaukseen).
      */
-    reaktiot: [
-  {
-    "id": "pariisi.r1",
-    "ankkuri": "Pariisi oli saarrettu",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r2",
-    "ankkuri": "Ostin lintutorilta kirjekyyhkyn",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r3",
-    "ankkuri": "Lintu kaarsi kerran poltetun palatsin yllä",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r4",
-    "ankkuri": "Kirjekyyhky osaa näköjään vain kotiin",
-    "tarkoitus": "huvittuu",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  }
-],
-    /* ÄÄNITE: luenta uusitaan tästä tekstistä (Äänittäjä, suomi pakotettuna); vanha äänite ei vastaa tekstiä ennen uutta ajoa. */
+    /* Reaktiot tyhjennetty 11.11.2026: vanhat ankkurit eivät osu uuteen tekstiin; uudet määritetään vasta, kun äänitteen aikaleimat on kohdistettu. */
+    reaktiot: [],
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, 11.11.2026), ämpärin täysi osoite; luennat-kokoelman url on sama. */
     luenta: "[softly] Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. [warmly] Kirjekyyhky osaa näköjään vain kotiin.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-pariisi.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE. Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json.
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
