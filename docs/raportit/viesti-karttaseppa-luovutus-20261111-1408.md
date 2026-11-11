@@ -320,3 +320,23 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   jos olemassa, muuten kaupungit-talot.json. NS cfe3324a3:n generaattori-kentät = kaupungit-talot.json (Pariisi, Lontoo) täsmälleen. Tarkistus T/aja-taulu-4.zsh.
 - JONO (KK 21.54): 1) GHSL-ehdot valmiiksi + KK:lle rivi. 2) uusi-kaupunki-ketju valmiiksi (otepolut sisäiseen; GHSL-tiilet T7:llä, sisäisellä levyllä vain 17 Gt vapaana).
   3) silta-askel (työkalu 1). 4) Lontoo mittauksena. Montmartren parit, kun yövienti tehty (JU:n aamurivi). LINKKI 224.85 odottaa yhä.
+
+## LISÄYS 23 (21.59): ketju kaikille käynnissä, silta-askel luonnos, NOLLAUS (konteksti 27 %)
+- KK:lle 21.5x lähetetty: GHSL-ehdot 1–4 tehty (1794edafd). ODOTTAA: KK:n kuittaus; GHSL-rivi pelin opas-luetteloon (ui.opas.lahde.*) KK:n tekstillä ennen ensimmäistä GHSL-kaupunkia.
+- UUSI-KAUPUNKI-KETJU (e3ebd2804, karttaseppa/tyokalu-1): aja_kaikki.py (kaikki otekansion kaupungit → <ulos>/kaikki.json + kaikki.md), uusi_kaupunki.py --kuvat
+  (Blender-luonnokset <ulos>/<id>/kuvat), GHSL_TIILET/BLENDER ympäristöstä, vakiokuvat.py: väli puolittuu 1000 → 500 → 250 m, jos 3 katua ei löydy (Dubrovnik; Pariisi/Lontoo/Wien ennallaan).
+  KÄYNNISSÄ 21.56 (taustalla, voi katketa nollauksessa): T/uudet-kaikki (T = _tyo/karttaseppa/tyokalu-1, T7), loki T/uudet-kaikki.log. JATKA SAMALLA KOMENNOLLA (valmiit ohitetaan):
+  cd työpuu/tyokalut/kaupunki; nice -n 15 /opt/homebrew/opt/python@3.14/bin/python3 aja_kaikki.py --otteet /Users/Shared/Claude/proto-3d/_tyo/karttaseppa-otteet/otteet-63 --ulos T/uudet-kaikki --kuvat
+  (~80–100 s/kaupunki). KUN VALMIS: T/uudet-kaikki/kaikki.md → KK yksi rivi (valmiit/pysähtyneet + syyt) + muutaman kaupungin vakiokuva-arkki (luonnos, ei pelikuva).
+  Odotettu: alpit pysähtyy (tyhjä ote, sääntö), Dubrovnik nyt GHSL 98 % → läpi.
+- SILTA-ASKEL (KK 21.54) LUONNOS 48031fe9e: tyokalut/kaupunki/sillat.py <id> <ote> <ulos.json> --unity-juuri <työpuu>: man_made=bridge-ääriviivat, jotka leikkaavat waterway river|canal,
+  → KaupunkiSilta-kentät JSONina (profiili sillat-data.py:n tavalla, maa pinta.py:n tavalla, oletukset kansi 9/7,5 m, pilari 4/2,5, aukko 30 m → kaaria 1–7, lasku 3 × kansi; laji: rautatie Metalli,
+  vain kevyt Jalka, muuten Kivi). Käsin tehdyt ohi sijainnista (OhjelmaKohdeSillat.cs KaupunkiSilta-rivit + TaloAlue.cs TeeSillat: Pont Neuf, Alexandre III). Pariisi: T/sillat/sillat-pariisi.json
+  65 siltaa (Kivi 36, Metalli 14, Jalka 15), 20 käsin ohi, 8 relaatiota ei tueta.
+  SEURAAVAKSI: (1) rajaa kaupungin talot-alueeseen (kaupunkitaulu.rivi(id)['raja']; nyt mukana Ivry/Charenton/Saint-Ouen); (2) järkevyysrajat → ohita + listaa (pituus > ~350 m, |MaaA − MaaB| > ~10 m:
+  way/440498228/-232/-240/440552632 ovat 465–666 m:n ratasiltoja/viadukteja, Bir-Hakeim MaaB 47 → tarkista profiili ja Passyn rinne); (3) PELIN LATAAJA: Resources/sillat-<id>.json → KaupunkiSilta[]
+  (C#: Matkakirja.Peli.MiniJson), lisää OhjelmaKohteet.cs:n KeskustanSillat-silmukan perään (Pariisi; Lontoo "lontoo"-listaan) ja TaloAlue.TeeSillat-listaan (maalatun sillan poisto palasta),
+  käsin tehdyt voittavat myös C#:ssa (etäisyys). HUOM: NS:n T1 (natiiviseppa/kaupunkitaulu) muuttaa OhjelmaKohteet.cs:ää ja TaloAlue.cs:ää → kysy NS:ltä pohja ennen C#-muutosta.
+  (4) testi Kartta-testeihin (generoidut sillat rakentuvat, ei NaN, kansi > pinta); (5) Lontoo samalla ajolla; NÄYTTÖ Mac-ajona: Pariisin ulkosillat + Lontoo, raja Alma ↔ Alexandre III vierekkäin → KK.
+- JONO (KK 21.54): 1) ketju valmiiksi (yllä) → KK. 2) silta-askel (yllä). 3) Lontoo mittauksena. Montmartren parit, kun yövienti tehty (JU:n aamurivi). LINKKI 224.85 odottaa (parvis-haamut tarkistetaan sen kuvista).
+- Levy: sisäinen 17 Gt vapaana (99 %) → isot ajot T7:lle (T on T7:llä).
