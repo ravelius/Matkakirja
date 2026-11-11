@@ -163,3 +163,20 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   "elävä kartta valmis peitteen alla X s" ja "häivytys valmis". muisti-4: odotus < 25 s + huippu (muisti-tarkka.log). → KK (kopio PT).
 - RUUTUNOPEUS VALMIS: ennen-3 37,5 / huonoin 27,4 / GPU 41,6/52,9 | jälkeen 40,0 / 28,5 / 34,8/50,5 → KK + PT lähetetty.
 - Cron ja ajovahti luotu tähän sessioon.
+
+## LISÄYS 15 — NOLLAUS TÄSTÄ (11.11. 13.0x, kontekstivahti 30 %). JATKA NÄISTÄ:
+- OMISTAJA 12.15 / KK 12.16 (PT:n välitys): ISON IPADIN JUOKSUPELIAJOT SEIS (juoksupeli rakennetaan uudelleen). Ei juoksupelin iPad-tilauksia; hahmovarjo-2
+  pysäytetty (JU 12.18). iPad-todiste vain KK:n erillisellä sanalla. Saapumisen iPad muisti-4 (204a54ecd) JATKUU.
+- TURHATYÖ-1 luettu: H1/H2 heijastus ei näy → 367ea7f0a pt-ok 224.72 (MR65 JU:lla). Valmis.
+- 1. KÄRKI (PT 12.2x, KK 12.07): LATAUSVIKA "Juoksupeli: lataus jää latauskuvaan, kun maailman tiedosto aikakatkeaa". Vaiheet 1–2 TEHTY, syy KK:lle + PT:lle 12.5x:
+  julkaistu runko (ennen d42a45345 10.11.) jumi 3/3: haku 60 s katto, epäonnistunut avoin glb (juhlasali 42 Mt jne.) haetaan uudelleen JOKAISELLE 21 huoneelle
+  (avoinPohjat[glb] täytetään vain onnistuessa, JuoksuSokkeloMaailma.Palatsi.cs:306–322) → ~21 × 60 s. Juna-224-runko (79b04e870, a61a98089) käynnistyi 2/2,
+  mutta "verkko lataus katkaistu" 41/76 s ja 69/439 glb puuttui HILJAA → ruutunopeusvertailu vajaasta maailmasta (kerrottu KK:lle). iPad 0,04–0,13 Mt/s,
+  hiljaisia katkoja 3–9; Mac curl samasta CDN:stä 22 Mt/s → epäily: rajaton rinnakkaisuus (JuoksuHahmot.Hae / JuoksuVerkko, ei jonoa eikä etusijaa; vain
+  JuoksuLeivottu KuvaHakuja 8 / GlbHakuja 6). Hiljainen vanha sokkelo: JuoksuV4Maailma.cs:530 (Palatsi null, pohja.json :86) → VapaaValmis false →
+  JuoksupeliNakyma.cs:791 LuoSokkelo ilman virhettä. Kulkukartta = Resources (JuoksuKulku), ei verkosta. Lataus: JuoksuV4Maailma.Lataa :456–561, Valmis :561.
+  KORJAUSSUUNNITELMA (odottaa KK:n sanaa): (a) yksi jono, pakolliset ensin, ≤ ~6 rinnakkain, tausta odottaa; (b) epäonnistunut URL merkitään kerran, uusinta
+  tauolla + Range-jatko; (c) ei hiljaista vajaata/vanhaa: näkyvä viesti + Yritä uudelleen; (d) todiste Macilla rajoitetulla nopeudella, iPad vain KK:n sanalla.
+  Koodipohja: wt /Users/Shared/Claude/wt/proto-natiiviseppa-turhatyo (haara natiiviseppa/juoksu-turhatyo, 9e67b65a0) tai uusi haara juna-224:stä.
+- SAAPUMINEN: mac-7 (204a54ecd) JU:n Mac-jonossa, muisti-4 iPadilla → lue (lisäys 14) → KK.
+- VAHTI: muista luoda uudelleen (Monitor vahti.sh) + cron 9.04.
