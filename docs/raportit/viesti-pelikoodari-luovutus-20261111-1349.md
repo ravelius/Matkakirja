@@ -1,0 +1,53 @@
+# Pelikoodari: luovutus 11.11.2026 klo 13.49 (konteksti 25 %, Raamattu 7.37)
+
+Edellinen: viesti-pelikoodari-luovutus-20261111-1320.md (125f97bac). TÄMÄ KORVAA SEN KOKONAAN.
+
+## 1. v133c 漱芳斋-ovi (ODOTTAA JU:ta)
+- Syy löytyi: kielletty-tausta-v133c PUUTTUU mediasta (https://media.matkakirja.app/juoksupeli/maailma-v4/kielletty-tausta-v133c/tausta.json = 404;
+  v133b ja v132 200). Paketti paikallisesti proto-3d/_valmiit/juoksupeli-kk-lavastaja-tausta-v133c-vienti-20261111. Siksi a0eaa2d8b- ja
+  904715425-ajoissa ei rakennuksia (ovet ja koristeet leijuvat). Ei häivytys, ei ovenhaun vika.
+- Ovi (−97,69; 490,03) on pienen rakennuksen (x −105…−92, z 490…493) eteläseinässä (pinnat: umpiseinä 3,25–10,25 m), EI reunuksella.
+- Selvitys + parit: proto-3d/_tyo/pelikoodari/kulkukartta/v133c/ovipari-aukio/TULOS.md. Lista tyokalut/koekuvat-ovi-shufangzhai-aukio.txt
+  (commit 904715425, haara pelikoodari/tausta-v133, proto-repo paikallinen, ei pushia).
+- Lähetetty 13.4x: JU (vienti + uusinta-ajo 904715425 samalla listalla), PT (3 riviä), LAV (kopio).
+- TEE: kun JU antaa uuden kansion → katso 3 kuvaa (vertaa v132-kansioon tarkastelukuvat-17fbf3e35-133051, pari.py:n tapaan rinnakkain)
+  → pari PT:lle (3 riviä), kopio LAV. MR vasta PT:n pt-ok:lla.
+
+## 2. KAMERALAITE PALA 2 (KK:n päätökset: tehtävänannon loppu, luku "KK:n päätökset" — LUE KOKONAAN)
+Tehtävänanto: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-kameralaite-pala2-tehtavananto.md
+Haara kameralaite/pala-2, wt /Users/Shared/Claude/wt/proto-pelikoodari-kameralaite. JÄRJESTYS (KK 13.29): E → A ja C → B:n mittaus → kytkentä + Mac.
+
+Commitit tällä vuorolla: cede375d9 (T10b syymittari SYY=1), fda4db16a (kytkentä peliin, vanha ruututapa: UusiKamera, S_enn, KameraMittari,
+komento "kamera uusi|vanha"; unity 0 virhettä) — KYTKENTÄ TEHDÄÄN UUDELLEEN E:n mukaan, 710e80733 (E KESKEN, ks. alla).
+
+E (KK 13.29, sitova): kamera kulkee pelin kiinteällä askeleella.
+(a) ohjaaja + laite 1/120 s kerran per pelin askel, syötteenä säännön paikka sillä askeleella; JuoksupeliNakyma.cs yhteensä ≤ 10 riviä
+    (askelsilmukka rivit ~1392–1397: saanto.Askel(Askel):n jälkeen yksi kutsu, esim. jv.KameraAskel(saanto)).
+(b) ruudun kamera = talletettu tila + osa-askel jäännöksellä kopiosta (sama jäännös ja S_enn kuin pelaajan näkyvä paikka), ei talleteta.
+(c) laitteen taaksepäin-ekstrapolointi pois (Kameralaite.cs vain tältä osin). (d) palan 1 testit 13/13, T10 ≤ 2 cm 30/38/60/120 pysähdys + käännös.
+
+TEHTY 710e80733 (Kameralaite.cs): Vaihe(x, t, y, h, tyonto) askeleen pituudella, ip = Paikka + PaikkaNopeus × 2·S·ennakko (ei taakse);
+Askel(tavoite, tyyli, dt) askeltaa h:lla ja antaa ulos Esikatso(tavoite, tyyli, kertyma, out v, out a, tyonto) = Vaihe kopiosta osa-askeleella.
+Palan 1 testit nyt 9/13: T06, T09, T10, T11 kaatuvat, koska ne syöttävät ruudun lopun tavoitteen ruudun dt:llä (1/60, 1/30).
+SEURAAVAKSI:
+1. KameralaiteTestit: ajotapa kiinteään askeleeseen (tavoite askeleen hetkeltä, analyyttinen t:n funktio; ruudun ulostulo laite.Esikatso
+   jäännöksellä). Väitteet ennallaan. Tarkista T06:n "ei lähde levosta" (Esikatso osa-askeleella ensimmäisellä askeleella).
+2. Seurantaohjaaja: Syota → Askel(V3 paikka, double kuvakulma) (yksi h-askel: hyppytarkistus, Vaihe(paikka), edRuutu = paikka, Tavoite = Laske(0));
+   Esikatso(V3 paikkaEnn, double osa) = Laske(osa) katse paikkaEnn:stä (Laske käyttää nyt edRuutu → parametriksi). kertyma pois.
+3. SeurantaohjaajaTestit: Pelaaja.Askel instanssikenttä (Jatkuvuus h/2), Ruutu(dt, Action<V3> askeleella) kutsuu askeleella Polku(S, SivuNyt);
+   Aja: per askel oh.Askel + laite.Askel(h); per ruutu tav = oh.Esikatso(pEnn, pel.Kertyma), a = laite.Esikatso(tav, …, pel.Kertyma); mittarit
+   askelten maksimina. Sama apuluokka T12:lle; T11 Tyontoero ja T13 (sovitin) samoin. T10b (SYY=1) näyttää eron.
+4. JuoksuSeurantaKamera: Askel(jalat, fov) per pelin askel, Kuva(jalatEnn, jaannos) per ruutu. Sitten A (τv 0,5, Te 1,0, D_min ahtauden mukaan
+   1,5 → 2,5 m) ja C (katseen ennakko v̂ × jäljen tangentti samasta ikkunasta, T7 mittari uusiksi: ylitys ≤ 1,5° yli atan(sivu/etäisyys),
+   yksi suunnanvaihto, rulla ≤ 2°) → B:n mittaus (T5/T6 a = 2,5 / 3,25 / 4,0 säännöllä a = min(4; D − 0,5; (ikkunan pienin seinäet. − 0,3)/0,24),
+   ≥ 1 m; luvut KK:lle) → kytkentä uudelleen (fda4db16a:n pohjalta: frame-osa jää, askel-osa JuoksupeliNakymaan) → Mac-tallenne (JU).
+E-selvitys ja Hermite-koe (hylätty): proto-3d/_tyo/pelikoodari/kameralaite/E-ruutunopeus-syy.md, E-hermite-koe.patch.
+
+## 3. JONOSSA
+- Kohdekartta: kuvahaut ilman kattoa (NS: Esilataajan Nakyva ohittaa katon; KohdekarttaNakyma.cs:237 ja NostotKartalla.cs:2991 Kuvat.Hae)
+  — ensin toisto Macilla rajoitetulla nopeudella, sitten ehdotus KK:lle ennen koodia. Tiedot proto-3d/_tyo/natiiviseppa/latausjono/vastaus-ii.md.
+  v133c ensin loppuun.
+- LAV:n aja-a2.zsh (JU) → vertaa m1-varmistus-kuviin. B1 (bcf32314c) junaan vain PT:n päätöksellä.
+
+Huom: tyokalut/tarkista.sh päivittää tyylikirjan (Tyylikirja.uss/.cs, tyylikirja.json) → palauta git checkoutilla, älä committaa.
+Ei agentteja käynnissä. Ei uusia lupia.
