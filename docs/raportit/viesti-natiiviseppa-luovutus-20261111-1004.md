@@ -264,3 +264,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   rivit (odotus 0 jälkeen) ja "purettu yhteensä"; 3) t1-tahti (kuva); 4) k1-karikatyyri (laatat latautuvat). → KK + Muistin keventäminen -rivi
   (python3 -I tools/asemataulu/tyolista.py --kansio /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo tilanne "Muistin keventäminen: vaiheet 0, V, 1, 2" "…").
   Sitten pt-ok-pyyntö PT:lle (junaehdokas 41ba1b7e5; QA-komennot mukana).
+- 18b KK 17.2x TARKENNUS kohtaan 2: a) 30 s:n pysähdyksessä latauksen sisäinen Range-jatko (uusinta tauolla 1/2/4/8 s, kesken[url] säilyttää MemoryStreamin)
+  yrittää ensin; virhe vasta kun jatkoyrityksetkään eivät tuo tavuja 30 s:iin (= globaali etenemisvahti laskee uusintojen tavut; TEE NYT kohdan 2 kanssa).
+  b) Yritä uudelleen jatkaa kesken jääneen tiedoston Rangella samasta kohdasta, jos pituus + ETag (tai Last-Modified) samat; muuten alusta. NYT Peru hävittää
+  kesken-MemoryStreamit (Latausjono.Peru) → b vaatii osittaisen tiedoston levylle (persistentDataPath, .osa + .meta: pituus, ETag/Last-Modified) + If-Range
+  tai vertailu + testit. Arvio KK:lle: ~80–120 riviä + 3–4 testiä = EI pieni → OMA RIVI (KK:lle kerrottu). Todiste b:lle: katkaisu kesken salin → Yritä
+  uudelleen → lokista "jatkettiin kohdasta N kt".
