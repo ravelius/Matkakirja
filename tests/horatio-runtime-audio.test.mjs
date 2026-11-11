@@ -94,7 +94,10 @@ test('Horatio-runtime on exact 45/45 completed-kuittien final-avaimissa ja kesto
     assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, id);
     assert.equal(horatioAanenKesto(`assets/audio/${nimi}`), kesto, id);
     assert.equal(horatioAanenKesto(`${AANI_JUURI}${polku}`), kesto, id);
-    assert.equal(FOKUSVIRRAT[id]?.matkakirja?.aanite, `assets/audio/${nimi}`, id);
+    // Pariisin isoisä: uusi ääni (kaupunki-intro-v3, 11.11.2026) täytenä ämpäri-URL:na; vanha Horatio-rivi jää taulukkoon.
+    const odotettuAanite = id === 'pariisi'
+      ? `${AANI_JUURI}aanet/kaupunki-intro-v3/isoisa-pariisi.mp3` : `assets/audio/${nimi}`;
+    assert.equal(FOKUSVIRRAT[id]?.matkakirja?.aanite, odotettuAanite, id);
   }
 });
 
