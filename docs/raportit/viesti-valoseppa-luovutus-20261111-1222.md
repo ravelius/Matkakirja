@@ -78,3 +78,6 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
     tarkempi laatta. Kysymykset lähetetty KS:lle (local_7b57e35a-3a8e-4943-aba1-c960b9eb4671) ja NS:lle (local_0f7f169f-2ceb-43d2-8fb4-223dda2c0870)
     ~13.0x; kokoa vastaukset. Uusi tavoitekuva (2):lle kallistetusta pelikuvasta vasta tosiasioiden jälkeen. Kaikki Macilla.
     Vihje: log "elävä kartta: … lähinäkymä … z17", "pallo kerros pakota: … striimikartan vesi". PT:lle pyydetty työlistarivi.
+- 13.1x: KS vastasi (omistaja KS; pohja Z10 101 m/px + elävä Z11–Z17 vektorit data Z14; Z17 0,79 m/px; Z18 ei auta; Z12/Z13-esipoltto tai
+  piirros kallistuksessa terävöittäisi; muisti +35–70 Mt/taso arvio). Viisi riviä lähetetty KK:lle. AVOIN: Cesiumin todellinen taso kallistetussa
+  kuvassa (Laattapalvelin.Elava.cs:139 elävä-tilarivi) Mac-ajosta; NS:n vastaus odottaa. Odota KK:n linjaa ennen työtä.
