@@ -61,3 +61,4 @@ LISÄYS 09.42: NUI bd7f0ea44 (natiivi-ui/pallo-maa, juna-224 79b04e870 + 1): pal
 LISÄYS 09.45: KJ34 Orsay (JU 09.40 rc 0, 10/10) katsottu → parit KK:lle (kopio PT) _tyo/karttaseppa/kj34-orsay/ (tee-parit.py). Odottaa KK:n OK:ta → jono 1:n junavaihe.
 LISÄYS 09.49: KK 09.46 Orsay OK → JUNAEHDOKAS f2346e167 (natiivi-backup karttaseppa/orsay-juna = juna-224 772f16b42 + b7fff2695 + Oletus "orsay" + talot v13 = palat-v37-orsay, paketti koodijuna/talot-paketti-pariisi-v13) JU:lle. Proto-worktree nyt haarassa karttaseppa/orsay-juna. Montparnasse OK → talot v14 = palat-v38-montparnasse (--edellinen v13), cherry-pick 8348e4eac tämän päälle.
 LISÄYS 09.51: JU 09.50: talot v13 ämpärissä, f2346e167 → MR59 → 224.66 (MR58:n jälkeen), odottaa pt-ok:ta. SEURAAVA PAKETTI = v14.
+LISÄYS 09.52: PT: 224.66.pt-ok f2346e167 (Orsay + v13). Nollaus PT:n pyynnöstä. Seuraaja: Monitor-vahti uudelleen, KJ36-kuvat JU:lta → jono 2.
