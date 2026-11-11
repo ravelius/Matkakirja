@@ -2,7 +2,8 @@
 
 Edellinen: viesti-pelikoodari-luovutus-20261111-1320.md (125f97bac). TÄMÄ KORVAA SEN KOKONAAN.
 
-## 1. v133c 漱芳斋-ovi (ODOTTAA JU:ta)
+## 1. v133c 漱芳斋-ovi — TEHTY 14.0x (lisäys): JU vei taustan 13.52, uusinta tarkastelukuvat-904715425-135609 katsottu, ovi seinässä,
+##    pari PT:lle ja kopio LAV:lle lähetetty 14.0x (TULOS.md). Jäljellä vain PT:n pt-ok → MR (PT pyytää). ÄLÄ toista.
 - Syy löytyi: kielletty-tausta-v133c PUUTTUU mediasta (https://media.matkakirja.app/juoksupeli/maailma-v4/kielletty-tausta-v133c/tausta.json = 404;
   v133b ja v132 200). Paketti paikallisesti proto-3d/_valmiit/juoksupeli-kk-lavastaja-tausta-v133c-vienti-20261111. Siksi a0eaa2d8b- ja
   904715425-ajoissa ei rakennuksia (ovet ja koristeet leijuvat). Ei häivytys, ei ovenhaun vika.
