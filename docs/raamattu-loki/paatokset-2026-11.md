@@ -1477,3 +1477,14 @@ Omistaja 19.58: uudet ohjeet isoisän ja pulun teksteille + "Nämä pitäisi kir
 KK ratkaisee itse ennen kortilla kysytyt asiat ja nollaa itsensä ilman korttia (Raamattu 7.27, 7.37); roolien kysymykset omistajalle tuodaan yhä KK:lle.
 KK:n tulkinta (kerrottu omistajalle): ostot, TestFlight-julkaisu sekä avaimet, luvat ja CLAUDE.md pysyvät omistajalla.
 Tarkennus 11.11.2026 klo 23.03 (omistaja KK:n selitykseen vanhasta korttisäännöstä): "Day nollata kunnes toisin sanon" (= "Saat nollata kunnes toisin sanon"): KK nollaa itsensä ilman korttia, kunnes omistaja toisin sanoo (Raamattu 7.37). Koneen CLAUDE.md:n nollausrivi päivitetty omistajan viestillä KK:n ikkunassa.
+
+## TYÖTAVAT VIIKKORAJAN SÄÄSTÖÖN (KK:n päätös 11.11.2026 klo 23.20; omistaja kysyi tehostamisesta 23.2x) (11.11.2026 klo 23.2x)
+
+Viikkoraja 56 % käytetty, kun viikosta kulunut 41 % (tahdilla täynnä noin la 14.11.).
+1) Rooli lähettää KK:lle yhden kootun viestin per valmis asia, ei väliviestejä eikä kuittauksia (Raamattu 7.23). 2) Kopio PT:lle vain, kun PT:n pitää toimia; KK ei lähetä tiedoksi-kopioita. 3) KK nollaa itsensä 30 %:ssa (7.37).
+PT seuraa viikkorajan tahtia kerran päivässä ja ehdottaa KK:lle rutiiniroolien tason laskua, jos tahti ei laske.
+Tarkennus 11.11.2026 klo 23.23 (omistaja): "Käytössä on kolme tiliä joten viikko käyttöä ei tarvitse rajoittaa sen takia mutta muuten kannattaa tehostaa" → roolien tasoja ei lasketa viikkorajan takia (KK perui edellisen kappaleen viimeisen lauseen); kohdat 1–3 pysyvät.
+
+## PT:N ROOLI KAVENNETAAN (omistajan kysymys 11.11.2026 klo 23.25, KK:n päätös 23.26) (11.11.2026 klo 23.3x)
+
+"Kannattaako päätoimittajaa enää pitää vai kannattaisiko sinun ottaa senkin rooli?" → KK: PT pidetään, rooli kavennetaan (Raamattu 7.24): tulokset ja kysymykset roolilta suoraan KK:lle; PT = juna ja yhdistämiset, Raamattu ja loki, aloitusviestit ja nollaukset, vahdit, esteiden koordinointi; yöllä PT kysyy KK:lta eikä päätä oletuksella.
