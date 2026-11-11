@@ -1382,3 +1382,7 @@ Omistaja 09.12: "miten tuohon saisi takaportin jotta iPad ei jäisi jatkossa jum
 ## JUOKSUPELIN PIIRRON KEVENNYS: PERIAATE A/B (omistaja 11.11.2026 klo 09.36, KK) (11.11.2026 klo 09.47)
 
 Omistaja ~09.36: "mutta varmasti järkevää optimoida, niin pyörii paremmin tai sitten voidaan lisätä muuta grafiikkaa ja tehosteita, kun ei käytetä laskentatehoa turhaan". KK purki 09.4x juoksuvipujen pysäytyksen osittain: A) turha työ pois (kuva ei muutu) junaan PT:n kuittauksella ilman KK:ta; B) kuvaa muuttavat (MSAA, varjot, varjomatka, tarkkuus, lehvästö) vain parilla ja KK:n sanalla. 224.65 = NS 41bbbc320 (kuvan kopio + leivottujen varjo pois, −5,7 ms, KK katsoi parin). Raamattu 2.177.
+
+## IPADIN ERROR 22 = PERITTY STDIN (JU 11.11. 09.43) (11.11.2026 klo 09.53)
+
+JU: error 22 ei johtunut laitteesta eikä wifistä, vaan nohup-jono peri nollauksessa suljetun sessiosoketin stdin:ksi ja devicectl --console kaatui. Korjaus: </dev/null jonoihin, exec </dev/null iPad-skripteihin; vianhaussa ensin lsof -d 0. Työlistan "iPad ilman wifiä" valmis. Raamattu 12.26.
