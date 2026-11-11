@@ -34,3 +34,23 @@ SEURAAVAT ASKELEET:
 - AVOIN -0040:stä: kertoja pois -poikkeuksen lokijärjestys näytettävä sopivassa ajossa (kertoja pois -kytkin skenaarioon).
 
 ## C. vakioajon uusinta (Lontoo + vakiokuvat): ei vielä ajettu (JU:n jonossa -0022:n mukaan) → PUUTE-rivit katsotaan, kun valmis.
+
+## LISÄYS 01.4x: KK 01.38 LINJA AJOLLE -5 (KORVAA kohdan B askeleet 1–2)
+- (2a) TIIVISTE-EPÄILY EI PIDÄ (KK laski: pollo.kommentti 144 mrk, tiiviste b67b8821 = koodi; äänite mediassa 11,15 s). Syy lokin hiljaisuuteen:
+  Aanet.Soita (Puhe-kanava) ei kirjoita mitään, ei soitosta eikä kieltäytymisistä. TEE: Aanet.Soita Puhe-kanavalle PYSYVÄ lokirivi soiton alkaessa
+  (tiedosto + pituus s) ja jokaisesta kieltäytymisestä syineen (jatkohiljaisuus, klippi null, KertojaPuhuu: mikä kolmesta ehdosta, PuluaaniSoi).
+  Tarkista ensin epäilty: KertojaPuhuu = Puhe.Instanssi.Soi (= puhuu) && !PuluaaniSoi — putoaako puhuu epätodeksi "odotus päättyi" -rivillä ennen
+  Kommentti(v, 0):aa (900 ms + 300 ms kysely)? Jos ei, Pulu vaikenee vain esikatselussa → korjaus samaan esikatselun haaraan.
+  UUSI EHTO 2a: "odotus päättyi … isoisa-pariisi.mp3" → sen jälkeen Puhe-kanavan alkurivi pulu-pariisi-3.mp3 ~11,2 s.
+- (3) LÄHDERIVI TÄYTTYY jo -4 p1:ssä (KK katsoi). Kuva ruudulla 3,0 s (NousukuvaLiike 1,1 + 1,0 + 0,9; omistaja 11.11. 19.58) → p2:n ehto POISTUU.
+  p3: pieni Pulun kuva kartalla → lokiin sen ruutupaikka + kuva heti paluun jälkeen.
+- (4) KK:N PÄÄTÖS 01.38: PALLOKUVA NOUSEE SANOILLA "KATSO YLÖS". Lauseet (s): 0–1,7 "Voi isoisä!" | 2,0–4,2 "Me kirjekyyhkyt…" | 4,7–7,4 "Siksi…ilmapallolla."
+  | 7,9–8,6 "Katso ylös:" | 9,1–10,9 "pallo nousee Pariisin ylle yhä." TAVOITE: nousu alkaa 7,9 s puheen alusta, lähes täysi 9,0 s, palaa kartalle 10,9 s.
+  TOTEUTUS (KK:n ehdotus): Kommentti(v, 0) antaa Sano:lle aaniLadattu-kutsun ja ajastaa aloituslennon Pulun kuvan nousun hetkeen klipin pituus − 3,25 s
+  (≥ 0); ilman klippiä (ääni pois, ei latautunut, kieltäytyminen) nousee heti kuten nyt. Vain aloituslennon nousukuva (Pariisi); muiden kuvapakka ennallaan;
+  PulunKuvaTulossa-varaus ennallaan vuoron alussa.
+- (5) TARKISTA: Pulun vuoron loppu (Lukuaika(teksti) + 280 ms → Hiljeni ja seuraukset) ei saa päättyä ennen äänitteen loppua; jos Lukuaika(144) < 11,2 + 0,6 s
+  → loppu = max(lukuaika, klipin pituus + 600 ms) kuten Kuplat.AsetaKesto. Mikään seuraava (Liiku-nappi, aarrekysymys saapuessa 224.91) ei ala Pulun puheen päälle.
+  Kerro KK:lle luku ja mitä lopusta seuraa.
+- AJO -5 KK:lle: lokirivit (1, 2a, kuvan nousun hetki suhteessa puheen alkuun, vuoron loppu) + kuvat p1 (kuva + lähderivi, ~1,5–2 s nousun alusta pelin ajassa),
+  p3, t5 → junasana → pt-ok PT:ltä.
