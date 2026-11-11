@@ -291,3 +291,13 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - SEURAAJAN JONO: 1) LINKKI-rivi 707331562:lle (JU) → kohta 1 valmis. 2) KJ48 Seine (JU ajaa KJ47c:n jälkeen) → arkki + puutelista KK:lle. 3) KK:n vastaus GHSL:stä/Wienistä.
   4) Kaupunkitaulun luku (NS cfe3324a3), otepolut sisäiseen (_tyo/karttaseppa-otteet), Lontoon tavulleen-sama-tarkistus 09693116f:n jälkeen (T/aja-lontoo-2.zsh). 5) Montmartre KJ43 maaston 01.00-viennin jälkeen.
   6) Työkalu 2: luonnoskuvat KK:lle ensin.
+
+## LISÄYS 21 (21.4x): KK 21.39 GHSL HYVÄKSYTTY (ehdot seuraajalle)
+- GHSL-ketju = työkalun 1 yleinen korkeuden varatie; EUBUCCO ei tarvita. EHDOT ennen kuin yksikään GHSL-pala menee peliin:
+  1) LAHTEET.md: GHSL GHS-BUILT-H R2023A ANBH, Euroopan komissio JRC (Pesaresi & Politis 2023, doi:10.2905/85005901-3A49-48DD-9D19-6261354F56FE), CC BY 4.0, linkki
+     https://human-settlement.emergency.copernicus.eu/ (tarkista LAHTEET.md:n sijainti ja muoto ennen lisäystä).
+  2) ghsl_kerroin 0,8 ja ghsl_hajonta 0,15 YHDESSÄ PAIKASSA oletuksina (nyt tee_palat.py:n osm-haarassa KL.get-oletuksina → siirrä nimetyiksi vakioiksi yhteen kohtaan); poikkeus vain kaupunkitaulun generaattori-kentän kautta.
+  3) uusi_kaupunki.py tulostaa korkeuden lähdejakauman (height / kerrokset / GHSL / oletus, pieni-* omana tai yhdistettynä selkeästi) ja pysähtyy, jos OLETUS > 40 % (nyt heikko-osuus laskee kaiken ilman tietoa → tarkista, että ehto = oletus-osuus).
+  4) Pariisi ja Lontoo pysyvät omalla mitatulla aineistollaan (ign / ea-lidar); lukittuihin taloihin ei kosketa.
+- ENSIN (KK): Wienin vakiokuva 0 (Schneiderhangasse 48.167581 16.323504, suunta vakiokuvat-wien.json) tyhjä kadunpuoli → varmista ortokuvasta tai otteen rajasta:
+  aukea / otteen raja / puuttuvat talot → YKSI RIVI KK:lle ennen kuin ketjua käytetään edelleen.
