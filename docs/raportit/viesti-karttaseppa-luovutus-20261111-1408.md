@@ -134,3 +134,4 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   → selvitä komento/tilasto (esim. kehityskomento ruudun kolmioista tai UnityStats Mac-ajossa) ja pyydä JU:lta lisäajo yleisnäkymästä. (c) Macin muistiero (MUISTI.txt).
   RAJAT: muisti ≤ +5 %, piirretyt kolmiot yleisnäkymässä ≤ ~+10 %. YLITYS → EI harvennusta (28 m näyttää aukkoiselta), vaan kevyt massapuu ≤ ~250 kolmiota + varjot vain lähellä
   (ND:n puiston puut ennalleen); KERRO LUVUT JA VALINTA KK:lle ENNEN TOTEUTUSTA. Kohta 3 (Palais de Justice) ennallaan jonossa, parit KJ45:n kulmista.
+- PT (KK:n linjaus 17.3x), SANATARKASTI: "ympäristöt-erä 90b66a261 EI junaan ennen KJ46:n kuvia ja lukuja. Ehto: 598 puuta × 1000 kolmiota → instansointi; yleisnäkymän kolmiot enintään noin +10 %, muisti +5 %; jos ylittyy → kevyempi puu ja varjot vain läheltä, EI harvennusta. Palais de Justice siirtyy seuraajallesi."
