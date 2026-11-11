@@ -19,7 +19,7 @@ sse64 4887 Mt; historia 3676 vs. tuore tileset 2851 Mt. SSE-2 hylätty (198 × C
 UUSI wt /Users/Shared/Claude/wt/proto-natiiviseppa-laattamuisti (haara natiiviseppa/laattamuisti 31951d8c9 = juna-224 494595623 + komennot
 `maasto rasteri <sse> <tekstuuri>` ja `maasto valimuisti <Mt>`, oletukset ennallaan, unity 0, pushattu natiivi-backup). EI junaan.
 Ajot JU:lla (ajopyynto-ipad-muisti.md): sk-ipad-muisti-1 (välimuisti 64), -2 (+ rasteri 4), -3 (+ tekstuuri 1024) → lokit/natiiviseppa-laattalataus-muisti-{1,2,3}.
-Luenta: python3 -I <scratchpad>/jaksot.py tapaan (N fp, A malloc/iogpu, U tex/Pallo/ov aikasarja); vertailu SSE-1 alkujakso 3513–3676 Mt.
+Luenta: python3 -I _tyo/natiiviseppa/laattalataus/jaksot.py <muisti-tarkka.log> <t0 ms> <t1 ms> <väli ms> (N fp, A malloc/iogpu, U tex/Pallo/ov aikasarja); vertailu SSE-1 alkujakso 3513–3676 Mt.
 PYSÄHDY kun huippu < 3200 Mt ilman näkyvää eroa (h80-muistiN ja lahin-muistiN; lahin-muisti1 = vertailu tekstuurille).
 Ajon 3 voi perua: touch /Users/Shared/Claude/julkaisija-tyokalut/ns-laattamuisti-peru-3. Tulos PT:lle (3 riviä + tiedosto).
 
@@ -56,7 +56,7 @@ SAAPUMINEN ennen junaa (KK, mac-2 katsottu: selvä parannus), TEE wt proto-natii
 ## LISÄYS 2, 09.4x: VIVUT PYSÄYTETTY (omistaja: "nyt on jotain pahasti pielessä. kyllä juoksupeli on minusta pyörinyt ihan hyvin")
 KK ja PT: KAIKKI kuvaa muuttavat vivut hyllyllä (MSAA, varjot, varjomatka, leivheitto). 41bbbc320 EI junaan; 224.64 = 474fb5642 (kopio pois, JU:n MR57).
 Syy: 58,6 ms (gpuMs = näytönohjaimen työaika, jäädytetty P1) luettiin ruutuajaksi. Faktat KK:lle lähetetty: mittauskäännöksellä koko juoksu mediaani 37,5 ruutua/s
-(5 s jaksot kehyksia/Δt, skripti <scratchpad>/fps.py), huonoin 5 s 28,3, alle 20: 0 %; botti liikkeessä 38,7; pelin mittari 41/s, nykäyksiä 10.
+(5 s jaksot kehyksia/Δt, skripti _tyo/natiiviseppa/juoksu-piirto/fps.py), huonoin 5 s 28,3, alle 20: 0 %; botti liikkeessä 38,7; pelin mittari 41/s, nykäyksiä 10.
 SEURAAVAKSI: ajopyynto-ruutunopeus.md (sk-juoksu-ruutunopeus.txt, JULKAISTU runko ilman kytkimiä/muistinäytteistystä, 6 min botti) JU:lla ennen laattamuistia
 → lokit/natiiviseppa-juoksu-ruutunopeus-1: luenta mediaani, huonoin 5 s, osuus alle 30/20, nykäykset → KK (kopio PT). Hitain 1 % ei tallennu juoksussa (kehysajat liike/lepo null).
 Varjomatka-ajo PERUTTU (ajopyyntö merkitty HYLLYLLÄ). MSAA-tallenne ja muut vivut vain, jos KK pyytää mittauksen jälkeen.
