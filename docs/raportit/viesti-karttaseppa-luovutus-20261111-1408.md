@@ -416,3 +416,17 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - SEURAAJAN JONO (23.0x): 1) aja_kaikki (jos katkesi: sama komento, LISÄYS 23) → T/uudet-kaikki/kaikki.md → KK yksi rivi (valmiit/pysähtyneet + syyt; pysähtyneitä mm. alpit tyhjä ote,
   ateena/barcelona pala > 8 Mt, sanmarino/venetsia/dubrovnik vakiokuvat < 3 katua) + muutama vakiokuva-arkki. 2) KJ49b → KK (LISÄYS 28). 3) Parvis: vaihtoehdot (a)/(b) luvuilla KK:lle (yllä).
   4) Työkalu 2 luonnokset (LISÄYS 25). Montmartren parit yöviennin jälkeen (JU:n aamurivi).
+
+## LISÄYS 30 (23.0x): KK 22.51 SILTALINJA (KJ49b → KJ49c), JU ajaa KJ49b
+- JU: KJ49b jonossa (pid 87003), 4 ajoa → lokit/ks-kj49b-sillat-{pariisi,lontoo}-<sha>; valmisrivi KS + PT. Skriptiä EI muutettu ajon jälkeen.
+- KK 22.51 (kirjoitettu ennen korjausta): 1) Alman syy verkosta → VASTATTU KK:lle 23.0x (kannen kärjet samassa tasossa, syy syvyysveto kärjissä, korjaus 4d18cf390 yleiseen rakentajaan).
+  2) SILLAN TYYPPI TODELLISUUDESTA: tarkista lähteestä (Structurae/Wikipedia) KK:n muistitieto: Mirabeau = 3 kaaren terässilta 1896, Alma = 1 välituen teräspalkkisilta 1974.
+     Nyt tyyppi ja kaaret tulevat sillat.py:stä (laji: rautatie → Metalli, vain kevyt → Jalka, muuten Kivi; kaaret = pituus / aukko 30 m, 1–7). TAVOITE: tyyppi (kivikaari / metallikaari / PALKKI = uusi laji
+     rakentajaan) ja aukkojen määrä ensin OSM-tageista (bridge:structure, material, tuet = man_made=bridge-alueen sisäiset pier-/tuki-kohteet), sitten kaupungin pieni korjaustaulu
+     (nimi → tyyppi, aukot, lähde rivillä; Pariisin generoidut Seinen sillat taulu TÄYTEEN nyt), viimeisenä oletus pituudesta. Uusi kaupunki toimii ilman taulua. Kerro KK:lle, mistä tyyppi nyt tulee.
+  3) SÄVY: generoitu silta = katu veden yli → kansi kartan kadun sävyyn (KatuKartta-tyyppisesti, sama kuin korvattu tie), kyljet + kaide astetta tummemmat kivi-/metallisävyllä,
+     kaarien alus tumma kuten nyt. Mirabeaun oikean pään vaalea kiilaläikkä pois (pää liittyy rantakatuun samassa tasossa ja sävyssä; katso SillanLasku/LaskuB). Käsin tehdyt ennallaan.
+  4) KUVAT (KJ49c kohtien 2–3 jälkeen): raja Alma ↔ Alexandre III yhdessä kuvassa; Lontoo Blackfriars + London Bridge läheltä; kummastakin kaupungista 45° yleis ennen|jälkeen samalla rajauksella;
+     levein ja pisin silta läheltä: Pariisi way/996671272 (48.900292 2.381194, 47 m) ja Pont Aval (48.834892 2.264338, 333 m); Lontoo Grosvenor (51.484499 −0.147352, 51 m) ja
+     way/837943387 (51.514593 0.004808, 349 m). Arkit 1000 px + täysikokoiset parit. KK katsoo → junasana. Pohja: tee-sillat-kj49b.py (sillat-kj49b/).
+- SEURAAJAN JONO: 1) aja_kaikki → KK rivi. 2) KJ49b kuvat → KK (vyöt poissa?). 3) Siltalinja 2–3 + KJ49c. 4) Parvis (a)/(b) → KK. 5) Työkalu 2 luonnokset. Montmartre yöviennin jälkeen.
