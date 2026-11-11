@@ -368,3 +368,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - KK-VIESTI (kopio PT) vasta kun katko-3 + palkki-2 luettu: 3-1…5 OK (21f), palkki ja katko tila. Junaehdokas sen jälkeen.
 - JONO JU:lla sen jälkeen: pala3-luettelo-1 (0f851ddbd) → koekamera-1 (LAV, 21e). LAV:lle kameran pohja K-kuvista, kun valmis.
 - Vahdit sessiokohtaisia: luo Monitorit uudelleen (latausjono-palkki-2, -katko-3, pala3-luettelo-1, pala3-koekamera-1; "valmis N s" = valmis). Cron 9.04 LUO UUDELLEEN.
+- 22b (20.1x) PALKKI-2 (34b73284a) LUETTU: lataus OK (439/439, pisin etenemätön 4,3 s), palkki EI parantunut: 0,757 ~50–60 s (muurikate), 0,161 ja 0,080 ~30 s.
+  → muurikatteen aikana ei valmistu pakollisiakaan; lohko odottaa jotain muuta (CPU, levy tai taustan glb-työ). SEURAAVA: muurikatteen alavaiheiden kestot lokiin
+  (Hae glb / Lue / C3-json / C3-malli / C2 / vanha kate) + Hanta(0, x) niiden väliin; vaihe 0 (0,080) ja vaihe 3 alku (0,161) samoin. Ei kelloa.
+  Jono JU:lla: NUI HETI (KK) → katko-3 ee10425ff → pala3-luettelo-1 → koekamera-1.
