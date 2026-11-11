@@ -1394,3 +1394,9 @@ Omistaja: "voisiko pilvet liikkua yhtä nopeasti kuin ennen ja pehmeästi, kun r
 ## JUOKSUPELIN VARJOT LEIVOTTUINA, ELÄVÄ VAIN PELAAJALLA (omistaja 11.11.2026 klo 09.54, KK) (11.11.2026 klo 09.59)
 
 Omistaja: "Eikö juoksupeliin kannattaisi leipoa kaikki varjot paikalleen? Se on todella ärsyttävän näköistä esimerkiksi aloituslennossa, kun varjot piirtyvät pikkuhiljaa näytölle jo piirrettyjen varjojen päälle. Eli siellä on tavallaan tuplavarjot. ainoastaan pelaajan varjo kannattaa piirtää pelin aikana." KK suositteli kyllä; Juoksupeli-kärjen jonon alkuun. Tavoite: paikallaan pysyvä varjo vain leivonnasta, ei ilmestymistä eikä tuplia, puiden läikkä pehmeä. NS johtaa (selvitys 1–5 KK:lle ensin), LAV leivonta, PK hahmot ja ovet; hahmojen läikkä KK:n parilla.
+
+## SALIN VARJOT LEIVOTAAN; KK AJATTELEE MUUTOSTYÖN ENSIN ITSE (omistaja 11.11.2026 klo 10.15, KK) (11.11.2026 klo 10.17)
+
+Omistaja: "Salin varjot voi myös laskea suoraan valmiiksi, koska ne eivät näy muulloin kuin silloin, kun keisari tulee sisään, joten ne voidaan suoraan laskea eri valon suunnasta valmiiksi etukäteen. sinun pitää ajatella jatkossa paremmin. Voiko olla, että nojaat liikaa muiden sessioiden palautteeseen tällaisissa tavallaan muutostöissä? Sinun itse kannattaa ajatella asia aina läpi jos kyse on muutostyöstä ja sitten laittaa vasta sessio tekemään työtä, eikä toisinpäin."
+- Sali: KK perui salipoikkeuksen; sali leivotaan omasta valon suunnastaan (oma valokartta, tarvittaessa kaksi + ristihäivytys), elävä varjo vain pelaajalla. NS vaihto, LAV leivonta v133:n jälkeen.
+- Työtapa: Raamattu 7.4 KK:n riville "MUUTOSTYÖSSÄ KK AJATTELEE ENSIN ITSE LÄPI" (KK:n sanamuoto).
