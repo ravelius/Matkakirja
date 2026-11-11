@@ -145,3 +145,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   näytteessä → kohinaa (puut laskennallisesti < 5 Mt, jaetut verkot). Kolmioehto (598k + varjot) ylittyy todennäköisesti → EHDOTETTU: kevyt massapuu ≤ ~250 kolmiota (puu-1
   kevennettynä, sama atlas), instansoitu piirto per alue+laji (Graphics.RenderMeshInstanced tms. 1 196 olion sijaan), varjot vain < ~400 m, ND:n puisto ennallaan; ~150k kolmiota.
   KK:n OK:n jälkeen toteuta + mittaa yleisnäkymän piirretyt kolmiot ennen/jälkeen (selvitä komento) + uusi KJ46-ajo.
+- KK 17.5x: HYVÄKSYTTY valinnat 1–4 (kevyt puu ≤ ~250 kolmiota samalla atlaksella ja sävyllä, yksi instansoitu piirto per alue ja laji, varjot vain < ~400 m, ND:n puiston puut ennallaan).
+  NÄYTTÖ: (a) yleisnäkymän PIIRRETYT kolmiot ja piirtokutsut ennen/jälkeen samasta kamerasta RUUDUN TILASTOISTA (ei laskennallisesti), raja ~+10 % kolmioissa;
+  (b) muisti NS:n tila-rivin laskureilla (tekstuuri- ja varattu muisti), EI prosessin näytteillä (±700 Mt); (c) parit KJ45:n kulmista + lähikuva kevyestä puusta ~100 m:stä
+  ND:n puiston puun rinnalla; (d) varjoraja 400 m liikkeessä: kaksi kuvaa rajan molemmin puolin samasta puurivistä (ei näkyvää poksahdusta). Junaan KK:n sanalla kuvista ja luvuista.
+- SEURAAJAN JONO: 1) kevyt puu + instansointi + lähivarjot haaraan karttaseppa/ymparistot (90b66a261:n päälle), testit, näyttö a–d JU-ajolla → KK. 2) Palais de Justice talot. 3) Montmartre KJ43 (01.00 jälkeen).
