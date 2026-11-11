@@ -36,3 +36,14 @@ Taustat: -1143 (esittelyn rajaus, NS kohta 6), -1125, -1027 (haarat natiivi-ui/l
   sulun alussa ja PaivitaEsitysKatse ilman rivin 2420 odotusta mutta silmää säilyttäen). Todiste: tallenne sulusta, keskiero ei piikkiä lopussa.
 
 ## Avoimet: NS kohta 6 (b) mac-4 lappu (-1143 kohta 2) odottaa NS:ää. Remote Control: ei kytketty (vain omistajan pyynnöstä).
+
+## LISÄYS 12.1x (korvaa kohtien 1, 3 ja 4 tilan)
+- JUNASHA NYT b83baccaf (natiivi-ui/napautus-juna) = 63b09d5a0 + juna-224 kärki 17fbf3e35 (PT: pohja juna-224 kärki), unity 0.
+- Työ E: KK 12.2x: kuva ennen junaa, täysikokoinen yläpalkin rajaus isolla ja pienellä iPadilla. Iso viety KK:lle (lokit/nui-napautus-juna-1-63b09d5a0/
+  j0-kartta-yla.png, j1-palkki-yla.png; siisti, ei päällekkäisyyttä). Pieni iPad JU:lla: napautus-juna-2 b83baccaf → lokit/nui-napautus-juna-2-b83baccaf.
+  SEURAAVAKSI: rajaa yläpalkki (`magick X.png -crop <leveys>x<~20 % korkeudesta>+0+0`), katso, vie KK:lle. KK OK → PT:lle "b83baccaf junaan" (PT antaa pt-ok).
+  PT 12.1x halusi E:n irti ilman KK:n OK:ta; KK:n ohje (kuva ensin) ratkaisee – jos KK hylkää E:n, peru 569de90bb napautus-juna-haarassa.
+- kohteet-arkki-2 VALMIS 12.04 (60/60, NRE 0) → lokit/nui-kohteet-arkki-2-919e7e855: arkit ja arvio tekemättä (kohta 3).
+- Sulun liikahdus: KK HYVÄKSYI korjauslinjan (kohta 4). Todiste: KK:n mittaus kummastakin videosta – sulun lopussa yksikään näyte-ero ei ylitä
+  edeltävää eikä kirkkaus hyppää. Tee omaan haaraan napautus-juna-haarasta; tallenne vaatii korjatun esikatselun (juna-224 kärjessä mukana).
+- matkaopas-3 JU:lla napautus-juna-1:n rinnalla.
