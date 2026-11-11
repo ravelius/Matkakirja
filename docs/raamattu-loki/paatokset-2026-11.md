@@ -1476,3 +1476,4 @@ Omistaja 19.58: uudet ohjeet isoisän ja pulun teksteille + "Nämä pitäisi kir
 "Saat tehdä kaikki päätökset puolestani sekä nollata ilman kysymistä."
 KK ratkaisee itse ennen kortilla kysytyt asiat ja nollaa itsensä ilman korttia (Raamattu 7.27, 7.37); roolien kysymykset omistajalle tuodaan yhä KK:lle.
 KK:n tulkinta (kerrottu omistajalle): ostot, TestFlight-julkaisu sekä avaimet, luvat ja CLAUDE.md pysyvät omistajalla.
+Tarkennus 11.11.2026 klo 23.03 (omistaja KK:n selitykseen vanhasta korttisäännöstä): "Day nollata kunnes toisin sanon" (= "Saat nollata kunnes toisin sanon"): KK nollaa itsensä ilman korttia, kunnes omistaja toisin sanoo (Raamattu 7.37). Koneen CLAUDE.md:n nollausrivi päivitetty omistajan viestillä KK:n ikkunassa.
