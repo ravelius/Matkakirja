@@ -29,3 +29,8 @@ KK: Île Seguinin joen suorakaide, r7:n vaakareuna ja r8:n terävä/pehmeä raja
 
 ## Muu
 Maa A (8693823d2) SEIS. Pilvivarjo 51e33fb4f MR66 → 224.72. Kynä v4 MR63 (224.70). Vesitäyttö 0829caa4e JU:lla ennallaan.
+
+## LISÄYS 14.2x
+- JU: muste-1 jonossa (Mac) → lokit/linssiseppa2-muste-1-1efd29cb4, rivit vs-pyydetyt-rivit.txt.
+- NS katsoi 1efd29cb4: OK junaehdokkaaksi, kun muste-1-pari katsottu ja unity-tarkistus 0. File-lähde, avainsana ja pois = ennallaan oikein.
+  KERRO KK:LLE junaehdotuksessa: multi_compile kaksinkertaistaa tileset-varjostimen fragmenttivariantit (käännösaika ja varjostinmuisti kasvavat jonkin verran).
