@@ -73,3 +73,10 @@ T09: LaitePeli-rajat saa laskea uudelleen (kerroin 1,25 pysyy). Kirjaa raporttii
 ja uudet huiput (a, j); JOS jompikumpi muuttuu yli 5 %, kerro KK:lle ENNEN rajan muutosta.
 Sitten T06/T10 ajotapa kiinteään askeleeseen, ohjaaja Askel/Esikatso, A + C, B-mittaus, kytkentä ja Mac-tallenne. KK lukee Seurantaohjaaja.cs:n
 ja kytkennän diffin kokonaan ja arvioi tallenteesta etäisyyden ahtaassa käytävässä.
+
+## LISÄYS 16.2x (PT 16.1x herätys): E(1) TEHTY b2b0325c7 (haara kameralaite/pala-2)
+Keski() laitteessa (askel ja Esikatso, kaikki kentät, Leikkaa nollaa = ehdot 1–3); T11 edellä 0,17 cm (raja 1 cm, ehto 4); T10 kiinteällä
+askeleella kaikilla dt 0,17 cm; T09 huiput a 20,32 → 20,29, j 110,8 → 107,85 (< 5 %) → Nykays 138,5 → 134,8. Palan 1 testit 12/13.
+AUKI: T06 "ei lähde levosta" v 0,0173 m/s (raja 0,01) 3 askeleen jälkeen; vanha ulostulo = askelta vanhempi tila (2 askelta) → KYSYTTY KK:lta
+16.2x (raja vai mittaushetki). EI VIELÄ: ehto 1:n testi (jatkuvuus askelrajalla: Esikatso(osa = h, seuraavan askeleen tavoite) == täysi askel)
+→ lisää KameralaiteTestit:iin. Sitten ohjaaja Askel/Esikatso + SeurantaohjaajaTestit-ajuri (kohta 2.2–2.4 yllä).
