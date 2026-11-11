@@ -288,3 +288,17 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 19b (17.5x): JU:n latausjono2-1 (9fb80c825) JUMI LOD1:ssä (haussa 0, pakollisia 0, valinnaisia 7, > 6 min). Syy: JuoksuLeivottu.HaeKuvat ohitti taustan
   aloittamat kuvat (valinnaisia, tauolla latausrajan jälkeen). KORJAUS d4fc36645: Latausjono.Nosta(KuvaUrl) + Vahdi: jumissa oleva valinnainenkin → Virhe
   (tyhjä jono ei). 925/925, unity 0. Mac-sarja -3 nyt d4fc36645:llä (JU:lle kerrottu; 7b7c06396 ei kelpaa).
+
+## LISÄYS 20 — NOLLAUS TÄSTÄ (11.11. 18.1x, kontekstivahti 25 %). JATKA NÄISTÄ:
+- JU ajaa latausjono3-sarjan d4fc36645:llä (hiljaisuusraja 1000 s): lokit/natiiviseppa-juoksu-latausjono3-1…5 + 3-katko-1. JU:n 10 min "SEIS" 2-1:ssä ja
+  ensimmäisessä 3-1:ssä oli JU:n oma vahti; 2-1 (9fb80c825) oli SILTI aito jumi (sama tila > 5 min) → korjattu d4fc36645 (PT:lle kerrottu).
+- LUE sarja: python3 -I /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/lue.py <kansiot> → 5/5 kulkukartta ladattu, mallit 439, pisin etenemätön < 30 s,
+  katko: K1-virhe + K1b-valikko-poistu + K2-uudelleen → yksi viesti KK:lle (kopio PT).
+- PALKKI EI TÄYTÄ ≤ 15 s -EHTOA (3-1-katkaistu-10min, d4fc36645): seisoo 0,080 ~40 s (vaihe 0: sokkelo.Lataa jatkuu moduulien jälkeen, k katkaistu Osa-kattoon),
+  0,16–0,19 ~60 s (vaihe 3 alku), 0,882 > 90 s (LOD0-kierroksen jälkeinen häntä: kaukopuut, muurikate, C2, osasarja, kaiteet, ulkorengas = vain ~5 yksikköä;
+  JuoksuSokkeloMaailma.Palatsi.cs :290 LatausYhteensa, :723 LatausValmiit = LatausYhteensa). Kesken-tavuosuus liikuttaa vain 1 yksikön (< 1 px).
+  KORJAUSIDEA (ei tehty): hännän vaiheille omat yksiköt tiedostojen mukaan TAI palkkiin leivotun paketin tiedostojen valmiusosuus (JuoksuLeivottu: hakemisto
+  1054 tiedostoa, kuvatLevylla, glb-esihaku-laskurit :308/:333) painotettuna; vaihe 0: k vie kohti Moduulit→Pohja-rajaa, kun moduulit valmiit. Mitoita VALMIIN
+  3-1:n aikajanalla (palkkirivit 10 s välein), sitten yksi erillinen Mac-ajo palkille (sk-juoksu-latausjono.txt), ei koko sarjaa uudelleen.
+- KK:lle palkista kerrotaan sarjan tuloksen yhteydessä (mitä seisoi ja korjaus tulossa).
+- Cron 9.04 (unity-julkaisut.py) + Monitor vahti-mac.sh LUO UUDELLEEN.
