@@ -1378,3 +1378,7 @@ Omistaja: "Kirjaa äänitys ohje raamattuun ja tarkista että siellä ei ole kil
 ## ISON IPADIN JUMIN TAKAPORTTI KÄYTÖSSÄ (KK 11.11. 09.1x, omistajan havainto 09.12) (11.11.2026 klo 09.29)
 
 Omistaja 09.12: "miten tuohon saisi takaportin jotta iPad ei jäisi jatkossa jumiin? eikö peliä voi vain tappaa ja käynnistää uudestaan". JU otti käyttöön A–C (ipad-takaportti.zsh, ipad-skenaario-f1.zsh, C-raja 360 s), ei pelin koodia. Raamattu 12.26 ja 7.41.
+
+## JUOKSUPELIN PIIRRON KEVENNYS: PERIAATE A/B (omistaja 11.11.2026 klo 09.36, KK) (11.11.2026 klo 09.47)
+
+Omistaja ~09.36: "mutta varmasti järkevää optimoida, niin pyörii paremmin tai sitten voidaan lisätä muuta grafiikkaa ja tehosteita, kun ei käytetä laskentatehoa turhaan". KK purki 09.4x juoksuvipujen pysäytyksen osittain: A) turha työ pois (kuva ei muutu) junaan PT:n kuittauksella ilman KK:ta; B) kuvaa muuttavat (MSAA, varjot, varjomatka, tarkkuus, lehvästö) vain parilla ja KK:n sanalla. 224.65 = NS 41bbbc320 (kuvan kopio + leivottujen varjo pois, −5,7 ms, KK katsoi parin). Raamattu 2.177.
