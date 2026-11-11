@@ -1,7 +1,7 @@
 // Kaupungin nimi + iskulause kertoja Williamin äänellä (omistaja 11.11.2026 klo 08.34 ja 08.50; KK:n päätös, Raamattu 5.1).
 // YKSI otto (61 riviä, eleven_v4_turbo, suomi pakotettuna), leikattu kaupungeittain: SAAPUMISPUHEET.url = nimi + iskulause; SAAPUMISPUHEET_NIMET = pelkkä nimi erikseen (ei sisältöpaketissa; skeemalaajennus vain NS:n/PT:n päätöksellä).
 // Korvaa isoisän (Viisas Kertoja) saapumispuheet; isoisän otot jäävät levylle, kytkentä on pois. Vaduz: yksi uusintaotto (Reinin laaksossa).
-// Ottoteksti ja tarkistus: docs/raportit/aanittaja-kaupunkinimet-william-20261111.md. Media: aanet/kaupunkinimet-william-v2/<id>/.
+// Ottoteksti ja tarkistus: docs/raportit/aanittaja-kaupunkinimet-william-20261111.md. Media: media.matkakirja.app, kansio kaupunkinimet-william-v2.
 export const SAAPUMISPUHE_AANI = Object.freeze({
   "voiceId": "oae6GCCzwoEbfc5FHdEu",
   "model": "eleven_v4_turbo",
