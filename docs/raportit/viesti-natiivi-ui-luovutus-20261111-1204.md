@@ -53,3 +53,8 @@ Taustat: -1143 (esittelyn rajaus, NS kohta 6), -1125, -1027 (haarat natiivi-ui/l
   VIKA: etusivun kuvana yhä Eiffel ja oppaan jaksoista puuttuivat kuvat → päätason jaksoissa kuvat ovat avaimella "kuvat", jäsennin luki vain "kuva".
 - Korjattu 23f6f6d07 (natiivi-ui/matkaopas-3 kärki, LehtiSisalto.Opas), unity 0. JU:lla matkaopas-4 (sk-matkaopas-4.txt) → lokit/nui-matkaopas-4-23f6f6d07.
   SEURAAVAKSI: tarkista etusivun kuva (Pariisissa Tour Saint-Jacques, vaaka) ja jaksojen kuvat oppaassa → KK:lle kuvat (m1, m2, m4, m5), PT kopio.
+
+## LISÄYS 3, 12.1x: JUNA
+- KK 12.12 HYVÄKSYI b83baccaf junaan (iso + pieni iPad, työ E mukana). Sha nimetty PT:lle, pt-ok pyydetty → JU vie. Ei muuta tehtävää junasta.
+- KK:n huomio (ei estä): pienellä iPadilla noston valokuva peittää Concorden aukion kyltin alun; jos kuvan paikkaa siirretään, väistä kylttejä.
+- Seuraavat: matkaopas-4 (JU:lla) → KK; kohteet-arkki-2 arkit → KK; sulun korjaus (PudotaEsitysKatse) liikemittauksella.
