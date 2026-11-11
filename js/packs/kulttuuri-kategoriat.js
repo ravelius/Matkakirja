@@ -114,10 +114,8 @@ export const KULTTUURI_KATEGORIAT = {
            * kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-lontoo-westminster-thames.jpg',
-          lyhyt: 'Westminsterin palatsin kellotornin Big Ben on lyönyt tunteja vuodesta 1859.',
-          selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden '
-            + '1834 palon jälkeen, ja sen kellotornin Big Ben on '
-            + 'lyönyt tunteja vuodesta 1859.',
+          lyhyt: 'Westminsterin palatsin kellotornin Big Ben soi ensi kerran 1859.',
+          selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden 1834 palon jälkeen, ja sen kellotornin Big Ben soi ensi kerran 1859.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -161,10 +159,8 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png',
-          lyhyt: 'Sky Gardenista Lontoossa näkyvät Thames, Tower Bridge ja Tower of London.',
-          selite: 'Sky Garden on julkinen puutarha ja näköalapaikka 20 Fenchurch Street '
-            + '-pilvenpiirtäjän ylimmissä kerroksissa. Ulkoterassilta näkee Thamesin, Tower Bridgen '
-            + 'ja Tower of Londonin.',
+          lyhyt: 'Sky Gardenista Lontoossa avautuu näkymä Thamesin yli kaupunkiin.',
+          selite: 'Sky Garden on julkinen puutarha ja näköalapaikka 20 Fenchurch Street -pilvenpiirtäjän ylimmissä kerroksissa. Ulkoterassilta avautuu näkymä Thamesin yli Lontooseen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -174,7 +170,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png',
-          lyhyt: 'Lontoon ensimmäisiä kaasukatuvaloja sytytettiin Pall Mallilla vuonna 1807.',
+          lyhyt: 'Lontoossa kaasukatuvalot yleistyivät 1800-luvun alussa; Pall Mall valaistiin kaasulla 1807.',
           selite: 'Kaasuvalon edelläkävijä Frederick Albert Winsor valaisi katua Pall '
             + 'Mallilla, ja Westminster Bridge valaistiin kaasulla 31. joulukuuta 1813.',
           lahde: 'Matkakirjan havainnekuva',
@@ -186,8 +182,7 @@ export const KULTTUURI_KATEGORIAT = {
            * Rajaus: Kuvasuhde 3:2 (2048x1362), rajausta ei tarvita.
            */
           tiedosto: 'Thames Clipper Hurricane Approaching Tower Bridge 2009.jpg',
-          lyhyt: 'Thames Clippersin jokibussi Hurricane Clipper kiitää Tower Bridgen ohi Thamesilla '
-            + 'Lontoossa.',
+          lyhyt: 'Thames Clippersin jokibussi Hurricane Clipper lähestyy Tower Bridgeä Thamesilla Lontoossa.',
           selite: 'Thames Clippersin jokibussiliikenne alkoi toukokuussa 1999, ja Hurricane Clipper '
             + 'otettiin käyttöön vuonna 2001.',
           lahde: 'David Merrett, Wikimedia Commons (CC BY 2.0)',
@@ -1827,10 +1822,8 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-praha-st-vitus.jpg',
-          lyhyt: 'Pyhän Vituksen katedraalin rakentaminen alkoi 1344 Kaarle IV:n käskystä ja valmistui vasta 1929.',
-          selite: 'Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 '
-            + 'Kaarle IV:n käskystä Matias Arraslaisen ja Peter Parlerin '
-            + 'johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929.',
+          lyhyt: 'Pyhän Vituksen katedraalin rakentaminen alkoi 1344 Kaarle IV:n aloitteesta ja valmistui vasta 1929.',
+          selite: 'Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 Kaarle IV:n aloitteesta Matias Arraslaisen ja Peter Parlerin johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -1849,10 +1842,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-praha-tyn-church.jpg',
-          lyhyt: 'Tynin kirkon kuoriin, 1300-luvulta rakennettuun, haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.',
-          selite: 'Tynin kirkkoa rakennettiin 1300-luvulta lähtien '
-            + 'vanhankaupungin pääkirkoksi, ja sen kuoriin haudattiin '
-            + 'tähtitieteilijä Tyko Brahe vuonna 1601.',
+          lyhyt: 'Týnin kirkkoon, 1300-luvulta rakennettuun, haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.',
+          selite: 'Týnin kirkkoa rakennettiin 1300-luvulta lähtien vanhankaupungin pääkirkoksi, ja sinne haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -1874,7 +1865,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png',
-          lyhyt: 'Čertovka-kanava kulkee Prahan Malá Stranan läpi vesimyllyn ohi.',
+          lyhyt: 'Čertovka-kanava kulkee Prahan Malá Stranassa vesimyllyn ohi.',
           selite: 'Čertovka on keskiajalla rakennettu kanava, joka säätelee vettä joenvarren '
             + 'myllyille ja erottaa Kampan saaren mantereesta.',
           lahde: 'Matkakirjan havainnekuva',
@@ -1910,9 +1901,8 @@ export const KULTTUURI_KATEGORIAT = {
            * Rajaus: Kuvasuhde on jo 3:2, ei rajausta tarvita.
            */
           tiedosto: 'Prague 2010 Tatra T3 and Hradschin.jpg',
-          lyhyt: 'Tatra T3 -raitiovaunu ajaa Mánesin sillalla, taustalla Prahan linna.',
-          selite: 'Mánesin silta avattiin 1914 ja valmistui kokonaan 1916. Tatra T3 -vaunuja '
-            + 'valmistettiin Prahan Smíchovissa vuosina 1960–1997 lähes 14 000.',
+          lyhyt: 'Tatra T3 -raitiovaunu ajaa Prahan linnan edessä.',
+          selite: 'Tatra T3 -vaunuja valmistettiin Prahan Smíchovissa vuosina 1960–1997 lähes 14 000.',
           lahde: 'hrs51, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -2843,27 +2833,20 @@ export const KULTTUURI_KATEGORIAT = {
            * kuvateksti ennallaan — sama kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-wien-stephansdom-fiaker.jpg',
-          lyhyt: 'Stephansdomin etelätorni (1433) oli vuosisatoja Euroopan korkeimpia; katossa on yli 230 000 laattaa.',
-          selite: 'Stephansdomin etelätorni valmistui 1433 ja oli '
-            + 'vuosisatoja Euroopan korkeimpia; kirkon kirjava '
-            + 'tiilikatto on ladottu yli 230 000 laatasta.',
+          lyhyt: 'Stephansdomin etelätorni (1433) kohoaa noin 136 metriin; katossa on yli 230 000 laattaa.',
+          selite: 'Stephansdomin etelätorni valmistui 1433 ja kohoaa noin 136 metriin; kirkon kirjava tiilikatto on ladottu yli 230 000 laatasta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-wien-schonbrunn.jpg',
-          lyhyt: 'Schönbrunnin 1441 huonetta ja puutarhat rakennettiin kilpailemaan Versailles\'n kanssa.',
-          selite: 'Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 '
-            + 'huonetta ja puutarhat rakennettiin kilpailemaan '
-            + 'Versailles\'n kanssa.',
+          lyhyt: 'Schönbrunnin 1441 huonetta ja puutarhat tekivät siitä Versailles\'n itävaltalaisen vastineen.',
+          selite: 'Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 huonetta ja puutarhat tekivät siitä Versailles\'n itävaltalaisen vastineen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-wien-state-opera.jpg',
-          lyhyt: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan ja on esiintynyt lähes joka ilta.',
-          selite: 'Valtionooppera avasi 1869 Ringstrassen '
-            + 'loistorakennusten sarjan, ja sen lavalla on esiinnytty '
-            + 'joka ilta pommituksista 1945 vain kymmenen vuoden '
-            + 'tauolla.',
+          lyhyt: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan, ja sen lavalla on noin 350 esitystä vuodessa.',
+          selite: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan; pommitukset tuhosivat sen 1945, ja talo avattiin uudelleen 1955. Nykyään siellä on noin 350 esitystä vuodessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -3782,13 +3765,8 @@ export const KULTTUURI_KATEGORIAT = {
            * selite kertoo tässä katedraalista — uusi kohde karuselliin.
            */
           ampari: 'herokoe/hero-madrid-almudena.jpg',
-          lyhyt: 'Almudenan katedraali (1883–1993) on ainoa Espanjan katedraali, jonka paavi on vihkinyt.',
-          selite: 'Almudenan katedraalin rakentaminen alkoi 1883 markiisi '
-            + 'Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; '
-            + 'paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993 '
-            + 'ainoana Espanjan katedraalina, ja se on käännetty '
-            + 'poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa '
-            + 'vastapäätä.',
+          lyhyt: 'Almudenan katedraalin (1883–1993) vihki paavi Johannes Paavali II 1993.',
+          selite: 'Almudenan katedraalin rakentaminen alkoi 1883 markiisi Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993, ja se on käännetty poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa vastapäätä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -3869,10 +3847,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Azotea del Circulo de Bellas Artes, Madrid.jpg',
-          lyhyt: 'Círculo de Bellas Artes, vuonna 1880 perustetun kulttuurijärjestön talo, valmistui 1926.',
-          selite: 'Círculo de Bellas Artes on vuonna 1880 perustettu '
-            + 'kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema '
-            + 'talo valmistui 1926.',
+          lyhyt: 'Círculo de Bellas Artesin katolta näkee Madridin keskustan; vuonna 1880 perustetun kulttuurijärjestön talo valmistui 1926.',
+          selite: 'Círculo de Bellas Artes on vuonna 1880 perustettu kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema talo valmistui 1926. Talon katolta avautuu näkymä Madridin keskustaan.',
           lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
         },
         {
@@ -3886,10 +3862,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Puesta de Sol - Cerro del Tio Pio - Madrid - 00.jpg',
-          lyhyt: 'Madrid on rakennettu Kastilian ylätasangolle, ja Cerro del Tío Pío on yksi laidan kukkuloista.',
-          selite: 'Madrid on rakennettu keskelle Kastilian ylätasankoa noin '
-            + '650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin '
-            + 'laidan kukkuloista.',
+          lyhyt: 'Cerro del Tío Pío on 1980-luvulla slummin raunioille rakennettu puisto, jonka kukkuloilta näkee Madridin.',
+          selite: 'Cerro del Tío Pío eli Parque de las Siete Tetas rakennettiin 1980-luvulla entisen slummin raunioiden päälle, ja sen kukkuloilta näkee Madridin yli.',
           lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -3898,10 +3872,8 @@ export const KULTTUURI_KATEGORIAT = {
            * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
            */
           tiedosto: 'Teleférico de Madrid (30209578353).jpg',
-          lyhyt: 'Madridin köysiradan siniset gondolit kulkevat puiden ja kattojen yllä Casa de Campon '
-            + 'suuntaan.',
-          selite: 'Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdisti Parque '
-            + 'del Oesten Casa de Campon puistoon. Gondolit kulkevat noin 40 metrin korkeudessa.',
+          lyhyt: 'Madridin köysiradan siniset gondolit puiden ja kattojen yllä matkalla Casa de Campoon.',
+          selite: 'Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdistää Parque del Oesten Casa de Campon puistoon noin 40 metrin korkeudessa. Rata suljettiin 2020-luvun alussa uusittavaksi.',
           lahde: 'Tim Adams, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -4198,33 +4170,27 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png',
-          lyhyt: 'Berliinin vuokrakasarmien sisäpihojen kokoon vaikutti paloruiskun '
-            + 'kääntöympyrä.',
+          lyhyt: 'Berliinin vuokrakasarmien sisäpihojen kokoon vaikutti paloruiskun kääntötila.',
           selite: 'Vuoden 1853 rakennusmääräykset vaativat pihalle vähintään noin 5,3 × 5,3 '
             + 'metrin tilan, jotta paloruisku mahtui kääntymään.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Berlin Panorama von der Siegessäule 2021.jpg',
-          lyhyt: 'Voitonpylväs vihittiin 1873 muistona voitosta Tanskasta, Itävallasta ja Ranskasta.',
-          selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen '
-            + 'alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt '
-            + 'voitoilla Itävallasta ja Ranskasta.',
+          lyhyt: 'Voitonpylvään näköalatasanteelta näkee yli Berliinin; pylväs vihittiin 1873 voitoista Tanskasta, Itävallasta ja Ranskasta.',
+          selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt voitoilla Itävallasta ja Ranskasta. Kuva on otettu pylvään näköalatasanteelta.',
           lahde: 'Lear 21, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Skyline Berlin - Das Humboldt-Forum mit Fernsehturm.jpg',
-          lyhyt: 'Berliinin kaupunkilinna, hallitsijoiden asunto 1443–1918, purettiin 1950 ja rakennettiin uudelleen.',
-          selite: 'Berliinin kaupunkilinna oli hallitsijoiden pääasunto '
-            + '1443–1918, Itä-Saksa purki sen maan tasalle 1950, ja julkisivu '
-            + 'rakennettiin uudelleen Humboldt Forumia varten.',
+          lyhyt: 'Humboldt Forumin julkisivu on 2020 valmistunut jäljennös Berliinin kaupunkilinnasta, joka purettiin 1950.',
+          selite: 'Berliinin kaupunkilinna oli hallitsijoiden pääasunto 1443–1918, Itä-Saksa purki sen maan tasalle 1950, ja julkisivu rakennettiin uudelleen 2013–2020 Humboldt Forumia varten.',
           lahde: 'abbilder, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Berliner Dom, 170409, ako (2).jpg',
-          lyhyt: 'Vanha kansallisgalleria (1862–1876) kuuluu Museosaareen, Unescon maailmanperintöön vuodesta 1999.',
-          selite: 'Vanha kansallisgalleria rakennettiin 1862–1876, ja koko '
-            + 'Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999.',
+          lyhyt: 'Berliinin tuomiokirkko (1905) seisoo Museosaarella, jonka museot ovat Unescon maailmanperintöä.',
+          selite: 'Berliinin tuomiokirkko valmistui 1905 Museosaarelle, jonka museot ovat olleet Unescon maailmanperintökohde vuodesta 1999.',
           lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
         },
         {
@@ -5249,28 +5215,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-venetsia-st-marks.jpg',
-          lyhyt: 'Markuksenkirkon neljä pronssihevosta tuotiin Konstantinopolista 1204.',
-          selite: 'Markuksenkirkon pääportaalin yllä seisovat neljä '
-            + 'pronssihevosta tuotiin Konstantinopolista 1204, ja '
-            + 'kampanilen nykyinen torni on vuoden 1902 sortuman '
-            + 'jälkeinen jälleenrakennus.',
+          lyhyt: 'Markuksenkirkon pronssihevoset tuotiin Konstantinopolista, ja julkisivulla ovat nykyään kopiot.',
+          selite: 'Markuksenkirkon pääportaalin yllä seisovat hevoset ovat kopioita; Konstantinopolista 1204 tuodut alkuperäiset ovat kirkon museossa. Kampanilen nykyinen torni on vuoden 1902 sortuman jälkeinen jälleenrakennus.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-venetsia-rialto-bridge.jpg',
-          lyhyt: 'Rialton silta valmistui 1591 yhtenä marmorikaarena, ja sen päällä kulkee kaksi myymäläriviä.',
-          selite: 'Rialton silta valmistui 1591 Antonio da Ponten '
-            + 'suunnittelemana yhtenä marmorikaarena, ja sen päällä '
-            + 'kulkee kaksi myymäläriviä.',
+          lyhyt: 'Rialton silta valmistui 1591 yhtenä kivikaarena, ja sen päällä kulkee kaksi myymäläriviä.',
+          selite: 'Rialton silta valmistui 1591 Antonio da Ponten suunnittelemana yhtenä kivikaarena, ja sen päällä kulkee kaksi myymäläriviä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-venetsia-santa-maria-della-salute.jpg',
-          lyhyt: 'Santa Maria della Saluten kahdeksankulmainen runko lepää yli miljoonan puupaalun varassa.',
-          selite: 'Santa Maria della Salute rakennettiin kiitokseksi '
-            + 'vuoden 1630 ruton päättymisestä, ja sen '
-            + 'kahdeksankulmainen runko lepää yli miljoonan puupaalun '
-            + 'varassa.',
+          lyhyt: 'Santa Maria della Saluten kahdeksankulmainen runko lepää puupaalujen varassa.',
+          selite: 'Santa Maria della Salute rakennettiin kiitokseksi vuoden 1630 ruton päättymisestä, ja sen kahdeksankulmainen runko lepää puupaalujen varassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -5280,8 +5238,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png',
-          lyhyt: 'Cannaregioon perustettiin 1516 Venetsian ghetto, jota pidetään maailman '
-            + 'ensimmäisenä.',
+          lyhyt: 'Cannaregioon perustettiin 1516 Venetsian ghetto, josta sana ghetto on lähtöisin.',
           selite: 'Venetsian tasavalta määräsi 1516 kaupungin juutalaiset asumaan pienelle '
             + 'alueelle Cannaregiossa. Rajoitus kumottiin 1797.',
           lahde: 'Matkakirjan havainnekuva',
@@ -5318,7 +5275,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png',
-          lyhyt: 'Venetsia rakentuu noin 118 saarelle, joita yhdistää noin 400 siltaa.',
+          lyhyt: 'Venetsia rakentuu noin 118 saarelle, joita yhdistää yli 400 siltaa.',
           selite: 'Saaret sijaitsevat matalassa laguunissa kanavien erottamina. Venetsia ja '
             + 'sen laguuni on Unescon maailmanperintökohde vuodesta 1987.',
           lahde: 'Matkakirjan havainnekuva',
@@ -6025,20 +5982,14 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
         {
           ampari: 'herokoe/hero-tukholma-aamu.png',
-          lyhyt: 'Tukholman kuninkaanlinna (1754) on yli 600 huoneellaan Euroopan suurimpia yhä virkakäytössä olevia.',
-          selite: 'Tukholman kuninkaanlinna valmistui 1754 palaneen Tre '
-            + 'Kronorin paikalle, ja yli 600 huoneellaan se on '
-            + 'Euroopan suurimpia yhä virkakäytössä olevia '
-            + 'kuninkaanlinnoja.',
+          lyhyt: 'Tukholman kuninkaanlinna (1754) on yli 600 huoneellaan yksi Euroopan suurimmista.',
+          selite: 'Tukholman kuninkaanlinna otettiin käyttöön 1754 palaneen Tre Kronorin paikalle, ja yli 600 huoneellaan se on yksi Euroopan suurimmista kuninkaanlinnoista.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-tukholma-keskipaiva.png',
-          lyhyt: 'Tukholman kaupungintalo (1923) tornin huipulla kimaltaa kolme kruunua Nobel-illallisten yllä.',
-          selite: 'Tukholman kaupungintalo valmistui 1923 kahdeksasta '
-            + 'miljoonasta tiilestä, ja sen 106-metrisen tornin '
-            + 'huipulla kimaltavat kolme kruunua — juhlasalissa '
-            + 'tanssitaan Nobel-illalliset.',
+          lyhyt: 'Tukholman kaupungintalon (1923) tornin huipulla kimaltaa kolme kruunua; Sinisessä salissa syödään Nobel-illallinen.',
+          selite: 'Tukholman kaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta tiilestä, ja sen 106-metrisen tornin huipulla kimaltavat kolme kruunua — Sinisessä salissa syödään Nobel-illallinen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -7926,17 +7877,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'The Acropolis from Mount Hymettus on February 9, 2020.jpg',
-          lyhyt: 'Ateenan kaupunkialueella asuu yli 3,6 miljoonaa, vaikka varsinaisessa kunnassa vain runsaat 640 000.',
-          selite: 'Ateenan kaupunkialueella asuu yli 3,6 miljoonaa ihmistä, '
-            + 'vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000.',
+          lyhyt: 'Ateenan pääkaupunkiseudulla asuu yli 3,6 miljoonaa, vaikka varsinaisessa kunnassa vain runsaat 640 000.',
+          selite: 'Ateenan pääkaupunkiseudulla asuu yli 3,6 miljoonaa ihmistä, vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000.',
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Athens at night on September 28, 2022.jpg',
-          lyhyt: 'Ateena, Manner-Euroopan kuumin kaupunki, nimitti ensimmäisenä eurooppalaisena virkamiehen helteille.',
-          selite: 'Ateenaa on sanottu Manner-Euroopan kuumimmaksi '
-            + 'kaupungiksi, ja se nimitti ensimmäisenä eurooppalaisena '
-            + 'kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.',
+          lyhyt: 'Ateena nimitti ensimmäisenä eurooppalaisena kaupunkina virkamiehen hoitamaan hellejaksoja.',
+          selite: 'Ateena nimitti 2021 ensimmäisenä eurooppalaisena kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.',
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -8638,10 +8586,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-amsterdam-aamu.png',
-          lyhyt: 'Westerkerkin torni (1638), Amsterdamin korkein, kantaa keisari Maximilianin lahjoittamaa kruunua.',
-          selite: 'Westerkerkin torni valmistui 1638 ja on Amsterdamin '
-            + 'korkein kirkontorni — sen huipulla kimaltaa keisari '
-            + 'Maximilianin kaupungille myöntämä kruunu.',
+          lyhyt: 'Westerkerkin torni (1638), Amsterdamin korkein, kantaa keisarillista kruunua.',
+          selite: 'Westerkerkin torni valmistui 1638 ja on Amsterdamin korkein kirkontorni — sen huipulla kimaltaa keisarillinen kruunu.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -8696,18 +8642,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'KeizersgrachtReguliersgrachtAmsterdam.jpg',
-          lyhyt: 'Keizersgracht, keskustan levein kanava, nimettiin keisari Maksimilian I:n mukaan.',
-          selite: 'Keizersgracht nimettiin keisari Maksimilian I:n mukaan ja '
-            + 'on keskustan levein kanava; sen risteävä Reguliersgracht '
-            + 'kaivettiin vuonna 1658.',
+          lyhyt: 'Keizersgracht eli keisarinkanava on keskustan levein kanava.',
+          selite: 'Keizersgracht eli keisarinkanava on keskustan levein kanava; sen risteävä Reguliersgracht kaivettiin vuonna 1658.',
           lahde: 'Massimo Catarinella, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Aerial photograph of Amsterdam Central Station and the surrounding area.jpg',
-          lyhyt: 'Cuypersin Amsterdam Centraal (1889) on Alankomaiden vierailluin valtakunnanmonumentti.',
-          selite: 'Pierre Cuypersin suunnittelema Amsterdam Centraal avattiin '
-            + 'vuonna 1889, ja se on Alankomaiden vierailluin '
-            + 'valtakunnanmonumentti.',
+          lyhyt: 'Cuypersin johdolla suunniteltu Amsterdam Centraal (1889) on Alankomaiden toiseksi vilkkain asema.',
+          selite: 'Pierre Cuypersin johdolla suunniteltu Amsterdam Centraal avattiin vuonna 1889, ja se on Alankomaiden toiseksi vilkkain rautatieasema Utrechtin jälkeen.',
           lahde: 'RubenVanKuik, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -9014,10 +8956,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-istanbul-keskipaiva.png',
-          lyhyt: 'Genovalaiset rakensivat Galatan tornin 1348 vartiotorniksi Kultaisen sarven pohjoisrannalle.',
-          selite: 'Genovalaiset rakensivat Galatan tornin 1348 '
-            + 'siirtokuntansa vartiotorniksi, ja se hallitsi Kultaisen '
-            + 'sarven pohjoisrantaa vuosisatoja.',
+          lyhyt: 'Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen kärkeen Kultaisen sarven pohjoisrannalle.',
+          selite: 'Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen korkeimmaksi torniksi, ja se hallitsi Kultaisen sarven pohjoisrantaa vuosisatoja.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -9053,9 +8993,7 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/istanbul/20261013-uudet-6-8/istanbul-6-nakoala-intro-v1.png',
           lyhyt: 'Galatan tornin tasanteelta näkyvät Kultainen sarvi, Hagia Sofia ja Sininen moskeija.',
-          selite: 'Genovalaiset rakensivat Galatan tornin vartiotorniksi vuonna 1348. Sen huipulta '
-            + 'avautuu näkymä Kultaiselle sarvelle, Bosporille ja Istanbulin historialliselle '
-            + 'niemimaalle.',
+          selite: 'Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen torniksi. Sen huipulta avautuu näkymä Kultaiselle sarvelle, Bosporille ja Istanbulin historialliselle niemimaalle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -9081,23 +9019,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg',
+          lyhyt: 'Süleymaniyen moskeija kohoaa vanhankaupungin kolmannella kukkulalla Kultaisen sarven yllä.',
           selite: 'Süleymaniyen moskeija seisoo vanhankaupungin '
             + 'kolmannen kukkulan laella Kultaisen sarven yllä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sultanahmet ferry on the Bosphorus in Istanbul, Turkey 001.jpg',
-          lyhyt: 'Lautta on Istanbulissa tavallinen kulkuneuvo ja kaupungin halvin näköalapaikka.',
-          selite: 'Lautta on Istanbulissa yhtä tavallinen kulkuneuvo '
-            + 'kuin raitiovaunu ja samalla halvin näköalapaikka, jonka '
-            + 'kaupunki tarjoaa.',
+          lyhyt: 'Lautta on Istanbulissa tavallinen kulkuneuvo ja edullinen tapa nähdä kaupunki mereltä.',
+          selite: 'Lautta on Istanbulissa yhtä tavallinen kulkuneuvo kuin raitiovaunu, ja matka tarjoaa edullisen näkymän kaupunkiin mereltä.',
           lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Panoramic view of Istanbul- Yeni Cami (The New Mosque), Galata Bridge. Turkey, Southeastern Europe.jpg',
-          lyhyt: 'Eminönün rantatorilla myydään balık ekmekiä veneistä, joissa kala kypsennetään laiturin kupeessa.',
-          selite: 'Eminönün rantatorilla myydään balık ekmekiä suoraan '
-            + 'veneistä, joissa kala kypsennetään laiturin kupeessa.',
+          lyhyt: 'Eminönün rannalta näkyvät Uusi moskeija ja Galatan silta.',
+          selite: 'Eminönün rannassa kohoaa Uusi moskeija eli Yeni Cami, ja Galatan silta yhdistää rannan Kultaisen sarven toiselle puolelle.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -9972,30 +9908,20 @@ export const KULTTUURI_KATEGORIAT = {
            * tullitalo jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-dublin-hapenny.jpg',
-          lyhyt: 'Ha\'penny Bridge avattiin 1816 Liffeyn ensimmäisenä jalankulkusiltana puolen pennyn tiemaksulla.',
-          selite: 'Ha’penny Bridge avattiin 1816 Liffeyn ensimmäisenä '
-            + 'jalankulkusiltana, sen valurautainen 43 metrin kaari '
-            + 'valettiin Coalbrookdalessa, ja nimensä silta sai puolen '
-            + 'pennyn tiemaksusta, jota perittiin vuoteen 1919.',
+          lyhyt: 'Ha\'penny Bridge avattiin 1816 jalankulkusiltana, ja nimensä silta sai puolen pennyn tiemaksusta.',
+          selite: 'Ha’penny Bridge avattiin 1816, sen valurautainen 43 metrin kaari valettiin Coalbrookdalessa, ja nimensä silta sai puolen pennyn tiemaksusta, jota perittiin vuoteen 1919.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-dublin-aamu.png',
-          lyhyt: 'Trinity Collegen kellotorni (1853) on graniittia ja Portlandin kiveä, juurellaan neljä veistosta.',
-          selite: 'Trinity Collegen kellotorni valmistui 1853 Charles '
-            + 'Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin '
-            + 'alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin '
-            + 'kiveä, ja kellohuoneen juurella istuu neljä veistosta — '
-            + 'jumaluusoppi, tiede, lääketiede ja laki.',
+          lyhyt: 'Trinity Collegen kellotorni (1854) on graniittia ja Portlandin kiveä, juurellaan neljä veistosta.',
+          selite: 'Trinity Collegen kellotorni valmistui 1854 Charles Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin kiveä, ja kellohuoneen juurella istuu neljä veistosta — jumaluusoppi, tiede, lääketiede ja laki.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-dublin-keskipaiva.png',
-          lyhyt: 'Pyhän Patrickin katedraali (1191) on Irlannin suurin kirkko, torninhuippu nostettiin vasta 1749.',
-          selite: 'Pyhän Patrickin katedraali perustettiin 1191, ja ulkoa 91 '
-            + 'metriä pitkänä se on Irlannin suurin kirkko — graniittinen '
-            + 'torninhuippu nostettiin tornin päälle vasta 1749 George '
-            + 'Semplen suunnitelmien mukaan.',
+          lyhyt: 'Pyhän Patrickin katedraali (1220–1260) on Irlannin suurin katedraali; torninhuippu nostettiin vasta 1749.',
+          selite: 'Pyhän Patrickin katedraali perustettiin 1191, nykyinen rakennus on vuosilta 1220–1260, ja ulkoa 91 metriä pitkänä se on Irlannin suurin katedraali — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -10062,27 +9988,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Dublin, városkép a Guinness-toronyból.jpg',
-          lyhyt: 'Guinnessin panimon käymislaitos (1902) oli Irlannin ensimmäinen teräsrunkoinen kerrostalo.',
-          selite: 'Guinnessin panimon käymislaitos rakennettiin vuonna 1902 ja '
-            + 'oli Irlannin ensimmäinen monikerroksinen teräsrunkoinen '
-            + 'rakennus.',
+          lyhyt: 'Guinnessin panimon käymislaitos oli Irlannin ensimmäisiä monikerroksisia teräsrunkoisia rakennuksia.',
+          selite: 'Guinnessin panimon käymislaitos rakennettiin 1902–1904 ja oli yksi Irlannin ensimmäisistä monikerroksisista teräsrunkoisista rakennuksista. Kuva on otettu Guinness Storehousen näköalatasanteelta.',
           lahde: 'Kiss Tamás ( Kit36a at Hungarian Wikipedia ), '
             + 'Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'The Four Courts and River Liffey, Dublin - geograph.org.uk - 2776535.jpg',
-          lyhyt: 'Four Courts sai nimensä neljästä alkuperäisestä oikeusistuimestaan, nyt korkeimman oikeuden talo.',
-          selite: 'Four Courts sai nimensä neljästä alkuperäisestä ylimmästä '
-            + 'oikeusistuimestaan, ja se on yhä Irlannin korkeimman oikeuden '
-            + 'istuntopaikka.',
+          lyhyt: 'Four Courts sai nimensä neljästä alkuperäisestä oikeusistuimestaan, ja talossa toimii yhä Irlannin tuomioistuimia.',
+          selite: 'Four Courts sai nimensä neljästä alkuperäisestä ylimmästä oikeusistuimestaan, ja talossa toimii yhä Irlannin tuomioistuimia.',
           lahde: 'Richard Humphrey, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'The sunset - Dublin, Ireland - Cityscape photography.jpg',
-          lyhyt: 'Gandonin tullitalo rakennettiin 1700-luvun lopulla suolle, jota kauppiaat pitivät kelvottomana.',
-          selite: 'James Gandonin suunnittelema tullitalo rakennettiin '
-            + '1700-luvun lopulla suolle, jota kaupungin kauppiaat pitivät '
-            + 'kelvottomana paikkana.',
+          lyhyt: 'Liffey virtaa Dublinin halki Dublininlahteen ja jakaa kaupungin pohjois- ja eteläpuoleen.',
+          selite: 'Liffey-joki virtaa Dublinin halki Dublininlahteen ja jakaa kaupungin pohjois- ja eteläpuoleen.',
           lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -10639,11 +10559,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-edinburgh-ilta.png',
-          lyhyt: 'Calton Hillin kansallismonumentti jäi kesken 1829 ja rakastettiin rauniona nimestään huolimatta.',
-          selite: 'Calton Hillin kansallismonumentti jäi kesken 1829, kun '
-            + 'rahat loppuivat kahdentoista pylvään jälkeen — '
-            + '”Edinburghin häpeäksi” ristitystä raunioista tuli '
-            + 'rakastettu maamerkki.',
+          lyhyt: 'Calton Hillin kansallismonumentti jäi kesken 1829, ja keskeneräinen maamerkki tunnetaan lempinimellä Edinburghin häpeä.',
+          selite: 'Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — ”Edinburghin häpeäksi” kutsutusta keskeneräisestä muistomerkistä tuli tunnettu maamerkki.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -10708,6 +10625,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Edinburgh (29285918903).jpg',
+          lyhyt: 'Edinburghin linnan muureilta näkyy uusikaupunki, jonka rakentaminen alkoi 1767.',
           selite: 'Uusikaupunki rakennettiin vuodesta 1767 noin 1850-luvulle '
             + 'asti James Craigin ruutukaavan mukaan.',
           lahde: 'mandoft from El Campello (Alicante), Spain, '
@@ -11192,11 +11110,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-marseille-keskipaiva.jpg',
-          lyhyt: 'Marseillen La Majorin katedraalin peruskiven laski Napoleon III 1852, valmistuen 1896.',
-          selite: 'Marseillen La Majorin katedraalin peruskiven laski '
-            + 'keisari Napoleon III vuonna 1852; bysanttilaista ja '
-            + 'romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 '
-            + 'ja valmistui 1896.',
+          lyhyt: 'Marseillen La Majorin katedraalin peruskiven laski Louis-Napoléon 1852, ja työt päättyivät 1893.',
+          selite: 'Marseillen La Majorin katedraalin peruskiven laski 26. syyskuuta 1852 prinssi-presidentti Louis-Napoléon, myöhempi Napoleon III; bysanttilaista ja romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 ja korotettiin basilikaksi 1896.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -11822,20 +11737,14 @@ export const KULTTUURI_KATEGORIAT = {
            * Belém, Jerónimos ja Kauppatori jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-lissabon-alfama.jpg',
-          lyhyt: 'São Jorgen linna on seisonut Lissabonin korkeimmalla kukkulalla maurien ajoista, valloitettu 1147.',
-          selite: 'São Jorgen linna on seisonut Lissabonin korkeimmalla '
-            + 'kukkulalla maurien 1000-luvulta asti, Afonso Henriques '
-            + 'valtasi kaupungin 1147, ja linna oli kuninkaan asuntona '
-            + '1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, '
-            + 'jonka kujia kiipeää raitiolinja 28.',
+          lyhyt: 'São Jorgen linna on seisonut kukkulallaan Lissabonin yllä maurien ajoista; kaupunki vallattiin 1147.',
+          selite: 'São Jorgen linna on seisonut kukkulallaan Lissabonin yllä maurien 1000-luvulta asti, Afonso Henriques valtasi kaupungin 1147, ja linna oli kuninkaan asuntona 1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, jonka kujia kiipeää raitiolinja 28.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-lissabon-aamu.png',
-          lyhyt: 'Belémin torni (1519) vartioi Tejon suuta, ja sen bastioniin mahtui seitsemäntoista tykkiä.',
-          selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: '
-            + 'nelikerroksinen torni nousee 30 metriin, ja sen bastionin '
-            + 'ampuma-aukoista mahtui tulittamaan seitsemäntoista tykkiä.',
+          lyhyt: 'Belémin torni (1519) vartioi Tejon suuta, ja sen bastioniin mahtui noin seitsemäntoista tykkiä.',
+          selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: nelikerroksinen torni nousee 30 metriin, ja sen bastionin ampuma-aukoista mahtui tulittamaan noin seitsemäntoista tykkiä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -11849,17 +11758,13 @@ export const KULTTUURI_KATEGORIAT = {
         {
           ampari: 'herokoe/hero-lissabon-ilta.png',
           lyhyt: 'Kauppatorin paikalla seisoi kuninkaanlinna, jonka 1755 maanjäristys ja tulipalo pyyhkivät pois.',
-          selite: 'Kauppatori mittaa 175 metriä joka suuntaan ja avautuu '
-            + 'U-kirjaimena Tejolle — sen paikalla seisoi kuninkaanlinna, '
-            + 'jonka vuoden 1755 maanjäristys ja tulipalo pyyhkivät pois.',
+          selite: 'Kauppatori mittaa 175 metriä joka suuntaan ja avautuu U-kirjaimena Tejolle — sen paikalla seisoi kuninkaanlinna, jonka vuoden 1755 maanjäristys ja tulipalo pyyhkivät pois. Jälleenrakennetun alakaupungin taloihin rakennettiin joustava puuhäkki, joka tärisee muttei kaadu.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Castelo de São Jorge and 25 de Abril Bridge Over Lisbon Rooftops (54739478432).jpg',
-          lyhyt: 'Alakaupungin taloihin rakennettiin joustava puuhäkki, joka tärisee muttei kaadu maanjäristyksessä.',
-          selite: 'Alakaupungin talojen seiniin, lattioihin ja kattoihin '
-            + 'rakennettiin joustava puuhäkki, joka tärisee muttei kaadu, '
-            + 'ja epävakaan maan alle lyötiin metsällinen paaluja.',
+          lyhyt: 'Lissabonin terrakottakattojen yllä kohoaa São Jorgen linnan kukkula, ja kaukana siintää 25 de Abril -silta.',
+          selite: 'Kuvassa näkyvät Lissabonin terrakottakatot, vasemmalla São Jorgen linnan kukkula ja kaukana Tejon yli kulkeva 25 de Abril -silta.',
           lahde: 'Dale Cruse - 10M views from San Francisco, CA, USA, '
             + 'Wikimedia Commons (CC BY 4.0)',
         },
@@ -11889,18 +11794,15 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Lisbon Cityscape with 25 de Abril Bridge (55260752373).jpg',
-          lyhyt: 'Lissabonin metro avattiin 1959 Portugalin ensimmäisenä, nyt neljä linjaa ja 56 asemaa.',
-          selite: 'Lissabonin metro avattiin joulukuussa 1959 Portugalin '
-            + 'ensimmäisenä, ja siinä on neljä linjaa ja 56 asemaa.',
+          lyhyt: 'Lissabonin keskustan kadut laskeutuvat kohti Tejoa, ja kaukana vasemmalla näkyy 25 de Abril -silta.',
+          selite: 'Lissabonin keskustan kadut laskeutuvat kohti Tejoa; kaukana vasemmalla erottuu 25 de Abril -silta.',
           lahde: 'Michael Gaylard from Horsham, UK, Wikimedia Commons '
             + '(CC BY 4.0)',
         },
         {
           tiedosto: 'Blue Hour over Lisbon (43257906392).jpg',
-          lyhyt: 'São Jorgen linnan ja Tejon väliin leviää Alfama, jonka kujilla on tiheässä fado-baareja.',
-          selite: 'São Jorgen linnan kukkulan ja Tejo-joen väliin leviää '
-            + 'Alfama, jonka kujilla on poikkeuksellisen tiheässä '
-            + 'fado-baareja ja ravintoloita.',
+          lyhyt: 'Linnan kukkulalta näkee Lissabonin keskustan valot ja Tejon sinisenä hetkenä.',
+          selite: 'Näkymä São Jorgen linnan kukkulalta Lissabonin keskustan ja Tejon yli sinisenä hetkenä.',
           lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -12500,11 +12402,8 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
         {
           ampari: 'herokoe/hero-barcelona-aamu.png',
-          lyhyt: 'Sagrada Famílian rakentaminen alkoi 1882, Gaudín johtaman työn Jeesuksen torni nousee 172,5 metriin.',
-          selite: 'Sagrada Famílian rakentaminen alkoi 19. maaliskuuta 1882 '
-            + 'ja Gaudí johti työtä 1883 kuolemaansa 1926 asti — '
-            + 'kahdeksastatoista tornista korkein eli Jeesuksen torni nousee '
-            + '172,5 metriin, ja kirkko vihittiin käyttöön 2010.',
+          lyhyt: 'Sagrada Famílian rakentaminen alkoi 1882; Jeesuksen torni valmistui 2026 ja on 172,5 metriä korkea.',
+          selite: 'Sagrada Famílian rakentaminen alkoi 19. maaliskuuta 1882, ja Gaudí otti työn johtoonsa 1883 ja johti sitä kuolemaansa 1926 asti — kahdeksastatoista tornista korkein eli Jeesuksen torni valmistui 2026 ja on 172,5 metriä korkea; kirkko vihittiin käyttöön 2010.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -12578,10 +12477,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Barcelona rooftops.jpg',
-          lyhyt: 'Barcelona pysyi 1850-luvulle asti muurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen ydin.',
-          selite: 'Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, '
-            + 'ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu '
-            + 'ydin.',
+          lyhyt: 'Barcelona pysyi 1850-luvulle asti muurien sisällä; katolta näkymä aukeaa vanhan kaupungin yli satamaan ja merelle.',
+          selite: 'Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu ydin. Kuva on otettu katolta, ja näkymä aukeaa vanhan kaupungin kattojen yli satamaan ja merelle.',
           lahde: 'Jvhertum, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -13102,19 +12999,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-granada-keskipaiva.jpg',
-          lyhyt: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506, sakaristo valmistui 1727–1764.',
-          selite: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506 '
-            + 'ja rakentaminen alkoi kymmenen vuotta myöhemmin jatkuen '
-            + 'kolmisensataa vuotta; sakaristo tehtiin 1727–1764 ja on '
-            + 'espanjalaisen churriguerismin mestariteoksia.',
+          lyhyt: 'Granadan kartusiaaniluostari La Cartuja rakennettiin 1500-luvulta kolmisensataa vuotta; sakaristo tehtiin 1727–1764.',
+          selite: 'Granadan kartusiaaniluostarin rakentaminen alkoi 1500-luvun alussa ja jatkui kolmisensataa vuotta; sakaristo rakennettiin 1727–1764 ja on espanjalaisen churriguerismin mestariteoksia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-granada-ilta.jpg',
-          lyhyt: 'Corral del Carbón on 1300-luvun funduq eli kauppiaiden majatalo, ainoa nasridiajalta säilynyt.',
-          selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt '
-            + 'funduq eli kauppiaiden majatalo ja viljavarasto — ainoa '
-            + 'nasridiajalta säilynyt lajissaan koko Iberian niemimaalla.',
+          lyhyt: 'Corral del Carbón on 1300-luvun funduq eli kauppiaiden majatalo, Granadan ainoa säilynyt nasridiajan majatalo.',
+          selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt funduq eli kauppiaiden majatalo ja viljavarasto — ainoa nasridiajalta säilynyt lajissaan.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -13748,11 +13640,8 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-budapest-parliament.jpg',
-          lyhyt: 'Unkarin parlamenttitalo valmistui 1904, sen kupoli nousee 96 metriin viitaten vuoteen 896.',
-          selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
-            + 'piirustuksin: uusgoottilainen palatsi on 268 metriä '
-            + 'pitkä, ja sen kupoli nousee tasan 96 metriin — luku '
-            + 'muistuttaa vuoden 896 maahantulosta.',
+          lyhyt: 'Unkarin parlamenttitalo valmistui 1904, ja se on 96 metriä korkea viitaten vuoteen 896.',
+          selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin piirustuksin: uusgoottilainen palatsi on 268 metriä pitkä ja 96 metriä korkea — luku viittaa vuoden 896 maahantuloon.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -13763,7 +13652,7 @@ export const KULTTUURI_KATEGORIAT = {
            * sama kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-budapest-lanchid.jpg',
-          lyhyt: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä pysyvänä siltana Tonavan yli.',
+          lyhyt: 'Széchenyin ketjusilta valmistui 1849 Budapestin ensimmäisenä pysyvänä siltana Tonavan yli.',
           selite: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä '
             + 'pysyvänä siltana Tonavan yli Budan ja Pestin välillä — '
             + 'kivileijonat ovat vartioineet sen päitä vuodesta 1852.',
@@ -13771,11 +13660,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-budapest-fishermans-bastion.jpg',
-          lyhyt: 'Kalastajanlinnakkeen seitsemän tornia muistuttaa heimoista; terassi valmistui 1902 kirkon viereen.',
-          selite: 'Kalastajanlinnakkeen seitsemän suippotornia '
-            + 'muistuttavat unkarilaisten seitsemästä heimosta — '
-            + 'näköalaterassi valmistui 1902 Matthias-kirkon viereen, '
-            + 'eikä se ole koskaan ollut puolustusrakennelma.',
+          lyhyt: 'Kalastajanlinnakkeen seitsemän tornia muistuttaa unkarilaisheimojen päämiehistä; terassi valmistui 1902 kirkon viereen.',
+          selite: 'Kalastajanlinnakkeen seitsemän suippotornia muistuttavat unkarilaisten seitsemästä heimopäämiehestä — näköalaterassi valmistui 1902 Matthias-kirkon viereen, eikä se ole koskaan ollut puolustusrakennelma.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -14468,10 +14354,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-rooma-keskipaiva.png',
-          lyhyt: 'Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli on yhä Rooman korkein rakennelma.',
-          selite: 'Pietarinkirkkoa rakennettiin yli sata vuotta '
-            + '(1506–1626), ja Michelangelon kupoli on yhä Rooman '
-            + 'korkein rakennelma.',
+          lyhyt: 'Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli nousee yli 136 metriin.',
+          selite: 'Pietarinkirkkoa rakennettiin yli sata vuotta (1506–1626), ja Michelangelon kupoli nousee yli 136 metriin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -14535,10 +14419,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: "Roma da Castel Sant'Angelo.jpg",
-          lyhyt: 'Rooma on kasattu kerroksittain: samassa korttelissa voi olla antiikin pylväs ja barokkikirkko.',
-          selite: 'Rooma on kasattu kerroksittain, ja saman korttelin '
-            + 'sisällä voi olla antiikin pylväs, keskiaikainen torni ja '
-            + 'barokkikirkko.',
+          lyhyt: 'Castel Sant\'Angelon terassilta näkee Rooman katot ja kupolit.',
+          selite: 'Rooma on kasattu kerroksittain, ja saman korttelin sisällä voi olla antiikin pylväs, keskiaikainen torni ja barokkikirkko. Kuva on otettu Castel Sant\'Angelolta.',
           lahde: 'Stefano Vigorelli, Wikimedia Commons (CC0)',
         },
         {
@@ -15102,10 +14984,8 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
         {
           ampari: 'herokoe/hero-krakova-aamu.png',
-          lyhyt: 'Wawelin kukkulan katedraali vihittiin 1364, siellä kruunattiin kuninkaat vuoteen 1764 asti.',
-          selite: 'Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä '
-            + 'seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan '
-            + 'kuninkaat vuoteen 1764 asti.',
+          lyhyt: 'Wawelin kukkulan katedraali vihittiin 1364, siellä kruunattiin kuninkaat vuoteen 1734 asti.',
+          selite: 'Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan kuninkaat vuoteen 1734 asti.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -15118,10 +14998,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-krakova-ilta.png',
-          lyhyt: 'Sukiennice sai renessanssiasunsa 1555 palon jälkeen, irvinaamat reunustavat sen räystäslistaa.',
-          selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen '
-            + 'torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen, '
-            + 'ja kiviset irvinaamat reunustavat sen räystäslistaa.',
+          lyhyt: 'Sukiennice sai renessanssiasunsa vuoden 1555 palon jälkeen 1556–1559, irvinaamat reunustavat sen räystäslistaa.',
+          selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin keskellä; renessanssiasunsa se sai vuoden 1555 palon jälkeen 1556–1559, ja kiviset irvinaamat reunustavat sen räystäslistaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -15185,10 +15063,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '20200808 Widok z Kopca Krakusa na Stare Miasto w Krakowie wczesnym rankiem 0557 3430.jpg',
-          lyhyt: 'Krakovan laaksossa kivihiilen poltto pilasi talvi-ilmaa, kunnes kaupunki kielsi sen 2019.',
-          selite: 'Krakova sijaitsee laaksossa, ja kivihiilen poltto teki '
-            + 'talvi-ilmasta ajoittain Euroopan huonointa — kaupunki kielsi '
-            + 'sen kotitalouksien lämmityksessä 2019.',
+          lyhyt: 'Krakovan laaksossa kivihiilen poltto pilasi talvi-ilmaa, kunnes alueen kielto tuli voimaan 2019.',
+          selite: 'Krakova sijaitsee laaksossa, ja kivihiilen poltto teki talvi-ilmasta ajoittain Euroopan huonointa — Pikku-Puolan aluevaltuuston kielto kotitalouksien kivihiililämmitykselle tuli voimaan 2019.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -15737,11 +15613,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-varsova-aamu.png',
-          lyhyt: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619 ja koottiin uudelleen 1971–1984 tuhon jälkeen.',
-          selite: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619, se '
-            + 'tuhoutui syyskuussa 1944 ja koottiin uudelleen 1971–1984 '
-            + 'vanhojen piirustusten mukaan — Sigismundin torni nousee 60 '
-            + 'metriin ja tiilijulkisivu on 90 metriä pitkä.',
+          lyhyt: 'Varsovan kuninkaanlinna valmistui 1619, tuhoutui 1944 ja rakennettiin uudelleen 1971–1984.',
+          selite: 'Varsovan kuninkaanlinnan barokkiasu valmistui 1619, saksalaiset tuhosivat sen syyskuussa 1944, ja se rakennettiin uudelleen 1971–1984 vanhojen piirustusten mukaan — Sigismundin torni nousee 60 metriin ja tiilijulkisivu on 90 metriä pitkä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -15799,26 +15672,20 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png',
-          lyhyt: 'Praga oli Varsovan vastarannalla erillinen kaupunki ennen kuin se '
-            + 'liitettiin Varsovaan 1791.',
-          selite: 'Praga sai kaupunkioikeudet 1600-luvun puolivälissä ja liitettiin Varsovaan '
-            + 'kaupunginosaksi vuonna 1791.',
+          lyhyt: 'Praga oli Varsovan vastarannalla erillinen kaupunki, ennen kuin sen liittäminen Varsovaan päätettiin 1791.',
+          selite: 'Praga sai kaupunkioikeudet 1600-luvun puolivälissä, ja sen liittäminen Varsovaan päätettiin vuonna 1791.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-varsova-ilta.png',
-          lyhyt: 'Saaripalatsi valmistui 1689 kylpypaviljongiksi, muutettiin 1764–1795 uusklassiseksi kesäpalatsiksi.',
-          selite: 'Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta '
-            + '1683 ja valmistui 1689, ja Domenico Merlini muutti sen '
-            + '1764–1795 uusklassiseksi kesäpalatsiksi 76 hehtaarin '
-            + 'Łazienki-puistoon.',
+          lyhyt: 'Saaripalatsi rakennettiin kylpypaviljongiksi ja muutettiin 1700-luvun lopulla uusklassiseksi kesäpalatsiksi.',
+          selite: 'Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta 1683 ja valmistui 1689, ja Domenico Merlini muutti sen 1700-luvun lopulla uusklassiseksi kesäpalatsiksi 76 hehtaarin Łazienki-puistoon.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Old Town in Warsaw view from Vistula 2019a.jpg',
-          lyhyt: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen tyhjästä, itäpuolen Praga säilyi ehjänä.',
-          selite: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen '
-            + 'tyhjästä, ja itäpuolen Praga säilyi lähes ehjänä.',
+          lyhyt: 'Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen; itäpuolen Praga säästyi pahimmalta tuholta.',
+          selite: 'Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, ja itäpuolen Praga säästyi pahimmalta tuholta.',
           lahde: 'Adrian Grycuk, Wikimedia Commons (CC BY-SA 3.0 PL)',
         },
         {

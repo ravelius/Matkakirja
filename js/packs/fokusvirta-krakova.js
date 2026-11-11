@@ -657,7 +657,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        * keisari Frans Joosef käski sotaväen pois vasta 1905. Lisäksi
        * js/packs/kulttuuri-kategoriat.js, krakova/avauskuvat: Wawelin
        * kukkula on jurakautista kalkkikiveä, katedraali vihittiin 1364 ja
-       * siellä kruunattiin kuninkaat vuoteen 1764 asti.
+       * siellä kruunattiin kuninkaat vuoteen 1734 asti.
        *
        * LISÄTIEDOT (EI PELIDATASSA — en-Wikipedia "Wawel Castle", haettu
        * 30.8.2026):
