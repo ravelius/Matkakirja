@@ -88,3 +88,15 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
 - KK 16.00: B VAHVISTETTU, A (15.59) PERUTTU. PT:lle 484d48fd9 (= 63f86d189:n sisältö df0f36c4b:n päällä). A:n ristiriita ei enää koske junaa.
   Napautuslennon korjauksen näyttö (KK): Riemukaari 2-lahin ja 3-lahin-kierto samoista kulmista + yksi leveä matala kohde (Louvre tai Invalidit);
   sitten napautuslento junaan KK:n sanalla (tällöin ratkaise pallo-ristiriita kuten yllä).
+
+## LISÄYS 8 (nollauksen jälkeen, 16.xx): napautuslennon korjaus 313e15b1a
+- KOLON SYY: varjostimien syvyysveto 60–63 m (OhjelmaKohde/NotreDameKirkko/TaloKerros). lahin-1:n koepohjasta (0ca9df559) puuttui KS:n e75ff1dae
+  (vetoraja lähitason taakse, junassa 224.70) → 78 m:n kulma vedettiin ~15 m:iin, lähitason (50 m) eteen. e75ff1dae litistää alle lähitaso+63 m:n
+  syvyydet lähitasolle (Cull Off: etuosan pinnat sekaisin) → NUI:n korjaus: PalloKierto.EsitysLahitaso = min(50, (etäisyys − EsitysRajaSade − 63)/1,02),
+  väh. 1 m; NahtavyysEsittely.LahinRajoista = RajaSade + 63 + 5,1 (Riemukaari 113 m ennallaan, lähitaso ~5 m). Vertailu `ui nahtavyysesittely lahitaso 0`;
+  tila-komento näyttää etäisyyden, todellisen lähitason ja katon. KK:lle kerrottu (kolotestin rivi = analyysi, ei vielä ajoa).
+- HAARA natiivi-backup natiivi-ui/napautus-224: bbdc9184a = 48532e3fa + merge juna-224 2882f055a (pallo-tiedostot --theirs: ainoa oma muutos d5c003d92
+  on junassa bd7f0ea44:nä + pallo-maa-3) + 313e15b1a korjaus. unity 0. (Huom. vanha natiivi-ui/napautus-juna = b83baccaf, peruttu; älä käytä.)
+- AJO JU:lla: sk-napautus-224-1.txt (proto-3d/_tyo/natiivi-ui) → lokit/nui-napautus-224-1-313e15b1a: Riemukaari a (lahitaso 0) / b, Louvre b.
+  SEURAAVAKSI: katso täysikokoisina (b: ei kolmiota eikä sekaisin meneviä pintoja; a näyttää litistyksen, jos se näkyy), lokista "lähitaso … (esityksen katto …)"
+  → KK:lle pari a/b + Louvre, PT kopio. KK:n sanalla 313e15b1a PT:lle junaan.
