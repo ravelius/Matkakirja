@@ -214,3 +214,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   oletus 0 = ennallaan; NS katsoo diffin ennen junaa (renderöintiputki NS:n). Odottaa VS:n sha:ta.
 - 16e: VS:n tileset-muutos 1efd29cb4 (linssiseppa2/elava-muste) KATSOTTU, NS OK junaehdokkaaksi muste-1-parin + unity 0 jälkeen (File-lähde oikein,
   multi_compile_fragment globaali → fragmenttivariantit 2×, kerrottu VS:lle KK:ta varten). Ei NS:n jatkotoimia.
+- 16f LÖYDÖS (PT/KK 14.52, EI TYÖTÄ ennen KK:n sanaa): elävän kartan lähikuva sumenee laskussa 8,24 s:ssa, kun tarkka laatta vaihtuu karkeampaan
+  (ilman mustetta). Kuva proto-3d/lokit/linssiseppa2-muste-2-tallenne-1a3081001/vs/pois-sumenee-k411-k413.jpg. Epäily (tarkistamatta): Cesiumin
+  SSE/tason valinta laskeutuessa tai Laattapalvelimen elävä pala ei ehdi → vanhempi taso; tarkista lokista Elava-tilarivit samalta hetkeltä.
