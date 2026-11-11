@@ -28,3 +28,8 @@ Pilvien varjot (VS), Kuumailmapallo liikkuu (NUI), Kiinnitetty kuumailmapallo (K
 ## Muuta
 - Asemataulu jäädytetty. Vahdit (odottajat, codex-posti) uusitaan 30 min välein.
 - Opittu: älä yhdistä PR:ää ennen kuin testit valmiit (6567 meni pending-tilassa, onneksi vihreä).
+
+## LISÄYS 09.4x (luovutuksen jälkeen)
+- Omistaja 09.38: "mutta varmasti järkevää optimoida, niin pyörii paremmin tai sitten voidaan lisätä muuta grafiikkaa ja tehosteita, kun ei käytetä laskentatehoa turhaan". KK purki pysäytyksen osittain: A) turha työ pois (kuva ei muutu) junaan PT:n kuittauksella ilman KK:ta; B) kuvaa muuttavat (MSAA, varjot, varjomatka, tarkkuus, lehvästö) vain parilla ja KK:n sanalla. Omistajan 09.36-lause oli ~09.36, ei 09.4x.
+- 224.65.pt-ok kirjoitettu 09.40: NS 41bbbc320 (= 474fb5642 + leivottujen varjo pois, −5,7 ms, KK katsoi parin). NS:lle: seuraavaksi heijastuksen rajaus ja PaivitaKappaleet (A), sekä todellinen ruutunopeus koko reitillä ennen/jälkeen yhdeksi luvuksi omistajalle.
+- TEKEMÄTTÄ (seuraajalle, KK pyysi): kirjaa periaate A/B Raamattuun (juoksupelin tai piirron kohta, ≤ 1 rivi, 7.49 RAAMATTU EI KASVA) + loki.
