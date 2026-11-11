@@ -129,3 +129,5 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
 ## LISÄYS 12 (KK 16.47): NAPAUTUSLENTO JUNALUPA → d520120aa PT:lle junaan (sisältää KS 03ad357fb; juna-224:n kärki oli yhä 2882f055a). Uutta Mac-ajoa ei
 ennen junaa; KK katsoo junan Mac-kuvan Riemukaaren lähimmästä kierrosta. KK:n löydös: kierron parit kuvataan lukitulla kulmalla (ei ajan mukaan).
 Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-pari KK:lle).
+- 17.14 (JU): 224.74 = 2882f055a (Lehti + Matkaopas) LINKISSÄ. Junan Mac-kuvat sk-juna-lehti-1 → proto-3d/lokit/nui-lehti-junakuvat-2882f055a
+  (ajossa 17.1x) → KATSO täysikokoisina ja vie KK:lle (PT kopio) ENSIMMÄISENÄ nollauksen jälkeen, sitten LISÄYS 4.
