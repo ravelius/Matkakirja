@@ -1,0 +1,29 @@
+{
+  "taskNumber": 2221,
+  "checkedAt": "2026-11-11T18:47:44.880969+00:00",
+  "status": "PASS_FOR_KK_REVIEW",
+  "method": "Human visual inspection of generated native image and comparison sheet; Pillow dimensions/decode and SHA256 integrity checks. No automated semantic approval claimed.",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "format": "PNG",
+  "imagegenCalls": 1,
+  "maximumAttempts": 2,
+  "selectedAttempt": 1,
+  "checks": {
+    "handDrawnSketch": "PASS: visible pencil/sepia-pen hatching and dilute wash throughout; no photographic output.",
+    "horatioAction": "PASS: mature traveller in matching light jacket, raised empty hand, three-quarter rear view watching bird.",
+    "characterContinuity": "Clothing, hair and apparent age based on prior steamer image. I1/I2 do not show the grandfather. A precise frontal face match is neither asserted nor introduced.",
+    "pigeon": "PASS: one airborne carrier pigeon above ruins, banking with leg message sleeve; no duplicate motion sequence.",
+    "ruinedPalace": "PASS: main palace shell has absent roof volumes, damaged upper masonry and open dark windows; historical massing follows Met 291458. A distant roof-shaped volume is present in the historical reference and new scene; it is not a reconstructed roof on the main ruined shell.",
+    "garden": "PASS: garden path, restrained planting and statue; no active fire or battle.",
+    "forbiddenElements": "PASS: no text, logo, signature, numbered labels or modern objects.",
+    "palette": "Restrained pale sepia/aged paper compatible with earlier images; new drawing is slightly warmer than photographic I1/I2, explicit sketch brief takes precedence."
+  },
+  "receiverReview": "KK pending",
+  "ownerAcceptance": "not asserted",
+  "gameIntegrated": false,
+  "published": false,
+  "historicalReference": "https://www.metmuseum.org/art/collection/search/291458"
+}

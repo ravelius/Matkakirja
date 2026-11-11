@@ -1,0 +1,62 @@
+{
+  "taskNumber": 2221,
+  "sourceOrder": "posti/pt-codex-isoisa-pariisi-kyyhky-tilaus-20261111.md",
+  "sourceCommit": "03e25f09280a5ff9ab23153311e58240649af9e4",
+  "sourceBlob": "7f1a1bac01f7418b0d239c3c9d3196fafe7c2a98",
+  "generationTool": "built-in image_gen",
+  "generationCalls": 1,
+  "selectedAttempt": 1,
+  "nativeOutput": {
+    "attempt": 1,
+    "status": "generated",
+    "startedAt": "2026-11-11T18:45:22.536858+00:00",
+    "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-2221-20261111/prompts/attempt-01.txt",
+    "tool": "built-in image_gen",
+    "completedAt": "2026-11-11T18:46:33.425515+00:00",
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-9ecf98cc-af5c-4607-a697-f9605534453b.png",
+    "localOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-2221-20261111/native/attempt-01.png",
+    "nativeDimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "35cd7fe37ae8b9992d6ad3cfbfd88a17c630cb2cb9ba8d9c51d26204a20e2e3e",
+    "selected": true
+  },
+  "finalImage": "isoisa-pariisi-kyyhky-1536x1024-v1.png",
+  "technicalProcessing": "Final illustration copied byte-for-byte from native output; no resize, retouch, compositing or AI upscaling. Comparison sheet only assembled with ImageMagick.",
+  "comparisonSources": [
+    {
+      "role": "existing Paris I1 visual comparison",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+      "archiveSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-2221-20261111/references/pariisi-i1.jpg",
+      "sha256": "c4f1d7d194d369c538d03201b2de034adfa11e0248718d4f057aa807bbc8cc46",
+      "manifestShaMatched": true,
+      "publicUrlFetch": "403; used original delivered local archive with exact checksum"
+    },
+    {
+      "role": "existing Paris I2 visual comparison",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+      "archiveSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-2221-20261111/references/pariisi-i2.jpg",
+      "sha256": "3455bbf148efea528e00a82d71d08147724fe1b24d435edd50c1d55e6d262c38",
+      "manifestShaMatched": true,
+      "publicUrlFetch": "403; used original delivered local archive with exact checksum"
+    }
+  ],
+  "historicalReference": {
+    "url": "https://www.metmuseum.org/art/collection/search/291458",
+    "imageUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/291458/610932/main-image",
+    "rights": "Public Domain per Met object page",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-2221-20261111/references/met-tuileries-291458.jpg",
+    "sha256": "fba2cf9d5bda268117e9357a2622620870b74906045abc623657f9890beac697"
+  },
+  "characterReference": {
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-2221-20261111/references/horatio-clothing-age-reference.jpg",
+    "sha256": "60924eb4b655f3a1015bf4cbbf38267b5716722e1ea8ea989e5d98aca83a3c82",
+    "scope": "clothing and apparent age, not a canonical frontal portrait"
+  },
+  "referenceDecision": "I1/I2 contain no Horatio figure and are photographic in rendering. Explicit current sketch instruction takes priority. Earlier steamer image provides clothing/apparent age, viewed from back to avoid inventing a new canonical portrait.",
+  "rights": "Historical Met reference is Public Domain per object page; existing game reference files retained as project comparison sources.",
+  "deliveryScope": "Only claude/postilaatikko review delivery. No R2 upload, game edits, integration or publication."
+}
