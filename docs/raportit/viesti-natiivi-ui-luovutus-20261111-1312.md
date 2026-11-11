@@ -43,3 +43,6 @@ UUSI SÄÄNTÖ (omistaja 12.21, Raamattu 12.26.5): kaikki ajot Macilla (esikatse
 - Näyttö: arkki-2:n 12 kohdetta uudelleen Macilla (sk-kohteet-arkki-2 pohjaksi); SC:n kirkko 45–67 % kuvan korkeudesta lähin-kuvassa;
   muut muuttuvat ≤ 5 %, paitsi pihalliset/portaalliset (listaa muuttuneet).
 - Tausta: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-saumat-ja-maet.md luku 4 C ja luku 5 osa 1.
+- SOVITTU KS:n kanssa 14.1x: `public static Bounds OhjelmaKohteet.RungonRajat(Mesh verkko)` (verkon omassa avaruudessa kuten verkko.bounds; tuntematon
+  → verkko.bounds). KS tekee haaran karttaseppa/runko (natiivi-backup, juna-224:n kärjestä) ja kertoo sha:n NUI:lle. NUI vaihtaa verkko.bounds →
+  RungonRajat(verkko): NahtavyysEsittely.TaysiMalli, Paisunta.MahtuvaKerroin ja Naytteet, jos sama. Pohja: juna-lehti + merge karttaseppa/runko (commit-pari).
