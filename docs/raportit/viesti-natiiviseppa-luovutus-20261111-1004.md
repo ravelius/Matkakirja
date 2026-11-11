@@ -118,3 +118,11 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 6) asettelu (luennan Ohita Turisti-infon päällä, luentapalkki valkoisen napin alla) → NUI:lle 11.4x. KK: älä muuta kuvien kiertoa eikä nimen animaatiota.
 - JU: ajopyynto-mac-4.md (sk-mac-saapuminen-4.txt, kuva s5b-kartta kohtaan 6) jonoon; iPad muisti-3 (b8e641712) jonossa ennallaan. KK:n ehto: iPad-muisti JU:lta yhä.
 - tarkista.sh pysähtyy pohjavahtiin (vanhat rivit muissa tiedostoissa, myös Introesitys fontti 1 c31deb71d:stä) → valo/liike/kameravahti ja kameratesti ajettu erikseen: omat tiedostot puhtaat.
+
+## LISÄYS 11 — NOLLAUS TÄSTÄ (kontekstivahti 25 %). JATKA NÄISTÄ:
+- NUI kohta 6: syy (a) Luentakuvasarja.Kaistale = M-napin laatikko kaupunkinäkymässä → Ohita Turisti-infon päälle; korjaus NUI:n seuraavalta vuorolta d7a60539d:n
+  päälle (NUI luovutus 237004290). (b) luentapalkki M:n alla: NUI selvittää s5b/mac-4-kuvista.
+- JU:n jono: 1) saapuminen-mac-4 d7a60539d (jonossa 11.24) → lue lokit/natiiviseppa-saapuminen-mac-4: oleta-rivit, "kallistus alkaa/valmis" -kulmat, s1 (UI häipyy),
+  s4 (ristihäivytys), s4b (kallistus levosta), n1 (yksi Ohita) → KK:lle video + arkki (kopio PT). 2) iPad muisti-3 b8e641712 → syyrivi "kesken …" → korjaus.
+  3) Ruutunopeus JÄLKEEN (MR58 = 224.65 a61a98089 linkissä 11.24) → fps-konsolista.py → KK (ENNEN 60 / huonoin 29,8).
+- Juoksupeli: omistajan päätös 11.09 (lisäys 8) — vain kesken olevat varjotyöt, ei kamera/drone-muutoksia.
