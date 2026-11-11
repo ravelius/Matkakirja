@@ -85,3 +85,6 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
   ratkaise pallo-tiedostot junan hyväksi (pallo-maa-3 on uudempi, omistajan katsoma) ja tarkista ankkurin tarve, unity, sha PT:lle.
 - KOLOTESTI (KK 15.59, junan jälkeen): toista 01-riemukaari-3-lahin-kierto Macilla, kokeile yksi kerrallaan: lähitaso puoleen, paisunta pois,
   esittelyn rajaus pois → yksi rivi KK:lle, mikä poisti kolon, ENNEN korjausta. Jos mikään ei: kuva samasta kulmasta mallin esityskameralla KS:lle.
+- KK 16.00: B VAHVISTETTU, A (15.59) PERUTTU. PT:lle 484d48fd9 (= 63f86d189:n sisältö df0f36c4b:n päällä). A:n ristiriita ei enää koske junaa.
+  Napautuslennon korjauksen näyttö (KK): Riemukaari 2-lahin ja 3-lahin-kierto samoista kulmista + yksi leveä matala kohde (Louvre tai Invalidit);
+  sitten napautuslento junaan KK:n sanalla (tällöin ratkaise pallo-ristiriita kuten yllä).
