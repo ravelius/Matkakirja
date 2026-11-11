@@ -43,3 +43,9 @@ KK 22.54: ESITTELYN 3D-TÄHTEÄ EI PIILOTETA (-2252:n kohta B peruttu kokonaan).
 A. pariisi-tekstit-1 tulokset → katso → KK (ja kuvatekstien vastaus KK:lta).
 B. aarrekysymys-2 tulokset → KK.
 C. vakioajon uusinta → PUUTE-rivit.
+
+## LISÄYS 00.3x
+- KK 00.22 kuvatekstit: lyhyt hyväksytty; selite KK:n sanoin 2 virkettä (testi vaatii 2 lausetta → "Nyt paikalla on puisto." pois), Liébert lähdetietoihin
+  → cb990dca6 (origin natiivi-ui/pariisi-isoisan-kuva), vienti-pariisi-tekstit päivitetty. KK:lle kerrottu.
+- aarrekysymys-2 KATSOTTU: b3/c2 ei noppaa, b5 Eiffelin esittely auki, c3 Liiku auki → KK:lle 00.3x. ODOTTAA KK:n junasanaa + PT pt-ok
+  (haara natiivi-backup natiivi-ui/aarrekysymys 9a8ca8d1a). Pieni: c3:ssa nappula ei näy Liiku-valinnan aikana (KK:lle mainittu).
