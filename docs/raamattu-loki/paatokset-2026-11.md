@@ -1355,3 +1355,7 @@ Omistaja KK:n kautta 11.11.2026 klo 00.07 sanatarkasti: "Ei tehdä tilin vaihtoa
 ## Lähin kamera hyväksytty (KK 11.11. noin klo 01.0x) (11.11.2026 klo 07.1x)
 
 KK hyväksyi NUI:n lähimmän kameran c032134e7 11.11. noin klo 01.0x (kuvat lokit/nui-lahin-2-7x-4-c032134e7, KS b5ef8b0c9): lähin leveys 0,231 = 0,620 km. Linkissä 224.51 (29768b6cb). Lähde: KS:n luovutus -0105, LISÄYS 01.1x; merkintä puuttui lokista, KK pyysi lisäämään 07.1x. VS:n kynäkoe ja uusi 1:1-viiva jatkuvat tällä kameralla.
+
+## Nostoesityksen kierto täytenä ympyränä samaan suuntaan (omistaja 11.11. 08.35) (11.11.2026 klo 08.4x)
+
+Omistaja KK:n kautta sanatarkasti: "ei kaupungissa ole näkyvissä painettuja nimiä ja orbit-kierto pitää olla koko ajan samaan suuntaan ja tehdä täysi ympyrä. Mutta sitä voi miettiä, pitäisikö kiertosuuntaa vuorotella jokaisen noston välillä. Mutta jos se on hankalaa, niin kierto voi myös olla aina samaan suuntaan." KK: muuttaa 9.11. klo 11.43 linjan (kierto kaistalla ±90°) nostoesityksen osalta: kaista pois, täysi ympyrä samaan suuntaan; suunnan vuorottelu nostojen välillä vapaaehtoinen. Toteuttaja NUI (nähtävyyden napautus, työ A, 50565c427). PT: ±90°-linjaa ei ollut kirjattu Raamattuun eikä tähän lokiin, joten Raamatun kohtaa ei muuteta.
