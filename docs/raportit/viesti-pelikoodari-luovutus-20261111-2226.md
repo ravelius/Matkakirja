@@ -37,3 +37,8 @@ EI tässä palassa: pelin kaaren vauhtipiikki (~8 m/s, 0,57 m kulman yli): KK ki
 
 Huom: tyokalut/tarkista.sh päivittää tyylikirjan (Tyylikirja.uss/.cs, tyylikirja.json) → palauta git checkoutilla, älä committaa.
 Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 22.3x: JU kuittasi tilauksen
+Jonossa (pid 15137) kartan ajojen ja NS palkki-6 + mono-1 jälkeen. Skenaario proto-3d/_tyo/pelikoodari/kameralaite/sk-kameralaite-pala2.txt
+(botti, v4 siemen 1, 1376 px, 60 s vanha + 60 s uusi); JU leikkaa 10 s:n pätkät uudesta lokin kamerarivien mukaan.
+Tulokset: /Users/Shared/Claude/proto-3d/lokit/pelikoodari-kameralaite-pala2-2ec17d3fb (JU lähettää polut, kun valmis).
