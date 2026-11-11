@@ -585,3 +585,14 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 33b (22.2x) JU kuittasi: palkki-6 jonossa KJ49 + T1-vakioajo + aarrekysymys-1 jälkeen (pid 97710) → lokit/natiiviseppa-juoksu-latausjono-palkki-6; mono-1 sen jälkeen (pid 7243) → lokit/ns-mono-1; pari-b erikseen klo 23 jälkeen.
 - 33c (22.4x) NUI (KK 22.19): työlistariviin "Ensimmäisen kertojan luennan viive" kirjattu: intro-nimet-5 (165addc72, b-lontoo) puheen ulostulo seisoi ~2,0 s (puhejärjestelmän käynnistys, 2,1 s yhteensä), lokit proto-3d/lokit/nui-intro-nimet-5-165addc72. Ei aloitettu (kaupunkityökalut ensin, KK:n järjestys).
 - 33d (22.59) JU: latausjonoerä 1b1359d75 LINKISSÄ 224.87 (a5c62488f), testit läpi. Palkki-6 (6c5b95883) tulee sen päälle omana eränään KK:n sanalla.
+
+## LISÄYS 34 (11.11. 23.1x, uusi sessio local_0f7f169f nollauksen jälkeen)
+- Palkki-6, mono-1, T1-vakioajo, pari-b: EI vielä lokeja 23.18 (JU ajaa KJ49b:tä). Lue ohjeet lisäys 32–33.
+- KERTOJAN VIIVE (työlista NS jarj 3, KK 22.19 "kaupunkityökalujen jälkeen"; kaupunkityökalut odottavat ajoja → aloitettu):
+  NUI:n 2,0 s = Macin eräajon ilmiö (batchmode: DSP-kello ei etene, Puhe.cs:1159 odottaa 2 s; iPad 100–400 ms). Syy yhä 10.11. mittaus (Louvre 5,3 s verkosta).
+  Korjaus cbaaf1d34 siirretty juna-224 72dcd6811:n päälle: natiivi-backup natiiviseppa/kertoja-esilataus-2 = 871011608 (QA `puhe valimuisti tyhjenna`) + 333e91c45
+  (esilataus), unity 0, wt /Users/Shared/Claude/wt/proto-selvittaja-kertoja-esilataus. JU: _tyo/natiiviseppa/kertoja-viive/ajopyynto-mac-esilataus.md (ennen|jälkeen)
+  → lokit/natiiviseppa-kertoja-esilataus-mac-{ennen,jalkeen}. LUE "puhe: alkoi … (verkko|välimuisti)" 3 kohteelle + "kertojan esilataus: pariisi" → KK (kopio PT)
+  + junaehdokas 333e91c45 (+ QA 871011608). Ehdotus KK:lle: batchmodessa ohita DSP-odotus (Application.isBatchMode), jotta NUI:n ajastusmittaukset eivät vääristy.
+  Yhteenveto _tyo/natiiviseppa/kertoja-viive/tulos.md.
+- Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac4.sh` (= mac3 + kertoja-esilataus-mac-*). Cron 9.04 LUO UUDELLEEN.
