@@ -303,3 +303,20 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   aukea / otteen raja / puuttuvat talot → YKSI RIVI KK:lle ennen kuin ketjua käytetään edelleen.
 - JU 21.4x: puistopuut KJ47c (5f44f5325 sis. 90b66a261 + dedc50853) junassa 224.85 (MR80, PT pt-ok), 224.84:n (NS työkalu 3) jälkeen; PiirtoTilasto NS:n versio. Odota LINKKI 224.85.
 - JU 21.4x: KK vahvisti 21.40 → MR80 = 224.85 = 707331562 (erä 1/2 dedc50853 mukana, se on esi-isä) jonossa MR79:n perään. Odota LINKKI 224.85.
+
+## LISÄYS 22 (22.0x, uusi sessio 21.43): Wien vk0, KJ48 suljettu, GHSL-ehdot 1–4, kaupunkitaulun luku
+- WIEN VAKIOKUVA 0: aukea (jalkapallokenttä + radan leikkaus; IGN-tyyppinen ortho Wienin basemap mapsneu.wien.gv.at, ei robots.txt:tä) → KK:lle rivi 21.4x.
+  Vika oli luonnospiirrossa: palan y on korkeuskoodi, talot leijuivat. Korjaus 6928b5969 (vakiokuva_render.py: kärki y − normaalin w = talo omalla pohjallaan).
+  Uudet kuvat + ortho T/uudet/wien/kuvat-2/; ortho-skripti T/orto-wien.py.
+- KJ48 SEINE: raportti docs/raportit/karttaseppa-kj48-seine-20261111.md (efabd62ad), arkit _tyo/karttaseppa/koodijuna/parit-kj48/. KK 21.54: LOPPULISTAN KOHTA 3 SULJETTU
+  (parvis-haamut tarkistetaan 224.85:n kuvista). TOISELLE KIERROKSELLE: (1) ulkosillat = TYÖKALUN 1 ASKEL: silta OSM:n bridge-viivasta veden yli yksinkertaisena
+  kaarisilta-koodimallina (kansi + kaaret + pilarit, leveys ja jänneväli aineistosta), sama sääntö kaikille kaupungeille; käsin tehdyt (KaupunkiSilta-taulu) voittavat;
+  näyttö Pariisin ulkosillat + Lontoo samalla ajolla, raja Alma ↔ Alexandre III vierekkäin. (2) Bir-Hakeim + Conciergerien tornit → työkalun 2 osakirjasto.
+- GHSL-EHDOT (KK 21.39) haarassa karttaseppa/tyokalu-1 (työpuu): 1) tyokalut/kaupunki/LAHTEET.md (GHSL R2023A ANBH E2018, 3″, CC BY 4.0, doi; huom: pelin opas-luettelossa
+  ui.opas.lahde.* ei GHSL-riviä → lisättävä ennen ensimmäistä GHSL-kaupunkia pelissä). 2) GHSL_KERROIN/GHSL_HAJONTA/OLETUS_KORKEUS_M/OLETUS_OSUUS_MAX tee_palat.py:n alussa.
+  3) lähdejakauma "KORKEUDEN LÄHTEET" (perus = ennen pienen talon sääntöä) + korkeus_oletus_osuus; uusi_kaupunki pysähtyy oletus-osuudella > 0,4 (ei enää heikko-osuudella,
+  jossa pieni-oletus oli mukana). Wien: height 1,5 %, kerrokset 29,7 %, GHSL 68,7 %, oletus 0,05 %; palat 428/428 samat. 4) Lontoo 242/242 ja Pariisi 32/32 tavulleen samat (aja-sama-3.zsh).
+- KAUPUNKITAULU: tyokalut/kaupunki/kaupunkitaulu.py lukee pelin taulun (Resources/kaupungit.json: generaattori + talot → raja) tai vanhan muodon; oletus pelin taulu,
+  jos olemassa, muuten kaupungit-talot.json. NS cfe3324a3:n generaattori-kentät = kaupungit-talot.json (Pariisi, Lontoo) täsmälleen. Tarkistus T/aja-taulu-4.zsh.
+- JONO (KK 21.54): 1) GHSL-ehdot valmiiksi + KK:lle rivi. 2) uusi-kaupunki-ketju valmiiksi (otepolut sisäiseen; GHSL-tiilet T7:llä, sisäisellä levyllä vain 17 Gt vapaana).
+  3) silta-askel (työkalu 1). 4) Lontoo mittauksena. Montmartren parit, kun yövienti tehty (JU:n aamurivi). LINKKI 224.85 odottaa yhä.
