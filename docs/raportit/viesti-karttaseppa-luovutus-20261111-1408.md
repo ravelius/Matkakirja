@@ -343,3 +343,5 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - 22.0x: KK 21.59 HYVÄKSYI GHSL-oppaan rivin (teksti tyokalut/kaupunki/LAHTEET.md, ec8b02ba2) → ui.fi.json:iin "ui.opas.lahde.talokorkeus-ghsl" SAMASSA ERÄSSÄ kuin ensimmäinen GHSL-kaupunki.
   Lontoon EA-rivi puuttuu luettelosta: aineiston tiedot (LIDAR Composite 1 m DSM First Return + DTM 2022, OGL v3, "© Environment Agency copyright and/or database right 2022") lähetetty KK:lle → odota KK:n sanamuotoa.
   NS 22.0x vahvisti T1 = cfe3324a3; NS:lle kerrottu, että seuraaja kysyy pohjan ennen silta-lataajan C#-muutosta.
+- NS 22.0x (SEURAAJALLE): silta-lataajan C#-POHJA = cfe3324a3 (natiivi-backup natiiviseppa/kaupunkitaulu), EI junan kärki. Se muuttaa OhjelmaKohteet.cs:ää (OmaKaupunki korvaa LontooKoe,
+  Pariisin lista kameran alueelta) ja TaloAlue.cs:ää (rajat taulusta, SeuraaKameraa, PoistoTaulu nimiviitteellä). Ei vielä junassa (KK:n sana odottaa vakioajoa). Tee silta-haara sen päälle.
