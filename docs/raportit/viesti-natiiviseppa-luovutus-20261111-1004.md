@@ -582,3 +582,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - T1-vakioajo (cfe3324a3, JU koeyhdistelmä 37c7d3b75) ei vielä ajettu (lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3 puuttuu 22.19) → LUE arkit ennen|jälkeen + palamäärät → KK + junaehdokas.
 - PARI-B (pala 3.1b) JU:lla yöllä → ohje lisäys 32.
 - Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac3.sh` (= mac2 + vanhat tilat ohitetaan alussa + ns-mono-*). Cron 9.04 LUO UUDELLEEN.
+- 33b (22.2x) JU kuittasi: palkki-6 jonossa KJ49 + T1-vakioajo + aarrekysymys-1 jälkeen (pid 97710) → lokit/natiiviseppa-juoksu-latausjono-palkki-6; mono-1 sen jälkeen (pid 7243) → lokit/ns-mono-1; pari-b erikseen klo 23 jälkeen.
