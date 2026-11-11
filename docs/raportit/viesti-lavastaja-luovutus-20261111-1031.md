@@ -45,3 +45,8 @@ Valmis v133 -> muuri/v133/paketoi.zsh, LAHTEET päivitys (M1, E4, E1, E1b, M8, M
 muuri/apu-20261111/ (+ jakauma.py, kansi.py, poly.py, sisa.py, laatta.py, lahella.py (kaikki materiaalit r:n sisällä), lista.py, pysty.py).
 Python ilman -I; shapely vain venv-lattia/bin/python3:lla. Odotusskriptissä pgrep-kuvio "m1/[a]ja-x.zsh" (muuten löytää itsensä).
 Worktreet ennallaan + wt/lavastaja-luovutus-1031.
+
+## PT 10.3x LISÄYS (sitova): a22
+a22 on kestänyt kaksi korjausta → EI kolmatta arvauksella. ENSIN tunnista, mikä verkko/objekti kiilan piirtää: mika-rivi a22-vino-kameraan
+(338,9 6 −103,4 180 30 70) kiilan kohtaan (kuvassa m1/pari-a2-a22-vino.jpg oikea puolisko, kiila n. x 0,25–0,55 / y 0,45–0,6 → mika 0,40 0,52 ja
+0,30 0,58) → osuman paketti + verkko + kärjet. Korjaus siihen pakettiin, jonka verkko se on (vrt. F2 = t-portti-m15, rakennukset-v127), sitten pari.
