@@ -35,3 +35,10 @@ Wt /Users/Shared/Claude/wt/proto-pelikoodari-kuvajono: poista (git worktree remo
 - B1 bcf32314c (pelikoodari/seinat-taso1): junaan vain PT:n päätöksellä.
 - tyokalut/tarkista.sh päivittää tyylikirjan → palauta git checkoutilla, älä committaa.
 Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 01.0x
+- UUSI TYÖ PT:ltä 01.00 (KK 00.59), aloita tästä, kun kamera odottaa: ESIKATSELUN MITTAKAAVA. Pikselimittaiset 3D-merkit (nappula, kone, varjo)
+  näkyvät esikatselukuvissa eri suhteessa käyttöliittymään kuin laitteella (pistekerroin nyt 0,465 vs. 2752 px:n kuva). Tavoite: sama suhde kuin
+  isolla iPadilla. Yksityiskohdat NUI:lta (local_4b84cd90-123f-46c5-bc07-75760ed4c80b). Tulos + kuvapari suoraan KK:lle; junaan vasta KK:n sanalla.
+- NUI tiedoksi (ei toimia): Puhe.cs 27d162d64 (natiivi-backup natiivi-ui/pariisi-tekstit) esikatselusääntö LataaJaSoitaTiedosto-silmukkaan;
+  älä tee päällekkäistä Puhe.cs-muutosta.
