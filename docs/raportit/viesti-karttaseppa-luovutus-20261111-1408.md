@@ -96,3 +96,11 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - 16.42 AJO A KATSOTTU, parit KK:lle (kopio PT): K/parit-kj44/ (pari-sv44-1…8, arkki-kj44-a.jpg). Eiffelin 1. kerroksen alapinnan sirpaleet (taivaslaikut, irtopalkki) poissa jälkeen-kuvissa; Riemukaari 90/130 m ennallaan ehjä. Odottaa: NUI:n B + KK:n päätös → junaehdokas 03ad357fb.
 - PT 16.43 (KK 16.42): SYVYYSVETO 03ad357fb HYVÄKSYTTY JUNAAN, pt-ok, JU vie kärkeen (224.75); työlistarivi 'Riemukaaren kolo' valmis. SEURAAJA ALOITTAA: jono 2 ympäristöt takaisin (LISÄYS 10).
 - KK 16.45: 03ad357fb junaan ajon A perusteella (B ratkaisee vain NUI:n lähitasokaton). UUSI PIENI TYÖ ympäristöt-erän mukaan: Eiffelin 1. kerroksen siniharmaa suorakaide (K/parit-kj44/pari-sv44-4-*.jpg, jälkeen-puoli): selvitä koodimallista (OhjelmaKohdePariisiEiffel*.cs), mikä pinta; jos kerroksen tason alapinta/runko → tornin raudan tumma ruskea. Kuvapari samasta kulmasta (sv44-4: lähin, kallista 85, suunta 225, aja 48.85826 2.29450 0.0006 3) ympäristöt-erän ajossa, ei omaa ajoa.
+
+## LISÄYS 11 (16.5x, uusi sessio 16.47): ympäristöt-erä alkanut
+- KJ45 NYKYTILA JU:lla (pyydetty 16.49): K/sk-mac-ymparistot-kj45.txt, 27 kuvaa (13 × ylhäältä kallista 0 + viisto 45° etelästä, + ym45-14 Eiffelin 1. kerros sv44-4-kulmasta).
+  Käännös juna-224 + 03ad357fb, oletustalot. Kuvat → lokit/ks-kj45-ymparistot-<sha>.
+- IGN-ilmakuvat samoille aloille K/ymparistot-kj45/orto/ (data.geopf.fr WMS, ei robots.txt:tä, Etalab). Arkki: python3 -I K/ymparistot-kj45/tee-arkki.py <kuvakansio> → kj45-arkki-1..4.jpg (peli ylhäältä | IGN | viisto).
+- Eiffelin siniharmaa suorakaide (sv44-4) = 1. kerroksen paviljonkien lasiseinät EiLasi 0x6E787C (OhjelmaKohdeEiffel.cs:167–170), EI alapinta/runko → KK päättää nykytilaraportissa (ei muutettu).
+- Työlista: tilanne kirjattu riville "Pariisi: nähtävyyksien ympäristöt takaisin" (rivi "ylisuuret 1:1" on jo valmis).
+- SEURAAVAKSI: kuvat → arkki + puutelista kohteittain KK:lle (kopio PT) ENNEN korjauksia; KK päättää rajaukset → korjaukset yhtenä talot-eränä + parit.
