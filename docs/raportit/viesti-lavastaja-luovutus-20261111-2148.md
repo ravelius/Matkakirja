@@ -25,3 +25,4 @@ on symlinkki tähän). Id:t: KK local_d5f31591, PT local_8d8ebf72, NS local_0f7f
   kujan suu), K6 → sijoita −136 425 suunta 0 (vanha K6 seinän sisällä). NS ajaa saman skenaarion koe-glb:illä (`palatsi mallit file://…`).
 - SEURAAVAKSI: (1) NS:lle/JU:lle koe-glb:t pariajoon (vanha `valo elava kaikki` v5 | koe `valo elava pelaaja`), molemmat tarkkuudet; (2) parit KK:lle
   täysikokoisina (Raamattu: pari sama kohde kokonaan); (3) täysi tarkka leivonta VASTA KK:n sanalla. Muisti: 4096² valoatlas palaa kohden on koeratkaisu, ei paketti.
+- LISÄYS 21.5x (NS): koekamera-2 tilattu JU:lta (nykypeli, 0f851ddbd) → lokit/natiiviseppa-juoksu-pala3-koekamera-2: K6 (−136 425 0) ja K7 (−136 336 180) pelikameralla, K7b = K7 + testikamera 2.7 7.1 12 29. Vain K1/K1b ovat koekamera-1:ssä pelikameralla (K5 testikamera 3.0 6.88 10 45; lokin kamera = pelikameran paikka). Koe-glb-pariajo on erikseen pyydetty NS:ltä.
