@@ -676,6 +676,12 @@ for (const city of ERA5_TTS_MANIFESTI.cities) {
   TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
 }
 
+/*
+ * PARIISIN UUSI PULUN TEKSTI (KK 11.11.2026, omistaja 20.31 "Kyllä kelpaa"): 14.9. manifestin tagiresepti
+ * ei enää osu tekstiin. Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan.
+ */
+TAGIT['pariisi-3'] = { alku: '[amused]', kohdat: [['Katso ylös', '[brightly]']] };
+
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();

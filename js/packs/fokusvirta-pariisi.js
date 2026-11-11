@@ -105,8 +105,8 @@ export const FOKUSVIRTA_PARIISI = {
      */
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; puntari '
       + 'nousee.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 352 merkkiä (yläraja 400). */
-    teksti: "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+    /* KAANON: OMISTAJAN TEKSTI (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"; KK:n lopulliset tekstit). Sanasta sanaan. 249 merkkiä. */
+    teksti: "Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. Kirjekyyhky osaa näköjään vain kotiin.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -131,47 +131,39 @@ export const FOKUSVIRTA_PARIISI = {
     reaktiot: [
   {
     "id": "pariisi.r1",
-    "ankkuri": "palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten",
+    "ankkuri": "Pariisi oli saarrettu",
     "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
+    "voimakkuus": 0.4,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
   },
   {
     "id": "pariisi.r2",
-    "ankkuri": "Tyhjät ikkunat seisoivat yhä puutarhan laidalla",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r3",
-    "ankkuri": "etsin kulmaa, josta rauniot eivät näkyisi",
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r4",
-    "ankkuri": "Halusin viedä kotiin kauniin Pariisin",
+    "ankkuri": "Ostin lintutorilta kirjekyyhkyn",
     "tarkoitus": "myotailee",
     "voimakkuus": 0.35,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
   },
   {
-    "id": "pariisi.r5",
-    "ankkuri": "käänsin kameran suoraan palatsiin",
-    "tarkoitus": "myotailee",
+    "id": "pariisi.r3",
+    "ankkuri": "Lintu kaarsi kerran poltetun palatsin yllä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pariisi.r4",
+    "ankkuri": "Kirjekyyhky osaa näköjään vain kotiin",
+    "tarkoitus": "huvittuu",
     "voimakkuus": 0.5,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden 11.11.2026 tekstin sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[softly] Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. [warmly] Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+    /* ÄÄNITE: luenta uusitaan tästä tekstistä (Äänittäjä, suomi pakotettuna); vanha äänite ei vastaa tekstiä ennen uutta ajoa. */
+    luenta: "[softly] Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. [warmly] Kirjekyyhky osaa näköjään vain kotiin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE. Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json.
@@ -202,27 +194,11 @@ export const FOKUSVIRTA_PARIISI = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
-     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
-     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
-     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
+     * PULUN SAAPUMISKUVA (KK 11.11.2026): vanha tuolikuva (p1) pois; uusi kuva (kiinnitetty pallo Pariisin yllä)
+     * lisätään `kuvat`-listaan, kun KK on katsonut sen.
      */
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg',
-        lyhyt: 'Pariisi: tuoli kääntyi ystävää kohti.',
-        selite: 'Tuileries’n vihreillä tuoleilla kaksi ystävää jatkaa keskusteluaan puiden varjossa. Näkymä avautuu tuolin selkänojan korkeudelta.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://votrebanc.louvre.fr/en/the-project/',
-          'https://www.edmond-fils.com/les-collections/tuileries-mobilier-en-acier/',
-        ],
-      },
-    ],
-    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina."],
+    /* KUPLA: KK:n lopullinen teksti 2 (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"). Sanasta sanaan. 144 merkkiä. */
+    kommentti: ["Voi isoisä! Me kirjekyyhkyt osaamme vain kotiin. Siksi meidät vietiin Pariisista ensin ilmapallolla. Katso ylös: pallo nousee Pariisin ylle yhä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
