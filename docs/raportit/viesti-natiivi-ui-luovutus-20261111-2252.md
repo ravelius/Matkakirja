@@ -30,3 +30,8 @@ B. KK 22.51 ERILLINEN LÖYDÖS (luvattu KK:lle 22.5x): esittelyn lähikuvassa vi
    "käynnissä + id"). Tee TARINAMERKKIEN TOISEN KIERROKSEN yhteydessä (KK:n sana; tarkista mikä se on: PT:n päätösloki 10.11. 21.12/21.27
    "tarinamerkit yksinkertaisiksi") ja näytä PARI (ennen/jälkeen samasta esittelyn hetkestä) KK:lle.
 C. aarrekysymys-1 (79f883671) JU:n jonossa vakioajon jälkeen → katso -2217 kohta 3 → KK.
+
+## LISÄYS 22.5x
+- PT/KK 22.53: junan 224.88 Mac-ajoon isoisän kortti taitettuna → sk-taitto-juna-1.txt (ilman fokusvirrat-juurta) JU:lle → lokit/nui-taitto-juna-1-<sha>.
+  Katso t1–t3 → KK. Jos "kuva taitettu" ei tule: linkkiversion Pariisin merkinnällä ei sivukuvaa → PT.
+- JU: petit-palais-juna-1 alkaa, kun MR84 (224.89, a0c49d779) on junassa → lokit/nui-petit-palais-juna-1-<sha>.
