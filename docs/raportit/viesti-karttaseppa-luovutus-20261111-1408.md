@@ -430,3 +430,10 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
      levein ja pisin silta läheltä: Pariisi way/996671272 (48.900292 2.381194, 47 m) ja Pont Aval (48.834892 2.264338, 333 m); Lontoo Grosvenor (51.484499 −0.147352, 51 m) ja
      way/837943387 (51.514593 0.004808, 349 m). Arkit 1000 px + täysikokoiset parit. KK katsoo → junasana. Pohja: tee-sillat-kj49b.py (sillat-kj49b/).
 - SEURAAJAN JONO: 1) aja_kaikki → KK rivi. 2) KJ49b kuvat → KK (vyöt poissa?). 3) Siltalinja 2–3 + KJ49c. 4) Parvis (a)/(b) → KK. 5) Työkalu 2 luonnokset. Montmartre yöviennin jälkeen.
+
+## LISÄYS 31 (23.0x): aja_kaikki VALMIS → KK, NOLLAUS
+- T/uudet-kaikki/kaikki.md: 52/63 valmis (10 Gt T7:llä). Pysähtyneet: alpit (tyhjä ote), ateena 8,3 / barcelona 8,2 Mt > 8 Mt, vakiokuvat < 3 katua: dubrovnik, helsinki,
+  moskova (0/3 → tarkista miksi), pietari, sanmarino, venetsia; pariisi = tee_palat.py FileNotFoundError /Users/Shared/Claude/wt/proto-karttaseppa-nd-kaanto-219/…/NotreDameKoe/pohja.png
+  (vanha Pariisin syöte osoittaa poistettuun työpuuhun → polku nykyiseen työpuuhun/gitistä), lontoo = korkeus_oletus_osuus-mittari puuttuu (oma ea-lidar-aineisto). Rivi KK:lle lähetetty 23.0x.
+- SEURAAJAN JONO: 1) muutama vakiokuva-arkki KK:lle (valmiista, esim. wien/rooma/praha; luonnos, ei pelikuva) + pysäytysten korjausehdotus (pala-raja, vakiokuvien kadunhaku, Pariisin polku).
+  2) KJ49b kuvat (JU) → KK. 3) Siltalinja KK 22.51 kohdat 2–3 + KJ49c (LISÄYS 30). 4) Parvis (a)/(b) → KK (LISÄYS 29). 5) Työkalu 2 luonnokset. Montmartre yöviennin jälkeen.
