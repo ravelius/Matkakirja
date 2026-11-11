@@ -203,3 +203,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - SAAPUMINEN: mac-7 (204a54ecd) yhä JU:n Mac-jonossa → lue (lisäys 14) → KK.
 - VS:lle vastattu striimikartasta (laatat KS:n, Z17 katto ElavaTyyli.Viimeinen, m/px ja muistiarvio).
 - Cron (unity-julkaisut 9.04) ja ajovahti (Monitor vahti.sh) LUO UUDELLEEN.
+- LISÄ 16b: KK 13.0x tarkisti (ii): rajaus vain juoksupeliin pitää; vastaus-ii.md:hen kirjattu Nakyva-tason kattottomuus (Esilataaja.cs:16, :164–169).
+  Löydös PT:lle: KohdekarttaNakyma.cs:237 / NostotKartalla.cs:2991 Kuvat.Hae → Nakyva ilman kattoa (Pelikoodarin jono; Latausjonoa EI laajenneta).
+- JU 13.10: saapuminen-mac-7 (204a54ecd) VALMIS (rc 0, kuvia 14/14, mp4 1, NRE 0) → lokit/natiiviseppa-saapuminen-mac-7: LUE ENSIN (lisäys 14 ehdot) → KK.
