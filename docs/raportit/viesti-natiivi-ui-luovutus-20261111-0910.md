@@ -45,3 +45,15 @@ Testit: Kartta 755/755, Linssit 2289/2289, Peli 912/912, kameratesti ok, kieliva
 
 ## LISÄYS 09.1x
 - lento-3 (9c24daf3e) ajettu 08.54 (JU), tallenteet lähetetty KK:lle 09.1x (kopio ei PT:lle: rutiini). Ei tarvitse lähettää uudelleen.
+
+## LISÄYS 2 (seuraaja, ennen nollausta)
+- KK:n lento-3-palaute (KK 09.4x) käsitelty, vastaus lähetetty KK:lle (kopio PT):
+  1) Sainte-Chapelle maan tasalla: kiertopiste ellipsoidilla ~90 m maan alla → 169 m / 60° kamera maan alle. b07796650 korjaa
+     (keskikorkeus, kamera ~120 m maan yllä). Katso katse-1:stä; jos kappeli jää yhä Oikeuspalatsin taakse → pienille kohteille
+     jyrkempi kallistus (KK:n ehdotus, NUI päättää keinon).
+  2) Sulun liikepiikki: 5ce4232cd natiivi-ui/napautus-lento (pushattu natiivi-backup). Kierto, siirto, zoomi ja paisunta palaavat
+     yhdessä PalloKierto.SulkuS 1,8 s; kohdelukko pysyy hiipumisen ajan, sitten PudotaEsitysKatse. Testit 755/2289/912, kameratesti ok.
+     Ei vielä ajettu: seuraava NUI-ajo JU:lle katse-1:n jälkeen (sama skenaario + sulku, katso liike 27–30 s).
+  3) Vinot palkit = KS:n SC:n paperiseinät (v36, KJ33 JU:lla; a539f9b92).
+- KS 09.3x (KK 09.2x), ei estä junaa, TEKEMÄTTÄ: NostotKartalla.TahtienIsannat — kun mallikylttiä ei ole (koodimalli korvaa Tripon,
+  esim. Grand Palais → ★ Palais de l'Industrie piiloutuu), ★-tekstin isännäksi kartan nimi (Nimikerros-laatikko). NostotKartalla.cs:1561/1588.
