@@ -1470,3 +1470,9 @@ Omistaja 19.58: uudet ohjeet isoisän ja pulun teksteille + "Nämä pitäisi kir
 "Lyhyemmät rajat": isoisän teksti enintään noin 250 merkkiä, pulun enintään noin 150 (Raamattu 3.6).
 "Kelpaa": Pariisin uusi aihe (kirjekyyhky lentää takaisin myyjälleen); KK tarkistaa faktat ja tuo lopulliset tekstit omistajalle ennen äänitystä.
 "Kyllä, nollaa nyt": KK nollasi itsensä 20.17, Postivahti aloitusviestin.
+
+## KK PÄÄTTÄÄ OMISTAJAN PUOLESTA JA NOLLAA KYSYMÄTTÄ (omistaja 11.11.2026 klo 22.56, KK) (11.11.2026 klo 23.0x)
+
+"Saat tehdä kaikki päätökset puolestani sekä nollata ilman kysymistä."
+KK ratkaisee itse ennen kortilla kysytyt asiat ja nollaa itsensä ilman korttia (Raamattu 7.27, 7.37); roolien kysymykset omistajalle tuodaan yhä KK:lle.
+KK:n tulkinta (kerrottu omistajalle): ostot, TestFlight-julkaisu sekä avaimet, luvat ja CLAUDE.md pysyvät omistajalla.
