@@ -211,3 +211,11 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KK 20.06: piirtokutsut HYVÄKSYTTY, sävy 130 131 78 lähtökohdaksi. KJ47c:stä KK:lle: NÄKYVÄT kolmiot ennen|jälkeen, Champ-de-Mars peli|orto, viistoparit Eiffel (ym47c-01-eiffel-b)
   ja Invalidit (ym47c-07-invalidit-b; lisätty skriptiin 20.1x, 9 kuvaa, JU:lle kerrottu), 3D|maalattu läheltä (42/43). Kunnossa → erä 90b66a261 + puut junaan YHTENÄ (lukitun loppulistan kohta 1).
 - JU 20.1x: KJ47c Mac-jonossa NS palkki-2, NUI yksi-etaisyys-1, NS katko-3, pala3-luettelo ja pala3-koekamera jälkeen; JU ilmoittaa KS + PT.
+- PT 20.5x (KK, omistaja 19.16 "Työkalut ensin"): KS:lle työkalu 1 (yhteinen tee-palat + `uusi-kaupunki`) ja työkalu 2 (tyypitys; ENSIN luonnoskuvat KK:lle).
+  Tehtävänanto /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md. Pariisin loppulista EDELLÄ.
+- KS 21.0x → KK + PT: "mahdoton/kalliimpi" lähetetty (ei mahdotonta). Ehdotukset: (1) Pariisin vanhat maskit jäävät syötteeksi ja näyttö (b) on tavulleen sama;
+  (2) Euroopan rakennusote kerran planeetasta (T7 /Volumes/T7 4TB/Matkakirja-karttaseppa/valitaso-osm/planet.osm.pbf 95,6 Gt; ei siirtoa ennen otetta);
+  (3) Wien: Overture tuskin auttaa (Pariisi 98,7 % OSM; duckdb-venv _tyo/karttaseppa/overture/venv) → "korkeusaineisto heikko"; (4) tyyppitalo ≤ ~1 500 kolmiota,
+  ikonien verkot tavulleen samat; (5) luonnokset: osakirjasto Unityn dotnet+Roslyn (Kartta-testit/kaanna.sh) → OBJ → Blender 5.2.
+  Skriptit: Pariisi _tyo/natiiviseppa/pariisi-talot/tee-palat.py (554 r.), Lontoo _tyo/pelikoodari/lontoo/a/tee-palat-lontoo.py (471 r.), planeettalukija hae-planeetasta.mjs.
+  ODOTTAA KK:n vastausta ennen aloitusta.
