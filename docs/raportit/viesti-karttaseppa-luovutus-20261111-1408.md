@@ -640,3 +640,16 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   tyokalu-1/nayte-kj54/oikeat/ (orto + Commons-katukuvat, lahteet.json). Arkki per kaupunki 1000 px: 3 vakiokuvaa + yleis + oikea kuva → KK.
 - JU:n jono: KJ49c → KJ51 → KJ52 → KJ54 → KJ55 → KJ53. Montmartren maasto 01.00 epäonnistui, JU ajaa uudelleen (tulos erikseen) → sitten KJ43.
 - Python: numpy/PIL vain käyttäjän site-packagesissa → aja ilman -I (scratchpadista).
+
+## LISÄYS 46 (01.4x): KJ49c katsottu → KK (VIKA), parvis 224.92, vertailukuvat valmiit, NOLLAUS (konteksti 25 %)
+- JU 01.36: PARVIS 1d2cdf71b LINKISSÄ 224.92 = 70f3a7aba. VALMIS.
+- KJ49c → KK 01.4x: arkit _tyo/karttaseppa/koodijuna/parit-kj49c/arkki-kj49c-{pariisi-a,pariisi-b,yleis}.jpg (+ pari-si49c-*.jpg). Kunnossa: kansi kadun sävyssä,
+  ylempi juova pois, Alma palkki + 1 pilari, Mirabeau 3 teräskaarta, Iéna 5 kaarta. VIKA: Alman palkin kylki (2,2 m, kameraan päin, si49c-31 ja -38) SYVÄN MUSTA
+  leveä nauha. SEURAAJA: korjaa haarassa karttaseppa/sillat (työpuu wt/proto-karttaseppa-sillat, 300c6b99d): tarkista palkkirakentajan kyljen normaali/kiertosuunta
+  ja AO-väri (GeneroidutSillat / KaupunkiSilta.Generoitu, SiltaLaji.Palkki, PalkkiKorkeus 2,2), testi kyljen normaalille; uusi pari si49c-31 + -38 (JU) → KK.
+  Junaan vietäessä poimi 300c6b99d + korjaus (+ pitkät ced23df14, jos KK) 224.92:n (70f3a7aba) päälle ilman NS T1:tä (kuten sillat-juna/parvis-juna).
+- VERTAILUKUVAT KJ54:lle valmiit: tyokalu-1/nayte-kj54/oikeat/ (orto-<id>-keskusta.jpg 6 kpl, katu-<id>-1..3.jpg 18 kpl, lahteet.json). Tukholman orto = Sentinel-2 10 m (pehmeä).
+  Katukuvista lähikadulta: luxemburg-1/2/3, amsterdam-2, barcelona-2 → mainitse lähderivillä. Kansiossa 3 _orto_meta*.tmp.json (agentin välitiedostot, ei poistettu).
+- Työlista: "3D-puun valoisan puolen sävy" tilanne päivitetty.
+- SEURAAJAN JONO: 1) KJ49c-palkin musta kylki (yllä) 2) KJ51 Petit Palais → KK 3) KJ52 + talojen päätös → KK (LISÄYS 41) 4) KJ54 näyte → arkit (3 vakio + yleis + orto/katu) → KK
+  5) KJ55 nimet → KK 6) Montmartre KJ43 kun JU:n maastovienti valmis 7) KJ53 puun valo (mittaa-kj53.py) 8) GHSL-kalibrointi näytteen jälkeen.
