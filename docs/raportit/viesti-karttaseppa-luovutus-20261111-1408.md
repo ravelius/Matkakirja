@@ -163,3 +163,18 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   kevyt (esplanadi) | ND:n puisto kaari 0.0011, (d) varjoraja esplanadin rivi kaari 0.0028/0.0034/0.0040/0.0048 + liikkeessä, (b) muisti alku/loppu.
   KUN TULEE: tarkista Shader-virheet (instansointi), puut näkyvät (jos puuttuvat → variantti karsittu), luvut: kolmiot ≤ ~+10 % yleis, muisti; parit + luvut KK:lle (kopio PT).
 - JONO: 1) KJ47 → KK. 2) Palais de Justice talot (aloitettu 18.1x). 3) Montmartre KJ43 (01.00 jälkeen).
+
+## LISÄYS 14 (18.2x): PALAIS DE JUSTICE -SELVITYS, NOLLAUS (konteksti 27 %)
+- KJ47 JU:lla (pyydetty 18.1x, kopio PT; JU:n sessio oli kesken, viesti jonossa). Tuloksia ei vielä tullut.
+- PdJ NYT (v41-pp, KJ45 ym45-04): talot EIVÄT puutu. Ketju tee-talot-sc-pohja.py (VARA 0,5, SC_DZ −16,5) leikkaa taloista vain SC:n KOODIMALLIN pohjan
+  + 0,5 m ja poistaa SC:n oman OSM-rakennuksen relation/3344870; Tripo-ajan SC-suorakaide on jo poissa. SYY "matala/litteä": koko Palais de Justice on OSM:ssä
+  YKSI multipolygon relation/536982 (building=civic, ei height-tagia, 28 484 m²), joten talokone (tee-palat.py korkeus(): IGN BD TOPO -talo, joka sisältää
+  keskipisteen, muuten lähin) antaa koko kompleksille YHDEN korkeuden → tasainen naapurien korkuinen massa. Naapurit: Cour d'assise way/245531936 (ei korkeutta),
+  Tribunal de commerce way/53601032 (height 25).
+- EHDOTETTU TAPA (ei vielä tehty): kääre tee-talot-sc-pohja.py:n päälle (kuten tee-talot-mm.py), joka korvaa relation/536982:n IGN BD TOPO -rakennuksilla
+  (P/ign/*.json, kentät hauteur, altitude_minimale_sol) sen ulkorenkaan sisältä: kukin IGN-osa omana talonaan omalla korkeudellaan; IGN ei kata pihoja, joten
+  SC:n piha jää tyhjäksi; SC:n koodimallin pohja + 0,5 m leikataan kuten nyt. Tarkista ensin: IGN-osien korkeudet PdJ:n alalla (odotus ~20–35 m, Conciergerien tornit)
+  ja nykyinen yksi korkeus (aja korkeus() samalla datalla). Pohja palat-v41-pp (EI v42-mm), kokoa vain muuttuneet palat (kokoa-v41-pp.py mallina),
+  uusi kansio K/raivaus-1-1-pdj/; ämpäriin vasta KK:n sanalla. Sitten KJ46b-parit ym45-04-kulmista + IGN (K/ymparistot-kj45/orto) + muisti (`puut tilasto`).
+- SEURAAJAN JONO: 1) KJ47 kuvat + piirtotilasto-rivit → KK (kopio PT); jos puita ei näy JÄLKEEN-kuvissa → instansointivariantti karsittu (tarkista unity.log Shader).
+  2) PdJ yllä olevalla tavalla. 3) Montmartre KJ43 maaston 01.00-viennin jälkeen.
