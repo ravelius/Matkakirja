@@ -30,3 +30,11 @@ Korvaa -0132:n; taustat ja työkalut: `git show 91be273d8:docs/raportit/viesti-k
 - KK: F-jalanjälki pienenä kartta-asiana Sainte-Chapellen JÄLKEEN: yksi rivi KK:lle, mikä talo puuttuu 3D:stä tai mikä piirros ylimääräinen
   (OSM-talot alueella kaikki paloissa → katso maan rakennustason lähde). Raivauksen tarkistuskuvaa ei tarvita.
 - Järjestys: KJ24 Sacré-Cœur → KJ25 Sainte-Chapelle (molemmat JU:n jonossa, 8f647a8d4) → F.
+
+## LISÄYS 02.20
+- KJ24/KJ25 katsottu → KK:lle (kuvat sc24-koodi-lahi-006/-009, sch25-koodi-yleis/-lansi) + mäen rivi; kysytty: Sainte-Chapelle junaan v29-sc1-raivauksella?
+  HUOM tähtäys: "aja"-kohde näkyy kuvan YLÄOSASSA (ei keskellä) → siirrä kohdetta etelään/kameran puolelle, jotta malli osuu keskelle.
+  sch25-koodi-lahi epäonnistui (kamera talojen tasolla) → uusi kaari 0,0035–0,004, jos KK pyytää.
+- Seuraavaksi F-jalanjälki (KK: Sainte-Chapellen jälkeen): yksi rivi KK:lle. OSM-talot alueella kaikki paloissa (scratchpad puuttuvat.py, laatikko
+  48.8612–48.8648 / 2.3335–2.3395) → piirros tulee maan rakennustasosta (mvt z14?) → etsi piirroksen lähde ja vertaa OSM:ään.
+- Sacré-Cœurin raivaus (169 taloa) pienennettävä 1:1-jalanjälkeen, kun KK pyytää.
