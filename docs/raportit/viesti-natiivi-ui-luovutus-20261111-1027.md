@@ -24,10 +24,10 @@ Ajojen odotus: scratchpadin odota.sh-malli (bash, until loki.txt "valmis N s"); 
 ## 2. Napautus A+B (natiivi-ui/napautus-lento 2c75bcf22)
 - katse-2 katsottu ja KK:lle viety; KK 10.3x: NUI:n osa KUNNOSSA (lento, kierto, katsepiste, sulku, Eiffel-huippu, Lehti-nappi).
 - KK:N PÄÄTÖS: A+B EI junaan yksin. SC:n viat (naapuritalon katto kuoren läpi, tornin kärki katkeaa Tripo-mallissa) = KS, jonossa KJ37:n jälkeen.
-- KK:n tehtävä 1: PYSYVÄ LÄHIKUVATARKISTUS: sk-kohteet-arkki-1.txt (12 Pariisin kohdetta × alku/90°/180°/lähin, kiertovauhti 15) → JU ajaa matkaopas-2:n
+- KK:n tehtävä 1: PYSYVÄ LÄHIKUVATARKISTUS: sk-kohteet-arkki-1.txt (12 Pariisin kohdetta × alku/90°/180°/270°/lähin = 60 kuvaa, kiertovauhti 15; 270° lisätty PT 10.3x: KK:n ehto 4 suuntaa; JU:lle sanottu kopioi uudelleen, raja 30 min) → JU ajaa matkaopas-2:n
   jälkeen: lokit/nui-kohteet-arkki-1-17ddd9e1c. Haara natiivi-ui/kohteet-arkki 17ddd9e1c (worktree /Users/Shared/Claude/wt/proto-nui-kohteet) =
   2c75bcf22 + karttaseppa/montparnasse-juna a4f6cd17b (Orsay+Montparnasse koodina, talot v14), unity 0. Orsay: `ui kohdenostot napauta Orsayn taidemuseo`
-  (ei 3D-kylttiä; tarkista lokista, avautuiko esitys). Tee arkit (montage 4 saraketta × 12 riviä, sips -Z 1000 -kopiot) → KK:lle ja KS:lle.
+  (ei 3D-kylttiä; tarkista lokista, avautuiko esitys). Tee arkit (montage 5 saraketta × 12 riviä, sips -Z 1000 -kopiot) → KK:lle ja KS:lle.
   Sama skenaario myöhemmin Lontoolle.
 - KK:n kohta 3: lähin etäisyys on nyt yhteinen kaava (NahtavyysEsittely.Lahin: h × EsitysLahinOsuus 0,7, palkin alle). KK:lle sanottu: kohdekohtainen
   vähimmäisetäisyys (nimen mukaan) tehdään, kun arkeista näkyy tarve. Sitten A+B + KS:n korjatut mallit junaan yhdessä KK:n sanalla.
