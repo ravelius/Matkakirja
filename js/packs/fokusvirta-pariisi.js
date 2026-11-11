@@ -139,22 +139,15 @@ export const FOKUSVIRTA_PARIISI = {
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
+    // Isoisän YKSI kuva kortissa tekstin vieressä (omistaja 11.11.2026 klo 20.31; Codex 689a190dd, KK hyväksyi 12.11. 00.4x).
+    // Vanhat i1 ja i2 (tarina14) pois samassa muutoksessa (KK 12.11. 00.16).
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg',
-      lyhyt: 'Pariisi, 1873. Tuileries’n tyhjät ikkunat puutarhan laidalla.',
-      selite: 'Vuoden 1871 palon jäljiltä palatsin runko seisoo yhä puutarhan edessä. Näkymä pohjautuu Henri Emile Godefroyn historialliseen valokuvaan.',
+      osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi.png',
+      lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries’n puutarhasta.',
+      selite: 'Isoisä päästää kirjekyyhkyn lentoon palaneen Tuileries’n palatsin edessä. Raunioiden muoto pohjautuu Alphonse Liébertin valokuvaan.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
-        'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5',
-      ],
-    },
-    luentakuva2: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg',
-      lyhyt: 'Pariisi, 1873. Rauniot näkyivät myös puiden alta.',
-      selite: 'Puiden varjosta avautuu toinen näkymä palaneen Tuileries’n julkisivuun. Puutarhan rajaus on kuviteltu saman historiallisen valokuvalähteen pohjalta.',
-      lahde: 'Matkakirjan havainnekuva',
-      lahteet: [
-        'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5',
+        'https://www.metmuseum.org/art/collection/search/291458',
       ],
     },
   },
