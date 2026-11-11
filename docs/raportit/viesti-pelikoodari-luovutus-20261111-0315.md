@@ -25,3 +25,8 @@ Parikuvat: scratchpadin pari.py-tapa (vierekkäin, ≤ 2000 px), itse katsottaes
 
 ## ENNALLAAN
 B1 bottijumi (−85; 500), eteläosan kartoitus; isolla iPadilla aukiovideo ja renkaiden uusinta. Penger LAV:lla (penger2 tehty).
+
+## LISÄYS 03.2x: v17 ja porraskivi ajettu (JU 03.15/03.18), katsottu, parit KK:lla (kopio PT, LAV)
+- v17: seinat-taso1/p2/v17/pari-*.png, rungot lehdessä, ei vikaa. KK:lta kysytty "kelpaako junaan" → kyllä = pt-ok-pyyntö 77128fef8 PT:lle.
+- porraskivi: seinat-taso1/porraskivi/pari-*.png, kuvio = penger, mutta portaat vaaleammat (ei leivottua valoa). Ehdotettu KK:lle tummennus
+  (oviPorrasKivi _BaseColor ≈ pengerin leivottu sävy, mittaa kuvasta) + uusi pari säästön jälkeen PT:n luvalla. Odottaa KK:n vastausta.
