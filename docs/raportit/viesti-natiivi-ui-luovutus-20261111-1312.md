@@ -56,3 +56,6 @@ lähin-kuvat (nui-lahin-1-0ca9df559, JU ajaa) → KK:n OK → sha PT:lle → pt-
 ## LISÄYS 3 (KS 14.3x): UI-pallon varjo jää näkyviin, kun UI-pallo piiloutuu KS:n koodipallon tieltä (KJ37 2cf7b7e48,
 lokit/karttaseppa-pallo-kj37-2cf7b7e48). NUI:n koodia: KaupunkiPallot.SarjaVarjo on erillinen elementti, PallonVarjoVaistaa (~975) asettaa
 visibilityn joka kehys. KS:ltä kysytty, millä kutsulla/lipulla UI-pallo piiloutuu → sama piilotus SarjaVarjolle (display None tai ohitus).
+- KS 14.3x vastasi: piilotus on KS:n haarassa karttaseppa/pallo-koe 2cf7b7e48 (KaupunkiPallot.cs): lippu `PalloMalliPiilottaa` (oletus true),
+  `PalloMalliAvain = "kuumailmapallo"`, `PalloMalli(Pallo p) = OhjelmaKohteet.KoodimallinNakyvyys(...)` (vain Pariisin kaupunkipallo) → `Pallo.Malli3D`,
+  UI-kuvan alfa 1 − Malli3D. KORJAUS: SarjaVarjon opasiteetti × (1 − p.Malli3D) PallonVarjoVaistaa-kohdassa, KS:n haaran päälle.
