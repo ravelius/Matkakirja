@@ -569,3 +569,16 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - LEVY (PT 00.1x, omistaja 23.34): _tyo/karttaseppa-kohokartta-raaka 37 Gi → /Volumes/T7 4TB/koodaus/karttaseppa/karttaseppa-kohokartta-raaka + symlinkki vanhaan polkuun,
   ajo scratchpad siirra-koho.zsh (rsync + cmp, lähde pois vasta samana). Jos symlinkkiä ei ole: siirto kesken/katkesi → tarkista, aja uudelleen (rsync jatkaa). Rivi PT:lle valmiina.
   Työpuut koodijuna/parvis/sillat EIVÄT valmiita (PT:lle kerrottu), ei poistettu.
+
+## LISÄYS 40 (12.11. 00.2x, uusi sessio 00.13): KJ49b Lontoo → KK, Petit Palais korjattu, KJ51 JU:lla, levysiirto uudelleen
+- KJ49b LONTOO → KK 00.2x: arkki K/parit-kj49b/arkki-kj49b-lontoo.jpg + pari-lontoo-*.jpg + rajaus-lontoo-35-blackfriars-kylki.jpg. Blackfriarsin ratasillan tumma juova poissa,
+  muut ennallaan; Lontoon ohjelmakohteet 166 787 → 191 583 kolmiota (+14,9 %). ODOTTAA KK:n junasanaa 4d18cf390:lle.
+- PETIT PALAIS (KK 00.06): syy = mallin oma pinta, EI syvyysveto. PpPiha: gallerioiden lasikatto (14 m) ulottui PpUlko-rajaan (−66, 17,5)…(−45, −45), joka oli 1–1,5 m
+  sivusiipien ulkoseinän ja rotundien ulkopuolella → lasi näkyi seinästä kaarien yllä ja tornin vierestä. KORJAUS e5282c741 (natiivi-backup karttaseppa/petit-palais-lasi,
+  = 8459237ec (224.89) + 1; työpuu /Users/Shared/Claude/wt/proto-karttaseppa-pp-lasi): PpUlko (−52,5, 17,5), (44,5, 17,5), (23,5, −38), (−31, −38) siipien sisällä.
+  Testi: säde alas 0,8 m ulkoseinän ulkopuolelta ei osu (kaatuu vanhalla); rotundatesti kupolista (vanha nojasi rotundan alle ulottuneeseen lasiin). 766/766, unity 0.
+- KJ51 pyydetty JU:lta 00.2x: _tyo/karttaseppa/koodijuna/petit-palais-kj51/sk-mac-petit-palais-kj51.txt (NUI:n pelaajan polku + 5 kiinteää lähikuvaa), ENNEN 8459237ec | JÄLKEEN e5282c741
+  → lokit/ks-kj51-pp-lasi-<sha>. KUN TULEE: parit K/pari.py → K/parit-kj51/ (pp51-6-lahin = KK:n kuva, rajaus crop iw*0.36:ih*0.22:iw*0.26:ih*0.50 täysikokoisena) → KK. Ei junaan ennen KK:n sanaa.
+- LEVY: edellinen siirra-koho katkesi alussa (kohde 0 B, ei rsynciä) → käynnistetty uudelleen 00.14 (scratchpad 5e2c9543…/siirra-koho.zsh, loki siirra-koho.log). Jos symlinkkiä ei ole, aja uudelleen.
+- SEURAAJAN JONO: 1) KJ50 + Amsterdam (JU) → KK. 2) KJ49c (JU) → KK. 3) KJ51 Petit Palais → KK. 4) Näyte 6 kaupunkia + Ateena (LISÄYS 37 k. 3). 5) Montmartre KJ43 01.00-viennin jälkeen.
+  6) Pitkät monikulmiot, GHSL-kalibrointi, 3D-puun sävy.
