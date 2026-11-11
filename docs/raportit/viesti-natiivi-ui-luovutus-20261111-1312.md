@@ -46,3 +46,6 @@ UUSI SÄÄNTÖ (omistaja 12.21, Raamattu 12.26.5): kaikki ajot Macilla (esikatse
 - SOVITTU KS:n kanssa 14.1x: `public static Bounds OhjelmaKohteet.RungonRajat(Mesh verkko)` (verkon omassa avaruudessa kuten verkko.bounds; tuntematon
   → verkko.bounds). KS tekee haaran karttaseppa/runko (natiivi-backup, juna-224:n kärjestä) ja kertoo sha:n NUI:lle. NUI vaihtaa verkko.bounds →
   RungonRajat(verkko): NahtavyysEsittely.TaysiMalli, Paisunta.MahtuvaKerroin ja Naytteet, jos sama. Pohja: juna-lehti + merge karttaseppa/runko (commit-pari).
+- KS 14.2x: RungonRajat VALMIS 2743a6ebd (natiivi-backup karttaseppa/runko, pohja 613f55c18 = juna-224-ehdokas SC; testit 758/912, unity 0).
+  Ulkona: SC:n terassi ja portaat, Louvren kiveys ja altaat, Opéran ja GP:n portaat; muilla = bounds. NUI: oma commit tämän päälle (+ juna-lehti),
+  TaysiMalli `b = OhjelmaKohteet.RungonRajat(verkko)`, Paisunta.MahtuvaKerroin, Naytteet → sha KS:lle, sitten KJ arkki-2:lle NUI:n skenaariolla.
