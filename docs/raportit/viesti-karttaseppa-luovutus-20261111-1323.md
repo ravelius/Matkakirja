@@ -39,3 +39,10 @@ K = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodijuna (T7-symlinkki: find
 Koehaarat (ei junaan sellaisenaan): karttaseppa/sc-osm-paikka 35c1dd1a1, karttaseppa/kohteet-arkki-syvyys 42e9543f7, karttaseppa/pallo-koe 2cf7b7e48, karttaseppa/petit-palais 4b8ae2d47, karttaseppa/runko 2743a6ebd.
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty, talot-paketti-pariisi-v15-v39-ALA-VIE. Ämpärin versionumeroa ei käytetä uudelleen (seuraava vapaa = v17).
 Isolla iPadilla vain KK:n nimeämä valmis kokonaisuus (omistaja 12.21); kaikki kokeet Macilla.
+
+## LISÄYS 13.3x: KJ37 katsottu (JU 13.28: rc 0, 12/12, kansio proto-3d/lokit/karttaseppa-pallo-kj37-2cf7b7e48)
+Parit KK:lle (kopio PT): K/parit-kj37/ (pari-yleis, -ita, -louvre, -lahin-pelikamera, -lahin-rajaus.jpg). NUI:lle kansio + kysymys varjon omistajasta.
+Löydökset: (1) yleisnäkymässä pallo ei erotu, kyltti kantaa; (2) pallon alla iso vaalea kermakiekko erottuu oliivipuistosta → pois tai kartan oliivi;
+(3) KAKSI VARJOA: ruskea soikio kiekon vasemmalla = sama kohta kuin ennen-kuvan UI-pallon varjo (jää, vaikka UI-pallo piiloutuu) + koodipallon oma; (4) vanha UI-pallo ei näy ✓.
+SEURAAVA: odota KK:n linja → korjaa karttaseppa/pallo-koe (2cf7b7e48; KpLaikka = tallattu ympyrä) + vanha varjo piiloon (NUI:n vai KS:n koodi?) → uusi KJ JU:lle.
+KJ42 (4b8ae2d47) alkaa JU:lla KJ37:n jälkeen.
