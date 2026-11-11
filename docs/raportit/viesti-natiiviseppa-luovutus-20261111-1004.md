@@ -212,3 +212,5 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - VS 14.1x (KK 14.06, saumat-ja-maet osa 4): elävän kartan muste+kuitu tileset-varjostimeen (tee_tileset.py, kytkin _elavaMuste_n, oletus 0).
   Vastattu: paikka 0 (pohja), VS tekee haarassaan linssiseppa2/elava-muste, ehto: generaattori + shadergraph samassa commitissa ja todiste, että
   oletus 0 = ennallaan; NS katsoo diffin ennen junaa (renderöintiputki NS:n). Odottaa VS:n sha:ta.
+- 16e: VS:n tileset-muutos 1efd29cb4 (linssiseppa2/elava-muste) KATSOTTU, NS OK junaehdokkaaksi muste-1-parin + unity 0 jälkeen (File-lähde oikein,
+  multi_compile_fragment globaali → fragmenttivariantit 2×, kerrottu VS:lle KK:ta varten). Ei NS:n jatkotoimia.
