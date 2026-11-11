@@ -449,3 +449,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ49b: JU:n jono-ks-kj49b.zsh (pid 87003) käynnissä 23.07.
 - SEURAAJAN JONO: 1) vakiokuva-arkit + pysäytysten korjausehdotus → KK (LISÄYS 31). 2) KJ49b → KK. 3) Siltalinja 2–3 + KJ49c (+ Alma 120 m matala). 4) Pitkät monikulmiot muissa
   rakentajissa (yllä 2). 5) Parvis (a)/(b) → KK. 6) Työkalu 2 luonnokset. Montmartre yöviennin jälkeen.
+- 23.1x JONO 1 TEHTY: arkki tyokalu-1/vakiokuvat-arkki-wien-rooma-praha.jpg + pysäytysten korjausehdotus KK:lle (odottaa sanaa): 1) vakiokuvat: highway=pedestrian
+  TAVALLINEN-joukkoon + TALOJA portaittain 12→8→6 (mitattu: venetsia 97, helsinki 10, sanmarino 6 jo 12:lla; moskova 39 kuudella; koe scratch katukoe.py). 2) ateena/barcelona: raja 8 Mt pysyy,
+  yli rajan pala jaetaan 4:ään (ei rajan nostoa). 3) Pariisin syötepolku nykyiseen työpuuhun. 4) Lontoo: oletus-osuus lasketaan myös EA-lähteelle. 5) alpit = maisema, ohitetaan.
+  SEURAAVA: KJ49b (JU pid 87003) → KK.
