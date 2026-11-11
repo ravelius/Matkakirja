@@ -64,3 +64,17 @@ skriptit /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-*.txt, lokit /Users/Sh
 - 21.1x KORJAUS: sivukuva-1 ecf7c28a6 (lokit/nui-sivukuva-1-ecf7c28a6) katsottu: sivukuvaa EI tullut (Sivukuvallinen vertasi "Pariisi", tunnus on
   "pariisi"; a5-avattu: kortti + kaksi pikkukuvaa alhaalla). Korjattu: JUNAN SHA nyt 1bde772da (natiivi-ui/intro-nimet-kortti), pulun haara
   d9af44f0f (natiivi-ui/intro-nimet). JU:lle: ajo 1bde772da → lokit/nui-sivukuva-1-1bde772da (korvaa 84d3e39a5- ja 3d513772b-ajot). Katso → KK.
+
+## KK:N PÄÄTÖKSET 21.1x (sanatarkasti tiivistettynä; KK local_d5f31591…)
+A (ennen junaa, KK:n sanalla): (1) PARIISI-kirjaimet eivät saa kulkea kuvan nimirivin yli: 1. kuvan nimi näkyviin vasta kun kirjaimet ohi, TAI
+rivit eri korkeudelle. (2) Nimirivin kontrasti vaalealla kuvalla (Riemukaari) vahvemmaksi reunalla ja varjolla, EI tummaa kaistaa
+(SaapumisKuvat.LisaaIntroNimi + Pulu.uss). Sitten uusi ajo; KK katsoo rajaukset a1–a5, tallenteen ja sivukuva-ajon kuvat yhdessä; junaan vasta KK:n sanalla.
+Korjaukset junan haaraan natiivi-ui/intro-nimet-kortti (1bde772da) ja sama pulun haaraan natiivi-ui/intro-nimet (d9af44f0f).
+TYÖKALU 3 HYVÄKSYTTY: kohdeluettelo = Nahtavyysalue.Kylttikohteet (Pariisi 14), ei nostoja. Lontoo: ensimmäinen vakioajo näyttää viat;
+korjaukset = Lontoon käsityö, eivät estä työkalua (valmis = Pariisin arkki + Lontoon arkki PUUTE-riveineen). Kaukokuvan rajaus kohteista
+kunnes kaupunkitaulu; arkin otsikkoon rajauksen lähde. Komennot "ui vakio …" (JU:lle tieto etuliitteestä), vakiokuvat JSON levyltä.
+D: (a) MatkaPerilla lykätään YHDESSÄ kohdassa PeliOhjaimessa, ei ehtoja kuuntelijoihin; NS katsoo esilatauksen; oikein-merkillä nykyiset
+saapumistestit läpi muuttumattomina. (b) Testikytkin vain kehityskäännöksessä, ajajan oletus "automaatti" (vastaa heti oikein) yhdessä
+paikassa, EI skriptien muokkausta; pelissä kysymys aina päällä. (c) Kysymys: nappulan alla, muuten kaupungin kohdalla, muuten alhaalla keskellä.
+Rasti: ei noppaa, vapaa kartta, Liiku-napista itse (omistaja 20.47).
+JÄRJESTYS: A:n kaksi korjausta → pulun pyöreä rajaus → B-arkki → työkalu 3 → ohjaussauvat → D (PT:n järjestys: loppulista ja A edellä).
