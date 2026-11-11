@@ -163,7 +163,7 @@ export const FOKUSVIRTA_PARIISI = {
   pollo: {
     /*
      * PULUN SAAPUMISKUVA (KK 11.11.2026 klo 20.5x, omistaja 20.31): kiinnitetty pallo Pariisin yllä nykyään; vanha tuolikuva (p1) pois.
-     * Commonsin valokuva, tiedostosivulta tarkistettu 11.11.2026: tekijä Aero4 (oma työ), lisenssi CC BY-SA 4.0, kuvattu 21.8.2013,
+     * Commonsin valokuva, tiedostosivulta tarkistettu 11.11.2026: tekijä Aero4 (oma työ), lisenssi CC BY-SA 4.0. KUVAUSPÄIVÄ: Commons ilmoittaa 21.8.2013 (EXIF 20.04), mutta kuvan puut ovat lehdettömät ja valo talvinen (KK 12.11. 00.16), joten päiväys on epäluotettava eikä sitä käytetä missään tekstissä; kirjataan vain 'Commonsin ilmoittama 21.8.2013'. Halkaisija lasketaan LEVEYDESTÄ (0.52 × leveys; korkeudesta laskettuna pallo leikkautuisi),
      * https://commons.wikimedia.org/wiki/File:Ballon_Generali_and_the_Eiffel_Tower.jpg. Kuvaa itseään ei muokata.
      * RAJAUS pyöreään kehykseen (natiivi): pallo ja joki, Eiffel jää pois. `rajaus`: kehyksen keskipiste kuvan leveyden ja korkeuden
      * suhteina [x, y] ja halkaisija kuvan leveyden suhteena (5760×3840 / 1280×853 -esikatselu: keskipiste noin (950, 430) px, halkaisija 660 px).
