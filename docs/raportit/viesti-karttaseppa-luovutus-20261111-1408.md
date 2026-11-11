@@ -408,3 +408,11 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   natural=scrub n 2649, < 100: 1467. → Pelkkä alaraja veisi ~40 % puutarhoista (sisäpihat, katuistutukset) → sääntöön ehto "kivetyllä aukiolla"
   (keskipiste OMT:n transportation-tason pedestrian-alueen / OSM highway=pedestrian area=yes / place=square sisällä) + alaraja ~150 m². Seuraavaksi: laske montako < 150 m²
   -laikkua osuu pedestrian-alueille Pariisissa ja Lontoossa, ehdota KK:lle raja + paikka (sääntö ElavaTyyli.cs:n landcover-silmukkaan kaikille kaupungeille; "työkalu 1" = tämä yleinen sääntö), sitten toteutus + pari KJ46 ym46-03-a + ND-esittelyn lopun kuva.
+- AUKIOEHTO MITATTU (skripti /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/koodijuna/parvis-saanto/aukiot.py, sama ote): OSM-aukioalueita (highway=pedestrian area=yes / place=square / area:highway)
+  Pariisi 2777, Lontoo 1475; niiden sisällä < 150 m² garden/grass/scrub-laikkuja Pariisi 195 (mm. Promenade Plantée), Lontoo 60. MUTTA parvis (Place Jean-Paul II) on OSM:ssä vain
+  viivoina (highway=pedestrian ilman area=yes, way/20444384, 592230707, 627267006–8), joten aukioehto EI osu parvis'n π:hin. → KK:lle vaihtoehdot ennen toteutusta:
+  (a) alaraja ~120 m² vain leisure=garden-laikuille, jotka eivät ole suuremman puiston/nurmen sisällä eivätkä sisäpihalla (talon ympäröimä) — mittaa ensin määrä;
+  (b) aukioehto + lähin pedestrian-viiva ≤ ~15 m; (c) aukioehto + parvis'lle nimetty poikkeus (KK kielsi käsipoiston → ei suositella). Suositus (a) tai (b) luvuilla.
+- SEURAAJAN JONO (23.0x): 1) aja_kaikki (jos katkesi: sama komento, LISÄYS 23) → T/uudet-kaikki/kaikki.md → KK yksi rivi (valmiit/pysähtyneet + syyt; pysähtyneitä mm. alpit tyhjä ote,
+  ateena/barcelona pala > 8 Mt, sanmarino/venetsia/dubrovnik vakiokuvat < 3 katua) + muutama vakiokuva-arkki. 2) KJ49b → KK (LISÄYS 28). 3) Parvis: vaihtoehdot (a)/(b) luvuilla KK:lle (yllä).
+  4) Työkalu 2 luonnokset (LISÄYS 25). Montmartren parit yöviennin jälkeen (JU:n aamurivi).
