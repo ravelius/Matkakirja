@@ -75,3 +75,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Linjattavaksi KK:lle: salin esteiden häivytys (sermi/pylväät) jättää leivotun varjon lattiaan. ODOTTAA KK:ta.
 - LAV:lle: SaliAurinko 45°/70° salin kehyksessä (ValoKohteet.cs:260, Valopohja.SaliAurinko), yksi leivonta juhlasali.glb:n kehyksessä kaikille kopioille,
   katto + palkisto varjostajiksi, juovat ei leivontaan. LAV aloittaa v133:n jälkeen.
+
+## LISÄYS 6 (11.0x): KK:n salilinjaus + kohta 3
+- KK: 1) yksi salileivonta OK, kaksi karttaa vain jos ovipari vaatii; 2) esteiden (sermi/pylväät) varjot LEIVOTAAN ja jäävät häivytettäessä; 4) varjon kääntyminen ovella ei saa näkyä.
+- KK 3) PELAAJAN VARJO LEIVOTUSSA VARJOSSA (koko peli): TEHTY 9e67b65a0 (juoksu-turhatyo, unity 0): VainPelaaja → Valopohja.JuoksuLattiaElava false = lattiallekin
+  varjomaski (JuoksuLeivottuAurinko, raja 0,45 → pehmeä reuna); `valo elava kaikki` palauttaa. PARI LAV:n leivonnan jälkeen: auringossa | rakennuksen varjossa |
+  puun varjon reunalla | salissa katon alla (+ ovipari sk-juoksu-salinovi.txt molempiin suuntiin, varjon kääntyminen ei näy). Asemataulu-hook ohitettu (jäädytetty).
