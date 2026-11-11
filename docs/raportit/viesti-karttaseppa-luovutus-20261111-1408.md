@@ -340,3 +340,6 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   (4) testi Kartta-testeihin (generoidut sillat rakentuvat, ei NaN, kansi > pinta); (5) Lontoo samalla ajolla; NÄYTTÖ Mac-ajona: Pariisin ulkosillat + Lontoo, raja Alma ↔ Alexandre III vierekkäin → KK.
 - JONO (KK 21.54): 1) ketju valmiiksi (yllä) → KK. 2) silta-askel (yllä). 3) Lontoo mittauksena. Montmartren parit, kun yövienti tehty (JU:n aamurivi). LINKKI 224.85 odottaa (parvis-haamut tarkistetaan sen kuvista).
 - Levy: sisäinen 17 Gt vapaana (99 %) → isot ajot T7:lle (T on T7:llä).
+- 22.0x: KK 21.59 HYVÄKSYI GHSL-oppaan rivin (teksti tyokalut/kaupunki/LAHTEET.md, ec8b02ba2) → ui.fi.json:iin "ui.opas.lahde.talokorkeus-ghsl" SAMASSA ERÄSSÄ kuin ensimmäinen GHSL-kaupunki.
+  Lontoon EA-rivi puuttuu luettelosta: aineiston tiedot (LIDAR Composite 1 m DSM First Return + DTM 2022, OGL v3, "© Environment Agency copyright and/or database right 2022") lähetetty KK:lle → odota KK:n sanamuotoa.
+  NS 22.0x vahvisti T1 = cfe3324a3; NS:lle kerrottu, että seuraaja kysyy pohjan ennen silta-lataajan C#-muutosta.
