@@ -69,3 +69,14 @@ huippu 3,87–4,35 ala 0,00 → arvio: matala pystypinta (porras/kynnys/pylvää
 VIKA RUUTULOKISSA: kamerapeitto 0 riviä (vienti kutsutaan vain, kun peliKamera && KameraMittari lakkaa; ei lauennut) ja kameraruutu alkoi vasta t 481
 (1035 riviä) → korjaa vienti (esim. kirjoita ruudut heti kun kertynyt ≥ 200, tai Kierros-kutsun kohdalla) ennen hyväksymistestiä.
 KK:lta kysytty: jatketaanko (a)+c1 ja tutkitaanko massan väärä hälytys erikseen ennen massakorjausta → odota vastaus.
+
+## LISÄYS 01.2x: KK:N PÄÄTÖS 01.20 (KORVAA lisäyksen 01.3x kysymyksen) — LUE tehtävänannon KAKSI VIIMEISTÄ OSIOTA
+Tiedosto: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-kameralaite-pala2-tehtavananto.md
+(osiot "KK:n päätökset PK:n syyraporttiin" ja "KK:n päätökset Mac-ajon f1c47100d faktoihin").
+1. Massassa-mittari hälyttää väärin: vanha kamera samalla siemenellä massassa 80 ruutua (kuva puhdas). Oletus: 1 m:n peittoruutu yhdistää seinän
+   juuren kivijalustan (ala 0) ja räystään (huippu 3,9). Selvitä lähde S 112–118 ja korjaa peittoruutujen vienti. EI kamerakorjausta massamittarin perusteella.
+2. Hyväksymisehto: toistossa T ja L aina kuljettavalla ja tarkka seinäetäisyys ≥ 0,3 m; Mac-ajon Massassa-ruudut eritellään, hyväksytään vain
+   kuljettavassa ruudussa jalustan ja räystään välissä, kun vanhakin hälyttää.
+3. Uusi kamera kujassa liian kaukana (väli 7,2 m, vanha 3,5 m). Tavoite ahtaassa noin 4 m. c2-taulukko rivit (τ_v; PaikkaS; D_min ahdas):
+   (0,25; 0,45; 1,5) | (0,25; 0,35; 1,5) | (0,25; 0,25; 1,5) | (0,15; 0,25; 1,5) | (0,125; 0,20; 1,25); sarakkeet tiedostossa. KK valitsee.
+JÄRJESTYS: (a) → c1 → c2-taulukko KK:lle → massamittarin syy rinnalla. Uusi Mac-ajo vasta c2-valinnan jälkeen.
