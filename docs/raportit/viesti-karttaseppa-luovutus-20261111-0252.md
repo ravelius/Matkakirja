@@ -58,3 +58,4 @@ Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8
   eiffel-maski-11.png:tä ja Champ de Marsin OSM-nurmea vasten; way/54108364:n viereinen < 8 m² way/54108363 on tee-poistot.py:ssä). Tee siisti-v32.json →
   aja-palat-v31.sh-tyyliin (SIISTI=…) → kokoa v32 = v31 + vain muuttuneet palat (md5-ero ulos-v31:een). Yksi tarkistuskuva viistosti: torni + jalat + palautetut
   korttelit (sama kulma myös ennen-kuvaan nykyisillä paloilla v31 → pari samasta kulmasta), KK:lle ennen junaa. Junaan vasta KK:n OK:lla (paketti v10).
+- JU 03.31: 224.56 = 16ae5cc48 LINKISSÄ (MR49, Sacré-Cœur + talot v9, dbb2bc643; v9 ämpärissä 03.12). Sacré-Cœur SULJETTU. SÄÄSTÖ (PT, viikko 98 %): lepo; Eiffel odottaa.
