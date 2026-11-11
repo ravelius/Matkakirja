@@ -67,7 +67,7 @@ export const ISKULAUSEET = Object.freeze({
   minsk: 'Leveiden puistokatujen kaupunki',
   chisinau: 'Viiniköynnösten ja puistojen kaupunki',
   belgrad: 'Linnoitus kahden joen kohtauspaikassa',
-  vaduz: 'Linna vuoren rinteellä, Rein laaksossa',
+  vaduz: 'Linna vuoren rinteellä, Reinin laaksossa',
   monaco: 'Ruhtinaskunta kallion ja meren välissä',
   skopje: 'Kivisillan ja vanhan basaarin kaupunki',
   tirana: 'Värikkäiden talojen kaupunki vuorten juurella',
