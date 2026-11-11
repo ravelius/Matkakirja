@@ -181,3 +181,21 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - JU 18.2x: KJ47 alkaa (lokit/ks-kj47-puut-{ennen-797404a3c,jalkeen-9f26843a1}, MUISTI.txt = piirtotilasto + Shader-virheet). PALLO a0384240a ei mergeytynyt (ristiriita NUI:n KaupunkiPallot.cs/UiKomennot.cs) → NUI tekee pallo+kyltin juna-224:n päälle → 224.81 (224.79 muste, 224.80 NUI). KS:ltä ei toimia; seuraa LINKKI 224.81 ja katso köydet junan kuvista (KK).
 - NUI 18.2x: pallo+kyltti natiivi-ui/pallo-kyltti-224 652653bc7 (merge a0384240a + 9c6a6f864, Oletus kuumailmapallo mukana), unity 0, 763/763 → JU MR75 = 224.81. KS:ltä ei toimia.
 - JU 18.2x NUMEROKORJAUS: kuumailmapallo 652653bc7 = 224.80 (EI 224.81; yllä 14b/14c korjautuu). Seuraa LINKKI 224.80.
+
+## LISÄYS 15 (19.5x, uusi sessio 18.3x): PdJ suljettu, KJ47 katsottu, KJ47b JU:lla, NOLLAUS (konteksti 25 %)
+- PALAIS DE JUSTICE: KK 18.34 PÄÄTÖS EI talot-erää (IGN ja OSM: koko kompleksi yksi rakennus 23,4 m; IGN-osia ei ole). docs/raportit/karttaseppa-pdj-selvitys-20261111.md.
+  Seine ja sillat -katsaukseen (LISÄYS 10 kohta 3) katsottava kohta: Conciergerien jokijulkisivu (tornien puute joelta).
+- KJ47 katsottu → KK 19.0x: docs/raportit/karttaseppa-kj47-puut-20261111.md, parit K/parit-kj47/. Muisti ≈ 0 ja piirtokutsut +8–11 % HYVÄKSYTTY (KK).
+  Unityn Triangles Count ei näe instansointia → uusi mittari. Varjoraja ei todennettu: aja-kaari rajautuu lähimpään näkymään ilman `komento lahizoomi 8`.
+- KK 19.01 HYVÄKSYI KJ47b: (1) näkyvät kolmiot (2) puu-3 pois (3) varjoraja uudelleen + (4) sijoittelu oikean puiston mukaan, akselit auki
+  (5) harhapuut pois, myös Rodin (6) sävy maalattuun puustoon. NÄYTTÖ: KJ47:n kulmat + Champ-de-Mars ylhäältä orton rinnalla + 3D|maalattu läheltä.
+- TEHTY: ce7a3849c (karttaseppa/ymparistot, natiivi-backup; 758/758, unity 0): 789 puuta v2 (tee-puut-v2.py, K/ymparistot-kj47b/: LÄHDE OSM-puurekisteri,
+  tarkistettu IGN-ortoa vasten orto/merkit-v2-*.jpg; akselit Champ-de-Mars ±55 m ja esplanadi ±45 m, viuhka, Invalidien kortteli, Rodin pois; harhapuu = < 2 OSM-naapuria 15 m:ssä;
+  väli 13 m rasterijärjestyksessä, jotta rivit pysyvät; lajit (0,0,1), Prunus → 1). Kevyet puut omalla aineella puuAineKevyt _Savy (1.25, 1.2, 1.1) haalistus 0.35,
+  komento `puut savy r g b [h]`. MITATTU (savy.py, KJ47 jälkeen-kuvat): maalattu puusto sRGB ~128 130 84, 3D-latvus ~90 90 55 (lineaarisesti ~2× tummempi; kylläisyys sama).
+  PiirtoTilasto: "NÄKYVÄT kolmiot" = isVisible-piirtäjien verkot + pääkameran näkymään osuvat puuerät. ENNEN-mittari b19f3b2ee (karttaseppa/ymparistot-mittari-ennen).
+- KJ47b JU:lla (pyydetty 19.5x, kopio PT): K/sk-mac-puut-kj47b.txt, 28 kuvaa → lokit/ks-kj47b-puut-{ennen-b19f3b2ee,jalkeen-ce7a3849c}.
+  KUN TULEE: parit pari.py:llä (K/pari.py a b ulos 2000) kansioon K/parit-kj47b/; Champ-de-Mars (ym47b-40) orton rinnalle (K/ymparistot-kj47b/orto/orto-eiffel.jpg);
+  sävy: aja savy.py-tapaan 3D vs maalattu (ym47b-41/42), valitse 42/43/44:stä lähin maalattuun ja kerro arvot; varjoraja 30–35 (lähin m lokista, ei poksahdusta);
+  kolmiot: NÄKYVÄT ennen → jälkeen yleisnäkymissä, raja ~+10 %. Luvut + parit KK:lle (kopio PT). Junaan VAIN KK:n sanalla.
+- SEURAAJAN JONO: 1) KJ47b → KK. 2) Montmartre KJ43 maaston 01.00-viennin jälkeen (JU:n aamun rivi). 3) Seine ja sillat -katsaus (LISÄYS 10 kohta 3, + Conciergerie).
