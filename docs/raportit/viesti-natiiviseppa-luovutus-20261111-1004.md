@@ -543,3 +543,21 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 31f (22.1x) PALKKI-5 HIDAS LUETTU: pisin sama ~10 s (2 riviä), suurin hyppy 0,032, laskuja 0, mallit 439/439, pakollinen VIRHE 0, lataus 678 s; lohkorivit seuraavat taulua (LOD0 ~208 s, ulkorengas ~94 s). LUOVUTETTU 3 = koekatkon valinnaiset, 'LATAUS EPÄONNISTUI' = oleta-rivin kuvio. Odottaa nopeaa → yksi KK-viesti. JU: 224.84 LINKISSÄ = c4b6179cf (T3-rivit c1841699a).
 - 31g (22.1x) PALKKI-5 NOPEA LUETTU: 89 s, pisin sama 0, 439/439; hyppy 0,415 = näyteväli (9 näytettä). KK-VIESTI LÄHETETTY (kopio PT): junaehdokas 1b1359d75 → ODOTA KK:n sana → pt-ok PT:lle. SEURAAVAKSI kaupunkityökalut: T1-vakioajo (JU) luenta → KK + junaehdokas cfe3324a3; mono-selvitys (lisäys 30).
 - 31h (22.2x) NUI aarrekysymys 79f883671 (natiivi-backup natiivi-ui/aarrekysymys): NS:n esilatausosuus TARKISTETTU, ei koodia: kysymyksen ajan MatkaPerilla lykkääntyy → esilataus jatkuu; rasti MatkaPerilla(null) → SaapumisLaatatSilta.Perilla → Esilataus.Peru (jonossa olevat pois, käynnissä valmistuvat, ladatut välimuistiin = KK:n kohta 4). NUI:lle vastattu. Mac-ajo lokit/nui-aarrekysymys-1-79f883671 (NUI lukee).
+
+## LISÄYS 32 — NOLLAUS TÄSTÄ (11.11. 22.2x, kontekstivahti 25 %). JATKA NÄISTÄ:
+- KK 22.10: palkki-5 1b1359d75 JUNAAN → pt-ok-pyyntö PT:lle LÄHETETTY 22.2x. Työlistarivi jää auki: "pisin sama ≤ 15 s" EI todistettu 10 s:n näytteistä
+  (2 samaa = 10–30 s; kaksi kohtaa: (a) alku 0,024 t 29,0 → 48,5 s, alkuarvo peittää taulun 3 ensimmäistä lohkoa 0,002–0,019; (b) t 99–109 s 0,093 kahdesti
+  "kesken 0 %", juhlasali.glb 16 Mt latautui koko ajan, 0,117 vasta salin jälkeen).
+- JATKOERÄ PALKKI-6 (natiiviseppa/latausjono 1b1359d75:n päälle, wt /Users/Shared/Claude/wt/proto-natiiviseppa-latausjono; enintään nämä 3):
+  1) näytetty palkki = alkuarvo + (1 − alkuarvo) × taulu (tai vastaava) → liikkuu ensimmäisestä lohkosta.
+  2) ison tiedoston latauksen tavut keskeneräiseen askeleeseen; SELVITÄ ENSIN miksi "kesken 0 %" (esihaun taustahaku ei kirjaudu askeleelle?). Jos ei pieni → syy KK:lle.
+  3) PELIN OMA MITTARI lokiin latauksen lopussa: "palkki: pisin sama arvo X s kohdassa Y (lohko Z)", joka ruudulta näytetystä arvosta (sama = muutos < 1 kuvapiste
+     palkin leveydestä); pysyvä tarkistus. NÄYTTÖ: hidas verkko (sk-juoksu-latausjono.txt), mittaririvi ≤ 15 s → KK. Mac-ajo väliin tai yöhön (kartan ajot ensin).
+  Nopean verkon epätasaisuus hyväksytty.
+- JÄRJESTYS (KK 22.10 + PT 21.54): kaupunkitaulun SHA KS:lle TEHTY (KS kuittasi: 1794edafd lukee taulun, Lontoo 242/242 tavulleen sama; KS:n seuraaja tekee
+  silta-askeleen OhjelmaKohteet/TaloAlue cfe3324a3:n päälle) → PALKKI-6 → kaupunkityökalut (T1-vakioajo JU:lla lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3 → LUE
+  arkit ennen|jälkeen + palamäärät → KK + junaehdokas cfe3324a3; mono-selvitys lisäys 30).
+- PARI-B (pala 3.1b) JU:lla YÖLLÄ (klo 23 jälkeen, pid 41093) 9a78cd26b → lokit/natiiviseppa-juoksu-pala3-pari-b: LUE unity.log "juoksupeli: korvaus" (v134, v128,
+  muurikate-v41, koe-glb), ei puuttuu-rivejä → 27 kuvaa A|B|C samasta kamerasta täysikoossa KK:lle (kopio LAV local_f12c9179). Lokin "kamera"-rivi näyttää pelikameran
+  myös testikamerakuvissa (K2–K5, K7b).
+- Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac2.sh` (kattaa palkki-[3-9]*, pala3-*, ns-kaupunkitaulu-vakioajo-*). Cron 9.04 LUO UUDELLEEN.
