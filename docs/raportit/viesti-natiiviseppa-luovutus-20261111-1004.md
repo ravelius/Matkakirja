@@ -328,3 +328,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   (V4_tile/V4_stone/V4_capstone?), ilman leivottua valoa materiaaleittain + pinta-ala-arvio. KK:lle kerrottu (viesti 18.2x).
 - Työlista: "Juoksupeli pala 3: pintojen kuvat (luettelot, pilotti pihan lattia)" tilanne päivitetty.
 - Cron 9.04 (unity-julkaisut.py) + Monitor vahti-mac.sh LUO UUDELLEEN.
+- 21b (18.31) KK: tehtävänanto VERSIO 3, uusi kohta 4c (LUE): valo kahtena kerroksena — pehmeä (taivas + heijastunut, karkea RGBM nykyisessä UV1:ssä) ja
+  auringon varjo (näkyvyys 0–1, yksi kanava; lattialla ruuduittain 64 m, UV = maailman xz / 64; seinät/terassit lähiatlas). Kaava: valo = pehmeä × k1 +
+  auringon väri × k2 × pinnan suunta × min(varjokuva, pelaajan varjo), polvipakkaus pelissä; 3 näytettä/kuvapiste. Järjestys ennallaan (latausjono → 3.0 → 3.3);
+  3.3:n varjostinrunko kerrosjaolla jo pilotissa (saa käyttää nykyistä yhdistettyä valoa, kunnes LAV:n kerrokset valmiit). Lattiaruutujen lataus suunnitellaan
+  vasta, kun LAV:n koepari on hyväksytty. LAV voi kysyä NS:ltä.
+- 21c: latausjono3-2 valmis 745 s (palkki 1.00) mutta ei L1-kuvaa: alkoi 18.12 ennen skenaarion kuvarivikorjausta. Vahti-mac.sh ei tunnista "valmis N s" -riviä (HILJAA = väärä hälytys).
