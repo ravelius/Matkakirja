@@ -49,3 +49,6 @@ UUSI SÄÄNTÖ (omistaja 12.21, Raamattu 12.26.5): kaikki ajot Macilla (esikatse
 - KS 14.2x: RungonRajat VALMIS 2743a6ebd (natiivi-backup karttaseppa/runko, pohja 613f55c18 = juna-224-ehdokas SC; testit 758/912, unity 0).
   Ulkona: SC:n terassi ja portaat, Louvren kiveys ja altaat, Opéran ja GP:n portaat; muilla = bounds. NUI: oma commit tämän päälle (+ juna-lehti),
   TaysiMalli `b = OhjelmaKohteet.RungonRajat(verkko)`, Paisunta.MahtuvaKerroin, Naytteet → sha KS:lle, sitten KJ arkki-2:lle NUI:n skenaariolla.
+
+## LISÄYS 2 (PT, KK 13.2x): junakokonaisuuden UI HYVÄKSYTTY Mac-kuvista (49d03f79f). Junasha 48532e3fa junaan VASTA kun KK on katsonut
+lähin-kuvat (nui-lahin-1-0ca9df559, JU ajaa) → KK:n OK → sha PT:lle → pt-ok. Laite-iPad vain KK:n iPad-erässä.
