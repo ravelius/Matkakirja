@@ -40,3 +40,12 @@ D (aarrekysymys saapuessa) odottaa KK:n suunnitelmaa.
 ## Muut
 - Työlista: "Esittelyn rajaus päärakennuksen rungosta" valmis (224.81 linkissä 19.56). Napautuslennon tilanne kirjattu 20.2x.
 - KK:n huomio (ei estä): pienellä iPadilla noston valokuva peittää Concorden aukion kyltin alun.
+
+## LISÄYS 20.3x
+- B: KK 20.26 HYVÄKSYI; JU: MR77 = 224.82 (14d331f06) käynnissä; linkin jälkeen junan ehtoajo sk-yksi-etaisyys-2 (12 kohdetta 6 s:ssa) →
+  lokit/juna-yksi-etaisyys-2-<sha> (JU tekee arkki-6s.png). SEURAAVA: katso arkki, erityisesti Orsay (0,27) ja Louvre (0,38) → KK + PT kopio.
+  Jos Orsay liian pieni: korjaus sen OMA ensimmäinen etäisyys (yksi lento), EI kasvun palautus (KK 20.26).
+- A: 7377430b3 (intro-nimet): erän 1 rivit 87/93 IntroNimet-taulukkoon (SK f2680ef27); 6 katselua odottavaa tyhjinä (ei riviä). Ei vielä ajettu
+  (intro-nimet-1 ajaa ed3045d1e:tä). Seuraava ajo kattaa 25ab7e0ff (sääntö 9) + 7377430b3.
+- Petit Palais: lopullinen lohko + kuva SK 5e3d8353a /Users/Shared/Claude/Matkakirja-sisaltokirjuri/docs/raportit/petit-palais-juttu-20261111.md
+  (introrivi "Petit Palais · 1900"). Kytke teksti + kuva + ääni SAMAAN versioon, kun Äänittäjän ääni valmis (PT 20.26). Nimipalkki 50ea00f74 jää varaksi.
