@@ -81,3 +81,17 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - KK 3) PELAAJAN VARJO LEIVOTUSSA VARJOSSA (koko peli): TEHTY 9e67b65a0 (juoksu-turhatyo, unity 0): VainPelaaja → Valopohja.JuoksuLattiaElava false = lattiallekin
   varjomaski (JuoksuLeivottuAurinko, raja 0,45 → pehmeä reuna); `valo elava kaikki` palauttaa. PARI LAV:n leivonnan jälkeen: auringossa | rakennuksen varjossa |
   puun varjon reunalla | salissa katon alla (+ ovipari sk-juoksu-salinovi.txt molempiin suuntiin, varjon kääntyminen ei näy). Asemataulu-hook ohitettu (jäädytetty).
+
+## LISÄYS 7 (11.1x) — NOLLAUS TÄSTÄ (kontekstivahti 26 %)
+- SAAPUMINEN mac-3 (c31deb71d) LUETTU, KK:lle tallenne (kopio PT): kuvat kiertävät odotuksessa, kuva → kartta tasainen ~0,3 s, kartta terävä, ei vaaleaa
+  eikä ponnahdusta. PUUTE "jyrkkä alkunäkymä" = skenaarion 60 s aikaraja (rivi tuli heti perään). Mac ~9 ruutua/s.
+- iPad MUISTI-1 (c31deb71d) LUETTU: huippu 3940 Mt (muistivahti OK, varoituksia 0) = täsmälleen KK:n katto 3940 → ilmoita KK:lle "rajalla" muisti-2:n kanssa.
+  ODOTUS 28 s (häivytys peitteestä 28,02 s, 11 kuvaa): "lopullinen näkymä EI valmis (katto 25 s), kesken talot"; talojen verkkolataus loppui ~4 s peitteestä,
+  silti talot kesken kattoon asti. Epäily: TaloKerros.valmiusKesken (palaPuuttuu = pala verkosta ei etene, tai muistikaton kasvu UlkoSade → aina lataus).
+  DIAGNOSTIIKKA b70f19656 (syy lokiin: "kesken talot (pala verkosta|levyltä, lataus, näkyvyys x/y, katto N m)"). Muisti-2 (c31deb71d, JU ajaa nyt):
+  jos odotus lyhyt → kylmän verkkolatauksen syy; jos taas 25 s → seuraava iPad-ajo b8e641712:llä ja korjaus syyrivin mukaan. KK:lle vasta muisti-2:n jälkeen
+  (huippu + odotus + johtopäätös). PUUTE nimi/häivytys/kierto muisti-1:ssä = skenaarion oleta-ajoitus (tarkistamatta).
+- ÄÄNITTÄJÄ: v2 viety → b8e641712: KoeWilliamUrl oletus kaupunkinimet-william-v2/<kaupunki>/nimi-iskulause.mp3 (HTTP 200 tarkistettu). Haara natiiviseppa/saapuminen-pariisi:
+  c31deb71d → b70f19656 → b8e641712 (unity 0).
+- KESKEN/ODOTTAA: ruutunopeus JÄLKEEN (224.65, JU) → fps-konsolista.py → KK; turhatyo-1 + hahmovarjo-1 (367ea7f0a, JU) → parit KK:lle; LAV:n leivonta v133:n jälkeen
+  → kohta 3 -pari (aurinko | rakennuksen varjo | puun varjon reuna | sali) + ovipari (sk-juoksu-salinovi.txt; käännös 9e67b65a0 tai uudempi juoksu-turhatyo).
