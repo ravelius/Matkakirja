@@ -95,14 +95,14 @@
   "nro": 2,
   "kuva": "hero-edinburgh-keskipaiva.png",
   "rivi": "St Gilesin katedraali",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "tila": "valmis"
  },
  {
   "kaupunki": "edinburgh",
   "nro": 3,
   "kuva": "hero-edinburgh-ilta.png",
   "rivi": "Skotlannin kansallismonumentti · 1826–1829",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "tila": "valmis"
  },
  {
   "kaupunki": "edinburgh",
@@ -221,7 +221,7 @@
   "nro": 1,
   "kuva": "hero-lissabon-alfama.jpg",
   "rivi": "São Jorgen linna",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "tila": "valmis"
  },
  {
   "kaupunki": "lissabon",
@@ -291,7 +291,7 @@
   "nro": 1,
   "kuva": "hero-barcelona-aamu.png",
   "rivi": "Sagrada Família · 1882–",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "tila": "valmis"
  },
  {
   "kaupunki": "barcelona",
@@ -367,22 +367,22 @@
   "kaupunki": "granada",
   "nro": 1,
   "kuva": "hero-granada-aamu.jpg",
-  "rivi": "San Jerónimon luostari",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "rivi": "San Jerónimon luostari · 1500-luku",
+  "tila": "valmis"
  },
  {
   "kaupunki": "granada",
   "nro": 2,
   "kuva": "hero-granada-keskipaiva.jpg",
   "rivi": "La Cartuja",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "tila": "valmis"
  },
  {
   "kaupunki": "granada",
   "nro": 3,
   "kuva": "hero-granada-ilta.jpg",
-  "rivi": "Corral del Carbón · 1300-luvun alku",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "rivi": "Corral del Carbón · 1300-luku",
+  "tila": "valmis"
  },
  {
   "kaupunki": "granada",
@@ -577,8 +577,8 @@
   "kaupunki": "krakova",
   "nro": 3,
   "kuva": "hero-krakova-ilta.png",
-  "rivi": "Sukiennice · 1358",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "rivi": "Sukiennice · 1559",
+  "tila": "valmis"
  },
  {
   "kaupunki": "krakova",
@@ -647,8 +647,8 @@
   "kaupunki": "varsova",
   "nro": 2,
   "kuva": "hero-varsova-aamu.png",
-  "rivi": "Varsovan kuninkaanlinna · 1971–1984",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "rivi": "Varsovan kuninkaanlinna · 1619, uudelleen 1984",
+  "tila": "valmis"
  },
  {
   "kaupunki": "varsova",
@@ -689,8 +689,8 @@
   "kaupunki": "varsova",
   "nro": 8,
   "kuva": "hero-varsova-ilta.png",
-  "rivi": "Saaripalatsi · 1689",
-  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+  "rivi": "Saaripalatsi · 1700-luku",
+  "tila": "valmis"
  },
  {
   "kaupunki": "varsova",

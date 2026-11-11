@@ -12,7 +12,10 @@ SK 11.11.2026 klo 21.xx. Dublin, Edinburgh, Marseille, Lissabon, Barcelona, Gran
 ## Odottaa katselua (kuvat Commons-tiedostoja, ei välimuistissa; ei peliin ennen)
 Lissabon #5 (ehdotus "Lissabonin katot"), #8 (ehdotus "Huhtikuun 25. päivän silta · 1966", jos silta näkyy; muuten "Lissabonin katot"), #9 (Alfama, sisältö päätelty vain luokista), Rooma #9 Castel Sant'Angelo (ehdotus ilman vuotta, näköalakuva), Rooma #11 Piazza Navona (ilman vuotta).
 
-## KK:LLE: avoimet (10 riviä; rivi on ehdotus)
+## RATKAISTU (KK 11.11. klo 20.4x, sovellettu JSONiin): alla olleet avoimet, vanhat ehdotukset historiana
+Lopulliset rivit: Edinburgh #2 St Gilesin katedraali (ei vuotta), #3 Skotlannin kansallismonumentti · 1826–1829, Lissabon #1 São Jorgen linna (ei vuotta), Barcelona #1 Sagrada Família · 1882–, Granada #1 San Jerónimon luostari · 1500-luku (alku 1504 ja julkisivu 1590 kahdesta lähteestä), #2 La Cartuja (ei vuotta), #3 Corral del Carbón · 1300-luku, Krakova #3 Sukiennice · 1559 (kolme lähdettä: renessanssikunnostus 1556–1559), Varsova #2 Varsovan kuninkaanlinna · 1619, uudelleen 1984 (tori ilman vuotta; kuvateksti kertoo tuhon ja jälleenrakennuksen kuvatekstierässä), #8 Saaripalatsi · 1700-luku. Tila: 98 valmis, 5 odottaa katselua (ei peliin; katsotaan mediasta).
+
+## (Historia) KK:lle esitetyt avoimet (10 riviä)
 Yhteinen kysymys A: **saako pitkään ja monivaiheisesti rakennettu rakennus, jolla lähteet eivät anna yksiselitteistä alkua–loppua, olla ilman vuotta** (sääntö 1 vaatisi välin)?
 1. Edinburgh #2 St Gilesin katedraali: ilman vuotta (perustus 1124, nykyrunko 1300–1500-luvulla, ulkokuori 1829–33; kolme kerrosta). Vaihtoehto "n. 1124–1500".
 2. Edinburgh #3 Skotlannin kansallismonumentti · 1826–1829 (keskeneräinen, valmistumisvuotta ei ole). Vaihtoehto "1829".
