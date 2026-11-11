@@ -40,3 +40,7 @@ JU 21.4x: NS:n palkki-5 (1. kärki) voi mennä väliin.
 
 ## SEURAAVA
 Jono yllä → sitten D (aarrekysymys, suunnitelmat/20261111-aarrekysymys-saapuessa.md + -2053:n KK:n päätökset). Ohjaussauvat EI enää jonossa.
+
+## LISÄYS 21.5x
+- KK 21.54: PULUN PYÖREÄ RAJAUS ec3aaa575 HYVÄKSYTTY (p1 + p3; pieni kuva maakuvion alla = näkymästä riippuva, ei korjata). Menee Pariisin tekstiversion
+  mukana (pulun haara natiivi-ui/intro-nimet), junaan A-erän yhteydessä KK:n sanalla. Ei toimia ennen sitä.
