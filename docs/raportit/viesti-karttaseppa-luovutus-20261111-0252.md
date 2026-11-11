@@ -44,3 +44,4 @@ Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8
 - KJ27 JU:lle (b8aaa83fa, sk-mac-vaistot-kj27.txt, 2 kuvaa lv27-koodi-lahi-lansi + sc27-koodi-lahi-006-keski) → lokit/karttaseppa-vaistot-kj27-b8aaa83fa.
   Katso: F poissa (Palais-Royalin eteläsiivet), terassi laella. Sitten KK:lle: lv22 | lv27 -pari + sc27 + lista väistöistä (yllä) + Eiffel-kysymys; kopio PT:lle.
   KK:n OK → junaehdokas: b8aaa83fa:n Sacré-Cœur oletukseen + talopaketti v9 = palat-v31 (--edellinen v8).
+- JU 02.57: 224.54 = 4b3ff1b63 linkissä (Sainte-Chapelle + talot v8, 8fdafec2e). Sacré-Cœurin junaehdokas tehdään juna-224:n kärjen päälle (merge b8aaa83fa), paketti v9 --edellinen v8.
