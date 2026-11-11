@@ -52,3 +52,12 @@ E-selvitys ja Hermite-koe (hylätty): proto-3d/_tyo/pelikoodari/kameralaite/E-ru
 
 Huom: tyokalut/tarkista.sh päivittää tyylikirjan (Tyylikirja.uss/.cs, tyylikirja.json) → palauta git checkoutilla, älä committaa.
 Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 15.4x (PT 15.38 herätys: jatka palaa 2)
+Palan 1 testit 710e80733:lla 9/13. Mittaus (ei committia): kun tavoite annetaan oikein joka askeleella (dt = h), laite on 6 m/s:ssa 2,67 cm EDELLÄ
+(T10 dt 8,3 ms: jättämä −2,67 cm; T11 edellä 2,67 cm, raja 1 cm). Syy = KK:n E(1): suotimet ovat puoli-implisiittinen Euler, tavoite askeleen
+loppuhetkeltä pidettynä koko askeleen → O(h)-etumatka ≈ v·h/2. Vanha toteutus peitti tämän antamalla ulos edellisen askeleen tilan (ed).
+Koe KOE_KESKI (ip −= PaikkaNopeus·h/2 = askeleen keskihetken tavoite): etumatka 0,17 cm, T11 läpi, 10/13. Oikea toteutus = edellisen ja
+nykyisen askeleen tavoitteen keskiarvo (ei ekstrapolointia). KYSYTTY KK:lta 15.4x — älä toteuta ennen vastausta. Muut kaatuvat:
+T06 (Esikatso levosta: tarkista), T09 (LaitePeli-rajat = 1,25 × viitehypyn huiput, huiput muuttuivat hieman: a 20,29, j 107,85 → rajat
+kalibroitava, KK:n päätös), T10 dt 1/60 ja 1/30 (testi syöttää ruudun lopun tavoitteen → ajotapa kiinteään askeleeseen).
