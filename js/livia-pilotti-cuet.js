@@ -278,41 +278,34 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.4
   }
 ]),
-  pariisi: pilotti("pariisi", LIVIAN_EUROOPAN_REVISION, "3b524abb834d06e629bef36e5d672a0c118e71cbee05b7ae24099d0df7171230", [
+  pariisi: pilotti("pariisi", LIVIAN_EUROOPAN_REVISION, "554d3023d10ac976e8c7fccb814e26d6a1dd77e6cba1a14dfd52e10abbeb8534", [
   {
     "id": "pariisi.livia.c1",
-    "ankkuri": "Palatsia ei enää ole",
+    "ankkuri": "Voi isoisä",
     "esiintyma": 1,
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.35
+    "tarkoitus": "lammin",
+    "voimakkuus": 0.45
   },
   {
     "id": "pariisi.livia.c2",
-    "ankkuri": "vihreän tuolin juuri siihen, missä haluaa istua",
+    "ankkuri": "osaamme vain kotiin",
     "esiintyma": 1,
     "tarkoitus": "selittaa",
     "voimakkuus": 0.4
   },
   {
     "id": "pariisi.livia.c3",
-    "ankkuri": "Valitsin selkänojan auringosta",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.4
-  },
-  {
-    "id": "pariisi.livia.c4",
-    "ankkuri": "minä sain uuden näkymän liikahtamatta",
+    "ankkuri": "ensin ilmapallolla",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.4
   },
   {
-    "id": "pariisi.livia.c5",
-    "ankkuri": "He olivat tavanneet täällä jo koululaisina",
+    "id": "pariisi.livia.c4",
+    "ankkuri": "pallo nousee Pariisin ylle yhä",
     "esiintyma": 1,
-    "tarkoitus": "lammin",
-    "voimakkuus": 0.55
+    "tarkoitus": "ilo",
+    "voimakkuus": 0.5
   }
 ]),
   berliini: pilotti("berliini", LIVIAN_EUROOPAN_REVISION, "0672699880869cba078b643ba78abda55fe3e3c34d95022b283a650ef264418f", [
