@@ -539,3 +539,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   elava kaikki) | B koe 6,25 (+ kk-tausta-1-3-lod0.glb koe-b/ulos-6.25, elava pelaaja) | C koe 12,5; kamerat K1–K7b → 27 kuvaa. JU: ajopyynto-mac-pari-b.md YÖLLÄ
   palkki-5:n jälkeen → lokit/natiiviseppa-juoksu-pala3-pari-b (KORVAA koekamera-2:n). LUE: unity.log "korvaus"-rivit + kuvat A|B|C samasta kamerasta → KK (kopio LAV),
   kuvat täysikoossa. LAV:lle kerrottu: muut paketit ennallaan (rakennukset v127 ym.), kysytty haluaako muut v5-kansiot.
+- 31e (22.0x) LAV: pari-b:hen kaikkiin sarjoihin myös rakennukset-v128 (v127:n tilalle) + muurikate-v41 (v40:n tilalle), osasarja v15 jää; skenaario päivitetty. JU: pari-b yöllä (klo 23 jälkeen) palkki-5:n + T1:n jälkeen, koekamera-2 poistettu jonosta.
