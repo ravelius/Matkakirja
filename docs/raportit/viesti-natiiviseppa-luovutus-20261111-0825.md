@@ -33,3 +33,15 @@ PT: muistirivi (päivitetty), usvarajaus-ajo pyydetty uudelleen, tulos (ei junaa
   mikä kasvaa liikkeessä (Pallo-rivit, Cesium-välimuisti); koodi wt:stä /Users/Shared/Claude/wt/proto-natiiviseppa-horisontti (7b7e12bfd),
   LiikeLaatat.cs/LiikeLaatatPaatos.cs (varjokamera SSE 32 liikkeessä).
 - Juoksu-piirto-1 käynnissä 08.5x (JU d0eceabaf).
+
+## LISÄYS 2 (PT 08.5x): UUSI TYÖ ENSIN, ennen liikkeen laattalatausta – KAUPUNKIIN SAAPUMINEN, PARIISI KOKEENA
+Omistaja 08.34 + 08.37, KK kannattaa. PT:n viesti sanatarkasti tiivistettynä:
+- Laukaisu: zoomaus maan näkymästä / kaupungin nimen painallus / ensimmäinen saapuminen – ilman näkyvää striimikarttaa.
+- Lähellä kohdetta: introkuvat pehmennetyn (blur) taustan päälle, liukuvat oikealta sisään ja vasemmalle ulos (vanha tapa; NUI:n
+  introkuvakomponentti → KYSY NUI:lta) → kaupungin nimi + iskulause kertoja Williamin äänellä (Äänittäjä tekee uudet otot) →
+  häivytys kaupunkiin → kamera liukuu ylhäältä noin 45°:een ja aloittaa hitaan kierron, keskeiset nähtävyydet näkyvissä →
+  matkakirjan luenta, EI aloituskaupungissa (vasta seuraavasta).
+- KK:n ehdot: kartta ladataan taustalla heti napautuksesta (vain piirto pois); häivytys kartan VALMIUDEN mukaan, ei kiinteällä ajalla;
+  muistihuippu mitataan isolla iPadilla. Nimien väärä asento tai rakennuksen peitto kierron aikana EI ole vika (omistaja 08.37).
+- Korvaa vanhat nousukuvat (Raamattu 2.210: nousevat kuvat Pariisissa). Karkea tallenne KK:lle (kopio PT) ennen junaa.
+Aloitus: Raamattu 2.210 (node tools/loki-hae.mjs), saapumisajo PalloKierto/Saapumiskortti.cs/OpasSovitin, NUI:n introkomponentti, Äänittäjälle ottopyyntö.
