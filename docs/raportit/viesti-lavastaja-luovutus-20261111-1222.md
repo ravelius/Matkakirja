@@ -36,3 +36,10 @@ toistaiseksi, iPad-todisteita EI tilata, Mac-ajot jatkuvat; iPad-ajoa odottavat 
 3. Parit suoraan KK:lle (Mac-ajot): F2 (kamera -92.5 2.4 -8.3 180 8 60, vanha | uusi), ik-1-3 haaleat suorakaiteet; NS puun lähikuvapari.
 4. Jonossa: a41 kulmaläppä, a22 lattian vino sauma (yhtenäinen lattia), ik-2-3 harjasauma, F3 (paikka PK:lta).
 Asemataulu jäädytetty (hookin päivityspyynnöt ohitetaan). Worktreet ennallaan + wt/lavastaja-luovutus-1222.
+
+## LISÄYS 12.3x
+- LEIVONTA-V5: kk-tausta-1-2 EPÄONNISTUI 12.25 (2 verkkoa: tausta + katto-longzongmen -> leivo_valo assert). Korjaus valmiina: leivo_valo.py YHDISTA=1
+  + leivonta-216/uusinta/v5/tausta-1-2.zsh (liittää, leipoo, katto_erota v4:n arvoin, tarkistaa kolmiot 1041). AJA kun Blender vapaa (v5:n jälkeen),
+  ENNEN pakettia: zsh v5/tausta-1-2.zsh >> ajo-leivonta-v5.log 2>&1. Muissa paloissa vain kujien lattia_alusta (leivo_valo hoitaa).
+- 漱芳斋: −Z = ETELÄ maailmassa (PK tarkisti). Eteläovi pidetään; LAV:n palautuspyyntö peruttu. (Salin oma kehys: −Z = pohjoisovi, eri asia.)
+- PT/omistaja 12.21–12.22 (Raamattu 12.26.5): isolla iPadilla VAIN KK:n nimeämä valmis kokonaisuus ennen versiota; LAV ei tilaa iPad-ajoja.
