@@ -527,3 +527,19 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KEVENNYS (KK 23.16 b): tee_palat.py rakenna() + uudelleenpiirto TASAKSI-joukolla (pienimmät pohjat ensin, 5 %:n erät, raja 15 % kärjistä, muuten kevennys_ei_riita
   → pysähdys); mittarit kevennetyt/kevennetyt_paloja/kevennys_suurin_pct/suurin_pala_tavut. uusi_kaupunki/aja_kaikki-muutokset valmiina scratch-skriptinä
   (kevennys2.py: pysähdys + tarkka tavuraja + kaikki.md-sarakkeet) — aja ja commitoi, kun ateena/barcelona-ajo valmis. Ateena-näyttö (ennen|jälkeen) vielä tekemättä.
+
+## LISÄYS 37 (23.5x): kevennys + Pariisin syöte commitoitu, KK:n 23.4x sana, NOLLAUS (konteksti 26 %)
+- c3f0a05b6 (natiivi-backup karttaseppa/tyokalu-1): kevennys (Ateena 15_18539_12638 8,25→7,95 Mt, 510 tasakattoa, 3,7 %; Barcelona 15_16585_12231 8,21→7,97, 396, 3,1 %),
+  rivin aineisto voittaa otteen (Pariisi IGN 208k, oletus 2,1 %), tarkka tavuraja, kaikki.md-sarakkeet. aja_kaikki 62/62 valmis 23.55. → KK:lle 23.5x.
+  Ateenan ENNEN-palat (ilman kevennystä): T/uudet-kaikki/ateena/palat-ennen-kevennys (PALA_MAX_MT=99) → Ateena-näyttö pelin piirrolla `talot kansio` ennen|jälkeen,
+  45° kaupunkinäkymä palan 15_18539_12638 kohdalta + yksi lähempää täysikokoisena (KK 23.16 k. 4), samaan näytteeseen.
+- NÄYTTEEN VAKIOKUVAT ajettu uudella vakiokuvat.py:llä (amsterdam, praha, lissabon, tukholma, luxemburg; vanhat *.vanha-saanto.json); barcelona ajettiin kokonaan uudelleen.
+- KK 23.4x KJ49b PARIISI KELPAA (+39k kolmiota ok). JUNASANA vasta LONTOON kahdesta lähikuvasta → LÄHETÄ LONTOON ARKKI KK:LLE HETI, kun JU:n ajot tulevat
+  (lokit/ks-kj49b-sillat-lontoo-{2eb8ff84a,4d18cf390}; parit K/pari.py → K/parit-kj49b/, arkki 1000 px kuten Pariisi).
+  KJ49c:hen (KK): Alman etureunassa KAKSI juovaa: ylempi = kannen lähireuna (palajako), ALEMPI = sillan pään ja rantamuurin välissä (oli jo ENNEN) → selvitä syy
+  geometriasta (GeneroidutSillat + OhjelmaKohdeGeometria.Lasku r. 211–270: LaskuA/LaskuB 27,0, MaaA 29,6, seinä y 0 → ya), korjaa samassa, näyttöpari samasta kamerasta (si49-31).
+- JU 23.4x: KJ50 parvis + Amsterdamin koekuva jonossa (pid 80431) KK:n 23.26 järjestyksellä: kj49b Lontoo → PEK kuvajono → PEK kamera → KJ50 → Amsterdam. Valmisrivi KS + PT.
+- PT 23.4x pyysi pysäyttämään ajot levyn takia (1,5 Gi); vastattu: pid 36037 ei ollut minun, aja_kaikki kirjoittaa T7:lle, levyllä oli jo 43 Gi.
+- SEURAAJAN JONO: 1) KJ49b Lontoo → KK heti kun tulee. 2) KJ50 + Amsterdam JU:lta → KK (kopio PT). 3) Näyte 6 kaupunkia pelin piirrolla (Amsterdamin koekuvan jälkeen)
+  + Ateena ennen|jälkeen + oikea ilma-/katukuva (lähde riville). 4) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 5) Siltatyyppi + kannen sävy + KJ49c (Alma 120 m + alempi juova).
+  6) GHSL-kalibrointi, pitkät monikulmiot, 3D-puun sävy. Työpuut: tyokalu-1 = /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna, parvis = wt/proto-karttaseppa-parvis, sillat = wt/proto-karttaseppa-sillat.
