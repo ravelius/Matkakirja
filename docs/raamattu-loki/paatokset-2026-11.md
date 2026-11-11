@@ -1488,3 +1488,8 @@ Tarkennus 11.11.2026 klo 23.23 (omistaja): "Käytössä on kolme tiliä joten vi
 ## PT:N ROOLI KAVENNETAAN (omistajan kysymys 11.11.2026 klo 23.25, KK:n päätös 23.26) (11.11.2026 klo 23.3x)
 
 "Kannattaako päätoimittajaa enää pitää vai kannattaisiko sinun ottaa senkin rooli?" → KK: PT pidetään, rooli kavennetaan (Raamattu 7.24): tulokset ja kysymykset roolilta suoraan KK:lle; PT = juna ja yhdistämiset, Raamattu ja loki, aloitusviestit ja nollaukset, vahdit, esteiden koordinointi; yöllä PT kysyy KK:lta eikä päätä oletuksella.
+
+## LEVYN TAVOITETASO ≥ 150 GI (omistaja 11.11.2026 klo 23.34, KK:n linja 23.40) (11.11.2026 klo 23.41)
+
+"Levyllä saisi olla enemmän tilaa." KK mittasi 23.35–23.40: vapaana 38/926 Gi (projekti ~430 Gi, omistajan ohjelmat ~330 Gi). Linja: pysyvästi ≥ 150 Gi vapaana, alle 100 Gi rivi PT:lle, pysäytys 20 Gi ennallaan; mitään ei poisteta, siirto = tarkistettu kopio + alkuperäinen pois (Raamattu 12.19).
+JU: valmiiden ajojen ruutukansiot (59 Gi) T7:lle. PT:n yöajot: wt/-työkopiot pois yhdistetyn/suljetun PR:n jälkeen (79 Gi, 73 kpl); T7:n yli 3 vrk vanhat ruutu- ja lokikansiot NAS:lle ja T7-alkuperäinen pois tarkistetun kopion (koko + tarkistussumma) jälkeen — KK:n päätös omistajan valtuutuksella 22.56, 6.11. puuttunut lupa; _tyo/pelikoodari (14 Gi) ja natiiviseppa (6 Gi) vanhat käännökset NAS:lle roolilta kysyen.

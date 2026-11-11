@@ -101,6 +101,13 @@ def syy_ohittaa(n, a, lk, valmis_nas, raja, auki):
     return None
 
 
+def merkki_vain(b):
+    """NAS-kansio, jossa on vain SIIRRETTY.txt (ja ._-kylkitiedostot), on vanha siirtomerkki eikä kopio."""
+    if not os.path.isdir(b) or os.path.islink(b): return False
+    nimet = [x for x in os.listdir(b) if not x.startswith('._')]
+    return nimet == ['SIIRRETTY.txt']
+
+
 def main():
     o = argparse.ArgumentParser()
     o.add_argument('--aja', action='store_true'); o.add_argument('--raja-vrk', type=float, default=7.0); o.add_argument('--enintaan', type=int); o.add_argument('--vain', nargs='*')
@@ -139,8 +146,11 @@ def main():
         if n in viitatut: print('VIITATTU', n, viitatut[n]); ohi['viitattu'] = ohi.get('viitattu', 0) + 1; continue
         z = koko(s)
         if not a.aja:
-            print('SIIRTYISI', n, f'{z / 2**30:.2f} Gi' + (', NAS-kopio jo olemassa' if os.path.lexists(b) else '')); tehty += 1; tavut += z; continue
+            print('SIIRTYISI', n, f'{z / 2**30:.2f} Gi' + ((', NAS:lla vanha siirtomerkki' if merkki_vain(b) else ', NAS-kopio jo olemassa') if os.path.lexists(b) else '')); tehty += 1; tavut += z; continue
         try:
+            if merkki_vain(b):
+                # 4.11.:n T7-siirron jättämä merkkikansio (vain SIIRRETTY.txt): siirretään piiloon, ei poisteta.
+                os.rename(b, os.path.join(a.nas, '.merkki-' + n))
             if not os.path.isdir(b):
                 os.makedirs(k, exist_ok=True)
                 p = subprocess.run(['/usr/bin/rsync', '-rlt', s + '/', k + '/'], capture_output=True, text=True)
