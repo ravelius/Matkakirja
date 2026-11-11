@@ -25,3 +25,6 @@ Korvaa -0940:n juna-, rooli- ja muut-kohdat. Keskustelutallenne: /Users/Shared/C
 
 ## Työlista (lisätty tänään)
 Juoksupeli: kaikki varjot leivottuina (NS) · Juoksupelin peruskorjaus (KK) · Sainte-Chapelle esityskameralle kuntoon (KS) · Nähtävyysesityksen arkit (NUI). Raamatun siivous = este (omistaja 06.51).
+
+## LISÄYS 11.2x
+- NUI pallo-maa-3 (6ab7d27b0) ok NUI:n katseella (köyden pää paikallaan), kuvat proto-3d/lokit/nui-pallo-maa-3-6ab7d27b0/ KK:lla → KK:n OK:lla 27ef4dd78 junaan (pt-ok PT:ltä).
