@@ -1,0 +1,723 @@
+[
+ {
+  "kaupunki": "dublin",
+  "nro": 1,
+  "kuva": "hero-dublin-hapenny.jpg",
+  "rivi": "Ha'penny Bridge · 1816",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 2,
+  "kuva": "hero-dublin-aamu.png",
+  "rivi": "Trinity Collegen kellotorni · 1854",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 3,
+  "kuva": "hero-dublin-keskipaiva.png",
+  "rivi": "Pyhän Patrickin katedraali · n. 1220–1260",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 4,
+  "kuva": "dublin-4-stoneybatter-arki-intro-v1.png",
+  "rivi": "Stoneybatter",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 5,
+  "kuva": "dublin-5-grand-canal-intro-v2.png",
+  "rivi": "Grand Canal",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 6,
+  "kuva": "Dublin city Luftbild (22149147891).jpg",
+  "rivi": "Wellingtonin obeliski · 1817–1861",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 7,
+  "kuva": "dublin-7-merrion-square-ilta-intro-v1.png",
+  "rivi": "Merrion Square",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 8,
+  "kuva": "hero-dublin-ilta.png",
+  "rivi": "Custom House · 1791",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 9,
+  "kuva": "Dublin, városkép a Guinness-toronyból.jpg",
+  "rivi": "Guinness Storehouse",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 10,
+  "kuva": "The Four Courts and River Liffey, Dublin - geograph.org.uk - 2776535.jpg",
+  "rivi": "Four Courts · 1776–1802",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 11,
+  "kuva": "The sunset - Dublin, Ireland - Cityscape photography.jpg",
+  "rivi": "Liffey-joki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dublin",
+  "nro": 12,
+  "kuva": "dublin-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Dublinin lähijuna",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 1,
+  "kuva": "hero-edinburgh-aamu.png",
+  "rivi": "Edinburghin linna",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 2,
+  "kuva": "hero-edinburgh-keskipaiva.png",
+  "rivi": "St Gilesin katedraali",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 3,
+  "kuva": "hero-edinburgh-ilta.png",
+  "rivi": "Skotlannin kansallismonumentti · 1826–1829",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 4,
+  "kuva": "edinburgh-4-kivikorttelin-arki-intro-v1.png",
+  "rivi": "Edinburghin uusikaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 5,
+  "kuva": "edinburgh-5-union-canal-intro-v1.png",
+  "rivi": "Union Canal · 1822",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 6,
+  "kuva": "edinburgh-6-nakoala-intro-v1.png",
+  "rivi": "Calton Hill",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 7,
+  "kuva": "edinburgh-7-kivikadun-iltavalot-intro-v2.png",
+  "rivi": "Edinburghin vanhakaupunki ja uusikaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 8,
+  "kuva": "Edinburgh Auld Toun (138362373).jpeg",
+  "rivi": "Edinburghin vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 9,
+  "kuva": "Edinburgh (29285918903).jpg",
+  "rivi": "Näkymä Edinburghin linnalta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 10,
+  "kuva": "Dean Village, Edinburgh (37952869852).jpg",
+  "rivi": "Dean Village",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "edinburgh",
+  "nro": 11,
+  "kuva": "edinburgh-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Edinburghin raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 1,
+  "kuva": "hero-marseille-aamu.jpg",
+  "rivi": "MuCEM · 2013",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 2,
+  "kuva": "hero-marseille-keskipaiva.jpg",
+  "rivi": "Marseillen katedraali · 1852–1893",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 3,
+  "kuva": "hero-marseille-ilta.jpg",
+  "rivi": "Palais Longchamp · 1869",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 4,
+  "kuva": "marseille-4-panier-arki-intro-v1.png",
+  "rivi": "Le Panier",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 5,
+  "kuva": "marseille-5-vallon-des-auffes-vesi-intro-v2.png",
+  "rivi": "Vallon des Auffes",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 6,
+  "kuva": "marseille-6-nakoala-intro-v1.png",
+  "rivi": "Vanha satama",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 7,
+  "kuva": "marseille-7-panier-ilta-portaat-intro-v1.png",
+  "rivi": "Le Panier",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "marseille",
+  "nro": 8,
+  "kuva": "Marseille tram.jpg",
+  "rivi": "Marseillen raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 1,
+  "kuva": "hero-lissabon-alfama.jpg",
+  "rivi": "São Jorgen linna",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 2,
+  "kuva": "hero-lissabon-aamu.png",
+  "rivi": "Belémin torni · 1519",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 3,
+  "kuva": "hero-lissabon-keskipaiva.png",
+  "rivi": "Jerónimosin luostari · 1501–1601",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 4,
+  "kuva": "hero-lissabon-ilta.png",
+  "rivi": "Kauppatori",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 5,
+  "kuva": "Castelo de São Jorge and 25 de Abril Bridge Over Lisbon Rooftops (54739478432).jpg",
+  "rivi": "Lissabonin katot",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 6,
+  "kuva": "View from from Miradouro das Portas do Sol, Lisbon, 20250603 2018 9054.jpg",
+  "rivi": "Portas do Sol",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 7,
+  "kuva": "lisbon-7-bairro-alto-ilta-intro-v1.png",
+  "rivi": "Bairro Alto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 8,
+  "kuva": "Lisbon Cityscape with 25 de Abril Bridge (55260752373).jpg",
+  "rivi": "Huhtikuun 25. päivän silta · 1966",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 9,
+  "kuva": "Blue Hour over Lisbon (43257906392).jpg",
+  "rivi": "Alfama",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "lissabon",
+  "nro": 10,
+  "kuva": "No28 Tram (45248843404).jpg",
+  "rivi": "Lissabonin raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 1,
+  "kuva": "hero-barcelona-aamu.png",
+  "rivi": "Sagrada Família · 1882–",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 2,
+  "kuva": "hero-barcelona-keskipaiva.png",
+  "rivi": "Casa Batlló · 1906",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 3,
+  "kuva": "hero-barcelona-ilta.png",
+  "rivi": "Palau Nacional · 1929",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 4,
+  "kuva": "barcelona-4-born-arki-intro-v1.png",
+  "rivi": "El Born",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 5,
+  "kuva": "barcelona-5-barceloneta-meri-intro-v1.png",
+  "rivi": "Barceloneta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 6,
+  "kuva": "barcelona-6-nakoala-intro-v1.png",
+  "rivi": "Bunkers del Carmel",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 7,
+  "kuva": "barcelona-7-gotic-ilta-intro-v2.png",
+  "rivi": "Barri Gòtic",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 8,
+  "kuva": "Barcelona rooftops.jpg",
+  "rivi": "Barcelonan katot",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 9,
+  "kuva": "Barcelona in evening light (49598614983).jpg",
+  "rivi": "Port Vell",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 10,
+  "kuva": "Barcelona desde El Carmelo.JPG",
+  "rivi": "Turó del Carmel",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "barcelona",
+  "nro": 11,
+  "kuva": "Old tram at Barcelona pic01.JPG",
+  "rivi": "Barcelonan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 1,
+  "kuva": "hero-granada-aamu.jpg",
+  "rivi": "San Jerónimon luostari",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 2,
+  "kuva": "hero-granada-keskipaiva.jpg",
+  "rivi": "La Cartuja",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 3,
+  "kuva": "hero-granada-ilta.jpg",
+  "rivi": "Corral del Carbón · 1300-luvun alku",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 4,
+  "kuva": "granada-4-albaicin-arki-intro-v1.png",
+  "rivi": "Albaicín",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 5,
+  "kuva": "granada-5-darro-espinosa-intro-v1.png",
+  "rivi": "Darro-joki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 6,
+  "kuva": "Granada 2025.jpg",
+  "rivi": "Torre de la Vela",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 7,
+  "kuva": "granada-7-asukortteli-ilta-intro-v1.png",
+  "rivi": "Albaicínin carmen-talot",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "granada",
+  "nro": 8,
+  "kuva": "granada-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Granadan minibussi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 1,
+  "kuva": "hero-budapest-parliament.jpg",
+  "rivi": "Unkarin parlamenttitalo · 1885–1904",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 2,
+  "kuva": "hero-budapest-lanchid.jpg",
+  "rivi": "Széchenyin ketjusilta · 1849",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 3,
+  "kuva": "hero-budapest-fishermans-bastion.jpg",
+  "rivi": "Kalastajanlinnake · 1902",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 4,
+  "kuva": "budapest-4-pest-arkipiha-intro-v1.png",
+  "rivi": "Pest",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 5,
+  "kuva": "budapest-5-gellert-tonava-intro-v2.png",
+  "rivi": "Gellértvuori",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 6,
+  "kuva": "budapest-6-nakoala-intro-v1.png",
+  "rivi": "Citadella",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 7,
+  "kuva": "budapest-7-obuda-iltakatu-intro-v2.png",
+  "rivi": "Óbuda",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "budapest",
+  "nro": 8,
+  "kuva": "Budapest, Clark Ádám tér, sikló, Budavári sikló, 13.jpg",
+  "rivi": "Budan linnan köysirata",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 1,
+  "kuva": "hero-rooma-forum.jpg",
+  "rivi": "Forum Romanum",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 2,
+  "kuva": "hero-rooma-aamu.png",
+  "rivi": "Colosseum · 80 jaa.",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 3,
+  "kuva": "hero-rooma-keskipaiva.png",
+  "rivi": "Pietarinkirkko · 1506–1626",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 4,
+  "kuva": "rome-4-trastevere-arki-intro-v1.png",
+  "rivi": "Trastevere",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 5,
+  "kuva": "rome-5-tiber-ponte-sisto-intro-v1.png",
+  "rivi": "Ponte Sisto · 1479",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 6,
+  "kuva": "rome-6-nakoala-intro-v1.png",
+  "rivi": "Gianicolo",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 7,
+  "kuva": "rome-7-regola-ilta-intro-v1.png",
+  "rivi": "Regola",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 8,
+  "kuva": "hero-rooma-ilta.png",
+  "rivi": "Pantheon · n. 126 jaa.",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 9,
+  "kuva": "Roma da Castel Sant'Angelo.jpg",
+  "rivi": "Castel Sant'Angelo",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 10,
+  "kuva": "Rome (IT), Ponte Palatino -- 2013 -- 3482.jpg",
+  "rivi": "Ponte Palatino · 1890",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 11,
+  "kuva": "Piazza Navona 1.jpg",
+  "rivi": "Piazza Navona",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "rooma",
+  "nro": 12,
+  "kuva": "rome-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Rooman raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 1,
+  "kuva": "hero-krakova-aamu.png",
+  "rivi": "Wawelin katedraali · 1320–1364",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 2,
+  "kuva": "hero-krakova-keskipaiva.png",
+  "rivi": "Mariacki-kirkko · 1355–1397",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 3,
+  "kuva": "hero-krakova-ilta.png",
+  "rivi": "Sukiennice · 1358",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 4,
+  "kuva": "krakow-4-kazimierz-piha-intro-v1.png",
+  "rivi": "Kazimierz",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 5,
+  "kuva": "krakow-5-planty-puut-intro-v1.png",
+  "rivi": "Planty",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 6,
+  "kuva": "Wawel-WidokZWieżyRatuszowej-POL, Kraków.jpg",
+  "rivi": "Näkymä Raatihuoneen tornista",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 7,
+  "kuva": "krakow-7-podgorze-ikkunat-intro-v1.png",
+  "rivi": "Podgórze",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 8,
+  "kuva": "Main Market Square, view from S, Old Town, Kraków, Poland.jpg",
+  "rivi": "Rynek Główny",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 9,
+  "kuva": "20200808 Widok z Kopca Krakusa na Stare Miasto w Krakowie wczesnym rankiem 0557 3430.jpg",
+  "rivi": "Krakovan vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 10,
+  "kuva": "Krakow - Wawel and Old Town from balloon.jpg",
+  "rivi": "Wawelin kukkula",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "krakova",
+  "nro": 11,
+  "kuva": "krakow-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Krakovan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 1,
+  "kuva": "hero-varsova-vanhatori.jpg",
+  "rivi": "Vanhankaupungin tori",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 2,
+  "kuva": "hero-varsova-aamu.png",
+  "rivi": "Varsovan kuninkaanlinna · 1971–1984",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 3,
+  "kuva": "hero-varsova-keskipaiva.png",
+  "rivi": "Wilanówin palatsi · 1677–1696",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 4,
+  "kuva": "warsaw-4-pragan-pihaarki-intro-v1.png",
+  "rivi": "Praga",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 5,
+  "kuva": "warsaw-5-saksilaispuiston-vesi-intro-v1.png",
+  "rivi": "Saksilaispuisto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 6,
+  "kuva": "warsaw-6-nakoala-intro-v1.png",
+  "rivi": "Kulttuuri- ja tiedepalatsi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 7,
+  "kuva": "warsaw-7-pragan-iltavalot-intro-v1.png",
+  "rivi": "Praga",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 8,
+  "kuva": "hero-varsova-ilta.png",
+  "rivi": "Saaripalatsi · 1689",
+  "tila": "odottaa-KK:n-päätöstä (ei peliin ennen)"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 9,
+  "kuva": "Old Town in Warsaw view from Vistula 2019a.jpg",
+  "rivi": "Varsovan vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 10,
+  "kuva": "2018-07-08 Krakowskie Przedmieście, Warszawa.jpg",
+  "rivi": "Krakowskie Przedmieście",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 11,
+  "kuva": "Panoramic view from Palace of Culture and Science in Warsaw.jpg",
+  "rivi": "Złota 44 · 2017",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "varsova",
+  "nro": 12,
+  "kuva": "warsaw-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Varsovan raitiovaunu",
+  "tila": "valmis"
+ }
+]
