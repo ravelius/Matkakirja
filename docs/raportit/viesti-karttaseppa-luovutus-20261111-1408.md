@@ -140,3 +140,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   HUOM: M1 on jälkeen PIENEMPI → kohinaa; 598 puuta jakavat 4 verkkoa, joten satoja Mt ei selity puilla. Selvitä näytesarjasta (muisti-naytteet.txt) samat kohdat kuvien mukaan
   ennen KK-arviota; tarvittaessa toisto. 'kartta muisti tila' ei tulosta riviä ja 'koodimallit tila' = TUNTEMATON KOMENTO (oikea komento selvitettävä, Komennot.cs).
   JU katsoi ym46-01-b: jälkeen puistopuut + allas Eiffelin kentällä näkyvät.
+- PT 17.5x: muistin huippu +521 Mt ≈ +6,7 % > 5 % → ehdon mukaan kevyempi puu + varjot läheltä; luvut ja valinta KK:lle ennen toteutusta.
+- KS 17.5x → KK (kopio PT), ODOTTAA KK:n OK:ta: muisti-naytteet samoista kohdista: keskivaihe mediaani 7101 → 7056 Mt, loppu 7253 → 7677, heilunta ±700 Mt, huippu viimeisessä
+  näytteessä → kohinaa (puut laskennallisesti < 5 Mt, jaetut verkot). Kolmioehto (598k + varjot) ylittyy todennäköisesti → EHDOTETTU: kevyt massapuu ≤ ~250 kolmiota (puu-1
+  kevennettynä, sama atlas), instansoitu piirto per alue+laji (Graphics.RenderMeshInstanced tms. 1 196 olion sijaan), varjot vain < ~400 m, ND:n puisto ennallaan; ~150k kolmiota.
+  KK:n OK:n jälkeen toteuta + mittaa yleisnäkymän piirretyt kolmiot ennen/jälkeen (selvitä komento) + uusi KJ46-ajo.
