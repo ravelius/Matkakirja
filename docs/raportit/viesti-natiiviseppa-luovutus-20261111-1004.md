@@ -183,3 +183,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - LISÄ 13.1x (omistaja 12.20–12.21, KK, JU): MR65 367ea7f0a PIDOSSA KK:n päätökseen (ei 224.72 vielä). Juoksupelin vanhan koodin mittauksia/profilointeja/nopeutuksia
   EI tehdä (37,5 → 40 lähtötaso); aineistotyö (leivotut varjot) jatkuu. ISON IPADIN AJOT vain KK:n nimeämille valmiille kokonaisuuksille: muisti-ipad-4 POIS jonosta,
   laattamuisti-ipad-2 pysäytetty. Mac-ajot jatkuvat (mac-7 jonossa). PT:lle vastattu: muuta juoksukoodin nopeutusta ei kesken (c28e4adb0 ⊂ 367ea7f0a).
+- PT 13.2x (Raamattu 12.26.5): iPad VAIN KK:n nimeämä valmis kokonaisuus viimeisenä tarkistuksena ennen versiota; NS ei tilaa iPad-ajoja. Latausvika: korjaus + todiste MACILLA.
