@@ -105,3 +105,10 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
 - KK:lle vastattu koodista: palautuspolut, D32_SFloat_S8 + käänteinen Z, Louvre (rajapallo 417, lähin 766, lähitaso 50) ja Invalidit (230, 407, 50) ennallaan,
   tavallinen kartta: 124 m kiertopisteestä (620/5), Riemukaari ~89 m, Eiffel ~0 m → litistys jo 224.70:ssä; KK päättää yhteisestä paikasta, EI laajennusta ennen sanaa.
 - JU:lle: aja 41b9c5965, skripti lisätty Invalidit + lopuksi 5 s tallenne e-riemukaari-b-lahin → lokit/nui-napautus-224-1-41b9c5965.
+
+## LISÄYS 10 (KK 16.26): syvyysvedon raja korjataan VARJOSTIMESSA (KS: v × min(1, 0,8 × raja / 60)), ei esityksen lähitasolla
+- 41b9c5965:n ajo (JU) valmistuu ja kuvat KK:lle, mutta napautuslento EI junaan ennen ajoa B.
+- AJO B: haara napautus-224 + KS:n varjostinsha (KS:ltä pyydetty 16.2x) → skripti valmiina proto-3d/_tyo/natiivi-ui/sk-napautus-224-2-b.txt
+  (Riemukaari lahitaso 0 / 1 samoista kulmista; täydennä sha otsikkoon) → JU. Kytkin `ui nahtavyysesittely lahitaso 0|1` on jo koodissa.
+- Jos kaari ehjä katto pois → poista EsitysLahitaso/EsitysRajaSade/kytkin haarasta (LahinRajoista palaa? päätä: 63 m:n veto ei enää rajaa lähintä
+  KS:n muutoksella → palauta vanha r + LahitasoM). lukonVersio jää joka tapauksessa.
