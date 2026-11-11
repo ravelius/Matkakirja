@@ -480,3 +480,15 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - PALKKI-4 (116d4b240) yhä JU:n jonossa → lue.py (pisin sama ≤ 15 s?) → KK (kopio PT) samassa viestissä katko-6:n kanssa → KK:n sana → pt-ok PT:lle (246e99d91).
 - Cron 9.04 luotu (3a20ab69). Monitor vahti-mac2.sh käynnissä (kattaa katko-6, palkki-4, T3-koe).
 - SEURAAVAKSI: T1 KAUPUNKITAULU (lisäys 27 ohjeet).
+
+## LISÄYS 29 (11.11. 21.5x): palkki-4 luettu, kaksi agenttia käynnissä
+- PALKKI-4 (116d4b240): EI ≤ 15 s: 0,872 ~50 s (C1 nosti 0,800 → 0,872 yhdessä jaksossa, ulkorengas 95 s antaa vain ~0,02), 0,639 ~20 s.
+  Alku korjattu (palkki-3:n 40/30 s poissa). Lataus 757 s (0,31 Mt/s), rc 0, mallit 439/439. lue.py:n "latausvirhe näkyy 1 / LUOVUTETTU 2" = väärä
+  hälytys (oleta-rivi + koekatkon valinnaiset). KK:lle lähetetty 21.5x.
+- AGENTTI A (Opus): palkki-korjaus latausjono-työpuuhun (natiiviseppa/latausjono, "NS: latausjono 3l") → sitten ajopyynto-mac-palkki-5.md JU:lle
+  (sk-juoksu-latausjono.txt → lokit/natiiviseppa-juoksu-latausjono-palkki-5). Jos agentti ei raportoinut: git log natiivi-backup/natiiviseppa/latausjono.
+- AGENTTI B (Opus): T1 kaupunkitaulu määrittelyn mukaan (/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/tyokalut/t1-kaupunkitaulu-maarittely.md)
+  → commit natiiviseppa/kaupunkitaulu ("NS: T1 kaupunkitaulu:"). SHA → KS:lle (tee_palat.py lukee kaupungit[id].generaattori + talot). KATSO diff
+  itse ennen KK-viestiä; näyttö vakioajon arkki Pariisi + Lontoo ennen|jälkeen (JU).
+- KATKO-6 (246e99d91) JU:lla (järjestys PT 21.2x: KS KJ47c → katko-6 → KJ48 → koekamera-1).
+- JU: MR78 = 224.83 vie 2edb6edeb:n junaan; LINKKI-rivi tulossa NS:lle.
