@@ -209,3 +209,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - PT 14.0x (KK) JONOON, järjestys: 1) latausvika (iv) Mac-todiste → 2) saapuminen mac-7 → 3) LÖYDÖS A (tarkistamatta): piirroskerros ei näy pelissä
   (ElavaTyyli.Striimi = true → Karikatyyri false), mutta PiirrosKerros.Purku pitkien ruutujen syissä → selvitä: lataako/purkaako laattoja turhaan,
   ja mitä kadonneiden ihmeiden tähdet siitä tarvitsevat. VAIN SELVITYS KK:lle + PT:lle, ei koodia ennen KK:n sanaa.
+- VS 14.1x (KK 14.06, saumat-ja-maet osa 4): elävän kartan muste+kuitu tileset-varjostimeen (tee_tileset.py, kytkin _elavaMuste_n, oletus 0).
+  Vastattu: paikka 0 (pohja), VS tekee haarassaan linssiseppa2/elava-muste, ehto: generaattori + shadergraph samassa commitissa ja todiste, että
+  oletus 0 = ennallaan; NS katsoo diffin ennen junaa (renderöintiputki NS:n). Odottaa VS:n sha:ta.
