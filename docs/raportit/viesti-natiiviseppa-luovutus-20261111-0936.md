@@ -60,3 +60,15 @@ Syy: 58,6 ms (gpuMs = näytönohjaimen työaika, jäädytetty P1) luettiin ruutu
 SEURAAVAKSI: ajopyynto-ruutunopeus.md (sk-juoksu-ruutunopeus.txt, JULKAISTU runko ilman kytkimiä/muistinäytteistystä, 6 min botti) JU:lla ennen laattamuistia
 → lokit/natiiviseppa-juoksu-ruutunopeus-1: luenta mediaani, huonoin 5 s, osuus alle 30/20, nykäykset → KK (kopio PT). Hitain 1 % ei tallennu juoksussa (kehysajat liike/lepo null).
 Varjomatka-ajo PERUTTU (ajopyyntö merkitty HYLLYLLÄ). MSAA-tallenne ja muut vivut vain, jos KK pyytää mittauksen jälkeen.
+
+## LISÄYS 3, 09.5x: OMISTAJA 09.38 "varmasti järkevää optimoida … kun ei käytetä laskentatehoa turhaan" → optimointi JATKUU (KUMOAA lisäys 2:n hyllytyksen A:n osalta)
+KK:n linja: A) turha työ pois, kuva ei muutu → junaan PT:n kuittauksella + pari todisteeksi. B) kuvaa muuttavat (MSAA, varjot, varjomatka, piirtotarkkuus, lehvästö)
+vain parilla ja KK:n sanalla.
+- 41bbbc320 (leivotut eivät heitä) ON JUNASSA 224.65 (PT pt-ok); 224.64 = 474fb5642 (kopio pois). Todistepari vivut/vipu-leivheitto.png.
+- SEURAAVAKSI A (PT): heijastuksen rajaus ja PaivitaKappaleet vain uusille piirtäjille → pari (ei eroa) + junaehdokas juna-224:n kärjen päälle → PT.
+  (Ajon 2 mittauksessa heijastus pois −0,8 ms = kohinaa; tee silti, koska A = turha työ pois; PaivitaKappaleet: lisää kustannuksen mittaus lokiin.)
+- RUUTUNOPEUS ennen | jälkeen: ajopyynto-ruutunopeus.md päivitetty kahdeksi ajoksi (julkaistu runko → -ennen, 224.65-runko → -jalkeen), JU:lla ennen laattamuistia.
+  Luenta: python3 -I _tyo/natiiviseppa/juoksu-piirto/fps.py <konsoli.txt> (muuta jakson rajat ajon mukaan: juoksun alku "kulkukartta ladattu" → "juoksupeli pois").
+  Yksi luku KK:lle omistajaa varten: mediaani ruutua/s ennen | jälkeen (+ huonoin 5 s), kopio PT.
+- KK:n tasaisuuskysymys vastattu (40 venynyttä ruutua / 841 s, 10 nykäystä; ruutuvälien jakaumaa ei tallennu juoksussa). Lisää tarvittaessa juoksupelin mittariin
+  ruutuvälien jakauma (p50/p95/p99 juostessa) – A-luokkaa, kuva ei muutu.
