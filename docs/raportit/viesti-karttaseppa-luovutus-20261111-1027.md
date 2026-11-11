@@ -43,3 +43,13 @@ SC-viat HETI, ennen KJ37:n katsomista (SC on linkissä olevaa sisältöä, pallo
 - TALOLEVY (Raamattu 2.204): raivaus = SC:n oma pohja tarkalleen. Leikkaa tai poista talot, joiden pohja leikkaa SC:n pohjaa. ÄLÄ kasvata lovea. → talot v15 (raivaus-1-1-putki, kuten Montparnasse v38).
 - TORNIN KÄRKI: selvitä ensin juurisyy (Tripo-verkko vai lähennyksen leikkaus). e75ff1dae on hypoteesi, ja KJ38 todentaa sen. Jos KJ38 näyttää kärjen ehjänä, juurisyy on lähitaso + syvyysveto.
 - Pari samoista kulmista kuin NUI:n k-000500/650/950 (katse-ajo) KK:lle, sitten juna (cherry-pick juna-224:n kärkeen + talot v15).
+
+## LISÄYS 10.3x (2): KK:n ja PT:n päätös, ENSIMMÄINEN TYÖ: "Sainte-Chapelle esityskameralle kuntoon" (ennen palloa ja Petit Palais'ta)
+NUI:n nähtävyysesitys (napautus → lento → kierto) vie kameran 110–145 m:n päähän kohteesta. Kuva: lokit/nui-napautus-katse-2-2c75bcf22/a3-sainte-chapelle-oikea.png. Korjattavat:
+1) Tornin kärki katkeaa lähennyksen jälkeen ja pysyy katkenneena (10 s ehjä, 13 s:sta loppuun tynkä, myös sulussa 370 m:stä) → juurisyy (ks. KJ38/e75ff1dae).
+2) Apsiksen (itäpääty) katossa vaalea pinnaton laatta ja v-muotoiset viivat.
+3) Viereinen talomassa työntyy apsiksen sisään (raivaus = SC:n pohja tarkalleen, 2.204).
+4) Korttelin talojen seinät levenevät alaspäin vinoina levyinä (etuala vasen ja oikea): KJ33:n jälkeen jääneitä paperiseiniä vai muuta?
+UUSI HYVÄKSYNTÄEHTO: jokaisen koodimallin hyväksyntäkuviin esityskameran kuvat 4 suunnasta (~120 m) KK:lle, ei vain lähin vapaa pelikamera.
+NUI tekee skenaarion kaikille 12 Pariisin kohteelle (4 kuvaa/kohde) → arkit KS:lle ja KK:lle → korjaa löydökset → uudet arkit → junaan yhdessä NUI:n lennon kanssa.
+KJ38 (e75ff1dae) on JU:n jonossa KJ37:n jälkeen.
