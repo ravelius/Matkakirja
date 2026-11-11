@@ -513,3 +513,17 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - SEURAAJAN JONO: 1) KJ49b → KK (parit K/pari.py; Alma 31/33, Concorde 34, raja 01b–01d, Lontoo 35–37; kolmioluku). 2) Amsterdamin koekuva JU:lle. 3) Parvis-toteutus + näyttö.
   4) Palan kevennys tee_palat.py + taulu + Ateena-näyttö. 5) Näyte 6 kaupunkia (Amsterdam, Praha, Lissabon, Tukholma, Luxemburg, Barcelona) + oikea ilma-/katukuva (lähde riville).
   6) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 7) Siltatyyppi + kannen sävy + KJ49c (Alma 120 m). 8) GHSL-kalibrointi, pitkät monikulmiot, 3D-puun sävy.
+
+## LISÄYS 36 (23.4x, uusi sessio 23.20): KJ49b Pariisi → KK, parvis tehty, Pariisin syöte korjattu, kevennys kesken
+- aja_kaikki katkesi nollauksessa (helsinki 23.19) → jatkettu samalla komennolla, VALMIS 23.27: 59/62 (ateena/barcelona 8 Mt, pariisi oletus 47 %).
+- PARIISIN 47 % = KETJUN SYÖTEVIRHE: uusi_kaupunki antoi tee_palat.py:lle otekansion, vaikka taulurivillä on oma `aineisto` (IGN) → "ign 0". KORJATTU
+  (rivin aineisto voittaa; työpuu proto-karttaseppa-koodijuna, EI VIELÄ COMMITOITU kevennyksen kanssa) → uusinta 23.41: pariisi valmis (IGN 107k, oletus 2,1 %), lontoo valmis (osm-d6).
+- KJ49b PARIISI katsottu → KK + PT 23.3x: arkki K/parit-kj49b/arkki-kj49b-pariisi.jpg. Alman vyöt poissa, 1 kapea juova kannen lähireunassa (KJ49c: yhteinen palajako),
+  Concorden iso musta aukko myös korjautui. LONTOO (2 ajoa) jäi JU:n levytauon taakse 23.26 (sisäinen levy 8 Gi) → JU ajaa myöhemmin; parit K/pari.py kuten Pariisi.
+- PARVIS TEHTY 06742c72a + 29f1c9bd9 (natiivi-backup karttaseppa/parvis, työpuu /Users/Shared/Claude/wt/proto-karttaseppa-parvis, juna-224 72dcd6811:n päällä):
+  ElavaViherPois.cs (garden < 120 m² yhdisteestä ≤ 3 m, sisäpiha 6/8 sädettä ≤ 40 m, z ≥ 13), ElavaTyyli landcover-silmukka, välimuistiavain -vp1. 772/772, unity 0.
+  OIKEA ND-PALA 14/8298/5636: poistuu täsmälleen parvis'n 3 laikkua, 7 ms. KJ50-skripti parvis-saanto/sk-mac-parvis-kj50.txt + Amsterdamin koekuva
+  tyokalu-1/amsterdam-koe/sk-mac-amsterdam-koe.txt PYYDETTY JU:LTA 23.40 (KJ49b Lontoon jälkeen). Tulokset → KK (kopio PT).
+- KEVENNYS (KK 23.16 b): tee_palat.py rakenna() + uudelleenpiirto TASAKSI-joukolla (pienimmät pohjat ensin, 5 %:n erät, raja 15 % kärjistä, muuten kevennys_ei_riita
+  → pysähdys); mittarit kevennetyt/kevennetyt_paloja/kevennys_suurin_pct/suurin_pala_tavut. uusi_kaupunki/aja_kaikki-muutokset valmiina scratch-skriptinä
+  (kevennys2.py: pysähdys + tarkka tavuraja + kaikki.md-sarakkeet) — aja ja commitoi, kun ateena/barcelona-ajo valmis. Ateena-näyttö (ennen|jälkeen) vielä tekemättä.
