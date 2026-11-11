@@ -450,3 +450,20 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   EtuAlku/Etu/EtuLoppu, Ali-kerroin 0,95 etuvaiheissa. JU: ajopyynto-mac-palkki-4.md → lokit/natiiviseppa-juoksu-latausjono-palkki-4 (pala3-luettelo-1:n jälkeen).
 - KK-VIESTI LÄHETETTY 21.06 (kopio PT): junaehdokas 2edb6edeb, virhetekstin tausta -ehdotus. Odota KK:n sana → pt-ok PT:lle.
 - Cron 9.04 luotu (38595728). Seuraavaksi T1 kaupunkitaulu.
+
+## LISÄYS 27 — NOLLAUS TÄSTÄ (11.11. 21.1x, kontekstivahti 24 %). JATKA NÄISTÄ:
+- LATAUSJONO: katko-5 OK (lisäys 26). Palkki-4 (116d4b240) JU:n jonossa pala3-luettelo-1:n jälkeen → LUE python3 -I …/latausjono/lue.py
+  lokit/natiiviseppa-juoksu-latausjono-palkki-4: pisin sama arvo ≤ 15 s? (palkki-3: 40 s 0,177 osamallit+lähipuut, 30 s 0,164 avoimet) + ositusrivit.
+  Jos yhä > 15 s: katso mikä lohko (rivien välissä olevat "Lohko"/latausrivit) ja säädä EtuPainot/HantaPainot. → KK:lle (kopio PT).
+- KK-VIESTI 21.06 lähetetty: junaehdokas 2edb6edeb + virhetekstin tausta -ehdotus → ODOTA KK:n sana → pt-ok-pyyntö PT:lle (junaan 2edb6edeb tai 116d4b240).
+- T1 KAUPUNKITAULU ALOITA NYT (KK:n linjaukset lisäys 25: 1b kolme rajausta, 1c tila koe|julkaistu vain näkyvyys, 1d nimiviite poistotaulukkoihin,
+  1e Resources/StreamingAssets + sama tiedosto KS:n generaattorille, 1f korvaa PuuRuudukko.Kaupungit; testi samat puut 35 kaupungille).
+  WT LUOTU: /Users/Shared/Claude/wt/proto-natiiviseppa-kaupunkitaulu (haara natiiviseppa/kaupunkitaulu juna-224 53171fed0:sta, ei committeja).
+  Tiedostot: Kartta/TaloAlue.cs (266 r: La0..Lo1 :9, AsetaArvot :14 asettaa LontooKoe = la0 > 50, SeuraaKameraa :21–29 kovakoodatut Pariisi/Lontoo,
+  PoistoTaulu :116 LontooKoe ? TaloPoistotLontoo(Isot) : TaloPoistot, PoistoAvain :122), Kartta/PariisiKallistus.cs (211), Kartta/TaloKerros.cs (479),
+  Kartta/TaloLataus.cs (397), Linssit/Ydin/Elava/PuuRuudukko.cs (272). Muut kohdat lisäys 25. Tehtävänanto:
+  /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md (TYÖKALU 1 kohta 1).
+  Näyttö: Pariisi ja Lontoo ennallaan (vakioajon arkki ennen|jälkeen, palamäärät) + taulun testit.
+- T3-koe (c1841699a) JU:n jonossa koekamera-1:n jälkeen → LUE lisäys 25:n ohjeella.
+- tarkista.sh: pohjavahti punainen UI-tiedostoissa (Kartta.uss, Matkakirja.uss, Kartuscha, JuoksupeliNakyma) jo junan pohjalla; tyylikirjan päivitys palautetaan.
+- Vahti: Monitor vahti-mac2.sh (lisää palkki-4 kuvioon: natiiviseppa-juoksu-latausjono-palkki-[3-9]*) + ns-tyokalu3-koe-*. Cron 9.04 LUO UUDELLEEN.
