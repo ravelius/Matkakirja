@@ -180,3 +180,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Koodipohja: wt /Users/Shared/Claude/wt/proto-natiiviseppa-turhatyo (haara natiiviseppa/juoksu-turhatyo, 9e67b65a0) tai uusi haara juna-224:stä.
 - SAAPUMINEN: mac-7 (204a54ecd) JU:n Mac-jonossa, muisti-4 iPadilla → lue (lisäys 14) → KK.
 - VAHTI: muista luoda uudelleen (Monitor vahti.sh) + cron 9.04.
+- LISÄ 13.1x (omistaja 12.20–12.21, KK, JU): MR65 367ea7f0a PIDOSSA KK:n päätökseen (ei 224.72 vielä). Juoksupelin vanhan koodin mittauksia/profilointeja/nopeutuksia
+  EI tehdä (37,5 → 40 lähtötaso); aineistotyö (leivotut varjot) jatkuu. ISON IPADIN AJOT vain KK:n nimeämille valmiille kokonaisuuksille: muisti-ipad-4 POIS jonosta,
+  laattamuisti-ipad-2 pysäytetty. Mac-ajot jatkuvat (mac-7 jonossa). PT:lle vastattu: muuta juoksukoodin nopeutusta ei kesken (c28e4adb0 ⊂ 367ea7f0a).
