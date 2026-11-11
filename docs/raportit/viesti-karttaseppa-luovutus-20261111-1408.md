@@ -458,3 +458,16 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   Blackfriars way/123464163 = arch. material harvoin (Pariisi 6) → kivi/metalli taulusta tai oletuksena. Tukia: Pariisi 245 / Lontoo 444 pier-/tuki-wayta (man_made=pier tai bridge:support).
   Koe: scratch siltatagit.py (ajetaan otteet-63:sta). SEURAAVAKSI: sillat.py lukee alueen bridge:structure → laji (arch→kaari, beam→PALKKI uusi laji rakentajaan, truss→metalli),
   aukot tukien määrästä alueen sisällä, sitten Pariisin Seinen siltojen korjaustaulu (nimi → tyyppi, materiaali, aukot, lähde), viimeisenä pituusoletus.
+
+## LISÄYS 33 (23.11): KK 23.08 JÄRJESTYS (KK:n päätös) + ketjusta KK haluaa nähdä — KORVAA aiemmat jonot
+- JÄRJESTYS: 1) KJ49b-kuvat → KK. 2) Pariisin lukittu lista: Montmartren parit KJ43 HETI 01.00:n maastoviennin jälkeen (nykyinen kumpu | kartan oma mäki; KK ratkaisee itse,
+  ei korttia) + Notre-Damen aukion haamut (ympäristöerä 2/2; LISÄYS 29 (a)/(b)). 3) Ketjun pysähdykset ja näyte (alla). 4) Sillan tyyppi + kannen sävy (KJ49c; LISÄYS 30/32).
+  5) Pitkät monikulmiot (LISÄYS 32), 3D-puun sävy.
+- KETJU (ei 52 arkkia): a) KORKEUDET: 70–97 % GHSL:stä → sovittu virheen mittaus Pariisia ja Lontoota vasten (KK 11.11. 21.2x) ENSIN: yksi luku (mediaanivirhe kerroksina
+  + pahin kymmenys). Ilman sitä yksikään GHSL-kaupunki ei mene peliin. b) NÄYTE 6 kaupungista: Amsterdam, Praha, Lissabon, Tukholma, Luxemburg, Barcelona (korjauksen jälkeen):
+  3 vakiokuvaa + 1 × 45° yleis yhdellä 1000 px arkilla per kaupunki + viereen oikea ilma-/katukuva samasta paikasta (lähde riville). c) PYSÄHDYKSET yleisellä säännöllä, ei
+  kaupunkipoikkeuksia: 8 Mt pysyy → pala jaetaan (Ateena, Barcelona). Vakiokuvat: Helsingin 1/3 ei voi olla oikein → syy ensin datasta (valintasääntö), sitten varasääntö
+  (Venetsia, Dubrovnik, San Marino: aukiot tai ranta). Moskova ja Pietari viimeisinä. Pariisi/Lontoo (tee_palat) = oma aineisto, korjaa maskipolku.
+  d) MITÄÄN ketjun tuloksista ei peliin eikä jakeluun ennen KK:n sanaa.
+- Huom: KK:n 23.08 kirjoitettu ennen KS:n 23.09 ehdotusta; Helsingin syy jo mitattu (vain 1 residential-katu ≥ 12 taloa/40 m, pedestrian 9) → valintasääntö ei osu
+  Helsingin isoihin kortteleihin; tarkennus KK:n linjalla vaiheessa 3.
