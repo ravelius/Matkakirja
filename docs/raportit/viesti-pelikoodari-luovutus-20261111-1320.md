@@ -42,4 +42,14 @@ NostotKartalla.cs:2991 (Kuvat.Hae → Taso.Nakyva) voivat laukaista kohdekartan 
 Järjestys: ensin toisto Macilla rajoitetulla nopeudella, sitten korjausehdotus KK:lle ENNEN koodia. Tiedot
 /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vastaus-ii.md. v133c ensin loppuun (luovutus -1230 kohta 2).
 
+## LISÄYS 13.3x: v133c 漱芳斋-ovi, PT:n tilaus (ENSIMMÄINEN TYÖ, ennen palaa 2)
+JU:n kuvat 13.14: /Users/Shared/Claude/proto-3d/lokit/tarkastelukuvat-a0eaa2d8b-131210 (yhteenveto: asettuminen kesken 0, takapinta enintään 0,091).
+PT ei antanut pt-ok:ta: kuvissa ovi on yksin aukiolla ja harjakoristeet leijuvat. LAV:n selvitys: rakennukset ovat v133c:ssä (lod0 eheä,
+2544 → 2540 m²). Kauko-kamera (−103; 6; 476) on eteläisen rakennuksen (x −115…−95, z 473…489) SISÄLLÄ, joten häivytys piilottaa rakennukset;
+irralliset koristesolmut eivät häivy (KK:lle huomio, ei korjata nyt). Ovi z 490 on etelärakennuksen ja pohjoisen salin (z 494…511) välisellä
+reunuksella, EI seinässä → vastaa PT:n kysymykseen (b) kuvien kanssa.
+TEE: uusi koekuvat-tiedosto (tyokalut/koekuvat-ovi-shufangzhai.txt mallina), kamera AUKIOLLA rakennusten ulkopuolella niin, että ovi ja
+katot näkyvät (esim. idästä x ≈ −85 välikköä pitkin länteen; tarkista kehys tiedostosta), ja sama kohta v132:lla (sha junasta) → JU ajaa
+tarkastelu_kuvat.sh → katso kuvat → pari PT:lle, kopio LAV:lle. MR vasta PT:n pt-ok:lla.
+
 Ei agentteja käynnissä. Ei uusia lupia.
