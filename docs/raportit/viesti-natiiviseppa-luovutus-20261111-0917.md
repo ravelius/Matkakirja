@@ -33,3 +33,8 @@ JU: mac-2 + ipad-muisti ajopyynnöt. KK: korjaukset 1–4 + vastaus 5 + UI-sumen
 
 ## LISÄYS 09.2x
 JU: mac-2 (1c92f7cea) jonossa Macilla, video koko ajosta. iPad-muisti-1/-2 siirtyi seuraavalle JU-sessiolle (JU:n luovutus 09.15), ajetaan mac-2:n jälkeen.
+
+## LISÄYS 2, 09.2x: SSE-1 AJETTU (JU 09.18, runko 494595623, huippu 4887 Mt, ei kaatunut); sse-2 käynnissä
+N-rivien fp-huippu jaksoittain (L-rivien "maasto sse" -aikaleimat): alku (40→60→80°, SSE oletus) 3676, sse32 3140, sse64 4887 (!), sse16 takaisin 3016.
+SSE 64:n huippu on vasta ~38 näyteyksikköä vaihdon jälkeen, ei välitön vaihtopiikki: selvitä A-rivien iogpu + U-rivin Pallo sse64-jaksosta (tileset luodaan uudelleen; vanha jää muistiin?). Vertaa sse-2:een.
+Horisonttikuvat h80-sse16-a/-b, -sse32, -sse64 katsomatta; pari samalla rajauksella PT:lle. Alustava: sse32 laski huippua ~540 Mt vs. alku → katso horisontti.
