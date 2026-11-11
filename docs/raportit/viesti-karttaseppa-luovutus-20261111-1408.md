@@ -253,3 +253,27 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   3) Aluerivit (Alpit, Sisilia, Kreeta, Islanti…) samalla säännöllä 16 × 16 km pelin pisteen ympäriltä; tyhjät hoitaa uusi-kaupunki-komennon pysäyttävä tarkistus.
   4) Lisäkaupunki myöhemmin = uusi läpikäynti, ei varastoa. Planeetta pysyy T7:llä toistaiseksi. KUN OTTEET TEHTY: YKSI RIVI KK:lle (koko + kaupunkimäärä).
   → SEURAAJAN JONON KOHTA 4 ALKAA TÄSTÄ: gzip-kirjoitus planeettaote.mjs:ään (zlib, puskuroitu), .gz-luku tee_palat.py:hyn ja vakiokuvat.py:hyn, ajo 61 kaupungille.
+
+## LISÄYS 19 (21.4x): otteet 63, osm/GHSL-korkeus, KJ47c → KK, NOLLAUS (konteksti 25 %)
+- TYÖKALU 1 (natiivi-backup karttaseppa/tyokalu-1, 196db31d4 → 960d485f0 → 09693116f; työpuu /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna):
+  otteet gzipattuina 63 pelikaupungille (pelikaupungit.py: eurooppa.json 60 + kokeilu.json Ateena/Pariisi/Tukholma), 891 Mt.
+  HUOM: T = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tyokalu-1 on LINKKI T7:lle; sisäinen kopio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa-otteet/otteet-63
+  (KK:lle korjattu). uusi_kaupunki.py:n GHSL_TIILET ja ajot osoittavat vielä T:hen → vaihda sisäiseen, kun ketju vakiintuu (GHSL-tiilet 1,2 Gt T/ghsl/lataus).
+  Raportti docs/raportit/karttaseppa-tyokalu1-tila-20261111.md (LISÄYS 21.3x). Lontoo yhä 242/242 tavulleen sama (960d485f0:n jälkeen; 09693116f:n jälkeen aja T/aja-lontoo-2.zsh uudelleen ennen kuin väität samaksi).
+- KK 21.28 KORKEUSPÄÄTÖS: EUBUCCO EI (ODbL + kattavuus). GHSL GHS-BUILT-H ANBH (CC BY 4.0, lähteen copyright.txt tarkistettu), varatie OSM height → levels → GHSL-ruutu (± 15 % hajonta osm-tunnuksen tiivisteestä) → oletus.
+  MITTAUS (T/mittaus, viite-* = IGN/lidar, koe-* = otteet-63 ilman omaa aineistoa, mittaa_korkeudet.py, keskusta < 3 km):
+  kerroin 1,0: Lontoo kaikki mediaani 2,44 / p90 7,3 (GHSL-talot 3,3, harha +2,1); Pariisi 3,5 / 11,4 (keskusta 3,0, reuna 3,8; GHSL-talot 5,8, harha +4,6 ≈ vakio 15 m).
+  Ilman GHSL:ää (oletus 15 m): Lontoo 4,08, Pariisi 3,6. Kerroin 0,8 (räystäs vs keskikorkeus) jälkilaskettuna: Lontoo 2,1 / 6,5, Pariisi 3,3 / 9,9 → oletukseksi ghsl_kerroin 0,8 (09693116f).
+  KÄYNNISSÄ 21.4x: T/aja-ghsl-2.zsh (koe kertoimella 0,8 → T/mittaus/tulos-{pariisi,lontoo}.json + Wien uusi_kaupunki.py:llä → T/uudet/wien/yhteenveto.json).
+  SEURAAVAKSI: luvut (kaikki/keskusta/reuna, mediaani + p90) + Wienin heikko-osuus KK:lle; Wienin VAKIOKUVA-ARKKI KK:lle: Blender 5.2
+  `/Applications/Blender.app/Contents/MacOS/Blender --background --python tyokalut/kaupunki/vakiokuva_render.py -- T/uudet/wien/palat T/uudet/wien/vakiokuvat-wien.json T/uudet/wien/kuvat`
+  (EI VIELÄ AJETTU: tarkista akselit ensimmäisestä kuvasta: pala x itä, y ylös, z pohjoinen → Blender (x, z, y)); arkki 3 kuvaa + nimet → KK (kertoen: luonnosrenderöinti paloista, ei pelikuva).
+  Jos Pariisin mediaani jää selvästi > 3 m → KK:lle luvut + yksi vertailukuva (KK 21.28 kohta 5).
+- uusi_kaupunki.py-koe: Alpit pysähtyi (tyhjä 1 463 < 2 000), Dubrovnik 99 % ja Luxemburg 92 % heikko (ennen GHSL:ää) → aja uudelleen GHSL:n kanssa.
+- KJ47c KATSOTTU → KK 21.4x (kopio PT): parit _tyo/karttaseppa/koodijuna/parit-kj47c/; näkyvät kolmiot yleis +7,3–7,9 %, keski +11,8 %, Champ +13–17 %; sävy 3D ~130 131 79.
+  ODOTTAA KK:n sanaa → erä 90b66a261 + puut (karttaseppa/ymparistot 5f44f5325 + NS c1841699a) junaan yhtenä (JU, PT:n pt-ok).
+- NS 21.2x: kaupunkitaulu Assets/Matkakirja/Kartta/Resources/kaupungit.json (natiiviseppa/kaupunkitaulu), rivin "generaattori" = kaupungit-talot.json-rivi, "talot" = raja;
+  NS kertoo SHA:n → lisää tee_palat.py:hyn luku (KAUPUNKITAULU=tämä, kaupungit[id].generaattori). Määrittely _tyo/natiiviseppa/tyokalut/t1-kaupunkitaulu-maarittely.md.
+- JU 21.34: KJ48 Seine alkaa KJ47c:n jälkeen → lokit/ks-kj48-seine-53171fed0 → arkki + puutelista KK:lle (LISÄYS 17).
+- SEURAAJAN JONO: 1) KJ48 kun tulee. 2) GHSL-luvut + Wienin vakiokuva-arkki KK:lle. 3) KK:n sana KJ47c:stä → junaehdokas. 4) Montmartre KJ43 maaston 01.00-viennin jälkeen.
+  5) työkalu 1: kaupunkitaulun luku (NS:n SHA), otepolut sisäiseen; työkalu 2 luonnokset KK:lle.
