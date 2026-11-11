@@ -89,3 +89,11 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
   Mac-ajosta (lisää skenaarioon elävä-tila-/laattataso-loki, ks. Laattapalvelin.Elava.cs:139; pyydä JU:lta Mac-ajo) ja (b) maa-a-3/-a-4-parit +
   mittaukset (±1 % viivattomalta alueelta, laskeutumisen välähdys/raja). Lähetä KK:lle vasta, kun MOLEMMAT ovat valmiit (KK nollautui 13.1x).
   Pilvivarjo MR66 → 224.72 JU:n jonossa (13.01), LINKKI-rivi tulee.
+
+## LISÄYS 13.3x: MAA A SEIS (KK) – KORVAA YLLÄ OLEVAT MAA A -OHJEET
+- KK 13.3x: piirroskerros ei näy pelissä MISSÄÄN kulmassa: ElavaTyyli.Striimi = true (ElavaTyyli.cs:770) → PiirrosKerros.KarikatyyriKaytettavissa =
+  false (PiirrosKerros.cs:275) → pariisissa = false → tavoite 0 (KK 4.11. 10.2x: striimikartta pohjaksi). Kulmasääntö ei ollut syy.
+- Maa A seis: ÄLÄ tilaa Mac-pareja tai tallenteita; maa-a-3/4 peruttu JU:lta. Haara linssiseppa2/maa-piirros-a 8693823d2 talteen, EI junaan.
+- KK:lle vastattu: A:n ero ei näkynyt missään ajossa; Cesiumin todellista tasoa ei mitattu. Seuraava istunto: EI maa A -työtä. Odota KK:n
+  päätöstä kallistetun lähinäkymän maasta (a/b/c) saumat- ja mäet-suunnitelmassa; ei toteutusta ennen sitä. Jos KK pyytää Cesium-tason
+  mittauksen, tee se Mac-ajona.
