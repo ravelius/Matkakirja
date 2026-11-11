@@ -36,3 +36,23 @@ KK lukee Seurantaohjaaja.cs:n ja kytkennän diffin (7355d8ab3..ad27cdad6 pelitie
 
 Huom: tyokalut/tarkista.sh päivittää tyylikirjan (Tyylikirja.uss/.cs, tyylikirja.json) → palauta git checkoutilla, älä committaa.
 Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 22.1x: KK:N VASTAUS 22.04 — SITOVA, KORVAA KOHDAN 2 "ODOTTAA" (koko teksti: tehtävänannon viimeinen osio, polku kohdassa 2)
+E (7f0571ef9) ja s_kam:n implisiittinen askel HYVÄKSYTTY. B PÄÄTETTY: a:n yläraja 4,0 m.
+C UUSI LINJA (13.26 kumottu): katseen ennakon VAAKASUUNTA = SÄÄNNÖN KULKUSUUNTA (PisteKaarella(S, Sivu, out suunta)), ei jäljen tangentti.
+1. Ohjaajalle Askel(paikka, kulkusuunta, fov); sovitin antaa säännön suunnan samalta askeleelta laitteen kehyksessä (SaannonJalat heittää sen
+   nyt `out _`; reitin kehys → peli: z käännetty kuten uKulku = (kulku.x, 0, −kulku.z)). Ohjaaja pysyy puhtaana.
+2. Suunta talteen jäljen kärkiin (uusi rengastaulukko jx/jy/jz/js:n rinnalle); ennakon suunta SAMALLA painolla kuin nyt (puolikolmio viimeisen
+   a metrin yli, eli Tangentti()-painotus), mutta säännön suunnista. Nollaa: kärjille nollauksen kulkusuunta.
+3. Pystysuunta (nousu) yhä ikkunoidusta jäljestä. `suunta` (lepoennakko, edessä-näytteet) ja KatseNopeus = v̂ × uusi suunta. Ei muita lakimuutoksia.
+4. Testien keinopelaaja antaa säännön suunnan erikseen: T7 suora sivuaskeleen ajan; käännökset kaarena kuten pelissä (alkaa kulmasta, 2 × 1,6 m)
+   → Murto-polulle kaariversio + suunta.
+JÄRJESTYS: C-korjaus ENSIN, sitten kytkentä (KameraAskel välittää suunnan) ja Mac-tallenne. EI tallennetta nykyisellä C:llä.
+SAA JATKAA KYSYMÄTTÄ kytkentään ja tallenteeseen, jos T7 ylitys ≤ 1,5° ja 1 suunnanvaihto JA T5/T6 sivukulmat eivät kasva yli 0,5°
+(nyt L 18,7 / VO 19,0 / VV 23,6°); muuten luvut KK:lle ensin.
+AUKI, EI PAIKATA, rajoja ei muuteta:
+(i) T06 vasen–vasen 23,6°: lisää tulosteeseen pahimman hetken erittely: kulma pelaajan ja TAVOITEkatseen välillä laitteen paikasta, kulma laitteen
+    katseen ja tavoitekatseen välillä (laitteen viive) ja kameran–pelaajan suora väli. KK päättää luvuista.
+(ii) T7 rulla 2,08°: mittaa uudelleen korjauksen jälkeen; KK arvioi tallenteesta.
+TALLENTEESEEN 3 pätkän lisäksi: kaistanvaihtoja suoralla ja kaksi samansuuntaista käännöstä peräkkäin, jos radalla on.
+Valmis-viesti KK:lle kuten tehtävänannossa (sha, testit, tallenteiden polut, mittaritaulukko); PT kopiona ≤ 3 riviä.
