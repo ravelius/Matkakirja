@@ -37,3 +37,9 @@ Esikatselu: `OHJELMAKOHTEET_VIENTI=<kansio> sh Kartta-testit/kaanna.sh` → obj;
 4) Petit Palais (KK: GP:n vieressä tavallinen ruskea talomassa).
 5) Overture-mittaus (ks. -0926).
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty. Ämpärin versionumeroa ei käytetä uudelleen.
+
+## LISÄYS 10.3x: PT:n JÄRJESTYS (sitova)
+SC-viat HETI, ennen KJ37:n katsomista (SC on linkissä olevaa sisältöä, pallo vain koe). Jonon kohdat 2–3 siis ensin:
+- TALOLEVY (Raamattu 2.204): raivaus = SC:n oma pohja tarkalleen. Leikkaa tai poista talot, joiden pohja leikkaa SC:n pohjaa. ÄLÄ kasvata lovea. → talot v15 (raivaus-1-1-putki, kuten Montparnasse v38).
+- TORNIN KÄRKI: selvitä ensin juurisyy (Tripo-verkko vai lähennyksen leikkaus). e75ff1dae on hypoteesi, ja KJ38 todentaa sen. Jos KJ38 näyttää kärjen ehjänä, juurisyy on lähitaso + syvyysveto.
+- Pari samoista kulmista kuin NUI:n k-000500/650/950 (katse-ajo) KK:lle, sitten juna (cherry-pick juna-224:n kärkeen + talot v15).
