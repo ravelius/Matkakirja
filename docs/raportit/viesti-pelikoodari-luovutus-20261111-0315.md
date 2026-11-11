@@ -30,3 +30,4 @@ B1 bottijumi (−85; 500), eteläosan kartoitus; isolla iPadilla aukiovideo ja r
 - v17: seinat-taso1/p2/v17/pari-*.png, rungot lehdessä, ei vikaa. KK:lta kysytty "kelpaako junaan" → kyllä = pt-ok-pyyntö 77128fef8 PT:lle.
 - porraskivi: seinat-taso1/porraskivi/pari-*.png, kuvio = penger, mutta portaat vaaleammat (ei leivottua valoa). Ehdotettu KK:lle tummennus
   (oviPorrasKivi _BaseColor ≈ pengerin leivottu sävy, mittaa kuvasta) + uusi pari säästön jälkeen PT:n luvalla. Odottaa KK:n vastausta.
+- 03.20 JU: P1 3199b079a JUNASSA 224 (476ea9d97), linkki 224.55 – P1 VALMIS.
