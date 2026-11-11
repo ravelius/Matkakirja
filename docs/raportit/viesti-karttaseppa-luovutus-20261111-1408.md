@@ -389,3 +389,13 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - aja_kaikki: lokissa 50 kaupunkia käsitelty klo 22.4x; taustaprosessi voi katketa nollauksessa → JATKA SAMALLA KOMENNOLLA (LISÄYS 23), valmiit ohitetaan.
 - SEURAAJAN JONO: 1) aja_kaikki loppuun → KK yksi rivi (valmiit/pysähtyneet + syyt; ateena, barcelona pala > 8 Mt) + muutama vakiokuva-arkki. 2) Alman kansivika (raportin kohta 1)
   + KJ49b (kohta 2) → KK. 3) Parvis-haamut KK:n linjalla (LISÄYS 26). 4) Työkalu 2 luonnokset (LISÄYS 25). Montmartren parit yöviennin jälkeen (JU:n aamurivi).
+
+## LISÄYS 28 (23.1x, uusi sessio 22.48): Alman kansivika korjattu, KJ49b JU:lla
+- aja_kaikki oli pysähtynyt (sevilla viimeisenä) → jatkettu 22.5x samalla komennolla taustalla (loki T/uudet-kaikki.log). Kun valmis: T/uudet-kaikki/kaikki.md → KK yksi rivi + muutama vakiokuva-arkki.
+- ALMA: syy = OhjelmaKohde.shader SyvyysVeto on lähellä kameraa epälineaarinen ja lasketaan vain kärjissä; 109 m:n kansi yhtenä nelikulmiona interpoloitui ~15 m liian kauas,
+  2 m:n paloista tehdyt holvien laet voittivat lakien kohdalla (= tummat vyöt). KORJAUS 4d18cf390 (karttaseppa/sillat, natiivi-backup; työpuu /Users/Shared/Claude/wt/proto-karttaseppa-sillat):
+  Rakentaja.Pilkko (oletus 0) → Silta() pilkkoo yli 8 m:n nelikulmiot x-suunnassa (SiltaPilkko 8). Koskee myös käsin tehtyjä keskustan siltoja (vain tessellointi).
+  Sillat 150 kpl (Pariisi+Lontoo+keskusta): 120 916 → 160 206 kolmiota (+32 %; 4 m:n ruudukolla olisi 355k). Testi PitkatPinnatPaloiksi; 775/775, unity 0.
+- KJ49b pyydetty JU:lta 23.0x (kopio PT): _tyo/karttaseppa/koodijuna/sillat-kj49b/sk-mac-sillat-kj49b-{pariisi,lontoo}.txt (7 + 5), ENNEN 2eb8ff84a | JÄLKEEN 4d18cf390
+  → lokit/ks-kj49b-sillat-*. KUN TULEE: parit (K/pari.py) → KK (kopio PT): Alma 31/33 vyöt poissa?, Concorde 34 ennallaan, raja 01b–01d, Lontoo 35–37 lähikuvat; kerro kolmioluku KK:lle.
+- SEURAAJAN JONO: 1) aja_kaikki → KK. 2) KJ49b → KK. 3) Parvis-haamut KK:n linjalla (LISÄYS 26). 4) Työkalu 2 luonnokset (LISÄYS 25). Montmartren parit yöviennin jälkeen.
