@@ -1435,3 +1435,26 @@ KK 12.21: (1) juoksupelin vanhan koodin mittauksia ja profilointeja (ruutunopeus
 
 Omistaja 12.21: "kannattaa varmaan ohjeistaa että ipadilla ei kannata ajaa mitään ennenkuin lopullinen suunniteltu versio on valmis. nyt siellä pyörii joku ajo vaikka suunnitelma ei ole vielä valmis koodissa" ja 12.22: "siis peruskartan ajo pyörii".
 KK 12.22: JU pysäytti käynnissä olevan ajon ja tyhjensi ison iPadin jonon (laattamuisti-2, pilvivarjo-todiste-2, saapuminen-muisti-4). Iso iPad näyttää omistajalle vain valmista: iPadilla ajetaan vain KK:n nimeämä valmis kokonaisuus (suunnitelma koodissa valmis + KK:n hyväksymät Mac-kuvat) viimeisenä tarkistuksena ennen versiota; kokeet, välivaiheet ja mittaukset Macilla; rooli ei tilaa iPad-ajoa itse. Junaan menee Mac-tarkistettu, iPad-erä ennen kuin versio annetaan omistajalle. Kirjattu Raamattu 12.26 kohta 5; työlistan iPad-todistetta odottavat rivit tilaan "odottaa KK:n iPad-erää".
+
+## ISOISÄN KUVAT POIS ALKUINTROSTA, TEKSTIT LYHYEMMIKSI; LEHTI OMAKSI PAINIKKEEKSI (omistaja 11.11.2026 klo 15.3x, KK) (11.11.2026 klo 19.2x)
+
+Omistaja 15.3x (224.71:n saapumisen jälkeen): saapuminen kelpaa, intron kohteiden kuvat jäävät; isoisän kuvat pois kaupungin alkuintrosta, kartalle isoisän tekstin kanssa, isoisältä yksi kuva; isoisän ja pulun tekstit ja kuvat lyhyemmiksi ja harkiten missä tarvitaan. Lehti omana painikkeena ja Matkaopas Lehden sisään kiireellä.
+- KK:n suunnitelma scratchpad/keskustelukanava/suunnitelmat/20261111-isoisa-ja-pulu-lyhennys.md (esimerkkiparit omistajalla; roolit vasta omistajan sanalla). Lehti + Matkaopas junassa 224.74. NS:n saapumiskoe ei junaan.
+
+## T7-LEVYLTÄ TILAA ENSIN (omistaja 11.11.2026 klo 16.07) (11.11.2026 klo 19.2x)
+
+Omistaja 16.07: "vapauttakaa ensin t7 levyltä tilaa". JU siirsi ei-aktiivista NAS:lle (ei poistoja): vapaa 134,9 → 228,6 Gi (18.5x); loput seuraavalla JU-vuorolla.
+
+## SOUNDLY-HAKU HUOMENNA (omistaja 11.11.2026 klo 18.37 ja 18.44, KK) (11.11.2026 klo 19.2x)
+
+Omistaja 18.37 "Voin painaa etänä", 18.44 "En pääse. Kokeillaan huomenna": kenkäleiman äänen Soundly-haku siirtyy 12.11.; KK kysyy. Työlista: "Kenkäleiman ääni Soundlysta" (este: odottaa omistajaa).
+
+## PARIISIN LOPPULISTA LUKITAAN; UUDET LÖYDÖT TOISELLE KIERROKSELLE (omistaja 11.11.2026 klo 19.16, kortti, KK) (11.11.2026 klo 19.2x)
+
+Kortti: "Lukitaanko Pariisin loppulista nyt? Listalle jäävät vain sovitut kohdat (puistot, Montmartre, Seine ja sillat, kymmenen kohdan lista); uudet löydöt siirtyvät toiselle kierrokselle eivätkä viivästytä Pariisi valmis -päätöstä." → "Lukitaan".
+- PT kokoaa lukitun loppulistan (scratchpad/keskustelukanava/suunnitelmat/20261111-pariisi-lukittu-loppulista.md), KK lukitsee; sen jälkeen uusi löytö KK:n listalle "toinen kierros" (jarjestys.md), ei Pariisiin. Raamattu 2.215.
+
+## KAUPUNKIEN KOLME TYÖKALUA ENNEN LONTOOTA; LONTOO MITTAUKSENA (omistaja 11.11.2026 klo 19.16, kortti, KK) (11.11.2026 klo 19.2x)
+
+Kortti: "Rakennetaanko ennen Lontoota kolme työkalua (uuden kaupungin pohja yhdellä komennolla, kirkkojen ja palatsien automaattinen rakentaminen valmiista osista, sama kuva-arkki ja muistimittaus joka kaupungista), ja tehdäänkö Lontoo niillä mittauksena?" → "Työkalut ensin".
+- Työlista: "Kaupunkien kolme työkalua ennen Lontoota: odottaa KK:n suunnitelmaa" (pohja suunnitelmat/20261110-euroopan-kaupungit-tyonkulku.md). Roolit eivät aloita ennen KK:n tehtävänantoja; Lontoon rinnakkaiskoe odottaa työkaluja. Raamattu 2.215.
