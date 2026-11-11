@@ -65,3 +65,6 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
 - KK ei ole vielä vastannut 12.20-löydökseen (kallistettu kamera = striimikartta); jos KK haluaa A:n myös kallistettuun, se on eri kerros (Cesium).
 - 12.4x: pilvivarjo-todiste-ipad-2 POIS JU:n jonosta (omistaja 12.21: ison iPadin ajot vain KK:n nimeämille valmiille kokonaisuuksille).
   Kysytty KK:lta, nimeääkö se ajettavaksi; ilman KK:n sanaa ei iPad-ajoja (myös maa A).
+- PT 12.4x (omistaja 12.21–12.22, Raamattu 12.26.5): isolla iPadilla VAIN KK:n nimeämä valmis kokonaisuus viimeisenä tarkistuksena ennen
+  versiota. Kokeet, välivaiheet ja mittaukset Macilla. ÄLÄ TILAA iPad-ajoa itse (ei maa A:n ruutuajoa, ei pilvivarjoa). Pilvivarjo-todiste-2 odottaa
+  KK:n iPad-erää; maa A:n hyväksyntä KK:lta Mac-todisteilla (maa-a-3/4).
