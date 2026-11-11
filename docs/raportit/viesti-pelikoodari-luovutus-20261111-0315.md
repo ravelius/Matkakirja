@@ -32,3 +32,11 @@ B1 bottijumi (−85; 500), eteläosan kartoitus; isolla iPadilla aukiovideo ja r
   (oviPorrasKivi _BaseColor ≈ pengerin leivottu sävy, mittaa kuvasta) + uusi pari säästön jälkeen PT:n luvalla. Odottaa KK:n vastausta.
 - 03.20 JU: P1 3199b079a JUNASSA 224 (476ea9d97), linkki 224.55 – P1 VALMIS.
 - 06.51 JU: P1B (028ec1d6f) KÄYNNISSÄ L2:lla, JU ilmoittaa "P1B AJETTU" → katso e1–e7 + j1/j2 ja vie KK:lle (kohta 3 yllä).
+
+## LISÄYS 07.0x (säästö purettu)
+- v17: KK 06.5x "KELPAA JUNAAN" → pt-ok-pyyntö PT:lle lähetetty (natiivi-backup pelikoodari/lahipuut-v17 = 77128fef8, juna-224 476ea9d97 + 2). ODOTTAA PT:tä.
+- Porraskivi: KK 06.5x "tummenna pengerin sävyyn, erityisesti päälliset; sama pari uudelleen, sitten junaan sanallani".
+  Tehty 96c6632e4 (päälliset omana alaverkkona 5, kertoimet PorrasYlaKerroin/PorrasKylkiKerroin). JU:n jonossa P1B:n jälkeen:
+  seinat-taso1/porraskivi2/aja-porraskivi2.zsh (ennen b6cceaeb7 | jälkeen 96c6632e4) → pari KK:lle; KK:n sanalla pt-ok b6cceaeb7+96c6632e4
+  (huom: 028ec1d6f lehtikorjaus on niiden välissä, eli pt-ok koko ketju 96c6632e4 asti, kun P1B-lehtipari on KK:lla OK).
+- P1B käynnissä JU:lla (06.51).
