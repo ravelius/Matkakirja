@@ -109,3 +109,12 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   (pallo 45,7 % / 99,7 %, piirros puuttuu 0/28). Talojen muistikatto ei kasva odotuksen aikana (talot muisti -rivit vasta myöhemmin) → epäily muistikatosta heikko;
   ei kylmän verkkolatauksen syy (napautuksessakin 28 s).
 - SEURAAVAKSI: JU ajaa _tyo/natiiviseppa/saapuminen/ajopyynto-ipad-muisti-3.md (b8e641712, syyrivi) → korjaus syyn mukaan → KK. Saapuminen = Kaupungit-kärki, ei juoksupeliä.
+
+## LISÄYS 10 (11.11. 11.4x): KK:n mac-3-palaute (SUUNTA OIKEA, EI JUNAAN VIELÄ) → saapumiskoe 4 d7a60539d (natiiviseppa/saapuminen-pariisi, unity 0, kameratesti 70/70)
+- 1) tummennus liukuu 0,5 s (TraileriTausta.Alku liukuS, Introesitys.PehmeaTummennusS); 2) UiNakymat.SaapumisPiilo: yläpalkki, Turisti-info, luennan Ohita,
+  maakyltti, pulu, nostot piiloon peitteen ajaksi (kuten lento), takaisin häivytyksessä; 3) ristihäivytys 1 s (Introesitys.PehmeaHaivytysS; pysäytyskuvan kopio
+  häipyy elävän kartan päältä, TraileriTausta.HaivytaPysaytys); 4) kamera seisoo häivytyksen ajan, KiertoOhje.KallistusAlku 0 (oletus 0,2 = aloituslento ennallaan),
+  AlkuS = KoeKiertoKiihdytysS 1,5; 5) lokiin "kallistus alkaa … X° → 45°, kesto" ja "kallistus valmis … X° → Y°".
+- 6) asettelu (luennan Ohita Turisti-infon päällä, luentapalkki valkoisen napin alla) → NUI:lle 11.4x. KK: älä muuta kuvien kiertoa eikä nimen animaatiota.
+- JU: ajopyynto-mac-4.md (sk-mac-saapuminen-4.txt, kuva s5b-kartta kohtaan 6) jonoon; iPad muisti-3 (b8e641712) jonossa ennallaan. KK:n ehto: iPad-muisti JU:lta yhä.
+- tarkista.sh pysähtyy pohjavahtiin (vanhat rivit muissa tiedostoissa, myös Introesitys fontti 1 c31deb71d:stä) → valo/liike/kameravahti ja kameratesti ajettu erikseen: omat tiedostot puhtaat.
