@@ -36,3 +36,6 @@ Yhteinen kysymys A: **saako pitkään ja monivaiheisesti rakennettu rakennus, jo
 - Złota 44 · 2017 (virallinen avaus; en-Wikipedia 2016).
 - Edinburgh #1 linna ilman vuotta (rakennusvaiheet 1100-luvulta 1880-luvulle).
 - Dublin #8 nimi "Custom House" (kohteen nimi, sääntö 7; vanhassa kuvatekstissä "tullitalo").
+
+## Katsotut 11.11. klo 22.xx (SK, mediasta; 5 katsomatonta ratkaistu)
+Lissabon #5 Lissabonin katot: OK (katot, São Jorge ja silta kaukana). #8: kuva on katukuva keskustasta, silta vain pieni kaukana → "Lissabonin keskusta" ilman vuotta (ei siltaa · 1966). #9: yönäkymä muurilta keskustan ja sillan yli, Alfama ei erotu → "Lissabon yöllä". Rooma #9: näkymä kaupungin yli (Vittoriano, kupolit), linna ei kuvassa → "Castel Sant'Angelo" näköalapaikkana (sääntö 5), ilman vuotta. #11 Piazza Navona: OK, ilman vuotta. Kaikki 103 riviä valmis. KK katsoo, jos nimet #8 ja #9 eivät kelpaa.

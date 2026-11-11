@@ -22,3 +22,6 @@ Wien #7 (Amerlinghaus), Istanbul #6 (näköala Galatan tornista: sääntö 5, ei
 
 ## KK:n lisäpäätökset 20.3x (tehty JSONiin)
 Berliini #8 "Voitonpylväs" ilman vuotta; Ateena #5 "Näkymä Akropoliilta"; Madrid #9 ilman vuotta; Amsterdam #7 "Prinsengracht". Sääntö 5 tarkennus: jos näköalapaikan nimi olisi sama kuin saman kaupungin toisen kuvan rivi, muoto on "Näkymä + paikka". Kuusi katsomatonta pysyy poissa pelistä, kunnes kuvat on katsottu mediasta.
+
+## Katsotut 11.11. klo 22.xx (SK, mediasta; 6 katsomatonta ratkaistu)
+Wien #7 Amerlinghaus (kivetty sisäpiha, köynnöksiä, ilta) OK. Istanbul #6 kuva on Galatan tornin näköala (Kultainen sarvi, Hagia Sofia, Sininen moskeija) ja nimi "Galatan torni" olisi sama kuin #3 → "Näkymä Galatan tornilta" (sääntö 5 tarkennus). #9 Kultainen sarvi (iltarusko, Süleymaniye), #10 Bosporin lautta (lautta Hagia Sofian edessä), #11 Eminönü (Yeni Cami, Galatan silta), #12 Bosporinsalmi (silta, Neitotorni, lautta): OK KK:n nimillä. Kaikki 93 riviä valmis.
