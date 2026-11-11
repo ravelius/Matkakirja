@@ -40,3 +40,17 @@ B1 bottijumi (−85; 500), eteläosan kartoitus; isolla iPadilla aukiovideo ja r
   seinat-taso1/porraskivi2/aja-porraskivi2.zsh (ennen b6cceaeb7 | jälkeen 96c6632e4) → pari KK:lle; KK:n sanalla pt-ok b6cceaeb7+96c6632e4
   (huom: 028ec1d6f lehtikorjaus on niiden välissä, eli pt-ok koko ketju 96c6632e4 asti, kun P1B-lehtipari on KK:lla OK).
 - P1B käynnissä JU:lla (06.51).
+
+## LISÄYS 07.1x – SEURAAVAN PK:N TYÖT (konteksti 26 %, nollaus)
+A) TAUSTA v132 (PT 07.0x: "Vaihda TaustaKansio v132:een ja tee junaehdokas", yhdistä porraskiven kanssa). v132 = v129 + v130 (lattia7 + piikki1,
+   omistaja 10.11. 08.52 Kelpaa) + v131 (raja3a + paaty1b, PT) + penger2. _valmiit/juoksupeli-kk-lavastaja-tausta-v132-vienti-20261111, SHA256SUMS 48b3d06c3486.
+   ALOITETTU JA PERUTTU: pelkkä TaustaKansio-vaihto kaataa testin JuoksuKulkuVersiotTestit (kulkukartta tehty v129:stä) →
+   aja `nice -n 15 tyokalut/kulkukartta_ajo.py <ulos> <osasarja.bin> --juuri <juuri jossa v132> --vie` (ohje tiedoston alussa; vaiheet kulkukartta →
+   ovi_y → tayte_valo → peli → pinta → rajat → vertailu). Lattia7 muutti lattiat → vertailu näyttää, muuttuuko kulkukartta/ovet (P1:n kivijalkaovet!).
+   Tarkista myös että v132 on ämpärissä (media.matkakirja.app/juoksupeli/maailma-v4/kielletty-tausta-v132/) ennen Mac-ajoa ilman koejuurta;
+   tyokalut/juoksu-leivonta-lista.txt viittaa v129:ään. Sitten Mac-pari ja pt-ok.
+B) LAV 07.0x lattia-v131-kartoitus (_tyo/linnanrakentaja/muuri/lattia-v131/kuvat/, sk: kamera-rivit samassa kansiossa):
+   E1 e1-180.png (kamera -85,6 4 296,6 suunta 180): vino harmaa levy + puulattiataso eivät ole LAV:n aineistossa → pelin geometriaa (ovilehti? ramppi?
+   koneportaat?). M6 m6-90.png: ruskea tanko = P2-runko (-92,0; 427,1), v17 korjaa; vasemman reunan pystysuora laattakaista ei ole taustassa → pelin puolelta.
+   Katso kuvat (sips -Z 1000) ja vertaa pelin omiin verkkoihin (ovet koe, lattiat, LattiaV4); QA `mika` listaa kappaleet.
+C) JU:n jonossa: P1B (käynnissä 06.51) ja porraskivi2 (96c6632e4). Porraskivi2:n jälkeen voi tehdä v132+porraskivi yhteisen junaehdokkaan.
