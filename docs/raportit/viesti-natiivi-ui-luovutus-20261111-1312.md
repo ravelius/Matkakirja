@@ -114,3 +114,14 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
   KS:n muutoksella → palauta vanha r + LahitasoM). lukonVersio jää joka tapauksessa.
 - 16.3x: B-ehdokas 2f4c0a80f (napautus-224 = 41b9c5965 + merge KS 03ad357fb, vain varjostimet) pushattu; ajo B JU:lla samaan Mac-ajoon KS:n A:n
   kanssa → lokit/nui-napautus-224-2-b-2f4c0a80f. Ajo 1 (41b9c5965) käynnissä 16.26 → lokit/nui-napautus-224-1-41b9c5965 (katso, kuvat KK:lle).
+
+## LISÄYS 11 (16.5x): AJO B KATSOTTU → LÄHITASOKATTO POISTETTU (KK 16.26:n ehto täyttyi)
+- lokit/nui-napautus-224-2-b-2f4c0a80f (KS:n veto 03ad357fb): Riemukaari katto pois (lähitaso 30 m, 113 m) ja päällä (5 m) → molemmat ehjät
+  täysikokoisina (2-lahin kulma + 3-lahin-kierto). Kulmat eivät vieläkään samat (pois −42°, päällä 34°; JU ajoi ilmeisesti ennen suunta 0 -lisäystä).
+- Ajo 1 (41b9c5965): a/b ehjät, erokuva k120/121 ilman välkettä (lokit/nui-napautus-224-1-41b9c5965/ero-k120-k121.png), Louvre/Invalidit 50 m ennallaan.
+- Haaraan napautus-224: revert 313e15b1a (katto, SyvyysVetoM, LahinRajoista palaa 48532e3fa:n muotoon, kytkin pois), lukonVersio JÄÄ,
+  tila-komennossa etäisyys + todellinen lähitaso = d520120aa (unity 0, pushattu). Seuraavaksi: sha KK:lle + PT:lle; junaan vasta KK:n sanalla
+  YHDESSÄ KS:n 03ad357fb:n kanssa (napautuslento ilman vetokorjausta leikkautuisi e75ff1dae:n litistykseen).
+- 16.5x: d520120aa KK:lle ja PT:lle. AVOINNA: KK:n sana junasta (suositus yhdessä KS:n 03ad357fb:n kanssa); jos KK haluaa vielä puhtaan parin
+  samoista kulmista, skripti sk-napautus-224-2-b.txt (suunta 0 lisätty) on valmis. LISÄYS 4 (kuumailmapallon kyltti) yhä jonossa junan jälkeen.
+- Luovutus nollausta varten (kontekstivahti 26 %).
