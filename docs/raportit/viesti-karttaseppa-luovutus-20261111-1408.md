@@ -543,3 +543,17 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - SEURAAJAN JONO: 1) KJ49b Lontoo → KK heti kun tulee. 2) KJ50 + Amsterdam JU:lta → KK (kopio PT). 3) Näyte 6 kaupunkia pelin piirrolla (Amsterdamin koekuvan jälkeen)
   + Ateena ennen|jälkeen + oikea ilma-/katukuva (lähde riville). 4) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 5) Siltatyyppi + kannen sävy + KJ49c (Alma 120 m + alempi juova).
   6) GHSL-kalibrointi, pitkät monikulmiot, 3D-puun sävy. Työpuut: tyokalu-1 = /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna, parvis = wt/proto-karttaseppa-parvis, sillat = wt/proto-karttaseppa-sillat.
+
+## LISÄYS 38 (12.11. 00.1x, uusi sessio 23.57): SILTALINJA 2–3 + KJ49c-koodi tehty, KJ49c JU:lla, NOLLAUS (konteksti 26 %)
+- KJ49b LONTOO, KJ50 ja Amsterdam yhä JU:n jonossa 00.08 (pid 45691 taitto-juna-1b:n takana; pid 80431 PEK kameran jälkeen). Lokit ruutukansioineen voivat olla T7:llä (JU LEVY 23.4x).
+- SILLAT 300c6b99d (natiivi-backup karttaseppa/sillat, työpuu /Users/Shared/Claude/wt/proto-karttaseppa-sillat; 778/778, unity 0):
+  SiltaLaji.Palkki (PalkkiAukko, PalkkiKorkeus 2,2, tuet = umpiseinät, ei SillanPilarit), KaupunkiSilta.Generoitu → kansi/laskut KatuKartta (KannenKatu/Jalka/Lankku),
+  Rakentaja.Pilkko leikkaa 8 m:n x-ruudukolla (yhteinen palajako), päätyseinä vesirajalla p[paras].x / p[paras+1].x (Alman alempi juova: tukiosan kotelo oli avoin),
+  GeneroidutSillat lukee valinnaisen Aukot-taulukon. Testit PalkkiJaAukotRakentuvat, GeneroidunKansiKadunSavyssa, YhteinenPalajako. Kolmiot 160 206 → 137 788.
+- TYÖKALU 1 e7129fb55 (karttaseppa/tyokalu-1): sillat.py tyyppi taulu → OSM bridge:structure/material + tuet → oletus; tyyppi_lahde rivillä; sillat-korjaus/pariisi.json 19 siltaa
+  (fr/en.wp; puuttuu Issy, Morland, Nelson-Mandela). Ajo: sillat.py <id> otteet-63/<id> _tyo/karttaseppa/tyokalu-1/sillat/sillat-<id>-tyyppi.json --unity-juuri <sillat-työpuu> --resurssi <…>/Resources/sillat/<id>.json.
+- KJ49c pyydetty JU:lta 00.08: _tyo/karttaseppa/koodijuna/sillat-kj49c/sk-mac-sillat-kj49c-{pariisi,lontoo}.txt (9 + 5, tee-sillat-kj49c.py), ENNEN 4d18cf390 | JÄLKEEN 300c6b99d
+  → lokit/ks-kj49c-sillat-*. KUN TULEE: parit K/pari.py → K/parit-kj49c/, arkki 1000 px → KK (kopio PT): Alma kaksi juovaa poissa (si49c-31, -38), palkki + 1 pilari (33),
+  Mirabeau 3 teräskaarta + ei kiilaa (32), Iéna 5 kivikaarta (39), kansi kartan kadun sävyssä yleiskuvissa, levein/pisin. KK:lle lähetetty 00.1x tulos + mistä tyyppi tulee.
+- SEURAAJAN JONO: 1) KJ49b Lontoo → KK heti (junasana). 2) KJ50 + Amsterdam → KK. 3) KJ49c → KK. 4) Näyte 6 kaupunkia + Ateena ennen|jälkeen (LISÄYS 37 k. 3).
+  5) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 6) Pitkät monikulmiot muissa rakentajissa (LISÄYS 32 (2): pilkonta yhteiseen apufunktioon; Rakentaja.Pilkko on nyt ruudukko), GHSL-kalibrointi, 3D-puun sävy.
