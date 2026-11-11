@@ -416,3 +416,23 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Nahtavyysalue/OhjelmaKohteet (saapumishaarasta) + Nahtavyysalue.ValmiusYhteenveto. JU:lle kerrottu (koe Pariisilla latausjonon ja pala3-ajojen jälkeen).
   LUE vakioajon 1. ajo: tuliko rivi, aika järkevä, talopalat > 0; MITTARI-arvot ≠ -1 (piirrot -1 = ei Development/editori).
 - KAUPUNKITAULU odottaa KK:n vastausta (1b–1f).
+
+## LISÄYS 25 — NOLLAUS TÄSTÄ (11.11. 21.4x, kontekstivahti 25 %). JATKA NÄISTÄ:
+- KK 21.3x PÄÄTÖKSET (kirjattu tehtävänantoon "Tarkennukset NS"): T3 rivi PYYNNÖSTÄ, katto 120 s, aika pyynnöstä + alusta; mittari = KS:n PiirtoTilasto,
+  piirrot vain editori/Development riittää. → TEHTY c1841699a (natiivi-backup natiiviseppa/tyokalu3-rivit: d088ca46a → 67860bf8a PiirtoTilasto KS:n
+  sellaisenaan → c1841699a; unity 0). Komento `kaupunki-valmis <id>` → "kaupunki valmis <id> <N alusta> s (pyynnöstä M s; …)" / "kaupunki EI valmis <id> 120 s
+  (kesken: …; alusta N s)". JU:lle kerrottu (sk:ihin `komento kaupunki-valmis @KAUPUNKI@` + oleta 130). KS:lle kerrottu (PiirtoTilasto public-muutos).
+  JU:n koe: sk-ns-rivit-koe-pariisi.txt → lokit/ns-tyokalu3-koe-pariisi-<sha> koekamera-1:n ja KS KJ48:n jälkeen. LUE: rivi tuli, N järkevä, talopalat > 0,
+  MITTARI ennen/valmis/20s arvot (kolmiot > 0, piirrot ≠ -1 editoriajossa) → KK:lle (kopio PT) + junaehdokas.
+- T1 KAUPUNKITAULU (KK 21.3x, aloita LATAUSJONON JÄLKEEN): (1b) kolme rajausta (talot, kyltit, kamera; kyltit/kamera oletus = talot, jos puuttuvat);
+  (1c) tila koe|julkaistu = vain näkyvyys, muut erot (maan nosto ym.) omina kenttinään; (1d) nimiviite TaloPoistot*-taulukoihin Pariisille/Lontoolle,
+  uusille generaattorin poistolista, ei uusia C#-taulukoita; (1e) taulu pelin sisällä (Resources/StreamingAssets), sama tiedosto generaattorille (KS);
+  (1f) korvaa PuuRuudukko.Kaupungit, testi: samat puutiedostot samoille 35 kaupungille. Näyttö: Pariisi ja Lontoo ennallaan (vakioajon arkki ennen|jälkeen, palamäärät).
+  Kohdat (agentin kartoitus): TaloAlue :14 :25–28 :116 :122, PariisiKallistus :18 :59 :63–67, TaloKerros ~:285–296 :431, TaloLataus :38–45,
+  PuuRuudukko :~23 :~32, Rakennus.cs :1194–1196 (editori), OhjelmaKohteet :16 :~280, KaupunkiPallot :1162, NostotKartalla :706–714 (2 viim. NUI:n alue).
+- LATAUSJONO: palkki-3 (393acb884, L1, alkoi 20.48) → lue.py; katko-5 (2edb6edeb) JU:n jonossa NUI petit-palais-4:n jälkeen → K1-virhe-kuvassa viesti + nappi?
+  Sitten KK-VIESTI (kopio PT) + junaehdokas 2edb6edeb → pt-ok PT:lle. Jono JU:lla sen jälkeen: pala3-luettelo-1 → koekamera-1 → T3-koe.
+- PT 21.3x tiedoksi (aarrekysymyksen esilataus, kun jonoon): omistaja 20.47: rasti EI vapauta esiladattua kaupunkia väkisin (pelaaja jää kartalle,
+  matka jatkuu Liiku-napista); suunnitelmat/20261111-aarrekysymys-saapuessa.md kohta 4.
+- Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac2.sh` (katko-[3-9], palkki-3, pala3-*; lisää ns-tyokalu3-koe-*).
+  Cron 9.04 unity-julkaisut.py LUO UUDELLEEN.
