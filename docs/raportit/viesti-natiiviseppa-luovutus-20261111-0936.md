@@ -52,3 +52,11 @@ SAAPUMINEN ennen junaa (KK, mac-2 katsottu: selvä parannus), TEE wt proto-natii
  3) iskulause ~1/3 nimen korkeudesta, sama fontti (nyt hiusviiva).
  4) näkyvä rauhallinen ~3 s kallistus jyrkemmästä (niin jyrkästä kuin valmis alue sallii) 45°:een ja suoraan kiertoon (omistaja: "liukua suoraan ylhäältä ~45°").
  Sitten mac-3 (korjaa myös n-sarjan oleta-rivit kuten iPad-skenaariossa) + iPadin muistihuippu KK:lle.
+
+## LISÄYS 2, 09.4x: VIVUT PYSÄYTETTY (omistaja: "nyt on jotain pahasti pielessä. kyllä juoksupeli on minusta pyörinyt ihan hyvin")
+KK ja PT: KAIKKI kuvaa muuttavat vivut hyllyllä (MSAA, varjot, varjomatka, leivheitto). 41bbbc320 EI junaan; 224.64 = 474fb5642 (kopio pois, JU:n MR57).
+Syy: 58,6 ms (gpuMs = näytönohjaimen työaika, jäädytetty P1) luettiin ruutuajaksi. Faktat KK:lle lähetetty: mittauskäännöksellä koko juoksu mediaani 37,5 ruutua/s
+(5 s jaksot kehyksia/Δt, skripti <scratchpad>/fps.py), huonoin 5 s 28,3, alle 20: 0 %; botti liikkeessä 38,7; pelin mittari 41/s, nykäyksiä 10.
+SEURAAVAKSI: ajopyynto-ruutunopeus.md (sk-juoksu-ruutunopeus.txt, JULKAISTU runko ilman kytkimiä/muistinäytteistystä, 6 min botti) JU:lla ennen laattamuistia
+→ lokit/natiiviseppa-juoksu-ruutunopeus-1: luenta mediaani, huonoin 5 s, osuus alle 30/20, nykäykset → KK (kopio PT). Hitain 1 % ei tallennu juoksussa (kehysajat liike/lepo null).
+Varjomatka-ajo PERUTTU (ajopyyntö merkitty HYLLYLLÄ). MSAA-tallenne ja muut vivut vain, jos KK pyytää mittauksen jälkeen.
