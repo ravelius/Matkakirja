@@ -63,3 +63,5 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
   molemmat 8693823d2, kallistus 0 / suunta 0. Tarkista ja lähetä KK:lle polut + mittaukset + puutteet.
 - NUI: lähin ei muuttunut (KS c032134e7 IsoisaLahinLeveys 0,231 ≈ 0,78 km). PK:n cd0edaa29 "5× lähemmäs" (vasen tappi) mainittu KK:lle, ei tarkistettu.
 - KK ei ole vielä vastannut 12.20-löydökseen (kallistettu kamera = striimikartta); jos KK haluaa A:n myös kallistettuun, se on eri kerros (Cesium).
+- 12.4x: pilvivarjo-todiste-ipad-2 POIS JU:n jonosta (omistaja 12.21: ison iPadin ajot vain KK:n nimeämille valmiille kokonaisuuksille).
+  Kysytty KK:lta, nimeääkö se ajettavaksi; ilman KK:n sanaa ei iPad-ajoja (myös maa A).
