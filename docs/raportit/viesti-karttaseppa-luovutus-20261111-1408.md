@@ -358,3 +358,19 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ49 pyydetty JU:lta 22.1x (kopio PT): _tyo/karttaseppa/koodijuna/sillat-kj49/sk-mac-sillat-kj49-{pariisi,lontoo}.txt (12 + 7 kuvaa, tee-sillat-kj49.py), ENNEN cfe3324a3 | JÄLKEEN 2eb8ff84a
   → lokit/ks-kj49-sillat-{pariisi,lontoo}-*. KUN TULEE: parit (K/pari.py) → KK (kopio PT): raja Alma ↔ Alexandre III (si49-01), Lontoo London Bridge ↔ Tower Bridge (si49-23); tarkista ettei maalattu silta näy kannen alta, kansi ei uppoa rinteeseen, kanavasillat järkevän kokoisia.
 - JONO: 1) aja_kaikki valmis → KK yksi rivi (valmiit/pysähtyneet + syyt) + muutama vakiokuva-arkki. 2) KJ49 → KK. 3) Lontoo mittauksena. Montmartren parit yöviennin jälkeen. LINKKI 224.85 odottaa.
+
+## LISÄYS 25 (22.2x): NOLLAUS (konteksti 25 %), työkalu 2 seuraavaksi
+- aja_kaikki KÄYNNISSÄ taustalla (aloitettu 22.06; jatka katkettua samalla komennolla, LISÄYS 23). KJ49 JU:lla (LISÄYS 24). LINKKI 224.85 odottaa.
+- "Lontoo mittauksena" (tehtävänanto kohta C) alkaa vasta, kun kolme työkalua toimivat → ei vielä.
+- SEURAAJA: TYÖKALU 2 ENSIMMÄINEN ASKEL = luonnoskuvat KK:lle ENNEN generaattorikoodia (tehtävänanto suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md r. 39–66 + TARKENNUKSET 21.2x;
+  tyyliohje suunnitelmat/20261110-pariisin-nahtavyydet-tyyliohje.md: vaalea lämmin kivi, siniharmaat katot, yksi korostus, ikkunarytmi syvennyksinä).
+  Arkki: kirkko 3 kokoluokassa (kappeli ≤ 400, kirkko ≤ 900, katedraali ≤ 1 500 kolmiota), asema, palatsi + tavallinen talo mittakaavaksi; tasavärit, neutraali valo, 45° + edestä.
+  SELVITETTY TAPA: uusi tiedosto Kartta/OhjelmaKohdeTyyppitalot.cs (partial OhjelmaKohdeGeometria, puhdas C#) Rakentajan primitiiveillä paikallisessa kehyksessä (x = pitkä akseli,
+  länsi = −x, y ylös): Laatikko/Seinat(q)/Kansi; Katto(x0,x1,z0,z1, renkaat (dx, dz, y)) = sisennetyt suorakaiderenkaat (harjakatto: [(0,0,H),(0,W/2,H+h)]; mansardi: välirengas;
+  kaari: useita renkaita cos-profiililla); Pyora(cx,cz,(r,y)[],sivuja) apsis/kupoli; Piikki = huippu; Seina r.S(x0,z0,x1,z1).Rivi(u0,u1,n,y,w,h,Aukko.Kaari,kehys) ikkunat;
+  KaariTayte = kello/ruusuikkuna. Värit OhjelmaKohdeGeometria.cs r. 117 (Kivi, KiviVaalea, Liuske, Sinkki, Lasi, Valkoinen). HUOM: Katto lisää Liuskerivit → laske kolmiot.
+  Osat (NdTorni r.180, NdFleche r.246, NdLentotuki r.124, NdLansiJulkisivu r.201 OhjelmaKohdePariisiNotreDame.cs; SpTorni OhjelmaKohdeLontoo.cs r.355) ovat ND-koordinaateissa:
+  irrotus yhteisiksi osiksi on vaihe 4, luonnokseen yksinkertaiset muodot riittävät (kerro KK:lle).
+  OBJ: Kartta-testeihin testi, joka kutsuu Tarkista(v, nimi) → Vie() kirjoittaa OBJ:n (kärkiväri v-rivillä), ajo OHJELMAKOHTEET_VIENTI=<kansio> sh Kartta-testit/kaanna.sh <testin nimi>.
+  Blender: tee render-skripti vakiokuva_render.py:n mallilla (EEVEE, aurinko 50°/35°, taivas, väri kärkiattribuutista; OBJ-tuonti bpy.ops.wm.obj_import, Unity (x,y,z) → Blender (x, z, y)).
+  Pohjaksi haara karttaseppa/sillat (työpuu /Users/Shared/Claude/wt/proto-karttaseppa-sillat) tai uusi haara juna-224:n kärjestä; ei koske ikonien verkkoihin.
