@@ -531,3 +531,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-v5-tyo/koe-b/ulos-{6.25,12.5}/kk-tausta-1-3-lod0.glb (valo_rgbm 4096², UV1 uusi; korvaa vain
   kk-tausta-1-3, kuja-1-3 pysyy v5) → pari vanha `valo elava kaikki` | koe `valo elava pelaaja`, K1–K5 + K6 (−136 425 0) + K7 (−136 336 180), molemmat
   tarkkuudet, täysikoossa KK:lle (kopio LAV). Vaatii glb-korvauskytkimen. KOEKAMERA-2 PIDÄTETTY JU:n jonosta. Molemmat vasta KK:n sanalla. LAV:n luovutus 8b58e158c.
+- 31c (21.5x) JU: 224.83 LINKISSÄ = a63615592 (latausjonokorjaus 2edb6edeb). T3-rivit c1841699a → 224.84. Palkki-5 1b1359d75 yhä odottaa ajoa.
