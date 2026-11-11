@@ -51,3 +51,8 @@ Testit (proto-worktreessä): `sh Kartta-testit/kaanna.sh` (grand-palais-1-1: 757
 4) Overture-mittaus (yksi kaupunki: height / num_floors / roof_shape -osuudet lähteittäin vs. talokoneen OSM), raportti docs/raportit/ tai posti.
 5) KK 09.2x: Petit Palais on Grand Palais'n vieressä tavallinen ruskea talomassa → ylisuurten/puuttuvien listan perään (Montparnassen jälkeen), ei nyt.
 Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8-hylatty. Ämpärin versionumeroa ei käytetä uudelleen.
+
+## LISÄYS 09.3x
+- NUI: ★-isäntä tehty af1f62bd4 (natiivi-ui/napautus-lento, natiivi-backup; NostotKartalla.TahdenIsanta): mallikyltin puuttuessa isäntä = kartan nimi "Grand Palais".
+  Testaa seuraavassa KJ-ajossa, jossa GP-koodi päällä (cherry-pick af1f62bd4 koehaaraan; KJ35-kuvissa nimi "Grand Palais" näkyi mallin alla, joten pitäisi toimia).
+  Jos ★ "Palais de l'Industrie" ei silti näy → kerro NUI:lle (tekee isännäksi koodimallin rajat). Ei estä junaa.
