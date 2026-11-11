@@ -274,3 +274,14 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   ei asetu jo juna-224:ssä. Mac ENNEN-ajo dc7219520 (lokit/natiiviseppa-piirros-ennakko-ennen): ennakko pois, tasolaattoja 0, purettu 0. "puuttuu 0/28" =
   0 puuttuu 28:sta. 41ba1b7e5 TARPEETON, EI JUNAAN; JÄLKEEN-ajo peruttu JU:lta; KK, JU ja Muistin keventäminen -rivi korjattu. Haaroja ei poisteta.
   (Sivuhuomio: skenaarion "traileri päättyi" ei tullut 90 s:ssa vanhassa saapumisessa; ei jatkotoimia.) EI NS:n jatkotöitä tästä.
+
+## LISÄYS 19 (11.11. 17.5x, uusi sessio local_0f7f169f): KK 17.2x päätökset 1–4 + 18b a TEHTY 7b7c06396 (natiiviseppa/latausjono, 924/924, unity 0)
+- 1) Latausjono.KeskenOsuus (pakollisten keskeneräisten Σ saatu / Σ koko) → JuoksuLatausEdistyminen.Osuus(…, kesken): enintään 1 työyksikkö, Kasvava.
+- 2) LatausjonoLogiikka VahtiAlkaa/Eteni/Vahdi/VahtiLoppuu: 30 s ilman tavuja / valmista / käsittelyn merkkiä (LatausValmiit-setteri, JuoksuLatausMittari.Lohko)
+  ja pakollinen kesken → Virhe (private). Ajurissa VirheRaja ∞ → Range-uusinnat tauolla jatkuvat (18b a). Loki: "pisin etenemätön jakso X s (syy)",
+  "EI ETENEMISTÄ 30 s … → VIRHE". 3) ei kokonaisrajaa. 4) "juoksupeli: latauspalkki 0.xxx (kesken N %, tila)" 10 s välein.
+- MAC-SARJA JU:lle: _tyo/natiiviseppa/latausjono/ajopyynto-mac-latausjono-3.md (korvaa latausjono2:n) → lokit/natiiviseppa-juoksu-latausjono3-1…5
+  + latausjono3-katko-1 (sk-juoksu-latausjono-katko-3.txt: + K1b-valikko-poistu = ☰ latauskuvan päällä). LUE: python3 -I …/latausjono/lue.py <kansiot>
+  (uudet rivit: palkin pisin muuttumaton jakso ≤ 15 s, pisin etenemätön < 30 s, mallit 439). → yksi viesti KK:lle (kopio PT): 5/5 + uusinnat + K1/K1b-kuvat.
+- 18b b (osittainen tiedosto levylle + If-Range) oma rivi, EI tehty. Vahti: Monitor vahti-mac.sh (kattaa latausjono3-*). Cron 9.04 luotu.
+- JONO sen jälkeen: tyhjä (piirroksen ennakko 18c: ei jatkotöitä).
