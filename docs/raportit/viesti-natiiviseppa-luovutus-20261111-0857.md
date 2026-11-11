@@ -52,3 +52,17 @@ muistipiikin korjaus + luovutus tulossa. PT 08.5x: tavoitekuva (luettu, aloitusl
 - KAUKORAJA 80°:ssa: valmista komentoa EI ole (Komennot.cs: vain maasto sse / maasto lataus / usva). Seuraaja: pieni QA-komento (esim. Cesiumin
   fog culling / culledScreenSpaceError tai kameran kaukoraja), käännös + 2. iPad-ajo. PT tietää.
 - Saapumistallenne KK:lle, kopio PT:lle (PT 09.0x vahvisti).
+
+## LISÄYS 2, 09.1x: SAAPUMISKOKEEN MAC-AJO TEHTY (JU 09.04, 3f75e733a) → KK:lle lähetetty (kopio PT), viat kerrottu
+Kansio lokit/natiiviseppa-saapuminen-mac-1 (saapuminen-koko.mp4 164 Mt, kuvat s0–s7, n0–n2, unity.log); arkki _tyo/natiiviseppa/saapuminen/arkki-mac-1.jpg.
+Lokista: peite 2,22 s (60 km, taso 9.9, piirros 0) → pysäytyskuva 0,36 s → kamera lataa peitossa → kuvat c1–c4 2,7 s välein → nimi 13,46 s →
+häivytys 16,74 s ("kartta terävä, lähinäkymä kesken") → kierto 45° 21,76 s → luenta alkaa. Kierto 45° (s5–s6) näyttää hyvältä.
+KORJATTAVAT (KK:lle luvattu):
+1. HÄIVYTYS LIIAN AIKAISIN: s4 näyttää karkean/harmaan kartan 1–3 s. SaapumisTerava mitattiin peitteen alla 1,8 × korkeudelta ylhäältä, ei lopullisesta
+   näkymästä; lähinäkymä kesken. Korjausehdotus: peitteen alla kamera SUORAAN kierron alkunäkymään (45°, kierron korkeus) ja odota
+   SaapumisTerava + Laattapalvelin.LahinakymaValmis (katto), tai pidä kamera lopullisessa näkymässä ja tee "ylhäältä liuku" lyhyempänä.
+2. NAPAUTUS: peite alkoi 2 220 km:ssä (skenaarion `komento aja 49.5 3.5 0.6 2` vei liian ylös, ja lähestymisajo katkesi KoeLahestymisS + 1 s
+   rajaan). Odota lähestymisajo loppuun (pidempi raja korkeuden mukaan) tai mitoita kesto korkeudesta (PalloKierto.MitoitaMatka).
+3. Pysäytyskuvan peite lähes musta (TraileriTausta sävy) – kysy KK:lta kelpaako.
+4. Skenaarion oleta-rajat: "nimi" 30 → 60, "kierto 45" 15 → 40.
+Sitten uusi Mac-ajo → KK, ja iPad-muistimittaus (KK:n ehto) ennen junaa.
