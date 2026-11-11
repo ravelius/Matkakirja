@@ -53,3 +53,30 @@ isoisän ääni = SK:n data; D aarrekysymys KK:n päätöksineen): ks. -2053 (gi
 - Kaukokuvan rajaus kohteiden ympäröivästä laatikosta (kunnes NS:n kaupunkitaulu); arkin otsikkoon rajauksen lähde ("rajaus: kohteet").
 - Lontoo: ensimmäinen vakioajo saa näyttää viat (PUUTE-rivit), korjaukset ovat Lontoon käsityötä. Valmis = Pariisin + Lontoon arkki.
 - JÄRJESTYS sen jälkeen: ohjaussauvat (ensin mitat + ehdotus KK:lle) → D (aarrekysymys).
+
+## LISÄYS 21.2x (ennen nollausta) — LUE TÄMÄ ENSIN (KK:n viestit 21.04–21.14 käsitelty tähän)
+- A KESKELLE (KK 21.14, omistajan "keskitettynä"): rivin siirto ylä-/alaosaan POISTETTU, rivi aina kuvan keskellä; piilotus kirjainten lennon ajan
+  ja vahvempi reuna pysyvät. JUNAN haara nyt bfaafec8c (natiivi-ui/intro-nimet-kortti = ee2673b39 erä 2 + keskelle), pulun haara 7fc22116c.
+  intro-nimet-2 (fbd6f4298, valmis 21.16) näyttää VANHAN asettelun → älä lähetä KK:lle.
+- AJO sk-intro-nimet-3 JU:lla → lokit/nui-intro-nimet-3-bfaafec8c: kuvat peliajassa (odota-peli 1,4 s sisääntulosta = asettunut täysi koko),
+  a0 = PARIISI-kirjaimet lennossa (rivi piilossa), kaikki oletukset oleta-uusi, B odottaa "lontoo uusi esittely" (intro-nimet-1:n B oli tyhjä:
+  vanhat rivit täsmäsivät heti). NÄYTTÖ KK:lle (21.04 kohta 4): viisi TÄYSIKOKOISTA rajausta ASETTUNEESTA kuvasta (kuvan rajat lokista
+  "traileri kuva N nousee … lepo x,y, koko W×H") + yksi rajaus kirjainten lennosta + Lontoon kuvat nimiriveineen. KK: ajastus pysyy (ViimeinenKasvuS
+  ennallaan), nimi näkyvissä ≥ ~1,5 s täydessä koossa. Kontrastin mittapuu Riemukaari (a2) ja Notre-Dame "1345" (a4); jos vielä heikko, vahvista
+  .mk-traileri__kuvanimi-teksti (nyt reuna 3px musta, varjo 0 1px 5px 0,95), EI kaistaa, fontti ja koko ennallaan.
+- KK 21.07/21.08/21.14: sivukuva-1 1bde772da kortin AJOITUS HYVÄKSYTTY (kortti ja puhe samalla hetkellä). Ohje käsikirjoituksiin: kuvat ja odotukset
+  PELIAJASSA (odota-peli) tai sidottuna lokin tapahtumaan, ei seinäkellosekunteina (tallennus ~1/6 nopeudella).
+- B (224.82) KK 21.14: VALMIS → merkitse työlistarivi valmiiksi (riviä "yhdelle etäisyydelle" ei löytynyt tyolista.json:sta nimellä; kysy PT:ltä otsikko).
+- UUSI A-ERÄÄN, ENNEN TYÖKALUA 3 (omistaja 21.13, KK:n tehtävänanto 21.13, PT 21.1x): ISOISÄN KUVA TAITETTUNA TEKSTIN SEKAAN matkakirjakortissa:
+  kuva oikeaan yläkulmaan tekstin sisälle; teksti kuvan vasemmalla niin monta riviä kuin kuva on korkea, jatkuu kuvan alla koko leveydellä; väli kuvaan
+  ~1 rivinkorkeus sivulla ja alla; ei tyhjää palstaa kuvan alle, kortti lyhenee; kehys ja kallistus ennallaan. EHDOT: (1) kirjoittuva teksti etenee
+  saumatta jaon yli (ei hyppyä eikä uudelleenrivitystä kesken sanan), (2) sama asettelu luennalla ja avatussa lapussa, (3) ilman kuvaa teksti koko leveydellä,
+  (4) toimii lyhyellä (249 merkkiä) ja nykyisellä pitkällä tekstillä, (5) alaosan pikkukuvat ennallaan. Toteutusehdotus KK:lta: kaksi peräkkäistä
+  kappaletta, jako mitatusta rivinvaihdosta sanarajalla. Jos jokin ehto mahdoton/kallis → YKSI viesti KK:lle ennen työtä. Koodi: Matkakirjakortti.AsetaSivukuva
+  (baf16f90d/ecf7c28a6). NÄYTTÖ: täysikokoiset kortin rajaukset kolmesta hetkestä (kuvan vieressä, jaon kohdalla, valmis) + avattu lappu. Junaan KK:n sanalla.
+- PETIT PALAIS YHÄ AUKI (KK 21.07 B, JU 21.06): petit-palais-4 c650f3ca6: "kohdenostot: pariisi, merkkejä 25" (ei 26), "mallilla Petit Palais ei kohdenostoa",
+  ei "ui lukija: aloita pala". Kyltti näkyy, napautus ei käynnistä esittelyä. Selvitä miksi PP ei ole kohdenostoissa vienti-pp4-juuresta
+  (Kohdenostot.Ruudulla/Vaihda; Kohdekartat.AsetaKehittajanJuuri nollaa kartat; onko PP:n kohdekartan rivissä id/paikka jota Kohdenostot vaatii;
+  SK:n juttu 24c73c1f5) → korjaa, uusi ajo, arkin rivi kuten muilla kohteilla → KK.
+- JU 21.1x: vakioajon etuliite jo vaihdettu ("ui vakio …"), JU ajaa kun SHA tulee.
+- JÄRJESTYS NYT: intro-nimet-3 katso → KK; pulu-rajaus-1 katso → KK; isoisän kuva taitettuna; Petit Palais; työkalu 3; ohjaussauvat; D.
