@@ -236,3 +236,4 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   3D|maalattu läheltä; kunnossa → KK: erä 90b66a261 + puut junaan yhtenä). 2) KJ48 → KK. 3) Montmartre KJ43. 4) Väleissä työkalu 1: yhteinen tee-palat
   (ensin diff Pariisi ↔ Lontoo-skripti, tavulleen sama -testi molempien nykyisillä syötteillä) + planeettaote (hae-planeetasta.mjs pohjaksi) + vakiokuvat-json;
   työkalu 2: luonnoskuvat KK:lle ensin.
+- JU 20.4x: KJ48 jonossa KJ47c:n perään, sha 53171fed0 (juna 224.82) → lokit/ks-kj48-seine-53171fed0; JU ilmoittaa KS + PT.
