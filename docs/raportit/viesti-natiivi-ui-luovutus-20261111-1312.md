@@ -64,3 +64,7 @@ visibilityn joka kehys. KS:ltä kysytty, millä kutsulla/lipulla UI-pallo piilou
 kyltti "Kuumailmapallo £200" peittää pallon ankkurin ja kentän etureunan → kyltti kentän viereen tai ylemmäs. Mac-pari (ennen/jälkeen) KK:lle.
 - LISÄYS 3 TEHTY 14.4x: 81ac33721 (natiivi-backup natiivi-ui/pallo-varjo, KS:n a20c6cb98:n päällä, unity 0): VarjonPeitto(p) = perus × (1 − Malli3D)
   rivillä ~850 ja SarjaVarjo():ssa (joka kirjoitti peiton yli). Sha KS:lle; KS pyytää JU:lta ajon ja KK:n parin. Ei NUI:n junassa (KS:n koe).
+
+## LISÄYS 5 (16.0x): lahin-1 VALMIS ja katsottu → KK:lle 16.0x (lokit/nui-lahin-1-0ca9df559, arkki-lahin-1-1000.jpg).
+Riemukaari lähin 113 m (rajoista 95), ~62 %, ei leikkautumista; kattoreunan kolmiokolo = MALLIN reikä (lähitaso 50 m, lähin pinta ~77 m).
+Eiffel 676 m ~½, Montparnasse 397 m ~0,7. SEURAAVAKSI: KK:n sana → "48532e3fa junaan" PT:lle → pt-ok. sulku-katse-1 JU:lla seuraavana.
