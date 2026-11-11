@@ -18,3 +18,4 @@ KK (RC päällä), PT (09.0x), LAV (08.5x ja uudelleen 09.29, ed4ae1c25), NS (09
 3. Muut: ei auki.
 
 LISÄYS 09.4x: KS:n uusin luovutus 6446d7ba2 (korvaa 42c137118:n, sama haara).
+LISÄYS 09.4x: NS:n uusin luovutus f0c9451cf (korvaa 5a9062b5b:n, sama haara).
