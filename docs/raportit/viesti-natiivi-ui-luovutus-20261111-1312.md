@@ -62,3 +62,5 @@ visibilityn joka kehys. KS:ltä kysytty, millä kutsulla/lipulla UI-pallo piilou
 
 ## LISÄYS 4 (PT, KK 13.30; ei kiire, junakokonaisuuden JÄLKEEN): työlistarivi "Kuumailmapallon kyltti peittää ankkurin lähikuvassa":
 kyltti "Kuumailmapallo £200" peittää pallon ankkurin ja kentän etureunan → kyltti kentän viereen tai ylemmäs. Mac-pari (ennen/jälkeen) KK:lle.
+- LISÄYS 3 TEHTY 14.4x: 81ac33721 (natiivi-backup natiivi-ui/pallo-varjo, KS:n a20c6cb98:n päällä, unity 0): VarjonPeitto(p) = perus × (1 − Malli3D)
+  rivillä ~850 ja SarjaVarjo():ssa (joka kirjoitti peiton yli). Sha KS:lle; KS pyytää JU:lta ajon ja KK:n parin. Ei NUI:n junassa (KS:n koe).
