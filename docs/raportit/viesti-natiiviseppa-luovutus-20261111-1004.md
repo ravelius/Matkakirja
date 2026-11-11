@@ -388,3 +388,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   pala3-luettelo-1 → koekamera-1. LUE katko-4: K2 "kulkukartta ladattu" + K1/K1b/K2-kuvat; palkki-3: lue.py pisin sama arvo ≤ 15 s + ositusrivin alavaihekestot.
   → KK-VIESTI (kopio PT): 3-1…5 OK (21f) + katko + palkki → junaehdokas 393acb884 (tai uudempi) → pt-ok-pyyntö PT:lle.
 - Vahti: Monitor vahti-mac2.sh (katko-3/4, palkki-3, pala3-*; "valmis N s" = valmis). Cron 9.04 luotu.
+- 23b (20.5x) PT (KK 20.5x, omistaja 19.16 "Työkalut ensin"): RINNAKKAIN latausjonon/pala 3:n jälkeen (ne KK:n järjestyksessä edellä): TYÖKALU 3 (kaksi lokiriviä)
+  + TYÖKALU 1 (kaupunkitaulu) — /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md (LUE).
+  Myöhemmin D:n esilataus (suunnitelmat/20261111-aarrekysymys-saapuessa.md). ENNEN ALOITUSTA yksi viesti KK:lle (local_d5f31591-…) + PT: mikä mahdotonta/kalliimpaa.
+  EI ALOITETTU (nollaus 25 %). JU:n jono 20.4x: NUI intro-nimet-1 → petit-palais-3 → sivukuva-1 (omistaja 20.31) → [katko-4 + palkki-3, pyydetty] → pala3-luettelo-1 → koekamera-1.
