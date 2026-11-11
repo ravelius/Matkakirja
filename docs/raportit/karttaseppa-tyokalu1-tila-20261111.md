@@ -34,3 +34,25 @@ Työkansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tyokalu-1 (T).
   (korkeuden varatiet: Wieniltä ei omaa aineistoa → OSM height / kerrokset / oletus, rivi "korkeusaineisto heikko" > 40 %), EUBUCCO-selvitys (kattavuus, lisenssi).
 - tee_palat.py:hyn korkeuden varatiet yleisinä (nyt ign tai ea-lidar; muille kaupungeille lähde "osm" ja maa maastosta).
 - Rivit siirretään NS:n kaupunkitauluun, kun se on olemassa.
+
+## LISÄYS 21.3x (KK 21.05:n päätöksen toteutus)
+Haara natiivi-backup `karttaseppa/tyokalu-1`: 196db31d4 (gzip + pelikaupungit.py), 960d485f0 (korkeuden varatie osm).
+- OTTEET: 63 pelikaupunkia, 402 s, gzipattuina 891 Mt (raakana 4,2 Gt) → /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tyokalu-1/otteet-63/<id>/
+  {osm,muut,puut,pisteet}.json.gz + ote.json (tavut, tavut_raaka). Tarkistus: kaikki 252 tiedostoa jäsentyvät, määrät = ote.json.
+  Kirjoitus: peräkkäiset gzip-jäsenet puskureittain (gunzip, Python gzip ja zlib lukevat yhtenä tiedostona).
+- KAUPUNKILISTA (pelikaupungit.py): pelin saapumispaikat = eurooppa.json 60 riviä + kokeilu.json 3 (Ateena, Pariisi, Tukholma) = 63.
+  (eurooppa.json:n huomio-tekstissä "61 kaupunkia", mutta luettelossa on 60 riviä; Pariisi, Ateena ja Tukholma ovat kokeilu.json:ssa.)
+  Keskipiste = saapumispiste, 16 × 16 km; aluerivit (alpit, lappi, sisilia, kreeta, islanti) samalla säännöllä.
+  Pienimmät: Alpit 1 463 taloa, Andorra la Vella 6 537, Dubrovnik 7 543. Suurimmat: Pariisi 367 767, Lontoo 335 778, Dublin 317 182.
+- LUKU: tee_palat.py ja vakiokuvat.py lukevat .json.gz:n suoraan (pakkaamaton ensin). Wienin vakiokuvat .gz-otteesta: Schneiderhangasse, Kiesewettergasse, Balderichgasse.
+- KORKEUDEN VARATIE `korkeus.lahde = "osm"`: height → building:levels (·3,2 + 1, + 2,5 · roof:levels) → oletus 15 m (oletus_m); maa pelin maastosta z12 (maasto.py kuten Lontoo).
+  Mittari korkeus_heikko_osuus (talot ilman height/levels); > 0,4 → tuloste "KORKEUSAINEISTO HEIKKO" (uusi-kaupunki pysähtyy).
+- WIENIN KUIVA-AJO (otteet-3/wien, korkeus osm): 166 369 taloa, 424 palaa, 340 Mt, maa 156–488 m; korkeus: height 2 564, levels 49 504, oletus 114 196
+  → heikko 0,687 → KORKEUSAINEISTO HEIKKO (odotetusti). Palat T/wien-palat (ei peliin).
+- LONTOO uudelleen muutosten jälkeen: 242/242 palaa + indeksi tavulleen samat.
+- EUBUCCO-SELVITYS: v0.2, 30 maata (EU-27 + UK, NO, CH), ~200 milj. rakennusta; korkeus kaikille, mutta 43 % mitattua, 57 % koneoppimisarviota.
+  LISENSSI ODbL 1.0 (sama kuin OSM), poikkeukset Praha CC BY-SA 2.0 ja Abruzzo CC BY-NC 2.0 (suodatettavissa geometry_source-sarakkeella).
+  → ODbL ei ole CC0/CC BY/PD → KK:n päätös. Ei kata: Balkanin EU:n ulkopuoliset maat, Ukraina, Turkki, Venäjä, Valko-Venäjä, Moldova, Islanti.
+  Itävallan korkeuden lähdettä (mitattu vai arvio) ei selvinnyt dokumentaatiosta; tarkistettavissa lataamalla Wienin NUTS-alue (Parquet).
+  Lähteet: https://docs.eubucco.com/latest/license/ , https://eubucco.com , https://docs.eubucco.com/latest/
+- JÄLJELLÄ: uusi-kaupunki-ketju (ote → korkeudet → tee_palat → paketti → puut → mittarit + pysäyttävät tarkistukset); kaupunkitaulun (NS, kaupungit.json) luku, kun NS:n SHA tulee.
