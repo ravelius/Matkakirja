@@ -127,3 +127,4 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   korvaus*.json ja nd-ranta). Uusi talot-kansio talot-paketti → ämpäriin vasta KK:n sanalla. Sitten KJ46b-parit SC:sta (ym45-04-kulmat) + muisti.
 - Montmartre KJ43 ennallaan (maaston vienti 01.00, sitten JU:lle).
 - JU 17.29: LINKKI 224.75 = 96e9eb2fa (syvyysveto 03ad357fb junassa), manifest 200. SYVYYSVETO VALMIS.
+- JU 17.35: KJ46 ALKOI (ennen → jälkeen). Muisti: lokit/ks-kj46-ymparistot-{ennen-96e9eb2fa,jalkeen-90b66a261}/MUISTI.txt + muisti-naytteet.txt (phys_footprint 3 s välein, MUISTI-1/-2 + huippu). Macin batch-Unity sisältää editorin (~5 Gt pohja): vertaa ERO ennen↔jälkeen ja suhteuta iPadin Pariisin muistiin (ei Macin kokonaislukuun) ennen 5 %:n arviota.
