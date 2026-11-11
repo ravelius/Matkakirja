@@ -60,3 +60,12 @@ KK:n havainnot, TARKISTA: (1) massaruudut (kamerarivit 67–68: 15 + 37) EIVÄT 
     a on alarajalla 54 % ajasta, koska SeinaEt on 0,5 m:n portain.
 JÄRJESTYS (KK): (a) ja c1 heti koodiin ja testeihin (kameralaite/pala-2 @ f1c47100d päälle), c2 rinnalla; Mac-ajo f1c47100d pysyy tilattuna.
 Kysymykset KK:lle yhtenä viestinä. Toistokoe: _tyo/pelikoodari/kameralaite/Toisto.cs + kaanna.sh (testiksi T14:ään).
+
+## LISÄYS 01.3x: JU:n Mac-ajo f1c47100d VALMIS, faktat lähetetty KK:lle (jonossa)
+Ajo: /Users/Shared/Claude/proto-3d/lokit/pelikoodari-kameralaite-pala2-siemen-f1c47100d (videoaika = kameraruutu t − 441,71). Massarivit:
+_tyo/pelikoodari/kameralaite/massarivit-f1c47100d.txt. KK:n havainto (1) OIKEIN: massa S 108–120 (porttitunneli + 2,5 m:n käytävä, 95 ruutua), S 135–137 (3),
+S 167–173 (35); EI U-käännöksessä. TAVOITE massassa ensin (käytävän keskilinja, oikaisu 0), laite samoissa ruuduissa 2,6 m myöhemmin; peittoruutu
+huippu 3,87–4,35 ala 0,00 → arvio: matala pystypinta (porras/kynnys/pylvään jalka) + katto → Massassa väärä hälytys? Tarkista arkit samoilta hetkiltä.
+VIKA RUUTULOKISSA: kamerapeitto 0 riviä (vienti kutsutaan vain, kun peliKamera && KameraMittari lakkaa; ei lauennut) ja kameraruutu alkoi vasta t 481
+(1035 riviä) → korjaa vienti (esim. kirjoita ruudut heti kun kertynyt ≥ 200, tai Kierros-kutsun kohdalla) ennen hyväksymistestiä.
+KK:lta kysytty: jatketaanko (a)+c1 ja tutkitaanko massan väärä hälytys erikseen ennen massakorjausta → odota vastaus.
