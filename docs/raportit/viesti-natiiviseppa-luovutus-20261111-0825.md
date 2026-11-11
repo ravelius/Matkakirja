@@ -25,3 +25,11 @@ HUOM: proto-3d/Matkakirja-proto (master) on VANHA – lue koodi aina wt:stä tai
 
 ## VIESTIT TÄLLÄ VUOROLLA
 PT: muistirivi (päivitetty), usvarajaus-ajo pyydetty uudelleen, tulos (ei junaan), horisontti ensin. JU: usva/juoksu/horisontti-2/-3 jonoon.
+
+## LISÄYS 08.5x
+- Kohta 1 (beige vyö) VALMIS: iPad 0/6, Mac-esikatselun ilmiö; PT 08.5x sulki, työlistarivi valmis, selvitys.md LOPPU-osa.
+  iPad-skenaarioissa kuvat "komento kuva X" (sk-ipad-horisontti-3.txt korjattu).
+- SEURAAVA = kohta 2 LIIKKEEN LAATTALATAUS (PT 08.5x "kuten sovittu"). Aloita lukemalla usva-a/b-ajojen muisti-tarkka.log 80° liikejaksosta,
+  mikä kasvaa liikkeessä (Pallo-rivit, Cesium-välimuisti); koodi wt:stä /Users/Shared/Claude/wt/proto-natiiviseppa-horisontti (7b7e12bfd),
+  LiikeLaatat.cs/LiikeLaatatPaatos.cs (varjokamera SSE 32 liikkeessä).
+- Juoksu-piirto-1 käynnissä 08.5x (JU d0eceabaf).
