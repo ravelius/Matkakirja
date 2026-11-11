@@ -80,3 +80,8 @@ askeleella kaikilla dt 0,17 cm; T09 huiput a 20,32 → 20,29, j 110,8 → 107,85
 AUKI: T06 "ei lähde levosta" v 0,0173 m/s (raja 0,01) 3 askeleen jälkeen; vanha ulostulo = askelta vanhempi tila (2 askelta) → KYSYTTY KK:lta
 16.2x (raja vai mittaushetki). EI VIELÄ: ehto 1:n testi (jatkuvuus askelrajalla: Esikatso(osa = h, seuraavan askeleen tavoite) == täysi askel)
 → lisää KameralaiteTestit:iin. Sitten ohjaaja Askel/Esikatso + SeurantaohjaajaTestit-ajuri (kohta 2.2–2.4 yllä).
+
+## LISÄYS 16.3x: KK 16.19 hyväksyi E(1):n; T06 ja T13 TEHTY (haara kameralaite/pala-2, 482622a6c)
+T06 mitataan 2 askeleen kohdalta (raja 0,01 pysyy) + v(3h) > v(2h) > 0; T13 osa-askeleen jatkuvuus askelrajalla (PELI, MUSEO). Palan 1 testit 14/14.
+SEURAAVAKSI: ohjaaja Askel/Esikatso + SeurantaohjaajaTestit-ajuri (kohdat 2.2–2.4), A + C, B-mittaus, kytkentä ja Mac-tallenne.
+KK lukee Seurantaohjaaja.cs:n ja kytkennän diffin kokonaan ennen tallenteen arviota.
