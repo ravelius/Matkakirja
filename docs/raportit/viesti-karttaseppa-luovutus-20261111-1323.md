@@ -46,3 +46,16 @@ Löydökset: (1) yleisnäkymässä pallo ei erotu, kyltti kantaa; (2) pallon all
 (3) KAKSI VARJOA: ruskea soikio kiekon vasemmalla = sama kohta kuin ennen-kuvan UI-pallon varjo (jää, vaikka UI-pallo piiloutuu) + koodipallon oma; (4) vanha UI-pallo ei näy ✓.
 SEURAAVA: odota KK:n linja → korjaa karttaseppa/pallo-koe (2cf7b7e48; KpLaikka = tallattu ympyrä) + vanha varjo piiloon (NUI:n vai KS:n koodi?) → uusi KJ JU:lle.
 KJ42 (4b8ae2d47) alkaa JU:lla KJ37:n jälkeen.
+
+## LISÄYS 2, 13.3x: KK:N PÄÄTÖS TYÖHÖN 2 (MONTMARTRE), aloita tästä
+Lue /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-saumat-ja-maet.md luvut 4–8 (luku 8 = päätös).
+- Tarkempi maasto mäkialueelle IGN RGE ALTI 5 m -mallista, EI koeajoa z12:lla. Tasot 13–15, kärkiväli rinteessä enintään noin 10 m.
+- YKSI korkeuslähde (RGE ALTI): maasto, talot v17 (vain Montmartren palat), kirkon lattia, portaat, nimet ja merkit.
+- Kaava hyväksytty: ruutu = 90 + (1 − w)·(h − reunaH), w = nykyinen tasauspaino; reunaH = ulkokehän mediaanikorkeus, ei leikkausta alapäästä.
+- Järjestys: maastolaatat ja kaava → talot v17 → kirkko, portaat ja nimet → Mac-parit.
+- Näyttö: lähin-kuvassa ei särmiä rinteessä; mäkialueen reunalla ei porrasta eikä rakoa karkeampaan laattaan; talon pohja ≤ 2 m, portaat ≤ 1 m, nousu 0,9–1,2 × kirkon korkeus.
+- Lisenssi Licence Ouverte (kuten BD TOPO), lähdemaininta IGN tekijälistaan (PT kirjaa). Ei ostoja. robots.txt ennen skriptattua hakua.
+- EI junaan ennen omistajan korttia kuvaparista (Raamattu 2.206).
+- Maastoputki: Rakennus.MaastoUrl julisteet/maasto/2026-10-29-maailma (quantized-mesh, EPSG:4326, octvertexnormals, maxzoom 12, available-listat layer.jsonissa);
+  Montmartren z12-laatta 12/4149/3160 (336 kärkeä). Tarkemmat tasot = uusi maastoversio ämpäriin (JU) + layer.json available z13–15 vain alueelle (MaastoLaatat.cs:63–100 lukee available).
+Työ 1 (2743a6ebd) KK kuitannut: KK katsoo NUI:n arkki-2-ajon, sitten junaan.
