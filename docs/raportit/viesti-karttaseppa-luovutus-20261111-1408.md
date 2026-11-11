@@ -208,3 +208,6 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   KUN TULEE: NÄKYVÄT kolmiot ennen → jälkeen yleisnäkymissä (raja ~+10 %), Champ-de-Mars 40 orton (orto/merkit-v3-eiffel.jpg) rinnalle, sävy 42/43
   (savy-kj47b.py-tapaan, nyt maalattu katupuusto kuvassa) → KK (kopio PT). Junaan VAIN KK:n sanalla.
 - JONO: 1) KJ47c → KK. 2) Montmartre KJ43 (01.00 jälkeen). 3) Seine ja sillat -katsaus (+ Conciergerie).
+- KK 20.06: piirtokutsut HYVÄKSYTTY, sävy 130 131 78 lähtökohdaksi. KJ47c:stä KK:lle: NÄKYVÄT kolmiot ennen|jälkeen, Champ-de-Mars peli|orto, viistoparit Eiffel (ym47c-01-eiffel-b)
+  ja Invalidit (ym47c-07-invalidit-b; lisätty skriptiin 20.1x, 9 kuvaa, JU:lle kerrottu), 3D|maalattu läheltä (42/43). Kunnossa → erä 90b66a261 + puut junaan YHTENÄ (lukitun loppulistan kohta 1).
+- JU 20.1x: KJ47c Mac-jonossa NS palkki-2, NUI yksi-etaisyys-1, NS katko-3, pala3-luettelo ja pala3-koekamera jälkeen; JU ilmoittaa KS + PT.
