@@ -30,3 +30,9 @@ Haara `linssiseppa2/elava-muste`: 1efd29cb4 (muste-1) → 1a3081001 (muste-2: jy
 ## Muu
 Rinnevarjo 05065cf0e junassa (MR69 → 224.75). Maa A SEIS. Vesitäyttö 0829caa4e JU:lla ennallaan. Mac-skenaariot `_tyo/linssiseppa2/elava-muste/`
 (sk-mac-muste-2*.txt, sk-mac-ranta-1.txt, vara ranta-1b ilman tallennetta).
+
+## LISÄYS 15.12: KK 15.10 HYVÄKSYI JUNAAN
+5721f4446 (linssiseppa2/elava-muste, pushattu): muste oletus päällä (ElavaMuste.Alusta, RuntimeInitializeOnLoadMethod) + `ElavaTyyli.RantaLahi`
+{ 2, 150, 60, 30 } oletukseksi Z16–Z17 (pääte "-rb" → Z16–Z17 kerran uudelleen; `elavakartta ranta ennen|lahi|…`). Kartta-testit 757/757,
+merge-tree juna-224 d9a9c2aeb ilman ristiriitoja. JU:lle junapyyntö 15.12, PT tiedotettu. Jatkajalle: odota JU:n MR-kuittaus ja PT:n pt-ok;
+hinta iPad-erässä (PT:n listalla). Katuviivoja ei muuteta (KK 15.10).
