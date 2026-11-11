@@ -42,3 +42,6 @@ Testit: Kartta 755/755, Linssit 2289/2289, Peli 912/912, kameratesti ok, kieliva
 - Saapumisen tavoitekuva Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-saapuminen-kaupunkiin.md: NS tekee, NUI auttaa
   introkuvissa (Introesitys, UiNakymat.Hae().Introesitys, Aloita(sumeaTausta: true)).
 - Myöhemmin: iso iPad 0f0f950a6 / KS 599b0150d -ajo JU:n vuorolla; tarinamerkit odottavat Codexia.
+
+## LISÄYS 09.1x
+- lento-3 (9c24daf3e) ajettu 08.54 (JU), tallenteet lähetetty KK:lle 09.1x (kopio ei PT:lle: rutiini). Ei tarvitse lähettää uudelleen.
