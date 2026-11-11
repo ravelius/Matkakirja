@@ -381,3 +381,11 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   KK 22.24 LINJA (ympäristöerän 2/2 osaksi): SELVITÄ LÄHDE ENSIN. Jos pieniä istutus-/pensasaitamonikulmioita → YLEINEN SÄÄNTÖ työkaluun 1 (kivetyllä aukiolla alle sovitun
   pinta-alan kasvillisuuslaikkuja ei piirretä; raja luvuista, kaikille kaupungeille), EI käsipoistoa. Jos lähde on piirroskartan valmis kuva → lähde + vaihtoehdot KK:lle ennen korjausta.
   NÄYTTÖ: sama pari samasta kulmasta (KJ46 ym46-03-a) + yksi kuva pelin kamerasta Notre-Damen esittelyn lopusta. KK:lle ei vastausta tähän linjaan.
+
+## LISÄYS 27 (22.4x): KJ49 katsottu → KK, NOLLAUS (konteksti 30 %)
+- KJ49 raportti docs/raportit/karttaseppa-kj49-sillat-20261111.md (59005b60e), arkit _tyo/karttaseppa/koodijuna/parit-kj49/. KK:lle + PT 22.4x: sillat toimivat (Mirabeau läheltä hyvä),
+  VIKA Pont de l'Alma läheltä (massiivinen laatta, tummat vyöt kannessa), raja-kuva Alma ↔ Alexandre III ja Lontoon lähikuvat epäonnistuivat → KJ49b. EI junaan ennen KK:n sanaa.
+- KK 22.05: Lontoon EA-opasrivi hyväksytty, kirjattu LAHTEET.md:hen 0722db542 (karttaseppa/tyokalu-1); PT lisää peliin.
+- aja_kaikki: lokissa 50 kaupunkia käsitelty klo 22.4x; taustaprosessi voi katketa nollauksessa → JATKA SAMALLA KOMENNOLLA (LISÄYS 23), valmiit ohitetaan.
+- SEURAAJAN JONO: 1) aja_kaikki loppuun → KK yksi rivi (valmiit/pysähtyneet + syyt; ateena, barcelona pala > 8 Mt) + muutama vakiokuva-arkki. 2) Alman kansivika (raportin kohta 1)
+  + KJ49b (kohta 2) → KK. 3) Parvis-haamut KK:n linjalla (LISÄYS 26). 4) Työkalu 2 luonnokset (LISÄYS 25). Montmartren parit yöviennin jälkeen (JU:n aamurivi).
