@@ -467,3 +467,16 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - T3-koe (c1841699a) JU:n jonossa koekamera-1:n jälkeen → LUE lisäys 25:n ohjeella.
 - tarkista.sh: pohjavahti punainen UI-tiedostoissa (Kartta.uss, Matkakirja.uss, Kartuscha, JuoksupeliNakyma) jo junan pohjalla; tyylikirjan päivitys palautetaan.
 - Vahti: Monitor vahti-mac2.sh (lisää palkki-4 kuvioon: natiiviseppa-juoksu-latausjono-palkki-[3-9]*) + ns-tyokalu3-koe-*. Cron 9.04 LUO UUDELLEEN.
+
+## LISÄYS 28 (11.11. 21.4x, uusi sessio nollauksen jälkeen): KK 21.10 kohdat 1–4
+- KK 21.10: (1) 2edb6edeb JUNAAN KYLLÄ → pt-ok-pyyntö PT:lle LÄHETETTY 21.2x. (2) virheteksti ☰-levylle, (3) napin painallus näyttöön + rivi
+  "sama koodipolku?", (4) palkki-4 luvut. Kohdat 2–3 + palkki-4 SAMAAN ERÄÄN, junaan vasta KK:n sanalla.
+- TEHTY 246e99d91 (natiivi-backup natiiviseppa/latausjono, unity 0, pohjavahti = pohja): .mk-edistyminen__viesti--virhe (Matkakirja.uss: tk-lasi-pinta-peitto,
+  tk-lasi-reunus, tk-kulma-kortti, tk-lasi-muste, 15 px) + Kirjasin.Luku; QA `ui juoksupeli uudelleen-nappi` (UiKomennot.Napauta napin keskelle).
+  KK:lle vastattu: nappi = Sulje() + Avaa(samat asetukset) = sama polku kuin pois + v4; ero: nappi avaa heti (skenaario odotti 5 s).
+- JU: ajopyynto-mac-katko6.md (sk-juoksu-latausjono-katko-6.txt) palkki-4:n jälkeen → lokit/natiiviseppa-juoksu-latausjono3-katko-6.
+  LUE: K1-virhe (levy, rajaus alaosasta täysikoossa) → KK; B: "testipainallus" → "Yritä uudelleen" → uusi "latausvirhe näkyy" (aika lokista, ~30 s
+  etenemättömyydestä, ei jumia), K3; A: verkko takaisin → painallus → "kulkukartta ladattu", K2-nappi-uudelleen.
+- PALKKI-4 (116d4b240) yhä JU:n jonossa → lue.py (pisin sama ≤ 15 s?) → KK (kopio PT) samassa viestissä katko-6:n kanssa → KK:n sana → pt-ok PT:lle (246e99d91).
+- Cron 9.04 luotu (3a20ab69). Monitor vahti-mac2.sh käynnissä (kattaa katko-6, palkki-4, T3-koe).
+- SEURAAVAKSI: T1 KAUPUNKITAULU (lisäys 27 ohjeet).
