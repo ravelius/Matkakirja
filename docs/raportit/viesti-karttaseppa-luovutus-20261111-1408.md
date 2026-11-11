@@ -437,3 +437,15 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   (vanha Pariisin syöte osoittaa poistettuun työpuuhun → polku nykyiseen työpuuhun/gitistä), lontoo = korkeus_oletus_osuus-mittari puuttuu (oma ea-lidar-aineisto). Rivi KK:lle lähetetty 23.0x.
 - SEURAAJAN JONO: 1) muutama vakiokuva-arkki KK:lle (valmiista, esim. wien/rooma/praha; luonnos, ei pelikuva) + pysäytysten korjausehdotus (pala-raja, vakiokuvien kadunhaku, Pariisin polku).
   2) KJ49b kuvat (JU) → KK. 3) Siltalinja KK 22.51 kohdat 2–3 + KJ49c (LISÄYS 30). 4) Parvis (a)/(b) → KK (LISÄYS 29). 5) Työkalu 2 luonnokset. Montmartre yöviennin jälkeen.
+
+## LISÄYS 32 (23.1x, uusi sessio): KK 23.06 Alman syy vahvistettu + kaksi lisäystä
+- KK laski vetokaavasta (SyvyysVeto, lähitaso 50 m): 109 m:n monikulmio 55–90 m:n päässä 18–25 m liian kauas; 4d18cf390 HYVÄKSYTTY korjauspaikaksi, junasana vasta KJ49b/c:n kuvista.
+- (1) 8 m:n paloillakin virhe enimmillään ~1,2 m, kun pala on ~110–130 m:n päässä (vetokaavan taite, raja 75 m); holvin laki vain 1,7 m kannen alla
+  → KJ49c:hen YKSI MATALA KUVA Alman kannesta ~120 m:n päästä (pahin kohta). Jos tumma juova näkyy: kansi ja holvin laki SAMAAN PALAJAKOON (samat asemat x-suunnassa),
+  jolloin virhe on molemmissa sama. (Huom: Rakentaja.Pilkko jakaa nyt kunkin nelikulmion omaan ceil(pit/8)-jakoonsa → asemat eivät osu kohdakkain kannen ja lakien välillä.)
+- (2) KOHTIEN 2–3 (sillan tyyppi, kannen sävy) JÄLKEEN: SAMA VIKA MUISSA RAKENTAJISSA. Listaa talokoneen ja koodinähtävyyksien pisimmät monikulmiot
+  (virhe pahimmillaan 109 m → 25 m, 50 m → 9 m, 30 m → 3,4 m, 16 m → 2,9 m). Jos yli 50 m:n monikulmioita (siivet, hallien katot, laiturit): pilkonta YHTEISEEN apufunktioon,
+  jota sillat, kohteet ja talot kutsuvat; muille kuin silloille raja 30 m. Kerro KK:lle kolmiomäärän muutos.
+- KJ49b: JU:n jono-ks-kj49b.zsh (pid 87003) käynnissä 23.1x.
+- SEURAAJAN JONO: 1) vakiokuva-arkit + pysäytysten korjausehdotus → KK (LISÄYS 31). 2) KJ49b → KK. 3) Siltalinja 2–3 + KJ49c (+ Alma 120 m matala). 4) Pitkät monikulmiot muissa
+  rakentajissa (yllä 2). 5) Parvis (a)/(b) → KK. 6) Työkalu 2 luonnokset. Montmartre yöviennin jälkeen.
