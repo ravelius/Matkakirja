@@ -653,3 +653,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - Työlista: "3D-puun valoisan puolen sävy" tilanne päivitetty.
 - SEURAAJAN JONO: 1) KJ49c-palkin musta kylki (yllä) 2) KJ51 Petit Palais → KK 3) KJ52 + talojen päätös → KK (LISÄYS 41) 4) KJ54 näyte → arkit (3 vakio + yleis + orto/katu) → KK
   5) KJ55 nimet → KK 6) Montmartre KJ43 kun JU:n maastovienti valmis 7) KJ53 puun valo (mittaa-kj53.py) 8) GHSL-kalibrointi näytteen jälkeen.
+
+## LISÄYS 47 (01.5x): KJ51 Petit Palais katsottu → KK
+- KJ51 (JU 01.47): lasikaista poissa julkisivusta ja tornin vierestä (parit _tyo/karttaseppa/koodijuna/parit-kj51/pari-pp51-6-lahin-rajaus.jpg, pari-pp51-8-matala.jpg) → KK 01.5x,
+  ODOTTAA junasanaa. Sanalla: poimi e5282c741 (karttaseppa/petit-palais-lasi) 224.92:n 70f3a7aba päälle → pt-ok PT:ltä SHA:lla.
+- SEURAAJAN JONO (korvaa LISÄYS 46:n kohdan 2): 1) KJ49c musta kylki 2) PP-junasana (yllä) 3) KJ52 4) KJ54 5) KJ55 6) Montmartre KJ43 7) KJ53 8) GHSL.
