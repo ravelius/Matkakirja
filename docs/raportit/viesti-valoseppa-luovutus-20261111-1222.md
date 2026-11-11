@@ -68,3 +68,13 @@ kuva = `komento kuva X`. `sh Peli-testit/unity-tarkistus.sh` worktreessa. Luovut
 - PT 12.4x (omistaja 12.21–12.22, Raamattu 12.26.5): isolla iPadilla VAIN KK:n nimeämä valmis kokonaisuus viimeisenä tarkistuksena ennen
   versiota. Kokeet, välivaiheet ja mittaukset Macilla. ÄLÄ TILAA iPad-ajoa itse (ei maa A:n ruutuajoa, ei pilvivarjoa). Pilvivarjo-todiste-2 odottaa
   KK:n iPad-erää; maa A:n hyväksyntä KK:lta Mac-todisteilla (maa-a-3/4).
+
+## LISÄYS 13.0x: KK:N PÄÄTÖS KERROKSISTA
+(1) PIIRROKSEN OMA KULMA: v2 loppuun (ehdot ennallaan ±1 %; Mac-parit maa-a-3 + laskeutuminen maa-a-4). KK arvioi; junaan vain, jos ero näkyy ja
+    on siisti (MR JU:lle KK:n sanalla, pt-ok PT:ltä).
+(2) KALLISTETTU LÄHIKAMERA = varsinainen tavoite (napautus, kierto, vapaa kamera). EI varjostintyötä vielä. Ensin TOSIASIAT VIIDELLÄ RIVILLÄ
+    KK:lle: mistä aineistosta striimikartan maa tulee lähellä, tarkin taso ja m/px lähimmällä kallistetulla kameralla, onko tarkempaa tasoa
+    olemassa/tehtävissä ja muistihinta, viimeisenä vaihtoehtona viiva laattojen varjostimeen. Sumea maa voi olla laattatason katto → oikea korjaus
+    tarkempi laatta. Kysymykset lähetetty KS:lle (local_7b57e35a-3a8e-4943-aba1-c960b9eb4671) ja NS:lle (local_0f7f169f-2ceb-43d2-8fb4-223dda2c0870)
+    ~13.0x; kokoa vastaukset. Uusi tavoitekuva (2):lle kallistetusta pelikuvasta vasta tosiasioiden jälkeen. Kaikki Macilla.
+    Vihje: log "elävä kartta: … lähinäkymä … z17", "pallo kerros pakota: … striimikartan vesi". PT:lle pyydetty työlistarivi.
