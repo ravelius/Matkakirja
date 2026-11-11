@@ -474,3 +474,18 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - PARVIS MITATTU → KK (suositus a, odottaa sanaa): skripti parvis-saanto/vaihtoehdot.py <ote>. (a) leisure=garden < 120 m², ei ≥ 1000 m²:n puiston/nurmen sisällä, ei sisäpiha
   (≥ 6/8 sädettä osuu taloon ≤ 40 m): parvis 3/3, Pariisi 680/1453, Lontoo 1708/8520 poistuu. (b) aukio tai pedestrian ≤ 15 m: parvis 0/3 (lähin pedestrian 15–38 m; footway 3–10 m)
   → ei. Toteutus sanalla ElavaTyyli.cs:n landcover-silmukkaan (OMT: garden-alueen ala + building-taso sisäpihatestiin), näyttö KJ46 ym46-03-a + ND-esittelyn loppu.
+
+## LISÄYS 34 (23.17): KK 23.09 päätökset ketjuun → toteutettu 1, 3, 4, 5; kohta 2 takaisin KK:lle
+- KK 23.09: 1) hyväksytty muutoksin: pedestrian + living_street, portaat 12→8→6 kirjataan tauluun, KADUT KESKUSTASTA (pelipiste, 1,5 km, eri suunnista, säde portaittain;
+  tiheys ehto, ei valintaperuste). 2) 8 Mt pysyy, pala jaetaan. 3) Pariisin polku. 4) oletus-osuus omallekin aineistolle. 5) Alpit maisemaksi.
+  Havainto työkalun 2 kattotyyppilistaan: Rooma 1:n katot taittuvat oudosti epäsäännöllisillä pohjilla. Näyte 6 kaupungista PELIN PIIRROLLA Macilla, jos ketjun tulos
+  latautuu kehittäjän juuresta; luonnospiirto vain jos ei, ja silloin vesi mukaan → kerro KK:lle kumpi.
+- TEHTY (karttaseppa/tyokalu-1, natiivi-backup): b70b07ec0 vakiokuvat keskustasta (8 kaupunkia 3/3; dubrovnik vain varasäännöllä 6 km ilman suuntia) + porras-sarake
+  kaikki.md:hen; 2e30f1907 tee_palat oletus-osuus kaikille lähteille (tavut ennallaan), maisemat.json (alpit). Pariisin syöte: _tyo/.../nahtavyyssarja/kohteet-pariisi.json
+  ND-polku → nahtavyyssarja/alueet/notre-dame-pohja-219e7e2ef.png (git-blob 392da4c8; vanha talteen .ennen-polkukorjausta-20261111).
+- KOHTA 2 KK:LLE 23.17: jako ei onnistu työkalussa (TaloKerros.PalaZ 15 kiinteä, Koodimallit + ämpäriluettelo samalla avaimella; muistia ei säästy).
+  (a) lataaja tukee jaettua palaa, (b) yleinen kevennys yli 8 Mt palaan (puut / pienimmät katot yksinkertaisemmiksi). Suositus (b). ODOTTAA.
+- UUSINTA-AJO käynnissä 23.16 (aja_kaikki ilman --vain, valmiit ohitetaan): loki T/uudet-kaikki-2.log. Valmiiden vakiokuvat yhä vanhalla säännöllä → näytteen 6 kaupunkia
+  ajetaan vakiokuvat.py uudelleen. Näytteen piirtotapa: tarkista latautuuko ketjun tulos pelissä kehittäjän juuresta (TaloKerros.LueKansio / kehittäjän kansio) → KK:lle kumpi.
+- JONO: 1) KJ49b → KK. 2) Montmartre KJ43 01.00:n jälkeen + parvis (odottaa sanaa a). 3) ketju: GHSL-virhemittaus Pariisi/Lontoo (a), näyte 6 kaupunkia (b), pala (odottaa).
+  4) Siltatyyppi + kannen sävy + KJ49c (Alma 120 m). 5) Pitkät monikulmiot, 3D-puun sävy.
