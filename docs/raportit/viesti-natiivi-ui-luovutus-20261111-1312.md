@@ -125,3 +125,7 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
 - 16.5x: d520120aa KK:lle ja PT:lle. AVOINNA: KK:n sana junasta (suositus yhdessä KS:n 03ad357fb:n kanssa); jos KK haluaa vielä puhtaan parin
   samoista kulmista, skripti sk-napautus-224-2-b.txt (suunta 0 lisätty) on valmis. LISÄYS 4 (kuumailmapallon kyltti) yhä jonossa junan jälkeen.
 - Luovutus nollausta varten (kontekstivahti 26 %).
+
+## LISÄYS 12 (KK 16.47): NAPAUTUSLENTO JUNALUPA → d520120aa PT:lle junaan (sisältää KS 03ad357fb; juna-224:n kärki oli yhä 2882f055a). Uutta Mac-ajoa ei
+ennen junaa; KK katsoo junan Mac-kuvan Riemukaaren lähimmästä kierrosta. KK:n löydös: kierron parit kuvataan lukitulla kulmalla (ei ajan mukaan).
+Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-pari KK:lle).
