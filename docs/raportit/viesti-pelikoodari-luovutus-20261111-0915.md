@@ -36,3 +36,6 @@ Ei uusia lupia. Asemataulu jäädytetty (ei päivitetty).
 - A-ajo TEHTY (JU 09.18): vinokuvista 13 varmaa + 3 ehkä kansilaattaa → LAV:lle 09.3x, lav-kohdat/VAHVISTETUT.txt. JONON KOHTA 2 POIS.
 - JU: P-ajo L1:llä LAV:n m-ajon jälkeen. JU mainitsi myös "p11d/p11e iPad vapautettu (PT), tulevat sinulle" – en tunnista
   p11d/p11e:tä tästä luovutuksesta; jos tulevat, kysy PT:ltä, mitä ne ovat, ennen toimia.
+- 09.4x: LAV korjasi 13 VARMAA koejuuri-m1:een (muuri/m1/tee_a.py; tyyppihaku tyhjä). EHKÄ a34/a37/a41 katsottu = vikoja → LAV korjaa.
+  SEURAAJA: kuvavarmistus aja-a.zsh:n kopiolla koejuuri-m1:tä vasten (vaihda sk:n `palatsi mallit` -juuri LAV:n
+  /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/katot-v125/koejuuri-m1/ ja sha LAV:n työpuun mukaan; vain 16 kohtaa) JU:n vuorolla.
