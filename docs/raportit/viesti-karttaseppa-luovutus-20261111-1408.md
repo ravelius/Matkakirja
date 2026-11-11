@@ -615,3 +615,14 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - HUOM SEURAAJALLE: KJ49c (300c6b99d) ja pitkät (ced23df14) ovat T1-pohjalla → junaan vietäessä poimi ne karttaseppa/sillat-juna:n päälle (sama ratkaisu).
 - KK:n Lontoon lista MYÖHEMMÄKSI (ei nyt, ei KJ49c:hen): London Bridgen eteläpää ison korttelin alla; Blackfriarsin rautatiesilta piirtyy ikkunallisena talona veden päällä.
 - KK:n järjestys: KJ49c-kuvat → Petit Palais → kuuden kaupungin näyte (jono LISÄYS 42 pätee).
+
+## LISÄYS 44 (12.11. 00.3x, uusi sessio 00.30): 3D-PUUN VALO koodattu, KJ53 JU:lla, levysiirto jatkuu
+- LEVY: siirra-koho oli katkennut (T7:llä 23/37 Gi, ei symlinkkiä) → käynnistetty uudelleen 00.3x tämän session alla
+  (scratchpad f9fad151-…/siirra-koho.zsh, loki siirra-koho.log). Jos symlinkkiä ei ole: aja sama skripti uudelleen (rsync jatkaa, cmp ennen poistoa). Valmis → rivi PT:lle.
+- 3D-PUUN VALO (KK 21.38) 6bb57f388 (natiivi-backup karttaseppa/puuvalo = 224.89 8459237ec + 1; työpuu /Users/Shared/Claude/wt/proto-karttaseppa-puuvalo; 766/766, unity 0):
+  NotreDameKirkko.shader _ValoEro/_ValoKeski: nl = lerp(keski, nl, ero), puolipallo kohti (maa+taivas)/2; vain puuAineKevyt (Nahtavyysalue.AsetaKevytValo),
+  komento `puut valoero ero [keski]`; oletus 1 = ennallaan (arvo valitaan KJ53:sta, keski säädetään niin, että 3D-latvuksen keskisävy pysyy).
+- KJ53 pyydetty JU:lta 00.3x KJ49c/KJ51/KJ52:n jälkeen: _tyo/karttaseppa/koodijuna/puuvalo-kj53/sk-mac-puuvalo-kj53.txt (12 kuvaa: 42/43 KJ47c-kulmat + 44 lähi × ero 1/0.7/0.5/0.35)
+  → lokit/ks-kj53-puuvalo-6bb57f388. KUN TULEE: python3 -I …/puuvalo-kj53/mittaa-kj53.py (3D ka + lum p10/p50/p90 vs maalattu) → valitse ero, säädä keski ka:n mukaan,
+  oletus koodiin, karkea kuva KK:lle (Näkyvä työ) ENNEN junaa.
+- JONO ennallaan (LISÄYS 42): 1) KJ50 + Amsterdam 2) KJ49c 3) KJ51 4) KJ52 + talot → KK 5) näyte 6 kaupunkia + Ateena 6) Montmartre KJ43 01.00 jälkeen 7) GHSL, puun valo (KJ53).
