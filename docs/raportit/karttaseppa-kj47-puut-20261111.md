@@ -39,3 +39,8 @@ Skriptin kaari-komento ei siis loitontanut kameraa. Uusinta vaatii toimivan etä
 2. puu-3 pois uusilta alueilta.
 3. Varjorajan uusinta oikealla etäisyyskomennolla.
 Kaikki samaan uuteen ajoon (KJ47b). Junaan vasta KK:n sanalla.
+
+## Varjorajan syy (19.1x)
+`aja lat lon kaari` ottaa kaaren asteina ja rajaa sen MinKorkeuteen (lähin näkymä 3,6°; Komennot.cs:674 → KorkeusKaarelle). 0.0011–0.0048 osuivat
+siksi kaikki pelin lähimpään korkeuteen (lähin kevyt puu 265–354 m). KJ37:n tapa: `komento lahizoomi 8` ennen ja `komento lahizoomi 0` jälkeen.
+Huom: pelaajan lähin näkymä on siis jo varjorajan (300–400 m) kohdalla: kutistuvat varjot näkyvät tavallisessa pelissä.
