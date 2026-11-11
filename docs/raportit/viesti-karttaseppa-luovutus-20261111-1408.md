@@ -607,3 +607,11 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - SEURAAJAN JONO: 1) KJ50 + Amsterdam → KK. 2) KJ49c → KK. 3) KJ51 Petit Palais → KK. 4) KJ52 + talojen päätös → KK (LISÄYS 41). 5) Näyte 6 kaupunkia + Ateena (LISÄYS 37 k. 3).
   6) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 7) GHSL-kalibrointi (näytteen jälkeen), 3D-puun valo.
   Työpuut: pp-lasi = /Users/Shared/Claude/wt/proto-karttaseppa-pp-lasi (karttaseppa/petit-palais-lasi), pitkät = wt/proto-karttaseppa-pitkat (karttaseppa/pitkat-monikulmiot); muut ennallaan (LISÄYS 37).
+
+## LISÄYS 43 (00.3x): KK 00.15 JUNASANA KJ49b → junahaara ilman NS T1:tä
+- KK 00.15: KJ49b (4d18cf390) JUNAAN. JU: 4d18cf390 toi NS T1:n (dd370eab6, cfe3324a3), jota ei hyväksytty → TEHTY 64004902b (natiivi-backup karttaseppa/sillat-juna,
+  työpuu /Users/Shared/Claude/wt/proto-karttaseppa-sillat-juna) = 8459237ec + 08b8d3885/2eb8ff84a/4d18cf390 poimittuina; OhjelmaKohteet.cs vanhalla rakenteella (Lista("kaikki","pariisi") /
+  Lista("lontoo","lontoo")), GeneroidutSillatLataus kiinteästi pariisi + lontoo. 770/770, unity 0. JU:lle sha, PT:ltä pt-ok pyydetty → MR85 = 224.90. ODOTA LINKKI 224.90.
+- HUOM SEURAAJALLE: KJ49c (300c6b99d) ja pitkät (ced23df14) ovat T1-pohjalla → junaan vietäessä poimi ne karttaseppa/sillat-juna:n päälle (sama ratkaisu).
+- KK:n Lontoon lista MYÖHEMMÄKSI (ei nyt, ei KJ49c:hen): London Bridgen eteläpää ison korttelin alla; Blackfriarsin rautatiesilta piirtyy ikkunallisena talona veden päällä.
+- KK:n järjestys: KJ49c-kuvat → Petit Palais → kuuden kaupungin näyte (jono LISÄYS 42 pätee).
