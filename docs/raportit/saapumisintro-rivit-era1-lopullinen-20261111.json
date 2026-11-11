@@ -1,0 +1,653 @@
+[
+ {
+  "kaupunki": "lontoo",
+  "nro": 1,
+  "kuva": "hero-lontoo-tower-bridge.jpg",
+  "rivi": "Tower Bridge · 1894",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 2,
+  "kuva": "hero-lontoo-westminster-thames.jpg",
+  "rivi": "Westminsterin palatsi · 1840–1870",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 3,
+  "kuva": "hero-lontoo-st-pauls.jpg",
+  "rivi": "Pyhän Paavalin katedraali · 1675–1710",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 4,
+  "kuva": "london-4-asuintalojen-arki-intro-v1.png",
+  "rivi": "Lontoon rivitalot",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 5,
+  "kuva": "london-5-regents-canal-intro-v1.png",
+  "rivi": "Regent's Canal · 1820",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 6,
+  "kuva": "london-6-nakoala-intro-v1.png",
+  "rivi": "Sky Garden",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 7,
+  "kuva": "london-7-asuinkadun-ilta-intro-v1.png",
+  "rivi": "Lontoon asuinkatu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lontoo",
+  "nro": 8,
+  "kuva": "Thames Clipper Hurricane Approaching Tower Bridge 2009.jpg",
+  "rivi": "Thamesin jokibussi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 1,
+  "kuva": "hero-praha-st-vitus.jpg",
+  "rivi": "Pyhän Vituksen katedraali · 1344–1929",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 2,
+  "kuva": "hero-praha-kaarlensilta-linna.jpg",
+  "rivi": "Kaarlensilta · 1357–1402",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 3,
+  "kuva": "hero-praha-tyn-church.jpg",
+  "rivi": "Týnin kirkko · n. 1350–1511",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 4,
+  "kuva": "prague-4-vinohrady-arki-intro-v1.png",
+  "rivi": "Vinohrady",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 5,
+  "kuva": "prague-5-certovka-mylly-intro-v1.png",
+  "rivi": "Čertovka",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 6,
+  "kuva": "prague-6-nakoala-intro-v1.png",
+  "rivi": "Letnán puisto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 7,
+  "kuva": "prague-7-mala-strana-iltakuja-intro-v1.png",
+  "rivi": "Malá Strana",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "praha",
+  "nro": 8,
+  "kuva": "Prague 2010 Tatra T3 and Hradschin.jpg",
+  "rivi": "Prahan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 1,
+  "kuva": "hero-wien-stephansdom-fiaker.jpg",
+  "rivi": "Tapanin tuomiokirkko · 1137–1433",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 2,
+  "kuva": "hero-wien-schonbrunn.jpg",
+  "rivi": "Schönbrunnin linna · 1696–1749",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 3,
+  "kuva": "hero-wien-state-opera.jpg",
+  "rivi": "Wienin valtionooppera · 1869",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 4,
+  "kuva": "vienna-4-servitenviertel-arki-intro-v1.png",
+  "rivi": "Servitenviertel",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 5,
+  "kuva": "vienna-5-alte-donau-ruoikko-intro-v1.png",
+  "rivi": "Alte Donau",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 6,
+  "kuva": "vienna-6-nakoala-intro-v1.png",
+  "rivi": "Kahlenberg",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 7,
+  "kuva": "vienna-7-amerling-piha-ilta-intro-v2.png",
+  "rivi": "Amerlinghaus",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "wien",
+  "nro": 8,
+  "kuva": "vienna-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Wienin raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 1,
+  "kuva": "hero-madrid-almudena.jpg",
+  "rivi": "Almudenan katedraali · 1883–1993",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 2,
+  "kuva": "hero-madrid-aamu.png",
+  "rivi": "Madridin kuninkaanlinna · 1738–1755",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 3,
+  "kuva": "hero-madrid-keskipaiva.png",
+  "rivi": "Plaza Mayor · 1619",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 4,
+  "kuva": "madrid-4-lavapies-arki-intro-v2.png",
+  "rivi": "Lavapiés",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 5,
+  "kuva": "madrid-5-retiro-vesi-intro-v1.png",
+  "rivi": "Retiron Estanque Grande",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 6,
+  "kuva": "Madrid - Sky Bar 360º (Hotel Riu Plaza España), vistas 01.jpg",
+  "rivi": "Edificio España",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 7,
+  "kuva": "madrid-7-latina-ilta-intro-v2.png",
+  "rivi": "La Latina",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 8,
+  "kuva": "hero-madrid-ilta.png",
+  "rivi": "Cibelesin palatsi · 1919",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 9,
+  "kuva": "Azotea del Circulo de Bellas Artes, Madrid.jpg",
+  "rivi": "Círculo de Bellas Artes",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 10,
+  "kuva": "Palacio Real y Catedral de la Almudena de Madrid 03.jpg",
+  "rivi": "Madridin kuninkaanlinna · 1738–1755",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 11,
+  "kuva": "Puesta de Sol - Cerro del Tio Pio - Madrid - 00.jpg",
+  "rivi": "Cerro del Tío Pío",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "madrid",
+  "nro": 12,
+  "kuva": "Teleférico de Madrid (30209578353).jpg",
+  "rivi": "Madridin köysirata",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 1,
+  "kuva": "hero-berliini-aamu.png",
+  "rivi": "Brandenburgin portti · 1791",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 2,
+  "kuva": "hero-berliini-keskipaiva.png",
+  "rivi": "Valtiopäivätalo · 1894",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 3,
+  "kuva": "hero-berliini-ilta.png",
+  "rivi": "Berliinin tuomiokirkko · 1905",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 4,
+  "kuva": "berlin-4-kreuzberg-arki-intro-v1.png",
+  "rivi": "Kreuzberg",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 5,
+  "kuva": "berlin-5-landwehrkanal-luonto-intro-v1.png",
+  "rivi": "Landwehrkanal · 1850",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 6,
+  "kuva": "berlin-6-nakoala-intro-v1.png",
+  "rivi": "Tiergarten",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 7,
+  "kuva": "berlin-7-kreuzberg-iltapiha-intro-v1.png",
+  "rivi": "Berliiniläinen sisäpiha",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 8,
+  "kuva": "Berlin Panorama von der Siegessäule 2021.jpg",
+  "rivi": "Voitonpylväs · 1873",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 9,
+  "kuva": "Skyline Berlin - Das Humboldt-Forum mit Fernsehturm.jpg",
+  "rivi": "Humboldt-Forum · 2020",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 10,
+  "kuva": "Berliner Dom, 170409, ako (2).jpg",
+  "rivi": "Berliinin tuomiokirkko · 1905",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "berliini",
+  "nro": 11,
+  "kuva": "Spree-Athen auf der Spree.jpg",
+  "rivi": "Spreen jokilaiva",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 1,
+  "kuva": "hero-venetsia-st-marks.jpg",
+  "rivi": "Markuksenkirkko · 1063–1094",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 2,
+  "kuva": "hero-venetsia-rialto-bridge.jpg",
+  "rivi": "Rialton silta · 1591",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 3,
+  "kuva": "hero-venetsia-santa-maria-della-salute.jpg",
+  "rivi": "Santa Maria della Salute · 1631–1687",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 4,
+  "kuva": "venice-4-cannaregio-arki-intro-v2.png",
+  "rivi": "Cannaregio",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 5,
+  "kuva": "venice-5-santerasmo-laguuni-intro-v1.png",
+  "rivi": "Sant'Erasmo",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 6,
+  "kuva": "venice-6-nakoala-intro-v1.png",
+  "rivi": "San Giorgio Maggioren kellotorni",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 7,
+  "kuva": "venice-7-misericordia-ilta-intro-v3.png",
+  "rivi": "Fondamenta della Misericordia",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "venetsia",
+  "nro": 8,
+  "kuva": "0 Venise, vaporetto naviguant sur le Grand Canal 2.JPG",
+  "rivi": "Canal Grande",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 1,
+  "kuva": "hero-tukholma-aamu.png",
+  "rivi": "Tukholman kuninkaanlinna · 1697–1754",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 2,
+  "kuva": "hero-tukholma-keskipaiva.png",
+  "rivi": "Tukholman kaupungintalo · 1923",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 3,
+  "kuva": "hero-tukholma-ilta.png",
+  "rivi": "Riddarholmenin kirkko · n. 1280–1300",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 4,
+  "kuva": "Gamla stan February 2013 01.jpg",
+  "rivi": "Gamla stan",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 5,
+  "kuva": "hero-tukholma-gamlastan.jpg",
+  "rivi": "Gamla stan",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 6,
+  "kuva": "Stockholm (15103231170).jpg",
+  "rivi": "Strandvägen",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 7,
+  "kuva": "stockholm-6-nakoala-intro-v1.png",
+  "rivi": "Fjällgatan",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tukholma",
+  "nro": 8,
+  "kuva": "stockholm-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Djurgårdenin lautta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 1,
+  "kuva": "hero-ateena-akropoliskallio.jpg",
+  "rivi": "Akropolis",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 2,
+  "kuva": "hero-ateena-aamu.png",
+  "rivi": "Parthenon · 438 eaa.",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 3,
+  "kuva": "hero-ateena-keskipaiva.png",
+  "rivi": "Olympieion · n. 520 eaa.–131 jaa.",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 4,
+  "kuva": "hero-ateena-ilta.png",
+  "rivi": "Panathinaikon stadion · 1896",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 5,
+  "kuva": "Atenas, 03.jpg",
+  "rivi": "Antiikin agora",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 6,
+  "kuva": "The Acropolis from Mount Hymettus on February 9, 2020.jpg",
+  "rivi": "Akropolis",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 7,
+  "kuva": "Athens at night on September 28, 2022.jpg",
+  "rivi": "Areiopagos",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "ateena",
+  "nro": 8,
+  "kuva": "athens-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Ateenan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 1,
+  "kuva": "hero-amsterdam-kanaalikeha.jpg",
+  "rivi": "Kanaalikehä",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 2,
+  "kuva": "hero-amsterdam-aamu.png",
+  "rivi": "Westerkerk · 1631",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 3,
+  "kuva": "hero-amsterdam-keskipaiva.png",
+  "rivi": "Rijksmuseum · 1885",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 4,
+  "kuva": "amsterdam-6-nakoala-intro-v1.png",
+  "rivi": "A'DAM-torni",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 5,
+  "kuva": "amsterdam-7-herengracht-ilta-intro-v1.png",
+  "rivi": "Herengracht",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 6,
+  "kuva": "hero-amsterdam-ilta.png",
+  "rivi": "Magere Brug · 1934",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 7,
+  "kuva": "Amsterdam Westerkerk Blick vom Turm auf die Prinsengracht 2.jpg",
+  "rivi": "Prinsengracht",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 8,
+  "kuva": "KeizersgrachtReguliersgrachtAmsterdam.jpg",
+  "rivi": "Keizersgracht",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 9,
+  "kuva": "Aerial photograph of Amsterdam Central Station and the surrounding area.jpg",
+  "rivi": "Amsterdam Centraal · 1889",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "amsterdam",
+  "nro": 10,
+  "kuva": "Amsterdam Concertgebouw GVB 3048 lijn 5 Jordaan (51456943606).jpg",
+  "rivi": "Concertgebouw · 1888",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 1,
+  "kuva": "hero-istanbul-kultainensarvi.jpg",
+  "rivi": "Kultainen sarvi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 2,
+  "kuva": "hero-istanbul-aamu.png",
+  "rivi": "Hagia Sofia · 537",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 3,
+  "kuva": "hero-istanbul-keskipaiva.png",
+  "rivi": "Galatan torni · 1348",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 4,
+  "kuva": "istanbul-4-balat-arki-intro-v1.png",
+  "rivi": "Balat",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 5,
+  "kuva": "istanbul-5-kucuksu-bospori-intro-v1.png",
+  "rivi": "Küçüksun paviljonki · 1857",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 6,
+  "kuva": "istanbul-6-nakoala-intro-v1.png",
+  "rivi": "Galatan torni",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 7,
+  "kuva": "istanbul-7-moda-iltakatu-intro-v1.png",
+  "rivi": "Moda",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 8,
+  "kuva": "hero-istanbul-ilta.png",
+  "rivi": "Sininen moskeija · 1616",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 9,
+  "kuva": "Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg",
+  "rivi": "Kultainen sarvi",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 10,
+  "kuva": "Sultanahmet ferry on the Bosphorus in Istanbul, Turkey 001.jpg",
+  "rivi": "Bosporin lautta",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 11,
+  "kuva": "Panoramic view of Istanbul- Yeni Cami (The New Mosque), Galata Bridge. Turkey, Southeastern Europe.jpg",
+  "rivi": "Eminönü",
+  "tila": "odottaa-katselua (ei peliin)"
+ },
+ {
+  "kaupunki": "istanbul",
+  "nro": 12,
+  "kuva": "Ferry-Bosphorus-Istanbul-October-2012.jpg",
+  "rivi": "Bosporinsalmi",
+  "tila": "odottaa-katselua (ei peliin)"
+ }
+]
