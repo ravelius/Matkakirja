@@ -137,7 +137,7 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];
   });
-  assert.equal(images.length, 105); // Pariisin pulun tuolikuva p1 poistettu 11.11.2026
+  assert.equal(images.length, 106); // Pariisin pulun kuva vaihdettu 11.11.2026 (sama lukumäärä)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2, image.osoite);
   }
@@ -161,7 +161,7 @@ test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauk
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];
   });
-  assert.equal(images.length, 148); // Pariisin pulun tuolikuva p1 poistettu 11.11.2026
+  assert.equal(images.length, 149); // Pariisin pulun kuva vaihdettu 11.11.2026 (sama lukumäärä)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
       `${image.osoite}: pitkän selitteen pitää olla kaksi sisältölausetta`);
