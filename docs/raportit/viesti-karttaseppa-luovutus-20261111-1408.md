@@ -126,3 +126,4 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   raivaus-1-1-petit-palais/aja-palat-v41.sh → tee-talot-sc-pohja.py (SIISTI/KORVAUS) → kokoa (vain muuttuneet palat). Tarkista ensin, mikä maski/raivaus ne vei (grep raivaus-1-1-*/siisti*.json,
   korvaus*.json ja nd-ranta). Uusi talot-kansio talot-paketti → ämpäriin vasta KK:n sanalla. Sitten KJ46b-parit SC:sta (ym45-04-kulmat) + muisti.
 - Montmartre KJ43 ennallaan (maaston vienti 01.00, sitten JU:lle).
+- JU 17.29: LINKKI 224.75 = 96e9eb2fa (syvyysveto 03ad357fb junassa), manifest 200. SYVYYSVETO VALMIS.
