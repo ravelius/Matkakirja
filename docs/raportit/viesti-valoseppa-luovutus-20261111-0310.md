@@ -33,3 +33,7 @@ Syy: konteksti (pehmeä raja). Tili sami.reivinen@vvi.fi. Natiivirepo `/Users/Sh
 
 ## TEKNIIKKA
 PIL `/opt/homebrew/bin/python3 -I`; numpy-skriptit ilman -I. Parit: `_tyo/linssiseppa2/erottuvuus/parit11.py <loki> <ulos>` (RAJ 1000 px:n koordinaateissa × 2,752, 1:1-koordinaatit päivitetty). Mac-ajon skenaario: `oleta 300 piirretty [1-9][0-9][0-9] levyltä` alkuun; "PUUTE oleta elävä kesken" = tilarivi ei tulostu levossa, ei vika. `sh Peli-testit/unity-tarkistus.sh`. Luovutus plumbingilla origin/mainin päälle omaan haaraan.
+
+## LISÄYS 06.51
+- HYLLYVALO SULJETTU (PT 04.2x): LAV tarkisti perusversion – samat hyllyt jo lattiaa, valo sama; räystäsvarjo luonnollinen. A ja B eivät tehdä; JU:n hylly-ajot peruttu. koejuuri-hylly2 saa jäädä (ei käytössä).
+- Säästötila purettu 06.4x. Seuraava työ: vesitäyttö iso iPad (AVOIN 3). NUI:n lähin kamera: ajot lokit/nui-lahin-2-7x-4-c032134e7 (00.56) – kysy PT:ltä, onko kamera päätetty, ennen kynää.
