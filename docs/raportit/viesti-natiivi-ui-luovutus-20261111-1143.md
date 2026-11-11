@@ -14,6 +14,9 @@ TALLENNEVIKA KORJATTU (JU 11.4x: f2511a80f / juna 224 17fbf3e35): jos skenaarios
   samannimistä kylttikohdetta; OnMalli ja Mitat käyttävät sitä (Orsay oli maisema 2,4 km). Rajoitus: koodimalli löytyy vasta kun se on luotu.
 - 919e7e855: Rajat(keskelle:true) – säde ja kiertopiste mallin rajalaatikon vaakakeskipisteestä, ei kyltin pisteestä (ND säde 141 m ≈ kyltin piste
   ~85 m katedraalista → ~15 %). Loki: "mallin keskipiste X m kohteen pisteestä, säde Y m". VaistaEsteet ennallaan.
+- VÄLITULOS orsay-rajaus-1 (16ed591a7, ajettiin ennen peruutusta): Orsay mallina 330 m, ~puolet ruudusta, lähin Seinen yllä ilman seinää;
+  SC ja GP ennallaan. Arkki lokit/nui-orsay-rajaus-1-16ed591a7/arkki-orsay-rajaus-1000.jpg viety KK:lle 11.4x (SC pieni = mäki mallissa;
+  ehdotettu SC:n koodimallia oletukseksi, jos keskipiste ei auta).
 - AJO: kohteet-arkki-2 (skripti _tyo/natiivi-ui/sk-kohteet-arkki-2.txt) → lokit/nui-kohteet-arkki-2-919e7e855. orsay-rajaus-1 peruttu.
 - SEURAAVAKSI: arkit kuten -1125 kohta 3 (montage 5×3 osat + -1000-kopiot, `montage … -tile 5x3 -geometry 600x450+6+6 -label '%t'`), vertaa
   arkki-1:een (lokit/nui-kohteet-arkki-1-17ddd9e1c/arkki-kohteet-osa1…4-1000.jpg), arvioi 1/3–1/2-tavoite jokaiselle 12:sta.
