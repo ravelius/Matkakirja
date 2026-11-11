@@ -14,11 +14,10 @@ JU 2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KS 7b57e35a-3a8e-4943-aba1-c960b9eb4671
 ## Tehty tänään (nollattu + aloitusviesti lähetetty)
 KS (443da8f26→ uusi sessio 08.0x, työ Grand Palais 1:1), PK (5cd3123c2), VS (c05aa8392), LAV (ab3c97e06), NS (7a3bb101a), JU (07.2x-luovutus, aloitusviesti jonossa), KK nollasi itse (01.1x).
 
-## AVOINNA (yksi kerrallaan, uusimmat luovutukset)
-1. NUI: NOLLAUS lähetetty 08.2x luovutuksella 19a4c7695 (haara/viesti natiivi-ui). Tarkista nollautuminen (get_usage < 10 %). Aloitusviesti (PT 08.3x): A (50565c427) Mac-tallenteet lento-1/-2 JU:lta → KK:lle, kopio PT; sitten B esityksen lukitus (vika), C sauvat, D Turisti-info Lehteen – sivun nimi "Matkaopas" (omistaja 08.21), E Lehden nappi (koe). Lue luovutus: git show 19a4c7695:docs/raportit/viesti-natiivi-ui-luovutus-20261111-0835.md. Kuittaa PT:lle.
-2. PK: luovutus a9fd0e13f (haara pelikoodari-luovutus-20261111-0735, docs/raportit/viesti-pelikoodari-luovutus-20261111-0735.md); PK levossa 08.2x → NOLLAUS NUI:n jälkeen. Aloitusviesti normaali + jono luovutuksesta.
-3. NS: luovutus a87707881 (korvaa 3e78d043a; haara natiiviseppa-luovutus-20261111-0825, viesti-natiiviseppa-luovutus-20261111-0825.md); NS kirjoitti "Nollaus voi edetä", käynnissä 08.38 → NOLLAUS levon alkaessa; aloitusviesti NOLLAUS.md:n vakiolla.
-4. Muut: ei auki. JU nollattu 08.0x, jos aloitusviesti (jonossa) ei ole mennyt, tarkista.
+## AVOINNA (päivitetty 09.0x, uusi tila)
+Nollattu ja aloitusviesti lähetetty 08.4x–09.0x: NS (ac98b75f5, ensin Pariisi-saapuminen), PK (a9fd0e13f), KS (a539f9b92), NUI (88905a6b7). Niille ei jää avoimia nollauksia.
+1. LAV: luovutus 3f3ea39ad (haara lavastaja/luovutus-20261111-0850, viesti-lavastaja-luovutus-20261111-0850.md); LAV käynnissä 09.0x → NOLLAUS levon alkaessa (pysyvä linja: kysymättä), aloitusviesti: lue luovutus + jono.
+2. Muut: ei auki. Vanha PV (tämä) pyysi PT:ltä aloitusviestin uudelle PV:lle; PT lähettää sen kun "PV nollaa nyt".
 
 ## Kierros
 ScheduleWakeup-kierros ei ole ollut käytössä tällä vuorolla (PT ohjaa viesteillä); jos tarvitaan, viritä yksi 4–5 min, prompt "Lue /Users/Shared/Claude/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan".
