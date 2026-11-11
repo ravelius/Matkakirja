@@ -43,3 +43,12 @@ Asemataulu jäädytetty (hookin päivityspyynnöt ohitetaan). Worktreet ennallaa
   ENNEN pakettia: zsh v5/tausta-1-2.zsh >> ajo-leivonta-v5.log 2>&1. Muissa paloissa vain kujien lattia_alusta (leivo_valo hoitaa).
 - 漱芳斋: −Z = ETELÄ maailmassa (PK tarkisti). Eteläovi pidetään; LAV:n palautuspyyntö peruttu. (Salin oma kehys: −Z = pohjoisovi, eri asia.)
 - PT/omistaja 12.21–12.22 (Raamattu 12.26.5): isolla iPadilla VAIN KK:n nimeämä valmis kokonaisuus ennen versiota; LAV ei tilaa iPad-ajoja.
+
+## LISÄYS 18.2x
+- LEIVONTA-V5:N TYÖKANSIO SIIRRETTY: leivonta-216 on symlinkki T7:lle (95–97 % täynnä, PT: älä kirjoita) -> leivonta-v5 nyt
+  /Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/leivonta-v5-tyo (vanhassa polussa symlinkki; skriptit toimivat ennallaan).
+- 48 rakennusta (v-ulkomuuri-027…075, lista leivonta-216/uusinta/v5/mustat.txt) leivottiin MUSTINA 16.11–18.03 äpin kaatumisen (16.08) jälkeen
+  (VALO max 0.0; syy tuntematon, uusinta 18.1x toimi). Merkit poistettu, uudelleen 18.09 alkaen. leivonta-v5.zsh pysähtyy nyt mustaan tulokseen
+  ("VIKA: rak … MUSTA") -> tarkista syy (koe v5/koe-musta2.zsh <malli>), aja uudelleen.
+- Tila 18.11: tausta 22/23 + muurikate valmiit, rakennuksia 79/156, sitten osasarja; tausta-1-2.zsh ja sali ajamatta.
+- KK 18.06 (pala 3, pintojen leivonta) vastattu: leivonta-v5-tyo/VASTAUS-KK-1806.md + mittaus-kk-1806.txt (v5/tiheys.py). Pala 3:n tehtävänanto tulee KK:lta.
