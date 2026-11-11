@@ -33,3 +33,12 @@ tyokalut/tarkista.sh päivittää tyylikirjan (Tyylikirja.uss/.cs, tyylikirja.js
 ## Muuta
 - NS kysyi introkuvista 08.4x: vastattu (Introesitys, UiNakymat.Hae().Introesitys, Aloita(sumeaTausta: true), NS kutsuu itse).
 - Myöhemmin: iso iPad 0f0f950a6 / KS 599b0150d -ajo JU:n vuorolla; tarinamerkit odottavat Codexia.
+
+## LISÄYS 08.5x: KK katsoi työn B (hyväksyy periaatteen; junaan yhdessä A:n kanssa, kun 1–4 korjattu; Mac sama skenaario sauva-1)
+1) KATSEPISTE kohteen keskikorkeuteen oikealta maanpinnalta (ei ellipsoidi/maa): lähennettäessä Eiffelissä vain jalat näkyivät. Sama juuri kuin
+   Sainte-Chapellen koossa → yksi korjaus: katsepiste = maa (KiertoKorkeus) + (huippu − maa)/2 lennossa, kierrossa ja lähennettäessä.
+2) LÄHIN ETÄISYYS esityksessä kohteen koosta (kohde mahtuu ruutuun tunnistettavana), ei kiinteä; vasen sauva ei vie lähemmäs.
+3) KIERTO SAUVAN JÄLKEEN: nyt kamera seisoo (ajo nollautuu TappiLiiku/TappiOhjaa suoraan-haarassa). Kierto jatkuu pehmeästi ~2 s
+   vapautuksesta samaan suuntaan uudesta kulmasta ja etäisyydestä (uusi AjaKiertaen Taysi nykyisestä tilasta, KaannosS 0, vauhti levosta).
+4) RISTIMERKKI ruudun keskellä lähikuvissa = KameraTappi-tähtäin (PaivitaTahtain; näkyy tapin käytössä + TahtainViipyy). KK: pois esityksestä
+   (PalloKierto.EsitysKohde != null → tähtäin piiloon).
