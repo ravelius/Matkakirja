@@ -46,3 +46,15 @@ Hylätyt, ÄLÄ vie: talot-paketti-pariisi-invalidit-vain-hylatty, -invalidit-v8
   KK:n OK → junaehdokas: b8aaa83fa:n Sacré-Cœur oletukseen + talopaketti v9 = palat-v31 (--edellinen v8).
 - JU 02.57: 224.54 = 4b3ff1b63 linkissä (Sainte-Chapelle + talot v8, 8fdafec2e). Sacré-Cœurin junaehdokas tehdään juna-224:n kärjen päälle (merge b8aaa83fa), paketti v9 --edellinen v8.
 - 03.07: KJ27 katsottu (kansio latautui r. 3269): F poissa, terassi laella OK. KK:lle ja PT:lle parit _tyo/karttaseppa/koodijuna/parit-kj26-27/ + Eiffel-kysymys (8 väistöä). Odotetaan KK:n OK → junaehdokas.
+
+## LISÄYS 03.12 (sama sessio, nollaus tämän jälkeen)
+- KK 03.1x: Sacré-Cœur + talot v9 JUNAAN; F ✓. JUNAEHDOKAS dbb2bc643 (natiivi-backup karttaseppa/sacre-coeur-juna-v9 = juna-224 4b3ff1b63 + merge b8aaa83fa
+  + "sacre-coeur:Sacré-Cœur" Oletukseen + talot pariisi.json v9). Paketti talot-paketti-pariisi-v9 (v8→v9 11 palaa 8,6 Mt, SHA256SUMS ok). 754/911/unity 0.
+  PT:lle ja JU:lle 03.11. Seuraava paketti = v10. Seuraa: PT:n pt-ok, JU:n ämpäri + MR-numero; kuittaa kun linkissä.
+- KK: SEURAAVIIN PAREIHIN sama kulma ja rajaus molemmille puolille (sc24 | sc27 olivat eri kulmista).
+- SEURAAVA TYÖ (KK 03.1x, erillinen pieni muutos, ei pidätä Sacré-Cœuria): EIFFELIN 8 VÄISTÖÄ takaisin = poista siisti-v31.json:n _pois-listalta
+  way/69034120, 69034126, 69034149, 69034153, 69034173 (v11 "etujalan kortteli") ja way/54108364, 54108369, 54031857 (v12 lounaispuolen pikkutalot).
+  EHTO: yksikään ei saa osua tornin jalkojen tai kaarien alle eikä Champ de Marsin nurmelle – ne jätetään pois ja luetellaan KK:lle (tarkista jalanjäljet
+  eiffel-maski-11.png:tä ja Champ de Marsin OSM-nurmea vasten; way/54108364:n viereinen < 8 m² way/54108363 on tee-poistot.py:ssä). Tee siisti-v32.json →
+  aja-palat-v31.sh-tyyliin (SIISTI=…) → kokoa v32 = v31 + vain muuttuneet palat (md5-ero ulos-v31:een). Yksi tarkistuskuva viistosti: torni + jalat + palautetut
+  korttelit (sama kulma myös ennen-kuvaan nykyisillä paloilla v31 → pari samasta kulmasta), KK:lle ennen junaa. Junaan vasta KK:n OK:lla (paketti v10).
