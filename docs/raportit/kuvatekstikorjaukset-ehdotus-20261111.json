@@ -104,8 +104,8 @@
   "nro": 3,
   "luokka": "B",
   "vika": "'esiintynyt lähes joka ilta' löyhä, selitteen 'joka ilta … kymmenen vuoden tauolla' epäselvä",
-  "lyhyt": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan ja esittää yli 350 esitystä vuodessa.",
-  "selite": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan; pommitukset tuhosivat sen 1945, ja talo avattiin uudelleen 1955. Nykyään siellä on yli 350 esitystä vuodessa.",
+  "lyhyt": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan, ja sen lavalla on noin 350 esitystä vuodessa.",
+  "selite": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan; pommitukset tuhosivat sen 1945, ja talo avattiin uudelleen 1955. Nykyään siellä on noin 350 esitystä vuodessa.",
   "nyt_lyhyt": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan ja on esiintynyt lähes joka ilta.",
   "nyt_selite": "Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan, ja sen lavalla on esiinnytty joka ilta pommituksista 1945 vain kymmenen vuoden tauolla."
  },
@@ -135,7 +135,7 @@
   "luokka": "A",
   "vika": "Cerro del Tío Pío on tekokukkula (1980-luvun puisto slummin raunioiden päällä), ei luonnollinen laidan kukkula",
   "lyhyt": "Cerro del Tío Pío on 1980-luvulla slummin raunioille rakennettu puisto, jonka kukkuloilta näkee Madridin.",
-  "selite": "Cerro del Tío Pío eli Parque de las Siete Tetas rakennettiin 1980-luvulla entisen slummin raunioiden päälle, ja sen kukkuloilta näkee yli Madridin Kastilian ylätasangolle.",
+  "selite": "Cerro del Tío Pío eli Parque de las Siete Tetas rakennettiin 1980-luvulla entisen slummin raunioiden päälle, ja sen kukkuloilta näkee Madridin yli.",
   "nyt_lyhyt": "Madrid on rakennettu Kastilian ylätasangolle, ja Cerro del Tío Pío on yksi laidan kukkuloista.",
   "nyt_selite": "Madrid on rakennettu keskelle Kastilian ylätasankoa noin 650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin laidan kukkuloista."
  },
@@ -144,8 +144,8 @@
   "nro": 12,
   "luokka": "A",
   "vika": "köysirata suljettu vuodesta 2022/2023 (uusitaan), teksti preesensissä",
-  "lyhyt": "Madridin köysiradan siniset gondolit kulkivat puiden ja kattojen yllä Casa de Campon suuntaan.",
-  "selite": "Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdisti Parque del Oesten Casa de Campon puistoon. Gondolit kulkivat noin 40 metrin korkeudessa; rata on suljettu uusittavaksi.",
+  "lyhyt": "Madridin köysiradan siniset gondolit puiden ja kattojen yllä matkalla Casa de Campoon.",
+  "selite": "Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdistää Parque del Oesten Casa de Campon puistoon noin 40 metrin korkeudessa. Rata suljettiin 2020-luvun alussa uusittavaksi.",
   "nyt_lyhyt": "Madridin köysiradan siniset gondolit kulkevat puiden ja kattojen yllä Casa de Campon suuntaan.",
   "nyt_selite": "Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdisti Parque del Oesten Casa de Campon puistoon. Gondolit kulkevat noin 40 metrin korkeudessa."
  },
@@ -164,8 +164,8 @@
   "nro": 8,
   "luokka": "A",
   "vika": "kuva (Berlin Panorama von der Siegessäule) on näkymä pylväältä, teksti kuvaa pylvästä",
-  "lyhyt": "Siegessäulen tasanteelta otetussa panoraamassa näkyy kaupunki; pylväs vihittiin 1873 voitoista Tanskasta, Itävallasta ja Ranskasta.",
-  "selite": "Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt voitoilla Itävallasta ja Ranskasta. Kuva on otettu pylvään näköalatasolta.",
+  "lyhyt": "Voitonpylvään näköalatasanteelta näkee yli Berliinin; pylväs vihittiin 1873 voitoista Tanskasta, Itävallasta ja Ranskasta.",
+  "selite": "Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt voitoilla Itävallasta ja Ranskasta. Kuva on otettu pylvään näköalatasanteelta.",
   "nyt_lyhyt": "Voitonpylväs vihittiin 1873 muistona voitosta Tanskasta, Itävallasta ja Ranskasta.",
   "nyt_selite": "Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt voitoilla Itävallasta ja Ranskasta."
  },
@@ -184,8 +184,8 @@
   "nro": 10,
   "luokka": "A",
   "vika": "kuvassa Berliinin tuomiokirkko (Berliner Dom), teksti Vanhasta kansallisgalleriasta",
-  "lyhyt": "Berliinin tuomiokirkko (1905) kuuluu Museosaareen, Unescon maailmanperintöön vuodesta 1999.",
-  "selite": "Berliinin tuomiokirkko valmistui 1905, ja koko Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999.",
+  "lyhyt": "Berliinin tuomiokirkko (1905) seisoo Museosaarella, jonka museot ovat Unescon maailmanperintöä.",
+  "selite": "Berliinin tuomiokirkko valmistui 1905 Museosaarelle, jonka museot ovat olleet Unescon maailmanperintökohde vuodesta 1999.",
   "nyt_lyhyt": "Vanha kansallisgalleria (1862–1876) kuuluu Museosaareen, Unescon maailmanperintöön vuodesta 1999.",
   "nyt_selite": "Vanha kansallisgalleria rakennettiin 1862–1876, ja koko Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999."
  },
@@ -195,7 +195,7 @@
   "luokka": "B",
   "vika": "julkisivun hevoset ovat kopioita (alkuperäiset sisällä vuodesta 1974)",
   "lyhyt": "Markuksenkirkon pronssihevoset tuotiin Konstantinopolista, ja julkisivulla ovat nykyään kopiot.",
-  "selite": "Markuksenkirkon pääportaalin yllä seisovat hevoset ovat kopioita; Konstantinopolista 1204 tuodut alkuperäiset ovat sisällä vuodesta 1974. Kampanilen nykyinen torni on vuoden 1902 sortuman jälkeinen jälleenrakennus.",
+  "selite": "Markuksenkirkon pääportaalin yllä seisovat hevoset ovat kopioita; Konstantinopolista 1204 tuodut alkuperäiset ovat kirkon museossa. Kampanilen nykyinen torni on vuoden 1902 sortuman jälkeinen jälleenrakennus.",
   "nyt_lyhyt": "Markuksenkirkon neljä pronssihevosta tuotiin Konstantinopolista 1204.",
   "nyt_selite": "Markuksenkirkon pääportaalin yllä seisovat neljä pronssihevosta tuotiin Konstantinopolista 1204, ja kampanilen nykyinen torni on vuoden 1902 sortuman jälkeinen jälleenrakennus."
  },
@@ -254,7 +254,7 @@
   "nro": 2,
   "luokka": "A",
   "vika": "Nobel-illallinen syödään Sinisessä salissa, ei tanssita juhlasalissa; 'lähes' kahdeksan miljoonaa tiiltä",
-  "lyhyt": "Tukholman kaupungintalo (1923) tornin huipulla kimaltaa kolme kruunua; Sinisessä salissa syödään Nobel-illallinen.",
+  "lyhyt": "Tukholman kaupungintalon (1923) tornin huipulla kimaltaa kolme kruunua; Sinisessä salissa syödään Nobel-illallinen.",
   "selite": "Tukholman kaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta tiilestä, ja sen 106-metrisen tornin huipulla kimaltavat kolme kruunua — Sinisessä salissa syödään Nobel-illallinen.",
   "nyt_lyhyt": "Tukholman kaupungintalo (1923) tornin huipulla kimaltaa kolme kruunua Nobel-illallisten yllä.",
   "nyt_selite": "Tukholman kaupungintalo valmistui 1923 kahdeksasta miljoonasta tiilestä, ja sen 106-metrisen tornin huipulla kimaltavat kolme kruunua — juhlasalissa tanssitaan Nobel-illalliset."
@@ -315,7 +315,7 @@
   "luokka": "C",
   "vika": "torni oli Galatan linnoituksen pääkohde, vartiotorni toissijainen",
   "lyhyt": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen kärkeen Kultaisen sarven pohjoisrannalle.",
-  "selite": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen pääkohteeksi, ja se hallitsi Kultaisen sarven pohjoisrantaa vuosisatoja.",
+  "selite": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen korkeimmaksi torniksi, ja se hallitsi Kultaisen sarven pohjoisrantaa vuosisatoja.",
   "nyt_lyhyt": "Genovalaiset rakensivat Galatan tornin 1348 vartiotorniksi Kultaisen sarven pohjoisrannalle.",
   "nyt_selite": "Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa vartiotorniksi, ja se hallitsi Kultaisen sarven pohjoisrantaa vuosisatoja."
  },
@@ -384,8 +384,8 @@
   "nro": 3,
   "luokka": "A",
   "vika": "1191 on perustamisvuosi, ei nykyrakennuksen; 'suurin kirkko' → 'suurin katedraali'",
-  "lyhyt": "Pyhän Patrickin katedraali (n. 1220–1260) on Irlannin suurin katedraali, torninhuippu nostettiin vasta 1749.",
-  "selite": "Pyhän Patrickin katedraali perustettiin 1191, nykyinen rakennus on n. 1220–1260, ja ulkoa 91 metriä pitkänä se on Irlannin suurin katedraali — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan.",
+  "lyhyt": "Pyhän Patrickin katedraali (1220–1260) on Irlannin suurin katedraali; torninhuippu nostettiin vasta 1749.",
+  "selite": "Pyhän Patrickin katedraali perustettiin 1191, nykyinen rakennus on vuosilta 1220–1260, ja ulkoa 91 metriä pitkänä se on Irlannin suurin katedraali — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan.",
   "nyt_lyhyt": "Pyhän Patrickin katedraali (1191) on Irlannin suurin kirkko, torninhuippu nostettiin vasta 1749.",
   "nyt_selite": "Pyhän Patrickin katedraali perustettiin 1191, ja ulkoa 91 metriä pitkänä se on Irlannin suurin kirkko — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan."
  },
@@ -394,7 +394,7 @@
   "nro": 9,
   "luokka": "A",
   "vika": "1902 on aloitusvuosi (valmis 1904/05); 'ensimmäinen' → 'ensimmäisiä'; kuva on näköalakuva Guinness-tornista",
-  "lyhyt": "Guinness Storehousen käymislaitos oli Irlannin ensimmäisiä monikerroksisia teräsrunkoisia rakennuksia.",
+  "lyhyt": "Guinnessin panimon käymislaitos oli Irlannin ensimmäisiä monikerroksisia teräsrunkoisia rakennuksia.",
   "selite": "Guinnessin panimon käymislaitos rakennettiin 1902–1904 ja oli yksi Irlannin ensimmäisistä monikerroksisista teräsrunkoisista rakennuksista. Kuva on otettu Guinness Storehousen näköalatasanteelta.",
   "nyt_lyhyt": "Guinnessin panimon käymislaitos (1902) oli Irlannin ensimmäinen teräsrunkoinen kerrostalo.",
   "nyt_selite": "Guinnessin panimon käymislaitos rakennettiin vuonna 1902 ja oli Irlannin ensimmäinen monikerroksinen teräsrunkoinen rakennus."
@@ -414,8 +414,8 @@
   "nro": 11,
   "luokka": "A",
   "vika": "kuva on Liffeyn ranta auringonlaskussa, tullitaloa ei näy (sama aihe kuin #8)",
-  "lyhyt": "Liffey virtaa Dublinin halki Dublin Bayhin ja jakaa kaupungin pohjois- ja eteläpuoleen.",
-  "selite": "Liffey-joki virtaa Dublinin halki Dublin Bayhin ja jakaa kaupungin pohjois- ja eteläpuoleen.",
+  "lyhyt": "Liffey virtaa Dublinin halki Dublininlahteen ja jakaa kaupungin pohjois- ja eteläpuoleen.",
+  "selite": "Liffey-joki virtaa Dublinin halki Dublininlahteen ja jakaa kaupungin pohjois- ja eteläpuoleen.",
   "nyt_lyhyt": "Gandonin tullitalo rakennettiin 1700-luvun lopulla suolle, jota kauppiaat pitivät kelvottomana.",
   "nyt_selite": "James Gandonin suunnittelema tullitalo rakennettiin 1700-luvun lopulla suolle, jota kaupungin kauppiaat pitivät kelvottomana paikkana."
  },
@@ -425,7 +425,7 @@
   "luokka": "C",
   "vika": "'rakastettiin rauniona' on tulkinta, lempinimi 'Edinburghin häpeä' lähteistetty",
   "lyhyt": "Calton Hillin kansallismonumentti jäi kesken 1829, ja keskeneräinen maamerkki tunnetaan lempinimellä Edinburghin häpeä.",
-  "selite": "Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — ”Edinburghin häpeäksi” kutsutusta raunioista tuli tunnettu maamerkki.",
+  "selite": "Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — ”Edinburghin häpeäksi” kutsutusta keskeneräisestä muistomerkistä tuli tunnettu maamerkki.",
   "nyt_lyhyt": "Calton Hillin kansallismonumentti jäi kesken 1829 ja rakastettiin rauniona nimestään huolimatta.",
   "nyt_selite": "Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — ”Edinburghin häpeäksi” ristitystä raunioista tuli rakastettu maamerkki."
  },
@@ -445,7 +445,7 @@
   "luokka": "A",
   "vika": "valmistumisvuosi: työt päättyivät 1893 (1896 = basilikaksi korotus); peruskiven laski Louis-Napoléon, ei vielä keisari",
   "lyhyt": "Marseillen La Majorin katedraalin peruskiven laski Louis-Napoléon 1852, ja työt päättyivät 1893.",
-  "selite": "Marseillen La Majorin katedraalin peruskiven laski 26.9.1852 prinssi-presidentti Louis-Napoléon, myöhempi Napoleon III; bysanttilaista ja romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 ja korotettiin basilikaksi 1896.",
+  "selite": "Marseillen La Majorin katedraalin peruskiven laski 26. syyskuuta 1852 prinssi-presidentti Louis-Napoléon, myöhempi Napoleon III; bysanttilaista ja romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 ja korotettiin basilikaksi 1896.",
   "nyt_lyhyt": "Marseillen La Majorin katedraalin peruskiven laski Napoleon III 1852, valmistuen 1896.",
   "nyt_selite": "Marseillen La Majorin katedraalin peruskiven laski keisari Napoleon III vuonna 1852; bysanttilaista ja romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 ja valmistui 1896."
  },
@@ -454,8 +454,8 @@
   "nro": 1,
   "luokka": "B",
   "vika": "'korkeimmalla kukkulalla' ei vahvistu lähteistä",
-  "lyhyt": "São Jorgen linna on seisonut Lissabonin kukkulalla maurien ajoista, valloitettu 1147.",
-  "selite": "São Jorgen linna on seisonut Lissabonin kukkulalla maurien 1000-luvulta asti, Afonso Henriques valtasi kaupungin 1147, ja linna oli kuninkaan asuntona 1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, jonka kujia kiipeää raitiolinja 28.",
+  "lyhyt": "São Jorgen linna on seisonut kukkulallaan Lissabonin yllä maurien ajoista; kaupunki vallattiin 1147.",
+  "selite": "São Jorgen linna on seisonut kukkulallaan Lissabonin yllä maurien 1000-luvulta asti, Afonso Henriques valtasi kaupungin 1147, ja linna oli kuninkaan asuntona 1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, jonka kujia kiipeää raitiolinja 28.",
   "nyt_lyhyt": "São Jorgen linna on seisonut Lissabonin korkeimmalla kukkulalla maurien ajoista, valloitettu 1147.",
   "nyt_selite": "São Jorgen linna on seisonut Lissabonin korkeimmalla kukkulalla maurien 1000-luvulta asti, Afonso Henriques valtasi kaupungin 1147, ja linna oli kuninkaan asuntona 1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, jonka kujia kiipeää raitiolinja 28."
  },
@@ -514,8 +514,8 @@
   "nro": 8,
   "luokka": "A",
   "vika": "kuva on Eixamplesta (Rambla de Catalunya), teksti Ciutat Vellasta",
-  "lyhyt": "Barcelonan muurit purettiin 1850-luvulla, ja Eixamplen ruudukko kasvoi vanhan kaupungin ympärille.",
-  "selite": "Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä; muurien purku määrättiin 1854, ja Eixamplen ruudukko rakennettiin vanhan kaupungin ympärille.",
+  "lyhyt": "Barcelona pysyi 1850-luvulle asti muurien sisällä; katolta näkymä aukeaa vanhan kaupungin yli satamaan ja merelle.",
+  "selite": "Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu ydin. Kuva on otettu katolta, ja näkymä aukeaa vanhan kaupungin kattojen yli satamaan ja merelle.",
   "nyt_lyhyt": "Barcelona pysyi 1850-luvulle asti muurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen ydin.",
   "nyt_selite": "Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu ydin."
  },
@@ -574,8 +574,8 @@
   "nro": 3,
   "luokka": "B",
   "vika": "'Rooman korkein rakennelma' ei vahvistu (basilika 'toiseksi korkein', kupoli 136,6 m)",
-  "lyhyt": "Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli nousee 136 metriin.",
-  "selite": "Pietarinkirkkoa rakennettiin yli sata vuotta (1506–1626), ja Michelangelon kupoli nousee 136 metriin.",
+  "lyhyt": "Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli nousee yli 136 metriin.",
+  "selite": "Pietarinkirkkoa rakennettiin yli sata vuotta (1506–1626), ja Michelangelon kupoli nousee yli 136 metriin.",
   "nyt_lyhyt": "Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli on yhä Rooman korkein rakennelma.",
   "nyt_selite": "Pietarinkirkkoa rakennettiin yli sata vuotta (1506–1626), ja Michelangelon kupoli on yhä Rooman korkein rakennelma."
  },
@@ -604,8 +604,8 @@
   "nro": 3,
   "luokka": "C",
   "vika": "palo 1555, renessanssikunnostus 1556–1559",
-  "lyhyt": "Sukiennice sai renessanssiasunsa 1555 palon jälkeen vuosina 1556–1559, irvinaamat reunustavat sen räystäslistaa.",
-  "selite": "Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen vuosina 1556–1559, ja kiviset irvinaamat reunustavat sen räystäslistaa.",
+  "lyhyt": "Sukiennice sai renessanssiasunsa vuoden 1555 palon jälkeen 1556–1559, irvinaamat reunustavat sen räystäslistaa.",
+  "selite": "Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin keskellä; renessanssiasunsa se sai vuoden 1555 palon jälkeen 1556–1559, ja kiviset irvinaamat reunustavat sen räystäslistaa.",
   "nyt_lyhyt": "Sukiennice sai renessanssiasunsa 1555 palon jälkeen, irvinaamat reunustavat sen räystäslistaa.",
   "nyt_selite": "Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen, ja kiviset irvinaamat reunustavat sen räystäslistaa."
  },
@@ -654,8 +654,8 @@
   "nro": 9,
   "luokka": "B",
   "vika": "'tyhjästä' ja Prahan 'ehjänä' liioittelua",
-  "lyhyt": "Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, itäpuolen Praga säilyi paljon vähemmän tuhoutuneena.",
-  "selite": "Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, ja itäpuolen Praga säilyi paljon vähemmän tuhoutuneena.",
+  "lyhyt": "Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen; itäpuolen Praga säästyi pahimmalta tuholta.",
+  "selite": "Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, ja itäpuolen Praga säästyi pahimmalta tuholta.",
   "nyt_lyhyt": "Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen tyhjästä, itäpuolen Praga säilyi ehjänä.",
   "nyt_selite": "Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen tyhjästä, ja itäpuolen Praga säilyi lähes ehjänä."
  }
