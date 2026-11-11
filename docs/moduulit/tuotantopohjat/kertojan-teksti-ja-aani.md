@@ -11,7 +11,7 @@ luvussa 7.)*
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
 
-**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitteesta: äänessä mallinäyte ja kuvaus, uudessa tekstityypissä esimerkit pelinäkymässä. Ääneen sovitettuna omistaja kuulee mallinäytteen ja valmiin oton peräkkäin KK:n kautta ennen junaa. Tämä koskee vain uusia asioita ja makuvalintoja (esim. uusi ääni, uusi hahmo, uusi tekstityyppi); tavallisen erän tutulla äänellä ja tutulla tyypillä hyväksyy PT (Raamattu 4.21).
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitteesta: äänessä mallinäyte ja kuvaus, uudessa tekstityypissä esimerkit pelinäkymässä. Äänitysten luvan ja tarkastuksen hoitaa KK (alle 3 %:n ajo; Raamattu 5.1, omistaja 11.11.2026 klo 08.51); omistaja kuulee vain äänet, jotka hän itse pyytää kuultavaksi (kohta 11), ja näkee kokonaan uudet luettavat tekstit listana ennen äänitystä.
 
 **Julkaisu (Raamattu 10.2 ja 9.11):** valmis ääni menee avoimeen junaan (yksi juna kerrallaan). Lukitus ja TestFlight tehdään vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA"). Simulaattoria käytetään vain selvästi uuteen tekniikkaan, omistajan pyytämiin kuviin ja yöjunan laitekierrokseen; tavallinen ääni- tai tekstierä kulkee automaattisten tarkistusten jälkeen suoraan junaan ilman simukuvia.
 
@@ -210,7 +210,7 @@ kohdat on nostettu kultaiseen polkuun 20.10.2026; rivit jäävät tähän tausta
 
 `docs/moduulit/tarinakaari.md` (luvut 4, 7, 8), `docs/moduulit/livia-aani.md`, `docs/moduulit/aanipohja.md`,
 `docs/moduulit/tuotantopohjat/paakaupungin-avaus.md` (luku 5, hyväksyntäpolku),
-Raamattu: 4.21 TUOTANTOPOHJAT, 5.1 UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN LUPAA, 5.2 MÄÄRÄN PÄÄTTÄÄ OMISTAJA,
+Raamattu: 4.21 TUOTANTOPOHJAT, 5.1 ÄÄNITYSLUPA JA TEKOTAPA, 5.2 MÄÄRÄ JA OTTOMÄÄRÄ,
 5.3 LUVAN RAJAT, 5.6 ÄÄNIVALINTA, 5.7 MALLI, 5.8 ÄÄNIPANKKI, 5.9 PULUN ÄÄNI, 5.11 ÄÄNIPORTTI, 5.12 DIALOGIT YHTENÄ OTTONA,
 5.15 ÄÄNET JA MUSIIKKI, 7.27 KYSYMYKSET, 9.11 OMISTAJA EI ENSIMMÄINEN TARKISTAJA, 10.2 JUNA JA YKSI JUNA;
 Äänittäjän luovutukset 14.–17.10.2026 (`docs/raportit/viesti-aanittaja-luovutus-*.md`).
