@@ -61,3 +61,15 @@ Koe KOE_KESKI (ip −= PaikkaNopeus·h/2 = askeleen keskihetken tavoite): etumat
 nykyisen askeleen tavoitteen keskiarvo (ei ekstrapolointia). KYSYTTY KK:lta 15.4x — älä toteuta ennen vastausta. Muut kaatuvat:
 T06 (Esikatso levosta: tarkista), T09 (LaitePeli-rajat = 1,25 × viitehypyn huiput, huiput muuttuivat hieman: a 20,29, j 107,85 → rajat
 kalibroitava, KK:n päätös), T10 dt 1/60 ja 1/30 (testi syöttää ruudun lopun tavoitteen → ajotapa kiinteään askeleeseen).
+
+## LISÄYS 15.4x: KK:N PÄÄTÖS 15.39 (E(1)) — HYVÄKSYTTY neljällä ehdolla, TOTEUTA
+Laite käyttää askeleella tavoitteena (edellisen askeleen tavoite + nykyinen) / 2 (keskihetki; poistaa v·h/2-etumatkan, muuten osa-askel värisisi 0…2,7 cm).
+1. Sama sääntö ruudun osa-askeleessa (Esikatso): kopion tavoite = (askeleen alun tavoite + ruudun hetken tavoite) / 2; jäännös = koko askel →
+   täsmälleen sama kuin täysi askel. LISÄÄ TESTI: jatkuvuus askelrajalla.
+2. Leikkaa, siirto ja aloitus: edellinen tavoite = nykyinen (ei vedä vanhaan paikkaan).
+3. Kaikki laitteelle menevät tavoitteet samalla säännöllä (paikka JA katse, myös nopeudet).
+4. T11:n raja pysyy 1 cm.
+T09: LaitePeli-rajat saa laskea uudelleen (kerroin 1,25 pysyy). Kirjaa raporttiin vanhat (rajat a 25,4, j 138,5 ↔ huiput ~20,3/110,8)
+ja uudet huiput (a, j); JOS jompikumpi muuttuu yli 5 %, kerro KK:lle ENNEN rajan muutosta.
+Sitten T06/T10 ajotapa kiinteään askeleeseen, ohjaaja Askel/Esikatso, A + C, B-mittaus, kytkentä ja Mac-tallenne. KK lukee Seurantaohjaaja.cs:n
+ja kytkennän diffin kokonaan ja arvioi tallenteesta etäisyyden ahtaassa käytävässä.
