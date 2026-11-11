@@ -658,3 +658,10 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ51 (JU 01.47): lasikaista poissa julkisivusta ja tornin vierestä (parit _tyo/karttaseppa/koodijuna/parit-kj51/pari-pp51-6-lahin-rajaus.jpg, pari-pp51-8-matala.jpg) → KK 01.5x,
   ODOTTAA junasanaa. Sanalla: poimi e5282c741 (karttaseppa/petit-palais-lasi) 224.92:n 70f3a7aba päälle → pt-ok PT:ltä SHA:lla.
 - SEURAAJAN JONO (korvaa LISÄYS 46:n kohdan 2): 1) KJ49c musta kylki 2) PP-junasana (yllä) 3) KJ52 4) KJ54 5) KJ55 6) Montmartre KJ43 7) KJ53 8) GHSL.
+
+## LISÄYS 48 (01.5x): KK 01.47 JUNASANA PP → db31b646e, pt-ok pyydetty
+- db31b646e (natiivi-backup karttaseppa/petit-palais-juna = 224.92 70f3a7aba + e5282c741; työpuu wt/proto-karttaseppa-sillat-juna; 776/776, unity 0) → PT:ltä pt-ok 01.5x. Odota LINKKI.
+- KK:N HUOMIO (ei estä junaa, sama ennen ja jälkeen): parissa pp51-6 oikean siiven 2. ikkunan oikeassa alakulmassa pieni tumma ikkunalasin sävyinen kolmio → katso syy
+  OhjelmaKohdePariisiPetitPalais*.cs:stä seuraavalla PP-käynnillä; pieni korjaus → sama rajaus (crop iw*0.36:ih*0.22:iw*0.26:ih*0.50) KK:lle.
+- KK: KJ49c ei junaan ennen Alman palkin mustan kyljen korjausta; samat kaksi kuvaa (si49c-31, -38) KK:lle.
+- SEURAAJAN JONO: 1) KJ49c musta kylki 2) odota LINKKI PP 3) KJ52 4) KJ54 5) KJ55 6) Montmartre KJ43 7) KJ53 8) GHSL 9) PP:n ikkunakolmio.
