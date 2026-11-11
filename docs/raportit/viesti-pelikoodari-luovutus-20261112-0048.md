@@ -37,3 +37,6 @@ Wt /Users/Shared/Claude/wt/proto-pelikoodari-kuvajono: poista (git worktree remo
 - NAS-siirto tehty (PT 12.11.): _tyo/pelikoodari 16 kansiota → Matkakirja-arkisto/pelikoodari/_tyo-20261111/.
 - Huom: tyokalut/tarkista.sh päivittää tyylikirjan → palauta git checkoutilla, älä committaa.
 Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 00.5x (NUI tiedoksi, ei toimia)
+Puhe.cs 27d162d64 (natiivi-backup natiivi-ui/pariisi-tekstit): esikatselusääntö LataaJaSoitaTiedosto-silmukkaan (vain editori + MATKAKIRJA_ESIKATSELU_SK). Laitteen kulku ennallaan; älä tee päällekkäistä Puhe.cs-muutosta.
