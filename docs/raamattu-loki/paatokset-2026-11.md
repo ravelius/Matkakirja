@@ -1374,3 +1374,7 @@ Omistaja KK:n kautta sanatarkasti: "Saat aina tehdä kaikki äänitykset ja niit
 ## ÄÄNITYSOHJE YHDEKSI, KILPAILEVAT POIS (omistaja 11.11. klo 08.58, KK:n välitys) (11.11.2026 klo 09.02)
 
 Omistaja: "Kirjaa äänitys ohje raamattuun ja tarkista että siellä ei ole kilpailevia ohjeita." 5.1 kirjoitettu yhdeksi voimassa olevaksi säännöksi (puheäänitykset: alle 3 % KK:n lupa ja tarkastus, yli 3 % omistajan kortti, uudet luettavat tekstit omistajalle listana; tekotapa; näyte vain pyydettäessä). 5.2 rajattu yli 3 %:n ajoon, 5.4 esiteksti, 5.12 kertojan otot, 5.28 vain pyydettäessä, 7.27 ÄÄNET uudelleen, 7.14 äänigenerointi Äänittäjällä (fakta), 7.15/11.x/12.23 viittaukset 5.1:een. Musiikki (Lyria) ja tekoälyn tehosteet ennallaan omistajan luvalla. Pohjat: kertojan-teksti-ja-aani, tuotannonohjaus, kysymys-omistajalle, tekotavat/aani, taidemuseon-maa, kuumailmapallokierros.
+
+## ISON IPADIN JUMIN TAKAPORTTI KÄYTÖSSÄ (KK 11.11. 09.1x, omistajan havainto 09.12) (11.11.2026 klo 09.29)
+
+Omistaja 09.12: "miten tuohon saisi takaportin jotta iPad ei jäisi jatkossa jumiin? eikö peliä voi vain tappaa ja käynnistää uudestaan". JU otti käyttöön A–C (ipad-takaportti.zsh, ipad-skenaario-f1.zsh, C-raja 360 s), ei pelin koodia. Raamattu 12.26 ja 7.41.
