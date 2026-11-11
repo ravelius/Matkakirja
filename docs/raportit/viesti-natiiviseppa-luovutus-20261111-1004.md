@@ -206,3 +206,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - LISÄ 16b: KK 13.0x tarkisti (ii): rajaus vain juoksupeliin pitää; vastaus-ii.md:hen kirjattu Nakyva-tason kattottomuus (Esilataaja.cs:16, :164–169).
   Löydös PT:lle: KohdekarttaNakyma.cs:237 / NostotKartalla.cs:2991 Kuvat.Hae → Nakyva ilman kattoa (Pelikoodarin jono; Latausjonoa EI laajenneta).
 - JU 13.10: saapuminen-mac-7 (204a54ecd) VALMIS (rc 0, kuvia 14/14, mp4 1, NRE 0) → lokit/natiiviseppa-saapuminen-mac-7: LUE ENSIN (lisäys 14 ehdot) → KK.
+- PT 14.0x (KK) JONOON, järjestys: 1) latausvika (iv) Mac-todiste → 2) saapuminen mac-7 → 3) LÖYDÖS A (tarkistamatta): piirroskerros ei näy pelissä
+  (ElavaTyyli.Striimi = true → Karikatyyri false), mutta PiirrosKerros.Purku pitkien ruutujen syissä → selvitä: lataako/purkaako laattoja turhaan,
+  ja mitä kadonneiden ihmeiden tähdet siitä tarvitsevat. VAIN SELVITYS KK:lle + PT:lle, ei koodia ennen KK:n sanaa.
