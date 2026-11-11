@@ -1464,3 +1464,9 @@ Kortti: "Rakennetaanko ennen Lontoota kolme työkalua (uuden kaupungin pohja yhd
 Omistaja 19.58: uudet ohjeet isoisän ja pulun teksteille + "Nämä pitäisi kirjoittaa ylös raamattuun nykyisten tilalle." 20.11: "Tuo mitä ei enää ole on hyvä lisä noihin ohjeisiin."
 - Raamattu 3.6 korvattu ohjeilla sanatarkasti + lisäys "mitä ei enää ole"; Grimshaw/revitty sivu/aarre-kaanon säilyy. KK:n muut ehdotukset (pituusrajat ym.) eivät ole omistajan päätöksiä: pituus kortilla.
 - Pariisin tekstit uusiksi (KK), muut kaupungit eivät vielä. Lähde: scratchpad/keskustelukanava/suunnitelmat/20261111-omistaja-1958-saapuminen-ja-tekstit.md.
+
+## ISOISÄN JA PULUN TEKSTIEN PITUUSRAJAT; PARIISIN UUSI AIHE (omistaja 11.11.2026 klo 20.17, kortit, KK) (11.11.2026 klo 20.2x)
+
+"Lyhyemmät rajat": isoisän teksti enintään noin 250 merkkiä, pulun enintään noin 150 (Raamattu 3.6).
+"Kelpaa": Pariisin uusi aihe (kirjekyyhky lentää takaisin myyjälleen); KK tarkistaa faktat ja tuo lopulliset tekstit omistajalle ennen äänitystä.
+"Kyllä, nollaa nyt": KK nollasi itsensä 20.17, Postivahti aloitusviestin.
