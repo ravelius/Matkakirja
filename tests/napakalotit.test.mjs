@@ -615,3 +615,75 @@ test('työnkulku vie kalotit webp:nä ja tarkistaa alfan', () => {
   assert.match(tyonkulku, /koko_etela:/);
   assert.match(tyonkulku, /m\.format!=='webp'/);
 });
+
+/* ===================== striimityyli (omistajan päätös 8.11.2026 klo 10.34) */
+
+test('striimi: varitaPikseli on pelin ElavaTyyli.Varita (oletusmeri → SVesi, oletusmaa → SMaa)', async () => {
+  const { STRIIMI, varitaPikseli, vedenOsuus } = await import('../tools/tee-napakalotit.mjs');
+  assert.deepEqual(varitaPikseli(...STRIIMI.meriOletus), [...STRIIMI.vesi]);
+  assert.deepEqual(varitaPikseli(...STRIIMI.maaOletus), [...STRIIMI.maa]);
+  // OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei, beige säilyy": vesiraja kuten TF 5d6967444 ja natiivi
+  // bffbbb29a (180–190). Napojen avomeri laatoissa (mitattu z5, 179/174/156) on Varitalle maata eli beige.
+  assert.ok(vedenOsuus(179, 174, 156) < 0.1, 'avomeri olisi oliivi: Varitan vesiraja ei ole TF:n (180–190)');
+  assert.ok(vedenOsuus(200, 200, 190) > 0.9, 'matala rannikko (m 190–222) on vettä eli oliivi');
+  assert.ok(vedenOsuus(...STRIIMI.maaOletus) < 0.1);
+});
+
+test('striimi: kalotin meri ankkuroidaan vesikaavalla ja maa saa maakaavan', async () => {
+  const { STRIIMI, STRIIMI_MAASIIRTO, STRIIMI_VESISIIRTO, vesiVarita } = await import('../tools/tee-napakalotit.mjs');
+  assert.deepEqual([...STRIIMI_MAASIIRTO], [8, -2, -12]);
+  assert.deepEqual([...STRIIMI_VESISIIRTO], [-36, -36, -51]);
+  assert.deepEqual(vesiVarita(...STRIIMI.meriOletus), [...STRIIMI.vesi]);
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  // Liitos vain vektorin merestä (80–83° N:ssä on Grönlantia ja saaria).
+  assert.match(tyokalu, /meressa: \(lat, lon\) => merenAlalla/);
+  // Jäähyllyt jäänä, ei merenä Etelämantereen sisällä.
+  assert.match(tyokalu, /striimi && jaatayte && vesi && Number\.isFinite\(m\) && m > 0\) vesi = false/);
+});
+
+test('striimi: kalotin meri ajetaan Varitan läpi kuten laatat (beige, omistaja 8.11.2026 klo 14.51)', async () => {
+  const { varitaPikseli } = await import('../tools/tee-napakalotit.mjs');
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  // Liitos mitataan paperina (ennen Varitaa) ja meripikselit ajetaan sitten koko Varitan läpi.
+  assert.match(tyokalu, /varita: null,/);
+  assert.match(tyokalu, /if \(!meripikseli\[p\]\) continue;\n\s*const o = p \* 4;\n\s*const q = varitaPikseli\(/);
+  // Avomeri beige (maakaava), ei oliivi.
+  const [r, , b] = varitaPikseli(179, 174, 156);
+  assert.ok(r - b > 35, `avomeri ei ole beige: ${varitaPikseli(179, 174, 156)}`);
+});
+
+test('striimi: reunakaista ei liu\'u laattojen tietorajan takaisiin raitoihin (61,47° S)', async () => {
+  const { TIETORAJA, TIETORAJA_SILOTUS_AST, REUNAKAISTA_AST } = await import('../tools/tee-napakalotit.mjs');
+  assert.equal(TIETORAJA.etela, -61.47);
+  assert.ok(TIETORAJA_SILOTUS_AST >= 2);
+  // Etelässä raja on reunakaistan sisällä, pohjoisessa ei.
+  assert.ok(Math.abs(TIETORAJA.etela) < Math.abs(NAPAKALOTTI.etela.reuna) + REUNAKAISTA_AST);
+  assert.ok(Math.abs(TIETORAJA.pohjoinen) >= Math.abs(NAPAKALOTTI.pohjoinen.reuna) + REUNAKAISTA_AST);
+});
+
+test('työnkulku välittää tyylin työkalulle', () => {
+  const tyonkulku = lue('../.github/workflows/tee-napakalotit.yml');
+  assert.match(tyonkulku, /tyyli:/);
+  assert.match(tyonkulku, /--tyyli=\$\{\{ inputs\.tyyli \}\}/);
+});
+
+test('striimi: reunakaista liukuu laattojen paikalliseen sävyyn (omistaja 8.11.2026 klo 12.50, kehä)', async () => {
+  const { REUNAKAISTA_AST } = await import('../tools/tee-napakalotit.mjs');
+  assert.ok(REUNAKAISTA_AST > HAIVE_AST, 'kaistan on alettava ennen alfahäivettä');
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  assert.match(tyokalu, /let kohde = reunaSavy\(a\.lat, a\.lon\);/);
+  assert.match(tyokalu, /reunanLaattasavy\(\{ puoli, sharp \}\)/);
+});
+
+test('striimi: meren paperikuvio jatkuu reunakaistalle ja on laattojen mittakaavassa (PT 8.11.2026 klo 15.3x)', async () => {
+  const { MERI_PAPERI_MITTA, MERI_PAPERI_VOIMA, meriPaperi } = await import('../tools/tee-napakalotit.mjs');
+  // Kuvio on kalotin pikseleitä isompi (laattojen z5-pikseli 60° S:ssa on 1,5 kalotin pikseliä).
+  assert.ok(MERI_PAPERI_MITTA >= 1.5, `mitta ${MERI_PAPERI_MITTA}`);
+  assert.ok(MERI_PAPERI_VOIMA >= 1, `voima ${MERI_PAPERI_VOIMA}`);
+  // Mitta skaalaa koordinaatit ja voima arvon.
+  assert.equal(meriPaperi(30, 40, 2, 1), meriPaperi(15, 20, 1, 1));
+  assert.ok(Math.abs(meriPaperi(7, 9, 1.5, 2) - 2 * meriPaperi(7, 9, 1.5, 1)) < 1e-9);
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  // Reunakaistalla meren paperi lisätään laattojen sävyn päälle, ei hävitetä.
+  assert.match(tyokalu, /\(kohde\[0\] \+ vm \* PAPERI_KANAVAT\[0\]\) \* w/);
+});

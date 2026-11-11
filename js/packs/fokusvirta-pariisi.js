@@ -280,9 +280,13 @@ export const FOKUSVIRTA_PARIISI = {
        *     esittää palatsin rakentamista takaisin.
        */
       id: 'tuileriat',
+      kysymykset: [
+        'Mitä isoisä näki, kun hän kulki palatsin raunioiden ohi?',
+        'Minne puretun palatsin kivet ja palat päätyivät?',
+      ],
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
       otsikko: 'Tuileriain rauniot',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu '
+      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu '
         + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
         + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
         + 'kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
@@ -376,6 +380,10 @@ export const FOKUSVIRTA_PARIISI = {
        * palloilla, eikä sitä sekoiteta tähän.
        */
       id: 'kyyhkyposti',
+      kysymykset: [
+        'Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?',
+        'Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua?',
+      ],
       nappi: 'Kyyhkyt, jotka kantoivat kokonaisen kaupungin postin',
       otsikko: 'Piiritetyn Pariisin kyyhkyposti',
       teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun '
@@ -434,9 +442,13 @@ export const FOKUSVIRTA_PARIISI = {
        * juuri Louvren Salon oli se ovi, jonka nämä maalarit kiersivät.
        */
       id: 'impressionistit',
+      kysymykset: [
+        'Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?',
+        'Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?',
+      ],
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
       otsikko: 'Nimi, joka oli alun perin pilkkaa',
-      teksti: 'Kun sinä kävelit Pariisissa, ranskalaista taide-elämää '
+      teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
         + '1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta '
@@ -1363,11 +1375,11 @@ export const FOKUSVIRTA_PARIISI = {
           lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
         },
         {
-          tiedosto: 'Denis Vrain-Lucas.jpg',
-          lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
-          selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
-            + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
-          lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+          tiedosto: 'Pascal à Galileo.jpg',
+          lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
+          selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
+            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
+          lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
         },
       ],
       kysymykset: [

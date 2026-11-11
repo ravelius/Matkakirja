@@ -1,3 +1,5 @@
+**JÄÄDYTETTY 9.11.2026 klo 23.08 (omistajan kortti "Kyllä, jäädytetään"); takaisin vain omistajan sanalla. Raamattu 7.39.**
+
 # Asemataulu: speksi (ainoa)
 
 TÄMÄ ON ASEMATAULUN AINOA SPEKSI (omistaja 19.10.2026 klo 19.51: "asemataulu pitää olla yksi tarkkaan speksattu työnkulku jotta

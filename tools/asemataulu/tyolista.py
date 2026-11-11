@@ -13,6 +13,14 @@ Käyttö (python3 -I, vain stdlib):
   päivittää rivin ts:n ja poistaa rivin vahti-kentän. --juna N lisää saman tekstin junan N Työn alle (juna.py lisaa).
 - valmis: tila valmis, edistys 5, valmistui = tänään. --juna N siirtää junan N Työn alla -kohdan Valmiinaan (juna.py valmis;
   kohta haetaan tekstillä tai --juna-kohta-osalla).
+JONO (omistaja 10.11.2026 klo 07.40, "työlista jonona"): rivillä tekija (rooli, esim. NS) ja jarj (paikka roolin jonossa,
+pienin ensin; omistajan vikahavainnot 0). Kullakin tekijällä enintään yksi "työn alla"; muut "jonossa" tai "odottaa" (+ este).
+  … lisaa "OTSIKKO" --teksti "…" --tekija NS [--jarj N] [--karki K] [--nyt]   (--nyt = ohi jonon: nykyinen työ jonon kärkeen)
+  … jono "OTSIKKO" [--tekija X] [--jarj N] [--karki K] [--tila jonossa|odottaa|myöhemmin] [--este "syy"]
+  … tehty "OTSIKKO" "teksti"   (rooli: tila "tehty" = odottaa PT:n kuittausta; roolin seuraava jonossa-rivi työn alle)
+  … este  "OTSIKKO" "syy"      (tila "odottaa", este = syy; roolin seuraava jonossa-rivi työn alle)
+  … seuraava [TEKIJA]          (tulostaa roolittain: nyt, seuraavat 2; ei kirjoita)
+- valmis vapauttaa myös roolin: jos rivi oli työn alla, seuraava jonossa-rivi nousee työn alle.
 - OTSIKKO löytyy tarkasti tai yksikäsitteisellä osamerkkijonolla (isoilla/pienillä ei väliä); muuten virhe ja ehdokkaat.
 Junavaihe ajetaan ensin: jos juna.py hylkää, työlistaan ei kirjoiteta mitään. Ylätason ts päivitetään nykyhetkeen.
 Tallennus: .tmp + os.replace + copymode, tarkistus ennen tallennusta. Paluukoodi 0 = ok, 1 = hylätty, 2 = käyttövirhe.
@@ -90,7 +98,53 @@ def tarkista(tl):
             virheet.append("%s: edistys pitää olla 0–5" % r["otsikko"][:50])
         if not isinstance(r.get("tila", ""), str):
             virheet.append("%s: tila pitää olla teksti" % r["otsikko"][:50])
+        if r.get("jarj") is not None and (isinstance(r.get("jarj"), bool) or not isinstance(r.get("jarj"), (int, float))):
+            virheet.append("%s: jarj pitää olla luku" % r["otsikko"][:50])
+    tyossa = {}
+    for r in tl["rivit"]:
+        if isinstance(r, dict) and r.get("tekija") and str(r.get("tila", "")) == "työn alla":
+            tyossa.setdefault(str(r["tekija"]), []).append(str(r.get("otsikko", ""))[:40])
+    for t, o in sorted(tyossa.items()):
+        if len(o) > 1:
+            virheet.append("tekijällä %s on %d työn alla -riviä (enintään 1): %s" % (t, len(o), " | ".join(o)))
     return virheet
+
+
+def jarj_avain(r):
+    j = r.get("jarj")
+    return (j if isinstance(j, (int, float)) and not isinstance(j, bool) else 9999, -(r.get("ts") or 0))
+
+
+def seuraava_tyon_alle(tl, tekija, nyt):
+    """Nostaa tekijän pienimmän jarj:n jonossa-rivin työn alle (jos tekijällä ei jo ole). Palauttaa rivin tai None."""
+    if not tekija:
+        return None
+    rivit = [r for r in tl["rivit"] if isinstance(r, dict) and r.get("tekija") == tekija]
+    if any(str(r.get("tila", "")) == "työn alla" for r in rivit):
+        return None
+    jono = sorted((r for r in rivit if str(r.get("tila", "")) == "jonossa"), key=jarj_avain)
+    if not jono:
+        return None
+    jono[0]["tila"] = "työn alla"
+    jono[0]["ts"] = nyt
+    jono[0].pop("vahti", None)
+    return jono[0]
+
+
+def tulosta_jonot(tl, tekija=None):
+    tekijat = sorted({str(r["tekija"]) for r in tl["rivit"] if isinstance(r, dict) and r.get("tekija")})
+    for t in tekijat:
+        if tekija and avain(t) != avain(tekija):
+            continue
+        rivit = [r for r in tl["rivit"] if isinstance(r, dict) and r.get("tekija") == t]
+        nyt = [r for r in rivit if str(r.get("tila", "")) == "työn alla"]
+        jono = sorted((r for r in rivit if str(r.get("tila", "")) == "jonossa"), key=jarj_avain)
+        odottaa = [r for r in rivit if str(r.get("tila", "")) in ("odottaa", "tehty")]
+        print("%s: NYT %s" % (t, nyt[0]["otsikko"][:70] if nyt else "– (ei työtä)"))
+        for r in jono[:2]:
+            print("    seuraava [%s] %s" % (r.get("jarj", "?"), r["otsikko"][:70]))
+        for r in odottaa[:3]:
+            print("    %s: %s%s" % (r.get("tila"), r["otsikko"][:60], (" (" + str(r.get("este"))[:50] + ")") if r.get("este") else ""))
 
 
 def etsi_rivi(tl, haku):
@@ -155,12 +209,29 @@ def toiminta(args):
     nyt_s = time.time()
     nyt = int(nyt_s * 1000)
 
+    if args.komento == "seuraava":
+        tulosta_jonot(tl, args.tekija)
+        return 0
     if args.komento == "lisaa":
         otsikko = " ".join(args.otsikko.split())
         if any(avain(r.get("otsikko", "")) == avain(otsikko) and not str(r.get("tila", "")).lower().startswith("valmis")
                for r in tl["rivit"] if isinstance(r, dict)):
             raise Virhe("rivi '%s' on jo työlistalla; käytä komentoa tilanne" % otsikko)
         rivi = {"otsikko": otsikko, "teksti": args.teksti.strip(), "lisa": args.lisa or "", "edistys": 1, "tila": "työn alla"}
+        if args.tekija:
+            rivi["tekija"] = args.tekija
+            if args.karki:
+                rivi["karki"] = args.karki
+            tyossa = [r for r in tl["rivit"] if isinstance(r, dict) and r.get("tekija") == args.tekija and str(r.get("tila", "")) == "työn alla"]
+            if args.nyt:
+                for r in tyossa:
+                    r["tila"] = "jonossa"
+                    r["jarj"] = 0
+                rivi["jarj"] = args.jarj if args.jarj is not None else 0
+            else:
+                rivi["jarj"] = args.jarj if args.jarj is not None else 100
+                if tyossa:
+                    rivi["tila"] = "jonossa"
         if args.tilanne:
             rivi["tilanne"] = "%s: %s" % (aikaleima(nyt_s), " ".join(args.tilanne.split()))
         rivi["ts"] = nyt
@@ -178,14 +249,47 @@ def toiminta(args):
             if args.edistys is not None:
                 rivi["edistys"] = args.edistys
             if str(rivi.get("tila", "")).lower().startswith(("pidossa", "odottaa")):
-                rivi["tila"] = "työn alla"
+                muu = rivi.get("tekija") and any(r is not rivi and r.get("tekija") == rivi.get("tekija") and str(r.get("tila", "")) == "työn alla"
+                                                  for r in tl["rivit"] if isinstance(r, dict))
+                rivi["tila"] = "jonossa" if muu else "työn alla"
+                rivi.pop("este", None)
+        elif args.komento in ("tehty", "este"):
+            oli_tyossa = str(rivi.get("tila", "")) == "työn alla"
+            rivi["tilanne"] = uusi_tilanne(rivi, args.teksti, nyt_s)
+            if args.komento == "tehty":
+                rivi["tila"] = "tehty"
+                rivi["edistys"] = 4
+            else:
+                rivi["tila"] = "odottaa"
+                rivi["este"] = " ".join(args.teksti.split())[:200]
+            if oli_tyossa:
+                seur = seuraava_tyon_alle(tl, rivi.get("tekija"), nyt)
+                if seur:
+                    print("SEURAAVA %s: %s" % (rivi.get("tekija"), seur["otsikko"]))
+        elif args.komento == "jono":
+            if args.tekija is not None:
+                rivi["tekija"] = args.tekija
+            if args.jarj is not None:
+                rivi["jarj"] = args.jarj
+            if args.karki is not None:
+                rivi["karki"] = args.karki
+            if args.este is not None:
+                rivi["este"] = args.este
+            if args.tila is not None:
+                rivi["tila"] = args.tila
         else:  # valmis
+            oli_tyossa = str(rivi.get("tila", "")) == "työn alla"
             if args.juna is not None:
                 junavaihe("valmis", args.juna, args.juna_kohta or args.teksti, kansio)
             rivi["tilanne"] = uusi_tilanne(rivi, args.teksti, nyt_s)
             rivi["tila"] = "valmis"
             rivi["edistys"] = 5
             rivi["valmistui"] = paiva(nyt_s)
+            rivi.pop("este", None)
+            if oli_tyossa:
+                seur = seuraava_tyon_alle(tl, rivi.get("tekija"), nyt)
+                if seur:
+                    print("SEURAAVA %s: %s" % (rivi.get("tekija"), seur["otsikko"]))
         rivi.pop("vahti", None)
         rivi["ts"] = nyt
     tl["ts"] = nyt
@@ -208,6 +312,25 @@ def main(argv):
     s.add_argument("--teksti", required=True)
     s.add_argument("--lisa")
     s.add_argument("--tilanne")
+    s.add_argument("--tekija")
+    s.add_argument("--jarj", type=int)
+    s.add_argument("--karki")
+    s.add_argument("--nyt", action="store_true")
+    s = sub.add_parser("jono")
+    s.add_argument("otsikko")
+    s.add_argument("--tekija")
+    s.add_argument("--jarj", type=int)
+    s.add_argument("--karki")
+    s.add_argument("--este")
+    s.add_argument("--tila", choices=("työn alla", "jonossa", "odottaa", "tehty", "myöhemmin"))
+    s = sub.add_parser("tehty")
+    s.add_argument("otsikko")
+    s.add_argument("teksti")
+    s = sub.add_parser("este")
+    s.add_argument("otsikko")
+    s.add_argument("teksti")
+    s = sub.add_parser("seuraava")
+    s.add_argument("tekija", nargs="?")
     s = sub.add_parser("tilanne")
     s.add_argument("otsikko")
     s.add_argument("teksti")

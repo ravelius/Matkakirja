@@ -18,9 +18,9 @@ tarkistetuista kohdista (pohja ja Raamatun kohdat), kuten Putki-osion kohdassa 1
   numeroituna listana (7.27; omistaja 21.10.2026 klo 17.28).
 - AINA: työ jatkuu kysymyksen ajan; jos odotus pysäyttäisi työn, edetään suosituksen mukaan muutettavissa asioissa
   (omistaja 21.10.2026 klo 17.22–17.25).
-- AINA lupa omistajalta: Lyria-musiikki (jokainen kutsu, 5.15), ElevenLabs yli 3 %:n rajan tai uusi ääni (5.1, 5.2),
+- AINA lupa omistajalta: Lyria-musiikki (jokainen kutsu, 5.15), ElevenLabs yli 3 %:n ajossa (5.1, 5.2; alle rajan KK päättää, myös uudet äänet),
   ostot (11.5).
-- EI lupaa: Codexin kuvat ja Tripo-mallit tarpeen mukaan (7.15), kertojan äänet hyväksytyillä äänillä (5.1),
+- EI lupaa: Codexin kuvat ja Tripo-mallit tarpeen mukaan (7.15), puheäänitykset alle 3 %:n ajossa KK:n luvalla (5.1),
   CC0-, CC BY- ja PD-lataukset (11.5), kaavan askeleet ja vihreät PR:t (7.27).
 - EI: omistajalle sisäisiä asioita (nollaukset, kuittaukset, mittausversiot), vain hänen päätöksensä, toimensa tai valmiit
   näkyvät asiat (7.31).

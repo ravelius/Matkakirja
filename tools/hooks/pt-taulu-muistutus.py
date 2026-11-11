@@ -172,7 +172,7 @@ def tyolistavanhat(d, sessio):
     vanhat = []
     valmiit = []
     for r in tl.get("rivit") or []:
-        if not isinstance(r, dict) or not re.search(r"työn alla|kesken|jonossa", str(r.get("tila", "")), re.I):
+        if not isinstance(r, dict) or not str(r.get("tila", "")) == "työn alla":  # jonomalli 10.11.: vain todella työn alla
             continue
         uusin = str(r.get("tilanne", "")).split("\n")[0]
         if re.search(r"\bvalmis\b|valmiina junassa|junassa 2\d\d \(TF", uusin, re.I) and not re.search(r"\bei valmis|kun .* valmis", uusin, re.I):

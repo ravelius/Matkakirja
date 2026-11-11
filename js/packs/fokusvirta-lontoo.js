@@ -322,6 +322,10 @@ export const FOKUSVIRTA_LONTOO = {
        * täky kertoo sen isoisän merkinnän kulmasta.
        */
       id: 'vuorovesi',
+      kysymykset: [
+        'Mitä mudlarkit etsivät Thamesin kivirannalta laskuveden aikaan?',
+        'Miksi Thamesin rannalla ei saa etsiä aarteita vapaasti?',
+      ],
       nappi: 'Ranta, joka paljastuu kahdesti päivässä',
       otsikko: 'Thamesin laskuvesiranta',
       teksti: 'Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole '
@@ -333,10 +337,11 @@ export const FOKUSVIRTA_LONTOO = {
         + 'etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan '
         + 'mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei '
         + 'silti ole vapaata riistaa: lupa on ostettava '
-        + 'satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, '
+        + 'satamaviranomaiselta, ja kun lupia oli kertynyt noin 5 000, '
         + 'myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, '
-        + 'mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta '
-        + 'vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, '
+        + 'mutta lupia jaetaan enintään 4 000. Arkeologisesti kiinnostavat '
+        + 'löydöt, kuten yli kolmesataa vuotta vanhat esineet, on '
+        + 'ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
       lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
         + '(GBR/luonto). Tarkistettu 1.9.2026.',
@@ -363,9 +368,9 @@ export const FOKUSVIRTA_LONTOO = {
         ],
         oikea: 1,
         fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla '
-          + 'saa etsiä vain satamaviranomaisen luvalla, ja yli '
-          + 'kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
-          + 'museolle.',
+          + 'saa etsiä vain satamaviranomaisen luvalla, ja arkeologisesti '
+          + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat '
+          + 'esineet, on ilmoitettava Lontoon museolle.',
       },
     },
     {
@@ -385,6 +390,10 @@ export const FOKUSVIRTA_LONTOO = {
        * vuosina, joina hän kulki Lontoon läpi.
        */
       id: 'hirvet',
+      kysymykset: [
+        'Miksi Richmond Parkin laumasta kaadetaan eläimiä joka talvi?',
+        'Miksi saksanhirven urosten karjunta kuuluu syksyllä puiston laidalle asti?',
+      ],
       nappi: 'Kuusisataa hirveä tiiliaidan sisällä',
       otsikko: 'Richmond Parkin lauma',
       teksti: 'Sumun ja kivihiilen kaupungissa on kulman takana toinen '
@@ -460,6 +469,10 @@ export const FOKUSVIRTA_LONTOO = {
        * arveluksi, joten sitä EI kerrota.
        */
       id: 'cheapside',
+      kysymykset: [
+        'Miten yksi pieni sinettikivi paljasti, milloin laatikko kätkettiin?',
+        'Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen?',
+      ],
       nappi: 'Laatikko, joka odotti kellarissa kolmesataa vuotta',
       otsikko: 'Cheapsiden kätkö',
       teksti: 'Isoisäsi sääntö sai Lontoossa todisteen — vain '
@@ -471,8 +484,8 @@ export const FOKUSVIRTA_LONTOO = {
         + 'ja kameoita. Kivet olivat ympäri maailmaa — smaragdi '
         + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
         + 'Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, '
-        + 'helmet Bahrainista. Oudoin esine on omenan kokoinen '
-        + 'kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka '
+        + 'helmet Bahrainista. Oudoin esine on kellonkuori, joka oli '
+        + 'koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka '
         + 'sisään oli sovitettu noin vuoden 1600 sveitsiläinen '
         + 'kellokoneisto. Yksi pieni sinettikivi kertoo, milloin '
         + 'laatikko pantiin maahan: siinä on Staffordin viscountin '
@@ -939,6 +952,20 @@ export const FOKUSVIRTA_LONTOO = {
           + 'paisunut osake romahtaa ja Exchange Alleyn kahvilat jäävät tyhjiksi.',
         lahde: 'William Hogarth 1721, Wikimedia Commons (CC0)',
       },
+      galleria: [
+        {
+          tiedosto: 'Jonathan\'s Coffee House or an Analysis of Change Alley With a Group of Characters from the Life - Inscribed to Jacob Henriques (BM 1868,0808.4311).jpg',
+          selite: 'Jonathan\'s-kahvilassa Exchange Alleyllä miehet kävivät kauppaa '
+            + 'osakkeilla ja puhuivat uutisista kahvikuppien ääressä.',
+          lahde: 'Jefferyes Hamett O\'Neale -teoksen mukaan 1763, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Garraway\'s Coffee House.jpg',
+          selite: 'Garraway\'s oli kahvila Exchange Alleyllä, jossa myytiin kahvia '
+            + 'ja teetä ja huutokaupattiin tavaroita.',
+          lahde: 'George Walter Thornbury, Old and New London 1873, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
         'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',

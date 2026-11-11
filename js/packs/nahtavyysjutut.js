@@ -2715,6 +2715,20 @@ export const NAHTAVYYSJUTUT = {
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
         + 'sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
         + 'nimi seisoo yhä Threadneedle Streetin kulmassa.',
+      kuvat: [
+        {
+          tiedosto: 'Allegorie op de neergang van de South Sea Company, RP-P-OB-18.742.jpg',
+          selite: 'Vuonna 1720 Etelämeren yhtiön osakkeet nousivat huimaan hintaan '
+            + 'ja romahtivat; moni menetti kaiken.',
+          lahde: 'Tuntematon tekijä n. 1750, Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'The Bubblers Medley, or a Sketch of the Times- Being Europe\'s Memorial for the Year 1720 (BM 1867,0309.729).jpg',
+          selite: 'Tämä pilkkapiirros vuodelta 1720 näyttää, miten ihmiset '
+            + 'hullaantuivat osakkeisiin ja uskoivat nopeaan rikastumiseen.',
+          lahde: 'Tuntematon tekijä 1720, British Museum, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Cheapsiden kätkö': {
@@ -2727,8 +2741,9 @@ export const NAHTAVYYSJUTUT = {
         + 'hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi '
         + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, '
         + 'lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. '
-        + 'Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli '
-        + 'koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 '
+        + 'Oudoin esine on kellonkuori, joka oli koverrettu yhdestä suuresta '
+        + 'kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin '
+        + 'vuoden 1600 '
         + 'sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin '
         + 'laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka '
         + 'hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon '
@@ -2754,9 +2769,11 @@ export const NAHTAVYYSJUTUT = {
         + 'pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan '
         + 'mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole '
         + 'vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia '
-        + 'oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin '
-        + 'uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa '
-        + 'vuotta vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, '
+        + 'oli kertynyt noin 5 000, myynti keskeytettiin vuonna 2022. Se '
+        + 'avattiin '
+        + 'uudelleen 2024, mutta lupia jaetaan enintään 4 000. Arkeologisesti '
+        + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat esineet, on '
+        + 'ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
       kuvat: [
         {
@@ -2792,6 +2809,15 @@ export const NAHTAVYYSJUTUT = {
         + '1577–1579 nostosillan torni korvattiin Nonsuch Housella, '
         + 'kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin '
         + 'julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.',
+      kuvat: [
+        {
+          tiedosto: '‘Old London Bridge - sketched on the spot’, William Alfred Delamotte - 30 March 1832.jpg',
+          selite: 'William Delamotte piirsi vanhan sillan maaliskuussa 1832, kun '
+            + 'sitä jo purettiin; uusi silta oli avattu viereen edellisenä '
+            + 'kesänä.',
+          lahde: 'William Alfred Delamotte 1832, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
@@ -2816,6 +2842,20 @@ export const NAHTAVYYSJUTUT = {
         + 'ensimmäisen generaattorin. Faraday ei osaa matematiikkaa juuri '
         + 'lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell yhtälöiksi '
         + 'vasta 1860-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Henry William Pickersgill (1782-1875) - Michael Faraday (1791–1867) - RIIC 0280 - Royal Institution.jpg',
+          selite: 'Michael Faraday oli tutkija Royal Institutionissa; vuonna 1831 '
+            + 'hän keksi, miten magneetilla saa aikaan sähköä.',
+          lahde: 'Henry William Pickersgill 1830, Royal Institution, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Michael Faraday lecturing at the Royal Institution; Prince A Wellcome V0013854.jpg',
+          selite: 'Faraday esitteli kokeitaan Royal Institutionin yleisöluennoilla, '
+            + 'joille tulivat kuuntelemaan niin lapset kuin prinssitkin.',
+          lahde: 'Alexander Blaikleyn maalauksen mukaan 1856, Wellcome Collection, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Fleming 1928': {
       nosto: 'hetki-fleming-malja-1928',
@@ -2834,6 +2874,20 @@ export const NAHTAVYYSJUTUT = {
         + 'ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja '
         + 'Ernst Chainin ryhmä Oxfordissa tekee siitä lääkkeen 1940-luvun alussa, '
         + 'ja kolmikko jakaa lääketieteen Nobelin 1945.',
+      kuvat: [
+        {
+          tiedosto: 'Professor Alexander Fleming at work in his laboratory at St Mary\'s Hospital, London, during the Second World War. D17801.jpg',
+          selite: 'Alexander Fleming työskenteli St Mary\'sin sairaalassa, jossa hän '
+            + 'huomasi vuonna 1928 homeen tappavan bakteereja.',
+          lahde: 'Ministry of Information Photo Division, Imperial War Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'First page of Alexander Fleming\'s paper on penicillin Wellcome L0007150.jpg',
+          selite: 'Tässä on Flemingin vuoden 1929 artikkelin ensimmäinen sivu, '
+            + 'jossa hän kertoi penisilliinistä ensimmäistä kertaa.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
     },
     'Tunneli 1827': {
       nosto: 'hetki-brunel-thames-tunnel-1827',
@@ -2842,9 +2896,11 @@ export const NAHTAVYYSJUTUT = {
         + 'kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa '
         + 'toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: '
         + 'kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, '
-        + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on '
-        + 'kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit '
-        + 'muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom '
+        + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun kehyksen '
+        + 'lokerot on kaivettu tyhjiksi, ruuvit työntävät sen kehyksen '
+        + 'eteenpäin; kehyksiä siirretään vuorotellen, jotta osa niistä tukee '
+        + 'maata koko ajan, ja muurarit muuraavat perässä. Työmaata johtaa '
+        + 'Marcin poika Isambard Kingdom '
         + 'Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. '
         + 'Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen '
         + 'jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet '
@@ -2853,6 +2909,20 @@ export const NAHTAVYYSJUTUT = {
         + 'reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
         + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta 25. '
         + 'maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen alittajana.',
+      kuvat: [
+        {
+          tiedosto: 'The Thames Tunnel (BM 1880,1113.1690).jpg',
+          selite: 'Tämä vanha mainos näyttää tunnelin joen alla; sisään pääsi '
+            + 'tutustumaan yhdellä shillingillä.',
+          lahde: 'Teape & Son 1843, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Penny Magazine 1832 341 Shield used in the Excavation of the Thames Tunnel.jpg',
+          selite: 'Tämä rautakilpi suojasi kaivajia, kun Thamesin alle tehtiin '
+            + 'tunnelia vuosina 1825–1843.',
+          lahde: 'Penny Magazine 1832, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Palo 1666': {
       nosto: 'hetki-lontoon-palo-1666',
@@ -2868,9 +2938,24 @@ export const NAHTAVYYSJUTUT = {
         + 'kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina '
         + 'tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
         + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut '
-        + 'kirjakauppiaiden varastot palavat. Keskiviikkona tuuli laantuu. Palo '
+        + 'kirjakauppiaiden varastot palavat. Tiistain ja keskiviikon välisenä '
+        + 'yönä tuuli laantuu. Palo '
         + 'tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain '
         + 'kourallinen — luku, jota epäillään yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Great Fire London.jpg',
+          selite: 'Vuonna 1666 tuli levisi puutaloista toiseen ja poltti suuren '
+            + 'osan vanhasta Lontoosta.',
+          lahde: 'Tuntematon hollantilainen taidemaalari n. 1675, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'The Great Fire of London, with Ludgate and Old St. Paul\'s.JPG',
+          selite: 'Palon aikana liekit nousivat vanhan Pyhän Paavalin katedraalin '
+            + 'ja Ludgaten portin ympärillä, ja katedraali tuhoutui.',
+          lahde: 'Tuntematon hollantilainen taidemaalari n. 1670, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Globe 1599': {
       nosto: 'hetki-shakespeare-globe-1599',
@@ -2883,13 +2968,29 @@ export const NAHTAVYYSJUTUT = {
         + 'vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää '
         + 'rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja '
         + 'William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. '
-        + 'Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä '
-        + 'Julius Caesarin ja lopuksi tanssin; se on ensimmäinen varma tieto '
-        + 'Globen esityksestä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja '
+        + 'Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä joen '
+        + 'etelärannan olkikattoisessa talossa Julius Caesarin ja lopuksi '
+        + 'tanssin; talo on lähes varmasti Globe, ja tieto on vanhimpia sen '
+        + 'esityksistä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja '
         + 'Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. '
         + 'Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken '
         + 'Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan '
         + 'oluella.',
+      kuvat: [
+        {
+          tiedosto: 'The Globe Theatre from the Long Antwerp View of London.jpg',
+          selite: 'Vuoden 1616 kaiverruksessa Globe seisoo Thamesin etelärannalla '
+            + 'lippu katollaan; piirtäjä teki lähes pyöreästä puuteatterista '
+            + 'kulmikkaan.',
+          lahde: 'Claes Jansz. Visscher 1616, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Wenceslaus-Hollar-The-second-Globe-playhouse-detail.png',
+          selite: 'Hollar luonnosteli toisen Globen vähän ennen kuin se purettiin '
+            + '1644; sen jälkeen teatteria ei enää ollut.',
+          lahde: 'Wenceslaus Hollar 1640-luku, Wikimedia Commons (PD)',
+        },
+      ],
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -2936,6 +3037,28 @@ export const NAHTAVYYSJUTUT = {
         + 'ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien '
         + 'lahjonnan, ja valtiovarainministeri John Aislabie erotettiin '
         + 'alahuoneesta ja suljettiin Toweriin.',
+      kuvat: [
+        {
+          tiedosto: 'William Hogarth, The South Sea Scheme, 1721, NGA 30435.jpg',
+          lyhyt: 'Hogarthin pilakuva vuodelta 1721 kuvaa Etelämeren-kuplan uhreja karusellissa kohti tuhoa.',
+          selite: 'William Hogarthin pilakuva Etelämeren-kuplasta (1721) kuvaa '
+            + 'keinottelijoita ratsastamassa karusellissa kohti perikatoa, kun '
+            + 'paisunut osake romahtaa ja Exchange Alleyn kahvilat jäävät tyhjiksi.',
+          lahde: 'William Hogarth 1721, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Jonathan\'s Coffee House or an Analysis of Change Alley With a Group of Characters from the Life - Inscribed to Jacob Henriques (BM 1868,0808.4311).jpg',
+          selite: 'Jonathan\'s-kahvilassa Exchange Alleyllä miehet kävivät kauppaa '
+            + 'osakkeilla ja puhuivat uutisista kahvikuppien ääressä.',
+          lahde: 'Jefferyes Hamett O\'Neale -teoksen mukaan 1763, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Garraway\'s Coffee House.jpg',
+          selite: 'Garraway\'s oli kahvila Exchange Alleyllä, jossa myytiin kahvia '
+            + 'ja teetä ja huutokaupattiin tavaroita.',
+          lahde: 'George Walter Thornbury, Old and New London 1873, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Canaletto Lontoossa': {
@@ -3100,6 +3223,466 @@ export const NAHTAVYYSJUTUT = {
             + 'julkinen taideteos, ja sen ympäri kiertyy maailman pisin '
             + 'tunneliliukumäki.',
           lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
+     * ennen striimatun tietokortin. Isoisän "kadonnut maailma" -sävy. Kuvat Wikimedia Commonsista (pysyvä lupa).
+     */
+    'Westminster Abbey': {
+      aika: '1245–1745',
+      teksti: 'Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard '
+          + 'Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa '
+          + '1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm '
+          + 'Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki '
+          + 'Englannin hallitsijat on kruunattu täällä.'
+        + '\n\n'
+        + 'Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki '
+          + 'Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, '
+          + 'kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta '
+          + '1745.'
+        + '\n\n'
+        + 'Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista '
+          + 'ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. '
+          + 'Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. '
+          + 'Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.',
+      kuvat: [
+        {
+          tiedosto: 'Westminster Abbey west front March 2015.jpg',
+          lyhyt: 'Westminster Abbeyn länsitornit valmistuivat vasta 1745.',
+          selite: 'Westminster Abbeyn länsijulkisivu ja Nicholas Hawksmoorin tornit, jotka '
+            + 'valmistuivat 1745.',
+          lahde: 'Prioryman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Thomas Medland - Westminster Abbey - B1977.14.16401 - Yale Center for British Art.jpg',
+          lyhyt: 'Westminster Abbey pohjoisesta 1790-luvulla.',
+          selite: 'Thomas Medlandin kaiverrus Westminster Abbeysta pohjoisen puolelta '
+            + '1790-luvulla, kun kirkon edustalla oli vielä vanha kaupunginosa.',
+          lahde: 'Thomas Medland, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Westminsterin palatsi': {
+      aika: '1840–1870',
+      teksti: 'Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja '
+          + 'palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui '
+          + 'vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen '
+          + 'kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.'
+        + '\n\n'
+        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, '
+          + 'joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat '
+          + 'liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat '
+          + 'tuhannet ihmiset, myös taidemaalari William Turner.'
+        + '\n\n'
+        + 'Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja '
+          + 'sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät '
+          + 'noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää '
+          + 'alakerran krypta.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of Westminster seen from the north bank of the Thames, London.jpg',
+          lyhyt: 'Westminsterin palatsi rakennettiin uudelleen vuoden 1834 palon jälkeen.',
+          selite: 'Westminsterin palatsi Thamesin pohjoisrannalta; nykyinen palatsi '
+            + 'rakennettiin vuoden 1834 palon jälkeen.',
+          lahde: 'Christian David, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Print of Houses of Parliament before 1834 Fire.jpg',
+          lyhyt: 'Vanha parlamenttitalo ennen vuoden 1834 paloa.',
+          selite: 'Vanhan Westminsterin palatsin parlamenttirakennukset ennen lokakuun 1834 '
+            + 'tulipaloa.',
+          lahde: 'J. Shury & Son, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Westminster Bridge': {
+      aika: '1862',
+      teksti: 'Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja '
+          + 'Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja '
+          + 'he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge '
+          + 'avattiin silti 1750.'
+        + '\n\n'
+        + 'Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti '
+          + 'sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin '
+          + 'aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset '
+          + 'pettivät joen pohjassa.'
+        + '\n\n'
+        + 'Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi '
+          + 'kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin '
+          + 'toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.',
+      kuvat: [
+        {
+          tiedosto: 'At London 2025 569 - Westminster Bridge with Palace of Westminster.jpg',
+          lyhyt: 'Nykyinen Westminster Bridge avattiin 1862.',
+          selite: 'Westminster Bridge ja Westminsterin palatsi; nykyinen valurautainen silta '
+            + 'avattiin 1862.',
+          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
+          lyhyt: 'Canaletto maalasi ensimmäisen Westminster Bridgen 1747.',
+          selite: 'Canaletton maalaus 1747: Lontoon pormestarin juhlakulkue veneillä Thamesilla '
+            + 'uuden kivisillan luona.',
+          lahde: 'Canaletto, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cutty Sark': {
+      aika: '1869',
+      teksti: 'Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi '
+          + 'teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon '
+          + 'ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. '
+          + 'Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä '
+          + 'paidassa, skotiksi cutty sark.'
+        + '\n\n'
+        + 'Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan '
+          + 'kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet '
+          + 'eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty '
+          + 'Sark kuljetti sen jälkeen villaa Australiasta.'
+        + '\n\n'
+        + 'Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella '
+          + 'nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin '
+          + 'kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa '
+          + 'syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.',
+      kuvat: [
+        {
+          tiedosto: 'Cutty Sark (16719233476).jpg',
+          lyhyt: 'Cutty Sark on ollut Greenwichin kuivatelakalla vuodesta 1954.',
+          selite: 'Teeklipperi Cutty Sark kuivatelakalla Greenwichissä.',
+          lahde: 'Krzysztof Belczyński, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Cutty Sark (ship, 1869) - SLV H91.250-164.jpg',
+          lyhyt: 'Cutty Sark täysissä purjeissa.',
+          selite: 'Cutty Sark täysissä purjeissa merellä aikana, jolloin se purjehti vielä '
+            + 'rahtilaivana.',
+          lahde: 'Allan C. Green, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lontoon Tower': {
+      aika: '1078',
+      teksti: 'Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri '
+          + 'valloitettua Lontoota kurissa. Torni oli kuninkaan linna, vankila, '
+          + 'asevarasto ja rahapaja, ja muurien sisällä säilytetään yhä kruununjalokiviä.'
+        + '\n\n'
+        + 'Towerissa oli myös kuninkaallinen eläintarha yli 600 vuoden ajan. Henrik III '
+          + 'sai 1250-luvulla lahjaksi jääkarhun, joka kalasti Thamesissa ketjuun '
+          + 'kytkettynä, ja Ranskan kuninkaalta norsun. Viimeiset eläimet siirrettiin '
+          + 'Lontoon eläintarhaan 1830-luvulla.'
+        + '\n\n'
+        + 'Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn '
+          + '1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään '
+          + 'kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit '
+          + 'lähtevät.',
+      kuvat: [
+        {
+          tiedosto: 'Tower of London viewed from the River Thames.jpg',
+          lyhyt: 'Valkoinen torni on seissyt Thamesin rannalla 1000-luvulta.',
+          selite: 'Lontoon Tower ja Valkoinen torni Thamesilta katsottuna.',
+          lahde: 'Bob Collowan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'William Woolnoth - The Tower of London - B1977.14.18641 - Yale Center for British Art.jpg',
+          lyhyt: 'Tower 1800-luvun alussa, ennen vallihaudan kuivattamista.',
+          selite: 'William Woolnothin kaiverrus Lontoon Towerista 1800-luvun alussa.',
+          lahde: 'William Woolnoth, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'British Museum': {
+      aika: '1753',
+      teksti: 'Lääkäri Hans Sloane keräsi elämänsä aikana yli 70 000 esinettä, kirjaa ja '
+          + 'kasvinäytettä. Hän testamenttasi ne kansakunnalle, ja 1753 perustettiin '
+          + 'British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se '
+          + 'avattiin 1759 vanhassa Montagu Housen kartanossa.'
+        + '\n\n'
+        + 'Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus '
+          + 'viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert '
+          + 'Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun '
+          + '1823–1852.'
+        + '\n\n'
+        + 'Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx '
+          + 'kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan '
+          + 'taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.',
+      kuvat: [
+        {
+          tiedosto: 'British Museum from NE 2 (cropped).JPG',
+          lyhyt: 'Robert Smirken pylväsjulkisivu valmistui 1852.',
+          selite: 'British Museumin kreikkalaistyylinen julkisivu, jonka suunnitteli Robert '
+            + 'Smirke.',
+          lahde: 'Ham, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Percy Carpenter (1820-1895) - Montagu House, South-East Corner and Gateway - Painting.59 - British Museum.jpg',
+          lyhyt: 'Montagu House, museon ensimmäinen koti, ennen purkamista.',
+          selite: 'Percy Carpenterin maalaus Montagu Housen kaakkoiskulmasta ja portista; '
+            + 'kartano purettiin uuden museorakennuksen tieltä.',
+          lahde: 'Percy Carpenter, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Natural History Museum': {
+      aika: '1873–1881',
+      teksti: 'Luonnontieteelliset kokoelmat kuuluivat ensin British Museumille, mutta tila '
+          + 'loppui kesken. Luonnontieteilijä Richard Owen halusi niille oman "luonnon '
+          + 'katedraalin", ja Alfred Waterhousen suunnittelema museo avattiin 1881.'
+        + '\n\n'
+        + 'Julkisivu on terrakottaa, koska se kesti Lontoon nokea paremmin kuin kivi. '
+          + 'Seiniin on muotoiltu satoja eläimiä ja kasveja: länsisiivessä elävät lajit, '
+          + 'itäsiivessä sukupuuttoon kuolleet.'
+        + '\n\n'
+        + 'Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota '
+          + 'kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin '
+          + '2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.',
+      kuvat: [
+        {
+          tiedosto: 'Natural History Museum London front facade 2025 dllu.jpg',
+          lyhyt: 'Alfred Waterhousen terrakottajulkisivu.',
+          selite: 'Natural History Museumin terrakottajulkisivu, jonka suunnitteli Alfred '
+            + 'Waterhouse.',
+          lahde: 'Daniel Lu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Construction of the 1862 International Exhibition Building at South Kensington (Scaffolding at Main Entrance), RP-F-2009-100.jpg',
+          lyhyt: 'Vuoden 1862 maailmannäyttelyn halli rakenteilla museon paikalla.',
+          selite: 'Vuoden 1862 maailmannäyttelyn rakennus rakenteilla South Kensingtonissa. '
+            + 'Halli purettiin 1864, ja sen paikalle nousi luonnontieteellinen museo.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victoria Memorial': {
+      aika: '1901–1924',
+      teksti: 'Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen '
+          + 'muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta '
+          + 'marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen '
+          + 'veisti Thomas Brock.'
+        + '\n\n'
+        + 'Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän '
+          + 'luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin '
+          + 'leveä juhlakulkutie Admiralty Archista palatsille.'
+        + '\n\n'
+        + 'Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni '
+          + 'Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, '
+          + 'jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan '
+          + '1924.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Memorial and Buckingham Palace.jpg',
+          lyhyt: 'Victoria Memorial ja Buckinghamin palatsin vuoden 1913 julkisivu.',
+          selite: 'Victoria Memorial Buckinghamin palatsin edessä; palatsin julkisivu '
+            + 'muurattiin uudelleen 1913.',
+          lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Buckingham Palace (BM 1880,1113.2415).jpg',
+          lyhyt: 'Buckinghamin palatsi 1850-luvulla, ennen muistomerkkiä.',
+          selite: 'Buckinghamin palatsi The Mallilta 1850-luvulla: vanha julkisivu ennen '
+            + 'Victoria Memorialia ja vuoden 1913 uutta pintaa.',
+          lahde: 'Edmund Walker, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Royal Albert Hall': {
+      aika: '1867–1871',
+      teksti: 'Vuoden 1851 maailmannäyttely Hyde Parkissa tuotti voittoa, ja sillä '
+          + 'ostettiin prinssi Albertin aloitteesta maata Kensingtonista museoille ja '
+          + 'oppilaitoksille. Alueesta tuli Albertopolis. Albert kuoli 1861, ja '
+          + 'konserttisali nimettiin hänen mukaansa.'
+        + '\n\n'
+        + 'Kuningatar Viktoria avasi salin 1871, mutta oli niin liikuttunut, ettei '
+          + 'pystynyt puhumaan, joten puheen piti Walesin prinssi. Pyöreässä salissa '
+          + 'kaikui niin pahasti, että sanottiin säveltäjän kuulevan siellä teoksensa '
+          + 'kahdesti. Kaikua vaimennettiin 1969 katosta riippuvilla sienen muotoisilla '
+          + 'levyillä.'
+        + '\n\n'
+        + 'Promenadikonsertit soitettiin ennen Queen\'s Hallissa, kunnes pommi tuhosi '
+          + 'salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä '
+          + 'yhä joka kesä.',
+      kuvat: [
+        {
+          tiedosto: 'Royal Albert Hall, London - Nov 2012.jpg',
+          lyhyt: 'Royal Albert Hall avattiin 1871.',
+          selite: 'Royal Albert Hall iltahämärässä.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'RAH Grand Opening by Queen Victoria 29 March 1871 The Graphic.jpg',
+          lyhyt: 'Kuningatar Viktoria avasi salin 29. maaliskuuta 1871.',
+          selite: 'The Graphic -lehden kuva Royal Albert Hallin avajaisista 29. maaliskuuta '
+            + '1871.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Albert Memorial': {
+      aika: '1864–1876',
+      teksti: 'Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui '
+          + 'suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert '
+          + 'Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu '
+          + 'katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa.'
+        + '\n\n'
+        + 'Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. Se purettiin '
+          + 'ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. '
+          + 'Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin '
+          + 'veistos.'
+        + '\n\n'
+        + 'Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja '
+          + 'kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin '
+          + 'vasta korjauksessa, joka valmistui 1998.',
+      kuvat: [
+        {
+          tiedosto: 'Albert Memorial, Londres, Inglaterra, 2022-11-25, DD 93-95 HDR.jpg',
+          lyhyt: 'Kullattu Albert istuu goottilaisen katoksen alla.',
+          selite: 'Albert Memorial Kensington Gardensissa iltahämärässä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Crystal Palace from the northeast from Dickinson\'s Comprehensive Pictures of the Great Exhibition of 1851. 1854.jpg',
+          lyhyt: 'Kristallipalatsi Hyde Parkissa 1851.',
+          selite: 'Vuoden 1851 maailmannäyttelyn Kristallipalatsi Hyde Parkissa. Näyttely oli '
+            + 'prinssi Albertin aloite.',
+          lahde: 'Dickinson Brothers, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kensingtonin palatsi': {
+      aika: '1689',
+      teksti: 'Kuningas Vilhelm III:lla oli astma, eikä hän sietänyt Whitehallin palatsin '
+          + 'kosteaa jokiilmaa. Hän osti 1689 Kensingtonin kylästä maalaistalon, ja '
+          + 'Christopher Wren laajensi sen palatsiksi. Whitehallin valtava palatsi paloi '
+          + '1698, eikä sitä rakennettu uudelleen.'
+        + '\n\n'
+        + 'Prinsessa Viktoria syntyi Kensingtonin palatsissa 1819 ja kasvoi siellä '
+          + 'tiukan valvonnan alla. Kesäkuun 20. päivän aamuna 1837 hänet herätettiin '
+          + 'kertomalla, että hänestä oli tullut kuningatar.'
+        + '\n\n'
+        + 'Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana '
+          + 'asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen '
+          + 'asuntona.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Kensington, Londres, Inglaterra, 2022-11-25, DD 30.jpg',
+          lyhyt: 'Kensingtonin palatsi, kuningatar Viktorian syntymäkoti.',
+          selite: 'Kensingtonin palatsin punatiilinen julkisivu.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nathaniel Parr - A Front View of the Royal Palace of Kensington - B1977.14.17293 - Yale Center for British Art.jpg',
+          lyhyt: 'Kensingtonin palatsi 1700-luvulla.',
+          selite: 'Nathaniel Parrin kaiverrus Kensingtonin palatsin etujulkisivusta '
+            + '1700-luvulla.',
+          lahde: 'Nathaniel Parr, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Royal Observatory': {
+      aika: '1675',
+      teksti: 'Merellä laiva pystyi määrittämään leveysasteensa auringosta, mutta '
+          + 'pituusastetta ei osattu laskea, ja laivoja ajoi karille. Kaarle II perusti '
+          + '1675 Greenwichin observatorion ratkaisemaan ongelman tähtien avulla, ja '
+          + 'Christopher Wren suunnitteli sen.'
+        + '\n\n'
+        + 'Ongelman ratkaisi lopulta puuseppä John Harrison tarkoilla merikelloillaan. '
+          + 'Vuodesta 1833 observatorion katolla on pudotettu punainen aikapallo joka '
+          + 'päivä kello 13, jotta Thamesin laivat voivat asettaa kellonsa.'
+        + '\n\n'
+        + 'Vuonna 1884 Greenwichin nollameridiaani hyväksyttiin koko maailman '
+          + 'pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja '
+          + 'tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi '
+          + 'seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.',
+      kuvat: [
+        {
+          tiedosto: 'View of the Royal Observatory Greenwich from One Tree Hill in Greenwich Park, London, 20260719 0940 4508.jpg',
+          lyhyt: 'Observatorio Greenwichin puiston kukkulalla.',
+          selite: 'Greenwichin kuninkaallinen observatorio puiston kukkulalla.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Jan Griffier I (c.1652-1718) - View from One Tree Hill, The Queen\'s House and the Royal Observatory, Greenwich - BHC1817 - Royal Museums Greenwich.jpg',
+          lyhyt: 'Observatorio ja Queen\'s House 1700-luvun alussa.',
+          selite: 'Jan Griffierin maalaus Greenwichistä 1700-luvun alussa: observatorio, '
+            + 'Queen\'s House ja Thamesin laivat.',
+          lahde: 'Jan Griffier I, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Old Royal Naval College': {
+      aika: '1696–1751',
+      teksti: 'Tällä paikalla seisoi ennen Greenwichin palatsi, jossa Henrik VIII ja '
+          + 'Elisabet I syntyivät. Palatsi rapistui sisällissodan aikana ja purettiin. '
+          + 'Kuningatar Maria II perusti paikalle sairaalan ja kodin vanhoille ja '
+          + 'haavoittuneille merimiehille, ja Christopher Wren suunnitteli sen.'
+        + '\n\n'
+        + 'Wren jakoi rakennukset kahtia, jotta Queen\'s Housesta näkyisi edelleen '
+          + 'joelle. Ruokasalin katon maalasi James Thornhill, ja työ kesti 19 vuotta. '
+          + 'Amiraali Nelsonin ruumis oli Maalatussa salissa julkisesti nähtävillä '
+          + 'tammikuussa 1806.'
+        + '\n\n'
+        + 'Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen '
+          + 'rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.',
+      kuvat: [
+        {
+          tiedosto: 'Royal Naval College Greenwich view from the Thames.jpg',
+          lyhyt: 'Wrenin kaksi kupolia joelta katsottuna.',
+          selite: 'Old Royal Naval College Thamesilta; rakennukset jaettiin kahtia, jotta '
+            + 'Queen\'s Housesta näkyisi joelle.',
+          lahde: 'Dmitry Tonkonog, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Greenwich Hospital from the North Bank of the Thames.jpg',
+          lyhyt: 'Greenwichin merimiessairaala Canaletton maalaamana.',
+          selite: 'Canaletton maalaus Greenwichin merimiessairaalasta Thamesin pohjoisrannalta '
+            + '1700-luvulla.',
+          lahde: 'Canaletto, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Queen\'s House': {
+      aika: '1616–1635',
+      teksti: 'Inigo Jones suunnitteli Queen\'s Housen 1616 kuningas Jaakko I:n puolisolle '
+          + 'Anna Tanskalaiselle. Se oli ensimmäinen puhtaan klassinen rakennus '
+          + 'Englannissa aikana, jolloin hovin talot olivat vielä punatiilisiä '
+          + 'Tudor-rakennuksia. Anna kuoli 1619, ja talo jäi kesken.'
+        + '\n\n'
+        + 'Talo rakennettiin kahden puoliskon varaan, sillä sen läpi kulki Lontoosta '
+          + 'Doveriin vievä maantie. Puoliskot yhdisti silta, jonka alta vaunut ajoivat. '
+          + 'Talo valmistui 1635 Kaarle I:n puolisolle Henrietta Marialle.'
+        + '\n\n'
+        + 'Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat '
+          + 'kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa '
+          + 'on taidegalleria.',
+      kuvat: [
+        {
+          tiedosto: 'Queen\'s House. Greenwich, UK.jpg',
+          lyhyt: 'Inigo Jonesin Queen\'s House valmistui 1635.',
+          selite: 'Queen\'s House Greenwichissä, Englannin ensimmäinen puhtaan klassinen '
+            + 'rakennus.',
+          lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'A View of Greenwich and the Queen\'s House from the South-East by Hendrick Danckerts.jpg',
+          lyhyt: 'Maantie kulki vielä Queen\'s Housen läpi.',
+          selite: 'Hendrick Danckertsin maalaus Greenwichistä noin 1675: vanha maantie kulkee '
+            + 'Queen\'s Housen kahden puoliskon välistä.',
+          lahde: 'Hendrick Danckerts, Wikimedia Commons (Public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -4533,6 +5116,198 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     /*
+     * PIIRROSKARTAN 3D-MALLIEN JUTUT (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.23, KK-kortti "Kyllä"; KS): mallin kyltti
+     * avasi ennen striimatun tietokortin. Kuvat Wikimedia Commonsista (pysyvä lupa).
+     */
+    Invalidit: {
+      aika: '1671–1706',
+      teksti: 'Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita '
+          + 'ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin '
+          + 'kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille '
+          + 'kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat '
+          + 'ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin '
+          + '4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat '
+          + 'tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä '
+          + 'oli oma sairaala ja kirkko.'
+        + '\n\n'
+        + 'Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin '
+          + 'Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. '
+          + 'Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui '
+          + 'Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia '
+          + 'ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista.'
+        + '\n\n'
+        + 'Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, '
+          + 'ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin '
+          + 'punaisesta kvartsiitista, joka louhittiin Äänisjärven rannalta '
+          + 'Karjalasta; keisari siirrettiin siihen 1861. Tuhansien '
+          + 'veteraanien kodista on jäljellä enää pieni hoitolaitos, ja '
+          + 'käytävillä kulkevat nyt armeijamuseon kävijät.',
+      kuvat: [
+        {
+          tiedosto: 'Hôtel des Invalides, North View, Paris 7e 140402 1.jpg',
+          lyhyt: 'Les Invalides rakennettiin Ludvig XIV:n sotaveteraanien kodiksi; kupolin alla lepää Napoleon.',
+          selite: 'Les Invalides rakennettiin alun perin sotaveteraanien kodiksi, '
+            + 'ja nykyään siellä on sotamuseo.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Tomb of Napoleon by Auguste Gérardin 1896.jpg',
+          lyhyt: 'Tsaari Nikolai II Napoleonin haudalla 1896.',
+          selite: 'Venäjän tsaari Nikolai II vieraili Napoleonin haudalla '
+            + 'Pariisin-matkallaan 1896. Auguste Gérardinin piirros julkaistiin '
+            + 'Le Monde illustré -lehdessä.',
+          lahde: 'Auguste Gérardin 1896, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sainte-Chapelle': {
+      aika: '1242–1248',
+      teksti: 'Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta '
+          + 'Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen '
+          + 'orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen '
+          + 'siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin '
+          + 'maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle '
+          + 'muutamassa vuodessa ja vihittiin huhtikuussa 1248.'
+        + '\n\n'
+        + 'Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja '
+          + 'hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää '
+          + 'lasia: viidessätoista ikkunassa on yli tuhat raamatullista '
+          + 'kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä '
+          + '1200-luvulta.'
+        + '\n\n'
+        + 'Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli '
+          + 'tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja '
+          + 'asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla '
+          + 'kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista '
+          + 'ei ole jäljellä juuri muuta kuin tämä kappeli ja Conciergerien '
+          + 'salit; ympärillä on nyt oikeuspalatsi, ja orjantappurakruunu '
+          + 'säilytetään Notre-Damessa.',
+      kuvat: [
+        {
+          tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
+          lyhyt: 'Yläkappelin viidessätoista ikkunassa on yli tuhat raamatullista kohtausta.',
+          selite: 'Yläkappelin seinät ovat lähes pelkkää lasimaalausta; noin '
+            + 'kaksi kolmasosaa laseista on 1200-luvulta.',
+          lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Paris Sainte Chapelle East View 02.JPG',
+          lyhyt: 'Kappelin ohut torni nousee oikeuspalatsin rakennusten yli.',
+          selite: 'Sainte-Chapelle on keskiajan goottilainen palatsikappeli '
+            + 'Île de la Citén oikeuspalatsin sisäpihalla.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grand Palais': {
+      aika: '1897–1900',
+      teksti: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen '
+          + 'tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. '
+          + 'Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, '
+          + 'jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn '
+          + 'valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan '
+          + 'palatsin eteen.'
+        + '\n\n'
+        + 'Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta '
+          + '1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita '
+          + 'ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen '
+          + 'maailmansodan aikana palatsi oli sotilassairaala.'
+        + '\n\n'
+        + 'Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi '
+          + 'niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi '
+          + 'vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden '
+          + '2024 olympialaisissa lasikaton alla miekkailtiin.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Palais @ Paris (34729073762).jpg',
+          lyhyt: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn.',
+          selite: 'Grand Palais on lasi- ja teräskattoinen näyttelypalatsi, '
+            + 'joka rakennettiin vuoden 1900 maailmannäyttelyyn.',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Grand Palais - PA00088877 - Bonhams 2013 - Vue d\'ensemble - 007.jpg',
+          lyhyt: 'Lasikaton alla on esitelty autoja vuodesta 1901.',
+          selite: 'Lasikaton alla on esitelty autoja vuodesta 1901; kuvassa '
+            + 'vanhojen autojen huutokauppa vuonna 2013.',
+          lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Petit Palais': {
+      aika: '1897–1900',
+      teksti: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn '
+          + 'Champs-Élysées’n tuntumaan, Grand Palais’ta vastapäätä. '
+          + 'Arkkitehti Charles Girault aloitti työn 10. lokakuuta 1897, ja '
+          + 'rakennus valmistui huhtikuussa 1900. Toisin kuin monet '
+          + 'näyttelyn rakennukset, sen oli alusta asti tarkoitus jäädä '
+          + 'pysyväksi taidemuseoksi.'
+        + '\n\n'
+        + 'Vuonna 1902 siitä tuli Pariisin kaupungin kuvataidemuseo. Samana '
+          + 'vuonna museolle tuli Dutuitin veljesten lahjoittama keskiajan ja '
+          + 'renessanssin teosten kokoelma. Julkisivun päätyä koristaa '
+          + 'Jean Antoine Injalbertin veistämä Pariisi muusien ympäröimänä.'
+        + '\n\n'
+        + 'Rakennuksen keskellä on puoliympyrän muotoinen pylväskäytävä, '
+          + 'joka avautuu puutarhaan. Sen pylväät ovat vaaleanpunaista '
+          + 'Vosgesien graniittia, ja koristeissa on kullattua pronssia. '
+          + 'Koristemaalaukset ja -veistokset valmistuivat vasta vuosina '
+          + '1903–1925, ja rakennus on ollut suojeltu historiallinen '
+          + 'monumentti vuodesta 1975.',
+      kuvat: [
+        {
+          tiedosto: 'Petit Palais, Paris 8th 003.JPG',
+          lyhyt: 'Petit Palais valmistui huhtikuussa 1900 maailmannäyttelyn rakennukseksi.',
+          selite: 'Petit Palais rakennettiin vuoden 1900 maailmannäyttelyyn ja '
+            + 'on sittemmin toiminut Pariisin kaupungin kuvataidemuseona.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tour Montparnasse': {
+      aika: '1969–1973',
+      teksti: 'Tornin paikalla seisoi vanha Montparnassen rautatieasema. '
+          + 'Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: '
+          + 'veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi '
+          + 'roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta '
+          + 'kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi '
+          + 'rakennettiin hieman etelämmäs.'
+        + '\n\n'
+        + 'Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja '
+          + '59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. '
+          + 'Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä '
+          + 'tyyliä, jossa koristeet karsittiin pois.'
+        + '\n\n'
+        + 'Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen '
+          + 'valmistumisen jälkeen keskustan uusien rakennusten korkeus '
+          + 'rajattiin 25 metriin ja reuna-alueilla 31–37 metriin, eikä '
+          + 'vastaavaa nostettu enää vanhaan '
+          + 'Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein '
+          + 'näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.',
+      kuvat: [
+        {
+          tiedosto: 'Train wreck at Montparnasse 1895.jpg',
+          lyhyt: 'Veturi aseman seinän läpi 22. lokakuuta 1895, tornin nykyisellä paikalla.',
+          selite: 'Granvillen juna ei pysähtynyt vanhan Montparnassen aseman '
+            + 'päätepysäkille 22. lokakuuta 1895, vaan veturi putosi seinän läpi '
+            + 'kadulle. Asema seisoi nykyisen tornin paikalla.',
+          lahde: 'Levy & fils 1895, Wikimedia Commons (public domain)',
+        },
+        {
+          tiedosto: 'Paris 75006 Jardin du Luxembourg - Tour Montparnasse.jpg',
+          lyhyt: 'Tour Montparnasse näkyy Luxembourgin puiston puiden yli.',
+          selite: 'Tour Montparnasse on vanhan Pariisin ainoa pilvenpiirtäjä; '
+            + 'se näkyy kauas, kuten tässä Luxembourgin puistosta.',
+          lahde: 'Russell Yarwood, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
      * KARSITTUJEN KARTTANOSTOJEN JUTUT (omistajan sääntö 2.9.2026, ks.
      * js/packs/maakartat.js kaupungin pariisi kohteet).
      *
@@ -4647,11 +5422,25 @@ export const NAHTAVYYSJUTUT = {
         + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
         + 'todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut '
         + 'aivan yhtä ilahtunut.',
+      kuvat: [
+        {
+          tiedosto: 'Pascal à Galileo.jpg',
+          selite: 'Vrain-Lucas väärensi tämän kirjeen, jossa yhdeksänvuotias Blaise '
+            + 'Pascal muka kirjoittaa Galileille vuonna 1633.',
+          lahde: 'Denis Vrain-Lucasin väärennös 1860-luvulta, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Charlemagne à Alcuin (Vrain-Lucas).jpg',
+          selite: 'Tämä "Kaarle Suuren kirje" on väärennös; oikeus tuomitsi '
+            + 'Vrain-Lucasin petoksesta vuonna 1870.',
+          lahde: 'Denis Vrain-Lucasin väärennös 1860-luvulta, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Impressionistit': {
       nosto: 'syvennys-pariisi-impressionistit',
-      teksti: 'Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä '
+      teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä '
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
         + 'näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. '
         + 'Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, '
@@ -4704,7 +5493,7 @@ export const NAHTAVYYSJUTUT = {
     // Kohdekartan nimi fokuskohteen mukaan (omistaja 31.10. 08.22, PT): kadonnut ihme, teksti syvennystarinan oma.
     'Tuileries\'n palatsi': {
       nosto: 'syvennys-pariisi-tuileriat',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli '
+      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
         + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
         + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '
@@ -4876,16 +5665,8 @@ export const NAHTAVYYSJUTUT = {
           + 'päiväyksen aikaan lapsi. Chasles piti kokoelmastaan kiinni '
           + 'vuosia, mutta väärentäjä tuomittiin helmikuussa 1870 kahdeksi '
           + 'vuodeksi vankeuteen.',
-      kuvat: [
-        {
-          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785.jpg',
-          lyhyt: 'Jalokivikauppiaat esittelevät kaulanauhaa kardinaalille, joka uskoo ostavansa kuningattarelle.',
-          selite: 'Jalokivikauppiaat esittelevät 647 timantin kaulanauhaa '
-            + 'kardinaali de Rohanille, joka uskoi ostavansa sen '
-            + 'kuningattaren puolesta.',
-          lahde: 'Matkakirjan havainnekuva: kaulanauha luovutetaan kardinaalille',
-        },
-      ],
+      // Kaulanauhajutun havainnekuva pois (KK 10.11.2026 12.24: kuva kuuluu vain kaulanauhajuttuun).
+      kuvat: [],
       lahde: 'Wikipedia',
     },
     /*
@@ -4911,6 +5692,20 @@ export const NAHTAVYYSJUTUT = {
         + '279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi '
         + 'linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. '
         + 'Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Le Chasteau de la Bastille de Paris, hors la Porte Sainct Antoine. G.285.jpg',
+          selite: 'Näin Bastiljin linnoitus kohosi Pariisin itälaidalla '
+            + '1600-luvulla; nykyään sen paikalla on aukio.',
+          lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'The Bastille in the first days of its demolition, by Hubert Robert.jpg',
+          selite: 'Heinäkuussa 1789 Bastiljia alettiin purkaa kivi kerrallaan; '
+            + 'maalari Hubert Robert näki työn läheltä.',
+          lahde: 'Hubert Robert 1789, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
@@ -4933,6 +5728,20 @@ export const NAHTAVYYSJUTUT = {
         + 'ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan '
         + 'Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
         + 'vuonna 1911 saa kemian palkinnon yksin.',
+      kuvat: [
+        {
+          tiedosto: 'Maria Skłodowska-Curie i Pierre Curie w laboratorium (1900).jpg',
+          selite: 'Marie ja Pierre Curie tekivät tutkimustaan vaatimattomassa '
+            + 'laboratoriossa ja löysivät kaksi uutta alkuainetta.',
+          lahde: 'Tuntematon valokuvaaja n. 1900, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Marie Curie c. 1898.jpg',
+          selite: 'Marie Curie löysi miehensä Pierren kanssa vuonna 1898 poloniumin '
+            + 'ja radiumin, joita kukaan ei ollut ennen tuntenut.',
+          lahde: 'Tuntematon valokuvaaja n. 1898, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Lavoisier 1780': {
       nosto: 'hetki-lavoisier-laboratorio-1780',
@@ -4952,6 +5761,15 @@ export const NAHTAVYYSJUTUT = {
         + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
         + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
         + 'vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+      kuvat: [
+        {
+          tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
+          selite: 'Lavoisier mittasi laboratoriossaan, paljonko ihminen kuluttaa '
+            + 'ilmaa hengittäessään; vaaka ja mittarit olivat hänen tärkeimmät '
+            + 'työkalunsa.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
     },
     'Pasteur 1862': {
       nosto: 'hetki-pasteur-pullot-1862',
@@ -4971,6 +5789,20 @@ export const NAHTAVYYSJUTUT = {
         + '1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
         + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny '
         + 'itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+      kuvat: [
+        {
+          tiedosto: 'Swan-necked flask used by Pasteur. Wellcome M0012521.jpg',
+          selite: 'Pasteurin joutsenkaulapullossa ilma pääsi sisään mutta pöly ei, '
+            + 'joten liemi pysyi pilaantumatta.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
+          selite: 'Suomalainen Albert Edelfelt maalasi Louis Pasteurin '
+            + 'laboratoriossaan 1885; pastörointi on nimetty Pasteurin mukaan.',
+          lahde: 'Albert Edelfelt 1885, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Torni 1888': {
       nosto: 'hetki-eiffel-torni-1888',
@@ -4990,6 +5822,20 @@ export const NAHTAVYYSJUTUT = {
         + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. '
         + 'Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, '
         + 'koska sen huipulle sopii radioantenni.',
+      kuvat: [
+        {
+          tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
+          selite: 'Marraskuussa 1888 Eiffel-torni oli vielä keskeneräinen '
+            + 'rautarunko, korkeampi kuin mikään Pariisissa ennen.',
+          lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Construction de la tour Eiffel, 7ème arrondissement, Paris. 14 septembre 1888, PH9114-12.jpg',
+          selite: 'Elokuun ja syyskuun 1888 kuvista näkee, paljonko torni kasvoi '
+            + 'kuukaudessa; se valmistui maailmannäyttelyyn 1889.',
+          lahde: 'Théophile Feau 1888, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
     },
     'Bastilji 1789': {
       nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
@@ -5008,9 +5854,25 @@ export const NAHTAVYYSJUTUT = {
         + 'sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet '
         + 'raahataan kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
         + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-        + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
-        + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja '
-        + 'siitä tulee trikolori.',
+        + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
+        + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
+        + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
+        + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
+        + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+      kuvat: [
+        {
+          tiedosto: 'Anonyme - Prise de la Bastille, le 14 juillet 1789 (P707-1) - P707-1 - Musée Carnavalet.jpg',
+          selite: 'Heinäkuun 14. päivänä 1789 pariisilaiset ryntäsivät Bastiljiin; '
+            + 'siitä tuli Ranskan vallankumouksen tunnetuin hetki.',
+          lahde: 'Tuntematon tekijä 1784–1794, Musée Carnavalet, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Jean-Baptiste Lallemand - La prise de la Bastille, le 14 juillet 1789 - P1718 - Musée Carnavalet.jpg',
+          selite: 'Maalauksessa väkijoukko hyökkää Bastiljiin, joka oli ollut '
+            + 'vuosisatoja kuninkaan vallan merkki.',
+          lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD)',
+        },
+      ],
     },
     'Lumière 1895': {
       nosto: 'hetki-lumiere-elokuva-1895',
@@ -5032,6 +5894,21 @@ export const NAHTAVYYSJUTUT = {
         + 'temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le '
         + 'Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva '
         + 'on.',
+      kuvat: [
+        {
+          tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',
+          selite: 'Tällaisella julisteella Lumièren veljekset kutsuivat ihmisiä '
+            + 'katsomaan liikkuvia kuvia, jotka olivat silloin ihme.',
+          lahde: 'Cinématographe Lumièren mainos 1895, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Plaque Lumière.jpg',
+          selite: 'Laatta Boulevard des Capucinesilla kertoo, että Lumièren '
+            + 'veljesten elokuvakone näytti täällä liikkuvia kuvia yleisölle '
+            + 'ensimmäisen kerran 28.12.1895.',
+          lahde: 'Tan 2009, Wikimedia Commons (PD)',
+        },
+      ],
     },
   },
   /*

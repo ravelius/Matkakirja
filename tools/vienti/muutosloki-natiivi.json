@@ -2,6 +2,31 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (224)",
+   "paiva": "2026-11-09",
+   "teksti": "Sisäinen koeversio: nähtävyyspalkissa selataan kaupungin nähtävyyksiä nuolilla, ja Pulun kysymykset tulevat nähtävyyden lähteistä. Seine virtaa Pariisin kartalla, ja juoksupelin alkulennon varjot näkyvät kauempaa. Ei muutoksia pelaajille."
+  },
+  {
+   "versio": "1.1 (223)",
+   "paiva": "2026-11-08",
+   "teksti": "Sisäinen koeversio: kartan nimet pysyvät paikoillaan liikkuessa ja nähtävyydet näkyvät ensin, nähtävyyttä napauttamalla pääsee sen esittelyyn, ja napa-alueet piirtyvät samalla paperisella merellä kuin muu kartta. Juoksupeli latautuu nopeammin. Ei muutoksia pelaajille."
+  },
+  {
+   "versio": "1.1 (222)",
+   "paiva": "2026-11-08",
+   "teksti": "Sisäinen koeversio: kuten 221, ja lisäksi kohokartta toisena kartan ulkoasuna; kytkin on valikon vieressä ja valinta muistetaan. Ei muutoksia pelaajille."
+  },
+  {
+   "versio": "1.1 (221)",
+   "paiva": "2026-11-08",
+   "teksti": "Sisäinen koeversio: Pariisin kartalle tulivat puut, lähialueen rakennukset ovat siistimpiä ja usva näkyy kevyempänä ilmaperspektiivinä. Juoksupelin kääntymisohje tulee pelaajan ensimmäiseen omaan käännökseen. Ei muutoksia pelaajille."
+  },
+  {
+   "versio": "1.1 (220)",
+   "paiva": "2026-11-07",
+   "teksti": "Sisäinen koeversio: Pariisin kartta vie vähemmän muistia, pelinappula piiloutuu usvan taakse, ja juoksupelin muuri ja kulkureitit on päivitetty. Ei muutoksia pelaajille."
+  },
+  {
    "versio": "1.1 (219)",
    "paiva": "2026-11-07",
    "teksti": "Sisäinen koeversio Pariisin ja Lontoon kartan vertailuun. Ei muutoksia pelaajille."

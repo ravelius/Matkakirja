@@ -3783,10 +3783,10 @@ export const MAA_KATEGORIAT = {
             + 'portaita pitkin etsimään savipiippuja ja astiansirpaleita. '
             + 'Etsijöitä sanotaan mudlarkeiksi. Ranta ei silti ole vapaata '
             + 'riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia '
-            + 'oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se '
+            + 'oli kertynyt noin 5 000, myynti keskeytettiin vuonna 2022. Se '
             + 'avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. '
-            + 'Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
-            + 'museolle.',
+            + 'Arkeologisesti kiinnostavat löydöt, kuten yli kolmesataa '
+            + 'vuotta vanhat esineet, on ilmoitettava Lontoon museolle.',
           lyhyt: 'Mudlarkeiksi kutsuttiin lontoolaisia, jotka etsivät Thamesin rannoilta myytävää tavaraa.',
           selite: 'Mudlarkeiksi kutsuttiin 1700- ja 1800-luvun lontoolaisia, '
             + 'jotka etsivät Thamesin rannoilta myytävää tavaraa, ja etsintä '

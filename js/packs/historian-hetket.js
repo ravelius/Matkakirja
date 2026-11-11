@@ -2099,6 +2099,10 @@ export const HISTORIAN_HETKET = [
       + 'Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin '
       + 'kanssa, ensimmäisenä naisena, ja vuonna 1911 saa kemian palkinnon '
       + 'yksin.',
+    kysymykset: [
+      'Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?',
+      'Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -2346,6 +2350,10 @@ export const HISTORIAN_HETKET = [
       + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
       + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
       + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+    kysymykset: [
+      'Miksi vaaka oli Lavoisierin laboratorion tärkein esine?',
+      'Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -2519,6 +2527,10 @@ export const HISTORIAN_HETKET = [
       + 'saa tasaista virtaa, ensimmäisen generaattorin. Faraday ei osaa '
       + 'matematiikkaa juuri lainkaan; hänen kenttäviivansa muuttaa James '
       + 'Clerk Maxwell yhtälöiksi vasta 1860-luvulla.',
+    kysymykset: [
+      'Mitä Faradaylle tapahtui ensimmäisen sähkömoottorin keksimisen jälkeen?',
+      'Miksi Faradayn kenttäviivat muuttuivat yhtälöiksi vasta 1860-luvulla?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -2603,6 +2615,10 @@ export const HISTORIAN_HETKET = [
       + 'kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, että '
       + 'näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
       + 'myöhemmin kirurgian ja rokotukset.',
+    kysymykset: [
+      'Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?',
+      'Miksi Pasteur kuljetti liemipullonsa vuorille asti?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -2859,6 +2875,10 @@ export const HISTORIAN_HETKET = [
       + 'keinoillaan. Vasta Howard Floreyn ja Ernst Chainin ryhmä Oxfordissa '
       + 'tekee siitä lääkkeen 1940-luvun alussa, ja kolmikko jakaa '
       + 'lääketieteen Nobelin 1945.',
+    kysymykset: [
+      'Miksi loman ajaksi jätetty malja ei päätynytkään roskiin?',
+      'Mistä homemehu sai lopulta nimensä penisilliini?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -3035,6 +3055,10 @@ export const HISTORIAN_HETKET = [
       + 'seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta '
       + '1889 maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
       + 'radioantenni.',
+    kysymykset: [
+      'Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?',
+      'Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -3110,9 +3134,11 @@ export const HISTORIAN_HETKET = [
       + 'kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa '
       + 'toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: '
       + 'kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, '
-      + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on '
-      + 'kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit '
-      + 'muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom '
+      + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun kehyksen '
+      + 'lokerot on kaivettu tyhjiksi, ruuvit työntävät sen kehyksen '
+      + 'eteenpäin; kehyksiä siirretään vuorotellen, jotta osa niistä tukee '
+      + 'maata koko ajan, ja muurarit muuraavat perässä. Työmaata johtaa '
+      + 'Marcin poika Isambard Kingdom '
       + 'Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. '
       + 'Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen '
       + 'jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet '
@@ -3122,6 +3148,10 @@ export const HISTORIAN_HETKET = [
       + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta '
       + '25. maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen '
       + 'alittajana.',
+    kysymykset: [
+      'Miten Brunelin tunnelikilpi suojasi kaivajia joen alla?',
+      'Mitä vaaroja kaivajat kohtasivat Thamesin pohjan alla?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -3683,9 +3713,14 @@ export const HISTORIAN_HETKET = [
       + 'parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli '
       + 'tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
       + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan '
-      + 'varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli '
-      + 'laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja '
+      + 'varastoidut kirjakauppiaiden varastot palavat. Tiistain ja '
+      + 'keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi 13 200 taloa '
+      + 'ja 87 kirkkoa, mutta kirjattuja '
       + 'kuolleita on vain kourallinen — luku, jota epäillään yhä.',
+    kysymykset: [
+      'Miksi leipomosta alkanut tuli levisi niin laajalle?',
+      'Miksi isoisä ei enää nähnyt Lontoon vanhaa puukaupunkia?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -3749,7 +3784,8 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 0,
       fakta: 'Palo alkoi Thomas Farrinerin leipomosta sunnuntaina 2. '
-        + 'syyskuuta; keskiviikkona tuuli laantui ja palo sammui.',
+        + 'syyskuuta; tiistain ja keskiviikon välisenä yönä tuuli laantui, '
+        + 'ja palo saatiin hallintaan.',
     },
   },
   /*
@@ -4046,12 +4082,17 @@ export const HISTORIAN_HETKET = [
       + 'yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat '
       + 'siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu '
       + 'noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta '
-      + 'nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on '
-      + 'ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä '
+      + 'nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin '
+      + 'ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on '
+      + 'vanhimpia sen esityksistä. Naisia ei näyttämöllä '
       + 'ole — Portian, Calpurnian ja Kleopatran roolit puhuvat '
       + 'äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. '
       + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; '
       + 'ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.',
+    kysymykset: [
+      'Miten Globen pihayleisö käyttäytyi näytelmän aikana?',
+      'Miten Globe-teatteri paloi kesken näytelmän vuonna 1613?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -4316,9 +4357,15 @@ export const HISTORIAN_HETKET = [
       + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
       + 'kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
       + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-      + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
-      + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja '
-      + 'siitä tulee trikolori.',
+      + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
+      + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
+      + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
+      + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
+      + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+    kysymykset: [
+      'Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?',
+      'Miten Ranskan sinivalkopunainen trikolori syntyi?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',
@@ -4582,6 +4629,10 @@ export const HISTORIAN_HETKET = [
       + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
       + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
       + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+    kysymykset: [
+      'Mitä Grand Cafén kellarissa näytettiin Lumièren veljesten ensimmäisessä maksullisessa näytöksessä?',
+      'Kuinka pitkiä ensimmäiset Pariisissa näytetyt elokuvat olivat?',
+    ],
     kuvat: [
       {
         rooli: 'lahi',

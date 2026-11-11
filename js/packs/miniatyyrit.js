@@ -144,11 +144,10 @@ export const MINIATYYRIT = {
     'Torni 1888': 'assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
     'Bastilji 1789': 'assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
     'Lumière 1895': 'assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
-    '72 nimeä': 'assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
+    // 72 nimeä ja Notre-Damen kukko ovat rakennustensa nostoja (KK 10.11.2026 12.24), eivät omia kohteita: piirrokset pois listalta.
     // Guimardin lasikattoinen Abbesses-édicule (Codex #1321, omistaja 30.10. 21.42: vanha väärää tyyliä);
     // uusi nimi -v2, ettei välimuisteihin jäänyt vanha kuva näy.
     'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
-    'Notre-Damen kukko': 'assets/kartat/miniatyyrit/pariisi-notre-damen-kukko.webp',
     'Pariisi soi': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
     'Paras patonki': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
     'Pariisin vuosisadat': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',

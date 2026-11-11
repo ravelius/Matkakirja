@@ -4,7 +4,7 @@
  *   node tools/tee-napakalotit.mjs --ne=<kansio> [--ulos=<kansio>]
  *        [--versio=2026-09-11b] [--koko=2048] [--koko-etela=4096]
  *        [--laatu=88] [--ylinaytto=2] [--kuiva]
- *        [--vain=pohjoinen|etela]
+ *        [--vain=pohjoinen|etela] [--tyyli=paperi|striimi]
  *
  * === MIKSI TÄMÄ ON OLEMASSA =========================================
  *
@@ -151,6 +151,63 @@ export const HAIVE_AST = 1.5;
  * mukana.
  */
 export const PAPERI_MITTA = 1;
+/*
+ * ======== STRIIMIN MEREN PAPERIKUVIO (PT 8.11.2026 klo 15.3x) =========
+ *
+ * KK mittasi beige-kalotin (9e98f55e5) etelästä: meren paperikuvio
+ * (kuitu, rae, laikka) kalotilla 0,2–0,4, laatoissa 1,0–1,6, ja kiekon
+ * reuna erottuu pehmeänä rajana. Mitattu syy (8.11.2026 klo 15.4x):
+ *
+ *  1. REUNAKAISTA 60–64° S oli kuvioton. Kaista liukuu laattojen z5-sävyyn,
+ *     ja pohjasarjan juliste päättyy 61,47° S:ään: laatan kuvio hiipuu jo
+ *     60,3→61,3° S, ja sen takana kohde on silotettu rajarivi. Kaistalla
+ *     kuvion voimakkuus oli 0,0 (10 km) koko kehän ympäri.
+ *  2. SISÄOSAN KUVIO OLI LIIAN HIENO. Paperi on kalotin pikseleissä
+ *     (1,63 km etelässä), laatoissa z5:n pikseleissä (2,45 km 60° S:ssa,
+ *     julisteen pienennöksenä). Pallonäkymässä ruudun pikseli on noin 3 km,
+ *     joten kalotin rae ja kuitu suodattuivat pois (ruudulla 0,4 vs 1,0).
+ *
+ * KORJAUS: meren paperi piirretään MERI_PAPERI_MITTA kertaa isompana ja
+ * MERI_PAPERI_VOIMA kertaa voimakkaampana (luvut sovitettu laattojen
+ * z5-riveihin 56–60° S samassa km-mittakaavassa: 10 km 1,43–1,67 vs 1,40,
+ * 30 km 1,71–1,93 vs 1,74), kuidut itä–länteen (meriPaperiKalotilla), ja reunakaistalla vain
+ * pohjasävy liukuu laattaan: meren paperi lisätään kohteen päälle, joten
+ * kuvio jatkuu kehälle asti. Maa ja jää ennallaan.
+ */
+export const MERI_PAPERI_MITTA = 1.5;
+export const MERI_PAPERI_VOIMA = 1.7;
+/**
+ * Puolet, joilla korjaus on päällä. Pohjoinen toimii PT:n mukaan (8.11.2026
+ * klo 15.3x), ja siellä kalotin pikseli (1,09 km) on laattojen z5-pikseliä
+ * (0,85 km 80° N:ssa) isompi, joten etelän luvut eivät sovi sinne sellaisenaan.
+ */
+export const MERI_PAPERI_PUOLET = Object.freeze(['etela']);
+/** Meren paperikohina (sama kaava kuin julisteen PAPERI-vaihe), skalaari ennen kanavakertoimia. */
+export function meriPaperi(gx, gy, mitta = MERI_PAPERI_MITTA, voima = MERI_PAPERI_VOIMA) {
+  const kuitu = fbm(KOHINA, gx / (52 * mitta), gy / (7 * mitta), 3) - 0.5;
+  const rae = KOHINA2(gx / (1.7 * mitta), gy / (1.7 * mitta)) - 0.5;
+  const laikka = fbm(KOHINA2, gx / (260 * mitta), gy / (260 * mitta), 3) - 0.5;
+  return (kuitu * 9 + rae * 11 + laikka * 16) * voima;
+}
+/**
+ * Meren paperi kalotin kuvapisteessä (gx, gy lopullisen kuvan pikseleinä,
+ * kuvan sivu `koko`). KUIDUT KULKEVAT ITÄ–LÄNTEEN kuten laatoissa:
+ * kohina luetaan napakoordinaateista (kaari leveyspiiriä pitkin, säde),
+ * ei kuvan akseleista, joissa kuitu olisi kehän sivuilla pystyssä ja
+ * vinossa. Kaaren sauma (θ = ±180°) häivytetään toiseen kenttään, jonka
+ * sauma on θ = 0; painot normitetaan, jotta voimakkuus ei notkahda.
+ */
+export function meriPaperiKalotilla(gx, gy, koko, mitta = MERI_PAPERI_MITTA, voima = MERI_PAPERI_VOIMA) {
+  const dx = gx - koko / 2; const dy = gy - koko / 2;
+  const sade = Math.hypot(dx, dy);
+  const th = Math.atan2(dx, -dy);
+  const n1 = meriPaperi(th * sade, sade, mitta, voima);
+  const n2 = th >= 0 ? n1 : meriPaperi((th + 2 * Math.PI) * sade, sade, mitta, voima);
+  const w1 = (1 + Math.cos(th)) / 2; const w2 = 1 - w1;
+  return (w1 * n1 + w2 * n2) / Math.hypot(w1, w2);
+}
+/** Paperin kanavakertoimet (piirto.js PAPERI: r 1,05, g 1, b 0,82). */
+const PAPERI_KANAVAT = [1.05, 1, 0.82];
 
 /*
  * ======== LIITOSSÄVY: KALOTIN MERI SOVITETAAN LAATTOIHIN ============
@@ -199,6 +256,12 @@ export const PAPERI_MITTA = 1;
  * ei vastaa, käytetään 11.9.2026 mitattuja varalukuja (LIITOS_VARA) ja
  * sanotaan se ääneen ajon lokissa.
  */
+/** Striimin reunakaista: kalotti liukuu laattojen paikalliseen sävyyn näin monta astetta kehältä (ks. REUNAKAISTA). */
+export const REUNAKAISTA_AST = 4;
+/** Pohjasarjan (julisteen) viimeinen leveysaste, jolla laatoissa on tietoa (ks. REUNAKAISTA). */
+export const TIETORAJA = Object.freeze({ pohjoinen: 84.0, etela: -61.47 });
+/** Rajarivin silotus pituussuunnassa (± astetta) tietorajan takana. */
+export const TIETORAJA_SILOTUS_AST = 4;
 /** Liitoskaista: näin monta astetta kalotin kehältä napaan päin. */
 export const LIITOS_KAISTA = 3;
 /** Laattataso, jolta kohdesävy luetaan (z6 = koko maailma 64 × 64 laattaa). */
@@ -213,6 +276,163 @@ export const LIITOS_VARA = Object.freeze({
   pohjoinen: Object.freeze([210.4, 200.1, 173.9]),
   etela: Object.freeze([198.8, 192.5, 173.9]),
 });
+
+/*
+ * ======== STRIIMITYYLI (OMISTAJAN PÄÄTÖS 8.11.2026 klo 10.34) =========
+ *
+ * *"Tavallisen kartan napa-alueet kuntoon molemmilla navoilla. Meri
+ * sininen napaan asti, Etelämanner samaan tyyliin kuin muu kartta, ei
+ * sumeaa häivevyötä."* (PT:n välittämänä.)
+ *
+ * Natiivipeli näyttää tavallisen kartan pohjan (sarja
+ * 2026-11-03-pohja-valitaso) striimin väreissä: jokainen laatan pikseli
+ * ajetaan ElavaTyyli.Varitan läpi (Matkakirja-natiivi,
+ * Assets/Matkakirja/Kartta/ElavaTyyli.cs). Vanha paperikalotti jäi sen
+ * päälle harmaanvalkeaksi kiekoksi (Natiivisepän selvitys 8.11.2026,
+ * proto-3d/_tyo/natiiviseppa/navat-koho/tavallinen/TULOS.md).
+ *
+ * KALOTTIA EI VOI AJAA VARITAN LÄPI PELISSÄ: Varita arvaa pikselin
+ * värin perusteella, onko se vettä, ja kalotin oma paletti osuu sen
+ * kynnyksille — meri ja jää laikuttuvat (Natiiviseppä kokeili). Tässä
+ * maa ja meri tiedetään vektorista, joten väritys tehdään täsmälleen:
+ *
+ *   MAA (myös Etelämantereen jää): Varitan maakaava sellaisenaan,
+ *     SMaa + (väri − MaaOletus). Jää pysyy vaaleana, koska sen
+ *     asteikko on paperia vaaleampi.
+ *   MERI (OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei, beige säilyy"):
+ *     kalotin paperimeri ankkuroidaan liitoskaistalla pohjalaattojen
+ *     paperimereen (ennen Varitaa), ja sitten JOKA meripikseli ajetaan
+ *     Varitan läpi kuten laattojen pikselit pelissä: avomeri (m < 180)
+ *     on Varitalle maata eli beige, matala rannikko (m 190–222) oliivi.
+ *     Näin kalotin meri on sama kuin laatoissa eikä navoille jää
+ *     oliivikiekkoa. (Versio 2026-11-08-striimi värjäsi koko meren
+ *     vesikaavalla oliiviksi; se oli NS:n ffc355105:n peili, peruttu.)
+ *
+ * Paperityyli (vanha, js/pallo.js:n verkkopeli) on ennallaan: --tyyli
+ * puuttuu tai on "paperi".
+ */
+export const STRIIMI = Object.freeze({
+  maa: Object.freeze([240, 222, 180]),
+  vesi: Object.freeze([169, 170, 147]),
+  tie: Object.freeze([200, 172, 136]),
+  meriOletus: Object.freeze([205, 206, 198]),
+  maaOletus: Object.freeze([232, 224, 192]),
+});
+/** Natiivipelin tavallisen kartan pohjasarja (KarttaKerrokset.SileaUrl). Tiedostojen y on XYZ (0 = pohjoinen). */
+export const POHJA_LAATAT = 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-11-03-pohja-valitaso/';
+/** Striimin liitossävyn taso: z6:ssa napojen rivit puuttuvat sarjasta, z5:ssä ne ovat. */
+export const STRIIMI_LAATTATASO = 5;
+/** Striimin näytteet pituusasteittain: vain meripisteet lasketaan, joten tiheämpi kuin paperilla. */
+export const STRIIMI_PITUUKSIA = 360;
+/**
+ * Striimin varasävyt (pohjalaatat z5 paperina ennen Varitaa, vektorin
+ * meripisteet liitoskaistalla, mitattu 8.11.2026 klo 15). Työnkulku ei
+ * vie kuvia varasävyllä.
+ */
+export const LIITOS_VARA_STRIIMI = Object.freeze({
+  pohjoinen: Object.freeze([193.5, 187.4, 168.4]),
+  etela: Object.freeze([179.2, 173.7, 155.8]),
+});
+
+const sile = (a, b, x) => {
+  const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
+  return t * t * (3 - 2 * t);
+};
+
+/**
+ * ElavaTyyli.VariPikseli (karkea, rel 1) yhdelle pikselille: sama kaava
+ * kuin pelissä, jotta liitossävy mitataan siitä, minkä pelaaja näkee.
+ */
+export function vedenOsuus(r0, g0, b0) {
+  const m = (r0 + g0 + b0) / 3; const rb = r0 - b0;
+  // Kuten TF 5d6967444 ja natiivi bffbbb29a (OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei, beige säilyy"):
+  // alaraja 180–190, joten avomeri (m < 180) on Varitalle maata eli beige. NS:n ffc355105 (140–150) peruttu.
+  return (1 - sile(26, 34, rb)) * sile(180, 190, m) * (1 - sile(222, 230, m));
+}
+
+export function varitaPikseli(r0, g0, b0) {
+  const m = (r0 + g0 + b0) / 3; const rb = r0 - b0;
+  const ve = vedenOsuus(r0, g0, b0);
+  const tie = (1 - ve) * sile(0.48, 0.58, rb / (m + 1)) * (1 - sile(150, 190, m));
+  const q = [r0, g0, b0];
+  return q.map((v, c) => {
+    const vesi = STRIIMI.vesi[c] + (v - STRIIMI.meriOletus[c]);
+    const maa = STRIIMI.maa[c] + (v - STRIIMI.maaOletus[c]);
+    const t = maa + (vesi - maa) * ve;
+    return Math.min(255, Math.max(0, Math.round(t + (STRIIMI.tie[c] - t) * tie)));
+  });
+}
+
+/**
+ * Varitan VESIKAAVA ilman Varitan arvausta: SVesi + (väri − MeriOletus).
+ *
+ * MITATTU 8.11.2026 (pohjalaatat z5, vektorin meripisteet): pelin Varita
+ * pitää vetenä vain pikselit, joiden keskiarvo on 180–222 (NS:n 140–150,
+ * ffc355105, peruttu omistajan päätöksellä 14.51: beige säilyy). Napojen
+ * syvä meri on laatoissa tummempaa (58–70° S noin 179/174/156, 84° N
+ * 182/175/156), joten Varita maalaa sen MAAN ruskeaksi (186/171/143):
+ * 58–65° S:ssa vain 1–10 meripistettä 360:stä on Varitalle vettä, 83° N
+ * 44/335. Siksi napojen ympärillä meri näkyy pelissä beigenä, ja se on
+ * omistajan päätöksellä oikein (14.51). Kalotin meri ajetaan nyt koko
+ * Varitan läpi (varitaPikseli), ei pelkän vesikaavan; vesiVarita jää
+ * vain vertailuun.
+ */
+export const STRIIMI_VESISIIRTO = Object.freeze(STRIIMI.vesi.map((v, c) => v - STRIIMI.meriOletus[c]));
+export const vesiVarita = (r, g, b) => [r, g, b].map((v, c) => Math.min(255, Math.max(0, v + STRIIMI_VESISIIRTO[c])));
+
+/**
+ * Pohjasarjan laatat Varitan jälkeen pisteittäin (bilineaarinen, Varita
+ * jokaiselle neljälle naapurille), kalotin kehän kaistalle esiladattuna.
+ * Palauttaa synkronisen näytteenottimen (lat, lon) → [r, g, b] | null.
+ */
+export async function reunanLaattasavy({
+  puoli, sharp, hae = fetch, juuri = POHJA_LAATAT, taso = STRIIMI_LAATTATASO, kaista = REUNAKAISTA_AST + 0.5,
+}) {
+  const k = NAPAKALOTTI[puoli];
+  const latA = k.reuna; const latB = k.reuna + k.merkki * kaista;
+  const yA = laattaKoordinaatit(latA, 0, taso).y; const yB = laattaKoordinaatit(latB, 0, taso).y;
+  const n = 2 ** taso;
+  const rivit = [];
+  for (let y = Math.max(0, Math.floor(Math.min(yA, yB)) - 1); y <= Math.min(n - 1, Math.floor(Math.max(yA, yB)) + 1); y += 1) rivit.push(y);
+  const laatat = new Map();
+  await Promise.all(rivit.flatMap((ty) => Array.from({ length: n }, (_, tx) => (async () => {
+    const v = await hae(`${juuri}${taso}/${tx}/${ty}.jpg`).catch(() => null);
+    if (!v?.ok) return;
+    const { data, info } = await sharp(Buffer.from(await v.arrayBuffer())).raw().toBuffer({ resolveWithObject: true });
+    const W = info.width; const H = info.height; const C = info.channels;
+    const vari = new Float32Array(W * H * 3);
+    for (let i = 0; i < W * H; i += 1) {
+      const q = varitaPikseli(data[i * C], data[i * C + 1], data[i * C + 2]);
+      vari[i * 3] = q[0]; vari[i * 3 + 1] = q[1]; vari[i * 3 + 2] = q[2];
+    }
+    laatat.set(`${tx}/${ty}`, { vari, W, H });
+  })())));
+  const pikseli = (gx, gy) => {
+    // gx, gy: koko tason pikselikoordinaatit (laatta × koko); x kiertää.
+    const L0 = laatat.values().next().value; if (!L0) return null;
+    const W = L0.W; const H = L0.H;
+    const X = ((gx % (n * W)) + n * W) % (n * W);
+    const Y = Math.min(n * H - 1, Math.max(0, gy));
+    const L = laatat.get(`${Math.floor(X / W)}/${Math.floor(Y / H)}`);
+    if (!L) return null;
+    const o = ((Y % H) * L.W + (X % W)) * 3;
+    return [L.vari[o], L.vari[o + 1], L.vari[o + 2]];
+  };
+  if (!laatat.size) return null;
+  const { W, H } = laatat.values().next().value;
+  return (lat, lon) => {
+    const t = laattaKoordinaatit(lat, lon, taso);
+    const fx = t.x * W - 0.5; const fy = t.y * H - 0.5;
+    const x0 = Math.floor(fx); const y0 = Math.floor(fy); const ax = fx - x0; const ay = fy - y0;
+    const p00 = pikseli(x0, y0); const p10 = pikseli(x0 + 1, y0);
+    const p01 = pikseli(x0, y0 + 1); const p11 = pikseli(x0 + 1, y0 + 1);
+    if (!p00 || !p10 || !p01 || !p11) return null;
+    return [0, 1, 2].map((c) => (p00[c] * (1 - ax) + p10[c] * ax) * (1 - ay) + (p01[c] * (1 - ax) + p11[c] * ax) * ay);
+  };
+}
+
+/** Varitan maakaava: vakiosiirto, jonka kalotin maa ja jää saavat striimityylissä. */
+export const STRIIMI_MAASIIRTO = Object.freeze(STRIIMI.maa.map((v, c) => v - STRIIMI.maaOletus[c]));
 
 /**
  * Etelämantereen jää. Alin sävy on täsmälleen se, jolla laatat
@@ -343,6 +563,7 @@ export function laattaKoordinaatit(lat, lon, taso = LIITOS_LAATTATASO) {
  */
 export async function laattojenLiitossavy({
   puoli, sharp, hae = fetch, juuri = PALLO_LAATAT, taso = LIITOS_LAATTATASO, hiljaa = false,
+  varita = null, meressa = null, pituuksia = LIITOS_NAYTTEET.pituuksia,
 }) {
   const kori = new Map();
   const laatta = async (tx, ty) => {
@@ -359,8 +580,11 @@ export async function laattojenLiitossavy({
   };
   let R = 0; let G = 0; let B = 0; let n = 0;
   for (const lat of liitoskaistanLeveydet(puoli)) {
-    for (let i = 0; i < LIITOS_NAYTTEET.pituuksia; i += 1) {
-      const lon = (360 * i) / LIITOS_NAYTTEET.pituuksia - 180;
+    for (let i = 0; i < pituuksia; i += 1) {
+      const lon = (360 * i) / pituuksia - 180;
+      // STRIIMI: kalotin liitos mitataan vain merestä, joten laatastakin
+      // luetaan vain vektorin meri (kaistalla 80–83° N on Grönlantia ja saaria).
+      if (meressa && !meressa(lat, lon)) continue;
       const t = laattaKoordinaatit(lat, lon, taso);
       const tx = Math.min(t.n - 1, Math.max(0, Math.floor(t.x)));
       const ty = Math.min(t.n - 1, Math.max(0, Math.floor(t.y)));
@@ -371,7 +595,10 @@ export async function laattojenLiitossavy({
       const px = Math.min(info.width - 1, Math.floor((t.x - tx) * info.width));
       const py = Math.min(info.height - 1, Math.floor((t.y - ty) * info.height));
       const o = (py * info.width + px) * info.channels;
-      R += data[o]; G += data[o + 1]; B += data[o + 2]; n += 1;
+      const [pr, pg, pb] = varita
+        ? varita(data[o], data[o + 1], data[o + 2])
+        : [data[o], data[o + 1], data[o + 2]];
+      R += pr; G += pg; B += pb; n += 1;
     }
   }
   if (!n) {
@@ -516,8 +743,12 @@ export function piirraJana(peitto, N, x0, y0, x1, y1, leveys) {
  */
 export function piirraKalotti({
   puoli, korkeus, indeksi, rannikot, koko = KOKO_OLETUS, ylinaytto = YLINAYTTO_OLETUS,
-  jaatayte = false, liitossavy = null,
+  jaatayte = false, liitossavy = null, tyyli = 'paperi', reunaSavy = null,
+  meriMitta = MERI_PAPERI_MITTA, meriVoima = MERI_PAPERI_VOIMA,
 }) {
+  const striimi = tyyli === 'striimi';
+  // Meren paperikorjaus vain etelässä: pohjoinen toimii (PT 15.3x), ja sen mittakaava on eri (ks. MERI_PAPERI_MITTA).
+  const meriKorjaus = striimi && MERI_PAPERI_PUOLET.includes(puoli);
   const k = NAPAKALOTTI[puoli];
   const napa = k.merkki * 90;
   const span = Math.abs(napa - k.reuna);
@@ -563,9 +794,24 @@ export function piirraKalotti({
       let g = pohja[1] + v;
       let b = pohja[2] + v * 0.82;
       let m = korkeus(a.lat, a.lon);
-      const vesi = merenAlalla(taulunRivi(taulu, a.lat), a.lon);
+      let vesi = merenAlalla(taulunRivi(taulu, a.lat), a.lon);
+      /*
+       * JÄÄHYLLYT OVAT JÄÄTÄ (striimi). ne_10m_ocean laskee Rossin,
+       * Ronnen ja muut jäähyllyt mereksi, ja ETOPO1:n pinta on niillä
+       * merenpinnan yläpuolella. Paperikalotilla ne näkyivät matalimpana
+       * merenä (kermanvaaleana); striimin meren värissä ne olisivat
+       * oliivia merta Etelämantereen sisällä. Rantaviiva pysyy vektorin.
+       */
+      if (striimi && jaatayte && vesi && Number.isFinite(m) && m > 0) vesi = false;
       if (vesi) {
         if (!Number.isFinite(m)) m = -900;
+        if (meriKorjaus) {
+          // STRIIMIN MEREN PAPERIKUVIO: isompi ja laattoihin sovitettu (ks. MERI_PAPERI_MITTA).
+          const vm = meriPaperiKalotilla(gx, gy, koko, meriMitta, meriVoima);
+          r = pohja[0] + vm * PAPERI_KANAVAT[0];
+          g = pohja[1] + vm * PAPERI_KANAVAT[1];
+          b = pohja[2] + vm * PAPERI_KANAVAT[2];
+        }
         const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
         const s = lerpSyvyys(m + n * Math.min(150, Math.max(12, -m * 1.25)));
         const o = 0.5;
@@ -594,6 +840,10 @@ export function piirraKalotti({
         r = t(c[0]);
         g = t(c[1] * (1 - varjo * 0.12));
         b = t(c[2] * (1 - varjo * 0.3));
+        // STRIIMI: Varitan maakaava (ks. STRIIMITYYLI); meri saa omansa liitossiirrosta.
+        if (striimi) {
+          r += STRIIMI_MAASIIRTO[0]; g += STRIIMI_MAASIIRTO[1]; b += STRIIMI_MAASIIRTO[2];
+        }
       }
       if (vesi) {
         meripikseli[iy * N + ix] = 1;
@@ -622,6 +872,92 @@ export function piirraKalotti({
       data[o] += liitossiirto[0];
       data[o + 1] += liitossiirto[1];
       data[o + 2] += liitossiirto[2];
+    }
+  }
+
+  /*
+   * STRIIMIN MERI VARITAN LÄPI (OMISTAJAN PÄÄTÖS 8.11.2026 klo 14.51 "Ei,
+   * beige säilyy"). Ankkuroitu paperimeri saa saman värin kuin laattojen
+   * meri pelissä: avomeri beige, matala rannikko oliivi. Uint8Clamped-
+   * taulu on jo rajannut arvot 0–255 kuten laatan jpg.
+   */
+  if (striimi) {
+    for (let p = 0; p < N * N; p += 1) {
+      if (!meripikseli[p]) continue;
+      const o = p * 4;
+      const q = varitaPikseli(data[o], data[o + 1], data[o + 2]);
+      data[o] = q[0]; data[o + 1] = q[1]; data[o + 2] = q[2];
+    }
+  }
+
+  /*
+   * REUNAKAISTA (striimi, omistajan havainto 8.11.2026 klo 12.50: "tumma
+   * pyöreä kehä" etelänavan ympärillä). Yksi liitossiirto sovittaa vain
+   * KESKIARVON: kalotin oma batymetria ja laattojen paikallinen sävy
+   * eroavat pituusasteittain (laatoissa 60° S:ssa keskiarvo 118–150), ja
+   * ero näkyi kehänä. Kaistalla REUNAKAISTA_AST kehältä sisäänpäin kuva
+   * liukuu JOKA PIKSELISSÄ siihen sävyyn, joka laatassa on samassa
+   * pisteessä Varitan jälkeen, ja on alfahäiveen alussa (HAIVE_AST)
+   * tasan laatan sävy. Sisäosa (oma batymetria, syvän meren väri) ennallaan.
+   */
+  if (reunaSavy) {
+    const rIn = 1 - REUNAKAISTA_AST / span;
+    const rTay = 1 - HAIVE_AST / span;
+    /*
+     * LAATTOJEN TIETORAJA (beige-poltto 8.11.2026 klo 15): pohjasarjan
+     * juliste päättyy 61,47° S:ään, ja sen takana laatta toistaa viimeistä
+     * riviään (pystyraidat). Reunakaista 60–64° S liukui niihin, ja beigen
+     * ja oliivin rajalla (Scotian kaari) ne näkyivät säteittäisinä raitoina.
+     * Rajan takana kohde on rajarivin sävy pituussuunnassa silotettuna
+     * (±TIETORAJA_SILOTUS_AST). Liuku tarkasta silotettuun alkaa 0,2° ennen
+     * rajaa ja on täysi 0,2° sen takana (laatan viimeiset rivit ovat jo venytettyjä).
+     */
+    const raja = TIETORAJA[puoli];
+    let silotettu = null;
+    if (Math.abs(k.reuna) < Math.abs(raja) && Math.abs(raja) < Math.abs(k.reuna) + REUNAKAISTA_AST) {
+      const askel = 0.05; const M = Math.round(360 / askel);
+      const rivi = Array.from({ length: M }, (_, j) => reunaSavy(raja, -180 + j * askel));
+      const L = Math.round(TIETORAJA_SILOTUS_AST / askel);
+      silotettu = Array.from({ length: M }, (_, j) => {
+        let R = 0; let G = 0; let B = 0; let n = 0;
+        for (let d = -L; d <= L; d += 1) {
+          const q = rivi[(((j + d) % M) + M) % M];
+          if (q) { R += q[0]; G += q[1]; B += q[2]; n += 1; }
+        }
+        return n ? [R / n, G / n, B / n] : null;
+      });
+    }
+    for (let iy = 0; iy < N; iy += 1) {
+      for (let ix = 0; ix < N; ix += 1) {
+        const a = kalotinAsteet(puoli, (ix + 0.5) / N, (iy + 0.5) / N);
+        if (a.r <= rIn || a.r >= 1.03) continue;
+        let kohde = reunaSavy(a.lat, a.lon);
+        if (!kohde) continue;
+        const yli = Math.abs(a.lat) - Math.abs(raja) + 0.2;
+        if (silotettu && yli > 0) {
+          const j = Math.round((((a.lon + 180) % 360) + 360) % 360 / 0.05) % silotettu.length;
+          const s = silotettu[j];
+          if (s) {
+            const u = Math.min(1, yli / 0.4);
+            kohde = [0, 1, 2].map((c) => kohde[c] * (1 - u) + s[c] * u);
+          }
+        }
+        if (a.r >= 1) {
+          // Läpinäkyvän kehän ulkopuolen väri laatan sävyksi (alfa pysyy 0): muuten
+          // pienennys ja webp vuotavat mustaa häiveeseen (mitattu −1,5 tasoa 1° kehältä).
+          const o = (iy * N + ix) * 4;
+          data[o] = kohde[0]; data[o + 1] = kohde[1]; data[o + 2] = kohde[2];
+          continue;
+        }
+        const t = Math.min(1, (a.r - rIn) / (rTay - rIn));
+        const w = t * t * (3 - 2 * t);
+        const o = (iy * N + ix) * 4;
+        // Meressä vain pohjasävy liukuu laattaan: paperi (puolet meren sekoituksessa) jää päälle.
+        const vm = meriKorjaus && meripikseli[iy * N + ix] ? meriPaperiKalotilla(ix / ylinaytto, iy / ylinaytto, koko, meriMitta, meriVoima) * 0.5 : 0;
+        data[o] = data[o] * (1 - w) + (kohde[0] + vm * PAPERI_KANAVAT[0]) * w;
+        data[o + 1] = data[o + 1] * (1 - w) + (kohde[1] + vm * PAPERI_KANAVAT[1]) * w;
+        data[o + 2] = data[o + 2] * (1 - w) + (kohde[2] + vm * PAPERI_KANAVAT[2]) * w;
+      }
     }
   }
 
@@ -725,10 +1061,12 @@ async function paa() {
   );
   const ylinaytto = Number(lippu('--ylinaytto') ?? YLINAYTTO_OLETUS);
   const vain = lippu('--vain');
+  const tyyli = lippu('--tyyli') ?? 'paperi';
+  if (!['paperi', 'striimi'].includes(tyyli)) throw new Error(`--tyyli: paperi tai striimi (${tyyli})`);
   const versio = lippu('--versio') || `${new Date().toISOString().slice(0, 10)}a`;
   const puolet = (vain ? [vain] : ['pohjoinen', 'etela']).filter((p) => NAPAKALOTTI[p]);
   if (!puolet.length) throw new Error(`--vain: pohjoinen tai etela (${vain})`);
-  console.log(`napakalotit ${versio}: webp q${laatu}, ylinäytto ${ylinaytto}; `
+  console.log(`napakalotit ${versio} (${tyyli}): webp q${laatu}, ylinäytto ${ylinaytto}; `
     + `${puolet.map((p) => `${p} ${NAPAKALOTTI[p].reuna}° ${sivu(p)} px`).join(', ')}`
     + ` → ${kalottienKansio(versio)}`);
   if (kuiva) { console.log('Kuiva ajo: ei lueta aineistoa eikä kirjoiteta.'); return; }
@@ -743,8 +1081,21 @@ async function paa() {
     const alkoi = Date.now();
     const koko = sivu(puoli);
     const aineisto = await keraaKalotti({ puoli, neKansio, renkaat });
-    const kohde = await laattojenLiitossavy({ puoli, sharp }).catch(() => null);
-    const liitossavy = kohde ?? LIITOS_VARA[puoli].slice();
+    const kohde = await laattojenLiitossavy(tyyli === 'striimi'
+      ? {
+        puoli,
+        sharp,
+        juuri: POHJA_LAATAT,
+        taso: STRIIMI_LAATTATASO,
+        // Paperisävy ennen Varitaa: kalotin meri ankkuroidaan paperina ja ajetaan sitten Varitan läpi (beige, 14.51).
+        varita: null,
+        pituuksia: STRIIMI_PITUUKSIA,
+        meressa: (lat, lon) => merenAlalla(leveyspiirinLeikkaukset(aineisto.indeksi, lat), lon),
+      }
+      : { puoli, sharp }).catch(() => null);
+    const reunaSavy = tyyli === 'striimi' ? await reunanLaattasavy({ puoli, sharp }).catch(() => null) : null;
+    if (tyyli === 'striimi') console.log(`  ${puoli}: reunakaista ${REUNAKAISTA_AST}° ${reunaSavy ? 'laattojen sävyyn' : 'EI LAATTOJA'}`);
+    const liitossavy = kohde ?? (tyyli === 'striimi' ? LIITOS_VARA_STRIIMI : LIITOS_VARA)[puoli].slice();
     const { data, N, liitossiirto } = piirraKalotti({
       puoli,
       korkeus: aineisto.korkeus,
@@ -754,6 +1105,10 @@ async function paa() {
       ylinaytto,
       jaatayte: puoli === 'etela',
       liitossavy,
+      tyyli,
+      reunaSavy,
+      meriMitta: Number(lippu('--meri-mitta') ?? MERI_PAPERI_MITTA),
+      meriVoima: Number(lippu('--meri-voima') ?? MERI_PAPERI_VOIMA),
     });
     const polku = join(ulos, `${puoli}.webp`);
     /*
@@ -761,10 +1116,23 @@ async function paa() {
      * juuri se liuku on liitos laattoihin: alphaQuality 100 pitää sen
      * häviöttömänä, vaikka väri pakataan. Ks. tiedoston alku.
      */
-    const tulos = await sharp(Buffer.from(data.buffer, data.byteOffset, data.byteLength), {
-      raw: { width: N, height: N, channels: 4 },
-    })
-      .resize(koko, koko, { kernel: 'lanczos3' })
+    const raaka = Buffer.from(data.buffer, data.byteOffset, data.byteLength);
+    const raw = { width: N, height: N, channels: 4 };
+    /*
+     * STRIIMI: VÄRI JA ALFA PIENENNETÄÄN ERIKSEEN. sharpin RGBA-pienennys
+     * tummentaa häiveen väriä 1–2 tasoa (mitattu 8.11.2026: tasainen
+     * 143/137/104 → 141/135/102), ja se näkyi kehänä. Kuvan ulkopuoli on
+     * striimissä laatan värinen (REUNAKAISTA), joten erikseen pienennetty
+     * väri ei vuoda mustaa.
+     */
+    const kuva = reunaSavy
+      ? sharp(await sharp(raaka, { raw }).removeAlpha().resize(koko, koko, { kernel: 'lanczos3' }).raw().toBuffer(), {
+        raw: { width: koko, height: koko, channels: 3 },
+      }).joinChannel(await sharp(raaka, { raw }).extractChannel(3).resize(koko, koko, { kernel: 'lanczos3' }).raw().toBuffer(), {
+        raw: { width: koko, height: koko, channels: 1 },
+      })
+      : sharp(raaka, { raw }).resize(koko, koko, { kernel: 'lanczos3' });
+    const tulos = await kuva
       .webp({ quality: laatu, alphaQuality: 100, effort: 6 })
       .toFile(polku);
     const s = Math.round((Date.now() - alkoi) / 1000);
@@ -782,10 +1150,15 @@ async function paa() {
       liitossavy: liitossavy.map((v) => +v.toFixed(1)),
       liitossavyMitattu: Boolean(kohde),
       liitossiirto: liitossiirto ? liitossiirto.map((v) => +v.toFixed(2)) : null,
+      reunakaistaAst: reunaSavy ? REUNAKAISTA_AST : null,
     });
   }
   writeFileSync(join(ulos, 'kalotit.json'), `${JSON.stringify({
     versio,
+    tyyli,
+    liitoslaatat: tyyli === 'striimi'
+      ? `${POHJA_LAATAT}${STRIIMI_LAATTATASO}/ (ElavaTyyli.Varita)`
+      : `${PALLO_LAATAT}${LIITOS_LAATTATASO}/`,
     projektio: 'atsimutaalinen ekvidistantti, napa keskellä, 0° ylös',
     haiveAst: HAIVE_AST,
     liitosKaista: LIITOS_KAISTA,
