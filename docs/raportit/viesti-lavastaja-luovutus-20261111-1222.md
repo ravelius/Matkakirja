@@ -52,3 +52,15 @@ Asemataulu jäädytetty (hookin päivityspyynnöt ohitetaan). Worktreet ennallaa
   ("VIKA: rak … MUSTA") -> tarkista syy (koe v5/koe-musta2.zsh <malli>), aja uudelleen.
 - Tila 18.11: tausta 22/23 + muurikate valmiit, rakennuksia 79/156, sitten osasarja; tausta-1-2.zsh ja sali ajamatta.
 - KK 18.06 (pala 3, pintojen leivonta) vastattu: leivonta-v5-tyo/VASTAUS-KK-1806.md + mittaus-kk-1806.txt (v5/tiheys.py). Pala 3:n tehtävänanto tulee KK:lta.
+
+## LISÄYS 18.3x: KK:N PALA 3 -TEHTÄVÄNANTO (KK 18.15) – SEURAAJAN TYÖ
+LUE KOKONAAN: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/20261111-pintojen-leivonta-pala3-tehtavananto.md
+- 3.1: leivonta-v5 loppuun kuten nyt (48 mustaa uudelleen, tausta-1-2.zsh, osasarja, sali PIENELLÄ KOKEELLA ensin) -> paketti.
+- 3.1b TARKKA VALO KULKUALUEELLE (omistaja: kaikki varjot leivotaan, elävä vain pelaajalle): tavoite lattia <= ~8 cm/tekseli (64 m / 1024 ruuduittain
+  kuten osasarja), kulkualueelta läheltä nähtävät seinät/terassit <= ~12 cm; lisäksi valo avoimiin huoneisiin, rekvisiittaan, kujien lattia-alustaan;
+  kaukotasoille kärkivärit. ENSIN KK:lle: tarkkuuskartta (v5/tiheys.py + etäisyys kulkukartasta, PK:n kulkukartta v133c) + ehdotus tavasta ja
+  kestosta (koko polunjäljitys ruuduittain vs. tarkka suora aurinko + nykyinen karkea epäsuora). EI tarkkaa leivontaa ennen KK:n sanaa.
+  Vertailukuva lokit/natiiviseppa-juoksu-hahmovarjo-1/V2-elava.png.
+- LATTIA: UV0-kuvion yhtenäistäminen POISTUU (kuvio ja valo maailmakoordinaateista). Jäävät: sokkelin juuren porras, vinot reunakivet, raja3;
+  UUSI: lattian alueet omina materiaaleinaan (sisä, piha ja kuja, aukio) ja joen kohta leikattuna verkosta (tehtävänannon 3.3).
+  Rajaus-/poikkeusehdotus KK:lle ennen toteutusta, PT kopiona. Työlistan rivi "Juoksupeli pala 3: tarkka leivottu valo kulkualueelle".
