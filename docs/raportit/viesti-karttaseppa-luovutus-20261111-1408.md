@@ -399,3 +399,12 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ49b pyydetty JU:lta 22.5x (kopio PT): _tyo/karttaseppa/koodijuna/sillat-kj49b/sk-mac-sillat-kj49b-{pariisi,lontoo}.txt (7 + 5), ENNEN 2eb8ff84a | JÄLKEEN 4d18cf390
   → lokit/ks-kj49b-sillat-*. KUN TULEE: parit (K/pari.py) → KK (kopio PT): Alma 31/33 vyöt poissa?, Concorde 34 ennallaan, raja 01b–01d, Lontoo 35–37 lähikuvat; kerro kolmioluku KK:lle.
 - SEURAAJAN JONO: 1) aja_kaikki → KK. 2) KJ49b → KK. 3) Parvis-haamut KK:n linjalla (LISÄYS 26). 4) Työkalu 2 luonnokset (LISÄYS 25). Montmartren parit yöviennin jälkeen.
+
+## LISÄYS 29 (23.0x): PARVIS-HAAMUJEN LÄHDE selvitetty (KK 22.24 -linja)
+- nd-koodi-puisto.png on 224.85:ssä puhdas (dedc50853 poisti blobin, palkin ja π:t, ero x 3–83 y 135–229). Jäljelle jääneet haaleat muodot piirtää ELÄVÄ KARTTA
+  (Assets/Matkakirja/Kartta/ElavaTyyli.cs r. ~457–477: landcover class grass, subclass garden → Puisto() → alfa 245) OSM:n pienistä alueista:
+  π-muodot = leisure=garden way/30836227 ja way/30836228 (107 ja 106 m², 20 × 16 m), pystypalkki = leisure=garden way/135617970 (82 m², 14 × 25 m). Ei valmis kuva → KK:n linjan YLEINEN SÄÄNTÖ.
+- LUVUT (Pariisin ote, suljetut monikulmiot): leisure=garden n 3338, mediaani 163 m², < 100 m²: 1331, < 150: 1598, < 200: 1840; landuse=grass n 11102, < 100: 4106, < 150: 5244;
+  natural=scrub n 2649, < 100: 1467. → Pelkkä alaraja veisi ~40 % puutarhoista (sisäpihat, katuistutukset) → sääntöön ehto "kivetyllä aukiolla"
+  (keskipiste OMT:n transportation-tason pedestrian-alueen / OSM highway=pedestrian area=yes / place=square sisällä) + alaraja ~150 m². Seuraavaksi: laske montako < 150 m²
+  -laikkua osuu pedestrian-alueille Pariisissa ja Lontoossa, ehdota KK:lle raja + paikka (sääntö ElavaTyyli.cs:n landcover-silmukkaan kaikille kaupungeille; "työkalu 1" = tämä yleinen sääntö), sitten toteutus + pari KJ46 ym46-03-a + ND-esittelyn lopun kuva.
