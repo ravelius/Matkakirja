@@ -130,4 +130,4 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
 ennen junaa; KK katsoo junan Mac-kuvan Riemukaaren lähimmästä kierrosta. KK:n löydös: kierron parit kuvataan lukitulla kulmalla (ei ajan mukaan).
 Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-pari KK:lle).
 - 17.14 (JU): 224.74 = 2882f055a (Lehti + Matkaopas) LINKISSÄ. Junan Mac-kuvat sk-juna-lehti-1 → proto-3d/lokit/nui-lehti-junakuvat-2882f055a
-  (ajossa 17.1x) → KATSO täysikokoisina ja vie KK:lle (PT kopio) ENSIMMÄISENÄ nollauksen jälkeen, sitten LISÄYS 4.
+  → KATSOTTU 17.3x (6/6 ok, arkki-1000.png) ja viety KK:lle. Seuraava työ: LISÄYS 4.
