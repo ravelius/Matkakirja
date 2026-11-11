@@ -77,3 +77,11 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
   yleinen lähin 0,231 ei muutu. Selvitä, miksi 113 m:ssä leikkautuu, vaikka PalloKierto lähitaso max(50, 1 %) → mahdollisesti toinen kamera
   (CesiumKaupunki.cs:144 lahi-kamera, ElavaKerros/LiikeLaatat kopioivat near), linssiK tai kaytetty==0 → 100 m. Lisää lokiin todellinen
   kamera.nearClipPlane ja etäisyys lähin-kuvan hetkellä (esim. liiketappi tila). Todiste: Riemukaari lähin-kierto puhdas + Eiffel/Montparnasse.
+
+## LISÄYS 7 (16.1x): KK 15.59 SANA = A (48532e3fa kokonaisena junaan, kolo ei haaran tuoma). PT 16.0x pyysi B:n juna-224 df0f36c4b:n päälle.
+- B VALMIS: 484d48fd9 (natiivi-ui/lehti-juna, rebase 17fbf3e35 → df0f36c4b ilman ristiriitoja; unity 0 vain vanhalla pohjalla 63f86d189).
+- A:N ESTE: 48532e3fa + df0f36c4b → ristiriita KaupunkiPallot.cs ja KaupunkiPalloMitat.cs (oma d5c003d92 pallon ankkuri vs junan pallo-maa-3,
+  224.69). Ratkaisematta. PT:lle ja KK:lle kerrottu; PT valitsee (B heti tai A ratkaisun jälkeen). Jos A: merge df0f36c4b haaraan juna-lehti,
+  ratkaise pallo-tiedostot junan hyväksi (pallo-maa-3 on uudempi, omistajan katsoma) ja tarkista ankkurin tarve, unity, sha PT:lle.
+- KOLOTESTI (KK 15.59, junan jälkeen): toista 01-riemukaari-3-lahin-kierto Macilla, kokeile yksi kerrallaan: lähitaso puoleen, paisunta pois,
+  esittelyn rajaus pois → yksi rivi KK:lle, mikä poisti kolon, ENNEN korjausta. Jos mikään ei: kuva samasta kulmasta mallin esityskameralla KS:lle.
