@@ -52,3 +52,7 @@ UUSI SÄÄNTÖ (omistaja 12.21, Raamattu 12.26.5): kaikki ajot Macilla (esikatse
 
 ## LISÄYS 2 (PT, KK 13.2x): junakokonaisuuden UI HYVÄKSYTTY Mac-kuvista (49d03f79f). Junasha 48532e3fa junaan VASTA kun KK on katsonut
 lähin-kuvat (nui-lahin-1-0ca9df559, JU ajaa) → KK:n OK → sha PT:lle → pt-ok. Laite-iPad vain KK:n iPad-erässä.
+
+## LISÄYS 3 (KS 14.3x): UI-pallon varjo jää näkyviin, kun UI-pallo piiloutuu KS:n koodipallon tieltä (KJ37 2cf7b7e48,
+lokit/karttaseppa-pallo-kj37-2cf7b7e48). NUI:n koodia: KaupunkiPallot.SarjaVarjo on erillinen elementti, PallonVarjoVaistaa (~975) asettaa
+visibilityn joka kehys. KS:ltä kysytty, millä kutsulla/lipulla UI-pallo piiloutuu → sama piilotus SarjaVarjolle (display None tai ohitus).
