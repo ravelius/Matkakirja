@@ -148,3 +148,6 @@ Seuraava NUI-työ: LISÄYS 4 (kuumailmapallon kyltti ankkurin päällä, Mac-par
 - AJO JU:lla pallo-kyltti-1:n jälkeen: sk-sulku-katse-2.txt → lokit/nui-sulku-katse-2-e0f7d6a7d. Mittaa: python3 (ei -I, numpy) _tyo/natiivi-ui/kehysero.py
   <kansio> 18 27; piikki pois a ~23,9 s ja b ~24,2 s; lokissa "→ 0 m". OK → KK:lle mittaus; junaan KK:n sanalla (napautus-224:n jälkeen).
 - 17.5x: pallo-kyltti-1 katsottu (1–3 ok, kauko ennallaan) → KK HYVÄKSYI 9c6a6f864 junaan; PT vie KS:n pallon kanssa. Työlistarivin tilanne kirjattu. LISÄYS 4 VALMIS.
+- 18.1x: SULKU-KATSE-2 MITATTU OK (lokit/nui-sulku-katse-2-e0f7d6a7d, kehysero-ennen-jalkeen.png): piikit a 23,86 / b 24,20 s poissa, loki "128 → 0 m", "274 → 0 m".
+  KK:lle + PT kopio 18.1x. AVOINNA: KK:n sana junasta (sulku-katse-2 = napautus-224 d520120aa, joka EI vielä juna-224:ssä, + 8b906efd1 + e0f7d6a7d; merge juna-224 puhdas).
+  NUI:n jono muuten tyhjä.
