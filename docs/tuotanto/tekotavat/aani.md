@@ -21,7 +21,7 @@ Soundlyn käyttöliittymä ei toimi, kun omistajan Space on koko ruudun sovellus
 1. **Tavoite:** mikä ääni, missä tapahtumassa, kuinka pitkä; mallinäyte tai yksi virke siitä, miltä sen pitää kuulostaa.
 2. **Haku tai otto:**
    - *Tehoste:* hae kokonaisia valmiita yksittäisiä tiedostoja (kesto yleensä 0,2–3 s); älä leikkaa paloja pitkistä nauhoista. Lyhyt kuvaus riittää hakusanaksi.
-   - *Puhe:* tee-skripti, `style 0`, `speed` natiivisti, `language_code fi`; yksi otto per teksti; raaka talteen heti.
+   - *Puhe:* tee-skripti, `style 0`, `speed` natiivisti, `language_code fi`, selvää suomea alkuun; luettelo (nimet, iskulauseet) yhtenä ottona, josta osat leikataan; pidempi kappale omana ottonaan kokonaisena; yksittäiseen nimeen suomenkielinen esiteksti, joka leikataan pois (Raamattu 5.1); raaka talteen heti.
    - *Musiikki:* yksi lyhyt myönteinen kehote (soittimet, tunnelma, tempo, paikka); Lyria ei noudata kestoa (~60 s), tempoa eikä soitinrajausta tarkasti.
 3. **Käsittely:** vain taso, mono/stereo, alun ja lopun hiljaisuus, saumaton silmukka. Ei pitch-/tempomuutoksia puheeseen eikä musiikkiin.
 4. **Sokkokuuntelu:** Gemini kuvaa äänen tietämättä tavoitetta (`gemini.kuvaile`), sitten verrataan tarpeeseen (`gemini.sopiiko`); ristiriita = hylkäys.

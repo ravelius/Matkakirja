@@ -93,17 +93,17 @@ Portti on kohta, josta työ ei jatku ennen kuin ehto täyttyy.
 ## 3. Lupataulukko
 
 "Pysyvä lupa" = tehdään kysymättä ja kerrotaan tarvittaessa jälkikäteen yhdellä rivillä. "Vaatii luvan" = omistajan
-lupa KK:n kautta ennen työtä: muut asiat kortilla, äänet ja tekstit tekstinä (7.27 ÄÄNISTÄ EI KORTTEJA).
+lupa KK:n kautta ennen työtä kortilla; luettavat tekstit listana (7.27). Puheäänitykset alle 3 %:n ajossa: luvan antaa ja
+tuloksen tarkastaa KK, ei omistaja (5.1, omistaja 11.11.2026 klo 08.51).
 
 | Asia | Pysyvä lupa (ei kysytä) | Vaatii omistajan luvan (KK:n kautta) | Raamattu |
 |---|---|---|---|
 | Codexin kuvat ja havainnekuvat | tarpeen mukaan, ei määrä- eikä ottokorttia | – | 7.15, 12.24 |
 | Tripo-mallit | Codex tekee tarpeen mukaan; hyväksytyt mallit saa ladata omistajan tililtä | tilin muut tiedostot; Clauden roolit eivät aja Tripoa itse | 7.15, 11.6, 12.24 |
 | Musiikki (Lyria) | – | jokainen Lyria-kutsu; valmis tai vapaa kappale musiikiksi. Juoksupeliin ei nyt lisää musiikkia, nykyiset raidat myös muille tasoille (omistaja 21.10. klo 18.02) | 5.15 |
-| Kertojaääni (ElevenLabs) | PT:n hyväksymät käsikirjoitukset jo hyväksytyllä lukijaäänellä, alle 3 % kuukauden kiintiöstä per ajo, yksi otto per teksti (omistaja 24.10. klo 02.12) | uusi lukijaääni tai yli 3 % | 5.1 |
-| Hahmo- ja muut puheäänet (ElevenLabs) | jo hyväksytyllä äänellä, kun yksi ajo jää alle 3 %:n kuukauden krediiteistä; kulutus KK:lle jälkikäteen | yli 3 %:n ajo; uusi henkilö tai uusi ääni aina | 5.1, 5.2 |
+| Puheäänitykset (ElevenLabs: kertoja, hahmot, uudet äänet, koeotot, uusinnat) | KK:n luvalla ja tarkastuksella, kun yksi ajo jää alle 3 %:n kuukauden kiintiöstä; omistajalle ei näytettä eikä korttia; kulutus KK:lle jälkikäteen (omistaja 11.11. klo 08.51) | yli 3 %:n ajo (kortti); kokonaan uudet luettavat tekstit listana ennen äänitystä | 5.1, 5.2 |
 | Ääni- ja tehosteet, äänimaisemat | Soundly Pro ja Sonniss ensin, Freesound alkuperäisinä aukkoihin | tekoälyllä tehty uusi ääni | 5.27, 5.20, 12.24 |
-| Generointien ottomäärä | – (Tripo ja Codexin kuvat eivät kuulu tähän) | luvan ottomäärä sitoo kuten merkkimäärä; uusinta = uusi otto = uusi lupa, vaikka merkkejä jäisi | 5.2, 7.15 |
+| Generointien ottomäärä | – (Tripo ja Codexin kuvat eivät kuulu tähän) | yli 3 %:n ajossa luvan ottomäärä sitoo kuten merkkimäärä (uusinta = uusi lupa); alle 3 %:n puheäänityksissä uusinnat KK:n luvalla (5.1) | 5.2, 7.15 |
 | Lataukset | CC0, CC BY, PD ja Commonsin CC BY-SA -kuvat; CC BY:stä tekijä LAHTEET.md:hen | NC-, ND- ja muu SA-aineisto ladataan vain omistajan päätöksellä (oletus: ei ladata) | 11.1, 11.5 |
 | Ostot | maksettujen tilausten käyttö ei ole ostamista | uudet ostot kielletty toistaiseksi; ehdotuksia ei tuoda ennen kuin omistaja avaa asian | 11.5, 12.24 |
 | Julkaisu ja TestFlight | vihreän PR:n kaavan askeleet avoimeen junaan | lukitus ja TF vain "OMISTAJA PYYSI JULKAISUA" | 10.1, 10.2, 9.3 |
