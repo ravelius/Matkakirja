@@ -27,3 +27,12 @@ Worktreet kuten -0022:ssa (nui-aarre, nui-pariisi, nui-pariisi-data, nui-vakio, 
 - Junaan KK:n sanalla: koodi (ce3e22c43 tai sen päälle) + SK-haara ja data cb990dca6 mainiin + sisällön vienti (PT/JU) + PT pt-ok.
 
 ## C. vakioajon uusinta (Lontoo + vakiokuvat): ei vielä ajettu; JU:n jonossa -0022:n mukaan → PUUTE-rivit katsotaan.
+
+## LISÄYS 00.5x (KK 00.39 ja 00.40)
+- KK:N PÄÄTÖKSET: kupla pysyy pois (omistaja 6.10.), t5 kelpaa. LÄHDERIVI KYLLÄ. Kertoja pois: Pulu odottaa kirjoituksen. → TEHTY d529f965a
+  (natiivi-backup natiivi-ui/pariisi-tekstit): lähderivi pyöreän Pulun kuvan alle (loki "Pulun kuvan lähderivi"); Saapumisesitys.KirjoitusJaJatko
+  (Matkakirjakortti.KunKirjoitettu, varakello +3 s; loki "ilman luentaa, Pulun vuoro kirjoituksen jälkeen"). unity-tarkistus 0.
+- pariisi-tekstit-2 vaihdettu d529f965a:han → lokit/nui-pariisi-tekstit-2-d529f965a (ei -ce3e22c43). JU:lle: Macin äänen ulostulon pitää soida
+  ennen ajoa (KK:n ehto: junasana vasta ajosta, jossa luenta soi loppuun ja Pulu puhuu). KATSO lisäksi p2 lähderivi täysikokoisena → KK.
+- AVOIN: poikkeuksen (kertoja pois) lokijärjestys "taitettu teksti kirjoitettu" → "ilman luentaa, Pulun vuoro kirjoituksen jälkeen" → "Pulun kuva nousee"
+  näytettävä seuraavassa sopivassa ajossa (kertoja pois -kytkin skenaarioon). Junasana KK:lta, kun molemmat nähty.
