@@ -95,3 +95,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   c31deb71d → b70f19656 → b8e641712 (unity 0).
 - KESKEN/ODOTTAA: ruutunopeus JÄLKEEN (224.65, JU) → fps-konsolista.py → KK; turhatyo-1 + hahmovarjo-1 (367ea7f0a, JU) → parit KK:lle; LAV:n leivonta v133:n jälkeen
   → kohta 3 -pari (aurinko | rakennuksen varjo | puun varjon reuna | sali) + ovipari (sk-juoksu-salinovi.txt; käännös 9e67b65a0 tai uudempi juoksu-turhatyo).
+
+## LISÄYS 8 (11.11. 11.10): OMISTAJAN PÄÄTÖS 11.09 (PT:n välitys) — juoksupelin peruskorjaus alkaa, KK lukee koodin (ensin drone/kamera)
+- Kesken olevat loppuun: varjokytkimet (367ea7f0a), läikkäpari (hahmovarjo-1), pelaajan varjo leivotussa, A-luokan turha työ (c28e4adb0), ruutunopeus JÄLKEEN.
+- EI uusia juoksupelin ominaisuuksia, EI mitään kameraan/droneen ilman KK:n määrittelyä. Siksi kohdan 1 "SEURAAVAKSI":
+  VainPelaaja oletukseksi vain varjojen osalta; AlkuVarjoMatka (alkulennon varjomatka) jää ennalleen, kunnes KK määrittelee.
+  Aloituslento ennen|jälkeen -pari otetaan vain kuvana (ei kamera-/lentokoodia); 3 pelikameraparia nykyisellä kameralla.
