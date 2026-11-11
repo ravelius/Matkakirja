@@ -45,3 +45,18 @@ skriptit /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-*.txt, lokit /Users/Sh
 - "Ennen aloitusta" -viesti KK:lle lähetetty 20.5x: kohdeluettelo = Nahtavyysalue.Kylttikohteet (ehdotus), Lontoon esittely riski, kaukaa-rajaus
   NS:n taulua odotellessa, vakiokuva JSON levyltä, komennot "ui vakio …"; D: MatkaPerilla-lykkäys PeliOhjaimessa + testikytkin kaikille Mac-skenaarioille.
 - JÄRJESTYS (PT): Pariisin loppulista ja A edellä; D A:n ja ohjaussauvojen jälkeen. Ohjaussauvat (KK 19.22): ensin mitat + ehdotus KK:lle.
+
+## LISÄYS 21.0x (ennen nollausta) — LUE TÄMÄ ENSIN
+- JUNAA VARTEN pulusta erillinen SHA (PT: pulun ääni kuuluu vasta Pariisin tekstiversioon SK:n datan kanssa): 3d513772b
+  (natiivi-ui/intro-nimet-kortti = ecf7c28a6 sivukuva + isoisän kortti auki luennalla; EI pulun ääntä). JU ajaa sivukuva-1:n tällä →
+  lokit/nui-sivukuva-1-3d513772b (ecf7c28a6-ajo L2:lla 20.49 näyttää kortin M:nä = vika ennen korjausta). Katso 3d513772b-ajo → KK.
+  natiivi-ui/intro-nimet (84d3e39a5) = sama + pulun ääni (Pariisin tekstiversioon).
+- PETIT PALAIS: c650f3ca6 menee junaan 50ea00f74:n tilalle (PT); petit-palais-4 JU:n jonossa.
+- B: yksi-etaisyys-2 224.82 (53171fed0) VALMIS 20.49 12/12, PUUTE 0: /Users/Shared/Claude/proto-3d/lokit/juna-yksi-etaisyys-2-53171fed0/arkki-6s.png
+  → tee KK-arkki (Orsay, Louvre koko) → KK + PT. EI vielä katsottu.
+- UUSI TYÖ (PT 21.0x): PULUN PARIISIN KUVA PYÖREÄLLÄ RAJAUKSELLA. SK a4be3cdd9 (koti/Matkakirja-sisaltokirjuri): pollo.kuvat = Commons
+  "Ballon Generali and the Eiffel Tower.jpg" (Aero4, CC BY-SA 4.0), p1 pois, esittelypaikat.mjs PARIISIN_LENTO + data/esittelypaikat.json.
+  Uusi kenttä `rajaus: { keskipiste: [0.742, 0.504], halkaisija: 0.52 }` (keskipiste leveyden/korkeuden suhteina, halkaisija leveyden suhteena):
+  natiivi näyttää pyöreän kehyksen tästä kohdasta (pallo ja joki, Eiffel pois) MUOKKAAMATTA kuvaa. Toteuta: VirtaKuva/Fokusvirrat lukee rajauksen,
+  pulun nousukuva + kartan pyöreä pieni kuva (SaapumisKuvat/"pieni kuva kartalle") käyttävät sitä (backgroundPosition/-Size UITK:ssa).
+  Lopuksi SHA + kuva KK:lle. Sisältövienti levylle SK:n haarasta (vie-sisalto --ulos) Mac-ajoa varten.
