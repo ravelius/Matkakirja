@@ -144,8 +144,9 @@ export const FOKUSVIRTA_PARIISI = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi.png',
       lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries’n puutarhasta.',
-      selite: 'Isoisä päästää kirjekyyhkyn lentoon palaneen Tuileries’n palatsin edessä. Raunioiden muoto pohjautuu Alphonse Liébertin valokuvaan.',
+      selite: 'Isoisä päästää kirjekyyhkyn lentoon poltetun Tuileries’n palatsin edessä. Palatsi paloi vuonna 1871, ja sen rauniot purettiin 1883.',
       lahde: 'Matkakirjan havainnekuva',
+      // Raunioiden esikuva: Alphonse J. Liébert, Tuileries Palace, Burned. General View (Metropolitan Museum, Public Domain).
       lahteet: [
         'https://www.metmuseum.org/art/collection/search/291458',
       ],
