@@ -232,3 +232,35 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   viesti + Yritä uudelleen (näytä KK:lle kuva), K2-uudelleen täysi maailma. → yksi viesti KK:lle (kopio PT): 5/5 + uusinnat + kuva.
 - Jonossa sen jälkeen: piirroskerroksen purku -selvitys (16c). VS:n tileset 1efd29cb4 katsottu (16e). Saapuminen pysäytetty (16g).
 - Cron 9.04 + vahti LUO UUDELLEEN.
+
+## LISÄYS 18 — NOLLAUS TÄSTÄ (11.11. 17.2x, kontekstivahti 26 %). JATKA NÄISTÄ:
+- VAHTI: Mac-ajoissa EI konsoli.txt:tä → vahti.sh ei näe niitä. Käytä Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac.sh`
+  (unity.log + loki.txt; latausjono*, piirros-ennakko-*; ALKOI/VALMIS/HUOM/HILJAA). Cron 9.04 unity-julkaisut.py LUO UUDELLEEN.
+- 1) LATAUSJONO: Mac-ajo latausjono-1 (31f66a2c3) EI valmistunut 611 s:ssa (palatsi haki osat sarjassa: Esihae vain levyltä, taustahaku tauolla latausrajan
+  120 s jälkeen). KORJAUS 9fb80c825 (natiivi-backup natiiviseppa/latausjono, wt /Users/Shared/Claude/wt/proto-natiiviseppa-latausjono): palatsin
+  verkkoesihaku EsihakuVerkkoN 5 jonon kautta (JuoksuSokkeloMaailma.Palatsi.cs Esihae/VerkkoEsihaku) + "latausjono: tila …" 20 s välein. 920/920, unity 0.
+  JU ajaa latausjono2-1…5 + -katko-1 (ajopyynto-mac-latausjono-2.md, 16 min/ajo; jatko vain jos ajo 1:ssä "kulkukartta ladattu" tai "latausvirhe näkyy").
+  Luenta: python3 -I /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/lue.py <kansiot> (unity.log; mallit "palatsi v2: ulkorengas … ladattu N glb:tä,
+  puuttuu M"; valinnainen LUOVUTETTU = ennakkohaku, ei vika; vika vain LUOVUTETTU + "VIRHE").
+- 2) KK 17.2x PÄÄTÖKSET latausjonoon (TEE SEURAAVAKSI 9fb80c825:n päälle, sitten uusi Mac-sarja):
+  1. Latauspalkki etenee myös keskeneräisen tiedoston tavujen mukaan (nyt JuoksuV4Maailma.LatausOsuus = palatsin ALOITETUT osat / kaikki; LatausValmiit++
+     ennen hakua, Palatsi.cs ~:442). Ehdotus: Latausjono tarjoaa keskeneräisten pakollisten tavuosuuden (ms.Length + downloadedBytes / Content-Range koko),
+     lisätään (1/kaikki)·osuus; JuoksuLatausEdistyminen.Kasvava pitää palkin kasvavana. Todiste-ehto: hitaalla verkolla palkin arvo muuttuu ≤ 15 s välein.
+  2. 30 s ilman MITÄÄN etenemistä → virhe + Yritä uudelleen; KORVAA 60 s/tiedosto (LatausjonoLogiikka.VirheRaja → ∞ ajurissa; testit pitävät 60:n).
+     Eteneminen = tavuja mistä tahansa haussa olevasta TAI valmis tiedosto TAI käsittelyvaiheen merkki (purku/jäsennys/rakennus: esim. LatausValmiit-setteri
+     + JuoksuRuutumerkinnat.Lohko päivittävät aikaleiman). Käsittely ei saa laukaista virhettä: lokiin "pisin etenemätön jakso X s (syy)" → todista < 30 s.
+     Virhe asetetaan Latausjonoon (uusi Logiikka-metodi, Virhe-setteri private), jotta Kelpaamaton estää Valmiin. Yritä uudelleen jatkaa (valmiit välimuistissa).
+  3. EI kokonaisrajaa virheenä (hidas mutta etenevä ok; hitaan yhteyden viesti riittää).
+  4. Palkin arvo lokiin 10 s välein (JuoksupeliNakyma ~:1291).
+  5. Poistuminen TARKISTETTU (KK:lle vastattu): ☰ latauskuvan päällä (KehysLatauskuvalle), Poistu ilman vahvistusta (:1929) → Sulje, haut perutaan.
+     Todisteeseen kuva ☰ + Poistu latauskuvassa. Ei koodimuutosta.
+  Normaalin verkon 5/5 + 439/439 yhä ehtona. Löydös juhlasali 42 Mt → PT:lle (pala 8) lähetetty.
+- 3) PIIRROKSEN ENNAKKO (KK 16.45, linja A) TEHTY 41ba1b7e5 (natiivi-backup natiiviseppa/piirros-ennakko, wt proto-natiiviseppa-piirros-ennakko): Saapuu ohittaa
+  ennakon striimikartalla + nollaus PaivitaLataukset; QA "karikatyyri tila" (tasolaatat muistissa/purettu, ennakko, tekstuuri-/varattu muisti) ja
+  "karikatyyri striimi on|pois". ENNEN dc7219520 (natiiviseppa/piirros-ennakko-ennen = juna-224 2882f055a + vain QA). Ero 7 riviä. Selvitys + ajopyyntö:
+  /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/piirros-purku/ (sk-mac-piirros-ennakko.txt). JU: ennen-ajo käynnissä toisella linjalla, jälkeen perään
+  → lokit/natiiviseppa-piirros-ennakko-{ennen,jalkeen}. LUE (KK 16.45): 1) "ui saapuminen: kartta terävä X ms" + "traileri päättyi" (paljastus), s2-paljastus
+  ennen|jälkeen: jos paljastus aikaistuu > 0,5 s tai kuva sumeampi → kuvat KK:lle ENNEN junaa; 2) muisti tila-riveiltä (s1–s4) + huippu, PiirrosKerros.Purku-
+  rivit (odotus 0 jälkeen) ja "purettu yhteensä"; 3) t1-tahti (kuva); 4) k1-karikatyyri (laatat latautuvat). → KK + Muistin keventäminen -rivi
+  (python3 -I tools/asemataulu/tyolista.py --kansio /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo tilanne "Muistin keventäminen: vaiheet 0, V, 1, 2" "…").
+  Sitten pt-ok-pyyntö PT:lle (junaehdokas 41ba1b7e5; QA-komennot mukana).
