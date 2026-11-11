@@ -1366,3 +1366,7 @@ Omistaja KK:n kautta sanatarkasti: "ei kaupungissa ole näkyvissä painettuja ni
 - 08.34: kaikki Euroopan kaupunkien nimet ja iskulauseet uudelleen kertoja Williamin äänellä, suomi pakotettuna, alkuun muutama suomenkielinen lause, koko lista YHTENÄ OTTONA, leikkaus jälkeenpäin; isoisän äänellä tehdyt 45 saapumispuhetta (15.9.) vaihdetaan. Uusinta = uusi lupa.
 - 08.50 kortti: 16 uutta iskulausetta (Bryssel–Valletta, KK:n sanamuoto) "Kyllä, kaikki" → otto 61 riviä. Nollauskortti KK:lle: "Ei vielä".
 - 08.11 + 08.19 + 08.21: nähtävyyden napautus yhtenä lentona kiertoon, kohde keskelle; Turisti-info Lehden sisälle sivuna "Matkaopas"; Lehden nappi nostopalkin vasemmalle (koe); ohjaussauvat isommiksi ja vähemmän herkiksi; nostoesityksessä kamera lukittu kohteeseen (vasen sauva vain ylös–alas). 08.11:n valikkosiirto korvattu 08.19:llä. Tekijä NUI.
+
+## Äänitykset KK:n vastuulle, suomi alkuun (omistaja 11.11. 08.51) (11.11.2026 klo 09.2x)
+
+Omistaja KK:n kautta sanatarkasti: "Saat aina tehdä kaikki äänitykset ja niitä ei tarvitse tuoda minulle tarkastettavaksi kunhan on huolehdittu että äänitys tehdään äskeisen ohjeeni mukaan tai jos pidempiä kappaleita niin silloin voi tehdä omina äänityksinä. Täytyy vain huolehtia että alussa on varmasti selkeästi suomen kieltä. Jos jokin nimi niin alkuun pitää laittaa hieman suomen kielistä tekstiä jotta nimi ääntyy oikein ja poistaa se sitten vain äänitteen alusta". Pysyvä työtapa: lupa ja tarkastus KK:lla, ei näytteitä eikä korttia omistajalle; korvaa äänitysten "uusinta = uusi kortti". Raamattu 5.1 ja 7.27 päivitetty.
