@@ -1,0 +1,631 @@
+{
+  "createdAt": "2026-11-11T17:51:16.836625+00:00",
+  "sourceOrder": {
+    "path": "posti/natiivi-ui-codex-tarinamerkit-tilaus-20261110.md",
+    "commit": "3a45ca51369ee9c33d2c07aac884b70a6456a582",
+    "blob": "106fa1c709b7ddcaebf32a378cad43fd6a86dc6c"
+  },
+  "tasks": [
+    2212,
+    2213,
+    2214,
+    2215,
+    2216
+  ],
+  "latestCorrections": [
+    2219,
+    2220
+  ],
+  "mode": "built-in image_gen, one complete new generation per attempt, true transparency requested",
+  "generationCalls": {
+    "kirja": 2,
+    "taskukello": 1,
+    "sulka": 1,
+    "lyhty": 1,
+    "tiimalasi": 1
+  },
+  "totalGenerationCalls": 6,
+  "calls": [
+    {
+      "subject": "kirja",
+      "attempt": 1,
+      "status": "generated",
+      "at": "2026-11-11T17:43:02.639657+00:00",
+      "prompt": "prompts/kirja-01.txt",
+      "selected": false,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/kirja-01.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-940b44e0-52eb-4d52-8ef8-434ae294c7c6.png",
+      "note": "Book too wide for intended 170 px height and balanced canvas margins; retry with compact nearly square silhouette."
+    },
+    {
+      "subject": "kirja",
+      "attempt": 2,
+      "status": "generated",
+      "at": "2026-11-11T17:44:02.094256+00:00",
+      "prompt": "prompts/kirja-02.txt",
+      "selected": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/kirja-02.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-df8207a0-5526-4499-8ed8-2bb30d9adfa2.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "mainSubjectBoxAtAlpha128": [
+        235,
+        315,
+        1013,
+        950
+      ],
+      "mainSubjectPixelsAtAlpha128": 434143,
+      "isolatedPixelsAtAlpha128": 0,
+      "alphaBounds": {
+        "1": [
+          0,
+          37,
+          1230,
+          1182
+        ],
+        "8": [
+          234,
+          314,
+          1014,
+          951
+        ],
+        "128": [
+          235,
+          315,
+          1013,
+          950
+        ],
+        "240": [
+          236,
+          316,
+          1012,
+          949
+        ]
+      }
+    },
+    {
+      "subject": "taskukello",
+      "attempt": 1,
+      "status": "generated",
+      "at": "2026-11-11T17:45:26.694265+00:00",
+      "prompt": "prompts/taskukello-01.txt",
+      "selected": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/taskukello-01.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c2bf5297-0850-4165-a31b-b70026d42cdb.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "mainSubjectBoxAtAlpha128": [
+        380,
+        291,
+        862,
+        956
+      ],
+      "mainSubjectPixelsAtAlpha128": 211335,
+      "isolatedPixelsAtAlpha128": 0,
+      "alphaBounds": {
+        "1": [
+          49,
+          87,
+          1226,
+          1221
+        ],
+        "8": [
+          379,
+          290,
+          863,
+          956
+        ],
+        "128": [
+          380,
+          291,
+          862,
+          956
+        ],
+        "240": [
+          380,
+          292,
+          861,
+          955
+        ]
+      }
+    },
+    {
+      "subject": "sulka",
+      "attempt": 1,
+      "status": "generated",
+      "at": "2026-11-11T17:45:26.694562+00:00",
+      "prompt": "prompts/sulka-01.txt",
+      "selected": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/sulka-01.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d57e78ff-df63-480f-9fe7-07b2a59fe31f.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "mainSubjectBoxAtAlpha128": [
+        316,
+        321,
+        977,
+        967
+      ],
+      "mainSubjectPixelsAtAlpha128": 166887,
+      "isolatedPixelsAtAlpha128": 0,
+      "alphaBounds": {
+        "1": [
+          97,
+          138,
+          1230,
+          1150
+        ],
+        "8": [
+          315,
+          321,
+          979,
+          967
+        ],
+        "128": [
+          316,
+          321,
+          977,
+          967
+        ],
+        "240": [
+          317,
+          322,
+          976,
+          966
+        ]
+      }
+    },
+    {
+      "subject": "lyhty",
+      "attempt": 1,
+      "status": "generated",
+      "at": "2026-11-11T17:45:26.694565+00:00",
+      "prompt": "prompts/lyhty-01.txt",
+      "selected": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/lyhty-01.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-7eb58328-5b38-4f61-b5bf-01acdeb5bb6c.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "mainSubjectBoxAtAlpha128": [
+        383,
+        309,
+        859,
+        987
+      ],
+      "mainSubjectPixelsAtAlpha128": 209280,
+      "isolatedPixelsAtAlpha128": 0,
+      "alphaBounds": {
+        "1": [
+          0,
+          37,
+          1232,
+          1206
+        ],
+        "8": [
+          382,
+          308,
+          860,
+          988
+        ],
+        "128": [
+          383,
+          309,
+          859,
+          987
+        ],
+        "240": [
+          384,
+          310,
+          858,
+          986
+        ]
+      }
+    },
+    {
+      "subject": "tiimalasi",
+      "attempt": 1,
+      "status": "generated",
+      "at": "2026-11-11T17:45:26.694566+00:00",
+      "prompt": "prompts/tiimalasi-01.txt",
+      "selected": true,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/tiimalasi-01.png",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-aee5b547-3317-4d90-9985-98c1183a3f0b.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "mainSubjectBoxAtAlpha128": [
+        378,
+        337,
+        876,
+        929
+      ],
+      "mainSubjectPixelsAtAlpha128": 208200,
+      "isolatedPixelsAtAlpha128": 0,
+      "alphaBounds": {
+        "1": [
+          49,
+          69,
+          1200,
+          1198
+        ],
+        "8": [
+          377,
+          335,
+          877,
+          930
+        ],
+        "128": [
+          378,
+          337,
+          876,
+          929
+        ],
+        "240": [
+          379,
+          337,
+          875,
+          928
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pariisi-pyoriva-tahti-v2-20261102/worker-production/frames/tahti-001.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/references/tahti-001.png",
+      "sha256": "d9884d355ca6e8fe4db68d8767da7e64bda1b5c283be50b240c9a09ea4c4446c"
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_tyo/codex/pariisi-kadonneet-ihmeet/tahti-tilaus-20261102/tyyliviite-kartta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/references/tyyliviite-kartta.png",
+      "sha256": "6db0347350369f204a531e12913f8b130e3bf01be7670a382f4dfa7e784085c9"
+    }
+  ],
+  "referenceStarDeliveryCommit": "f84dfb5b41a1ab4c370d9cbf3bacf5512c6e9612",
+  "referenceStarSHA256": "d9884d355ca6e8fe4db68d8767da7e64bda1b5c283be50b240c9a09ea4c4446c",
+  "technicalExports": [
+    {
+      "subject": "kirja",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/kirja-02.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/_review-tarinamerkit-20261110/tarina-kirja.png",
+      "nativeSubjectBox": [
+        235,
+        315,
+        1013,
+        950
+      ],
+      "nativeCrop": [
+        229,
+        309,
+        790,
+        647
+      ],
+      "resizePercent": 26.77165354330709,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "visibleSubjectBoxAtAlpha128": [
+        24,
+        43,
+        231,
+        212
+      ],
+      "visibleHeight": 169,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "method": "ImageMagick proportional downsample of generated artwork plus centered transparent canvas; no painted content or colour changes; six native pixels of edge padding retained."
+    },
+    {
+      "subject": "taskukello",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/taskukello-01.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/_review-tarinamerkit-20261110/tarina-taskukello.png",
+      "nativeSubjectBox": [
+        380,
+        291,
+        862,
+        956
+      ],
+      "nativeCrop": [
+        374,
+        285,
+        494,
+        677
+      ],
+      "resizePercent": 25.563909774436087,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "visibleSubjectBoxAtAlpha128": [
+        66,
+        43,
+        189,
+        212
+      ],
+      "visibleHeight": 169,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "method": "ImageMagick proportional downsample of generated artwork plus centered transparent canvas; no painted content or colour changes; six native pixels of edge padding retained."
+    },
+    {
+      "subject": "sulka",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/sulka-01.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/_review-tarinamerkit-20261110/tarina-sulka.png",
+      "nativeSubjectBox": [
+        316,
+        321,
+        977,
+        967
+      ],
+      "nativeCrop": [
+        310,
+        315,
+        673,
+        658
+      ],
+      "resizePercent": 26.31578947368421,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "visibleSubjectBoxAtAlpha128": [
+        41,
+        43,
+        214,
+        212
+      ],
+      "visibleHeight": 169,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "method": "ImageMagick proportional downsample of generated artwork plus centered transparent canvas; no painted content or colour changes; six native pixels of edge padding retained."
+    },
+    {
+      "subject": "lyhty",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/lyhty-01.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/_review-tarinamerkit-20261110/tarina-lyhty.png",
+      "nativeSubjectBox": [
+        383,
+        309,
+        859,
+        987
+      ],
+      "nativeCrop": [
+        377,
+        303,
+        488,
+        690
+      ],
+      "resizePercent": 25.073746312684364,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "visibleSubjectBoxAtAlpha128": [
+        69,
+        42,
+        187,
+        213
+      ],
+      "visibleHeight": 171,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "method": "ImageMagick proportional downsample of generated artwork plus centered transparent canvas; no painted content or colour changes; six native pixels of edge padding retained."
+    },
+    {
+      "subject": "tiimalasi",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/native/tiimalasi-01.png",
+      "final": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tarinamerkit-2212-2216-20261111/_review-tarinamerkit-20261110/tarina-tiimalasi.png",
+      "nativeSubjectBox": [
+        378,
+        337,
+        876,
+        929
+      ],
+      "nativeCrop": [
+        372,
+        331,
+        510,
+        604
+      ],
+      "resizePercent": 28.716216216216218,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "visibleSubjectBoxAtAlpha128": [
+        57,
+        43,
+        199,
+        212
+      ],
+      "visibleHeight": 169,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "method": "ImageMagick proportional downsample of generated artwork plus centered transparent canvas; no painted content or colour changes; six native pixels of edge padding retained."
+    }
+  ],
+  "technicalProcessing": "ImageMagick alpha-preserving proportional downsample, framing around the principal silhouette and centered 256px transparent canvas. No local creative retouching or colour replacement. Generated originals preserved. Comparison sheet only composites the unchanged sprites over identical 1:1 crops of the supplied map.",
+  "sourceMapCrop": [
+    640,
+    384,
+    256,
+    256
+  ],
+  "sheetSpriteSizes": [
+    256,
+    48
+  ],
+  "sheetStarIsReferenceOnly": true,
+  "finalImageFiles": [
+    {
+      "file": "tarina-kirja.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 44857,
+      "sha256": "78bf83e55552426f56d0f448ee090d62526e60bca7ec75b78b628a9c34d22a72",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        24,
+        43,
+        231,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        127.5,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-taskukello.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 35137,
+      "sha256": "97f9527cf5c58a2f50e5b5d1d6da5c796ac78aa0a9d58b49edbc34a435c8a79a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        66,
+        43,
+        189,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        127.5,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-sulka.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 33014,
+      "sha256": "a482d7dabda01d8cdfc4f9b6a635e81dfa3d014eceedda5f4039c5b57602ccb5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        41,
+        43,
+        214,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        127.5,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-lyhty.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 33967,
+      "sha256": "c075b0e9cdee2568e9136bb9da6593fda0331871e93a62ea42530ac5e3545b7d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        69,
+        42,
+        187,
+        213
+      ],
+      "subjectHeight": 171,
+      "centre": [
+        128.0,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-tiimalasi.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 37375,
+      "sha256": "ae365623a588446edb441f13c7290457aad80e8ccf4e7f398fb3414b24dd91ac",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        57,
+        43,
+        199,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        128.0,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "arkki.png",
+      "size": [
+        1536,
+        760
+      ],
+      "mode": "RGBA",
+      "bytes": 810026,
+      "sha256": "360a6a32f8707539bdc5d0507d6e5543b5e0a32cc735581e2acd249bc172b6fe"
+    }
+  ]
+}

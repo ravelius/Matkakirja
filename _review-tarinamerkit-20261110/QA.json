@@ -1,0 +1,179 @@
+{
+  "checkedAt": "2026-11-11T17:51:16.836625+00:00",
+  "status": "PASS",
+  "imageFiles": [
+    {
+      "file": "tarina-kirja.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 44857,
+      "sha256": "78bf83e55552426f56d0f448ee090d62526e60bca7ec75b78b628a9c34d22a72",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        24,
+        43,
+        231,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        127.5,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-taskukello.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 35137,
+      "sha256": "97f9527cf5c58a2f50e5b5d1d6da5c796ac78aa0a9d58b49edbc34a435c8a79a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        66,
+        43,
+        189,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        127.5,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-sulka.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 33014,
+      "sha256": "a482d7dabda01d8cdfc4f9b6a635e81dfa3d014eceedda5f4039c5b57602ccb5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        41,
+        43,
+        214,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        127.5,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-lyhty.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 33967,
+      "sha256": "c075b0e9cdee2568e9136bb9da6593fda0331871e93a62ea42530ac5e3545b7d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        69,
+        42,
+        187,
+        213
+      ],
+      "subjectHeight": 171,
+      "centre": [
+        128.0,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "tarina-tiimalasi.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bytes": 37375,
+      "sha256": "ae365623a588446edb441f13c7290457aad80e8ccf4e7f398fb3414b24dd91ac",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "subjectBoxAtAlpha128": [
+        57,
+        43,
+        199,
+        212
+      ],
+      "subjectHeight": 169,
+      "centre": [
+        128.0,
+        127.5
+      ],
+      "edgeEightPixelsFullyTransparent": true
+    },
+    {
+      "file": "arkki.png",
+      "size": [
+        1536,
+        760
+      ],
+      "mode": "RGBA",
+      "bytes": 810026,
+      "sha256": "360a6a32f8707539bdc5d0507d6e5543b5e0a32cc735581e2acd249bc172b6fe"
+    }
+  ],
+  "technicalChecks": {
+    "fiveRGBA256Sprites": true,
+    "trueTransparentBackground": true,
+    "subjectHeight169to171Pixels": true,
+    "centeredWithinOnePixel": true,
+    "noCanvasEdgeClipping": true,
+    "staticOneFramePerSubject": true,
+    "sourceAttemptLimitRespected": true
+  },
+  "visualChecks": {
+    "oneObjectPerIcon": true,
+    "darkSepiaAndThinParchmentEdge": true,
+    "noGlowTextNumbersOrLogos": true,
+    "featherWithoutInkBottle": true,
+    "fullSizeAnd48pxOnRequestedCleanMapReviewed": true,
+    "additional40pxReadabilityReviewed": true,
+    "lightAndDarkBackgroundEdgesReviewed": true,
+    "goldStarRemainsVisuallyDistinct": true
+  },
+  "reviewer": "Codex primary agent; direct visual inspection and local technical checks, no independent-review claim",
+  "generationCalls": {
+    "kirja": 2,
+    "taskukello": 1,
+    "sulka": 1,
+    "lyhty": 1,
+    "tiimalasi": 1
+  },
+  "totalGenerationCalls": 6,
+  "runtimeTested": false,
+  "ownerSelection": "pending",
+  "receiverAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false
+}
