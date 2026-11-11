@@ -32,7 +32,8 @@ Wt /Users/Shared/Claude/wt/proto-pelikoodari-kuvajono: poista (git worktree remo
 
 ## 3. MUUT (ennallaan)
 - v133c 漱芳斋-ovi: PT:n pt-ok → MR (PT pyytää). Haara pelikoodari/tausta-v133 904715425 pushattu.
-- B1 bcf32314c (pelikoodari/seinat-taso1): junaan vain PT:n päätöksellä.
+- B1 bcf32314c (pelikoodari/seinat-taso1): JUNASANA KK:LTA (PT 01.1x, Raamattu 7.24): kun LAV:n aja-a2.zsh-ajon (JU) vertailu m1-varmistus-kuviin
+  on valmis, tulos + bcf32314c suoraan KK:lle; pt-ok sitten PT:ltä. Työlistan rivi "Juoksupeli: puuttuvat seinät ja rakenteet" = tämä.
 - tyokalut/tarkista.sh päivittää tyylikirjan → palauta git checkoutilla, älä committaa.
 Ei agentteja käynnissä. Ei uusia lupia.
 
