@@ -182,7 +182,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - NUI 18.2x: pallo+kyltti natiivi-ui/pallo-kyltti-224 652653bc7 (merge a0384240a + 9c6a6f864, Oletus kuumailmapallo mukana), unity 0, 763/763 → JU MR75 = 224.81. KS:ltä ei toimia.
 - JU 18.2x NUMEROKORJAUS: kuumailmapallo 652653bc7 = 224.80 (EI 224.81; yllä 14b/14c korjautuu). Seuraa LINKKI 224.80.
 
-## LISÄYS 15 (19.5x, uusi sessio 18.3x): PdJ suljettu, KJ47 katsottu, KJ47b JU:lla, NOLLAUS (konteksti 25 %)
+## LISÄYS 15 (19.08, uusi sessio 18.3x): PdJ suljettu, KJ47 katsottu, KJ47b JU:lla, NOLLAUS (konteksti 25 %)
 - PALAIS DE JUSTICE: KK 18.34 PÄÄTÖS EI talot-erää (IGN ja OSM: koko kompleksi yksi rakennus 23,4 m; IGN-osia ei ole). docs/raportit/karttaseppa-pdj-selvitys-20261111.md.
   Seine ja sillat -katsaukseen (LISÄYS 10 kohta 3) katsottava kohta: Conciergerien jokijulkisivu (tornien puute joelta).
 - KJ47 katsottu → KK 19.0x: docs/raportit/karttaseppa-kj47-puut-20261111.md, parit K/parit-kj47/. Muisti ≈ 0 ja piirtokutsut +8–11 % HYVÄKSYTTY (KK).
@@ -194,7 +194,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   väli 13 m rasterijärjestyksessä, jotta rivit pysyvät; lajit (0,0,1), Prunus → 1). Kevyet puut omalla aineella puuAineKevyt _Savy (1.25, 1.2, 1.1) haalistus 0.35,
   komento `puut savy r g b [h]`. MITATTU (savy.py, KJ47 jälkeen-kuvat): maalattu puusto sRGB ~128 130 84, 3D-latvus ~90 90 55 (lineaarisesti ~2× tummempi; kylläisyys sama).
   PiirtoTilasto: "NÄKYVÄT kolmiot" = isVisible-piirtäjien verkot + pääkameran näkymään osuvat puuerät. ENNEN-mittari b19f3b2ee (karttaseppa/ymparistot-mittari-ennen).
-- KJ47b JU:lla (pyydetty 19.5x, kopio PT): K/sk-mac-puut-kj47b.txt, 28 kuvaa → lokit/ks-kj47b-puut-{ennen-b19f3b2ee,jalkeen-ce7a3849c}.
+- KJ47b JU:lla (pyydetty 19.0x, kopio PT): K/sk-mac-puut-kj47b.txt, 28 kuvaa → lokit/ks-kj47b-puut-{ennen-b19f3b2ee,jalkeen-ce7a3849c}.
   KUN TULEE: parit pari.py:llä (K/pari.py a b ulos 2000) kansioon K/parit-kj47b/; Champ-de-Mars (ym47b-40) orton rinnalle (K/ymparistot-kj47b/orto/orto-eiffel.jpg);
   sävy: aja savy.py-tapaan 3D vs maalattu (ym47b-41/42), valitse 42/43/44:stä lähin maalattuun ja kerro arvot; varjoraja 30–35 (lähin m lokista, ei poksahdusta);
   kolmiot: NÄKYVÄT ennen → jälkeen yleisnäkymissä, raja ~+10 %. Luvut + parit KK:lle (kopio PT). Junaan VAIN KK:n sanalla.
