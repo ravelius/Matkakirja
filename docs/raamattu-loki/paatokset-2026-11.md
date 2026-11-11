@@ -1347,3 +1347,11 @@ Omistaja 21.58 KK:lle: "Tehdäänkö kaikki nyt oikeassa mittasuhteessa ilman li
 ## Nähtävyys paisuu hetkeksi kohteena, koe (omistaja 10.11. 22.01) (10.11.2026 klo 22.0x)
 
 Omistaja KK:lle sanatarkasti: "Ja voisiko rakennusta vain paisuttaa hetkellisesti joka suuntaan jos se on kohteena? Silloin se ei mahtuisi paikalleen mutta jos se on vain väliaikainen ja animoitu liike niin se voisi toimia". KK:n tavoitekuva suunnitelmat/20261110-nahtavyys-paisuu-kohteena.md (ponnahduskirja: kartta 1:1, valittu kasvaa ~0,5 s pohjan keskipisteestä, naapurit väistyvät, paluu valinnan päättyessä). Koe videona, ei junaan; tekijä NUI (PT 22.0x), KS:n 1:1-työ edellä; karkea ND-video suoraan KK:lle.
+
+## Ei tilinvaihtoa, kevennys aamulla (omistaja 11.11. 00.07) (11.11.2026 klo 00.08)
+
+Omistaja KK:n kautta 11.11.2026 klo 00.07 sanatarkasti: "Ei tehdä tilin vaihtoa sillä sain ilmaisen resetin. Menen kuitenkin kohta nukkumaan joten voit tehdä nollauksen ilman lupaa. Tehdään raamattu juttu vasta aamulla. Resetin kun prosentit alkaa loppua". 1) Ei tilinvaihtoa; omistaja nollaa viikkorajan itse: kun viikko lähestyy 99 %:a, PT/Postivahti rivi KK:lle, ei tilinvaihtoa eikä luovutuksia sen takia. 2) Raamatun kevennys (luvut 12 ja 7, KK) aamulla 11.11. ilman tilinvaihtoa. 3) Yön säännöt voimassa.
+
+## Lähin kamera hyväksytty (KK 11.11. noin klo 01.0x) (11.11.2026 klo 07.1x)
+
+KK hyväksyi NUI:n lähimmän kameran c032134e7 11.11. noin klo 01.0x (kuvat lokit/nui-lahin-2-7x-4-c032134e7, KS b5ef8b0c9): lähin leveys 0,231 = 0,620 km. Linkissä 224.51 (29768b6cb). Lähde: KS:n luovutus -0105, LISÄYS 01.1x; merkintä puuttui lokista, KK pyysi lisäämään 07.1x. VS:n kynäkoe ja uusi 1:1-viiva jatkuvat tällä kameralla.
