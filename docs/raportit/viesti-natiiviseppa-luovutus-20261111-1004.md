@@ -270,3 +270,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   kesken-MemoryStreamit (Latausjono.Peru) → b vaatii osittaisen tiedoston levylle (persistentDataPath, .osa + .meta: pituus, ETag/Last-Modified) + If-Range
   tai vertailu + testit. Arvio KK:lle: ~80–120 riviä + 3–4 testiä = EI pieni → OMA RIVI (KK:lle kerrottu). Todiste b:lle: katkaisu kesken salin → Yritä
   uudelleen → lokista "jatkettiin kohdasta N kt".
+- 18c (17.35) KORJAUS kohtaan 3: PIIRROKSEN ENNAKKO-LÖYDÖS OLI VÄÄRÄ. PiirrosKerros.Keskusta() palauttaa null ilman karikatyyriä → striimikartalla ennakkoa
+  ei asetu jo juna-224:ssä. Mac ENNEN-ajo dc7219520 (lokit/natiiviseppa-piirros-ennakko-ennen): ennakko pois, tasolaattoja 0, purettu 0. "puuttuu 0/28" =
+  0 puuttuu 28:sta. 41ba1b7e5 TARPEETON, EI JUNAAN; JÄLKEEN-ajo peruttu JU:lta; KK, JU ja Muistin keventäminen -rivi korjattu. Haaroja ei poisteta.
+  (Sivuhuomio: skenaarion "traileri päättyi" ei tullut 90 s:ssa vanhassa saapumisessa; ei jatkotoimia.) EI NS:n jatkotöitä tästä.
