@@ -150,3 +150,16 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - HAHMOVARJO-1: 9 kuvaa pikselilleen samat (ei hahmoja ruudussa) → hahmovarjo-2 (_tyo/natiiviseppa/varjot/sk-juoksu-hahmovarjo-2.txt: eunukki kurkistaa / huutavat / vartijan kehote)
   JU:n iPad-jonossa → kolmikot KK:lle (kopio PT).
 - Cron (unity-julkaisut 9.04) ja ajovahti (Monitor vahti.sh) LUO UUDELLEEN.
+
+## LISÄYS 14 (11.11. 12.5x, uusi sessio): KK 12.07 mac-6 -jäänteet → korjaus 204a54ecd (natiiviseppa/saapuminen-pariisi, unity 0)
+- Jäänne 1 (notkahdus 36,7–37,0 s): pysäytyskuva häipyi ennen peitettä → pallon OMA sumennus (pieni renderScale) näkyi, sitten tarkkuus palasi 1 kehyksessä
+  (reunat 118 → 126 → 100, ero 14). Jäänne 2 (ylitys 37,6–38,0 s): NimiPois-kirjaimet kasvavat ruudun kokoisiksi ja vaalentavat keskikohdan viimeisinä.
+  Kuvat lokit/natiiviseppa-saapuminen-mac-6/jaanne*-ns.jpg. KK:lle selitetty.
+- Korjaus: TraileriTausta.PohjaPeitteeseen (pysäytyskuvan kopio + sävy peitteen alimmiksi lapsiksi), Introesitys.PehmeaLoppu (ryhmähäivytys suodin opacity,
+  käyrä lineaarinen/smoothstep-keskiarvo, odottaa PalloKierto.ElavaTerava + 2 kehystä, katto PehmeaValmisKattoS 1 s; nimi ei syöksy), PalloKierto.SumennusHetiPois,
+  SaapumisKoe: UI palaa häivytyksen alkaessa (LoppuOdottaa), kamera seisoo LoppuKaynnissa. PysaytysEsiS/PehmeaKokoS/HaivytaPysaytys poistettu.
+- JU: ajopyynto-mac-7.md (204a54ecd) + ajopyynto-ipad-muisti-4.md (sha päivitetty 204a54ecd). LUE mac-7: kirkkaus 10 näytettä/s (k-*.jpg joka 5., 50 fps;
+  scratchpad-skripti alfa.py: /opt/homebrew/bin/python3 -P -E, numpy) → ehdot: yhteen suuntaan, poikkeama ≤ 2, ruutuero ≤ 2 × naapurit; lokirivit
+  "elävä kartta valmis peitteen alla X s" ja "häivytys valmis". muisti-4: odotus < 25 s + huippu (muisti-tarkka.log). → KK (kopio PT).
+- RUUTUNOPEUS VALMIS: ennen-3 37,5 / huonoin 27,4 / GPU 41,6/52,9 | jälkeen 40,0 / 28,5 / 34,8/50,5 → KK + PT lähetetty.
+- Cron ja ajovahti luotu tähän sessioon.
