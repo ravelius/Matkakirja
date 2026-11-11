@@ -23,3 +23,10 @@ Korvaa -0132:n; taustat ja työkalut: `git show 91be273d8:docs/raportit/viesti-k
   F näkyy myös KJ20:ssä (v6-palat) → vanha rakennustaso/3D-ero. KK:lta kysytty 02.3x: saako Louvre jäädä 224.53:een (suositus kyllä).
 - SC KSC=1: ulos-sc1 valmis (exit 0). Seuraavaksi v29 = v28 + vain Citén palat ulos-sc1:stä → Mac-ajo.
 - KJ24 Sacré-Cœur JU:n jonossa.
+
+## LISÄYS 02.10
+- KK 02.3x: Louvre JÄÄ 224.53:een. PT 02.09 pt-ok uudelleen, JU ajaa MR46 (73e4fa159, talot v7). Invalidit-versio peruttu:
+  talot-paketti-pariisi-invalidit-v8-hylatty ja -invalidit-vain-hylatty = käyttämättömiä, ÄLÄ vie. Seuraava talopaketti = v8.
+- KK: F-jalanjälki pienenä kartta-asiana Sainte-Chapellen JÄLKEEN: yksi rivi KK:lle, mikä talo puuttuu 3D:stä tai mikä piirros ylimääräinen
+  (OSM-talot alueella kaikki paloissa → katso maan rakennustason lähde). Raivauksen tarkistuskuvaa ei tarvita.
+- Järjestys: KJ24 Sacré-Cœur → KJ25 Sainte-Chapelle (molemmat JU:n jonossa, 8f647a8d4) → F.
