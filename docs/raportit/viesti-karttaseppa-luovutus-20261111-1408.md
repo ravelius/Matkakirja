@@ -66,3 +66,15 @@ M = /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/montmartre-maasto, K = /Users
   Katso: esityskamera 4 suuntaa (kirkko ~1/4 korkeudesta), Saint-Pierre ylös, 5 km, lähin portaat + länsirinne. Mitat raporttiin, parit KK:lle (kopio PT).
 - Avoimet: nimet ja merkit (MontmartreKorkeus RGE:stä bdccb177e) tarkistetaan pareista; jos rinteessä särmiä tai reunalla porras → raportti KK:lle, ei paikata mallilla.
 - JONO: 1) odota JU:n aamun rivi → KJ43 JU:lle. 2) Sillä välin: PT:n/KK:n vastaus GP:stä. Jos ei muuta, rivi PT:lle "JONO TYHJÄ (odottaa maaston vientiä)".
+
+## LISÄYS 9 (16.27): rivi suljettu, SYVYYSVETO (KK 16.26), NOLLAUS
+- PT/KK 16.19: GP ei uutta korjausta. Rivi "Pariisin loput ylisuuret 1:1" VALMIS (tyolista.py valmis); KK:lle lista: 13 nähtävyyttä koodina, nolla Tripoa, kaikki 224.73:ssa.
+- SYVYYSVETO 03ad357fb (natiivi-backup karttaseppa/syvyysveto-2 = juna-224 kärki 2882f055a + 1 commit): KK:n kaava SyvyysVeto = v · min(1, 0,8 · raja / 60)
+  kolmeen varjostimeen (NotreDameKirkkoYhteinen.hlsl, OhjelmaKohde.shader, TaloKerros.shader). 758/758, unity 0. Tarkistettu: kaikki vedot ≤ 63 m → kerroin ≤ 1,
+  ääriviiva (60 − taakse) skaalautuu samalla kertoimella → pysyy pinnan takana; ei lähitason eteen.
+- AJO A JU:lla (pyydetty 16.3x, kopio PT): K/sk-mac-syvyysveto-kj44-a.txt, 8 kuvaa (Eiffelin juuri sisältä ja vierestä, Riemukaari 90 m ja 130 m, lähin kamera, kallistus 85), ENNEN 2882f055a | JÄLKEEN 03ad357fb.
+  NUI yhdistää 03ad357fb:n haaraansa natiivi-ui/napautus-224 ajoa B varten (lähitasokatto pois/päällä) ja liittää skriptinsä samaan JU-ajoon.
+  KUN KUVAT TULEVAT: katso 1000 px:n kopioina ja täysikokoisina rajauksina (litistys/leikkautuminen) ja lähetä parit ennen | jälkeen KK:lle (kopio PT). KK:n OK → junaehdokas
+  (cherry-pick 03ad357fb juna-224:n kärkeen) JU:lle PT:n pt-ok:lla.
+- Työpuu /Users/Shared/Claude/wt/proto-karttaseppa-koodijuna on nyt haarassa karttaseppa/syvyysveto-2 (puhdas). Montmartre jatkuu haarasta karttaseppa/montmartre (4115be46b).
+- JONO: 1) syvyysvedon kuvat (A + B) → KK. 2) Montmartre KJ43 JU:lle maaston 01.00-viennin jälkeen (ks. LISÄYS 8).
