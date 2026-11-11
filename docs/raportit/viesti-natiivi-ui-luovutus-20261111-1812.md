@@ -23,3 +23,5 @@ Kehysero: `python3 _tyo/natiivi-ui/kehysero.py <kansio> <alku_s> <loppu_s>` (ILM
 - Rungon rajat (KS RungonRajat 2743a6ebd, LISÄYS 14.0x vanhassa luovutuksessa): NUI:n vaihto verkko.bounds → OhjelmaKohteet.RungonRajat
   (NahtavyysEsittely.TaysiMalli, Paisunta.MahtuvaKerroin, Naytteet) EI ALOITETTU; kysy KK:lta, onko yhä jonossa (SC:n koko).
 - JONO MUUTEN TYHJÄ → jos ei uutta työtä: rivi PT:lle "JONO TYHJÄ: Natiivi-UI".
+
+## LISÄYS 1 (18.1x, JU): sulku-katse-2 e0f7d6a7d → MR74 → 224.80, korvaa d520120aa:n (napautuslento mukana). Linkki tulee JU:lta.
