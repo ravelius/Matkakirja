@@ -60,3 +60,4 @@ skriptit /Users/Shared/Claude/proto-3d/_tyo/natiivi-ui/sk-*.txt, lokit /Users/Sh
   natiivi näyttää pyöreän kehyksen tästä kohdasta (pallo ja joki, Eiffel pois) MUOKKAAMATTA kuvaa. Toteuta: VirtaKuva/Fokusvirrat lukee rajauksen,
   pulun nousukuva + kartan pyöreä pieni kuva (SaapumisKuvat/"pieni kuva kartalle") käyttävät sitä (backgroundPosition/-Size UITK:ssa).
   Lopuksi SHA + kuva KK:lle. Sisältövienti levylle SK:n haarasta (vie-sisalto --ulos) Mac-ajoa varten.
+- 21.0x JU: sivukuva-1 ajetaan 84d3e39a5:llä → lokit/nui-sivukuva-1-84d3e39a5 (kuvissa sama kuin 3d513772b; ero vain pulun ääni). Katso se; junaan silti 3d513772b.
