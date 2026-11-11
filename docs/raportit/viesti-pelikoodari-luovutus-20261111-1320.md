@@ -51,5 +51,6 @@ reunuksella, EI seinässä → vastaa PT:n kysymykseen (b) kuvien kanssa.
 TEE: uusi koekuvat-tiedosto (tyokalut/koekuvat-ovi-shufangzhai.txt mallina), kamera AUKIOLLA rakennusten ulkopuolella niin, että ovi ja
 katot näkyvät (esim. idästä x ≈ −85 välikköä pitkin länteen; tarkista kehys tiedostosta), ja sama kohta v132:lla (sha junasta) → JU ajaa
 tarkastelu_kuvat.sh → katso kuvat → pari PT:lle, kopio LAV:lle. MR vasta PT:n pt-ok:lla.
+PT 13.3x: jos ovi on reunuksella eikä seinässä, se on OVENHAUN VIKA → korjaa haku ennen MR:ää; v133c ei junaan ennen PT:n katsomaa paria.
 
 Ei agentteja käynnissä. Ei uusia lupia.
