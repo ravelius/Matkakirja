@@ -562,3 +562,23 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   myös testikamerakuvissa (K2–K5, K7b).
 - Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac2.sh` (kattaa palkki-[3-9]*, pala3-*, ns-kaupunkitaulu-vakioajo-*). Cron 9.04 LUO UUDELLEEN.
 - 32b PT 22.1x: 1b1359d75 → juna 224.87 (pt-ok). Järjestys ennallaan: SHA KS:lle (TEHTY) → palkki-6 → kaupunkityökalut; pari-b yöllä.
+
+## LISÄYS 33 — NOLLAUS TÄSTÄ (11.11. 22.3x, kontekstivahti 26 %). JATKA NÄISTÄ:
+- PALKKI-6 TEHTY 6c5b95883 (natiivi-backup natiiviseppa/latausjono, 1b1359d75:n päälle; Peli-testit 930/930, unity 0): 1) JuoksuLatausEdistyminen.Naytetty
+  (alkuarvo + (1 − alkuarvo) × taulu, JuoksuV4Maailma.palkkiPohja); 2) "kesken 0 %" SYY: Latausjono.Lataa luki pakollisuuden vain yrityksen alussa,
+  juhlasali.glb alkoi taustan valinnaisena esihakuna → Nosta kesken yrityksen → tavut eivät kirjautuneet. Nyt Osuus lukee Jono.OnPakollinen joka kerta;
+  KeskenKatto vain kun koko lohko kesken (k = 1); avoimien askel mallin tavujen mukaan (Palatsi.AvoinPaino: juhlasali 16,3 / 9,2 / 9,2 / 9,6 Mt);
+  3) pelin oma mittari JuoksupeliNakyma.MittaaPalkki (SamaMittari, joka ruutu, kynnys 1 px palkin leveydestä) → lokirivi lopussa
+  "juoksupeli: palkki: pisin sama arvo X s kohdassa Y (t …, lohko Z); kynnys …, leveys N px". lue.py tulostaa sen "MITTARI"-rivinä.
+  JU: ajopyynto-mac-palkki-6.md (hidas, sk-juoksu-latausjono.txt) → lokit/natiiviseppa-juoksu-latausjono-palkki-6 (pyydetty 22.2x).
+  LUE: python3 -I /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/lue.py <kansio> → MITTARI ≤ 15 s? + 439/439 + VIRHE 0 → KK (kopio PT):
+  mittaririvi + mitä korjattiin (alkuarvo, juhlasalin syy) → KK:n sana → pt-ok PT:lle (6c5b95883). Jos > 15 s: lohko rivistä → säädä.
+- MONO-SELVITYS (KK 21.37, vain mittaus) TEHTY 0e7c0a6a9 (natiivi-backup natiiviseppa/mono-selvitys, wt /Users/Shared/Claude/wt/proto-natiiviseppa-tyokalu3,
+  c1841699a:n päälle, EI JUNAAN): QA `mono-varaajat <s> <tunniste>` (Kartta/MonoVaraajat.cs koukku + Editor/MonoVaraajatEditori.cs: ProfilerDriver +
+  RawFrameDataView, kaikki säikeet, kutsupinot). Rivit "MONO-VARAAJAT <t> 20 s: mono a → b Mt …, GC.Alloc yht …", "MONO-VARAAJA <t> 1–5 … Mt/s | merkit | kutsupaikka",
+  "MONO-KAYRA". Jos "PROFILOIJA EI TALLENTANUT" → batchmode-rajoitus, keksi muu (esim. ProfilerRecorder GC Allocated In Frame + omat merkit).
+  JU: _tyo/natiiviseppa/mono/ajopyynto-mac-mono-1.md (sk-mono-pariisi.txt: 20 s ennen kaupunkia + 20 s valmiin jälkeen) → lokit/ns-mono-1, palkki-6:n jälkeen.
+  LUE → YKSI viesti KK:lle (kopio PT): kolme suurinta varaajaa kutsupaikkoineen (Mt/s) + toistuuko ennen kaupungin latausta. Ei korjauksia.
+- T1-vakioajo (cfe3324a3, JU koeyhdistelmä 37c7d3b75) ei vielä ajettu (lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3 puuttuu 22.19) → LUE arkit ennen|jälkeen + palamäärät → KK + junaehdokas.
+- PARI-B (pala 3.1b) JU:lla yöllä → ohje lisäys 32.
+- Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac3.sh` (= mac2 + vanhat tilat ohitetaan alussa + ns-mono-*). Cron 9.04 LUO UUDELLEEN.
