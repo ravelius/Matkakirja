@@ -100,3 +100,8 @@ kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto
 - AJO JU:lla: sk-napautus-224-1.txt (proto-3d/_tyo/natiivi-ui) → lokit/nui-napautus-224-1-313e15b1a: Riemukaari a (lahitaso 0) / b, Louvre b.
   SEURAAVAKSI: katso täysikokoisina (b: ei kolmiota eikä sekaisin meneviä pintoja; a näyttää litistyksen, jos se näkyy), lokista "lähitaso … (esityksen katto …)"
   → KK:lle pari a/b + Louvre, PT kopio. KK:n sanalla 313e15b1a PT:lle junaan.
+
+## LISÄYS 9 (KK 16.20): ehdokas nyt 41b9c5965 (= 313e15b1a + lukonVersio: lukko vapautuu, vaikka uusi esittely ei ota omaansa)
+- KK:lle vastattu koodista: palautuspolut, D32_SFloat_S8 + käänteinen Z, Louvre (rajapallo 417, lähin 766, lähitaso 50) ja Invalidit (230, 407, 50) ennallaan,
+  tavallinen kartta: 124 m kiertopisteestä (620/5), Riemukaari ~89 m, Eiffel ~0 m → litistys jo 224.70:ssä; KK päättää yhteisestä paikasta, EI laajennusta ennen sanaa.
+- JU:lle: aja 41b9c5965, skripti lisätty Invalidit + lopuksi 5 s tallenne e-riemukaari-b-lahin → lokit/nui-napautus-224-1-41b9c5965.
