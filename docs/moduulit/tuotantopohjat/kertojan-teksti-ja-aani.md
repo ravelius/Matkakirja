@@ -11,7 +11,7 @@ luvussa 7.)*
 
 **Napit, tyylit ja toimintalogiikka (omistaja 20.10.2026 klo 22.58; Raamattu 2.70 ja kohta 2 UI-POHJAT):** pohja ei kuvaa omia nappeja, värejä eikä sisään- ja ulostuloa. Käytä tyylikirjaa (`tools/tyylikirja.mjs`, `tyylikirja/`) ja yhteisiä linssien ja pelien sääntöjä (2.70, 2.201). Käytä ensin yhteistä osaa; uusi osa tehdään yhteiseksi kaikille (omistaja 23.25), ja puuttuva pohja kysytään PT:ltä.
 
-**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitteesta: äänessä mallinäyte ja kuvaus, uudessa tekstityypissä esimerkit pelinäkymässä. Ääneen sovitettuna omistaja kuulee mallinäytteen ja valmiin oton peräkkäin KK:n kautta ennen junaa. Tämä koskee vain uusia asioita ja makuvalintoja (esim. uusi ääni, uusi hahmo, uusi tekstityyppi); tavallisen erän tutulla äänellä ja tutulla tyypillä hyväksyy PT (Raamattu 4.21).
+**Koko työ ideasta junaan (omistaja 20.10.2026 klo 22.53, Raamattu 4.21):** pohja kattaa työn ideasta junaan. Työ alkaa tavoitteesta: äänessä mallinäyte ja kuvaus, uudessa tekstityypissä esimerkit pelinäkymässä. Äänitysten luvan ja tarkastuksen hoitaa KK (alle 3 %:n ajo; Raamattu 5.1, omistaja 11.11.2026 klo 08.51); omistaja kuulee vain äänet, jotka hän itse pyytää kuultavaksi (kohta 11), ja näkee kokonaan uudet luettavat tekstit listana ennen äänitystä.
 
 **Julkaisu (Raamattu 10.2 ja 9.11):** valmis ääni menee avoimeen junaan (yksi juna kerrallaan). Lukitus ja TestFlight tehdään vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA"). Simulaattoria käytetään vain selvästi uuteen tekniikkaan, omistajan pyytämiin kuviin ja yöjunan laitekierrokseen; tavallinen ääni- tai tekstierä kulkee automaattisten tarkistusten jälkeen suoraan junaan ilman simukuvia.
 
@@ -27,14 +27,14 @@ kertomukset, historiaosiot, selitteet, Pulun vastaukset ja kutsut. Se ei kata mu
 Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi tekstityyppi)
   → Sisältökirjuri: teksti (hyväksytty, faktat tarkistettu)
   → Äänittäjä: lukutarkistus + ämpärin manifestin tarkistus
-  → PT: merkkimäärä + ottomäärä + lupapyyntö → KK → omistajan lupa nimetylle erälle (tekstinä, ei korttia)
-     (kertojaäänten pysyvä lupa: ks. kultainen polku 4)
+  → Äänittäjä: merkkimäärä + ottomäärä → KK:n lupa (alle 3 %:n ajo; yli 3 %: omistajan kortti KK:n kautta;
+     kokonaan uudet luettavat tekstit omistajalle listana ensin) (Raamattu 5.1)
   → Äänittäjä: otto (ElevenLabs) + mittaus
   → Gemini: sokkokuuntelu mallinäytettä vasten (ennen omistajaa)
   → ääniportti (pakollinen vaihe vie-paketti.sh:ssa)
   → ämpäri (vie-paketti.sh, ei ylikirjoita)
   → kytkentä (Pelikoodari / Linssiseppä / Projektiseppä / Natiivi-UI) + ilmoitus Äänittäjälle
-  → uusi asia tai makuvalinta: omistaja kuulee mallinäytteen ja valmiin oton peräkkäin KK:n kautta
+  → KK tarkastaa tuloksen (raportti, ääniportti); omistaja kuulee vain, jos itse pyytää (5.1)
   → avoin juna (lukitus ja TestFlight vain omistajan pyynnöstä)
 ```
 
@@ -43,13 +43,13 @@ Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi 
 | 0. Tavoite | Äänittäjä (ääni), Sisältökirjuri (uusi tekstityyppi); hyväksyy PT, uudet asiat ja makuvalinnat omistaja | Mallinäyte ja lyhyt kuvaus siitä, miltä pitää kuulostaa; uudessa tekstityypissä muutama esimerkki pelinäkymässä |
 | 1. Lukutarkistus | Äänittäjä + kytkijä | Selvillä, tarvitaanko tiedostoa lainkaan ja onko ääni jo ämpärissä (kultainen polku 1) |
 | 2. Teksti | Sisältökirjuri (kaanon: PT) | Hyväksytty teksti, pituusbudjetin sisällä, tagit lisätty |
-| 3. Lupapyyntö | PT → KK → omistaja | Sanatarkat tekstit, palvelu, leikemäärä, ottomäärä, merkkimäärä; "OMISTAJAN PÄÄTÖS klo …" |
+| 3. Lupa | Äänittäjä → KK (yli 3 %: KK → omistajan kortti) | Tekstit, palvelu, leikemäärä, ottomäärä, merkkimäärä; KK:n lupa (Raamattu 5.1) |
 | 4. Otto | Äänittäjä | Raaka-otot talteen, mp3, aikaleimat |
-| 5. Sokkokuuntelu | Äänittäjä (Gemini) | Gemini kuunnellut oton mallinäytettä vasten; poikkeama = uusinta, joka vaatii uuden luvan |
+| 5. Sokkokuuntelu | Äänittäjä (Gemini) | Gemini kuunnellut oton mallinäytettä vasten; poikkeama = uusinta KK:n luvalla |
 | 6. Portti | Äänittäjä | `aaniportti.py` läpi |
 | 7. Vienti | Äänittäjä | Ämpäri + `LAHTEET.md` + SHA256SUMS + manifestirivit |
 | 8. Kytkentä | Kytkijä | Manifestirivit pelissä, mykistykset pois |
-| 9. Omistajan kuuntelu | KK (vain uudet asiat ja makuvalinnat) | Mallinäyte ja valmis otto peräkkäin tiedostoina; palaute tekstinä |
+| 9. Tarkastus | KK | Äänittäjän raportti ja ääniportti; omistajalle vain hänen itse pyytämänsä äänet videona (5.1, 5.28) |
 | 10. Juna | Kytkijä → avoin juna | Automaattiset tarkistukset läpi; lukitus ja TF vain omistajan pyynnöstä |
 | 11. Retrospektiivi | Äänittäjä | Kirjaus tämän pohjan opit-osioon |
 
@@ -71,20 +71,17 @@ Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi 
    maksullisia sen jälkeen (tarinakaari.md, luku 7). Auditit ja faktatarkistus tehdään tekstivaiheessa.
 3. **Ruututeksti = luentateksti sanasta sanaan.** Lisätään vain tunnetagit ja kirjoitusasun sovitukset (SUURAAKKOSET
    pienennetään, luvut sanoiksi). Tagit 2–5 per luenta, alku ja loppu eri sävyssä.
-4. **Lupa ennen jokaista generointia** (Raamattu 5.1 ja 5.2).
-   - Uusia ääniä ei generoida ilman omistajan lupaa. Lupapyynnössä on sanatarkat tekstit, palvelu, tarkka leikemäärä,
-     ottomäärä ja merkkimäärä. Määrän päättää omistaja; PT tuo pyynnön KK:lle, ja KK esittää sen omistajalle tekstinä,
-     ei kortilla ("Sano ok, niin Äänittäjä tekee nämä"; Raamattu 7.27, ÄÄNISTÄ EI KORTTEJA).
-   - Lupa tulee vain KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä; PT:n välittämä ei riitä, vaan Äänittäjä pyytää
-     vahvistuksen KK:lta.
-   - **Ottomäärä sitoo kuten merkkimäärä** (5.2, OTTOMÄÄRÄ SITOO): uusinta on uusi otto ja vaatii uuden luvan KK:n
-     kautta (tekstinä), vaikka merkkejä jäisi; jäljelle jääneitä merkkejä ei käytetä. Rooli ei hyväksy uusintaa itse, vaan
-     lähettää KK:lle lupapyynnön aineiston (merkit, ääni, syy). Jokainen lisäys tai ylitys vaatii uuden luvan.
+4. **Lupa ennen jokaista generointia** (Raamattu 5.1 ja 5.2; omistaja 11.11.2026 klo 08.51).
+   - Alle 3 %:n ajo: äänitys- ja uusintaluvan antaa KK ja tuloksen tarkastaa KK; omistajalle ei näytettä eikä korttia.
+     Äänittäjä lähettää KK:lle tekstit, palvelun, leikemäärän, ottomäärän ja merkkimäärän (puhutussa muodossa).
+   - Yli 3 %:n ajo: omistajan lupa kortilla KK:n kautta; silloin luvan leike-, otto- ja merkkimäärä sitovat, eikä
+     ylijääneitä merkkejä käytetä uusintaan (5.2).
+   - Kokonaan uudet luettavat tekstit (esim. uudet iskulauseet, Pulun repliikit, uudet isoisän tekstit) KK näyttää
+     omistajalle numeroituna listana ennen äänitystä; jo hyväksyttyjen tekstien äänitys ja uusinta ei tarvitse omistajaa.
+   - Rooli ei hyväksy uusintaa itse, vaan lähettää KK:lle aineiston (merkit, ääni, syy).
    - Lupa lasketaan teksteistä; jos lupa on annettu pelkille teksteille, tageja ei lisätä (opit 20.10.).
-   - **Kertojaäänten pysyvä lupa** (5.1): PT:n hyväksymät käsikirjoitukset, kun lukijaääni on jo hyväksytty ja ajo vie
-     alle 3 % kuukauden kiintiöstä (omistaja 24.10.2026 klo 02.12), yksi otto per teksti. Äänittäjä generoi suoraan, ja PT
-     kertoo omistajalle jälkikäteen yhdellä rivillä. Uusi lukijaääni tai yli 3 %:n ajo vaatii omistajan luvan. Pulun repliikit ja uudet isoisän tekstit tarvitsevat ensin omistajan
-     tekstihyväksynnän (`paakaupungin-avaus.md`, luku 5), joten PT ei yksin tee niistä pysyvän luvan käsikirjoitusta.
+   - Tekotapa: suomi pakotettuna ja selvää suomea alkuun; luettelo yhtenä ottona, josta osat leikataan; pidempi
+     kappale omana ottonaan kokonaisena; yksittäiseen nimeen suomenkielinen esiteksti, joka leikataan pois (5.1, 5.4, 5.12).
    - Vanhoja julkaistuja ottoja ei uusita eikä vaihdeta ilman omistajan päätöstä (5.6; opit 19.10.).
 5. **Luvut sanoiksi ENNEN merkkimäärän laskemista.** Numerot kasvattavat tekstin pituutta puhuttuna (esim. +662 merkkiä
    yhdessä erässä), joten lupapyynnön merkkimäärä lasketaan puhutusta muodosta. Muuten lupa ylittyy ja tarvitaan uusi.
@@ -115,12 +112,12 @@ Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi 
    on generoitu ja kytketty. Peli ei koskaan soita vanhoilla sanoilla.
 10. **Gemini kuuntelee sokkona ennen omistajaa** (Raamattu 5.11 ja 9.11, omistaja 19.10. klo 15.21; korvaa 11.10.
     linjauksen "kuuntelematta saa viedä"): omistaja ei ole ensimmäinen kuuntelija. Gemini vertaa jokaista puheottoa
-    mallinäytteeseen sokkona (aksentti, ääneen luetut tagit, ikä, sävy). Poikkeama = uusinta ennen omistajaa, ja uusinta
-    vaatii uuden luvan (kohta 4). Whisper-base/small ja Gemini paljastavat myös heikon kirjaimen (esim. "Mahesteetti").
+    mallinäytteeseen sokkona (aksentti, ääneen luetut tagit, ikä, sävy). Poikkeama = uusinta ennen tarkastusta KK:n luvalla
+    (kohta 4). Whisper-base/small ja Gemini paljastavat myös heikon kirjaimen (esim. "Mahesteetti").
     Whisper-vertailu (sanasuhde) on tiedoksi, ei tuomari: vieraat nimet se kirjoittaa suomalaisittain.
-11. **Omistajan kuuntelu vain uusissa asioissa ja makuvalinnoissa** (Raamattu 4.21, omistaja 20.10. klo 22.53): KK
-    lähettää mallinäytteen ja valmiin oton peräkkäin kuunneltaviksi tiedostoina ennen junaa, ja omistaja kommentoi
-    tekstinä (äänistä ei kysymyskortteja, Raamattu 7.27). Muut erät hyväksyy PT.
+11. **Tarkastus KK:lla** (Raamattu 5.1 ja 7.27, omistaja 11.11.2026 klo 08.51; korvaa 20.10. omistajan kuuntelun): KK
+    tarkastaa tuloksen Äänittäjän raportista ja ääniportista ennen junaa. Omistaja kuulee vain äänet, jotka hän itse
+    pyytää kuultavaksi (esim. äänivalinta): videona koko promptin kanssa (5.28), palaute tekstinä, ei kortteja.
 12. **Juna** (Raamattu 10.2 ja 9.11): kytketty ääni menee avoimeen junaan automaattisten tarkistusten jälkeen. Lukitus ja
     TestFlight vain omistajan pyynnöstä. Ei simukuvia tavalliselle ääni- tai tekstierälle.
 13. **Avaimet.** `source ~/.zshrc` samaan komentoon (ELEVEN_API_KEY); avainta ei koskaan repoon, lokiin eikä viestiin.
@@ -134,20 +131,20 @@ Paketti ei ole valmis ennen kuin kaikki kohdat täyttyvät:
 - [ ] Varmistettu, ettei peli lue tekstiä jo workerin kautta (`KortinLukija` / `Puhe.Lue`) eikä ääni ole jo ämpärissä
       (manifesti tarkistettu ennen lupapyyntöä).
 - [ ] Teksti hyväksytty ja pituusbudjetin sisällä (saapuminen ≤ 380, kohtaaminen ≤ 260, aarre ≤ 220, kohde ≤ 800 merkkiä).
-- [ ] Lupa on KK:n suoralla rivillä (tai kertojaäänten pysyvä lupa pätee), ja leikemäärä, ottomäärä ja merkkimäärä
-      (puhutussa muodossa) pitävät. Jokaiselle uusinnalle on oma uusi lupa.
+- [ ] Lupa KK:lta (yli 3 %:n ajo: omistajan kortti KK:n kautta; uudet luettavat tekstit omistaja nähnyt listana);
+      merkkimäärä laskettu puhutusta muodosta; uusinnat KK:n luvalla (5.1).
 - [ ] Luvut ja lyhenteet sanoiksi: tarkistettu 100–199 ("sata…", 104 = sataneljä), "eaa./jaa." lauseen lopussa saa pisteen,
       vuosiluvut yhteen, taivutukset oikein.
 - [ ] Oikea ääni ja malli (isoisä `eleven_v3`, kertoja turbo, nopeus vain `speed`-asetuksella, Pulu oma resepti, muut
       hahmot äänipankista); kieli `fi`.
 - [ ] Vieraiden nimien ääntämysvihjeet tehty (esim. `orsay-rf-2027b`); Whisper-poikkeamat luettu.
-- [ ] Gemini kuunnellut jokaisen oton sokkona mallinäytettä vasten; poikkeamat uusittu (uudella luvalla) ennen omistajaa.
+- [ ] Gemini kuunnellut jokaisen oton sokkona mallinäytettä vasten; poikkeamat uusittu (KK:n luvalla) ennen tarkastusta.
 - [ ] Taso mitattu: kaari −14,6 LUFS, fokus −17 LUFS, Pulu −17,2 LUFS (Raamattu 5.9), muut tyypin mukaan; fade ja
       hiljainen häntä.
 - [ ] Aikaleimat tehty, jos peli ajoittaa niillä (huudahdukset, tekstin eteneminen).
 - [ ] Ääniportti läpi, vienti ok, `LAHTEET.md` (lisenssi ja tekijä) ja SHA256SUMS mukana.
 - [ ] Manifestirivit toimitettu kytkijälle ja kytkijä kuitannut; `mykistetyt` poistettu.
-- [ ] Uusi asia tai makuvalinta: omistaja kuullut mallinäytteen ja valmiin oton peräkkäin KK:n kautta ennen junaa.
+- [ ] KK tarkastanut tuloksen (raportti, ääniportti) ennen junaa; omistajalle vain hänen pyytämänsä äänet (5.1).
 - [ ] Avoimessa junassa; lukitusta eikä TestFlightiä ole tehty ilman omistajan pyyntöä; ei simukuvia ilman syytä (9.11).
 - [ ] Raaka-otot talteen `_tyo/<aihe>-<pvm>`-kansioon (ei poisteta).
 - [ ] Retrospektiivi kirjattu tämän pohjan opit-osioon (luku 5).
@@ -213,7 +210,7 @@ kohdat on nostettu kultaiseen polkuun 20.10.2026; rivit jäävät tähän tausta
 
 `docs/moduulit/tarinakaari.md` (luvut 4, 7, 8), `docs/moduulit/livia-aani.md`, `docs/moduulit/aanipohja.md`,
 `docs/moduulit/tuotantopohjat/paakaupungin-avaus.md` (luku 5, hyväksyntäpolku),
-Raamattu: 4.21 TUOTANTOPOHJAT, 5.1 UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN LUPAA, 5.2 MÄÄRÄN PÄÄTTÄÄ OMISTAJA,
+Raamattu: 4.21 TUOTANTOPOHJAT, 5.1 ÄÄNITYSLUPA JA TEKOTAPA, 5.2 MÄÄRÄ JA OTTOMÄÄRÄ,
 5.3 LUVAN RAJAT, 5.6 ÄÄNIVALINTA, 5.7 MALLI, 5.8 ÄÄNIPANKKI, 5.9 PULUN ÄÄNI, 5.11 ÄÄNIPORTTI, 5.12 DIALOGIT YHTENÄ OTTONA,
 5.15 ÄÄNET JA MUSIIKKI, 7.27 KYSYMYKSET, 9.11 OMISTAJA EI ENSIMMÄINEN TARKISTAJA, 10.2 JUNA JA YKSI JUNA;
 Äänittäjän luovutukset 14.–17.10.2026 (`docs/raportit/viesti-aanittaja-luovutus-*.md`).
@@ -221,5 +218,5 @@ Raamattu: 4.21 TUOTANTOPOHJAT, 5.1 UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN L
 ## 7. Omistajalle myöhemmin (avoimet)
 
 - **Huutojen venytys jälkikäteen (atempo).** Saako huutoja venyttää jälkikäteen? Suositus: ei, koska pidempi huuto
-  generoidaan suoraan ohjeella, ja se on uusi otto ja uusi lupa (Raamattu 5.7, ei jälkisäätöjä puheeseen). Tuodaan
-  omistajalle ääninäytteen kanssa.
+  generoidaan suoraan ohjeella, ja se on uusi otto KK:n luvalla (Raamattu 5.1 ja 5.7, ei jälkisäätöjä puheeseen). Omistajalle vain, jos hän pyytää
+  kuultavaksi (5.1).
