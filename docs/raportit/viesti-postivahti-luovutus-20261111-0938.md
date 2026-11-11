@@ -16,3 +16,5 @@ KK (RC päällä), PT (09.0x), LAV (08.5x ja uudelleen 09.29, ed4ae1c25), NS (09
 2. NS: luovutus 5a9062b5b (haara natiiviseppa-luovutus-20261111-0936, viesti-natiiviseppa-luovutus-20261111-0936.md); NS käynnissä → NOLLAUS levon alkaessa; kansio päivitettävä (Matkakirja-3d-selvittaja).
    Pysyvä linja: luovutuksen tehnyt rooli nollataan kysymättä.
 3. Muut: ei auki.
+
+LISÄYS 09.4x: KS:n uusin luovutus 6446d7ba2 (korvaa 42c137118:n, sama haara).
