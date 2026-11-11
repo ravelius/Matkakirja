@@ -492,3 +492,24 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - 23.17 KK:lle (ketju a + näytteen piirto): GHSL-talot kerroksina (3,2 m): mediaani Lontoo 0,8 / Pariisi 1,5 kerrosta, pahin kymmenys > 2,4 / 3,4; keskusta harha −2,2 / −2,6 m
   (T/mittaus/tulos-*.json, kerroin 0,8). Pelikelpoisuus = KK:n päätös, ODOTTAA. Näyte: pelin piirto `talot kansio <abs polku palat>` (MT02 sijaintiriippumaton) — ehdotettu
   JU:lle ensin YKSI koekuva Amsterdamista (tarkista, ettei kaupungin oma rakennuskerros peitä); jos ei toimi → luonnos + vesi. Ei vielä pyydetty JU:lta (odottaa KK:n vastausta).
+
+## LISÄYS 35 (23.18): KK:n päätökset 23.12 / 23.16 / 23.17, NOLLAUS (Postivahti)
+- PARVIS (KK 23.12): sääntö (a) HYVÄKSYTTY + LISÄYS: 120 m²:n raja toisiinsa koskevien viheralueiden (garden, grass, park; väli ≤ ~3 m) YHDISTEESTÄ. (b) ei.
+  MITATTU (parvis-saanto/yhdiste.py <ote> [esim.json]): Pariisi poistuu 476 (yksittäin 680), Lontoo 357 (yksittäin 1708), parvis 3/3 → KK:lle 23.18.
+  Poistuvat listattu: parvis-saanto/poistuvat-{pariisi,lontoo}.json (osm, ala, lat, lon). TOTEUTA KJ49b:n JÄLKEEN: ElavaTyyli.cs landcover-silmukka (OMT: garden-alueen ala,
+  yhdiste koskevista viheralueista ≤ 3 m, ≥ 1000 m² puiston sisällä ei, sisäpihatesti building-tasosta).
+  NÄYTTÖ: ND-aukio KJ46 ym46-03-a -kulmasta + ND-esittelyn lopun kuva + Lontoon rivitaloalue ennen|jälkeen + yksi Pariisin katu, josta laikkuja poistuu (täysikokoinen rajaus).
+- PALA (KK 23.16): PÄÄTÖS (b) kevennys, ei jakoa. 1) Järjestys: pienimpien talojen katot tasakatoiksi pienimmästä pohjasta ylöspäin, kunnes pala ≤ 8 Mt. PUIHIN EI KOSKETA.
+  2) Katto: jos pala ei mahdu, vaikka kärjistä olisi lähtenyt 15 %, ketju pysähtyy ja raportoi (ei hiljaista riisumista). 3) kaikki.md-sarakkeet: kevennettyjä paloja,
+  suurin kevennys %. 4) NÄYTTÖ: Ateenan raskain pala (15_18539_12638, 8,65 Mt, 284k kärkeä) ennen|jälkeen 45° kaupunkinäkymä + yksi lähempää täysikokoisena; samaan näytteeseen.
+  Yleinen sääntö tee_palat.py:hyn (katon muoto: katto-funktio ~r. 407–420 'tasa'; kevennys palan kirjoitussilmukassa r. ~645: jos len(data) > 8 MiB → uusinta tasakatoin).
+- GHSL (KK 23.17): KELPAA tavallisille taloille, lopullinen sana näytekuvista. 1) Lähdejärjestys pysyy; listaa näytekaupungeista isot pohjat ilman OSM-korkeutta (tornit).
+  2) Järjestelmällinen virhe pois: kerroin kaupunkikohtaisesti kaupungin omia OSM height/levels -taloja vasten (≥ 500 pelipisteen 3 km:n säteellä), muuten yleinen 0,8;
+  kerroin + jäännösvirhe tauluun — NÄYTTEEN JÄLKEEN. 3) GHSL:n lähderivi pelin oppaaseen ensimmäisen GHSL-kaupungin mukana.
+- NÄYTE (KK 23.17): pelin piirto hyväksytty → ENSIN yksi Amsterdamin koekuva JU:lle KJ49b:n jälkeen (`talot kansio <T/uudet-kaikki/amsterdam/palat>`, kamera Amsterdamiin);
+  jos omat rakennukset peittyvät tai päällekkäin → KK:lle ennen luonnoskuvia. Näytekaupunkien vakiokuvat ajettava uudella vakiokuvat.py:llä (b70b07ec0) ennen kuvia.
+- TAUSTA: uusinta-ajo (aja_kaikki, valmiit ohitetaan) käynnistetty 23.16, loki T/uudet-kaikki-2.log; jos katkesi nollauksessa → sama komento (LISÄYS 23, ilman --vain).
+  Ateena/Barcelona pysähtyvät yhä 8 Mt:iin, kunnes kevennys tehty. KJ49b: JU pid 87003 (jono-ks-kj49b.zsh) käynnissä 23.18.
+- SEURAAJAN JONO: 1) KJ49b → KK (parit K/pari.py; Alma 31/33, Concorde 34, raja 01b–01d, Lontoo 35–37; kolmioluku). 2) Amsterdamin koekuva JU:lle. 3) Parvis-toteutus + näyttö.
+  4) Palan kevennys tee_palat.py + taulu + Ateena-näyttö. 5) Näyte 6 kaupunkia (Amsterdam, Praha, Lissabon, Tukholma, Luxemburg, Barcelona) + oikea ilma-/katukuva (lähde riville).
+  6) Montmartre KJ43 01.00-viennin jälkeen (JU:n rivi). 7) Siltatyyppi + kannen sävy + KJ49c (Alma 120 m). 8) GHSL-kalibrointi, pitkät monikulmiot, 3D-puun sävy.
