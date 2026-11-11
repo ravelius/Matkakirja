@@ -626,3 +626,17 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   → lokit/ks-kj53-puuvalo-6bb57f388. KUN TULEE: python3 -I …/puuvalo-kj53/mittaa-kj53.py (3D ka + lum p10/p50/p90 vs maalattu) → valitse ero, säädä keski ka:n mukaan,
   oletus koodiin, karkea kuva KK:lle (Näkyvä työ) ENNEN junaa.
 - JONO ennallaan (LISÄYS 42): 1) KJ50 + Amsterdam 2) KJ49c 3) KJ51 4) KJ52 + talot → KK 5) näyte 6 kaupunkia + Ateena 6) Montmartre KJ43 01.00 jälkeen 7) GHSL, puun valo (KJ53).
+
+## LISÄYS 45 (01.3x): KJ49b 224.90 tarkistettu, KJ50 junasana, Amsterdamin nimet, näyte KJ54 JU:lla
+- LEVY VALMIS 00.50 (symlinkki, sisäisellä 172 Gi), PT:lle kerrottu.
+- KJ49b 224.90 (dc1117faa; juna-haaran kärki 546552cf0) junakuvat = ehdokas (parit _tyo/karttaseppa/koodijuna/parit-kj49b-juna/) → KK.
+- KJ50 + Amsterdam → KK 01.1x; KK 01.16 JUNASANA parvis → 1d2cdf71b (natiivi-backup karttaseppa/parvis-juna = 546552cf0 + 06742c72a/29f1c9bd9; 776/776, unity 0;
+  työpuu wt/proto-karttaseppa-sillat-juna on nyt tässä haarassa). pt-ok pyydetty PT:ltä 01.2x → odota LINKKI.
+- AMSTERDAMIN NIMET (PT/KK 01.16 uusi rivi): c7dfbc2fe (natiivi-backup karttaseppa/nimet = 546552cf0 + 1, työpuu wt/proto-karttaseppa-nimet; 771/771, unity 0):
+  Merkittavat.json Q855003 → Pampus 52.36472 5.06889 (Wikidata Q924769); ElavaNimet.Sopimaton (seksi/eroot/eroti/porno/prostitu/bordel/strippa/striptea + "sex" sanan alussa)
+  POI-nimiin kaikissa kaupungeissa. Otteissa (otteet-63) ei ole POI-pisteitä → muiden kaupunkien osumia ei voi listata ilman planeettahakua.
+  KJ55 JU:lla (koodijuna/nimet-kj55/sk-mac-nimet-kj55.txt, ENNEN 546552cf0 | JÄLKEEN c7dfbc2fe) → parit + tulos KK:lle.
+- KJ54 NÄYTE JU:lla (tyokalu-1/nayte-kj54/sk-mac-nayte-kj54.txt, 29 kuvaa, 224.90) → lokit/ks-kj54-nayte-dc1117faa. Vertailukuvat: Sonnet-agentti hakee
+  tyokalu-1/nayte-kj54/oikeat/ (orto + Commons-katukuvat, lahteet.json). Arkki per kaupunki 1000 px: 3 vakiokuvaa + yleis + oikea kuva → KK.
+- JU:n jono: KJ49c → KJ51 → KJ52 → KJ54 → KJ55 → KJ53. Montmartren maasto 01.00 epäonnistui, JU ajaa uudelleen (tulos erikseen) → sitten KJ43.
+- Python: numpy/PIL vain käyttäjän site-packagesissa → aja ilman -I (scratchpadista).
