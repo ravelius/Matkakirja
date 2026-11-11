@@ -68,3 +68,12 @@ kyltti "Kuumailmapallo £200" peittää pallon ankkurin ja kentän etureunan →
 ## LISÄYS 5 (16.0x): lahin-1 VALMIS ja katsottu → KK:lle 16.0x (lokit/nui-lahin-1-0ca9df559, arkki-lahin-1-1000.jpg).
 Riemukaari lähin 113 m (rajoista 95), ~62 %, ei leikkautumista; kattoreunan kolmiokolo = MALLIN reikä (lähitaso 50 m, lähin pinta ~77 m).
 Eiffel 676 m ~½, Montparnasse 397 m ~0,7. SEURAAVAKSI: KK:n sana → "48532e3fa junaan" PT:lle → pt-ok. sulku-katse-1 JU:lla seuraavana.
+
+## LISÄYS 6 (16.1x): KK 15.58 hylkäsi Riemukaaren lähin-kierron (01-riemukaari-3-lahin-kierto.png, rajaus 1000×700+900+650: kulma leikattu
+kolmioksi). Minun "mallin reikä" -arvioni oli VÄÄRÄ: alkukuvassa 121 m katto ehjä, kolmio = taso leikkaa laatikon kulman → LÄHITASO.
+- Päätös B (KK:n ehdollinen, omistaja 15.3x "Lehti ja Matkaopas pian peliin"): Lehti + Matkaopas IRROTETTU: 63f86d189 (natiivi-ui/lehti-juna =
+  17fbf3e35 + cherry-pick 237e44e6f, 569de90bb, cccae5d87, 23f6f6d07, cb8e98001; unity 0, EI ajettu tällä pohjalla) → PT:lle junaan 16.1x.
+- SEURAAVA TYÖ: napautuslennon (48532e3fa) leikkaus korjattava: kohde ei saa leikkautua MISSÄÄN kierron kulmassa lähimmällä etäisyydellä;
+  yleinen lähin 0,231 ei muutu. Selvitä, miksi 113 m:ssä leikkautuu, vaikka PalloKierto lähitaso max(50, 1 %) → mahdollisesti toinen kamera
+  (CesiumKaupunki.cs:144 lahi-kamera, ElavaKerros/LiikeLaatat kopioivat near), linssiK tai kaytetty==0 → 100 m. Lisää lokiin todellinen
+  kamera.nearClipPlane ja etäisyys lähin-kuvan hetkellä (esim. liiketappi tila). Todiste: Riemukaari lähin-kierto puhdas + Eiffel/Montparnasse.
