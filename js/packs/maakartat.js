@@ -5387,6 +5387,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
       { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
       { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
+      // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
+      { nimi: 'Petit Palais', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
       { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
