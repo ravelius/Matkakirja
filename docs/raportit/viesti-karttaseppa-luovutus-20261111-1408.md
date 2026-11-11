@@ -453,3 +453,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   TAVALLINEN-joukkoon + TALOJA portaittain 12→8→6 (mitattu: venetsia 97, helsinki 10, sanmarino 6 jo 12:lla; moskova 39 kuudella; koe scratch katukoe.py). 2) ateena/barcelona: raja 8 Mt pysyy,
   yli rajan pala jaetaan 4:ään (ei rajan nostoa). 3) Pariisin syötepolku nykyiseen työpuuhun. 4) Lontoo: oletus-osuus lasketaan myös EA-lähteelle. 5) alpit = maisema, ohitetaan.
   SEURAAVA: KJ49b (JU pid 87003) → KK.
+- 23.1x SILTALINJA 2 (tyyppi) ALOITETTU, mittaus: OSM:n man_made=bridge-alueilla bridge:structure kattaa lähes kaiken (Pariisi 356/390: beam 245, arch 78, humpback 14,
+  truss 12, suspension 4, cable-stayed 3; Lontoo 525/805 vastaavasti). Alma way/183589443 = beam, Mirabeau way/184264542 = arch, Alexandre III way/183620685 = arch,
+  Blackfriars way/123464163 = arch. material harvoin (Pariisi 6) → kivi/metalli taulusta tai oletuksena. Tukia: Pariisi 245 / Lontoo 444 pier-/tuki-wayta (man_made=pier tai bridge:support).
+  Koe: scratch siltatagit.py (ajetaan otteet-63:sta). SEURAAVAKSI: sillat.py lukee alueen bridge:structure → laji (arch→kaari, beam→PALKKI uusi laji rakentajaan, truss→metalli),
+  aukot tukien määrästä alueen sisällä, sitten Pariisin Seinen siltojen korjaustaulu (nimi → tyyppi, materiaali, aukot, lähde), viimeisenä pituusoletus.
