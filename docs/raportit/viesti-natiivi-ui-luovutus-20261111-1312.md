@@ -59,3 +59,6 @@ visibilityn joka kehys. KS:ltä kysytty, millä kutsulla/lipulla UI-pallo piilou
 - KS 14.3x vastasi: piilotus on KS:n haarassa karttaseppa/pallo-koe 2cf7b7e48 (KaupunkiPallot.cs): lippu `PalloMalliPiilottaa` (oletus true),
   `PalloMalliAvain = "kuumailmapallo"`, `PalloMalli(Pallo p) = OhjelmaKohteet.KoodimallinNakyvyys(...)` (vain Pariisin kaupunkipallo) → `Pallo.Malli3D`,
   UI-kuvan alfa 1 − Malli3D. KORJAUS: SarjaVarjon opasiteetti × (1 − p.Malli3D) PallonVarjoVaistaa-kohdassa, KS:n haaran päälle.
+
+## LISÄYS 4 (PT, KK 13.30; ei kiire, junakokonaisuuden JÄLKEEN): työlistarivi "Kuumailmapallon kyltti peittää ankkurin lähikuvassa":
+kyltti "Kuumailmapallo £200" peittää pallon ankkurin ja kentän etureunan → kyltti kentän viereen tai ylemmäs. Mac-pari (ennen/jälkeen) KK:lle.
