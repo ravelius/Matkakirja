@@ -345,3 +345,16 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   NS 22.0x vahvisti T1 = cfe3324a3; NS:lle kerrottu, että seuraaja kysyy pohjan ennen silta-lataajan C#-muutosta.
 - NS 22.0x (SEURAAJALLE): silta-lataajan C#-POHJA = cfe3324a3 (natiivi-backup natiiviseppa/kaupunkitaulu), EI junan kärki. Se muuttaa OhjelmaKohteet.cs:ää (OmaKaupunki korvaa LontooKoe,
   Pariisin lista kameran alueelta) ja TaloAlue.cs:ää (rajat taulusta, SeuraaKameraa, PoistoTaulu nimiviitteellä). Ei vielä junassa (KK:n sana odottaa vakioajoa). Tee silta-haara sen päälle.
+
+## LISÄYS 24 (22.14, uusi sessio 22.05): silta-askel pelissä, KJ49 JU:lla
+- aja_kaikki oli pysähtynyt nollauksessa (6 valmiina) → jatkettu 22.06 samalla komennolla taustalla (loki T/uudet-kaikki.log). Pysähtyneet säännöllä: ateena ja barcelona "pala > 8,0 Mt" (8,3/8,2) → kerro KK:lle loppurivissä.
+- SILTA-ASKEL kohdat 1–4 TEHTY: sillat.py (karttaseppa/tyokalu-1 af89b9741, f14499292, b0a113336): rajaus kaupunkitaulun talot-alueeseen, järkevyysrajat (pituus > 350 m, |MaaA − MaaB| > 10 m → ohi + lista),
+  maanalaiset vedet (tunnel/covered) pois (Holborn Viaduct), Bir-Hakeim OSAKIRJASTO-listalla (työkalu 2), Lontoon koemallit (Tower Bridge, Westminster Bridge) käsin tehtyjen joukossa, --resurssi kirjoittaa pelin tiedoston.
+  Pariisi 44 (Kivi 24, Metalli 8, Jalka 12; käsin ohi 20; Pont Rouelle 375 m ohi), Lontoo 88 (4 yli 350 m ohi). T/sillat/sillat-{pariisi,lontoo}.json (ohitetut listattuina).
+- PELI: karttaseppa/sillat 08b8d3885 + 2eb8ff84a (natiivi-backup; työpuu /Users/Shared/Claude/wt/proto-karttaseppa-sillat), pohja NS cfe3324a3:
+  Resources/sillat/<id>.json → GeneroidutSillat.cs (puhdas C#, MiniJson; käsin tehdyt voittavat: KeskustanSillat + OmatMallit + MuutMallit) + GeneroidutSillatLataus.cs (BeforeSceneLoad, pääsäie);
+  OhjelmaKohteet.Lista(nimi, id) lisää kaupungin sillat (SiltaKohde), TaloAlue.SiltaPala/SiltaTiePois poistaa maalatun sillan myös niiden kohdalta (Pont Neufin/Alexandre III:n luvut nyt GeneroidutSillat.OmatMallit).
+  Testi Kartta-testit/Testit/GeneroidutSillatTestit.cs (3 testiä). 774/774, unity 0.
+- KJ49 pyydetty JU:lta 22.1x (kopio PT): _tyo/karttaseppa/koodijuna/sillat-kj49/sk-mac-sillat-kj49-{pariisi,lontoo}.txt (12 + 7 kuvaa, tee-sillat-kj49.py), ENNEN cfe3324a3 | JÄLKEEN 2eb8ff84a
+  → lokit/ks-kj49-sillat-{pariisi,lontoo}-*. KUN TULEE: parit (K/pari.py) → KK (kopio PT): raja Alma ↔ Alexandre III (si49-01), Lontoo London Bridge ↔ Tower Bridge (si49-23); tarkista ettei maalattu silta näy kannen alta, kansi ei uppoa rinteeseen, kanavasillat järkevän kokoisia.
+- JONO: 1) aja_kaikki valmis → KK yksi rivi (valmiit/pysähtyneet + syyt) + muutama vakiokuva-arkki. 2) KJ49 → KK. 3) Lontoo mittauksena. Montmartren parit yöviennin jälkeen. LINKKI 224.85 odottaa.
