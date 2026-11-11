@@ -49,3 +49,11 @@ D (aarrekysymys saapuessa) odottaa KK:n suunnitelmaa.
   (intro-nimet-1 ajaa ed3045d1e:tä). Seuraava ajo kattaa 25ab7e0ff (sääntö 9) + 7377430b3.
 - Petit Palais: lopullinen lohko + kuva SK 5e3d8353a /Users/Shared/Claude/Matkakirja-sisaltokirjuri/docs/raportit/petit-palais-juttu-20261111.md
   (introrivi "Petit Palais · 1900"). Kytke teksti + kuva + ääni SAMAAN versioon, kun Äänittäjän ääni valmis (PT 20.26). Nimipalkki 50ea00f74 jää varaksi.
+
+## LISÄYS 2 (20.4x, ennen nollausta) — UUSIN TILA, LUE TÄMÄ ENSIN
+- Petit Palais: juttu (SK 5e3d8353a) lisätty main-PR 6579:ään 041c05119 (haara natiivi-ui/petit-palais-nosto, wt /Users/Shared/Claude/wt/nui-pp-juttu;
+  sisältötestit 180/180; CI kesken). Äänittäjä: luenta 3 palaa valmis, manifestirivit
+  /Users/Shared/Claude/proto-3d/_valmiit/luennat-v1-vienti-20261111-petit-palais/_uudet-palat.json (JU vie mediaan). PT:lle kerrottu (samaan versioon:
+  PR 6579 yhdistys checks pass + äänivienti + sisältövienti + natiivi 50ea00f74). PR 6579 EI yhdistetä ennen KK:n kuvahyväksyntää (petit-palais-3 tai -4).
+  SEURAAVA: kun PR yhdistetty ja äänet mediassa → skripti sk-petit-palais-4 (napautus kertojan kanssa, palkki jutulla, kuvat 0-kyltti + 5 kulmaa) → KK.
+- Odottavat JU-rivit: intro-nimet-1 (ed3045d1e), petit-palais-3 (50ea00f74), juna 224.82 ehtoajo lokit/juna-yksi-etaisyys-2-<sha> (arkki-6s.png).
