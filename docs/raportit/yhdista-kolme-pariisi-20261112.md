@@ -64,3 +64,127 @@ Linkit: https://commons.wikimedia.org/wiki/File: + tiedoston nimi (välilyönnit
 4. **Kuvien pelikäyttö**: CC BY / CC BY-SA -kuvista (K1, K2) tekijä ja lisenssi näkyvät pelissä (lisenssit-ja-lataukset 4); BY-SA-kuvan muokkaus (rajaus) jaetaan samalla lisenssillä.
 5. **Lumière-kuva K1 on CC BY-SA 4.0** — sallittu Commonsin BY-SA-kuvana; jos halutaan puhdas PD, ainoa löydetty PD-vaihtoehto on pieni juliste (K1 varalla 2), ei kone.
 6. Kuvia ei ole ladattu repoon eikä äänijonoon; miniatyyri/laattakuvan teko vasta KK:n sanalla.
+
+---
+
+# PÄÄTÖKSET 12.11.2026 klo 21.20 (KK) JA DATALUONNOS KEHYKSELLE (SK)
+
+## 1. Päätökset
+- A-kolmikot 1–3 hyväksytty; Sainte-Chapellen lappu **"n. 1242–1248"** ("n." kertoo, että lähteet eroavat alkuvuodesta).
+- Kolmikko tulee peliin vain, jos kaikilla kolmella on koodimalli. Jos puuttuu: korvaaja samalta aikajänteeltä (keskiaika / 1600–1700 / 1800–1900).
+- B = Lumière–Pasteur–Curie; Lavoisier pois; toista B-kolmikkoa ei nyt.
+- Kuvat: BY-SA-kone muokkaamatta (vain skaalaus); tekijä + teos + lisenssi + linkki dataan (lisenssit-ja-lataukset 4). EI ladata vielä (vasta kun PK:n kehys näyttää kuvia).
+
+## 2. Koodimallit ja kolmikoiden tila (SK:n luenta, ODOTTAA PK:n TULOS.md-listaa)
+PK:n seuraajan listaa (`proto-3d/_tyo/pelikoodari/rakennusajat/TULOS.md`) ei ollut vielä kirjoitettu. Alla SK:n luenta koodista `proto-3d/Matkakirja-proto-esikatselu/Assets/Matkakirja/Kartta/OhjelmaKohteet.cs` ja `OhjelmaKohdePariisi*.cs` (esikatselun puu; PK vahvistaa, ovatko mallit samassa tilassa kehyksen puussa).
+
+| Rakennus | Koodimalli | Avain (`Korvaa`) | Huomio koodin kommentista |
+|---|---|---|---|
+| Notre-Dame | on | `notre-dame:Notre-Dame` | oletus |
+| Panthéon | on | `pantheon:Panthéon` | oletus |
+| Eiffel-torni | on | `eiffel` | "koe, ei junaan" |
+| Sainte-Chapelle | on | `notre-dame:Sainte-Chapelle` | "koe, ei junaan" |
+| Invalidit | on | `invalides:Invalidit` | — |
+| Grand Palais | on | `grand-palais` | — |
+| Tour Montparnasse | on | `montparnasse` | oletuksena (KJ36) |
+| Palais Garnier | on | (OhjelmaKohdePariisiOpera.cs) | — |
+| Riemukaari | on | `riemukaari` | "koe, ei junaan" |
+| Sacré-Cœur | on | `sacre-coeur:Sacré-Cœur` | — |
+| **Place des Vosges** | **EI** | — | ei tiedostoa, ei viittausta koodissa |
+
+**Seuraus:** alkuperäinen kolmikko 2 (Place des Vosges / Palais Garnier / Tour Montparnasse) ei toteudu. Ainoa 1600–1700-luvun rakennus, jolla on malli, on Invalidit, ja se on jo kolmikossa 3. Ehdotus (uudelleenjako, kaikilla kolmella malli):
+
+| Kolmikko | Rakennus | Lappu | Aikakausi |
+|---|---|---|---|
+| 1 (ennallaan) | Notre-Dame / Panthéon / Eiffel-torni | 1163–1345 / 1758–1790 / 1887–1889 | keskiaika / 1700 / 1800 |
+| 2 (= entinen 3) | Sainte-Chapelle / Invalidit / Grand Palais | n. 1242–1248 / 1671–1706 / 1897–1900 | keskiaika / 1600–1700 / 1800–1900 |
+| 3 (UUSI) | Riemukaari / Sacré-Cœur / Tour Montparnasse | 1806–1836 / 1875–1914 / 1969–1973 | 1800 / 1800 loppu / 1900 |
+
+Huomiot uudelle kolmikolle 3: (a) Riemukaaren ja Sacré-Cœurin väli on vain n. 40 vuotta, mutta tyyli erottuu selvästi (kaari / valkoiset kupolit) ja Montparnasse on ilmeinen; (b) 1600-lukua ei ole, koska se ainoa (Invalidit) on kolmikossa 2; jos Place des Vosges saa mallin, entinen kolmikko 2 palaa; (c) Riemukaari: valmistumisvuodet 1806–1836 (aloitus 15.8.1806, vihkiäiset 28.7.1836; 1873-taulukko, en-Wikipedia "Arc de Triomphe"), Sacré-Cœur: peruskivi 16.6.1875, valmis 1914, vihitty 1919 (1873-taulukko, en-Wikipedia "Sacré-Cœur, Paris"; lappu "1875–1914"). Varalla Palais Garnier (1861–1875): sama aikakausi kuin Sacré-Cœur eikä lisää eroa.
+
+Ennen peliin tuloa PK vahvistaa: mallit ovat samassa tilassa (osa "koe, ei junaan").
+
+## 3. Datan luonnos kehykselle (EI vielä koodiin eikä dataan)
+
+Paikka: `tarinakaari.<kaupunki>.yhdistaKolme` (taulukko; kaupungilla voi olla useita; tyhjä = ei tehtävää, vanha tietovisa). PK:n koe käyttää kenttää `rakennusajat [{malli, nimi, alku, loppu}]`; tämä on sen yleistys (tyyppi + kolme paria), joten `rakennusajat` korvautuu tyypillä `rakennus-aika`.
+
+Kentät:
+- `id`: vakaa tunnus.
+- `tyyppi`: `rakennus-aika` (ylärivi 3D-malli, pyörii) | `keksinto-keksija` (ylärivi kuva, keinuu).
+- `parit`: tasan kolme; kukin:
+  - `kohde`: joko `{ malli: '<Korvaa-avain>' }` tai `{ kuva: { tiedosto, ...lahde } }`.
+  - `nimi`: teksti mallin/kuvan alla (rakennuksen nimi tai keksinnön nimi); saa näkyä.
+  - `lappu`: joko `{ teksti: '1163–1345' }` tai `{ kuva: { tiedosto, ...lahde }, nimi: 'Louis Pasteur' }`.
+- `lahde` (kuvalle): `{ tekija, teos, lisenssi, linkki, muokkaus }`; muokkaus `'vain skaalaus'` BY-SA-kuvalla, muuten `'rajaus sallittu'` PD/CC BY.
+- Laput sekoitetaan ajonaikaisesti; datassa pari on oikeassa järjestyksessä.
+
+```js
+yhdistaKolme: [
+  {
+    id: 'pariisi-rakennusajat-1', tyyppi: 'rakennus-aika',
+    parit: [
+      { kohde: { malli: 'notre-dame:Notre-Dame' }, nimi: 'Notre-Dame', lappu: { teksti: '1163–1345' } },
+      { kohde: { malli: 'pantheon:Panthéon' },     nimi: 'Panthéon',   lappu: { teksti: '1758–1790' } },
+      { kohde: { malli: 'eiffel' },                 nimi: 'Eiffel-torni', lappu: { teksti: '1887–1889' } },
+    ],
+  },
+  {
+    id: 'pariisi-rakennusajat-2', tyyppi: 'rakennus-aika',
+    parit: [
+      { kohde: { malli: 'notre-dame:Sainte-Chapelle' }, nimi: 'Sainte-Chapelle', lappu: { teksti: 'n. 1242–1248' } },
+      { kohde: { malli: 'invalides:Invalidit' },         nimi: 'Invalidit',       lappu: { teksti: '1671–1706' } },
+      { kohde: { malli: 'grand-palais' },                nimi: 'Grand Palais',    lappu: { teksti: '1897–1900' } },
+    ],
+  },
+  {
+    id: 'pariisi-rakennusajat-3', tyyppi: 'rakennus-aika',
+    parit: [
+      { kohde: { malli: 'riemukaari' },                nimi: 'Riemukaari',        lappu: { teksti: '1806–1836' } },
+      { kohde: { malli: 'sacre-coeur:Sacré-Cœur' },    nimi: 'Sacré-Cœur',        lappu: { teksti: '1875–1914' } },
+      { kohde: { malli: 'montparnasse' },              nimi: 'Tour Montparnasse', lappu: { teksti: '1969–1973' } },
+    ],
+  },
+  {
+    id: 'pariisi-keksinnot-1', tyyppi: 'keksinto-keksija',
+    parit: [
+      {
+        kohde: { kuva: { tiedosto: 'Institut Lumière - CINEMATOGRAPHE Camera.jpg',
+          lahde: { tekija: 'Victorgrigas', teos: 'Institut Lumière - CINEMATOGRAPHE Camera', lisenssi: 'CC BY-SA 4.0',
+                   linkki: 'https://commons.wikimedia.org/wiki/File:Institut_Lumi%C3%A8re_-_CINEMATOGRAPHE_Camera.jpg', muokkaus: 'vain skaalaus' } } },
+        nimi: 'Elokuvakone',
+        lappu: { kuva: { tiedosto: 'Auguste and Louis Lumière.jpg',
+          lahde: { tekija: 'tuntematon, n. 1895', teos: 'Auguste and Louis Lumière', lisenssi: 'PD',
+                   linkki: 'https://commons.wikimedia.org/wiki/File:Auguste_and_Louis_Lumi%C3%A8re.jpg', muokkaus: 'rajaus sallittu' } },
+                 nimi: 'Lumièren veljekset' },
+      },
+      {
+        kohde: { kuva: { tiedosto: 'Swan-necked flask used by Pasteur. Wellcome M0012521.jpg',
+          lahde: { tekija: 'Wellcome Collection', teos: 'Swan-necked flask used by Pasteur', lisenssi: 'CC BY 4.0',
+                   linkki: 'https://commons.wikimedia.org/wiki/File:Swan-necked_flask_used_by_Pasteur._Wellcome_M0012521.jpg', muokkaus: 'rajaus sallittu' } } },
+        nimi: 'Joutsenkaulapullo',
+        lappu: { kuva: { tiedosto: 'Pasteur, Louis (1822-1895) par Paul Nadar.jpg',
+          lahde: { tekija: 'Paul Nadar', teos: 'Pasteur, Louis (1822-1895)', lisenssi: 'PD',
+                   linkki: 'https://commons.wikimedia.org/wiki/File:Pasteur,_Louis_(1822-1895)_par_Paul_Nadar.jpg', muokkaus: 'rajaus sallittu' } },
+                 nimi: 'Louis Pasteur' },
+      },
+      {
+        kohde: { kuva: { tiedosto: 'Curie and radium by Castaigne.jpg',
+          lahde: { tekija: 'André Castaigne, 1903', teos: 'Curie and radium', lisenssi: 'PD',
+                   linkki: 'https://commons.wikimedia.org/wiki/File:Curie_and_radium_by_Castaigne.jpg', muokkaus: 'rajaus sallittu' } } },
+        nimi: 'Radium',
+        lappu: { kuva: { tiedosto: 'Marie Curie c. 1898.jpg',
+          lahde: { tekija: 'tuntematon, n. 1898', teos: 'Marie Curie c. 1898', lisenssi: 'PD',
+                   linkki: 'https://commons.wikimedia.org/wiki/File:Marie_Curie_c._1898.jpg', muokkaus: 'rajaus sallittu' } },
+                 nimi: 'Marie Curie' },
+      },
+    ],
+  },
+],
+```
+
+Huomiot datasta:
+- Wellcome-kuvan Commons-tekijäkenttä on tyhjä; tekijäksi kirjattu kokoelma (Wellcome Collection), lisenssi CC BY 4.0 — PK/NUI näyttävät tekijä + lisenssi kuten jutuissa (jo pelissä Pasteur-jutun kuvana).
+- Kaksi kuvaa (Pasteurin pullo, Marie Curie c. 1898) on jo nähtävyysjutuissa; samat tiedostot, ei uutta tuontia. Uusia kuvia: K1 (kone), M1 (Lumière), M2 (Nadar), K3 (Castaigne).
+- Keksintökuvien nimeämä vastaus: `nimi` kuvan alla kertoo keksinnön ("Radium"), lapussa on keksijä; ei kirjoiteta keksinnön vuotta, ettei lappu paljasta paria.
+- Koodin puolella `kohde.malli`-avaimet ovat `Kohde.Korvaa`-merkkijonoja (OhjelmaKohteet.cs); PK päättää, tarvitaanko erillinen `tunniste` (Palais Garnier ei kuulu nykyisiin kolmikoihin, joten sen avainta ei kirjattu).
+- Lappujen ja ylärivin järjestys sekoitetaan ajonaikaisesti. 3D-pyörintä 10°/s, kuvakeinunta kehyksen oma asia.
