@@ -15,7 +15,7 @@ SÄÄNNÖT:
 10. ISS:n kuvaselitteet luetaan vain kaiutinnapista tai Auto-tilassa. Vuosiluvut ja numerot luetaan sanoina. [R-5.22] [R-5.9]
 11. Valmis äänite soi, kun sen teksti vastaa näytön tekstiä; muuttunut teksti striimataan. [R-5.26]
 12. Keskustelu ja pitkä kertojateksti ovat yksi otto aikaleimoin; luettelo on yksi otto, josta osat leikataan. Kohtauksen kertoja on oma tiedostonsa ennen tai jälkeen. [R-5.12] [R-4.26]
-13. Kesto lyhennetään tekstiä lyhentämällä, ei taukoja leikkaamalla; korkeus ja nopeus vain ElevenLabsin omilla keinoilla. [R-5.12] [R-5.7]
+13. Kesto lyhennetään tekstiä lyhentämällä, ei taukoja leikkaamalla; korkeus ja nopeus vain ElevenLabsin omilla keinoilla. Poikkeus: isoisän yli 0,9 s virketauko lyhennetään raakaotoksesta. [R-5.12] [R-5.7] [P-261111-7]
 14. Äänitetään vain korjattu ja tarkistettu teksti. [R-3.17] [R-2.76]
 15. Puhe on pakotettu suomeksi, ja luettava teksti alkaa suomenkielisellä sanalla. [R-5.4] [R-5.1]
 16. Nuoren keisarin äänissä ei kuulu hengitystä eikä huohotusta. [R-5.29]
