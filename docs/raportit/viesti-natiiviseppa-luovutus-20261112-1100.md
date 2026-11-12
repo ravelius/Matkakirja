@@ -6,7 +6,10 @@ KK local_d5f31591-21fa-4cb0-bab3-bcd3435d075a, PT local_8d8ebf72-60f5-4fde-8625-
 JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, LAV local_f12c9179-a76b-4ce8-a1fe-1e0f2c8f251e, Postivahti local_1f31f830-9df5-41c1-8992-172e100af57f.
 KELLO: aja `date` ennen jokaista aikaleimaa. Viesteissäni 10.3x–11.4x olivat liian myöhäisiä (todellinen 10.3x–11.00).
 
-## AVOIMET (KK:n järjestys 10.57: 1 → 2 → 3)
+## AVOIMET: JÄRJESTYS PT 11.05 / KK 11.04 = kohta 4 (kujavarjo, estää v134:n; täysikokoinen A/B-pari + kujan toinen pää KK:lle,
+## EI junaan ennen KK:n sanaa) → kohta 1 (Peitto-bitit) → kohta 2 (Metal-vaihe 6). Kohta 3 ei vaadi työtä.
+Metal-koeajot (kohta 2) voivat katketa nollauksessa: aja tarvittaessa uudelleen worktreessä metal-vaihe:
+`METAL_TARKISTUS=1 zsh tyokalut/ennen-junaa.sh --nyt` ja `zsh tyokalut/ennen-junaa.sh --nyt` (taustalla, tulos lokit/ennen-junaa-*/JUNATARKISTUS.md).
 
 1. MONON KEKO, KK:n PÄÄTÖS 10.57 KYLLÄ: Peitto bitteihin + reunalista säiekohtaiseksi, ILMAN allasta. Tee nyt (mittaus tuoreena).
    - Worktree luotu: /Users/Shared/Claude/wt/proto-natiiviseppa-elava-bitit (haara natiiviseppa/elava-bitit juna-224:n 2f62c309e:n päältä), ei muutoksia vielä.
