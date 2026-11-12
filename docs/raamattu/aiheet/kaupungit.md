@@ -22,6 +22,6 @@ EI VIKA:
 
 TEKOTAPA:
 - Koodi ja napautukset nyt: docs/moduulit/kaupungit.md.
-- Työkalut ja kaupunkitaulu: suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md.
+- Työkalut ja taulu: docs/suunnitelmat/20261111-kolme-tyokalua-tehtavananto.md.
 - Piirroskaupungin teko: tiedosto RAKENNUSPERIAATE.md.
 - Pääkaupungit: kokoelmat/paakaupungit.json. Fokusvirta: js/fokusvirta.js.
