@@ -32,6 +32,10 @@ Vahti: EI Monitor-uusintoja (syövät kontekstia) → Bash run_in_background unt
    Mono-2:n luvut (analyysi pois): ennen MiniJson Jasennin.Merkkijono 2,7 Mt, Nimikerros.Mittaa 2,3 Mt; valmis ElavaTyyli.Sumea 17,2 Mt
    (36 kpl, Thread Pool), ElavaTyyli.Suurenna 2,3 Mt; mono 571 → 582 Mt / 20 s (T3-kokeen 632 → 1584 ei toistunut). "ennen"-osassa vain
    6 kehystä 20 s:ssa (eräajon lataus).
+3b. 09.10 MONO-3 LUETTU → KK (kopio PT): mittari kunnossa (kesto 20 s, oma 2–3 Mt). Valmiin jälkeen +4 Mt/s, 36 % ElavaTyyli.Sumea
+   (:818, uudet double/float-taulukot ~0,5 Mt per ruutu), ElavaHaku 23 Mt; ennen kaupunkia ei toistu. Korjausehdotus (Sumean taulukot
+   uudelleenkäyttöön) ODOTTAA KK:n sanaa; kysytty KK:lta seuraava (pari-b?). 63e742f1f ei junaan.
+   Avainkorjaus 4f544a8ef (KK 09.05): uudet avaimet alkuperäisestä tekstistä, haku kuten Valmisluennat.Url; jono 224.
 4. KAUPUNKITYÖKALUT: T1 kaupunkitaulu LINKISSÄ 224.95, T3-rivit 224.84. Mono = viimeinen auki oleva. Sen jälkeen kysy KK:lta seuraava.
 
 ## Muut auki
