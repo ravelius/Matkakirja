@@ -5716,20 +5716,24 @@ export const NAHTAVYYSJUTUT = {
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
     'Curie 1898': {
       nosto: 'hetki-marie-curie-hangaari-1898',
-      teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
-        + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
-        + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
-        + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
-        + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
-        + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta '
-        + 'samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on '
-        + 'saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten '
-        + 'pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä '
-        + 'uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty '
-        + 'kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön '
-        + 'säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja '
-        + 'ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan '
-        + 'Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
+      teksti: 'Pariisissa Marie ja Pierre Curie ilmoittavat vuonna 1898 '
+        + 'löytäneensä kaksi uutta alkuainetta, poloniumin ja radiumin, ja '
+        + 'todistavat sen sitten vuosia vuotavassa vajassa keittämällä '
+        + 'tonneittain kaivosjätettä. Olkapäät ovat puutuneet jo '
+        + 'aamupäivällä, mutta tankoa ei voi laskea. Marie sekoittaa kiehuvaa '
+        + 'pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen '
+        + 'lääketieteellisen koulun ruumiinavaussali, vuotaa sateella '
+        + 'katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo '
+        + 'työn kannattavan. Polonium on ilmoitettu heinäkuussa 1898 ja '
+        + 'radium 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä '
+        + 'kemisteille — uusi alkuaine on saatava käteen puhtaana. Se '
+        + 'tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, '
+        + 'suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, '
+        + 'jolloin tonnista malmia on eristetty kymmenesosagramma '
+        + 'radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee '
+        + 'käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee '
+        + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
+        + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
         + 'vuonna 1911 saa kemian palkinnon yksin.',
       kuvat: [
         {
@@ -5748,22 +5752,20 @@ export const NAHTAVYYSJUTUT = {
     },
     'Lavoisier 1780': {
       nosto: 'hetki-lavoisier-laboratorio-1780',
-      teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
-        + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
-        + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
-        + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
-        + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä '
-        + 'vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja '
-        + 'osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on '
-        + 'yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu '
-        + 'Marie-Anne Paulze Lavoisier, joka naitettiin hänelle '
-        + 'kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
-        + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
-        + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
-        + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
-        + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
-        + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
-        + 'vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+      teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+        + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
+        + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
+        + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
+        + 'esine ja tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät '
+        + 'myyvät, sillä Lavoisier punnitsee kaiken ennen koetta ja sen '
+        + 'jälkeen. Vastapäätä istuu hänen vaimonsa Marie-Anne Paulze '
+        + 'Lavoisier. Hän on oppinut englannin kääntääkseen Priestleyn ja '
+        + 'Kirwanin kirjoitukset, ja hän piirtää laitteet niin tarkasti, että '
+        + 'muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy ensimmäinen '
+        + 'moderni kemian oppikirja, jossa on kolmetoista Marie-Annen '
+        + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+        + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
+        + 'veronkantajana.',
       kuvat: [
         {
           tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
@@ -5776,22 +5778,25 @@ export const NAHTAVYYSJUTUT = {
     },
     'Pasteur 1862': {
       nosto: 'hetki-pasteur-pullot-1862',
-      teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis '
-        + 'Pasteur nostaa sen valoa vasten École normale supérieuren '
-        + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan '
-        + 'muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn '
-        + 'mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja '
-        + 'haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö '
-        + 'elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix '
-        + 'Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. '
-        + 'Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, '
-        + 'joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille '
-        + 'ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat '
-        + 'pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän '
-        + 'on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna '
-        + '1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
-        + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny '
-        + 'itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+      teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, ettei '
+        + 'elämä synny itsestään mätänevästä aineesta vaan näkymätön elämä '
+        + 'tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun palkinnon '
+        + 'vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja pullo on yhä '
+        + 'kirkas. Pasteur nostaa sen valoa vasten École normale supérieuren '
+        + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
+        + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
+        + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
+        + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
+        + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
+        + 'Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään '
+        + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
+        + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
+        + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
+        + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
+        + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
+        + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+        + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
+        + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
       kuvat: [
         {
           tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
@@ -5809,22 +5814,25 @@ export const NAHTAVYYSJUTUT = {
     },
     'Eiffel-torni 1888': {
       nosto: 'hetki-eiffel-torni-1888',
-      teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
-        + 'niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
-        + 'Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu '
-        + 'yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti '
-        + 'lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen '
-        + 'kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin '
-        + 'valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: '
-        + 'jokainen 18 038 osasta on piirretty Levallois-Perret\'n konepajalla '
-        + 'kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään '
-        + 'takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. '
-        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja '
-        + 'Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, '
-        + 'Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella '
-        + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. '
-        + 'Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, '
-        + 'koska sen huipulle sopii radioantenni.',
+      teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
+        + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
+        + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
+        + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+        + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
+        + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
+        + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
+        + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
+        + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
+        + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
+        + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
+        + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
+        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
+        + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
+        + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
+        + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
+        + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
+        + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+        + 'radioantenni.',
       kuvat: [
         {
           tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
@@ -5842,26 +5850,29 @@ export const NAHTAVYYSJUTUT = {
     },
     'Bastilji 1789': {
       nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
-      teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa '
-        + 'on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt '
-        + 'Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei '
-        + 'panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten '
-        + 'Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin '
-        + 'reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun '
+      teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin linnoitukseen '
+        + 'hakemaan sinne siirrettyä ruutia, ja illalla kuvernööri de Launay '
+        + 'antautuu. Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
+        + 'Aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin '
+        + 'asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 '
+        + 'tynnyriä — on siirretty muutama päivä sitten Bastiljiin, '
+        + 'keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. '
+        + 'Siksi kansa on siellä. Kuningas on erottanut suositun '
         + 'rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; '
         + 'Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että '
         + 'verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 '
-        + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, '
-        + 'joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. '
-        + 'Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes '
-        + 'sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet '
-        + 'raahataan kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
-        + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-        + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
-        + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
-        + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
-        + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
-        + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+        + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän '
+        + 'vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko '
+        + 'päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, '
+        + 'ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay '
+        + 'antautuu; hänet raahataan kaupungintalolle ja surmataan sen '
+        + 'edessä. Linnoitus puretaan seuraavina kuukausina. Kolme päivää '
+        + 'myöhemmin Ludvig XVI tulee Versailles\'sta Pariisin '
+        + 'kaupungintalolle, ja hänelle annetaan vallankumouksen kokardi '
+        + 'hattuun kiinnitettäväksi. Perimätiedon mukaan Lafayette lisää '
+        + 'kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja '
+        + 'sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei '
+        + 'tiedetä, kuka värit yhdisti.',
       kuvat: [
         {
           tiedosto: 'Anonyme - Prise de la Bastille, le 14 juillet 1789 (P707-1) - P707-1 - Musée Carnavalet.jpg',
@@ -5879,24 +5890,27 @@ export const NAHTAVYYSJUTUT = {
     },
     'Lumière 1895': {
       nosto: 'hetki-lumiere-elokuva-1895',
-      teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des '
-        + 'Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
-        + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
-        + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
-        + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset '
-        + 'hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä '
-        + 'kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on '
-        + 'puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. '
-        + 'Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; '
-        + 'heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi '
-        + 'että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet '
-        + 'filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+      teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
+        + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
+        + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+        + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
+        + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
+        + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
+        + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
+        + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
+        + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
+        + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
+        + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
+        + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+        + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
+        + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
+        + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
         + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
-        + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, ettei '
-        + 'keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja keksii '
-        + 'temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le '
-        + 'Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva '
-        + 'on.',
+        + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, '
+        + 'ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja '
+        + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
+        + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
+        + 'liikkuva valokuva on.',
       kuvat: [
         {
           tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',

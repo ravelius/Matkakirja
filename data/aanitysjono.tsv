@@ -89,7 +89,6 @@ b797bf3ca4cf58ce985d5f2291341df4	kobenhavn	nahtavyysjutut	Kööpenhamina 1884	1	
 89e5da9ddd65d3b5dd32799c2dae9009	lontoo	nahtavyysjutut	Shakespeare 1599	1	2026-11-12
 9c38509f9fb2a75887090fcf75f00c34	luxemburg	nahtavyysjutut	Luxemburg 963	1	2026-11-12
 d025d25e280541d32690298d57c5ec92	oslo	nahtavyysjutut	Nansen 1893	1	2026-11-12
-f1098db29c6084f743e1db3d190f7363	pariisi	nahtavyysjutut	Eiffel-torni 1888	1	2026-11-12
 f7e8b1958564db9c4a669ea007c0a1ac	pietari	nahtavyysjutut	Pietari 1703	1	2026-11-12
 c8e422a804915f40cdf4f596ea39dec0	rooma	nahtavyysjutut	Michelangelo 1510	1	2026-11-12
 0ec0f61dbac0697f8ca8cedece61314b	sarajevo	nahtavyysjutut	Sarajevo 1914	1	2026-11-12
@@ -152,3 +151,9 @@ e2502128991c5942d204a59d8afbe567	ALB	historianHetket	vloren-itsenaisyys-1912	1	2
 53d875134e2f11ce917c6dcd75b2032a	FRA	historianHetket	eiffel-torni-1888	2	2026-11-12
 cb5a51cf3b5ab25ca5b2a29a5d44c0c3	FRA	historianHetket	ranskan-vallankumous-bastilji-1789	1	2026-11-12
 d3e1dd44ad56275e5591effc5b67e88c	FRA	historianHetket	lumiere-elokuva-1895	1	2026-11-12
+4227573c2db45eeeb9c7392821f26c7b	pariisi	nahtavyysjutut	Curie 1898	1	2026-11-12
+070f0c43fb90379aa77daecd0d7af760	pariisi	nahtavyysjutut	Lavoisier 1780	1	2026-11-12
+b659cc749f6978e2d36f7ffb5a321b34	pariisi	nahtavyysjutut	Pasteur 1862	1	2026-11-12
+8e7d4766918c8c00e2d435c1811b8d3f	pariisi	nahtavyysjutut	Eiffel-torni 1888	1	2026-11-12
+7d801d174285470e3705b22b237c1d76	pariisi	nahtavyysjutut	Bastilji 1789	1	2026-11-12
+e271b23d4bc898a76c7078a8c24ae18a	pariisi	nahtavyysjutut	Lumière 1895	1	2026-11-12
