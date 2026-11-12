@@ -24,3 +24,4 @@ TEKOTAPA:
 - Esilataaja: docs/raportit/esilataaja-suunnitelma-20260925.md.
 - Osumaprosentti ja verkko-odotus vaiheittain: loki ja savuke.
 - Palkin ulkoasu: tyylikirja. Äänten lähde: media-ja-ampari.
+- Offline-karttojen tasot: palvelimen offline.json, ei koodissa.
