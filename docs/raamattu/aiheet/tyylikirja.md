@@ -21,6 +21,7 @@ SÄÄNNÖT:
 
 EI VIKA:
 - Kartan kuvamerkit ja nostokiekot ovat pyöreitä.
+- Yläpalkin nahkapilleri: omistajan valitsema muoto (2.10.2026).
 - Introkuvan nimi ja vuosi on kuvan päällä.
 
 TEKOTAPA:
