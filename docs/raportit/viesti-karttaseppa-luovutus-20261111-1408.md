@@ -756,3 +756,12 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ53b JU:lla seuraavana, sitten KJ54b.
 - SEURAAJAN JONO: 1) KJ53b mittaus (LISÄYS 58) 2) KJ54b arkit → KK 3) KK:n sana tornisäännöstä → tee_palat.py 4) Alman junasana → poiminta 5) KJ52 + talojen päätös
   6) Montmartre KJ43 7) PP:n ikkunakolmio 8) kehämuurien nimet.
+
+## LISÄYS 61 (05.1x): KJ53b → puun valon oletus, KK:lle; ITSENOLLAUS (konteksti 30 %)
+- KJ53b mitattu (koodijuna/puuvalo-kj53/mittaa-kj53b.py): valittu ero 0,35 keski 0,3 → fd6f80c8b (natiivi-backup karttaseppa/puuvalo = 6bb57f388 + 1; 766/766, unity 0;
+  työpuu wt/proto-karttaseppa-puuvalo). Parit puuvalo-kj53/pari-pv53b-{42-esplanadi,44-lahi}.jpg → KK 05.15 (kopio PT). ODOTTAA junasanaa; KK voi pyytää ero 0,2.
+  Junaan: poimi 6bb57f388 + fd6f80c8b uusimman junakärjen päälle, testit, pt-ok PT:ltä SHA:lla.
+- KK:lle 05.1x jonossa (queued) myös KJ49d-parit ja GHSL-raportti → katso KK:n vastaukset ensin.
+- JU:lla KJ54b (sk-mac-nayte-kj54b.txt) → lokit/ks-kj54b-nayte-<sha> → arkit (peli | Commons; tee kuten nayte-kj54/arkit, Sonnet-agentti voi koota) → KK.
+- SEURAAJAN JONO: 1) KK:n vastaukset (Alma-junasana → poiminta 300c6b99d + 9e25f616f; puuvalo-junasana; tornisääntö) 2) KJ54b arkit → KK 3) tornisääntö tee_palat.py:hyn
+  KK:n sanalla 4) KJ52 + talojen päätös 5) Montmartre KJ43 6) PP:n ikkunakolmio 7) kehämuurien nimet.
