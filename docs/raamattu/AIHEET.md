@@ -40,7 +40,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.7 kt | 12.11.2026 |
 | media-ja-ampari | Media ja ämpäri | JU | – | – |
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
-| lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | – | – |
+| lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 2.9 kt | 12.11.2026 |
 | oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | – | – |
 | testit | Testit | NS | 3.0 kt | 12.11.2026 |
 | valmiin-maaritelma | Valmiin määritelmä | KK | 2.8 kt | 12.11.2026 |
