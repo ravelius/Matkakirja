@@ -648,3 +648,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   EI tullut 20 s:n odotuksessa (skenaarion oleta-aika liian lyhyt vai käsittely jumissa? katso lokit/ns-mono-2/unity.log rivit "MONO-" valmiin jälkeen).
   → korjaa (oleta 60 s / käsittely) → mono-3 → YKSI viesti KK:lle (kolme suurinta varaajaa kutsupaikkoineen, toistuuko ennen kaupunkia). Ei korjauksia peliin.
 - 35n (03.49) JU: kertojan esilataus 333e91c45 LINKISSÄ 224.96 = 3929cdcf6 (VALMIS; jatko: ei-valmiit 8 → KK, lisäys 35k).
+- 35o (04.5x) PT/KK 04.54: palkki-7 (LOD0 tavuina + mittari iPadin leveydellä, KK 03.14) → Opus-agentti tekee haaraan natiiviseppa/latausjono ("NS: latausjono 3o") + ajopyynto-mac-palkki-7.md. Jos agentti ei raportoinut: git log natiivi-backup/natiiviseppa/latausjono → JU:lle ajopyyntö (jonossa NUI, PK, KS jälkeen) → lue.py lokit/natiiviseppa-juoksu-latausjono-palkki-7 → KK yksi rivi + mittaririvi.
