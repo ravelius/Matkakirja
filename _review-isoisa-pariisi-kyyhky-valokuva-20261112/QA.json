@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-12T07:26:51.220300+00:00",
+  "method": "visual inspection of full generated output plus dimensions/decode/hash check",
+  "photoAppearance": "PASS: photographic surfaces, monochrome print tones and motion-softened wings; no pencil lines or drawn hatching",
+  "identityConcealment": "PASS: only two hands, wrists and sleeve ends; no face, head, body, silhouette or reflection",
+  "subject": "One pigeon just released from the hands, small message attachment",
+  "setting": "Close cropped roofless ruined masonry with empty window openings; no full palace panorama",
+  "format": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "sha256": "4b356eeb78536ba88b3c249f765cafc3d75b7328cca7ecc65a6a413d5384b445"
+  },
+  "postProcessing": "none; native output copied byte-identically",
+  "ownerApproval": "approved by direct owner message 2026-11-12",
+  "delivery": "prepared for authorized mailbox delivery; delivery receipt is tracked separately"
+}

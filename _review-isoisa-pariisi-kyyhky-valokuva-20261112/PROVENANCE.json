@@ -1,0 +1,29 @@
+{
+  "taskNumber": 2224,
+  "relatedTask": 2221,
+  "image": "isoisa-pariisi-kyyhky-valokuva-v2.png",
+  "sha256": "4b356eeb78536ba88b3c249f765cafc3d75b7328cca7ecc65a6a413d5384b445",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "generationTool": "built-in image_gen",
+  "revisionGenerationCalls": 1,
+  "priorSketchGenerationCalls": 1,
+  "additionalCallsDuringDelivery": 0,
+  "nativeSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e9833f65-66fb-4d07-8b01-82705e195b9d.png",
+  "postprocessing": "None. Approved native image copied byte-identically.",
+  "references": [
+    "../isoisa-pariisi-kyyhky-2221-20261111/references/met-tuileries-291458.jpg",
+    "../isoisa-pariisi-kyyhky-2221-20261111/references/pariisi-i1.jpg"
+  ],
+  "historicalReference": "https://www.metmuseum.org/art/collection/search/291458",
+  "supersedesSketch": {
+    "deliveryCommit": "689a190ddc6e74f7eb45febee4612d4a22219125",
+    "imageSha256": "35cd7fe37ae8b9992d6ad3cfbfd88a17c630cb2cb9ba8d9c51d26204a20e2e3e",
+    "reason": "Latest owner rejects drawing medium and visible grandfather; prior KK acceptance is historical only."
+  },
+  "ownerApproved": true,
+  "gameIntegrated": false,
+  "published": false
+}
