@@ -621,3 +621,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 35e (03.2x) MONO-1 (0e7c0a6a9) VIRHEELLINEN: NRE MonoVaraajatEditori.cs:128 (nimetön merkki) → MONO-VARAAJAT-rivit puuttuvat + "kaupunki EI valmis pariisi 120 s
   (kesken maa)". KORJAUS 2086687cb (natiiviseppa/mono-selvitys, unity 0). JU: uusinta → lokit/ns-mono-2 (kertoja-esilataus ensin). LUE lisäys 33:n ohjeella;
   jos "kaupunki EI valmis (kesken maa)" toistuu, selvitä (profiloijan kuorma?).
+- 35f (03.2x) PARI-B (9a78cd26b) VALMIS JU:lla, EI LUETTU (27 kuvaa, jätetty seuraajalle kontekstin takia): rc 0, NRE 0, korvaus-rivejä 1158, v134 puuttuu 0.
+  HUOM PUUTE 2 = odota-maailma aikaraja (näkyvät 1409 → 1548, häivytys 0, valoatlaksia 0) → TARKISTA ENSIN, ovatko kuvat valmiista maailmasta (jos ei: kerro KK:lle
+  ja pyydä uusinta pidemmällä odotuksella). Lue lisäys 32:n ohjeella → A|B|C samasta kamerasta täysikoossa KK:lle (kopio LAV local_f12c9179).
+  JU: MR91-sillat Pariisi 7/7 ok, Lontoo ajossa → odota LINKKI 224.95 (5cb17d3db).
