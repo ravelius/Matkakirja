@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "158890505fe9d0c2",
-  "aika": "2026-11-12T08:10:46.294Z"
+  "sha": "c039ec8dc4d7d927",
+  "aika": "2026-11-12T08:15:47.770Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -42,5 +42,9 @@
  "aiheet/kartan-merkit-ja-nimet.md": {
   "sha": "5d6debe54e857104",
   "aika": "2026-11-12T08:10:46.294Z"
+ },
+ "aiheet/valmiin-maaritelma.md": {
+  "sha": "843d40446f1c3e35",
+  "aika": "2026-11-12T08:15:47.770Z"
  }
 }
