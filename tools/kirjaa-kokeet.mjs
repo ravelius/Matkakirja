@@ -25,7 +25,7 @@ const KAMERA = `# kamera · vastuu PK · tarkistettu 12.11.2026
 TAVOITE: Kamera liikkuu koko pelissä yhdellä elokuvamaisella käsialalla. Pelaaja ei huomaa kameraa, vain maiseman.
 SÄÄNNÖT:
 1. Kamera liikkuu pehmeästi usealla akselilla yhtä aikaa, kevyesti kallistaen ja ilman nyökkäystä. [R-2.6]
-2. Juoksupelin kamera ei ole FPV-lento eikä hypi pelaajan askelten tahdissa. [R-2.7]
+2. Juoksupelin kamera ei ole FPV-lento eikä hypi pelaajan askelten tahdissa. [R-2.7] [P-261111-kasiala]
 EI VIKA: Hidas aloitusliike saapuessa on tarkoituksellinen.
 TEKOTAPA: kirjastoluettelon rivi kamera; tarkistus tests/kamera.test.mjs.
 `;

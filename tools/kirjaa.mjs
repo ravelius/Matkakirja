@@ -34,11 +34,11 @@ const MUISTI = process.env.KIRJAA_MUISTI ||
 const PERUSTA = { A: ['A-peli.md', 2048], B: ['B-linjaukset.md', 4096], C: ['C-talo.md', 4096], KIRJASTOT: ['KIRJASTOT.md', 8192] };
 const KORTTI_RAJA = 3072, AIHEITA_RAJA = 50, KOKO_RAJA = 150 * 1024, SAMA = 0.8, PAIVAA = 30;
 const POHJA = ['TAVOITE:', 'SÄÄNNÖT:', 'EI VIKA:', 'TEKOTAPA:'];
-const TUNNUS = /\[(P-\d{6}-\d+|R-\d+\.\d+)\]/g;
+const TUNNUS = /\[(P-\d{6}-[a-zäö0-9]+|R-\d+\.\d+)\]/g;  // P-VVKKPP-<sana> = paikanpitäjä, kunnes kirjaa paatos antaa numeron
 
 const lue = (p) => (existsSync(p) ? readFileSync(p, 'utf8') : '');
 const sha = (s) => createHash('sha256').update(s).digest('hex').slice(0, 16);
-const git = (...a) => execFileSync('git', ['-C', JUURI, ...a], { encoding: 'utf8' });
+const git = (...a) => execFileSync('git', ['-C', JUURI, ...a], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 const nyt = new Date();
 const pvm = (d) => `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
 const kuolema = (viesti) => { console.error(viesti); process.exit(2); };
@@ -336,6 +336,9 @@ if (komento === 'hae') {
   rivi('aiheita', aiheet().length, AIHEITA_RAJA, aiheet().length > AIHEITA_RAJA);
   const ilman = paatokset().filter((x) => !lue(korttiPolku(x.aihe)).includes(`[${x.tunnus}]`)).map((x) => `${x.tunnus} ${x.aihe}`);
   rivi('päätöksiä ilman korttipäivitystä', ilman.length, 0, ilman.length, ilman.slice(0, 3).join(', '));
+  const paikka = new Set();
+  for (const a of aiheet()) for (const m of lue(korttiPolku(a.tunnus)).matchAll(/\[(P-\d{6}-[a-zäö][a-zäö0-9]*)\]/g)) paikka.add(`${a.tunnus} ${m[1]}`);
+  rivi('paikanpitäjätunnuksia (odottaa kirjaa paatos)', paikka.size, null, false, [...paikka].slice(0, 3).join(', '));
   const pyynnot = lue(join(R, 'aihepyynnot.md')).split('\n').filter((r) => r.startsWith('- ')).length;
   rivi('aihepyyntöjä', pyynnot, null, false);
   rivi('rinnakkaiset toteutukset kirjastoluettelon ohi', 'ei v1:ssä', null, false, 'mittari tulee KIRJASTOT.md:n rivien mukana');
