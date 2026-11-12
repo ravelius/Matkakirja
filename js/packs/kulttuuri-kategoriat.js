@@ -71161,21 +71161,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
-           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png',
-          lyhyt: 'Sliemen rannalta näkee Vallettan siluetin: Karmeliittakirkon kupolin ja '
-            + 'kaupunginmuurit.',
-          selite: 'Karmeliittakirkon soikea kupoli on 42 metriä korkea, ja sen vieressä kohoaa '
-            + 'anglikaanisen pro-katedraalin torni; ne erottuvat Vallettan siluetista Marsamxettin '
-            + 'sataman puolella. Nykyinen Karmeliittakirkko rakennettiin 1958-1981 sodassa '
-            + 'vaurioituneen tilalle.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -71206,47 +71191,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puutalokaupunginosista, ja se nousee rannasta suoraan '
             + 'vuoren rinteeseen.',
           lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png',
-          lyhyt: 'Upper Barrakka Gardensin terassilta avautuu näkymä Grand Harbouriin ja Kolmeen '
-            + 'kaupunkiin.',
-          selite: 'Puutarha perustettiin 1661 Italian kielikunnan ritarien yksityiseksi puutarhaksi. '
-            + 'Kolme kaupunkia ovat Grand Harbourin vastarannalla sijaitsevat Birgu, Senglea ja '
-            + 'Cospicua.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png',
-          lyhyt: 'Valletta perustettiin 1566 Suuren piirityksen jälkeen ja nimettiin suurmestari Jean '
-            + 'de Valetten mukaan.',
-          selite: 'Ritarikunta asettui Birguun 1530, ja Valletta rakennettiin Grand Harbourin '
-            + 'vastarannalle Birgua vastapäätä. Unesco merkitsi Vallettan maailmanperintökohteeksi '
-            + '1980.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
-           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Dgħajsa-vene on kuljettanut matkustajia Maltan satamissa 1600-luvulta lähtien.',
-          selite: 'Dgħajsa tal-pass on perinteinen maltalainen satamavene, joka kehittyi 1600-luvun '
-            + 'alussa kuljettamaan matkustajia Grand Harbourin yli. Nykyään harvat jäljellä olevat '
-            + 'veneet kuljettavat enimmäkseen matkailijoita.',
-          lahde: 'Matkakirjan havainnekuva',
         },
         {
           /*
