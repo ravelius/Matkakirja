@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "47962f2fd20dc810",
-  "aika": "2026-11-12T08:51:37.735Z"
+  "sha": "43cef7907d8e9a4e",
+  "aika": "2026-11-12T08:51:42.376Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -82,5 +82,9 @@
  "aiheet/grafiikan-tuotanto.md": {
   "sha": "2010331b6bd07e52",
   "aika": "2026-11-12T08:51:37.735Z"
+ },
+ "aiheet/saapuminen-ja-intro.md": {
+  "sha": "413fb0101139d632",
+  "aika": "2026-11-12T08:51:42.376Z"
  }
 }
