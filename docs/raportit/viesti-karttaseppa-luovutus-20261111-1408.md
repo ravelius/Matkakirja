@@ -665,3 +665,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   OhjelmaKohdePariisiPetitPalais*.cs:stä seuraavalla PP-käynnillä; pieni korjaus → sama rajaus (crop iw*0.36:ih*0.22:iw*0.26:ih*0.50) KK:lle.
 - KK: KJ49c ei junaan ennen Alman palkin mustan kyljen korjausta; samat kaksi kuvaa (si49c-31, -38) KK:lle.
 - SEURAAJAN JONO: 1) KJ49c musta kylki 2) odota LINKKI PP 3) KJ52 4) KJ54 5) KJ55 6) Montmartre KJ43 7) KJ53 8) GHSL 9) PP:n ikkunakolmio.
+
+## LISÄYS 49 (01.58): PP LINKISSÄ
+- JU 01.58: PETIT PALAIS db31b646e LINKISSÄ 224.93 = e59480dc2. VALMIS. Uusi junapohja poiminnoille: e59480dc2.
+- KJ52: 3/4 ajoa valmis (JU), loput tulossa → seuraaja katsoo (LISÄYS 41).
+- SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 4) KJ55 5) Montmartre KJ43 6) KJ53 7) GHSL 8) PP:n ikkunakolmio.
