@@ -68,7 +68,6 @@ import {
   avaaKehittajaLehti, avaaKehittajalehti, avaaLukijoiltaLehti, avaaMaalehti,
   avaaMusiikkiLehti,
   avaaPoiminnatLehti,
-  avaaRaamattuLehti,
   avaaSisallysvalikko,
   avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kaupunginEsittely,
   kytkeTutkiSelaus, naytaMaaUutiset, LEHDEN_VAKIOESITTELY,
@@ -334,7 +333,6 @@ import { puheTuettu } from './puhe.js';
  * suoraan peliin. Tuonti ei kasvata pelaajan polkuja: sisältö
  * piirretään vain kehittäjätilan valikkolinkeistä.
  */
-import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TILANNE, TESTATTAVAA } from './tyohuone-tilanne.js';
 import {
   el,
@@ -16168,7 +16166,6 @@ export class UI {
   /** Ihmenauha kuvan vasempaan yläkulmaan; isäntä on kuvan kokoinen. */
   piirraIhmenauha(isanta, teksti) { return piirraIhmenauha(isanta, teksti); }
 
-  avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
 
   /* Työhuoneen toinen nappi (omistaja 11.9.2026): entiset seitsemän
      työhuoneen nappia yhden lehden riveinä. */
