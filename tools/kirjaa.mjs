@@ -10,6 +10,7 @@
  *   node tools/kirjaa.mjs kortti <aihe|A|B|C|KIRJASTOT> <tiedosto> [--ei-commit]   korvaa koko kortin (portti)
  *   node tools/kirjaa.mjs uusi-aihe <tunnus> "<nimi>" --perustelu "…"          pyyntö KK:lle
  *   node tools/kirjaa.mjs hyvaksy-aihe <tunnus> "<nimi>" <vastuu>               vain KK
+ *   Kirjaukset kulkevat työpuun /Users/Shared/Claude/wt/raamattu haarasta kirjaus PR:nä mainiin (PT yhdistää vihreänä).
  *   node tools/kirjaa.mjs alusta                             kerran: rakenteen rekisteröinti (vain ilman rekisteriä)
  *   node tools/kirjaa.mjs tila [--json]                       mittarit (myös kuntotarkastus, luku 13)
  *
@@ -25,8 +26,14 @@ import { join, relative } from 'node:path';
 const argv = process.argv.slice(2);
 const lippu = (n) => { const i = argv.indexOf(n); if (i < 0) return null; const v = argv[i + 1]; argv.splice(i, 2); return v; };
 const kytkin = (n) => { const i = argv.indexOf(n); if (i < 0) return false; argv.splice(i, 1); return true; };
-const JUURI = lippu('--juuri') || process.env.KIRJAA_JUURI ||
-  execFileSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim();
+// KIRJAUSPUU (KK 09.38: miten Kirjaus-commit kulkee mainiin): oletuksena kaikki kirjaukset tehdään omaan työpuuhun
+// /Users/Shared/Claude/wt/raamattu (haara kirjaus), joka seuraa origin/mainia. Kirjoittava komento: fetch, ja jos haaralla ei
+// ole avointa PR:ää, puu nollataan origin/mainiin; commit pushataan haaraan kirjaus ja PR avataan (PT yhdistää vihreänä).
+// Lukevat komennot lukevat samaa puuta, joten avoimen PR:n kirjaukset näkyvät heti. --juuri/KIRJAA_JUURI = koe, ei pushia.
+const PUU = process.env.KIRJAA_PUU || '/Users/Shared/Claude/wt/raamattu';
+const KOTI = '/Users/Shared/Claude/Matkakirja-fable';
+const JUURI = lippu('--juuri') || process.env.KIRJAA_JUURI || PUU;
+const KIRJAUSPUU = JUURI === PUU;
 const R = join(JUURI, 'docs/raamattu');
 const LUKULOKI = process.env.KIRJAA_LUKULOKI || '/Users/Shared/Claude/Matkakirja-fable/scratchpad/raamattu/lukuloki.tsv';
 const MUISTI = process.env.KIRJAA_MUISTI ||
@@ -158,10 +165,37 @@ function generoiAiheet() {
   writeFileSync(join(R, 'AIHEET.md'), rivit.join('\n') + '\n');
 }
 
+function luoPuu() {
+  if (!KIRJAUSPUU || existsSync(join(PUU, '.git'))) return;
+  execFileSync('git', ['-C', KOTI, 'fetch', '-q', 'origin', 'main'], { stdio: 'ignore' });
+  execFileSync('git', ['-C', KOTI, 'worktree', 'add', '-q', '-B', 'kirjaus', PUU, 'origin/main'], { stdio: 'ignore' });
+}
+function valmistelePuu() {
+  if (!KIRJAUSPUU) return;
+  luoPuu();
+  git('fetch', '-q', 'origin', 'main');
+  if (git('status', '--porcelain').trim()) kuolema(`HYLÄTTY: kirjauspuussa ${PUU} on commitoimattomia muutoksia (ohi oven?); PT selvittää`);
+  if (!avoinPr()) git('reset', '-q', '--hard', 'origin/main');  // edelliset kirjaukset ovat mainissa (tai hylätty)
+}
+function avoinPr() {
+  try {
+    return execFileSync('gh', ['pr', 'list', '--head', 'kirjaus', '--state', 'open', '--json', 'url', '-q', '.[0].url'],
+      { cwd: JUURI, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+  } catch { return ''; }
+}
 function commit(viesti, polut) {
   git('add', '--', ...polut.map((p) => relative(JUURI, p)));
   git('commit', '-q', '-m', viesti);
-  return git('log', '-1', '--format=%h').trim();
+  const h = git('log', '-1', '--format=%h').trim();
+  if (!KIRJAUSPUU) return h;
+  git('push', '-q', '--force-with-lease', 'origin', 'HEAD:kirjaus');
+  let pr = avoinPr();
+  if (!pr) {
+    pr = execFileSync('gh', ['pr', 'create', '--head', 'kirjaus', '--base', 'main', '--title', 'Kirjaus: Raamattu (kirjaa.mjs)',
+      '--body', 'Raamatun kirjaukset komennolla tools/kirjaa.mjs. PT yhdistää, kun checks ovat vihreät.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)'],
+    { cwd: JUURI, encoding: 'utf8' }).trim();
+  }
+  return `${h} → ${pr}`;
 }
 
 function lukuloki() {
@@ -186,6 +220,7 @@ function paatokset() {
 }
 
 // --- komennot ---
+luoPuu();
 const [komento, ...loput] = argv;
 const vaadiAihe = (a) => {
   if (!a) kuolema('aihe puuttuu');
@@ -233,6 +268,7 @@ if (komento === 'hae') {
   mkdirSync(join(LUKULOKI, '..'), { recursive: true });
   appendFileSync(LUKULOKI, `${nyt.toISOString()}\t${a}\t${process.env.KIRJAA_KUKA || '-'}\n`);
 } else if (komento === 'paatos') {
+  valmistelePuu();
   const klo = lippu('--klo'), kuka = lippu('--kuka'), p = lippu('--pvm');
   const [a, ...sanat] = argv.slice(1); vaadiAihe(a);
   if (PERUSTA[a] && a !== 'B') kuolema('päätös kirjataan aiheelle tai B:lle');
@@ -248,10 +284,11 @@ if (komento === 'hae') {
   if (!existsSync(f)) writeFileSync(f, `# Päätösloki ${d.getMonth() + 1}/${d.getFullYear()} (vain lisätään: node tools/kirjaa.mjs paatos)\n\n`);
   appendFileSync(f, `- [${tunnus}] ${pvm(d)} klo ${klo} · ${a} · kirjasi ${kuka}: "${sanat.join(' ')}"\n`);
   kirjaaRekisteriin([f]);
-  console.log(`KIRJATTU ${tunnus} → ${relative(JUURI, f)}`);
+  console.log(`KIRJATTU ${tunnus} → ${relative(JUURI, f)}; commit ${commit(`Kirjaus: päätös ${tunnus} (${a})`, [f, join(R, '.kirjattu.json')])}`);
   console.log(`PÄIVITÄ KORTTI ${a} SAMASSA VUOROSSA (sääntöön [${tunnus}]); muuten kirjaa tila näyttää punaista.\n`);
   console.log(lue(korttiPolku(a)) || `(kortti ${a} on vielä kirjoittamatta)`);
 } else if (komento === 'kortti') {
+  valmistelePuu();
   const eiCommit = kytkin('--ei-commit');
   const [a, tiedosto] = argv.slice(1); vaadiAihe(a);
   if (!tiedosto || !existsSync(tiedosto)) kuolema('anna kortin tiedosto');
@@ -268,6 +305,7 @@ if (komento === 'hae') {
   console.log(`HYVÄKSYTTY ${a} (${(Buffer.byteLength(teksti) / 1024).toFixed(1)} / ${korttiRaja(a) / 1024} kt)`);
   if (!eiCommit) console.log(`commit ${commit(`Kirjaus: ${a}`, polut)}`);
 } else if (komento === 'uusi-aihe') {
+  valmistelePuu();
   const perustelu = lippu('--perustelu');
   const [tunnus, nimi] = argv.slice(1);
   if (!tunnus || !nimi || !perustelu) kuolema('kirjaa uusi-aihe <tunnus> "<nimi>" --perustelu "…"');
@@ -275,8 +313,10 @@ if (komento === 'hae') {
   if (!existsSync(f)) writeFileSync(f, '# Aihepyynnöt (KK hyväksyy: kirjaa hyvaksy-aihe)\n\n');
   appendFileSync(f, `- ${pvm(nyt)} ${tunnus} "${nimi}": ${perustelu}\n`);
   kirjaaRekisteriin([f]);
+  console.log(`commit ${commit(`Kirjaus: aihepyyntö ${tunnus}`, [f, join(R, '.kirjattu.json')])}`);
   console.log(`PYYNTÖ kirjattu (${relative(JUURI, f)}); aiheluettelo on suljettu, KK hyväksyy tai hylkää. Kirjaa siihen asti lähimpään aiheeseen.`);
 } else if (komento === 'hyvaksy-aihe') {
+  valmistelePuu();
   const [tunnus, nimi, vastuu] = loput;
   if (process.env.KIRJAA_KUKA !== 'KK') kuolema('vain KK (KIRJAA_KUKA=KK)');
   const j = luettelo();
@@ -284,7 +324,7 @@ if (komento === 'hae') {
   j.aiheet.push([tunnus, nimi, vastuu]);
   writeFileSync(join(R, 'aiheet.json'), JSON.stringify(j, null, 2) + '\n');
   generoiAiheet(); kirjaaRekisteriin([join(R, 'aiheet.json'), join(R, 'AIHEET.md')]);
-  console.log(`LISÄTTY ${tunnus}`);
+  console.log(`LISÄTTY ${tunnus}; commit ${commit(`Kirjaus: aihe ${tunnus}`, [join(R, 'aiheet.json'), join(R, 'AIHEET.md'), join(R, '.kirjattu.json')])}`);
 } else if (komento === 'alusta') {
   // kertaluonteinen: rakenteen ensimmäinen rekisteröinti (vain kun .kirjattu.json puuttuu; muuten ovi on jo käytössä)
   if (existsSync(join(R, '.kirjattu.json'))) kuolema('HYLÄTTY: rekisteri on jo olemassa; muutokset vain komennoilla');
