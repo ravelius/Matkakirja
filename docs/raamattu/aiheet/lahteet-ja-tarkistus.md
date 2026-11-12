@@ -22,4 +22,4 @@ EI VIKA:
 TEKOTAPA:
 - Luettavan tekstin muutos: tools/aanitysjono/tarkista.mjs (jonorivi samaan committiin).
 - Tarkistusraportit: docs/raportit/ (faktat, seulonnat).
-- Kieli: tekstit-ja-kieli. Kuvat ja lisenssit: havainnekuvat-ja-kuvatyyli, lisenssit-ja-lataukset. Ääni: kertojaaanet.
+- Kieli: tekstit-ja-kieli. Havainnekuvan tyyli ja merkintä: tyylikirja. Luvat: lisenssit-ja-lataukset. Ääni: kertojaaanet.
