@@ -1493,3 +1493,7 @@ Tarkennus 11.11.2026 klo 23.23 (omistaja): "Käytössä on kolme tiliä joten vi
 
 "Levyllä saisi olla enemmän tilaa." KK mittasi 23.35–23.40: vapaana 38/926 Gi (projekti ~430 Gi, omistajan ohjelmat ~330 Gi). Linja: pysyvästi ≥ 150 Gi vapaana, alle 100 Gi rivi PT:lle, pysäytys 20 Gi ennallaan; mitään ei poisteta, siirto = tarkistettu kopio + alkuperäinen pois (Raamattu 12.19).
 JU: valmiiden ajojen ruutukansiot (59 Gi) T7:lle. PT:n yöajot: wt/-työkopiot pois yhdistetyn/suljetun PR:n jälkeen (79 Gi, 73 kpl); T7:n yli 3 vrk vanhat ruutu- ja lokikansiot NAS:lle ja T7-alkuperäinen pois tarkistetun kopion (koko + tarkistussumma) jälkeen — KK:n päätös omistajan valtuutuksella 22.56, 6.11. puuttunut lupa; _tyo/pelikoodari (14 Gi) ja natiiviseppa (6 Gi) vanhat käännökset NAS:lle roolilta kysyen.
+
+## TALO EI SEISO: LEPOVAHDIN KORJAUS (KK 12.11.2026 klo 08.34) (12.11.2026 klo 08.4x)
+
+Talo seisoi 06.06–08.34: kaikki roolit levossa 2,5 h, vaikka jonoissa oli työtä (omistaja kysyi tilannetta 08.33). Syy: Postivahdin ajastusketju katkesi, eikä Karttasepän lepo hälyttänyt (vanha "oikeutettu lepo"). Korjaus (Raamattu 7.38, KIERROS.md): rooli, jolla on jonossa työtä, ei ole koskaan oikeutetussa levossa; Postivahdille CronCreate-varakierros 30 min välein ScheduleWakeup-ketjun lisäksi.
