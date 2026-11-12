@@ -618,3 +618,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 35d (03.1x) KK 03.14 PALKKI-7 TARKENNUKSET (korvaa 35c:n "alavaiheet"): (1) LOD0-lohkon SISÄLLÄ palkki etenee vastaanotettujen tavujen mukaan (tavut / lohkon koko),
   EI kiinteinä välivaiheina → liikkuu aina kun dataa tulee, seisoo vain kun lataus oikeasti seisoo. (2) Mittarin "sama" ISON IPADIN palkin leveydestä
   (laitteen kuvapisteinä; kirjoita leveys mittaririville), ei eräajon 84 px:stä. Ehto ≤ 15 s hitaalla verkolla. Tulos KK:lle yhtenä rivinä + mittaririvi, ei kuvaa.
+- 35e (03.2x) MONO-1 (0e7c0a6a9) VIRHEELLINEN: NRE MonoVaraajatEditori.cs:128 (nimetön merkki) → MONO-VARAAJAT-rivit puuttuvat + "kaupunki EI valmis pariisi 120 s
+  (kesken maa)". KORJAUS 2086687cb (natiiviseppa/mono-selvitys, unity 0). JU: uusinta → lokit/ns-mono-2 (kertoja-esilataus ensin). LUE lisäys 33:n ohjeella;
+  jos "kaupunki EI valmis (kesken maa)" toistuu, selvitä (profiloijan kuorma?).
