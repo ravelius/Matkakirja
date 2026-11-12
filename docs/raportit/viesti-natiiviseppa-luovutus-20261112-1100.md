@@ -36,6 +36,15 @@ KELLO: aja `date` ennen jokaista aikaleimaa. Viesteissäni 10.3x–11.4x olivat 
 3. [0] LATAUS JÄÄ LATAUSKUVAAN: NS:n osuus TEHTY (palkki-6/7 128ae58ba linkissä 224.101; Mac hidas verkko 13,1 s ≤ 15 s, 439/439, VIRHE 0).
    Jäljellä vain KK:n iPad-erän luku; KK:lle kerrottu 11.0x. Ei NS-työtä.
 
+4. KUJAVARJO TAKAISIN NS:LLE (LAV 11.00, KORJAA alla olevan "valmiit"-kohdan): varjo ON atlaksessa. V4_kujakivi_lattian itäkaista
+   x −134…−132, z 375–440 tumma (L 0–0,2 vs länsi 0,65) kaikissa atlaksissa; sen UV1 u 0,05–0,16 (oma profiilini katsoi vain u 0–0,02 =
+   valoisa länsisarake → väärä johtopäätös). Pelissä (lod-g G0, oikea reuna oven puolella) kaista ei ole tumma → vika PELIN PUOLELLA.
+   Epäillyt: (a) JuoksuV4Maailma.cs ~770–806: uv1t lisätään kärjittäin `alku`-indeksiin, mutta JaaKolmiot/JaaAlusta (lattiat, laji 10,
+   varjostin Matkakirja/Juoksupeli/Lattia) voivat järjestää/monistaa kärjet → UV1 ei vastaa kärkeä; (b) JuoksuLattia.shader: leivottu
+   näyte uv1:llä vs. _LeivottuST; (c) materiaali: kujakivi-lattia ei saa _ValoAtlasta (leivottu-ehto ru1.Count == r.p.Count).
+   Koe: QA-tulostus kujan lattiaryhmästä (kärkiä, UV1-min/max, onko _ValoAtlas) + kuva, jossa lattia näyttää pelkän atlaksen (debug).
+   LAV:n yläkuva: proto-3d/_tyo/linnanrakentaja/leivonta-v5-tyo/koe-b/kuja13-lattia-ylhaalta-atlas.png. KK:lle korjaus vasta A/B-parina.
+
 ## VALMIIT TÄNÄÄN (tämä vuoro)
 
 - PR 6603 yhdistetty (CI vihreä).
