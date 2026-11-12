@@ -5500,8 +5500,9 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen',
       },
       // sama piste kuin kohde Bastilji: nimiö oikealle.
+      // KK 12.11.2026 20.09: oma kyltti POIS (tarinapaikka: false); juttu avautuu Bastiljin tähden kortista.
       {
-        nimi: 'Bastilji 1789', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
+        nimi: 'Bastilji 1789', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
