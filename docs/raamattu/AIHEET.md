@@ -22,7 +22,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
 | saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 12.11.2026 |
 | matkustus-ja-reitit | Matkustus ja reitit | PK | 2.9 kt | 12.11.2026 |
-| aarteet | Aarteet | PK | – | – |
+| aarteet | Aarteet | PK | 2.9 kt | 12.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | – | – |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
 | pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
@@ -36,17 +36,17 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | grafiikan-tuotanto | Grafiikan tuotanto | PT | 2.8 kt | 12.11.2026 |
 | mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | – | – |
-| suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | – | – |
+| suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | 2.9 kt | 12.11.2026 |
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.7 kt | 12.11.2026 |
 | media-ja-ampari | Media ja ämpäri | JU | – | – |
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 2.9 kt | 12.11.2026 |
-| oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | – | – |
+| oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | 2.9 kt | 12.11.2026 |
 | testit | Testit | NS | 3.0 kt | 12.11.2026 |
 | valmiin-maaritelma | Valmiin määritelmä | KK | 2.8 kt | 12.11.2026 |
 | juna-ja-julkaisu | Juna ja julkaisu | JU | 2.9 kt | 12.11.2026 |
 | laitteet-ja-simulaattorit | Laitteet ja simulaattorit | JU | 2.9 kt | 12.11.2026 |
-| kone-ja-levy | Kone ja levy | PT | – | – |
+| kone-ja-levy | Kone ja levy | PT | 3.0 kt | 12.11.2026 |
 | tilit-ja-kiintio | Tilit ja kiintiö | PT | 2.5 kt | 12.11.2026 |
 | avaimet-ja-luvat | Avaimet ja luvat | PT | 2.8 kt | 12.11.2026 |
 | roolit-ja-viestit | Roolit ja viestit | PT | 2.8 kt | 12.11.2026 |
