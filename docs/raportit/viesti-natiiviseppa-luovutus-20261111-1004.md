@@ -625,3 +625,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   HUOM PUUTE 2 = odota-maailma aikaraja (näkyvät 1409 → 1548, häivytys 0, valoatlaksia 0) → TARKISTA ENSIN, ovatko kuvat valmiista maailmasta (jos ei: kerro KK:lle
   ja pyydä uusinta pidemmällä odotuksella). Lue lisäys 32:n ohjeella → A|B|C samasta kamerasta täysikoossa KK:lle (kopio LAV local_f12c9179).
   JU: MR91-sillat Pariisi 7/7 ok, Lontoo ajossa → odota LINKKI 224.95 (5cb17d3db).
+- 35g (03.3x) LAV pari-b:stä: EI KELPAA KK:lle sellaisenaan. Lokin osuma (0.65, 0.80) = "v4 palatsi osasarja kauko0 -3,-4" → pelin lattia on OSASARJA v15, ei kk-tausta-1-3:n
+  V4_lattia (koe paransi väärää pintaa). B/C:n tasainen kirkas lattia = v15:n leivottu valo ilman elävää; koe-glb:n atlaksessa varjot ovat. Johtopäätös LAV: 3.1b:n tarkka
+  valo leivotaan OSASARJAN ruutuihin (koealue, 1024²/64 m = 6,25 cm), LAV tekee yöllä KK:n luvalla → uusi pari sen jälkeen. TEE: kuvat (A|B|C) KK:lle LAV:n
+  selityksen kanssa (pari näyttää: v15 ilman elävää = varjoton), kopio LAV. Seuraavaan pariin glb-korvaus osasarjan ruutuihin (palatsi korvaa <avain> <kohde>).
