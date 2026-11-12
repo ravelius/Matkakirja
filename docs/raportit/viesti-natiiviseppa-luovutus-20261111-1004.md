@@ -611,3 +611,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 35b (03.1x) PT: cfe3324a3 ristiriidassa 224.94 (ce2849074) kanssa OhjelmaKohteet.cs:ssä (KS:n sillat). UUSI T1 = 5cb17d3db (natiivi-backup
   natiiviseppa/kaupunkitaulu-224-94 = ce2849074 + dd370eab6 + cfe3324a3; Lista(ohjelmakohteet, kaupungin id) + taulun kamera-alue; Kartta 782/782, Linssit 2293/2293,
   unity 0). pt-ok-pyyntö PT:lle LÄHETETTY 5cb17d3db:lle. NUI 631172274 (natiivi-ui/vakioajo): vakioajon lähtöasento kiinnitetty, JU ajaa uusinnan.
+- 35c (03.1x) PALKKI-6 (6c5b95883) LUETTU: lataus OK (439/439, VIRHE 0, etenemätön 3,7 s), palkki 0,020 → 0,979, 10 s:n riveissä ei samoja peräkkäin. MUTTA MITTARI
+  "pisin sama 28,9 s kohdassa 0,449 (t 327–356 s, lohko LOD0)", kynnys 1 px = 0,0119 (leveys 84 px eräajossa) → ehto ≤ 15 s EI täyty. KK:lle lähetetty (kopio PT).
+  SEURAAVA: LOD0-lohkoon alavaiheet (katso "latauksen ositus"- ja "palkkilohko"-rivit t 327–356 s), uusi Mac-ajo palkki-7 → MITTARI ≤ 15 s → KK. Ei junaan ennen sitä.
+  JU: T1 5cb17d3db = MR91/224.95, linkki kun sillat-ajo näyttää sillat kuten 224.94 (kuvat NS:lle ja KS:lle). JU:n jono: pari-b → mono-1 → kertoja.
