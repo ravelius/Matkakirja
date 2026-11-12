@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "c039ec8dc4d7d927",
-  "aika": "2026-11-12T08:15:47.770Z"
+  "sha": "b0dac7a8ec25bdf3",
+  "aika": "2026-11-12T08:15:55.969Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -46,5 +46,9 @@
  "aiheet/valmiin-maaritelma.md": {
   "sha": "843d40446f1c3e35",
   "aika": "2026-11-12T08:15:47.770Z"
+ },
+ "aiheet/lehti-ja-nostot.md": {
+  "sha": "afb9b3953db894a5",
+  "aika": "2026-11-12T08:15:55.969Z"
  }
 }
