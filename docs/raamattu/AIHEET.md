@@ -16,7 +16,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | 3.0 kt | 12.11.2026 |
 | museot | Museot | LAV | 3.0 kt | 12.11.2026 |
 | linssit | Linssit | VS | 3.0 kt | 12.11.2026 |
-| iss-ja-avaruus | ISS ja avaruus | VS | 2.4 kt | 12.11.2026 |
+| iss-ja-avaruus | ISS ja avaruus | VS | 2.6 kt | 12.11.2026 |
 | isoisa-ja-tarina | Isoisä ja tarina | SK | 2.9 kt | 12.11.2026 |
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
@@ -24,7 +24,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | matkustus-ja-reitit | Matkustus ja reitit | PK | 2.9 kt | 12.11.2026 |
 | aarteet | Aarteet | PK | 2.9 kt | 12.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | 2.4 kt | 12.11.2026 |
-| kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | 2.5 kt | 12.11.2026 |
+| kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | 2.8 kt | 12.11.2026 |
 | pelit-ja-minipelit | Pelit ja minipelit | PK | 2.8 kt | 12.11.2026 |
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
 | tyylikirja | Tyylikirja | NUI | 3.0 kt | 12.11.2026 |

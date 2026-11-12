@@ -21,5 +21,5 @@ EI VIKA:
 
 TEKOTAPA:
 - Julisteen malli: proto-3d/_valmiit/hyvaksytyt-mallit/iss-juliste-e3-20261001/.
-- Astronautin kamera: js/linssit/satelliitti.js; reliefi tools/tee-reliefikartta.mjs.
+- Natiivikoodi (Assets/Matkakirja/): Linssit/Ydin/Astronautti/AstronauttiLinssi.cs, Linssit/Unity/AstronauttiKerros.cs, UI/Linssit/AstronautinNakyma.cs; raketti Linssit/Unity/RakettiLaukaisu.cs. Reliefi: tools/tee-reliefikartta.mjs.
 - Raketin videon teko: grafiikan-tuotanto.
