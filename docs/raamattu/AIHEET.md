@@ -7,7 +7,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | maailma-ja-rajaukset | Maailma ja rajaukset | KK | – | – |
 | aika-ja-ulkoasu | Aika ja ulkoasu | KK | – | – |
 | kartta-ja-pallo | Kartta ja pallo | KS | 2.9 kt | 12.11.2026 |
-| kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 2.8 kt | 12.11.2026 |
+| kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 2.9 kt | 12.11.2026 |
 | kaupungit | Kaupungit | KS | – | – |
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
 | opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | – | – |
@@ -21,13 +21,13 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
 | saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 12.11.2026 |
-| matkustus-ja-reitit | Matkustus ja reitit | PK | – | – |
+| matkustus-ja-reitit | Matkustus ja reitit | PK | 2.9 kt | 12.11.2026 |
 | aarteet | Aarteet | PK | – | – |
 | talous-ja-pisteet | Talous ja pisteet | PK | – | – |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
 | pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
-| tyylikirja | Tyylikirja | NUI | – | – |
+| tyylikirja | Tyylikirja | NUI | 2.9 kt | 12.11.2026 |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |
 | lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
@@ -37,7 +37,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | – | – |
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | – | – |
-| lataus-ja-kaynnistys | Lataus ja käynnistys | NS | – | – |
+| lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.7 kt | 12.11.2026 |
 | media-ja-ampari | Media ja ämpäri | JU | – | – |
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | – | – |
@@ -45,7 +45,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | testit | Testit | NS | 3.0 kt | 12.11.2026 |
 | valmiin-maaritelma | Valmiin määritelmä | KK | 2.8 kt | 12.11.2026 |
 | juna-ja-julkaisu | Juna ja julkaisu | JU | 2.9 kt | 12.11.2026 |
-| laitteet-ja-simulaattorit | Laitteet ja simulaattorit | JU | – | – |
+| laitteet-ja-simulaattorit | Laitteet ja simulaattorit | JU | 2.8 kt | 12.11.2026 |
 | kone-ja-levy | Kone ja levy | PT | – | – |
 | tilit-ja-kiintio | Tilit ja kiintiö | PT | – | – |
 | avaimet-ja-luvat | Avaimet ja luvat | PT | – | – |
