@@ -99,3 +99,13 @@ SEURAAVAT ASKELEET:
   (komento tarinamerkit pohja 0|1), sk-tarinamerkki-5.txt (katot / Jardin des Plantes / Seine, kultatähti + ND + Panthéon samassa näkymässä,
   PISTEKERROIN 0.397 = laitteen 2,0 px/pt) JU:lla → lokit/nui-tarinamerkki-5-00bc4abc1 → täysikokoiset rajaukset KK:lle; KK valitsee (ei korttia).
   -4 (ad63f29a1, kaikki viisi, 0.465) valmis vertailuksi.
+
+## LISÄYS 09.0x: NOLLAUS (konteksti 26 %, Raamattu 7.37). JONO SEURAAJALLE
+1) TARINAMERKKI-5 (JU ajaa, sha 00bc4abc1, PISTEKERROIN 0.397) → lokit/nui-tarinamerkki-5-00bc4abc1: tarkista unity.log "tarinamerkit: 3 merkkiä, kuva …codex-<m>.png
+   (ladattu) … pohja True/False … piirretty 3" ennen jokaista kuvaa; katso l-/k- × kirja/tiimalasi × A/B. TÄYSIKOKOISET RAJAUKSET (ei pienennöksiä) kolmesta
+   taustasta (katot 48.8420/2.3476, Jardin des Plantes 48.8438/2.3600, Seine 48.8475/2.3622) + kultatähti ja ND/Panthéon samasta kuvasta → KK yhtenä viestinä,
+   kerro mittakaava (0,397 × 5,04 = 2,0 px/pt = laite; tarinamerkki ja tähti ruudun osuutena). KK valitsee (ei korttia). Jos joki-merkki ei osu Seineen → korjaa
+   piste ja uusi ajo. -4 (ad63f29a1, kaikki viisi, 0.465) vertailuna samassa kansiossa.
+2) LUENNAT V11: 96f5f1c38 (natiivi-backup natiivi-ui/luennat-v11, juna-224 9b777264d:n päällä; Peli-testit 931/931) → pt-ok PYYDETTY PT:ltä 09.0x.
+3) Introrivit 561fbd57c: PT otti junaan (juna-224 9b777264d). Kun linkissä → ei omistajalle erikseen (KK päättää koosteesta).
+Worktreet: wt/nui-intro, wt/nui-tarina, wt/nui-luennat (+ vanhat -0040:stä). Scratchpad-skriptit: haara-commit.sh (tiedosto haaraan ilman checkoutia).
