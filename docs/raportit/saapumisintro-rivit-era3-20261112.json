@@ -1,0 +1,1689 @@
+[
+ {
+  "kaupunki": "alpit",
+  "nro": 1,
+  "kuva": "herokoe/hero-alpit-aamu.jpg",
+  "rivi": "Sphinx-observatorio · 1937",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 2,
+  "kuva": "herokoe/hero-alpit-keskipaiva.jpg",
+  "rivi": "Landwasserin viadukti · 1902",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 3,
+  "kuva": "herokoe/hero-alpit-ilta.jpg",
+  "rivi": "Eiger",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 4,
+  "kuva": "saapumisintro/alps/20261012-full/alps-4-sils-kylan-arki-intro-v1.png",
+  "rivi": "Sils",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 5,
+  "kuva": "saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+  "rivi": "Silsjärvi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 6,
+  "kuva": "saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Furtschellasilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 7,
+  "kuva": "saapumisintro/alps/20261012-full/alps-7-sils-talvi-ilta-intro-v1.png",
+  "rivi": "Sils",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "alpit",
+  "nro": 8,
+  "kuva": "saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Fexin laakson hevosomnibussi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 1,
+  "kuva": "herokoe/hero-bergen-aamu.png",
+  "rivi": "Johanneksen kirkko · 1894",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 2,
+  "kuva": "herokoe/hero-bergen-keskipaiva.png",
+  "rivi": "Fløibanen-köysirata",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 3,
+  "kuva": "herokoe/hero-bergen-ilta.png",
+  "rivi": "Grieghallen · 1978",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 4,
+  "kuva": "saapumisintro/bergen/20261012-full/bergen-4-nordnes-arki-intro-v1.png",
+  "rivi": "Nordnes",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 5,
+  "kuva": "saapumisintro/bergen/20261012-full/bergen-5-nordnes-ranta-intro-v1.png",
+  "rivi": "Nordnes",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 6,
+  "kuva": "saapumisintro/bergen/20261013-uudet-6-8/bergen-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Fløyeniltä",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 7,
+  "kuva": "saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+  "rivi": null,
+  "tila": "ei-riviä: väärä kaupunki (Valletta), pois Bergenin listasta (PR 6593)"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 8,
+  "kuva": "saapumisintro/bergen/20261012-full/bergen-7-nygardshoyden-ilta-intro-v1.png",
+  "rivi": "Nygårdshøyden",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 9,
+  "kuva": "Vista de Bergen desde la montaña Fløyen, Noruega, 2019-09-08, DD 48.jpg",
+  "rivi": "Vågen",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 10,
+  "kuva": "Bergen Bryggen 1017.jpg",
+  "rivi": "Bryggen",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 11,
+  "kuva": "Bergen - Skuteviken sett fra Sverresborg.jpg",
+  "rivi": "Skuteviken",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 12,
+  "kuva": "saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+  "rivi": null,
+  "tila": "ei-riviä: väärä kaupunki (Valletta), pois Bergenin listasta (PR 6593)"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 13,
+  "kuva": "saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+  "rivi": null,
+  "tila": "ei-riviä: väärä kaupunki (Valletta), pois Bergenin listasta (PR 6593)"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 14,
+  "kuva": "saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+  "rivi": null,
+  "tila": "ei-riviä: väärä kaupunki (Valletta), pois Bergenin listasta (PR 6593)"
+ },
+ {
+  "kaupunki": "bergen",
+  "nro": 15,
+  "kuva": "Bybanen Bergen Kaigaten.jpg",
+  "rivi": "Bergenin raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 1,
+  "kuva": "herokoe/hero-bukarest-parlamentti.jpg",
+  "rivi": "Parlamentin palatsi · 1984–1997",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 2,
+  "kuva": "herokoe/hero-bukarest-aamu.jpg",
+  "rivi": "Riemukaari · 1936",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 3,
+  "kuva": "herokoe/hero-bukarest-keskipaiva.jpg",
+  "rivi": "Stavropoleosin kirkko · 1724",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 4,
+  "kuva": "saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+  "rivi": "Cotroceni",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 5,
+  "kuva": "saapumisintro/bucharest/20261012-full/bucharest-5-cismigiu-intro-v1.png",
+  "rivi": "Cișmigiun puisto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 6,
+  "kuva": "saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Riemukaarelta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 7,
+  "kuva": "saapumisintro/bucharest/20261012-full/bucharest-7-dambovita-ilta-intro-v1.png",
+  "rivi": "Dâmbovița",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 8,
+  "kuva": "herokoe/hero-bukarest-ilta.jpg",
+  "rivi": "CEC-palatsi · 1900",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "bukarest",
+  "nro": 9,
+  "kuva": "saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Bukarestin raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 1,
+  "kuva": "herokoe/hero-dubrovnik-kaupunginmuurit.jpg",
+  "rivi": "Dubrovnikin kaupunginmuurit",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 2,
+  "kuva": "herokoe/hero-dubrovnik-aamu.jpg",
+  "rivi": "Lovrijenacin linnake",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 3,
+  "kuva": "herokoe/hero-dubrovnik-keskipaiva.jpg",
+  "rivi": "Rehtorinpalatsi · 1400-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 4,
+  "kuva": "saapumisintro/dubrovnik/20261012-full/dubrovnik-4-arki-kuja-intro-v1.png",
+  "rivi": "Dubrovnikin vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 5,
+  "kuva": "saapumisintro/dubrovnik/20261012-full/dubrovnik-5-lokrum-ranta-intro-v1.png",
+  "rivi": "Lokrum",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 6,
+  "kuva": "saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+  "rivi": "Gruž",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 7,
+  "kuva": "herokoe/hero-dubrovnik-ilta.jpg",
+  "rivi": "Pyhän Blasiuksen kirkko · 1715",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 8,
+  "kuva": "saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Srđ-kukkulalta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "dubrovnik",
+  "nro": 9,
+  "kuva": "saapumisintro/dubrovnik/20261013-uudet-6-8/dubrovnik-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Dubrovnikin köysirata",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 1,
+  "kuva": "herokoe/hero-firenze-aamu.png",
+  "rivi": "Duomo · 1296–1436",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 2,
+  "kuva": "herokoe/hero-firenze-keskipaiva.png",
+  "rivi": "Ponte Vecchio · 1345",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 3,
+  "kuva": "herokoe/hero-firenze-ilta.png",
+  "rivi": "Palazzo Vecchio · 1299–1314",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 4,
+  "kuva": "saapumisintro/florence/20261012-full/florence-4-san-frediano-arki-intro-v2.png",
+  "rivi": "San Frediano",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 5,
+  "kuva": "saapumisintro/florence/20261012-full/florence-5-cascine-arno-intro-v1.png",
+  "rivi": "Cascinen puisto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 6,
+  "kuva": "saapumisintro/florence/20261013-uudet-6-8/florence-6-nakoala-intro-v1.png",
+  "rivi": "Piazzale Michelangelo",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 7,
+  "kuva": "saapumisintro/florence/20261012-full/florence-7-oltrarno-ilta-intro-v1.png",
+  "rivi": "Oltrarno",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 8,
+  "kuva": "flickr-27613279050.jpg",
+  "rivi": "Ponte Santa Trinita · 1569, uudelleen 1958",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 9,
+  "kuva": "herokoe/hero-firenze-piazzale-michelangelo.jpg",
+  "rivi": "Piazzale Michelangelo",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 10,
+  "kuva": "View from Giotto IMG 4586.JPG",
+  "rivi": "Giotton kellotorni",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 11,
+  "kuva": "Arno river sunset, Florence, Italy.jpg",
+  "rivi": "Ponte Vecchio · 1345",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 12,
+  "kuva": "flickr-27155711546.jpg",
+  "rivi": "Ponte Vecchio · 1345",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 13,
+  "kuva": "flickr-27407894606.jpg",
+  "rivi": "Duomo · 1296–1436",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 14,
+  "kuva": "GEST 1012 Strozzi Fallaci 20251011.jpg",
+  "rivi": "Firenzen raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 1,
+  "kuva": "herokoe/hero-helsinki-senaatintori.jpg",
+  "rivi": "Helsingin tuomiokirkko · 1830–1852",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 2,
+  "kuva": "herokoe/hero7-uspenski.png",
+  "rivi": "Uspenskin katedraali · 1868",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 3,
+  "kuva": "herokoe/hero7-oodi.png",
+  "rivi": "Oodi · 2018",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 4,
+  "kuva": "saapumisintro/helsinki/20261012-full/helsinki-4-asuinalueen-arki-intro-v2.png",
+  "rivi": "Ullanlinna",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 5,
+  "kuva": "saapumisintro/helsinki/20261012-full/helsinki-5-kaivopuiston-meri-intro-v1.png",
+  "rivi": "Kaivopuisto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 6,
+  "kuva": "View to the south from Helsinki Olympic tower zoomed.jpg",
+  "rivi": "Olympiastadionin torni",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 7,
+  "kuva": "saapumisintro/helsinki/20261012-full/helsinki-7-ikkunavalot-intro-v1.png",
+  "rivi": "Ullanlinna",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 8,
+  "kuva": "Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg",
+  "rivi": "Helsingin keskusta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 9,
+  "kuva": "Helsingin Tuomiokirkko ja Senaatintori - D672 - hkm.HKMS000005-km002mzn.jpg",
+  "rivi": "Senaatintori",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 10,
+  "kuva": "Market Square in Helsinki, Finland, 2024 May.jpg",
+  "rivi": "Kauppatori",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 11,
+  "kuva": "MS Suomenlinna II.jpg",
+  "rivi": "Suomenlinnan lautta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 1,
+  "kuva": "herokoe/hero-islanti-hallgrimskirkja.jpg",
+  "rivi": "Hallgrímskirkja · 1945–1986",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 2,
+  "kuva": "herokoe/hero-islanti-keskipaiva.jpg",
+  "rivi": "Þingvellir",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 3,
+  "kuva": "herokoe/hero-islanti-ilta.jpg",
+  "rivi": "Strokkur",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 4,
+  "kuva": "saapumisintro/iceland/20261012-full/iceland-4-reykjavikin-arki-intro-v1.png",
+  "rivi": "Reykjavikin aaltopeltitalot",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 5,
+  "kuva": "saapumisintro/iceland/20261012-full/iceland-5-tjorninin-vesi-intro-v1.png",
+  "rivi": "Tjörnin",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 6,
+  "kuva": "Iceland - Reykjavik 050 - view from the Perlan (6571034905).jpg",
+  "rivi": "Näkymä Perlanilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 7,
+  "kuva": "saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+  "rivi": "Reykjavikin asuinkatu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 8,
+  "kuva": "2017-08-23 01 ANDREA - IMO 7222231 - Reykjavik, Iceland.jpg",
+  "rivi": "Reykjavikin valaidenkatseluvene",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 1,
+  "kuva": "herokoe/hero-kiova-mihaelin-luostari.jpg",
+  "rivi": "Pyhän Mikaelin luostari · 1113, uudelleen 1999",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 2,
+  "kuva": "herokoe/hero-kiova-aamu.jpg",
+  "rivi": "Pyhän Sofian katedraali · 1000-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 3,
+  "kuva": "herokoe/hero-kiova-keskipaiva.jpg",
+  "rivi": "Kiovan luolaluostari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 4,
+  "kuva": "saapumisintro/kyiv/20261012-full/kyiv-4-podil-arki-intro-v1.png",
+  "rivi": "Podil",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 5,
+  "kuva": "saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png",
+  "rivi": "Trukhanivin saari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 6,
+  "kuva": "saapumisintro/kyiv/20261013-uudet-6-8/kyiv-6-nakoala-intro-v1.png",
+  "rivi": "Dnipr-joki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 7,
+  "kuva": "saapumisintro/kyiv/20261012-full/kyiv-7-podil-iltavalot-intro-v2.png",
+  "rivi": "Podil",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 8,
+  "kuva": "herokoe/hero-kiova-ilta.jpg",
+  "rivi": "Isänmaa-äiti · 1981",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 9,
+  "kuva": "Київський фунікулер, 2008 рік 03.jpg (kuva-61491i.jpg)",
+  "rivi": "Kiovan funikulaari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 1,
+  "kuva": "herokoe/hero-kobenhavn-aamu.png",
+  "rivi": "Marmorikirkko · 1749–1894",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 2,
+  "kuva": "herokoe/hero-kobenhavn-keskipaiva.png",
+  "rivi": "Christiansborgin linna · 1907–1928",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 3,
+  "kuva": "herokoe/hero-kobenhavn-ilta.png",
+  "rivi": "Vapahtajan kirkko · 1682–1696",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 4,
+  "kuva": "saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png",
+  "rivi": "Kööpenhaminan asuinkatu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 5,
+  "kuva": "saapumisintro/copenhagen/20261012-full/copenhagen-5-frederiksbergin-kanava-intro-v1.png",
+  "rivi": "Frederiksbergin puisto",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 6,
+  "kuva": "Panoramicas de Copenhague 05.jpg",
+  "rivi": "Näkymä Christiansborgin tornista",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 7,
+  "kuva": "saapumisintro/copenhagen/20261012-full/copenhagen-7-korttelin-iltavalot-intro-v2.png",
+  "rivi": "Kööpenhaminan mukulakivikatu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 8,
+  "kuva": "Panorama view on Copenhagen from Church of Our Saviour (2).jpg",
+  "rivi": "Näkymä Vapahtajan kirkon tornista",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 9,
+  "kuva": "Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg",
+  "rivi": "Rosenborgin linna · 1600-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 10,
+  "kuva": "herokoe/hero-kobenhavn-nyhavn.jpg",
+  "rivi": "Nyhavn",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kobenhavn",
+  "nro": 11,
+  "kuva": "Copenhagen Harbour Bus Havnebus 2014 02.jpg",
+  "rivi": "Kööpenhaminan satamabussi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 1,
+  "kuva": "herokoe/hero-kreeta-aamu.jpg",
+  "rivi": "Arkadin luostari · 1500-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 2,
+  "kuva": "herokoe/hero-kreeta-keskipaiva.jpg",
+  "rivi": "Koulesin linnoitus · 1523–1540",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 3,
+  "kuva": "herokoe/hero-kreeta-ilta.jpg",
+  "rivi": "Rethymnon Fortezza · 1580",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 4,
+  "kuva": "saapumisintro/crete/20261012-full/crete-4-kournas-kylarki-intro-v1.png",
+  "rivi": "Kournas",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 5,
+  "kuva": "saapumisintro/crete/20261012-full/crete-5-kournasjarvi-intro-v1.png",
+  "rivi": "Kournasjärvi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 6,
+  "kuva": "saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png",
+  "rivi": "Valkoiset vuoret",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 7,
+  "kuva": "saapumisintro/crete/20261012-full/crete-7-hanian-asuintalojen-valot-intro-v1.png",
+  "rivi": "Topanas",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "kreeta",
+  "nro": 8,
+  "kuva": "saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Chanian kaupunkibussi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 1,
+  "kuva": "herokoe/hero-lappi-aamu.jpg",
+  "rivi": "Arktikum · 1992",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 2,
+  "kuva": "herokoe/hero-lappi-keskipaiva.jpg",
+  "rivi": "Jätkänkynttilä · 1989",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 3,
+  "kuva": "herokoe/hero-lappi-ilta.jpg",
+  "rivi": "Saamelaiskulttuurikeskus Sajos · 2012",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 4,
+  "kuva": "saapumisintro/lapland/20261012-full/lapland-4-inari-talviarki-intro-v1.png",
+  "rivi": "Inari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 5,
+  "kuva": "saapumisintro/lapland/20261012-full/lapland-5-pahtaniemi-inarijarvi-intro-v1.png",
+  "rivi": "Inarijärvi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 6,
+  "kuva": "saapumisintro/lapland/20261013-uudet-6-8/lapland-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Ounasvaaralta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 7,
+  "kuva": "saapumisintro/lapland/20261012-full/lapland-7-ivalo-talvi-ilta-intro-v1.png",
+  "rivi": "Ivalo",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "lappi",
+  "nro": 8,
+  "kuva": "Icebreaker Sampo in lapland 002.jpg",
+  "rivi": "Kemin jäänmurtaja",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 1,
+  "kuva": "herokoe/hero-moskova-aamu.png",
+  "rivi": "Vasilin katedraali · 1561",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 2,
+  "kuva": "herokoe/hero-moskova-keskipaiva.png",
+  "rivi": "Kreml",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 3,
+  "kuva": "herokoe/hero-moskova-ilta.png",
+  "rivi": "Moskovan yliopiston päärakennus · 1953",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 4,
+  "kuva": "saapumisintro/moscow/20261012-full/moscow-4-arbat-piha-intro-v1.png",
+  "rivi": "Arbat",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 5,
+  "kuva": "saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+  "rivi": "Chistyje Prudy",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 6,
+  "kuva": "saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+  "rivi": "Varpusvuoret",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 7,
+  "kuva": "saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+  "rivi": "Zamoskvoretšje",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 8,
+  "kuva": "Moscow skyline.jpg",
+  "rivi": "Varpusvuoret",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 9,
+  "kuva": "Moscow panoramic October 2008.jpg",
+  "rivi": "Moskvajoki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 10,
+  "kuva": "High Night Moscow City (195406651).jpeg",
+  "rivi": "Moscow-City",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "moskova",
+  "nro": 11,
+  "kuva": "saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Lužnikin metrosilta · 1959",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 1,
+  "kuva": "herokoe/hero-odessa-potemkinin-portaat.jpg",
+  "rivi": "Potemkinin portaat · 1841",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 2,
+  "kuva": "herokoe/hero-odessa-aamu.jpg",
+  "rivi": "Odessan ooppera- ja balettiteatteri · 1887",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 3,
+  "kuva": "herokoe/hero-odessa-keskipaiva.jpg",
+  "rivi": "Vorontsovin palatsi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 4,
+  "kuva": "saapumisintro/odessa/20261012-full/odessa-4-odesa-piha-intro-v2.png",
+  "rivi": "Odessan historiallinen keskusta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 5,
+  "kuva": "saapumisintro/odessa/20261012-full/odessa-5-kuyalnyk-ranta-intro-v1.png",
+  "rivi": "Kuyalnykin estuaari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 6,
+  "kuva": "saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+  "rivi": "Odessan satama",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 7,
+  "kuva": "saapumisintro/odessa/20261012-full/odessa-7-asuinkatu-ilta-intro-v1.png",
+  "rivi": "Odessan asuinkatu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 8,
+  "kuva": "herokoe/hero-odessa-ilta.jpg",
+  "rivi": "Odessan kaupungintalo · 1834",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "odessa",
+  "nro": 9,
+  "kuva": "saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Odessan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 1,
+  "kuva": "herokoe/hero-oslo-oopperatalo.jpg",
+  "rivi": "Oslon oopperatalo · 2008",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 2,
+  "kuva": "herokoe/hero-oslo-aamu.png",
+  "rivi": "Akershusin linnoitus",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 3,
+  "kuva": "herokoe/hero-oslo-keskipaiva.png",
+  "rivi": "Holmenkollenin hyppyrimäki · 2010",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 4,
+  "kuva": "saapumisintro/oslo/20261012-full/oslo-4-valerenga-arki-intro-v2.png",
+  "rivi": "Vålerenga",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 5,
+  "kuva": "saapumisintro/oslo/20261012-full/oslo-5-hovedoya-ranta-intro-v1.png",
+  "rivi": "Hovedøya",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 6,
+  "kuva": "saapumisintro/oslo/20261013-uudet-6-8/oslo-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Ekebergiltä",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 7,
+  "kuva": "saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png",
+  "rivi": "Akerselva",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 8,
+  "kuva": "herokoe/hero-oslo-ilta.png",
+  "rivi": "Oslon kuninkaanlinna · 1825–1848",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 9,
+  "kuva": "Barcode and Oslo Opera house seen from Ekeberg.JPG",
+  "rivi": "Ekeberg",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 10,
+  "kuva": "Oslo - Damstredet.jpg",
+  "rivi": "Damstredet",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 11,
+  "kuva": "2010-10-25 Oslo.jpg",
+  "rivi": "Oslovuono",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "oslo",
+  "nro": 12,
+  "kuva": "Stiopa-CAF Urbos 100-foto.3.jpg",
+  "rivi": "Oslon raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 1,
+  "kuva": "herokoe/hero-pietari-aamu.png",
+  "rivi": "Talvipalatsi · 1762",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 2,
+  "kuva": "herokoe/hero-pietari-keskipaiva.png",
+  "rivi": "Verikirkko · 1883–1907",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 3,
+  "kuva": "herokoe/hero-pietari-ilta.png",
+  "rivi": "Pietari-Paavalin katedraali · 1712–1733",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 4,
+  "kuva": "saapumisintro/saint-petersburg/20261012-full/saint-petersburg-4-vasilinsaaren-arki-intro-v3.png",
+  "rivi": "Vasilinsaari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 5,
+  "kuva": "saapumisintro/saint-petersburg/20261012-full/saint-petersburg-5-moika-sininen-silta-intro-v1.png",
+  "rivi": "Sininen silta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 6,
+  "kuva": "saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png",
+  "rivi": "Admiraliteetti",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 7,
+  "kuva": "saapumisintro/saint-petersburg/20261012-full/saint-petersburg-7-moikan-iltavalot-intro-v1.png",
+  "rivi": "Moika",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 8,
+  "kuva": "Spb Views from Isaac Cathedral May2012 05.jpg",
+  "rivi": "Näkymä Iisakinkirkon kolonnadilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 9,
+  "kuva": "Petersburg Vasilievsky Island-20070703-RM-124551.jpg",
+  "rivi": "Vanha pörssitalo · 1810",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 10,
+  "kuva": "Санкт-Петербург. Дворцовый мост и Зимний дворец.jpg",
+  "rivi": "Palatsisilta · 1916",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "pietari",
+  "nro": 11,
+  "kuva": "Метеор (теплоход). Река Нева, Санкт-Петербург 20.08.2025.jpg",
+  "rivi": "Nevan kantosiipialus",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 1,
+  "kuva": "herokoe/hero-riika-vanhakaupunki.jpg",
+  "rivi": "Riian vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 2,
+  "kuva": "herokoe/hero-riika-aamu.png",
+  "rivi": "Mustapäiden talo · 1334, uudelleen 1999",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 3,
+  "kuva": "herokoe/hero-riika-keskipaiva.png",
+  "rivi": "Vapaudenpatsas · 1935",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 4,
+  "kuva": "saapumisintro/riga/20261012-full/riga-4-agenskalns-arki-intro-v1.png",
+  "rivi": "Āgenskalns",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 5,
+  "kuva": "saapumisintro/riga/20261012-full/riga-5-bastejkalns-kanava-intro-v1.png",
+  "rivi": "Riian kaupunginkanava",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 6,
+  "kuva": "saapumisintro/riga/20261013-uudet-6-8/riga-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Pyhän Pietarin kirkon tornista",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 7,
+  "kuva": "saapumisintro/riga/20261012-full/riga-7-vanhakaupunki-iltakuja-intro-v3.png",
+  "rivi": "Vanhankaupungin kuja",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 8,
+  "kuva": "herokoe/hero-riika-ilta.png",
+  "rivi": "Pyhän Pietarin kirkko · 1400-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 9,
+  "kuva": "Riga From 26th Floor of Radisson Blu, Latvia.jpg",
+  "rivi": "Näkymä Radisson Blu -hotellilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 10,
+  "kuva": "20070630-IMG 1662. Rīgas Doms, panorāma.jpg",
+  "rivi": "Riian tuomiokirkko",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 11,
+  "kuva": "Art Nouveau Riga 09.jpg",
+  "rivi": "Riian jugendtalot",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "riika",
+  "nro": 12,
+  "kuva": "Riga, Škoda 15T ForCity Alfa Riga č. 57016.jpg",
+  "rivi": "Riian raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 1,
+  "kuva": "herokoe/hero-sarajevo-bascarsija.jpg",
+  "rivi": "Baščaršija",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 2,
+  "kuva": "herokoe/hero-sarajevo-aamu.jpg",
+  "rivi": "Gazi Husrev-begin moskeija · 1531",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 3,
+  "kuva": "herokoe/hero-sarajevo-keskipaiva.jpg",
+  "rivi": "Sarajevon katedraali · 1887",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 4,
+  "kuva": "saapumisintro/sarajevo/20261012-full/sarajevo-4-alifakovac-arki-intro-v1.png",
+  "rivi": "Alifakovac",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 5,
+  "kuva": "saapumisintro/sarajevo/20261012-full/sarajevo-5-miljacka-kozija-intro-v1.png",
+  "rivi": "Kozija ćuprija · 1500-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 6,
+  "kuva": "Sarajevo - Žuta Tabija (49126643821).jpg",
+  "rivi": "Žuta tabija",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 7,
+  "kuva": "saapumisintro/sarajevo/20261012-full/sarajevo-7-mejtas-ilta-intro-v1.png",
+  "rivi": "Mejtaš",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 8,
+  "kuva": "herokoe/hero-sarajevo-ilta.jpg",
+  "rivi": "Latinalaissilta · 1798",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sarajevo",
+  "nro": 9,
+  "kuva": "Tram Sarajevo former Wiener Linien Obala Kulina bana 2011.jpg",
+  "rivi": "Sarajevon raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 1,
+  "kuva": "herokoe/hero-sevilla-aamu.png",
+  "rivi": "Giralda · 1100-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 2,
+  "kuva": "herokoe/hero-sevilla-keskipaiva.png",
+  "rivi": "Plaza de España · 1914–1928",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 3,
+  "kuva": "herokoe/hero-sevilla-ilta.png",
+  "rivi": "Metropol Parasol · 2011",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 4,
+  "kuva": "saapumisintro/seville/20261012-full/seville-4-triana-arki-intro-v2.png",
+  "rivi": "Triana",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 5,
+  "kuva": "saapumisintro/seville/20261012-full/seville-5-triana-jokivesi-intro-v1.png",
+  "rivi": "Trianan silta · 1852",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 6,
+  "kuva": "saapumisintro/seville/20261013-uudet-6-8/seville-6-nakoala-intro-v1.png",
+  "rivi": "Sevillan katedraali",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 7,
+  "kuva": "saapumisintro/seville/20261012-full/seville-7-asuinkuja-ilta-intro-v2.png",
+  "rivi": "Sevillan vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 8,
+  "kuva": "Seville (18370564119).jpg",
+  "rivi": "Näkymä Metropol Parasolilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 9,
+  "kuva": "Sevilla desde la Torre del Oro (1).jpg",
+  "rivi": "Guadalquivir",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 10,
+  "kuva": "Sevilla - March 2011 - 063.jpg",
+  "rivi": "Maestranzan härkätaisteluareena",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sevilla",
+  "nro": 11,
+  "kuva": "saapumisintro/seville/20261013-uudet-6-8/seville-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Sevillan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 1,
+  "kuva": "herokoe/hero-sisilia-aamu.jpg",
+  "rivi": "Concordian temppeli · n. 430 eaa.",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 2,
+  "kuva": "herokoe/hero-sisilia-keskipaiva.jpg",
+  "rivi": "Syrakusan tuomiokirkko",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 3,
+  "kuva": "herokoe/hero-sisilia-ilta.jpg",
+  "rivi": "Monrealen katedraali · 1100-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 4,
+  "kuva": "saapumisintro/sicily/20261012-full/sicily-4-marzamemi-arki-intro-v1.png",
+  "rivi": "Marzamemi",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 5,
+  "kuva": "saapumisintro/sicily/20261012-full/sicily-5-calamosche-luonto-intro-v1.png",
+  "rivi": "Calamosche",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 6,
+  "kuva": "saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png",
+  "rivi": "Giardini Naxosin lahti",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 7,
+  "kuva": "saapumisintro/sicily/20261012-full/sicily-7-marzamemi-satamailta-intro-v2.png",
+  "rivi": "Marzamemin satama",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sisilia",
+  "nro": 8,
+  "kuva": "saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Taorminan köysirata",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 1,
+  "kuva": "herokoe/hero-sofia-nevski.jpg",
+  "rivi": "Aleksanteri Nevskin katedraali · 1912",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 2,
+  "kuva": "herokoe/hero-sofia-banya-bashi.jpg",
+  "rivi": "Banja Bashin moskeija · n. 1566",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 3,
+  "kuva": "herokoe/hero-sofia-vitosa.jpg",
+  "rivi": "Sofian raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 4,
+  "kuva": "saapumisintro/sofia/20261012-full/sofia-4-lahdevesi-arki-intro-v1.png",
+  "rivi": "Sofian kivennäislähde",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 5,
+  "kuva": "saapumisintro/sofia/20261012-full/sofia-5-boyana-putous-intro-v1.png",
+  "rivi": "Boyanan vesiputous",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 6,
+  "kuva": "saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Kopitotolta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 7,
+  "kuva": "saapumisintro/sofia/20261012-full/sofia-7-oborishte-ilta-intro-v1.png",
+  "rivi": "Oborishte",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 8,
+  "kuva": "Sofia (37139621884).jpg",
+  "rivi": "Sofia",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 9,
+  "kuva": "Sofia seen from Vitosha 1.jpg",
+  "rivi": "Näkymä Vitoshalta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "sofia",
+  "nro": 10,
+  "kuva": "saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Sofian raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 1,
+  "kuva": "herokoe/hero-tallinna-kaupunginmuuri.jpg",
+  "rivi": "Tallinnan kaupunginmuuri",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 2,
+  "kuva": "herokoe/hero-tallinna-aamu.png",
+  "rivi": "Pyhän Olavin kirkko · 1400-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 3,
+  "kuva": "herokoe/hero-tallinna-keskipaiva.png",
+  "rivi": "Kadriorgin palatsi · 1725",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 4,
+  "kuva": "saapumisintro/tallinn/20261012-full/tallinn-4-kalamajan-arki-intro-v1.png",
+  "rivi": "Kalamaja",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 5,
+  "kuva": "saapumisintro/tallinn/20261012-full/tallinn-5-piritan-ranta-intro-v1.png",
+  "rivi": "Piritan ranta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 6,
+  "kuva": "saapumisintro/tallinn/20261013-uudet-6-8/tallinn-6-nakoala-intro-v1.png",
+  "rivi": "Näkymä Kohtuotsalta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 7,
+  "kuva": "saapumisintro/tallinn/20261012-full/tallinn-7-puutalokorttelin-ilta-intro-v1.png",
+  "rivi": "Kalamaja",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 8,
+  "kuva": "herokoe/hero-tallinna-ilta.png",
+  "rivi": "Tallinnan teletorni · 1980",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 9,
+  "kuva": "Tallinn Landmarks 01.jpg",
+  "rivi": "Tallinnan vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 10,
+  "kuva": "Tallinn view from Kohtuotsa 2018.jpg",
+  "rivi": "Tallinnan raatihuone · 1404",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 11,
+  "kuva": "Talvine Tallinn.jpg",
+  "rivi": "Tallinnanlahti",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tallinna",
+  "nro": 12,
+  "kuva": "T5tramm.jpg",
+  "rivi": "Tallinnan raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 1,
+  "kuva": "herokoe/hero-tampere-aamu.jpg",
+  "rivi": "Näsilinna · 1898",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 2,
+  "kuva": "herokoe/hero-tampere-keskipaiva.jpg",
+  "rivi": "Tampereen pääkirjasto Metso · 1986",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 3,
+  "kuva": "herokoe/hero-tampere-ilta.jpg",
+  "rivi": "Tampereen Vanha kirkko · 1824",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 4,
+  "kuva": "saapumisintro/tampere/20261012-full/tampere-4-finlayson-arki-intro-v1.png",
+  "rivi": "Finlaysonin alue",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 5,
+  "kuva": "saapumisintro/tampere/20261012-full/tampere-5-pyynikki-pyhajarvi-intro-v1.png",
+  "rivi": "Pyynikinharju",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 6,
+  "kuva": "Tampere from Pyynikki tower narrow.jpg",
+  "rivi": "Näkymä Pyynikin näkötornilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 7,
+  "kuva": "saapumisintro/tampere/20261012-full/tampere-7-tiilikortteli-ilta-intro-v1.png",
+  "rivi": "Tampereen tiilikortteli",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 8,
+  "kuva": "herokoe/hero-tampere-nasinneula.jpg",
+  "rivi": "Näsinneula · 1971",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tampere",
+  "nro": 9,
+  "kuva": "saapumisintro/tampere/20261013-uudet-6-8/tampere-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Tampereen raitiovaunu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 1,
+  "kuva": "herokoe/hero-tromssa-aamu.jpg",
+  "rivi": "Jäämeren katedraali · 1965",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 2,
+  "kuva": "herokoe/hero-tromssa-keskipaiva.jpg",
+  "rivi": "Polaria · 1998",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 3,
+  "kuva": "herokoe/hero-tromssa-ilta.jpg",
+  "rivi": "Polarmuseet",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 4,
+  "kuva": "saapumisintro/tromso/20261012-full/tromso-4-puutalokatu-arki-intro-v1.png",
+  "rivi": "Tromssan puutalot",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 5,
+  "kuva": "saapumisintro/tromso/20261012-full/tromso-5-prestvannet-luonto-intro-v1.png",
+  "rivi": "Prestvannet",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 6,
+  "kuva": "saapumisintro/tromso/20261013-uudet-6-8/tromso-6-nakoala-intro-v1.png",
+  "rivi": "Tromssan saari",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 7,
+  "kuva": "saapumisintro/tromso/20261012-full/tromso-7-puutalokatu-iltavalot-intro-v1.png",
+  "rivi": "Tromssan puutalokatu",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "tromssa",
+  "nro": 8,
+  "kuva": "saapumisintro/tromso/20261013-uudet-6-8/tromso-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Tromssan matkustaja-alus",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 1,
+  "kuva": "herokoe/hero-vilna-gediminas.jpg",
+  "rivi": "Gediminasin torni",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 2,
+  "kuva": "herokoe/hero-vilna-aamu.jpg",
+  "rivi": "Vilnan tuomiokirkko · 1783–1801",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 3,
+  "kuva": "herokoe/hero-vilna-keskipaiva.jpg",
+  "rivi": "Aamunkoiton portti · 1500-luku",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 4,
+  "kuva": "saapumisintro/vilnius/20261012-full/vilnius-4-uzupisin-koiralenkki-intro-v1.png",
+  "rivi": "Užupis",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 5,
+  "kuva": "saapumisintro/vilnius/20261012-full/vilnius-5-vilnia-luonnonranta-intro-v1.png",
+  "rivi": "Vilnia-joki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 6,
+  "kuva": "210 vilnius From Three Crosses Hill (15315336184).jpg",
+  "rivi": "Gediminasin kukkula",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 7,
+  "kuva": "saapumisintro/vilnius/20261012-full/vilnius-7-zverynasin-puutaloilta-intro-v1.png",
+  "rivi": "Žvėrynas",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 8,
+  "kuva": "herokoe/hero-vilna-ilta.jpg",
+  "rivi": "Pyhien Pietarin ja Paavalin kirkko",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "vilna",
+  "nro": 9,
+  "kuva": "Solaris Trollino 15AC (II), VVT, 2713, route 3, Vilnius, Arsenalo gatvė.jpg",
+  "rivi": "Vilnan johdinauto",
+  "tila": "valmis"
+ }
+]
