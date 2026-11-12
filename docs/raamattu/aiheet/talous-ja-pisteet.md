@@ -6,7 +6,7 @@ SÄÄNNÖT:
 1. Aloitusraha on £300; sillä ei pääse Euroopan laidalta toiselle ilman tehtäviä. Pankkia tai lainaa ei ole. [R-2.190]
 2. Vuorokauden vaihtuessa veloitetaan ruoka £8 ja yösija £12 kerrottuna maan hintatasolla 0,6, 1,0 tai 1,6. [R-2.190]
 3. Tulot: paikallisaarre (pieni noin £150, iso noin £600), mantereen aarre £1000, pääaarre £2000 ja oikeat vastaukset; nostovisan oikea vastaus +£25. [R-2.190] [R-2.18] [R-2.146]
-4. Menot: matkat, varusteet noin £1000 kappale, visavihje ja 50:50. Linssit ja pelit ovat huvituksia, mutta ne voi löytää myös ilmaiseksi. [R-2.190] [R-2.22]
+4. Menot: matkat, varusteet noin £1000 kappale, visavihje £40 ja 50:50 £80. Linssit ja pelit ovat huvituksia, mutta ne voi löytää myös ilmaiseksi. [R-2.190] [R-2.22]
 5. Sähketehtävässä kokonainen pulla pululle maksaa £50 ja antaa vinkin, puolikas £25. [R-2.25]
 6. Olavinlinnan esittely ja luenta ovat ilmaisia. Pelaaminen maksaa £20, alusta aloitus aina £10 lisää, jatko ei mitään; lukijan kysymyksestä saa £25 kerran. [R-2.186]
 7. Rosvo vie puolet rahoista. [R-2.190]

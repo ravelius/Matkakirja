@@ -21,7 +21,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
 | saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 12.11.2026 |
-| matkustus-ja-reitit | Matkustus ja reitit | PK | 2.9 kt | 12.11.2026 |
+| matkustus-ja-reitit | Matkustus ja reitit | PK | 3.0 kt | 12.11.2026 |
 | aarteet | Aarteet | PK | 2.9 kt | 12.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | 2.4 kt | 12.11.2026 |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | 2.8 kt | 12.11.2026 |
@@ -31,14 +31,14 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |
 | lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
-| aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 2.5 kt | 12.11.2026 |
-| musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.5 kt | 12.11.2026 |
+| aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 2.9 kt | 12.11.2026 |
+| musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.7 kt | 12.11.2026 |
 | grafiikan-tuotanto | Grafiikan tuotanto | PT | 2.8 kt | 12.11.2026 |
 | mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
-| valo-ja-materiaalit | Valo ja materiaalit | VS | 2.7 kt | 12.11.2026 |
+| valo-ja-materiaalit | Valo ja materiaalit | VS | 3.0 kt | 12.11.2026 |
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | 2.9 kt | 12.11.2026 |
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.8 kt | 12.11.2026 |
-| media-ja-ampari | Media ja ämpäri | JU | 2.5 kt | 12.11.2026 |
+| media-ja-ampari | Media ja ämpäri | JU | 2.9 kt | 12.11.2026 |
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 2.9 kt | 12.11.2026 |
 | oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | 2.9 kt | 12.11.2026 |
