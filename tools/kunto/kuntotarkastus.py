@@ -277,6 +277,14 @@ def mittaa(a):
     m_n, m_e = parit(mem, 0.6)
     t_n, t_e = parit([x.get("otsikko", "") for x in rivit if x.get("tila") not in ("valmis", "tehty")], 0.8)
     L["12 päällekkäisiä kirjauksia"] = (m_n + t_n, None, f"muisti {m_n}, työlista {t_n}: " + "; ".join((m_e + t_e)[:2]))
+    # 13 RAAMATUN OVI (KK 12.11. 09.26; tools/kirjaa.mjs tila): punaiset rivit yhteensä
+    try:
+        o = json.loads(subprocess.run(["node", f"{REPO}/tools/kirjaa.mjs", "--juuri", REPO, "tila", "--json"],
+                                      capture_output=True, text=True, timeout=120).stdout)
+        pun = [f"{r['nimi']} {r['arvo']}" for r in o["rivit"] if r["punainen"]]
+        L["13 Raamatun ovi punaisia"] = (o["punaisia"], 0, ", ".join(pun)[:120])
+    except (OSError, ValueError, KeyError, subprocess.SubprocessError):
+        L["13 Raamatun ovi punaisia"] = (None, None, "kirjaa.mjs ei vielä mainissa")
     return nyt_l, L
 
 
