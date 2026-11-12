@@ -5,7 +5,7 @@ TAVOITE: Pelaaja ei koskaan näe avainta, koodia eikä tunnusta: niitä ei ole s
 SÄÄNNÖT:
 1. Avaimet ovat Macin ympäristössä (~/.zshrc ja ~/.matkakirja-avaimet-koodaus.zsh), GitHubin repo-salaisuuksissa ja gh-tunnus avainnipussa. Uusi sijainti lisätään tähän nimeltä. [R-12.2]
 2. Ennen kuin avain todetaan puuttuvaksi, se etsitään nimellä kaikista sijainneista. Vasta kun sitä ei löydy, KK pyytää omistajaa lisäämään sen itse ympäristöön tai salaisuuteen. [R-12.3] [R-12.4]
-3. Arvot ladataan hiljaa; avaintiedostosta katsotaan vain nimet. Paljastunut arvo kirjataan lokiin ja kerrotaan KK:lle; avaimen vaihdosta päättää omistaja. [R-12.5]
+3. Arvot ladataan hiljaa; avaintiedostosta katsotaan vain nimet. Paljastuminen (avaimen nimi, ei arvoa) kirjataan lokiin ja kerrotaan KK:lle; avaimen vaihdosta päättää omistaja. [R-12.5]
 4. Pulun kehittäjäkoodi on GitHub-salaisuuksissa ja Macin avaintiedostossa, ehdotusavain vain GitHubissa; täysi Pulu-savuke saa ne vain työnkulun kautta, ja mittaus lähettää koodin otsakkeessa tulostamatta sitä. [R-12.3] [R-12.25]
 5. Sovelluksessa avaimet ja koodit ovat vain laitteen avainnipussa, ei asetuksissa, binäärissä eikä lokissa. Kentät ovat salasanakenttiä vain kehittäjätilassa, ja App Store -käännöksessä ne ovat tyhjät. [R-12.6]
 6. Claude-API laskutetaan omistajan Console-organisaatiosta: omistaja luo avaimen ja tallentaa sen salaisuuteen, Julkaisija vie sen workeriin. Macin vanhaa Claude-avainta ei käytetä. [R-12.7]

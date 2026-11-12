@@ -10,7 +10,7 @@ SÄÄNNÖT:
 5. Verkosta haetaan koneella vain virallisista rajapinnoista tai robots.txt:n ja käyttöehtojen sallimista poluista, eikä robottitarkistuksia ohiteta. Kielto pysäyttää haun, eikä kielletystä lähteestä saatua käytetä. [R-2.183]
 6. Wikimedian rajapintaa saa käyttää peräkkäisin pyynnöin ja kuvaavalla tunnisteella ilman omistajan sähköpostia. Freesound vain rajapinnalla; Overpass ja OSM:n omat latauspalvelimet ovat kiellettyjä. [R-2.183]
 7. Pelin ämpäri ei ole jakelua: ostettu ja ladattu sisältö viedään sinne normaalisti, ja lisenssistä tarkistetaan vain pelikäyttö (kaupallinen käyttö, nimeäminen, tekoälykoulutuskielto). [R-11.4]
-8. Tilauskirjaston raakatiedostot ovat NAS:lla ja ämpärissä vain käsitellyt; tilauksen päättyessä peliin viemättömät raakatiedostot poistetaan. [R-5.20]
+8. Tilauskirjaston raakatiedostot ovat NAS:lla ja ämpärissä vain käsitellyt; tilauksen päättyessä peliin viemättömät raakatiedostot poistetaan vain, jos tilausehto sitä vaatii. [R-5.20]
 9. Museoteos saa olla Commonsin kopio, vaikka museo rajaa kaupallisen käytön; kuva poistetaan museon pyynnöstä. Museoiden palvelimilta ei tehdä massahakuja. [R-2.126]
 10. Jos Italian valtion museoiden teoksia on pelissä, sovellus jätetään pois Italian App Storesta. Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D piilotetaan vain Kreikan App Storessa, eikä niille tehdä uusia kuumailmapallokierroksia. [R-2.134] [R-2.135]
 11. Omalla koneella ajettavan tekoälymallin lisenssin on sallittava kaupallinen käyttö. Codexin toimituksia koskevat samat lisenssisäännöt. [R-2.95] [R-11.7]
