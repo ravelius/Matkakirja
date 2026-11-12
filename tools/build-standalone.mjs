@@ -490,7 +490,6 @@ const MODULES = [
   // Kehittäjän liitteet (v697): ui.js lukee Raamatun ja tilannetaulut
   // pelin sisäisiin lehtiin, joten ne kuuluvat myös yhden tiedoston
   // versioon.
-  'js/tyohuone-raamattu.js',
   'js/tyohuone-tilanne.js',
   'js/tyohuone-pelit.js',
   // Lukijaäänen oletusten näyttökopio (main.js tuo sen dialogiin).
@@ -852,7 +851,6 @@ const MODULES = [
    * yllä.
    */
   'js/tyohuone-kehittajalehti.js',
-  'js/tyohuone-raamattu-muokkaus.js',
   /*
    * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
    * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —

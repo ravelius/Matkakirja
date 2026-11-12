@@ -14,9 +14,10 @@
  *   1. HAMPURILAINEN ON SAMA KEHITTÄJÄTILASSA JA ILMAN. #kehittaja-
  *      kotelo on poissa index.html:stä kokonaan, eikä siellä ole enää
  *      yhtäkään poistettua nappi-id:tä.
- *   2. KAKSI NAPPIA RATTAASSA. #kehittaja-valikon sisällä ovat
- *      #raamattu-lehti-btn ja #kehittajalehti-btn, ja js/main.js
- *      kytkee molemmat omaan avaukseensa.
+ *   2. NAPPI RATTAASSA. #kehittaja-valikon sisällä on
+ *      #kehittajalehti-btn, ja js/main.js kytkee sen avaukseensa.
+ *      Raamattu-nappi poistui 12.11.2026 (KK 17.30: yksi ovi,
+ *      tools/kirjaa.mjs); testi vartioi, ettei se palaa.
  *   3. SEITSEMÄN RIVIÄ AVAA OIKEAN LEHDEN. Kehittäjälehden rivit
  *      piirretään pienellä DOM-mallilla ja jokaista napautetaan:
  *      rivin on kutsuttava täsmälleen omaa avaustaan.
@@ -123,13 +124,13 @@ test('hampurilaisvalikossa ei ole enää kehittäjän koteloa', () => {
 /* 2. Kaksi nappia hammasratasvalikossa                              */
 /* ---------------------------------------------------------------- */
 
-test('hammasratasvalikossa on Raamattu ja Kehittäjälehti', () => {
+test('hammasratasvalikossa on Kehittäjälehti, ei Raamattua', () => {
   const html = lue('index.html');
   const alku = html.indexOf('id="kehittaja-valikko"');
   const loppu = html.indexOf('id="paavalikko"');
   assert.ok(alku > 0 && loppu > alku, 'kehittäjävalikkoa ei löydy index.html:stä');
   const valikko = html.slice(alku, loppu);
-  assert.ok(valikko.includes('id="raamattu-lehti-btn"'), 'Raamattu-nappi puuttuu rattaasta');
+  assert.ok(!html.includes('raamattu-lehti-btn'), 'poistettu Raamattu-nappi on palannut');
   assert.ok(valikko.includes('id="kehittajalehti-btn"'), 'Kehittäjälehti-nappi puuttuu rattaasta');
   /*
    * EI OTSIKKOA, POHJIMMAISENA (omistaja 11.9.2026: *"raamattu ja
@@ -141,14 +142,14 @@ test('hammasratasvalikossa on Raamattu ja Kehittäjälehti', () => {
   assert.ok(valikko.indexOf('id="kehittaja-tyohuone"') > valikko.indexOf('id="kehittaja-vivut"'),
     'työhuoneen napit eivät ole valikon alimmaisina');
   // Molemmat ovat samaa viivaikoninappityyliä kuin ennen.
-  const napit = [...valikko.matchAll(/id="(raamattu-lehti-btn|kehittajalehti-btn)"[^>]*class="([^"]+)"/g)];
-  assert.equal(napit.length, 2, 'nappien luokkia ei löytynyt');
+  const napit = [...valikko.matchAll(/id="(kehittajalehti-btn)"[^>]*class="([^"]+)"/g)];
+  assert.equal(napit.length, 1, 'napin luokkia ei löytynyt');
   for (const [, id, luokat] of napit) {
     assert.ok(luokat.includes('tyohuone-nappi'), `${id}: työhuoneen nappityyli puuttuu`);
   }
 
   const main = lue('js/main.js');
-  assert.match(main, /getElementById\('raamattu-lehti-btn'\)[\s\S]{0,200}avaaRaamattuLehti\(\)/);
+  assert.doesNotMatch(main, /avaaRaamattuLehti/);
   assert.match(main, /getElementById\('kehittajalehti-btn'\)[\s\S]{0,200}avaaKehittajalehti\(\)/);
 });
 
@@ -211,7 +212,7 @@ test('Kehittäjälehti on yhden sivun lehti', () => {
 test('uudet työhuonemoduulit ovat sw.js:n SHELLissä ja niputuksessa', () => {
   const sw = lue('sw.js');
   const nippu = lue('tools/build-standalone.mjs');
-  for (const moduuli of ['js/tyohuone-kehittajalehti.js', 'js/tyohuone-raamattu-muokkaus.js']) {
+  for (const moduuli of ['js/tyohuone-kehittajalehti.js']) {
     assert.ok(sw.includes(`'./${moduuli}'`), `${moduuli} puuttuu sw.js:n SHELListä`);
     assert.ok(nippu.includes(`'${moduuli}'`), `${moduuli} puuttuu MODULES-listalta`);
   }
