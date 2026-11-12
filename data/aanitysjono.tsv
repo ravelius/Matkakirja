@@ -3,9 +3,7 @@ dbce1438db01b9f3542ee4ebe888329c	helsinki	nahtavyysjutut	Sibeliuksen puisto	1	20
 450d9e37e37dd62d59f07680ee1d1749	lontoo	nahtavyysjutut	Westminster Abbey	1	2026-11-12
 f956030edf5c26def172719b33a07a69	lontoo	nahtavyysjutut	Westminster Abbey	2	2026-11-12
 2beca4614874b542af1eea8864d337fb	lontoo	nahtavyysjutut	Westminster Abbey	3	2026-11-12
-96c94af8e34252daa39f852f59c438d9	lontoo	nahtavyysjutut	Westminsterin palatsi	1	2026-11-12
 7ba38a3d3f7ccac587084bddb9a298ad	lontoo	nahtavyysjutut	Westminsterin palatsi	2	2026-11-12
-d1662307873c5c5ad35f5d35b7621ff5	lontoo	nahtavyysjutut	Westminster Bridge	1	2026-11-12
 4d798b9a0f578bf3a6efe2bfb816c036	lontoo	nahtavyysjutut	Westminster Bridge	2	2026-11-12
 b53f17b96587a19246a9e3bd479fc975	lontoo	nahtavyysjutut	Westminster Bridge	3	2026-11-12
 b698144d1342f11fd1962311efbf0170	lontoo	nahtavyysjutut	Cutty Sark	1	2026-11-12
@@ -15,20 +13,16 @@ b698144d1342f11fd1962311efbf0170	lontoo	nahtavyysjutut	Cutty Sark	1	2026-11-12
 7e39763cbb814a27c8e2039adc776550	lontoo	nahtavyysjutut	Lontoon Tower	2	2026-11-12
 c72c73f2f9f483483c44509564136d86	lontoo	nahtavyysjutut	Lontoon Tower	3	2026-11-12
 d59588a99d5a4742f125128019541ffc	lontoo	nahtavyysjutut	British Museum	1	2026-11-12
-d7f74e1bf3416bff577805c5e286ffb8	lontoo	nahtavyysjutut	British Museum	2	2026-11-12
 54c1a26759dfc3df461f01b11fe4b702	lontoo	nahtavyysjutut	British Museum	3	2026-11-12
 38350426e61d9419b5d5f91b1b2c2f82	lontoo	nahtavyysjutut	Natural History Museum	1	2026-11-12
 c3090e08b10fe9fcbc324b6d22ae6846	lontoo	nahtavyysjutut	Natural History Museum	2	2026-11-12
 9d3e9d7f6fbc2a0169a0d294bb265797	lontoo	nahtavyysjutut	Natural History Museum	3	2026-11-12
 756f004ae69cb6bc3dd54df30111c272	lontoo	nahtavyysjutut	Victoria Memorial	1	2026-11-12
-a0880efe8e5c7bb5b681139a7cef94c6	lontoo	nahtavyysjutut	Victoria Memorial	2	2026-11-12
 d3edefb9e48e9a3b421280dcac7a6e30	lontoo	nahtavyysjutut	Victoria Memorial	3	2026-11-12
 dc739627f01851c29a6dd0b6cb91ef27	lontoo	nahtavyysjutut	Royal Albert Hall	1	2026-11-12
 aea4f61ddfa46df6c84e21171bc1848f	lontoo	nahtavyysjutut	Royal Albert Hall	2	2026-11-12
 36109755df985d661eb84d19c445d4fd	lontoo	nahtavyysjutut	Royal Albert Hall	3	2026-11-12
-6a9f0e6a7194b40c63da727634800c85	lontoo	nahtavyysjutut	Albert Memorial	1	2026-11-12
 6794ce70e9e2258a21ac8882c7e27527	lontoo	nahtavyysjutut	Albert Memorial	2	2026-11-12
-d8b841a8d0a2a04c51677ad22cbfcbcb	lontoo	nahtavyysjutut	Albert Memorial	3	2026-11-12
 ed96ed48abb34aceeb386fa173ee6c7c	lontoo	nahtavyysjutut	Kensingtonin palatsi	1	2026-11-12
 f8be440f471bc9a77c5cd56254bd66b1	lontoo	nahtavyysjutut	Kensingtonin palatsi	2	2026-11-12
 885d3876b9baa1156f8619285f3f6528	lontoo	nahtavyysjutut	Kensingtonin palatsi	3	2026-11-12
@@ -42,22 +36,16 @@ f80d8194ad47f80467c1d445e17b2540	lontoo	nahtavyysjutut	Old Royal Naval College	3
 2487f7d1548f1b0b46fd11474f5914ec	lontoo	nahtavyysjutut	Queen's House	2	2026-11-12
 3e54fa0e6442ac4ff04be5b28b7e373d	lontoo	nahtavyysjutut	Queen's House	3	2026-11-12
 13d41c106d3807760abbb9cbec966913	lontoo	nahtavyysjutut	Millennium Bridgen portaat	1	2026-11-12
-3977097a0bf672a250baa2a1a8005bd2	lontoo	nahtavyysjutut	Cheapsiden kätkö	1	2026-11-12
 447d34023e6242eeb46c068debf7cad9	lontoo	nahtavyysjutut	Tunneli 1827	1	2026-11-12
-661e3203a3f2ef497cb2901877ad6536	lontoo	nahtavyysjutut	Palo 1666	1	2026-11-12
-f50593e474ff1fde68a6c30662d7ca0a	lontoo	nahtavyysjutut	Globe 1599	1	2026-11-12
 3b2dc370f527b937058deceb00e06432	pariisi	nahtavyysjutut	Invalidit	3	2026-11-12
 5f2b0ca03cdd0b24e9736a14c4e69501	pariisi	nahtavyysjutut	Sainte-Chapelle	3	2026-11-12
 76eef14f3d2df0501916d42258b47d89	pariisi	nahtavyysjutut	Grand Palais	3	2026-11-12
 909b211bcd0d3cb54908ac11f53c0bd2	pariisi	nahtavyysjutut	Tour Montparnasse	3	2026-11-12
 64fcacaf65f7ce2801faea12855524c4	FRA	skandaalit	mona-lisan-varkaus-1911	5	2026-11-12
 e009dba352fd49b59f6f93e4fa8ff332	GBR	historianHetket	brunel-thames-tunnel-1827	1	2026-11-12
-c55dc45606cb312e9a1a702d8faeda97	GBR	historianHetket	lontoon-palo-1666	2	2026-11-12
-5b6c3e2f53670809938a3ac74ca36bdf	GBR	historianHetket	shakespeare-globe-1599	2	2026-11-12
 58280623007ccb21f61ad3f7bb127734	pariisi	fokusvirta-takyt	tuileriat	1	2026-11-12
 4f94b14a0d8d0b5fe099142a085216b1	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-12
 fed3a749cf78036c5e6707df77a9ab09	lontoo	fokusvirta-takyt	vuorovesi	2	2026-11-12
-d6a0f6e5fa8d3b043cb1574d4977bf8b	lontoo	fokusvirta-takyt	cheapside	2	2026-11-12
 751f2d86a4ba687f934b3e72fb2e6888	AUT	hahmotelma	hahmotelma-ringtheater	1	2026-11-12
 6b4174a7cd0f66f7a9d24ef30ec1391d	AUT	hahmotelma	hahmotelma-ringtheater	2	2026-11-12
 f022d58ba2117370d4b1fb195ef94c0b	DEU	hahmotelma	hahmotelma-palast-der-republik	2	2026-11-12
@@ -65,9 +53,7 @@ f022d58ba2117370d4b1fb195ef94c0b	DEU	hahmotelma	hahmotelma-palast-der-republik	2
 51992b86b3c93c8bf6570b216219d6f0	DNK	hahmotelma	hahmotelma-vor-frue-keskiaika	2	2026-11-12
 689b737ee0d8f60e11605fb398b54488	FIN	hahmotelma	hahmotelma-helsinki-vanha-asema	1	2026-11-12
 4e9b86d70443a7fedd5cd1196df9468d	FIN	hahmotelma	hahmotelma-helsinki-vanha-asema	2	2026-11-12
-b9aaf9b369969cf069dc8ae9e6f9445e	GBR	hahmotelma	hahmotelma-old-tolbooth	1	2026-11-12
 22b9186934b8f5eb993b8672e74e4941	GBR	hahmotelma	hahmotelma-old-tolbooth	2	2026-11-12
-d5248ce5545dec69148a1c9e82ae7e3e	GBR	hahmotelma	hahmotelma-greenwich-palatsi	1	2026-11-12
 dd29c9f3c993a02fc4d60aca9a2c908a	GBR	hahmotelma	hahmotelma-greenwich-palatsi	2	2026-11-12
 d64a5b360e6e3cde5b82e99a1fdae55a	GBR	hahmotelma	hahmotelma-newgate	1	2026-11-12
 f157b026020b0603e66ff08fc8cdad33	GBR	hahmotelma	hahmotelma-newgate	2	2026-11-12
@@ -75,8 +61,6 @@ f157b026020b0603e66ff08fc8cdad33	GBR	hahmotelma	hahmotelma-newgate	2	2026-11-12
 06231d38c702eb64d32e7fbb466481a4	GBR	hahmotelma	hahmotelma-euston-arch	2	2026-11-12
 44b00a672704ec68c478ce05925f8840	GBR	hahmotelma	hahmotelma-westminster-vanha	1	2026-11-12
 d3d5bd40f3e7f6d02ca7cf65d86dfd0f	GBR	hahmotelma	hahmotelma-westminster-vanha	2	2026-11-12
-b541e8d6ac8c1a39f9f517b1fcb6162a	GBR	hahmotelma	hahmotelma-whitehall	1	2026-11-12
-72f549975f101d0dc480c09d277a3ed2	GBR	hahmotelma	hahmotelma-whitehall	2	2026-11-12
 8ee388ebf6ce88e6f1546c8e12f06afb	HUN	hahmotelma	hahmotelma-erzsebet-silta	2	2026-11-12
 418efea32afd845dcee2ee687a121ef5	IRL	hahmotelma	hahmotelma-nelsonin-pylvas	1	2026-11-12
 28293c444d2a7d9935df4d6a0053f2a1	IRL	hahmotelma	hahmotelma-nelsonin-pylvas	2	2026-11-12
@@ -227,3 +211,20 @@ ccd46db3e6baea5642e5d8dfabcb151c	pariisi	nahtavyysjutut	Bastilji 1789	1	2026-11-
 0820b6d69b5746eb5c8f08d44e2f4aa4	LUX	hahmotelma	hahmotelma-luxemburgin-linnoitus	1	2026-11-12
 a5f1fa44ed4f5b2cd00cc77ac48362c7	lontoo	nahtavyysjutut	Westminsterin palatsi	3	2026-11-12
 d10d24333fcfadafc8812b8f9398f81c	sofia	nahtavyysjutut	Banja Bašin moskeija	1	2026-11-12
+faefbf65bfbba5dc55f5ca6c189075de	lontoo	nahtavyysjutut	Westminsterin palatsi	1	2026-11-12
+aa6db7b3a5a2d583ed9554b92104b280	lontoo	nahtavyysjutut	Westminster Bridge	1	2026-11-12
+58b8e4306df1a8e37f390eae9a884805	lontoo	nahtavyysjutut	British Museum	2	2026-11-12
+65c5edec2f9566b09cd9bf6f4f890af1	lontoo	nahtavyysjutut	Victoria Memorial	2	2026-11-12
+08c1f25be8b0ce17b7355444f1261c66	lontoo	nahtavyysjutut	Albert Memorial	1	2026-11-12
+cc05279cc17924a67499e980664459bb	lontoo	nahtavyysjutut	Albert Memorial	3	2026-11-12
+78687df9e612cfc69452a2c7ed48520f	lontoo	nahtavyysjutut	Cheapsiden kätkö	1	2026-11-12
+ab6eb0d26bc87f2ea3ff217d5af543cd	lontoo	nahtavyysjutut	Palo 1666	1	2026-11-12
+2ff83073a5b2dfd9ad2e52f0f62254b7	lontoo	nahtavyysjutut	Globe 1599	1	2026-11-12
+00bea5bc69c5ca116c7305a4d2b13add	GBR	historianHetket	lontoon-palo-1666	1	2026-11-12
+f202d24526878765a19c6e6bd4cb22ac	GBR	historianHetket	lontoon-palo-1666	2	2026-11-12
+197786fecb0b7818a7737866f827395e	GBR	historianHetket	shakespeare-globe-1599	2	2026-11-12
+17bd6ec198170be6602382b10a4928fa	lontoo	fokusvirta-takyt	cheapside	2	2026-11-12
+9881c3f31f54ff4623e24e34668519c6	GBR	hahmotelma	hahmotelma-old-tolbooth	1	2026-11-12
+4d39d1e49c0d3321831425e87f25b487	GBR	hahmotelma	hahmotelma-greenwich-palatsi	1	2026-11-12
+8f094adde58adb6d3931b03a8cd272de	GBR	hahmotelma	hahmotelma-whitehall	1	2026-11-12
+ddcb1322ce5f93dba107c3682b691917	GBR	hahmotelma	hahmotelma-whitehall	2	2026-11-12
