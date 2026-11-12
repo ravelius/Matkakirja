@@ -4,23 +4,79 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "31644958f2573b4c",
-  "aika": "2026-11-12T07:53:41.942Z"
+  "sha": "d5a615c8f0197d96",
+  "aika": "2026-11-12T08:34:47.712Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
   "aika": "2026-11-12T07:49:38.893Z"
  },
  "aiheet/kamera.md": {
-  "sha": "2a128e1a5e74033a",
-  "aika": "2026-11-12T07:53:35.324Z"
+  "sha": "1df81ad6f40cb011",
+  "aika": "2026-11-12T08:08:26.637Z"
  },
  "aiheet/juna-ja-julkaisu.md": {
-  "sha": "fe95b515e1fa1440",
-  "aika": "2026-11-12T07:49:47.587Z"
+  "sha": "003225fee768f360",
+  "aika": "2026-11-12T08:28:40.169Z"
  },
  "aiheet/juoksupeli.md": {
-  "sha": "61e2054c1fc98dae",
-  "aika": "2026-11-12T07:53:41.942Z"
+  "sha": "6b58b44fc362622b",
+  "aika": "2026-11-12T08:28:29.126Z"
+ },
+ "paatokset/2026-11.md": {
+  "sha": "7252351fc9336b5e",
+  "aika": "2026-11-12T08:34:42.921Z"
+ },
+ "aiheet/nahtavyydet.md": {
+  "sha": "c2f3f3ba50b70862",
+  "aika": "2026-11-12T08:09:19.768Z"
+ },
+ "aiheet/lahteet-ja-tarkistus.md": {
+  "sha": "8d2038c3fd9e426a",
+  "aika": "2026-11-12T08:10:07.021Z"
+ },
+ "aiheet/kartta-ja-pallo.md": {
+  "sha": "2ac276c8f62d5376",
+  "aika": "2026-11-12T08:10:21.751Z"
+ },
+ "aiheet/kartan-merkit-ja-nimet.md": {
+  "sha": "f8c90ac4939c4d4a",
+  "aika": "2026-11-12T08:28:34.894Z"
+ },
+ "aiheet/valmiin-maaritelma.md": {
+  "sha": "c7c4ce5ec634e2d9",
+  "aika": "2026-11-12T08:28:44.904Z"
+ },
+ "aiheet/lehti-ja-nostot.md": {
+  "sha": "b311bb114026f3c7",
+  "aika": "2026-11-12T08:28:49.628Z"
+ },
+ "aiheet/pulu-ja-kysymykset.md": {
+  "sha": "1078af0f51da1edb",
+  "aika": "2026-11-12T08:16:22.150Z"
+ },
+ "paatokset/2026-10.md": {
+  "sha": "098593b5ba03195b",
+  "aika": "2026-11-12T08:32:49.024Z"
+ },
+ "C-talo.md": {
+  "sha": "f3d92a3c1df07315",
+  "aika": "2026-11-12T08:30:12.493Z"
+ },
+ "aiheet/isoisa-ja-tarina.md": {
+  "sha": "0ef9af22b2ca3de9",
+  "aika": "2026-11-12T08:33:10.627Z"
+ },
+ "aiheet/tekstit-ja-kieli.md": {
+  "sha": "ec11c155b1bc4693",
+  "aika": "2026-11-12T08:33:15.711Z"
+ },
+ "aiheet/kertojaaanet.md": {
+  "sha": "a9e8fe5bb1b28412",
+  "aika": "2026-11-12T08:34:47.712Z"
+ },
+ "aiheet/mallit-ja-3d.md": {
+  "sha": "98688d4ca47548e4",
+  "aika": "2026-11-12T08:33:31.727Z"
  }
 }
