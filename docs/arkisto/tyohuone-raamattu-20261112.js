@@ -1,3 +1,5 @@
+// ARKISTO, ei voimassa (arkistoitu 12.11.2026, KK 17.30 / P-261112-23). Säännöt: docs/raamattu/ ja node tools/kirjaa.mjs;
+// vanha kohtanumero korteista: node tools/kirjaa.mjs hae "R-x.y".
 /*
  * !!! AGENTIT VAIN OPUS JA SONNET. FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
  * (omistaja 1.9.2026 ja 7.9.2026 — sitova, ensimmäinen sääntö;

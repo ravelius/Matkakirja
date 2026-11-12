@@ -27,7 +27,7 @@ const PAKAT = new URL('../js/packs/', import.meta.url);
 const MUUT = ['../js/muutokset.js'];
 
 /*
- * Työhuoneen Raamattu (js/tyohuone-raamattu.js) ja kehittäjälehdet
+ * Kehittäjälehdet
  * (js/lehti.js avaaKehittajaLehti) EIVÄT ole tässä: ne ovat
  * nimenomaan kehittäjän tekstiä, ja niissä dokumenttipolku on ohje
  * eikä vuoto.

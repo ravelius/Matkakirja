@@ -1,6 +1,6 @@
 # Osallistuminen
 
-Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamatun luvun 1 kohta "PERUSTUSLAKI: VIISI PILARIA" (js/tyohuone-raamattu.js; pelissä kehittäjätilan Raamattu-lehti) —
+Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: pelin kuvaus ja linjaukset (docs/raamattu/A-peli.md ja B-linjaukset.md) —
 ne kertovat, millä perusteilla sisältö hyväksytään peliin. Tämä peli on rakennettu niin, että uusien lautojen ja
 kysymysten lisääminen on mahdollisimman helppoa — myös ilman syvää
 ohjelmointikokemusta. Kaikki muutokset tehdään pull requesteina, ja testit

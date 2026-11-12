@@ -3,7 +3,7 @@
 *(Päätoimittaja 21.10.2026, studiojako (Raamattu 4.21), osa D.)*
 
 Tämä on ainoa paikka, jossa tuotannon vaiheet, portit ja luvat kerrotaan. Suunta (A), tekotavat (B) ja reseptit (C)
-viittaavat tänne eivätkä toista lupia. Täysi sääntö on aina Raamatussa (`js/tyohuone-raamattu.js`, kohdan numero
+viittaavat tänne eivätkä toista lupia. Täysi sääntö on aina Raamatussa (`docs/raamattu/`, `node tools/kirjaa.mjs hae "R-<numero>"`; kohdan numero
 suluissa); jos tämä ja Raamattu eroavat, Raamattu voittaa ja tämä korjataan.
 
 Periaate on sama kuin ammattimaisessa peliyhtiössä: tavoite sovitaan ensin, sitten tehdään karkea pelattava versio,

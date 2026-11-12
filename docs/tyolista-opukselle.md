@@ -190,7 +190,7 @@ vain lehdet.
 ### Lue ennen aloitusta (järjestyksessä)
 
 1. CLAUDE.md ja docs/roolitus.md (roolit, julkaisusäännöt).
-2. Raamattu (js/tyohuone-raamattu.js), erityisesti Perustuslaki,
+2. Raamattu (docs/raamattu/), erityisesti Perustuslaki,
    Kuvat ja lähteet (mm. 20.8. linjaukset: tuhoutuneen kaupungin
    nykykuvat, matkaopas on nykytietoa) ja Viisas Pöllö.
 3. **docs/aasia-tyoaineisto/LUEMINUT.md** ja sen kansio: resepti
