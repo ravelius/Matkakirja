@@ -69,3 +69,6 @@ Ei agentteja käynnissä. Työkopiot (/Users/Shared/Claude/wt): proto-pelikoodar
 - HAVAINNOT OTTEEN PITOON (mittaa, älä korjaa erikseen). KK haluaa YHDEN kootun viestin: ovatko nämä otteen pidon mittarissa mukana ja mitkä luvut ne saavat.
   - Pari-2, jälkeen: käännös noin 90° kuudessa ruudussa (0,2 s), ja pelaajan jalat ruudun ulkona 4 ruutua (ruudut 54–57 = 93,8–93,9 s).
   - Pari-1, jälkeen: 74–75 s rakennuksen kulma täyttää vasemman kolmanneksen noin 0,5 s (pelaaja näkyy koko ajan).
+
+## LISÄYS 10.54: JU
+- PisteKaarella a552d1db8 + kaistanvaihto e429412e5 LINKISSÄ 224.110 = 2f62c309e (kartta 787/787, linssit 2293/2293, peli 931/931, unity 0). Junahaara pelikoodari/pistekaarella on käytetty.
