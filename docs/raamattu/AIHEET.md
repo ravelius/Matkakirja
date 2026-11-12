@@ -27,7 +27,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
 | pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
-| tyylikirja | Tyylikirja | NUI | 2.9 kt | 12.11.2026 |
+| tyylikirja | Tyylikirja | NUI | 3.0 kt | 12.11.2026 |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |
 | lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
