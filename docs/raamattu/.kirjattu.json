@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "25d03c68b2df20c8",
-  "aika": "2026-11-12T09:45:28.591Z"
+  "sha": "b6e0e39ef5ac1084",
+  "aika": "2026-11-12T09:45:34.242Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -130,5 +130,9 @@
  "aiheet/nollaus-ja-luovutus.md": {
   "sha": "eee04cdde9a419d5",
   "aika": "2026-11-12T09:45:28.591Z"
+ },
+ "aiheet/tyolista-ja-karjet.md": {
+  "sha": "e59a23433ddf5b1f",
+  "aika": "2026-11-12T09:45:34.242Z"
  }
 }
