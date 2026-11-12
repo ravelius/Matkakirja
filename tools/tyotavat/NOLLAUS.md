@@ -25,15 +25,23 @@ Keskustelukanavaa (local_d5f31591) EI nollata koskaan (omistaja nollaa sen korti
 ## Vakioaloitusviesti (täytä <…>)
 ```
 Olet <ROOLI> (<malli>), Matkakirjan roolisessio; session id <id>, checkout <kansio>.
-Lue ensin CLAUDE.md ja luovutuksesi: git show <sha>:<luovutustiedoston polku> KOKONAAN, ja toimi sen mukaan.
+Lue ensin CLAUDE.md ja luovutuksesi KOKONAAN: /Users/Shared/Claude/luovutukset/<rooli>-<pvm>-<klo>.md, ja toimi sen mukaan.
+KEVYT ALOITUS (KK 12.11. 15.36, kortti nollaus-ja-luovutus 1 ja 7): lue lisäksi vain omat aihekortit (node tools/kirjaa.mjs aiheet → kirjaa.mjs lue <aihe>, vastuu = roolisi) ja työlistan oma rivi; Raamatun lukuja ei lueta kokonaan, vaan haetaan tarpeen mukaan (kirjaa.mjs hae). Tavoite aloitus ≤ 15 %.
 Osoitteet: /Users/Shared/Claude/osoitekirja.md — viestit AINA send_messagella session id:llä, ei nimellä.
 Viestit Päätoimittajalle (local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31) enintään 3 riviä: mitä, sha, kuvien polku; yksityiskohdat tiedostoon.
 Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>".
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
-(ASEMATAULU, 31.10. seisokki 09.40–16.2x, KK 16.3x: hoitaja käynnistyy vain KK:n "OMISTAJAN PÄÄTÖS klo 23.35" -rivillä. Asemataulun jokaisen nollauksen jälkeen lähetä KK:lle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) rivi "nollattu Asemataulu" PT:n kuittauksen lisäksi.)
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 
 ## Kotikansioiden päivitys ennen nollausta (omistajan päätös 22.24 B3, PT:n välittämä 20.10.)
 Ennen jokaista roolin nollausta (kulun kohta 2 ja 3 välissä): `bash tools/paivita-kotikansiot.sh --aja --uusi-haara <roolin kansio>`. Kunnes `--uusi-haara` on mainissa, pelkkä `--aja`. Kansio, jota ei voi päivittää → rivi PT:lle.
+
+
+ASEMATAULU JÄÄDYTETTY (omistaja 9.11. 23.08, Raamattu 7.39): ei vientejä tauluun, ei Asemataulun herätyksiä/Boostia eikä "Asemataulu auki" -riviä aloitusviesteissä (myös PT, KK). tyolista.json/junat.json jäävät sessioiden tiedoiksi.
+
+## Luovutuksen koko ja aloitusviestin paikka (PT 12.11. 08.4x, KK 08.45, Raamattu 7.37 / PR 6590)
+- Luovutus ≤ 8 kt ja ≤ 60 riviä, ei "lisäys N" -ketjuja. Yli 8 kt → palauta roolille tiivistettäväksi ENNEN clear_sessionia (KS -1408 115 kt ja NS 33 lisäystä: tiivistys seuraavassa nollauksessa).
+- Aloitusviesti on nollatun roolin ENSIMMÄINEN viesti: lähetä se heti kun list_events = 0.
+- PT:n oma nollaus: odota, että PR 6590 on yhdistetty (PT yhdistää vihreänä), sitten PT nollaa.
