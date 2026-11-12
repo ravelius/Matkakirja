@@ -4,7 +4,7 @@ TAVOITE: Linssi on kartalla avautuva animoitu katsaus, jossa vuosiluvut juokseva
 
 SÄÄNNÖT:
 1. Linssit ja niiden sisältö kattavat koko maailman; maanosarajaukset koskevat vain karttaa. [R-2.60]
-2. Uusi linssi aloitetaan vain omistajan valinnalla linssikatalogista. [R-2.59] [R-6.7]
+2. Uusi linssi aloitetaan vain omistajan valinnalla linssikatalogista. [R-2.59]
 3. Linssi avautuu siellä, missä aihe merkitsee eniten. Aineisto on käsin tarkistettu, ja kerralla näkyy enintään 2–3 kerrosta. [R-2.63] [R-2.59]
 4. Linssi on oma näkymä: kartan korostukset, nostot ja muut äänet pysähtyvät, ja kehys palaa liukumalla, ei häivyttäen. Suljettu linssi ei kuluta resursseja. [R-2.71] [R-2.61]
 5. Avaus tapahtuu mustan tai aloitusnäkymän takana, ja nimikyltti näkyy noin 3 s. Poistu palauttaa kartalle samaan tilaan; vahvistus vain, jos keskeneräistä menetetään. [R-2.70]
@@ -29,4 +29,4 @@ EI VIKA:
 
 TEKOTAPA:
 - Linssien luettelo ja tila: docs/linssikatalogi.md.
-- Liike: kamera. Nappien ulkoasu: ui-pohjat.
+- Liike: kamera. Nappien ulkoasu: ui-pohjat. Aikajanalinssin oma musiikki: musiikki-ja-tehosteet.
