@@ -77,3 +77,5 @@ SEURAAVAT ASKELEET:
   Jos "EI SOI: kertoja puhuu (Puhe soi …)" → puhuu ei putoa esikatselun seisovassa lopussa ajoissa → korjaa Puhe-haarassa.
 - LISÄYS 05.1x: AJO -5 OK lokista (isoisa 18.3 s seisova loppu → "Pulun puhe pulu-pariisi-3.mp3: soi 11.3 s" → nousukuva 8.0 s → vuoro loppuu 11884 ms).
   KK:lle lähetetty junasanaa varten (kuvat p1/p3/t5 KK katsoo). KK:n junasanalla → pt-ok PT:ltä: 4043ebd49 + SK-haara/data cb990dca6 + sisällön vienti.
+- LISÄYS 05.1x: KK:N JUNASANA 05.06 Pariisin tekstiversio (4043ebd49 + SK cb990dca6 + vienti) → pt-ok PYYDETTY PT:ltä. AVOIN: kun juna-ajo
+  224.97+:n päällä valmis (JU), tarkista lokista "aanet: Pulun puhe pulu-pariisi-3.mp3: soi" ja "Pulun nousukuva ajastettu" → yksi rivi KK:lle.
