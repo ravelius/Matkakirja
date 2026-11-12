@@ -2941,7 +2941,7 @@ export const MAAKARTAT = {
  *           KONEELLINEN LINKKI (tools/tarkista-nostopaikat.mjs,
  *           tests/nostot-kartalla.test.mjs): nimivertailu ei kelpaisi,
  *           koska sama sisältö kulkee kartalla eri nimellä kuin
- *           nostona (`moskeijat` on täällä "Banja Bashin moskeija").
+ *           nostona (`moskeijat` on täällä "Banja Bašin moskeija").
  *           Omistajan sääntö 2.9.2026: *"lisää kaikki historian hetket
  *           ja muut karttanostot myös joko pääkarttanäkymään tai sitten
  *           kaupunkilehden kaupunkikartalle, ellei näin ole jo tehty."*
@@ -7133,7 +7133,7 @@ export const KAUPUNKIKARTAT = {
       + 'jo antiikin ajoista. Keskusmineraalikylpylä avattiin 1913, ja '
       + 'vuodesta 2015 siinä on toiminut Sofian historiamuseo. Pyhän Yrjön '
       + 'rotunda on 300-luvun alusta ja kaupungin vanhin säilynyt rakennus. '
-      + 'Banja Bashin moskeija on 1500-luvulta, ja Serdican areena löytyi '
+      + 'Banja Bašin moskeija on 1500-luvulta, ja Serdican areena löytyi '
       + '2004 hotellin työmaalta.\n\n'
       + 'Aleksanteri Nevskin katedraali vihittiin 1924, ja sen kultakupoli '
       + 'on 45 metriä korkea. Sofian yliopisto perustettiin 1888, ja '
@@ -7152,7 +7152,7 @@ export const KAUPUNKIKARTAT = {
        * Neljältä kohteelta puuttuu wiki, koska fi.wikipedian
        * Sofia-kattavuus on ohut: mineraalikylpylästä, rotundasta,
        * Borisovan puutarhasta eikä kulttuuripalatsista ole artikkelia.
-       * Banja Bashin moskeija, synagoga ja Serdican rauniot jäivät
+       * Banja Bašin moskeija, synagoga ja Serdican rauniot jäivät
        * listalta pois kahdesta syystä: niistäkään ei ole artikkelia, ja
        * ne ovat 3–6 prosenttiyksikön päässä kylpylästä eli numerot
        * menisivät päällekkäin.
@@ -7175,14 +7175,14 @@ export const KAUPUNKIKARTAT = {
        * tarha 42,6581, kun kartan eteläraja on 42,681); täkynosto
        * `nosto-areena` kertoo saman tarinan kuin areena; ja
        * `syvennys-sofia-pollopatsas` eli Sofia-patsas seisoo 77 %:n
-       * peitolla Banja Bashin päällä (tools/tarkista-karttapisteet.mjs),
+       * peitolla Banja Bašin päällä (tools/tarkista-karttapisteet.mjs),
        * joten kahdesta valittiin rakennus. Kaikkien sisältö on lehdessä.
        */
-      // Nimiö vasemmalle: keskitettynä kaksirivinen "Banja Bashin
+      // Nimiö vasemmalle: keskitettynä kaksirivinen "Banja Bašin
       // moskeija" laskeutui Pyhän Yrjön rotundan piirroksen päälle,
       // joka on 33 px oikealla alaviistossa.
       {
-        nimi: 'Banja Bashin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
+        nimi: 'Banja Bašin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
         nosto: 'moskeijat',
       },
       /*

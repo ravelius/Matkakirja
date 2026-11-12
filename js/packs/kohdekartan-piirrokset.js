@@ -1024,7 +1024,7 @@
   },
   "sofia": {
     "Mineraalikylpylä": "assets/kartat/miniatyyrit/sofia-mineraalikylpyla-kk.webp",
-    "Banja Bashin moskeija": "assets/kartat/miniatyyrit/sofia-banja-bashin-moskeija-kk.webp",
+    "Banja Bašin moskeija": "assets/kartat/miniatyyrit/sofia-banja-bashin-moskeija-kk.webp",
     "Serdican areena": "assets/kartat/miniatyyrit/sofia-serdican-areena-kk.webp",
     "Pyhän Yrjön rotunda": "assets/kartat/miniatyyrit/sofia-pyhan-yrjon-rotunda-kk.webp",
     "Sofian katedraali": "assets/kartat/miniatyyrit/sofia-sofian-katedraali-kk.webp",

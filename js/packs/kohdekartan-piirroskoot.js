@@ -1024,7 +1024,7 @@
   },
   "sofia": {
     "Mineraalikylpylä": 0.65,
-    "Banja Bashin moskeija": 0.78,
+    "Banja Bašin moskeija": 0.78,
     "Serdican areena": 0.633,
     "Pyhän Yrjön rotunda": 0.644,
     "Sofian katedraali": 0.775,
