@@ -80,3 +80,6 @@ Tiedosto: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suun
 3. Uusi kamera kujassa liian kaukana (väli 7,2 m, vanha 3,5 m). Tavoite ahtaassa noin 4 m. c2-taulukko rivit (τ_v; PaikkaS; D_min ahdas):
    (0,25; 0,45; 1,5) | (0,25; 0,35; 1,5) | (0,25; 0,25; 1,5) | (0,15; 0,25; 1,5) | (0,125; 0,20; 1,25); sarakkeet tiedostossa. KK valitsee.
 JÄRJESTYS: (a) → c1 → c2-taulukko KK:lle → massamittarin syy rinnalla. Uusi Mac-ajo vasta c2-valinnan jälkeen.
+
+## LISÄYS 04.5x: PT (KK 04.54): Mac-jono tyhjä 3 h → kameran pala 2 HETI: T14 (a) + c1-luvut + c2-taulukko, ajot JU:lle (NUI:n Pariisi-ajo -5 ensin jonossa).
+Esto → yksi rivi PT:lle. (Edellinen sessio ei nollautunut 01.2x–04.5x: nollaa itsesi clear_session "self" kun luovutus on valmis, älä odota Postivahtia.)
