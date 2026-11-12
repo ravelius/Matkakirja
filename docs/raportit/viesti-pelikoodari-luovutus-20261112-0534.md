@@ -19,3 +19,19 @@ Koodi: natiivi-backup kameralaite/pala-2 @ ae7c3c004 (wt /Users/Shared/Claude/wt
 - Mittauskomennot: MITTAUS=c2b sh Linssit-testit/kaanna.sh C2b; MITTAUS=c2|c1 sh Linssit-testit/kameratoisto.sh C2Mittaus|C1Mittaus;
   MITTAUS=huiput [HUIPUT_RIVI=1–5] [HUIPUT_SARJA=siemen:t0:t1] kameratoisto.sh Huiput. Älä aja kahta kameratoisto.sh:ta yhtä aikaa.
 Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 05.4x: KK:N VASTAUS 05.44 TULI — TÄMÄ ON NYT ENSIMMÄINEN TYÖ
+Koko teksti: tehtävänannon VIIMEINEN osio "klo 05.4x" (/Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/suunnitelmat/
+20261111-kameralaite-pala2-tehtavananto.md) — LUE KOKONAAN ja TARKISTA KK:N LASKUT (jäämän huippu 1,37 × Δv / w = 1,46 m KatseS 0,25:llä).
+Tiivistelmä: (1) KatseS liukuu ahtauden mukaan kuten PaikkaS (Tyyli()), LaiteKatseViiveS = (1 − e) × 2 × senhetkinen KatseS; mittaa ahdas
+(0,125; 0,20; 1,5) × KatseS 0,15 / 0,125 / 0,10, avoin ennallaan; valitse itse suurin KatseS, jolla T5 ja VO ≤ 21,9°, T7 ylitys ≤ 1,5° + yksi
+suunnanvaihto + rulla ≤ 2°, palan 1 testit läpi. (3) 5a POIS: KatseSivuAste oletus 0.
+(2a) tavoite = q + pehmeä raja(ikkunan keskiarvo − q; enintään Tarkka(q) − 0,4), q = jäljen piste s_kam:ssa, nopeus samasta lausekkeesta;
+ikkunan seinätermi pois: a = min(4,0; D − 0,5). (2b) seinätyöntö pois (katto jää); toistosta poikkeama tavoitteen radasta, tarkka < 0,3,
+ei-kuljettavalla (jäljen 0,1 m pois lukien); ei nolla → kymmenen pahinta KK:lle ennen sileää työntöä. (2c) U-käännös: suunta kääntynyt yli
+120° jäljen viimeisen 3,0 m:n aikana → odotus + leikkaus (T6 VV 4 m pysyy jatkuvana); testi 150° 0,35 s:ssa, 6 ja 10 m/s → tasan yksi
+leikkaus. (2d) katseen nousu jäljen vaakamatkaa kohti (Σ vaakapätkät); testi U-käännös tasaisella → katseen y ± 0,2 m.
+T14 keinorata mitataan muutosten jälkeen. Toiston huiput: odotus a < 30, j < 600, ω < 250 °/s leikkausten ulkopuolella; muuten kymmenen suurinta.
+JATKA KYSYMÄTTÄ MAC-AJOON (JU, siemen 1942463309 vanha + uusi, massaetaisyys-tuomari mukana, peittoruutujen vienti), jos T5 ja VO ≤ 21,9°,
+T7 ja T14 läpi, palan 1 testit läpi, toistossa tavoite ja laite ehdon (i) mukaiset (0 askelta) ja peitossa pisin ≤ 0,6 s; taulukko KK:lle
+samassa viestissä. Muuten taulukko ensin. Kytkin pois. Pohja: kameralaite/pala-2 @ ae7c3c004. Ei vastattu vielä KK:lle.
