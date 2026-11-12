@@ -68,3 +68,10 @@ SEURAAVAT ASKELEET:
   junasanaa varten (03.4x). KK:n junasanalla → pt-ok PT:ltä (631172274, natiivi-backup natiivi-ui/vakioajo). NS:lle tiedoksi.
 - LISÄYS 03.4x: KK:N JUNASANA 03.42 vakioajo 631172274 → pt-ok PYYDETTY PT:ltä (03.4x). Jäljellä vain vakiokuvien komento käännökseen (PT/JU).
 - KK 03.42: PARIISIN TEKSTIVERSION AJO -5 (linja KK 01.38 yllä) ON KÄRJESSÄ ENNEN MUUTA → aloita siitä.
+- LISÄYS 05.0x (PT/KK 04.5x, Mac tyhjä): KK 01.38 -linja TOTEUTETTU 4043ebd49 (natiivi-ui/pariisi-tekstit): Aanet.Soita Puhe-kanava pysyvä loki
+  "MATKAKIRJA aanet: Pulun puhe <tiedosto>: soi X s | EI SOI: <syy>" (jatkohiljaisuus / klippi / kertoja puhuu (kertojakanava | Puhe soi X | linssin puhe) /
+  Pulun chat-vastaus); Saapumisesitys.Kommentti: aloituslennon nousukuva aaniLadattu-kutsussa viiveellä klippi − 3,25 s (loki "Pulun nousukuva ajastettu X s
+  puheen alusta"), vuoron loppu max(lukuaika+280, klippi+600) (loki "Pulun vuoro i loppuu … ms"). Skenaario sk-pariisi-tekstit-5.txt (p1 +1,7 s, p3 +3,2 s, t5; p2/k1 pois).
+  AJO -5 PYYDETTY JU:lta → lokit/nui-pariisi-tekstit-5-4043ebd49. KATSO: "odotus päättyi … isoisa-pariisi.mp3" → "Pulun puhe pulu-pariisi-3.mp3: soi ~11,2 s";
+  nousukuva ~7,9 s; vuoron loppu ~11 750 ms; p1 kuva + lähderivi, p3 pieni kuva, t5 → KK:lle yksi viesti → junasana → pt-ok.
+  Jos "EI SOI: kertoja puhuu (Puhe soi …)" → puhuu ei putoa esikatselun seisovassa lopussa ajoissa → korjaa Puhe-haarassa.
