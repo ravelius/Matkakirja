@@ -8,7 +8,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | aika-ja-ulkoasu | Aika ja ulkoasu | KK | – | – |
 | kartta-ja-pallo | Kartta ja pallo | KS | 2.9 kt | 12.11.2026 |
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 2.9 kt | 12.11.2026 |
-| kaupungit | Kaupungit | KS | – | – |
+| kaupungit | Kaupungit | KS | 3.0 kt | 12.11.2026 |
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
 | opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | – | – |
 | kamera | Kamera | PK | 2.8 kt | 12.11.2026 |
