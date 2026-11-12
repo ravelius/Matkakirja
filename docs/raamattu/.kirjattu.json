@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "2979d06504cc2438",
-  "aika": "2026-11-12T09:45:39.538Z"
+  "sha": "0cdbb9ecaddb9c6e",
+  "aika": "2026-11-12T09:45:44.576Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -138,5 +138,9 @@
  "aiheet/agentit-ja-komennot.md": {
   "sha": "08d281a1208e3b48",
   "aika": "2026-11-12T09:45:39.538Z"
+ },
+ "aiheet/tilit-ja-kiintio.md": {
+  "sha": "2a8bf731b82ae1d0",
+  "aika": "2026-11-12T09:45:44.576Z"
  }
 }
