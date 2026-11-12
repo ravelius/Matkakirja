@@ -149,8 +149,8 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        saapumispuheet sekä fokusvirtojen kohtaamispiste ja sahketehtava
  *        päätasolle (tools/vienti/tyypitys.mjs).
  *   1.27 työhuoneen moduulit natiivin KOKEET-valikolle (Natiivi-UI):
- *        js/tyohuone-raamattu.js RAAMATTU, js/tyohuone-tilanne.js TILANNE,
- *        TESTATTAVAA ja TUOREET, js/tyohuone-pelit.js PELIT (luokka kehittaja);
+ *        js/tyohuone-tilanne.js TILANNE, TESTATTAVAA ja TUOREET,
+ *        js/tyohuone-pelit.js PELIT (luokka kehittaja; Raamattu-moduuli pois 12.11.2026);
  *        tyohuone-musiikki.js HILJENNYKSEN_SYY ja TUNTEMATTOMAT_LAJIT.
  *        Kehittäjämoduulien sähköpostiosoitteet peitetään (peitaSahkopostit).
  *   1.28 kokoelma tyohuonetilastot (Natiivi-UI): webin laskeTilastot()

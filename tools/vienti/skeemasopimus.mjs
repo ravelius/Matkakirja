@@ -87,7 +87,8 @@ export const VAATIMUKSET = {
   '1.25': ['maakuntarajat/kaaret'],
   '1.26': ['tarinakaari.kohtaaminen', 'paikkatiedot.teksti', 'kohtaamiset.tervehdys', 'kohtaamiskuvat.tila',
     'paikallisaarteet.pieniAarre', 'saapumispuheet.url', 'fokusvirrat.sahketehtava'],
-  '1.27': ['moduuli:js/tyohuone-raamattu.js', 'moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
+  // 1.27: Raamattu-moduuli poistui 12.11.2026 (vanhan Raamatun js:n poisto; natiivi ei enää lue sitä).
+  '1.27': ['moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
