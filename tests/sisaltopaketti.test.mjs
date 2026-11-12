@@ -1058,7 +1058,8 @@ test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
 test('skeema 1.27: työhuoneen moduulit ilman henkilöiden sähköposteja', async () => {
   const { peitaSahkopostit } = await import('../tools/vienti/vie-sisalto.mjs');
   assert.equal(peitaSahkopostit('a etu.suku@esimerkki.fi b palaute@matkakirja.app'), 'a [sähköposti] b palaute@matkakirja.app');
-  for (const [m, nimet] of [['tyohuone-raamattu', ['RAAMATTU']], ['tyohuone-tilanne', ['TILANNE', 'TESTATTAVAA', 'TUOREET']], ['tyohuone-pelit', ['PELIT']]]) {
+  assert.ok(!tiedostot.has('moduulit/js/tyohuone-raamattu.json'), 'Raamattu-moduuli poistui viennistä 12.11.2026');
+  for (const [m, nimet] of [['tyohuone-tilanne', ['TILANNE', 'TESTATTAVAA', 'TUOREET']], ['tyohuone-pelit', ['PELIT']]]) {
     const t = tiedostot.get(`moduulit/js/${m}.json`);
     assert.ok(t, m);
     for (const n of nimet) assert.ok(n in JSON.parse(t).exportit, `${m}.${n}`);
