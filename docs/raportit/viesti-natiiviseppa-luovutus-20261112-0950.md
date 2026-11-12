@@ -12,7 +12,8 @@ Kello: date ennen leimaa. Vahti: Bash run_in_background until-silmukka (loki.txt
    ElavaMaski-allas vahvana piirron ajan, heikoksi 20 s tauon tai Application.lowMemoryn jälkeen. Testi ElavaMaskiAllasTestit, Kartta-testit 790/790, unity 0.
    Mono-5 (koe 65ff16870, natiiviseppa/mono-5-koe, wt proto-natiiviseppa-tyokalu3) luettu ja KK:lle lähetetty klo 09.49:
    GC.Alloc 125,5 → 98,7 Mt / 20 s, Peitto pois kärjestä; mono 1014 → 1040 (taso noin 70 Mt korkeampi, allas). Kuvapari mono-4/mono-5 sama.
-   → ODOTA KK:n junasanaa, sitten pt-ok-pyyntö PT:lle (0865440d9). iPad-erässä tarkistetaan korkeamman monotason vaikutus muistivaraan.
+   → SULJETTU 09.5x (KK:n ehto ≤ +40 Mt ei täyty: MONO-KAYRAn keruun jälkeinen taso 698 vs. 976 Mt = +280). Allas pois, 0865440d9 EI junaan,
+     LisaaRengas jää. Ei toimia.
 2. PARI-C (LAV pala 3.1b): JU:n jonossa mono-5:n jälkeen (jono-ns-pala3-pari-c.zsh, raja 35 min) → lokit/natiiviseppa-juoksu-pala3-pari-c.
    Skenaario _tyo/natiiviseppa/pala3/sk-juoksu-pala3-pari-c.txt = pari-b + B/C korvaa myös kk-tausta-kuja-1-3-lod0.glb → koe-b/ulos-{6.25,12.5}/.
    TAUSTA (pari-b luettu 09.29): kaikki kamerat (sijoita −136, 300–425) ovat kujaruudulla kuja-1-3 (rajat x −139,2…−132,4); pari-b korvasi vain 1-3 → B ≈ C.
