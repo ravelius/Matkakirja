@@ -741,3 +741,18 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   tasakattolaatikot, Ateenan kevennys ei näy. AVOIN KK 23.17 k. 1: isot pohjat ilman OSM-korkeutta (tornit) näytekaupungeista → seuraavaksi; sitten k. 2 kerroin.
 - KJ53b JU:lla (pyydetty 05.0x edeltäjältä) → lokit/ks-kj53b-puuvalo-6bb57f388, ei vielä tullut.
 - SEURAAJAN JONO: 1) KJ49d → KK 2) KJ53b mittaus (LISÄYS 58) 3) GHSL-tornilista → KK, sitten kerroin 4) KJ52 + talojen päätös 5) Montmartre KJ43 6) PP:n ikkunakolmio 7) kehämuurien nimet.
+
+## LISÄYS 60 (05.1x): KJ49d → KK, KK 05.04 vastaukset, GHSL-kerroin ketjuun
+- KJ49d katsottu: musta nauha poissa (parit _tyo/karttaseppa/koodijuna/parit-kj49d/) → KK + PT 05.1x. ODOTTAA KK:n junasanaa (LISÄYS 59: poiminta).
+  Lokissa POIKKEUS ArgumentOutOfRange käynnistyksessä myös ENNEN-ajossa (ei sillan vika).
+- KK 05.04 (näyte): (1) GHSL ei vielä kuitattu → KJ54b JU:lla (tyokalu-1/nayte-kj54/sk-mac-nayte-kj54b.txt, tee-sk-b.py; katto pois, kallista 45, kaari 0.0011,
+  katsepiste Commonsin kamerakoordinaatissa oikeat/kuvapaikat.json) → lokit/ks-kj54b-nayte-<sha>; KUN TULEE: arkit kuten KJ54 (peli | Commons) Luxemburg, Lissabon, Tukholma → KK.
+  HUOM: kuvapaikat haettiin Commonsin api.php:stä (9 kyselyä); robots.txt kieltää /w/ (API-käytäntö sallii) → älä hae lisää ilman PT:n/KK:n sanaa.
+  (2) Luxemburg katu 1 mitattu: ote 179 = ketju 179 (250 m), ilmakuva omakotitaloja → ei puutetta (KK:lle). (3) puiden lähteet selvitetty → KK. (4)(5) KK:n omia.
+- GHSL k. 1 tornilista + k. 2 kertoimet → KK 05.09 (tyokalu-1/nayte-kj54/ghsl/: ghsl-tornit.json, ghsl-kerroin.json, skriptit). Ehdotettu: ≥ 5000 m² GHSL ≥ 6 m
+  + nimetyt tornit KOHDE_KORKEUS-tauluun (ČT 100 m, Nya Karolinska, Danderyd, AVL, Klementinum) — ODOTTAA KK:ta.
+- TOTEUTETTU (koodijuna-työpuu, karttaseppa/tyokalu-1, pushattu natiivi-backup): 115e2c78f KORKEUDET-vedokseen ala/rakennus/nimi; 1ff9907df ghsl_kerroin.py +
+  uusi_kaupunki.py esiajo (rivin ghsl_kerroin) + kaikki.md sarakkeet. Koeajo Luxemburg (scratchpad uk-koe): kerroin 0,921, palat käyttävät. uudet-kaikki EI ajettu uudelleen.
+- KJ53b JU:lla seuraavana, sitten KJ54b.
+- SEURAAJAN JONO: 1) KJ53b mittaus (LISÄYS 58) 2) KJ54b arkit → KK 3) KK:n sana tornisäännöstä → tee_palat.py 4) Alman junasana → poiminta 5) KJ52 + talojen päätös
+  6) Montmartre KJ43 7) PP:n ikkunakolmio 8) kehämuurien nimet.
