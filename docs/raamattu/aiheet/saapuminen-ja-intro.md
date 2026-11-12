@@ -24,5 +24,5 @@ EI VIKA:
 
 TEKOTAPA:
 - Tekstit: docs/tuotanto/suunta/kerronta.md (alkukohtaus), docs/raportit/hyvaksytyt-tekstit-20261015-2024.md (Pulu).
-- Nimi ja vuosi: suunnitelmat/20261111-introvuodet-era1-paatokset.md.
+- Nimi ja vuosi: docs/suunnitelmat/20261111-introvuodet-era1-paatokset.md.
 - Uni: isoisa-ja-tarina.
