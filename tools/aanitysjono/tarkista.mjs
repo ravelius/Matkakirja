@@ -20,7 +20,7 @@
  * Oletuksena vain Eurooppa (ja maanosattomat: Arktis, Antarktis), koska vain Eurooppa äänitetään.
  *
  * Paluu: 0 = OK, 1 = HYLÄTTY (kappaleita ilman äänitettä ja jonoriviä), 2 = VIKA (vienti tai manifesti ei latautunut).
- * Kutsuja: natiivirepon tyokalut/ennen-junaa.sh vaihe 5.
+ * Kutsujat: natiivirepon tyokalut/ennen-junaa.sh vaihe 5 ja PR-CI (.github/workflows/testit.yml, askel Äänitysjono; paluu 2 = varoitus).
  */
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
