@@ -629,3 +629,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   V4_lattia (koe paransi väärää pintaa). B/C:n tasainen kirkas lattia = v15:n leivottu valo ilman elävää; koe-glb:n atlaksessa varjot ovat. Johtopäätös LAV: 3.1b:n tarkka
   valo leivotaan OSASARJAN ruutuihin (koealue, 1024²/64 m = 6,25 cm), LAV tekee yöllä KK:n luvalla → uusi pari sen jälkeen. TEE: kuvat (A|B|C) KK:lle LAV:n
   selityksen kanssa (pari näyttää: v15 ilman elävää = varjoton), kopio LAV. Seuraavaan pariin glb-korvaus osasarjan ruutuihin (palatsi korvaa <avain> <kohde>).
+- 35h (03.3x) LAV KORJAUS 35g:hen: osasarjan valo on jo tarkka (valo.json 11,5–32 px/m, laatta-2m mukana) → EI uusia koeruutuja ennen syytä. Epäily: lattiassa piirtyy
+  osasarjan KAUKO0-taso (karki.bin-kärkivärit, laatta-2m 12 kärkeä / 2 m → ei varjoja) eikä lähitaso/atlas, TAI v15:n atlas (r_*.png) ei latautunut. TEE ENSIN
+  (ennen KK-viestiä): pari-b:n unity.logista / lyhyellä QA-ajolla kohdassa −136 336: kumpi osasarjan taso piirtyy (lähi/atlas vai kauko0) ja onko r_*.png ladattu
+  → vika pelissä (NS korjaa: lähitason etäisyys/atlaksen lataus) vai leivonnassa (LAV). Tulos LAV:lle + KK:lle kuvien mukana.
