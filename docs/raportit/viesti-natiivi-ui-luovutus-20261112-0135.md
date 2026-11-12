@@ -113,3 +113,6 @@ Worktreet: wt/nui-intro, wt/nui-tarina, wt/nui-luennat (+ vanhat -0040:stä). Sc
   (myönteinen rivi) → jos kappale ilman äänitettä, nimi KK:lle. Vastattu KK:lle: tuleviin eriin ei koodimuutosta — sisältöpaketin kokoelmat/asetukset.json
   avain "osoitteet.luennat-manifesti" (Asetus.Teksti, Valmisluennat/Puhe/NostoluentaVienti lukevat sen) → versio vaihtuu sisällön viennillä; koodin oletus vain varalle.
   JU:n tarinamerkki-5 jonossa 08.56.
+- LISÄYS 09.00: TARINAMERKKI-5 VALMIS ja LÄHETETTY KK:lle 09.00 (rajaukset lokit/nui-tarinamerkki-5-00bc4abc1/rajaukset/, 8 kpl; loki ladattu + piirretty 3/3).
+  NUI:n arvio: B (paperipohja) erottuu kaikilla taustoilla eikä sekoitu tähteen, A katoaa kattoihin. ODOTTAA KK:n valintaa → seuraaja toteuttaa (oikea data
+  nostodatasta, suunnitelman osa 3) haarasta natiivi-ui/tarinamerkki-koe-2. Introrivit LINKISSÄ 224.102 = 9b777264d. Luennat v11 96f5f1c38 odottaa pt-ok:ta (JU poimii).
