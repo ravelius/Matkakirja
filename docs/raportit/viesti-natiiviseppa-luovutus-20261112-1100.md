@@ -52,6 +52,12 @@ Metal-koeajot (kohta 2) voivat katketa nollauksessa: aja tarvittaessa uudelleen 
    katse +z:aan (kaista ~10 m edessä oikealla/vasemmalla) ennen vianhakua. Leivonnan aurinko 40°/45° (+x,+z; peli 318°/45°), elävä
    aurinko voi erota → vertaa K1:n varjon puolta.
 
+5. KORTTI lataus-ja-kaynnistys (KK 11.3x, PR 6611; työn väliin, EI kujavalon ohi): `node tools/kirjaa.mjs lue lataus-ja-kaynnistys`
+   (kansiossa /Users/Shared/Claude/Matkakirja-fable). Vastaa KK:lle YHDELLÄ viestillä ≤ 8 riviä, koodista tarkistettuna: 1) pitävätkö
+   säännöt 5 ja 6 (asennuspaketin sisältö, mitä ei esiladata) ja 10 (offline-kartat: Z8 koko maailma, Z9 kaupunkien ympäriltä); 2) sääntö 9
+   (virransäästö/kuuma → taustalataus pysähtyy): toteutettu vai tavoite; 3) väärät/puuttuvat säännöt; onko natiivissa webin turvatilaa
+   (vanha 10.18) vastaava suoja toisella nimellä. Älä muokkaa korttia. Laajat haut Sonnet-Explorella.
+
 ## VALMIIT TÄNÄÄN (tämä vuoro)
 
 - PR 6603 yhdistetty (CI vihreä).
