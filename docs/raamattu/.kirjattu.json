@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "245cbec09599e5eb",
-  "aika": "2026-11-12T10:49:11.050Z"
+  "sha": "62f097aad4c5364d",
+  "aika": "2026-11-12T10:49:22.136Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -186,5 +186,9 @@
  "aiheet/talous-ja-pisteet.md": {
   "sha": "58924d744c680e91",
   "aika": "2026-11-12T10:49:11.050Z"
+ },
+ "aiheet/kohtaamiset-ja-reaktiot.md": {
+  "sha": "f347c52b021cb4a2",
+  "aika": "2026-11-12T10:49:22.136Z"
  }
 }
