@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "341bf4a899388ddf",
-  "aika": "2026-11-12T08:09:19.768Z"
+  "sha": "269b7fe40882fe3f",
+  "aika": "2026-11-12T08:10:07.021Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -30,5 +30,9 @@
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
   "aika": "2026-11-12T08:09:19.768Z"
+ },
+ "aiheet/lahteet-ja-tarkistus.md": {
+  "sha": "8d2038c3fd9e426a",
+  "aika": "2026-11-12T08:10:07.021Z"
  }
 }
