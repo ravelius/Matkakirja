@@ -76,3 +76,12 @@ natiivi-backup pelikoodari/seinat-taso1-v133c @ a405aeb07, odottaa KK:n junasana
   - K1: kivireunuksen alakärjet → −0,02, pysty 0,32 m, z 294,15–294,48, x −82,4…−78,3.
   - K1: 8 m:n kalteva suikale (−90,16; 291,77)–(−82,23; 294,48), kärki 0,19 → −0,02.
   - LAV kysyy, kumpi on syy kulkukartassa: uusi lattia y 0 reunuksen vieressä vai kalteva suikale. Tarkista kulkukartta.py:n tulkinta (esim. katoavat.py / kartta_koe.py) ja vastaa LAV:lle. LAV korjaa geometrian v134:ään; reittigeneraattoria ei korjata, jos syy on geometria.
+- JU 11.4x: ote-pari e3e6e75b9 VALMIS (L2 rc 0, virheitä 0), mutta liian lyhyt.
+  - Kansio /Users/Shared/Claude/proto-3d/lokit/pelikoodari-ote-pari-e3e6e75b9/:
+    - ote-pari-46-58s-vanha-vasen.mp4 (vanha vasen, uusi oikea)
+    - arkki-46-58s-1000.png
+    - lokirivit-vanha.txt ja lokirivit-uusi.txt (888 riviä)
+  - Täydet videot: lokit/pelikoodari-ote-{vanha,uusi}-e3e6e75b9/.
+  - Tallenne kesti vain 58 s peliaikaa. Kiinni osuu noin 54–56 s, ja tallenne loppuu noin 3 s otteen jälkeen.
+  - TOIMI: katso arkki (alkuosa), sitten pidennä skenaarioita sk-ote-*.txt: "odota 20" → useita "odota-peli 2" -rivejä ja tallenteen pituus (tallenne-alku-rivin 30 = s?).
+  - Tilaa uusi pari JU:lta vasta leikkausasennon korjauksen jälkeen. Siihen yksi U-leikkaus + ote ± 8 s (KK 11.19), jotta KK saa yhden kootun parin.
