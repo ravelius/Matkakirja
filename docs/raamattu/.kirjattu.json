@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "68b9337e900d6025",
-  "aika": "2026-11-12T10:16:48.498Z"
+  "sha": "6620c0d2e417e268",
+  "aika": "2026-11-12T10:43:51.768Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -166,5 +166,9 @@
  "aiheet/kone-ja-levy.md": {
   "sha": "86f3816776df251c",
   "aika": "2026-11-12T10:15:14.961Z"
+ },
+ "aiheet/opas-ja-kuumailmapallo.md": {
+  "sha": "ae9faf0f9e9c4c4d",
+  "aika": "2026-11-12T10:43:51.768Z"
  }
 }
