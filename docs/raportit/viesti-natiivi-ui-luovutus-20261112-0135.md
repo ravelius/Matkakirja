@@ -59,3 +59,5 @@ SEURAAVAT ASKELEET:
 - 210c842ad: Pariisi 42/48 kuvaa, 11 kohdetta; Lontoo 66/72, 19 kohdetta; PUUTE 0; MUTTA vakiokuvat 1–9 "puuttuu". Arkit
   /Users/Shared/Claude/proto-3d/lokit/vakioajo-{pariisi,lontoo}-210c842ad/arkki-1000.png (JU korjasi arkki.py:n lukemaan mittarit unity.log:sta).
   TEE: katso arkit, selvitä miksi vakiokuvat 1–9 puuttuvat (skenaario vai koodi) ja puuttuvat 6+6 kuvaa → tulos KK:lle yhtenä viestinä.
+- LISÄYS 03.0x (KK 02.49 JU:n kautta): 45° yleiskuvat 6578 m = usvaa, ei tarkoituksellinen → TEHTY 794652b07 (natiivi-backup natiivi-ui/vakioajo, worktree nui-vakio):
+  Vakioajo.Yleis45KattoM = 1500 m (≥ MinKorkeusPaikassa), "kaukaa" ennallaan. JU ajaa vakioajon uudelleen → katso 45-* -kuvat (korttelit ja nähtävyydet erottuvat?) → KK:lle.
