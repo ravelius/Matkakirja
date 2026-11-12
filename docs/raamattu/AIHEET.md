@@ -4,7 +4,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 
 | Tunnus | Nimi | Vastuu | Koko | Tarkistettu |
 |---|---|---|---|---|
-| maailma-ja-rajaukset | Maailma ja rajaukset | KK | – | – |
+| maailma-ja-rajaukset | Maailma ja rajaukset | KK | 2.1 kt | 12.11.2026 |
 | aika-ja-ulkoasu | Aika ja ulkoasu | KK | – | – |
 | kartta-ja-pallo | Kartta ja pallo | KS | 2.9 kt | 12.11.2026 |
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 2.9 kt | 12.11.2026 |

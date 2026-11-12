@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "2632bfd2e617e432",
-  "aika": "2026-11-12T15:03:00.804Z"
+  "sha": "735d0a96714a9441",
+  "aika": "2026-11-12T15:03:06.384Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -218,5 +218,9 @@
  "aiheet/arkkitehtuuri-ja-kirjastot.md": {
   "sha": "9527f826eebadb10",
   "aika": "2026-11-12T15:03:00.804Z"
+ },
+ "aiheet/maailma-ja-rajaukset.md": {
+  "sha": "af5d87ae4a31f83b",
+  "aika": "2026-11-12T15:03:06.384Z"
  }
 }
