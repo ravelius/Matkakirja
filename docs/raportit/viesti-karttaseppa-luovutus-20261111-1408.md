@@ -710,3 +710,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - JU 02.43: KJ55 fdb433090 LINKISSÄ 224.94 = ce2849074. Uusi junapohja poiminnoille: ce2849074.
 - KJ55b (1 kuva, Pampus junan käännöksellä) pyydetty JU:lta: koodijuna/nimet-kj55/sk-mac-nimet-kj55b.txt → lokit/ks-kj55b-pampus-ce2849074.
   KUN TULEE: rajaus (kuten rajaus-nm55-03-pampus: box 1076,780,1676,1180) KK:lle TIEDOKSI (ei päätettävää). Sitten työlistan nimirivi valmis.
+
+## LISÄYS 56 (02.5x): Pampus-rajaus KK:lle, NIMET VALMIS
+- KJ55b katsottu: "Pampus" saaren keskellä junassa 224.94 (koodijuna/nimet-kj55/parit/rajaus-nm55b-pampus-224-94.jpg) → KK tiedoksi 02.5x. Amsterdamin nimet VALMIS.
+- SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) Montmartre KJ43 5) KJ53 (LISÄYS 54) 6) GHSL 7) PP:n ikkunakolmio 8) kehämuurien nimet (Rooma ensin).
