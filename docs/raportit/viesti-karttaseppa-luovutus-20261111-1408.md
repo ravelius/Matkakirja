@@ -670,3 +670,9 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - JU 01.58: PETIT PALAIS db31b646e LINKISSÄ 224.93 = e59480dc2. VALMIS. Uusi junapohja poiminnoille: e59480dc2.
 - KJ52: 3/4 ajoa valmis (JU), loput tulossa → seuraaja katsoo (LISÄYS 41).
 - SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 4) KJ55 5) Montmartre KJ43 6) KJ53 7) GHSL 8) PP:n ikkunakolmio.
+
+## LISÄYS 50 (02.2x): KJ52 ja KJ54 ajot valmiit (katsomatta)
+- KJ52 (JU 02.04): lokit/ks-kj52-pitkat-{pariisi,lontoo}-{300c6b99d,ced23df14}, kaikki ok → parit K/parit-kj52/ + kolmioluvut + talojen päätös KK:lle (LISÄYS 41).
+- KJ54 NÄYTE (JU 02.23): lokit/ks-kj54-nayte-dc1117faa 29/29; n54-loppu = n54-ateena-jalkeen-2-lahi tavulleen (sama kamera, ei vika).
+  Arkki per kaupunki 1000 px: n54-<id>-0-yleis + 1..3-katu + oikeat/orto-<id>-keskusta.jpg + katu-<id>-1..3.jpg (lähteet lahteet.json) + Ateena ennen|jälkeen (1-kaupunki, 2-lahi) → KK.
+- JU:lla nyt KJ55 nimet, sitten KJ53.
