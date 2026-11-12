@@ -295,6 +295,19 @@ def mittaa(a):
         L["15 työpuita talossa"] = (len(puut) - 1, 19, "")
     except (OSError, subprocess.SubprocessError):
         L["15 työpuita talossa"] = (None, 19, "git worktree list ei onnistunut")
+    # 16 VARMUUSKOPIOT (KK 12.11. 12.04): uusin bundle NAS:lla ≤ 2 vrk, GitHub-peili ≤ 3 h (ikä tunteina)
+    nas = "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/natiivi-git-bundlet"
+    bundlet = glob.glob(f"{nas}/proto-3d-*.bundle")
+    if bundlet:
+        ika = (nyt.timestamp() - max(os.path.getmtime(b) for b in bundlet)) / 3600
+        L["16 bundle ikä h"] = (round(ika), 48, "")
+    else:
+        L["16 bundle ikä h"] = (None, 48, "NAS ei liitetty tai ei bundleja")
+    peili = "/Users/Shared/Claude/proto-3d/lokit/varmuuskopio-viimeisin.txt"
+    try:
+        L["16 peili ikä h"] = (round((nyt.timestamp() - os.path.getmtime(peili)) / 3600), 3, "")
+    except OSError:
+        L["16 peili ikä h"] = (None, 3, "tilatiedosto puuttuu")
     return nyt_l, L
 
 
