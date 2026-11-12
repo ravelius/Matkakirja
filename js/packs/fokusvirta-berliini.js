@@ -341,8 +341,8 @@ export const FOKUSVIRTA_BERLIINI = {
       id: 'viemarit',
       nappi: 'Työmaa, joka alkoi juuri sinä vuonna',
       otsikko: 'Hobrechtin putket',
-      teksti: 'Ne perustukset, joita kaduilla lyötiin, olivat osaksi '
-        + 'viemäriä: Berliinillä ei sellaista vielä ollut. James '
+      teksti: 'Vuonna 1873 Berliinin katuja kaivettiin auki viemäriä '
+        + 'varten: sellaista kaupungilla ei vielä ollut. James '
         + 'Hobrecht oli laatinut kaupungin laajenemissuunnitelman jo '
         + '1862, mutta hänet oli erotettu ennen kuin se valmistui, ja '
         + 'hän lähti Stettiniin rakentamaan vesijohtoa ja viemäriä. '
@@ -352,10 +352,11 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'ylipormestari 1872, ja lääkäri-poliitikko Rudolf Virchow. '
         + 'Hobrecht suunnitteli kahdentoista pääsuunnan säteittäisen '
         + 'järjestelmän, joka johti jätevedet kaupungin laidalle '
-        + 'sadetuskentille. Pääputkien rakentaminen alkoi 1873 ja '
-        + 'viimeinen valmistui 1909. Samalta mieheltä tilattiin sen '
-        + 'jälkeen viemärit kolmeenkymmeneen saksalaiseen kaupunkiin '
-        + 'sekä Moskovaan, Tokioon ja Kairoon.',
+        + 'sadetuskentille. Pääputkien rakentaminen jatkui, ja '
+        + 'viimeinen valmistui 1893. Samaa miestä pyydettiin sen '
+        + 'jälkeen neuvomaan viemäröinnissä noin kolmessakymmenessä '
+        + 'saksalaisessa kaupungissa sekä Moskovassa, Tokiossa ja '
+        + 'Kairossa.',
       lahde: 'en-Wikipedia "James Hobrecht". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 3600×2945, public domain, James Hobrecht,

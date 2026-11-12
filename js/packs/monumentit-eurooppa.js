@@ -111,12 +111,12 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 6012.1, y: 1671.4 }, europe: { x: 314.2, y: 754.9 } },
       teksti: 'Marseillen siirtosilta ylitti Vanhan sataman Quai du Portin ja Rive-Neuven välillä. Insinööri '
         + 'Ferdinand Arnodinin suunnittelema rakenne valmistui 19 kuukaudessa ja avattiin 15. joulukuuta '
-        + '1905. Kaksi 86,6 metriä korkeaa tornia kannatti 239 metriä pitkää kantta 52 metrin korkeudessa '
+        + '1905. Kaksi 86,6 metriä korkeaa tornia kannatti kantta 52 metrin korkeudessa '
         + 'veden yläpuolella. Matkustajat ylittivät sataman kannesta roikkuvalla korilla, joka liikkui '
         + 'kantta pitkin ja kulki matkan noin puolessatoista minuutissa. Pohjoisessa tornissa oli hissi '
-        + '1907 lähtien, 74 metrin korkeudella oli näköalataso ja kannen pohjoispäässä kalaravintola. '
+        + '1907 lähtien, ylhäällä näköalataso ja kalaravintola. '
         + '1930-luvulla silta oli enää koriste, koska huoltoon ei ollut varoja. Saksalaiset räjäyttivät sen '
-        + '22. elokuuta 1944; vain pohjoinen torni putosi, ja loput romahti 1. syyskuuta 1945.',
+        + '22. elokuuta 1944; vain pohjoinen torni putosi, ja loput romahtivat 1. syyskuuta 1945.',
       lahde: 'fr-Wikipedia ”Pont transbordeur de Marseille”; en-Wikipedia ”Marseille Transporter Bridge” '
         + '(tarkistettu 31.10.2026).',
       kuva: 'ihme-pont-transbordeur-loistoaika.jpg',
@@ -368,11 +368,11 @@ export const EUROOPAN_KADONNEET = {
       korostukset: ['Franz Schwechten|Franz Schwechten', 'Theresienstadt|Theresienstadtiin'],
       nappi: 'Asema, jonka julkisivusta jäi vain katkelma',
       laudat: { maailmankartta: { x: 6279.4, y: 1279.6 }, europe: { x: 468.1, y: 512.8 } },
-      teksti: 'Anhalter Bahnhof oli Berliinin eteläinen pääteasema. Franz Schwechten suunnitteli sen 1872 '
+      teksti: 'Anhalter Bahnhof oli Berliinin eteläinen pääteasema. Franz Schwechten suunnitteli sen '
         + 'vuonna 1841 avatun vanhan aseman tilalle, ja uusi asema avattiin 15. kesäkuuta 1880. Julkisivu '
         + 'oli 101 metriä leveä, ja seinät muurattiin klinkkeritiilestä ja koristeltiin terrakotalla. '
         + 'Hallin teräskatto kohosi 34 metrin korkeuteen 62 metrin jännevälillä. Asemalta pääsi Leipzigiin, '
-        + 'Müncheniin, Wieniin ja Roomaan, ja 1930-luvulla juna lähti kolmen–viiden minuutin välein. Yli 9 '
+        + 'Müncheniin, Wieniin ja Roomaan. Noin 9 '
         + '600 berliiniläistä juutalaista karkotettiin täältä 116 junalla, enimmäkseen Theresienstadtiin. '
         + 'Ilmahyökkäys poltti hallin 3. helmikuuta 1945, liikenne loppui 1952, ja rauniot purettiin '
         + '1959–1961. Jäljelle jäi osa pääsisäänkäynnin julkisivusta.',
@@ -403,7 +403,7 @@ export const EUROOPAN_KADONNEET = {
       teksti: 'Palast der Republik oli Itä-Berliinin Schlossplatzilla seissyt DDR:n kansankamarin ja '
         + 'kulttuuritalon yhdistelmä. Arkkitehti Heinz Graffunderin suunnittelema talo avattiin 23. '
         + 'huhtikuuta 1976, ja parlamentin lisäksi siellä oli teatteri, galleria, keilarata ja kolmetoista '
-        + 'ravintolaa. Suuren salin paikkamäärä vaihteli noin tuhannesta 4 500:aan. Monien valaisimien '
+        + 'ravintolaa. Suuren salin paikkamäärä vaihteli lavan asettelun mukaan. Monien valaisimien '
         + 'takia talo sai lempinimen Erichs Lampenladen, Erichin lamppukauppa. Elokuun 22.–23. päivän yönä '
         + '1990 kansankamari äänesti täällä DDR:n liittymisestä Saksan liittotasavaltaan. Asbestin vuoksi '
         + 'palatsi suljettiin 19. syyskuuta 1990, ja se purettiin 2006–2008. Paikalla on Berliinin '
@@ -456,11 +456,10 @@ export const EUROOPAN_KADONNEET = {
       teksti: 'San Geminianon kirkko seisoi Pyhän Markuksen torin länsilaidalla, ja perinteen mukaan '
         + 'bysanttilainen kenraali Narses perusti sen 500-luvulla. Doge Sebastiano Zianin aikana 1100-luvun '
         + 'lopulla kirkko purettiin ja rakennettiin uudelleen toiseen paikkaan, jotta tori saatiin '
-        + 'laajemmaksi. Nykyinen keskikupolinen kirkko aloitettiin 1505, ja Jacopo Sansovinon suunnittelema '
-        + 'julkisivu valmistui 1557. Sansovino haudattiin kirkkoon 1570. Kun Venetsian tasavalta kaatui '
-        + '1797, kirkko toimi kasarmina. Napoleonin aikana purku alkoi 19. toukokuuta 1807, ja kirkon '
-        + 'tilalle rakennettiin Napoleonin siipi. Sansovinon jäännökset siirrettiin Salute-seminaariin ja '
-        + 'pyhän Geminianuksen pyhäinjäännökset Nome di Gesù -kirkkoon.',
+        + 'laajemmaksi. Uusi, keskikupolinen kirkko aloitettiin 1505, ja Jacopo Sansovinon suunnittelema '
+        + 'julkisivu valmistui 1557. Sansovino haudattiin kirkkoon 1570. Napoleonin aikana purku alkoi 19. '
+        + 'toukokuuta 1807, ja kirkon tilalle rakennettiin Napoleonin siipi. Pyhän Geminianuksen '
+        + 'pyhäinjäännökset siirrettiin Nome di Gesù -kirkkoon.',
       lahde: 'en-Wikipedia ”San Geminiano, Venice” ja ”Procuratie” (tarkistettu 31.10.2026).',
       kuva: 'ihme-san-geminiano-loistoaika.jpg',
       lyhyt: 'Venetsialaiset kulkevat Sansovinon marmorijulkisivun ohi Pyhän Markuksen torin länsilaidalla; '
@@ -487,10 +486,9 @@ export const EUROOPAN_KADONNEET = {
         + 'oli kojuja, kauppoja ja teurastajien Beccheria. Siellä seisoivat myös Giorgio Vasarin '
         + 'suunnittelema kalahalli Loggia del Pesce ja Abbondanza-pylväs, ja osassa aluetta asui '
         + 'juutalaisia, jotka oli määrätty gettoon 1571. Kun Firenze oli ollut Italian pääkaupunki, '
-        + 'kaupunki päätti vanhan keskustan saneerauksesta; hanke hyväksyttiin 2. huhtikuuta 1885, ja '
-        + 'tieltä häädettiin 1 778 perhettä, yhteensä 5 822 ihmistä. Tilalle nousi Piazza Vittorio Emanuele '
-        + 'II, nykyinen Piazza della Repubblica, jonka kaareen kirjoitettiin: ”L’antico centro della '
-        + 'città”.',
+        + 'kaupunki päätti vanhan keskustan saneerauksesta; hanke hyväksyttiin vuonna 1885, ja alueen '
+        + 'asukkaat häädettiin. Tilalle nousi Piazza Vittorio Emanuele II, nykyinen Piazza della '
+        + 'Repubblica, jonka kaareen kirjoitettiin: ”kaupungin vanha keskusta”.',
       lahde: 'en-Wikipedia ”Piazza della Repubblica, Florence”, osiot ”Origins”, ”Ghetto” ja ”Risanamento”; '
         + 'it-Wikipedia ”Mercato Vecchio (Firenze)”, osiot ”Ghetto” ja ”Demolizione” (tarkistettu '
         + '31.10.2026).',
@@ -516,14 +514,14 @@ export const EUROOPAN_KADONNEET = {
       korostukset: ['Septimius Severus|Septimius Severus', 'kardinaali|kardinaalia'],
       nappi: 'Julkisivu, josta tuli obeliskin jalusta',
       laudat: { maailmankartta: { x: 6249.6, y: 1728.1 }, europe: { x: 451.0, y: 792.0 } },
-      teksti: 'Septizodium oli Rooman Palatinus-kukkulan juurella, Via Appian varrella seissyt monumentaalinen '
-        + 'julkisivu, jonka keisari Septimius Severus rakennutti vuonna 203. Se oli noin 90 metriä pitkä ja '
-        + 'kohosi kolmena pylväskerroksena, ja kolmeen puoliympyräsyvennykseen kuhunkin kuului pyöreä '
-        + 'suihkulähde. Jo 700-luvulle mennessä se oli rapistunut, ja siitä tehtiin paronien linnake. '
-        + 'Elokuussa 1241 yksitoista kardinaalia kokoontui Septizodiumiin valitsemaan paavia; vaali oli '
-        + 'niin ankara, että yksi heistä kuoli, ja valittu Selestinus IV kuoli 16 päivää valintansa '
-        + 'jälkeen. Paavi Sixtus V käski Domenico Fontanan purkaa julkisivun 1588–1589, ja kivistä '
-        + 'rakennettiin muun muassa obeliskin jalusta ja Marcus Aureliuksen pylvään korjaus.',
+      teksti: 'Septizodium oli monumentaalinen julkisivu Rooman Palatinus-kukkulan juurella Via Appian '
+        + 'varrella; keisari Septimius Severus rakennutti sen vuonna 203. Se oli noin 90 metriä pitkä ja '
+        + 'kohosi kolmena pylväskerroksena, ja kolmeen suureen syvennykseen kuhunkin kuului suihkulähde. '
+        + 'Myöhemmin se rapistui, ja keskiajalla siitä tehtiin paronien linnake. Vuonna 1241 kardinaalit '
+        + 'lukittiin Septizodiumiin valitsemaan paavia. Yksi heistä kuoli kesken vaalin, ja valittu Selestinus '
+        + 'IV kuoli vain pari viikkoa valintansa jälkeen. Paavi Sixtus V käski Domenico Fontanan purkaa '
+        + 'julkisivun 1588–1589; kivet käytettiin muun muassa Flaminion obeliskin jalustaan ja Marcus '
+        + 'Aureliuksen pylvään korjaukseen.',
       lahde: 'en-Wikipedia "Septizodium", johdanto ja osiot "History" sekä "Demolition"; it-Wikipedia '
         + '"Settizonio", osiot "Descrizione" ja "Storia" (tarkistettu 31.10.2026).',
       kuva: 'ihme-septizodium-loistoaika.jpg',
@@ -617,8 +615,9 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5906.2, y: 1748.0 }, europe: { x: 253.2, y: 805.1 } },
       teksti: 'Ciutadella oli Barcelonan linnake, jonka Espanjan kuningas Filip V rakennutti 1713–1714 käydyn '
         + 'piirityksen jälkeen pitämään kaupunki ja Katalonia kurissa. Markiisi Verboomin suunnittelema '
-        + 'viisikulmainen linnake valmistui 1725. Sen alta purettiin 1 016 taloa La Riberan kaupunginosan '
-        + '38 kadulta, ja noin 4 500 ihmistä jäi ilman kotia ja ilman korvausta. Rakennusaikanaan se oli '
+        + 'viisikulmainen linnake rakennettiin 1700-luvun alkupuolella. Sen alta purettiin tuhatkunta taloa '
+        + 'La Riberan kaupunginosasta, ja asukkaat jäivät ilman kotia ja ilman korvausta. Rakennusaikanaan se '
+        + 'oli '
         + 'Euroopan suurin linnake, ja siihen mahtui 8 000 sotilasta. Barcelonalaiset vihasivat sitä, ja '
         + 'kenraali Prim luovutti sen jäljellä olevan alueen kaupungille 1869. Linnake purettiin, ja '
         + 'alueelle perustettiin puisto. Arsenaali, kuvernöörin palatsi ja kappeli jäivät pystyyn; '
@@ -672,11 +671,12 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5528.8, y: 1853.4 }, europe: { x: 35.8, y: 875.6 } },
       teksti: 'Tejon kuninkaallisen oopperan vihkiäisiä vietettiin 31. maaliskuuta 1755 kuningatar Mariana '
         + 'Vitórian syntymäpäivänä. Kuningas José I tilasi talon arkkitehti Giovanni Carlo Galli '
-        + 'Bibienalta, ja se rakennettiin Tejo-joen rannalle vanhan Ribeiran palatsin kylkeen. Salissa oli '
-        + 'noin 600 henkeä parterressa ja 38 aitiota sekä kuninkaallinen aitio. Ensi-illassa esitettiin '
+        + 'Bibienalta, ja se rakennettiin Tejo-joen rannalle vanhan Ribeiran palatsin kylkeen. Saliin '
+        + 'mahtui noin 600 katsojaa: parterin lisäksi oli 38 aitiota ja kuninkaallinen aitio. Ensi-illassa '
+        + 'esitettiin '
         + 'David Perezin ooppera Alessandro nell’Indie, ja siinä lauloivat tenori Anton Raaff ja kastraatti '
-        + 'Caffarelli. Lokakuussa 1755 ohjelmassa oli Antonio Mazzonin Antigono. Marraskuun alkuun oli '
-        + 'suunniteltu Artaserse, mutta Lissabonin maanjäristys 1. marraskuuta 1755 tuhosi talon, joka oli '
+        + 'Caffarelli. Kolmantena oopperana harjoiteltiin Antonio Mazzonin Antigonoa, mutta Lissabonin '
+        + 'maanjäristys 1. marraskuuta 1755 tuhosi talon, joka oli '
         + 'ehtinyt toimia noin seitsemän kuukautta.',
       lahde: 'pt-Wikipedia ”Ópera do Tejo”; en-Wikipedia ”Ópera do Tejo” (tarkistettu 31.10.2026).',
       kuva: 'ihme-tejo-ooppera-loistoaika.jpg',
@@ -789,13 +789,13 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Teatteri, jossa Beethovenin yhdeksäs kuultiin ensi kerran',
       laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
       teksti: 'Kärntnertor-teatteri oli Wienin hovin teatteri, jonka Antonio Beduzzi suunnitteli ja joka '
-        + 'avattiin 30. marraskuuta 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
+        + 'avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
         + 'uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio 23. '
         + 'toukokuuta 1814 ja Chopinin Wienin-debyytti 1829. Huipentuma oli 7. toukokuuta 1824: Beethovenin '
-        + 'yhdeksännen sinfonian kantaesitys, jossa soitti lähes kaksi kertaa tavallista suurempi '
+        + 'yhdeksännen sinfonian kantaesitys, jossa soitti tavallista suurempi '
         + 'orkesteri. Viimeinen ooppera, Rossinin Wilhelm Tell, esitettiin 17. huhtikuuta 1870, ja uusi '
-        + 'hovioopperatalo oli avattu jo 1869. Kärntnertor purettiin, ja tilalle rakennettiin asuintalo, '
-        + 'josta tuli Hotel Sacher. Isoisän matkavuonna 1873 teatteria ei enää ollut.',
+        + 'hovioopperatalo oli avattu jo 1869. Kärntnertor purettiin, ja sen tontilla on nykyään Hotel '
+        + 'Sacher. Isoisän matkavuonna 1873 teatteri oli jo suljettu.',
       lahde: 'en-Wikipedia ”Theater am Kärntnertor”; de-Wikipedia ”Theater am Kärntnertor”; en-Wikipedia '
         + '”Symphony No. 9 (Beethoven)”, osio ”Premiere” (tarkistettu 31.10.2026).',
       kuva: 'ihme-karntnertor-loistoaika.jpg',
@@ -897,10 +897,10 @@ export const EUROOPAN_KADONNEET = {
       teksti: 'Prahan Vanhankaupungin raatihuoneen itäsiipi rakennettiin uusgoottilaiseksi vuosina 1838–1848, '
         + 'ja sen tieltä purettiin kaksi 1300-luvun taloa. Arkkitehteina työskentelivät Pietro Nobile ja '
         + 'Pavel Sprenger. Toukokuun alussa 1945 Prahan kansannousun aikana raatihuone toimi vastarinnan '
-        + 'keskuksena. Saksalaiset joukot ampuivat sitä 8. toukokuuta, muutama tunti ennen antautumisensa '
-        + 'allekirjoitusta, ja itäsiipi paloi kuoreksi. Tuli vahingoitti myös tornia ja astronomista kelloa '
+        + 'keskuksena. Saksalaiset joukot ampuivat sitä 8. toukokuuta, ja itäsiipi paloi kuoreksi. Tuli '
+        + 'vahingoitti myös tornia ja astronomista kelloa '
         + 'ja tuhosi osan kaupunginarkistosta. Jäljelle jääneet seinät purettiin tornin viereistä osaa '
-        + 'lukuun ottamatta. Kilpailut vuodesta 1899 lähtien jäivät ilman voittajaa tai toteutusta, eikä '
+        + 'lukuun ottamatta. Kilpailut vuodesta 1899 lähtien jäivät ilman toteutusta, eikä '
         + 'siivelle ole rakennettu korvaajaa.',
       lahde: 'cs-Wikipedia ”Staroměstská radnice”; en-Wikipedia ”Old Town Hall (Prague)” (tarkistettu '
         + '31.10.2026).',
@@ -936,9 +936,9 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Ketjusilta, jonka jänneväli oli ennätys',
       laudat: { maailmankartta: { x: 6468.4, y: 1497.8 }, europe: { x: 577.0, y: 644.6 } },
       teksti: 'Budapestin Erzsébet-silta avattiin 10. lokakuuta 1903 ja nimettiin Itävalta-Unkarin keisarinna '
-        + 'Elisabetin mukaan. Siltaa varten järjestettiin kansainvälinen kilpailu, johon tuli 53 ehdotusta, '
+        + 'Elisabetin mukaan. Siltaa varten järjestettiin kansainvälinen kilpailu, '
         + 'mutta voittanutta riippusiltaa ei voitu rakentaa, koska Unkarissa ei ollut sopivaa teräsköyttä. '
-        + 'Kauppaministeriön insinöörit Aurél Czekelius ja Antal Kherndl suunnittelivat tilalle '
+        + 'Kauppaministeriön insinöörit Aurél Czekelius ja Kherndl suunnittelivat tilalle '
         + 'ketjusillan. Silta ylitti Tonavan 290 metrin jännevälillä, ja se oli pisin ketjusillan '
         + 'jänneväli, kunnes Hercílio Luz -silta valmistui Brasiliassa 1926. Saksalaiset joukot räjäyttivät '
         + 'sillan 18. tammikuuta 1945 perääntyessään. Se on ainoa Budapestin silloista, jota ei rakennettu '
@@ -1012,12 +1012,13 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Luostari, jonka tilalle jäi keskeneräinen työmaa',
       laudat: { maailmankartta: { x: 6703.9, y: 1626.3 }, europe: { x: 712.6, y: 725.8 } },
       teksti: 'Văcărești oli Bukarestin suuri luostari, jonka Valakian ruhtinas Nicolae Mavrocordat aloitti '
-        + '1716; kirkko vihittiin 24. syyskuuta 1724. Luostariin perustettiin kreikankielinen koulu, '
-        + 'kirjapaino ja kirjasto, jonka vuoden 1723 luettelossa oli 237 kirjoittajaa. Vuoden 1848 '
-        + 'vallankumouksen johtajia pidettiin täällä vangittuina, ja vuodesta 1868 luostari oli '
+        + '1716; kirkko vihittiin 1724. Luostariin perustettiin kreikankielinen koulu, kirjapaino ja '
+        + 'kirjasto. Vuoden 1848 vallankumouksen johtajia pidettiin täällä vangittuina, ja 1800-luvulla '
+        + 'luostarista tuli '
         + 'virallisesti vankila. 1970-luvulla se alettiin kunnostaa uskonnollisen taiteen museoksi, mutta '
         + 'työ keskeytyi vuoden 1977 maanjäristyksen jälkeen. Ceaușescu määräsi luostarin purettavaksi, kun '
-        + 'patriarkka ei suostunut ottamaan sitä käyttöön ennen kunnostusta. Purku alkoi syksyllä 1985, ja '
+        + 'patriarkka ei suostunut ottamaan sitä käyttöön ennen kunnostusta. Purku alkoi 1980-luvun '
+        + 'puolivälissä, ja '
         + 'koko kompleksi oli maan tasalla 1987. Tilalle suunniteltu oikeusministeriön rakennus jäi kesken '
         + '1990.',
       lahde: 'en-Wikipedia "Văcărești Monastery", johdanto ja osiot historiasta ja purusta; ro-Wikipedia '
@@ -1097,7 +1098,8 @@ export const EUROOPAN_KADONNEET = {
     laudat: { maailmankartta: { x: 6676.3, y: 1180.3 }, europe: { x: 696.7, y: 455.4 } },
     teksti: 'Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus '
       + '1400-luvulta. Venäjän sota vaurioitti sitä pahoin 1655–1661, ja tsaarin '
-      + 'viranomaiset purkivat rauniot 1801–1805. Palatsi rakennettiin uudelleen museoksi, joka avattiin 2018.',
+      + 'viranomaiset purkivat rauniot 1800-luvun alussa. Palatsi rakennettiin uudelleen museoksi, joka '
+      + 'avattiin 2018.',
     lahde: 'en-Wikipedia "Palace of the Grand Dukes of Lithuania", historia (tarkistettu 21.9.2026).',
     kysymykset: ['Miltä Vilnan alalinna näytti loistoaikanaan?', 'Miksi palatsi purettiin ja rakennettiin uudelleen?'],
     kuva: {
@@ -1233,7 +1235,7 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 6435.7, y: 958.9 }, europe: { x: 558.2, y: 333.2 } },
       teksti: 'Kustaa III perusti Ruotsin oopperan ja rakennutti sille talon Gustav Adolfs torgin itälaidalle. '
         + 'Carl Fredrik Adelcrantzin suunnittelema ooppera vihittiin 30. syyskuuta 1782 Naumannin '
-        + 'oopperalla Cora och Alonzo. Lavan koko oli noin 10,7 × 23,7 metriä, ja katsomossa oli parteri ja '
+        + 'oopperalla Cora och Alonzo. Katsomossa oli parteri ja '
         + 'neljä parvea. Maaliskuun 16. päivänä 1792 talossa pidettiin naamiaiset, joissa aatelisten '
         + 'salaliittolaiset ampuivat kuningasta; hän kuoli 29. maaliskuuta. Naamiaiset kiellettiin 1821 '
         + 'asti, ja Verdin ooppera Un ballo in maschera (1859) sai tapahtumasta aiheensa. Vanha ooppera '
@@ -1394,10 +1396,8 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 6847.0, y: 928.6 }, europe: { x: 795.1, y: 317.1 } },
       teksti: 'Nyenskans oli ruotsalainen linnoitus Nevan ja Okhta-joen yhtymäkohdassa, ja Ruotsi rakensi sen '
         + '1611 vahvistaakseen valtaansa Inkerissä. Okhta-joen toiselle puolelle kasvoi Nyenin '
-        + 'kauppakaupunki, joka sai kaupunkioikeudet 1632. Sen asukasmäärä oli 1600-luvun puolivälissä noin '
-        + '2 000, ja kirkonkirjojen mukaan asukkaat olivat enimmäkseen suomalaisia, sitten ruotsalaisia ja '
-        + 'joitakin saksalaisia. Venäläiset hyökkäsivät kaupunkiin 1656 ja vahingoittivat sitä pahoin, '
-        + 'mutta linnoitus kesti. Pietari Suuri valtasi Nyenskansin 1. toukokuuta 1703 ja päätti perustaa '
+        + 'kauppakaupunki. Venäläiset hyökkäsivät kaupunkiin 1656 ja vahingoittivat sitä pahoin. Pietari '
+        + 'Suuri valtasi Nyenskansin toukokuussa 1703 ja päätti perustaa '
         + 'uuden pääkaupungin sen ympäristöön, vaikka maa kuului vielä virallisesti Ruotsille. Linnoitus '
         + 'purettiin vähitellen kaupungin kasvaessa.',
       lahde: 'en-Wikipedia ”Nyenskans” ja ”Nyen” (tarkistettu 31.10.2026).',
@@ -1457,10 +1457,10 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 7087.8, y: 1129.8 }, europe: { x: 933.7, y: 426.8 } },
       teksti: 'Sukharevin torni oli punatiilinen, valkokivikoristeinen torni Moskovassa, joka rakennettiin '
         + 'Pietari I:n käskystä 1692–1695. Nimi tuli Lavrenti Sukharevin johtamasta streltsi- eli '
-        + 'jousiampujarykmentistä, joka tuki Pietaria. Torni oli 64 metriä korkea, ja siinä oli kello ja '
-        + 'neljä pientä tornia. Kolmanteen kerrokseen perustettiin 1701 matematiikan ja navigaation koulu, '
-        + 'ja yläkertaan Jakov Bruce rakensi Venäjän ensimmäisen tähtitornin, jonka kaukoputket olivat jopa '
-        + '20 metriä pitkiä. Neuvostohallitus teki tornista museon 1921, mutta se purettiin 1934, koska sen '
+        + 'jousiampujarykmentistä, joka tuki Pietaria. Torni oli yli 60 metriä korkea, ja siinä oli kello '
+        + 'ja pieniä torneja. Kolmanteen kerrokseen perustettiin 1701 matematiikan ja navigaation koulu, ja '
+        + 'yläkertaan Jakov Bruce rakensi Venäjän ensimmäisen tähtitornin. Neuvostohallitus teki tornista '
+        + 'museon 1926, mutta se purettiin 1934, koska sen '
         + 'sanottiin haittaavan liikennettä. Purku kesti huhtikuun puolivälistä 11. kesäkuuta. Perustukset '
         + 'löydettiin alikulkukäytävän työmaalla ja säilytettiin.',
       lahde: 'en-Wikipedia "Sukharev Tower" ja ru-Wikipedia "Сухарева башня", johdanto ja osiot historiasta, '
@@ -2002,9 +2002,9 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Katedraali, jota purettiin kaksi vuotta',
       laudat: { maailmankartta: { x: 6533.8, y: 1291.4 }, europe: { x: 614.6, y: 519.7 } },
       teksti: 'Aleksanteri Nevskin katedraali oli Venäjän keisarikunnan rakennuttama ortodoksinen katedraali '
-        + 'Varsovan Saksin aukiolla. Keisari Aleksanteri III hyväksyi Leon Benois\'n suunnitelman '
-        + 'tammikuussa 1894, perustuskivi laskettiin 30. elokuuta 1894 ja katedraali vihittiin 20. '
-        + 'toukokuuta 1912. Kustannukset nousivat noin 3,1 miljoonaan ruplaan, vaikka arvio oli 900 000. '
+        + 'Varsovan Saksin aukiolla. Keisari Aleksanteri III hyväksyi Leon Benois\'n suunnitelman, '
+        + 'perustuskivi laskettiin 30. elokuuta 1894 ja katedraali vihittiin 20. toukokuuta 1912. '
+        + 'Kustannukset nousivat yli 3 miljoonaan ruplaan. '
         + 'Erillinen kellotorni oli 70 metriä korkea, rakennuksen päällä oli viisi kultakupolia, ja '
         + 'Moskovassa valettiin 14 kelloa. Katedraali suljettiin 1924 ja purettiin 1924–1926, koska se oli '
         + 'Venäjän vallan symboli ja täytti pääaukion; työhön tarvittiin lähes 15 000 hallittua räjäytystä. '
@@ -2033,10 +2033,9 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Synagoga, jossa oli 2 200 paikkaa',
       laudat: { maailmankartta: { x: 6533.4, y: 1291.2 }, europe: { x: 614.4, y: 519.6 } },
       teksti: 'Varsovan suuri synagoga seisoi Tłomackie-kadulla, ja sen suunnitteli Leandro Marconi. Kaupungin '
-        + 'juutalaisyhteisö rakennutti sen vuosina 1876–1878; kustannukset nousivat noin 200 000 ruplaan, '
-        + 'vaikka suunnitelma oli 150 000. Synagoga avattiin 26. syyskuuta 1878 juutalaisen uudenvuoden '
-        + 'aikaan, ja siellä oli 2 200 paikkaa: 1 150 päähallissa ja 1 050 naisten parvilla. Päähalli oli '
-        + '29 × 33 metriä, ja Toora-arkki oli tehty Libanonin setristä. Saarnat pidettiin puolaksi, ja '
+        + 'juutalaisyhteisö rakennutti sen vuosina 1876–1878; kustannukset nousivat noin 200 000 ruplaan. '
+        + 'Synagoga avattiin 26. syyskuuta 1878 juutalaisen uudenvuoden aikaan, ja siellä oli noin 2 200 '
+        + 'paikkaa. Toora-arkki oli tehty Libanonin setristä. Saarnat pidettiin puolaksi, ja '
         + 'jumalanpalvelusta säesti kuoro. SS räjäytti synagogan 16. toukokuuta 1943 Varsovan gettokapinan '
         + 'päätteeksi. Paikalla seisoo Sininen pilvenpiirtäjä, joka valmistui 1991.',
       lahde: 'en-Wikipedia "Great Synagogue (Warsaw)", johdanto ja osiot "Construction" ja "Destruction"; '
@@ -2099,9 +2098,9 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 6037.9, y: 1407.0 }, europe: { x: 329.0, y: 588.8 } },
       teksti: 'Luxemburgin linnoitus kasvoi Bock-kallion päälle, jonne kreivi Siegfried rakensi linnan 963. '
         + 'Vuosisatojen kuluessa burgundilaiset, espanjalaiset, ranskalaiset, itävaltalaiset ja '
-        + 'preussilaiset laajensivat sitä, ja Vaubanin johtamassa jälleenrakennuksessa 1684–1688 '
-        + 'työskenteli yli 3 000 miestä. Linnoitusvyöhyke peitti noin 180 hehtaaria, kun kaupunki oli noin '
-        + '120 hehtaaria, ja kallion sisään louhittiin noin 23 kilometriä kasemattikäytäviä. Sitä '
+        + 'preussilaiset laajensivat sitä, ja 1680-luvulla ranskalaisten linnoitusmestari Vauban rakensi '
+        + 'sen uudelleen. Linnoitusvyöhyke oli selvästi kaupunkia laajempi, ja kallion '
+        + 'sisään louhittiin yli kaksikymmentä kilometriä kasemattikäytäviä. Sitä '
         + 'kutsuttiin Pohjoisen Gibraltariksi. Toinen Lontoon sopimus teki Luxemburgista pysyvästi '
         + 'puolueettoman 1867 ja määräsi linnoituksen purettavaksi. Purku kesti vuoteen 1883 ja maksoi 1,5 '
         + 'miljoonaa frangia, joten isoisän käydessä 1873 se oli vielä kesken. Bockin ja Pétrussen '
@@ -2135,10 +2134,10 @@ export const EUROOPAN_KADONNEET = {
         + 'se vihittiin 2. huhtikuuta 1899 Jean Jaurèsin läsnä ollessa. Rakennus oli rauta- ja lasitalo, '
         + 'jonka runkoon käytettiin yli 600 000 kiloa rautaa: alakerrassa oli myymälöitä ja '
         + 'kahvila-ravintola, ylempänä puolueen toimistoja, kirjasto ja kokoushuoneita ja ylimpänä suuri '
-        + 'juhlasali. Julkisivu oli noin 80 metriä pitkä, ja Hortan koristeet rajoittuivat lähinnä '
-        + 'kaiteiden kaariin. Talo purettiin 1965, vaikka satoja arkkitehteja ja taiteilijoita vastusti '
+        + 'juhlasali. Hortan koristeet rajoittuivat lähinnä kaiteiden kaariin. Talo purettiin 1965, vaikka '
+        + 'satoja arkkitehteja vastusti '
         + 'sitä. Osat numeroitiin, jotta rakennus voitaisiin pystyttää muualle, mutta sitä ei koskaan '
-        + 'tehty, ja osa ruostui ulkona. Tilalle nousi 26-kerroksinen toimistotorni.',
+        + 'tehty, ja osa osista katosi. Tilalle nousi 26-kerroksinen toimistotorni.',
       lahde: 'en-Wikipedia ”Maison du Peuple, Brussels”; fr-Wikipedia ”Maison du Peuple (Bruxelles)” '
         + '(tarkistettu 31.10.2026).',
       kuva: 'ihme-maison-du-peuple-loistoaika.jpg',
