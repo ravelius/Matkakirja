@@ -9,7 +9,7 @@ SÄÄNNÖT:
 4. Uusi tekotapa kokeillaan ensin pienellä alueella; koko kaupunkiin vasta hyväksynnän jälkeen. [P-261109-2]
 5. Piirretyn kartan saanut kaupunki näytetään sillä kokonaan, noin 2,5 m/px, yksinkertaistettuna isoisän ajan matkailijan karttana. Muut kaupungit pysyvät ennallaan. [R-2.204] [P-261102-2]
 6. Kaupungin loppulista lukitaan; uudet löydöt menevät toisen kierroksen listalle eivätkä viivästytä valmis-päätöstä. [R-2.215] [P-261112-13]
-7. Kaupungin nimen tai merkin napautus zoomaa kaupunkiin eikä avaa korttia. Avauskortti (kuva, lyhyt esittely, nähtävyyskartta ilman tekstejä, turisti-info) aukeaa pelaajan kaupungin pienestä kutsukortista. Piirroskartan kaupungissa kutsukorttia ei ole: sisältö avautuu kartan kohteista ja turisti-infosta. Saapuessa ei avaudu mitään; kaupunkilehti jää syventäväksi. [P-261110-11] [P-261102-3] [R-2.138]
+7. Kaupungin nimen tai merkin napautus lentää kaupunkiin 60°:n kallistukseen ja jää kiertämään, eikä avaa korttia. Avauskortti (kuva, lyhyt esittely, nähtävyyskartta ilman tekstejä, turisti-info) aukeaa pelaajan kaupungin pienestä kutsukortista. Piirroskartan kaupungissa kutsukorttia ei ole: sisältö avautuu kartan kohteista ja turisti-infosta. Saapuessa ei avaudu mitään; kaupunkilehti jää syventäväksi. [P-261110-11] [P-261102-3] [R-2.138] [P-261112-32]
 8. Fokusvirran kortit eivät näy kaupungeissa. Täysi sisältö vain maan pää- ja aarrekaupungilla; muut ovat tarkoituksella kevyitä. [R-2.10]
 9. Maa ilman pelikaupunkia saa sellaisen Firenzen mallin mukaan; lisäyksen jälkeen reitit tarkistetaan. [R-2.147]
 10. Jokaisella maalla on pääkaupunki omana kokoelmanaan, ei pysäkkinä eikä reitteinä; napautus avaa maakortin. Maa ilman pelikaupunkia näyttää pääkaupunkinsa aina. [R-1.13]
@@ -17,7 +17,6 @@ SÄÄNNÖT:
 12. Jerusalemilla ei ole pääkaupunkipistettä; Israelin kortissa hallinnon paikka mainitaan samoin kuin Ramallah Palestiinalle, ilman kannanottoa. [R-1.13]
 
 EI VIKA:
-- Kaupungin napautus tai saapuminen ei avaa korttia; Pariisissa ei ole kutsukorttia.
 - Natiivin kaupunkikortissa on pieni herokuva.
 
 TEKOTAPA:
