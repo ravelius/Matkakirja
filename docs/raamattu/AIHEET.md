@@ -17,7 +17,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | museot | Museot | LAV | 3.0 kt | 12.11.2026 |
 | linssit | Linssit | VS | 3.0 kt | 12.11.2026 |
 | iss-ja-avaruus | ISS ja avaruus | VS | 2.6 kt | 12.11.2026 |
-| isoisa-ja-tarina | Isoisä ja tarina | SK | 2.9 kt | 12.11.2026 |
+| isoisa-ja-tarina | Isoisä ja tarina | SK | 2.8 kt | 12.11.2026 |
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
 | saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 12.11.2026 |

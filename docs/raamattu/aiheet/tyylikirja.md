@@ -3,12 +3,12 @@
 TAVOITE: Peli näyttää isoisän atlakselta, mutta kuvat kertovat todentuntuisesti nykymaailmasta. Käyttöliittymä on hillitty, ja kaikki liikkuu pehmeästi ja elävästi.
 
 SÄÄNNÖT:
-1. Taidesuunta on 1873-atlaksen akvarelli ja niukkuus. Kartan pienoismallit ja miniatyyrit ovat akvarellia karttapaletilla; havainnekuvat, varustekuvat ja 3D-maailmat todentuntuisia, ei piirrosmaisia. [R-4.21] [R-4.47]
-2. Isoisän kuvat ovat mustavalkoisia kynäluonnoksia, eivät kaiverruksia; reunoilla saa olla vinjetti. Matkakirja on nimetön, kulunut vihko. [R-3.12]
-3. Nykyhetki on valokuva: nykypaikan kuvan on näytettävä aidolta valokuvalta, muuten käytetään tuoretta Commonsin valokuvaa. [R-3.12] [R-4.47]
+1. Taidesuunta on 1873-atlaksen akvarelli ja niukkuus. Kartan pienoismallit ovat akvarellia karttapaletilla; havainnekuvat, varustekuvat ja 3D-maailmat todentuntuisia. [R-4.21] [R-4.47]
+2. Isoisän kuvat näyttävät aikansa vanhoilta valokuvilta, eivät piirroksilta. Hänen ulkonäköään ei paljasteta: kuvassa on enintään kädet, siluetti tai kaukainen hahmo. Matkakirja on nimetön, kulunut vihko. [R-3.12] [P-261112-29]
+3. Nykypaikan kuvan on näytettävä aidolta valokuvalta, muuten käytetään tuoretta Commonsin valokuvaa. [R-3.12] [R-4.47]
 4. Loistoaikakuva on puhtaasti omassa ajassaan, ja aikasiirtymä näytetään parina aidon nykyvalokuvan kanssa. Herokuva on tiukasti rajattu. [R-4.47]
 5. Kuvassa ei ole poltettua aikaleimaa, vesileimaa eikä tekstiä, eikä valokuvassa tunnistettavia yksityishenkilöitä; havainnekuvassa historialliset henkilöt sallitaan. [R-2.146] [R-11.16]
-6. Havainnekuva-merkintä ja lähde näkyvät vain suurennoksessa. Ihmeen nauha on vino punainen kaista kuvan vasemmassa yläkulmassa kuvan päällä: harvennettua lihavaa kirjaseriffiä isoin kirjaimin. [R-2.146] [R-2.50] [R-4.47]
+6. Havainnekuva-merkintä ja lähde näkyvät vain suurennoksessa. Ihmeen nauha on vino punainen kaista kuvan vasemmassa yläkulmassa: harvennettua lihavaa kirjaseriffiä isoin kirjaimin. [R-2.146] [R-2.50] [R-4.47]
 7. Värit ovat vain tyylikirjan nimettyjä tokeneita; uusi väri lisätään ensin tokeniksi. [R-4.3]
 8. Lasi on vain linsseissä ja peleissä: yksi yhteinen lasipohja (sumea tausta, kevyt tummennus, ohut vaalea reuna). Peruskartan seepiapohja pysyy; läpinäkyviä vain yksittäiset napit ja lyhyet tekstit. [R-4.5]
 9. Ovaaleja ja kapseleita ei ole: napit, kytkimet ja merkit ovat pyöristettyjä suorakulmioita, kuvakenapit yhtenäisiä pyöristettyjä neliöitä yhdessä ryhmässä. [R-4.6]
@@ -21,7 +21,7 @@ SÄÄNNÖT:
 
 EI VIKA:
 - Kartan kuvamerkit ja nostokiekot ovat pyöreitä.
-- Yläpalkin nahkapilleri: omistajan valitsema muoto (2.10.2026).
+- Yläpalkin nahkapilleri (omistajan valinta 2.10.2026).
 - Introkuvan nimi ja vuosi on kuvan päällä.
 
 TEKOTAPA:
