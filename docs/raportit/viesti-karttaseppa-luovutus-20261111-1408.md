@@ -688,3 +688,10 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - LINKIN JÄLKEEN: yksi Pampus-rajaus KK:lle tiedoksi (pyydä JU:lta nm55-03-pampus-kulma junan käännöksellä tai sk-mac-nimet-kj55.txt:n kuva 3).
 - KK:lle lähetetty lista saman lajin pistenimistä (muurit, vallit, linjat, reitit, kanavat Merkittavat.json:ssa) – KK päättää, ei siirretty.
 - SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) nimet LINKKI + Pampus-rajaus 5) Montmartre KJ43 6) KJ53 7) GHSL 8) PP:n ikkunakolmio.
+
+## LISÄYS 53 (02.3x): KK 02.35 kehämuurien nimet (uusi rivi jonon perään)
+- KK: PYSYVÄT pitkät linjat, reitit, kanavat ja Orăștie. SIIRRETÄÄN muurin päälle (OSM:n muuriviivan piste säilyneellä osalla): Aurelianuksen muuri (Q625149; ehdotus
+  Porta San Sebastiano), Serviuksen muuri (Q281330; ehdotus Terminin aseman säilynyt osa), Visbyn kehämuuri (Q1474383), Thessalonikin kaupunginmuuri (Q7963249).
+  Paikat MITATTAVA OSM:stä (KK:n ehdotukset eivät mitattuja). Rooma ensin. Merkittavat.json lat/lon; näyttö Rooman pari täysikokoisena KK:lle. Ei kiire.
+- SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) nimet LINKKI + Pampus-rajaus 5) Montmartre KJ43 6) KJ53 7) GHSL 8) PP:n ikkunakolmio
+  9) kehämuurien nimet (Rooma ensin).
