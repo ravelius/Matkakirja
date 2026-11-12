@@ -3,8 +3,8 @@
 TAVOITE: Pelit ovat yhtä tärkeitä kuin linssit: pelaaja oppii pelaamalla, ei pelkällä visalla. Peli vie heti mukaan ilman selostuksia, ja kaikki pelit toimivat samoin.
 
 SÄÄNNÖT:
-1. Pelilajeja on kaksi: lautapelit (Mylly, Tavli, kortti- ja pihapelit) ja videopelit (historialliset seikkailut, Lentopeli ja juoksupeli, oma kortti). Pelivalikossa on osio kummallekin, tyhjää ei näytetä. [R-2.185]
-2. Minipeli pelataan bottia tai kaveria vastaan, ja tulos kertyy matkakirjaan. [R-2.184]
+1. Pelilajeja on kaksi: lautapelit (Mylly, Tavli, Shakki, kortti- ja pihapelit) ja videopelit (historialliset seikkailut, Lentopeli ja juoksupeli, oma kortti). Pelivalikossa on osio kummallekin, tyhjää ei näytetä. [R-2.185]
+2. Minipeli pelataan kolmitasoista bottia tai kaveria vastaan, ja tulos kertyy matkakirjaan. [R-2.184]
 3. Peli aukeaa ruudulta ilman ulkoa opettelua, eikä pelin aikana opeteta: tehtävä ymmärretään heti, opastus on pieniä vihjeitä ja tieto vapaaehtoista. [R-2.26] [R-2.174]
 4. Historiapelit tehdään yhdellä historiamoottorilla ja lautapelit lautapelimoottorilla. Historiapeli alkaa maan tasalta heti arvoituksesta tai aarteesta; tietokerros tulee vasta lopussa tai pyydettäessä. [R-2.173] [R-2.185]
 5. Historiapelin joka tilassa on tekemistä, vihjeet nojaavat oikeisiin paikkoihin, esineisiin ja henkilöihin, ja mittasuhteet ovat oikein. [R-2.173] [R-2.174]
