@@ -615,3 +615,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   "pisin sama 28,9 s kohdassa 0,449 (t 327–356 s, lohko LOD0)", kynnys 1 px = 0,0119 (leveys 84 px eräajossa) → ehto ≤ 15 s EI täyty. KK:lle lähetetty (kopio PT).
   SEURAAVA: LOD0-lohkoon alavaiheet (katso "latauksen ositus"- ja "palkkilohko"-rivit t 327–356 s), uusi Mac-ajo palkki-7 → MITTARI ≤ 15 s → KK. Ei junaan ennen sitä.
   JU: T1 5cb17d3db = MR91/224.95, linkki kun sillat-ajo näyttää sillat kuten 224.94 (kuvat NS:lle ja KS:lle). JU:n jono: pari-b → mono-1 → kertoja.
+- 35d (03.1x) KK 03.14 PALKKI-7 TARKENNUKSET (korvaa 35c:n "alavaiheet"): (1) LOD0-lohkon SISÄLLÄ palkki etenee vastaanotettujen tavujen mukaan (tavut / lohkon koko),
+  EI kiinteinä välivaiheina → liikkuu aina kun dataa tulee, seisoo vain kun lataus oikeasti seisoo. (2) Mittarin "sama" ISON IPADIN palkin leveydestä
+  (laitteen kuvapisteinä; kirjoita leveys mittaririville), ei eräajon 84 px:stä. Ehto ≤ 15 s hitaalla verkolla. Tulos KK:lle yhtenä rivinä + mittaririvi, ei kuvaa.
