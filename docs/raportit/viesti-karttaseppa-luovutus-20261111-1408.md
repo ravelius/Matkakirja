@@ -676,3 +676,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ54 NÄYTE (JU 02.23): lokit/ks-kj54-nayte-dc1117faa 29/29; n54-loppu = n54-ateena-jalkeen-2-lahi tavulleen (sama kamera, ei vika).
   Arkki per kaupunki 1000 px: n54-<id>-0-yleis + 1..3-katu + oikeat/orto-<id>-keskusta.jpg + katu-<id>-1..3.jpg (lähteet lahteet.json) + Ateena ennen|jälkeen (1-kaupunki, 2-lahi) → KK.
 - JU:lla nyt KJ55 nimet, sitten KJ53.
+
+## LISÄYS 51 (02.3x): KJ55 nimet → KK, odottaa junasanaa
+- KJ55 katsottu: seksimuseo + puolustusrintama poissa Damilta, puolustusrintama Pampuksella (koodijuna/nimet-kj55/parit/rajaus-nm55-01-dam.jpg, -03-pampus.jpg) → KK 02.3x.
+  Sanalla: poimi c7dfbc2fe (karttaseppa/nimet) 224.93 e59480dc2:n päälle → pt-ok PT:ltä SHA:lla.
+- SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) nimet-junasana (yllä) 5) Montmartre KJ43 6) KJ53 (JU ajaa nyt) 7) GHSL 8) PP:n ikkunakolmio.
