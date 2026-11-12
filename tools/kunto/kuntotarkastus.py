@@ -151,12 +151,18 @@ def mittaa(a):
     ses = sessiot(alku)
 
     # 1 SEISOKKI
-    aktiiviset = {TEKIJA.get(x.get("tekija"), x.get("tekija")) for x in rivit if x.get("tila") in ("työn alla", "jonossa")}
+    aktiiviset = {}  # rooli → vanhimman aktiivisen rivin ts (ts = viimeisin muutos ≥ syntyhetki; varovainen alaraja)
+    for x in rivit:
+        if x.get("tila") in ("työn alla", "jonossa"):
+            r = TEKIJA.get(x.get("tekija"), x.get("tekija"))
+            t = dt.datetime.fromtimestamp(x.get("ts", 0) / 1000, dt.timezone.utc)
+            aktiiviset[r] = min(aktiiviset.get(r, t), t)
     pisin, kuka = 0, "-"
     for r, tt in ses.items():
         if r not in aktiiviset:
             continue
-        ajat = sorted(t for _, a_, _ in tt for t in a_ if t >= alku) + [nyt]
+        raja_t = max(alku, aktiiviset[r])
+        ajat = [raja_t] + sorted(t for _, a_, _ in tt for t in a_ if t >= raja_t) + [nyt]
         for x, y in zip(ajat, ajat[1:]):
             g = (y - x).total_seconds() / 60
             if g > pisin:
@@ -187,7 +193,9 @@ def mittaa(a):
     noll = {r: sum(1 for _, a_, _ in tt if min(a_) >= alku) for r, tt in ses.items()}
     L["3 nollaukset KK"] = (noll.get("KK", 0), 12, "")
     muut = sorted(((v, r) for r, v in noll.items() if r != "KK"), reverse=True)
-    L["3 nollaukset muut (suurin)"] = (muut[0][0] if muut else 0, None, ", ".join(f"{r} {v}" for v, r in muut[:5]))
+    L["3 nollaukset muut (suurin)"] = (muut[0][0] if muut else 0, 20, ", ".join(f"{r} {v}" for v, r in muut[:5]))
+    rm = sorted(((kk_aloitusmuisti(tt, alku) or 0, r) for r, tt in ses.items() if r != "KK"), reverse=True)
+    L["3 roolin muisti aloituksen jälkeen %"] = (rm[0][0] if rm else None, 10, ", ".join(f"{r} {v}" for v, r in rm[:4]))
 
     # 4 KIERROKSET + 6 MAC
     ml = macloki(nyt_l)
@@ -198,7 +206,8 @@ def mittaa(a):
             ajot.setdefault(f"{m.group(1)} {m.group(2)}", []).append(m.group(3))
     n = [len(v) for v in ajot.values()]
     top = max(ajot.items(), key=lambda kv: len(kv[1]), default=("-", []))
-    L["4 kierrokset suurin"] = (max(n, default=0), 3, f"{top[0]}; mediaani {statistics.median(n) if n else 0}")
+    L["4 asioita yli 3 kierroksen"] = (sum(1 for v in n if v > 3), 0,
+                                     f"suurin {top[0]} {len(top[1])}; mediaani {statistics.median(n) if n else 0}")
     kestot = [int(m.group(1)) for r in ml for m in [re.search(r" kesto (\d+) min", r)] if m]
     L["6 Mac-ajoja"] = (len(kestot), None, f"pisin ajo {max(kestot, default=0)} min; jonoon tuloa ei kirjata")
 
@@ -212,9 +221,16 @@ def mittaa(a):
 
     # 8 SÄÄNTÖJEN KASVU (verrataan historiaan)
     L["8 Raamattu kt"] = (round(int(git("cat-file", "-s", f"origin/main:{RAAMATTU}") or 0) / 1024, 1), 450, "")
-    lisatyt = git("log", "origin/main", f"--since={alku.isoformat()}", "--format=%s", "--", RAAMATTU).splitlines()
-    kohdat = sorted({k for s in lisatyt for k in re.findall(r"Raamattu ((?:\d+\.\d+[ +,]*)+)", s)})
-    L["8 Raamattu-muutoksia"] = (len(lisatyt), None, "; ".join(k.strip(" +,") for k in kohdat)[:120])
+    pohja = git("rev-list", "-1", f"--before={alku.isoformat()}", "origin/main").strip()
+    ero = git("diff", "-U0", pohja, "origin/main", "--", RAAMATTU) if pohja else ""
+    kohta = re.compile(r"^([+-])\s*'(\d+\.\d+) ([^:]{1,60})")
+    lisatty, poistettu = {}, set()
+    for r in ero.splitlines():
+        m = kohta.match(r)
+        if m:
+            (lisatty.__setitem__(m.group(2), m.group(3).strip()) if m.group(1) == "+" else poistettu.add(m.group(2)))
+    uudet = [f"{k} {v}" for k, v in sorted(lisatty.items()) if k not in poistettu]
+    L["8 Raamattu-kohtia muuttui"] = (len(lisatty), 3, ("UUDET: " + "; ".join(uudet))[:160] if uudet else "")
 
     # 9 VANHAT RIVIT
     vanhat = [x for x in rivit if x.get("tila") == "työn alla" and nyt.timestamp() - x.get("ts", 0) / 1000 > 6 * 3600]
