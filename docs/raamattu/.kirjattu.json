@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "4abf40d9ef2d324c",
-  "aika": "2026-11-12T10:06:07.268Z"
+  "sha": "8815722146eb02e4",
+  "aika": "2026-11-12T10:06:12.813Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -158,5 +158,9 @@
  "aiheet/aarteet.md": {
   "sha": "3845e8637b5621d9",
   "aika": "2026-11-12T10:06:07.268Z"
+ },
+ "aiheet/suorituskyky-ja-muisti.md": {
+  "sha": "006ee54ebaf38602",
+  "aika": "2026-11-12T10:06:12.813Z"
  }
 }
