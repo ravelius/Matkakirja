@@ -23,3 +23,19 @@ massaetaisyys.py samassa kansiossa, aja `python3 -P`, ei -I: numpy käyttäjän 
   osasarja EI (SarjatPeittoon = false).
 
 ## 3. TYÖKOPIOT: ennallaan (kuvajono-wt pois, kun 6e47d988f junassa). Ei agentteja käynnissä. Ei uusia lupia.
+
+## LISÄYS 05.2x: KK:N VASTAUS 05.11 TULI — TÄMÄ ON NYT ENSIMMÄINEN TYÖ (korvaa kohdan 1 "odotetaan")
+Koko teksti: tehtävänannon (polku kohdassa 1) VIIMEINEN OSIO — LUE KOKONAAN ennen koodia. Tiivistelmä KK:n viestistä:
+(1) KYLLÄ: U-käännös = yli 120° kolmen askeleen sisällä.
+(2) FAIL 1: ei rajan löysäystä; Kameralaite saa Leikkaa(asento, nopeus, katsenopeus) (ainoa sallittu laitemuutos; palan 1 testit + uusi
+    leikkaustesti). FAIL 2: ei löysäystä eikä + 0,1: leikkauksessa D := pienin jäljen matka, jolla SUORA väli ≥ D_min.
+(3) c1: ehto (i) jäljen suhteen (ei-kuljettavalla vain ≤ 0,1 m pelaajan jäljestä); säännön ja kulkukartan ristiriitapaikat listaksi, ei korjausta.
+(4) c2: mikään rivi ei kelpaa sellaisenaan (rakenne, ei arvot):
+    5a. T5:n sivukulma tulee katseen ennakosta: ennakosta tavoite–pelaaja-akselin osa kokonaan, kohtisuora osa pehmeästi rajattuna d × tan(6°).
+    5b. Ahdas pää (τ_v 0,125; PaikkaS 0,20; D_min 1,5) → noin 4,2 m, avoin nykyinen, liuku ahtaudesta; vertailuksi (0,15; 0,25; 1,5).
+        Geometria (KK): näköyhteys säilyy 90° käännöksessä, kun väli ≤ 2 × käytävän leveys. Hyväksyntä: T5/T6 ≤ 21,9°, väli ahtaassa 4–5 m.
+(6) Toiston huiput (85 m/s², 5900 m/s³, 704–7227 °/s): syy ennen Mac-ajoa, kymmenen suurinta tilan kanssa; KK:n oletus: ikkunan a hyppää
+    SeinaEt:n 0,5 m:n portaista.
+JÄRJESTYS (KK): 1–4 koodiin → huippujen syy → 5a + 5b mittaus → YKSI viesti KK:lle → KK valitsee → Mac-ajo. KK: "Tarkista laskuni; jos geometria
+tai kaava ei pidä, kerro se ennen toteutusta." Ei vastattu vielä KK:lle mitään (edellinen sessio nollautui heti viestin jälkeen).
+Pohja: kameralaite/pala-2 @ 2749b7b77.
