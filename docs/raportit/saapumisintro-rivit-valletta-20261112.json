@@ -1,0 +1,30 @@
+[
+ {
+  "kaupunki": "valletta",
+  "nro": 1,
+  "kuva": "saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+  "rivi": "Näkymä Upper Barrakka Gardensilta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "valletta",
+  "nro": 2,
+  "kuva": "saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+  "rivi": "Vallettan vanhakaupunki",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "valletta",
+  "nro": 3,
+  "kuva": "saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+  "rivi": "Näkymä Birgusta",
+  "tila": "valmis"
+ },
+ {
+  "kaupunki": "valletta",
+  "nro": 4,
+  "kuva": "saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+  "rivi": "Vallettan satamavene",
+  "tila": "valmis"
+ }
+]
