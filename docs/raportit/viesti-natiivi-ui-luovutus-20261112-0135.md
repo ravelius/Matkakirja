@@ -54,3 +54,8 @@ SEURAAVAT ASKELEET:
   Kerro KK:lle luku ja mitä lopusta seuraa.
 - AJO -5 KK:lle: lokirivit (1, 2a, kuvan nousun hetki suhteessa puheen alkuun, vuoron loppu) + kuvat p1 (kuva + lähderivi, ~1,5–2 s nousun alusta pelin ajassa),
   p3, t5 → junasana → pt-ok PT:ltä.
+
+## LISÄYS 02.5x: C. VAKIOAJO VALMIS (JU), katsomatta
+- 210c842ad: Pariisi 42/48 kuvaa, 11 kohdetta; Lontoo 66/72, 19 kohdetta; PUUTE 0; MUTTA vakiokuvat 1–9 "puuttuu". Arkit
+  /Users/Shared/Claude/proto-3d/lokit/vakioajo-{pariisi,lontoo}-210c842ad/arkki-1000.png (JU korjasi arkki.py:n lukemaan mittarit unity.log:sta).
+  TEE: katso arkit, selvitä miksi vakiokuvat 1–9 puuttuvat (skenaario vai koodi) ja puuttuvat 6+6 kuvaa → tulos KK:lle yhtenä viestinä.
