@@ -22,11 +22,19 @@ Kello date-komennosta. Kuvat ≤ 1000 px pienennöksinä omaan katseluun, KK:lle
 2. LUENNAT-ASETUS — 0b7f0e02f, natiivi-ui/luennat-asetus (98e8e9f10:n päällä), worktree wt/nui-luennat. Puhe hakee manifestin uudelleen
    Asetus.Vaihtui-tapahtumasta (ennen luki ennen sisältöpaketin asetuksia → v12–v14 eivät olisi tulleet viennillä), KertojanEsilataus
    ajaa kaupungin uudelleen Valmisluennat.Versiolla. KK 09.21 JUNASANA EHDOLLA: JU:n koekansiokoe (asetukset.json v12) skenaariolla
-   sk-mac-luennat-v12.txt näyttää "valmisluennat: 9278 … v11" → "9286 … v12" JA erän 1 pala soi (Sainte-Chapelle #3 5f2b0ca0… tai
+   sk-mac-luennat-v12.txt näyttää (OSA 1 TÄYTTYI 09.27: lokit/nui-luennat-v12-koe-0b7f0e02f r1951 9278 → r2041 9286; osa 2 eli
+   Sainte-Chapelle-skenaario JU:lle 09.28; junassa paikka 224.107) "valmisluennat: 9278 … v11" → "9286 … v12" JA erän 1 pala soi (Sainte-Chapelle #3 5f2b0ca0… tai
    Invalidit #3 3b2dc370…; "puhe: alkoi … <heksa>.mp3"). Täyttyy → kooste KK:lle + pt-ok-pyyntö PT:lle. Ei → syy lokista, korjaa.
 
 3. INTRORIVIT ERÄ 3 — 755936ac8, natiivi-ui/intro-rivit-era3, worktree wt/nui-intro: 237 riviä 24 kohteesta (SK b27110ebe json).
-   KK:n junasana 09.21; pt-ok PYYDETTY PT:ltä 09.24. Bergenin 4 Valletta-kuvaa EI tauluun (PR 6593 poistaa ne Bergenistä).
+   pt-ok 09.23 → JU MR101 = 224.105 (ei toimia). Bergenin 4 Valletta-kuvaa EI tauluun (PR 6593 poistaa ne Bergenistä).
+
+4. VALLETTA-INTRORIVIT (SK 09.2x, KK 09.21): SK:n json docs/raportit/saapumisintro-rivit-valletta-20261112.json (haara
+   koti/Matkakirja-sisaltokirjuri; 4 riviä: Näkymä Upper Barrakka Gardensilta, Vallettan vanhakaupunki, Näkymä Birgusta, Vallettan
+   satamavene). Kuvat Vallettan avauskuvat-lohkossa (PR 6594, 629ed1000), nro 1–4. Lisää IntroNimet-tauluun uudelle haaralle
+   junan päälle (avain = kuvan tiedostonimi: valletta-6-nakoala-intro-v1.png, valletta-5-luonto-intro-v1.png, valletta-7-ilta-intro-v2.png,
+   valletta-8-kulkuneuvo-intro-v1.png; tarkista json:n kuva-kenttä), unity-tarkistus → KK:n junasana. SK lähettää myöhemmin Sofian
+   "Banja Bašin moskeija" -korjauksen (kuvatekstikorjaus-PR:ään).
 
 ## VALMIIT TÄNÄÄN (ei toimia)
 - Luennat v11 224.103 linkissä (98e8e9f10); KK:n ehto täyttyi (9278, ei valmista 0, Invalidit .mp3). Kooste KK:lle lähetetty.
