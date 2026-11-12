@@ -24,6 +24,11 @@ Kello: date ennen leimaa (viesteissäni 10.3x–11.0x olivat liian myöhäisiä,
      Jos EI muutu → lattian materiaali ei käytä atlasta (JuoksuV4Maailma.cs ~695–915: valoKuva/uv1t/JaaAlusta, KujaKiviKoko ei tunne
      "lattialaatat-v03-albedo" (vain v01, Lattia.cs:209)) → NS korjaa. Jos muuttuu mutta ilman seinävarjoa → atlaksen sisältö/UV1 (LAV).
      LAV:lta kysytty 10.2x: viittaako kujakivi_lattian UV1 glb:n omaan valo_rgbm:ään.
+   LAV 10.2x (TODENNÄKÖISIN SYY): kujakivi_lattian UV1 0–1 viittaa glb:n omaan valo_rgbm:ään (2048², ei textures-listassa). Pistekoe
+   kolmioiden keskipisteistä: v alaspäin (glTF) mediaani 0,32 / tummia 28 %; v YLÖSPÄIN (1−v) mediaani 0,12 / tummia 53 % (= leivonnan
+   suora.npy 62 %). Leivonta kirjoittaa atlaksen v ylöspäin (Blender) → jos peli lukee UV1:n glTF-tapaan (v-kääntö PuraKuva/uv1t), varjot
+   osuvat väärin. TEE: vertaa miten osasarjan r_*-atlakset luetaan (niissä varjot näkyvät) vs. glb:n valo_rgbm (JuoksuV4Maailma.cs ~695–915,
+   DioraamaGlb UV1-luku) → koeajo UV1.y → 1−y vain kujalle (QA-kytkin) → jos varjo näkyy, korjaus + LAV:lle tieto, kumpi puoli kääntää.
    Kolmikko A|B|C KK:lle vasta kun koevarjo näkyy. Apuskriptit scratchpadissa (peitto.py = vaakatasot pisteessä, glbinfo.py = glb:n
    materiaalit/kuvat/attribuutit; LAV:n työkalut leivonta-216/.../korjaa.py G, prims, lue_p).
 3. SEURAAVA MONOKÄRKI (vain KK:n sanalla): LisaaRengas 8,1 Mt / 336 kpl, Suurenna (ElavaTyyli.cs:82) 4,3 + 3,9 Mt, Laattapalvelin.Lataa 3,7 + 3,7 Mt.
