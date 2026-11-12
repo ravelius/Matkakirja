@@ -4,6 +4,7 @@
  *
  *   node tools/aanitysjono/tarkista.mjs [--vienti <dist/vienti>] [--manifesti <url|polku>]
  *        [--lisaa] [--siivoa] [--kaikki-maanosat] [--tsv <ulos.tsv>] [--jono <data/aanitysjono.tsv>]
+ *        [--aanitettavat <ulos.json>]   Äänittäjälle: jonon rivit + koko teksti, loppuTagi, ääni ja malli (sama avain kuin pelillä)
  *
  * Pysäyttää junan, kun luettava teksti on muuttunut (tai uusi) eikä sen kappaleen avainta ole
  * valmiiden luentojen manifestissa EIKÄ äänitysjonossa (data/aanitysjono.tsv).
@@ -30,7 +31,15 @@ import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const JONO = join(JUURI, 'data/aanitysjono.tsv');
-export const MANIFESTI = 'https://media.matkakirja.app/aanet/luennat/v9/manifest.json';
+// Manifesti = sama kuin pelillä: viennin asetus osoitteet.luennat-manifesti (data/asetukset.json, KK 12.11. 09.03: yksi lähde
+// versiolle). Oletus vain, jos asetus puuttuu (= natiivin Valmisluennat.ManifestiOletus); tulosteessa näkyy, kumpi käytössä.
+export const MANIFESTI = 'https://media.matkakirja.app/aanet/luennat/v11/manifest.json';
+export function manifestiAsetuksista(vienti) {
+  const p = join(vienti, 'kokoelmat/asetukset.json');
+  if (!existsSync(p)) return null;
+  const a = JSON.parse(readFileSync(p, 'utf8'));
+  return a?.osoitteet?.['luennat-manifesti'] || a?.['osoitteet.luennat-manifesti'] || null;
+}
 export const NOPEUS = 1.15;
 const SARAKKEET = ['avain', 'kaupunki', 'paketti', 'kohde', 'pala', 'paiva'];
 
@@ -194,21 +203,24 @@ async function lueManifesti(lahde) {
 
 // --- ajo -----------------------------------------------------------------------------------------------------------------
 async function main(argv) {
-  const a = { vienti: null, manifesti: MANIFESTI, lisaa: false, siivoa: false, kaikki: false, tsv: null, jono: JONO };
+  const a = { vienti: null, manifesti: null, lisaa: false, siivoa: false, kaikki: false, tsv: null, jono: JONO, aanitettavat: null };
   for (let i = 0; i < argv.length; i++) {
     const v = argv[i];
     if (v === '--vienti') a.vienti = argv[++i]; else if (v === '--manifesti') a.manifesti = argv[++i];
     else if (v === '--tsv') a.tsv = argv[++i]; else if (v === '--lisaa') a.lisaa = true; else if (v === '--siivoa') a.siivoa = true;
     else if (v === '--kaikki-maanosat') a.kaikki = true; else if (v === '--jono') a.jono = resolve(argv[++i]);
+    else if (v === '--aanitettavat') a.aanitettavat = argv[++i];
     else { console.error(`tuntematon valinta ${v} (ks. tiedoston alku)`); return 2; }
   }
-  let tmp = null, man, kaikki;
+  let tmp = null, man, kaikki, lahde;
   try {
-    man = await lueManifesti(a.manifesti);
     if (!a.vienti) {
       tmp = mkdtempSync(join(tmpdir(), 'aanitysjono-'));
       execFileSync(process.execPath, [join(JUURI, 'tools/vienti/vie-sisalto.mjs'), '--ulos', tmp], { cwd: JUURI, stdio: 'ignore' });
     }
+    const asetus = manifestiAsetuksista(a.vienti || tmp);
+    lahde = a.manifesti ? `${a.manifesti} (--manifesti)` : asetus ? `${asetus} (asetus)` : `${MANIFESTI} (oletus: asetus osoitteet.luennat-manifesti puuttuu)`;
+    man = await lueManifesti(a.manifesti || asetus || MANIFESTI);
     kaikki = kappaleet(a.vienti || tmp);
   } catch (e) { console.log(`ÄÄNITYSJONO: VIKA (${String(e.message || e).slice(0, 200)})`); return 2; }
   finally { if (tmp) rmSync(tmp, { recursive: true, force: true }); }
@@ -221,9 +233,11 @@ async function main(argv) {
   let jono = lueJono(a.jono);
   if (a.siivoa) {
     const ennen = jono.length;
+    // Jonoon jää vain sisällössä oleva ja yhä äänittämätön (osuma myös normalisoimattomalla tekstillä = äänitetty).
     const kaikkiAvaimet = new Set(kaikki.map((r) => avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi)));
-    const aanitetty = jono.filter((r) => r.avain in man.palat).length;
-    jono = jono.filter((r) => !(r.avain in man.palat) && kaikkiAvaimet.has(r.avain));
+    const yhaPuuttuu = new Set(kaikki.filter((r) => !osuu(r)).map((r) => avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi)));
+    const aanitetty = jono.filter((r) => kaikkiAvaimet.has(r.avain) && !yhaPuuttuu.has(r.avain)).length;
+    jono = jono.filter((r) => yhaPuuttuu.has(r.avain));
     kirjoitaJono(jono, a.jono);
     console.log(`siivous: ${ennen} → ${jono.length} riviä (äänitetty ${aanitetty}, teksti ei enää sisällössä ${ennen - jono.length - aanitetty})`);
   }
@@ -236,10 +250,18 @@ async function main(argv) {
     console.log(`lisätty jonoon ${vailla.length} riviä (${a.jono})`);
     vailla.length = 0;
   }
+  if (a.aanitettavat) {
+    const teksti = new Map(kaikki.map((r) => [avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi), r]));
+    const out = jono.filter((r) => teksti.has(r.avain)).map((r) => { const k = teksti.get(r.avain);
+      return { avain: r.avain, kaupunki: r.kaupunki, paketti: r.paketti, kohde: r.kohde, pala: Number(r.pala), paiva: r.paiva, teksti: norm(k.teksti), loppuTagi: k.tagi ?? '' }; });
+    writeFileSync(a.aanitettavat, JSON.stringify({ manifesti: lahde, aani: man.aani, malli: man.malli, nopeus: NOPEUS, rivit: out }, null, 1) + '\n');
+    console.log(`äänitettävät ${out.length} → ${a.aanitettavat}`);
+  }
   if (a.tsv) writeFileSync(a.tsv, ['kaupunki\tpaketti\tkohde\tpala\tavain\tjonossa\ttekstin_alku',
     ...[...puuttuvat.values()].map((r) => [r.kaupunki, r.paketti, r.kohde, r.pala, r.avain, jonossa.has(r.avain) ? 'k' : 'e', r.teksti.slice(0, 80).replace(/\s+/g, ' ')].join('\t'))].join('\n') + '\n');
 
   const laske = (rivit) => { const m = new Map(); for (const r of rivit) m.set(r.kaupunki, (m.get(r.kaupunki) || 0) + 1); return [...m].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0])); };
+  console.log(`manifesti ${lahde}`);
   console.log(`kappaleita ${alue.length}${a.kaikki ? '' : ' (Eurooppa)'}, valmiina ${alue.length - [...alue].filter((r) => !osuu(r)).length}, puuttuu ${puuttuvat.size} (jonossa ${puuttuvat.size - vailla.length})`);
   console.log(`puuttuvat kaupungeittain: ${laske([...puuttuvat.values()]).map(([k, n]) => `${k} ${n}`).join(', ') || '–'}`);
   if (vailla.length) {

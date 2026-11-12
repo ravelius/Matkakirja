@@ -130,7 +130,7 @@ se tarvitsee simu- tai laiteajon. Päiväjunassa vaihe on EI AJETTU.
 
 - **Mitä:** `node tools/aanitysjono/tarkista.mjs` (noin 12 s). Jokaisella luettavalla kappaleella (Eurooppa ja Arktis/Antarktis:
   nähtävyysjutut, skandaalit, historian hetket, eläintäyt, täkynostot, fokusvirrat, hahmotelmat, maasto- ja fokuskohteet)
-  on oltava valmis äänite luentojen manifestissa (v9) tai rivi `data/aanitysjono.tsv`:ssä. Muuten HYLÄTTY ja luku kaupungeittain.
+  on oltava valmis äänite samassa luentojen manifestissa, jota peli lukee (asetus `osoitteet.luennat-manifesti`, nyt v11), tai rivi `data/aanitysjono.tsv`:ssä. Muuten HYLÄTTY ja luku kaupungeittain.
 - **Tekstin muuttaja:** aja `node tools/aanitysjono/tarkista.mjs --lisaa` ja commitoi jonon rivit SAMASSA commitissa tekstin kanssa.
 - **Jono = Äänittäjän työlista** (avain, kaupunki, paketti, kohde, pala, päivä). Viennin jälkeen `--siivoa` poistaa äänitetyt ja
   rivit, joiden tekstiä ei enää ole. Avain ja kappalejako = natiivin `Valmisluennat.Avain` ja `Puhe.cs`.
