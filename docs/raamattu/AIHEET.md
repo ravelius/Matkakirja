@@ -9,7 +9,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kartta-ja-pallo | Kartta ja pallo | KS | – | – |
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | – | – |
 | kaupungit | Kaupungit | KS | – | – |
-| nahtavyydet | Nähtävyydet | KS | – | – |
+| nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
 | opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | – | – |
 | kamera | Kamera | PK | 2.8 kt | 12.11.2026 |
 | juoksupeli | Juoksupeli | PK | 2.9 kt | 12.11.2026 |
