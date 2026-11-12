@@ -66,3 +66,5 @@ SEURAAVAT ASKELEET:
   TARKISTA: kaksi peräkkäistä ajoa → sama suuntima/kallistus kohteittain; jos ei, NahtavyysEsittely.NapautaMallin kulma (NS:n ala?) → NS:lle.
 - LISÄYS 03.4x: VAKIOAJO VALMIS 631172274 (JU 03.41: a = b identtiset asennot, 4 ajoa rc 0, PUUTE 0, Pariisi 42/42, Lontoo 66/66). KK:lle lähetetty
   junasanaa varten (03.4x). KK:n junasanalla → pt-ok PT:ltä (631172274, natiivi-backup natiivi-ui/vakioajo). NS:lle tiedoksi.
+- LISÄYS 03.4x: KK:N JUNASANA 03.42 vakioajo 631172274 → pt-ok PYYDETTY PT:ltä (03.4x). Jäljellä vain vakiokuvien komento käännökseen (PT/JU).
+- KK 03.42: PARIISIN TEKSTIVERSION AJO -5 (linja KK 01.38 yllä) ON KÄRJESSÄ ENNEN MUUTA → aloita siitä.
