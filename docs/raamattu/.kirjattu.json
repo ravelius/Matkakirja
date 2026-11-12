@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "62f097aad4c5364d",
-  "aika": "2026-11-12T10:49:22.136Z"
+  "sha": "e55a2d49285e26c4",
+  "aika": "2026-11-12T10:49:27.892Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -190,5 +190,9 @@
  "aiheet/kohtaamiset-ja-reaktiot.md": {
   "sha": "f347c52b021cb4a2",
   "aika": "2026-11-12T10:49:22.136Z"
+ },
+ "aiheet/iss-ja-avaruus.md": {
+  "sha": "1b12b996ca3e8c29",
+  "aika": "2026-11-12T10:49:27.892Z"
  }
 }
