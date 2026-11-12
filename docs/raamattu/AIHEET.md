@@ -25,7 +25,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | aarteet | Aarteet | PK | 2.9 kt | 12.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | – | – |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
-| pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
+| pelit-ja-minipelit | Pelit ja minipelit | PK | 2.8 kt | 12.11.2026 |
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
 | tyylikirja | Tyylikirja | NUI | 3.0 kt | 12.11.2026 |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |
