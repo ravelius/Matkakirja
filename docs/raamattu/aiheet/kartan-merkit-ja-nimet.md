@@ -18,6 +18,7 @@ SÄÄNNÖT:
 13. Jokainen näkyvä merkki ja nimi on napautettava. [R-4.38]
 14. Linssikaupungit sykkivät violettina ja Olavinlinna sinisenä hunnun päällä. [R-2.188]
 15. Karttaselite sytyttää aiheen kohteet valotäplällä: kahdeksan pääkategoriaa ja tiimalasi. [R-4.37]
+16. Pelinappula on yksinkertainen lautapelinappula: lämmin valkoinen, ohut ääriviiva. [R-2.15]
 
 EI VIKA:
 - Kaupunkikommentti ilman kuplaa.
@@ -27,6 +28,6 @@ EI VIKA:
 - Päällekkäinen nimi katoaa.
 
 TEKOTAPA:
-- tools/tarkista-karttamerkit.mjs; uusi elementti iPadin panorointiajolla.
+- tools/tarkista-karttamerkit.mjs; uusi elementti panorointiajolla Macilla, iPadilla KK:n erässä.
 - Näkyvä työ: karkea kuva KK:lle ensin.
 - Lipun asento: mallit-ja-3d. Pohja ja sumu: kartta-ja-pallo. Aarre: aarteet.
