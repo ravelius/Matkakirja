@@ -56,6 +56,8 @@ Katso /Users/Shared/Claude/osoitekirja.md (ainoa ajantasainen lähde; Linssisepp
 ## Levyn tilapäinen sääntö (PT 14.05)
 Levyä 10 min välein; hälytä PT:lle vain jos vapaa < 45 Gi tai lasku > 1 Gi/min vielä 14.20 jälkeen (14.03 lasku oli swapia, dsymutil ja uudet Unity-worktreet).
 
+- ÄÄNIMASTERIT NAS:LLE (KK 12.11. 15.45, aaniluvat sääntö 8: raaka-PCM vain T7:llä; PT teki ensikopion 12.11. 15.5x, 9825 tdst / 24 Gt): yökierroksella kerran vuorokaudessa (klo 02–05, ei hiljaisella tunnilla), kun T7 ja NAS ovat liitettyinä: `rsync -a "/Volumes/T7 4TB/Matkakirja-aanimasterit/" /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/aanimasterit/` (EI --deleteä). Rivi PT:lle vain virheestä tai jos levy puuttuu.
+
 ## Levyn pysyvä raja (PT 15.20, omistaja; Raamattu LEVYJAKO)
 Käynnistyslevyllä aina vähintään 100 Gi vapaana. Kirjoita PT:lle yksi rivi heti kun vapaa < 100 Gi. Korvaa aiemman 45 Gi:n ja 1 Gi/min -säännöt.
 
