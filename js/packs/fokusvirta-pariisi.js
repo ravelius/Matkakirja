@@ -677,9 +677,10 @@ export const FOKUSVIRTA_PARIISI = {
        * annettiin vasta 1985 — aikalaisten nimi kerrotaan sen sijaan.
        *
        * LÄHETYSVUOTTA EI MAINITA. Aineistossa lukee sekä "lähetti 1827"
-       * että "saapui Marseilleen 31.10.1826"; kumpaakaan ei ole
-       * muutettu, vaan tekstiin on otettu vain se päivämäärä, jonka
-       * lähde antaa täsmällisenä.
+       * että "saapui Marseilleen 31.10.1826"; tekstiin on otettu vain
+       * saapumispäivä 31.10.1826 ja kävelyn lähtö toukokuussa 1827
+       * (en-Wikipedia: talvehti Marseillessa, lähti 20.5.1827, 41 päivää;
+       * nimiö ja otsikko "Kirahvi 1827", KK 12.11.2026).
        */
       id: 'kirahvin-kavelymatka',
       nimio: 'Kirahvi 1827',
@@ -702,7 +703,8 @@ export const FOKUSVIRTA_PARIISI = {
           + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
           + 'Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti '
           + 'eläimelle kaksiosaisen keltaisen takin ja kengät.',
-        'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
+        'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa '
+          + '1827. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
           + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka '
           + 'kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, '
           + 'kankaisiin ilmestyi täpliä ja väri nimeltä ”kirahvin vatsa” myi '
