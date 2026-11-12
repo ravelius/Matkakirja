@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "e1e5a5f7bcd256be",
-  "aika": "2026-11-12T09:01:36.676Z"
+  "sha": "76fc6c568dbb5370",
+  "aika": "2026-11-12T09:14:43.317Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -94,5 +94,9 @@
  "aiheet/testit.md": {
   "sha": "55cff95c342c85f9",
   "aika": "2026-11-12T08:56:42.951Z"
+ },
+ "aiheet/tyylikirja.md": {
+  "sha": "056d475f8553fee0",
+  "aika": "2026-11-12T09:14:43.317Z"
  }
 }
