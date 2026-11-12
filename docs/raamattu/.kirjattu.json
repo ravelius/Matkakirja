@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "e758505d38dfcc4e",
-  "aika": "2026-11-12T13:21:22.417Z"
+  "sha": "d66c4e79cc91d26f",
+  "aika": "2026-11-12T13:31:24.350Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -24,8 +24,8 @@
   "aika": "2026-11-12T08:28:29.126Z"
  },
  "paatokset/2026-11.md": {
-  "sha": "1c164692d74edebe",
-  "aika": "2026-11-12T10:05:48.033Z"
+  "sha": "db4e71bfc0e56f81",
+  "aika": "2026-11-12T13:31:02.300Z"
  },
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
@@ -56,8 +56,8 @@
   "aika": "2026-11-12T08:16:22.150Z"
  },
  "paatokset/2026-10.md": {
-  "sha": "299c42df118f7468",
-  "aika": "2026-11-12T09:30:21.026Z"
+  "sha": "4c0d708570567a1e",
+  "aika": "2026-11-12T13:30:57.391Z"
  },
  "C-talo.md": {
   "sha": "f3d92a3c1df07315",
@@ -198,5 +198,21 @@
  "aiheet/linnat-ja-dioraamat.md": {
   "sha": "b16589a189b36c12",
   "aika": "2026-11-12T10:54:56.054Z"
+ },
+ "aiheet/valo-ja-materiaalit.md": {
+  "sha": "a00d7da3452136b1",
+  "aika": "2026-11-12T13:31:07.286Z"
+ },
+ "aiheet/musiikki-ja-tehosteet.md": {
+  "sha": "26c20ab4eb0172ba",
+  "aika": "2026-11-12T13:31:12.701Z"
+ },
+ "aiheet/aaniluvat-ja-aaniportti.md": {
+  "sha": "c877745792e6b29a",
+  "aika": "2026-11-12T13:31:17.920Z"
+ },
+ "aiheet/media-ja-ampari.md": {
+  "sha": "c00d5f7df97d1910",
+  "aika": "2026-11-12T13:31:24.350Z"
  }
 }
