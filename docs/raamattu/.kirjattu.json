@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "3333b0b3c867e91c",
-  "aika": "2026-11-12T09:22:34.294Z"
+  "sha": "4c2a876bd5a5e4c4",
+  "aika": "2026-11-12T09:31:10.986Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -24,8 +24,8 @@
   "aika": "2026-11-12T08:28:29.126Z"
  },
  "paatokset/2026-11.md": {
-  "sha": "c32bb051ceb24d98",
-  "aika": "2026-11-12T09:01:10.649Z"
+  "sha": "cd9e92bb259682ba",
+  "aika": "2026-11-12T09:30:39.561Z"
  },
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
@@ -56,8 +56,8 @@
   "aika": "2026-11-12T08:16:22.150Z"
  },
  "paatokset/2026-10.md": {
-  "sha": "7e9a03d32c0c51d4",
-  "aika": "2026-11-12T08:51:09.778Z"
+  "sha": "299c42df118f7468",
+  "aika": "2026-11-12T09:30:21.026Z"
  },
  "C-talo.md": {
   "sha": "f3d92a3c1df07315",
@@ -80,8 +80,8 @@
   "aika": "2026-11-12T08:33:31.727Z"
  },
  "aiheet/grafiikan-tuotanto.md": {
-  "sha": "2010331b6bd07e52",
-  "aika": "2026-11-12T08:51:37.735Z"
+  "sha": "492ffa7227bb4e4e",
+  "aika": "2026-11-12T09:31:10.986Z"
  },
  "aiheet/saapuminen-ja-intro.md": {
   "sha": "0824955b4bf96f38",
@@ -110,5 +110,21 @@
  "aiheet/matkustus-ja-reitit.md": {
   "sha": "fca3b85118121d61",
   "aika": "2026-11-12T09:15:05.977Z"
+ },
+ "aiheet/avaimet-ja-luvat.md": {
+  "sha": "4609dc4dd4f29b11",
+  "aika": "2026-11-12T09:30:46.716Z"
+ },
+ "aiheet/lisenssit-ja-lataukset.md": {
+  "sha": "fc50c199d8be1748",
+  "aika": "2026-11-12T09:30:53.880Z"
+ },
+ "aiheet/roolit-ja-viestit.md": {
+  "sha": "216f4454a93ad4b1",
+  "aika": "2026-11-12T09:31:00.026Z"
+ },
+ "aiheet/omistajan-kanssa.md": {
+  "sha": "93e9478eb1a0a4cf",
+  "aika": "2026-11-12T09:31:05.744Z"
  }
 }

@@ -24,4 +24,4 @@ EI VIKA:
 TEKOTAPA:
 - Posti: haara claude/postilaatikko. Vahti: Matkakirja-posti/codex-odottaa.py.
 - Herokuvat: tools/hero-kuvakulmat.mjs. Mallitoimitus: tuotantopohjat/codex-3d-toimitus.md.
-- Lupa muuhun generointiin: kertojaaanet, avaimet-ja-luvat.
+- Lupa muuhun generointiin: kertojaaanet, omistajan-kanssa.
