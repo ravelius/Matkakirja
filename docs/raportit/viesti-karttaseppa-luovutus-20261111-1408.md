@@ -714,3 +714,7 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 ## LISÄYS 56 (02.5x): Pampus-rajaus KK:lle, NIMET VALMIS
 - KJ55b katsottu: "Pampus" saaren keskellä junassa 224.94 (koodijuna/nimet-kj55/parit/rajaus-nm55b-pampus-224-94.jpg) → KK tiedoksi 02.5x. Amsterdamin nimet VALMIS.
 - SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) Montmartre KJ43 5) KJ53 (LISÄYS 54) 6) GHSL 7) PP:n ikkunakolmio 8) kehämuurien nimet (Rooma ensin).
+
+## LISÄYS 57 (03.3x): NS T1 (kaupunkitaulu) JUNASSA 224.95
+- JU 03.3x: 224.95 toi NS T1:n; sillat 62da37f7e:ssä kuten 224.94 (Pariisi 7/7, Lontoo 5/5). SEURAAJALLE: KJ49c (300c6b99d) ja pitkät (ced23df14) ovat T1-pohjalla –
+  "ilman NS T1:tä" -poiminta ei ehkä enää tarpeen; tarkista uusin junakärki (natiivi-backup) ja yhdistä/poimi sen päälle, testit ennen pt-ok:ta.
