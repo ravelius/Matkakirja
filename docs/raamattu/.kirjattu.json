@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "e36ea8e7f994dd83",
-  "aika": "2026-11-12T13:31:17.920Z"
+  "sha": "d66c4e79cc91d26f",
+  "aika": "2026-11-12T13:31:24.350Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -210,5 +210,9 @@
  "aiheet/aaniluvat-ja-aaniportti.md": {
   "sha": "c877745792e6b29a",
   "aika": "2026-11-12T13:31:17.920Z"
+ },
+ "aiheet/media-ja-ampari.md": {
+  "sha": "c00d5f7df97d1910",
+  "aika": "2026-11-12T13:31:24.350Z"
  }
 }
