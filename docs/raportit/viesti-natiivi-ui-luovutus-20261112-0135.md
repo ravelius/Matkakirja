@@ -94,3 +94,8 @@ SEURAAVAT ASKELEET:
 - PT 08.4x: CODEXIN TARINAMERKIT (6f2839967) vastaanotettu, kuittaus postilaatikko 495eab4f2; arkki KK:lle 08.43. Koe junan päälle ad63f29a1
   (natiivi-ui/tarinamerkki-koe-2, worktree wt/nui-tarina), skenaario sk-tarinamerkki-4.txt, Mac-ajo pyydetty JU:lta → lokit/nui-tarinamerkki-4-ad63f29a1
   → katso tila-rivit (ladattu, piirretty > 0) ja kuvat l1–l6, k1–k5 → KK:lle yksi viesti → kortti omistajalle KK:n kautta.
+- KK 08.49: introrivit 561fbd57c JUNASANA (pt-ok pyydetty PT:ltä 08.5x); kyltti ja vakioajo SULJETTU (ei kehittäjän alarajaa; nimeämistä ei tehty,
+  "katukuva"-nimeä ei ole NUI:n koodissa). TARINAMERKIT: vain kirja + tiimalasi, A sellaisenaan / B paperipohja koodilla → 00bc4abc1
+  (komento tarinamerkit pohja 0|1), sk-tarinamerkki-5.txt (katot / Jardin des Plantes / Seine, kultatähti + ND + Panthéon samassa näkymässä,
+  PISTEKERROIN 0.397 = laitteen 2,0 px/pt) JU:lla → lokit/nui-tarinamerkki-5-00bc4abc1 → täysikokoiset rajaukset KK:lle; KK valitsee (ei korttia).
+  -4 (ad63f29a1, kaikki viisi, 0.465) valmis vertailuksi.
