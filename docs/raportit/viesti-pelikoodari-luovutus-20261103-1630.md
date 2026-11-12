@@ -36,3 +36,12 @@ Proto-haarat ovat paikallisia (proto-3d:llä ei etärepoa); worktree /Users/Shar
 4. Codex-toimitukset odottavat yhä (Viimeisen keisarin nosto 5345c2379, postilaatikossa ei vastausta 16.2x).
 5. MUISTA (ennallaan): Editor-työkalumuutokset myös kivi-216-puuhun (tyokalut/esikatselu.sh kopioi sieltä).
 6. Checkout /Users/Shared/Claude/Matkakirja-pelikoodari: luovutushaara koti/pelikoodari-20261103-1630.
+
+## LISÄYS 16.40: taso1b-ag valmis (sali-218ag/20261103-162232-taso1b-v3.mp4, 97,3 s; "VIKA kuvia ei syntynyt" on taso1b:ssä normaali)
+- Kohta 3 OK: 25–31 s eunukki ovella ja Puyi samassa kuvassa koko ajan.
+- Kohta 1 OK: aukio 76–92 s rakennukset, puut ja taivas (131103d47).
+- Kohta 2 EI TODISTETTU: tässä ajossa ei yhtään vartijaa juoksun aikana (ei "varoitus"-riviä; eri siemen). Tarvitsee ajon, jossa
+  liuku vartijan alta (esim. sali-ajon skenaario vartijalla tai sama siemen kuin af 1217174437).
+- 93–97 s: yhä jyrkkä kuva pelkkää kiveystä porttikäytävän jälkeen (ks. -1535: YhtKulmaMax katon alla → kuja-kulma) – AUKI.
+- Ennen avausta (botti pois) "kiinni takaa v1 z10" – skenaarion odotusvaihe, ei tallenteessa.
+- KK-paketti valmiina PT:lle: /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/sali-218ag/kk-taso1b/ (taso1b-218ag.mp4 + arkki-01…05, 20 s/arkki).
