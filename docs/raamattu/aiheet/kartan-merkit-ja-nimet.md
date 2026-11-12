@@ -1,0 +1,32 @@
+# kartan-merkit-ja-nimet · vastuu NUI · tarkistettu 12.11.2026
+
+TAVOITE: Kartta on kuin painettu isoisän ajan kartta: merkit ja nimet pysyvät paikallaan. Kohteen lajin tunnistaa yhdellä vilkaisulla, ja kartta pysyy rauhallisena.
+
+SÄÄNNÖT:
+1. Nimet, kyltit ja merkit ovat kiinni kartan pinnassa eivätkä väistele, hypi tai liu'u. Nimellä on yksi kiinteä paikka ja kylki. [R-2.216]
+2. Päällekkäisistä nimistä vähemmän tärkeä jää pois, aina sama: pysäkit, kaupungit, nostotasot 1–3, pääkaupunkipisteet. Nimi ei jää merkin alle. [R-2.216] [R-2.144] [R-1.13]
+3. Nimet vain näkyvän kartan päällä. Pohjalla vain pysyvät nimet; vuoden 1873 poliittiset nimet ja rajat vain 1873-linssissä. [R-2.215] [R-2.143]
+4. Oletuksena kylien, nähtävyyksien ja jokien nimet; kadut, kaupunginosat ja pienet vedet Kartta-välilehdeltä. [P-261110-nimet] [R-2.73]
+5. Maan ja Euroopan näkymissä kaupunki on yksi piste ja nimi, pääkaupunki kaksoisrenkaalla. Pääkaupunkipiste on pienintä tärkeysluokkaa. [R-2.137] [R-4.38] [R-1.13]
+6. Vain 2D-merkkejä ja vain kohteilla, joissa on pelattavaa tai kohdelinssi. Kohteet ovat paikkoja samalla kontrastilla: kaupungissa nähtävyys, kadonnut ihme ja tarinapaikka. [R-2.167] [R-2.139] [P-261110-kolmelajia]
+7. Kuvamerkit ovat pieniä pyöreitä, yksi per kohde; napautus suurentaa nopeasti. Nostomerkki on värikiekko; omaa muotoa vain vuori, vesi, skandaali, tassu ja ihme. Löydetty ja löytämätön näyttävät samalta. [R-2.205] [R-4.38] [R-4.39]
+8. Kadonnut ihme on pyörivä piirretty kultatähti, alla kuvakyltti (kuva ja nimi); paikan toinen nimi jää pois. [P-261102-tahti] [P-261110-kuvakyltti]
+9. Tarinamerkki on yksinkertainen siluetti, ei koskaan tähteä leveämpi. Se väistää kaikki kiinteät nimet; samassa paikassa tähti voittaa. [P-261112-tarinamerkki] [P-261110-tarinamerkki]
+10. Nimikyltit ovat pieniä, kiinteän kokoisia ja ilmestyvät vasta lähellä; erikoiskohteilla sama kyltti, maksullisessa hinta. [P-261105-kyltit] [R-2.212]
+11. Kohdemaan merkit piirtyvät heti ilman kattoa. Saman aiheen nostot ovat yksi merkki, joka avautuu listaksi. [R-2.145] [R-2.137]
+12. Kohdemaan lippu näkyy kaikilla tasoilla samankokoisena. [R-2.167]
+13. Jokainen näkyvä merkki ja nimi on napautettava. [R-4.38]
+14. Linssikaupungit sykkivät violettina ja Olavinlinna sinisenä hunnun päällä. [R-2.188]
+15. Karttaselite sytyttää aiheen kohteet valotäplällä: kahdeksan pääkategoriaa ja tiimalasi. [R-4.37]
+
+EI VIKA:
+- Kaupunkikommentti ilman kuplaa.
+- Alakulman maakyltti näyttää pelaajan maan.
+- Lippu Elsassissa.
+- Esittelyn suuri tähti.
+- Päällekkäinen nimi katoaa.
+
+TEKOTAPA:
+- tools/tarkista-karttamerkit.mjs; uusi elementti iPadin panorointiajolla.
+- Näkyvä työ: karkea kuva KK:lle ensin.
+- Lipun asento: mallit-ja-3d. Pohja ja sumu: kartta-ja-pallo. Aarre: aarteet.
