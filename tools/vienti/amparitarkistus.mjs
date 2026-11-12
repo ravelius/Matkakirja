@@ -35,11 +35,12 @@ export function manifestinPolut(manifest) {
   return [...polut].sort();
 }
 
-async function head(url, yrityksia = 3) {
+// 429 (Julkaisija 13.11.2026): CDN:n nopeusraja on ohimenevä kuten 5xx (v1084: 1/935 HEAD 429 kaatoi viennin) → uusitaan.
+async function head(url, yrityksia = 6) {
   for (let i = 0; ; i += 1) {
     try {
       const v = await fetch(url, { method: 'HEAD', headers: { 'accept-encoding': 'identity' } }); // pakkaamaton koko
-      if (v.ok || i + 1 >= yrityksia || v.status < 500) return { tila: v.status, koko: Number(v.headers.get('content-length') ?? NaN) };
+      if (v.ok || i + 1 >= yrityksia || (v.status < 500 && v.status !== 429)) return { tila: v.status, koko: Number(v.headers.get('content-length') ?? NaN) };
     } catch (e) {
       if (i + 1 >= yrityksia) return { tila: `verkko: ${e.cause?.code ?? e.message}`, koko: NaN };
     }
