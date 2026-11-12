@@ -818,7 +818,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Muuri 1961': {
+    'Berliini 1961': {
       nosto: 'hetki-berliinin-muuri-1961',
       teksti: 'Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. '
         + 'On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, '
@@ -2890,7 +2890,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Tunneli 1827': {
+    'Brunel 1827': {
       nosto: 'hetki-brunel-thames-tunnel-1827',
       teksti: 'Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä '
         + 'Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja '
@@ -2925,7 +2925,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Palo 1666': {
+    'Lontoon palo 1666': {
       nosto: 'hetki-lontoon-palo-1666',
       teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä '
         + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. Laivaston virkamies '
@@ -2958,7 +2958,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Globe 1599': {
+    'Shakespeare 1599': {
       nosto: 'hetki-shakespeare-globe-1599',
       teksti: 'Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon '
         + 'keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa '
@@ -4267,7 +4267,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Yhdeksäs 1824': {
+    'Beethoven 1824': {
       nosto: 'hetki-beethoven-yhdeksas-1824',
       teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline '
         + 'Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, '
@@ -4286,7 +4286,7 @@ export const NAHTAVYYSJUTUT = {
         + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen kolme '
         + 'osaa. Sävel on nyt Euroopan hymni.',
     },
-    'Figaro 1786': {
+    'Mozart 1786': {
       nosto: 'hetki-mozart-wien-1786',
       teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin '
         + 'Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, '
@@ -5320,7 +5320,7 @@ export const NAHTAVYYSJUTUT = {
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee kartalla.
      * Kenttä `nosto` kertoo, mistä karsitusta merkistä juttu on.
      */
-    'Carmenin ensi-ilta': {
+    'Bizet 1875': {
       nosto: 'nosto-carmenin-ensi-ilta',
       teksti: 'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, '
         + 'ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi '
@@ -5359,7 +5359,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kirahvin kävelymatka': {
+    'Kirahvi 1827': {
       nosto: 'nosto-kirahvin-kavelymatka',
       teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle '
         + 'X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa '
@@ -5369,7 +5369,8 @@ export const NAHTAVYYSJUTUT = {
         + 'käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja '
         + 'kengät.'
         + '\n\n'
-        + 'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
+        + 'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa '
+        + '1827. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
         + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
         + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi '
         + 'täpliä ja väri nimeltä ”kirahvin vatsa” myi kaiken. Aikalaiset '
@@ -5391,7 +5392,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Torni romuraudaksi': {
+    'Lustig 1925': {
       nosto: 'nosto-lustig-eiffel',
       teksti: 'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
         + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän '
@@ -5441,7 +5442,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Impressionistit': {
+    'Monet 1874': {
       nosto: 'syvennys-pariisi-impressionistit',
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä '
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
@@ -5466,7 +5467,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kyyhkyposti': {
+    'Piiritys 1870': {
       nosto: 'syvennys-pariisi-kyyhkyposti',
       teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset '
         + 'sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat '
@@ -5528,7 +5529,7 @@ export const NAHTAVYYSJUTUT = {
      * — tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    '72 nimeä': {
+    'Tornin nimet 2026': {
       nosto: 'nosto-pariisin-72-nimea',
       teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
         + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
@@ -5550,7 +5551,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Metron sisäänkäynti': {
+    'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
       teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
         + 'oli järjestetty arkkitehtikilpailu, mutta yksikään 21 '
@@ -5569,7 +5570,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Notre-Damen kukko': {
+    'Notre-Dame 2019': {
       nosto: 'nosto-notre-damen-kukko',
       teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
         + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
@@ -5592,7 +5593,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Pariisi soi': {
+    'Piaf ja Django': {
       nosto: 'nosto-pariisi-soi',
       teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
         + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
@@ -5621,7 +5622,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Paras patonki': {
+    'Patonki 1994': {
       nosto: 'nosto-pariisin-patonki',
       teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
         + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
@@ -5643,7 +5644,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Pariisin vuosisadat': {
+    'Kaulanauha 1785': {
       nosto: 'nosto-pariisin-vuosisadat',
       teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
         + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
@@ -5716,20 +5717,24 @@ export const NAHTAVYYSJUTUT = {
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
     'Curie 1898': {
       nosto: 'hetki-marie-curie-hangaari-1898',
-      teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
-        + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
-        + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
-        + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
-        + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
-        + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta '
-        + 'samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on '
-        + 'saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten '
-        + 'pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä '
-        + 'uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty '
-        + 'kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön '
-        + 'säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja '
-        + 'ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan '
-        + 'Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
+      teksti: 'Pariisissa Marie ja Pierre Curie ilmoittavat vuonna 1898 '
+        + 'löytäneensä kaksi uutta alkuainetta, poloniumin ja radiumin, ja '
+        + 'todistavat sen sitten vuosia vuotavassa vajassa keittämällä '
+        + 'tonneittain kaivosjätettä. Olkapäät ovat puutuneet jo '
+        + 'aamupäivällä, mutta tankoa ei voi laskea. Marie sekoittaa kiehuvaa '
+        + 'pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen '
+        + 'lääketieteellisen koulun ruumiinavaussali, vuotaa sateella '
+        + 'katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo '
+        + 'työn kannattavan. Polonium on ilmoitettu heinäkuussa 1898 ja '
+        + 'radium 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä '
+        + 'kemisteille — uusi alkuaine on saatava käteen puhtaana. Se '
+        + 'tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, '
+        + 'suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, '
+        + 'jolloin tonnista malmia on eristetty kymmenesosagramma '
+        + 'radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee '
+        + 'käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee '
+        + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
+        + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
         + 'vuonna 1911 saa kemian palkinnon yksin.',
       kuvat: [
         {
@@ -5748,22 +5753,20 @@ export const NAHTAVYYSJUTUT = {
     },
     'Lavoisier 1780': {
       nosto: 'hetki-lavoisier-laboratorio-1780',
-      teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
-        + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
-        + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
-        + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
-        + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä '
-        + 'vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja '
-        + 'osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on '
-        + 'yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu '
-        + 'Marie-Anne Paulze Lavoisier, joka naitettiin hänelle '
-        + 'kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
-        + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
-        + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
-        + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
-        + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
-        + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
-        + 'vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+      teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+        + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
+        + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
+        + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
+        + 'esine ja tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät '
+        + 'myyvät, sillä Lavoisier punnitsee kaiken ennen koetta ja sen '
+        + 'jälkeen. Vastapäätä istuu hänen vaimonsa Marie-Anne Paulze '
+        + 'Lavoisier. Hän on oppinut englannin kääntääkseen Priestleyn ja '
+        + 'Kirwanin kirjoitukset, ja hän piirtää laitteet niin tarkasti, että '
+        + 'muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy ensimmäinen '
+        + 'moderni kemian oppikirja, jossa on kolmetoista Marie-Annen '
+        + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+        + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
+        + 'veronkantajana.',
       kuvat: [
         {
           tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
@@ -5776,22 +5779,25 @@ export const NAHTAVYYSJUTUT = {
     },
     'Pasteur 1862': {
       nosto: 'hetki-pasteur-pullot-1862',
-      teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis '
-        + 'Pasteur nostaa sen valoa vasten École normale supérieuren '
-        + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan '
-        + 'muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn '
-        + 'mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja '
-        + 'haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö '
-        + 'elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix '
-        + 'Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. '
-        + 'Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, '
-        + 'joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille '
-        + 'ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat '
-        + 'pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän '
-        + 'on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna '
-        + '1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
-        + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny '
-        + 'itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+      teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, ettei '
+        + 'elämä synny itsestään mätänevästä aineesta vaan näkymätön elämä '
+        + 'tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun palkinnon '
+        + 'vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja pullo on yhä '
+        + 'kirkas. Pasteur nostaa sen valoa vasten École normale supérieuren '
+        + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
+        + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
+        + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
+        + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
+        + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
+        + 'Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään '
+        + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
+        + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
+        + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
+        + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
+        + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
+        + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+        + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
+        + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
       kuvat: [
         {
           tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
@@ -5807,24 +5813,27 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Torni 1888': {
+    'Eiffel-torni 1888': {
       nosto: 'hetki-eiffel-torni-1888',
-      teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
-        + 'niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
-        + 'Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu '
-        + 'yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti '
-        + 'lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen '
-        + 'kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin '
-        + 'valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: '
-        + 'jokainen 18 038 osasta on piirretty Levallois-Perret\'n konepajalla '
-        + 'kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään '
-        + 'takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. '
-        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja '
-        + 'Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, '
-        + 'Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella '
-        + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. '
-        + 'Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, '
-        + 'koska sen huipulle sopii radioantenni.',
+      teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
+        + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
+        + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
+        + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+        + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
+        + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
+        + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
+        + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
+        + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
+        + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
+        + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
+        + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
+        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
+        + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
+        + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
+        + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
+        + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
+        + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+        + 'radioantenni.',
       kuvat: [
         {
           tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
@@ -5842,26 +5851,29 @@ export const NAHTAVYYSJUTUT = {
     },
     'Bastilji 1789': {
       nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
-      teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa '
-        + 'on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt '
-        + 'Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei '
-        + 'panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten '
-        + 'Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin '
-        + 'reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun '
+      teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin linnoitukseen '
+        + 'hakemaan sinne siirrettyä ruutia, ja illalla kuvernööri de Launay '
+        + 'antautuu. Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
+        + 'Aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin '
+        + 'asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 '
+        + 'tynnyriä — on siirretty muutama päivä sitten Bastiljiin, '
+        + 'keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. '
+        + 'Siksi kansa on siellä. Kuningas on erottanut suositun '
         + 'rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; '
         + 'Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että '
         + 'verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 '
-        + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, '
-        + 'joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. '
-        + 'Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes '
-        + 'sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet '
-        + 'raahataan kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
-        + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-        + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
-        + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
-        + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
-        + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
-        + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+        + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän '
+        + 'vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko '
+        + 'päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, '
+        + 'ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay '
+        + 'antautuu; hänet raahataan kaupungintalolle ja surmataan sen '
+        + 'edessä. Linnoitus puretaan seuraavina kuukausina. Kolme päivää '
+        + 'myöhemmin Ludvig XVI tulee Versailles\'sta Pariisin '
+        + 'kaupungintalolle, ja hänelle annetaan vallankumouksen kokardi '
+        + 'hattuun kiinnitettäväksi. Perimätiedon mukaan Lafayette lisää '
+        + 'kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja '
+        + 'sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei '
+        + 'tiedetä, kuka värit yhdisti.',
       kuvat: [
         {
           tiedosto: 'Anonyme - Prise de la Bastille, le 14 juillet 1789 (P707-1) - P707-1 - Musée Carnavalet.jpg',
@@ -5879,24 +5891,27 @@ export const NAHTAVYYSJUTUT = {
     },
     'Lumière 1895': {
       nosto: 'hetki-lumiere-elokuva-1895',
-      teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des '
-        + 'Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
-        + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
-        + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
-        + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset '
-        + 'hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä '
-        + 'kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on '
-        + 'puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. '
-        + 'Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; '
-        + 'heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi '
-        + 'että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet '
-        + 'filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+      teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
+        + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
+        + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+        + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
+        + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
+        + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
+        + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
+        + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
+        + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
+        + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
+        + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
+        + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+        + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
+        + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
+        + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
         + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
-        + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, ettei '
-        + 'keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja keksii '
-        + 'temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le '
-        + 'Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva '
-        + 'on.',
+        + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, '
+        + 'ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja '
+        + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
+        + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
+        + 'liikkuva valokuva on.',
       kuvat: [
         {
           tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',
@@ -6330,7 +6345,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Suomi herää 1899': {
+    'Sibelius 1899': {
       nosto: 'hetki-sibelius-finlandia-1899',
       teksti: 'Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. '
         + 'marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen '
@@ -6711,7 +6726,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Louis 1896': {
+    'Maraton 1896': {
       nosto: 'hetki-olympia-ateena-1896',
       teksti: 'Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää '
         + 'tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin '
@@ -8359,7 +8374,7 @@ export const NAHTAVYYSJUTUT = {
   },
   luxemburg: {
     // Kohdekartan oma piste käyttää samaa tekstiä kuin historian hetki.
-    'Bockin kauppa 963': {
+    'Luxemburg 963': {
       nosto: 'hetki-siegfried-ostaa-bockin-963',
       teksti: 'Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella '
         + 'Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. '
@@ -9820,7 +9835,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Sikstus 1510': {
+    'Michelangelo 1510': {
       nosto: 'hetki-michelangelo-sikstus-1510',
       teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
         + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
@@ -12812,7 +12827,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Jänissaari 1703': {
+    'Pietari 1703': {
       nosto: 'hetki-pietari-perustus-1703',
       teksti: 'Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. '
         + 'Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli '
@@ -14689,7 +14704,7 @@ export const NAHTAVYYSJUTUT = {
   oslo: {
     // Historian hetken kohdekartan piste (omistaja 3.9.2026): juttu on
     // sanatarkasti hetken oma teksti (js/packs/historian-hetket.js).
-    'Fram 1893': {
+    'Nansen 1893': {
       nosto: 'hetki-nansen-fram-1893',
       teksti: 'Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. '
         + '31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman '

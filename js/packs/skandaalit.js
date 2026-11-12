@@ -2287,7 +2287,7 @@ export const SKANDAALIT = {
         'Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?',
         'Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne?',
       ],
-      otsikko: 'Vrain-Lucasin 27 000 väärennettyä kirjettä',
+      otsikko: 'Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä',
       nimio: 'Vrain-Lucas',
       vuosi: '1861–1870',
       paikka: 'Institut de France (tiedeakatemia), Pariisi',

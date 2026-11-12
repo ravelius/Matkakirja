@@ -835,7 +835,7 @@
     "Place des Vosges": "assets/kartat/miniatyyrit/pariisi-place-des-vosges-kk.webp",
     "Tuileries'n palatsi": "assets/kartat/miniatyyrit/pariisi-tuileries-kk.webp",
     "Bastilji": "assets/kartat/miniatyyrit/pariisi-bastilji-vari2-kk.webp",
-    "Metron sisäänkäynti": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2-kk.webp",
+    "Metro 1900": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2-kk.webp",
   },
   "peking": {
     "Vanha kesäpalatsi": "assets/kartat/miniatyyrit/peking-vanha-kesapalatsi-vari2-kk.webp",

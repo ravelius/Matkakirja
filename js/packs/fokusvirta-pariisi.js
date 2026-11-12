@@ -54,7 +54,7 @@ import { MAALEHTINOSTOT_FRA } from './maalehtinostot-fra.js';
  *
  * SISÄLTÖ ON LEHDEN OMAA. Piaf-kysymys on Pariisin lehden sivun 2
  * ("Musiikki") oman noston "Édith Piaf lauloi ensin kadulla" tekstiä
- * ja metrokysymys sivun 1 ("Pariisi") oman noston "Metron sisäänkäynti
+ * ja metrokysymys sivun 1 ("Pariisi") oman noston "Metro 1900
  * koottiin palasista" tekstiä (js/packs/kulttuuri-kategoriat.js).
  * Uusia faktaväitteitä ei ole kummassakaan.
  *
@@ -247,7 +247,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Minne puretun palatsin kivet ja palat päätyivät?',
       ],
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
-      otsikko: 'Tuileriain rauniot',
+      otsikko: 'Tuileries 1883 — palatsin rauniot puretaan',
       teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu '
         + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
         + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
@@ -347,7 +347,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua?',
       ],
       nappi: 'Kyyhkyt, jotka kantoivat kokonaisen kaupungin postin',
-      otsikko: 'Piiritetyn Pariisin kyyhkyposti',
+      otsikko: 'Piiritys 1870 — viestit kulkevat kyyhkyillä',
       teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun '
         + 'preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset '
         + 'lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa '
@@ -409,7 +409,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?',
       ],
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
-      otsikko: 'Nimi, joka oli alun perin pilkkaa',
+      otsikko: 'Monet 1874 — impressionistien ensimmäinen näyttely',
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
@@ -608,9 +608,18 @@ export const FOKUSVIRTA_PARIISI = {
        * nosto jää ainoaksi ilman `valokuva`-kakkoskuvaa.
        */
       id: 'lustig-eiffel',
-      nimio: 'Torni romuraudaksi',
-      otsikko: 'Mies myi Eiffel-tornin romuraudaksi — ja palasi samana '
-        + 'vuonna myymään sen uudelleen',
+      nimio: 'Lustig 1925',
+      otsikko: 'Lustig 1925 — Eiffel-torni myydään romuksi',
+      visa: {
+        kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
+        vaihtoehdot: [
+          'Hän häpesi',
+          'Hän sai rahansa takaisin',
+          'Hän ei huomannut huijausta',
+        ],
+        oikea: 0,
+        fakta: 'Lustig palasi Pariisiin saman vuoden 1925 puolella ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
+      },
       lunastus: [
         'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
           + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi '
@@ -668,14 +677,24 @@ export const FOKUSVIRTA_PARIISI = {
        * annettiin vasta 1985 — aikalaisten nimi kerrotaan sen sijaan.
        *
        * LÄHETYSVUOTTA EI MAINITA. Aineistossa lukee sekä "lähetti 1827"
-       * että "saapui Marseilleen 31.10.1826"; kumpaakaan ei ole
-       * muutettu, vaan tekstiin on otettu vain se päivämäärä, jonka
-       * lähde antaa täsmällisenä.
+       * että "saapui Marseilleen 31.10.1826"; tekstiin on otettu vain
+       * saapumispäivä 31.10.1826 ja kävelyn lähtö toukokuussa 1827
+       * (en-Wikipedia: talvehti Marseillessa, lähti 20.5.1827, 41 päivää;
+       * nimiö ja otsikko "Kirahvi 1827", KK 12.11.2026).
        */
       id: 'kirahvin-kavelymatka',
-      nimio: 'Kirahvi',
-      otsikko: 'Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — '
-        + 'takki päällä ja kengät jalassa',
+      nimio: 'Kirahvi 1827',
+      otsikko: 'Kirahvi 1827 — kävelymatka Pariisiin',
+      visa: {
+        kysymys: 'Miksi kirahvi kulki Marseillesta Pariisiin jalkaisin?',
+        vaihtoehdot: [
+          'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena',
+          'Laivassa ei ollut tilaa',
+          'Kuningas halusi kansan katsovan eläintä matkan varrella',
+        ],
+        oikea: 0,
+        fakta: 'Matka kesti 41 päivää; Pariisissa kirahvia kävi katsomassa yli 100 000 ihmistä, ja se eli Jardin des Plantes\'ssa 18 vuotta.',
+      },
       lunastus: [
         'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle '
           + 'Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta '
@@ -684,7 +703,8 @@ export const FOKUSVIRTA_PARIISI = {
           + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
           + 'Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti '
           + 'eläimelle kaksiosaisen keltaisen takin ja kengät.',
-        'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
+        'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa '
+          + '1827. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
           + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka '
           + 'kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, '
           + 'kankaisiin ilmestyi täpliä ja väri nimeltä ”kirahvin vatsa” myi '
@@ -796,10 +816,8 @@ export const FOKUSVIRTA_PARIISI = {
        * SANOTTIIN — se on koko skandaalin ydin.
        */
       id: 'carmenin-ensi-ilta',
-      nimio: 'Carmenin ensi-ilta',
-      otsikko: 'Teatterin johtaja vastusti oopperaa niin kiivaasti, '
-        + 'että erosi — ja ensi-illan jälkeen näytti siltä, että hän '
-        + 'oli ollut oikeassa',
+      nimio: 'Bizet 1875',
+      otsikko: 'Bizet 1875 — Carmen saa kylmän vastaanoton',
       lunastus: [
         'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla '
           + '1873, ja ensimmäinen näytös oli valmis siihen kesään '
@@ -959,8 +977,8 @@ export const FOKUSVIRTA_PARIISI = {
        * `nimiPuoli` ja `siirto`, ei uusi koordinaatti.
        */
       id: 'pariisin-72-nimea',
-      nimio: '72 nimeä',
-      otsikko: 'Tornissa on 72 nimeä kullalla',
+      nimio: 'Tornin nimet 2026',
+      otsikko: 'Tornin nimet 2026 — naisten lista julkaistaan',
       symboli: 'tekniikka',
       lunastus: [
         'Gustave Eiffel halusi, että hänen torninsa on tieteen '
@@ -1007,8 +1025,8 @@ export const FOKUSVIRTA_PARIISI = {
        * 48,8844 N / 2,3382 E.
        */
       id: 'guimardin-metro',
-      nimio: 'Métropolitain',
-      otsikko: 'Metron sisäänkäynti koottiin palasista',
+      nimio: 'Metro 1900',
+      otsikko: 'Metro 1900 — Guimardin sisäänkäynnit',
       symboli: 'tekniikka',
       lunastus: [
         'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli '
@@ -1035,7 +1053,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Miksi puolet sisäänkäynneistä purettiin?',
       ],
       paikka: {
-        nimi: 'Metron sisäänkäynti',
+        nimi: 'Metro 1900',
         laudat: {
           maailmankartta: { x: 5911.3, y: 1438.4 },
           europe: { x: 256.1, y: 607.9 },
@@ -1057,8 +1075,8 @@ export const FOKUSVIRTA_PARIISI = {
        * uskottavia arvauksia — sama kaava kuin PIAF_VISAssa.
        */
       id: 'notre-damen-kukko',
-      nimio: 'Notre-Damen kukko',
-      otsikko: 'Kukko putosi ja löytyi seuraavana päivänä',
+      nimio: 'Notre-Dame 2019',
+      otsikko: 'Notre-Dame 2019 — palo, jonka kukko selvisi',
       symboli: 'historia',
       lunastus: [
         'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
@@ -1129,9 +1147,19 @@ export const FOKUSVIRTA_PARIISI = {
        * yhden liikkeen. Piste on kohdekartan rajauksen sisällä.
        */
       id: 'pariisin-patonki',
-      nimio: 'Paras patonki',
-      otsikko: 'Paras patonki valitaan sokkona',
+      nimio: 'Patonki 1994',
+      otsikko: 'Patonki 1994 — kilpailu parhaasta leivästä',
       symboli: 'ruoka',
+      visa: {
+        kysymys: 'Mikä velvollisuus Pariisin parhaan patongin tekijällä on voittonsa jälkeen?',
+        vaihtoehdot: [
+          'Hän toimittaa presidentinpalatsin leivät seuraavan vuoden',
+          'Hän avaa uuden leipomon kaupungin keskustaan',
+          'Hän opettaa leipomoalaa kaupungin kouluissa',
+        ],
+        oikea: 0,
+        fakta: 'Kilpailu on järjestetty vuodesta 1994, leivät arvostellaan anonyymeinä, ja voittaja saa myös rahapalkinnon.',
+      },
       lunastus: [
         'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
           + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
@@ -1159,7 +1187,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Mikä velvollisuus voittajalle tulee?',
       ],
       paikka: {
-        nimi: 'Paras patonki',
+        nimi: 'Patonki 1994',
         laudat: {
           maailmankartta: { x: 5910.6, y: 1439.0 },
           europe: { x: 255.7, y: 608.3 },
@@ -1170,7 +1198,7 @@ export const FOKUSVIRTA_PARIISI = {
       /*
        * LEHDEN SIVU 2 ("Musiikki"), KOLME NOSTOA YHDEKSI
        * (suunnitelman luku 4.7: *"Yhdistetään yhdeksi nostoksi
-       * 'Pariisi soi' → kohdekartta (Opéra)"*).
+       * 'Piaf ja Django' → kohdekartta (Opéra)"*).
        *
        * KAPPALEITA ON KAKSI EIKÄ KOLME, ja se on sisältöpäätös, ei
        * unohdus: sivun kolmas nosto ("Carmen kaatui ensi-illassaan")
@@ -1184,9 +1212,10 @@ export const FOKUSVIRTA_PARIISI = {
        */
       id: 'pariisi-soi',
       wiki: ['Édith Piaf', 'Django Reinhardt'],
-      nimio: 'Pariisi soi',
-      otsikko: 'Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen',
+      nimio: 'Piaf ja Django',
+      otsikko: 'Piaf ja Django — kadulta ja vaunusta maineeseen',
       symboli: 'kulttuuri',
+      visa: PIAF_VISA,
       lunastus: [
         'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
           + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
@@ -1249,7 +1278,7 @@ export const FOKUSVIRTA_PARIISI = {
       // ("kohdekartta (Opéra)"); sama koordinaatti kuin kartan omalla
       // Palais Garnier -kohteella.
       paikka: {
-        nimi: 'Pariisi soi',
+        nimi: 'Piaf ja Django',
         laudat: {
           maailmankartta: { x: 5911.1, y: 1438.9 },
           europe: { x: 256.0, y: 608.3 },
@@ -1286,9 +1315,8 @@ export const FOKUSVIRTA_PARIISI = {
        * kirjoitettu 1800-luvun ranskaksi."*
        */
       id: 'pariisin-vuosisadat',
-      nimio: 'Vuosisadat',
-      otsikko: 'Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, '
-        + 'joita ei ollut',
+      nimio: 'Kaulanauha 1785',
+      otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
       symboli: 'historia',
       lunastus: [
         'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
@@ -1368,7 +1396,7 @@ export const FOKUSVIRTA_PARIISI = {
       // ulkopuolella. Panthéon on kartan oma historiakohde ja tämän
       // kortin ankkuri.
       paikka: {
-        nimi: 'Pariisin vuosisadat',
+        nimi: 'Kaulanauha 1785',
         laudat: {
           maailmankartta: { x: 5911.5, y: 1440.1 },
           europe: { x: 256.3, y: 608.9 },

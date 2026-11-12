@@ -1714,8 +1714,8 @@
    "eroKartanPisteesta_m": 82
   },
   {
-   "id": "ateena:Louis 1896",
-   "nimi": "Louis 1896",
+   "id": "ateena:Maraton 1896",
+   "nimi": "Maraton 1896",
    "qid": null,
    "lat": 37.96833,
    "lon": 23.74111,
@@ -2970,8 +2970,8 @@
    "eroKartanPisteesta_m": 42
   },
   {
-   "id": "berliini:Muuri 1961",
-   "nimi": "Muuri 1961",
+   "id": "berliini:Berliini 1961",
+   "nimi": "Berliini 1961",
    "qid": null,
    "lat": 52.5375,
    "lon": 13.3933,
@@ -7851,8 +7851,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "helsinki:Suomi herää 1899",
-   "nimi": "Suomi herää 1899",
+   "id": "helsinki:Sibelius 1899",
+   "nimi": "Sibelius 1899",
    "qid": null,
    "lat": 60.16722,
    "lon": 24.94333,
@@ -11125,8 +11125,8 @@
    "eroKartanPisteesta_m": 59
   },
   {
-   "id": "kobenhavn:Christiansborg 1884",
-   "nimi": "Christiansborg 1884",
+   "id": "kobenhavn:Kööpenhamina 1884",
+   "nimi": "Kööpenhamina 1884",
    "qid": "Q940733",
    "lat": 55.67583,
    "lon": 12.57889,
@@ -13079,8 +13079,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "lontoo:Tunneli 1827",
-   "nimi": "Tunneli 1827",
+   "id": "lontoo:Brunel 1827",
+   "nimi": "Brunel 1827",
    "qid": "Q1190691",
    "lat": 51.50306,
    "lon": -0.05444,
@@ -13092,8 +13092,8 @@
    "eroKartanPisteesta_m": 5
   },
   {
-   "id": "lontoo:Palo 1666",
-   "nimi": "Palo 1666",
+   "id": "lontoo:Lontoon palo 1666",
+   "nimi": "Lontoon palo 1666",
    "qid": null,
    "lat": 51.5102,
    "lon": -0.0853,
@@ -13105,8 +13105,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "lontoo:Globe 1599",
-   "nimi": "Globe 1599",
+   "id": "lontoo:Shakespeare 1599",
+   "nimi": "Shakespeare 1599",
    "qid": "Q272434",
    "lat": 51.50667,
    "lon": -0.09472,
@@ -13608,8 +13608,8 @@
    "eroKartanPisteesta_m": 19
   },
   {
-   "id": "luxemburg:Bockin kauppa 963",
-   "nimi": "Bockin kauppa 963",
+   "id": "luxemburg:Luxemburg 963",
+   "nimi": "Luxemburg 963",
    "qid": null,
    "lat": 49.61174,
    "lon": 6.13715,
@@ -17611,8 +17611,8 @@
    "samaKuin": "oslo:Karl Johans gate"
   },
   {
-   "id": "oslo:Fram 1893",
-   "nimi": "Fram 1893",
+   "id": "oslo:Nansen 1893",
+   "nimi": "Nansen 1893",
    "qid": null,
    "lat": 59.9098,
    "lon": 10.7318,
@@ -18155,8 +18155,8 @@
    "eroKartanPisteesta_m": 2
   },
   {
-   "id": "pariisi:Carmenin ensi-ilta",
-   "nimi": "Carmenin ensi-ilta",
+   "id": "pariisi:Bizet 1875",
+   "nimi": "Bizet 1875",
    "qid": null,
    "lat": 48.8709,
    "lon": 2.3378,
@@ -18168,8 +18168,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Kirahvin kävelymatka",
-   "nimi": "Kirahvin kävelymatka",
+   "id": "pariisi:Kirahvi 1827",
+   "nimi": "Kirahvi 1827",
    "qid": null,
    "lat": 48.8447,
    "lon": 2.3597,
@@ -18181,8 +18181,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Torni romuraudaksi",
-   "nimi": "Torni romuraudaksi",
+   "id": "pariisi:Lustig 1925",
+   "nimi": "Lustig 1925",
    "qid": null,
    "lat": 48.8583,
    "lon": 2.29448,
@@ -18208,8 +18208,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Impressionistit",
-   "nimi": "Impressionistit",
+   "id": "pariisi:Monet 1874",
+   "nimi": "Monet 1874",
    "qid": null,
    "lat": 48.8705,
    "lon": 2.328,
@@ -18221,8 +18221,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Kyyhkyposti",
-   "nimi": "Kyyhkyposti",
+   "id": "pariisi:Piiritys 1870",
+   "nimi": "Piiritys 1870",
    "qid": null,
    "lat": 48.8566,
    "lon": 2.3522,
@@ -18299,8 +18299,8 @@
    "eroKartanPisteesta_m": 69
   },
   {
-   "id": "pariisi:Torni 1888",
-   "nimi": "Torni 1888",
+   "id": "pariisi:Eiffel-torni 1888",
+   "nimi": "Eiffel-torni 1888",
    "qid": null,
    "lat": 48.8583,
    "lon": 2.29448,
@@ -18339,8 +18339,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:72 nimeä",
-   "nimi": "72 nimeä",
+   "id": "pariisi:Tornin nimet 2026",
+   "nimi": "Tornin nimet 2026",
    "qid": null,
    "lat": 48.8583,
    "lon": 2.29448,
@@ -18353,8 +18353,8 @@
    "samaKuin": "pariisi:Eiffel-torni"
   },
   {
-   "id": "pariisi:Metron sisäänkäynti",
-   "nimi": "Metron sisäänkäynti",
+   "id": "pariisi:Metro 1900",
+   "nimi": "Metro 1900",
    "qid": null,
    "lat": 48.8844,
    "lon": 2.3382,
@@ -18366,8 +18366,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Notre-Damen kukko",
-   "nimi": "Notre-Damen kukko",
+   "id": "pariisi:Notre-Dame 2019",
+   "nimi": "Notre-Dame 2019",
    "qid": "Q2981",
    "lat": 48.853,
    "lon": 2.3498,
@@ -18379,8 +18379,8 @@
    "eroKartanPisteesta_m": 7
   },
   {
-   "id": "pariisi:Pariisi soi",
-   "nimi": "Pariisi soi",
+   "id": "pariisi:Piaf ja Django",
+   "nimi": "Piaf ja Django",
    "qid": null,
    "lat": 48.87194,
    "lon": 2.33167,
@@ -18393,8 +18393,8 @@
    "samaKuin": "pariisi:Palais Garnier"
   },
   {
-   "id": "pariisi:Paras patonki",
-   "nimi": "Paras patonki",
+   "id": "pariisi:Patonki 1994",
+   "nimi": "Patonki 1994",
    "qid": null,
    "lat": 48.8703,
    "lon": 2.3167,
@@ -18406,8 +18406,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Pariisin vuosisadat",
-   "nimi": "Pariisin vuosisadat",
+   "id": "pariisi:Kaulanauha 1785",
+   "nimi": "Kaulanauha 1785",
    "qid": null,
    "lat": 48.8462,
    "lon": 2.34611,
@@ -19007,8 +19007,8 @@
    "eroKartanPisteesta_m": 40
   },
   {
-   "id": "pietari:Jänissaari 1703",
-   "nimi": "Jänissaari 1703",
+   "id": "pietari:Pietari 1703",
+   "nimi": "Pietari 1703",
    "qid": "Q1588376",
    "lat": 59.94972,
    "lon": 30.31639,
@@ -20596,8 +20596,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "rooma:Sikstus 1510",
-   "nimi": "Sikstus 1510",
+   "id": "rooma:Michelangelo 1510",
+   "nimi": "Michelangelo 1510",
    "qid": null,
    "lat": 41.90222,
    "lon": 12.45342,
@@ -22162,8 +22162,8 @@
    "eroKartanPisteesta_m": 7
   },
   {
-   "id": "sarajevo:Latin-silta 1914",
-   "nimi": "Latin-silta 1914",
+   "id": "sarajevo:Sarajevo 1914",
+   "nimi": "Sarajevo 1914",
    "qid": "Q1277685",
    "lat": 43.85765,
    "lon": 18.42901,
@@ -26722,8 +26722,8 @@
    "eroKartanPisteesta_m": 3
   },
   {
-   "id": "wien:Yhdeksäs 1824",
-   "nimi": "Yhdeksäs 1824",
+   "id": "wien:Beethoven 1824",
+   "nimi": "Beethoven 1824",
    "qid": null,
    "lat": 48.20333,
    "lon": 16.36917,
@@ -26736,8 +26736,8 @@
    "samaKuin": "wien:Valtionooppera"
   },
   {
-   "id": "wien:Figaro 1786",
-   "nimi": "Figaro 1786",
+   "id": "wien:Mozart 1786",
+   "nimi": "Mozart 1786",
    "qid": null,
    "lat": 48.2078,
    "lon": 16.3665,
@@ -26749,8 +26749,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "wien:Pörssikrahi 1873",
-   "nimi": "Pörssikrahi 1873",
+   "id": "wien:Wienin krahi 1873",
+   "nimi": "Wienin krahi 1873",
    "qid": null,
    "lat": 48.2166,
    "lon": 16.3648,

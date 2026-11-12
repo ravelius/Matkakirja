@@ -798,7 +798,7 @@ export const SYVENNYSPAIKAT = {
      *   sijoitettu kaupungin keskipisteeseen
      */
     kyyhkyposti: {
-      lat: 48.8566, lon: 2.3522, symboli: 'tekniikka', nimio: 'Kyyhkyposti',
+      lat: 48.8566, lon: 2.3522, symboli: 'tekniikka', nimio: 'Piiritys 1870',
     },
     /*
      * Boulevard des Capucines (Nadarin ateljeen alue; täsmällistä katuosoitetta ei ole paketin lähteessä) (sijainti on arvio).
@@ -808,7 +808,7 @@ export const SYVENNYSPAIKAT = {
      *   Madeleinen välissä)
      */
     impressionistit: {
-      lat: 48.8705, lon: 2.328, symboli: 'kulttuuri', nimio: 'Impressionistit',
+      lat: 48.8705, lon: 2.328, symboli: 'kulttuuri', nimio: 'Monet 1874',
     },
   },
   pietari: {

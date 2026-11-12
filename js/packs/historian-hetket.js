@@ -18,16 +18,25 @@
  * muuriin). Sama erä uusi Röntgenin ja Einsteinin kuvat photo-v4:ksi.
  * Vuoden 2026 syyskuun 28. päivän erä toi 13 Euroopan historian hetkeä.
  *
- * ── TEKSTIN SÄÄNTÖ: IHMINEN EDELLÄ ─────────────────────────────────
+ * ── TEKSTIN SÄÄNTÖ: KUKA, MISSÄ, MILLOIN JA MIKSI ENSIN ────────────
  *
- * Jokainen `teksti` alkaa siitä, mitä kuvan ihminen kokee, pelkää tai
- * ajattelee juuri tässä sekunnissa; suuri kaari kerrotaan vasta sen
- * jälkeen ja lyhyesti. Aloitustapa vaihtelee (lähikuva, ääni, esine,
- * kysymys, ohikulkeva hetki) eikä sama tapa toistu peräkkäisissä
- * hetkissä. Mitta on 120–170 sanaa. Keksitty minitarina on sallittu
- * vain merkittynä ("ehkä", "kerrotaan"); päivämäärät, nimet ja luvut
- * ovat en-Wikipediasta, ja artikkeli nimetään jokaisen hetken
- * yläpuolella olevassa lähdekommentissa.
+ * KK 12.11.2026 (omistaja 19.37: "Tuo sopii."). Otsikko kertoo tapauksen
+ * eikä arvoitusta: "<Kuka tai mikä> <vuosi> — <tapaus selkokielellä>",
+ * noin 45 merkkiä; otsikon alku on kyltti (`nimio`, ≤ 18 merkkiä, avain
+ * kohdekartalla, nähtävyysjutuissa ja miniatyyreissä; ketjun tarkistaa
+ * `node tools/nimio-ketju.mjs`).
+ *
+ * Jokaisen `teksti`n ensimmäinen virke kertoo, kuka, missä, milloin ja
+ * miksi hetki on tärkeä. Vasta sen jälkeen tulee ihminen: mitä kuvan
+ * ihminen kokee, pelkää tai ajattelee juuri tässä sekunnissa (lähikuva,
+ * ääni, esine, kysymys, ohikulkeva hetki; sama tapa ei toistu peräkkäin),
+ * ja suuri kaari lyhyesti. Faktat vain jutun omasta tekstistä tai
+ * lähteestä; `lehtiJohdanto` seuraa samaa kaavaa. Mitta on noin 120–170
+ * sanaa. Keksitty minitarina on sallittu vain merkittynä ("ehkä",
+ * "kerrotaan"); päivämäärät, nimet ja luvut ovat en-Wikipediasta, ja
+ * artikkeli nimetään jokaisen hetken yläpuolella olevassa
+ * lähdekommentissa. Aloitukset on uusittu toistaiseksi vain Pariisin
+ * kuudelle hetkelle (12.11.2026); muut kaupungit KK:n sanalla.
  *
  * ── MISSÄ HETKI NÄKYY ──────────────────────────────────────────────
  *
@@ -213,8 +222,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'kolumbus-portugali-1484',
-    otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
-    nimio: 'Lissabon 1484',
+    otsikko: 'Kolumbus 1484 — Portugali hylkää suunnitelman',
+    nimio: 'Kolumbus 1484',
     paivays: '1484',
     paikka: 'Lissabon, Portugali',
     iso: 'PRT',
@@ -298,8 +307,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'kolumbus-santa-fe-1492',
-    otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
-    nimio: 'Santa Fé 1492',
+    otsikko: 'Kolumbus 1492 — kuningatar hyväksyy matkan',
+    nimio: 'Kolumbus 1492',
     paivays: '17.4.1492',
     paikka: 'Santa Fé, Granada, Espanja',
     iso: 'ESP',
@@ -387,8 +396,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'kolumbus-palos-1492',
-    otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
-    nimio: 'Palos 1492',
+    otsikko: 'Palosin lähtö 1492 — Kolumbus purjehtii länteen',
+    nimio: 'Palosin lähtö 1492',
     paivays: '3.8.1492',
     paikka: 'Palos de la Frontera, Espanja',
     iso: 'ESP',
@@ -472,8 +481,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'magalhaes-sanlucar-1519',
-    otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
-    nimio: 'Sanlúcar 1519',
+    otsikko: 'Magalhães 1519 — maailmanympärimatka alkaa',
+    nimio: 'Magalhães 1519',
     paivays: '20.9.1519',
     paikka: 'Sanlúcar de Barrameda, Espanja',
     iso: 'ESP',
@@ -567,8 +576,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'vasco-da-gama-restelo-1497',
-    otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
-    nimio: 'Restelo 1497',
+    otsikko: 'Vasco da Gama 1497 — lähtö kohti Intiaa',
+    nimio: 'Vasco da Gama 1497',
     paivays: '8.7.1497',
     paikka: 'Restelon ranta, Lissabon',
     iso: 'PRT',
@@ -650,7 +659,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'cook-endeavour-plymouth-1768',
-    otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
+    otsikko: 'Endeavour 1768 — Cookin tutkimusmatka alkaa',
     nimio: 'Endeavour 1768',
     aihe: 'Löytöretki',
     paivays: '26.8.1768',
@@ -741,7 +750,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'trafalgar-victory-1805',
-    otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+    otsikko: 'Trafalgar 1805 — Nelsonin laiva ennen taistelua',
     nimio: 'Trafalgar 1805',
     paivays: '21.10.1805',
     paikka: 'Trafalgarin niemen edusta, Espanja',
@@ -848,8 +857,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'darwin-galapagos-1835',
-    otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
-    nimio: 'Galápagos 1835',
+    otsikko: 'Darwin 1835 — Galápagosin kilpikonnat',
+    nimio: 'Darwin 1835',
     paivays: 'syyskuu 1835',
     paikka: 'San Cristóbal (Chatham), Galápagos',
     iso: 'ECU',
@@ -926,7 +935,7 @@ export const HISTORIAN_HETKET = [
    * Oslo 1 yksikön päässä eli sama paikka. Omistaja 3.9.2026: laatan
    * päälle osuva hetki EI ole pääkartalla — sivu on Oslon
    * kaupunkilehdessä ja piste sen kohdekartalla (js/packs/maakartat.js
-   * "Fram 1893" → tämä hetki). Piste osuisi myös Oslon
+   * "Nansen 1893" → tämä hetki). Piste osuisi myös Oslon
    * kohdekartan rajaukseen, mutta hetki ei ole nähtävyys: sen kortti
    * on havainnekuvineen ja tiimalasimerkkeineen oma lajinsa, ja vain
    * pääkartta osaa näyttää sen sellaisena.
@@ -934,8 +943,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'nansen-fram-1893',
-    otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
-    nimio: 'Fram 1893',
+    otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
+    nimio: 'Nansen 1893',
     paivays: '24.6.1893',
     paikka: 'Kristiania (Oslo), Norja',
     iso: 'NOR',
@@ -1027,8 +1036,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'amundsen-etelanapa-1911',
-    otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
-    nimio: 'Etelänapa 1911',
+    otsikko: 'Amundsen 1911 — etelänavan valtaus',
+    nimio: 'Amundsen 1911',
     paivays: '14.12.1911',
     paikka: 'Etelänapa',
     iso: 'NOR',
@@ -1125,7 +1134,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'titanic-southampton-1912',
-    otsikko: 'Southampton 1912 — metri törmäyksestä',
+    otsikko: 'Titanic 1912 — neitsytmatka alkaa',
     nimio: 'Titanic 1912',
     aihe: 'Haaksirikko',
     paivays: '10.4.1912',
@@ -1228,8 +1237,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'viikinkilaiva-roskilde-1040',
-    otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
-    nimio: 'Roskilde 1040',
+    otsikko: 'Viikingit 1040 — sotalaiva Roskildenvuonolla',
+    nimio: 'Viikingit 1040',
     paivays: 'n. 1040',
     paikka: 'Roskildenvuono, Tanska',
     iso: 'DNK',
@@ -1321,8 +1330,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'rontgen-kasi-1895',
-    otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
-    nimio: 'Würzburg 1895',
+    otsikko: 'Röntgen 1895 — röntgensäteiden löytö',
+    nimio: 'Röntgen 1895',
     aihe: 'Röntgenkuva',
     paivays: '22.12.1895',
     paikka: 'Würzburg, Saksa',
@@ -1409,8 +1418,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'wright-kitty-hawk-1903',
-    otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
-    nimio: 'Kitty Hawk 1903',
+    otsikko: 'Wrightit 1903 — ensimmäinen moottorilento',
+    nimio: 'Wrightit 1903',
     aihe: 'Lento',
     paivays: '17.12.1903',
     paikka: 'Kill Devil Hills, Kitty Hawk, Yhdysvallat',
@@ -1498,8 +1507,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'einstein-patenttitoimisto-1905',
-    otsikko: 'Bern 1905 — patenttipino ja valonsäde',
-    nimio: 'Bern 1905',
+    otsikko: 'Einstein 1905 — suhteellisuusteoria syntyy',
+    nimio: 'Einstein 1905',
     paivays: '1905',
     paikka: 'Bern, Sveitsi',
     iso: 'CHE',
@@ -1587,8 +1596,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'tutankhamon-carter-1922',
-    otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
-    nimio: 'Luxor 1922',
+    otsikko: 'Tutankhamon 1922 — hauta löytyy',
+    nimio: 'Tutankhamon 1922',
     paivays: '26.11.1922',
     paikka: 'Kuninkaiden laakso, Egypti',
     iso: 'EGY',
@@ -1691,8 +1700,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'schliemann-troija-1873',
-    otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
-    nimio: 'Troija 1873',
+    otsikko: 'Schliemann 1873 — Troijan aarre löytyy',
+    nimio: 'Schliemann 1873',
     paivays: 'toukokuu 1873',
     paikka: 'Hisarlık, Turkki',
     iso: 'TUR',
@@ -1780,7 +1789,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'rosettan-kivi-1799',
-    otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+    otsikko: 'Rosetta 1799 — kivi, jolla hieroglyfit avattiin',
     nimio: 'Rosetta 1799',
     aihe: 'Kirjoitus',
     paivays: 'heinäkuu 1799',
@@ -1882,8 +1891,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'galilei-kaukoputki-1610',
-    otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
-    nimio: 'Padova 1610',
+    otsikko: 'Galilei 1610 — Jupiterin kuut löytyvät',
+    nimio: 'Galilei 1610',
     paivays: 'tammikuu 1610',
     paikka: 'Padova, Venetsian tasavalta',
     iso: 'ITA',
@@ -1981,7 +1990,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'machu-picchu-1911',
-    otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
+    otsikko: 'Machu Picchu 1911 — Bingham löytää rauniot',
     nimio: 'Machu Picchu 1911',
     paivays: '24.7.1911',
     paikka: 'Machu Picchu, Peru',
@@ -2076,29 +2085,32 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'marie-curie-hangaari-1898',
-    otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+    otsikko: 'Curie 1898 — radiumin ja poloniumin löytö',
     nimio: 'Curie 1898',
     paivays: '1898',
     paikka: 'Pariisi, Ranska',
     iso: 'FRA',
     lat: 48.8420, lon: 2.3476,
     kuvaversio: 4,
-    teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
-      + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
-      + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
-      + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
-      + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
-      + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta '
-      + 'samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine '
-      + 'on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten '
-      + 'pikivälkejätettä, joka keitetään, suodatetaan ja '
-      + 'kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista '
-      + 'malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei '
-      + 'tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie '
-      + 'kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. '
-      + 'Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin '
-      + 'kanssa, ensimmäisenä naisena, ja vuonna 1911 saa kemian palkinnon '
-      + 'yksin.',
+    teksti: 'Pariisissa Marie ja Pierre Curie ilmoittavat vuonna 1898 '
+      + 'löytäneensä kaksi uutta alkuainetta, poloniumin ja radiumin, ja '
+      + 'todistavat sen sitten vuosia vuotavassa vajassa keittämällä '
+      + 'tonneittain kaivosjätettä. Olkapäät ovat puutuneet jo '
+      + 'aamupäivällä, mutta tankoa ei voi laskea. Marie sekoittaa kiehuvaa '
+      + 'pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen '
+      + 'lääketieteellisen koulun ruumiinavaussali, vuotaa sateella '
+      + 'katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo '
+      + 'työn kannattavan. Polonium on ilmoitettu heinäkuussa 1898 ja '
+      + 'radium 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä '
+      + 'kemisteille — uusi alkuaine on saatava käteen puhtaana. Se '
+      + 'tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, '
+      + 'suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, '
+      + 'jolloin tonnista malmia on eristetty kymmenesosagramma '
+      + 'radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee '
+      + 'käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee '
+      + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
+      + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
+      + 'vuonna 1911 saa kemian palkinnon yksin.',
     kysymykset: [
       'Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?',
       'Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?',
@@ -2138,9 +2150,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Rue Lhomondin pihalla seisoi vuosisadan vaihteessa vuotava '
-      + 'vaja, jossa aviopari keitti tonneittain kaivosjätettä saadakseen '
-      + 'siitä esiin suolanjyvän verran uutta alkuainetta.',
+    lehtiJohdanto: 'Marie ja Pierre Curie ilmoittivat vuonna 1898 löytäneensä '
+      + 'poloniumin ja radiumin; Rue Lhomondin pihan vuotavassa vajassa he '
+      + 'keittivät tonneittain kaivosjätettä saadakseen niitä puhtaana '
+      + 'suolanjyvän verran.',
     lehtiTehtava: {
       kysymys: 'Paljonko radiumkloridia Curiet saivat eristettyä tonnista '
         + 'pikivälkettä vuoteen 1902 mennessä?',
@@ -2164,7 +2177,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'newton-prisma-1666',
-    otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+    otsikko: 'Newton 1666 — valkoinen valo hajoaa väreiksi',
     nimio: 'Newton 1666',
     aihe: 'Valon tutkimus',
     paivays: '1666',
@@ -2250,7 +2263,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'franklin-leija-1752',
-    otsikko: 'Philadelphia 1752 — kipinä avaimesta rystyseen',
+    otsikko: 'Franklin 1752 — leijakoe ukkospilvessä',
     nimio: 'Franklin 1752',
     aihe: 'Salama',
     paivays: 'kesäkuu 1752',
@@ -2327,29 +2340,27 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'lavoisier-laboratorio-1780',
-    otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+    otsikko: 'Lavoisier 1780 — modernin kemian synty',
     nimio: 'Lavoisier 1780',
     paivays: 'noin 1780',
     paikka: 'Arsenaali, Pariisi',
     iso: 'FRA',
     lat: 48.8503, lon: 2.3635,
     kuvaversio: 4,
-    teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
-      + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
-      + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
-      + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
-      + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission '
-      + 'jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa '
-      + 'ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on '
-      + 'yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu '
-      + 'Marie-Anne Paulze Lavoisier, joka naitettiin hänelle '
-      + 'kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
-      + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
-      + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
-      + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
-      + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
-      + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
-      + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+    teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+      + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
+      + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
+      + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
+      + 'esine ja tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät '
+      + 'myyvät, sillä Lavoisier punnitsee kaiken ennen koetta ja sen '
+      + 'jälkeen. Vastapäätä istuu hänen vaimonsa Marie-Anne Paulze '
+      + 'Lavoisier. Hän on oppinut englannin kääntääkseen Priestleyn ja '
+      + 'Kirwanin kirjoitukset, ja hän piirtää laitteet niin tarkasti, että '
+      + 'muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy ensimmäinen '
+      + 'moderni kemian oppikirja, jossa on kolmetoista Marie-Annen '
+      + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+      + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
+      + 'veronkantajana.',
     kysymykset: [
       'Miksi vaaka oli Lavoisierin laboratorion tärkein esine?',
       'Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?',
@@ -2388,9 +2399,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Arsenaalin laboratoriossa aviopari punnitsi kaiken ennen '
-      + 'koetta ja sen jälkeen — ja kemia lakkasi olemasta alkemiaa, '
-      + 'vaikka vallankumous ei antanut sitä heille anteeksi.',
+    lehtiJohdanto: 'Pariisin Arsenaalin laboratoriossa Antoine ja Marie-Anne Lavoisier '
+      + 'punnitsivat noin vuonna 1780 kaiken ennen koetta ja sen jälkeen — '
+      + 'ja kemia lakkasi olemasta alkemiaa. Vallankumous mestasi Antoinen '
+      + 'veronkantajana vuonna 1794.',
     lehtiTehtava: {
       kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian '
         + 'vallankumouksessa?',
@@ -2413,7 +2425,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'jenner-rokotus-1796',
-    otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+    otsikko: 'Jenner 1796 — ensimmäinen rokotus',
     nimio: 'Jenner 1796',
     aihe: 'Rokotus',
     paivays: '14.5.1796',
@@ -2503,7 +2515,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'faraday-luento-1831',
-    otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+    otsikko: 'Faraday 1831 — sähkön tuottaminen magneetilla',
     nimio: 'Faraday 1831',
     paivays: '29.8.1831',
     paikka: 'Royal Institution, Lontoo',
@@ -2591,30 +2603,32 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'pasteur-pullot-1862',
-    otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+    otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
     nimio: 'Pasteur 1862',
     paivays: '1862',
     paikka: 'École normale supérieure, Pariisi',
     iso: 'FRA',
     lat: 48.8419, lon: 2.3444,
     kuvaversio: 4,
-    teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. '
-      + 'Louis Pasteur nostaa sen valoa vasten École normale supérieuren '
+    teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, ettei '
+      + 'elämä synny itsestään mätänevästä aineesta vaan näkymätön elämä '
+      + 'tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun palkinnon '
+      + 'vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja pullo on yhä '
+      + 'kirkas. Pasteur nostaa sen valoa vasten École normale supérieuren '
       + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
       + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
-      + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, '
-      + 'on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja '
-      + 'kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin '
-      + 'museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää '
-      + 'synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
+      + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
+      + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
+      + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
+      + 'Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään '
+      + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
       + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
-      + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa '
-      + 'pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään '
-      + 'hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on '
-      + 'elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin '
-      + 'kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, että '
-      + 'näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
-      + 'myöhemmin kirurgian ja rokotukset.',
+      + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
+      + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
+      + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
+      + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+      + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
+      + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
     kysymykset: [
       'Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?',
       'Miksi Pasteur kuljetti liemipullonsa vuorille asti?',
@@ -2652,9 +2666,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Rue d\'Ulmin laboratoriossa rivi keitettyjä liemipulloja '
-      + 'odotti viikkoja samenemista, joka ei tullut — ja vanha usko '
-      + 'itsestään syntyvään elämään menetti palkintokilpailun.',
+    lehtiJohdanto: 'Louis Pasteur osoitti Pariisin rue d\'Ulmin laboratoriossa vuonna '
+      + '1862, ettei elämä synny itsestään: rivi keitettyjä liemipulloja '
+      + 'odotti viikkoja samenemista, joka ei tullut, ja vanha usko menetti '
+      + 'palkintokilpailun.',
     lehtiTehtava: {
       kysymys: 'Miksi joutsenkaulapullon liemi pysyi kirkkaana, vaikka ilma '
         + 'pääsi sisään?',
@@ -2678,7 +2693,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'mendelejev-kortit-1869',
-    otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+    otsikko: 'Mendelejev 1869 — jaksollinen järjestelmä',
     nimio: 'Mendelejev 1869',
     paivays: '6.3.1869',
     paikka: 'Pietarin yliopisto, Venäjä',
@@ -2763,7 +2778,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'edison-lamppu-1879',
-    otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+    otsikko: 'Edison 1879 — hehkulamppu palaa 13 tuntia',
     nimio: 'Edison 1879',
     aihe: 'Sähkövalo',
     paivays: '22.10.1879',
@@ -2852,7 +2867,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'fleming-malja-1928',
-    otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+    otsikko: 'Fleming 1928 — penisilliinin löytö',
     nimio: 'Fleming 1928',
     paivays: '3.9.1928',
     paikka: 'St Mary\'s Hospital, Paddington, Lontoo',
@@ -2939,7 +2954,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'gutenberg-paino-1454',
-    otsikko: 'Mainz 1454 — sivu syntyy metallista',
+    otsikko: 'Gutenberg 1454 — Raamattu painetaan irtokirjakkeilla',
     nimio: 'Gutenberg 1454',
     aihe: 'Kirjapaino',
     paivays: '1454',
@@ -3026,34 +3041,36 @@ export const HISTORIAN_HETKET = [
    * Piste on Pariisin laatan päällä (1,4 laudan yksikköä) ja kohdekartan
    * rajauksessa (Champ de Mars; sama piste kuin kohde "Eiffel-torni").
    * Vain Pariisin kaupunkilehdessä ja sen kohdekartalla
-   * (js/packs/maakartat.js "Torni 1888").
+   * (js/packs/maakartat.js "Eiffel-torni 1888").
    * Lähde: en.wikipedia.org: Eiffel Tower
    */
   {
     id: 'eiffel-torni-1888',
-    otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
-    nimio: 'Torni 1888',
+    otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
+    nimio: 'Eiffel-torni 1888',
     paivays: 'elokuu 1888',
     paikka: 'Champ de Mars, Pariisi',
     iso: 'FRA',
     lat: 48.8582, lon: 2.2945,
     kuvaversio: 4,
-    teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, '
-      + 'ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
-      + 'Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko '
+    teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
+      + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
+      + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
+      + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+      + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
       + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
       + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
       + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
       + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
       + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
       + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
-      + 'lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana '
-      + 'kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit '
-      + 'Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän '
-      + 'patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, '
-      + 'ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin '
-      + 'seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta '
-      + '1889 maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+      + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
+      + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
+      + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
+      + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
+      + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
+      + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
+      + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
       + 'radioantenni.',
     kysymykset: [
       'Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?',
@@ -3095,9 +3112,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Champ de Marsilla niittaajat seisoivat kesällä 1888 yli '
-      + 'sadan metrin korkeudessa ilman kaiteita ja takoivat kuumia '
-      + 'niittejä rautaan, jonka piti seisoa vain kaksikymmentä vuotta.',
+    lehtiJohdanto: 'Pariisin Champ de Marsilla niittaajat kokosivat kesällä 1888 '
+      + 'Eiffel-tornia maailmannäyttelyyn: yli sadan metrin korkeudessa he '
+      + 'takoivat kuumia niittejä rautaan, jonka piti seisoa vain '
+      + 'kaksikymmentä vuotta.',
     lehtiTehtava: {
       kysymys: 'Miksi Eiffel-tornin osiin ei porattu yhtään reikää '
         + 'työmaalla?',
@@ -3117,13 +3135,13 @@ export const HISTORIAN_HETKET = [
    * 33. ROTHERHITHE, TOUKOKUU 1827 — KILPI THAMESIN ALLA.
    * Piste on Lontoon laatan päällä (2 laudan yksikköä) ja kohdekartan
    * rajauksessa (Rotherhithen kuilu). Vain Lontoon kaupunkilehdessä ja
-   * sen kohdekartalla (js/packs/maakartat.js "Tunneli 1827").
+   * sen kohdekartalla (js/packs/maakartat.js "Brunel 1827").
    * Lähde: en.wikipedia.org: Thames Tunnel
    */
   {
     id: 'brunel-thames-tunnel-1827',
-    otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
-    nimio: 'Tunneli 1827',
+    otsikko: 'Brunel 1827 — tunneli Thamesin alle',
+    nimio: 'Brunel 1827',
     paivays: 'toukokuu 1827',
     paikka: 'Rotherhithe, Lontoo',
     iso: 'GBR',
@@ -3215,7 +3233,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'suezin-kanava-avajaiset-1869',
-    otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+    otsikko: 'Suez 1869 — kanava avataan',
     nimio: 'Suez 1869',
     aihe: 'Kanava',
     paivays: '17.11.1869',
@@ -3323,7 +3341,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'brooklyn-bridge-1883',
-    otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+    otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
     nimio: 'Brooklyn 1883',
     paivays: '24.5.1883',
     paikka: 'Brooklyn Bridge, New York',
@@ -3420,13 +3438,13 @@ export const HISTORIAN_HETKET = [
    * Piste on Pietarin laatan päällä (0,5 laudan yksikköä) ja kohdekartan
    * rajauksessa (Pietari-Paavalin linnoitus). Vain Pietarin
    * kaupunkilehdessä ja sen kohdekartalla (js/packs/maakartat.js
-   * "Jänissaari 1703").
+   * "Pietari 1703").
    * Lähde: en.wikipedia.org: Peter and Paul Fortress, Saint Petersburg
    */
   {
     id: 'pietari-perustus-1703',
-    otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
-    nimio: 'Jänissaari 1703',
+    otsikko: 'Pietari 1703 — tsaari perustaa kaupungin',
+    nimio: 'Pietari 1703',
     paivays: '27.5.1703',
     paikka: 'Jänissaari, Nevan suisto',
     iso: 'RUS',
@@ -3511,7 +3529,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'vesuvius-pompeji-79',
-    otsikko: 'Pompeji 79 — ropina katolla',
+    otsikko: 'Pompeji 79 — Vesuvius tuhoaa kaupungin',
     nimio: 'Pompeji 79',
     paivays: '79 jaa.',
     paikka: 'Pompeji, Campania',
@@ -3605,8 +3623,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'konstantinopoli-1453',
-    otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
-    nimio: 'Konstantinopoli',
+    otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
+    nimio: 'Konstantinopoli 1453',
     paivays: '29.5.1453',
     paikka: 'Theodosiuksen muuri, Konstantinopoli',
     iso: 'TUR',
@@ -3687,14 +3705,14 @@ export const HISTORIAN_HETKET = [
    * 39. LONTOO 2.9.1666 — PUDDING LANE JA THAMES.
    * Piste on Lontoon laatan päällä (1 laudan yksikkö) ja kohdekartan
    * rajauksessa (Pudding Lane). Vain Lontoon kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Palo 1666"). Kolmas kuva on
+   * kohdekartalla (js/packs/maakartat.js "Lontoon palo 1666"). Kolmas kuva on
    * The London Gazetten numero 85 (HETKI_LEHTIKUVAT).
    * Lähde: en.wikipedia.org: Great Fire of London
    */
   {
     id: 'lontoon-palo-1666',
-    otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
-    nimio: 'Palo 1666',
+    otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
+    nimio: 'Lontoon palo 1666',
     paivays: '2.–5.9.1666',
     paikka: 'Pudding Lane, Lontoo',
     iso: 'GBR',
@@ -3792,14 +3810,14 @@ export const HISTORIAN_HETKET = [
    * 40. BERNAUER STRASSE 13.8.1961 — PIIKKILANKA KADUN POIKKI.
    * Piste on Berliinin laatan päällä (0,6 laudan yksikköä) ja kohdekartan
    * rajauksessa (Bernauer Straße). Vain Berliinin kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Muuri 1961"). Kolmas kuva on
+   * kohdekartalla (js/packs/maakartat.js "Berliini 1961"). Kolmas kuva on
    * BILD-lehden etusivu 14.8.1961 (HETKI_LEHTIKUVAT).
    * Lähde: en.wikipedia.org: Berlin Wall
    */
   {
     id: 'berliinin-muuri-1961',
-    otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
-    nimio: 'Muuri 1961',
+    otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
+    nimio: 'Berliini 1961',
     paivays: '13.8.1961',
     paikka: 'Bernauer Straße, Berliini',
     iso: 'DEU',
@@ -3892,13 +3910,13 @@ export const HISTORIAN_HETKET = [
    * 41. SIKSTUKSEN KAPPELI 1510 — TELINEELLÄ, PÄÄ TAAKSEPÄIN.
    * Piste on Rooman laatan päällä (1,4 laudan yksikköä) ja kohdekartan
    * rajauksessa (Vatikaani). Vain Rooman kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Sikstus 1510").
+   * kohdekartalla (js/packs/maakartat.js "Michelangelo 1510").
    * Lähde: en.wikipedia.org: Sistine Chapel ceiling
    */
   {
     id: 'michelangelo-sikstus-1510',
-    otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
-    nimio: 'Sikstus 1510',
+    otsikko: 'Michelangelo 1510 — Sikstuksen katto',
+    nimio: 'Michelangelo 1510',
     paivays: '1510',
     paikka: 'Sikstuksen kappeli, Vatikaani',
     iso: 'ITA',
@@ -3976,13 +3994,13 @@ export const HISTORIAN_HETKET = [
    * 42. WIEN, KÄRNTNERTOR-TEATTERI 7.5.1824 — SÄVELTÄJÄ KÄÄNNETÄÄN.
    * Piste on Wienin laatan päällä (0,9 laudan yksikköä) ja kohdekartan
    * rajauksessa (Valtionoopperan vieressä). Vain Wienin kaupunkilehdessä
-   * ja sen kohdekartalla (js/packs/maakartat.js "Yhdeksäs 1824").
+   * ja sen kohdekartalla (js/packs/maakartat.js "Beethoven 1824").
    * Lähde: en.wikipedia.org: Symphony No. 9 (Beethoven)
    */
   {
     id: 'beethoven-yhdeksas-1824',
-    otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
-    nimio: 'Yhdeksäs 1824',
+    otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
+    nimio: 'Beethoven 1824',
     paivays: '7.5.1824',
     paikka: 'Theater am Kärntnertor, Wien',
     iso: 'AUT',
@@ -4060,13 +4078,13 @@ export const HISTORIAN_HETKET = [
    * 43. SOUTHWARK, SYYSKUU 1599 — JULIUS CAESAR GLOBESSA.
    * Piste on Lontoon laatan päällä (0,7 laudan yksikköä) ja kohdekartan
    * rajauksessa (Bankside). Vain Lontoon kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Globe 1599").
+   * kohdekartalla (js/packs/maakartat.js "Shakespeare 1599").
    * Lähde: en.wikipedia.org: Globe Theatre
    */
   {
     id: 'shakespeare-globe-1599',
-    otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
-    nimio: 'Globe 1599',
+    otsikko: 'Shakespeare 1599 — Globe-teatteri aukeaa',
+    nimio: 'Shakespeare 1599',
     paivays: '21.9.1599',
     paikka: 'Globe-teatteri, Southwark, Lontoo',
     iso: 'GBR',
@@ -4151,13 +4169,13 @@ export const HISTORIAN_HETKET = [
    * Piste on Wienin laatan päällä (1,1 laudan yksikköä) ja kohdekartan
    * rajauksessa (vanha Burgtheater Michaelerplatzilla, Hofburgin
    * vieressä). Vain Wienin kaupunkilehdessä ja sen kohdekartalla
-   * (js/packs/maakartat.js "Figaro 1786").
+   * (js/packs/maakartat.js "Mozart 1786").
    * Lähde: en.wikipedia.org: The Marriage of Figaro
    */
   {
     id: 'mozart-wien-1786',
-    otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
-    nimio: 'Figaro 1786',
+    otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
+    nimio: 'Mozart 1786',
     paivays: '1.5.1786',
     paikka: 'Burgtheater, Wien',
     iso: 'AUT',
@@ -4243,7 +4261,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'luther-wittenberg-1517',
-    otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+    otsikko: 'Luther 1517 — 95 teesiä Wittenbergissä',
     nimio: 'Luther 1517',
     aihe: 'Uskonpuhdistus',
     paivays: '31.10.1517',
@@ -4334,34 +4352,36 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'ranskan-vallankumous-bastilji-1789',
-    otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+    otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
     nimio: 'Bastilji 1789',
     paivays: '14.7.1789',
     paikka: 'Bastilji, Pariisi',
     iso: 'FRA',
     lat: 48.8533, lon: 2.3692,
     kuvaversio: 4,
-    teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
-      + 'Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on '
-      + 'tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 '
-      + 'kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama '
-      + 'päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen '
-      + 'Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. '
-      + 'Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin '
-      + 'ympärille on koottu joukkoja; Camille Desmoulins on huutanut '
-      + 'Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa '
-      + 'on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä '
-      + 'krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. '
-      + 'Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee '
-      + 'ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. '
-      + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
-      + 'kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
-      + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-      + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
-      + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
-      + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
-      + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
-      + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+    teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin linnoitukseen '
+      + 'hakemaan sinne siirrettyä ruutia, ja illalla kuvernööri de Launay '
+      + 'antautuu. Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
+      + 'Aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin '
+      + 'asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 '
+      + 'tynnyriä — on siirretty muutama päivä sitten Bastiljiin, '
+      + 'keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. '
+      + 'Siksi kansa on siellä. Kuningas on erottanut suositun '
+      + 'rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; '
+      + 'Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että '
+      + 'verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 '
+      + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän '
+      + 'vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko '
+      + 'päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, '
+      + 'ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay '
+      + 'antautuu; hänet raahataan kaupungintalolle ja surmataan sen '
+      + 'edessä. Linnoitus puretaan seuraavina kuukausina. Kolme päivää '
+      + 'myöhemmin Ludvig XVI tulee Versailles\'sta Pariisin '
+      + 'kaupungintalolle, ja hänelle annetaan vallankumouksen kokardi '
+      + 'hattuun kiinnitettäväksi. Perimätiedon mukaan Lafayette lisää '
+      + 'kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja '
+      + 'sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei '
+      + 'tiedetä, kuka värit yhdisti.',
     kysymykset: [
       'Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?',
       'Miten Ranskan sinivalkopunainen trikolori syntyi?',
@@ -4401,9 +4421,9 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Saint-Antoinen esikaupungin reunalla seisoi heinäkuussa '
-      + '1789 linnoitus, jossa oli seitsemän vankia ja 250 tynnyriä '
-      + 'ruutia — ja juuri ruudin takia väkijoukko tuli sen porteille.',
+    lehtiJohdanto: 'Pariisin kansa hyökkäsi 14. heinäkuuta 1789 Bastiljin '
+      + 'linnoitukseen hakemaan sinne siirrettyä ruutia — linnoituksessa '
+      + 'oli vain seitsemän vankia ja 250 tynnyriä ruutia.',
     lehtiTehtava: {
       kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta '
         + '1789?',
@@ -4422,13 +4442,13 @@ export const HISTORIAN_HETKET = [
    * 47. ATEENA, PANATHINAIKO 10.4.1896 — MARATONIN VOITTAJA SAAPUU.
    * Piste on Ateenan laatan päällä (0,1 laudan yksikköä) ja kohdekartan
    * rajauksessa (Kallimarmaro-stadion). Vain Ateenan kaupunkilehdessä ja
-   * sen kohdekartalla (js/packs/maakartat.js "Louis 1896").
+   * sen kohdekartalla (js/packs/maakartat.js "Maraton 1896").
    * Lähde: en.wikipedia.org: 1896 Summer Olympics, Spyridon Louis
    */
   {
     id: 'olympia-ateena-1896',
-    otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
-    nimio: 'Louis 1896',
+    otsikko: 'Maraton 1896 — ensimmäinen olympiamaraton',
+    nimio: 'Maraton 1896',
     paivays: '10.4.1896',
     paikka: 'Panathinaiko-stadion, Ateena',
     iso: 'GRC',
@@ -4509,13 +4529,13 @@ export const HISTORIAN_HETKET = [
    * yksikköä Helsingin laatasta, joka on laudalla siirretty keskustasta).
    * Raamattu: kohdekartan rajauksen sisällä oleva nosto piirretään VAIN
    * kohdekartalle — sivu on Helsingin kaupunkilehdessä ja piste sen
-   * kohdekartalla (js/packs/maakartat.js "Suomi herää 1899").
+   * kohdekartalla (js/packs/maakartat.js "Sibelius 1899").
    * Lähde: en.wikipedia.org: Finlandia, Jean Sibelius
    */
   {
     id: 'sibelius-finlandia-1899',
-    otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
-    nimio: 'Suomi herää 1899',
+    otsikko: 'Sibelius 1899 — Finlandian synty',
+    nimio: 'Sibelius 1899',
     paivays: '4.11.1899',
     paikka: 'Ruotsalainen teatteri, Helsinki',
     iso: 'FIN',
@@ -4604,31 +4624,34 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'lumiere-elokuva-1895',
-    otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+    otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
     nimio: 'Lumière 1895',
     paivays: '28.12.1895',
     paikka: 'Salon Indien du Grand Café, Pariisi',
     iso: 'FRA',
     lat: 48.8703, lon: 2.3294,
     kuvaversio: 4,
-    teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard '
-      + 'des Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
-      + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
-      + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
-      + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset '
-      + 'hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen '
-      + 'filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden '
-      + 'joukossa on puutarhuri, joka kastelee itsensä letkulla — '
-      + 'ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat '
-      + 'valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu '
-      + 'helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä '
-      + 'pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa '
-      + 'tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. '
-      + 'Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa '
-      + 'laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole '
-      + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
-      + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
-      + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+    teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
+      + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
+      + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+      + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
+      + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
+      + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
+      + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
+      + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
+      + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
+      + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
+      + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
+      + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+      + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
+      + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
+      + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+      + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
+      + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, '
+      + 'ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja '
+      + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
+      + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
+      + 'liikkuva valokuva on.',
     kysymykset: [
       'Mitä Grand Cafén kellarissa näytettiin Lumièren veljesten ensimmäisessä maksullisessa näytöksessä?',
       'Kuinka pitkiä ensimmäiset Pariisissa näytetyt elokuvat olivat?',
@@ -4681,10 +4704,11 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Boulevard des Capucines\'in kahvilan kellarissa muutama '
-      + 'kymmenen ihmistä maksoi joulukuussa 1895 frangin ja näki tehtaan '
-      + 'portin aukeavan valkokankaalla — yleisön joukossa taikuri, joka '
-      + 'halusi heti ostaa koneen.',
+    lehtiJohdanto: 'Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. '
+      + 'joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama '
+      + 'kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan '
+      + 'valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa '
+      + 'koneen.',
     lehtiTehtava: {
       kysymys: 'Mitä Lumièren veljekset vastasivat Georges Mélièsille, kun '
         + 'tämä halusi ostaa Cinématographen?',
@@ -4702,8 +4726,8 @@ export const HISTORIAN_HETKET = [
   /* suuri-piiritys-paattyy-1565 — Heritage Malta, The Great Siege / Victory Day; tarkistettu 27.9.2026. */
   {
     id: 'suuri-piiritys-paattyy-1565',
-    otsikko: 'Valletta 1565 — purjeet horisontissa',
-    nimio: 'Apu saapuu 1565',
+    otsikko: 'Malta 1565 — Suuri piiritys päättyy',
+    nimio: 'Malta 1565',
     paivays: '7.9.1565',
     paikka: 'Mellieħan lahti, Malta',
     iso: 'MLT',
@@ -4769,8 +4793,8 @@ export const HISTORIAN_HETKET = [
   /* siegfried-ostaa-bockin-963 — Luxembourg City Tourist Office, Bock Promontory; tarkistettu 27.9.2026. */
   {
     id: 'siegfried-ostaa-bockin-963',
-    otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
-    nimio: 'Bockin kauppa 963',
+    otsikko: 'Luxemburg 963 — kreivi ostaa Bock-kallion',
+    nimio: 'Luxemburg 963',
     paivays: '963',
     paikka: 'Bock-kallio, Luxemburg',
     iso: 'LUX',
@@ -4832,8 +4856,8 @@ export const HISTORIAN_HETKET = [
   /* roger-ii-cefalu-lupaus-1131 — Cefalù Visit Sicily, The Cathedral of Cefalù; tarkistettu 27.9.2026. */
   {
     id: 'roger-ii-cefalu-lupaus-1131',
-    otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
-    nimio: 'Cefalùn lupaus',
+    otsikko: 'Cefalù 1131 — kuningas lupaa katedraalin',
+    nimio: 'Cefalù 1131',
     paivays: '1131',
     paikka: 'Cefalùn edusta, Sisilia',
     iso: 'ITA',
@@ -4897,7 +4921,7 @@ export const HISTORIAN_HETKET = [
   /* arkadin-luostarin-rajahdys-1866 — Kreikan kulttuuriministeriö, Arkadi Monastery; tarkistettu 27.9.2026. */
   {
     id: 'arkadin-luostarin-rajahdys-1866',
-    otsikko: 'Arkadi 1866 — viimeinen ovi',
+    otsikko: 'Arkadi 1866 — luostari räjähtää',
     nimio: 'Arkadi 1866',
     paivays: '9.11.1866',
     paikka: 'Arkadin luostari, Kreeta',
@@ -4962,8 +4986,8 @@ export const HISTORIAN_HETKET = [
   /* ensimmainen-juna-rovaniemi-1909 — Rovaniemen kaupunki, rakennetun ympäristön historia; tarkistettu 27.9.2026. */
   {
     id: 'ensimmainen-juna-rovaniemi-1909',
-    otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
-    nimio: 'Ensijuna 1909',
+    otsikko: 'Rovaniemi 1909 — ensimmäinen juna saapuu',
+    nimio: 'Rovaniemi 1909',
     paivays: '1909',
     paikka: 'Rovaniemen rautatieasema, Lappi',
     iso: 'FIN',
@@ -5026,7 +5050,7 @@ export const HISTORIAN_HETKET = [
   /* wienin-porssikrahi-1873 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "wienin-porssikrahi-1873",
-    otsikko: "Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi",
+    otsikko: "Wienin krahi 1873 — pörssi romahtaa",
     nimio: "Wienin krahi 1873",
     paivays: "9.5.1873",
     paikka: "Väliaikainen pörssitalo, Schottenring, Wien",
@@ -5067,8 +5091,8 @@ export const HISTORIAN_HETKET = [
   /* afsluitdijkin-viimeinen-aukko-1932 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "afsluitdijkin-viimeinen-aukko-1932",
-    otsikko: "De Vlieter 1932 — meri lakkaa kahtia jakamasta",
-    nimio: "Vlieter 1932",
+    otsikko: "Afsluitdijk 1932 — padon viimeinen aukko",
+    nimio: "Afsluitdijk 1932",
     paivays: "28.5.1932",
     paikka: "”De Vlieter”, Afsluitdijk",
     iso: "NLD",
@@ -5111,8 +5135,8 @@ export const HISTORIAN_HETKET = [
   /* gotthardin-lapimurto-1880 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "gotthardin-lapimurto-1880",
-    otsikko: "Gotthard 1880 — valokuva kulkee kalliossa",
-    nimio: "Läpimurto 1880",
+    otsikko: "Gotthard 1880 — tunnelin läpimurto",
+    nimio: "Gotthard 1880",
     paivays: "29.2.1880",
     paikka: "Gotthardin rautatietunnelin keskikohta, Göschenenin ja Airolon välissä",
     iso: "CHE",
@@ -5155,8 +5179,8 @@ export const HISTORIAN_HETKET = [
   /* christiansborgin-palo-1884 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "christiansborgin-palo-1884",
-    otsikko: "Christiansborg 1884 — savu valtaosien alla",
-    nimio: "Linnanpalo 1884",
+    otsikko: "Kööpenhamina 1884 — Christiansborg palaa",
+    nimio: "Kööpenhamina 1884",
     paivays: "3.10.1884",
     paikka: "Christiansborgin linna, Kööpenhamina",
     iso: "DNK",
@@ -5197,7 +5221,7 @@ export const HISTORIAN_HETKET = [
   {
     id: "belgradin-piiritys-1456",
     otsikko: "Belgrad 1456 — talonpojat murtavat piirityksen",
-    nimio: "Piiritys 1456",
+    nimio: "Belgrad 1456",
     paivays: "21.–22.7.1456",
     paikka: "Belgradin linnoitus (Kalemegdan)",
     iso: "SRB",
@@ -5242,8 +5266,8 @@ export const HISTORIAN_HETKET = [
   /* franz-ferdinandin-salamurha-1914 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "franz-ferdinandin-salamurha-1914",
-    otsikko: "Sarajevo 1914 — auto pysähtyy väärään paikkaan",
-    nimio: "Latin-silta 1914",
+    otsikko: "Sarajevo 1914 — Franz Ferdinand murhataan",
+    nimio: "Sarajevo 1914",
     paivays: "28.6.1914",
     paikka: "Latin-silta, Sarajevo",
     iso: "BIH",
@@ -5283,8 +5307,8 @@ export const HISTORIAN_HETKET = [
   /* vloren-itsenaisyys-1912 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "vloren-itsenaisyys-1912",
-    otsikko: "Vlorë 1912 — lippu, joka ommeltiin yöllä",
-    nimio: "Vlorë 1912",
+    otsikko: "Albania 1912 — itsenäisyys julistetaan",
+    nimio: "Albania 1912",
     paivays: "28.11.1912",
     paikka: "Ismail Qemalin talo, Vlorë",
     iso: "ALB",
@@ -5371,14 +5395,14 @@ export const HISTORIAN_HETKET = [
   /* obodin-kirjapaino-1494 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "obodin-kirjapaino-1494",
-    otsikko: "Obod 1494 — musteen viimeinen arkki",
+    otsikko: "Obod 1494 — Montenegron ensimmäinen painettu kirja",
     nimio: "Obod 1494",
     paivays: "4.1.1494",
     paikka: "Obodin kirjapaino, Rijeka Crnojevića",
     iso: "MNE",
     lat: 42.35, lon: 19.033,
     kuvaversio: 4,
-    teksti: "Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka eteläslaavilaiset ovat koskaan tuottaneet omalla kielialueellaan — aikaisemmin kaikki kirjat oli kopioitava käsin munkkien luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone katoaa historiasta jäljettömiin.",
+    teksti: "Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on nykyisen Montenegron alueen ensimmäinen painettu teos — aikaisemmin kaikki kirjat oli kopioitava käsin munkkien luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone katoaa historiasta jäljettömiin.",
     kuvat: [
       {
         rooli: "lahi",
@@ -5404,7 +5428,7 @@ export const HISTORIAN_HETKET = [
       vaihtoehdot: ["Oktoih prvoglasnik", "Raamatun ensimmäinen käännös", "Zetan lakikirja"],
       oikea: 0,
     },
-    lehtiJohdanto: "Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih prvoglasnik — ensimmäinen eteläslaavien oma painettu kirja, tehty vain viisi vuotta ennen painokoneen katoamista osmanien tieltä.",
+    lehtiJohdanto: "Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih prvoglasnik — Montenegron ensimmäinen painettu kirja, tehty vain viisi vuotta ennen painokoneen katoamista osmanien tieltä.",
     lehtiTehtava: {
       kysymys: "Mikä kirja valmistui Obodin painossa 4.1.1494?",
       vaihtoehdot: ["Oktoih prvoglasnik", "Raamatun ensimmäinen käännös", "Zetan lakikirja", "Venetsian kauppasopimus"],
@@ -5415,7 +5439,7 @@ export const HISTORIAN_HETKET = [
   /* britannian-lippu-nikosiassa-1878 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "britannian-lippu-nikosiassa-1878",
-    otsikko: "Nikosia 1878 — puolikuu laskee, risti nousee",
+    otsikko: "Nikosia 1878 — Britannia ottaa Kyproksen",
     nimio: "Nikosia 1878",
     paivays: "12.7.1878",
     paikka: "Nikosia, Kypros",
@@ -5456,8 +5480,8 @@ export const HISTORIAN_HETKET = [
   /* pyhan-elmon-linnake-1565 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "pyhan-elmon-linnake-1565",
-    otsikko: "Pyhä Elmo 1565 — viimeinen aamu muurilla",
-    nimio: "Fort St Elmo 1565",
+    otsikko: "Pyhä Elmo 1565 — linnake kaatuu piirityksessä",
+    nimio: "Pyhä Elmo 1565",
     paivays: "23.6.1565",
     paikka: "Pyhän Elmon linnake, Sciberras-niemi (nyk. Valletta), Malta",
     iso: "MLT",
@@ -5497,8 +5521,8 @@ export const HISTORIAN_HETKET = [
   /* bessarabian-liittyminen-1918 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "bessarabian-liittyminen-1918",
-    otsikko: "Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi",
-    nimio: "Chișinău 1918",
+    otsikko: "Bessarabia 1918 — liittyminen Romaniaan",
+    nimio: "Bessarabia 1918",
     paivays: "27.3.1918",
     paikka: "Sfatul Țării -palatsi, Chișinău",
     iso: "MDA",
@@ -5543,7 +5567,7 @@ export const HISTORIAN_HETKET = [
   /* berezinan-ylitys-1812 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "berezinan-ylitys-1812",
-    otsikko: "Berezina 1812 — jäinen vesi polvien yli",
+    otsikko: "Berezina 1812 — Napoleonin armeija pakenee",
     nimio: "Berezina 1812",
     paivays: "26.–28.11.1812",
     paikka: "Studziankan kahluupaikka, lähellä Borisovia",

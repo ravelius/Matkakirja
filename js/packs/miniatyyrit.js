@@ -56,7 +56,7 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Kulta-Liisa': 'berliini-kulta-liisa-vari2',
     'Radialsystem V': 'assets/kartat/miniatyyrit/berliini-radialsystem-v.webp',  // Codex 31.10.2026: rakennuksen oma piirros (PT)
-    'Muuri 1961': 'assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
+    'Berliini 1961': 'assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
     'Hattupäinen ukkeli': 'assets/kartat/miniatyyrit/berliini-hattupainen-ukkeli.webp',
     'Gaertnerin Berliini': 'assets/kartat/miniatyyrit/berliini-gaertnerin-berliini.webp',
     'Marlene Dietrich': 'assets/kartat/miniatyyrit/berliini-marlene-dietrich.webp',
@@ -83,7 +83,7 @@ export const MINIATYYRIT = {
     // Finlandia (nuottiteline) pois kartalta: musiikkiteos ei ole paikka (omistaja 31.10.2026 klo 11.26, PT).
     Pirtukuningas: 'helsinki-pirtukuningas-vari2',
     'Nurmen kohu': 'helsinki-nurmen-kohu-vari2',
-    'Suomi herää 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
+    'Sibelius 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
   },
   pariisi: {
     'Grand Châtelet': 'assets/kartat/miniatyyrit/pariisi-grand-chatelet.webp',  // kadonnut ihme (31.10.2026)
@@ -128,12 +128,12 @@ export const MINIATYYRIT = {
      * piirretty rakennus ja pysyy kartalla.
      */
     Bastilji: 'pariisi-bastilji-vari2',
-    'Carmenin ensi-ilta': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
-    'Kirahvin kävelymatka': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
-    'Torni romuraudaksi': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
+    'Bizet 1875': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
+    'Kirahvi 1827': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
+    'Lustig 1925': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
-    Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
-    Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
+    'Monet 1874': 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
+    'Piiritys 1870': 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
     // Tuileries'n palatsi KADONNEENA IHMEENÄ LOISTONSA AIKANA (omistaja 31.10.2026 klo 08.22 "Kartalle voi kyllä tehdä niitä
     // ihmeitä. Tuilers voisi olla sellainen", PT): ehjä palatsi kartan piirrostyylissä (Codex #1320, omistaja 30.10. 22.58).
     // Rauniokuvaa ei käytetä (omistaja 06.55 "Kartta kuvaa nykyaikaa").
@@ -141,16 +141,16 @@ export const MINIATYYRIT = {
     'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
     'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
     'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
-    'Torni 1888': 'assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
+    'Eiffel-torni 1888': 'assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
     'Bastilji 1789': 'assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
     'Lumière 1895': 'assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
     // 72 nimeä ja Notre-Damen kukko ovat rakennustensa nostoja (KK 10.11.2026 12.24), eivät omia kohteita: piirrokset pois listalta.
     // Guimardin lasikattoinen Abbesses-édicule (Codex #1321, omistaja 30.10. 21.42: vanha väärää tyyliä);
     // uusi nimi -v2, ettei välimuisteihin jäänyt vanha kuva näy.
-    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
-    'Pariisi soi': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
-    'Paras patonki': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
-    'Pariisin vuosisadat': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
+    'Metro 1900': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
+    'Piaf ja Django': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
+    'Patonki 1994': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
+    'Kaulanauha 1785': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {
     'Greenwichin palatsi': 'assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi.webp',  // kadonnut ihme (31.10.2026)
@@ -175,9 +175,9 @@ export const MINIATYYRIT = {
     'Vanha London Bridge': 'lontoo-vanha-london-bridge-vari2',
     'Faraday 1831': 'assets/kartat/miniatyyrit/lontoo-faraday-1831.webp',
     'Fleming 1928': 'assets/kartat/miniatyyrit/lontoo-fleming-1928.webp',
-    'Tunneli 1827': 'assets/kartat/miniatyyrit/lontoo-tunneli-1827.webp',
-    'Palo 1666': 'assets/kartat/miniatyyrit/lontoo-palo-1666.webp',
-    'Globe 1599': 'assets/kartat/miniatyyrit/lontoo-globe-1599.webp',
+    'Brunel 1827': 'assets/kartat/miniatyyrit/lontoo-tunneli-1827.webp',
+    'Lontoon palo 1666': 'assets/kartat/miniatyyrit/lontoo-palo-1666.webp',
+    'Shakespeare 1599': 'assets/kartat/miniatyyrit/lontoo-globe-1599.webp',
     'Metron höyryveturi': 'assets/kartat/miniatyyrit/lontoo-metron-hoyryveturi.webp',
     'Exchange Alley': 'assets/kartat/miniatyyrit/lontoo-exchange-alley.webp',
     'Canaletto Lontoossa': 'assets/kartat/miniatyyrit/lontoo-canaletto-lontoossa.webp',
@@ -228,7 +228,7 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Forum Romanum': 'rooma-forum-romanum-vari2',
     'Banca Romana': 'rooma-banca-romana-vari2',
-    'Sikstus 1510': 'assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
+    'Michelangelo 1510': 'assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
     'Kolikko olan yli': 'assets/kartat/miniatyyrit/rooma-kolikko-olan-yli.webp',
     'Areenan kellari': 'assets/kartat/miniatyyrit/rooma-areenan-kellari.webp',
     'Norsu ja obeliski': 'assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp',
@@ -253,8 +253,8 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Klimtin maalaukset': 'wien-klimtin-maalaukset-vari2',
     Saliera: 'wien-saliera-vari2',
-    'Yhdeksäs 1824': 'assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
-    'Figaro 1786': 'assets/kartat/miniatyyrit/wien-figaro-1786.webp',
+    'Beethoven 1824': 'assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
+    'Mozart 1786': 'assets/kartat/miniatyyrit/wien-figaro-1786.webp',
     'Rattaan kulmat': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
     Lipizzanit: 'assets/kartat/miniatyyrit/wien-lipizzanit.webp',
     Taikahuilu: 'assets/kartat/miniatyyrit/wien-taikahuilu.webp',
@@ -547,7 +547,7 @@ export const MINIATYYRIT = {
     'Elginin marmorit': 'assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
     'Diogeneen astia': 'assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
     'Niken temppeli': 'assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
-    'Louis 1896': 'assets/kartat/miniatyyrit/ateena-louis-1896.webp',
+    'Maraton 1896': 'assets/kartat/miniatyyrit/ateena-louis-1896.webp',
   },
   sofia: {
     'Mineraalikylpylä': 'assets/kartat/miniatyyrit/sofia-mineraalikylpyla.webp',
@@ -699,7 +699,7 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Huudon varkaus': 'oslo-huudon-varkaus-vari2',
     Boheemikirja: 'oslo-boheemikirja-vari2',
-    'Fram 1893': 'oslo-fram-1893-vari2',
+    'Nansen 1893': 'oslo-fram-1893-vari2',
   },
   dublin: {
     'Nelsonin pylväs': 'assets/kartat/miniatyyrit/dublin-nelsonin-pylvas.webp',  // kadonnut ihme (31.10.2026)
@@ -786,7 +786,7 @@ export const MINIATYYRIT = {
     // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
     // tarkistettu 200.
     'Mendelejev 1869': 'pietari-mendelejev-1869',
-    'Jänissaari 1703': 'assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
+    'Pietari 1703': 'assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
   },
   kiova: {
     'Kontraktovan aukio': 'assets/kartat/miniatyyrit/kiova-kontraktovan-aukio.webp',
