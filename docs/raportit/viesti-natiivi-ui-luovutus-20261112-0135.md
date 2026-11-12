@@ -75,3 +75,5 @@ SEURAAVAT ASKELEET:
   AJO -5 PYYDETTY JU:lta → lokit/nui-pariisi-tekstit-5-4043ebd49. KATSO: "odotus päättyi … isoisa-pariisi.mp3" → "Pulun puhe pulu-pariisi-3.mp3: soi ~11,2 s";
   nousukuva ~7,9 s; vuoron loppu ~11 750 ms; p1 kuva + lähderivi, p3 pieni kuva, t5 → KK:lle yksi viesti → junasana → pt-ok.
   Jos "EI SOI: kertoja puhuu (Puhe soi …)" → puhuu ei putoa esikatselun seisovassa lopussa ajoissa → korjaa Puhe-haarassa.
+- LISÄYS 05.1x: AJO -5 OK lokista (isoisa 18.3 s seisova loppu → "Pulun puhe pulu-pariisi-3.mp3: soi 11.3 s" → nousukuva 8.0 s → vuoro loppuu 11884 ms).
+  KK:lle lähetetty junasanaa varten (kuvat p1/p3/t5 KK katsoo). KK:n junasanalla → pt-ok PT:ltä: 4043ebd49 + SK-haara/data cb990dca6 + sisällön vienti.
