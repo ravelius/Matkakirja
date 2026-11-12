@@ -11347,20 +11347,20 @@ export const NAHTAVYYSJUTUT = {
      * on siis kahdessa paikassa samassa lehdessä; Historia-sivun oma
      * tehtävä kysyy juuri areenasta, joten sivun nostoja ei purettu.
      */
-    'Banja Bashin moskeija': {
+    'Banja Bašin moskeija': {
       aika: '1566',
       teksti: 'Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, '
           + 'venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian '
           + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
           + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
           + 'osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle '
-          + 'jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka '
+          + 'jäi Banja Baši, kaupungin ainoa yhä toimiva moskeija, joka '
           + 'seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin '
           + 'synagoga ja kaksi kirkkoa.',
       kuvat: [
         {
           tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
-          selite: 'Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se '
+          selite: 'Banja Baši on Sofian ainoa yhä toimiva moskeija, ja se '
             + 'valmistui vuonna 1566.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },

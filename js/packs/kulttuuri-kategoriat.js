@@ -16036,10 +16036,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
-          lyhyt: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta; toisessa päässä on Kauppatori.',
-          selite: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta '
-            + 'asti, ja sen toisessa päässä odottavat Kauppatori ja '
-            + 'Eteläsatama.',
+          lyhyt: 'Helsingin keskustassa Senaatintori, tuomiokirkko, Kauppatori ja Eteläsatama ovat '
+            + 'lähekkäin meren rannalla.',
+          selite: 'Helsingin keskusta kohtaa meren Kauppatorilla ja Eteläsatamassa.',
           lahde: 'Suomen Ilmakuva Oy, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16051,8 +16050,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Market Square in Helsinki, Finland, 2024 May.jpg',
-          selite: 'Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja '
-            + 'lokakuussa silakkaa suoraan veneistä.',
+          lyhyt: 'Kauppatorilla myydään kesäisin mansikoita, ja lokakuun Silakkamarkkinoilla '
+            + 'silakkaa suoraan veneistä.',
+          selite: 'Kauppatorilla myydään kesäisin herneitä ja mansikoita, ja lokakuun '
+            + 'Silakkamarkkinoilla silakkaa suoraan veneistä.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16558,12 +16559,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tampere-ilta.jpg',
-          lyhyt: 'Tampereen Vanha kirkko valmistui 1824, kellotapuli 1828; se on keskustan vanhin säilynyt rakennus.',
-          selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona '
-            + '1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön '
-            + '1825, sen viereinen kellotapuli valmistui 1828 Carl Ludvig '
-            + 'Engelin piirustusten mukaan, ja kirkko on keskustan vanhin '
-            + 'säilynyt rakennus.',
+          lyhyt: 'Tampereen Vanha kirkko valmistui 1824 ja otettiin käyttöön 1825; sen viereinen '
+            + 'kellotapuli valmistui 1828–1829.',
+          selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona 1824 Carlo Bassin '
+            + 'suunnitelmien mukaan ja otettiin käyttöön 1825, ja sen viereinen kellotapuli '
+            + 'valmistui 1828–1829 Carl Ludvig Engelin piirustusten mukaan.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -16574,8 +16574,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/tampere/20261012-full/tampere-4-finlayson-arki-intro-v1.png',
           lyhyt: 'Tampereen vanhat tiilitehtaat nousivat Tammerkosken rannalle 1800-luvulla.',
-          selite: 'Skotlantilainen James Finlayson perusti Tammerkosken rannalle '
-            + 'puuvillatehtaan 1820, ja sen Plevna-rakennuksessa syttyi 1882 '
+          selite: 'Skotlantilainen James Finlayson perusti Finlayson-yhtiön 1820, ja sen '
+            + 'puuvillatehtaan Plevna-rakennuksessa Tammerkosken rannalla syttyi 1882 '
             + 'Pohjoismaiden ensimmäinen sähkövalo.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -16610,17 +16610,18 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/tampere/20261012-full/tampere-7-tiilikortteli-ilta-intro-v1.png',
-          lyhyt: 'Tampere on Pyhäjärven ja Näsijärven välisellä kannaksella.',
-          selite: 'Tampere perustettiin Kustaa III:n päätöksellä, ja täydet kaupunkioikeudet '
-            + 'se sai 1. lokakuuta 1779.',
+          lyhyt: 'Tampere perustettiin Kustaa III:n päätöksellä ja sai kaupunkioikeudet 1779.',
+          selite: 'Tampere perustettiin Kustaa III:n päätöksellä, ja täydet kaupunkioikeudet se '
+            + 'sai 1. lokakuuta 1779.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-tampere-nasinneula.jpg',
-          lyhyt: 'Näsinneula avattiin 1971 ja on 168 metriä korkea; pyörivä ravintola tekee kierroksen 45 minuutissa.',
-          selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 '
-            + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä ravintola '
-            + '124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.',
+          lyhyt: 'Näsinneula avattiin 1971 ja on antenneineen 168 metriä korkea; pyörivä ravintola '
+            + 'tekee kierroksen 45 minuutissa.',
+          selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 Särkänniemessä ja on '
+            + 'antenneineen 168 metriä korkea; sen pyörivä ravintola 124 metrin korkeudessa tekee '
+            + 'täyden kierroksen 45 minuutissa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -17427,12 +17428,11 @@ export const KULTTUURI_KATEGORIAT = {
            * kertoo muurista — uusi kohde karuselliin.
            */
           ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
-          lyhyt: 'Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja 20 tornia, aiemmin oli 2,4 kilometriä.',
-          selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 '
-            + 'kilometriä ja siinä 46 tornia; nykyään muuria on jäljellä '
-            + 'noin 1,9 kilometriä ja torneista pystyssä 20, ja se on '
-            + 'Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia '
-            + 'kaupunginmuureja.',
+          lyhyt: 'Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja yli kaksikymmentä '
+            + 'tornia, aiemmin oli 2,4 kilometriä.',
+          selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä; nykyään muuria on '
+            + 'jäljellä noin 1,9 kilometriä ja siinä on yli kaksikymmentä tornia, ja se on '
+            + 'Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia kaupunginmuureja.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -17511,19 +17511,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tallinna-ilta.png',
-          lyhyt: 'Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein rakennus.',
-          selite: 'Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan '
-            + 'olympialaisten purjehduskisoja varten, se on 314 metriä korkea '
-            + 'ja siten Viron korkein rakennus, ja sen näköalatasanne on 170 '
-            + 'metrin korkeudessa.',
+          lyhyt: 'Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein '
+            + 'rakennus.',
+          selite: 'Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan olympialaisten '
+            + 'purjehduskisoja varten, se on 314 metriä korkea ja siten Viron korkein rakennus, ja '
+            + 'sen näköalatasanne on yli 170 metrin korkeudessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Tallinn Landmarks 01.jpg',
-          lyhyt: 'Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta vuonna 1878.',
-          selite: 'Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä '
-            + 'Toompea omine herroineen ja alhaalla kauppiaiden kaupunki, ja '
-            + 'ne yhdistettiin vasta vuonna 1878.',
+          lyhyt: 'Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta 1870-luvun '
+            + 'lopulla.',
+          selite: 'Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä Toompea omine herroineen '
+            + 'ja alhaalla kauppiaiden kaupunki, ja ne yhdistettiin vasta 1870-luvun lopulla.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17546,9 +17546,10 @@ export const KULTTUURI_KATEGORIAT = {
            * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
            */
           tiedosto: 'T5tramm.jpg',
-          lyhyt: 'Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti Vana-Lõunaa.',
-          selite: 'Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut aloittivat '
-            + 'liikenteen 28.10.1925. Raideleveys on edelleen 1 067 millimetriä.',
+          lyhyt: 'Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti '
+            + 'Vana-Lõunaa.',
+          selite: 'Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut '
+            + 'aloittivat liikenteen 28.10.1925. Raideleveys on 1 067 millimetriä.',
           lahde: 'MorsMe, Wikimedia Commons (CC0)',
         },
       ],
@@ -17978,11 +17979,12 @@ export const KULTTUURI_KATEGORIAT = {
            * uusi kohde Kiovan karuselliin.
            */
           ampari: 'herokoe/hero-kiova-mihaelin-luostari.jpg',
-          lyhyt: 'Pyhän Mihaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja uudelleen 1997–1998.',
-          selite: 'Pyhän Mihaelin kultakupolinen luostari rakennettiin ensi '
-            + 'kerran vuosina 1108–1113, neuvostovalta purki sen '
-            + '1930-luvulla, ja nykyinen kirkko rakennettiin uudelleen '
-            + '1997–1998 vanhojen mittausten ja piirustusten mukaan.',
+          lyhyt: 'Pyhän Mikaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja '
+            + 'rakennettiin uudelleen 1999.',
+          selite: 'Pyhän Mikaelin kultakupolinen luostari rakennettiin ensi kerran vuosina '
+            + '1108–1113, neuvostovalta purki sen 1930-luvulla, ja jälleenrakennus vanhojen '
+            + 'mittausten ja piirustusten mukaan alkoi 1997; nykyinen kirkko avattiin virallisesti '
+            + '1999.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -17997,10 +17999,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kiova-keskipaiva.jpg',
-          lyhyt: 'Kiovan luolaluostarin perusti munkki Antoni 1051, lavra on maailmanperintöluettelossa vuodesta 1990.',
-          selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan '
-            + 'Athos-vuorelta palannut munkki Antoni vuonna 1051, ja '
-            + 'maanalaisista käytävistä kasvanut lavra on ollut Unescon '
+          lyhyt: 'Kiovan luolaluostarin perusti kronikoiden mukaan munkki Antoni 1051; lavra on '
+            + 'maailmanperintöluettelossa vuodesta 1990.',
+          selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan Athos-vuorelta palannut munkki '
+            + 'Antoni vuonna 1051, ja maanalaisista käytävistä kasvanut lavra on ollut Unescon '
             + 'maailmanperintöluettelossa vuodesta 1990.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -18023,9 +18025,8 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png',
-          lyhyt: 'Trukhanivin saari on Kiovan suurin saari keskellä Dneprjokea.',
-          selite: 'Trukhanivin saari on Kiovan suurin saari. Se on Dneprillä Podilia '
-            + 'vastapäätä, ja siellä on useita uimarantoja.',
+          lyhyt: 'Trukhanivin saari sijaitsee keskellä Dneprjokea Podilia vastapäätä.',
+          selite: 'Trukhanivin saari on Dneprillä Podilia vastapäätä, ja siellä on laaja ranta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19267,10 +19268,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png',
-          lyhyt: 'Chistyje Prudyn lammella voi kesällä vuokrata veneen ja talvella '
-            + 'luistella.',
-          selite: 'Chistyje Prudy tarkoittaa puhtaita lampia. Lampia oli aikoinaan useita, '
-            + 'mutta nykyään niistä on jäljellä vain yksi.',
+          lyhyt: 'Chistyje Prudyn lammella luistellaan talvisin.',
+          selite: 'Chistyje Prudy tarkoittaa puhtaita lampia. Lampia oli aikoinaan useita, mutta '
+            + 'nykyään niistä on jäljellä vain yksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19280,9 +19280,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png',
-          lyhyt: 'Varpuskukkulan näköalatasanne on noin 85 metriä Moskva-joen yläpuolella.',
-          selite: 'Varpuskukkulan (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla rannalla, '
-            + 'ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa.',
+          lyhyt: 'Varpusvuorten näköalatasanne on noin 85 metriä Moskvajoen yläpuolella.',
+          selite: 'Varpusvuorten (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla '
+            + 'rannalla, ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19292,10 +19292,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png',
-          lyhyt: 'Zamoskvoretšje on Moskva-joen eteläpuolinen kaupunginosa, jonka nimi '
-            + 'tarkoittaa joen takaista.',
-          selite: 'Nimi tulee sanoista ”joen takana” Kremliltä katsoen. 1700-luvulta alueelle '
-            + 'asettui paljon kauppiaita, joiden matalissa taloissa oli hedelmätarhoja.',
+          lyhyt: 'Zamoskvoretšje on Moskvajoen eteläpuolinen kaupunginosa, jonka nimi tarkoittaa '
+            + 'joen takaista.',
+          selite: 'Nimi tulee sanoista ”joen takana” Kremliltä katsoen, sillä alue on Moskvajoen '
+            + 'toisella puolella.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19308,8 +19308,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Moscow panoramic October 2008.jpg',
-          selite: 'Moskvajoki sai lisää vettä Volgasta, kun Moskovan kanava '
-            + 'rakennettiin vuosina 1932–1937.',
+          lyhyt: 'Moskovan kanava yhdistää Moskvajoen Volgaan, ja se rakennettiin vuosina '
+            + '1932–1937.',
+          selite: 'Moskvajoki sai lisää vettä Volgasta, kun Moskovan kanava rakennettiin vuosina '
+            + '1932–1937.',
           lahde: 'Антон Денисов, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -19327,7 +19329,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Moskovan metro ylittää Moskva-joen Lužnikin metrosillalla.',
+          lyhyt: 'Moskovan metro ylittää Moskvajoen Lužnikin metrosillalla.',
           selite: 'Lužnikin metrosilta on kaksikerroksinen kaarisilta: päällä ajotie, alla metrolinja. '
             + 'Sillalla on Vorobjovy Gory -asema, ainoa Moskovan metron asema veden päällä, ja se '
             + 'avattiin uudelleen 2002.',
@@ -19774,7 +19776,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Sofia Synagogue chandelier.JPG',
           teksti: 'Muutaman sadan metrin päässä toisistaan seisoo Sofiassa neljä '
             + 'eri uskonnon rakennusta: ortodoksinen Pyhän Nedeljan kirkko, '
-            + 'Banja Bashin moskeija vuodelta 1566, Sofian synagoga ja '
+            + 'Banja Bašin moskeija vuodelta 1566, Sofian synagoga ja '
             + 'katolinen Pyhän Joosefin katedraali. Kaupunkia kutsutaan siksi '
             + 'suvaitsevaisuuden neliöksi. Synagoga avattiin 1909 ja on '
             + 'Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia — '
@@ -19824,18 +19826,18 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-sofia-nevski.jpg',
-          lyhyt: 'Aleksanteri Nevskin katedraali rakennettiin 1882–1912 sodassa kaatuneiden muistoksi.',
-          selite: 'Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 '
-            + 'Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; '
-            + 'se pystytettiin vuosien 1877–1878 sodassa kaatuneiden '
-            + 'muistoksi, ja sen kullattu kupoli nousee 45 metriin ja '
-            + 'kellotorni 53 metriin.',
+          lyhyt: 'Aleksanteri Nevskin katedraali rakennettiin 1904–1912 sodassa kaatuneiden '
+            + 'muistoksi.',
+          selite: 'Aleksanteri Nevskin katedraalin perustuskivi laskettiin 1882 ja varsinainen '
+            + 'rakennustyö Aleksandr Pomerantsevin suunnitelmien mukaan kesti 1904–1912; se '
+            + 'pystytettiin vuosien 1877–1878 sodassa kaatuneiden muistoksi, ja sen kullattu '
+            + 'kupoli nousee 45 metriin ja kellotorni noin 50 metriin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-sofia-banya-bashi.jpg',
-          lyhyt: 'Banja Bashin moskeija on rakennettu kuumien lähteiden päälle, ainoa yhä toimiva moskeija Sofiassa.',
-          selite: 'Banja Bashin moskeija on rakennettu kuumien lähteiden '
+          lyhyt: 'Banja Bašin moskeija on rakennettu kuumien lähteiden päälle, ainoa yhä toimiva moskeija Sofiassa.',
+          selite: 'Banja Bašin moskeija on rakennettu kuumien lähteiden '
             + 'päälle ja sai nimensä viereisistä kylpylöistä; se on ainoa '
             + 'Sofiassa yhä toimiva moskeija, ja sen leveä lyijykupoli '
             + 'lepää tiilikuution päällä kolmiholvisen eteiskatoksen '
@@ -19844,10 +19846,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sofia-vitosa.jpg',
-          lyhyt: 'Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm raideleveydellä.',
-          selite: 'Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin '
-            + 'osa verkosta kulkee poikkeuksellisella 1 009 millimetrin '
-            + 'raideleveydellä — kadun päässä kohoaa Vitosa.',
+          lyhyt: 'Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm '
+            + 'raideleveydellä.',
+          selite: 'Sofian raitiotie avattiin 1901 alussa, ja suurin osa verkosta kulkee '
+            + 'poikkeuksellisella 1 009 millimetrin raideleveydellä — kadun päässä kohoaa Vitosa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19903,8 +19905,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sofia (37139621884).jpg',
-          selite: 'Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään '
-            + 'siinä asuu lähes 1,3 miljoonaa ihmistä.',
+          lyhyt: 'Sofiassa asuu nykyään yli miljoona ihmistä.',
+          selite: 'Sofiassa asuu nykyään yli miljoona ihmistä.',
           lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -19931,8 +19933,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Banya Bashi 1900.jpg',
           vuosi: 'noin 1900',
-          lyhyt: 'Banja Bashin moskeija valmistui 1566, Sofiasta tuli itsenäistyneen Bulgarian pääkaupunki 1879.',
-          selite: 'Banja Bashin moskeija valmistui vuonna 1566, ja Sofiasta '
+          lyhyt: 'Banja Bašin moskeija valmistui 1566, Sofiasta tuli itsenäistyneen Bulgarian pääkaupunki 1879.',
+          selite: 'Banja Bašin moskeija valmistui vuonna 1566, ja Sofiasta '
             + 'tuli vasta itsenäistyneen Bulgarian pääkaupunki 1879.',
           lahde: 'Wikimedia Commons (PD)',
         },
@@ -20032,10 +20034,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
             + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
             + 'osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle '
-            + 'jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka '
+            + 'jäi Banja Baši, kaupungin ainoa yhä toimiva moskeija, joka '
             + 'seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin '
             + 'synagoga ja kaksi kirkkoa.',
-          selite: 'Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se '
+          selite: 'Banja Baši on Sofian ainoa yhä toimiva moskeija, ja se '
             + 'valmistui vuonna 1566.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
@@ -20531,8 +20533,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png',
           lyhyt: 'Cotrocenin kukkulalle Șerban Cantacuzino perusti luostarin vuonna 1679.',
-          selite: 'Kuningas Carol I rakennutti luostarin alueelle palatsin, jonka '
-            + 'rakentaminen alkoi 1888. Palatsin ympäristö kehittyi asuinalueeksi.',
+          selite: 'Kuningas Carol I rakennutti luostarin alueelle palatsin. Palatsin ympäristö '
+            + 'kehittyi asuinalueeksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20555,8 +20557,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png',
           lyhyt: 'Riemukaaren yläterassilta avautuu näkymä Bukarestin ylle.',
-          selite: 'Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin kävijöille '
-            + 'maaliskuussa 2025. Terassilta näkee kaupungin panoraaman.',
+          selite: 'Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin pysyvästi '
+            + 'kävijöille maaliskuussa 2025. Terassilta näkee kaupungin panoraaman.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20574,10 +20576,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bukarest-ilta.jpg',
-          lyhyt: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja metallikupoli.',
-          selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi '
-            + 'Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä '
-            + 'kaartuu suuri lasi- ja metallikupoli.',
+          lyhyt: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja '
+            + 'metallikupoli.',
+          selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi Calea Victoriei -kadun '
+            + 'varrelle — beaux-arts-tyylinen talo, jonka keskellä kaartuu suuri lasi- ja '
+            + 'metallikupoli.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20587,9 +20590,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä raiteella.',
-          selite: 'Bukarestin linjalle 41 tuli joulukuussa 2022 uusia Imperio-raitiovaunuja. Linja '
-            + 'kulkee Ghencean ja Piața Presein välillä kaupungin länsiosassa.',
+          lyhyt: 'Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä '
+            + 'raiteella.',
+          selite: 'Bukarestin raitiolinja 41 kulkee Ghencean ja Piața Presein välillä kaupungin '
+            + 'länsiosassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -21094,10 +21098,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sarajevo-keskipaiva.jpg',
-          lyhyt: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 uusgoottilaiseen asuun, tunnetaan Katedralana.',
-          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 '
-            + 'Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja '
-            + 'ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.',
+          lyhyt: 'Jeesuksen pyhän sydämen katedraali valmistui 1887 uusgoottilaiseen asuun, '
+            + 'tunnetaan Katedralana.',
+          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1887 Ferhadija-kadulle '
+            + 'uusgoottilaiseen asuun kaksoistorneineen ja ruusuikkunoineen ja vihittiin 1889; '
+            + 'sitä kutsutaan usein vain Katedralaksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -21706,11 +21711,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-keskipaiva.jpg',
-          lyhyt: 'Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin 1827–1830 ruhtinas Vorontsoville.',
-          selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin '
-            + '1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen '
-            + 'Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn '
-            + 'linnoituksen paikalle.',
+          lyhyt: 'Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin ruhtinas '
+            + 'Vorontsoville.',
+          selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin ruhtinas Mihail '
+            + 'Vorontsoville sardinialaissyntyisen Francesco Boffon piirustusten mukaan '
+            + 'turkkilaisen Hacıbeyn linnoituksen paikalle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -21748,8 +21753,9 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png',
           lyhyt: 'Primorskin bulevardi on rinteen reunan kävelykatu, jolta näkee Odessan sataman.',
-          selite: 'Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja niissä '
-            + 'on nykyään 192 askelmaa. Ylhäältä avautuu näkymä satamaan ja merelle.',
+          selite: 'Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja '
+            + 'niissä on nykyään 192 askelmaa; portaikon yläpäästä avautuu näkymä Odessan satamaan '
+            + 'ja merelle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -21767,11 +21773,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-ilta.jpg',
-          lyhyt: 'Odessan kaupungintalo Dumska valmistui 1828–1834, Franz Morandi rakensi sen uudelleen 1871–1873.',
-          selite: 'Odessan kaupungintalo eli Dumska valmistui 1828–1834 '
-            + 'Francesco Boffon ja Gregorio Toricellin uusklassisena '
-            + 'suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi '
+          lyhyt: 'Odessan kaupungintalo valmistui 1834 pörssirakennukseksi, ja Franz Morandi '
             + 'rakensi sen uudelleen 1871–1873.',
+          selite: 'Odessan kaupungintalo rakennettiin pörssiksi 1828–1834 Francesco Boffon ja '
+            + 'Gregorio Toricellin uusklassisena suunnitelmana Primorskin bulevardin päähän, ja '
+            + 'Franz Morandi rakensi sen uudelleen 1871–1873.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -26146,10 +26152,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           ampari: 'herokoe/hero-tromssa-ilta.jpg',
           lyhyt: 'Polarmuseet avattiin 1978 Amundsenin viimeisen lennon 50-vuotispäivänä.',
-          selite: 'Polarmuseet avattiin 18. kesäkuuta 1978 tasan '
-            + 'viisikymmentä vuotta Roald Amundsenin viimeisen lennon '
-            + 'jälkeen, ja se toimii 1840-luvun tullimakasiineissa Skansenin '
-            + 'lähellä.',
+          selite: 'Polarmuseet avattiin 18. kesäkuuta 1978 tasan viisikymmentä vuotta Roald '
+            + 'Amundsenin viimeisen lennon jälkeen, ja se toimii 1800-luvun tullimakasiineissa '
+            + 'Skansenin lähellä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -26182,10 +26187,11 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/tromso/20261013-uudet-6-8/tromso-6-nakoala-intro-v1.png',
-          lyhyt: 'Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Arktinen katedraali.',
-          selite: 'Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne nousee '
-            + 'Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan saaren, '
-            + 'Tromsøbrua-sillan ja Arktisen katedraalin.',
+          lyhyt: 'Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Jäämeren '
+            + 'katedraali.',
+          selite: 'Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne '
+            + 'nousee Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan '
+            + 'saaren, Tromsøbrua-sillan ja Jäämeren katedraalin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -26207,10 +26213,11 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/tromso/20261013-uudet-6-8/tromso-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Hurtigruten-rannikkolaivat pysähtyvät Tromssassa Bergen–Kirkenes-reitillä.',
-          selite: 'Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin kävelymatkan '
-            + 'päässä keskustasta Tromssan saarella. Tromssa on yksi pysähdyspaikoista Bergenin ja '
-            + 'Kirkkoniemen välisellä reitillä.',
+          lyhyt: 'Matkustaja-alukset liikennöivät Tromssan satamassa, ja '
+            + 'Bergen–Kirkenes-rannikkoreitin laivat pysähtyvät kaupungissa.',
+          selite: 'Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin '
+            + 'kävelymatkan päässä keskustasta Tromssan saarella. Tromssa on yksi '
+            + 'pysähdyspaikoista Bergenin ja Kirkkoniemen välisellä reitillä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -26772,9 +26779,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png',
-          lyhyt: 'Alþingi perustettiin uudelleen Reykjavikiin vuonna 1845.',
-          selite: 'Alþingi on Islannin kansalliskokous, joka perustettiin alun perin noin '
-            + 'vuonna 930. Reykjavik sai kaupunkioikeudet vuonna 1786.',
+          lyhyt: 'Reykjavikin aaltopeltitalot ovat puutaloja, joiden seinät on verhottu '
+            + 'Isosta-Britanniasta tuodulla aaltopellillä.',
+          selite: 'Reykjavikin puutalojen seinät verhottiin Isosta-Britanniasta tuodulla '
+            + 'aaltopellillä, joka kestää hyvin Islannin tuulta ja sadetta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -27332,9 +27340,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/lapland/20261013-uudet-6-8/lapland-6-nakoala-intro-v1.png',
-          lyhyt: 'Ounasvaaran näkötornista näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.',
-          selite: 'Ounasvaaran näkötorni on vaaran länsirinteellä noin 2,2 kilometriä keskustasta '
-            + 'itään, noin 160 metrin korkeudessa merenpinnasta. Tornista näkyvät keskusta ja '
+          lyhyt: 'Ounasvaaralta näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.',
+          selite: 'Ounasvaaran länsirinteellä, noin 2,2 kilometriä keskustasta itään ja noin 160 '
+            + 'metrin korkeudessa merenpinnasta, on näkötorni. Rinteeltä näkyvät keskusta ja '
             + 'Kemijoki, ja joen yli kulkee Jätkänkynttilä-silta.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -27907,19 +27915,19 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-kreeta-aamu.jpg',
-          lyhyt: 'Arkadin luostarin kirkon fasadi valmistui 1587; 1866 luostari oli Kreetan kapinan näyttämö.',
-          selite: 'Arkadin luostarin kirkon fasadi valmistui 1587 '
-            + 'venetsialaiseen renessanssityyliin. Vuonna 1866 luostari '
-            + 'oli Kreetan kapinan traaginen näyttämö, jonka tarina '
-            + 'tunnettiin kaikkialla Euroopassa.',
+          lyhyt: 'Arkadin luostarin kirkko rakennettiin 1500-luvun lopulla; 1866 luostari oli '
+            + 'Kreetan kapinan näyttämö.',
+          selite: 'Arkadin luostarin kirkko rakennettiin 1500-luvun lopulla venetsialaiseen '
+            + 'renessanssityyliin. Vuonna 1866 luostari oli Kreetan kapinan traaginen näyttämö, '
+            + 'jonka tarina tunnettiin kaikkialla Euroopassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-kreeta-keskipaiva.jpg',
-          lyhyt: 'Koulesin linnoitus valmistui Heraklionin satamaan 1540; muurissa on yhä Pyhän Markuksen leijona.',
-          selite: 'Koulesin linnoitus valmistui Heraklionin satamansuulle '
-            + '1540 venetsialaisten Rocca a Marena, ja sen muurissa on '
-            + 'yhä Pyhän Markuksen leijona.',
+          lyhyt: 'Koulesin linnoitus valmistui Heraklionin satamaan 1540; muurissa on yhä Pyhän '
+            + 'Markuksen leijona.',
+          selite: 'Koulesin linnoitus eli venetsialaisittain Rocca al Mare valmistui Heraklionin '
+            + 'satamansuulle 1540, ja sen muurissa on yhä Pyhän Markuksen leijona.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -28546,10 +28554,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sisilia-ilta.jpg',
-          lyhyt: 'Monrealen katedraali rakennettiin 1170-luvulla normannien, arabien ja bysanttilaisten yhteistyönä.',
-          selite: 'Monrealen katedraali rakennettiin 1170-luvulla '
-            + 'normannien, arabien ja bysanttilaisten käsityönä; '
-            + 'vieressä avautuu ristikäytävän puutarha.',
+          lyhyt: 'Monrealen katedraali rakennettiin 1170- ja 1180-luvuilla normannien, arabien ja '
+            + 'bysanttilaisten yhteistyönä.',
+          selite: 'Monrealen katedraali rakennettiin 1170- ja 1180-luvuilla normannien, arabien ja '
+            + 'bysanttilaisten käsityönä; vieressä avautuu ristikäytävän puutarha.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -29225,9 +29233,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png',
-          lyhyt: 'Chastè-niemi työntyy Sils-järveen Sveitsin Engadinissa.',
-          selite: 'Chastè tarkoittaa retoromaaniksi linnaa, ja niemellä on vanhan linnan '
-            + 'muurien jäänteitä.',
+          lyhyt: 'Chastè-niemi työntyy Silsjärveen Sveitsin Engadinissa.',
+          selite: 'Chastè tarkoittaa retoromaaniksi linnaa, ja niemellä on vanhan linnan muurien '
+            + 'jäänteitä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -29262,9 +29270,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png',
           lyhyt: 'Silsistä kulkee hevosomnibussi suurelta osin autottomaan Fexin laaksoon.',
-          selite: 'Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen hevosomnibussi. '
-            + 'Laaksossa asuu noin sata ihmistä, ja matka pysäkeille kestää hevosvaunulla noin '
-            + '15-50 minuuttia.',
+          selite: 'Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen '
+            + 'hevosomnibussi, ja matka pysäkeille kestää hevosvaunulla noin 20–50 minuuttia.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -29774,12 +29781,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-dubrovnik-aamu.jpg',
-          lyhyt: 'Lovrijenacin linnake pystytettiin kalliolleen kolmessa kuukaudessa venetsialaisia kilpaillen.',
-          selite: 'Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä '
-            + 'merenpinnan yläpuolella kaupunginmuurin ulkopuolella, ja '
-            + 'Ragusan kronikoiden mukaan se pystytettiin kolmessa '
-            + 'kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle '
-            + 'ensin.',
+          lyhyt: 'Lovrijenacin linnake pystytettiin legendan mukaan kalliolleen kolmessa '
+            + 'kuukaudessa venetsialaisia kilpaillen.',
+          selite: 'Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä merenpinnan '
+            + 'yläpuolella kaupunginmuurin ulkopuolella, ja legendan mukaan se pystytettiin '
+            + 'kolmessa kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle ensin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -29825,20 +29831,20 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png',
-          lyhyt: 'Dubrovnikin ylimykset rakennuttivat rannikolle yli 200 kesähuvilaa '
-            + '1400–1700-luvuilla.',
-          selite: 'Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan '
-            + 'veneellä. Perheet viettivät niissä kesiä ja hoitivat viljelmiään.',
+          lyhyt: 'Dubrovnikin ylimykset rakennuttivat rannikolle kesähuviloita 1400-luvulta '
+            + 'alkaen.',
+          selite: 'Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan veneellä. '
+            + 'Perheet viettivät niissä kesiä ja hoitivat viljelmiään.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-dubrovnik-ilta.jpg',
-          lyhyt: 'Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, vanhin veistos edessään.',
-          selite: 'Pyhän Blasiuksen kirkko on omistettu kaupungin '
-            + 'suojeluspyhimykselle, ja venetsialainen Marino Gropelli '
-            + 'rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; '
-            + 'sen edessä seisoo Orlandon pylväs vuodelta 1418, Dubrovnikin '
-            + 'vanhin säilynyt julkinen veistos.',
+          lyhyt: 'Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, ja sen '
+            + 'edessä on yksi kaupungin vanhimmista veistoksista.',
+          selite: 'Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, ja '
+            + 'venetsialainen Marino Gropelli rakensi nykyisen barokkikirkon 1715 edellisen '
+            + 'palettua 1706; sen edessä seisoo Orlandon pylväs vuodelta 1418, yksi Dubrovnikin '
+            + 'vanhimmista julkisista veistoksista.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -30328,11 +30334,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-riika-aamu.png',
-          lyhyt: 'Mustapäiden talo pystytettiin 1334, tuhoutui 1941 ja purettiin; nykyinen on jälleenrakennus.',
-          selite: 'Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi '
-            + 'ja juhlapaikaksi, se tuhoutui 29. kesäkuuta 1941 ja purettiin '
-            + '1948, ja nykyinen talo on 1996–1999 tehty jälleenrakennus, '
-            + 'joka avattiin 9. joulukuuta 1999.',
+          lyhyt: 'Mustapäiden talo pystytettiin 1334, tuhoutui 1941 ja purettiin; nykyinen on '
+            + 'jälleenrakennus.',
+          selite: 'Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi ja juhlapaikaksi, se '
+            + 'tuhoutui 29. kesäkuuta 1941 ja purettiin 1948, ja nykyisen talon jälleenrakennus '
+            + 'alkoi 1996 ja se avattiin 9. joulukuuta 1999.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -30397,10 +30403,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-riika-ilta.png',
-          lyhyt: 'Riian Pyhän Pietarin kirkko mainitaan ensi kerran 1209; sen torni kunnostettiin 1967–1983.',
-          selite: 'Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi '
-            + 'kerran vuonna 1209, sen moneen kertaan uusittu torni '
-            + 'kunnostettiin 1967–1983, ja tornin näköalatasanne on 72 metrin '
+          lyhyt: 'Pyhän Pietarin kirkko mainitaan ensi kerran 1209; nykyinen kirkko on '
+            + '1400-luvulta, ja sen torni tuhoutui 1941.',
+          selite: 'Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran vuonna 1209, ja '
+            + 'nykyinen kirkko on 1400-luvulta. Sen moneen kertaan uusittu torni tuhoutui 1941, ja '
+            + 'entisöinti alkoi 1967 ja jatkui 1980-luvulle; tornin näköalatasanne on 72 metrin '
             + 'korkeudessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -30412,10 +30419,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '20070630-IMG 1662. Rīgas Doms, panorāma.jpg',
-          lyhyt: 'Pyhän Pietarin kirkko mainitaan ensi kerran 1209 ja säilyi saman vuoden kaupunkipalossa.',
-          selite: 'Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran '
-            + 'vuonna 1209, ja se säilyi saman vuoden kaupunkipalossa '
-            + 'kivirakenteensa ansiosta.',
+          lyhyt: 'Riian tuomiokirkon peruskivi laskettiin 1211 Daugavan rannalle.',
+          selite: 'Riian tuomiokirkon peruskivi laskettiin vuonna 1211 Daugavan rannalle. Samassa '
+            + 'vanhassakaupungissa ovat myös linna ja Pyhän Jaakobin katedraali.',
           lahde: 'Karlis Ustups, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -30891,30 +30897,30 @@ export const KULTTUURI_KATEGORIAT = {
            * Antakalnisin kirkko jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-vilna-gediminas.jpg',
-          lyhyt: 'Gediminaan torni on ainoa jäljellä osa Vilnan ylälinnasta; lippu nousi salkoon ensi kerran 1919.',
-          selite: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan '
-            + 'ylälinnasta, ja nykyinen tiilitorni on 1400-luvun '
-            + 'puolivälistä; sen salkoon nostettiin Liettuan trikolori ensi '
-            + 'kerran 1. tammikuuta 1919 ja uudelleen 7. lokakuuta 1988.',
+          lyhyt: 'Gediminasin torni on ainoa jäljellä osa Vilnan ylälinnasta; lippu nousi salkoon '
+            + 'ensi kerran 1919.',
+          selite: 'Gediminasin torni on ainoa jäljellä oleva osa Vilnan ylälinnasta, ja se on '
+            + '1300–1400-lukujen tiililinnan jäänne, jota on rakennettu osin uudelleen '
+            + '1930-luvulla; sen salkoon nostettiin Liettuan trikolori ensi kerran 1. tammikuuta '
+            + '1919 ja uudelleen 7. lokakuuta 1988.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-vilna-aamu.jpg',
-          lyhyt: 'Vilnan tuomiokirkko sai uusklassisen asunsa 1779–1783; kellotapulin alin kerros on 1200-luvulta.',
-          selite: 'Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa '
-            + 'Laurynas Gucevičiuksen suunnitelmien mukaan vuosina '
-            + '1779–1783, ja sisustus valmistui 1801; erillisen kellotapulin '
-            + 'alin kerros on 1200-luvun puolivälistä, jolloin se oli '
-            + 'Alalinnan puolustustorni.',
+          lyhyt: 'Vilnan tuomiokirkko sai uusklassisen asunsa 1783–1801; kellotapulin alin kerros '
+            + 'on 1200-luvulta.',
+          selite: 'Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa Laurynas Gucevičiuksen '
+            + 'suunnitelmien mukaan vuosina 1783–1801; erillisen kellotapulin alin kerros on '
+            + '1200-luvulta, jolloin se oli Alalinnan puolustustorni.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-vilna-keskipaiva.jpg',
-          lyhyt: 'Aamunkoiton portti rakennettiin 1503–1514 ja jäi ainoana pystyyn muurien purkamisen jälkeen.',
-          selite: 'Aamunkoiton portti rakennettiin 1503–1514 yhdeksi Vilnan '
-            + 'kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin '
-            + '1799–1805, se jäi ainoana pystyyn portin kappelissa palvotun '
-            + 'Neitsyt Marian kuvan takia.',
+          lyhyt: 'Aamunkoiton portti rakennettiin 1500-luvun alussa ja jäi ainoana pystyyn muurien '
+            + 'purkamisen jälkeen.',
+          selite: 'Aamunkoiton portti rakennettiin 1500-luvun alussa yhdeksi Vilnan '
+            + 'kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin 1799–1805, se jäi '
+            + 'ainoana pystyyn portin kappelissa palvotun Neitsyt Marian kuvan takia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -31507,19 +31513,17 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png',
-          lyhyt: 'Akerselvan koskia hyödynnettiin 1800-luvulla Oslon tehtaiden '
-            + 'voimanlähteenä.',
-          selite: 'Akerselvassa on noin 20 koskea, ja sen varteen syntyi 1840-luvulta lähtien '
-            + 'tekstiilitehtaita ja konepajoja; monet vanhat rakennukset ovat nykyään '
-            + 'asuntoja ja toimistoja.',
+          lyhyt: 'Akerselvan koskia hyödynnettiin 1800-luvulla Oslon tehtaiden voimanlähteenä.',
+          selite: 'Akerselvassa on noin 20 koskea, ja sen varteen syntyi tehtaita; monet vanhat '
+            + 'rakennukset ovat nykyään asuntoja ja toimistoja.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-oslo-ilta.png',
-          lyhyt: 'Oslon kuninkaanlinna rakennettiin 1824–1849; siinä on 173 huonetta ja ympärillä 22 hehtaarin puisto.',
-          selite: 'Oslon kuninkaanlinna rakennettiin 1824–1849 Hans Linstowin '
-            + 'suunnitelmien mukaan, siinä on 173 huonetta, ja sitä ympäröi '
+          lyhyt: 'Oslon kuninkaanlinna rakennettiin 1825–1848; siinä on 173 huonetta ja ympärillä '
             + '22 hehtaarin puisto.',
+          selite: 'Oslon kuninkaanlinna rakennettiin 1825–1848 Hans Linstowin suunnitelmien '
+            + 'mukaan, siinä on 173 huonetta, ja sitä ympäröi 22 hehtaarin puisto.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -31950,9 +31954,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-27613279050.jpg',
-          lyhyt: 'Ponte Santa Trinita on maailman vanhin ellipsikaarinen silta, rakennettu 1567–1569.',
-          selite: 'Ponte Santa Trinita on maailman vanhin ellipsikaarinen '
-            + 'silta, ja Bartolomeo Ammannati rakensi sen vuosina 1567–1569.',
+          lyhyt: 'Ponte Santa Trinita rakennettiin 1567–1569; vuonna 1944 tuhoutunut silta '
+            + 'rakennettiin uudelleen 1958.',
+          selite: 'Bartolomeo Ammannati rakensi Ponte Santa Trinitan vuosina 1567–1569; silta '
+            + 'tuhoutui 1944 ja rakennettiin uudelleen entiseen muotoonsa 1958.',
           lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
         },
         {
@@ -31978,23 +31983,26 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Arno river sunset, Florence, Italy.jpg',
-          lyhyt: 'Ponte Vecchion paikka on ollut tieverkon solmu siitä asti, kun Via Cassia Nova valmistui.',
-          selite: 'Ponte Vecchion paikka on ollut Firenzen tieverkon solmu '
-            + 'siitä asti, kun roomalainen Florentia yhdistettiin vuonna 123 '
-            + 'valmistuneeseen Via Cassia Novaan.',
+          lyhyt: 'Ponte Vecchion paikka on ollut tieverkon solmu siitä asti, kun Via Cassia Nova '
+            + 'valmistui.',
+          selite: 'Ponte Vecchion paikka on ollut Firenzen tieverkon solmu siitä asti, kun '
+            + 'roomalainen Florentia yhdistettiin noin vuonna 123 valmistuneeseen Via Cassia '
+            + 'Novaan.',
           lahde: 'hozinja, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-27155711546.jpg',
-          lyhyt: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, minkä vuoksi teurastajat karkotettiin.',
-          selite: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, '
-            + 'ja juuri sen takia sillan teurastajat karkotettiin vuonna 1593.',
+          lyhyt: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, minkä vuoksi '
+            + 'teurastajat karkotettiin.',
+          selite: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, ja juuri sen takia '
+            + 'sillan teurastajat karkotettiin.',
           lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-27407894606.jpg',
-          selite: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja '
-            + 'se valmistui vuonna 1436.',
+          lyhyt: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui 1436.',
+          selite: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui vuonna '
+            + '1436.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
         },
         {
@@ -32621,12 +32629,11 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
         {
           ampari: 'herokoe/hero-kobenhavn-aamu.png',
-          lyhyt: 'Marmorikirkon peruskivi laskettiin 1749, mutta rahat loppuivat, ja se valmistui vasta 1894.',
-          selite: 'Marmorikirkon eli Frederikin kirkon peruskivi laskettiin '
-            + '31. lokakuuta 1749 Nicolai Eigtvedin suunnitelmien mukaan, '
-            + 'mutta rahat loppuivat ja kirkko valmistui vasta 19. elokuuta '
-            + '1894 marmorin sijasta kalkkikivestä — kupolin jänneväli on 31 '
-            + 'metriä.',
+          lyhyt: 'Marmorikirkon peruskivi laskettiin 1749, mutta rahat loppuivat, ja se valmistui '
+            + 'vasta 1894.',
+          selite: 'Marmorikirkon eli Frederikin kirkon peruskivi laskettiin lokakuussa 1749 '
+            + 'Nicolai Eigtvedin suunnitelmien mukaan, mutta rahat loppuivat ja kirkko valmistui '
+            + 'vasta 19. elokuuta 1894 — kupolin jänneväli on 31 metriä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -32640,11 +32647,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kobenhavn-ilta.png',
-          lyhyt: 'Vapahtajan kirkko vihittiin 1695; kierreportainen huippu valmistui 1752, 400 porrasta 90 metriin.',
-          selite: 'Vapahtajan kirkko vihittiin 1695 ja Lauritz de Thurahin '
-            + 'kierreportainen torninhuippu valmistui 1752 — 90 metrin '
-            + 'korkeuteen nousee 400 porrasta, joista viimeiset 150 kiertävät '
-            + 'tornia ulkopuolelta.',
+          lyhyt: 'Vapahtajan kirkko vihittiin 1696; kierreportainen huippu valmistui 1752, 400 '
+            + 'porrasta 90 metriin.',
+          selite: 'Vapahtajan kirkko vihittiin 1696 ja Lauritz de Thurahin kierreportainen '
+            + 'torninhuippu valmistui 1752 — 90 metrin korkeuteen nousee 400 porrasta, joista '
+            + 'viimeiset 150 kiertävät tornia ulkopuolelta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -32654,10 +32661,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png',
-          lyhyt: 'Kööpenhaminan varhaisimpia pyöräteitä rakennettiin Esplanadenille vuonna '
-            + '1892.',
-          selite: 'Pyöräily yleistyi nopeasti: vuonna 1890 kaupungissa oli kolmisen tuhatta '
-            + 'polkupyörää, mutta vuonna 1907 jo noin 80 000.',
+          lyhyt: 'Pyöräily juurtui Kööpenhaminaan 1800-luvun lopulla: varhaisimpia pyöräteitä '
+            + 'rakennettiin Esplanadenille 1892.',
+          selite: 'Pyöräily yleistyi nopeasti: vuonna 1890 kaupungissa oli noin 2 500 polkupyörää, '
+            + 'mutta vuonna 1907 jo noin 80 000.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -32680,10 +32687,10 @@ export const KULTTUURI_KATEGORIAT = {
            * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
            */
           tiedosto: 'Panoramicas de Copenhague 05.jpg',
-          lyhyt: 'Christiansborgin tornista näkyvät Kööpenhaminan katot, oopperatalo ja kaukana Amager '
-            + 'Bakken piiput.',
-          selite: 'Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni. Kuvan '
-            + 'keskellä kaukana erottuva oopperatalo avattiin 2005.',
+          lyhyt: 'Christiansborgin tornista näkyvät Kööpenhaminan katot ja kaukana Amager Bakken '
+            + 'piiput.',
+          selite: 'Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni; '
+            + 'kaukana siintävät Amager Bakken savupiiput.',
           lahde: 'Alberto-g-rovi, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -32709,9 +32716,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg',
-          lyhyt: 'Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja laajennettiin nykyiseen muotoonsa 1624.',
-          selite: 'Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja '
-            + 'laajennettiin nykyiseen muotoonsa vuoteen 1624 mennessä.',
+          lyhyt: 'Rosenborgin linna rakennettiin maaseutuhuvilaksi vuodesta 1606 alkaen ja '
+            + 'laajennettiin vaiheittain 1630-luvulle asti.',
+          selite: 'Rosenborgin linna rakennettiin maaseutuhuvilaksi vuodesta 1606 alkaen ja '
+            + 'laajennettiin vaiheittain 1630-luvulle asti.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -67845,12 +67853,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sevilla-keskipaiva.png',
-          lyhyt: 'Sevillan Plaza de España rakennettiin 1928 seuraavan vuoden näyttelyä varten.',
-          selite: 'Sevillan Plaza de España rakennettiin 1928 Aníbal '
-            + 'Gonzálezin suunnitelmien mukaan seuraavan vuoden '
-            + 'Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 '
-            + 'neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat '
-            + 'Espanjan vanhoja kuningaskuntia.',
+          lyhyt: 'Sevillan Plaza de España rakennettiin 1914–1928 vuoden 1929 näyttelyä varten.',
+          selite: 'Sevillan Plaza de España rakennettiin 1914–1928 Aníbal Gonzálezin suunnitelmien '
+            + 'mukaan vuoden 1929 Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 '
+            + 'neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat Espanjan vanhoja '
+            + 'kuningaskuntia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -67929,10 +67936,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sevilla - March 2011 - 063.jpg',
-          lyhyt: 'Sevilla on rakennettu Guadalquivirin laaksoon lähes merenpinnan tasalle.',
-          selite: 'Sevilla on rakennettu Guadalquivirin laaksoon '
-            + 'keskimäärin seitsemän metriä merenpinnan yläpuolelle, ja '
-            + 'kunnan pinta-ala on 141 neliökilometriä.',
+          lyhyt: 'Real Maestranzan härkätaisteluareenan rakentaminen alkoi Sevillassa 1700-luvun '
+            + 'puolivälissä, ja kehä suljettiin kokonaan 1881.',
+          selite: 'Real Maestranzan härkätaisteluareenan rakentaminen alkoi Sevillassa 1700-luvun '
+            + 'puolivälissä, ja kehä suljettiin kokonaan 1881.',
           lahde: 'Michiel1972, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -71174,10 +71181,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bergen-ilta.png',
-          lyhyt: 'Bergenin Grieghallen vihittiin 1978; sen pääsalissa on 1 500 paikkaa ja se on filharmonikkojen koti.',
-          selite: 'Bergenin Grieghallen vihittiin 23. toukokuuta 1978 '
-            + 'tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa '
-            + 'on 1 500 paikkaa, ja talo on Bergenin filharmonikkojen koti.',
+          lyhyt: 'Bergenin Grieghallen vihittiin 1978; sen pääsalissa on yli 1 600 paikkaa ja se '
+            + 'on filharmonikkojen koti.',
+          selite: 'Bergenin Grieghallen vihittiin toukokuussa 1978 tanskalaisen Knud Munkin '
+            + 'suunnitelmien mukaan, sen pääsalissa on yli 1 600 paikkaa, ja talo on Bergenin '
+            + 'filharmonikkojen koti.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -71238,8 +71246,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Bergen Bryggen 1017.jpg',
-          selite: 'Bryggen on Vågenin itärannan vanha laituri, jonka '
-            + 'ympärillä hansakauppa Bergenissä käytiin.',
+          lyhyt: 'Bryggen on Vågenin itärannan vanha hansakaupan satamakortteli.',
+          selite: 'Bryggen on Vågenin itärannan vanha hansakaupan satamakortteli Bergenissä.',
           lahde: 'Anna Anichkova, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {

@@ -558,7 +558,7 @@ export const MINIATYYRIT = {
     Kansalliskulttuuripalatsi: 'assets/kartat/miniatyyrit/sofia-kansalliskulttuuripalatsi.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
-    'Banja Bashin moskeija': 'sofia-banja-bashin-moskeija',
+    'Banja Bašin moskeija': 'sofia-banja-bashin-moskeija',
     'Serdican areena': 'sofia-serdican-areena',
     'Sofia-patsas': 'sofia-sofia-patsas',
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki

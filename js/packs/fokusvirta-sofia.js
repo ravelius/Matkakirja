@@ -783,7 +783,7 @@ export const FOKUSVIRTA_SOFIA = {
     kuva: {
       tiedosto: 'Ruins of Serdica (48831910108).jpg',
       selite: 'Roomalaisen Serdican raunioita Sofian keskustassa; '
-        + 'taustalla Banja Bashin moskeija vuodelta 1576.',
+        + 'taustalla Banja Bašin moskeija vuodelta 1576.',
       lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
     },
   },
