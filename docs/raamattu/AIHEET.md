@@ -18,7 +18,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | linssit | Linssit | VS | – | – |
 | iss-ja-avaruus | ISS ja avaruus | VS | – | – |
 | isoisa-ja-tarina | Isoisä ja tarina | SK | – | – |
-| pulu-ja-kysymykset | Pulu ja kysymykset | SK | – | – |
+| pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
 | saapuminen-ja-intro | Saapuminen ja intro | NUI | – | – |
 | matkustus-ja-reitit | Matkustus ja reitit | PK | – | – |
