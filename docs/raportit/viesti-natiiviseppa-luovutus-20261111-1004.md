@@ -660,3 +660,10 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   tee itse lisäys 35k:n keinolla → yksi viesti KK:lle.
 - 35r (08.3x) KK 08.36 JUNASANA palkki-7 128ae58ba → pt-ok-pyyntö PT:lle LÄHETETTY. KK:n järjestys: 8 kappaleen lista → mono-keko (mono-3, lisäys 35m) → kaupunkityökalut.
 - 35s (08.4x) 8 KAPPALEEN LISTA LÄHETETTY KK:lle: 7 ei äänitetty (Invalidit 1–2, Petit Palais 1–2, Sainte-Chapelle/Grand Palais/Montparnasse pala 2), 1 tekstimuutos (Tuileries pala 1, b6a690b98). Avainten Python-toisto + aineisto _tyo/natiiviseppa/kertoja-viive/ei-valmiit/ (tee.py). Tarjottu KK:lle: ennen-junaa.sh-tarkistus (luku per kaupunki) KK:n sanalla. SEURAAVAKSI mono-3 (lisäys 35m).
+- 35t (08.4x) KK 08.42 PÄÄTÖS ÄÄNITTEET: 8 tilattu Äänittäjältä. JÄRJESTYS 3 → 2 → mono → kaupunkityökalut.
+  3) LASKENTA koko luettavalle sisällölle (kaikki kaupungit + paketit: nähtävyysjutut kaikki palat, hahmotelmat, fokusvirta-*, skandaalit…; b6a690b98 muutti myös
+     Impressionistit + 2 fokusvirta-pariisi + 1 skandaalit) → Sonnet-agentti tekee → _tyo/natiiviseppa/kertoja-viive/ei-valmiit/puuttuvat-kaikki.tsv → YKSI viesti KK:lle:
+     puuttuvat kaupungeittain + paketeittain, a (ei äänitetty) / b (teksti muuttui) + yhteensä + tiedoston polku.
+  2) ennen-junaa.sh-TARKISTUS: pysäyttää, kun luettava teksti muuttuu eikä avainta ole manifestissa EIKÄ äänitysjonossa. Jono = yksi tiedosto repossa (avain, kaupunki,
+     kohde, pala, päivä); tekstin muuttaja lisää rivin samassa commitissa (juna läpi, jono = Äänittäjän työlista); vienti poistaa rivin, kun avain manifestissa.
+     Tuloste: puuttuvien luku kaupungeittain. Pohjana tee.py-avaintoisto. (Kohta 1 = viennin vertailu on Äänittäjän.)
