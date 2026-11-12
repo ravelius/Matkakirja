@@ -423,6 +423,9 @@ export const KAARI_PAKETIT = {
         + 'kysymykseen. Kirja on odottanut siitä illasta. Vastaa, niin '
         + 'se on sinun."',
       kysymys: {
+        // Vihje: tarinapaikka, jonka jutusta vastaus löytyy (= kohdekartan kohteen `nosto`).
+        lahde: 'nosto-pariisin-bukinistit',
+        vihje: 'Kysyn sinulta Seinen rannan kirjakauppiaista. Etsi tiimalasi Quai Voltairen rantamuurilta.',
         q: 'Seinen rannalla kirjoja on myyty laatikoista vuosisatoja. '
           + 'Mistä myyjien nimi bukinisti tulee?',
         vaihtoehdot: [

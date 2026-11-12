@@ -18406,6 +18406,19 @@
    "eroKartanPisteesta_m": 0
   },
   {
+   "id": "pariisi:Bukinistit 1859",
+   "nimi": "Bukinistit 1859",
+   "qid": null,
+   "lat": 48.859,
+   "lon": 2.33075,
+   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "kartanPiste": {
+    "lat": 48.859,
+    "lon": 2.33075
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
    "id": "pariisi:Kaulanauha 1785",
    "nimi": "Kaulanauha 1785",
    "qid": null,

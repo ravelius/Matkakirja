@@ -17,3 +17,6 @@ A. UUSI TARINAPAIKKA "Bukinistit 1859 — laatikot pääsevät kaiteelle" (Quai 
 B. VAIHDETAAN KYSYMYS yhdeksi, jonka vastaus on jo tarinapaikan jutussa (esim. Lavoisier: miten hän osoitti ettei mikään katoa → vaaka; vihje: "Kysyn sinulta eräästä keksinnöstä. Etsi lamppu Arsenaalin kohdalta."). Colette-hahmo ja bukinistikohtaaminen pitäisi sovittaa uuteen kysymykseen.
 C. Jätetään Pariisin vihje pois (vanha käytös), kunnes A tai B on tehty.
 SUOSITUS: A.
+
+## TOTEUTETTU 12.11.2026 (KK 20.52: vaihtoehto A)
+Tarinapaikka "Bukinistit 1859" (nosto-pariisin-bukinistit, Quai Voltaire 48,859 N / 2,33075 E, tiimalasi) + tarinakaaren Pariisi-kysymykseen `lahde: nosto-pariisin-bukinistit` ja `vihje`. Miniatyyri: ämpäritunnus pariisi-bukinistit-1859 (kuvaa ei generoitu; puuttuva kuva = varatäplä). Äänijonoon 3 riviä.

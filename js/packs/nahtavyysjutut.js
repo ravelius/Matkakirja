@@ -5392,6 +5392,27 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    'Bukinistit 1859': {
+      nosto: 'nosto-pariisin-bukinistit',
+      teksti: 'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi '
+        + 'kertoo, mitä laatikoissa on: ranskan sana bouquin tarkoittaa '
+        + 'vanhaa kirjaa. Vihreistä peltilaatikoista myydään käytettyjä '
+        + 'kirjoja, vanhoja lehtiä ja julisteita, ja ammattikunta on ollut '
+        + 'joen varrella 1500-luvulta asti. Vuonna 1859 kauppiaat saivat '
+        + 'luvan kiinnittää laatikkonsa rantojen kaiteisiin, mutta laatikot '
+        + 'piti silti kantaa pois joka ilta. Pysyvä lukitus sallittiin '
+        + 'vasta vuonna 1891.',
+      kuvat: [
+        {
+          tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
+          lyhyt: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin vihreistä laatikoista 1500-luvulta asti.',
+          selite: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin '
+            + 'vihreistä laatikoista 1500-luvulta asti.',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     'Lustig 1925': {
       nosto: 'nosto-lustig-eiffel',
       teksti: 'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
