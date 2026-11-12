@@ -667,3 +667,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   2) ennen-junaa.sh-TARKISTUS: pysäyttää, kun luettava teksti muuttuu eikä avainta ole manifestissa EIKÄ äänitysjonossa. Jono = yksi tiedosto repossa (avain, kaupunki,
      kohde, pala, päivä); tekstin muuttaja lisää rivin samassa commitissa (juna läpi, jono = Äänittäjän työlista); vienti poistaa rivin, kun avain manifestissa.
      Tuloste: puuttuvien luku kaupungeittain. Pohjana tee.py-avaintoisto. (Kohta 1 = viennin vertailu on Äänittäjän.)
+- 35u (09.0x) — NOLLAUS TÄSTÄ (kontekstivahti 35 %). JU: palkki-6 + palkki-7 LINKISSÄ 224.101 = 67092d8d5 (VALMIS; työlista päivitetty).
+  KESKEN: laskenta (kohta 3) Sonnet-agentilla, joka KUOLEE nollauksessa → TARKISTA onko _tyo/natiiviseppa/kertoja-viive/ei-valmiit/puuttuvat-kaikki.tsv valmis;
+  jos ei, tee itse (tee.py + hist.py samassa kansiossa = avaintoisto; laajenna kaikkiin paketteihin ja kaupunkeihin, lisäys 35t) → KK yksi viesti. Sitten kohta 2, mono-3.
+  Viestit: SendMessage-raja täyttyi 03.4x → käytä mcp__ccd_session_mgmt__send_message session-id:llä (CLAUDE.md VIESTIRAJA).
