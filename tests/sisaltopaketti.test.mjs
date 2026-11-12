@@ -1044,6 +1044,12 @@ test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
   assert.equal(praha.kohtaaminen, praha.data.kohtaaminen);
   assert.equal(praha.kysymys.kysymys, praha.data.kysymys.q);
   assert.deepEqual(praha.kysymys.vaihtoehdot, praha.data.kysymys.vaihtoehdot);
+  // Vihjekortti (KK 13.11. 00.10): lahde ja vihje päätasolle; ilman niitä null (natiivi lukee vain päätason).
+  const pariisi = k('tarinakaari').find((a) => a.id === 'pariisi');
+  assert.equal(pariisi.kysymys.vihje, pariisi.data.kysymys.vihje);
+  assert.equal(pariisi.kysymys.lahde, 'nosto-pariisin-bukinistit');
+  assert.ok(pariisi.kysymys.vihje?.length > 0, 'Pariisin vihje');
+  assert.ok(k('tarinakaari').every((a) => !a.kysymys || ('vihje' in a.kysymys && 'lahde' in a.kysymys)));
   assert.ok(k('paikkatiedot').every((a) => typeof a.teksti === 'string' && a.teksti.length));
   assert.ok(k('kohtaamiset').every((a) => a.tervehdys && a.loyto && a.tyhja && a.vaarin));
   assert.ok(k('kohtaamiskuvat').every((a) => typeof a.tila === 'string'));
