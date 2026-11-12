@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "07e2a3625114a348",
-  "aika": "2026-11-12T08:33:15.711Z"
+  "sha": "20ff661394a06246",
+  "aika": "2026-11-12T08:33:20.468Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -70,5 +70,9 @@
  "aiheet/tekstit-ja-kieli.md": {
   "sha": "ec11c155b1bc4693",
   "aika": "2026-11-12T08:33:15.711Z"
+ },
+ "aiheet/kertojaaanet.md": {
+  "sha": "fc2afae4078dc0cd",
+  "aika": "2026-11-12T08:33:20.468Z"
  }
 }
