@@ -11,7 +11,7 @@ SÄÄNNÖT:
 6. Vain 2D-merkkejä ja vain kohteilla, joissa on pelattavaa tai kohdelinssi. Kohteet ovat paikkoja samalla kontrastilla: kaupungissa nähtävyys, kadonnut ihme ja tarinapaikka. [R-2.167] [R-2.139] [P-261110-3]
 7. Kuvamerkit ovat pieniä pyöreitä, yksi per kohde; napautus suurentaa nopeasti. Nostomerkki on värikiekko; omaa muotoa vain vuori, vesi, skandaali, tassu ja ihme. Löydetty ja löytämätön näyttävät samalta. [R-2.205] [R-4.38] [R-4.39]
 8. Kadonnut ihme on pyörivä piirretty kultatähti, alla kuvakyltti (kuva ja nimi); paikan toinen nimi jää pois. [P-261102-1] [P-261110-4]
-9. Tarinamerkki on yksinkertainen siluetti, ei koskaan tähteä leveämpi. Se väistää kaikki kiinteät nimet; samassa paikassa tähti voittaa. [P-261112-4] [P-261110-5]
+9. Tarinapaikalla ei ole erillistä merkkiä: kuvakyltin nimen lopussa on pieni tiimalasin siluetti. Samassa paikassa tähti voittaa. [P-261112-25] [P-261110-5]
 10. Nimikyltit ovat pieniä, kiinteän kokoisia ja ilmestyvät vasta lähellä; erikoiskohteilla sama kyltti, maksullisessa hinta. [P-261105-1] [R-2.212]
 11. Kohdemaan merkit piirtyvät heti ilman kattoa. Saman aiheen nostot ovat yksi merkki, joka avautuu listaksi. [R-2.145] [R-2.137]
 12. Kohdemaan lippu näkyy kaikilla tasoilla samankokoisena. [R-2.167]
