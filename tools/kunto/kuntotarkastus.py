@@ -285,7 +285,39 @@ def mittaa(a):
         L["13 Raamatun ovi punaisia"] = (o["punaisia"], 0, ", ".join(pun)[:120])
     except (OSError, ValueError, KeyError, subprocess.SubprocessError):
         L["13 Raamatun ovi punaisia"] = (None, None, "kirjaa.mjs ei vielä mainissa")
+    # 14 VAHDIT (KK 12.11. 11.45, Raamattu 7.41): tools/kunto/VAHDIT.md vs. ajossa olevat
+    puuttuu = vahdit_puuttuu(git("show", "origin/main:tools/kunto/VAHDIT.md"))
+    L["14 vahteja poissa"] = (None if puuttuu is None else len(puuttuu), 0,
+                              "VAHDIT.md puuttuu" if puuttuu is None else ", ".join(puuttuu)[:120])
+    # 15 TYÖPUUT (kortti agentit-ja-komennot 11: talossa alle 20)
+    try:
+        puut = [r for r in git("worktree", "list", "--porcelain").splitlines() if r.startswith("worktree ")]
+        L["15 työpuita talossa"] = (len(puut) - 1, 19, "")
+    except (OSError, subprocess.SubprocessError):
+        L["15 työpuita talossa"] = (None, 19, "git worktree list ei onnistunut")
     return nyt_l, L
+
+
+def vahdit_puuttuu(teksti):
+    """VAHDIT.md:n (origin/main) rivit '- tyyppi | tunniste | omistaja | kuvaus' → lista puuttuvista 'omistaja:tunniste'."""
+    rivit = [r[2:].split("|") for r in (teksti or "").splitlines() if r.startswith("- ") and r.count("|") >= 3]
+    if not rivit:
+        return None
+    ladatut = subprocess.run(["launchctl", "list"], capture_output=True, text=True).stdout
+    puuttuu = []
+    for osat in rivit:
+        tyyppi, tunniste, omistaja = (x.strip() for x in osat[:3])
+        if tyyppi == "launchagent":
+            ok = any(r.split("\t")[-1] == tunniste for r in ladatut.splitlines())
+        elif tyyppi == "prosessi":
+            ok = subprocess.run(["pgrep", "-f", tunniste], capture_output=True).returncode == 0
+        elif tyyppi == "tiedosto":
+            ok = os.path.exists(tunniste)
+        else:
+            continue
+        if not ok:
+            puuttuu.append(f"{omistaja}:{tunniste}")
+    return puuttuu
 
 
 def punainen(nimi, arvo, raja, lisa=""):
