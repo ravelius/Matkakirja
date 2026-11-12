@@ -647,3 +647,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   kehyksiä 6" saatiin (HUOM vain 6 kehystä 20 s:ssa → profiloija tallentaa vähän batchmodessa?). PUUTE 1: "MONO-VARAAJAT valmis" alkoi (mono 571 Mt), loppuriviä
   EI tullut 20 s:n odotuksessa (skenaarion oleta-aika liian lyhyt vai käsittely jumissa? katso lokit/ns-mono-2/unity.log rivit "MONO-" valmiin jälkeen).
   → korjaa (oleta 60 s / käsittely) → mono-3 → YKSI viesti KK:lle (kolme suurinta varaajaa kutsupaikkoineen, toistuuko ennen kaupunkia). Ei korjauksia peliin.
+- 35n (03.49) JU: kertojan esilataus 333e91c45 LINKISSÄ 224.96 = 3929cdcf6 (VALMIS; jatko: ei-valmiit 8 → KK, lisäys 35k).
