@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "e052c3ebf7093614",
-  "aika": "2026-11-12T07:53:35.324Z"
+  "sha": "31644958f2573b4c",
+  "aika": "2026-11-12T07:53:41.942Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -18,5 +18,9 @@
  "aiheet/juna-ja-julkaisu.md": {
   "sha": "fe95b515e1fa1440",
   "aika": "2026-11-12T07:49:47.587Z"
+ },
+ "aiheet/juoksupeli.md": {
+  "sha": "61e2054c1fc98dae",
+  "aika": "2026-11-12T07:53:41.942Z"
  }
 }
