@@ -597,9 +597,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Yhteenveto _tyo/natiiviseppa/kertoja-viive/tulos.md.
 - Vahti: Monitor `bash /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/latausjono/vahti-mac4.sh` (= mac3 + kertoja-esilataus-mac-*). Cron 9.04 LUO UUDELLEEN.
 
-## LISÄYS 35 — NOLLAUS TÄSTÄ (12.11. 03.1x, kontekstivahti 26 %). JATKA NÄISTÄ:
+## LISÄYS 35 — NOLLAUS TÄSTÄ (12.11. 03.0x, kontekstivahti 26 %). JATKA NÄISTÄ:
 - T1 KAUPUNKITAULU: vakioajo luettu (Pariisi 21,6 → 21,5 s, 1613 → 1603 Mt; Lontoo 23,2 → 23,1 s, 1669 → 1666 Mt; 66/66, PUUTE 0, kuvat samat).
-  Kuvat proto-3d/lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3-vertailu/. KK 03.02 JUNASANA → pt-ok-pyyntö PT:lle LÄHETETTY 03.1x (cfe3324a3). Odota LINKKI-rivi JU:lta.
+  Kuvat proto-3d/lokit/ns-kaupunkitaulu-vakioajo-cfe3324a3-vertailu/. KK 03.02 JUNASANA → pt-ok-pyyntö PT:lle LÄHETETTY 03.0x (cfe3324a3). Odota LINKKI-rivi JU:lta.
   KK:n huomiot: (1) vakioajon kohdekamera ei toistu (Cutty Sark 20°/18°) → NUI:lle kirjattu (Vakioajo.cs 210c842ad on NUI:n), kopio JU; (2) Lontoon
   "nähtävyysalueet luotu 0" = oikein (Nahtavyysalue.cs:n 10 aluetta kaikki Pariisin) → KK:lle vastattu.
 - JU:N JONO (03.00): palkki-6 → pala3-pari-b → mono-1 → kertoja-esilataus (ennen|jälkeen). Lukuohjeet: palkki-6 lisäys 33, pari-b lisäys 32, mono-1 lisäys 33,
