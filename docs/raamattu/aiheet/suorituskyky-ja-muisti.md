@@ -4,7 +4,7 @@ TAVOITE: Peli liikkuu sulavasti ilman nykäyksiä ja näyttää niin hyvältä k
 
 SÄÄNNÖT:
 1. Kehystahti pysyy tasaisena; yksittäinenkin pudotus näkyy nykäyksenä. [R-6.10]
-2. Täysi ruudunpäivitys on käytössä vain, kun jokin liikkuu (kosketus, kamera, lento, linssi, käyttöliittymän animaatio). Puolen sekunnin levon jälkeen tahti laskee 30 fps:iin, ja kun mikään ei muutu, ei piirretä lainkaan. [R-6.14]
+2. Täysi ruudunpäivitys on käytössä vain, kun jokin liikkuu (kosketus, kamera, lento, linssi, käyttöliittymän animaatio). Puolen sekunnin levon jälkeen tahti laskee 30 fps:iin, ja kun mikään ei muutu, peli tarkistaa tilanteen kymmenen kertaa sekunnissa ja piirtää kuvan vain kahden sekunnin välein. [R-6.14]
 3. Kuumailmapallo piirretään 40 fps:llä myös viileänä, ja sen lämpöhidastus alkaa jo lämpimänä. [R-6.14]
 4. Peli lukee laitteen lämpötilan ja virransäästön. Kuumana tahdin katto on 30 fps ja kuvaskaala, reunanpehmennys ja hehku kevenevät, kriittisessä lämmössä katto on 20 fps; virransäästö vastaa kuumaa. Laatutasoa ei vaihdeta kesken näkymän. [R-6.14] [R-6.15]
 5. Grafiikka käyttää kaiken, minkä laite kantaa: M-sarjan laitteilla on korkein laatutaso, vanhemmat saavat kevyemmän automaattisesti. [R-6.15]
