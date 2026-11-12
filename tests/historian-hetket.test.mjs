@@ -35,6 +35,8 @@ import { KARTTAVALO_AIHEET } from '../js/karttavalot.js';
 
 /** Karttanimiön enimmäismitta (js/fokusnosto-symbolit.js NOSTOSYM_NIMIO_MERKKEJA). */
 const NIMION_MAKSIMI = 18;
+/** Hetki, jota ei ole pääkartalla (kartalla: false), saa kohdekartan kyltiksi 20 merkkiä (KK 12.11.2026). */
+const NIMION_MAKSIMI_KOHDEKARTTA = 20;
 
 /** Etäisyys, jota lähempänä hetki latoutuu kaupungin sarakkeeseen. */
 const VAHIN_ETAISYYS_KAUPUNKIIN = 35;
@@ -95,8 +97,8 @@ test('hetkiä on 67 ja jokaisella on kortin kentät', () => {
         `${hetki.id}: kenttä ${kentta} puuttuu tai on tyhjä`);
     }
     assert.ok(hetki.teksti.length > 300, `${hetki.id}: teksti on epäilyttävän lyhyt`);
-    assert.ok(hetki.nimio.length <= NIMION_MAKSIMI,
-      `${hetki.id}: nimiö "${hetki.nimio}" on yli ${NIMION_MAKSIMI} merkkiä `
+    assert.ok(hetki.nimio.length <= (hetki.kartalla ? NIMION_MAKSIMI : NIMION_MAKSIMI_KOHDEKARTTA),
+      `${hetki.id}: nimiö "${hetki.nimio}" on yli ${hetki.kartalla ? NIMION_MAKSIMI : NIMION_MAKSIMI_KOHDEKARTTA} merkkiä `
       + '— kartalla se lyhennettäisiin');
     assert.match(hetki.iso, /^[A-Z]{3}$/, `${hetki.id}: iso ei ole maatunnus`);
     assert.ok(Number.isFinite(hetki.lon) && Number.isFinite(hetki.lat),

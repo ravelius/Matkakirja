@@ -22,7 +22,8 @@ const { NAHTAVYYSJUTUT } = await import(path.join(ROOT, 'js/packs/nahtavyysjutut
 const { MINIATYYRIT } = await import(path.join(ROOT, 'js/packs/miniatyyrit.js'));
 const lue = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
 
-const NIMIO_MAX = 18; // kyltti lyhenee tätä pitempänä (tests/historian-hetket.test.mjs)
+// 18 merkkiä pääkartalla (kartalla: true; nostosymLyhennaNimio), 20 hetkillä, jotka näkyvät vain kohdekartalla (KK 12.11.)
+const nimioMax = (h) => (h.kartalla ? 18 : 20);
 const virheet = [];
 const virhe = (s) => virheet.push(s);
 const huomautukset = [];
@@ -35,7 +36,7 @@ const hetki = new Map(HISTORIAN_HETKET.map((h) => [`hetki-${h.id}`, h]));
 const nim = new Map();
 for (const h of HISTORIAN_HETKET) {
   if (!h.nimio) { virhe(`${h.id}: nimiö puuttuu`); continue; }
-  if ([...h.nimio].length > NIMIO_MAX) virhe(`${h.id}: nimiö yli ${NIMIO_MAX} merkkiä: ${h.nimio}`);
+  if ([...h.nimio].length > nimioMax(h)) virhe(`${h.id}: nimiö yli ${nimioMax(h)} merkkiä: ${h.nimio}`);
   if (!h.otsikko.startsWith(h.nimio)) virhe(`${h.id}: otsikko ei ala nimiöllä (${h.nimio} / ${h.otsikko})`);
   if (nim.has(h.nimio)) virhe(`nimiö kahdesti: ${h.nimio} (${nim.get(h.nimio)}, ${h.id})`);
   nim.set(h.nimio, h.id);

@@ -54,7 +54,7 @@ OK: nimiöketju ehjä
 | brooklyn-bridge-1883 | East River 1883 — kuka tämän sillan rakensi? | **Brooklyn 1883 — Brooklynin silta avataan** | Brooklyn 1883 (ei muutu) |
 | pietari-perustus-1703 | Jänissaari 1703 — kuusi bastionia suohon | **Pietari 1703 — tsaari perustaa kaupungin** | Jänissaari 1703 → **Pietari 1703** |
 | vesuvius-pompeji-79 | Pompeji 79 — ropina katolla | **Pompeji 79 — Vesuvius tuhoaa kaupungin** | Pompeji 79 (ei muutu) |
-| konstantinopoli-1453 | Konstantinopoli 1453 — aamu tulee rumpujen mukana | **Konstantinopoli 1453 — kaupunki kaatuu** | Konstantinopoli (ei muutu) |
+| konstantinopoli-1453 | Konstantinopoli 1453 — aamu tulee rumpujen mukana | **Konstantinopoli 1453 — kaupunki kaatuu** | Konstantinopoli → **Konstantinopoli 1453** |
 | lontoon-palo-1666 | Lontoo 1666 — soitin veneessä, kaupunki tulessa | **Lontoon palo 1666 — kaupunki syttyy** | Palo 1666 → **Lontoon palo 1666** |
 | berliinin-muuri-1961 | Bernauer Straße 1961 — piikkilanka kadun poikki | **Berliini 1961 — muurin rakentaminen alkaa** | Muuri 1961 → **Berliini 1961** |
 | michelangelo-sikstus-1510 | Sikstuksen kappeli 1510 — giornata kerrallaan | **Michelangelo 1510 — Sikstuksen katto** | Sikstus 1510 → **Michelangelo 1510** |

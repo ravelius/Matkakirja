@@ -3624,7 +3624,7 @@ export const HISTORIAN_HETKET = [
   {
     id: 'konstantinopoli-1453',
     otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
-    nimio: 'Konstantinopoli',
+    nimio: 'Konstantinopoli 1453',
     paivays: '29.5.1453',
     paikka: 'Theodosiuksen muuri, Konstantinopoli',
     iso: 'TUR',

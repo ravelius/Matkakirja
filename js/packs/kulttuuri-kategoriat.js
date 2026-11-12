@@ -9461,7 +9461,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-konstantinopoli-1453',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Konstantinopoli',
+      otsikko: 'Historian hetki: Konstantinopoli 1453',
       johdanto: 'Toukokuun 29. päivän aamuna 1453 kahdeksantuhatta puolustajaa '
         + 'seisoi kahdentoista mailin muurilla, ja sama aamu päättyi Hagia Sofian '
         + 'ovien murtumiseen — tuhatvuotinen keisarikunta loppui yhdessä päivässä.',
