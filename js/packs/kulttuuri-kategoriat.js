@@ -1038,22 +1038,22 @@ export const KULTTUURI_KATEGORIAT = {
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
           teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, '
-            + 'mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, '
-            + 'ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä '
-            + 'päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
-            + 'kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi '
-            + 'yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, '
-            + 'joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli '
-            + 'ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut '
-            + 'taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, '
-            + 'ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa '
+            + 'mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. '
+            + 'Laivaston virkamies Samuel Pepys katselee tulta joelta ja kertoo '
+            + 'päiväkirjassaan ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
+            + 'ylsi heihin, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä '
+            + 'Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei '
+            + 'uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen '
+            + 'kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen '
+            + 'tieltä, ja itätuuli levitti tulta: kesä oli ollut kuiva, ja '
+            + 'puukaupungin kadut olivat kapeita. Pepys itse kaivaa '
             + 'parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli '
             + 'tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
-            + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan '
-            + 'varastoidut kirjakauppiaiden varastot palavat. Tiistain ja '
-            + 'keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi 13 200 taloa '
-            + 'ja 87 kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — '
-            + 'luku, jota epäillään yhä.',
+            + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kirjakauppiaiden '
+            + 'kryptaan varastoimat kirjat palavat. Tiistain ja keskiviikon '
+            + 'välisenä yönä tuuli laantuu. Palo tuhosi noin 13 200 taloa ja 87 '
+            + 'kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — luku, '
+            + 'jota epäillään yhä.',
           lyhyt: 'Nuori nainen suojaa soitintaan Lontoon suurpalossa veneessä '
             + 'pakenevien tavaroiden joukossa.',
           selite: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: lähes '
@@ -1144,11 +1144,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta '
             + 'nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin '
             + 'ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on '
-            + 'vanhimpia sen esityksistä. Naisia ei näyttämöllä ole — Portian, '
-            + 'Calpurnian ja Kleopatran roolit puhuvat äänenmurroksen kynnyksellä '
-            + 'olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki '
-            + 'sytyttää olkikaton kesken Henrik VIII:n; ainoa vahinko on mies, '
-            + 'jonka palavat housut sammutetaan oluella.',
+            + 'vanhimpia sen esityksistä. Naisia ei näyttämöllä ole — Portian ja '
+            + 'Calpurnian roolit esittävät äänenmurroksen kynnyksellä olevat '
+            + 'pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää '
+            + 'olkikaton kesken Henrik kahdeksannen -näytelmän; ainoa vahinko on '
+            + 'mies, jonka palavat housut sammutetaan oluella.',
           lyhyt: 'Poikanäyttelijä esittää Caesarin painajaisunta Globen '
             + 'äänekkäälle pihayleisölle ilman mikrofonia.',
           selite: 'Nuori poikanäyttelijä astuu Calpurniana näyttämölle, vain '

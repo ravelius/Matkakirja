@@ -481,17 +481,17 @@ export const FOKUSVIRTA_LONTOO = {
         + '30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta '
         + 'tuli puinen laatikko. Sen sisällä oli yli neljäsataa '
         + 'korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja '
-        + 'ja kameoita. Kivet olivat ympäri maailmaa — smaragdi '
-        + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
-        + 'Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, '
+        + 'ja kameoita. Kivet tulivat ympäri maailmaa: smaragdi '
+        + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, lapislatsuli Afganistanista, '
+        + 'turkoosi Persiasta, '
         + 'helmet Bahrainista. Oudoin esine on kellonkuori, joka oli '
         + 'koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka '
         + 'sisään oli sovitettu noin vuoden 1600 sveitsiläinen '
         + 'kellokoneisto. Yksi pieni sinettikivi kertoo, milloin '
         + 'laatikko pantiin maahan: siinä on Staffordin viscountin '
-        + 'vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä '
+        + 'vaakuna, ja arvonimen hän sai vasta marraskuussa 1640. Kellarin päällä '
         + 'ollut talo paloi Lontoon suurpalossa syyskuussa 1666. Jossain '
-        + 'noiden kahden päivän välissä joku kaivoi laatikon lattiaansa '
+        + 'noiden kahden vuosiluvun välissä joku kaivoi laatikon lattiaansa '
         + 'eikä koskaan palannut hakemaan sitä.',
       lahde: 'en-Wikipedia "Cheapside Hoard". Tarkistettu 1.9.2026.',
       /*
