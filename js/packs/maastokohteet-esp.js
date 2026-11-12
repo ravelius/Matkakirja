@@ -851,7 +851,7 @@ export const MAASTOKOHTEET_ESP = [
       maailmankartta: { x: 5278.7, y: 2243.6 },
     },
     teksti: 'Teide on Teneriffalla Kanariansaarilla sijaitseva tulivuori ja Espanjan korkein '
-      + 'kohta: 3 715 metriä merenpinnan yläpuolella. Kerrostulivuori syntyi noin 170 000 '
+      + 'kohta: 3 715 metriä merenpinnan yläpuolella. Kerrostulivuori syntyi yli sata tuhatta '
       + 'vuotta sitten Las Cañadasin kalderan sisään. Köysirata kuljettaa matkustajia lähelle '
       + 'huippua. Teiden kansallispuisto kirjattiin Unescon maailmanperintöön vuonna 2007.',
     lahde: 'en-Wikipedia "Mount Teide", johdanto ja osiot "Geology", "Teide National Park" ja '

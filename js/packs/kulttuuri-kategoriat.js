@@ -7348,7 +7348,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko '
             + 'pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää '
             + 'kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan '
-            + 'kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
+            + 'kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
             + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
             + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
             + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon '

@@ -790,8 +790,8 @@ export const NAHTAVYYSJUTUT = {
     },
     'Radialsystem V': {
       nosto: 'syvennys-berliini-viemarit',
-      teksti: 'Ne perustukset, joita kaduilla lyötiin, olivat osaksi viemäriä: '
-        + 'Berliinillä ei sellaista vielä ollut. James Hobrecht oli laatinut '
+      teksti: 'Vuonna 1873 Berliinin katuja kaivettiin auki viemäriä varten: '
+        + 'sellaista kaupungilla ei vielä ollut. James Hobrecht oli laatinut '
         + 'kaupungin laajenemissuunnitelman jo 1862, mutta hänet oli erotettu '
         + 'ennen kuin se valmistui, ja hän lähti Stettiniin rakentamaan '
         + 'vesijohtoa ja viemäriä. Vuonna 1869 hän palasi tehtävänään koko '
@@ -800,9 +800,10 @@ export const NAHTAVYYSJUTUT = {
         + '1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli '
         + 'kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti '
         + 'jätevedet kaupungin laidalle sadetuskentille. Pääputkien '
-        + 'rakentaminen alkoi 1873 ja viimeinen valmistui 1909. Samalta '
-        + 'mieheltä tilattiin sen jälkeen viemärit kolmeenkymmeneen '
-        + 'saksalaiseen kaupunkiin sekä Moskovaan, Tokioon ja Kairoon.',
+        + 'rakentaminen jatkui, ja viimeinen valmistui 1893. Samaa miestä '
+        + 'pyydettiin sen jälkeen neuvomaan viemäröinnissä noin '
+        + 'kolmessakymmenessä saksalaisessa kaupungissa sekä Moskovassa, '
+        + 'Tokiossa ja Kairossa.',
       kuvat: [
         {
           tiedosto: 'Canalisation von Berlin. Blatt 10.png',
@@ -5852,7 +5853,7 @@ export const NAHTAVYYSJUTUT = {
         + 'joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. '
         + 'Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes '
         + 'sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet '
-        + 'raahataan kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
+        + 'raahataan kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
         + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
         + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
         + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
