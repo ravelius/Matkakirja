@@ -643,3 +643,7 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   (luku per kaupunki). Keino: lisää KertojanEsilataus.Aja:han lokiin ei-valmiit (kohde + 40 merkkiä tekstistä) TAI vertaa Valmisluennat-manifestia
   Nahtavyysarkki.JutunLuettavat-teksteihin skriptillä (manifestin avain = Puhe.ValmisUrl: Katkaise(JsTrim(teksti)) + persoona + loppuTagi).
 - 35l (03.4x) JU: vakioajon kohdekamera toistuu NUI 631172274:llä (a = b, Cutty Sark 18° molemmissa) → KK:n huomio (1) ratkaistu (NUI:n). mono-2 ajossa → lokit/ns-mono-2.
+- 35m (03.4x) MONO-2 (2086687cb): NRE 0, kaupunki valmis pariisi 21,7 s (ei toistunut). "MONO-VARAAJAT ennen 20 s: mono 426 → 335 Mt, GC 20, GC.Alloc 47,4 Mt,
+  kehyksiä 6" saatiin (HUOM vain 6 kehystä 20 s:ssa → profiloija tallentaa vähän batchmodessa?). PUUTE 1: "MONO-VARAAJAT valmis" alkoi (mono 571 Mt), loppuriviä
+  EI tullut 20 s:n odotuksessa (skenaarion oleta-aika liian lyhyt vai käsittely jumissa? katso lokit/ns-mono-2/unity.log rivit "MONO-" valmiin jälkeen).
+  → korjaa (oleta 60 s / käsittely) → mono-3 → YKSI viesti KK:lle (kolme suurinta varaajaa kutsupaikkoineen, toistuuko ennen kaupunkia). Ei korjauksia peliin.
