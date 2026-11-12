@@ -2739,16 +2739,16 @@ export const NAHTAVYYSJUTUT = {
         + 'kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin '
         + 'kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli '
         + 'neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, '
-        + 'hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi '
-        + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, '
-        + 'lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. '
+        + 'hajuvesipulloja ja kameoita. Kivet tulivat ympäri maailmaa: smaragdi '
+        + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, lapislatsuli Afganistanista, '
+        + 'turkoosi Persiasta, helmet Bahrainista. '
         + 'Oudoin esine on kellonkuori, joka oli koverrettu yhdestä suuresta '
         + 'kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin '
         + 'vuoden 1600 '
         + 'sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin '
-        + 'laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka '
-        + 'hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon '
-        + 'suurpalossa syyskuussa 1666. Jossain noiden kahden päivän välissä joku '
+        + 'laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, ja arvonimen '
+        + 'hän sai vasta marraskuussa 1640. Kellarin päällä ollut talo paloi Lontoon '
+        + 'suurpalossa syyskuussa 1666. Jossain noiden kahden vuosiluvun välissä joku '
         + 'kaivoi laatikon lattiaansa eikä koskaan palannut hakemaan sitä.',
       kuvat: [
         {
@@ -2928,20 +2928,20 @@ export const NAHTAVYYSJUTUT = {
     'Palo 1666': {
       nosto: 'hetki-lontoon-palo-1666',
       teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä '
-        + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel '
-        + 'Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa '
-        + 'ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja '
+        + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. Laivaston virkamies '
+        + 'Samuel Pepys katselee tulta joelta ja kertoo päiväkirjassaan '
+        + 'ihmisistä, jotka jäivät koteihinsa, kunnes tuli ylsi heihin, ja '
         + 'pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin '
         + 'leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä '
         + 'ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas '
-        + 'Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: '
+        + 'Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli levitti tulta: '
         + 'kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse '
         + 'kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina '
         + 'tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
-        + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut '
-        + 'kirjakauppiaiden varastot palavat. Tiistain ja keskiviikon välisenä '
+        + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kirjakauppiaiden kryptaan '
+        + 'varastoimat kirjat palavat. Tiistain ja keskiviikon välisenä '
         + 'yönä tuuli laantuu. Palo '
-        + 'tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain '
+        + 'tuhosi noin 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain '
         + 'kourallinen — luku, jota epäillään yhä.',
       kuvat: [
         {
@@ -2972,10 +2972,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä joen '
         + 'etelärannan olkikattoisessa talossa Julius Caesarin ja lopuksi '
         + 'tanssin; talo on lähes varmasti Globe, ja tieto on vanhimpia sen '
-        + 'esityksistä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja '
-        + 'Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. '
+        + 'esityksistä. Naisia ei näyttämöllä ole — Portian ja Calpurnian roolit esittävät '
+        + 'äänenmurroksen kynnyksellä olevat pojat. '
         + 'Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken '
-        + 'Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan '
+        + 'Henrik kahdeksannen -näytelmän; ainoa vahinko on mies, jonka palavat housut '
+        + 'sammutetaan '
         + 'oluella.',
       kuvat: [
         {
@@ -3270,7 +3271,7 @@ export const NAHTAVYYSJUTUT = {
     'Westminsterin palatsi': {
       aika: '1840–1870',
       teksti: 'Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja '
-          + 'palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui '
+          + 'palatsin vanhin osa, Westminster Hall, valmistui 1099. Parlamentti kokoontui '
           + 'vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen '
           + 'kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.'
         + '\n\n'
@@ -3304,7 +3305,7 @@ export const NAHTAVYYSJUTUT = {
     'Westminster Bridge': {
       aika: '1862',
       teksti: 'Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja '
-          + 'Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja '
+          + 'Westminsterissä joen yli soudettiin. Venemiehet elivät kyydityksestä, ja '
           + 'he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge '
           + 'avattiin silti 1750.'
         + '\n\n'
@@ -3406,8 +3407,8 @@ export const NAHTAVYYSJUTUT = {
           + 'British Museum, maailman ensimmäinen kaikille avoin kansallismuseo. Se '
           + 'avattiin 1759 vanhassa Montagu Housen kartanossa.'
         + '\n\n'
-        + 'Alussa kävijän piti hakea pääsylippua kirjallisesti ja odottaa sitä joskus '
-          + 'viikkoja. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert '
+        + 'Alussa kävijän piti hakea pääsylippua etukäteen. Kokoelmat kasvoivat niin, että '
+        + 'vanha kartano purettiin, ja Robert '
           + 'Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun '
           + '1823–1852.'
         + '\n\n'
@@ -3470,8 +3471,8 @@ export const NAHTAVYYSJUTUT = {
           + 'marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen '
           + 'veisti Thomas Brock.'
         + '\n\n'
-        + 'Muistomerkki paljastettiin 1911. Kuningas Yrjö V kutsui kuvanveistäjän '
-          + 'luokseen ja löi hänet ritariksi paikan päällä. Samalla The Mallista tehtiin '
+        + 'Muistomerkki paljastettiin 1911. Kuningas Yrjö V teki kuvanveistäjän '
+          + 'ritariksi samana päivänä. Samalla The Mallista tehtiin '
           + 'leveä juhlakulkutie Admiralty Archista palatsille.'
         + '\n\n'
         + 'Palatsin julkisivu oli tehty pehmeästä ranskalaisesta kivestä, joka mureni '
@@ -3532,7 +3533,7 @@ export const NAHTAVYYSJUTUT = {
     'Albert Memorial': {
       aika: '1864–1876',
       teksti: 'Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui '
-          + 'suruasuun loppuelämäkseen, ja Hyde Parkiin pystytettiin George Gilbert '
+          + 'suruasuun loppuelämäkseen, ja Kensington Gardensiin pystytettiin George Gilbert '
           + 'Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu '
           + 'katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa.'
         + '\n\n'
@@ -3541,8 +3542,9 @@ export const NAHTAVYYSJUTUT = {
           + 'Muistomerkin jalustaa kiertää 169 taiteilijan, säveltäjän ja arkkitehdin '
           + 'veistos.'
         + '\n\n'
-        + 'Ensimmäisen maailmansodan aikana kullattu patsas maalattiin mustaksi, ja '
-          + 'kerrotaan, että syynä olivat saksalaiset ilmalaivat. Kulta palautettiin '
+        + 'Kullattu patsas seisoi noin kahdeksankymmentä vuotta mustaksi maalattuna. Tarinan '
+        + 'mukaan syynä olivat ensimmäisen maailmansodan saksalaiset ilmalaivat, mutta maali '
+        + 'on vanhempaa: ilmansaasteet olivat jo pilanneet kullan. Kulta palautettiin '
           + 'vasta korjauksessa, joka valmistui 1998.',
       kuvat: [
         {

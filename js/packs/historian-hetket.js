@@ -3701,20 +3701,20 @@ export const HISTORIAN_HETKET = [
     lat: 51.5102, lon: -0.0853,
     kuvaversio: 4,
     teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä '
-      + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja '
-      + 'Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä '
-      + 'päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
-      + 'kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä '
+      + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. Laivaston virkamies '
+      + 'Samuel Pepys katselee tulta joelta ja '
+      + 'kertoo päiväkirjassaan ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
+      + 'ylsi heihin, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä '
       + 'Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei '
       + 'uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen '
       + 'kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen '
-      + 'tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja '
+      + 'tieltä, ja itätuuli levitti tulta: kesä oli ollut kuiva, ja '
       + 'puukaupungin kadut olivat kapeita. Pepys itse kaivaa '
       + 'parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli '
       + 'tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
-      + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan '
-      + 'varastoidut kirjakauppiaiden varastot palavat. Tiistain ja '
-      + 'keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi 13 200 taloa '
+      + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kirjakauppiaiden kryptaan '
+      + 'varastoimat kirjat palavat. Tiistain ja '
+      + 'keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi noin 13 200 taloa '
       + 'ja 87 kirkkoa, mutta kirjattuja '
       + 'kuolleita on vain kourallinen — luku, jota epäillään yhä.',
     kysymykset: [
@@ -4085,9 +4085,9 @@ export const HISTORIAN_HETKET = [
       + 'nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin '
       + 'ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on '
       + 'vanhimpia sen esityksistä. Naisia ei näyttämöllä '
-      + 'ole — Portian, Calpurnian ja Kleopatran roolit puhuvat '
+      + 'ole — Portian ja Calpurnian roolit esittävät '
       + 'äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. '
-      + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; '
+      + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik kahdeksannen -näytelmän; '
       + 'ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.',
     kysymykset: [
       'Miten Globen pihayleisö käyttäytyi näytelmän aikana?',

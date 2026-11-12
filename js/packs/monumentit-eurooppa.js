@@ -1749,10 +1749,11 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5727.0, y: 1121.5 }, europe: { x: 149.9, y: 422.1 } },
       teksti: 'Old Tolbooth oli Edinburghin High Streetillä St Gilesin katedraalin luoteiskulmassa seissyt '
         + 'raatihuone ja vankila. Kuningas Robert II myönsi paikasta peruskirjan 1386. Parlamentti '
-        + 'kokoontui siellä ensimmäisen kerran 27. marraskuuta 1438, ja Maria Stuart määräsi rakennuksen '
-        + 'purettavaksi ja rakennettavaksi uudelleen 1562. Parlamentti muutti omaan taloonsa 1639, ja '
+        + 'kokoontui siellä jo 1438, ja Maria Stuart määräsi 1560-luvun alussa rakennuksen '
+        + 'korvattavaksi uudella. Parlamentti muutti omaan taloonsa 1639, ja '
         + 'rakennuksesta tuli ennen kaikkea vankila; vuodesta 1785 teloitukset toimitettiin sen '
-        + 'laajennuksen katolla. Rakennus purettiin 1817, ja Walter Scott sai sen rautaoven avaimineen '
+        + 'laajennuksen luona. Rakennus purettiin 1817, ja Walter Scott sai sen rautaoven '
+        + 'avaimineen '
         + 'kartanoonsa Abbotsfordiin. Scott kirjoitti vankilasta romaanin The Heart of Midlothian (1818), '
         + 'ja Heart of Midlothian -nimiset kivet merkitsevät sisäänkäynnin paikan.',
       lahde: 'en-Wikipedia "Old Tolbooth", johdanto ja osiot historiasta, purosta ja Walter Scottista '
@@ -1778,7 +1779,8 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Palatsi, jossa syntyivät Henrik VIII ja Elisabet I',
       laudat: { maailmankartta: { x: 5833.1, y: 1325.1 }, europe: { x: 211.1, y: 539.6 } },
       teksti: 'Greenwichin palatsi, tunnetummin Placentia, oli Tudorien kuninkaallinen palatsi Thamesin '
-        + 'rannalla. Humphrey, Gloucesterin herttua, rakennutti sen 1443 nimellä Bella Court, ja Margareta '
+        + 'rannalla. Humphrey, Gloucesterin herttua, rakennutti sen 1430-luvulla nimellä '
+        + 'Bella Court, ja Margareta '
         + 'Anjoulainen antoi sille nimen Placentia. Henrik VII rakennutti palatsin uudelleen 1498–1504. '
         + 'Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni '
         + 'täällä naimisiin Anna Clevesiläisen kanssa 1540. Sisällissodassa palatsi rapistui ja toimi '
@@ -1902,12 +1904,15 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5829.2, y: 1324.2 }, europe: { x: 208.8, y: 539.1 } },
       teksti: 'Whitehallin palatsi oli Englannin kuninkaiden pääasunto Lontoossa vuodesta 1530 vuoteen 1698. '
         + 'Henrik VIII otti paikan haltuunsa 1530, kun kardinaali Wolsey oli menettänyt asemansa. '
-        + 'Palatsissa oli yli 1 500 huonetta ja se peitti suurimmillaan noin 23 hehtaaria, joten aikoinaan '
-        + 'se oli Euroopan suurin. Juhlasali Banqueting House valmistui 1622 Inigo Jonesin suunnittelemana, '
+        + 'Palatsissa oli yli 1 500 huonetta, ja se peitti suurimmillaan noin yhdeksän '
+        + 'hehtaaria. Se oli aikansa Euroopan suurimpia palatseja. Juhlasali Banqueting House '
+        + 'valmistui 1622 Inigo Jonesin suunnittelemana, '
         + 'ja sen edessä mestattiin Kaarle I vuonna 1649. Tammikuun 4. päivänä 1698 palvelija ripusti '
-        + 'märkää pyykkiä hiilipannun viereen, ja syttynyt tuli tuhosi noin 15 tunnissa lähes kaikki asuin- '
-        + 'ja hallintorakennukset. Vain Banqueting House säilyi, eikä palatsia koskaan rakennettu '
-        + 'uudelleen. Paikalla on nykyään valtionhallinnon rakennuksia.',
+        + 'märkää pyykkiä hiilipannun viereen, ja syttynyt tuli tuhosi lähes kaikki asuin- '
+        + 'ja hallintorakennukset. Banqueting House säilyi, ja palatsin osia on yhä '
+        + 'valtionhallinnon Cabinet Officen rakennuksen sisällä. Palatsia ei koskaan '
+        + 'rakennettu '
+        + 'uudelleen.',
       lahde: 'en-Wikipedia "Palace of Whitehall", johdanto sekä osiot "History", "Destruction" ja "Present '
         + 'day" (tarkistettu 31.10.2026).',
       kuva: 'ihme-whitehall-loistoaika.jpg',
