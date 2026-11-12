@@ -718,3 +718,15 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 ## LISÄYS 57 (03.3x): NS T1 (kaupunkitaulu) JUNASSA 224.95
 - JU 03.3x: 224.95 toi NS T1:n; sillat 62da37f7e:ssä kuten 224.94 (Pariisi 7/7, Lontoo 5/5). SEURAAJALLE: KJ49c (300c6b99d) ja pitkät (ced23df14) ovat T1-pohjalla –
   "ilman NS T1:tä" -poiminta ei ehkä enää tarpeen; tarkista uusin junakärki (natiivi-backup) ja yhdistä/poimi sen päälle, testit ennen pt-ok:ta.
+
+## LISÄYS 58 (05.0x): PT 04.5x jono, kaksi agenttia käynnissä, ITSENOLLAUS
+- PT 04.5x (KK 04.54): KJ49c Alman kylki → JU, sitten KJ53 ja näyte (JU:lla NUI ja PK ennen KS:ää).
+- ALMAN KYLKI: Opus-agentti korjaa työpuussa /Users/Shared/Claude/wt/proto-karttaseppa-sillat (haara karttaseppa/sillat, pohja 300c6b99d) → commit + push natiivi-backup
+  + skripti _tyo/karttaseppa/koodijuna/sillat-kj49c/sk-mac-sillat-kj49d.txt (si49d-31, -38; ENNEN 300c6b99d | JÄLKEEN uusi). AGENTTI VOI KATKETA NOLLAUKSESSA:
+  tarkista `git -C /Users/Shared/Claude/wt/proto-karttaseppa-sillat log --oneline -3` ja `status`; jos uusi commit ja skripti → testit, pyydä KJ49d JU:lta (ENNEN KJ53b:tä),
+  parit KK:lle; jos kesken/puuttuu → tee itse (syy: kyljen normaali/kiertosuunta/AO/väri, GeneroidutSillat/KaupunkiSilta.Generoitu/Rakentaja, testi kyljen normaalille).
+- KJ53b pyydetty JU:lta 05.0x (koodijuna/puuvalo-kj53/sk-mac-puuvalo-kj53b.txt, 15 kuvaa, ero 0.5/0.35 × keski 0.2/0.3) → lokit/ks-kj53b-puuvalo-6bb57f388.
+  Mittaa mittaa-kj53.py:n tapaan (vaihda kansio/nimet), valitse arvo jolla ka ≈ ero 1 ja p90 laskee → oletus koodiin + karkea kuva KK:lle.
+- NÄYTE-ARKIT: Sonnet-agentti kokoaa _tyo/karttaseppa/tyokalu-1/nayte-kj54/arkit/arkki-<id>.jpg (6) + arkki-ateena.jpg. Tarkista, että ne ovat olemassa (muuten kokoa
+  itse: peli yleis | orto, 3 × peli katu | Commons, lähderivit lahteet.json), KATSO ITSE, sitten KK:lle: arkit + havainnot + GHSL-pelikelpoisuus (KK 23.17 lopullinen sana näytekuvista).
+- SEURAAJAN JONO: 1) Alman kylki (yllä) 2) KJ53b 3) näyte-arkit → KK 4) KJ52 + talojen päätös 5) Montmartre KJ43 (JU:n maastovienti?) 6) GHSL-kalibrointi 7) PP:n ikkunakolmio 8) kehämuurien nimet.
