@@ -5404,27 +5404,27 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
        */
       {
-        nimi: 'Carmenin ensi-ilta', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
+        nimi: 'Bizet 1875', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
       },
       {
-        nimi: 'Kirahvin kävelymatka', tarinapaikka: true, tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
+        nimi: 'Kirahvi 1826', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
         // KK 10.11.2026 12.24: ei samaan pisteeseen Eiffel-tornin kanssa; tornin itäisen jalan juurelle (Torni 1888 läntisen).
-        nimi: 'Torni romuraudaksi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85826, lon: 2.2957,
+        nimi: 'Lustig 1925', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85826, lon: 2.2957,
         nosto: 'nosto-lustig-eiffel', nimiPuoli: 'oikea',
       },
       {
-        nimi: 'Vrain-Lucas', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
+        nimi: 'Vrain-Lucas', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
         nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       },
       {
-        nimi: 'Impressionistit', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
+        nimi: 'Monet 1874', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
         nosto: 'syvennys-pariisi-impressionistit', nimiPuoli: 'vasen',
       },
       {
-        nimi: 'Kyyhkyposti', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
+        nimi: 'Piiritys 1870', tarinapaikka: true, merkki: 'tiimalasi', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
       },
       /*
        * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
@@ -5475,22 +5475,22 @@ export const KAUPUNKIKARTAT = {
        */
       // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
       {
-        nimi: 'Curie 1898', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
+        nimi: 'Curie 1898', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
         nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
       },
       // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
       {
-        nimi: 'Lavoisier 1780', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
+        nimi: 'Lavoisier 1780', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
         nosto: 'hetki-lavoisier-laboratorio-1780',
       },
       // École normale supérieure, rue d'Ulm.
       {
-        nimi: 'Pasteur 1862', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
+        nimi: 'Pasteur 1862', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
       },
       // Tornin läntisen jalan juurelle (KK 10.11.2026 12.24: Eiffelin merkit eivät päällekkäin; Torni romuraudaksi itäisen).
       {
-        nimi: 'Eiffel-torni 1888', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
+        nimi: 'Eiffel-torni 1888', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
         nosto: 'hetki-eiffel-torni-1888',
         nimiPuoli: 'vasen',
       },
@@ -5503,7 +5503,7 @@ export const KAUPUNKIKARTAT = {
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
       {
-        nimi: 'Lumière 1895', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
+        nimi: 'Lumière 1895', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
         nosto: 'hetki-lumiere-elokuva-1895',
         nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
@@ -5512,7 +5512,7 @@ export const KAUPUNKIKARTAT = {
        * suunnitelman luku 4.7, omistajan hyväksymä jakotaulukko). Lehden
        * sivut "Pariisi", "Musiikki" ja "Historia" purettiin klikattaviksi
        * karttapaloiksi: viisi niistä on tällä kartalla, ja kuudes
-       * ("Paras patonki") jäi pääkartalle kaupungin viereen.
+       * ("Patonki 1994") jäi pääkartalle kaupungin viereen.
        *
        * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on
        * siellä, missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
@@ -5522,33 +5522,33 @@ export const KAUPUNKIKARTAT = {
       // 72 nimeä: Eiffel-tornin nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
       // Abbesses'n asema, yksi jäljellä olevista Guimardin
       // sisäänkäynneistä (48,8844 N / 2,3382 E). Oma piste, ei naapureita.
-      // Karttanimi `nimio` (PT 30.10.2026 klo 23.5x): "Metron sisäänkäynti"
+      // Karttanimi `nimio` (PT 30.10.2026 klo 23.5x): "Metro 1900"
       // on 19 merkkiä ja lyheni kartalla muotoon "Metron." (18 merkin
       // lyhennyssääntö, js/fokusnosto-symbolit.js nostosymLyhennaNimio).
       // Karttanimet vain suomeksi (omistaja 29.10.), siksi ei "Métropolitain".
       {
-        nimi: 'Metron sisäänkäynti', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
+        nimi: 'Metro 1900', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
         nosto: 'nosto-guimardin-metro',
       },
       // Notre-Damen kukko: Notre-Damen nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
       // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
       // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
       {
-        nimi: 'Pariisi soi', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
+        nimi: 'Piaf ja Django', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
         nosto: 'nosto-pariisi-soi',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
       },
       // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
       // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
       {
-        nimi: 'Paras patonki', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
+        nimi: 'Patonki 1994', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
         nosto: 'nosto-pariisin-patonki',
       },
       // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
       // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
       // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
       {
-        nimi: 'Pariisin vuosisadat', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
+        nimi: 'Kaulanauha 1785', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
         nosto: 'nosto-pariisin-vuosisadat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },

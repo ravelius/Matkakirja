@@ -18155,8 +18155,8 @@
    "eroKartanPisteesta_m": 2
   },
   {
-   "id": "pariisi:Carmenin ensi-ilta",
-   "nimi": "Carmenin ensi-ilta",
+   "id": "pariisi:Bizet 1875",
+   "nimi": "Bizet 1875",
    "qid": null,
    "lat": 48.8709,
    "lon": 2.3378,
@@ -18168,8 +18168,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Kirahvin kävelymatka",
-   "nimi": "Kirahvin kävelymatka",
+   "id": "pariisi:Kirahvi 1826",
+   "nimi": "Kirahvi 1826",
    "qid": null,
    "lat": 48.8447,
    "lon": 2.3597,
@@ -18181,8 +18181,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Torni romuraudaksi",
-   "nimi": "Torni romuraudaksi",
+   "id": "pariisi:Lustig 1925",
+   "nimi": "Lustig 1925",
    "qid": null,
    "lat": 48.8583,
    "lon": 2.29448,
@@ -18208,8 +18208,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Impressionistit",
-   "nimi": "Impressionistit",
+   "id": "pariisi:Monet 1874",
+   "nimi": "Monet 1874",
    "qid": null,
    "lat": 48.8705,
    "lon": 2.328,
@@ -18221,8 +18221,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Kyyhkyposti",
-   "nimi": "Kyyhkyposti",
+   "id": "pariisi:Piiritys 1870",
+   "nimi": "Piiritys 1870",
    "qid": null,
    "lat": 48.8566,
    "lon": 2.3522,
@@ -18339,8 +18339,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:72 nimeä",
-   "nimi": "72 nimeä",
+   "id": "pariisi:Tornin nimet 2026",
+   "nimi": "Tornin nimet 2026",
    "qid": null,
    "lat": 48.8583,
    "lon": 2.29448,
@@ -18353,8 +18353,8 @@
    "samaKuin": "pariisi:Eiffel-torni"
   },
   {
-   "id": "pariisi:Metron sisäänkäynti",
-   "nimi": "Metron sisäänkäynti",
+   "id": "pariisi:Metro 1900",
+   "nimi": "Metro 1900",
    "qid": null,
    "lat": 48.8844,
    "lon": 2.3382,
@@ -18366,8 +18366,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Notre-Damen kukko",
-   "nimi": "Notre-Damen kukko",
+   "id": "pariisi:Notre-Dame 2019",
+   "nimi": "Notre-Dame 2019",
    "qid": "Q2981",
    "lat": 48.853,
    "lon": 2.3498,
@@ -18379,8 +18379,8 @@
    "eroKartanPisteesta_m": 7
   },
   {
-   "id": "pariisi:Pariisi soi",
-   "nimi": "Pariisi soi",
+   "id": "pariisi:Piaf ja Django",
+   "nimi": "Piaf ja Django",
    "qid": null,
    "lat": 48.87194,
    "lon": 2.33167,
@@ -18393,8 +18393,8 @@
    "samaKuin": "pariisi:Palais Garnier"
   },
   {
-   "id": "pariisi:Paras patonki",
-   "nimi": "Paras patonki",
+   "id": "pariisi:Patonki 1994",
+   "nimi": "Patonki 1994",
    "qid": null,
    "lat": 48.8703,
    "lon": 2.3167,
@@ -18406,8 +18406,8 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "pariisi:Pariisin vuosisadat",
-   "nimi": "Pariisin vuosisadat",
+   "id": "pariisi:Kaulanauha 1785",
+   "nimi": "Kaulanauha 1785",
    "qid": null,
    "lat": 48.8462,
    "lon": 2.34611,

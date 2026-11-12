@@ -128,12 +128,12 @@ export const MINIATYYRIT = {
      * piirretty rakennus ja pysyy kartalla.
      */
     Bastilji: 'pariisi-bastilji-vari2',
-    'Carmenin ensi-ilta': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
-    'Kirahvin kävelymatka': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
-    'Torni romuraudaksi': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
+    'Bizet 1875': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
+    'Kirahvi 1826': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
+    'Lustig 1925': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
-    Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
-    Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
+    'Monet 1874': 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
+    'Piiritys 1870': 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
     // Tuileries'n palatsi KADONNEENA IHMEENÄ LOISTONSA AIKANA (omistaja 31.10.2026 klo 08.22 "Kartalle voi kyllä tehdä niitä
     // ihmeitä. Tuilers voisi olla sellainen", PT): ehjä palatsi kartan piirrostyylissä (Codex #1320, omistaja 30.10. 22.58).
     // Rauniokuvaa ei käytetä (omistaja 06.55 "Kartta kuvaa nykyaikaa").
@@ -147,10 +147,10 @@ export const MINIATYYRIT = {
     // 72 nimeä ja Notre-Damen kukko ovat rakennustensa nostoja (KK 10.11.2026 12.24), eivät omia kohteita: piirrokset pois listalta.
     // Guimardin lasikattoinen Abbesses-édicule (Codex #1321, omistaja 30.10. 21.42: vanha väärää tyyliä);
     // uusi nimi -v2, ettei välimuisteihin jäänyt vanha kuva näy.
-    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
-    'Pariisi soi': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
-    'Paras patonki': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
-    'Pariisin vuosisadat': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
+    'Metro 1900': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
+    'Piaf ja Django': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
+    'Patonki 1994': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
+    'Kaulanauha 1785': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {
     'Greenwichin palatsi': 'assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi.webp',  // kadonnut ihme (31.10.2026)

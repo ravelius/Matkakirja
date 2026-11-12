@@ -835,7 +835,7 @@
     "Place des Vosges": 0.761,
     "Tuileries'n palatsi": 0.9,
     "Bastilji": 0.656,
-    "Metron sisäänkäynti": 0.699,
+    "Metro 1900": 0.699,
   },
   "peking": {
     "Vanha kesäpalatsi": 0.555,

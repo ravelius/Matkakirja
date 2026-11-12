@@ -7,9 +7,9 @@ Haara sisaltokirjuri-hetket-otsikot. EI PR:ää ennen KK:n kuittausta. Tarkistin
 ```
 hetkiä 67, nimiöitä 67; maakartat-hetkikohteita 28, nahtavyysjuttuja 24, miniatyyriavaimia 1111, sijaintirivejä 2057 (hetkikohteita 28), tunnisteavaimia 1118; vanhoja viittauksia 0
 HUOM (ei virhe) 3:
- - kohdekartat-sijainnit: pariisi:72 nimeä ei ole kaupungin kohde (vanhentunut rivi, ei hetki)
- - kohdekartat-sijainnit: pariisi:Notre-Damen kukko ei ole kaupungin kohde (vanhentunut rivi, ei hetki)
- - kohdetunnisteet: avain pariisi:Notre-Damen kukko ei ole kaupungin kohde (vanhentunut rivi)
+ - kohdekartat-sijainnit: pariisi:Tornin nimet 2026 ei ole kaupungin kohde (vanhentunut rivi, ei hetki)
+ - kohdekartat-sijainnit: pariisi:Notre-Dame 2019 ei ole kaupungin kohde (vanhentunut rivi, ei hetki)
+ - kohdetunnisteet: avain pariisi:Notre-Dame 2019 ei ole kaupungin kohde (vanhentunut rivi)
 OK: nimiöketju ehjä
 ```
 
@@ -117,3 +117,27 @@ OK: nimiöketju ehjä
 - uusi: Veljekset Auguste ja Louis Lumière pitävät 28.
 - uusi johdanto: Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa koneen.
 
+
+## 4. Pariisin 13 muuta juttua: kyltti ja otsikko vanha → uusi
+
+| vanha kyltti | uusi kyltti | uusi otsikko | merkki | kartalle |
+|---|---|---|---|---|
+| Pariisin vuosisadat | Kaulanauha 1785 | Kaulanauha 1785 — kuningattaren timanttihuijaus | skandaali | uusi |
+| Pariisi soi | Piaf ja Django | Piaf ja Django — kadulta ja vaunusta maineeseen | lyyra | uusi |
+| Vrain-Lucas | Vrain-Lucas (ei muutu) | Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä | skandaali | uusi |
+| Kyyhkyposti | Piiritys 1870 | Piiritys 1870 — viestit kulkevat kyyhkyillä | tiimalasi | uusi |
+| Notre-Damen kukko | Notre-Dame 2019 | Notre-Dame 2019 — palo, jonka kukko selvisi | – | ei (katedraalin nosto) |
+| Carmenin ensi-ilta | Bizet 1875 | Bizet 1875 — Carmen kaatuu ensi-iltaan | lyyra | uusi |
+| Kirahvin kävelymatka | Kirahvi 1826 | Kirahvi 1826 — kävelymatka Pariisiin | tiimalasi | jo |
+| Torni romuraudaksi | Lustig 1925 | Lustig 1925 — Eiffel-torni myydään romuksi | skandaali | jo |
+| Impressionistit | Monet 1874 | Monet 1874 — impressionistit näyttelevät | lyyra | uusi |
+| Tuileries'n palatsi | Tuileries'n palatsi / nimio Tuileries (tähti) | Tuileries 1883 — palatsin rauniot puretaan | – | tähti |
+| 72 nimeä | Tornin nimet 2026 | Tornin nimet 2026 — naisten lista julkaistaan | – | ei |
+| Metron sisäänkäynti | Metro 1900 | Metro 1900 — Guimardin sisäänkäynnit | – | ei |
+| Paras patonki | Patonki 1994 | Patonki 1994 — kilpailu parhaasta leivästä | lyyra | uusi |
+
+Merkit lamppu: Lavoisier, Curie, Pasteur, Lumière; tiimalasi: Eiffel-torni 1888 (+ Kirahvi, Piiritys); lyyra: Piaf ja Django, Bizet, Monet, Patonki; skandaali: Vrain-Lucas, Kaulanauha, Lustig. Kenttä `merkki` kohdekartan kohteella (maakartat.js); NUI piirtää.
+
+Uudet visat (kolme vastausvaihtoehtoa, vastaus jutussa): Lustig (miksi uhri ei ilmoittanut: häpesi), Kirahvi (miksi käveli: Atlantin ylitys liian vaarallinen), Patonki (voittajan velvollisuus: presidentinpalatsin leivät), Pariisi soi käyttää Piaf-visaa (lempinimi = varpunen). Muilla oli jo visa.
+
+Huom: Bastilji 1789 on maakartassa jo tarinapaikka samassa pisteessä kuin Bastilji-tähti (KK: ei omaa kylttiä) — päätä, poistetaanko oma kyltti.

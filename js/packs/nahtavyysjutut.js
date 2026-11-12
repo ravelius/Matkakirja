@@ -5320,7 +5320,7 @@ export const NAHTAVYYSJUTUT = {
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee kartalla.
      * Kenttä `nosto` kertoo, mistä karsitusta merkistä juttu on.
      */
-    'Carmenin ensi-ilta': {
+    'Bizet 1875': {
       nosto: 'nosto-carmenin-ensi-ilta',
       teksti: 'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, '
         + 'ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi '
@@ -5359,7 +5359,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kirahvin kävelymatka': {
+    'Kirahvi 1826': {
       nosto: 'nosto-kirahvin-kavelymatka',
       teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle '
         + 'X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa '
@@ -5391,7 +5391,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Torni romuraudaksi': {
+    'Lustig 1925': {
       nosto: 'nosto-lustig-eiffel',
       teksti: 'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
         + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän '
@@ -5441,7 +5441,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Impressionistit': {
+    'Monet 1874': {
       nosto: 'syvennys-pariisi-impressionistit',
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä '
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
@@ -5466,7 +5466,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kyyhkyposti': {
+    'Piiritys 1870': {
       nosto: 'syvennys-pariisi-kyyhkyposti',
       teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset '
         + 'sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat '
@@ -5528,7 +5528,7 @@ export const NAHTAVYYSJUTUT = {
      * — tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    '72 nimeä': {
+    'Tornin nimet 2026': {
       nosto: 'nosto-pariisin-72-nimea',
       teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
         + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
@@ -5550,7 +5550,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Metron sisäänkäynti': {
+    'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
       teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
         + 'oli järjestetty arkkitehtikilpailu, mutta yksikään 21 '
@@ -5569,7 +5569,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Notre-Damen kukko': {
+    'Notre-Dame 2019': {
       nosto: 'nosto-notre-damen-kukko',
       teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
         + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
@@ -5592,7 +5592,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Pariisi soi': {
+    'Piaf ja Django': {
       nosto: 'nosto-pariisi-soi',
       teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
         + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
@@ -5621,7 +5621,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Paras patonki': {
+    'Patonki 1994': {
       nosto: 'nosto-pariisin-patonki',
       teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
         + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
@@ -5643,7 +5643,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Pariisin vuosisadat': {
+    'Kaulanauha 1785': {
       nosto: 'nosto-pariisin-vuosisadat',
       teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
         + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
