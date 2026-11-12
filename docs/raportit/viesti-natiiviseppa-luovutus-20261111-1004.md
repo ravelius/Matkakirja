@@ -649,3 +649,9 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   → korjaa (oleta 60 s / käsittely) → mono-3 → YKSI viesti KK:lle (kolme suurinta varaajaa kutsupaikkoineen, toistuuko ennen kaupunkia). Ei korjauksia peliin.
 - 35n (03.49) JU: kertojan esilataus 333e91c45 LINKISSÄ 224.96 = 3929cdcf6 (VALMIS; jatko: ei-valmiit 8 → KK, lisäys 35k).
 - 35o (04.5x) PT/KK 04.54: palkki-7 (LOD0 tavuina + mittari iPadin leveydellä, KK 03.14) → Opus-agentti tekee haaraan natiiviseppa/latausjono ("NS: latausjono 3o") + ajopyynto-mac-palkki-7.md. Jos agentti ei raportoinut: git log natiivi-backup/natiiviseppa/latausjono → JU:lle ajopyyntö (jonossa NUI, PK, KS jälkeen) → lue.py lokit/natiiviseppa-juoksu-latausjono-palkki-7 → KK yksi rivi + mittaririvi.
+- 35p (05.xx) PALKKI-7 TEHTY 128ae58ba (natiivi-backup natiiviseppa/latausjono, 6c5b95883:n päälle; Peli-testit 931/931, unity 0). Syy 28,9 s: LOD0:n 182 kohdetta
+  saivat saman askeleen (~0,0018), vaikka isojen rakennusten valokartat ~11 Mt → 0,449 → 0,459 alle 1 px. Nyt LOD0 = saadut tavut / arvioidut kokonaistavut
+  (Latausjono.PakollisetTavut; kohteen koko liukuva keskiarvo, alku 4 Mt; Content-Range 1. osasta), Kasvava; lokirivi "palkkilohko LOD0 tavut: saatu X Mt …".
+  Mittari: leveys 360 px (iso iPad, .mk-edistyminen--paksu 180 pt × 2). Riski: jos kohteet suurenevat lohkon lopussa, palkki hidastuu lopussa.
+  JU: ajopyynto-mac-palkki-7.md PYYDETTY (viimeisenä NUI, PK, KS jälkeen) → LUE lue.py lokit/natiiviseppa-juoksu-latausjono-palkki-7: MITTARI ≤ 15 s? + 439/439
+  + VIRHE 0 → KK yksi rivi + mittaririvi (kopio PT) → KK:n sana → pt-ok PT:lle (128ae58ba; sisältää palkki-6:n).
