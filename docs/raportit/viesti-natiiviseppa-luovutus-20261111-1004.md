@@ -658,3 +658,4 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 35q (08.3x) PALKKI-7 LUETTU: MITTARI pisin sama 13,1 s ≤ 15 (LOD2 → LOD1, leveys 360 px), 439/439, VIRHE 0, LOD0 tavut 570,6 Mt → KK:lle LÄHETETTY (kopio PT):
   junaehdokas 128ae58ba → ODOTA KK:n sana → pt-ok PT:lle. 8 KAPPALEEN LISTA: Sonnet-agentti selvittää (manifesti vs Pariisin jutut) → jos ei raportoinut,
   tee itse lisäys 35k:n keinolla → yksi viesti KK:lle.
+- 35r (08.3x) KK 08.36 JUNASANA palkki-7 128ae58ba → pt-ok-pyyntö PT:lle LÄHETETTY. KK:n järjestys: 8 kappaleen lista → mono-keko (mono-3, lisäys 35m) → kaupunkityökalut.
