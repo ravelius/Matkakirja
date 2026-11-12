@@ -5,7 +5,7 @@ TAVOITE: Pelaaja matkustaa kaupungista toiseen kuin lautapelissä: valitsee kulk
 SÄÄNNÖT:
 1. Vuoro on kulkutavan valinta, noppa ja siirto. Heitto, laivamatka ja lento kuluttavat kukin 6 tuntia matka-aikaa. [R-2.4]
 2. Kulkutapa valitaan ennen heittoa Liiku-napista (läpinäkyvä tekstinappi alhaalla keskellä). Nappi on himmeä, kunnes kaupungin aarre on avattu, joka kaupungissa erikseen. [R-2.168]
-3. Liftaus on noppa autokyytinä: kyytimaksu £50 kerran kaupungista lähdettäessä, jatko reitillä ilmainen. Bussi (£80) vie suoraan seuraavaan kaupunkiin ilman noppaa ja aikaa; laiva maksaa £200 ja lento £350. [R-2.168] [R-2.190]
+3. Liftaus on noppa autokyytinä: kyytimaksu matkan pituuden mukaan (£0,15/km, vähintään £20) kerran kaupungista lähdettäessä, jatko reitillä ilmainen. Bussi (1,5 × kyytimaksu, vähintään £80) vie suoraan seuraavaan kaupunkiin ilman noppaa ja aikaa; laiva maksaa £200 ja lento £350. [R-2.168] [R-2.190] [P-261011-1]
 4. Automaattinen nopanheitto (asetus) toimii liftauksessa ja laivalla, vaikka bussi olisi tarjolla. [R-2.168]
 5. Uudelle mantereelle pääsee vasta pääaarteella tai maksamalla £1000 ylitykseltä; mantereen rajakaupunkiin pääsee aina. [R-2.5] [R-2.17]
 6. Reitit ovat lautapelin katkoviivoja: paksu harva katko, pyöreät päät ja kevyt käsivarahuojunta, merellä tiheämpi katko. Välipisteet ovat päätepisteen kokoisia ympyröitä ilman punaista. [R-2.14] [R-2.168]
