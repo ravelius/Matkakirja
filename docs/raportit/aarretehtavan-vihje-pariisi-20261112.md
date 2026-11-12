@@ -20,3 +20,6 @@ SUOSITUS: A.
 
 ## TOTEUTETTU 12.11.2026 (KK 20.52: vaihtoehto A)
 Tarinapaikka "Bukinistit 1859" (nosto-pariisin-bukinistit, Quai Voltaire 48,859 N / 2,33075 E, tiimalasi) + tarinakaaren Pariisi-kysymykseen `lahde: nosto-pariisin-bukinistit` ja `vihje`. Miniatyyri: ämpäritunnus pariisi-bukinistit-1859 (kuvaa ei generoitu; puuttuva kuva = varatäplä). Äänijonoon 3 riviä.
+
+## 1859-sanamuoto tarkistettu (KK 21.11, 12.11.2026)
+en-Wikipedia "Bouquinistes": 1859 kauppiaille sallittiin kiinteät pisteet (concession: kullekin kaidetta, vuosimaksu); 1891 heidän pyyntönsä jättää laatikot yöksi hyväksyttiin. Artikkeli ei mainitse laatikoiden kiinnittämistä kaiteisiin eikä "pysyvää lukitusta" → vanha muoto ("lupa kiinnittää laatikot kaiteisiin") poistettu; teksti, otsikko ja visa KK:n sanamuodon mukaan. "Kaupungilta" ja "piti silti kantaa pois joka ilta" ovat päätelmiä (concession-järjestelmä; sama fakta pelin kohtaamiset.js:ssä), ei suoria virkkeitä.
