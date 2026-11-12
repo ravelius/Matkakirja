@@ -9,7 +9,7 @@ SÄÄNNÖT:
 4. Kaikki katsotaan ensin Macilla iPadin ja iPhonen ruutukoossa. Mac-ajo on lyhyt ja ratkaisee yhden nimetyn kysymyksen pienellä kuvalistalla; ajoa ei tehdä, jos testi tai loki riittää. [R-12.26] [R-10.5]
 5. iPadilla tarkistetaan vain muisti, nopeus, kosketus ja koeversio. Iso iPad on rajoittava laite: sillä ajetaan vain KK:n nimeämä valmis kokonaisuus, eikä rooli tilaa iPad-ajoa itse. [R-12.26] [R-9.11]
 6. Koeversion löydös pysäyttää TestFlightin ulkoisen jaon; ulkoisilla pysyy edellinen käännös. [R-9.11]
-7. Pienelle iPadille asennetaan heti PT:n kuittaama junan kärki; ajoihin sitä käytetään vain, kun tarvitaan kaksi rinnakkain. [R-2.217] [R-9.11]
+7. PT:n kuittaama junan kärki jaetaan asennussivulle, josta laite asentaa sen. Pientä iPadia käytetään ajoihin vain, kun tarvitaan kaksi rinnakkain. [R-2.217] [R-9.11]
 8. iPhonella ei mitata, eikä sen kytkentää pyydetä. Iso iPad ajetaan vaakana, ellei kohde vaadi pystyä. [R-12.26] [R-9.11]
 9. Roolit eivät käännä itse: käännös- ja simuvuoro pyydetään Julkaisijalta, ja työ alkaa vasta NYT-viestistä. Juna menee ensin, kolmatta käännöslinjaa ei avata, ja jaettua käännösinfraa muutetaan vain omistajan luvalla. [R-10.4] [R-10.5]
 10. Simulaattoreita on neljä yhteistä, vuorolukolla yksi rooli kerrallaan; uusia ei luoda eikä vanhaa sisäistä sarjaa käytetä. Ajon jälkeen rooli sammuttaa vain omansa tunnisteella. Isolla iPadilla on oma lukko ja yksi ajo kerrallaan. [R-12.17] [R-12.16]
@@ -20,6 +20,6 @@ EI VIKA:
 - iPhone-mittausta ei ole, eikä se ole avoin asia.
 
 TEKOTAPA:
-- Simulaattorit: proto-3d/tyokalut/simusarja.sh. Ennen käännöspyyntöä Matkakirja-proto/tyokalut/tarkista.sh (virheitä yhteensä 0).
-- Lukot, iPad-jonot ja muistivahdit: /Users/Shared/Claude/julkaisija-tyokalut.
+- Simulaattorit: proto-3d/tyokalut/simusarja.sh (sarja T7-levyllä). Ennen käännöspyyntöä proto-3d/Matkakirja-proto/tyokalut/tarkista.sh (virheitä yhteensä 0).
+- Mac-esikatselun linjat (mac-yleis.zsh), lukot, iPad-jonot ja muistivahdit: /Users/Shared/Claude/julkaisija-tyokalut.
 - Muistiajo ja -raja: testit, suorituskyky-ja-muisti. Junan kulku: juna-ja-julkaisu.
