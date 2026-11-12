@@ -20,6 +20,10 @@ Kello: date ennen leimaa. Vahti: Bash run_in_background until-silmukka (loki.txt
    (koe korvasi vain lod0:n, eikä niissä ole atlasta) tai valo putoaa materiaalilta. LOD-B = pari-c:n B-sarja + `valo lodtieto` + `valo tila`
    ennen jokaista kuvaa. LUE lodtieto-rivit K1/K7 → jos lod1/2: LOD-raja (JuoksuSokkeloMaailma.Palatsi.cs, LodTieto) NS korjaa / LAV leipoo
    lod1:n; jos lod0: materiaalin JUOKSU_LEIVOTTU-avain. LAV:lle kerrottu 10.00. Kolmikko KK:lle vasta kun koevarjo näkyy.
+   LAV 10.0x (TODENNÄKÖISIN): koe-lod0:n kujalattiassa on varjot (62 % varjossa), MUTTA ruudun 1-3 lod0:ssa on 43 V4_lattia-kolmiota kujan alla
+   samalla y 0,00:lla, joten ne kilpailevat samasta pikselistä. Kuvissa lähin vaalea marmori = V4_lattia (1-3), harmaa kujakivi on kauempana.
+   Kujan ja 1-3:n lod1:stä puuttuu UV1. Pyysin LAV:ilta koe-1-3-lod0:n ilman niitä 43 kolmiota → odota polku, aja B-sarja (pari-c:n B,
+   1-3 = uusi tiedosto) uudelleen JU:lla LOD-B:n jälkeen. Pelissä ei ole mika-komentoa.
    (vanha) PARI-C: ajettu 09.49–09.59 → lokit/natiiviseppa-juoksu-pala3-pari-c.
    Skenaario _tyo/natiiviseppa/pala3/sk-juoksu-pala3-pari-c.txt = pari-b + B/C korvaa myös kk-tausta-kuja-1-3-lod0.glb → koe-b/ulos-{6.25,12.5}/.
    TAUSTA (pari-b luettu 09.29): kaikki kamerat (sijoita −136, 300–425) ovat kujaruudulla kuja-1-3 (rajat x −139,2…−132,4); pari-b korvasi vain 1-3 → B ≈ C.
