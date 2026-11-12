@@ -47,7 +47,7 @@ OK: nimiöketju ehjä
 | mendelejev-kortit-1869 | Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa | **Mendelejev 1869 — jaksollinen järjestelmä** | Mendelejev 1869 (ei muutu) |
 | edison-lamppu-1879 | Menlo Park 1879 — kolmetoista ja puoli tuntia valoa | **Edison 1879 — hehkulamppu palaa 13 tuntia** | Edison 1879 (ei muutu) |
 | fleming-malja-1928 | St Mary's 1928 — malja, jota ei heitetty pois | **Fleming 1928 — penisilliinin löytö** | Fleming 1928 (ei muutu) |
-| gutenberg-paino-1454 | Mainz 1454 — sivu syntyy metallista | **Gutenberg 1454 — ensimmäiset painetut sivut** | Gutenberg 1454 (ei muutu) |
+| gutenberg-paino-1454 | Mainz 1454 — sivu syntyy metallista | **Gutenberg 1454 — Raamattu painetaan irtokirjakkeilla** | Gutenberg 1454 (ei muutu) |
 | eiffel-torni-1888 | Champ de Mars 1888 — niitti kerrallaan taivaalle | **Eiffel-torni 1888 — näin torni koottiin** | Torni 1888 → **Eiffel-torni 1888** |
 | brunel-thames-tunnel-1827 | Rotherhithe 1827 — 36 lokeroa joen alla | **Brunel 1827 — tunneli Thamesin alle** | Tunneli 1827 → **Brunel 1827** |
 | suezin-kanava-avajaiset-1869 | Port Said 1869 — keulan edessä vain kaivettua vettä | **Suez 1869 — kanava avataan** | Suez 1869 (ei muutu) |
@@ -79,7 +79,7 @@ OK: nimiöketju ehjä
 | franz-ferdinandin-salamurha-1914 | Sarajevo 1914 — auto pysähtyy väärään paikkaan | **Sarajevo 1914 — Franz Ferdinand murhataan** | Latin-silta 1914 → **Sarajevo 1914** |
 | vloren-itsenaisyys-1912 | Vlorë 1912 — lippu, joka ommeltiin yöllä | **Albania 1912 — itsenäisyys julistetaan** | Vlorë 1912 → **Albania 1912** |
 | krusevon-tasavalta-1903 | Kruševo 1903 — kymmenen päivän tasavalta | **Kruševo 1903 — kymmenen päivän tasavalta** | Kruševo 1903 (ei muutu) |
-| obodin-kirjapaino-1494 | Obod 1494 — musteen viimeinen arkki | **Obod 1494 — ensimmäinen eteläslaavien painama kirja** | Obod 1494 (ei muutu) |
+| obodin-kirjapaino-1494 | Obod 1494 — musteen viimeinen arkki | **Obod 1494 — Montenegron ensimmäinen painettu kirja** | Obod 1494 (ei muutu) |
 | britannian-lippu-nikosiassa-1878 | Nikosia 1878 — puolikuu laskee, risti nousee | **Nikosia 1878 — Britannia ottaa Kyproksen** | Nikosia 1878 (ei muutu) |
 | pyhan-elmon-linnake-1565 | Pyhä Elmo 1565 — viimeinen aamu muurilla | **Pyhä Elmo 1565 — linnake kaatuu piirityksessä** | Fort St Elmo 1565 → **Pyhä Elmo 1565** |
 | bessarabian-liittyminen-1918 | Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi | **Bessarabia 1918 — liittyminen Romaniaan** | Chișinău 1918 → **Bessarabia 1918** |
@@ -122,15 +122,15 @@ OK: nimiöketju ehjä
 
 | vanha kyltti | uusi kyltti | uusi otsikko | merkki | kartalle |
 |---|---|---|---|---|
-| Pariisin vuosisadat | Kaulanauha 1785 | Kaulanauha 1785 — kuningattaren timanttihuijaus | skandaali | uusi |
+| Pariisin vuosisadat | Kaulanauha 1785 | Kaulanauha 1785 — huijaus kuningattaren nimissä | skandaali | uusi |
 | Pariisi soi | Piaf ja Django | Piaf ja Django — kadulta ja vaunusta maineeseen | lyyra | uusi |
 | Vrain-Lucas | Vrain-Lucas (ei muutu) | Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä | skandaali | uusi |
 | Kyyhkyposti | Piiritys 1870 | Piiritys 1870 — viestit kulkevat kyyhkyillä | tiimalasi | uusi |
 | Notre-Damen kukko | Notre-Dame 2019 | Notre-Dame 2019 — palo, jonka kukko selvisi | – | ei (katedraalin nosto) |
-| Carmenin ensi-ilta | Bizet 1875 | Bizet 1875 — Carmen kaatuu ensi-iltaan | lyyra | uusi |
-| Kirahvin kävelymatka | Kirahvi 1826 | Kirahvi 1826 — kävelymatka Pariisiin | tiimalasi | jo |
+| Carmenin ensi-ilta | Bizet 1875 | Bizet 1875 — Carmen saa kylmän vastaanoton | lyyra | uusi |
+| Kirahvin kävelymatka | Kirahvi 1827 | Kirahvi 1827 — kävelymatka Pariisiin | tiimalasi | jo |
 | Torni romuraudaksi | Lustig 1925 | Lustig 1925 — Eiffel-torni myydään romuksi | skandaali | jo |
-| Impressionistit | Monet 1874 | Monet 1874 — impressionistit näyttelevät | lyyra | uusi |
+| Impressionistit | Monet 1874 | Monet 1874 — impressionistien ensimmäinen näyttely | lyyra | uusi |
 | Tuileries'n palatsi | Tuileries'n palatsi / nimio Tuileries (tähti) | Tuileries 1883 — palatsin rauniot puretaan | – | tähti |
 | 72 nimeä | Tornin nimet 2026 | Tornin nimet 2026 — naisten lista julkaistaan | – | ei |
 | Metron sisäänkäynti | Metro 1900 | Metro 1900 — Guimardin sisäänkäynnit | – | ei |

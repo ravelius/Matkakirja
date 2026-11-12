@@ -10,7 +10,7 @@ import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
 const LAJIT = new Set(['tiimalasi', 'lamppu', 'lyyra', 'skandaali']);
 const ODOTETTU = {
   'Lavoisier 1780': 'lamppu', 'Curie 1898': 'lamppu', 'Pasteur 1862': 'lamppu', 'Lumière 1895': 'lamppu',
-  'Eiffel-torni 1888': 'tiimalasi', 'Kirahvi 1826': 'tiimalasi', 'Piiritys 1870': 'tiimalasi',
+  'Eiffel-torni 1888': 'tiimalasi', 'Kirahvi 1827': 'tiimalasi', 'Piiritys 1870': 'tiimalasi',
   'Piaf ja Django': 'lyyra', 'Bizet 1875': 'lyyra', 'Monet 1874': 'lyyra', 'Patonki 1994': 'lyyra',
   'Vrain-Lucas': 'skandaali', 'Kaulanauha 1785': 'skandaali', 'Lustig 1925': 'skandaali',
 };

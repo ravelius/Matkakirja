@@ -2401,8 +2401,8 @@ export const HISTORIAN_HETKET = [
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
     lehtiJohdanto: 'Pariisin Arsenaalin laboratoriossa Antoine ja Marie-Anne Lavoisier '
       + 'punnitsivat noin vuonna 1780 kaiken ennen koetta ja sen jälkeen — '
-      + 'ja kemia lakkasi olemasta alkemiaa, vaikka vallankumous ei antanut '
-      + 'sitä heille anteeksi.',
+      + 'ja kemia lakkasi olemasta alkemiaa. Vallankumous mestasi Antoinen '
+      + 'veronkantajana vuonna 1794.',
     lehtiTehtava: {
       kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian '
         + 'vallankumouksessa?',
@@ -2954,7 +2954,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'gutenberg-paino-1454',
-    otsikko: 'Gutenberg 1454 — ensimmäiset painetut sivut',
+    otsikko: 'Gutenberg 1454 — Raamattu painetaan irtokirjakkeilla',
     nimio: 'Gutenberg 1454',
     aihe: 'Kirjapaino',
     paivays: '1454',
@@ -5395,14 +5395,14 @@ export const HISTORIAN_HETKET = [
   /* obodin-kirjapaino-1494 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "obodin-kirjapaino-1494",
-    otsikko: "Obod 1494 — ensimmäinen eteläslaavien painama kirja",
+    otsikko: "Obod 1494 — Montenegron ensimmäinen painettu kirja",
     nimio: "Obod 1494",
     paivays: "4.1.1494",
     paikka: "Obodin kirjapaino, Rijeka Crnojevića",
     iso: "MNE",
     lat: 42.35, lon: 19.033,
     kuvaversio: 4,
-    teksti: "Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka eteläslaavilaiset ovat koskaan tuottaneet omalla kielialueellaan — aikaisemmin kaikki kirjat oli kopioitava käsin munkkien luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone katoaa historiasta jäljettömiin.",
+    teksti: "Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on nykyisen Montenegron alueen ensimmäinen painettu teos — aikaisemmin kaikki kirjat oli kopioitava käsin munkkien luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone katoaa historiasta jäljettömiin.",
     kuvat: [
       {
         rooli: "lahi",
@@ -5428,7 +5428,7 @@ export const HISTORIAN_HETKET = [
       vaihtoehdot: ["Oktoih prvoglasnik", "Raamatun ensimmäinen käännös", "Zetan lakikirja"],
       oikea: 0,
     },
-    lehtiJohdanto: "Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih prvoglasnik — ensimmäinen eteläslaavien oma painettu kirja, tehty vain viisi vuotta ennen painokoneen katoamista osmanien tieltä.",
+    lehtiJohdanto: "Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih prvoglasnik — Montenegron ensimmäinen painettu kirja, tehty vain viisi vuotta ennen painokoneen katoamista osmanien tieltä.",
     lehtiTehtava: {
       kysymys: "Mikä kirja valmistui Obodin painossa 4.1.1494?",
       vaihtoehdot: ["Oktoih prvoglasnik", "Raamatun ensimmäinen käännös", "Zetan lakikirja", "Venetsian kauppasopimus"],

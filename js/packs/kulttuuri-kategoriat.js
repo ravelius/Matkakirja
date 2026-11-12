@@ -7080,8 +7080,8 @@ export const KULTTUURI_KATEGORIAT = {
       otsikko: 'Historian hetki: Lavoisier 1780',
       johdanto: 'Pariisin Arsenaalin laboratoriossa Antoine ja Marie-Anne '
         + 'Lavoisier punnitsivat noin vuonna 1780 kaiken ennen koetta ja sen '
-        + 'jälkeen — ja kemia lakkasi olemasta alkemiaa, vaikka vallankumous ei '
-        + 'antanut sitä heille anteeksi.',
+        + 'jälkeen — ja kemia lakkasi olemasta alkemiaa. Vallankumous mestasi '
+        + 'Antoinen veronkantajana vuonna 1794.',
       tehtava: {
         kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian vallankumouksessa?',
         vaihtoehdot: [

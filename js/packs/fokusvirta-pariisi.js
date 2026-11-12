@@ -409,7 +409,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?',
       ],
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
-      otsikko: 'Monet 1874 — impressionistit näyttelevät',
+      otsikko: 'Monet 1874 — impressionistien ensimmäinen näyttely',
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
@@ -682,8 +682,8 @@ export const FOKUSVIRTA_PARIISI = {
        * lähde antaa täsmällisenä.
        */
       id: 'kirahvin-kavelymatka',
-      nimio: 'Kirahvi 1826',
-      otsikko: 'Kirahvi 1826 — kävelymatka Pariisiin',
+      nimio: 'Kirahvi 1827',
+      otsikko: 'Kirahvi 1827 — kävelymatka Pariisiin',
       visa: {
         kysymys: 'Miksi kirahvi kulki Marseillesta Pariisiin jalkaisin?',
         vaihtoehdot: [
@@ -815,7 +815,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       id: 'carmenin-ensi-ilta',
       nimio: 'Bizet 1875',
-      otsikko: 'Bizet 1875 — Carmen kaatuu ensi-iltaan',
+      otsikko: 'Bizet 1875 — Carmen saa kylmän vastaanoton',
       lunastus: [
         'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla '
           + '1873, ja ensimmäinen näytös oli valmis siihen kesään '
@@ -1314,7 +1314,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       id: 'pariisin-vuosisadat',
       nimio: 'Kaulanauha 1785',
-      otsikko: 'Kaulanauha 1785 — kuningattaren timanttihuijaus',
+      otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
       symboli: 'historia',
       lunastus: [
         'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '

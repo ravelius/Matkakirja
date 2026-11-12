@@ -8955,7 +8955,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Gutenberg 1454 — ensimmäiset painetut sivut',
+          otsikko: 'Gutenberg 1454 — Raamattu painetaan irtokirjakkeilla',
           aika: '1454',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
@@ -8987,7 +8987,7 @@ export const MAA_KATEGORIAT = {
             + 'Gutenberg Bibles, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Gutenberg 1454 — ensimmäiset painetut sivut',
+              otsikko: 'Gutenberg 1454 — Raamattu painetaan irtokirjakkeilla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
               lyhyt: 'Gutenbergin Raamattu syntyy monen käsiparin vuosien työnä '
                 + 'noin 180 kappaleen painoksena.',
@@ -63987,8 +63987,8 @@ export const MAA_KATEGORIAT = {
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Obod 1494',
       johdanto: 'Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih '
-        + 'prvoglasnik — ensimmäinen eteläslaavien oma painettu kirja, tehty vain '
-        + 'viisi vuotta ennen painokoneen katoamista osmanien tieltä.',
+        + 'prvoglasnik — Montenegron ensimmäinen painettu kirja, tehty vain viisi '
+        + 'vuotta ennen painokoneen katoamista osmanien tieltä.',
       tehtava: {
         kysymys: 'Mikä kirja valmistui Obodin painossa 4.1.1494?',
         vaihtoehdot: [
@@ -64004,7 +64004,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Obod 1494 — ensimmäinen eteläslaavien painama kirja',
+          otsikko: 'Obod 1494 — Montenegron ensimmäinen painettu kirja',
           aika: '4.1.1494',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-obodin-kirjapaino-1494-lahi-photo-v4.jpg',
@@ -64018,20 +64018,19 @@ export const MAA_KATEGORIAT = {
             + 'Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet '
             + 'valettuina käsin metallista. Paperi tuodaan laivoilla samaa '
             + 'reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole '
-            + 'yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka '
-            + 'eteläslaavilaiset ovat koskaan tuottaneet omalla kielialueellaan — '
-            + 'aikaisemmin kaikki kirjat oli kopioitava käsin munkkien '
-            + 'luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin '
-            + 'vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin '
-            + 'osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone '
-            + 'katoaa historiasta jäljettömiin.',
+            + 'yhtään paperimyllyä. Kirja on nykyisen Montenegron alueen '
+            + 'ensimmäinen painettu teos — aikaisemmin kaikki kirjat oli '
+            + 'kopioitava käsin munkkien luostareissa vuosikausia. Zeta, pieni '
+            + 'ruhtinaskunta Balkanin vuorten keskellä, ehtii painaa vain viisi '
+            + 'kirjaa ennen kuin osmanien paine pakottaa Crnojevićin suvun '
+            + 'pakenemaan ja painokone katoaa historiasta jäljettömiin.',
           lyhyt: 'Munkki käyttää varhaista painokonetta Obodissa 1494.',
           selite: 'Munkki käyttää varhaista painokonetta Obodissa 1494.',
           lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Montenegron '
             + 'kansallismuseo, Oktoih prvoglasnik; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Obod 1494 — ensimmäinen eteläslaavien painama kirja',
+              otsikko: 'Obod 1494 — Montenegron ensimmäinen painettu kirja',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-obodin-kirjapaino-1494-kauko-photo-v4.jpg',
               lyhyt: 'Obodin linnan seutu Rijeka Crnojevićan ympäristössä; '
                 + 'kirjapainon tarkka paikka on epävarma.',

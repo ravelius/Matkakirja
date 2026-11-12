@@ -114,7 +114,6 @@ bb6d5ce87a21a564e31cf4533bc30dab	GBR	historianHetket	newton-prisma-1666	1	2026-1
 17364eef10021a8894f172fe742344b6	GBR	historianHetket	faraday-luento-1831	1	2026-11-12
 21525d595205b73c0cb1926d17bfaa2a	RUS	historianHetket	mendelejev-kortit-1869	1	2026-11-12
 4e47cbe3b16c725697230276267d818f	GBR	historianHetket	fleming-malja-1928	1	2026-11-12
-9d1d5bae0d8c27de0ccd51beaadb3503	DEU	historianHetket	gutenberg-paino-1454	1	2026-11-12
 7597092c05cea4102d021b7a367a765f	GBR	historianHetket	brunel-thames-tunnel-1827	1	2026-11-12
 4a1341e49dcd11fb3aea4cc5410787dc	RUS	historianHetket	pietari-perustus-1703	1	2026-11-12
 60f1ebd1880608b6ecd45335f4126423	ITA	historianHetket	vesuvius-pompeji-79	1	2026-11-12
@@ -138,7 +137,6 @@ afe11ded2d6d5ff05de0ac8feefc816a	NLD	historianHetket	afsluitdijkin-viimeinen-auk
 a2e588a0e34ecf744d4dfccfc0045836	DNK	historianHetket	christiansborgin-palo-1884	1	2026-11-12
 cf9ef3f10f3654728dbfc16595693a21	BIH	historianHetket	franz-ferdinandin-salamurha-1914	1	2026-11-12
 e2502128991c5942d204a59d8afbe567	ALB	historianHetket	vloren-itsenaisyys-1912	1	2026-11-12
-268344e6185f05631c4fb78ba8d1af06	MNE	historianHetket	obodin-kirjapaino-1494	1	2026-11-12
 553983a0a7ab7d83572e98d78545c890	MLT	historianHetket	pyhan-elmon-linnake-1565	1	2026-11-12
 68655e7fd624523e457c005b24135719	MDA	historianHetket	bessarabian-liittyminen-1918	1	2026-11-12
 10ba44be491194362102e6fe4168a65a	BLR	historianHetket	berezinan-ylitys-1812	1	2026-11-12
@@ -159,7 +157,6 @@ b659cc749f6978e2d36f7ffb5a321b34	pariisi	nahtavyysjutut	Pasteur 1862	1	2026-11-1
 e271b23d4bc898a76c7078a8c24ae18a	pariisi	nahtavyysjutut	Lumière 1895	1	2026-11-12
 efcdab9e456a8d175f8ea1a201894511	pariisi	nahtavyysjutut	Metro 1900	1	2026-11-12
 5b9ac5a3eb91ffafc78aaa6498064e6e	pariisi	nahtavyysjutut	Bizet 1875	1	2026-11-12
-40b589cc0c22141ddd7aa2ead959787b	pariisi	nahtavyysjutut	Kirahvi 1826	1	2026-11-12
 45fa81e86f6ce029dec3664b32867a0e	pariisi	nahtavyysjutut	Lustig 1925	1	2026-11-12
 9d2fa1eabc43ed9a01c074f0ed885e0f	pariisi	nahtavyysjutut	Monet 1874	1	2026-11-12
 75ec51eb0f822e3e9b74b10f83204387	pariisi	nahtavyysjutut	Piiritys 1870	1	2026-11-12
@@ -168,14 +165,18 @@ f6992f2f149cd882ab1603595271764b	pariisi	nahtavyysjutut	Patonki 1994	1	2026-11-1
 dff627dcb983291db6c9469045258734	pariisi	nahtavyysjutut	Kaulanauha 1785	1	2026-11-12
 be87cda1d4b2e6d4333a789dc0ac8afc	FRA	skandaalit	vrain-lucas-kirjevaarennokset	1	2026-11-12
 eab9e742b9cbb2ccbe6150ea31c4fbb8	pariisi	takynostot	lustig-eiffel	1	2026-11-12
-3f8bf4ae090735fe2b3ed041da351431	pariisi	takynostot	kirahvin-kavelymatka	1	2026-11-12
-9994b03fe7d664da91f0669072fc7e33	pariisi	takynostot	carmenin-ensi-ilta	1	2026-11-12
 92eedea62224b28a148836363ff39ea3	pariisi	takynostot	pariisin-72-nimea	1	2026-11-12
 23d6e8bb9fe5a47ffe4e4ff1e9b91517	pariisi	takynostot	guimardin-metro	1	2026-11-12
 b65624900688926dba5f3972a868878f	pariisi	takynostot	notre-damen-kukko	1	2026-11-12
 ebc2f05b58df40a60ef3cd9b9e8ac71c	pariisi	takynostot	pariisin-patonki	1	2026-11-12
 2dd2101411f52577e14d768c7756793b	pariisi	takynostot	pariisi-soi	1	2026-11-12
-eaf402f40d79b1985ffd57d3d8e34970	pariisi	takynostot	pariisin-vuosisadat	1	2026-11-12
 4267f4d50c8aababd05b5b38084994c4	pariisi	fokusvirta-takyt	tuileriat	1	2026-11-12
 dbe470bcbdb19d0617f68c638e21cf66	pariisi	fokusvirta-takyt	kyyhkyposti	1	2026-11-12
-ec4fc553a76b19ea01b08dab8b56bb29	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-12
+0f488a9ee3e70a0b3de4d885aef71da2	pariisi	nahtavyysjutut	Kirahvi 1827	1	2026-11-12
+3fd2014d303cd3f320e3a46e16b4d8a2	DEU	historianHetket	gutenberg-paino-1454	1	2026-11-12
+8b53538b2a1a2aae3723649cf6524327	MNE	historianHetket	obodin-kirjapaino-1494	1	2026-11-12
+f2afb005271678d780df662dee873688	MNE	historianHetket	obodin-kirjapaino-1494	2	2026-11-12
+7c53a1a211a5a9106c7b6af7f5719d6c	pariisi	takynostot	kirahvin-kavelymatka	1	2026-11-12
+0ea388135cc5ff85b809b06bda59e781	pariisi	takynostot	carmenin-ensi-ilta	1	2026-11-12
+dbdbad1ff875e870fc047b0ceb641ba9	pariisi	takynostot	pariisin-vuosisadat	1	2026-11-12
+2a4475fc1e8106c865105ead12742e7b	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-12

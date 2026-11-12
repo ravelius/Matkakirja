@@ -129,7 +129,7 @@ export const MINIATYYRIT = {
      */
     Bastilji: 'pariisi-bastilji-vari2',
     'Bizet 1875': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
-    'Kirahvi 1826': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
+    'Kirahvi 1827': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
     'Lustig 1925': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
     'Monet 1874': 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',

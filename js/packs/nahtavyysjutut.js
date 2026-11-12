@@ -5359,7 +5359,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kirahvi 1826': {
+    'Kirahvi 1827': {
       nosto: 'nosto-kirahvin-kavelymatka',
       teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle '
         + 'X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa '

@@ -5407,7 +5407,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Bizet 1875', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
       },
       {
-        nimi: 'Kirahvi 1826', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
+        nimi: 'Kirahvi 1827', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
