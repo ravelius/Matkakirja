@@ -25,4 +25,4 @@ EI VIKA:
 
 TEKOTAPA:
 - Kamera, valo ja muisti: kortit kamera, valo-ja-materiaalit, suorituskyky-ja-muisti.
-- Moduulit: suunnitelmat/20261111-juoksupeli-tavoiterakenne.md.
+- Moduulit: docs/suunnitelmat/20261111-juoksupeli-tavoiterakenne.md.
