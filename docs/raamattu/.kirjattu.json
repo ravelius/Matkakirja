@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "23d716e118cad264",
-  "aika": "2026-11-12T10:06:01.057Z"
+  "sha": "4abf40d9ef2d324c",
+  "aika": "2026-11-12T10:06:07.268Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -154,5 +154,9 @@
  "aiheet/oikeudet-ja-ansainta.md": {
   "sha": "f132c98689d50f82",
   "aika": "2026-11-12T10:06:01.057Z"
+ },
+ "aiheet/aarteet.md": {
+  "sha": "3845e8637b5621d9",
+  "aika": "2026-11-12T10:06:07.268Z"
  }
 }

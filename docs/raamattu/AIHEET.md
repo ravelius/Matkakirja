@@ -22,7 +22,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
 | saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 12.11.2026 |
 | matkustus-ja-reitit | Matkustus ja reitit | PK | 2.9 kt | 12.11.2026 |
-| aarteet | Aarteet | PK | – | – |
+| aarteet | Aarteet | PK | 2.9 kt | 12.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | – | – |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
 | pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
