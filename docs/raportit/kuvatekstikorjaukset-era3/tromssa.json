@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "Tromssa",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-tromssa-ilta.jpg",
+  "luokka": "B",
+  "vika": "'1840-luvun tullimakasiineissa' epävarma: UiT-opas 1830/1833, lokalhistoriewiki 1840-luku, tulliasema 1789-n. 1850 -> '1800-luvun'.",
+  "nyt_lyhyt": "Polarmuseet avattiin 1978 Amundsenin viimeisen lennon 50-vuotispäivänä.",
+  "nyt_selite": "Polarmuseet avattiin 18. kesäkuuta 1978 tasan viisikymmentä vuotta Roald Amundsenin viimeisen lennon jälkeen, ja se toimii 1840-luvun tullimakasiineissa Skansenin lähellä.",
+  "lyhyt": "Polarmuseet avattiin 1978 Amundsenin viimeisen lennon 50-vuotispäivänä.",
+  "selite": "Polarmuseet avattiin 18. kesäkuuta 1978 tasan viisikymmentä vuotta Roald Amundsenin viimeisen lennon jälkeen, ja se toimii 1800-luvun tullimakasiineissa Skansenin lähellä."
+ },
+ {
+  "kaupunki": "Tromssa",
+  "nro": 6,
+  "tiedosto": "saapumisintro/tromso/20261013-uudet-6-8/tromso-6-nakoala-intro-v1.png",
+  "luokka": "C",
+  "vika": "Nimi ristiriidassa KK:n introrivin 'Jäämeren katedraali' (rivi 1) ja kuvatekstin 1 kanssa: 'Arktinen katedraali' -> 'Jäämeren katedraali'.",
+  "nyt_lyhyt": "Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Arktinen katedraali.",
+  "nyt_selite": "Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne nousee Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan saaren, Tromsøbrua-sillan ja Arktisen katedraalin.",
+  "lyhyt": "Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Jäämeren katedraali.",
+  "selite": "Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne nousee Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan saaren, Tromsøbrua-sillan ja Jäämeren katedraalin."
+ },
+ {
+  "kaupunki": "Tromssa",
+  "nro": 8,
+  "tiedosto": "saapumisintro/tromso/20261013-uudet-6-8/tromso-8-kulkuneuvo-intro-v1.png",
+  "luokka": "A",
+  "vika": "Kuva ≠ teksti: kuvassa pieni valko-harmaa retkialus, ei Hurtigruten-rannikkolaiva. Lyhyt muotoiltu neutraaliksi (KK:n rivi 'Tromssan matkustaja-alus'); selite pitää sellaisenaan (reittitieto yleisesti oikea, ei väitä kuvan alusta Hurtigrutenksi).",
+  "nyt_lyhyt": "Hurtigruten-rannikkolaivat pysähtyvät Tromssassa Bergen–Kirkenes-reitillä.",
+  "nyt_selite": "Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin kävelymatkan päässä keskustasta Tromssan saarella. Tromssa on yksi pysähdyspaikoista Bergenin ja Kirkkoniemen välisellä reitillä.",
+  "lyhyt": "Matkustaja-alukset liikennöivät Tromssan satamassa, ja Bergen–Kirkenes-rannikkoreitin laivat pysähtyvät kaupungissa.",
+  "selite": "Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin kävelymatkan päässä keskustasta Tromssan saarella. Tromssa on yksi pysähdyspaikoista Bergenin ja Kirkkoniemen välisellä reitillä."
+ }
+]

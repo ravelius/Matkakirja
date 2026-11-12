@@ -1,0 +1,46 @@
+[
+ {
+  "kaupunki": "Tallinna",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-tallinna-kaupunginmuuri.jpg",
+  "luokka": "B",
+  "vika": "Tornien määrä lähteittäin ristiriitainen (26 / 27+8 / 28+3); '20' ja '46' eivät vahvistu kahdella lähteellä. Pituus 1,9 km pitää. Sana 'yli kaksikymmentä' sopii kaikkiin lähteisiin.",
+  "nyt_lyhyt": "Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja 20 tornia, aiemmin oli 2,4 kilometriä.",
+  "nyt_selite": "Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä ja siinä 46 tornia; nykyään muuria on jäljellä noin 1,9 kilometriä ja torneista pystyssä 20, ja se on Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia kaupunginmuureja.",
+  "lyhyt": "Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja yli kaksikymmentä tornia, aiemmin oli 2,4 kilometriä.",
+  "selite": "Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä; nykyään muuria on jäljellä noin 1,9 kilometriä ja siinä on yli kaksikymmentä tornia, ja se on Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia kaupunginmuureja."
+ },
+ {
+  "kaupunki": "Tallinna",
+  "nro": 8,
+  "tiedosto": "herokoe/hero-tallinna-ilta.png",
+  "luokka": "C",
+  "vika": "Näköalatasanne remontin (2012) jälkeen 175 m, ei 170 m (teletorn.ee; 170 m oli alkuperäinen). Vain yksi lähde 175 m:lle.",
+  "nyt_lyhyt": "Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein rakennus.",
+  "nyt_selite": "Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan olympialaisten purjehduskisoja varten, se on 314 metriä korkea ja siten Viron korkein rakennus, ja sen näköalatasanne on 170 metrin korkeudessa.",
+  "lyhyt": "Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein rakennus.",
+  "selite": "Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan olympialaisten purjehduskisoja varten, se on 314 metriä korkea ja siten Viron korkein rakennus, ja sen näköalatasanne on noin 175 metrin korkeudessa."
+ },
+ {
+  "kaupunki": "Tallinna",
+  "nro": 9,
+  "tiedosto": "Tallinn Landmarks 01.jpg",
+  "luokka": "C",
+  "vika": "Yhdistämisvuosi lähteittäin 1877 (History of Tallinn) / 1878 (Toompea); epävarma, joten '1870-luvun lopulla'.",
+  "nyt_lyhyt": "Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta vuonna 1878.",
+  "nyt_selite": "Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä Toompea omine herroineen ja alhaalla kauppiaiden kaupunki, ja ne yhdistettiin vasta vuonna 1878.",
+  "lyhyt": "Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta 1870-luvun lopulla.",
+  "selite": "Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä Toompea omine herroineen ja alhaalla kauppiaiden kaupunki, ja ne yhdistettiin vasta 1870-luvun lopulla."
+ },
+ {
+  "kaupunki": "Tallinna",
+  "nro": 12,
+  "tiedosto": "T5tramm.jpg",
+  "luokka": "C",
+  "vika": "Raideleveys 1 067 mm vakioitu vasta 1931, osa verkosta oli aiemmin 1 524 mm; 'edelleen' harhaanjohtava.",
+  "nyt_lyhyt": "Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti Vana-Lõunaa.",
+  "nyt_selite": "Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut aloittivat liikenteen 28.10.1925. Raideleveys on edelleen 1 067 millimetriä.",
+  "lyhyt": "Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti Vana-Lõunaa.",
+  "selite": "Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut aloittivat liikenteen 28.10.1925. Raideleveys on 1 067 millimetriä."
+ }
+]

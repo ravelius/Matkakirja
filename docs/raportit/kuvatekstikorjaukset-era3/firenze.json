@@ -1,0 +1,46 @@
+[
+ {
+  "kaupunki": "firenze",
+  "nro": 8,
+  "tiedosto": "flickr-27613279050.jpg",
+  "luokka": "B",
+  "vika": "'maailman vanhin ellipsikaarinen silta' heikosti lähteistetty (vain en-Wikipedia, it-Wikipedia ei väitä); kuvassa nykyinen jälleenrakennettu silta (tuhottu 1944, uudelleen 1958); introrivi 'Ponte Santa Trinita · 1569, uudelleen 1958'",
+  "nyt_lyhyt": "Ponte Santa Trinita on maailman vanhin ellipsikaarinen silta, rakennettu 1567–1569.",
+  "nyt_selite": "Ponte Santa Trinita on maailman vanhin ellipsikaarinen silta, ja Bartolomeo Ammannati rakensi sen vuosina 1567–1569.",
+  "lyhyt": "Ponte Santa Trinita rakennettiin 1567–1569; vuonna 1944 tuhoutunut silta rakennettiin uudelleen 1958.",
+  "selite": "Bartolomeo Ammannati rakensi Ponte Santa Trinitan vuosina 1567–1569; silta tuhoutui 1944 ja rakennettiin uudelleen entiseen muotoonsa 1958."
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 11,
+  "tiedosto": "Arno river sunset, Florence, Italy.jpg",
+  "luokka": "C",
+  "vika": "Via Cassia Novan 'vuonna 123' on likimääräinen (Hadrianus n. 123, tienviitta 124)",
+  "nyt_lyhyt": "Ponte Vecchion paikka on ollut tieverkon solmu siitä asti, kun Via Cassia Nova valmistui.",
+  "nyt_selite": "Ponte Vecchion paikka on ollut Firenzen tieverkon solmu siitä asti, kun roomalainen Florentia yhdistettiin vuonna 123 valmistuneeseen Via Cassia Novaan.",
+  "lyhyt": "Ponte Vecchion paikka on ollut tieverkon solmu siitä asti, kun Via Cassia Nova valmistui.",
+  "selite": "Ponte Vecchion paikka on ollut Firenzen tieverkon solmu siitä asti, kun roomalainen Florentia yhdistettiin noin vuonna 123 valmistuneeseen Via Cassia Novaan."
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 12,
+  "tiedosto": "flickr-27155711546.jpg",
+  "luokka": "B",
+  "vika": "teurastajien karkotusvuosi 1593 ei vahvistu: lähteet 1565 / 1593 / 1594 / 1595 (KK 12.11.: vuosi pois)",
+  "nyt_lyhyt": "Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, minkä vuoksi teurastajat karkotettiin.",
+  "nyt_selite": "Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, ja juuri sen takia sillan teurastajat karkotettiin vuonna 1593.",
+  "lyhyt": "Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, minkä vuoksi teurastajat karkotettiin.",
+  "selite": "Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, ja juuri sen takia sillan teurastajat karkotettiin."
+ },
+ {
+  "kaupunki": "firenze",
+  "nro": 13,
+  "tiedosto": "flickr-27407894606.jpg",
+  "luokka": "C",
+  "vika": "lyhyt puuttuu (null)",
+  "nyt_lyhyt": null,
+  "nyt_selite": "Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui vuonna 1436.",
+  "lyhyt": "Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui 1436.",
+  "selite": "Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui vuonna 1436."
+ }
+]

@@ -1,0 +1,46 @@
+[
+ {
+  "kaupunki": "Moskova",
+  "nro": 5,
+  "tiedosto": "saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png",
+  "luokka": "B",
+  "vika": "Lyhyt: 'kesällä voi vuokrata veneen' ei löytynyt lähteistä (talviluistelu löytyi: Moscow Times 2010); lähteetön osa poistetaan. Selite (Puhtaat lammet, nykyään yksi lampi) pitää.",
+  "nyt_lyhyt": "Chistyje Prudyn lammella voi kesällä vuokrata veneen ja talvella luistella.",
+  "nyt_selite": "Chistyje Prudy tarkoittaa puhtaita lampia. Lampia oli aikoinaan useita, mutta nykyään niistä on jäljellä vain yksi.",
+  "lyhyt": "Chistyje Prudyn lammella luistellaan talvisin.",
+  "selite": "Chistyje Prudy tarkoittaa puhtaita lampia. Lampia oli aikoinaan useita, mutta nykyään niistä on jäljellä vain yksi."
+ },
+ {
+  "kaupunki": "Moskova",
+  "nro": 6,
+  "tiedosto": "saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png",
+  "luokka": "C",
+  "vika": "Sama kohde kahdella nimellä: #6 'Varpuskukkula', #8 ja KK:n introrivi 'Varpusvuoret'. Yhtenäistetään muotoon Varpusvuoret. 85 m pitää (en-Wikipedia Sparrow Hills).",
+  "nyt_lyhyt": "Varpuskukkulan näköalatasanne on noin 85 metriä Moskva-joen yläpuolella.",
+  "nyt_selite": "Varpuskukkulan (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla rannalla, ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa.",
+  "lyhyt": "Varpusvuorten näköalatasanne on noin 85 metriä Moskva-joen yläpuolella.",
+  "selite": "Varpusvuorten (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla rannalla, ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa."
+ },
+ {
+  "kaupunki": "Moskova",
+  "nro": 7,
+  "tiedosto": "saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png",
+  "luokka": "B",
+  "vika": "Selite: '1700-luvulta ... kauppiaita ... hedelmätarhoja' jäi varmistamatta (hakutulos mainitsi vain puutarhureiden asutuksen ilman vuotta, yksi lähde); poistetaan. Nimen merkitys 'joen takainen' varmistui (en-Wikipedia). Lyhyt pitää.",
+  "nyt_lyhyt": "Zamoskvoretšje on Moskva-joen eteläpuolinen kaupunginosa, jonka nimi tarkoittaa joen takaista.",
+  "nyt_selite": "Nimi tulee sanoista ”joen takana” Kremliltä katsoen. 1700-luvulta alueelle asettui paljon kauppiaita, joiden matalissa taloissa oli hedelmätarhoja.",
+  "lyhyt": "Zamoskvoretšje on Moskva-joen eteläpuolinen kaupunginosa, jonka nimi tarkoittaa joen takaista.",
+  "selite": "Nimi tulee sanoista ”joen takana” Kremliltä katsoen, sillä alue on Moskva-joen toisella puolella."
+ },
+ {
+  "kaupunki": "Moskova",
+  "nro": 9,
+  "tiedosto": "Moscow panoramic October 2008.jpg",
+  "luokka": "C",
+  "vika": "Puuttuva lyhyt (null). Kirjoitettu selitteen ja tulosten mukaan (Moskovan kanava rakennettu 1932–1937, yhdistää Moskvajoen ja Volgan: en-Wikipedia Moscow Canal); introrivi 'Moskvajoki'. Selite pitää sellaisenaan.",
+  "nyt_lyhyt": null,
+  "nyt_selite": "Moskvajoki sai lisää vettä Volgasta, kun Moskovan kanava rakennettiin vuosina 1932–1937.",
+  "lyhyt": "Moskovan kanava yhdisti Moskvajoen Volgaan, ja se rakennettiin vuosina 1932–1937.",
+  "selite": "Moskvajoki sai lisää vettä Volgasta, kun Moskovan kanava rakennettiin vuosina 1932–1937."
+ }
+]

@@ -1,0 +1,46 @@
+[
+ {
+  "kaupunki": "Tampere",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-tampere-ilta.jpg",
+  "luokka": "B",
+  "vika": "Kellotapulin valmistumisvuosi lähteittäin 1828 / 1828-1829 / 1829 -> '1828-1829'. 'Keskustan vanhin säilynyt rakennus' lähteetön (tarkistamatta), poistettu; lyhyt korvattu varmalla tiedolla (käyttöönotto 1825).",
+  "nyt_lyhyt": "Tampereen Vanha kirkko valmistui 1824, kellotapuli 1828; se on keskustan vanhin säilynyt rakennus.",
+  "nyt_selite": "Tampereen Vanha kirkko valmistui puisena ristikirkkona 1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön 1825, sen viereinen kellotapuli valmistui 1828 Carl Ludvig Engelin piirustusten mukaan, ja kirkko on keskustan vanhin säilynyt rakennus.",
+  "lyhyt": "Tampereen Vanha kirkko valmistui 1824 ja otettiin käyttöön 1825; sen viereinen kellotapuli valmistui 1828–1829.",
+  "selite": "Tampereen Vanha kirkko valmistui puisena ristikirkkona 1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön 1825, ja sen viereinen kellotapuli valmistui 1828–1829 Carl Ludvig Engelin piirustusten mukaan."
+ },
+ {
+  "kaupunki": "Tampere",
+  "nro": 4,
+  "tiedosto": "saapumisintro/tampere/20261012-full/tampere-4-finlayson-arki-intro-v1.png",
+  "luokka": "C",
+  "vika": "1820 on Finlayson-yhtiön perustamisvuosi, ei tehtaan valmistumis- tai käynnistysvuosi (tarkistamatta). Plevna 1882 pitää.",
+  "nyt_lyhyt": "Tampereen vanhat tiilitehtaat nousivat Tammerkosken rannalle 1800-luvulla.",
+  "nyt_selite": "Skotlantilainen James Finlayson perusti Tammerkosken rannalle puuvillatehtaan 1820, ja sen Plevna-rakennuksessa syttyi 1882 Pohjoismaiden ensimmäinen sähkövalo.",
+  "lyhyt": "Tampereen vanhat tiilitehtaat nousivat Tammerkosken rannalle 1800-luvulla.",
+  "selite": "Skotlantilainen James Finlayson perusti Finlayson-yhtiön 1820, ja sen puuvillatehtaan Plevna-rakennuksessa Tammerkosken rannalla syttyi 1882 Pohjoismaiden ensimmäinen sähkövalo."
+ },
+ {
+  "kaupunki": "Tampere",
+  "nro": 7,
+  "tiedosto": "saapumisintro/tampere/20261012-full/tampere-7-tiilikortteli-ilta-intro-v1.png",
+  "luokka": "A",
+  "vika": "KK: rivi 'Tampereen tiilikortteli'; kuvateksti kertoo vain kaupungin sijainnista ja perustamisesta, ei kuvasta. Korvattu sillä, mikä kuvassa varmasti näkyy (havainnekuva: märkä mukulakivipiha, punatiilisiä ja vaaleita taloja, valaistut ikkunat, kaksi kävelijää, iltahämärä). Vanha selite (Kustaa III, 1.10.1779) oli tosi mutta ei kuvasta.",
+  "nyt_lyhyt": "Tampere on Pyhäjärven ja Näsijärven välisellä kannaksella.",
+  "nyt_selite": "Tampere perustettiin Kustaa III:n päätöksellä, ja täydet kaupunkioikeudet se sai 1. lokakuuta 1779.",
+  "lyhyt": "Tampereen tiilikorttelissa punatiilisten ja vaaleiden talojen ikkunat hehkuvat märän mukulakivipihan ympärillä iltahämärässä.",
+  "selite": "Iltahämärässä märällä mukulakivipihalla kävelee kaksi ihmistä, ja ympäröivien punatiilisten ja vaaleiden talojen ikkunoissa palaa valo."
+ },
+ {
+  "kaupunki": "Tampere",
+  "nro": 8,
+  "tiedosto": "herokoe/hero-tampere-nasinneula.jpg",
+  "luokka": "C",
+  "vika": "168 m sisältää antennin (päärakenne noin 134,5 m, fi-Wikipedia; finnisharchitecture.fi 130 m). Lisätty 'antenneineen'.",
+  "nyt_lyhyt": "Näsinneula avattiin 1971 ja on 168 metriä korkea; pyörivä ravintola tekee kierroksen 45 minuutissa.",
+  "nyt_selite": "Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 Särkänniemessä ja on 168 metriä korkea; sen pyörivä ravintola 124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.",
+  "lyhyt": "Näsinneula avattiin 1971 ja on antenneineen 168 metriä korkea; pyörivä ravintola tekee kierroksen 45 minuutissa.",
+  "selite": "Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 Särkänniemessä ja on antenneineen 168 metriä korkea; sen pyörivä ravintola 124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa."
+ }
+]

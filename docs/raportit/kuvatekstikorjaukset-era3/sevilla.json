@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "Sevilla",
+  "nro": 2,
+  "tiedosto": "herokoe/hero-sevilla-keskipaiva.png",
+  "luokka": "A",
+  "vika": "Kuvateksti sanoo Plaza de Espanan 'rakennettiin 1928', mutta 1928 on loppuvuosi: rakennustyö alkoi elokuussa 1914 ja kesti 1928 asti (es-Wikipedia; escapadarural.com ja vanupied.com: 1914-1928). Täsmää KK:n introriviin 'Plaza de España · 1914-1928'. Näyttelyn avajaiset olivat 9.5.1929 (es-Wikipedia), joten 'seuraavan vuoden näyttely' korvattu vuodella 1929.",
+  "nyt_lyhyt": "Sevillan Plaza de España rakennettiin 1928 seuraavan vuoden näyttelyä varten.",
+  "nyt_selite": "Sevillan Plaza de España rakennettiin 1928 Aníbal Gonzálezin suunnitelmien mukaan seuraavan vuoden Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat Espanjan vanhoja kuningaskuntia.",
+  "lyhyt": "Sevillan Plaza de España rakennettiin 1914–1928 vuoden 1929 näyttelyä varten.",
+  "selite": "Sevillan Plaza de España rakennettiin 1914–1928 Aníbal Gonzálezin suunnitelmien mukaan vuoden 1929 Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat Espanjan vanhoja kuningaskuntia."
+ },
+ {
+  "kaupunki": "Sevilla",
+  "nro": 10,
+  "tiedosto": "Sevilla - March 2011 - 063.jpg",
+  "luokka": "A",
+  "vika": "Kuva ≠ teksti: kuvassa on Real Maestranzan härkätaisteluareena (soikea keltainen arkadikehä, ympärillä valkoisia kattoja), mutta kuvateksti kertoo Sevillan sijainnista Guadalquivirin laaksossa eikä mainitse areenaa. Uusi teksti kuvan kohteesta; vain lähteistetyt faktat: rakentaminen alkoi 1700-luvun puolivälissä (en-Wikipedia ja realmaestranza.com: 1749 tai 1761), arkadi suljettu / areena valmis 1881 (en-Wikipedia, realmaestranza.com). Tarkkaa alkuvuotta ei anneta, koska lähteet eroavat (1749/1761). Vanhat väitteet (7 m merenpinnasta, 141 km2) poistuvat, koska eivät liity kuvaan; ne voi siirtää toiseen kuvaan, jos halutaan.",
+  "nyt_lyhyt": "Sevilla on rakennettu Guadalquivirin laaksoon lähes merenpinnan tasalle.",
+  "nyt_selite": "Sevilla on rakennettu Guadalquivirin laaksoon keskimäärin seitsemän metriä merenpinnan yläpuolelle, ja kunnan pinta-ala on 141 neliökilometriä.",
+  "lyhyt": "Maestranzan härkätaisteluareenan keltainen arkadikehä erottuu Sevillan valkoisten kattojen keskeltä.",
+  "selite": "Real Maestranzan härkätaisteluareenan rakentaminen alkoi 1700-luvun puolivälissä, ja sen arkadikehä saatiin suljettua 1881."
+ }
+]

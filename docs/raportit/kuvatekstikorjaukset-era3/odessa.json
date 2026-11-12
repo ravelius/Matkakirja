@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "Odessa",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-odessa-keskipaiva.jpg",
+  "luokka": "B",
+  "vika": "Vuosiväite 1827–1830 ei vahvistu: lähteet eroavat (en.wikipedia 1827–1830 alaviitteineen 1824–1827/valmis 1829, Sveitsin kansallismuseon blogi palatsi 1824–1828 ja kolonnadi 1829, ruwiki 1826–1828, uk.wikipedia 1827). Palatsi ja kolonnadi eivät ole samalta vuodelta. Vuosi poistettu, rivi on ilman vuotta.",
+  "nyt_lyhyt": "Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin 1827–1830 ruhtinas Vorontsoville.",
+  "nyt_selite": "Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin 1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn linnoituksen paikalle.",
+  "lyhyt": "Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin ruhtinas Vorontsoville.",
+  "selite": "Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin ruhtinas Mihail Vorontsoville sardinialaissyntyisen Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn linnoituksen paikalle."
+ },
+ {
+  "kaupunki": "Odessa",
+  "nro": 6,
+  "tiedosto": "saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png",
+  "luokka": "A",
+  "vika": "Kuva ≠ teksti: selite kertoo Potemkinin portaiden rakentamisesta, mutta kuva esittää satamaa, ja portaikon yläosa näkyy vain vasemmassa reunassa. Selite kuvaa nyt satamanäkymän ja mainitsee portaat vain reunassa näkyvänä (1837–1841 ja 192 askelmaa täsmäävät lähteeseen en.wikipedia/Potemkin_Stairs). Lyhyt ei muutu.",
+  "nyt_lyhyt": "Primorskin bulevardi on rinteen reunan kävelykatu, jolta näkee Odessan sataman.",
+  "nyt_selite": "Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja niissä on nykyään 192 askelmaa. Ylhäältä avautuu näkymä satamaan ja merelle.",
+  "lyhyt": "Primorskin bulevardi on rinteen reunan kävelykatu, jolta näkee Odessan sataman.",
+  "selite": "Rinteen reunalta avautuu näkymä Odessan satamaan nostureineen ja merelle; vasemmassa reunassa näkyy portaikon yläpää. Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja niissä on nykyään 192 askelmaa."
+ },
+ {
+  "kaupunki": "Odessa",
+  "nro": 8,
+  "tiedosto": "herokoe/hero-odessa-ilta.jpg",
+  "luokka": "C",
+  "vika": "Tarkennus: nimi Dumska ei kuulu rakennuksen alkuaikaan, koska kaupunginvaltuusto (Duma) muutti taloon vasta 1899 pörssin siirryttyä. Alkuperäinen käyttö (pörssi, en.wikipedia ja Sveitsin kansallismuseon blogi) kirjataan Dumskan tilalle. Vuodet 1828–1834 ja Morandin uudelleenrakennus 1871–1873 jäävät; lyhyt täsmää introriviin (kaupungintalo · 1834, KK). uk.wikipedia antaa valmistumisvuodeksi 1837, mutta KK on päättänyt 1834.",
+  "nyt_lyhyt": "Odessan kaupungintalo Dumska valmistui 1828–1834, Franz Morandi rakensi sen uudelleen 1871–1873.",
+  "nyt_selite": "Odessan kaupungintalo eli Dumska valmistui 1828–1834 Francesco Boffon ja Gregorio Toricellin uusklassisena suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi rakensi sen uudelleen 1871–1873.",
+  "lyhyt": "Odessan kaupungintalo valmistui 1834 pörssirakennukseksi, ja Franz Morandi rakensi sen uudelleen 1871–1873.",
+  "selite": "Odessan kaupungintalo rakennettiin pörssiksi 1828–1834 Francesco Boffon ja Gregorio Toricellin uusklassisena suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi rakensi sen uudelleen 1871–1873."
+ }
+]

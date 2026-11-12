@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "islanti",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-islanti-hallgrimskirkja.jpg",
+  "luokka": "C",
+  "vika": "korkeus: en-Wikipedia 74,5 m (koko kirkko), kirkon oma sivu 73 m (torni); lähteet eroavat hieman, siksi 'noin 74 m' (lievä, valinnainen)",
+  "nyt_lyhyt": "Hallgrímskirkja, Islannin suurin kirkko, jäljittelee basalttipatsaita ja valmistui vasta 1986.",
+  "nyt_selite": "Reykjavíkin Hallgrímskirkja on 74,5 metriä korkea ja Islannin suurin kirkko; Guðjón Samúelssonin vuonna 1937 tilattu suunnitelma jäljittelee maan basalttipatsaita, ja rakennus valmistui vasta 1986.",
+  "lyhyt": "Hallgrímskirkja, Islannin suurin kirkko, jäljittelee basalttipatsaita ja valmistui vasta 1986.",
+  "selite": "Reykjavíkin Hallgrímskirkja on noin 74 metriä korkea ja Islannin suurin kirkko; Guðjón Samúelssonin vuonna 1937 tilattu suunnitelma jäljittelee maan basalttipatsaita, ja rakennus valmistui vasta 1986."
+ },
+ {
+  "kaupunki": "islanti",
+  "nro": 7,
+  "tiedosto": "saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png",
+  "luokka": "A",
+  "vika": "kuva ≠ teksti: kuvassa iltainen aaltopeltitalojen rinnekatu, Alþingin taloa ei näy; introrivi 'Reykjavikin asuinkatu'. Lyhyt kuvaa nyt näkyvän, Alþingi-fakta (1845) säilyy",
+  "nyt_lyhyt": "Alþingi perustettiin uudelleen Reykjavikiin vuonna 1845.",
+  "nyt_selite": "Alþingi on Islannin kansalliskokous, joka perustettiin alun perin noin vuonna 930. Reykjavik sai kaupunkioikeudet vuonna 1786.",
+  "lyhyt": "Reykjavikin rinnekatujen aaltopeltitalot hohtavat iltavaloissa; Alþingi perustettiin uudelleen Reykjavikiin 1845.",
+  "selite": "Alþingi on Islannin kansalliskokous, joka perustettiin alun perin noin vuonna 930. Reykjavik sai kaupunkioikeudet vuonna 1786."
+ }
+]

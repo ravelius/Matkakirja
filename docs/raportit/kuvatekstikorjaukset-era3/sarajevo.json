@@ -1,0 +1,13 @@
+[
+ {
+  "kaupunki": "Sarajevo",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-sarajevo-keskipaiva.jpg",
+  "luokka": "A",
+  "vika": "Kuvateksti antaa valmistumisvuodeksi 1889, mutta 1889 on vihkimisvuosi: rakennus valmistui 9.11.1887 (en-Wikipedia Sacred Heart Cathedral, Sarajevo; gcatholic.org: 1884-1887, ded. 1889). KK:n päätös: valmistumisvuosi 1887, introrivi 'Sarajevon katedraali · 1887'; vihkiminen 1889 mainitaan erikseen selitteessä.",
+  "nyt_lyhyt": "Jeesuksen pyhän sydämen katedraali valmistui 1889 uusgoottilaiseen asuun, tunnetaan Katedralana.",
+  "nyt_selite": "Jeesuksen pyhän sydämen katedraali valmistui 1889 Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.",
+  "lyhyt": "Jeesuksen pyhän sydämen katedraali valmistui 1887 uusgoottilaiseen asuun, tunnetaan Katedralana.",
+  "selite": "Jeesuksen pyhän sydämen katedraali valmistui 1887 Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja ruusuikkunoineen ja vihittiin 1889; sitä kutsutaan usein vain Katedralaksi."
+ }
+]

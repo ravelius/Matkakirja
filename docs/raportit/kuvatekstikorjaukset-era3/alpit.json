@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "Alpit",
+  "nro": 5,
+  "tiedosto": "saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png",
+  "luokka": "C",
+  "vika": "Kirjoitusasu \"Sils-järveen\" eri kuin kuvan 6 ja introrivin \"Silsjärvi\" (fi.wikipedia-muoto); yhtenäistetään.",
+  "nyt_lyhyt": "Chastè-niemi työntyy Sils-järveen Sveitsin Engadinissa.",
+  "nyt_selite": "Chastè tarkoittaa retoromaaniksi linnaa, ja niemellä on vanhan linnan muurien jäänteitä.",
+  "lyhyt": "Chastè-niemi työntyy Silsjärveen Sveitsin Engadinissa.",
+  "selite": "Chastè tarkoittaa retoromaaniksi linnaa, ja niemellä on vanhan linnan muurien jäänteitä."
+ },
+ {
+  "kaupunki": "Alpit",
+  "nro": 8,
+  "tiedosto": "saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+  "luokka": "A",
+  "vika": "Matka-aika \"15-50 min\" väärin: operaattorin ajat 20, 30 ja 50 min (15 ei löydy lähteestä), korjataan \"noin 20–50 minuuttia\". Lisäksi (B) \"Laaksossa asuu noin sata ihmistä\" on lähteetön (vain yksi kauppiaan sivu, ei viranomaislähdettä), poistetaan.",
+  "nyt_lyhyt": "Silsistä kulkee hevosomnibussi suurelta osin autottomaan Fexin laaksoon.",
+  "nyt_selite": "Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen hevosomnibussi. Laaksossa asuu noin sata ihmistä, ja matka pysäkeille kestää hevosvaunulla noin 15-50 minuuttia.",
+  "lyhyt": "Silsistä kulkee hevosomnibussi suurelta osin autottomaan Fexin laaksoon.",
+  "selite": "Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen hevosomnibussi, ja matka pysäkeille kestää hevosvaunulla noin 20–50 minuuttia."
+ }
+]

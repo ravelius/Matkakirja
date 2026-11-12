@@ -1,0 +1,46 @@
+[
+ {
+  "kaupunki": "Bukarest",
+  "nro": 4,
+  "tiedosto": "saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png",
+  "luokka": "B",
+  "vika": "\"palatsin, jonka rakentaminen alkoi 1888\": lähteet ristiriidassa (ro-Wikipedia 1888, en-Wikipedia 1893 alku / 1895 valmis); alkuvuosi poistetaan, kunnes toinen lähde ratkaisee.",
+  "nyt_lyhyt": "Cotrocenin kukkulalle Șerban Cantacuzino perusti luostarin vuonna 1679.",
+  "nyt_selite": "Kuningas Carol I rakennutti luostarin alueelle palatsin, jonka rakentaminen alkoi 1888. Palatsin ympäristö kehittyi asuinalueeksi.",
+  "lyhyt": "Cotrocenin kukkulalle Șerban Cantacuzino perusti luostarin vuonna 1679.",
+  "selite": "Kuningas Carol I rakennutti luostarin alueelle palatsin. Palatsin ympäristö kehittyi asuinalueeksi."
+ },
+ {
+  "kaupunki": "Bukarest",
+  "nro": 6,
+  "tiedosto": "saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+  "luokka": "C",
+  "vika": "Terassi avattiin pysyvästi yleisölle 15.3.2025 (agerpres), mutta kaari oli avoinna viikonloppuisin jo 2021; tarkennetaan \"pysyvästi\".",
+  "nyt_lyhyt": "Riemukaaren yläterassilta avautuu näkymä Bukarestin ylle.",
+  "nyt_selite": "Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin kävijöille maaliskuussa 2025. Terassilta näkee kaupungin panoraaman.",
+  "lyhyt": "Riemukaaren yläterassilta avautuu näkymä Bukarestin ylle.",
+  "selite": "Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin pysyvästi kävijöille maaliskuussa 2025. Terassilta näkee kaupungin panoraaman."
+ },
+ {
+  "kaupunki": "Bukarest",
+  "nro": 9,
+  "tiedosto": "saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+  "luokka": "B",
+  "vika": "\"linjalle 41 tuli joulukuussa 2022 uusia Imperio-raitiovaunuja\" EI VAHVISTETTU (haku ei löytänyt); poistetaan, reitti Ghencea–Piața Presei Libere vahvistettu.",
+  "nyt_lyhyt": "Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä raiteella.",
+  "nyt_selite": "Bukarestin linjalle 41 tuli joulukuussa 2022 uusia Imperio-raitiovaunuja. Linja kulkee Ghencean ja Piața Presein välillä kaupungin länsiosassa.",
+  "lyhyt": "Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä raiteella.",
+  "selite": "Bukarestin raitiolinja 41 kulkee Ghencean ja Piața Presein välillä kaupungin länsiosassa."
+ },
+ {
+  "kaupunki": "Bukarest",
+  "nro": 8,
+  "tiedosto": "herokoe/hero-bukarest-ilta.jpg",
+  "luokka": "C",
+  "vika": "Oma havaintoni, ei tutkimuksen virhelistalla: selitteessä katuniminen taivutus rikki (\"Calea Victoriellen\"; oikea nimi Calea Victoriei, tulos-bukarest.md). Korjataan kielioppi, sisältö ei muutu.",
+  "nyt_lyhyt": "CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja metallikupoli.",
+  "nyt_selite": "CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä kaartuu suuri lasi- ja metallikupoli.",
+  "lyhyt": "CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja metallikupoli.",
+  "selite": "CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi Calea Victoriei -kadun varrelle — beaux-arts-tyylinen talo, jonka keskellä kaartuu suuri lasi- ja metallikupoli."
+ }
+]

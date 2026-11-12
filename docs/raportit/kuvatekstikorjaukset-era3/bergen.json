@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "Bergen",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-bergen-ilta.png",
+  "luokka": "A",
+  "vika": "Pääsalin paikkamäärä: SNL (\"over 1600 sitteplasser\") ja no-Wikipedia (Griegsalen 1 610) sanovat yli 1 600, en-Wikipedia ja fib.no 1 500; kaksi norjalaista lähdettä voittaa. Lisäksi (B) vihkiäispäivä 23.5.1978 epävarma (SNL: virallisesti 30.5.1978), päivä pois, vuosi 1978 pitää.",
+  "nyt_lyhyt": "Bergenin Grieghallen vihittiin 1978; sen pääsalissa on 1 500 paikkaa ja se on filharmonikkojen koti.",
+  "nyt_selite": "Bergenin Grieghallen vihittiin 23. toukokuuta 1978 tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa on 1 500 paikkaa, ja talo on Bergenin filharmonikkojen koti.",
+  "lyhyt": "Bergenin Grieghallen vihittiin 1978; sen pääsalissa on yli 1 600 paikkaa ja se on filharmonikkojen koti.",
+  "selite": "Bergenin Grieghallen vihittiin toukokuussa 1978 tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa on yli 1 600 paikkaa, ja talo on Bergenin filharmonikkojen koti."
+ },
+ {
+  "kaupunki": "Bergen",
+  "nro": 10,
+  "tiedosto": "Bergen Bryggen 1017.jpg",
+  "luokka": "C",
+  "vika": "Puuttuva lyhyt (null). Tutkimus ei nosta tätä virheeksi, selite OK; lyhyt johdettu selitteen faktasta, ei uutta tietoa.",
+  "nyt_lyhyt": null,
+  "nyt_selite": "Bryggen on Vågenin itärannan vanha laituri, jonka ympärillä hansakauppa Bergenissä käytiin.",
+  "lyhyt": "Bryggen on Vågenin itärannan vanha laituri, jonka ympärillä hansakauppa käytiin.",
+  "selite": "Bryggen on Vågenin itärannan vanha laituri, jonka ympärillä hansakauppa Bergenissä käytiin."
+ }
+]

@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "kiova",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-kiova-mihaelin-luostari.jpg",
+  "luokka": "A",
+  "vika": "jälleenrakennus '1997–1998' ristiriidassa introrivin 'uudelleen 1999' kanssa (työ alkoi 24.5.1997, virallinen avaus 30.5.1999: en-Wikipedia ja Ukrainan tietosanakirja); nimi 'Mihaelin' → 'Mikaelin' (pelin kyltti ja introrivi); etualalla Sofian kellotorni mainitaan",
+  "nyt_lyhyt": "Pyhän Mihaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja uudelleen 1997–1998.",
+  "nyt_selite": "Pyhän Mihaelin kultakupolinen luostari rakennettiin ensi kerran vuosina 1108–1113, neuvostovalta purki sen 1930-luvulla, ja nykyinen kirkko rakennettiin uudelleen 1997–1998 vanhojen mittausten ja piirustusten mukaan.",
+  "lyhyt": "Pyhän Mikaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja rakennettiin uudelleen 1999.",
+  "selite": "Pyhän Mikaelin kultakupolinen luostari rakennettiin ensi kerran vuosina 1108–1113, neuvostovalta purki sen 1930-luvulla, ja jälleenrakennus vanhojen mittausten ja piirustusten mukaan alkoi 1997; nykyinen kirkko avattiin virallisesti 1999. Kuvan etualalla näkyy Pyhän Sofian kellotorni."
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-kiova-keskipaiva.jpg",
+  "luokka": "C",
+  "vika": "'perusti Antoni 1051' ilman varausta: Nestorin kronikka antaa 1051 tai 1074 (lyhyt); selitteessä jo 'kronikoiden mukaan'",
+  "nyt_lyhyt": "Kiovan luolaluostarin perusti munkki Antoni 1051, lavra on maailmanperintöluettelossa vuodesta 1990.",
+  "nyt_selite": "Kiovan luolaluostarin perusti kronikoiden mukaan Athos-vuorelta palannut munkki Antoni vuonna 1051, ja maanalaisista käytävistä kasvanut lavra on ollut Unescon maailmanperintöluettelossa vuodesta 1990.",
+  "lyhyt": "Kiovan luolaluostarin perusti kronikoiden mukaan munkki Antoni 1051; lavra on maailmanperintöluettelossa vuodesta 1990.",
+  "selite": "Kiovan luolaluostarin perusti kronikoiden mukaan Athos-vuorelta palannut munkki Antoni vuonna 1051, ja maanalaisista käytävistä kasvanut lavra on ollut Unescon maailmanperintöluettelossa vuodesta 1990."
+ },
+ {
+  "kaupunki": "kiova",
+  "nro": 5,
+  "tiedosto": "saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png",
+  "luokka": "B",
+  "vika": "'Kiovan suurin saari' ei löydy lähteestä (en-Wikipedia: 4,5 km², Dnipr, Podilia vastapäätä, suuri ranta); 'useita uimarantoja' lähteessä 'suuri ranta'",
+  "nyt_lyhyt": "Trukhanivin saari on Kiovan suurin saari keskellä Dneprjokea.",
+  "nyt_selite": "Trukhanivin saari on Kiovan suurin saari. Se on Dneprillä Podilia vastapäätä, ja siellä on useita uimarantoja.",
+  "lyhyt": "Trukhanivin saari sijaitsee keskellä Dneprjokea Podilia vastapäätä.",
+  "selite": "Trukhanivin saari on Dneprillä Podilia vastapäätä, ja siellä on laaja hiekkaranta."
+ }
+]

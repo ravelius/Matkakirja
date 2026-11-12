@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "Vilna",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-vilna-gediminas.jpg",
+  "luokka": "A",
+  "vika": "'Nykyinen tiilitorni on 1400-luvun puolivälistä' ei vahvistu: en-Wikipedia ensimmäinen tiililinna 1409, torni rakennettu uudelleen 1930-luvulla (en-Wikipedia, VLE: 3. kerros), ylälinnan jäänteet 1300-1400-luvulta (VLE). Lisäksi nimi 'Gediminaan' -> 'Gediminasin' (KK:n introrivi).",
+  "nyt_lyhyt": "Gediminaan torni on ainoa jäljellä osa Vilnan ylälinnasta; lippu nousi salkoon ensi kerran 1919.",
+  "nyt_selite": "Gediminaan torni on ainoa jäljellä oleva osa Vilnan ylälinnasta, ja nykyinen tiilitorni on 1400-luvun puolivälistä; sen salkoon nostettiin Liettuan trikolori ensi kerran 1. tammikuuta 1919 ja uudelleen 7. lokakuuta 1988.",
+  "lyhyt": "Gediminasin torni on ainoa jäljellä osa Vilnan ylälinnasta; lippu nousi salkoon ensi kerran 1919.",
+  "selite": "Gediminasin torni on ainoa jäljellä oleva osa Vilnan ylälinnasta, ja se on 1300–1400-lukujen tiililinnan jäänne, jota on rakennettu osin uudelleen 1930-luvulla; sen salkoon nostettiin Liettuan trikolori ensi kerran 1. tammikuuta 1919 ja uudelleen 7. lokakuuta 1988."
+ },
+ {
+  "kaupunki": "Vilna",
+  "nro": 2,
+  "tiedosto": "herokoe/hero-vilna-aamu.jpg",
+  "luokka": "A",
+  "vika": "Uusklassinen asu 1783-1801 (en- ja lt-Wikipedia; KK:n introrivi), ei 1779-1783. 'Alin kerros 1200-luvun puolivälistä' -> '1200-luvulta' (tarkka puoliväli tarkistamatta, en-Wikipedia 1200-luku). 'Sisustus valmistui 1801' yhdistetty vuosiväliin.",
+  "nyt_lyhyt": "Vilnan tuomiokirkko sai uusklassisen asunsa 1779–1783; kellotapulin alin kerros on 1200-luvulta.",
+  "nyt_selite": "Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa Laurynas Gucevičiuksen suunnitelmien mukaan vuosina 1779–1783, ja sisustus valmistui 1801; erillisen kellotapulin alin kerros on 1200-luvun puolivälistä, jolloin se oli Alalinnan puolustustorni.",
+  "lyhyt": "Vilnan tuomiokirkko sai uusklassisen asunsa 1783–1801; kellotapulin alin kerros on 1200-luvulta.",
+  "selite": "Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa Laurynas Gucevičiuksen suunnitelmien mukaan vuosina 1783–1801; erillisen kellotapulin alin kerros on 1200-luvulta, jolloin se oli Alalinnan puolustustorni."
+ },
+ {
+  "kaupunki": "Vilna",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-vilna-keskipaiva.jpg",
+  "luokka": "B",
+  "vika": "'1503–1514' ristiriitainen enemmistölähteen 1503-1522 kanssa (lt-Wikipedia, History Hit, radzima); KK: sano varovasti, ilman loppuvuotta -> '1500-luvun alussa' (aloitus 1503 kaikissa lähteissä).",
+  "nyt_lyhyt": "Aamunkoiton portti rakennettiin 1503–1514 ja jäi ainoana pystyyn muurien purkamisen jälkeen.",
+  "nyt_selite": "Aamunkoiton portti rakennettiin 1503–1514 yhdeksi Vilnan kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin 1799–1805, se jäi ainoana pystyyn portin kappelissa palvotun Neitsyt Marian kuvan takia.",
+  "lyhyt": "Aamunkoiton portti rakennettiin 1500-luvun alussa ja jäi ainoana pystyyn muurien purkamisen jälkeen.",
+  "selite": "Aamunkoiton portti rakennettiin 1500-luvun alussa yhdeksi Vilnan kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin 1799–1805, se jäi ainoana pystyyn portin kappelissa palvotun Neitsyt Marian kuvan takia."
+ }
+]

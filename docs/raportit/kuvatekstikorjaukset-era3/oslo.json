@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "Oslo",
+  "nro": 8,
+  "tiedosto": "herokoe/hero-oslo-ilta.png",
+  "luokka": "A",
+  "vika": "Väärä vuosiväli 1824–1849. Peruskivi laskettiin 1825 (SNL, Lex.dk, lokalhistoriewiki, en.wikipedia; 1824 on en.wikipedian mukaan vain paikan tasoitustyön alku). Valmis 1848 (SNL ja Lex.dk), joten teksti täsmää introriviin 1825–1848 (KK).",
+  "nyt_lyhyt": "Oslon kuninkaanlinna rakennettiin 1824–1849; siinä on 173 huonetta ja ympärillä 22 hehtaarin puisto.",
+  "nyt_selite": "Oslon kuninkaanlinna rakennettiin 1824–1849 Hans Linstowin suunnitelmien mukaan, siinä on 173 huonetta, ja sitä ympäröi 22 hehtaarin puisto.",
+  "lyhyt": "Oslon kuninkaanlinna rakennettiin 1825–1848; siinä on 173 huonetta ja ympärillä 22 hehtaarin puisto.",
+  "selite": "Oslon kuninkaanlinna rakennettiin 1825–1848 Hans Linstowin suunnitelmien mukaan, siinä on 173 huonetta, ja sitä ympäröi 22 hehtaarin puisto."
+ },
+ {
+  "kaupunki": "Oslo",
+  "nro": 7,
+  "tiedosto": "saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png",
+  "luokka": "B",
+  "vika": "Lähteetön väite: selitteen \"1840-luvulta lähtien tekstiilitehtaita ja konepajoja\" ei löytynyt vahvistusta (en.wikipedia mainitsee 1840-luvulta vain tiilitehtaan Øvre Fossilla); tutkimus jätti sen muuttamatta mutta merkitsi tarkistettavaksi. Täsmällinen vuosikymmen ja tehdaslajit poistettu; lyhyt kertoo jo 1800-luvun voimanlähdekäytöstä. Jos KK haluaa jättää alkuperäisen, kohta voidaan pitää ennallaan.",
+  "nyt_lyhyt": "Akerselvan koskia hyödynnettiin 1800-luvulla Oslon tehtaiden voimanlähteenä.",
+  "nyt_selite": "Akerselvassa on noin 20 koskea, ja sen varteen syntyi 1840-luvulta lähtien tekstiilitehtaita ja konepajoja; monet vanhat rakennukset ovat nykyään asuntoja ja toimistoja.",
+  "lyhyt": "Akerselvan koskia hyödynnettiin 1800-luvulla Oslon tehtaiden voimanlähteenä.",
+  "selite": "Akerselvassa on noin 20 koskea, ja sen varteen syntyi tehtaita; monet vanhat rakennukset ovat nykyään asuntoja ja toimistoja."
+ }
+]

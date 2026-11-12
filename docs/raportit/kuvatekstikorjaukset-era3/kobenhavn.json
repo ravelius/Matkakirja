@@ -1,0 +1,57 @@
+[
+ {
+  "kaupunki": "Kööpenhamina",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-kobenhavn-aamu.png",
+  "luokka": "A",
+  "vika": "Selite: 'marmorin sijasta kalkkikivestä' on väärä yksinkertaistus (lex.dk: alaosa kokonaan norjalaista marmoria, yläosa tiiltä ja kalkkikiveä; da-Wikipedia: muurit ja pylväsportiikit norjalaista marmoria, vain kupolin tambuuri kalkkikiveä); poistetaan. Peruskivipäivä vaihtelee lähteissä (31.10. en-Wikipedia, 30.10. da-Wikipedia), joten 'lokakuussa 1749'. Lyhyt pitää (ei materiaaliväitettä, 1749 ja 1894 täsmäävät).",
+  "nyt_lyhyt": "Marmorikirkon peruskivi laskettiin 1749, mutta rahat loppuivat, ja se valmistui vasta 1894.",
+  "nyt_selite": "Marmorikirkon eli Frederikin kirkon peruskivi laskettiin 31. lokakuuta 1749 Nicolai Eigtvedin suunnitelmien mukaan, mutta rahat loppuivat ja kirkko valmistui vasta 19. elokuuta 1894 marmorin sijasta kalkkikivestä — kupolin jänneväli on 31 metriä.",
+  "lyhyt": "Marmorikirkon peruskivi laskettiin 1749, mutta rahat loppuivat, ja se valmistui vasta 1894.",
+  "selite": "Marmorikirkon eli Frederikin kirkon peruskivi laskettiin lokakuussa 1749 Nicolai Eigtvedin suunnitelmien mukaan, mutta rahat loppuivat ja kirkko valmistui vasta 19. elokuuta 1894 — kupolin jänneväli on 31 metriä."
+ },
+ {
+  "kaupunki": "Kööpenhamina",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-kobenhavn-ilta.png",
+  "luokka": "A",
+  "vika": "'vihittiin 1695' väärä: vihkiminen 19.4.1696 (da-Wikipedia, 'opført 1682-96'; en-Wikipedian infokenttä 1696). Täsmää KK:n introriviin Vapahtajan kirkko · 1682–1696. Torni 1752, 400 porrasta, 150 ulkona, 90 m pitävät (vorfrelserskirke.dk).",
+  "nyt_lyhyt": "Vapahtajan kirkko vihittiin 1695; kierreportainen huippu valmistui 1752, 400 porrasta 90 metriin.",
+  "nyt_selite": "Vapahtajan kirkko vihittiin 1695 ja Lauritz de Thurahin kierreportainen torninhuippu valmistui 1752 — 90 metrin korkeuteen nousee 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolelta.",
+  "lyhyt": "Vapahtajan kirkko vihittiin 1696; kierreportainen huippu valmistui 1752, 400 porrasta 90 metriin.",
+  "selite": "Vapahtajan kirkko vihittiin 1696 ja Lauritz de Thurahin kierreportainen torninhuippu valmistui 1752 — 90 metrin korkeuteen nousee 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolelta."
+ },
+ {
+  "kaupunki": "Kööpenhamina",
+  "nro": 4,
+  "tiedosto": "saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png",
+  "luokka": "A",
+  "vika": "Selite: 'kolmisen tuhatta polkupyörää' 1890 on väärin: 2 500 (en-Wikipedia Cycling in Copenhagen, Copenhagen Post); 1907 noin 80 000 pitää. Lyhyt (kuva ≠ teksti, C): kuva on yleinen kapea asuinkatu, ei tunnistettavasti Esplanaden, joten lause muotoillaan kaupunkia koskevaksi faktaksi (Esplanaden 1892 täsmää lähteisiin); introrivi 'Kööpenhaminan asuinkatu'.",
+  "nyt_lyhyt": "Kööpenhaminan varhaisimpia pyöräteitä rakennettiin Esplanadenille vuonna 1892.",
+  "nyt_selite": "Pyöräily yleistyi nopeasti: vuonna 1890 kaupungissa oli kolmisen tuhatta polkupyörää, mutta vuonna 1907 jo noin 80 000.",
+  "lyhyt": "Pyöräily juurtui Kööpenhaminaan 1800-luvun lopulla: varhaisimpia pyöräteitä rakennettiin Esplanadenille 1892.",
+  "selite": "Pyöräily yleistyi nopeasti: vuonna 1890 kaupungissa oli noin 2 500 polkupyörää, mutta vuonna 1907 jo noin 80 000."
+ },
+ {
+  "kaupunki": "Kööpenhamina",
+  "nro": 6,
+  "tiedosto": "Panoramicas de Copenhague 05.jpg",
+  "luokka": "A",
+  "vika": "Kuva ≠ teksti: oopperatalo ei erotu kuvassa (katsottu itse kuva 12.11.; keskellä kaukana Amager Bakken piiput, tuulivoimaloita ja vesi, oikealla alhaalla punatiilinen kirkko), eikä tulos voinut varmistaa oopperatalon paikannusta. Oopperatalo poistetaan, muu (106 m, korkein torni, Amager Bakke) pitää.",
+  "nyt_lyhyt": "Christiansborgin tornista näkyvät Kööpenhaminan katot, oopperatalo ja kaukana Amager Bakken piiput.",
+  "nyt_selite": "Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni. Kuvan keskellä kaukana erottuva oopperatalo avattiin 2005.",
+  "lyhyt": "Christiansborgin tornista näkyvät Kööpenhaminan katot ja kaukana Amager Bakken piiput.",
+  "selite": "Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni. Kuvassa kaukana horisontissa erottuvat Amager Bakken savupiiput ja tuulivoimalat."
+ },
+ {
+  "kaupunki": "Kööpenhamina",
+  "nro": 9,
+  "tiedosto": "Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg",
+  "luokka": "B",
+  "vika": "'nykyiseen muotoonsa 1624' vain en-Wikipedian väite; da-Wikipedia 1606–1633, lex.dk laajennettu vaiheittain 1634 asti. KK:n päätös: introrivi Rosenborgin linna · 1600-luku; teksti muotoillaan varovasti ilman loppuvuotta ('vaiheittain 1630-luvulle asti' tukee da-Wikipedia ja lex.dk).",
+  "nyt_lyhyt": "Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja laajennettiin nykyiseen muotoonsa 1624.",
+  "nyt_selite": "Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja laajennettiin nykyiseen muotoonsa vuoteen 1624 mennessä.",
+  "lyhyt": "Rosenborgin linna rakennettiin 1606 alkaen maaseutuhuvilaksi ja laajennettiin vaiheittain 1630-luvulle asti.",
+  "selite": "Rosenborgin linna rakennettiin 1606 alkaen maaseutuhuvilaksi ja laajennettiin vaiheittain 1630-luvulle asti."
+ }
+]

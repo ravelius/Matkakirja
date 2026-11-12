@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "Sofia",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-sofia-nevski.jpg",
+  "luokka": "A",
+  "vika": "Lyhyt sanoo 'rakennettiin 1882-1912' ja selite 'rakentaminen alkoi 1882', mutta 1882 on perustuskiven laskun vuosi; varsinainen rakennustyö oli 1904-1912 (en-Wikipedia, fi-Wikipedia, BTA). KK:n päätös: rakennus 1904-1912, perustuskivi 1882 ei rakennuksen alku. Introrivi 'Aleksanteri Nevskin katedraali · 1912'. Perustuskivi mainitaan selitteessä erikseen. Lisäksi (luokka B) kellotornin korkeus 53 m -> 'noin 50 metriin', koska en-Wikipedia antaa 53 m ja fi-Wikipedia 51 m (lähteet ristiriidassa).",
+  "nyt_lyhyt": "Aleksanteri Nevskin katedraali rakennettiin 1882–1912 sodassa kaatuneiden muistoksi.",
+  "nyt_selite": "Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; se pystytettiin vuosien 1877–1878 sodassa kaatuneiden muistoksi, ja sen kullattu kupoli nousee 45 metriin ja kellotorni 53 metriin.",
+  "lyhyt": "Aleksanteri Nevskin katedraali rakennettiin 1904–1912 sodassa kaatuneiden muistoksi.",
+  "selite": "Aleksanteri Nevskin katedraalin perustuskivi laskettiin 1882 ja varsinainen rakennustyö Aleksandr Pomerantsevin suunnitelmien mukaan kesti 1904–1912; se pystytettiin vuosien 1877–1878 sodassa kaatuneiden muistoksi, ja sen kullattu kupoli nousee 45 metriin ja kellotorni noin 50 metriin."
+ },
+ {
+  "kaupunki": "Sofia",
+  "nro": 3,
+  "tiedosto": "herokoe/hero-sofia-vitosa.jpg",
+  "luokka": "C",
+  "vika": "Selite antaa avauspäiväksi 1. tammikuuta 1901, mutta päivä riippuu kalenterista: en-Wikipedia 1.1.1901 (vanha ajanlasku), BTA 1.1. vanhaa = 14.1.1901 uutta, publics.bg 15.1.1901. Vuosi 1901 on varma, joten päivä poistettu ja muoto yhtenäistetty kuvan 10 tekstin ('vuoden 1901 alussa') kanssa. Lyhyt ei muutu.",
+  "nyt_lyhyt": "Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm raideleveydellä.",
+  "nyt_selite": "Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin osa verkosta kulkee poikkeuksellisella 1 009 millimetrin raideleveydellä — kadun päässä kohoaa Vitosa.",
+  "lyhyt": "Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm raideleveydellä.",
+  "selite": "Sofian raitiotie avattiin 1901 alussa, ja suurin osa verkosta kulkee poikkeuksellisella 1 009 millimetrin raideleveydellä — kadun päässä kohoaa Vitosa."
+ },
+ {
+  "kaupunki": "Sofia",
+  "nro": 8,
+  "tiedosto": "Sofia (37139621884).jpg",
+  "luokka": "C",
+  "vika": "Puuttuva lyhyt (null). Kirjoitettu yhdeksi virkkeeksi (alle 120 merkkiä) selitteen väitteistä; selite ennallaan. Huom: 1878 'pieni maakuntakaupunki' ja 'lähes 1,3 miljoonaa asukasta' on jo selitteessä eikä tulostiedosto tarkistanut niitä (ei rakennusvuosia).",
+  "nyt_lyhyt": null,
+  "nyt_selite": "Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään siinä asuu lähes 1,3 miljoonaa ihmistä.",
+  "lyhyt": "Sofia oli vielä 1878 pieni maakuntakaupunki, mutta nykyään siinä asuu lähes 1,3 miljoonaa ihmistä.",
+  "selite": "Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään siinä asuu lähes 1,3 miljoonaa ihmistä."
+ }
+]

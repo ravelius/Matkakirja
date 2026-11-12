@@ -1,0 +1,13 @@
+[
+ {
+  "kaupunki": "Lappi",
+  "nro": 6,
+  "tiedosto": "saapumisintro/lapland/20261013-uudet-6-8/lapland-6-nakoala-intro-v1.png",
+  "luokka": "C",
+  "vika": "Kuva ≠ teksti: tulos (kuva katsottu) kertoo, että kuva on kalliolta ja männiköstä alas (ei näkötornin tasanteelta), ja introrivi on 'Näkymä Ounasvaaralta'. Lyhyt muutetaan 'Ounasvaaralta'; selitteessä näkötornin sijainti säilyy paikkatietona, mutta näkymä liitetään rinteeseen eikä torniin. Sijaintiluvut (2,2 km, 160 m) säilytetty sellaisinaan, tulos ei kiistä niitä.",
+  "nyt_lyhyt": "Ounasvaaran näkötornista näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.",
+  "nyt_selite": "Ounasvaaran näkötorni on vaaran länsirinteellä noin 2,2 kilometriä keskustasta itään, noin 160 metrin korkeudessa merenpinnasta. Tornista näkyvät keskusta ja Kemijoki, ja joen yli kulkee Jätkänkynttilä-silta.",
+  "lyhyt": "Ounasvaaralta näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.",
+  "selite": "Ounasvaaran länsirinteellä, noin 2,2 kilometriä keskustasta itään ja noin 160 metrin korkeudessa merenpinnasta, on näkötorni. Rinteeltä näkyvät keskusta ja Kemijoki, ja joen yli kulkee Jätkänkynttilä-silta."
+ }
+]

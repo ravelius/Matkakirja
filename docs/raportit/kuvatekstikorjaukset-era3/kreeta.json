@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "Kreeta",
+  "nro": 1,
+  "tiedosto": "herokoe/hero-kreeta-aamu.jpg",
+  "luokka": "C",
+  "vika": "'fasadi valmistui 1587' on tulkinta: en-Wikipedia julkisivu ja laivat 1586, kellon kirjoitus 1587 (perustaminen), vihkiminen 1590–96; gtp.gr kirkko 'rakennettu 1587'. Täsmennetään introrivin Arkadin luostari · 1500-luku mukaiseksi ilman tarkkaa vuotta. 1866 pitää (kapina marraskuussa 1866).",
+  "nyt_lyhyt": "Arkadin luostarin kirkon fasadi valmistui 1587; 1866 luostari oli Kreetan kapinan näyttämö.",
+  "nyt_selite": "Arkadin luostarin kirkon fasadi valmistui 1587 venetsialaiseen renessanssityyliin. Vuonna 1866 luostari oli Kreetan kapinan traaginen näyttämö, jonka tarina tunnettiin kaikkialla Euroopassa.",
+  "lyhyt": "Arkadin luostarin kirkko rakennettiin 1500-luvun lopulla; 1866 luostari oli Kreetan kapinan näyttämö.",
+  "selite": "Arkadin luostarin kirkko rakennettiin 1500-luvun lopulla venetsialaiseen renessanssityyliin. Vuonna 1866 luostari oli Kreetan kapinan traaginen näyttämö, jonka tarina tunnettiin kaikkialla Euroopassa."
+ },
+ {
+  "kaupunki": "Kreeta",
+  "nro": 2,
+  "tiedosto": "herokoe/hero-kreeta-keskipaiva.jpg",
+  "luokka": "C",
+  "vika": "Selite: 'venetsialaisten Rocca a Marena' on kirjoitusvirhe/outo taivutus; venetsialainen nimi on Rocca al Mare (cretanbeaches; en-Wikipedia: Castello a Mare). Lause korjataan kieliopillisesti. Vuosi 1540 ja leijona pitävät (introrivi 1523–1540 täsmää).",
+  "nyt_lyhyt": "Koulesin linnoitus valmistui Heraklionin satamaan 1540; muurissa on yhä Pyhän Markuksen leijona.",
+  "nyt_selite": "Koulesin linnoitus valmistui Heraklionin satamansuulle 1540 venetsialaisten Rocca a Marena, ja sen muurissa on yhä Pyhän Markuksen leijona.",
+  "lyhyt": "Koulesin linnoitus valmistui Heraklionin satamaan 1540; muurissa on yhä Pyhän Markuksen leijona.",
+  "selite": "Koulesin linnoitus eli venetsialaisittain Rocca al Mare valmistui Heraklionin satamansuulle 1540, ja sen muurissa on yhä Pyhän Markuksen leijona."
+ }
+]

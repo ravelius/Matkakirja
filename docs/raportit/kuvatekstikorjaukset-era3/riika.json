@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "Riika",
+  "nro": 10,
+  "tiedosto": "20070630-IMG 1662. Rīgas Doms, panorāma.jpg",
+  "luokka": "A",
+  "vika": "Kuva ≠ teksti: teksti kertoo Pyhän Pietarin kirkosta (1209), mutta kuva (tiedostonimi Rīgas Doms, panorāma) esittää Daugavan yli vanhankaupungin siluettia: vasemmalla linna, keskellä Pyhän Jaakobin vihreä huippu, oikealla tuomiokirkon kupolitorni. Pietarin kirkon teksti kuuluu kuvaan #8. Uusi teksti kuvan mukaan; tuomiokirkon peruskivi 1211 (redzet.lv; sama vuosi on jo kuvan #1 selitteessä). Rivi on ilman vuotta (lähteet eroavat päärungon valmistumisesta).",
+  "nyt_lyhyt": "Pyhän Pietarin kirkko mainitaan ensi kerran 1209 ja säilyi saman vuoden kaupunkipalossa.",
+  "nyt_selite": "Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran vuonna 1209, ja se säilyi saman vuoden kaupunkipalossa kivirakenteensa ansiosta.",
+  "lyhyt": "Riian tuomiokirkon peruskivi laskettiin 1211; Daugavan yli näkyvät myös linna ja Pyhän Jaakobin katedraalin huippu.",
+  "selite": "Riian tuomiokirkon peruskivi laskettiin vuonna 1211. Daugavan yli näkyvät vasemmalla linna, keskellä Pyhän Jaakobin katedraalin vihreä huippu ja oikealla tuomiokirkon kupolitorni."
+ },
+ {
+  "kaupunki": "Riika",
+  "nro": 8,
+  "tiedosto": "herokoe/hero-riika-ilta.png",
+  "luokka": "A",
+  "vika": "Väärä kohdistus: vuosiväli 1967–1983 on koko kirkon pääasiallinen entisöinti (en.wikipedia ja useat lähteet), ei pelkän tornin kunnostus; tornin metallirakenne valmistui 1973 ja sisätilat 1983/1984, joten täsmällinen valmistumisvuosi jätetään pois (KK: sano varovasti tai ilman vuotta). Lisätty KK:n päätösten mukaan rivin tieto 1400-luvusta (nykyinen basilika 1400-luvun saneerauksissa: en.wikipedia ja latvia.travel) sekä tornin tuho 1941 ja jälleenrakennus. 1209 ja 72 m pysyvät.",
+  "nyt_lyhyt": "Riian Pyhän Pietarin kirkko mainitaan ensi kerran 1209; sen torni kunnostettiin 1967–1983.",
+  "nyt_selite": "Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran vuonna 1209, sen moneen kertaan uusittu torni kunnostettiin 1967–1983, ja tornin näköalatasanne on 72 metrin korkeudessa.",
+  "lyhyt": "Pyhän Pietarin kirkko mainitaan ensi kerran 1209; nykyinen kirkko on 1400-luvulta, ja sen torni tuhoutui 1941.",
+  "selite": "Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran vuonna 1209, ja nykyinen kirkko on 1400-luvulta. Sen moneen kertaan uusittu torni tuhoutui 1941, ja kirkon entisöinti alkoi 1967 ja jatkui 1980-luvulle. Tornin näköalatasanne on 72 metrin korkeudessa."
+ },
+ {
+  "kaupunki": "Riika",
+  "nro": 2,
+  "tiedosto": "herokoe/hero-riika-aamu.png",
+  "luokka": "C",
+  "vika": "Tarkennus: \"1996–1999 tehty jälleenrakennus\" on yksinkertaistus. en.wikipedia antaa jälleenrakennuksen ajaksi 1996–2000 ja virallinen sivu (melngalvjunams.lv) kertoo rakennustyön alkaneen 1996; avajaiset 9.12.1999 ovat varmat ja täsmäävät introriviin (uudelleen 1999). Selite kirjoitettu niin, että 1996 on alku ja 1999 vihkimisvuosi. Lyhyt ennallaan. Pommituspäivä 29.6.1941 jätetty, koska en.wikipedia antaa sen (osa lähteistä 28.6.), mutta merkitty tiedoksi.",
+  "nyt_lyhyt": "Mustapäiden talo pystytettiin 1334, tuhoutui 1941 ja purettiin; nykyinen on jälleenrakennus.",
+  "nyt_selite": "Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi ja juhlapaikaksi, se tuhoutui 29. kesäkuuta 1941 ja purettiin 1948, ja nykyinen talo on 1996–1999 tehty jälleenrakennus, joka avattiin 9. joulukuuta 1999.",
+  "lyhyt": "Mustapäiden talo pystytettiin 1334, tuhoutui 1941 ja purettiin; nykyinen on jälleenrakennus.",
+  "selite": "Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi ja juhlapaikaksi, se tuhoutui 29. kesäkuuta 1941 ja purettiin 1948, ja nykyisen talon jälleenrakennus alkoi 1996 ja se avattiin 9. joulukuuta 1999."
+ }
+]

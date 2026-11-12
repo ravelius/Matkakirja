@@ -1,0 +1,24 @@
+[
+ {
+  "kaupunki": "helsinki",
+  "nro": 8,
+  "tiedosto": "Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg",
+  "luokka": "A",
+  "vika": "kuva ≠ teksti: kuvassa keskustan ilmakuva (tuomiokirkko, Senaatintori, Kauppatori, Eteläsatama), Esplanadia ei erota; 'istuttu 1800-luvun alusta' ei löydy lähteestä (Esplanadi: kaava 1812, nimi 1820, valmis 1827); introrivi 'Helsingin keskusta' (KK 12.11.)",
+  "nyt_lyhyt": "Esplanadin puiston nurmella on istuttu 1800-luvun alusta; toisessa päässä on Kauppatori.",
+  "nyt_selite": "Esplanadin puiston nurmella on istuttu 1800-luvun alusta asti, ja sen toisessa päässä odottavat Kauppatori ja Eteläsatama.",
+  "lyhyt": "Helsingin keskusta kohtaa meren: kuvassa näkyvät tuomiokirkko, Senaatintori, Kauppatori ja Eteläsatama.",
+  "selite": "Ilmakuvassa Helsingin keskusta kohtaa meren: tuomiokirkko ja Senaatintori ovat kuvan keskellä, ja rannassa ovat Kauppatori ja Eteläsatama."
+ },
+ {
+  "kaupunki": "helsinki",
+  "nro": 10,
+  "tiedosto": "Market Square in Helsinki, Finland, 2024 May.jpg",
+  "luokka": "C",
+  "vika": "lyhyt puuttuu (null)",
+  "nyt_lyhyt": null,
+  "nyt_selite": "Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja lokakuussa silakkaa suoraan veneistä.",
+  "lyhyt": "Kauppatorilta ostetaan kesällä mansikoita ja lokakuussa silakkaa suoraan veneistä.",
+  "selite": "Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja lokakuussa silakkaa suoraan veneistä."
+ }
+]

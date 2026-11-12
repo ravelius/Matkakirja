@@ -1,0 +1,35 @@
+[
+ {
+  "kaupunki": "Dubrovnik",
+  "nro": 2,
+  "tiedosto": "herokoe/hero-dubrovnik-aamu.jpg",
+  "luokka": "B",
+  "vika": "Kolmen kuukauden rakennusaika on legenda (Ragusan kronikat; kohteen oma sivu ei mainitse, alku 1018/1038 perinnettä, ensimmäinen asiakirjamaininta 1301), esitetty faktana; lisätään \"legendan mukaan\".",
+  "nyt_lyhyt": "Lovrijenacin linnake pystytettiin kalliolleen kolmessa kuukaudessa venetsialaisia kilpaillen.",
+  "nyt_selite": "Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä merenpinnan yläpuolella kaupunginmuurin ulkopuolella, ja Ragusan kronikoiden mukaan se pystytettiin kolmessa kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle ensin.",
+  "lyhyt": "Lovrijenacin linnake pystytettiin legendan mukaan kalliolleen kolmessa kuukaudessa venetsialaisia kilpaillen.",
+  "selite": "Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä merenpinnan yläpuolella kaupunginmuurin ulkopuolella, ja legendan mukaan se pystytettiin kolmessa kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle ensin."
+ },
+ {
+  "kaupunki": "Dubrovnik",
+  "nro": 6,
+  "tiedosto": "saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png",
+  "luokka": "B",
+  "vika": "\"yli 200 kesähuvilaa\" EI VAHVISTETTU (kahdella haulla ei lähdettä; yksittäisestä Rijeka Dubrovačkasta löytyi 24); luku poistetaan. Ylärajaa \"1700-luvuilla\" lähteet eivät erikseen anna, vain huvilaperinteen alku 1400-luvulla, joten muotoillaan \"1400-luvulta alkaen\".",
+  "nyt_lyhyt": "Dubrovnikin ylimykset rakennuttivat rannikolle yli 200 kesähuvilaa 1400–1700-luvuilla.",
+  "nyt_selite": "Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan veneellä. Perheet viettivät niissä kesiä ja hoitivat viljelmiään.",
+  "lyhyt": "Dubrovnikin ylimykset rakennuttivat rannikolle kesähuviloita 1400-luvulta alkaen.",
+  "selite": "Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan veneellä. Perheet viettivät niissä kesiä ja hoitivat viljelmiään."
+ },
+ {
+  "kaupunki": "Dubrovnik",
+  "nro": 7,
+  "tiedosto": "herokoe/hero-dubrovnik-ilta.jpg",
+  "luokka": "B",
+  "vika": "\"Dubrovnikin vanhin säilynyt julkinen veistos\" (lyhyt \"vanhin veistos\") EI VAHVISTETTU: lähteet sanovat enintään \"yksi vanhimmista julkisista monumenteista\"; muotoillaan \"yksi kaupungin vanhimmista\". Orlandon pylväs 1418, Gropelli 1715 ja palo 1706 täsmäävät.",
+  "nyt_lyhyt": "Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, vanhin veistos edessään.",
+  "nyt_selite": "Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, ja venetsialainen Marino Gropelli rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; sen edessä seisoo Orlandon pylväs vuodelta 1418, Dubrovnikin vanhin säilynyt julkinen veistos.",
+  "lyhyt": "Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle; sen edessä on yksi vanhimmista veistoksista.",
+  "selite": "Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, ja venetsialainen Marino Gropelli rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; sen edessä seisoo Orlandon pylväs vuodelta 1418, yksi Dubrovnikin vanhimmista julkisista veistoksista."
+ }
+]
