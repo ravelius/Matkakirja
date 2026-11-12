@@ -38,3 +38,12 @@ Kello date-komennosta. Kuvat ≤ 1000 px pienennöksinä omaan katseluun, KK:lle
 - Tila-rivin "nimiä alla" listaa ympyrän + 4 pt varan alle osuvat nimilaatikot; reunakosketus näkyy listassa, vaikka kuvassa
   nimi on kokonaan näkyvissä. Kuva ratkaisee.
 - KK:n viestit: local_d5f31591…; PT local_8d8ebf72…; JU local_2a7d6c96… (osoitekirja /Users/Shared/Claude/osoitekirja.md).
+
+## LISÄYS 11.07: KK 11.01 (tuli juuri ennen nollausta, ei aloitettu)
+- KK: kortit korjattu tarkistuksen mukaan (PR 6610). JU 11.0x: tarinamerkki-9 jonossa.
+- TYÖ A (pieni commit, pt-ok PT:ltä): vanhentuneet kommentit Aloitusnakyma.cs:13-17, KaupunkiIntro.cs:215-222,
+  IssKohdevalikko.cs:11-25 + tyylikirja/tyylikirja.json NOSTOKORTTI/PULU "(ei ✕)" → ✕ on (Sulkunappi.cs:62, Pinnaus.cs:5-8).
+- TYÖ B, TARKISTA ja vastaa KK:lle YHDELLÄ RIVILLÄ: kenen ääni on muiden kaupunkien saapumispuheessa (luennat.Saapumispuhe,
+  PeliOhjain.cs:1882-1884)? Omistaja 11.11. 08.33: nimet ja iskulauseet Williamin äänellä kaikissa; Äänittäjä äänitti
+  61 + 61 Williamilla. Jos koodi soittaa yhä isoisän ottoja = VIKA → korjaus junaan (KK:n junasana, pt-ok) + rivi KK:lle.
+- Pysyy: aloituskaupunkien 6 kuvaa. Isoisän kuva tekstin sekaan kaikkiin kaupunkeihin on työlistalla ennallaan.
