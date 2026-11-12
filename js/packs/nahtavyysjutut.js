@@ -5794,16 +5794,16 @@ export const NAHTAVYYSJUTUT = {
         + 'itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
       kuvat: [
         {
-          tiedosto: 'Swan-necked flask used by Pasteur. Wellcome M0012521.jpg',
-          selite: 'Pasteurin joutsenkaulapullossa ilma pääsi sisään mutta pöly ei, '
-            + 'joten liemi pysyi pilaantumatta.',
-          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
           tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
           selite: 'Suomalainen Albert Edelfelt maalasi Louis Pasteurin '
             + 'laboratoriossaan 1885; pastörointi on nimetty Pasteurin mukaan.',
           lahde: 'Albert Edelfelt 1885, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Swan-necked flask used by Pasteur. Wellcome M0012521.jpg',
+          selite: 'Pasteurin joutsenkaulapullossa ilma pääsi sisään mutta pöly ei, '
+            + 'joten liemi pysyi pilaantumatta.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
         },
       ],
     },
