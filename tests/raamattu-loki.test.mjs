@@ -2,25 +2,16 @@
  * RAAMATUN JAKO (omistaja 20.9.2026 klo 18.08): Raamatussa on vain
  * voimassa oleva linjaus, päätöshistoria on sanatarkasti kansiossa
  * docs/raamattu-loki/. Nämä vartiot pitävät jaon koossa:
- *   1. jokainen Raamatun "Loki: docs/raamattu-loki/<tiedosto> #<otsikko>"
- *      -viite osoittaa olemassa olevaan tiedostoon ja otsikkoon, ja
- *      jokainen docs/raamattu-loki/-polku olemassa olevaan tiedostoon
- *      (jäsennys 14 lukuun 19.10.2026: "Loki:"-listat poistuivat
- *      Raamatusta, historia on vain lokissa; määrävaatimusta ei ole);
- *   2. lokitiedostojen otsikot ovat ## -tasolla ja koodin viittaamat
- *      PAATOKSET-sarjat löytyvät lokista (viittaukset eivät katkea);
- *   3. tools/raamattu-kirjaa.mjs kirjoittaa kohdan sovitussa muodossa
- *      juoksevan lokin loppuun;
- *   4. Raamattu ei kasva takaisin lokiksi: pelin lataama tiedosto pysyy
- *      selvästi alle jaon jälkeisen koon kaksinkertaisena.
+ *   lokitiedostojen otsikot ovat ## -tasolla ja koodin viittaamat
+ *   PAATOKSET-sarjat löytyvät lokista (viittaukset eivät katkea).
+ * Vanha loki on nyt vain luettava historia (tools/loki-hae.mjs). Uudet päätökset
+ * kirjataan ovella `node tools/kirjaa.mjs paatos` (docs/raamattu/paatokset/, testit
+ * tests/kirjaa.test.mjs); vanhan js:n poisto vaihe 1 (KK 12.11.2026 klo 17.30)
+ * poisti täältä vanhan Raamatun lokiviitteet, tools/raamattu-kirjaa.mjs:n ja kokovahdin.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdtempSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
-import { RAAMATTU } from '../js/tyohuone-raamattu.js';
-import { kirjaa, lokikohta, lokipolku, rivita, suomenAika } from '../tools/raamattu-kirjaa.mjs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const JUURI = new URL('../', import.meta.url);
 const LOKIKANSIO = new URL('docs/raamattu-loki/', JUURI);
@@ -28,35 +19,6 @@ const lokinOtsikot = (tiedosto) => new Set(
   readFileSync(new URL(tiedosto, LOKIKANSIO), 'utf8').split('\n')
     .filter((l) => l.startsWith('## ')).map((l) => l.slice(3)),
 );
-
-test('jokainen Raamatun lokiviite osoittaa olemassa olevaan tiedostoon ja otsikkoon', () => {
-  let viitteita = 0;
-  for (const osio of RAAMATTU.osiot) for (const kohta of osio.kohdat) {
-    const i = kohta.indexOf('Loki: docs/raamattu-loki/');
-    if (i < 0) continue;
-    const osat = kohta.slice(i + 'Loki: '.length).replace(/\.$/, '')
-      .split('; docs/').map((s, j) => (j ? `docs/${s}` : s));
-    for (const osa of osat) {
-      const m = osa.match(/^docs\/raamattu-loki\/([\w.-]+\.md)(?: \(.*\))?(?: (#.*))?$/);
-      assert.ok(m, `${osio.otsikko}: lokiviitteen muoto: ${osa.slice(0, 80)}`);
-      assert.ok(existsSync(new URL(m[1], LOKIKANSIO)), `${osio.otsikko}: lokia ${m[1]} ei ole`);
-      if (!m[2]) continue;
-      const otsikot = lokinOtsikot(m[1]);
-      for (const h of m[2].split(', #').map((s) => s.replace(/^#/, ''))) {
-        viitteita++;
-        assert.ok(otsikot.has(h), `${osio.otsikko}: ${m[1]} ei sisällä otsikkoa "## ${h}"`);
-      }
-    }
-  }
-  // Jäsennys 19.10.2026: määrää ei vaadita, mutta jokainen polku on elossa.
-  const kaikki = RAAMATTU.osiot.flatMap((o) => o.kohdat).join('\n') + RAAMATTU.johdanto;
-  const polut = [...kaikki.matchAll(/docs\/raamattu-loki\/([\w.-]+\.md)/g)].map((m) => m[1]);
-  assert.ok(kaikki.includes('docs/raamattu-loki/'), 'Raamattu ei viittaa päätöslokiin');
-  for (const p of new Set(polut)) {
-    assert.ok(existsSync(new URL(p, LOKIKANSIO)), `Raamattu viittaa lokiin ${p}, jota ei ole`);
-  }
-  assert.ok(viitteita >= 0);
-});
 
 test('koodin viittaamat KARTTAUUDISTUKSEN PAATOKSET -sarjat löytyvät lokista', () => {
   const otsikot = [...lokinOtsikot('paatokset-2026-09-13--09-20.md')];
@@ -79,39 +41,4 @@ test('lokitiedostojen alkurivi kertoo lähdeosion, ja kohdat ovat ##-otsikoita',
     assert.equal(lokinOtsikot(tiedosto).size, maara, `${tiedosto}: kohtien määrä`);
   }
   assert.ok(existsSync(new URL('paatokset-2026-09.md', LOKIKANSIO)), 'juokseva loki puuttuu');
-});
-
-test('raamattu-kirjaa kirjoittaa kohdan sovitussa muodossa lokin loppuun', () => {
-  assert.equal(suomenAika(new Date('2026-09-20T15:05:00Z')), '20.9.2026 klo 18.05');
-  assert.equal(suomenAika(new Date('2026-12-01T07:03:00Z')), '1.12.2026 klo 09.03');
-  assert.equal(lokikohta('KOE: OTSIKKO', 'teksti', new Date('2026-09-20T15:05:00Z')),
-    '\n## KOE: OTSIKKO (20.9.2026 klo 18.05)\n\nteksti\n');
-  assert.throws(() => lokikohta('', 'teksti'));
-  const juuri = mkdtempSync(join(tmpdir(), 'raamattu-loki-'));
-  mkdirSync(join(juuri, 'docs/raamattu-loki'), { recursive: true });
-  const LOKI = lokipolku(new Date('2026-09-20T15:05:00Z'));
-  assert.equal(LOKI, 'docs/raamattu-loki/paatokset-2026-09.md');
-  writeFileSync(join(juuri, LOKI), 'Alkurivi.\n');
-  const rivi = kirjaa('KOE 2', 'toinen', { juuri, nyt: new Date('2026-09-20T15:05:00Z') });
-  assert.equal(rivi, '## KOE 2 (20.9.2026 klo 18.05)');
-  assert.equal(readFileSync(join(juuri, LOKI), 'utf8'), 'Alkurivi.\n\n## KOE 2 (20.9.2026 klo 18.05)\n\ntoinen\n');
-});
-
-test('raamattu-kirjaa luo puuttuvan kuukausitiedoston ja rivittää pitkän tekstin', () => {
-  assert.equal(lokipolku(new Date('2026-10-31T23:30:00Z')), 'docs/raamattu-loki/paatokset-2026-11.md');
-  const juuri = mkdtempSync(join(tmpdir(), 'raamattu-loki-'));
-  const pitka = Array.from({ length: 400 }, (_, i) => `sana${i}`).join(' ');
-  kirjaa('PITKA', pitka, { juuri, nyt: new Date('2026-10-15T10:00:00Z') });
-  const sisalto = readFileSync(join(juuri, 'docs/raamattu-loki/paatokset-2026-10.md'), 'utf8');
-  const rivit = sisalto.split('\n');
-  assert.ok(rivit.filter((l) => l.startsWith('## ')).length === 1, 'yksi kirjaus');
-  assert.ok(Math.max(...rivit.map((l) => l.length)) <= 200, 'rivit enintään 200 merkkiä');
-  assert.equal(rivit.filter((l) => l.startsWith('sana')).join(' '), pitka, 'sisältö säilyy');
-  assert.equal(rivita('lyhyt teksti'), 'lyhyt teksti');
-});
-
-test('Raamattu pysyy linjauksena, ei lokina (koko)', () => {
-  const koko = statSync(new URL('js/tyohuone-raamattu.js', JUURI)).size;
-  assert.ok(koko < 450 * 1024,
-    `js/tyohuone-raamattu.js on ${(koko / 1024).toFixed(0)} kt — päätökset kuuluvat lokiin (tools/raamattu-kirjaa.mjs)`);
 });

@@ -79,7 +79,7 @@ test('glob: * pysyy kansiossa, ** ylittää sen', () => {
 });
 
 test('polkusuodatin: dokumentti ei laukaise mitään, linssi laukaisee omansa', () => {
-  assert.deepEqual(valitseHarvat(['docs/raportit/x.md', 'js/tyohuone-raamattu.js'], SARJAT), []);
+  assert.deepEqual(valitseHarvat(['docs/raportit/x.md', 'docs/raamattu/aiheet/x.md'], SARJAT), []);
   const sat = valitseHarvat(['js/linssit/satelliitti-avaruus.js'], SARJAT);
   assert.ok(sat.includes('savuke-satelliittilinssi.mjs#isot'));
   assert.ok(sat.includes('savuke-astro-pallo.mjs#vartija-a'));
