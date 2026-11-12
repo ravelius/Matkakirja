@@ -109,3 +109,7 @@ SEURAAVAT ASKELEET:
 2) LUENNAT V11: 96f5f1c38 (natiivi-backup natiivi-ui/luennat-v11, juna-224 9b777264d:n päällä; Peli-testit 931/931) → pt-ok PYYDETTY PT:ltä 09.0x.
 3) Introrivit 561fbd57c: PT otti junaan (juna-224 9b777264d). Kun linkissä → ei omistajalle erikseen (KK päättää koosteesta).
 Worktreet: wt/nui-intro, wt/nui-tarina, wt/nui-luennat (+ vanhat -0040:stä). Scratchpad-skriptit: haara-commit.sh (tiedosto haaraan ilman checkoutia).
+- LISÄYS 09.0x: KK 08.58 hyväksyi v11:n. JUNASANA EHDOLLA: junan Mac-ajon lokissa Pariisin esilataus "puuttuvia 0" (ennen 8) JA Invalidien luenta soi
+  (myönteinen rivi) → jos kappale ilman äänitettä, nimi KK:lle. Vastattu KK:lle: tuleviin eriin ei koodimuutosta — sisältöpaketin kokoelmat/asetukset.json
+  avain "osoitteet.luennat-manifesti" (Asetus.Teksti, Valmisluennat/Puhe/NostoluentaVienti lukevat sen) → versio vaihtuu sisällön viennillä; koodin oletus vain varalle.
+  JU:n tarinamerkki-5 jonossa 08.56.
