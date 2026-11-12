@@ -19,7 +19,10 @@ Vahti: EI Monitor-uusintoja (syövät kontekstia) → Bash run_in_background unt
    - Natiivi 56eba6130 (natiivi-backup natiiviseppa/aanitysjono-ennen-junaa, juna-224:n päällä, wt
      /Users/Shared/Claude/wt/proto-natiiviseppa-aanitysjono): ennen-junaa.sh vaihe 5 Äänitysjono. Koeajo OK (12 s).
      VIKA kunnes PR 6591 mainissa ja koti-checkout (MATKAKIRJA_REPO = Matkakirja-tyokaluseppa) päivittynyt.
-     → KK:n junasana → pt-ok-pyyntö PT:lle (56eba6130), PR 6591 ensin mainiin.
+   - 09.05 KK 09.03 JUNASANA + korjaus TEHTY c479c694f: manifesti asetuksesta osoitteet.luennat-manifesti (puuttuu vielä
+     data/asetukset.json:sta → oletus v11; NUI lisää), jono siivottu v11:llä 234 → 224, --aanitettavat <json> Äänittäjälle.
+     pt-ok-pyyntö PT:lle LÄHETETTY (PR 6591 ensin mainiin, sitten 56eba6130). Äänittäjän pohjat (laske-pariisi.py, vertailu.py)
+     tulossa → hänen vientinsä kutsuu samaa skriptiä (KK 08.58: yksi avaintoteutus).
 3. MONO-3 JU:LLA: korjaus 63e742f1f (natiivi-backup natiiviseppa/mono-selvitys, wt /Users/Shared/Claude/wt/proto-natiiviseppa-tyokalu3,
    kaanna-editori 0 virhettä). Mono-2:n vika: analyysi itse oli suurin varaaja (Analysoi/Merkit/Kutsupaikka 215 000 kpl) ja venytti
    20 s:n mittauksen > 60 s:iin (valmis-rivi aikarajan jälkeen). Nyt avain luvuista, omat varaukset erikseen ("oma analyysi X Mt",
