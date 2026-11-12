@@ -126,6 +126,15 @@ se tarvitsee simu- tai laiteajon. Päiväjunassa vaihe on EI AJETTU.
   nyt tarvita mihinkään junaan. Pelaava botti (`projektiseppa/linna-botti-10`) ei ole vielä masterissa; se liittyy samaan
   putkeen, kun haara on junassa. Muiden kohtausten botit tulevat samaan putkeen omina skenaarioinaan.
 
+## 5. Äänitysjono (KK 12.11.2026 klo 08.42)
+
+- **Mitä:** `node tools/aanitysjono/tarkista.mjs` (noin 12 s). Jokaisella luettavalla kappaleella (Eurooppa ja Arktis/Antarktis:
+  nähtävyysjutut, skandaalit, historian hetket, eläintäyt, täkynostot, fokusvirrat, hahmotelmat, maasto- ja fokuskohteet)
+  on oltava valmis äänite luentojen manifestissa (v9) tai rivi `data/aanitysjono.tsv`:ssä. Muuten HYLÄTTY ja luku kaupungeittain.
+- **Tekstin muuttaja:** aja `node tools/aanitysjono/tarkista.mjs --lisaa` ja commitoi jonon rivit SAMASSA commitissa tekstin kanssa.
+- **Jono = Äänittäjän työlista** (avain, kaupunki, paketti, kohde, pala, päivä). Viennin jälkeen `--siivoa` poistaa äänitetyt ja
+  rivit, joiden tekstiä ei enää ole. Avain ja kappalejako = natiivin `Valmisluennat.Avain` ja `Puhe.cs`.
+
 ## Vastuut
 
 - Työkaluseppä ylläpitää ennen-junaa.sh:ta, kameratesti.py:tä, nykaysvahti.py:tä, tuontiporttia ja lähtötasoja.
@@ -141,7 +150,7 @@ se tarvitsee simu- tai laiteajon. Päiväjunassa vaihe on EI AJETTU.
 - [ ] Päiväjuna: KK on kysynyt omistajalta, ajetaanko tarkistukset; omistajan vastaus kirjattu. Studiolla tarkistusvideo isolla
       iPadilla ja omistajan palaute käsitelty ennen käännöstä.
 - [ ] `zsh tyokalut/ennen-junaa.sh` ilman simua (tekijä ennen junaan vientiä, Natiiviseppä junan kokoamisessa): vaiheet
-      1, 2 ja botin logiikka OK. Päiväjunassa KESKEN (vaiheet 3 ja 4b EI AJETTU) on hyväksytty tulos; HYLÄTTY estää junan.
+      1, 2, 5 ja botin logiikka OK. Päiväjunassa KESKEN (vaiheet 3 ja 4b EI AJETTU) on hyväksytty tulos; HYLÄTTY estää junan.
 - [ ] Yöjunan laitekierros: `ennen-junaa.sh --loki` vakiona (Laitetestaaja tai Natiiviseppä).
 - [ ] Codex-vaiheen hylkäykset käsitelty: oikea puute → kooste Codexille PT:n kautta; portin virhe → portti korjattu ja testi lisätty.
 - [ ] Kameratesti läpi ja kattavuuden lähtötaso ei kasvanut (`tyylikirja/kameratesti.json`).
