@@ -53,3 +53,12 @@ Edellinen: viesti-pelikoodari-luovutus-20261112-0935.md (3f7bb0f9e). Sen kohta 1
 ## 4. B1 (botti maali) ennallaan: natiivi-backup pelikoodari/seinat-taso1-v133c @ a405aeb07, odottaa KK:n junasanaa.
 
 Ei agentteja käynnissä. Työkopiot (/Users/Shared/Claude/wt): proto-pelikoodari-kameralaite, -pistekaarella, -v133d, -b1, pelikoodari-luovutus-1012.
+
+## LISÄYS 10.2x: KK 10.14 ja JU 10.2x
+- KK kuittasi e429412e5:n (27 → 0). Junasana tulee, kun KK on katsonut JU:n Mac-parin.
+  - JU ajaa parin: sk-pistekaarella-kaannokset-2.txt, 0–104 s (avaus kestää 41,1 s), lokit/pelikoodari-pistekaarella2-*.
+- RISTEYKSET (11): ei korjata nyt eikä jousella. Kohdan 1 toiston jako (U-käännös / hyppy) näyttää, aiheuttaako jokin niistä leikkauksen.
+  - Ehto: tavoitteen hypystä johtuvia leikkauksia 0.
+  - Jos jako näyttää hypystä johtuvan leikkauksen, korjaa lähteestä omana committinaan: 1,60 m (kaista aukolle ja käännös samassa askeleessa) ja 1,37 m (paluu seinän edessä) ensin.
+  - 9 pientä (alle 0,4 m) saavat jäädä, jos ne eivät leikkaa. Jalan paikan koe pysyy poissa.
+- JÄRJESTYS: toisto jaolla → otteen pito + Mac-pari otteesta ahtaassa → kolme pahinta (a)-ikkunaa KK:lle.
