@@ -765,3 +765,16 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - JU:lla KJ54b (sk-mac-nayte-kj54b.txt) → lokit/ks-kj54b-nayte-<sha> → arkit (peli | Commons; tee kuten nayte-kj54/arkit, Sonnet-agentti voi koota) → KK.
 - SEURAAJAN JONO: 1) KK:n vastaukset (Alma-junasana → poiminta 300c6b99d + 9e25f616f; puuvalo-junasana; tornisääntö) 2) KJ54b arkit → KK 3) tornisääntö tee_palat.py:hyn
   KK:n sanalla 4) KJ52 + talojen päätös 5) Montmartre KJ43 6) PP:n ikkunakolmio 7) kehämuurien nimet.
+
+## LISÄYS 62 (05.17): KK 05.15 PÄÄTÖKSET, Alma → pt-ok pyydetty
+- KK JUNASANA sillat KJ49c+KJ49d → 1c8d932ed (natiivi-backup karttaseppa/alma-juna = juna-224 c2d60205a + 300c6b99d + 9e25f616f; työpuu wt/proto-karttaseppa-sillat-juna;
+  786/786, unity 0). pt-ok pyydetty PT:ltä 05.17 → odota LINKKI. EI ced23df14:ää (pitkät): oma erä, KK ei ole nähnyt kuvia → ensin parit KK:lle (lokit/ks-kj52-*).
+- KK: GHSL ≥ 5000 m² → vähintään 6 m + nimetyt tornit KOHDE_KORKEUS-tauluun: KYLLÄ → TEE tee_palat.py:hyn (osm_korkeus/ghsl-haara; tornien korkeudet lähteestä,
+  esim. ČT-päärakennus ~100 m, Nya Karolinska, Danderyd, AVL, Klementinum — mittaa/lähteistä, ei arvausta) + testi/vertailu.
+- KK: kerroin automaattiseksi KYLLÄ ehdoin: mediaani (on jo), rajat 0,7–1,3 (lisää ghsl_kerroin.py:hyn clamp), jäännös > 40 % → merkintä kaikki.md:hen ja kaupungin
+  katukuvat katselmukseen. Praha (57 %) mukaan seuraavaan katukuvaerään.
+- KK: katupariin kelpaa vain valokuva ≤ 60 m samalta kadulta, muuten ruutu "ei vertailukelpoinen" (KJ54b-arkeissa: Luxemburg 1 287 m, 2 196 m, Lissabon 1 119 m, Tukholma 1 66 m).
+- KK: puut-rivi työlistassa (KK lisäsi), ei ennen kolmea kaupunkityökalua.
+- KJ54b-arkit → KK, sitten KK:n sana GHSL:stä.
+- SEURAAJAN JONO: 1) Alma LINKKI 2) KJ54b arkit → KK (60 m -sääntö) 3) GHSL: clamp + jäännösmerkintä + 6 m -sääntö + tornit → commit tyokalu-1 4) puuvalo-junasana
+  5) pitkät ced23df14 parit → KK 6) KJ52 + talojen päätös 7) Montmartre KJ43 8) PP:n ikkunakolmio 9) kehämuurien nimet.
