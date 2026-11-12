@@ -52,3 +52,27 @@ Ei agentteja käynnissä. Työkopiot (/Users/Shared/Claude/wt): proto-pelikoodar
 
 ## 2. B1 (botti maali) ennallaan
 natiivi-backup pelikoodari/seinat-taso1-v133c @ a405aeb07, odottaa KK:n junasanaa.
+
+## LISÄYS 11.3x: viestit luovutuksen jälkeen (EI VIELÄ KÄSITELTY, toimi näiden mukaan; kohdan 1 järjestys korvautuu)
+- KK 11.03 PÄÄTÖS: lattia 3,6 on työarvo → vaihda oletus (pala-2: Seurantaohjaaja.cs rivi 66 dTavLattiaVara 0.6 + Vara()-oletus 0.6) ja aja T14/C3.
+  - Risteysten 11 hyppyä: kohta SULJETTU.
+  - Lopullinen "kytkin pois" vasta Mac-parista.
+- KK 11.19 PÄÄTÖS: otteen pito HYVÄKSYTTY koodina. Havainnot t 33,36 / 53,07 on selitetty. **KORJAA LEIKKAUSASENTO ENSIN**: leikkaus laskeutuu suoraan asentoon, jossa jalat ovat kuvassa ensimmäisestä ruudusta; ei korjausliikettä jälkeenpäin. Ehdot (koko toisto, lattia 3,6):
+  1. jalat ulkona ≤ 0,5 s leikkauksesta = 0 s (nyt 85 s)
+  2. kulmanopeus 0,5 s leikkauksen jälkeen ei kasva (ei nyökkäystä)
+  3. T14 ja ahtauden luvut eivät huonone, leikkauksia ei tule lisää
+  4. kerro, mistä loput noin 40 s jalat ulkona tulee (pisin 0,71 s sivureunalla, siemen 2 t 139), ja ehdota korjausta, mutta ÄLÄ korjaa.
+  - Sitten kolme pahinta (a)/(b)-ikkunaa ahtaasta ja Mac-pari, jossa on yksi U-leikkaus.
+  - Pariin KK:lle myös pisin peitto (siemen 10 t 133,2) ja KK:n havainnot (pari-2:n jalat 4 ruutua, pari-1 74–75 s kulma). YKSI koottu viesti.
+- JU 11.2x: ote-pari e3e6e75b9 on jonossa → lokit/pelikoodari-ote-{vanha,uusi}-e3e6e75b9 + rinnakkaisleike ± 8 s + arkki. JU lähettää polut; vie KK:lle (KK haluaa sen).
+- KK 11.3x: Raamatun kortti matkustus-ja-reitit (PR 6611) on Pelikoodarin vastuulla. Tarkista työn väliin: `node tools/kirjaa.mjs lue matkustus-ja-reitit` (kansio /Users/Shared/Claude/Matkakirja-fable).
+  - Vastaa KK:lle yhdellä viestillä (≤ 8 riviä), koodista tarkistettuna:
+    1. koskeeko sääntö 12 (kaksitaso matalalla kartan yllä) kaikkia lentoja vai vain saapumis- ja aloituslentoa
+    2. onko kaupunkien välisillä lennoilla yhä oma aurinko pelin kellonajan mukaan ja sininen taivas (vanha 2.163)
+    3. väärät tai puuttuvat säännöt (hinnat säännössä 3, automaattinen noppa säännössä 4)
+    4. mitkä lennon kuvakulmat ovat voimassa (KK lisää ne kamera-korttiin).
+- LAV 11.3x: kohdan (−84,8; 292,7) kavennusta EI ollut tarkoitettu. v133c → v133d -ero palassa 1-3:
+  - K4: 2 uutta V4_lattia-kolmiota y 0, kärjet (−91,43; 291,74), (−83,07; 291,93), (−80,81; 294,19), (−82,23; 294,48), eli täsmälleen kavennuksen kaistale.
+  - K1: kivireunuksen alakärjet → −0,02, pysty 0,32 m, z 294,15–294,48, x −82,4…−78,3.
+  - K1: 8 m:n kalteva suikale (−90,16; 291,77)–(−82,23; 294,48), kärki 0,19 → −0,02.
+  - LAV kysyy, kumpi on syy kulkukartassa: uusi lattia y 0 reunuksen vieressä vai kalteva suikale. Tarkista kulkukartta.py:n tulkinta (esim. katoavat.py / kartta_koe.py) ja vastaa LAV:lle. LAV korjaa geometrian v134:ään; reittigeneraattoria ei korjata, jos syy on geometria.
