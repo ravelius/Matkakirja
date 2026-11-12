@@ -730,3 +730,14 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - NÄYTE-ARKIT: Sonnet-agentti kokoaa _tyo/karttaseppa/tyokalu-1/nayte-kj54/arkit/arkki-<id>.jpg (6) + arkki-ateena.jpg. Tarkista, että ne ovat olemassa (muuten kokoa
   itse: peli yleis | orto, 3 × peli katu | Commons, lähderivit lahteet.json), KATSO ITSE, sitten KK:lle: arkit + havainnot + GHSL-pelikelpoisuus (KK 23.17 lopullinen sana näytekuvista).
 - SEURAAJAN JONO: 1) Alman kylki (yllä) 2) KJ53b 3) näyte-arkit → KK 4) KJ52 + talojen päätös 5) Montmartre KJ43 (JU:n maastovienti?) 6) GHSL-kalibrointi 7) PP:n ikkunakolmio 8) kehämuurien nimet.
+
+## LISÄYS 59 (05.0x, uusi sessio 04.57): Alman kylki korjattu → KJ49d JU:lla, näyte-arkit → KK
+- Alman kylki: edeltäjän agentti EI jättänyt committia → tehty itse. SYY: ei kylki, vaan kameran lähitaso leikkasi onton palkkilaatikon (kamera kannen päällä,
+  si49c-31: 73 m sillan keskeltä etelään); leikkauksesta näkyi alapinnan selkä (SiltaTumma, normaali alas, Cull Off) maan valossa 36,27,18.
+  KORJAUS 9e25f616f (natiivi-backup karttaseppa/sillat = 300c6b99d + 1; 779/779, unity 0): PalkinSisapohja = ylöspäin katsova kivipohja (SiltaKivi × 0,8) palkin
+  alareunan tasolla koko laatikon matkalta; testi PalkinSisapohjaJaKyljet. KJ49d JU:lla 05.0x (sillat-kj49c/sk-mac-sillat-kj49d.txt, si49d-31/-38, ENNEN 300c6b99d |
+  JÄLKEEN 9e25f616f) → KUN TULEE: katso, pari KK:lle. Junaan: poimi 300c6b99d + 9e25f616f (+ pitkät ced23df14, jos KK) uusimman junakärjen päälle (LISÄYS 57).
+- NÄYTE-ARKIT (Sonnet valmis 04.56) katsottu → KK 05.03 havainnot: yleiskuvat osuvat, GHSL-korkeudet uskottavia (ehdotus: kelpaa), Luxemburg katu 1 OSM-pohjia puuttuu,
+  tasakattolaatikot, Ateenan kevennys ei näy. AVOIN KK 23.17 k. 1: isot pohjat ilman OSM-korkeutta (tornit) näytekaupungeista → seuraavaksi; sitten k. 2 kerroin.
+- KJ53b JU:lla (pyydetty 05.0x edeltäjältä) → lokit/ks-kj53b-puuvalo-6bb57f388, ei vielä tullut.
+- SEURAAJAN JONO: 1) KJ49d → KK 2) KJ53b mittaus (LISÄYS 58) 3) GHSL-tornilista → KK, sitten kerroin 4) KJ52 + talojen päätös 5) Montmartre KJ43 6) PP:n ikkunakolmio 7) kehämuurien nimet.
