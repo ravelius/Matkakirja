@@ -14,7 +14,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kamera | Kamera | PK | 2.8 kt | 12.11.2026 |
 | juoksupeli | Juoksupeli | PK | 2.8 kt | 12.11.2026 |
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | – | – |
-| museot | Museot | LAV | – | – |
+| museot | Museot | LAV | 2.8 kt | 12.11.2026 |
 | linssit | Linssit | VS | – | – |
 | iss-ja-avaruus | ISS ja avaruus | VS | – | – |
 | isoisa-ja-tarina | Isoisä ja tarina | SK | 2.9 kt | 12.11.2026 |
