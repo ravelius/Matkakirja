@@ -395,7 +395,7 @@ const PUHE_PERSOONAT = {
 /*
  * JÄRJESTELMÄKEHOTE — hahmon koko luonne ja kaikki kiellot.
  *
- * Tämä on sitova määrittely (js/tyohuone-raamattu.js, osio "Viisas
+ * Tämä on sitova määrittely (vanha Raamattu, arkistossa docs/arkisto/, osio "Viisas
  * Pöllö"): tietokumppani on TIEDON hahmo, ei tarinan. Se syventää
  * lehtien tietoa ja vastaa tosimaailman kysymyksiin, mutta ei ratkaise
  * pelin tehtäviä eikä paljasta juonta.

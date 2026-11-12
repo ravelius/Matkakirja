@@ -108,14 +108,6 @@ const VANHA_KARTTA_POIS = new Set([
   'js/packs/maasto-tekstit.js',
 ]);
 
-/*
- * EI PELIN MODUULI (KK 12.11.2026 17.30, vanhan Raamatun js:n poisto):
- * peli ei enää tuo js/tyohuone-raamattu.js:ää (Raamattu-lehti poistui),
- * mutta tiedosto on yhä levyllä viennin lähteenä, kunnes se siirtyy
- * arkistoon (suunnitelman vaihe 3) — silloin tämä lista tyhjenee.
- */
-const EI_PELIN_MODUULI = new Set(['js/tyohuone-raamattu.js']);
-
 /**
  * Hakemiston .js-tiedostot repon juuresta laskettuina polkuina.
  *
@@ -134,14 +126,14 @@ function moduulitLevylla(hakemisto) {
 
 test('kaikki js-moduulit ovat SHELLissä', () => {
   const levy = SKANNATTAVAT.flatMap(moduulitLevylla);
-  const unohtui = levy.filter((p) => !SHELL.includes(p) && !VANHA_KARTTA_POIS.has(p) && !EI_PELIN_MODUULI.has(p));
+  const unohtui = levy.filter((p) => !SHELL.includes(p) && !VANHA_KARTTA_POIS.has(p));
   assert.deepEqual(unohtui, [],
     'nämä moduulit puuttuvat sw.js:n SHELL-listalta — offline hajoaisi. Korjaus on '
     + `sw.js:n SHELL-listaan: ${unohtui.map((p) => `'./${p}',`).join(' ')}`);
 
   // Symmetria: pois jätetty moduuli ei saa olla myös SHELLissä — muuten
   // lista valehtelisi siitä, mitä palvelutyöntekijä hakee.
-  const tuplana = [...VANHA_KARTTA_POIS, ...EI_PELIN_MODUULI].filter((p) => SHELL.includes(p));
+  const tuplana = [...VANHA_KARTTA_POIS].filter((p) => SHELL.includes(p));
   assert.deepEqual(tuplana, [],
     'tasokartan moduuli on sekä SHELLissä että VANHA_KARTTA_POIS-listalla — poista toisesta');
   const kadonneet = [...VANHA_KARTTA_POIS].filter((p) => !existsSync(join(JUURI, p)));

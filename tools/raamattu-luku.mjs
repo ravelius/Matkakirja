@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * VANHA OVI, OHJAA UUTEEN (KK 12.11.2026 klo 17.30, vanhan js:n poisto vaihe 1): vanha Raamattu (js/tyohuone-raamattu.js)
+ * VANHA OVI, OHJAA UUTEEN (KK 12.11.2026 klo 17.30, vanhan js:n poisto vaihe 1): vanha Raamattu (arkistossa docs/arkisto/)
  * ei ole enää voimassa. Kohtanumero (esim. 7.47) haetaan korteista tunnuksella [R-7.47]:
  *   node tools/raamattu-luku.mjs 7.47   →   node tools/kirjaa.mjs hae "R-7.47"
  * Pelkkä luku (esim. 7) tai --sisallys → aiheluettelo (node tools/kirjaa.mjs aiheet).

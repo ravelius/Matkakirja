@@ -6,7 +6,7 @@ speksi täydentää tätä; ristiriidassa speksi voittaa.
 ## Roolit ja rajat
 - Työskentelet git-worktreessä. ÄLÄ KOSKAAN käytä git stashia. Lopuksi
   YKSI commit, EI pushia. Raportoi worktree-polku + commit-hash.
-- EI kosketa: js/tyohuone-raamattu.js, docs/tarina.md,
+- EI kosketa: docs/raamattu/, docs/tarina.md,
   docs/isoisan-raamattu.md, js/tyohuone-tilanne.js.
 - EI versionostoa, EI uusia sivu-id:itä (vakiot js/ui-apurit.js
   AIHE_IKONIT), EI API-avaimia repoon/lokiin.

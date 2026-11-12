@@ -7,7 +7,7 @@ Euroopassa. hiotaan vain ensin tuo linssi mahdollisimman hyväksi niin sitten
 voidaan monistaa samaa logiikkaa muihinkin."*
 
 Tämä on elävä luettelo: aiheita lisätään ja tila päivitetään. Sitovat
-linjaukset ovat Raamatussa (js/tyohuone-raamattu.js, Karttalinssit);
+linjaukset ovat Raamatussa (docs/raamattu/aiheet/linssit.md);
 tämä dokumentti on työlista. Sama sisältö on julkisena sivuna pelin
 osoitteessa https://ravelius.github.io/Matkakirja/linssikatalogi.html
 (repon juuren linssikatalogi.html, Pages kopioi sen; näkyy kaikilla
