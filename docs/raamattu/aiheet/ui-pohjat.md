@@ -11,7 +11,7 @@ SÄÄNNÖT:
 6. Nosto pinnataan aina itsestään, Pulun chatissa on pin. Pinnattu (yksi kerrallaan) pienenee kartan liikkuessa palkiksi oikealle ylös: otsikko ja tauko/jatka, napautus palauttaa, ✕ sulkee, puhe jatkuu. Uusi luenta tai linssi päättää pinnauksen. [R-4.12] [P-261109-3]
 7. Pinta avautuu napautuksen ruudulla avaajan suunnasta ja sulkeutuu samaa reittiä; siirtymät alle 250 ms ilman hyppyjä. Pienennetty kutistuu sisältönsä kokoiseksi. [R-4.15] [R-4.14] [R-4.16]
 8. Puhetta ei tekstitetä, paitsi pelaajan valitsemana linsseissä ja peleissä; matkakirjan sivu on tekstiä, ei tekstitystä. Nimikyltti näkyy saavuttaessa noin 3 s; info- ja nimilaput vain napautuksesta. [R-4.13] [R-2.70]
-9. Näkymän säädöt (aika, vuodenaika, LIVE, nimet, pilvet, sää) ovat vain ⚙:ssä. [R-2.73]
+9. Näkymän säädöt (aika, vuodenaika, LIVE, nimet, pilvet) ovat vain ⚙:ssä. [R-2.73]
 10. ☰ on sama kaikilla laitteilla ja asennoissa, ja siinä ovat vain pelin ympärykset; linssit ja pelit avataan Linssit-napista tai laukusta. Keskeneräinen ja työhuone näkyvät vain kehittäjälle. [R-4.32] [R-2.62] [R-2.74] [R-13.51]
 11. Luennassa näkyy vain kaiutin ja mini-☰. Kaiutin on otsikkorivin oikeassa reunassa, VU kaarissa; tauolla se on himmeä taukomerkin alla ja jatkaa samasta, ja ei luentaa -tila on vino viiva. Mini-☰:ssä ovat kappaleet, kelaus, nopeus, äänet sekä Auto ja Nostojen ohjaus (oletus pois). [R-5.23] [R-5.25] [R-2.194] [R-2.31]
 12. Kaupungissa oman maan kartussi on vasemmassa alakulmassa eikä estä vieritystä; napautus avaa maakortin. Linssissä sitä ei näy. [R-2.149] [R-2.148]

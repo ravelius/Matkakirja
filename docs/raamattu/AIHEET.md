@@ -4,8 +4,8 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 
 | Tunnus | Nimi | Vastuu | Koko | Tarkistettu |
 |---|---|---|---|---|
-| maailma-ja-rajaukset | Maailma ja rajaukset | KK | – | – |
-| aika-ja-ulkoasu | Aika ja ulkoasu | KK | – | – |
+| maailma-ja-rajaukset | Maailma ja rajaukset | KK | 2.1 kt | 12.11.2026 |
+| aika-ja-ulkoasu | Aika ja ulkoasu | KK | 2.2 kt | 12.11.2026 |
 | kartta-ja-pallo | Kartta ja pallo | KS | 2.9 kt | 12.11.2026 |
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 2.9 kt | 12.11.2026 |
 | kaupungit | Kaupungit | KS | 3.0 kt | 12.11.2026 |
@@ -39,7 +39,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | 2.9 kt | 12.11.2026 |
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | 2.8 kt | 12.11.2026 |
 | media-ja-ampari | Media ja ämpäri | JU | 2.9 kt | 12.11.2026 |
-| arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
+| arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | 2.2 kt | 12.11.2026 |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 2.9 kt | 12.11.2026 |
 | oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | 2.9 kt | 12.11.2026 |
 | testit | Testit | NS | 3.0 kt | 12.11.2026 |
