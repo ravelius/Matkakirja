@@ -3,7 +3,7 @@
 TAVOITE: Kartalla on paikkoja, lehdessä luettava syvyys. Nosto avautuu kuva edellä, kertoo tosia asioita lyhyesti ja herättää kysymyksen. Lehti tuntuu oikealta paikallislehdeltä omasta maastaan.
 
 SÄÄNNÖT:
-1. Kaikki nostot avaavat saman kortin; erot ovat dataa (laajuus, palkkio, aihe). Kaupungin kartalla ovat vain nähtävyydet, kadonneet ihmeet ja tarinapaikat; muut jutut ovat lehdessä. [R-2.11] [P-261110-kolmelajia]
+1. Kaikki nostot avaavat saman kortin; erot ovat dataa (laajuus, palkkio, aihe). Kaupungin kartalla ovat vain nähtävyydet, kadonneet ihmeet ja tarinapaikat; muut jutut ovat lehdessä. [R-2.11] [P-261110-3]
 2. Maan tasolla maalehden sivut ovat myös nostoja, ja tärkeimmät vuoret, meret ja joet ovat avattavia kohteita. [R-2.137] [R-2.11]
 3. Nosto aukeaa kuva edellä, LISÄÄ avaa tekstin. Auki oleva nosto ei sulkeudu vierittämällä eikä sisällön napautuksesta. [R-2.41] [R-2.146]
 4. Teksti on 3–5 virkettä; laajassa nostossa ingressi ja noin 160–240 sanaa. [R-2.146] [R-2.11]
