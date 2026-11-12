@@ -2,7 +2,7 @@
 
 SK 12.11.2026. 24 kohdetta, 241 kuvaa. Perusta: säännöt 1–13, tutkimus `saapumisintro-era3-tutkimus/tulos-*.md`, KK:n päätökset 15 kohtaan. JSON-kentät kuten erissä 1–2: `kaupunki`, `nro`, `kuva`, `rivi`, `tila`. Rivi on `Nimi · vuosi` tai pelkkä nimi; `rivi: null` = ei riviä (Bergen 7, 12, 13, 14: Vallettan kuvat, poistettu Bergenin listasta PR 6593).
 
-Nimet säännön 7 mukaan: Firenze "Duomo" (pelin kyltti), Kiova "Pyhän Mikaelin luostari" (kyltti), Sarajevo "Sarajevon katedraali" ja "Latinalaissilta" (kyltit), Sofia "Banja Bashin moskeija" (kyltti).
+Nimet säännön 7 mukaan: Firenze "Duomo" (pelin kyltti), Kiova "Pyhän Mikaelin luostari" (kyltti), Sarajevo "Sarajevon katedraali" ja "Latinalaissilta" (kyltit), Sofia "Banja Bašin moskeija" (kyltti).
 
 
 ## ALPIT
@@ -298,7 +298,7 @@ Nimet säännön 7 mukaan: Firenze "Duomo" (pelin kyltti), Kiova "Pyhän Mikaeli
 | # | kuva | rivi | tila |
 |---|---|---|---|
 | 1 | herokoe/hero-sofia-nevski.jpg | Aleksanteri Nevskin katedraali · 1912 | valmis |
-| 2 | herokoe/hero-sofia-banya-bashi.jpg | Banja Bashin moskeija · n. 1566 | valmis |
+| 2 | herokoe/hero-sofia-banya-bashi.jpg | Banja Bašin moskeija · n. 1566 | valmis |
 | 3 | herokoe/hero-sofia-vitosa.jpg | Sofian raitiovaunu | valmis |
 | 4 | 0261012-full/sofia-4-lahdevesi-arki-intro-v1.png | Sofian kivennäislähde | valmis |
 | 5 | 20261012-full/sofia-5-boyana-putous-intro-v1.png | Boyanan vesiputous | valmis |
