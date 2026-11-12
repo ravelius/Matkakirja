@@ -213,8 +213,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'kolumbus-portugali-1484',
-    otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
-    nimio: 'Lissabon 1484',
+    otsikko: 'Kolumbus 1484 — Portugali hylkää suunnitelman',
+    nimio: 'Kolumbus 1484',
     paivays: '1484',
     paikka: 'Lissabon, Portugali',
     iso: 'PRT',
@@ -298,8 +298,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'kolumbus-santa-fe-1492',
-    otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
-    nimio: 'Santa Fé 1492',
+    otsikko: 'Kolumbus 1492 — kuningatar hyväksyy matkan',
+    nimio: 'Kolumbus 1492',
     paivays: '17.4.1492',
     paikka: 'Santa Fé, Granada, Espanja',
     iso: 'ESP',
@@ -387,8 +387,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'kolumbus-palos-1492',
-    otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
-    nimio: 'Palos 1492',
+    otsikko: 'Palosin lähtö 1492 — Kolumbus purjehtii länteen',
+    nimio: 'Palosin lähtö 1492',
     paivays: '3.8.1492',
     paikka: 'Palos de la Frontera, Espanja',
     iso: 'ESP',
@@ -472,8 +472,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'magalhaes-sanlucar-1519',
-    otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
-    nimio: 'Sanlúcar 1519',
+    otsikko: 'Magalhães 1519 — maailmanympärimatka alkaa',
+    nimio: 'Magalhães 1519',
     paivays: '20.9.1519',
     paikka: 'Sanlúcar de Barrameda, Espanja',
     iso: 'ESP',
@@ -567,8 +567,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'vasco-da-gama-restelo-1497',
-    otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
-    nimio: 'Restelo 1497',
+    otsikko: 'Vasco da Gama 1497 — lähtö kohti Intiaa',
+    nimio: 'Vasco da Gama 1497',
     paivays: '8.7.1497',
     paikka: 'Restelon ranta, Lissabon',
     iso: 'PRT',
@@ -650,7 +650,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'cook-endeavour-plymouth-1768',
-    otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
+    otsikko: 'Endeavour 1768 — Cookin tutkimusmatka alkaa',
     nimio: 'Endeavour 1768',
     aihe: 'Löytöretki',
     paivays: '26.8.1768',
@@ -741,7 +741,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'trafalgar-victory-1805',
-    otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+    otsikko: 'Trafalgar 1805 — Nelsonin laiva ennen taistelua',
     nimio: 'Trafalgar 1805',
     paivays: '21.10.1805',
     paikka: 'Trafalgarin niemen edusta, Espanja',
@@ -848,8 +848,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'darwin-galapagos-1835',
-    otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
-    nimio: 'Galápagos 1835',
+    otsikko: 'Darwin 1835 — Galápagosin kilpikonnat',
+    nimio: 'Darwin 1835',
     paivays: 'syyskuu 1835',
     paikka: 'San Cristóbal (Chatham), Galápagos',
     iso: 'ECU',
@@ -934,8 +934,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'nansen-fram-1893',
-    otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
-    nimio: 'Fram 1893',
+    otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
+    nimio: 'Nansen 1893',
     paivays: '24.6.1893',
     paikka: 'Kristiania (Oslo), Norja',
     iso: 'NOR',
@@ -1027,8 +1027,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'amundsen-etelanapa-1911',
-    otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
-    nimio: 'Etelänapa 1911',
+    otsikko: 'Amundsen 1911 — etelänavan valtaus',
+    nimio: 'Amundsen 1911',
     paivays: '14.12.1911',
     paikka: 'Etelänapa',
     iso: 'NOR',
@@ -1125,7 +1125,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'titanic-southampton-1912',
-    otsikko: 'Southampton 1912 — metri törmäyksestä',
+    otsikko: 'Titanic 1912 — neitsytmatka alkaa',
     nimio: 'Titanic 1912',
     aihe: 'Haaksirikko',
     paivays: '10.4.1912',
@@ -1228,8 +1228,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'viikinkilaiva-roskilde-1040',
-    otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
-    nimio: 'Roskilde 1040',
+    otsikko: 'Viikingit 1040 — sotalaiva Roskildenvuonolla',
+    nimio: 'Viikingit 1040',
     paivays: 'n. 1040',
     paikka: 'Roskildenvuono, Tanska',
     iso: 'DNK',
@@ -1321,8 +1321,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'rontgen-kasi-1895',
-    otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
-    nimio: 'Würzburg 1895',
+    otsikko: 'Röntgen 1895 — röntgensäteiden löytö',
+    nimio: 'Röntgen 1895',
     aihe: 'Röntgenkuva',
     paivays: '22.12.1895',
     paikka: 'Würzburg, Saksa',
@@ -1409,8 +1409,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'wright-kitty-hawk-1903',
-    otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
-    nimio: 'Kitty Hawk 1903',
+    otsikko: 'Wrightit 1903 — ensimmäinen moottorilento',
+    nimio: 'Wrightit 1903',
     aihe: 'Lento',
     paivays: '17.12.1903',
     paikka: 'Kill Devil Hills, Kitty Hawk, Yhdysvallat',
@@ -1498,8 +1498,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'einstein-patenttitoimisto-1905',
-    otsikko: 'Bern 1905 — patenttipino ja valonsäde',
-    nimio: 'Bern 1905',
+    otsikko: 'Einstein 1905 — suhteellisuusteoria syntyy',
+    nimio: 'Einstein 1905',
     paivays: '1905',
     paikka: 'Bern, Sveitsi',
     iso: 'CHE',
@@ -1587,8 +1587,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'tutankhamon-carter-1922',
-    otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
-    nimio: 'Luxor 1922',
+    otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
+    nimio: 'Carter 1922',
     paivays: '26.11.1922',
     paikka: 'Kuninkaiden laakso, Egypti',
     iso: 'EGY',
@@ -1691,8 +1691,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'schliemann-troija-1873',
-    otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
-    nimio: 'Troija 1873',
+    otsikko: 'Schliemann 1873 — Troijan aarre löytyy',
+    nimio: 'Schliemann 1873',
     paivays: 'toukokuu 1873',
     paikka: 'Hisarlık, Turkki',
     iso: 'TUR',
@@ -1780,7 +1780,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'rosettan-kivi-1799',
-    otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+    otsikko: 'Rosetta 1799 — kivi, jolla hieroglyfit avattiin',
     nimio: 'Rosetta 1799',
     aihe: 'Kirjoitus',
     paivays: 'heinäkuu 1799',
@@ -1882,8 +1882,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'galilei-kaukoputki-1610',
-    otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
-    nimio: 'Padova 1610',
+    otsikko: 'Galilei 1610 — Jupiterin kuut löytyvät',
+    nimio: 'Galilei 1610',
     paivays: 'tammikuu 1610',
     paikka: 'Padova, Venetsian tasavalta',
     iso: 'ITA',
@@ -1981,8 +1981,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'machu-picchu-1911',
-    otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
-    nimio: 'Machu Picchu 1911',
+    otsikko: 'Bingham 1911 — Machu Picchun löytö',
+    nimio: 'Bingham 1911',
     paivays: '24.7.1911',
     paikka: 'Machu Picchu, Peru',
     iso: 'PER',
@@ -2076,7 +2076,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'marie-curie-hangaari-1898',
-    otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+    otsikko: 'Curie 1898 — radiumin ja poloniumin löytö',
     nimio: 'Curie 1898',
     paivays: '1898',
     paikka: 'Pariisi, Ranska',
@@ -2164,7 +2164,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'newton-prisma-1666',
-    otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+    otsikko: 'Newton 1666 — valkoinen valo hajoaa väreiksi',
     nimio: 'Newton 1666',
     aihe: 'Valon tutkimus',
     paivays: '1666',
@@ -2250,7 +2250,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'franklin-leija-1752',
-    otsikko: 'Philadelphia 1752 — kipinä avaimesta rystyseen',
+    otsikko: 'Franklin 1752 — leijakoe ukkospilvessä',
     nimio: 'Franklin 1752',
     aihe: 'Salama',
     paivays: 'kesäkuu 1752',
@@ -2327,7 +2327,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'lavoisier-laboratorio-1780',
-    otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+    otsikko: 'Lavoisier 1780 — modernin kemian synty',
     nimio: 'Lavoisier 1780',
     paivays: 'noin 1780',
     paikka: 'Arsenaali, Pariisi',
@@ -2413,7 +2413,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'jenner-rokotus-1796',
-    otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+    otsikko: 'Jenner 1796 — ensimmäinen rokotus',
     nimio: 'Jenner 1796',
     aihe: 'Rokotus',
     paivays: '14.5.1796',
@@ -2503,7 +2503,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'faraday-luento-1831',
-    otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+    otsikko: 'Faraday 1831 — sähkön tuottaminen magneetilla',
     nimio: 'Faraday 1831',
     paivays: '29.8.1831',
     paikka: 'Royal Institution, Lontoo',
@@ -2591,7 +2591,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'pasteur-pullot-1862',
-    otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+    otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
     nimio: 'Pasteur 1862',
     paivays: '1862',
     paikka: 'École normale supérieure, Pariisi',
@@ -2678,7 +2678,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'mendelejev-kortit-1869',
-    otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+    otsikko: 'Mendelejev 1869 — jaksollinen järjestelmä',
     nimio: 'Mendelejev 1869',
     paivays: '6.3.1869',
     paikka: 'Pietarin yliopisto, Venäjä',
@@ -2763,7 +2763,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'edison-lamppu-1879',
-    otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+    otsikko: 'Edison 1879 — hehkulamppu palaa 13 tuntia',
     nimio: 'Edison 1879',
     aihe: 'Sähkövalo',
     paivays: '22.10.1879',
@@ -2852,7 +2852,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'fleming-malja-1928',
-    otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+    otsikko: 'Fleming 1928 — penisilliinin löytö',
     nimio: 'Fleming 1928',
     paivays: '3.9.1928',
     paikka: 'St Mary\'s Hospital, Paddington, Lontoo',
@@ -2939,7 +2939,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'gutenberg-paino-1454',
-    otsikko: 'Mainz 1454 — sivu syntyy metallista',
+    otsikko: 'Gutenberg 1454 — ensimmäiset painetut sivut',
     nimio: 'Gutenberg 1454',
     aihe: 'Kirjapaino',
     paivays: '1454',
@@ -3031,8 +3031,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'eiffel-torni-1888',
-    otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
-    nimio: 'Torni 1888',
+    otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
+    nimio: 'Eiffel-torni 1888',
     paivays: 'elokuu 1888',
     paikka: 'Champ de Mars, Pariisi',
     iso: 'FRA',
@@ -3122,8 +3122,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'brunel-thames-tunnel-1827',
-    otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
-    nimio: 'Tunneli 1827',
+    otsikko: 'Brunel 1827 — tunneli Thamesin alle',
+    nimio: 'Brunel 1827',
     paivays: 'toukokuu 1827',
     paikka: 'Rotherhithe, Lontoo',
     iso: 'GBR',
@@ -3215,7 +3215,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'suezin-kanava-avajaiset-1869',
-    otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+    otsikko: 'Suez 1869 — kanava avataan',
     nimio: 'Suez 1869',
     aihe: 'Kanava',
     paivays: '17.11.1869',
@@ -3323,7 +3323,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'brooklyn-bridge-1883',
-    otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+    otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
     nimio: 'Brooklyn 1883',
     paivays: '24.5.1883',
     paikka: 'Brooklyn Bridge, New York',
@@ -3425,8 +3425,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'pietari-perustus-1703',
-    otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
-    nimio: 'Jänissaari 1703',
+    otsikko: 'Pietari 1703 — tsaari perustaa kaupungin',
+    nimio: 'Pietari 1703',
     paivays: '27.5.1703',
     paikka: 'Jänissaari, Nevan suisto',
     iso: 'RUS',
@@ -3511,7 +3511,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'vesuvius-pompeji-79',
-    otsikko: 'Pompeji 79 — ropina katolla',
+    otsikko: 'Pompeji 79 — Vesuvius tuhoaa kaupungin',
     nimio: 'Pompeji 79',
     paivays: '79 jaa.',
     paikka: 'Pompeji, Campania',
@@ -3605,8 +3605,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'konstantinopoli-1453',
-    otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
-    nimio: 'Konstantinopoli',
+    otsikko: 'Bysantti 1453 — Konstantinopoli kaatuu',
+    nimio: 'Bysantti 1453',
     paivays: '29.5.1453',
     paikka: 'Theodosiuksen muuri, Konstantinopoli',
     iso: 'TUR',
@@ -3693,8 +3693,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'lontoon-palo-1666',
-    otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
-    nimio: 'Palo 1666',
+    otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
+    nimio: 'Lontoon palo 1666',
     paivays: '2.–5.9.1666',
     paikka: 'Pudding Lane, Lontoo',
     iso: 'GBR',
@@ -3798,8 +3798,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'berliinin-muuri-1961',
-    otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
-    nimio: 'Muuri 1961',
+    otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
+    nimio: 'Berliini 1961',
     paivays: '13.8.1961',
     paikka: 'Bernauer Straße, Berliini',
     iso: 'DEU',
@@ -3897,8 +3897,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'michelangelo-sikstus-1510',
-    otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
-    nimio: 'Sikstus 1510',
+    otsikko: 'Michelangelo 1510 — Sikstuksen katto',
+    nimio: 'Michelangelo 1510',
     paivays: '1510',
     paikka: 'Sikstuksen kappeli, Vatikaani',
     iso: 'ITA',
@@ -3981,8 +3981,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'beethoven-yhdeksas-1824',
-    otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
-    nimio: 'Yhdeksäs 1824',
+    otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
+    nimio: 'Beethoven 1824',
     paivays: '7.5.1824',
     paikka: 'Theater am Kärntnertor, Wien',
     iso: 'AUT',
@@ -4065,8 +4065,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'shakespeare-globe-1599',
-    otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
-    nimio: 'Globe 1599',
+    otsikko: 'Shakespeare 1599 — Globe-teatteri aukeaa',
+    nimio: 'Shakespeare 1599',
     paivays: '21.9.1599',
     paikka: 'Globe-teatteri, Southwark, Lontoo',
     iso: 'GBR',
@@ -4156,8 +4156,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'mozart-wien-1786',
-    otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
-    nimio: 'Figaro 1786',
+    otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
+    nimio: 'Mozart 1786',
     paivays: '1.5.1786',
     paikka: 'Burgtheater, Wien',
     iso: 'AUT',
@@ -4243,7 +4243,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'luther-wittenberg-1517',
-    otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+    otsikko: 'Luther 1517 — 95 teesiä Wittenbergissä',
     nimio: 'Luther 1517',
     aihe: 'Uskonpuhdistus',
     paivays: '31.10.1517',
@@ -4334,7 +4334,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'ranskan-vallankumous-bastilji-1789',
-    otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+    otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
     nimio: 'Bastilji 1789',
     paivays: '14.7.1789',
     paikka: 'Bastilji, Pariisi',
@@ -4427,8 +4427,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'olympia-ateena-1896',
-    otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
-    nimio: 'Louis 1896',
+    otsikko: 'Maraton 1896 — Louis voittaa ensimmäisen kisan',
+    nimio: 'Maraton 1896',
     paivays: '10.4.1896',
     paikka: 'Panathinaiko-stadion, Ateena',
     iso: 'GRC',
@@ -4514,8 +4514,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'sibelius-finlandia-1899',
-    otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
-    nimio: 'Suomi herää 1899',
+    otsikko: 'Sibelius 1899 — Finlandian synty',
+    nimio: 'Sibelius 1899',
     paivays: '4.11.1899',
     paikka: 'Ruotsalainen teatteri, Helsinki',
     iso: 'FIN',
@@ -4604,7 +4604,7 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'lumiere-elokuva-1895',
-    otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+    otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
     nimio: 'Lumière 1895',
     paivays: '28.12.1895',
     paikka: 'Salon Indien du Grand Café, Pariisi',
@@ -4702,8 +4702,8 @@ export const HISTORIAN_HETKET = [
   /* suuri-piiritys-paattyy-1565 — Heritage Malta, The Great Siege / Victory Day; tarkistettu 27.9.2026. */
   {
     id: 'suuri-piiritys-paattyy-1565',
-    otsikko: 'Valletta 1565 — purjeet horisontissa',
-    nimio: 'Apu saapuu 1565',
+    otsikko: 'Malta 1565 — Suuri piiritys päättyy',
+    nimio: 'Malta 1565',
     paivays: '7.9.1565',
     paikka: 'Mellieħan lahti, Malta',
     iso: 'MLT',
@@ -4769,8 +4769,8 @@ export const HISTORIAN_HETKET = [
   /* siegfried-ostaa-bockin-963 — Luxembourg City Tourist Office, Bock Promontory; tarkistettu 27.9.2026. */
   {
     id: 'siegfried-ostaa-bockin-963',
-    otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
-    nimio: 'Bockin kauppa 963',
+    otsikko: 'Luxemburg 963 — kreivi ostaa Bock-kallion',
+    nimio: 'Luxemburg 963',
     paivays: '963',
     paikka: 'Bock-kallio, Luxemburg',
     iso: 'LUX',
@@ -4832,8 +4832,8 @@ export const HISTORIAN_HETKET = [
   /* roger-ii-cefalu-lupaus-1131 — Cefalù Visit Sicily, The Cathedral of Cefalù; tarkistettu 27.9.2026. */
   {
     id: 'roger-ii-cefalu-lupaus-1131',
-    otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
-    nimio: 'Cefalùn lupaus',
+    otsikko: 'Roger II 1131 — lupaus myrskyssä',
+    nimio: 'Roger II 1131',
     paivays: '1131',
     paikka: 'Cefalùn edusta, Sisilia',
     iso: 'ITA',
@@ -4897,7 +4897,7 @@ export const HISTORIAN_HETKET = [
   /* arkadin-luostarin-rajahdys-1866 — Kreikan kulttuuriministeriö, Arkadi Monastery; tarkistettu 27.9.2026. */
   {
     id: 'arkadin-luostarin-rajahdys-1866',
-    otsikko: 'Arkadi 1866 — viimeinen ovi',
+    otsikko: 'Arkadi 1866 — luostari räjähtää',
     nimio: 'Arkadi 1866',
     paivays: '9.11.1866',
     paikka: 'Arkadin luostari, Kreeta',
@@ -4962,7 +4962,7 @@ export const HISTORIAN_HETKET = [
   /* ensimmainen-juna-rovaniemi-1909 — Rovaniemen kaupunki, rakennetun ympäristön historia; tarkistettu 27.9.2026. */
   {
     id: 'ensimmainen-juna-rovaniemi-1909',
-    otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+    otsikko: 'Ensijuna 1909 — rautatie saapuu Rovaniemelle',
     nimio: 'Ensijuna 1909',
     paivays: '1909',
     paikka: 'Rovaniemen rautatieasema, Lappi',
@@ -5026,7 +5026,7 @@ export const HISTORIAN_HETKET = [
   /* wienin-porssikrahi-1873 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "wienin-porssikrahi-1873",
-    otsikko: "Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi",
+    otsikko: "Wienin krahi 1873 — pörssi romahtaa",
     nimio: "Wienin krahi 1873",
     paivays: "9.5.1873",
     paikka: "Väliaikainen pörssitalo, Schottenring, Wien",
@@ -5067,8 +5067,8 @@ export const HISTORIAN_HETKET = [
   /* afsluitdijkin-viimeinen-aukko-1932 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "afsluitdijkin-viimeinen-aukko-1932",
-    otsikko: "De Vlieter 1932 — meri lakkaa kahtia jakamasta",
-    nimio: "Vlieter 1932",
+    otsikko: "Afsluitdijk 1932 — padon viimeinen aukko",
+    nimio: "Afsluitdijk 1932",
     paivays: "28.5.1932",
     paikka: "”De Vlieter”, Afsluitdijk",
     iso: "NLD",
@@ -5111,8 +5111,8 @@ export const HISTORIAN_HETKET = [
   /* gotthardin-lapimurto-1880 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "gotthardin-lapimurto-1880",
-    otsikko: "Gotthard 1880 — valokuva kulkee kalliossa",
-    nimio: "Läpimurto 1880",
+    otsikko: "Gotthard 1880 — tunnelin läpimurto",
+    nimio: "Gotthard 1880",
     paivays: "29.2.1880",
     paikka: "Gotthardin rautatietunnelin keskikohta, Göschenenin ja Airolon välissä",
     iso: "CHE",
@@ -5155,8 +5155,8 @@ export const HISTORIAN_HETKET = [
   /* christiansborgin-palo-1884 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "christiansborgin-palo-1884",
-    otsikko: "Christiansborg 1884 — savu valtaosien alla",
-    nimio: "Linnanpalo 1884",
+    otsikko: "Kööpenhamina 1884 — Christiansborg palaa",
+    nimio: "Kööpenhamina 1884",
     paivays: "3.10.1884",
     paikka: "Christiansborgin linna, Kööpenhamina",
     iso: "DNK",
@@ -5197,7 +5197,7 @@ export const HISTORIAN_HETKET = [
   {
     id: "belgradin-piiritys-1456",
     otsikko: "Belgrad 1456 — talonpojat murtavat piirityksen",
-    nimio: "Piiritys 1456",
+    nimio: "Belgrad 1456",
     paivays: "21.–22.7.1456",
     paikka: "Belgradin linnoitus (Kalemegdan)",
     iso: "SRB",
@@ -5242,8 +5242,8 @@ export const HISTORIAN_HETKET = [
   /* franz-ferdinandin-salamurha-1914 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "franz-ferdinandin-salamurha-1914",
-    otsikko: "Sarajevo 1914 — auto pysähtyy väärään paikkaan",
-    nimio: "Latin-silta 1914",
+    otsikko: "Sarajevo 1914 — Franz Ferdinand murhataan",
+    nimio: "Sarajevo 1914",
     paivays: "28.6.1914",
     paikka: "Latin-silta, Sarajevo",
     iso: "BIH",
@@ -5283,8 +5283,8 @@ export const HISTORIAN_HETKET = [
   /* vloren-itsenaisyys-1912 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "vloren-itsenaisyys-1912",
-    otsikko: "Vlorë 1912 — lippu, joka ommeltiin yöllä",
-    nimio: "Vlorë 1912",
+    otsikko: "Albania 1912 — itsenäisyys julistetaan",
+    nimio: "Albania 1912",
     paivays: "28.11.1912",
     paikka: "Ismail Qemalin talo, Vlorë",
     iso: "ALB",
@@ -5371,7 +5371,7 @@ export const HISTORIAN_HETKET = [
   /* obodin-kirjapaino-1494 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "obodin-kirjapaino-1494",
-    otsikko: "Obod 1494 — musteen viimeinen arkki",
+    otsikko: "Obod 1494 — ensimmäinen eteläslaavien painama kirja",
     nimio: "Obod 1494",
     paivays: "4.1.1494",
     paikka: "Obodin kirjapaino, Rijeka Crnojevića",
@@ -5415,7 +5415,7 @@ export const HISTORIAN_HETKET = [
   /* britannian-lippu-nikosiassa-1878 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "britannian-lippu-nikosiassa-1878",
-    otsikko: "Nikosia 1878 — puolikuu laskee, risti nousee",
+    otsikko: "Nikosia 1878 — Britannia ottaa Kyproksen",
     nimio: "Nikosia 1878",
     paivays: "12.7.1878",
     paikka: "Nikosia, Kypros",
@@ -5456,8 +5456,8 @@ export const HISTORIAN_HETKET = [
   /* pyhan-elmon-linnake-1565 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "pyhan-elmon-linnake-1565",
-    otsikko: "Pyhä Elmo 1565 — viimeinen aamu muurilla",
-    nimio: "Fort St Elmo 1565",
+    otsikko: "Pyhä Elmo 1565 — linnake kaatuu piirityksessä",
+    nimio: "Pyhä Elmo 1565",
     paivays: "23.6.1565",
     paikka: "Pyhän Elmon linnake, Sciberras-niemi (nyk. Valletta), Malta",
     iso: "MLT",
@@ -5497,8 +5497,8 @@ export const HISTORIAN_HETKET = [
   /* bessarabian-liittyminen-1918 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "bessarabian-liittyminen-1918",
-    otsikko: "Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi",
-    nimio: "Chișinău 1918",
+    otsikko: "Bessarabia 1918 — liittyminen Romaniaan",
+    nimio: "Bessarabia 1918",
     paivays: "27.3.1918",
     paikka: "Sfatul Țării -palatsi, Chișinău",
     iso: "MDA",
@@ -5543,7 +5543,7 @@ export const HISTORIAN_HETKET = [
   /* berezinan-ylitys-1812 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
   {
     id: "berezinan-ylitys-1812",
-    otsikko: "Berezina 1812 — jäinen vesi polvien yli",
+    otsikko: "Berezina 1812 — Napoleonin armeija pakenee",
     nimio: "Berezina 1812",
     paivays: "26.–28.11.1812",
     paikka: "Studziankan kahluupaikka, lähellä Borisovia",

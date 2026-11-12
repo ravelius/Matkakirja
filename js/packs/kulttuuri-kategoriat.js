@@ -789,7 +789,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+          otsikko: 'Faraday 1831 — sähkön tuottaminen magneetilla',
           aika: '29.8.1831',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-lahi-photo-v4.jpg',
@@ -821,7 +821,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ring-coil apparatus, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+              otsikko: 'Faraday 1831 — sähkön tuottaminen magneetilla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-kauko-photo-v4.jpg',
               lyhyt: 'Faradayn pienen rautarenkaan käämien välinen hetkellinen '
                 + 'virta avaa periaatteen muuntajille.',
@@ -869,7 +869,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+          otsikko: 'Fleming 1928 — penisilliinin löytö',
           aika: '3.9.1928',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-lahi-photo-v4.jpg',
@@ -900,7 +900,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Facing Infection Together, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+              otsikko: 'Fleming 1928 — penisilliinin löytö',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-kauko-photo-v4.jpg',
               lyhyt: 'Flemingin sattuma vaatii vielä Floreyn ja Chainin työn, '
                 + 'ennen kuin siitä tulee penisilliini.',
@@ -930,7 +930,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-brunel-thames-tunnel-1827',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Tunneli 1827',
+      otsikko: 'Historian hetki: Brunel 1827',
       johdanto: 'Rotherhithen kuilussa 36 miestä kaivoi 1820-luvulla '
         + 'valurautaisen kilven lokeroista savea Thamesin alla, ja uteliaat '
         + 'maksoivat shillingin nähdäkseen, miten joen alitse mennään.',
@@ -949,7 +949,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
+          otsikko: 'Brunel 1827 — tunneli Thamesin alle',
           aika: 'toukokuu 1827',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg',
@@ -983,7 +983,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'archive, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
+              otsikko: 'Brunel 1827 — tunneli Thamesin alle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
               lyhyt: 'Nuori Brunel ohjaa kilpeä, joka kaivaa ensimmäistä tunnelia '
                 + 'purjehduskelpoisen joen alle.',
@@ -1014,7 +1014,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-lontoon-palo-1666',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Palo 1666',
+      otsikko: 'Historian hetki: Lontoon palo 1666',
       johdanto: 'Pudding Lanen leipomosta syyskuun 1666 yönä lähtenyt tuli poltti '
         + 'neljässä päivässä 13 200 taloa, ja Thames täyttyi veneistä, joihin '
         + 'ihmiset pakkasivat sen, mitä ehtivät.',
@@ -1033,7 +1033,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+          otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
           aika: '2.–5.9.1666',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
@@ -1065,7 +1065,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+              otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
               lyhyt: 'Thames täyttyy palon tieltä pakenevista veneistä, jotka on '
                 + 'lastattu huonekaluilla ja arkuilla.',
@@ -1078,7 +1078,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+              otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
               lyhyt: 'Palo tuhoaa myös The London Gazetten painopaikan; lehti '
                 + 'ilmestyy viikon viiveellä Savoysta.',
@@ -1109,7 +1109,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-shakespeare-globe-1599',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Globe 1599',
+      otsikko: 'Historian hetki: Shakespeare 1599',
       johdanto: 'Thamesin etelärannalle nousi 1599 vanhan teatterin hirsistä '
         + 'pyöreä puutalo, jossa penniyleisö seisoi taivasalla ja pojat '
         + 'näyttelivät naisia — ja sveitsiläinen matkailija kirjoitti nähneensä '
@@ -1128,7 +1128,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
+          otsikko: 'Shakespeare 1599 — Globe-teatteri aukeaa',
           aika: '21.9.1599',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-lahi-photo-v4.jpg',
@@ -1160,7 +1160,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'of the Globe Theatre, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
+              otsikko: 'Shakespeare 1599 — Globe-teatteri aukeaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
               lyhyt: 'Thomas Platter kuvailee Globen Julius Caesar -esitystä, '
                 + 'jossa yleisö syö ja kommentoi vapaasti.',
@@ -3176,7 +3176,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-beethoven-yhdeksas-1824',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Yhdeksäs 1824',
+      otsikko: 'Historian hetki: Beethoven 1824',
       johdanto: 'Kärntnertor-teatterissa nousi toukokuussa 1824 sali seisomaan '
         + 'viisi kertaa, ja kuuro säveltäjä näki sen vasta, kun nuori '
         + 'alttolaulaja käänsi hänet yleisöön päin.',
@@ -3194,7 +3194,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
+          otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
           aika: '7.5.1824',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
@@ -3225,7 +3225,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Symphony, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
+              otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
               lyhyt: 'Muusikot seuraavat Umlaufin tahtipuikkoa, jotta kuuron '
                 + 'Beethovenin partituuri pysyy koossa.',
@@ -3255,7 +3255,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-mozart-wien-1786',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Figaro 1786',
+      otsikko: 'Historian hetki: Mozart 1786',
       johdanto: 'Hofburgin vieressä sijainneessa hoviteatterissa kantaesitettiin '
         + 'toukokuussa 1786 ooppera kielletystä näytelmästä, ja yleisö vaati '
         + 'numeroita uusiksi niin, että keisarin oli puututtava asiaan.',
@@ -3273,7 +3273,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
+          otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
           aika: '1.5.1786',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg',
@@ -3305,7 +3305,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Figaro critical edition, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
+              otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
               lyhyt: 'Mozart johtaa Figaron häiden ensiesityksiä cembalosta '
                 + 'hoviteatterin tiiviin yleisön edessä.',
@@ -3354,7 +3354,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi',
+          otsikko: 'Wienin krahi 1873 — pörssi romahtaa',
           aika: '9.5.1873',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-lahi-photo-v4.jpg',
@@ -3382,7 +3382,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pörssin historia; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi',
+              otsikko: 'Wienin krahi 1873 — pörssi romahtaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-kauko-photo-v4.jpg',
               lyhyt: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
               selite: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
@@ -4783,7 +4783,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-berliinin-muuri-1961',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Muuri 1961',
+      otsikko: 'Historian hetki: Berliini 1961',
       johdanto: 'Elokuun 1961 sunnuntaiaamuna berliiniläiset heräsivät '
         + 'ilmavasaroihin: kadun poikki vedettiin piikkilanka, ja Bernauer '
         + 'Straßella talon ovi ja sen edustan jalkakäytävä jäivät eri valtioihin.',
@@ -4801,7 +4801,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+          otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
           aika: '13.8.1961',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
@@ -4833,7 +4833,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1961, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+              otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
               lyhyt: 'Opiskelijan tie isän luo katkeaa piikkilankaan, kun '
                 + 'tuhannet sulkevat Berliinin rajan.',
@@ -4846,7 +4846,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'August 1961, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+              otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
               lyhyt: 'BILD tiivistää Berliinin muurin yön otsikkoon panssareista, '
                 + 'vaikka mitta on tuttu naapuri.',
@@ -5463,7 +5463,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-galilei-kaukoputki-1610',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Padova 1610',
+      otsikko: 'Historian hetki: Galilei 1610',
       johdanto: 'Tammikuussa 1610 Padovan yliopiston professori suuntasi itse '
         + 'rakentamansa kaukoputken Jupiteriin ja näki neljä valopistettä, jotka '
         + 'ilta illalta vaihtoivat paikkaa — ensimmäiset kappaleet, joiden '
@@ -5482,7 +5482,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
+          otsikko: 'Galilei 1610 — Jupiterin kuut löytyvät',
           aika: 'tammikuu 1610',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg',
@@ -5520,7 +5520,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '4.9.2026.',
           galleria: [
             {
-              otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
+              otsikko: 'Galilei 1610 — Jupiterin kuut löytyvät',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
               lyhyt: 'Avustaja kirjaa Galilein havainnot, kunnes toistuva liike '
                 + 'paljastaa neljä Jupiterin kuuta.',
@@ -7012,7 +7012,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+          otsikko: 'Curie 1898 — radiumin ja poloniumin löytö',
           aika: '1898',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
@@ -7043,7 +7043,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'näyttelyaineisto, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+              otsikko: 'Curie 1898 — radiumin ja poloniumin löytö',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
               lyhyt: 'Curien pariskunnan laboratorio on kylmä pihavaja, jonka '
                 + 'säteilyriskejä kumpikaan ei vielä tunne.',
@@ -7091,7 +7091,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+          otsikko: 'Lavoisier 1780 — modernin kemian synty',
           aika: 'noin 1780',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
@@ -7121,7 +7121,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lavoisier\'s instruments, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+              otsikko: 'Lavoisier 1780 — modernin kemian synty',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
               lyhyt: 'Marie-Anne Lavoisier dokumentoi kokeet, kun Antoine mittaa '
                 + 'kaasuja heidän laboratoriossaan.',
@@ -7170,7 +7170,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+          otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
           aika: '1862',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
@@ -7201,7 +7201,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'years 1862–1877, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+              otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
               lyhyt: 'Viikkoja jatkunut odotus vahvistaa Pasteurin kokeen: elämä '
                 + 'ei synny liemeen itsestään.',
@@ -7231,7 +7231,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-eiffel-torni-1888',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Torni 1888',
+      otsikko: 'Historian hetki: Eiffel-torni 1888',
       johdanto: 'Champ de Marsilla niittaajat seisoivat kesällä 1888 yli sadan '
         + 'metrin korkeudessa ilman kaiteita ja takoivat kuumia niittejä rautaan, '
         + 'jonka piti seisoa vain kaksikymmentä vuotta.',
@@ -7249,7 +7249,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
+          otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
           aika: 'elokuu 1888',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
@@ -7281,7 +7281,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'history, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
+              otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
               lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet '
                 + 'esivalmistetut osat kootaan yhdeksi torniksi.',
@@ -7330,7 +7330,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+          otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
           aika: '14.7.1789',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
@@ -7366,7 +7366,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'the Bastille, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+              otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
               lyhyt: 'Bastiljin sveitsiläinen vartija yrittää kadota pihalle '
                 + 'ennen kuin väkijoukko saavuttaa hänet.',
@@ -7416,7 +7416,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+          otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
           aika: '28.12.1895',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
@@ -7449,7 +7449,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lumière, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+              otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
               lyhyt: 'Avustaja pitää kameran kammen tasaisena, jotta Lumièren '
                 + 'elokuvan ihmiset jatkavat kävelyään.',
@@ -7462,7 +7462,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Lumière, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+              otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
               lyhyt: 'Toimittaja yrittää selittää lukijoille liikkuvaa kuvaa, '
                 + 'jota kukaan ei ole ennen nähnyt.',
@@ -8113,7 +8113,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-olympia-ateena-1896',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Louis 1896',
+      otsikko: 'Historian hetki: Maraton 1896',
       johdanto: 'Marmoristadionille juoksi huhtikuussa 1896 Marousin vedenkantaja '
         + 'kahden prinssin saattamana, ja ensimmäisten nykyaikaisten '
         + 'olympialaisten isäntämaa sai voiton, jota se oli odottanut koko '
@@ -8132,7 +8132,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
+          otsikko: 'Maraton 1896 — Louis voittaa ensimmäisen kisan',
           aika: '10.4.1896',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
@@ -8164,7 +8164,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Athens 1896 report, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
+              otsikko: 'Maraton 1896 — Louis voittaa ensimmäisen kisan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
               lyhyt: 'Louisin isä etsii poikansa kasvoja väkijoukosta stadionilla '
                 + 'Kreikan juhliessa olympiavoittoa.',
@@ -9446,7 +9446,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-konstantinopoli-1453',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Konstantinopoli',
+      otsikko: 'Historian hetki: Bysantti 1453',
       johdanto: 'Toukokuun 29. päivän aamuna 1453 kahdeksantuhatta puolustajaa '
         + 'seisoi kahdentoista mailin muurilla, ja sama aamu päättyi Hagia Sofian '
         + 'ovien murtumiseen — tuhatvuotinen keisarikunta loppui yhdessä päivässä.',
@@ -9464,7 +9464,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
+          otsikko: 'Bysantti 1453 — Konstantinopoli kaatuu',
           aika: '29.5.1453',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
@@ -9498,7 +9498,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'history, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
+              otsikko: 'Bysantti 1453 — Konstantinopoli kaatuu',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
               lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin '
                 + 'reilun seitsemän viikon piirityksen.',
@@ -11896,7 +11896,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-vasco-da-gama-restelo-1497',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Restelo 1497',
+      otsikko: 'Historian hetki: Vasco da Gama 1497',
       johdanto: 'Belémin rannalla seisoi vuonna 1497 pieni merimiesten kappeli, '
         + 'ei vielä luostaria; siellä Vasco da Gaman miehet valvoivat viimeisen '
         + 'yönsä Euroopassa.',
@@ -11914,7 +11914,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
+          otsikko: 'Vasco da Gama 1497 — lähtö kohti Intiaa',
           aika: '8.7.1497',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-lahi-photo-v3.jpg',
@@ -11944,7 +11944,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1497–1499*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
+              otsikko: 'Vasco da Gama 1497 — lähtö kohti Intiaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
               lyhyt: 'Da Gaman lähtö on rannalle sekä lupaus vauraudesta että '
                 + 'mahdollinen viimeinen hyvästi.',
@@ -11974,7 +11974,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-kolumbus-portugali-1484',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Lissabon 1484',
+      otsikko: 'Historian hetki: Kolumbus 1484',
       johdanto: 'Kolumbus asui Lissabonissa toistakymmentä vuotta ja esitti '
         + 'suunnitelmansa ensin Portugalin kuninkaalle — joka sanoi ei, ja oli '
         + 'laskuopin puolesta oikeassa.',
@@ -11992,7 +11992,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
+          otsikko: 'Kolumbus 1484 — Portugali hylkää suunnitelman',
           aika: '1484',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-lahi-photo-v3.jpg',
@@ -12021,7 +12021,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Harrisse Collection; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
+              otsikko: 'Kolumbus 1484 — Portugali hylkää suunnitelman',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
               lyhyt: 'Juhana II:n hovi pitää Kolumbuksen matkaa turhana riskinä; '
                 + 'hylätty suunnittelija lähtee Kastiliaan.',
@@ -13232,7 +13232,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-kolumbus-santa-fe-1492',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Santa Fé 1492',
+      otsikko: 'Historian hetki: Kolumbus 1492',
       johdanto: 'Granadan viereen piiritystä varten rakennettu leirikaupunki '
         + 'Santa Fé näki 17. huhtikuuta 1492 sopimuksen, joka teki genovalaisesta '
         + 'purjehtijasta amiraalin ennen kuin hän oli löytänyt mitään.',
@@ -13251,7 +13251,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
+          otsikko: 'Kolumbus 1492 — kuningatar hyväksyy matkan',
           aika: '17.4.1492',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-lahi-photo-v3.jpg',
@@ -13285,7 +13285,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'of Privileges*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
+              otsikko: 'Kolumbus 1492 — kuningatar hyväksyy matkan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
               lyhyt: 'Huhtikuun 1492 sopimuksessa Kolumbukselle ratkaisee paitsi '
                 + 'matka myös hänen tuleva asemansa.',
@@ -14630,7 +14630,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-michelangelo-sikstus-1510',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Sikstus 1510',
+      otsikko: 'Historian hetki: Michelangelo 1510',
       johdanto: 'Vatikaanin kappelin holvin alla seisoi vuonna 1510 '
         + 'kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti päivän '
         + 'laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.',
@@ -14648,7 +14648,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
+          otsikko: 'Michelangelo 1510 — Sikstuksen katto',
           aika: '1510',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
@@ -14679,7 +14679,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Chapel ceiling, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
+              otsikko: 'Michelangelo 1510 — Sikstuksen katto',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
               lyhyt: 'Vuonna 1510 Sikstuksen katosta on valmiina vasta puolikas, '
                 + 'ja työ etenee alue kerrallaan.',
@@ -16327,7 +16327,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-sibelius-finlandia-1899',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Suomi herää 1899',
+      otsikko: 'Historian hetki: Sibelius 1899',
       johdanto: 'Erottajan teatterissa esitettiin marraskuussa 1899 kuusi '
         + 'historiallista kuvaelmaa sanomalehtimiesten eläkekassan hyväksi — ja '
         + 'sensori joutui kuuntelemaan protestia, jota kukaan ei sanonut ääneen.',
@@ -16346,7 +16346,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
+          otsikko: 'Sibelius 1899 — Finlandian synty',
           aika: '4.11.1899',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg',
@@ -16378,7 +16378,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
+              otsikko: 'Sibelius 1899 — Finlandian synty',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
               lyhyt: 'Finlandian protesti piilotetaan kuvaelmiin ja musiikkiin '
                 + 'niin, ettei sensori voi puuttua siihen.',
@@ -18726,7 +18726,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+          otsikko: 'Mendelejev 1869 — jaksollinen järjestelmä',
           aika: '6.3.1869',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg',
@@ -18757,7 +18757,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Assembling the periodic table, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+              otsikko: 'Mendelejev 1869 — jaksollinen järjestelmä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
               lyhyt: 'Mendelejev korjailee luonnoksiaan ja päättää lähettää 200 '
                 + 'painosta taulukostaan kollegoille.',
@@ -18787,7 +18787,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-pietari-perustus-1703',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Jänissaari 1703',
+      otsikko: 'Historian hetki: Pietari 1703',
       johdanto: 'Nevan suiston soisella saarella mitattiin toukokuussa 1703 '
         + 'kuuden bastionin linnoitusta ruotsalaisia vastaan — kukaan '
         + 'lapiomiehistä ei tiennyt seisovansa tulevan pääkaupungin keskustassa.',
@@ -18805,7 +18805,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
+          otsikko: 'Pietari 1703 — tsaari perustaa kaupungin',
           aika: '27.5.1703',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-lahi-photo-v4.jpg',
@@ -18837,7 +18837,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'foundation of St Petersburg, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
+              otsikko: 'Pietari 1703 — tsaari perustaa kaupungin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
               lyhyt: 'Toukokuussa 1703 Jänissaarella on vasta soinen maa ja '
                 + 'mittanaruja tulevan Pietarin sijaan.',
@@ -21324,7 +21324,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-franz-ferdinandin-salamurha-1914',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Latin-silta 1914',
+      otsikko: 'Historian hetki: Sarajevo 1914',
       johdanto: 'Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan '
         + 'kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, '
         + 'joka luuli tehtävänsä jo epäonnistuneen.',
@@ -21342,7 +21342,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Sarajevo 1914 — auto pysähtyy väärään paikkaan',
+          otsikko: 'Sarajevo 1914 — Franz Ferdinand murhataan',
           aika: '28.6.1914',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franz-ferdinandin-salamurha-1914-lahi-photo-v4.jpg',
@@ -21370,7 +21370,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '28.9.2026.',
           galleria: [
             {
-              otsikko: 'Sarajevo 1914 — auto pysähtyy väärään paikkaan',
+              otsikko: 'Sarajevo 1914 — Franz Ferdinand murhataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franz-ferdinandin-salamurha-1914-kauko-photo-v4.jpg',
               lyhyt: 'Franz Ferdinandin autosaattue Latin-sillan luona.',
               selite: 'Franz Ferdinandin autosaattue Latin-sillan luona.',
@@ -27595,7 +27595,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+          otsikko: 'Ensijuna 1909 — rautatie saapuu Rovaniemelle',
           aika: '1909',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-lahi-photo-v4.jpg',
@@ -27621,7 +27621,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennetun ympäristön historia, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+              otsikko: 'Ensijuna 1909 — rautatie saapuu Rovaniemelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-kauko-photo-v4.jpg',
               lyhyt: 'Höyryjuna saapuu Rovaniemen puuasemalle vuonna 1909.',
               selite: 'Rovaniemen vuoden 1909 rautatieasemalle saapuu höyryjuna; '
@@ -28215,7 +28215,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Arkadi 1866 — viimeinen ovi',
+          otsikko: 'Arkadi 1866 — luostari räjähtää',
           aika: '9.11.1866',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-arkadin-luostarin-rajahdys-1866-lahi-photo-v4.jpg',
@@ -28242,7 +28242,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Arkadi Monastery, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Arkadi 1866 — viimeinen ovi',
+              otsikko: 'Arkadi 1866 — luostari räjähtää',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-arkadin-luostarin-rajahdys-1866-kauko-photo-v4.jpg',
               lyhyt: 'Arkadin luostari iltahämärässä marraskuun 1866 piirityksen aikana.',
               selite: 'Arkadin luostarin kalkkikivijulkisivu ja lähestyvät '
@@ -28834,7 +28834,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-roger-ii-cefalu-lupaus-1131',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Cefalùn lupaus',
+      otsikko: 'Historian hetki: Roger II 1131',
       johdanto: 'Tarinan mukaan kuningas Roger II lupasi myrskyssä rakentaa '
         + 'katedraalin sinne, minne pääsisi hengissä rantaan — ja hänen laivansa '
         + 'ajautui Cefalùhun 1131.',
@@ -28852,7 +28852,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+          otsikko: 'Roger II 1131 — lupaus myrskyssä',
           aika: '1131',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-lahi-photo-v4.jpg',
@@ -28880,7 +28880,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Cathedral of Cefalù, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+              otsikko: 'Roger II 1131 — lupaus myrskyssä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-kauko-photo-v4.jpg',
               lyhyt: 'Pieni normannialus kamppailee aaltoja vastaan La Roccan edustalla.',
               selite: 'Myrskyävä meri ja Cefalùn La Rocca muodostavat näyttämön '
@@ -31737,7 +31737,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-nansen-fram-1893',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Fram 1893',
+      otsikko: 'Historian hetki: Nansen 1893',
       johdanto: 'Kristianian rannat olivat mustanaan väkeä 24. kesäkuuta 1893, '
         + 'kun vuonolle liukui pyöreäpohjainen laiva, jonka oli tarkoitus jäätyä '
         + 'kiinni tahallaan.',
@@ -31755,7 +31755,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+          otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
           aika: '24.6.1893',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-lahi-photo-v3.jpg',
@@ -31785,7 +31785,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Expedition (1893–1896)*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+              otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-kauko-photo-v3.jpg',
               lyhyt: 'Omaiset odottavat Framin uutisia lähes kolme vuotta '
                 + 'tietämättä, onnistuuko Nansenin uhkapeli.',
@@ -31797,7 +31797,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Fram Expedition (1893–1896)*; tarkistettu 3.9.2026.',
             },
             {
-              otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+              otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
               lyhyt: 'Eva Nansen jää odottamaan miestä, joka lähtee '
                 + 'tarkoituksella kadota Jäämeren ahtojäihin.',
@@ -33279,7 +33279,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-christiansborgin-palo-1884',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Linnanpalo 1884',
+      otsikko: 'Historian hetki: Kööpenhamina 1884',
       johdanto: 'Christiansborgin linna paloi lähes maan tasalle 3. lokakuuta '
         + '1884 — hoviteatteri, ratsastushalli ja linnankirkko selvisivät, ja '
         + 'kolmannen linnan rakentaminen alkoi vasta parinkymmenen vuoden '
@@ -33298,7 +33298,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Christiansborg 1884 — savu valtaosien alla',
+          otsikko: 'Kööpenhamina 1884 — Christiansborg palaa',
           aika: '3.10.1884',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-christiansborgin-palo-1884-lahi-photo-v4.jpg',
@@ -33325,7 +33325,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Christiansborgin historia; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Christiansborg 1884 — savu valtaosien alla',
+              otsikko: 'Kööpenhamina 1884 — Christiansborg palaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-christiansborgin-palo-1884-kauko-photo-v4.jpg',
               lyhyt: 'Kööpenhaminan Christiansborg palaa lokakuussa 1884.',
               selite: 'Kööpenhaminan Christiansborg palaa lokakuussa 1884.',
@@ -34042,7 +34042,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-siegfried-ostaa-bockin-963',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Bockin kauppa 963',
+      otsikko: 'Historian hetki: Luxemburg 963',
       johdanto: 'Koko Luxemburgin kaupunki syntyi kaupasta: kreivi Siegfried '
         + 'hankki jyrkän Bock-kallion vuonna 963 ja rakensi sen päälle linnan, '
         + 'jonka ympärille kaupunki kasvoi.',
@@ -34060,7 +34060,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+          otsikko: 'Luxemburg 963 — kreivi ostaa Bock-kallion',
           aika: '963',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-siegfried-ostaa-bockin-963-lahi-photo-v4.jpg',
@@ -34087,7 +34087,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Office, Bock Promontory, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+              otsikko: 'Luxemburg 963 — kreivi ostaa Bock-kallion',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-siegfried-ostaa-bockin-963-kauko-photo-v4.jpg',
               lyhyt: 'Paljas Bock-kallio kohoaa Alzetten metsäisen jokimutkan yllä.',
               selite: 'Bockin kallioniemi ennen linnan ja kaupungin rakentamista; '
@@ -34505,7 +34505,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
+          otsikko: 'Nikosia 1878 — Britannia ottaa Kyproksen',
           aika: '12.7.1878',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg',
@@ -34529,7 +34529,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
+              otsikko: 'Nikosia 1878 — Britannia ottaa Kyproksen',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-kauko-photo-v4.jpg',
               lyhyt: 'Nikosian vanhan kaupungin ympäristö Britannian hallinnon '
                 + 'alkaessa; tarkka lipunnostopaikka on epävarma.',
@@ -38214,7 +38214,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-tutankhamon-carter-1922',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Luxor 1922',
+      otsikko: 'Historian hetki: Carter 1922',
       johdanto: 'Marraskuussa 1922 Howard Carter työnsi kynttilän reiästä oveen, '
         + 'joka oli ollut muurattuna yli kolme tuhatta vuotta — ja Kuninkaiden '
         + 'laaksosta löytyi ainoa lähes koskematon faaraonhauta.',
@@ -38232,7 +38232,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
+          otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
           aika: '26.11.1922',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
@@ -38265,7 +38265,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
+              otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
               lyhyt: 'Lady Evelyn Herbert seuraa jännittyneenä, kun yli '
                 + 'kolmentuhannen vuoden hiljaisuus rikkoutuu.',
@@ -38277,7 +38277,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
             },
             {
-              otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
+              otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
               lyhyt: 'Brittilehti kuvittaa Carterin löydön piirroksin, ennen kuin '
                 + 'varsinaiset valokuvat leviävät.',
@@ -64370,7 +64370,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+          otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
           aika: '24.5.1883',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg',
@@ -64404,7 +64404,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+              otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
               lyhyt: 'Washington Roebling seuraa sillan avajaisia kotoaan, '
                 + 'sivussa juhlivasta väkijoukosta.',
@@ -64418,7 +64418,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Bridge, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+              otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
               lyhyt: 'Brooklyn Daily Eagle juhlii siltaa erikoisnumerossa, mutta '
                 + 'Emily Roeblingin työ jää rivien väliin.',
@@ -70890,7 +70890,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-suuri-piiritys-paattyy-1565',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Apu saapuu 1565',
+      otsikko: 'Historian hetki: Malta 1565',
       johdanto: 'Neljä kuukautta kestänyt piiritys päättyi, kun sisilialainen '
         + 'apulaivasto laski maihin Mellieħan lahdessa syyskuun alussa 1565 — '
         + 'osmaanit purjehtivat pois muutamassa päivässä.',
@@ -70908,7 +70908,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Valletta 1565 — purjeet horisontissa',
+          otsikko: 'Malta 1565 — Suuri piiritys päättyy',
           aika: '7.9.1565',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suuri-piiritys-paattyy-1565-lahi-photo-v4.jpg',
@@ -70938,7 +70938,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Siege / Victory Day, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Valletta 1565 — purjeet horisontissa',
+              otsikko: 'Malta 1565 — Suuri piiritys päättyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suuri-piiritys-paattyy-1565-kauko-photo-v4.jpg',
               lyhyt: 'Sisiliasta tullut apulaivasto tuo väkeä maihin Maltan rannikolla.',
               selite: 'Mellieħan lahdella apulaivaston veneet kuljettavat '
@@ -70965,7 +70965,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-pyhan-elmon-linnake-1565',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Fort St Elmo 1565',
+      otsikko: 'Historian hetki: Pyhä Elmo 1565',
       johdanto: 'Pyhän Elmon linnake kaatui 23. kesäkuuta 1565 lähes 28 päivän '
         + 'puolustuksen jälkeen — tappio, joka silti kulutti osmanijoukkoja niin '
         + 'paljon, että koko piiritys epäonnistui.',
@@ -70984,7 +70984,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pyhä Elmo 1565 — viimeinen aamu muurilla',
+          otsikko: 'Pyhä Elmo 1565 — linnake kaatuu piirityksessä',
           aika: '23.6.1565',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pyhan-elmon-linnake-1565-lahi-photo-v4.jpg',
@@ -71010,7 +71010,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Malta, Fort St Elmo; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Pyhä Elmo 1565 — viimeinen aamu muurilla',
+              otsikko: 'Pyhä Elmo 1565 — linnake kaatuu piirityksessä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pyhan-elmon-linnake-1565-kauko-photo-v4.jpg',
               lyhyt: 'Pyhän Elmon linnake Maltan suuren piirityksen aikana.',
               selite: 'Pyhän Elmon linnake Maltan suuren piirityksen aikana.',
@@ -78518,7 +78518,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-machu-picchu-1911',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Machu Picchu 1911',
+      otsikko: 'Historian hetki: Bingham 1911',
       johdanto: 'Heinäkuussa 1911 yalelainen Hiram Bingham kiipesi paikallisen '
         + 'viljelijän ja yksitoistavuotiaan pojan perässä harjanteelle, jolla '
         + 'kaksi perhettä viljeli inkojen terasseja — ja lehdet tekivät hänestä '
@@ -78537,7 +78537,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
+          otsikko: 'Bingham 1911 — Machu Picchun löytö',
           aika: '24.7.1911',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg',
@@ -78569,7 +78569,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Picchu and Hiram Bingham; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
+              otsikko: 'Bingham 1911 — Machu Picchun löytö',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg',
               lyhyt: 'Paikallisille perheille Machu Picchun kiviseinät ovat '
                 + 'arkea, jonka ulkopuolinen kutsuu löydöksi.',

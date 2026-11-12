@@ -4045,7 +4045,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
+          otsikko: 'Endeavour 1768 — Cookin tutkimusmatka alkaa',
           aika: '26.8.1768',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-lahi-photo-v3.jpg',
@@ -4080,7 +4080,7 @@ export const MAA_KATEGORIAT = {
             + '3.9.2026.',
           galleria: [
             {
-              otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
+              otsikko: 'Endeavour 1768 — Cookin tutkimusmatka alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
               lyhyt: 'Hiililaivaan pakattu tiede- ja taiteilijaryhmä lähtee '
                 + 'kolmivuotiselle Tyynenmeren purjehdukselle.',
@@ -4131,7 +4131,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Southampton 1912 — metri törmäyksestä',
+          otsikko: 'Titanic 1912 — neitsytmatka alkaa',
           aika: '10.4.1912',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-lahi-photo-v3.jpg',
@@ -4160,7 +4160,7 @@ export const MAA_KATEGORIAT = {
             + 'sekä Michel ja Edmond Navratilista; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Southampton 1912 — metri törmäyksestä',
+              otsikko: 'Titanic 1912 — neitsytmatka alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
               lyhyt: 'Kaksi poikaa matkustaa Titanicissa väärällä nimellä; isän '
                 + 'kuoltua heidät tunnetaan orpoina lehdissä.',
@@ -4175,7 +4175,7 @@ export const MAA_KATEGORIAT = {
                 + '3.9.2026.',
             },
             {
-              otsikko: 'Southampton 1912 — metri törmäyksestä',
+              otsikko: 'Titanic 1912 — neitsytmatka alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
               lyhyt: 'Radisti Phillips lähettää hätäkutsuja veden noustessa '
                 + 'Titanicissa; Bride selviää, Phillips ei.',
@@ -4226,7 +4226,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+          otsikko: 'Newton 1666 — valkoinen valo hajoaa väreiksi',
           aika: '1666',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-lahi-photo-v4.jpg',
@@ -4256,7 +4256,7 @@ export const MAA_KATEGORIAT = {
             + 'Manor, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+              otsikko: 'Newton 1666 — valkoinen valo hajoaa väreiksi',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg',
               lyhyt: 'Ruton sulkema Cambridge vapauttaa Newtonin kokeilemaan '
                 + 'prismaa lapsuudenkotinsa pimeässä huoneessa.',
@@ -4304,7 +4304,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+          otsikko: 'Jenner 1796 — ensimmäinen rokotus',
           aika: '14.5.1796',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-lahi-photo-v4.jpg',
@@ -4335,7 +4335,7 @@ export const MAA_KATEGORIAT = {
             + 'Cottage, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+              otsikko: 'Jenner 1796 — ensimmäinen rokotus',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
               lyhyt: 'Jennerin rokotuskoe nojaa Sarah Nelmesin lehmänrokkoon ja '
                 + 'pojan isän lupaan osallistua.',
@@ -5348,7 +5348,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+          otsikko: 'Rosetta 1799 — kivi, jolla hieroglyfit avattiin',
           aika: 'heinäkuu 1799',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg',
@@ -5380,7 +5380,7 @@ export const MAA_KATEGORIAT = {
             + 'Stone; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+              otsikko: 'Rosetta 1799 — kivi, jolla hieroglyfit avattiin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
               lyhyt: 'Fort Julienin korjaajat kampeavat Rosettan kiven esiin '
                 + 'arkisen purkutyön yhteydessä.',
@@ -5392,7 +5392,7 @@ export const MAA_KATEGORIAT = {
                 + 'Rosetta Stone; tarkistettu 4.9.2026.',
             },
             {
-              otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+              otsikko: 'Rosetta 1799 — kivi, jolla hieroglyfit avattiin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
               lyhyt: 'Ranskalaislehti raportoi vuonna 1799 Rosettan kivilöydöstä '
                 + 'varovaisena, ilman sensaatio-otsikkoa.',
@@ -5441,7 +5441,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+          otsikko: 'Suez 1869 — kanava avataan',
           aika: '17.11.1869',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg',
@@ -5474,7 +5474,7 @@ export const MAA_KATEGORIAT = {
             + 'history, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+              otsikko: 'Suez 1869 — kanava avataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
               lyhyt: 'L’Aigle johtaa 77 aluksen jonoa Suezin kanavaan, ja '
                 + 'hiljainen ranta muuttuu meriväyläksi.',
@@ -5487,7 +5487,7 @@ export const MAA_KATEGORIAT = {
                 + 'Canal history, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+              otsikko: 'Suez 1869 — kanava avataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
               lyhyt: 'Kuvittaja lähettää Port Saidista muistiinpanot, joista '
                 + 'Lontoossa tehdään avajaisten puukaiverrus.',
@@ -6171,7 +6171,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pompeji 79 — ropina katolla',
+          otsikko: 'Pompeji 79 — Vesuvius tuhoaa kaupungin',
           aika: '79 jaa.',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
@@ -6204,7 +6204,7 @@ export const MAA_KATEGORIAT = {
             + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Pompeji 79 — ropina katolla',
+              otsikko: 'Pompeji 79 — Vesuvius tuhoaa kaupungin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
               lyhyt: 'Plinius vertaa Vesuviuksen pilveä pinjapuuhun, mutta '
                 + 'forumilla vertaus ei vielä auta ketään.',
@@ -6987,7 +6987,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+          otsikko: 'Trafalgar 1805 — Nelsonin laiva ennen taistelua',
           aika: '21.10.1805',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi-photo-v3.jpg',
@@ -7021,7 +7021,7 @@ export const MAA_KATEGORIAT = {
             + 'Victory -kokoelma; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+              otsikko: 'Trafalgar 1805 — Nelsonin laiva ennen taistelua',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
               lyhyt: 'Nuori ruutipoika odottaa Victoryn kannella ensimmäistä '
                 + 'laukausta alivoimaisessa laivastossa.',
@@ -7035,7 +7035,7 @@ export const MAA_KATEGORIAT = {
                 + 'HMS Victory -kokoelma; tarkistettu 3.9.2026.',
             },
             {
-              otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+              otsikko: 'Trafalgar 1805 — Nelsonin laiva ennen taistelua',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
               lyhyt: 'Lontoo lukee samasta uutisesta sekä voiton Napoleonista '
                 + 'että Nelsonin kuoleman Trafalgarilla.',
@@ -7067,7 +7067,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-kolumbus-palos-1492',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Palos 1492',
+      otsikko: 'Historian hetki: Palosin lähtö 1492',
       johdanto: 'Kahdeksankymmentä kilometriä Sevillasta länteen, Río Tinton '
         + 'suistossa, kolme laivaa odotti laskuvettä 3. elokuuta 1492 — ja '
         + 'lähtijät olivat tämän saman jokisuun omia merenkulkijoita.',
@@ -7085,7 +7085,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+          otsikko: 'Palosin lähtö 1492 — Kolumbus purjehtii länteen',
           aika: '3.8.1492',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
@@ -7118,7 +7118,7 @@ export const MAA_KATEGORIAT = {
             + 'tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+              otsikko: 'Palosin lähtö 1492 — Kolumbus purjehtii länteen',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
               lyhyt: 'Kolme laivaa katoaa Río Tinton suulle; retki etsii Aasiaa '
                 + 'mutta avaa yhteyden Atlantin yli.',
@@ -7148,7 +7148,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-magalhaes-sanlucar-1519',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Sanlúcar 1519',
+      otsikko: 'Historian hetki: Magalhães 1519',
       johdanto: 'Sevillasta lähdettiin 10. elokuuta 1519 Guadalquivirjokea alas, '
         + 'ja jokisuussa Sanlúcar de Barramedassa viisi laivaa odotti vielä yli '
         + 'viisi viikkoa ennen kuin ne katosivat länteen.',
@@ -7165,7 +7165,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+          otsikko: 'Magalhães 1519 — maailmanympärimatka alkaa',
           aika: '20.9.1519',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
@@ -7196,7 +7196,7 @@ export const MAA_KATEGORIAT = {
             + 'tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+              otsikko: 'Magalhães 1519 — maailmanympärimatka alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
               lyhyt: 'Viisi laivaa lähtee Sanlúcarista; lähes kolme vuotta '
                 + 'myöhemmin palaa vain uupunut Victoria.',
@@ -8857,7 +8857,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-rontgen-kasi-1895',
       nimi: 'Röntgenkuva',
-      otsikko: 'Historian hetki: Würzburg 1895',
+      otsikko: 'Historian hetki: Röntgen 1895',
       johdanto: 'Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta '
         + '1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa '
         + 'vihkisormus — ja lääketiede sai uuden silmän.',
@@ -8875,7 +8875,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
+          otsikko: 'Röntgen 1895 — röntgensäteiden löytö',
           aika: '22.12.1895',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v4.jpg',
@@ -8907,7 +8907,7 @@ export const MAA_KATEGORIAT = {
             + 'UNESCO dossier, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
+              otsikko: 'Röntgen 1895 — röntgensäteiden löytö',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
               lyhyt: 'Röntgen kutsuu vaimonsa salaiseen kokeeseen, josta tulee '
                 + 'ensimmäinen kuva ihmisen sisuksista.',
@@ -8955,7 +8955,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Mainz 1454 — sivu syntyy metallista',
+          otsikko: 'Gutenberg 1454 — ensimmäiset painetut sivut',
           aika: '1454',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
@@ -8987,7 +8987,7 @@ export const MAA_KATEGORIAT = {
             + 'Gutenberg Bibles, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Mainz 1454 — sivu syntyy metallista',
+              otsikko: 'Gutenberg 1454 — ensimmäiset painetut sivut',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
               lyhyt: 'Gutenbergin Raamattu syntyy monen käsiparin vuosien työnä '
                 + 'noin 180 kappaleen painoksena.',
@@ -9036,7 +9036,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+          otsikko: 'Luther 1517 — 95 teesiä Wittenbergissä',
           aika: '31.10.1517',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-lahi-photo-v4.jpg',
@@ -9069,7 +9069,7 @@ export const MAA_KATEGORIAT = {
             + 'the theses, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+              otsikko: 'Luther 1517 — 95 teesiä Wittenbergissä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
               lyhyt: 'Linnankirkon ovi toimii ilmoitustauluna; teesien leviämisen '
                 + 'ratkaisee kirjapaino, ei vasara.',
@@ -10765,7 +10765,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-afsluitdijkin-viimeinen-aukko-1932',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Vlieter 1932',
+      otsikko: 'Historian hetki: Afsluitdijk 1932',
       johdanto: 'Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 '
         + 'kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.',
       tehtava: {
@@ -10782,7 +10782,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'De Vlieter 1932 — meri lakkaa kahtia jakamasta',
+          otsikko: 'Afsluitdijk 1932 — padon viimeinen aukko',
           aika: '28.5.1932',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-afsluitdijkin-viimeinen-aukko-1932-lahi-photo-v4.jpg',
@@ -10810,7 +10810,7 @@ export const MAA_KATEGORIAT = {
             + 'Archief, Afsluitdijkin sulkeminen; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'De Vlieter 1932 — meri lakkaa kahtia jakamasta',
+              otsikko: 'Afsluitdijk 1932 — padon viimeinen aukko',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-afsluitdijkin-viimeinen-aukko-1932-kauko-photo-v4.jpg',
               lyhyt: 'Zuiderzeen sulkevan padon viimeinen aukko täytetään 1932.',
               selite: 'Zuiderzeen sulkevan padon viimeinen aukko täytetään 1932.',
@@ -12671,7 +12671,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-einstein-patenttitoimisto-1905',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Bern 1905',
+      otsikko: 'Historian hetki: Einstein 1905',
       johdanto: 'Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan '
         + 'tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta '
         + 'ja muutti fysiikan.',
@@ -12689,7 +12689,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bern 1905 — patenttipino ja valonsäde',
+          otsikko: 'Einstein 1905 — suhteellisuusteoria syntyy',
           aika: '1905',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg',
@@ -12721,7 +12721,7 @@ export const MAA_KATEGORIAT = {
             + 'and Bern, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Bern 1905 — patenttipino ja valonsäde',
+              otsikko: 'Einstein 1905 — suhteellisuusteoria syntyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
               lyhyt: 'Virkailija Einstein käsittelee patenttihakemuksia ennen '
                 + 'kuin ehtii omaan vuoden 1905 fysiikkaansa.',
@@ -12751,7 +12751,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-gotthardin-lapimurto-1880',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Läpimurto 1880',
+      otsikko: 'Historian hetki: Gotthard 1880',
       johdanto: 'Gotthardin rautatietunnelin pohjois- ja eteläpuolen louhijat '
         + 'kohtasivat syvällä kalliossa 29. helmikuuta 1880 — insinööri Louis '
         + 'Favre ei elänyt näkemään sitä.',
@@ -12770,7 +12770,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Gotthard 1880 — valokuva kulkee kalliossa',
+          otsikko: 'Gotthard 1880 — tunnelin läpimurto',
           aika: '29.2.1880',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gotthardin-lapimurto-1880-lahi-photo-v4.jpg',
@@ -12800,7 +12800,7 @@ export const MAA_KATEGORIAT = {
             + '28.9.2026.',
           galleria: [
             {
-              otsikko: 'Gotthard 1880 — valokuva kulkee kalliossa',
+              otsikko: 'Gotthard 1880 — tunnelin läpimurto',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gotthardin-lapimurto-1880-kauko-photo-v4.jpg',
               lyhyt: 'Gotthardin tunnelin kaksi työryhmää yhdistyvät 1880.',
               selite: 'Gotthardin tunnelin kaksi työryhmää yhdistyvät 1880.',
@@ -13208,7 +13208,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-amundsen-etelanapa-1911',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Etelänapa 1911',
+      otsikko: 'Historian hetki: Amundsen 1911',
       johdanto: 'Etelänavalla oli 14. joulukuuta 1911 kello noin kolme '
         + 'iltapäivällä viisi miestä, kahdeksantoista koiraa ja yksi lipputanko.',
       tehtava: {
@@ -13225,7 +13225,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
+          otsikko: 'Amundsen 1911 — etelänavan valtaus',
           aika: '14.12.1911',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi-photo-v3.jpg',
@@ -13256,7 +13256,7 @@ export const MAA_KATEGORIAT = {
             + '3.9.2026.',
           galleria: [
             {
-              otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
+              otsikko: 'Amundsen 1911 — etelänavan valtaus',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
               lyhyt: 'Amundsenin ryhmä palaa navalta elossa, kun myöhemmin '
                 + 'saapuva Scottin ryhmä kuolee paluumatkalla.',
@@ -13270,7 +13270,7 @@ export const MAA_KATEGORIAT = {
                 + 'tarkistettu 3.9.2026.',
             },
             {
-              otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
+              otsikko: 'Amundsen 1911 — etelänavan valtaus',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
               lyhyt: 'Sähke tekee Amundsenista sankarin, kun taas Scottin ryhmä '
                 + 'on yhä vaarallisella paluumatkalla.',
@@ -13754,7 +13754,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-viikinkilaiva-roskilde-1040',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Roskilde 1040',
+      otsikko: 'Historian hetki: Viikingit 1040',
       johdanto: 'Roskildenvuonon pohjasta nostettiin vuosina 1957–1962 viisi '
         + 'viikinkilaivaa, jotka oli aikanaan upotettu sulkemaan väylä — ja juuri '
         + 'niiden ansiosta tiedetään tarkasti, miltä tuhat vuotta sitten lähtenyt '
@@ -13772,7 +13772,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+          otsikko: 'Viikingit 1040 — sotalaiva Roskildenvuonolla',
           aika: 'n. 1040',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
@@ -13806,7 +13806,7 @@ export const MAA_KATEGORIAT = {
             + 'tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+              otsikko: 'Viikingit 1040 — sotalaiva Roskildenvuonolla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
               lyhyt: 'Pitkälaiva kuljettaa kokonaista yhteisöä, sukulaisia ja '
                 + 'soutajia, Atlantille ja itään.',
@@ -19103,7 +19103,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-schliemann-troija-1873',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Troija 1873',
+      otsikko: 'Historian hetki: Schliemann 1873',
       johdanto: 'Toukokuun lopulla 1873 Hisarlıkin kaivannon seinämästä nousi '
         + 'kuparinen astia täynnä kultaa, ja Heinrich Schliemann nimesi sen '
         + 'Priamoksen aarteeksi — väärästä kerroksesta.',
@@ -19121,7 +19121,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
+          otsikko: 'Schliemann 1873 — Troijan aarre löytyy',
           aika: 'toukokuu 1873',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg',
@@ -19154,7 +19154,7 @@ export const MAA_KATEGORIAT = {
             + '150 years since the Treasure of Priam; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
+              otsikko: 'Schliemann 1873 — Troijan aarre löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
               lyhyt: 'Hisarlıkin kaivajat jatkavat työtään, kun Schliemann kokoaa '
                 + 'löydöt omaksi sankaritarinakseen.',
@@ -33895,7 +33895,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-wright-kitty-hawk-1903',
       nimi: 'Lento',
-      otsikko: 'Historian hetki: Kitty Hawk 1903',
+      otsikko: 'Historian hetki: Wrightit 1903',
       johdanto: 'Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 '
         + 'ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan '
         + 'otti mies, joka ei ollut koskaan ennen käyttänyt kameraa.',
@@ -33913,7 +33913,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
+          otsikko: 'Wrightit 1903 — ensimmäinen moottorilento',
           aika: '17.12.1903',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-lahi-photo-v3.jpg',
@@ -33944,7 +33944,7 @@ export const MAA_KATEGORIAT = {
             + 'Memorial, *The First Flight*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
+              otsikko: 'Wrightit 1903 — ensimmäinen moottorilento',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
               lyhyt: 'Ensi kertaa kameraa käyttävä pelastusmies vangitsee '
                 + 'Orvillen 36 metrin lennon Kitty Hawkissa.',
@@ -33993,7 +33993,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Philadelphia 1752 — kipinä avaimesta rystyseen',
+          otsikko: 'Franklin 1752 — leijakoe ukkospilvessä',
           aika: 'kesäkuu 1752',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franklin-leija-1752-lahi-photo-v4.jpg',
@@ -34057,7 +34057,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+          otsikko: 'Edison 1879 — hehkulamppu palaa 13 tuntia',
           aika: '22.10.1879',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-lahi-photo-v4.jpg',
@@ -34089,7 +34089,7 @@ export const MAA_KATEGORIAT = {
             + 'Edison biography, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+              otsikko: 'Edison 1879 — hehkulamppu palaa 13 tuntia',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
               lyhyt: 'Menlo Parkin hehkulamppu syntyy monen työntekijän '
                 + 'yhteisenä, valvotun yön saavutuksena.',
@@ -36478,7 +36478,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-darwin-galapagos-1835',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Galápagos 1835',
+      otsikko: 'Historian hetki: Darwin 1835',
       johdanto: 'HMS Beagle laski ankkurin Chathamin saarelle 16. syyskuuta 1835, '
         + 'ja laivan 26-vuotias luonnontutkija astui ensimmäistä kertaa '
         + 'Galápagosin laavarannalle.',
@@ -36497,7 +36497,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
+          otsikko: 'Darwin 1835 — Galápagosin kilpikonnat',
           aika: 'syyskuu 1835',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi-photo-v3.jpg',
@@ -36528,7 +36528,7 @@ export const MAA_KATEGORIAT = {
             + 'toimitukselliset viitteet; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
+              otsikko: 'Darwin 1835 — Galápagosin kilpikonnat',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
               lyhyt: 'Beaglen lyhyt pysähdys Galápagosilla kypsyy Darwinin '
                 + 'mielessä vuosikymmenten evoluutioteoriaksi.',
@@ -63115,7 +63115,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-belgradin-piiritys-1456',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Piiritys 1456',
+      otsikko: 'Historian hetki: Belgrad 1456',
       johdanto: 'Belgradin piiritys päättyi heinäkuussa 1456 yllättävään '
         + 'talonpoikaisten ristiretkeläisten hyökkäykseen, joka haavoitti '
         + 'sulttaani Mehmed II:n ja pysäytti osmanien etenemisen Euroopassa '
@@ -63411,7 +63411,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-vloren-itsenaisyys-1912',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Vlorë 1912',
+      otsikko: 'Historian hetki: Albania 1912',
       johdanto: 'Ismail Qemali julisti Albanian itsenäiseksi Vlorën satamatalossa '
         + '28. marraskuuta 1912 — lippu, joka nousi samana iltana, ommeltiin '
         + 'viime hetkellä uudestaan.',
@@ -63429,7 +63429,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Vlorë 1912 — lippu, joka ommeltiin yöllä',
+          otsikko: 'Albania 1912 — itsenäisyys julistetaan',
           aika: '28.11.1912',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vloren-itsenaisyys-1912-lahi-photo-v4.jpg',
@@ -63456,7 +63456,7 @@ export const MAA_KATEGORIAT = {
             + 'kansallinen historiamuseo, itsenäisyys; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Vlorë 1912 — lippu, joka ommeltiin yöllä',
+              otsikko: 'Albania 1912 — itsenäisyys julistetaan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vloren-itsenaisyys-1912-kauko-photo-v4.jpg',
               lyhyt: 'Vlorën kadut täyttyvät itsenäisyysjulistuksen päivänä.',
               selite: 'Vlorën kadut täyttyvät itsenäisyysjulistuksen päivänä.',
@@ -64004,7 +64004,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Obod 1494 — musteen viimeinen arkki',
+          otsikko: 'Obod 1494 — ensimmäinen eteläslaavien painama kirja',
           aika: '4.1.1494',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-obodin-kirjapaino-1494-lahi-photo-v4.jpg',
@@ -64031,7 +64031,7 @@ export const MAA_KATEGORIAT = {
             + 'kansallismuseo, Oktoih prvoglasnik; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Obod 1494 — musteen viimeinen arkki',
+              otsikko: 'Obod 1494 — ensimmäinen eteläslaavien painama kirja',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-obodin-kirjapaino-1494-kauko-photo-v4.jpg',
               lyhyt: 'Obodin linnan seutu Rijeka Crnojevićan ympäristössä; '
                 + 'kirjapainon tarkka paikka on epävarma.',
@@ -64253,7 +64253,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'hetki-bessarabian-liittyminen-1918',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Chișinău 1918',
+      otsikko: 'Historian hetki: Bessarabia 1918',
       johdanto: 'Sfatul Țării äänesti Bessarabian liittymisestä Romaniaan '
         + 'Chișinăussa 27. maaliskuuta 1918 äänin 86–3 — päätös, jonka ehdot '
         + 'jäivät osin lunastamatta.',
@@ -64272,7 +64272,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi',
+          otsikko: 'Bessarabia 1918 — liittyminen Romaniaan',
           aika: '27.3.1918',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-bessarabian-liittyminen-1918-lahi-photo-v4.jpg',
@@ -64301,7 +64301,7 @@ export const MAA_KATEGORIAT = {
             + 'kansallinen historiamuseo, suuri unioni; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi',
+              otsikko: 'Bessarabia 1918 — liittyminen Romaniaan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-bessarabian-liittyminen-1918-kauko-photo-v4.jpg',
               lyhyt: 'Sfatul Țării -rakennuksen ympärillä odotetaan päätöstä.',
               selite: 'Sfatul Țării -rakennuksen ympärillä odotetaan päätöstä.',
@@ -64549,7 +64549,7 @@ export const MAA_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Berezina 1812 — jäinen vesi polvien yli',
+          otsikko: 'Berezina 1812 — Napoleonin armeija pakenee',
           aika: '26.–28.11.1812',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berezinan-ylitys-1812-lahi-photo-v4.jpg',
@@ -64575,7 +64575,7 @@ export const MAA_KATEGORIAT = {
             + 'Napoléon, Berezinan ylitys; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Berezina 1812 — jäinen vesi polvien yli',
+              otsikko: 'Berezina 1812 — Napoleonin armeija pakenee',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berezinan-ylitys-1812-kauko-photo-v4.jpg',
               lyhyt: 'Kaksi puusiltaa vie Napoleonin perääntyvää armeijaa joen yli.',
               selite: 'Kaksi puusiltaa vie Napoleonin perääntyvää armeijaa joen yli.',
