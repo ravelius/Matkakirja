@@ -634,3 +634,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   (ennen KK-viestiä): pari-b:n unity.logista / lyhyellä QA-ajolla kohdassa −136 336: kumpi osasarjan taso piirtyy (lähi/atlas vai kauko0) ja onko r_*.png ladattu
   → vika pelissä (NS korjaa: lähitason etäisyys/atlaksen lataus) vai leivonnassa (LAV). Tulos LAV:lle + KK:lle kuvien mukana.
 - 35i (03.3x) JU: T1 MR91 = 62da37f7e sillat-ajo OK (Pariisi 7/7, Lontoo 5/5, kuten 224.94; lokit/mr91-sillat-*-62da37f7e). Käännös 224.95 käynnissä → odota LINKKI-rivi.
+- 35j (03.4x) JU: T1 LINKISSÄ 224.95 = 62da37f7e (VALMIS). KERTOJA-ESILATAUS Mac-pari LUETTU → KK:lle (kopio PT): Riemukaari 183 → 85 ms, Notre-Dame 470 → 88 ms
+  (välimuisti), Invalidit 400 ms (ei valmista äänitettä, 8 kpl). Junaehdokas 333e91c45 (+ QA 871011608) → ODOTA KK:n sana → pt-ok PT:lle. Työlista päivitetty.
+  JU:n jono: mono-2 (2086687cb) seuraavaksi → lue lisäys 33/35e.
