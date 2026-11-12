@@ -61,7 +61,6 @@ c55dc45606cb312e9a1a702d8faeda97	GBR	historianHetket	lontoon-palo-1666	2	2026-11
 fac49762134a129461a731254df2d00f	FRA	historianHetket	ranskan-vallankumous-bastilji-1789	2	2026-11-12
 58280623007ccb21f61ad3f7bb127734	pariisi	fokusvirta-takyt	tuileriat	1	2026-11-12
 4f94b14a0d8d0b5fe099142a085216b1	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-12
-1f6f6c793c02df0d5defe2a6f03bdd0d	pariisi	fokusvirta-takyt	impressionistit	2	2026-11-12
 fed3a749cf78036c5e6707df77a9ab09	lontoo	fokusvirta-takyt	vuorovesi	2	2026-11-12
 d6a0f6e5fa8d3b043cb1574d4977bf8b	lontoo	fokusvirta-takyt	cheapside	2	2026-11-12
 751f2d86a4ba687f934b3e72fb2e6888	AUT	hahmotelma	hahmotelma-ringtheater	1	2026-11-12
@@ -103,7 +102,6 @@ b541e8d6ac8c1a39f9f517b1fcb6162a	GBR	hahmotelma	hahmotelma-whitehall	1	2026-11-1
 e0e6e97c1b6ae34f60d4b9c09e4c3b49	ITA	hahmotelma	hahmotelma-san-geminiano	1	2026-11-12
 ed1a1f31bd63028742834cabf7333bfd	ITA	hahmotelma	hahmotelma-san-geminiano	2	2026-11-12
 c7a7d308204941140a92054293c5c8d9	ITA	hahmotelma	hahmotelma-mercato-vecchio	1	2026-11-12
-f74a5479aa6e4ba55e61d7c0a59b1a2e	ITA	hahmotelma	hahmotelma-mercato-vecchio	2	2026-11-12
 004aefb3ed6a5c241df16f7e391ab35d	ITA	hahmotelma	hahmotelma-septizodium	1	2026-11-12
 56cd4fc9422dc97578c0f06c30ce3189	ITA	hahmotelma	hahmotelma-septizodium	2	2026-11-12
 cdca10f9db7fb10e583f8d1bfd8d4dec	ITA	hahmotelma	hahmotelma-capitolium	1	2026-11-12
@@ -123,7 +121,6 @@ f386cf98fbdb9bfe110d21b42b8e9ba0	POL	hahmotelma	hahmotelma-nevski-varsova	1	2026
 9058970232a061744b9e498c3145e9a9	POL	hahmotelma	hahmotelma-saksin-palatsi	1	2026-11-12
 f4b3f328152d9b923d56d2cdb7a947d4	POL	hahmotelma	hahmotelma-saksin-palatsi	2	2026-11-12
 0efa142989e67386a92c2a2e25fc202f	PRT	hahmotelma	hahmotelma-tejo-ooppera	1	2026-11-12
-7389b83e4e19a96ed536d9752bac00c8	PRT	hahmotelma	hahmotelma-tejo-ooppera	2	2026-11-12
 57f1e50c24e45482b178da39972414d5	ROU	hahmotelma	hahmotelma-vacaresti	1	2026-11-12
 bd64bd726f000dac25d334d7649a4218	ROU	hahmotelma	hahmotelma-vacaresti	2	2026-11-12
 f0150b604c20471b536063ff647350c4	RUS	hahmotelma	hahmotelma-nyenskans	1	2026-11-12
@@ -136,7 +133,6 @@ d350e0d0767525393a83b6bff27894da	RUS	hahmotelma	hahmotelma-sukharev	2	2026-11-12
 bf76d27b5bf4fc6afa72188ba55a6525	SWE	hahmotelma	hahmotelma-kustaa-ooppera	2	2026-11-12
 35444f42f76cdea2e04c2ab6ec6170da	ARK	maastokohteet	ark-pohjoisnapa	1	2026-11-12
 899232289903b08b26d95b193db8e0b3	ARK	maastokohteet	ark-pohjoisnapa	2	2026-11-12
-d10d8df06cfe0fb70589cce0772c0180	ARK	maastokohteet	ark-fram	1	2026-11-12
 fc9f0f16460807fdea3b24a118e4a964	ARK	maastokohteet	ark-fram	2	2026-11-12
 fd046fc2b82540fd392d2b08b2a35e4e	ARK	maastokohteet	ark-andree	1	2026-11-12
 897fc14abb45462f87178eb22d4f4e99	ARK	maastokohteet	ark-andree	2	2026-11-12
@@ -148,13 +144,11 @@ c5532df5aec3e3935606a0c0aa7e87c4	ARK	maastokohteet	ark-luoteisvayla	1	2026-11-12
 190d871fc2bf30f2ecf4f933367684b1	ARK	maastokohteet	ark-luoteisvayla	2	2026-11-12
 b0293a093273ea6b86dbaf7e0cf4f01b	ARK	maastokohteet	ark-vega	1	2026-11-12
 be6051a0c3eea048b7fa404645e938a5	ARK	maastokohteet	ark-vega	2	2026-11-12
-f23fff3236e884618b0ee91e60e2d5e5	ARK	maastokohteet	ark-maud	1	2026-11-12
 e545f36821389c1ba367514056337b62	ARK	maastokohteet	ark-italia	1	2026-11-12
 7a49c9bf182a0afdf4cb859a527dbf82	ARK	maastokohteet	ark-italia	2	2026-11-12
 feabb73a5161a8f51a0bcfd2e33bf130	ARK	maastokohteet	ark-ny-alesund	1	2026-11-12
 0e719a1e4d977130750c6ab326c2aa62	ARK	maastokohteet	ark-ny-alesund	2	2026-11-12
 a7a5e9fd6fd3ecb70f2b923906082e82	ARK	maastokohteet	ark-cape-columbia	1	2026-11-12
-6c659cebab673882fb4a3d96efde02f1	ARK	maastokohteet	ark-cape-columbia	2	2026-11-12
 69b276c790249ab8168ead5cecbbfb9b	ARK	maastokohteet	ark-papanin	1	2026-11-12
 b0fba855fd254f65f901536a367dab19	ARK	maastokohteet	ark-papanin	2	2026-11-12
 a8828687ce7c5b45369f14ef56d0a7c0	ARK	maastokohteet	ark-nautilus	1	2026-11-12
@@ -171,10 +165,8 @@ cd50526bc2e9776851a29a24f0ea51bc	ARK	maastokohteet	ark-siemenholvi	1	2026-11-12
 71fa28f3a8f4e5177b66be44c3fb5843	ARK	maastokohteet	ark-siemenholvi	2	2026-11-12
 2bc190a9b365820b72a9c32ce91be3b8	ARK	maastokohteet	ark-pyramiden	1	2026-11-12
 d2d5fee2ed30d7ce789c901a1f497a89	ARK	maastokohteet	ark-pyramiden	2	2026-11-12
-b585683624d4cba0d32de953c609d4aa	ARK	maastokohteet	ark-novaja-zemlja	1	2026-11-12
 16593312f574f45b4a411961e69768d8	ARK	maastokohteet	ark-novaja-zemlja	2	2026-11-12
 4dc12945b834dba93b612eca6423fa0f	ARK	maastokohteet	ark-frans-josefin-maa	1	2026-11-12
-66b91d40746cb21b490c2aba338db098	ARK	maastokohteet	ark-frans-josefin-maa	2	2026-11-12
 96355167ff71142d7ea7bc979786964e	ARK	maastokohteet	ark-ellesmere	1	2026-11-12
 619cda3cdf14bf06b17f9e231ace8b26	ARK	maastokohteet	ark-ellesmere	2	2026-11-12
 26060ae529a6199f2717912b5cab4020	ARK	maastokohteet	ark-alert	1	2026-11-12
@@ -189,7 +181,6 @@ a0b1037f910dce0417e2dcddb710a2d7	ARK	maastokohteet	ark-merijaa	1	2026-11-12
 5c77ca906af5c345583f9eef49c05d20	ARK	maastokohteet	ark-merijaa	2	2026-11-12
 77d4a4b9cc1efadfe3b002f86aa13af2	ARK	maastokohteet	ark-thule	1	2026-11-12
 1b805fa6a999a98c93946f1305ae1084	ARK	maastokohteet	ark-thule	2	2026-11-12
-865359d60a075888723012b3cefc349b	ARK	maastokohteet	ark-nenetsit	1	2026-11-12
 3d72cbdf6b3dc7099b13f2695bfe7380	ARK	maastokohteet	ark-nenetsit	2	2026-11-12
 81a00ed81d3ca4868e035b16b4cc034a	ARK	maastokohteet	ark-saamelaiset	1	2026-11-12
 312c5321b4d62d58dc767dc6b5cb6abf	ARK	maastokohteet	ark-saamelaiset	2	2026-11-12
@@ -201,7 +192,6 @@ a0b1037f910dce0417e2dcddb710a2d7	ARK	maastokohteet	ark-merijaa	1	2026-11-12
 ceeffe124af43e2337ccdf51245ec552	ARK	maastokohteet	ark-norilsk	2	2026-11-12
 ae08b0b2aa087e2585af33cdf2a7723d	ARK	maastokohteet	ark-magneettinen-napa	1	2026-11-12
 f198e27451ae117c7278981de5979d00	ARK	maastokohteet	ark-magneettinen-napa	2	2026-11-12
-5bf00d322ef8aaa163e8b6cb926a5b53	ARK	maastokohteet	ark-utqiagvik	1	2026-11-12
 3ccecffa4136cc93852f17c19ad6d25c	ARK	maastokohteet	ark-utqiagvik	2	2026-11-12
 dcafda2a63d429657d8f41ce3e6a29ba	ATA	maastokohteet	ata-etelanapa-asema	1	2026-11-12
 752221ec7f9bc905c1a74da5c53f32d8	ATA	maastokohteet	ata-etelanapa-asema	2	2026-11-12
@@ -215,7 +205,6 @@ f942ce804b0dfc0b619d321ed952b386	ATA	maastokohteet	ata-deception-island	1	2026-1
 4416b73c3b4e064d8eb1cefcdb162fd2	ATA	maastokohteet	ata-deception-island	2	2026-11-12
 e57f60a0f03d0ded6e1b315a64fe834d	ATA	maastokohteet	ata-vernadski	1	2026-11-12
 f157e7d5dcb72cf9ff515d7be0517915	ATA	maastokohteet	ata-vernadski	2	2026-11-12
-36104522602715845132c1a3cb893e31	CHE	maastokohteet	chillon	1	2026-11-12
 72b6135bfd01fc424588a4fe5a9dcbe9	ESP	maastokohteet	teide	1	2026-11-12
 fe3494c69591145568b6a1d815532844	ESP	maastokohteet	teide	2	2026-11-12
 5f466ef5be1cbdd0e89c3263011bd0c4	FIN	maastokohteet	pohjanlahti	1	2026-11-12
@@ -223,3 +212,14 @@ e1065770063204cff823f0c11e3c85d2	PRT	maastokohteet	sete-cidades	1	2026-11-12
 3df54874859955f1c849ff4d7e7f5cad	PRT	maastokohteet	sete-cidades	2	2026-11-12
 f98c5401ec44d70dd77a1b7aac6b4f8a	PRT	maastokohteet	madeiran-laurisilva	1	2026-11-12
 8593bb965393df33e3745ec6d5a9940f	PRT	maastokohteet	madeiran-laurisilva	2	2026-11-12
+3ce7ad70705b7628bbaa311083315f89	pariisi	fokusvirta-takyt	impressionistit	2	2026-11-12
+26025fc57d2318010b8eb27316c97c01	ITA	hahmotelma	hahmotelma-mercato-vecchio	2	2026-11-12
+20a709b2e2f7d7d325e5664bfacc01a7	PRT	hahmotelma	hahmotelma-tejo-ooppera	2	2026-11-12
+203b9234f6e27fe75fbcf7203f233fad	ARK	maastokohteet	ark-fram	1	2026-11-12
+8cd7e6f79b8a2015ffd543e703d0ec05	ARK	maastokohteet	ark-maud	1	2026-11-12
+01a52f36b76aa3921b490e2218663b91	ARK	maastokohteet	ark-cape-columbia	2	2026-11-12
+48267a00d50ad9bdc5ef4e19626386e7	ARK	maastokohteet	ark-novaja-zemlja	1	2026-11-12
+2bd74d43ee05cabd003bbf9faffb4e63	ARK	maastokohteet	ark-frans-josefin-maa	2	2026-11-12
+fcc27e8b922da3f8973540181dd69490	ARK	maastokohteet	ark-nenetsit	1	2026-11-12
+48c7e9746ce990bc167e4e94def3c0ef	ARK	maastokohteet	ark-utqiagvik	1	2026-11-12
+4173657f967efca7caded4ce92cca5cf	CHE	maastokohteet	chillon	1	2026-11-12

@@ -225,17 +225,20 @@ async function main(argv) {
   } catch (e) { console.log(`ÄÄNITYSJONO: VIKA (${String(e.message || e).slice(0, 200)})`); return 2; }
   finally { if (tmp) rmSync(tmp, { recursive: true, force: true }); }
 
+  // Haku kuten natiivin Valmisluennat.Url: ensin suorilla lainausmerkeillä, sitten sellaisenaan. Uusi avain (jono, äänitys)
+  // ALKUPERÄISESTÄ tekstistä kuten Äänittäjän vienti (KK 09.05); peli löytää sen raakatekstin haulla.
+  const uusiAvain = (r) => avain(r.teksti, man.malli, man.aani, NOPEUS, r.tagi);
   const osuu = (r) => [norm(r.teksti), r.teksti].some((t) => avain(t, man.malli, man.aani, NOPEUS, r.tagi) in man.palat);
   const alue = kaikki.filter((r) => a.kaikki || r.manner === 'europe' || r.manner === '?');
   const puuttuvat = new Map(); // avain → rivi (sama teksti voi olla kahdessa paketissa)
-  for (const r of alue) if (!osuu(r)) { const k = avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi); if (!puuttuvat.has(k)) puuttuvat.set(k, { ...r, avain: k }); }
+  for (const r of alue) if (!osuu(r)) { const k = uusiAvain(r); if (!puuttuvat.has(k)) puuttuvat.set(k, { ...r, avain: k }); }
 
   let jono = lueJono(a.jono);
   if (a.siivoa) {
     const ennen = jono.length;
     // Jonoon jää vain sisällössä oleva ja yhä äänittämätön (osuma myös normalisoimattomalla tekstillä = äänitetty).
-    const kaikkiAvaimet = new Set(kaikki.map((r) => avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi)));
-    const yhaPuuttuu = new Set(kaikki.filter((r) => !osuu(r)).map((r) => avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi)));
+    const kaikkiAvaimet = new Set(kaikki.map((r) => uusiAvain(r)));
+    const yhaPuuttuu = new Set(kaikki.filter((r) => !osuu(r)).map((r) => uusiAvain(r)));
     const aanitetty = jono.filter((r) => kaikkiAvaimet.has(r.avain) && !yhaPuuttuu.has(r.avain)).length;
     jono = jono.filter((r) => yhaPuuttuu.has(r.avain));
     kirjoitaJono(jono, a.jono);
@@ -251,9 +254,9 @@ async function main(argv) {
     vailla.length = 0;
   }
   if (a.aanitettavat) {
-    const teksti = new Map(kaikki.map((r) => [avain(norm(r.teksti), man.malli, man.aani, NOPEUS, r.tagi), r]));
+    const teksti = new Map(kaikki.map((r) => [uusiAvain(r), r]));
     const out = jono.filter((r) => teksti.has(r.avain)).map((r) => { const k = teksti.get(r.avain);
-      return { avain: r.avain, kaupunki: r.kaupunki, paketti: r.paketti, kohde: r.kohde, pala: Number(r.pala), paiva: r.paiva, teksti: norm(k.teksti), loppuTagi: k.tagi ?? '' }; });
+      return { avain: r.avain, kaupunki: r.kaupunki, paketti: r.paketti, kohde: r.kohde, pala: Number(r.pala), paiva: r.paiva, teksti: k.teksti, loppuTagi: k.tagi ?? '' }; });
     writeFileSync(a.aanitettavat, JSON.stringify({ manifesti: lahde, aani: man.aani, malli: man.malli, nopeus: NOPEUS, rivit: out }, null, 1) + '\n');
     console.log(`äänitettävät ${out.length} → ${a.aanitettavat}`);
   }
