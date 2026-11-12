@@ -31,7 +31,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |
 | lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
-| aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | – | – |
+| aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 2.5 kt | 12.11.2026 |
 | musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.5 kt | 12.11.2026 |
 | grafiikan-tuotanto | Grafiikan tuotanto | PT | 2.8 kt | 12.11.2026 |
 | mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
