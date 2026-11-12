@@ -3278,7 +3278,7 @@ export const NAHTAVYYSJUTUT = {
           + 'liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat '
           + 'tuhannet ihmiset, myös taidemaalari William Turner.'
         + '\n\n'
-        + 'Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja '
+        + 'Palosta säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja '
           + 'sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät '
           + 'noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää '
           + 'alakerran krypta.',
