@@ -1,56 +1,67 @@
 /*
- * Ohjedokumenttien kartta pysyy täydellisenä.
+ * Ohjedokumentit löytyvät yhdestä ovesta.
  *
  * Omistajan linjaus 15.8.2026: "Raamatussa pitää olla listattuna muut
  * ohjedokumentit mikäli sellaisia on. Kehitystä vaihdellaan sessioiden
  * välillä ja rikkinäinen puhelin on kaikkein pahin."
  *
- * Nämä testit tekevät linjauksesta koneellisen: docs/-kansioon ei voi
- * ilmestyä ohjedokumenttia, jota Raamatun kartta ei tunne, eikä
- * kartalta voi kadota tiedostoa, joka on yhä olemassa. Arkisto ja
- * raportit ovat kartan ulkopuolella tarkoituksella — ne eivät ole
- * ohjeita, ja arkistoidut tiedostot kantavat otsikkohuomautusta.
+ * Vanhan Raamatun käsin pidetty ohjekartta (luku 13) korvautui 12.11.2026
+ * ovella `node tools/kirjaa.mjs hae`, joka käy ohjeet läpi itse
+ * (tools/kirjaa-ohjeet.mjs; KK 12.11. 17.30, vanhan js:n poisto vaihe 1).
+ * Nämä testit pitävät linjauksen koneellisena: docs/-ohje ei voi jäädä
+ * oven ulkopuolelle, eikä kortti voi viitata kadonneeseen tiedostoon.
+ * Arkisto ja raportit ovat oven ulkopuolella tarkoituksella — ne eivät
+ * ole ohjeita, ja arkistoidut tiedostot kantavat otsikkohuomautusta.
+ * Päätösloki docs/raamattu-loki/ löytyy omalla ovellaan tools/loki-hae.mjs.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
+import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { ohjeTiedostot } from '../tools/kirjaa-ohjeet.mjs';
 
-const RAAMATTU = readFileSync(new URL('../js/tyohuone-raamattu.js', import.meta.url), 'utf8');
+const JUURI = fileURLToPath(new URL('../', import.meta.url));
 const DOCS = new URL('../docs/', import.meta.url);
 
-test('jokainen docs/-ohjedokumentti on Raamatun kartalla', () => {
-  // Moduulikohtaiset ohjeet (docs/moduulit/, dokumenttiremontin D2)
-  // ovat ohjeita siinä missä juuritasonkin — sama karttavaatimus.
+/** Raamatun uusi koti: kortit, perusta ja KIRJASTOT (docs/raamattu/**.md). */
+function korttiTekstit() {
+  const out = [];
+  const kayLapi = (d) => {
+    for (const f of readdirSync(d)) {
+      const q = join(d, f);
+      if (statSync(q).isDirectory()) kayLapi(q); else if (f.endsWith('.md')) out.push(q);
+    }
+  };
+  kayLapi(join(JUURI, 'docs/raamattu'));
+  return out.map((p) => readFileSync(p, 'utf8')).join('\n');
+}
+
+test('jokainen docs/-ohjedokumentti löytyy ovesta (kirjaa hae)', () => {
+  const ovi = new Set(ohjeTiedostot(JUURI).map((p) => relative(JUURI, p)));
   const tiedostot = [
     ...readdirSync(DOCS).filter((n) => n.endsWith('.md')),
     ...(existsSync(new URL('moduulit/', DOCS))
       ? readdirSync(new URL('moduulit/', DOCS))
         .filter((n) => n.endsWith('.md')).map((n) => `moduulit/${n}`)
       : []),
-    // Päätösloki (docs/raamattu-loki/, Raamatun jako 20.9.2026) on
-    // Raamatun liite: jokainen lokitiedosto on kartalla, jotta sessio
-    // löytää sen — loki ei lataudu peliin, mutta se on ohjeen historia.
-    ...(existsSync(new URL('raamattu-loki/', DOCS))
-      ? readdirSync(new URL('raamattu-loki/', DOCS))
-        .filter((n) => n.endsWith('.md')).map((n) => `raamattu-loki/${n}`)
-      : []),
   ];
+  assert.ok(tiedostot.length >= 8, `ohjeita vain ${tiedostot.length}`);
   for (const nimi of tiedostot) {
-    assert.ok(RAAMATTU.includes(`docs/${nimi}`),
-      `docs/${nimi} puuttuu Raamatun ohjedokumenttikartalta `
-      + '(js/tyohuone-raamattu.js) — lisää se karttaan tai arkistoi '
+    assert.ok(ovi.has(`docs/${nimi}`),
+      `docs/${nimi} ei löydy ovesta (tools/kirjaa-ohjeet.mjs) — lisää kansio luetteloon tai arkistoi `
       + 'tiedosto docs/arkisto/-kansioon otsikkohuomautuksella.');
   }
 });
 
-test('Raamatun kartalla ei ole kadonneita tiedostoja', () => {
-  // Kaikki docs/-polut, joihin Raamattu viittaa, ovat olemassa —
-  // kuollut viite kartalla on yhtä paha kuin puuttuva rivi.
-  const viitteet = [...RAAMATTU.matchAll(/docs\/[\w./-]+\.md/g)].map((m) => m[0]);
-  assert.ok(viitteet.length >= 8, `kartta vaikuttaa tyhjältä (${viitteet.length} viitettä)`);
+test('korttien docs/-viitteissä ei ole kadonneita tiedostoja', () => {
+  // Kaikki docs/-polut, joihin kortit viittaavat, ovat olemassa —
+  // kuollut viite kortilla on yhtä paha kuin puuttuva ohje.
+  const viitteet = [...korttiTekstit().matchAll(/docs\/[\w./-]+\.md/g)].map((m) => m[0]);
+  assert.ok(viitteet.length >= 8, `kortit vaikuttavat tyhjiltä (${viitteet.length} viitettä)`);
   for (const polku of new Set(viitteet)) {
     assert.ok(existsSync(new URL(`../${polku}`, import.meta.url)),
-      `Raamattu viittaa tiedostoon ${polku}, jota ei ole — päivitä kartta.`);
+      `kortti viittaa tiedostoon ${polku}, jota ei ole — päivitä kortti (node tools/kirjaa.mjs kortti).`);
   }
 });
 

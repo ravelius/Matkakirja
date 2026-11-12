@@ -32,7 +32,6 @@ MEMORY = f"{PROJ}/-Users-Shared-Claude-Matkakirja-fable/memory/MEMORY.md"
 KK_ALOITUS = f"{REPO}/scratchpad/keskustelukanava/aloitus.md"
 KK_JARJ = f"{REPO}/scratchpad/keskustelukanava/jarjestys.md"
 KK_ARKISTO = f"{REPO}/scratchpad/keskustelukanava/arkisto"
-RAAMATTU = "js/tyohuone-raamattu.js"
 JU = "/Users/Shared/Claude/julkaisija-tyokalut"
 MACLOKI = f"{JU}/jono-20261103-ilta.txt"
 LINKKI = f"{JU}/linkki-224-uutta"
@@ -219,18 +218,8 @@ def mittaa(a):
     L["7 suljettuja rivejä"] = (len(valmiit), None, "")
     L["7 Pariisi avoimia rivejä"] = (len(pariisi), None, "")
 
-    # 8 SÄÄNTÖJEN KASVU (verrataan historiaan)
-    L["8 Raamattu kt"] = (round(int(git("cat-file", "-s", f"origin/main:{RAAMATTU}") or 0) / 1024, 1), 450, "")
-    pohja = git("rev-list", "-1", f"--before={alku.isoformat()}", "origin/main").strip()
-    ero = git("diff", "-U0", pohja, "origin/main", "--", RAAMATTU) if pohja else ""
-    kohta = re.compile(r"^([+-])\s*'(\d+\.\d+) ([^:]{1,60})")
-    lisatty, poistettu = {}, set()
-    for r in ero.splitlines():
-        m = kohta.match(r)
-        if m:
-            (lisatty.__setitem__(m.group(2), m.group(3).strip()) if m.group(1) == "+" else poistettu.add(m.group(2)))
-    uudet = [f"{k} {v}" for k, v in sorted(lisatty.items()) if k not in poistettu]
-    L["8 Raamattu-kohtia muuttui"] = (len(lisatty), 3, ("UUDET: " + "; ".join(uudet))[:160] if uudet else "")
+    # 8 SÄÄNTÖJEN KASVU: vanhan Raamatun kt- ja kohtamittarit poistuivat (KK 12.11. 17.30, vanhan js:n poisto vaihe 1);
+    #   korttien koko ja 24 h:n muutokset näkyvät kohdassa 13 (kirjaa tila).
 
     # 9 VANHAT RIVIT
     vanhat = [x for x in rivit if x.get("tila") == "työn alla" and nyt.timestamp() - x.get("ts", 0) / 1000 > 6 * 3600]

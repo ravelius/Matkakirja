@@ -121,7 +121,6 @@ ohitettu vartio.
 - `savuke-ilme`
 - `savuke-jalkamatka`
 - `savuke-katselin-pollo`
-- `savuke-kehittajalehti`
 - `savuke-kohdekaupungit`
 - `savuke-kohtaamiskortti`
 - `savuke-kuvaputki`
@@ -209,7 +208,6 @@ jää vartioimaan murrettua palettia, jos siihen joskus palataan.
 | savuke-kaistat-levea | EI KAISTOJA LAAJALLA RUUDULLA (rootin live-QA 13.9.2026, v1856, 2560 × 1352): tasoituslaataston kaksi terävää reunaa eivät ole nähtävissä. Saapuu Pariisiin, odottaa levon ja mittaa neljän rajan yli (laattaruudukon läntinen ja itäinen reuna lon −21,40 / 29,80, laataston laatikon reunat lon −10,25 / 14,67) luminanssieron kahdesta avomeripisteestä — rajat LUETAAN pyramidin luettelosta ja laataston bittikartasta, ei kirjoiteta savukkeeseen. Lisäksi V0 (variMaa FRA, varillisia > 0, `syy` tyhjä) ja V5 (Keski-Ranskan reliefikontrasti on yhä naapurin tasoitettua suurempi eli maalaus ei levinnyt kohdemaahan). Ajetaan sekä 2560 × 1352 että 1920 × 1080 (`--ruutu`). VASTAKOE `--ilman-korjausta` tarjoilee js/pallolaatat.js:n ilman asiakkaan kerma-maalausta (peli kuten v1856) — silloin V1…V4 ON KAADUTTAVA (mitattu 45,3 · 41,6 · 37,3 · 10,2 luminanssiyksikköä) |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
-| savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
 | savuke-kohtaamistesti | Kehittäjän kohtaamislista (ratasvalikon Kohtaamiset): mannerryhmät MANNER_NIMET-järjestyksessä, ryhmä auki/kiinni, rivi avaa kohtaamisen pelin omalla kortilla kuvineen, tehtäväpeli aarteeseen asti — ja HIEKKALAATIKKO: tallenne, raha, päivät, löydöt ja tietäjäpisteet eivät muutu. Oletuslauta ja `?lauta=kartta`. Vaatii ämpärin (`NODE_USE_ENV_PROXY=1`) kohtaamiskuvaa varten |
 | savuke-liiku | Liiku-napin neljä kulkutapaa pallolla: liftaus (0 p / 6 h), bussi (50 p / 0 h), laiva (100 p / 6 h) ja lento (300 p / 6 h); kartan kulkutapakohtainen rajaus ja paluu maan rajaukseen; autokyydin nopeusprofiili (kiihtyy, jarruttaa, ei hyppyä); automaattinen nopanheitto säilyy sisämaassa ja laivareitillä vaikka bussi on tarjolla. Vastakokeet: ilman rahaa bussi ja laiva harmaina, vaihekäyrä riisuttuna profiiliväite kaatuu, erän 8 vanha autoTravel-ehto punaisena |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |

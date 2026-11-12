@@ -22,6 +22,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { ohjeTiedostot } from './kirjaa-ohjeet.mjs';
 
 const argv = process.argv.slice(2);
 const lippu = (n) => { const i = argv.indexOf(n); if (i < 0) return null; const v = argv[i + 1]; argv.splice(i, 2); return v; };
@@ -249,11 +250,8 @@ if (komento === 'hae') {
   tulosta('PÄÄTÖSLOKI', existsSync(k) ? readdirSync(k).map((f) => join(k, f)) : []);
   // OHJEET (KK 12.11.2026, 20261112-kirjaa-hae-ohjeet.md): ovi löytää elävät ohjeet itse, ei käsin pidettyä ohjekarttaa.
   // Osuma = kaikki hakusanat tiedoston nimessä tai 10 ensimmäisellä rivillä; nimiosumat ensin, enintään 10; ei koko tekstin hakua.
-  const ohjeet = [];
-  const kayLapi = (d) => { if (!existsSync(d)) return; for (const f of readdirSync(d)) { const q = join(d, f);
-    if (statSync(q).isDirectory()) kayLapi(q); else if (f.endsWith('.md')) ohjeet.push(q); } };
-  kayLapi(join(JUURI, 'docs/tuotanto')); kayLapi(join(JUURI, 'docs/moduulit'));
-  for (const f of ['docs/tilinvaihto.md', 'AGENTS.md']) if (existsSync(join(JUURI, f))) ohjeet.push(join(JUURI, f));
+  // Luettelo: tools/kirjaa-ohjeet.mjs (docs/*.md, docs/tuotanto, docs/moduulit, AGENTS.md; vanhan ohjekartan korvaaja).
+  const ohjeet = ohjeTiedostot(JUURI);
   const osumat = [];
   for (const q of ohjeet) {
     const nimi = relative(JUURI, q).toLowerCase(), alku = lue(q).split('\n').slice(0, 10);
