@@ -41,7 +41,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | media-ja-ampari | Media ja ämpäri | JU | – | – |
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | 2.9 kt | 12.11.2026 |
-| oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | – | – |
+| oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | 2.9 kt | 12.11.2026 |
 | testit | Testit | NS | 3.0 kt | 12.11.2026 |
 | valmiin-maaritelma | Valmiin määritelmä | KK | 2.8 kt | 12.11.2026 |
 | juna-ja-julkaisu | Juna ja julkaisu | JU | 2.9 kt | 12.11.2026 |
