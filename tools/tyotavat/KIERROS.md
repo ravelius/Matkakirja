@@ -31,6 +31,12 @@ Kierros 4–5 min välein ScheduleWakeup, prompt: "Lue /Users/Shared/Claude/Matk
 - Levy < 50 Gi tai lasku > 1 Gi/min yli 5 min; < 38 Gi ilmoitus, < 31 kriittinen.
 - LEPÄÄ: rooli levossa > 15 min eikä jonossa aloitettavaa (scratchpad/tyojonot.md Päätoimittajan checkoutissa) → "LEPÄÄ: <rooli>, jono tyhjä". Oikeutetut levot (Laitetestaaja ja omistajaa odottavat) eivät hälytä; rooli, jolla on jonossa työtä (työlista, KK:n jarjestys.md, junan ehto), ei ole koskaan oikeutetussa levossa (KK 12.11. 08.34).
 
+
+## Varmuuskopiot (KK 12.11.2026 klo 12.04, scratchpad/keskustelukanava/suunnitelmat/20261112-varmuuskopiot-paatos.md; launchd ei aja niitä)
+- PEILI kerran tunnissa: jos /Users/Shared/Claude/proto-3d/lokit/varmuuskopio-viimeisin.txt on yli 60 min vanha → aja `zsh /Users/Shared/Claude/proto-3d/tyokalut/varmuuskopioi-natiivi.sh` (taustalle). "Varmuuskopiointi valmis" = ok; VARMUUSKOPIO-rivi (varmuuskopio-VIKA.txt) → rivi PT:lle.
+- BUNDLE kerran yössä klo 02–05 (ei hiljaisella tunnilla): `zsh /Users/Shared/Claude/proto-3d/tyokalut/bundle-natiivi-nas.sh` (taustalle; NAS liitettynä). OK-rivi = ok; VIKA tai NAS puuttuu → rivi PT:lle. Ei launchctl-komentoja eikä plist-muutoksia.
+- Kuntotarkastus (luku 16) hälyttää: uusin bundle yli 2 vrk, peili yli 3 h.
+
 ## Tyhjäkäyntivahti (Keskustelukanava 14.10.2026 klo 20.2x, omistaja: "kuka pitää huolen että codex ja claude eivät jää vahigossa tyhjäkäynnille?")
 - CLAUDE: rooli levossa (isRunning false) yli 20 min, ja työlistalla (/Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/data/talo/tyolista.json, tila "työn alla", rooli lisa-kentässä) tai junan ehdoissa on sille auki olevaa työtä → rivi PT:lle "TYHJÄKÄYNTI: <rooli> <min> min, auki: <kohde>" (kerran tunnissa roolia kohden). Jos tilanne jatkuu 20 min hälytyksen jälkeen, lähetä rivi myös Keskustelukanavalle (local_d5f31591-21fa-4cb0-bab3-bcd3435d075a). Tämä ei ole rutiinia.
 - CODEX (korjattu omistajan kortilla 17.10.2026 klo 07.25): aja joka kierroksella `python3 -I /Users/Shared/Claude/Matkakirja-posti/codex-odottaa.py`. Se katsoo KAIKKI Codexin viestit posti/codex-<rooli>-* ja vastaukset posti/<rooli>-codex-* (72 h). "CODEX ODOTTAA <min> min: …" (≥ 30 min) → rivi PT:lle (kerran viestiä kohden; PT vastaa itse tai antaa roolille). "CODEX ODOTTAA YLI 60 MIN …" → rivi myös Keskustelukanavalle JA Asemataulun VAATII TOIMIA -rivi (talo toimi-codex-odottaa), kunnes skripti ei enää tulosta viestiä; sitten rivi pois.
