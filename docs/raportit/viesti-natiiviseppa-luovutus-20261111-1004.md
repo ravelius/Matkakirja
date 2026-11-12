@@ -637,3 +637,8 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
 - 35j (03.4x) JU: T1 LINKISSÄ 224.95 = 62da37f7e (VALMIS). KERTOJA-ESILATAUS Mac-pari LUETTU → KK:lle (kopio PT): Riemukaari 183 → 85 ms, Notre-Dame 470 → 88 ms
   (välimuisti), Invalidit 400 ms (ei valmista äänitettä, 8 kpl). Junaehdokas 333e91c45 (+ QA 871011608) → ODOTA KK:n sana → pt-ok PT:lle. Työlista päivitetty.
   JU:n jono: mono-2 (2086687cb) seuraavaksi → lue lisäys 33/35e.
+- 35k (03.4x) KK 03.40 JUNASANA kertojan esilataus 333e91c45 → pt-ok-pyyntö PT:lle LÄHETETTY. Laitteen luku seuraavassa iPad-erässä (ei erillistä ajoa).
+  JATKO KK:lle (pieni): "ei valmista 8" → listaa 8 Pariisin kappaletta (kohde + kappale) + syy: äänite puuttuu kokonaan vai teksti muuttunut äänityksen jälkeen
+  (SK:n kuvateksti-/vuosilukukorjaukset) → yksi viesti KK:lle. Jos tekstimuutos: ehdota putkeen tarkistus "jokaisella kaupungin luennalla on valmis kappale"
+  (luku per kaupunki). Keino: lisää KertojanEsilataus.Aja:han lokiin ei-valmiit (kohde + 40 merkkiä tekstistä) TAI vertaa Valmisluennat-manifestia
+  Nahtavyysarkki.JutunLuettavat-teksteihin skriptillä (manifestin avain = Puhe.ValmisUrl: Katkaise(JsTrim(teksti)) + persoona + loppuTagi).
