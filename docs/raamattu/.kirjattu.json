@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "d60804937811370a",
-  "aika": "2026-11-12T08:33:10.627Z"
+  "sha": "07e2a3625114a348",
+  "aika": "2026-11-12T08:33:15.711Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -66,5 +66,9 @@
  "aiheet/isoisa-ja-tarina.md": {
   "sha": "0ef9af22b2ca3de9",
   "aika": "2026-11-12T08:33:10.627Z"
+ },
+ "aiheet/tekstit-ja-kieli.md": {
+  "sha": "ec11c155b1bc4693",
+  "aika": "2026-11-12T08:33:15.711Z"
  }
 }
