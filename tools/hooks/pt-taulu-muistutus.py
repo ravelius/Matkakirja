@@ -9,7 +9,7 @@ Hook (vain Päätoimittajan checkout, Matkakirja-fable/.claude/settings.local.js
 - UserPromptSubmit: kun omistaja kirjoittaa (ei roolien viestit eikä ajastukset), muistutus lisätä uusi
   pyyntö työlistaan.
 - KONTEKSTIVAHTI (molemmat tapahtumat, myös roolien viestit): lukee session oman tallenteen viimeisen
-  mallikutsun kontekstin ja muistuttaa 30/35/40 %:ssa (PT 30 pehmeä / 40 kova; KK 35 aloitus.md / 40 kortti).
+  mallikutsun kontekstin ja muistuttaa 30/40 %:ssa (PT 30 pehmeä / 40 kova = pakkonollaus; KK 30 % = nollaus, kortti nollaus-ja-luovutus 1).
   Viesti kertoo kummankin säännön, koska koukku ei tiedä roolia. Ei riipu Postivahdista.
 - KK:N VÄLITTÄMÄT OMISTAJAN PÄÄTÖKSET (2.11.2026): UserPromptSubmit-viesti KK:lta (from=KK:n id), jonka rivi alkaa
   "OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA klo", muistuttaa kirjaamaan sen työlistaan tools/asemataulu/tyolista.py:llä
@@ -32,7 +32,8 @@ TARKISTIN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 if not os.path.exists(TARKISTIN):  # asennettu kopio /Users/Shared/Claude/hooks/ (KK 2.11.)
     TARKISTIN = "/Users/Shared/Claude/Matkakirja-fable/tools/asemataulu/tarkista-junat.py"
 # vain KK:n lähettämä viesti, jonka rivi alkaa päätöksellä tai pyynnöllä (KK 2.11. 12.1x: PT:n lainaus laukaisi muistutuksen KK:ssa)
-KK_IDT = ("local_d5f31591-21fa-4cb0-bab3-bcd3435d075a", "local_37f7c945-e1a0-4638-90b8-93c389a36fbe")  # sami.reivinen + vvi (PT 3.11.)
+KK_IDT = ("local_d5f31591-21fa-4cb0-bab3-bcd3435d075a", "local_37f7c945-e1a0-4638-90b8-93c389a36fbe",
+          "local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe")  # sami.reivinen, vvi, päätili (CLAUDE.md)
 OMISTAJAN_VIESTI = re.compile(r"(?m)^\s*(OMISTAJAN PÄÄTÖS|OMISTAJAN PYYNTÖ|OMISTAJA) klo")
 TYOLISTA_KOMENTO = "python3 -I tools/asemataulu/tyolista.py"
 VANHA_H = 3
@@ -102,22 +103,16 @@ def kontekstivahti(d, sessio):
     p = konteksti_prosentti(polku)
     if p is None or p < 30:
         return None
+    LUOV = ("luovutus tiedostoksi /Users/Shared/Claude/luovutukset/<rooli>-<pvm>-<klo>.md (≤ 8 kt, ei työpuuta/haaraa/PR:ää), "
+            "tallenne (python3 tools/tallenna-keskustelu.py <keskustelu-uuid> <Rooli>), Postivahdille LUOVUTUS VALMIS + polku, nollaus")
     if p >= 40:
         if not saa_muistuttaa("konteksti-40", sessio, VALI):
             return None
-        return (f"KONTEKSTIVAHTI (hook): konteksti {p} % ≥ 40 %. PÄÄTOIMITTAJA: KOVA RAJA (Raamattu NOLLAUSRAJAT 30/40) → "
-                "lopeta uudet työt, kirjoita luovutus ja aloitusviesti, tallenna keskustelu "
-                "(python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja), pushaa ja lähetä Postivahdille "
-                "LUOVUTUS VALMIS; toistuu 10 min välein. KESKUSTELUKANAVA: päivitä aloitus.md ja kysy kortilla \"Nollaanko nyt?\".")
-    if p >= 35:
-        if not saa_muistuttaa("konteksti-35", sessio, 2 * VALI):
-            return None
-        return (f"KONTEKSTIVAHTI (hook): konteksti {p} % ≥ 35 %. PÄÄTOIMITTAJA: pehmeä raja ylitetty → ei uusia isoja tehtäviä, "
-                "luovutus ja nollaus ensimmäisellä luontevalla tauolla. KESKUSTELUKANAVA: päivitä scratchpad/keskustelukanava/aloitus.md.")
-    if not saa_muistuttaa("konteksti-30", sessio, 2 * VALI):
-        return None
-    return (f"KONTEKSTIVAHTI (hook): konteksti {p} % ≥ 30 %. PÄÄTOIMITTAJA: pehmeä raja → ei uusia isoja tehtäviä, luovutus ja "
-            "nollaus ensimmäisellä luontevalla tauolla, viimeistään 40 %:ssa; raskaat lukemat ali-agentille. (Keskustelukanavalle ei toimia ennen 35 %.)")
+        return (f"KONTEKSTIVAHTI (hook): konteksti {p} % ≥ 40 %. PÄÄTOIMITTAJA: PAKKONOLLAUS (kortti nollaus-ja-luovutus 1 ja 10) → "
+                f"lopeta uudet työt: {LUOV}; toistuu 10 min välein. KESKUSTELUKANAVA: raja 30 % ylitetty → nollaa itsesi heti.")
+    return (f"KONTEKSTIVAHTI (hook): konteksti {p} % ≥ 30 %. KESKUSTELUKANAVA: RAJA 30 % → aloitus.md, etäohjaus pois, nollaa "
+            f"itsesi ilman korttia (kortti nollaus-ja-luovutus 1 ja 3). PÄÄTOIMITTAJA: pehmeä raja → ei uusia isoja tehtäviä; "
+            f"ensimmäisellä luontevalla tauolla, viimeistään 40 %:ssa: {LUOV}.") if saa_muistuttaa("konteksti-30", sessio, 2 * VALI) else None
 
 
 def taulumuistutus(d, tapahtuma, sessio):

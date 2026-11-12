@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """PT:n yöajo: poistaa /Users/Shared/Claude/wt/-työkopiot, joiden PR on yhdistetty tai suljettu.
 
-Raamattu 12.19 (omistaja 11.11.2026 klo 23.34, KK 23.40). Ehdot jokaiselle kopiolle:
+Raamattu 12.19 (omistaja 11.11.2026 klo 23.34, KK 23.40), kortti agentit-ja-komennot 12. Ehdot jokaiselle kopiolle:
 - se on git-worktree (ei päächeckout) ja sen haaralla on GitHubissa PR, jonka tila on MERGED tai CLOSED;
 - puu on puhdas (git status --porcelain tyhjä) eikä haaralla ole pushaamattomia committeja;
 - poisto tehdään `git worktree remove` ilman --force-lippua (git itse kieltäytyy, jos jotain on kesken).
@@ -77,15 +77,19 @@ def main():
                 print(f'JÄÄ {nimi}: käytetty alle 48 h sitten ({haara})'); continue
             tila, nro = 'ETÄHAARASSA', etä.split()[0]
         elif 'luovutus' in haara:
-            # luovutuskopio: sisältö on originissa; alle 6 h vanha jää (rooli voi vielä lisätä siihen)
+            # luovutuskopio: sisältö on originissa; alle 1 h vanha jää (kortti agentit-ja-komennot 12)
             _, ts, _ = git(p, 'log', '-1', '--format=%ct')
-            if time.time() - int(ts or 0) < 6 * 3600:
+            if time.time() - int(ts or 0) < 3600:
                 print(f'JÄÄ {nimi}: tuore luovutus ({haara})'); continue
             tila, nro = 'LUOVUTUS', 'pushattu'
         else:
             tila, nro = pr_tila(p, haara)
         if tila not in ('MERGED', 'CLOSED', 'LUOVUTUS', 'ETÄHAARASSA'):
             print(f'JÄÄ {nimi}: PR {tila or "ei"} ({haara})'); continue
+        # Kortti agentit-ja-komennot 12 (12.11.2026): yhdistetty puu poistetaan, kun se on yli tunnin vanha.
+        if subprocess.run(['find', p, '-newermt', '-1 hours', '-not', '-path', '*/.git*', '-print', '-quit'],
+                          capture_output=True, text=True).stdout.strip():
+            print(f'JÄÄ {nimi}: muokattu alle 1 h sitten ({haara})'); continue
         mt = koko_mt(p)
         if not a.aja:
             print(f'POISTUISI {nimi}: PR {nro} {tila}, {mt} Mt'); continue
