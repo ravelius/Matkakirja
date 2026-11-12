@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "0cdbb9ecaddb9c6e",
-  "aika": "2026-11-12T09:45:44.576Z"
+  "sha": "3a2e64bd5afa2d7e",
+  "aika": "2026-11-12T09:57:21.497Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -24,8 +24,8 @@
   "aika": "2026-11-12T08:28:29.126Z"
  },
  "paatokset/2026-11.md": {
-  "sha": "57ce6f0d26146463",
-  "aika": "2026-11-12T09:45:00.839Z"
+  "sha": "636920a48aeeec4a",
+  "aika": "2026-11-12T09:56:39.041Z"
  },
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
@@ -142,5 +142,9 @@
  "aiheet/tilit-ja-kiintio.md": {
   "sha": "2a8bf731b82ae1d0",
   "aika": "2026-11-12T09:45:44.576Z"
+ },
+ "aiheet/kaupungit.md": {
+  "sha": "15c9997478ad9d91",
+  "aika": "2026-11-12T09:57:21.497Z"
  }
 }
