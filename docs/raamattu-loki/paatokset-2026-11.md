@@ -1497,3 +1497,7 @@ JU: valmiiden ajojen ruutukansiot (59 Gi) T7:lle. PT:n yöajot: wt/-työkopiot p
 ## TALO EI SEISO: LEPOVAHDIN KORJAUS (KK 12.11.2026 klo 08.34) (12.11.2026 klo 08.4x)
 
 Talo seisoi 06.06–08.34: kaikki roolit levossa 2,5 h, vaikka jonoissa oli työtä (omistaja kysyi tilannetta 08.33). Syy: Postivahdin ajastusketju katkesi, eikä Karttasepän lepo hälyttänyt (vanha "oikeutettu lepo"). Korjaus (Raamattu 7.38, KIERROS.md): rooli, jolla on jonossa työtä, ei ole koskaan oikeutetussa levossa; Postivahdille CronCreate-varakierros 30 min välein ScheduleWakeup-ketjun lisäksi.
+
+## LUOVUTUS ≤ 8 KT JA ALOITUSVIESTI ENSIN (omistajan kysymys 12.11.2026 klo 08.43, KK:n päätös 08.45) (12.11.2026 klo 08.5x)
+
+"Hidastaako jokin tavoitteisiin pääsyä ja pitäisikö sessioiden ja varsinkin sinun aloituskontekstin määrää saada jotenkin pienennettyä?" → KK (Raamattu 7.37): luovutus vain voimassa oleva tila, ≤ 8 kt, ei "lisäys N" -ketjuja (uusi korvaa); Postivahti tarkistaa koon nollauksessa; Postivahdin aloitusviesti aina nollatun roolin ensimmäinen viesti. Mitattu: KS:n luovutus -1408 115 kt (37 lisäystä), NS 33 lisäystä → tiivistys seuraavassa nollauksessa. Seisokit (12.11. 2,5 h, 11.11. PK 3 h 47 min) korjattu lepovahdilla (7.38, PR 6589).
