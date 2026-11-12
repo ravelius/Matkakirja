@@ -695,3 +695,13 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   Paikat MITATTAVA OSM:stä (KK:n ehdotukset eivät mitattuja). Rooma ensin. Merkittavat.json lat/lon; näyttö Rooman pari täysikokoisena KK:lle. Ei kiire.
 - SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) nimet LINKKI + Pampus-rajaus 5) Montmartre KJ43 6) KJ53 7) GHSL 8) PP:n ikkunakolmio
   9) kehämuurien nimet (Rooma ensin).
+
+## LISÄYS 54 (02.4x): KJ53 puun valo AJETTU + mitattu (ei vielä KK:lle), nimet → 224.94
+- JU 02.35: KJ55 fdb433090 → 224.94 (MR90 ajossa; odota LINKKI → Pampus-rajaus KK:lle). JU:n Mac-jono KS:ltä tyhjä.
+- KJ53 lokit/ks-kj53-puuvalo-6bb57f388 12/12 ok. mittaa-kj53.py (lin. luminanssi 3D-latvus; maalattu sRGB 42: 123 125 81, 43: 126 129 83):
+  42 esplanadi ero 1 → 0.35: ka 0.243 → 0.260, p10 0.090 → 0.137, p90 0.488 → 0.460 (p90/p10 5.4 → 3.4); sRGB ka 131 132 79 → 137 139 83.
+  43 champ: ka 0.225 → 0.260, p10 0.097 → 0.145, p90 0.359 → 0.401 (!), p90/p10 3.7 → 2.8. 44 lähi: ka 0.283 → 0.315, p90 0.547 → 0.577, p90/p10 4.2 → 3.75.
+  TULKINTA: varjopuoli vaalenee, mutta VALOISA PUOLI EI TUMMU (p90 ennallaan/nousee) ja keskisävy nousee 3–12 % → keski 0.5 on liian korkea (todellinen n·l-ka pienempi).
+  SEURAAJA: (a) selvitä miksi p90 ei laske – kirkkain osa ehkä puolipallon taivas/Neutral-käyrä tai vastaValo/reuna (_ValoMuoto), ei nl; (b) uusi ajo keski ≈ 0.3 ja ehkä
+  myös puolipallon taivas-osuus kohti keskeä; tavoite: KK:n linja "valoisa puoli ei maalattua vaaleampi/keltaisempi, keskisävy ennallaan (ka ≈ ero 1)". Karkea kuva KK:lle ennen junaa.
+- SEURAAJAN JONO ennallaan (LISÄYS 53), KJ53 kohdassa 6.
