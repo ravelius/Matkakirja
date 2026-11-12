@@ -62,3 +62,10 @@ Ei agentteja käynnissä. Työkopiot (/Users/Shared/Claude/wt): proto-pelikoodar
   - Jos jako näyttää hypystä johtuvan leikkauksen, korjaa lähteestä omana committinaan: 1,60 m (kaista aukolle ja käännös samassa askeleessa) ja 1,37 m (paluu seinän edessä) ensin.
   - 9 pientä (alle 0,4 m) saavat jäädä, jos ne eivät leikkaa. Jalan paikan koe pysyy poissa.
 - JÄRJESTYS: toisto jaolla → otteen pito + Mac-pari otteesta ahtaassa → kolme pahinta (a)-ikkunaa KK:lle.
+
+## LISÄYS 10.4x: KK 10.40
+- JUNASANA e429412e5:lle annettu PT:lle. Mac-pari: /Users/Shared/Claude/proto-3d/lokit/pelikoodari-pistekaarella2-pari/ (JU:n leikkeet 69,5–77 s ja 92–96,5 s, avaus 41,1 s; botin reitti eroaa koodien välillä).
+- Seuraava työ ennallaan (kohdat 1–2 ja lisäys 10.2x).
+- HAVAINNOT OTTEEN PITOON (mittaa, älä korjaa erikseen). KK haluaa YHDEN kootun viestin: ovatko nämä otteen pidon mittarissa mukana ja mitkä luvut ne saavat.
+  - Pari-2, jälkeen: käännös noin 90° kuudessa ruudussa (0,2 s), ja pelaajan jalat ruudun ulkona 4 ruutua (ruudut 54–57 = 93,8–93,9 s).
+  - Pari-1, jälkeen: 74–75 s rakennuksen kulma täyttää vasemman kolmanneksen noin 0,5 s (pelaaja näkyy koko ajan).
