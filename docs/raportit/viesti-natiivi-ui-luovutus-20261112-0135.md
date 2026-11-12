@@ -64,3 +64,5 @@ SEURAAVAT ASKELEET:
 - LISÄYS 03.1x (NS/KK 03.0x): kohdekamera ei toistunut (Cutty Sark suuntima 20° vs 18°; esittelyn lento perii edellisen suunnan) → TEHTY 631172274
   (natiivi-ui/vakioajo): ui vakio kohde asettaa suuntima 0 ja kallistus 45° ennen lähestymistä. JU:lle pyydetty uusinta 631172274:lla (sisältää 45°-katon).
   TARKISTA: kaksi peräkkäistä ajoa → sama suuntima/kallistus kohteittain; jos ei, NahtavyysEsittely.NapautaMallin kulma (NS:n ala?) → NS:lle.
+- LISÄYS 03.4x: VAKIOAJO VALMIS 631172274 (JU 03.41: a = b identtiset asennot, 4 ajoa rc 0, PUUTE 0, Pariisi 42/42, Lontoo 66/66). KK:lle lähetetty
+  junasanaa varten (03.4x). KK:n junasanalla → pt-ok PT:ltä (631172274, natiivi-backup natiivi-ui/vakioajo). NS:lle tiedoksi.
