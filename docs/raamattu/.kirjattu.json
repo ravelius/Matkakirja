@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "eace62ada6d41c87",
-  "aika": "2026-11-12T09:15:00.729Z"
+  "sha": "04828aab77a1af28",
+  "aika": "2026-11-12T09:15:05.977Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -106,5 +106,9 @@
  "aiheet/laitteet-ja-simulaattorit.md": {
   "sha": "a46a93edb05e4954",
   "aika": "2026-11-12T09:15:00.729Z"
+ },
+ "aiheet/matkustus-ja-reitit.md": {
+  "sha": "fca3b85118121d61",
+  "aika": "2026-11-12T09:15:05.977Z"
  }
 }
