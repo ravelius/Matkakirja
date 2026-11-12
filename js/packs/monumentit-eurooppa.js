@@ -2098,8 +2098,8 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 6037.9, y: 1407.0 }, europe: { x: 329.0, y: 588.8 } },
       teksti: 'Luxemburgin linnoitus kasvoi Bock-kallion päälle, jonne kreivi Siegfried rakensi linnan 963. '
         + 'Vuosisatojen kuluessa burgundilaiset, espanjalaiset, ranskalaiset, itävaltalaiset ja '
-        + 'preussilaiset laajensivat sitä, ja Vaubanin johtamassa jälleenrakennuksessa 1680-luvulta alkaen '
-        + 'linnoitus sai nykyisen ilmeensä. Linnoitusvyöhyke oli selvästi kaupunkia laajempi, ja kallion '
+        + 'preussilaiset laajensivat sitä, ja 1680-luvulla ranskalaisten linnoitusmestari Vauban rakensi '
+        + 'sen uudelleen. Linnoitusvyöhyke oli selvästi kaupunkia laajempi, ja kallion '
         + 'sisään louhittiin yli kaksikymmentä kilometriä kasemattikäytäviä. Sitä '
         + 'kutsuttiin Pohjoisen Gibraltariksi. Toinen Lontoon sopimus teki Luxemburgista pysyvästi '
         + 'puolueettoman 1867 ja määräsi linnoituksen purettavaksi. Purku kesti vuoteen 1883 ja maksoi 1,5 '
