@@ -33,7 +33,7 @@ const PARIISIN_INTRO = [1, 2, 3, 4].map((n) => `pariisi-nykyintro-c${n}.jpg`);
 // kansi.avauskuvat ei sisällä, isoisän luentakuvat (ottopaikka Tuileries'n puutarha) ja Pulun kuva.
 const PARIISIN_LENTO = ['hero-pariisi-riemukaari.jpg', 'hero-pariisi-sacre-coeur.jpg', 'hero-pariisi-louvre.jpg',
   'matkakirja-pariisi-i1-r20260914-tarina-v1.jpg', 'matkakirja-pariisi-i2-r20260914-tarina-v1.jpg',
-  'matkakirja-pariisi-p1-r20260914-tarina-v1.jpg'];
+  'Ballon Generali and the Eiffel Tower.jpg'];
 const VALI_M = 25;
 
 const args = process.argv.slice(2);

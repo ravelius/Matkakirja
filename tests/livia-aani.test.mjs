@@ -301,6 +301,9 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   assert.equal(rivit.find((rivi) => rivi.avain === 'pietari-2'), undefined);
 });
 
+/* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
+const AANTA_ODOTTAVAT = new Set(['pariisi-3']);
+
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
    * Kirjoitettu kupla on oma äänitteensä (7.9.2026): sen on mahduttava
@@ -325,7 +328,7 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
    * Portti ei siis heikkene, se saa yhden kirjatun poikkeuksen.
    */
   const KATONNOSTON_POIKKEUKSET = new Set([
-    'bukarest-3', 'budapest-3', 'pariisi-3', 'amsterdam-3',
+    'bukarest-3', 'budapest-3', 'amsterdam-3',
     'berliini-3', 'dubrovnik-3', 'tukholma-3', 'kobenhavn-3',
   ]);
   const kaytetyt = new Set();
@@ -396,7 +399,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
     // Kaupunkikuplat -3 ja -4 = pakin kommentti[0] ja [1]; muiden tiivisteet
     // valvoo kuivan ajon testi (kaikki ajan tasalla).
-    if (FOKUSVIRRAT[lahde] && lahde !== 'sofia' && (indeksi === 2 || indeksi === 3)) {
+    if (FOKUSVIRRAT[lahde] && lahde !== 'sofia' && !AANTA_ODOTTAVAT.has(avain) && (indeksi === 2 || indeksi === 3)) {
       // Lainausmerkit (18.10.2026): vanha raaka tiiviste kelpaa (livianTiivisteTasmaa).
       assert.ok(livianTiivisteTasmaa(LIVIAN_AANITETYT[avain], FOKUSVIRRAT[lahde].pollo.kommentti[indeksi - 2]),
         `${avain}: näkyvän tekstin tiiviste`);
@@ -532,12 +535,13 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   // Kaikki repliikit on sidottu valmistuneisiin kuitteihin; viiden uuden
   // kaupungin kuplat äänitettiin v4-ajossa 28.9.2026 ilta.
-  const odotetutMuuttuneet = [];
+  const odotetutMuuttuneet = [...AANTA_ODOTTAVAT];
   assert.deepEqual(
     rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
     odotetutMuuttuneet,
   );
   for (const avain of Object.keys(LIVIAN_VERSIOIDUT_AANET)) {
+    if (AANTA_ODOTTAVAT.has(avain)) continue;
     assert.equal(tila(avain), 'ajan tasalla', avain);
   }
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));

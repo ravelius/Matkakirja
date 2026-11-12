@@ -105,8 +105,8 @@ export const FOKUSVIRTA_PARIISI = {
      */
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; puntari '
       + 'nousee.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 352 merkkiä (yläraja 400). */
-    teksti: "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+    /* KAANON: OMISTAJAN TEKSTI (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"; KK:n lopulliset tekstit). Sanasta sanaan. 249 merkkiä. */
+    teksti: "Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. Kirjekyyhky osaa näköjään vain kotiin.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -128,73 +128,27 @@ export const FOKUSVIRTA_PARIISI = {
      * Hiljaiset osuudet: "Paluumatkalla seurasin kaksi korttelia miestä"
      * (kuljetus kohtaukseen).
      */
-    reaktiot: [
-  {
-    "id": "pariisi.r1",
-    "ankkuri": "palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r2",
-    "ankkuri": "Tyhjät ikkunat seisoivat yhä puutarhan laidalla",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r3",
-    "ankkuri": "etsin kulmaa, josta rauniot eivät näkyisi",
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r4",
-    "ankkuri": "Halusin viedä kotiin kauniin Pariisin",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r5",
-    "ankkuri": "käänsin kameran suoraan palatsiin",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  }
-],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[softly] Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. [warmly] Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
+    /* Reaktiot tyhjennetty 11.11.2026: vanhat ankkurit eivät osu uuteen tekstiin; uudet määritetään vasta, kun äänitteen aikaleimat on kohdistettu. */
+    reaktiot: [],
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, 11.11.2026), ämpärin täysi osoite; luennat-kokoelman url on sama. */
+    luenta: "[softly] Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. [warmly] Kirjekyyhky osaa näköjään vain kotiin.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-pariisi.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE. Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json.
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
+    // Isoisän YKSI kuva kortissa tekstin vieressä (omistaja 11.11.2026 klo 20.31; Codex 689a190dd, KK hyväksyi 12.11. 00.4x).
+    // Vanhat i1 ja i2 (tarina14) pois samassa muutoksessa (KK 12.11. 00.16).
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg',
-      lyhyt: 'Pariisi, 1873. Tuileries’n tyhjät ikkunat puutarhan laidalla.',
-      selite: 'Vuoden 1871 palon jäljiltä palatsin runko seisoo yhä puutarhan edessä. Näkymä pohjautuu Henri Emile Godefroyn historialliseen valokuvaan.',
+      osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi.png',
+      lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries’n puutarhasta.',
+      selite: 'Isoisä päästää kirjekyyhkyn lentoon poltetun Tuileries’n palatsin edessä. Palatsi paloi vuonna 1871, ja sen rauniot purettiin 1883.',
       lahde: 'Matkakirjan havainnekuva',
+      // Raunioiden esikuva: Alphonse J. Liébert, Tuileries Palace, Burned. General View (Metropolitan Museum, Public Domain).
       lahteet: [
-        'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5',
-      ],
-    },
-    luentakuva2: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg',
-      lyhyt: 'Pariisi, 1873. Rauniot näkyivät myös puiden alta.',
-      selite: 'Puiden varjosta avautuu toinen näkymä palaneen Tuileries’n julkisivuun. Puutarhan rajaus on kuviteltu saman historiallisen valokuvalähteen pohjalta.',
-      lahde: 'Matkakirjan havainnekuva',
-      lahteet: [
-        'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5',
+        'https://www.metmuseum.org/art/collection/search/291458',
       ],
     },
   },
@@ -202,27 +156,24 @@ export const FOKUSVIRTA_PARIISI = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
-     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
-     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
-     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
+     * PULUN SAAPUMISKUVA (KK 11.11.2026 klo 20.5x, omistaja 20.31): kiinnitetty pallo Pariisin yllä nykyään; vanha tuolikuva (p1) pois.
+     * Commonsin valokuva, tiedostosivulta tarkistettu 11.11.2026: tekijä Aero4 (oma työ), lisenssi CC BY-SA 4.0. KUVAUSPÄIVÄ: Commons ilmoittaa 21.8.2013 (EXIF 20.04), mutta kuvan puut ovat lehdettömät ja valo talvinen (KK 12.11. 00.16), joten päiväys on epäluotettava eikä sitä käytetä missään tekstissä; kirjataan vain 'Commonsin ilmoittama 21.8.2013'. Halkaisija lasketaan LEVEYDESTÄ (0.52 × leveys; korkeudesta laskettuna pallo leikkautuisi),
+     * https://commons.wikimedia.org/wiki/File:Ballon_Generali_and_the_Eiffel_Tower.jpg. Kuvaa itseään ei muokata.
+     * RAJAUS pyöreään kehykseen (natiivi): pallo ja joki, Eiffel jää pois. `rajaus`: kehyksen keskipiste kuvan leveyden ja korkeuden
+     * suhteina [x, y] ja halkaisija kuvan leveyden suhteena (5760×3840 / 1280×853 -esikatselu: keskipiste noin (950, 430) px, halkaisija 660 px).
+     * Selitteet ovat SK:n luonnos, KK katsoo (vain kuva on hyväksytty).
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg',
-        lyhyt: 'Pariisi: tuoli kääntyi ystävää kohti.',
-        selite: 'Tuileries’n vihreillä tuoleilla kaksi ystävää jatkaa keskusteluaan puiden varjossa. Näkymä avautuu tuolin selkänojan korkeudelta.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://votrebanc.louvre.fr/en/the-project/',
-          'https://www.edmond-fils.com/les-collections/tuileries-mobilier-en-acier/',
-        ],
+        tiedosto: 'Ballon Generali and the Eiffel Tower.jpg',
+        lyhyt: 'Pariisi: pallo kohoaa yhä kaupungin ylle.',
+        selite: 'Kiinnitetty ilmapallo kohoaa Seinen rannalta Pariisin ylle. Matkustajat näkevät sieltä koko kaupungin.',
+        lahde: 'Aero4, Wikimedia Commons (CC BY-SA 4.0)',
+        rajaus: { keskipiste: [0.742, 0.504], halkaisija: 0.52 },
       },
     ],
-    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina."],
+    /* KUPLA: KK:n lopullinen teksti 2 (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"). Sanasta sanaan. 144 merkkiä. */
+    kommentti: ["Voi isoisä! Me kirjekyyhkyt osaamme vain kotiin. Siksi meidät vietiin Pariisista ensin ilmapallolla. Katso ylös: pallo nousee Pariisin ylle yhä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
