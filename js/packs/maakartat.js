@@ -5411,6 +5411,11 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
+        // KK 20.52 12.11.2026 (vaihtoehto A): Pariisin aarretehtävän vihje osoittaa tähän (Quai Voltaire).
+        nimi: 'Bukinistit 1859', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 48.859, lon: 2.33075,
+        nosto: 'nosto-pariisin-bukinistit',
+      },
+      {
         // KK 10.11.2026 12.24: ei samaan pisteeseen Eiffel-tornin kanssa; tornin itäisen jalan juurelle (Torni 1888 läntisen).
         nimi: 'Lustig 1925', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85826, lon: 2.2957,
         nosto: 'nosto-lustig-eiffel', nimiPuoli: 'oikea',

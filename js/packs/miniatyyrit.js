@@ -150,6 +150,8 @@ export const MINIATYYRIT = {
     'Metro 1900': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
     'Piaf ja Django': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
     'Patonki 1994': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
+    // Ämpäritunnus: kuva tilataan erikseen (ei generointia ilman lupaa); puuttuva kuva putoaa varatäpläksi.
+    'Bukinistit 1859': 'pariisi-bukinistit-1859',
     'Kaulanauha 1785': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {

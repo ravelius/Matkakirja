@@ -758,6 +758,71 @@ export const FOKUSVIRTA_PARIISI = {
     },
     {
       /*
+       * TARINAPAIKKA "Bukinistit 1859" (KK 20.52, 12.11.2026, vaihtoehto A).
+       *
+       * Pariisin tarinakaaren aarretehtävän (Colette, bouquin) vihje
+       * osoittaa tähän: tarinakaari.pariisi.kysymys.lahde =
+       * `nosto-pariisin-bukinistit` (js/tyohuone-kehitys-data.js).
+       * Jutun faktat ovat pelin jo hyväksytystä aineistosta: oppitunnin
+       * bouquin-selitys ja 1500-luvun ammattikunta (yllä, oppitunti)
+       * sekä 1859 kiinteät myyntipaikat ja 1891 laatikoiden jättäminen yöksi
+       * (en-Wikipedia "Bouquinistes", tarkistettu uudelleen 12.11.2026, KK 21.11).
+       *
+       * NIMIÖ/OTSIKKO: "Bukinistit 1859" kuvaa vuoden 1859 tapausta
+       * (kiinteä myyntipaikka kaiteen varrella), EI laatikoiden jättämistä yöksi (1891). Otsikko ei
+       * paljasta visan eikä Coletten kysymyksen vastausta.
+       * Visa on eri kuin Coletten: se kysyy iltarutiinia, ei nimen
+       * alkuperää.
+       */
+      id: 'pariisin-bukinistit',
+      nimio: 'Bukinistit 1859',
+      otsikko: 'Bukinistit 1859 — oma paikka Seinen kaiteella',
+      visa: {
+        kysymys: 'Mitä bukinistien piti kiinteän paikan saatuaankin tehdä laatikoilleen joka ilta?',
+        vaihtoehdot: [
+          'Kantaa ne pois kaiteelta',
+          'Lukita ne kaiteeseen riippulukolla',
+          'Peittää ne purjekankaalla',
+        ],
+        oikea: 0,
+        fakta: 'Laatikot sai jättää kaiteeseen vasta vuonna 1891.',
+      },
+      lunastus: [
+        'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi '
+          + 'kertoo, mitä laatikoissa on: ranskan sana bouquin tarkoittaa '
+          + 'vanhaa kirjaa. Vihreistä peltilaatikoista myydään käytettyjä '
+          + 'kirjoja, vanhoja lehtiä ja julisteita, ja ammattikunta on ollut '
+          + 'joen varrella 1500-luvulta asti. Vuonna 1859 kauppiaat saivat '
+          + 'kaupungilta kiinteät myyntipaikat rantakaiteen varrelta, mutta '
+          + 'laatikot piti silti kantaa pois joka ilta. Kaiteeseen ne sai '
+          + 'jättää vasta vuonna 1891.',
+      ],
+      lahde: 'Pelin hyväksytty Pariisi-aineisto: oppitunti "Joki, joka virtaa '
+        + 'kahden kirjahyllyn välissä" (tämä tiedosto) ja 1859/1891-fakta '
+        + '(en-Wikipedia "Bouquinistes", tarkistettu 12.11.2026).',
+      kuva: {
+        tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
+        lyhyt: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin vihreistä laatikoista 1500-luvulta asti.',
+        selite: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin '
+          + 'vihreistä laatikoista 1500-luvulta asti.',
+        lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+      },
+      kysymykset: [
+        'Mitä bukinistien laatikoista myydään?',
+        'Kuinka kauan bukinistit ovat olleet Seinen rannoilla?',
+        'Milloin laatikot saivat jäädä kaiteelle yöksi?',
+      ],
+      // Quai Voltaire, 48,859 N / 2,33075 E (esittelypaikoista, vaihtoehto A).
+      paikka: {
+        nimi: 'Bukinistit 1859',
+        laudat: {
+          maailmankartta: { x: 5911.1, y: 1439.5 },
+          europe: { x: 256, y: 608.6 },
+        },
+      },
+    },
+    {
+      /*
        * ── SIIRRETTY ESPANJASTA (1.9.2026, nostojen sisältöaudit) ────
        *
        * Tämä nosto asui 29.8.2026 alkaen Sevillan paketissa
