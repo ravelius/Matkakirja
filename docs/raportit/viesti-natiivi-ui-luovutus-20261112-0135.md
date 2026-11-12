@@ -83,3 +83,14 @@ SEURAAVAT ASKELEET:
 ## JONO NYT (PT 08.3x, KK 08.34; talo seisoi 06.06–): 1) kuumailmapallon kyltti peittää ankkurin (lähikuva), 2) intron nimi ja vuosi
 ## (introkuvien rakennusvuodet lähteineen, Pariisi ensin), 3) vakiokuvien komento käännökseen. Mac-ajot JU:lle, tulokset KK:lle, esto → rivi PT:lle.
 - Lisäksi avoin: Pariisin tekstiversion pt-ok (pyydetty 05.1x) ja juna-ajon tarkistusrivi KK:lle (yllä).
+
+## LISÄYS 08.5x (uusi NUI, nollauksen jälkeen): JONO 1–3 KÄYTY, kooste KK:lle 08.41 (PT kopio)
+- 1) Kyltti/ankkuri: 9c6a6f864 jo juna-224:ssä (merge a48f8ee33 11.11. 19.09), linkissä → työlista valmis.
+- 2) Introrivit: NUI 561fbd57c (natiivi-backup natiivi-ui/intro-rivit-valmiit, juna-224 c95f68c39:n päällä; worktree wt/nui-intro): 14 riviä SK:n
+  erien 1–2 taulukoista (11 katsottua + Berliini #8, Ateena #5, Dublin #3); koodi = SK:n json (skripti vertaa.py scratchpadissa). ODOTTAA KK:n junasanaa
+  (pyydetty ilman Mac-ajoa) → pt-ok. Erä 3 SK:lla.
+- 3) Vakiokuvat: komento jo käännöksessä (224.97); 1–3 valmis, 4–9 = KS:n json merkit [] tarkoituksella; json on KS:n vanhasta valinnasta
+  (KK 23.09 keskusta-työkalu b70b07ec0 ajamatta) → KS; katukuva 620/1679 m minimikorkeudesta → KK:n päätös kysytty.
+- PT 08.4x: CODEXIN TARINAMERKIT (6f2839967) vastaanotettu, kuittaus postilaatikko 495eab4f2; arkki KK:lle 08.43. Koe junan päälle ad63f29a1
+  (natiivi-ui/tarinamerkki-koe-2, worktree wt/nui-tarina), skenaario sk-tarinamerkki-4.txt, Mac-ajo pyydetty JU:lta → lokit/nui-tarinamerkki-4-ad63f29a1
+  → katso tila-rivit (ladattu, piirretty > 0) ja kuvat l1–l6, k1–k5 → KK:lle yksi viesti → kortti omistajalle KK:n kautta.
