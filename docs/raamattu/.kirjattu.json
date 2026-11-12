@@ -4,8 +4,8 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "25ec6baeaa95f228",
-  "aika": "2026-11-12T09:31:00.026Z"
+  "sha": "4c2a876bd5a5e4c4",
+  "aika": "2026-11-12T09:31:05.744Z"
  },
  "KIRJASTOT.md": {
   "sha": "73308d2669289448",
@@ -122,5 +122,9 @@
  "aiheet/roolit-ja-viestit.md": {
   "sha": "216f4454a93ad4b1",
   "aika": "2026-11-12T09:31:00.026Z"
+ },
+ "aiheet/omistajan-kanssa.md": {
+  "sha": "93e9478eb1a0a4cf",
+  "aika": "2026-11-12T09:31:05.744Z"
  }
 }
