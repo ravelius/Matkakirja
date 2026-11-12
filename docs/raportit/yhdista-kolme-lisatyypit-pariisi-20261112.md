@@ -58,7 +58,7 @@ Varalla: Edelfeltin Louis Pasteur (1885; PD; kuva jo pelissä) — museota en-Wi
 | Id | Tiedosto | Tekijä | Aika | Lisenssi | Koko | Näkyy |
 |---|---|---|---|---|---|---|
 | f1 | `Monet - Impression, Sunrise.jpg` | Claude Monet | 1872 | PD | 5773×4478 | Sinertävä satama, oranssi aurinko, veneet (jo pelissä). |
-| f2 | `Pierre-Auguste Renoir, Le Moulin de la Galette.jpg` | Pierre-Auguste Renoir | 1876 | PD | 2200×1639 | Tanssijat puiden alla, täplikäs valo (EI vielä katsottu pienoiskuvana tässä erässä; katso ennen käyttöä). |
+| f2 | `Pierre-Auguste Renoir, Le Moulin de la Galette.jpg` | Pierre-Auguste Renoir | 1876 | PD | 2200×1639 | Silmin katsottu 12.11. (700 px): ulkoilmatanssit, pariskunta vasemmalla, pöytäseurue oikealla, täplikäs valo puiden alla; tunnistettava Orsayn versio, ei vääristymiä. |
 | f3 | `The Bastille in the first days of its demolition, by Hubert Robert.jpg` | Hubert Robert | 1789 | PD | 5162×3428 | Tornit pölyssä, purkajat edessä (jo pelissä). |
 | f varalla | `Albert Edelfelt - Louis Pasteur - 1885.jpg` | Albert Edelfelt | 1885 | PD | 2082×2532 | Pasteurin muotokuva (jo pelissä). |
 
@@ -126,4 +126,4 @@ Asettelu: ylärivissä rakennus (3D-malli pyörii), lappu = henkilön muotokuva 
 - **Uusia kuvia (jos tyypit otetaan käyttöön):** c1 (Orsay-raunio), c2 (Baldus), c3 (Trocadéro), f2 (Renoir), i1, i2, i3. Jo pelissä: f1, f3 (ja varalla Edelfelt). Kaikki PD tai CC0 (ei BY/BY-SA-vaatimuksia).
 - **Faktaa tarvitaan:** Palais de Chaillot ei ole pelin jutussa (ainoa kolmikon kohta ilman omaa juttua); rivin fakta en-Wikipedia "Palais du Trocadéro".
 - **PK vahvistaa:** mallit (Orsay-avain, Panthéon, Invalidit, Grand Palais) ovat samassa tilassa kehyksen puussa.
-- **TARKISTETTAVAA:** Renoirin kuva silmin (f2), Edelfeltin taulun museo (jos halutaan varalle), Tuileries-kuva (jos halutaan kolmanneksi c-pariksi Chaillotin sijaan).
+- **TARKISTETTAVAA:** Edelfeltin taulun museo (jos halutaan varalle), Tuileries-kuva (jos halutaan kolmanneksi c-pariksi Chaillotin sijaan).
