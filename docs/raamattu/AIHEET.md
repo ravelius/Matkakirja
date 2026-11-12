@@ -34,7 +34,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | – | – |
 | musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | – | – |
 | grafiikan-tuotanto | Grafiikan tuotanto | PT | – | – |
-| mallit-ja-3d | Mallit ja 3D | LAV | – | – |
+| mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | – | – |
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | – | – |
 | lataus-ja-kaynnistys | Lataus ja käynnistys | NS | – | – |
