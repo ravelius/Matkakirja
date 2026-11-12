@@ -3,7 +3,7 @@
 TAVOITE: Kone tarkistaa jokaisen muutoksen ennen junaa, ja laitteella ajetaan vasta valmis kokonaisuus. Testaaja näkee testaajatilassa koko sisällön, ja kehittäjä pääsee testattavaan kohtaan suoraan.
 
 SÄÄNNÖT:
-1. Junaan vaaditaan vain automaattiset testit ja virheetön käännös ilman varjostinvirheitä. Pieni virhe korjataan seuraavassa junassa. [R-9.1] [R-9.2]
+1. Junaan vaaditaan vain automaattiset testit ja virheetön käännös. Varjostinten Metal-variantit käännetään aina, kun varjostimia on muutettu, ja aina ennen TestFlightia. Pieni virhe korjataan seuraavassa junassa. [R-9.1] [R-9.2]
 2. Sääntö, jonka kone voi valvoa, kirjataan testiksi. Työkalun alkukommentti on sen käyttöohje. [R-13.50]
 3. Simulaattoria käytetään vain uuteen tekniikkaan (varjostin, valo, ohjaus, kosketus, laitteen toiminnot, suorituskyky, muisti, käännösputki), pyydettyihin kuviin ja TestFlight-junan laitekierrokseen. Muu kulkee testien ja Macin esikatselun kautta. [R-9.11] [R-9.3]
 4. Laitteella ajetaan vain KK:n nimeämä valmis kokonaisuus. Kokeita, välivaiheita eikä poistuvaa tai keskeneräistä koodia mitata. [R-12.26] [R-2.209]
@@ -21,6 +21,6 @@ EI VIKA:
 - Sisäisessä TestFlightissa kehittäjätila on oletuksena päällä.
 
 TEKOTAPA:
-- Ennen junaa: Matkakirja-proto/tyokalut/tarkista.sh, ennen-junaa.sh. Tarkistusajo: tuotantoputken-tarkistukset.md.
+- Ennen junaa: Matkakirja-proto/tyokalut/tarkista.sh, ennen-junaa.sh, metal-tarkistus.sh. Tarkistusajo: tuotantoputken-tarkistukset.md.
 - Todistusajo: Matkakirja-proto/tyokalut/todistusajo/OHJE.md. Välähdykset: tools/valahdys-yavg.py.
 - Muut kortit: kamera (kameratestit), laitteet-ja-simulaattorit (laiteajojen menettely), valmiin-maaritelma.
