@@ -4911,7 +4911,7 @@ export const KAUPUNKIKARTAT = {
       // Ruotsalainen teatteri, nimiö oikealle. Samaan pisteeseen myös syvennystarina Finlandia (sama ilta 1899; omistaja
       // 31.10.2026: musiikkiteos ei ole oma karttamerkki) – listamuoto kuten Pariisin Tuileries'n palatsi.
       {
-        nimi: 'Suomi herää 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
+        nimi: 'Sibelius 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
         nosto: ['hetki-sibelius-finlandia-1899', 'syvennys-helsinki-finlandia'],
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5061,7 +5061,7 @@ export const KAUPUNKIKARTAT = {
       // sama piste kuin Kallimarmaro ja Maratonhuijaus (siirto vasemmalle): nimiö
       // oikealle.
       {
-        nimi: 'Louis 1896', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7411,
+        nimi: 'Maraton 1896', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7411,
         nosto: 'hetki-olympia-ateena-1896',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5490,7 +5490,7 @@ export const KAUPUNKIKARTAT = {
       },
       // Tornin läntisen jalan juurelle (KK 10.11.2026 12.24: Eiffelin merkit eivät päällekkäin; Torni romuraudaksi itäisen).
       {
-        nimi: 'Torni 1888', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
+        nimi: 'Eiffel-torni 1888', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
         nosto: 'hetki-eiffel-torni-1888',
         nimiPuoli: 'vasen',
       },
@@ -5830,18 +5830,18 @@ export const KAUPUNKIKARTAT = {
        */
       // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
       {
-        nimi: 'Yhdeksäs 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
+        nimi: 'Beethoven 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
         nosto: 'hetki-beethoven-yhdeksas-1824',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
       {
-        nimi: 'Figaro 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
+        nimi: 'Mozart 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Pörssikrahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
+        nimi: 'Wienin krahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
         nosto: 'hetki-wienin-porssikrahi-1873',
         teksti: HISTORIAN_HETKET_ID.get('wienin-porssikrahi-1873').teksti,
       },
@@ -6187,18 +6187,18 @@ export const KAUPUNKIKARTAT = {
       },
       // Rotherhithen kuilu (Brunel Museum).
       {
-        nimi: 'Tunneli 1827', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
+        nimi: 'Brunel 1827', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
         nosto: 'hetki-brunel-thames-tunnel-1827',
       },
       // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
       // oikealle.
       {
-        nimi: 'Palo 1666', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
+        nimi: 'Lontoon palo 1666', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
         nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
       },
       // alkuperäisen Globen tontti Southwarkissa.
       {
-        nimi: 'Globe 1599', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
+        nimi: 'Shakespeare 1599', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
         nosto: 'hetki-shakespeare-globe-1599',
       },
       /*
@@ -6389,7 +6389,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Bernauer Straße, muurin muistomerkki.
       {
-        nimi: 'Muuri 1961', tyyppi: 'henkilo', lat: 52.5375, lon: 13.3933,
+        nimi: 'Berliini 1961', tyyppi: 'henkilo', lat: 52.5375, lon: 13.3933,
         nosto: 'hetki-berliinin-muuri-1961',
       },
       /*
@@ -6857,7 +6857,7 @@ export const KAUPUNKIKARTAT = {
       // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
       // nimiö vasemmalle.
       {
-        nimi: 'Sikstus 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
+        nimi: 'Michelangelo 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -7433,7 +7433,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
       {
-        nimi: 'Latin-silta 1914', tyyppi: 'henkilo', lat: 43.8579, lon: 18.4289,
+        nimi: 'Sarajevo 1914', tyyppi: 'henkilo', lat: 43.8579, lon: 18.4289,
         nosto: 'hetki-franz-ferdinandin-salamurha-1914',
         teksti: HISTORIAN_HETKET_ID.get('franz-ferdinandin-salamurha-1914').teksti,
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
@@ -7631,7 +7631,7 @@ export const KAUPUNKIKARTAT = {
       // keskellä.
       {
         // Saaren länsiosaan (oli 59.9515/30.312 salmessa; Karttaseppä 11.10.2026).
-        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
+        nimi: 'Pietari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
         nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
       },
       // Pietarin yliopisto, Vasilinsaari.
@@ -7897,7 +7897,7 @@ export const KAUPUNKIKARTAT = {
       // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026): Fram
       // lähti Pipervikasta, nykyisen kaupungintalon edustalta.
       {
-        nimi: 'Fram 1893', tyyppi: 'henkilo', lat: 59.9098, lon: 10.7318,
+        nimi: 'Nansen 1893', tyyppi: 'henkilo', lat: 59.9098, lon: 10.7318,
         nosto: 'hetki-nansen-fram-1893',
       },
     ],
@@ -8061,7 +8061,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
       {
-        nimi: 'Christiansborg 1884', tyyppi: 'henkilo', lat: 55.6763, lon: 12.5806,
+        nimi: 'Kööpenhamina 1884', tyyppi: 'henkilo', lat: 55.6763, lon: 12.5806,
         nosto: 'hetki-christiansborgin-palo-1884',
         teksti: HISTORIAN_HETKET_ID.get('christiansborgin-palo-1884').teksti,
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
@@ -8432,7 +8432,7 @@ export const KAUPUNKIKARTAT = {
       },
       // Vuoden 963 tapahtuma avautuu omana historian hetkenään Bockin vieressä.
       {
-        nimi: 'Bockin kauppa 963', tyyppi: 'henkilo',
+        nimi: 'Luxemburg 963', tyyppi: 'henkilo',
         lat: 49.6118, lon: 6.1358,
         nosto: 'hetki-siegfried-ostaa-bockin-963',
       },

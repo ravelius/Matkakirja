@@ -3882,7 +3882,7 @@
   "etaisyys_m": 9,
   "pvm": "2.11.2026"
  },
- "kobenhavn:Christiansborg 1884": {
+ "kobenhavn:Kööpenhamina 1884": {
   "qid": "Q940733",
   "tapa": "nimi+säde",
   "wikidataNimi": "Christiansborg",
@@ -4429,7 +4429,7 @@
   "etaisyys_m": 56,
   "pvm": "2.11.2026"
  },
- "lontoo:Globe 1599": {
+ "lontoo:Shakespeare 1599": {
   "qid": "Q272434",
   "tapa": "nimi+säde",
   "wikidataNimi": "Globeteatern",
@@ -4453,7 +4453,7 @@
   "etaisyys_m": 4,
   "pvm": "2.11.2026"
  },
- "lontoo:Tunneli 1827": {
+ "lontoo:Brunel 1827": {
   "qid": "Q1190691",
   "tapa": "ehdokas",
   "wikidataNimi": "Thames Tunnel",
@@ -6339,7 +6339,7 @@
   "etaisyys_m": 40,
   "pvm": "2.11.2026"
  },
- "pietari:Jänissaari 1703": {
+ "pietari:Pietari 1703": {
   "qid": "Q1588376",
   "tapa": "nimi+säde",
   "wikidataNimi": "Jänissaari",
@@ -7624,7 +7624,7 @@
   "etaisyys_m": 4,
   "pvm": "2.11.2026"
  },
- "sarajevo:Latin-silta 1914": {
+ "sarajevo:Sarajevo 1914": {
   "qid": "Q1277685",
   "tapa": "nimi+säde",
   "wikidataNimi": "Latinerbroen",

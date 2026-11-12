@@ -6994,9 +6994,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-marie-curie-hangaari-1898',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Curie 1898',
-      johdanto: 'Rue Lhomondin pihalla seisoi vuosisadan vaihteessa vuotava vaja, '
-        + 'jossa aviopari keitti tonneittain kaivosjätettä saadakseen siitä esiin '
-        + 'suolanjyvän verran uutta alkuainetta.',
+      johdanto: 'Marie ja Pierre Curie ilmoittivat vuonna 1898 löytäneensä '
+        + 'poloniumin ja radiumin; Rue Lhomondin pihan vuotavassa vajassa he '
+        + 'keittivät tonneittain kaivosjätettä saadakseen niitä puhtaana '
+        + 'suolanjyvän verran.',
       tehtava: {
         kysymys: 'Paljonko radiumkloridia Curiet saivat eristettyä tonnista '
           + 'pikivälkettä vuoteen 1902 mennessä?',
@@ -7016,15 +7017,18 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '1898',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
-          teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
-            + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
-            + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
-            + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
-            + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
-            + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. '
-            + 'joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — '
-            + 'uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa '
-            + 'tonneittain kaivosten pikivälkejätettä, joka keitetään, '
+          teksti: 'Pariisissa Marie ja Pierre Curie ilmoittavat vuonna 1898 '
+            + 'löytäneensä kaksi uutta alkuainetta, poloniumin ja radiumin, ja '
+            + 'todistavat sen sitten vuosia vuotavassa vajassa keittämällä '
+            + 'tonneittain kaivosjätettä. Olkapäät ovat puutuneet jo '
+            + 'aamupäivällä, mutta tankoa ei voi laskea. Marie sekoittaa kiehuvaa '
+            + 'pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen '
+            + 'lääketieteellisen koulun ruumiinavaussali, vuotaa sateella '
+            + 'katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo '
+            + 'työn kannattavan. Polonium on ilmoitettu heinäkuussa 1898 ja '
+            + 'radium 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä '
+            + 'kemisteille — uusi alkuaine on saatava käteen puhtaana. Se '
+            + 'tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, '
             + 'suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, '
             + 'jolloin tonnista malmia on eristetty kymmenesosagramma '
             + 'radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee '
@@ -7074,9 +7078,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-lavoisier-laboratorio-1780',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Lavoisier 1780',
-      johdanto: 'Arsenaalin laboratoriossa aviopari punnitsi kaiken ennen koetta '
-        + 'ja sen jälkeen — ja kemia lakkasi olemasta alkemiaa, vaikka '
-        + 'vallankumous ei antanut sitä heille anteeksi.',
+      johdanto: 'Pariisin Arsenaalin laboratoriossa Antoine ja Marie-Anne '
+        + 'Lavoisier punnitsivat noin vuonna 1780 kaiken ennen koetta ja sen '
+        + 'jälkeen — ja kemia lakkasi olemasta alkemiaa, vaikka vallankumous ei '
+        + 'antanut sitä heille anteeksi.',
       tehtava: {
         kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian vallankumouksessa?',
         vaihtoehdot: [
@@ -7095,22 +7100,20 @@ export const KULTTUURI_KATEGORIAT = {
           aika: 'noin 1780',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
-          teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
-            + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
-            + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
-            + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
-            + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission '
-            + 'jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa '
-            + 'astioissa ja osoittaa, ettei mikään katoa eikä synny tyhjästä — '
-            + 'palaminen on yhtymistä ilman osaan, jonka hän nimeää hapeksi. '
-            + 'Vastapäätä istuu Marie-Anne Paulze Lavoisier, joka naitettiin '
-            + 'hänelle kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
-            + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
-            + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
-            + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
-            + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
-            + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
-            + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+          teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 '
+            + 'moderni kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa '
+            + 'mikään katoa eikä synny tyhjästä: palaminen on yhtymistä ilman '
+            + 'osaan, jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen '
+            + 'kallein esine ja tarkempi kuin mikään, mitä Pariisin kello- tai '
+            + 'kultasepät myyvät, sillä Lavoisier punnitsee kaiken ennen koetta '
+            + 'ja sen jälkeen. Vastapäätä istuu hänen vaimonsa Marie-Anne Paulze '
+            + 'Lavoisier. Hän on oppinut englannin kääntääkseen Priestleyn ja '
+            + 'Kirwanin kirjoitukset, ja hän piirtää laitteet niin tarkasti, että '
+            + 'muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy ensimmäinen '
+            + 'moderni kemian oppikirja, jossa on kolmetoista Marie-Annen '
+            + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+            + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
+            + 'veronkantajana.',
           lyhyt: 'Lavoisierit punnitsevat aineet ennen ja jälkeen reaktion '
             + 'osoittaakseen, ettei massa katoa.',
           selite: 'Kun vaa\'an neula pysähtyy, Marie-Anne merkitsee luvun ennen '
@@ -7152,9 +7155,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-pasteur-pullot-1862',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Pasteur 1862',
-      johdanto: 'Rue d\'Ulmin laboratoriossa rivi keitettyjä liemipulloja odotti '
-        + 'viikkoja samenemista, joka ei tullut — ja vanha usko itsestään '
-        + 'syntyvään elämään menetti palkintokilpailun.',
+      johdanto: 'Louis Pasteur osoitti Pariisin rue d\'Ulmin laboratoriossa vuonna '
+        + '1862, ettei elämä synny itsestään: rivi keitettyjä liemipulloja odotti '
+        + 'viikkoja samenemista, joka ei tullut, ja vanha usko menetti '
+        + 'palkintokilpailun.',
       tehtava: {
         kysymys: 'Miksi joutsenkaulapullon liemi pysyi kirkkaana, vaikka ilma '
           + 'pääsi sisään?',
@@ -7174,10 +7178,13 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '1862',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
-          teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. '
-            + 'Louis Pasteur nostaa sen valoa vasten École normale supérieuren '
-            + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
-            + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
+          teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, '
+            + 'ettei elämä synny itsestään mätänevästä aineesta vaan näkymätön '
+            + 'elämä tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun '
+            + 'palkinnon vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja '
+            + 'pullo on yhä kirkas. Pasteur nostaa sen valoa vasten École normale '
+            + 'supérieuren laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, '
+            + 'jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
             + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
             + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
             + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
@@ -7185,12 +7192,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
             + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
             + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
-            + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto '
-            + 'myönnetään hänelle 1862. Samaan aikaan hän on osoittanut, että '
-            + 'käyminen on elävien mikrobien työtä, ja vuonna 1865 hän patentoi '
-            + 'viinin kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, '
-            + 'että näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
-            + 'myöhemmin kirurgian ja rokotukset.',
+            + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
+            + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
+            + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+            + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
+            + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
           lyhyt: 'Pasteurin joutsenkaulapullo pysyy kirkkaana, kun taas katkaistu '
             + 'pullo samenee mikrobeista.',
           selite: 'Ehjässä joutsenkaulapullossa liemi pysyy kirkkaana, vaikka '
@@ -7232,9 +7238,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-eiffel-torni-1888',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Eiffel-torni 1888',
-      johdanto: 'Champ de Marsilla niittaajat seisoivat kesällä 1888 yli sadan '
-        + 'metrin korkeudessa ilman kaiteita ja takoivat kuumia niittejä rautaan, '
-        + 'jonka piti seisoa vain kaksikymmentä vuotta.',
+      johdanto: 'Pariisin Champ de Marsilla niittaajat kokosivat kesällä 1888 '
+        + 'Eiffel-tornia maailmannäyttelyyn: yli sadan metrin korkeudessa he '
+        + 'takoivat kuumia niittejä rautaan, jonka piti seisoa vain kaksikymmentä '
+        + 'vuotta.',
       tehtava: {
         kysymys: 'Miksi Eiffel-tornin osiin ei porattu yhtään reikää työmaalla?',
         vaihtoehdot: [
@@ -7253,23 +7260,25 @@ export const KULTTUURI_KATEGORIAT = {
           aika: 'elokuu 1888',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
-          teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin '
+          teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 '
+            + 'Eiffel-tornia vuoden 1889 maailmannäyttelyyn: toinen kerros on '
+            + 'valmis, ja kolmisensataa rakentajaa niittaa rautaristikkoa yhä '
+            + 'ylemmäs. Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin '
             + 'maassa, ja niittaajan on osattava seistä siinä koko päivä. '
-            + 'Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja '
-            + 'rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa '
+            + 'Rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa '
             + 'kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja '
             + 'kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. '
             + 'Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei '
             + 'porata paikan päällä: jokainen 18 038 osasta on piirretty '
             + 'Levallois-Perret\'n konepajalla kymmenesosamillin tarkkuudella, ja '
-            + 'jos osa ei sovi, se lähetetään takaisin. Rakentajia on '
-            + 'kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat '
-            + 'Gustave Eiffelin insinöörit Maurice Koechlin ja Émile Nouguier; '
-            + 'Eiffel osti heidän patenttinsa. Pariisin taiteilijat, Maupassant '
-            + 'ja Garnier mukana, ovat vastustaneet tornia julkisella '
-            + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä '
-            + 'vuotta. Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — '
-            + 'ja jää, koska sen huipulle sopii radioantenni.',
+            + 'jos osa ei sovi, se lähetetään takaisin. Työn aikana kuolee yksi '
+            + 'rakentaja. Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice '
+            + 'Koechlin ja Émile Nouguier; Eiffel osti heidän patenttinsa. '
+            + 'Pariisin taiteilijat, Maupassant ja Garnier mukana, ovat '
+            + 'vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin '
+            + 'seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. '
+            + 'maaliskuuta 1889 maailmannäyttelyyn — ja jää, koska sen huipulle '
+            + 'sopii radioantenni.',
           lyhyt: 'Neljän miehen ketju niittaa Eiffel-tornia ilman suojakaiteita, '
             + 'joka isku toisen varassa.',
           selite: 'Kuuma niitti ehtii jäähtyä nopeasti, joten neljän miehen '
@@ -7313,9 +7322,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-ranskan-vallankumous-bastilji-1789',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Bastilji 1789',
-      johdanto: 'Saint-Antoinen esikaupungin reunalla seisoi heinäkuussa 1789 '
-        + 'linnoitus, jossa oli seitsemän vankia ja 250 tynnyriä ruutia — ja '
-        + 'juuri ruudin takia väkijoukko tuli sen porteille.',
+      johdanto: 'Pariisin kansa hyökkäsi 14. heinäkuuta 1789 Bastiljin '
+        + 'linnoitukseen hakemaan sinne siirrettyä ruutia — linnoituksessa oli '
+        + 'vain seitsemän vankia ja 250 tynnyriä ruutia.',
       tehtava: {
         kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta 1789?',
         vaihtoehdot: [
@@ -7334,20 +7343,22 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '14.7.1789',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
-          teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
-            + 'Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on '
-            + 'tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 '
-            + 'kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama '
-            + 'päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen '
-            + 'Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. '
-            + 'Kuningas on erottanut suositun rahaministeri Neckerin, ja '
-            + 'kaupungin ympärille on koottu joukkoja; Camille Desmoulins on '
-            + 'huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. '
-            + 'Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 '
-            + 'sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on '
-            + 'väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko '
-            + 'pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää '
-            + 'kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan '
+          teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin '
+            + 'linnoitukseen hakemaan sinne siirrettyä ruutia, ja illalla '
+            + 'kuvernööri de Launay antautuu. Musketti painaa olkapäällä, mutta '
+            + 'siihen ei ole ruutia. Aamulla väkijoukko on tyhjentänyt Invalidien '
+            + 'sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. '
+            + 'Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten '
+            + 'Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen '
+            + 'esikaupungin reunalle. Siksi kansa on siellä. Kuningas on '
+            + 'erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille '
+            + 'on koottu joukkoja; Camille Desmoulins on huutanut '
+            + 'Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa '
+            + 'on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä '
+            + 'krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. '
+            + 'Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee '
+            + 'ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. '
+            + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
             + 'kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
             + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
             + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
@@ -7397,10 +7408,11 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-lumiere-elokuva-1895',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Lumière 1895',
-      johdanto: 'Boulevard des Capucines\'in kahvilan kellarissa muutama kymmenen '
-        + 'ihmistä maksoi joulukuussa 1895 frangin ja näki tehtaan portin '
-        + 'aukeavan valkokankaalla — yleisön joukossa taikuri, joka halusi heti '
-        + 'ostaa koneen.',
+      johdanto: 'Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. '
+        + 'joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama '
+        + 'kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan '
+        + 'valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa '
+        + 'koneen.',
       tehtava: {
         kysymys: 'Mitä Lumièren veljekset vastasivat Georges Mélièsille, kun tämä '
           + 'halusi ostaa Cinématographen?',
@@ -7416,28 +7428,31 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
+          otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
           aika: '28.12.1895',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
-          teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard '
-            + 'des Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
-            + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
-            + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
-            + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, '
-            + 'naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. '
-            + 'Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja '
-            + 'niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — '
-            + 'ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat '
-            + 'valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu '
-            + 'helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä '
-            + 'pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa '
-            + 'tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. '
-            + 'Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa '
-            + 'laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole '
-            + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
-            + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
-            + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+          teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
+            + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
+            + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+            + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
+            + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
+            + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
+            + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
+            + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
+            + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
+            + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
+            + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
+            + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+            + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
+            + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
+            + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+            + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
+            + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, '
+            + 'ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja '
+            + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
+            + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
+            + 'liikkuva valokuva on.',
           lyhyt: 'Méliès katsoo hämmästyneenä, kun Lumièren elokuva saa '
             + 'valkokankaan näyttämään ikkunalta.',
           selite: 'Georges Méliès nojautuu eteenpäin, kun valkokankaan '
@@ -7449,7 +7464,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lumière, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
+              otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
               lyhyt: 'Avustaja pitää kameran kammen tasaisena, jotta Lumièren '
                 + 'elokuvan ihmiset jatkavat kävelyään.',
@@ -7462,7 +7477,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Lumière, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
+              otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
               lyhyt: 'Toimittaja yrittää selittää lukijoille liikkuvaa kuvaa, '
                 + 'jota kukaan ei ole ennen nähnyt.',
@@ -8132,7 +8147,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Maraton 1896 — Louis voittaa ensimmäisen kisan',
+          otsikko: 'Maraton 1896 — ensimmäinen olympiamaraton',
           aika: '10.4.1896',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
@@ -8164,7 +8179,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Athens 1896 report, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Maraton 1896 — Louis voittaa ensimmäisen kisan',
+              otsikko: 'Maraton 1896 — ensimmäinen olympiamaraton',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
               lyhyt: 'Louisin isä etsii poikansa kasvoja väkijoukosta stadionilla '
                 + 'Kreikan juhliessa olympiavoittoa.',
@@ -9446,7 +9461,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-konstantinopoli-1453',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Bysantti 1453',
+      otsikko: 'Historian hetki: Konstantinopoli',
       johdanto: 'Toukokuun 29. päivän aamuna 1453 kahdeksantuhatta puolustajaa '
         + 'seisoi kahdentoista mailin muurilla, ja sama aamu päättyi Hagia Sofian '
         + 'ovien murtumiseen — tuhatvuotinen keisarikunta loppui yhdessä päivässä.',
@@ -9464,7 +9479,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bysantti 1453 — Konstantinopoli kaatuu',
+          otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
           aika: '29.5.1453',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
@@ -9498,7 +9513,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'history, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Bysantti 1453 — Konstantinopoli kaatuu',
+              otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
               lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin '
                 + 'reilun seitsemän viikon piirityksen.',
@@ -27577,7 +27592,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-ensimmainen-juna-rovaniemi-1909',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Ensijuna 1909',
+      otsikko: 'Historian hetki: Rovaniemi 1909',
       johdanto: 'Rautatie Rovaniemelle valmistui 1909 ja toi ensimmäisen '
         + 'höyryveturin markkinakylään, joka oli tähän asti tavoitettu vesitse, '
         + 'reellä ja maanteitse.',
@@ -27595,7 +27610,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Ensijuna 1909 — rautatie saapuu Rovaniemelle',
+          otsikko: 'Rovaniemi 1909 — ensimmäinen juna saapuu',
           aika: '1909',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-lahi-photo-v4.jpg',
@@ -27621,7 +27636,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennetun ympäristön historia, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Ensijuna 1909 — rautatie saapuu Rovaniemelle',
+              otsikko: 'Rovaniemi 1909 — ensimmäinen juna saapuu',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-kauko-photo-v4.jpg',
               lyhyt: 'Höyryjuna saapuu Rovaniemen puuasemalle vuonna 1909.',
               selite: 'Rovaniemen vuoden 1909 rautatieasemalle saapuu höyryjuna; '
@@ -28834,7 +28849,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-roger-ii-cefalu-lupaus-1131',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Roger II 1131',
+      otsikko: 'Historian hetki: Cefalù 1131',
       johdanto: 'Tarinan mukaan kuningas Roger II lupasi myrskyssä rakentaa '
         + 'katedraalin sinne, minne pääsisi hengissä rantaan — ja hänen laivansa '
         + 'ajautui Cefalùhun 1131.',
@@ -28852,7 +28867,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Roger II 1131 — lupaus myrskyssä',
+          otsikko: 'Cefalù 1131 — kuningas lupaa katedraalin',
           aika: '1131',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-lahi-photo-v4.jpg',
@@ -28880,7 +28895,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Cathedral of Cefalù, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Roger II 1131 — lupaus myrskyssä',
+              otsikko: 'Cefalù 1131 — kuningas lupaa katedraalin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-kauko-photo-v4.jpg',
               lyhyt: 'Pieni normannialus kamppailee aaltoja vastaan La Roccan edustalla.',
               selite: 'Myrskyävä meri ja Cefalùn La Rocca muodostavat näyttämön '
@@ -38214,7 +38229,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-tutankhamon-carter-1922',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Carter 1922',
+      otsikko: 'Historian hetki: Tutankhamon 1922',
       johdanto: 'Marraskuussa 1922 Howard Carter työnsi kynttilän reiästä oveen, '
         + 'joka oli ollut muurattuna yli kolme tuhatta vuotta — ja Kuninkaiden '
         + 'laaksosta löytyi ainoa lähes koskematon faaraonhauta.',
@@ -38232,7 +38247,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
+          otsikko: 'Tutankhamon 1922 — hauta löytyy',
           aika: '26.11.1922',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
@@ -38265,7 +38280,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
+              otsikko: 'Tutankhamon 1922 — hauta löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
               lyhyt: 'Lady Evelyn Herbert seuraa jännittyneenä, kun yli '
                 + 'kolmentuhannen vuoden hiljaisuus rikkoutuu.',
@@ -38277,7 +38292,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
             },
             {
-              otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
+              otsikko: 'Tutankhamon 1922 — hauta löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
               lyhyt: 'Brittilehti kuvittaa Carterin löydön piirroksin, ennen kuin '
                 + 'varsinaiset valokuvat leviävät.',
@@ -78518,7 +78533,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-machu-picchu-1911',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Bingham 1911',
+      otsikko: 'Historian hetki: Machu Picchu 1911',
       johdanto: 'Heinäkuussa 1911 yalelainen Hiram Bingham kiipesi paikallisen '
         + 'viljelijän ja yksitoistavuotiaan pojan perässä harjanteelle, jolla '
         + 'kaksi perhettä viljeli inkojen terasseja — ja lehdet tekivät hänestä '
@@ -78537,7 +78552,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bingham 1911 — Machu Picchun löytö',
+          otsikko: 'Machu Picchu 1911 — Bingham löytää rauniot',
           aika: '24.7.1911',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg',
@@ -78569,7 +78584,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Picchu and Hiram Bingham; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Bingham 1911 — Machu Picchun löytö',
+              otsikko: 'Machu Picchu 1911 — Bingham löytää rauniot',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg',
               lyhyt: 'Paikallisille perheille Machu Picchun kiviseinät ovat '
                 + 'arkea, jonka ulkopuolinen kutsuu löydöksi.',

@@ -18,16 +18,25 @@
  * muuriin). Sama erä uusi Röntgenin ja Einsteinin kuvat photo-v4:ksi.
  * Vuoden 2026 syyskuun 28. päivän erä toi 13 Euroopan historian hetkeä.
  *
- * ── TEKSTIN SÄÄNTÖ: IHMINEN EDELLÄ ─────────────────────────────────
+ * ── TEKSTIN SÄÄNTÖ: KUKA, MISSÄ, MILLOIN JA MIKSI ENSIN ────────────
  *
- * Jokainen `teksti` alkaa siitä, mitä kuvan ihminen kokee, pelkää tai
- * ajattelee juuri tässä sekunnissa; suuri kaari kerrotaan vasta sen
- * jälkeen ja lyhyesti. Aloitustapa vaihtelee (lähikuva, ääni, esine,
- * kysymys, ohikulkeva hetki) eikä sama tapa toistu peräkkäisissä
- * hetkissä. Mitta on 120–170 sanaa. Keksitty minitarina on sallittu
- * vain merkittynä ("ehkä", "kerrotaan"); päivämäärät, nimet ja luvut
- * ovat en-Wikipediasta, ja artikkeli nimetään jokaisen hetken
- * yläpuolella olevassa lähdekommentissa.
+ * KK 12.11.2026 (omistaja 19.37: "Tuo sopii."). Otsikko kertoo tapauksen
+ * eikä arvoitusta: "<Kuka tai mikä> <vuosi> — <tapaus selkokielellä>",
+ * noin 45 merkkiä; otsikon alku on kyltti (`nimio`, ≤ 18 merkkiä, avain
+ * kohdekartalla, nähtävyysjutuissa ja miniatyyreissä; ketjun tarkistaa
+ * `node tools/nimio-ketju.mjs`).
+ *
+ * Jokaisen `teksti`n ensimmäinen virke kertoo, kuka, missä, milloin ja
+ * miksi hetki on tärkeä. Vasta sen jälkeen tulee ihminen: mitä kuvan
+ * ihminen kokee, pelkää tai ajattelee juuri tässä sekunnissa (lähikuva,
+ * ääni, esine, kysymys, ohikulkeva hetki; sama tapa ei toistu peräkkäin),
+ * ja suuri kaari lyhyesti. Faktat vain jutun omasta tekstistä tai
+ * lähteestä; `lehtiJohdanto` seuraa samaa kaavaa. Mitta on noin 120–170
+ * sanaa. Keksitty minitarina on sallittu vain merkittynä ("ehkä",
+ * "kerrotaan"); päivämäärät, nimet ja luvut ovat en-Wikipediasta, ja
+ * artikkeli nimetään jokaisen hetken yläpuolella olevassa
+ * lähdekommentissa. Aloitukset on uusittu toistaiseksi vain Pariisin
+ * kuudelle hetkelle (12.11.2026); muut kaupungit KK:n sanalla.
  *
  * ── MISSÄ HETKI NÄKYY ──────────────────────────────────────────────
  *
@@ -926,7 +935,7 @@ export const HISTORIAN_HETKET = [
    * Oslo 1 yksikön päässä eli sama paikka. Omistaja 3.9.2026: laatan
    * päälle osuva hetki EI ole pääkartalla — sivu on Oslon
    * kaupunkilehdessä ja piste sen kohdekartalla (js/packs/maakartat.js
-   * "Fram 1893" → tämä hetki). Piste osuisi myös Oslon
+   * "Nansen 1893" → tämä hetki). Piste osuisi myös Oslon
    * kohdekartan rajaukseen, mutta hetki ei ole nähtävyys: sen kortti
    * on havainnekuvineen ja tiimalasimerkkeineen oma lajinsa, ja vain
    * pääkartta osaa näyttää sen sellaisena.
@@ -1587,8 +1596,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'tutankhamon-carter-1922',
-    otsikko: 'Carter 1922 — Tutankhamonin hauta löytyy',
-    nimio: 'Carter 1922',
+    otsikko: 'Tutankhamon 1922 — hauta löytyy',
+    nimio: 'Tutankhamon 1922',
     paivays: '26.11.1922',
     paikka: 'Kuninkaiden laakso, Egypti',
     iso: 'EGY',
@@ -1981,8 +1990,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'machu-picchu-1911',
-    otsikko: 'Bingham 1911 — Machu Picchun löytö',
-    nimio: 'Bingham 1911',
+    otsikko: 'Machu Picchu 1911 — Bingham löytää rauniot',
+    nimio: 'Machu Picchu 1911',
     paivays: '24.7.1911',
     paikka: 'Machu Picchu, Peru',
     iso: 'PER',
@@ -2083,22 +2092,25 @@ export const HISTORIAN_HETKET = [
     iso: 'FRA',
     lat: 48.8420, lon: 2.3476,
     kuvaversio: 4,
-    teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
-      + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
-      + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
-      + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
-      + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
-      + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta '
-      + 'samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine '
-      + 'on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten '
-      + 'pikivälkejätettä, joka keitetään, suodatetaan ja '
-      + 'kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista '
-      + 'malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei '
-      + 'tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie '
-      + 'kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. '
-      + 'Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin '
-      + 'kanssa, ensimmäisenä naisena, ja vuonna 1911 saa kemian palkinnon '
-      + 'yksin.',
+    teksti: 'Pariisissa Marie ja Pierre Curie ilmoittavat vuonna 1898 '
+      + 'löytäneensä kaksi uutta alkuainetta, poloniumin ja radiumin, ja '
+      + 'todistavat sen sitten vuosia vuotavassa vajassa keittämällä '
+      + 'tonneittain kaivosjätettä. Olkapäät ovat puutuneet jo '
+      + 'aamupäivällä, mutta tankoa ei voi laskea. Marie sekoittaa kiehuvaa '
+      + 'pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen '
+      + 'lääketieteellisen koulun ruumiinavaussali, vuotaa sateella '
+      + 'katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo '
+      + 'työn kannattavan. Polonium on ilmoitettu heinäkuussa 1898 ja '
+      + 'radium 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä '
+      + 'kemisteille — uusi alkuaine on saatava käteen puhtaana. Se '
+      + 'tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, '
+      + 'suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, '
+      + 'jolloin tonnista malmia on eristetty kymmenesosagramma '
+      + 'radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee '
+      + 'käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee '
+      + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
+      + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
+      + 'vuonna 1911 saa kemian palkinnon yksin.',
     kysymykset: [
       'Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?',
       'Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?',
@@ -2138,9 +2150,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Rue Lhomondin pihalla seisoi vuosisadan vaihteessa vuotava '
-      + 'vaja, jossa aviopari keitti tonneittain kaivosjätettä saadakseen '
-      + 'siitä esiin suolanjyvän verran uutta alkuainetta.',
+    lehtiJohdanto: 'Marie ja Pierre Curie ilmoittivat vuonna 1898 löytäneensä '
+      + 'poloniumin ja radiumin; Rue Lhomondin pihan vuotavassa vajassa he '
+      + 'keittivät tonneittain kaivosjätettä saadakseen niitä puhtaana '
+      + 'suolanjyvän verran.',
     lehtiTehtava: {
       kysymys: 'Paljonko radiumkloridia Curiet saivat eristettyä tonnista '
         + 'pikivälkettä vuoteen 1902 mennessä?',
@@ -2334,22 +2347,20 @@ export const HISTORIAN_HETKET = [
     iso: 'FRA',
     lat: 48.8503, lon: 2.3635,
     kuvaversio: 4,
-    teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
-      + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
-      + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
-      + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
-      + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission '
-      + 'jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa '
-      + 'ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on '
-      + 'yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu '
-      + 'Marie-Anne Paulze Lavoisier, joka naitettiin hänelle '
-      + 'kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
-      + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
-      + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
-      + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
-      + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
-      + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
-      + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+    teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+      + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
+      + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
+      + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
+      + 'esine ja tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät '
+      + 'myyvät, sillä Lavoisier punnitsee kaiken ennen koetta ja sen '
+      + 'jälkeen. Vastapäätä istuu hänen vaimonsa Marie-Anne Paulze '
+      + 'Lavoisier. Hän on oppinut englannin kääntääkseen Priestleyn ja '
+      + 'Kirwanin kirjoitukset, ja hän piirtää laitteet niin tarkasti, että '
+      + 'muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy ensimmäinen '
+      + 'moderni kemian oppikirja, jossa on kolmetoista Marie-Annen '
+      + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+      + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
+      + 'veronkantajana.',
     kysymykset: [
       'Miksi vaaka oli Lavoisierin laboratorion tärkein esine?',
       'Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?',
@@ -2388,9 +2399,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Arsenaalin laboratoriossa aviopari punnitsi kaiken ennen '
-      + 'koetta ja sen jälkeen — ja kemia lakkasi olemasta alkemiaa, '
-      + 'vaikka vallankumous ei antanut sitä heille anteeksi.',
+    lehtiJohdanto: 'Pariisin Arsenaalin laboratoriossa Antoine ja Marie-Anne Lavoisier '
+      + 'punnitsivat noin vuonna 1780 kaiken ennen koetta ja sen jälkeen — '
+      + 'ja kemia lakkasi olemasta alkemiaa, vaikka vallankumous ei antanut '
+      + 'sitä heille anteeksi.',
     lehtiTehtava: {
       kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian '
         + 'vallankumouksessa?',
@@ -2598,23 +2610,25 @@ export const HISTORIAN_HETKET = [
     iso: 'FRA',
     lat: 48.8419, lon: 2.3444,
     kuvaversio: 4,
-    teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. '
-      + 'Louis Pasteur nostaa sen valoa vasten École normale supérieuren '
+    teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, ettei '
+      + 'elämä synny itsestään mätänevästä aineesta vaan näkymätön elämä '
+      + 'tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun palkinnon '
+      + 'vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja pullo on yhä '
+      + 'kirkas. Pasteur nostaa sen valoa vasten École normale supérieuren '
       + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
       + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
-      + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, '
-      + 'on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja '
-      + 'kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin '
-      + 'museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää '
-      + 'synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
+      + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
+      + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
+      + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
+      + 'Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään '
+      + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
       + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
-      + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa '
-      + 'pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään '
-      + 'hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on '
-      + 'elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin '
-      + 'kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, että '
-      + 'näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
-      + 'myöhemmin kirurgian ja rokotukset.',
+      + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
+      + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
+      + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
+      + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+      + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
+      + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
     kysymykset: [
       'Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?',
       'Miksi Pasteur kuljetti liemipullonsa vuorille asti?',
@@ -2652,9 +2666,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Rue d\'Ulmin laboratoriossa rivi keitettyjä liemipulloja '
-      + 'odotti viikkoja samenemista, joka ei tullut — ja vanha usko '
-      + 'itsestään syntyvään elämään menetti palkintokilpailun.',
+    lehtiJohdanto: 'Louis Pasteur osoitti Pariisin rue d\'Ulmin laboratoriossa vuonna '
+      + '1862, ettei elämä synny itsestään: rivi keitettyjä liemipulloja '
+      + 'odotti viikkoja samenemista, joka ei tullut, ja vanha usko menetti '
+      + 'palkintokilpailun.',
     lehtiTehtava: {
       kysymys: 'Miksi joutsenkaulapullon liemi pysyi kirkkaana, vaikka ilma '
         + 'pääsi sisään?',
@@ -3026,7 +3041,7 @@ export const HISTORIAN_HETKET = [
    * Piste on Pariisin laatan päällä (1,4 laudan yksikköä) ja kohdekartan
    * rajauksessa (Champ de Mars; sama piste kuin kohde "Eiffel-torni").
    * Vain Pariisin kaupunkilehdessä ja sen kohdekartalla
-   * (js/packs/maakartat.js "Torni 1888").
+   * (js/packs/maakartat.js "Eiffel-torni 1888").
    * Lähde: en.wikipedia.org: Eiffel Tower
    */
   {
@@ -3038,22 +3053,24 @@ export const HISTORIAN_HETKET = [
     iso: 'FRA',
     lat: 48.8582, lon: 2.2945,
     kuvaversio: 4,
-    teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, '
-      + 'ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
-      + 'Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko '
+    teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
+      + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
+      + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
+      + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+      + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
       + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
       + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
       + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
       + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
       + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
       + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
-      + 'lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana '
-      + 'kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit '
-      + 'Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän '
-      + 'patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, '
-      + 'ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin '
-      + 'seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta '
-      + '1889 maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+      + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
+      + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
+      + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
+      + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
+      + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
+      + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
+      + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
       + 'radioantenni.',
     kysymykset: [
       'Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?',
@@ -3095,9 +3112,10 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Champ de Marsilla niittaajat seisoivat kesällä 1888 yli '
-      + 'sadan metrin korkeudessa ilman kaiteita ja takoivat kuumia '
-      + 'niittejä rautaan, jonka piti seisoa vain kaksikymmentä vuotta.',
+    lehtiJohdanto: 'Pariisin Champ de Marsilla niittaajat kokosivat kesällä 1888 '
+      + 'Eiffel-tornia maailmannäyttelyyn: yli sadan metrin korkeudessa he '
+      + 'takoivat kuumia niittejä rautaan, jonka piti seisoa vain '
+      + 'kaksikymmentä vuotta.',
     lehtiTehtava: {
       kysymys: 'Miksi Eiffel-tornin osiin ei porattu yhtään reikää '
         + 'työmaalla?',
@@ -3117,7 +3135,7 @@ export const HISTORIAN_HETKET = [
    * 33. ROTHERHITHE, TOUKOKUU 1827 — KILPI THAMESIN ALLA.
    * Piste on Lontoon laatan päällä (2 laudan yksikköä) ja kohdekartan
    * rajauksessa (Rotherhithen kuilu). Vain Lontoon kaupunkilehdessä ja
-   * sen kohdekartalla (js/packs/maakartat.js "Tunneli 1827").
+   * sen kohdekartalla (js/packs/maakartat.js "Brunel 1827").
    * Lähde: en.wikipedia.org: Thames Tunnel
    */
   {
@@ -3420,7 +3438,7 @@ export const HISTORIAN_HETKET = [
    * Piste on Pietarin laatan päällä (0,5 laudan yksikköä) ja kohdekartan
    * rajauksessa (Pietari-Paavalin linnoitus). Vain Pietarin
    * kaupunkilehdessä ja sen kohdekartalla (js/packs/maakartat.js
-   * "Jänissaari 1703").
+   * "Pietari 1703").
    * Lähde: en.wikipedia.org: Peter and Paul Fortress, Saint Petersburg
    */
   {
@@ -3605,8 +3623,8 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'konstantinopoli-1453',
-    otsikko: 'Bysantti 1453 — Konstantinopoli kaatuu',
-    nimio: 'Bysantti 1453',
+    otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
+    nimio: 'Konstantinopoli',
     paivays: '29.5.1453',
     paikka: 'Theodosiuksen muuri, Konstantinopoli',
     iso: 'TUR',
@@ -3687,7 +3705,7 @@ export const HISTORIAN_HETKET = [
    * 39. LONTOO 2.9.1666 — PUDDING LANE JA THAMES.
    * Piste on Lontoon laatan päällä (1 laudan yksikkö) ja kohdekartan
    * rajauksessa (Pudding Lane). Vain Lontoon kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Palo 1666"). Kolmas kuva on
+   * kohdekartalla (js/packs/maakartat.js "Lontoon palo 1666"). Kolmas kuva on
    * The London Gazetten numero 85 (HETKI_LEHTIKUVAT).
    * Lähde: en.wikipedia.org: Great Fire of London
    */
@@ -3792,7 +3810,7 @@ export const HISTORIAN_HETKET = [
    * 40. BERNAUER STRASSE 13.8.1961 — PIIKKILANKA KADUN POIKKI.
    * Piste on Berliinin laatan päällä (0,6 laudan yksikköä) ja kohdekartan
    * rajauksessa (Bernauer Straße). Vain Berliinin kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Muuri 1961"). Kolmas kuva on
+   * kohdekartalla (js/packs/maakartat.js "Berliini 1961"). Kolmas kuva on
    * BILD-lehden etusivu 14.8.1961 (HETKI_LEHTIKUVAT).
    * Lähde: en.wikipedia.org: Berlin Wall
    */
@@ -3892,7 +3910,7 @@ export const HISTORIAN_HETKET = [
    * 41. SIKSTUKSEN KAPPELI 1510 — TELINEELLÄ, PÄÄ TAAKSEPÄIN.
    * Piste on Rooman laatan päällä (1,4 laudan yksikköä) ja kohdekartan
    * rajauksessa (Vatikaani). Vain Rooman kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Sikstus 1510").
+   * kohdekartalla (js/packs/maakartat.js "Michelangelo 1510").
    * Lähde: en.wikipedia.org: Sistine Chapel ceiling
    */
   {
@@ -3976,7 +3994,7 @@ export const HISTORIAN_HETKET = [
    * 42. WIEN, KÄRNTNERTOR-TEATTERI 7.5.1824 — SÄVELTÄJÄ KÄÄNNETÄÄN.
    * Piste on Wienin laatan päällä (0,9 laudan yksikköä) ja kohdekartan
    * rajauksessa (Valtionoopperan vieressä). Vain Wienin kaupunkilehdessä
-   * ja sen kohdekartalla (js/packs/maakartat.js "Yhdeksäs 1824").
+   * ja sen kohdekartalla (js/packs/maakartat.js "Beethoven 1824").
    * Lähde: en.wikipedia.org: Symphony No. 9 (Beethoven)
    */
   {
@@ -4060,7 +4078,7 @@ export const HISTORIAN_HETKET = [
    * 43. SOUTHWARK, SYYSKUU 1599 — JULIUS CAESAR GLOBESSA.
    * Piste on Lontoon laatan päällä (0,7 laudan yksikköä) ja kohdekartan
    * rajauksessa (Bankside). Vain Lontoon kaupunkilehdessä ja sen
-   * kohdekartalla (js/packs/maakartat.js "Globe 1599").
+   * kohdekartalla (js/packs/maakartat.js "Shakespeare 1599").
    * Lähde: en.wikipedia.org: Globe Theatre
    */
   {
@@ -4151,7 +4169,7 @@ export const HISTORIAN_HETKET = [
    * Piste on Wienin laatan päällä (1,1 laudan yksikköä) ja kohdekartan
    * rajauksessa (vanha Burgtheater Michaelerplatzilla, Hofburgin
    * vieressä). Vain Wienin kaupunkilehdessä ja sen kohdekartalla
-   * (js/packs/maakartat.js "Figaro 1786").
+   * (js/packs/maakartat.js "Mozart 1786").
    * Lähde: en.wikipedia.org: The Marriage of Figaro
    */
   {
@@ -4341,27 +4359,29 @@ export const HISTORIAN_HETKET = [
     iso: 'FRA',
     lat: 48.8533, lon: 2.3692,
     kuvaversio: 4,
-    teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
-      + 'Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on '
-      + 'tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 '
-      + 'kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama '
-      + 'päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen '
-      + 'Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. '
-      + 'Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin '
-      + 'ympärille on koottu joukkoja; Camille Desmoulins on huutanut '
-      + 'Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa '
-      + 'on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä '
-      + 'krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. '
-      + 'Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee '
-      + 'ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. '
-      + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
-      + 'kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
-      + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-      + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
-      + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan '
-      + 'Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan '
-      + 'Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; '
-      + 'tarkalleen ei tiedetä, kuka värit yhdisti.',
+    teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin linnoitukseen '
+      + 'hakemaan sinne siirrettyä ruutia, ja illalla kuvernööri de Launay '
+      + 'antautuu. Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
+      + 'Aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin '
+      + 'asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 '
+      + 'tynnyriä — on siirretty muutama päivä sitten Bastiljiin, '
+      + 'keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. '
+      + 'Siksi kansa on siellä. Kuningas on erottanut suositun '
+      + 'rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; '
+      + 'Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että '
+      + 'verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 '
+      + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän '
+      + 'vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko '
+      + 'päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, '
+      + 'ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay '
+      + 'antautuu; hänet raahataan kaupungintalolle ja surmataan sen '
+      + 'edessä. Linnoitus puretaan seuraavina kuukausina. Kolme päivää '
+      + 'myöhemmin Ludvig XVI tulee Versailles\'sta Pariisin '
+      + 'kaupungintalolle, ja hänelle annetaan vallankumouksen kokardi '
+      + 'hattuun kiinnitettäväksi. Perimätiedon mukaan Lafayette lisää '
+      + 'kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja '
+      + 'sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei '
+      + 'tiedetä, kuka värit yhdisti.',
     kysymykset: [
       'Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?',
       'Miten Ranskan sinivalkopunainen trikolori syntyi?',
@@ -4401,9 +4421,9 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Saint-Antoinen esikaupungin reunalla seisoi heinäkuussa '
-      + '1789 linnoitus, jossa oli seitsemän vankia ja 250 tynnyriä '
-      + 'ruutia — ja juuri ruudin takia väkijoukko tuli sen porteille.',
+    lehtiJohdanto: 'Pariisin kansa hyökkäsi 14. heinäkuuta 1789 Bastiljin '
+      + 'linnoitukseen hakemaan sinne siirrettyä ruutia — linnoituksessa '
+      + 'oli vain seitsemän vankia ja 250 tynnyriä ruutia.',
     lehtiTehtava: {
       kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta '
         + '1789?',
@@ -4422,12 +4442,12 @@ export const HISTORIAN_HETKET = [
    * 47. ATEENA, PANATHINAIKO 10.4.1896 — MARATONIN VOITTAJA SAAPUU.
    * Piste on Ateenan laatan päällä (0,1 laudan yksikköä) ja kohdekartan
    * rajauksessa (Kallimarmaro-stadion). Vain Ateenan kaupunkilehdessä ja
-   * sen kohdekartalla (js/packs/maakartat.js "Louis 1896").
+   * sen kohdekartalla (js/packs/maakartat.js "Maraton 1896").
    * Lähde: en.wikipedia.org: 1896 Summer Olympics, Spyridon Louis
    */
   {
     id: 'olympia-ateena-1896',
-    otsikko: 'Maraton 1896 — Louis voittaa ensimmäisen kisan',
+    otsikko: 'Maraton 1896 — ensimmäinen olympiamaraton',
     nimio: 'Maraton 1896',
     paivays: '10.4.1896',
     paikka: 'Panathinaiko-stadion, Ateena',
@@ -4509,7 +4529,7 @@ export const HISTORIAN_HETKET = [
    * yksikköä Helsingin laatasta, joka on laudalla siirretty keskustasta).
    * Raamattu: kohdekartan rajauksen sisällä oleva nosto piirretään VAIN
    * kohdekartalle — sivu on Helsingin kaupunkilehdessä ja piste sen
-   * kohdekartalla (js/packs/maakartat.js "Suomi herää 1899").
+   * kohdekartalla (js/packs/maakartat.js "Sibelius 1899").
    * Lähde: en.wikipedia.org: Finlandia, Jean Sibelius
    */
   {
@@ -4604,31 +4624,34 @@ export const HISTORIAN_HETKET = [
    */
   {
     id: 'lumiere-elokuva-1895',
-    otsikko: 'Lumière 1895 — elokuvan ensi-ilta',
+    otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
     nimio: 'Lumière 1895',
     paivays: '28.12.1895',
     paikka: 'Salon Indien du Grand Café, Pariisi',
     iso: 'FRA',
     lat: 48.8703, lon: 2.3294,
     kuvaversio: 4,
-    teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard '
-      + 'des Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
-      + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
-      + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
-      + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset '
-      + 'hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen '
-      + 'filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden '
-      + 'joukossa on puutarhuri, joka kastelee itsensä letkulla — '
-      + 'ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat '
-      + 'valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu '
-      + 'helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä '
-      + 'pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa '
-      + 'tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. '
-      + 'Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa '
-      + 'laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole '
-      + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
-      + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
-      + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+    teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
+      + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
+      + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+      + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
+      + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
+      + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
+      + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
+      + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
+      + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
+      + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
+      + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
+      + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+      + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
+      + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
+      + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+      + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
+      + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, '
+      + 'ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja '
+      + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
+      + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
+      + 'liikkuva valokuva on.',
     kysymykset: [
       'Mitä Grand Cafén kellarissa näytettiin Lumièren veljesten ensimmäisessä maksullisessa näytöksessä?',
       'Kuinka pitkiä ensimmäiset Pariisissa näytetyt elokuvat olivat?',
@@ -4681,10 +4704,11 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
-    lehtiJohdanto: 'Boulevard des Capucines\'in kahvilan kellarissa muutama '
-      + 'kymmenen ihmistä maksoi joulukuussa 1895 frangin ja näki tehtaan '
-      + 'portin aukeavan valkokankaalla — yleisön joukossa taikuri, joka '
-      + 'halusi heti ostaa koneen.',
+    lehtiJohdanto: 'Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. '
+      + 'joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama '
+      + 'kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan '
+      + 'valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa '
+      + 'koneen.',
     lehtiTehtava: {
       kysymys: 'Mitä Lumièren veljekset vastasivat Georges Mélièsille, kun '
         + 'tämä halusi ostaa Cinématographen?',
@@ -4832,8 +4856,8 @@ export const HISTORIAN_HETKET = [
   /* roger-ii-cefalu-lupaus-1131 — Cefalù Visit Sicily, The Cathedral of Cefalù; tarkistettu 27.9.2026. */
   {
     id: 'roger-ii-cefalu-lupaus-1131',
-    otsikko: 'Roger II 1131 — lupaus myrskyssä',
-    nimio: 'Roger II 1131',
+    otsikko: 'Cefalù 1131 — kuningas lupaa katedraalin',
+    nimio: 'Cefalù 1131',
     paivays: '1131',
     paikka: 'Cefalùn edusta, Sisilia',
     iso: 'ITA',
@@ -4962,8 +4986,8 @@ export const HISTORIAN_HETKET = [
   /* ensimmainen-juna-rovaniemi-1909 — Rovaniemen kaupunki, rakennetun ympäristön historia; tarkistettu 27.9.2026. */
   {
     id: 'ensimmainen-juna-rovaniemi-1909',
-    otsikko: 'Ensijuna 1909 — rautatie saapuu Rovaniemelle',
-    nimio: 'Ensijuna 1909',
+    otsikko: 'Rovaniemi 1909 — ensimmäinen juna saapuu',
+    nimio: 'Rovaniemi 1909',
     paivays: '1909',
     paikka: 'Rovaniemen rautatieasema, Lappi',
     iso: 'FIN',

@@ -818,7 +818,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Muuri 1961': {
+    'Berliini 1961': {
       nosto: 'hetki-berliinin-muuri-1961',
       teksti: 'Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. '
         + 'On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, '
@@ -2890,7 +2890,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Tunneli 1827': {
+    'Brunel 1827': {
       nosto: 'hetki-brunel-thames-tunnel-1827',
       teksti: 'Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä '
         + 'Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja '
@@ -2925,7 +2925,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Palo 1666': {
+    'Lontoon palo 1666': {
       nosto: 'hetki-lontoon-palo-1666',
       teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä '
         + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. Laivaston virkamies '
@@ -2958,7 +2958,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Globe 1599': {
+    'Shakespeare 1599': {
       nosto: 'hetki-shakespeare-globe-1599',
       teksti: 'Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon '
         + 'keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa '
@@ -4267,7 +4267,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Yhdeksäs 1824': {
+    'Beethoven 1824': {
       nosto: 'hetki-beethoven-yhdeksas-1824',
       teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline '
         + 'Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, '
@@ -4286,7 +4286,7 @@ export const NAHTAVYYSJUTUT = {
         + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen kolme '
         + 'osaa. Sävel on nyt Euroopan hymni.',
     },
-    'Figaro 1786': {
+    'Mozart 1786': {
       nosto: 'hetki-mozart-wien-1786',
       teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin '
         + 'Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, '
@@ -5807,7 +5807,7 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
-    'Torni 1888': {
+    'Eiffel-torni 1888': {
       nosto: 'hetki-eiffel-torni-1888',
       teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
         + 'niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
@@ -6330,7 +6330,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Suomi herää 1899': {
+    'Sibelius 1899': {
       nosto: 'hetki-sibelius-finlandia-1899',
       teksti: 'Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. '
         + 'marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen '
@@ -6711,7 +6711,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Louis 1896': {
+    'Maraton 1896': {
       nosto: 'hetki-olympia-ateena-1896',
       teksti: 'Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää '
         + 'tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin '
@@ -8359,7 +8359,7 @@ export const NAHTAVYYSJUTUT = {
   },
   luxemburg: {
     // Kohdekartan oma piste käyttää samaa tekstiä kuin historian hetki.
-    'Bockin kauppa 963': {
+    'Luxemburg 963': {
       nosto: 'hetki-siegfried-ostaa-bockin-963',
       teksti: 'Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella '
         + 'Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. '
@@ -9820,7 +9820,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Sikstus 1510': {
+    'Michelangelo 1510': {
       nosto: 'hetki-michelangelo-sikstus-1510',
       teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
         + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
@@ -12812,7 +12812,7 @@ export const NAHTAVYYSJUTUT = {
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
-    'Jänissaari 1703': {
+    'Pietari 1703': {
       nosto: 'hetki-pietari-perustus-1703',
       teksti: 'Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. '
         + 'Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli '
@@ -14689,7 +14689,7 @@ export const NAHTAVYYSJUTUT = {
   oslo: {
     // Historian hetken kohdekartan piste (omistaja 3.9.2026): juttu on
     // sanatarkasti hetken oma teksti (js/packs/historian-hetket.js).
-    'Fram 1893': {
+    'Nansen 1893': {
       nosto: 'hetki-nansen-fram-1893',
       teksti: 'Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. '
         + '31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman '
