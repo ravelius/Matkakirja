@@ -33,7 +33,7 @@ until-silmukka (lokit/<kansio>/loki.txt "valmis N s|LOPPU|ajo päättyi" tai uni
 - Puuttuvien äänitteiden laskenta KK:lle 08.51 (Eurooppa 235 palaa; /Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/kertoja-viive/ei-valmiit/).
 - Äänitysjono: PR 6591 MAINISSA (8ee7c563d): tools/aanitysjono/tarkista.mjs (manifesti asetuksesta osoitteet.luennat-manifesti,
   oletus v11; uudet avaimet alkuperäisestä tekstistä; --lisaa, --siivoa, --aanitettavat), data/aanitysjono.tsv 224 riviä.
-  Natiivin ennen-junaa.sh vaihe 5 = 56eba6130, PT antoi pt-ok:n JU:lle 09.14. NUI lisää asetusavaimen data/asetukset.json:iin
+  Natiivin ennen-junaa.sh vaihe 5 = 56eba6130 LINKISSÄ 224.104 = 9846d130d (JU 09.25). NUI lisää asetusavaimen data/asetukset.json:iin
   v12-viennin yhteydessä. Äänittäjän pohjat (laske-pariisi.py, vertailu.py) voivat tulla → hänen vientinsä kutsuu samaa skriptiä
   (KK 08.58: yksi avaintoteutus); auta liittämään, älä tee toista.
 - Mono-3 luettu KK:lle 09.10 (kaupungin jälkeinen kasvu = elävän kartan pehmennys, ei toistu ennen kaupunkia).
