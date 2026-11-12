@@ -247,6 +247,25 @@ if (komento === 'hae') {
   tulosta('KORTIT JA PERUSTA', kortit);
   const k = join(R, 'paatokset');
   tulosta('PÄÄTÖSLOKI', existsSync(k) ? readdirSync(k).map((f) => join(k, f)) : []);
+  // OHJEET (KK 12.11.2026, 20261112-kirjaa-hae-ohjeet.md): ovi löytää elävät ohjeet itse, ei käsin pidettyä ohjekarttaa.
+  // Osuma = kaikki hakusanat tiedoston nimessä tai 10 ensimmäisellä rivillä; nimiosumat ensin, enintään 10; ei koko tekstin hakua.
+  const ohjeet = [];
+  const kayLapi = (d) => { if (!existsSync(d)) return; for (const f of readdirSync(d)) { const q = join(d, f);
+    if (statSync(q).isDirectory()) kayLapi(q); else if (f.endsWith('.md')) ohjeet.push(q); } };
+  kayLapi(join(JUURI, 'docs/tuotanto')); kayLapi(join(JUURI, 'docs/moduulit'));
+  for (const f of ['docs/tilinvaihto.md', 'AGENTS.md']) if (existsSync(join(JUURI, f))) ohjeet.push(join(JUURI, f));
+  const osumat = [];
+  for (const q of ohjeet) {
+    const nimi = relative(JUURI, q).toLowerCase(), alku = lue(q).split('\n').slice(0, 10);
+    const nimessa = sanat.every((s) => nimi.includes(s));
+    if (!nimessa && !sanat.every((s) => `${nimi}\n${alku.join('\n').toLowerCase()}`.includes(s))) continue;
+    const otsikko = (alku.find((r) => r.startsWith('#')) || alku.find((r) => r.trim()) || '').trim().slice(0, 120);
+    osumat.push({ nimessa, rivi: `  ${relative(JUURI, q)}  ${otsikko}` });
+  }
+  osumat.sort((x, y) => (y.nimessa - x.nimessa) || x.rivi.localeCompare(y.rivi));
+  console.log(`OHJEET (${osumat.length})`);
+  osumat.slice(0, 10).forEach((o) => console.log(o.rivi));
+  if (osumat.length > 10) console.log(`  … ${osumat.length - 10} lisää`);
   for (const a of aiheet()) {
     const t = `${a.tunnus} ${a.nimi} ${lue(korttiPolku(a.tunnus))}`.toLowerCase();
     pisteet[a.tunnus] = sanat.reduce((n, s) => n + t.split(s).length - 1 + (a.tunnus.includes(s) ? 10 : 0), 0);

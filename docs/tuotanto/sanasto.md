@@ -1,0 +1,5 @@
+# Sanasto: pelin käsitteet
+
+Vanhan Raamatun kohta 13.1 sellaisenaan (siirretty 12.11.2026, KK:n tehtävä 20261112-kirjaa-hae-ohjeet; ei Raamatun kokoon).
+
+13.1 SANASTO: unohdettu aarre = Aarnin luettelon manneraarre · paikallisaarre = maan oma pieni/iso aarre · laatta = käännettävä kätkö · tutki kätkö -pelit = Etsi kätkö -napin tehtävät · kohtaaminen = kaupungin henkilö kysymyksineen · hiljaisen tiedon arkku = kohtaamisten kehys · valokuvapulma = vaihtoehdot oikeita valokuvia · mannerraja / mannerlento = eteneminen mantereelta toiselle · varustekauppa = valikon Käy kaupassa · superlinssi = alle 80 päivän palkinto · visavihje / aarrevihje = ks. Talous · johtolause = isoisän äänen esittelytapa · lehtikaupunki / maalehti = luettava lehti · työhuone = kehittäjävivun takaiset lehdet pelissä · fokuslehti = maan esirenderöity karttakuva · atlas = kaikkien valmiiden maiden lehdet kartalla · täky / täkynosto = uteliaisuuskoukku ja sen klikkiotsikkokupla · sähke / retkikunta = rakenteinen moninpeliviestintä · kaveriapu = retkikunnan veikkaus aarrekysymykseen (25 p) · turvatila = kaatumissilmukan itsekorjaus (lehdet pois tunniksi).
