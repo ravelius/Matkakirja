@@ -1501,3 +1501,7 @@ Talo seisoi 06.06–08.34: kaikki roolit levossa 2,5 h, vaikka jonoissa oli työ
 ## LUOVUTUS ≤ 8 KT JA ALOITUSVIESTI ENSIN (omistajan kysymys 12.11.2026 klo 08.43, KK:n päätös 08.45) (12.11.2026 klo 08.5x)
 
 "Hidastaako jokin tavoitteisiin pääsyä ja pitäisikö sessioiden ja varsinkin sinun aloituskontekstin määrää saada jotenkin pienennettyä?" → KK (Raamattu 7.37): luovutus vain voimassa oleva tila, ≤ 8 kt, ei "lisäys N" -ketjuja (uusi korvaa); Postivahti tarkistaa koon nollauksessa; Postivahdin aloitusviesti aina nollatun roolin ensimmäinen viesti. Mitattu: KS:n luovutus -1408 115 kt (37 lisäystä), NS 33 lisäystä → tiivistys seuraavassa nollauksessa. Seisokit (12.11. 2,5 h, 11.11. PK 3 h 47 min) korjattu lepovahdilla (7.38, PR 6589).
+
+## LEVYN ALARAJA 20 GI (12.11.2026 klo 12.16)
+
+KK:n päätös 12.11.2026 klo 12.15 (PT:n ehdotus): kun levyllä vapaata alle 20 Gi, ei aloiteta käännöksiä, Mac-ajoja eikä paistoja; ajastettujen tehtävien lokeja tai tiedostoja ei siirretä linkeiksi ulkoiselle levylle (luku 12). PT välitti JU:lle ja LAV:lle.
