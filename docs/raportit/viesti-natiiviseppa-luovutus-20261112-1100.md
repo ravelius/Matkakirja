@@ -44,6 +44,10 @@ KELLO: aja `date` ennen jokaista aikaleimaa. Viesteissäni 10.3x–11.4x olivat 
    näyte uv1:llä vs. _LeivottuST; (c) materiaali: kujakivi-lattia ei saa _ValoAtlasta (leivottu-ehto ru1.Count == r.p.Count).
    Koe: QA-tulostus kujan lattiaryhmästä (kärkiä, UV1-min/max, onko _ValoAtlas) + kuva, jossa lattia näyttää pelkän atlaksen (debug).
    LAV:n yläkuva: proto-3d/_tyo/linnanrakentaja/leivonta-v5-tyo/koe-b/kuja13-lattia-ylhaalta-atlas.png. KK:lle korjaus vasta A/B-parina.
+   ENSIN (LAV 11.1x): tarkista KATSESUUNTA. Atlaksessa itäkaista on tumma vasta z 375–440; z 345–370 (kameran z 364 vieressä) valoisa
+   myös leivonnassa. `valo sijoita -136 360 180`: jos 180 = katse −z:aan, varjoa EI kuulukaan näkyä → ei ajonaikaista vikaa. Aja kuva
+   katse +z:aan (kaista ~10 m edessä oikealla/vasemmalla) ennen vianhakua. Leivonnan aurinko 40°/45° (+x,+z; peli 318°/45°), elävä
+   aurinko voi erota → vertaa K1:n varjon puolta.
 
 ## VALMIIT TÄNÄÄN (tämä vuoro)
 
