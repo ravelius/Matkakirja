@@ -5,10 +5,10 @@ TAVOITE: Pelaaja etsii kaupunki kerrallaan unohdettuja aarteita isoisän jäljil
 SÄÄNNÖT:
 1. Aarteelle mennään kartan vihreästä pisteestä, joka syttyy matkan ensimmäisestä oikeasta visavastauksesta (myös tarinapaikan kysymys) ja on sitten auki joka kaupungissa. Pisteessä tavataan henkilö ja ratkaistaan aarretehtävä; Etsi aarre -nappia ei ole. [R-2.147] [R-2.27] [P-261112-27]
 2. Aarretehtävään on kaksi yritystä, ja kohtaamiskortti kertoo sen etukäteen. Kahden virheen jälkeen aarre lukkiutuu, mutta matka jatkuu. [R-2.24]
-3. Tehtävä nojaa kaupungin omaan tarinaan: väittämä tai pulma on jo saman kaupungin merkinnässä. [R-2.24]
+3. Aarretehtävä on toistaiseksi vain tietovisa, ja vihje tulee ennen sitä; kokeilun muut tyypit eivät näy. Väittämä on jo saman kaupungin merkinnässä. [R-2.24] [P-261112-34]
 4. Näkyvin apu on pullavinkki: pulla pululle punnilla, halvempi kuin matkalippu, kerran aarretta kohden. 50:50 on hiljainen vara. [R-2.24]
 5. Sähketehtävä on toinen avaustapa: Livian tehtävä ratkeaa maan omista aineistoista valinnoilla, eikä sen maassa ole kohtaamista. [R-2.25]
-6. Aarteita on neljää lajia: pieni ja iso paikallisaarre, mantereen aarre (1000 p) ja pääaarre (2000 p, jää matkalaukkuun). Muiden arvo arvotaan löydettäessä kymmenen punnan tarkkuudella. [R-2.17]
+6. Aarteita on neljää lajia: pieni ja iso paikallisaarre, mantereen aarre (1000 p) ja pääaarre (2000 p, jää matkalaukkuun). Muiden arvo arvotaan löydettäessä (10 £ tarkkuus). [R-2.17]
 7. Mantereella on yksi pääaarre ja yksi mantereen aarre; muista noin kolmannes on isoja. Pääaarre voi olla jo ensimmäisessä kätkössä, viimeisessä aina. [R-2.17] [R-2.23]
 8. Joka maalla on oma pari: pieni on paikallinen herkku tai luonnontuote, iso kadonnut kansallisaarre. Taru kerrotaan taruna. [R-2.18]
 9. Pääaarteet tulevat Aarnin luettelosta; Euroopan riipus on Kolme veljestä -riipus, ei Riian taloja, ja Oseanian höyhenvyöstä kerrotaan kunnioittaen. [R-3.10]
