@@ -79,3 +79,7 @@ SEURAAVAT ASKELEET:
   KK:lle lähetetty junasanaa varten (kuvat p1/p3/t5 KK katsoo). KK:n junasanalla → pt-ok PT:ltä: 4043ebd49 + SK-haara/data cb990dca6 + sisällön vienti.
 - LISÄYS 05.1x: KK:N JUNASANA 05.06 Pariisin tekstiversio (4043ebd49 + SK cb990dca6 + vienti) → pt-ok PYYDETTY PT:ltä. AVOIN: kun juna-ajo
   224.97+:n päällä valmis (JU), tarkista lokista "aanet: Pulun puhe pulu-pariisi-3.mp3: soi" ja "Pulun nousukuva ajastettu" → yksi rivi KK:lle.
+
+## JONO NYT (PT 08.3x, KK 08.34; talo seisoi 06.06–): 1) kuumailmapallon kyltti peittää ankkurin (lähikuva), 2) intron nimi ja vuosi
+## (introkuvien rakennusvuodet lähteineen, Pariisi ensin), 3) vakiokuvien komento käännökseen. Mac-ajot JU:lle, tulokset KK:lle, esto → rivi PT:lle.
+- Lisäksi avoin: Pariisin tekstiversion pt-ok (pyydetty 05.1x) ja juna-ajon tarkistusrivi KK:lle (yllä).
