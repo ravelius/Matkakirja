@@ -681,3 +681,10 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
 - KJ55 katsottu: seksimuseo + puolustusrintama poissa Damilta, puolustusrintama Pampuksella (koodijuna/nimet-kj55/parit/rajaus-nm55-01-dam.jpg, -03-pampus.jpg) → KK 02.3x.
   Sanalla: poimi c7dfbc2fe (karttaseppa/nimet) 224.93 e59480dc2:n päälle → pt-ok PT:ltä SHA:lla.
 - SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) nimet-junasana (yllä) 5) Montmartre KJ43 6) KJ53 (JU ajaa nyt) 7) GHSL 8) PP:n ikkunakolmio.
+
+## LISÄYS 52 (02.4x): KK 02.31 nimien korjaukset → fdb433090, pt-ok pyydetty
+- fdb433090 (natiivi-backup karttaseppa/nimet-juna = 224.93 e59480dc2 + 1; työpuu wt/proto-karttaseppa-nimet; 777/777, unity 0): Pampus omalla nimellään (Q924769, sl 15),
+  puolustusrintama pois; "sex"/"bordel" kokonaisin sanoin (testit Sextius, Sexten, Sextant, bordelais, bordelaise). pt-ok pyydetty 02.4x → odota LINKKI.
+- LINKIN JÄLKEEN: yksi Pampus-rajaus KK:lle tiedoksi (pyydä JU:lta nm55-03-pampus-kulma junan käännöksellä tai sk-mac-nimet-kj55.txt:n kuva 3).
+- KK:lle lähetetty lista saman lajin pistenimistä (muurit, vallit, linjat, reitit, kanavat Merkittavat.json:ssa) – KK päättää, ei siirretty.
+- SEURAAJAN JONO: 1) KJ49c musta kylki 2) KJ52 + talojen päätös 3) KJ54 näyte-arkit 4) nimet LINKKI + Pampus-rajaus 5) Montmartre KJ43 6) KJ53 7) GHSL 8) PP:n ikkunakolmio.
