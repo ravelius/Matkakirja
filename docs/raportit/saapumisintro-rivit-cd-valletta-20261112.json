@@ -6,20 +6,20 @@
   "Vue depuis le mont des arts Bruxelles.jpg": "Mont des Arts",
   "brussels-4-arki-intro-v2.png": "Place du Jeu de Balle",
   "brussels-5-luonto-intro-v1.png": "Bois de la Cambre",
-  "brussels-6-nakoala-intro-v1.png": "Marolles",
+  "brussels-6-nakoala-intro-v1.png": "Näkymä Place Poelaertilta",
   "brussels-7-ilta-intro-v1.png": "Notre-Dame du Sablon · 1400-luku",
   "BEL Brussels, Cathédrale Saint-Jacques-sur-Coudenberg 001.jpg": "Saint-Jacques-sur-Coudenbergin kirkko · 1787",
-  "View over Old Town from St. Elisabeth Cathedral Bell Tower - Kosice - Slovakia (36428414991).jpg": "Hlavná-katu ja valtionteatteri",
-  "Košice z vyhliadkovej veže 5.JPG": "Hradován näkötorni",
+  "View over Old Town from St. Elisabeth Cathedral Bell Tower - Kosice - Slovakia (36428414991).jpg": "Näkymä Pyhän Elisabetin tuomiokirkon tornista",
+  "Košice z vyhliadkovej veže 5.JPG": "Näkymä Hradován näkötornilta",
   "Košice Hlavná.jpg": "Hlavná-katu ja valtionteatteri",
   "kosice-4-arki-intro-v1.png": "Hrnčiarska-katu",
   "kosice-5-luonto-intro-v1.png": "Hornád-joki",
-  "Kosice panorama.jpg": "Pyhän Elisabetin tuomiokirkko",
+  "Kosice panorama.jpg": "Pyhän Elisabetin tuomiokirkko · n. 1380–1508",
   "kosice-7-ilta-intro-v2.png": "Urbanin torni",
   "Košice, Tatra T3 č. 410+411 (01).jpg": "Košicen raitiovaunu",
-  "Views from Ljubljana Castle 20150819-1.jpg": "Prešernin aukio",
+  "Views from Ljubljana Castle 20150819-1.jpg": "Näkymä Ljubljanan linnalta",
   "Ljubljana (Slovenia) (54248876094).jpg": "Linnavuori",
-  "Ljubljana Evening (49152933117).jpg": "Näkymä Ljubljanaan (ehdotus)",
+  "Ljubljana Evening (49152933117).jpg": "Ljubljana illalla",
   "ljubljana-4-arki-intro-v1.png": "Krakovo",
   "ljubljana-5-luonto-intro-v1.png": "Tivolin, Rožnikin ja Šišenski hribin maisemapuisto",
   "Ljubljana, Slovenia (22342237376).jpg": "Näkymä Nebotičnikilta",
@@ -98,12 +98,12 @@
    "kaupunki": "bryssel",
    "nro": 6,
    "tiedosto": "saapumisintro/brussels/20261013-uudet-6-8/brussels-6-nakoala-intro-v1.png",
-   "rivi": "Marolles",
+   "rivi": "Näkymä Place Poelaertilta",
    "laji": "näköala",
    "lahde1": null,
    "lahde2": null,
-   "tila": "epävarma",
-   "huomio": "Sääntö 5: näköalakuva, ei vuotta. Kuvassa näkyvä nimettävä kohde on Marollesin kaupunginosa (kattomeri). Vaihtoehto: 'Place Poelaert' (näköalapaikka), jos pelin kyltti käyttää sitä. Koekelbergin basilika ja kaupungintalon torni näkyvät mutta eivät ole kuvan pääkohde."
+   "tila": "valmis",
+   "huomio": "KK 12.11. 18.05 päätti rivin. Sääntö 5: näköalakuva, ei vuotta. Kuvassa näkyvä nimettävä kohde on Marollesin kaupunginosa (kattomeri). Vaihtoehto: 'Place Poelaert' (näköalapaikka), jos pelin kyltti käyttää sitä. Koekelbergin basilika ja kaupungintalon torni näkyvät mutta eivät ole kuvan pääkohde."
   },
   {
    "kaupunki": "bryssel",
@@ -111,7 +111,7 @@
    "tiedosto": "saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png",
    "rivi": "Notre-Dame du Sablon · 1400-luku",
    "laji": "rakennus (monivaiheinen, sääntö 10)",
-   "lahde1": "https://en.wikipedia.org/wiki/Church_of_Our_Lady_of_the_Sablon",
+   "lahde1": "https://en.wikipedia.org/wiki/Church_of_Our_Lady_of_Victories_at_the_Sablon",
    "lahde2": "https://monument.heritage.brussels/fr/buildings/30493",
    "tila": "valmis",
    "huomio": "Sääntö 10: päärunko 1400-luvulla. Lähde 1 (en-Wikipedia): rakennus alkoi n. 1400, kuoro valmis 1435, 'Built in the 15th century'. Lähde 2 (Brysselin perintöluettelo): työt alkavat 1400-luvun alussa, kuoro aloitettu ennen 1409 ja valmis 1435, risteyskäytävä holvattu 1400-luvun puolivälissä, nave 5 travéeta + tuplasivulaivat 1494 jälkeen. Eri päät: fr-Wikipedia infobox 1348–1549 (kappeli 1304–1318, sacrarium 1549, kaksi lisäholvia 1500-luvun alussa) ja Visit Brussels 1300-luku–; en-Wikipedia 'torneja ei valmistettu'. Siksi vuosisata, ei väliä. Kuva on Matkakirjan havainnekuva (tunnistus sopii: Sablonin kirkon eteläsivu)."
@@ -124,30 +124,30 @@
    "laji": "rakennus",
    "lahde1": "https://en.wikipedia.org/wiki/Church_of_St._James_on_Coudenberg",
    "lahde2": "https://monument.heritage.brussels/fr/buildings/30521",
-   "tila": "epävarma",
-   "huomio": "Rakennettu 1776–1787 (11 v, sääntö 1) = valmistumisvuosi 1787: en-Wikipedia 'built from 1776 to 1787', fr-Wikipedia 'achevés en 11 ans (1776 à 1787)' (https://fr.wikipedia.org/wiki/Église_Saint-Jacques-sur-Coudenberg), perintöluettelo: julkisivu 1776–1780, nave/risteys/kuoro 1785–1786, vihkiäiset 1787. HUOM: näkyvä kupoli, lyhty ja kellotorni ovat Suysin 1849–1851 (korvasi Montoyerin päätteen); molemmat Wikipedian infoboxit näyttävät 'Fin des travaux 1849'. Tulkinta: päärunko 1787; jos KK pitää kupolia osana päärunkoa, vaihtoehto 'ilman vuotta' tai '1700-luku' (sääntö 10). Raitiovaunu näkyy, mutta kohde on kirkko."
+   "tila": "valmis",
+   "huomio": "KK 12.11. 18.05: hyväksytty. Rakennettu 1776–1787 (11 v, sääntö 1) = valmistumisvuosi 1787: en-Wikipedia 'built from 1776 to 1787', fr-Wikipedia 'achevés en 11 ans (1776 à 1787)' (https://fr.wikipedia.org/wiki/Église_Saint-Jacques-sur-Coudenberg), perintöluettelo: julkisivu 1776–1780, nave/risteys/kuoro 1785–1786, vihkiäiset 1787. HUOM: näkyvä kupoli, lyhty ja kellotorni ovat Suysin 1849–1851 (korvasi Montoyerin päätteen); molemmat Wikipedian infoboxit näyttävät 'Fin des travaux 1849'. Tulkinta: päärunko 1787; jos KK pitää kupolia osana päärunkoa, vaihtoehto 'ilman vuotta' tai '1700-luku' (sääntö 10). Raitiovaunu näkyy, mutta kohde on kirkko."
   },
   {
    "kaupunki": "kosice",
    "nro": 1,
    "tiedosto": "View over Old Town from St. Elisabeth Cathedral Bell Tower - Kosice - Slovakia (36428414991).jpg",
-   "rivi": "Hlavná-katu ja valtionteatteri",
+   "rivi": "Näkymä Pyhän Elisabetin tuomiokirkon tornista",
    "laji": "näköala",
    "lahde1": null,
    "lahde2": null,
    "tila": "valmis",
-   "huomio": "Sääntö 5 (näköalakuva) ja 4 (katu): ei vuotta. Teatteri näkyy, mutta kuva on näkymä; vaihtoehto \"Valtionteatteri\" ei kelpaa vuodella, koska lähteet ristiriidassa (1879–1899 vs 1897–1899). Kuvan 3 kanssa sama rivi."
+   "huomio": "KK 12.11. 18.05 päätti rivin. Sääntö 5 (näköalakuva) ja 4 (katu): ei vuotta. Teatteri näkyy, mutta kuva on näkymä; vaihtoehto \"Valtionteatteri\" ei kelpaa vuodella, koska lähteet ristiriidassa (1879–1899 vs 1897–1899). Kuvan 3 kanssa sama rivi."
   },
   {
    "kaupunki": "kosice",
    "nro": 2,
    "tiedosto": "Košice z vyhliadkovej veže 5.JPG",
-   "rivi": "Hradován näkötorni",
+   "rivi": "Näkymä Hradován näkötornilta",
    "laji": "näköala",
    "lahde1": null,
    "lahde2": null,
    "tila": "valmis",
-   "huomio": "Sääntö 5: kuvassa ei ole nimettävää yksittäistä kohdetta (pelkkä kaupunkipanoraama), joten näköalapaikan nimi. Torni on teräsrakenne (1987), ei vuotta. Vaihtoehto: \"Näkymä Hradován näkötornista\"."
+   "huomio": "KK 12.11. 18.05 päätti rivin. Sääntö 5: kuvassa ei ole nimettävää yksittäistä kohdetta (pelkkä kaupunkipanoraama), joten näköalapaikan nimi. Torni on teräsrakenne (1987), ei vuotta. Vaihtoehto: \"Näkymä Hradován näkötornista\"."
   },
   {
    "kaupunki": "kosice",
@@ -186,12 +186,12 @@
    "kaupunki": "kosice",
    "nro": 6,
    "tiedosto": "Kosice panorama.jpg",
-   "rivi": "Pyhän Elisabetin tuomiokirkko",
+   "rivi": "Pyhän Elisabetin tuomiokirkko · n. 1380–1508",
    "laji": "rakennus (monivaiheinen)",
    "lahde1": "https://en.wikipedia.org/wiki/Cathedral_of_St._Elizabeth",
    "lahde2": "https://sk.wikipedia.org/wiki/D%C3%B3m_sv%C3%A4tej_Al%C5%BEbety",
    "tila": "valmis",
-   "huomio": "Sääntö 10: monivaiheinen (n. 1380–1508, vaiheet 1380–1420, 1420–1440, 1440–1462, 1462–1490, 1491–1508; lisäksi 1800-luvun suuret restauroinnit 1856–1896). Lähteet antavat alun eri tavoin (en-wiki infobox 1378; sk-wiki \"1300-luvun loppu\", tarkkaa alkua ei tiedetä; structurae.net 1345) ja päärungon valmistumisvuosisata ei ole yksi (1300–1400-luku), joten ei vuotta. Vaihtoehto jos KK haluaa: \"1378–1508\" (en-wiki) tai pelkkä loppu 1508 (en+sk), mutta alku ei yksiselitteinen."
+   "huomio": "KK 12.11. 18.05 päätti rivin. Sääntö 10: monivaiheinen (n. 1380–1508, vaiheet 1380–1420, 1420–1440, 1440–1462, 1462–1490, 1491–1508; lisäksi 1800-luvun suuret restauroinnit 1856–1896). Lähteet antavat alun eri tavoin (en-wiki infobox 1378; sk-wiki \"1300-luvun loppu\", tarkkaa alkua ei tiedetä; structurae.net 1345) ja päärungon valmistumisvuosisata ei ole yksi (1300–1400-luku), joten ei vuotta. Vaihtoehto jos KK haluaa: \"1378–1508\" (en-wiki) tai pelkkä loppu 1508 (en+sk), mutta alku ei yksiselitteinen."
   },
   {
    "kaupunki": "kosice",
@@ -219,12 +219,12 @@
    "kaupunki": "ljubljana",
    "nro": 1,
    "tiedosto": "Views from Ljubljana Castle 20150819-1.jpg",
-   "rivi": "Prešernin aukio",
+   "rivi": "Näkymä Ljubljanan linnalta",
    "laji": "näköala (sääntö 5)",
    "lahde1": null,
    "lahde2": null,
-   "tila": "epävarma",
-   "huomio": "Vaihtoehto: Näkymä Ljubljanan linnalta. Rakennus (linna) ei näy; vuotta ei. Fransiskaanikirkko näkyy selvästi mutta on rakennus, jolle vuosi ei kuulu näköalakuvaan. Aukio itse on osin kirkon ja talojen peitossa; varavaihtoehto 'Ljubljanan vanhakaupunki' (mutta rivi 7 käyttää sitä). Commons: kuvaus vain 'Views from Ljubljana Castle' (19.8.2015, Suicasmo)."
+   "tila": "valmis",
+   "huomio": "KK 12.11. 18.05 päätti rivin. Vaihtoehto: Näkymä Ljubljanan linnalta. Rakennus (linna) ei näy; vuotta ei. Fransiskaanikirkko näkyy selvästi mutta on rakennus, jolle vuosi ei kuulu näköalakuvaan. Aukio itse on osin kirkon ja talojen peitossa; varavaihtoehto 'Ljubljanan vanhakaupunki' (mutta rivi 7 käyttää sitä). Commons: kuvaus vain 'Views from Ljubljana Castle' (19.8.2015, Suicasmo)."
   },
   {
    "kaupunki": "ljubljana",
@@ -241,12 +241,12 @@
    "kaupunki": "ljubljana",
    "nro": 3,
    "tiedosto": "Ljubljana Evening (49152933117).jpg",
-   "rivi": "Näkymä Ljubljanaan (ehdotus)",
+   "rivi": "Ljubljana illalla",
    "laji": "näköala (sääntö 5)",
    "lahde1": null,
    "lahde2": null,
-   "tila": "epävarma",
-   "huomio": "Katselupaikkaa ja kirkkoa ei voi tunnistaa varmasti: Commons (otettu 2.6.2019 klo 20.51, 'Views of Ljubljana' / 'Evening in Ljubljana') ei nimeä niitä. Ehdotus yleinen 'Näkymä Ljubljanaan'; tilaa epävarma, koska tornia ei nimetä arvaamatta. Vuoristo todennäköisesti Kamnikin-Savinjan Alpit (ei vahvistettu)."
+   "tila": "valmis",
+   "huomio": "KK 12.11. 18.05 päätti rivin. Katselupaikkaa ja kirkkoa ei voi tunnistaa varmasti: Commons (otettu 2.6.2019 klo 20.51, 'Views of Ljubljana' / 'Evening in Ljubljana') ei nimeä niitä. Ehdotus yleinen 'Näkymä Ljubljanaan'; tilaa epävarma, koska tornia ei nimetä arvaamatta. Vuoristo todennäköisesti Kamnikin-Savinjan Alpit (ei vahvistettu)."
   },
   {
    "kaupunki": "ljubljana",
@@ -278,8 +278,8 @@
    "laji": "näköala (sääntö 5)",
    "lahde1": null,
    "lahde2": null,
-   "tila": "epävarma",
-   "huomio": "SK muutti agentin ehdotuksesta (Nebotičnik): kuva on otettu Nebotičnikin huipulta, rakennus ei näy (sääntö 5). Nebotičnik ei näy kuvassa, joten vuotta (1933) ei näytetä. Kuvassa ei ole yksittäistä varmasti nimettävää kohdetta (Linnavuori on jo rivillä 2), joten rivi = näköalapaikan nimi. Vaihtoehto selkeämpi: 'Näkymä Nebotičnikilta'. Paikka: Commons-luokka 'Views of Ljubljana from Nebotičnik' https://commons.wikimedia.org/wiki/File:Ljubljana,_Slovenia_(22342237376).jpg"
+   "tila": "valmis",
+   "huomio": "KK 12.11. 18.05: hyväksytty. SK muutti agentin ehdotuksesta (Nebotičnik): kuva on otettu Nebotičnikin huipulta, rakennus ei näy (sääntö 5). Nebotičnik ei näy kuvassa, joten vuotta (1933) ei näytetä. Kuvassa ei ole yksittäistä varmasti nimettävää kohdetta (Linnavuori on jo rivillä 2), joten rivi = näköalapaikan nimi. Vaihtoehto selkeämpi: 'Näkymä Nebotičnikilta'. Paikka: Commons-luokka 'Views of Ljubljana from Nebotičnik' https://commons.wikimedia.org/wiki/File:Ljubljana,_Slovenia_(22342237376).jpg"
   },
   {
    "kaupunki": "ljubljana",
