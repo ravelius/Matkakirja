@@ -10,12 +10,12 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 2.9 kt | 12.11.2026 |
 | kaupungit | Kaupungit | KS | 3.0 kt | 12.11.2026 |
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
-| opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | – | – |
+| opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 3.0 kt | 12.11.2026 |
 | kamera | Kamera | PK | 2.8 kt | 12.11.2026 |
 | juoksupeli | Juoksupeli | PK | 2.8 kt | 12.11.2026 |
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | – | – |
-| museot | Museot | LAV | – | – |
-| linssit | Linssit | VS | – | – |
+| museot | Museot | LAV | 2.8 kt | 12.11.2026 |
+| linssit | Linssit | VS | 2.9 kt | 12.11.2026 |
 | iss-ja-avaruus | ISS ja avaruus | VS | – | – |
 | isoisa-ja-tarina | Isoisä ja tarina | SK | 2.9 kt | 12.11.2026 |
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
@@ -25,7 +25,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | aarteet | Aarteet | PK | 2.9 kt | 12.11.2026 |
 | talous-ja-pisteet | Talous ja pisteet | PK | – | – |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
-| pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
+| pelit-ja-minipelit | Pelit ja minipelit | PK | 2.8 kt | 12.11.2026 |
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
 | tyylikirja | Tyylikirja | NUI | 3.0 kt | 12.11.2026 |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |

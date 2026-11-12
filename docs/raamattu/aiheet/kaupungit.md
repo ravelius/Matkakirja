@@ -5,7 +5,7 @@ TAVOITE: Kaupungin tunnistaa jo tavallisista taloista, ja kirkko, asema ja palat
 SÄÄNNÖT:
 1. Kaupungit tehdään koodilla: talokone tavallisille taloille, tyyppimallit merkkirakennuksille (hillitympinä, jotta nähtävyydet erottuvat) ja tunnetuimmat nähtävyydet yksitellen. Uusia Tripo- tai Codex-malleja ei tehdä ilman omistajan sanaa; tehdyt jäävät. [P-261109-2] [P-261111-13]
 2. Uusi kaupunki tehdään yhteisillä työkaluilla: pohja yhdellä komennolla, merkkirakennukset tyypittämällä ja sama vakioajo (arkki ja muistimittaus). Koodissa ei ole kaupunkikohtaisia ehtoja: kaupunki on rivi kaupunkitaulussa. [P-261111-13]
-3. Talojen korkeus tulee GHSL-aineistosta kaupungin omalla kertoimella, nimetyt tornit korkeustaulusta. Katukuvia verrataan 30–40 m:n korkeudelta lähes vaakaan. [P-261112-12]
+3. Talojen korkeus tulee GHSL-aineistosta kaupungin omalla kertoimella, nimetyt tornit korkeustaulusta. Katukuvat otetaan pelin lähimmältä tasolta lähes vaakaan. [P-261112-12]
 4. Uusi tekotapa kokeillaan ensin pienellä alueella; koko kaupunkiin vasta hyväksynnän jälkeen. [P-261109-2]
 5. Piirretyn kartan saanut kaupunki näytetään sillä kokonaan, noin 2,5 m/px, yksinkertaistettuna isoisän ajan matkailijan karttana. Muut kaupungit pysyvät ennallaan. [R-2.204] [P-261102-2]
 6. Kaupungin loppulista lukitaan; uudet löydöt menevät toisen kierroksen listalle eivätkä viivästytä valmis-päätöstä. [R-2.215] [P-261112-13]
