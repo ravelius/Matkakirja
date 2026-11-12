@@ -22,6 +22,7 @@ import os
 import re
 import subprocess
 import statistics
+import difflib
 
 REPO = "/Users/Shared/Claude/Matkakirja-fable"
 PROJ = "/Users/koodaus/.claude/projects"
@@ -243,6 +244,23 @@ def mittaa(a):
         if re.search(r"(\d{8})", os.path.basename(p)).group(1) >= eilen:
             osumat += sum(1 for r in open(p, encoding="utf-8", errors="replace") if re.search(r"virhe|oikaisu", r, re.I))
     L["11 KK virhe/oikaisu-rivit"] = (osumat, None, "")
+
+    # 12 PÄÄLLEKKÄISET KIRJAUKSET (KK 12.11. 09.02): lähes samat MEMORY.md-rivit ja avoimet työlistan otsikot
+    def parit(tekstit, raja):
+        n, esim = 0, []
+        for i, x in enumerate(tekstit):
+            for y in tekstit[i + 1:]:
+                if difflib.SequenceMatcher(None, x.lower(), y.lower()).ratio() >= raja:
+                    n += 1
+                    esim.append(f"{x[:22]} ≈ {y[:22]}")
+        return n, esim
+    try:
+        mem = [re.sub(r"\(.*?\.md\)", "", r).strip("- \n") for r in open(MEMORY, encoding="utf-8") if r.startswith("- [")]
+    except OSError:
+        mem = []
+    m_n, m_e = parit(mem, 0.6)
+    t_n, t_e = parit([x.get("otsikko", "") for x in rivit if x.get("tila") not in ("valmis", "tehty")], 0.8)
+    L["12 päällekkäisiä kirjauksia"] = (m_n + t_n, None, f"muisti {m_n}, työlista {t_n}: " + "; ".join((m_e + t_e)[:2]))
     return nyt_l, L
 
 
