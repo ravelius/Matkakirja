@@ -705,3 +705,8 @@ Montmartren KJ43: KK katsoo yöviennin jälkeen; ei junaan ennen omistajan kortt
   SEURAAJA: (a) selvitä miksi p90 ei laske – kirkkain osa ehkä puolipallon taivas/Neutral-käyrä tai vastaValo/reuna (_ValoMuoto), ei nl; (b) uusi ajo keski ≈ 0.3 ja ehkä
   myös puolipallon taivas-osuus kohti keskeä; tavoite: KK:n linja "valoisa puoli ei maalattua vaaleampi/keltaisempi, keskisävy ennallaan (ka ≈ ero 1)". Karkea kuva KK:lle ennen junaa.
 - SEURAAJAN JONO ennallaan (LISÄYS 53), KJ53 kohdassa 6.
+
+## LISÄYS 55 (02.4x): NIMET LINKISSÄ 224.94
+- JU 02.43: KJ55 fdb433090 LINKISSÄ 224.94 = ce2849074. Uusi junapohja poiminnoille: ce2849074.
+- KJ55b (1 kuva, Pampus junan käännöksellä) pyydetty JU:lta: koodijuna/nimet-kj55/sk-mac-nimet-kj55b.txt → lokit/ks-kj55b-pampus-ce2849074.
+  KUN TULEE: rajaus (kuten rajaus-nm55-03-pampus: box 1076,780,1676,1180) KK:lle TIEDOKSI (ei päätettävää). Sitten työlistan nimirivi valmis.
