@@ -1,0 +1,639 @@
+{
+ "manifesti": "https://media.matkakirja.app/aanet/luennat/v11/manifest.json (oletus: asetus osoitteet.luennat-manifesti puuttuu)",
+ "aani": "oae6GCCzwoEbfc5FHdEu",
+ "malli": "eleven_v4_turbo",
+ "nopeus": 1.15,
+ "rivit": [
+  {
+   "avain": "0817065df8ae1178440f87351b1250e5",
+   "kaupunki": "berliini",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Radialsystem V",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Radialsystem V. Vuonna 1873 Berliinin katuja kaivettiin auki viemäriä varten: sellaista kaupungilla ei vielä ollut. James Hobrecht oli laatinut kaupungin laajenemissuunnitelman jo 1862, mutta hänet oli erotettu ennen kuin se valmistui, ja hän lähti Stettiniin rakentamaan vesijohtoa ja viemäriä. Vuonna 1869 hän palasi tehtävänään koko Berliinin viemäröinti. Kaksi liittolaista teki sen mahdolliseksi: hänen veljensä Arthur Hobrecht, josta tuli kaupungin ylipormestari 1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti jätevedet kaupungin laidalle sadetuskentille. Pääputkien rakentaminen jatkui, ja viimeinen valmistui 1893. Samaa miestä pyydettiin sen jälkeen neuvomaan viemäröinnissä noin kolmessakymmenessä saksalaisessa kaupungissa sekä Moskovassa, Tokiossa ja Kairossa.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "456bd772763b327fb7096be02a2f2d7e",
+   "kaupunki": "FRA",
+   "paketti": "historianHetket",
+   "kohde": "ranskan-vallankumous-bastilji-1789",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee Versailles'sta Pariisin kaupungintalolle, ja hänelle annetaan vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei tiedetä, kuka värit yhdisti.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "b1f7db5b847ba6bd3c9e69fa46b6da4f",
+   "kaupunki": "berliini",
+   "paketti": "fokusvirta-takyt",
+   "kohde": "viemarit",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Hobrechtin putket. Vuonna 1873 Berliinin katuja kaivettiin auki viemäriä varten: sellaista kaupungilla ei vielä ollut. James Hobrecht oli laatinut kaupungin laajenemissuunnitelman jo 1862, mutta hänet oli erotettu ennen kuin se valmistui, ja hän lähti Stettiniin rakentamaan vesijohtoa ja viemäriä. Vuonna 1869 hän palasi tehtävänään koko Berliinin viemäröinti.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "2b44564fcc364d1c649a3cd3020ab56f",
+   "kaupunki": "berliini",
+   "paketti": "fokusvirta-takyt",
+   "kohde": "viemarit",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Kaksi liittolaista teki sen mahdolliseksi: hänen veljensä Arthur Hobrecht, josta tuli kaupungin ylipormestari 1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti jätevedet kaupungin laidalle sadetuskentille. Pääputkien rakentaminen jatkui, ja viimeinen valmistui 1893. Samaa miestä pyydettiin sen jälkeen neuvomaan viemäröinnissä noin kolmessakymmenessä saksalaisessa kaupungissa sekä Moskovassa, Tokiossa ja Kairossa.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "ccd46db3e6baea5642e5d8dfabcb151c",
+   "kaupunki": "pariisi",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Bastilji 1789",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Bastilji 1789. Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee Versailles'sta Pariisin kaupungintalolle, ja hänelle annetaan vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon mukaan Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei tiedetä, kuka värit yhdisti.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "d10d24333fcfadafc8812b8f9398f81c",
+   "kaupunki": "sofia",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Banja Bašin moskeija",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Banja Bašin moskeija. Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle jäi Banja Baši, kaupungin ainoa yhä toimiva moskeija, joka seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin synagoga ja kaksi kirkkoa.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "c6bde29535775605999771c565d05b4e",
+   "kaupunki": "FRA",
+   "paketti": "skandaalit",
+   "kohde": "mona-lisan-varkaus-1911",
+   "pala": 4,
+   "paiva": "2026-11-12",
+   "teksti": "Etsintä oli valtava ja hämmästyttävän huono. Peruggia oli jättänyt peukalonjäljen, ja hänen sormenjälkensä olivat poliisin kortistossa, mutta hänen nimensä unohtui vertailtavien listalta. Runoilija Guillaume Apollinaire ehdittiin pidättää, ja hänen ystäväänsä Pablo Picassoa kuulusteltiin.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "7fc21189e2e9a39b81388eb20774f603",
+   "kaupunki": "AUT",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-karntnertor",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Kärntnertor-teatteri. Kärntnertor-teatteri oli Wienin hovin teatteri, jonka Antonio Beduzzi suunnitteli ja joka avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio 23. toukokuuta 1814 ja Chopinin Wienin-debyytti 1829. Huipentuma oli 7. toukokuuta 1824: Beethovenin yhdeksännen sinfonian kantaesitys, jossa soitti tavallista suurempi orkesteri. Viimeinen ooppera, Rossinin Wilhelm Tell, esitettiin 17. huhtikuuta 1870, ja uusi hovioopperatalo oli avattu jo 1869. Kärntnertor purettiin, ja sen tontilla on nykyään Hotel Sacher.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "34d6c6f7f5c607c2b598e4e4017aa2b8",
+   "kaupunki": "AUT",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-karntnertor",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Isoisän matkavuonna 1873 teatteri oli jo suljettu.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "36fa702bdb4f2d76ef008e7d0086d7bd",
+   "kaupunki": "BEL",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-maison-du-peuple",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Maison du Peuple. Maison du Peuple oli Belgian työväenpuolueen talo Brysselissä. Victor Horta suunnitteli sen, ja se vihittiin 2. huhtikuuta 1899 Jean Jaurèsin läsnä ollessa. Rakennus oli rauta- ja lasitalo, jonka runkoon käytettiin yli 600 000 kiloa rautaa: alakerrassa oli myymälöitä ja kahvila-ravintola, ylempänä puolueen toimistoja, kirjasto ja kokoushuoneita ja ylimpänä suuri juhlasali. Hortan koristeet rajoittuivat lähinnä kaiteiden kaariin.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "b5034c9ce4865e9c50e84e7ff0ea92ad",
+   "kaupunki": "BEL",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-maison-du-peuple",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Talo purettiin 1965, vaikka satoja arkkitehteja vastusti sitä. Osat numeroitiin, jotta rakennus voitaisiin pystyttää muualle, mutta sitä ei koskaan tehty, ja osa osista katosi. Tilalle nousi 26-kerroksinen toimistotorni.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "7341612500c4b256f20daf68d11f2ef0",
+   "kaupunki": "CZE",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-praha-raatihuone",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Prahan vanhan raatihuoneen itäsiipi. Prahan Vanhankaupungin raatihuoneen itäsiipi rakennettiin uusgoottilaiseksi vuosina 1838–1848, ja sen tieltä purettiin kaksi 1300-luvun taloa. Arkkitehteina työskentelivät Pietro Nobile ja Pavel Sprenger. Toukokuun alussa 1945 Prahan kansannousun aikana raatihuone toimi vastarinnan keskuksena. Saksalaiset joukot ampuivat sitä 8. toukokuuta, ja itäsiipi paloi kuoreksi.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "63f97dc34c284b234143bc3d37aafde7",
+   "kaupunki": "CZE",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-praha-raatihuone",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Tuli vahingoitti myös tornia ja astronomista kelloa ja tuhosi osan kaupunginarkistosta. Jäljelle jääneet seinät purettiin tornin viereistä osaa lukuun ottamatta. Kilpailut vuodesta 1899 lähtien jäivät ilman toteutusta, eikä siivelle ole rakennettu korvaajaa.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "aeee9f8903b02614715b8b81bc8081be",
+   "kaupunki": "DEU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-anhalter-bahnhof",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Anhalter Bahnhof. Anhalter Bahnhof oli Berliinin eteläinen pääteasema. Franz Schwechten suunnitteli sen vuonna 1841 avatun vanhan aseman tilalle, ja uusi asema avattiin 15. kesäkuuta 1880. Julkisivu oli 101 metriä leveä, ja seinät muurattiin klinkkeritiilestä ja koristeltiin terrakotalla. Hallin teräskatto kohosi 34 metrin korkeuteen 62 metrin jännevälillä.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "eb387711126aea26aaa993fc9db53d63",
+   "kaupunki": "DEU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-anhalter-bahnhof",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Asemalta pääsi Leipzigiin, Müncheniin, Wieniin ja Roomaan. Noin 9 600 berliiniläistä juutalaista karkotettiin täältä 116 junalla, enimmäkseen Theresienstadtiin. Ilmahyökkäys poltti hallin 3. helmikuuta 1945, liikenne loppui 1952, ja rauniot purettiin 1959–1961. Jäljelle jäi osa pääsisäänkäynnin julkisivusta.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "23bf0e0bd441a28aa90380b0881e8412",
+   "kaupunki": "DEU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-palast-der-republik",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Palast der Republik. Palast der Republik oli Itä-Berliinin Schlossplatzilla seissyt DDR:n kansankamarin ja kulttuuritalon yhdistelmä. Arkkitehti Heinz Graffunderin suunnittelema talo avattiin 23. huhtikuuta 1976, ja parlamentin lisäksi siellä oli teatteri, galleria, keilarata ja kolmetoista ravintolaa. Suuren salin paikkamäärä vaihteli lavan asettelun mukaan.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "55b8b64540be14e513ce9353d0958f10",
+   "kaupunki": "ESP",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-ciutadella",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Barcelonan Ciutadellan linnake. Ciutadella oli Barcelonan linnake, jonka Espanjan kuningas Filip V rakennutti 1713–1714 käydyn piirityksen jälkeen pitämään kaupunki ja Katalonia kurissa. Markiisi Verboomin suunnittelema viisikulmainen linnake rakennettiin 1700-luvun alkupuolella. Sen alta purettiin tuhatkunta taloa La Riberan kaupunginosasta, ja asukkaat jäivät ilman kotia ja ilman korvausta.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "180dd56275a477a83648158e8101446b",
+   "kaupunki": "ESP",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-ciutadella",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Rakennusaikanaan se oli Euroopan suurin linnake, ja siihen mahtui 8 000 sotilasta. Barcelonalaiset vihasivat sitä, ja kenraali Prim luovutti sen jäljellä olevan alueen kaupungille 1869. Linnake purettiin, ja alueelle perustettiin puisto. Arsenaali, kuvernöörin palatsi ja kappeli jäivät pystyyn; arsenaali on nykyään Katalonian parlamentin talo.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "d0f86ac989d0c74cc0f769155d4a60e5",
+   "kaupunki": "FRA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-pont-transbordeur",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Marseillen siirtosilta. Marseillen siirtosilta ylitti Vanhan sataman Quai du Portin ja Rive-Neuven välillä. Insinööri Ferdinand Arnodinin suunnittelema rakenne valmistui 19 kuukaudessa ja avattiin 15. joulukuuta 1905. Kaksi 86,6 metriä korkeaa tornia kannatti kantta 52 metrin korkeudessa veden yläpuolella. Matkustajat ylittivät sataman kannesta roikkuvalla korilla, joka liikkui kantta pitkin ja kulki matkan noin puolessatoista minuutissa.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "43cedd1091d471167cef77a3255668a7",
+   "kaupunki": "FRA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-pont-transbordeur",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Pohjoisessa tornissa oli hissi 1907 lähtien, ylhäällä näköalataso ja kalaravintola. 1930-luvulla silta oli enää koriste, koska huoltoon ei ollut varoja. Saksalaiset räjäyttivät sen 22. elokuuta 1944; vain pohjoinen torni putosi, ja loput romahtivat 1. syyskuuta 1945.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "476dfc7c05c8189758c1a24fc5dbf38c",
+   "kaupunki": "HUN",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-erzsebet-silta",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Alkuperäinen Erzsébet-silta. Budapestin Erzsébet-silta avattiin 10. lokakuuta 1903 ja nimettiin Itävalta-Unkarin keisarinna Elisabetin mukaan. Siltaa varten järjestettiin kansainvälinen kilpailu, mutta voittanutta riippusiltaa ei voitu rakentaa, koska Unkarissa ei ollut sopivaa teräsköyttä. Kauppaministeriön insinöörit Aurél Czekelius ja Kherndl suunnittelivat tilalle ketjusillan.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "3b3754628200ff6e26a8acda46118a0b",
+   "kaupunki": "ITA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-san-geminiano",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "San Geminianon kirkko. San Geminianon kirkko seisoi Pyhän Markuksen torin länsilaidalla, ja perinteen mukaan bysanttilainen kenraali Narses perusti sen 500-luvulla. Doge Sebastiano Zianin aikana 1100-luvun lopulla kirkko purettiin ja rakennettiin uudelleen toiseen paikkaan, jotta tori saatiin laajemmaksi.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "56cd01a8ab264568b288b5bc42233985",
+   "kaupunki": "ITA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-san-geminiano",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Uusi, keskikupolinen kirkko aloitettiin 1505, ja Jacopo Sansovinon suunnittelema julkisivu valmistui 1557. Sansovino haudattiin kirkkoon 1570. Napoleonin aikana purku alkoi 19. toukokuuta 1807, ja kirkon tilalle rakennettiin Napoleonin siipi. Pyhän Geminianuksen pyhäinjäännökset siirrettiin Nome di Gesù -kirkkoon.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "e19d5f9d66d0f83f51366f950c92bfde",
+   "kaupunki": "ITA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-mercato-vecchio",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Siellä seisoivat myös Giorgio Vasarin suunnittelema kalahalli Loggia del Pesce ja Abbondanza-pylväs, ja osassa aluetta asui juutalaisia, jotka oli määrätty gettoon 1571. Kun Firenze oli ollut Italian pääkaupunki, kaupunki päätti vanhan keskustan saneerauksesta; hanke hyväksyttiin vuonna 1885, ja alueen asukkaat häädettiin. Tilalle nousi Piazza Vittorio Emanuele II, nykyinen Piazza della Repubblica, jonka kaareen kirjoitettiin: ”kaupungin vanha keskusta”.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "13ecc00c5ca1da8d410f22c65b9f6c0f",
+   "kaupunki": "ITA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-septizodium",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Septizodium. Septizodium oli monumentaalinen julkisivu Rooman Palatinus-kukkulan juurella Via Appian varrella; keisari Septimius Severus rakennutti sen vuonna 203. Se oli noin 90 metriä pitkä ja kohosi kolmena pylväskerroksena, ja kolmeen suureen syvennykseen kuhunkin kuului suihkulähde. Myöhemmin se rapistui, ja keskiajalla siitä tehtiin paronien linnake. Vuonna 1241 kardinaalit lukittiin Septizodiumiin valitsemaan paavia.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "6e052fcc2377fd900a7b295dbd90f5a0",
+   "kaupunki": "ITA",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-septizodium",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Yksi heistä kuoli kesken vaalin, ja valittu Selestinus IV kuoli vain pari viikkoa valintansa jälkeen. Paavi Sixtus V käski Domenico Fontanan purkaa julkisivun 1588–1589; kivet käytettiin muun muassa Flaminion obeliskin jalustaan ja Marcus Aureliuksen pylvään korjaukseen.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "575172b811ba39d05dc3e195a8827d2f",
+   "kaupunki": "LTU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-vilnan-alalinna",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Vilnan alalinna. Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus 1400-luvulta. Venäjän sota vaurioitti sitä pahoin 1655–1661, ja tsaarin viranomaiset purkivat rauniot 1800-luvun alussa.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "3d92fbdd6415f36976a869e42eeeac33",
+   "kaupunki": "LTU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-vilnan-alalinna",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Palatsi rakennettiin uudelleen museoksi, joka avattiin 2018.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "1c65a76dfab68fde6313e6f5bc1f04a7",
+   "kaupunki": "POL",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-nevski-varsova",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Aleksanteri Nevskin katedraali. Aleksanteri Nevskin katedraali oli Venäjän keisarikunnan rakennuttama ortodoksinen katedraali Varsovan Saksin aukiolla. Keisari Aleksanteri III hyväksyi Leon Benois'n suunnitelman, perustuskivi laskettiin 30. elokuuta 1894 ja katedraali vihittiin 20. toukokuuta 1912. Kustannukset nousivat yli 3 miljoonaan ruplaan. Erillinen kellotorni oli 70 metriä korkea, rakennuksen päällä oli viisi kultakupolia, ja Moskovassa valettiin 14 kelloa.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "1c4d34a592e0ca05466e90e4a842b899",
+   "kaupunki": "POL",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-suuri-synagoga-varsova",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Varsovan suuri synagoga. Varsovan suuri synagoga seisoi Tłomackie-kadulla, ja sen suunnitteli Leandro Marconi. Kaupungin juutalaisyhteisö rakennutti sen vuosina 1876–1878; kustannukset nousivat noin 200 000 ruplaan. Synagoga avattiin 26. syyskuuta 1878 juutalaisen uudenvuoden aikaan, ja siellä oli noin 2 200 paikkaa. Toora-arkki oli tehty Libanonin setristä.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "2c187fdabd6b2696b833a332bcea81d7",
+   "kaupunki": "PRT",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-tejo-ooppera",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Tejon kuninkaallinen ooppera. Tejon kuninkaallisen oopperan vihkiäisiä vietettiin 31. maaliskuuta 1755 kuningatar Mariana Vitórian syntymäpäivänä. Kuningas José I tilasi talon arkkitehti Giovanni Carlo Galli Bibienalta, ja se rakennettiin Tejo-joen rannalle vanhan Ribeiran palatsin kylkeen. Saliin mahtui noin 600 katsojaa: parterin lisäksi oli 38 aitiota ja kuninkaallinen aitio.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "488695dd5a606747bf85db5784a9358f",
+   "kaupunki": "PRT",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-tejo-ooppera",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Ensi-illassa esitettiin David Perezin ooppera Alessandro nell’Indie, ja siinä lauloivat tenori Anton Raaff ja kastraatti Caffarelli. Kolmantena oopperana harjoiteltiin Antonio Mazzonin Antigonoa, mutta Lissabonin maanjäristys 1. marraskuuta 1755 tuhosi talon, joka oli ehtinyt toimia noin seitsemän kuukautta.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "b6d91eadd685d656b501ff68016397bb",
+   "kaupunki": "ROU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-vacaresti",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Văcărești-luostari. Văcărești oli Bukarestin suuri luostari, jonka Valakian ruhtinas Nicolae Mavrocordat aloitti 1716; kirkko vihittiin 1724. Luostariin perustettiin kreikankielinen koulu, kirjapaino ja kirjasto. Vuoden 1848 vallankumouksen johtajia pidettiin täällä vangittuina, ja 1800-luvulla luostarista tuli virallisesti vankila. 1970-luvulla se alettiin kunnostaa uskonnollisen taiteen museoksi, mutta työ keskeytyi vuoden 1977 maanjäristyksen jälkeen.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "4b7e6716163e198d07e62ef2e0dbb340",
+   "kaupunki": "ROU",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-vacaresti",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Ceaușescu määräsi luostarin purettavaksi, kun patriarkka ei suostunut ottamaan sitä käyttöön ennen kunnostusta. Purku alkoi 1980-luvun puolivälissä, ja koko kompleksi oli maan tasalla 1987. Tilalle suunniteltu oikeusministeriön rakennus jäi kesken 1990.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "153fd5ff4be54ac93777dec47d36530b",
+   "kaupunki": "RUS",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-nyenskans",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Nyenskans. Nyenskans oli ruotsalainen linnoitus Nevan ja Okhta-joen yhtymäkohdassa, ja Ruotsi rakensi sen 1611 vahvistaakseen valtaansa Inkerissä. Okhta-joen toiselle puolelle kasvoi Nyenin kauppakaupunki. Venäläiset hyökkäsivät kaupunkiin 1656 ja vahingoittivat sitä pahoin.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "4ce247fe25585ef827155dc57028195e",
+   "kaupunki": "RUS",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-nyenskans",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Pietari Suuri valtasi Nyenskansin toukokuussa 1703 ja päätti perustaa uuden pääkaupungin sen ympäristöön, vaikka maa kuului vielä virallisesti Ruotsille. Linnoitus purettiin vähitellen kaupungin kasvaessa.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "68aebf7d568bc05a6681b595b2798fe0",
+   "kaupunki": "RUS",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-sukharev",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Sukharevin torni. Sukharevin torni oli punatiilinen, valkokivikoristeinen torni Moskovassa, joka rakennettiin Pietari I:n käskystä 1692–1695. Nimi tuli Lavrenti Sukharevin johtamasta streltsi- eli jousiampujarykmentistä, joka tuki Pietaria. Torni oli yli 60 metriä korkea, ja siinä oli kello ja pieniä torneja. Kolmanteen kerrokseen perustettiin 1701 matematiikan ja navigaation koulu, ja yläkertaan Jakov Bruce rakensi Venäjän ensimmäisen tähtitornin.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "b6031da1b669d18289933b8439f47fea",
+   "kaupunki": "RUS",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-sukharev",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Neuvostohallitus teki tornista museon 1926, mutta se purettiin 1934, koska sen sanottiin haittaavan liikennettä. Purku kesti huhtikuun puolivälistä 11. kesäkuuta. Perustukset löydettiin alikulkukäytävän työmaalla ja säilytettiin.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "28ed36db4f6a81f3403e00f10fcb4370",
+   "kaupunki": "SWE",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-kustaa-ooppera",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Kustaa III:n ooppera. Kustaa III perusti Ruotsin oopperan ja rakennutti sille talon Gustav Adolfs torgin itälaidalle. Carl Fredrik Adelcrantzin suunnittelema ooppera vihittiin 30. syyskuuta 1782 Naumannin oopperalla Cora och Alonzo. Katsomossa oli parteri ja neljä parvea. Maaliskuun 16. päivänä 1792 talossa pidettiin naamiaiset, joissa aatelisten salaliittolaiset ampuivat kuningasta; hän kuoli 29. maaliskuuta.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "1b91e62a4f4be0d9db8ed6ce328c99cf",
+   "kaupunki": "ESP",
+   "paketti": "maastokohteet",
+   "kohde": "teide",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Teide. Teide on Teneriffalla Kanariansaarilla sijaitseva tulivuori ja Espanjan korkein kohta: 3 715 metriä merenpinnan yläpuolella. Kerrostulivuori syntyi yli sata tuhatta vuotta sitten Las Cañadasin kalderan sisään.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "f0aa77d8321f80e9519f889fb99e3ddb",
+   "kaupunki": "PRT",
+   "paketti": "maastokohteet",
+   "kohde": "sete-cidades",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Sete Cidades. Sete Cidades on São Miguelin saaren länsiosassa Azoreilla sijaitseva kaldera, jonka pohjalla on kaksi järveä. Kaldera on halkaisijaltaan noin 5 kilometriä, ja sen syvyys on satoja metrejä.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "27d64b24032a554e8180ea7459456e18",
+   "kaupunki": "PRT",
+   "paketti": "maastokohteet",
+   "kohde": "sete-cidades",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Taru kertoo, että prinsessa ja paimenpoika itkivät erotessaan, ja kyyneleistä syntyivät Lagoa Verde ja Lagoa Azul, vihreä ja sininen järvi; kertojasta riippuen vihreä on prinsessan silmien väri tai paimenen. Järvi on noin 260 metrin korkeudella ja enimmillään noin 33 metriä syvä.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "c207bd47511f6a2b008a222393bafeb8",
+   "kaupunki": "PRT",
+   "paketti": "maastokohteet",
+   "kohde": "madeiran-laurisilva",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Madeiran laurisilva. Madeiran laurisilva on laakeripuiden hallitsema ikivihreä metsä, jota kasvaa saaren pohjoisrinteillä 300–1 300 metrin korkeudessa ja eteläpuolella korkeammalla. Jäljellä on noin 15 000 hehtaaria, enimmäkseen saaren pohjoispuolella. Kosteassa metsässä kasvavat muun muassa Ocotea foetens ja Laurus novocanariensis, ja kasvistoon kuuluu kymmeniä kotoperäisiä putkilokasveja.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "a23e1141b7d35f4f1842ba981e8052cf",
+   "kaupunki": "PRT",
+   "paketti": "maastokohteet",
+   "kohde": "madeiran-laurisilva",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Tämän kaltaista metsää kasvoi Etelä-Euroopassa kymmeniä miljoonia vuosia sitten; Madeiralla se on säilynyt. Unesco hyväksyi alueen maailmanperintökohteeksi vuonna 1999.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "0820b6d69b5746eb5c8f08d44e2f4aa4",
+   "kaupunki": "LUX",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-luxemburgin-linnoitus",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Luxemburgin linnoitus. Luxemburgin linnoitus kasvoi Bock-kallion päälle, jonne kreivi Siegfried rakensi linnan 963. Vuosisatojen kuluessa burgundilaiset, espanjalaiset, ranskalaiset, itävaltalaiset ja preussilaiset laajensivat sitä, ja 1680-luvulla ranskalaisten linnoitusmestari Vauban rakensi sen uudelleen. Linnoitusvyöhyke oli selvästi kaupunkia laajempi, ja kallion sisään louhittiin yli kaksikymmentä kilometriä kasemattikäytäviä. Sitä kutsuttiin Pohjoisen Gibraltariksi.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "a5f1fa44ed4f5b2cd00cc77ac48362c7",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Westminsterin palatsi",
+   "pala": 3,
+   "paiva": "2026-11-12",
+   "teksti": "Palosta säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "faefbf65bfbba5dc55f5ca6c189075de",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Westminsterin palatsi",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Westminsterin palatsi. Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1099. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "aa6db7b3a5a2d583ed9554b92104b280",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Westminster Bridge",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Westminster Bridge. Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Venemiehet elivät kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "58b8e4306df1a8e37f390eae9a884805",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "British Museum",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Alussa kävijän piti hakea pääsylippua etukäteen. Kokoelmat kasvoivat niin, että vanha kartano purettiin, ja Robert Smirke rakensi tilalle nykyisen kreikkalaistyylisen pylväsjulkisivun 1823–1852.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "65c5edec2f9566b09cd9bf6f4f890af1",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Victoria Memorial",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Muistomerkki paljastettiin 1911. Kuningas Yrjö V teki kuvanveistäjän ritariksi samana päivänä. Samalla The Mallista tehtiin leveä juhlakulkutie Admiralty Archista palatsille.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "08c1f25be8b0ce17b7355444f1261c66",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Albert Memorial",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Albert Memorial. Prinssi Albert kuoli 1861 vain 42-vuotiaana. Kuningatar Viktoria pukeutui suruasuun loppuelämäkseen, ja Kensington Gardensiin pystytettiin George Gilbert Scottin suunnittelema goottilainen muistomerkki. Kullattu Albert istuu katoksen alla ja pitää sylissään maailmannäyttelyn luetteloa.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "cc05279cc17924a67499e980664459bb",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Albert Memorial",
+   "pala": 3,
+   "paiva": "2026-11-12",
+   "teksti": "Kullattu patsas seisoi noin kahdeksankymmentä vuotta mustaksi maalattuna. Tarinan mukaan syynä olivat ensimmäisen maailmansodan saksalaiset ilmalaivat, mutta maali on vanhempaa: ilmansaasteet olivat jo pilanneet kullan. Kulta palautettiin vasta korjauksessa, joka valmistui 1998.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "78687df9e612cfc69452a2c7ed48520f",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Cheapsiden kätkö",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Cheapsiden kätkö. Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet tulivat ympäri maailmaa: smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on kellonkuori, joka oli koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, ja arvonimen hän sai vasta marraskuussa 1640. Kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuussa 1666. Jossain noiden kahden vuosiluvun välissä joku kaivoi laatikon lattiaansa eikä koskaan palannut hakemaan sitä.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "ab6eb0d26bc87f2ea3ff217d5af543cd",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Palo 1666",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Palo 1666. Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. Laivaston virkamies Samuel Pepys katselee tulta joelta ja kertoo päiväkirjassaan ihmisistä, jotka jäivät koteihinsa, kunnes tuli ylsi heihin, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli levitti tulta: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet syttyvät; lyijykatto sulaa ja valuu kaduille, ja kirjakauppiaiden kryptaan varastoimat kirjat palavat. Tiistain ja keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi noin 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — luku, jota epäillään yhä.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "2ff83073a5b2dfd9ad2e52f0f62254b7",
+   "kaupunki": "lontoo",
+   "paketti": "nahtavyysjutut",
+   "kohde": "Globe 1599",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Globe 1599. Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on vanhimpia sen esityksistä. Naisia ei näyttämöllä ole — Portian ja Calpurnian roolit esittävät äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik kahdeksannen -näytelmän; ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "00bea5bc69c5ca116c7305a4d2b13add",
+   "kaupunki": "GBR",
+   "paketti": "historianHetket",
+   "kohde": "lontoon-palo-1666",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Lontoo 1666 — soitin veneessä, kaupunki tulessa. Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. Laivaston virkamies Samuel Pepys katselee tulta joelta ja kertoo päiväkirjassaan ihmisistä, jotka jäivät koteihinsa, kunnes tuli ylsi heihin, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli levitti tulta: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "f202d24526878765a19c6e6bd4cb22ac",
+   "kaupunki": "GBR",
+   "paketti": "historianHetket",
+   "kohde": "lontoon-palo-1666",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet syttyvät; lyijykatto sulaa ja valuu kaduille, ja kirjakauppiaiden kryptaan varastoimat kirjat palavat. Tiistain ja keskiviikon välisenä yönä tuuli laantuu. Palo tuhosi noin 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — luku, jota epäillään yhä.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "197786fecb0b7818a7737866f827395e",
+   "kaupunki": "GBR",
+   "paketti": "historianHetket",
+   "kohde": "shakespeare-globe-1599",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on vanhimpia sen esityksistä. Naisia ei näyttämöllä ole — Portian ja Calpurnian roolit esittävät äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik kahdeksannen -näytelmän; ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "17bd6ec198170be6602382b10a4928fa",
+   "kaupunki": "lontoo",
+   "paketti": "fokusvirta-takyt",
+   "kohde": "cheapside",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Kivet tulivat ympäri maailmaa: smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on kellonkuori, joka oli koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, ja arvonimen hän sai vasta marraskuussa 1640. Kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuussa 1666. Jossain noiden kahden vuosiluvun välissä joku kaivoi laatikon lattiaansa eikä koskaan palannut hakemaan sitä.",
+   "loppuTagi": ""
+  },
+  {
+   "avain": "9881c3f31f54ff4623e24e34668519c6",
+   "kaupunki": "GBR",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-old-tolbooth",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Old Tolbooth. Old Tolbooth oli Edinburghin High Streetillä St Gilesin katedraalin luoteiskulmassa seissyt raatihuone ja vankila. Kuningas Robert II myönsi paikasta peruskirjan 1386. Parlamentti kokoontui siellä jo 1438, ja Maria Stuart määräsi 1560-luvun alussa rakennuksen korvattavaksi uudella. Parlamentti muutti omaan taloonsa 1639, ja rakennuksesta tuli ennen kaikkea vankila; vuodesta 1785 teloitukset toimitettiin sen laajennuksen luona.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "4d39d1e49c0d3321831425e87f25b487",
+   "kaupunki": "GBR",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-greenwich-palatsi",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Greenwichin palatsi. Greenwichin palatsi, tunnetummin Placentia, oli Tudorien kuninkaallinen palatsi Thamesin rannalla. Humphrey, Gloucesterin herttua, rakennutti sen 1430-luvulla nimellä Bella Court, ja Margareta Anjoulainen antoi sille nimen Placentia. Henrik VII rakennutti palatsin uudelleen 1498–1504. Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni täällä naimisiin Anna Clevesiläisen kanssa 1540. Sisällissodassa palatsi rapistui ja toimi keksitehtaana ja sotavankileirinä.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "8f094adde58adb6d3931b03a8cd272de",
+   "kaupunki": "GBR",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-whitehall",
+   "pala": 1,
+   "paiva": "2026-11-12",
+   "teksti": "Whitehallin palatsi. Whitehallin palatsi oli Englannin kuninkaiden pääasunto Lontoossa vuodesta 1530 vuoteen 1698. Henrik VIII otti paikan haltuunsa 1530, kun kardinaali Wolsey oli menettänyt asemansa. Palatsissa oli yli 1 500 huonetta, ja se peitti suurimmillaan noin yhdeksän hehtaaria. Se oli aikansa Euroopan suurimpia palatseja.",
+   "loppuTagi": "[pause]"
+  },
+  {
+   "avain": "ddcb1322ce5f93dba107c3682b691917",
+   "kaupunki": "GBR",
+   "paketti": "hahmotelma",
+   "kohde": "hahmotelma-whitehall",
+   "pala": 2,
+   "paiva": "2026-11-12",
+   "teksti": "Juhlasali Banqueting House valmistui 1622 Inigo Jonesin suunnittelemana, ja sen edessä mestattiin Kaarle I vuonna 1649. Tammikuun 4. päivänä 1698 palvelija ripusti märkää pyykkiä hiilipannun viereen, ja syttynyt tuli tuhosi lähes kaikki asuin- ja hallintorakennukset. Banqueting House säilyi, ja palatsin osia on yhä valtionhallinnon Cabinet Officen rakennuksen sisällä. Palatsia ei koskaan rakennettu uudelleen.",
+   "loppuTagi": ""
+  }
+ ],
+ "huom": "Äänitä ensimmäiset 7 ensin (Bastilji, Berliinin täky, Sofia): soivat jo pelissä vanhalla tekstillä. Lista = kolmen PR:n (6600, 6601, 6599/6605) lisäämät jonorivit, tehty työkalulla tarkista.mjs --aanitettavat."
+}
