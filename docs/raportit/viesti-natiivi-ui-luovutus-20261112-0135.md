@@ -61,3 +61,6 @@ SEURAAVAT ASKELEET:
   TEE: katso arkit, selvitä miksi vakiokuvat 1–9 puuttuvat (skenaario vai koodi) ja puuttuvat 6+6 kuvaa → tulos KK:lle yhtenä viestinä.
 - LISÄYS 03.0x (KK 02.49 JU:n kautta): 45° yleiskuvat 6578 m = usvaa, ei tarkoituksellinen → TEHTY 794652b07 (natiivi-backup natiivi-ui/vakioajo, worktree nui-vakio):
   Vakioajo.Yleis45KattoM = 1500 m (≥ MinKorkeusPaikassa), "kaukaa" ennallaan. JU ajaa vakioajon uudelleen → katso 45-* -kuvat (korttelit ja nähtävyydet erottuvat?) → KK:lle.
+- LISÄYS 03.1x (NS/KK 03.0x): kohdekamera ei toistunut (Cutty Sark suuntima 20° vs 18°; esittelyn lento perii edellisen suunnan) → TEHTY 631172274
+  (natiivi-ui/vakioajo): ui vakio kohde asettaa suuntima 0 ja kallistus 45° ennen lähestymistä. JU:lle pyydetty uusinta 631172274:lla (sisältää 45°-katon).
+  TARKISTA: kaksi peräkkäistä ajoa → sama suuntima/kallistus kohteittain; jos ei, NahtavyysEsittely.NapautaMallin kulma (NS:n ala?) → NS:lle.
