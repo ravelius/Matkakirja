@@ -14,7 +14,7 @@ SÄÄNNÖT:
 9. Tiedosto, jota toinen ohjelma lukee, kirjoitetaan väliaikaistiedostoon ja vaihdetaan paikalleen; suoritusoikeus säilyy, ja committiin ei mene oikeusmuutoksia. [R-7.40] [R-12.9] [P-261104-7]
 10. Työkansiot ovat vain yhteisessä Claude-kansiossa. PT:n checkoutiin ei kosketa; roolin checkout pysyy omassa työhaarassaan, jota ei yhdistetä. [R-7.7]
 11. Yksi erä = yksi worktree ja yksi haara uniikilla aiheella; commit vasta, kun tila on katsottu oikeassa worktreessä. Roolilla enintään 3 worktreetä, talossa alle 20. [R-7.7] [R-10.13]
-12. Worktree poistetaan heti yhdistämisen jälkeen, kun se on puhdas, yli tunnin vanha eikä mikään skripti viittaa sen polkuun. Haaraa ei poisteta mergessä, eikä jaettua työkaluworktreetä tai Codexin worktreitä poisteta. [R-10.13] [R-10.12]
+12. Worktree poistetaan heti yhdistämisen jälkeen, kun se on puhdas, yli tunnin vanha eikä mikään skripti viittaa sen polkuun. PR yhdistetään aina ilman --delete-branch-valitsinta (gh poistaa myös työpuun, jossa haara on auki); etähaaran voi poistaa erikseen, toisten työpuihin ei kosketa. Jaettua työkaluworktreetä tai Codexin worktreitä ei poisteta. [R-10.13] [R-10.12] [P-261112-22]
 
 EI VIKA:
 - Roolin checkout ei ole päähaarassa.
