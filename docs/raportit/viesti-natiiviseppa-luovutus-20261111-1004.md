@@ -608,6 +608,6 @@ JU 10.1x: turhatyö-ajo käyttää 367ea7f0a (c28e4adb0-käännös ei alkanut), 
   Muistin keventäminen -rivin tila (0, V, 1, 2a junassa; jäljellä iPad-vahvistus + laattamuisti 1–3 KK:n iPad-erässä).
 - Vahti: 30 min Monitor-uusinnat syövät kontekstia → käytä taustaodotusta (Bash run_in_background until-silmukka: loki.txt "valmis N s|LOPPU|ajo päättyi" kansioissa yllä).
   Cron 9.04 LUO UUDELLEEN.
-- 35b (03.2x) PT: cfe3324a3 ristiriidassa 224.94 (ce2849074) kanssa OhjelmaKohteet.cs:ssä (KS:n sillat). UUSI T1 = 5cb17d3db (natiivi-backup
+- 35b (03.1x) PT: cfe3324a3 ristiriidassa 224.94 (ce2849074) kanssa OhjelmaKohteet.cs:ssä (KS:n sillat). UUSI T1 = 5cb17d3db (natiivi-backup
   natiiviseppa/kaupunkitaulu-224-94 = ce2849074 + dd370eab6 + cfe3324a3; Lista(ohjelmakohteet, kaupungin id) + taulun kamera-alue; Kartta 782/782, Linssit 2293/2293,
   unity 0). pt-ok-pyyntö PT:lle LÄHETETTY 5cb17d3db:lle. NUI 631172274 (natiivi-ui/vakioajo): vakioajon lähtöasento kiinnitetty, JU ajaa uusinnan.
