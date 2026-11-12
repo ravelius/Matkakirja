@@ -8,7 +8,7 @@ SÄÄNNÖT:
 3. Muut äänet tehdään mallilla eleven_v4_turbo. Suomeksi merkittyjä ääniä ei käytetä, eikä käytössä olevaa ääntä vaihdeta ilman omistajan päätöstä. [R-5.6] [R-5.7]
 4. Henkilöiden äänet ovat 20 äänen pankista: uutta ei suunnitella, jos sopiva löytyy, eikä sama ääni puhu kahta henkilöä samassa paikassa. [R-5.8]
 5. Pulun ääni on Flicker: repliikit lyhyitä, yksi tagi virkettä kohden (warmly, amused, mischievously, proud), ei softly eikä whispers. [R-5.9]
-6. Saapumisäänessä isoisä sanoo kaupungin nimen ja iskulauseen yhtenä ottona ilman lisäsanoja ja tageja; Pulu ei puhu eikä näy. [R-3.7]
+6. Saapumisessa William sanoo kaupungin nimen ja iskulauseen ilman lisäsanoja ja tageja; Pulu ei puhu eikä näy. [P-261111-8] [R-3.7]
 7. Pulu ja kertoja eivät puhu päällekkäin. Kohtauksissa Pulu puhuu vain pelaajan napautuksesta. [R-5.17] [R-4.26]
 8. Pulun puhetta ohjaa vain sen kaiutinvipu. Ääntä on enintään 15 000 merkkiä vuorokaudessa, sitten vastaus tulee tekstinä. [R-2.194] [R-2.31]
 9. Luetaan vain leipätekstit ja niiden otsikot sanasta sanaan; taulukot, kuvatekstit, lähderivit, napit ja pulmat jäävät lukematta. Uusi taittolaji on hiljainen, kunnes se merkitään. [R-5.24] [R-5.22]

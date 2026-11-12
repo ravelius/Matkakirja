@@ -20,20 +20,20 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | isoisa-ja-tarina | Isoisä ja tarina | SK | 2.9 kt | 12.11.2026 |
 | pulu-ja-kysymykset | Pulu ja kysymykset | SK | 2.9 kt | 12.11.2026 |
 | lehti-ja-nostot | Lehti ja nostot | NUI | 2.9 kt | 12.11.2026 |
-| saapuminen-ja-intro | Saapuminen ja intro | NUI | – | – |
+| saapuminen-ja-intro | Saapuminen ja intro | NUI | 2.9 kt | 12.11.2026 |
 | matkustus-ja-reitit | Matkustus ja reitit | PK | – | – |
 | aarteet | Aarteet | PK | – | – |
 | talous-ja-pisteet | Talous ja pisteet | PK | – | – |
 | kohtaamiset-ja-reaktiot | Kohtaamiset ja reaktiot | SK | – | – |
 | pelit-ja-minipelit | Pelit ja minipelit | PK | – | – |
-| ui-pohjat | UI-pohjat | NUI | – | – |
+| ui-pohjat | UI-pohjat | NUI | 2.9 kt | 12.11.2026 |
 | tyylikirja | Tyylikirja | NUI | – | – |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.6 kt | 12.11.2026 |
 | lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
 | aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | – | – |
 | musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | – | – |
-| grafiikan-tuotanto | Grafiikan tuotanto | PT | – | – |
+| grafiikan-tuotanto | Grafiikan tuotanto | PT | 2.8 kt | 12.11.2026 |
 | mallit-ja-3d | Mallit ja 3D | LAV | 2.5 kt | 12.11.2026 |
 | valo-ja-materiaalit | Valo ja materiaalit | VS | – | – |
 | suorituskyky-ja-muisti | Suorituskyky ja muisti | NS | – | – |
@@ -42,7 +42,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | arkkitehtuuri-ja-kirjastot | Arkkitehtuuri ja kirjastot | NS | – | – |
 | lisenssit-ja-lataukset | Lisenssit ja lataukset | PT | – | – |
 | oikeudet-ja-ansainta | Oikeudet ja ansainta | KK | – | – |
-| testit | Testit | NS | – | – |
+| testit | Testit | NS | 2.9 kt | 12.11.2026 |
 | valmiin-maaritelma | Valmiin määritelmä | KK | 2.8 kt | 12.11.2026 |
 | juna-ja-julkaisu | Juna ja julkaisu | JU | 2.9 kt | 12.11.2026 |
 | laitteet-ja-simulaattorit | Laitteet ja simulaattorit | JU | – | – |
