@@ -8,23 +8,22 @@ SÄÄNNÖT:
 3. Kaupunkiparissa on niin kova juttu, että haluaa lukea seuraavankin; tunnelma tai kuriositeetti ei riitä. [R-3.6] [R-3.16]
 4. Sävy vaihtelee ihmetyksestä huumoriin ja haikeuteen; ei väkisin synkentämistä, mystisiä viittauksia eikä siirappia. [R-3.6] [R-3.21]
 5. Pituus merkkeinä: kaupunkiparissa isoisä enintään noin 250 ja Pulu noin 150. Tarinakohteessa saapuminen 280–350, kohtaaminen 180–240, aarreteksti 140–200, yhteensä enintään 800. [R-3.6] [R-3.18]
-6. Isoisän tekstin otsikko on paikka ja aika, alla kursiivilla sään ja tunnelman rivi. [R-3.14]
+6. Isoisän tekstin otsikko on paikka ja aika, alla kursiivilla sään ja tunnelman rivi. Jutun otsikossa on kuka tai mikä, vuosi ja tapaus (≤ 45 merkkiä); avausvirke kertoo kuka, missä, milloin ja miksi. [R-3.14] [P-261112-28]
 7. Vaara tai käänne avautuu ensikuulemalla, ja jokaisella yksityiskohdalla on merkitys. Kieli tarkistetaan käsikirjoituksesta ennen äänitystä. [R-3.17] [R-3.19] [R-2.76]
-8. Tarina avaa tunnelman, lehti syventää. Uusi teksti kirjoitetaan puhtaalta pöydältä, ja luenta on teksti sanasta sanaan. [R-3.15]
+8. Tarina avaa tunnelman, lehti syventää. Uusi teksti kirjoitetaan puhtaalta pöydältä. [R-3.15]
 9. Kantavat keinot ovat kommellus, aikakontrasti, auki jäävä koukku, aistiankkuri ja nimetty ihminen; joka erässä on aito kommellus. [R-3.21] [R-3.15]
 10. Mikään ennen visaa näkyvä ei paljasta vastausta; vaihtoehdot ovat luontevaa suomea. [R-3.20] [R-2.146]
 11. Kuvateksti on yksi virke siitä, mitä kohde on, ei siitä, mitä kuvassa näkyy. [R-11.25]
 12. Tekoälyllä tehty kuva on aina havainnekuva. Raha kirjoitetaan £300 ja −£20. [R-4.46] [R-2.189]
-13. Sama nimi kirjoitetaan koko pelissä samalla tavalla (Moskvajoki). [P-261112-7]
+13. Nimi kirjoitetaan koko pelissä samoin (Moskvajoki). [P-261112-7]
 14. Varatekstejä ei koosteta muusta aineistosta: puuttuva kohta jätetään pois. [R-1.15]
 15. Pääotsikko on Vernen romaanin nimi · OSA II · UNOHDETTU AARRE. Suojatusta suomennoksesta ei lainata eikä sovituksiin viitata. [R-3.13]
 16. Käännökset tehdään vasta lukitusta suomesta, ensin englanti, kielikohtaisina paketteina. [R-2.49]
-17. Tekstit noudattavat kaanonia (isoisa-ja-tarina). [R-8.4]
 
 EI VIKA:
 - Hyväksytty vanha teksti, joka ylittää rajat.
 - Näkyvä tilateksti, kuten Matkalla.
 
 TEKOTAPA:
-- Puheen kieli ja äänitys: kertojaaanet. Ajan nimi ja kartan nimi: isoisa-ja-tarina.
+- Puheen kieli ja äänitys: kertojaaanet. Kaanon, ajan nimi ja kartan nimi: isoisa-ja-tarina.
 - Faktat: lahteet-ja-tarkistus. Pulun puhetapa: pulu-ja-kysymykset.
