@@ -371,6 +371,24 @@ const JAKO = [
         europe: { x: 255.6, y: 609.1 },
       },
     },
+    /*
+     * MINITEHTÄVÄ (SK:n v2, KK 13.15; omistajan kortti 12.46): vastaus tekstissä ("hän oli kemisti
+     * eikä laillistettu lääkäri eikä olisi saanut hoitaa ketään"); toinen väärä on tekstin vastainen
+     * ("testannut vain koirilla"). Seitsemäs visa kahdeksastatoista (kiintiö 6 ylittyy omistajan
+     * tilauksesta).
+     */
+    visa: {
+      kysymys: 'Miksi Louis Pasteur olisi voinut joutua vaikeuksiin hoidettuaan yhdeksänvuotiasta '
+        + 'Joseph Meisteriä?',
+      vaihtoehdot: [
+        'Hän oli kemisti, ei laillistettu lääkäri',
+        'Rokotetta ei ollut kokeiltu yhdelläkään eläimellä',
+        'Pojan vanhemmat eivät antaneet lupaa',
+      ],
+      oikea: 0,
+      fakta: 'Kaksi lääkäriä totesi, että poika kuolisi ilman hoitoa. Meister ei sairastunut, ja '
+        + 'aikuisena hänestä tuli Pasteur-instituutin vahtimestari.',
+    },
   },
   {
     sivu: 'keksinnot',
