@@ -21,7 +21,7 @@ Nostot: `pariisin-72-nimea`, `guimardin-metro` (js/packs/fokusvirta-pariisi.js, 
 - lähteet: en-Wikipedia "Hector Guimard" (kilpailussa 21 ehdokasta, Guimard ei hakenut, rauta ja lasi nopeampaa; toimeksianto 12.1.1900).
 
 ## 3. maalehti-pasteur-meister (Joseph Meister)
-- kysymys (KK 13.15): Miksi Louis Pasteur olisi voinut joutua oikeuteen hoidettuaan yhdeksänvuotiasta Joseph Meisteriä?
+- kysymys (KK 13.15): Miksi Louis Pasteur olisi voinut joutua vaikeuksiin hoidettuaan yhdeksänvuotiasta Joseph Meisteriä?
 - vaihtoehdot (KK 13.15): Hän oli kemisti, ei laillistettu lääkäri (40 merkkiä, oikea) · Rokotetta ei ollut kokeiltu yhdelläkään eläimellä (50) · Pojan vanhemmat eivät antaneet lupaa (36); oikea keskimmäinen. Huom: noston teksti sanoo "pelkäsi omaa asemaansa" eikä mainitse oikeudenkäyntiä; vastaus (kemisti, ei lääkäri, ei saanut hoitaa) löytyy tekstistä, joten kysymys kestää, mutta PK voi halutessaan muokata kysymyksen sanan "oikeuteen" → "vaikeuksiin".
 - oikea: 0
 - fakta: Kaksi lääkäriä totesi, että poika kuolisi ilman hoitoa. Meister ei sairastunut, ja aikuisena hänestä tuli Pasteur-instituutin vahtimestari.
