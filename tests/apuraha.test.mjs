@@ -50,13 +50,13 @@ test('versio 9: avaus, hetket (webTeksti, tekeilla, tyhjät kuvat pois), ajatus,
   assert.ok(d.hetket.every((h) => h.video === null));
   // Selaimessa webTeksti korvaa tekstin.
   assert.match(d.hetket[2].teksti, /Vain iOS-sovelluksessa\.$/);
-  assert.match(d.hetket[5].teksti, /Maailman radiot vain iOS-sovelluksessa\.$/);
+  assert.match(d.hetket[5].teksti, /Maailman radiot kuuluvat vain iOS-sovelluksessa\.$/);
   assert.equal(d.hetket[0].teksti, raaka.hetket[0].teksti);
   assert.equal(d.ajatusOtsikko, 'Pelin ajatus');
   assert.match(d.ajatus, /^Maailman kulttuuri/);
   assert.equal(d.tekeillaTeksti, 'tekeillä');
   assert.equal(d.missa.nyt.otsikko, 'Pelattavissa nyt');
-  assert.match(d.missa.nyt.teksti, /Kuumailmapallo ja avaruusasema vain iOS-sovelluksessa\.$/);
+  assert.match(d.missa.nyt.teksti, /Kuumailmapallo ja avaruusasema ovat vain iOS-sovelluksessa\.$/);
   assert.equal(d.missa.seuraavaksi.otsikko, 'Seuraavaksi');
   assert.equal(d.missa.seuraavaksi.lista.length, 4);
   assert.match(d.loppu, /^Täysi peli/);

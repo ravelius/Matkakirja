@@ -84,7 +84,7 @@
     {
       "otsikko": "Katso maailmaa linssin läpi",
       "teksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät, miten ihminen levisi maapallolle, mitä maailman radioissa soi juuri nyt.",
-      "webTeksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät ja miten ihminen levisi maapallolle. Maailman radiot vain iOS-sovelluksessa.",
+      "webTeksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät ja miten ihminen levisi maapallolle. Maailman radiot kuuluvat vain iOS-sovelluksessa.",
       "kuvat": [],
       "tekeilla": false,
       "video": null
@@ -97,7 +97,7 @@
     "nyt": {
       "otsikko": "Pelattavissa nyt",
       "teksti": "Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista.",
-      "webTeksti": "Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista. Kuumailmapallo ja avaruusasema vain iOS-sovelluksessa."
+      "webTeksti": "Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista. Kuumailmapallo ja avaruusasema ovat vain iOS-sovelluksessa."
     },
     "seuraavaksi": {
       "otsikko": "Seuraavaksi",
@@ -142,7 +142,7 @@
     {
       "otsikko": "Katso maailmaa linssin läpi",
       "teksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät, miten ihminen levisi maapallolle, mitä maailman radioissa soi juuri nyt.",
-      "webTeksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät ja miten ihminen levisi maapallolle. Maailman radiot vain iOS-sovelluksessa."
+      "webTeksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät ja miten ihminen levisi maapallolle. Maailman radiot kuuluvat vain iOS-sovelluksessa."
     },
     {
       "otsikko": "Pelin ajatus",
@@ -151,7 +151,7 @@
     {
       "otsikko": "Pelattavissa nyt",
       "teksti": "Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista.",
-      "webTeksti": "Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista. Kuumailmapallo ja avaruusasema vain iOS-sovelluksessa."
+      "webTeksti": "Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista. Kuumailmapallo ja avaruusasema ovat vain iOS-sovelluksessa."
     },
     {
       "otsikko": "Seuraavaksi",
