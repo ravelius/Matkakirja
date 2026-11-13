@@ -612,6 +612,8 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'lustig-eiffel',
       nimio: 'Lustig 1925',
       otsikko: 'Lustig 1925 — Eiffel-torni myydään romuksi',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'huuto',
       visa: {
         kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
         vaihtoehdot: [
@@ -687,6 +689,8 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'kirahvin-kavelymatka',
       nimio: 'Kirahvi 1827',
       otsikko: 'Kirahvi 1827 — kävelymatka Pariisiin',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'historia',
       visa: {
         kysymys: 'Miksi kirahvi kulki Marseillesta Pariisiin jalkaisin?',
         vaihtoehdot: [
@@ -779,6 +783,8 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'pariisin-bukinistit',
       nimio: 'Bukinistit 1859',
       otsikko: 'Bukinistit 1859 — oma paikka Seinen kaiteella',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'historia',
       visa: {
         kysymys: 'Mitä bukinistien piti kiinteän paikan saatuaankin tehdä laatikoilleen joka ilta?',
         vaihtoehdot: [
@@ -885,6 +891,8 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'carmenin-ensi-ilta',
       nimio: 'Bizet 1875',
       otsikko: 'Bizet 1875 — Carmen saa kylmän vastaanoton',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'kulttuuri',
       lunastus: [
         'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla '
           + '1873, ja ensimmäinen näytös oli valmis siihen kesään '
@@ -1384,7 +1392,8 @@ export const FOKUSVIRTA_PARIISI = {
       id: 'pariisin-vuosisadat',
       nimio: 'Kaulanauha 1785',
       otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
-      symboli: 'historia',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'huuto',
       lunastus: [
         'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
           + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
