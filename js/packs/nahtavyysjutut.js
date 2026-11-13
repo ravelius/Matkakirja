@@ -5094,7 +5094,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     'Palais Garnier': {
-      aika: '1875',
+      aika: '1862–1875',
       teksti: 'Uuden oopperatalon suunnittelukilpailu julkistettiin '
           + 'joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. '
           + 'Voittajaksi julistettiin toukokuussa 1861 yksimielisesti '
@@ -5111,7 +5111,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. '
           + 'Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra '
           + 'Bastille valmistui; nykyään Palais Garnier on Pariisin '
-          + 'oopperan baletin koti.',
+          + 'oopperan baletin koti.'
+        + '\n\n'
+        + 'Oopperan peruskivi muurattiin vuonna 1862, ja talo avattiin '
+          + 'vuonna 1875.',
       kuvat: [
         {
           tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
@@ -5122,6 +5125,15 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    // Saint-Eustache (SK 13.11.2026, KK 13.25; lähteet docs/raportit/kohdekortti-virkkeet-pariisi-20261113.md):
+    // vaikeamman Yhdistä-näyttämön lappu 1532–1637. Ei vielä Pariisin karttakohdetta (maakartat.js).
+    'Saint-Eustache': {
+      aika: '1532–1637',
+      teksti: 'Saint-Eustachea alettiin rakentaa vuonna 1532, ja kirkko '
+          + 'vihittiin vuonna 1637. Länsijulkisivu on myöhempi: sitä '
+          + 'alettiin rakentaa uudelleen vuonna 1754.',
       lahde: 'Wikipedia',
     },
     'Place des Vosges': {
