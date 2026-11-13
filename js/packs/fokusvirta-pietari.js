@@ -1056,6 +1056,7 @@ export const FOKUSVIRTA_PIETARI = {
        *   - Unescon maailmanperintöluettelossa vuodesta 1990.
        */
       id: 'kizin-kirkko',
+      symboli: 'historia',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Kižin puukirkko',
       otsikko: 'Kirkko rakennettiin ilman ainuttakaan naulaa — lukuun '
@@ -1165,6 +1166,7 @@ export const FOKUSVIRTA_PIETARI = {
       id: 'pietarhovin-suihkulahteet',
       nimio: 'Pietarhovi',
       otsikko: 'Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua',
+      symboli: 'tekniikka',
       lunastus: [
         'Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, '
           + 'maalaisasunnoksi meren rannalle. Vierailu Ranskan hovissa '
@@ -1287,6 +1289,7 @@ export const FOKUSVIRTA_PIETARI = {
       nimio: 'Baikal',
       otsikko: 'Se ei ole järvi vaan repeämä — ja se levenee neljä '
         + 'millimetriä vuodessa',
+      symboli: 'luonto',
       lunastus: [
         'Baikal on kuusisataakolmekymmentäkuusi kilometriä pitkä, '
           + 'seitsemänkymmentäyhdeksän kilometriä leveä ja tuhat '

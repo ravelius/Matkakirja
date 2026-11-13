@@ -977,6 +977,7 @@ export const FOKUSVIRTA_KIOVA = {
        * välikohtaus. Sotasisältöä ei kirjoiteta (tarinakaari, luku 2).
        */
       id: 'trypillia',
+      symboli: 'historia',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Trypillia',
       otsikko: 'Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta '
@@ -1090,6 +1091,7 @@ export const FOKUSVIRTA_KIOVA = {
       nimio: 'Dneprin kosket',
       otsikko: 'Yhdeksän koskea, joiden kohina kuului kilometrien päähän '
         + '— ja jotka ovat nyt järven pohjassa',
+      symboli: 'luonto',
       lunastus: [
         'Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja '
           + 'niin se on — kolmesataa kilometriä. Sitten tuli kalliota. '
@@ -1210,6 +1212,7 @@ export const FOKUSVIRTA_KIOVA = {
       nimio: 'Sofian mosaiikit',
       otsikko: 'Kun isoisäsi kävi kaupungissa, maailman suurin varhainen '
         + 'mosaiikkikokoelma oli kalkittu piiloon',
+      symboli: 'kulttuuri',
       lunastus: [
         'Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole '
           + 'missään muualla samassa mitassa: 1000-luvun alkupuolen '

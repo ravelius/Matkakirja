@@ -781,6 +781,7 @@ export const FOKUSVIRTA_PRAHA = {
       nimio: 'Karlštejn',
       otsikko: 'Keisari rakensi kokonaisen linnan yhtä huonetta varten '
         + '— ja huone valmistui viimeisenä',
+      symboli: 'historia',
       lunastus: [
         'Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla '
           + 'Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen '

@@ -606,6 +606,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       id: 'kopenickin-kapteeni',
       nimio: 'Köpenick',
+      symboli: 'huuto',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * Köpenick on Berliinin kaakkoislaidalla eikä osu kaupunkilehden
@@ -693,6 +694,7 @@ export const FOKUSVIRTA_BERLIINI = {
       nimio: 'Lehmän hinnalla',
       otsikko: 'Maanviljelijä myi maailman kuuluisimman fossiilin — hinta '
         + 'oli yksi lehmä',
+      symboli: 'luonto',
       lunastus: [
         'Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, '
           + 'jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja '
@@ -768,6 +770,7 @@ export const FOKUSVIRTA_BERLIINI = {
       nimio: 'Velkojen linna',
       otsikko: 'Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan '
         + '— ovet avattiin yleisölle heti hänen kuoltuaan',
+      symboli: 'historia',
       lunastus: [
         'Baijerin kuningas Ludwig II halusi pois Münchenin hovin '
           + 'rajoituksista ja rakennutti Alppien reunalle linnan, joka '

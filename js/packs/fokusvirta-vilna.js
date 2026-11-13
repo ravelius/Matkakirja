@@ -978,6 +978,7 @@ export const FOKUSVIRTA_VILNA = {
        * luku 2), joten teksti puhuu veneenrakennuksesta ilman sitä.
        */
       id: 'kursiu-nerija',
+      symboli: 'luonto',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Kuršių nerija',
       otsikko: 'Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka '
@@ -1101,6 +1102,7 @@ export const FOKUSVIRTA_VILNA = {
       nimio: 'Kryžių kalnas',
       otsikko: 'Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne '
         + 'palasivat joka kerta yöllä',
+      symboli: 'historia',
       lunastus: [
         'Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala '
           + 'kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien '
@@ -1207,6 +1209,7 @@ export const FOKUSVIRTA_VILNA = {
       nimio: 'Trakai',
       otsikko: 'Saarilinna punaisesta tiilestä — raunio, joka koottiin '
         + 'takaisin viisisataa vuotta myöhemmin',
+      symboli: 'historia',
       lunastus: [
         'Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka '
           + 'saarella seisoo linna. Kivilinnan rakentaminen alkoi '

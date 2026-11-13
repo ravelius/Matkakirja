@@ -873,6 +873,7 @@ export const FOKUSVIRTA_LISSABON = {
       nimio: 'Lepakkokirjasto',
       otsikko: 'Kirjaston pöydät peitetään joka ilta nahalla — ja aamulla '
         + 'lattialta lakaistaan se, mikä yöllä tapahtui',
+      symboli: 'elain',
       lunastus: [
         'Coimbran yliopiston barokkikirjasto on rakennettu kirjoja varten '
           + 'niin perusteellisesti, että se toimii kuin holvi. Kuningas '
@@ -961,6 +962,7 @@ export const FOKUSVIRTA_LISSABON = {
       nimio: 'Nazarén aalto',
       otsikko: 'Yhden kylän edustalla aallot ovat kaksi kertaa isompia kuin '
         + 'naapurirannalla — syy on kilometrien syvyydessä',
+      symboli: 'luonto',
       lunastus: [
         'Nazarén kalastajakylän pohjoisen rannan edessä avautuu merenalainen '
           + 'kanjoni, joka on Euroopan suurin: noin 230 kilometriä pitkä ja '
@@ -1050,6 +1052,7 @@ export const FOKUSVIRTA_LISSABON = {
       nimio: 'Laattahalli',
       otsikko: 'Portossa on odotushalli, jonka seinillä on kaksikymmentä'
         + 'tuhatta laattaa — ja yksi mies maalasi ne kaikki',
+      symboli: 'kulttuuri',
       lunastus: [
         'Porton päärautatieasema rakennettiin vanhan luostarin paikalle ja '
           + 'sai siltä nimensä. Rakennustyö alkoi vuonna 1904 arkkitehti '
@@ -1142,6 +1145,7 @@ export const FOKUSVIRTA_LISSABON = {
       nimio: 'Korkkitammi',
       otsikko: 'Puulta viedään kuori kirveellä, ja se jää pystyyn — sata '
         + 'vuotta myöhemmin sille tehdään sama uudestaan',
+      symboli: 'luonto',
       lunastus: [
         'Korkkitammen paksu kaarna voidaan irrottaa ilman että puu kuolee, '
           + 'mutta vain jos sen tekee ihminen kirveellä. Konetta ei käytetä, '

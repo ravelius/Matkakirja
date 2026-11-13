@@ -856,6 +856,7 @@ export const FOKUSVIRTA_BERGEN = {
        * pelin oma nosto tekee.
        */
       id: 'amundsen',
+      symboli: 'historia',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Amundsenin koti',
       otsikko: 'Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli '
@@ -986,6 +987,7 @@ export const FOKUSVIRTA_BERGEN = {
       nimio: 'Ekofisk',
       otsikko: 'Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja '
         + 'sitten yksi osui juuri ennen joulua',
+      symboli: 'tekniikka',
       lunastus: [
         'Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli '
           + 'etsitty öljyä vuosia, ja koereikiä oli porattu yli '

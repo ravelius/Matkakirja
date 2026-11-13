@@ -783,6 +783,7 @@ export const FOKUSVIRTA_SARAJEVO = {
   takynostot: [
     {
       id: 'pyramidi',
+      symboli: 'huuto',
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Pyramidihuijaus',
       otsikko: 'Seitsemän arkeologia allekirjoitti julkilausuman: '

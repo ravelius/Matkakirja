@@ -895,6 +895,7 @@ export const FOKUSVIRTA_DUBLIN = {
       otsikko: 'Kaksi poikaa nosti perunapellosta Irlannin hienoimman '
         + 'maljan — sata vuotta myöhemmin toinen samanlainen löytö '
         + 'muutti koko maan lain',
+      symboli: 'historia',
       lunastus: [
         'Syyskuun lopulla 1868 Jim Quin ja Paddy Flanagan kaivoivat '
           + 'perunapellossa Reerasta-nimisen rengaslinnakkeen '
@@ -1020,6 +1021,7 @@ export const FOKUSVIRTA_DUBLIN = {
       nimio: 'Newgrange',
       otsikko: 'Kumpu kaivettiin auki rakennuskiven takia — ja sisällä oli '
         + 'huone, johon aurinko osuu kerran vuodessa',
+      symboli: 'historia',
       lunastus: [
         'Vuonna 1699 Boynen laaksossa seisoi multakumpu, jota kukaan ei '
           + 'pitänyt minään. Paikallinen maanomistaja Charles Campbell '
@@ -1129,6 +1131,7 @@ export const FOKUSVIRTA_DUBLIN = {
       nimio: 'Suovoi',
       otsikko: 'Suosta nostettiin viisikymmentä kiloa voita, joka haisi '
         + 'yhä maidolta',
+      symboli: 'historia',
       lunastus: [
         'Irlannissa on ensimmäiseltä vuosisadalta jaa. alkaen '
           + 'haudattu voita suohon. Se pakattiin puuastiaan — sankoon, '
