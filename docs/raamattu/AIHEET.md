@@ -29,7 +29,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
 | tyylikirja | Tyylikirja | NUI | 3.0 kt | 12.11.2026 |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.7 kt | 12.11.2026 |
-| lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
+| lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.6 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
 | aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 2.9 kt | 12.11.2026 |
 | musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.7 kt | 12.11.2026 |
