@@ -5106,15 +5106,13 @@ export const NAHTAVYYSJUTUT = {
           + 'vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita '
           + 'taloja. Garnier ratkaisi asian tekemällä talosta '
           + 'näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat '
-          + 'yhtä koreat kuin katsomo.'
+          + 'yhtä koreat kuin katsomo. Peruskivi muurattiin vuonna 1862, '
+          + 'ja talo avattiin vuonna 1875.'
         + '\n\n'
         + 'Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. '
           + 'Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra '
           + 'Bastille valmistui; nykyään Palais Garnier on Pariisin '
-          + 'oopperan baletin koti.'
-        + '\n\n'
-        + 'Oopperan peruskivi muurattiin vuonna 1862, ja talo avattiin '
-          + 'vuonna 1875.',
+          + 'oopperan baletin koti.',
       kuvat: [
         {
           tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
