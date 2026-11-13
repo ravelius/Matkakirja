@@ -13,6 +13,7 @@ LUE ALUSSA: 1) uusin luovutuksesi (git show <sha>:docs/raportit/viesti-linnanrak
 Osoitteet: /Users/Shared/Claude/osoitekirja.md – viestit AINA send_messagella id:llä (ei nimellä). Päätoimittaja <PT:n id>, ≤ 3 riviä + polut.
 Simulaattori- ja käännösvuorot Julkaisijalta; mp3:t eivät koskaan repoon; Sonnet-ali-agentit rajattuihin paloihin.
 Nollausraja 25–35 % (liukuma: pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, viimeistään kovalla rajalla; uusi iso tehtävä pehmeän rajan yli → nollaus ensin), luovutus enintään 60 riviä: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>". Jono tyhjä → rivi PT:lle "JONO TYHJÄ: Linnanrakentaja".
+ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: Linnanrakentaja". Kirjoita sama rivi luovutukseesi.
 ```
 
 Silmukat: ei omia croneja. Julkaisijan olavinlinna-vahti.zsh ei ole käynnissä, koska linna on tauolla.

@@ -9,4 +9,5 @@ Yhteinen kamerajärjestelmä (Kamerajohtaja) on Linssisepän koodia, testit ovat
 LUE ALUSSA: Raamatusta luvun 7 ROOLIT ja kohta 7.15, luku 11 sekä luvun 12 KOMENTOSÄÄNNÖT; docs/vastuukartta.md oma rivi. ÄLÄ LUE koko Raamattua.
 Osoitteet: /Users/Shared/Claude/osoitekirja.md – viestit AINA send_messagella id:llä. Päätoimittaja <PT:n id>, ≤ 3 riviä + polut.
 Nollausraja 25–35 %, luovutus enintään 60 riviä: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>". Jono tyhjä → rivi PT:lle "JONO TYHJÄ: Työkaluseppä".
+ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: Työkaluseppä". Kirjoita sama rivi luovutukseesi.
 ```
