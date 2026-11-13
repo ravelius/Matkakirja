@@ -76,13 +76,13 @@
   "kuvat": [
     {
       "tiedosto": "assets/apuraha/pariisi-kartta-louvre.jpg",
-      "teksti": "Pariisin kartalla pelaaja katselee kaupunkia vinosti ylhäältä ja näkee Louvren, Seinen ja Cité-saaren.",
+      "teksti": "Pariisi vinosti ylhäältä: Louvre, Seine ja Cité-saari.",
       "rajaus": "50% 65%",
       "kappale": 5
     },
     {
       "tiedosto": "assets/apuraha/nahtavyyden-esittely-eiffel.jpg",
-      "teksti": "Nähtävyyskierroksella pelaaja tutustuu Eiffel-torniin Pariisin piirretyssä kaupungissa, ja kierros etenee kohde kerrallaan.",
+      "teksti": "Kaupunkikierros etenee kohde kerrallaan; kuvassa Eiffel-torni.",
       "rajaus": "50% 50%",
       "kappale": 5
     },
