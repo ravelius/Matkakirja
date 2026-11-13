@@ -13223,15 +13223,15 @@
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "lontoo:Liukumäkiveistos",
-   "nimi": "Liukumäkiveistos",
+   "id": "lontoo:Savusumu 1952",
+   "nimi": "Savusumu 1952",
    "qid": null,
-   "lat": 51.504,
-   "lon": -0.135,
+   "lat": 51.5093,
+   "lon": -0.1207,
    "lahde": "kartan piste (nostokohde ilman wikiä)",
    "kartanPiste": {
-    "lat": 51.504,
-    "lon": -0.135
+    "lat": 51.5093,
+    "lon": -0.1207
    },
    "eroKartanPisteesta_m": 0
   }

@@ -32,6 +32,16 @@ test('Pariisin tarinapaikoilla on lajin mukainen merkki ja tarinapaikka-lippu', 
   }
 });
 
+test('Lontoon tarinapaikka Savusumu 1952 on tiimalasi ja aarretehtävän vihjeen kohde (KK 13.11.2026)', () => {
+  const k = (KAUPUNKIKARTAT.lontoo?.kohteet ?? []).find((x) => x.nimi === 'Savusumu 1952');
+  assert.ok(k, 'Savusumu 1952: kohde puuttuu Lontoon kohdekartalta');
+  assert.equal(k.tarinapaikka, true);
+  assert.equal(k.merkki, 'tiimalasi');
+  assert.equal(k.nosto, 'nosto-lontoon-savusumu-1952');
+  assert.ok(!(KAUPUNKIKARTAT.lontoo?.kohteet ?? []).some((x) => x.nimi === 'Liukumäkiveistos'),
+    'Liukumäkiveistos kuuluu pääkartalle (Stratford on reunuksella), ei kohdekartalle');
+});
+
 test('merkin arvo on yksi neljästä lajista kaikissa kaupungeissa', () => {
   const kaikki = [];
   (function kerää(o, syv = 0) {

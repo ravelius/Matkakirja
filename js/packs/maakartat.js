@@ -6255,9 +6255,14 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Liukumäkiveistos', tyyppi: 'taide', lat: 51.504, lon: -0.135,
-        nosto: 'nosto-orbitin-liukumaki',
+        // KK 13.11.2026 (Lontoon faktapohja, vaihtoehto A): Lontoon aarretehtävän vihje osoittaa tähän
+        // (Victoria Embankment, Embankment Gardens Savoyn kohdalla; SK:n tarkistus PR 6681: maalla, lähin merkki 535 m).
+        nimi: 'Savusumu 1952', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5093, lon: -0.1207,
+        nosto: 'nosto-lontoon-savusumu-1952',
       },
+      // Liukumäkiveistos (Orbit) EI ole täällä (KK 13.11.2026, päätös 3a): oikea paikka Stratfordissa
+      // (51,538 / −0,013) on reunuksella, joten nosto on pääkartalla kattoVapaa-lipulla
+      // (js/packs/fokusvirta-lontoo.js orbitin-liukumaki), kuten Wienin Prater ja Rooman Avaimenreikä.
     ],
   },
   berliini: {

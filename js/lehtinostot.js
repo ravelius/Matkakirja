@@ -83,9 +83,11 @@ export const KAUPUNKILEHDEN_SIIRTYNEET = [
       + 'junatunnelin kattoon, nostetaan tyhjälle patsasjalustalle ja '
       + 'kiedotaan liukumäeksi olympiapuiston veistoksen ympärille.',
     kohdekartta: ['nosto-leake-streetin-tunneli', 'nosto-neljas-jalusta',
-      'nosto-tate-modernin-turbiinihalli', 'nosto-orbitin-liukumaki'],
+      'nosto-tate-modernin-turbiinihalli'],
     pooli: ['nosto-leake-streetin-tunneli', 'nosto-neljas-jalusta',
-      'nosto-tate-modernin-turbiinihalli', 'nosto-orbitin-liukumaki'],
+      'nosto-tate-modernin-turbiinihalli'],
+    // Orbit on Stratfordissa kohdekartan ulkopuolella (KK 13.11.2026): pääkartalla kattoVapaa-lipulla.
+    paakartta: ['orbitin-liukumaki'],
   },
   {
     kaupunki: 'lontoo',

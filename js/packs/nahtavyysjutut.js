@@ -3230,6 +3230,41 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     /*
+     * TARINAPAIKKA "Savusumu 1952" (KK 13.11.2026, Lontoon faktapohja kohdat 1 ja 5.3; SK:n luonnos PR 6681).
+     * Teksti on KK:n hyväksymä sanatarkasti (otsikko + K1–K3); äänityslupa koskee tätä tekstiä. Sama teksti
+     * on täkynoston lunastuksena (js/packs/fokusvirta-lontoo.js lontoon-savusumu-1952).
+     */
+    'Savusumu 1952': {
+      aika: '1952',
+      nosto: 'nosto-lontoon-savusumu-1952',
+      teksti: 'Joulukuussa 1952 Lontoon kadut katosivat viideksi päiväksi. Korkeapaine '
+          + 'painoi kivihiilen savun kadun tasalle ja tuuli tyyntyi: näkyvyys putosi '
+          + 'paikoin noin kolmeenkymmeneen senttiin, konsertteja ja elokuvanäytöksiä '
+          + 'peruttiin, ja kaikki joukkoliikenne metroa lukuun ottamatta pysähtyi. '
+          + 'Kuolleita arvioitiin ensin neljätuhatta, myöhemmissä laskelmissa '
+          + '10 000–12 000.'
+        + '\n\n'
+        + 'Joki on nähnyt sumun ennenkin. Isoisäsi matkavuonna 1873 tämä rantakatu '
+          + 'oli kolmen vuoden ikäinen. Joulukuussa pikimusta sumu pysäytti Thamesin '
+          + 'höyrylaivat, ja samana vuonna yhdeksäntoista ihmistä hukkui pudottuaan '
+          + 'sumussa jokeen, kanavaan tai satama-altaaseen.'
+        + '\n\n'
+        + 'Neljä vuotta savusumun jälkeen, vuonna 1956, säädettiin laki, joka puuttui '
+          + 'siihen, mistä savu tuli: piipusta ei enää saanut päästää tummaa savua, ja '
+          + 'kunnat saivat oikeuden määrätä kokonaisia alueita savuttomiksi, jolloin '
+          + 'kodin tulisijassa sai polttaa vain savutonta polttoainetta.',
+      kuvat: [
+        {
+          tiedosto: "Nelson's Column during the Great Smog of 1952.jpg",
+          lyhyt: 'Nelsonin pylväs Trafalgar Squarella savusumussa joulukuussa 1952.',
+          selite: 'Nelsonin pylväs joulukuun 1952 savusumussa. Kuva on Trafalgar Squarelta, '
+            + 'noin puolen kilometrin päästä tästä rantakadun kohdasta.',
+          lahde: 'N T Stobbs, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
      * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
      * ennen striimatun tietokortin. Isoisän "kadonnut maailma" -sävy. Kuvat Wikimedia Commonsista (pysyvä lupa).
      */
@@ -3465,7 +3500,8 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     'Victoria Memorial': {
-      aika: '1901–1924',
+      // Rakennusaika (KK 13.11.2026, Lontoon faktapohja 5.4): 1906–1924; teksti kertoo kuoleman 1901.
+      aika: '1906–1924',
       teksti: 'Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. Hänen '
           + 'muistomerkikseen Buckinghamin palatsin eteen pystytettiin valkoisesta '
           + 'marmorista muistomerkki, jonka huipulla on kullattu Voiton jumalatar. Sen '
