@@ -29,6 +29,38 @@
 
 /** Pelin oma tekijänoikeus. Sanamuodot ovat LICENSE-tiedostosta. */
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+import { KAIKKI_VALOKUVAT, EI_VALOKUVAKYSYMYKSEEN } from './sisaltotaulut.js';
+
+/*
+ * VALOKUVAKYSYMYSTEN KUVAT (omistaja 13.11.2026 klo 13.09: "Kuvalähteitä ei koskaan näkyviin
+ * tehtävissä"; KK 13.17: nimeämistä vaativien kuvien rivit Tietoja-sivulle ennen junaa).
+ * Kysymyksen kuva on kaupungin valokuva (nykykuva, muuten vanha vedos; sama valinta kuin
+ * tools/vienti/kokoelmat.mjs kysymyskuvaKokoelmat ja js/ui.js primePhotoPool). CC BY- ja
+ * CC BY-SA -kuvista rivi suoraan datasta, jotta uusi kuva tulee luetteloon itsestään.
+ * Lähdekentän muoto: "Tekijä, Commons (CC BY-SA 4.0)"; muu muoto näytetään sellaisenaan.
+ */
+const LISENSSI_LOPUSSA = /\s*\(((?:CC BY(?:-SA)?) [\d.]+(?: [A-Za-z]{2})?)\)\s*$/;
+export function kysymyskuvanRivi(id, kuva) {
+  const lahde = String(kuva.lahde ?? '');
+  const lisenssi = lahde.match(LISENSSI_LOPUSSA)?.[1];
+  if (!lisenssi) return null;
+  const tekija = lahde.replace(LISENSSI_LOPUSSA, '')
+    .replace(/,\s*(?:Wikimedia )?Commons\b.*$/, '')
+    .replace(/^Commonsin käyttäjä\s+/, '')
+    .trim() || lahde;
+  return { nimi: kuva.lyhyt ?? id, tekija, lisenssi, huom: `Wikimedia Commons: ${kuva.tiedosto}` };
+}
+function kysymyskuvienRivit() {
+  const rivit = [];
+  for (const [id, valokuva] of Object.entries(KAIKKI_VALOKUVAT)) {
+    if (EI_VALOKUVAKYSYMYKSEEN.has(id)) continue;
+    const kuva = valokuva?.uusi?.tiedosto ? valokuva.uusi : valokuva;
+    if (!kuva?.tiedosto) continue;
+    const rivi = kysymyskuvanRivi(id, kuva);
+    if (rivi) rivit.push(rivi);
+  }
+  return rivit;
+}
 
 /*
  * Lipun tekijä luettavaksi: Commonsin kenttä kantaa lataushistoriaa
@@ -414,6 +446,12 @@ export const LAHTEET = [
         lisenssi: 'CC0 1.0',
       },
     ],
+  },
+  {
+    otsikko: 'Valokuvakysymysten kuvat',
+    johdanto: 'Tietovisan kuvakysymysten valokuvat, jotka vaativat tekijän nimeämisen '
+      + '(CC BY ja CC BY-SA). Public domain- ja CC0-kuvia ei luetella.',
+    rivit: kysymyskuvienRivit(),
   },
   {
     otsikko: 'Äänet',
