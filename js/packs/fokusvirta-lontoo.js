@@ -1365,6 +1365,8 @@ export const FOKUSVIRTA_LONTOO = {
       id: 'lontoon-savusumu-1952',
       nimio: 'Savusumu 1952',
       otsikko: 'Savusumu 1952 — viisi päivää ilman katuja',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'historia',
       visa: {
         kysymys: 'Mikä kulki sumun aikana, vaikka kaikki muu joukkoliikenne seisoi?',
         vaihtoehdot: [
