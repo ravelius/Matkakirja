@@ -123,5 +123,14 @@
   "kaupunki": "valletta",
   "lahde": "en-Wikipedia \"Valletta\" (Q23800) koordinaatit 35.89833, 14.5125 (kaupungin piste); nosto: js/packs/hahmotelma-mlt.js",
   "perustelu": "Nosto kertoo koko kaupungin perustamisesta ja linnoituksista, ei yksittäisestä rakennuksesta, joten se kuuluu kaupunkimerkin viuhkaan."
+ },
+ "nosto:orbitin-liukumaki": {
+  "tila": "siirto",
+  "nimi": "Liukumäkiveistos",
+  "kaupunki": "lontoo",
+  "lat": 51.53833,
+  "lon": -0.01333,
+  "lahde": "en-Wikipedia ArcelorMittal Orbit (Wikidata Q631871), koordinaatit 51°32′18″N 0°00′48″W",
+  "perustelu": "KK 13.11.2026: Orbit pääkartalle Stratfordiin (kattoVapaa). Webin ladonta vei piirtopisteen 51,505 / 0,166 (Rainham, noin 13 km itään, alle karkaavan nimen 25 km:n rajan), joten natiivi piirsi kyltin väärään paikkaan (näyttö 3 iPad-esikatselu 13.11. klo 09.29)."
  }
 }
