@@ -256,3 +256,21 @@ EI TUTKITTU (aika/rajaus): en voi vahvistaa faktoja enkä kuvia. Ideoita jatkoon
 1. EHDOKAS 1 (YHDISTÄ keksintö-keksijä): käyttökelpoinen heti, 6-8 paria; kuvat riittävät kaikille paitsi Cooke ja Marc Brunel (vain muotokuvaton).
 2. EHDOKAS 2 (YHDISTÄ kadonnut-nykyinen): 7 paria hyvällä pohjalla; kaksi kuvapuutetta (Whitehall vanha, London Bridge nykyinen) jatkohakuun; Crystal Palace uusi sisältö (ei kartalla).
 3. Kriittiset tarkistuskohdat: Brunel (isä/poika), Fleming/Baird (1873+, "ensimmäinen"-väitteet), Greenwich (1970-luku EI tue lähteet), Waterloo Bridge (purkuvuodet), Visscher-Globe (nimivirhe).
+
+
+---------------------------------------------------------------------
+
+## TARKENNUS 13.11.2026 (SK; KK 13.41 osa 2): Lontoon patsasehdokas (EROTTELE/PALJASTA)
+**Ehdotus: Kaarle I:n ratsastajapatsas, Charing Cross (Trafalgar Square).** Pre-1873, bronssi, tunnistettava, vapaa kuva.
+
+Faktat (kaksi lähdettä; Historic England on kokonaan itsenäinen toisesta):
+- Pronssinen ratsastajapatsas, tekijä Hubert Le Sueur; valettu **1633**; veistetty Portland-kivijalusta Joshua Marshall; pystytetty nykyiselle paikalle (Eleanor-ristin paikka) **1674–75**; Grade I -suojeltu. Kuningas esitetään puolipanssarissa. [Historic England list entry 1357291 (`britishlistedbuildings.co.uk/101357291-statue-of-charles-i-st-jamess-ward`, peili, luettu 13.11.2026) ja en-Wikipedia "Equestrian statue of Charles I, Charing Cross" (luettu: 1633 hevosen vasemmassa etujalassa, asennettu 1675, koristeltu jalusta siltä ajalta).]
+- Tilattu 1630 Charles I:n rahastonhoitajalle Sir Richard Westonille hänen maalaistalolleen Roehamptoniin (HE; en-Wikipedia sama; Wikipedia kirjoittaa Putney Parkin, HE Mortlake Parkin → **talon nimi ei tekstiin**).
+- Ero kirjattu: pystytysvuosi HE 1674–75, Wikipedia 1675 → "1670-luvulla" tai "vuonna 1675" (kahdesta täsmäävä: 1670-luku). Valuvuosi: Wikipedia "probably 1633", HE 1633 → "noin 1633". Hakutulosmirrorit antoivat myös 1638: ei luettu, ei käytetä.
+- **[1L] ei tekstiin:** "mitat Lontoosta mitataan tästä pisteestä" (vain Wikipedia); "ensimmäinen ratsastajapatsas Englannissa" (HE-teksti; superlatiivi, kortti lahteet-ja-tarkistus 5 → ei).
+- 1873: patsas seisoi paikallaan jo yli kaksisataa vuotta (1675 →); Nelsonin patsas (1843) ei kelpaa tähän: kuvassa kaukana pylvään päällä.
+
+Kuvat (Commons API, vapaa, katsottu silmin 13.11.2026):
+1. **File:Charles I statue by Le Sueur.jpg** — Jim Ebdon, CC BY-SA 2.0, 3872×2592; patsas yksin taivasta vasten, ei ympäristöä → paras PALJASTA-kuvaksi.
+2. File:Charles I Statue - geograph.org.uk - 2380626.jpg — Colin Smith, CC BY-SA 2.0, 1920×2560; jalusta, Nelsonin pylväs ja punainen bussi näkyvät → nykyaikainen, ei tehtävään.
+Muut ehdokkaat (ei tutkittu loppuun): Richard Leijonamieli (Carlo Marochetti; pystytetty 1860 Old Palace Yardille; HE-listaus ja Commons-kuva tarkistamatta, 1860/1856/1851-vuodet vaihtelevat → tarvitsee lisätyön), Achilles (Westmacott 1822, Hyde Park, tutkimatta). Boadicea/Eros eivät kelpaa (pystytetty 1902/1893 = 1873+).
