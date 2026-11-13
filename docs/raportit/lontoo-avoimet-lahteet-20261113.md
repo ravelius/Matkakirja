@@ -57,3 +57,20 @@ Tausta: KK 13.11. 07.42 kohta 6 (lähdekysymys Lontoon erään; robots-tarkistus
 
 **Tulos:** lähteet eivät jakaudu 1676/1677; 1676 on yhden lähteen (CAMRA, jota Wikipedia toistaa) luku, ja HE vahvistaa vain "1600-luku". Toista itsenäistä päivämääräistä lähdettä ei saatu.
 **Ehdotus (KK:n varavaihtoehdon mukaan):** teksti muotoon **"rakennettu uudelleen Southwarkin vuoden 1676 palon jälkeen"** kolmessa paikassa (nahtavyysjutut.js r. 3115 teksti, r. 3122 lyhyt, r. 3125 selite), ei vuosilappua tehtäviin. Sanamuoto seuraa CAMRA:a ("rebuilt in 1676 after a major fire") eikä väitä erillistä uudelleenrakennusvuotta. Ellei KK halua odottaa National Trustin /george-inn -sivua (robots sallii; sivu voi antaa botintarkistuksen), tämä riittää.
+
+---
+# Toteutus (KK 23.08): LUONNOS-data-PR
+
+## Naval College
+- Aika-kenttä '1696–1751' → **'1696–1750-luvun alku'** (nahtavyysjutut.js r. 3666; kirjoitusasu kuten pelin '1400-luvun loppu–1746').
+- **Ehto tarkistettu:** aika-kenttää ei jäsennetä luvuksi. Web: js/nahtavyydet.js:2223 tulostaa sen tekstinä ("Kohde N · aika"); js/pollo-haku.js:282 liittää sen hakutekstiin merkkijonona; testit eivät lue kenttää. Natiivin checkoutista (Matkakirja-pelikoodari/Assets) ei löydy jutun luentaa (Old Royal Naval College / nahtavyysjutut: ei osumia); natiivin puolta ei voi tarkistaa täällä, joten PK vahvistaa.
+- Jutun leipäteksti: ei 1751:tä eikä muuta valmistumisvuotta (vain Thornhill "19 vuotta", Nelson 1806, vanhat merimiehet 1869, upseerikoulu 1998). Ei muutosta.
+- Ei vuositehtäviin.
+
+## The George
+- Palon vuosi 1676: **toinen itsenäinen lähde löytyi:** Survey of London, osa 22 (Bankside), luku "Borough High Street", No. 77 the George Inn (British History Online, london County Council 1950; robots sallii): "Six years later the George was destroyed by the fire which consumed most of Borough High Street." (edellinen tulipalo 1670: "in 1670 part of the inn and all the barns and stables were burnt down"); "Weyland rebuilt the inn probably on the old plan." Kirja ei anna uudelleenrakennukselle vuotta, mikä tukee muotoa "palon jälkeen". Ensimmäinen lähde: CAMRA ("rebuilt in 1676 after a major fire in Southwark").
+- Teksti muotoon "rakennettu uudelleen Southwarkin vuoden 1676 palon jälkeen" **kuudessa paikassa** (KK:n kolme × kaksi tiedostoa): nahtavyysjutut.js r. 3115/3122/3125 ja fokusvirta-lontoo.js r. 1076–1091 (Lontoon kaupunkilehden nosto "Pubi, jossa Dickens istui"). `lyhyt`-teksti lyhennetty "rakennettu uudelleen vuoden 1676 palon jälkeen" (Southwark kaksi kertaa samassa virkkeessä); KK voi vaihtaa täyteen sanamuotoon.
+- Ei vuosilappua.
+
+## Tarkistus
+Testit: nahtavyydet, nostokortti-media, pollo, nostot-kartalla, vienti: 191 / 0 fail.
