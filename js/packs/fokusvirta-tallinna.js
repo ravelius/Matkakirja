@@ -690,6 +690,7 @@ export const FOKUSVIRTA_TALLINNA = {
       otsikko: 'Taivaalta tuli kivi asutun kylän päälle, ja kesti '
         + 'kaksisataa vuotta ennen kuin kukaan uskoi sen',
       symboli: 'luonto',
+      laji: 'jarvi',
       lunastus: [
         'Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 '
           + 'metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan '

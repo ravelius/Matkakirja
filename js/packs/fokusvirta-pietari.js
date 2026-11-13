@@ -1290,6 +1290,7 @@ export const FOKUSVIRTA_PIETARI = {
       otsikko: 'Se ei ole järvi vaan repeämä — ja se levenee neljä '
         + 'millimetriä vuodessa',
       symboli: 'luonto',
+      laji: 'jarvi',
       lunastus: [
         'Baikal on kuusisataakolmekymmentäkuusi kilometriä pitkä, '
           + 'seitsemänkymmentäyhdeksän kilometriä leveä ja tuhat '

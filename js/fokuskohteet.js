@@ -2048,7 +2048,9 @@ const KOHDE_SYMBOLI_R = NOSTOSYM_MINI_R * KOHDE_SYMBOLI_SKAALA;
  */
 export function kohdeMerkinLadonta(ui, kohde) {
   const symboli = kohteenSymboli(kohde);
-  const ulos = { symboli, laji: kohde?.tyyppi };
+  // Noston oma luonnon laji (merkkirivin `laji`, js/fokusnosto.js
+  // nostoMerkinKentat) voittaa tyypin; kohdeolioilla lajia ei ole.
+  const ulos = { symboli, laji: kohde?.laji ?? kohde?.tyyppi };
   if (!symboli || !kohteenNimio(ui, kohde)) return ulos;
   // Kartan nimi, ei kortin (kohteenKarttanimi): väistöpassi mittaa
   // samaa tekstiä, joka merkin perään ladotaan.
