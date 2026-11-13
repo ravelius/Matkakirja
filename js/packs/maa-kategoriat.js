@@ -10067,13 +10067,16 @@ export const MAA_KATEGORIAT = {
               linkki: 'https://collections.louvre.fr/',
             },
             {
-              nimi: 'Centre Pompidou — nykytaiteen kokoelma',
+              // Nimi ja sulkemisvirke kuten kohdekortti Pompidou-keskus (KK 13.11. 14.21; SK:n VANHENEE: tarkista ennen 2030).
+              nimi: 'Pompidou-keskus — nykytaiteen kokoelma',
               teksti: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja '
                 + 'keskus avattiin vuonna 1977. '
-                + 'Centre Pompidou on Pariisin nykytaiteen museo, ja sen '
+                + 'Pompidou-keskus on Pariisin nykytaiteen museo, ja sen '
                 + 'rakennus on itsessään osa juttua: putket, ilmastointi ja '
                 + 'portaat vietiin julkisivulle, jotta sisälle jäisi '
-                + 'mahdollisimman paljon tyhjää tilaa.',
+                + 'mahdollisimman paljon tyhjää tilaa. '
+                + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
+                + 'avautua uudelleen vuonna 2030.',
               linkki: 'https://www.centrepompidou.fr/en/',
             },
             {
