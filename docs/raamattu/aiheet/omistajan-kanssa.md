@@ -5,7 +5,7 @@ TAVOITE: Omistaja näkee vain sen, mikä vaatii hänen sanaansa tai on valmiina 
 SÄÄNNÖT:
 1. KK ratkaisee itse kaiken, mikä ennen kysyttiin kortilla (kuvat, mallit, tekstit, luvat KK:n rajoissa, työtavan säännöt, valmiin toteaminen), hänen linjojaan vasten, ja kertoo tuloksen rivillä. [R-7.27] [P-261111-5]
 2. Kun aihekortti varaa asian omistajan päätökseksi tai muutos koskisi hänen aiempaa päätöstään, KK kysyy häneltä. Maksullinen generointi pysyvien lupien ja KK:n rajan ulkopuolella on rahankäyttöä. [R-12.24] [P-261111-5]
-3. Kortti näytetään vain hänen omaan toimeensa, hänelle varattuun päätökseen tai valintaan, jota hän itse pyysi. Se kysyy yhden asian hänen sanojensa rajoissa, suositus ensin. [R-7.27] [P-261111-5]
+3. Kysyttävä kysytään päivisin aina kortilla: yksi asia hänen sanojensa rajoissa, suositus ensin. Yöllä ei korttia (KK ei jää jumiin), eikä ennen kuin etäohjaus on päällä. [P-261113-7] [R-7.27]
 4. Perustelut kirjoitetaan tekstinä ennen korttia; kortissa lyhyt kysymys ja vaihtoehdot, ja olennainen (komento, määrä) myös kysymykseen. [R-7.27] [P-261109-4]
 5. Makuvalinta tuodaan yhtenä versiona pelaajan kokemuksena, ei numeroina. Tekstit näytetään viestinä numeroituna listana, ei korttina eikä taulukkona. [R-7.27] [R-7.29]
 6. Toimi alkaa otsikolla ## ⚠️ TOIMI TARVITAAN, alla lihavoitu ohje (mikä ikkuna, mitä) ja jokainen komento omana yksirivisenä lohkonaan. KK tarkistaa roolin komennon; salaisuus kysytään piilossa. [R-7.29] [P-261101-3]

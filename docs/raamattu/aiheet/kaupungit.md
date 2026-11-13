@@ -1,15 +1,15 @@
-# kaupungit · vastuu KS · tarkistettu 12.11.2026
+# kaupungit · vastuu KS · tarkistettu 13.11.2026
 
-TAVOITE: Kaupungin tunnistaa jo tavallisista taloista, ja kirkko, asema ja palatsi näyttävät siltä, mitä ne ovat. Kaukaa kuva on rauhallinen lämmin kuvakartta. Uusi kaupunki syntyy samalla koneella ilman käsityötä.
+TAVOITE: Kaupungin tunnistaa jo tavallisista taloista, ja kirkko, asema ja palatsi näyttävät siltä, mitä ne ovat. Kaukaa kuva on rauhallinen lämmin kuvakartta. Uusi kaupunki syntyy samalla koneella.
 
 SÄÄNNÖT:
 1. Kaupungit tehdään koodilla: talokone tavallisille taloille, tyyppimallit merkkirakennuksille (hillitympinä) ja tunnetuimmat nähtävyydet yksitellen. Uusia Tripo- tai Codex-malleja ei tehdä ilman omistajan sanaa; tehdyt jäävät. [P-261109-2] [P-261111-13]
 2. Uusi kaupunki tehdään yhteisillä työkaluilla: pohja yhdellä komennolla, merkkirakennukset tyypittämällä ja sama vakioajo (arkki ja muistimittaus). Koodissa ei ole kaupunkikohtaisia ehtoja: kaupunki on rivi kaupunkitaulussa. [P-261111-13]
-3. Talojen korkeus tulee GHSL-aineistosta kaupungin omalla kertoimella, nimetyt tornit korkeustaulusta. Katukuvat otetaan pelin lähimmältä tasolta lähes vaakaan. [P-261112-12]
+3. Talojen korkeus GHSL-aineistosta kaupungin kertoimella, nimetyt tornit korkeustaulusta. Katukuvat otetaan pelin lähimmältä tasolta lähes vaakaan. [P-261112-12]
 4. Uusi tekotapa kokeillaan ensin pienellä alueella; koko kaupunkiin vasta hyväksyttynä. [P-261109-2]
 5. Piirretyn kartan saanut kaupunki näytetään sillä kokonaan, noin 2,5 m/px, yksinkertaistettuna isoisän ajan matkailijan karttana. Muut kaupungit pysyvät ennallaan. [R-2.204] [P-261102-2]
-6. Kaupungin loppulista lukitaan; uudet löydöt menevät toisen kierroksen listalle eivätkä viivästytä valmis-päätöstä. Pariisiin uudet katot ja Montmartre (yksi paketti KK:n junasanalla). [R-2.215] [P-261112-13] [P-261112-35] [P-261113-2] [P-261113-3]
-7. Kaupungin nimen tai merkin napautus lentää kaupunkiin 60°:n kallistukseen ja jää kiertämään, eikä avaa korttia. Avauskortti (kuva, lyhyt esittely, nähtävyyskartta ilman tekstejä, turisti-info) aukeaa pelaajan kaupungin pienestä kutsukortista. Piirroskartan kaupungissa ei ole kutsukorttia: sisältö avautuu kohteista ja turisti-infosta. Saapuessa ei avaudu mitään; kaupunkilehti jää syventäväksi. [P-261110-11] [P-261102-3] [R-2.138] [P-261112-32]
+6. Viisi ensimmäistä: Pariisi, Lontoo, Amsterdam, Wien, Rooma; kartta ensin näille; muita ei lukita ennen läpipeluuta. Loppulista lukitaan, uudet löydöt toiselle kierrokselle. Pariisiin uudet katot ja Montmartre. [R-2.215] [P-261112-13] [P-261112-35] [P-261113-2] [P-261113-3] [P-261113-8]
+7. Kaupungin nimen tai merkin napautus lentää kaupunkiin 60°:n kallistukseen ja kiertää, eikä avaa korttia. Avauskortti (kuva, esittely, nähtävyyskartta ilman tekstejä, turisti-info) aukeaa pelaajan kaupungin pienestä kutsukortista. Piirroskartan kaupungissa ei ole kutsukorttia: sisältö avautuu kohteista ja turisti-infosta. Saapuessa ei avaudu mitään; kaupunkilehti jää syventäväksi. [P-261110-11] [P-261102-3] [R-2.138] [P-261112-32]
 8. Fokusvirran kortit eivät näy kaupungeissa. Täysi sisältö vain maan pää- ja aarrekaupungilla; muut tarkoituksella kevyitä. [R-2.10]
 9. Maa ilman pelikaupunkia saa sellaisen Firenzen mallin mukaan; reitit tarkistetaan lisäyksen jälkeen. [R-2.147]
 10. Jokaisella maalla on pääkaupunki omana kokoelmanaan, ei pysäkkinä eikä reitteinä; napautus avaa maakortin. Maa ilman pelikaupunkia näyttää pääkaupunkinsa aina. [R-1.13]
