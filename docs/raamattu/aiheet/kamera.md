@@ -1,4 +1,4 @@
-# kamera · vastuu PK · tarkistettu 12.11.2026
+# kamera · vastuu PK · tarkistettu 13.11.2026
 
 TAVOITE: Kamera liikkuu koko pelissä kuin hyvässä elokuvassa: se lähtee ja pysähtyy pehmeästi, liikkuu usealla akselilla yhtä aikaa eikä koskaan nykäise tai hyppää. Käsiala on sama kartalla, kaupungeissa, museoissa ja peleissä; vain tahti vaihtuu.
 
@@ -19,6 +19,7 @@ SÄÄNNÖT:
 14. Liikkeen lopussa tarvittava ladataan ennen liikkeen alkua. Yli 20 ms:n ruutu liikkeen aikana tai sekunnin sen jälkeen hylkää ajon. [R-4.24]
 15. Pelaaja saa panoroida ja loitontaa vapaasti koko pallolla. Nipistyksen pieni kierto ohitetaan, kunnes kääntö ylittää kynnyksen (15–20 astetta). [R-2.15] [R-6.11]
 16. Vanha kohtaus siirretään kirjastoon työlistan järjestyksessä. Siirto on valmis vasta, kun vanha toteutus on poistettu. [P-261112-1]
+17. Kartan sauvat ovat oletuksena piilossa Ohjain-napin takana ja palaavat sinne 10 s käyttämättöminä. Nappi näkyy aina eikä syki. [P-261113-19]
 
 EI VIKA:
 - Kamera ei nyökkää kiihdytyksessä eikä jarrutuksessa.
