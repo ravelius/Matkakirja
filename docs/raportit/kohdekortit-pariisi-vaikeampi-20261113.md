@@ -1,4 +1,4 @@
-# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17; Pompidou ilman kuvaa ja kaikki ilman miniatyyriä KK 21.59; korjaukset 22.03: Saint-Eustache "Kirkon paikalla", Saint-Jacques kaupan ehto ja Pascal-virke; kohta 2 (Eustachen kappalejärjestys) odottaa KK:ta)
+# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17; Pompidou ilman kuvaa ja kaikki ilman miniatyyriä KK 21.59; korjaukset 22.03: Saint-Eustache "Kirkon paikalla", Saint-Jacques kaupan ehto ja Pascal-virke; kohta 2: Eustachen 3. ja 4. kappale yhdistetty yhdeksi, kortissa nyt kolme kappaletta)
 
 **Korjaukset 13.53 (10 kpl) ja nimi 14.17 tehty tähän tiedostoon; vuosivirkkeet sanatarkasti ennallaan.** Kortin ja lapun nimi on **Pompidou-keskus** (ei "Centre Pompidou"; pelin muut Pariisin kohteet käyttävät suomenkielistä nimeä ja kartan malli on jo sillä nimellä). Ranskankieliset lähde- ja tiedostonimet (centrepompidou.fr, Commons-tiedostot) säilyvät sellaisinaan.
 
@@ -90,9 +90,8 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
       + 'hän rakennutti 1655 tornien alle kaksi kappelia, ja julkisivu '
       + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
       + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
-      + 'täällä ensimmäisellä ehtoollisellaan 1649.'
-    + '\n\n'
-    + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
+      + 'täällä ensimmäisellä ehtoollisellaan 1649. '
+      + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
       + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
   kuvat: [
     {
