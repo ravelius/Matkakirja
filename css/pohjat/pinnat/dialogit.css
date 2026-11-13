@@ -81,6 +81,33 @@ dialog.tk-kortti[open]:has(.tk-lista--loki) > :not(.tk-lista--loki) { flex: none
 }
 .apuraha-lappu .tk-kortti .tk-kapiteeli,
 .apuraha-lappu .tk-kortti .tk-nappi--levea { clear: both; }
+/* Pelin esittely v9 (js/ui.js piirraEsittely9): leveät kuvat pohjan kulmin ja reunuksin, hetken otsikko 1,15 × leipä,
+   tekeillä-merkki pilleri, hetkien välissä viiva. Perusmitat: css/styles.css .apuraha-iso. */
+.dialog .tk-kortti button.apuraha-iso,
+.dialog .tk-kortti button.apuraha-iso:hover:not(:disabled) {
+  margin: 0 0 var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pieni);
+  background: var(--tk-reunus);
+}
+.dialog .tk-kortti .apuraha-kuvarivi button.apuraha-iso { margin: 0; }
+.apuraha-lappu .tk-kortti .apuraha-kuvarivi { margin: calc(8px - var(--tk-vali-s)) 0 var(--tk-vali-s); }
+.apuraha-lappu .tk-kortti .apuraha-viiva { margin: var(--tk-vali-m) 0; background: var(--tk-reunus); }
+.apuraha-lappu .tk-kortti .apuraha-hetki-otsikko {
+  margin: 0 0 var(--tk-vali-xs);
+  font-family: var(--font-luku);
+  font-size: calc(var(--tk-koko-leipa) * 1.15);
+  color: var(--tk-muste);
+}
+@media (min-width: 600px) {
+  .apuraha-lappu .tk-kortti .apuraha-hetki-otsikko { font-size: calc((var(--tk-koko-leipa) + var(--tk-koko-leveaLisa)) * 1.15); }
+}
+.apuraha-lappu .tk-kortti .apuraha-tekeilla {
+  border-color: var(--tk-reunus);
+  border-radius: var(--tk-kulma-pilleri);
+  color: var(--tk-muste-pehmea);
+}
+.apuraha-lappu .tk-kortti .apuraha-hetki .tk-leipa:last-child { margin-bottom: 0; }
 /* Listarivin kuva (esittely.json "rivi"): rivi pitää kuvan sisällään, seuraava rivi alkaa kuvan alta. */
 .apuraha-lappu .tk-kortti .tk-lista li::after { content: ''; display: block; clear: both; }
 /* Vanhan dialogikortin katkoviivakehys (::before, absoluuttinen) vierii pitkän kortin sisällön mukana ja piirtyi
