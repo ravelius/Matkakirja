@@ -5,7 +5,7 @@ TAVOITE: Peli etenee täyttä vauhtia joka päivä: kiintiö ei hidasta työtä,
 SÄÄNNÖT:
 1. Omistajalla on kolme Claude-tiliä, joita käytetään vuorotellen; yksi tili kestää noin kolme päivää. Päätilillä on myös omistajan muuta käyttöä. [P-261110-10]
 2. Viikko- tai viiden tunnin raja ei ole syy hidastaa, laskea tasoa tai rajata työtä. Kulutusta pienennetään tehostamalla: ei tiedoksi-kopioita, ei välitysviestejä. [P-261111-11]
-3. Koodaustili käytetään loppuun; 99 %:ssa omistajalle menee yksi rivi. Päätilin vaihto on valmis ennen 92 %:a: 85 %:ssa KK antaa omistajalle vaihdon toimet, 90 %:ssa roolit luovuttavat. [R-12.21]
+3. Tili käytetään 100 %:iin, kun omistajalla on sille reset; vaihtoa ei valmistella eikä rooleja luovuteta 90 %:ssa, vaan 99 %:ssa KK antaa omistajalle yhden rivin. Siirtoprompti pidetään varalla. [P-261113-15]
 4. Tilin vaihtaa omistaja antamalla uuden tilin PT:lle siirtopromptin. Kirjautumisohjeita ei anneta, eikä komentorivin kirjautumista pyydetä. [R-12.23]
 5. Uuden tilin käyttöraja kysytään vain tilinvaihdossa, ei nollauksen tai tiedon korjauksen takia. [R-12.21]
 6. Vanhat sessiot jatkavat nollattuina samoilla tunnuksilla. Jos se ei onnistu, luodaan uudet ja vanhat arkistoidaan kysymättä. [R-12.23]
