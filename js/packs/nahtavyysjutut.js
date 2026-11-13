@@ -5125,13 +5125,97 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    // Saint-Eustache (SK 13.11.2026, KK 13.25; lähteet docs/raportit/kohdekortti-virkkeet-pariisi-20261113.md):
-    // vaikeamman Yhdistä-näyttämön lappu 1532–1637. Ei vielä Pariisin karttakohdetta (maakartat.js).
+    // Tour Saint-Jacques, Saint-Eustache ja Pompidou-keskus: Pariisin karttakohteet ja vaikeamman Yhdistä-näyttämön laput (KK 14.17).
+    // Tekstit sanatarkasti SK:n korjatuista korteista (KK 13.53, PR 6712): docs/raportit/kohdekortit-pariisi-vaikeampi-20261113.md (lähteet siellä).
+    'Tour Saint-Jacques': {
+      aika: '1509–1523',
+      teksti: 'Tour Saint-Jacques rakennettiin 1509–1523, ja se on ainoa jäljelle '
+          + 'jäänyt osa keskiaikaisesta Saint-Jacques-de-la-Boucherien kirkosta. '
+          + 'Kirkko seisoi Grande Boucherien, Pariisin teurastajien kaupunginosan, '
+          + 'keskellä. '
+          + 'Tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de '
+          + 'Compostelaan vievistä pyhiinvaellusreiteistä.'
+        + '\n\n'
+        + 'Vallankumouksen vuosina kirkko myytiin louhokseksi, ja sen kivet '
+          + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehdoksi '
+          + 'kerrotaan, ettei sitä saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
+          + 'tornin, ja 1850-luvulla sen ympärille tehtiin '
+          + 'puisto, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
+          + 'de Sébastopolin juuri tornin eteen.'
+        + '\n\n'
+        + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäinen patsas '
+          + 'syöstiin alas vallankumouksen aikana, ja nykyinen on 1800-luvun '
+          + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
+          + 'sanotaan tehneen tornissa ilmanpainekokeita — mistä historioitsijat '
+          + 'ovat kuitenkin eri mieltä. Sääasema perustettiin torniin vasta 1891.',
+      kuvat: [
+        {
+          tiedosto: 'Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg',
+          lyhyt: 'Tour Saint-Jacques (1509–1523) on ainoa jäljellä oleva osa keskiajan Saint-Jacques-kirkosta.',
+          selite: 'Tour Saint-Jacques rakennettiin 1509–1523, ja se on ainoa jäljelle jäänyt osa keskiaikaisesta Saint-Jacques-de-la-Boucherien kirkosta.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     'Saint-Eustache': {
       aika: '1532–1637',
-      teksti: 'Saint-Eustachea alettiin rakentaa vuonna 1532, ja kirkko '
-          + 'vihittiin vuonna 1637. Länsijulkisivu on myöhempi: sitä '
-          + 'alettiin rakentaa uudelleen vuonna 1754.',
+      teksti: 'Saint-Eustachea alettiin rakentaa vuonna 1532, ja kirkko vihittiin '
+          + 'vuonna 1637. Länsijulkisivu on myöhempi: sitä alettiin rakentaa '
+          + 'uudelleen vuonna 1754.'
+        + '\n\n'
+        + 'Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä; '
+          + 'tori siirrettiin Rungisiin vuonna 1969. '
+          + 'Sen paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
+          + 'seurakunta kasvoi ja kappeli kävi pieneksi. Rakentaminen kesti yli '
+          + 'sata vuotta, ja tulos on sekoitus: rakenne on goottilaista, koristeet '
+          + 'renessanssia.'
+        + '\n\n'
+        + 'Julkisivun uusimiseen johti Colbert, seurakuntalainen, joka hoiti '
+          + 'kirkon raha-asioita ja josta tuli myöhemmin Ludvig XIV:n ministeri: '
+          + 'hän rakennutti 1655 tornien alle kaksi kappelia, ja julkisivu '
+          + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
+          + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
+          + 'täällä ensimmäisellä ehtoollisellaan 1649.'
+        + '\n\n'
+        + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
+          + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
+      kuvat: [
+        {
+          tiedosto: 'Saint Eustache.jpg',
+          lyhyt: 'Saint-Eustachea alettiin rakentaa 1532 ja kirkko vihittiin 1637; goottilaista rakennetta, renessanssikoristeet.',
+          selite: 'Saint-Eustachea alettiin rakentaa vuonna 1532, ja kirkko vihittiin vuonna 1637; rakenne on goottilaista ja koristeet renessanssia.',
+          lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pompidou-keskus': {
+      aika: '1972–1977',
+      teksti: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus '
+          + 'avattiin vuonna 1977. Keskus on nimetty Ranskan presidentin Georges '
+          + 'Pompidoun mukaan, ja sen suunnittelusta järjestettiin 1970–1971 '
+          + 'kansainvälinen arkkitehtikilpailu, jonka voittivat italialainen Renzo '
+          + 'Piano ja britti Richard Rogers työryhmineen.'
+        + '\n\n'
+        + 'Voittajat veivät rakenteet, putket, portaat ja hissit ulkopuolelle, '
+          + 'jotta sisälle jäisi vapaita tasoja. Putket on maalattu käyttönsä '
+          + 'mukaan: ilma on sininen, vesi vihreä, sähkö keltainen ja kulku — '
+          + 'liukuportaat ja hissit — punainen. Rakennus vei vain puolet tontista, '
+          + 'ja toinen puoli jäi aukioksi, jota sanotaan piazzaksi.'
+        + '\n\n'
+        + 'Talossa on nykytaiteen museo ja yleinen kirjasto; musiikin ja äänen '
+          + 'tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
+          + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
+          + 'avautua uudelleen vuonna 2030.',
+      kuvat: [
+        {
+          tiedosto: 'Centre Pompidou @ Beaubourg @ Paris (15448205062).jpg',
+          lyhyt: 'Pompidou-keskuksen rakennustyöt alkoivat 1972 ja keskus avattiin 1977; rakenteet ja putket ovat ulkopuolella.',
+          selite: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus avattiin vuonna 1977; rakenteet, putket ja liukuportaat ovat rakennuksen ulkopuolella.',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Place des Vosges': {
