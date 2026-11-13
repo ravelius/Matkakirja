@@ -1049,6 +1049,10 @@ test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
   assert.equal(pariisi.kysymys.vihje, pariisi.data.kysymys.vihje);
   assert.equal(pariisi.kysymys.lahde, 'nosto-pariisin-bukinistit');
   assert.ok(pariisi.kysymys.vihje?.length > 0, 'Pariisin vihje');
+  // Lontoon vihje (KK 13.11.2026): tarinapaikka Savusumu 1952.
+  const lontoo = k('tarinakaari').find((a) => a.id === 'lontoo');
+  assert.equal(lontoo.kysymys.lahde, 'nosto-lontoon-savusumu-1952');
+  assert.equal(lontoo.kysymys.vihje, lontoo.data.kysymys.vihje);
   assert.ok(k('tarinakaari').every((a) => !a.kysymys || ('vihje' in a.kysymys && 'lahde' in a.kysymys)));
   assert.ok(k('paikkatiedot').every((a) => typeof a.teksti === 'string' && a.teksti.length));
   assert.ok(k('kohtaamiset').every((a) => a.tervehdys && a.loyto && a.tyhja && a.vaarin));

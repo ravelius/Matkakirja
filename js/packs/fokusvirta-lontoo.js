@@ -1300,6 +1300,13 @@ export const FOKUSVIRTA_LONTOO = {
       id: 'orbitin-liukumaki',
       wiki: 'Anish Kapoor',
       nimio: 'Liukumäkiveistos',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA; KK 13.11.2026, Lontoon faktapohja 3a):
+       * veistos on Stratfordin olympiapuistossa (51,538 / −0,013), joka jää Lontoon kohdekartan lepotilan
+       * näkymän itäpuolelle reunukselle. Kohdekartan piste 51,504 / −0,135 oli väärä, joten merkki on
+       * pääkartalla kuten Wienin Prater ja Rooman Avaimenreikä.
+       */
+      kattoVapaa: true,
       otsikko: 'Veistos, jonka sisällä on liukumäki',
       symboli: 'tekniikka',
       lunastus: [
@@ -1329,11 +1336,82 @@ export const FOKUSVIRTA_LONTOO = {
           + 'putkessa on?',
         'Mitä teräsvyyhdille tehdään kisojen jälkeen?',
       ],
+      // Stratford, 51,538 N / −0,013 E (en-Wikipedia "ArcelorMittal Orbit"); laudat projisoiLaudalle-muunnoksella.
       paikka: {
         nimi: 'Liukumäkiveistos',
         laudat: {
-          maailmankartta: { x: 5828.8, y: 1324.1 },
-          europe: { x: 208.6, y: 539 },
+          maailmankartta: { x: 5832.9, y: 1322.6 },
+          europe: { x: 211, y: 538.2 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA "Savusumu 1952" (KK 13.11.2026, Lontoon faktapohja kohdat 1 ja 5; vaihtoehto A).
+       *
+       * Lontoon tarinakaaren aarretehtävän (Leila, Clean Air Act 1956) vihje
+       * osoittaa tähän: tarinakaari.lontoo.kysymys.lahde =
+       * `nosto-lontoon-savusumu-1952` (js/tyohuone-kehitys-data.js).
+       * Lunastus on KK:n hyväksymä teksti sanatarkasti (sama kuin
+       * js/packs/nahtavyysjutut.js 'Savusumu 1952'). Faktat: en-Wikipedia
+       * "Great Smog of London" ja "Clean Air Act 1956" sekä pelin oppitunnin
+       * ja maalehden 1873-sumu (SK, PR 6681).
+       *
+       * Visa on eri kuin Leilan: se kysyy, mikä kulki sumun aikana (metro),
+       * ei lain sisältöä. Väärät vaihtoehdot ovat joukkoliikennettä, joka
+       * lähteen mukaan seisoi ("public transport, with the exception of the
+       * London Underground, was shut down"). KK lukee vaihtoehdot ennen junasanaa.
+       */
+      id: 'lontoon-savusumu-1952',
+      nimio: 'Savusumu 1952',
+      otsikko: 'Savusumu 1952 — viisi päivää ilman katuja',
+      visa: {
+        kysymys: 'Mikä kulki sumun aikana, vaikka kaikki muu joukkoliikenne seisoi?',
+        vaihtoehdot: [
+          'Metro',
+          'Bussit',
+          'Thamesin jokiveneet',
+        ],
+        oikea: 0,
+        fakta: 'Joulukuun 1952 savusumussa kaikki joukkoliikenne metroa lukuun ottamatta pysähtyi.',
+      },
+      lunastus: [
+        'Joulukuussa 1952 Lontoon kadut katosivat viideksi päiväksi. Korkeapaine '
+          + 'painoi kivihiilen savun kadun tasalle ja tuuli tyyntyi: näkyvyys putosi '
+          + 'paikoin noin kolmeenkymmeneen senttiin, konsertteja ja elokuvanäytöksiä '
+          + 'peruttiin, ja kaikki joukkoliikenne metroa lukuun ottamatta pysähtyi. '
+          + 'Kuolleita arvioitiin ensin neljätuhatta, myöhemmissä laskelmissa '
+          + '10 000–12 000.',
+        'Joki on nähnyt sumun ennenkin. Isoisäsi matkavuonna 1873 tämä rantakatu '
+          + 'oli kolmen vuoden ikäinen. Joulukuussa pikimusta sumu pysäytti Thamesin '
+          + 'höyrylaivat, ja samana vuonna yhdeksäntoista ihmistä hukkui pudottuaan '
+          + 'sumussa jokeen, kanavaan tai satama-altaaseen.',
+        'Neljä vuotta savusumun jälkeen, vuonna 1956, säädettiin laki, joka puuttui '
+          + 'siihen, mistä savu tuli: piipusta ei enää saanut päästää tummaa savua, ja '
+          + 'kunnat saivat oikeuden määrätä kokonaisia alueita savuttomiksi, jolloin '
+          + 'kodin tulisijassa sai polttaa vain savutonta polttoainetta.',
+      ],
+      lahde: 'en-Wikipedia "Great Smog of London" ja "Clean Air Act 1956" sekä pelin '
+        + 'hyväksytty Lontoo-aineisto (oppitunti ja maalehti, sumu 1873); '
+        + 'SK:n tarkistus PR 6681, KK:n hyväksymä teksti 13.11.2026.',
+      kuva: {
+        tiedosto: "Nelson's Column during the Great Smog of 1952.jpg",
+        lyhyt: 'Nelsonin pylväs Trafalgar Squarella savusumussa joulukuussa 1952.',
+        selite: 'Nelsonin pylväs Trafalgar Squarella joulukuun 1952 savusumussa; '
+          + 'kuva on otettu Trafalgar Squarelta, ei rantakadulta.',
+        lahde: 'N T Stobbs, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miksi savu jäi kadun tasalle?',
+        'Kuinka moni kuoli savusumuun?',
+        'Mitä sumu teki Thamesille isoisän matkavuonna?',
+      ],
+      // Victoria Embankment, Embankment Gardens Savoyn kohdalla, 51,5093 N / −0,1207 E (SK PR 6681, KK 5.1).
+      paikka: {
+        nimi: 'Savusumu 1952',
+        laudat: {
+          maailmankartta: { x: 5829.3, y: 1323.9 },
+          europe: { x: 208.9, y: 538.9 },
         },
       },
     },

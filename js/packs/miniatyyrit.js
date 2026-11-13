@@ -188,7 +188,9 @@ export const MINIATYYRIT = {
     'Leake Streetin tunneli': 'assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp',
     'Neljäs jalusta': 'assets/kartat/miniatyyrit/lontoo-neljas-jalusta.webp',
     Turbiinihalli: 'assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp',
-    Liukumäkiveistos: 'assets/kartat/miniatyyrit/lontoo-liukumakiveistos.webp',
+    // Liukumäkiveistos pois (KK 13.11.2026): Orbit on pääkartalla, ei kohdekartalla.
+    // Ämpäritunnus: kuva tilataan erikseen (ei generointia ilman lupaa); puuttuva kuva putoaa varatäpläksi.
+    'Savusumu 1952': 'lontoo-savusumu-1952',
   },
   // Eurooppa-erä 1 (omistajan tilaus 15.8.2026: "Lisää kartta
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
