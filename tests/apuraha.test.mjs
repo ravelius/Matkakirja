@@ -7,45 +7,36 @@ import { tarkistaApuraha, lataaApuraha, nollaaApuraha, APURAHA_OSOITE } from '..
 
 const raaka = JSON.parse(readFileSync(new URL(`../${APURAHA_OSOITE}`, import.meta.url), 'utf8'));
 
-test('esittely.json on kelvollinen: filosofia, korostettu kehitysmuutos, pelit, ei linkkejä, enintään 3 kuvaa', () => {
+test('esittely.json on kelvollinen pelin esittely: Pelissä nyt, Tulossa, ei apurahaa, ei linkkejä', () => {
   const d = tarkistaApuraha(raaka);
   assert.ok(d, 'tarkistus hylkäsi tiedoston');
-  assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
-  // Omistaja 7.10.2026: ensin pelin filosofia, sitten korostettuna kehityksen siirto natiiviin, sitten Maapallo,
-  // Kuumailmapallo ja ISS omina alaotsikkoinaan ja lopuksi pelit.
-  assert.equal(d.kappaleet.length, 8);
-  assert.deepEqual(d.kappaleet.slice(2, 5).map((k) => k.otsikko), ['Maapallo', 'Kuumailmapallo', 'ISS']);
-  assert.match(d.kappaleet[0].teksti, /^Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli/);
-  assert.equal(d.kappaleet[1].korostus, true);
-  assert.match(d.kappaleet[1].teksti, /^Kehitys siirtyi syyskuussa/);
-  assert.ok(d.kappaleet.filter((k, i) => i !== 1).every((k) => k.korostus === false));
-  // Omistaja 7.10.2026: ei linkkejä; kuvat (ISS:n kupola, Olavinlinna, Kuumailmapallo) pelistä, enintään 3.
-  assert.ok(raaka.kappaleet.every((k) => !k.linkki), 'linkit poistettiin (omistaja 7.10.2026)');
-  assert.ok(d.kuvat.length <= 3, `kuvia ${d.kuvat.length}`);
-  assert.equal('video' in raaka, false, 'video poistettiin (omistaja 30.9. klo 15.06)');
+  // Omistaja 13.11.2026 klo 14.52 (KK 15.07): kortti on pelin esittely.
+  assert.equal(d.nappi, 'Pelin esittely');
+  assert.equal(d.otsikko, 'Matkakirja ja unohdettu aarre');
+  assert.deepEqual(d.kappaleet.slice(4).map((k) => k.otsikko),
+    ['Pelissä nyt', 'Kartta ja Pariisi', 'Aarteet', 'Kuumailmapallo', 'ISS ja raketti', 'Linssit', 'Tulossa']);
+  assert.match(d.kappaleet[0].teksti, /^Pelaaja on nuori Fogg/);
+  assert.ok(d.kappaleet.every((k) => k.korostus === false));
+  assert.ok(raaka.kappaleet.every((k) => !k.linkki), 'ei linkkejä');
+  assert.equal('video' in raaka, false);
   for (const k of raaka.kuvat) if (k.rajaus != null) assert.match(k.rajaus, /^\d{1,3}% \d{1,3}%$/, `rajaus ${k.tiedosto}`);
-  assert.ok(d.webHuomautus.startsWith('Selainpeli ei sisällä kaikkia ominaisuuksia.'));
-  // Selain saa webTekstit: iOS:n ominaisuudet kerrotaan iOS:n ominaisuuksina.
+  assert.equal(d.webHuomautus, 'Selainpeli ei sisällä kaikkia ominaisuuksia. Täysi peli on iPhonen ja iPadin sovelluksessa.');
   const kaikki = d.kappaleet.flatMap((k) => [k.teksti ?? '', ...(k.lista ?? [])]).join(' ');
-  assert.ok(!/poikkileikkaus|esittelylinsseistä/.test(kaikki), kaikki);
-  assert.ok(/Videopelit tulevat vain iOS-sovellukseen/.test(kaikki));
+  // Apurahaviittaukset ja päiväys pois.
+  assert.ok(!/apuraha|arvioija|tilanne 7\.10|Kehitys siirtyi|TestFlight/i.test(JSON.stringify({ n: raaka.nappi, o: raaka.otsikko, a: raaka.alaotsikko, k: raaka.kappaleet, w: raaka.webHuomautus, v: raaka.valmiitLinssit.teksti, t: raaka.kuvat.map((x) => x.teksti) })), 'apurahaviittaus');
+  assert.ok(!/—/.test(kaikki), 'ei ajatusviivoja');
   assert.equal((kaikki.match(/Vain iOS-sovelluksessa\./g) ?? []).length, 2, 'Kuumailmapallo ja ISS merkitty iOS:n ominaisuuksiksi selaimessa');
 });
 
-test('kuvat kappaleensa vieressä (versio 7): ISS-kupola ISS-kappaleeseen, Olavinlinna Työn alla -kappaleeseen', () => {
+test('kuvat (versio 8): kappaleeseen sidotut kuvat osuvat olemassa olevaan kappaleeseen', () => {
   const d = tarkistaApuraha(raaka);
-  assert.equal(raaka.versio, 7);
+  assert.equal(raaka.versio, 8);
   const kohta = (nimi) => d.kappaleet.find((k) => k.otsikko === nimi).kuvat.map((k) => k.tiedosto);
-  assert.deepEqual(kohta('ISS'), ['assets/apuraha/iss-kupola-lansi-eurooppa.jpg']);
-  // Omistaja 11.10.2026: Maapallo- ja Kuumailmapallo-kappaleisiin pelin kuvakaappaukset (TF 181, iPad).
-  // Omistaja 15.10.2026 klo 16.33 (TF 193): Maapallo-kuvaksi pelin oma peruskarttapallo satelliittipallon tilalle.
-  assert.deepEqual(kohta('Maapallo'), ['assets/apuraha/maapallo-peruskartta.jpg']);
+  assert.deepEqual(kohta('ISS ja raketti'), ['assets/apuraha/iss-kupola-lansi-eurooppa.jpg']);
+  assert.deepEqual(kohta('Kartta ja Pariisi'), ['assets/apuraha/maapallo-peruskartta.jpg']);
   assert.deepEqual(kohta('Kuumailmapallo'), ['assets/apuraha/kuumailmapallo-pariisi.jpg']);
   for (const k of raaka.kuvat) assert.ok(existsSync(new URL(`../${k.tiedosto}`, import.meta.url)), `kuva puuttuu: ${k.tiedosto}`);
-  assert.deepEqual(kohta('Työn alla'), ['assets/apuraha/olavinlinna-hamara.jpg']);
-  assert.equal(raaka.kuvat.find((k) => k.tiedosto.includes('olavinlinna')).rivi, 1, 'Olavinlinna-rivin viereen');
-  assert.equal(d.kuvat.length, 0, 'kaikilla kuvilla on kappale, loppuriviä ei ole');
-  for (const k of raaka.kuvat) assert.ok(Number.isInteger(k.kappale) && raaka.kappaleet[k.kappale], `kappale ${k.tiedosto}`);
+  for (const k of raaka.kuvat) if (k.kappale != null) assert.ok(Number.isInteger(k.kappale) && raaka.kappaleet[k.kappale], `kappale ${k.tiedosto}`);
   const ilman = tarkistaApuraha({ ...raaka, kuvat: [{ tiedosto: 'a.jpg' }, { tiedosto: 'b.jpg', kappale: 99 }] });
   assert.equal(ilman.kuvat.length, 2, 'ilman kelvollista kappaletta kortin loppuun');
 });
