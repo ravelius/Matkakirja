@@ -32,7 +32,7 @@ Lähteet: en-Wikipedia (kaikki yhdeksän artikkelia, koko teksti MediaWiki-rajap
 | Sacré-Cœur | 1870 ehdotus; 1873 päätös; 1875 alku; 1876; 1884; 1891; 1899 kupoli; 1912 kellotorni; 1914 valmis; 1919 vihkiminen; 1985 urkujen restaurointi; 2022 |
 | Tour Montparnasse | 1956–1958 suunnittelu; 1968 lupa; 1969 alku; 1970; 1973 valmis ja avattu; 2009–2012 asbestin poisto; 2017 julkisivukilpailu |
 
-Tulos: yksikään kuudesta harhalapun päätepisteestä (1204, 1291, 1719, 1752, 1263, 1270, 1652, 1684, 1819, 1849, 1880, 1922) ei ole listassa. Tekstihaku löysi vain asiaan kuulumattomia osumia, eli yhtäkään rakennus-, valmistumis- tai uudistusvuotta ei osunut:
+Tulos: yksikään kahdestatoista harhalappujen päätepisteestä (1204, 1291, 1719, 1752, 1263, 1270, 1652, 1684, 1819, 1849, 1880, 1922) ei ole listassa. Tekstihaku löysi vain yhden asiaan kuulumattoman osuman (1752) ja yhden päivämäärän sivuhuomautuksen (1880); yhtäkään rakennus-, valmistumis- tai uudistusvuotta ei osunut:
 - 1752: Notre-Damen sisällä oleva maalaus (Vien) on päivätty 1752.
 - 1880: 1873-taulukon Bastilji-rivillä "kuvattu vielä 1880" (valokuvan vuosi).
 - 1819, 1849, 1204, 1291, 1719, 1263, 1270, 1652, 1684, 1922: ei osumia missään yhdeksässä artikkelissa.
@@ -41,5 +41,5 @@ Tulos: yksikään kuudesta harhalapun päätepisteestä (1204, 1291, 1719, 1752,
 
 1. Tarkistus on negatiivinen (vuotta ei löydy kummastakaan lähteestä), joten kyse on "ei tunnettua vastaavuutta", ei todistuksesta. Epävarmuutta jää: Notre-Damen valmistumisvuosi (1260 vs 1345; infolaatikko 1345, tekstissä "by 1260") ja Sainte-Chapellen alku (1238 vs 1242; kappelin lappu on "n. 1242–1248") ovat jo tunnettuja; harhoja 1263–1270 ei ole kummassakaan.
 2. Välin nimi paljastaa joskus: harha 1263–1270 on kappelin lapun naapuri (n. 1242–1248). Se on tarkoituksella lähellä, koska poissulku ei saa ratkaista; jos KK pitää liian vaikeana, vaihtoehto on "1285–1292" (ei osumia testattu).
-3. Lyhytväliset lapput (1887–1889, n. 1242–1248, 1897–1900, 1969–1973) saavat harhan pituudeltaan 7 vuotta (1263–1270) vain kolmikossa 2. Kolmikoissa 1 ja 3 harhat ovat pitkiä (87, 33, 30, 42 vuotta), joten ne näyttävät seuraavan 3 pisimmän oikean laatan mittaa, mutta Eiffel (2 v) ja Montparnasse (4 v) ovat silti helposti tunnistettavia rautatornina ja pilvenpiirtäjänä (tyyli erottaa), mikä on tarkoituksellista.
+3. Pituus: kolmikon 1 harhat ovat 87 ja 33 vuotta (oikeat 182, 32, 2), kolmikon 2 harhat 7 ja 32 vuotta (oikeat 6, 35, 3), kolmikon 3 harhat 30 ja 42 vuotta (oikeat 30, 39, 4). Eiffel (2 v), Grand Palais (3 v) ja Montparnasse (4 v) jäävät silti ilman harhaa vastaavaa lyhyttä väliä, koska harhan pituus ei saa paljastaa paria; tyyli (rautatorni, lasikupoli, pilvenpiirtäjä) erottaa ne katsomalla. Jos KK haluaa lyhyen harhan myös näille, ehdotan esim. 1889–1891 (EI: 1889 on Eiffelin vuosi) — siksi lyhyitä ei ehdotettu.
 4. Näyttämön viiden lapun asettelu ja datan muoto: Näyttämöseppä (kenttä `vaikea.harhat[]`). Tämä dokumentti ei muuta dataa.
