@@ -1,4 +1,4 @@
-# lehti-ja-nostot · vastuu NUI · tarkistettu 12.11.2026
+# lehti-ja-nostot · vastuu NUI · tarkistettu 13.11.2026
 
 TAVOITE: Kartalla on paikkoja, lehdessä luettava syvyys. Nosto avautuu kuva edellä, kertoo tosia asioita lyhyesti ja herättää kysymyksen. Lehti tuntuu oikealta paikallislehdeltä omasta maastaan.
 
@@ -7,7 +7,7 @@ SÄÄNNÖT:
 2. Maan tasolla maalehden sivut ovat myös nostoja, ja tärkeimmät vuoret, meret ja joet ovat avattavia kohteita. [R-2.137] [R-2.11]
 3. Nosto aukeaa kuva edellä, LISÄÄ avaa tekstin. Auki oleva nosto ei sulkeudu vierittämällä eikä sisällön napautuksesta. [R-2.41] [R-2.146]
 4. Teksti on 3–5 virkettä; laajassa nostossa ingressi ja noin 160–240 sanaa. [R-2.146] [R-2.11]
-5. Jokaisella nostolla on Pulun kysymykset; ilman niitä testi on punainen. Kolmasosassa maan nostoista on visa, jonka vastaus on noston tekstissä. [R-2.218] [R-11.15]
+5. Jokaisella nostolla on Pulun kysymykset; ilman niitä testi on punainen. Kolmasosassa maan nostoista on visa, jonka vastaus on noston tekstissä; pienennetyn noston alla vihreä Tehtävä-palkki avaa sen pieneen ikkunaan. [R-2.218] [R-11.15] [P-261113-10]
 6. Nostolla on oikeita kuvia. Havainnekuva on kadonneen kohteen pääkuva ja rappeutuneen pari nykykuvalle; muualla vain, kun se tuo selvästi lisää. [R-2.146] [R-11.16]
 7. Eläinkohteen kuvassa on eläin lähikuvassa, tarvittaessa lajista muualta selitteen kertoessa sen. [R-11.18]
 8. Historian hetkessä katsoja on paikalla: lähikuva ihmisistä ja kaukokuva, teksti alkaa ihmisen kokemuksesta. Keksitty minitarina merkitään. [R-2.13]
