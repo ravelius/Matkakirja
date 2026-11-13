@@ -1397,8 +1397,8 @@ export const FOKUSVIRTA_LONTOO = {
       kuva: {
         tiedosto: "Nelson's Column during the Great Smog of 1952.jpg",
         lyhyt: 'Nelsonin pylväs Trafalgar Squarella savusumussa joulukuussa 1952.',
-        selite: 'Nelsonin pylväs Trafalgar Squarella joulukuun 1952 savusumussa; '
-          + 'kuva on otettu Trafalgar Squarelta, ei rantakadulta.',
+        selite: 'Nelsonin pylväs joulukuun 1952 savusumussa. Kuva on Trafalgar Squarelta, '
+          + 'noin puolen kilometrin päästä tästä rantakadun kohdasta.',
         lahde: 'N T Stobbs, Wikimedia Commons (CC BY-SA 2.0)',
       },
       kysymykset: [
