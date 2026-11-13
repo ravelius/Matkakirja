@@ -80,6 +80,7 @@ tyyppi() {
     *.js|*.mjs) echo 'text/javascript; charset=utf-8' ;; *.txt) echo 'text/plain; charset=utf-8' ;;
     *.bin|*.bytes|*.astc|*.astcm) echo application/octet-stream ;; *.tif|*.tiff) echo image/tiff ;; *.gif) echo image/gif ;; *.mp4) echo video/mp4 ;; *.geojson) echo application/geo+json ;;
     *.ttf) echo font/ttf ;; *.otf) echo font/otf ;; *.woff) echo font/woff ;; *.woff2) echo font/woff2 ;;
+    *.gz) echo application/gzip ;;  # JU 9.11. talopalat (pelin koko osa 2): EI Content-Encodingia, laite tarkistaa .gz:n sha256:n sellaisenaan
     *.terrain) echo application/vnd.quantized-mesh ;;  # KS 12.10. (korjattu 15.5x): gzip-pakattu → Content-Encoding: gzip, kuten maailmanmaasto
     *) echo "" ;;
   esac

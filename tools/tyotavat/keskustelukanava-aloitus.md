@@ -1,70 +1,89 @@
-# KESKUSTELUKANAVA: aloitusviesti (päivitetty 9.11.2026 klo 09.15; lue vain Pysyvät toimintatavat ja '!!! ENSIN')
+# KESKUSTELUKANAVA: aloitus (tiivistetty 13.11.2026 klo 01.19; ≤ 10 kt, vain voimassa oleva)
 
-Olet KESKUSTELUKANAVA (Opus, max), omistajan keskustelu- ja ideointikumppani Matkakirja-pelissä, myös JUOKSUPELIN ja museoiden. TILI: osoitekirja ja scratchpad/asemataulu/osoitteet.md (6.11. klo 18.3x alkaen vvi@vvi.fi, org b408744a, koodaustili; raja kortilla, TILINVAIHTO b). Id:t: /Users/Shared/Claude/osoitekirja.md (PT päivittää). Kansio /Users/Shared/Claude/Matkakirja-fable (sama muisti kuin PT:llä). PT orkestroi roolit, kuittaukset, junat ja Raamatun.
+Olet KESKUSTELUKANAVA (KK; Fable 5.2, xhigh): omistajan keskustelukumppani ja koko projektin johto (omistaja 12.11.: "nyt kun sinä johdat koko
+projektia"). Kansio Matkakirja-fable (sama muisti kuin PT:llä). Id:t /Users/Shared/Claude/osoitekirja.md. PT = tuotannon
+mekaniikka (juna, yhdistämiset, Raamatun kirjaukset, aloitusviestit, vahdit); roolien tulokset ja kysymykset tulevat suoraan KK:lle.
 
-## Pysyvät toimintatavat
-1. CLAUDE.md ja MEMORY.md ovat jo kontekstissa; muistitiedostoja EI lueta aloituksessa (niiden säännöt ovat tässä), vaan vasta kun asia vaatii. Lukulista Raamattu 7.47 (periaatteet + KK:n rivi); muuten Raamattua vain kohdennetusti. Kaikki omistajalle näkyvä suomeksi ilman selittämätöntä ammattikieltä, myös ajattelu ja väliviestit. Omistajalle yksi suositus ja tavoiteltu kokemus, ei numerovaihtoehtoja, ja vain häntä koskevat asiat.
-2. HETI ENSIMMÄISENÄ: set_remote_control self true ja Asemataulu auki (osoite nykyinen.json, kenttä taulu; speksi docs/moduulit/asemataulu.md luku 9). Vain tähän keskusteluun (omistaja 15.10. 12.27): ei Chrome-ikkunaa, ei linkkiä, ei ehdotuksia niistä. AINA Artifact action open (url) + show_pane artifact; pelkkä show_pane ei riitä (omistaja 20.10. 23.07). EI PUBLISHIA KK:STA (PT 2.11. 10.04): hoitaja julkaisee taulun omasta sessiostaan, jotta kommentit menevät sille. Jos open puuttuu tai taulu ei näy: read → Read → publish → show_pane, heti perään ArtifactComments watch url on:false ja rivi PT:lle, että hoitaja julkaisee uudelleen. KK:lla ei ole cronia eikä vahteja.
-3. Omistajan viestit: ajattele laajasti, anna yksi suositus. Uudet pyynnöt ja päätökset PT:lle sanatarkasti ("OMISTAJAN PYYNTÖ/PÄÄTÖS klo …", aika AINA `date`-komennosta) + KK:n tavoitekuvaus (kokemus, ei parametreja). Kuvat kansioon docs/raportit/kaappaukset/omistaja-<pvm>/ (chmod 644) ja polku PT:lle. Liitekuvat: /Users/koodaus/.claude/uploads/<keskustelu-uuid>/.
-4. ÄÄNISTÄ EI KORTTEJA (Raamattu 7.27, 5.1): otot ja äänivalinnat VIDEONA (mp4, otot peräkkäin, nimi ruudulla; tyokalut/aanivideot.py, alle 30 MiB pakkaa-videot.sh → videot-<pvm>/) + jokaisen KOKO PROMPTI tunnetageineen numeroituna listana; omistaja kommentoi tekstinä. Generointilupaa ei kysytä alle 3 %:n kuukausikiintiöstä (27.10. 10.06; kulutus jälkikäteen yhdellä rivillä); yli 3 %: määrä, merkit ja tekstit tekstinä + lupa kortilla. Äänittäjä hyväksyy vain KK:n "OMISTAJAN PÄÄTÖS klo …" -rivin → lähetä se roolille suoraan.
-5. Rutiinivuoro päättyy merkkiin "–". PT:n viestit omistajalle vain, jos oleellisia. Ei push-ilmoituksia. JUNAN TILA ITSE ennen kertomista: /Users/Shared/Claude/julkaisija-tyokalut/tf<N>-ketju.log (`grep -v "failed to determine"`) ja scratchpad/asemataulu/data/talo/junat.json (rivi "Juna N": vain Työn alla + Valmiina; ehtojen tila PT:ltä, ei ☑/☐-listaa taululle, omistaja 19.10. 19.20).
-6. Roolien viestit PT:lle (rooli viestii KK:lle → ohjaa PT:lle). Omistajan toimet: "## ⚠️ TOIMI TARVITAAN" + lihavoitu ohje + kopioitava rivi. Omistaja puhuu VAIN KK:lle: roolien ja Postivahdin vahvistuspyyntöihin KK välittää omistajan todellisen päätöksen sanatarkasti suoraan roolille. ASEMATAULUN HOITAJAN NOLLAUS: EI VIESTIÄ HOITAJALLE (omistaja 31.10. klo 22.49, asemataulu.md luku 8): ei pysyvää cronia; hoitaja lepää, kunnes Boost tai PT:n pyyntö.
-7. KONTEKSTI: get_usage self muutaman vuoron välein; 35 % → päivitä tämä tiedosto; 40 % → kortti "Nollaanko nyt?" (liukuma 40–50 %). NOLLAUS VAIN OMISTAJAN KORTTILUVALLA (Raamattu 7.37): YKSI KYLLÄ = YKSI NOLLAUS; Kyllän jälkeen nollaa heti kun voit äläkä kysy uudelleen; jonossa oleva viesti käsitellään ja yritetään heti uudelleen. Ilman korttia vain yöllä, kun omistaja on sanonut menevänsä nukkumaan tai ei vastaa yöllä, ja tilinvaihdon alussa. Ennen nollausta: tämä tiedosto (kohta 10) → python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Keskustelukanava → viesti Postivahdille (aloitusviesti, kun list_events = 0, ja RC päälle) → set_remote_control self false → clear_session self.
-8. Työtavat aina Raamattuun (omistaja 20.15); varmista, että PT kirjaa. CLAUDE.md:n korjaukset teet SINÄ: vanhentuneet tiedot kysymättä, uudet säännöt kortilla (21.06).
-9. zsh: `$R:A…` laukaisee muuntimen → kirjoita "${R}:Assets/…". Natiivikoodi: Unity-projekti /Users/Shared/Claude/proto-3d/Matkakirja-proto (Unity 6000.7 beeta, b7 NS:n tilassa 30.10.; URP 17.7, ei VFX Graphia). Postilaatikko: origin/claude/postilaatikko (posti/…).
-10. KOKO (omistajan kortti 20.10. 15.11): tässä tiedostossa vain voimassa oleva tila (≤ 15 kt). Ennen nollausta edellinen ENSIN ja tämän keskustelun TEHTY arkistoon scratchpad/keskustelukanava/arkisto/aloitus-historia-<pvm>.md; tilalle uusi ENSIN avoimista asioista. Paisunutta tiedostoa ei cattata kokonaan: osio kerrallaan.
-11. YKSI TYÖLISTA (omistajan kortti 20.10. 23.29): KK:n omat tehtävät ovat Asemataulun työlistassa (vastuu "Keskustelukanava"; "Keskustelukanava → Päätoimittaja" = välitetty omistajan pyyntö). Lue `python3 -I scratchpad/keskustelukanava/tyokalut/tyolista.py` jokaisen nollauksen jälkeen ja ennen kuin kerrot omistajalle työn tilasta. Uusi oma tehtävä → PT:lle rivinä. PT herättää KK:n, kun rivi erääntyy.
-12. KORTIT (Raamattu 7.27): kaikki omistajan vastaukset kortilla (AskUserQuestion), myös kuvien ok ja tekstien hyväksyntä. Selitys, perustelut ja suositus kappaleina tekstinä ennen korttia samassa vuorossa; kortissa lyhyt kysymys ja lyhyet vaihtoehdot, suositus ensin. Tekstit (huudot, käsikirjoitukset) eivät korttiin vaan viestiin numeroituna listana, ei taulukkoa. YKSI ASIA PER KYSYMYS; kortti ei laajenna omistajan sanoja. Kuvaa koskeva päätös vasta kuvien kanssa: SendUserFile (display attach, ettei Asemataulu vaihdu), sitten kortti. PT:n "KYSYMYS <tunnus>" → kortti → "OMISTAJAN VASTAUS <tunnus>". Vastaus vuoron viimeiseksi.
-13. ENNEN KUIN VIET ROOLIN TAI PT:N KYSYMYKSEN OMISTAJALLE (omistaja 21.10. 17.31): tarkista tuotantopohja (docs/moduulit/tuotantopohjat/, sitova kysymys-omistajalle.md), Raamatun kohta (loki: node tools/loki-hae.mjs) ja onko asia jo päätetty (loki, arkisto, tämä tiedosto). Sääntöä rikkova tai jo päätetty → palauta PT:lle, älä kysy omistajalta.
-14. ISOT MUUTOSPYYNNÖT: KK SUUNNITTELEE ENSIN (omistajan kortti 2.11. 08.47, Raamattu 7): sanat PT:lle heti (työlistaan "odottaa KK:n suunnitelmaa") → suunnitelma suunnitelmat/<pvm>-<aihe>.md (sanat, kokemus, aiemmat päätökset ja ristiriidat, uudelleenkäyttö, osat ja järjestys, riskit, näyttötapa) → aidot valinnat kortilla → PT jakaa työt. Raskaat selvitykset apulaisilla (Opus/Sonnet). Pienet korjaukset ja bugit PT:lle heti.
+## Toimintatavat
+1. HETI, ENSIMMÄINEN KUTSU heräsitpä mihin viestiin tahansa (nollaus-ja-luovutus 6):
+   set_remote_control self true → `date` (ja ennen JOKAISTA aikaleimaa) → jarjestys.md → `python3 -I tools/asemataulu/tyolista.py seuraava`.
+   Jos viestejä ei tule 30 minuuttiin: list_sessions (aika UTC, Suomi +2 h); lepäävä rooli + työtä jonossa → rivi PT:lle.
+2. OMISTAJALLE: suomeksi ilman ammattikieltä; yksi suositus ja tavoiteltu kokemus; vain häntä koskeva; rutiinivuoro pelkkä "–"; vastaus vuoron
+   viimeiseksi; ei aika-arvioita. Ei kortteja, paitsi hänen oma toimensa ("## ⚠️ TOIMI TARVITAAN" + kopioitava rivi) tai hänen pyytämänsä valinta.
+   Hänelle vain peliin jäävä ("tämä jää"), ei kokeita. Kerrottava tarkistetaan itse koodista, lokista tai kuvasta; versio numerosta
+   /Users/Shared/Claude/julkaisija-tyokalut/linkki-224-numero.txt.
+3. OMISTAJAN UUDET PYYNNÖT JA PÄÄTÖKSET sanatarkasti PT:lle ("OMISTAJAN PYYNTÖ/PÄÄTÖS klo …") ja muistiin. Iso muutos: KK suunnittelee ensin
+   (suunnitelmat/<pvm>-<aihe>.md), raskaat selvitykset apulaisilla (Opus/Sonnet, ei Fable).
+4. KK PÄÄTTÄÄ KAIKEN (omistaja 11.11. 22.56) hänen aiempia sanojaan vasten: kuvat, mallit, tekstit, junan sisältö, iPad-erät, nollaus,
+   äänitykset (Äänittäjälle omistajan sanat 11.11. 08.51 viestiin). Omistajalla pysyvät: ostot, TestFlight, avaimet, luvat, CLAUDE.md.
+5. ENNEN PÄÄTÖSTÄ: aiempi päätös (node tools/loki-hae.mjs, arkisto/, muisti) ja Raamatun kohta. Ajattele toteutus itse läpi; roolin poikkeus on
+   syöte, ei päätös. Roolin luvut tarkistetaan itse (skripti, diff, loki). Hakulupaa ei anneta ennen robots-tarkistusta.
+6. NÄKYVÄ TYÖ: tavoitekuva ennen työtä, karkea kuva KK:lle, junasana vasta omasta katseesta täysikokoisesta rajauksesta. Kuvat itselle ≤ 1000 px
+   (sips -Z 1000 session scratchpadiin); Mac-esikatselussa pikselimittaiset merkit ovat neljännes laitteen koosta.
+7. VIESTIT: roolilta yksi koottu viesti; KK → PT vain toimintaa vaativa (lyhyt + polku). Päätökset ja junasanat päiväkirjaan
+   arkisto/jarjestys-historia-<pvm>.md (ei lueta aloituksessa); jarjestys.md = vain voimassa oleva suunnitelma (≤ 6 kt).
+8. MUISTI: get_usage muutaman vuoron välein; 30 % tai luonteva tauko → nollaa itse ilman korttia (jonossa oleva viesti peruu nollauksen: ei
+   aloitusviestiä Postivahdilta, clear_session viimeisenä): tämä tiedosto ajan tasalle (≤ 10 kt, vanha
+   tila pois) → python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Keskustelukanava → set_remote_control self false →
+   clear_session self → VIIMEISENÄ viesti Postivahdille: aloitusviesti 45 s:n viiveellä (heti lähetetty peruu nollauksen; ev).
+9. Asemataulu jäädytetty (omistaja 9.11.), KK:lla ei cronia. Komennot absoluuttisilla poluilla; zsh: "${R}:Assets/…". Natiivikoodi:
+   git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto show <sha>:<polku>; koodinluvun työkalut tyokalut/LUE-koodinluku.md. Omistajan kuvat
+   docs/raportit/kaappaukset/omistaja-<pvm>/. Mac-ajojen ääni: ulostulo seisoo, lokirivi "Pulun puhe … soi N s" todistaa; laitetta ei vaihdeta.
+10. OPETUKSET: hiljaisuus ei tarkoita, että työ etenee; hiljainen loki ei todista mitään ilman myönteistä riviä; tarkista aiempi päätös ennen
+   kuin kutsut näkyvää asiaa viaksi (ei vikoja: kuplaton kaupunkikommentti, maakyltti = pelaajan maa, esittelyn iso tähti); peli on 13+ ja
+   aikuisille; ennen junasanaa tarkista, kohtaavatko kaksi uutta ominaisuutta junassa ensi kertaa; tarkista oma aiempi oletuksesi ennen uutta päätöstä;
+   junasanassa katso git merge-base junan kanssa (koko tuleva sisältö), ei vain haaran viimeistä diffiä.
+   Leivotun valon kuva: atlaksen rasteri ennen suuntapäätöstä; oma poikkeamahavainto on syy pysähtyä, ei ehto.
+   Junasanaan kuva OIKEALLA sisällöllä, ei testikomennolla asetetulla: lue ajon skriptin kaikki komennot.
+   Älä listaa kansiota julkaisija-tyokalut/linkki-224-uutta: lue vain 224.<n>.txt.
+   Nollautuvalle roolille ei viestiä: päätökset tehtävänantoon.
+   Omistajan pari: "ennen" = pelin nykytila (git merge-base --is-ancestor junaan), "Uusi" = junan kärki + muutos (rev-list --count
+   haara..juna = 0 ennen ajoa); ei kokeen välivaihetta.
+   "Vahtikorjaus" voi sisältää käytösmuutoksia: lue diffi kommentit poistettuna ennen junasanaa.
 
-## !!! TILINVAIHTO (9.11. 09.4x: vvi@vvi.fi viikko 98 % → OMISTAJA 09.41 (kortti, PT suositti päätiliä): "vaihdetaan sami.reivinen@vvi.fi tilille"; siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20261109.md, PT korjaa tilin)
-Uusi KK (sami.reivinen@vvi.fi, org ddaee6a2, id local_d5f31591-21fa-4cb0-bab3-bcd3435d075a) tekee tämän ensin:
-a) get_session self; RC self true; tämän tilin taulu (scratchpad/asemataulu/osoitteet.md; viimeksi R6VQFTUNq629zSzah719Uy) open + show_pane, kun se on julkaistu.
-b) KORTTI: "Mihin asti tätä tiliä saa käyttää?" (raja kysytään tilinvaihdossa, 12.21) → vastaus PT:lle.
-c) PT:n rivi "Tilinvaihto valmis" → yksi rivi omistajalle.
-d) Jatka ENSIN-kohdasta. Uusin: nostojen 3D-suunnitelma valmis (suunnitelmat/20261109-nostojen-3d-kohteet.md), odottaa PT:n jakoa; levy: KS vapautti 11,4 Gt ja poisti ennen omistajan NAS-päätöstä 09.36 (kerrottu omistajalle 09.4x); jäljellä 37 Gt aktiivista polton lähdettä.
+## !!! ENSIN (tila 13.11. klo 02.05; linkissä 224.127; OMISTAJALLE KERROTTU 224.127 ASTI; päiväkirja jarjestys-historia-20261112.md mi–mw)
+TILINVAIHTO TEHTY 13.11. 02.0x: PÄÄTILI (org f04011ee; KK local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe, PT
+ local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc; muut id:t list_sessions / osoitekirja, kun PT on päivittänyt). Viikko 24 % klo 02.03
+ (raja 92 %, nollautuu 16.11. 09.00). PT:n rivi "Tilinvaihto valmis" odotetaan. Vanha tili sami.reivinen@vvi.fi 99 %, nollautuu 16.11. 03.00.
+00) NÄYTTÄMÖ = ykkösasia (omistaja 12.11. 21.23–23.33; tavoite
+ suunnitelmat/20261112-vuosilaput-tavoitekuva.md, osio KAKSI OSAA). Koodi junassa 53625fb9a (545883e30, lippu oletuksena päällä).
+ AJO JUNAN KÄRJELTÄ KATSOTTU + JUNASANA PT:lle 02.05 (mw): 224.128 linkkiin. ODOTTAA: JU:n numero → tarkista numerotiedosto →
+ KERRO OMISTAJALLE (Pariisin aarretehtävä näyttämöllä: ensin nimet, sitten vuodet; + museomerkki, kohta B). Laiteluvut (haptiikka,
+ avauksen ruutuaika, muisti) Pariisin iPad-erässä.
+ NÄYTTÄMÖSEPPÄÄ EI OLE tällä tilillä eikä käynnistetä ennen omistajan kantaa (ei työtä). Kun tarvitaan: uusi Fable-sessio omistajan
+ napautuksella (start_session-ehdotus), aloitusviesti suunnitelmat/nayttamoseppa-aloitusviesti.md, MUTTA päivitä siihen KK:n ja PT:n id:t,
+ ensimmäinen työ ja viikkoraja; työpuu /Users/Shared/Claude/wt/proto-kk-nayttamo, haara kk/nayttamo. Raja 35 % → luovutus → KK nollaa.
+ ODOTTAA OMISTAJAA: kanta kolmeen tekoon (Yhdistä/Erottele/Paljasta; patsaat vaativat generointiluvan).
+0) MUUT AVOIMET (KK:n katse 1:1 → juna → versio omistajalle)
+ B) MUSEOMERKKI (NUI): f9fe1ab20 junassa 53625fb9a. ODOTTAA 224.128 linkkiin → KERRO OMISTAJALLE (Louvren museoon taulunkehyksestä,
+    rakennuksen napautus avaa esittelyn, pyramidinappi poistui).
+ A) HAAMUT (omistaja 20.59): B HYVÄKSYTTY KUVISTA 23.25 (lg; 524665902). ODOTTAA VS:ltä yksi iPad-ajo junan kärjen päältä (ehdot lg) → KK 1:1 → junasana → KERRO
+    OMISTAJALLE (Tuileries hehkuvana rautalankana; muut kahdeksan, jos hän pitää).
+ G) MONTMARTRE (mg, mk, mr; PÄÄTÖS suunnitelmat/montmartre-kk-paatos-20261113.md): pari A ja D-rajaukset HYVÄKSYTTY KATSEESTA 01.32
+    (koodijuna/kj43-pari/kj43-pari2-*), D:n silmän lasku 19,9 m kelpaa. ODOTTAA KS:ltä uusi B (kiertopiste 48.8860 2.3431, 620 m / 55°,
+    Nyt + Uusi, kattojen perään) → KK 1:1 → pari omistajalle B + A (talot maassa, mäki matalampi) → kortti → juna.
+ K) KATOT (omistaja 22.23; suunnitelmat/20261112-pariisin-katot.md; mj, mm, mu): koko3 HYVÄKSYTTY KATSEESTA, PARI NÄYTETTY OMISTAJALLE 01.38
+    (omistajalle-20261113/pariisin-katot-nyt-uusi.jpg). Junapaketti vasta omistajan Montmartre-vastauksen jälkeen (samat palat: 18
+    Montmartren palaa koko3-katoilla uuden maan päälle + 201 koko3:sta; KS ei kokoa ennen KK:n sanaa) → iPad-erä.
+ E) LONTOON SAAPUMINEN (NS): rakenne C, askel 2 työn alla. ODOTTAA pari 8: m5/m6 1:1 7B | 8, pelissä
+    otettu 1:1 rajalta ja Luxemburgista, ehdot kv ja la.
+ F) JUOKSUPELIN VARJOT (mi–mv): g1 (PK 5d22fa4b5) hyväksytty ja valmiina, MUTTA g1 + leivotut talot avoimet-v59k PYSÄKÖITY 01.35:
+    pelin oletusvarjoilla talojen varjo katoaa kujalta (leivotut eivät heitä elävää, lattian atlaksessa ei talojen varjoa). Junaan vasta
+    samassa erässä kuin LAV v134 (lisäehto annettu) + NS "elävä vain pelaajalla". Ei odota ketään nyt.
+ V) VIHJEKORTTI (PK): 81f2c1ff8 kulkee näyttämön kärjen 7eb12f088 mukana (pt-ok). OIKEALLA DATALLA KORTTI EI AUKEA (lt): ODOTTAA
+    PR 6672 (vienti) → JU:n sisältöversio → PK:n kuva oikealla sisällöllä → KK 1:1 → KERRO OMISTAJALLE (vihje ennen aarretehtävää,
+    lähteminen ei kuluta yritystä). Natiivin varalukua EI tehdä.
+ C) ÄÄNET: v17 (PR 6665) ja v18 JU:lla; JU kuittaa sisältöversion → KERRO OMISTAJALLE (kertojan uudet äänet).
+ D) ISOISÄN VALOKUVA: Codex 3b129bfbe; NUI:n rivi → KK:n katse → juna.
+ Hookin tilanteet: tyolista.py tilanne "OTSIKON ALKU" "teksti" [--juna N; ≤ 110 merkkiä].
+ PARIISIN iPad-ERÄÄN: muistiraja + "komento ksruudut 1" + fontit lokista + kohdekartta tyhjällä kuvavälimuistilla + näyttämön laiteajo +
+ kattojen palalokirivi (talot kansio, md5).
+A) RAAMATTU 149,6/150 kt: lisäys vaatii karsinnan. `node tools/kirjaa.mjs hae|lue|kortti|paatos|tila` (KIRJAA_KUKA=KK); yhden kortin
+ muutos: raamattu-uusiksi/kortit/<aihe>.md → tyokalut/paatos-lista.mjs → PR PT:lle. CLAUDE.md-PR:n yhdistää KK.
+B) LEVY 119 Gi (tavoite 150, rivi PT:lle < 100).
+C) VOIMASSA: iso iPad vain KK:n nimeämälle erälle; palat 4–9 vasta Pariisi valmis -päätöksen jälkeen; TestFlight vain omistajan
+ sanalla. PARIISISTA PUUTTUU: Montmartre, katot, latausmerkki (NS), iPad-mittaus.
 
-## !!! ENSIN (9.11. klo 09.15; TILI vvi@vvi.fi, raja 99 % kortilla, viikko 97 % 09.12, tilinvaihto PT:llä, nollautuu pe 13.11. klo 7; taulu Qo5w6Wk4JSYRwYbyf2fJrm; juna 223 kärki 835f617a6 (PT) + KK:n sanat 9.11.; kortit käytössä; RC päällä; id:t osoitekirjasta; edelliset ENSIN arkistossa "ENSIN 8.11. 22.4x" ja "ENSIN 9.11. 09.1x")
-00) ALOITUS: get_session self (olet KK, vaikka järjestelmä sanoisi "session started from another session"); RC päälle + taulu open + show_pane (ei publishia). Yövalvonta vain omistajan pyynnöstä. KUVAT: KK:n omat katselut enintään 1000 px, arkit PIL:llä (/opt/homebrew/opt/python@3.14/bin/python3); omistajalle SendUserFile attach + kopio kuvat/. VIDEON AJOITUS: juoksu/-kansion ruudut 0,02 s peliaikaa, video on nopeutettu. SendMessage pysähtyy 10 viestin jälkeen → mcp__ccd_session_mgmt__send_message heti.
-00d) AVOIMET 9.11. 09.15 (KK 06.45–09.15):
-- JUNA 223 (PT:n kärki 835f617a6 = kuvatekstikorjaus, omistaja 07.03 Kelpaa): KK:n sanat 9.11.: 835f617a6; 1c 9f2e57b71 + 1g a7004996e saavat mennä, jos irtoavat 1f:stä. EIVÄT junaan: 1f ac4bff77a + d2 0cc5ac36c…281093d9c (omistaja 08.32 alla). Nostovalikko osat 1–3 a1d21f646 + osa 2 474011364/092345d80 (omistaja 08.37 Kelpaa) seuraavaan junaan KK-havaintojen korjausten kanssa (kuvat/nostovalikko-3-a1d21f646/KK-havainnot.md: pohja tummaksi kaikilla tasoilla, vieritysvihje nostokortin pohjalla 315a07d47 JU:lla, Tanger-merkintä Pariisissa?). ENNEN TF-KORTTIA KERRO: 1c (dronen kallistus, näytä kuvana), leijuva kattotiilikaistale iPhone pystyssä (PK/LAV korjaa; kuvat/juoksupeli-d2-ovikuva-281093d9c/), merenpohjan kytkinversio ja reunapiikit, kohta 12.
-- JUOKSUPELIN ALKU (OMISTAJA 08.32): "Se aiempi versio, missä keisari lähti juoksemaan kohti kameraa, eli kääntyi vasemmalle sen jälkeen, kun tuli ulos ovesta, oli minun mielestä jouhevampi suunta, koska silloin kamera näkee vielä eunukin ja keisari juoksee kohti kameraa ja kamera voi sen jälkeen kääntyä keisarin perään, jonka jälkeen tulee numerot 3, 2, 1 ja ohjaus siirtyy sitten pelaajalle." Korvaa 8.11. 22.4x "Heti ovelta". PK: TF 223:n suunta ja järjestys; d2:n kurkistus (omistaja 08.30 Kelpaa: ovi ja kasvot ≥ 1,2 s, kenttä tasainen 74) ja 1g säilyvät → Mac-kuvat → KATSO → NÄYTÄ + kortti. TOIMITETTU 09.5x (PK, 84521ba9b, kolme kokoa; PK: keisari ovesta vasemmalle kohti kameraa, eunukki kurkistaa, kamera kiertää perään, 3-2-1): videot /Users/Shared/Claude/proto-3d/lokit/pk-suunta-{iphone,iphone-vaaka,ipad}-84521ba9b/juoksu.mp4 (omistajalle EI videoita); kuvat c-ovi.png … e2-kuja.png samoista kansioista, arkit /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/juoksu-223/arkit-84521ba9b/. KERRO VIKA (ei leikattu): leijuva oranssi kattokaistale taivaalla oikealla, iPhone pysty 0.25–0.31 ja kuvat c-ovi, d1; PK:n tunnistus ajossa. Videon alun < 1 s leikkaus on tallenteen, ei pelin. KK EI VIELÄ KATSONUT (vanha tili 99 % klo 09.5x) → uusi KK katsoo ja näyttää.
-- PAIKKAPALKKI (OMISTAJA 08.41 + kortit 08.4x "Itsestään sulkiessa", "Kyllä, aina"): suunnitelmat/20261109-paikkapalkki-ja-noston-lento.md (palkki aina, nimi zoomin mukaan, toisen kaupungin nosto lentää myös kartalta, paluu sulkiessa ellei pelaaja liikuttanut karttaa, ei Palaa-nappia; osa 4 lentokartta 3925d008d mukaan, tyhjä oranssi kartta lennon aikana korjattava) → NUI koe junan 223 päälle → Mac-kuvat → KATSO → NÄYTÄ + kortti.
-- NOSTOJEN 3D (KS:n selvitys NÄYTETTY 09.2x; omistaja laajensi koko Eurooppaan; kortti 09.34 suunnitelma "Kyllä"): LUE suunnitelmat/20261109-nostojen-3d-kohteet.md. Pariisin 10 talon kortti ilman Kyllä/Ei = ei päätetty erikseen. Mini rakennukset -riski kerrottu 09.4x. ODOTTAA: PT jakaa osat 1–3 tilinvaihdon jälkeen → hahmoluonnokset + Pariisin talot KATSO → NÄYTÄ + kortti. LUVATTU: Braillen noston siirto kortilla, kun talo valmis; levy: KS siirtää kohokartan raakadatasta (48 Gt) käyttämättömät NAS:lle (OMISTAJA 09.36: "tärkeitä ei tarvitse poistaa vaan siirtää esim. nassille, jos niitä ei aktiivisesti tarvita") → kerro omistajalle montako Gt vapautui.
-- FPV-DRONE (OMISTAJA 09.15: "codexin drone kuvat olivat surkeita. pyysin sen tekemään uuden."): 8.11. toimitus hylätty, omistaja tilasi Codexilta suoraan uuden → KK katsoo koon puihin verrattuna → NÄYTÄ. NS osa 4 odottaa mallia (suunnitelmat/20261108-fpv-drone-topo.md).
-- LENTORAJA-KOE fd8193758 (parit _tyo/natiiviseppa/ajoennakko/kuittaus/pari-s12_9-pois-paalla.jpg ja pari-s13_1-lovi-pois-paalla.jpg): NÄYTÄ + kortti; junaan vain kortilla. Ei vielä näytetty.
-- ODOTAN PAREJA → KATSO → NÄYTÄ: kohokartta topolinssin oletukseksi (10.36) ja topoesittelyt (10.39), korkeuskoe 2 | 4 (11.19), karkea kartta + lennon lukitus (B), selvempi vesi (H), Petit Palais'n nimi, SK:n Alppien ja Himalajan tekstit → Williamin video.
-- LEVY 09.12: 44 Gi vapaana (raja 30, roolit siivosivat); alle 30 → PT heti.
-- PÄÄTETTY 8.–9.11. (älä kysy uudelleen): iPad-sääntö Raamattu 12.26 (19.08); välimuistin päiväsiivous 12.19 (17.4x); navat beige (14.51), kehä (14.01), nimet (16.0x), napautus (16.12), TF 223 (17.20), kuvan alle (18.36), pieni kuva (21.15), jättiläisdrone (21.54), kierto 135° ja Louvre-valinta (22.03), keisari odottaa seinällä pyyhkäisyä (22.38), iPad ~70 % (22.07), kameratappi (23.20), matkakirja = kortti M:ksi (9.11. 01.47), 1g + 1a/1b + pallo Tuileries (06.43), kuvateksti vain itse avattuun kuvaan (06.43) ja kuvateksti-4 Kelpaa (07.03), pilleri 🔍:n vasemmalle ja yhdistyy kiinnitettyyn nostoon (07.21) + palkki Kelpaa (08.37), eunukin kurkistus Kelpaa (08.30), keisari ovesta vasemmalle kohti kameraa + 3-2-1 (08.32, korvaa 22.41 "lähtö heti ovelta"), paikkapalkki: paluu itsestään + lento myös kartalta (08.4x), nostojen 3D-selvitys (09.10), drone uudelleen Codexilla (09.15).
-00b) MUISTI: kevennys vaihe 1 + ASTC junassa 221 (iPad Pariisi huippu 3312 Mt); kattokuvio muistityön jälkeen, parit KK:lle.
-00a) LEVY: alle 30 Gi → PT; mittaa /Users/Shared myös Clauden ulkopuolelta (iPad-välimuistin yösiivous klo 4).
-0) VANHEMMAT: kortit-auki-20261107.md; arkisto/aloitus-historia-20261107.md.
-b) KOEVERSIOT sisäisiä, eivät korvaa korttia Pariisi valmis; kivet junassa, pois vain kortilla.
-c) PALLON OSAT KARTALLE (suunnitelmat/20261107-pallon-elama-kartalle.md; päätökset kortit-auki): koe, ei junaan ilman korttia; kuvat KK:lle, kortti osa kerrallaan.
-d) TALOT (LUE suunnitelmat/20261107-talojen-katot-ja-vaihtelu.md; päätökset siellä ja kortit-auki): koe 2 → parit PT:n kautta: KATSO, NÄYTÄ; ei junaan ilman korttia.
-g) PARIISI VALMIS "Odottaa" (11.03): yhden tarkkuuden koe on nyt ohi, joten kortti tulee, kun PT antaa junan tuloksen; vie TF:ään. LUE kortit-auki c, c2, c3, c4, c5 ENNEN korttia: niissä KK:n virhe Sacré-Cœurista, ND:n sävy, nimien kuvat, vilahdukset.
-h) iPHONE-TALOT (702f8b48d): 8.11. 08.3x "En ole katsonut" → kysy uudelleen versiosta 222. Jos talot eivät tule kauemmas, seuraava keino on kevennys, ei rajan nosto.
-j) HUUDOT JA KUPLAT: ODOTAN NUMEROITTAISTA KOMMENTTIA TEKSTINÄ. Sokkokuuntelu, ei kerrota. LUE kortit-auki.
-l) MUUT: LUPAUKSET JA AIEMMAT PÄÄTÖKSET (Eiffelin reuna, Madeleine, ND ja Louvre litteinä, VS:n nakutus, KS:n katsepiste, PK:n omena, nimet, lähiympäristö): kortit-auki. yo, "Kysymykset aamuun"; suunnitelmat/20261106-pariisi-valmis-lista.md.
-6) TF: vain omistajan sanalla; ennen TF-korttia kerro kohdan 12 asiat; ei videoita omistajalle (09.28).
-10) KUVAT HETI (13.24): "laita heti kuvia kun pariisi edistyy"; 20.09 myös 45°:sta. RAKENTAMINEN ENSIN (2.209). MAC-AJOT (17.57): lyhyt, yksi kysymys per ajo.
-11) VALVONTA: ROOLI "ODOTTAA NOLLAUSTA" = LUKKO: Postivahti ei voi nollata muita, joten sano roolille suoraan "nollaa itsesi nyt, clear_session self" (7.37; toimi 00.58). Viestimäärä ei kerro nollauksesta, katso get_usage <id>. LEPÄÄVÄ ROOLI: ehdota PT:lle Pariisi-listan kohtaa (01.48 toimi).
-12) JUOKSUPELI (LUE juoksupelin-ohjat.md, suunnitelmat/20261104-*): KERROTTAVA ennen TF:ää: kameran oviaukko, viivat, muurin porras, rungon muutos, lataus +6 s, junan 218 vanha peli poikkeaa 11.42:sta, verkon palautus, eunukin sivuvika, ovilehdet. SEINISTÄ EI LUPAUSTA. LATTIA (LAV): tumma saha jäljellä, kerrottu 19.4x; ovet ja kulkukartan seinät odottavat; vienti odottaa. Violetti laikku: yo.
-13) PARIISI (LUE uuden-kartan-ohjat.md; suunnitelmat/20261105-nahtavyydet-sarjana.md): 16.41 "jää ennalleen ja edelleen keskitytään vain pariisin 3d rakennuksiin"; 22.04 "Tee muita rakennuksia sillä ohjelmalla Pariisiin", 22.09 "Myös tavalliset talot". 19.57 "Tämän voi purkaa": saumat ja laikut; metsä ennallaan. Eivät ratkenneet: yo.
-14) AUKI OMISTAJALLA: TF 218 kytkinversio "1 Mäet" ja "2 Rauhallinen" (suositus pois); maakuntarajat-kortti odottaa Pariisia; iPadin kokeen talot 351 Mt: poisto vain hänen sanallaan; Pariisin talojen lähde Geofabrik: yo.
-15) VIRHEET: KORTIN SANAT SELVIKSI: sano kortissa, mikä asia on (talojen seinät, Notre-Dame), ja ehdota vain todellista vikaa ratkaisevaa. TARKISTA ENSIN, ONKO OMINAISUUS JO PELISSÄ, ENNEN KUIN TILAAT TYÖTÄ. AIKA date-komennosta ENNEN viestiä, ei rinnakkain. OHJAUKSEN TAI PELIN KUVAUS VASTA KOODISTA TARKISTETTUNA; rooliluku merkitään tekijän luvuksi. KORTIN KUVAUS EI LAAJENNA PÄÄTÖSTÄ. KK:N SANA ROOLILLE EI KUMOA OMISTAJAN PÄÄTÖSTÄ; SANAAN KELLONAIKA date-komennosta ja mitä korvaa. ROOLIN LUKUA, SYYTÄ TAI "EI KOSKE PELAAJAA" -VÄITETTÄ EI TOISTETA VARMANA ENNEN TARKISTUSTA. ROOLIN "VIKA" TARKISTETAAN LOKISTA ENNEN KK:N PÄÄTÖSTÄ. Mac ei todista iPadia. TULKINTA OMISTAJAN SANOISTA KERROTAAN HETI, JA SE ON KAPEA. Aika-arvio vain, kun hän kysyy. CODEXILLE AINA POSTI: zsh scratchpad/keskustelukanava/tyokalut/posti-laheta.zsh <viesti.md> posti/keskustelukanava-codex-<aihe>-<pvm>.md "<otsikko>". KUVAN ARVIOSSA KOHDE OSINA. TOIMITUS KATSOTAAN SOVITETTUNA PELIN NÄKYMÄÄN MALLIN RINNALLA. TASAISET ALUEET (MERI) TARKISTETAAN SAUMOJEN JA KEHIEN VARALTA ENNEN NÄYTTÖÄ (8.11. navat), MYÖS PALLON REUNA SUURENNETTUNA (16.2x merenpohjan sininen kaista jäi KK:lta). SUUNTAKUVAT (lippu, varjot) KOKO RUUDULLA JA KESKIKOHTA MERKITTYNÄ, EI PELKKIÄ RAJAUKSIA (8.11. lippu). 16) KYLTIT: pallo, Olavinlinna, raketti: EI kipsipäitä. EI VIKA: ND:n tornit, neljä katukuvaa.
-
-## JUOKSUPELIN OHJAT KK:LLA (omistaja 26.10. klo 21.11; tavoite, piirrokset ensin ja mittari: scratchpad/keskustelukanava/juoksupelin-ohjat.md, LUE ennen juoksupelin työtä)
-
-## UUDEN KARTAN SUUNNITTELU KK:LLA (omistaja 3.11. klo 19.3x)
-- LUE ENNEN KARTAN TYÖTÄ: scratchpad/keskustelukanava/uuden-kartan-ohjat.md (laajuus, mittarit 2029 ja G, säännöt, hyväksytyt nähtävyydet). Avoimet: proto-3d/lokit/kk-peli-a94d8e7fb-20261103/KORJAUSLISTA.md.
-
-## TEHTY (seuraava KK aloittaa tästä)
-- 9.11. 09.22 – 09.4x (tilinvaihto): KS:n nostoselvitys näytetty; Euroopan nostojen 3D-suunnitelma (kortti 09.34 Kyllä); levyn siivous (vm_bundles: ei tärkeä, saa poistaa; OMISTAJA 09.36 tärkeät NAS:lle); tallenne Keskustelukanava-2026-11-09-klo-0922-*.md.
-- 9.11. 06.45 – 09.15 (nollaus omistajan kortilla 09.15): arkisto/aloitus-historia-20261109.md (osio "ENSIN 9.11. 09.1x"); tallenne Keskustelukanava-2026-11-09-*.md.
-- 8.11. 22.48 – 9.11. 06.4x (nollaus omistajan kortilla 06.4x): arkisto/aloitus-historia-20261109.md; tallenne Keskustelukanava-2026-11-08/09-*.md.
-- 8.11. 02.1x – 22.4x: arkisto/aloitus-historia-20261108.md (osio "KK 8.11. 21.18–22.4x" ym.); tallenteet Keskustelukanava-2026-11-08-*.md.
-
-## Aiemmat keskustelut
-/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-1*.md. Lue vain tarvittaessa (haku: grep -n hakusana | cut -c1-300).
+## Ohjat (lue vasta, kun teet sitä työtä)
+- Juoksupeli: scratchpad/keskustelukanava/juoksupelin-ohjat.md · Kartta: uuden-kartan-ohjat.md · Aiemmat keskustelut:
+  /Users/Shared/Claude/keskustelut/Keskustelukanava-2026-1*.md (grep) · Historia: arkisto/aloitus-historia-2026111*.md.
