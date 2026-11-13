@@ -132,3 +132,12 @@ Vuodet vs 1873: kaikki pre-1873.
 - Neljän joen obeliskin ajoitus (Domitianus / Maxentius / Caracalla).
 - Hellmerin kuolinvuosi 1935 [V: en.wikipedia]; Alfred Gilbertin kuolinvuosi (1934) tarkistamatta.
 - Tritoni-suihkulähteen vuosi, Gesù- ja Pietarinaukion tekijät/vuodet.
+
+
+---------------------------------------------------------------------
+
+## TARKENNUS 13.11.2026 (SK; KK 13.41 osa 2): Marcus Aureliuksen varmistettu kuva
+- **Varmistettu kuva (ALKUPERÄINEN):** File:Equestrian statue of Marcus Aurelius (Rome).jpg, Merulana, CC BY-SA 4.0, otettu 4.12.2022, 4872×8844; Restrictions tyhjä. **Katsottu silmin (13.11.2026):** patsas seisoo sisätiloissa lasiseinäisessä museosalissa (Musei Capitolini, Marcus Aurelius -eksedra), pronssissa näkyy kullauksen jäänteitä → alkuperäinen, ei piazzan kopio. Commons-kuvaus on vain nimi; tunnistus kuvasta ja salista.
+- **Faktat (kaksi itsenäistä):** Musei Capitolini (`museicapitolini.org/en/node/2727`, luettu): pronssi, inv. MC3247, pystytetty todennäköisesti 176 jKr tai 180 jKr (kaksi vuotta, ei valintaa), Paavali III:n käskystä siirretty 1538 Kapitolille. it-Wikipedia (`it.wikipedia.org/wiki/Statua_equestre_di_Marco_Aurelio`, haettu): 176 tai 180, kullattu pronssi, 1538 siirto Lateraanilta Kapitolille; museossa vuodesta 1990, 1997 piazzan jalustalle asetettu kopio ilman kullausta.
+- **1873-sovitus:** vuonna 1873 alkuperäinen seisoi ulkona Piazza del Campidoglion jalustalla (Michelangelon suunnittelema jalusta; siirto sinne 1538, museoon vasta 1990-luvun alussa). Kuva on siis sisätilassa otettu nykykuva samasta patsaasta; tehtävässä ei saa väittää, että patsas "seisoo" kuvan salissa 1873. Jos halutaan kuva piazzalta, se on kopio (1997) ja se pitää nimetä kopioksi; Commonsin kopiokuvia ei tässä tarkistettu.
+- Muu huomio: kaksi vuotta (176/180) → tehtävässä sanotaan "noin 176–180 jKr".

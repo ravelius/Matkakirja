@@ -118,7 +118,7 @@ Miksi sopii: kaupungin kertomus on nimenomaan Ringstrasse (1873 maailmannäyttel
 | Votiivikirkko | kiitoskirkko keisarin pelastumisesta (attentaatti 1853) | 1856–1879, vihitty 24.4.1879 (hopeahääpäivä) | Heinrich von Ferstel | https://www.wikipedia.org/wiki/Votivkirche ; https://austria-forum.org/af/AEIOU/Votivkirche | peruskivi 22. vs. 24.4.1856; attentaatin vuosi 1853 ei esiinny hakutuloksissa (TUNT.) |
 | Yliopiston päärakennus | yliopisto | 1873/1877–1884, avattu 11.10.1884 | H. von Ferstel (k. 1883), jatkoi Max Ferstel & Köchlin | https://geschichte.univie.ac.at/en/node/30371 ; https://en.wikipedia.org/wiki/Main_building_(University_of_Vienna) | alku 1873 vs. 1877; avajaiset 11. (yliopisto) vs. 10.10. (Wikipedia) |
 | Musikverein | konserttisali (Wienin filharmonikot) | avattu 6.1.1870 | Theophil Hansen | https://www.austria.info/de-at/locations/musikverein/ ; https://en.wikipedia.org/wiki/Musikverein | rakennuksen alkuvuosi 1867 jäi varmistamatta (TUNT.); ei ole Ringillä vaan Karlsplatzilla |
-| Naturhistorisches Museum | luonnonhistoria | TUNT. (ei tarkistettu; yleisesti 1871–1889) | Semper & Hasenauer | – | tarkistettava |
+| Naturhistorisches Museum | luonnonhistoria | **avattu 10.8.1889** [V, kolme lähdettä sopivat]; rakennus alkoi 1871 [V, kaksi]; valmistunut: NHM 'built between 1871 and 1889', Austria-Forum 'Gebäude 1871 bis 1881' (kuori) → käytä vain avausvuotta 1889 | Semper & Hasenauer [Austria-Forum] | https://www.nhm-wien.ac.at/en/museum/history (luettu 13.11.2026: 'opened in 1889', 'between 1871 and 1889'); https://www.geschichtewiki.wien.gv.at/Naturhistorisches_Museum (luettu: 'am 10. August 1889 eröffnet'); https://austria-forum.org/af/AEIOU/Naturhistorisches_Museum (luettu: 10.8.1889, 'Gebäude 1871 bis 1881') | rakennuksen valmistumisvuosi 1881 (kuori) vs 1889 (avaus) → vain avaus. Tarkistettu SK 13.11.2026 (KK 13.41 osa 2) |
 
 Ringstrasse itse: keisarin käsky 20.12.1857 (Austria-Forum; vienna.at antaa 25.12.1857 = ERO) ja avajaiset 1.5.1865 (kaksi lähdettä sopivat; https://austria-forum.org/af/AEIOU/Ringstra%C3%9Fe ; https://sammlung.wienmuseum.at/en/object/41672-die-eroeffnung-der-ringstrasse-am-1-mai-1865/ ). Franz-Josefs-Kai avattiin jo 1.5.1858.
 
@@ -156,3 +156,11 @@ Vaikeampi versio: 1873-tapahtumat (Rotunde). Riski: kahden Ringtheater-paikan se
 1. Ehdokas 1 (sävelmä–säveltäjä) on pelin kannalta vahvin ja ainoa, joka tuo uutta (ääni); 8 paria saadaan, kun A + A- + 3 B-luokkaa; tärkein uusi työ on 5 äänitteen nimeämisten lisääminen aanilahteet.json:iin ja 2012 Musopen -sarjan lähdetietojen yhdistäminen Eroican nykyiseen riviin.
 2. Ehdokas 2 (Ringstrasse) toimii kuvallisena toisena erätyyppinä; 8 paria, 9 vapaata kuvaa; käytä vain täsmääviä vuosia.
 3. Ehdokas 3 jätetään varalle (3 paria vahvoja).
+
+
+---------------------------------------------------------------------
+
+## TARKENNUS 13.11.2026 (SK; KK 13.41 osa 2): Ringstrassen NHM-vuodet
+- **Naturhistorisches Museum: avattu 10.8.1889** (kolme itsenäistä: NHM Wien itse, Wien Geschichte Wiki, Austria-Forum AEIOU; kaikki lukien sivut). Rakennustyö alkoi 1871 (NHM, Austria-Forum). Valmistumiseksi lähteet antavat 1881 (kuori; Austria-Forum) ja 1889 (NHM:n oma muotoilu "between 1871 and 1889") → pelissä vain avausvuosi 1889; samalla kaavalla kuin KHM 1891.
+- Ringstrasse-erän avausvuodet nyt: Staatsoper 1869, Musikverein 1870, Votivkirche 1879, Rathaus 1883, Parlamentti 1883, Universität 1884, Burgtheater 1888, **NHM 1889**, KHM 1891 (yhdeksän; 1873 mennessä vain kaksi ensimmäistä valmiina). Dataa ei viety (KK: odottaa Erottelen kytkentää).
+- Kuva (varmistettu aiemmin): File:Wien - Naturhistorisches Museum (4).JPG, CC BY-SA 4.0, C.Stadler/Bwag.
