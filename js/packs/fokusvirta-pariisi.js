@@ -1146,20 +1146,19 @@ export const FOKUSVIRTA_PARIISI = {
         'Miksi puolet sisäänkäynneistä purettiin?',
       ],
       /*
-       * MINITEHTÄVÄ (SK:n v2, KK 13.15): vastaus noston tekstissä ("työ annettiin Hector
-       * Guimardille, joka ei ollut edes osallistunut kilpailuun"). Oikea ei ole pisin.
+       * MINITEHTÄVÄ (SK:n v2, KK 13.15; kysymys vaihdettu KK 14.15): vastaus on vain noston tekstissä ("Sitten
+       * tyyli meni pois muodista ja puolet purettiin"). Ei kysytä työn saamista eikä vakio-osia: lehden sivun 3
+       * JULISTE-tehtävä (GUIMARD_VISA) kysyy ensimmäistä ja sen fakta paljastaa toisen.
        */
       visa: {
-        kysymys: 'Metron sisäänkäyntien arkkitehtikilpailun 21 ehdotuksesta yksikään ei kelvannut. '
-          + 'Miten Hector Guimard sai työn?',
+        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin 167, mutta puolet niistä purettiin. Miksi?',
         vaihtoehdot: [
-          'Hän voitti heti perään järjestetyn uuden kilpailun ja sai työn',
-          'Kaupunki osti hänen hylätyn ehdotuksensa jälkikäteen',
-          'Työ annettiin hänelle, vaikka hän ei osallistunut kilpailuun',
+          'Valurauta ruostui käyttökelvottomaksi',
+          'Ne vaurioituivat sodissa',
+          'Tyyli meni pois muodista',
         ],
         oikea: 2,
-        fakta: 'Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
-          + 'samoista paloista sai kasattua sisäänkäynnin mihin tahansa kadunkulmaan.',
+        fakta: 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
       },
       paikka: {
         nimi: 'Metro 1900',
