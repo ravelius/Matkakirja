@@ -30,3 +30,30 @@ Tausta: KK 13.11. 07.42 kohta 6 (lähdekysymys Lontoon erään; robots-tarkistus
 
 **Tulos:** 1677 ei löydy kummastakaan. Luku on **1676**; CAMRA ja Wikipedia eivät ole itsenäisiä (Wikipedia lainaa CAMRA:a), joten tarvitaan toinen itsenäinen lähde: ehdotus National Trustin oma sivu (nationaltrust.org.uk, The George Inn; robots-tarkistus ensin) tai Historic Englandin listaus, jos KK antaa sen haun jollain muulla tavalla.
 **Ehdotus:** jutun ja selitteen "1677" → "1676" heti kun toinen lähde on luettu (kolme paikkaa: teksti r. 3115, lyhyt r. 3122, selite r. 3125). Muut väitteet samoissa riveissä: National Trust 1937 ✔ (CAMRA ja en-Wikipedia). Rautatien purku: CAMRA "demolished in 1889", en-Wikipedia "demolition of the north range in 1874" → ei mainita jutussa; ei muutosta.
+
+---
+# Toinen kierros (KK 23.05; robots tarkistettu ensin; haettu 13.11.2026)
+
+## 1. Naval College '1696–1751': alku pitää, loppuvuodelle ei ole toista lähdettä
+| Väite | Lähde | Tulos |
+|---|---|---|
+| Työ alkoi 1696 | ORNC:n oma sivu (ornc.org/our-history/royal-hospital/foundation-of-the-royal-hospital/; robots sallii): "Work on the Hospital began in 1696." Sama sivusto: "Sir Christopher Wren was appointed as surveyor in 1696" | ✔ |
+| Peruskivi 30.6.1696, Evelyn | ORNC:n sivu "John Evelyn – Treasurer of Greenwich Hospital" (ornc.org/?p=8151) lainaa päiväkirjaa päivättynä "30th June, 1696": "I laid the first stone of the intended foundation, precisely at five o'clock" | ✔ päiväkirjan merkintä (ensisijainen lähde, lainattu ORNC:n sivulla). Itse päiväkirjan tekstiä ei saatu: twentytrees.co.uk 410, ghsoc.co.uk 425 |
+| 1696 toisesta lähteestä | en-Wikipedia "Old Royal Naval College": "built between 1696 and 1712"; "Greenwich Hospital, London": komissio 20.10.1696 | ✔ alkuvuosi |
+| Valmistui 1751 | ORNC (sama sivu): "It took over 50 years to build and was not completed until 1751." (koko sairaala; ei nimeä Queen Mary Courtia eikä Ripleytä) | **vain yksi lähde** |
+| Queen Mary Court, Ripley | en-Wikipedia "Greenwich Hospital, London": "Queen Mary Court … by Thomas Ripley, completed in 1742" · HE-listaus (BLB 1211384, Queen Mary's Quarter, kaakkoon): "Completed by Sir John Vanbrugh 1728", Ripleytä ei mainita · HE-listaus (BLB 1290044, Queen Anne's Quarter, koilliseen): "Completed by Campbell and Ripley in 1750" | lähteet ovat keskenään ristiriidassa: 1728 / 1742 / 1750 / 1751 |
+
+**Tulos:** Alku 1696 on tuettu kahdesta lähteestä (ORNC + päiväkirja; en-Wikipedia). Loppu 1751 on vain ORNC:n yleisellä tasolla, ja muut lähteet antavat 1728, 1742 tai 1750; KK:n muistikuva "Queen Mary Court, Ripley, 1751" ei vahvistu: HE:n Queen Mary's Quarter sanoo 1728 (Vanbrugh), ja Ripley on HE:n listauksessa Queen Anne's Quarterissa (1750).
+**KK:n sääntö (ei kahta lähdettä molemmille → '1698–1750') ei täyty puhtaasti:** 1751 ei kumoudu, mutta ei vahvistu. Ehdotus: **aika-kenttä jää ennalleen '1696–1751'** (ORNC:n oma span), mutta Naval College **ei tule vuositehtäviin** ennen kuin loppuvuosi vahvistuu (Survey of London / Historic England -kirjoitus Greenwich Hospitalista; BHO-polkuja ei löytynyt, vol48 = 404). Jos KK haluaa varman luvun nyt: '1698–1750' on HE:n sanatarkka span (neljä lähdettä ristiriidassa ei tarvitse ratkaista).
+
+## 2. The George: kumpikaan lähde ei anna 1677:ää
+| Lähde | Tulos |
+|---|---|
+| CAMRA (pub-sivu; robots sallii) | "rebuilt in 1676 after a major fire in Southwark" |
+| en-Wikipedia (lainaa CAMRA:a) | sama, 1676 |
+| Historic England (list entry 1378357), luettu BLB-peilistä (101378357) | ei vuotta: "Inn. C17. Timber-frame and brick."; pohjoissiipi purettu 1874; National Trust 1937 |
+| National Trust | /visit/london/the-george-inn 404; historia-sivu botintarkistus, ei sisältöä; /george-inn ei haettu (linkki kolmannen osapuolen sivulta) |
+| 1677 | ei löytynyt mistään luetusta lähteestä |
+
+**Tulos:** lähteet eivät jakaudu 1676/1677; 1676 on yhden lähteen (CAMRA, jota Wikipedia toistaa) luku, ja HE vahvistaa vain "1600-luku". Toista itsenäistä päivämääräistä lähdettä ei saatu.
+**Ehdotus (KK:n varavaihtoehdon mukaan):** teksti muotoon **"rakennettu uudelleen Southwarkin vuoden 1676 palon jälkeen"** kolmessa paikassa (nahtavyysjutut.js r. 3115 teksti, r. 3122 lyhyt, r. 3125 selite), ei vuosilappua tehtäviin. Sanamuoto seuraa CAMRA:a ("rebuilt in 1676 after a major fire") eikä väitä erillistä uudelleenrakennusvuotta. Ellei KK halua odottaa National Trustin /george-inn -sivua (robots sallii; sivu voi antaa botintarkistuksen), tämä riittää.
