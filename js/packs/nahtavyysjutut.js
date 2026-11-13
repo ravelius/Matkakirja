@@ -3112,7 +3112,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-the-george-pubi',
       teksti: 'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
         + 'tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen '
-        + 'aikaan. Nykyinen rakennus on rakennettu uudelleen Southwarkin vuoden '
+        + 'aikaan. Nykyinen rakennus on rakennettu Southwarkin vuoden '
         + '1676 palon jälkeen, ja sen penkeillä istui aikanaan Charles Dickens, '
         + 'joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — '
         + 'olutta myydään silti joka päivä.',
@@ -3121,7 +3121,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'The George at Southwark (8553233399).jpg',
           lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, rakennettu uudelleen vuoden 1676 palon jälkeen.',
           selite: 'The George Southwarkissa on Lontoon viimeinen '
-            + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on rakennettu uudelleen '
+            + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on rakennettu '
             + 'Southwarkin vuoden 1676 palon jälkeen.',
           lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
         },
