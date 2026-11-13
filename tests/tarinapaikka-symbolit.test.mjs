@@ -67,11 +67,11 @@ for (const { kaupunki, n } of kaikki) {
  * luontonoston merkki valitaan lajista (jarvi|joki|meri), muuten se on vuori. Baikal näkyi siksi vuorena. Laji kulkee
  * merkkiriville (js/fokusnosto.js nostoMerkinKentat) ja ladontaan (js/fokuskohteet.js kohdeMerkinLadonta) → viennin
  * karttavalot.laji → natiivin Kuvamerkki. Jokaisella luontonostolla laji on joko tunnettu tai tarkoituksella puuttuu
- * (vuori on oikea merkki: fossiili, puu, dyyni, tulivuoret, vuorovesi odottaa KK:n sanaa).
+ * (vuori on oikea merkki: fossiili, puu, dyyni, tulivuoret; Couesnonin vuorovesi meri KK 13.17).
  */
 const LUONNON_LAJIT = new Set(['jarvi', 'joki', 'meri']);
 const LAJI_TARKOITUKSELLA_PUUTTUU = new Set([
-  'archaeopteryx', 'korkkitammi', 'maalehti-dune-du-pilat', 'maalehti-chaine-des-puys', 'maalehti-couesnonin-vuorovesi',
+  'archaeopteryx', 'korkkitammi', 'maalehti-dune-du-pilat', 'maalehti-chaine-des-puys',
 ]);
 const luontonostot = kaikki.filter(({ n }) => n.symboli === 'luonto');
 

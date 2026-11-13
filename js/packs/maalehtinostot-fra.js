@@ -511,6 +511,7 @@ const JAKO = [
     tyyppi: 'meri',
     nimio: 'Vuorovesi 2015',
     symboli: 'luonto',
+    laji: 'meri',
     lahi: true,
     teksti: 'Keskiajalla Mont-Saint-Michelin lahdelle kulkeneille '
       + "pyhiinvaeltajille varoitettiin, että vuorovesi nousee ’yhtä "
@@ -1024,6 +1025,8 @@ function korttiLehdesta(rivi) {
     ...(rivi.lahi ? { lahi: true } : {}),
     ...(rivi.visa ? { visa: rivi.visa } : {}),
     ...(rivi.taso ? { taso: rivi.taso } : {}),
+    // Luonnon laji (jarvi|joki|meri) merkin kuvaksi (js/fokusnosto.js nostoMerkinKentat; KK 13.11.2026).
+    ...(rivi.laji ? { laji: rivi.laji } : {}),
     paikka: rivi.paikka,
     lahde: `Maalehden sivu "${rivi.sivu}", nosto "${lahde.otsikko}" `
       + '(js/packs/maa-kategoriat.js FRA, pelin omaa tarkistettua '
