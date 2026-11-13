@@ -18142,6 +18142,45 @@
    "eroKartanPisteesta_m": 1
   },
   {
+   "id": "pariisi:Tour Saint-Jacques",
+   "nimi": "Tour Saint-Jacques",
+   "qid": "Q1431547",
+   "lat": 48.85776,
+   "lon": 2.34878,
+   "lahde": "wikidata Q1431547 P625 (fi.wikipedia: Tour Saint-Jacques)",
+   "kartanPiste": {
+    "lat": 48.8578,
+    "lon": 2.3488
+   },
+   "eroKartanPisteesta_m": 5
+  },
+  {
+   "id": "pariisi:Saint-Eustache",
+   "nimi": "Saint-Eustache",
+   "qid": "Q1338207",
+   "lat": 48.86333,
+   "lon": 2.345,
+   "lahde": "wikidata Q1338207 P625 (fi.wikipedia: Saint-Eustachen kirkko)",
+   "kartanPiste": {
+    "lat": 48.8633,
+    "lon": 2.345
+   },
+   "eroKartanPisteesta_m": 3
+  },
+  {
+   "id": "pariisi:Pompidou-keskus",
+   "nimi": "Pompidou-keskus",
+   "qid": "Q178065",
+   "lat": 48.86064,
+   "lon": 2.35224,
+   "lahde": "wikidata Q178065 P625 (fi.wikipedia: Pompidou-keskus)",
+   "kartanPiste": {
+    "lat": 48.8606,
+    "lon": 2.3522
+   },
+   "eroKartanPisteesta_m": 5
+  },
+  {
    "id": "pariisi:Tour Montparnasse",
    "nimi": "Tour Montparnasse",
    "qid": "Q323767",
