@@ -1,4 +1,6 @@
-# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Centre Pompidou (SK 13.11.2026; KK 13.41 osa 1)
+# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17)
+
+**Korjaukset 13.53 (10 kpl) ja nimi 14.17 tehty tähän tiedostoon; vuosivirkkeet sanatarkasti ennallaan.** Kortin ja lapun nimi on **Pompidou-keskus** (ei "Centre Pompidou"; pelin muut Pariisin kohteet käyttävät suomenkielistä nimeä ja kartan malli on jo sillä nimellä). Ranskankieliset lähde- ja tiedostonimet (centrepompidou.fr, Commons-tiedostot) säilyvät sellaisinaan.
 
 Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kappaletta, `kuvat`, `lahde`). PK vie datan vasta KK:n sanalla. Lähderiviä ei näytetä pelaajalle (omistaja 13.09); ne kulkevat tässä tarkistukseen asti (kortti lahteet-ja-tarkistus 1–5). Hyväksytyt vuosivirkkeet ovat sanatarkasti kunkin tekstin ensimmäisenä. Jokaisella luvulla vähintään kaksi itsenäistä lähdettä (Wikipedian kieliversiot = yksi). Haettu 13.11.2026; sivut luettu itse.
 
@@ -11,18 +13,18 @@ Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kapp
       + 'jäänyt osa keskiaikaisesta Saint-Jacques-de-la-Boucherien kirkosta. '
       + 'Kirkko seisoi Grande Boucherien, Pariisin teurastajien kaupunginosan, '
       + 'keskellä. '
-      + 'Tornin juurelta alkaa vielä nykyäänkin Santiago de Compostelan '
-      + 'pyhiinvaellusreitin Via Turonensis.'
+      + 'Tornin juurelta alkaa yhä Via Turonensis, yksi Santiago de '
+      + 'Compostelaan vievistä pyhiinvaellusreiteistä.'
     + '\n\n'
-    + 'Vallankumouksen jälkeen kirkko myytiin louhokseksi, ja sen kivet '
+    + 'Vallankumouksen vuosina kirkko myytiin louhokseksi, ja sen kivet '
       + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehdoksi '
       + 'kerrotaan, ettei sitä saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
-      + 'tornin, ja 1850-luvulla sen ympärille tehtiin Pariisin ensimmäisiä '
-      + 'puistoja, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
+      + 'tornin, ja 1850-luvulla sen ympärille tehtiin '
+      + 'puisto, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
       + 'de Sébastopolin juuri tornin eteen.'
     + '\n\n'
-    + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäisen patsaan '
-      + 'syöksivät vallankumouksen aikana alas, ja nykyinen on 1800-luvun '
+    + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäinen patsas '
+      + 'syöstiin alas vallankumouksen aikana, ja nykyinen on 1800-luvun '
       + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
       + 'sanotaan tehneen tornissa ilmanpainekokeita — mistä historioitsijat '
       + 'ovat kuitenkin eri mieltä. Sääasema perustettiin torniin vasta 1891.',
@@ -38,7 +40,7 @@ Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kapp
 },
 ```
 
-Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luvulta, 1891 mainittu myöhempänä). Kortti on kirjoitettu nykyaikaiseen sävyyn kuten Garnier-kortti ("nykyäänkin" vain pyhiinvaellusreitistä).
+Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luvulta, 1891 mainittu myöhempänä). Kortti on kirjoitettu nykyaikaiseen sävyyn kuten Garnier-kortti ("yhä" vain pyhiinvaellusreitistä).
 
 ### Lähderivit (kaksi itsenäistä jokaiselle)
 | Väite | Lähde 1 | Lähde 2 (+3) |
@@ -47,10 +49,10 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
 | Ainoa jäljellä oleva osa | paris.fr ("vestige d'une église", kirkko purettu) | Mérimée ("Tour de l'ancienne église"); en-/fr-Wikipedia |
 | Kaupunginosa Grande Boucherie, nimi | paris.fr ("quartier de la Grande Boucherie") | en-Wikipedia ("Saint James of the Meat Market", Les Hallesin teurastajat) |
 | Via Turonensis alkaa tornin juurelta | paris.fr ("la via Turonensis démarre à son pied") | en-Wikipedia ("pilgrims setting out on the road that led to Tours"); UNESCO 1998 (en + fr) |
-| Myytiin louhokseksi (vallankumouksen jälkeen) | paris.fr (vendue comme carrière en 1797) | Mérimée ("En 1797, l'église est vendue comme carrière"); en-Wikipedia ("treated as a quarry") |
+| Myytiin louhokseksi ("vallankumouksen vuosina"; myynti 1797, Direktorion aika, joten ei "heti vallankumouksen jälkeen") | paris.fr (vendue comme carrière en 1797) | Mérimée ("En 1797, l'église est vendue comme carrière"); en-Wikipedia ("treated as a quarry") |
 | Ehto: torni säästetään ("kerrotaan") | paris.fr ("sous réserve que son clocher… soit épargné") | Mérimée ("une clause interdit la démolition du clocher"); fr-Wikipedia sanoo ehdon olemassaolon kiistanalaiseksi → siksi "kerrotaan" |
 | Kaupunki osti 1836 | paris.fr (27.8.1836) | Mérimée ("En 1836… acheté par la Ville"); en- ja fr-Wikipedia |
-| Puisto 1850-luvulla; Haussmann, Rivoli, Sébastopol | paris.fr (Haussmann, 1853; puisto Ballun johdolla; Rivoli ja Sébastopol "se croisent devant le monument") | Mérimée ("En 1854, un décret autorise la création d'un square"); fr-Wikipedia (puisto 1856, Ballu 1854–1858); en-Wikipedia (Ballu, Rue de Rivoli) |
+| Puisto 1850-luvulla ("puisto", ei "Pariisin ensimmäisiä": superlatiivi poistettu 13.53); Haussmann, Rivoli, Sébastopol | paris.fr (Haussmann, 1853; puisto Ballun johdolla; Rivoli ja Sébastopol "se croisent devant le monument") | Mérimée ("En 1854, un décret autorise la création d'un square"); fr-Wikipedia (puisto 1856, Ballu 1854–1858); en-Wikipedia (Ballu, Rue de Rivoli) |
 | Pyhä Jaakob huipulla, alkuperäinen syöksetty, nykyinen 1800-luvun | paris.fr ("précipitée en l'an IV… sa reproduction du XIXe siècle") | fr-Wikipedia (abattue à la Révolution; korvaaja Chenillon); en-Wikipedia (patsas 1800-luvulla huipulle) |
 | Pascal-patsas; kokeet kiistanalaiset | paris.fr (kokeet tornin huipulla ja juurella; patsas 1800-luvun ensimmäisessä restauroinnissa) | en-Wikipedia (patsas juurella; "it is debated whether they were performed here"); siksi "sanotaan… eri mieltä" |
 | Sääasema 1891 | paris.fr ("à partir de 1891") | Mérimée ("En 1891, installation d'une station météorologique"); fr-Wikipedia |
@@ -76,19 +78,22 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
       + 'vuonna 1637. Länsijulkisivu on myöhempi: sitä alettiin rakentaa '
       + 'uudelleen vuonna 1754.'
     + '\n\n'
-    + 'Kirkko seisoo Les Hallesin, Pariisin vanhan ruokatorin, vieressä. '
+    + 'Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä; '
+      + 'tori siirrettiin Rungisiin vuonna 1969. '
       + 'Sen paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
-      + 'seurakunta kasvoi ja kirkko kävi pieneksi. Rakentaminen kesti yli '
+      + 'seurakunta kasvoi ja kappeli kävi pieneksi. Rakentaminen kesti yli '
       + 'sata vuotta, ja tulos on sekoitus: rakenne on goottilaista, koristeet '
       + 'renessanssia.'
     + '\n\n'
-    + 'Julkisivun uusimiseen johti Colbert, seurakuntalainen ja kirkon '
-      + 'talousjohtaja: hän rakennutti 1655 tornien alle kaksi kappelia, ja '
-      + 'julkisivu heikkeni niin, että se piti purkaa. Uusi julkisivu jäi '
-      + 'kesken. Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV '
-      + 'kävi täällä ensimmäisellä ehtoollisellaan 1649. Vallankumouksessa '
-      + 'kirkko suljettiin ja siitä tehtiin Maanviljelyksen temppeli, ja '
-      + 'arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
+    + 'Julkisivun uusimiseen johti Colbert, seurakuntalainen, joka hoiti '
+      + 'kirkon raha-asioita ja josta tuli myöhemmin Ludvig XIV:n ministeri: '
+      + 'hän rakennutti 1655 tornien alle kaksi kappelia, ja julkisivu '
+      + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
+      + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
+      + 'täällä ensimmäisellä ehtoollisellaan 1649.'
+    + '\n\n'
+    + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
+      + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
   kuvat: [
     {
       tiedosto: 'Saint Eustache.jpg',
@@ -105,12 +110,12 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
 | Väite | Lähde 1 | Lähde 2 (+3) |
 |---|---|---|
 | 1532 alku; 1637 vihkiminen; julkisivu 1754 (hyväksytty virke) | paris.fr (`restauration-de-la-facade-occidentale…`): "construite à partir de 1532", "reconstruite à partir de 1754" | Structurae: 1532, 1637 "consacrée", 1754; en-Wikipedia; saint-eustache.org (22.5.1754 peruskivi) |
-| Les Halles vieressä | paris.fr ("quartier historique des Halles") | en-Wikipedia (near Les Halles); saint-eustache.org |
+| Les Halles vieressä; tori siirretty Rungisiin 1969 | paris.fr ("quartier historique des Halles"); saint-eustache.org (Les Hallesin siirto Rungisiin 1969) | en-/fr-Wikipedia (Les Halles market moved to Rungis 1969); en-Wikipedia (near Les Halles) |
 | Kappeli 1213 | paris.fr ("chapelle bâtie en 1213") | saint-eustache.org ("une modeste chapelle est bâtie en 1213"); en-Wikipedia |
-| Seurakunta kasvoi, kirkko pieneksi | saint-eustache.org ("la population ne cesse de s'accroître; il faut agrandir l'église") | en-Wikipedia ("too small for its congregation") |
+| Seurakunta kasvoi, KAPPELI kävi pieneksi (ei "kirkko": kirkko ei vielä ollut olemassa) | saint-eustache.org ("la population ne cesse de s'accroître; il faut agrandir l'église") | en-Wikipedia ("too small for its congregation") |
 | Rakennus kesti yli sata vuotta | saint-eustache.org ("plus d'un siècle") | Structurae (1532…1637); en-Wikipedia (1532–1632/37) |
 | Goottilainen rakenne, renessanssikoristeet | paris.fr ("éléments gothiques… motifs décoratifs sculptés de style Renaissance") | en-Wikipedia ("structure is Flamboyant Gothic… decoration Renaissance and classical") |
-| Colbert seurakuntalainen ja talousjohtaja; kaksi kappelia 1655; julkisivu heikkeni, purettiin | saint-eustache.org ("En 1655, Colbert, paroissien et premier marguillier… deux chapelles sous les tours… on doit démolir la façade") | paris.fr (1655); Structurae (1655 chapelles dans les tours); en-Wikipedia |
+| Colbert seurakuntalainen, hoiti kirkon raha-asioita (premier marguillier); myöhemmin Ludvig XIV:n ministeri (1661: Larousse "Colbert lui succède comme ministre d'État (1661)", luettu 13.11.; en-Wikipedia: myöhemmin ministeri; 1655 hän ei vielä ollut ministeri); kaksi kappelia 1655; julkisivu heikkeni, purettiin | saint-eustache.org ("En 1655, Colbert, paroissien et premier marguillier… deux chapelles sous les tours… on doit démolir la façade") | paris.fr (1655); Structurae (1655 chapelles dans les tours); en-Wikipedia |
 | Uusi julkisivu jäi kesken | paris.fr ("tour sud… restée inachevée") | Structurae (Moreau-Desproux "laisse la façade inachevée"); en-Wikipedia (principal facade unfinished); fr-Wikipedia (hanke vaillinainen) |
 | Richelieu ja Molière kastettu | saint-eustache.org ("Richelieu est baptisé… ainsi que Molière") | en-/fr-Wikipedia |
 | Ludvig XIV ensimmäinen ehtoollinen 1649 | saint-eustache.org ("En 1649, le jeune Louis XIV fait sa première communion") | en-Wikipedia (1649); fr-Wikipedia ("vers 1649") |
@@ -130,12 +135,12 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
 2. `File:Église Saint-Eustache Paris 1er 001.JPG` — Moonik, CC BY-SA 3.0, 22.11.2011; länsijulkisivu (1754, vasemmalla pylväät ja torni) ja etelälaidan koristeet iltavalossa. Katsottu silmin. Sopii, jos kortin kuvan halutaan näyttävän julkisivun.
 Varalla: `File:Saint Eustache church Paris P1060101.JPG` — Pline, CC BY-SA 3.0 (julkisivu ja Jardin des Halles, lasipaviljonki edessä; vähemmän puhdas).
 
-## 3. Centre Pompidou rakennuksena (`aika: '1972–1977'`)
+## 3. Pompidou-keskus rakennuksena (`aika: '1972–1977'`)
 
-Kokoelmakortti (`maa-kategoriat.js` r. 10070) jää ennalleen; tämä on oma kohdekortti.
+Kokoelmakortti (`maa-kategoriat.js` r. 10070, nimi "Centre Pompidou — nykytaiteen kokoelma") jää ennalleen; tämä on oma kohdekortti. Ehdotus PK:lle: kokoelmakortin nimi samaan muotoon "Pompidou-keskus — nykytaiteen kokoelma" (teksti käyttää jo "Pompidou-keskus"-nimeä; r. 10073 sisältää vielä "Centre Pompidou on Pariisin nykytaiteen museo").
 
 ```js
-'Centre Pompidou': {
+'Pompidou-keskus': {
   aika: '1972–1977',
   teksti: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus '
       + 'avattiin vuonna 1977. Keskus on nimetty Ranskan presidentin Georges '
@@ -144,13 +149,13 @@ Kokoelmakortti (`maa-kategoriat.js` r. 10070) jää ennalleen; tämä on oma koh
       + 'Piano ja britti Richard Rogers työryhmineen.'
     + '\n\n'
     + 'Voittajat veivät rakenteet, putket, portaat ja hissit ulkopuolelle, '
-      + 'jotta sisälle jäi vapaita tasoja. Putket on maalattu käyttönsä '
+      + 'jotta sisälle jäisi vapaita tasoja. Putket on maalattu käyttönsä '
       + 'mukaan: ilma on sininen, vesi vihreä, sähkö keltainen ja kulku — '
       + 'liukuportaat ja hissit — punainen. Rakennus vei vain puolet tontista, '
       + 'ja toinen puoli jäi aukioksi, jota sanotaan piazzaksi.'
     + '\n\n'
-    + 'Talossa on nykytaiteen museo, yleinen kirjasto ja IRCAM-niminen musiikin '
-      + 'ja äänen tutkimuskeskus. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
+    + 'Talossa on nykytaiteen museo ja yleinen kirjasto; musiikin ja äänen '
+      + 'tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
       + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
       + 'avautua uudelleen vuonna 2030.',
   kuvat: [
@@ -172,10 +177,11 @@ Kokoelmakortti (`maa-kategoriat.js` r. 10070) jää ennalleen; tämä on oma koh
 | Nimetty presidentti Georges Pompidoun mukaan | virallinen nimi: Fondazione Renzo Piano ("Centre Georges Pompidou") | en-Wikipedia ("Centre national d'art et de culture Georges-Pompidou… President"); fr-Wikipedia (1969 presidentti päätti, laki 3.1.1975) |
 | Kansainvälinen kilpailu 1970–1971 | Fondazione Renzo Piano ("international competition launched in 1970", Competition 1970–1971) | fr-Wikipedia (kilpailu julistettu joulukuussa 1970, voittaja 1971); en-Wikipedia ("selection announced in 1971") |
 | Voittajat Piano ja Rogers (työryhmineen) | Fondazione Renzo Piano ("Studio Piano & Rogers") | centrepompidou.fr (p1: "Renzo Piano et Richard Rogers… équipe"); en-/fr-Wikipedia (Franchini, Happold; kortissa "työryhmineen") |
-| Rakenteet ja putket ulos, vapaat tasot | centrepompidou.fr (p1: "toute la structure… à l'extérieur… plateaux complètement libres") | Fondazione Renzo Piano ("open plan"); fr-Wikipedia; olemassa oleva hyväksytty kokoelmakortti |
+| Rakenteet ja putket ulos, vapaat tasot ("jäisi") | centrepompidou.fr (p1: "toute la structure… à l'extérieur… plateaux complètement libres") | Fondazione Renzo Piano ("open plan"); fr-Wikipedia; olemassa oleva hyväksytty kokoelmakortti |
 | Värit: sininen ilma, vihreä vesi, keltainen sähkö, punainen kulku | centrepompidou.fr (p4: sininen ilma, vihreä vesi, keltainen sähkö, punainen "circulations") | en-Wikipedia (green plumbing, blue climate control, yellow electrical, red circulation/safety) |
 | Piazza, puolet tontista | centrepompidou.fr (p1: piazza "occupe la moitié de l'espace") | fr-Wikipedia ("n'occuper que la moitié du terrain… piazza") |
-| Museo, kirjasto, IRCAM | Fondazione Renzo Piano (Bpi, National Museum of Modern Art, IRCAM) | fr-/en-Wikipedia |
+| Museo ja kirjasto talossa | Fondazione Renzo Piano (Bpi, National Museum of Modern Art) | fr-/en-Wikipedia |
+| IRCAM EI ole talossa: viereisessä rakennuksessa, place Stravinsky | Ircam.fr (luettu 13.11.): rakennus "jouxte celui du Centre Pompidou"; Ircam perustettu 1977 | fr-Wikipedia (Ircam place Stravinsky); Piano & Rogers suunnittelivat sen (Ircam.fr) |
 | Peruskorjaus päättyi 2000 | Fondazione Renzo Piano (Renovation 1996–2000) | fr-Wikipedia (avattiin uudelleen 1.1.2000); en-Wikipedia |
 | Suljettu uuteen peruskorjaukseen, uudelleenavaus 2030 | Euronews 11.5.2023 (`fr.euronews.com/2023/05/11/le-centre-pompidou-ferme-de-2025-a-2030`, luettu: "fermé de 2025 à 2030") ja 9.8.2025 (luettu: "réouverture est prévue pour 2030") | The Art Newspaper 11.5.2023 (luettu); en-Wikipedia |
 
@@ -189,6 +195,10 @@ Kokoelmakortti (`maa-kategoriat.js` r. 10070) jää ennalleen; tämä on oma koh
 1. `File:Centre Pompidou @ Beaubourg @ Paris (15448205062).jpg` — Guilhem Vellut, CC BY 2.0, 5.9.2014; julkisivu ja ulkoportaat, piazza edessä (vähän ihmisiä, ei erottuvia kasvoja). **Ensisijainen.** Katsottu silmin.
 2. `File:Centre Pompidou @ Jardin Anne-Frank.jpg` — Rémih, CC BY-SA 4.0, 4.10.2026; punaiset ja siniset putket ja tuuletusaukot rakennuksen takaa. Sopii värikoodauksen kuvaksi. Katsottu silmin.
 Huomio: kaikki kolme (Vellut, Rémih ja DXR) ovat CC BY / CC BY-SA, jotka vaativat tekijän ja lisenssin näyttämisen kuvatekstissä (kuten nykyiset `lahde`-rivit).
+
+## VANHENEE
+- **Pompidou-keskus: uudelleenavaus 2030.** Kortin viimeinen virke ("nykyään suljettu… määrä avautua uudelleen vuonna 2030") vanhenee, kun keskus avataan (lähteet: Euronews 11.5.2023 ja 9.8.2025). Tarkista ennen 2030.
+- Kokoelmakortti `maa-kategoriat.js` r. 10070 ("Centre Pompidou — nykytaiteen kokoelma") EI mainitse sulkemista (grep `js/packs/`: ei osumaa "suljettu"/"2030" Pompidoun yhteydessä); se kuvaa kokoelmaa ikään kuin keskus olisi auki. Kirjattu KK:lle ja PK:lle päätettäväksi: lisätäänkö sulkemishuomio vai jätetäänkö se.
 
 ## Tila ja seuraava
 - Kolme korttia valmiina tarkistukseen; jokainen tekstin väite on kahdesta itsenäisestä lähteestä (pyhäinjäännöslause pudotettu, koska vain Wikipedia). Tour Saint-Jacques 1523: Villain 1758 -ehto kuten 13.25.

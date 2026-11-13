@@ -7,7 +7,7 @@ Sääntö (KK 13.24, kortti lahteet-ja-tarkistus 2–3): jokaisella päätevuode
 | Kohde | Lappu | Tila |
 |---|---|---|
 | Saint-Eustache | **1532–1637** | VALMIS: 1532 ja 1637 kahdesta+ lähteestä; 1754 kahdesta |
-| Centre Pompidou | **1972–1977** | VALMIS: 1972 ja 1977 kahdesta itsenäisestä |
+| Pompidou-keskus | **1972–1977** | VALMIS: 1972 ja 1977 kahdesta itsenäisestä |
 | Palais Garnier | **1862–1875** (KK 13.25) | VALMIS: 1862 Mérimée + Opéra de Paris; 1875 kolme lähdettä |
 | Tour Saint-Jacques | **1509–1523** (KK 13.25) | VALMIS: 1509 kolme lähdettä; 1523 paris.fr + en-Wikipedia (viite Villain 1758); Mérimée 1525 ja Structurae 1522 poikkeamina |
 
@@ -16,7 +16,7 @@ Sääntö (KK 13.24, kortti lahteet-ja-tarkistus 2–3): jokaisella päätevuode
 | Kohde | Virke | Mihin korttiin |
 |---|---|---|
 | Saint-Eustache | **Saint-Eustachea alettiin rakentaa vuonna 1532, ja kirkko vihittiin vuonna 1637. Länsijulkisivu on myöhempi: sitä alettiin rakentaa uudelleen vuonna 1754.** | Ei korttia datassa (`grep` js/ ja data/: ei osumaa) → **uusi kortti** `js/packs/nahtavyysjutut.js`, avain `'Saint-Eustache'`, `aika: '1532–1637'`; virke tekstin ensimmäiseksi. |
-| Centre Pompidou | **Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus avattiin vuonna 1977.** | Olemassa oleva kokoelmakortti `js/packs/maa-kategoriat.js` rivi 10070 (`teksti`:n alkuun, ennen "Centre Pompidou on Pariisin nykytaiteen museo…"); tai oma kohdekortti, `aika: '1972–1977'`. |
+| Pompidou-keskus | **Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus avattiin vuonna 1977.** | Olemassa oleva kokoelmakortti `js/packs/maa-kategoriat.js` rivi 10070 (`teksti`:n alkuun, ennen "Centre Pompidou on Pariisin nykytaiteen museo…"); tai oma kohdekortti, `aika: '1972–1977'`. |
 | Palais Garnier | **Oopperan peruskivi muurattiin vuonna 1862, ja talo avattiin vuonna 1875.** (KK 13.25; kilpailun voitto 1861 saa jäädä kortin tekstiin, kaivua 1861 ei mainita) | Olemassa oleva kortti `'Palais Garnier'` (`nahtavyysjutut.js` r. ~5096): lisää virke tekstin loppuun, `aika: '1862–1875'` (nyt '1875'). |
 | Tour Saint-Jacques | *(ei uutta virkettä; vuodet 1509–1523 ovat jo Matkaopas-kuvatekstissä `kulttuuri-kategoriat.js` r. 6478, KK 13.25)* | Ei muutosta dataan. |
 
