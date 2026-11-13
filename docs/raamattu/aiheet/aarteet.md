@@ -4,7 +4,7 @@ TAVOITE: Pelaaja etsii kaupunki kerrallaan unohdettuja aarteita isoisän jäljil
 
 SÄÄNNÖT:
 1. Aarteelle mennään kartan vihreästä pisteestä; se syttyy matkan ensimmäisestä oikeasta visavastauksesta (myös tarinapaikan kysymys) ja on sitten auki joka kaupungissa. Pisteessä tavataan henkilö ja ratkaistaan aarretehtävä; Etsi aarre -nappia ei ole. [R-2.147] [R-2.27] [P-261112-27]
-2. Aarretehtävään on kaksi yritystä, ja kohtaamiskortti kertoo sen etukäteen. Kahden virheen jälkeen aarre lukkiutuu, mutta matka jatkuu. Kahdessa koekaupungissa voi valita vaikeamman (vähemmän tunnetut); palkintona isoisän merkintä rajaa kartalta pois puolet jäljellä olevista kaupungeista. [R-2.24] [P-261113-9] [P-261113-11]
+2. Aarretehtävään on kaksi yritystä, ja kohtaamiskortti kertoo sen etukäteen. Kahden virheen jälkeen aarre lukkiutuu; matka jatkuu. Kahdessa koekaupungissa voi valita vaikeamman (neljä vähemmän tunnettua); palkintona isoisän merkintä rajaa kartalta pois puolet jäljellä olevista kaupungeista. [R-2.24] [P-261113-9] [P-261113-12]
 3. Aarretehtävä on toistaiseksi vain tietovisa, vihje ennen sitä; kokeilun muut tyypit eivät näy. Väittämä on jo kaupungin merkinnässä. Näyttämöllä myös Erottele ja Paljasta (vieras patsas muualta). [R-2.24] [P-261112-34] [P-261113-4]
 4. Näkyvin apu on pullavinkki: pulla pululle punnilla, halvempi kuin matkalippu, kerran aarteelle. 50:50 on hiljainen vara. [R-2.24]
 5. Sähketehtävä on toinen avaustapa: Livian tehtävä ratkeaa maan aineistoista valinnoilla, ilman kohtaamista. [R-2.25]
