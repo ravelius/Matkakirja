@@ -20,7 +20,7 @@
  *
  * Tulos <ulos>/tulos.json ja tulos.md; <ulos>/VIKA.txt on tyhjä, kun kaikki on kunnossa, muuten yksi
  * hälytysrivi (Postivahti lukee sen). historia.log saa rivin jokaisesta ajosta. Oletuskansio
- * /Users/Shared/Claude/proto-3d/eheysvartija (Mac Studio; .github/workflows/eheysvartija.yml).
+ * /Users/Shared/Claude/proto-3d/lokit/eheysvartija (Mac Studio; .github/workflows/eheysvartija.yml).
  */
 import { execFile } from 'node:child_process';
 import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -166,7 +166,7 @@ function markdown(t, osat) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const arvo = (nimi, oletus) => { const i = process.argv.indexOf(nimi); return i > 0 ? process.argv[i + 1] : oletus; };
-  const ulos = resolve(arvo('--ulos', '/Users/Shared/Claude/proto-3d/eheysvartija'));
+  const ulos = resolve(arvo('--ulos', '/Users/Shared/Claude/proto-3d/lokit/eheysvartija'));
   const t = await tarkista({ kaikki: process.argv.includes('--kaikki'), rinnakkain: Number(arvo('--rinnakkain', 32)),
     versio: arvo('--versio', null), luettelo: !process.argv.includes('--head') });
   const osat = yhteenveto(t);

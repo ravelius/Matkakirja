@@ -50,5 +50,5 @@ jobs:
       - name: Eheysvartija
         run: |
           set -euo pipefail
-          node tools/vienti/eheysvartija.mjs ${{ inputs.kaikki && '--kaikki' || '' }}
+          node tools/vienti/eheysvartija.mjs --ulos /Users/Shared/Claude/proto-3d/eheysvartija ${{ inputs.kaikki && '--kaikki' || '' }}
           cat /Users/Shared/Claude/proto-3d/eheysvartija/tulos.md >> "$GITHUB_STEP_SUMMARY"
