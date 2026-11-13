@@ -118,3 +118,33 @@ Valintaperusteet ja pois jätetyt:
 - Tarkistettu (ei uusia latauksia): kaikilla 13 teoksella on `kuva.seina_lahde` pelin teokset.json:ssa; kuvasuhteet 0,82–1,73 (Avercamp 1,73 on leveä, Ruysch 0,82 korkea) → eri muotoisia, ei vihjettä.
 - Amsterdamin kohtaaminen: Yara (kohtaamisraportti c1, `js/packs/kohtaamiset.js`) on olemassa, joten kohta 4 "alle 4 teosta / ei kohtaamista" ei lauennut; luku KK:lle tarpeeton.
 - Nykyinen `erottele.json` (ranska-maalarit: omat ranska, vieraat alankomaat) kääntyy tähän: omat alankomaat, vieraat ranska, kaupunki amsterdam. Teokset SK-C-5 ja SK-A-2344 olivat siinä vieraina; sama kuva ei siis ole kahdessa roolissa samassa kaupungissa.
+
+## 5. Selitys: mistä oikean lipun väritys ja ulkoasu ovat peräisin (SK 13.11.2026, KK 16.27, omistajan lisäys)
+
+Vain docs. Kenttä `nayttamo[].selitys` (valmis suomenkielinen teksti, 13+ ja aikuiset, 2–3 virkettä, enintään noin 300 merkkiä; pituudet 232–281). Näytetään lopputilassa maiden nimien kanssa. Data-PR vasta KK:n sanalla. Lähteet haettu 13.11.2026; kortin lahteet-ja-tarkistus säännöt 1, 3 ja 5: epävarma sanotaan epävarmana, legenda legendana.
+
+```json
+{
+  "rooma-lippu-italia": "Lippu perustuu Ranskan kolmivärin malliin, ja Reggio Emilia hyväksyi sen vuonna 1797. Punainen ja valkoinen tulevat Milanon vaakunasta, vihreä yleisen selityksen mukaan Milanon kaartin asepuvusta (tämä on kiistelty). Savoijin vaakuna poistui lipusta 1946.",
+  "pariisi-lippu-ranska": "Yleisen selityksen mukaan sininen ja punainen ovat Pariisin kaupungin värit ja valkoinen Ranskan kuninkaan väri. Vallankumouksen aikana 1789 ne yhdistettiin kolmivärikokardiksi, ja kolmiväri vahvistettiin kansalliseksi lipuksi 1794.",
+  "lontoo-lippu-iso-britannia": "Lipun loi kuningas Jaakko I vuonna 1606 yhdistämällä Englannin Yrjön punaisen ristin ja Skotlannin Andreaan valkoisen vinoristin sinisellä pohjalla. Kun Irlanti liitettiin kuningaskuntaan 1801, mukaan tuli Pyhän Patrikin punainen vinoristi.",
+  "amsterdam-lippu-alankomaat": "Esikuva on 1500-luvun Prinssinlippu, jonka oranssi-valkoinen-sininen otettiin Oranian ruhtinas Vilhelmin väreistä. Oranssi vaihtui 1600-luvulla punaiseksi; syystä on eri selityksiä, ja yksi niistä on haalistuva oranssi väri. Punavalkosininen vahvistettiin virallisesti vuonna 1937.",
+  "wien-lippu-itavalta": "Punavalkopunainen on Babenbergien herttuasuvun vaakunan väri, ja se tunnetaan 1200-luvulta. Perimätiedon mukaan herttua Leopold V:n valkoinen asu värjäytyi Akkonin piirityksessä 1191 vereen, vyön alta jäi valkoinen kaista. Tarinasta ei ole todisteita."
+}
+```
+
+### Lähteet ja tarkistus (väite → lähteet)
+
+| Maa | Väite | Lähteet (kaksi itsenäistä) | Huomio |
+|---|---|---|---|
+| Ranska | Pariisin sininen ja punainen + kuninkaan valkoinen; kokardi 1789 (Lafayette, heinäkuu 1789); kansallinen lippu 15.2.1794 (asetus 27 pluviôse II) | FOTW (crwflags.com/fotw/Flags/fr_revol.html, fr.html); francethisway.com ja drapeaux-sfv.org (lipun historia) | FOTW: tarina kuninkaasta kokardi hatussa on legenda ja värien merkitykset jälkikäteen keksittyjä, joten teksti ei kerro "vapaus, veljeys, tasa-arvo" -tulkintaa eikä kuninkaan kokardia. "Yleisen selityksen mukaan" kantaa epävarmuuden. 1790 laivaston lippu jätetty pois (lyhyys) |
+| Britannia | 1606 Jaakko I:n julistus (Yrjön risti + Andreaan vinoristi); 1801 Patrikin vinoristi | Flag Institute (flaginstitute.org/wp/uk-flags/union-flag-history/); royal.uk/union-jack; History Today ("The First Union Flag") | Kolme lähdettä sopii. Vuosi 1606 = ensimmäinen yhdistetty lippu (ensin laivoille); 1707 ja 1634 jätetty pois |
+| Alankomaat | Prinssinlippu oranssi–valkoinen–sininen, Vilhelm Oranialaisen livree; punainen oranssin tilalle 1600-luvulla; kuninkaallinen päätös 19.2.1937 (nro 93) | FOTW (crwflags.com/fotw/flags/nl.html); maxvandaag.nl (1937); Wikipedia (Prince's Flag, Statenvlag) | Haalistumisselitys löytyi vain Wikipediasta, joten teksti sanoo "syystä on eri selityksiä, ja yksi niistä on haalistuva oranssi". Ajoitus vaihtelee (1597 / 1630–1650-luku), siksi "1600-luvulla". Muut teoriat (Baijeri, Ranska) jätetty pois. "Virallisesti 1937" = päätös, jolla värit vahvistettiin (ei lakia) |
+| Itävalta | Babenbergien vaakuna punainen–valkoinen–punainen; ensimmäinen merkintä 1230 (Friedrich II) / 1232 asiakirja; Leopold V ja Akkon legenda | Wikipedia (Flag of Austria) ja FOTW (crwflags.com/fotw/flags/at.html) | "Perimätiedon mukaan" + "tarinasta ei ole todisteita": FOTW ei löytänyt tarinan lähdettä, itävaltalaisissa lähteissä sitä ei ole. Tekijä vaihtelee (Leopold V / Friedrich II), joten teksti ei nimeä vaakunan luojaa; "1200-luvulta" riittää. 1918/1945 jätetty pois |
+| Italia | Reggio Emilia 7.1.1797 (Compagnoni, Cispadanan kongressi); malli Ranskan kolmiväri; punainen ja valkoinen Milanon vaakunasta (punainen risti valkoisella), vihreä Milanon kaartin asepuvusta; 1946 tasavalta ilman Savoijin vaakunaa | Quirinale (Il Tricolore, tricolore_en.pdf; päivä, Compagnoni); Wikipedia (Flag of Italy, Flags of Napoleonic Italy); FOTW (it-hist.html); italiani.it; Giornale Digitale ja difesa.it (1946, art. 12) | Näyttämösepän luonnos pitää faktoiltaan: 1797 ✓, Ranskan malli ✓, Milanon vaakuna ✓, nykymuoto 1946 ✓ (muoto vahvistettiin väliaikaisesti 19.6.1946 ja Italian perustuslain 12 artiklassa, voimaan 1948). **Vihreän alkuperä on kiistelty** (toinen tulkinta: Milanon herttuakunnan Visconti-lippu), joten "yleisen selityksen mukaan" ja suluissa "tämä on kiistelty" ovat välttämättömiä. Ensimmäinen lippu oli vaakasuora ja pystyraidat tulivat myöhemmin; teksti ei väitä pystyraitoja |
+
+Huomioita KK:lle ja Näyttämösepälle:
+- Italian Ranska-väite (malli) perustuu kahteen lähteeseen (Wikipedia + Quirinalen oma aineisto kautta italiani.it); suora Quirinalen PDF ei latautunut tarkistuksessa (verkkovirhe), joten Italian teksti on sama kuin Näyttämösepän luonnos mutta lisätty "yleisen selityksen mukaan" ja "kiistelty". Jos KK haluaa lyhyemmän: "Punainen ja valkoinen tulevat Milanon vaakunasta, vihreä luultavasti Milanon kaartin asepuvusta."
+- Tekstit eivät sisällä väritunnuksia eivätkä luettelomaisia piirteitä; kaikki ovat 232–281 merkkiä (enintään noin 300).
+- Peli ei kerro värien "merkityksiä" (esim. Ranskan vapaus/veljeys, Italian vihreä toivo): ne on todettu jälkikäteisiksi tulkinnoiksi eivätkä läpäise tarkistussääntöä 1.
+- `maa`-avaimet ja nimet näytetään kaikkien neljän lipun alla pelin omasta maa-taulusta (suomenkielinen nimi), ei kovakoodattuna.
