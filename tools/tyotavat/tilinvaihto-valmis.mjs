@@ -65,7 +65,7 @@ for (const { rooli, id } of rivit) {
   try { d = JSON.parse(readFileSync(t.polku, 'utf8')); } catch { huom(`${rooli}: sessiotiedosto ei ole JSONia`); continue; }
   if (d.isArchived) huom(`${rooli}: sessio arkistoitu (${id})`);
   if (tili && t.tili !== tili) huom(`${rooli}: sessio on toisella tilillä (${t.tili.slice(0, 8)})`);
-  const malli = /sonnet/.test(d.model || '') ? 'Sonnet 5.5' : /opus/.test(d.model || '') ? 'Opus' : (d.model || '?');
+  const malli = /sonnet/.test(d.model || '') ? 'Sonnet 5.5' : /opus/.test(d.model || '') ? 'Opus' : /fable/.test(d.model || '') ? 'Fable' : (d.model || '?');
   const odotus = malliSarake.get(id) || '';
   if (odotus && (!odotus.includes(malli) || (d.effort && !odotus.includes(d.effort)))) {
     huom(`${rooli}: osoitekirja "${odotus}", sessio ${malli}, ${d.effort}`);
