@@ -14,13 +14,17 @@ Kuva: kaikki 19 lippua ovat jo pelissä (`assets/liput/<tiedosto>.png`, avain Co
 | Kroatia | Vaakaraitojen keskellä on punavalkoruutuinen vaakuna (Ranskan lipussa ei ole tunnusta). |
 | Romania | Keskimmäinen raita on keltainen eikä valkoinen. |
 
-### Iso-Britannia (United-Kingdom.png, 5:3)
-| Harha | Ero Britanniaan |
+### Iso-Britannia (United-Kingdom.png) — uusittu KK 14.12
+Lähdetarkistus: **Englannin lippu (Yrjön risti) EI ole pelin lippulähteessä** (ei `Flag of England.svg`-riviä taulussa `LIPUT_PAIKALLISET`, ei tiedostoa `assets/liput/`); ei ladattu. **Skotlanti on** (`scotland.png`, 5:3, PD; ei `LIPPU_TEKIJAT`-listalla). Myös Wales (`wales.png`), Georgia, Jamaika, Australia ovat lähteessä.
+
+**Suositus (kaikki lähteessä, harhat keskenään erilaisia):**
+| Harha | Ero Britanniaan (yksi virke) |
 |---|---|
-| Australia | Britannian lippu on vain kulmassa, ja loppu on sinistä tähtineen (Britannialla risteilevä kuvio täyttää koko lipun). |
-| Uusi-Seelanti | Britannian lippu on vain kulmassa, ja sinisellä on neljä punaista tähteä. |
-| Fidži | Britannian lippu on vain kulmassa, ja vaaleansinisellä on vaakuna. |
-Huomio: kolme harhaa ovat keskenään samanlaisia (kulmalippu sinisellä), mutta jokainen eroaa oikeasta samalla yhdellä selvällä piirteellä; hyvä "ei ole koko lippu" -koe. Varalla Tuvalu (ei repossa).
+| Skotlanti | Vain valkoinen vinoristi sinisellä (Britannian lipussa on lisäksi punainen risti ja punaiset vinoraidat). |
+| Georgia | Valkoisella pohjalla on vain punainen suora risti ja neljä pientä ristiä (Britannialla on myös vinoristit). |
+| Australia | Britannian lippu on vain kulmassa, ja loppu on sinistä tähtineen. |
+Georgia on Englannin lipun paikalla: se muistuttaa Yrjön ristiä, ja puuttuvan Englannin ero (ei vinoristiä) säilyy. Vaihtoehto Georgian tilalle: **Jamaika** (keltainen vinoristi vihreän ja mustan kolmioilla; "vinoristi, mutta ei punaista eikä sinistä"). **Wales** ei suositella: Wales kuuluu Britanniaan, joten sekä Skotlanti että Wales voivat hämmentää ("eikö se ole Britannian lippu?"); sama koskee Skotlantia, mutta se on KK:n oma ehdotus ja ero (vain vinoristi) on selvä. Jos Englanti halutaan: lippu pitäisi ladata (Commons, PD, yksinkertainen), vaatii KK:n luvan.
+Kysymyslause, jos Skotlanti tuntuu epäreilulta: "Mikä näistä on koko Yhdistyneen kuningaskunnan lippu?" (pelin nimi Iso-Britannia säilyy otsikossa).
 
 ### Alankomaat (Netherlands.png, 3:2)
 | Harha | Ero Alankomaihin |
@@ -48,7 +52,7 @@ Varalla Unkari (raidat vaakasuorassa): jos Irlanti halutaan korvata piirteellä,
 ## 2. Havainnot KK:lle ja Näyttämösepälle
 
 - **Kuvakoko**: repon PNG:t ovat pieniä (Ranska, Italia, Norsunluurannikko, Iso-Britannia, Peru, Libanon, Puola, Kroatia, Australia, Uusi-Seelanti, Fidži 120 px leveitä; Irlanti, Unkari, Alankomaat, Venäjä, Romania, Itävalta 250 px). 3D-kankaaseen (iPad lähikuva) 120 px on pehmeä; pelin `lippuUrl` hakee muuten Commonsin renderin (leveys 320–1600) tai peilin, joten Näyttämöseppä käyttää samaa reittiä kuin visa eikä repon PNG:tä suoraan.
-- **Kuvasuhde antaa vihjeen**: oikeat suhteet ovat Irlanti 2:1, Italia 3:2, Norsunluurannikko 3:2, Meksiko ~7:4, Iso-Britannia 5:3, Australia/Uusi-Seelanti/Fidži 2:1. Kun jokaisella lipulla on oma suhde (KK:n linja), suhde paljastaa osan vastauksesta (esim. Irlanti on Italiaa leveämpi). Ei haittaa, jos kuuluu "ero löytyy katsomalla"; mainittu päätöstä varten.
+- **Kuvasuhde**: KK 14.06: kaikki neljä lippua piirretään samassa kuvasuhteessa, joten vihjettä ei tule (Irlanti 2:1 vs Italia 3:2 ei vaikuta).
 - **Paraguay ja Peru**: Paraguayn lipun kääntöpuolella on eri tunnus, repon kuva on etupuoli. Perun repon kuva on tunnukseton siviililippu (valtionlipussa on vaakuna).
 - **Varat**: Kanada on repossa (assets/liput/canada.png), Tuvalu ei; Tuvalu vaatisi uuden latauksen, joten sitä ei käytetä ilman KK:n lupaa.
 
@@ -63,7 +67,7 @@ Varalla Unkari (raidat vaakasuorassa): jos Irlanti halutaan korvata piirteellä,
   { "id": "pariisi-lippu-ranska", "tyyppi": "valitse", "kysymys": "Mikä näistä on Ranskan lippu?",
     "oikea": { "maa": "ranska" }, "vaarat": [ { "maa": "alankomaat" }, { "maa": "kroatia" }, { "maa": "romania" } ] },
   { "id": "lontoo-lippu-iso-britannia", "tyyppi": "valitse", "kysymys": "Mikä näistä on Ison-Britannian lippu?",
-    "oikea": { "maa": "iso-britannia" }, "vaarat": [ { "maa": "australia" }, { "maa": "uusi-seelanti" }, { "maa": "fidži" } ] },
+    "oikea": { "maa": "iso-britannia" }, "vaarat": [ { "maa": "skotlanti" }, { "maa": "georgia" }, { "maa": "australia" } ] },
   { "id": "amsterdam-lippu-alankomaat", "tyyppi": "valitse", "kysymys": "Mikä näistä on Alankomaiden lippu?",
     "oikea": { "maa": "alankomaat" }, "vaarat": [ { "maa": "ranska" }, { "maa": "venäjä" }, { "maa": "paraguay" } ] },
   { "id": "wien-lippu-itavalta", "tyyppi": "valitse", "kysymys": "Mikä näistä on Itävallan lippu?",
@@ -86,7 +90,7 @@ Muoto `tyyppi: "erottele"`, tekijän maa ratkaisee (KK 10.44). Vain teos-id:t, j
   "omat": { "maa": "alankomaat",
             "teokset": ["SK-C-5", "SK-A-2344", "SK-A-135", "SK-A-1718", "SK-C-211", "SK-A-354", "SK-A-385", "SK-C-206"] },
   "vieraat": [ { "maa": "ranska",
-            "teokset": ["louvre-inv-8525", "louvre-inv-3692", "louvre-inv-3699", "louvre-rf-129", "marmottan-4014"] } ] }
+            "teokset": ["louvre-inv-8525", "louvre-inv-3692", "louvre-inv-3699", "orsay-rf-2739", "marmottan-4014"] } ] }
 ```
 
 | Rooli | id | Teos | Tekijä, vuosi | Lisenssi |
@@ -102,15 +106,15 @@ Muoto `tyyppi: "erottele"`, tekijän maa ratkaisee (KK 10.44). Vain teos-id:t, j
 | vieras | louvre-inv-8525 | Pyhiinvaellus Kytheraan | Watteau, 1717 | PD-Art |
 | vieras | louvre-inv-3692 | Horatiusten vala | David, 1784 | PD-Art |
 | vieras | louvre-inv-3699 | Napoleonin kruunajaiset | David, 1805–07 | PD-Art |
-| vieras | louvre-rf-129 | Vapaus johtaa kansaa | Delacroix, 1830 | PD-Art |
+| vieras | orsay-rf-2739 | Tanssiaiset Moulin de la Galettessa | Renoir, 1876 | PD-Art |
 | vieras | marmottan-4014 | Impressio, auringonnousu | Monet, 1872 | PD-Art |
 
 Luvut: omat 8, vieraat 5, kierros 6 → kumpaakin vähintään 2 (kierros on 2–4 vierasta ja 2–4 omaa).
 
 Valintaperusteet ja pois jätetyt:
 - Omat: viisi eri maalaria + kolme (Hals, Steen, Potter, Ruysch) tunnettuja; kaikki ennen 1873 ja ei tekijäkiistaa. Pois: **SK-A-4691** (Omakuva n. 1628, "after Rembrandt"-kiista), **SK-A-3957** (Cuyp, mahdollinen pastissi), **SK-C-374** (Codde + Hals yhdessä), **SK-A-4** (Asselijn syntyi Dieppessä), Leyster-teokset ("mainittu teoksessa"; Iloinen juoja -nimi sama kuin Halsilla, sekoittaa), Mauritshuis/Hals-museo/Van Gogh -museon kuvat (kuvaehdot erikseen, ks. taidemuseo-alankomaat-aineisto-20261009.md).
-- Vieraat: vain ranskalaisia tekijöitä (tekijän maa). **Älä käytä** ranska-aineistosta: **Rembrandtin Batseba (louvre-mi-957)** ja **Van Goghin Tähtikirkas yö / Auversin kirkko (orsay-rf-1975-19, orsay-rf-1951-42)** ovat hollantilaisia ranskalaisessa museossa; Leonardo, Rafael, Veronese, Tiziano ovat italialaisia (vain jos vieraat-lista saa toisen maan: `maa: "italia"`, Mona Lisa tunnetuin houkutin, mutta UI:n maa-avaimet vaativat `ui.erottele.maa.italia`); Cassatt on amerikkalainen. Alastomuus/ruumiit pois: Olympia, Aamiainen ruohikolla, Suuri odaliski, Sardanapalos, Medusan lautta, Khioksen verilöyly, Pelihulluuden riivaama nainen.
-- Vaikeus: Watteau, David, Delacroix ja Monet näyttävät eri tyyliltä kuin hollantilainen 1600-luku, joten ero löytyy katsomalla. Vaikeampaan versioon (samaan alkioon myöhemmin) kuuluvat Poussin (louvre-inv-7300), La Tour (louvre-rf-1972-8) ja Chardin (louvre-inv-3197): ranskalaisia, mutta 1600–1700-luvun tyyli lähellä hollantilaista. Ranska-aineisto ei sisällä flaamilaisia naapureita (Rubens, Van Dyck); ne vaatisivat uuden latauksen (KK:n lupa), tutkimuksessa on 11 vapaata (amsterdam-tutkimus.md kohta c).
+- Vieraat: vain ranskalaisia tekijöitä (tekijän maa). **Älä käytä** ranska-aineistosta: **Rembrandtin Batseba (louvre-mi-957)** ja **Van Goghin Tähtikirkas yö / Auversin kirkko (orsay-rf-1975-19, orsay-rf-1951-42)** ovat hollantilaisia ranskalaisessa museossa; Leonardo, Rafael, Veronese, Tiziano ovat italialaisia (vain jos vieraat-lista saa toisen maan: `maa: "italia"`, Mona Lisa tunnetuin houkutin, mutta UI:n maa-avaimet vaativat `ui.erottele.maa.italia`); Cassatt on amerikkalainen. Alastomuus/ruumiit pois (KK 14.12): **Vapaus johtaa kansaa (louvre-rf-129: paljas rinta, ruumiita etualalla)**, Olympia, Aamiainen ruohikolla, Suuri odaliski, Sardanapalos, Medusan lautta, Khioksen verilöyly, Pelihulluuden riivaama nainen.
+- Vaikeus: Watteau, David, Renoir ja Monet näyttävät eri tyyliltä kuin hollantilainen 1600-luku, joten ero löytyy katsomalla. Vaikeampaan versioon (samaan alkioon myöhemmin) kuuluvat Poussin (louvre-inv-7300), La Tour (louvre-rf-1972-8) ja Chardin (louvre-inv-3197): ranskalaisia, mutta 1600–1700-luvun tyyli lähellä hollantilaista. Ranska-aineisto ei sisällä flaamilaisia naapureita (Rubens, Van Dyck); ne vaatisivat uuden latauksen (KK:n lupa), tutkimuksessa on 11 vapaata (amsterdam-tutkimus.md kohta c).
 - Tarkistettu (ei uusia latauksia): kaikilla 13 teoksella on `kuva.seina_lahde` pelin teokset.json:ssa; kuvasuhteet 0,82–1,73 (Avercamp 1,73 on leveä, Ruysch 0,82 korkea) → eri muotoisia, ei vihjettä.
 - Amsterdamin kohtaaminen: Yara (kohtaamisraportti c1, `js/packs/kohtaamiset.js`) on olemassa, joten kohta 4 "alle 4 teosta / ei kohtaamista" ei lauennut; luku KK:lle tarpeeton.
 - Nykyinen `erottele.json` (ranska-maalarit: omat ranska, vieraat alankomaat) kääntyy tähän: omat alankomaat, vieraat ranska, kaupunki amsterdam. Teokset SK-C-5 ja SK-A-2344 olivat siinä vieraina; sama kuva ei siis ole kahdessa roolissa samassa kaupungissa.
