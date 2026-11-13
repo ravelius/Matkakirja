@@ -108,6 +108,18 @@ dialog.tk-kortti[open]:has(.tk-lista--loki) > :not(.tk-lista--loki) { flex: none
   color: var(--tk-muste-pehmea);
 }
 .apuraha-lappu .tk-kortti .apuraha-hetki .tk-leipa:last-child { margin-bottom: 0; }
+/* Leveä ruutu (KK 13.11. 22.58): v9-kortti noin 900 px, kuvat koko kortin levyisinä ja tekstit keskitetyssä lukupalstassa
+   (enintään 640 px). Natiivin iPad vaaka samoin (Apuraha.cs). */
+@media (min-width: 1000px) {
+  .dialog.apuraha-lappu--9,
+  .apuraha-lappu--9 .dialog-card.tk-kortti { max-width: var(--tk-leveys-levea); }
+  .apuraha-lappu--9 .tk-kortti > :not(.apuraha-iso):not(.apuraha-hetket),
+  .apuraha-lappu--9 .tk-kortti .apuraha-hetki > :not(.apuraha-iso):not(.apuraha-kuvarivi) {
+    max-width: var(--tk-leveys-lukupalsta);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /* Listarivin kuva (esittely.json "rivi"): rivi pitää kuvan sisällään, seuraava rivi alkaa kuvan alta. */
 .apuraha-lappu .tk-kortti .tk-lista li::after { content: ''; display: block; clear: both; }
 /* Vanhan dialogikortin katkoviivakehys (::before, absoluuttinen) vierii pitkän kortin sisällön mukana ja piirtyi

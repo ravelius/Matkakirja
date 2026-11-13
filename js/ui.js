@@ -17764,6 +17764,8 @@ export class UI {
 
     // Versio 9 (esittely.json hetket): uusi asettelu; kappaleet ja kuvat ovat vain vanhoille sovellusversioille.
     const uusi = Array.isArray(esittely.hetket);
+    // Leveällä ruudulla (≥ 1000 px) v9-kortti on leveämpi ja tekstit lukupalstassa (css dialogit.css .apuraha-lappu--9).
+    if (uusi) lappu.classList.add('apuraha-lappu--9');
     // Kaikki kuvat suurennoksen selaukseen kortin järjestyksessä (kappaleiden kuvat, sitten loppurivi; v9: avauskuva
     // ja hetkien kuvat).
     const kaikkiKuvat = uusi
