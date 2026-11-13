@@ -4,7 +4,7 @@ TAVOITE: Pelaaja etsii kaupunki kerrallaan unohdettuja aarteita isoisän jäljil
 
 SÄÄNNÖT:
 1. Aarteelle mennään kartan vihreästä pisteestä; se syttyy matkan ensimmäisestä oikeasta visavastauksesta (myös tarinapaikan kysymys) ja on sitten auki joka kaupungissa. Pisteessä tavataan henkilö ja ratkaistaan aarretehtävä; Etsi aarre -nappia ei ole. [R-2.147] [R-2.27] [P-261112-27]
-2. Aarretehtävään on kaksi yritystä, ja kohtaamiskortti kertoo sen etukäteen. Kahden virheen jälkeen aarre lukkiutuu, mutta matka jatkuu. Kahdessa koekaupungissa voi valita vaikeamman (neljä vähemmän tunnettua); palkintona isoisän merkintä rajaa kartalta pois puolet jäljellä olevista kaupungeista. [R-2.24] [P-261113-9] [P-261113-12]
+2. Aarretehtävään on kaksi yritystä, ja kohtaamiskortti kertoo sen etukäteen. Kahden virheen jälkeen aarre lukkiutuu; matka jatkuu. Kahdessa koekaupungissa voi valita vaikeamman (neljä vähemmän tunnettua); palkintona isoisän merkintä rajaa kartalta pois puolet jäljellä olevista kaupungeista. [R-2.24] [P-261113-9] [P-261113-12]
 3. Aarretehtävä on toistaiseksi vain tietovisa, vihje ennen sitä; kokeilun muut tyypit eivät näy. Väittämä on jo kaupungin merkinnässä. Näyttämöllä myös Erottele ja Paljasta (vieras patsas muualta). [R-2.24] [P-261112-34] [P-261113-4]
 4. Näkyvin apu on pullavinkki: pulla pululle punnilla, halvempi kuin matkalippu, kerran aarteelle. 50:50 on hiljainen vara. [R-2.24]
 5. Sähketehtävä on toinen avaustapa: Livian tehtävä ratkeaa maan aineistoista valinnoilla, ilman kohtaamista. [R-2.25]
@@ -16,7 +16,7 @@ SÄÄNNÖT:
 11. Löytöteksti: lyhyt tosi fakta ja onnentoivotus; muut huudahdukset enintään kaksi sanaa. [R-2.20] [R-2.21]
 12. Euroopassa aarteen ensimmäinen avaus avaa kaupungin valmiin linssin. [R-2.17]
 13. Seitsemäs pääaarre on tarinan huipennus, mutta matkaa voi jatkaa; ennen päivää 80 löydettynä se antaa myymättömän Seitsemän peninkulman linssin. [R-2.7] [R-2.8]
-14. Aarre sykkii kultaisena hunnun päällä. Laskuri Etsityt kaupungit: avatut Euroopan aarteet. [R-2.188] [R-2.162]
+14. Aarre sykkii kultaisena hunnun päällä. Laskuri Etsityt kaupungit: avatut Euroopan aarrekaupungit. [R-2.188] [R-2.162]
 15. Säilynyt ihme on kohde, jonka kortissa on nappi ihmekuvaan; kadonnut avaa ihmekuvan suoraan. [R-2.50]
 
 EI VIKA:
