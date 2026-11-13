@@ -1,4 +1,4 @@
-# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17)
+# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17; Pompidou ilman kuvaa ja kaikki ilman miniatyyriä KK 21.59; korjaukset 22.03: Saint-Eustache "Kirkon paikalla", Saint-Jacques kaupan ehto ja Pascal-virke; kohta 2: Eustachen 3. ja 4. kappale yhdistetty yhdeksi, kortissa nyt kolme kappaletta)
 
 **Korjaukset 13.53 (10 kpl) ja nimi 14.17 tehty tähän tiedostoon; vuosivirkkeet sanatarkasti ennallaan.** Kortin ja lapun nimi on **Pompidou-keskus** (ei "Centre Pompidou"; pelin muut Pariisin kohteet käyttävät suomenkielistä nimeä ja kartan malli on jo sillä nimellä). Ranskankieliset lähde- ja tiedostonimet (centrepompidou.fr, Commons-tiedostot) säilyvät sellaisinaan.
 
@@ -17,8 +17,8 @@ Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kapp
       + 'Compostelaan vievistä pyhiinvaellusreiteistä.'
     + '\n\n'
     + 'Vallankumouksen vuosina kirkko myytiin louhokseksi, ja sen kivet '
-      + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehdoksi '
-      + 'kerrotaan, ettei sitä saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
+      + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona '
+      + 'kerrotaan olleen, ettei tornia saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
       + 'tornin, ja 1850-luvulla sen ympärille tehtiin '
       + 'puisto, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
       + 'de Sébastopolin juuri tornin eteen.'
@@ -26,8 +26,8 @@ Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kapp
     + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäinen patsas '
       + 'syöstiin alas vallankumouksen aikana, ja nykyinen on 1800-luvun '
       + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
-      + 'sanotaan tehneen tornissa ilmanpainekokeita — mistä historioitsijat '
-      + 'ovat kuitenkin eri mieltä. Sääasema perustettiin torniin vasta 1891.',
+      + 'sanotaan tehneen tornissa ilmanpainekokeita — tosin historioitsijat '
+      + 'ovat tästä eri mieltä. Sääasema perustettiin torniin vasta 1891.',
   kuvat: [
     {
       tiedosto: 'Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg',
@@ -80,7 +80,7 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
     + '\n\n'
     + 'Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä; '
       + 'tori siirrettiin Rungisiin vuonna 1969. '
-      + 'Sen paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
+      + 'Kirkon paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
       + 'seurakunta kasvoi ja kappeli kävi pieneksi. Rakentaminen kesti yli '
       + 'sata vuotta, ja tulos on sekoitus: rakenne on goottilaista, koristeet '
       + 'renessanssia.'
@@ -90,9 +90,8 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
       + 'hän rakennutti 1655 tornien alle kaksi kappelia, ja julkisivu '
       + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
       + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
-      + 'täällä ensimmäisellä ehtoollisellaan 1649.'
-    + '\n\n'
-    + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
+      + 'täällä ensimmäisellä ehtoollisellaan 1649. '
+      + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
       + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
   kuvat: [
     {
@@ -158,14 +157,7 @@ Kokoelmakortti (`maa-kategoriat.js` r. 10070, nimi "Centre Pompidou — nykytait
       + 'tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
       + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
       + 'avautua uudelleen vuonna 2030.',
-  kuvat: [
-    {
-      tiedosto: 'Centre Pompidou @ Beaubourg @ Paris (15448205062).jpg',
-      lyhyt: 'Pompidou-keskuksen rakennustyöt alkoivat 1972 ja keskus avattiin 1977; rakenteet ja putket ovat ulkopuolella.',
-      selite: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus avattiin vuonna 1977; rakenteet, putket ja liukuportaat ovat rakennuksen ulkopuolella.',
-      lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
-    },
-  ],
+  kuvat: [],
   lahde: 'Wikipedia',
 },
 ```
@@ -191,10 +183,8 @@ Kokoelmakortti (`maa-kategoriat.js` r. 10070, nimi "Centre Pompidou — nykytait
 - Sulkemisen päivä: en-Wikipedia 2.3.2025 ja 22.9.2025; Euronews/muut "2025" → vain "nykyään suljettu… 2030". Remontin budjetti ja alkamisaika vaihtelevat lähteissä → ei mainita.
 - Mitat (166 × 45 m, korkeus 42 m: Fondazione Renzo Piano ja fr-Wikipedia sopivat) jätetty pois koristelukuina (kortti lahteet-ja-tarkistus 4); saatavilla varalle.
 
-### Valokuvaehdokkaat
-1. `File:Centre Pompidou @ Beaubourg @ Paris (15448205062).jpg` — Guilhem Vellut, CC BY 2.0, 5.9.2014; julkisivu ja ulkoportaat, piazza edessä (vähän ihmisiä, ei erottuvia kasvoja). **Ensisijainen.** Katsottu silmin.
-2. `File:Centre Pompidou @ Jardin Anne-Frank.jpg` — Rémih, CC BY-SA 4.0, 4.10.2026; punaiset ja siniset putket ja tuuletusaukot rakennuksen takaa. Sopii värikoodauksen kuvaksi. Katsottu silmin.
-Huomio: kaikki kolme (Vellut, Rémih ja DXR) ovat CC BY / CC BY-SA, jotka vaativat tekijän ja lisenssin näyttämisen kuvatekstissä (kuten nykyiset `lahde`-rivit).
+### Kuva (KK 21.59)
+**Pompidousta ei valokuvaa:** Ranskassa ei ole kaupallista panoraamavapautta, ja rakennus on suojattu teos (Piano elää; Rogers kuoli 2021), joten kortti on `kuvat: []`. Edellisen version ehdokkaat (Vellut, Rémih) on poistettu; ei latauksia. Tour Saint-Jacques ja Saint-Eustache säilyttävät kuvaehdokkaansa (1800-lukua vanhemmat rakennukset, ei suojaa). **Ilman miniatyyriä** (ei piirrettyä kutsuminiatyyriä, ei generointia) kaikille kolmelle.
 
 ## VANHENEE
 - **Pompidou-keskus: uudelleenavaus 2030.** Kortin viimeinen virke ("nykyään suljettu… määrä avautua uudelleen vuonna 2030") vanhenee, kun keskus avataan (lähteet: Euronews 11.5.2023 ja 9.8.2025). Tarkista ennen 2030.

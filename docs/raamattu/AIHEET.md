@@ -11,7 +11,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kaupungit | Kaupungit | KS | 3.0 kt | 13.11.2026 |
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
 | opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 3.0 kt | 12.11.2026 |
-| kamera | Kamera | PK | 2.8 kt | 12.11.2026 |
+| kamera | Kamera | PK | 3.0 kt | 13.11.2026 |
 | juoksupeli | Juoksupeli | PK | 2.8 kt | 12.11.2026 |
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | 3.0 kt | 12.11.2026 |
 | museot | Museot | LAV | 2.9 kt | 12.11.2026 |
@@ -29,7 +29,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | ui-pohjat | UI-pohjat | NUI | 3.0 kt | 12.11.2026 |
 | tyylikirja | Tyylikirja | NUI | 3.0 kt | 12.11.2026 |
 | tekstit-ja-kieli | Tekstit ja kieli | SK | 2.7 kt | 12.11.2026 |
-| lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.5 kt | 12.11.2026 |
+| lahteet-ja-tarkistus | Lähteet ja tarkistus | SK | 2.6 kt | 12.11.2026 |
 | kertojaaanet | Kertojaäänet | ÄÄ | 2.9 kt | 12.11.2026 |
 | aaniluvat-ja-aaniportti | Ääniluvat ja ääniportti | ÄÄ | 2.9 kt | 12.11.2026 |
 | musiikki-ja-tehosteet | Musiikki ja tehosteet | ÄÄ | 2.7 kt | 12.11.2026 |
@@ -49,8 +49,8 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kone-ja-levy | Kone ja levy | PT | 2.9 kt | 12.11.2026 |
 | tilit-ja-kiintio | Tilit ja kiintiö | PT | 2.5 kt | 12.11.2026 |
 | avaimet-ja-luvat | Avaimet ja luvat | PT | 2.8 kt | 12.11.2026 |
-| roolit-ja-viestit | Roolit ja viestit | PT | 2.8 kt | 12.11.2026 |
-| omistajan-kanssa | Omistajan kanssa | KK | 2.9 kt | 12.11.2026 |
+| roolit-ja-viestit | Roolit ja viestit | PT | 2.9 kt | 13.11.2026 |
+| omistajan-kanssa | Omistajan kanssa | KK | 3.0 kt | 13.11.2026 |
 | nollaus-ja-luovutus | Nollaus ja luovutus | PT | 2.9 kt | 12.11.2026 |
 | tyolista-ja-karjet | Työlista ja kärjet | KK | 2.9 kt | 12.11.2026 |
 | agentit-ja-komennot | Agentit ja komennot | PT | 2.9 kt | 12.11.2026 |

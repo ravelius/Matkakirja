@@ -90,7 +90,7 @@ const GUIMARD_VISA = {
   oikea: 1,
   fakta: 'Kilpailun 21 ehdotuksesta yksikään ei kelvannut. Guimard '
     + 'piirsi vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
-    + 'sisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
+    + 'sisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
 };
 
 export const FOKUSVIRTA_PARIISI = {
@@ -1063,7 +1063,7 @@ export const FOKUSVIRTA_PARIISI = {
           + '1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. Yhtään naista '
           + 'listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 '
           + 'nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa '
-          + 'miesten nimien yläpuolelle vuonna 2027.',
+          + 'miesten nimien yläpuolelle, kunhan kolme akatemiaa on antanut lausuntonsa.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Tornissa on 72 '
         + 'nimeä kullalla" (js/packs/kulttuuri-kategoriat.js). Teksti '
@@ -1080,6 +1080,24 @@ export const FOKUSVIRTA_PARIISI = {
         'Ketkä ovat sen toisen, vuonna 2026 julkistetun listan nimet?',
         'Miten 72 nimeä valittiin tornin kylkeen?',
       ],
+      /*
+       * MINITEHTÄVÄ (SK:n v2, KK 13.15; docs/raportit/minitehtava-kolme-pariisin-nostoa-20261113.md).
+       * Vastaus on noston omassa tekstissä ("72 ranskalaista tiedemiestä ja insinööriä"); väärät
+       * ovat uskottavia arvauksia. Oikea ei ole pisin. Peli ei sekoita järjestystä, joten oikean
+       * paikka vaihtelee nostosta toiseen.
+       */
+      visa: {
+        kysymys: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää kullattu nimilista. '
+          + 'Keiden nimiä siinä on?',
+        vaihtoehdot: [
+          'Tornin rakentaneiden 72 työmiehen ja insinöörin',
+          '72 ranskalaisen tiedemiehen ja insinöörin',
+          'Ranskan vallankumouksen 72 sankarin',
+        ],
+        oikea: 1,
+        fakta: 'Kirjaimet ovat 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja '
+          + 'tehtiin näkyviin uudelleen 1980-luvun lopulla.',
+      },
       // Eiffel-torni 48,85822 N / 2,2945 E — sama piste kuin nostolla
       // `lustig-eiffel` (en-Wikipedia "Eiffel Tower").
       paikka: {
@@ -1111,7 +1129,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'jotka sopivat yhteen kuin rakennussarja: samoista paloista sai '
           + 'kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä '
           + 'tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. '
-          + 'Jäljellä olevista 88:sta 86 on rauhoitettu, suurin osa vuonna 1978.',
+          + 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Metron '
         + 'sisäänkäynti koottiin palasista" (js/packs/kulttuuri-kategoriat.js). '
@@ -1119,7 +1137,7 @@ export const FOKUSVIRTA_PARIISI = {
         + '13.9.2026.',
       kuva: {
         tiedosto: '01 Guimard\'s Métropolitain.jpg',
-        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
+        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
         lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
       },
       kysymykset: [
@@ -1127,6 +1145,21 @@ export const FOKUSVIRTA_PARIISI = {
         'Mitä vakio-osista kasaaminen tarkoitti käytännössä?',
         'Miksi puolet sisäänkäynneistä purettiin?',
       ],
+      /*
+       * MINITEHTÄVÄ (SK:n v2, KK 13.15; kysymys vaihdettu KK 14.15): vastaus on vain noston tekstissä ("Sitten
+       * tyyli meni pois muodista ja puolet purettiin"). Ei kysytä työn saamista eikä vakio-osia: lehden sivun 3
+       * JULISTE-tehtävä (GUIMARD_VISA) kysyy ensimmäistä ja sen fakta paljastaa toisen.
+       */
+      visa: {
+        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin 167, mutta puolet niistä purettiin. Miksi?',
+        vaihtoehdot: [
+          'Valurauta ruostui käyttökelvottomaksi',
+          'Ne vaurioituivat sodissa',
+          'Tyyli meni pois muodista',
+        ],
+        oikea: 2,
+        fakta: 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+      },
       paikka: {
         nimi: 'Metro 1900',
         laudat: {

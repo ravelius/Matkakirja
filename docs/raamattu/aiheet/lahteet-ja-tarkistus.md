@@ -18,6 +18,7 @@ SÄÄNNÖT:
 EI VIKA:
 - Päiväntasaajan Guinean pääkaupunki on Ciudad de la Paz; Malabo mainitaan esittelyssä.
 - Pyöristetty luku (lähes sata metriä, 1430-luvulla) on päätös, ei epätarkkuus.
+- Pompidou-keskuksen kortin tieto sulkemisesta ja avautumisesta 2030 jää korttiin; se päivitetään vuonna 2030.
 
 TEKOTAPA:
 - Luettavan tekstin muutos: tools/aanitysjono/tarkista.mjs (jonorivi samaan committiin).

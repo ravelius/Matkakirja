@@ -5689,8 +5689,8 @@ export const NAHTAVYYSJUTUT = {
         + 'maalilla 1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. '
         + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
         + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
-        + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna '
-        + '2027.',
+        + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle, '
+        + 'kunhan kolme akatemiaa on antanut lausuntonsa.',
       kuvat: [
         {
           tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
@@ -5711,11 +5711,11 @@ export const NAHTAVYYSJUTUT = {
         + 'valurautaisia vakio-osia, jotka sopivat yhteen kuin '
         + 'rakennussarja: samoista paloista sai kasattua sopivan '
         + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
-        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevista 88:sta 86 on rauhoitettu, suurin osa vuonna 1978.',
+        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
       kuvat: [
         {
           tiedosto: "01 Guimard's Métropolitain.jpg",
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
+          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
           lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
         },
       ],

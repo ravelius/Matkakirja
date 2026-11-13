@@ -1,4 +1,4 @@
-# roolit-ja-viestit · vastuu PT · tarkistettu 12.11.2026
+# roolit-ja-viestit · vastuu PT · tarkistettu 13.11.2026
 
 TAVOITE: Jokainen sessio tietää, kuka päättää, kuka tekee ja minne tulos lähtee. Tieto menee perille yhdellä viestillä, eikä työ seiso viestin, luvan tai jumin takia.
 
@@ -17,6 +17,7 @@ SÄÄNNÖT:
 12. Yhteisen ominaisuuden rajapinnasta sovitaan ennen rinnakkaista työtä; toisen tiedostoja ei paikata hiljaa. [R-7.17]
 13. Ennen isoa erää tai toisen roolin avointa kohtaa katsotaan muiden haarat; jos toinen on asiassa, sovitaan ennen koodia. [R-7.28]
 14. PT harkitsee tilanteen eikä sovella sääntöä sokeasti. Käskyssä on ehdon lähde; PT:n oma ehto puretaan, kun se estää omistajan sanat. Yöllä PT kysyy KK:lta. [R-7.35] [R-9.5] [R-7.24]
+15. Yö on 23–08 kaikille rooleille. Omistajan hyvän yön toivotus aloittaa yön ja huomenen toivotus päättää sen aiemmin. [P-261113-18]
 
 EI VIKA:
 - Rooli ei kuittaa saamaansa viestiä.
