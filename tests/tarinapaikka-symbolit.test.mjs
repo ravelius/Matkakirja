@@ -39,3 +39,23 @@ for (const { kaupunki, k } of tarinapaikat) {
     assert.equal(nostosymPaakategoria(nosto.symboli), odotus, `${k.nosto}: symboli ${nosto.symboli} ei vastaa merkkiä ${k.merkki}`);
   });
 }
+
+/*
+ * KAIKKI TÄKYNOSTOT (KK 13.11.2026 klo 10.18; SK:n taulukko docs/raportit/takynostojen-symboliehdotus-20261113.md):
+ * symboli kirjoitetaan aina näkyviin, jotta kortti ei putoa oletukseen 'huuto' = SKANDAALIT. Käydään virta kerrallaan,
+ * koska sama tunnus voi esiintyä kahden kaupungin virrassa.
+ */
+const kaikki = [];
+for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT))
+  for (const n of virta?.takynostot ?? []) kaikki.push({ kaupunki, n });
+
+test('täkynostoja löytyy kaikista virroista (yli 100)', () => {
+  assert.ok(kaikki.length > 100, `vain ${kaikki.length}`);
+});
+
+for (const { kaupunki, n } of kaikki) {
+  test(`${kaupunki} / nosto-${n.id}: symboli kirjoitettu ja tunnettu`, () => {
+    assert.ok(NOSTOSYM_TYYPIT.has(n.symboli), `symboli puuttuu tai tuntematon (${n.symboli}) → kortti näyttäisi SKANDAALIT`);
+    assert.ok(nostosymPaakategoria(n.symboli), `symbolilla ${n.symboli} ei ole kartan pääkategoriaa`);
+  });
+}

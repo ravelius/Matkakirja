@@ -780,6 +780,7 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Sutton Hoo',
       otsikko: 'Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi '
         + 'laivan, josta ei ollut jäljellä yhtään lautaa',
+      symboli: 'historia',
       lunastus: [
         'Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut '
           + 'avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne '

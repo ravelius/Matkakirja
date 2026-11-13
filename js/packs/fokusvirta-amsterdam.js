@@ -885,6 +885,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        *     hintakuplana.
        */
       id: 'tulppaanimania',
+      symboli: 'kauppa',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Alkmaar',
       otsikko: 'Yhdestä sipulista maksettiin kanavatalon hinta, ja '
@@ -988,6 +989,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       id: 'afsluitdijk',
       nimio: 'Afsluitdijk',
       otsikko: 'Meri suljettiin kuin ovi, ja siitä tuli järvi',
+      symboli: 'tekniikka',
       lunastus: [
         'Zuiderzee oli matala merenlahti, joka nousi tulvina '
           + 'rantakyliin niin kauan kuin kukaan muisti. Insinööri '
@@ -1081,6 +1083,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       nimio: 'Delftin linssit',
       otsikko: 'Salaisuus, jonka hän vei hautaan, luettiin neutroneilla '
         + 'kolmesataa vuotta myöhemmin',
+      symboli: 'tekniikka',
       lunastus: [
         'Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti '
           + 'langan tiheyttä suurennuslasilla — siitä kaikki alkoi. Hän '
@@ -1173,6 +1176,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       nimio: 'Loevesteinin arkku',
       otsikko: 'Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — '
         + 'juuri niin kauan kuin venematka kesti',
+      symboli: 'historia',
       lunastus: [
         'Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen '
           + 'Loevesteinin linnaan tasavallan uskontokiistojen takia. '

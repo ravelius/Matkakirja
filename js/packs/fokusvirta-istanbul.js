@@ -807,6 +807,7 @@ export const FOKUSVIRTA_ISTANBUL = {
   takynostot: [
     {
       id: 'schliemann',
+      symboli: 'huuto',
       /*
        * JUTUN KOHDE ON KARTAN OMA TROIJA (js/packs/fokuskohteet-tur.js
        * `troija` — sama kumpu, sama kaivaus). Yhtenäisen kohdemallin

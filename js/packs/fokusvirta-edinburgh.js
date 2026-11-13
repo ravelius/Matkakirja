@@ -894,6 +894,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       nimio: 'Skara Brae',
       otsikko: 'Myrsky riisui hiekan kummun päältä, ja alta tuli esiin '
         + 'kylä, jonka viimeinen asukas lähti neljätuhatta vuotta sitten',
+      symboli: 'historia',
       lunastus: [
         'Talvella 1850 Skotlantiin iski myrsky, joka tappoi yli kaksisataa '
           + 'ihmistä ja repi rannikkoa auki. Orkneyn Mainlandilla, '
@@ -998,6 +999,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       nimio: 'Bell Rock',
       otsikko: 'Majakka, jonka perustus on veden alla kaksikymmentä tuntia '
         + 'vuorokaudessa — ja joka on seissyt siinä yli kaksisataa vuotta',
+      symboli: 'tekniikka',
       lunastus: [
         'Yksitoista mailia Tayn suulta itään on kallio, joka ei näy. '
           + 'Muutamaa tuntia päivässä lukuun ottamatta se on juuri veden '
@@ -1105,6 +1107,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       nimio: 'St Kilda',
       otsikko: 'Kolmekymmentäkuusi ihmistä pyysi itse pois saareltaan, ja '
         + 'jälkeen jäi tuhat kaksisataa kivivarastoa',
+      symboli: 'historia',
       lunastus: [
         'Kolmekymmentäviisi meripeninkulmaa North Uistista länsiluoteeseen '
           + 'on saaristo, jonka kalliot ovat Britannian korkeimmat: '
@@ -1211,6 +1214,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       nimio: 'Fingalin luola',
       otsikko: 'Luola, jonka basalttipylväät ovat kuusikulmaisia — ja '
         + 'jonka nimi gaeliksi tarkoittaa soivaa',
+      symboli: 'luonto',
       lunastus: [
         'Sisä-Hebrideillä on asumaton saari nimeltä Staffa. Viikingit '
           + 'antoivat sille nimen, joka tarkoittaa pylvästä, koska saaren '

@@ -744,6 +744,7 @@ export const FOKUSVIRTA_ROOMA = {
   takynostot: [
     {
       id: 'kissat',
+      symboli: 'elain',
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Caesarin kissat',
       /*

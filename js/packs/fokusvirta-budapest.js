@@ -734,6 +734,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        * kokonaan uusiksi.
        */
       id: 'szegedin-tulva',
+      symboli: 'historia',
       /*
        * JUTUN KOHDE ON KARTAN OMA SZEGED (js/packs/fokuskohteet-hun.js
        * `szeged` — tulva vei juuri sen kaupungin, ja noston paikka on

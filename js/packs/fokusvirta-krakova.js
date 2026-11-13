@@ -1145,6 +1145,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        * tarvitse sitä: sen aihe on suola, kappeli ja kaksi prosenttia.
        */
       id: 'wieliczka',
+      symboli: 'historia',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Wieliczka',
       /*
@@ -1289,6 +1290,7 @@ export const FOKUSVIRTA_KRAKOVA = {
       nimio: 'Toruń',
       otsikko: 'Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan '
         + 'kaksisataa vuotta',
+      symboli: 'ruoka',
       lunastus: [
         'Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti '
           + 'on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy '
@@ -1400,6 +1402,7 @@ export const FOKUSVIRTA_KRAKOVA = {
       nimio: 'Wrocław',
       otsikko: 'Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on '
         + 'polven korkeudella',
+      symboli: 'kulttuuri',
       lunastus: [
         'Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on '
           + 'muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, '

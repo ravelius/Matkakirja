@@ -631,6 +631,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       id: 'maailmannayttely-1873',
       nimio: 'Näyttely ja pörssi',
+      symboli: 'kauppa',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * näyttelyalue oli Praterissa, joka jää Wienin kohdekartan
@@ -745,6 +746,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       id: 'kirahvimuoti',
       nimio: 'Kirahvi ja muoti',
+      symboli: 'kulttuuri',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * Schönbrunnin eläintarha on kaupunkilehden kohdekartan

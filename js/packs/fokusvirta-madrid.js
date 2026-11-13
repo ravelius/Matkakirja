@@ -654,6 +654,7 @@ export const FOKUSVIRTA_MADRID = {
       nimio: 'Altamiran katto',
       otsikko: 'Löytäjää naurettiin väärentäjäksi — anteeksipyyntö tuli, '
         + 'kun hän oli ollut kuolleena neljätoista vuotta',
+      symboli: 'historia',
       lunastus: [
         'Luolan löysi 1868 tiilentekijä Modesto Cubillas, mutta kukaan ei '
           + 'katsonut kattoon. Vuonna 1879 harrastelija-arkeologi Marcelino '
@@ -755,6 +756,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       id: 'munkkiaratit',
       nimio: 'Papukaijat',
+      symboli: 'elain',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * piste on Casa de Campon ja Länsipuiston puolella, kaupunkilehden
@@ -834,6 +836,7 @@ export const FOKUSVIRTA_MADRID = {
       nimio: 'Cartagenan kantoni',
       otsikko: 'Kaupunki julistautui omaksi valtioksi — ja oma hallitus '
         + 'julisti sen laivaston merirosvoiksi',
+      symboli: 'historia',
       lunastus: [
         'Kun Espanjan tasavalta ei saanut ohjia käsiinsä, Cartagena — maan '
           + 'Välimeren päälaivastotukikohta — nousi aseelliseen kapinaan '
