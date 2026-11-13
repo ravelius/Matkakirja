@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 984a63cc15a9 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 9b9392de6abb */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -200,7 +200,7 @@ body.paivittyy .app { visibility: hidden; }
   --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
   --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
   --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
-  --tk-himmennys-paljastus: rgba(14, 9, 4, 0.99);
+  --tk-himmennys-paljastus: rgba(14, 9, 4, 1);
   --tk-tila-onnistuminen: #2f6b3f;
   --tk-tila-virhe: #b03a2b;
   --tk-tila-live: #e8892e;
