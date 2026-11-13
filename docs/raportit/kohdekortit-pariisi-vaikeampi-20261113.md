@@ -1,4 +1,4 @@
-# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17; Pompidou ilman kuvaa ja kaikki ilman miniatyyriä KK 21.59)
+# Kolme Pariisin kohdekorttia: Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus (SK 13.11.2026; KK 13.41 osa 1; korjattu KK 13.53 ja 14.17; Pompidou ilman kuvaa ja kaikki ilman miniatyyriä KK 21.59; korjaukset 22.03: Saint-Eustache "Kirkon paikalla", Saint-Jacques kaupan ehto ja Pascal-virke; kohta 2 (Eustachen kappalejärjestys) odottaa KK:ta)
 
 **Korjaukset 13.53 (10 kpl) ja nimi 14.17 tehty tähän tiedostoon; vuosivirkkeet sanatarkasti ennallaan.** Kortin ja lapun nimi on **Pompidou-keskus** (ei "Centre Pompidou"; pelin muut Pariisin kohteet käyttävät suomenkielistä nimeä ja kartan malli on jo sillä nimellä). Ranskankieliset lähde- ja tiedostonimet (centrepompidou.fr, Commons-tiedostot) säilyvät sellaisinaan.
 
@@ -17,8 +17,8 @@ Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kapp
       + 'Compostelaan vievistä pyhiinvaellusreiteistä.'
     + '\n\n'
     + 'Vallankumouksen vuosina kirkko myytiin louhokseksi, ja sen kivet '
-      + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehdoksi '
-      + 'kerrotaan, ettei sitä saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
+      + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona '
+      + 'kerrotaan olleen, ettei tornia saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
       + 'tornin, ja 1850-luvulla sen ympärille tehtiin '
       + 'puisto, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
       + 'de Sébastopolin juuri tornin eteen.'
@@ -26,8 +26,8 @@ Vain docs. Muoto kuten `js/packs/nahtavyysjutut.js` (`aika`, `teksti` 2–3 kapp
     + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäinen patsas '
       + 'syöstiin alas vallankumouksen aikana, ja nykyinen on 1800-luvun '
       + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
-      + 'sanotaan tehneen tornissa ilmanpainekokeita — mistä historioitsijat '
-      + 'ovat kuitenkin eri mieltä. Sääasema perustettiin torniin vasta 1891.',
+      + 'sanotaan tehneen tornissa ilmanpainekokeita — tosin historioitsijat '
+      + 'ovat tästä eri mieltä. Sääasema perustettiin torniin vasta 1891.',
   kuvat: [
     {
       tiedosto: 'Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg',
@@ -80,7 +80,7 @@ Pelin vuosi 1873: kaikki väitteet pätevät silloin (1836 osto, puisto 1850-luv
     + '\n\n'
     + 'Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä; '
       + 'tori siirrettiin Rungisiin vuonna 1969. '
-      + 'Sen paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
+      + 'Kirkon paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
       + 'seurakunta kasvoi ja kappeli kävi pieneksi. Rakentaminen kesti yli '
       + 'sata vuotta, ja tulos on sekoitus: rakenne on goottilaista, koristeet '
       + 'renessanssia.'
