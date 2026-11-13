@@ -17781,7 +17781,11 @@ export class UI {
       // Kuva pienenä kappaleensa vieressä (omistaja 7.10.2026 klo 14.5x, esittely.json "kappale"); teksti kiertää kuvan.
       // Listakappaleessa "rivi" vie kuvan listan rivin viereen (Olavinlinna-rivi), muuten kappaleen alkuun.
       const riville = (kuva) => k.lista?.length && Number.isInteger(kuva.rivi) && kuva.rivi >= 0 && kuva.rivi < k.lista.length;
-      for (const kuva of (k.kuvat ?? []).filter((x) => !riville(x))) kortti.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
+      // Kaksi kuvaa samassa kappaleessa: omaan pariinsa, jotta kapealla ruudulla (alle ~480 px) ne mahtuvat riville koko leveydellä
+      // ja teksti jää kuvien alle (KK 13.11.); leveämmällä pari on display: contents, jolloin kuvat kiertyvät kuten ennen.
+      const upotukset = (k.kuvat ?? []).filter((x) => !riville(x));
+      const upotusPari = upotukset.length >= 2 ? kortti.appendChild(html('div', 'apuraha-kuvapari')) : kortti;
+      for (const kuva of upotukset) upotusPari.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
       if (k.teksti) kortti.appendChild(html('p', `periaate-teksti apuraha-teksti${k.korostus ? ' apuraha-teksti--korostus' : ''}`, k.teksti));
       if (k.lista?.length) {
         const ol = html('ol', 'apuraha-lista');
