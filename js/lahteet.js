@@ -30,6 +30,14 @@
 /** Pelin oma tekijänoikeus. Sanamuodot ovat LICENSE-tiedostosta. */
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import { KAIKKI_VALOKUVAT, EI_VALOKUVAKYSYMYKSEEN } from './sisaltotaulut.js';
+import { PYLVASKUVAT } from './packs/europe-puzzles.js';
+import { EUROPE } from './packs/europe.js';
+import { AFRICA } from './packs/africa.js';
+import { MIDDLE_EAST } from './packs/middleeast.js';
+import { ASIA } from './packs/asia.js';
+import { NORTHAMERICA } from './packs/northamerica.js';
+import { SOUTHAMERICA } from './packs/southamerica.js';
+import { OCEANIA } from './packs/oceania.js';
 
 /*
  * VALOKUVAKYSYMYSTEN KUVAT (omistaja 13.11.2026 klo 13.09: "Kuvalähteitä ei koskaan näkyviin
@@ -58,6 +66,38 @@ function kysymyskuvienRivit() {
     if (!kuva?.tiedosto) continue;
     const rivi = kysymyskuvanRivi(id, kuva);
     if (rivi) rivit.push(rivi);
+  }
+  return rivit;
+}
+
+/*
+ * PULMIEN JA AARTEIDEN KUVAT (KK 13.50, kortti lisenssit-ja-lataukset 4): valokuvapulman vaihtoehtokuvat
+ * (js/packs/europe-puzzles.js PYLVASKUVAT; natiivi ei enää näytä niiden lähderiviä tehtävässä) ja aarteiden
+ * kuvat, joilla on kuvaLahde-kenttä (mantereen pakan tokens.types; nimeäminen ei kuulu aarteen faktaan).
+ */
+export const AARREPAKAT = [EUROPE, AFRICA, MIDDLE_EAST, ASIA, NORTHAMERICA, SOUTHAMERICA, OCEANIA];
+export function aarrekuvanRivi(aarre) {
+  const k = aarre?.kuvaLahde;
+  if (!k?.lisenssi) return null;
+  return {
+    nimi: `${aarre.name}: ${k.teos}`,
+    tekija: k.tekija,
+    lisenssi: k.lisenssi,
+    huom: [k.muokattu ? `Muokattu (${k.muokattu}); jaetaan samalla lisenssillä.` : '', k.linkki].filter(Boolean).join(' '),
+  };
+}
+function pulmienJaAarteidenRivit() {
+  const rivit = [];
+  for (const k of PYLVASKUVAT) {
+    const rivi = kysymyskuvanRivi(k.tyyli, { tiedosto: k.tiedosto, lyhyt: `Pylväspulma: ${k.nimi}`, lahde: k.lahde });
+    if (rivi) rivit.push(rivi);
+  }
+  const nahty = new Set();
+  for (const pakka of AARREPAKAT) {
+    for (const aarre of Object.values(pakka?.tokens?.types ?? {})) {
+      const rivi = aarrekuvanRivi(aarre);
+      if (rivi && !nahty.has(rivi.huom)) { nahty.add(rivi.huom); rivit.push(rivi); }
+    }
   }
   return rivit;
 }
@@ -452,6 +492,12 @@ export const LAHTEET = [
     johdanto: 'Tietovisan kuvakysymysten valokuvat, jotka vaativat tekijän nimeämisen '
       + '(CC BY ja CC BY-SA). Public domain- ja CC0-kuvia ei luetella.',
     rivit: kysymyskuvienRivit(),
+  },
+  {
+    otsikko: 'Pulmien ja aarteiden kuvat',
+    johdanto: 'Valokuvapulmien vaihtoehtokuvat ja aarteiden kuvat, jotka vaativat tekijän nimeämisen '
+      + '(CC BY ja CC BY-SA).',
+    rivit: pulmienJaAarteidenRivit(),
   },
   {
     otsikko: 'Äänet',
