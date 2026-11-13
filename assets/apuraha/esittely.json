@@ -1,46 +1,60 @@
 {
-  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. valmiitLinssit {teksti, nappi, valmis, linssit: [tunnus…]} näytetään kappaleiden jälkeen: nappi avaa heti vain listan valmiit (pelaajille julkaistut) linssit ilman pisteitä ja ilman kehittäjätilaa; sama lista webille ja natiiville (omistaja 7.10.2026 klo 15.0x). Oma ylätason kenttä, jotta vanhat TF-appit (kappaleen toiminto \"esittelylinssit\" avasi kehittäjätilan linssit) eivät näytä nappia eivätkä sen tekstiä. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Versio 6 (omistaja 7.10.2026): lyhyt teksti ilman linkkejä; kuvat (enintään 3: ISS:n kupola, Olavinlinna, Kuumailmapallo; omistaja 11.10.2026: lisäksi Maapallo ja Kuumailmapallo pelin kuvakaappauksina, yhteensä 4) lisätään pelistä tekstin julkaisun jälkeen, ja kuvarivi näkyy vain, jos kuvia on. Apurahaprosessin jälkeen kortista muokataan neutraalimpi pelin esittely. Ei videota. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa (web .apuraha-teksti--korostus, natiivi lihavoitu). Kuvan paikka: \"kappale\": n = 0-pohjainen kappaleindeksi (kappaleet[n]); kuva näkyy pienenä (noin kolmannes kortin leveydestä) oman kappaleensa vieressä, napautus suurentaa (omistaja 7.10.2026, versio 7); ilman kenttää kuva kortin lopussa. Listakappaleessa \"rivi\": m (0-pohjainen) vie kuvan listan rivin m viereen (Olavinlinna-rivi); ilman sitä kappaleen alkuun. Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste (web object-position, natiivi taustan sijainti); oletus keskeltä ylhäältä (50% 20%).",
-  "versio": 7,
-  "nappi": "Apurahahakemus – katso tämä ensin",
-  "otsikko": "Apurahan arvioijalle",
-  "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 7.10.2026",
+  "_ohje": "Pelin esittelykortti etusivulla: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. valmiitLinssit {teksti, nappi, valmis, linssit: [tunnus…]} näytetään kappaleiden jälkeen: nappi avaa heti vain listan valmiit (pelaajille julkaistut) linssit ilman pisteitä ja ilman kehittäjätilaa; sama lista webille ja natiiville (omistaja 7.10.2026). Oma ylätason kenttä, jotta vanhat TF-appit eivät näytä nappia. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Versio 8 (omistaja 13.11.2026 klo 14.52, KK 15.07): kortti on pelin esittely (nappi Pelin esittely; Pelissä nyt ja Tulossa), ei apurahakortti; tekstit ovat SK:n ja KK:n hyväksymiä. Nimet koodissa (Apuraha, assets/apuraha) saavat jäädä, koska vanhat sovellusversiot lukevat samaa osoitetta. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa. Kuvan paikka: \"kappale\": n = 0-pohjainen kappaleindeksi (kappaleet[n]); kuva näkyy pienenä oman kappaleensa vieressä, napautus suurentaa; ilman kenttää kuva kortin lopussa. Listakappaleessa \"rivi\": m (0-pohjainen) vie kuvan listan rivin m viereen. Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste, oletus 50% 20%.",
+  "versio": 8,
+  "nappi": "Pelin esittely",
+  "otsikko": "Matkakirja ja unohdettu aarre",
+  "alaotsikko": "Seikkailupeli 13 vuotta täyttäneille ja aikuisille",
   "kappaleet": [
     {
-      "teksti": "Matkakirja ja unohdettu aarre on kokemuksellinen oppimispeli 13 vuotta täyttäneille ja aikuisille. Pääosassa ovat koukuttavat tarinat ja pelit. Kun kiinnostus herää, peli tarjoaa faktatarkistettua tietoa, ja pelaaja voi oppia lisää kysymällä. Kaikki kerrotaan äänen ja kuvan kautta eikä oppikirjamaisena tekstinä."
+      "teksti": "Pelaaja on nuori Fogg, joka löytää vintiltä isoisänsä matkalaukun ja matkapäiväkirjan vuodelta 1873. Fogg lähtee isoisän jäljille ja etsii Aarnin luettelon unohdettuja aarteita. Matka tehdään tämän päivän maailmassa. Vain ulkoasu on vanha: paperia, mustetta ja isoisän ääni."
     },
     {
-      "korostus": true,
-      "teksti": "Kehitys siirtyi syyskuussa selaimesta iPhonen ja iPadin sovellukseen, joka tehdään Unity-pelimoottorilla. Vain pelimoottorilla kaupunkien 3D-näkymät ja kävelyseikkailut toimivat sujuvasti myös puhelimessa. Samasta pohjasta tehdään myöhemmin Mac-, Android- ja Windows-versiot. Selainpeli matkakirja.app jatkuu suppeampana."
+      "teksti": "Pelaaja kulkee kartalla maasta ja kaupungista toiseen, tutkii nähtävyyksiä, kuulee tarinoita ja pelaa matkan varrella pelejä. Tavoite on kiertää maailma alle 80 päivässä. Raja kannustaa, mutta sen ylittämisestä ei rangaista."
     },
     {
-      "otsikko": "Maapallo",
-      "teksti": "Nuori Fogg matkustaa todellisen maailman kartalla isoisänsä vuoden 1873 matkapäiväkirjan jäljillä ja etsii kadonneita aarteita. Kartta tarkentuu koko maapallosta kaupunkeihin."
+      "teksti": "Unohdettu aarre on myös pelin ajatus. Maailman kulttuuri, taide ja tiede ovat aarre, joka hukkuu helposti somen ja tekoälyn roskaan. Peli käyttää tekoälyä tämän aarteen löytämiseen, ja ihminen valitsee ja hyväksyy kaiken."
+    },
+    {
+      "teksti": "Täysi peli on iPhonen ja iPadin sovellus. Selainversio on suppeampi."
+    },
+    {
+      "otsikko": "Pelissä nyt",
+      "teksti": "Nämä toimivat pelissä jo nyt."
+    },
+    {
+      "otsikko": "Kartta ja Pariisi",
+      "teksti": "Maailma on yksi pyöritettävä karttapallo. Pariisi on piirretty kaupunki, jossa on nähtävyyksiä ja kertojan tarinoita."
+    },
+    {
+      "otsikko": "Aarteet",
+      "teksti": "Kartan vihreästä pisteestä pääsee aarteelle. Pariisissa aarretehtävä on rakennusten peli: ensin pelaaja yhdistää rakennuksiin nimet, sitten rakennusvuodet. Yrityksiä on kaksi. Löydöstä pelaaja saa lyhyen, tosi faktan ja onnentoivotuksen."
     },
     {
       "otsikko": "Kuumailmapallo",
-      "teksti": "Tietyissä kaupungeissa kartalta voi hypätä kuumailmapallon kyytiin ja tutkia kaupunkia fotorealistisessa 3D:ssä. Opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin.",
-      "webTeksti": "Tietyissä kaupungeissa kartalta voi hypätä kuumailmapallon kyytiin ja tutkia kaupunkia fotorealistisessa 3D:ssä. Opas lentää kohteelta toiselle, kertoo niistä ääneen ja vastaa kysymyksiin. Vain iOS-sovelluksessa."
+      "teksti": "Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin ja liitää kaupungin ylle. Opas kertoo kohteista ja vastaa kysymyksiin.",
+      "webTeksti": "Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin ja liitää kaupungin ylle. Opas kertoo kohteista ja vastaa kysymyksiin. Vain iOS-sovelluksessa."
     },
     {
-      "otsikko": "ISS",
-      "teksti": "ISS:n kupolasta katsotaan maapalloa avaruudesta. Pelaaja ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta, ja kuva tehdään tarkasta satelliittiaineistosta julisteeksi.",
-      "webTeksti": "ISS:n kupolasta katsotaan maapalloa avaruudesta. Pelaaja ohjaa asemaa ja ottaa kuvan mistä tahansa paikasta, ja kuva tehdään tarkasta satelliittiaineistosta julisteeksi. Vain iOS-sovelluksessa."
+      "otsikko": "ISS ja raketti",
+      "teksti": "Raketti nousee Tromssan lähistöltä avaruusasemalle. Asemalla pelaaja kuvaa minkä tahansa paikan Maasta omaksi julisteekseen.",
+      "webTeksti": "Raketti nousee Tromssan lähistöltä avaruusasemalle. Asemalla pelaaja kuvaa minkä tahansa paikan Maasta omaksi julisteekseen. Vain iOS-sovelluksessa."
     },
     {
-      "otsikko": "Pelit",
-      "teksti": "Peliin on suunniteltu kahdenlaisia pelejä: lautapelejä ja videopelejä. Videopeleissä pelaaja, joka muuten liikkuu nykyajassa, astuu historian hetkeen. Videopelit tulevat vain iOS-sovellukseen."
+      "otsikko": "Linssit",
+      "teksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta, esimerkiksi keksinnöt Euroopassa, ihmisen matka ja maailmanradio."
     },
     {
-      "otsikko": "Työn alla",
+      "otsikko": "Tulossa",
+      "teksti": "Seuraavaksi Amsterdam, Lontoo, Rooma ja Wien. Jokaisessa on oma tehtävä.",
       "lista": [
-        "Lautapelit: Euroopan perinteiset pelit, kuten Mylly ja Tavli, joita pelataan tietokonetta tai kaveria vastaan.",
-        "Olavinlinna, noin vuosi 1500, on ensimmäinen videopeli. Saavut yöllä veneellä linnan alle, hiivit vartijoiden ohi, ratkaiset arvoituksen ja löydät aarteen.",
-        "Kielletty kaupunki, Peking 1923: viimeisen keisarin palatsista katoaa aarteita, ja kesäkuun yönä osa palatsista syttyy palamaan.",
-        "Gizan pyramidit, noin 2560 eaa.: Suuren pyramidin rakennustyömaa faarao Khufun aikaan."
+        "Amsterdam: pelaaja erottaa hollantilaisten taiteilijoiden maalaukset muiden joukosta.",
+        "Lontoo: pelaaja yhdistää keksinnön sen keksijään.",
+        "Rooma: pelaaja löytää patsaiden joukosta sen, joka on peräisin toisesta kaupungista, ja valitsee neljästä samannäköisestä lipusta Italian lipun.",
+        "Wien: pelaaja kuuntelee sävelmiä ja yhdistää ne säveltäjiin.",
+        "Kielletty kaupunki, Peking: Kiinan viimeinen keisari, pieni Puyi, karkaa hovilta ja juoksee Kielletyn kaupungin kujilla ja pihoilla. Pelaaja ohjaa pyyhkäisyillä ja väistää takaa-ajajia.",
+        "Pelit historian hetkiin: pelaaja astuu menneisyyden paikkaan, esimerkiksi linnaan, ja ratkaisee arvoituksen tai löytää aarteen.",
+        "Lautapelit: Euroopan perinteiset pelit, kuten Mylly ja Tavli, joita pelataan tietokonetta tai kaveria vastaan."
       ]
-    },
-    {
-      "teksti": "Videopeleissä ei opeteta mitään pelin aikana. Pelaaja liikkuu vapaasti, ja paikat, esineet ja henkilöt ovat todellisia. Jos kiinnostus herää, historiaa voi tutkia pelin ohessa tai sen jälkeen."
     }
   ],
   "valmiitLinssit": {
@@ -64,27 +78,25 @@
       "tiedosto": "assets/apuraha/maapallo-peruskartta.jpg",
       "teksti": "Maapallo: pelin oma kartta, Eurooppa ja Afrikka",
       "rajaus": "50% 40%",
-      "kappale": 2
+      "kappale": 5
     },
     {
       "tiedosto": "assets/apuraha/kuumailmapallo-pariisi.jpg",
       "teksti": "Kuumailmapallo: Eiffel-torni Pariisissa",
       "rajaus": "50% 45%",
-      "kappale": 3
+      "kappale": 7
     },
     {
       "tiedosto": "assets/apuraha/iss-kupola-lansi-eurooppa.jpg",
       "teksti": "ISS:n kupolasta: Länsi-Eurooppa",
       "rajaus": "50% 70%",
-      "kappale": 4
+      "kappale": 8
     },
     {
       "tiedosto": "assets/apuraha/olavinlinna-hamara.jpg",
       "teksti": "Olavinlinna illan hämärässä",
-      "rajaus": "50% 55%",
-      "kappale": 6,
-      "rivi": 1
+      "rajaus": "50% 55%"
     }
   ],
-  "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Suosittelemme iOS-sovellusta (App Store -testiversion linkki on apurahahakemuksessa)."
+  "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Täysi peli on iPhonen ja iPadin sovelluksessa."
 }
