@@ -75,27 +75,28 @@
   },
   "kuvat": [
     {
-      "tiedosto": "assets/apuraha/maapallo-peruskartta.jpg",
-      "teksti": "Maapallo: pelin oma kartta, Eurooppa ja Afrikka",
-      "rajaus": "50% 40%",
+      "tiedosto": "assets/apuraha/pariisi-kartta-louvre.jpg",
+      "teksti": "Pariisin kartalla pelaaja katselee kaupunkia vinosti ylhäältä ja näkee Louvren, Seinen ja Cité-saaren.",
+      "rajaus": "50% 65%",
       "kappale": 5
     },
     {
-      "tiedosto": "assets/apuraha/kuumailmapallo-pariisi.jpg",
-      "teksti": "Kuumailmapallo: Eiffel-torni Pariisissa",
-      "rajaus": "50% 45%",
-      "kappale": 7
+      "tiedosto": "assets/apuraha/nahtavyyden-esittely-eiffel.jpg",
+      "teksti": "Nähtävyyskierroksella pelaaja tutustuu Eiffel-torniin Pariisin piirretyssä kaupungissa, ja kierros etenee kohde kerrallaan.",
+      "rajaus": "50% 50%",
+      "kappale": 5
     },
     {
-      "tiedosto": "assets/apuraha/iss-kupola-lansi-eurooppa.jpg",
-      "teksti": "ISS:n kupolasta: Länsi-Eurooppa",
-      "rajaus": "50% 70%",
+      "tiedosto": "assets/apuraha/aarretehtava-pariisi.jpg",
+      "teksti": "Aarretehtävässä pelaaja valitsee Eiffel-tornille, Notre-Damelle ja Panthéonille oikeat rakennusvuodet.",
+      "rajaus": "50% 55%",
+      "kappale": 6
+    },
+    {
+      "tiedosto": "assets/apuraha/iss-kapseli-asemalla.jpg",
+      "teksti": "Matkalla avaruusasemalle pelaaja seuraa, kuinka miehistökapseli lähestyy asemaa 408 kilometrin korkeudessa.",
+      "rajaus": "50% 50%",
       "kappale": 8
-    },
-    {
-      "tiedosto": "assets/apuraha/olavinlinna-hamara.jpg",
-      "teksti": "Olavinlinna illan hämärässä",
-      "rajaus": "50% 55%"
     }
   ],
   "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Täysi peli on iPhonen ja iPadin sovelluksessa."

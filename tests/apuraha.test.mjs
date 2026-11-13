@@ -32,9 +32,12 @@ test('kuvat (versio 8): kappaleeseen sidotut kuvat osuvat olemassa olevaan kappa
   const d = tarkistaApuraha(raaka);
   assert.equal(raaka.versio, 8);
   const kohta = (nimi) => d.kappaleet.find((k) => k.otsikko === nimi).kuvat.map((k) => k.tiedosto);
-  assert.deepEqual(kohta('ISS ja raketti'), ['assets/apuraha/iss-kupola-lansi-eurooppa.jpg']);
-  assert.deepEqual(kohta('Kartta ja Pariisi'), ['assets/apuraha/maapallo-peruskartta.jpg']);
-  assert.deepEqual(kohta('Kuumailmapallo'), ['assets/apuraha/kuumailmapallo-pariisi.jpg']);
+  assert.deepEqual(kohta('ISS ja raketti'), ['assets/apuraha/iss-kapseli-asemalla.jpg']);
+  assert.deepEqual(kohta('Kartta ja Pariisi'), ['assets/apuraha/pariisi-kartta-louvre.jpg', 'assets/apuraha/nahtavyyden-esittely-eiffel.jpg']);
+  assert.deepEqual(kohta('Aarteet'), ['assets/apuraha/aarretehtava-pariisi.jpg']);
+  assert.deepEqual(kohta('Kuumailmapallo'), [], 'ei kuvaa (KK 13.11.: neljä uutta kuvaa, Olavinlinna pois)');
+  assert.equal(raaka.kuvat.length, 4);
+  assert.ok(raaka.kuvat.every((x) => x.teksti.split(/[.!?]/).filter(Boolean).length === 1), 'kuvateksti on yksi virke');
   for (const k of raaka.kuvat) assert.ok(existsSync(new URL(`../${k.tiedosto}`, import.meta.url)), `kuva puuttuu: ${k.tiedosto}`);
   for (const k of raaka.kuvat) if (k.kappale != null) assert.ok(Number.isInteger(k.kappale) && raaka.kappaleet[k.kappale], `kappale ${k.tiedosto}`);
   const ilman = tarkistaApuraha({ ...raaka, kuvat: [{ tiedosto: 'a.jpg' }, { tiedosto: 'b.jpg', kappale: 99 }] });
