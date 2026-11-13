@@ -16,6 +16,7 @@ SÄÄNNÖT:
 11. Codexilla on aina 2–3 hyväksyttyä tehtävää jonossa. Toimitus kuitataan postiin heti ja arvioidaan puolessa tunnissa. [R-7.18]
 12. Tripo-tililtä ladataan vain peliin hyväksytyt mallit. [R-11.6]
 13. Pelissä oleva kohtaus videoidaan pelistä; vain pelissä olematon hetki renderöidään Codexilla Tripo-mallista. [R-4.21]
+14. Olemattomia patsaita saa generoida pieninä koe-erinä (muutama, yksi maa); omistaja näkee ne ennen lisää. [P-261113-5]
 
 EI VIKA:
 - Valmiit Tripo-mallit jäävät, vaikka uudet rakennukset tehdään koodilla.
