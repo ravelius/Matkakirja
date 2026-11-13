@@ -94,3 +94,22 @@ Tarkistus: kolmikon merkkivuodet (patentti-, koe-, esitys-, valmistumis- ja kuol
 6. **Harrison:** vain jos KK hyväksyy "keksijä, joka työskenteli Lontoossa". Kuva vaatii rajauksen (kyltti vasemmassa yläkulmassa).
 7. **Lisenssit:** BY-SA-kuvista (Perkinin puku, Fleming-hometta, varalla sähkötin ja H4) tekijä ja lisenssi näkyvät pelissä; rajaus jaetaan samalla lisenssillä. PD-kuvat (Brunel, Faraday, Snow) ja CC BY (Baird) eivät aseta jakamisehtoa.
 8. Kuvia ei ole ladattu repoon eikä peliin; lataus vasta KK:n sanalla.
+
+## 5. KK 16.05: kuvien rajaukset ja uusi Faraday-kuva (SK 13.11.2026)
+
+Arkki (6 kuvaa neliöiksi rajattuna) katsottu ja HYVÄKSYTTY, yksi muutos: **Faradayn rengas vaihtuu** terävämpään PD-kuvaan, joka rajataan niin, ettei etualan tyhjä kortti näy lainkaan. Data-PR vasta KK:n sanalla.
+
+**Uusi Faraday-kuva:** `Apparatus from which the first magnetic electric current was obtained, 1831, Science Museum, South Kensington, Acme Newspictures, c. December 1929, from the Digital Commonwealth - 1 22 10 001309 0006 A.jpg` (Commons), tekijä Acme Newspictures (New York City), lisenssi Public domain (Restrictions tyhjä), 5257×4079; sama Science Museumin 1831-rengas. Linkki: https://commons.wikimedia.org/wiki/File:Apparatus_from_which_the_first_magnetic_electric_current_was_obtained,_1831,_Science_Museum,_South_Kensington,_Acme_Newspictures,_c._December_1929,_from_the_Digital_Commonwealth_-_1_22_10_001309_0006_A.jpg . Silmin katsottu 13.11.: ei tekstiä; rengasta kiertää kapea paperilappu (lukukelvoton), etualalla tyhjä kortti (rajataan pois). Korvaa `Faraday ring transformer.jpg` (553×536); datan lähderivi: tekija 'Acme Newspictures', teos 'Faradayn rengaskäämi (Science Museum, kuva n. 1929)', lisenssi 'PD'.
+
+**Rajaukset (neliö, pikseliä alkuperäistiedostosta: vasen, ylä, oikea, ala):**
+
+| Id | Tiedosto | Alkuperäinen koko | Rajaus | Huomio |
+|---|---|---|---|---|
+| 1 | `Brunel-shield.JPG` | 960×1280 | 0, 160, 960, 1120 | Pienoismalli keskellä. |
+| 2 | `Mauvinfärgad klänning.jpg` | 1152×1536 | koko kuva, mustaa lisätty sivuille 1536×1536 | Musta pohja kelpaa (KK). |
+| 3 | `Penicillia on Petri dish.jpg` | 3456×3692 | 0, 72, 3456, 3528 | Neljä kasvustoa. |
+| 4 | `Apparatus from which the first magnetic electric current …0006 A.jpg` | 5257×4079 | 1451, 342, 3861, 2752 (2410 px neliö) | Alareuna päättyy kortin yläreunan yläpuolelle (kortti kokonaan pois); vasemman yläkulman tumma kolmio osin mukana. |
+| 5 | `Snow-cholera-map-1.jpg` | 20124×18877 | 6027, 3668, 17032, 14673 | Broad Streetin ympäristö; katujen nimet kelpaavat (KK). |
+| 6 | `Baird TV 1926a.jpg` | 1012×1094 | 0, 82, 1012, 1094 | Kiekko keskellä; ei kylttiä. |
+
+Nimi kolmikossa 1: "Tunnelikilpi" (KK 15.57); Perkinin puvun tekijä "Science Museum Group".

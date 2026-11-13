@@ -79,3 +79,26 @@ Huom V2: "seisoo Louvressa" ilman asemointivuotta (1883–84) pitää tekstin 18
 - **Avoin:** Marcus Aureliuksen kuva on nykykuva sisältä; 1873 patsas oli piazzalla. Tehtävässä ei saa sanoa "seisoo" kuvan salissa 1873.
 - **Avoin:** BY-SA-kuvat (7 kpl) jaetaan samalla lisenssillä rajauksessa; CC BY 2.0 ja 2.0 (gallialainen, Boudica) vaativat tekijän maininnan; CC0 (susi, Laokoon, Nike) ei vaadi.
 - Ehdotus erän muodoksi: 8 omaa + 1 vieras per tehtävä; helppo = Rembrandt, vaikea = Milo tai Nike. Erillisiä kysymyksiä (kaksi vierasta) vain jos KK haluaa; 1c:n Farnese-Herakles (löytö Roomasta, nyt Napolissa) jätetty pois, koska ei ole toisesta pelin kaupungista.
+
+## 5. KK 16.04 päätökset ja Italian sääntö 10 (SK 13.11.2026)
+
+**Päätökset (KK 16.04; data-PR:ään vasta KK:n sanalla):** joukko 8 + 6 hyväksytty; erän koko päätetään Näyttämösepän kokeesta (oletus 4 omaa + 1 vieras arvottuna); 1873 jälkeiset vieraat (Boadicea, Anteros, Mozart) kelpaavat; V5 jättää sanan "Eros" paljastukseen; V6 riittää de-Wikipedia + Wien Geschichte Wiki. Kolme tekstiä korvataan (ei kiistanalaista vuotta):
+
+- O1: Tämä on Rooman oma: Marcus Aureliuksen pronssinen ratsastajapatsas on 100-luvun lopulta jKr, ja paavi Paavali III siirrätti sen Kapitolille 1538.
+- O3: Tämä on Rooman oma: Marforio on antiikin roomalainen jokijumala, joka siirrettiin Kapitolille 1592 ja makaa nyt Kapitolin museon pihalla.
+- O6: Tämä on Rooman oma: Apollo Belvedere on saanut nimensä Vatikaanin Belvederen pihasta, jonne paavi Julius II sen sijoitti 1500-luvun alussa.
+
+**Italian sääntö 10** (kortti lisenssit-ja-lataukset, R-2.134: Italian valtion museoiden teokset pelissä → sovellus pois Italian App Storesta). Luettelo omista kahdeksasta (KK:n rajaus: Kapitolin museot, San Pietro in Vincoli, Piazza Navona; Vatikaani ei ole Italiaa):
+
+| # | Patsas | Sijainti | Sääntö 10 -piirissä |
+|---|---|---|---|
+| O1 | Marcus Aurelius | Musei Capitolini | KYLLÄ |
+| O2 | Kapitolinuksen susi | Musei Capitolini | KYLLÄ |
+| O3 | Marforio | Musei Capitolini | KYLLÄ |
+| O4 | Mooses | San Pietro in Vincoli | KYLLÄ |
+| O5 | Laokoon | Vatikaanin museot | ei (Vatikaani) |
+| O6 | Apollo Belvedere | Vatikaanin museot | ei (Vatikaani) |
+| O7 | Kuoleva gallialainen | Musei Capitolini | KYLLÄ |
+| O8 | Neljän joen suihkulähde | Piazza Navona | KYLLÄ |
+
+Piirissä 6/8; vain O5 ja O6 (Vatikaani) ovat sen ulkopuolella. Seuraus PT:lle ja omistajalle: koska Vatikaanin patsaita on vain kaksi, 4 omaa -arvonta sisältää aina vähintään kaksi sääntö 10:n piiriin kuuluvaa, joten Rooman Paljasta on kokonaan piirissä; ainoa tapa ulos olisi erä pelkästä Vatikaanista (2 patsasta) tai sääntöpäätöksen muutos. Huom: Musei Capitolini kuuluu Rooman kaupungille eikä valtiolle, San Pietro in Vincoli on kirkko ja Piazza Navona julkinen aukio; KK:n rajaus noudatettu sellaisenaan, oikeudellisen tulkinnan tekee omistaja.
