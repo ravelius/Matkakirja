@@ -10068,7 +10068,9 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Centre Pompidou — nykytaiteen kokoelma',
-              teksti: 'Centre Pompidou on Pariisin nykytaiteen museo, ja sen '
+              teksti: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja '
+                + 'keskus avattiin vuonna 1977. '
+                + 'Centre Pompidou on Pariisin nykytaiteen museo, ja sen '
                 + 'rakennus on itsessään osa juttua: putket, ilmastointi ja '
                 + 'portaat vietiin julkisivulle, jotta sisälle jäisi '
                 + 'mahdollisimman paljon tyhjää tilaa.',
