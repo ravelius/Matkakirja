@@ -17,7 +17,9 @@
  * skandaalit, historian hetket, eläintäyt, täkynostot, fokusvirtojen täkyt ja täkynostot sekä
  * hahmotelma-, maastokohde- ja fokuskohdepaketit. Kappalejako ja avain = natiivin Puhe.cs /
  * Nahtavyysarkki / Valmisluennat.cs (avaimen testivektorit tools/natiivi-kultaiset/tee-valmisluennat-avaimet.mjs).
- * Oletuksena vain Eurooppa (ja maanosattomat: Arktis, Antarktis), koska vain Eurooppa äänitetään.
+ * Oletuksena vain Eurooppa (ja maanosattomat: Arktis, Antarktis), koska vain Eurooppa äänitetään. EUROOPPA = manner europe + Euroopan
+ * pakan (js/packs/europe.js) kaupungit + pakan saumakaupunkien maataso (KK 13.11.2026 13.06: istanbul ja TUR kuuluvat, Kypros ja
+ * pakan ulkopuoliset Turkin kaupungit eivät). Saumakaupunki = pakan kaupunki, jonka kaupunkitaulun manner ei ole europe.
  *
  * Paluu: 0 = OK, 1 = HYLÄTTY (kappaleita ilman äänitettä ja jonoriviä), 2 = VIKA (vienti tai manifesti ei latautunut).
  * Kutsujat: natiivirepon tyokalut/ennen-junaa.sh vaihe 5 ja PR-CI (.github/workflows/testit.yml, askel Äänitysjono; paluu 2 = varoitus).
@@ -30,6 +32,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+const { EUROPE } = await import(new URL('../../js/packs/europe.js', import.meta.url).href);
 export const JONO = join(JUURI, 'data/aanitysjono.tsv');
 // Manifesti = sama kuin pelillä: viennin asetus osoitteet.luennat-manifesti (data/asetukset.json, KK 12.11. 09.03: yksi lähde
 // versiolle). Oletus vain, jos asetus puuttuu (= natiivin Valmisluennat.ManifestiOletus); tulosteessa näkyy, kumpi käytössä.
@@ -126,7 +129,13 @@ function takyTeksti(d) {
 export function kappaleet(vienti) {
   const J = (p) => JSON.parse(readFileSync(join(vienti, p), 'utf8'));
   const kaup = new Map(J('kokoelmat/kaupungit.json').alkiot.map((x) => [x.id, x]));
+  // Euroopan rajaus pakasta: pakan kaupungit Eurooppaan; saumakaupunkien (manner muu kuin europe) maiden maataso myös.
+  const pakka = new Set(EUROPE.cities.map((x) => x.id));
+  const saumaMaat = new Set([...pakka].filter((id) => kaup.has(id) && kaup.get(id).manner !== 'europe')
+    .map((id) => kaup.get(id).maa || EUROPE.map?.cityCountry?.[id]).filter(Boolean));
   const maanosa = (k, maa) => {
+    if (k && pakka.has(k)) return 'europe';
+    if (!k && saumaMaat.has(maa)) return 'europe';
     if (kaup.has(k)) return kaup.get(k).manner;
     for (const c of kaup.values()) if (c.maa === maa) return c.manner;
     return '?';
