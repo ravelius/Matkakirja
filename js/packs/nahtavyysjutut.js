@@ -5126,7 +5126,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     // Tour Saint-Jacques, Saint-Eustache ja Pompidou-keskus: Pariisin karttakohteet ja vaikeamman Yhdistä-näyttämön laput (KK 14.17).
-    // Tekstit sanatarkasti SK:n korjatuista korteista (KK 13.53, PR 6712): docs/raportit/kohdekortit-pariisi-vaikeampi-20261113.md (lähteet siellä).
+    // Tekstit sanatarkasti SK:n korjatuista korteista (KK 13.53 ja 22.03, PR 6712/6728/6729; Pompidou ilman kuvaa, KK 21.59): docs/raportit/kohdekortit-pariisi-vaikeampi-20261113.md (lähteet siellä).
     'Tour Saint-Jacques': {
       aika: '1509–1523',
       teksti: 'Tour Saint-Jacques rakennettiin 1509–1523, ja se on ainoa jäljelle '
@@ -5137,8 +5137,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Compostelaan vievistä pyhiinvaellusreiteistä.'
         + '\n\n'
         + 'Vallankumouksen vuosina kirkko myytiin louhokseksi, ja sen kivet '
-          + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehdoksi '
-          + 'kerrotaan, ettei sitä saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
+          + 'kelpasivat rakennusaineeksi. Kellotorni säästyi: kaupan ehtona '
+          + 'kerrotaan olleen, ettei tornia saa purkaa. Vuonna 1836 Pariisin kaupunki osti '
           + 'tornin, ja 1850-luvulla sen ympärille tehtiin '
           + 'puisto, kun Haussmannin työt avasivat Rue de Rivolin ja Boulevard '
           + 'de Sébastopolin juuri tornin eteen.'
@@ -5146,8 +5146,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Huipulla seisoo pyhä Jaakob pyhiinvaeltajana. Alkuperäinen patsas '
           + 'syöstiin alas vallankumouksen aikana, ja nykyinen on 1800-luvun '
           + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
-          + 'sanotaan tehneen tornissa ilmanpainekokeita — mistä historioitsijat '
-          + 'ovat kuitenkin eri mieltä. Sääasema perustettiin torniin vasta 1891.',
+          + 'sanotaan tehneen tornissa ilmanpainekokeita — tosin historioitsijat '
+          + 'ovat tästä eri mieltä. Sääasema perustettiin torniin vasta 1891.',
       kuvat: [
         {
           tiedosto: 'Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg',
@@ -5166,7 +5166,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Kirkko seisoo Les Hallesin, Pariisin entisen ruokatorin, vieressä; '
           + 'tori siirrettiin Rungisiin vuonna 1969. '
-          + 'Sen paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
+          + 'Kirkon paikalla oli ennen vaatimaton kappeli vuodelta 1213, mutta '
           + 'seurakunta kasvoi ja kappeli kävi pieneksi. Rakentaminen kesti yli '
           + 'sata vuotta, ja tulos on sekoitus: rakenne on goottilaista, koristeet '
           + 'renessanssia.'
@@ -5176,9 +5176,8 @@ export const NAHTAVYYSJUTUT = {
           + 'hän rakennutti 1655 tornien alle kaksi kappelia, ja julkisivu '
           + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
           + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
-          + 'täällä ensimmäisellä ehtoollisellaan 1649.'
-        + '\n\n'
-        + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
+          + 'täällä ensimmäisellä ehtoollisellaan 1649. '
+          + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
           + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
       kuvat: [
         {
@@ -5208,14 +5207,7 @@ export const NAHTAVYYSJUTUT = {
           + 'tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
           + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
           + 'avautua uudelleen vuonna 2030.',
-      kuvat: [
-        {
-          tiedosto: 'Centre Pompidou @ Beaubourg @ Paris (15448205062).jpg',
-          lyhyt: 'Pompidou-keskuksen rakennustyöt alkoivat 1972 ja keskus avattiin 1977; rakenteet ja putket ovat ulkopuolella.',
-          selite: 'Pompidou-keskuksen rakennustyöt alkoivat vuonna 1972, ja keskus avattiin vuonna 1977; rakenteet, putket ja liukuportaat ovat rakennuksen ulkopuolella.',
-          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
-        },
-      ],
+      kuvat: [],
       lahde: 'Wikipedia',
     },
     'Place des Vosges': {
