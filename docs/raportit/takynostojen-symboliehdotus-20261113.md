@@ -1,4 +1,4 @@
-# Symboliehdotus 56 täkynostolle, joilta symboli puuttuu (SK 13.11.2026)
+# Symboliehdotus (KK:n kuittaama) 56 täkynostolle, joilta symboli puuttuu (SK 13.11.2026)
 
 Tehtävä: PT 13.11. (KK 10.17). Vain docs, ei koodimuutosta. Lähde: `/Users/Shared/Claude/proto-3d/_tyo/pelikoodari/lontoo-naytto3/oletus-huuto-luettelo.md` (PK, 56 riviä).
 Sääntö: KK 13.11. päätös kohdat 8 ja 9 (`suunnitelmat/20261113-lontoon-faktapohja-kk-paatos.md`): symboli kirjoitetaan aina näkyviin ja sen pääkategoria seuraa kartan merkkiä (tiimalasi → historia, lyyra → kulttuuri, lamppu → tekniikka, skandaali → huuto). Ei `hetki`-symbolia (omistaja 2.9.2026). Aidot huijaukset pysyvät huutona.
@@ -8,13 +8,13 @@ Arvot ovat `NOSTOSYM_LUOKAT`-avaimia (js/fokusnosto-symbolit.js:1419); sarake "P
 ## Yhteenveto
 | Symboli | Luokka (kortin ylärivi) | Kpl |
 |---|---|---|
-| historia | Historia | 24 |
-| luonto | Luonto | 9 |
+| historia | Historia | 23 |
+| luonto | Luonto | 10 |
+| kulttuuri | Kulttuuri | 5 |
 | tekniikka | Tekniikka | 5 |
 | elain | Eläimet | 4 |
-| kauppa | Kauppa | 4 |
-| kulttuuri | Kulttuuri | 4 |
 | huuto | Skandaalit | 3 |
+| kauppa | Kauppa | 3 |
 | sana | Tarinat | 1 |
 | urheilu | Urheilu | 1 |
 | ruoka | Ruoka ja juoma | 1 |
@@ -35,9 +35,9 @@ Pysyy huutona (aito huijaus tai moite): 3 nostoa. Kaikki muut saavat uuden symbo
 | madrid | Papukaijat | nosto-munkkiaratit | **elain** | Eläimet | elaimet | Puistojen papukaijat. |
 | madrid | Cartagenan kantoni | nosto-cartagenan-kantoni | **historia** | Historia | historia | Poliittinen tapahtuma 1873. |
 | wien | Näyttely ja pörssi | nosto-maailmannayttely-1873 | **kauppa** | Kauppa | kauppa | Pörssiromahdus 1873; sama sävy kuin muut 1873-jutut. Vaihtoehto historia. |
-| wien | Kirahvi ja muoti | nosto-kirahvimuoti | **historia** | Historia | historia | KK 13.11. kohta 8: Kirahvi 1827 → historia, ei elain. |
+| wien | Kirahvi ja muoti | nosto-kirahvimuoti | **kulttuuri** | Kulttuuri | kulttuuri | KK 13.11.: juttu on muodista; Pariisin Kirahvi-merkkisääntö (historia) ei koske tätä. |
 | berliini | Köpenick | nosto-kopenickin-kapteeni | **huuto** | Skandaalit | skandaalit | PYSYY: aito huijaus (univormuhuijaus). |
-| berliini | Lehmän hinnalla | nosto-archaeopteryx | **kauppa** | Kauppa | kauppa | Otsikon ydin on hinta (yksi lehmä). Vaihtoehto luonto (fossiili). |
+| berliini | Lehmän hinnalla | nosto-archaeopteryx | **luonto** | Luonto | luonto | KK 13.11.: juttu on fossiilista, hinta on koukku. |
 | berliini | Velkojen linna | nosto-neuschwanstein | **historia** | Historia | historia | Linnan rakennus ja velat. |
 | budapest | Szegedin tulva | nosto-szegedin-tulva | **historia** | Historia | historia | Tulva 1879 ja jälleenrakennus. |
 | dubrovnik | Pulan areena | nosto-pulan-areena | **historia** | Historia | historia | Roomalainen amfiteatteri, Venetsian päätös. |
@@ -83,7 +83,7 @@ Pysyy huutona (aito huijaus tai moite): 3 nostoa. Kaikki muut saavat uuden symbo
 | pietari | Baikal | nosto-baikal | **luonto** | Luonto | luonto | Repeämäjärvi. |
 
 ## Huomioita KK:lle
-- Epävarmat (vaihtoehto kirjattu riville): Troijan tuhoaja (huuto vai historia), Altamira (historia vai huuto), Näyttely ja pörssi, Kolumbuksen luut, Archaeopteryx, Lepakkokirjasto.
-- Kirahvi ja muoti (Wien) seuraa Pariisin Kirahvin päätöstä: historia, ei elain.
+- Epävarmat (vaihtoehto kirjattu riville): Troijan tuhoaja (huuto vai historia), Altamira (historia vai huuto), Näyttely ja pörssi, Kolumbuksen luut, Lepakkokirjasto (Archaeopteryx ja Kirahvi ja muoti ratkaistu KK:n kuittauksessa).
+- KK:n kuittaus 13.11. 10.18: Archaeopteryx kauppa → luonto, Kirahvi ja muoti historia → kulttuuri; muut 54 ehdotuksen mukaan.
 - Tarkistamatta jutun koko teksti: valinnat tehty otsikosta ja nostotunnuksesta. Jos KK haluaa, luen epävarmojen rivien tekstit ennen kuittausta.
 - PK:n testilaajennus (kaikki täkynostot, symboli vastaa kartan merkkiä) pätee tämän taulukon jälkeen myös `sana`, `urheilu` ja `elain` -arvoille: niiden pääkategoria on taulussa `NOSTOSYM_PAAKATEGORIAT`.
