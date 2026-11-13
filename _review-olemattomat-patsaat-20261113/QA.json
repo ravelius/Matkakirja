@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-13T09:04:24.341133+00:00",
+  "status": "READY_FOR_RECEIVER_REVIEW_WITH_NOTES",
+  "method": "Visual review of all three native images, comparison with four reference photographs, dimensions and checksums",
+  "common": {
+    "portrait3to4": true,
+    "wholeStatueAndPlinthVisible": true,
+    "noVisibleTextPlaquesNumbersOrWatermarks": true,
+    "noForegroundPeople": true,
+    "referenceStatueNotCopied": "No recognizable copy of the four supplied sculptures observed; no exhaustive global originality claim.",
+    "photoAppearance": "Ordinary daylight museum/garden photographs; no drawing/painting appearance observed."
+  },
+  "items": {
+    "v1": {
+      "subject": "Aurinkokuningas ja torni",
+      "observed": "Curled wig, armour, cloak, baton, recognizable Eiffel miniature, weathered bronze, limestone plinth, courtyard arcades.",
+      "note": "Tower tip is near the upper edge, approximately 2% headroom. Entire object visible. Do not crop vertically without receiver check."
+    },
+    "v2": {
+      "subject": "Lyhdynsytyttäjä",
+      "observed": "Thin man in cap and long coat, raised heels on tiptoe, pole reaching into complete ornate lamp, bronze verdigris, rough granite plinth, garden.",
+      "note": "Lamp finial has approximately 2% headroom. Entire lamp and plinth visible. Do not crop vertically without receiver check."
+    },
+    "v3": {
+      "subject": "Varpusten ystävä",
+      "observed": "Clothed girl on a low wall, ankle boots, exactly three marble birds on palm, shoulder and wall, grey plinth, glass-roofed museum.",
+      "note": "All requested foreground elements visible."
+    }
+  },
+  "technicalNote": "The tool returned 1086x1448, below the requested 1536px short side. Delivered JPGs are conventionally resampled to 1536x2048; they do not contain native 1536px detail. No new attempts were made.",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

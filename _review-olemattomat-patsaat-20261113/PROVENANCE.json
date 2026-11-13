@@ -1,0 +1,137 @@
+{
+  "sourcePath": "posti/nayttamoseppa-codex-olemattomat-patsaat-tilaus-20261113.md",
+  "sourceCommit": "3f8b358d9ca03660718c8cfba979fea468a3a8a9",
+  "sourceBlob": "be26d0c65f6b7533bcd34beb3aa98e34420898fa",
+  "taskNumbers": [
+    2228,
+    2229,
+    2230
+  ],
+  "tool": "built-in image_gen",
+  "generationCallsTotal": 3,
+  "generationCallsPerSubject": 1,
+  "retries": 0,
+  "files": [
+    {
+      "file": "v1.jpg",
+      "sha256": "68e0703e42138854651b59533c6745c7e03774d95a3353c33442d624231839d8",
+      "bytes": 1522034,
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeSha256": "0901232bbbf59a56ee485710ceb56bf24a60a0b51ec50744be02b0124484e91a",
+      "generationCalls": 1,
+      "technicalExport": "Lanczos 1.41436464x, JPEG quality 95, 4:4:4, no crop, no generative upscale or retouch"
+    },
+    {
+      "file": "v2.jpg",
+      "sha256": "28bc20cbfaf4cb2de0cafc970ff440c051c4e24c2a0038756e7a9f12cd52a65e",
+      "bytes": 1560153,
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeSha256": "878d7ef18daf3d09ddd6e70eaa3e5aecde90693fac29fa0ab08fcd088545e330",
+      "generationCalls": 1,
+      "technicalExport": "Lanczos 1.41436464x, JPEG quality 95, 4:4:4, no crop, no generative upscale or retouch"
+    },
+    {
+      "file": "v3.jpg",
+      "sha256": "5b44c60002884bd3aa56ce240d59d654e556116ce3af63e3ca66e774c6f23f5c",
+      "bytes": 885935,
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "nativeSha256": "2188c0fd926152cd77afad8dbc472cdae140470d1047082f7b161a730ef42f7c",
+      "generationCalls": 1,
+      "technicalExport": "Lanczos 1.41436464x, JPEG quality 95, 4:4:4, no crop, no generative upscale or retouch"
+    }
+  ],
+  "referenceImages": [
+    {
+      "id": "penseur",
+      "title": "Le Penseur Musée Rodin Paris S.1295.jpg",
+      "author": "Jebulon",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg/960px-Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olemattomat-patsaat-2228-2230-20261113/references/penseur.jpg",
+      "sha256": "9a92e4f44856bba9eccb100a22e6db2a5efbf9061bbe8c002057c55d0eadb6ef",
+      "dimensions": [
+        960,
+        1364
+      ],
+      "bytes": 357161,
+      "status": "downloaded",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Le_Penseur_Mus%C3%A9e_Rodin_Paris_S.1295.jpg"
+    },
+    {
+      "id": "balzac",
+      "title": "Balzac Musée Rodin S.1296 Paris.jpg",
+      "author": "Jebulon",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Balzac_Mus%C3%A9e_Rodin_S.1296_Paris.jpg/960px-Balzac_Mus%C3%A9e_Rodin_S.1296_Paris.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olemattomat-patsaat-2228-2230-20261113/references/balzac.jpg",
+      "sha256": "2aac6d95fc6e6cfda162e0ea6e629c0f35c18592b4e02d493e37c6739cb700d5",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "bytes": 554895,
+      "status": "downloaded",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Balzac_Mus%C3%A9e_Rodin_S.1296_Paris.jpg"
+    },
+    {
+      "id": "bourgeois",
+      "title": "Les Bourgeois de Calais, Musée Rodin garden, Paris August 2013.jpg",
+      "author": "Shadowgate",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Les_Bourgeois_de_Calais%2C_Mus%C3%A9e_Rodin_garden%2C_Paris_August_2013.jpg/1280px-Les_Bourgeois_de_Calais%2C_Mus%C3%A9e_Rodin_garden%2C_Paris_August_2013.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olemattomat-patsaat-2228-2230-20261113/references/bourgeois.jpg",
+      "sha256": "b1856534611a7d8a903b4b1fa51d63935dbc5264cac4e6f3ab93219b84b89f0f",
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 451934,
+      "status": "downloaded",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Les_Bourgeois_de_Calais%2C_Mus%C3%A9e_Rodin_garden%2C_Paris_August_2013.jpg"
+    },
+    {
+      "id": "venus",
+      "title": "Venus de Milo Louvre Ma399 n4.jpg",
+      "author": "Marie-Lan Nguyen / Jastrow",
+      "license": "Public Domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Venus_de_Milo_Louvre_Ma399_n4.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Venus_de_Milo_Louvre_Ma399_n4.jpg/960px-Venus_de_Milo_Louvre_Ma399_n4.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olemattomat-patsaat-2228-2230-20261113/references/venus.jpg",
+      "sha256": "69b6d2e19d5a07434e6b10235a5dd1f0e7a9fc3ecc4b7b495de8164eaff69415",
+      "dimensions": [
+        960,
+        1611
+      ],
+      "bytes": 349859,
+      "status": "downloaded",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Venus_de_Milo_Louvre_Ma399_n4.jpg"
+    }
+  ],
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

@@ -1,0 +1,58 @@
+# PROMPTS — kolme erillistä built-in image_gen -kutsua, yksi per patsas
+
+## v1 — otto 1/1
+
+Viitteet tässä järjestyksessä: penseur.jpg, bourgeois.jpg
+
+Use case: photorealistic-natural. Create one new, original fictional sculpture photographed like an ordinary museum visitor snapshot, not a collage.
+
+A life-size dark bronze statue from the late 1600s of King Louis XIV of France, standing in a long curled wig, ceremonial armour and
+cloak, one hand on a baton, the other holding up a small bronze model of the Eiffel Tower like a founder presenting a building.
+Weathered bronze with brown patina and green streaks, tall pale limestone plinth. Setting: gravel courtyard of a classical
+17th-century Parisian stone building with arcades.
+
+Photorealistic photograph taken by a museum visitor with an ordinary camera, natural daylight, eye level, the whole statue with its
+plinth in frame, centred, portrait 3:4. Match the look of the attached reference photos. No people in the foreground, no text, no
+inscriptions, no plaques, no watermark. The statue must not resemble any existing famous statue.
+
+Input images 1 and 2 are reference photographs for ordinary photographic appearance, bronze patina and natural light only. Do not reproduce their sculpture designs, poses or inscriptions. The Eiffel Tower miniature is intentionally anachronistic and must be clearly recognizable in the king's hand.
+
+Output framing: portrait 3:4, requested native resolution 1536 x 2048 pixels. Keep all parts of the sculpture and plinth inside the frame, with visible ground below and breathing room on every side. Ordinary camera exposure and natural surface variation, no cinematic grading or illustration. No lettering anywhere, not even on the plinth.
+
+## v2 — otto 1/1
+
+Viitteet tässä järjestyksessä: penseur.jpg, balzac.jpg, bourgeois.jpg
+
+Use case: photorealistic-natural. Create one new, original fictional sculpture photographed like an ordinary museum visitor snapshot, not a collage.
+
+A life-size bronze statue with green verdigris patina of a 19th-century Parisian lamplighter: a thin man in a flat cap and long coat,
+on tiptoe, reaching up with a long lighting pole towards an ornate cast-iron gas street lamp that is part of the sculpture. Low rough
+granite plinth. Setting: a small Parisian garden with clipped hedges, gravel path and plane trees, cream stone houses blurred behind.
+
+Photorealistic photograph taken by a museum visitor with an ordinary camera, natural daylight, eye level, the whole statue with its
+plinth in frame, centred, portrait 3:4. Match the look of the attached reference photos. No people in the foreground, no text, no
+inscriptions, no plaques, no watermark. The statue must not resemble any existing famous statue.
+
+Input images 1, 2 and 3 are reference photographs for ordinary photographic appearance, bronze patina and garden light only. Do not reproduce their sculpture designs, poses or inscriptions. Keep the entire lamp, its top ornament, the lighting pole, the man and the whole granite plinth in frame, with safe margins. The man is visibly on tiptoe.
+
+Output framing: portrait 3:4, requested native resolution 1536 x 2048 pixels. Keep all parts of the sculpture and plinth inside the frame, with visible ground below and breathing room on every side. Ordinary camera exposure and natural surface variation, no cinematic grading or illustration. No lettering anywhere, not even on the plinth.
+
+## v3 — otto 1/1
+
+Viitteet tässä järjestyksessä: venus.jpg
+
+Use case: photorealistic-natural. Create one new, original fictional sculpture photographed like an ordinary museum visitor snapshot, not a collage.
+
+A white marble statue from about 1880, slightly under life-size, of a girl of about ten in a simple dress and ankle boots, sitting on a
+low stone wall and holding out her open hand, with three small marble sparrows: one on her palm, one on her shoulder, one on the wall.
+French academic 19th-century style, softly polished, light grey veining. Low grey stone plinth. Setting: a bright museum sculpture
+hall with a glass roof and pale stone walls, other sculptures out of focus far behind.
+
+Photorealistic photograph taken by a museum visitor with an ordinary camera, natural daylight, eye level, the whole statue with its
+plinth in frame, centred, portrait 3:4. Match the look of the attached reference photos. No people in the foreground, no text, no
+inscriptions, no plaques, no watermark. The statue must not resemble any existing famous statue.
+
+Input image 1 is a reference photograph for real marble surface and museum photographic appearance only. Do not reproduce its statue, pose, nudity or cropping. The requested girl wears the simple dress and ankle boots. Exactly three sculpted marble sparrows, clearly separated: one on the open palm, one on the shoulder, one on the low wall.
+
+Output framing: portrait 3:4, requested native resolution 1536 x 2048 pixels. Keep all parts of the sculpture and plinth inside the frame, with visible ground below and breathing room on every side. Ordinary camera exposure and natural surface variation, no cinematic grading or illustration. No lettering anywhere, not even on the plinth.
+
