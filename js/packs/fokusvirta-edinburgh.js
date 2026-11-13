@@ -1215,6 +1215,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       otsikko: 'Luola, jonka basalttipylväät ovat kuusikulmaisia — ja '
         + 'jonka nimi gaeliksi tarkoittaa soivaa',
       symboli: 'luonto',
+      laji: 'meri',
       lunastus: [
         'Sisä-Hebrideillä on asumaton saari nimeltä Staffa. Viikingit '
           + 'antoivat sille nimen, joka tarkoittaa pylvästä, koska saaren '

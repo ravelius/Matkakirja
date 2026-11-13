@@ -1092,6 +1092,7 @@ export const FOKUSVIRTA_KIOVA = {
       otsikko: 'Yhdeksän koskea, joiden kohina kuului kilometrien päähän '
         + '— ja jotka ovat nyt järven pohjassa',
       symboli: 'luonto',
+      laji: 'joki',
       lunastus: [
         'Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja '
           + 'niin se on — kolmesataa kilometriä. Sitten tuli kalliota. '

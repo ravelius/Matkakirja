@@ -811,6 +811,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       id: 'ventas-rumba',
       symboli: 'luonto',
+      laji: 'joki',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Ventas rumba',
       otsikko: 'Euroopan levein vesiputous on kahden metrin korkuinen — ja '
@@ -924,6 +925,7 @@ export const FOKUSVIRTA_RIIKA = {
       otsikko: 'Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla '
         + 'oli lopulta enää yksi puhuja',
       symboli: 'luonto',
+      laji: 'meri',
       lunastus: [
         'Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, '
           + 'on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella '

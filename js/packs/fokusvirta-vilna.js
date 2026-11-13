@@ -979,6 +979,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       id: 'kursiu-nerija',
       symboli: 'luonto',
+      laji: 'meri',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Kuršių nerija',
       otsikko: 'Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka '

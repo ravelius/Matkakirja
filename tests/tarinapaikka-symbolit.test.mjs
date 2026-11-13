@@ -13,6 +13,8 @@ import assert from 'node:assert/strict';
 import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { NOSTOSYM_TYYPIT, nostosymPaakategoria } from '../js/fokusnosto-symbolit.js';
+import { nostoKarttarivit } from '../js/fokusnosto.js';
+import { kohdeMerkinLadonta } from '../js/fokuskohteet.js';
 
 const MERKIN_PAAKATEGORIA = { tiimalasi: 'historia', lyyra: 'kulttuuri', lamppu: 'kauppa', skandaali: 'skandaalit' };
 
@@ -59,3 +61,41 @@ for (const { kaupunki, n } of kaikki) {
     assert.ok(nostosymPaakategoria(n.symboli), `symbolilla ${n.symboli} ei ole kartan pääkategoriaa`);
   });
 }
+
+/*
+ * LUONNON TÄKYNOSTON LAJI (KK 13.11.2026, täkymerkit c; proto-3d/_tyo/pelikoodari/takymerkit/TULOS.md):
+ * luontonoston merkki valitaan lajista (jarvi|joki|meri), muuten se on vuori. Baikal näkyi siksi vuorena. Laji kulkee
+ * merkkiriville (js/fokusnosto.js nostoMerkinKentat) ja ladontaan (js/fokuskohteet.js kohdeMerkinLadonta) → viennin
+ * karttavalot.laji → natiivin Kuvamerkki. Jokaisella luontonostolla laji on joko tunnettu tai tarkoituksella puuttuu
+ * (vuori on oikea merkki: fossiili, puu, dyyni, tulivuoret, vuorovesi odottaa KK:n sanaa).
+ */
+const LUONNON_LAJIT = new Set(['jarvi', 'joki', 'meri']);
+const LAJI_TARKOITUKSELLA_PUUTTUU = new Set([
+  'archaeopteryx', 'korkkitammi', 'maalehti-dune-du-pilat', 'maalehti-chaine-des-puys', 'maalehti-couesnonin-vuorovesi',
+]);
+const luontonostot = kaikki.filter(({ n }) => n.symboli === 'luonto');
+
+test('luontotäkyjä löytyy, ja Baikal on järvi', () => {
+  assert.ok(luontonostot.length >= 13, `vain ${luontonostot.length}`);
+  assert.equal(luontonostot.find(({ n }) => n.id === 'baikal')?.n.laji, 'jarvi');
+});
+
+for (const { kaupunki, n } of luontonostot) {
+  test(`${kaupunki} / nosto-${n.id}: luonnon laji tunnettu tai tarkoituksella puuttuu`, () => {
+    if (LAJI_TARKOITUKSELLA_PUUTTUU.has(n.id)) assert.equal(n.laji, undefined, 'laji lisätty: poista listalta');
+    else assert.ok(LUONNON_LAJIT.has(n.laji), `laji puuttuu tai tuntematon (${n.laji}) → merkki olisi vuori`);
+  });
+}
+
+for (const { kaupunki, n } of kaikki.filter(({ n }) => n.laji)) {
+  test(`${kaupunki} / nosto-${n.id}: laji kulkee merkkiriville ja ladontaan`, () => {
+    const { rivit } = nostoKarttarivit([{ ...n, kohde: undefined, paikka: { x: 1, y: 1, nimi: n.nimio } }], 'maailma');
+    assert.equal(rivit[0]?.kohde.laji, n.laji);
+    assert.equal(kohdeMerkinLadonta({}, rivit[0].kohde).laji, n.laji);
+  });
+}
+
+test('lajiton nosto pitää ladonnan lajina tyypin', () => {
+  const { rivit } = nostoKarttarivit([{ id: 'x', otsikko: 'x', symboli: 'historia', paikka: { x: 1, y: 1 } }], 'maailma');
+  assert.equal(kohdeMerkinLadonta({}, rivit[0].kohde).laji, 'nosto');
+});

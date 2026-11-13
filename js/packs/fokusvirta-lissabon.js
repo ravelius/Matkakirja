@@ -963,6 +963,7 @@ export const FOKUSVIRTA_LISSABON = {
       otsikko: 'Yhden kylän edustalla aallot ovat kaksi kertaa isompia kuin '
         + 'naapurirannalla — syy on kilometrien syvyydessä',
       symboli: 'luonto',
+      laji: 'meri',
       lunastus: [
         'Nazarén kalastajakylän pohjoisen rannan edessä avautuu merenalainen '
           + 'kanjoni, joka on Euroopan suurin: noin 230 kilometriä pitkä ja '
