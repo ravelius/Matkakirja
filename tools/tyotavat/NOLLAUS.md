@@ -32,7 +32,7 @@ Viestit Päätoimittajalle (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc) enintä�
 Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>".
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
-ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: <rooli>". Kirjoita sama rivi luovutukseesi.
+ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: <rooli>". Seuraava rivi otetaan VAIN, jos se ei odota KK:n päätöstä eikä riko voimassa olevaa "älä aja vielä" -sanaa (KK 10.29); vanhentuneelta näyttävästä rivistä yksi rivi PT:lle, ei työn aloitusta. Kirjoita sama rivi luovutukseesi.
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 
