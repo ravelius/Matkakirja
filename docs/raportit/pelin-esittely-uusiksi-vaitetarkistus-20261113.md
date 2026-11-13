@@ -71,3 +71,19 @@ Ei ajatusviivoja luonnoksessa ✔; sinuttelu ja preesens ✔ (v8 puhuu pelaajast
 - Kuumailmapallon ja Pariisin ylänäkymän kuvat: Googlen laatat, ks. 5; ei ulkoiseen käyttöön ilman lisenssiä. Pelin oma malli (Eiffel piirretyllä kartalla) käy.
 - Kielletyn kaupungin juoksukuva: oikea pelinäkymä käy; kuvateksti "tekeillä".
 - ISS-kuva: asema ja Maa omasta kohtauksesta; NASAn kuvissa valkoinen tunnuspalkki rajataan pois (iss 8); kuvalähteitä ei näytetä tehtävissä (lisenssit 4).
+
+## Lisäys 13.11. klo 22.20: hetki 5 "Astu Olavinlinnaan" (tekeillä; omistaja: Olavinlinna mukaan, kuva ulkoa)
+Luonnos: "Savonlinna. Astut menneisyyden linnaan ja ratkaiset arvoituksen tai löydät aarteen." (korvaa kohdan C: Olavinlinna pysyy mukana "tekeillä" -merkinnällä.)
+
+| Väite | Tulos | Lähde / ehdotus |
+|---|---|---|
+| Savonlinna | ✔ | Olavinlinna on Savonlinnassa; pelin linna on dioraamassa ilman nykykaupunkia (linnat 1) |
+| Astut menneisyyden linnaan | ✔ | linnat tavoite: aikamatka elokuun yöhön 1499; sääntö 2 |
+| "ratkaiset arvoituksen **tai** löydät aarteen" | ✎ | Tarinassa (Aarnivalkea, linnat 4–5) arvoitus ja aarre ovat yksi ketju: arvoitus johtaa aarteeseen ja palkinto on huomattava aarre. Ehdotus: "ratkaiset arvoituksen ja löydät aarteen". "Tai" on v8:n yleisvirke historian hetkistä, ei Olavinlinnan |
+| Pelin laji | ✎ | Raamatussa seikkailu on ensimmäisen persoonan hiiviskely (valo, varjo, harhautus; ei väkivaltaa ihmisiä vastaan; anteeksiantava). Ehdotus: "Hiivit elokuun yönä 1499 Olavinlinnaan, ratkaiset arvoituksen ja löydät aarteen." |
+| "Tekeillä" | ⚠ KK | Pelillä on viisi valmista tilaa (keittiö, porttikäytävä, pikkupiha, linnantupa, voudin sali), mutta linnatyö on tauolla ja uutta erää ei aloiteta ilman omistajan päätöstä (linnat 9); keskeneräinen osa ei ole julkaisussa (linnat 6). "Tekeillä" on silti oikein, kunhan esittelyssä ei lupailla ajankohtaa eikä kestoa |
+
+**Kuva ulkoa (olemassa olevat):**
+- `assets/apuraha/olavinlinna-hamara.jpg` (1600 px): pelin oma ulkokuva hämärässä, linna järven yli, valoja ikkunoissa, heijastus vedessä, ei Pulua eikä nykykaupunkia. **Suositus** (sopii "menneisyyden linnaan" ja 1499-kehykseen).
+- `assets/apuraha/3-olavinlinna.jpg` (1200 px): linna ylhäältä, mutta kuvassa **Pulu** (linnaseikkailussa ei Pulua, pulu-ja-kysymykset) ja tähtimäiset nykybastionit (1499-linnassa ne ovat poissa, linnat 2). Ei sovi tähän hetkeen.
+- Molemmat ovat pelin omia renderöintejä, eli ei kolmannen osapuolen lisenssiä; kuvalähteitä ei näytetä (lisenssit 4). Tuore otto ei tarvita.
