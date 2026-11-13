@@ -49,7 +49,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kone-ja-levy | Kone ja levy | PT | 2.9 kt | 12.11.2026 |
 | tilit-ja-kiintio | Tilit ja kiintiö | PT | 2.5 kt | 12.11.2026 |
 | avaimet-ja-luvat | Avaimet ja luvat | PT | 2.8 kt | 12.11.2026 |
-| roolit-ja-viestit | Roolit ja viestit | PT | 2.8 kt | 12.11.2026 |
+| roolit-ja-viestit | Roolit ja viestit | PT | 2.9 kt | 13.11.2026 |
 | omistajan-kanssa | Omistajan kanssa | KK | 3.0 kt | 13.11.2026 |
 | nollaus-ja-luovutus | Nollaus ja luovutus | PT | 2.9 kt | 12.11.2026 |
 | tyolista-ja-karjet | Työlista ja kärjet | KK | 2.9 kt | 12.11.2026 |
