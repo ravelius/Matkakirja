@@ -287,7 +287,9 @@
   "himmennys": {
     "tumma": "rgba(14, 9, 4, 0.72)",
     "kevyt": "rgba(14, 9, 4, 0.35)",
-    "kuva": "rgba(14, 9, 4, 0.92)"
+    "kuva": "rgba(14, 9, 4, 0.92)",
+    "_paljastus": "Aarteen paljastuksen tausta (KK 13.11.2026 klo 21.51 ja 22.36): kartan nimet eivät erotu tekstin takaa.",
+    "paljastus": "rgba(14, 9, 4, 0.99)"
   },
   "tila": {
     "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana. live: ☾-listan LIVE-laatikon pohja päällä (oranssi; pois = teeman toiminto-harmaa; omistaja 8.10.2026 klo 09.1x). raha-vahenee ja raha-kasvaa: kukkaron palaute yläpalkin tummalla pillerillä (summa punaisena tai vihreänä noin 1 s, omistaja 11.10.2026, juna 182).",
