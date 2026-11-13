@@ -557,9 +557,6 @@ const MODULES = [
    * funktioita, se ei tee levyversiossa mitään.
    */
   'js/natiivi.js',
-  // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
-  // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
-  'js/lahteet.js',
   // Nimetön kävijälaskuri (main.js tuo; tarvitsee pollo-asetukset.js:n).
   'js/kaynti.js',
   'js/aani-ehdokkaat.js',
@@ -662,6 +659,9 @@ const MODULES = [
    */
   // Sisältötaulut ennen ui.js:ää (ui tuo ne; pakat ovat jo yllä).
   'js/sisaltotaulut.js',
+  // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo, jonka js/ui.js tuo staattisesti.
+  // Sisältötaulujen jälkeen: valokuvakysymysten nimeämisrivit tulevat KAIKKI_VALOKUVAT-datasta (PR 6705).
+  'js/lahteet.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
   // Avaus- ja sulkuanimaatioiden apuri (omistaja 29.9.2026) ennen kortteja, popupeja ja valikoita,
