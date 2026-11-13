@@ -573,9 +573,9 @@ test('alkuerän retain-kuvat käyttävät hyväksyttyä versiota', async () => {
     assert.match(FOKUSVIRRAT[id].matkakirja.luentakuva.osoite,
       new RegExp(`-${id}-r20260909-paper-v4\\.jpg$`), id);
   }
-  // Pariisin luentakuva: isoisä ja kirjekyyhky (Codex 689a190dd, KK 12.11.2026 00.4x); i1/i2 (tarina14) pois.
+  // Pariisin luentakuva: isoisän kädet ja kirjekyyhky VALOKUVANA (omistaja 12.11.2026, Codex #2224 3b129bfbe; korvaa piirroksen 689a190dd).
   assert.match(FOKUSVIRRAT.pariisi.matkakirja.luentakuva.osoite,
-    /\/kaupunki-intro-v3\/isoisa-pariisi\.png$/, 'pariisi');
+    /\/kaupunki-intro-v3\/isoisa-pariisi-valokuva-v2\.png$/, 'pariisi');
   assert.equal(FOKUSVIRRAT.pariisi.matkakirja.luentakuva2, undefined, 'pariisi: yksi kuva');
 });
 

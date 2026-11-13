@@ -139,10 +139,12 @@ export const FOKUSVIRTA_PARIISI = {
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
-    // Isoisän YKSI kuva kortissa tekstin vieressä (omistaja 11.11.2026 klo 20.31; Codex 689a190dd, KK hyväksyi 12.11. 00.4x).
-    // Vanhat i1 ja i2 (tarina14) pois samassa muutoksessa (KK 12.11. 00.16).
+    // Isoisän YKSI kuva kortissa tekstin vieressä (omistaja 11.11.2026 klo 20.31). VALOKUVA v2 (omistaja 12.11.2026 09.27:
+    // "Tämä on hyvä, toimita Claudelle"; Codex #2224, postilaatikko 3b129bfbe, SHA256 4b356eeb…b445, muuttamaton 1536×1024) korvaa
+    // piirroksen 689a190dd. Isoisän kuvat vanhoina valokuvina, hänen ulkonäköään ei näytetä (tässä vain kädet).
+    // Uusi avain, koska vanha isoisa-pariisi.png on välimuisteissa muuttumattomana (immutable).
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi.png',
+      osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi-valokuva-v2.png',
       lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries’n puutarhasta.',
       selite: 'Isoisä päästää kirjekyyhkyn lentoon poltetun Tuileries’n palatsin edessä. Palatsi paloi vuonna 1871, ja sen rauniot purettiin 1883.',
       lahde: 'Matkakirjan havainnekuva',
