@@ -10,7 +10,7 @@ SÄÄNNÖT:
 5. Apulainen ei käytä simulaattoreita, käännöspalvelua eikä tuotannon workeria, ei poista eikä avaa PR:ää. Se on kertakäyttöinen; rooli todentaa ja julkaisee. [R-7.12] [R-12.1]
 6. Mikä onnistuu Macilla, ajetaan Macilla; GitHubin työnkulut vain PR:n porttiin ja siihen, mikä ei Macilla onnistu. [R-12.4]
 7. Ei cd:tä eikä komentoketjuja, haut rajattuun kansioon. Lupakysely on jumi: yksi viesti PT:lle, ei kiertoa. [R-12.9] [R-7.25]
-8. Yli 10 minuutin ajo käynnistetään omaan prosessiryhmäänsä lukolla ja sen pid tallennetaan. Lopetus vain sillä pid:llä, ei koskaan emo-, käyttäjä- tai nimiperusteisesti. [R-12.9] [R-12.4]
+8. Yli 10 minuutin ajo käynnistetään omaan prosessiryhmäänsä lukolla ja pid tallennetaan. Lopetus vain kill <oma pid>; pkill ja killall kielletty kokonaan (macOS:n pkill lukee valitsimet kuvioiksi ja osuu kaikkiin sessioihin). [R-12.9] [R-12.4]
 9. Tiedosto, jota toinen ohjelma lukee, kirjoitetaan väliaikaistiedostoon ja vaihdetaan paikalleen; suoritusoikeus säilyy, ja committiin ei mene oikeusmuutoksia. [R-7.40] [R-12.9] [P-261104-7]
 10. Työkansiot ovat vain yhteisessä Claude-kansiossa. PT:n checkoutiin ei kosketa; roolin checkout pysyy omassa työhaarassaan, jota ei yhdistetä. [R-7.7]
 11. Yksi erä = yksi worktree ja yksi haara uniikilla aiheella; commit vasta, kun tila on katsottu oikeassa worktreessä. Roolilla enintään 3 worktreetä, talossa alle 20. [R-7.7] [R-10.13]

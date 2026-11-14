@@ -10,7 +10,7 @@ SÄÄNNÖT:
 5. Kärjen ulkopuolinen työ alkaa vain omistajan sanalla ohi jonon, ja kärjet vaihtaa vain omistaja. Kärkeen vain tulkinnan kautta kuuluvaa työtä tai kokeita ei aloiteta; odottavaa riviä ei poisteta. [R-7.49] [P-261105-7]
 6. Tauolla olevaan tai peruttuun projektiin ei tehdä uutta erää ilman omistajan sanaa. [R-2.200]
 7. Rivi on valmis, kun työ on asennettavissa versiossa, ja versio kirjataan riville. KK tarkistaa rivin, kun rooli raportoi valmiin tai versio ilmestyy. [P-261110-9]
-8. Valmiin tai estyneen työn jälkeen rooli jatkaa heti seuraavalla jonorivillään ilman kuittausta. Tyhjästä jonosta rooli kertoo PT:lle ennen lepoa, ja PT antaa uuden työn listan järjestyksessä. [R-7.40]
+8. Valmiin, estyneen tai ajoa odottavan työn jälkeen rooli jatkaa samassa vuorossa seuraavalla jonorivillään ilman kuittausta; kuva katsotaan, kun se tulee. Ajon odotus ei ole lepotila. Tyhjästä jonosta yksi rivi KK:lle samassa vuorossa; jokaisella roolilla on vähintään kaksi työtä jonossa. [R-7.40] [P-261114-12]
 9. Joka ilta PT laatii työlistasta yösuunnitelman: jokaisen roolin jono täyteen ja raskaat ajot yöhön. Tehdyt rivit suljetaan ja päätöstä vaativat viedään KK:lle; aamulla KK kertoo omistajalle, mitä valmistui. [R-7.46]
 10. Työtä, jonka omistaja on ajoittanut myöhemmäksi, ei aikaisteta, vaikka konetta tai kiintiötä vapautuisi. [R-7.46]
 11. Asemataulu on jäädytetty: sitä ei avata, päivitetä eikä kehitetä ennen omistajan sanaa. Työlista ja junatiedot säilyvät yhteisenä tietona, ja tilannekuvan omistaja saa KK:lta. [R-7.39]

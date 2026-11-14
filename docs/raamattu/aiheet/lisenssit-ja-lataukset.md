@@ -1,4 +1,4 @@
-# lisenssit-ja-lataukset · vastuu PT · tarkistettu 13.11.2026
+# lisenssit-ja-lataukset · vastuu PT · tarkistettu 14.11.2026
 
 TAVOITE: Kaikki pelin kuvat, äänet, mallit ja aineistot ovat luvallisia, ja niiden tekijä näkyy. Mikään sisältö ei joudu pois oikeuksien takia.
 
@@ -12,13 +12,12 @@ SÄÄNNÖT:
 7. Pelin ämpäri ei ole jakelua: ostettu ja ladattu sisältö viedään sinne, ja lisenssistä tarkistetaan vain pelikäyttö (kaupallinen käyttö, nimeäminen, tekoälykoulutuskielto). [R-11.4]
 8. Tilauskirjaston raakatiedostot ovat NAS:lla ja ämpärissä vain käsitellyt; tilauksen päättyessä peliin viemättömät raakatiedostot poistetaan vain, jos tilausehto sitä vaatii. [R-5.20]
 9. Museoteos saa olla Commonsin kopio, vaikka museo rajaa kaupallisen käytön; kuva poistetaan museon pyynnöstä. Museoiden palvelimille ei massahakuja. [R-2.126]
-10. Jos Italian valtion museoiden teoksia on pelissä, sovellus jätetään pois Italian App Storesta. Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D piilotetaan vain Kreikan App Storessa, eikä niille tehdä uusia kuumailmapallokierroksia. [R-2.134] [R-2.135]
+10. Jos Italian valtion tai kuntien museoiden tai kuntien julkisia teoksia (Capitolini, Navona) on pelissä, sovellus jätetään pois Italian App Storesta (ei Vatikaani). Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D piilotetaan vain Kreikan App Storessa, eikä niille tehdä uusia kuumailmapallokierroksia. [R-2.134] [R-2.135] [P-261114-2]
 11. Omalla koneella ajettavan tekoälymallin lisenssin on sallittava kaupallinen käyttö. Codexin toimituksia koskevat samat lisenssisäännöt. [R-2.95] [R-11.7]
 12. Livekamera upotetaan vain virallisesta lähteestä, joka sallii upotuksen. [R-11.18]
 
 EI VIKA:
 - Wikimedian rajapintahaku, vaikka robots.txt kieltää polun /w/.
-- Commonsin kopio museoteoksesta, jonka museo rajaa kaupalliselta käytöltä.
 
 TEKOTAPA:
 - Lähdeluettelo: paketin LAHTEET.md; tarkistus julkaisija-tyokalut/vie-paketti.sh --kuiva.
