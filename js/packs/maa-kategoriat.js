@@ -2906,20 +2906,18 @@ export const MAA_KATEGORIAT = {
           wiki: 'Globe-teatteri',
         },
         {
-          otsikko: '42 773 sanaa yhdestä talosta',
+          otsikko: 'Yli 40 000 sanaa yhdestä talosta',
           tiedosto: "Dr Johnson's House, Gough Square - geograph.org.uk - 5590547.jpg",
-          teksti: 'Samuel Johnson allekirjoitti sanakirjasopimuksen kesäkuussa '
-            + '1746 ja sai palkkioksi 1 500 guineaa. Työ tehtiin 17 Gough '
-            + 'Squaren talossa Fleet Streetin takana, jonne hän muutti 1748, '
-            + 'ja kirja ilmestyi 15. huhtikuuta 1755. Siinä oli 42 773 '
-            + 'hakusanaa ja noin 114 000 lainausta noin viideltäsadalta '
-            + 'kirjailijalta. Ullakolla kuusi apulaista seisoi pitkän pöydän '
-            + 'ääressä ja kopioi Johnsonin kirjoihin merkitsemiä kohtia '
-            + 'paperiliuskoille. Talon edustalla istuu nykyään pronssinen '
-            + 'kissa: Johnsonin Hodge, jolle isäntä kävi itse ostamassa '
-            + 'ostereita, jottei palvelusväki suuttuisi elukalle.',
+          teksti: 'Samuel Johnson sai 1740-luvun puolivälissä kustantajilta '
+            + 'tehtäväkseen englannin kielen sanakirjan ja palkkioksi '
+            + '1 500 guineaa. Suuri osa työstä tehtiin 17 Gough Squaren talossa Fleet '
+            + 'Streetin takana, ja kirja ilmestyi 1755. Siinä oli yli 40 000 '
+            + 'hakusanaa ja yli 100 000 lainausta. Ullakolla apulaiset '
+            + 'kopioivat Johnsonin '
+            + 'kirjoihin merkitsemiä kohtia paperiliuskoille. Talon edustalla '
+            + 'istuu nykyään pronssinen kissa: Johnsonin Hodge.',
           lyhyt: "Dr Johnsonin talo Gough Squarella",
-          selite: "Gough Squaren talo numero 17 on Samuel Johnsonin entinen koti ja nykyään kirjailijakotimuseo; hän asui siinä 1748–1759 ja kirjoitti sanakirjansa.",
+          selite: "Gough Squaren talo numero 17 on Samuel Johnsonin entinen koti ja nykyään kirjailijakotimuseo; hän asui siinä suuren osan sanakirjan teon ajasta.",
           lahde: "Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)",
           wiki: 'Samuel Johnson',
         },
@@ -2964,16 +2962,14 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Osoite, jota ei ollut olemassa',
           tiedosto: 'Sherlock Holmes Museum, Baker Street, London (2).jpg',
           teksti: 'Arthur Conan Doyle antoi Sherlock Holmesille osoitteen 221B '
-            + 'Baker Street, vaikka sellaista ei ollut olemassa: vuonna 1890 '
-            + 'katu loppui numeroon 85. Vasta 1930-luvulla Baker Street '
+            + 'Baker Street, vaikka sellaista ei ollut olemassa: katu oli silloin '
+            + 'paljon nykyistä lyhyempi. Vasta 1930-luvulla Baker Street '
             + 'pidennettiin ja talot numeroitiin uudelleen, jolloin numerot '
             + '219–229 osuivat asuntoluottoyhtiö Abbey Nationalin juuri '
             + 'valmistuneeseen pääkonttoriin. Sinne alkoi tulla kirjeitä '
             + 'ympäri maailmaa: ihmiset pyysivät Holmesia ratkaisemaan omia '
             + 'arvoituksiaan. Yhtiö palkkasi työntekijän, jonka tehtävä oli '
-            + 'vastata niihin, ja tätä työtä riitti vuodesta 1932 aina '
-            + 'vuoteen 2002. Vakiovastaus kuului, että etsivä on jäänyt '
-            + 'eläkkeelle ja hoitaa nyt mehiläisiä Sussexissa.',
+            + 'vastata niihin.',
           lyhyt: 'Vuonna 1990 avattu museo saa käyttää osoitetta 221b talon sijaitessa numeroiden 237 ja 241 välissä.',
           selite: 'Vuonna 1990 avattu museo saa Westminsterin luvalla '
             + 'käyttää osoitetta 221b, vaikka sen georgiaaninen talo '
@@ -3406,16 +3402,15 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kartta, joka paljasti pumpun',
           tiedosto: 'Snow-cholera-map-1.jpg',
           teksti: 'Elokuun lopulla 1854 Sohossa puhkesi koleraepidemia, joka '
-            + 'tappoi 616 ihmistä. Lääkäri John Snow ei uskonut taudin '
+            + 'tappoi satoja ihmisiä. Lääkäri John Snow ei uskonut taudin '
             + 'leviävän pahasta hajusta, vaan kiersi ovelta ovelle ja '
             + 'merkitsi jokaisen kuolleen mustana palkkina sen talon '
             + 'kohdalle, jossa tämä oli asunut. Palkit kasautuivat yhden '
             + 'ainoan vesipumpun ympärille Broad Streetillä; pumpun kahva '
-            + 'irrotettiin 8. syyskuuta, ja myöhemmin selvisi, että kaivon '
-            + 'reunasta oli vajaa metri vuotavaan likakaivoon.',
+            + 'irrotettiin.',
           lyhyt: 'John Snow\'n kartta vuoden 1854 koleraepidemiasta osoitti taudin leviävän saastuneesta vedestä.',
           selite: 'John Snow\'n kartta vuoden 1854 Broad Streetin '
-            + 'koleraepidemiasta, joka tappoi 616 ihmistä ja jonka avulla '
+            + 'koleraepidemiasta, joka tappoi satoja ihmisiä ja jonka avulla '
             + 'Snow osoitti taudin leviävän saastuneesta vedestä eikä '
             + 'ilmasta.',
           lahde: 'John Snow, Commons (PD)',
@@ -3532,7 +3527,7 @@ export const MAA_KATEGORIAT = {
     {
       id: 'huumori',
       nimi: 'Huumori',
-      johdanto: 'Nukke jolla on virallinen syntymäpäivä, sana cartoon joka syntyi '
+      johdanto: 'Nukke jolla on perinteinen syntymäpäivä, sana cartoon joka syntyi '
         + 'vitsistä, ja kirkonkellot jotka ratkaisevat kuka on oikea cockney.',
       nostot: [
         {
@@ -3540,14 +3535,9 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
           teksti: 'Samuel Pepys kirjoitti päiväkirjaansa 9. toukokuuta 1662 '
             + 'nähneensä Covent Gardenissa italialaisen nukketeatterin, joka '
-            + 'oli hänen mielestään hyvin sievä. Nukettaja oli italialainen '
-            + 'Pietro Gimonde, ja esityksen tähti oli Pulcinella, josta '
-            + 'englannissa tuli Mr Punch. Tuota päivää pidetään yhä Punchin '
-            + 'virallisena syntymäpäivänä. Punchin kimeä kirkuna syntyy '
-            + 'swazzlesta, kahdesta metalliliuskasta ja niiden välisestä '
-            + 'nauhasta, jota nukettaja pitää suussaan koko näytöksen ajan. '
-            + 'Punchista on jäänyt englantiin sanontakin: pleased as Punch '
-            + 'tarkoittaa hyvin tyytyväistä.',
+            + 'oli hänen mielestään hyvin sievä. '
+            + 'Esityksen tähti oli Pulcinella, josta englannissa tuli Mr Punch. '
+            + 'Tuota päivää pidetään perinteisesti Punchin syntymäpäivänä.',
           lyhyt: 'Muistolaatan mukaan Punch ja Judy -nukketeatteri esitettiin Englannissa ensi kerran vuonna 1662.',
           selite: 'Muistolaatta kertoo, että Punch ja Judy -nukketeatteri '
             + 'esitettiin Englannissa ensi kerran vuonna 1662 ja Samuel '
@@ -3618,14 +3608,14 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Chaplin oli lontoolainen köyhä poika',
           tiedosto: "Charlie Chaplin.jpg",
-          teksti: 'Charlie Chaplin syntyi 16. huhtikuuta 1889 Walworthissa '
-            + 'Etelä-Lontoossa, ja seitsemänvuotiaana hänet vietiin Lambethin '
+          teksti: 'Charlie Chaplin syntyi 16. huhtikuuta 1889 '
+            + 'Etelä-Lontoossa, ja seitsemänvuotiaana hänet vietiin '
             + 'vaivaistaloon. Molemmat vanhemmat olivat music hall '
-            + '-esiintyjiä, ja poika itse kiersi yhdeksänvuotiaana '
+            + '-esiintyjiä, ja poika itse kiersi lapsena '
             + 'englantilaisia varieteesaleja Eight Lancashire Lads '
-            + '-puukenkätanssiryhmässä. Kulkurin asun hän kokosi Keystonen '
-            + 'studiolla Los Angelesissa 1914 yhden periaatteen mukaan, jonka '
-            + 'hän myöhemmin kirjoitti muistiin: kaiken piti olla '
+            + '-puukenkätanssiryhmässä. Kulkurin asu nähtiin ensi kerran '
+            + 'elokuvassa 1914, ja Chaplin kokosi sen yhden periaatteen mukaan, '
+            + 'jonka hän myöhemmin kirjoitti muistiin: kaiken piti olla '
             + 'ristiriitaista, housut pussittavat, takki tiukka, hattu pieni '
             + 'ja kengät suuret.',
           lyhyt: "Charlie Chaplin Kulkurin asussa 1915",
@@ -3634,17 +3624,13 @@ export const MAA_KATEGORIAT = {
           wiki: 'Charles Chaplin',
         },
         {
-          otsikko: 'Viimeinen suuri music hall',
+          otsikko: 'Harvinainen säilynyt music hall',
           tiedosto: 'Wilton\'s Music Hall - Interior.jpg',
-          teksti: 'John Wilton rakensi 1859 ostamansa Mahogany Bar -pubin taakse '
-            + 'Tower Hamletsiin salin, johon mahtui 1 500 työläistä istumaan '
-            + 'pöytien ääreen kuuntelemaan laulajia ja koomikoita. Katosta '
-            + 'riippui sun-burner, jossa paloi 300 kaasuliekkiä ja välkkyi 27 '
-            + '000 hiottua kristallia; sen kuumuuden jättämä palojälki näkyy '
-            + 'kattoparruissa yhä. Sali ehti olla metodistien lähetysasema ja '
-            + 'lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
-            + 'koomikot Peter Sellers ja Spike Milligan olivat mukana '
-            + 'pelastamassa sitä, ja talo suojeltiin huhtikuussa 1971.',
+          teksti: 'Vuonna 1859 John Wilton rakensi Tower Hamletsissa ostamansa '
+            + 'Mahogany Bar -pubin taakse suuren salin, jossa yleisö kuunteli '
+            + 'laulajia ja koomikoita. Sali ehti olla metodistien lähetysasema '
+            + 'ja lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
+            + 'se pelastettiin, ja talo suojeltiin 1970-luvun alussa.',
           lyhyt: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin music halleja, nykyään esitystalo.',
           selite: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin '
             + 'music halleja, ja se toimii nykyään monialaisena '
@@ -3675,17 +3661,17 @@ export const MAA_KATEGORIAT = {
         + 'saarilla.',
       nostot: [
         {
-          otsikko: 'Säännöt kirjoitettiin pubin takahuoneessa',
+          otsikko: 'Säännöt kirjoitettiin lontoolaisessa tavernassa',
           tiedosto: 'Original laws of the game 1863.jpg',
-          teksti: 'Lokakuussa 1863 kaksitoista seuraa kokoontui lontoolaiseen '
-            + 'Freemasons\' Tavern -pubiin sopimaan yhteisistä säännöistä. '
+          teksti: 'Lokakuussa 1863 joukko seuroja kokoontui Lontoossa Great Queen '
+            + 'Streetillä sopimaan yhteisistä säännöistä. '
             + 'Siihen asti joka koulu pelasi omillaan: joissakin sai kantaa '
             + 'palloa käsissä, toisissa ei, ja vastustajan potkiminen sääreen '
-            + 'kuului joidenkin mielestä peliin. Kokouksissa käsien käyttö ja '
-            + 'säären potkiminen äänestettiin pois — ne seurat, jotka '
-            + 'halusivat pitää ne, lähtivät ja perustivat myöhemmin rugbyn. '
-            + 'Käsisääntö erotti kaksi maailmanlaajuista peliä toisistaan '
-            + 'yhdessä illassa.',
+            + 'kuului joidenkin mielestä peliin. Kokouksissa pallon kantaminen ja '
+            + 'säären potkiminen jäivät pois säännöistä — ne seurat, jotka '
+            + 'halusivat pitää ne, lähtivät ja perustivat myöhemmin oman rugbyliittonsa. '
+            + 'Kantokielto erotti kaksi maailmanlaajuista peliä toisistaan '
+            + 'muutamassa viikossa.',
           lyhyt: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen perusta Football Associationissa.',
           selite: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen '
             + 'perusta, ja ne hyväksyttiin juuri perustetussa Football '

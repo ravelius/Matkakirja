@@ -3265,6 +3265,96 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     /*
+     * TARINAPAIKKA 'Händel ja Hendrix' (KK 14.11.2026, Lontoon 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on täkynoston
+     * lunastuksena (js/packs/fokusvirta-lontoo.js 'handel-hendrix-brook-street'). Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     */
+    'Händel ja Hendrix': {
+      aika: '1723–1969',
+      nosto: 'nosto-handel-hendrix-brook-street',
+      teksti: 'Mayfairin Brook Streetillä on kaksi vierekkäistä taloa, joissa asui kaksi kuuluisaa '
+        + 'muusikkoa. Säveltäjä Georg Friedrich Händel muutti numeroon 25 vuonna 1723 ja asui '
+        + 'siellä kuolemaansa saakka 14. huhtikuuta 1759. Elokuun 22. ja syyskuun 14. päivän '
+        + 'välillä 1741 hän sävelsi 24 päivässä Messias-oratorion, joka syntyi todennäköisesti '
+        + 'juuri tässä talossa.'
+        + '\n\n'
+        + 'Reilut kaksisataa vuotta myöhemmin viereisessä talossa, numerossa 23, asui vuosina '
+        + '1968–69 kitaristi Jimi Hendrix. Kerrotaan, että kun hän sai tietää Händelin asuneen '
+        + 'naapurissa, hän osti Messias-levyn.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot ovat '
+        + 'yhdessä museo.',
+      kuvat: [
+        {
+          tiedosto: 'George Frideric Handel by Thomas Hudson.jpg',
+          lyhyt: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä.',
+          selite: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä, joka asui Brook Streetin numerossa 25 vuodesta 1723 kuolemaansa saakka.',
+          lahde: 'Thomas Hudson, Wikimedia Commons (PD)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): English Heritage (siniset laatat), Handel Hendrix House -museo (Learn about Handel/Hendrix), en-Wikipedia "Handel & Hendrix in London" ja "Messiah (Handel)"; kaksi itsenäistä lähdettä.
+      lahde: 'Matkakirjan oma teksti · lähteinä English Heritage, Handel Hendrix House -museo ja Wikipedia',
+    },
+    /*
+     * TARINAPAIKKA 'Johnson 1755' (KK 14.11.2026, Lontoon 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on täkynoston
+     * lunastuksena (js/packs/fokusvirta-lontoo.js 'johnsonin-sanakirja-1755'). Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     */
+    'Johnson 1755': {
+      aika: '1755',
+      nosto: 'nosto-johnsonin-sanakirja-1755',
+      teksti: '1740-luvun puolivälissä joukko lontoolaisia kustantajia palkkasi kirjailija Samuel '
+        + 'Johnsonin laatimaan englannin kielen sanakirjaa. Palkkio oli 1 500 guineaa. Työ kesti '
+        + 'lähes vuosikymmenen, ja kirja ilmestyi vuonna 1755.'
+        + '\n\n'
+        + 'Johnson asui työn aikana osan ajasta Gough Squarella Fleet Streetin pohjoispuolella, '
+        + 'talossa numero 17. Hän merkitsi kirjoihin kohdat, joissa sana esiintyi esimerkkinä, ja '
+        + 'apulaiset kopioivat ne paperiliuskoille. Talo oli täynnä kirjoja ja apulaisia.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
+        + 'vuokraamansa talo seisoi yhä Gough Squarella. Nykyään siinä on museo.',
+      kuvat: [
+        {
+          tiedosto: 'Dr Johnson\'s House, Gough Square - geograph.org.uk - 5590547.jpg',
+          lyhyt: 'Dr Johnsonin talo Gough Squarella.',
+          selite: 'Gough Squaren talo numero 17, jossa Samuel Johnson asui osan sanakirjan teon ajasta ja jossa nykyään on museo.',
+          lahde: 'Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): drjohnsonshouse.org (Johnson's Dictionary, 17 Gough Square); Boswell, Life of Johnson (1791, Gutenberg); EB 1911 "Johnson, Samuel" (Wikisource): 1 500 guineaa, julkaisu 1755. Sopimusvuosi jätetty pois tarkoituksella (lähteet 1746/1747). Paikka ja museo: en-Wikipedia "Dr Johnson's House".
+      lahde: 'Matkakirjan oma teksti · lähteinä Dr Johnson\'s House -museo, Boswellin Life of Johnson, Encyclopaedia Britannica (1911) ja Wikipedia',
+    },
+    /*
+     * TARINAPAIKKA 'Punch 1662' (KK 14.11.2026, Lontoon 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on täkynoston
+     * lunastuksena (js/packs/fokusvirta-lontoo.js 'punch-pepys-1662'). Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     */
+    'Punch 1662': {
+      aika: '1662',
+      nosto: 'nosto-punch-pepys-1662',
+      teksti: 'Toukokuun 9. päivänä 1662 Samuel Pepys kirjasi päiväkirjaansa käyneensä Covent '
+        + 'Gardenissa katsomassa italialaista nukketeatteria, jota esitettiin aitauksen sisällä. '
+        + 'Hänen mielestään se oli hyvin sievä, parasta mitä hän oli nähnyt, ja katsojia riitti. '
+        + 'Merkintä ei mainitse Punchia nimeltä, mutta perinteen mukaan päivä on Punchin '
+        + 'syntymäpäivä.'
+        + '\n\n'
+        + 'Vuonna 1669 Pepys kirjasi toisen merkinnän: kujalla hän kuuli köyhien kutsuvan lihavaa '
+        + 'lastaan Punchiksi, ja se ilahdutti häntä, koska sana oli tullut yleiseen käyttöön '
+        + 'kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
+        + 'italialaisesta Pulcinellasta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut yli 200 vuotta. St Paulin kirkon '
+        + 'seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
+        + 'merkinnästä.',
+      kuvat: [
+        {
+          tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
+          lyhyt: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa.',
+          selite: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa kertoo, että Pepys näki Punchin nukketeatterin lähellä tätä paikkaa vuonna 1662.',
+          lahde: 'Spudgun67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): Pepysin päiväkirja 9.5.1662 ja huhtikuu 1669 (en-Wikisource); EB 1911 "Punch (puppet)" (Wikisource); laatta nähty Commons-kuvasta. Pepysin päivä on juliaaninen. "Punchin syntymäpäivä" = perinne (vain Wikipedia, KK 23.31 sallii). Gimonde, swazzle ja "pleased as Punch" jätetty pois (yksi lähde).
+      lahde: 'Matkakirjan oma teksti · lähteinä Pepysin päiväkirja, Encyclopaedia Britannica (1911) ja Wikipedia',
+    },
+    /*
      * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
      * ennen striimatun tietokortin. Isoisän "kadonnut maailma" -sävy. Kuvat Wikimedia Commonsista (pysyvä lupa).
      */

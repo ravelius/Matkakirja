@@ -191,6 +191,10 @@ export const MINIATYYRIT = {
     // Liukumäkiveistos pois (KK 13.11.2026): Orbit on pääkartalla, ei kohdekartalla.
     // Ämpäritunnus: kuva tilataan erikseen (ei generointia ilman lupaa); puuttuva kuva putoaa varatäpläksi.
     'Savusumu 1952': 'lontoo-savusumu-1952',
+    // Lontoon 3 tarinapaikkaa (KK 14.11.2026): ämpäritunnus, kuva tilataan erikseen; puuttuva kuva putoaa varatäpläksi.
+    'Händel ja Hendrix': 'lontoo-handel-hendrix-brook-street',
+    'Johnson 1755': 'lontoo-johnsonin-sanakirja-1755',
+    'Punch 1662': 'lontoo-punch-pepys-1662',
   },
   // Eurooppa-erä 1 (omistajan tilaus 15.8.2026: "Lisää kartta
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
