@@ -92,3 +92,13 @@ KK:n valinta: kolmikon 2 kolmas pari = Egmont-alkusoitto (Czech National SO / Mu
 - Kaikki löytyneet ovat Wikipediaa (ei riippumattomia toisistaan); mikään ei sano kirjaimellisesti "kantaesitettiin Burgtheaterissa". Tuettu muotoilu: "Burgtheater tilasi musiikin, ja se kantaesitettiin Wienissä 15.6.1810 Goethen Egmontin esityksen yhteydessä."
 
 **Seuraus:** KK:n ehto (toinen suora lähde) ei täyty. Vara: Beethoven 5, osa IV (Victor Concert Orchestra / Josef Pasternack 1917; Wien-kantaesitys 22.12.1808 Theater an der Wien 3/3 lähteestä). Ote levynpuolen A sisältä (0:00–4:30; sauma kohdassa 4:30). KK päättää, hyväksytäänkö Egmont de- ja it-Wikipedian varassa vai siirrytäänkö varaan.
+
+## Päätös 14.11. klo 10.12: Rooman sääntö 10 (omistaja, KK:n välittämä)
+
+OMISTAJAN PÄÄTÖS: "Kyllä, sama sääntö." Rooman kaupungin museoita (Musei Capitolini ym.) kohdellaan kuten Italian valtion museoita eli **laaja tulkinta** pätee.
+
+- Rooman Paljasta pitää kaikki kahdeksan omaa teostaan; teoksia ei vaihdeta.
+- Peliä **ei julkaista Italian App Storessa** (sääntö 10).
+- Seuraukset-kohdan 2 kysymys (kortin sana vs. "haltija Italiassa") on ratkaistu: kortin sana.
+- Kohdan 3 avoimet haltijatiedot (Mooseksen omistaja, V4/V5:n haltijat) eivät ole enää tarpeen; niitä ei selvitetä.
+- Ei datamuutoksia; data-PR (Rooma) vasta KK:n sanalla.
