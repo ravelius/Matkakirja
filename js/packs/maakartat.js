@@ -5389,6 +5389,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
       { nimi: 'Petit Palais', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
+      // Natiivin koodimallit ilman Tripoa (KK 14.17, S3-faktat): nimi = natiivin Kohde.Nimi, piste = Wikidata P625 (Q1431547, Q1338207, Q178065).
+      { nimi: 'Tour Saint-Jacques', lat: 48.8578, lon: 2.3488, wiki: 'Tour Saint-Jacques' },
+      { nimi: 'Saint-Eustache', lat: 48.8633, lon: 2.345, wiki: 'Saint-Eustachen kirkko' },
+      { nimi: 'Pompidou-keskus', lat: 48.8606, lon: 2.3522, wiki: 'Pompidou-keskus' },
       { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
