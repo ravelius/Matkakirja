@@ -1,0 +1,56 @@
+# Valoseppä 15.11.2026: tyyppimallit Nyt | Uusi samassa ajossa (ui kartanelama merkit 0|1), haara valoseppa/tyyppimallit-peliin. EI JUNAAN (KK 01.10).
+alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento lahizoomi 0
+komento kallista 58
+komento suunta 314
+komento aja 48.849 2.3365 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva p1-nyt Luxembourg ja Saint-Sulpice läheltä: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva p1-uusi Luxembourg ja Saint-Sulpice läheltä: Uusi (tyyppimallit)
+komento kallista 58
+komento suunta 200
+komento aja 48.8672 2.323 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva p2-nyt Concorde, Madeleine ja Hôtel de la Marine läheltä: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva p2-uusi Concorde, Madeleine ja Hôtel de la Marine läheltä: Uusi (tyyppimallit)
+komento kallista 50
+komento suunta 314
+komento aja 48.859 2.335 0.05 2
+odota 20
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva p3-nyt Pariisi kaukaa (keskusta): Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva p3-uusi Pariisi kaukaa (keskusta): Uusi (tyyppimallit)

@@ -1,0 +1,72 @@
+# Valoseppä 15.11.2026: tyyppimallit Nyt | Uusi samassa ajossa (ui kartanelama merkit 0|1), haara valoseppa/tyyppimallit-peliin. EI JUNAAN (KK 01.10).
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento lahizoomi 0
+komento kallista 58
+komento suunta 300
+komento aja 51.505 -0.1268 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva l1-nyt Whitehall: Horse Guards, Old Admiralty, Banqueting House läheltä: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva l1-uusi Whitehall: Horse Guards, Old Admiralty, Banqueting House läheltä: Uusi (tyyppimallit)
+komento kallista 58
+komento suunta 200
+komento aja 51.531 -0.125 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva l2-nyt King's Cross ja St Pancras läheltä: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva l2-uusi King's Cross ja St Pancras läheltä: Uusi (tyyppimallit)
+komento kallista 58
+komento suunta 200
+komento aja 51.5108 -0.1172 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva l3-nyt Somerset House ja Strand läheltä: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva l3-uusi Somerset House ja Strand läheltä: Uusi (tyyppimallit)
+komento kallista 50
+komento suunta 300
+komento aja 51.507 -0.11 0.05 2
+odota 20
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva l4-nyt Lontoo kaukaa (Westminster–City): Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva l4-uusi Lontoo kaukaa (Westminster–City): Uusi (tyyppimallit)
