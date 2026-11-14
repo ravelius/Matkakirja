@@ -1557,14 +1557,14 @@ export const FOKUSVIRTA_LONTOO = {
           + 'käyttöön kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
           + 'italialaisesta Pulcinellasta.',
         'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut 211 vuotta. St Paulin '
-          + 'kirkon seinällä Covent Gardenissa on laatta, jonka teatterintutkijoiden seura ja '
-          + 'brittiläinen nukke- ja pienoisteatterikilta pystyttivät vuonna 1962.',
+          + 'kirkon seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
+          + 'merkinnästä.',
       ],
       lahde: 'Pepysin päiväkirja 9.5.1662 ja huhtikuu 1669 (en-Wikisource); Encyclopaedia Britannica 11. painos "Punch (puppet)" (Wikisource): Pepys 1662, Punchinello; laatta nähty Commons-kuvasta. Pepysin päivä on juliaaninen. "Punchin syntymäpäivä" = perinne (vain Wikipedia, KK 23.31 sallii). Gimonde, swazzle ja "pleased as Punch" jätetty pois (yksi lähde). SK 14.11.2026; tarkistaja ja KK ennen junaa.',
       kuva: {
         tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
         lyhyt: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa.',
-        selite: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa kertoo, että Pepys näki Punchin nukketeatterin lähellä tätä paikkaa vuonna 1662. Laatta on vuodelta 1962.',
+        selite: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa kertoo, että Pepys näki Punchin nukketeatterin lähellä tätä paikkaa vuonna 1662.',
         lahde: 'Spudgun67, Wikimedia Commons (CC BY-SA 4.0)',
       },
       kysymykset: [

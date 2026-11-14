@@ -2906,13 +2906,13 @@ export const MAA_KATEGORIAT = {
           wiki: 'Globe-teatteri',
         },
         {
-          otsikko: '42 773 sanaa yhdestä talosta',
+          otsikko: 'Yli 40 000 sanaa yhdestä talosta',
           tiedosto: "Dr Johnson's House, Gough Square - geograph.org.uk - 5590547.jpg",
           teksti: 'Samuel Johnson sai 1740-luvun puolivälissä kustantajilta '
             + 'tehtäväkseen englannin kielen sanakirjan ja palkkioksi '
             + '1 500 guineaa. Työ tehtiin 17 Gough Squaren talossa Fleet '
-            + 'Streetin takana, ja kirja ilmestyi 1755. Siinä oli 42 773 '
-            + 'hakusanaa ja noin 114 000 lainausta. Ullakolla apulaiset '
+            + 'Streetin takana, ja kirja ilmestyi 1755. Siinä oli yli 40 000 '
+            + 'hakusanaa ja yli 100 000 lainausta. Ullakolla apulaiset '
             + 'seisoivat pitkän pöydän ääressä ja kopioivat Johnsonin '
             + 'kirjoihin merkitsemiä kohtia paperiliuskoille. Talon edustalla '
             + 'istuu nykyään pronssinen kissa: Johnsonin Hodge.',
@@ -3407,8 +3407,7 @@ export const MAA_KATEGORIAT = {
             + 'merkitsi jokaisen kuolleen mustana palkkina sen talon '
             + 'kohdalle, jossa tämä oli asunut. Palkit kasautuivat yhden '
             + 'ainoan vesipumpun ympärille Broad Streetillä; pumpun kahva '
-            + 'irrotettiin 8. syyskuuta, ja myöhemmin selvisi, että kaivon '
-            + 'reunasta oli vajaa metri vuotavaan likakaivoon.',
+            + 'irrotettiin.',
           lyhyt: 'John Snow\'n kartta vuoden 1854 koleraepidemiasta osoitti taudin leviävän saastuneesta vedestä.',
           selite: 'John Snow\'n kartta vuoden 1854 Broad Streetin '
             + 'koleraepidemiasta, joka tappoi satoja ihmisiä ja jonka avulla '
@@ -3633,12 +3632,12 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Viimeinen suuri music hall',
           tiedosto: 'Wilton\'s Music Hall - Interior.jpg',
           teksti: 'John Wilton rakensi 1859 ostamansa Mahogany Bar -pubin taakse '
-            + 'Tower Hamletsiin salin, johon mahtui noin 1 500 katsojaa '
+            + 'Tower Hamletsiin salin, johon mahtui yli tuhat katsojaa '
             + 'kuuntelemaan laulajia ja koomikoita. Katosta '
-            + 'riippui sun-burner, jossa paloi 300 kaasuliekkiä ja välkkyi 27 '
-            + '000 hiottua kristallia. Sali ehti olla metodistien lähetysasema '
+            + 'riippui sun-burner, jossa paloi satoja kaasuliekkejä ja välkkyi '
+            + 'kristalleja. Sali ehti olla metodistien lähetysasema '
             + 'ja lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
-            + 'se pelastettiin, ja talo suojeltiin huhtikuussa 1971.',
+            + 'se pelastettiin, ja talo suojeltiin 1970-luvun alussa.',
           lyhyt: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin music halleja, nykyään esitystalo.',
           selite: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin '
             + 'music halleja, ja se toimii nykyään monialaisena '
