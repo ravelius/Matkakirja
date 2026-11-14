@@ -3622,17 +3622,16 @@ export const MAA_KATEGORIAT = {
           wiki: 'Charles Chaplin',
         },
         {
-          otsikko: 'Harvinainen säilynyt music hall',
+          otsikko: 'Music hall pubin takana',
           tiedosto: 'Wilton\'s Music Hall - Interior.jpg',
-          teksti: 'Vuonna 1859 John Wilton rakensi Tower Hamletsissa ostamansa '
-            + 'Mahogany Bar -pubin taakse suuren salin, jossa yleisö kuunteli '
-            + 'laulajia ja koomikoita. Sali ehti olla metodistien lähetysasema '
-            + 'ja lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
-            + 'se pelastettiin, ja talo suojeltiin 1970-luvun alussa.',
-          lyhyt: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin music halleja, nykyään esitystalo.',
-          selite: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin '
-            + 'music halleja, ja se toimii nykyään monialaisena '
-            + 'esitystalona.',
+          teksti: 'Vuonna 1859 John Wilton rakensi Tower Hamletsissa Mahogany '
+            + 'Bar -pubinsa taakse suuren salin, jossa yleisö kuunteli '
+            + 'laulajia ja koomikoita. Vuonna 1888 talosta tuli metodistien '
+            + 'lähetysasema. 1960-luvulla talo oli määrä purkaa, mutta se '
+            + 'pelastettiin.',
+          lyhyt: 'Wilton\'s Music Hall Tower Hamletsissa toimii nykyään esitystalona.',
+          selite: 'Wilton\'s Music Hall Tower Hamletsissa toimii nykyään '
+            + 'monialaisena esitystalona.',
           lahde: 'Kbthompson at English Wikipedia, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Music hall',
         },
