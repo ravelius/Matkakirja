@@ -142,8 +142,7 @@ export const EUROOPAN_KADONNEET = {
       laudat: { maailmankartta: { x: 5911.6, y: 1439.6 }, europe: { x: 256.3, y: 608.6 } },
       teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla, jonka Ludvig VI '
         + 'rakennutti kiveksi noin 1130. Philippe Auguste rakennutti kaupungin muurin 1190, ja linnakkeesta '
-        + 'tuli Pariisin prévôtin oikeudenkäytön ja poliisin pääpaikka. Ludvig XIV rakennutti rakennuksen '
-        + 'lähes kokonaan uudelleen 1684. Rue Saint-Denis kulki rakennuksen alta: idässä oli vankila, '
+        + 'tuli Pariisin prévôtin oikeudenkäytön ja poliisin pääpaikka. Rue Saint-Denis kulki rakennuksen alta: idässä oli vankila, '
         + 'lännessä tuomareiden salit ja kaupungin ruumishuone. Vankeina olivat muun muassa François '
         + 'Villon, Molière ja rosvo Cartouche. Seudulla haisi läheisten teurastamojen veri, ja viemärivesi '
         + 'virtasi Seineen. Prévôtin virka lakkautettiin 1790, ja linnake purettiin 1802–1810. Paikalle '
@@ -169,7 +168,7 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Torni, jonka Napoleon käski purkaa',
       laudat: { maailmankartta: { x: 5912.0, y: 1439.2 }, europe: { x: 256.5, y: 608.4 } },
       teksti: 'Temple-torni eli Grosse Tour oli temppeliritarien Pariisin päämajan linnoitustorni, jonka '
-        + 'rakentaminen alkoi 1240 Ludvig Pyhän aikana. Torni oli noin 50 metriä korkea, sen muurit olivat '
+        + 'rakentaminen alkoi 1240 Ludvig Pyhän aikana. Tornin muurit olivat '
         + 'keskimäärin neljä metriä paksut, ja kulmissa oli neljä pienempää tornia. Temppeliritarikunta '
         + 'lakkautettiin 1312. Elokuun 13. päivänä 1792 Pariisin kommuuni vei kuningasperheen Templeen; '
         + 'Ludvig XVI lähti sieltä giljotiinille 21. tammikuuta 1793. Hänen poikansa Ludvig XVII kuoli '
@@ -235,10 +234,9 @@ export const EUROOPAN_KADONNEET = {
         + 'vuoden 1855 Pariisin maailmannäyttelyä varten. Arkkitehti Jean-Marie-Victor Vielin ja insinööri '
         + 'Alexis Barrault\'n suunnittelema rakennus piilotti rautarakenteensa kivijulkisivun taakse, ja sen '
         + 'päälaiva oli 190 metriä pitkä ja 48 metriä leveä. Halli ei ollut valmis avajaisissa, ja huono '
-        + 'ilmanvaihto teki siitä päivisin tukalan. Kirjailija Octave Mirbeau vertasi sitä härkään, joka '
-        + 'tallaa ruusutarhaa. Vuosina 1857–1897 siellä pidettiin vuosittain Salon, ja 1881 ensimmäinen '
+        + 'ilmanvaihto teki siitä päivisin tukalan. Vuosina 1857–1897 siellä pidettiin vuosittain Salon, ja 1881 ensimmäinen '
         + 'kansainvälinen sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1896–1897 '
-        + 'Grand Palais\'n tieltä, ja sen rautaa ja kiveä käytettiin Notre-Dame-du-Travail-kirkossa.',
+        + 'Grand Palais\'n tieltä, ja sen rautaa käytettiin Notre-Dame-du-Travail-kirkossa.',
       lahde: 'en-Wikipedia "Palais de l\'Industrie", johdanto ja osiot "Architecture", "History" ja "Legacy"; '
         + 'fr-Wikipedia "Palais de l\'Industrie", osiot "Historique" ja "Utilisation" (tarkistettu '
         + '31.10.2026).',
@@ -326,17 +324,18 @@ export const EUROOPAN_KADONNEET = {
       korostukset: ['Victor Baltard|Victor Baltardin', 'Émile Zola|Émile Zolan'],
       nappi: 'Pariisin vatsa, jonka tilalle jäi kuoppa',
       laudat: { maailmankartta: { x: 5911.5, y: 1439.4 }, europe: { x: 256.2, y: 608.5 } },
-      teksti: 'Les Halles oli Pariisin keskeinen ruokatori, jonka historia ulottuu 1000-luvulle; Filip II '
+      teksti: 'Les Halles oli Pariisin keskeinen ruokatori, jonka historia ulottuu 1100-luvulle; Filip II '
         + 'Augustus otti sen haltuunsa 1183 ja rakennutti kaksi hallia kankaille. Victor Baltardin '
-        + 'suunnittelemat lasi- ja rautapaviljongit avattiin vaiheittain 1857–1874, joten isoisän käydessä '
-        + '1873 hallit olivat lähes valmiit. Émile Zolan romaani Pariisin vatsa (1873) sijoittuu näille '
+        + 'suunnittelemat lasi- ja rautapaviljongit, kymmenen kappaletta, rakennettiin vaiheittain '
+        + '1850-luvulta 1870-luvun alkuun. Émile Zolan romaani Pariisin vatsa (1873) sijoittuu näille '
         + 'markkinoille ja antoi torille lempinimen. Tukkukauppa muutti Rungisiin 1969, ja hallit purettiin '
         + '1971–1973. Paikalle jäi niin valtava työmaa, että sitä kutsuttiin nimellä "Les Hallesin reikä". '
         + 'Yksi paviljonki pystytettiin uudelleen Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle '
         + '1979.',
       lahde: 'en-Wikipedia "Les Halles", osiot "History" (The market of the Little Fields; The wholesale '
-        + 'market; Major conversion); fr-Wikipedia "Halles de Paris", osio "Historique" (tarkistettu '
-        + '31.10.2026).',
+        + 'market; Major conversion); fr-Wikipedia "Halles de Paris", osio "Historique"; paris.fr "Ces lieux disparus qui font aussi '
+        + 'l\'histoire de Paris (2/2)" (1100-luku, 1183) ja fr-Wikisource "Les Halles centrales de Paris" '
+        + '(1183) (tarkistettu 14.11.2026).',
       kuva: 'ihme-les-halles-loistoaika.jpg',
       lyhyt: 'Aamuyöllä torimummot huutavat hintoja lasihallien katon alla vihannesvuorten keskellä; sata '
         + 'vuotta myöhemmin hallit puretaan.',
