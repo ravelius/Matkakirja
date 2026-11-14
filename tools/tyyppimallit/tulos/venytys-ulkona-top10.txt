@@ -1,0 +1,22 @@
+pariisi: venytyksen ulkopuolella 41 kirkkoa; 10 suurinta (ala m², pohja pituus × leveys m, sivusuhde, lähin koko ja venytys x/z)
+  (nimetön)	relation/1068013	2211	64 × 37	1.73	suuri	x 0.57, z 0.75
+  Église Saint-Séverin	way/19740659	1828	53 × 39	1.36	levea	x 1.56, z 1.85
+  Église Saint-Ferdinand des Ternes	way/84325824	1775	59 × 42	1.41	suuri	x 0.53, z 0.86
+  Église Sainte-Jeanne-de-Chantal	way/87959071	1691	64 × 42	1.52	suuri	x 0.58, z 0.86
+  Église Saint-Louis-en-l'Île	way/55314295	1675	56 × 37	1.52	levea	x 1.64, z 1.74
+  Église Saint-Jacques-le-Majeur	way/83236772	1646	57 × 31	1.85	keski	x 0.94, z 1.62
+  Église Saint-Bernard-de-La-Chapelle	way/78005074	1589	66 × 31	2.12	keski	x 1.08, z 1.64
+  Église Sainte-Odile	way/84324632	1498	99 × 22	4.55	keski	x 1.62, z 1.14
+  Église Notre-Dame de la Gare	way/79084116	1363	55 × 38	1.43	levea	x 1.61, z 1.82
+  Église Saint-Justin	way/62089113	1315	45 × 35	1.27	levea	x 1.31, z 1.67
+lontoo: venytyksen ulkopuolella 34 kirkkoa; 10 suurinta (ala m², pohja pituus × leveys m, sivusuhde, lähin koko ja venytys x/z)
+  St Mary and St Michael Church	way/52128420	1838	57 × 42	1.36	suuri	x 0.52, z 0.86
+  St James's	way/160404637	1589	61 × 32	1.9	keski	x 1.00, z 1.69
+  Former Church of St Columba	way/305035318	1469	47 × 34	1.39	levea	x 1.37, z 1.60
+  Second Church of Christ, Scientist, London	way/113119046	1457	56 × 36	1.55	levea	x 1.64, z 1.71
+  Church of Saint Peter	way/38118477	1317	55 × 32	1.73	levea	x 1.61, z 1.50
+  St. Augustine's	way/76236566	1273	55 × 33	1.69	levea	x 1.63, z 1.56
+  St Pancras Church	way/51517078	1248	53 × 37	1.43	levea	x 1.57, z 1.78
+  St Alfege Church	way/158230794	1189	52 × 39	1.31	levea	x 1.51, z 1.88
+  Grove Chapel	way/86678082	276	19 × 14	1.32	pieni	x 0.60, z 1.20
+  St Pauls United Reformed Church	way/79107411	238	18 × 14	1.34	pieni	x 0.57, z 1.13
