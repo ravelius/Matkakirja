@@ -43,3 +43,17 @@ fr.wikipedia ("Palais de l'Industrie", "Exposition universelle de 1855"; ensimm�
 ## Lisäys 14.11. klo 10.4x: POP/Mérimée luettu (tulos: ei apua)
 POP-haku toimii selaimessa (pop.culture.gouv.fr/recherche?q=…, tulokset latautuvat n. 5 s; notice-URL pop.culture.gouv.fr/notice/merimee/<viite>). Louvre-Tuileries-notice **PA00085992** ("Palais du Louvre et jardin des Tuileries", luettu kokonaan 14.11.) on pelkkä suojelu-ilmoitus (Arc du Carrousel 1808; "Description historique" vain Carrousel); **ei kattomateriaalia, ei väriä**. Itse Tuileries-palatsi (purettu 1883) ei ole omana Mérimée-noticenaan. Haku "palais des Tuileries toiture ardoise" palautti epäolennaisia (Dijonin teatteri, Saint-Riquier). POP on siis umpikuja kattojen materiaalille; Orsayn/Industrien noticeja ei haettu (rakennukset purettu/muutettu; sama odotus).
 Commonsin hakuehdotukset värimaalauksille (ei vielä mitattu): kategoriat "Paintings of interiors of the Palais des Tuileries" (sisätiloja, ei kattoa), Monet "Les Tuileries (esquisse)", Pissarro/Menzel Tuileries-puutarha (palatsi kaukana, pieni). Parempi: Carnavalet-maalaus Second Empire -ajalta, jossa palatsin julkisivu näkyy suurena; ei vielä löytynyt hakusanoilla.
+
+## LOPULLINEN TAULUKKO (KK hyväksyi 14.11. klo 10.20; haku päättyi)
+Hologrammissa väri vain kuultaa; ei toista Tuileries-kuvaa eikä lisää POP-hakua. Luokitus: **mitattu** = luku mitattu kuvasta; **analogia** = toisen kohteen mitattu arvo; **arvio** = ei lähdettä.
+
+| Osa | Väri | Luokitus | Perusta |
+|---|---|---|---|
+| Seinä (kaikki kolme) | **#DAD2B2** | mitattu (Orsay), analogia (Tuileries, Industrie) | Rouard P500, Carnavalet CC0 |
+| Katto/kupoli: Tuileries | **#777C85** | mitattu (yksi maalaus, seinään suhteutettu; raaka #5D5B52) | Carnavalet P1576, CC0; materiaali ei lähdettä |
+| Katto: Orsay | **#777C85** | analogia (Tuileries) | Orsayn katolle ei lähdettä |
+| Industrien holvi | **#BFD3D6** | arvio (väri); materiaali himmeä lasi "verre dépoli" lähteellinen | 1855-opas s. 62 |
+| Rautakaaret | **#4F5558** | arvio | ei lähdettä |
+| Industrien kulmapaviljonkien katto | #777C85 | analogia (Tuileries) | ei lähdettä |
+
+Näyttämösepälle välitetty KK:n toimesta 14.11. 10.20. Korvaa aiemmat paikkamerkit #4A4F57 (katto).
