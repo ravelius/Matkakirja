@@ -80,110 +80,6 @@ f157e7d5dcb72cf9ff515d7be0517915	ATA	maastokohteet	ata-vernadski	2	2026-11-12
 2bd74d43ee05cabd003bbf9faffb4e63	ARK	maastokohteet	ark-frans-josefin-maa	2	2026-11-12
 fcc27e8b922da3f8973540181dd69490	ARK	maastokohteet	ark-nenetsit	1	2026-11-12
 48c7e9746ce990bc167e4e94def3c0ef	ARK	maastokohteet	ark-utqiagvik	1	2026-11-12
-10ec3dc17a89b6b25c6aae92da2b9a1e	ateena	nahtavyysjutut	Maraton 1896	1	2026-11-12
-e37b507f964ddc64ab4fc3618468dd70	berliini	nahtavyysjutut	Berliini 1961	1	2026-11-12
-9a3ea510c57a89319740c7d0a11e4885	helsinki	nahtavyysjutut	Sibelius 1899	1	2026-11-12
-b797bf3ca4cf58ce985d5f2291341df4	kobenhavn	nahtavyysjutut	Kööpenhamina 1884	1	2026-11-12
-837c693edec4f0f3df4a6c94768020a0	lontoo	nahtavyysjutut	Brunel 1827	1	2026-11-12
-7649d57b9b72854de11d409a781af017	lontoo	nahtavyysjutut	Lontoon palo 1666	1	2026-11-12
-89e5da9ddd65d3b5dd32799c2dae9009	lontoo	nahtavyysjutut	Shakespeare 1599	1	2026-11-12
-9c38509f9fb2a75887090fcf75f00c34	luxemburg	nahtavyysjutut	Luxemburg 963	1	2026-11-12
-d025d25e280541d32690298d57c5ec92	oslo	nahtavyysjutut	Nansen 1893	1	2026-11-12
-f7e8b1958564db9c4a669ea007c0a1ac	pietari	nahtavyysjutut	Pietari 1703	1	2026-11-12
-c8e422a804915f40cdf4f596ea39dec0	rooma	nahtavyysjutut	Michelangelo 1510	1	2026-11-12
-0ec0f61dbac0697f8ca8cedece61314b	sarajevo	nahtavyysjutut	Sarajevo 1914	1	2026-11-12
-6d1be22fbc67e7b0907331895af4c3b2	wien	nahtavyysjutut	Beethoven 1824	1	2026-11-12
-3ef079b36155884f89d820ae0761b0b2	wien	nahtavyysjutut	Mozart 1786	1	2026-11-12
-abe77f7fe93a95273cc7c80146cd0ba6	wien	nahtavyysjutut	Wienin krahi 1873	1	2026-11-12
-2ddd83b98d93bcaafcacd688fc88f512	PRT	historianHetket	kolumbus-portugali-1484	1	2026-11-12
-a60dc333300a2d0a2e751c7f906bd322	ESP	historianHetket	kolumbus-santa-fe-1492	1	2026-11-12
-062d128838fea9a57d2dcfde14893f5a	ESP	historianHetket	kolumbus-palos-1492	1	2026-11-12
-2b9467ea980c34669e6db7b0e25020d8	ESP	historianHetket	magalhaes-sanlucar-1519	1	2026-11-12
-666db69d309385c2adcad6e250565d14	PRT	historianHetket	vasco-da-gama-restelo-1497	1	2026-11-12
-17e5e3126588ce9e8d2b29e936bc9efe	GBR	historianHetket	cook-endeavour-plymouth-1768	1	2026-11-12
-5ce69224936f07fd52b05616425c809a	ESP	historianHetket	trafalgar-victory-1805	1	2026-11-12
-52a809b2e5ea3fb2011f8e1a71662167	NOR	historianHetket	nansen-fram-1893	1	2026-11-12
-d04f5feb8c36a5476d45e667c494847c	NOR	historianHetket	amundsen-etelanapa-1911	1	2026-11-12
-3836765925ce8b93415a194c049a4d2e	GBR	historianHetket	titanic-southampton-1912	1	2026-11-12
-7cb579d8a5142aeefddf3800d7652e3e	DNK	historianHetket	viikinkilaiva-roskilde-1040	1	2026-11-12
-dba66e7c03946b787341d177856b7a79	DEU	historianHetket	rontgen-kasi-1895	1	2026-11-12
-d6a3fb50e04cc9ad56bd73b61059bcf1	CHE	historianHetket	einstein-patenttitoimisto-1905	1	2026-11-12
-da45c261c896e8d82f3ec22eb2c1329c	ITA	historianHetket	galilei-kaukoputki-1610	1	2026-11-12
-bb6d5ce87a21a564e31cf4533bc30dab	GBR	historianHetket	newton-prisma-1666	1	2026-11-12
-84b58bc69aa1ef970339489e542cc4b2	GBR	historianHetket	jenner-rokotus-1796	1	2026-11-12
-17364eef10021a8894f172fe742344b6	GBR	historianHetket	faraday-luento-1831	1	2026-11-12
-21525d595205b73c0cb1926d17bfaa2a	RUS	historianHetket	mendelejev-kortit-1869	1	2026-11-12
-4e47cbe3b16c725697230276267d818f	GBR	historianHetket	fleming-malja-1928	1	2026-11-12
-7597092c05cea4102d021b7a367a765f	GBR	historianHetket	brunel-thames-tunnel-1827	1	2026-11-12
-4a1341e49dcd11fb3aea4cc5410787dc	RUS	historianHetket	pietari-perustus-1703	1	2026-11-12
-60f1ebd1880608b6ecd45335f4126423	ITA	historianHetket	vesuvius-pompeji-79	1	2026-11-12
-abbf38525c1fa137602dd4040eb7fb1f	GBR	historianHetket	lontoon-palo-1666	1	2026-11-12
-983dd4e6c69a66de1600bc01537a8d96	DEU	historianHetket	berliinin-muuri-1961	1	2026-11-12
-252c219af7513e365898713bc4401df4	ITA	historianHetket	michelangelo-sikstus-1510	1	2026-11-12
-1efe222c50a2b593cc579cc0a222f113	AUT	historianHetket	beethoven-yhdeksas-1824	1	2026-11-12
-dbeaf14fdb2d1c9384c99b3bf55ad2fe	GBR	historianHetket	shakespeare-globe-1599	1	2026-11-12
-a92eee9e2ac581472190fab6ac26971e	AUT	historianHetket	mozart-wien-1786	1	2026-11-12
-435b31fa5f1e4e1e9a12a464e748bea6	DEU	historianHetket	luther-wittenberg-1517	1	2026-11-12
-19ba142cfe313fa17aa0119a34f475b2	GRC	historianHetket	olympia-ateena-1896	1	2026-11-12
-05b02ba8b41384a4b5455eabf96f2e61	FIN	historianHetket	sibelius-finlandia-1899	1	2026-11-12
-606c3da4f01c78152f9965d13c5b7f3b	MLT	historianHetket	suuri-piiritys-paattyy-1565	1	2026-11-12
-cfceec28da1c2a8222a229e8f5aefbec	LUX	historianHetket	siegfried-ostaa-bockin-963	1	2026-11-12
-753ddd83c94ef666962c9c696c4cb94c	ITA	historianHetket	roger-ii-cefalu-lupaus-1131	1	2026-11-12
-20b9cacf10678b2cd32992a8b2fcd101	GRC	historianHetket	arkadin-luostarin-rajahdys-1866	1	2026-11-12
-139631e1c302fedd8354faedfac35043	FIN	historianHetket	ensimmainen-juna-rovaniemi-1909	1	2026-11-12
-c7fd3ed2a217292407ccfd3aead38add	AUT	historianHetket	wienin-porssikrahi-1873	1	2026-11-12
-afe11ded2d6d5ff05de0ac8feefc816a	NLD	historianHetket	afsluitdijkin-viimeinen-aukko-1932	1	2026-11-12
-8ffc76f6cb4c34b25c4a47b20f0c23e2	CHE	historianHetket	gotthardin-lapimurto-1880	1	2026-11-12
-a2e588a0e34ecf744d4dfccfc0045836	DNK	historianHetket	christiansborgin-palo-1884	1	2026-11-12
-cf9ef3f10f3654728dbfc16595693a21	BIH	historianHetket	franz-ferdinandin-salamurha-1914	1	2026-11-12
-e2502128991c5942d204a59d8afbe567	ALB	historianHetket	vloren-itsenaisyys-1912	1	2026-11-12
-553983a0a7ab7d83572e98d78545c890	MLT	historianHetket	pyhan-elmon-linnake-1565	1	2026-11-12
-68655e7fd624523e457c005b24135719	MDA	historianHetket	bessarabian-liittyminen-1918	1	2026-11-12
-10ba44be491194362102e6fe4168a65a	BLR	historianHetket	berezinan-ylitys-1812	1	2026-11-12
-1fc9a7bc47d58629390bc20b83427f19	FRA	historianHetket	marie-curie-hangaari-1898	1	2026-11-12
-2b6898ef18f1100d3af56c2baca894b6	FRA	historianHetket	lavoisier-laboratorio-1780	1	2026-11-12
-6e6a409946e5519c23645704e1f7e1e0	FRA	historianHetket	lavoisier-laboratorio-1780	2	2026-11-12
-110d6c8ff56d1fac91c62cdb827f1fd8	FRA	historianHetket	pasteur-pullot-1862	1	2026-11-12
-5e95da0c2120bfdacf394bdd5ee4b315	FRA	historianHetket	pasteur-pullot-1862	2	2026-11-12
-086b6e18cc1ece5e1ae348c93eeb605d	FRA	historianHetket	eiffel-torni-1888	1	2026-11-12
-53d875134e2f11ce917c6dcd75b2032a	FRA	historianHetket	eiffel-torni-1888	2	2026-11-12
-cb5a51cf3b5ab25ca5b2a29a5d44c0c3	FRA	historianHetket	ranskan-vallankumous-bastilji-1789	1	2026-11-12
-d3e1dd44ad56275e5591effc5b67e88c	FRA	historianHetket	lumiere-elokuva-1895	1	2026-11-12
-4227573c2db45eeeb9c7392821f26c7b	pariisi	nahtavyysjutut	Curie 1898	1	2026-11-12
-070f0c43fb90379aa77daecd0d7af760	pariisi	nahtavyysjutut	Lavoisier 1780	1	2026-11-12
-b659cc749f6978e2d36f7ffb5a321b34	pariisi	nahtavyysjutut	Pasteur 1862	1	2026-11-12
-8e7d4766918c8c00e2d435c1811b8d3f	pariisi	nahtavyysjutut	Eiffel-torni 1888	1	2026-11-12
-7d801d174285470e3705b22b237c1d76	pariisi	nahtavyysjutut	Bastilji 1789	1	2026-11-12
-e271b23d4bc898a76c7078a8c24ae18a	pariisi	nahtavyysjutut	Lumière 1895	1	2026-11-12
-efcdab9e456a8d175f8ea1a201894511	pariisi	nahtavyysjutut	Metro 1900	1	2026-11-12
-5b9ac5a3eb91ffafc78aaa6498064e6e	pariisi	nahtavyysjutut	Bizet 1875	1	2026-11-12
-45fa81e86f6ce029dec3664b32867a0e	pariisi	nahtavyysjutut	Lustig 1925	1	2026-11-12
-9d2fa1eabc43ed9a01c074f0ed885e0f	pariisi	nahtavyysjutut	Monet 1874	1	2026-11-12
-75ec51eb0f822e3e9b74b10f83204387	pariisi	nahtavyysjutut	Piiritys 1870	1	2026-11-12
-a0d6a7988dd40b4f254abc08a27f3876	pariisi	nahtavyysjutut	Piaf ja Django	1	2026-11-12
-f6992f2f149cd882ab1603595271764b	pariisi	nahtavyysjutut	Patonki 1994	1	2026-11-12
-dff627dcb983291db6c9469045258734	pariisi	nahtavyysjutut	Kaulanauha 1785	1	2026-11-12
-be87cda1d4b2e6d4333a789dc0ac8afc	FRA	skandaalit	vrain-lucas-kirjevaarennokset	1	2026-11-12
-eab9e742b9cbb2ccbe6150ea31c4fbb8	pariisi	takynostot	lustig-eiffel	1	2026-11-12
-92eedea62224b28a148836363ff39ea3	pariisi	takynostot	pariisin-72-nimea	1	2026-11-12
-23d6e8bb9fe5a47ffe4e4ff1e9b91517	pariisi	takynostot	guimardin-metro	1	2026-11-12
-b65624900688926dba5f3972a868878f	pariisi	takynostot	notre-damen-kukko	1	2026-11-12
-ebc2f05b58df40a60ef3cd9b9e8ac71c	pariisi	takynostot	pariisin-patonki	1	2026-11-12
-2dd2101411f52577e14d768c7756793b	pariisi	takynostot	pariisi-soi	1	2026-11-12
-4267f4d50c8aababd05b5b38084994c4	pariisi	fokusvirta-takyt	tuileriat	1	2026-11-12
-dbe470bcbdb19d0617f68c638e21cf66	pariisi	fokusvirta-takyt	kyyhkyposti	1	2026-11-12
-0f488a9ee3e70a0b3de4d885aef71da2	pariisi	nahtavyysjutut	Kirahvi 1827	1	2026-11-12
-3fd2014d303cd3f320e3a46e16b4d8a2	DEU	historianHetket	gutenberg-paino-1454	1	2026-11-12
-8b53538b2a1a2aae3723649cf6524327	MNE	historianHetket	obodin-kirjapaino-1494	1	2026-11-12
-f2afb005271678d780df662dee873688	MNE	historianHetket	obodin-kirjapaino-1494	2	2026-11-12
-7c53a1a211a5a9106c7b6af7f5719d6c	pariisi	takynostot	kirahvin-kavelymatka	1	2026-11-12
-0ea388135cc5ff85b809b06bda59e781	pariisi	takynostot	carmenin-ensi-ilta	1	2026-11-12
-dbdbad1ff875e870fc047b0ceb641ba9	pariisi	takynostot	pariisin-vuosisadat	1	2026-11-12
-2a4475fc1e8106c865105ead12742e7b	pariisi	fokusvirta-takyt	impressionistit	1	2026-11-12
-b574019d872549611663c69788e8b4bd	pariisi	nahtavyysjutut	Kirahvi 1827	2	2026-11-12
-be6455c938b77fd0ee849f9f5fea1883	pariisi	nahtavyysjutut	Bukinistit 1859	1	2026-11-12
-abd3efa42d588269c29fa3620eeb4a42	pariisi	takynostot	pariisin-bukinistit	1	2026-11-12
-f0199451bdf5bc50d882b2f85226f76b	pariisi	takynostot	pariisin-bukinistit	2	2026-11-12
 9e45f6154208c598afb2821c56b42844	lontoo	nahtavyysjutut	Savusumu 1952	1	2026-11-13
 3b53f95d4c3737631ba51ccc6fdaf278	lontoo	nahtavyysjutut	Savusumu 1952	2	2026-11-13
 5fa86279f597d04b8bcbd049856a991f	lontoo	nahtavyysjutut	Savusumu 1952	3	2026-11-13
@@ -208,21 +104,15 @@ a019d6d9ced9877fd6d2776150497927	FRA	hahmotelma	hahmotelma-grand-chatelet	1	2026
 02d8cc5f48405b408e213eb84eca24e7	FRA	hahmotelma	hahmotelma-palais-industrie	1	2026-11-14
 a7eac5b3f413b05515f5c451d8cde515	FRA	hahmotelma	hahmotelma-palais-industrie	2	2026-11-14
 32df16bb0989be792c68d40567a68fb4	FRA	hahmotelma	hahmotelma-les-halles	1	2026-11-14
-400d9eff9b6b197542c93eb742da3f38	lontoo	nahtavyysjutut	Händel ja Hendrix	1	2026-11-15
-4f52ae63c10ad91cfa2eb0415ffd0da9	lontoo	nahtavyysjutut	Händel ja Hendrix	2	2026-11-15
-e8b7fb562a27f64dc53d7132f76f3d39	lontoo	nahtavyysjutut	Händel ja Hendrix	3	2026-11-15
-8571b53a2a67c0845d7e0fb67d165afa	lontoo	nahtavyysjutut	Johnson 1755	1	2026-11-15
 5453d20fac746357fdc77abd17f0c95f	lontoo	nahtavyysjutut	Johnson 1755	2	2026-11-15
-2618f1d4be1aaed1bf3028777b8d1a04	lontoo	nahtavyysjutut	Johnson 1755	3	2026-11-15
-4cbb8198b2a8d67aca4833c3890ba3b3	lontoo	nahtavyysjutut	Punch 1662	1	2026-11-15
 e9484b1ce39a84868e0b8b4bdcc5acc5	lontoo	nahtavyysjutut	Punch 1662	2	2026-11-15
-fe44c2e2548f1ec33e21e9a96904fae0	lontoo	nahtavyysjutut	Punch 1662	3	2026-11-15
-621f4feaab78e67f37229b3a1fc804d5	lontoo	takynostot	handel-hendrix-brook-street	1	2026-11-15
-8a3a52c68c9a6993d565eec949206f2e	lontoo	takynostot	johnsonin-sanakirja-1755	1	2026-11-15
-b873890debeb67af8a000e46ae1fefda	lontoo	takynostot	punch-pepys-1662	1	2026-11-15
-b76a32a51951e75bc8ce883dbf58d5a6	lontoo	nahtavyysjutut	Punch 1662	3	2026-11-15
 d74a5652a085f6eb4b47c1929b6791a3	lontoo	nahtavyysjutut	Händel ja Hendrix	3	2026-11-15
 164b510ad7882f952ebe4da9ffb72886	lontoo	nahtavyysjutut	Johnson 1755	1	2026-11-15
-c3842e0d50640d7d2362d58d73bdb4ec	lontoo	nahtavyysjutut	Johnson 1755	3	2026-11-15
 f31a03b0518eba85b403be54ff988dae	lontoo	nahtavyysjutut	Punch 1662	3	2026-11-15
 10fb2f6e3f53d80f09da84d93b39273e	lontoo	takynostot	johnsonin-sanakirja-1755	1	2026-11-15
+a48a62abd4890e85506e1809ff43c6e1	lontoo	nahtavyysjutut	Händel ja Hendrix	1	2026-11-15
+00ba847d69f137d8899698159bc6a221	lontoo	nahtavyysjutut	Händel ja Hendrix	2	2026-11-15
+90252d7287b50d49e2152b38ef5c5fd0	lontoo	nahtavyysjutut	Johnson 1755	3	2026-11-15
+5af37634271c38680b264e8744780f9b	lontoo	nahtavyysjutut	Punch 1662	1	2026-11-15
+b94bef63df206ad86cab596588129c2d	lontoo	takynostot	handel-hendrix-brook-street	1	2026-11-15
+9c5b516dd5233c436d774457ca1111ee	lontoo	takynostot	punch-pepys-1662	1	2026-11-15

@@ -1438,21 +1438,22 @@ export const FOKUSVIRTA_LONTOO = {
           'Kuninkaallisen ilotulitusmusiikin',
         ],
         oikea: 0,
-        fakta: 'Händel sävelsi Messiaan elokuun 22. ja syyskuun 14. päivän välillä 1741. Viereisessä talossa asui 1968–69 Jimi Hendrix.',
+        fakta: 'Händel sävelsi Messiaan elokuun 22. ja syyskuun 14. päivän välillä 1741. Hänen kotinsa viereisessä talossa asui 1968–69 Jimi Hendrix.',
       },
       lunastus: [
-        'Mayfairin Brook Streetillä on kaksi vierekkäistä taloa, joissa asuivat kaksi '
+        'Mayfairin Brook Streetillä on kaksi vierekkäistä taloa, joissa asui kaksi '
           + 'kuuluisaa muusikkoa. Säveltäjä Georg Friedrich Händel muutti numeroon 25 vuonna 1723 '
           + 'ja asui siellä kuolemaansa saakka 14. huhtikuuta 1759. Elokuun 22. ja syyskuun 14. '
           + 'päivän välillä 1741 hän sävelsi 24 päivässä Messias-oratorion, joka syntyi '
           + 'todennäköisesti juuri tässä talossa.',
         'Reilut kaksisataa vuotta myöhemmin viereisessä talossa, numerossa 23, asui vuosina '
           + '1968–69 kitaristi Jimi Hendrix. Kerrotaan, että kun hän sai tietää Händelin asuneen '
-          + 'naapurissa, hän osti levyn Messiaasta.',
+          + 'naapurissa, hän osti Messias-levyn.',
         'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot '
           + 'ovat yhdessä museo.',
       ],
-      lahde: 'English Heritage (siniset laatat: Händel ja Hendrix); Handel Hendrix House -museo (Learn about Handel, Learn about Hendrix); en-Wikipedia "Handel & Hendrix in London" ja "Messiah (Handel)". Kaksi itsenäistä lähdettä (SK 14.11.2026; tarkistaja ja KK ennen junaa).',
+      // Lähdemuistiinpano (SK 14.11.2026): English Heritage (siniset laatat), Handel Hendrix House -museo (Learn about Handel/Hendrix), en-Wikipedia "Handel & Hendrix in London" ja "Messiah (Handel)"; kaksi itsenäistä lähdettä.
+      lahde: 'Matkakirjan oma teksti · lähteinä English Heritage, Handel Hendrix House -museo ja en-Wikipedia',
       kuva: {
         tiedosto: 'George Frideric Handel by Thomas Hudson.jpg',
         lyhyt: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä.',
@@ -1461,7 +1462,7 @@ export const FOKUSVIRTA_LONTOO = {
       },
       kysymykset: [
         'Missä talossa Messias syntyi?',
-        'Miksi Hendrix osti levyn Messiaasta?',
+        'Miksi Hendrix osti Messias-levyn?',
         'Millaista musiikkia Händelin aikana soitettiin?',
       ],
       // Brook Street 25 ja 23 (English Heritage 51,5131 / −0,14606; Wikipedia 51,513 / −0,1459).
@@ -1502,13 +1503,14 @@ export const FOKUSVIRTA_LONTOO = {
           + 'talossa numero 17. Hän merkitsi kirjoihin kohdat, joissa sana esiintyi esimerkkinä, '
           + 'ja apulaiset kopioivat ne paperiliuskoille. Talo oli täynnä kirjoja ja apulaisia.',
         'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
-          + 'vuokraamansa talo seisoi jo Gough Squarella. Nykyään siinä on museo.',
+          + 'vuokraamansa talo seisoi yhä Gough Squarella. Nykyään siinä on museo.',
       ],
-      lahde: 'Dr Johnson\'s House (drjohnsonshouse.org: Johnson\'s Dictionary, 17 Gough Square); Boswell, Life of Johnson (1791, Project Gutenberg); Encyclopaedia Britannica 11. painos "Johnson, Samuel" (Wikisource): 1 500 guineaa, julkaisu 1755. Sopimusvuosi jätetty pois (lähteet 1746/1747). Paikka ja museo: en-Wikipedia "Dr Johnson\'s House". Kaksi itsenäistä lähdettä (SK 14.11.2026; tarkistaja ja KK ennen junaa).',
+      // Lähdemuistiinpano (SK 14.11.2026): drjohnsonshouse.org (Johnson's Dictionary, 17 Gough Square); Boswell, Life of Johnson (1791, Gutenberg); EB 1911 "Johnson, Samuel" (Wikisource): 1 500 guineaa, julkaisu 1755. Sopimusvuosi jätetty pois tarkoituksella (lähteet 1746/1747). Paikka ja museo: en-Wikipedia "Dr Johnson's House".
+      lahde: 'Matkakirjan oma teksti · lähteinä Dr Johnson\'s House -museo, Boswellin Life of Johnson, Encyclopaedia Britannica (1911) ja en-Wikipedia',
       kuva: {
         tiedosto: 'Dr Johnson\'s House, Gough Square - geograph.org.uk - 5590547.jpg',
         lyhyt: 'Dr Johnsonin talo Gough Squarella.',
-        selite: 'Gough Squaren talo numero 17, jossa Samuel Johnson asui sanakirjan teon aikana ja jossa nykyään on museo.',
+        selite: 'Gough Squaren talo numero 17, jossa Samuel Johnson asui osan sanakirjan teon ajasta ja jossa nykyään on museo.',
         lahde: 'Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)',
       },
       kysymykset: [
@@ -1548,10 +1550,10 @@ export const FOKUSVIRTA_LONTOO = {
       },
       lunastus: [
         'Toukokuun 9. päivänä 1662 Samuel Pepys kirjasi päiväkirjaansa käyneensä Covent '
-          + 'Gardenissa katsomassa italialaista nukketeatteria, joka esitti aitauksen sisällä. '
+          + 'Gardenissa katsomassa italialaista nukketeatteria, jota esitettiin aitauksen sisällä. '
           + 'Hänen mielestään se oli hyvin sievä, parasta mitä hän oli nähnyt, ja katsojia '
-          + 'riitti. Merkintä ei mainitse Punchia nimeltä, mutta perinteen mukaan tämä on hänen '
-          + 'syntymäpäivänsä.',
+          + 'riitti. Merkintä ei mainitse Punchia nimeltä, mutta perinteen mukaan päivä on Punchin '
+          + 'syntymäpäivä.',
         'Vuonna 1669 Pepys kirjasi toisen merkinnän: kujalla hän kuuli köyhien kutsuvan '
           + 'lihavaa lastaan Punchiksi, ja se ilahdutti häntä, koska sana oli tullut yleiseen '
           + 'käyttöön kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
@@ -1560,7 +1562,8 @@ export const FOKUSVIRTA_LONTOO = {
           + 'kirkon seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
           + 'merkinnästä.',
       ],
-      lahde: 'Pepysin päiväkirja 9.5.1662 ja huhtikuu 1669 (en-Wikisource); Encyclopaedia Britannica 11. painos "Punch (puppet)" (Wikisource): Pepys 1662, Punchinello; laatta nähty Commons-kuvasta. Pepysin päivä on juliaaninen. "Punchin syntymäpäivä" = perinne (vain Wikipedia, KK 23.31 sallii). Gimonde, swazzle ja "pleased as Punch" jätetty pois (yksi lähde). SK 14.11.2026; tarkistaja ja KK ennen junaa.',
+      // Lähdemuistiinpano (SK 14.11.2026): Pepysin päiväkirja 9.5.1662 ja huhtikuu 1669 (en-Wikisource); EB 1911 "Punch (puppet)" (Wikisource); laatta nähty Commons-kuvasta. Pepysin päivä on juliaaninen. "Punchin syntymäpäivä" = perinne (vain Wikipedia, KK 23.31 sallii). Gimonde, swazzle ja "pleased as Punch" jätetty pois (yksi lähde).
+      lahde: 'Matkakirjan oma teksti · lähteinä Pepysin päiväkirja, Encyclopaedia Britannica (1911) ja en-Wikipedia',
       kuva: {
         tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
         lyhyt: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa.',

@@ -3628,8 +3628,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Wilton\'s Music Hall - Interior.jpg',
           teksti: 'Vuonna 1859 John Wilton rakensi Tower Hamletsissa ostamansa '
             + 'Mahogany Bar -pubin taakse suuren salin, jossa yleisö kuunteli '
-            + 'laulajia ja koomikoita. Katosta '
-            + 'riippui sun-burner, kristallein koristeltu suuri kaasukruunu. Sali ehti olla metodistien lähetysasema '
+            + 'laulajia ja koomikoita. Sali ehti olla metodistien lähetysasema '
             + 'ja lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
             + 'se pelastettiin, ja talo suojeltiin 1970-luvun alussa.',
           lyhyt: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin music halleja, nykyään esitystalo.',
@@ -3668,10 +3667,10 @@ export const MAA_KATEGORIAT = {
             + 'Streetillä sopimaan yhteisistä säännöistä. '
             + 'Siihen asti joka koulu pelasi omillaan: joissakin sai kantaa '
             + 'palloa käsissä, toisissa ei, ja vastustajan potkiminen sääreen '
-            + 'kuului joidenkin mielestä peliin. Kokouksissa käsien käyttö ja '
+            + 'kuului joidenkin mielestä peliin. Kokouksissa pallon kantaminen ja '
             + 'säären potkiminen jäivät pois säännöistä — ne seurat, jotka '
             + 'halusivat pitää ne, lähtivät ja perustivat myöhemmin oman rugbyliittonsa. '
-            + 'Käsisääntö erotti kaksi maailmanlaajuista peliä toisistaan '
+            + 'Kantokielto erotti kaksi maailmanlaajuista peliä toisistaan '
             + 'muutamassa viikossa.',
           lyhyt: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen perusta Football Associationissa.',
           selite: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen '
