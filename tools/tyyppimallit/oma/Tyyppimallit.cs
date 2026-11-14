@@ -207,37 +207,39 @@ namespace Matkakirja
             return r.Valmis();
         }
 
-        /// <summary>ASEMA (pääteasema): julkisivurakennus 64 × 16 m räystäs 20 m keskikaarella ja kellolla, kulmapaviljongit 26 m; sen takana kaareva
-        /// hallikatto 60 × 140 m pitkän akselin suuntaan (lasinauha harjalla, lasinen pääty raiteiden suuntaan).</summary>
-        public static Verkko TyyppiAsema()
+        /// <summary>ASEMA (pääteasema): julkisivurakennus 16 m syvä räystäs 20 m, kulmapaviljongit 26 m pyramidikatoin, jokaisen hallin päässä keskikaari
+        /// ja keskimmäisen yllä kello; sen takana halleja (1–3, KK 23.32 työ E) rinnakkaista kaarevaa hallikattoa pitkän akselin suuntaan (lasinauha harjalla,
+        /// lasinen pääty raiteiden suuntaan). pituus × leveys = OSM-pohjan suorakaide; oletus 156 × 60 = luonnos 1:n asema. Kaaren nousu 0,3 × hallin leveys
+        /// (enintään 18 m), ripojen väli kasvaa pitkillä halleilla (kolmioraja).</summary>
+        public static Verkko TyyppiAsema(int halleja = 1, float pituus = 156f, float leveys = 60f)
         {
             var r = TyRakentaja();
             const float Pii = (float)Math.PI;
-            // Halli: x 0…140, z ±30, seinät 9 m, kaari nousee 18 m (puoliellipsi), 10 jaksoa.
-            float hx0 = 0f, hx1 = 140f, hz = 30f, hy = 9f, nousu = 18f;
-            TySeinat(r, hx0, hx1, -hz, hz, 0f, hy, TyKiviVarjo);
+            float fx0 = -16f, fx1 = 0f, hx0 = 0f, hx1 = pituus - 16f, hy = 9f, hl = leveys / halleja, hz = hl * 0.5f, nousu = Math.Min(18f, hl * 0.3f);
+            float fz = leveys * 0.5f + 2f, fy = 20f, rivi = Math.Max(14f, hx1 / 10f);
             const int K = 10;
-            P3 Kaari(float x, int j) { float a = Pii * j / K; return new P3(x, hy + nousu * (float)Math.Sin(a), hz * (float)Math.Cos(a)); }
-            for (int j = 0; j < K; j++)
+            TySeinat(r, hx0, hx1, -leveys * 0.5f, leveys * 0.5f, 0f, hy, TyKiviVarjo);
+            for (int h = 0; h < halleja; h++)
             {
-                var v = (j == K / 2 - 1 || j == K / 2) ? TyLasi : TyKatto;
-                var a0 = Kaari(hx0 - 1f, j); var a1 = Kaari(hx1, j); var b1 = Kaari(hx1, j + 1); var b0 = Kaari(hx0 - 1f, j + 1);
-                var keski = Kaari(0f, j); var nn = new P3(0f, keski.Y - hy + 0.01f, keski.Z);
-                r.Neli(a0, a1, b1, b0, v, nn);
-                // Päätylasi raiteiden puolella
-                r.Kolmio(new P3(hx1, hy, 0f), Kaari(hx1, j), Kaari(hx1, j + 1), TyLasi, new P3(1f, 0f, 0f));
-            }
-            // Kaarten ripojen rytmi lasin päällä: ohuet tummat raidat
-            for (float x = 14f; x < hx1; x += 14f)
+                float zc = -leveys * 0.5f + hz + h * hl;
+                P3 Kaari(float x, int j) { float a = Pii * j / K; return new P3(x, hy + nousu * (float)Math.Sin(a), zc + hz * (float)Math.Cos(a)); }
                 for (int j = 0; j < K; j++)
                 {
-                    var a = Kaari(x, j); var b = Kaari(x, j + 1); var no = new P3(0f, a.Y - hy + 0.01f, a.Z);
-                    float k = 1.04f;
-                    P3 Ul(P3 p, float dx) => new P3(p.X + dx, hy + (p.Y - hy) * k, p.Z * k);
-                    r.Neli(Ul(a, -0.5f), Ul(a, 0.5f), Ul(b, 0.5f), Ul(b, -0.5f), TyRauta, no);
+                    var v = (j == K / 2 - 1 || j == K / 2) ? TyLasi : TyKatto;
+                    var a0 = Kaari(hx0 - 1f, j); var a1 = Kaari(hx1, j); var b1 = Kaari(hx1, j + 1); var b0 = Kaari(hx0 - 1f, j + 1);
+                    var keski = Kaari(0f, j); var nn = new P3(0f, keski.Y - hy + 0.01f, keski.Z - zc);
+                    r.Neli(a0, a1, b1, b0, v, nn);
+                    r.Kolmio(new P3(hx1, hy, zc), Kaari(hx1, j), Kaari(hx1, j + 1), TyLasi, new P3(1f, 0f, 0f));
                 }
-            // Julkisivurakennus x −16…0, z ±32, räystäs 20, matala mansardi; kulmapaviljongit 10 × 10 m räystäs 26 m pyramidikatoin
-            float fx0 = -16f, fx1 = 0f, fz = 32f, fy = 20f;
+                for (float x = rivi; x < hx1; x += rivi)
+                    for (int j = 0; j < K; j++)
+                    {
+                        var a = Kaari(x, j); var b = Kaari(x, j + 1); var no = new P3(0f, a.Y - hy + 0.01f, a.Z - zc);
+                        float k = 1.04f;
+                        P3 Ul(P3 p, float dx) => new P3(p.X + dx, hy + (p.Y - hy) * k, zc + (p.Z - zc) * k);
+                        r.Neli(Ul(a, -0.5f), Ul(a, 0.5f), Ul(b, 0.5f), Ul(b, -0.5f), TyRauta, no);
+                    }
+            }
             r.Laatikko(fx0, fx1, 0f, fy, -fz, fz, TyKivi, TyKatto);
             r.Katto(fx0, fx1, -fz + 10f, fz - 10f, new[] { (0f, 0f, fy), (2.5f, 2.5f, fy + 4f) }, TyKatto, TyKatto);
             foreach (float s in new[] { -1f, 1f })
@@ -246,13 +248,16 @@ namespace Matkakirja
                 r.Laatikko(fx0 - 1f, fx0 + 10f, 0f, 26f, zc - 5.5f, zc + 5.5f, TyKivi, TyKatto);
                 r.Pyora(fx0 + 4.5f, zc, new[] { (5.5f * 1.4142f, 26f), (0f, 33f) }, 4, TyKatto, 0.7854f);
             }
-            var j0 = r.S(fx0, -fz + 11f, fx0, fz - 11f);   // länsijulkisivu (kasvot −x)
-            float L = j0.Pituus, c = L / 2f;
-            // Suuri keskikaari (hallin pääty näkyy julkisivussa) ja kello sen yllä
-            j0.Pinta(c - 8f, c + 8f, 0f, 10f, 0.06f, TyAukko);
-            j0.KaariTayte(c, 10f, 8f, 0.06f, TyLasi, 8);
-            TyKello(r, j0, c, 16.5f, 2.2f);
-            // Sivujen kaariovet ja yläkerran ikkunat
+            var j0 = r.S(fx0, -fz + 11f, fx0, fz - 11f);   // länsijulkisivu (kasvot −x); u kasvaa +z:sta −z:aan? (Seina a → b)
+            float L = j0.Pituus, kaari = Math.Min(8f, hl * 0.27f);
+            for (int h = 0; h < halleja; h++)
+            {
+                float u = (fz - 11f) - (-leveys * 0.5f + hz + h * hl);   // hallin keskiviiva julkisivun koordinaatissa
+                if (u < kaari + 1f || u > L - kaari - 1f) continue;
+                j0.Pinta(u - kaari, u + kaari, 0f, 10f, 0.06f, TyAukko);
+                j0.KaariTayte(u, 10f, kaari, 0.06f, TyLasi, 8);
+                if (h == halleja / 2) TyKello(r, j0, u, 16.5f, 2.2f);
+            }
             for (int i = 0; i < 4; i++)
             {
                 float u1 = 4f + i * 3.6f, u2 = L - 4f - i * 3.6f;
@@ -493,6 +498,55 @@ namespace Matkakirja
             return r.Valmis();
         }
 
+        /// <summary>UMPIPIHAPALATSI (KK 23.32 työ D, parametri piha): neljä siipeä (syvyys siipi m, räystäs 16) pihan ympärillä, mansardikatot, kulmapaviljongit
+        /// (siipi + 4 m, räystäs 18, jyrkempi mansardi) ja pääjulkisivun (+z) keskirisaliitti kolmiopäätyineen ja porttiholvi. Pituus x, leveys z = OSM-pohjan
+        /// pienin suorakaide; ulkojulkisivuilla kaksi ikkunakerrosta, pihan puolella yksi (näkyy vain ylhäältä). Lyhyt sivu alle 2,6 × siipi → umpinainen tanko.</summary>
+        public static Verkko TyyppiPalatsiPiha(float pituus = 120f, float leveys = 90f, float siipi = 16f)
+        {
+            var r = TyRakentaja();
+            float x0 = -pituus * 0.5f, x1 = pituus * 0.5f, z0 = -leveys * 0.5f, z1 = leveys * 0.5f, y = 16f, pv = siipi + 4f;
+            bool piha = Math.Min(pituus, leveys) >= 2.6f * siipi;
+            (float, float, float)[] Mansardi(float sy, float d) => new[] { (0f, 0f, sy), (1.6f, 1.6f, sy + 5f), (Math.Min(d * 0.32f, 6f), d * 0.32f, sy + 7f) };
+            void Siipi(float a0, float a1, float b0, float b1, bool pitkinX)
+            {
+                r.Laatikko(a0, a1, 0f, y, b0, b1, TyKivi, TyKatto);
+                var m = Mansardi(y, pitkinX ? b1 - b0 : a1 - a0);
+                if (!pitkinX) m = Array.ConvertAll(m, t => (t.Item2, t.Item1, t.Item3));
+                r.Katto(a0, a1, b0, b1, m, TyKatto, TyKatto);
+            }
+            if (piha)
+            {
+                Siipi(x0 + pv, x1 - pv, z0, z0 + siipi, true); Siipi(x0 + pv, x1 - pv, z1 - siipi, z1, true);
+                Siipi(x0, x0 + siipi, z0 + pv, z1 - pv, false); Siipi(x1 - siipi, x1, z0 + pv, z1 - pv, false);
+            }
+            else Siipi(x0 + pv, x1 - pv, z0, z1, true);
+            foreach (float sx in new[] { -1f, 1f })
+                foreach (float sz in new[] { -1f, 1f })
+                {
+                    if (!piha && sz > 0) continue;
+                    float a = sx < 0 ? x0 : x1 - pv, b = a + pv, c = piha ? (sz < 0 ? z0 : z1 - pv) : z0, d = piha ? c + pv : z1;
+                    r.Laatikko(a, b, 0f, y + 2f, c, d, TyKivi, TyKatto);
+                    r.Katto(a, b, c, d, new[] { (0f, 0f, y + 2f), (1.8f, 1.8f, y + 8f), (pv * 0.3f, (d - c) * 0.3f, y + 10f) }, TyKatto, TyKatto);
+                }
+            // Ulkojulkisivut: kolme ikkunariviä paviljonkien välissä; jako harvenee isoissa (kolmioraja 1 500: enintään ~52 ikkunaa riviä kohden)
+            float julkisivu = 2f * (pituus - 2f * pv) + (piha ? 2f * (leveys - 2f * pv) : 0f), iv = Math.Max(4.2f, julkisivu / 52f);
+            foreach (var (ax, az, bx, bz) in new[] { (x0 + pv, z1, x1 - pv, z1), (x1 - pv, z0, x0 + pv, z0), (x0, z0 + pv, x0, z1 - pv), (x1, z1 - pv, x1, z0 + pv) })
+            {
+                if (!piha && ax == bx) continue;
+                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 7.5f, 10.5f, false, TyAukko);
+                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 12f, 14.5f, false, TyAukko);
+                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 2f, 4.5f, false, TyAukko);
+            }
+            // Keskirisaliitti pääjulkisivulla (+z) ja porttiholvi
+            r.Laatikko(-10f, 10f, 0f, y + 1f, z1 - 0.5f, z1 + 1.5f, TyKivi, TyKatto);
+            r.Kolmio(new P3(-10f, y + 1f, z1 + 1.5f), new P3(10f, y + 1f, z1 + 1.5f), new P3(0f, y + 6f, z1 + 1.5f), TyKivi, new P3(0f, 0f, 1f));
+            r.Neli(new P3(-10.3f, y + 1f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 - 4f), new P3(-10.3f, y + 1f, z1 - 4f), TyKatto, new P3(-1f, 2f, 0f));
+            r.Neli(new P3(10.3f, y + 1f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 - 4f), new P3(10.3f, y + 1f, z1 - 4f), TyKatto, new P3(1f, 2f, 0f));
+            var portti = r.S(-10f, z1 + 1.5f, 10f, z1 + 1.5f);
+            portti.Pinta(7.5f, 12.5f, 0f, 6f, 0.06f, TyAukko); portti.KaariTayte(10f, 6f, 2.5f, 0.06f, TyAukko, 6);
+            return r.Valmis();
+        }
+
         /// <summary>TAVALLINEN TALO mittakaavaksi: 16 × 12 m, viisi kerrosta räystääseen 18 m, sinkkinen mansardi 4 m (Pariisin kerrostalo); talojen kivi.</summary>
         public static Verkko TyyppiTalo()
         {
@@ -513,6 +567,10 @@ namespace Matkakirja
             ("palatsi", TyyppiPalatsi(), 1500),
             ("kupolikirkko", TyyppiKupolikirkko(true), 1500),
             ("pylvastemppeli", TyyppiPylvastemppeli(100f, 40f, 8, true), 1500),
+            ("palatsi-piha", TyyppiPalatsiPiha(120f, 90f), 1500),
+            ("asema-nord-2", TyyppiAsema(2, 185f, 137f), 1500),
+            ("asema-lazare-3", TyyppiAsema(3, 249f, 247f), 1500),
+            ("asema-lyon-3", TyyppiAsema(3, 217f, 181f), 1500),
             ("pylvastemppeli-attika", TyyppiPylvastemppeli(70f, 42f, 10, false), 1500),
             ("kupolikirkko-ilman", TyyppiKupolikirkko(false), 1500),
             ("kirkko-keski-risteys-1-pyramidi", TyyppiKirkkoKeski("risteys", 1, "pyramidi"), 900),

@@ -37,32 +37,42 @@ NIMILISTAT = {
         'way/59846865': ('kupolikirkko', 'keski', 'Val-de-Grâce'),
         'way/56046786': ('kupolikirkko', 'keski', 'Saint-Paul-Saint-Louis'),
         'way/67501490': ('kupolikirkko', 'keski', 'Saint-Augustin'),
-        # ASEMAT (ehdotus): vain hallikatolliset pääteasemat, joiden pohja on pitkä (sivusuhde ≥ 1,3)
-        'way/62380197': ('asema', 'suuri', "Gare d'Austerlitz"),
-        'way/280670907': ('asema', 'suuri', "Gare de l'Est (halli, nimetön OSM-pohja)"),
-        'way/63197091': ('asema', 'suuri', 'Gare du Nord (halli, nimetön OSM-pohja)'),
-        # PALATSIT (ehdotus): klassiset palatsit ja hôtel particulier -palatsit, pohja suorakaide tai pihallinen suorakaide
-        'relation/1019368': ('palatsi', 'keski', 'Palais Bourbon'),
-        'relation/975955': ('palatsi', 'keski', 'Palais du Luxembourg'),
-        'relation/1060803': ('palatsi', 'keski', "Palais de l'Élysée"),
-        'relation/1002192': ('palatsi', 'keski', "Palais de la Légion d'Honneur"),
-        'relation/542460': ('palatsi', 'keski', 'Palais Cambon'),
-        'way/448794899': ('palatsi', 'keski', 'Quai d’Orsay (ministère)'),
-        'way/175448743': ('palatsi', 'keski', 'Hôtel de Lassay'),
-        'way/83203039': ('palatsi', 'keski', 'Château de la Muette'),
-        'relation/284089': ('palatsi', 'keski', 'Hôtel de Ville'),
-        'relation/1060822': ('palatsi', 'keski', 'Hôtel de la Marine'),
-        'relation/1060804': ('palatsi', 'keski', 'Hôtel de Crillon'),
-        'relation/1076880': ('palatsi', 'keski', 'Hôtel de Matignon'),
+        # PYLVÄSTEMPPELIT (hyväksytty KK 23.32, seitsemäs tyyppi)
+        'way/54180046': ('pylvastemppeli', 'keski', 'Madeleine', {'katto': 'harja'}),
+        'way/54657155': ('pylvastemppeli', 'keski', 'Palais Brongniart', {'katto': 'attika'}),
+        # ASEMAT (KK 23.32: Austerlitz ja l'Est hyväksytty; Nord, Saint-Lazare ja Lyon odottavat parametria halleja 1–3, työ E)
+        'way/62380197': ('asema', 'suuri', "Gare d'Austerlitz", {'halleja': 1}),
+        'way/280670907': ('asema', 'suuri', "Gare de l'Est (halli, nimetön OSM-pohja)", {'halleja': 1}),
+        'way/63197091': ('asema', 'suuri', 'Gare du Nord (halli, nimetön OSM-pohja)', {'odottaa': 'halleja-parametri (KK 23.32, työ E)'}),
+        'way/727994377': ('asema', 'suuri', 'Gare Saint-Lazare', {'odottaa': 'halleja-parametri (KK 23.32, työ E)'}),
+        'way/1161318094': ('asema', 'suuri', 'Gare de Lyon', {'odottaa': 'halleja-parametri (KK 23.32, työ E)'}),
+        # PALATSIT (KK 23.32: nimet hyväksytty, malli EI vielä: sovitus ja umpipihavariantti, työ D)
+        'relation/1019368': ('palatsi', 'keski', 'Palais Bourbon', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/975955': ('palatsi', 'keski', 'Palais du Luxembourg', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/1060803': ('palatsi', 'keski', "Palais de l'Élysée", {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/1002192': ('palatsi', 'keski', "Palais de la Légion d'Honneur", {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/542460': ('palatsi', 'keski', 'Palais Cambon', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'way/448794899': ('palatsi', 'keski', 'Quai d’Orsay (ministère)', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'way/175448743': ('palatsi', 'keski', 'Hôtel de Lassay', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'way/83203039': ('palatsi', 'keski', 'Château de la Muette', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/284089': ('palatsi', 'keski', 'Hôtel de Ville', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/1060822': ('palatsi', 'keski', 'Hôtel de la Marine', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/1060804': ('palatsi', 'keski', 'Hôtel de Crillon', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
+        'relation/1076880': ('palatsi', 'keski', 'Hôtel de Matignon', {'odottaa': 'palatsin sovitus / umpipiha (KK 23.32, työ D)'}),
     },
 }
-NIMILISTA_TILA = {'kupolikirkko': 'hyväksytty', 'asema': 'ehdotus', 'palatsi': 'ehdotus'}
+NIMILISTA_TILA = {'kupolikirkko': 'hyväksytty', 'pylvastemppeli': 'hyväksytty', 'asema': 'hyväksytty', 'palatsi': 'nimi hyväksytty'}
 # TORNIN OLETUKSET kokoluokittain (KK 23.05 kohta 2): paikka (lansi | risteys), torneja (1 | 2), huippu (pyramidi | neula | tasakatto).
 TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'), 'suuri': ('lansi', 2, 'tasakatto')}
 # Tyypit, joille on malli (oma/Tyyppimallit.cs); muut tyypitetyt menevät "ei sovi" -listaan.
-MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski'), ('asema', 'pieni'), ('asema', 'suuri'), ('palatsi', 'keski')}
+MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski'), ('asema', 'suuri'), ('palatsi', 'keski'), ('pylvastemppeli', 'keski')}
+# Mallien pohjan mitat (pituus × leveys m, torni mukana; kaanna.sh tulostaa): luonnollinen sovitus kirkoille kaistalla (KK 23.32).
+MALLIMITAT = {('kirkko', 'pieni'): (32.0, 12.0), ('kirkko', 'keski'): (61.0, 19.0), ('kirkko', 'suuri'): (111.0, 49.0)}
 SOVITUS = {
-    'kirkko_min_sivusuhde': 1.25,  # neliömäinen tai pyöreä pohja = keskeiskirkko, ei pitkäkirkkoa
+    'kirkko_min_sivusuhde': 1.10,  # alle: neliömäinen tai pyöreä pohja = keskeiskirkko, ei pitkäkirkkoa (KK 23.32, oli 1,25)
+    'luonnollinen_alle': 1.25,     # kaistalla 1,10–1,25 LUONNOLLINEN sovitus (mittasuhde säilyy, loppu pohjasta kirkkopihaksi; KK 23.32)
+    'max_ylitys': 2.0,             # m: luonnollinen malli saa ylittää pohjan enintään tämän, muuten pienennetään
+    'min_mittakaava': 0.7,         # luonnollinen mittakaava tätä pienempi → ei sovi
     'min_tayttoaste': 0.55,        # ala / pienin suorakaide: pienempi = L-, U- tai sisäpihallinen pohja
 }
 # Ikonien koodimallit (OhjelmaKohde*.cs, Lat/Lon-vakiot) ja säde metreinä: ehdokas, jonka keskipiste on säteen sisällä, on ikoni ja ohitetaan.
@@ -154,6 +164,30 @@ def korkeus(t):
     return None, None
 
 
+def piste_ulkona(p, poly):
+    """Etäisyys monikulmion ulkopuolelle (0 = sisällä)."""
+    x, y = p; sis = False; n = len(poly); dmin = 1e9
+    for i in range(n):
+        (ax, ay), (bx, by) = poly[i], poly[(i + 1) % n]
+        if (ay > y) != (by > y) and x < (bx - ax) * (y - ay) / (by - ay) + ax: sis = not sis
+        dx, dy = bx - ax, by - ay; l2 = dx * dx + dy * dy or 1e-9
+        t = max(0.0, min(1.0, ((x - ax) * dx + (y - ay) * dy) / l2))
+        dmin = min(dmin, math.hypot(x - ax - t * dx, y - ay - t * dy))
+    return 0.0 if sis else dmin
+
+
+def sovita_luonnollinen(poly, atsi, L, W, pit, lev):
+    """Mittasuhteen säilyttävä mittakaava: mahtuu pienimpään suorakaiteeseen, ja jos malli ylittää pohjan yli max_ylitys m, pienennetään.
+    poly suhteessa suorakaiteen keskipisteeseen. Palauttaa (mittakaava, ylitys)."""
+    s = min(pit / L, lev / W); ux, uy = math.sin(math.radians(atsi)), math.cos(math.radians(atsi)); vx, vy = -uy, ux
+    while True:
+        hl, hw = L * s / 2, W * s / 2
+        pts = [(i * hl, j * hw) for i in (-1, 0, 1) for j in (-1, 0, 1) if i or j]
+        yl = max(piste_ulkona((a * ux + b * vx, a * uy + b * vy), poly) for a, b in pts)
+        if yl <= SOVITUS['max_ylitys'] or s < SOVITUS['min_mittakaava'] * 0.9: return s, yl
+        s *= 0.97
+
+
 def nimi_hall(nimi):
     import re
     return re.search(r'\b(Hall|Halle)\b', nimi or '') is not None
@@ -226,9 +260,10 @@ def main(a):
         A = sum(alat)
         pts = [p for q in qs for p in q]
         pit, lev, atsi, c = pienin_suorakaide(pts)
-        tyyppi, koko, saanto = tyypita(t, A, pit)
+        tyyppi, koko, saanto = tyypita(t, A, pit); parametrit = {}
         if oid in lista:
-            tyyppi, koko, ln = lista[oid]; saanto = f'nimilista ({NIMILISTA_TILA.get(tyyppi, "ehdotus")}): {ln}'
+            tyyppi, koko, ln, *pa = lista[oid]; parametrit = dict(pa[0]) if pa else {}
+            saanto = f'nimilista ({NIMILISTA_TILA.get(tyyppi, "ehdotus")}): {ln}'
         elif tyyppi in ('asema', 'palatsi'):
             saanto = 'ei nimilistalla (KK 23.25: harvinaiset tyypit vain listalta)'
         if tyyppi is None and saanto is None: continue
@@ -253,16 +288,33 @@ def main(a):
             if len(kk) > 2 and kk[2]: th = kk[2]
         syy = ei_sovi(tyyppi, koko, A, pit, lev, len(qs), nimi) if saanto != 'käsikorjaus' else None
         if saanto.startswith('ei nimilistalla'): syy = 'ei nimilistalla'
+        if 'odottaa' in parametrit: syy = 'odottaa: ' + parametrit.pop('odottaa')
         if oid in kasi.get('ei_sovi', {}): syy = 'käsikorjaus: ' + kasi['ei_sovi'][oid]
-        la_c = meta['lat'] + c[1] / 111320.0; lo_c = meta['lon'] + c[0] / (111320.0 * math.cos(math.radians(meta['lat'])))
         suurin = qs[alat.index(max(alat))]
+        # Sovitus (KK 23.32): kirkko kaistalla 1,10–1,25 luonnollisesti (mittakaava, kirkkopiha), muuten pohjaan.
+        sovitus, mk, yl = 'pohja', None, None
+        if tyyppi == 'kirkko' and syy is None and pit / max(lev, 0.1) < SOVITUS['luonnollinen_alle']:
+            poly = [(x - c[0], y - c[1]) for x, y in suurin]
+            # Ensin pinta-alan kokoluokka, sitten pienempi (keski → pieni, suuri → keski), jos mittakaava jää alle rajan.
+            for kk_ in [koko] + {'suuri': ['keski'], 'keski': ['pieni'], 'pieni': []}[koko]:
+                L, W = MALLIMITAT[(tyyppi, kk_)]
+                mk, yl = sovita_luonnollinen(poly, atsi, L, W, pit, lev)
+                if mk >= SOVITUS['min_mittakaava'] and yl <= SOVITUS['max_ylitys']:
+                    if kk_ != koko: saanto += f'; luonnollinen: {koko} → {kk_}'; koko = kk_
+                    break
+            sovitus = 'luonnollinen'
+            if tyyppi == 'kirkko': tp, tn, th = TORNI_OLETUS[koko]
+            if mk < SOVITUS['min_mittakaava']: syy = f'luonnollinen sovitus (mittakaava {mk:.2f} < {SOVITUS["min_mittakaava"]})'
+            elif yl > SOVITUS['max_ylitys']: syy = f'luonnollinen sovitus (ylitys {yl:.1f} m)'
+        la_c = meta['lat'] + c[1] / 111320.0; lo_c = meta['lon'] + c[0] / (111320.0 * math.cos(math.radians(meta['lat'])))
         merkit.append({
             'osm': oid, 'tyyppi': tyyppi, 'koko': koko, 'saanto': saanto, 'nimi': nimi, 'wikidata': t.get('wikidata'),
             'keski': [round(la_c, 7), round(lo_c, 7)], 'akseli': round(atsi, 1), 'pituus': round(pit, 1), 'leveys': round(lev, 1),
             'ala': round(A), 'sivusuhde': round(pit / max(lev, 0.1), 2), 'korkeus': h, 'korkeus_lahde': hl,
             'torni_paikka': tp, 'torneja': tn, 'huippu': th, 'ei_sovi': syy, 'lansipaa': [round(c[0] + lansi[0] * pit / 2 - c[0], 1), round(lansi[1] * pit / 2, 1)],
             'pohja': [[round(x - c[0], 1), round(y - c[1], 1)] for x, y in suurin[:-1]],
-            'renkaita': len(qs),
+            'renkaita': len(qs), 'sovitus': sovitus, 'mittakaava': round(mk, 3) if mk else None, 'ylitys': round(yl, 1) if yl is not None else None,
+            'parametrit': parametrit or None,
         })
         if syy is None: poistot.append(oid)
     merkit.sort(key=lambda m: (m['tyyppi'], m['koko'], -m['ala']))
@@ -272,6 +324,8 @@ def main(a):
     with open(os.path.join(ulos, f'ohitetut-{kaupunki}.tsv'), 'w') as f:
         for r in ohit: f.write('\t'.join(r) + '\n')
     eis = [m for m in merkit if m['ei_sovi']]
+    lu = [m for m in merkit if m['sovitus'] == 'luonnollinen']
+    lu_ok = [m for m in lu if not m['ei_sovi']]
     with open(os.path.join(ulos, f'eisovi-{kaupunki}.tsv'), 'w') as f:
         f.write('osm\ttyyppi\tala\tnimi\tei sovi mihinkään tyyppiin\tosm-linkki\n')
         for m in sorted(eis, key=lambda m: -m['ala']):
@@ -280,6 +334,8 @@ def main(a):
     from collections import Counter
     c = Counter((m['tyyppi'], m['koko']) for m in merkit)
     print(f'{kaupunki}: {len(merkit)} tyypitetty ({len(poistot)} malliin, {len(eis)} ei sovi), {len(ohit)} ohitettu')
+    if lu: print(f"  luonnollinen sovitus (kaista {SOVITUS['kirkko_min_sivusuhde']}–{SOVITUS['luonnollinen_alle']}): {len(lu)} kirkkoa, {len(lu_ok)} malliin "
+                 f"(mittakaava {min(m['mittakaava'] for m in lu_ok):.2f}–{max(m['mittakaava'] for m in lu_ok):.2f}, pienempi kokoluokka {sum('→' in m['saanto'] for m in lu_ok)}), {len(lu) - len(lu_ok)} ei sovi")
     print('  ei sovi:', ', '.join(f'{k} {n}' for k, n in Counter(m['ei_sovi'].split(' (')[0] for m in eis).most_common()))
     for k, n in sorted(c.items()): print(f'  {k[0]}-{k[1]}\t{n}')
     co = Counter(r[2].split(' ')[0] for r in ohit)

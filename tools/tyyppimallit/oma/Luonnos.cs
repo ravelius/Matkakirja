@@ -12,9 +12,13 @@ namespace Matkakirja
         public static int Main(string[] a)
         {
             var ulos = a.Length > 0 ? a[0] : "obj";
-            Directory.CreateDirectory(ulos);
             var ci = CultureInfo.InvariantCulture;
-            foreach (var (nimi, v, raja) in OhjelmaKohdeGeometria.TyyppiLuonnokset())
+            Directory.CreateDirectory(ulos);
+            var lista = OhjelmaKohdeGeometria.TyyppiLuonnokset();
+            // Parametrinen vienti: Luonnos.dll <kansio> <nimi> palatsi-piha <pituus> <leveys>  (sovituskuviin, KK 23.32 työ D)
+            if (a.Length >= 5 && a[2] == "palatsi-piha")
+                lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiPalatsiPiha(float.Parse(a[3], ci), float.Parse(a[4], ci)), 1500) };
+            foreach (var (nimi, v, raja) in lista)
             {
                 var sb = new StringBuilder();
                 sb.Append("# ").Append(nimi).Append(" kolmioita ").Append(v.Kolmioita).Append('\n');

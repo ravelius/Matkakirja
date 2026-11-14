@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 sys.path.insert(0, '.')
 import tyypitys as T
 ote, merkit, objk, ulos, *ids = sys.argv[1:]
+PALATSI = '--palatsi' in ids; ids = [i for i in ids if i != '--palatsi']
 meta = json.load(open(f'{ote}/ote.json')); d = json.load(gzip.open(f'{ote}/osm.json.gz'))
 P = T.projektori(meta['lat'], meta['lon'])
 M = {m['osm']: m for m in json.load(open(merkit))['merkit']}
@@ -19,7 +20,7 @@ def lue_obj(nimi):
         elif o[0] == 'f': f.append(tuple(int(i) - 1 for i in o[1:4]))
     return v, f
 
-S, R = 440, 70.0       # paneelin koko px, puolileveys metreinä
+S, R = 440, (130.0 if '--palatsi' in sys.argv else 70.0)       # paneelin koko px, puolileveys metreinä
 def paneeli(m, tapa):
     im = Image.new('RGB', (S, S), (238, 234, 224)); dr = ImageDraw.Draw(im)
     lat, lon = m['keski']; cx, cy = P(lat, lon)
@@ -29,15 +30,17 @@ def paneeli(m, tapa):
     for w in d['ways']:
         if 'p' not in w or not w.get('t', {}).get('building') or w['osm'] == m['osm']: continue
         la, lo = w['p'][0]
-        if abs(la - lat) > 0.0009 or abs(lo - lon) > 0.0013: continue
+        if abs(la - lat) > 0.0009 * R / 70 or abs(lo - lon) > 0.0013 * R / 70: continue
         dr.polygon([px(*P(a, b)) for a, b in w['p']], fill=(206, 200, 188), outline=(170, 162, 150))
     pohja = [(cx + x, cy + y) for x, y in m['pohja']]
     dr.polygon([px(*q) for q in pohja], fill=(226, 214, 200))
     # malli: OBJ x = pitkä akseli (torni −x = länsi), OBJ −z = leveys
-    v, f = lue_obj(f"kirkko-{m['koko']}")
+    obj = (f"piha-{m['osm'].replace('/', '-')}" if tapa == 'piha' else 'palatsi') if PALATSI else f"kirkko-{m['koko']}"
+    v, f = lue_obj(obj)
     xs = [p[0] for p in v]; zs = [p[2] for p in v]
     L, W = max(xs) - min(xs), max(zs) - min(zs); mx, mz = (max(xs) + min(xs)) / 2, (max(zs) + min(zs)) / 2
     if tapa == 'venytetty': sx, sz = m['pituus'] / L, m['leveys'] / W
+    elif tapa == 'piha': sx = sz = 1.0
     else: sx = sz = min(m['pituus'] / L, m['leveys'] / W)
     a = math.radians(m['akseli']); ux, uy = math.sin(a), math.cos(a)     # akselin suunta (0 = pohjoinen)
     lp = m['lansipaa']
@@ -52,7 +55,8 @@ def paneeli(m, tapa):
     dr.line([px(*q) for q in pohja + pohja[:1]], fill=(200, 40, 30), width=3)
     # mittakaava 20 m
     dr.line([(12, S - 14), (12 + 20 * k, S - 14)], fill=(40, 34, 28), width=3); dr.text((14, S - 34), '20 m', fill=(40, 34, 28), font=F(14))
-    dr.text((10, 8), 'VENYTETTY pohjaan' if tapa == 'venytetty' else f'LUONNOLLINEN (mittakaava {sx:.2f})', fill=(40, 34, 28), font=FB(16))
+    otsake = {'venytetty': 'NYKYINEN MALLI venytettynä' if PALATSI else 'VENYTETTY pohjaan', 'piha': 'UMPIPIHA pohjaan (parametri piha)' if L > 0 and min(m['pituus'], m['leveys']) >= 41.6 else 'PIHA = EI: kapea pohja → tanko'}.get(tapa, f'LUONNOLLINEN (mittakaava {sx:.2f})')
+    dr.text((10, 8), otsake, fill=(40, 34, 28), font=FB(16))
     if tapa == 'venytetty': dr.text((10, 28), f'pituus × {sx:.2f}, leveys × {sz:.2f}', fill=(80, 70, 60), font=F(14))
     return im
 
@@ -62,12 +66,16 @@ v_, otsikko = 10, 50
 sar = 2   # kirkkoa per rivi
 W_ = v_ + sar * (2 * S + v_ * 3); H_ = 74 + math.ceil(len(ids) / sar) * (otsikko + S + v_) + 26
 a = Image.new('RGB', (W_, H_), (245, 240, 228)); dr = ImageDraw.Draw(a)
-dr.text((v_, 10), 'KYNNYSKUVA: kirkot sivusuhteella 1,10–1,25 ylhäältä (Valoseppä 14.11.2026, KK 23.25 työ A)', fill=(40, 34, 28), font=FB(24))
-dr.text((v_, 42), 'Punainen = OSM-pohja (vaalea sisus = tyhjäksi jäävä ala), harmaa = naapuritalot. Malli kirkko-keski (46 × 18 m laiva), torni länteen. Nyt kynnys 1,25 → kaikki nämä ovat "ei sovi" (perustalo jää).', fill=(70, 62, 52), font=F(16))
+if PALATSI:
+    dr.text((v_, 10), 'PALATSIEN SOVITUS ylhäältä: nykyinen 100 × 28 m:n tanko venytettynä vs. umpipihavariantti (Valoseppä 15.11.2026, KK 23.32 työ D)', fill=(40, 34, 28), font=FB(24))
+    dr.text((v_, 42), 'Punainen = OSM-pohja, harmaa = naapuritalot. Umpipiha: siivet 16 m, kulmapaviljongit 20 m, pääjulkisivu ja porttiholvi +z:n pitkällä sivulla; mittakaava 1 (pohjan suorakaide).', fill=(70, 62, 52), font=F(16))
+else:
+    dr.text((v_, 10), 'KYNNYSKUVA: kirkot sivusuhteella 1,10–1,25 ylhäältä (Valoseppä 14.11.2026, KK 23.25 työ A)', fill=(40, 34, 28), font=FB(24))
+    dr.text((v_, 42), 'Punainen = OSM-pohja (vaalea sisus = tyhjäksi jäävä ala), harmaa = naapuritalot. Malli kirkko-keski (46 × 18 m laiva), torni länteen. Nyt kynnys 1,25 → kaikki nämä ovat "ei sovi" (perustalo jää).', fill=(70, 62, 52), font=F(16))
 for i, o in enumerate(ids):
     m = M[o]; x0 = v_ + (i % sar) * (2 * S + v_ * 3); y0 = 74 + (i // sar) * (otsikko + S + v_)
     dr.text((x0, y0 + 4), f"{m['nimi']}  ({o})", fill=(40, 34, 28), font=FB(18))
     dr.text((x0, y0 + 26), f"ala {m['ala']} m², pohja {m['pituus']:.0f} × {m['leveys']:.0f} m, sivusuhde {m['sivusuhde']:.2f}", fill=(80, 70, 60), font=F(15))
-    for j, tapa in enumerate(('venytetty', 'luonnollinen')): a.paste(paneeli(m, tapa), (x0 + j * (S + v_), y0 + otsikko))
+    for j, tapa in enumerate(('venytetty', 'piha') if PALATSI else ('venytetty', 'luonnollinen')): a.paste(paneeli(m, tapa), (x0 + j * (S + v_), y0 + otsikko))
 dr.text((v_, H_ - 22), 'Lähde: _tyo/valoseppa/tyyppitalot/kynnys.py; OSM-ote KS otteet-63/pariisi; malli oma/Tyyppimallit.cs (OBJ, valo leivottu kärkiväreihin).', fill=(110, 100, 90), font=F(13))
 a.save(ulos, quality=88); print(ulos, a.size)

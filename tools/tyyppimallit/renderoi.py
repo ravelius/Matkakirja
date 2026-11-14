@@ -47,7 +47,7 @@ for t in TYYPIT:
     cam_d = bpy.data.cameras.new('k'); cam_d.type = 'ORTHO'
     cam = bpy.data.objects.new('k', cam_d); sc.collection.objects.link(cam); sc.camera = cam
     nak = {'45': (225, 45, 1.05), 'edesta': (180, 3, 0.95), 'sivulta': (270, 3, 1.0)}
-    if t == 'palatsi': nak = {'45': (225, 45, 1.05), 'edesta': (90, 3, 1.0), 'sivulta': (180, 3, 1.0)}   # pääjulkisivu pohjoiseen (pihan puoli)
+    if t == 'palatsi' or t.startswith('palatsi-piha') or t.startswith('piha-'): nak = {'45': (225, 45, 1.05), 'edesta': (90, 3, 1.0), 'sivulta': (180, 3, 1.0)}   # pääjulkisivu pohjoiseen (pihan puoli)
     for nakyma, (az, el, sk) in nak.items():
         # az: suunta, josta katsotaan (0 = itä, 90 = pohjoinen); kamera katsoo kohti keskeä
         ra, re = math.radians(az), math.radians(el)

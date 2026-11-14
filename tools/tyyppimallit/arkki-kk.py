@@ -17,14 +17,18 @@ RIVIT = [('kirkko-pieni', 'KIRKKO PIENI (kappeli, kyläkirkko)', 'laiva 24 × 11
          ('kirkko-keski-risteys-1-pyramidi', 'TORNIN PARAMETRIT: torni_paikka | torneja | huippu (sama tyyppi, ei uusia tyyppejä)', 'oletukset: pieni länsi | 1 | pyramidi, keski länsi | 1 | neula; katedraali aina länsi | 2 | tasakatto + kattoratsastaja',
           [('kirkko-keski-risteys-1-pyramidi-45', 'keski: risteys | 1 | pyramidi'), ('kirkko-keski-lansi-2-neula-45', 'keski: länsi | 2 | neula'), ('kirkko-keski-45', 'keski: oletus länsi | 1 | neula')]),
          ('pylvastemppeli', 'UUSI: PYLVÄSTEMPPELI (Madeleine, Palais Brongniart; myöhemmin Wien, Ateena; KK 23.25 työ C)', 'jalusta + etuportaat, cella, pylväskehä (päädyssä 8 / 10, sivuilla sama jako), palkisto; harja kolmiopäätyineen TAI attika + loiva katto; pituus ja leveys pohjasta',
-          [('pylvastemppeli-45', 'harja, 8 pylvästä päädyssä (100 × 40 m)'), ('pylvastemppeli-edesta', 'edestä'), ('pylvastemppeli-attika-45', 'attika, 10 päädyssä (70 × 42 m)')])]
+          [('pylvastemppeli-45', 'harja, 8 pylvästä päädyssä (100 × 40 m)'), ('pylvastemppeli-edesta', 'edestä'), ('pylvastemppeli-attika-45', 'attika, 10 päädyssä (70 × 42 m)')]),
+         ('palatsi-piha', 'UUSI: PALATSI, parametri piha (umpipiha; KK 23.32 työ D)', 'neljä siipeä 16 m pihan ympärillä, mansardit, kulmapaviljongit 20 m, pääjulkisivulla risaliitti ja porttiholvi; mitat OSM-pohjasta; kapea pohja (< 42 m) → tanko',
+          [('palatsi-piha-45', 'umpipiha 120 × 90 m'), ('palatsi-piha-edesta', 'edestä (pääjulkisivu)'), ('piha-relation-1060804-45', 'Crillon 91 × 32 m: piha = ei → tanko')]),
+         ('asema-nord-2', 'UUSI: ASEMA, parametri halleja 1–3 (KK 23.32 työ E)', 'rinnakkaiset hallit pohjan leveydelle (hallin leveys = leveys / halleja), jokaisen päässä kaari, kello keskimmäisessä; ripojen väli kasvaa pitkillä halleilla',
+          [('asema-nord-2-45', 'Gare du Nord: 2 hallia, 185 × 137 m'), ('asema-lazare-3-45', 'Saint-Lazare: 3 hallia, 249 × 247 m'), ('asema-lyon-3-45', 'Gare de Lyon: 3 hallia, 217 × 181 m')])]
 NAK = [('45', '45° lounaasta'), ('edesta', 'edestä'), ('sivulta', 'sivulta')]; NAKP = [('45', '45° lounaasta'), ('edesta', 'edestä (pääjulkisivu)'), ('sivulta', 'päädystä')]
 cw, ch, v, otsikko, ala = 600, 427, 10, 52, 26
 W = v + 3 * (cw + v); H = 70 + len(RIVIT) * (otsikko + ch + v) + ala
 a = Image.new('RGB', (W, H), (245, 240, 228)); d = ImageDraw.Draw(a)
 f = lambda s: ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial.ttf', s)
 fb = lambda s: ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial Bold.ttf', s)
-d.text((v, 12), 'TYÖKALU 2 – tyyppimallien luonnokset, versio 3: kupolikirkko, tornin parametrit, pylvästemppeli (Valoseppä 14.11.2026)', fill=(40, 34, 28), font=fb(26))
+d.text((v, 12), 'TYÖKALU 2 – tyyppimallien luonnokset, versio 4: kupolikirkko, tornit, pylvästemppeli, umpipihapalatsi, hallit (Valoseppä 14.11.2026)', fill=(40, 34, 28), font=fb(26))
 d.text((v, 44), 'Tasavärit ja neutraali valo, ortokamera; vieressä tavallinen pariisilainen talo (16 × 12 m, räystäs 18 m) mittakaavaksi. Suorakaidepohja: lopullisessa seinät nousevat OSM-pohjasta.', fill=(70, 62, 52), font=f(17))
 y = 70
 for t, nimi, kuvaus, *oma in RIVIT:
