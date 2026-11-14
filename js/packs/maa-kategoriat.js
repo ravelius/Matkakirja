@@ -2963,12 +2963,12 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Sherlock Holmes Museum, Baker Street, London (2).jpg',
           teksti: 'Arthur Conan Doyle antoi Sherlock Holmesille osoitteen 221B '
             + 'Baker Street, vaikka katu oli silloin nykyistä lyhyempi: '
-            + 'Baker Street päättyi Marylebone Roadiin, ja sen pohjoispuolella '
-            + 'oli erillinen Upper Baker Street. Myöhemmin katu yhdistettiin '
-            + 'ja talot numeroitiin uudelleen. Kun asuntoluottoyhtiö Abbey '
-            + 'National muutti 1930-luvulla Baker Streetille, sen konttoriin '
-            + 'alkoi tulla Holmesille osoitettuja kirjeitä. Yhtiö palkkasi '
-            + 'työntekijän vastaamaan niihin Holmesin sihteerinä.',
+            + 'Marylebone Roadin pohjoispuolella oli erillinen Upper Baker '
+            + 'Street. Myöhemmin kadut yhdistettiin ja talot numeroitiin '
+            + 'uudelleen. Baker Streetillä toimineen asuntoluottoyhtiö Abbey '
+            + 'Nationalin konttoriin alkoi tulla Holmesille osoitettuja '
+            + 'kirjeitä, ja yhtiö palkkasi työntekijän vastaamaan niihin '
+            + 'Holmesin sihteerinä.',
           lyhyt: 'Vuonna 1990 avattu Sherlock Holmes -museo käyttää osoitetta 221b Baker Street.',
           selite: 'Vuonna 1990 avattu Sherlock Holmes -museo käyttää '
             + 'osoitetta 221b Baker Street.',
