@@ -1584,5 +1584,121 @@ export const FOKUSVIRTA_LONTOO = {
         },
       },
     },
+    {
+      /*
+       * TARINAPAIKKA 'Baird 1926' (KK 15.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Baird 1926'. Vain kahden lähteen väitteet
+       * (docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 5); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'baird-televisio-1926',
+      nimio: 'Baird 1926',
+      otsikko: 'Baird 1926 — liikkuva kuva Sohon yläkerrassa',
+      symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Mitä Bairdin televisiokokeissa käytettiin kuvattavana?',
+        vaihtoehdot: [
+          'Vatsastapuhujan nuken päätä',
+          'Kipsistä valettua rintakuvaa',
+          'Maalattua muotokuvaa',
+        ],
+        oikea: 0,
+        fakta: 'Nuken päätä kutsuttiin Stooky Billiksi. Tammikuussa 1926 Baird esitteli televisiotaan Royal Institutionin jäsenille Sohossa.',
+      },
+      lunastus: [
+        'Tammikuussa 1926 keksijä John Logie Baird esitteli Royal '
+          + 'Institutionin jäsenille laitettaan laboratoriossa, joka oli yläkerran huoneessa '
+          + 'Frith Streetillä Sohossa. Vieraat näkivät, miten liikkuva kuva siirtyi huoneesta '
+          + 'toiseen. The Times kirjoitti esityksestä 28. tammikuuta. Sitä pidetään '
+          + 'ensimmäisenä todellisen television esityksenä.',
+        'Bairdin televisio oli mekaaninen, ja sen ytimessä oli pyörivä kiekko, jonka '
+          + 'saksalainen Paul Nipkow oli keksinyt jo vuonna 1884. Kokeissa kuvattavana oli '
+          + 'vatsastapuhujan nuken pää, jota kutsuttiin Stooky Billiksi. Kuvaamiseen tarvittiin '
+          + 'kirkkaita lamppuja, joiden alla ihmisen oli tukala olla.',
+        'Isoisäsi matkavuonna 1873 televisiota ei vielä ollut, eikä Baird ollut edes '
+          + 'syntynyt. Nipkow\'n kiekon keksimiseen oli vielä yksitoista vuotta.',
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 5): Royal Institution ja tammikuu 1926 = Moseley ja Barton Chapple,
+      // Television To-day and To-morrow (1930) + Larner, Practical Television (1928); Frith Street, yläkerran huone, huoneesta toiseen
+      // ja Times 28.1. = The Timesin juttu (lainattu Moseleyssa) + Wikipedia; "pidetään ensimmäisenä" = Moseley + Larner (molemmat
+      // brittiläisiä, siksi varovasti); nuken pää = Times + Dunlap, The Outlook for Television (1932); Stooky Bill = Dunlap + Wikipedia;
+      // Nipkow 1884 = Dunlap + Wikipedia; lamput pehmeästi (vain Dunlap, ei syy-yhteyttä nukkeen). Pois KK:n rajauksella: päivä 26.1.,
+      // talonumero 22, Bar Italia, "langattomasti", syntymävuosi 1888 (vain Wikipedia).
+      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television ja Wikipedia',
+      kuva: {
+        tiedosto: 'John Logie Baird in 1917.jpg',
+        lyhyt: 'John Logie Baird vuonna 1917.',
+        selite: 'John Logie Baird valokuvassa vuodelta 1917, lähes vuosikymmen ennen Frith Streetin esitystä.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten Bairdin mekaaninen televisio toimi?',
+        'Kuka oli Stooky Bill?',
+        'Mitä The Times kirjoitti esityksestä?',
+      ],
+      // Frith Street Sohossa, kadun eteläpää (talonumeroa ei käytetä; piste kadulla, ei talossa).
+      paikka: {
+        nimi: 'Baird 1926',
+        laudat: {
+          maailmankartta: { x: 5828.9, y: 1323.7 },
+          europe: { x: 208.7, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Sähkötin 1837' (KK 15.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Sähkötin 1837'. Vain kahden lähteen väitteet
+       * (docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 6); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'sahkotin-euston-1837',
+      nimio: 'Sähkötin 1837',
+      otsikko: 'Sähkötin 1837 — neulat Eustonin radalla',
+      symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Montako neulaa oli sähköttimessä, jota Cooke ja Wheatstone kokeilivat Eustonissa 1837?',
+        vaihtoehdot: [
+          'Viisi',
+          'Kaksi',
+          'Kymmenen',
+        ],
+        oikea: 0,
+        fakta: 'Laite oli viiden neulan sähkötin. Sitä kokeiltiin heinäkuussa 1837 Euston-aseman ja Camden Townin välillä.',
+      },
+      lunastus: [
+        'Toukokuussa 1837 William Cooke ja Charles Wheatstone sopivat yhteistyöstä, ja '
+          + 'kesäkuussa he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
+          + 'kokeiltiin London and Birmingham -radalla Euston-aseman ja Camden Townin välillä.',
+        'Sähköttimessä oli viisi neulaa. Myöhemmin Great Western Railway otti sähköttimen '
+          + 'käyttöön Paddingtonin asemalta alkaen.',
+        'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta.',
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 6): yhteistyö toukokuussa 1837 = The Electric Telegraph: Was it
+      // invented by Professor Wheatstone? (1856, molempien osapuolten kiistakirjoitukset) + Munro, Heroes of the Telegraph (1891)
+      // + DNB "Cooke, William Fothergill"; patentti kesäkuussa 1837 = Cooke (12.6.1837) + Wheatstonen puolustajan First Pamphlet;
+      // yhteinen patentti 1837 myös EB 1911 "Wheatstone"; koe Euston–Camden Town London and Birmingham -radalla heinäkuussa 1837 =
+      // 1856-kokoelma + Munro (+ DNB); viisi neulaa = Munro + DNB; GWR Paddingtonista = Munro + 1856-kokoelma (+ DNB). Radan nimi
+      // London and Birmingham (Munron "London and North Western" on anakronismi). Pois KK:n rajauksella: päivä 25.7., köysiveto,
+      // West Drayton, "välinpitämättömästi", miesten paikat, "elossa 1873" (Wheatstonen kuolinvuosi ei kahdesta lähteestä).
+      lahde: 'Matkakirjan oma teksti · lähteinä Cooken ja Wheatstonen kiistakirjoitukset (1856), Munron Heroes of the Telegraph, Dictionary of National Biography, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Wheatstone Charles drawing 1868.jpg',
+        lyhyt: 'Charles Wheatstone, Samuel Laurencen piirros 1868.',
+        selite: 'Charles Wheatstone Samuel Laurencen piirroksessa vuodelta 1868, kolme vuosikymmentä Eustonin kokeen jälkeen.',
+        lahde: 'Samuel Laurence, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten neulasähkötin välitti viestin?',
+        'Miksi rautatiet tarvitsivat sähkötintä?',
+        'Mitä Cooke ja Wheatstone tekivät yhdessä?',
+      ],
+      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, nimiö oikealle.
+      paikka: {
+        nimi: 'Sähkötin 1837',
+        laudat: {
+          maailmankartta: { x: 5828.9, y: 1323.1 },
+          europe: { x: 208.6, y: 538.4 },
+        },
+      },
+    },
   ],
 };

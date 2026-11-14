@@ -3355,6 +3355,64 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteinä Pepysin päiväkirja, Encyclopaedia Britannica (1911) ja Wikipedia',
     },
     /*
+     * TARINAPAIKKA 'Baird 1926' (KK 15.11.2026, Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset). Sama teksti on
+     * täkynoston lunastuksena (js/packs/fokusvirta-lontoo.js 'baird-televisio-1926'). Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     */
+    'Baird 1926': {
+      aika: '1926',
+      nosto: 'nosto-baird-televisio-1926',
+      teksti: 'Tammikuussa 1926 keksijä John Logie Baird esitteli Royal Institutionin jäsenille '
+        + 'laitettaan laboratoriossa, joka oli yläkerran huoneessa Frith Streetillä Sohossa. Vieraat '
+        + 'näkivät, miten liikkuva kuva siirtyi huoneesta toiseen. The Times kirjoitti esityksestä '
+        + '28. tammikuuta. Sitä pidetään ensimmäisenä todellisen television esityksenä.'
+        + '\n\n'
+        + 'Bairdin televisio oli mekaaninen, ja sen ytimessä oli pyörivä kiekko, jonka saksalainen '
+        + 'Paul Nipkow oli keksinyt jo vuonna 1884. Kokeissa kuvattavana oli vatsastapuhujan nuken '
+        + 'pää, jota kutsuttiin Stooky Billiksi. Kuvaamiseen tarvittiin kirkkaita lamppuja, joiden '
+        + 'alla ihmisen oli tukala olla.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 televisiota ei vielä ollut, eikä Baird ollut edes syntynyt. '
+        + 'Nipkow\'n kiekon keksimiseen oli vielä yksitoista vuotta.',
+      kuvat: [
+        {
+          tiedosto: 'John Logie Baird in 1917.jpg',
+          lyhyt: 'John Logie Baird vuonna 1917.',
+          selite: 'John Logie Baird valokuvassa vuodelta 1917, lähes vuosikymmen ennen Frith Streetin esitystä.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): ks. js/packs/fokusvirta-lontoo.js 'baird-televisio-1926' ja
+      // docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 5 (Times 1926 Moseleyssa, Moseley 1930, Larner 1928, Dunlap 1932, Wikipedia).
+      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television ja Wikipedia',
+    },
+    /*
+     * TARINAPAIKKA 'Sähkötin 1837' (KK 15.11.2026, Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset). Sama teksti on
+     * täkynoston lunastuksena (js/packs/fokusvirta-lontoo.js 'sahkotin-euston-1837'). Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     */
+    'Sähkötin 1837': {
+      aika: '1837',
+      nosto: 'nosto-sahkotin-euston-1837',
+      teksti: 'Toukokuussa 1837 William Cooke ja Charles Wheatstone sopivat yhteistyöstä, ja '
+        + 'kesäkuussa he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
+        + 'kokeiltiin London and Birmingham -radalla Euston-aseman ja Camden Townin välillä.'
+        + '\n\n'
+        + 'Sähköttimessä oli viisi neulaa. Myöhemmin Great Western Railway otti sähköttimen '
+        + 'käyttöön Paddingtonin asemalta alkaen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta.',
+      kuvat: [
+        {
+          tiedosto: 'Wheatstone Charles drawing 1868.jpg',
+          lyhyt: 'Charles Wheatstone, Samuel Laurencen piirros 1868.',
+          selite: 'Charles Wheatstone Samuel Laurencen piirroksessa vuodelta 1868, kolme vuosikymmentä Eustonin kokeen jälkeen.',
+          lahde: 'Samuel Laurence, Wikimedia Commons (PD)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): ks. js/packs/fokusvirta-lontoo.js 'sahkotin-euston-1837' ja
+      // docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 6 (Cooke–Wheatstone 1856, Munro 1891, DNB Cooke, EB 1911 Wheatstone).
+      lahde: 'Matkakirjan oma teksti · lähteinä Cooken ja Wheatstonen kiistakirjoitukset (1856), Munron Heroes of the Telegraph, Dictionary of National Biography, Encyclopaedia Britannica (1911) ja Wikipedia',
+    },
+    /*
      * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
      * ennen striimatun tietokortin. Isoisän "kadonnut maailma" -sävy. Kuvat Wikimedia Commonsista (pysyvä lupa).
      */

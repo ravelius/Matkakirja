@@ -13273,6 +13273,32 @@
     "lon": -0.1242
    },
    "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Baird 1926",
+   "nimi": "Baird 1926",
+   "qid": null,
+   "lat": 51.5135,
+   "lon": -0.1317,
+   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "kartanPiste": {
+    "lat": 51.5135,
+    "lon": -0.1317
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Sähkötin 1837",
+   "nimi": "Sähkötin 1837",
+   "qid": null,
+   "lat": 51.5282,
+   "lon": -0.1337,
+   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "kartanPiste": {
+    "lat": 51.5282,
+    "lon": -0.1337
+   },
+   "eroKartanPisteesta_m": 0
   }
  ],
  "losangeles": [
