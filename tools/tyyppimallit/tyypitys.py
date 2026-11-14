@@ -65,27 +65,27 @@ NIMILISTAT = {
         'relation/3300400': ('palatsi', 'keski', 'Palais Royal', {'julkisivu': 'etelä', 'katu': 'Place du Palais-Royal / Rue Saint-Honoré'}),
     },
     'lontoo': {
-        # ASEMAT hyväksytty KK 15.11. 01.13. Palatsit ja Royal Exchange odottavat arkkia (katto rivikohtaisesti attika | mansardi, KK 01.13).
-        # EHDOTUS (VS 15.11., ehdotus-listat-lontoo.md): kaikilla 'odottaa' → ei vientiin ennen KK:n sanaa. Julkisivu käsin; 'arvio' = tarkistettava.
+        # HYVÄKSYTTY (KK 15.11. 01.13 asemat, 01.24 palatsit + Royal Exchange; katto rivikohtaisesti, mansardi vain County Hall ja Old Admiralty).
+        # Julkisivu käsin; 'arvio' = tarkistettava. Seinäväri rivikohtaisesti KS:n paletista myöhemmin (KK 01.24: Portland-kivi, Old Admiralty punatiili).
         'way/947381552': ('asema', 'suuri', 'Paddington'),
         'way/4256246': ('asema', 'suuri', 'St Pancras'),   # 2. kierroksen ehdokas: oikeasti yksi Barlow-halli + tiilijulkisivu (KK 01.13)
         'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2}),
         'way/4959629': ('asema', 'suuri', 'Liverpool Street (halli, nimetön OSM-pohja)'),
         # St James's Palace (relation/545040) pois listalta: Tudor-tiili, perustalo (KK 15.11. 01.13)
-        'way/372841786': ('palatsi', 'keski', "Somerset House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Strand'}),
-        'relation/3848545': ('palatsi', 'keski', "Burlington House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Piccadilly'}),
-        'relation/78291': ('palatsi', 'keski', "Foreign Office", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall', 'arvio': True}),
-        'way/133153176': ('palatsi', 'keski', "Horse Guards", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
-        'relation/20350084': ('palatsi', 'keski', "Old Admiralty", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Horse Guards Parade', 'arvio': True}),
-        'way/33695114': ('palatsi', 'keski', "Mansion House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Bankin risteys (portiikki)', 'arvio': True}),
-        'way/4266524': ('palatsi', 'keski', "Lancaster House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Stable Yard', 'arvio': True}),
-        'relation/16057566': ('palatsi', 'keski', "Spencer House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Green Park'}),
-        'way/161800467': ('palatsi', 'keski', "Marlborough House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Pall Mall', 'arvio': True}),
-        'relation/1789966': ('palatsi', 'keski', "County Hall", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Thames', 'arvio': True}),
-        'way/54478457': ('palatsi', 'keski', "Clarence House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'etelä', 'katu': 'The Mall', 'arvio': True}),
-        'way/120316250': ('palatsi', 'keski', "Apsley House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Hyde Park Corner', 'arvio': True}),
-        'way/140470549': ('palatsi', 'keski', "Banqueting House", {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
-        'way/367646970': ('pylvastemppeli', 'keski', 'Royal Exchange', {'odottaa': 'ehdotus VS 15.11. (ehdotus-listat-lontoo.md), KK:n sana', 'katto': 'attika', 'portiikki': True}),
+        'way/372841786': ('palatsi', 'keski', "Somerset House", {'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Strand'}),
+        'relation/3848545': ('palatsi', 'keski', "Burlington House", {'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Piccadilly'}),
+        'relation/78291': ('palatsi', 'keski', "Foreign Office", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall', 'arvio': True}),
+        'way/133153176': ('palatsi', 'keski', "Horse Guards", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
+        'relation/20350084': ('palatsi', 'keski', "Old Admiralty", {'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Horse Guards Parade', 'arvio': True}),
+        'way/33695114': ('palatsi', 'keski', "Mansion House", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Bankin risteys (portiikki)', 'arvio': True}),
+        'way/4266524': ('palatsi', 'keski', "Lancaster House", {'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Stable Yard', 'arvio': True}),
+        'relation/16057566': ('palatsi', 'keski', "Spencer House", {'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Green Park'}),
+        'way/161800467': ('palatsi', 'keski', "Marlborough House", {'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Pall Mall', 'arvio': True}),
+        'relation/1789966': ('palatsi', 'keski', "County Hall", {'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Thames', 'arvio': True}),
+        'way/54478457': ('palatsi', 'keski', "Clarence House", {'katto': 'attika', 'julkisivu': 'etelä', 'katu': 'The Mall', 'arvio': True}),
+        'way/120316250': ('palatsi', 'keski', "Apsley House", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Hyde Park Corner', 'arvio': True}),
+        'way/140470549': ('palatsi', 'keski', "Banqueting House", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
+        'way/367646970': ('pylvastemppeli', 'keski', 'Royal Exchange', {'katto': 'attika', 'portiikki': True}),
     },
 }
 NIMILISTA_TILA = {'kupolikirkko': 'hyväksytty', 'pylvastemppeli': 'hyväksytty', 'asema': 'hyväksytty', 'palatsi': 'hyväksytty'}
