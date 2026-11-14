@@ -27,6 +27,10 @@ namespace Matkakirja
                 int h = int.Parse(a[3]); float L = float.Parse(a[4], ci), W = float.Parse(a[5], ci);
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiAsema(h > 0 ? h : OhjelmaKohdeGeometria.AsemanHallit(W), L, W), 1500) };
             }
+            // Luonnos.dll <kansio> <nimi> malli <tyyppi> <a> <b> <c> <p0> <p1>: MK01-rivi kuten pelissä (OhjelmaKohdeGeometria.TyyppiMalli; KK 15.11. 01.13 arkki).
+            if (a.Length >= 9 && a[2] == "malli")
+                lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiMalli(int.Parse(a[3]), int.Parse(a[4]),
+                    int.Parse(a[5]), int.Parse(a[6]), float.Parse(a[7], ci), float.Parse(a[8], ci)), 1500) };
             foreach (var (nimi, v, raja) in lista)
             {
                 var sb = new StringBuilder();

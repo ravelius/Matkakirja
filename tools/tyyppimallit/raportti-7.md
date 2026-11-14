@@ -48,3 +48,13 @@
       Grove Chapel	way/86678082	276	19 × 14	1.32	pieni	x 0.60, z 1.20
       St Pauls United Reformed Church	way/79107411	238	18 × 14	1.34	pieni	x 0.57, z 1.13
 - Viidennen muodon koe (vain laskettu, ei mallia): 58 × 38 m (myös 55 × 36 ja 60 × 40) toisi mukaan P 17/41, L 8/34; loput ovat pieniä kappeleita (alle 20 m) tai hyvin pitkiä ja kapeita.
+
+## KK 01.13: Lontoo (asemat vientiin, katto ja portiikki, arkki lontoo-1.jpg)
+- Asemat hyväksytty: Paddington 3, St Pancras 2 (2. kierroksen ehdokas: yksi Barlow-halli + tiilijulkisivu), King's Cross 2 (lista), Liverpool Street 2. L 405 → 409.
+- Palatsi katto "mansardi" | "attika" (TyyppiPalatsiPiha; MK01 tyyppi 6 c = 1 attika): attikalla siivet ja paviljongit päättyvät räystäslistaan ja kaiteeseen,
+  tasakatto; 495 kolmiota (mansardi 1 359). Rivikohtaisesti: attika kaikille paitsi County Hall ja Old Admiralty (oikeasti korkeat katot → mansardi).
+  St James's pois listalta. Palatsit odottavat yhä ('odottaa').
+- Pylvästemppeli portiikki (MK01 tyyppi 5 c = 1; TyPortiikkitemppeli): 8 pylvästä vain etupäädyssä (−x, käännetään länteen kuten kirkon torni),
+  kolmiopääty, runko pohjan reunassa ikkunoin; 225 kolmiota. Pieni muutos (~30 riviä). Royal Exchange odottaa.
+- Pariisin vienti tavulleen ennallaan (c = 0). Arkki: lontoo-kuva.py (Blender, Luonnos.dll malli-tila = MK01-rivi) + arkki-lontoo.py.
+- Natiivi 2. commit (katso git log valoseppa/tyyppimallit-peliin). Kartta 854/854, Linssit 2340/2340, unity-tarkistus 0. EI JUNAAN.

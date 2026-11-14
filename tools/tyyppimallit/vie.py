@@ -10,8 +10,8 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
   otsake 32 t:  "MK01" | u16 malleja | u16 liput (bit 0 = maa merkeissä) | u32 merkkejä | u32 varattu | f64 origo lat | f64 origo lon
   malli 24 t:   u8 tyyppi | u8 a | u8 b | u8 c | f32 p0 | f32 p1 | f32 p2 | f32 p3 | u32 varattu
      tyyppi 1 kirkko-pieni, 2 kirkko-keski (a = torni_paikka 0 länsi / 1 risteys, b = torneja, c = huippu 0 pyramidi / 1 neula / 2 tasakatto),
-            3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1),
-            6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
+            3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1, c = portiikki vain päädyssä 0/1),
+            6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
             7 asema (a = halleja, p0 pituus, p1 leveys)
             8 kirkko-levea (a b c kuten 2; KK 15.11. 00.28)
      Tyypit 1–4 ja 8 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
@@ -54,9 +54,9 @@ def malli(m):
     if t == 'kupolikirkko': return (ty, 0 if p.get('pylvaspaaty') is False else 1, 0, 0, 0.0, 0.0, 0.0, 0.0)
     if t == 'pylvastemppeli':
         attika = p.get('katto') == 'attika'
-        return (ty, 10 if attika else 8, 0 if attika else 1, 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
+        return (ty, 8 if p.get('portiikki') or not attika else 10, 0 if attika else 1, 1 if p.get('portiikki') else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     if t == 'palatsi':
-        return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
+        return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 1 if p.get('katto') == 'attika' else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     if t == 'asema': return (ty, int(p['halleja']), 0, 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     raise ValueError(t)
 
@@ -64,7 +64,7 @@ def malli(m):
 def akseli(m):
     """Mallin +x:n atsimuutti. Kirkoissa +x = kuori (itäpää): jos länsipää on akselin suuntaan, käännetään 180°."""
     a = m['akseli'] % 360
-    if m['tyyppi'] in ('kirkko', 'kupolikirkko'):
+    if m['tyyppi'] in ('kirkko', 'kupolikirkko') or (m['tyyppi'] == 'pylvastemppeli' and (m['parametrit'] or {}).get('portiikki')):   # portiikki (−x) länteen
         ux, uy = math.sin(math.radians(a)), math.cos(math.radians(a))
         lx, ly = m['lansipaa']
         if ux * lx + uy * ly > 0: a = (a + 180) % 360
