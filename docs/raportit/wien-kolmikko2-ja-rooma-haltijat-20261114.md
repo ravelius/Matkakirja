@@ -102,3 +102,17 @@ OMISTAJAN PÄÄTÖS: "Kyllä, sama sääntö." Rooman kaupungin museoita (Musei 
 - Seuraukset-kohdan 2 kysymys (kortin sana vs. "haltija Italiassa") on ratkaistu: kortin sana.
 - Kohdan 3 avoimet haltijatiedot (Mooseksen omistaja, V4/V5:n haltijat) eivät ole enää tarpeen; niitä ei selvitetä.
 - Ei datamuutoksia; data-PR (Rooma) vasta KK:n sanalla.
+
+## Päätös ja lähteet 14.11. klo 10.15 (KK): Egmont pysyy kolmikon 2 kolmantena parina
+
+KK 10.15: Egmont pysyy; Beethoven 5 osa IV (Victor 1917) jää varaksi. Kantaesitykselle löytyi kaksi ei-Wikipedia-lähdettä (sivun oma teksti luettu 14.11., sanatarkat kohdat):
+
+1. **C.R.M.B. (Centro Ricerche Musicali Beethoveniane), lvbeethoven.org/opus084** (HTTP 200): "at the fourth performance of the tragedy at the Burgtheater in Vienna on 15 June 1810" (kohdassa "The first complete performance of the music took place …"). Lisäksi: "The music was not ready for this first performance and was heard in its entirety only at the fourth performance, on 15 June of the same year." Sivu erottaa näytelmän kantaesityksen (24.5.1810 Wienissä, musiikki ei valmis) musiikin ensiesityksestä (15.6.1810). Kuvaus nojaa Biamonti, Catalogo cronologico e tematico (Torino, ILTE 1968).
+2. **Sofia Philharmonic, sofiaphilharmonic.com/en/works/ludwig-van-beethoven-overture-egmont** (HTTP 200): "It was first introduced at the fourth performance of the drama on June 15, 1810, at the Vienna Court Theatre." (Burgtheateria ei nimetä; "Vienna Court Theatre" = Hofburgtheater.)
+3. Madison Symphony Orchestra (toukokuu 2022): sivusto palautti 403, ei luettu.
+
+**Muotoilu pelitekstiin:** "Musiikki kuultiin kokonaisuudessaan ensi kerran Burgtheaterissa Wienissä 15.6.1810 Goethen Egmontin neljännessä esityksessä." Älä sano "näytelmä kantaesitettiin 15.6.": näytelmän kantaesitys oli 24.5.1810 (C.R.M.B.). Ehto "toinen suora lähde" täyttyy (C.R.M.B. nimeää Burgtheaterin ja päivän; Sofia päivän ja Hoftheaterin).
+
+## Värit 14.11. klo 10.15 (KK): päätös ja tilaus
+
+Hyväksytty: seinä #DAD2B2 kaikille kolmelle kadonneelle rakennukselle (Orsay mitattu, Tuileries ja Industrie analogialla; merkinnät kuten kadonneiden-rakennusten-varit-pariisi-20261114.md:ssä). Katto ja lasi jäävät tilapäisiksi. Tilaus SK:lle: kattojen materiaali ja väri lähteestä (Paris Musées / Carnavalet CC0 -värimaalaukset mitaten, POP Mérimée, Gallica 1855) → KK.
