@@ -58,3 +58,12 @@
   kolmiopääty, runko pohjan reunassa ikkunoin; 225 kolmiota. Pieni muutos (~30 riviä). Royal Exchange odottaa.
 - Pariisin vienti tavulleen ennallaan (c = 0). Arkki: lontoo-kuva.py (Blender, Luonnos.dll malli-tila = MK01-rivi) + arkki-lontoo.py.
 - Natiivi 2. commit (katso git log valoseppa/tyyppimallit-peliin). Kartta 854/854, Linssit 2340/2340, unity-tarkistus 0. EI JUNAAN.
+
+## KK 01.14: viides muoto kirkko-basilika (tyyppi 9; arkki basilika-1.jpg)
+- 58 × 38 m, 46 m korkea, 160 kolmiota (tornipari 218). Sama rakenne kuin leveällä: yhteinen TyKirkkoSivulaivoin, ja leveä pysyy tavulleen ennallaan (136).
+  Keskilaiva 41,5 × 18 m (räystäs 17, harja 25), sivulaivat 2 × 10 m (räystäs 9, pulpetti 14 m:iin), viisi ikkunaa; torni kuten keski (9 m, 28 m, kärki 46 m).
+- Alueella: P 254 → 271 (+17 entistä venytykseen pudonnutta), L 409 → 417 (+8). Basilika yhteensä P 59 ja L 31; koko vaihtui P 42 ja L 23.
+  Venytykseen jää yhä kirkkoja: P 24 ja L 26. sz > 1,45: P 1 (ennen 26), L 0 (ennen 13).
+- HUOM: pienimmän venytyksen sääntö siirsi suuresta basilikaksi P 12 (Saint-Germain-l'Auxerrois, Saint-Gervais, Saint-Laurent, Notre-Dame-des-Champs,
+  Saint-Étienne-du-Mont, Saint-Merri, ND-de-Lorette, ND-du-Travail, Saint-Jacques-du-Haut-Pas, Saint-Médard, ND du Perpétuel Secours, Saint-Martin-des-Champs)
+  ja L 2 (Friends House, Metropolitan Tabernacle).

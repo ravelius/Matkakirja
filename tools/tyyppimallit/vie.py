@@ -13,8 +13,8 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
             3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1, c = portiikki vain päädyssä 0/1),
             6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
             7 asema (a = halleja, p0 pituus, p1 leveys)
-            8 kirkko-levea (a b c kuten 2; KK 15.11. 00.28)
-     Tyypit 1–4 ja 8 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
+            8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
+     Tyypit 1–4, 8 ja 9 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
   merkki 24 t:  f32 x | f32 z (m origosta itään ja pohjoiseen, WGS84-ENU kuten kartta_puut.py) | i16 maa (0,25 m, maasto.py z12; 0 jos ei maata)
                 | u16 malli | u16 akseli (0,01°, mallin +x:n atsimuutti pohjoisesta myötäpäivään; kirkoissa +x = kuori, torni länsipäähän)
                 | u16 sx | u16 sz (×0,001) | u16 varattu | i32 osm (way > 0, relation < 0)
@@ -30,7 +30,7 @@ ORIGO = {'pariisi': (48.86122, 2.35092), 'lontoo': (51.49754, -0.12574)}
 # Kartta tasainen (puiden tiedostossa ei MAA1:tä): peli laskee maan itse kuten puille (PuunMaa). Muualla maa merkkiin.
 TASAINEN = {'pariisi'}
 TYYPPI = {('kirkko', 'pieni'): 1, ('kirkko', 'keski'): 2, ('kirkko', 'suuri'): 3, ('kupolikirkko', 'keski'): 4, ('pylvastemppeli', 'keski'): 5,
-          ('palatsi', 'keski'): 6, ('asema', 'suuri'): 7, ('kirkko', 'levea'): 8}
+          ('palatsi', 'keski'): 6, ('asema', 'suuri'): 7, ('kirkko', 'levea'): 8, ('kirkko', 'basilika'): 9}
 SIVU = {None: 0, '': 0, '+x': 1, '-x': 2, '+z': 3, '-z': 4}
 PAIKKA = {'lansi': 0, 'risteys': 1}
 HUIPPU = {'pyramidi': 0, 'neula': 1, 'tasakatto': 2}
@@ -123,7 +123,7 @@ def main(a):
             v = maa(m)
             if v is None: puuttuu.append(m['osm']); v = float('nan')
             y = v
-        inst = (m['tyyppi'], m['koko']) in {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski')}
+        inst = (m['tyyppi'], m['koko']) in {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'basilika'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski')}
         sx = m['sx'] if inst and m['sx'] else 1.0; sz = m['sz'] if inst and m['sz'] else 1.0
         if inst and m['sovitus'] == 'luonnollinen': sx = sz = m['mittakaava']
         merkit_b.append([x, z, y, mallit[r], akseli(m), sx, sz, osm_luku(m['osm'])])

@@ -156,13 +156,24 @@ namespace Matkakirja
         /// räystäs 12 m, harja 18 m, viisisivuinen kuori; sivulaivat 2 × 5,5 m räystäs 7 m pulpettikatoin keskilaivan seinään 10 m:iin (yläikkunarivi
         /// pulpetin ja räystään väliin); kolme suippoikkunaa sivulaivaa kohti. Torni samoin parametrein (paikka, torneja, huippu) kuin kirkko-keski,
         /// mittakaava laivan mukaan: 8 m, runko 25 m, kärki 40 m (≈ 2,2 × harja, keskellä 2,1).</summary>
-        public static Verkko TyyppiKirkkoLevea(string paikka = "lansi", int torneja = 1, string huippu = "neula")
+        public static Verkko TyyppiKirkkoLevea(string paikka = "lansi", int torneja = 1, string huippu = "neula") =>
+            TyKirkkoSivulaivoin(-10.5f, 12f, 5f, 10.5f, 12f, 6f, 7f, 10f, 4f, 3, 2f, 5.6f, 1.6f, 10.4f, 11.6f, 1.4f, paikka, torneja, huippu, 8f, 25f, 40f);
+
+        /// <summary>KIRKKO BASILIKA (KK 15.11. 01.14, viides muoto): leveän rakenne isompana, pohja noin 58 × 38 m. Keskilaiva 41,5 × 18 m räystäs 17 m,
+        /// harja 25 m; sivulaivat 2 × 10 m räystäs 9 m pulpettikatoin 14 m:iin; viisi ikkunaa sivulaivaa kohti. Torni seurakuntakirkon mittakaavassa
+        /// kuten kirkko-keski (9 m, runko 28 m, kärki 46 m), ei katedraalin.</summary>
+        public static Verkko TyyppiKirkkoBasilika(string paikka = "lansi", int torneja = 1, string huippu = "neula") =>
+            TyKirkkoSivulaivoin(-21.5f, 20f, 9f, 19f, 17f, 8f, 9f, 14f, 6f, 5, 2.5f, 7.5f, 2f, 14.6f, 16.4f, 1.6f, paikka, torneja, huippu, 9f, 28f, 46f);
+
+        /// <summary>Sivulaivallinen kirkko (leveä, basilika): keskilaiva x0..x1 × ±zl räystäs y harja +h, kuori itään (säde zl, korkeus hk), sivulaivat ±zl..±zs
+        /// räystäs ys pulpetilla keskilaivan seinään yp:hen; n suippoikkunaa per sivulaiva (ia0..ia1, leveys il) ja yläikkunat (ik0..ik1, leveys ikl; keskimmäinen pois).</summary>
+        static Verkko TyKirkkoSivulaivoin(float x0, float x1, float zl, float zs, float y, float h, float ys, float yp, float hk, int n, float ia0, float ia1, float il,
+            float ik0, float ik1, float ikl, string paikka, int torneja, string huippu, float tw, float tRunko, float tKarki)
         {
             var r = TyRakentaja();
-            float x0 = -10.5f, x1 = 12f, zl = 5f, zs = 10.5f, y = 12f, h = 6f, ys = 7f, yp = 10f;
             TySeinat(r, x0, x1, -zl, zl, 0f, y, TyKivi);
             TyHarja(r, x0, x1, -zl, zl, y, h, 0.5f, TyKatto, TyKivi, true, true);
-            TyKuori(r, x1, 0f, zl, y - 1f, 4f, 5, TyKivi, TyKatto);
+            TyKuori(r, x1, 0f, zl, y - 1f, hk, 5, TyKivi, TyKatto);
             foreach (float s in new[] { -1f, 1f })
             {
                 float zu = s * zs, zi = s * zl;
@@ -171,16 +182,16 @@ namespace Matkakirja
                 TyPulpetti(r, x0, x1, zu, zi, ys, yp, TyKatto);
                 foreach (float xe in new[] { x0, x1 })
                     r.Neli(new P3(xe, 0f, zi), new P3(xe, 0f, zu), new P3(xe, ys, zu), new P3(xe, yp, zi), TyKivi, new P3(xe < 0f ? -1f : 1f, 0f, 0f));
-                float jakso = (x1 - x0 - 4f) / 3f;
+                float jakso = (x1 - x0 - 4f) / n;
                 var sk = s > 0 ? r.S(x0, zi, x1, zi) : r.S(x1, zi, x0, zi);
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < n; i++)
                 {
                     float xm = x0 + 4f + (i + 0.5f) * jakso, u = s > 0 ? xm - x0 : x1 - xm;
-                    Suippo(r, sa, u, 2f, 5.6f, 1.6f, 0.05f, TyAukko);
-                    if (i != 1) Suippo(r, sk, u, 10.4f, 11.6f, 1.4f, 0.05f, TyAukko);
+                    Suippo(r, sa, u, ia0, ia1, il, 0.05f, TyAukko);
+                    if (n % 2 == 0 || i != n / 2) Suippo(r, sk, u, ik0, ik1, ikl, 0.05f, TyAukko);
                 }
             }
-            TyKirkonTornit(r, x0, x1, zl, y + h, paikka, torneja, huippu, 8f, 25f, 40f, 2, 1.5f);
+            TyKirkonTornit(r, x0, x1, zl, y + h, paikka, torneja, huippu, tw, tRunko, tKarki, 2, 1.5f);
             return r.Valmis();
         }
 
@@ -671,7 +682,7 @@ namespace Matkakirja
             return r.Valmis();
         }
 
-        /// <summary>MK01-tiedoston mallirivi verkoksi (työkalun vie.py; MerkkiTiedosto.Malli). Tyypit 1–4 ja 8 jaettuja (instanssi, venytys), 5–7 pohjan mitoista.
+        /// <summary>MK01-tiedoston mallirivi verkoksi (työkalun vie.py; MerkkiTiedosto.Malli). Tyypit 1–4, 8 ja 9 jaettuja (instanssi, venytys), 5–7 pohjan mitoista.
         /// Sivukoodi 0 ei, 1 +x, 2 −x, 3 +z, 4 −z. c: tyyppi 5 portiikki vain päädyssä 0/1, tyyppi 6 katto 0 mansardi / 1 attika. Tuntematon tyyppi = null.</summary>
         public static Verkko TyyppiMalli(int tyyppi, int a, int b, int c, float p0, float p1)
         {
@@ -687,12 +698,13 @@ namespace Matkakirja
                 case 6: return TyyppiPalatsiPiha(p0, p1, a > 0 ? Sivu(a) : "+z", Sivu(b), 16f, c == 1 ? "attika" : "mansardi");
                 case 7: return TyyppiAsema(a > 0 ? a : AsemanHallit(p1), p0, p1);
                 case 8: return TyyppiKirkkoLevea(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
+                case 9: return TyyppiKirkkoBasilika(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
                 default: return null;
             }
         }
 
         /// <summary>Jaettu verkko (yksi kaikille saman rivin merkeille, venytys sx sz instanssissa) vai pohjan mitoista rakennettu (leivotaan paloittain).</summary>
-        public static bool TyyppiJaettu(int tyyppi) => (tyyppi >= 1 && tyyppi <= 4) || tyyppi == 8;
+        public static bool TyyppiJaettu(int tyyppi) => (tyyppi >= 1 && tyyppi <= 4) || tyyppi == 8 || tyyppi == 9;
 
         /// <summary>Kaikki luonnosmallit nimineen ja kokoluokan kolmiorajoineen (0 = ei rajaa).</summary>
         public static List<(string nimi, Verkko v, int raja)> TyyppiLuonnokset() => new List<(string, Verkko, int)>
@@ -700,6 +712,8 @@ namespace Matkakirja
             ("kirkko-pieni", TyyppiKirkkoPieni(), 400),
             ("kirkko-keski", TyyppiKirkkoKeski(), 900),
             ("kirkko-levea", TyyppiKirkkoLevea(), 900),
+            ("kirkko-basilika", TyyppiKirkkoBasilika(), 900),
+            ("kirkko-basilika-lansi-2-neula", TyyppiKirkkoBasilika("lansi", 2, "neula"), 900),
             ("kirkko-suuri", TyyppiKirkkoSuuri(), 1500),
             ("asema", TyyppiAsema(), 1500),
             ("palatsi", TyyppiPalatsi(), 1500),
