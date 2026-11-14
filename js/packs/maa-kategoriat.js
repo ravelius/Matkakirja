@@ -2965,7 +2965,10 @@ export const MAA_KATEGORIAT = {
             + 'Baker Street, vaikka katu oli silloin nykyistä lyhyempi: '
             + 'Baker Street päättyi Marylebone Roadiin, ja sen pohjoispuolella '
             + 'oli erillinen Upper Baker Street. Myöhemmin katu yhdistettiin '
-            + 'ja talot numeroitiin uudelleen.',
+            + 'ja talot numeroitiin uudelleen. Kun asuntoluottoyhtiö Abbey '
+            + 'National muutti 1930-luvulla Baker Streetille, sen konttoriin '
+            + 'alkoi tulla Holmesille osoitettuja kirjeitä. Yhtiö palkkasi '
+            + 'työntekijän vastaamaan niihin Holmesin sihteerinä.',
           lyhyt: 'Vuonna 1990 avattu Sherlock Holmes -museo käyttää osoitetta 221b Baker Street.',
           selite: 'Vuonna 1990 avattu Sherlock Holmes -museo käyttää '
             + 'osoitetta 221b Baker Street.',
