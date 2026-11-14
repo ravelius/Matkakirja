@@ -12,7 +12,7 @@ Aiheita 50 / 50. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
 | opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 3.0 kt | 12.11.2026 |
 | kamera | Kamera | PK | 3.0 kt | 13.11.2026 |
-| juoksupeli | Juoksupeli | PK | 2.8 kt | 12.11.2026 |
+| juoksupeli | Juoksupeli | PK | 3.0 kt | 12.11.2026 |
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | 3.0 kt | 12.11.2026 |
 | museot | Museot | LAV | 2.9 kt | 12.11.2026 |
 | linssit | Linssit | VS | 3.0 kt | 12.11.2026 |
