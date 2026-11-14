@@ -3364,7 +3364,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Tammikuussa 1926 keksijä John Logie Baird esitteli Royal Institutionin jäsenille '
         + 'laitettaan laboratoriossa, joka oli yläkerran huoneessa Frith Streetillä Sohossa. Vieraat '
         + 'näkivät, miten liikkuva kuva siirtyi huoneesta toiseen. The Times kirjoitti esityksestä '
-        + '28. tammikuuta. Sitä pidetään ensimmäisenä todellisen television esityksenä.'
+        + '28. tammikuuta. Tätä tilaisuutta pidetään ensimmäisenä todellisen television esityksenä.'
         + '\n\n'
         + 'Bairdin televisio oli mekaaninen, ja sen ytimessä oli pyörivä kiekko, jonka saksalainen '
         + 'Paul Nipkow oli keksinyt jo vuonna 1884. Kokeissa kuvattavana oli vatsastapuhujan nuken '
@@ -3383,7 +3383,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       // Lähdemuistiinpano (SK 15.11.2026): ks. js/packs/fokusvirta-lontoo.js 'baird-televisio-1926' ja
       // docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 5 (Times 1926 Moseleyssa, Moseley 1930, Larner 1928, Dunlap 1932, Wikipedia).
-      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television ja Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television, BBC ja Wikipedia',
     },
     /*
      * TARINAPAIKKA 'Sähkötin 1837' (KK 15.11.2026, Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset). Sama teksti on
@@ -3393,13 +3393,15 @@ export const NAHTAVYYSJUTUT = {
       aika: '1837',
       nosto: 'nosto-sahkotin-euston-1837',
       teksti: 'Toukokuussa 1837 William Cooke ja Charles Wheatstone sopivat yhteistyöstä, ja '
-        + 'kesäkuussa he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
+        + 'samana vuonna he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
         + 'kokeiltiin London and Birmingham -radalla Euston-aseman ja Camden Townin välillä.'
         + '\n\n'
-        + 'Sähköttimessä oli viisi neulaa. Myöhemmin Great Western Railway otti sähköttimen '
-        + 'käyttöön Paddingtonin asemalta alkaen.'
+        + 'Patentin sähköttimessä oli viisi neulaa. Ne osoittivat taululta kirjaimia: kaksi neulaa '
+        + 'kääntyi osoittamaan samaa kirjainta. Myöhemmin Great Western Railway otti sähköttimen '
+        + 'käyttöön radallaan, joka lähti Paddingtonin asemalta.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta.',
+        + 'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta. Molemmat keksijät '
+        + 'olivat vielä elossa: Wheatstone kuoli 1875 ja Cooke 1879.',
       kuvat: [
         {
           tiedosto: 'Wheatstone Charles drawing 1868.jpg',

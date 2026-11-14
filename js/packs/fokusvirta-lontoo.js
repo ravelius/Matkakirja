@@ -1608,7 +1608,7 @@ export const FOKUSVIRTA_LONTOO = {
         'Tammikuussa 1926 keksijä John Logie Baird esitteli Royal '
           + 'Institutionin jäsenille laitettaan laboratoriossa, joka oli yläkerran huoneessa '
           + 'Frith Streetillä Sohossa. Vieraat näkivät, miten liikkuva kuva siirtyi huoneesta '
-          + 'toiseen. The Times kirjoitti esityksestä 28. tammikuuta. Sitä pidetään '
+          + 'toiseen. The Times kirjoitti esityksestä 28. tammikuuta. Tätä tilaisuutta pidetään '
           + 'ensimmäisenä todellisen television esityksenä.',
         'Bairdin televisio oli mekaaninen, ja sen ytimessä oli pyörivä kiekko, jonka '
           + 'saksalainen Paul Nipkow oli keksinyt jo vuonna 1884. Kokeissa kuvattavana oli '
@@ -1623,7 +1623,7 @@ export const FOKUSVIRTA_LONTOO = {
       // brittiläisiä, siksi varovasti); nuken pää = Times + Dunlap, The Outlook for Television (1932); Stooky Bill = Dunlap + Wikipedia;
       // Nipkow 1884 = Dunlap + Wikipedia; lamput pehmeästi (vain Dunlap, ei syy-yhteyttä nukkeen). Pois KK:n rajauksella: päivä 26.1.,
       // talonumero 22, Bar Italia, "langattomasti", syntymävuosi 1888 (vain Wikipedia).
-      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television ja Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television, BBC ja Wikipedia',
       kuva: {
         tiedosto: 'John Logie Baird in 1917.jpg',
         lyhyt: 'John Logie Baird vuonna 1917.',
@@ -1655,30 +1655,32 @@ export const FOKUSVIRTA_LONTOO = {
       otsikko: 'Sähkötin 1837 — neulat Eustonin radalla',
       symboli: 'tekniikka',
       visa: {
-        kysymys: 'Montako neulaa oli sähköttimessä, jota Cooke ja Wheatstone kokeilivat Eustonissa 1837?',
+        kysymys: 'Montako neulaa oli Cooken ja Wheatstonen vuonna 1837 patentoimassa sähköttimessä?',
         vaihtoehdot: [
           'Viisi',
           'Kaksi',
           'Kymmenen',
         ],
         oikea: 0,
-        fakta: 'Laite oli viiden neulan sähkötin. Sitä kokeiltiin heinäkuussa 1837 Euston-aseman ja Camden Townin välillä.',
+        fakta: 'Patentin sähköttimessä oli viisi neulaa. Heinäkuussa 1837 sähkötintä kokeiltiin Euston-aseman ja Camden Townin välillä.',
       },
       lunastus: [
         'Toukokuussa 1837 William Cooke ja Charles Wheatstone sopivat yhteistyöstä, ja '
-          + 'kesäkuussa he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
+          + 'samana vuonna he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
           + 'kokeiltiin London and Birmingham -radalla Euston-aseman ja Camden Townin välillä.',
-        'Sähköttimessä oli viisi neulaa. Myöhemmin Great Western Railway otti sähköttimen '
-          + 'käyttöön Paddingtonin asemalta alkaen.',
-        'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta.',
+        'Patentin sähköttimessä oli viisi neulaa. Ne osoittivat taululta kirjaimia: kaksi neulaa '
+          + 'kääntyi osoittamaan samaa kirjainta. Myöhemmin Great Western Railway otti sähköttimen '
+          + 'käyttöön radallaan, joka lähti Paddingtonin asemalta.',
+        'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta. Molemmat keksijät '
+          + 'olivat vielä elossa: Wheatstone kuoli 1875 ja Cooke 1879.',
       ],
       // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 6): yhteistyö toukokuussa 1837 = The Electric Telegraph: Was it
       // invented by Professor Wheatstone? (1856, molempien osapuolten kiistakirjoitukset) + Munro, Heroes of the Telegraph (1891)
-      // + DNB "Cooke, William Fothergill"; patentti kesäkuussa 1837 = Cooke (12.6.1837) + Wheatstonen puolustajan First Pamphlet;
+      // + DNB "Cooke, William Fothergill"; patentin kuukausi kiistanalainen (Cooke 12.6.1837 vs. WP/DNB toukokuu) → teksti "samana vuonna";
       // yhteinen patentti 1837 myös EB 1911 "Wheatstone"; koe Euston–Camden Town London and Birmingham -radalla heinäkuussa 1837 =
-      // 1856-kokoelma + Munro (+ DNB); viisi neulaa = Munro + DNB; GWR Paddingtonista = Munro + 1856-kokoelma (+ DNB). Radan nimi
+      // 1856-kokoelma + Munro (+ DNB); viisi neulaa = patentin laite (Munro + DNB + WP; Eustonin koelaite WP:n mukaan neljä neulaa → ei sidota); neulat osoittivat kirjaimia = Munro + WP; keksijät elossa 1873 = EB 1911 + WP; GWR Paddingtonista = Munro + 1856-kokoelma (+ DNB). Radan nimi
       // London and Birmingham (Munron "London and North Western" on anakronismi). Pois KK:n rajauksella: päivä 25.7., köysiveto,
-      // West Drayton, "välinpitämättömästi", miesten paikat, "elossa 1873" (Wheatstonen kuolinvuosi ei kahdesta lähteestä).
+      // West Drayton, "välinpitämättömästi", miesten paikat, (tarkistaja 15.11.: "elossa 1873" täyttyy EB 1911 + WP, otettu mukaan).
       lahde: 'Matkakirjan oma teksti · lähteinä Cooken ja Wheatstonen kiistakirjoitukset (1856), Munron Heroes of the Telegraph, Dictionary of National Biography, Encyclopaedia Britannica (1911) ja Wikipedia',
       kuva: {
         tiedosto: 'Wheatstone Charles drawing 1868.jpg',
