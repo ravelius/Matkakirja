@@ -2959,21 +2959,19 @@ export const MAA_KATEGORIAT = {
           wiki: 'Liisan seikkailut ihmemaassa',
         },
         {
-          otsikko: 'Osoite, jota ei ollut olemassa',
+          otsikko: 'Kirjailijan keksimä osoite',
           tiedosto: 'Sherlock Holmes Museum, Baker Street, London (2).jpg',
           teksti: 'Arthur Conan Doyle antoi Sherlock Holmesille osoitteen 221B '
-            + 'Baker Street, vaikka sellaista ei ollut olemassa: katu oli silloin '
-            + 'paljon nykyistä lyhyempi. Vasta 1930-luvulla Baker Street '
-            + 'pidennettiin ja talot numeroitiin uudelleen, jolloin numerot '
-            + '219–229 osuivat asuntoluottoyhtiö Abbey Nationalin juuri '
-            + 'valmistuneeseen pääkonttoriin. Sinne alkoi tulla kirjeitä '
-            + 'ympäri maailmaa: ihmiset pyysivät Holmesia ratkaisemaan omia '
-            + 'arvoituksiaan. Yhtiö palkkasi työntekijän, jonka tehtävä oli '
-            + 'vastata niihin.',
-          lyhyt: 'Vuonna 1990 avattu museo saa käyttää osoitetta 221b talon sijaitessa numeroiden 237 ja 241 välissä.',
-          selite: 'Vuonna 1990 avattu museo saa Westminsterin luvalla '
-            + 'käyttää osoitetta 221b, vaikka sen georgiaaninen talo '
-            + 'sijaitsee numeroiden 237 ja 241 välissä.',
+            + 'Baker Street, vaikka katu oli silloin nykyistä lyhyempi: '
+            + 'Marylebone Roadin pohjoispuolella oli erillinen Upper Baker '
+            + 'Street. Myöhemmin kadut yhdistettiin ja talot numeroitiin '
+            + 'uudelleen. Baker Streetillä toimineen asuntoluottoyhtiö Abbey '
+            + 'Nationalin konttoriin alkoi tulla Holmesille osoitettuja '
+            + 'kirjeitä, ja yhtiö palkkasi työntekijän vastaamaan niihin '
+            + 'Holmesin sihteerinä.',
+          lyhyt: 'Vuonna 1990 avattu Sherlock Holmes -museo käyttää osoitetta 221b Baker Street.',
+          selite: 'Vuonna 1990 avattu Sherlock Holmes -museo käyttää '
+            + 'osoitetta 221b Baker Street.',
           lahde: 'MOs810, Commons (CC BY-SA 4.0)',
           wiki: 'Sherlock Holmes',
         },
@@ -3403,7 +3401,7 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Snow-cholera-map-1.jpg',
           teksti: 'Elokuun lopulla 1854 Sohossa puhkesi koleraepidemia, joka '
             + 'tappoi satoja ihmisiä. Lääkäri John Snow ei uskonut taudin '
-            + 'leviävän pahasta hajusta, vaan kiersi ovelta ovelle ja '
+            + 'leviävän pahasta hajusta, vaan kävi läpi kuolleiden talot ja '
             + 'merkitsi jokaisen kuolleen mustana palkkina sen talon '
             + 'kohdalle, jossa tämä oli asunut. Palkit kasautuivat yhden '
             + 'ainoan vesipumpun ympärille Broad Streetillä; pumpun kahva '
@@ -3624,17 +3622,16 @@ export const MAA_KATEGORIAT = {
           wiki: 'Charles Chaplin',
         },
         {
-          otsikko: 'Harvinainen säilynyt music hall',
+          otsikko: 'Music hall pubin takana',
           tiedosto: 'Wilton\'s Music Hall - Interior.jpg',
-          teksti: 'Vuonna 1859 John Wilton rakensi Tower Hamletsissa ostamansa '
-            + 'Mahogany Bar -pubin taakse suuren salin, jossa yleisö kuunteli '
-            + 'laulajia ja koomikoita. Sali ehti olla metodistien lähetysasema '
-            + 'ja lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
-            + 'se pelastettiin, ja talo suojeltiin 1970-luvun alussa.',
-          lyhyt: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin music halleja, nykyään esitystalo.',
-          selite: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin '
-            + 'music halleja, ja se toimii nykyään monialaisena '
-            + 'esitystalona.',
+          teksti: 'Vuonna 1859 John Wilton rakensi Tower Hamletsissa Mahogany '
+            + 'Bar -pubinsa taakse suuren salin, jossa yleisö kuunteli '
+            + 'laulajia ja koomikoita. Vuonna 1888 talosta tuli metodistien '
+            + 'lähetysasema. 1960-luvulla talo oli määrä purkaa, mutta se '
+            + 'pelastettiin.',
+          lyhyt: 'Wilton\'s Music Hall Tower Hamletsissa toimii nykyään esitystalona.',
+          selite: 'Wilton\'s Music Hall Tower Hamletsissa toimii nykyään '
+            + 'monialaisena esitystalona.',
           lahde: 'Kbthompson at English Wikipedia, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Music hall',
         },
@@ -3667,11 +3664,9 @@ export const MAA_KATEGORIAT = {
             + 'Streetillä sopimaan yhteisistä säännöistä. '
             + 'Siihen asti joka koulu pelasi omillaan: joissakin sai kantaa '
             + 'palloa käsissä, toisissa ei, ja vastustajan potkiminen sääreen '
-            + 'kuului joidenkin mielestä peliin. Kokouksissa pallon kantaminen ja '
+            + 'kuului joidenkin mielestä peliin. Kokouksissa pallolla juokseminen ja '
             + 'säären potkiminen jäivät pois säännöistä — ne seurat, jotka '
-            + 'halusivat pitää ne, lähtivät ja perustivat myöhemmin oman rugbyliittonsa. '
-            + 'Kantokielto erotti kaksi maailmanlaajuista peliä toisistaan '
-            + 'muutamassa viikossa.',
+            + 'halusivat pitää ne, lähtivät ja perustivat myöhemmin oman rugbyliittonsa.',
           lyhyt: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen perusta Football Associationissa.',
           selite: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen '
             + 'perusta, ja ne hyväksyttiin juuri perustetussa Football '
