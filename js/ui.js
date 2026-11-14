@@ -193,7 +193,9 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
-import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
+import {
+  avaaEsittelylinssit, esittelylinssitAuki, esittelyOsoite, lataaApuraha, onEsittelyHash,
+} from './apuraha.js';
 import { pohjatLataaTyyli, luoPohjaGalleria } from './pohjat/pohjat.js';
 import { lahetaKaynti } from './kaynti.js';
 // Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
@@ -17734,6 +17736,8 @@ export class UI {
       if (esittely.webHuomautus) {
         alaosa.appendChild(html('p', 'start-huomautus', esittely.webHuomautus));
       }
+      // Suora osoite matkakirja.app/#esittely (versio 9): kortti auki heti, kun esittely on ladattu.
+      if (onEsittelyHash(globalThis.location?.hash) && !this.apurahaDialog) this.naytaApuraha(esittely);
     });
 
     this.mapPane.appendChild(portti);
@@ -17758,8 +17762,15 @@ export class UI {
     kortti.appendChild(otsikko);
     if (esittely.alaotsikko) kortti.appendChild(html('p', 'apuraha-alaotsikko', esittely.alaotsikko));
 
-    // Kaikki kuvat suurennoksen selaukseen kortin järjestyksessä (kappaleiden kuvat, sitten loppurivi).
-    const kaikkiKuvat = [...esittely.kappaleet.flatMap((k) => k.kuvat ?? []), ...esittely.kuvat];
+    // Versio 9 (esittely.json hetket): uusi asettelu; kappaleet ja kuvat ovat vain vanhoille sovellusversioille.
+    const uusi = Array.isArray(esittely.hetket);
+    // Leveällä ruudulla (≥ 1000 px) v9-kortti on leveämpi ja tekstit lukupalstassa (css dialogit.css .apuraha-lappu--9).
+    if (uusi) lappu.classList.add('apuraha-lappu--9');
+    // Kaikki kuvat suurennoksen selaukseen kortin järjestyksessä (kappaleiden kuvat, sitten loppurivi; v9: avauskuva
+    // ja hetkien kuvat).
+    const kaikkiKuvat = uusi
+      ? [esittely.avaus?.kuva, ...esittely.hetket.flatMap((h) => h.kuvat)].filter(Boolean)
+      : [...esittely.kappaleet.flatMap((k) => k.kuvat ?? []), ...esittely.kuvat];
     const lista = kaikkiKuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
     const pikkukuva = (k, luokka) => {
       const b = html('button', luokka);
@@ -17776,7 +17787,9 @@ export class UI {
       return b;
     };
 
-    for (const k of esittely.kappaleet) {
+    if (uusi) this.piirraEsittely9(kortti, esittely, pikkukuva);
+
+    for (const k of uusi ? [] : esittely.kappaleet) {
       if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
       // Kuva pienenä kappaleensa vieressä (omistaja 7.10.2026 klo 14.5x, esittely.json "kappale"); teksti kiertää kuvan.
       // Listakappaleessa "rivi" vie kuvan listan rivin viereen (Olavinlinna-rivi), muuten kappaleen alkuun.
@@ -17848,7 +17861,7 @@ export class UI {
       kortti.appendChild(rivi);
     }
 
-    if (esittely.kuvat.length) {
+    if (!uusi && esittely.kuvat.length) {
       // Kuvat ilman kappaletta kortin loppuun riviksi kuten ennen versiota 7.
       const rivi = html('div', 'apuraha-kuvat');
       rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
@@ -17884,14 +17897,139 @@ export class UI {
       oikeudet.className = 'tk-apuri';
       puePohjaKortiksi(kortti, { otsikko, sulje });
     }
-    lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
+    // Suora osoite (versio 9): auki ollessa #esittely osoitteessa (linkin voi kopioida), sulkiessa pois.
+    const osoite = (auki) => {
+      try {
+        const uusiOsoite = esittelyOsoite(globalThis.location, auki);
+        if (uusiOsoite != null) globalThis.history?.replaceState(globalThis.history.state, '', uusiOsoite);
+      } catch { /* osoitetta ei voi muuttaa (esim. upotettu kehys): kortti toimii silti */ }
+    };
+    lappu.addEventListener('close', () => {
+      lappu.remove();
+      // Vain tämä kortti: jos uusi on jo auki (close-tapahtuma tulee jälkijunassa), hash jää sille.
+      if (this.apurahaDialog === lappu) {
+        this.apurahaDialog = null;
+        osoite(false);
+      }
+    });
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
     document.body.appendChild(lappu);
     this.apurahaDialog = lappu;
+    osoite(true);
     lappu.showModal();
     kortti.scrollTop = 0;
     otsikko.setAttribute('tabindex', '-1');
     otsikko.focus({ preventScroll: true });
+  }
+
+  /**
+   * PELIN ESITTELY, VERSIO 9 (omistaja 13.11.2026 22.12–22.25; esittely.json avaus, hetket, ajatus, missa, loppu):
+   * avauskuva kortin levyisenä 4:3 ja avauskappaleet, sitten hetket järjestyksessä (ensimmäinen kuva kortin
+   * levyisenä 16:9, loput tasaleveänä 16:9-rivinä sen alla, lihavoitu otsikko ilman numeroa, tekeillä-merkki,
+   * teksti; hetkien välissä ohut viiva), pelin ajatus, Pelattavissa nyt, Seuraavaksi ja loppukappale. Kuvateksti
+   * näkyy vain suurennoksessa. Valmiiden linssien nappi, lähderivit ja Takaisin tulevat naytaApurahasta.
+   */
+  piirraEsittely9(kortti, esittely, pikkukuva) {
+    const kappale = (teksti) => kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', teksti));
+    const valiotsikko = (teksti) => { if (teksti) kortti.appendChild(html('h3', 'periaate-valiotsikko', teksti)); };
+    // Leveä kuva: rajaus = painopiste (pikkukuva asettaa sen), muuten keskeltä (css .apuraha-iso img).
+    const iso = (kuva, luokka) => pikkukuva(kuva, `apuraha-iso ${luokka}`);
+
+    const avaus = esittely.avaus ?? { kuva: null, kappaleet: [] };
+    if (avaus.kuva) kortti.appendChild(iso(avaus.kuva, 'apuraha-iso--avaus'));
+    for (const t of avaus.kappaleet) kappale(t);
+
+    const hetket = html('div', 'apuraha-hetket');
+    esittely.hetket.forEach((h, i) => {
+      if (i > 0) hetket.appendChild(html('hr', 'apuraha-viiva'));
+      const osa = html('section', 'apuraha-hetki');
+      const [ensimmainen, ...muut] = h.kuvat;
+      if (ensimmainen) {
+        const b = iso(ensimmainen, ensimmainen.muoto === '4:3' ? 'apuraha-iso--hetki apuraha-iso--43' : 'apuraha-iso--hetki');
+        if (h.video) this.esittelyVideonappi(b, h.video, h.otsikko);
+        osa.appendChild(b);
+      } else if (h.video) {
+        // Video ilman kuvaa: tumma 16:9-ruutu ja toistonappi.
+        const b = html('button', 'apuraha-iso apuraha-iso--hetki apuraha-iso--video');
+        b.type = 'button';
+        this.esittelyVideonappi(b, h.video, h.otsikko);
+        osa.appendChild(b);
+      }
+      if (muut.length) {
+        const rivi = html('div', 'apuraha-kuvarivi');
+        rivi.style.setProperty('--apuraha-kuvia', String(muut.length));
+        for (const k of muut) rivi.appendChild(iso(k, 'apuraha-iso--rivi'));
+        osa.appendChild(rivi);
+      }
+      if (h.otsikko) {
+        const otsikko = html('h3', 'apuraha-hetki-otsikko', h.otsikko);
+        if (h.tekeilla) {
+          otsikko.appendChild(document.createTextNode(' '));
+          otsikko.appendChild(html('span', 'apuraha-tekeilla', esittely.tekeillaTeksti || 'tekeillä'));
+        }
+        osa.appendChild(otsikko);
+      }
+      if (h.teksti) osa.appendChild(html('p', 'periaate-teksti apuraha-teksti', h.teksti));
+      hetket.appendChild(osa);
+    });
+    kortti.appendChild(hetket);
+
+    if (esittely.ajatus) {
+      valiotsikko(esittely.ajatusOtsikko);
+      kappale(esittely.ajatus);
+    }
+    const { nyt = null, seuraavaksi = null } = esittely.missa ?? {};
+    if (nyt) {
+      valiotsikko(nyt.otsikko);
+      if (nyt.teksti) kappale(nyt.teksti);
+    }
+    if (seuraavaksi) {
+      valiotsikko(seuraavaksi.otsikko);
+      if (seuraavaksi.teksti) kappale(seuraavaksi.teksti);
+      if (seuraavaksi.lista?.length) {
+        const ul = html('ul', 'apuraha-lista');
+        for (const r of seuraavaksi.lista) ul.appendChild(html('li', null, r));
+        kortti.appendChild(ul);
+      }
+    }
+    if (esittely.loppu) kappale(esittely.loppu);
+  }
+
+  /**
+   * Hetken video (esittely.json hetket[].video, versio 9; nyt kaikki null): pyöreä toistonappi kuvan päälle. Ei
+   * automaattitoistoa kortissa; napautus avaa videon suurennoskerrokseen (<video controls>) kortin päälle.
+   */
+  esittelyVideonappi(b, video, otsikko) {
+    b.classList.add('apuraha-iso--toisto');
+    b.setAttribute('aria-label', otsikko ? `Toista video: ${otsikko}` : 'Toista video');
+    b.appendChild(html('span', 'apuraha-toisto'));
+    // Kaappausvaiheessa ennen kuvan omaa suurennosta: video korvaa kuvan avaamisen.
+    b.addEventListener('click', (e) => {
+      e.stopImmediatePropagation();
+      const isanta = this.apurahaDialog?.open ? this.apurahaDialog : document.body;
+      const kerros = html('div', 'lightbox apuraha-videokerros');
+      const v = html('video', 'apuraha-video');
+      v.src = video;
+      v.controls = true;
+      v.playsInline = true;
+      v.preload = 'metadata';
+      const sulje = html('button', 'lightbox-close', '✕');
+      sulje.type = 'button';
+      sulje.setAttribute('aria-label', 'Sulje video');
+      const pois = () => {
+        v.pause();
+        kerros.remove();
+        document.removeEventListener('keydown', esc, { capture: true });
+      };
+      // Esc sulkee vain videon, ei koko korttia.
+      const esc = (ev) => { if (ev.key === 'Escape') { ev.preventDefault(); ev.stopPropagation(); pois(); } };
+      sulje.addEventListener('click', (ev) => { ev.stopPropagation(); pois(); });
+      kerros.addEventListener('click', (ev) => { if (ev.target === kerros) pois(); });
+      document.addEventListener('keydown', esc, { capture: true });
+      kerros.append(v, sulje);
+      isanta.appendChild(kerros);
+      v.play?.()?.catch?.(() => { /* selain esti: ohjaimet näkyvät, pelaaja painaa itse */ });
+    }, { capture: true });
   }
 
   /**
