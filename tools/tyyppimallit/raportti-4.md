@@ -52,3 +52,12 @@ oma/Tyyppimallit.cs (TyyppiPalatsiPiha-kuormitus, TyKierra, AsemanHallit, kellop
 tyypitys.py, palatsikuva.py, arkki-ajz.py, renderoi.py (piha2-). Tulokset tulos/: merkit-, poistot-, eisovi-, ohitetut-, ikoniero-, koodimallit-,
 ikonit.json. Ennen-tila: varmuus/tulos-ennen-ajz, varmuus/oma-ennen-ajz, varmuus/tyypitys-ennen-ajz.py.
 HUOM: kynnys.py:n kirkkopiirto peilaa mallin z:n (symmetrisille kirkoille ei näy); palatsikuva.py käyttää oikeaa kiertoa (OhjelmaKohteet).
+
+## KK 14.11. 23.59 vastaukset (tehty 15.11.)
+1. Kaikki pelin koodimallit ikoneiksi AUTOMAATTISESTI: ikonilista.py lukee OhjelmaKohteet.cs:n (Unity-repo, sha = lahde/LAHDE-SHA; kopio
+   varmuus/OhjelmaKohteet-<sha>.cs) → tulos/koodimallit.tsv (41) → `Luonnos.dll ikonit tulos/koodimallit.tsv tulos/ikonit.json` (heijastus; 40,
+   Kuumailmapallo puuttuu osakirjastosta; lambdat = Pont Neuf ja Concorde ohitetaan). Leikkausraja nostettu 5 → 10 % (Hôtel de Lassay osui Bourbonin
+   kuoreen 6 % naapurina). Uudet ikonit: Saint-Sulpice, Saint-Eustache, Madeleine, Hôtel de Ville, Palais Bourbon.
+2. Austerlitz ja l'Est: sääntö → 2 hallia (59 ja 57 m).
+3. Cambon itä (13 rue Cambon, länsipuoli), Muette itä (arvio: True).
+LUVUT: Pariisi 421 malliin / 221 ei sovi; Lontoo 892 / 458 (ennallaan).

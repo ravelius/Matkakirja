@@ -13,7 +13,7 @@ namespace Matkakirja
         {
             var ulos = a.Length > 0 ? a[0] : "obj";
             var ci = CultureInfo.InvariantCulture;
-            if (ulos == "ikonit") return Ikonit(a.Length > 1 ? a[1] : "ikonit.json");
+            if (ulos == "ikonit") return Ikonit(a[1], a.Length > 2 ? a[2] : "ikonit.json");   // Luonnos.dll ikonit <koodimallit.tsv> <ikonit.json>
             Directory.CreateDirectory(ulos);
             var lista = OhjelmaKohdeGeometria.TyyppiLuonnokset();
             // Parametrinen vienti (sovituskuviin): Luonnos.dll <kansio> <nimi> palatsi-piha <pituus> <leveys> [julkisivu +z|-z|+x|-x] [avoin sivu]
@@ -50,50 +50,24 @@ namespace Matkakirja
         /// <summary>IKONIEN POHJAT (KK 14.11. 23.40 F): koodimallin verkon XZ-rajat, paikka ja kierto json:ksi tyypitys.py:n leikkaustestiin.
         /// Paikka ja kierto kuten OhjelmaKohteet.cs (juna-224, 1ccace4a6; rivit 34 ja 1046–1056): ankkuri = Lat/Lon + (SiirtoX, SiirtoZ) kierrettynä;
         /// itä = x·cos a − z·sin a, pohjoinen = x·sin a + z·cos a, a = Akseli. Koko (komento "ohjelmakohteet isot") jätetään pois: oletus 1.
-        /// lista = on tyypitys.py:n IKONIT-listalla (KK:n hyväksymät ikonit); muut koodimallit raportoidaan, mutta niitä ei ohiteta.</summary>
-        static int Ikonit(string polku)
+        /// Kaikki koodimallit ovat ikoneita (KK 14.11. 23.59: käsin tehty voittaa aina).</summary>
+        static int Ikonit(string luettelo, string polku)
         {
             var ci = CultureInfo.InvariantCulture;
             var G = typeof(OhjelmaKohdeGeometria);
-            var k = new (string kaupunki, string nimi, bool lista, double lat, double lon, double akseli, double sx, double sz, Func<OhjelmaKohdeGeometria.Verkko> tee)[]
+            // Luettelo pelin koodimalleista (ikonilista.py OhjelmaKohteet.cs:stä; KK 14.11. 23.59: kaikki koodimallit ikoneiksi, ei käsin ylläpidettävää listaa).
+            // Vakiot ja verkot heijastuksella: "OhjelmaKohdeGeometria.X" → const-kenttä tai parametriton metodi.
+            double Arvo(string t) => t.StartsWith("OhjelmaKohdeGeometria.") ? Convert.ToDouble(G.GetField(t.Substring(22)).GetRawConstantValue(), ci) : double.Parse(t, ci);
+            var lista = new System.Collections.Generic.List<(string kaupunki, string nimi, bool lista, double lat, double lon, double akseli, double sx, double sz, Func<OhjelmaKohdeGeometria.Verkko> tee)>();
+            foreach (var rivi in File.ReadAllLines(luettelo))
             {
-                ("pariisi", "Notre-Dame", true, OhjelmaKohdeGeometria.NotreDameLat, OhjelmaKohdeGeometria.NotreDameLon, OhjelmaKohdeGeometria.NotreDameAkseli, 0, 0, OhjelmaKohdeGeometria.NotreDame),
-                ("pariisi", "Sainte-Chapelle", true, OhjelmaKohdeGeometria.SainteChapelleLat, OhjelmaKohdeGeometria.SainteChapelleLon, OhjelmaKohdeGeometria.SainteChapelleAkseli, 0, 0, OhjelmaKohdeGeometria.SainteChapelle),
-                ("pariisi", "Sacré-Cœur", true, OhjelmaKohdeGeometria.SacreCoeurLat, OhjelmaKohdeGeometria.SacreCoeurLon, OhjelmaKohdeGeometria.SacreCoeurAkseli, 0, 0, OhjelmaKohdeGeometria.SacreCoeur),
-                ("pariisi", "Panthéon", true, OhjelmaKohdeGeometria.PantheonLat, OhjelmaKohdeGeometria.PantheonLon, OhjelmaKohdeGeometria.PantheonAkseli, 0, 0, OhjelmaKohdeGeometria.Pantheon),
-                ("pariisi", "Invalides", true, OhjelmaKohdeGeometria.InvalidesLat, OhjelmaKohdeGeometria.InvalidesLon, OhjelmaKohdeGeometria.InvalidesAkseli, 0, 0, OhjelmaKohdeGeometria.Invalides),
-                ("pariisi", "Opéra", true, OhjelmaKohdeGeometria.OperaLat, OhjelmaKohdeGeometria.OperaLon, OhjelmaKohdeGeometria.OperaAkseli, 0, 0, OhjelmaKohdeGeometria.Opera),
-                ("pariisi", "Louvre", true, OhjelmaKohdeGeometria.LouvreLat, OhjelmaKohdeGeometria.LouvreLon, OhjelmaKohdeGeometria.LouvreAkseli, 0, 0, OhjelmaKohdeGeometria.Louvre),
-                ("pariisi", "Orsay", true, OhjelmaKohdeGeometria.OrsayLat, OhjelmaKohdeGeometria.OrsayLon, OhjelmaKohdeGeometria.OrsayAkseli, 0, 0, OhjelmaKohdeGeometria.Orsay),
-                ("pariisi", "Grand Palais", true, OhjelmaKohdeGeometria.GrandPalaisLat, OhjelmaKohdeGeometria.GrandPalaisLon, OhjelmaKohdeGeometria.GrandPalaisAkseli, 0, 0, OhjelmaKohdeGeometria.GrandPalais),
-                ("pariisi", "Petit Palais", true, OhjelmaKohdeGeometria.PetitPalaisLat, OhjelmaKohdeGeometria.PetitPalaisLon, OhjelmaKohdeGeometria.PetitPalaisAkseli, 0, 0, OhjelmaKohdeGeometria.PetitPalais),
-                ("pariisi", "Montparnasse", true, OhjelmaKohdeGeometria.MontparnasseLat, OhjelmaKohdeGeometria.MontparnasseLon, OhjelmaKohdeGeometria.MontparnasseAkseli, 0, 0, OhjelmaKohdeGeometria.Montparnasse),
-                ("pariisi", "Riemukaari", true, OhjelmaKohdeGeometria.RiemukaariLat, OhjelmaKohdeGeometria.RiemukaariLon, OhjelmaKohdeGeometria.RiemukaariAkseli, 0, 0, OhjelmaKohdeGeometria.Riemukaari),
-                ("pariisi", "Hôtel de Ville", false, 48.8563106, 2.3524401, 70.1, 14.3, 0, OhjelmaKohdeGeometria.HotelDeVille),
-                ("pariisi", "Madeleine", false, 48.869911, 2.324353, -116.0, 0, 0, OhjelmaKohdeGeometria.Madeleine),
-                ("pariisi", "Palais Bourbon", false, 48.8615973, 2.3182860, 64.3, 0, 0, OhjelmaKohdeGeometria.PalaisBourbon),
-                ("pariisi", "Tour Saint-Jacques", false, 48.8579974, 2.3489140, -21.6, 0, 0, OhjelmaKohdeGeometria.TourSaintJacques),
-                ("pariisi", "Saint-Eustache", false, 48.8634783, 2.3451651, -7.9, 0, 0, OhjelmaKohdeGeometria.SaintEustache),
-                ("pariisi", "Saint-Sulpice", false, 48.8510098, 2.3349286, 7.3, 0, 0, OhjelmaKohdeGeometria.SaintSulpice),
-                ("pariisi", "Pompidou", false, 48.8605387, 2.3524118, 69.93, 0, 0, OhjelmaKohdeGeometria.Pompidou),
-                ("pariisi", "Eiffel", false, 48.8582606, 2.2944985, 45.8, 0, 0, OhjelmaKohdeGeometria.Eiffel),
-                ("lontoo", "Abbey", true, OhjelmaKohdeGeometria.AbbeyLat, OhjelmaKohdeGeometria.AbbeyLon, OhjelmaKohdeGeometria.AbbeyAkseli, 4.5, 1, OhjelmaKohdeGeometria.WestminsterAbbey),
-                ("lontoo", "St Paul", true, OhjelmaKohdeGeometria.StPaulLat, OhjelmaKohdeGeometria.StPaulLon, OhjelmaKohdeGeometria.StPaulAkseli, 0, 0, OhjelmaKohdeGeometria.StPauls),
-                ("lontoo", "Westminster", true, OhjelmaKohdeGeometria.PalatsiLat, OhjelmaKohdeGeometria.PalatsiLon, OhjelmaKohdeGeometria.PalatsiAkseli, 0, 0, OhjelmaKohdeGeometria.WestminsterPalatsi),
-                ("lontoo", "Big Ben", true, 51.500712, -0.124552, OhjelmaKohdeGeometria.BigBenAkseli, -1.2, -1.45, OhjelmaKohdeGeometria.BigBen),
-                ("lontoo", "Tower", true, OhjelmaKohdeGeometria.LbTowerLat, OhjelmaKohdeGeometria.LbTowerLon, OhjelmaKohdeGeometria.LbTowerAkseli, 0, 0, OhjelmaKohdeGeometria.LontoonTower),
-                ("lontoo", "British Museum", true, OhjelmaKohdeGeometria.LbBritishLat, OhjelmaKohdeGeometria.LbBritishLon, OhjelmaKohdeGeometria.LbBritishAkseli, 0, 0, OhjelmaKohdeGeometria.BritishMuseum),
-                ("lontoo", "NHM", true, OhjelmaKohdeGeometria.LbNhmLat, OhjelmaKohdeGeometria.LbNhmLon, OhjelmaKohdeGeometria.LbNhmAkseli, 0, 0, OhjelmaKohdeGeometria.NaturalHistoryMuseum),
-                ("lontoo", "Buckingham", true, 51.500916, -0.142449, 33.6, 0, 0, OhjelmaKohdeGeometria.BuckinghamPalatsi),
-                ("lontoo", "Royal Albert Hall", true, 51.501021, -0.177405, 6.6, 0, 0, OhjelmaKohdeGeometria.RoyalAlbertHall),
-                ("lontoo", "Kensington", true, 51.505158, -0.188124, 15.9, 0, 0, OhjelmaKohdeGeometria.KensingtonPalatsi),
-                ("lontoo", "Greenwich College", true, OhjelmaKohdeGeometria.LdCollegeLat, OhjelmaKohdeGeometria.LdCollegeLon, OhjelmaKohdeGeometria.LdCollegeAkseli, 0, 0, OhjelmaKohdeGeometria.GreenwichCollege),
-                ("lontoo", "Queens House", true, OhjelmaKohdeGeometria.LdQueensLat, OhjelmaKohdeGeometria.LdQueensLon, OhjelmaKohdeGeometria.LdQueensAkseli, 0, 0, OhjelmaKohdeGeometria.QueensHouse),
-                ("lontoo", "Royal Observatory", false, OhjelmaKohdeGeometria.LdFlamsteedLat, OhjelmaKohdeGeometria.LdFlamsteedLon, OhjelmaKohdeGeometria.LdFlamsteedAkseli, 0, 0, OhjelmaKohdeGeometria.Flamsteed),
-                ("lontoo", "Victoria Memorial", false, 51.50184, -0.14059, 33.6, 0, 0, OhjelmaKohdeGeometria.VictoriaMemorial),
-                ("lontoo", "Albert Memorial", false, 51.502418, -0.17769, 6.5, 0, 0, OhjelmaKohdeGeometria.AlbertMemorial),
-                ("lontoo", "Cutty Sark", false, OhjelmaKohdeGeometria.CuttySarkLat, OhjelmaKohdeGeometria.CuttySarkLon, OhjelmaKohdeGeometria.CuttySarkAkseli, 0, 0, OhjelmaKohdeGeometria.CuttySark),
-            };
+                var o = rivi.Split('\t'); if (o.Length < 8) continue;
+                var m = G.GetMethod(o[7].Substring(22), Type.EmptyTypes);
+                if (m == null) { Console.WriteLine($"puuttuu osakirjastosta: {o[1]} ({o[7]})"); continue; }
+                try { lista.Add((o[0], o[1], true, Arvo(o[2]), Arvo(o[3]), Arvo(o[4]), Arvo(o[5]), Arvo(o[6]), () => (OhjelmaKohdeGeometria.Verkko)m.Invoke(null, null))); }
+                catch (Exception e) { Console.WriteLine($"ei ratkea: {o[1]}: {e.Message}"); }
+            }
+            var k = lista.ToArray();
             var sb = new StringBuilder("[\n");
             for (int i = 0; i < k.Length; i++)
             {

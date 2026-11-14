@@ -41,8 +41,8 @@ NIMILISTAT = {
         'way/54180046': ('pylvastemppeli', 'keski', 'Madeleine', {'katto': 'harja'}),
         'way/54657155': ('pylvastemppeli', 'keski', 'Palais Brongniart', {'katto': 'attika'}),
         # ASEMAT (KK 23.32: Austerlitz ja l'Est hyväksytty; Nord, Saint-Lazare ja Lyon odottavat parametria halleja 1–3, työ E)
-        'way/62380197': ('asema', 'suuri', "Gare d'Austerlitz", {'halleja': 1}),
-        'way/280670907': ('asema', 'suuri', "Gare de l'Est (halli, nimetön OSM-pohja)", {'halleja': 1}),
+        'way/62380197': ('asema', 'suuri', "Gare d'Austerlitz"),   # KK 23.59: lista-arvo halleja 1 pois, sääntö
+        'way/280670907': ('asema', 'suuri', "Gare de l'Est (halli, nimetön OSM-pohja)"),
         # KK 14.11. 23.40 E: hallit hyväksytty, hallien määrä leveydestä (35–65 m, 1–5; AsemanHallit), lista saa ohittaa (halleja).
         'way/63197091': ('asema', 'suuri', 'Gare du Nord (halli, nimetön OSM-pohja)'),
         'way/727994377': ('asema', 'suuri', 'Gare Saint-Lazare'),
@@ -53,10 +53,10 @@ NIMILISTAT = {
         'relation/975955': ('palatsi', 'keski', 'Palais du Luxembourg', {'julkisivu': 'pohjoinen', 'katu': 'Rue de Vaugirard'}),
         'relation/1060803': ('palatsi', 'keski', "Palais de l'Élysée", {'julkisivu': 'pohjoinen', 'katu': 'Rue du Faubourg-Saint-Honoré'}),
         'relation/1002192': ('palatsi', 'keski', "Palais de la Légion d'Honneur", {'julkisivu': 'etelä', 'katu': 'Rue de Lille (porttikaari; rotunda Seinen puolella)'}),
-        'relation/542460': ('palatsi', 'keski', 'Palais Cambon', {'julkisivu': 'itä', 'katu': 'Rue Cambon (tarkistettava)'}),
+        'relation/542460': ('palatsi', 'keski', 'Palais Cambon', {'julkisivu': 'itä', 'katu': 'Rue Cambon (13 rue Cambon kadun länsipuolella; KK 23.59)'}),
         'way/448794899': ('palatsi', 'keski', 'Quai d’Orsay (ministère)', {'julkisivu': 'pohjoinen', 'katu': 'Quai d’Orsay (Seine)'}),
         'way/175448743': ('palatsi', 'keski', 'Hôtel de Lassay', {'julkisivu': 'etelä', 'katu': "Rue de l'Université (piha; puutarha Seinelle)"}),
-        'way/83203039': ('palatsi', 'keski', 'Château de la Muette', {'julkisivu': 'itä', 'katu': 'Rue André-Pascal (tarkistettava)'}),
+        'way/83203039': ('palatsi', 'keski', 'Château de la Muette', {'julkisivu': 'itä', 'katu': 'Rue André-Pascal', 'arvio': True}),
         'relation/284089': ('palatsi', 'keski', 'Hôtel de Ville', {'julkisivu': 'länsi', 'katu': "Place de l'Hôtel-de-Ville"}),
         'relation/1060822': ('palatsi', 'keski', 'Hôtel de la Marine', {'julkisivu': 'etelä', 'katu': 'Place de la Concorde'}),
         'relation/1060804': ('palatsi', 'keski', 'Hôtel de Crillon', {'julkisivu': 'etelä', 'katu': 'Place de la Concorde'}),
@@ -318,9 +318,9 @@ def leikkausala(poly, nelio):
     return abs(ala(out)) if len(out) >= 3 else 0.0
 
 
-# IKONIN POHJALEIKKAUS (KK 14.11. 23.40 F): ehdokas ohitetaan vain, kun sen pohja leikkaa ikonin koodimallin rungon XZ-rajat (tulos/ikonit.json,
-# Luonnos.dll ikonit; rungon kupera kuori, varalla rajat). Leikkaus = yhteinen ala ≥ 25 m² ja ≥ 5 % ehdokkaan alasta (kadun yli piirtyvä raja tai yhteinen seinä ei riitä).
-IKONILEIKKAUS = {'min_ala': 25.0, 'min_osuus': 0.05}
+# IKONIN POHJALEIKKAUS (KK 14.11. 23.40 F; 23.59: kaikki pelin koodimallit, luettelo ikonilista.py:llä OhjelmaKohteet.cs:stä): ehdokas ohitetaan vain, kun sen pohja leikkaa ikonin koodimallin rungon XZ-rajat (tulos/ikonit.json,
+# Luonnos.dll ikonit; rungon kupera kuori, varalla rajat). Leikkaus = yhteinen ala ≥ 25 m² ja ≥ 10 % ehdokkaan alasta (kadun yli piirtyvä raja tai yhteinen seinä ei riitä).
+IKONILEIKKAUS = {'min_ala': 25.0, 'min_osuus': 0.10}   # 10 %: Lassay osuu Bourbonin kuoreen 6 % (naapuri, KK 23.59 jälkeen)
 
 
 def ikonien_nelikulmiot(polku, kaupunki, P):
@@ -434,8 +434,7 @@ def main(a):
             for n_, lista_, nel in nelikulmiot:
                 yht = sum(leikkausala(q, nel) for q in qs)
                 if yht >= IKONILEIKKAUS['min_ala'] and yht >= IKONILEIKKAUS['min_osuus'] * A:
-                    if lista_ and ik is None: ik = n_
-                    elif not lista_: koodiosumat.append((oid, nimi, n_, round(yht), round(A)))
+                    if ik is None: ik = n_   # kaikki pelin koodimallit ovat ikoneita (KK 14.11. 23.59)
             if bool(ik) != bool(ik_sade) or (ik and ik_sade and ik != ik_sade): sade_ero.append((oid, nimi, ik_sade or '', ik or ''))
         if ik: ohit.append((oid, nimi, f'ikoni {ik}')); continue
         if oid in kasi.get('tyyppi', {}):
