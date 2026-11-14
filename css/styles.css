@@ -8706,6 +8706,8 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 .dialog button.apuraha-iso--avaus { aspect-ratio: 4 / 3; margin-top: 0.2rem; }
 .dialog button.apuraha-iso--hetki,
 .dialog button.apuraha-iso--rivi { aspect-ratio: 16 / 9; }
+/* esittely.json kuva.muoto "4:3": hetken ensimmäinen kuva kokonaan 4:3-ruudussa (KK 14.11. 22.14). */
+.dialog button.apuraha-iso--hetki.apuraha-iso--43 { aspect-ratio: 4 / 3; }
 .apuraha-iso img {
   display: block;
   width: 100%;

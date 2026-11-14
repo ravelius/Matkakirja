@@ -69,6 +69,8 @@ test('versio 9: avaus, hetket (webTeksti, tekeilla, tyhjät kuvat pois), ajatus,
     assert.match(k.rajaus, /^\d{1,3}% \d{1,3}%$/, `rajaus ${k.tiedosto}`);
     assert.ok(k.teksti.split(/[.!?]/).filter(Boolean).length === 1, `kuvateksti on yksi virke: ${k.tiedosto}`);
   }
+  // Linssihetken keksintökuva näytetään kokonaan 4:3 (KK 14.11. 22.14); muut hetken kuvat 16:9.
+  assert.deepEqual(d.hetket[5].kuvat.map((k) => k.muoto ?? '16:9'), ['4:3', '16:9', '16:9']);
 });
 
 test('versio 9: puutteellinen hetki- ja kuvadata siistitään, oletussanat', () => {
@@ -87,6 +89,9 @@ test('versio 9: puutteellinen hetki- ja kuvadata siistitään, oletussanat', () 
   assert.equal(d.hetket.length, 2);
   assert.equal(d.hetket[0].tekeilla, false, 'vain true on tekeillä');
   assert.deepEqual(d.hetket[0].kuvat, [{ tiedosto: 'a.jpg', rajaus: null, teksti: '' }]);
+  // muoto: vain "4:3" kelpaa, muu jää pois (16:9).
+  const m = tarkistaApuraha({ nappi: 'x', otsikko: 'x', kappaleet: [], hetket: [{ otsikko: 'M', kuvat: [{ tiedosto: 'a.jpg', muoto: '4:3' }, { tiedosto: 'b.jpg', muoto: '1:1' }] }] });
+  assert.deepEqual(m.hetket[0].kuvat.map((k) => k.muoto ?? null), ['4:3', null]);
   assert.equal(d.hetket[0].video, null);
   assert.equal(d.hetket[1].teksti, '');
   assert.equal(d.hetket[1].kuvat.length, 3, 'enintään kolme kuvaa');

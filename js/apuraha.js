@@ -58,13 +58,17 @@ export function tarkistaApuraha(d) {
 
 const RAJAUS = /^\d{1,3}% \d{1,3}%$/;
 
-/** Kuva { tiedosto, rajaus, teksti } tai null (ei kelvollista tiedostoa). Rajaus vain muodossa "x% y%". */
+/**
+ * Kuva { tiedosto, rajaus, teksti, muoto? } tai null (ei kelvollista tiedostoa). Rajaus vain muodossa "x% y%".
+ * muoto "4:3" = hetken ensimmäinen kuva näytetään kokonaan 4:3-ruudussa (KK 14.11. 22.14); muuten 16:9. Kenttä vain, kun se on 4:3.
+ */
 function kuva9(k) {
   if (!k || typeof k !== 'object' || typeof k.tiedosto !== 'string' || !k.tiedosto.trim()) return null;
   return {
     tiedosto: k.tiedosto.trim(),
     rajaus: typeof k.rajaus === 'string' && RAJAUS.test(k.rajaus) ? k.rajaus : null,
     teksti: typeof k.teksti === 'string' ? k.teksti : '',
+    ...(k.muoto === '4:3' ? { muoto: '4:3' } : {}),
   };
 }
 

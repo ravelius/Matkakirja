@@ -17945,7 +17945,7 @@ export class UI {
       const osa = html('section', 'apuraha-hetki');
       const [ensimmainen, ...muut] = h.kuvat;
       if (ensimmainen) {
-        const b = iso(ensimmainen, 'apuraha-iso--hetki');
+        const b = iso(ensimmainen, ensimmainen.muoto === '4:3' ? 'apuraha-iso--hetki apuraha-iso--43' : 'apuraha-iso--hetki');
         if (h.video) this.esittelyVideonappi(b, h.video, h.otsikko);
         osa.appendChild(b);
       } else if (h.video) {
