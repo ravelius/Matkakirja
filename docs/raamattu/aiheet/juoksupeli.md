@@ -17,12 +17,12 @@ SÄÄNNÖT:
 12. Poistuvaa koodia ei mitata eikä nopeuteta. Muisti ja laite mitataan vasta valmiista tasosta. [R-2.209] [P-261111-4]
 13. Varjot leivotaan; elävä varjo vain pelaajalla. Kuvaa muuttava kevennys vain parilla ja KK:n sanalla. [R-2.177] [P-261111-2]
 14. Käytöstä pudonnut kyky palaa vain omistajan päätöksellä. [P-261111-3]
-15. Jokaisessa junasanapyynnössä mitat.py:n luvut ennen → jälkeen (rivit, Paivita, kytkimet); kasvu vaatii syyrivin ja KK:n sanan. [P-261114-13]
+15. Jokaisessa junasanapyynnössä juoksu-mitat.py:n luvut ennen → jälkeen (rivit, Paivita, kytkimet); kasvu vaatii syyrivin ja KK:n sanan. [P-261114-13]
 
 EI VIKA:
 - Kiinniotossa ja uupumisruudulla eunukin selkä peittää Puyin, ja kamera pysyy ylhäällä.
 - Osa rakennuksista on ilman ovea.
-- Puyi pysähtyy seinän eteen ja kynnykselle.
+- Puyi pysähtyy seinään ja kynnykseen.
 
 TEKOTAPA:
 - Kamera, valo ja muisti: kortit kamera, valo-ja-materiaalit, suorituskyky-ja-muisti.
