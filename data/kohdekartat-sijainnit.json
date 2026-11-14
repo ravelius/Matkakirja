@@ -13234,6 +13234,45 @@
     "lon": -0.1207
    },
    "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Händel ja Hendrix",
+   "nimi": "Händel ja Hendrix",
+   "qid": null,
+   "lat": 51.5131,
+   "lon": -0.146,
+   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "kartanPiste": {
+    "lat": 51.5131,
+    "lon": -0.146
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Johnson 1755",
+   "nimi": "Johnson 1755",
+   "qid": null,
+   "lat": 51.515,
+   "lon": -0.1081,
+   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "kartanPiste": {
+    "lat": 51.515,
+    "lon": -0.1081
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "lontoo:Punch 1662",
+   "nimi": "Punch 1662",
+   "qid": null,
+   "lat": 51.5114,
+   "lon": -0.1242,
+   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "kartanPiste": {
+    "lat": 51.5114,
+    "lon": -0.1242
+   },
+   "eroKartanPisteesta_m": 0
   }
  ],
  "losangeles": [

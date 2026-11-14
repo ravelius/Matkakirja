@@ -6264,6 +6264,21 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Savusumu 1952', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5093, lon: -0.1207,
         nosto: 'nosto-lontoon-savusumu-1952',
       },
+      // Brook Street 25 ja 23 (English Heritage 51,5131 / −0,14606; Wikipedia 51,513 / −0,1459). Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Händel ja Hendrix', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5131, lon: -0.146,
+        nosto: 'nosto-handel-hendrix-brook-street',
+      },
+      // Gough Square 17 (en-Wikipedia "Dr Johnson's House" 51,515 / −0,10806). Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Johnson 1755', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.515, lon: -0.1081,
+        nosto: 'nosto-johnsonin-sanakirja-1755',
+      },
+      // St Paulin kirkko Covent Gardenissa (en-Wikipedia 51,51139 / −0,12417); laatta kirkon seinällä. Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Punch 1662', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5114, lon: -0.1242,
+        nosto: 'nosto-punch-pepys-1662', nimiPuoli: 'vasen',
+      },
       // Liukumäkiveistos (Orbit) EI ole täällä (KK 13.11.2026, päätös 3a): oikea paikka Stratfordissa
       // (51,538 / −0,013) on reunuksella, joten nosto on pääkartalla kattoVapaa-lipulla
       // (js/packs/fokusvirta-lontoo.js orbitin-liukumaki), kuten Wienin Prater ja Rooman Avaimenreikä.
