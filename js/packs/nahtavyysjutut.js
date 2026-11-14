@@ -3281,7 +3281,7 @@ export const NAHTAVYYSJUTUT = {
         + '1968–69 kitaristi Jimi Hendrix. Kerrotaan, että kun hän sai tietää Händelin asuneen '
         + 'naapurissa, hän osti levyn Messiaasta.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo 114 vuotta. Nykyään talot ovat '
+        + 'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot ovat '
         + 'yhdessä museo.',
       kuvat: [
         {
@@ -3300,7 +3300,7 @@ export const NAHTAVYYSJUTUT = {
     'Johnson 1755': {
       aika: '1746–1755',
       nosto: 'nosto-johnsonin-sanakirja-1755',
-      teksti: '1740-luvun puolivälissä joukko Fleet Streetin kustantajia palkkasi kirjailija Samuel '
+      teksti: '1740-luvun puolivälissä joukko lontoolaisia kustantajia palkkasi kirjailija Samuel '
         + 'Johnsonin laatimaan englannin kielen sanakirjaa. Palkkio oli 1 500 guineaa. Työ kesti '
         + 'lähes vuosikymmenen, ja kirja ilmestyi vuonna 1755.'
         + '\n\n'
@@ -3308,7 +3308,7 @@ export const NAHTAVYYSJUTUT = {
         + 'talossa numero 17. Hän merkitsi kirjoihin kohdat, joissa sana esiintyi esimerkkinä, ja '
         + 'apulaiset kopioivat ne paperiliuskoille. Talo oli täynnä kirjoja ja apulaisia.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena 89 vuotta, mutta hänen '
+        + 'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
         + 'vuokraamansa talo seisoi jo Gough Squarella. Nykyään siinä on museo.',
       kuvat: [
         {
@@ -3338,7 +3338,7 @@ export const NAHTAVYYSJUTUT = {
         + 'kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
         + 'italialaisesta Pulcinellasta.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut 211 vuotta. St Paulin kirkon '
+        + 'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut yli 200 vuotta. St Paulin kirkon '
         + 'seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
         + 'merkinnästä.',
       kuvat: [

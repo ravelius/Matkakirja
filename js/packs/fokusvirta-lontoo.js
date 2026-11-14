@@ -1449,7 +1449,7 @@ export const FOKUSVIRTA_LONTOO = {
         'Reilut kaksisataa vuotta myöhemmin viereisessä talossa, numerossa 23, asui vuosina '
           + '1968–69 kitaristi Jimi Hendrix. Kerrotaan, että kun hän sai tietää Händelin asuneen '
           + 'naapurissa, hän osti levyn Messiaasta.',
-        'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo 114 vuotta. Nykyään talot '
+        'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot '
           + 'ovat yhdessä museo.',
       ],
       lahde: 'English Heritage (siniset laatat: Händel ja Hendrix); Handel Hendrix House -museo (Learn about Handel, Learn about Hendrix); en-Wikipedia "Handel & Hendrix in London" ja "Messiah (Handel)". Kaksi itsenäistä lähdettä (SK 14.11.2026; tarkistaja ja KK ennen junaa).',
@@ -1495,13 +1495,13 @@ export const FOKUSVIRTA_LONTOO = {
         fakta: 'Sopimus oli 1 500 guinean arvoinen, ja sanakirja ilmestyi vuonna 1755, lähes vuosikymmen sopimuksen jälkeen.',
       },
       lunastus: [
-        '1740-luvun puolivälissä joukko Fleet Streetin kustantajia palkkasi kirjailija Samuel '
+        '1740-luvun puolivälissä joukko lontoolaisia kustantajia palkkasi kirjailija Samuel '
           + 'Johnsonin laatimaan englannin kielen sanakirjaa. Palkkio oli 1 500 guineaa. Työ '
           + 'kesti lähes vuosikymmenen, ja kirja ilmestyi vuonna 1755.',
         'Johnson asui työn aikana osan ajasta Gough Squarella Fleet Streetin pohjoispuolella, '
           + 'talossa numero 17. Hän merkitsi kirjoihin kohdat, joissa sana esiintyi esimerkkinä, '
           + 'ja apulaiset kopioivat ne paperiliuskoille. Talo oli täynnä kirjoja ja apulaisia.',
-        'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena 89 vuotta, mutta hänen '
+        'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
           + 'vuokraamansa talo seisoi jo Gough Squarella. Nykyään siinä on museo.',
       ],
       lahde: 'Dr Johnson\'s House (drjohnsonshouse.org: Johnson\'s Dictionary, 17 Gough Square); Boswell, Life of Johnson (1791, Project Gutenberg); Encyclopaedia Britannica 11. painos "Johnson, Samuel" (Wikisource): 1 500 guineaa, julkaisu 1755. Sopimusvuosi jätetty pois (lähteet 1746/1747). Paikka ja museo: en-Wikipedia "Dr Johnson\'s House". Kaksi itsenäistä lähdettä (SK 14.11.2026; tarkistaja ja KK ennen junaa).',
@@ -1556,7 +1556,7 @@ export const FOKUSVIRTA_LONTOO = {
           + 'lihavaa lastaan Punchiksi, ja se ilahdutti häntä, koska sana oli tullut yleiseen '
           + 'käyttöön kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
           + 'italialaisesta Pulcinellasta.',
-        'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut 211 vuotta. St Paulin '
+        'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut yli 200 vuotta. St Paulin '
           + 'kirkon seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
           + 'merkinnästä.',
       ],
