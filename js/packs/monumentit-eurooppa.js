@@ -168,12 +168,12 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Torni, jonka Napoleon käski purkaa',
       laudat: { maailmankartta: { x: 5912.0, y: 1439.2 }, europe: { x: 256.5, y: 608.4 } },
       teksti: 'Temple-torni eli Grosse Tour oli temppeliritarien Pariisin päämajan linnoitustorni, jonka '
-        + 'rakentaminen alkoi 1240 Ludvig Pyhän aikana. Tornin muurit olivat '
+        + 'rakentaminen alkoi 1200-luvulla. Tornin muurit olivat '
         + 'keskimäärin neljä metriä paksut, ja kulmissa oli neljä pienempää tornia. Temppeliritarikunta '
         + 'lakkautettiin 1312. Elokuun 13. päivänä 1792 Pariisin kommuuni vei kuningasperheen Templeen; '
         + 'Ludvig XVI lähti sieltä giljotiinille 21. tammikuuta 1793. Hänen poikansa Ludvig XVII kuoli '
         + 'Templessä 8. kesäkuuta 1795 kymmenvuotiaana. Napoleon määräsi tornin purettavaksi 1808 '
-        + 'estääkseen rojalistien pyhiinvaellukset, ja purku kesti kaksi vuotta. Tornin paikasta osa on '
+        + 'estääkseen rojalistien pyhiinvaellukset. Tornin paikasta osa on '
         + 'nykyisin Square du Temple -puistoa.',
       lahde: 'en-Wikipedia "Tour du Temple", johdanto ja osiot "Origins", "Royal imprisonment" ja '
         + '"Demolition"; fr-Wikipedia "Tour du Temple", osiot "Histoire" ja "Prison" (tarkistettu '
@@ -234,9 +234,9 @@ export const EUROOPAN_KADONNEET = {
         + 'vuoden 1855 Pariisin maailmannäyttelyä varten. Arkkitehti Jean-Marie-Victor Vielin ja insinööri '
         + 'Alexis Barrault\'n suunnittelema rakennus piilotti rautarakenteensa kivijulkisivun taakse, ja sen '
         + 'päälaiva oli 190 metriä pitkä ja 48 metriä leveä. Halli ei ollut valmis avajaisissa, ja huono '
-        + 'ilmanvaihto teki siitä päivisin tukalan. Vuosina 1857–1897 siellä pidettiin vuosittain Salon, ja 1881 ensimmäinen '
-        + 'kansainvälinen sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1896–1897 '
-        + 'Grand Palais\'n tieltä, ja sen rautaa käytettiin Notre-Dame-du-Travail-kirkossa.',
+        + 'ilmanvaihto teki siitä päivisin tukalan. Siellä pidettiin vuosittain Salon, ja 1881 kansainvälinen '
+        + 'sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1890-luvun '
+        + 'lopulla Grand Palais\'n tieltä.',
       lahde: 'en-Wikipedia "Palais de l\'Industrie", johdanto ja osiot "Architecture", "History" ja "Legacy"; '
         + 'fr-Wikipedia "Palais de l\'Industrie", osiot "Historique" ja "Utilisation" (tarkistettu '
         + '31.10.2026).',
