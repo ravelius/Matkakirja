@@ -71,13 +71,19 @@ TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'
 # Tyypit, joille on malli (oma/Tyyppimallit.cs); muut tyypitetyt menevät "ei sovi" -listaan.
 MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski'), ('asema', 'suuri'), ('palatsi', 'keski'), ('pylvastemppeli', 'keski')}
 # Mallien pohjan mitat (pituus × leveys m, torni mukana; kaanna.sh tulostaa): luonnollinen sovitus kirkoille kaistalla (KK 23.32).
-MALLIMITAT = {('kirkko', 'pieni'): (32.0, 12.0), ('kirkko', 'keski'): (61.0, 19.0), ('kirkko', 'suuri'): (111.0, 49.0)}
+MALLIMITAT = {('kirkko', 'pieni'): (32.0, 12.0), ('kirkko', 'keski'): (61.0, 19.0), ('kirkko', 'suuri'): (111.0, 49.0),
+              ('kupolikirkko', 'keski'): (76.7, 34.2)}   # kupolikirkko: obj/kupolikirkko.obj rajat (−39,5…37,2 × ±17,1)
+# Instansoitavat (yksi jaettu verkko, venytys sx = pituus / L, sz = leveys / W). Palatsi, asema ja pylvästemppeli rakennetaan pohjan mitoista
+# (parametrinen, ei venytystä) ja leivotaan latauksessa yhdeksi staattiseksi verkoksi (KK 15.11. 00.16 kohta 3).
+INSTANSSIT = set(MALLIMITAT)
 SOVITUS = {
     'kirkko_min_sivusuhde': 1.10,  # alle: neliömäinen tai pyöreä pohja = keskeiskirkko, ei pitkäkirkkoa (KK 23.32, oli 1,25)
     'luonnollinen_alle': 1.25,     # kaistalla 1,10–1,25 LUONNOLLINEN sovitus (mittasuhde säilyy, loppu pohjasta kirkkopihaksi; KK 23.32)
     'max_ylitys': 2.0,             # m: luonnollinen malli saa ylittää pohjan enintään tämän, muuten pienennetään
     'min_mittakaava': 0.7,         # luonnollinen mittakaava tätä pienempi → ei sovi
     'max_mittakaava': 1.2,         # suurempi → kokeillaan yhtä suurempaa kokoluokkaa, muuten ei sovi (KK 14.11. 23.40 A)
+    'venytys_min': 0.6,            # pohja-sovituksen venytys kummallakin akselilla; ulkopuolella ei sovi, perustalo jää (KK 15.11. 00.16 kohta 2)
+    'venytys_max': 1.6,
     'min_tayttoaste': 0.55,        # ala / pienin suorakaide: pienempi = L-, U- tai sisäpihallinen pohja
 }
 # Ikonien koodimallit (OhjelmaKohde*.cs, Lat/Lon-vakiot) ja säde metreinä: ehdokas, jonka keskipiste on säteen sisällä, on ikoni ja ohitetaan.
@@ -488,6 +494,23 @@ def main(a):
             if mk < SOVITUS['min_mittakaava']: syy = f'luonnollinen sovitus (mittakaava {mk:.2f} < {SOVITUS["min_mittakaava"]})'
             elif mk > SOVITUS['max_mittakaava']: syy = f'luonnollinen sovitus (mittakaava {mk:.2f} > {SOVITUS["max_mittakaava"]})'
             elif yl > SOVITUS['max_ylitys']: syy = f'luonnollinen sovitus (ylitys {yl:.1f} m)'
+        # Venytysraja (KK 15.11. 00.16 kohta 2): pohja-sovituksessa kirkon koko valitaan ensin pienimmän venytyksen mukaan (max |ln s| akseleista),
+        # ellei koko tule nimilistalta tai käsikorjauksesta; sitten sx ja sz rajaan 0,6–1,6, muuten ei sovi.
+        sx = sz = None
+        if (tyyppi, koko) in INSTANSSIT and sovitus == 'pohja':
+            def venytys(kk): L, W = MALLIMITAT[(tyyppi, kk)]; return pit / L, lev / W
+            if tyyppi == 'kirkko' and syy is None and not saanto.startswith(('nimilista', 'käsikorjaus')):
+                paras = min(('pieni', 'keski', 'suuri'), key=lambda kk: max(abs(math.log(v)) for v in venytys(kk)))
+                if paras != koko:
+                    saanto += f'; venytys: {koko} → {paras}'; koko = paras
+                    tp, tn, th = TORNI_OLETUS[koko]
+                    kk = kasi.get('torni', {}).get(oid, '').split('|')
+                    if len(kk) > 0 and kk[0]: tp = kk[0]
+                    if len(kk) > 1 and kk[1]: tn = int(kk[1])
+                    if len(kk) > 2 and kk[2]: th = kk[2]
+            sx, sz = venytys(koko)
+            if syy is None and not (SOVITUS['venytys_min'] <= sx <= SOVITUS['venytys_max'] and SOVITUS['venytys_min'] <= sz <= SOVITUS['venytys_max']):
+                syy = f"venytys (x {sx:.2f}, z {sz:.2f}; raja {SOVITUS['venytys_min']}–{SOVITUS['venytys_max']})"
         la_c = meta['lat'] + c[1] / 111320.0; lo_c = meta['lon'] + c[0] / (111320.0 * math.cos(math.radians(meta['lat'])))
         merkit.append({
             'osm': oid, 'tyyppi': tyyppi, 'koko': koko, 'saanto': saanto, 'nimi': nimi, 'wikidata': t.get('wikidata'),
@@ -495,7 +518,7 @@ def main(a):
             'ala': round(A), 'sivusuhde': round(pit / max(lev, 0.1), 2), 'korkeus': h, 'korkeus_lahde': hl,
             'torni_paikka': tp, 'torneja': tn, 'huippu': th, 'ei_sovi': syy, 'lansipaa': [round(c[0] + lansi[0] * pit / 2 - c[0], 1), round(lansi[1] * pit / 2, 1)],
             'pohja': [[round(x - c[0], 1), round(y - c[1], 1)] for x, y in suurin[:-1]],
-            'renkaita': len(qs), 'sovitus': sovitus, 'mittakaava': round(mk, 3) if mk else None, 'ylitys': round(yl, 1) if yl is not None else None,
+            'renkaita': len(qs), 'sovitus': sovitus, 'mittakaava': round(mk, 3) if mk else None, 'sx': round(sx, 3) if sx else None, 'sz': round(sz, 3) if sz else None, 'ylitys': round(yl, 1) if yl is not None else None,
             'parametrit': parametrit or None,
         })
         if syy is None: poistot.append(oid)
