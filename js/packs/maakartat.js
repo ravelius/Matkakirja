@@ -6279,6 +6279,16 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Punch 1662', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5114, lon: -0.1242,
         nosto: 'nosto-punch-pepys-1662', nimiPuoli: 'vasen',
       },
+      // Frith Street Sohossa, kadun eteläpää (talonumeroa ei käytetä). Tarinapaikka KK 15.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Baird 1926', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5135, lon: -0.1317,
+        nosto: 'nosto-baird-televisio-1926',
+      },
+      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, joten nimiö oikealle. Tarinapaikka KK 15.11.2026.
+      {
+        nimi: 'Sähkötin 1837', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 51.5282, lon: -0.1337,
+        nosto: 'nosto-sahkotin-euston-1837', nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
       // Liukumäkiveistos (Orbit) EI ole täällä (KK 13.11.2026, päätös 3a): oikea paikka Stratfordissa
       // (51,538 / −0,013) on reunuksella, joten nosto on pääkartalla kattoVapaa-lipulla
       // (js/packs/fokusvirta-lontoo.js orbitin-liukumaki), kuten Wienin Prater ja Rooman Avaimenreikä.

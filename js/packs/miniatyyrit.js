@@ -195,6 +195,9 @@ export const MINIATYYRIT = {
     'Händel ja Hendrix': 'lontoo-handel-hendrix-brook-street',
     'Johnson 1755': 'lontoo-johnsonin-sanakirja-1755',
     'Punch 1662': 'lontoo-punch-pepys-1662',
+    // Baird ja sähkötin (KK 15.11.2026): ämpäritunnus, kuva tilataan erikseen; puuttuva kuva putoaa varatäpläksi.
+    'Baird 1926': 'lontoo-baird-televisio-1926',
+    'Sähkötin 1837': 'lontoo-sahkotin-euston-1837',
   },
   // Eurooppa-erä 1 (omistajan tilaus 15.8.2026: "Lisää kartta
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
