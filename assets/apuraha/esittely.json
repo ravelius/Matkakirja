@@ -85,7 +85,23 @@
       "otsikko": "Katso maailmaa linssin läpi",
       "teksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät, miten ihminen levisi maapallolle, mitä maailman radioissa soi juuri nyt.",
       "webTeksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät ja miten ihminen levisi maapallolle. Maailman radiot kuuluvat vain iOS-sovelluksessa.",
-      "kuvat": [],
+      "kuvat": [
+        {
+          "tiedosto": "assets/apuraha/linssi-keksinnot.jpg",
+          "rajaus": "50% 50%",
+          "teksti": "Keksintöjen linssi: Rudolf Diesel ja hänen moottorinsa vuodelta 1897."
+        },
+        {
+          "tiedosto": "assets/apuraha/linssi-ihmisen-matka.jpg",
+          "rajaus": "50% 50%",
+          "teksti": "Ihmisen matka -linssi kulkee ajassa taaksepäin ja näyttää, miten ihminen levisi Afrikasta maapallolle."
+        },
+        {
+          "tiedosto": "assets/apuraha/linssi-topografia.jpg",
+          "rajaus": "50% 50%",
+          "teksti": "Topografian linssi korostaa maaston muodot: Himalaja ja Tiibetin ylätasanko."
+        }
+      ],
       "tekeilla": false,
       "video": null
     }

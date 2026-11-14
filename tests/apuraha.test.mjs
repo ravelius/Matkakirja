@@ -46,7 +46,7 @@ test('versio 9: avaus, hetket (webTeksti, tekeilla, tyhjät kuvat pois), ajatus,
   ]);
   assert.ok(d.hetket.every((h) => !/^\d|\(tekeillä\)/.test(h.otsikko)), 'ei numeroita eikä tekeillä-sanaa otsikossa');
   assert.deepEqual(d.hetket.map((h) => h.tekeilla), [false, false, false, true, true, false]);
-  assert.deepEqual(d.hetket.map((h) => h.kuvat.length), [1, 1, 2, 0, 1, 0]);
+  assert.deepEqual(d.hetket.map((h) => h.kuvat.length), [1, 1, 2, 0, 1, 3]);
   assert.ok(d.hetket.every((h) => h.video === null));
   // Selaimessa webTeksti korvaa tekstin.
   assert.match(d.hetket[2].teksti, /Vain iOS-sovelluksessa\.$/);
