@@ -79,3 +79,16 @@ Vieraiden osalta sääntö 10 ei osu millään tulkinnalla. Ranskan, Alankomaide
 
 ## Mitä tämä luonnos ei tee
 Ei lataa tiedostoja, ei leikkaa ääntä, ei muuta dataa. Äänitteet kuuntelee ja otteet leikkaa Äänittäjä; omistajan lupa vapaille orkesteriäänitteille on annettu 14.11.
+
+## Lisäys 14.11. klo 10.10 (KK 10.03): Egmontin toinen suora lähde, tulos
+
+KK:n valinta: kolmikon 2 kolmas pari = Egmont-alkusoitto (Czech National SO / Musopen 2012), ehdolla että Wienin kantaesitykselle 15.6.1810 (Burgtheater) löytyy toinen suora lähde; muuten vara Beethoven 5, osa IV (Victor 1917, ote levynpuolen sisältä alle 4:30).
+
+**Toista suoraa lähdettä EI löytynyt.** Luettu (sivun oma teksti, 14.11.):
+- de.wikipedia "Musik zu Goethes Trauerspiel Egmont": musiikki Wiener Burgtheaterin toimeksiannosta, kantaesitys 15.6.1810 "in Wien" (Wien + päivä; Burgtheater tilaajana, ei erikseen esityspaikkana).
+- it.wikipedia "Egmont (Beethoven)": infolaatikko "Prima esecuzione: 15 giugno 1810"; "composta su commissione del Teatro Imperiale di Vienna" (päivä; Wien tilaajana; Burgtheateria ei nimetä). Viite: flaminioonline.it, Nicola Costarelli "Egmont, op. 84" (ei luettu, URL:ia ei annettu).
+- en.wikipedia "Egmont (play)": Burgtheater pyysi Beethovenia säveltämään musiikin 1809 (ei päivää, ei kantaesityspaikkaa). en.wikipedia "Egmont (Beethoven)": päivä 15.6.1810, ei paikkaa.
+- EI mainitse: fr.wikipedia "Egmont (Beethoven)", Wien Geschichte Wiki "Ludwig van Beethoven" ja "Burgtheater", IMSLP. EI SAATAVILLA: Britannica (403), beethoven.de (412), Wiener Symphoniker (etusivulta ei löytynyt työsivua).
+- Kaikki löytyneet ovat Wikipediaa (ei riippumattomia toisistaan); mikään ei sano kirjaimellisesti "kantaesitettiin Burgtheaterissa". Tuettu muotoilu: "Burgtheater tilasi musiikin, ja se kantaesitettiin Wienissä 15.6.1810 Goethen Egmontin esityksen yhteydessä."
+
+**Seuraus:** KK:n ehto (toinen suora lähde) ei täyty. Vara: Beethoven 5, osa IV (Victor Concert Orchestra / Josef Pasternack 1917; Wien-kantaesitys 22.12.1808 Theater an der Wien 3/3 lähteestä). Ote levynpuolen A sisältä (0:00–4:30; sauma kohdassa 4:30). KK päättää, hyväksytäänkö Egmont de- ja it-Wikipedian varassa vai siirrytäänkö varaan.
