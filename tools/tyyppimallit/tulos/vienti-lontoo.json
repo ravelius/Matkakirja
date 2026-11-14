@@ -7,14 +7,14 @@
  "merkkeja": 431,
  "malleja": 23,
  "tavua": 10928,
- "sha256": "1619b8c0a1d00100daaaed12a446dc41a89f251a6e3a8fd9d9a560fd750fd713",
+ "sha256": "c9a350d70c8053f8570db7eff50d1cf1d4e3e2a92594b1d730c0e4787d1f5bfc",
  "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
  "maa_laskut": {
   "pisteita": 431,
   "lahin_tunnettu": 0
  },
  "lahde": "/Users/Shared/Claude/proto-3d/_tyo/valoseppa/tyyppitalot/tulos/merkit-lontoo.json",
- "lahde_sha256": "addbb62f511f4bce1acc083377948eb3401bd655377e3ac71a5dbaa37c2bdfe2",
+ "lahde_sha256": "d1a8247f8cd51bed9d55c4bba02bff65c753d476320a0ed1bdeb89606155e780",
  "tyypit": {
   "kirkko-keski": 38,
   "palatsi-keski": 13,

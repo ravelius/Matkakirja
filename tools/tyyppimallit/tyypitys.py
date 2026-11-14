@@ -66,25 +66,26 @@ NIMILISTAT = {
     },
     'lontoo': {
         # HYVÄKSYTTY (KK 15.11. 01.13 asemat, 01.24 palatsit + Royal Exchange; katto rivikohtaisesti, mansardi vain County Hall ja Old Admiralty).
+        # SEINÄ (KK 01.24, KS 01.4x paletti katot.py PERHEET['lontoo']): portland = Portland-kivi #E4DCCA, tiili = punatiili #AC7862 (Old Admiralty); LUONNOS, KK päättää pelikuvista.
         # Julkisivu käsin; 'arvio' = tarkistettava. Seinäväri rivikohtaisesti KS:n paletista myöhemmin (KK 01.24: Portland-kivi, Old Admiralty punatiili).
         'way/947381552': ('asema', 'suuri', 'Paddington'),
         'way/4256246': ('asema', 'suuri', 'St Pancras'),   # 2. kierroksen ehdokas: oikeasti yksi Barlow-halli + tiilijulkisivu (KK 01.13)
         'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2}),
         'way/4959629': ('asema', 'suuri', 'Liverpool Street (halli, nimetön OSM-pohja)'),
         # St James's Palace (relation/545040) pois listalta: Tudor-tiili, perustalo (KK 15.11. 01.13)
-        'way/372841786': ('palatsi', 'keski', "Somerset House", {'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Strand'}),
-        'relation/3848545': ('palatsi', 'keski', "Burlington House", {'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Piccadilly'}),
-        'relation/78291': ('palatsi', 'keski', "Foreign Office", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall', 'arvio': True}),
-        'way/133153176': ('palatsi', 'keski', "Horse Guards", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
-        'relation/20350084': ('palatsi', 'keski', "Old Admiralty", {'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Horse Guards Parade', 'arvio': True}),
-        'way/33695114': ('palatsi', 'keski', "Mansion House", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Bankin risteys (portiikki)', 'arvio': True}),
-        'way/4266524': ('palatsi', 'keski', "Lancaster House", {'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Stable Yard', 'arvio': True}),
-        'relation/16057566': ('palatsi', 'keski', "Spencer House", {'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Green Park'}),
-        'way/161800467': ('palatsi', 'keski', "Marlborough House", {'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Pall Mall', 'arvio': True}),
-        'relation/1789966': ('palatsi', 'keski', "County Hall", {'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Thames', 'arvio': True}),
-        'way/54478457': ('palatsi', 'keski', "Clarence House", {'katto': 'attika', 'julkisivu': 'etelä', 'katu': 'The Mall', 'arvio': True}),
-        'way/120316250': ('palatsi', 'keski', "Apsley House", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Hyde Park Corner', 'arvio': True}),
-        'way/140470549': ('palatsi', 'keski', "Banqueting House", {'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
+        'way/372841786': ('palatsi', 'keski', "Somerset House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Strand'}),
+        'relation/3848545': ('palatsi', 'keski', "Burlington House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Piccadilly'}),
+        'relation/78291': ('palatsi', 'keski', "Foreign Office", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall', 'arvio': True}),
+        'way/133153176': ('palatsi', 'keski', "Horse Guards", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
+        'relation/20350084': ('palatsi', 'keski', "Old Admiralty", {'seina': 'tiili', 'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Horse Guards Parade', 'arvio': True}),
+        'way/33695114': ('palatsi', 'keski', "Mansion House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Bankin risteys (portiikki)', 'arvio': True}),
+        'way/4266524': ('palatsi', 'keski', "Lancaster House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Stable Yard', 'arvio': True}),
+        'relation/16057566': ('palatsi', 'keski', "Spencer House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'länsi', 'katu': 'Green Park'}),
+        'way/161800467': ('palatsi', 'keski', "Marlborough House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Pall Mall', 'arvio': True}),
+        'relation/1789966': ('palatsi', 'keski', "County Hall", {'seina': 'portland', 'katto': 'mansardi', 'julkisivu': 'länsi', 'katu': 'Thames', 'arvio': True}),
+        'way/54478457': ('palatsi', 'keski', "Clarence House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'etelä', 'katu': 'The Mall', 'arvio': True}),
+        'way/120316250': ('palatsi', 'keski', "Apsley House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Hyde Park Corner', 'arvio': True}),
+        'way/140470549': ('palatsi', 'keski', "Banqueting House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'itä', 'katu': 'Whitehall'}),
         'way/367646970': ('pylvastemppeli', 'keski', 'Royal Exchange', {'katto': 'attika', 'portiikki': True}),
     },
 }

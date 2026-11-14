@@ -12,6 +12,7 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
      tyyppi 1 kirkko-pieni, 2 kirkko-keski (a = torni_paikka 0 länsi / 1 risteys, b = torneja, c = huippu 0 pyramidi / 1 neula / 2 tasakatto),
             3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1, c = portiikki vain päädyssä 0/1),
             6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
+                          p2 = seinän sRGB 0xRRGGBB f32-kokonaislukuna (0 = oletuskivi; parametri 'seina' SEINA-taulusta)
             7 asema (a = halleja, p0 pituus, p1 leveys)
             8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
      Tyypit 1–4, 8 ja 9 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
@@ -34,6 +35,8 @@ TYYPPI = {('kirkko', 'pieni'): 1, ('kirkko', 'keski'): 2, ('kirkko', 'suuri'): 3
 SIVU = {None: 0, '': 0, '+x': 1, '-x': 2, '+z': 3, '-z': 4}
 PAIKKA = {'lansi': 0, 'risteys': 1}
 HUIPPU = {'pyramidi': 0, 'neula': 1, 'tasakatto': 2}
+# Seinävärit (KS 15.11. 01.4x, katot.py PERHEET['lontoo'].seinat): Portland-kivi = 'lontoo'-stukko, punatiili; LUONNOS (KK päättää pelikuvista).
+SEINA = {None: 0, 'portland': 0xE4DCCA, 'tiili': 0xAC7862}
 
 
 def alueella(k, merkit):
@@ -56,7 +59,7 @@ def malli(m):
         attika = p.get('katto') == 'attika'
         return (ty, 8 if p.get('portiikki') or not attika else 10, 0 if attika else 1, 1 if p.get('portiikki') else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     if t == 'palatsi':
-        return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 1 if p.get('katto') == 'attika' else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
+        return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 1 if p.get('katto') == 'attika' else 0, float(m['pituus']), float(m['leveys']), float(SEINA[p.get('seina')]), 0.0)
     if t == 'asema': return (ty, int(p['halleja']), 0, 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     raise ValueError(t)
 
