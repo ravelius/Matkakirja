@@ -152,6 +152,38 @@ namespace Matkakirja
             return r.Valmis();
         }
 
+        /// <summary>KIRKKO LEVEÄ (KK 15.11. 00.28 kohta 2; lyhyt ja leveä seurakuntakirkko, pohja noin 34 × 21 m, sivusuhde ~1,6): keskilaiva 22,5 × 10 m
+        /// räystäs 12 m, harja 18 m, viisisivuinen kuori; sivulaivat 2 × 5,5 m räystäs 7 m pulpettikatoin keskilaivan seinään 10 m:iin (yläikkunarivi
+        /// pulpetin ja räystään väliin); kolme suippoikkunaa sivulaivaa kohti. Torni samoin parametrein (paikka, torneja, huippu) kuin kirkko-keski,
+        /// mittakaava laivan mukaan: 8 m, runko 25 m, kärki 40 m (≈ 2,2 × harja, keskellä 2,1).</summary>
+        public static Verkko TyyppiKirkkoLevea(string paikka = "lansi", int torneja = 1, string huippu = "neula")
+        {
+            var r = TyRakentaja();
+            float x0 = -10.5f, x1 = 12f, zl = 5f, zs = 10.5f, y = 12f, h = 6f, ys = 7f, yp = 10f;
+            TySeinat(r, x0, x1, -zl, zl, 0f, y, TyKivi);
+            TyHarja(r, x0, x1, -zl, zl, y, h, 0.5f, TyKatto, TyKivi, true, true);
+            TyKuori(r, x1, 0f, zl, y - 1f, 4f, 5, TyKivi, TyKatto);
+            foreach (float s in new[] { -1f, 1f })
+            {
+                float zu = s * zs, zi = s * zl;
+                var sa = s > 0 ? r.S(x0, zu, x1, zu) : r.S(x1, zu, x0, zu);
+                sa.Pinta(0f, sa.Pituus, 0f, ys, 0f, TyKivi);
+                TyPulpetti(r, x0, x1, zu, zi, ys, yp, TyKatto);
+                foreach (float xe in new[] { x0, x1 })
+                    r.Neli(new P3(xe, 0f, zi), new P3(xe, 0f, zu), new P3(xe, ys, zu), new P3(xe, yp, zi), TyKivi, new P3(xe < 0f ? -1f : 1f, 0f, 0f));
+                float jakso = (x1 - x0 - 4f) / 3f;
+                var sk = s > 0 ? r.S(x0, zi, x1, zi) : r.S(x1, zi, x0, zi);
+                for (int i = 0; i < 3; i++)
+                {
+                    float xm = x0 + 4f + (i + 0.5f) * jakso, u = s > 0 ? xm - x0 : x1 - xm;
+                    Suippo(r, sa, u, 2f, 5.6f, 1.6f, 0.05f, TyAukko);
+                    if (i != 1) Suippo(r, sk, u, 10.4f, 11.6f, 1.4f, 0.05f, TyAukko);
+                }
+            }
+            TyKirkonTornit(r, x0, x1, zl, y + h, paikka, torneja, huippu, 8f, 25f, 40f, 2, 1.5f);
+            return r.Valmis();
+        }
+
         /// <summary>KIRKKO SUURI (katedraali): keskilaiva 90 × 14 m räystäs 24 m, harja 33 m; sivulaivat 2 × 9 m räystäs 12 m pulpettikatoin; poikkilaiva
         /// 14 × 48 m keskellä; viisisivuinen kuori; kaksi länsitornia 12 m tasakatoin 58 m:iin (≈ 1,8 × harja); tukipilarit lentotukineen; risteyksen
         /// kattoratsastaja (flèche, NdFleche yksinkertaistettuna) 62 m:iin.</summary>
@@ -609,6 +641,7 @@ namespace Matkakirja
         {
             ("kirkko-pieni", TyyppiKirkkoPieni(), 400),
             ("kirkko-keski", TyyppiKirkkoKeski(), 900),
+            ("kirkko-levea", TyyppiKirkkoLevea(), 900),
             ("kirkko-suuri", TyyppiKirkkoSuuri(), 1500),
             ("asema", TyyppiAsema(), 1500),
             ("palatsi", TyyppiPalatsi(), 1500),
@@ -623,6 +656,8 @@ namespace Matkakirja
             ("kirkko-keski-risteys-1-pyramidi", TyyppiKirkkoKeski("risteys", 1, "pyramidi"), 900),
             ("kirkko-keski-lansi-2-neula", TyyppiKirkkoKeski("lansi", 2, "neula"), 900),
             ("kirkko-keski-lansi-1-tasakatto", TyyppiKirkkoKeski("lansi", 1, "tasakatto"), 900),
+            ("kirkko-levea-lansi-2-neula", TyyppiKirkkoLevea("lansi", 2, "neula"), 900),
+            ("kirkko-levea-risteys-1-pyramidi", TyyppiKirkkoLevea("risteys", 1, "pyramidi"), 900),
             ("kirkko-pieni-risteys-2-pyramidi", TyyppiKirkkoPieni("risteys", 2, "pyramidi"), 400),
             ("talo", TyyppiTalo(), 0),
         };

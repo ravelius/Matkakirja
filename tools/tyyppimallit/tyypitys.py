@@ -67,11 +67,12 @@ NIMILISTAT = {
 }
 NIMILISTA_TILA = {'kupolikirkko': 'hyväksytty', 'pylvastemppeli': 'hyväksytty', 'asema': 'hyväksytty', 'palatsi': 'hyväksytty'}
 # TORNIN OLETUKSET kokoluokittain (KK 23.05 kohta 2): paikka (lansi | risteys), torneja (1 | 2), huippu (pyramidi | neula | tasakatto).
-TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'), 'suuri': ('lansi', 2, 'tasakatto')}
+TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'), 'levea': ('lansi', 1, 'neula'), 'suuri': ('lansi', 2, 'tasakatto')}
 # Tyypit, joille on malli (oma/Tyyppimallit.cs); muut tyypitetyt menevät "ei sovi" -listaan.
-MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski'), ('asema', 'suuri'), ('palatsi', 'keski'), ('pylvastemppeli', 'keski')}
+MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski'), ('asema', 'suuri'), ('palatsi', 'keski'), ('pylvastemppeli', 'keski')}
 # Mallien pohjan mitat (pituus × leveys m, torni mukana; kaanna.sh tulostaa): luonnollinen sovitus kirkoille kaistalla (KK 23.32).
-MALLIMITAT = {('kirkko', 'pieni'): (32.0, 12.0), ('kirkko', 'keski'): (61.0, 19.0), ('kirkko', 'suuri'): (111.0, 49.0),
+# kirkko-levea (KK 15.11. 00.28 kohta 2): lyhyt ja leveä, sivulaivat; vain venytysvalinnassa (koko ei tule pinta-alasta).
+MALLIMITAT = {('kirkko', 'pieni'): (32.0, 12.0), ('kirkko', 'keski'): (61.0, 19.0), ('kirkko', 'levea'): (34.0, 21.0), ('kirkko', 'suuri'): (111.0, 49.0),
               ('kupolikirkko', 'keski'): (76.7, 34.2)}   # kupolikirkko: obj/kupolikirkko.obj rajat (−39,5…37,2 × ±17,1)
 # Instansoitavat (yksi jaettu verkko, venytys sx = pituus / L, sz = leveys / W). Palatsi, asema ja pylvästemppeli rakennetaan pohjan mitoista
 # (parametrinen, ei venytystä) ja leivotaan latauksessa yhdeksi staattiseksi verkoksi (KK 15.11. 00.16 kohta 3).
@@ -84,6 +85,7 @@ SOVITUS = {
     'max_mittakaava': 1.2,         # suurempi → kokeillaan yhtä suurempaa kokoluokkaa, muuten ei sovi (KK 14.11. 23.40 A)
     'venytys_min': 0.6,            # pohja-sovituksen venytys kummallakin akselilla; ulkopuolella ei sovi, perustalo jää (KK 15.11. 00.16 kohta 2)
     'venytys_max': 1.6,
+    'kirkko_min_pituus': 20.0,     # m: lyhyempi kirkko jää perustaloksi (KK 15.11. 00.28 kohta 3)
     'min_tayttoaste': 0.55,        # ala / pienin suorakaide: pienempi = L-, U- tai sisäpihallinen pohja
 }
 # Ikonien koodimallit (OhjelmaKohde*.cs, Lat/Lon-vakiot) ja säde metreinä: ehdokas, jonka keskipiste on säteen sisällä, on ikoni ja ohitetaan.
@@ -500,7 +502,7 @@ def main(a):
         if (tyyppi, koko) in INSTANSSIT and sovitus == 'pohja':
             def venytys(kk): L, W = MALLIMITAT[(tyyppi, kk)]; return pit / L, lev / W
             if tyyppi == 'kirkko' and syy is None and not saanto.startswith(('nimilista', 'käsikorjaus')):
-                paras = min(('pieni', 'keski', 'suuri'), key=lambda kk: max(abs(math.log(v)) for v in venytys(kk)))
+                paras = min(('pieni', 'keski', 'levea', 'suuri'), key=lambda kk: max(abs(math.log(v)) for v in venytys(kk)))
                 if paras != koko:
                     saanto += f'; venytys: {koko} → {paras}'; koko = paras
                     tp, tn, th = TORNI_OLETUS[koko]
@@ -511,6 +513,8 @@ def main(a):
             sx, sz = venytys(koko)
             if syy is None and not (SOVITUS['venytys_min'] <= sx <= SOVITUS['venytys_max'] and SOVITUS['venytys_min'] <= sz <= SOVITUS['venytys_max']):
                 syy = f"venytys (x {sx:.2f}, z {sz:.2f}; raja {SOVITUS['venytys_min']}–{SOVITUS['venytys_max']})"
+        if tyyppi == 'kirkko' and syy is None and pit < SOVITUS['kirkko_min_pituus'] and not saanto.startswith(('nimilista', 'käsikorjaus')):
+            syy = f"alle {SOVITUS['kirkko_min_pituus']:.0f} m (pituus {pit:.1f})"
         la_c = meta['lat'] + c[1] / 111320.0; lo_c = meta['lon'] + c[0] / (111320.0 * math.cos(math.radians(meta['lat'])))
         merkit.append({
             'osm': oid, 'tyyppi': tyyppi, 'koko': koko, 'saanto': saanto, 'nimi': nimi, 'wikidata': t.get('wikidata'),
