@@ -1,0 +1,21 @@
+asema|Gare Saint-Lazare	asema	5	248.6	246.7
+asema|Gare d'Austerlitz	asema	2	288.9	118.7
+asema|Gare de Lyon	asema	4	217.4	181.1
+asema|way/280670907	asema	2	202.5	114.4
+asema|way/63197091	asema	3	185.1	136.7
+kirkko-keski|lansi|1|neula	kirkko-keski	lansi	1	neula
+kirkko-pieni|lansi|1|pyramidi	kirkko-pieni	lansi	1	pyramidi
+kirkko-suuri	kirkko-suuri
+kupolikirkko|true	kupolikirkko	true
+palatsi|Château de la Muette	piha	54.0	50.7	+x	
+palatsi|Hôtel de Crillon	piha	90.9	31.4	-x	
+palatsi|Hôtel de Lassay	piha	57.9	22.2	-z	
+palatsi|Hôtel de Matignon	piha	70.6	59.5	+x	
+palatsi|Hôtel de la Marine	piha	94.1	65.3	-z	
+palatsi|Hôtel du ministre des Affaires étrangères	piha	77.5	38.7	+z	
+palatsi|Palais Cambon	piha	85.3	52.9	+x	
+palatsi|Palais Royal	piha	143.8	132.8	-z	
+palatsi|Palais de l'Élysée	piha	114.5	107.8	+x	-x
+palatsi|Palais de la Légion d'Honneur	piha	78.3	68.3	-x	
+palatsi|Palais du Luxembourg	piha	149.9	90.6	+x	
+pylvastemppeli|attika	pylvastemppeli	70	42	10	false

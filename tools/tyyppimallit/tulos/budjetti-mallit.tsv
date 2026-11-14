@@ -1,0 +1,22 @@
+avain	kolmioita	karkia	syvyys	ulko	leveys_x	syvyys_z	korkeus_y
+asema|Gare Saint-Lazare	1424	4272	1	0	250.9	251.7	34.9
+asema|Gare d'Austerlitz	704	2112	1	0	291.2	123.7	37.9
+asema|Gare de Lyon	1104	3312	1	0	219.2	186.1	33.1
+asema|way/280670907	704	2112	1	0	204.8	119.4	37.3
+asema|way/63197091	884	2652	1	0	186.9	141.7	33.2
+kirkko-keski|lansi|1|neula	126	378	1	0	60.8	19.2	46.0
+kirkko-pieni|lansi|1|pyramidi	75	225	1	0	32.2	12.0	26.0
+kirkko-suuri	635	1905	1	0	111.2	49.0	62.0
+kupolikirkko|true	1350	4050	1	0	76.7	34.1	58.0
+palatsi|Château de la Muette	1107	3321	1	0	55.9	50.8	26.1
+palatsi|Hôtel de Crillon	675	2025	1	0	92.7	31.4	26.1
+palatsi|Hôtel de Lassay	483	1449	1	0	57.9	24.1	26.1
+palatsi|Hôtel de Matignon	1179	3537	1	0	72.5	59.6	26.1
+palatsi|Hôtel de la Marine	1263	3789	1	0	94.2	67.2	26.1
+palatsi|Hôtel du ministre des Affaires étrangères	611	1833	1	0	77.5	40.6	26.1
+palatsi|Palais Cambon	1203	3609	1	0	87.2	53.0	26.1
+palatsi|Palais Royal	1347	4041	1	0	143.9	134.7	26.1
+palatsi|Palais de l'Élysée	1151	3453	1	0	116.3	107.9	26.1
+palatsi|Palais de la Légion d'Honneur	1227	3681	1	0	80.2	68.4	26.1
+palatsi|Palais du Luxembourg	1347	4041	1	0	151.8	90.7	26.1
+pylvastemppeli|attika	818	2454	1	0	81.3	42.0	37.0

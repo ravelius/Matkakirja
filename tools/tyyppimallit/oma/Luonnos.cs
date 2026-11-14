@@ -14,6 +14,7 @@ namespace Matkakirja
             var ulos = a.Length > 0 ? a[0] : "obj";
             var ci = CultureInfo.InvariantCulture;
             if (ulos == "ikonit") return Ikonit(a[1], a.Length > 2 ? a[2] : "ikonit.json");   // Luonnos.dll ikonit <koodimallit.tsv> <ikonit.json>
+            if (ulos == "budjetti") return Budjetti(a[1], a[2]);   // Luonnos.dll budjetti <muunnelmat.tsv> <ulos.tsv> (KK 14.11. 23.59 budjetti)
             Directory.CreateDirectory(ulos);
             var lista = OhjelmaKohdeGeometria.TyyppiLuonnokset();
             // Parametrinen vienti (sovituskuviin): Luonnos.dll <kansio> <nimi> palatsi-piha <pituus> <leveys> [julkisivu +z|-z|+x|-x] [avoin sivu]
@@ -44,6 +45,36 @@ namespace Matkakirja
                 string tila = raja == 0 ? "" : (v.Kolmioita <= raja ? " OK" : " YLI");
                 Console.WriteLine($"{nimi}\tkolmioita {v.Kolmioita}\traja {raja}{tila}\tkoko {v.MaxX - v.MinX:0} × {v.MaxZ - v.MinZ:0} × {v.MaxY:0} m");
             }
+            return 0;
+        }
+
+        /// <summary>BUDJETTI (KK 14.11. 23.59): jokaisen mallimuunnelman kolmiot ja kärjet. Rivi: avain, tyyppi, parametrit (tab). Tyypit:
+        /// kirkko-pieni|kirkko-keski paikka torneja huippu; kirkko-suuri; asema halleja pituus leveys; piha pituus leveys julkisivu avoin;
+        /// kupolikirkko pylvaspaaty(true/false); pylvastemppeli pituus leveys paaty harja.</summary>
+        static int Budjetti(string sisaan, string ulos)
+        {
+            var ci = CultureInfo.InvariantCulture;
+            var sb = new StringBuilder("avain\tkolmioita\tkarkia\tsyvyys\tulko\tleveys_x\tsyvyys_z\tkorkeus_y\n");
+            foreach (var rivi in File.ReadAllLines(sisaan))
+            {
+                var o = rivi.Split('\t'); if (o.Length < 2 || o[0] == "avain") continue;
+                float F(int i) => float.Parse(o[i], ci);
+                OhjelmaKohdeGeometria.Verkko v = o[1] switch
+                {
+                    "kirkko-pieni" => OhjelmaKohdeGeometria.TyyppiKirkkoPieni(o[2], int.Parse(o[3]), o[4]),
+                    "kirkko-keski" => OhjelmaKohdeGeometria.TyyppiKirkkoKeski(o[2], int.Parse(o[3]), o[4]),
+                    "kirkko-suuri" => OhjelmaKohdeGeometria.TyyppiKirkkoSuuri(),
+                    "asema" => OhjelmaKohdeGeometria.TyyppiAsema(int.Parse(o[2]), F(3), F(4)),
+                    "piha" => OhjelmaKohdeGeometria.TyyppiPalatsiPiha(F(2), F(3), o[4], o.Length > 5 ? o[5] : ""),
+                    "kupolikirkko" => OhjelmaKohdeGeometria.TyyppiKupolikirkko(o[2] == "true"),
+                    "pylvastemppeli" => OhjelmaKohdeGeometria.TyyppiPylvastemppeli(F(2), F(3), int.Parse(o[4]), o[5] == "true"),
+                    _ => throw new ArgumentException("tuntematon tyyppi " + o[1]),
+                };
+                int ulkoja = 0; if (v.Ulko != null) foreach (var u in v.Ulko) if (u) ulkoja++;
+                sb.AppendFormat(ci, "{0}\t{1}\t{2}\t{3}\t{4}\t{5:0.0}\t{6:0.0}\t{7:0.0}\n", o[0], v.Kolmioita, v.Karkia, v.Syvyys != null ? 1 : 0, ulkoja,
+                    v.MaxX - v.MinX, v.MaxZ - v.MinZ, v.MaxY);
+            }
+            File.WriteAllText(ulos, sb.ToString());
             return 0;
         }
 
