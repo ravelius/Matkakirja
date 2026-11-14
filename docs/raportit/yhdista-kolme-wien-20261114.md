@@ -2,7 +2,7 @@
 
 Taulukko, EI pelidataa, ei latauksia, ei leikkausta, ei generointia. Malli: yhdista-kolme-lontoo-20261113.md. Pohja: viisi-kaupunkia-20261113/wien-tutkimus.md (A- ja A−-luokat). Tämän päivän lisätarkistus: Wien-väitteet luettiin lähdesivuilta (Sonnet web-fetch, 14.11.; robots noudatettu, 403 ja botinesto raportoitu eikä kierretty), äänitteiden lisenssit ja kestot Commonsin rajapinnasta (14.11.). Äänitteiden aikaleimat eivät perustu kuunteluun: **kaikki otteet on kuultava ennen käyttöä**.
 
-KK 09.20: napautuksella soiva valmis äänite vaatii omistajan luvan (musiikki-ja-tehosteet sääntö 1); KK kysyy sen. Tämä luonnos ei lataa, leikkaa eikä vie mitään.
+KK 09.20: napautuksella soiva valmis äänite vaatii omistajan luvan (musiikki-ja-tehosteet sääntö 1). **LUPA ANNETTU: omistajan päätös 14.11. klo 09.4x (kortti), "Saa käyttää": Wienin tehtävässä saa käyttää valmiita, vapaita orkesteriäänitteitä (KK 09.43). Otteet tekee Äänittäjä; SK ei lataa eikä leikkaa ääntä. Osa B (varasarja ilman ääntä) EI tarvita.** Tämä luonnos ei lataa, leikkaa eikä vie mitään.
 
 ## A. Sävelmä ↔ säveltäjä (6 paria = 2 kolmikkoa + 2 varaparia)
 
@@ -74,15 +74,15 @@ Kolmikko 2 on heikompi kuin 1: Brahms 2 on 1873:n jälkeinen (isoisän matkavuos
 | Mustalaisparoni (vara) | `Overture to The Gypsy Baron - U.S. Marine Band.ogg` | Public domain (PD-USMC) | US Marine Band | n. 443 s; ogg 21,5 MB | ei määritelty | K |
 
 Riskit ja päätettävää (äänipuoli):
-1. **Omistajan lupa** napautusotteille (KK kysyy). Samoin ote LEIKATAAN pitkästä äänitteestä; musiikki-ja-tehosteet sääntö 8 (ei pitkistä nauhoitteista leikattuja paloja) on kirjoitettu äänimaisemille ja tehosteille, mutta KK päättää, koskeeko se otteita.
+1. ~~Omistajan lupa napautusotteille~~ annettu 14.11. klo 09.4x (ks. alku). Ote LEIKATAAN pitkästä äänitteestä; musiikki-ja-tehosteet sääntö 8 (ei pitkistä nauhoitteista leikattuja paloja) on kirjoitettu äänimaisemille ja tehosteille, mutta KK päättää, koskeeko se otteita.
 2. Flac-tiedostot ovat 44–159 MB: vienti tarvitsee pienen ogg-/opus-kopion (työkalu ÄÄ/PK), ei latausta ennen KK:n sanaa.
 3. Pelkät "European Archive" -Musopen-lataukset (Kaiserwalzer, Kleine Nachtmusik ym.) jätetään pois esittäjän puuttuessa (wien-tutkimus kohta C). CC BY-SA -ääntä ei käytetä (lisenssit-ja-lataukset sääntö 1).
 4. Lähdeluettelo: tekijä ja lisenssi lahteet.js/aanilahteet.json:iin, ei tehtävänäkymään (lisenssit sääntö 4). Äänitteiden nimeäminen aanilahteet.json:iin on PK/ääni-työtä.
 5. Omistaja hylkäsi 12.11. "kuuntele ja valitse" -tehtävän; tämä on Yhdistä-tehtävä, jossa ääni on vihje, mutta KK tuntee rajan paremmin.
 
-## B. Varasarja ilman ääntä: säveltäjä ↔ muotokuva (6 paria)
+## B. Varasarja ilman ääntä: säveltäjä ↔ muotokuva (6 paria) — EI TARVITA (KK 09.43, lupa annettu); säilytetty vain tiedoksi
 
-Käytetään, jos omistaja ei anna lupaa ääneen. Kaikki kuvat on valittu Commonsista rajapinnalla (14.11.); lisenssi luettu rajapinnasta, **kuvia ei ole katsottu silmin eikä ladattu**: lisenssit-ja-lataukset sääntö 3 vaatii silmämääräisen tarkistuksen ennen käyttöä. Kaikki ovat Public domain (tekijä kuollut yli 70 v sitten tai julkaistu ennen 1900); mikään ei ole CC BY-SA. Tekijä ja lisenssi lähdeluetteloon, ei tehtävänäkymään.
+Olisi käytetty, jos omistaja ei olisi antanut lupaa ääneen. Kaikki kuvat on valittu Commonsista rajapinnalla (14.11.); lisenssi luettu rajapinnasta, **kuvia ei ole katsottu silmin eikä ladattu**: lisenssit-ja-lataukset sääntö 3 vaatii silmämääräisen tarkistuksen ennen käyttöä. Kaikki ovat Public domain (tekijä kuollut yli 70 v sitten tai julkaistu ennen 1900); mikään ei ole CC BY-SA. Tekijä ja lisenssi lähdeluetteloon, ei tehtävänäkymään.
 
 | # | Säveltäjä | Commons-tiedosto | Tekijä, ajoitus | Lisenssi | Koko | Wien-yhteys (tarkistus) |
 |---|---|---|---|---|---|---|
@@ -100,4 +100,4 @@ Huomiot:
 - Soitin–kuva-vaihtoehtoa (Wienin hovi- ja salonkisoittimet, esim. pianot tai viulut) ei tutkittu; jos KK haluaa yhden soitinparin, kysy erikseen.
 
 ## Mitä tämä luonnos ei tee
-Ei lataa tiedostoja, ei leikkaa ääntä, ei muuta dataa, ei kirjoita pelitekstejä. Äänet ja kuvat vaativat KK:n sanan, omistajan luvan ääneen (kohta A, riski 1) ja silmämääräisen kuvatarkistuksen.
+Ei lataa tiedostoja, ei leikkaa ääntä, ei muuta dataa, ei kirjoita pelitekstejä. Äänet ja kuvat vaativat KK:n sanan, (osa B:n osalta) silmämääräisen kuvatarkistuksen; omistajan lupa ääneen on annettu.
