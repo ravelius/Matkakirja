@@ -1,0 +1,78 @@
+{
+  "file": "kronborg-2288-max-original-8k.glb",
+  "bytes": 80509048,
+  "sha256": "1ddfff4f55b498f8075f3c9772f7426a055c8ce910f536796f1148f14adf9746",
+  "triangles": 1868968,
+  "vertices": 1093277,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_75ea6872-6dd1-43a0-a97e-92f1b7bd1544",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1448470
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_d5030595-575a-4ab7-9306-beefc5c14aa4_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 18605344
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_d5030595-575a-4ab7-9306-beefc5c14aa4_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 3040487
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.48593151569366455,
+      0,
+      -0.4906616359949112
+    ],
+    "max": [
+      0.485870361328125,
+      0.54376220703125,
+      0.4904479831457138
+    ],
+    "dimensions": [
+      0.9718018770217896,
+      0.54376220703125,
+      0.981109619140625
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": [],
+  "matchesCheckpointSHA256": true,
+  "matchesCheckpointTriangles": true
+}

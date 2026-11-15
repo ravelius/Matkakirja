@@ -1,0 +1,21 @@
+{
+  "method": "Read-only existing Tripo viewer; axis gizmo +/-X and +/-Z, plus manually orbited upper view; no Blender render, modification or generation",
+  "jobId": "d1e5752c-1e01-4819-879f-d5d3d233dc17",
+  "cropFromFullScreenshot": [
+    700,
+    250,
+    1850,
+    1140
+  ],
+  "reviewMaxPx": 1000,
+  "createdAt": "2026-11-15T20:12:17.177956+00:00",
+  "sourceModelUnchanged": true,
+  "views": [
+    "01-plusZ-1000.jpg",
+    "02-plusX-1000.jpg",
+    "03-minusZ-1000.jpg",
+    "04-minusX-1000.jpg",
+    "05-upper-oblique-1000.jpg"
+  ],
+  "geographicRegistration": "unresolved; local axis labels, geographic compass not asserted"
+}
