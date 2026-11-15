@@ -1,0 +1,15 @@
+# Turun linna v2 #2322 — riippumaton visuaalinen QA
+
+**Verdict: WARNING — toinen torni ja pelkistetty ovi näkyvät; toisen tornin täsmällinen runkoliittymä ja mittasuhteet jäävät varmistamatta. Ei KK-hyväksyntä tai Tripo-lupa.**
+
+Katsottu natiivi `turku-model-v2.png`; verrattu tämän erän valmistelussa katsottuun `output/linnat-jatko-20261115-2222/turku/turku.jpg`-kollaasiin ja saman hakemiston `turku-model-v1-1000.jpg`:hen. Lähde-MD:t, edeltävä QA, tämän hakemiston valmistelu ja uusi KK-päätös (commit `efe45884bbaa58fefd7a30331d221134f415149d`) määräävät tarkistuksen.
+
+- **Toinen torni: näkyvä korjaustavoite PASS.** Oikean etualan korkean päätornin lisäksi vasemmalla taaempana, päälinnan esilinnanpuoleisessa päässä, erottuu nelikulmainen kivinen torni vihreine pyramidikattoineen. Se nousee viereisten kattojen yli eikä toinen pää enää jatku vain matalana kattomassana. Kuvassa on kaksi vihreäkattoista päälinnan torniksi tarkoitettua massaa; valkoisen esilinnan tumma katto/kulmatorni erottuu niistä.
+- **Tornin paikka ja suhteet: WARNING.** Taaemman tornin alaosa ja liittymä päälinnan runkoon peittyvät vihreän pääkaton sekä valkoisten tummakattoisten osien taakse. Tästä ei voi todistaa tornin täsmällistä pohjapaikkaa, mittoja tai runkoliittymää eikä varmistaa, että se on rakennettu oikein päälinnaan eikä vain asetettu taustalle. Sen toistuvat pintapiirteet ja aukotukset eivät saa tarkkaa tukea pienestä ilmaruudusta5. KK:n hyväksymä yleissijainnin tulkinta on toteutettu kuvan tasolla; mittatarkkaa rekonstruktiota ei ole varmennettu.
+- **Portaali: korjaus PASS.** Oikean päätornin ovella ei enää ole v1:n suurta koristekehystä/katosaihetta. Nyt näkyy pieni kaariovi ja yksinkertainen vaalea kaarireunus, ei palatsimainen portaali. Ylempänä seinässä oleva pieni syvennysaihe on eri asia kuin poistettu sisäänkäynnin koristekokonaisuus; sen yksityiskohtia ei vahvisteta tällä koonnilla.
+- **Muu massajako ja pinnat säilyvät.** Korkea päälinna on edessä, sen pitkä runko vasemmalle, matalampi valkoinen esilinna tummine kattoineen takana. Vihreä kupari ja lähteiden vaaleat rappausalueet säilyvät. Teline-/suojapeitekaistale ei palaa. Korjaus ei aiheuta näkyvää kokonaisuuden peilausta. Lähdekollaasin2/3 päämassat ovat tunnistettavia, mutta siipien kaikkia pituuksia, aukotusta tai esilinnan takarakennusten pohjaa ei voi vahvistaa.
+- **Suunta ja peitto.** Näkymä säilyy v1:n kameraperheessä. NW/pohjoissivu on KK:n uudempi tulkinta, vastoin vanhan kollaasin3 epävarmaa SW/S-tekstiä; SK:n karttavarmistus on avoin. Tämä QA ei ratkaise ilmansuuntaa. Esilinnan piha, pohjoisen piilo-osat ja tarkka kattopohja eivät tule tästä näkymästä todistetuiksi.
+
+**KK-puuterivi:** Toinen vihreäkattoinen torni näkyy nyt päälinnan esilinnanpuoleisessa päässä ja koristeportaali on pelkistetty kaarioveksi; tornin peittyvä runkoliittymä, täsmäsuhteet ja esilinnan koko pohja jäävät lähdekollaasin rajojen vuoksi arvioiksi.
+
+Ei uutta generointia, korjausta, mallia, selainta, lähetystä tai yhteistilan muutosta. Yksi sallittu v2-kutsu on käytetty; vastapuolen kuvaa ei tarkistettu tässä raportissa.

@@ -1,0 +1,171 @@
+{
+  "jobs": [
+    {
+      "taskNumber": 2321,
+      "slug": "neuschwanstein-v4-2321",
+      "status": "QA_READY_AWAITING_DELIVERY",
+      "maxCalls": 1,
+      "callsReserved": 1,
+      "method": "built-in image_gen",
+      "cost": "not exposed",
+      "sourceCommit": "efe45884bbaa58fefd7a30331d221134f415149d",
+      "sourceBlob": "74c12c1b2a89b35be92308f361f720e00237dca0",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/neuschwanstein-v4-2321/imagegenprompt.txt",
+      "promptSHA256": "1c4b2d4d5aa71e48f10438525413d82e0f9ee866e84f1e0bcef837842f560f97",
+      "refs": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/neuschwanstein/neuschwanstein.jpg",
+          "sha256": "37fc935dc84961e68c0b9f8a21ec2113082987e9dd9f1a38a4743608099069c0"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-20261115-2222/neuschwanstein-v3/neuschwanstein-model-v3.png",
+          "sha256": "8c092864ee9fe4db5a5ab0569febb5985a452668d3b5177daa3f7cd8c69a03cb"
+        }
+      ],
+      "startedAt": "2026-11-15T21:05:10.076414+00:00",
+      "estimatedFinish": "2-5min after submission",
+      "tripoAllowed": false,
+      "gameIntegration": false,
+      "calls": 1,
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/neuschwanstein-v4-2321/neuschwanstein-model-v4.png",
+      "nativeSHA256": "4fa70babaed49a24bdfef69a0a53928ff219fc1bb290852b8cd5cbb8b185ff53",
+      "artifactId": "exec-bf0b5f09-de6b-4558-8bef-eb64e502f9b3",
+      "providerJobId": null,
+      "completedAt": "2026-11-15T21:07:31.847763+00:00",
+      "qa": "WARNING",
+      "qaFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/neuschwanstein-v4-2321/QA.md",
+      "receiverAccepted": false
+    },
+    {
+      "taskNumber": 2322,
+      "slug": "turku-v2-2322",
+      "status": "QA_READY_AWAITING_DELIVERY",
+      "maxCalls": 1,
+      "callsReserved": 1,
+      "method": "built-in image_gen",
+      "cost": "not exposed",
+      "sourceCommit": "efe45884bbaa58fefd7a30331d221134f415149d",
+      "sourceBlob": "74c12c1b2a89b35be92308f361f720e00237dca0",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/imagegenprompt.txt",
+      "promptSHA256": "7d0ee6924e171ff03ead09aa35628f744d06e2e13e89840e8f7f1eeab347e0ea",
+      "refs": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-20261115-2222/turku/turku.jpg",
+          "sha256": "989530cece26b367045d29438e314b31866833612e84941b915823d31b73d402"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-20261115-2222/turku/turku-model-v1.png",
+          "sha256": "4198177e1b91b9c8985fdc21da315f61ad94a8f5b4bcedc63a3ed2d8c889e489"
+        }
+      ],
+      "startedAt": "2026-11-15T21:05:10.078000+00:00",
+      "estimatedFinish": "2-5min after submission",
+      "tripoAllowed": false,
+      "gameIntegration": false,
+      "calls": 1,
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/turku-model-v2.png",
+      "nativeSHA256": "ac876829e1c006c7e781e1fa4b316172c2ae00790940be063a0ae20ed7e95c2c",
+      "artifactId": "exec-8bb87ef7-b274-4dd3-aef8-e890d2cb4caa",
+      "providerJobId": null,
+      "completedAt": "2026-11-15T21:07:31.888264+00:00",
+      "qa": "WARNING",
+      "qaFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/QA.md",
+      "receiverAccepted": false
+    },
+    {
+      "taskNumber": 2323,
+      "slug": "turku-vastapuoli-2323",
+      "status": "QA_READY_AWAITING_DELIVERY",
+      "maxCalls": 1,
+      "callsReserved": 1,
+      "method": "built-in image_gen",
+      "cost": "not exposed",
+      "sourceCommit": "efe45884bbaa58fefd7a30331d221134f415149d",
+      "sourceBlob": "74c12c1b2a89b35be92308f361f720e00237dca0",
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-vastapuoli-2323/imagegenprompt.txt",
+      "promptSHA256": "0090b7b9ebb5e02069ea6beefca03c3920a8e77888ceec01fa99395589ac4fb3",
+      "refs": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-20261115-2222/turku/turku.jpg",
+          "sha256": "989530cece26b367045d29438e314b31866833612e84941b915823d31b73d402"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/turku-model-v2.png",
+          "sha256": "ac876829e1c006c7e781e1fa4b316172c2ae00790940be063a0ae20ed7e95c2c",
+          "role": "corrected front view for same massing/materials only"
+        }
+      ],
+      "startedAt": "2026-11-15T21:07:31.889371+00:00",
+      "estimatedFinish": "2-5min after submission",
+      "tripoAllowed": false,
+      "gameIntegration": false,
+      "calls": 1,
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-vastapuoli-2323/turku-vastapuoli-v1.png",
+      "nativeSHA256": "556a95fdbb6e03d82bca851a992cf046aee8132f02e7a588d611fd390e2910af",
+      "artifactId": "exec-8066ece1-8170-4221-8efb-62ef6326dfb7",
+      "providerJobId": null,
+      "completedAt": "2026-11-15T21:10:33.909640+00:00",
+      "qa": "WARNING",
+      "qaFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-vastapuoli-2323/QA.md",
+      "receiverAccepted": false
+    }
+  ],
+  "sourceCommit": "efe45884bbaa58fefd7a30331d221134f415149d",
+  "method": "built-in image_gen",
+  "totalImageCalls": 3,
+  "maxCallsPerImage": 1,
+  "tripoCalls": 0,
+  "noAutomaticRetry": true,
+  "receiverAccepted": false,
+  "gameIntegration": false,
+  "files": {
+    "neuschwanstein-v4-2321-QA.md": {
+      "sha256": "0ec0a26a0b1705069cec54f1a1044104d3a623a707ffeae092d3f670abf7f24a",
+      "bytes": 2717
+    },
+    "neuschwanstein-v4-2321-imagegenprompt.txt": {
+      "sha256": "1c4b2d4d5aa71e48f10438525413d82e0f9ee866e84f1e0bcef837842f560f97",
+      "bytes": 1982
+    },
+    "neuschwanstein-v4-2321-neuschwanstein-model-v4-1000.jpg": {
+      "sha256": "f56af52dc8fc3a06ed56bbe5b0e00782b19adf4bf044753cdf21deb5c7a773b7",
+      "bytes": 147200
+    },
+    "neuschwanstein-v4-2321-source-preparation.md": {
+      "sha256": "d6e24151a933833e8bf783abdee3ac62a3e07d6f53fae534e12ede4749483c9b",
+      "bytes": 3518
+    },
+    "turku-v2-2322-QA.md": {
+      "sha256": "27a056fa3be8a3f7a49d8ad4a1b413aa3495b2c0dad8250b04ed32ae76b63422",
+      "bytes": 3238
+    },
+    "turku-v2-2322-imagegenprompt.txt": {
+      "sha256": "7d0ee6924e171ff03ead09aa35628f744d06e2e13e89840e8f7f1eeab347e0ea",
+      "bytes": 2230
+    },
+    "turku-v2-2322-source-preparation.md": {
+      "sha256": "f0de459dc9907371b805aabcde3dd72a4086b5c3bb48743680ae787efef12ea3",
+      "bytes": 4646
+    },
+    "turku-v2-2322-turku-model-v2-1000.jpg": {
+      "sha256": "ff967f55b75e189daf7f24a70f3170872b0da71e6a88d753ad4f6c3c6de50594",
+      "bytes": 151206
+    },
+    "turku-vastapuoli-2323-QA.md": {
+      "sha256": "3d10023380a7f24190f535637f1fe56c8bc2f7d9f18bdd4ae07e9db1efe5e926",
+      "bytes": 4126
+    },
+    "turku-vastapuoli-2323-imagegenprompt.txt": {
+      "sha256": "0090b7b9ebb5e02069ea6beefca03c3920a8e77888ceec01fa99395589ac4fb3",
+      "bytes": 2861
+    },
+    "turku-vastapuoli-2323-source-preparation.md": {
+      "sha256": "f1da3db7be393bc828b0e04fb37b9e56d62e3df80b1041ba540cfe9db0cd5b1e",
+      "bytes": 5443
+    },
+    "turku-vastapuoli-2323-turku-vastapuoli-v1-1000.jpg": {
+      "sha256": "5a121b295771c8cfc21869a31fd7af7346cbde2cb3b1bdeefa05b90c614b3c74",
+      "bytes": 140596
+    }
+  }
+}
