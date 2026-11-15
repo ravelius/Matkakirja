@@ -243,7 +243,7 @@ export const EUROOPAN_KADONNEET = {
         + 'Appliances (1884); paris.fr "Les petits secrets du Grand Palais"; fr-Wikipedia "Palais de l\'Industrie" '
         + '(tarkistettu 15.11.2026).',
       kuva: 'ihme-palais-industrie-loistoaika.jpg',
-      lyhyt: 'Salonin vieraat kulkevat taulujen ohi lasikaton alla; vajaat kolmekymmentä vuotta myöhemmin halli '
+      lyhyt: 'Salonin vieraat kulkevat taulujen ohi lasikaton alla; noin neljännesvuosisata myöhemmin halli '
         + 'puretaan.',
       selite: 'Vuonna 1873 Salonin vieraat kulkevat rautaisen ja lasisen hallin sisällä taulujen ohi, ja '
         + 'lasikaton alla kävijöiden askeleet kaikuvat. Halli puretaan 1890-luvun lopulla vuoden 1900 '
