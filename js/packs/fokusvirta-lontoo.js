@@ -128,7 +128,7 @@ export const FOKUSVIRTA_LONTOO = {
      * Wienissä (js/packs/fokusvirta-wien.js paikkarivi).
      */
     paikkarivi: "Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun toista puolta erota; puntari matalalla.",
-    /* KAANON: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 08.33 kortilla "Kelpaa"; KK:n lopulliset tekstit, suunnitelmat/20261115-lontoon-tekstit-lopulliset.md). Sanasta sanaan. 256 merkkiä. */
+    /* KAANON: OMISTAJAN TEKSTI (omistajan 9.9.2026 teksti lyhennettynä, omistaja hyväksyi 15.11.2026 klo 08.33; suunnitelmat/20261115-lontoon-tekstit-lopulliset.md). Sanasta sanaan. 256 merkkiä. */
     teksti: "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla kilpakumppanini Grimshaw tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -242,11 +242,12 @@ export const FOKUSVIRTA_LONTOO = {
      * Lahteet on tausta-aineisto (ei nay pelaajalle). (Lontoon kuva vaihdettu 15.11.2026, ks. alla.)
      */
     /*
-     * PULUN KUVA (KK 15.11.2026, omistaja 08.33): Commonsin valokuva Baker Streetin Circle-linjan laiturista nykyään; vanha
+     * PULUN KUVA (KK 15.11.2026, omistaja 08.33 "Nenäliina ja laituri"): Commonsin valokuva Baker Streetin Circle-linjan laiturista nykyään; vanha
      * parlamenttikuva (pulu-cam-lontoo-01) pois. Tiedosto: Philafrenzy, 2.10.2016, CC BY-SA 4.0 (KK katsoi Commonsin sivulta 15.11.),
      * https://commons.wikimedia.org/wiki/File:Baker_Street_Circle_Line_platform_01.jpg. Kuvaa itseään ei muokata.
-     * RAJAUS pyöreään kehykseen puuttuu: kuvaa ei ole ladattu eikä katsottu pelikoossa (lataus vaatii luvan); keskipiste ja halkaisija
-     * tulevat PT-viennin kuvasta, katso PR:n kuvaus. `lyhyt` on KK:n hyväksymä selite-ehdotus; `selite` on SK:n luonnos (kaksi
+     * RAJAUS pyöreään kehykseen (KK 15.11.2026 klo 08.40, katsottu PT:n 1000 × 750 -viennistä pyöreänä): keskipiste kuvan leveyden
+     * ja korkeuden suhteina [x, y], halkaisija leveyden suhteena; holvi, valokuilut, laiturinumerot 6 ja 5, raiteet ja keltainen viiva
+     * mukana, penkkien matkustajat jäävät reunalle. `lyhyt` on KK:n hyväksymä selite-ehdotus; `selite` on SK:n luonnos (kaksi
      * sisältölausetta, vain KK:n tarkistamia faktoja: Historic England 1239815, en-Wikipedia "Baker Street tube station").
      */
     kuvat: [
@@ -255,6 +256,7 @@ export const FOKUSVIRTA_LONTOO = {
         lyhyt: 'Baker Streetin laituri Lontoossa: asema avattiin 1863, ja laituri on yhä käytössä.',
         selite: 'Circle-linjan laituri Baker Streetin asemalla Lontoossa. Aseman alkuperäiset laiturit 5 ja 6 ovat vuodelta 1863, ja junat pysähtyvät niillä yhä.',
         lahde: 'Philafrenzy, Wikimedia Commons (CC BY-SA 4.0)',
+        rajaus: { keskipiste: [0.47, 0.50], halkaisija: 0.70 },
         lahteet: [
           'https://commons.wikimedia.org/wiki/File:Baker_Street_Circle_Line_platform_01.jpg',
           'https://historicengland.org.uk/listing/the-list/list-entry/1239815',
@@ -264,7 +266,7 @@ export const FOKUSVIRTA_LONTOO = {
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: KK:n lopullinen teksti 2 (omistaja 15.11.2026 klo 08.33 "Kelpaa"; KK:n muotoilu). Sanasta sanaan. 145 merkkiä. */
+    /* KUPLA: KK:n lopullinen teksti 2 (omistajan vastaus 15.11.2026 klo 08.33: "Nenäliina ja laituri (Suositus)"; KK:n muotoilu). Sanasta sanaan. 145 merkkiä. */
     kommentti: ["Voi isoisä! Nyt metrojunat kulkevat sähköllä, eikä nenäliinaa tarvita. Baker Streetillä ne pysähtyvät yhä samalle laiturille kuin sinun aikanasi."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

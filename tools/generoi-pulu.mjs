@@ -683,7 +683,7 @@ for (const city of ERA5_TTS_MANIFESTI.cities) {
 TAGIT['pariisi-3'] = { alku: '[amused]', kohdat: [['Katso ylös', '[brightly]']] };
 
 /*
- * LONTOON UUSI PULUN TEKSTI (KK 15.11.2026, omistaja 08.33 "Kelpaa"): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * LONTOON UUSI PULUN TEKSTI (KK 15.11.2026, omistaja 08.33 "Nenäliina ja laituri"): 14.9. manifestin tagiresepti ei enää osu tekstiin.
  * Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan.
  */
 TAGIT['lontoo-3'] = { alku: '[amused]', kohdat: [['Baker Streetillä', '[warmly]']] };
