@@ -55,5 +55,5 @@
     { "kuva": "Bertaux / Duplessi-Bertaux / Dupréel, hyvästit (BnF btv1b69489773)", "syy": "pieni vinjetti, leima, ja lukeva mies (luettelon mukaan Edgeworth) joka ei ollut hyvästeissä" }
   ],
   "purkulause": "Torni purettiin Napoleonin aikana, viimeistään vuonna 1811.",
-  "purkulause_perustelu": "Lähteet eroavat purkuvuodesta (1805, 1808, 1810, 1811), joten pelitekstiin ei panna yksittäistä purkuvuotta."
+  "purkulause_perustelu": "Purkaminen alkoi 1808 (parcoursrevolution, fr.wikipedia, en.wikipedia) ja valmistui 1810 (fr.wikipedia) tai 1811 (en.wikipedia, BnF), siksi lauseessa vain yläraja; pelin 1808-tekstit (nahtavyysjutut.js, monumentit-eurooppa.js) pysyvät, koska 1808 on purkamisen alku."
 }

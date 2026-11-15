@@ -14,4 +14,4 @@ Hauerin kuva on rajattu (kehys pois) ja pienennetty; muokattu BY-SA-kuva jaetaan
 
 "Torni purettiin Napoleonin aikana, viimeistään vuonna 1811."
 
-Perustelu: lähteet eroavat purkuvuodesta (fr.wikipedia 1808 + "kaksi vuotta" = 1810; en.wikipedia 1808, valmis 1811; BnF-nimeke "détruite en 1811"; Viollet-le-Duc 1805, ei luettu); purkuvuotta 1808 ei esitetä. Ylärajaa 1811 tukee kolme lähdettä. Huomio: `js/packs/nahtavyysjutut.js` Temple-tornin teksti sanoo yhä "Napoleon alkoi purkaa sitä vuonna 1808"; sitä EI muutettu tässä PR:ssä.
+Perustelu: purkaminen alkoi 1808 (parcoursrevolution, fr.wikipedia, en.wikipedia) ja valmistui 1810 (fr.wikipedia) tai 1811 (en.wikipedia, BnF-nimeke "détruite en 1811"), siksi lauseessa vain yläraja. Pelin 1808-tekstit (`js/packs/nahtavyysjutut.js`, `js/packs/monumentit-eurooppa.js`) pysyvät ennallaan: 1808 on purkamisen alku, ei valmistumisvuosi. Vuotta 1808 ei esitetä purun valmistumisena.
