@@ -31,6 +31,16 @@ namespace Matkakirja
             if (a.Length >= 9 && a[2] == "malli")
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiMalli(int.Parse(a[3]), int.Parse(a[4]),
                     int.Parse(a[5]), int.Parse(a[6]), float.Parse(a[7], ci), float.Parse(a[8], ci), a.Length >= 10 ? float.Parse(a[9], ci) : 0f), 1500) };
+            // Luonnos.dll <kansio> <nimi> julkisivu <kupoli 0|1> <sx> <sz> [raskas]: julkisivukirkko kuten peli piirtää (runko venyy, kupoli min(sx, sz); KK 15.11. ehto a).
+            if (a.Length >= 6 && a[2] == "julkisivu")
+                lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiKirkkoJulkisivuKoko(a[3] != "0",
+                    float.Parse(a[4], ci), float.Parse(a[5], ci), !(a.Length > 6 && a[6] == "raskas")), 1500) };
+            // Mallirivin lisäosa (julkisivukirkon kupoli) mukaan kuten pelissä.
+            if (a.Length >= 9 && a[2] == "malli")
+            {
+                var osa = OhjelmaKohdeGeometria.TyyppiLisaosa(int.Parse(a[3]), int.Parse(a[4]), out float ox, out float oy);
+                if (osa != null) lista[0] = (lista[0].Item1, OhjelmaKohdeGeometria.TyYhdista(lista[0].Item2, 1f, 1f, osa, ox, oy), lista[0].Item3);
+            }
             foreach (var (nimi, v, raja) in lista)
             {
                 var sb = new StringBuilder();

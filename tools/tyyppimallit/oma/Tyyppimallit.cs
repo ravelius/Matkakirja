@@ -220,13 +220,9 @@ namespace Matkakirja
                 var sk = s > 0 ? r.S(x0, zi, x1, zi) : r.S(x1, zi, x0, zi);
                 for (int i = 0; i < 4; i++) { float u = 6f + i * 8.5f; sk.KaariTayte(u, 13f, 1.6f, 0.05f, TyAukko, 4); }
             }
-            if (kupoli)
-            {
-                float cx = x1 - 12f;
-                r.Laatikko(cx - 7f, cx + 7f, 0f, y + 3f, -8f, 8f, TyKivi, TyKatto);
-                TyRumpu(r, cx, 0f, y + 3f, 7f, 5.4f, y + 9f, 5.9f, y + 12f, 0, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
-                TyKupoli(r, cx, 0f, y + 12f, 6.2f, 8.5f, TyHuippu, TyKivi, TyAukko, 8, 1.2f, 45f, 16, 7);
-            }
+            // Kupoli (KK 15.11. ~03.3x ehto a): rungossa vain risteyksen neliöjalusta, joka venyy rungon mukana; rumpu, kupoli ja lyhty ovat oma jaettu
+            // verkko (TyyppiJulkisivuKupoli), jonka peli piirtää jalustan päälle tasaisella mittakaavalla, jotta kupoli pysyy pyöreänä.
+            if (kupoli) r.Laatikko(JulkisivuKupoliX - 7f, JulkisivuKupoliX + 7f, 0f, JulkisivuKupoliY, -8f, 8f, TyKivi, TyKatto);
             // Länsijulkisivu x = fx (−x:n suuntaan)
             float fx = x0 - 1.2f, ya = 15f, yy = 24f, yk = 28f;
             r.Laatikko(fx, x0, 0f, ya, -zs, zs, TyKivi, TyKatto);
@@ -252,6 +248,78 @@ namespace Matkakirja
             var yla = r.S(fx + 0.3f, -zl - 0.5f, fx + 0.3f, zl + 0.5f);
             yla.Pinta(zl + 0.5f - 1.6f, zl + 0.5f + 1.6f, ya + 3f, ya + 6.5f, 0.05f, TyAukko); yla.KaariTayte(zl + 0.5f, ya + 6.5f, 1.6f, 0.05f, TyAukko, 6);
             return r.Valmis();
+        }
+
+        /// <summary>Julkisivukirkon kupolin paikka rungossa (risteys itäpäästä 12 m, jalustan yläpinta 19 m).</summary>
+        public const float JulkisivuKupoliX = 7f, JulkisivuKupoliY = 19f;
+
+        /// <summary>JULKISIVUKIRKON KUPOLI (KK 15.11. ~03.3x ehdot a ja b): rumpu (8 ikkunaa), kupoli ja lyhty omana verkkona, origo rummun alla jalustan
+        /// päällä; huippu 26 m origosta (45 m maasta). Kevyt = pelin versio (12 sivua, 4 kehää, ei ripoja, lyhty ilman pilareita; koko kirkko ≤ 600
+        /// kolmiota); kevyt = false on luonnosten alkuperäinen (16 sivua, 7 kehää, 8 ripaa) pariin. Peli: mittakaava s = min(sx, sz) kaikkiin akseleihin,
+        /// paikka rungon venytyksestä (JulkisivuKupoliX · sx, JulkisivuKupoliY).</summary>
+        public static Verkko TyyppiJulkisivuKupoli(bool kevyt = true)
+        {
+            var r = TyRakentaja();
+            float tays = (float)(Math.PI * 2.0);
+            if (!kevyt)
+            {
+                TyRumpu(r, 0f, 0f, 0f, 7f, 5.4f, 6f, 5.9f, 9f, 0, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
+                TyKupoli(r, 0f, 0f, 9f, 6.2f, 8.5f, TyHuippu, TyKivi, TyAukko, 8, 1.2f, 26f, 16, 7);
+                return r.Valmis();
+            }
+            const int N = 12;
+            // Rumpu: jalustan reunus, seinä ja räystäslista yhtenä profiilina; ikkunat ohuina nauhoina seinän edessä.
+            r.Pyora(0f, 0f, new[] { (7f, 0f), (7f, 1f), (5.9f, 1f), (5.9f, 8.2f), (6.4f, 8.6f), (5.9f, 9f) }, N, TyKivi, 0f, tays, 1f, false);
+            for (int i = 0; i < 8; i++) { float levy = tays / 8f; r.Pyora(0f, 0f, new[] { (5.95f, 3f), (5.95f, 6.6f) }, 1, TyAukko, i * levy, levy * 0.35f, 1f, false); }
+            // Kupoli: neljä kehää lyhdyn juureen (sama kaari kuin alkuperäisessä: säde 6,2, korkeus 8,5).
+            const int K = 4; float sade = 6.2f, kork = 8.5f, ly = 1.2f, laki = ly / sade;
+            var q = new (float r, float y)[K + 1];
+            for (int j = 0; j <= K; j++) { float th = j / (float)K * (float)Math.Acos(laki); q[j] = (sade * (float)Math.Cos(th), 9f + kork * (float)Math.Sin(th)); }
+            r.Pyora(0f, 0f, q, N, TyHuippu, 0f, tays, 1f, false);
+            // Lyhty: tumma lasiseinä, kivinen hattu kartiona ja piikki 26 m:iin.
+            float yl = q[K].y, lk = 3f, ky = yl + lk;
+            r.Pyora(0f, 0f, new[] { (ly, yl), (ly, ky) }, 8, TyAukko, 0f, tays, 1f, false);
+            r.Pyora(0f, 0f, new[] { (ly * 1.35f, ky), (ly * 1.35f, ky + 0.6f), (ly * 0.2f, ky + 3.4f) }, 8, TyHuippu, 0f, tays, 1f, false);
+            r.Piikki(0f, 0f, ky + 3.3f, 26f - (ky + 3.3f), 0.3f, TyKivi);
+            return r.Valmis();
+        }
+
+        /// <summary>Koko julkisivukirkko yhtenä verkkona kuten peli sen piirtää (luonnoksiin ja arkkeihin): runko venytettynä (sx, 1, sz), kupoli tasaisesti
+        /// min(sx, sz) jalustan päällä.</summary>
+        public static Verkko TyyppiKirkkoJulkisivuKoko(bool kupoli = true, float sx = 1f, float sz = 1f, bool kevyt = true)
+        {
+            var runko = TyyppiKirkkoJulkisivu(kupoli);
+            return kupoli ? TyYhdista(runko, sx, sz, TyyppiJulkisivuKupoli(kevyt), JulkisivuKupoliX, JulkisivuKupoliY) : TyYhdista(runko, sx, sz, null, 0f, 0f);
+        }
+
+        /// <summary>Runko venytettynä (sx, 1, sz) ja lisäosa paikkaan (ox · sx, oy, 0) tasaisella mittakaavalla min(sx, sz); normaalit käänteisellä venytyksellä.</summary>
+        public static Verkko TyYhdista(Verkko runko, float sx, float sz, Verkko osa, float ox, float oy)
+        {
+            float s = Math.Min(sx, sz);
+            int n1 = runko.Paikat.Length, n2 = osa?.Paikat.Length ?? 0;
+            var v = new Verkko { Paikat = new float[n1 + n2], Normaalit = new float[n1 + n2], Varit = new float[n1 + n2], Syvyys = new float[(n1 + n2) / 3] };
+            void Kopioi(Verkko l, int o, float kx, float ky, float kz, float tx, float ty)
+            {
+                for (int i = 0; i < l.Paikat.Length; i += 3)
+                {
+                    v.Paikat[o + i] = l.Paikat[i] * kx + tx; v.Paikat[o + i + 1] = l.Paikat[i + 1] * ky + ty; v.Paikat[o + i + 2] = l.Paikat[i + 2] * kz;
+                    float nx = l.Normaalit[i] / kx, ny = l.Normaalit[i + 1] / ky, nz = l.Normaalit[i + 2] / kz, nl = (float)Math.Sqrt(nx * nx + ny * ny + nz * nz);
+                    if (nl > 0f) { nx /= nl; ny /= nl; nz /= nl; }
+                    v.Normaalit[o + i] = nx; v.Normaalit[o + i + 1] = ny; v.Normaalit[o + i + 2] = nz;
+                    v.Varit[o + i] = l.Varit[i]; v.Varit[o + i + 1] = l.Varit[i + 1]; v.Varit[o + i + 2] = l.Varit[i + 2];
+                    v.Syvyys[(o + i) / 3] = l.Syvyys[i / 3];
+                }
+            }
+            Kopioi(runko, 0, sx, 1f, sz, 0f, 0f);
+            if (osa != null) Kopioi(osa, n1, s, s, s, ox * sx, oy);
+            v.MinX = v.MinY = v.MinZ = float.MaxValue; v.MaxX = v.MaxY = v.MaxZ = float.MinValue;
+            for (int i = 0; i < v.Paikat.Length; i += 3)
+            {
+                v.MinX = Math.Min(v.MinX, v.Paikat[i]); v.MaxX = Math.Max(v.MaxX, v.Paikat[i]);
+                v.MinY = Math.Min(v.MinY, v.Paikat[i + 1]); v.MaxY = Math.Max(v.MaxY, v.Paikat[i + 1]);
+                v.MinZ = Math.Min(v.MinZ, v.Paikat[i + 2]); v.MaxZ = Math.Max(v.MaxZ, v.Paikat[i + 2]);
+            }
+            return v;
         }
 
         /// <summary>KIRKKO SUURI (katedraali): keskilaiva 90 × 14 m räystäs 24 m, harja 33 m; sivulaivat 2 × 9 m räystäs 12 m pulpettikatoin; poikkilaiva
@@ -769,6 +837,16 @@ namespace Matkakirja
         /// <summary>Jaettu verkko (yksi kaikille saman rivin merkeille, venytys sx sz instanssissa) vai pohjan mitoista rakennettu (leivotaan paloittain).</summary>
         public static bool TyyppiJaettu(int tyyppi) => (tyyppi >= 1 && tyyppi <= 4) || tyyppi == 8 || tyyppi == 9 || tyyppi == 10;
 
+        /// <summary>Jaetun mallin LISÄOSA, joka ei veny rungon mukana (KK 15.11. ~03.3x): julkisivukirkon kupoli (tyyppi 10, a ≠ 0), muuten null.
+        /// Peli piirtää sen samalla merkillä toisena jaettuna verkkona: paikka rungon kehyksessä (x · sx, y, 0), mittakaava min(sx, sz) kaikkiin akseleihin.</summary>
+        public static Verkko TyyppiLisaosa(int tyyppi, int a, out float x, out float y)
+        {
+            x = y = 0f;
+            if (tyyppi != 10 || a == 0) return null;
+            x = JulkisivuKupoliX; y = JulkisivuKupoliY;
+            return TyyppiJulkisivuKupoli(true);
+        }
+
         /// <summary>Kaikki luonnosmallit nimineen ja kokoluokan kolmiorajoineen (0 = ei rajaa).</summary>
         public static List<(string nimi, Verkko v, int raja)> TyyppiLuonnokset() => new List<(string, Verkko, int)>
         {
@@ -778,7 +856,8 @@ namespace Matkakirja
             ("kirkko-basilika", TyyppiKirkkoBasilika(), 900),
             ("kirkko-basilika-lansi-2-neula", TyyppiKirkkoBasilika("lansi", 2, "neula"), 900),
             ("kirkko-suuri", TyyppiKirkkoSuuri(), 1500),
-            ("kirkko-julkisivu", TyyppiKirkkoJulkisivu(true), 1500),
+            ("kirkko-julkisivu", TyyppiKirkkoJulkisivuKoko(true), 600),
+            ("kirkko-julkisivu-raskas", TyyppiKirkkoJulkisivuKoko(true, 1f, 1f, false), 1500),
             ("kirkko-julkisivu-ilman", TyyppiKirkkoJulkisivu(false), 900),
             ("asema", TyyppiAsema(), 1500),
             ("palatsi", TyyppiPalatsi(), 1500),
