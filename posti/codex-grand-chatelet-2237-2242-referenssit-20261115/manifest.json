@@ -1,0 +1,81 @@
+{
+  "taskNumbers": [
+    2237,
+    2238,
+    2240,
+    2241,
+    2242
+  ],
+  "createdAt": "2026-11-15T15:34:01.827000+00:00",
+  "status": "REFERENCES_FOR_KK_REVIEW_NOT_TRIPO_INPUT_APPROVAL",
+  "images": [
+    {
+      "file": "01-north.png",
+      "view": "north",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1626142,
+      "sha256": "f1d05262e964c91aefdd52ee6f16124d6097f59238eb014671753a1f72c5ae4d"
+    },
+    {
+      "file": "02-south.png",
+      "view": "south",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1573012,
+      "sha256": "b11387bdbeda59d4e1cffa7f8cb67a3756db676a2d2adc76d4447ee177c5a3a7"
+    },
+    {
+      "file": "03-east.png",
+      "view": "east",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1581229,
+      "sha256": "5a92d2c206148dd86a865020449308c786cefd2e6105e98714bda2c6a93e8640"
+    },
+    {
+      "file": "04-west.png",
+      "view": "west",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1659234,
+      "sha256": "051dea8a6a1e848cf3c1e907117436a0e91f5e25fb92a9abf9f8e82ccb576328"
+    },
+    {
+      "file": "05-upper-oblique.png",
+      "view": "upper-oblique",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 1925834,
+      "sha256": "ca46e1752b314b701f03c36058a51c6740dbb43433d9d3e6c3fb666c33b5abab"
+    }
+  ],
+  "sourceOrderCommit": "767c5be735e196b41f8129163c9007cffd3e85e7",
+  "sourceOrderBlob": "ba182aaa706ab7e36810ee6d6756496598675130",
+  "sourceGeometrySHA256": "89ab5a8f677c6d35289bdb8bbc0df53c717c1d51a3bede33e0d4ec11d3165928",
+  "turgotSourceCommit": "fac7dbe65132412d0f293a96006dd77ccd2f6d8f",
+  "tool": "built-in image_gen",
+  "imageGenCallsTotal": 13,
+  "imageGenCallsCurrentSeries": 7,
+  "rejectedCurrentSeries": 2,
+  "monetaryCost": null,
+  "costReason": "Tool did not expose cost",
+  "tripoJobs": [],
+  "tripoCreditsUsed": 0,
+  "KKApproval": null,
+  "geometryGuideRole": "Deterministic shared camera/footprint/tower/roof scaffold; generated texture/window placement is interpretive and may vary by view",
+  "axes": "Blender +X east-southeast, +Y north-northeast, +Z up; GLB front -Z",
+  "originalArchiveRequirement": "After explicit KK approval: one maximum-quality Tripo generation; raw mesh and full-size textures preserved before 18Nov; separate constrained game version",
+  "localQA": "PASS_FOR_KK_REVIEW_WITH_DISCLOSED_INTERPRETIVE_DIFFERENCES",
+  "independentQA": "reference-series-qa.json"
+}

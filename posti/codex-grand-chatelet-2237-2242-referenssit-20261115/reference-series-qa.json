@@ -1,0 +1,117 @@
+{
+  "checked_at_utc": "2026-11-15T15:34:28.379814+00:00",
+  "scope": "Independent visual series review of five selected reference-v3 PNGs against guide-v3; no generation or repair",
+  "selected_corrected_jobs": {
+    "east": "exec-93251f58-e35a-4f65-af47-d1502acf4094",
+    "upper_oblique": "exec-7706a095-a984-4226-affc-de9341efc6bb"
+  },
+  "status": "READY_FOR_KK_REVIEW_WITH_DOCUMENTED_INTERPRETATIONS",
+  "blocking_visual_errors": [],
+  "series_caveats": [
+    "These are separately generated 2D views, not five renders of one textured 3D asset. Exact window/material matching across hidden sides is not proven.",
+    "No exact metric dimensions can be certified from the finished PNGs.",
+    "South three lower arches, invented side windows, roof/gable material boundaries and low front connector roof require KK review.",
+    "Turgot 1739 roof interpretation does not itself establish unchanged appearance in1786."
+  ],
+  "historical_approval": {
+    "granted": false,
+    "owner": "KK",
+    "boundary": "Visual QA checks direction, silhouette, framing, main roofs/towers and obvious false openings only. It does not certify historical reconstruction, unseen facades, window count, colors, chronology or suitability for final Tripo production. No Tripo approval is inferred."
+  },
+  "images": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/01-north.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "f1d05262e964c91aefdd52ee6f16124d6097f59238eb014671753a1f72c5ae4d",
+      "guide": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/01-north.png",
+      "visually_inspected": true,
+      "direction": "North facade matches guide; large NE tower on image left, no mirror detected",
+      "tower": "Large cone remains highest; two projecting gate turrets and small rear cone present",
+      "roof": "Two main gable silhouettes and lower portal roof retained; part of left front roof/gable is interpreted with slate where guide is untextured",
+      "footprint_framing": "Full footprint silhouette within canvas; no base slab, neighboring buildings or crop",
+      "openings": "Central pointed opening remains open; clock above two stacked large facade windows; added small wall windows are interpretive",
+      "differences": [
+        "Regular three-storey side window grid added to blank guide walls",
+        "Exact stone/slate division on complex left north gable is an interpretation"
+      ]
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/02-south.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "b11387bdbeda59d4e1cffa7f8cb67a3756db676a2d2adc76d4447ee177c5a3a7",
+      "guide": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/02-south.png",
+      "visually_inspected": true,
+      "direction": "South facade matches guide; big tower tip on image right",
+      "tower": "Expected northern cone tips remain visible above southern roofs",
+      "roof": "Two tall gable ends and lower portal connector retained",
+      "footprint_framing": "Complete silhouette and lower edge retained, neutral background",
+      "openings": "Central open pointed passage preserved; three additional dark arched openings at lower right are image interpretation absent from guide",
+      "differences": [
+        "Three lower right arches added beyond guide; Turgot mentions south arches but exact mapping is not independently established",
+        "Rear windows are interpretive"
+      ]
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/03-east.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "5a92d2c206148dd86a865020449308c786cefd2e6105e98714bda2c6a93e8640",
+      "guide": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/03-east.png",
+      "visually_inspected": true,
+      "direction": "Corrected east side selected; large tower near image right and thin projecting turret at far right",
+      "tower": "Tower positions and cone height order correspond to guide",
+      "roof": "Long ridge and right sloping roof boundary broadly retained",
+      "footprint_framing": "Full lower edge solid, no cropping or platform",
+      "openings": "No false clock or gateway; sparse small rectangular windows only",
+      "differences": [
+        "Three rows of small windows and tower windows added to blank side walls",
+        "Stone block scale is somewhat finer than north/west views"
+      ]
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/04-west.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "051dea8a6a1e848cf3c1e907117436a0e91f5e25fb92a9abf9f8e82ccb576328",
+      "guide": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/04-west.png",
+      "visually_inspected": true,
+      "direction": "West side matches guide, projecting northern turret on image left",
+      "tower": "Left corbel turret and distant large cone tip retained",
+      "roof": "Long gable with lower edge roofs corresponds to guide; no return to flat temporary main roofs",
+      "footprint_framing": "Complete silhouette retained; no ground or platform",
+      "openings": "No false central gateway or clock visible; added small windows",
+      "differences": [
+        "Exact window positions/counts are newly interpreted and not synchronized as a proven 3D facade layout"
+      ]
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/05-upper-oblique.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "ca46e1752b314b701f03c36058a51c6740dbb43433d9d3e6c3fb666c33b5abab",
+      "guide": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/05-upper-oblique.png",
+      "visually_inspected": true,
+      "direction": "NE oblique matches guide orientation; front gate at image right and large NE tower left of gate",
+      "tower": "Large round tower, two corbel gate turrets and rear cone retained",
+      "roof": "Two parallel major ridges and smaller portal/edge roofs retained; source mass notch around large tower still readable",
+      "footprint_framing": "Irregular footprint and omitted southern eastern area remain legible; full model shown",
+      "openings": "Front gateway opening visible; clock and stacked windows on correct gate face; passage interior dark so through-depth cannot be certified from this image alone",
+      "differences": [
+        "Low front connector receives a small slate roof; guide supplied it as a simple horizontal mass",
+        "Notch returns and facade windows have artistic interpretation; exact five-view 3D consistency is not guaranteed"
+      ]
+    }
+  ]
+}

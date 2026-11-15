@@ -1,0 +1,105 @@
+[
+  {
+    "view": "north",
+    "version": 3,
+    "attempt": 1,
+    "prompt": "Create a completely NEW photoreal architectural product image based solely on the attached gray geometric template. This is a surface/material rendering task, not architecture design. EXACTLY COPY the image's camera, silhouette, relative widths, tower heights and positions, all roof planes and their joins, every wing and every void. Do NOT reposition any element. No attempt to make it a conventional castle. Show the building with the EXACT same framing and empty margins,1536x1024. Every edge and feature must remain at the same image coordinates. Replace gray wall planes with finely detailed gently weathered warm gray-brown limestone ashlar, and sloping roof planes with fine subdued blue-gray slate tiles. Vertical triangular gable ends must be STONE, not slate. Smooth cylinder faceting into round towers without changing their silhouettes. Do not add new towers or roof volumes. All four conical roofs stay in exactly the indicated locations, including the short thin stair-tower partly hidden behind roofs. Large tower7.9m diameter,25m tip; thin corbel gate towers2.5m diameter,21.5m tip,corbels at6.5m. Two principal parallel N-S gable roofs at23.2m ridges, no truncated hips or flat roofs. Keep the open pointed gateway visible THROUGH the building with pale backdrop in distance, not a door. Front facade detail guides: two stacked large rectangular stone-mullioned windows with black nonreflecting panes then small circular clock above, plus simple attic opening as template. Other wings: sparse small plain rectangular dark windows in regular rows, no ornate decorations. Tiny slate dormers only if they do not change outer silhouette. Plain light gray background, even diffuse neutral studio light, minimal shadows, no floor slab, no scene or people, no labels or text. Identity: Grand Chatelet circa1786, irregular prison/courthouse reconstruction.\nSpecific view: NORTH elevation, large round tower at image x420 not centered; portal at x700; two thin gate turrets at x620 and780; bigtower cone tip y298, eachgateretip y360, building base aroundy735. Fullbuildingwidthabout1105pixels. Large tower must be about140pixels wide, not250. Mainstonegabletriangleleftbehindbigtowerandrightbehindrightturret. Do not exaggerate tower. Prioritize exact geometric alignment over cinematic appearance.",
+    "referencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/01-north.png"
+    ],
+    "startedAt": "2026-11-15T15:28:32.395Z",
+    "tool": "built-in image_gen",
+    "status": "LOCAL_QA_CANDIDATE_FOR_KK",
+    "tripoCreditsUsed": 0,
+    "estimateMinutes": 2,
+    "costReportedByTool": null,
+    "completedAt": "2026-11-15T15:29:25.894262+00:00",
+    "jobId": "exec-3ef147d5-2378-4296-aa63-f5e71e0c8524",
+    "toolOutputFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-3ef147d5-2378-4296-aa63-f5e71e0c8524.png",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/01-north.png",
+    "qa": "Visual QA: guide silhouette and tower positions retained; large tower highest and left, gate arch open, two window levels and clock; historic approval pending KK."
+  },
+  {
+    "view": "south",
+    "stem": "02-south",
+    "version": 3,
+    "attempt": 1,
+    "prompt": "Create a completely NEW photoreal architectural product image based solely on the attached gray geometric template. This is a surface/material rendering task, not architecture design. EXACTLY COPY the image's camera, silhouette, relative widths, tower heights and positions, all roof planes and their joins, every wing and every void. Do NOT reposition any element. No attempt to make it a conventional castle. Show the building with the EXACT same framing and empty margins,1536x1024. Every edge and feature must remain at the same image coordinates. Replace gray wall planes with finely detailed gently weathered warm gray-brown limestone ashlar, and sloping roof planes with fine subdued blue-gray slate tiles. Vertical triangular gable ends must be STONE, not slate. Smooth cylinder faceting into round towers without changing their silhouettes. Do not add new towers or roof volumes. All four conical roofs stay in exactly the indicated locations, including the short thin stair-tower partly hidden behind roofs. Large tower7.9m diameter,25m tip; thin corbel gate towers2.5m diameter,21.5m tip,corbels at6.5m. Two principal parallel N-S gable roofs at23.2m ridges, no truncated hips or flat roofs. Keep the open pointed gateway visible THROUGH the building with pale backdrop in distance, not a door. Front facade detail guides: two stacked large rectangular stone-mullioned windows with black nonreflecting panes then small circular clock above, plus simple attic opening as template. Other wings: sparse small plain rectangular dark windows in regular rows, no ornate decorations. Tiny slate dormers only if they do not change outer silhouette. Plain light gray background, even diffuse neutral studio light, minimal shadows, no floor slab, no scene or people, no labels or text. Identity: Grand Chatelet circa1786, irregular prison/courthouse reconstruction.\nSpecific view: SOUTH elevation. The north towers are partly occluded BEHIND roof gables; do not pull them to the front. Keep the two gable triangles as vertical STONE walls with tiny dark attic windows, blue-gray slate only thin roof rims. Back side simple unornamented gray-brown stone; three small arched recessed dark ground-level openings on the taller narrow southern gable and sparse rectangular windows. Keep the through-passage exactly in its template location. No clock or hanging turrets on south walls.\nThe north clock/windows apply only if the NORTH face is visible in the template. No geometry copied from other views, use only this image.",
+    "referencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/02-south.png"
+    ],
+    "startedAt": "2026-11-15T15:30:07.325Z",
+    "tool": "built-in image_gen",
+    "status": "LOCAL_QA_CANDIDATE_FOR_KK",
+    "tripoCreditsUsed": 0,
+    "estimateMinutes": 2,
+    "costReportedByTool": null,
+    "completedAt": "2026-11-15T15:32:31.351301+00:00",
+    "jobId": "exec-2f2efa9e-576f-442e-8379-d19c5885cdaa",
+    "toolOutputFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-2f2efa9e-576f-442e-8379-d19c5885cdaa.png",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/02-south.png",
+    "qa": "Guide silhouette/roof/tower positions visually retained. Pending full series review and KK historic approval."
+  },
+  {
+    "view": "east",
+    "version": 3,
+    "attempt": 2,
+    "prompt": "Create a NEW photoreal architectural product render directly from the attached gray mesh screenshot. Match the screenshot EXACTLY: same orthographic EAST SIDE camera, 1536x1024 framing, every roof edge and wall edge, silhouettes, widths, heights, footprints and tower positions. This is ONLY the EAST SIDE of a historic limestone courthouse; not the front. The main walls in this picture are solid simple unornamented masonry, with THREE rows of sparse small rectangular black windows. There is NO clock on any visible face. There are NO large stacked mullioned windows. There is NO gateway, arch, doorway or door opening ANYWHERE visible in this EAST view. Keep the complete lower edge SOLID all the way across, matching template. Do not turn the end of the wall into a facade with a gate. The small triangular wall area near the right tower has only one small plain rectangular window and otherwise blank limestone. All cylindrical towers remain exactly as shown: right large tower with sharp cone and far-right thin corbel turret, their faces have only tiny plain narrow windows. Only the barely visible back towers remain as in template, never expose more of them. Preserve every wall plane and its step and angle. Do not add or extend a wing. Sloping roof planes are muted blue-gray fine slate shingles, vertical wall and gable planes warm gray-brown gently weathered limestone ashlar. Stonework same neutral warm beige-gray on entire building, natural subdued detail, no extreme dirt. Plain uniform light gray backdrop, evenly diffused light with minimal shadows. Whole isolated building, no ground, floor slab, platform, plants, props or people. DO NOT add text, ornaments, crenellations or a clock. Prioritize one-to-one alignment to attached image over aesthetics. Only add materials and small regular windows to existing geometry.",
+    "referencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/03-east.png"
+    ],
+    "startedAt": "2026-11-15T15:32:31.509Z",
+    "tool": "built-in image_gen",
+    "status": "LOCAL_QA_CANDIDATE_FOR_KK",
+    "tripoCreditsUsed": 0,
+    "estimateMinutes": 2,
+    "costReportedByTool": null,
+    "completedAt": "2026-11-15T15:33:23.875992+00:00",
+    "jobId": "exec-93251f58-e35a-4f65-af47-d1502acf4094",
+    "toolOutputFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-93251f58-e35a-4f65-af47-d1502acf4094.png",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/03-east.png",
+    "qa": "Visual QA: side silhouette retained, no false clock or side gateway; plain walls with small windows, correct roof slopes/tower positions."
+  },
+  {
+    "view": "west",
+    "stem": "04-west",
+    "version": 3,
+    "attempt": 1,
+    "prompt": "Create a completely NEW photoreal architectural product image based solely on the attached gray geometric template. This is a surface/material rendering task, not architecture design. EXACTLY COPY the image's camera, silhouette, relative widths, tower heights and positions, all roof planes and their joins, every wing and every void. Do NOT reposition any element. No attempt to make it a conventional castle. Show the building with the EXACT same framing and empty margins,1536x1024. Every edge and feature must remain at the same image coordinates. Replace gray wall planes with finely detailed gently weathered warm gray-brown limestone ashlar, and sloping roof planes with fine subdued blue-gray slate tiles. Vertical triangular gable ends must be STONE, not slate. Smooth cylinder faceting into round towers without changing their silhouettes. Do not add new towers or roof volumes. All four conical roofs stay in exactly the indicated locations, including the short thin stair-tower partly hidden behind roofs. Large tower7.9m diameter,25m tip; thin corbel gate towers2.5m diameter,21.5m tip,corbels at6.5m. Two principal parallel N-S gable roofs at23.2m ridges, no truncated hips or flat roofs. Keep the open pointed gateway visible THROUGH the building with pale backdrop in distance, not a door. Front facade detail guides: two stacked large rectangular stone-mullioned windows with black nonreflecting panes then small circular clock above, plus simple attic opening as template. Other wings: sparse small plain rectangular dark windows in regular rows, no ornate decorations. Tiny slate dormers only if they do not change outer silhouette. Plain light gray background, even diffuse neutral studio light, minimal shadows, no floor slab, no scene or people, no labels or text. Identity: Grand Chatelet circa1786, irregular prison/courthouse reconstruction.\nSpecific view: WEST elevation. North entrance end is image LEFT. Precisely preserve visible thin turret on left and roofs that occlude all other towers. Two long ridge roof slopes and smaller lean-to foreground wing are slate; vertical gable patches stone. Simple sparse dark rectangular windows, no invented side doorway, no clock added on this face. Keep each existing angled wall and step in wing alignment.\nThe north clock/windows apply only if the NORTH face is visible in the template. No geometry copied from other views, use only this image.",
+    "referencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/04-west.png"
+    ],
+    "startedAt": "2026-11-15T15:30:07.325Z",
+    "tool": "built-in image_gen",
+    "status": "LOCAL_QA_CANDIDATE_FOR_KK",
+    "tripoCreditsUsed": 0,
+    "estimateMinutes": 2,
+    "costReportedByTool": null,
+    "completedAt": "2026-11-15T15:32:31.493336+00:00",
+    "jobId": "exec-11acb636-67fa-4b53-adb5-e4c65a965483",
+    "toolOutputFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-11acb636-67fa-4b53-adb5-e4c65a965483.png",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/04-west.png",
+    "qa": "Guide silhouette/roof/tower positions visually retained. Pending full series review and KK historic approval."
+  },
+  {
+    "view": "upper-oblique",
+    "stem": "05-upper-oblique",
+    "version": 3,
+    "attempt": 2,
+    "prompt": "Create a completely NEW photoreal architectural product image based solely on the attached gray geometric template. This is a surface/material rendering task, not architecture design. EXACTLY COPY the image's camera, silhouette, relative widths, tower heights and positions, all roof planes and their joins, every wing and every void. Do NOT reposition any element. No attempt to make it a conventional castle. Show the building with the EXACT same framing and empty margins,1536x1024. Every edge and feature must remain at the same image coordinates. Replace gray wall planes with finely detailed gently weathered warm gray-brown limestone ashlar, and sloping roof planes with fine subdued blue-gray slate tiles. Vertical triangular gable ends must be STONE, not slate. Smooth cylinder faceting into round towers without changing their silhouettes. Do not add new towers or roof volumes. All four conical roofs stay in exactly the indicated locations, including the short thin stair-tower partly hidden behind roofs. Large tower7.9m diameter,25m tip; thin corbel gate towers2.5m diameter,21.5m tip,corbels at6.5m. Two principal parallel N-S gable roofs at23.2m ridges, no truncated hips or flat roofs. Keep the open pointed gateway visible THROUGH the building with pale backdrop in distance, not a door. Front facade detail guides: two stacked large rectangular stone-mullioned windows with black nonreflecting panes then small circular clock above, plus simple attic opening as template. Other wings: sparse small plain rectangular dark windows in regular rows, no ornate decorations. Tiny slate dormers only if they do not change outer silhouette. Plain light gray background, even diffuse neutral studio light, minimal shadows, no floor slab, no scene or people, no labels or text. Identity: Grand Chatelet circa1786, irregular prison/courthouse reconstruction.\nSpecific view: NORTHEAST upper oblique view at35degrees. Exact same camera and silhouette as gray image. Large7.9m round tower is near the FRONT, next to portal, at roughly image x770,y770body with cone tip around x770,y600. It is NOT at back-left of the image. Follow every edge in image1. Two thin gate turrets at image x960 and1060 on front; short stair cone just behind atx854. Back long gable ridge at imageupperleft-to-right, front east-block gable atimageleft-center, maintain parallel ridge arrangement. Do not grow or move any tower, do not compact footprints. Match all visible voids and front side setbacks. Vertical gable triangles limestone. No extra finials or chimneys beyond template. Preserve original precise framing, full building in image.\nThe north clock/windows apply only if the NORTH face is visible in the template. No geometry copied from other views, use only this image.",
+    "referencePaths": [
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/guide-v3/05-upper-oblique.png"
+    ],
+    "startedAt": "2026-11-15T15:30:07.325Z",
+    "tool": "built-in image_gen",
+    "status": "LOCAL_QA_CANDIDATE_FOR_KK",
+    "tripoCreditsUsed": 0,
+    "estimateMinutes": 2,
+    "costReportedByTool": null,
+    "completedAt": "2026-11-15T15:32:31.503379+00:00",
+    "jobId": "exec-7706a095-a984-4226-affc-de9341efc6bb",
+    "toolOutputFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-7706a095-a984-4226-affc-de9341efc6bb.png",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-v3/05-upper-oblique.png",
+    "qa": "Guide silhouette/roof/tower positions visually retained. Pending full series review and KK historic approval."
+  }
+]
