@@ -1,0 +1,166 @@
+{
+  "preparedAt": "2026-11-15T16:41:03.142461+00:00",
+  "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+  "sourceSHA256": "ed365ffd736f134f9da7824cb211e245b386badd251e3b0ce883fa74e74ef8b9",
+  "selected": [
+    {
+      "deliveryFile": "01-north.png",
+      "status": "selected-for-KK-review-not-approved",
+      "startedAt": "2026-11-15T16:28:18.309771+00:00",
+      "estimatedCompletion": "about2-4minutes",
+      "sourceGuide": "output/grand-chatelet-2237-20261115/work/guide-v4/01-north.png",
+      "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+      "promptFile": "01-north.prompt.txt",
+      "tool": "builtin-image_gen",
+      "cost": null,
+      "tripoCredits": 0,
+      "jobId": "exec-fceef298-d983-43b9-8a74-6f14bc1b728d",
+      "output": "output/grand-chatelet-2237-20261115/references-v4/01-north.png",
+      "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-fceef298-d983-43b9-8a74-6f14bc1b728d.png",
+      "completionObservedAt": "2026-11-15T16:33:02.154661+00:00",
+      "sha256": "c76ca42d0cd27562c513a9ede4065a15e0f99b802733c807ecf3fe5bdd7b5f14",
+      "QA": "qa-v4.md"
+    },
+    {
+      "deliveryFile": "02-south.png",
+      "status": "selected-for-KK-review-not-approved",
+      "startedAt": "2026-11-15 16:34:39 UTC",
+      "estimatedCompletion": "about 2-4 minutes",
+      "sourceGuide": "output/grand-chatelet-2237-20261115/work/guide-v4/02-south.png",
+      "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+      "sourceOfficialMailCommit": "cfd759a3b5ade3f3fb9ead54cb1bc53fa2139e68",
+      "promptFile": "02-south.prompt.txt",
+      "tool": "builtin-image_gen",
+      "cost": null,
+      "tripoCredits": 0,
+      "jobId": "exec-2b1e0ae4-6e3f-4e74-901b-c7cb57000420",
+      "output": "output/grand-chatelet-2237-20261115/references-v4/02-south.png",
+      "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-2b1e0ae4-6e3f-4e74-901b-c7cb57000420.png",
+      "completionObservedAt": "2026-11-15T16:36:20.189666+00:00",
+      "sha256": "f8ad5ff42a0f3500ff3a7c3dbeb6566fb2747e48533f4e5f9029e69463c1028e",
+      "QA": "qa-v4.md"
+    },
+    {
+      "deliveryFile": "03-east.png",
+      "status": "selected-for-KK-review-not-approved",
+      "startedAt": "2026-11-15 16:34:39 UTC",
+      "estimatedCompletion": "about 2-4 minutes",
+      "sourceGuide": "output/grand-chatelet-2237-20261115/work/guide-v4/03-east.png",
+      "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+      "sourceOfficialMailCommit": "cfd759a3b5ade3f3fb9ead54cb1bc53fa2139e68",
+      "promptFile": "03-east.prompt.txt",
+      "tool": "builtin-image_gen",
+      "cost": null,
+      "tripoCredits": 0,
+      "jobId": "exec-e6b6186a-ddee-46ab-a70d-9fff822555ae",
+      "output": "output/grand-chatelet-2237-20261115/references-v4/03-east.png",
+      "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-e6b6186a-ddee-46ab-a70d-9fff822555ae.png",
+      "completionObservedAt": "2026-11-15T16:36:20.200162+00:00",
+      "sha256": "1095774df3618fdf0e9861cd62ae229caafa77b581e68e76721108332f22d448",
+      "QA": "qa-v4.md"
+    },
+    {
+      "deliveryFile": "04-west.png",
+      "status": "selected-for-KK-review-not-approved",
+      "startedAt": "2026-11-15 16:38:21 UTC",
+      "estimatedCompletion": "2-4 minutes",
+      "sourceGuide": "work/guide-v4/04-west.png",
+      "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+      "correctionReason": "Prior west image turned square southwest pavilion into a cylindrical turret with conical roof.",
+      "tool": "builtin-image_gen",
+      "cost": null,
+      "tripoCredits": 0,
+      "jobId": "exec-f44b5436-86a6-4bdd-a6be-d25e83653f51",
+      "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-f44b5436-86a6-4bdd-a6be-d25e83653f51.png",
+      "output": "output/grand-chatelet-2237-20261115/references-v4/04-west-square-pavilion.png",
+      "completionObservedAt": "2026-11-15T16:39:12.270689+00:00",
+      "sha256": "d46b14550cd94759ee73746ddd61739aed3286990b4b7aebf7c813e44e15c4cf",
+      "QA": "qa-v4.md"
+    },
+    {
+      "deliveryFile": "05-upper-oblique.png",
+      "status": "selected-for-KK-review-not-approved",
+      "startedAt": "2026-11-15T16:28:47.082676+00:00",
+      "estimatedCompletion": "about2-4minutes",
+      "sourceGuide": "output/grand-chatelet-2237-20261115/work/guide-v4/05-upper-oblique-high.png",
+      "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+      "promptFile": "05-upper-oblique.prompt.txt",
+      "tool": "builtin-image_gen",
+      "cost": null,
+      "tripoCredits": 0,
+      "jobId": "exec-a431bba8-e616-4aa3-b83e-d77f920bb7ad",
+      "output": "output/grand-chatelet-2237-20261115/references-v4/05-upper-oblique.png",
+      "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-a431bba8-e616-4aa3-b83e-d77f920bb7ad.png",
+      "completionObservedAt": "2026-11-15T16:33:02.160183+00:00",
+      "sha256": "59b78d88eee1b96bdbb8ccafb38cc34025825058378af5ffdb2aa8880f3b8562",
+      "QA": "qa-v4.md"
+    }
+  ],
+  "generationCallsThisRevision": 6,
+  "rejectedJobIds": [
+    "exec-c1af41f3-ca58-4758-9974-ca23a0668211"
+  ],
+  "imageGenCost": null,
+  "costNote": "not exposed by tool",
+  "tripoJobs": [],
+  "tripoCredits": 0,
+  "approval": "pending explicit KK review",
+  "files": {
+    "05-upper-oblique.png": {
+      "bytes": 1809570,
+      "sha256": "59b78d88eee1b96bdbb8ccafb38cc34025825058378af5ffdb2aa8880f3b8562"
+    },
+    "05-upper-oblique-geometry-guide.png": {
+      "bytes": 1123497,
+      "sha256": "627da9e83632c03a030fdbc15aabcca2ce7a19a91bf18505b3aaf137551d07e1"
+    },
+    "02-south-geometry-guide.png": {
+      "bytes": 777570,
+      "sha256": "b96c2240ac64e8222a13bb910599b09d5651c9b0c3ad3c791825f3457ee1dbb2"
+    },
+    "QA.md": {
+      "bytes": 2951,
+      "sha256": "d65cad9954f28a82c5dbee825ee8e302657df8a9a84646a8833e2c3c6bb54b0a"
+    },
+    "04-west-geometry-guide.png": {
+      "bytes": 856653,
+      "sha256": "3c23cd2ba979b12ef599eae6583c3d9a2ba6dc3682cab5f8ca0972c280afe7b6"
+    },
+    "01-north.png": {
+      "bytes": 1671629,
+      "sha256": "c76ca42d0cd27562c513a9ede4065a15e0f99b802733c807ecf3fe5bdd7b5f14"
+    },
+    "README.md": {
+      "bytes": 3292,
+      "sha256": "c09c701218ad82d1d8fd16ce7fd081c7176f7cd6cd018da044cf5128a5c36984"
+    },
+    "03-east.png": {
+      "bytes": 1684548,
+      "sha256": "1095774df3618fdf0e9861cd62ae229caafa77b581e68e76721108332f22d448"
+    },
+    "official-source-manifest.json": {
+      "bytes": 3665,
+      "sha256": "e0aec914aa552d9697548c57c8da7afc4180120135ed81b5b04b5ca37fcc1198"
+    },
+    "04-west.png": {
+      "bytes": 1628709,
+      "sha256": "d46b14550cd94759ee73746ddd61739aed3286990b4b7aebf7c813e44e15c4cf"
+    },
+    "01-north-geometry-guide.png": {
+      "bytes": 907629,
+      "sha256": "5c24768c18943a9f94072eb3ba70f6a185df1bd2a104ae48e723db89142b7e3a"
+    },
+    "02-south.png": {
+      "bytes": 1766460,
+      "sha256": "f8ad5ff42a0f3500ff3a7c3dbeb6566fb2747e48533f4e5f9029e69463c1028e"
+    },
+    "03-east-geometry-guide.png": {
+      "bytes": 832701,
+      "sha256": "65d1d47e58090c948574fcef544cfd51e0e519c4da6934e131b1255dcbe44084"
+    },
+    "geometry-provenance.json": {
+      "bytes": 1364,
+      "sha256": "9df464316f1afb95b673a151bfe3df7c34b0bf63453ba0a64785952ba0112be8"
+    }
+  }
+}

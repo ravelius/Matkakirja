@@ -1,0 +1,74 @@
+{
+  "verifiedAt": "2026-11-15T16:33:46.093943+00:00",
+  "mailCommit": "cfd759a3b5ade3f3fb9ead54cb1bc53fa2139e68",
+  "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+  "officialRawExactlyMatchesV4Guide": true,
+  "files": {
+    "SAATE.md": {
+      "bytes": 4907,
+      "gitBlob": "314391e84cb349e45d7e9715c5df6fa8d8eeee79",
+      "sha256": "7205abe0042186880284875b7ed1af9a1e65fe0fbce87203faba883d3eefb32e",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/SAATE.md"
+    },
+    "arkki-pohja.png": {
+      "bytes": 504857,
+      "gitBlob": "99417aca591b787536045aacd5d9e54b05137ab8",
+      "sha256": "796ecc333d2fcafb4f82749451d448825c8af5aff9968f723963e90b3c438998",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/arkki-pohja.png"
+    },
+    "arkki-pohjoisjulkisivu.png": {
+      "bytes": 402764,
+      "gitBlob": "c3db6742b07a7fde449d0e299dadc4a26ed8d5af",
+      "sha256": "5049e563ea9a0408d9de0e75516495cccabc19c43407d8e477911c20ab6dea82",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/arkki-pohjoisjulkisivu.png"
+    },
+    "arkki-turgot-katot.png": {
+      "bytes": 579698,
+      "gitBlob": "123aec5b02eb6347569e757dff663beb71e6c1be",
+      "sha256": "7fa3fa4fa156d3624803cf8921cbe2eb3bd167288d9a94ec4fde888ebb3ab26e",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/arkki-turgot-katot.png"
+    },
+    "grand-chatelet-massa-kolmiot.txt": {
+      "bytes": 80266,
+      "gitBlob": "94010a8a5d84310fb34c057670a74b267792032d",
+      "sha256": "ed365ffd736f134f9da7824cb211e245b386badd251e3b0ce883fa74e74ef8b9",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/grand-chatelet-massa-kolmiot.txt"
+    },
+    "grand-chatelet-massa.glb": {
+      "bytes": 73360,
+      "gitBlob": "f3123a0a379349f28bd4531174dd04e4891112f5",
+      "sha256": "b5ccc4089c3544a8079830de7ed6aa7510a201bc6a93acac7152c0292a7f73bc",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/grand-chatelet-massa.glb"
+    },
+    "grand-chatelet-massa.obj": {
+      "bytes": 56716,
+      "gitBlob": "05a6646697318cc8aebc338b8afdd59b11f900cd",
+      "sha256": "c896a5d3352779fb0667754f822107ab93793b8589220f3d458d03b7fa451ab2",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/grand-chatelet-massa.obj"
+    },
+    "harmaa-nelja-suuntaa.png": {
+      "bytes": 28977,
+      "gitBlob": "a0a2045be2726e04c14357c209f5124c6a87fdeb",
+      "sha256": "2a3dd58c84bffecee36cc5a097541bb0c11cdc54e10a3a5b7584b64060720c0e",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/harmaa-nelja-suuntaa.png"
+    },
+    "harmaa-piha.png": {
+      "bytes": 23218,
+      "gitBlob": "c3d25f3275288d29f2fbd40b1205442b563d49d9",
+      "sha256": "abfdf96add8b59f5d82f2d7f955b50bb79dff03cc5d44b6aaa7c9439baaf3200",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/harmaa-piha.png"
+    },
+    "harmaa-turgot-suunta.png": {
+      "bytes": 17770,
+      "gitBlob": "83623e07f597875c293710b859257d20118c67e3",
+      "sha256": "5a8c92f1165a63b1de0463939715b10054e5fe48f676ccb68fe06930a10d7b43",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/harmaa-turgot-suunta.png"
+    },
+    "harmaa-ylhaalta.png": {
+      "bytes": 12234,
+      "gitBlob": "467977531dcb73564cab8b5abd85be487664e048",
+      "sha256": "a28a14f5ebc52fec393c449d55e39e2d37765e021bd296186d10defc80d027e0",
+      "remotePath": "posti/nayttamoseppa-codex-grand-chatelet-massaverkko-20261115/harmaa-ylhaalta.png"
+    }
+  }
+}
