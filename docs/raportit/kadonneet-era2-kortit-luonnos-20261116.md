@@ -16,7 +16,7 @@ v2: KK:n päätökset 16.11. klo 01.21 (1–4) toteutettu; sivulta tarkistetut k
 - Edelleen heikoin kortti (lähteitä vähän); KK päätti pitää lyhyenä.
 
 ## 2. Waag op de Dam: `aika: '1560-luku–1808'`
-> Damin aukiolla seisoi Waag, vaaka, jossa punnittiin torilla myytäviä tavaroita. Kivinen vaakahuone rakennettiin 1560-luvulla. Yläkerrassa oli kaupungin vartiosto ja asevarasto.
+> Damin aukiolla seisoi Waag, vaaka, jossa punnittiin torilla myytäviä tavaroita. Vaakahuone rakennettiin 1560-luvulla. Yläkerrassa oli kaupungin vartiosto ja asevarasto.
 >
 > Hollannin kuningas Louis Bonaparte muutti viereisen raatihuoneen palatsikseen ja käski purkaa vaa'an, joka oli hänen mielestään tiellä. Vaaka purettiin vuonna 1808.
 >
@@ -39,11 +39,11 @@ v2: KK:n päätökset 16.11. klo 01.21 (1–4) toteutettu; sivulta tarkistetut k
 ## 4. Meta Sudans: `aika: '1. vuosisata–1936'`
 > Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä Roomassa. Nimi tarkoittaa hikoilevaa käännepylvästä. Se rakennettiin 1. vuosisadan lopulla, vähän Colosseumin jälkeen.
 >
-> Mussolini käski purkaa jäänteet vuonna 1936, koska ne olivat paraatien ja liikenteen tiellä. Suihkulähdettä ei ole enää.
+> Mussolini käski purkaa sen rauniot vuonna 1936, koska ne olivat paraatien ja liikenteen tiellä. Suihkulähdettä ei ole enää.
 >
-> Isoisäsi vuonna 1873 tiilinen kartio seisoi vielä raunioina Colosseumin vieressä.
+> Isoisäsi vuonna 1873 tiilinen kartio seisoi vielä rauniona Colosseumin vieressä.
 - 2L: rakennettu 1. vuosisadan lopulla (en-WP + Platner & Ashby 1929), nimi (en-WP + P&A), raunio 1873 (en-WP: Cuccionin kuva 1858 + P&A: kartiomainen ydin pystyssä 1929 asti), purku 1936 Mussolini (en-WP + Marlowe/Pearse + P&A, Thayerin huomautus), syy: paraatit ja liikenne (en-WP liikenneympyrä + Marlowe paraatit).
-- Kappalejärjestys KK:n mallin mukaan (isoisä viimeisenä). Huom: "jäänteet" mainitaan 2. kappaleessa ennen kuin 3. kertoo raunion; jos KK haluaa, "jäänteet" → "tiilikartion".
+- Kappalejärjestys KK:n mallin mukaan (isoisä viimeisenä).
 - POIS: tarkka vuosi 89–96 ja Domitianus, mitat, gladiaattoripesu, voittokulkueet, nykyasu.
 
 ## Avoimet KK:lle
