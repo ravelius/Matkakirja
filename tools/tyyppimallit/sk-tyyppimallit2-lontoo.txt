@@ -1,0 +1,40 @@
+# Valoseppä 15.11.2026 kierros 2: asemahallien uusi lasisävy (KK 04.30 kohta 1), haara valoseppa/tyyppimallit-peliin. EI JUNAAN.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento lahizoomi 0
+komento kallista 58
+komento suunta 200
+komento aja 51.531 -0.125 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva l2-nyt King's Cross ja St Pancras läheltä, uusi lasisävy: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva l2-uusi King's Cross ja St Pancras läheltä, uusi lasisävy: Uusi (tyyppimallit)
+komento kallista 50
+komento suunta 300
+komento aja 51.507 -0.11 0.05 2
+odota 20
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva l4-nyt Lontoo kaukaa (Westminster–City), uusi lasisävy: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva l4-uusi Lontoo kaukaa (Westminster–City), uusi lasisävy: Uusi (tyyppimallit)

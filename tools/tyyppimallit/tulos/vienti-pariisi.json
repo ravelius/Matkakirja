@@ -5,24 +5,25 @@
   "lon": 2.35092
  },
  "merkkeja": 271,
- "malleja": 23,
- "tavua": 7088,
- "sha256": "26209e0722b737427b1056ef57dcf4122edb026aca272770ca8da9aabca167c5",
+ "malleja": 25,
+ "tavua": 7136,
+ "sha256": "3391530335825f2f5a88a87977993e3737ea521d38ba150b1a5ec688ed941d33",
  "maa": "ei (kartta tasainen: peli kuten puut)",
  "maa_laskut": {
   "pisteita": 0,
   "lahin_tunnettu": 0
  },
  "lahde": "/Users/Shared/Claude/proto-3d/_tyo/valoseppa/tyyppitalot/tulos/merkit-pariisi.json",
- "lahde_sha256": "f9b08a28c7c736987caa7b175ce78168bb96ff69e10abebcef443f2a61738297",
+ "lahde_sha256": "180716e343857850a3a839f3eaf74354ae67775ee452ca188b332713fdda44b4",
  "tyypit": {
   "palatsi-keski": 11,
   "kirkko-levea": 68,
-  "kirkko-basilika": 59,
+  "kirkko-basilika": 58,
   "kirkko-keski": 36,
   "kirkko-pieni": 74,
   "kirkko-suuri": 15,
   "asema-suuri": 5,
+  "kirkko-julkisivu": 1,
   "pylvastemppeli-keski": 1,
   "kupolikirkko-keski": 2
  },
