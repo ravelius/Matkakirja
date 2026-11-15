@@ -1,0 +1,70 @@
+{
+  "preparedAt": "2026-11-15T16:46:22.458832+00:00",
+  "purpose": "KK2248 approximate structural cutaway trial; not approved or game delivery",
+  "sourceDecisionCommit": "ce707a5f90e8f5b7aa69d0ea695fe7944d182fd9",
+  "imageGenJob": {
+    "status": "selected-for-KK-review-not-approved",
+    "startedAt": "2026-11-15 16:43:51 UTC",
+    "estimatedCompletion": "2-4 minutes",
+    "tool": "builtin-image_gen",
+    "sourceGuide": "work/temple-half-cut-guide-v2.png",
+    "sourceDecision": "source-decision-2248.md",
+    "sourceDecisionCommit": "ce707a5f90e8f5b7aa69d0ea695fe7944d182fd9",
+    "assumptions": "work/guide-assumptions-v2.json",
+    "cost": null,
+    "tripoCredits": 0,
+    "approval": "Reference image must be reviewed by KK before Tripo",
+    "grandChateletReferencesAlreadyDelivered": "35357d569b89db47e2b4e166513caace4dd377da",
+    "jobId": "exec-ebc47564-fd2b-4b4b-95d9-80acea0d1d3a",
+    "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-ebc47564-fd2b-4b4b-95d9-80acea0d1d3a.png",
+    "output": "output/tripo-halkaistu-koe-2243-20261115/temple-cutaway-v1.png",
+    "completionObservedAt": "2026-11-15T16:44:57.653526+00:00",
+    "sha256": "92a5974331f3f881b88ba585443adb5e63e9b46c4dddb52272b58c34fc06f7ec",
+    "QA": "QA-temple-reference-v1.md"
+  },
+  "imageGenCalls": 1,
+  "imageGenCost": null,
+  "tripoJobs": [],
+  "tripoCredits": 0,
+  "KKApprovalBeforeEachTripo": true,
+  "maxTripoCalls": 2,
+  "approxCreditCap": 100,
+  "files": {
+    "source-manifest.json": {
+      "bytes": 2241,
+      "sha256": "01fd4e2da2310adae06c69f77ff081e11940ef714d14e5e26b3ce30813b40849"
+    },
+    "QA.md": {
+      "bytes": 3492,
+      "sha256": "c0c3152810f8715b97021b3a0a4a21405600e2f56ae492126a9ca9ed8c980f46"
+    },
+    "prompt.txt": {
+      "bytes": 3061,
+      "sha256": "738efd3ba4458dc369a8cb31e4548706d6611b36bbc668faf22913af79500d29"
+    },
+    "README.md": {
+      "bytes": 3129,
+      "sha256": "8ee1eb3a40fbf41780da016ae9d4c416503e69de2cbb2369a17bf385d25facab"
+    },
+    "job.json": {
+      "bytes": 1102,
+      "sha256": "879241b970f23756c3c3a303d37e1bb6e0a4f0e572bd7ffbcdccdab132da9d33"
+    },
+    "KK-decision-2248.md": {
+      "bytes": 1274,
+      "sha256": "800c4be60ddce825c9963154d8dfc80e578273937009f1b9d6d53f5f882b9ff9"
+    },
+    "geometry-guide-v2.png": {
+      "bytes": 1560685,
+      "sha256": "86635c0a9a1a9e3f52a719f0052e13609b91f0136eafde9b6be92442dd942fa5"
+    },
+    "temple-cutaway-v1.png": {
+      "bytes": 2129638,
+      "sha256": "92a5974331f3f881b88ba585443adb5e63e9b46c4dddb52272b58c34fc06f7ec"
+    },
+    "geometry-assumptions.json": {
+      "bytes": 1436,
+      "sha256": "5fded3160f47f31e48f2fdee150d04addae162a06226b24d93fc9ab1fcc704d6"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "verifiedAt": "2026-11-15T15:51:16.373802+00:00",
+  "files": [
+    {
+      "path": "sources/H-LAHTEET.md",
+      "bytes": 24978,
+      "sha256": "1214a7c86ede21de16442fb80c22a5b573cabcff612c5b1bdb32d3de8034ba2b"
+    },
+    {
+      "path": "sources/H-PAIKAT.md",
+      "bytes": 11903,
+      "sha256": "7ba4185c2dce777fbd1755e14204b139f63c2d2761338f0fe74f3b40dfcec7c3"
+    },
+    {
+      "path": "sources/additional-sources.json",
+      "bytes": 494,
+      "sha256": "2ed0985bd1d0392298c3e93d18868c719accdae0e9e03721812669e80dccefb9"
+    },
+    {
+      "path": "sources/curzon-1888-p116.jpg",
+      "bytes": 1573926,
+      "sha256": "2df5f99f25ae058adb86be69b4ba48b7d70e3f27d7584d1ad17cc949434384e4"
+    },
+    {
+      "path": "sources/floorplan-sources.json",
+      "bytes": 975,
+      "sha256": "1e344d1743ff425ad73ff8256cde27e85052bb1cf2c672e03d77f09a526ab31e"
+    },
+    {
+      "path": "sources/geometry-registration-check.md",
+      "bytes": 1270,
+      "sha256": "753ed501fe285325cb67ed608e59636251bdd8db05d7e2618abd162b95df8477"
+    },
+    {
+      "path": "sources/giraud-1802-38.jpg",
+      "bytes": 1712370,
+      "sha256": "96dad1d3dafc59b91520d334647c3a337777222e9d780700cac5d73fcc260a92"
+    },
+    {
+      "path": "sources/giraud-1802-39.jpg",
+      "bytes": 1734767,
+      "sha256": "7ef5ba2c15d19772da6e5a33964488d44d3d56150616abe5a10142b4664c7188"
+    },
+    {
+      "path": "sources/temple-auvray-exterior-cc0.jpg",
+      "bytes": 1839333,
+      "sha256": "1986f0cfb70dc8ece919f29e69bb9d6ce311bc043b93fb82c50816f5e20f6337"
+    },
+    {
+      "path": "sources/temple-bourla-ground-plan.jpg",
+      "bytes": 219912,
+      "sha256": "6e84a86b9ecc99ace5f01e6f9bdcc4ebe71c8d0983491f65c2f5406dda7ebf85"
+    },
+    {
+      "path": "sources/temple-bourla-plan-second.jpg",
+      "bytes": 15981394,
+      "sha256": "cce1c20427066a67ccb688c1ca086b3fd8eb69f1132bf93c875b3793d14f96af"
+    },
+    {
+      "path": "sources/temple-plan-440AP-1.jpg",
+      "bytes": 205894,
+      "sha256": "fa53cfdcf19e0fc0079743134dd384e2866fe06dfaff35cf1518ae79a5ecf300"
+    },
+    {
+      "path": "sources/temple-source-research.md",
+      "bytes": 3963,
+      "sha256": "355734729139a126a67456cfee4eabdc70922893c2c731177adafca0a55d99c9"
+    }
+  ]
+}

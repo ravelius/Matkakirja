@@ -1,0 +1,38 @@
+{
+  "createdAt": "2026-11-15T16:39:58.628674+00:00",
+  "purpose": "KK2248 approximate technical prototype, nothistoricallyvalidated or game-ready",
+  "fourHallLevels": [
+    0,
+    7,
+    13.5,
+    19.5,
+    24
+  ],
+  "roofApex": 39,
+  "cornerConeApex": 34,
+  "cornerConeHeightInterpretation": "relative5m offset from central apex, not validated45m historicvalue",
+  "footprint": {
+    "body": 13.5,
+    "wall": 2.27,
+    "inner": 8.96,
+    "turretDiameter": 5.5,
+    "turretCentres": 6.75,
+    "outerExtent": 19.0
+  },
+  "cut": "plan-localx=y,keepx<=y; through lower-leftstair andoppositeupper-right; no mirror",
+  "sourcePlaneRegistration": "unresolved; no compassclaim",
+  "unresolvedHeight": "Curzon39/50m contradiction retained. Hallheightvalues used asapproximate intervals; no invented11m floor.",
+  "approximations": [
+    "vaultspring/rise, slabs, columnradius, stairtreadcount and coneheights illustrate structure",
+    "windowpositions rectangular simplifications fromtwo-bay text",
+    "guette aslowwalkway aroundatticbase; noextraresidentialfloor"
+  ],
+  "omitted": [
+    "PetiteTour annex outsideisolatedGrosseTourstructuraltest",
+    "furniture",
+    "cellar",
+    "prisonpartitionwalls toavoidinvented identicalfloors"
+  ],
+  "stairVisibilityCorrection": "main-wall and main-slab circular voids, four approximate hall access openings; no floor-height, mirror or cut-plane change",
+  "engine": "Workbench4threads only"
+}

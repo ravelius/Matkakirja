@@ -1,0 +1,20 @@
+{
+  "status": "selected-for-KK-review-not-approved",
+  "startedAt": "2026-11-15 16:43:51 UTC",
+  "estimatedCompletion": "2-4 minutes",
+  "tool": "builtin-image_gen",
+  "sourceGuide": "work/temple-half-cut-guide-v2.png",
+  "sourceDecision": "source-decision-2248.md",
+  "sourceDecisionCommit": "ce707a5f90e8f5b7aa69d0ea695fe7944d182fd9",
+  "assumptions": "work/guide-assumptions-v2.json",
+  "cost": null,
+  "tripoCredits": 0,
+  "approval": "Reference image must be reviewed by KK before Tripo",
+  "grandChateletReferencesAlreadyDelivered": "35357d569b89db47e2b4e166513caace4dd377da",
+  "jobId": "exec-ebc47564-fd2b-4b4b-95d9-80acea0d1d3a",
+  "originalOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-ebc47564-fd2b-4b4b-95d9-80acea0d1d3a.png",
+  "output": "output/tripo-halkaistu-koe-2243-20261115/temple-cutaway-v1.png",
+  "completionObservedAt": "2026-11-15T16:44:57.653526+00:00",
+  "sha256": "92a5974331f3f881b88ba585443adb5e63e9b46c4dddb52272b58c34fc06f7ec",
+  "QA": "QA-temple-reference-v1.md"
+}
