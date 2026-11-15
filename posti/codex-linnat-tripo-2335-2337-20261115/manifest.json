@@ -1,0 +1,308 @@
+{
+  "createdAt": "2026-11-15T21:50:57.556139+00:00",
+  "status": "PREPARED_FOR_KK_REVIEW",
+  "deliveryNote": "posti/tripo3d-kk-linnat-tripo-2335-2337-20261115.md",
+  "models": [
+    {
+      "taskNumber": 2335,
+      "slug": "neuschwanstein-v4",
+      "jobId": "b7e992e4-6040-4548-ab6f-945130ce54e2",
+      "sourceImages": [
+        {
+          "role": "single",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/neuschwanstein-v4-2321/neuschwanstein-model-v4.png",
+          "sha256": "4fa70babaed49a24bdfef69a0a53928ff219fc1bb290852b8cd5cbb8b185ff53"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-tripo-2335-2337-20261115/neuschwanstein-v4/neuschwanstein-v4-2335-max-original-8k.glb",
+      "sha256": "37ca269a1ab8dded70a126bb64b156261c675474fe5f5e7fd0d8222c15f4a369",
+      "bytes": 77900520,
+      "triangles": 1875874,
+      "vertices": 1071608,
+      "metricsFile": "neuschwanstein-v4-glb-metrics.json",
+      "QA": "neuschwanstein-v4-QA.md",
+      "views": [
+        "neuschwanstein-v4-01-plusX.jpg",
+        "neuschwanstein-v4-02-plusZ.jpg",
+        "neuschwanstein-v4-03-minusX.jpg",
+        "neuschwanstein-v4-04-minusZ.jpg",
+        "neuschwanstein-v4-05-upper.jpg"
+      ],
+      "overview": "neuschwanstein-v4-5views-1000.jpg",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "visualVerdict": "WARNING",
+      "technicalFailureFound": false,
+      "jobURL": "https://studio.tripo3d.ai/workspace/generate/b7e992e4-6040-4548-ab6f-945130ce54e2",
+      "startedAt": "2026-11-15T21:32:57.215350+00:00",
+      "exportedAt": "2026-11-15T21:40:39.436843+00:00",
+      "sources": [
+        {
+          "role": "single",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/neuschwanstein-v4-2321/neuschwanstein-model-v4.png",
+          "sha256": "4fa70babaed49a24bdfef69a0a53928ff219fc1bb290852b8cd5cbb8b185ff53"
+        }
+      ],
+      "sourceCommit": "b308b8a2d9b653808eceb11571c609ed9e5cf802",
+      "sourceBlob": "0f42337535ea732fb61163874a55e64699845287",
+      "creditsSpent": 65,
+      "maxCalls": 1,
+      "callsUsed": 1
+    },
+    {
+      "taskNumber": 2336,
+      "slug": "turku-A-multiview",
+      "jobId": "1f614393-1834-43fe-a64e-16b702fc142b",
+      "sourceImages": [
+        {
+          "role": "front",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/turku-model-v2.png",
+          "sha256": "ac876829e1c006c7e781e1fa4b316172c2ae00790940be063a0ae20ed7e95c2c"
+        },
+        {
+          "role": "left",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-vastapuoli-2323/turku-vastapuoli-v1.png",
+          "sha256": "556a95fdbb6e03d82bca851a992cf046aee8132f02e7a588d611fd390e2910af"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-tripo-2335-2337-20261115/turku-A-multiview/turku-A-multiview-2336-max-original-8k.glb",
+      "sha256": "a6b3c5dca93734ec902c174cdad4df55e9c8a84c2abc4b1fd5b74c752b134455",
+      "bytes": 82131820,
+      "triangles": 1976029,
+      "vertices": 1136724,
+      "metricsFile": "turku-A-multiview-glb-metrics.json",
+      "QA": "turku-A-multiview-QA.md",
+      "views": [
+        "turku-A-multiview-01-plusX.jpg",
+        "turku-A-multiview-02-plusZ.jpg",
+        "turku-A-multiview-03-minusX.jpg",
+        "turku-A-multiview-04-minusZ.jpg",
+        "turku-A-multiview-05-upper.jpg"
+      ],
+      "overview": "turku-A-multiview-5views-1000.jpg",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "visualVerdict": "WARNING",
+      "technicalFailureFound": false,
+      "jobURL": "https://studio.tripo3d.ai/workspace/generate/1f614393-1834-43fe-a64e-16b702fc142b",
+      "startedAt": "2026-11-15T21:37:55.295295+00:00",
+      "exportedAt": "2026-11-15T21:43:19.872562+00:00",
+      "sources": [
+        {
+          "role": "front",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/turku-model-v2.png",
+          "sha256": "ac876829e1c006c7e781e1fa4b316172c2ae00790940be063a0ae20ed7e95c2c"
+        },
+        {
+          "role": "left",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-vastapuoli-2323/turku-vastapuoli-v1.png",
+          "sha256": "556a95fdbb6e03d82bca851a992cf046aee8132f02e7a588d611fd390e2910af"
+        }
+      ],
+      "sourceCommit": "b308b8a2d9b653808eceb11571c609ed9e5cf802",
+      "sourceBlob": "0f42337535ea732fb61163874a55e64699845287",
+      "creditsSpent": 65,
+      "maxCalls": 1,
+      "callsUsed": 1
+    },
+    {
+      "taskNumber": 2337,
+      "slug": "turku-B-single",
+      "jobId": "b64ec558-3c25-48c5-a1bd-78630fcbbbae",
+      "sourceImages": [
+        {
+          "role": "single",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/turku-model-v2.png",
+          "sha256": "ac876829e1c006c7e781e1fa4b316172c2ae00790940be063a0ae20ed7e95c2c"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-tripo-2335-2337-20261115/turku-B-single/turku-B-single-2337-max-original-8k.glb",
+      "sha256": "85c5fec695044d0b376df8da54be321ceca00f3b69eb39c90baae8534fda156f",
+      "bytes": 85379932,
+      "triangles": 1956389,
+      "vertices": 1313068,
+      "metricsFile": "turku-B-single-glb-metrics.json",
+      "QA": "turku-B-single-QA.md",
+      "views": [
+        "turku-B-single-01-plusX.jpg",
+        "turku-B-single-02-plusZ.jpg",
+        "turku-B-single-03-minusX.jpg",
+        "turku-B-single-04-minusZ.jpg",
+        "turku-B-single-05-upper.jpg"
+      ],
+      "overview": "turku-B-single-5views-1000.jpg",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "visualVerdict": "FAIL_VISIBLE_MAIN_MASS_CONTINUITY",
+      "technicalFailureFound": false,
+      "jobURL": "https://studio.tripo3d.ai/workspace/generate/b64ec558-3c25-48c5-a1bd-78630fcbbbae",
+      "startedAt": "2026-11-15T21:39:09.378841+00:00",
+      "exportedAt": "2026-11-15T21:45:15.817539+00:00",
+      "sources": [
+        {
+          "role": "single",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-korjaukset-2321-2323-20261115/turku-v2-2322/turku-model-v2.png",
+          "sha256": "ac876829e1c006c7e781e1fa4b316172c2ae00790940be063a0ae20ed7e95c2c"
+        }
+      ],
+      "sourceCommit": "b308b8a2d9b653808eceb11571c609ed9e5cf802",
+      "sourceBlob": "0f42337535ea732fb61163874a55e64699845287",
+      "creditsSpent": 65,
+      "maxCalls": 1,
+      "callsUsed": 1
+    }
+  ],
+  "reviewImageCounts": {
+    "individual": 15,
+    "overview": 3
+  },
+  "localAxesOnly": true,
+  "geographicRegistration": false,
+  "modelOriginalsUnchanged": true,
+  "gameIntegration": false,
+  "KKAcceptance": false,
+  "simplificationPerformed": false,
+  "creditsSpentThisBatch": 195,
+  "rendering": "None; cropped existing browser screenshots only",
+  "sheetVerification": "New process per model; labels/legend use fixed raster glyphs. Every expected white letter pixel checked in decoded JPEG, not merely text-area presence; fresh-path images reviewed.",
+  "visualSummary": {
+    "neuschwanstein-v4": "WARNING; corrected south wall and lower courtyard retained, full north stair-tower body/upper courtyard/loggia positions unverified",
+    "turku-A-multiview": "WARNING; green main mass more continuous, surrounding dark roofs and incomplete courtyard unverified",
+    "turku-B-single": "FAIL for visible green main-mass continuity; not a technical GLB failure. Two green towers retained but middle is lower/dark-roofed.",
+    "selection": "KK selects; A more faithful to visible main mass, neither full footprint historically validated"
+  },
+  "PTAck": {
+    "taskNumber": 2338,
+    "commit": "6a7dcb705413ee8b4e77f2afc3e971a72b2e169a",
+    "readBy": "root; conveyed in task",
+    "message": "#2324–2328 koosteet välitetty KK:lle; hyväksyntä auki, ei uusia ottoja/Kamjanets-Tripoa."
+  },
+  "files": [
+    {
+      "file": "neuschwanstein-v4-01-plusX.jpg",
+      "sha256": "dfc19fad0e46e38d2a1fa3f3839998c60f42252f61749d4fd70ef8c6fc3ae2ce",
+      "bytes": 43439
+    },
+    {
+      "file": "neuschwanstein-v4-02-plusZ.jpg",
+      "sha256": "4dd7fb877af293f5690055be44f484d6c86a4d1c54812596ad85fea6aff4955c",
+      "bytes": 91020
+    },
+    {
+      "file": "neuschwanstein-v4-03-minusX.jpg",
+      "sha256": "56922783683b8d9513d72da4b2d98a5de84f20843800c76d77a83125684e9556",
+      "bytes": 37364
+    },
+    {
+      "file": "neuschwanstein-v4-04-minusZ.jpg",
+      "sha256": "576f4de6c69e85715403524276e1e8735e39e19e1b21504d385bf3df619591bc",
+      "bytes": 88742
+    },
+    {
+      "file": "neuschwanstein-v4-05-upper.jpg",
+      "sha256": "fcb6a514d5bd96a7ca3a6dcfff3c117e4f4fc7a6e0a5e25a252d93deb78a22e7",
+      "bytes": 108501
+    },
+    {
+      "file": "neuschwanstein-v4-5views-1000.jpg",
+      "sha256": "31982223514e86bac002a49dda1ca1d716210a0f5dae02d32e16ae12abfb1cbe",
+      "bytes": 146660
+    },
+    {
+      "file": "neuschwanstein-v4-QA.md",
+      "sha256": "104d1a2f0b94e80c9983104b657d6ae7725e2bdfa19fb93900f57c777c489d07",
+      "bytes": 4061
+    },
+    {
+      "file": "neuschwanstein-v4-glb-metrics.json",
+      "sha256": "3d1db05cd510aba03af3f44af9588e1b60ea72c932ac9d1f34d65a7533ff8944",
+      "bytes": 1797
+    },
+    {
+      "file": "turku-A-multiview-01-plusX.jpg",
+      "sha256": "51bcddcc4ec0f5c0e36f8019aa319b49492c46391cd11da22675d21966536d8c",
+      "bytes": 88671
+    },
+    {
+      "file": "turku-A-multiview-02-plusZ.jpg",
+      "sha256": "15956df5419783052991bfe5e6e68306e6fa6af74727cdb4f0d46a4e435b0422",
+      "bytes": 105483
+    },
+    {
+      "file": "turku-A-multiview-03-minusX.jpg",
+      "sha256": "2e7f7671e464924943e63b34d573f3d6ac5821b720f1675ce52597c9034cc6a4",
+      "bytes": 77950
+    },
+    {
+      "file": "turku-A-multiview-04-minusZ.jpg",
+      "sha256": "644ef175cffb9e5e6d6846502bebc56a94a8d28eccfdfc9e9dc39afb30ca6fc9",
+      "bytes": 93621
+    },
+    {
+      "file": "turku-A-multiview-05-upper.jpg",
+      "sha256": "1220082f7c7efa799a8efcbc4f2802ebd585d4cb9f4d9a44782869479a8c758c",
+      "bytes": 151528
+    },
+    {
+      "file": "turku-A-multiview-5views-1000.jpg",
+      "sha256": "2c0e2da0499565812366abf148d510352ebccda19619a8b51f92a365af5811d2",
+      "bytes": 175582
+    },
+    {
+      "file": "turku-A-multiview-QA.md",
+      "sha256": "0a5b3e05cb286b636e9158d7c20444c0a054031c315aa888625f9f6ad7ad2964",
+      "bytes": 4392
+    },
+    {
+      "file": "turku-A-multiview-glb-metrics.json",
+      "sha256": "f37ae34d1eff2f939df2fe1ffa743898ad27fce0a8b45a3d052e3f7d004139d5",
+      "bytes": 1794
+    },
+    {
+      "file": "turku-AB-comparison.md",
+      "sha256": "7aa5a6915fb88f2a24226484aaa61b9527c242c7542cb5a9fd056f2cee859da0",
+      "bytes": 3288
+    },
+    {
+      "file": "turku-B-single-01-plusX.jpg",
+      "sha256": "8f34293fb95a7502856ea8a81d0de1cbf70e3af528101de93a7ace25fc5047ea",
+      "bytes": 63490
+    },
+    {
+      "file": "turku-B-single-02-plusZ.jpg",
+      "sha256": "eec11ca4b7998c1c2399d38ed7e5dc9ead9a5cd6e6a2587f55abed0391254337",
+      "bytes": 79786
+    },
+    {
+      "file": "turku-B-single-03-minusX.jpg",
+      "sha256": "fb19e69b11182af4b9bc9cbc75d621d0ca74979f2aee77bde22fc506f10869e7",
+      "bytes": 47793
+    },
+    {
+      "file": "turku-B-single-04-minusZ.jpg",
+      "sha256": "f39b1cc9c0cb87e81215aef63d4916615a5ea1c38405cce918ae8b78f74a2608",
+      "bytes": 80138
+    },
+    {
+      "file": "turku-B-single-05-upper.jpg",
+      "sha256": "415a93d3bdd2395e0b18802c3ce9948c3154b7541097883a1f489339601bb93a",
+      "bytes": 124860
+    },
+    {
+      "file": "turku-B-single-5views-1000.jpg",
+      "sha256": "68135defdb2eb5940c8c65e94daca30d7ad849bc4e77b673d5796665a6e8ee62",
+      "bytes": 155959
+    },
+    {
+      "file": "turku-B-single-QA.md",
+      "sha256": "330a243f70500984ab383873098a570c56e2a2b63b921ad493937c445e62dbd4",
+      "bytes": 3392
+    },
+    {
+      "file": "turku-B-single-glb-metrics.json",
+      "sha256": "655dda711d3b45555da247c48871fb75137ac15e8a85a4401fd46e882ae75276",
+      "bytes": 1800
+    }
+  ],
+  "creditsBefore": 14320,
+  "creditsAfter": 14125,
+  "labelPixelVerification": "../label-pixel-verification.json",
+  "labelPixelVerificationSHA256": "0d591a73351043ed1d08b0279b6a4b4a3589d0aca9aed1fe71aa640d44880e1c"
+}
