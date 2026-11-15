@@ -1,0 +1,74 @@
+{
+  "taskNumber": 2284,
+  "sourceUpdateTask": 2285,
+  "status": "QA_FAIL_SEVEN_TOWERS_AWAITING_KK",
+  "startedAt": "2026-11-15T19:39:52.487458+00:00",
+  "estimatedFinish": "approximately5-10minutes for one image and QA",
+  "generationCalls": 1,
+  "maxModelImages": 1,
+  "tripoCalls": 0,
+  "tripoCredits": 0,
+  "imageGenerationCost": "not exposed by tool",
+  "tripoAllowed": false,
+  "sourceCommit": "ba072545340eabdb36ace4cbc28959d392674271",
+  "updateCommit": "38f9496f2585167d0de051e1a436433d23e6dda3",
+  "sourceMarkdownReadFully": true,
+  "sourceCollageViewed": true,
+  "gameIntegration": false,
+  "generationStartedAt": "2026-11-15T19:40:26.889050+00:00",
+  "tool": "built-in image_gen",
+  "providerJobId": null,
+  "ack": {
+    "commit": "389a7007cbe47e1266096f926fe894abcc7a8ad2",
+    "blob": "1e2ea92eb492f814cef480a74c7d2db9084410a9",
+    "readbackVerified": true
+  },
+  "toolArtifactId": "exec-8f443175-80d0-4c31-b0b7-331da54d3458",
+  "completedAt": "2026-11-15T19:41:32.111526+00:00",
+  "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/castel-del-monte-mallikuva-2284-20261115/castel-del-monte-model-v1.png",
+  "nativeSHA256": "09906dada7e75c4490b96ef14a6aaae99e5af3375cca0b5c58dd5414feaae5f4",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "previewSize": [
+    1000,
+    666
+  ],
+  "qa": "FAIL",
+  "observedTowerCount": 7,
+  "requiredTowerCount": 8,
+  "qaReport": "independent-QA.md",
+  "viewDirection": "East, main portal at front, oblique aerial; west facade hidden and northern triforium not verified",
+  "retryAllowed": false,
+  "completedOneImageAttempt": true,
+  "artifactScope": "Diagnostic failed candidate only; NOT approved source for Tripo",
+  "sourceFiles": {
+    "castel-del-monte.jpg": "c3b73313d604b78e20e35dda8f8259e1a3fd0e5a8953828db0e5845ecfbaf400",
+    "castel-del-monte.md": "8b2ac69517ae4710a3bdcbf63880e4f7777dff6ed28fced57ddbd55602a4fbe8",
+    "castel-del-monte-huomiot.md": "6068222c791c9f0bc607a9dafbfa93c9b885baab371d4d9351060cd43aecc093"
+  },
+  "nativePreservedOnT7": true,
+  "deliveryFiles": {
+    "prompt.txt": {
+      "bytes": 2970,
+      "sha256": "d7e6f79d9acf189665415a27bb3b98be7f59e8b8e257dc7d2c63895669aed1fd"
+    },
+    "source-update.md": {
+      "bytes": 428,
+      "sha256": "725e017f7833b56455e21c2ae7723c2c0309c0eaeeee5f245b2b270c08e3c2f5"
+    },
+    "source-order.md": {
+      "bytes": 1409,
+      "sha256": "360d31aff7275b4a56012a654aa33953f767094b1b87b8fe7d22c499257e3c88"
+    },
+    "castel-del-monte-model-v1-1000.jpg": {
+      "bytes": 129483,
+      "sha256": "425f9f8aae0196f99cdc2e9dc2ac20fa9c8c63dd8edec1b19e1baa2d5987d852"
+    },
+    "independent-QA.md": {
+      "bytes": 3177,
+      "sha256": "9de75208c1c84dab763d2c82d5ff3c9db2b4fa1099bb6fd527d871ec013d9cdd"
+    }
+  }
+}
