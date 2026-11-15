@@ -2,11 +2,11 @@
 
 Malli: Pariisi (PR 6588), Lontoo (6789), Rooma, Wien (docs/raportit/wien-isoisa-pulu-luonnos-20261115.md). Rajat: isoisä ≤ ~250, pulu ~150 merkkiä (kortti tekstit-ja-kieli 5). EI data-PR:ää, EI äänityksiä eikä kuvien latausta ilman KK:n sanaa. Tarkistettu ensin, mitä Amsterdamista on jo (js/packs/fokusvirta-amsterdam.js; amsterdam-tutkimus.md PR 6709 koskee vain tehtäväehdokkaita, ei saapumistekstejä): nykyinen isoisä on omistajan hyväksymä ullakkokirkkoteksti (262 merkkiä, hyvä kommellus), nykyinen pulu pyörähalli + ankka (296 merkkiä, yli rajan). Siksi EI keksitä uutta tapahtumaa väkisin: ehdotus pitää ullakkokirkon ja lyhentää molemmat rajaan. Uudet 1873-kandidaatit tutkittiin (alla), mutta mikään ei ole ullakkokirkon veroinen.
 
-## Ehdotus (lyhennetyt nykyiset; avaus ilman "Voi isoisä!": tunnuslause enintään joka kolmannessa kaupungissa)
+## HYVÄKSYTTY (KK 16.11.2026 klo 01.08; pulussa yksi sanajärjestys: "kävelin sen alla"). Ehdotus (lyhennetyt nykyiset; avaus ilman "Voi isoisä!": tunnuslause enintään joka kolmannessa kaupungissa)
 
 1. **Isoisä (253 merkkiä):** "Kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se rakennettiin aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut soivat, ja penkki värisi."
    Muutokset nykyiseen: "Amsterdamin" pois (paikkarivi kertoo paikan), "oli rakennettu" → "rakennettiin", "alkoivat soida niin, että" → "soivat, ja". Sisältö sama.
-2. **Pulu (152 merkkiä):** "Aseman edessä on pyörähalli veden alla, seitsemälletuhannelle pyörälle! Kurkistin sisään. Ankka ui yllä tietämättä, että sen alla kävelin kuivin jaloin."
+2. **Pulu (152 merkkiä):** "Aseman edessä on pyörähalli veden alla, seitsemälletuhannelle pyörälle! Kurkistin sisään. Ankka ui yllä tietämättä, että kävelin sen alla kuivin jaloin."
    Nykyisestä: pyörähalli, 7 000, ankka pysyvät; "palasin rantaan" ja "olisin halunnut nähdä sen ilmeen" pois.
 
 ## Faktat ja lähteet
