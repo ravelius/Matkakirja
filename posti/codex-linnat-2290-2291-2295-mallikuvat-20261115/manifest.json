@@ -1,0 +1,52 @@
+{
+  "createdAt": "2026-11-15T20:04:22.055583+00:00",
+  "scope": "One new reference each 2290,2291,2295; no Tripo for these references",
+  "receiverApproval": false,
+  "records": [
+    {
+      "taskNumber": 2290,
+      "slug": "neuschwanstein",
+      "nativeT7": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2286-2292-20261115/neuschwanstein-2290/neuschwanstein-model-v2.png",
+      "nativeSHA256": "3ab59dcbebe0d4ece0668a957ddb9c76fd705a8798f59ea8002bc15af1beded4",
+      "reviewImage": "neuschwanstein-model-v2-1000.jpg",
+      "qa": "WARNING",
+      "imageCalls": 1,
+      "maxImageCalls": 1,
+      "tripoCalls": 0,
+      "tripoAllowed": false,
+      "providerJobId": null,
+      "cost": "not exposed",
+      "method": "built-in image_gen"
+    },
+    {
+      "taskNumber": 2291,
+      "slug": "chillon",
+      "nativeT7": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2286-2292-20261115/chillon-2291/chillon-model-v2.png",
+      "nativeSHA256": "8039e121cc938d76c59b4a09050c5b4f7668ef8a9d417805aa4773a9dcb8b240",
+      "reviewImage": "chillon-model-v2-1000.jpg",
+      "qa": "WARNING",
+      "imageCalls": 1,
+      "maxImageCalls": 1,
+      "tripoCalls": 0,
+      "tripoAllowed": false,
+      "providerJobId": null,
+      "cost": "not exposed",
+      "method": "built-in image_gen"
+    },
+    {
+      "taskNumber": 2295,
+      "slug": "castel-del-monte",
+      "nativeT7": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/castel-del-monte-mallikuva-2284-20261115/retry-2295/castel-del-monte-model-v2.png",
+      "nativeSHA256": "7027818ae3326590413d54935ad2b119af00f1264fefa6318b4a68c5211f2d3a",
+      "reviewImage": "castel-del-monte-model-v2-1000.jpg",
+      "qa": "PASS_VISIBLE_STRUCTURE",
+      "imageCalls": 1,
+      "maxImageCalls": 1,
+      "tripoCalls": 0,
+      "tripoAllowed": false,
+      "providerJobId": null,
+      "cost": "not exposed",
+      "method": "built-in image_gen"
+    }
+  ]
+}
