@@ -7660,6 +7660,44 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
+    Haringpakkerstoren: {
+      aika: '–1829',
+      teksti: 'Haringpakkerstoren, sillinpakkaajien torni, oli Amsterdamin linnoitukseen kuulunut torni IJ:n '
+        + 'rannalla. Torni purettiin vuonna 1829.'
+        + '\n\n'
+        + 'Sitä ei ole rakennettu uudelleen, vaikka kopion rakentamista suunniteltiin 2000-luvulla.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 torni oli ollut poissa jo yli neljäkymmentä vuotta.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Bulletin KNOB ja Rijksmuseo',
+    },
+    // Sama erä.
+    'Waag op de Dam': {
+      aika: '1560-luku–1808',
+      teksti: 'Damin aukiolla seisoi Waag, vaaka, jossa punnittiin torilla myytäviä tavaroita. Vaakahuone '
+        + 'rakennettiin 1560-luvulla. Yläkerrassa oli kaupungin vartiosto ja asevarasto.'
+        + '\n\n'
+        + 'Hollannin kuningas Louis Bonaparte muutti viereisen raatihuoneen palatsikseen ja käski purkaa '
+        + 'vaa\'an, joka oli hänen mielestään tiellä. Vaaka purettiin vuonna 1808.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 aukiolla ei ollut vaakaa. Raatihuone seisoi paikallaan, ja se on yhä '
+        + 'kuninkaanpalatsi.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Ons Amsterdam ja I amsterdam',
+    },
+    // Sama erä.
+    'Paleis voor Volksvlijt': {
+      aika: '1864–1929',
+      teksti: 'Paleis voor Volksvlijt oli lasista ja raudasta rakennettu näyttelypalatsi Amsterdamin '
+        + 'Frederiksplein-aukiolla. Esikuvana oli Lontoon Kristallipalatsi. Ajatuksen antoi lääkäri Samuel '
+        + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli sen. Palatsi avattiin 16. elokuuta 1864. '
+        + 'Siellä pidettiin näyttelyitä, konsertteja sekä ooppera- ja teatteriesityksiä.'
+        + '\n\n'
+        + 'Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Paikalla on '
+        + 'nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Oneindig Noord-Holland, Andere Tijden ja Ons Amsterdam',
+    },
   },
   dublin: {
     'Guinness-panimo': {
@@ -10502,6 +10540,18 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+    // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
+    'Meta Sudans': {
+      aika: '1. vuosisata–1936',
+      teksti: 'Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä Roomassa. Nimi tarkoittaa '
+        + 'hikoilevaa käännepylvästä. Se rakennettiin 1. vuosisadan lopulla, vähän Colosseumin jälkeen.'
+        + '\n\n'
+        + 'Mussolini käski purkaa sen rauniot vuonna 1936, koska ne olivat paraatien ja liikenteen tiellä. '
+        + 'Suihkulähdettä ei ole enää.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 tiilinen kartio seisoi vielä rauniona Colosseumin vieressä.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Platner & Ashby (1929) ja Elizabeth Marlowen tutkimus',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
