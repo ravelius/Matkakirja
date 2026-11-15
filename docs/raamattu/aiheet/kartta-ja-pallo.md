@@ -7,7 +7,7 @@ SÄÄNNÖT:
 2. Ulkoasu on 1873-atlaksen akvarelli: tummanruskea muste, kerma valkoisen sijaan, paperin syy. Paperin rae on laitepikseleinä, piirteet kartan mittakaavassa. [R-4.34]
 3. Reliefi on monisuuntaisesti varjostettu, lämmin korkeusvärjäys. Meressä on vain pehmeä sävyliuku, ei syvyyskäyriä eikä vesiviivoitusta. [R-4.35]
 4. Maiden rajat ovat vektoriviivoja täydellä voimalla, ilman erillistä rantaviivaa ja paksua rajakehää. Kohdemaan raja on muita vahvempi mutta hento ja käsin piirretyn näköinen (1,7 pt, voima 0,42). [R-4.36] [R-2.136] [P-261115-3]
-5. Muiden maiden päällä ei ole huntua. Koko palloa saa selata, mutta napautus avaa vain kohdemaan asiat; linssit, ISS-raketti, aarrepisteet, nopan siirrot ja lentotarjoukset toimivat kaikkialla. [R-2.136] [P-261115-3] [P-261115-4]
+5. Muualla ei ole huntua. Koko palloa saa selata, mutta napautus avaa ja perintöpisteet nimineen näkyvät vain kohdemaassa; linssit, ISS-raketti, aarrepisteet, nopan siirrot ja lentotarjoukset toimivat kaikkialla. [R-2.136] [P-261115-3] [P-261115-4] [P-261115-5]
 6. Kartan kaikki kohteet ovat yhdessä karttapaletissa; liian vahva väri puristetaan rajaan tuonnissa. Paletti ei koske käyttöliittymää, Pulua eikä kohdemaan lippua. [R-4.40]
 7. Pysyvä poltetaan yhteen maailman laattapyramidiin (pohja, nostot, viivat); vain pelissä vaihtuva on elävää, ja laitteelle haetaan vain näkyvät laatat. [R-6.9]
 8. Pohja kattaa koko maailman; tarkemmat tasot tehdään vain paikoille, joissa pelaaja käy. Navoilla on oma samantyylinen karttakuva. [R-4.35] [R-6.10]
