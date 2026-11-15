@@ -26,6 +26,8 @@ def lue(polku):
     d = open(polku, 'rb').read()
     nm, _, nk = struct.unpack_from('<HHI', d, 4); lat0, lon0 = struct.unpack_from('<dd', d, 16)
     rivit = [struct.unpack_from('<BBBBffffI', d, 32 + 24 * i) + (struct.unpack_from('<I', d, 32 + 24 * i + 16)[0],) for i in range(nm)]
+    # MK01 muoto 2 (KK 07.25): asemarivin perässä jatkorivi (tyyppi 11), tavut 1…23 hallitavujen jatkoksi
+    rivit = [r + ((d[32 + 24 * (i + 1) + 1:32 + 24 * (i + 2)] if r[0] == 7 and r[3] & 0x80 else None),) for i, r in enumerate(rivit)]
     o = 32 + 24 * nm; merkit = []
     for i in range(nk):
         x, z, _, mi, ak, _, _, _, osm = struct.unpack_from('<ffhHHHHHi', d, o + 24 * i)
@@ -40,10 +42,10 @@ def enu_f(lat0, lon0):
 
 
 def laatikot(rivi, vanha):
-    t, a, b, c, L, W, p2, p3f, va, p3 = rivi
+    t, a, b, c, L, W, p2, p3f, va, p3, jatko = rivi
     if vanha:
         return [(-17.5, L - 16, -W / 2, W / 2), (-17.5, 0.0, -W / 2 - 2, W / 2 + 2)]
-    hs, jul = hallit.pura(L, W, a, b, c, p3, va)
+    hs, jul = hallit.pura(L, W, a, b, c, p3, va, jatko)
     q = [(x0, x1, z0, z1) for z0, z1, x0, x1, _ in hs]
     if jul: q.append(jul)
     return q

@@ -1,0 +1,264 @@
+# Valoseppä 15.11.2026 kierros 6 (KK 07.25): pudonneet kaistat puolikkaina + kirkkojen/palatsin oikea lähikuva (lahizoomi). EI JUNAAN.
+# Nyt = pelin talot ilman tyyppimalleja. Uusi = KS:n poisOsm-palat + tyyppimallit (muoto 2).
+alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3251 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p5-nyt Saint-Lazare (way/727994377): puolikaistat: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.8418 2.3662 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p6-nyt Gare d'Austerlitz (way/62380197): puolikaistat: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.8447 2.3748 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p7-nyt Gare de Lyon (way/1161318094): puolikaistat: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3594 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p12-nyt Gare de l'Est (way/280670907): puolikaistat: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.881 2.3554 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p13-nyt Gare du Nord (way/63197091): puolikaistat: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.85057 2.32627 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p8-nyt Saint-Ignace (way/24310193) LÄHIKUVA (lahizoomi 4): Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 3
+komento aja 48.86355 2.33685 0.004 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p9-nyt Palais Royal (relation/3300400) LÄHIKUVA (lahizoomi 3): Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.82975 2.31189 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p10-nyt Chapelle (way/137692720) LÄHIKUVA (lahizoomi 4): Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.86769 2.29847 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p11-nyt Saint-Pierre de Chaillot (way/79276832) LÄHIKUVA (lahizoomi 4): Nyt (nykyiset talot, ei tyyppimalleja)
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/talot-vaisto/koko-v21-merkit/palat
+odota 20
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3251 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p5-uusi Saint-Lazare (way/727994377): puolikaistat: Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.8418 2.3662 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p6-uusi Gare d'Austerlitz (way/62380197): puolikaistat: Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.8447 2.3748 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p7-uusi Gare de Lyon (way/1161318094): puolikaistat: Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3594 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p12-uusi Gare de l'Est (way/280670907): puolikaistat: Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.881 2.3554 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p13-uusi Gare du Nord (way/63197091): puolikaistat: Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.85057 2.32627 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p8-uusi Saint-Ignace (way/24310193) LÄHIKUVA (lahizoomi 4): Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 3
+komento aja 48.86355 2.33685 0.004 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p9-uusi Palais Royal (relation/3300400) LÄHIKUVA (lahizoomi 3): Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.82975 2.31189 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p10-uusi Chapelle (way/137692720) LÄHIKUVA (lahizoomi 4): Uusi (poisOsm-palat + tyyppimallit)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.86769 2.29847 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p11-uusi Saint-Pierre de Chaillot (way/79276832) LÄHIKUVA (lahizoomi 4): Uusi (poisOsm-palat + tyyppimallit)

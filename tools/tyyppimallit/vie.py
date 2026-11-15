@@ -14,10 +14,11 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
             6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
                           p2 = seinän sRGB 0xRRGGBB f32-kokonaislukuna (0 = oletuskivi; parametri 'seina' SEINA-taulusta)
             7 asema (p0 pituus L, p1 leveys W, p2 = kaupungin kattoväri sRGB 0xRRGGBB; kattovari(): KK 15.11. 05.22). Hallit pohjan sisään
-                    (KK 15.11. 06.20 päätös B; hallit.py): a = halleja (bitit 0–2) | julkisivukaistat << 3; kaistan k alku ja loppu u8:na tavuissa
-                    T[2k], T[2k+1], T = [b, c, p3:n 4 RAAKAA tavua, varattu-kentän 4 tavua] (LE); x = −L/2 + q · L/255, kaista mukana jos loppu > alku.
-                    Mallin keskipiste = pohjan suorakaiteen keskipiste kulman kehyksessä (merkin x z siirretty), akseli = hallien akseli (julkisivu −x
-                    kohti origoa). Kaikki tavut 0 = vanha malli (peli TyyppiAsema).
+                    (KK 15.11. 06.20 päätös B; pudonneet kaistat puolikkaina KK 07.25; hallit.py): MUOTO 2 = a = kaistoja (bitit 0–2) | julkisivukaistat << 3;
+                    b | c << 8 = kaistakartta (bitti 15 = 1; kaistan k tila bitit 3k…: 0 ei, 1 kokonainen, 2 / 3 vain 1. / 2. puolikas, 4 molemmat);
+                    hallien alku ja loppu u8:na jonossa H = [p3:n 4 RAAKAA tavua, varattu-kentän 4 tavua, jatkorivin tavut 1…23]; x = −L/2 + q · L/255.
+                    Rivin perässä AINA JATKORIVI: tyyppi 11, 23 hallitavua (ei merkkejä, ei verkkoa). Mallin keskipiste = pohjan suorakaiteen keskipiste
+                    kulman kehyksessä (merkin x z siirretty), akseli = hallien akseli (julkisivu −x kohti origoa). b c p3 varattu 0 = vanha malli (TyyppiAsema).
             8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
             10 kirkko-julkisivu (tornitön, KK 15.11.; a = kupoli 0/1: peli piirtää kupolin lisäosana tasaisella min(sx, sz); vain nimilistalta)
      Tyypit 1–4 ja 8–10 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
@@ -180,13 +181,22 @@ def main(a):
         if m['tyyppi'] == 'asema':
             # KK 15.11. 06.20 B: hallit pohjan sisään (hallit.py), julkisivu (−x) kohti origoa; merkki pohjan suorakaiteen keskelle.
             m['_hallit'] = hallit.laske(m, (-x, -z))
+            def kat(r):
+                hs, jul = hallit.pura(r['pituus'], r['leveys'], r['a'], r['b'], r['c'], r['p3_bitit'], r['varattu'], r['jatko'])
+                return round(100 * hallit.kattavuus(m, r['akseli'], r['siirto'], hs, jul), 1)
+            ennen = hallit.laske(m, (-x, -z), puolikkaat=False)
             x, z = x + m['_hallit']['siirto'][0], z + m['_hallit']['siirto'][1]
             asemat.append(dict(osm=m['osm'], nimi=m.get('nimi'), akseli=round(m['_hallit']['akseli'], 2), poikkeama=m['_hallit']['poikkeama'],
                                siirto=[round(v, 2) for v in m['_hallit']['siirto']], pituus=round(m['_hallit']['pituus'], 1), leveys=round(m['_hallit']['leveys'], 1),
                                halleja=m['_hallit']['halleja'], julkisivu=m['_hallit']['julkisivu'],
-                               kaistat=[None if a_ is None else [round(a_, 1), round(b_, 1)] for a_, b_ in zip(m['_hallit']['alku'], m['_hallit']['loppu'])]))
+                               kaistat=m['_hallit']['kaistat'], hallimaara=m['_hallit']['hallimaara'],
+                               katettu_pct=kat(m['_hallit']), katettu_ennen_pct=kat(ennen), kaistat_ennen=ennen['kaistat']))
         r = malli(m)
-        if r not in mallit: mallit[r] = len(rivit); rivit.append(r)
+        avain = (r, m['_hallit']['jatko']) if m['tyyppi'] == 'asema' else r
+        if avain not in mallit:
+            mallit[avain] = len(rivit); rivit.append(r)
+            if m['tyyppi'] == 'asema': rivit.append(('jatko', m['_hallit']['jatko']))   # KK 07.25: hallitavut jatkuvat seuraavalle riville (tyyppi 11)
+        r = avain
         y = 0
         if maa:
             v = maa(m)
@@ -204,7 +214,9 @@ def main(a):
 
     liput = 1 if maa else 0
     out = bytearray(b'MK01' + struct.pack('<HHII', len(rivit), liput, len(merkit_b), 0) + struct.pack('<dd', lat0, lon0))
-    for r in rivit: out += struct.pack('<BBBBfff', *r[:7]) + r[7] + struct.pack('<I', r[8])
+    for r in rivit:
+        if r[0] == 'jatko': assert len(r[1]) == 23; out += bytes([11]) + r[1]; continue
+        out += struct.pack('<BBBBfff', *r[:7]) + r[7] + struct.pack('<I', r[8])
     for x, z, y, mi, ak, sx, sz, oid in merkit_b:
         out += struct.pack('<ffhHHHHHi', x, z, int(round(y / 0.25)) if maa else 0, mi, int(round(ak * 100)) % 36000,
                            int(round(sx * 1000)), int(round(sz * 1000)), 0, oid)
