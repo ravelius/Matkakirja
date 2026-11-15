@@ -99,9 +99,6 @@ e8ce359d98028aaf8e30ff1d49dde3ad	pariisi	nahtavyysjutut	Saint-Eustache	3	2026-11
 01d38a900dd42ca2aac0c5a7fec8cf99	pariisi	nahtavyysjutut	Pompidou-keskus	1	2026-11-14
 d2b9d2ad149388b0fc7e55261b4a5fd6	pariisi	nahtavyysjutut	Pompidou-keskus	2	2026-11-14
 e20d95461cb7fc24089eac981b2cdba8	pariisi	nahtavyysjutut	Pompidou-keskus	3	2026-11-14
-a019d6d9ced9877fd6d2776150497927	FRA	hahmotelma	hahmotelma-grand-chatelet	1	2026-11-14
-02d8cc5f48405b408e213eb84eca24e7	FRA	hahmotelma	hahmotelma-palais-industrie	1	2026-11-14
-32df16bb0989be792c68d40567a68fb4	FRA	hahmotelma	hahmotelma-les-halles	1	2026-11-14
 5453d20fac746357fdc77abd17f0c95f	lontoo	nahtavyysjutut	Johnson 1755	2	2026-11-15
 e9484b1ce39a84868e0b8b4bdcc5acc5	lontoo	nahtavyysjutut	Punch 1662	2	2026-11-15
 d74a5652a085f6eb4b47c1929b6791a3	lontoo	nahtavyysjutut	Händel ja Hendrix	3	2026-11-15
@@ -114,9 +111,6 @@ a48a62abd4890e85506e1809ff43c6e1	lontoo	nahtavyysjutut	Händel ja Hendrix	1	2026
 5af37634271c38680b264e8744780f9b	lontoo	nahtavyysjutut	Punch 1662	1	2026-11-15
 b94bef63df206ad86cab596588129c2d	lontoo	takynostot	handel-hendrix-brook-street	1	2026-11-15
 9c5b516dd5233c436d774457ca1111ee	lontoo	takynostot	punch-pepys-1662	1	2026-11-15
-f04b3e41cb4927bc2c4b45dd415b4b66	FRA	hahmotelma	hahmotelma-temple-torni	1	2026-11-15
-a39bfc8fc47c45d02076ee797b7b869e	FRA	hahmotelma	hahmotelma-temple-torni	2	2026-11-15
-82806d0b6315678328b17910d6042dff	FRA	hahmotelma	hahmotelma-palais-industrie	2	2026-11-15
 56cfd536833407f92d99cfbabd1d7de9	lontoo	nahtavyysjutut	Baird 1926	2	2026-11-15
 320b4ce1b783595f17fcbbfeeee50192	lontoo	nahtavyysjutut	Baird 1926	3	2026-11-15
 bbaffe7961e46c85d1cd91f0f4a621b6	lontoo	nahtavyysjutut	Baird 1926	1	2026-11-15
@@ -125,3 +119,17 @@ eb5ab82de16d7fa961d5680848edbfd7	lontoo	nahtavyysjutut	Sähkötin 1837	2	2026-11
 688b0b8cca0db51b72265bb38a017cc5	lontoo	nahtavyysjutut	Sähkötin 1837	3	2026-11-15
 eb95c30487894104ef04e6a79c6d0f13	lontoo	takynostot	baird-televisio-1926	1	2026-11-15
 25e84a86e0714e8049eecab98443fc28	lontoo	takynostot	sahkotin-euston-1837	1	2026-11-15
+9d780fe1b8d1eab63df03d3141b3a705	FRA	hahmotelma	hahmotelma-grand-chatelet	1	2026-11-15
+0c8858a2f790933dbbe673da6bb7f69f	FRA	hahmotelma	hahmotelma-grand-chatelet	2	2026-11-15
+54e811f18f6a514b3d29008d209448af	FRA	hahmotelma	hahmotelma-temple-torni	1	2026-11-15
+38c32777aa7b89c4163f6eda6b8ab42a	FRA	hahmotelma	hahmotelma-temple-torni	2	2026-11-15
+3024cf8de61bdf1b90596b7332a19271	FRA	hahmotelma	hahmotelma-palais-orsay	1	2026-11-15
+52b33af4d17015285a02f6b051f81c64	FRA	hahmotelma	hahmotelma-palais-orsay	2	2026-11-15
+01b84dd01b30944ed2d74143ac92066f	FRA	hahmotelma	hahmotelma-palais-industrie	1	2026-11-15
+13e55bb005979de7ea4b9c257504750c	FRA	hahmotelma	hahmotelma-palais-industrie	2	2026-11-15
+cc389a693f843a84ca39d9d254eb8eb4	FRA	hahmotelma	hahmotelma-trocadero	1	2026-11-15
+bb5e03cc8afc6b17fc2af96910ae8383	FRA	hahmotelma	hahmotelma-trocadero	2	2026-11-15
+d65c464b9017eac22319e6d04929e90a	FRA	hahmotelma	hahmotelma-galerie-des-machines	1	2026-11-15
+f2937183af80511b37b274d884b68f42	FRA	hahmotelma	hahmotelma-galerie-des-machines	2	2026-11-15
+b481b4fe1cce7622ae7f58f1a7ca9d32	FRA	hahmotelma	hahmotelma-les-halles	1	2026-11-15
+96bceba2840f4246af11d266216fa4d2	FRA	hahmotelma	hahmotelma-les-halles	2	2026-11-15
