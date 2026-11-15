@@ -8,7 +8,7 @@ SÄÄNNÖT:
 3. Mittausikkunan aikana ei pushata eikä ajeta savukkeita; commit odottaa paikallisena. [R-12.13]
 4. Jumissa olevalla koneella toisen prosessia ei pysäytetä: sen prioriteetin saa laskea, ja pid kerrotaan omistajalleen. [R-12.13]
 5. Salasanaton sudo kattaa vain neljä huoltokomentoa, ja uuden lisää vain omistaja. Komento ajetaan yksin sallintarivin muodossa, ja PT saa siitä rivin. [R-12.11]
-6. Vapaata tilaa tavoitellaan pysyvästi 150 Gi tai enemmän. Alle 100 Gi:n lukemasta lähtee rivi PT:lle, ja alle 20 Gi:n ei aloiteta käännöksiä, Mac-ajoja eikä paistoja. [R-12.19]
+6. Vapaata tilaa riittää 110 Gi; 150 Gi:tä ei ajeta takaa eikä omistajaa muistuteta. [P-261115-2] Alle 100 Gi:n lukemasta lähtee rivi PT:lle, ja alle 20 Gi:n ei aloiteta käännöksiä, Mac-ajoja eikä paistoja. [R-12.19]
 7. Käynnistyslevyllä on vain päivittäinen työ. Työn alla oleva aineisto, työkalut ja välimuistit ovat T7:llä; pysyvä arkisto on NAS:lla ilman linkkejä. Uusi aineisto tallennetaan suoraan oikeaan paikkaan. [R-12.19]
 8. Tilaa vapautetaan siirtämällä, ei poistamalla: alkuperäinen lähtee vasta, kun kopion koko ja tarkistussumma täsmäävät. Poistaa saa vain omistajan nimeämiä itsestään palautuvia välimuisteja yösiivouksessa (iPad-asennukset, simulaattorien taustakuvat). [P-261109-6] [R-12.19]
 9. Kansion siirtää sen omistava rooli. Käytössä olevaa käännöstä, jonon kohdetta tai toisen roolin appia ei siirretä eikä poisteta. [R-12.19] [R-12.9]
