@@ -1,0 +1,274 @@
+{
+  "preparedAt": "2026-11-15T19:29:38.344785+00:00",
+  "status": "EDITOR_SOURCE_COMPARISON_ONLY",
+  "sourceCommit": "65e11215540ba8da4ee02eba34f1a0f3b5785cb6",
+  "priorModelAcceptanceCommit": "731d51566ef88c9c2673f59ba44eea829349ee3a",
+  "items": [
+    {
+      "taskNumber": 2276,
+      "name": "neuschwanstein",
+      "image": "neuschwanstein-model-v1-1000.jpg",
+      "imageSize": [
+        1000,
+        500
+      ],
+      "qaVerdict": "REVIEW_READY",
+      "uncertaintyLine": "Luoteinen nykytilan hahmo ja tornisuhteet tunnistuvat ilman90m kappelitornia; pihan peittyvät liittymät ja pienaukotus jäävät arvioiksi, korkein risti on niukasti yläreunan sisällä.",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/neuschwanstein/neuschwanstein-model-v1.png",
+      "nativeSHA256": "4e02e589dedb230f1b7debc04a321246e4f4c1bda046286c7bc3cb904371ae4c",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/neuschwanstein/prompt.txt",
+      "toolArtifactId": "exec-03b30729-9c59-4360-8ce3-aaa85540b2f8",
+      "providerJobId": null,
+      "generationStartedAt": "2026-11-15T19:20:48.018425+00:00",
+      "generationFinishedAt": "2026-11-15T19:21:40.305498+00:00",
+      "generationCalls": 1,
+      "tool": "built-in image_gen",
+      "imageGenerationCost": "not exposed by tool",
+      "tripoCalls": 0,
+      "tripoCredits": 0,
+      "sourceCommit": "65e11215540ba8da4ee02eba34f1a0f3b5785cb6",
+      "sourceAttachments": [
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/neuschwanstein.jpg",
+          "sha256": "37fc935dc84961e68c0b9f8a21ec2113082987e9dd9f1a38a4743608099069c0"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/neuschwanstein.md",
+          "sha256": "e979490f31ae34a6232d6b76e07c51327af0f79824a290f968dffeff3bd8363c"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/neuschwanstein-huomiot.md",
+          "sha256": "2a13ba8467360e7e6b474db909d48b2b62499346a700b8763865bfa0c1f00505"
+        }
+      ]
+    },
+    {
+      "taskNumber": 2277,
+      "name": "chillon",
+      "image": "chillon-model-v1-1000.jpg",
+      "imageSize": [
+        1000,
+        547
+      ],
+      "qaVerdict": "WARNING",
+      "uncertaintyLine": "Chillonin yleismassa ja restauroitu ilme tunnistuvat, mutta pienestä lähdekoonnista ei voi varmistaa pihojen/kattojen tarkkaa jakoa eikä generoituja ikkuna- ja ulokedetaljeja; puhdas pohjoissivu puuttuu.",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/chillon/chillon-model-v1.png",
+      "nativeSHA256": "893e12ced4ec2a92791307550c74b1cacfb309495e7f2a45ef5505396048d25c",
+      "nativeSize": [
+        1695,
+        928
+      ],
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/chillon/prompt.txt",
+      "toolArtifactId": "exec-743fe66c-4520-4845-a58b-125424e4dabc",
+      "providerJobId": null,
+      "generationStartedAt": "2026-11-15T19:22:18.596846+00:00",
+      "generationFinishedAt": "2026-11-15T19:23:03.714148+00:00",
+      "generationCalls": 1,
+      "tool": "built-in image_gen",
+      "imageGenerationCost": "not exposed by tool",
+      "tripoCalls": 0,
+      "tripoCredits": 0,
+      "sourceCommit": "65e11215540ba8da4ee02eba34f1a0f3b5785cb6",
+      "sourceAttachments": [
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/chillon.jpg",
+          "sha256": "9036ef535bc2892cd6f78f5f1d12086adb18394b58eeecbf06e753cdef6e533c"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/chillon.md",
+          "sha256": "00c670fe255143660e231abf8425517cbb88167120053ef1612fa627321ac08b"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/chillon-huomiot.md",
+          "sha256": "29a626bde4689397f75223a638c625d4330e56608a766340fc8e1facc230fbaa"
+        }
+      ]
+    },
+    {
+      "taskNumber": 2278,
+      "name": "karlstejn",
+      "image": "karlstejn-model-v1-1000.jpg",
+      "imageSize": [
+        1000,
+        666
+      ],
+      "qaVerdict": "WARNING",
+      "uncertaintyLine": "Kolmiportainen massa ja avoimet pihat seuraavat SSW-ilmakuvaa; oikean reunan kirkkosiiven suippokaari-ikkunat,korkeus ja kattodetaljit ovat lähdekuvaa korostavaa tulkintaa; puhdas länsipuoli puuttuu.",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/karlstejn/karlstejn-model-v1.png",
+      "nativeSHA256": "11c3b9c32bd239c67992e6962a03dfd2c80fd05d5a03b1d9ee8849bdfdf87e9e",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/karlstejn/prompt.txt",
+      "toolArtifactId": "exec-39238146-a8af-423c-b89f-a0df864313a9",
+      "providerJobId": null,
+      "generationStartedAt": "2026-11-15T19:23:38.912222+00:00",
+      "generationFinishedAt": "2026-11-15T19:24:28.378913+00:00",
+      "generationCalls": 1,
+      "tool": "built-in image_gen",
+      "imageGenerationCost": "not exposed by tool",
+      "tripoCalls": 0,
+      "tripoCredits": 0,
+      "sourceCommit": "65e11215540ba8da4ee02eba34f1a0f3b5785cb6",
+      "sourceAttachments": [
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/karlstejn.jpg",
+          "sha256": "f9d952362069b826f591e78c64ff7abf44384d7e425e3257f3731f6206b2370b"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/karlstejn.md",
+          "sha256": "542761e9787f3c866ee821116dd5696c81c3c55869eee33405aec4bf0f6f8f67"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/karlstejn-huomiot.md",
+          "sha256": "1be1911a4a7ab0f05fd62bc3ac4ae8446c0cb0118d502ca01363a6a47386a483"
+        }
+      ]
+    },
+    {
+      "taskNumber": 2279,
+      "name": "kalmar",
+      "image": "kalmar-model-v1-1000.jpg",
+      "imageSize": [
+        1000,
+        562
+      ],
+      "qaVerdict": "REVIEW_READY",
+      "uncertaintyLine": "Neljä palatsin kulmatornia,suuri Kuretornet,neljä matalaa ulkobastionia ja avoimeksi esitetty piha tunnistuvat; pihan suhteet ja pienet ikkuna-/kattodetaljit jäävät varmistamatta, suunta ja absoluuttimitat avoimiksi.",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/kalmar/kalmar-model-v1.png",
+      "nativeSHA256": "40cbd16257eda500533fba1c05aee5fab5a5ad8feb755b41677ced905384ca34",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/kalmar/prompt.txt",
+      "toolArtifactId": "exec-1cac98ca-9bc0-454c-b1b6-dbb1070141ae",
+      "providerJobId": null,
+      "generationStartedAt": "2026-11-15T19:25:01.205569+00:00",
+      "generationFinishedAt": "2026-11-15T19:25:51.029663+00:00",
+      "generationCalls": 1,
+      "tool": "built-in image_gen",
+      "imageGenerationCost": "not exposed by tool",
+      "tripoCalls": 0,
+      "tripoCredits": 0,
+      "sourceCommit": "65e11215540ba8da4ee02eba34f1a0f3b5785cb6",
+      "sourceAttachments": [
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/kalmar.jpg",
+          "sha256": "d02969e89b6e72f02a580493881d5170e201c794a4f2f936843904709a1d9aa1"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/kalmar.md",
+          "sha256": "e468da702884ddfca8de12b81f44ac62bc2da0458820fce8a2eb1724a1013e4e"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/kalmar-huomiot.md",
+          "sha256": "1805668ced66f61fa2bf181a55e2b7ab95b9eff6da83134d745a3bed97462ec6"
+        }
+      ]
+    },
+    {
+      "taskNumber": 2280,
+      "name": "kronborg",
+      "image": "kronborg-model-v1-1000.jpg",
+      "imageSize": [
+        1000,
+        666
+      ],
+      "qaVerdict": "REVIEW_READY",
+      "uncertaintyLine": "Nelisiipinen massa,avoin piha,vasen umpineliötorni ja oikea koristetorni vastaavat SSW-ilmakuvaa; länsipuolen ikkuna-/ovijako ja huippujen täsmäkorkeudet jäävät varmistamatta.",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/kronborg/kronborg-model-v1.png",
+      "nativeSHA256": "3fd397c59d1b98223d061e924ac1f17ed27bfdbe29ec970e3bf1f2dea4e7b57d",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "promptFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-mallikuvat-2276-2280-20261115/kronborg/prompt.txt",
+      "toolArtifactId": "exec-db835ab4-27ed-4fad-8a26-b28f7fcff512",
+      "providerJobId": null,
+      "generationStartedAt": "2026-11-15T19:26:24.594088+00:00",
+      "generationFinishedAt": "2026-11-15T19:27:32.932921+00:00",
+      "generationCalls": 1,
+      "tool": "built-in image_gen",
+      "imageGenerationCost": "not exposed by tool",
+      "tripoCalls": 0,
+      "tripoCredits": 0,
+      "sourceCommit": "65e11215540ba8da4ee02eba34f1a0f3b5785cb6",
+      "sourceAttachments": [
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/kronborg.jpg",
+          "sha256": "3cf2ccc7182217b50e0175fd72c80dbf5789294b99f32786717ef39dcc8d621c"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/kronborg.md",
+          "sha256": "cd435e6026f81f20ece496424ae738eb4a655894e1ad8413faa27387fd570b16"
+        },
+        {
+          "path": "posti/paatoimittaja-codex-viisi-linnaa-lahdepaketit-20261115/kronborg-huomiot.md",
+          "sha256": "704aa85cfee7e4b38366be6d2fc905aa63805b48088a9d432b91f9b9f74943e6"
+        }
+      ]
+    }
+  ],
+  "newTripoCalls": 0,
+  "tripoCredits": 0,
+  "imageCalls": 5,
+  "imageCost": "provider billing unavailable in tool result",
+  "gameIntegration": false,
+  "publication": false,
+  "files": {
+    "chillon-QA.md": {
+      "bytes": 2145,
+      "sha256": "6075f42897215622cd380ab5e2c25221f40a3104f72f6fd4199fa980c57ed94e"
+    },
+    "chillon-model-v1-1000.jpg": {
+      "bytes": 122359,
+      "sha256": "6274ffdd1e36de3ccad74abcd36ebdd75fe2bcc9f237dd58a9952ca3322f2855"
+    },
+    "kalmar-QA.md": {
+      "bytes": 2249,
+      "sha256": "6b3e3ac71f84c6c5272eac930381f1d409ffdcac47db8e70735194a5e9b14ffa"
+    },
+    "kalmar-model-v1-1000.jpg": {
+      "bytes": 96089,
+      "sha256": "4a2447b240dff1b976e380f417d9e1e6223c072898064ba0986de3d03076241f"
+    },
+    "karlstejn-QA.md": {
+      "bytes": 2526,
+      "sha256": "f1cfc4afa128986a2b88abe6f1783d93a065324222b634d1a9b128ed46c43bea"
+    },
+    "karlstejn-model-v1-1000.jpg": {
+      "bytes": 90702,
+      "sha256": "462ca0002bc4ca8f0dbc8b28e02e4e7d13f0fe24e740c606d40265cac5fb532e"
+    },
+    "kronborg-QA.md": {
+      "bytes": 2321,
+      "sha256": "bf78e6ea72799c4bc1b21ea6310c23b04dd7b3383dd8ce2bb2a122c6e0ae995c"
+    },
+    "kronborg-model-v1-1000.jpg": {
+      "bytes": 161254,
+      "sha256": "fcd274e2de69ace6cb15db2d5fb4e4b7a10ef22a49392b3ad30de7df34332007"
+    },
+    "neuschwanstein-QA.md": {
+      "bytes": 1662,
+      "sha256": "b7f02f5c3a211f4dd70ded4f69b2e932231c8e2737fffd14c89f822df1eb5c81"
+    },
+    "neuschwanstein-model-v1-1000.jpg": {
+      "bytes": 103480,
+      "sha256": "02c03603c441aa9e0e66fa99c7568813bfa99f396db3575766f713efee800a6d"
+    },
+    "prompts.txt": {
+      "bytes": 10466,
+      "sha256": "8ba64a3377333e93120dbcc8b1c24db4c48c664dcd3afd44a6c61c22e4b1bcd1"
+    },
+    "source-order.md": {
+      "bytes": 1849,
+      "sha256": "2f65c34acc551ec94ac5f355c8d10deae31484935f75bf37e86bf5a6b8a15aed"
+    }
+  }
+}
