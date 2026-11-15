@@ -28,7 +28,7 @@ test('R2-hyväksyntälähde on tarkalleen käyttäjän hyväksymä 45 kaupungin 
 /** Kaupungit, joiden teksti ja ääni odottavat erän 5 ajoa (14.9.2026). */
 const ODOTTAA = new Set(ERA5_ODOTTAVAT_KAUPUNGIT);
 /** Pariisin isoisän ja pulun tekstit uusittu 11.11.2026 (KK, omistaja 20.31); 14.9. koonti on historiallinen lähde. */
-const UUSITTU_20261111 = new Set(['pariisi', 'lontoo']); // lontoo uusittu 15.11.2026 (KK, omistaja 08.33)
+const UUSITTU_20261111 = new Set(['pariisi', 'lontoo', 'amsterdam']); // lontoo uusittu 15.11.2026 (KK, omistaja 08.33); amsterdam 16.11.2026 (KK 01.08, lyhennetty nykyinen)
 
 test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia', () => {
   assert.equal(combined.cityCount, 45);
@@ -137,7 +137,7 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])].filter(Boolean);
   });
-  assert.equal(images.length, 104); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (i1/i2 → isoisa-pariisi, KK 12.11.); Lontoon isoisällä yksi kuva (luentakuva2 pois, KK 15.11.)
+  assert.equal(images.length, 102); // Amsterdam 16.11.2026: isoisällä yksi kuva (i2 pois), pulun kuva Commons-valokuva (p1/p2 pois); Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (i1/i2 → isoisa-pariisi, KK 12.11.); Lontoon isoisällä yksi kuva (luentakuva2 pois, KK 15.11.)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2, image.osoite);
   }
@@ -161,7 +161,7 @@ test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauk
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])].filter(Boolean);
   });
-  assert.equal(images.length, 147); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (KK 12.11.); Lontoon isoisällä yksi kuva (KK 15.11.)
+  assert.equal(images.length, 145); // Amsterdam 16.11.2026 (i2, p1/p2 pois, Commons-kuva); Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (KK 12.11.); Lontoon isoisällä yksi kuva (KK 15.11.)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
       `${image.osoite}: pitkän selitteen pitää olla kaksi sisältölausetta`);

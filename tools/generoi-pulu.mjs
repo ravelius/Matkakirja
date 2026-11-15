@@ -688,6 +688,12 @@ TAGIT['pariisi-3'] = { alku: '[amused]', kohdat: [['Katso ylös', '[brightly]']]
  */
 TAGIT['lontoo-3'] = { alku: '[amused]', kohdat: [['Baker Streetillä', '[warmly]']] }; // sama kuin ÄÄ:n otto 2 (15.11.2026)
 
+/*
+ * AMSTERDAMIN LYHENNETTY PULUN TEKSTI (KK 16.11.2026 klo 01.08): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan (vasta omistajan sanasta).
+ */
+TAGIT['amsterdam-3'] = { alku: '[amused]', kohdat: [['Ankka ui yllä', '[warmly]']] };
+
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();
