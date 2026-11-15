@@ -1,0 +1,97 @@
+{
+  "task": 2271,
+  "checkedDate": "2026-11-15",
+  "scope": "Temple height and orientation only; Turku2270 cancelled",
+  "height": {
+    "resolution": "Unresolved internal source contradiction; approx50m explicitly reported overall,39m calculated sum only",
+    "overallReportedApprox_m": 50,
+    "components_m": [
+      7,
+      6.5,
+      6,
+      4.5,
+      15
+    ],
+    "sum_m": 39,
+    "difference_m": 11,
+    "cornerTowerReported_m": 45,
+    "missing11mAssignment": null,
+    "extraGroundFloorSupported": false,
+    "roofWalkway35mStatus": "Earlier inference, not a direct Curzon measurement",
+    "originalPageVisuallyRechecked": true,
+    "primaryURL": "https://archive.org/details/lamaisondutempl00curzgoog/page/n137/mode/1up",
+    "primaryImageURL": "https://archive.org/download/lamaisondutempl00curzgoog/page/n137.jpg",
+    "supportingPages": [
+      115,
+      116,
+      117
+    ]
+  },
+  "orientation": {
+    "resolution": "Approximate square-axis directions available; named staircase/cutaway world yaw unresolved",
+    "priorSquareAxesAzimuth_deg": [
+      32,
+      122
+    ],
+    "priorAxisUncertainty_deg": 5,
+    "priorMeasurementRecomputed": false,
+    "measurementSourceType": "Belhoste2022 derivative map based on Verniquet, per prior H-PAIKAT analysis",
+    "mapRecordURL": "https://commons.wikimedia.org/wiki/File:Paris_Verniquet_1789_color.jpg",
+    "originalAtlasURL": "https://gallica.bnf.fr/ark:/12148/btv1b53243704g",
+    "originalAtlasAccessResult": "403 Forbidden; no Temple plate measurement verified",
+    "namedSideConflict": "Curzon staircaseNE / PetiteTour north versus preserved plans handedness; existing geometry-registration-check documents cannot satisfy both by rotation alone",
+    "mirrorAuthorized": false,
+    "actualModelYaw": null
+  },
+  "localEvidence": [
+    {
+      "path": "output/tripo-halkaistu-koe-2243-20261115/sources/H-LAHTEET.md",
+      "lineReference": "137-175",
+      "sha256": "1214a7c86ede21de16442fb80c22a5b573cabcff612c5b1bdb32d3de8034ba2b"
+    },
+    {
+      "path": "output/tripo-halkaistu-koe-2243-20261115/sources/H-PAIKAT.md",
+      "lineReference": "20-47",
+      "sha256": "7ba4185c2dce777fbd1755e14204b139f63c2d2761338f0fe74f3b40dfcec7c3"
+    },
+    {
+      "path": "output/tripo-halkaistu-koe-2243-20261115/sources/geometry-registration-check.md",
+      "lineReference": "2-8",
+      "sha256": "753ed501fe285325cb67ed608e59636251bdd8db05d7e2618abd162b95df8477"
+    },
+    {
+      "path": "output/tripo-halkaistu-koe-2243-20261115/sources/temple-source-research.md",
+      "lineReference": null,
+      "sha256": "355734729139a126a67456cfee4eabdc70922893c2c731177adafca0a55d99c9"
+    },
+    {
+      "path": "output/tripo-halkaistu-koe-2243-20261115/sources/curzon-1888-p116.jpg",
+      "lineReference": null,
+      "sha256": "2df5f99f25ae058adb86be69b4ba48b7d70e3f27d7584d1ad17cc949434384e4"
+    },
+    {
+      "path": "output/tripo-halkaistu-koe-2243-20261115/source-decision-2248.md",
+      "lineReference": null,
+      "sha256": "800c4be60ddce825c9963154d8dfc80e578273937009f1b9d6d53f5f882b9ff9"
+    }
+  ],
+  "notPerformed": [
+    "Blender",
+    "geometry changes",
+    "generation",
+    "new model",
+    "Finna or API access",
+    "external delivery",
+    "story or room-use research"
+  ],
+  "primarySourcesOnlyForFacts": true,
+  "independentHeightSourceConfirmed": false,
+  "historicallyVerifiedPlacementAchieved": false,
+  "rootProposalAssessment": {
+    "honestIfExplicitlyLabelled": true,
+    "proposal": "Preserve proportions during simplification; approx50m nominal total working height; local cut-view unchanged without reflection; geographic yaw unlocked",
+    "status": "Proposed technical placement convention, not historical proof or resolution of height contradiction",
+    "extra11mFloor": false,
+    "gameIntegrationGate": "Separate KK and NS acceptance required"
+  }
+}

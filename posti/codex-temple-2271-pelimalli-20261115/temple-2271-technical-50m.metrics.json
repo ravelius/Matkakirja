@@ -1,0 +1,39 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-halkaistu-koe-2243-20261115/game-2271/temple-2271-technical-50m.glb",
+  "bytes": 3850504,
+  "triangles": 74999,
+  "images": [
+    {
+      "name": "normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 566685
+    },
+    {
+      "name": "basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 953110
+    },
+    {
+      "name": "metallic-roughness-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "JPEG",
+      "bytes": 126866
+    }
+  ],
+  "imageCount": 3,
+  "maxPixels": 2048,
+  "sha256": "843ec7a3e22f952299e91af8c59d199ba7d6678fe540198e86959ff79424b74e",
+  "externalDependencies": false,
+  "gameAccepted": false
+}

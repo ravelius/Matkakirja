@@ -1,0 +1,99 @@
+{
+  "task": 2271,
+  "preparedAt": "2026-11-15T19:03:55.380871+00:00",
+  "status": "TECHNICAL_REVIEW_ONLY",
+  "model": "temple-2271-technical-50m.glb",
+  "metrics": {
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-halkaistu-koe-2243-20261115/game-2271/temple-2271-technical-50m.glb",
+    "bytes": 3850504,
+    "triangles": 74999,
+    "images": [
+      {
+        "name": "normal-1024",
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "bytes": 566685
+      },
+      {
+        "name": "basecolor-2048",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "JPEG",
+        "bytes": 953110
+      },
+      {
+        "name": "metallic-roughness-1024",
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "JPEG",
+        "bytes": 126866
+      }
+    ],
+    "imageCount": 3,
+    "maxPixels": 2048,
+    "sha256": "843ec7a3e22f952299e91af8c59d199ba7d6678fe540198e86959ff79424b74e",
+    "externalDependencies": false,
+    "gameAccepted": false
+  },
+  "originalsPreserved": true,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "jobId": null,
+  "receiverAcceptance": false,
+  "gameIntegration": false,
+  "gameBranchChanged": false,
+  "publication": false,
+  "files": {
+    "01-cut-front.png": {
+      "bytes": 824461,
+      "sha256": "3160e06413af9753a1542d9c83bdb448ddd0ab536382a55ec8a692db2bd9e25b"
+    },
+    "02-cut-oblique.png": {
+      "bytes": 759309,
+      "sha256": "69a01c451703c7a561c6db9a5a413397691db46c82b9a3b9286c55aaf7b74c84"
+    },
+    "05-stairs-geometry.png": {
+      "bytes": 617781,
+      "sha256": "9b62fe6dc466e2f0aaf0a333eacd61bdd8febbee141609f9b33bb72810ac349b"
+    },
+    "QA.md": {
+      "bytes": 2070,
+      "sha256": "e43832e5cc139b82da960b3d7de89ed23e2f4c703a301c8432693a6a38f1f5f6"
+    },
+    "curzon-2273-wording.md": {
+      "bytes": 1475,
+      "sha256": "b356b9661c30a18e146cea206f42a52fdcc61d32784da7adee64837f1fc512cd"
+    },
+    "evidence.json": {
+      "bytes": 3863,
+      "sha256": "d7dc70a48adf862e5ce9af6ff296a23a9a4d627f0a44d98b2160dee55498b445"
+    },
+    "independent-visual-QA.md": {
+      "bytes": 2785,
+      "sha256": "5bc6e59862a5c112b47db4aaa926d5380c5d5be2d9646a6cc9e65adfc23978e5"
+    },
+    "source-height-orientation.md": {
+      "bytes": 5714,
+      "sha256": "4e0b7d56b5b32ba1c8e0f768ced6e09e9ae1c1b4aaf6302c2657a836594e245f"
+    },
+    "source-order.md": {
+      "bytes": 3067,
+      "sha256": "7cb24285f2e155046f9a8202c8925ae2be591325ce3e7ef86542e66406969895"
+    },
+    "temple-2271-technical-50m.glb": {
+      "bytes": 3850504,
+      "sha256": "843ec7a3e22f952299e91af8c59d199ba7d6678fe540198e86959ff79424b74e"
+    },
+    "temple-2271-technical-50m.metrics.json": {
+      "bytes": 827,
+      "sha256": "ca373c1df811b7c7e113134dba1237f5fec2461d9e2bbf86a188a32d481689bf"
+    }
+  }
+}
