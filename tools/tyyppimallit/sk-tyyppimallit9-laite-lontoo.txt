@@ -1,0 +1,29 @@
+# Valoseppä 15.11.2026 kierros 9 LAITEAJO iPadilla, Lontoo l3 (kuten Pariisi). EI JUNAAN.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento kallista 50
+komento suunta 350
+komento lahizoomi 0
+komento aja 51.53194 -0.12657 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui lasi mittaa 10 l3-merkit-pois
+odota 12
+ui kartanelama merkit 1
+odota 4
+ui lasi mittaa 10 l3-merkit-paalla
+odota 12
+ui kartanelama tila
+linssi kaista
+odota 3

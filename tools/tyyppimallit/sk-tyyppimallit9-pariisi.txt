@@ -1,0 +1,108 @@
+# Valoseppä 15.11.2026 kierros 9 = KK 12.00 PÄÄTÖS A (kimput: leivotut palat ja varjot ≤ 256 palaa / 65535 kärkeä per verkko, Aariviiva-passi pois). EI JUNAAN.
+# merkit-pariisi-kartta.bytes 99218b90 (sama vienti kuin kierros 8). Vain UUSI (vertailu kierros 8 UUSI). p5:ssä palan nousu 0 | 0.5 | 1 (talot nousu).
+# Luvut: tyyppimallit … (lataus, muisti, kimput) + ruudut; piirtotilasto <kuva>-merkit-pois|paalla; kartanelama tila (omat kutsut).
+alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/talot-vaisto/koko-v21-merkit/palat
+odota 20
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3251 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p5-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p5-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p5-uusi Saint-Lazare (way/727994377): Uusi (kierros 9: kimput, nousuvariantti)
+komento talot nousu 0
+odota 3
+ui kartanelama tila
+kuva p5-q0 Saint-Lazare (way/727994377): palan nousu 0 (talot ja tyyppimallit samassa vaiheessa)
+komento talot nousu 0.5
+odota 3
+ui kartanelama tila
+kuva p5-q50 Saint-Lazare (way/727994377): palan nousu 0.5 (talot ja tyyppimallit samassa vaiheessa)
+komento talot nousu 1
+odota 3
+ui kartanelama tila
+kuva p5-q100 Saint-Lazare (way/727994377): palan nousu 1 (talot ja tyyppimallit samassa vaiheessa)
+komento talot nousu pois
+odota 3
+komento kallista 50
+komento suunta 10
+komento lahizoomi 3
+komento aja 48.86355 2.33685 0.004 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p9-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p9-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p9-uusi Palais Royal (relation/3300400) LÄHIKUVA: Uusi (kierros 9: kimput, nousuvariantti)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.86769 2.29847 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p11-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p11-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p11-uusi Saint-Pierre de Chaillot (way/79276832) LÄHIKUVA: Uusi (kierros 9: kimput, nousuvariantti)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3594 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p12-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p12-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p12-uusi Gare de l'Est (way/280670907): Uusi (kierros 9: kimput, nousuvariantti)
+odota 3
