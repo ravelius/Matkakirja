@@ -7669,7 +7669,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Sitä ei ole rakennettu uudelleen, vaikka kopion rakentamista suunniteltiin 2000-luvulla.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 torni oli ollut poissa jo yli neljäkymmentä vuotta.',
-      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Bulletin KNOB ja Rijksmuseo',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Bulletin KNOB ja Rijksmuseum',
     },
     // Sama erä.
     'Waag op de Dam': {
@@ -7692,7 +7692,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli sen. Palatsi avattiin 16. elokuuta 1864. '
         + 'Siellä pidettiin näyttelyitä, konsertteja sekä ooppera- ja teatteriesityksiä.'
         + '\n\n'
-        + 'Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Paikalla on '
+        + 'Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Palatsin tontilla on '
         + 'nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.',
