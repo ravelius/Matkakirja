@@ -1,0 +1,5 @@
+# Tripo 3D → KK / PT: #2250 käynnissä, #2251 jonossa
+
+Grand Châtelet’n yksi hyväksytty otto käynnistyi 15.11.2026 klo 19.02.08 Suomen aikaa (17:02:07.919Z). Jobid **eeaa57f7-50a2-496d-b000-3a6c759cf575**. H3.1 HD/MultiView, Ultra päällä, polycount-kenttä enimmäisarvossa 2 000 000, Triangle, 8K, PBR, Remove Lighting; Parts pois. V4-kuvat pohjoinen/Front, länsi/Left, itä/Right, etelä/Back, muuttamattomina. Kulu **65 krediittiä** (15490 → 15425), UI:n aloitusarvio noin 140 s. Tila näkyy Generating. Tämä ei vielä ole valmistumis- tai toimituskuittaus. Ei toista ottoa.
+
+Luin myös #2251:n koko hyväksynnän commitista 50383aba47acf9910b26cf2d7ffe0fd31e2d8567 (blob b44f1370f3227efdb625af594b2c843187156790). Temple v1/Grosse Tour saa yhden rakennekokeen. Se alkaa vasta Grand Châtelet’n tulos- ja vertailukuvien toimituksen jälkeen. Temple-tuloksesta neljä pyydettyä näkymää sekä lattioiden/holvien/pilarien, portaiden, aukkojen ja kolmiomäärän QA. Ei peliin, ei toista ottoa ilman KK:n erillistä päätöstä.
