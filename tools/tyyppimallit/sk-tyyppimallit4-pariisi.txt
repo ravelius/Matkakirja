@@ -1,0 +1,26 @@
+# Valoseppä 15.11.2026 kierros 4: asemahallit kaupungin talokattojen perusväristä (KK 05.22). EI JUNAAN.
+alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento lahizoomi 0
+komento kallista 58
+komento suunta 10
+komento aja 48.8775 2.3255 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 3
+ui kartanelama tila
+kuva p5-nyt Saint-Lazaren asema läheltä: lasihallit ja sinkkikatot: Nyt (ilman tyyppimalleja)
+ui kartanelama merkit 1
+odota 4
+ui kartanelama tila
+kuva p5-uusi Saint-Lazaren asema läheltä: lasihallit ja sinkkikatot: Uusi (tyyppimallit)

@@ -7,7 +7,7 @@
  "merkkeja": 429,
  "malleja": 23,
  "tavua": 10880,
- "sha256": "737582449941995a85d8d31c6b8c04fccb9bc16e533c0cbb57a7fc8447e71e55",
+ "sha256": "91949e6641936dea7ec3bfc86bee2be553270aeb6549454a194a212bf606ed7c",
  "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
  "maa_laskut": {
   "pisteita": 429,
@@ -456,5 +456,9 @@
   "way/99275231",
   "way/99379811",
   "way/998407660"
- ]
+ ],
+ "asemien_kattovari": {
+  "srgb": "#A88C74",
+  "lahde": "tee-palat.py KATTO"
+ }
 }

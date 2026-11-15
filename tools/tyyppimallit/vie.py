@@ -13,7 +13,7 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
             3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1, c = portiikki vain päädyssä 0/1),
             6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
                           p2 = seinän sRGB 0xRRGGBB f32-kokonaislukuna (0 = oletuskivi; parametri 'seina' SEINA-taulusta)
-            7 asema (a = halleja, p0 pituus, p1 leveys)
+            7 asema (a = halleja, p0 pituus, p1 leveys, p2 = kaupungin kattoväri sRGB 0xRRGGBB; kattovari(): KK 15.11. 05.22)
             8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
             10 kirkko-julkisivu (tornitön, KK 15.11.; a = kupoli 0/1: peli piirtää kupolin lisäosana tasaisella min(sx, sz); vain nimilistalta)
      Tyypit 1–4 ja 8–10 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
@@ -39,6 +39,43 @@ PAIKKA = {'lansi': 0, 'risteys': 1}
 HUIPPU = {'pyramidi': 0, 'neula': 1, 'tasakatto': 2}
 # Seinävärit (KS 15.11. 01.4x, katot.py PERHEET['lontoo'].seinat): Portland-kivi = 'lontoo'-stukko, punatiili; LUONNOS (KK päättää pelikuvista).
 SEINA = {None: 0, 'portland': 0xE4DCCA, 'tiili': 0xAC7862}
+# Asemahallien kattoväri (KK 15.11. 05.22): kaupungin talokattojen perusväri SAMASTA LÄHTEESTÄ kuin talopalat. Kaupunkirivin katot.paletti
+# (kaupungit-talot.json): vaihtelu-perhe → paletti → KATTO, kustakin suurimman osuuden sävy (KK 15.11. 05.26). Testi: testi_kattovari.py.
+KATTOVARI = (0, '-')
+KAUPUNKI_TYOKALU = '/Users/Shared/Claude/wt/proto-karttaseppa-tyokalu1/tyokalut/kaupunki'
+TEE_PALAT = '/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/tee-palat.py'
+
+
+def perheen_katot(lahde, perhe):
+    """katot.py:n PERHEET[perhe]['katot'] (lista ((r, g, b), osuus)) lähdetekstistä."""
+    import ast, re
+    lohko = lahde[lahde.index('PERHEET = {'):]
+    lohko = lohko[lohko.index(f"'{perhe}': dict("):]
+    return ast.literal_eval(re.search(r'katot=(\[[^\]]*\])', lohko).group(1))
+
+
+def kattovari(k):
+    """(sRGB 0xRRGGBB, selite) kaupungin talokattojen perusväri SAMASTA LÄHTEESTÄ kuin talopalat (KK 15.11. 05.26):
+    kaupunkirivin katot.vaihtelu → katot.py PERHEET[perhe].katot suurin osuus; muuten katot.paletti → PALETTI_* suurin osuus; muuten tee-palat.py KATTO.
+    Tasatilanteessa listan ensimmäinen (max palauttaa ensimmäisen). Talokohtainen ±4,5 % ja tiili eivät kuulu halliin (KK 05.26 kohta 2)."""
+    import ast, re
+    rivit = json.load(open(os.path.join(KAUPUNKI_TYOKALU, 'kaupungit-talot.json')))
+    rivit = rivit.get('kaupungit', rivit) if isinstance(rivit, dict) else rivit
+    rivi = ({r.get('nimi', r.get('id')): r for r in rivit} if isinstance(rivit, list) else rivit).get(k) or {}
+    katot = rivi.get('katot') or {}
+    lahde = open(os.path.join(KAUPUNKI_TYOKALU, 'katot.py'), encoding='utf-8').read()
+    def suurin(lista, nimi):
+        (r, g, b), osuus = max(lista, key=lambda x: x[1])
+        return (r << 16) | (g << 8) | b, f'{nimi} suurin osuus {osuus}'
+    perhe = (katot.get('vaihtelu') or {}).get('perhe')
+    if perhe: return suurin(perheen_katot(lahde, perhe), f"katot.py PERHEET['{perhe}'].katot")
+    paletti = katot.get('paletti')
+    if paletti:
+        nimi = {'k2b': 'PALETTI_K2B', 'k2': 'PALETTI_K2'}[paletti]
+        return suurin(ast.literal_eval(re.search(rf'^{nimi} = (\[.*\])$', lahde, re.M).group(1)), f'katot.py {nimi}')
+    r, g, b = ast.literal_eval(re.search(r'KATTO=(\([0-9, ]+\))', open(TEE_PALAT, encoding='utf-8').read()).group(1))
+    return (r << 16) | (g << 8) | b, 'tee-palat.py KATTO'
+
 
 
 def alueella(k, merkit):
@@ -63,7 +100,7 @@ def malli(m):
         return (ty, 8 if p.get('portiikki') or not attika else 10, 0 if attika else 1, 1 if p.get('portiikki') else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     if t == 'palatsi':
         return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 1 if p.get('katto') == 'attika' else 0, float(m['pituus']), float(m['leveys']), float(SEINA[p.get('seina')]), 0.0)
-    if t == 'asema': return (ty, int(p['halleja']), 0, 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
+    if t == 'asema': return (ty, int(p['halleja']), 0, 0, float(m['pituus']), float(m['leveys']), float(KATTOVARI[0]), 0.0)
     raise ValueError(t)
 
 
@@ -85,6 +122,8 @@ def osm_luku(oid):
 
 def main(a):
     k, ulos = a[0], a[1]
+    global KATTOVARI
+    KATTOVARI = kattovari(k)
     mpolku = a[a.index('--merkit') + 1] if '--merkit' in a else os.path.join(TY, 'tulos', f'merkit-{k}.json')
     moduulit = a[a.index('--moduulit') + 1] if '--moduulit' in a else MAASTO_OLETUS
     kaikki = json.load(open(mpolku))['merkit']
@@ -154,6 +193,7 @@ def main(a):
                  maa_laskut=maa_lkm, lahde=os.path.abspath(mpolku), lahde_sha256=hashlib.sha256(open(mpolku, 'rb').read()).hexdigest(),
                  tyypit=dict(Counter(f"{m['tyyppi']}-{m['koko']}" for m in ms)), ei_sovi_alueella=len(alueella(k, [m for m in kaikki if m['ei_sovi']])),
                  poisOsm=[m['osm'] for m in ms])
+    tieto['asemien_kattovari'] = {'srgb': f'#{KATTOVARI[0]:06X}', 'lahde': KATTOVARI[1]}
     json.dump(tieto, open(os.path.join(TY, 'tulos', f'vienti-{k}.json'), 'w'), ensure_ascii=False, indent=1)
     print(k, {a_: b for a_, b in tieto.items() if a_ != 'poisOsm'})
 

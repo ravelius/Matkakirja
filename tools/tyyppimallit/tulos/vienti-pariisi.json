@@ -7,7 +7,7 @@
  "merkkeja": 271,
  "malleja": 25,
  "tavua": 7136,
- "sha256": "3391530335825f2f5a88a87977993e3737ea521d38ba150b1a5ec688ed941d33",
+ "sha256": "f5344dd0f2c06bdfb6f82425bfc7c52fe2d66e3b34f17b8de318ae408c25ddd6",
  "maa": "ei (kartta tasainen: peli kuten puut)",
  "maa_laskut": {
   "pisteita": 0,
@@ -300,5 +300,9 @@
   "way/94236417",
   "way/95860808",
   "way/95869425"
- ]
+ ],
+ "asemien_kattovari": {
+  "srgb": "#949EAA",
+  "lahde": "katot.py PALETTI_K2B suurin osuus 0.36"
+ }
 }
