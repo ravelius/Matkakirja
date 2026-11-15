@@ -1,7 +1,7 @@
 {
  "lahde": "media.matkakirja.app .eleet.json + mp3, tarkistettu js/livia-puheeleet-lataus.js tarkistaLivianPilottiData",
  "yksikko": "ms äänen alusta",
- "haettu": "2026-10-10",
+ "haettu": "2026-11-15",
  "kaupungit": {
   "alpit": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
@@ -747,32 +747,32 @@
   },
   "lontoo": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "2a22c0329b0ccafe38385c0b8a11856666e4acbd7ea928775656a3f7786c5331",
+   "tekstiSha256": "71c08a3e3f9141b4960e32bdbf06d05a5a16be89b7788cb62e8dbf4c16396e88",
    "tila": "ok",
    "aani": {
-    "tavut": 282165,
-    "sha256": "192b966ca43d6385216cdb6af4b1ac892e884ef0ef1de47bf3bc7fd2da4e987b"
+    "tavut": 266492,
+    "sha256": "9ef9e9793374cbb1034ed1c6af5a723ffdf97359edf0f74866c69f632654f0a3"
    },
    "eleet": [
     {
      "id": "lontoo.livia.c1",
-     "alku": 180,
-     "loppu": 5720
+     "alku": 240,
+     "loppu": 2480
     },
     {
      "id": "lontoo.livia.c2",
-     "alku": 5720,
-     "loppu": 7960
+     "alku": 2480,
+     "loppu": 4440
     },
     {
      "id": "lontoo.livia.c3",
-     "alku": 7960,
-     "loppu": 10640
+     "alku": 4440,
+     "loppu": 8680
     },
     {
      "id": "lontoo.livia.c4",
-     "alku": 10640,
-     "loppu": 11480
+     "alku": 8680,
+     "loppu": 11120
     }
    ]
   },
