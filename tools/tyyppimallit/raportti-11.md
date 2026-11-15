@@ -31,3 +31,8 @@ St Pancras [228,425,425,–] | King's Cross [224,–] (lista 2) | Paddington [�
 - Linssit-testit TyyppiMerkitTestit: P3Bitit/Varattu-purku (JasennysJaPaikka) ja asemarivien kaistatavut (PelinTiedostot). 2340/2340.
 - Tiiviste (Luonnos.dll tiiviste tulos/mallirivit-b.tsv): 43 verkkometodia + 48 pelin MK01-riviä + 8 lisäasemariviä = 99/99 tavulleen samat
   ennen/jälkeen; 28 luonnos-OBJ:ia samat. testi_kattovari OK (P #949EAA, L #A88C74). unity-tarkistus 0 virhettä.
+
+## Kuvat ja Lontoon katto (07.2x)
+- JU tyyppimallit5b (a98c590a4) 14/14: lokit/valoseppa-tyyppimallit5b-pariisi; arkki lokit/valoseppa-tyyppimallit5-koonti/ (arkki5.py). Ensimmäinen ajo (5) huono:
+  `linssi kaista lahelle` vain kerran → kaukokuvat; korjattu skenaarioon jokaisen ajan jälkeen. Kirkkojen lähikuvat (p8, p10, p11) silti kaukaa.
+- Lontoon hallikatto KS l3d: perhe 'lontoo' #808183 (vie.py PERHE_OHITUS, kunnes kaupunkirivi tulee); peli b6bf7270a.
