@@ -302,7 +302,8 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
-const AANTA_ODOTTAVAT = new Set([]);
+/* Wienin pulun teksti uusittu 15.11.2026 (omistaja 18.58); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
+const AANTA_ODOTTAVAT = new Set(['wien-3']);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
