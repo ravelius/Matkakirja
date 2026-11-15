@@ -1,0 +1,19 @@
+{
+  "method": "Existing Tripo viewer: four local axis sides and manual upper orbit; no local render",
+  "viewOrder": [
+    "+X",
+    "+Z",
+    "-X",
+    "-Z",
+    "upper-oblique"
+  ],
+  "geographicRegistration": false,
+  "fullScreenshotsPreserved": true,
+  "cropBox": [
+    700,
+    210,
+    1850,
+    1140
+  ],
+  "imageCount": 5
+}

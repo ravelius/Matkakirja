@@ -1,0 +1,76 @@
+{
+  "file": "castel-del-monte-2301-max-original-8k.glb",
+  "bytes": 82018128,
+  "sha256": "7076b684b3ed004c98936883bb53907032ab31cb0bc37076dde7821b25291634",
+  "triangles": 1942596,
+  "vertices": 1222816,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_3a0a4876-ec3b-4315-a64d-11374d8f6038",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1639445
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_f685099c-9e1d-4a0f-918c-e82e5638dc67_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 16089538
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_f685099c-9e1d-4a0f-918c-e82e5638dc67_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1845611
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.4831848442554474,
+      0,
+      -0.48974616825580597
+    ],
+    "max": [
+      0.48309335112571716,
+      0.49310302734375,
+      0.4897156208753586
+    ],
+    "dimensions": [
+      0.9662781953811646,
+      0.49310302734375,
+      0.9794617891311646
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}
