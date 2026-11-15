@@ -32,3 +32,6 @@ KONE JA TURVA
 21. Avaimia ei tulosteta, kirjoiteta eikä kysytä omistajalta. Lupa-asetuksia ja CLAUDE.md:tä muuttaa vain omistaja omalla viestillään. Kortti: avaimet-ja-luvat.
 22. Kun omistaja käyttää Macia, ei raskaita ajoja eikä ikkunoita hänen näytölleen. Käynnistyslevyllä pidetään vähintään 150 Gi vapaana. Kortti: kone-ja-levy.
 23. Tilien käyttö ja vaihto: kortti tilit-ja-kiintio. Laitteet ja simulaattorit: kortti laitteet-ja-simulaattorit.
+
+KK:N JUNASANA JA TARKISTUS
+24. Junasana menee roolille ja sama rivi PT:lle. Ennen sitä: git diff juna...haara ja merge-tree juuri haetun kärjen päälle, testisarjat nimeltä ("vihreät" ei riitä) ja ajon skriptin komennot. Versiorivi vain koodista varmistetusta näkyvästä muutoksesta. Kiirepyyntö kertoo, mitä se ei saa pysäyttää. Hiljaisuus ei ole etenemistä. Työtapapäätös kirjataan korttiin samassa vuorossa.
