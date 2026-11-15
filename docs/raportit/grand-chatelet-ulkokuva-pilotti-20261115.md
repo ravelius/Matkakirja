@@ -58,6 +58,28 @@ Kaikki luettu Commonsin File-sivun Licensing-osiosta 15.11.2026. Kuvia EI ladatt
 
 **Huom.:** A on rajattu ovaaliksi ja sen värit ovat väritystä; B:ssä on laajempi tori. Yhdessä ne antavat Codexille hyvän viitteen.
 
+## 3b. Turgot-kartta 1739: kattomuodot ja eteläpuoli (KK 17.08)
+
+**Lähde:** Plan de Paris, dit plan de Turgot, **arkki 10 / 20** (Grand Châtelet on kuvassa nimettynä "Gr. Châtelet"). Louis Bretez (piirtäjä, kartta mitattu 1734–1736), Claude Lucas (kaivertaja), tilaaja Michel-Étienne Turgot; julkaistu 1739. Lisenssi: public domain (Commonsin File-sivun Licensing-osio luettu 17.11.; "free of known restrictions", tekijät kuolleet yli 100 v sitten), pysyvä latauslupa (lisenssit-ja-lataukset 1).
+**Linkki:** https://commons.wikimedia.org/wiki/File:Turgot_map_of_Paris,_sheet_10_-_Norman_B._Leventhal_Map_Center.jpg (skannaus Norman B. Leventhal Map Center, Boston Public Library; 8950 × 5710, 40,9 Mt). Muut saman arkin skannaukset Commonsissa: BnF, Kyoto University Library, UWM, David Rumsey (Rumsey ei käytetty: oma lisenssi NC).
+**Kartta kuvaa 1730-luvun tilan, ei vuotta 1786.** Rakennus oli uudistettu 1684 ja säilyi sellaisenaan purkuun (en-WP, Desmaze), joten muoto on sama; muutoksia 1736–1786 ei löytynyt (? ei tiedossa).
+**Rajattu kuva (omasta lataamastani alkuperäisestä, ei muokattu muuten kuin rajattu):** `docs/raportit/kuvat/grand-chatelet-turgot-1739-tiukka.jpg` (tiukka rajaus: koko linnake ja katot) ja `docs/raportit/kuvat/grand-chatelet-turgot-1739-laaja.jpg` (laaja: Pont au Change, Seine, Grande Boucherie, Rue de Gèvres, Saint-Jacques-de-la-Boucherie).
+Kartta on isometrinen lintuperspektiivi kaakkoon päin (en-WP). Ilmansuunnat on tässä luettu joesta ja sillasta (Seine ja Pont au Change ovat rajauksen oikeassa yläkulmassa = linnakkeen eteläpuoli), ei kompassista.
+
+**Kattomuodot (K = katsottu kartasta, ei kirjallista lähdettä):**
+- Päärunko: kaksi pitkää jyrkkää **harjakattoa** rinnakkain, päissä pystysuorat **päätykolmiot**; ei kupolia eikä litteää kattoa.
+- **Pyöreät tornit teräväkärkisin kartiokatoin**: korkein torni linnakkeen kulmassa Rue de la Joaillerien (nimi kuvassa) puolella; sen vieressä ja keskellä pienempiä kartiokattoisia kulma- ja rappukäytävätorneja, kaikkiaan 4–5 kartiokattoa näkyy (sama määrä kuin aikalaiskuvissa).
+- Pienempiä lapekattoja kattoikkunoin linnakkeen reunoilla; rakennus on epäsäännöllinen kokonaisuus, jossa on useita pihoja (Desmaze: kolme tornia ja niitä yhdistävät eri aikojen rakennukset).
+- Katon väri ei näy mustavalkoisesta etsauksesta: D.8793 ja D.3137 (sinertävänharmaa liuske) pysyvät värin lähteenä.
+
+**Eteläpuoli (joen ja Pont au Changen suunta; K, ilmansuunta luettu joesta ja sillasta, ei kompassista):**
+- Pitkän harjakaton **etelänpuoleinen pääty** on korkea ja kapea: päätykolmio, pystysuorat ikkunarivit ja **alakerrassa kolme kaarevaa aukkoa**; sen vieressä kulkee Rue de la Saunerie.
+- Linnakkeen eteläpuolella on **3–4-kerroksinen pitkä asuin- ja kauppatalo** ja heti sen takana kapea katu sekä Pont au Changen lähestymiskatu (Rue de Gèvres, kuvassa nimi); silta ja Seine näkyvät vasta korttelien takana kuvan oikeassa yläkulmassa. Linnake ei siis seiso suoraan rannassa, ja joki ei näy sen edestä katsottuna.
+- Läntinen naapuri on Grande Boucherie (neliömäinen rakennus, alakerrassa aukkoja ja sisäpiha) ja Porte de Paris -katu; teurastamo ja linnake ovat siis vierekkäin (sama kuin kirjallisissa lähteissä).
+- Pohjoispuolen Rue Saint-Denisin kulkuaukkoa ei erota tästä rajauksesta varmasti: se jää tämän sivun G.4057:n, D.8793:n ja D.3137:n varaan.
+
+**Vaikutus Codex-pyyntöön:** ulkokuva otetaan pohjoisesta (G.4057, D.8793, D.3137), joten eteläpuolta ei kuvassa näy; tässä kohdassa vain kattomuodot: **jyrkät harjakatot ja kartiokattoiset tornit** (ei kupolia, ei litteää kattoa) ovat nyt varmistettu kartasta (K) aikalaiskuvien lisäksi. Ehdotus: tiukka rajaus lisäviitteeksi pyyntöön (muotoviite, ei kopioitavaksi); eteläpuoli ei ole kuvassa.
+
 ## 4. Ympäristö noin vuonna 1786
 
 | Asia | Tieto | Peruste |
