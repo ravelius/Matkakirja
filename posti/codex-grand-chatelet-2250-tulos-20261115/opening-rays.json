@@ -1,0 +1,182 @@
+{
+  "modelAlignment": "camera-and-alignment.json",
+  "note": "Sampled geometric rays supplement pictures; not a full watertightness or collision test.",
+  "rays": [
+    {
+      "label": "gate north-south",
+      "origin": [
+        -3,
+        80,
+        2
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": false,
+      "location": null,
+      "object": null
+    },
+    {
+      "label": "gate north-south",
+      "origin": [
+        -3,
+        80,
+        3.5
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": false,
+      "location": null,
+      "object": null
+    },
+    {
+      "label": "gate north-south",
+      "origin": [
+        -1.8,
+        80,
+        2
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": false,
+      "location": null,
+      "object": null
+    },
+    {
+      "label": "gate north-south",
+      "origin": [
+        -1.8,
+        80,
+        3.5
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": false,
+      "location": null,
+      "object": null
+    },
+    {
+      "label": "gate north-south",
+      "origin": [
+        -0.5,
+        80,
+        2
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": false,
+      "location": null,
+      "object": null
+    },
+    {
+      "label": "gate north-south",
+      "origin": [
+        -0.5,
+        80,
+        3.5
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "hit": false,
+      "location": null,
+      "object": null
+    },
+    {
+      "label": "expected courtyard from above",
+      "origin": [
+        -12,
+        11,
+        60
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hit": true,
+      "location": [
+        -12.000000953674316,
+        11.0,
+        18.163286209106445
+      ],
+      "object": "tripo_node_5112cb66-c0bd-4350-b08d-2d27dd33d282"
+    },
+    {
+      "label": "expected courtyard from above",
+      "origin": [
+        -15,
+        11,
+        60
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hit": true,
+      "location": [
+        -14.999999046325684,
+        11.0,
+        18.16284942626953
+      ],
+      "object": "tripo_node_5112cb66-c0bd-4350-b08d-2d27dd33d282"
+    },
+    {
+      "label": "expected courtyard from above",
+      "origin": [
+        -12,
+        8,
+        60
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hit": true,
+      "location": [
+        -12.000000953674316,
+        8.0,
+        18.16331672668457
+      ],
+      "object": "tripo_node_5112cb66-c0bd-4350-b08d-2d27dd33d282"
+    },
+    {
+      "label": "expected courtyard from above",
+      "origin": [
+        -15,
+        8,
+        60
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "hit": true,
+      "location": [
+        -15.0,
+        8.000000953674316,
+        18.16292381286621
+      ],
+      "object": "tripo_node_5112cb66-c0bd-4350-b08d-2d27dd33d282"
+    }
+  ]
+}

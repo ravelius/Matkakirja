@@ -1,0 +1,83 @@
+{
+  "verifiedAt": "2026-11-15T17:08:54.769494+00:00",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2250/grand-chatelet-2250-max-original-8k.glb",
+  "bytes": 91932732,
+  "sha256": "8a7ff0ba8c1a8af07a5b0cf74b71483c8cfa9830d36f8a10088ee8441e4ea287",
+  "triangles": 1972540,
+  "images": [
+    {
+      "size": [
+        4096,
+        4096
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 1722498
+    },
+    {
+      "size": [
+        8192,
+        8192
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 23474096
+    },
+    {
+      "size": [
+        4096,
+        4096
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 2394877
+    }
+  ],
+  "primitives": 1,
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "tripo_node_5112cb66-c0bd-4350-b08d-2d27dd33d282",
+      "translation": [
+        -0.00015254318714141846,
+        0,
+        1.5214085578918457e-05
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "tripo_mesh_5112cb66-c0bd-4350-b08d-2d27dd33d282",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessorBounds": [
+    {
+      "count": 1270891,
+      "min": [
+        -0.4900818467140198,
+        0,
+        -0.4731903672218323
+      ],
+      "max": [
+        0.4900818467140198,
+        0.4152984619140625,
+        0.4731903672218323
+      ]
+    },
+    {
+      "count": 1270891,
+      "min": null,
+      "max": null
+    }
+  ],
+  "downloadMovedOffBootDisk": true,
+  "sourceModelUnmodified": true
+}

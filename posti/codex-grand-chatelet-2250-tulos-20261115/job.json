@@ -1,0 +1,84 @@
+{
+  "status": "COMPLETED_ARCHIVED_QA_PENDING",
+  "preflightAt": "2026-11-15T17:02:01.353864+00:00",
+  "approvalTask": 2250,
+  "approvalCommit": "4a43be05e5683a9e38f05854c3e91fb1ba93a94e",
+  "approvalBlob": "bd2ea3c005f7bc3b3dd230e2e29a1e14906bc523",
+  "approvalReadFully": true,
+  "attemptLimit": 1,
+  "attemptsSubmitted": 1,
+  "TripoJobId": "eeaa57f7-50a2-496d-b000-3a6c759cf575",
+  "accountPlan": "Max",
+  "creditsBefore": 15490,
+  "expectedCredits": 65,
+  "creditsSpent": 65,
+  "sourceGeometryCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+  "settings": {
+    "workflow": "HD Model / MultiView",
+    "model": "H3.1 Best Quality",
+    "UltraMeshQuality": true,
+    "Polycount": 2000000,
+    "Topology": "Triangle",
+    "textureResolution": 8192,
+    "RemoveLighting": true,
+    "PBR": true,
+    "GenerateInParts": false
+  },
+  "images": [
+    {
+      "slot": "Front",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/01-north.png",
+      "sha256": "c76ca42d0cd27562c513a9ede4065a15e0f99b802733c807ecf3fe5bdd7b5f14",
+      "bytes": 1671629,
+      "modifiedSinceApproval": false
+    },
+    {
+      "slot": "Left",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/04-west.png",
+      "sha256": "d46b14550cd94759ee73746ddd61739aed3286990b4b7aebf7c813e44e15c4cf",
+      "bytes": 1628709,
+      "modifiedSinceApproval": false
+    },
+    {
+      "slot": "Right",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/03-east.png",
+      "sha256": "1095774df3618fdf0e9861cd62ae229caafa77b581e68e76721108332f22d448",
+      "bytes": 1684548,
+      "modifiedSinceApproval": false
+    },
+    {
+      "slot": "Back",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/02-south.png",
+      "sha256": "f8ad5ff42a0f3500ff3a7c3dbeb6566fb2747e48533f4e5f9029e69463c1028e",
+      "bytes": 1766460,
+      "modifiedSinceApproval": false
+    }
+  ],
+  "estimatedCompletionAfterSubmission": "Approximately 5-15 minutes; service has not given a precise ETA",
+  "gameChanged": false,
+  "secondAttemptAllowed": false,
+  "submittedAt": "2026-11-15T17:02:07.919Z",
+  "url": "https://studio.tripo3d.ai/workspace/generate/eeaa57f7-50a2-496d-b000-3a6c759cf575",
+  "creditsAfterSubmission": 15425,
+  "estimatedCompletion": "2026-11-15T17:04:40Z, UI initial140s estimate; actual can differ",
+  "firstConfirmedProgressPercent": 6,
+  "submissionProof": "started-proof.jpg",
+  "completedObservedAt": "2026-11-15T17:08:54.769494+00:00",
+  "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2250/grand-chatelet-2250-max-original-8k.glb",
+  "archiveSHA256": "8a7ff0ba8c1a8af07a5b0cf74b71483c8cfa9830d36f8a10088ee8441e4ea287",
+  "actualTriangles": 1972540,
+  "actualTextureSizes": [
+    [
+      4096,
+      4096
+    ],
+    [
+      8192,
+      8192
+    ],
+    [
+      4096,
+      4096
+    ]
+  ]
+}

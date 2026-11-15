@@ -1,0 +1,104 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2250/grand-chatelet-2250-max-original-8k.glb",
+  "sourceFileModified": false,
+  "sourceGeometryReference": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+  "renderer": "Workbench texture, 8 AA, 2 threads, no shadows or cavity; quick inspection only, no baking/pathtracing",
+  "modelAlignment": {
+    "rotationDegreesZ": 180,
+    "uniformScale": 62.60557739648014,
+    "shift": [
+      -5.709549903869629,
+      3.94345760345459,
+      -0.0
+    ],
+    "basis": "Single global transform: height normalized to source26m; XY bbox centers aligned once; ground0. Not an exact physical survey. No reflection or per-view fitting.",
+    "transformedDimensions": [
+      61.36371994018555,
+      59.24871826171875,
+      26.0
+    ],
+    "sourceDimensions": [
+      63.4,
+      56.48882,
+      26
+    ]
+  },
+  "views": [
+    {
+      "name": "01-north",
+      "camera": [
+        -5.699999809265137,
+        163.9444122314453,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "02-south",
+      "camera": [
+        -5.699999809265137,
+        -156.0555877685547,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "03-east",
+      "camera": [
+        154.3000030517578,
+        3.9444100856781006,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "04-west",
+      "camera": [
+        -165.6999969482422,
+        3.9444100856781006,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "05-upper-oblique",
+      "camera": [
+        107.43708801269531,
+        117.08149719238281,
+        290.1281433105469
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 60,
+      "orthoScale": 112
+    }
+  ],
+  "elapsedSeconds": 3.6295814998447895
+}

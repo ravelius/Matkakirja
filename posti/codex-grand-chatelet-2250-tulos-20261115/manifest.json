@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-11-15T17:12:47.031161+00:00",
+  "task": 2250,
+  "status": "RESULT_DELIVERABLE_WITH_STRUCTURAL_FAILURE_NOT_APPROVED",
+  "TripoJobId": "eeaa57f7-50a2-496d-b000-3a6c759cf575",
+  "costCredits": 65,
+  "attempts": 1,
+  "secondAttemptAllowed": false,
+  "gameModified": false,
+  "rawOriginalLocal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2250/grand-chatelet-2250-max-original-8k.glb",
+  "rawOriginalSHA256": "8a7ff0ba8c1a8af07a5b0cf74b71483c8cfa9830d36f8a10088ee8441e4ea287",
+  "geometryUnmodified": true,
+  "mainFailure": "Open west courtyard was closed by roof and wall in generated model.",
+  "files": {
+    "01-north-compare.jpg": {
+      "bytes": 479369,
+      "sha256": "f3fad85ffd46b5e652a9118b39d694645e6855627a67320ac52f621bca853b71"
+    },
+    "02-south-compare.jpg": {
+      "bytes": 464289,
+      "sha256": "ca22af26e43c87bd2ecb2468ada2a3ddcdd9a0620c1098070bbc0f753ecb75d7"
+    },
+    "03-east-compare.jpg": {
+      "bytes": 453961,
+      "sha256": "3351db81f98a1b4627d8d292fd39549fb59eb6cb2955e5c2ced20f1abec79a98"
+    },
+    "04-west-compare.jpg": {
+      "bytes": 465287,
+      "sha256": "03247dea8ff905622784c888b7695fc6e7ac6d8f0c56acad4d0587eb4c8126fc"
+    },
+    "05-upper-oblique-compare.jpg": {
+      "bytes": 577963,
+      "sha256": "4144abf0ad4a185a0d769c2a658cb10f26f55292a54493d0896a1cd2fec5db8f"
+    },
+    "06-upper-oblique-full-compare.jpg": {
+      "bytes": 466102,
+      "sha256": "2725adc725331f3d8a0fa099f2a2046c953dbe6b1b7aa8eefb2ee740fb9b09b1"
+    },
+    "QA.md": {
+      "bytes": 3725,
+      "sha256": "ab78527a6ccacb42a9a64c8bbc7c93b2d3ab721f0a32907b5787b1f5096fa802"
+    },
+    "README.md": {
+      "bytes": 555,
+      "sha256": "1a42c20e4d418e94156c16977bae11951e2094ce1ee746d9bb8eee15771803df"
+    },
+    "archive-verification.json": {
+      "bytes": 1671,
+      "sha256": "32ec4a1a26a1376bf964c9fbac311ea1ed123ce205f5796d5d6fcd61a819735d"
+    },
+    "camera-and-alignment.json": {
+      "bytes": 2456,
+      "sha256": "e993269098461fc6d32dfe4364f9ff4b02af4f905308a64a45870a21b3e63e5a"
+    },
+    "job.json": {
+      "bytes": 3104,
+      "sha256": "2a950c5a28c9e4d0a99320508934c291c750f2a5ae58efa3870425ccb29860a5"
+    },
+    "opening-rays.json": {
+      "bytes": 3083,
+      "sha256": "f2ca046272957f3711527f9adab2b15d743062ba1b632c3a91054b5471e3c8d0"
+    }
+  }
+}
