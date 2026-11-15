@@ -302,8 +302,7 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
-const AANTA_ODOTTAVAT = new Set(['pariisi-3', 'lontoo-3']);
-/* Lontoon pulun teksti uusittu 15.11.2026 (KK); sama kuin Pariisi. */
+const AANTA_ODOTTAVAT = new Set(['pariisi-3']);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
@@ -378,7 +377,12 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
   // + 23 avaus/paljastus/mannerivihje/lehtivinkki/ihmisen-matka/sofia-5…14
   // + 10 ISS-repliikkiä, kaikki eleven_v4:llä tasoitettuina.
   assert.equal(Object.keys(LIVIAN_VERSIOIDUT_AANET).length, 45 + 10 + 23 + 10);
-  for (const polku of Object.values(LIVIAN_VERSIOIDUT_AANET)) assert.match(polku, /\/tasoitettu\//);
+  // Lontoon pulu (15.11.2026): ÄÄ:n omalla tasolla (−17,6 dB) viety kaupunki-intro-v3-kansioon, ei tasoitettu/-alikansiota.
+  const KAUPUNKI_INTRO_V3 = /^aanet\/kaupunki-intro-v3\/pulu-[a-z-]+-3\.mp3$/;
+  for (const polku of Object.values(LIVIAN_VERSIOIDUT_AANET)) {
+    if (KAUPUNKI_INTRO_V3.test(polku)) continue;
+    assert.match(polku, /\/tasoitettu\//);
+  }
   assert.deepEqual(Object.keys(LIVIAN_KESTOT).sort(), Object.keys(LIVIAN_VERSIOIDUT_AANET).sort());
   const issRivit = Object.entries(LIVIAN_ISS)
     .flatMap(([ryhma, tekstit]) => tekstit.map((teksti, i) => [`iss-${ryhma}-${i + 1}`, teksti]));
@@ -396,7 +400,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     const indeksi = Number(avain.slice(erotin + 1)) - 1;
     assert.equal(livianAaniOsoite(lahde, indeksi), `${AANI_JUURI}${polku}`, avain);
     // v4-erät soivat tasoitettuina (tools/tasoita-pulu.mjs, 28.9.2026): alikansio tasoitettu/.
-    assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/(tasoitettu\/)?livia-.+\.mp3$/);
+    if (!KAUPUNKI_INTRO_V3.test(polku)) assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/(tasoitettu\/)?livia-.+\.mp3$/);
     assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
     // Kaupunkikuplat -3 ja -4 = pakin kommentti[0] ja [1]; muiden tiivisteet
     // valvoo kuivan ajon testi (kaikki ajan tasalla).
@@ -408,7 +412,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     assert.ok(Number.isFinite(LIVIAN_KESTOT[avain]) && LIVIAN_KESTOT[avain] > 0,
       `${avain}: kuitin kesto`);
   }
-  assert.match(livianAaniOsoite('lontoo', 2), /aanet\/pulu\/versiot\/.+\/livia-lontoo-3\.mp3$/);
+  assert.match(livianAaniOsoite('lontoo', 2), /aanet\/kaupunki-intro-v3\/pulu-lontoo-3\.mp3$/); // uusittu 15.11.2026 (ÄÄ otto 2)
 });
 
 /*

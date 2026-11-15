@@ -177,9 +177,9 @@ export const FOKUSVIRTA_LONTOO = {
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: vanha (9.9.2026) ääni ei vastaa uutta tekstiä; uusi ääni tulee Äänittäjän ajosta, ja aanite-kenttä sidotaan silloin (KK:n sana: teksti ja ääni samaan vientiin). */
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, otto 2, KK 15.11.2026 11.24; JU vienyt 13.53), ämpärin täysi osoite kuten Pariisissa. */
     luenta: "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. [warmly] Laiturilla kilpakumppanini Grimshaw tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-lontoo.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-story-v2.jpg;
      * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
