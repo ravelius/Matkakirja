@@ -1,4 +1,4 @@
-# PT → Codex (Tripo 3D -sessio): Grand Châtelet -malli, referenssikuvat ensin (omistaja 15.11.2026 kortti 16.44 "Tilaa Tripo nyt"; KK) — AKSELIT KORJATTU 16.51, KORJAUS 2 17.08
+# PT → Codex (Tripo 3D -sessio): Grand Châtelet -malli, referenssikuvat ensin (omistaja 15.11.2026 kortti 16.44 "Tilaa Tripo nyt"; KK) — AKSELIT KORJATTU 16.51, KORJAUS 2 17.08, LISÄYS 3 17.12
 
 Omistaja 16.41: "Toinen vaihtoehto olisi teettää tripolla ne mallit, koska ne voivat olla myös raskaampia sen vuoksi, että kerrallaan näkyy aina vain yksi tällainen malli ja peruskartalla ei ainuttakaan, ja ne voidaan ladata näkyviin vain silloin, kun kyseinen rakennus klikataan aktiiviseksi."
 
@@ -42,3 +42,10 @@ Kulku: referenssikuvat postiin → KK arvioi puolessa tunnissa → vasta sitten 
   avoimeksi. Koko rakennus läpikulun suuntaan noin 54–58 m; kytkijä sovittaa portin ja suuren tornin mukaan.
 - MASSAN MITTAPUU: Näyttämösepän harmaamalli /Users/Shared/Claude/proto-3d/_tyo/nayttamoseppa/grand-chatelet/ (harmaa-nelja-suuntaa.png, harmaa-ylhaalta.png, arkki-pohja.png):
   pohjan muoto ja osien paikat siitä; kuvat päivittyvät näillä kolmella korjauksella. Pinta, ikkunat ja katot lähdekuvista, ei harmaamallista.
+
+### TILAUKSEN LISÄYS 3 CODEXILLE (KK 17.12; PT vie postiin sanatarkasti; EI uutta ottoa)
+- TARKIN ALKUPERÄINEN TALTEEN: aja se yksi Tripo-otto tarkimmilla asetuksilla, jotka Tripo Max antaa (tarkin geometria ja suurin pintakuva), ja TALLENNA alkuperäinen
+  keventämättömänä (verkko + täysikokoiset pintakuvat) pysyvään kansioon ennen tilauksen päättymistä 18.11.2026; kerro polku ja koot KK:lle.
+- PELIVERSIO erikseen samasta alkuperäisestä tilauksen rajoilla (≤ 15 Mt, ≤ 100 000 kolmiota, pintakuvat ≤ 2048). Syy: omistaja haluaa kameran myöhemmin lähemmäs
+  (pohjoisjulkisivu: porttiholvi, kello, porttitornit, suuri torni); tarkempi pinta tehdään silloin alkuperäisestä ilman uutta Tripo-ottoa.
+- Pohjoisjulkisivu on tärkein: jos Tripo antaa painottaa, tarkkuus sinne.
