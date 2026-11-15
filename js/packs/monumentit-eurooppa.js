@@ -136,28 +136,31 @@ export const EUROOPAN_KADONNEET = {
     ihmeKohde({
       id: 'grand-chatelet',
       nimi: 'Grand Châtelet',
-      kysymykset: ['Mikä kulki Grand Châtelet\'n rakennuksen alta?', 'Mitä Grand Châtelet\'n paikalla on?'],
-      korostukset: ['prévôt|prévôtin', 'Rue Saint-Denis|Rue Saint-Denis'],
-      nappi: 'Linnake, jonka läpi kulki katu',
+      kysymykset: ['Mitä Grand Châtelet\'n tuomioistuimelle tapahtui 1790?', 'Mitä Grand Châtelet\'n paikalla on?'],
+      korostukset: ['prévôt|prévôtin', 'holvikäytävä|holvikäytävä'],
+      nappi: 'Linnake, jonka läpi kulki tie kaupunkiin',
       laudat: { maailmankartta: { x: 5911.6, y: 1439.6 }, europe: { x: 256.3, y: 608.6 } },
       teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla, jonka Ludvig VI '
-        + 'rakennutti kiveksi noin 1130. Philippe Auguste rakennutti kaupungin muurin 1190, ja linnakkeesta '
-        + 'tuli Pariisin prévôtin oikeudenkäytön ja poliisin pääpaikka. Rue Saint-Denis kulki rakennuksen alta: idässä oli vankila, '
-        + 'lännessä tuomareiden salit ja kaupungin ruumishuone. Vankeina olivat muun muassa François '
-        + 'Villon, Molière ja rosvo Cartouche. Seudulla haisi läheisten teurastamojen veri, ja viemärivesi '
-        + 'virtasi Seineen. Prévôtin virka lakkautettiin 1790, ja linnake purettiin 1802–1810. Paikalle '
-        + 'tuli Place du Châtelet, jonka vierellä Théâtre du Châtelet avattiin 1862.',
-      lahde: 'en-Wikipedia "Grand Châtelet", johdanto ja osiot "History" ja "Demolition"; fr-Wikipedia "Grand '
-        + 'Châtelet", osiot "Histoire" ja "Prisons" (tarkistettu 31.10.2026).',
+        + 'rakennutti kiveksi 1100-luvulla. Kun Philippe Auguste alkoi rakennuttaa kaupungin muuria 1190, '
+        + 'linnake menetti puolustustehtävänsä, ja siitä tuli Pariisin prévôtin oikeudenkäytön ja poliisin '
+        + 'pääpaikka. Rakennuksen läpi kulki holvikäytävä kaupunkiin, ja samoissa muureissa olivat vankila, '
+        + 'tuomareiden salit ja kaupungin ruumishuone. Vankeina olivat muun muassa François Villon, Molière '
+        + 'ja rosvo Cartouche. Grand Châtelet\'tä pidettiin Pariisin pahanhajuisimpana paikkana, ja aivan lähellä olivat '
+        + 'teurastamot. Châtelet\'n tuomioistuin lakkautettiin 1790, ja linnakkeen purku alkoi 1802. Paikalle '
+        + 'tuli Place du Châtelet. Aukion vierellä seisoo Théâtre du Châtelet, jonka Gabriel Davioud rakensi '
+        + '1860–1862.',
+      lahde: 'paris.fr "Ces lieux disparus qui font aussi l\'histoire de Paris (2/2)" ja "Le Théâtre du Châtelet '
+        + 'rouvre ses portes"; POP PA00086112; Desmaze, Le Châtelet de Paris (1863); Larousse "Villon"; herodote.net '
+        + '"Molière"; paris.fr "Les prisons, gardiennes de l\'histoire parisienne"; Encyclopædia Britannica (1911) '
+        + '"Châtelet"; Fournier, Paris démoli (1855); fr-Wikipedia "Grand Châtelet" (tarkistettu 15.11.2026).',
       kuva: 'ihme-grand-chatelet-loistoaika.jpg',
-      lyhyt: 'Kärryt ja kulkijat tunkevat Rue Saint-Denisin kautta Grand Châtelet\'n holvin alta, ja ilma '
-        + 'haisee läheisten teurastamoiden verestä; reilut viisikymmentä vuotta myöhemmin purku alkaa.',
-      selite: 'Noin vuonna 1750 kuormat, kantajat ja kauppiaat tunkevat Rue Saint-Denisiä pitkin Grand '
-        + 'Châtelet\'n rakennuksen alta, ja ilma haisee teurastamoiden verestä ja Seineen virtaavasta '
-        + 'viemärivedestä. Rakennuksen itäpuolella on vankila, länsipuolella tuomioistuin, ja kulkijat '
-        + 'ohittavat molemmat nopeasti. Prévôtin virka lakkautetaan 1790, ja linnake puretaan 1802–1810.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1750). Faktat: en- ja '
-        + 'fr-Wikipedia "Grand Châtelet", tarkistettu 31.10.2026.',
+      lyhyt: 'Kärryt ja kulkijat tunkevat Grand Châtelet\'n holvikäytävän läpi, ja ilma haisee läheisistä '
+        + 'teurastamoista; reilut viisikymmentä vuotta myöhemmin purku alkaa.',
+      selite: 'Noin vuonna 1750 kuormat, kantajat ja kauppiaat tunkevat Grand Châtelet\'n holvikäytävän läpi, '
+        + 'ja ilma haisee läheisistä teurastamoista. Rakennuksessa ovat vankila ja tuomioistuin, ja kulkijat '
+        + 'ohittavat ne nopeasti. Tuomioistuin lakkautetaan 1790, ja linnakkeen purku alkaa 1802.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1750). Faktat: paris.fr, '
+        + 'Desmaze (1863) ja fr-Wikipedia "Grand Châtelet", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Grand_Ch%C3%A2telet',
     }),
     ihmeKohde({
@@ -168,28 +171,29 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Torni, jonka Napoleon käski purkaa',
       laudat: { maailmankartta: { x: 5912.0, y: 1439.2 }, europe: { x: 256.5, y: 608.4 } },
       teksti: 'Temple-torni eli Grosse Tour oli temppeliritarien Pariisin päämajan linnoitustorni, jonka '
-        + 'rakentaminen alkoi 1200-luvulla. Tornin muurit olivat '
-        + 'keskimäärin neljä metriä paksut, ja kulmissa oli neljä pienempää tornia. Temppeliritarikunta '
+        + 'rakentaminen alkoi keskiajalla. Tornin muurit olivat '
+        + 'paksut, ja sen kulmissa oli neljä pienempää tornia. Temppeliritarikunta '
         + 'lakkautettiin 1312. Elokuun 13. päivänä 1792 Pariisin kommuuni vei kuningasperheen Templeen; '
         + 'Ludvig XVI lähti sieltä giljotiinille 21. tammikuuta 1793. Hänen poikansa Ludvig XVII kuoli '
         + 'Templessä 8. kesäkuuta 1795 kymmenvuotiaana. Napoleon määräsi tornin purettavaksi 1808 '
-        + 'estääkseen rojalistien pyhiinvaellukset. Tornin paikasta osa on '
-        + 'nykyisin Square du Temple -puistoa.',
-      lahde: 'en-Wikipedia "Tour du Temple", johdanto ja osiot "Origins", "Royal imprisonment" ja '
-        + '"Demolition"; fr-Wikipedia "Tour du Temple", osiot "Histoire" ja "Prison" (tarkistettu '
-        + '31.10.2026).',
+        + 'estääkseen rojalistien pyhiinvaellukset. Tornin paikan vieressä on '
+        + 'nykyisin Square du Temple -puisto.',
+      lahde: 'parcoursrevolution.paris.fr "Temple"; Viollet-le-Duc, Dictionnaire raisonné ("Temple"); Cléry, '
+        + 'Journal (1798); herodote.net; Larousse "Louis XVII"; fr-Wikipedia "Tour du Temple" (tarkistettu '
+        + '15.11.2026).',
       // Vaatetorikuva -v2 (omistaja 9.11. 19.06 "teksti kuvan mukaiseksi", PT B): vanhalla nimellä CDN tarjosi
       // 31.10. 14.02 torikuvaa ja alkuperä ritarikuvaa; uusi nimi ohittaa välimuistin, vanha nimi jää ämpäriin.
       kuva: 'ihme-temple-torni-loistoaika-v2.jpg',
-      lyhyt: 'Vaatekauppiaat tinkivät kankaista Templen muurin juurella, ja vanha ritaritorni kohoaa torin yllä; '
-        + 'kolmenkymmenen vuoden päästä sitä ei enää ole.',
-      selite: 'Noin vuonna 1780 vaatekauppiaat ovat levittäneet pöydilleen takkeja, liinavaatteita ja '
-        + 'kangaspakkoja Templen muurien juurella, ja ostajat hieraisevat villaa sormiensa välissä. '
-        + 'Temppeliritarit ovat olleet poissa jo puolituhatta vuotta, mutta heidän tornistaan on tullut torin '
-        + 'maamerkki neljine kulmatorneineen. Vuonna 1792 tornista tulee kuningasperheen vankila, ja Napoleon '
-        + 'käskee 1808 purkaa sen. Tornista ei jäänyt kiveäkään; sen paikalla on nyt Square du Temple -puisto.',
-      ihmeLahde: 'Matkakirjan havainnekuva: Templen alue vaatetorina 1700-luvun lopulla (n. 1780). Faktat: en- ja '
-        + 'fr-Wikipedia "Tour du Temple" ja fr-Wikipedia "Carreau du Temple", tarkistettu 9.11.2026.',
+      lyhyt: 'Vaatekauppiaat tinkivät kankaista Templen alueella, ja vanha ritaritorni kohoaa torin yllä; '
+        + 'muutaman vuoden päästä Napoleon käskee purkaa sen.',
+      selite: 'Noin vuonna 1805 vaatekauppiaat ovat levittäneet pöydilleen takkeja, liinavaatteita ja '
+        + 'kangaspakkoja Templen alueella, ja ostajat '
+        + 'hieraisevat villaa sormiensa välissä. Temppeliritarit ovat olleet poissa jo puolituhatta vuotta, '
+        + 'mutta heidän tornistaan neljine kulmatorneineen on tullut torin maamerkki. Vuosina 1792–1795 torni '
+        + 'oli kuningasperheen vankila, ja vuonna 1808 Napoleon käskee purkaa sen. Tornista ei ole jäänyt '
+        + 'mitään; sen paikan vieressä on nyt Square du Temple -puisto.',
+      ihmeLahde: 'Matkakirjan havainnekuva: Templen alue vaatetorina 1800-luvun alussa (n. 1805). Faktat: '
+        + 'parcoursrevolution.paris.fr ja fr-Wikipedia "Tour du Temple" ja "Carreau du Temple", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Tour_du_Temple',
     }),
     ihmeKohde({
@@ -201,15 +205,15 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Palatsi, jonka raunioista tuli asema',
       laudat: { maailmankartta: { x: 5910.9, y: 1439.5 }, europe: { x: 255.9, y: 608.6 } },
       teksti: 'Palais d\'Orsay oli Seinen rannalla Quai d\'Orsay\'lla seissyt hallintopalatsi, jonka Napoleon I '
-        + 'aloitti 1810 ja joka valmistui vasta 1838. Arkkitehti Jacques-Charles Bonnard suunnitteli sen, '
+        + 'aloitti 1810 ja joka valmistui vasta noin kolmenkymmenen vuoden päästä. Arkkitehti Jacques-Charles Bonnard suunnitteli sen, '
         + 'ja Jacques Lacornée jatkoi työtä. Valtioneuvosto muutti alakertaan 1840 ja '
         + 'tilintarkastustuomioistuin Cour des comptes ensimmäiseen kerrokseen 1842, ja sen portaikkoon '
         + 'Théodore Chassériau maalasi freskot. Palatsin sytyttivät tuleen kommunardit yönä 23.–24. '
-        + 'toukokuuta 1871. Rauniot jäivät keskelle Pariisia, ja isoisä näki ne 1873. Vain noin 60 '
-        + 'neliömetriä freskoista säilyi, koska ne jäivät sään armoille 27 vuodeksi. Rauniot purettiin '
+        + 'toukokuuta 1871. Rauniot jäivät keskelle Pariisia, ja isoisä näki ne 1873. Freskoista '
+        + 'pelastettiin vain irrotettuja palasia. Rauniot purettiin '
         + 'vuodesta 1898, ja paikalle rakennettiin Gare d\'Orsay vuoden 1900 maailmannäyttelyä varten.',
-      lahde: 'en-Wikipedia "Palais d\'Orsay", johdanto ja osiot "History" ja "Fire"; fr-Wikipedia "Palais '
-        + 'd\'Orsay"; en-Wikipedia "Musée d\'Orsay", johdanto (tarkistettu 31.10.2026).',
+      lahde: 'conseil-etat.fr "Le palais d\'Orsay"; POP PA00088689 ja Joconde 000PE000431; univ-droit.fr '
+        + '(Leniaud); fr-Wikipedia "Palais d\'Orsay" (tarkistettu 15.11.2026).',
       kuva: 'ihme-palais-orsay-loistoaika.jpg',
       lyhyt: 'Tilintarkastajat nousevat Chassériaun maalaamaa portaikkoa Seinen rannan palatsissa; reilut '
         + 'kymmenen vuotta myöhemmin kommunardit sytyttävät palatsin tuleen.',
@@ -218,39 +222,35 @@ export const EUROOPAN_KADONNEET = {
         + 'istunut vuodesta 1840 ja yläkerrassa tilintarkastustuomioistuin vuodesta 1842, ja käytävillä '
         + 'kahisevat asiakirjanipput. Toukokuussa 1871 kommunardit sytyttävät rakennuksen, ja rauniot '
         + 'seisovat Seinen rannalla vuoteen 1898 asti; sitten ne puretaan ja paikalle rakennetaan asema.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1860). Faktat: en- ja '
-        + 'fr-Wikipedia "Palais d\'Orsay", tarkistettu 31.10.2026.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (n. 1860). Faktat: conseil-etat.fr, '
+        + 'POP/Joconde ja fr-Wikipedia "Palais d\'Orsay", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Palais_d%27Orsay',
     }),
     ihmeKohde({
       id: 'palais-industrie',
       nimi: 'Palais de l\'Industrie',
       nimio: 'Teollisuuspalatsi',
-      kysymykset: ['Mitä Palais de l\'Industrien paikalle rakennettiin?', 'Mitä taidenäyttelyä siellä pidettiin vuosittain?'],
+      kysymykset: ['Mitä Palais de l\'Industrien paikalle rakennettiin?', 'Mikä taidenäyttely Palais de l\'Industriessa pidettiin?'],
       korostukset: ['Salon|Salon', 'Grand Palais|Grand Palais\'n'],
       nappi: 'Lasihalli, jonka tilalle tuli Grand Palais',
       laudat: { maailmankartta: { x: 5910.4, y: 1439.2 }, europe: { x: 255.6, y: 608.4 } },
       teksti: 'Palais de l\'Industrie oli lasi- ja rautahalli Champs-Élysées\'n varrella, joka rakennettiin '
         + 'vuoden 1855 Pariisin maailmannäyttelyä varten. Arkkitehti Jean-Marie-Victor Vielin ja insinööri '
-        + 'Alexis Barrault\'n suunnittelema rakennus piilotti rautarakenteensa kivijulkisivun taakse, ja sen '
-        + 'päälaiva oli 190 metriä pitkä ja 48 metriä leveä. Halli ei ollut valmis avajaisissa, ja huono '
-        + 'ilmanvaihto teki siitä päivisin tukalan. Siellä pidettiin vuosittain Salon, ja 1881 kansainvälinen '
+        + 'Alexis Barrault\'n suunnittelema halli avattiin toukokuussa 1855. Siellä pidettiin Pariisin virallinen taidenäyttely Salon, ja 1881 kansainvälinen '
         + 'sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1890-luvun '
         + 'lopulla Grand Palais\'n tieltä.',
-      lahde: 'en-Wikipedia "Palais de l\'Industrie", johdanto ja osiot "Architecture", "History" ja "Legacy"; '
-        + 'fr-Wikipedia "Palais de l\'Industrie", osiot "Historique" ja "Utilisation" (tarkistettu '
-        + '31.10.2026).',
+      lahde: 'Canadian Centre for Architecture (Viel, Barrault); herodote.net; Larousse "salon"; Heap, Electrical '
+        + 'Appliances (1884); paris.fr "Les petits secrets du Grand Palais"; fr-Wikipedia "Palais de l\'Industrie" '
+        + '(tarkistettu 15.11.2026).',
       kuva: 'ihme-palais-industrie-loistoaika.jpg',
-      lyhyt: 'Salonin vieraat kulkevat taulujen ohi lasikaton alla ja kriitikot voivottelevat rakennuksen '
-        + 'painavuutta; kaksikymmentäneljä vuotta myöhemmin halli on poissa.',
-      selite: 'Vuonna 1873 Salonin vieraat kulkevat rautaisen ja lasisen hallin sisällä taulujen ohi, ja ulkoa '
-        + 'Champs-Élysées\'lle näkyy kivijulkisivu, joka kätkee raudan. Arvostelijat pitävät rakennusta '
-        + 'raskaana, ja lasikaton alla kävijöiden askeleet kaikuvat. Sisäänkäynnin yllä komeilee Élias '
-        + 'Robertin veistosryhmä Ranska kruunaa taiteen ja teollisuuden. Halli puretaan 1896–1897 vuoden '
-        + '1900 maailmannäyttelyn tieltä, ja paikalle nousevat Grand Palais ja Petit Palais.',
+      lyhyt: 'Salonin vieraat kulkevat taulujen ohi lasikaton alla; noin neljännesvuosisata myöhemmin halli '
+        + 'puretaan.',
+      selite: 'Vuonna 1873 Salonin vieraat kulkevat rautaisen ja lasisen hallin sisällä taulujen ohi, ja '
+        + 'lasikaton alla kävijöiden askeleet kaikuvat. Halli puretaan 1890-luvun lopulla vuoden 1900 '
+        + 'maailmannäyttelyn tieltä, ja paikalle nousee Grand Palais.',
       ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
-        + 'Faktat: en-Wikipedia "Palais de l\'Industrie" ja fr-Wikipedia "Palais de l\'Industrie", '
-        + 'tarkistettu 31.10.2026.',
+        + 'Faktat: paris.fr, Larousse, Heap (1884) ja fr-Wikipedia "Palais de l\'Industrie", '
+        + 'tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Palais_de_l%27Industrie',
     }),
     ihmeKohde({
@@ -259,30 +259,29 @@ export const EUROOPAN_KADONNEET = {
       nimio: 'Trocadéro',
       kysymykset: ['Mitä Trocadéron palatsista jäi pystyyn?', 'Miksi palatsi purettiin 1935?'],
       korostukset: ['maailmannäyttely|maailmannäyttelyä', 'Chaillot\'n palatsi|Chaillot\'n palatsin'],
-      nappi: 'Näyttelypalatsi, jota ei tehty kestämään',
+      nappi: 'Näyttelypalatsi, josta jäivät vain siivet',
       laudat: { maailmankartta: { x: 5909.6, y: 1439.4 }, europe: { x: 255.1, y: 608.5 } },
       teksti: 'Trocadéron palatsi rakennettiin vuoden 1878 Pariisin maailmannäyttelyä varten Seinen '
         + 'pohjoisrannalle, ja sen suunnittelivat Gabriel Davioud ja Jules Bourdais. '
-        + 'Mauri-bysanttilaistyylisessä palatsissa oli kaksi yli 80 metriä korkeaa tornia ja kaksi kaarevaa '
-        + 'siipeä, jotka venyttivät julkisivun noin 430 metriin. Keskellä oli 4 600 paikan sali, johon '
-        + 'vihittiin Cavaillé-Collin urut. Työt kestivät marraskuusta 1876 kesäkuuhun 1878, ja kustannukset '
-        + 'nousivat noin 12 miljoonaan kultafrangiin; palatsia ei ollut tarkoitettu kestämään näyttelyn '
-        + 'jälkeen. Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
-        + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadérota, sillä sen rakennustyöt '
+        + 'Palatsissa oli kaksi korkeaa tornia ja kaksi kaarevaa '
+        + 'siipeä. Keskellä oli yli neljän tuhannen paikan sali, johon vihittiin Cavaillé-Collin urut. '
+        + 'Palatsi rakennettiin vuosina 1876–1878. Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
+        + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadéroa, sillä sen rakennustyöt '
         + 'alkoivat vasta 1876.',
-      lahde: 'en-Wikipedia "Palais du Trocadéro", johdanto ja osiot "History" ja "Architecture"; "Palais de '
-        + 'Chaillot", osio "Design" ja "History" (tarkistettu 31.10.2026).',
+      lahde: 'POP PA00086706; L\'art et l\'industrie de tous les peuples à l\'Exposition universelle de 1878 '
+        + '(1880); Auditorium de Lyon; fr-Wikipedia "Palais du Trocadéro" (tarkistettu 15.11.2026).',
       kuva: 'ihme-trocadero-loistoaika.jpg',
       lyhyt: 'Kesäpukuiset pariisilaisperheet seisovat kaskadin reunalla ihailemassa palatsin kahta tornia, ja '
-        + 'sisällä 4 600 paikan salissa soivat vastavihityt urut; viisikymmentäseitsemän vuotta myöhemmin '
+        + 'sisällä suuressa salissa soivat vastavihityt urut; viisikymmentäseitsemän vuotta myöhemmin '
         + 'keskiosa puretaan.',
       selite: 'Vuonna 1878 näyttelyvieraat seisovat palatsin edessä kaskadin ja puutarhan yläpuolella ja '
-        + 'katsovat Seinen yli näyttelyalueelle, ja vieressä kohoavat kaksi korkeaa tornia. Sisällä '
-        + 'puoliympyrän muotoisessa salissa koko yleisö istuu 4 600 paikalla Cavaillé-Collin uruille, jotka '
-        + 'on juuri vihitty. Vieraiden mielestä palatsi on lähinnä jännittävä. Vuonna 1935 keskisali ja '
+        + 'katsovat Seinen yli näyttelyalueelle, ja vieressä kohoaa kaksi korkeaa tornia. Sisällä '
+        + 'puoliympyrän muotoisessa salissa yli neljätuhatta kuulijaa istuu Cavaillé-Collin urkujen edessä, ja '
+        + 'urut on juuri vihitty. Vuonna 1935 keskisali ja '
         + 'tornit puretaan, ja jäljelle jäävät siivet uuden Chaillot\'n palatsin sisään.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1878). Faktat: en-Wikipedia '
-        + '"Palais du Trocadéro", tarkistettu 31.10.2026.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1878). Faktat: POP, '
+        + 'L\'art et l\'industrie de tous les peuples à l\'Exposition universelle de 1878 (1880) ja fr-Wikipedia '
+        + '"Palais du Trocadéro", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Palais_du_Trocad%C3%A9ro',
     }),
     ihmeKohde({
@@ -291,51 +290,47 @@ export const EUROOPAN_KADONNEET = {
       nimio: 'Konehalli',
       kysymykset: ['Kuinka suuri maailmannäyttelyn konehalli oli?', 'Miksi halli purettiin?'],
       korostukset: ['Eiffel-torni|Eiffel-torni', 'Ferdinand Dutert|Ferdinand Duterin'],
-      nappi: 'Halli, johon olisi mahtunut 15 000 ratsumiestä',
+      nappi: 'Halli, jossa ei ollut yhtään pilaria',
       laudat: { maailmankartta: { x: 5910.0, y: 1439.8 }, europe: { x: 255.4, y: 608.8 } },
       teksti: 'Galerie des Machines oli vuoden 1889 Pariisin maailmannäyttelyn konehalli Champ-de-Marsilla, '
         + 'samalla kentällä kuin Eiffel-torni. Insinööri Victor Contaminin ja arkkitehti Ferdinand Duterin '
         + 'suunnittelema halli oli 420 metriä pitkä ja 115 metriä leveä, eikä sen sisällä ollut yhtään '
-        + 'tukipilaria. Kaarten kolminivelinen rakenne oli lainattu siltasuunnittelusta. Vuoden 1889 arvion '
-        + 'mukaan sinne olisi mahtunut 15 000 hevosta ja 15 000 ratsastajaa, vaikka sitä ei koskaan '
-        + 'kokeiltu. Vieraita kuljettivat hallissa liikkuvat sillat. Halli purettiin 1909–1910 näkymän '
-        + 'avaamiseksi Champ-de-Marsille. Isoisä ei ehtinyt nähdä sitä: halli valmistui 16 vuotta hänen '
+        + 'tukipilaria. Kaarten kolminivelinen rakenne oli lainattu siltasuunnittelusta. Vieraita kuljettivat hallissa '
+        + 'liikkuvat sillat. Halli purettiin 1900-luvun alussa, jotta näkymä Champ-de-Marsille aukeaisi. Isoisä ei ehtinyt nähdä sitä: halli valmistui 16 vuotta hänen '
         + 'matkansa jälkeen.',
-      lahde: 'en-Wikipedia "Galerie des machines", osiot "Construction", "Usage" ja "Destruction"; '
-        + 'fr-Wikipedia "Galerie des machines", osio "Historique" (tarkistettu 31.10.2026).',
+      lahde: 'Parville, L\'Exposition universelle (1890); paris.fr "Ces lieux disparus qui font aussi '
+        + 'l\'histoire de Paris (4/4)"; en-Wikipedia "Galerie des machines" (tarkistettu 15.11.2026).',
       kuva: 'ihme-galerie-des-machines-loistoaika.jpg',
-      lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka teräskaari '
-        + 'nousee yli hallin; reilut kaksikymmentä vuotta myöhemmin halli puretaan.',
+      lyhyt: 'Näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka kaari '
+        + 'nousee yli hallin; parikymmentä vuotta myöhemmin halli puretaan.',
       selite: 'Vuonna 1889 näyttelyvieras seisoo liikkuvalla sillalla koneiden yläpuolella ja katsoo, kuinka '
-        + 'teräskaari kaartuu hänen ylitseen 115 metrin leveyden yli ilman ainuttakaan sisäpilaria. Alla '
-        + 'höyrykoneet ja sähkögeneraattorit hyrisevät rivi rivin perään, ja ihmiset kulkevat koneiden '
-        + 'välissä hattu kädessä. Vieraalle halli on tulevaisuuden temppeli, kunnes seuraava näyttely vie '
-        + 'huomion. Kaupunki päättää 1909 purkaa hallin ja avata näkymän Champ-de-Marsille; Orsayn museossa '
-        + 'on siitä 1:200-pienoismalli.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1889). Faktat: en-Wikipedia '
-        + '"Galerie des machines", tarkistettu 31.10.2026.',
+        + 'kaari kaartuu hänen ylitseen 115 metrin leveyden yli ilman ainuttakaan sisäpilaria. Alla '
+        + 'koneet hyrisevät rivi rivin perään, ja ihmiset kulkevat koneiden '
+        + 'välissä hattu kädessä. Halli puretaan 1900-luvun alussa, jotta näkymä Champ-de-Marsille aukeaa.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1889). Faktat: Parville '
+        + '(1890), paris.fr ja en-Wikipedia "Galerie des machines", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Galerie_des_machines',
     }),
     ihmeKohde({
       id: 'les-halles',
       nimi: 'Les Hallesin hallit',
       nimio: 'Les Halles',
-      kysymykset: ['Miksi Les Halles tunnettiin nimellä Pariisin vatsa?', 'Mitä hallien tilalla on nykyään?'],
-      korostukset: ['Victor Baltard|Victor Baltardin', 'Émile Zola|Émile Zolan'],
+      kysymykset: ['Millä nimellä Émile Zola kutsui halleja?', 'Mitä hallien tilalla on nykyään?'],
+      korostukset: ['Victor Baltard|Victor Baltardin', 'Émile Zola|Émile Zola'],
       nappi: 'Pariisin vatsa, jonka tilalle jäi kuoppa',
       laudat: { maailmankartta: { x: 5911.5, y: 1439.4 }, europe: { x: 256.2, y: 608.5 } },
-      teksti: 'Les Halles oli Pariisin keskeinen ruokatori, jonka historia ulottuu 1100-luvulle; Filip II '
-        + 'Augustus otti sen haltuunsa 1183 ja rakennutti kaksi hallia kankaille. Victor Baltardin '
+      teksti: 'Les Halles oli Pariisin keskeinen ruokatori, jonka historia ulottuu 1100-luvulle; Philippe '
+        + 'Auguste siirsi sinne 1183 toisen markkinan ja rakennutti torille ensimmäiset katetut hallit. Victor Baltardin '
         + 'suunnittelemat lasi- ja rautapaviljongit, kymmenen kappaletta, rakennettiin vaiheittain '
-        + '1850-luvulta 1870-luvun alkuun. Émile Zolan romaani Pariisin vatsa (1873) sijoittuu näille '
-        + 'markkinoille ja antoi torille lempinimen. Tukkukauppa muutti Rungisiin 1969, ja hallit purettiin '
-        + '1971–1973. Paikalle jäi niin valtava työmaa, että sitä kutsuttiin nimellä "Les Hallesin reikä". '
+        + '1850-luvulta 1870-luvun alkuun. Émile Zola kutsui halleja Pariisin vatsaksi samannimisessä '
+        + 'romaanissaan (1873). Tukkukauppa muutti Rungisiin 1969, ja hallit purettiin 1970-luvun alussa. '
+        + 'Paikalle jäi niin valtava työmaa, että sitä kutsuttiin yksinkertaisesti reiäksi. '
         + 'Yksi paviljonki pystytettiin uudelleen Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle '
         + '1979.',
       lahde: 'en-Wikipedia "Les Halles", osiot "History" (The market of the Little Fields; The wholesale '
         + 'market; Major conversion); fr-Wikipedia "Halles de Paris", osio "Historique"; paris.fr "Ces lieux disparus qui font aussi '
         + 'l\'histoire de Paris (2/2)" (1100-luku, 1183) ja fr-Wikisource "Les Halles centrales de Paris" '
-        + '(1183) (tarkistettu 14.11.2026).',
+        + '(1183); Baltard ja Callet, Monographie des Halles centrales de Paris (1862); pavillonbaltard.fr "Histoire" (tarkistettu 15.11.2026).',
       kuva: 'ihme-les-halles-loistoaika.jpg',
       lyhyt: 'Aamuyöllä torimummot huutavat hintoja lasihallien katon alla vihannesvuorten keskellä; sata '
         + 'vuotta myöhemmin hallit puretaan.',
@@ -345,7 +340,7 @@ export const EUROOPAN_KADONNEET = {
         + 'valossa ennen auringonnousua. Sata vuotta myöhemmin hallit puretaan ja tilalle jää suuri kuoppa, '
         + 'josta kasvaa ostoskeskus.',
       ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873, isoisän matkavuosi). '
-        + 'Faktat: en-Wikipedia "Les Halles" ja fr-Wikipedia "Halles de Paris", tarkistettu 31.10.2026.',
+        + 'Faktat: paris.fr, Baltard ja Callet (1862), pavillonbaltard.fr ja fr-Wikipedia "Halles de Paris", tarkistettu 15.11.2026.',
       url: 'https://en.wikipedia.org/wiki/Les_Halles',
     }),kohde({
     id: 'saint-cloud', nimi: 'Saint-Cloud’n linna',
