@@ -6237,14 +6237,14 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'hahmotelma-grand-chatelet',
       teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla. Ludvig VI '
         + 'rakennutti sen kiveksi 1100-luvulla. Kun kaupungille alettiin vuonna 1190 rakentaa uutta muuria, '
-        + 'linnake menetti puolustustehtävänsä: siitä tuli kuninkaan pariisilaisen virkamiehen, prévôtin, '
-        + 'oikeudenkäytön ja poliisin pääpaikka. Sen vankiloissa istuivat muiden muassa runoilija François '
-        + 'Villon, velkojen takia vuonna 1645 näytelmäkirjailija Molière ja vuonna 1721 rosvopäällikkö '
-        + 'Cartouche. Linnakkeessa oli myös ruumishuone, ranskaksi morgue.'
+        + 'linnake menetti puolustustehtävänsä: siitä tuli oikeuden ja poliisin pääpaikka, jota johti '
+        + 'kuninkaan virkamies, prévôt. Sen vankiloissa istuivat muiden muassa runoilija François '
+        + 'Villon, näytelmäkirjailija Molière velkojen takia vuonna 1645 ja rosvopäällikkö Cartouche '
+        + 'vuonna 1721. Linnakkeessa oli myös ruumishuone, ranskaksi morgue.'
         + '\n\n'
         + 'Linnakkeen purkaminen alkoi vuonna 1802. Paikalle tehtiin Place du Châtelet.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 aukion vieressä seisoi teatteri, Théâtre du Châtelet, jonka Gabriel '
+        + 'Isoisäsi vuonna 1873 aukion vieressä seisoi teatteri, Théâtre du Châtelet, jonka Gabriel '
         + 'Davioud rakensi vuosina 1860–1862.',
       kuvat: [
         {
@@ -6273,10 +6273,10 @@ export const NAHTAVYYSJUTUT = {
         + 'vangiksi Templeen. Ludvig XVI lähti sieltä giljotiinille tammikuussa 1793, ja hänen poikansa Ludvig '
         + 'XVII kuoli tornissa vuonna 1795 kymmenvuotiaana.'
         + '\n\n'
-        + 'Torni muuttui rojalistien pyhiinvaelluskohteeksi, ja siksi Napoleon alkoi purkaa sen vuonna 1808.'
+        + 'Torni muuttui rojalistien pyhiinvaelluskohteeksi, ja siksi Napoleon alkoi purkaa sitä vuonna 1808.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 torni oli purettu jo yli kuusikymmentä vuotta aiemmin. Sen paikalla seisoi uusi '
-        + 'kaupunginosan kaupungintalo, ja vieressä oli puisto, Square du Temple, joka oli avattu 1857. '
+        + 'Isoisäsi vuonna 1873 torni oli purettu jo yli kuusikymmentä vuotta aiemmin. Sen paikalla seisoi '
+        + 'kaupunginosan uusi kaupungintalo, ja vieressä oli puisto, Square du Temple, joka oli avattu 1857. '
         + 'Kaupungintalo on yhä paikallaan Rue Eugène-Spullerilla.',
       kuvat: [
         {
@@ -6338,8 +6338,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palais de l\'Industrie - Édouard Baldus.jpg',
-          lyhyt: 'Palais de l\'Industrien pääsisäänkäynti Édouard Baldusin valokuvassa.',
-          selite: 'Palais de l\'Industrien kaareva pääsisäänkäynti Édouard Baldusin '
+          lyhyt: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin valokuvassa.',
+          selite: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin '
             + 'valokuvassa 1850- tai 1860-luvulta.',
           lahde: 'Édouard Baldus, The Metropolitan Museum of Art, Wikimedia Commons (PD)',
         },
@@ -6356,17 +6356,17 @@ export const NAHTAVYYSJUTUT = {
     'Trocadéron palatsi': {
       aika: '1876–1935',
       nosto: 'hahmotelma-trocadero',
-      teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillotin '
+      teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillot\'n '
         + 'kukkulalle suunniteltiin jo 1811 palatsia Napoleonin pojalle, "Rooman kuninkaalle", mutta siitä '
         + 'tehtiin vain maanrakennustöitä. Todellinen palatsi rakennettiin vuosina 1876–1878 maailmannäyttelyä '
         + 'varten: siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
-        + 'Salin akustiikka oli huono, mutta siellä soi Cavaillé-Collin urut, jotka vihittiin elokuussa 1878.'
+        + 'Salin akustiikka oli huono, mutta siellä soivat Cavaillé-Collin urut, jotka vihittiin elokuussa 1878.'
         + '\n\n'
         + 'Palatsi seisoi vuoteen 1935, jolloin sali ja tornit purettiin vuoden 1937 näyttelyn tieltä. Vanhojen '
         + 'siipien runko jäi paikalleen, ja sen eteen Seinen puolelle rakennettiin yhtä leveä uusi galleria: '
         + 'siivet ovat nykyisen Chaillot\'n palatsin osia.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 palatsia ei ollut vielä lainkaan: kukkulan paikalla oli tasoitettu aukio.',
+        + 'Isoisäsi vuonna 1873 palatsia ei ollut vielä lainkaan: kukkulalla oli tasoitettu aukio.',
       kuvat: [
         {
           tiedosto: 'Le palais du Trocadéro, 1878.jpg',
@@ -6394,7 +6394,7 @@ export const NAHTAVYYSJUTUT = {
         + 'ollut yhtään tukipilaria. Katon kantoi kaksikymmentä kolminivelistä kaarta: jokainen oli kaksi '
         + 'puolikaarta, jotka nojasivat toisiinsa huipulta ja alhaalta tappeihin.'
         + '\n\n'
-        + 'Vieraita kuljettivat hallin yli liikkuvat sillat.'
+        + 'Vieraita kuljetettiin hallissa liikkuvilla silloilla.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 hallia ei ollut. Halli purettiin 1900-luvun alussa, jotta näkymä '
         + 'Champ-de-Marsille aukeaisi.',
@@ -6422,13 +6422,13 @@ export const NAHTAVYYSJUTUT = {
         + 'suunnitteli uudet paviljongit raudasta, valuraudasta ja lasista; niitä rakennettiin kymmenen, '
         + 'vaiheittain 1870-luvun alkuun mennessä.'
         + '\n\n'
-        + 'Émile Zola kuvasi hallit vuonna 1873 ilmestyneessä romaanissa Le Ventre de Paris "jättimäiseksi '
+        + 'Émile Zola kuvasi hallit vuonna 1873 ilmestyneessä romaanissa Pariisin vatsa (Le Ventre de Paris) "jättimäiseksi '
         + 'metallimahaksi, pulteilla ja niiteillä kokoon pantuksi, puusta, lasista ja valuraudasta". Isoisäsi '
         + 'vuonna 1873 hallit olivat jo käytössä.'
         + '\n\n'
-        + 'Ruokamarkkina siirtyi Rungisiin 1969, ja hallit purettiin 1970-luvun alussa. Jäljelle jäänyttä '
+        + 'Ruokatori siirtyi Rungisiin 1969, ja hallit purettiin 1970-luvun alussa. Jäljelle jäänyttä '
         + 'valtavaa työmaata kutsuttiin yksinkertaisesti reiäksi. Yksi paviljonki pystytettiin uudelleen '
-        + 'Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle 1979. Nogentin paviljongissa soi nykyään '
+        + 'Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle 1979. Nogentin paviljongissa soivat nykyään '
         + 'elokuvateatteri Gaumont-Palacen urut.',
       kuvat: [
         {
