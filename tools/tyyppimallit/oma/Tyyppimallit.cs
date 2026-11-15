@@ -12,12 +12,30 @@ namespace Matkakirja
     public static partial class OhjelmaKohdeGeometria
     {
         // Tasavärit tyyliohjeen mukaan (kohta 2): vaalea lämmin kivi, siniharmaa katto, tumma lyijy tornin huipussa, tummat aukot.
-        static readonly Vari TyKivi = Vari.H(0xEADCC0), TyKiviVarjo = Vari.H(0xC9BA9C), TyKatto = Vari.H(0x8E979D), TyHuippu = Vari.H(0x5F666E),
-            TyAukko = Vari.H(0x5E5850), TyLasi = Vari.H(0x96958C), TyTaulu = Vari.H(0xF2EEE4), TyViisari = Vari.H(0x2E2E2E), TyRauta = Vari.H(0x6A6F74),
+        // KK 15.11. 09.00 A: kartalla KAIKKI värit kaupungin taloperheestä (MK01:n palettirivi, tyyppi 12 → TyyppiMalli(…, katto, seinä)): katto kuten
+        // hallit (vie.py kattovari()), seinä samasta lähteestä (seinavari()), ikkuna-aukko ja seinän varjo seinästä johdettuina. Ainoa oma väri on tornin
+        // huippu (TyHuippu, tumma aksentti). Ilman palettia (luonnokset, testit) alla olevat oletukset tavulleen kuten ennen.
+        static readonly Vari TyKiviOletus = Vari.H(0xEADCC0), TyKiviVarjoOletus = Vari.H(0xC9BA9C), TyKattoOletus = Vari.H(0x8E979D), TyHuippu = Vari.H(0x5F666E),
+            TyAukkoOletus = Vari.H(0x5E5850), TyLasi = Vari.H(0x96958C), TyTaulu = Vari.H(0xF2EEE4), TyViisari = Vari.H(0x2E2E2E), TyRauta = Vari.H(0x6A6F74),
             // Asemahallit (KK 15.11. 04.30 kohta 1): lasi ja hallikatto harmaanvihreinä joen suuntaan (Thames pelikuvassa ≈ #B0AB8B), kirkkaus ja kylläisyys
             // enintään veden tasolla; lasin tuntu ruutujaosta, puitteet lasia tummempina. KK 04.58: yksi yhteinen lähes harmaa (kylläisyys ≤ 0,1) kaikkiin
             // kaupunkeihin, koska harmaanvihreä riiteli Pariisin sinkkikattojen kanssa (Saint-Lazare).
             TyHalli = Vari.H(0x84837A), TyPuite = Vari.H(0x5A5A54);
+
+        // Kaupungin paletti rakennuksen ajaksi (TyyppiMalli asettaa ja palauttaa; säiekohtainen, koska kartan elämä rakentaa taustasäikeessä).
+        [ThreadStatic] static bool tyPaletti;
+        [ThreadStatic] static Vari tyKatto, tyKivi;
+        static Vari TyKatto => tyPaletti ? tyKatto : TyKattoOletus;
+        static Vari TyKivi => tyPaletti ? tyKivi : TyKiviOletus;
+        static Vari TyKiviVarjo => tyPaletti ? TyVarjoSeinasta(tyKivi) : TyKiviVarjoOletus;
+        static Vari TyAukko => tyPaletti ? TyAukkoSeinasta(tyKivi) : TyAukkoOletus;
+
+        /// <summary>Seinän varjokaista (jakolista, hallien sivuseinät): sama suhde seinään kuin oletuspari TyKiviVarjoOletus / TyKiviOletus (lineaarinen, kanavittain).</summary>
+        static Vari TyVarjoSeinasta(Vari k) => new Vari(k.R * TyKiviVarjoOletus.R / TyKiviOletus.R, k.G * TyKiviVarjoOletus.G / TyKiviOletus.G, k.B * TyKiviVarjoOletus.B / TyKiviOletus.B);
+
+        /// <summary>Ikkuna-aukko kuten talojen ikkuna (KK 09.00 b): TaloKerros.shader sekoittaa lähikuvassa seinän ja ikkunan materiaalivärin
+        /// (0,18, 0,117, 0,08) osuudella 0,8 lineaarisena; sama sekoitus tässä, joten aukko on talon ikkunan värinen samalla valolla.</summary>
+        static Vari TyAukkoSeinasta(Vari k) => new Vari(0.2f * k.R + 0.8f * 0.18f, 0.2f * k.G + 0.8f * 0.117f, 0.2f * k.B + 0.8f * 0.08f);
 
         /// <summary>Harjakatto pitkin x-akselia: lappeet räystäältä y harjalle y + h, räystäs ulkonee o; päädyt kivestä seinän tasossa (pois, jos päätyä ei näy).</summary>
         static void TyHarja(Rakentaja r, float x0, float x1, float z0, float z1, float y, float h, float o, Vari katto, Vari paaty, bool p0 = true, bool p1 = true)
@@ -63,7 +81,7 @@ namespace Matkakirja
             }
         }
 
-        static Rakentaja TyRakentaja() => new Rakentaja { AoKorkeus = 1f, AoMaara = 0f };
+        static Rakentaja TyRakentaja() => new Rakentaja { AoKorkeus = 1f, AoMaara = 0f, SaumaVari = tyPaletti ? tyKatto.Kerro(0.86f) : (Vari?)null };   // harjapelti kuten liuskerivit
 
         // ------------------------------------------------------------------ tyypit ------------------------------------------------------------------
 
@@ -700,7 +718,8 @@ namespace Matkakirja
         public static Verkko TyyppiPalatsiPiha(float pituus = 120f, float leveys = 90f, float siipi = 16f, string avoin = "", string katto = "mansardi", int seina = 0)
         {
             var r = TyRakentaja();
-            var kivi = seina > 0 ? Vari.H(seina) : TyKivi;   // seinä rivikohtaisesti (KK 15.11. 01.24; KS:n paletti), 0 = Pariisin kivi
+            var kivi = seina > 0 ? Vari.H(seina) : TyKivi;   // seinä rivikohtaisesti (KK 15.11. 01.24; KS:n paletti), 0 = kaupungin seinä (paletti) tai oletuskivi
+            var aukko = seina > 0 ? TyAukkoSeinasta(kivi) : TyAukko;   // ikkuna talojen tapaan seinästä (KK 09.00 b)
             bool attika = katto == "attika";
             float x0 = -pituus * 0.5f, x1 = pituus * 0.5f, z0 = -leveys * 0.5f, z1 = leveys * 0.5f, y = 16f, pv = siipi + 4f;
             bool piha = Math.Min(pituus, leveys) >= 2.6f * siipi;
@@ -731,15 +750,30 @@ namespace Matkakirja
                     if (attika) { r.Laatikko(a - 0.4f, b + 0.4f, y + 2f, y + 3.8f, c - 0.4f, d + 0.4f, kivi, TyKatto); continue; }
                     r.Katto(a, b, c, d, new[] { (0f, 0f, y + 2f), (1.8f, 1.8f, y + 8f), (pv * 0.3f, (d - c) * 0.3f, y + 10f) }, TyKatto, TyKatto);
                 }
-            // Ulkojulkisivut: kolme ikkunariviä paviljonkien välissä; jako harvenee isoissa (kolmioraja 1 500: enintään ~52 ikkunaa riviä kohden)
-            float julkisivu = 2f * (pituus - 2f * pv) + (piha ? 2f * (leveys - 2f * pv) : 0f), iv = Math.Max(4.2f, julkisivu / 52f);
+            // Pitkät seinät: kolme ikkunariviä paviljonkien välissä ulkojulkisivuilla JA pihan puolella (KK 15.11. 09.00 c: sama rytmi kaikille palatsin
+            // pitkille seinille, yleinen sääntö). Jako harvenee isoissa (kolmioraja 1 500): enintään ~60 ikkunaa riviä kohden ulko- ja pihaseinät yhteensä (ennen 52 vain ulkona).
+            // Pihaseinä = siiven sisäpinta (siipi m ulkoseinästä), suunta kuten ulkoseinällä vastakkaiseen normaaliin.
+            var seinat = new List<(float, float, float, float)>();
             foreach (var (ax, az, bx, bz, sivu) in new[] { (x0 + pv, z1, x1 - pv, z1, "+z"), (x1 - pv, z0, x0 + pv, z0, "-z"), (x0, z0 + pv, x0, z1 - pv, "-x"), (x1, z1 - pv, x1, z0 + pv, "+x") })
             {
                 if (!piha && ax == bx) continue;
                 if (sivu == avoin) continue;
-                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 7.5f, 10.5f, false, TyAukko);
-                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 12f, 14.5f, false, TyAukko);
-                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 2f, 4.5f, false, TyAukko);
+                seinat.Add((ax, az, bx, bz));
+                if (!piha) continue;
+                // pihan puoli: sama siipi, normaali kohti pihaa (suunta käännetty, paikka siiven verran sisään)
+                if (sivu == "+z") seinat.Add((x1 - pv, z1 - siipi, x0 + pv, z1 - siipi));
+                else if (sivu == "-z") seinat.Add((x0 + pv, z0 + siipi, x1 - pv, z0 + siipi));
+                else if (sivu == "-x") seinat.Add((x0 + siipi, z1 - pv, x0 + siipi, z0 + pv));
+                else seinat.Add((x1 - siipi, z0 + pv, x1 - siipi, z1 - pv));
+            }
+            float julkisivu = 0f;
+            foreach (var (ax, az, bx, bz) in seinat) julkisivu += Math.Abs(bx - ax) + Math.Abs(bz - az);
+            float iv = Math.Max(4.2f, julkisivu / 60f);
+            foreach (var (ax, az, bx, bz) in seinat)
+            {
+                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 7.5f, 10.5f, false, aukko);
+                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 12f, 14.5f, false, aukko);
+                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 2f, 4.5f, false, aukko);
             }
             // Keskirisaliitti pääjulkisivulla (+z) ja porttiholvi; jos +z on avoin (U-palatsin kunniapiha), risaliitti on pihan puolella päärakennuksessa (−z-siipi).
             if (avoin == "+z") z1 = z0 + siipi;
@@ -748,7 +782,7 @@ namespace Matkakirja
             r.Neli(new P3(-10.3f, y + 1f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 - 4f), new P3(-10.3f, y + 1f, z1 - 4f), TyKatto, new P3(-1f, 2f, 0f));
             r.Neli(new P3(10.3f, y + 1f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 + 1.8f), new P3(0f, y + 6.2f, z1 - 4f), new P3(10.3f, y + 1f, z1 - 4f), TyKatto, new P3(1f, 2f, 0f));
             var portti = r.S(-10f, z1 + 1.5f, 10f, z1 + 1.5f);
-            portti.Pinta(7.5f, 12.5f, 0f, 6f, 0.06f, TyAukko); portti.KaariTayte(10f, 6f, 2.5f, 0.06f, TyAukko, 6);
+            portti.Pinta(7.5f, 12.5f, 0f, 6f, 0.06f, aukko); portti.KaariTayte(10f, 6f, 2.5f, 0.06f, aukko, 6);
             return r.Valmis();
         }
 
@@ -807,8 +841,20 @@ namespace Matkakirja
 
         /// <summary>MK01-tiedoston mallirivi verkoksi (työkalun vie.py; MerkkiTiedosto.Malli). Tyypit 1–4, 8 ja 9 jaettuja (instanssi, venytys), 5–7 pohjan mitoista.
         /// Sivukoodi 0 ei, 1 +x, 2 −x, 3 +z, 4 −z. c: tyyppi 5 portiikki vain päädyssä 0/1, tyyppi 6 katto 0 mansardi / 1 attika; tyyppi 6 p2 = seinän sRGB 0xRRGGBB, tyyppi 7 p2 = kaupungin kattoväri sRGB 0xRRGGBB
-        /// (f32 kokonaislukuna, 0 = oletuskivi); tyyppi 7 muoto 2: jatko = seuraavan rivin (tyyppi 11) tavut 1…23. Tuntematon tyyppi (myös 11) = null.</summary>
-        public static Verkko TyyppiMalli(int tyyppi, int a, int b, int c, float p0, float p1, float p2 = 0f, uint p3Bitit = 0, uint varattu = 0, byte[] jatko = null)
+        /// (f32 kokonaislukuna, 0 = oletuskivi); tyyppi 7 muoto 2: jatko = seuraavan rivin (tyyppi 11) tavut 1…23. Tuntematon tyyppi (myös 11 ja 12) = null.
+        /// katto, seina = kaupungin paletti sRGB 0xRRGGBB (MK01:n palettirivi, tyyppi 12; KK 15.11. 09.00 A): kaikki värit niistä (aukko ja varjo seinästä,
+        /// tornin huippu ainoana omana). 0 = ei palettia (oletusvärit tavulleen kuten ennen).</summary>
+        public static Verkko TyyppiMalli(int tyyppi, int a, int b, int c, float p0, float p1, float p2 = 0f, uint p3Bitit = 0, uint varattu = 0, byte[] jatko = null,
+            int katto = 0, int seina = 0)
+        {
+            bool ennen = tyPaletti; var (kEnnen, sEnnen) = (tyKatto, tyKivi);
+            tyPaletti = katto > 0 && katto <= 0xFFFFFF && seina > 0 && seina <= 0xFFFFFF;
+            if (tyPaletti) { tyKatto = Vari.H(katto); tyKivi = Vari.H(seina); }
+            try { return TyyppiMalliRivi(tyyppi, a, b, c, p0, p1, p2, p3Bitit, varattu, jatko); }
+            finally { tyPaletti = ennen; tyKatto = kEnnen; tyKivi = sEnnen; }
+        }
+
+        static Verkko TyyppiMalliRivi(int tyyppi, int a, int b, int c, float p0, float p1, float p2, uint p3Bitit, uint varattu, byte[] jatko)
         {
             string[] paikka = { "lansi", "risteys" }, huippu = { "pyramidi", "neula", "tasakatto" }, sivu = { "", "+x", "-x", "+z", "-z" };
             string Sivu(int k) => k >= 0 && k < sivu.Length ? sivu[k] : "";
@@ -833,12 +879,16 @@ namespace Matkakirja
 
         /// <summary>Jaetun mallin LISÄOSA, joka ei veny rungon mukana (KK 15.11. ~03.3x): julkisivukirkon kupoli (tyyppi 10, a ≠ 0), muuten null.
         /// Peli piirtää sen samalla merkillä toisena jaettuna verkkona: paikka rungon kehyksessä (x · sx, y, 0), mittakaava min(sx, sz) kaikkiin akseleihin.</summary>
-        public static Verkko TyyppiLisaosa(int tyyppi, int a, out float x, out float y)
+        public static Verkko TyyppiLisaosa(int tyyppi, int a, out float x, out float y, int katto = 0, int seina = 0)
         {
             x = y = 0f;
             if (tyyppi != 10 || a == 0) return null;
             x = JulkisivuKupoliX; y = JulkisivuKupoliY;
-            return TyyppiJulkisivuKupoli(true);
+            bool ennen = tyPaletti; var (kEnnen, sEnnen) = (tyKatto, tyKivi);
+            tyPaletti = katto > 0 && katto <= 0xFFFFFF && seina > 0 && seina <= 0xFFFFFF;
+            if (tyPaletti) { tyKatto = Vari.H(katto); tyKivi = Vari.H(seina); }
+            try { return TyyppiJulkisivuKupoli(true); }
+            finally { tyPaletti = ennen; tyKatto = kEnnen; tyKivi = sEnnen; }
         }
 
         /// <summary>Kaikki luonnosmallit nimineen ja kokoluokan kolmiorajoineen (0 = ei rajaa).</summary>

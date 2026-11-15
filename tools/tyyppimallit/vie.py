@@ -21,6 +21,8 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
                     kulman kehyksessä (merkin x z siirretty), akseli = hallien akseli (julkisivu −x kohti origoa). b c p3 varattu 0 = vanha malli (TyyppiAsema).
             8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
             10 kirkko-julkisivu (tornitön, KK 15.11.; a = kupoli 0/1: peli piirtää kupolin lisäosana tasaisella min(sx, sz); vain nimilistalta)
+            12 PALETTIRIVI, aina rivi 0 (KK 15.11. 09.00 A): p0 = kattovari(k), p1 = seinavari(k) (sRGB f32-kokonaislukuina); ei merkkejä. Peli: kaikki
+               tyyppimallien värit näistä (aukko ja seinän varjo seinästä, harjapelti katosta), tornin huippu ainoana omana värinä.
      Tyypit 1–4 ja 8–10 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
   merkki 24 t:  f32 x | f32 z (m origosta itään ja pohjoiseen, WGS84-ENU kuten kartta_puut.py) | i16 maa (0,25 m, maasto.py z12; 0 jos ei maata)
                 | u16 malli | u16 akseli (0,01°, mallin +x:n atsimuutti pohjoisesta myötäpäivään; kirkoissa +x = kuori, torni länsipäähän)
@@ -44,8 +46,9 @@ TYYPPI = {('kirkko', 'pieni'): 1, ('kirkko', 'keski'): 2, ('kirkko', 'suuri'): 3
 SIVU = {None: 0, '': 0, '+x': 1, '-x': 2, '+z': 3, '-z': 4}
 PAIKKA = {'lansi': 0, 'risteys': 1}
 HUIPPU = {'pyramidi': 0, 'neula': 1, 'tasakatto': 2}
-# Seinävärit (KS 15.11. 01.4x, katot.py PERHEET['lontoo'].seinat): Portland-kivi = 'lontoo'-stukko, punatiili; LUONNOS (KK päättää pelikuvista).
-SEINA = {None: 0, 'portland': 0xE4DCCA, 'tiili': 0xAC7862}
+# Palatsin rivikohtainen seinä (KS 15.11. 01.4x): Portland-kivi = katot.py PERHEET['lontoo'].seinat[0], punatiili = viimeinen (KK 09.00 A: samasta
+# lähteestä kuin talot, ei omia vakioita). Täytetään main():ssa lähteestä; None = kaupungin seinä (palettirivi).
+SEINA = {None: 0, 'portland': None, 'tiili': None}
 # Asemahallien kattoväri (KK 15.11. 05.22): kaupungin talokattojen perusväri SAMASTA LÄHTEESTÄ kuin talopalat. Kaupunkirivin katot.paletti
 # (kaupungit-talot.json): vaihtelu-perhe → paletti → KATTO, kustakin suurimman osuuden sävy (KK 15.11. 05.26). Testi: testi_kattovari.py.
 KATTOVARI = (0, '-')
@@ -86,6 +89,37 @@ def kattovari(k):
     r, g, b = ast.literal_eval(re.search(r'KATTO=(\([0-9, ]+\))', open(TEE_PALAT, encoding='utf-8').read()).group(1))
     return (r << 16) | (g << 8) | b, 'tee-palat.py KATTO'
 
+
+
+def seinavari(k):
+    """(sRGB 0xRRGGBB, selite) kaupungin talojen perusseinä SAMASTA LÄHTEESTÄ ja samalla säännöllä kuin kattovari() (KK 15.11. 09.00 A):
+    kaupunkirivin katot.vaihtelu → PERHEET[perhe].seinat suurin osuus (tasatilanteessa ensimmäinen); muuten katot.seina 'puoli' → SEINA_PUOLI[0],
+    '1' → SEINA_VAALEA[0]; muuten tee-palat.py SEINA[0]."""
+    import ast, re
+    rivit = json.load(open(os.path.join(KAUPUNKI_TYOKALU, 'kaupungit-talot.json')))
+    rivit = rivit.get('kaupungit', rivit) if isinstance(rivit, dict) else rivit
+    rivi = ({r.get('nimi', r.get('id')): r for r in rivit} if isinstance(rivit, list) else rivit).get(k) or {}
+    katot = rivi.get('katot') or {}
+    lahde = open(os.path.join(KAUPUNKI_TYOKALU, 'katot.py'), encoding='utf-8').read()
+    perhe = (katot.get('vaihtelu') or {}).get('perhe') or PERHE_OHITUS.get(k)
+    if perhe:
+        (r, g, b), osuus = max(perheen_seinat(lahde, perhe), key=lambda x: x[1])
+        return (r << 16) | (g << 8) | b, f"katot.py PERHEET['{perhe}'].seinat suurin osuus {osuus}"
+    seina = str(katot.get('seina') or '')
+    if seina:
+        nimi = 'SEINA_PUOLI' if seina == 'puoli' else 'SEINA_VAALEA'
+        r, g, b = ast.literal_eval(re.search(rf'^{nimi} = (\[[^\]]*\])', lahde, re.M).group(1))[0]
+        return (r << 16) | (g << 8) | b, f'katot.py {nimi}[0]'
+    r, g, b = ast.literal_eval(re.search(r'SEINA=\[(\([0-9, ]+\))', open(TEE_PALAT, encoding='utf-8').read()).group(1))
+    return (r << 16) | (g << 8) | b, 'tee-palat.py SEINA[0]'
+
+
+def perheen_seinat(lahde, perhe):
+    """katot.py:n PERHEET[perhe]['seinat'] (lista ((r, g, b), osuus)) lähdetekstistä."""
+    import ast, re
+    lohko = lahde[lahde.index('PERHEET = {'):]
+    lohko = lohko[lohko.index(f"'{perhe}': dict("):]
+    return ast.literal_eval(re.search(r'seinat=(\[[^\]]*\])', lohko).group(1))
 
 
 def alueella(k, merkit):
@@ -141,6 +175,10 @@ def main(a):
     k, ulos = a[0], a[1]
     global KATTOVARI
     KATTOVARI = kattovari(k)
+    SEINAVARI = seinavari(k)
+    lontoo = perheen_seinat(open(os.path.join(KAUPUNKI_TYOKALU, 'katot.py'), encoding='utf-8').read(), 'lontoo')
+    rgb = lambda c: (c[0] << 16) | (c[1] << 8) | c[2]
+    SEINA['portland'], SEINA['tiili'] = rgb(lontoo[0][0]), rgb(lontoo[-1][0])
     mpolku = a[a.index('--merkit') + 1] if '--merkit' in a else os.path.join(TY, 'tulos', f'merkit-{k}.json')
     moduulit = a[a.index('--moduulit') + 1] if '--moduulit' in a else MAASTO_OLETUS
     kaikki = json.load(open(mpolku))['merkit']
@@ -176,6 +214,7 @@ def main(a):
             return min(hs) if hs else None
 
     mallit, rivit, merkit_b, puuttuu, asemat = {}, [], [], [], []
+    rivit.append((12, 0, 0, 0, float(KATTOVARI[0]), float(SEINAVARI[0]), 0.0, struct.pack('<f', 0.0), 0))   # palettirivi = rivi 0 (KK 09.00 A)
     for m in ms:
         x, z = enu(*m['keski'])
         if m['tyyppi'] == 'asema':
@@ -231,6 +270,8 @@ def main(a):
                  poisOsm=[m['osm'] for m in ms])
     tieto['asemat'] = asemat
     tieto['asemien_kattovari'] = {'srgb': f'#{KATTOVARI[0]:06X}', 'lahde': KATTOVARI[1]}
+    tieto['paletti'] = {'katto': f'#{KATTOVARI[0]:06X}', 'katto_lahde': KATTOVARI[1], 'seina': f'#{SEINAVARI[0]:06X}', 'seina_lahde': SEINAVARI[1],
+                        'palatsin_seinat': {n: f'#{v:06X}' for n, v in SEINA.items() if n}}
     json.dump(tieto, open(os.path.join(TY, 'tulos', f'vienti-{k}.json'), 'w'), ensure_ascii=False, indent=1)
     print(k, {a_: b for a_, b in tieto.items() if a_ != 'poisOsm'})
 
