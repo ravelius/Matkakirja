@@ -7,7 +7,7 @@ SÄÄNNÖT:
 2. Kuvat tilaa Codexin kuvasessio, 3D-mallit Tripo 3D -sessio; tilaus osoitetaan oikealle sessiolle postilaatikon kautta, ja korjaus toisen alueelle pyydetään postiviestillä. [R-7.15] [R-7.14]
 3. Ennen tilausta varmistetaan kohde kuvasta tai kortilta ja haetaan aiemmat työt ja päätökset. Tilaus kertoo, liikkuuko malli ja miten; liikkumaton toimitetaan ilman luurankoa. [P-261023-1] [R-7.15]
 4. Kuvatilaus kuuluu putkeen HERO (nykyinen kohde, 2–3 Commons-viitekuvaa, ei viitteettömiä yleisnäkymiä), IHME (kadonnut tai loistoaika, merkitään havainnekuvaksi) tai AARRE (esine vaalealla pergamentilla). [R-11.11] [R-11.13] [R-2.51]
-5. Kuvassa ei ole tekstiä eikä vesileimaa. Kuvat tehdään uusimmalla OpenAI-mallilla, vaihto vertailukokeen kautta; muoto JPG, peliin saa muuntaa webp:ksi. [R-2.51] [R-11.12] [R-11.11]
+5. Kuvassa ei ole tekstiä eikä vesileimaa. Kuvat tehdään uusimmalla OpenAI-mallilla (vaihto kokeen kautta); muoto JPG, peliin saa muuntaa webp:ksi. Pulun kuva neliönä, aihe ympyrässä. [R-2.51] [R-11.12] [R-11.11] [P-261115-6]
 6. Rakennukset ja kaupungit tehdään koodilla; niihin uusi Tripo- tai Codex-malli vain omistajan sanalla. Hahmot, eläimet, esineet ja kalusteet tehdään Tripolla Codexin kautta. [P-261109-2] [R-7.15]
 7. Codexin kuvilla ja Tripolla on pysyvä lupa ilman määrä- tai ottokorttia. Lupa kattaa tuotannon, ei mallin hyväksyntää (kortti mallit-ja-3d). [R-7.15] [P-261105-3]
 8. Omistaja sopii Codexin valinnat suoraan Codexin kanssa; Claude toimii Codexin postiviestin mukaan eikä kysy samaa kortilla. [P-261021-1]
@@ -19,10 +19,10 @@ SÄÄNNÖT:
 14. Olemattomia patsaita ei generoida: Paljasta-tehtävässä joukossa on oikea patsas toisesta kaupungista, ja pelaaja osoittaa vieraan. [P-261113-6]
 
 EI VIKA:
-- Valmiit Tripo-mallit jäävät, vaikka uudet rakennukset tehdään koodilla.
+- Valmiit Tripo-mallit jäävät, vaikka rakennukset tehdään koodilla.
 - Codexin valintaa ei kysytä omistajalta kortilla.
 
 TEKOTAPA:
 - Posti: haara claude/postilaatikko. Vahti: Matkakirja-posti/codex-odottaa.py.
-- Herokuvat: tools/hero-kuvakulmat.mjs. Mallitoimitus: tuotantopohjat/codex-3d-toimitus.md.
-- Lupa muuhun generointiin: kertojaaanet, omistajan-kanssa.
+- Herokuvat: tools/hero-kuvakulmat.mjs. Mallit: tuotantopohjat/codex-3d-toimitus.md.
+- Muu generointi: kertojaaanet, omistajan-kanssa.
