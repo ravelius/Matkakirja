@@ -165,7 +165,7 @@ test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauk
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
       `${image.osoite}: pitkän selitteen pitää olla kaksi sisältölausetta`);
-    const shortContent = image.lyhyt.replace(/^[^.]+,\s*1873\.\s*/u, '');
+    const shortContent = image.lyhyt.replace(/^[^.]+,\s*(?:noin )?18\d\d\.\s*/u, '')  /* Rooman kitkentäkuva: "noin 1871" (KK 15.11. 20.34) */;
     assert.equal((shortContent.match(/[.!?](?=\s|$)/g) ?? []).length, 1,
       `${image.osoite}: lyhyen selitteen pitää olla yksi sisältölause`);
   }

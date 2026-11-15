@@ -180,7 +180,7 @@ export const FOKUSVIRTA_ROOMA = {
      */
     luentakuva: {
       osoite: "https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-rooma-kitkenta-v1.png",
-      lyhyt: "Rooma, 1873. Colosseumin muurin kasvit kitkettiin pari vuotta aiemmin.",
+      lyhyt: "Rooma, noin 1871. Työmiehet kitkevät kasveja Colosseumin muurilta.",
       selite: 'Työmiehet köysissä kitkevät kasveja Colosseumin ulkomuurilta. Kasvillisuus poistettiin muureilta noin vuosina 1870–1871, ettei se rikkoisi kiveä.',
       lahde: "Matkakirjan havainnekuva",
       // Kitkennän ajankohta: Vistanet 22.12.2020 (1870, Pietro Rosa) ja en-Wikipedia Colosseum (1871); ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
