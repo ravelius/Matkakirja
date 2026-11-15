@@ -4,6 +4,14 @@ Yksi sivu: miltä Grand Châtelet näytti ulkoa, mistä suunnasta se tunnetaan, 
 Codex-pyyntöä EI ole lähetetty; se lähtee vasta, kun KK on hyväksynyt tämän sivun. Kuvia ei ladattu levylle; ne katsottiin Commonsin
 /wiki/File:-sivuilta selaimessa (robots.txt luettu ensin: kielletty vain /w/, /api/, Special:; kaikki käytetyt polut sallittuja).
 
+## 0. KK:n päätökset (15.11. klo 15.04): sivu hyväksytty, Codex-pyyntö saa lähteä PT:n kautta
+
+- Vuosi **"noin 1786"**. Kaksi eri vuotta nostossa (noin 1750 ja noin 1786) käy; vuosi on kuvatekstissä.
+- **Aito vanha kuva kolmanneksi = D.8793** (Naudet, noin 1798): eri kulma ja torielämä, lukukelpoinen pienenä. G.4057 jää malliksi ja Lähde-tekstiin.
+- D.8793:n lisenssi (CC0, luettu Commonsin File-sivulta) vahvistetaan vielä rajapinnasta; päätös alp. Rajapintaa ei käytetä tämän sivun kautta (api.php kielletty).
+- Pyyntöön lisätty (a)–(d): ei ovaalia/kehystä/paperin reunaa/maalauksen jälkeä; katot sinertävänharmaata liusketta, kivi lämmin harmaanruskea ja kulunut (tyyliviite nykyinen `ihme-grand-chatelet-loistoaika.jpg`); rakennus 60–70 % kuvan leveydestä, tornien huiput ja taivasta niiden yllä, yläkulmat vain taivasta tai seinää; kadun molemmin puolin korkeat kapeat 4–5-kerroksiset talot ja vasemmalla edessä matala puinen kauppahalli.
+- Kuva tulee → rivi KK:lle (polku) → KK katsoo mallikuvia vasten → omistajalle. Data-PR luonnoksena. Ei muita kohteita ennen omistajan sanaa.
+
 ## 1. Lyhyesti
 
 - **Vuosi: noin 1786.** Ainoa selvästi 1780-luvulle ajoitettu aikalaiskuva on G.4057 (1786–1787, kohta 3); kaksi muuta (D.8793, D.3137) ovat
@@ -46,7 +54,7 @@ Kaikki luettu Commonsin File-sivun Licensing-osiosta 15.11.2026. Kuvia EI ladatt
 | – | Hoffbauer 1885 "vu depuis la rue Saint-Denis, 1800", Bénard "XVIIIe siècle. D.85" | rekonstruktioita | PD / CC0 | EI aikalaiskuvia: vain suuntavihje |
 | – | Dunouy 1785 (BnF btv1b103027141) | Alexandre-Hyacinthe Dunouy | PD | **? kohde epävarma** (luettelossa vesimylly "Corbeil"); ei käytetä ennen silmämääräistä tarkistusta |
 
-**Nostoon "aito vanha kuva" (kolmas):** ehdotus A (G.4057, 1786–1787): tekijä + vuosi tunnetaan, CC0, ovaali ja väritetty; B (D.8793) on vaihtoehto, mutta sen ajoitus on "noin 1798–1800", joten se kertoo hieman myöhemmästä vuodesta. Päätös: KK/alp.
+**Nostoon "aito vanha kuva" (kolmas): D.8793** (Naudet, noin 1798; KK 15.04). G.4057 (1786–1787) jää mallikuvaksi ja Lähde-tekstiin.
 
 **Huom.:** A on rajattu ovaaliksi ja sen värit ovat väritystä; B:ssä on laajempi tori. Yhdessä ne antavat Codexille hyvän viitteen.
 
@@ -70,13 +78,17 @@ Kaikki luettu Commonsin File-sivun Licensing-osiosta 15.11.2026. Kuvia EI ladatt
 
 > **Tilaus: Grand Châtelet, ulkokuva, noin vuosi 1786**
 > Yksi fotorealistinen havainnekuva (valokuvamainen, ei piirros eikä maalaus), vaaka **1536 × 1024 px, JPEG**.
+> **Tyyli ja rajaus (KK 15.11. 15.04):** valokuvamainen havainnekuva täydellä kuvalla; EI ovaalia rajausta, kehystä, paperin reunaa eikä maalauksen jälkeä
+> (viitekuva A on ovaali, älä jäljennä sitä). Tyyliviite sävymaailmaan: nykyinen `assets/kartat/ihmeet/ihme-grand-chatelet-loistoaika.jpg`.
+> **Sommittelu:** rakennus noin 60–70 % kuvan leveydestä, tornien huiput kokonaan näkyvissä ja taivasta niiden yllä; kuvan vasempaan ja oikeaan yläkulmaan vain taivasta
+> tai seinää (nauha ja kuvakkeet tulevat niiden päälle). Kadun molemmin puolin korkeat kapeat 4–5-kerroksiset talot; vasemmalla edessä matala puinen kauppahalli (näkyvät viitekuvissa A ja B).
 > Katsepiste: katutaso, matalalta (silmän korkeudelta, hieman ylöspäin), **Rue Saint-Denisin pohjoispäästä katsottuna etelään**, koko Grand Châtelet
 > näkyy yhtenä kokonaisuutena ja sen ympäristö sen ympärillä. Aikalaisviitteet (CC0, vain viitteeksi, ei kopioitavaksi):
 > 1) G.4057 (Sergent / Le Campion, akvatinta 1786–1787), 2) D.8793 (Naudet, noin 1798), 3) D.3137 (tuntematon, noin 1800);
 > linkit sivun kohdassa 3. Tarkista tornit, holvi ja mittasuhteet näistä, älä muista.
 > **Rakennus:** harmaanruskea kivinen linnake. Keskellä porttirakennus, jossa korkea suippokaarinen holvikäytävä, jonka läpi katu jatkuu;
 > holvin yläpuolella kaksi kerrosta ikkunoita ja niiden välissä kellotaulu. Sivuilla pyöreitä kartiokattoisia torneja eri korkuisina (vasemmalla suurin).
-> Katot tummat (sinertävänharmaa liuska tai ruskea). Ei myöhempiä lisäyksiä.
+> Katot **sinertävänharmaata liusketta** (D.8793 ja D.3137 yhtä mieltä; G.4057:n punaruskea on väritystä), kivi **lämmin harmaanruskea ja kulunut**. Ei myöhempiä lisäyksiä.
 > **Ympäristö (1786):** mukulakivikatu, edessä pieni tori; vasemmalla puurakenteinen kaupparakennus. Kojuja markiisein ja sateenvarjomaisin katoksin, käsikärryjä,
 > aasi, vedenkantajia, torimyyjiä, kantajia, kulkijoita 1780-luvun vaatteissa (kolmikulmahattu, pitkä takki, polvihousut, esiliina, myssy).
 > Tunnelma: arkinen, sotkuinen ja hajuinen kaupunginosa, hieman sumuinen taivas, päivänvalo. Teurastamojen kojuja saa näkyä, mutta ei raakaa.
@@ -89,7 +101,7 @@ Kaikki luettu Commonsin File-sivun Licensing-osiosta 15.11.2026. Kuvia EI ladatt
 
 1. **Ulkokuva (uusi), ensimmäisenä:** "Noin vuonna 1786: Grand Châtelet Rue Saint-Denisin päästä. Kärryjä, torikojuja ja kantajia holvin edessä." Merkki **HAVAINNEKUVA**; Lähde-sana: "Tekoälyllä tuotettu havainnekuva. Mallina aikalaiskuvat: Sergent & Le Campion 1786–1787 (Musée Carnavalet, CC0); Naudet noin 1798 (Musée Carnavalet, CC0)."
 2. **Nykyinen havainnekuva** (noin 1750, holvikäytävän ruuhka) toisena. Kuvateksti jo valmiina: ihmeLahde/selite.
-3. **Aito vanha kuva** kolmantena: G.4057 (1786–1787) tai D.8793 (noin 1798).
+3. **Aito vanha kuva** kolmantena: **D.8793** (Naudet, noin 1798; KK:n päätös 15.11. klo 15.04). Kuvateksti: vuosi "noin 1798" ja mitä näkyy (tori Grand Châtelet'n edessä). G.4057 mainitaan ulkokuvan Lähde-tekstissä mallina.
 
 Huom: "noin 1750" nykyisessä kuvassa ja "noin 1786" uudessa eivät ole ristiriidassa, jos kuvatekstit sanovat vuoden erikseen; nostossa ne ovat kaksi eri hetkeä samasta paikasta. KK päättää, halutaanko yhtenäinen vuosi.
 
