@@ -15,7 +15,8 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
                           p2 = seinän sRGB 0xRRGGBB f32-kokonaislukuna (0 = oletuskivi; parametri 'seina' SEINA-taulusta)
             7 asema (a = halleja, p0 pituus, p1 leveys)
             8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
-     Tyypit 1–4, 8 ja 9 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
+            10 kirkko-julkisivu (tornitön, KK 15.11.; a = kupoli 0/1: peli piirtää kupolin lisäosana tasaisella min(sx, sz); vain nimilistalta)
+     Tyypit 1–4 ja 8–10 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
   merkki 24 t:  f32 x | f32 z (m origosta itään ja pohjoiseen, WGS84-ENU kuten kartta_puut.py) | i16 maa (0,25 m, maasto.py z12; 0 jos ei maata)
                 | u16 malli | u16 akseli (0,01°, mallin +x:n atsimuutti pohjoisesta myötäpäivään; kirkoissa +x = kuori, torni länsipäähän)
                 | u16 sx | u16 sz (×0,001) | u16 varattu | i32 osm (way > 0, relation < 0)
@@ -31,7 +32,8 @@ ORIGO = {'pariisi': (48.86122, 2.35092), 'lontoo': (51.49754, -0.12574)}
 # Kartta tasainen (puiden tiedostossa ei MAA1:tä): peli laskee maan itse kuten puille (PuunMaa). Muualla maa merkkiin.
 TASAINEN = {'pariisi'}
 TYYPPI = {('kirkko', 'pieni'): 1, ('kirkko', 'keski'): 2, ('kirkko', 'suuri'): 3, ('kupolikirkko', 'keski'): 4, ('pylvastemppeli', 'keski'): 5,
-          ('palatsi', 'keski'): 6, ('asema', 'suuri'): 7, ('kirkko', 'levea'): 8, ('kirkko', 'basilika'): 9}
+          ('palatsi', 'keski'): 6, ('asema', 'suuri'): 7, ('kirkko', 'levea'): 8, ('kirkko', 'basilika'): 9,
+          ('kirkko', 'julkisivu'): 10}
 SIVU = {None: 0, '': 0, '+x': 1, '-x': 2, '+z': 3, '-z': 4}
 PAIKKA = {'lansi': 0, 'risteys': 1}
 HUIPPU = {'pyramidi': 0, 'neula': 1, 'tasakatto': 2}
@@ -51,6 +53,7 @@ def malli(m):
     """(avain, rivi): sama avain = sama verkko."""
     t, k, p = m['tyyppi'], m['koko'], m['parametrit'] or {}
     ty = TYYPPI[(t, k)]
+    if t == 'kirkko' and k == 'julkisivu': return (ty, 1 if p.get('kupoli') else 0, 0, 0, 0.0, 0.0, 0.0, 0.0)   # kupoli vain lähde + Commons-kuva
     if t == 'kirkko' and k != 'suuri':
         return (ty, PAIKKA[m['torni_paikka']], m['torneja'], HUIPPU[m['huippu']], 0.0, 0.0, 0.0, 0.0)
     if t == 'kirkko': return (ty, 0, 0, 0, 0.0, 0.0, 0.0, 0.0)
@@ -126,7 +129,7 @@ def main(a):
             v = maa(m)
             if v is None: puuttuu.append(m['osm']); v = float('nan')
             y = v
-        inst = (m['tyyppi'], m['koko']) in {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'basilika'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski')}
+        inst = (m['tyyppi'], m['koko']) in {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'basilika'), ('kirkko', 'suuri'), ('kirkko', 'julkisivu'), ('kupolikirkko', 'keski')}
         sx = m['sx'] if inst and m['sx'] else 1.0; sz = m['sz'] if inst and m['sz'] else 1.0
         if inst and m['sovitus'] == 'luonnollinen': sx = sz = m['mittakaava']
         merkit_b.append([x, z, y, mallit[r], akseli(m), sx, sz, osm_luku(m['osm'])])

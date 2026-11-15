@@ -143,13 +143,17 @@ NIMILISTAT = {
 }
 NIMILISTA_TILA = {'kupolikirkko': 'hyväksytty', 'pylvastemppeli': 'hyväksytty', 'asema': 'hyväksytty', 'palatsi': 'hyväksytty'}
 # TORNIN OLETUKSET kokoluokittain (KK 23.05 kohta 2): paikka (lansi | risteys), torneja (1 | 2), huippu (pyramidi | neula | tasakatto).
-TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'), 'levea': ('lansi', 1, 'neula'), 'basilika': ('lansi', 1, 'neula'), 'suuri': ('lansi', 2, 'tasakatto')}
+TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'), 'levea': ('lansi', 1, 'neula'), 'basilika': ('lansi', 1, 'neula'), 'suuri': ('lansi', 2, 'tasakatto'),
+                'julkisivu': ('lansi', 0, 'tasakatto')}   # julkisivukirkko: ei tornia (KK 15.11.)
 # Tyypit, joille on malli (oma/Tyyppimallit.cs); muut tyypitetyt menevät "ei sovi" -listaan.
-MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'basilika'), ('kirkko', 'suuri'), ('kupolikirkko', 'keski'), ('asema', 'suuri'), ('palatsi', 'keski'), ('pylvastemppeli', 'keski')}
+MALLIT = {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'basilika'), ('kirkko', 'suuri'), ('kirkko', 'julkisivu'), ('kupolikirkko', 'keski'), ('asema', 'suuri'), ('palatsi', 'keski'), ('pylvastemppeli', 'keski')}
 # Mallien pohjan mitat (pituus × leveys m, torni mukana; kaanna.sh tulostaa): luonnollinen sovitus kirkoille kaistalla (KK 23.32).
 # kirkko-levea (KK 15.11. 00.28 kohta 2) ja kirkko-basilika (KK 01.14, viides muoto): sivulaivalliset; vain venytysvalinnassa (koko ei tule pinta-alasta).
 MALLIMITAT = {('kirkko', 'pieni'): (32.0, 12.0), ('kirkko', 'keski'): (61.0, 19.0), ('kirkko', 'levea'): (34.0, 21.0), ('kirkko', 'basilika'): (58.0, 38.0), ('kirkko', 'suuri'): (111.0, 49.0),
-              ('kupolikirkko', 'keski'): (76.7, 34.2)}   # kupolikirkko: obj/kupolikirkko.obj rajat (−39,5…37,2 × ±17,1)
+              ('kupolikirkko', 'keski'): (76.7, 34.2),
+              # julkisivukirkko (tyyppi 10, KK 15.11. ~03.3x ehto c): VAIN nimilistalta (vahvistetut tornittomat; 'kupoli': True vain lähde + Commons-kuva),
+              # ei pienimmän venytyksen valintaan (valintatuple alla ei sisällä sitä). Rajat obj/kirkko-julkisivu-ilman.obj (49 × 25).
+              ('kirkko', 'julkisivu'): (49.0, 25.0)}   # kupolikirkko: obj/kupolikirkko.obj rajat (−39,5…37,2 × ±17,1)
 # Instansoitavat (yksi jaettu verkko, venytys sx = pituus / L, sz = leveys / W). Palatsi, asema ja pylvästemppeli rakennetaan pohjan mitoista
 # (parametrinen, ei venytystä) ja leivotaan latauksessa yhdeksi staattiseksi verkoksi (KK 15.11. 00.16 kohta 3).
 INSTANSSIT = set(MALLIMITAT)
