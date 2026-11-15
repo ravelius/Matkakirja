@@ -180,18 +180,12 @@ export const FOKUSVIRTA_ROOMA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
     },
-    luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260911-paper2-v1.jpg",
-      lyhyt: "Rooma, 1873. Uusi virkamies kulki vanhan keisarin ohi.",
-      selite: 'Uusi virkamies kantoi paperinsa kuivina vanhan keisarin ohi. Rooma oli vaihtanut tehtävää, mutta kaikki hallitsijat eivät olleet poistuneet — osa vain hoiti virkaansa kivestä.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
-    },
+    /* Isoisällä yksi kuva (omistaja 12.11.): luentakuva2 pois (SK 15.11.2026). HUOM: luentakuva on vielä vanha Pantheon-kuva, uusi Codex-kuva (työmiehet köysissä Colosseumin muurilla, ei isoisää) tulee tilalle KK:n luvalla. */
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 344 merkkiä (yläraja 400). */
-    teksti: "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+    /* KAANON: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 19.19 "kelpaa"; SK:n luonnos docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md, PR 6815). Sanasta sanaan. 232 merkkiä. */
+    teksti: "Colosseumin muureilla oli kasvanut yli neljäsataa kasvilajia. Pari vuotta sitten ne kitkettiin pois, etteivät juuret rikkoisi kiveä. Kysyin vartijalta, pysyvätkö ne poissa. Hän sanoi, että kasvit tietävät sen paremmin kuin kaupunki.",
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -220,47 +214,39 @@ export const FOKUSVIRTA_ROOMA = {
     reaktiot: [
   {
     "id": "rooma.r1",
-    "ankkuri": "kattoaukosta satoi sisään",
-    "tarkoitus": "hammastyy",
+    "ankkuri": "neljäsataa kasvilajia",
+    "tarkoitus": "myotailee",
     "voimakkuus": 0.35,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   },
   {
     "id": "rooma.r2",
-    "ankkuri": "Vesi katosi lattian pieniin reikiin",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "rooma.r3",
-    "ankkuri": "ei kai tohtinut huomauttaa katosta",
-    "tarkoitus": "huvittuu",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "rooma.r4",
-    "ankkuri": "Kaupungin hallitsijat olivat vaihtuneet monta kertaa",
+    "ankkuri": "kitkettiin pois",
     "tarkoitus": "vakavoituu",
     "voimakkuus": 0.4,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   },
   {
-    "id": "rooma.r5",
-    "ankkuri": "taivaan sisään kysymättä nimeä",
-    "tarkoitus": "myotailee",
+    "id": "rooma.r3",
+    "ankkuri": "pysyvätkö ne poissa",
+    "tarkoitus": "epailee",
     "voimakkuus": 0.35,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r4",
+    "ankkuri": "kasvit tietävät sen paremmin kuin kaupunki",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. [thoughtfully] Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+    /* ÄÄNITE: vanha (9.9.2026) ääni ei vastaa uutta tekstiä; uusi ääni tulee Äänittäjän ajosta, ja aanite-kenttä sidotaan silloin (teksti ja ääni samaan vientiin). */
+    luenta: "[curious] Colosseumin muureilla oli kasvanut yli neljäsataa kasvilajia. Pari vuotta sitten ne kitkettiin pois, etteivät juuret rikkoisi kiveä. Kysyin vartijalta, pysyvätkö ne poissa. [warmly] Hän sanoi, että kasvit tietävät sen paremmin kuin kaupunki.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -310,10 +296,10 @@ export const FOKUSVIRTA_ROOMA = {
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Pantheoniin ostetaan nyt pääsylippu. Minä kiersin kattoaukkoa juuri, kun sade alkoi. Alhaalla ihmiset siirtyivät kuivaan. Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee."],
+    /* KUPLA: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 19.19 "kelpaa"). Sanasta sanaan. 108 merkkiä. */
+    kommentti: ["Vartija oli oikeassa! Colosseumilla kasvaa yhä yli kaksisataa lajia. Kitkijät eivät saaneet viimeistä sanaa."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
-    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
       + 'samat.',
