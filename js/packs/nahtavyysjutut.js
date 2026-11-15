@@ -6221,6 +6221,234 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
     },
+    /*
+     * PARIISIN 7 KADONNUTTA NÄHTÄVYYTTÄ TARINAPAIKKOINA (KK 15.11.2026; SK:n data-LUONNOS, tarkistaja ja KK lukevat
+     * ennen junaa). Kohdekartan pisteet ovat jo olemassa (js/packs/maakartat.js, kadonnut ihme 31.10.2026, nimi =
+     * hahmotelman nimi), joten tämä lohko antaa niille vain oman jutun: juttu voittaa pisteen wiki-linkin
+     * (js/nahtavyydet.js), ja ihmekuva tulee jutun ensimmäiseksi kuvaksi nimellä (matkakirjanIhme). `nosto` on
+     * pisteen oma hahmotelmatunnus; testi ei vertaa sitä mihinkään tekstiin (hahmotelman teksti on eri juttu).
+     * Teksti: docs/raportit/pariisi-7-kadonneen-nahtavyysjutut-v3-20261115.md, korjattuna hakukierros 4:n ja PR 6781:n
+     * tarkistuksen mukaan (poikkeamat: docs/raportit/pariisi-7-data-pr-20261115.md). Kahden itsenäisen lähteen sääntö;
+     * Wikipedian kieliversiot ovat yksi lähde. Kuvat eivät vielä ole pelin mediassa (tools/vienti/kuvamitat.json):
+     * mediapyyntö docs/raportit/pariisi-7-mediapyynto-20261115.md. Äänityslupa vasta KK:n hyväksyttyä tekstin.
+     */
+    'Grand Châtelet': {
+      aika: '1100-luku–1802',
+      nosto: 'hahmotelma-grand-chatelet',
+      teksti: 'Grand Châtelet oli Pariisin oikeus- ja vankilalinnake Seinen oikealla rannalla. Ludvig VI '
+        + 'rakennutti sen kiveksi 1100-luvulla. Kun kaupungille alettiin vuonna 1190 rakentaa uutta muuria, '
+        + 'linnake menetti puolustustehtävänsä: siitä tuli oikeuden ja poliisin pääpaikka, jota johti '
+        + 'kuninkaan virkamies, prévôt. Sen vankiloissa istuivat muiden muassa runoilija François '
+        + 'Villon, näytelmäkirjailija Molière velkojen takia vuonna 1645 ja rosvopäällikkö Cartouche '
+        + 'vuonna 1721. Linnakkeessa oli myös ruumishuone, ranskaksi morgue.'
+        + '\n\n'
+        + 'Linnakkeen purkaminen alkoi vuonna 1802. Paikalle tehtiin Place du Châtelet.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 aukion vieressä seisoi teatteri, Théâtre du Châtelet, jonka Gabriel '
+        + 'Davioud rakensi vuosina 1860–1862.',
+      kuvat: [
+        {
+          tiedosto: 'Le Grand Chastelet de Paris. G.283.jpg',
+          lyhyt: 'Grand Châtelet Israël Silvestren etsauksessa 1600-luvun puolivälistä.',
+          selite: 'Grand Châtelet\'n tornit ja porttirakennus Israël Silvestren etsauksessa vuosilta 1650–1660, '
+            + 'puolitoista vuosisataa ennen purkua.',
+          lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 1 sanatarkasti. Ludvig VI 1100-luvulla = paris.fr "Ces lieux disparus
+      // 2/2" + fr-WP; muuri 1190 = paris.fr + POP PA00086112; Villon = Larousse + fr-WP; Molière 1645 = herodote.net +
+      // fr-WP; Cartouche 1721 ja morgue = Desmaze 1863 + fr-WP; purku alkoi 1802 = paris.fr (kaksi sivua) + fr-WP;
+      // Théâtre 1860–1862 = paris.fr + chatelet.com. Pois: "noin 1130", Villonin vuosi, purku "1802–1810", Rue Saint-Denis.
+      // Holvikäytävä ja tuomioistuimen lakkautus 1790 (kahden lähteen varassa, PR 6781) EIVÄT ole v3:n tekstissä, joten
+      // niitä ei lisätty.
+      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin ja Théâtre du Châtelet\'n sivut, Ranskan '
+        + 'kulttuuriministeriön muistomerkkirekisteri, Desmazen Le Châtelet de Paris (1863), Larousse, Hérodote.net ja '
+        + 'Wikipedia',
+    },
+    'Temple-torni': {
+      aika: 'keskiaika–1808',
+      nosto: 'hahmotelma-temple-torni',
+      teksti: 'Temppeliritarit rakennuttivat Pariisin päämajaansa keskiajalla mahtavan linnoitustornin, Grosse '
+        + 'Tourin. Ritarikunta lakkautettiin, mutta torni jäi. Elokuun 13. päivänä 1792 kuningasperhe vietiin '
+        + 'vangiksi Templeen. Ludvig XVI lähti sieltä giljotiinille tammikuussa 1793, ja hänen poikansa Ludvig '
+        + 'XVII kuoli tornissa vuonna 1795 kymmenvuotiaana.'
+        + '\n\n'
+        + 'Torni muuttui rojalistien pyhiinvaelluskohteeksi, ja siksi Napoleon alkoi purkaa sitä vuonna 1808.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 torni oli purettu jo yli kuusikymmentä vuotta aiemmin. Sen paikalla seisoi '
+        + 'kaupunginosan uusi kaupungintalo, ja vieressä oli puisto, Square du Temple, joka oli avattu 1857. '
+        + 'Kaupungintalo on yhä paikallaan Rue Eugène-Spullerilla.',
+      kuvat: [
+        {
+          tiedosto: 'La Tour du Temple. Paris Musées 20230619165202.jpg',
+          lyhyt: 'Temple-torni kulmatorneineen vanhassa akvatintassa.',
+          selite: 'Temppeliritarien Grosse Tour neljine kulmatorneineen tuntemattoman taiteilijan akvatintassa, '
+            + 'joka kuuluu Musée Carnavalet\'n kokoelmiin.',
+          lahde: 'Tuntematon taiteilija, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 2 sanatarkasti; aika KK:n päätöksellä 'keskiaika–1808'. 13.8.1792 =
+      // Cléry 1798 + parcoursrevolution.paris.fr; Ludvig XVII 1795 = Larousse + fr-WP; purku 1808 ja pyhiinvaellukset =
+      // parcoursrevolution + fr-WP; Square du Temple 1857 = paris.fr + fr-WP; Rue Eugène-Spuller = parcoursrevolution +
+      // fr-WP. Pois: "1240", "1312"-vuosi, "kaksi vuotta", "pohjoiskulma", korkeus, vaatetori (ei v3:ssa).
+      lahde: 'Matkakirjan oma teksti · lähteinä Pariisin kaupungin vallankumousreitti ja puistosivut, Cléryn '
+        + 'päiväkirja Temple-tornista (1798), Larousse, Viollet-le-Ducin Dictionnaire raisonné ja Wikipedia',
+    },
+    'Palais d\'Orsay': {
+      aika: '1810–1898',
+      nosto: 'hahmotelma-palais-orsay',
+      teksti: 'Napoleon käski rakentaa Seinen rannalle hallintopalatsin vuonna 1810, mutta se valmistui vasta '
+        + 'noin kolmenkymmenen vuoden päästä. Siellä toimivat valtioneuvosto ja tilintarkastustuomioistuin, '
+        + 'jonka portaikon seinille Théodore Chassériau maalasi freskot.'
+        + '\n\n'
+        + 'Kommunardit sytyttivät palatsin tuleen toukokuussa 1871. Émile Zola kuvasi tulipaloa romaanissa La '
+        + 'Débâcle: jättimäinen kivikuutio, jossa oli kaksi kerrosta pylväskäytäviä ja josta liekit syöksyivät. '
+        + 'Palaneet muurit seisoivat keskellä Pariisia lähes kolmekymmentä vuotta. Freskoista pelastettiin vain '
+        + 'irrotettuja palasia, jotka ovat nyt Louvressa.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 rauniot olivat jokirannalla. Valtio myi ne rautatieyhtiölle, ja vuodesta 1898 '
+        + 'paikalle rakennettiin asema vuoden 1900 maailmannäyttelyä varten. Siitä tuli taidemuseo vuonna 1986.',
+      kuvat: [
+        {
+          tiedosto: 'Les ruines de la Cour des Comptes, Palais d\'Orsay, quai Anatole-France (actuel Musée d\'Orsay) 7ème arrondissement. D.455.jpg',
+          lyhyt: 'Palais d\'Orsayn rauniot Auguste Constantinin piirroksessa 1892.',
+          selite: 'Palaneen Palais d\'Orsayn kattoton sisäpiha Auguste Constantinin piirroksessa vuodelta 1892, '
+            + 'kun rauniot olivat seisseet jo yli kaksikymmentä vuotta.',
+          lahde: 'Auguste Constantin 1892, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 3 sanatarkasti. 1810 ja "noin kolmekymmentä vuotta" = conseil-etat.fr
+      // (1840) + fr-WP (1838); Chassériaun freskot = conseil-etat.fr + Joconde 000PE000431; palo 1871 = conseil-etat.fr +
+      // fr-WP; Zola = La Débâcle (fr.wikisource, ensikäden teksti) + fr-WP; asema 1898–1900 = POP PA00088689 + fr-WP;
+      // Leniaud (univ-droit.fr) tilintarkastustuomioistuimesta. Pois: 1838/1840, "60 m²", tarkat päivät.
+      lahde: 'Matkakirjan oma teksti · lähteinä Ranskan valtioneuvoston sivut, Ranskan kulttuuriministeriön '
+        + 'muistomerkki- ja taide-esinerekisterit, Leniaudin tutkimus tilintarkastustuomioistuimesta Palais '
+        + 'd\'Orsayssa, Zolan La Débâcle ja Wikipedia',
+    },
+    'Palais de l\'Industrie': {
+      aika: '1855–1890-luvun loppu',
+      nosto: 'hahmotelma-palais-industrie',
+      teksti: 'Pariisin ensimmäistä maailmannäyttelyä varten vuonna 1855 rakennettiin Champs-Élysées\'n varrelle '
+        + 'lasi- ja rautahalli, jonka suunnittelivat arkkitehti Jean-Marie-Victor Viel ja insinööri Alexis '
+        + 'Barrault. Näyttely avattiin toukokuussa 1855. Toisin kuin Lontoon Kristallipalatsi, halli jäi '
+        + 'paikalleen, ja siellä pidettiin Pariisin virallinen taidenäyttely, Salon. Vuonna 1881 siellä oli '
+        + 'kansainvälinen sähkönäyttely.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 halli oli vielä käytössä. Se purettiin 1890-luvun lopulla Grand Palais\'n tieltä.',
+      kuvat: [
+        {
+          tiedosto: 'Palais de l\'Industrie - Édouard Baldus.jpg',
+          lyhyt: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin valokuvassa.',
+          selite: 'Palais de l\'Industrien pääsisäänkäynnin kaariportti Édouard Baldusin '
+            + 'valokuvassa 1850- tai 1860-luvulta.',
+          lahde: 'Édouard Baldus, The Metropolitan Museum of Art, Wikimedia Commons (PD)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 4; viimeinen virke PR 6781:n tarkistuksen mukaan ("vuosisadan
+      // lopulla Grand Palais'n ja Petit Palais'n tieltä" → "1890-luvun lopulla Grand Palais'n tieltä": purkuvuosi ERO
+      // paris.fr 1897 / fr-WP 1896, Petit Palais vain fr-WP). Viel ja Barrault = CCA + fr-WP; toukokuu 1855 =
+      // herodote.net + fr-WP; Salon = Larousse + fr-WP; sähkönäyttely 1881 = Heap 1884 + fr-WP; Grand Palais'n tieltä =
+      // paris.fr + fr-WP. Pois: kivijulkisivu, mitat, Robertin ryhmä, Salonin vuodet, Notre-Dame-du-Travail.
+      lahde: 'Matkakirjan oma teksti · lähteinä Kanadan arkkitehtuurikeskuksen (CCA) kokoelmat, Hérodote.net, '
+        + 'Larousse, Heapin Electrical Appliances of the Present Day (1884), Pariisin kaupungin Grand Palais -sivu ja '
+        + 'Wikipedia',
+    },
+    'Trocadéron palatsi': {
+      aika: '1876–1935',
+      nosto: 'hahmotelma-trocadero',
+      teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillot\'n '
+        + 'kukkulalle suunniteltiin jo 1811 palatsia Napoleonin pojalle, "Rooman kuninkaalle", mutta siitä '
+        + 'tehtiin vain maanrakennustöitä. Todellinen palatsi rakennettiin vuosina 1876–1878 maailmannäyttelyä '
+        + 'varten: siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
+        + 'Salin akustiikka oli huono, mutta siellä soivat Cavaillé-Collin urut, jotka vihittiin elokuussa 1878.'
+        + '\n\n'
+        + 'Palatsi seisoi vuoteen 1935, jolloin sali ja tornit purettiin vuoden 1937 näyttelyn tieltä. Vanhojen '
+        + 'siipien runko jäi paikalleen, ja sen eteen Seinen puolelle rakennettiin yhtä leveä uusi galleria: '
+        + 'siivet ovat nykyisen Chaillot\'n palatsin osia.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 palatsia ei ollut vielä lainkaan: kukkulalla oli tasoitettu aukio.',
+      kuvat: [
+        {
+          tiedosto: 'Le palais du Trocadéro, 1878.jpg',
+          lyhyt: 'Trocadéron palatsi tornineen vuoden 1878 maailmannäyttelyssä.',
+          selite: 'Trocadéron palatsin kaksi tornia ja keskisali Place du Trocadéron puolelta Trichonin '
+            + 'kaiverruksessa vuoden 1878 maailmannäyttelyn ajalta.',
+          lahde: 'Trichon 1878, Brown University Library, Wikimedia Commons (PD)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 5; korjattu PR 6781:n tarkistuksen mukaan: "se oli
+      // mauri-bysanttilaistyylinen" pois (vain WP) ja "Palatsia ei ollut tarkoitettu kestämään näyttelyn jälkeen, mutta
+      // se seisoi" → "Palatsi seisoi" (aikalaislähde L'art et l'industrie… 1880 kumoaa: "Dès 1876, il avait été décidé
+      // que le palais du Trocadéro resterait à la ville de Paris"). Kaksi korkeaa tornia ja kaarevat siivet = 1880-teos +
+      // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; 1876–1878 = 1880-teos + WP; siivet Chaillot'ssa = Livre d'or
+      // 1937 + Cité de l'architecture + POP; urut = Auditorium de Lyon + WP.
+      lahde: 'Matkakirjan oma teksti · lähteinä Ranskan kulttuuriministeriön muistomerkkirekisteri, vuoden 1937 '
+        + 'maailmannäyttelyn virallinen Livre d\'or, L\'art et l\'industrie de tous les peuples à l\'Exposition '
+        + 'universelle de 1878 (1880), Cité de l\'architecture et du patrimoine, Auditorium de Lyon ja Wikipedia',
+    },
+    'Galerie des Machines': {
+      aika: '1889–1900-luvun alku',
+      nosto: 'hahmotelma-galerie-des-machines',
+      teksti: 'Vuoden 1889 maailmannäyttelyn konehalli seisoi Champ-de-Marsilla, samalla kentällä kuin '
+        + 'Eiffel-torni. Halli oli 420 metriä pitkä, 115 metriä leveä ja yli 40 metriä korkea, eikä sen sisällä '
+        + 'ollut yhtään tukipilaria. Katon kantoi kaksikymmentä kolminivelistä kaarta: jokainen oli kaksi '
+        + 'puolikaarta, jotka nojasivat toisiinsa huipulta ja alhaalta tappeihin.'
+        + '\n\n'
+        + 'Vieraita kuljetettiin hallissa liikkuvilla silloilla.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 hallia ei ollut. Halli purettiin 1900-luvun alussa, jotta näkymä '
+        + 'Champ-de-Marsille aukeaisi.',
+      kuvat: [
+        {
+          tiedosto: 'Intérieur de la Galerie des machines, présentation des machines, 7e arrondissement, Paris. PH77410.jpg',
+          lyhyt: 'Konehallin sisäpuoli koneineen noin vuonna 1889.',
+          selite: 'Galerie des Machinesin koneosastot kaarevan lasikaton alla Hippolyte Blancardin valokuvassa '
+            + 'noin vuodelta 1889.',
+          lahde: 'Hippolyte Blancard noin 1889, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 6 sanatarkasti; aika KK:n päätöksellä '1889–1900-luvun alku'
+      // (purku paris.fr 1909 / en-WP 1910). 420 × 115 m, kaksikymmentä kaarta, pilarittomuus ja liikkuvat sillat =
+      // Parville, L'Exposition universelle (1890) + en-WP; yli 40 m = Parville 45 m / en-WP 48 m; näkymän avaaminen =
+      // paris.fr "Ces lieux disparus 4/4" + en-WP. Pois: sähkökäyttöiset sillat, 15 000 hevosta, rauta teräksen sijaan.
+      lahde: 'Matkakirjan oma teksti · lähteinä Parvillen L\'Exposition universelle (1890), Pariisin kaupungin '
+        + 'Ces lieux disparus -sarja ja Wikipedia',
+    },
+    'Les Hallesin hallit': {
+      aika: '1850-luku–1970-luvun alku',
+      nosto: 'hahmotelma-les-halles',
+      teksti: 'Pariisin ruokatorin hallit rakennettiin 1850-luvulta alkaen. Victor Baltard aloitti ensimmäisen '
+        + 'hallin kivestä, mutta Napoleon III ei pitänyt raskaasta kivirakennuksesta ja vaati metallia. Baltard '
+        + 'suunnitteli uudet paviljongit raudasta, valuraudasta ja lasista; niitä rakennettiin kymmenen, '
+        + 'vaiheittain 1870-luvun alkuun mennessä.'
+        + '\n\n'
+        + 'Émile Zola kuvasi hallit vuonna 1873 ilmestyneessä romaanissa Pariisin vatsa (Le Ventre de Paris) "jättimäiseksi '
+        + 'metallimahaksi, pulteilla ja niiteillä kokoon pantuksi, puusta, lasista ja valuraudasta". Isoisäsi '
+        + 'vuonna 1873 hallit olivat jo käytössä.'
+        + '\n\n'
+        + 'Ruokatori siirtyi Rungisiin 1969, ja hallit purettiin 1970-luvun alussa. Jäljelle jäänyttä '
+        + 'valtavaa työmaata kutsuttiin yksinkertaisesti reiäksi. Yksi paviljonki pystytettiin uudelleen '
+        + 'Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle 1979. Nogentin paviljongissa soivat nykyään '
+        + 'elokuvateatteri Gaumont-Palacen urut.',
+      kuvat: [
+        {
+          tiedosto: 'Les Halles Centrales, nouvelles Halles de Baltard, 1er arrondissement, Paris. PH10089.jpg',
+          lyhyt: 'Baltardin uudet paviljongit Charles Marvillen valokuvassa 1865–1866.',
+          selite: 'Baltardin lasi- ja rautapaviljongit Charles Marvillen valokuvassa vuosilta 1865–1866, kun '
+            + 'hallien rakentaminen oli vielä kesken.',
+          lahde: 'Charles Marville 1865–1866, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 7; korjattu hakukierros 4:n ja PR 6781:n mukaan: purku "1971–1973"
+      // → "1970-luvun alussa" (1971–1973 vain fr-WP; pavillonbaltard.fr 1972 ja Larousse 1971 päätöksestä) ja "sai nimen
+      // 'Les Hallesin reikä'" → "kutsuttiin yksinkertaisesti reiäksi" (paris.fr "le trou de Paris", WP "le trou des
+      // Halles"). Kymmenen paviljonkia 1850-luvulta 1870-luvun alkuun = pavillonbaltard.fr + WP; materiaali = paris.fr;
+      // Zolan lainaus = Le Ventre de Paris (fr.wikisource, ensikäden teksti); Rungis 1969 ja Forum 1979 = paris.fr + fr-WP;
+      // Nogent = pavillonbaltard.fr + fr-WP. Zolan lempinimilausetta ei ole.
+      lahde: 'Matkakirjan oma teksti · lähteinä Zolan Le Ventre de Paris (1873), Pariisin kaupungin Ces lieux '
+        + 'disparus -sarja, Pavillon Baltardin historiasivu, Ranskan kulttuuriministeriön muistomerkkirekisteri ja '
+        + 'Wikipedia',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
