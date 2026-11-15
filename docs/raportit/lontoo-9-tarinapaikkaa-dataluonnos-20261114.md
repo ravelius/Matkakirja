@@ -1,3 +1,5 @@
+**Korvattu: lontoo-9-tarinapaikkaa-valinta-20261114.md** (PR 6769, KK:n hyväksymä lista; älä lue tätä).
+
 # Lontoon 9 uutta tarinapaikkaa: dataluonnos (SK 14.11.2026, KK 22.48 kohta 2)
 
 Tila: LUONNOS, ei data-PR. Ei koske js/-tiedostoja. Data-PR vasta KK:n sanalla ja tekstien tarkistuksen (lahteet-ja-tarkistus 10) jälkeen.

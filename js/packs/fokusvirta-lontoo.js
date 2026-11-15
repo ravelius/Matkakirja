@@ -1419,5 +1419,288 @@ export const FOKUSVIRTA_LONTOO = {
         },
       },
     },
+    {
+      /*
+       * TARINAPAIKKA 'Händel ja Hendrix' (KK 14.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Händel ja Hendrix'. Kaksi itsenäistä lähdettä
+       * jokaiselle väitteelle (docs/raportit/lontoo-9-tarinapaikkaa-valinta-20261114.md ja
+       * lontoo-9-toiset-lahteet-20261114.md); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'handel-hendrix-brook-street',
+      nimio: 'Händel ja Hendrix',
+      otsikko: 'Händel ja Hendrix — kaksi taloa, yksi seinä',
+      symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Minkä teoksen Händel sävelsi 24 päivässä vuonna 1741?',
+        vaihtoehdot: [
+          'Messias-oratorion',
+          'Vesimusiikin',
+          'Kuninkaallisen ilotulitusmusiikin',
+        ],
+        oikea: 0,
+        fakta: 'Händel sävelsi Messiaan elokuun 22. ja syyskuun 14. päivän välillä 1741. Hänen kotinsa viereisessä talossa asui 1968–69 Jimi Hendrix.',
+      },
+      lunastus: [
+        'Mayfairin Brook Streetillä on kaksi vierekkäistä taloa, joissa asui kaksi '
+          + 'kuuluisaa muusikkoa. Säveltäjä Georg Friedrich Händel muutti numeroon 25 vuonna 1723 '
+          + 'ja asui siellä kuolemaansa saakka 14. huhtikuuta 1759. Elokuun 22. ja syyskuun 14. '
+          + 'päivän välillä 1741 hän sävelsi 24 päivässä Messias-oratorion, joka syntyi '
+          + 'todennäköisesti juuri tässä talossa.',
+        'Reilut kaksisataa vuotta myöhemmin viereisessä talossa, numerossa 23, asui vuosina '
+          + '1968–69 kitaristi Jimi Hendrix. Kerrotaan, että kun hän sai tietää Händelin asuneen '
+          + 'naapurissa, hän osti Messias-levyn.',
+        'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot '
+          + 'ovat yhdessä museo.',
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): English Heritage (siniset laatat), Handel Hendrix House -museo (Learn about Handel/Hendrix), en-Wikipedia "Handel & Hendrix in London" ja "Messiah (Handel)"; kaksi itsenäistä lähdettä.
+      lahde: 'Matkakirjan oma teksti · lähteinä English Heritage, Handel Hendrix House -museo ja Wikipedia',
+      kuva: {
+        tiedosto: 'George Frideric Handel by Thomas Hudson.jpg',
+        lyhyt: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä.',
+        selite: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä, joka asui Brook Streetin numerossa 25 vuodesta 1723 kuolemaansa saakka.',
+        lahde: 'Thomas Hudson, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Missä talossa Messias syntyi?',
+        'Miksi Hendrix osti Messias-levyn?',
+        'Millaista musiikkia Händelin aikana soitettiin?',
+      ],
+      // Brook Street 25 ja 23 (English Heritage 51,5131 / −0,14606; Wikipedia 51,513 / −0,1459).
+      paikka: {
+        nimi: 'Händel ja Hendrix',
+        laudat: {
+          maailmankartta: { x: 5828.5, y: 1323.7 },
+          europe: { x: 208.4, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Johnson 1755' (KK 14.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Johnson 1755'. Kaksi itsenäistä lähdettä
+       * jokaiselle väitteelle (docs/raportit/lontoo-9-tarinapaikkaa-valinta-20261114.md ja
+       * lontoo-9-toiset-lahteet-20261114.md); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'johnsonin-sanakirja-1755',
+      nimio: 'Johnson 1755',
+      otsikko: 'Johnson 1755 — sanakirja talosta Gough Squarella',
+      symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Kuinka suuren palkkion kustantajat sopivat Johnsonin saavan englannin sanakirjasta?',
+        vaihtoehdot: [
+          '1 500 guineaa',
+          '150 guineaa',
+          '15 000 guineaa',
+        ],
+        oikea: 0,
+        fakta: 'Sopimus oli 1 500 guinean arvoinen, ja sanakirja ilmestyi vuonna 1755, lähes vuosikymmen sopimuksen jälkeen.',
+      },
+      lunastus: [
+        '1740-luvun puolivälissä joukko lontoolaisia kustantajia palkkasi kirjailija Samuel '
+          + 'Johnsonin laatimaan englannin kielen sanakirjaa. Palkkio oli 1 500 guineaa. Työ '
+          + 'kesti lähes vuosikymmenen, ja kirja ilmestyi vuonna 1755.',
+        'Johnson asui työn aikana osan ajasta Gough Squarella Fleet Streetin pohjoispuolella, '
+          + 'talossa numero 17. Hän merkitsi kirjoihin kohdat, joissa sana esiintyi esimerkkinä, '
+          + 'ja apulaiset kopioivat ne paperiliuskoille. Talo oli täynnä kirjoja ja apulaisia.',
+        'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
+          + 'vuokraamansa talo seisoi yhä Gough Squarella. Nykyään siinä on museo.',
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): drjohnsonshouse.org (Johnson's Dictionary, 17 Gough Square); Boswell, Life of Johnson (1791, Gutenberg); EB 1911 "Johnson, Samuel" (Wikisource): 1 500 guineaa, julkaisu 1755. Sopimusvuosi jätetty pois tarkoituksella (lähteet 1746/1747). Paikka ja museo: en-Wikipedia "Dr Johnson's House".
+      lahde: 'Matkakirjan oma teksti · lähteinä Dr Johnson\'s House -museo, Boswellin Life of Johnson, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Dr Johnson\'s House, Gough Square - geograph.org.uk - 5590547.jpg',
+        lyhyt: 'Dr Johnsonin talo Gough Squarella.',
+        selite: 'Gough Squaren talo numero 17, jossa Samuel Johnson asui osan sanakirjan teon ajasta ja jossa nykyään on museo.',
+        lahde: 'Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miten apulaiset auttoivat Johnsonia sanakirjan teossa?',
+        'Miksi sanakirjan tekeminen kesti niin kauan?',
+        'Millainen oli Fleet Street Johnsonin aikaan?',
+      ],
+      // Gough Square 17 (en-Wikipedia "Dr Johnson's House" 51,515 / −0,10806).
+      paikka: {
+        nimi: 'Johnson 1755',
+        laudat: {
+          maailmankartta: { x: 5829.7, y: 1323.7 },
+          europe: { x: 209.1, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Punch 1662' (KK 14.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Punch 1662'. Kaksi itsenäistä lähdettä
+       * jokaiselle väitteelle (docs/raportit/lontoo-9-tarinapaikkaa-valinta-20261114.md ja
+       * lontoo-9-toiset-lahteet-20261114.md); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'punch-pepys-1662',
+      nimio: 'Punch 1662',
+      otsikko: 'Punch 1662 — nukketeatteri Covent Gardenissa',
+      symboli: 'historia',
+      visa: {
+        kysymys: 'Mistä maasta oli se nukketeatteri, jonka Pepys näki Covent Gardenissa 1662?',
+        vaihtoehdot: [
+          'Italiasta',
+          'Ranskasta',
+          'Hollannista',
+        ],
+        oikea: 0,
+        fakta: 'Pepys kirjasi 9. toukokuuta 1662 nähneensä Covent Gardenissa italialaisen nukketeatterin ja piti sitä hyvin sievänä.',
+      },
+      lunastus: [
+        'Toukokuun 9. päivänä 1662 Samuel Pepys kirjasi päiväkirjaansa käyneensä Covent '
+          + 'Gardenissa katsomassa italialaista nukketeatteria, jota esitettiin aitauksen sisällä. '
+          + 'Hänen mielestään se oli hyvin sievä, parasta mitä hän oli nähnyt, ja katsojia '
+          + 'riitti. Merkintä ei mainitse Punchia nimeltä, mutta perinteen mukaan päivä on Punchin '
+          + 'syntymäpäivä.',
+        'Vuonna 1669 Pepys kirjasi toisen merkinnän: kujalla hän kuuli köyhien kutsuvan '
+          + 'lihavaa lastaan Punchiksi, ja se ilahdutti häntä, koska sana oli tullut yleiseen '
+          + 'käyttöön kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
+          + 'italialaisesta Pulcinellasta.',
+        'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut yli 200 vuotta. St Paulin '
+          + 'kirkon seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
+          + 'merkinnästä.',
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): Pepysin päiväkirja 9.5.1662 ja huhtikuu 1669 (en-Wikisource); EB 1911 "Punch (puppet)" (Wikisource); laatta nähty Commons-kuvasta. Pepysin päivä on juliaaninen. "Punchin syntymäpäivä" = perinne (vain Wikipedia, KK 23.31 sallii). Gimonde, swazzle ja "pleased as Punch" jätetty pois (yksi lähde).
+      lahde: 'Matkakirjan oma teksti · lähteinä Pepysin päiväkirja, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
+        lyhyt: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa.',
+        selite: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa kertoo, että Pepys näki Punchin nukketeatterin lähellä tätä paikkaa vuonna 1662.',
+        lahde: 'Spudgun67, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Mitä Pepys kirjoitti nukketeatterista?',
+        'Mistä nimi Punch tulee?',
+        'Miksi Covent Gardenissa esitettiin nukketeatteria?',
+      ],
+      // St Paulin kirkko Covent Gardenissa (en-Wikipedia 51,51139 / −0,12417); laatta kirkon seinällä.
+      paikka: {
+        nimi: 'Punch 1662',
+        laudat: {
+          maailmankartta: { x: 5829.2, y: 1323.8 },
+          europe: { x: 208.8, y: 538.9 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Baird 1926' (KK 15.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Baird 1926'. Vain kahden lähteen väitteet
+       * (docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 5); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'baird-televisio-1926',
+      nimio: 'Baird 1926',
+      otsikko: 'Baird 1926 — liikkuva kuva Sohon yläkerrassa',
+      symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Mitä Bairdin televisiokokeissa käytettiin kuvattavana?',
+        vaihtoehdot: [
+          'Vatsastapuhujan nuken päätä',
+          'Kipsistä valettua rintakuvaa',
+          'Maalattua muotokuvaa',
+        ],
+        oikea: 0,
+        fakta: 'Nuken päätä kutsuttiin Stooky Billiksi. Tammikuussa 1926 Baird esitteli televisiotaan Royal Institutionin jäsenille Sohossa.',
+      },
+      lunastus: [
+        'Tammikuussa 1926 keksijä John Logie Baird esitteli Royal '
+          + 'Institutionin jäsenille laitettaan laboratoriossa, joka oli yläkerran huoneessa '
+          + 'Frith Streetillä Sohossa. Vieraat näkivät, miten liikkuva kuva siirtyi huoneesta '
+          + 'toiseen. The Times kirjoitti esityksestä 28. tammikuuta. Tätä tilaisuutta pidetään '
+          + 'ensimmäisenä todellisen television esityksenä.',
+        'Bairdin televisio oli mekaaninen, ja sen ytimessä oli pyörivä kiekko, jonka '
+          + 'saksalainen Paul Nipkow oli keksinyt jo vuonna 1884. Kokeissa kuvattavana oli '
+          + 'vatsastapuhujan nuken pää, jota kutsuttiin Stooky Billiksi. Kuvaamiseen tarvittiin '
+          + 'kirkkaita lamppuja, joiden alla ihmisen oli tukala olla.',
+        'Isoisäsi matkavuonna 1873 televisiota ei vielä ollut, eikä Baird ollut edes '
+          + 'syntynyt. Nipkow\'n kiekon keksimiseen oli vielä yksitoista vuotta.',
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 5): Royal Institution ja tammikuu 1926 = Moseley ja Barton Chapple,
+      // Television To-day and To-morrow (1930) + Larner, Practical Television (1928); Frith Street, yläkerran huone, huoneesta toiseen
+      // ja Times 28.1. = The Timesin juttu (lainattu Moseleyssa) + Wikipedia; "pidetään ensimmäisenä" = Moseley + Larner (molemmat
+      // brittiläisiä, siksi varovasti); nuken pää = Times + Dunlap, The Outlook for Television (1932); Stooky Bill = Dunlap + Wikipedia;
+      // Nipkow 1884 = Dunlap + Wikipedia; lamput pehmeästi (vain Dunlap, ei syy-yhteyttä nukkeen). Pois KK:n rajauksella: päivä 26.1.,
+      // talonumero 22, Bar Italia, "langattomasti", syntymävuosi 1888 (vain Wikipedia).
+      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television, BBC ja Wikipedia',
+      kuva: {
+        tiedosto: 'John Logie Baird in 1917.jpg',
+        lyhyt: 'John Logie Baird vuonna 1917.',
+        selite: 'John Logie Baird valokuvassa vuodelta 1917, lähes vuosikymmen ennen Frith Streetin esitystä.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten Bairdin mekaaninen televisio toimi?',
+        'Kuka oli Stooky Bill?',
+        'Mitä The Times kirjoitti esityksestä?',
+      ],
+      // Frith Street Sohossa, kadun eteläpää (talonumeroa ei käytetä; piste kadulla, ei talossa).
+      paikka: {
+        nimi: 'Baird 1926',
+        laudat: {
+          maailmankartta: { x: 5828.9, y: 1323.7 },
+          europe: { x: 208.7, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Sähkötin 1837' (KK 15.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Sähkötin 1837'. Vain kahden lähteen väitteet
+       * (docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 6); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'sahkotin-euston-1837',
+      nimio: 'Sähkötin 1837',
+      otsikko: 'Sähkötin 1837 — neulat Eustonin radalla',
+      symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Montako neulaa oli Cooken ja Wheatstonen vuonna 1837 patentoimassa sähköttimessä?',
+        vaihtoehdot: [
+          'Viisi',
+          'Kaksi',
+          'Kymmenen',
+        ],
+        oikea: 0,
+        fakta: 'Patentin sähköttimessä oli viisi neulaa. Heinäkuussa 1837 sähkötintä kokeiltiin Euston-aseman ja Camden Townin välillä.',
+      },
+      lunastus: [
+        'Toukokuussa 1837 William Cooke ja Charles Wheatstone sopivat yhteistyöstä, ja '
+          + 'samana vuonna he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
+          + 'kokeiltiin London and Birmingham -radalla Euston-aseman ja Camden Townin välillä.',
+        'Patentin sähköttimessä oli viisi neulaa. Ne osoittivat taululta kirjaimia: kaksi neulaa '
+          + 'kääntyi osoittamaan samaa kirjainta. Myöhemmin Great Western Railway otti sähköttimen '
+          + 'käyttöön radallaan, joka lähti Paddingtonin asemalta.',
+        'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta. Molemmat keksijät '
+          + 'olivat vielä elossa: Wheatstone kuoli 1875 ja Cooke 1879.',
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 6): yhteistyö toukokuussa 1837 = The Electric Telegraph: Was it
+      // invented by Professor Wheatstone? (1856, molempien osapuolten kiistakirjoitukset) + Munro, Heroes of the Telegraph (1891)
+      // + DNB "Cooke, William Fothergill"; patentin kuukausi kiistanalainen (Cooke 12.6.1837 vs. WP/DNB toukokuu) → teksti "samana vuonna";
+      // yhteinen patentti 1837 myös EB 1911 "Wheatstone"; koe Euston–Camden Town London and Birmingham -radalla heinäkuussa 1837 =
+      // 1856-kokoelma + Munro (+ DNB); viisi neulaa = patentin laite (Munro + DNB + WP; Eustonin koelaite WP:n mukaan neljä neulaa → ei sidota); neulat osoittivat kirjaimia = Munro + WP; keksijät elossa 1873 = EB 1911 + WP; GWR Paddingtonista = Munro + 1856-kokoelma (+ DNB). Radan nimi
+      // London and Birmingham (Munron "London and North Western" on anakronismi). Pois KK:n rajauksella: päivä 25.7., köysiveto,
+      // West Drayton, "välinpitämättömästi", miesten paikat, (tarkistaja 15.11.: "elossa 1873" täyttyy EB 1911 + WP, otettu mukaan).
+      lahde: 'Matkakirjan oma teksti · lähteinä Cooken ja Wheatstonen kiistakirjoitukset (1856), Munron Heroes of the Telegraph, Dictionary of National Biography, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Wheatstone Charles drawing 1868.jpg',
+        lyhyt: 'Charles Wheatstone, Samuel Laurencen piirros 1868.',
+        selite: 'Charles Wheatstone Samuel Laurencen piirroksessa vuodelta 1868, kolme vuosikymmentä Eustonin kokeen jälkeen.',
+        lahde: 'Samuel Laurence, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten neulasähkötin välitti viestin?',
+        'Miksi rautatiet tarvitsivat sähkötintä?',
+        'Mitä Cooke ja Wheatstone tekivät yhdessä?',
+      ],
+      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, nimiö oikealle.
+      paikka: {
+        nimi: 'Sähkötin 1837',
+        laudat: {
+          maailmankartta: { x: 5828.9, y: 1323.1 },
+          europe: { x: 208.6, y: 538.4 },
+        },
+      },
+    },
   ],
 };

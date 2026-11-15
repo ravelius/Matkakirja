@@ -5389,6 +5389,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
       { nimi: 'Petit Palais', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
+      // Natiivin koodimallit ilman Tripoa (KK 14.17, S3-faktat): nimi = natiivin Kohde.Nimi, piste = Wikidata P625 (Q1431547, Q1338207, Q178065).
+      { nimi: 'Tour Saint-Jacques', lat: 48.8578, lon: 2.3488, wiki: 'Tour Saint-Jacques' },
+      { nimi: 'Saint-Eustache', lat: 48.8633, lon: 2.345, wiki: 'Saint-Eustachen kirkko' },
+      { nimi: 'Pompidou-keskus', lat: 48.8606, lon: 2.3522, wiki: 'Pompidou-keskus' },
       { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
@@ -6158,19 +6162,22 @@ export const KAUPUNKIKARTAT = {
        * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
        * (omistajan päätös 2.9.2026 illalla).
        *
-       * −0,08778 E / 51,50806 N — en-Wikipedia "London Bridge"
-       * (tietolaatikon coordinates), sama luku kuin kohteen omassa
-       * pakissa (js/packs/fokuskohteet-gbr.js). Piste on nykyisen sillan
-       * paikka; keskiaikainen silta seisoi noin 30 metriä siitä itään,
-       * mikä ei erotu omaksi pisteekseen tälläkään kartalla. Piste on
-       * määritelmän mukaan vedellä — silta ylittää joen, ks.
+       * −0,08702 E / 51,50808 N — keskiaikaisen sillan keskikohta (siirretty
+       * 15.11.2026 KK:n päätöksellä: aiempi piste, en-Wikipedian "London
+       * Bridge" −0,08778 / 51,50806, oli nykyisen sillan paikka). Keskiviivojen
+       * väli nykyiseen siltaan 43 m alavirtaan (SK:n toinen lähde: 30–46 m;
+       * Maitland/Entick 1775 ja guidelondon.org.uk; docs/raportit/
+       * lontoo-kadonneet-mitat-toinen-lahde-20261115.md); piste on sama kuin
+       * hologrammin kehyksen origo (Kadonneet/lontoo.json, NSe erä A), jotta ✦
+       * ja noston hologrammi ovat samassa paikassa. Piste on määritelmän
+       * mukaan vedellä — silta ylittää joen, ks.
        * tools/tarkista-karttapisteet.mjs:n otsake.
        *
        * Juttu on kohteen OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
        */
       {
-        nimi: 'Vanha London Bridge', lat: 51.50806, lon: -0.08778,
+        nimi: 'Vanha London Bridge', lat: 51.50808, lon: -0.08702,
         nosto: 'vanha-london-bridge',
       },
       /*
@@ -6259,6 +6266,31 @@ export const KAUPUNKIKARTAT = {
         // (Victoria Embankment, Embankment Gardens Savoyn kohdalla; SK:n tarkistus PR 6681: maalla, lähin merkki 535 m).
         nimi: 'Savusumu 1952', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5093, lon: -0.1207,
         nosto: 'nosto-lontoon-savusumu-1952',
+      },
+      // Brook Street 25 ja 23 (English Heritage 51,5131 / −0,14606; Wikipedia 51,513 / −0,1459). Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Händel ja Hendrix', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5131, lon: -0.146,
+        nosto: 'nosto-handel-hendrix-brook-street',
+      },
+      // Gough Square 17 (en-Wikipedia "Dr Johnson's House" 51,515 / −0,10806). Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Johnson 1755', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.515, lon: -0.1081,
+        nosto: 'nosto-johnsonin-sanakirja-1755',
+      },
+      // St Paulin kirkko Covent Gardenissa (en-Wikipedia 51,51139 / −0,12417); laatta kirkon seinällä. Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Punch 1662', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5114, lon: -0.1242,
+        nosto: 'nosto-punch-pepys-1662', nimiPuoli: 'vasen',
+      },
+      // Frith Street Sohossa, kadun eteläpää (talonumeroa ei käytetä). Tarinapaikka KK 15.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Baird 1926', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5135, lon: -0.1317,
+        nosto: 'nosto-baird-televisio-1926',
+      },
+      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, joten nimiö oikealle. Tarinapaikka KK 15.11.2026.
+      {
+        nimi: 'Sähkötin 1837', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 51.5282, lon: -0.1337,
+        nosto: 'nosto-sahkotin-euston-1837', nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Liukumäkiveistos (Orbit) EI ole täällä (KK 13.11.2026, päätös 3a): oikea paikka Stratfordissa
       // (51,538 / −0,013) on reunuksella, joten nosto on pääkartalla kattoVapaa-lipulla
