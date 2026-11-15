@@ -49,6 +49,9 @@ SEINA = {None: 0, 'portland': 0xE4DCCA, 'tiili': 0xAC7862}
 # (kaupungit-talot.json): vaihtelu-perhe → paletti → KATTO, kustakin suurimman osuuden sävy (KK 15.11. 05.26). Testi: testi_kattovari.py.
 KATTOVARI = (0, '-')
 KAUPUNKI_TYOKALU = '/Users/Shared/Claude/wt/proto-karttaseppa-tyokalu1/tyokalut/kaupunki'
+# Kaupungit, joiden talopalat tehdään jo tyyliperheellä, vaikka kaupunkirivi (kaupungit-talot.json katot.vaihtelu.perhe) ei vielä ole KS:n haarassa:
+# Lontoo l3d (KK 15.11. 07.05; KS katot.py 380dd4ae3, raakapalat karttaseppa/lontoo-tyyliperhe-20261115/l-l3d, rivi TYYLIPERHE.md). Kun rivi tulee, tämä ei muuta mitään.
+PERHE_OHITUS = {'lontoo': 'lontoo'}
 TEE_PALAT = '/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/tee-palat.py'
 
 
@@ -73,7 +76,7 @@ def kattovari(k):
     def suurin(lista, nimi):
         (r, g, b), osuus = max(lista, key=lambda x: x[1])
         return (r << 16) | (g << 8) | b, f'{nimi} suurin osuus {osuus}'
-    perhe = (katot.get('vaihtelu') or {}).get('perhe')
+    perhe = (katot.get('vaihtelu') or {}).get('perhe') or PERHE_OHITUS.get(k)
     if perhe: return suurin(perheen_katot(lahde, perhe), f"katot.py PERHEET['{perhe}'].katot")
     paletti = katot.get('paletti')
     if paletti:

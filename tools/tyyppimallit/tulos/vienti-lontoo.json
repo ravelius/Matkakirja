@@ -7,7 +7,7 @@
  "merkkeja": 429,
  "malleja": 23,
  "tavua": 10880,
- "sha256": "e5cb3e6021c5f835d7a8d15a1497eadcfab125919b707fa991e642ff8343e96d",
+ "sha256": "fff6e3497c0a04b712817e88c407cb9c925d3336ac8f6e77c984977beb9ebd12",
  "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
  "maa_laskut": {
   "pisteita": 429,
@@ -581,7 +581,7 @@
   }
  ],
  "asemien_kattovari": {
-  "srgb": "#A88C74",
-  "lahde": "tee-palat.py KATTO"
+  "srgb": "#808183",
+  "lahde": "katot.py PERHEET['lontoo'].katot suurin osuus 0.5"
  }
 }
