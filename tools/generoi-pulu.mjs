@@ -682,6 +682,12 @@ for (const city of ERA5_TTS_MANIFESTI.cities) {
  */
 TAGIT['pariisi-3'] = { alku: '[amused]', kohdat: [['Katso ylös', '[brightly]']] };
 
+/*
+ * LONTOON UUSI PULUN TEKSTI (KK 15.11.2026, omistaja 08.33 "Nenäliina ja laituri"): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * Resepti = ÄÄ:n otto 2 (pyyntöloki pulu2: [amused] alussa, [warmly] ennen "Baker Streetillä").
+ */
+TAGIT['lontoo-3'] = { alku: '[amused]', kohdat: [['Baker Streetillä', '[warmly]']] }; // sama kuin ÄÄ:n otto 2 (15.11.2026)
+
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();

@@ -352,34 +352,34 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.55
   }
 ]),
-  lontoo: pilotti("lontoo", LIVIAN_EUROOPAN_REVISION, "2a22c0329b0ccafe38385c0b8a11856666e4acbd7ea928775656a3f7786c5331", [
+  lontoo: pilotti("lontoo", LIVIAN_EUROOPAN_REVISION, "71c08a3e3f9141b4960e32bdbf06d05a5a16be89b7788cb62e8dbf4c16396e88", [
   {
     "id": "lontoo.livia.c1",
-    "ankkuri": "Nyt metron junat kulkevat sähköllä",
+    "ankkuri": "Voi isoisä",
+    "esiintyma": 1,
+    "tarkoitus": "lammin",
+    "voimakkuus": 0.45
+  },
+  {
+    "id": "lontoo.livia.c2",
+    "ankkuri": "metrojunat kulkevat sähköllä",
     "esiintyma": 1,
     "tarkoitus": "selittaa",
     "voimakkuus": 0.4
   },
   {
-    "id": "lontoo.livia.c2",
-    "ankkuri": "näen, kuka tulee perässä",
+    "id": "lontoo.livia.c3",
+    "ankkuri": "eikä nenäliinaa tarvita",
     "esiintyma": 1,
-    "tarkoitus": "vakavoituu",
+    "tarkoitus": "hammastys",
     "voimakkuus": 0.4
   },
   {
-    "id": "lontoo.livia.c3",
-    "ankkuri": "tarkistin saman varjon kolmesti",
-    "esiintyma": 1,
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.45
-  },
-  {
     "id": "lontoo.livia.c4",
-    "ankkuri": "Omahan se oli",
+    "ankkuri": "samalle laiturille kuin sinun aikanasi",
     "esiintyma": 1,
-    "tarkoitus": "hammentynyt",
-    "voimakkuus": 0.45
+    "tarkoitus": "ilo",
+    "voimakkuus": 0.5
   }
 ]),
   budapest: pilotti("budapest", LIVIAN_EUROOPAN_REVISION, "d6cc78fd2a1fd884d28cf2aa3fe75bd5199d6faf07567b68506e636c4316d0cc", [

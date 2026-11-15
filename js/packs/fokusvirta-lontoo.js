@@ -128,8 +128,8 @@ export const FOKUSVIRTA_LONTOO = {
      * Wienissä (js/packs/fokusvirta-wien.js paikkarivi).
      */
     paikkarivi: "Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun toista puolta erota; puntari matalalla.",
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
-    teksti: "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+    /* KAANON: OMISTAJAN TEKSTI (omistajan 9.9.2026 teksti lyhennettynä, omistaja hyväksyi 15.11.2026 klo 08.33; suunnitelmat/20261115-lontoon-tekstit-lopulliset.md). Sanasta sanaan. 256 merkkiä. */
+    teksti: "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla kilpakumppanini Grimshaw tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -153,14 +153,6 @@ export const FOKUSVIRTA_LONTOO = {
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   },
   {
-    "id": "lontoo.r2",
-    "ankkuri": "katosi välillä näkyvistä",
-    "tarkoitus": "huvittuu",
-    "voimakkuus": 0.3,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
     "id": "lontoo.r3",
     "ankkuri": "pehmustettuja penkkejä",
     "tarkoitus": "huvittuu",
@@ -170,7 +162,7 @@ export const FOKUSVIRTA_LONTOO = {
   },
   {
     "id": "lontoo.r4",
-    "ankkuri": "herra Grimshaw’n, kilpakumppanini aarrejahdissa",
+    "ankkuri": "kilpakumppanini Grimshaw",
     "tarkoitus": "vakavoituu",
     "voimakkuus": 0.4,
     "siirtyma": 0,
@@ -185,9 +177,9 @@ export const FOKUSVIRTA_LONTOO = {
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. [warmly] Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, otto 2, KK 15.11.2026 11.24; JU vienyt 13.53), ämpärin täysi osoite kuten Pariisissa. */
+    luenta: "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. [warmly] Laiturilla kilpakumppanini Grimshaw tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-lontoo.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-story-v2.jpg;
      * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
@@ -205,13 +197,6 @@ export const FOKUSVIRTA_LONTOO = {
         'https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs',
         'https://www.heritagefund.org.uk/news/worlds-oldest-known-underground-carriage-be-restored',
       ],
-    },
-    luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260911-paper2-v1.jpg",
-      lyhyt: "Lontoo, 1873. Perille päästiin nopeasti; yskä astui laiturille mukana.",
-      selite: 'Metropolitanin höyryjuna jäi puhkumaan laiturille, ja savu seurasi matkustajia kaasulamppujen alle. Matka oli nopea, mutta keuhkot tahtoivat antaa oman lausuntonsa.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/97","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"],
     },
   },
 
@@ -254,28 +239,37 @@ export const FOKUSVIRTA_LONTOO = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lontoo-01-r20260909-paikka-v2.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). (Lontoon kuva vaihdettu 15.11.2026, ks. alla.)
+     */
+    /*
+     * PULUN KUVA (KK 15.11.2026, omistaja 08.33 "Nenäliina ja laituri"): Commonsin valokuva Baker Streetin Circle-linjan laiturista nykyään; vanha
+     * parlamenttikuva (pulu-cam-lontoo-01) pois. Tiedosto: Philafrenzy, 2.10.2016, CC BY-SA 4.0 (KK katsoi Commonsin sivulta 15.11.),
+     * https://commons.wikimedia.org/wiki/File:Baker_Street_Circle_Line_platform_01.jpg. Kuvaa itseään ei muokata.
+     * RAJAUS pyöreään kehykseen (KK 15.11.2026 klo 08.40, katsottu PT:n 1000 × 750 -viennistä pyöreänä): keskipiste kuvan leveyden
+     * ja korkeuden suhteina [x, y], halkaisija leveyden suhteena; holvi, valokuilut, laiturinumerot 6 ja 5, raiteet ja keltainen viiva
+     * mukana, penkkien matkustajat jäävät reunalle. `lyhyt` on KK:n hyväksymä selite-ehdotus; `selite` on SK:n luonnos (kaksi
+     * sisältölausetta, vain KK:n tarkistamia faktoja: Historic England 1239815, en-Wikipedia "Baker Street tube station").
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lontoo-01-r20260909-paikka-v2.jpg',
-        lyhyt: 'Lontoo: parlamentti jäi taustalle, sillä penkillä oli tärkeämpää.',
-        selite: 'Thamesin rantapenkiltä näkyvät parlamentti ja Elizabeth Tower, mutta nokkani edessä oleva muru ei löydy yhdeltäkään kartalta. Isoisä valitsi maanalaisen vaunun; tässä on parempi ilmanvaihto ja oma tarjoilu.',
-        lahde: 'Matkakirjan havainnekuva',
+        tiedosto: 'Baker Street Circle Line platform 01.jpg',
+        lyhyt: 'Baker Streetin laituri Lontoossa: asema avattiin 1863, ja laituri on yhä käytössä.',
+        selite: 'Circle-linjan laituri Baker Streetin asemalla Lontoossa. Aseman alkuperäiset laiturit 5 ja 6 ovat vuodelta 1863, ja junat pysähtyvät niillä yhä.',
+        lahde: 'Philafrenzy, Wikimedia Commons (CC BY-SA 4.0)',
+        rajaus: { keskipiste: [0.47, 0.50], halkaisija: 0.70 },
         lahteet: [
-          'https://southbank.london/see-and-do/queens-walk',
-          'https://www.parliament.uk/about/living-heritage/building/palace-westmister-at-150/external-architecture-/',
-          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_Panorama_view_on_Victoria_Tower_Gardens,_Houses_of_Parliament,_Westminster_Bridge_%26_Saint_Thomas_Medical_School_01.jpg',
-          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_View_North_along_St_Thomas%27_Hospital.jpg',
-          'https://memoirsofametrogirl.com/2015/01/13/swan-benches-albert-embankment-lambeth-london-history/',
+          'https://commons.wikimedia.org/wiki/File:Baker_Street_Circle_Line_platform_01.jpg',
+          'https://historicengland.org.uk/listing/the-list/list-entry/1239815',
+          'https://en.wikipedia.org/wiki/Baker_Street_tube_station',
+          'https://www.lurs.org.uk/04_dec23_HIDDEN_LONDON_BAKER_STREET.pdf',
         ],
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Nyt metron junat kulkevat sähköllä. Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. Kerran tarkistin saman varjon kolmesti. Omahan se oli."],
+    /* KUPLA: KK:n lopullinen teksti 2 (omistajan vastaus 15.11.2026 klo 08.33: "Nenäliina ja laituri (Suositus)"; KK:n muotoilu). Sanasta sanaan. 145 merkkiä. */
+    kommentti: ["Voi isoisä! Nyt metrojunat kulkevat sähköllä, eikä nenäliinaa tarvita. Baker Streetillä ne pysähtyvät yhä samalle laiturille kuin sinun aikanasi."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
-    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/
