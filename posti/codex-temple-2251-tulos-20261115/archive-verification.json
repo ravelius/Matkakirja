@@ -1,0 +1,90 @@
+{
+  "verifiedAt": "2026-11-15T17:28:12.288006+00:00",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-halkaistu-koe-2243-20261115/tripo-2251/temple-2251-max-original-8k.glb",
+  "bytes": 72270664,
+  "sha256": "5c7114ffba86b69ff9fe8e128c0e9b221f19b71845c0d6b74607e556dbdebe3d",
+  "triangles": 1868577,
+  "vertices": 1095638,
+  "images": [
+    {
+      "index": 0,
+      "size": [
+        4096,
+        4096
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 650080
+    },
+    {
+      "index": 1,
+      "size": [
+        8192,
+        8192
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 12390572
+    },
+    {
+      "index": 2,
+      "size": [
+        4096,
+        4096
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 1744422
+    }
+  ],
+  "materials": [
+    {
+      "name": "tripo_mat_78d4c29f-6245-45c2-9721-39ba4c93277b",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ],
+  "accessorBounds": [
+    {
+      "count": 1095638,
+      "min": [
+        -0.3360748589038849,
+        0,
+        -0.18505859375
+      ],
+      "max": [
+        0.3360748589038849,
+        0.982391357421875,
+        0.18505859375
+      ]
+    },
+    {
+      "count": 1095638,
+      "min": null,
+      "max": null
+    }
+  ],
+  "downloadMovedOffBootDisk": true,
+  "sourceModelUnmodified": true,
+  "externalDependencies": false
+}

@@ -1,0 +1,76 @@
+{
+  "status": "QA_COMPLETE_DELIVERY_PENDING",
+  "preflightAt": "2026-11-15T17:20:42.417099+00:00",
+  "approvalTask": 2251,
+  "approvalCommit": "50383aba47acf9910b26cf2d7ffe0fd31e2d8567",
+  "approvalBlob": "b44f1370f3227efdb625af594b2c843187156790",
+  "approvalReadFully": true,
+  "attemptLimitThisApproval": 1,
+  "attemptsSubmitted": 1,
+  "jobId": "17ddf794-b654-41f4-a5cb-c07aac61c203",
+  "creditsSpent": 65,
+  "approximateExperimentTotalCreditCap": 100,
+  "sourceImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-halkaistu-koe-2243-20261115/temple-cutaway-v1.png",
+  "sourceImageSHA256": "92a5974331f3f881b88ba585443adb5e63e9b46c4dddb52272b58c34fc06f7ec",
+  "grandChateletResultDelivery": {
+    "commit": "9507767209b181b8dc9f8fe24a5a62d611693331",
+    "verifiedAt": "2026-11-15T17:19:58.270860+00:00",
+    "readbackVerified": true,
+    "notePath": "posti/tripo3d-kk-grand-chatelet-2250-tulos-20261115.md",
+    "receiverAccepted": false,
+    "structuralQA": "FAIL_COURTYARD_CLOSED"
+  },
+  "expectedCredits": 65,
+  "secondAttemptAllowed": false,
+  "gameDeliveryAllowed": false,
+  "resourceCheck": {
+    "load": [
+      13.64990234375,
+      14.53173828125,
+      13.82275390625
+    ],
+    "heavyLocalRenderStarted": false
+  },
+  "creditsBefore": 15425,
+  "settings": {
+    "workflow": "HD Model / Single Image",
+    "model": "H3.1 Best Quality",
+    "UltraMeshQuality": true,
+    "Polycount": 2000000,
+    "Topology": "Triangle",
+    "textureResolution": 8192,
+    "RemoveLighting": true,
+    "PBR": true,
+    "GenerateInParts": false,
+    "AIComplete": false
+  },
+  "submissionReservedAt": "2026-11-15T17:21:28.882288+00:00",
+  "estimatedCompletionAfterSubmission": "2-5min, service estimate pending",
+  "submittedAt": "2026-11-15T17:21:34.141Z",
+  "creditsAfter": 15360,
+  "url": "https://studio.tripo3d.ai/workspace/generate/17ddf794-b654-41f4-a5cb-c07aac61c203",
+  "estimatedCompletion": "About17:23:40Z from initial116s UI estimate; actual may differ",
+  "firstConfirmedProgressPercent": 4,
+  "submissionProof": "started-proof.jpg",
+  "completionObservedAt": "2026-11-15T17:28:12.288006+00:00",
+  "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-halkaistu-koe-2243-20261115/tripo-2251/temple-2251-max-original-8k.glb",
+  "archiveSHA256": "5c7114ffba86b69ff9fe8e128c0e9b221f19b71845c0d6b74607e556dbdebe3d",
+  "actualTriangles": 1868577,
+  "actualTextureSizes": [
+    [
+      4096,
+      4096
+    ],
+    [
+      8192,
+      8192
+    ],
+    [
+      4096,
+      4096
+    ]
+  ],
+  "exportNote": "First export navigated to blocked storage page. Back to model and documented download event succeeded on second export; no new generation.",
+  "qaCompletedAt": "2026-11-15T17:36:25.694459+00:00",
+  "qaConclusion": "Visible interior geometry and stairs confirmed; full vault shells and all doorway permeability unverified; technique trial only"
+}

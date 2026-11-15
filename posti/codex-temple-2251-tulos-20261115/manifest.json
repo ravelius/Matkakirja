@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-11-15T17:36:25.694459+00:00",
+  "jobId": "17ddf794-b654-41f4-a5cb-c07aac61c203",
+  "approvalTask": 2251,
+  "gameDeliveryAllowed": false,
+  "files": {
+    "01-cut-front.png": {
+      "bytes": 2030469,
+      "sha256": "a81368a81fc8bbc164524dea615f5ff4c12142d0b117ff5a1d5c9758a6b22ba0"
+    },
+    "02-cut-oblique.png": {
+      "bytes": 1833453,
+      "sha256": "517036dcca971146662a4c5b01e16d599b6e7557b3513d96d6af7c4eb7fbf0be"
+    },
+    "03-stairs-close.png": {
+      "bytes": 1949275,
+      "sha256": "48820253ebd70fc1aaf24467f562ea57b9f926f170caef207278a2ad7315ab5b"
+    },
+    "04-exterior-back.png": {
+      "bytes": 1980447,
+      "sha256": "7ade44f27a2a08d9daee665fc42d6cec3637eb52d80cd8b8723cd30a1e279507"
+    },
+    "05-stairs-geometry.png": {
+      "bytes": 1588093,
+      "sha256": "b95485ae3073b32cf2b350e7c256c2f986c6752a93fc52265bf7d441204a359b"
+    },
+    "06-interior-geometry.png": {
+      "bytes": 1500688,
+      "sha256": "30df70d545c8e633614ea1b455b79f40820d42d0a4ad4f32a257ea776f543d13"
+    },
+    "QA.md": {
+      "bytes": 3499,
+      "sha256": "be99bd478cb104baa54914ed516e323011cbc334fb39f842b70139503cac1cc0"
+    },
+    "README.md": {
+      "bytes": 1816,
+      "sha256": "4a8cd59cf8774d3d3d06df61c9f546dd11c452f73e3529025f5a0756b2bf98ad"
+    },
+    "archive-verification.json": {
+      "bytes": 1711,
+      "sha256": "1351defbd25d0eed15a336ac7b3ce7aa023f235816514383c9e5ebc9b7b205e9"
+    },
+    "camera-and-alignment.json": {
+      "bytes": 2142,
+      "sha256": "3568444c9895e7dceb0907fe096cc06bee95298320a6bed3b082d7f7dfe214a9"
+    },
+    "completed-proof.jpg": {
+      "bytes": 217363,
+      "sha256": "dd0211c9a9360e24eb1a5c6a0bc3ff75b76060e547f4cb4e15bc9d7bdb9c0fdb"
+    },
+    "geometry-probes.json": {
+      "bytes": 26903,
+      "sha256": "b475aa0d75a1744387cf360fd8b5fb50772189ad07a2eb1d3c05b667f9b1e8c0"
+    },
+    "independent-visual-QA.md": {
+      "bytes": 2967,
+      "sha256": "8fbe259b898cfd3820216a4734cd2eaa5f750b02299704003e993e34aca52483"
+    },
+    "job.json": {
+      "bytes": 2907,
+      "sha256": "309b333aa29ae634a8851e3dd67cf9f40544f20bb919df47172749abaf594083"
+    }
+  }
+}

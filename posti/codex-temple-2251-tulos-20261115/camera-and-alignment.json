@@ -1,0 +1,110 @@
+{
+  "input": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-halkaistu-koe-2243-20261115/tripo-2251/temple-2251-max-original-8k.glb",
+  "sourceModelModified": false,
+  "coordinateNote": "Front is generated model front (glTF+Z, Blender-Y), not geographic north. No reflection. Uniform39m display height is approximate prototype, not historical validation.",
+  "uniformScale": 39.69904631729365,
+  "shift": [
+    -0.006663353182375431,
+    -0.021807929500937462,
+    -0.0
+  ],
+  "displayDimensions": [
+    26.68370246887207,
+    14.693299293518066,
+    39.0
+  ],
+  "views": [
+    {
+      "name": "01-cut-front",
+      "camera": [
+        0,
+        -90,
+        20.2
+      ],
+      "target": [
+        0.0,
+        0.0,
+        19.5
+      ],
+      "orthoScale": 46,
+      "colorMode": "TEXTURE"
+    },
+    {
+      "name": "02-cut-oblique",
+      "camera": [
+        36,
+        -75,
+        33
+      ],
+      "target": [
+        0.0,
+        0.0,
+        18.0
+      ],
+      "orthoScale": 48,
+      "colorMode": "TEXTURE"
+    },
+    {
+      "name": "03-stairs-close",
+      "camera": [
+        -15.872970028380408,
+        -65,
+        14
+      ],
+      "target": [
+        -9.872969627380371,
+        0.0,
+        13.5
+      ],
+      "orthoScale": 31,
+      "colorMode": "TEXTURE"
+    },
+    {
+      "name": "04-exterior-back",
+      "camera": [
+        0,
+        90,
+        21
+      ],
+      "target": [
+        0.0,
+        0.0,
+        19.5
+      ],
+      "orthoScale": 46,
+      "colorMode": "TEXTURE"
+    },
+    {
+      "name": "05-stairs-geometry",
+      "camera": [
+        -15.872970028380408,
+        -65,
+        14
+      ],
+      "target": [
+        -9.872969627380371,
+        0.0,
+        13.5
+      ],
+      "orthoScale": 31,
+      "colorMode": "MATERIAL"
+    },
+    {
+      "name": "06-interior-geometry",
+      "camera": [
+        36,
+        -75,
+        33
+      ],
+      "target": [
+        0.0,
+        0.0,
+        18.0
+      ],
+      "orthoScale": 48,
+      "colorMode": "MATERIAL"
+    }
+  ],
+  "renderer": "Workbench,2threads,8AA,no shadows or baking",
+  "elapsedSeconds": 3.4952944577671587
+}
