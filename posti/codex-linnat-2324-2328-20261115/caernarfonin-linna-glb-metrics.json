@@ -1,0 +1,76 @@
+{
+  "file": "caernarfonin-linna-2324-max-original-8k.glb",
+  "bytes": 86745400,
+  "sha256": "cd9f7564f8ecd07471e71389bc42544e7f03fb8ae3cbfcc21fdf8f3844fea81f",
+  "triangles": 1978427,
+  "vertices": 1249810,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_49250864-00c3-4b65-b1fc-e109c589fac6",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 2119551
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_8fcf20c1-f0ab-4f17-b594-bc05b9684ff1_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 19262935
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_8fcf20c1-f0ab-4f17-b594-bc05b9684ff1_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1625603
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.49023444950580597,
+      0,
+      -0.2062378227710724
+    ],
+    "max": [
+      0.4896851032972336,
+      0.2654876708984375,
+      0.2057648003101349
+    ],
+    "dimensions": [
+      0.9799195528030396,
+      0.2654876708984375,
+      0.4120026230812073
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}

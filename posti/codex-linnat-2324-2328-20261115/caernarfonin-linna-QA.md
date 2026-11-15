@@ -1,0 +1,17 @@
+# Caernarfon #2324 — riippumaton visuaalinen QA
+
+**Verdict: WARNING — tornien pyöreähkö muotovaraus jää voimaan, mutta kaikkia torneja ei voi kutsua sileiksi lieriöiksi.** KK hyväksyi lähdekuvan varauksin yhteen ottoon; tämä tarkistus ei avaa uusintaa eikä merkitse mallia hyväksytyksi tai integroiduksi.
+
+Katsottu kaikki viisi valmista kokoruudun PNG:tä `qa-browser/01-plusX.png`, `02-plusZ.png`, `03-minusX.png`, `04-minusZ.png` ja `05-upper.png` sekä hyväksytty syöte `output/linnat-2309-2312-20261115/caernarfonin-linna/caernarfonin-linna-model-v1.png`. Luettu aiempi kuvan QA vain geometriavarauksen tunnistamiseksi; sen vanhaa hylkäävää verdictiä ei käytetä KK:n myöhemmän ehdollisen kuvanhyväksynnän kumoamiseen.
+
+- **Piha: PASS näkyvälle avoimuudelle.** Yläviistossa muurin sisäpuolinen pitkä alue on kattamaton. Näkyy matalia väliseinä-/rauniojäänteitä, ei uutta keskimmäistä tornia, kattomattoa tai katettua hallia. Pihan täsmällinen ositus ja raunioiden historialliset paikat jäävät varmistamatta.
+- **Tornit: WARNING, muoto vaihtelee.** Eagle Towerin suuressa rungossa näkyy erityisesti pääty- ja yläkuvissa leveitä suoria seinäpintoja ja niiden välisiä kulmia. Myös porttimassat ovat selvästi kulmikkaita. Näitä ei ole perusteltua nimetä sileiksi pyörölieriöiksi. Sen sijaan pitkän näkyvän muurin useiden välitornien etuosat ja Eagle Towerin pienet ylätornit lukevat pyöreähköinä tai vain heikosti fasetoituina. Osa sivupinnoista taittuu tasaisemmin kuin eturintama: tarkka poikkileikkaus ei selviä kuvista, eikä kaikkien historiallisten särmien säilymistä vahvisteta. Lähdekuvan pyöreähkö varaus ei siis poistu Tripossa.
+- **Eagle Tower / pikkutornit: PARTIAL.** Länsipään korkea porrastettu torniryhmä säilyy ja eri suunnat näyttävät sen epäsymmetrian. Kaikki kolme syötteen pikkutorniaihetta eivät erotu jokaisessa kuvassa; peitto ja vähäinen kuvakoko estävät täydellisen kolmen itsenäisen rungon varmistuksen. Peittymistä ei tulkita automaattiseksi puuttumiseksi eikä väitetä varmaa 3/3 geometriatodistusta.
+- **Siluetti ja yhtenäisyys: pääosin syötteen mukaiset.** Pitkä matalampi muuri välitornien kanssa yhdistää korkeamman Eagle-pään ja toisen porttipään. Ei selvää irrallista siipeä, suurta uutta tornia tai valokuvan ulkopuolista kaupunkirakennusta. Pienet sakarat ja aukot ovat pehmeitä ja osin pintatekstuurin varassa.
+- **Portit/aukot: PARTIAL.** Porttiaiheet erottuvat molemmilla pitkiltä sivuilta otetuilla kuvilla. Osa kaariaukoista näyttää tummina/vaaleina suljettuina takapintoina; läpikulkuja ei vahvisteta. King's Gaten pihanpuoli ja pohjoismuurin yksityiskohdat olivat jo lähteissä puutteellisia, joten tasaisesti täydennettyä vastasivua ei hyväksytä historiallisesti todennetuksi.
+
+**Suunnat:** neljä paikallista katselimen akselisivua (+X, +Z, −X, −Z) ja yläviisto on tarkastettu. N/E/S/W-rekisteröintiä tai absoluuttista mittakaavaa ei tehty. Kuvalliset fasetit eivät korvaa verkon poikkileikkausmittausta, eikä tässä tehty geometriatestiä.
+
+**KK-rivi:** Piha säilyy avoimena ja Eagle-/porttirungoissa näkyy todellisia kulmikkaita sivuja, mutta useat välitornit ja pienet ylätornit jäävät pyöreähköiksi tai heikosti fasetoiduiksi; niitä ei voi hyväksyä lähteen särmikkäiksi torneiksi eikä myöskään väittää kaikkia sileiksi lieriöiksi.
+
+Vain tämä QA-tiedosto kirjoitettu. Ei selainta, generointia, renderöintiä, mallimuutosta, postia tai yhteisen tilan muokkausta. Ei uusintaa.

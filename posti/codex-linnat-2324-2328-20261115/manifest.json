@@ -1,0 +1,372 @@
+{
+  "createdAt": "2026-11-15T21:38:41.261690+00:00",
+  "status": "PREPARED_FOR_KK_REVIEW",
+  "deliveryNote": "posti/tripo3d-kk-linnat-2324-2328-20261115.md",
+  "originalsModified": false,
+  "checkpointOrLedgerModified": false,
+  "reviewOnly": true,
+  "gameIntegration": false,
+  "KKAcceptance": false,
+  "simplification": "Not performed; no simplification before 2026-11-18",
+  "geographicRegistration": "Four LOCAL axes +X,+Z,-X,-Z and oblique; compass directions uncalibrated",
+  "imageCounts": {
+    "modelIndividualViews": 20,
+    "modelOverviews": 4,
+    "kamjanetsImage": 1,
+    "additionalMirroredKuressaareSource": 1
+  },
+  "models": [
+    {
+      "taskNumber": 2324,
+      "slug": "caernarfonin-linna",
+      "jobId": "257e7ff6-4bcf-4d68-9490-353147306626",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/caernarfonin-linna/caernarfonin-linna-2324-max-original-8k.glb",
+      "sha256": "cd9f7564f8ecd07471e71389bc42544e7f03fb8ae3cbfcc21fdf8f3844fea81f",
+      "bytes": 86745400,
+      "triangles": 1978427,
+      "vertices": 1249810,
+      "metricsFile": "caernarfonin-linna-glb-metrics.json",
+      "views": [
+        "caernarfonin-linna-01-plusX.jpg",
+        "caernarfonin-linna-02-plusZ.jpg",
+        "caernarfonin-linna-03-minusX.jpg",
+        "caernarfonin-linna-04-minusZ.jpg",
+        "caernarfonin-linna-05-upper.jpg"
+      ],
+      "overview": "caernarfonin-linna-5views-1000.jpg",
+      "QA": "caernarfonin-linna-QA.md",
+      "sourceImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-2309-2312-20261115/caernarfonin-linna/caernarfonin-linna-model-v1.png",
+      "sourceImageSHA256": "b023135aefd4bdb563f943e6c27ce091a600db17ffb0d132c962a14f23d37e25",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "startedAt": "2026-11-15T21:18:15.410924+00:00",
+      "exportedAt": "2026-11-15T21:23:21.998970+00:00",
+      "estimatedMinutes": 8,
+      "creditsSpent": 65,
+      "sourceCommit": "bd19f3d4a3f0d25fa8b8e718a4d46a81ff87b428"
+    },
+    {
+      "taskNumber": 2325,
+      "slug": "kuressaare",
+      "jobId": "4c400cbc-0658-428c-af32-c9451488081f",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/kuressaare/kuressaare-2325-max-original-8k.glb",
+      "sha256": "ee4a48eb6395962938ff7105addf2b089b424de8e24735b58acdd640c5481586",
+      "bytes": 86993288,
+      "triangles": 1961866,
+      "vertices": 1338024,
+      "metricsFile": "kuressaare-glb-metrics.json",
+      "views": [
+        "kuressaare-01-plusX.jpg",
+        "kuressaare-02-plusZ.jpg",
+        "kuressaare-03-minusX.jpg",
+        "kuressaare-04-minusZ.jpg",
+        "kuressaare-05-upper.jpg"
+      ],
+      "overview": "kuressaare-5views-1000.jpg",
+      "QA": "kuressaare-QA.md",
+      "sourceImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/kuressaare/kuressaare-model-v1-mirrored.png",
+      "sourceImageSHA256": "b8aa0841ad25149c154eb029e8b07f2cad1aee842542bec3b34a3b25091db89b",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "startedAt": "2026-11-15T21:19:08.982979+00:00",
+      "exportedAt": "2026-11-15T21:25:20.617341+00:00",
+      "estimatedMinutes": 8,
+      "creditsSpent": 65,
+      "sourceCommit": "bd19f3d4a3f0d25fa8b8e718a4d46a81ff87b428"
+    },
+    {
+      "taskNumber": 2326,
+      "slug": "hame",
+      "jobId": "99d11759-e292-4817-9c89-34c37ebbf972",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/hame/hame-2326-max-original-8k.glb",
+      "sha256": "c450a36d237bc322d56ae5742e92862abd38d5e99d1bf333353495278c28dcf4",
+      "bytes": 88963364,
+      "triangles": 1982210,
+      "vertices": 1380537,
+      "metricsFile": "hame-glb-metrics.json",
+      "views": [
+        "hame-01-plusX.jpg",
+        "hame-02-plusZ.jpg",
+        "hame-03-minusX.jpg",
+        "hame-04-minusZ.jpg",
+        "hame-05-upper.jpg"
+      ],
+      "overview": "hame-5views-1000.jpg",
+      "QA": "hame-QA.md",
+      "sourceImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-2309-2312-20261115/hame/hame-model-v1.png",
+      "sourceImageSHA256": "4d7beb96f009433614f36d44ea5ba61afb069967ba730875ab3d20666d803f07",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "startedAt": "2026-11-15T21:19:52.390732+00:00",
+      "exportedAt": "2026-11-15T21:26:55.619734+00:00",
+      "estimatedMinutes": 8,
+      "creditsSpent": 65,
+      "sourceCommit": "bd19f3d4a3f0d25fa8b8e718a4d46a81ff87b428"
+    },
+    {
+      "taskNumber": 2327,
+      "slug": "helsinki1907",
+      "jobId": "b8ab09c8-c88b-49a8-8702-cb4d55bbe7a5",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/helsinki1907/helsinki1907-2327-max-original-8k.glb",
+      "sha256": "f29d4b56fb879ae6af8ab231a11c09757823b848c8f8b362777dfa2eb363a916",
+      "bytes": 73459056,
+      "triangles": 1920714,
+      "vertices": 1114102,
+      "metricsFile": "helsinki1907-glb-metrics.json",
+      "views": [
+        "helsinki1907-01-plusX.jpg",
+        "helsinki1907-02-plusZ.jpg",
+        "helsinki1907-03-minusX.jpg",
+        "helsinki1907-04-minusZ.jpg",
+        "helsinki1907-05-upper.jpg"
+      ],
+      "overview": "helsinki1907-5views-1000.jpg",
+      "QA": "helsinki1907-QA.md",
+      "sourceImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kadonneet-ryhma4-20261115/helsingin-vanha-rautatieasema/retry-2316/helsingin-vanha-rautatieasema-model-v2.png",
+      "sourceImageSHA256": "0d1f1070ca86fb7649a92d70ca53fd4f3cd96b50c0504acd18fd578bf3f51e92",
+      "status": "KK_REVIEW_ONLY_NOT_ACCEPTED_OR_INTEGRATED",
+      "startedAt": "2026-11-15T21:20:30.998605+00:00",
+      "exportedAt": "2026-11-15T21:29:11.152635+00:00",
+      "estimatedMinutes": 8,
+      "creditsSpent": 65,
+      "sourceCommit": "bd19f3d4a3f0d25fa8b8e718a4d46a81ff87b428"
+    }
+  ],
+  "kamjanets": {
+    "taskNumber": 2328,
+    "kind": "ONE_MODEL_IMAGE_ONLY_NO_TRIPO",
+    "image": "kamjanets-model-v1-1000.jpg",
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/kamjanets-podilskyin-linna/kamjanets-podilskyin-linna-model-v1.png",
+    "nativeSHA256": "693516285f12a61d1e461451e077634126b8e90f41e73b438cacbde9d3786cba",
+    "QA": "kamjanets-podilskyin-linna-QA.md",
+    "warning": "Low camera conceals courtyard/north; small roofed part between a-b unverified",
+    "maxCalls": 1,
+    "callsReserved": 1,
+    "status": "GENERATED_AWAITING_QA",
+    "startedAt": "2026-11-15T21:21:02.242021+00:00",
+    "estimatedMinutes": 6,
+    "cost": "not exposed by built-in tool",
+    "tripoAuthorized": false,
+    "artifactId": "exec-f06be877-4866-421d-8b3b-3044f67e6d48",
+    "sha256": "693516285f12a61d1e461451e077634126b8e90f41e73b438cacbde9d3786cba",
+    "bytes": 2284984,
+    "completedAt": "2026-11-15T21:21:39.923589+00:00",
+    "providerJobId": null
+  },
+  "warnings": {
+    "caernarfonin-linna": "Some rounded or weakly faceted towers; not all are smooth cylinders; courtyard open",
+    "kuressaare": "Upper view shows continuous central roof without visible open courtyard; roofplan is unverified inference",
+    "hame": "Ring footprint and tall stone plinth remain accepted source-image caveats; courtyard visibly open",
+    "helsinki1907": "Full long rear canopy visible in view03; exact1907 canopy/rear geometry unverified inference"
+  },
+  "newOrdersAcknowledgementOnly": {
+    "decisionCommit": "b308b8a2d9b653808eceb11571c609ed9e5cf802",
+    "tasks": [
+      2335,
+      2336,
+      2337
+    ],
+    "neuschwanstein": {
+      "input": "v4 only, SINGLE, no v1 pair",
+      "jobId": "b7e992e4-6040-4548-ab6f-945130ce54e2",
+      "status": "Started per root report; output not delivered in this package"
+    },
+    "turkuA": {
+      "front": "v2",
+      "leftSide": "#2323",
+      "back": false
+    },
+    "turkuB": {
+      "input": "v2 only, SINGLE"
+    },
+    "maxCallsEach": 1,
+    "creditsEach": 65,
+    "newProductionDeliveredHere": false
+  },
+  "files": [
+    {
+      "file": "caernarfonin-linna-01-plusX.jpg",
+      "bytes": 75479,
+      "sha256": "8cf773443a66d9ffe6718da71d8aef65db99eb70984aa7d1c3dac5d534e1f3f6"
+    },
+    {
+      "file": "caernarfonin-linna-02-plusZ.jpg",
+      "bytes": 39233,
+      "sha256": "7a83665f31b25dfac88f9e4e96f5684e510371252c4bf960310888b0554bfb48"
+    },
+    {
+      "file": "caernarfonin-linna-03-minusX.jpg",
+      "bytes": 64432,
+      "sha256": "59aced066e83f69f6fc47ca830f4d32f35045f8ec24a4f4170ce728eeb77ebac"
+    },
+    {
+      "file": "caernarfonin-linna-04-minusZ.jpg",
+      "bytes": 35051,
+      "sha256": "c73437e4f9cb0f7959e68396fd236977f667c5581e7a190bcf69d86731b437ee"
+    },
+    {
+      "file": "caernarfonin-linna-05-upper.jpg",
+      "bytes": 117451,
+      "sha256": "4e8bc7ccbd9faf735b07df9d6c5596d0bdbc6ba6844769ab5213c5a62f1fb994"
+    },
+    {
+      "file": "caernarfonin-linna-5views-1000.jpg",
+      "bytes": 148981,
+      "sha256": "2ee6c1edfcc25b184c08f57c368ab56ea024d35e75229ab40b636cf543faf091"
+    },
+    {
+      "file": "caernarfonin-linna-QA.md",
+      "bytes": 3586,
+      "sha256": "f3542d63c1ca32dedcbdee146fbffa71c459a112dd5dc39f0321a18ef74fe3b2"
+    },
+    {
+      "file": "caernarfonin-linna-glb-metrics.json",
+      "bytes": 1802,
+      "sha256": "2433cf2c5bbc6c6389bc32780cd7900059ac5c0594fd60bdf0af6c211d7b1195"
+    },
+    {
+      "file": "hame-01-plusX.jpg",
+      "bytes": 112258,
+      "sha256": "e99fcc1d668e430e4200fd73804c24b7a05b14d55eb98ad36a640dde01400d76"
+    },
+    {
+      "file": "hame-02-plusZ.jpg",
+      "bytes": 115144,
+      "sha256": "8ebfa75a061232fc2a39dd176b29f221b0fb311cc1ff31438b00ece8b94736d0"
+    },
+    {
+      "file": "hame-03-minusX.jpg",
+      "bytes": 128212,
+      "sha256": "d3bd01c7c08830123a0739e31f58c8bde2b4ce300d35f71768187ee3a743e8f1"
+    },
+    {
+      "file": "hame-04-minusZ.jpg",
+      "bytes": 98072,
+      "sha256": "7b294d7d145dd7bd5d6c0ecd310d8089752fe3adea39bf733cdcf6750dac0a79"
+    },
+    {
+      "file": "hame-05-upper.jpg",
+      "bytes": 115079,
+      "sha256": "16c30f13042a36a2fff37e71c1817fa4bf7c9dcf8d305be0377cd1aad4b07b63"
+    },
+    {
+      "file": "hame-5views-1000.jpg",
+      "bytes": 162237,
+      "sha256": "cac42a096623aae1daa948b6594b8498e898a566ee3529f6d0e3be1b327c5ee2"
+    },
+    {
+      "file": "hame-QA.md",
+      "bytes": 3015,
+      "sha256": "7259518014174d3f01d4c8d953f57074fb2a8135de2f682f53565e623a773dfa"
+    },
+    {
+      "file": "hame-glb-metrics.json",
+      "bytes": 1785,
+      "sha256": "b66f638930f3c34679d7a714d4300ba9e0dffb48d58507990c60ac3f6a54b480"
+    },
+    {
+      "file": "helsinki1907-01-plusX.jpg",
+      "bytes": 83518,
+      "sha256": "c7e4488236512babae046b02dfcfba79bb03f9aaa9189a0a7d6c38770555d3d1"
+    },
+    {
+      "file": "helsinki1907-02-plusZ.jpg",
+      "bytes": 38082,
+      "sha256": "81dac3f203b50edcd5b6a25fadaa71d30950abb18c5f8a6214ea45af9533583b"
+    },
+    {
+      "file": "helsinki1907-03-minusX.jpg",
+      "bytes": 79493,
+      "sha256": "11891804221dfa3c97ec1a4f8def589f9210a0f16d126eeeb7b57f0892279bda"
+    },
+    {
+      "file": "helsinki1907-04-minusZ.jpg",
+      "bytes": 37361,
+      "sha256": "b9c98badc2d86bb8f0cd4c82cdbd5b903cdcdf42aef48a305ea3e404341ae5ca"
+    },
+    {
+      "file": "helsinki1907-05-upper.jpg",
+      "bytes": 137120,
+      "sha256": "c6bd32b8017cb8820879f8ca29de4bb9f99cbb222f7664c758855f6aeedd96df"
+    },
+    {
+      "file": "helsinki1907-5views-1000.jpg",
+      "bytes": 143377,
+      "sha256": "b6ece6991b6260f1a8d514afc70334ae0b174ae9bcb6d63527e6d6367a8f09fb"
+    },
+    {
+      "file": "helsinki1907-QA.md",
+      "bytes": 3165,
+      "sha256": "6e38bcec4e011e4e668c77e860a2d8d2631c46b4032d76b958859893323c3207"
+    },
+    {
+      "file": "helsinki1907-glb-metrics.json",
+      "bytes": 1798,
+      "sha256": "82f460d4ec078ff1b6b55ebfc8de1c502e8a5cfb6f291e8954b5a481b6a3f30c"
+    },
+    {
+      "file": "kamjanets-model-v1-1000.jpg",
+      "bytes": 127328,
+      "sha256": "84a80f1265b5399f248c209830f1108988576a92fd5cce41a32c3cb51761b701"
+    },
+    {
+      "file": "kamjanets-podilskyin-linna-QA.md",
+      "bytes": 3873,
+      "sha256": "9cba68b58e3d444b1351278469596870fc4495d25c6e24c30e6b8fd1a935fe5c"
+    },
+    {
+      "file": "kuressaare-01-plusX.jpg",
+      "bytes": 195723,
+      "sha256": "30b5084015ee8c9be5b1c2508dfd53de186c3d7bd2bff69a4f83fd889dcc918c"
+    },
+    {
+      "file": "kuressaare-02-plusZ.jpg",
+      "bytes": 197420,
+      "sha256": "4fab95e532b7f40c75245e9e28364148cd39fd5001e97e9cce28a27da676715c"
+    },
+    {
+      "file": "kuressaare-03-minusX.jpg",
+      "bytes": 185853,
+      "sha256": "c5b192b6822c2150a5e6e2fa0ac94a2a219f0fb2c89d6ab1159996cfa6c5283f"
+    },
+    {
+      "file": "kuressaare-04-minusZ.jpg",
+      "bytes": 182854,
+      "sha256": "f0eecc82701ead418f5a6e485ab089364a3bc238c67cc4732013080ec778377a"
+    },
+    {
+      "file": "kuressaare-05-upper.jpg",
+      "bytes": 207418,
+      "sha256": "e1ab51893fbc7e70966fecc21105e2d726b1d5c6e07aea3c2eeddf7031302be5"
+    },
+    {
+      "file": "kuressaare-5views-1000.jpg",
+      "bytes": 149980,
+      "sha256": "baa137c45897aeb4dd31878119bcbd746e4adba43e6909efa5b2b02321cab106"
+    },
+    {
+      "file": "kuressaare-QA.md",
+      "bytes": 3791,
+      "sha256": "bb738c58a9e4d5d186ef2b49da4f1e4b16dc18ad707b5ed95e0ce0efa60ebf4e"
+    },
+    {
+      "file": "kuressaare-glb-metrics.json",
+      "bytes": 1786,
+      "sha256": "815c6d1d7901cfbf776798d46cf1d391bdcaed3bff57bee511c8083375b0f62d"
+    },
+    {
+      "file": "kuressaare-mirror-preparation.md",
+      "bytes": 966,
+      "sha256": "526820219dfeb3d8f6e7127c3dfcbb9f9bed2db3493d8120d3b2b029edb4ea64"
+    },
+    {
+      "file": "kuressaare-mirrored-source-1000.jpg",
+      "bytes": 127462,
+      "sha256": "5989b704898f4fa325cf9cf3b8a9c9c7d1161a2c60ae5f65598c798f4cf0eec7"
+    }
+  ],
+  "verification": {
+    "modelOriginalSHA256AndBytesVerified": true,
+    "allListedReviewImagesMax1000px": true,
+    "hameSheet": "Rebuilt alone in fresh Python process; full labels/legend verified from hame-review-verification-v2.jpg and text-pixel checks",
+    "verificationCopyOutsideDeliveryReview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/hame-review-verification-v2.jpg"
+  },
+  "creditsSpent": 260
+}
