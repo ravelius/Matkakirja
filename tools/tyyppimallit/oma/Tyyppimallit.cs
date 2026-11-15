@@ -13,10 +13,11 @@ namespace Matkakirja
     {
         // Tasavärit tyyliohjeen mukaan (kohta 2): vaalea lämmin kivi, siniharmaa katto, tumma lyijy tornin huipussa, tummat aukot.
         static readonly Vari TyKivi = Vari.H(0xEADCC0), TyKiviVarjo = Vari.H(0xC9BA9C), TyKatto = Vari.H(0x8E979D), TyHuippu = Vari.H(0x5F666E),
-            TyAukko = Vari.H(0x5E5850), TyLasi = Vari.H(0x9C9A7E), TyTaulu = Vari.H(0xF2EEE4), TyViisari = Vari.H(0x2E2E2E), TyRauta = Vari.H(0x6A6F74),
+            TyAukko = Vari.H(0x5E5850), TyLasi = Vari.H(0x96958C), TyTaulu = Vari.H(0xF2EEE4), TyViisari = Vari.H(0x2E2E2E), TyRauta = Vari.H(0x6A6F74),
             // Asemahallit (KK 15.11. 04.30 kohta 1): lasi ja hallikatto harmaanvihreinä joen suuntaan (Thames pelikuvassa ≈ #B0AB8B), kirkkaus ja kylläisyys
-            // enintään veden tasolla; lasin tuntu ruutujaosta, puitteet lasia tummempina. Sama sävy kaikissa kaupungeissa.
-            TyHalli = Vari.H(0x878670), TyPuite = Vari.H(0x5B5D4F);
+            // enintään veden tasolla; lasin tuntu ruutujaosta, puitteet lasia tummempina. KK 04.58: yksi yhteinen lähes harmaa (kylläisyys ≤ 0,1) kaikkiin
+            // kaupunkeihin, koska harmaanvihreä riiteli Pariisin sinkkikattojen kanssa (Saint-Lazare).
+            TyHalli = Vari.H(0x84837A), TyPuite = Vari.H(0x5A5A54);
 
         /// <summary>Harjakatto pitkin x-akselia: lappeet räystäältä y harjalle y + h, räystäs ulkonee o; päädyt kivestä seinän tasossa (pois, jos päätyä ei näy).</summary>
         static void TyHarja(Rakentaja r, float x0, float x1, float z0, float z1, float y, float h, float o, Vari katto, Vari paaty, bool p0 = true, bool p1 = true)
