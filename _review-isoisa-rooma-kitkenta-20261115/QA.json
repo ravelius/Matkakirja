@@ -1,0 +1,42 @@
+{
+  "taskNumber": 2258,
+  "reviewedAt": "2026-11-15T18:17:54.761253+00:00",
+  "status": "PASS_FOR_KK_REVIEW",
+  "selectedAttempt": 1,
+  "generationCalls": 1,
+  "generationLimit": 2,
+  "secondAttemptUsed": false,
+  "file": "isoisa-rooma-kitkenta-v1.png",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "sha256": "aee54ee50b91a67455e2913df5a6f3ddd7290e772a4d3403e28b1e01ae8e3980",
+  "checks": {
+    "correctSizeAndAspect": true,
+    "periodPhotographicAppearance": true,
+    "workersFacingAwayNoFaces": true,
+    "grandfatherAbsent": true,
+    "guardOnlyHandsAtEdge": true,
+    "ropesAndWeedingVisible": true,
+    "wheelbarrowsAndRemovedPlantsVisible": true,
+    "unclearedVegetationVisibleAlongside": true,
+    "noObservedTextNumbersLogosWatermarks": true,
+    "noObservedModernObjects": true,
+    "unalteredNativePNG": true
+  },
+  "inspection": [
+    "Full native image reviewed visually.",
+    "Three workers and guard detail inspected enlarged in browser-rendered QA sheet; backs of heads only, no face/profile.",
+    "Ropes visible from upper edge to workers; exact historical working method is a reconstruction from the order, not documentary proof."
+  ],
+  "notes": [
+    "Artificially generated historically informed illustration with a period-photograph aesthetic, not an authentic archival photograph.",
+    "Architecture and plant quantities are not claimed as a measured reconstruction or exact species inventory.",
+    "Second attempt not needed on producer review. KK still decides suitability before use."
+  ],
+  "receiverAcceptance": "pending",
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

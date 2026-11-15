@@ -1,0 +1,98 @@
+{
+  "taskNumber": 2258,
+  "generatedAt": "2026-11-15T18:15:49.965756+00:00",
+  "generator": "built-in image_gen",
+  "oneSubject": true,
+  "generationCalls": 1,
+  "selectedAttempt": 1,
+  "maxAttempts": 2,
+  "image": "isoisa-rooma-kitkenta-v1.png",
+  "sha256": "aee54ee50b91a67455e2913df5a6f3ddd7290e772a4d3403e28b1e01ae8e3980",
+  "bytes": 3216100,
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "postprocessing": "None; native PNG copied byte-for-byte. QA sheet is browser display only.",
+  "source": {
+    "sourcePath": "posti/paatoimittaja-codex-rooma-isoisa-kuva-20261115.md",
+    "sourceCommit": "80eeb9dfead52ce5c357d8062a72d2530fddfc5a",
+    "sourceBlob": "fe16106e831257bcfa96a917ef1348627634c10b"
+  },
+  "priorityRelease": {
+    "verifiedAt": "2026-11-15T18:14:34.266803+00:00",
+    "dependencyTask": 2253,
+    "deliveryCommit": "2fa45abd8a83d9869458673075df7e9f69014a9e",
+    "receiptCommit": "e2e2528021da7a0b8528e5b57288623fec15c20d",
+    "receiptBlob": "802a2a9af9fcd489606507e6daac36e73cbfc1c1",
+    "receiptPath": "posti/paatoimittaja-codex-gc-2253-kuittaus-20261115.md",
+    "sourceReadFully": true,
+    "prioritySatisfied": true,
+    "separateKKDecisionPendingFor2253": true
+  },
+  "referenceUse": "All references personally viewed; new generation from text, no reference photograph copied into result.",
+  "references": [
+    {
+      "file": "rooma-current-pantheon.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-rooma-kitkenta-2258-20261115/references/rooma-current-pantheon.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 608583,
+      "sha256": "9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469",
+      "personallyViewed": true
+    },
+    {
+      "file": "rooma-current-virkamies.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260911-paper2-v1.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-rooma-kitkenta-2258-20261115/references/rooma-current-virkamies.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 726975,
+      "sha256": "f16b2769c50c48166305676db441bc6b18f40cdfaafd1931a8b7b7a7b448c1c2",
+      "personallyViewed": true
+    },
+    {
+      "file": "colosseum-1870s-reference.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Roma_Colosseo_1870s.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-rooma-kitkenta-2258-20261115/references/colosseum-1870s-reference.jpg",
+      "dimensions": [
+        940,
+        705
+      ],
+      "bytes": 208262,
+      "sha256": "c467b81a85c477a51abb68cd794fdccd4af8edf32627040b42c20808ec8aa12f",
+      "personallyViewed": true,
+      "filePage": "https://commons.wikimedia.org/wiki/File:Roma_Colosseo_1870s.jpg",
+      "author": "Unknown photographer",
+      "period": "1870s as catalogued; not an exact year",
+      "rights": "Public Domain / PDM as marked on Commons",
+      "role": "architectural period reference only; not evidence of weeding scene"
+    },
+    {
+      "role": "approved photographic style and target dimensions",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/isoisa-pariisi-kyyhky-valokuva-20261112/isoisa-pariisi-kyyhky-valokuva-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "4b356eeb78536ba88b3c249f765cafc3d75b7328cca7ecc65a6a413d5384b445",
+      "ownerApproved": true,
+      "deliveryCommit": "3b129bfbeaafb0540be4817bbe7a49e7fc25a660",
+      "personallyViewed": true
+    }
+  ],
+  "latestOwnerRules": [
+    "Old period photograph appearance; not drawing.",
+    "No grandfather or faces.",
+    "One subject, at most two attempts.",
+    "KK review before game use."
+  ],
+  "targetReplacement": "Rooma luentakuva Pantheon/rain and luentakuva2 civil servant; integration belongs to SK PR6822/NUI",
+  "gameChanged": false,
+  "ownerAccepted": false
+}

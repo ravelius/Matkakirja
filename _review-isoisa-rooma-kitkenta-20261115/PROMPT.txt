@@ -1,0 +1,19 @@
+Use case: historical-scene.
+Create one 1536 x 1024 landscape image, aspect ratio 3:2. A convincing period photograph of workers removing plants and roots from the OUTER wall of the Colosseum in Rome around 1870–1871. It must look like a photograph made with a camera of that era, not an engraving, drawing, painting, modern film still or CGI reconstruction.
+
+STYLE TARGET, PERSONALLY INSPECTED:
+Match the approved Paris pigeon photograph v2: softly rendered natural photographic detail, subdued warm grey / faint sepia monochrome, believable light and shadows, fine photographic grain, mild optical softness and gentle fading. The result should feel like an actual old photographic print, not a modern photograph with a heavy paper-texture filter. No etched contours, drawn hatching, painted strokes, dramatic cinematic lighting, HDR, excessive artificial scratches or a decorative frame. Any edge wear is restrained.
+
+SCENE:
+An oblique view from ground level of a coherent section of the Colosseum's exterior wall, close enough to understand the work but wide enough to see several recognizable arched bays and their vertical arrangement. Follow the period architectural reference for the weathered masonry, arcades, engaged columns, broken upper wall and proportions; this is a working ruin, not a rebuilt complete Roman arena. Do not copy the reference photograph's distant panorama or foreground ruins. The ground is bare, dusty, uneven and appropriate to the period, without modern paving installations or visitor equipment.
+
+Two or three small workmen are suspended on believable hemp work ropes against the wall, backs to the camera, facing the masonry. Ropes lead upward to plausible anchors out of view; their feet rest against ledges or the wall while they loosen plants and roots by hand or with simple hand tools. Plain period trousers, work shirts, waistcoats and cloth caps; no modern climbing harnesses, helmets, carabiners or high-visibility clothes. Keep every face fully hidden by the back-facing angle and distance. Slight softness on moving hands is plausible for the exposure; avoid frozen acrobatic action poses.
+
+Beside the area being cleared, show a visibly unweeded patch of grasses, low plants and a few small woody roots growing from stone joints and ledges. Below, one or two rough wooden wheelbarrows with wooden or iron-rimmed wheels and a modest pile of uprooted plants, earth and roots make the activity understandable. Vegetation is uneven and rooted in the masonry, not a dense fantasy jungle. The cleared patch and remaining vegetation are adjacent in the same photograph.
+
+At the extreme foreground edge, only a small cropped detail of an anonymous guard's hands and plain dark wool coat cuffs may appear. No head or face and no identifying insignia. The guard is incidental; the workers and wall are the subject. The grandfather / Horatio Fogg is NOT in this scene: no grandfather figure, silhouette, reflection, portrait or implied identifiable stand-in.
+
+ABSOLUTE EXCLUSIONS:
+No visible faces anywhere, including profiles. No text, letters, numerals, signage, logos, watermark or date stamp. Do not reproduce carved numerals above archways. No modern objects, vehicles, electric equipment, plastic buckets, modern scaffolding, contemporary street furniture or tourist crowds. No colored image, illustration, painterly surface or theatrical composition. No added pigeon or other narrative prop from the Paris style reference.
+
+This is a new historically informed reconstruction for editorial review, not an authenticated archival photograph. Produce a complete new candidate; do not retouch or partially edit a previous generated image.
