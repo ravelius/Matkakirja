@@ -1,0 +1,76 @@
+{
+  "file": "sukharevin-torni-2313-max-original-8k.glb",
+  "bytes": 72986020,
+  "sha256": "d5be1c7d957f898cff0105bd49aedf0ef5e33961c71d4e6f88173d134e49926b",
+  "triangles": 1850493,
+  "vertices": 1061245,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_f8bebe5a-7e56-47e9-b2c9-9729940ab7cb",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1516939
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_06011be0-20f0-4c00-a60d-853cf1acd44c_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 13315494
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_06011be0-20f0-4c00-a60d-853cf1acd44c_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1985566
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.19313055276870728,
+      0,
+      -0.47857673466205597
+    ],
+    "max": [
+      0.19299322366714478,
+      0.981964111328125,
+      0.4790344685316086
+    ],
+    "dimensions": [
+      0.38612377643585205,
+      0.981964111328125,
+      0.9576112031936646
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}

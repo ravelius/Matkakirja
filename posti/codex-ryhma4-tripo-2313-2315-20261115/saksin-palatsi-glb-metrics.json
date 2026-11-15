@@ -1,0 +1,76 @@
+{
+  "file": "saksin-palatsi-2315-max-original-8k.glb",
+  "bytes": 74732384,
+  "sha256": "eaa637223b4dbeb5f3a1e6f6c48d436694f1d62eb169719fe2529743c4867711",
+  "triangles": 1926397,
+  "vertices": 1083791,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_0264bfa4-a510-4774-95b3-11bac6bbd42a",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1298223
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_20092b1d-6299-42e1-a2a2-bbb2d4fbfa53_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 13668747
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_20092b1d-6299-42e1-a2a2-bbb2d4fbfa53_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1965070
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.48928840458393097,
+      0,
+      -0.3069152534008026
+    ],
+    "max": [
+      0.4893799275159836,
+      0.1688079833984375,
+      0.30679330229759216
+    ],
+    "dimensions": [
+      0.9786683320999146,
+      0.1688079833984375,
+      0.6137085556983948
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}

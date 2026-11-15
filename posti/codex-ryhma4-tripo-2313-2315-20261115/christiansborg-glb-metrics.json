@@ -1,0 +1,76 @@
+{
+  "file": "christiansborg-2314-max-original-8k.glb",
+  "bytes": 76092556,
+  "sha256": "b6b504254b32991356ecb1838e7479362a5ab3f5c8f180da8b49b1dd6b8f151f",
+  "triangles": 1883022,
+  "vertices": 1101575,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_cd2a9a72-6ed5-4e1f-ae54-f51b655cad7c",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1102411
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_e530726d-0a6c-435c-85c4-a1fa38d5fc72_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 14581504
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_e530726d-0a6c-435c-85c4-a1fa38d5fc72_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 2559706
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.4888611286878586,
+      0,
+      -0.17919927090406418
+    ],
+    "max": [
+      0.48953254520893097,
+      0.2909393310546875,
+      0.1789703443646431
+    ],
+    "dimensions": [
+      0.9783936738967896,
+      0.2909393310546875,
+      0.3581696152687073
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}
