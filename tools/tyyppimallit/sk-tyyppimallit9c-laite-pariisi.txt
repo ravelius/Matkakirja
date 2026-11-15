@@ -1,5 +1,6 @@
 # Valoseppä 15.11.2026 kierros 9C LAITEAJO (vuorottelu pois|päällä ×2, 15 s; kierros 9:n yksi pari jäi kohinan alle 30 fps:n rajalla) iPadilla (KK 12.00 ehto 4): ruutuaika merkit pois | päällä samasta näkymästä (ui lasi mittaa 10 s, CPU/GPU FrameTimingManagerista).
 # Mittauksen ajan talot nousu 1: talokerros animoi, joten pallo ei lepää harvennettuna (kierros 9 Lontoo 10 fps PAIKALLAAN-tilassa); vertailu CPU- ja GPU-ajasta 30 fps:n LEPO-tahdissa.
+# Lisäksi merkit päällä ILMAN VARJOKIMPPUJA (ui kartanelama merkit varjot 0): GPU-nousun osuus varjoilla (KK 16.2x).
 # Ehto: ero ≤ 0,5 ms, lokissa "Shader error" 0. Talot = laitteen oletuspalat (Macin palat-merkit-kansiota ei laitteella); merkkien piirtohinta mitataan silti.
 alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
 ui konsoli pois
@@ -38,6 +39,12 @@ ui kartanelama merkit 1
 odota 4
 ui lasi mittaa 15 p5-merkit-paalla-2
 odota 17
+ui kartanelama merkit varjot 0
+odota 4
+ui lasi mittaa 15 p5-merkit-ilman-varjoja
+odota 17
+ui kartanelama merkit varjot 1
+odota 2
 ui kartanelama tila
 komento talot nousu pois
 linssi kaista
@@ -70,6 +77,12 @@ ui kartanelama merkit 1
 odota 4
 ui lasi mittaa 15 p9-merkit-paalla-2
 odota 17
+ui kartanelama merkit varjot 0
+odota 4
+ui lasi mittaa 15 p9-merkit-ilman-varjoja
+odota 17
+ui kartanelama merkit varjot 1
+odota 2
 ui kartanelama tila
 komento talot nousu pois
 linssi kaista

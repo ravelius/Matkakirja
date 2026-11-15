@@ -21,3 +21,13 @@ Pariisi: lataus 145 ms (taustasäie 102, pääsäie 43) / iPad 115 ms (99 / 15,6
 
 ## KK päättää
 - Junasana nykyisillä luvuilla (ehdot 1 setpass ja 4 ruutuaika jäävät 1036c2429:llä mittaamatta) TAI yksi yöajo VS9B (Mac + iPad 9c, valmiina; JU palauttaa PT:n perustelurivillä).
+
+## KK 16.2x: EI junasanaa → VS9B yöajoon; p5:n GPU-nousun syy koodista (ei ajettu)
+iPad p5 (laaja näkymä, 0,012): GPU 15,96 → 32,68 ms, ruutu 33,35 → 34,64 ms (289/300 ruutua). p9 (lähikuva): GPU 12,7 → 9,9 ms. Molemmat 30 fps:n LEPO-tahdissa (joka ruutu piirretään).
+Todennäköisin syy: VARJOKIMPUT. KovaVarjo = ZTest Always, Cull Off, kertova sekoitus; jokaisen rakennuksen kaikki varjokolmiot litistetään maahan päällekkäin
+(sapluuna estää kaksinkertaisen tummenemisen, mutta fragmentit lasketaan, ja sekoitus estää Apple-GPU:n piilopintojen poiston). Laajassa näkymässä koko kaupungin
+128 varjopalaa on ruudulla, joten ylipiirto on moninkertainen; lähikuvassa (p9) ruudulla on vain muutama varjo. Sama varjoverkko oli kierros 8:ssa paloittain, eli tämä ei tullut
+kimpuista, mutta sitä ei ole aiemmin mitattu laitteella. Muut: (b) mallien Forward-passi piirtää talojen päälle (syvyysveto 60 m), (c) mitään ei karsita näkökentän mukaan
+(worldBounds koko maailma, kuten kierros 8) — kumpikin pieni laajassa näkymässä verrattuna varjoihin.
+Erottelu samassa yöajossa: komento `ui kartanelama merkit varjot 0|1` (pelihaara, uusi sha) ja skenaario 9c-laite-pariisi mittaa p5:ssä ja p9:ssä myös "merkit päällä ilman varjoja".
+Jos varjot ovat syy: korjausehdotus = varjokimppu vain lähelle (palan etäisyys < ~1,5 km) tai kova varjo merkeiltä pois laajassa näkymässä; KK päättää luvuista.
