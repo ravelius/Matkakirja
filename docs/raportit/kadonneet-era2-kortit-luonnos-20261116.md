@@ -28,7 +28,7 @@ v2: KK:n päätökset 16.11. klo 01.21 (1–4) toteutettu; sivulta tarkistetut k
 ## 3. Paleis voor Volksvlijt: `aika: '1864–1929'`
 > Paleis voor Volksvlijt oli lasista ja raudasta rakennettu näyttelypalatsi Amsterdamin Frederiksplein-aukiolla. Esikuvana oli Lontoon Kristallipalatsi. Ajatuksen antoi lääkäri Samuel Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli sen. Palatsi avattiin 16. elokuuta 1864. Siellä pidettiin näyttelyitä, konsertteja sekä ooppera- ja teatteriesityksiä.
 >
-> Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Paikalla on nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.
+> Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Palatsin tontilla on nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.
 >
 > Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.
 - Sivulta luettu (ONH): avattu 16.8.1864, Outshoorn + Sarphati, "geïnspireerd op het Crystal Palace (1855) in Londen" (ONH) + nl-WP → Kristallipalatsi 2L. Palo huhtikuussa 1929 (ONH, AT, nl-WP, Ons Amsterdam); "muutamassa tunnissa" Ons Amsterdam (Becker 2011) + AT. DNB paikalla (ONH + nl-WP + AT).
