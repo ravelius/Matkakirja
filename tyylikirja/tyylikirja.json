@@ -272,6 +272,17 @@
       "nappi-reunus": "rgba(224, 224, 224, 0.15)",
       "nappi-kuvake": "rgba(240, 240, 240, 0.65)"
     },
+    "kartta": {
+      "_selite": "KARTAN LEIJUVAT NAPIT JA LAATIKOT yhtenä perheenä, \"+ henki\" (omistajan valinta 15.11.2026 klo 18.09, KK:n kortti; vertailuarkki NUI 00e28140d): paperi ilman varjoa, kynäviivareuna, kulma mitat.kulma.pieni. pinta = tekstiä kantava laatikko 0,55, pinta-kuvake = pelkkä kuvake 0,35; sisaviiva = tekstilaatikon hento sisäviiva 0,5 pt, 2 pt sisempänä; paperin kuitu ≤ 6 % (natiivi Pohjat/paperikuitu). Vain kartan päällä: ei yläpalkin nahkaa eikä kullattua päänappia.",
+      "pinta": "rgba(245, 240, 226, 0.55)",
+      "pinta-kuvake": "rgba(245, 240, 226, 0.35)",
+      "muste": "#46331f",
+      "muste-pehmea": "rgba(70, 51, 31, 0.45)",
+      "korostus": "#7a5514",
+      "reunus": "rgba(70, 51, 31, 0.3)",
+      "sisaviiva": "rgba(70, 51, 31, 0.18)",
+      "toiminto": "#d9a13b"
+    },
     "lcd": {
       "pinta": "#0c2214",
       "pinta-peitto": "#0c2214",
