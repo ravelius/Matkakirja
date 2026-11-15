@@ -12,3 +12,11 @@ Bourlan pystyleikkauksen paikka löytyi Chantelauze1884 kuvalaatasta6, mutta [t�
 **Kysymys KK:lle:** saako ensimmäinen mallikuva olla pystysuunnaltaan nimenomaisesti suuntaa antava rakennekoe (neljä lähteen mukaista holvattua salia +guette, ei ylimääräistä11m kerrosta), vai onko teillä ehjä Bourla-leikkaus tai valittu korkeusratkaisu? En lukitse ristiriitaista pystymittaa historialliseksi faktaksi. Teen sillä välin pohjaan perustuvan leikkausrakenteen.
 
 Leikkausperiaate: pystytaso NE–SW-kulmatornien keskilinjan kautta, säilytetään NW-puolikas. Näin keskipilarit ja NE-kierreportaat näkyvät leikattuina. Paikalliset akselit +Y=NNE32°, +X=ESE122°; koko rakennusta ei peilata. Ei keksittyä kalustusta, ei kellaria. Mallikuva hyväksytettävä edelleen ennen kumpaakaan enintään kahdesta Tripo-otosta. Tripo-krediittejä käytetty0.
+
+## Lisähuomio pohjan rekisteröinnistä (15.11. noin17.50)
+
+Riippumaton pohjakuvatarkistus löysi myös suunnanvarauksen: molemmissa huonepohjissa Petite Tour on kuvan vasemmalla ja kierreportaikko suuren tornin alavasemmassa kulmassa. Jos Petite-sivu sidotaan Curzonin pohjoiseen, portaikon sijoittaminen Curzonin NE:ksi ei onnistu pelkällä kierrolla. En peilaa pohjia tämän peittämiseksi. Leikkaus voidaan valita pohjapiirroksesta portaikon–vastakkaisen tornin läpi, mutta sen maantieteellinen rekisteröinti jää tässä vielä auki.
+
+Numeeriset sovitukset kirjataan arvioiksi: 13,50−2×2,27=8,96m, kun sisämitaksi ilmoitetaan9,10m. Ø5,50m tornit täsmälleen13,50m rungon kulmissa antaisivat19,00m ulkorajan, eivät19,50m. Näitä likiarvoja ei esitetä millimetrintarkkana yhteisenä mittasarjana.
+
+T7:lle on säilytetty alkuperäinen Curzonin sivukuva, Bourlan maantasopohja, molemmat huonepohjat, CC0ulkokuva, lähdeoikeudet ja tarkistussummat: output/tripo-halkaistu-koe-2243-20261115/sources/. Huoneväliseiniä ei kopioida samanlaisina kaikkiin kerroksiin; maantasossa käytetään lähteen paljasta neljän holvin salia ja keskipilaria. Katon/kerrosten pystysuunnan selvitys on edelleen avoin; mitään uutta Tripo-ottoa ei ole käynnistetty.
