@@ -13042,13 +13042,13 @@
   {
    "id": "lontoo:Vanha London Bridge",
    "nimi": "Vanha London Bridge",
-   "qid": "Q130206",
-   "lat": 51.50806,
-   "lon": -0.08778,
-   "lahde": "wikidata Q130206 P625 (tunniste nimi+säde: London Bridge)",
+   "qid": null,
+   "lat": 51.50808,
+   "lon": -0.08702,
+   "lahde": "kartan piste (käsin: Wikidatan piste 51.50806,-0.08778 on NYKYISEN London Bridgen paikka; keskiaikaisen sillan keskiviiva oli 43 m alavirtaan (SK 15.11.2026, toinen lähde 30–46 m), joten kartan piste = hologrammin kehyksen origo 51.50808,-0.08702.)",
    "kartanPiste": {
-    "lat": 51.50806,
-    "lon": -0.08778
+    "lat": 51.50808,
+    "lon": -0.08702
    },
    "eroKartanPisteesta_m": 0
   },

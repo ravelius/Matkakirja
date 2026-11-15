@@ -6162,19 +6162,22 @@ export const KAUPUNKIKARTAT = {
        * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
        * (omistajan päätös 2.9.2026 illalla).
        *
-       * −0,08778 E / 51,50806 N — en-Wikipedia "London Bridge"
-       * (tietolaatikon coordinates), sama luku kuin kohteen omassa
-       * pakissa (js/packs/fokuskohteet-gbr.js). Piste on nykyisen sillan
-       * paikka; keskiaikainen silta seisoi noin 30 metriä siitä itään,
-       * mikä ei erotu omaksi pisteekseen tälläkään kartalla. Piste on
-       * määritelmän mukaan vedellä — silta ylittää joen, ks.
+       * −0,08702 E / 51,50808 N — keskiaikaisen sillan keskikohta (siirretty
+       * 15.11.2026 KK:n päätöksellä: aiempi piste, en-Wikipedian "London
+       * Bridge" −0,08778 / 51,50806, oli nykyisen sillan paikka). Keskiviivojen
+       * väli nykyiseen siltaan 43 m alavirtaan (SK:n toinen lähde: 30–46 m;
+       * Maitland/Entick 1775 ja guidelondon.org.uk; docs/raportit/
+       * lontoo-kadonneet-mitat-toinen-lahde-20261115.md); piste on sama kuin
+       * hologrammin kehyksen origo (Kadonneet/lontoo.json, NSe erä A), jotta ✦
+       * ja noston hologrammi ovat samassa paikassa. Piste on määritelmän
+       * mukaan vedellä — silta ylittää joen, ks.
        * tools/tarkista-karttapisteet.mjs:n otsake.
        *
        * Juttu on kohteen OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
        */
       {
-        nimi: 'Vanha London Bridge', lat: 51.50806, lon: -0.08778,
+        nimi: 'Vanha London Bridge', lat: 51.50808, lon: -0.08702,
         nosto: 'vanha-london-bridge',
       },
       /*
