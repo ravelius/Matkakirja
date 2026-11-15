@@ -1,0 +1,101 @@
+{
+ "toleranssi_m2": 30.0,
+ "syvyys_m": 0.5,
+ "askel_m": 2.0,
+ "kaupungit": {
+  "pariisi": [
+   {
+    "osm": "way/1161318094",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "Gare de Lyon",
+    "vanha_ala": 1852.0
+   },
+   {
+    "osm": "way/280670907",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "",
+    "vanha_ala": 1956.0
+   },
+   {
+    "osm": "way/62380197",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "Gare d'Austerlitz",
+    "vanha_ala": 4856.0
+   },
+   {
+    "osm": "way/63197091",
+    "ala": 24.0,
+    "syvyys": 0.4,
+    "talot": [
+     [
+      "way/63195471",
+      24.0
+     ]
+    ],
+    "sisalla": {},
+    "nimi": "",
+    "vanha_ala": 156.0
+   },
+   {
+    "osm": "way/727994377",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {
+     "way/333443267": 52.0,
+     "way/333491873": 24.0,
+     "way/685588977": 12.0
+    },
+    "nimi": "Gare Saint-Lazare",
+    "vanha_ala": 13488.0
+   }
+  ],
+  "lontoo": [
+   {
+    "osm": "way/260720558",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "London King's Cross Railway Station",
+    "vanha_ala": 7608.0
+   },
+   {
+    "osm": "way/4256246",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "St Pancras International Station",
+    "vanha_ala": 11364.0
+   },
+   {
+    "osm": "way/4959629",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "",
+    "vanha_ala": 7724.0
+   },
+   {
+    "osm": "way/947381552",
+    "ala": 0.0,
+    "syvyys": 0.0,
+    "talot": [],
+    "sisalla": {},
+    "nimi": "London Paddington Railway Station",
+    "vanha_ala": 14068.0
+   }
+  ]
+ }
+}

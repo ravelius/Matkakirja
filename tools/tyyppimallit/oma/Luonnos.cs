@@ -28,10 +28,11 @@ namespace Matkakirja
                 int h = int.Parse(a[3]); float L = float.Parse(a[4], ci), W = float.Parse(a[5], ci);
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiAsema(h > 0 ? h : OhjelmaKohdeGeometria.AsemanHallit(W), L, W), 1500) };
             }
-            // Luonnos.dll <kansio> <nimi> malli <tyyppi> <a> <b> <c> <p0> <p1> [p2]: MK01-rivi kuten pelissä (OhjelmaKohdeGeometria.TyyppiMalli; KK 15.11. 01.13 arkki).
+            // Luonnos.dll <kansio> <nimi> malli <tyyppi> <a> <b> <c> <p0> <p1> [p2] [p3bitit] [varattu]: MK01-rivi kuten pelissä (OhjelmaKohdeGeometria.TyyppiMalli; KK 15.11. 01.13 arkki).
             if (a.Length >= 9 && a[2] == "malli")
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiMalli(int.Parse(a[3]), int.Parse(a[4]),
-                    int.Parse(a[5]), int.Parse(a[6]), float.Parse(a[7], ci), float.Parse(a[8], ci), a.Length >= 10 ? float.Parse(a[9], ci) : 0f), 1500) };
+                    int.Parse(a[5]), int.Parse(a[6]), float.Parse(a[7], ci), float.Parse(a[8], ci), a.Length >= 10 ? float.Parse(a[9], ci) : 0f,
+                    a.Length >= 11 ? uint.Parse(a[10]) : 0u, a.Length >= 12 ? uint.Parse(a[11]) : 0u), 1500) };
             // Luonnos.dll <kansio> <nimi> julkisivu <kupoli 0|1> <sx> <sz> [raskas]: julkisivukirkko kuten peli piirtää (runko venyy, kupoli min(sx, sz); KK 15.11. ehto a).
             if (a.Length >= 6 && a[2] == "julkisivu")
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiKirkkoJulkisivuKoko(a[3] != "0",
@@ -181,7 +182,7 @@ namespace Matkakirja
             {
                 var o = rivi.Split('\t'); if (o.Length < 8) continue;
                 int t = int.Parse(o[1]), a = int.Parse(o[2]), b = int.Parse(o[3]), c = int.Parse(o[4]);
-                var v = OhjelmaKohdeGeometria.TyyppiMalli(t, a, b, c, float.Parse(o[5], ci), float.Parse(o[6], ci), float.Parse(o[7], ci));
+                var v = OhjelmaKohdeGeometria.TyyppiMalli(t, a, b, c, float.Parse(o[5], ci), float.Parse(o[6], ci), float.Parse(o[7], ci), o.Length > 8 ? uint.Parse(o[8]) : 0u, o.Length > 9 ? uint.Parse(o[9]) : 0u);
                 var osa = OhjelmaKohdeGeometria.TyyppiLisaosa(t, a, out float ox, out float oy);
                 if (osa != null) v = OhjelmaKohdeGeometria.TyYhdista(v, 1f, 1f, osa, ox, oy);
                 sb.Append("malli\t").Append(o[0]).Append('\t').Append(v.Kolmioita).Append('\t').Append(H(v)).Append('\n');

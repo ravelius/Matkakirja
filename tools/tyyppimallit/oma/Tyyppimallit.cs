@@ -346,27 +346,52 @@ namespace Matkakirja
 
         public static Verkko TyyppiAsema(int halleja = 1, float pituus = 156f, float leveys = 60f, int katto = 0)
         {
+            // Vanha malli (ei leikkausta): julkisivu x = −16 … 0, hallit 0 … pituus − 16 kaikilla kaistoilla, julkisivu 2 m leveämpi kummaltakin sivulta.
+            var alku = new float[halleja]; var loppu = new float[halleja]; var jul = new bool[halleja];
+            for (int h = 0; h < halleja; h++) { alku[h] = 0f; loppu[h] = pituus - 16f; jul[h] = true; }
+            return TyAsema(halleja, leveys, alku, loppu, jul, 2f, katto);
+        }
+
+        /// <summary>ASEMA KAISTOITTAIN (KK 15.11. 06.20 päätös B: hallit pohjan sisään). Kaista h: z = −leveys/2 + h · leveys/halleja …, hallikatto
+        /// alku[h] … loppu[h] (mukana, jos loppu &gt; alku). julkisivu[h]: julkisivurakennus (16 m) kaistan eteen x = alku − 16 … alku ja holvi alkaa
+        /// alku − 1; muilla kaistoilla lasipääty molemmissa päissä. Julkisivu kattaa kaistat j0…j1 (ensimmäinen … viimeinen julkisivukaista) ja on
+        /// lisa m leveämpi kummaltakin sivulta (vanha malli 2, uusi 0); kellopääty keskimmäisen julkisivukaistan kohdalla. Sivuseinät kaistoittain
+        /// (vierekkäiset samanmittaiset kaistat yhtenä laatikkona).</summary>
+        public static Verkko TyAsema(int halleja, float leveys, float[] alku, float[] loppu, bool[] julkisivu, float lisa, int katto)
+        {
             var r = TyRakentaja();
             var (vHalli, vLasi, vPuite) = AsemanVarit(katto);
             const float Pii = (float)Math.PI;
-            float fx0 = -16f, fx1 = 0f, hx0 = 0f, hx1 = pituus - 16f, hy = 9f, hl = leveys / halleja, hz = hl * 0.5f, nousu = Math.Min(18f, hl * 0.3f);
-            // KK 14.11. 23.40 E: julkisivurakennus vähintään 0,8 × hallin harjakorkeus, kellopääty harjan yli (keskimmäisen hallin kohdalla).
-            float harja = hy + nousu, fz = leveys * 0.5f + 2f, fy = Math.Max(20f, 0.8f * harja), rivi = Math.Max(14f, hx1 / 10f);
+            float hy = 9f, hl = leveys / halleja, hz = hl * 0.5f, nousu = Math.Min(18f, hl * 0.3f), harja = hy + nousu;
+            float Z(int k) => k == 0 ? -leveys * 0.5f : k == halleja ? leveys * 0.5f : -leveys * 0.5f + k * hl;
+            bool Mukana(int k) => loppu[k] > alku[k];
+            int j0 = -1, j1 = -1;
+            for (int h = 0; h < halleja; h++) if (Mukana(h) && julkisivu[h]) { if (j0 < 0) j0 = h; j1 = h; }
+            // Sivuseinät: vierekkäiset kaistat, joilla sama alku ja loppu (julkisivukaistoilla alku − 1 ei vaikuta), yhtenä laatikkona.
+            for (int h = 0; h < halleja; )
+            {
+                if (!Mukana(h)) { h++; continue; }
+                int e = h + 1;
+                while (e < halleja && Mukana(e) && alku[e] == alku[h] && loppu[e] == loppu[h]) e++;
+                TySeinat(r, alku[h], loppu[h], Z(h), Z(e), 0f, hy, TyKiviVarjo);
+                h = e;
+            }
             const int K = 10;
-            TySeinat(r, hx0, hx1, -leveys * 0.5f, leveys * 0.5f, 0f, hy, TyKiviVarjo);
             for (int h = 0; h < halleja; h++)
             {
-                float zc = -leveys * 0.5f + hz + h * hl;
+                if (!Mukana(h)) continue;
+                float zc = -leveys * 0.5f + hz + h * hl, hx0 = alku[h], hx1 = loppu[h], xa = julkisivu[h] ? hx0 - 1f : hx0, rivi = Math.Max(14f, (hx1 - hx0) / 10f);
                 P3 Kaari(float x, int j) { float a = Pii * j / K; return new P3(x, hy + nousu * (float)Math.Sin(a), zc + hz * (float)Math.Cos(a)); }
                 for (int j = 0; j < K; j++)
                 {
                     var v = (j == K / 2 - 1 || j == K / 2) ? vLasi : vHalli;
-                    var a0 = Kaari(hx0 - 1f, j); var a1 = Kaari(hx1, j); var b1 = Kaari(hx1, j + 1); var b0 = Kaari(hx0 - 1f, j + 1);
+                    var a0 = Kaari(xa, j); var a1 = Kaari(hx1, j); var b1 = Kaari(hx1, j + 1); var b0 = Kaari(xa, j + 1);
                     var keski = Kaari(0f, j); var nn = new P3(0f, keski.Y - hy + 0.01f, keski.Z - zc);
                     r.Neli(a0, a1, b1, b0, v, nn);
                     r.Kolmio(new P3(hx1, hy, zc), Kaari(hx1, j), Kaari(hx1, j + 1), vLasi, new P3(1f, 0f, 0f));
+                    if (!julkisivu[h]) r.Kolmio(new P3(hx0, hy, zc), Kaari(hx0, j), Kaari(hx0, j + 1), vLasi, new P3(-1f, 0f, 0f));
                 }
-                for (float x = rivi; x < hx1; x += rivi)
+                for (float x = hx0 + rivi; x < hx1; x += rivi)
                     for (int j = 0; j < K; j++)
                     {
                         var a = Kaari(x, j); var b = Kaari(x, j + 1); var no = new P3(0f, a.Y - hy + 0.01f, a.Z - zc);
@@ -375,16 +400,23 @@ namespace Matkakirja
                         r.Neli(Ul(a, -0.5f), Ul(a, 0.5f), Ul(b, 0.5f), Ul(b, -0.5f), vPuite, no);
                     }
             }
-            r.Laatikko(fx0, fx1, 0f, fy, -fz, fz, TyKivi, TyKatto);
-            r.Katto(fx0, fx1, -fz + 10f, fz - 10f, new[] { (0f, 0f, fy), (2.5f, 2.5f, fy + 4f) }, TyKatto, TyKatto);
+            if (j0 < 0) return r.Valmis();
+            // KK 14.11. 23.40 E: julkisivurakennus vähintään 0,8 × hallin harjakorkeus, kellopääty harjan yli (keskimmäisen julkisivuhallin kohdalla).
+            // Koko leveys: zf = 0 ja fz = leveys/2 + lisa suoraan (vanha malli tavulleen sama), muuten julkisivukaistojen väli.
+            float fx1 = alku[j0], fx0 = fx1 - 16f, zf, fz;
+            if (j0 == 0 && j1 == halleja - 1) { zf = 0f; fz = leveys * 0.5f + lisa; }
+            else { float zlo = Z(j0), zhi = Z(j1 + 1); zf = (zlo + zhi) * 0.5f; fz = (zhi - zlo) * 0.5f + lisa; }
+            float fy = Math.Max(20f, 0.8f * harja);
+            r.Laatikko(fx0, fx1, 0f, fy, zf - fz, zf + fz, TyKivi, TyKatto);
+            r.Katto(fx0, fx1, zf - fz + 10f, zf + fz - 10f, new[] { (0f, 0f, fy), (2.5f, 2.5f, fy + 4f) }, TyKatto, TyKatto);
             foreach (float s in new[] { -1f, 1f })
             {
-                float zc = s * (fz - 5f);
+                float zc = zf + s * (fz - 5f);
                 r.Laatikko(fx0 - 1f, fx0 + 10f, 0f, fy + 6f, zc - 5.5f, zc + 5.5f, TyKivi, TyKatto);
                 r.Pyora(fx0 + 4.5f, zc, new[] { (5.5f * 1.4142f, fy + 6f), (0f, fy + 13f) }, 4, TyKatto, 0.7854f);
             }
-            // Kellopääty: keskimmäisen hallin edessä julkisivusta 1,5 m ulos, räystäs harjan yli, kolmiopääty ja kello päädyssä (alareuna harjan yläpuolella).
-            int hm = halleja / 2;
+            // Kellopääty: keskimmäisen julkisivuhallin edessä julkisivusta 1,5 m ulos, räystäs harjan yli, kolmiopääty ja kello päädyssä (alareuna harjan yläpuolella).
+            int hm = j0 + (j1 - j0 + 1) / 2;
             float zg = -leveys * 0.5f + hz + hm * hl, wg = Math.Min(hl * 0.7f, 34f), yg = Math.Max(fy + 3f, harja + 1.5f), gx = fx0 - 1.5f, gt = wg * 0.28f;
             r.Laatikko(gx, fx0 + 6f, 0f, yg, zg - wg * 0.5f, zg + wg * 0.5f, TyKivi, TyKatto);
             foreach (float px in new[] { gx, fx0 + 6f })
@@ -394,20 +426,21 @@ namespace Matkakirja
             var gs = r.S(gx, zg - wg * 0.5f, gx, zg + wg * 0.5f);
             float ks = Math.Min(3.2f, wg * 0.1f);
             OsaKellotaulu(r, gs, wg * 0.5f, Math.Max(yg - 0.5f, harja + 1.15f * ks + 0.5f), ks, TyTaulu, TyRauta, TyViisari);
-            var j0 = r.S(fx0, -fz + 11f, fx0, fz - 11f);   // länsijulkisivu (kasvot −x); u kasvaa +z:sta −z:aan? (Seina a → b)
-            float L = j0.Pituus, kaari = Math.Min(8f, hl * 0.27f);
-            for (int h = 0; h < halleja; h++)
+            var js = r.S(fx0, zf - fz + 11f, fx0, zf + fz - 11f);   // julkisivu (kasvot −x)
+            float L = js.Pituus, kaari = Math.Min(8f, hl * 0.27f);
+            for (int h = j0; h <= j1; h++)
             {
-                float u = (fz - 11f) - (-leveys * 0.5f + hz + h * hl);   // hallin keskiviiva julkisivun koordinaatissa
+                if (!Mukana(h) || !julkisivu[h]) continue;
+                float u = (zf + fz - 11f) - (-leveys * 0.5f + hz + h * hl);   // hallin keskiviiva julkisivun koordinaatissa
                 if (h == hm) { gs.Pinta(wg * 0.5f - kaari, wg * 0.5f + kaari, 0f, 10f, 0.06f, TyAukko); gs.KaariTayte(wg * 0.5f, 10f, kaari, 0.06f, vLasi, 8); continue; }
                 if (u < kaari + 1f || u > L - kaari - 1f) continue;
-                j0.Pinta(u - kaari, u + kaari, 0f, 10f, 0.06f, TyAukko);
-                j0.KaariTayte(u, 10f, kaari, 0.06f, vLasi, 8);
+                js.Pinta(u - kaari, u + kaari, 0f, 10f, 0.06f, TyAukko);
+                js.KaariTayte(u, 10f, kaari, 0.06f, vLasi, 8);
             }
             for (int i = 0; i < 4; i++)
             {
                 float u1 = 4f + i * 3.6f, u2 = L - 4f - i * 3.6f;
-                foreach (float u in new[] { u1, u2 }) { j0.Pinta(u - 1.1f, u + 1.1f, 0f, 4.5f, 0.05f, TyAukko); j0.KaariTayte(u, 4.5f, 1.1f, 0.05f, TyAukko, 4); j0.Pinta(u - 0.8f, u + 0.8f, 8f, 12f, 0.05f, TyAukko); }
+                foreach (float u in new[] { u1, u2 }) { js.Pinta(u - 1.1f, u + 1.1f, 0f, 4.5f, 0.05f, TyAukko); js.KaariTayte(u, 4.5f, 1.1f, 0.05f, TyAukko, 4); js.Pinta(u - 0.8f, u + 0.8f, 8f, 12f, 0.05f, TyAukko); }
             }
             return r.Valmis();
         }
@@ -711,10 +744,32 @@ namespace Matkakirja
             return r.Valmis();
         }
 
+        /// <summary>MK01 tyyppi 7 (KK 15.11. 06.20 päätös B; työkalun hallit.py): a = halleja (bitit 0–2) | julkisivukaistat (bitti 3 + k);
+        /// kaistan k alku ja loppu u8:na tavuissa T[2k], T[2k + 1], T = {b, c, p3:n 4 tavua LE, varattu-kentän 4 tavua LE}; x = −L/2 + q · L/255,
+        /// kaista mukana jos loppu &gt; alku. Kaikki tavut 0 = vanha malli (TyyppiAsema, hallien määrä leveydestä jos a = 0).</summary>
+        public static Verkko MalliAsema(int a, int b, int c, float pituus, float leveys, int katto, uint p3Bitit, uint varattu)
+        {
+            int h = a & 7, jb = a >> 3;
+            if (b == 0 && c == 0 && p3Bitit == 0 && varattu == 0) return TyyppiAsema(h > 0 ? h : AsemanHallit(leveys), pituus, leveys, katto);
+            if (h < 1) return null;
+            h = Math.Min(h, 5);
+            var T = new int[10];
+            T[0] = b & 255; T[1] = c & 255;
+            for (int i = 0; i < 4; i++) { T[2 + i] = (int)((p3Bitit >> (8 * i)) & 255); T[6 + i] = (int)((varattu >> (8 * i)) & 255); }
+            var alku = new float[h]; var loppu = new float[h]; var jul = new bool[h];
+            for (int k = 0; k < h; k++)
+            {
+                int qa = T[2 * k], ql = T[2 * k + 1];
+                alku[k] = -pituus * 0.5f + qa * pituus / 255f; loppu[k] = ql > qa ? -pituus * 0.5f + ql * pituus / 255f : alku[k];
+                jul[k] = ((jb >> k) & 1) != 0;
+            }
+            return TyAsema(h, leveys, alku, loppu, jul, 0f, katto);
+        }
+
         /// <summary>MK01-tiedoston mallirivi verkoksi (työkalun vie.py; MerkkiTiedosto.Malli). Tyypit 1–4, 8 ja 9 jaettuja (instanssi, venytys), 5–7 pohjan mitoista.
         /// Sivukoodi 0 ei, 1 +x, 2 −x, 3 +z, 4 −z. c: tyyppi 5 portiikki vain päädyssä 0/1, tyyppi 6 katto 0 mansardi / 1 attika; tyyppi 6 p2 = seinän sRGB 0xRRGGBB, tyyppi 7 p2 = kaupungin kattoväri sRGB 0xRRGGBB
         /// (f32 kokonaislukuna, 0 = oletuskivi). Tuntematon tyyppi = null.</summary>
-        public static Verkko TyyppiMalli(int tyyppi, int a, int b, int c, float p0, float p1, float p2 = 0f)
+        public static Verkko TyyppiMalli(int tyyppi, int a, int b, int c, float p0, float p1, float p2 = 0f, uint p3Bitit = 0, uint varattu = 0)
         {
             string[] paikka = { "lansi", "risteys" }, huippu = { "pyramidi", "neula", "tasakatto" }, sivu = { "", "+x", "-x", "+z", "-z" };
             string Sivu(int k) => k >= 0 && k < sivu.Length ? sivu[k] : "";
@@ -726,7 +781,7 @@ namespace Matkakirja
                 case 4: return TyyppiKupolikirkko(a != 0);
                 case 5: return TyyppiPylvastemppeli(p0, p1, a > 0 ? a : 8, b != 0, c == 1);
                 case 6: return TyyppiPalatsiPiha(p0, p1, a > 0 ? Sivu(a) : "+z", Sivu(b), 16f, c == 1 ? "attika" : "mansardi", p2 > 0f && p2 <= 0xFFFFFF ? (int)p2 : 0);
-                case 7: return TyyppiAsema(a > 0 ? a : AsemanHallit(p1), p0, p1, p2 > 0f && p2 <= 0xFFFFFF ? (int)p2 : 0);
+                case 7: return MalliAsema(a, b, c, p0, p1, p2 > 0f && p2 <= 0xFFFFFF ? (int)p2 : 0, p3Bitit, varattu);
                 case 8: return TyyppiKirkkoLevea(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
                 case 9: return TyyppiKirkkoBasilika(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
                 case 10: return TyyppiKirkkoJulkisivu(a != 0);

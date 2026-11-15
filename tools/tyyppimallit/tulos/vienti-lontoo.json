@@ -7,7 +7,7 @@
  "merkkeja": 429,
  "malleja": 23,
  "tavua": 10880,
- "sha256": "91949e6641936dea7ec3bfc86bee2be553270aeb6549454a194a212bf606ed7c",
+ "sha256": "e5cb3e6021c5f835d7a8d15a1497eadcfab125919b707fa991e642ff8343e96d",
  "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
  "maa_laskut": {
   "pisteita": 429,
@@ -456,6 +456,129 @@
   "way/99275231",
   "way/99379811",
   "way/998407660"
+ ],
+ "asemat": [
+  {
+   "osm": "way/260720558",
+   "nimi": "London King's Cross Railway Station",
+   "akseli": 2.3,
+   "poikkeama": 0.0,
+   "siirto": [
+    0.03,
+    0.01
+   ],
+   "pituus": 256.3,
+   "leveys": 164.1,
+   "halleja": 2,
+   "julkisivu": [
+    0
+   ],
+   "kaistat": [
+    [
+     -104.0,
+     120.1
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/4256246",
+   "nimi": "St Pancras International Station",
+   "akseli": 334.8,
+   "poikkeama": -2.5,
+   "siirto": [
+    -2.09,
+    -2.52
+   ],
+   "pituus": 447.6,
+   "leveys": 125.1,
+   "halleja": 4,
+   "julkisivu": [
+    1,
+    2
+   ],
+   "kaistat": [
+    [
+     -6.1,
+     222.0
+    ],
+    [
+     -202.7,
+     222.0
+    ],
+    [
+     -202.7,
+     222.0
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/4959629",
+   "nimi": "",
+   "akseli": 18.7,
+   "poikkeama": 0.0,
+   "siirto": [
+    -0.03,
+    -0.05
+   ],
+   "pituus": 239.2,
+   "leveys": 119.5,
+   "halleja": 5,
+   "julkisivu": [
+    1,
+    2,
+    3
+   ],
+   "kaistat": [
+    null,
+    [
+     -84.0,
+     117.7
+    ],
+    [
+     -84.0,
+     117.7
+    ],
+    [
+     -84.0,
+     117.7
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/947381552",
+   "nimi": "London Paddington Railway Station",
+   "akseli": 324.7,
+   "poikkeama": 6.5,
+   "siirto": [
+    1.36,
+    -1.29
+   ],
+   "pituus": 356.0,
+   "leveys": 153.3,
+   "halleja": 5,
+   "julkisivu": [
+    3
+   ],
+   "kaistat": [
+    null,
+    [
+     -126.3,
+     73.3
+    ],
+    [
+     -141.7,
+     71.9
+    ],
+    [
+     -157.0,
+     67.7
+    ],
+    null
+   ]
+  }
  ],
  "asemien_kattovari": {
   "srgb": "#A88C74",

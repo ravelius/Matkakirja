@@ -7,7 +7,7 @@
  "merkkeja": 271,
  "malleja": 25,
  "tavua": 7136,
- "sha256": "f5344dd0f2c06bdfb6f82425bfc7c52fe2d66e3b34f17b8de318ae408c25ddd6",
+ "sha256": "13717a05a3241c46ca464fa7c2feae1d5021f9232c708fca0cd047d51a3c046b",
  "maa": "ei (kartta tasainen: peli kuten puut)",
  "maa_laskut": {
   "pisteita": 0,
@@ -300,6 +300,184 @@
   "way/94236417",
   "way/95860808",
   "way/95869425"
+ ],
+ "asemat": [
+  {
+   "osm": "way/1161318094",
+   "nimi": "Gare de Lyon",
+   "akseli": 128.7,
+   "poikkeama": 0.0,
+   "siirto": [
+    0.02,
+    -0.03
+   ],
+   "pituus": 217.4,
+   "leveys": 181.0,
+   "halleja": 5,
+   "julkisivu": [
+    0,
+    1,
+    2
+   ],
+   "kaistat": [
+    [
+     -72.0,
+     107.0
+    ],
+    [
+     -72.0,
+     107.0
+    ],
+    [
+     -72.0,
+     102.7
+    ],
+    [
+     49.0,
+     102.7
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/280670907",
+   "nimi": "",
+   "akseli": 291.5,
+   "poikkeama": 0.0,
+   "siirto": [
+    -0.03,
+    -0.01
+   ],
+   "pituus": 202.6,
+   "leveys": 114.4,
+   "halleja": 4,
+   "julkisivu": [
+    1,
+    2
+   ],
+   "kaistat": [
+    [
+     -44.9,
+     26.6
+    ],
+    [
+     -71.1,
+     97.3
+    ],
+    [
+     -71.1,
+     83.0
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/62380197",
+   "nimi": "Gare d'Austerlitz",
+   "akseli": 149.8,
+   "poikkeama": -4.0,
+   "siirto": [
+    2.88,
+    1.71
+   ],
+   "pituus": 282.1,
+   "leveys": 130.2,
+   "halleja": 5,
+   "julkisivu": [
+    1,
+    2
+   ],
+   "kaistat": [
+    [
+     30.4,
+     138.8
+    ],
+    [
+     -122.3,
+     138.8
+    ],
+    [
+     -122.3,
+     138.8
+    ],
+    [
+     -70.3,
+     30.4
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/63197091",
+   "nimi": "",
+   "akseli": 17.0,
+   "poikkeama": 0.0,
+   "siirto": [
+    0.0,
+    -0.02
+   ],
+   "pituus": 185.2,
+   "leveys": 136.8,
+   "halleja": 5,
+   "julkisivu": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "kaistat": [
+    [
+     -65.0,
+     88.2
+    ],
+    [
+     -65.0,
+     88.2
+    ],
+    [
+     -65.0,
+     89.0
+    ],
+    [
+     -65.0,
+     89.0
+    ],
+    null
+   ]
+  },
+  {
+   "osm": "way/727994377",
+   "nimi": "Gare Saint-Lazare",
+   "akseli": 336.3,
+   "poikkeama": -4.5,
+   "siirto": [
+    -1.94,
+    -7.09
+   ],
+   "pituus": 250.1,
+   "leveys": 250.7,
+   "halleja": 5,
+   "julkisivu": [
+    1,
+    2
+   ],
+   "kaistat": [
+    null,
+    [
+     -83.9,
+     110.4
+    ],
+    [
+     -83.9,
+     98.6
+    ],
+    [
+     -88.8,
+     86.8
+    ],
+    null
+   ]
+  }
  ],
  "asemien_kattovari": {
   "srgb": "#949EAA",

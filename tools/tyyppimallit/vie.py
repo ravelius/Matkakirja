@@ -8,12 +8,16 @@ python3 -I vie.py <kaupunki> <ulos.bytes> [--merkit tulos/merkit-<k>.json] [--mo
 
 TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs):
   otsake 32 t:  "MK01" | u16 malleja | u16 liput (bit 0 = maa merkeissä) | u32 merkkejä | u32 varattu | f64 origo lat | f64 origo lon
-  malli 24 t:   u8 tyyppi | u8 a | u8 b | u8 c | f32 p0 | f32 p1 | f32 p2 | f32 p3 | u32 varattu
+  malli 24 t:   u8 tyyppi | u8 a | u8 b | u8 c | f32 p0 | f32 p1 | f32 p2 | f32 p3 (tyyppi 7: u32 bitteinä) | u32 varattu
      tyyppi 1 kirkko-pieni, 2 kirkko-keski (a = torni_paikka 0 länsi / 1 risteys, b = torneja, c = huippu 0 pyramidi / 1 neula / 2 tasakatto),
             3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1, c = portiikki vain päädyssä 0/1),
             6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
                           p2 = seinän sRGB 0xRRGGBB f32-kokonaislukuna (0 = oletuskivi; parametri 'seina' SEINA-taulusta)
-            7 asema (a = halleja, p0 pituus, p1 leveys, p2 = kaupungin kattoväri sRGB 0xRRGGBB; kattovari(): KK 15.11. 05.22)
+            7 asema (p0 pituus L, p1 leveys W, p2 = kaupungin kattoväri sRGB 0xRRGGBB; kattovari(): KK 15.11. 05.22). Hallit pohjan sisään
+                    (KK 15.11. 06.20 päätös B; hallit.py): a = halleja (bitit 0–2) | julkisivukaistat << 3; kaistan k alku ja loppu u8:na tavuissa
+                    T[2k], T[2k+1], T = [b, c, p3:n 4 RAAKAA tavua, varattu-kentän 4 tavua] (LE); x = −L/2 + q · L/255, kaista mukana jos loppu > alku.
+                    Mallin keskipiste = pohjan suorakaiteen keskipiste kulman kehyksessä (merkin x z siirretty), akseli = hallien akseli (julkisivu −x
+                    kohti origoa). Kaikki tavut 0 = vanha malli (peli TyyppiAsema).
             8 kirkko-levea, 9 kirkko-basilika (a b c kuten 2; KK 15.11. 00.28 ja 01.14)
             10 kirkko-julkisivu (tornitön, KK 15.11.; a = kupoli 0/1: peli piirtää kupolin lisäosana tasaisella min(sx, sz); vain nimilistalta)
      Tyypit 1–4 ja 8–10 ovat jaettuja verkkoja (instanssi, venytys sx sz); 5–7 rakennetaan pohjan mitoista (sx = sz = 1) ja leivotaan yhdeksi verkoksi.
@@ -22,6 +26,8 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
                 | u16 sx | u16 sz (×0,001) | u16 varattu | i32 osm (way > 0, relation < 0)
 """
 import json, math, os, struct, sys, hashlib
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hallit
 
 TY = os.path.dirname(os.path.abspath(__file__))
 TAULU = '/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/vaihtelu-20261114/taulu-uusi.json'
@@ -87,7 +93,12 @@ def alueella(k, merkit):
 
 
 def malli(m):
-    """(avain, rivi): sama avain = sama verkko."""
+    """(avain, rivi): sama avain = sama verkko. Rivi = (tyyppi, a, b, c, p0, p1, p2, p3:n 4 tavua, varattu)."""
+    r = _malli(m)
+    return r if len(r) == 9 else r[:7] + (struct.pack('<f', r[7]), 0)
+
+
+def _malli(m):
     t, k, p = m['tyyppi'], m['koko'], m['parametrit'] or {}
     ty = TYYPPI[(t, k)]
     if t == 'kirkko' and k == 'julkisivu': return (ty, 1 if p.get('kupoli') else 0, 0, 0, 0.0, 0.0, 0.0, 0.0)   # kupoli vain lähde + Commons-kuva
@@ -100,7 +111,9 @@ def malli(m):
         return (ty, 8 if p.get('portiikki') or not attika else 10, 0 if attika else 1, 1 if p.get('portiikki') else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     if t == 'palatsi':
         return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 1 if p.get('katto') == 'attika' else 0, float(m['pituus']), float(m['leveys']), float(SEINA[p.get('seina')]), 0.0)
-    if t == 'asema': return (ty, int(p['halleja']), 0, 0, float(m['pituus']), float(m['leveys']), float(KATTOVARI[0]), 0.0)
+    if t == 'asema':
+        r = m['_hallit']
+        return (ty, r['a'], r['b'], r['c'], float(r['pituus']), float(r['leveys']), float(KATTOVARI[0]), struct.pack('<I', r['p3_bitit']), r['varattu'])
     raise ValueError(t)
 
 
@@ -158,11 +171,19 @@ def main(a):
             maa_lkm['pisteita'] += 1
             return min(hs) if hs else None
 
-    mallit, rivit, merkit_b, puuttuu = {}, [], [], []
+    mallit, rivit, merkit_b, puuttuu, asemat = {}, [], [], [], []
     for m in ms:
+        x, z = enu(*m['keski'])
+        if m['tyyppi'] == 'asema':
+            # KK 15.11. 06.20 B: hallit pohjan sisään (hallit.py), julkisivu (−x) kohti origoa; merkki pohjan suorakaiteen keskelle.
+            m['_hallit'] = hallit.laske(m, (-x, -z))
+            x, z = x + m['_hallit']['siirto'][0], z + m['_hallit']['siirto'][1]
+            asemat.append(dict(osm=m['osm'], nimi=m.get('nimi'), akseli=round(m['_hallit']['akseli'], 2), poikkeama=m['_hallit']['poikkeama'],
+                               siirto=[round(v, 2) for v in m['_hallit']['siirto']], pituus=round(m['_hallit']['pituus'], 1), leveys=round(m['_hallit']['leveys'], 1),
+                               halleja=m['_hallit']['halleja'], julkisivu=m['_hallit']['julkisivu'],
+                               kaistat=[None if a_ is None else [round(a_, 1), round(b_, 1)] for a_, b_ in zip(m['_hallit']['alku'], m['_hallit']['loppu'])]))
         r = malli(m)
         if r not in mallit: mallit[r] = len(rivit); rivit.append(r)
-        x, z = enu(*m['keski'])
         y = 0
         if maa:
             v = maa(m)
@@ -171,7 +192,7 @@ def main(a):
         inst = (m['tyyppi'], m['koko']) in {('kirkko', 'pieni'), ('kirkko', 'keski'), ('kirkko', 'levea'), ('kirkko', 'basilika'), ('kirkko', 'suuri'), ('kirkko', 'julkisivu'), ('kupolikirkko', 'keski')}
         sx = m['sx'] if inst and m['sx'] else 1.0; sz = m['sz'] if inst and m['sz'] else 1.0
         if inst and m['sovitus'] == 'luonnollinen': sx = sz = m['mittakaava']
-        merkit_b.append([x, z, y, mallit[r], akseli(m), sx, sz, osm_luku(m['osm'])])
+        merkit_b.append([x, z, y, mallit[r], m['_hallit']['akseli'] if m['tyyppi'] == 'asema' else akseli(m), sx, sz, osm_luku(m['osm'])])
     # Puuttuva maa (laatta ei välimuistissa): lähimmän tunnetun merkin maa.
     tunnetut = [b for b in merkit_b if not (isinstance(b[2], float) and math.isnan(b[2]))]
     for b in merkit_b:
@@ -180,7 +201,7 @@ def main(a):
 
     liput = 1 if maa else 0
     out = bytearray(b'MK01' + struct.pack('<HHII', len(rivit), liput, len(merkit_b), 0) + struct.pack('<dd', lat0, lon0))
-    for r in rivit: out += struct.pack('<BBBBffffI', *r, 0)
+    for r in rivit: out += struct.pack('<BBBBfff', *r[:7]) + r[7] + struct.pack('<I', r[8])
     for x, z, y, mi, ak, sx, sz, oid in merkit_b:
         out += struct.pack('<ffhHHHHHi', x, z, int(round(y / 0.25)) if maa else 0, mi, int(round(ak * 100)) % 36000,
                            int(round(sx * 1000)), int(round(sz * 1000)), 0, oid)
@@ -193,6 +214,7 @@ def main(a):
                  maa_laskut=maa_lkm, lahde=os.path.abspath(mpolku), lahde_sha256=hashlib.sha256(open(mpolku, 'rb').read()).hexdigest(),
                  tyypit=dict(Counter(f"{m['tyyppi']}-{m['koko']}" for m in ms)), ei_sovi_alueella=len(alueella(k, [m for m in kaikki if m['ei_sovi']])),
                  poisOsm=[m['osm'] for m in ms])
+    tieto['asemat'] = asemat
     tieto['asemien_kattovari'] = {'srgb': f'#{KATTOVARI[0]:06X}', 'lahde': KATTOVARI[1]}
     json.dump(tieto, open(os.path.join(TY, 'tulos', f'vienti-{k}.json'), 'w'), ensure_ascii=False, indent=1)
     print(k, {a_: b for a_, b in tieto.items() if a_ != 'poisOsm'})
