@@ -3,7 +3,7 @@
 // +Y ylös, x = pitkä akseli (+x itään, kuori), z = leveys. Luonnoksessa pohja on suorakaide; lopullisessa seinät nousevat OSM-pohjasta ja tyyppi
 // tuo vain katon, tornin ja julkisivun. Kolmiorajat (KK 21.2x): pieni ~400, keski 900, suuri 1 500.
 // Osat ovat olemassa olevasta kirjastosta (Rakentaja, Seina, Sivut, Rengas, Viisari, OsaSeinaRytmi, OsaKaarikaytava); uudet apufunktiot (Ty*) ovat
-// ehdokkaita yhteisiksi osiksi (OsaTorni, OsaHuippu, OsaTukipilari, OsaKellotaulu), jotka irrotetaan vasta luonnosten hyväksynnän jälkeen.
+// irrotettu osakirjastoon (OhjelmaKohdeOsat.cs: OsaTorni, OsaTukipilarit, OsaKellotaulu; OsaKupoli/OsaRumpu sivuja-parametri; KK 15.11. 06.15).
 using System;
 using System.Collections.Generic;
 
@@ -47,65 +47,6 @@ namespace Matkakirja
             const float Pii = (float)Math.PI;
             r.Pyora(x0, zc, new[] { (sade, 0f), (sade, y) }, sivuja, kivi, Pii / 2f, Pii, 1f, false);
             r.Pyora(x0, zc, new[] { (sade + 0.6f, y - 0.4f), (0f, y + h) }, sivuja, katto, Pii / 2f, Pii, 1f, false);
-        }
-
-        /// <summary>TORNI (ehdokas OsaTorni): neliörunko leveys w korkeudelle yRunko, kellohuoneen aukot (aukkoja per sivu, 0 = ei) ja huippu kärkeen
-        /// yKarki (sivuja 4 = pyramidi, 8 = kahdeksankulmainen neula ja nurkkapiikit). Huippu 0 = tasakatto ja kaide (katedraalin länsitornit).</summary>
-        static void TyTorni(Rakentaja r, float cx, float cz, float w, float yRunko, float yKarki, int sivuja, int aukkoja, Vari kivi, Vari aukko, Vari huippu)
-        {
-            float h = w * 0.5f;
-            r.Laatikko(cx - h, cx + h, 0f, yRunko, cz - h, cz + h, kivi, kivi);
-            if (aukkoja > 0)
-            {
-                float a1 = yRunko - w * 0.25f, a0 = a1 - Math.Min(w * 1.1f, yRunko * 0.22f);
-                foreach (var s in Sivut(r, cx - h, cx + h, cz - h, cz + h))
-                {
-                    float vali = s.Pituus / (aukkoja + 1), lev = Math.Min(vali * 0.55f, 1.6f + w * 0.08f);
-                    for (int i = 1; i <= aukkoja; i++) Suippo(r, s, i * vali, a0, a1, lev, 0.05f, aukko);
-                }
-            }
-            if (sivuja == 4)
-                r.Pyora(cx, cz, new[] { (h * 1.4142f + 0.3f, yRunko), (0f, yKarki) }, 4, huippu, 0.7854f);
-            else if (sivuja == 8)
-            {
-                const float Pii = (float)Math.PI;
-                r.Pyora(cx, cz, new[] { (h * 0.92f, yRunko), (0f, yKarki) }, 8, huippu, Pii / 8f);
-                float p = h - w * 0.08f, ph = (yKarki - yRunko) * 0.16f;
-                foreach (var (dx, dz) in new[] { (-p, -p), (p, -p), (p, p), (-p, p) }) r.Piikki(cx + dx, cz + dz, yRunko, ph, w * 0.09f, kivi);
-            }
-            else
-            {
-                // Tasakatto ja matala kaide: katedraalin länsitorni (Notre-Dame-tyyppi, NdTorni yksinkertaistettuna).
-                r.Laatikko(cx - h - 0.4f, cx + h + 0.4f, yRunko, yRunko + 1.2f, cz - h - 0.4f, cz + h + 0.4f, kivi, TyKatto);
-            }
-        }
-
-        /// <summary>TUKIPILARIT (ehdokas OsaTukipilari, NdLentotuki yksinkertaistettuna): sivulaivan ulkoseinän vieressä porrastettu pilari ja vino lentotuki
-        /// keskilaivan seinään. Jakso x-suunnassa, pilarin ulkopinta zUlko, keskilaivan seinä zSisa korkeudella yTuki.</summary>
-        static void TyTukipilarit(Rakentaja r, float x0, float x1, float vali, float zUlko, float zSisa, float yPilari, float yTuki, Vari kivi)
-        {
-            float s = zUlko > zSisa ? 1f : -1f;
-            int n = Math.Max(1, (int)((x1 - x0) / vali));
-            for (int i = 1; i < n; i++)
-            {
-                float x = x0 + i * (x1 - x0) / n;
-                float za = zUlko, zb = zUlko - s * 1.6f;
-                r.Laatikko(x - 0.7f, x + 0.7f, 0f, yPilari, Math.Min(za, zb), Math.Max(za, zb), kivi, kivi);
-                // Lentotuki: ohut vino laatta pilarin päästä keskilaivan seinään.
-                var a = new P3(x, yPilari - 0.5f, zb); var b = new P3(x, yTuki, zSisa);
-                r.Neli(new P3(x - 0.35f, a.Y, a.Z), new P3(x + 0.35f, a.Y, a.Z), new P3(x + 0.35f, b.Y, b.Z), new P3(x - 0.35f, b.Y, b.Z), kivi, new P3(0f, 1f, s));
-                r.Neli(new P3(x - 0.35f, a.Y - 1.2f, a.Z), new P3(x - 0.35f, a.Y, a.Z), new P3(x - 0.35f, b.Y, b.Z), new P3(x - 0.35f, b.Y - 1.2f, b.Z), kivi.Kerro(0.9f), new P3(-1f, 0f, 0f));
-                r.Neli(new P3(x + 0.35f, a.Y - 1.2f, a.Z), new P3(x + 0.35f, a.Y, a.Z), new P3(x + 0.35f, b.Y, b.Z), new P3(x + 0.35f, b.Y - 1.2f, b.Z), kivi.Kerro(0.9f), new P3(1f, 0f, 0f));
-            }
-        }
-
-        /// <summary>KELLOTAULU (ehdokas OsaKellotaulu; Rengas ja Viisari Big Benistä): valkoinen kiekko, tumma reuna ja kaksi viisaria.</summary>
-        static void TyKello(Rakentaja r, Seina s, float uc, float yc, float sade)
-        {
-            Rengas(r, s, uc, yc, 0f, sade, 0.08f, TyTaulu, 12);
-            Rengas(r, s, uc, yc, sade, sade * 1.15f, 0.1f, TyRauta, 12);
-            Viisari(r, s, uc, yc, 5.24f, sade * 0.12f, sade * 0.55f, sade * 0.1f, 0.14f, TyViisari);
-            Viisari(r, s, uc, yc, 0.52f, sade * 0.12f, sade * 0.85f, sade * 0.07f, 0.15f, TyViisari);
         }
 
         /// <summary>Ikkunarivi pitkälle seinälle (OsaSeinaRytmi): suippokaari-ikkunat kirkoille, suorat palatsille.</summary>
@@ -267,8 +208,8 @@ namespace Matkakirja
             float tays = (float)(Math.PI * 2.0);
             if (!kevyt)
             {
-                TyRumpu(r, 0f, 0f, 0f, 7f, 5.4f, 6f, 5.9f, 9f, 0, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
-                TyKupoli(r, 0f, 0f, 9f, 6.2f, 8.5f, TyHuippu, TyKivi, TyAukko, 8, 1.2f, 26f, 16, 7);
+                OsaRumpu(r, 0f, 0f, 0f, 7f, 5.4f, 6f, 5.9f, 9f, 0, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
+                OsaKupoli(r, 0f, 0f, 9f, 6.2f, 8.5f, TyHuippu, TyKivi, TyAukko, 8, 1.2f, 26f, 16, 7);
                 return r.Valmis();
             }
             const int N = 12;
@@ -355,7 +296,7 @@ namespace Matkakirja
                     Suippo(r, sa, u, 3f, 10f, 2.4f, 0.05f, TyAukko);
                     Suippo(r, sk, u, 16.8f, 22.5f, 2.6f, 0.05f, TyAukko);
                 }
-                TyTukipilarit(r, x0 + 12f, x1, 7f, zu + s * 1.6f, s * zl, ys + 2f, y - 3f, TyKivi);
+                OsaTukipilarit(r, x0 + 12f, x1, 7f, zu + s * 1.6f, s * zl, ys + 2f, y - 3f, TyKivi);
             }
             // Sivulaivojen päätyseinät (länsi): tornit peittävät suurimman osan.
             // Poikkilaiva
@@ -374,8 +315,8 @@ namespace Matkakirja
             var lj = r.S(x0 - 10f, -zl, x0 - 10f, zl);
             Rengas(r, lj, zl, 24f, 0f, 4.6f, 0.06f, TyAukko, 12);
             for (int i = -1; i <= 1; i++) Suippo(r, r.S(x0 - 10f, -zs - 2f, x0 - 10f, zs + 2f), zs + 2f + i * 11f, 0f, 9f, i == 0 ? 5f : 3.6f, 0.07f, TyAukko);
-            TyTorni(r, x0 - 4f, -(zl + 4.5f) - 1f, 12f, 56f, 0f, 0, 2, TyKivi, TyAukko, TyHuippu);
-            TyTorni(r, x0 - 4f, zl + 4.5f + 1f, 12f, 56f, 0f, 0, 2, TyKivi, TyAukko, TyHuippu);
+            OsaTorni(r, x0 - 4f, -(zl + 4.5f) - 1f, 12f, 56f, 0f, 0, 2, TyKivi, TyAukko, TyHuippu, TyKatto);
+            OsaTorni(r, x0 - 4f, zl + 4.5f + 1f, 12f, 56f, 0f, 0, 2, TyKivi, TyAukko, TyHuippu, TyKatto);
             // Kattoratsastaja risteyksessä
             r.Pyora(7f, 0f, new[] { (2.2f, y + h - 1f), (2.2f, y + h + 6f), (0f, 62f) }, 8, TyHuippu, (float)Math.PI / 8f, (float)(Math.PI * 2.0), 1f, false);
             return r.Valmis();
@@ -452,7 +393,7 @@ namespace Matkakirja
             r.Neli(new P3(gx - 0.3f, yg, zg + wg * 0.5f + 0.3f), new P3(gx - 0.3f, yg + gt + 0.1f, zg), new P3(fx0 + 6.3f, yg + gt + 0.1f, zg), new P3(fx0 + 6.3f, yg, zg + wg * 0.5f + 0.3f), TyKatto, new P3(0f, 1f, gt / (wg * 0.5f)));
             var gs = r.S(gx, zg - wg * 0.5f, gx, zg + wg * 0.5f);
             float ks = Math.Min(3.2f, wg * 0.1f);
-            TyKello(r, gs, wg * 0.5f, Math.Max(yg - 0.5f, harja + 1.15f * ks + 0.5f), ks);
+            OsaKellotaulu(r, gs, wg * 0.5f, Math.Max(yg - 0.5f, harja + 1.15f * ks + 0.5f), ks, TyTaulu, TyRauta, TyViisari);
             var j0 = r.S(fx0, -fz + 11f, fx0, fz - 11f);   // länsijulkisivu (kasvot −x); u kasvaa +z:sta −z:aan? (Seina a → b)
             float L = j0.Pituus, kaari = Math.Min(8f, hl * 0.27f);
             for (int h = 0; h < halleja; h++)
@@ -507,7 +448,7 @@ namespace Matkakirja
         /// <summary>TORNIN PARAMETRIT (KK 23.05 kohta 2: paikka, määrä ja huippu parametreina, ei uusina tyyppeinä). paikka "lansi" | "risteys",
         /// torneja 1 | 2, huippu "pyramidi" | "neula" | "tasakatto". Länsi 1: torni keskiviivalla länsipäädyn edessä (sisään sisennys m), ovi tornissa.
         /// Länsi 2: tornipari julkisivun kulmissa, ovi laivan päädyssä. Risteys 1: torni harjan läpi kuoren puoleiseen kolmannekseen (kaakko-Eurooppa,
-        /// romaaninen), länsipäätyyn ovi. Risteys 2: tornit kuoren molemmin puolin (kuoritornit). Tasakatto saa kaiteen (TyTorni sivuja 0).</summary>
+        /// romaaninen), länsipäätyyn ovi. Risteys 2: tornit kuoren molemmin puolin (kuoritornit). Tasakatto saa kaiteen (OsaTorni sivuja 0).</summary>
         static void TyKirkonTornit(Rakentaja r, float x0, float x1, float zl, float yHarja, string paikka, int torneja, string huippu, float w, float yRunko,
             float yKarki, int aukkoja, float sisennys)
         {
@@ -519,7 +460,7 @@ namespace Matkakirja
             if (lansi && torneja < 2)
             {
                 float cx = x0 - w * 0.5f + sisennys;
-                TyTorni(r, cx, 0f, w, korkeus, karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu);
+                OsaTorni(r, cx, 0f, w, korkeus, karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu, TyKatto);
                 var s = new Seina(r, cx - w * 0.5f, -w * 0.5f, cx - w * 0.5f, w * 0.5f);
                 Suippo(r, s, w * 0.5f, 0f, w * 0.65f, w * 0.29f, 0.06f, TyAukko);
                 return;
@@ -527,11 +468,11 @@ namespace Matkakirja
             var ovi = new Seina(r, x0, -zl, x0, zl);
             Suippo(r, ovi, zl, 0f, Math.Min(w * 0.65f, yHarja * 0.4f), w * 0.29f, 0.06f, TyAukko);
             if (lansi)
-                foreach (float s in new[] { -1f, 1f }) TyTorni(r, x0 + w * 0.5f - sisennys, s * (zl + w * 0.5f - 1f), w, korkeus, karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu);
+                foreach (float s in new[] { -1f, 1f }) OsaTorni(r, x0 + w * 0.5f - sisennys, s * (zl + w * 0.5f - 1f), w, korkeus, karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu, TyKatto);
             else if (torneja < 2)
-                TyTorni(r, x1 - (x1 - x0) * 0.3f, 0f, Math.Min(w, zl * 1.6f), Math.Max(korkeus, yHarja + w * 1.2f), karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu);
+                OsaTorni(r, x1 - (x1 - x0) * 0.3f, 0f, Math.Min(w, zl * 1.6f), Math.Max(korkeus, yHarja + w * 1.2f), karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu, TyKatto);
             else
-                foreach (float s in new[] { -1f, 1f }) TyTorni(r, x1 - w * 0.5f, s * (zl + w * 0.5f - 0.5f), w, korkeus, karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu);
+                foreach (float s in new[] { -1f, 1f }) OsaTorni(r, x1 - w * 0.5f, s * (zl + w * 0.5f - 0.5f), w, korkeus, karki, sivuja, aukkoja, TyKivi, TyAukko, TyHuippu, TyKatto);
         }
 
         /// <summary>Kaksi verkkoa yhteen; b kierretään ensin 90° y-akselin ympäri (x, z) → (z, −x) ja siirretään (dx, 0, dz). Osat, jotka on kirjoitettu
@@ -554,61 +495,6 @@ namespace Matkakirja
                 v.MinZ = Math.Min(v.MinZ, v.Paikat[i + 2]); v.MaxZ = Math.Max(v.MaxZ, v.Paikat[i + 2]);
             }
             return v;
-        }
-
-        /// <summary>OsaKupoli ja OsaRumpu sivumäärä parametrina (osakirjastossa kiinteä 32; tyyppimallin kolmioraja 1 500 vaatii 16). Ehdotus irrotukseen:
-        /// valinnainen parametri sivuja = 32 osakirjastoon, jolloin ikonit pysyvät tavulleen samoina ja nämä kopiot poistuvat.</summary>
-        static float TyKupoli(Rakentaja r, float cx, float cz, float y, float sade, float korkeus, Vari kupoli, Vari kivi, Vari aukko, int rivat, float lyhtySade, float huippuY, int sivuja, int k = 9)
-        {
-            int K = k;
-            float tays = (float)(Math.PI * 2.0);
-            float laki = Math.Max(lyhtySade, 0.5f) / sade;
-            var q = new (float r, float y)[K + 1];
-            for (int j = 0; j <= K; j++)
-            {
-                float th = j / (float)K * (float)Math.Acos(laki);
-                q[j] = (sade * (float)Math.Cos(th), y + korkeus * (float)Math.Sin(th));
-            }
-            r.Pyora(cx, cz, q, sivuja, kupoli, 0f, tays, 1f, false);
-            for (int i = 0; i < rivat; i++)
-            {
-                float a = i * tays / rivat;
-                var qq = new (float r, float y)[K + 1];
-                for (int j = 0; j <= K; j++) qq[j] = (q[j].r + 0.12f, q[j].y);
-                r.Pyora(cx, cz, qq, 1, kupoli.Kerro(0.82f), a, tays / rivat * 0.12f, 1f, false);
-            }
-            float yl = q[K].y, lk = Math.Max(3f, lyhtySade * 2.2f);
-            r.Pyora(cx, cz, new[] { (lyhtySade, yl), (lyhtySade, yl + lk) }, 12, aukko, 0f, tays, 1f, false);
-            for (int i = 0; i < 8; i++)
-            {
-                float a = i * tays / 8f;
-                Palkki(r, new P3(cx + lyhtySade * 1.15f * (float)Math.Cos(a), yl, cz + lyhtySade * 1.15f * (float)Math.Sin(a)),
-                    new P3(cx + lyhtySade * 1.15f * (float)Math.Cos(a), yl + lk, cz + lyhtySade * 1.15f * (float)Math.Sin(a)), Math.Max(0.4f, lyhtySade * 0.23f), kivi);
-            }
-            float ky = yl + lk;
-            r.Pyora(cx, cz, new[] { (lyhtySade * 1.35f, ky), (lyhtySade * 1.35f, ky + 0.6f), (lyhtySade, ky + 1.2f), (lyhtySade * 0.55f, ky + 2.6f), (lyhtySade * 0.2f, ky + 3.4f) }, 12, kupoli);
-            if (huippuY > ky + 3.3f) r.Piikki(cx, cz, ky + 3.3f, huippuY - (ky + 3.3f), Math.Max(0.3f, lyhtySade * 0.17f), kivi);
-            return yl;
-        }
-
-        static void TyRumpu(Rakentaja r, float cx, float cz, float y0, float rUlko, float rSeina, float yPylvas, float rYla, float yYla, int nPylvas, int nIkkuna, Vari kivi, Vari varjo, Vari aukko, int sivuja)
-        {
-            float tays = (float)(Math.PI * 2.0), y1 = y0 + 1f;
-            r.Pyora(cx, cz, new[] { (rUlko, y0), (rUlko, y1), (rSeina, y1) }, sivuja, kivi, 0f, tays, 1f, false);
-            r.Pyora(cx, cz, new[] { (rSeina, y1), (rSeina, yPylvas + 0.4f) }, sivuja, varjo, 0f, tays, 1f, false);
-            for (int i = 0; i < nPylvas; i++)
-            {
-                float a = (i + 0.5f) * tays / nPylvas;
-                SpPylvaat(r, cx + (rSeina + 2.6f) * (float)Math.Cos(a), cz + (rSeina + 2.6f) * (float)Math.Sin(a), y1, yPylvas, 0.7f, kivi);
-            }
-            float ya = yPylvas + 3.2f;
-            r.Pyora(cx, cz, new[] { (rSeina, yPylvas), (rUlko - 0.2f, yPylvas), (rUlko - 0.2f, yPylvas + 2f), (rUlko - 0.6f, yPylvas + 2f), (rUlko - 0.6f, ya), (rYla, ya) }, sivuja, kivi, 0f, tays, 1f, false);
-            r.Pyora(cx, cz, new[] { (rYla, ya), (rYla, yYla - 0.8f), (rYla + 0.4f, yYla - 0.4f), (rYla - 0.2f, yYla) }, sivuja, kivi, 0f, tays, 1f, false);
-            for (int i = 0; i < nIkkuna; i++)
-            {
-                float levy = tays / nIkkuna;
-                r.Pyora(cx, cz, new[] { (rYla + 0.05f, ya + 1f), (rYla + 0.05f, ya + 3.2f) }, 1, aukko, i * levy, levy * 0.35f, 1f, false);
-            }
         }
 
         /// <summary>KUPOLIKIRKKO (KK 23.05 kohta 1; Val-de-Grâce, Institut, Saint-Paul-Saint-Louis; myös Rooma, Wien, Lontoo): latinalainen risti,
@@ -642,8 +528,8 @@ namespace Matkakirja
                 for (int i = 0; i < 3; i++) { float u = 8f + i * 9f; sv.Pinta(u - 1.4f, u + 1.4f, 6f, 13f, 0.05f, TyAukko); sv.KaariTayte(u, 13f, 1.4f, 0.05f, TyAukko, 4); }
             }
             // Rumpu ja kupoli osakirjastosta (16 sivua, kupolissa 7 kehää)
-            TyRumpu(r, cx, 0f, 22f, 9f, 5.6f, 30f, 6.2f, 35f, 8, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
-            TyKupoli(r, cx, 0f, 35f, 6.6f, 10f, TyHuippu, TyKivi, TyAukko, 8, 1.4f, 58f, 16, 7);
+            OsaRumpu(r, cx, 0f, 22f, 9f, 5.6f, 30f, 6.2f, 35f, 8, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
+            OsaKupoli(r, cx, 0f, 35f, 6.6f, 10f, TyHuippu, TyKivi, TyAukko, 8, 1.4f, 58f, 16, 7);
             // Länsijulkisivu: leveämpi alakerta, kapeampi yläkerta, kolmiopääty, voluuttien sijaan porrastus
             float fx = x0 - 1.5f;
             r.Laatikko(fx, x0, 0f, 15f, -11f, 11f, TyKivi, TyKatto);

@@ -1,0 +1,2136 @@
+[
+ {
+  "osm": "way/727994377",
+  "nimi": "Gare Saint-Lazare",
+  "tyyppi": "asema-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 3208,
+  "talot": [
+   [
+    "way/67825347",
+    420,
+    0.93
+   ],
+   [
+    "relation/1070834",
+    292,
+    0.33
+   ],
+   [
+    "relation/1070833",
+    288,
+    1.0
+   ],
+   [
+    "way/67847317",
+    256,
+    0.55
+   ],
+   [
+    "way/69257460",
+    212,
+    0.23
+   ],
+   [
+    "way/67825355",
+    204,
+    0.19
+   ],
+   [
+    "way/64046222",
+    184,
+    1.0
+   ],
+   [
+    "way/67847281",
+    184,
+    0.35
+   ],
+   [
+    "way/69257562",
+    172,
+    0.52
+   ],
+   [
+    "way/725879034",
+    164,
+    1.0
+   ],
+   [
+    "relation/1069737",
+    156,
+    0.05
+   ],
+   [
+    "way/69257298",
+    124,
+    0.76
+   ],
+   [
+    "way/67825351",
+    120,
+    1.0
+   ],
+   [
+    "way/69257658",
+    100,
+    0.64
+   ],
+   [
+    "way/685588977",
+    88,
+    1.0
+   ],
+   [
+    "way/67825354",
+    80,
+    0.34
+   ],
+   [
+    "way/333443267",
+    52,
+    1.0
+   ],
+   [
+    "way/67847319",
+    40,
+    0.06
+   ],
+   [
+    "way/67825357",
+    36,
+    0.19
+   ],
+   [
+    "way/69257650",
+    36,
+    0.28
+   ]
+  ]
+ },
+ {
+  "osm": "way/62380197",
+  "nimi": "Gare d'Austerlitz",
+  "tyyppi": "asema-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 2388,
+  "talot": [
+   [
+    "way/626357932",
+    1576,
+    0.32
+   ],
+   [
+    "way/638187266",
+    664,
+    0.76
+   ],
+   [
+    "way/1063223362",
+    112,
+    1.0
+   ],
+   [
+    "way/1309038256",
+    36,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/63197091",
+  "nimi": "",
+  "tyyppi": "asema-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 1328,
+  "talot": [
+   [
+    "way/63195471",
+    1328,
+    0.14
+   ]
+  ]
+ },
+ {
+  "osm": "way/1161318094",
+  "nimi": "Gare de Lyon",
+  "tyyppi": "asema-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 1324,
+  "talot": [
+   [
+    "way/78158492",
+    864,
+    0.49
+   ],
+   [
+    "way/78158960",
+    404,
+    0.46
+   ],
+   [
+    "way/115948339",
+    56,
+    0.58
+   ]
+  ]
+ },
+ {
+  "osm": "way/24310193",
+  "nimi": "Église Saint-Ignace",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 1280,
+  "talot": [
+   [
+    "relation/1024194",
+    1280,
+    0.27
+   ]
+  ]
+ },
+ {
+  "osm": "relation/3300400",
+  "nimi": "Palais Royal",
+  "tyyppi": "palatsi-keski",
+  "sovitus": "pohja",
+  "ala_alle": 924,
+  "talot": [
+   [
+    "way/54058973",
+    440,
+    1.0
+   ],
+   [
+    "relation/541189",
+    440,
+    1.0
+   ],
+   [
+    "way/54058971",
+    44,
+    0.15
+   ]
+  ]
+ },
+ {
+  "osm": "way/137692720",
+  "nimi": "Chapelle",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 832,
+  "talot": [
+   [
+    "relation/1211713",
+    832,
+    0.07
+   ]
+  ]
+ },
+ {
+  "osm": "way/79276832",
+  "nimi": "Église Saint-Pierre de Chaillot",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "luonnollinen",
+  "ala_alle": 728,
+  "talot": [
+   [
+    "relation/1191403",
+    348,
+    0.3
+   ],
+   [
+    "way/79276840",
+    120,
+    0.18
+   ],
+   [
+    "relation/1191404",
+    92,
+    0.27
+   ],
+   [
+    "way/79276839",
+    72,
+    0.23
+   ],
+   [
+    "way/79276830",
+    56,
+    0.58
+   ],
+   [
+    "relation/1191405",
+    40,
+    0.08
+   ]
+  ]
+ },
+ {
+  "osm": "way/130906379",
+  "nimi": "Église du Saint-Esprit",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 676,
+  "talot": [
+   [
+    "way/130906391",
+    160,
+    0.73
+   ],
+   [
+    "way/130906406",
+    144,
+    0.97
+   ],
+   [
+    "way/130906408",
+    140,
+    1.0
+   ],
+   [
+    "way/130906400",
+    136,
+    1.0
+   ],
+   [
+    "way/130906392",
+    72,
+    0.41
+   ],
+   [
+    "way/130906388",
+    24,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/62287173",
+  "nimi": "Église Saint-Germain des Prés",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 612,
+  "talot": [
+   [
+    "way/495635813",
+    172,
+    0.81
+   ],
+   [
+    "way/62287142",
+    156,
+    0.59
+   ],
+   [
+    "way/495635817",
+    148,
+    1.0
+   ],
+   [
+    "way/62287189",
+    56,
+    0.39
+   ],
+   [
+    "way/62287135",
+    28,
+    0.22
+   ],
+   [
+    "way/1461285706",
+    28,
+    0.88
+   ],
+   [
+    "way/62287103",
+    24,
+    0.11
+   ]
+  ]
+ },
+ {
+  "osm": "way/42722202",
+  "nimi": "Église Saint-Roch",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 496,
+  "talot": [
+   [
+    "way/42722205",
+    148,
+    0.24
+   ],
+   [
+    "way/54117417",
+    104,
+    0.32
+   ],
+   [
+    "way/42722203",
+    100,
+    0.46
+   ],
+   [
+    "way/42722204",
+    80,
+    0.69
+   ],
+   [
+    "way/54117420",
+    40,
+    0.24
+   ],
+   [
+    "way/54117426",
+    24,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/55742120",
+  "nimi": "Église Saint-Merri",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 464,
+  "talot": [
+   [
+    "way/55750696",
+    240,
+    0.85
+   ],
+   [
+    "way/55750698",
+    152,
+    0.66
+   ],
+   [
+    "way/55742124",
+    72,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/146912739",
+  "nimi": "Chapelle",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 444,
+  "talot": [
+   [
+    "relation/1259165",
+    444,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/84322974",
+  "nimi": "Temple Réformé de l'Etoile",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "luonnollinen",
+  "ala_alle": 424,
+  "talot": [
+   [
+    "relation/1260851",
+    232,
+    0.55
+   ],
+   [
+    "way/84323712",
+    112,
+    0.22
+   ],
+   [
+    "way/84320731",
+    80,
+    0.29
+   ]
+  ]
+ },
+ {
+  "osm": "way/426995607",
+  "nimi": "",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 384,
+  "talot": [
+   [
+    "relation/537182",
+    384,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/115804138",
+  "nimi": "Église Sainte-Marguerite",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "luonnollinen",
+  "ala_alle": 360,
+  "talot": [
+   [
+    "way/115804158",
+    148,
+    1.0
+   ],
+   [
+    "way/63648647",
+    116,
+    0.3
+   ],
+   [
+    "way/115804163",
+    96,
+    0.25
+   ]
+  ]
+ },
+ {
+  "osm": "way/56301534",
+  "nimi": "Ancienne Église Saint-Martin des Champs",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 348,
+  "talot": [
+   [
+    "relation/550505",
+    284,
+    0.02
+   ],
+   [
+    "way/56301517",
+    64,
+    0.22
+   ]
+  ]
+ },
+ {
+  "osm": "way/84325824",
+  "nimi": "Église Saint-Ferdinand des Ternes",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 332,
+  "talot": [
+   [
+    "way/84320128",
+    188,
+    0.15
+   ],
+   [
+    "way/84325248",
+    100,
+    0.27
+   ],
+   [
+    "way/84331841",
+    44,
+    0.85
+   ]
+  ]
+ },
+ {
+  "osm": "way/63640725",
+  "nimi": "Basilique Notre-Dame du Perpétuel Secours",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 332,
+  "talot": [
+   [
+    "relation/1002698",
+    292,
+    0.48
+   ],
+   [
+    "way/63638905",
+    40,
+    0.07
+   ]
+  ]
+ },
+ {
+  "osm": "way/75747135",
+  "nimi": "Église Saint-Joseph des Épinettes",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 320,
+  "talot": [
+   [
+    "relation/2081500",
+    116,
+    0.15
+   ],
+   [
+    "way/75748489",
+    60,
+    0.38
+   ],
+   [
+    "way/75747434",
+    56,
+    0.78
+   ],
+   [
+    "way/75748867",
+    40,
+    0.08
+   ],
+   [
+    "way/75747499",
+    28,
+    0.5
+   ],
+   [
+    "way/75749307",
+    20,
+    0.2
+   ]
+  ]
+ },
+ {
+  "osm": "way/62090852",
+  "nimi": "Église Saint-Pierre",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 320,
+  "talot": [
+   [
+    "relation/4875156",
+    192,
+    0.32
+   ],
+   [
+    "way/343553964",
+    128,
+    0.82
+   ]
+  ]
+ },
+ {
+  "osm": "way/1479606357",
+  "nimi": "Chapelle Notre-Dame de Bonne Délivrance",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 300,
+  "talot": [
+   [
+    "way/81128767",
+    300,
+    0.32
+   ]
+  ]
+ },
+ {
+  "osm": "way/69072238",
+  "nimi": "Église Saint-Pierre du Gros Caillou",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 292,
+  "talot": [
+   [
+    "way/69072349",
+    292,
+    0.14
+   ]
+  ]
+ },
+ {
+  "osm": "way/439916874",
+  "nimi": "Chapelle de la Trinité",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 280,
+  "talot": [
+   [
+    "relation/1672626",
+    280,
+    0.07
+   ]
+  ]
+ },
+ {
+  "osm": "way/67350058",
+  "nimi": "Église protestante unie du Saint-Esprit",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "luonnollinen",
+  "ala_alle": 268,
+  "talot": [
+   [
+    "way/67350073",
+    144,
+    0.33
+   ],
+   [
+    "way/67350074",
+    124,
+    0.76
+   ]
+  ]
+ },
+ {
+  "osm": "way/63203063",
+  "nimi": "Église Saint-Joseph-Artisan",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 248,
+  "talot": [
+   [
+    "way/63197574",
+    248,
+    0.94
+   ]
+  ]
+ },
+ {
+  "osm": "way/69073401",
+  "nimi": "Immeuble de la Société théosophique",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 240,
+  "talot": [
+   [
+    "way/69073411",
+    112,
+    0.37
+   ],
+   [
+    "way/69073339",
+    92,
+    0.96
+   ],
+   [
+    "way/69073429",
+    36,
+    0.07
+   ]
+  ]
+ },
+ {
+  "osm": "way/60279510",
+  "nimi": "Église Saint-Jacques-du-Haut-Pas",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 224,
+  "talot": [
+   [
+    "way/1457837352",
+    164,
+    0.79
+   ],
+   [
+    "way/60279513",
+    60,
+    0.79
+   ]
+  ]
+ },
+ {
+  "osm": "way/84153309",
+  "nimi": "Église Saint-Denys de la Chapelle",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 224,
+  "talot": [
+   [
+    "way/84154737",
+    132,
+    0.4
+   ],
+   [
+    "way/84153771",
+    92,
+    0.43
+   ]
+  ]
+ },
+ {
+  "osm": "way/1553569328",
+  "nimi": "chapelle de Saint-Jean de Passy",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 216,
+  "talot": [
+   [
+    "way/83743795",
+    216,
+    0.22
+   ]
+  ]
+ },
+ {
+  "osm": "way/78019585",
+  "nimi": "Église Saint-Éloi",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "luonnollinen",
+  "ala_alle": 216,
+  "talot": [
+   [
+    "way/42311097",
+    88,
+    0.88
+   ],
+   [
+    "way/42311096",
+    68,
+    0.89
+   ],
+   [
+    "way/78018988",
+    60,
+    0.38
+   ]
+  ]
+ },
+ {
+  "osm": "way/55343672",
+  "nimi": "Église Saint-Étienne-du-Mont",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 212,
+  "talot": [
+   [
+    "way/255080063",
+    84,
+    0.51
+   ],
+   [
+    "way/255080061",
+    76,
+    0.32
+   ],
+   [
+    "way/255080058",
+    52,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/55984117",
+  "nimi": "Église Notre-Dame-des-Blancs-Manteaux",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 212,
+  "talot": [
+   [
+    "relation/570126",
+    136,
+    0.02
+   ],
+   [
+    "way/55848909",
+    76,
+    0.7
+   ]
+  ]
+ },
+ {
+  "osm": "way/84324974",
+  "nimi": "Église Saint-Charles-de-Monceau",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 212,
+  "talot": [
+   [
+    "way/84321087",
+    112,
+    0.25
+   ],
+   [
+    "way/84318572",
+    40,
+    0.14
+   ],
+   [
+    "way/84329729",
+    40,
+    0.06
+   ],
+   [
+    "way/84330041",
+    20,
+    0.24
+   ]
+  ]
+ },
+ {
+  "osm": "way/105220265",
+  "nimi": "Chapelle Laennec",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "luonnollinen",
+  "ala_alle": 212,
+  "talot": [
+   [
+    "relation/1079005",
+    212,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/63536576",
+  "nimi": "Église Saint-Thomas d'Aquin",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 204,
+  "talot": [
+   [
+    "relation/1002118",
+    128,
+    0.02
+   ],
+   [
+    "way/63536488",
+    44,
+    0.07
+   ],
+   [
+    "way/63536547",
+    32,
+    0.13
+   ]
+  ]
+ },
+ {
+  "osm": "way/1056864734",
+  "nimi": "Chapelle Saint-Patrick",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 192,
+  "talot": [
+   [
+    "relation/660843",
+    192,
+    0.19
+   ]
+  ]
+ },
+ {
+  "osm": "way/79232285",
+  "nimi": "Cathédrale Saint-Étienne",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 184,
+  "talot": [
+   [
+    "way/79232273",
+    184,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/95860808",
+  "nimi": "Chapelle Sainte-Ursule",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 180,
+  "talot": [
+   [
+    "relation/572440",
+    180,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "relation/1083626",
+  "nimi": "",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "luonnollinen",
+  "ala_alle": 176,
+  "talot": [
+   [
+    "relation/1083630",
+    156,
+    0.3
+   ],
+   [
+    "way/68991242",
+    20,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/67353449",
+  "nimi": "Temple de Pentemont",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 168,
+  "talot": [
+   [
+    "relation/1066859",
+    168,
+    0.12
+   ]
+  ]
+ },
+ {
+  "osm": "relation/1060822",
+  "nimi": "Hôtel de la Marine",
+  "tyyppi": "palatsi-keski",
+  "sovitus": "pohja",
+  "ala_alle": 168,
+  "talot": [
+   [
+    "way/67115659",
+    168,
+    0.22
+   ]
+  ]
+ },
+ {
+  "osm": "way/559104799",
+  "nimi": "Couvent Saint-Jacques",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 164,
+  "talot": [
+   [
+    "relation/1211304",
+    76,
+    0.06
+   ],
+   [
+    "way/1363068934",
+    64,
+    0.8
+   ],
+   [
+    "relation/1211371",
+    24,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/70185807",
+  "nimi": "Chapelle du Corpus-Christi",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 164,
+  "talot": [
+   [
+    "relation/1104615",
+    92,
+    0.02
+   ],
+   [
+    "relation/1104616",
+    44,
+    0.1
+   ],
+   [
+    "relation/1104613",
+    28,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/53400775",
+  "nimi": "Église Saint-Christophe de Javel",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 144,
+  "talot": [
+   [
+    "way/53400508",
+    144,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/149268044",
+  "nimi": "Chapelle de Conflans",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 144,
+  "talot": [
+   [
+    "way/149275141",
+    144,
+    0.33
+   ]
+  ]
+ },
+ {
+  "osm": "way/77385186",
+  "nimi": "Église de l'Immaculée Conception",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 140,
+  "talot": [
+   [
+    "way/77385331",
+    140,
+    0.55
+   ]
+  ]
+ },
+ {
+  "osm": "way/55314295",
+  "nimi": "Église Saint-Louis-en-l'Île",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 136,
+  "talot": [
+   [
+    "relation/554310",
+    56,
+    0.05
+   ],
+   [
+    "way/55314283",
+    32,
+    1.0
+   ],
+   [
+    "way/330517721",
+    28,
+    0.2
+   ],
+   [
+    "way/55314285",
+    20,
+    0.56
+   ]
+  ]
+ },
+ {
+  "osm": "way/70148329",
+  "nimi": "Église Saint-Jean-Bosco",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 136,
+  "talot": [
+   [
+    "way/996099358",
+    136,
+    0.25
+   ]
+  ]
+ },
+ {
+  "osm": "way/64037954",
+  "nimi": "Église Saint-Jacques Saint-Christophe",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 128,
+  "talot": [
+   [
+    "way/64038231",
+    104,
+    0.29
+   ],
+   [
+    "way/64040428",
+    24,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/75748174",
+  "nimi": "Temple des Batignolles",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 128,
+  "talot": [
+   [
+    "way/75748679",
+    96,
+    0.39
+   ],
+   [
+    "way/75747803",
+    32,
+    0.53
+   ]
+  ]
+ },
+ {
+  "osm": "way/79150163",
+  "nimi": "Église Sainte-Croix d'Ivry-Port",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 124,
+  "talot": [
+   [
+    "way/79149311",
+    84,
+    0.37
+   ],
+   [
+    "way/79148014",
+    40,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/69049385",
+  "nimi": "Église Américaine",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 124,
+  "talot": [
+   [
+    "way/69049437",
+    124,
+    0.19
+   ]
+  ]
+ },
+ {
+  "osm": "way/69226577",
+  "nimi": "Église Saint-Louis-d'Antin",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 120,
+  "talot": [
+   [
+    "way/103839777",
+    96,
+    0.15
+   ],
+   [
+    "way/69226711",
+    24,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/77807770",
+  "nimi": "Église Saint-Jean de Montmartre",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 116,
+  "talot": [
+   [
+    "relation/1781565",
+    68,
+    0.12
+   ],
+   [
+    "way/77807161",
+    48,
+    0.27
+   ]
+  ]
+ },
+ {
+  "osm": "way/53933240",
+  "nimi": "Église Saint-Leu - Saint-Gilles",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 116,
+  "talot": [
+   [
+    "way/53933239",
+    72,
+    0.82
+   ],
+   [
+    "way/53933242",
+    44,
+    0.85
+   ]
+  ]
+ },
+ {
+  "osm": "way/67233894",
+  "nimi": "Église anglicane Saint-Michael",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 112,
+  "talot": [
+   [
+    "way/260187064",
+    64,
+    0.16
+   ],
+   [
+    "way/260187063",
+    48,
+    0.11
+   ]
+  ]
+ },
+ {
+  "osm": "way/1543248506",
+  "nimi": "Cathédrale Saint-Irénée",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 112,
+  "talot": [
+   [
+    "way/78406523",
+    64,
+    0.13
+   ],
+   [
+    "way/78406795",
+    24,
+    0.06
+   ],
+   [
+    "way/137692728",
+    24,
+    0.06
+   ]
+  ]
+ },
+ {
+  "osm": "way/63370983",
+  "nimi": "Église Saint-Joseph des Carmes",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 96,
+  "talot": [
+   [
+    "relation/1000958",
+    96,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/55477164",
+  "nimi": "Église Saint-Gervais",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 92,
+  "talot": [
+   [
+    "way/55545737",
+    72,
+    0.2
+   ],
+   [
+    "way/55545751",
+    20,
+    0.05
+   ]
+  ]
+ },
+ {
+  "osm": "way/79687825",
+  "nimi": "Église Notre-Dame-du-Travail",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 84,
+  "talot": [
+   [
+    "relation/1212938",
+    84,
+    0.04
+   ]
+  ]
+ },
+ {
+  "osm": "way/84326196",
+  "nimi": "Église Saint-François-de-Sales (nouvelle église)",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 80,
+  "talot": [
+   [
+    "way/84321900",
+    80,
+    0.16
+   ]
+  ]
+ },
+ {
+  "osm": "way/80853671",
+  "nimi": "Église Saint-Honoré d'Eylau",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 80,
+  "talot": [
+   [
+    "relation/1213680",
+    80,
+    0.07
+   ]
+  ]
+ },
+ {
+  "osm": "way/462398675",
+  "nimi": "Église espagnole du Coeur Immaculé de Marie",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 76,
+  "talot": [
+   [
+    "relation/1229889",
+    76,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/164853780",
+  "nimi": "Chapelle",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 76,
+  "talot": [
+   [
+    "way/77807774",
+    52,
+    0.07
+   ],
+   [
+    "relation/1528979",
+    24,
+    0.05
+   ]
+  ]
+ },
+ {
+  "osm": "way/448794899",
+  "nimi": "Hôtel du ministre des Affaires étrangères",
+  "tyyppi": "palatsi-keski",
+  "sovitus": "pohja",
+  "ala_alle": 76,
+  "talot": [
+   [
+    "relation/1019367",
+    76,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/70003069",
+  "nimi": "Église du Cœur Eucharistique de Jésus",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 72,
+  "talot": [
+   [
+    "way/69999683",
+    72,
+    0.56
+   ]
+  ]
+ },
+ {
+  "osm": "way/80237236",
+  "nimi": "Chapelle Notre-Dame-du-Lys",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 72,
+  "talot": [
+   [
+    "way/80237018",
+    72,
+    0.42
+   ]
+  ]
+ },
+ {
+  "osm": "way/112358505",
+  "nimi": "Basilique Sainte-Jeanne-d’Arc",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 68,
+  "talot": [
+   [
+    "way/84153321",
+    44,
+    0.42
+   ],
+   [
+    "way/84153556",
+    24,
+    0.19
+   ]
+  ]
+ },
+ {
+  "osm": "way/78470232",
+  "nimi": "Église Sainte-Anne de la Butte-aux-Cailles",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "luonnollinen",
+  "ala_alle": 68,
+  "talot": [
+   [
+    "way/78470591",
+    68,
+    0.45
+   ]
+  ]
+ },
+ {
+  "osm": "way/78407279",
+  "nimi": "Église Sainte-Rosalie",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 68,
+  "talot": [
+   [
+    "way/78407018",
+    36,
+    0.13
+   ],
+   [
+    "way/78406768",
+    32,
+    0.04
+   ]
+  ]
+ },
+ {
+  "osm": "way/56159605",
+  "nimi": "Chapelle",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 68,
+  "talot": [
+   [
+    "relation/572779",
+    68,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/48974965",
+  "nimi": "Église Sainte-Hélène",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 60,
+  "talot": [
+   [
+    "way/48975427",
+    60,
+    0.16
+   ]
+  ]
+ },
+ {
+  "osm": "way/94236417",
+  "nimi": "Église Saint-Antoine des Quinze-Vingts",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 60,
+  "talot": [
+   [
+    "way/78146191",
+    36,
+    0.06
+   ],
+   [
+    "relation/1365328",
+    24,
+    0.05
+   ]
+  ]
+ },
+ {
+  "osm": "way/137884625",
+  "nimi": "Chapelle Saint-Joseph-de-Cluny",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 60,
+  "talot": [
+   [
+    "way/79611341",
+    60,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/104339971",
+  "nimi": "Chapelle de l'Épiphanie",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 60,
+  "talot": [
+   [
+    "relation/1477432",
+    60,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/79626601",
+  "nimi": "Église Saint-Dominique",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 56,
+  "talot": [
+   [
+    "way/79626680",
+    56,
+    0.17
+   ]
+  ]
+ },
+ {
+  "osm": "relation/1060804",
+  "nimi": "Hôtel de Crillon",
+  "tyyppi": "palatsi-keski",
+  "sovitus": "pohja",
+  "ala_alle": 56,
+  "talot": [
+   [
+    "relation/1060806",
+    56,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/56290843",
+  "nimi": "Église Saint-Nicolas-des-Champs",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 52,
+  "talot": [
+   [
+    "way/54964106",
+    52,
+    0.2
+   ]
+  ]
+ },
+ {
+  "osm": "way/24406636",
+  "nimi": "Église Saint-Médard",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 48,
+  "talot": [
+   [
+    "way/56138858",
+    28,
+    0.12
+   ],
+   [
+    "way/56138862",
+    20,
+    0.28
+   ]
+  ]
+ },
+ {
+  "osm": "way/78006792",
+  "nimi": "Chapelle Notre-Dame de la Paix",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 48,
+  "talot": [
+   [
+    "relation/1211591",
+    48,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/112461792",
+  "nimi": "Chapelle Notre-Dame-du-Saint-Sacrement",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 48,
+  "talot": [
+   [
+    "way/81791940",
+    48,
+    0.06
+   ]
+  ]
+ },
+ {
+  "osm": "way/55942658",
+  "nimi": "Église Luthérienne des Billettes",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 48,
+  "talot": [
+   [
+    "relation/569370",
+    48,
+    0.15
+   ]
+  ]
+ },
+ {
+  "osm": "way/63638108",
+  "nimi": "Église Saint-Ambroise",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 48,
+  "talot": [
+   [
+    "way/63645493",
+    48,
+    0.46
+   ]
+  ]
+ },
+ {
+  "osm": "way/16929093",
+  "nimi": "Église Saint-Pierre de Montrouge",
+  "tyyppi": "kirkko-suuri",
+  "sovitus": "pohja",
+  "ala_alle": 48,
+  "talot": [
+   [
+    "way/79633536",
+    48,
+    0.11
+   ]
+  ]
+ },
+ {
+  "osm": "way/184127778",
+  "nimi": "Grande Chapelle",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 44,
+  "talot": [
+   [
+    "way/114924087",
+    44,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/42268952",
+  "nimi": "Chapelle Saint-Sauveur",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 44,
+  "talot": [
+   [
+    "way/184124925",
+    44,
+    0.05
+   ]
+  ]
+ },
+ {
+  "osm": "way/244749667",
+  "nimi": "Chapelle Notre-Dame de la Médaille Miraculeuse",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 44,
+  "talot": [
+   [
+    "relation/1079004",
+    44,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/77670243",
+  "nimi": "Église Sainte-Geneviève des Grandes-Carrières",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 44,
+  "talot": [
+   [
+    "way/77670197",
+    44,
+    0.12
+   ]
+  ]
+ },
+ {
+  "osm": "way/199694468",
+  "nimi": "Église Saint-Étienne",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 44,
+  "talot": [
+   [
+    "way/111826151",
+    44,
+    0.28
+   ]
+  ]
+ },
+ {
+  "osm": "way/50371917",
+  "nimi": "Église Saint-Eugène Sainte-Cécile",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 40,
+  "talot": [
+   [
+    "way/69221001",
+    40,
+    0.11
+   ]
+  ]
+ },
+ {
+  "osm": "way/80266257",
+  "nimi": "Église Saint-Jean-Baptiste-de-La-Salle",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 40,
+  "talot": [
+   [
+    "way/80265896",
+    20,
+    0.02
+   ],
+   [
+    "relation/1211699",
+    20,
+    0.04
+   ]
+  ]
+ },
+ {
+  "osm": "way/95869425",
+  "nimi": "Notre-Dame-du-Liban",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "pohja",
+  "ala_alle": 40,
+  "talot": [
+   [
+    "way/98644341",
+    40,
+    0.09
+   ]
+  ]
+ },
+ {
+  "osm": "way/56206112",
+  "nimi": "Temple du Marais",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 40,
+  "talot": [
+   [
+    "way/56206067",
+    40,
+    0.05
+   ]
+  ]
+ },
+ {
+  "osm": "way/118650031",
+  "nimi": "Église du Bon Secours",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 40,
+  "talot": [
+   [
+    "way/63648165",
+    40,
+    0.31
+   ]
+  ]
+ },
+ {
+  "osm": "way/93664894",
+  "nimi": "Chapelle de la Visitation",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 40,
+  "talot": [
+   [
+    "relation/1672626",
+    40,
+    0.01
+   ]
+  ]
+ },
+ {
+  "osm": "way/75220961",
+  "nimi": "Chapelle Saint-Pierre - Saint-Paul",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 36,
+  "talot": [
+   [
+    "way/1102161130",
+    36,
+    0.29
+   ]
+  ]
+ },
+ {
+  "osm": "way/320707523",
+  "nimi": "Chapelle des petites sœurs de l'Assomption",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 36,
+  "talot": [
+   [
+    "way/320707524",
+    36,
+    0.1
+   ]
+  ]
+ },
+ {
+  "osm": "way/1144467565",
+  "nimi": "Climbing District Saint-Lazare",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 32,
+  "talot": [
+   [
+    "way/68256652",
+    32,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/111797202",
+  "nimi": "Chapelle rose",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 28,
+  "talot": [
+   [
+    "way/111797225",
+    28,
+    0.08
+   ]
+  ]
+ },
+ {
+  "osm": "relation/1076880",
+  "nimi": "Hôtel de Matignon",
+  "tyyppi": "palatsi-keski",
+  "sovitus": "pohja",
+  "ala_alle": 28,
+  "talot": [
+   [
+    "way/68571263",
+    28,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/19740659",
+  "nimi": "Église Saint-Séverin",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/55442908",
+    24,
+    0.1
+   ]
+  ]
+ },
+ {
+  "osm": "way/82322935",
+  "nimi": "Église Saints-Pierre-et-Paul",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/133432154",
+    24,
+    0.1
+   ]
+  ]
+ },
+ {
+  "osm": "way/78020496",
+  "nimi": "Église Notre-Dame du Bon Conseil",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/141969568",
+    24,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/81792421",
+  "nimi": "Église protestante unie de l'Annonciation",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/81792453",
+    24,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/69332080",
+  "nimi": "Cathédrale arménienne Saint-Jean-Baptiste",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/1165024891",
+    24,
+    0.27
+   ]
+  ]
+ },
+ {
+  "osm": "way/219378497",
+  "nimi": "Chapelle Notre-Dame-des-Anges",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/64315010",
+    24,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/60209197",
+  "nimi": "Église Luthérienne Saint-Marcel",
+  "tyyppi": "kirkko-pieni",
+  "sovitus": "pohja",
+  "ala_alle": 24,
+  "talot": [
+   [
+    "way/60209201",
+    24,
+    0.04
+   ]
+  ]
+ },
+ {
+  "osm": "way/304186825",
+  "nimi": "Église Notre-Dame-de-La-Salette",
+  "tyyppi": "kirkko-basilika",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "way/80152178",
+    20,
+    0.04
+   ]
+  ]
+ },
+ {
+  "osm": "relation/1305902",
+  "nimi": "Prieuré Sainte-Bathilde",
+  "tyyppi": "kirkko-keski",
+  "sovitus": "luonnollinen",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "way/370516380",
+    20,
+    1.0
+   ]
+  ]
+ },
+ {
+  "osm": "way/54118568",
+  "nimi": "Chapelle Notre-Dame de Grâce",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "way/186592000",
+    20,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/68256672",
+  "nimi": "Église Saint-André de l'Europe",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "way/68256662",
+    20,
+    0.06
+   ]
+  ]
+ },
+ {
+  "osm": "way/69332061",
+  "nimi": "Chapelle Notre-Dame-de-Consolation",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "relation/1086158",
+    20,
+    0.02
+   ]
+  ]
+ },
+ {
+  "osm": "way/70000860",
+  "nimi": "Église Notre-Dame-des-Coptes",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "way/298418997",
+    20,
+    0.03
+   ]
+  ]
+ },
+ {
+  "osm": "way/55366403",
+  "nimi": "Église orthodoxe roumaine des saints archanges",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "relation/554963",
+    20,
+    0.04
+   ]
+  ]
+ },
+ {
+  "osm": "way/84320043",
+  "nimi": "Église Luthérienne de l'Ascension",
+  "tyyppi": "kirkko-levea",
+  "sovitus": "pohja",
+  "ala_alle": 20,
+  "talot": [
+   [
+    "way/84316097",
+    20,
+    1.0
+   ]
+  ]
+ }
+]

@@ -14,7 +14,8 @@ namespace Matkakirja
             var ulos = a.Length > 0 ? a[0] : "obj";
             var ci = CultureInfo.InvariantCulture;
             if (ulos == "ikonit") return Ikonit(a[1], a.Length > 2 ? a[2] : "ikonit.json");   // Luonnos.dll ikonit <koodimallit.tsv> <ikonit.json>
-            if (ulos == "budjetti") return Budjetti(a[1], a[2]);   // Luonnos.dll budjetti <muunnelmat.tsv> <ulos.tsv> (KK 14.11. 23.59 budjetti)
+            if (ulos == "budjetti") return Budjetti(a[1], a[2]);
+            if (ulos == "tiiviste") return Tiiviste(a[1], a[2]);   // Luonnos.dll tiiviste <mallirivit.tsv> <ulos.tsv> (osien irrotus: ennen → jälkeen tavulleen)   // Luonnos.dll budjetti <muunnelmat.tsv> <ulos.tsv> (KK 14.11. 23.59 budjetti)
             Directory.CreateDirectory(ulos);
             var lista = OhjelmaKohdeGeometria.TyyppiLuonnokset();
             // Parametrinen vienti (sovituskuviin): Luonnos.dll <kansio> <nimi> palatsi-piha <pituus> <leveys> [julkisivu +z|-z|+x|-x] [avoin sivu]
@@ -151,6 +152,41 @@ namespace Matkakirja
                 Console.WriteLine($"{e.kaupunki}\t{e.nimi}\trunko {x1 - x0:0} × {z1 - z0:0} m (koko verkko {v.MaxX - v.MinX:0} × {v.MaxZ - v.MinZ:0}, ulko-kärkiä {ulkoja})");
             }
             File.WriteAllText(polku, sb.Append("]\n").ToString());
+            return 0;
+        }
+
+        /// <summary>TIIVISTE (osien irrotus, KK 15.11. 06.15): SHA-256 jokaisesta verkosta (paikat, normaalit, värit, syvyys, ulko, viiva, veto):
+        /// kaikki OhjelmaKohdeGeometrian parametrittomat Verkko-metodit (ikonit ja tyyppien oletukset) + pelin MK01-mallirivit (TyyppiMalli + lisäosa).</summary>
+        static int Tiiviste(string rivit, string ulos)
+        {
+            var ci = CultureInfo.InvariantCulture;
+            string H(OhjelmaKohdeGeometria.Verkko v)
+            {
+                using var ms = new MemoryStream(); using var w = new BinaryWriter(ms);
+                void F(float[] x) { w.Write(x == null ? -1 : x.Length); if (x != null) foreach (var f in x) w.Write(f); }
+                F(v.Paikat); F(v.Normaalit); F(v.Varit); F(v.Syvyys); F(v.Viiva); F(v.Veto); w.Write(v.Vedot);
+                w.Write(v.Ulko == null ? -1 : v.Ulko.Length); if (v.Ulko != null) foreach (var b in v.Ulko) w.Write(b);
+                w.Flush(); return Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(ms.ToArray())).ToLowerInvariant();
+            }
+            var sb = new StringBuilder();
+            var ms_ = new System.Collections.Generic.List<System.Reflection.MethodInfo>(typeof(OhjelmaKohdeGeometria).GetMethods(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static));
+            ms_.Sort((x, y) => string.CompareOrdinal(x.Name, y.Name));
+            foreach (var m in ms_)
+            {
+                if (m.ReturnType != typeof(OhjelmaKohdeGeometria.Verkko) || m.GetParameters().Length != 0) continue;
+                var v = (OhjelmaKohdeGeometria.Verkko)m.Invoke(null, null);
+                sb.Append("metodi\t").Append(m.Name).Append('\t').Append(v.Kolmioita).Append('\t').Append(H(v)).Append('\n');
+            }
+            foreach (var rivi in File.ReadAllLines(rivit))
+            {
+                var o = rivi.Split('\t'); if (o.Length < 8) continue;
+                int t = int.Parse(o[1]), a = int.Parse(o[2]), b = int.Parse(o[3]), c = int.Parse(o[4]);
+                var v = OhjelmaKohdeGeometria.TyyppiMalli(t, a, b, c, float.Parse(o[5], ci), float.Parse(o[6], ci), float.Parse(o[7], ci));
+                var osa = OhjelmaKohdeGeometria.TyyppiLisaosa(t, a, out float ox, out float oy);
+                if (osa != null) v = OhjelmaKohdeGeometria.TyYhdista(v, 1f, 1f, osa, ox, oy);
+                sb.Append("malli\t").Append(o[0]).Append('\t').Append(v.Kolmioita).Append('\t').Append(H(v)).Append('\n');
+            }
+            File.WriteAllText(ulos, sb.ToString()); Console.WriteLine(ulos);
             return 0;
         }
     }
