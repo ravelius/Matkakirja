@@ -1,4 +1,4 @@
-# PT → Codex (Tripo 3D -sessio): Grand Châtelet -malli, referenssikuvat ensin (omistaja 15.11.2026 kortti 16.44 "Tilaa Tripo nyt"; KK)
+# PT → Codex (Tripo 3D -sessio): Grand Châtelet -malli, referenssikuvat ensin (omistaja 15.11.2026 kortti 16.44 "Tilaa Tripo nyt"; KK) — AKSELIT KORJATTU 16.51
 
 Omistaja 16.41: "Toinen vaihtoehto olisi teettää tripolla ne mallit, koska ne voivat olla myös raskaampia sen vuoksi, että kerrallaan näkyy aina vain yksi tällainen malli ja peruskartalla ei ainuttakaan, ja ne voidaan ladata näkyviin vain silloin, kun kyseinen rakennus klikataan aktiiviseksi."
 
@@ -22,7 +22,7 @@ Omistaja 16.41: "Toinen vaihtoehto olisi teettää tripolla ne mallit, koska ne 
   vain rakennus. KK vertaa lähteisiin (lupaus: arvio puolessa tunnissa toimituksesta) → vasta sitten Tripo.
 - MALLI: liikkumaton, ei luurankoa; yksi GLB (codex-3d-toimitus.md luvut 3, 4 ja 6: ≤ 15 Mt, ≤ 100 000 kolmiota, tekstuurit ≤ 2048 px,
   enintään 8); saa käyttää rajat täyteen (malli ladataan vain, kun kohde avataan, ja näkyy yksin). Yksikkö metri, todellinen koko; pivot
-  pohjan keskellä maan tasossa; +Z = läpikulun suunta pohjoiskoilliseen (pääjulkisivu +Z-päässä), +X itäkaakkoon. EI maata, katua, ihmisiä,
+  pohjan keskellä maan tasossa; AKSELIT KORJATTU 16.51 (NSe: vanha rivi "+Z pohjoiskoilliseen, +X itäkaakkoon, +Y ylös" oli vasenkätinen, GLB on oikeakätinen): Blenderissä +Y = läpikulun suunta pohjoiskoilliseen (pääjulkisivu, Rue Saint-Denis, +Y-päässä), +X itäkaakkoon, +Z ylös; tavallisessa glTF-viennissä (+Y ylös) pääjulkisivu on −Z-päässä. EI PEILAUSTA: pääjulkisivua pohjoisesta katsoen suuri pyöreä torni on VASEMMALLA (idässä), vino luoteisjulkisivu oikealla. LISÄKSI (NSe): mieluiten yksi materiaali, yksi 2048 px:n värikartta + yksi normaalikartta (enintään 3 materiaalia), ei läpinäkyviä pintoja (ikkunat umpinaisina tummina), porttiholvi geometriana auki, solmujen muunnokset sovellettuina, ei Draco- eikä meshopt-pakkausta (/Users/Shared/Claude/proto-3d/_tyo/nayttamoseppa/grand-chatelet/TILAUS-AKSELIT.md). EI maata, katua, ihmisiä,
   kojuja, puita eikä naapuritaloja (nahtavyydet 4). Tekstuuriin ei leivottuja jyrkkiä varjoja eikä taivaan heijastuksia (pelin valo valaisee).
 - KYTKIJÄ: Näyttämöseppä (hologrammin täyttyminen, haara kk/hologrammi-tayttyy; paikka 48.857616, 2.347227, akseli −18,3°).
 - KIIRE JA KYSYMYS: Tripo-tilaus päättyy noin 18.11.2026 → toimitus ennen sitä. Codexilta samalla: tilauksen tarkka päättymispäivä ja
