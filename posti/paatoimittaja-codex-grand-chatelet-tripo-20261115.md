@@ -1,4 +1,4 @@
-# PT → Codex (Tripo 3D -sessio): Grand Châtelet -malli, referenssikuvat ensin (omistaja 15.11.2026 kortti 16.44 "Tilaa Tripo nyt"; KK) — AKSELIT KORJATTU 16.51, KORJAUS 2 17.08, LISÄYS 3 17.12
+# PT → Codex (Tripo 3D -sessio): Grand Châtelet -malli, referenssikuvat ensin (omistaja 15.11.2026 kortti 16.44 "Tilaa Tripo nyt"; KK) — AKSELIT KORJATTU 16.51, KORJAUS 2 17.08, LISÄYS 3 17.12, LISÄYS 4 17.15
 
 Omistaja 16.41: "Toinen vaihtoehto olisi teettää tripolla ne mallit, koska ne voivat olla myös raskaampia sen vuoksi, että kerrallaan näkyy aina vain yksi tällainen malli ja peruskartalla ei ainuttakaan, ja ne voidaan ladata näkyviin vain silloin, kun kyseinen rakennus klikataan aktiiviseksi."
 
@@ -49,3 +49,12 @@ Kulku: referenssikuvat postiin → KK arvioi puolessa tunnissa → vasta sitten 
 - PELIVERSIO erikseen samasta alkuperäisestä tilauksen rajoilla (≤ 15 Mt, ≤ 100 000 kolmiota, pintakuvat ≤ 2048). Syy: omistaja haluaa kameran myöhemmin lähemmäs
   (pohjoisjulkisivu: porttiholvi, kello, porttitornit, suuri torni); tarkempi pinta tehdään silloin alkuperäisestä ilman uutta Tripo-ottoa.
 - Pohjoisjulkisivu on tärkein: jos Tripo antaa painottaa, tarkkuus sinne.
+
+### TILAUKSEN LISÄYS 4 CODEXILLE (KK 17.15; PT vie postiin sanatarkasti; koskee referenssikuvia ja mallia)
+- KATTOJEN LÄHDE: Plan de Turgot 1739, arkki 10 / 20 (PD), https://commons.wikimedia.org/wiki/File:Turgot_map_of_Paris,_sheet_10_-_Norman_B._Leventhal_Map_Center.jpg
+  ("Gr. Châtelet" nimettynä; kartassa kaakko on ylhäällä, Seine ja Pont au Change oikealla ylhäällä). Rajaukset: haara sk/grand-chatelet-turgot,
+  docs/raportit/kuvat/grand-chatelet-turgot-1739-tiukka.jpg ja -laaja.jpg; selitys docs/raportit/grand-chatelet-ulkokuva-pilotti-20261115.md kohta 3b.
+- KATOT: pitkät jyrkät harjakatot pystysuorin päätykolmioin (kaksi pitkää rinnakkain; katso suunta ja määrä kartasta), torneissa teräväkärkiset kartiokatot, reunoilla
+  pienempiä lapekattoja kattoikkunoin. EI tasakattoja, EI katkaistuja aumakattoja, EI kupoleita. Näyttämösepän harmaamallin tasalakiset katot ovat väliaikaiset: massa ja
+  pohja harmaamallista, KATOT Turgot'sta. Väri ei näy kartasta: sinertävänharmaa liuske (D.8793, D.3137) kuten tilauksessa.
+- Katto on pelissä näkyvin osa (kamera katsoo yläviistosta), joten referenssikuvan "viistosti ylhäältä" pitää vastata Turgot'ta.
