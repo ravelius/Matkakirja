@@ -1,0 +1,32 @@
+{
+  "task": 2253,
+  "part": "A",
+  "status": "SELECTED_FOR_PART_A_TRIPO",
+  "tool": "builtin-image_gen",
+  "startedAt": "2026-11-15T17:40:21.594831+00:00",
+  "estimatedCompletion": "2-4min",
+  "referenceOnly": true,
+  "newTripoJobs": 0,
+  "imageGenerationCost": null,
+  "costNote": "Tool cost not reported",
+  "inputPolicy": "New full reference derived from exact source gray guide plus approvedv4 surface references",
+  "inputs": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/parts-2253/A-guide-main.png",
+      "sha256": "edd03c25c2f448673c625a245b7473294bf0055b4ce78e80b3bc9f9b33241e79"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/01-north.png",
+      "sha256": "c76ca42d0cd27562c513a9ede4065a15e0f99b802733c807ecf3fe5bdd7b5f14"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/03-east.png",
+      "sha256": "1095774df3618fdf0e9861cd62ae229caafa77b581e68e76721108332f22d448"
+    }
+  ],
+  "completedAt": "2026-11-15T17:41:35.127877+00:00",
+  "jobId": "exec-5df74096-143f-471c-99d7-e0ae682b4e7d",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/A-reference-v1.png",
+  "sha256": "4613e168e629bffd08811bb156d4d7553649ef6ed7b23e5423629a192eaea1fd",
+  "QA": "Grayguide silhouette and separate roof directions retained, large round tower plus gate corbels, open gateway. No western courtyard wings or pavilion added. Sourcegeometry remains authority."
+}

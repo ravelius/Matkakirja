@@ -1,0 +1,353 @@
+{
+  "note": "Small ray sample only, no collision or watertightness certification. Separate source comparison.",
+  "samples": {
+    "ALIGNED": [
+      {
+        "label": "gate north-south",
+        "origin": [
+          -3,
+          80,
+          2
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": true,
+        "location": [
+          -3.0,
+          23.75253677368164,
+          2.0
+        ],
+        "object": "tripo_node_e6f5fee3-53e4-4865-8978-03d8ffaad579"
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -3,
+          80,
+          3.5
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": true,
+        "location": [
+          -2.9999990463256836,
+          23.754871368408203,
+          3.5
+        ],
+        "object": "tripo_node_e6f5fee3-53e4-4865-8978-03d8ffaad579"
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -1.8,
+          80,
+          2
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": true,
+        "location": [
+          -1.7999992370605469,
+          29.537952423095703,
+          2.0
+        ],
+        "object": "tripo_node_e6f5fee3-53e4-4865-8978-03d8ffaad579"
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -1.8,
+          80,
+          3.5
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": true,
+        "location": [
+          -1.7999992370605469,
+          29.538009643554688,
+          3.5
+        ],
+        "object": "tripo_node_e6f5fee3-53e4-4865-8978-03d8ffaad579"
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -0.5,
+          80,
+          2
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": true,
+        "location": [
+          -0.5,
+          29.51531410217285,
+          2.0
+        ],
+        "object": "tripo_node_e6f5fee3-53e4-4865-8978-03d8ffaad579"
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -0.5,
+          80,
+          3.5
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": true,
+        "location": [
+          -0.5000009536743164,
+          29.51530647277832,
+          3.5
+        ],
+        "object": "tripo_node_e6f5fee3-53e4-4865-8978-03d8ffaad579"
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -12,
+          11,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -15,
+          11,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -12,
+          8,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -15,
+          8,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      }
+    ],
+    "SOURCE": [
+      {
+        "label": "gate north-south",
+        "origin": [
+          -3,
+          80,
+          2
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -3,
+          80,
+          3.5
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -1.8,
+          80,
+          2
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -1.8,
+          80,
+          3.5
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -0.5,
+          80,
+          2
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "gate north-south",
+        "origin": [
+          -0.5,
+          80,
+          3.5
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -12,
+          11,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -15,
+          11,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -12,
+          8,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      },
+      {
+        "label": "source courtyard from above",
+        "origin": [
+          -15,
+          8,
+          60
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "hit": false,
+        "location": null,
+        "object": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/sources-2249/grand-chatelet-massa-kolmiot.txt",
+  "source_sha256": "ed365ffd736f134f9da7824cb211e245b386badd251e3b0ce883fa74e74ef8b9",
+  "source_faces": 666,
+  "revision": 3,
+  "revision2_archive": "v2/",
+  "revision3_transfer_to_B_area_by_source_face": {
+    "51": 7.192155554867367e-07,
+    "315": 0.00034729988773417623,
+    "316": 3.5115789737170773e-09,
+    "317": 0.0010384771376812515,
+    "319": 1.4895653886670405e-08,
+    "320": 1.3038549126277958e-08,
+    "321": 5.060746396219792,
+    "322": 0.004759454468146056,
+    "323": 5.050604142567607
+  },
+  "guide_export_triangles": {
+    "A": 571,
+    "B": 278,
+    "C": 106
+  },
+  "C_seam_cap_triangles": 9,
+  "C_seam_caps_area_m2": 172.85593202904687,
+  "v1_archive": "v1/",
+  "A_geometry_unchanged_from_v1": true,
+  "transfer_C_to_B_area_by_source_face": {
+    "23": 61.28050537269011,
+    "24": 21.83371648377926,
+    "25": 27.208746516406322,
+    "26": 64.97753101645286,
+    "33": 103.35215088507002,
+    "34": 45.561730638265594,
+    "43": 15.720048111427063,
+    "44": 11.745688729009265,
+    "45": 0.00037436239055949457,
+    "47": 0.007694544970006767,
+    "50": 0.00231237248332262,
+    "51": 0.006209347847267505,
+    "52": 0.01694311060071265,
+    "315": 29.17051896789492,
+    "316": 11.992166263088754,
+    "317": 17.13428204592788,
+    "318": 0.8655948065978324,
+    "319": 13.714817026647413,
+    "320": 11.139078996069015
+  },
+  "transfer_C_to_B_footprint_raw_xz": [
+    [
+      -21.4,
+      1.6
+    ],
+    [
+      -15.487399380804952,
+      0.93
+    ],
+    [
+      -18.119226006191948,
+      10.17
+    ],
+    [
+      -24.031258278145692,
+      10.84
+    ]
+  ],
+  "C_residual_wall_slivers_removed": true,
+  "geometry_changed": "Source surface union unchanged. C detached roof-end and tiny cap fragments moved to B; two separately tagged planar C guide seam caps added, excluded from source coverage QA.",
+  "part_triangles": {
+    "A": 571,
+    "B": 278,
+    "C": 97
+  },
+  "part_source_area_m2": {
+    "A": 7741.463217644261,
+    "B": 4189.456398406657,
+    "C": 1171.9749666986495
+  },
+  "source_area_m2": 13102.894582749577,
+  "split_area_m2": 13102.894582749568,
+  "max_per_source_face_area_error_m2": 4.618527782440651e-12,
+  "max_vertex_distance_from_source_plane_m": 5.861739910541436e-15,
+  "max_barycentric_outside": 1.0052650999571054e-13,
+  "max_pairwise_piece_overlap_m2": 3.1513280873696203e-10,
+  "all_source_faces_covered": true,
+  "courtyard_escape_proofs": {
+    "A": {
+      "probe_raw_xz": [
+        -12,
+        11
+      ],
+      "direction_raw_xz": [
+        -1,
+        0
+      ],
+      "intersected_projected_triangles": 0,
+      "clear_to_outside": true
+    },
+    "B": {
+      "probe_raw_xz": [
+        -12,
+        11
+      ],
+      "direction_raw_xz": [
+        0,
+        1
+      ],
+      "intersected_projected_triangles": 0,
+      "clear_to_outside": true
+    },
+    "C": {
+      "probe_raw_xz": [
+        -12,
+        11
+      ],
+      "direction_raw_xz": [
+        1,
+        0
+      ],
+      "intersected_projected_triangles": 0,
+      "clear_to_outside": true
+    }
+  },
+  "seam_caps_added": true,
+  "warning": "C guide includes separately tagged planar seam caps (source face=-1). Source surface QA excludes caps. Other inherited overlaps and open bottoms remain; not a watertight manufacturing mesh.",
+  "no_render_performed": true,
+  "axes": "OBJ/GLB official axes: raw(x,y,-z); Blender raw(x,z,y). Shared origin and metres, no recenter or normalization.",
+  "A_file_hashes_unchanged": {
+    "A.obj": "0a0da26c19bc8d8d951019b9d230272e2f829077917894722b71719d31c81d17",
+    "A.glb": "41f866132075d36d5da5c8f3665ad62c81398940715b2d0b869b2ba8b58b7a78",
+    "A-triangles.json": "e60833aa2a8ce15c853e58e47f7c4feb4e8ae8b2d746bfd3601577004fd45ed4"
+  },
+  "C_source_components_shared_vertex_test": [
+    {
+      "triangles": 87,
+      "source_faces": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        48,
+        49,
+        50,
+        51,
+        52,
+        315,
+        316,
+        318,
+        319,
+        320,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336
+      ]
+    },
+    {
+      "triangles": 10,
+      "source_faces": [
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665
+      ]
+    }
+  ],
+  "B_Tripo_input_guide_revision": 2,
+  "assembly_source_parts_revision": 3,
+  "B_source_fragments_retained_in_B": true,
+  "C_guide_only_files": [
+    "C-guide-only.blend",
+    "C-guide-only.glb"
+  ]
+}

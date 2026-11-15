@@ -1,0 +1,30 @@
+{
+  "task": 2253,
+  "part": "B",
+  "status": "SELECTED_FOR_PART_B_TRIPO",
+  "tool": "builtin-image_gen",
+  "startedAt": "2026-11-15T17:45:46.658579+00:00",
+  "estimatedCompletion": "2-4min",
+  "referenceOnly": true,
+  "newTripoJobs": 0,
+  "imageGenerationCost": null,
+  "inputs": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/parts-2253/B-guide-main.png",
+      "sha256": "7265084b48e919acf0f050f000e749e7cf766014d0f0595ab698204e964b8ad6"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/04-west.png",
+      "sha256": "d46b14550cd94759ee73746ddd61739aed3286990b4b7aebf7c813e44e15c4cf"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/A-reference-v1.png",
+      "sha256": "4613e168e629bffd08811bb156d4d7553649ef6ed7b23e5423629a192eaea1fd"
+    }
+  ],
+  "completedAt": "2026-11-15T17:46:57.297015+00:00",
+  "jobId": "exec-2f8be657-8071-4868-8718-768b4f333cab",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/B-reference-v1.png",
+  "sha256": "7c85c96a39afa7219ee512a6bc1c8ebc29de121d3561c5d75c4bfd0dc4ec2359",
+  "QA": "Two distinct long parallel gable roofs, square pavilion retained, no round towers, no courtyard. Sourcegeometry remains authority."
+}

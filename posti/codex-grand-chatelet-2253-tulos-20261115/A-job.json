@@ -1,0 +1,50 @@
+{
+  "task": 2253,
+  "part": "A",
+  "status": "COMPLETED_ARCHIVED_QA_PENDING",
+  "reservedAt": "2026-11-15T17:42:47.014977+00:00",
+  "approvalCommit": "091ff53d89bc762deb41633d3e9bc18f898cc34e",
+  "maxCallsTotal": 3,
+  "maxCallsPerPart": 1,
+  "attemptsSubmitted": 1,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/A-reference-v1.png",
+  "sourceSHA256": "4613e168e629bffd08811bb156d4d7553649ef6ed7b23e5423629a192eaea1fd",
+  "sourceMassSHA256": "ed365ffd736f134f9da7824cb211e245b386badd251e3b0ce883fa74e74ef8b9",
+  "expectedCredits": 65,
+  "creditsBefore": 15360,
+  "estimatedCompletion": "2-5min from submission; initial UI estimate to be recorded",
+  "settings": {
+    "workflow": "HD Model / Single Image",
+    "model": "H3.1 Best Quality",
+    "Ultra": true,
+    "AIComplete": false,
+    "Parts": false,
+    "Texture": "8K",
+    "RemoveLighting": true,
+    "PBR": true,
+    "Topology": "Triangle",
+    "Polycount": 2000000
+  },
+  "resourceCheck": {
+    "load": [
+      28.6611328125,
+      15.9541015625,
+      13.91748046875
+    ],
+    "localHeavyRenderStarted": false
+  },
+  "sourceArchivePreserved": true,
+  "gameChanged": false,
+  "submittedAt": "2026-11-15T17:42:53.077Z",
+  "jobId": "2967ace5-d69a-4245-ada2-91a5e29c5578",
+  "url": "https://studio.tripo3d.ai/workspace/generate/2967ace5-d69a-4245-ada2-91a5e29c5578",
+  "creditsSpent": 65,
+  "creditsAfter": 15295,
+  "confirmedProgressPercent": 6,
+  "submissionProof": "A-started-proof.jpg",
+  "completionObservedAt": "2026-11-15T17:51:29.310752+00:00",
+  "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/A-max-original-8k.glb",
+  "archiveSHA256": "760685293ac2be15e347a08ddcdbb80b09a53c7696b9a020c2bb5f4064a5f7fe",
+  "bytes": 86784224,
+  "actualTriangles": 1923649
+}

@@ -1,0 +1,287 @@
+{
+  "task": 2253,
+  "checkedAt": "2026-11-15T18:07:34.743307+00:00",
+  "overall": "PARTIAL_IMPROVEMENT_NOT_ACCEPTED_AS_SOURCE_MATCH",
+  "sourceCommit": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+  "checks": [
+    {
+      "item": 1,
+      "requirement": "SW square pavilion and tent roof",
+      "result": "PARTIAL",
+      "evidence": "04-west and06: square/rectangular pavilion with pyramidal roof retained. Exact dimensions and corner join not accepted."
+    },
+    {
+      "item": 2,
+      "requirement": "Western courtyard open, no roof/fill",
+      "result": "PASS_SAMPLED",
+      "evidence": "05 gray and06 show open courtyard; all4 registered overhead rays clear, same as source. This is not full collision certification."
+    },
+    {
+      "item": 3,
+      "requirement": "East-west gable ridges and separate source roof masses",
+      "result": "FAIL",
+      "evidence": "B retains two parallel gabled wings, but A replaces source roof masses with broad joined hipped/intersecting slopes. E-W mass direction alone is insufficient."
+    },
+    {
+      "item": 4,
+      "requirement": "See-through gate",
+      "result": "FAIL",
+      "evidence": "01-north gate has closed stone infill;6/6 sampled source-aligned gate rays hitA versus0/6 source hits. Placement is approximate, image also confirms closure."
+    },
+    {
+      "item": 5,
+      "requirement": "NE tower highest round part",
+      "result": "PARTIAL",
+      "evidence": "NE large round tower is visually above smaller gate turrets in01/03; exact source25m height relation not preserved/verified because generated main roof is highest inA. No physical measurement acceptance."
+    },
+    {
+      "item": 6,
+      "requirement": "Gate turret corbels at required height",
+      "result": "PARTIAL",
+      "evidence": "01 shows tapering supported gate turrets, but source-specific corbel6.5m±1m attachment not verified and silhouette differs. Not a six-of-six pass."
+    }
+  ],
+  "tripoCalls": 3,
+  "credits": 195,
+  "imageCalls": 3,
+  "imageCost": null,
+  "imageCostNote": "Built-in tool does not expose actual cost",
+  "originals": [
+    {
+      "verifiedAt": "2026-11-15T17:51:29.310752+00:00",
+      "part": "A",
+      "jobId": "2967ace5-d69a-4245-ada2-91a5e29c5578",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/A-max-original-8k.glb",
+      "bytes": 86784224,
+      "sha256": "760685293ac2be15e347a08ddcdbb80b09a53c7696b9a020c2bb5f4064a5f7fe",
+      "triangles": 1923649,
+      "vertices": 1234582,
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            4096,
+            4096
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 1477584
+        },
+        {
+          "index": 1,
+          "size": [
+            8192,
+            8192
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 20893239
+        },
+        {
+          "index": 2,
+          "size": [
+            4096,
+            4096
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 1820723
+        }
+      ],
+      "materials": [
+        {
+          "name": "tripo_mat_e6f5fee3-53e4-4865-8978-03d8ffaad579",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ],
+      "externalDependencies": false,
+      "sourceModelUnmodified": true,
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_e6f5fee3-53e4-4865-8978-03d8ffaad579.glb",
+      "downloadMovedOffBootDisk": true
+    },
+    {
+      "verifiedAt": "2026-11-15T17:58:36.179126+00:00",
+      "part": "B",
+      "jobId": "2e4bcc62-e21b-44c5-a17b-fd07b4f3e590",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/B-max-original-8k.glb",
+      "bytes": 81277584,
+      "sha256": "903fb5e2acd66baff9bbd28218898ddefc8f80d77dc8249db2ddd4d499a550ba",
+      "triangles": 1899037,
+      "vertices": 1239979,
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            4096,
+            4096
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 951233
+        },
+        {
+          "index": 1,
+          "size": [
+            8192,
+            8192
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 15057660
+        },
+        {
+          "index": 2,
+          "size": [
+            4096,
+            4096
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 2798663
+        }
+      ],
+      "materials": [
+        {
+          "name": "tripo_mat_4943be87-4bbb-4bc8-8cb5-0c9d38941bf6",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ],
+      "externalDependencies": false,
+      "sourceModelUnmodified": true,
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_4943be87-4bbb-4bc8-8cb5-0c9d38941bf6.glb",
+      "downloadMovedOffBootDisk": true
+    },
+    {
+      "verifiedAt": "2026-11-15T18:05:08.192560+00:00",
+      "part": "C",
+      "jobId": "cd74025c-1ebf-4338-b3cd-727eaede60fb",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/C-max-original-8k.glb",
+      "bytes": 84110468,
+      "sha256": "abb34f040a6fcf68f30075d2f0be4b7a0d249d332f819203ddab12c61f5a83f7",
+      "triangles": 1833074,
+      "vertices": 1171955,
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            4096,
+            4096
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 1763156
+        },
+        {
+          "index": 1,
+          "size": [
+            8192,
+            8192
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 20703498
+        },
+        {
+          "index": 2,
+          "size": [
+            4096,
+            4096
+          ],
+          "mimeType": "image/jpeg",
+          "bytes": 2142119
+        }
+      ],
+      "materials": [
+        {
+          "name": "tripo_mat_d3c77366-3d5f-4b5f-811e-ba97a354036e",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ],
+      "externalDependencies": false,
+      "sourceModelUnmodified": true,
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_d3c77366-3d5f-4b5f-811e-ba97a354036e.glb",
+      "downloadMovedOffBootDisk": true
+    }
+  ],
+  "trianglesTotal": 5655760,
+  "bytesTotal": 252172276,
+  "assembly": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/assembled-inspection.blend",
+    "sha256": "ad0bf8b82939568fbc65ef1996cc2d77dd53321d0754e03d86b5e61fd3b48394",
+    "purpose": "Inspection comparison, not finished game mesh",
+    "transformOnly": true,
+    "uniformHeightScale": true,
+    "noMirroring": true,
+    "sourceSeamsC": 9,
+    "sourceOriginalModified": false,
+    "C_yawAmbiguous": true,
+    "note": "C alternatives33/214deg within2%; chosen33 is automatic source surface fit. Root visual review broadly agrees with L-wing placement but exact seams and yaw remain provisional."
+  },
+  "newGenerationAllowed": false,
+  "gameChanged": false,
+  "receiverAccepted": false
+}

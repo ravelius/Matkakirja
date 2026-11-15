@@ -1,0 +1,35 @@
+{
+  "task": 2253,
+  "part": "C",
+  "status": "SELECTED_FOR_PART_C_TRIPO",
+  "tool": "builtin-image_gen",
+  "startedAt": "2026-11-15T17:55:42.070402+00:00",
+  "estimatedCompletion": "2-4min",
+  "imageGenerationCost": null,
+  "costNote": "Tool does not expose actual cost",
+  "newTripoJobs": 0,
+  "resourceLoad": [
+    8.2724609375,
+    10.01318359375,
+    11.5107421875
+  ],
+  "inputs": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/work/parts-2253/C-guide-reverse.png",
+      "sha256": "7c9bb32a70b0719e13d48d980b8d633d1700962531a75c59589f5c8100ecba97"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/delivery-v4/01-north.png",
+      "sha256": "c76ca42d0cd27562c513a9ede4065a15e0f99b802733c807ecf3fe5bdd7b5f14"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/A-reference-v1.png",
+      "sha256": "4613e168e629bffd08811bb156d4d7553649ef6ed7b23e5423629a192eaea1fd"
+    }
+  ],
+  "completedAt": "2026-11-15T17:56:21.730884+00:00",
+  "jobId": "exec-0bea2079-a43c-4a4d-8614-a23235d2b857",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/C-reference-v1.png",
+  "sha256": "c6767ec04533ddbbe58dd9b74d5c7b6475e3c736ccb3f9c035ad7cddf6460862",
+  "QA": "L-shaped inward corner open, one chimney, no added wings/towers; silhouette retained. Source mass remains authority."
+}

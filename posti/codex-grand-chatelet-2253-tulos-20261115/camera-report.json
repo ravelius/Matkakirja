@@ -1,0 +1,113 @@
+{
+  "renderer": "Workbench, 2 threads, 8 AA, no shadows, cavity, baking or pathtracing",
+  "placement": "../transformation-report.json",
+  "views": [
+    {
+      "name": "01-north",
+      "camera": [
+        -5.699999809265137,
+        163.9444122314453,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "02-south",
+      "camera": [
+        -5.699999809265137,
+        -156.0555877685547,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "03-east",
+      "camera": [
+        154.3000030517578,
+        3.9444100856781006,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "04-west",
+      "camera": [
+        -165.6999969482422,
+        3.9444100856781006,
+        14.3962984085083
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 0.5,
+      "orthoScale": 88
+    },
+    {
+      "name": "05-upper-gray",
+      "camera": [
+        107.43708801269531,
+        117.08149719238281,
+        290.1281433105469
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 60,
+      "orthoScale": 140
+    },
+    {
+      "name": "06-upper-oblique-full",
+      "camera": [
+        107.43708801269531,
+        117.08149719238281,
+        290.1281433105469
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 60,
+      "orthoScale": 140
+    },
+    {
+      "name": "06-upper-oblique-full-guide",
+      "camera": [
+        107.43708801269531,
+        117.08149719238281,
+        290.1281433105469
+      ],
+      "target": [
+        -5.699999809265137,
+        3.9444100856781006,
+        13.0
+      ],
+      "elevationDegrees": 60,
+      "orthoScale": 140
+    }
+  ],
+  "sourceAndGeneratedCamera06Identical": true,
+  "elapsedSeconds": 3.9860467086546123
+}

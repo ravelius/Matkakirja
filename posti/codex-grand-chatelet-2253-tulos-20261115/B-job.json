@@ -1,0 +1,53 @@
+{
+  "task": 2253,
+  "part": "B",
+  "status": "COMPLETED_ARCHIVED_QA_PENDING",
+  "reservedAt": "2026-11-15T17:46:57.300020+00:00",
+  "approvalCommit": "091ff53d89bc762deb41633d3e9bc18f898cc34e",
+  "maxCallsTotal": 3,
+  "maxCallsPerPart": 1,
+  "attemptsSubmitted": 1,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/references-parts-2253/B-reference-v1.png",
+  "sourceSHA256": "7c85c96a39afa7219ee512a6bc1c8ebc29de121d3561c5d75c4bfd0dc4ec2359",
+  "sourceMassSHA256": "ed365ffd736f134f9da7824cb211e245b386badd251e3b0ce883fa74e74ef8b9",
+  "expectedCredits": 65,
+  "creditsBefore": 15295,
+  "estimatedCompletion": "2-5min from submission; initial UI estimate to be recorded",
+  "settings": {
+    "workflow": "HD Model / Single Image",
+    "model": "H3.1 Best Quality",
+    "Ultra": true,
+    "AIComplete": false,
+    "Parts": false,
+    "Texture": "8K",
+    "RemoveLighting": true,
+    "PBR": true,
+    "Topology": "Triangle",
+    "Polycount": 2000000
+  },
+  "resourceCheck": {
+    "load": [
+      6.25048828125,
+      11.0009765625,
+      12.25390625
+    ],
+    "localHeavyRenderStarted": false
+  },
+  "sourceArchivePreserved": true,
+  "gameChanged": false,
+  "submittedAt": "2026-11-15T17:47:19.814Z",
+  "jobId": "2e4bcc62-e21b-44c5-a17b-fd07b4f3e590",
+  "url": "https://studio.tripo3d.ai/workspace/generate/2e4bcc62-e21b-44c5-a17b-fd07b4f3e590",
+  "creditsSpent": 65,
+  "creditsAfter": 15230,
+  "confirmedProgressPercent": 9,
+  "submissionProof": "B-started-proof.jpg",
+  "completedObservedAt": "2026-11-15T17:57:18.296688+00:00",
+  "UIFaces": 1899037,
+  "UIVertices": 1072296,
+  "completionObservedAt": "2026-11-15T17:58:36.179126+00:00",
+  "archive": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/B-max-original-8k.glb",
+  "archiveSHA256": "903fb5e2acd66baff9bbd28218898ddefc8f80d77dc8249db2ddd4d499a550ba",
+  "bytes": 81277584,
+  "actualTriangles": 1899037
+}

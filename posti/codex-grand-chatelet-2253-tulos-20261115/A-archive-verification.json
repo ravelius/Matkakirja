@@ -1,0 +1,73 @@
+{
+  "verifiedAt": "2026-11-15T17:51:29.310752+00:00",
+  "part": "A",
+  "jobId": "2967ace5-d69a-4245-ada2-91a5e29c5578",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/A-max-original-8k.glb",
+  "bytes": 86784224,
+  "sha256": "760685293ac2be15e347a08ddcdbb80b09a53c7696b9a020c2bb5f4064a5f7fe",
+  "triangles": 1923649,
+  "vertices": 1234582,
+  "images": [
+    {
+      "index": 0,
+      "size": [
+        4096,
+        4096
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 1477584
+    },
+    {
+      "index": 1,
+      "size": [
+        8192,
+        8192
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 20893239
+    },
+    {
+      "index": 2,
+      "size": [
+        4096,
+        4096
+      ],
+      "mimeType": "image/jpeg",
+      "bytes": 1820723
+    }
+  ],
+  "materials": [
+    {
+      "name": "tripo_mat_e6f5fee3-53e4-4865-8978-03d8ffaad579",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ],
+  "externalDependencies": false,
+  "sourceModelUnmodified": true,
+  "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_e6f5fee3-53e4-4865-8978-03d8ffaad579.glb",
+  "downloadMovedOffBootDisk": true
+}
