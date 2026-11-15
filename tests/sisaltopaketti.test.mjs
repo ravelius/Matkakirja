@@ -1675,3 +1675,32 @@ test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', 
   const kuvat = new Set(fra.mediaKuvat.map((k) => k.url));
   assert.ok(fra.media.some((u) => kuvat.has(u)), 'FRA: media-listan kuvia mediaKuvissa');
 });
+
+/*
+ * PULUN KOMMENTIN ÄÄNI (KK 15.11.2026 klo 15.35): natiivi lukee kaupungin kommentin äänen kokoelman livianrepliikit rivistä
+ * "<kaupunki>-3" ja soittaa sen vain, kun rivin teksti on kuplan teksti (fokusvirran pollo.kommentti[0]) ja ajanTasalla on true
+ * (Assets/Matkakirja/UI/Pulu/LivianRepliikit.cs). Tekstien ero on punainen: lähteet ovat ajautuneet erilleen. ajanTasalla false ei ole
+ * punainen (teksti saa vaihtua ennen äänitystä); se tulostuu äänitysjonona.
+ */
+test('pulun kommentin rivi <kaupunki>-3 = fokusvirran ensimmäinen kupla', (t) => {
+  const repliikit = new Map(JSON.parse(tiedostot.get('kokoelmat/livianrepliikit.json')).alkiot.map((r) => [r.id, r]));
+  const virrat = JSON.parse(tiedostot.get('kokoelmat/fokusvirrat.json')).alkiot;
+  const erot = [];
+  const jono = [];
+  let rivilla = 0;
+  for (const v of virrat) {
+    const k = v.kaupunki ?? v.id;
+    const kommentti = v.pollo?.kommentti ?? v.data?.pollo?.kommentti;
+    const eka = Array.isArray(kommentti) ? kommentti[0] : kommentti;
+    if (typeof eka !== 'string') continue;
+    const r = repliikit.get(`${k}-3`);
+    if (!r) continue;
+    rivilla += 1;
+    if (r.teksti.trim() !== eka.trim()) erot.push(`${k}: rivi "${r.teksti.slice(0, 40)}…" ≠ kupla "${eka.slice(0, 40)}…"`);
+    if (!r.ajanTasalla) jono.push(k);
+    assert.match(r.aani ?? '', /^https:\/\//, `${k}-3 aani`);
+  }
+  assert.ok(rivilla >= 40, `kaupunkirivejä ${rivilla}`);
+  assert.deepEqual(erot, [], 'pulun kommentin teksti eroaa fokusvirrasta');
+  t.diagnostic(`äänitysjono (ajanTasalla false): ${jono.length ? jono.join(', ') : 'tyhjä'}; kaupunkirivejä ${rivilla}`);
+});
