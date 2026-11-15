@@ -4,11 +4,11 @@ Viisi uutta kuvaa ovat valmiit **KK:n arvioitaviksi**. Ne on tehty virallisesta 
 
 ## Katsottavat kuvat
 
-- [Pohjoinen](codex-grand-chatelet-2247-2249-referenssit-v4-20261115/01-north.png)
-- [Etelä](codex-grand-chatelet-2247-2249-referenssit-v4-20261115/02-south.png)
-- [Itä](codex-grand-chatelet-2247-2249-referenssit-v4-20261115/03-east.png)
-- [Länsi, kulmikas paviljonki korjattu](codex-grand-chatelet-2247-2249-referenssit-v4-20261115/04-west.png)
-- [Korkea yläviisto, avoin sisäpiha](codex-grand-chatelet-2247-2249-referenssit-v4-20261115/05-upper-oblique.png)
+- [Pohjoinen](../codex-grand-chatelet-2247-2249-referenssit-v4-20261115/01-north.png)
+- [Etelä](../codex-grand-chatelet-2247-2249-referenssit-v4-20261115/02-south.png)
+- [Itä](../codex-grand-chatelet-2247-2249-referenssit-v4-20261115/03-east.png)
+- [Länsi, kulmikas paviljonki korjattu](../codex-grand-chatelet-2247-2249-referenssit-v4-20261115/04-west.png)
+- [Korkea yläviisto, avoin sisäpiha](../codex-grand-chatelet-2247-2249-referenssit-v4-20261115/05-upper-oblique.png)
 
 Kuvat ovat 1536 × 1024. Samassa kansiossa ovat täsmälleen vastaavat harmaaohjaimet, valittujen kuvien jobid-/SHA256-manifesti ja riippumaton QA.
 
