@@ -1,0 +1,150 @@
+# Valoseppä 15.11.2026 kierros 8 = KK 09.30 VAIHE 1 (lopullinen vienti peliin + mittaus). EI JUNAAN.
+# merkit-pariisi-kartta.bytes 99218b90 (säännöt A + a b c). Nyt = pelin talot ilman tyyppimalleja; Uusi = poisOsm-palat + tyyppimallit.
+# Luvut: MATKAKIRJA kartan elämä: tyyppimallit … (lataus, pääsäie, muisti) + … ruudut (pisin ruutu); piirtotilasto <kuva>-merkit-pois|paalla.
+alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3251 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p5-nyt Saint-Lazare (way/727994377): Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 3
+komento aja 48.86355 2.33685 0.004 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p9-nyt Palais Royal (relation/3300400) LÄHIKUVA: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.86769 2.29847 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p11-nyt Saint-Pierre de Chaillot (way/79276832) LÄHIKUVA: Nyt (nykyiset talot, ei tyyppimalleja)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3594 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva p12-nyt Gare de l'Est (way/280670907): Nyt (nykyiset talot, ei tyyppimalleja)
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/talot-vaisto/koko-v21-merkit/palat
+odota 20
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3251 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p5-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p5-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p5-uusi Saint-Lazare (way/727994377): Uusi (poisOsm-palat + tyyppimallit, lopullinen vienti)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 3
+komento aja 48.86355 2.33685 0.004 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p9-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p9-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p9-uusi Palais Royal (relation/3300400) LÄHIKUVA: Uusi (poisOsm-palat + tyyppimallit, lopullinen vienti)
+komento kallista 50
+komento suunta 10
+komento lahizoomi 4
+komento aja 48.86769 2.29847 0.003 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p11-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p11-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p11-uusi Saint-Pierre de Chaillot (way/79276832) LÄHIKUVA: Uusi (poisOsm-palat + tyyppimallit, lopullinen vienti)
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3594 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto p12-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto p12-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva p12-uusi Gare de l'Est (way/280670907): Uusi (poisOsm-palat + tyyppimallit, lopullinen vienti)
+odota 3

@@ -1,0 +1,47 @@
+# Valoseppä 15.11.2026 kierros 8 = KK 09.30 VAIHE 1, Lontoo l3. EI JUNAAN. merkit-lontoo-kartta.bytes 15750023.
+# Uusi = KS lontoo-v2-yhd-20261115/palat-merkit + tyyppimallit. Luvut kuten Pariisissa.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento kallista 50
+komento suunta 350
+komento lahizoomi 0
+komento aja 51.53194 -0.12657 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+ui kartanelama tila
+linssi kaista
+kuva l3-nyt St Pancras LÄHELTÄ: Nyt (nykyiset talot, ei tyyppimalleja)
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/lontoo-v2-yhd-20261115/palat-merkit
+odota 20
+komento kallista 50
+komento suunta 350
+komento lahizoomi 0
+komento aja 51.53194 -0.12657 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto l3-merkit-pois
+odota 3
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto l3-merkit-paalla
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva l3-uusi St Pancras LÄHELTÄ: Uusi (poisOsm-palat + tyyppimallit, lopullinen vienti)
+odota 3
