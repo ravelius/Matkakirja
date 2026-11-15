@@ -1,0 +1,30 @@
+{
+  "repository": "ravelius/Matkakirja",
+  "commit": "91a1e0e5198bf2fca4f899de81f8c00954be5e8d",
+  "orderPath": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115.md",
+  "orderBlob": "599c510c4e81f954c94c9f0cdc74c68168116ecb",
+  "method": "gh api contents at commit + immutable git blobs; verified Git blob SHA1",
+  "files": [
+    {
+      "file": "sukharevin-torni-huomiot.md",
+      "path": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/sukharevin-torni-huomiot.md",
+      "gitBlob": "0d279560c272beee2a6f4dbfcd23b7c457377092",
+      "sha256": "bef75723be332669b05cd8965366711c154a1917d681b14f2bff32f0fa196263",
+      "bytes": 4729
+    },
+    {
+      "file": "sukharevin-torni.jpg",
+      "path": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/sukharevin-torni.jpg",
+      "gitBlob": "ccf2963836c442736f8803bb72781734b5ee4ffa",
+      "sha256": "7923b5c694d0f50f66ed91fb378f318d92ff372edb5630c25c6ab76719e01bd7",
+      "bytes": 198190
+    },
+    {
+      "file": "sukharevin-torni.md",
+      "path": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/sukharevin-torni.md",
+      "gitBlob": "e14a4ec3ec127a1cb882ff86d5ae03513f5363fc",
+      "sha256": "e9cd045c5153a94f37ebf75e35e675b0b00224d9b9fea98957a78bf9891506bf",
+      "bytes": 3406
+    }
+  ]
+}

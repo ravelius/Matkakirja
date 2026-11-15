@@ -1,0 +1,30 @@
+{
+  "repository": "ravelius/Matkakirja",
+  "commit": "91a1e0e5198bf2fca4f899de81f8c00954be5e8d",
+  "orderPath": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115.md",
+  "orderBlob": "599c510c4e81f954c94c9f0cdc74c68168116ecb",
+  "method": "gh api contents at commit + immutable git blobs; verified Git blob SHA1",
+  "files": [
+    {
+      "file": "helsingin-vanha-rautatieasema-huomiot.md",
+      "path": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/helsingin-vanha-rautatieasema-huomiot.md",
+      "gitBlob": "6847b8c453ba533546dc9f78a9e0ea8216e826c5",
+      "sha256": "5a5b096f5b692dc03067c33e8669aedbf96cc007f4c29028861445015841d6ed",
+      "bytes": 3454
+    },
+    {
+      "file": "helsingin-vanha-rautatieasema.jpg",
+      "path": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/helsingin-vanha-rautatieasema.jpg",
+      "gitBlob": "5e8a7e7a44ee8c359ec3947d74a4231be233fe97",
+      "sha256": "b20362dd3075dc14dbc7a11dd5613b67d447a6918683f9fc1bc7929555ed605c",
+      "bytes": 105834
+    },
+    {
+      "file": "helsingin-vanha-rautatieasema.md",
+      "path": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/helsingin-vanha-rautatieasema.md",
+      "gitBlob": "87134501baa87c2678048a0e0eda7c5d204c9693",
+      "sha256": "df10e1ab4081be223ca4255bce460ebb26236b59b9487182668e594e6f98078b",
+      "bytes": 3267
+    }
+  ]
+}

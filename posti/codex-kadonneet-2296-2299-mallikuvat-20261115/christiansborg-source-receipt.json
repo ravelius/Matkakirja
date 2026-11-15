@@ -1,0 +1,26 @@
+[
+  {
+    "path": "output/kadonneet-ryhma4-20261115/christiansborg/christiansborg.jpg",
+    "sourcePath": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/christiansborg.jpg",
+    "commit": "91a1e0e5198bf2fca4f899de81f8c00954be5e8d",
+    "gitBlobSHA": "2f93490c7e614bd7657501628edde256c59f41c2",
+    "bytes": 181375,
+    "sha256": "fd4dd66fa8c0455f03823486c48d46aee375f92fd6f73482154aca3327a5f026"
+  },
+  {
+    "path": "output/kadonneet-ryhma4-20261115/christiansborg/christiansborg.md",
+    "sourcePath": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/christiansborg.md",
+    "commit": "91a1e0e5198bf2fca4f899de81f8c00954be5e8d",
+    "gitBlobSHA": "b199c3d13d5b6ee93bf6c6aa239f0ecb58c1f0fd",
+    "bytes": 3536,
+    "sha256": "a918ff12e45fb492f76eb6e40db3f562d42413998cd89c5e13f77ec986dc5e80"
+  },
+  {
+    "path": "output/kadonneet-ryhma4-20261115/christiansborg/christiansborg-huomiot.md",
+    "sourcePath": "posti/paatoimittaja-codex-ryhma4-kadonneet-20261115/christiansborg-huomiot.md",
+    "commit": "91a1e0e5198bf2fca4f899de81f8c00954be5e8d",
+    "gitBlobSHA": "029e6fad0516e398e34bad3858bd196bc2985fc0",
+    "bytes": 4998,
+    "sha256": "de305caec4fc960f04c6a3123c738fc6b7a563a9d60c22328857cb08819953f4"
+  }
+]
