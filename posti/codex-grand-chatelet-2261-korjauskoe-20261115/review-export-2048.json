@@ -1,0 +1,107 @@
+{
+  "status": "FAILED_REVIEW_ONLY_NOT_FOR_GAME",
+  "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/correction-2261/grand-chatelet-2261-REVIEW-FAILED-2048.glb",
+  "bytes": 9926096,
+  "sha256": "5a47d6929bc4e5671064f6d098858aee97386c619c9afcde223bf63a687fdb40",
+  "triangles": 75112,
+  "textureImages": 8,
+  "sourceOriginalsModified": false,
+  "geometryChangedByExport": false,
+  "gameAccepted": false,
+  "intendedMaxDimensions": 2048,
+  "dimensionValidation": "Actual embedded GLB image headers read",
+  "caps": {
+    "triangles100k": true,
+    "bytes15MB": true,
+    "images8": true,
+    "dimensions2048": true
+  },
+  "images": [
+    {
+      "name": "A-normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 1180982
+    },
+    {
+      "name": "A-basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 1379263
+    },
+    {
+      "name": "Own-stone-patch",
+      "size": [
+        256,
+        256
+      ],
+      "format": "PNG",
+      "bytes": 104818
+    },
+    {
+      "name": "B-normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 620268
+    },
+    {
+      "name": "B-basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 1188274
+    },
+    {
+      "name": "C-normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 1402472
+    },
+    {
+      "name": "C-basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 1400135
+    },
+    {
+      "name": "Own-slate-patch",
+      "size": [
+        256,
+        256
+      ],
+      "format": "PNG",
+      "bytes": 106916
+    }
+  ],
+  "originalsVerified": [
+    {
+      "part": "A",
+      "sha256": "760685293ac2be15e347a08ddcdbb80b09a53c7696b9a020c2bb5f4064a5f7fe"
+    },
+    {
+      "part": "B",
+      "sha256": "903fb5e2acd66baff9bbd28218898ddefc8f80d77dc8249db2ddd4d499a550ba"
+    },
+    {
+      "part": "C",
+      "sha256": "abb34f040a6fcf68f30075d2f0be4b7a0d249d332f819203ddab12c61f5a83f7"
+    }
+  ]
+}

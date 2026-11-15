@@ -1,0 +1,76 @@
+{
+  "startedAt": "2026-11-15T18:28:40.223324+00:00",
+  "roofAttempt": 1,
+  "credits": 0,
+  "bake": false,
+  "source": "ae77525c30ffbbb31d215f29df9049e937f58aa2",
+  "stages": [
+    "Source arch volumes cut; own stone on Boolean interior faces",
+    "One roof replacement completed; must inspect seam and surface before acceptance"
+  ],
+  "materialPatches": [
+    {
+      "name": "Own-slate-patch",
+      "sourceImage": "A-basecolor-2048",
+      "sample": "vertical roof XY13..17,5..9",
+      "missingRays": 0,
+      "rays": 65536,
+      "noNewGeneratedTexture": true
+    },
+    {
+      "name": "Own-stone-patch",
+      "sourceImage": "A-basecolor-2048",
+      "sample": "east wall Y-1..2,Z3..6",
+      "missingRays": 0,
+      "rays": 65536,
+      "noNewGeneratedTexture": true
+    }
+  ],
+  "COrientation": {
+    "decision": "Retain current handedness after source-anchor check, not RMS ranking",
+    "generatedChimneyTopCenter": [
+      -8.31365353562111,
+      27.22510457593341,
+      20.876596805661222
+    ],
+    "sourceChimneyTopCenter": [
+      -9.6,
+      25.1,
+      21
+    ],
+    "sourceSWJointCenter": [
+      -21.075242142,
+      10.505,
+      15.5
+    ],
+    "sourceLongArmPointsTowardPort": [
+      0.858691674,
+      0.512492545
+    ],
+    "visualRequirement": "chimney on long port-end arm; pavilion on opposite short southwest end",
+    "wholeGeneratedPartNotExactSourceGeometry": true
+  },
+  "roofSourceFaces": [
+    368,
+    431
+  ],
+  "roofRemovalEaveZ": 15.5,
+  "roofCutFootprintOutwardToleranceM": 0.4,
+  "roofTowersProtected": [
+    {
+      "center": [
+        14.2,
+        23.9
+      ],
+      "radius": 4.8
+    },
+    {
+      "center": [
+        6.5,
+        24.5
+      ],
+      "radius": 2.2
+    }
+  ],
+  "elapsedSeconds": 1.9876527497544885
+}
