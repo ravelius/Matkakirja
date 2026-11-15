@@ -5,9 +5,9 @@ Malli: Pariisi (PR 6588), Lontoo (PR 6789), Wien-luonnos (PR 6814). Rajat: isois
 ## Ehdotus (päivitetty toisen lähteen jälkeen)
 
 1. **Isoisä (232 merkkiä):** "Colosseumin muureilla oli kasvanut yli neljäsataa kasvilajia. Pari vuotta sitten ne kitkettiin pois, etteivät juuret rikkoisi kiveä. Kysyin vartijalta, pysyvätkö ne poissa. Hän sanoi, että kasvit tietävät sen paremmin kuin kaupunki."
-2. **Pulu (120 merkkiä):** "Voi isoisä! Vartija oli oikeassa. Colosseumilla kasvaa yhä yli kaksisataa lajia. Kitkijät eivät saaneet viimeistä sanaa."
+2. **Pulu (108 merkkiä, ilman "Voi isoisä!", KK 18.59 + faktatarkistus):** "Vartija oli oikeassa! Colosseumilla kasvaa yhä yli kaksisataa lajia. Kitkijät eivät saaneet viimeistä sanaa."
 
-Muutokset KK:n 18.54 tekstiin (syy: toinen lähde, ks. alla): (1) "Kaksi vuotta sitten" → **"Pari vuotta sitten"**, koska kitkennän vuosi on lähteissä 1870 (Vistanet: Pietro Rosa) ja 1871 (Wikipedia, BYU): "pari" kattaa molemmat. (2) Pulun "kasvit palasivat… useimmat samoja kuin 1643" → **"Vartija oli oikeassa… kasvaa yhä yli kaksisataa lajia"**: "200 samaa kuin 1643" EI vahvistu (lähteet: ~200 läsnä koko ajan; 192 yhteistä kaikille luetteloille; ei sidottu 1643:een), eikä "taas" ole varma, koska 242 on vuoden 2001 kartoitus, enimmäkseen maanalaisissa osissa (hypogeum). Jos KK haluaa takaisin 1643-viittauksen: "noin 200 lajia on kasvanut siellä kaikissa luetteloissa" (Caneva: 192).
+Muutokset KK:n 18.54 tekstiin (syy: toinen lähde, ks. alla): (1) "Kaksi vuotta sitten" → **"Pari vuotta sitten"**, koska kitkennän vuosi on lähteissä 1870 (Vistanet: Pietro Rosa) ja 1871 (Wikipedia, BYU): "pari" kattaa molemmat. (2) Pulun "kasvit palasivat… useimmat samoja kuin 1643" → **"Vartija oli oikeassa… kasvaa yhä yli kaksisataa lajia"**: "200 samaa kuin 1643" EI vahvistu (lähteet: ~200 läsnä koko ajan; 192 yhteistä kaikille luetteloille; ei sidottu 1643:een), eikä "taas" ole varma, koska 242 on vuoden 2001 kartoitus, enimmäkseen maanalaisissa osissa (hypogeum). KK:n 18.59 ehdottama "Kasvit palasivat! … taas yli kaksisataa lajia, useimmat samoja kuin vuonna 1643" EI kestä faktatarkistusta ("useimmat samoja kuin 1643" ei vahvistu; "taas" epävarma), siksi yllä oleva muotoilu; avaus "Vartija oli oikeassa!" sitoo isoisän vartijaan. Jos KK haluaa takaisin 1643-viittauksen: "noin 200 lajia on kasvanut siellä kaikissa luetteloissa" (Caneva: 192).
 Idea: kommellus ja aikakontrasti, kuten ennen. Aihe on täkyaineistosta (takyt-rooma.md täky 3), ei vielä pelissä; Vatikaanin vanki on jo pelissä.
 
 ## Faktat ja lähteet: kaksi itsenäistä lähdettä (haettu 15.11., robots luettu, ei estoja)
@@ -28,7 +28,7 @@ colosseo.it ja kulttuuriministeriö jäivät hakematta (apulaisen kutsuraja); L1
 
 ## Kuvat (ei ladattu; KK katsoo)
 
-- **Isoisän kuva (yksi, Codex, vasta KK:n sanalla):** työmiehet köysissä Colosseumin ulkomuurilla irrottamassa kasveja, alla Horatio ja työnjohtaja; 1873. Vanha(t) luentakuva(t) pois kuten muissa.
+- **Isoisän kuva (yksi, Codex, vasta KK:n sanalla):** vanhan valokuvan näköinen, isoisää/Horatiota EI näytetä: työmiehet köysissä Colosseumin ulkomuurilla irrottamassa kasveja, alhaalla kottikärryjä ja vartijan selkä tai pelkät kädet; 1870-luvun alku. Vanhat luentakuvat pois kuten muissa.
 - **Pulun kuva (yksi), KK:n ohje: ei Deakinin nimiösivua, nykyvalokuva kasveineen.** Commonsissa ei ole kasvikategoriaa (Flora/Plants/Vegetation of the Colosseum = 404) eikä yhtään sivua, jonka kuvaus sanoisi kasvien kasvavan muurilla; kolme ehdokasta lisensseineen, **sisältö katsottava silmin (kuvia EI ladattu)**, linkit https://commons.wikimedia.org/wiki/File:<nimi>:
   1. `Colosseum-close.jpg` · Paul Bruder · 13.8.2006 · PD (self) · 1200×1600 · kuvaus "close up view of the walls".
   2. `Colosseum_-_wall_fragment,_Rome,_Italy_(9611364110).jpg` · l0da_ralta · 2.5.2011 · CC BY 2.0 · 1536×2048 · kuvaus "Colosseum walls in Rome".
