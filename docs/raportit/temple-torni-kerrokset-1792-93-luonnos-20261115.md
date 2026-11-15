@@ -1,6 +1,6 @@
-# Temple-tornin kerrostarina 1792–93: kuka oli missäkin kerroksessa — LUONNOS KK:lle (SK 15.11.2026)
+# Temple-tornin kerrostarina 1792–93: kuka oli missäkin kerroksessa — KK:n korjaukset tehty (SK 15.11.2026)
 
-Tausta: omistaja 15.11.2026 klo 20.42 (P-261115-20): Temple-torni on ensimmäinen halkaistu rakennus peliin; PT 20.46: kirjoita kerrosten tarina lähteineen (ei Codexilta). Tämä on faktapohjalla tehty tekstiluonnos; EI data-PR:ää, EI kuvia, EI ääntä ennen KK:n katsetta. Faktapohja: scratchpad/temple/raportti.md (tutkija-apulainen, Sonnet; ensikäden lähteet luettu archive.org-OCR:sta, ks. lähteet).
+Tausta: omistaja 15.11.2026 klo 20.42 (P-261115-20): Temple-torni on ensimmäinen halkaistu rakennus peliin; PT 20.46: kirjoita kerrosten tarina lähteineen (ei Codexilta). Tämä on faktapohjalla tehty teksti; KK luki sen 15.11. klo 21.33 ja päätti korjaukset (a–g, tehty tähän); EI data-PR:ää, EI kuvia, EI ääntä ennen KK:n katsetta. Faktapohja: scratchpad/temple/raportti.md (tutkija-apulainen, Sonnet; ensikäden lähteet luettu archive.org-OCR:sta, ks. lähteet).
 
 ## 0. Mitä pelaajalle voi sanoa varmasti (ja mitä ei)
 
@@ -8,7 +8,9 @@ Luotettavuus: **2L** = kaksi eri tekstiä sanoo samaa (ensikäden E tai toissija
 
 **Kerrosnumerointi on ranskalainen (pohjakerros = 0).** Cléry, Lepitre, Beauchesne ja Wikipedia käyttävät samaa: pohjakerros + 1.–4. kerros. Suomalaisessa puhekielessä "toinen kerros" tarkoittaa usein ranskalaista 1er étagea, joten PELIN KYLTEISSÄ EI KÄYTETÄ KERROSNUMEROITA ilman selitettä: kerroksen nimi on sen asukas ("Kuninkaan kerros", "Kuningattaren kerros", "Vartioston kerros", "Neuvoston kerros"), numero vain pienellä leikkauskaaviossa. Tekstissä "pohjakerros" ja "ylimmäinen kerros".
 
-Rakenne (2L): Grosse Tour eli iso torni, noin 50 m korkea, pohjakerros + neljä holvattua kerrosta, keskellä paksu pilari, kulmissa neljä pientä tornia, yhdessä kierreportaat; jokaiseen kerrokseen kahden oven kautta (tammiovi + rautaovi), portaikossa seitsemän vartiopistettä. Vieressä kiinni oli Petite Tour (pieni torni), jossa perhe asui ENSIN (13.8.–26.10.1792) ja josta ei ollut sisäistä yhteyttä isoon torniin.
+Rakenne (2L): Grosse Tour eli iso torni, keskellä paksu pilari, kulmissa neljä pientä tornia, yhdessä kierreportaat; jokaiseen saliin kahden oven kautta (tammiovi + rautaovi), portaikossa seitsemän vartiopistettä. Mallin tasot (KK 21.33): sali 1 = Neuvosto, sali 2 = Vartiosto, sali 3 = Kuningas, sali 4 = Kuningatar, ullakko ja galleria = Katon alla. Lähteen mukaan torni on neljä holvattua salia sekä ullakko ja katto (Curzon, päiväkirja ms.); holvattujen kerrosten lukua ja korkeutta (39/50 m auki) EI pelitekstiin.
+
+Vieressä kiinni oli Petite Tour (pieni torni), jossa perhe asui ENSIN (13.8.–26.10.1792) ja josta ei ollut sisäistä yhteyttä isoon torniin.
 
 ## 1. Kerros kerrokselta (Grosse Tour, perhe 26.10.1792 alkaen)
 
@@ -17,7 +19,7 @@ Rakenne (2L): Grosse Tour eli iso torni, noin 50 m korkea, pohjakerros + neljä 
 | 4. | **Katon alla: tyhjä kerros ja kävelygalleria** | Ei asukkaita; ympäri kulki kävelygalleria, krenelien väliin pantiin lankkuja, ettei vankeja näkynyt ulos; vangit saivat kävellä siellä (kuningatar ja perhe katolla helmikuun lopusta 1793) | 2L (rakenne), kävelyt 2L (E+T) |
 | 3. | **Kuningattaren kerros** | Marie-Antoinette ja Madame Royale (Marie-Thérèse) samassa huoneessa; Madame Élisabeth kapeassa pimeässä huoneessa suoraan Cléryn huoneen päällä; Tisonin pariskunta (palvelijat) ruokasalin päällä; Dauphin kuningattaren luona 11.12.1792–3.7.1793; kuningatar vietiin Conciergerieen 2.8.1793 n. klo 2 yöllä; Madame Royale ja Élisabeth jäivät; Élisabeth vietiin 9.5.1794, teloitus 10.5. | 2L |
 | 2. | **Kuninkaan kerros** | Ludvig XVI 29.9.1792 (Petite Tourista; päivä riidassa) – 21.1.1793; palvelija Cléry vieressä; Dauphin isän huoneessa 26.10.–11.12.1792; 11.12.1792 Dauphin viedään pois ja oikeudenkäynti alkaa; **20.1.1793 hyvästit ruokasalissa klo 20.30–22.15**; 21.1. messu klo 6 kuninkaan huoneessa, lähtö n. klo 9. Kun Dauphin viedään äidiltään 3.7.1793, hänet viedään tähän kerrokseen Antoine Simonin huostaan | 2L (E+E) hyvästeistä ja messusta; Dauphinin kerros 3.7.1793 "toissijaisten lähteiden varassa" (T+T) |
-| 1. | **Vartioston kerros** | Kansalliskaartin vartiosto (corps de garde); aseet kasattuina pilarin ympärille | 2L (rooli) |
+| 1. | **Vartioston kerros** | Kansalliskaartin vartiosto (corps de garde); keskellä pilari (2L); leirisängyt ja aseet pilarin ympärillä: ei kahta lähdettä, EI pelitekstiin | 2L (rooli, pilari) |
 | 0. | **Neuvoston kerros** | Pariisin kunnan valvojat (municipaux); kunnallinen neuvosto siirrettiin tänne 8.12.1792; he söivät ja nukkuivat siellä vuorojen välillä | 2L |
 
 Päällekkäiset huoneet (2L): kuninkaan makuuhuone ja kuningattaren makuuhuone suoraan päällekkäin; Cléryn ja Élisabethin huoneet päällekkäin; ruokasali ja Tisonin huone päällekkäin. Kunnanvartijat nukkuivat kummankin asunnon eteishuoneessa sängyissä, jotka sulkivat tien makuuhuoneeseen (2L).
@@ -26,19 +28,19 @@ Päällekkäiset huoneet (2L): kuninkaan makuuhuone ja kuningattaren makuuhuone 
 
 Muoto sama kuin muissa halkaistun rakennuksen kerroksissa; yksi teksti per kerros, kaksi tekstiä ylimmälle. Isoisän äänellä ei tarvita (kerrokset ovat historiaa; isoisä 1873 ei nähnyt tornia, jonka Napoleon purki 1808).
 
-1. **Pohjakerros, Neuvoston kerros.** "Pohjakerroksessa istui Pariisin kunnan neuvosto. Vartijat söivät ja nukkuivat siellä vuorojen välillä ja valvoivat jokaista, joka meni ylös." (≈160 merkkiä)
-2. **Vartioston kerros.** "Ylempänä oli vartiosto. Kansalliskaartilaiset lepäsivät leirisängyillä, ja aseet oli kasattu keskellä seisovan paksun pilarin ympärille." (≈145)
-3. **Kuninkaan kerros.** "Ludvig XVI asui tässä kerroksessa. Hänen vieressään nukkui palvelija Cléry, joka kirjasi ylös, mitä tapahtui. Tammikuun 20. päivänä 1793 perhe tuli tänne hyvästelemään hänet." (≈190)
-4. **Kuninkaan kerros, ruokasali.** "Hyvästit sanottiin ruokasalissa, jonka lasiseinän läpi vartijat näkivät kaiken. Ne kestivät yli kaksi tuntia, ja kuningas lupasi tavata perheensä vielä aamulla. Hän ei tavannut." (≈190)
+1. **Pohjakerros, Neuvoston kerros.** "Pohjakerroksessa pitivät neuvostoaan Pariisin kunnan lähettämät valvojat. He söivät ja nukkuivat täällä vuorojen välillä." (≈125 merkkiä)
+2. **Vartioston kerros.** "Ylempänä oli vartiosto. Kansalliskaartin sotilaat pitivät tornissa vartiota, ja kerroksen keskellä seisoi paksu pilari." (≈120)
+3. **Kuninkaan kerros.** "Ludvig XVI asui tässä kerroksessa. Hänen vieressään nukkui kamaripalvelija Cléry, joka kirjoitti tapahtumista päiväkirjan. Teloitusta edeltävänä iltana, 20. tammikuuta 1793, perhe tuli tänne hyvästelemään hänet." (≈210)
+4. **Kuninkaan kerros, ruokasali.** "Hyvästit sanottiin ruokasalissa, jonka lasiseinän läpi vartijat näkivät kaiken. Ne kestivät lähes kaksi tuntia, ja kuningas lupasi tavata perheensä vielä aamulla. Hän ei tavannut." (≈190)
 5. **Kuningattaren kerros.** "Täällä asuivat kuningatar Marie-Antoinette, hänen tyttärensä ja kuninkaan sisar Élisabeth. Élisabeth ja Cléry lähettivät toisilleen viestejä narulla ikkunasta ikkunaan, koska heidän huoneensa olivat päällekkäin." (≈215)
-6. **Kuningattaren kerros, Dauphin.** "Kesällä 1793 kuningattaren pojalta, Dauphin Ludvig-Kaarlelta, otettiin pois äiti. Poika vietiin alakertaan kenkäsepän huostaan." (≈130; poika vietiin 3.7.1793 Antoine Simonin huostaan; kerros "toissijaisten lähteiden varassa", siksi pelissä vain "alakertaan"; Madame Royalen muistelma pojan laulusta jää pois, koska se on yhden lähteen varassa)
-7. **Katon alla.** "Ylimmässä kerroksessa ei asunut kukaan. Katon alla kulki galleria, jossa vangit saivat kävellä. Lankut krenelien välissä esti heitä näkymästä ulos." (≈150)
+6. **Kuningattaren kerros, Dauphin.** "Kesällä 1793 kahdeksanvuotias kruununprinssi Ludvig Kaarle erotettiin äidistään. Hänet vietiin alempaan kerrokseen suutari Simonin huostaan." (≈140; syntynyt 27.3.1785 = 8 v heinäkuussa 1793; vienti 3.7.1793 Antoine Simonin huostaan; kerros "toissijaisten lähteiden varassa", siksi pelissä vain "alempaan kerrokseen"; Madame Royalen muistelma pojan laulusta jää pois, koska se on yhden lähteen varassa)
+7. **Katon alla.** "Ylimmässä kerroksessa ei asunut kukaan. Katon alla kulki galleria, jossa vangit saivat kävellä. Muurin sakaroiden välit oli peitetty, etteivät vangit nähneet ulos eikä heitä nähty." (≈175; Cléry: "voir et être vue"; lankku vai säleikkö auki, siksi "peitetty")
 
 Lopputarinat (valinnainen kehys, 2L): kuningatar Conciergerieen 2.8.1793 (n. klo 2 yöllä); Élisabeth 9.5.1794; Dauphin kuoli tornissa 8.6.1795 (jo pelissä Pariisi-kortissa).
 
-## 3. Petite Tour 13.8.–26.10.1792 (oma kuva tai merkintä, jos halutaan)
+## 3. Petite Tour 13.8.–26.10.1792 (KK 21.33: EI omana kuvana eikä kerroksena)
 
-Kuningas 3. kerroksessa (nukkui yksin, Hue ja Chamilly kopissa eteisen takana 19.–20.8. asti), kuningatar ja lapset sekä Madame Élisabeth 2. kerroksessa; 19.–20.8. seuralaiset (Lamballe, Tourzel yms.) vietiin La Forceen; Cléry tuli 26.8. klo 20. Huonejako tarkemmin RIIDAT (ks. 4.3). Ehdotus pelitekstiksi (≈130): "Aluksi perhe asui pienessä tornissa, joka oli kiinni isossa tornissa mutta ei yhteydessä siihen. Kuningas nukkui kolmannessa kerroksessa, kuningatar ja lapset toisessa." (PT:n kerrosnumerointi: ranskalainen, sama kuin yllä.)
+Malli on pelkkä iso torni, huonejako riidassa. Kehyksessä saa olla yksi lause ilman kerrosnumeroita: "Aluksi perhe asui viereisessä pienessä tornissa." Tarkempi faktapohja (kuningas ja perhe eri kerroksissa, seuralaiset La Forceen 19.–20.8., Cléry 26.8.) jää tähän vain tietoon.
 
 ## 4. Ristiriidat ja avoimet (ei ratkaistu arvaamalla)
 
@@ -63,8 +65,8 @@ Kuningas 3. kerroksessa (nukkui yksin, Hue ja Chamilly kopissa eteisen takana 19
 - parcoursrevolution.paris.fr (Temple ou la dernière prison).
 - Ei luettu: paris.fr ja en.wikipedia (vain robots); Wikisource Cléry (404); kielletyt hostit (Gallica ym.) avaamatta. Rajatapaus: archive.org /advancedsearch.php käytetty kolmesti tunnisteiden löytämiseen (robots sallii; brief ei maininnut).
 
-## 6. KK:lta tarvitaan
+## 6. KK:n vastaukset (21.33)
 
-1. Kelpaako kerrosten nimeäminen asukkaan mukaan (ei numeroita kyltissä)?
-2. Kelpaako 7 tekstiä muotoineen (vain 2L-väitteet) vai halutaanko toinen sävy/pituus (esim. 120 merkkiä per kerros)?
-3. Halutaanko Petite Tour (jakso 3) mukaan vai pelkkä iso torni?
+1. Kerrokset nimetään asukkaan mukaan (Neuvoston, Vartioston, Kuninkaan, Kuningattaren kerros, Katon alla); ei kerrosnumeroita kyltteihin eikä teksteihin.
+2. Seitsemän tekstiä, enintään noin 220 merkkiä; sisältö lukittu, lopullinen pituus lukitaan KK:n näyttötapasuunnitelmassa.
+3. Ei Petite Touria omana kuvana eikä kerroksena (yksi lause kehyksessä, ks. jakso 3).
