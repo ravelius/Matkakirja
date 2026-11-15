@@ -195,6 +195,65 @@ namespace Matkakirja
             return r.Valmis();
         }
 
+
+        /// <summary>JULKISIVUKIRKKO (KK 15.11. kohdat 1 ja 3; Rooma: Gesù, Sant'Andrea della Valle, Sant'Agnese; Pariisi ja Lontoo: tornittomat kuten ND-de-Lorette):
+        /// EI TORNIA. Pohja 46 × 24 m (sivusuhde ~1,9, venytys kuten muilla kirkoilla). Keskilaiva ±7 m räystäs 16 m, loiva harja +4 m; sivukappelit ±7..±12 m
+        /// räystäs 9 m pulpetilla laivan seinään 12 m:iin; puolipyöreä apsis itään. Länsijulkisivu kaksikerroksinen (barokki): alakerta koko leveydeltä 15 m,
+        /// neljä pilasteria, keskiportaali kaarella ja kaksi sivuovea; yläkerta laivan levyinen 15–24 m, kaari-ikkuna, kolmiopääty 28 m:iin; voluuttien
+        /// paikalla kalteva olka alakerran reunasta yläkerran kylkeen. kupoli = rumpu ja kupoli risteyksessä (itäpäästä 12 m) lyhtyineen 45 m:iin.</summary>
+        public static Verkko TyyppiKirkkoJulkisivu(bool kupoli = true)
+        {
+            var r = TyRakentaja();
+            float x0 = -21f, x1 = 19f, zl = 7f, zs = 12f, y = 16f, h = 4f, ys = 9f, yp = 12f;
+            TySeinat(r, x0, x1, -zl, zl, 0f, y, TyKivi);
+            TyHarja(r, x0, x1, -zl, zl, y, h, 0.4f, TyKatto, TyKivi, false, true);
+            TyKuori(r, x1, 0f, zl, y - 2f, 4f, 5, TyKivi, TyKatto);
+            foreach (float s in new[] { -1f, 1f })
+            {
+                float zu = s * zs, zi = s * zl;
+                var sa = s > 0 ? r.S(x0, zu, x1 - 3f, zu) : r.S(x1 - 3f, zu, x0, zu);
+                sa.Pinta(0f, sa.Pituus, 0f, ys, 0f, TyKivi);
+                TyPulpetti(r, x0, x1 - 3f, zu, zi, ys, yp, TyKatto);
+                r.Neli(new P3(x1 - 3f, 0f, zi), new P3(x1 - 3f, 0f, zu), new P3(x1 - 3f, ys, zu), new P3(x1 - 3f, yp, zi), TyKivi, new P3(1f, 0f, 0f));
+                // kappelien kaari-ikkunat (barokki) ja laivan lunettirivi pulpetin yllä
+                for (int i = 0; i < 4; i++) { float u = 6f + i * 8.5f; sa.Pinta(u - 1.1f, u + 1.1f, 3f, 6.5f, 0.05f, TyAukko); sa.KaariTayte(u, 6.5f, 1.1f, 0.05f, TyAukko, 4); }
+                var sk = s > 0 ? r.S(x0, zi, x1, zi) : r.S(x1, zi, x0, zi);
+                for (int i = 0; i < 4; i++) { float u = 6f + i * 8.5f; sk.KaariTayte(u, 13f, 1.6f, 0.05f, TyAukko, 4); }
+            }
+            if (kupoli)
+            {
+                float cx = x1 - 12f;
+                r.Laatikko(cx - 7f, cx + 7f, 0f, y + 3f, -8f, 8f, TyKivi, TyKatto);
+                TyRumpu(r, cx, 0f, y + 3f, 7f, 5.4f, y + 9f, 5.9f, y + 12f, 0, 8, TyKivi, TyKiviVarjo, TyAukko, 16);
+                TyKupoli(r, cx, 0f, y + 12f, 6.2f, 8.5f, TyHuippu, TyKivi, TyAukko, 8, 1.2f, 45f, 16, 7);
+            }
+            // Länsijulkisivu x = fx (−x:n suuntaan)
+            float fx = x0 - 1.2f, ya = 15f, yy = 24f, yk = 28f;
+            r.Laatikko(fx, x0, 0f, ya, -zs, zs, TyKivi, TyKatto);
+            r.Laatikko(fx - 0.3f, x0, ya, ya + 1f, -zs - 0.3f, zs + 0.3f, TyKiviVarjo, TyKatto);   // jakolista
+            r.Laatikko(fx + 0.3f, x0, ya + 1f, yy, -zl - 0.5f, zl + 0.5f, TyKivi, TyKatto);
+            foreach (float s in new[] { -1f, 1f })
+            {
+                // olka (voluutin paikka): kolmio alakerran reunasta yläkerran kylkeen
+                r.Kolmio(new P3(fx + 0.3f, ya + 1f, s * zs), new P3(fx + 0.3f, ya + 1f, s * (zl + 0.5f)), new P3(fx + 0.3f, ya + 6f, s * (zl + 0.5f)), TyKivi, new P3(-1f, 0f, 0f));
+                r.Neli(new P3(fx + 0.3f, ya + 1f, s * zs), new P3(fx + 0.3f, ya + 6f, s * (zl + 0.5f)), new P3(x0, ya + 6f, s * (zl + 0.5f)), new P3(x0, ya + 1f, s * zs), TyKatto, new P3(0f, 1f, s));
+                // alakerran pilasterit
+                foreach (float z in new[] { 3.6f, 10.6f }) r.Laatikko(fx - 0.4f, fx, 0f, ya, s * z - 0.6f, s * z + 0.6f, TyKiviVarjo, TyKivi);
+            }
+            r.Laatikko(fx - 0.3f, x0, yy, yy + 0.8f, -zl - 0.8f, zl + 0.8f, TyKiviVarjo, TyKatto);
+            r.Kolmio(new P3(fx + 0.3f, yy + 0.8f, -zl - 0.5f), new P3(fx + 0.3f, yy + 0.8f, zl + 0.5f), new P3(fx + 0.3f, yk, 0f), TyKivi, new P3(-1f, 0f, 0f));
+            float kz = (yk - yy - 0.8f) / (zl + 0.5f);
+            r.Neli(new P3(fx + 0.3f, yy + 0.8f, -zl - 0.5f), new P3(fx + 0.3f, yk, 0f), new P3(x0 + 2f, yk, 0f), new P3(x0 + 2f, yy + 0.8f, -zl - 0.5f), TyKatto, new P3(0f, 1f, -kz));
+            r.Neli(new P3(x0 + 2f, yy + 0.8f, zl + 0.5f), new P3(x0 + 2f, yk, 0f), new P3(fx + 0.3f, yk, 0f), new P3(fx + 0.3f, yy + 0.8f, zl + 0.5f), TyKatto, new P3(0f, 1f, kz));
+            var ala = r.S(fx - 0.4f, -zs, fx - 0.4f, zs);
+            ala.Pinta(zs - 1.8f, zs + 1.8f, 0f, 7f, 0.06f, TyAukko); ala.KaariTayte(zs, 7f, 1.8f, 0.06f, TyAukko, 6);
+            foreach (float u in new[] { zs - 7.1f, zs + 7.1f }) { ala.Pinta(u - 1f, u + 1f, 0f, 4.5f, 0.05f, TyAukko); ala.KaariTayte(u, 4.5f, 1f, 0.05f, TyAukko, 4); }
+            foreach (float u in new[] { zs - 7.1f, zs + 7.1f }) { ala.Pinta(u - 0.9f, u + 0.9f, 8f, 11.5f, 0.05f, TyAukko); ala.KaariTayte(u, 11.5f, 0.9f, 0.05f, TyAukko, 4); }
+            var yla = r.S(fx + 0.3f, -zl - 0.5f, fx + 0.3f, zl + 0.5f);
+            yla.Pinta(zl + 0.5f - 1.6f, zl + 0.5f + 1.6f, ya + 3f, ya + 6.5f, 0.05f, TyAukko); yla.KaariTayte(zl + 0.5f, ya + 6.5f, 1.6f, 0.05f, TyAukko, 6);
+            return r.Valmis();
+        }
+
         /// <summary>KIRKKO SUURI (katedraali): keskilaiva 90 × 14 m räystäs 24 m, harja 33 m; sivulaivat 2 × 9 m räystäs 12 m pulpettikatoin; poikkilaiva
         /// 14 × 48 m keskellä; viisisivuinen kuori; kaksi länsitornia 12 m tasakatoin 58 m:iin (≈ 1,8 × harja); tukipilarit lentotukineen; risteyksen
         /// kattoratsastaja (flèche, NdFleche yksinkertaistettuna) 62 m:iin.</summary>
@@ -702,12 +761,13 @@ namespace Matkakirja
                 case 7: return TyyppiAsema(a > 0 ? a : AsemanHallit(p1), p0, p1);
                 case 8: return TyyppiKirkkoLevea(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
                 case 9: return TyyppiKirkkoBasilika(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
+                case 10: return TyyppiKirkkoJulkisivu(a != 0);
                 default: return null;
             }
         }
 
         /// <summary>Jaettu verkko (yksi kaikille saman rivin merkeille, venytys sx sz instanssissa) vai pohjan mitoista rakennettu (leivotaan paloittain).</summary>
-        public static bool TyyppiJaettu(int tyyppi) => (tyyppi >= 1 && tyyppi <= 4) || tyyppi == 8 || tyyppi == 9;
+        public static bool TyyppiJaettu(int tyyppi) => (tyyppi >= 1 && tyyppi <= 4) || tyyppi == 8 || tyyppi == 9 || tyyppi == 10;
 
         /// <summary>Kaikki luonnosmallit nimineen ja kokoluokan kolmiorajoineen (0 = ei rajaa).</summary>
         public static List<(string nimi, Verkko v, int raja)> TyyppiLuonnokset() => new List<(string, Verkko, int)>
@@ -718,6 +778,8 @@ namespace Matkakirja
             ("kirkko-basilika", TyyppiKirkkoBasilika(), 900),
             ("kirkko-basilika-lansi-2-neula", TyyppiKirkkoBasilika("lansi", 2, "neula"), 900),
             ("kirkko-suuri", TyyppiKirkkoSuuri(), 1500),
+            ("kirkko-julkisivu", TyyppiKirkkoJulkisivu(true), 1500),
+            ("kirkko-julkisivu-ilman", TyyppiKirkkoJulkisivu(false), 900),
             ("asema", TyyppiAsema(), 1500),
             ("palatsi", TyyppiPalatsi(), 1500),
             ("kupolikirkko", TyyppiKupolikirkko(true), 1500),
