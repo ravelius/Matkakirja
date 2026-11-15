@@ -1,0 +1,75 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/correction-2269/grand-chatelet-2269-fallback.glb",
+  "bytes": 9864536,
+  "triangles": 77762,
+  "images": [
+    {
+      "name": "Own-stone-patch",
+      "size": [
+        256,
+        256
+      ],
+      "format": "PNG",
+      "bytes": 104818
+    },
+    {
+      "name": "A-normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 1180982
+    },
+    {
+      "name": "A-basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 1379263
+    },
+    {
+      "name": "B-normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 620268
+    },
+    {
+      "name": "B-basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 1188274
+    },
+    {
+      "name": "C-normal-1024",
+      "size": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "bytes": 1402472
+    },
+    {
+      "name": "C-basecolor-2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "format": "JPEG",
+      "bytes": 1400135
+    }
+  ],
+  "imageCount": 7,
+  "maxPixels": 2048,
+  "sha256": "71a90db9811cd23ebe46df759264ac69272c468963252be57549393c71f7d033",
+  "externalDependencies": false,
+  "gameAccepted": false
+}

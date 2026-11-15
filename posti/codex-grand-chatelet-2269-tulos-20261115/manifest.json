@@ -1,0 +1,127 @@
+{
+  "task": 2269,
+  "preparedAt": "2026-11-15T19:03:55.380871+00:00",
+  "status": "TECHNICAL_REVIEW_ONLY",
+  "model": "grand-chatelet-2269-fallback.glb",
+  "metrics": {
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/correction-2269/grand-chatelet-2269-fallback.glb",
+    "bytes": 9864536,
+    "triangles": 77762,
+    "images": [
+      {
+        "name": "Own-stone-patch",
+        "size": [
+          256,
+          256
+        ],
+        "format": "PNG",
+        "bytes": 104818
+      },
+      {
+        "name": "A-normal-1024",
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "bytes": 1180982
+      },
+      {
+        "name": "A-basecolor-2048",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "JPEG",
+        "bytes": 1379263
+      },
+      {
+        "name": "B-normal-1024",
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "bytes": 620268
+      },
+      {
+        "name": "B-basecolor-2048",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "JPEG",
+        "bytes": 1188274
+      },
+      {
+        "name": "C-normal-1024",
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "bytes": 1402472
+      },
+      {
+        "name": "C-basecolor-2048",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "JPEG",
+        "bytes": 1400135
+      }
+    ],
+    "imageCount": 7,
+    "maxPixels": 2048,
+    "sha256": "71a90db9811cd23ebe46df759264ac69272c468963252be57549393c71f7d033",
+    "externalDependencies": false,
+    "gameAccepted": false
+  },
+  "originalsPreserved": true,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "jobId": null,
+  "receiverAcceptance": false,
+  "gameIntegration": false,
+  "gameBranchChanged": false,
+  "publication": false,
+  "files": {
+    "01-north.png": {
+      "bytes": 598594,
+      "sha256": "05ed846b51a859cb4862225f7b1f21c74ade5f98ad25c0ea92d9bc95d57c9624"
+    },
+    "02-south.png": {
+      "bytes": 576377,
+      "sha256": "1788704e6e8c3cb0b119f3d74bd173d9e14547abe4b52741ff5e5242c0919f83"
+    },
+    "06-upper-oblique-full.png": {
+      "bytes": 535782,
+      "sha256": "823f57f1d2dce1150a1ed57bc90e8e9a37f7e76332c3fe20b8d2a146881ce57d"
+    },
+    "QA.md": {
+      "bytes": 1768,
+      "sha256": "722f93fb77890034342b0fec6ee150a322ea402c24db033bccf342e59cb80688"
+    },
+    "grand-chatelet-2269-fallback.glb": {
+      "bytes": 9864536,
+      "sha256": "71a90db9811cd23ebe46df759264ac69272c468963252be57549393c71f7d033"
+    },
+    "grand-chatelet-2269-fallback.metrics.json": {
+      "bytes": 1401,
+      "sha256": "a29833c0b9aab50a8e3d294e7b5a52a81c52a3d400c8d419f06a1f11cef9b13c"
+    },
+    "independent-fallback-QA.md": {
+      "bytes": 2038,
+      "sha256": "e3f822e637ae48e95d877534b3191b2a3c2415394d20791bd25453dcf4cfd573"
+    },
+    "originals-preserved.json": {
+      "bytes": 586,
+      "sha256": "1e0b2ba5bec2c8240f96f5bbd9fea87786d991683ae4087119a06b8797387430"
+    },
+    "source-order.md": {
+      "bytes": 3067,
+      "sha256": "7cb24285f2e155046f9a8202c8925ae2be591325ce3e7ef86542e66406969895"
+    }
+  }
+}
