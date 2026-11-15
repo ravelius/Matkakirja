@@ -6240,7 +6240,7 @@ export const NAHTAVYYSJUTUT = {
         + 'linnake menetti puolustustehtävänsä: siitä tuli kuninkaan pariisilaisen virkamiehen, prévôtin, '
         + 'oikeudenkäytön ja poliisin pääpaikka. Sen vankiloissa istuivat muiden muassa runoilija François '
         + 'Villon, velkojen takia vuonna 1645 näytelmäkirjailija Molière ja vuonna 1721 rosvopäällikkö '
-        + 'Cartouche. Linnakkeen alakerrassa oli ruumishuone, ranskaksi morgue.'
+        + 'Cartouche. Linnakkeessa oli myös ruumishuone, ranskaksi morgue.'
         + '\n\n'
         + 'Linnakkeen purkaminen alkoi vuonna 1802. Paikalle tehtiin Place du Châtelet.'
         + '\n\n'
@@ -6275,9 +6275,9 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Torni muuttui rojalistien pyhiinvaelluskohteeksi, ja siksi Napoleon alkoi purkaa sen vuonna 1808.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 tornia ei ollut ollut yli kuuteenkymmeneen vuoteen. Sen paikalla oli puisto, '
-        + 'Square du Temple, joka oli avattu 1857. Tornin paikka on nykyään kaupunginosan kaupungintalon '
-        + 'kohdalla, Rue Eugène-Spullerilla.',
+        + 'Isoisäsi vuonna 1873 torni oli purettu jo yli kuusikymmentä vuotta aiemmin. Sen paikalla seisoi uusi '
+        + 'kaupunginosan kaupungintalo, ja vieressä oli puisto, Square du Temple, joka oli avattu 1857. '
+        + 'Kaupungintalo on yhä paikallaan Rue Eugène-Spullerilla.',
       kuvat: [
         {
           tiedosto: 'La Tour du Temple. Paris Musées 20230619165202.jpg',
@@ -6339,7 +6339,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Palais de l\'Industrie - Édouard Baldus.jpg',
           lyhyt: 'Palais de l\'Industrien pääsisäänkäynti Édouard Baldusin valokuvassa.',
-          selite: 'Palais de l\'Industrien kaareva pääsisäänkäynti Champs-Élysées\'n puolella Édouard Baldusin '
+          selite: 'Palais de l\'Industrien kaareva pääsisäänkäynti Édouard Baldusin '
             + 'valokuvassa 1850- tai 1860-luvulta.',
           lahde: 'Édouard Baldus, The Metropolitan Museum of Art, Wikimedia Commons (PD)',
         },
@@ -6356,7 +6356,7 @@ export const NAHTAVYYSJUTUT = {
     'Trocadéron palatsi': {
       aika: '1876–1935',
       nosto: 'hahmotelma-trocadero',
-      teksti: 'Nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillotin '
+      teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillotin '
         + 'kukkulalle suunniteltiin jo 1811 palatsia Napoleonin pojalle, "Rooman kuninkaalle", mutta siitä '
         + 'tehtiin vain maanrakennustöitä. Todellinen palatsi rakennettiin vuosina 1876–1878 maailmannäyttelyä '
         + 'varten: siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
@@ -6392,7 +6392,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Vuoden 1889 maailmannäyttelyn konehalli seisoi Champ-de-Marsilla, samalla kentällä kuin '
         + 'Eiffel-torni. Halli oli 420 metriä pitkä, 115 metriä leveä ja yli 40 metriä korkea, eikä sen sisällä '
         + 'ollut yhtään tukipilaria. Katon kantoi kaksikymmentä kolminivelistä kaarta: jokainen oli kaksi '
-        + 'puolikaarta, jotka nojasivat toisiinsa huipulta ja kantoivat tappeihin.'
+        + 'puolikaarta, jotka nojasivat toisiinsa huipulta ja alhaalta tappeihin.'
         + '\n\n'
         + 'Vieraita kuljettivat hallin yli liikkuvat sillat.'
         + '\n\n'
