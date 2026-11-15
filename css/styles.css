@@ -8684,6 +8684,101 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   object-position: 50% 20%;
 }
 
+/*
+ * Pelin esittely, versio 9 (esittely.json hetket; js/ui.js piirraEsittely9): avauskuva kortin levyisenä 4:3, hetken
+ * ensimmäinen kuva kortin levyisenä 16:9 ja muut tasaleveänä 16:9-rivinä sen alla (väli 8 px). Kuva on nappi
+ * (suurennos), joten vanha `.dialog button` -pinta pois. Pohjan (KORTTI) tarkennukset: css/pohjat/pinnat/dialogit.css.
+ */
+.dialog button.apuraha-iso,
+.dialog button.apuraha-iso:hover:not(:disabled) {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 0;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 4px;
+  background: rgba(70, 51, 31, 0.08);
+  box-shadow: none;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.dialog button.apuraha-iso--avaus { aspect-ratio: 4 / 3; margin-top: 0.2rem; }
+.dialog button.apuraha-iso--hetki,
+.dialog button.apuraha-iso--rivi { aspect-ratio: 16 / 9; }
+/* esittely.json kuva.muoto "4:3": hetken ensimmäinen kuva kokonaan 4:3-ruudussa (KK 14.11. 22.14). */
+.dialog button.apuraha-iso--hetki.apuraha-iso--43 { aspect-ratio: 4 / 3; }
+.apuraha-iso img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.apuraha-kuvarivi {
+  display: grid;
+  grid-template-columns: repeat(var(--apuraha-kuvia, 2), minmax(0, 1fr));
+  gap: 8px;
+  margin: calc(8px - 0.6rem) 0 0.6rem; /* väli ensimmäiseen kuvaan 8 px */
+}
+.dialog .apuraha-kuvarivi button.apuraha-iso { margin: 0; }
+.apuraha-hetket { margin: 0.9rem 0 0.2rem; }
+.apuraha-viiva {
+  height: 1px;
+  margin: 1rem 0;
+  border: 0;
+  background: rgba(70, 51, 31, 0.28);
+}
+.apuraha-hetki-otsikko {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-luku, inherit);
+  font-size: calc(0.94rem * 1.15);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--map-ink);
+}
+/* Tekeillä-merkki otsikon perään: pieni kapiteelipilleri, hillitty väri. */
+.apuraha-tekeilla {
+  display: inline-block;
+  padding: 0.05em 0.6em 0.1em;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  font-family: var(--font-type);
+  font-size: 0.62em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  vertical-align: 0.2em;
+  color: #8a6a2c;
+  white-space: nowrap;
+}
+/* Video (myöhemmin): pyöreä toistonappi kuvan päälle; ei automaattitoistoa. */
+.dialog button.apuraha-iso--toisto { cursor: pointer; }
+.dialog button.apuraha-iso--video { background: rgba(30, 22, 12, 0.85); }
+.apuraha-toisto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.4rem;
+  height: 3.4rem;
+  margin: -1.7rem 0 0 -1.7rem;
+  border: 2px solid rgba(255, 248, 232, 0.9);
+  border-radius: 50%;
+  background: rgba(20, 14, 6, 0.55);
+}
+.apuraha-toisto::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  border-style: solid;
+  border-width: 0.65rem 0 0.65rem 1.05rem;
+  border-color: transparent transparent transparent rgba(255, 248, 232, 0.95);
+  transform: translate(-50%, -50%);
+}
+.apuraha-video { max-width: 94%; max-height: 86%; border-radius: 4px; background: #000; }
+
 .periaate-sulje {
   margin-top: 1rem;
   width: 100%;
@@ -15749,7 +15844,7 @@ button.lukija-nappi.lukee,
 
 /* Vertailulinssin maavalitsin: pieni kirjoituskonerivi, paperin värit. */
 .vertailu-rivi {
-  margin: -0.2rem 0 0.6rem;
+  margin: calc(8px - 0.6rem) 0 0.6rem; /* väli ensimmäiseen kuvaan 8 px */
   font-family: var(--font-type);
   font-size: 0.8rem;
   color: rgba(70, 51, 31, 0.85);
@@ -23702,7 +23797,7 @@ a.pollo-kuvalahde {
 /* Esikirjoitetun vastauksen lähde (Ihmisen matka -linssin valmiit
    kysymykset, js/pollo.js vastaaLinssinValmiilla). */
 .pollo-valmislahteet {
-  margin: -0.2rem 0 0.6rem;
+  margin: calc(8px - 0.6rem) 0 0.6rem; /* väli ensimmäiseen kuvaan 8 px */
   font-size: 0.8em;
   opacity: 0.8;
 }
