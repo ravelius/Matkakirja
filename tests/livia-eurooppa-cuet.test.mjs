@@ -55,10 +55,10 @@ test('Euroopan kaikki 45 city-3-riviä vastaavat exact r2-manifestin SHA:ta ja c
     const nakyvaSha256 = createHash('sha256').update(nakyva).digest('hex');
     assert.ok(runtime, `${item.city}: runtime-sopimus puuttuu`);
     assert.equal(runtime.avain, item.livia.audioId, `${item.city}: audioId`);
-    if (item.city === 'pariisi') {
-      // Teksti uusittu 11.11.2026 (KK): 14.9. manifesti on historiallinen; cue-sopimus seuraa pakin uutta tekstiä.
-      assert.equal(runtime.tekstiSha256, nakyvaSha256, 'pariisi: cue-sopimuksen SHA');
-      assert.ok(runtime.cuet.length > 0, 'pariisi: cuet puuttuvat');
+    if (item.city === 'pariisi' || item.city === 'lontoo') {
+      // Teksti uusittu (pariisi 11.11., lontoo 15.11.2026, KK): 14.9. manifesti on historiallinen; cue-sopimus seuraa pakin uutta tekstiä.
+      assert.equal(runtime.tekstiSha256, nakyvaSha256, `${item.city}: cue-sopimuksen SHA`);
+      assert.ok(runtime.cuet.length > 0, `${item.city}: cuet puuttuvat`);
       for (const cue of runtime.cuet) assert.equal(nakyva.split(cue.ankkuri).length - 1, cue.esiintyma, cue.id);
       continue;
     }

@@ -302,7 +302,8 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
-const AANTA_ODOTTAVAT = new Set(['pariisi-3']);
+const AANTA_ODOTTAVAT = new Set(['pariisi-3', 'lontoo-3']);
+/* Lontoon pulun teksti uusittu 15.11.2026 (KK); sama kuin Pariisi. */
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
@@ -535,7 +536,7 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   // Kaikki repliikit on sidottu valmistuneisiin kuitteihin; viiden uuden
   // kaupungin kuplat äänitettiin v4-ajossa 28.9.2026 ilta.
-  const odotetutMuuttuneet = [...AANTA_ODOTTAVAT];
+  const odotetutMuuttuneet = [...AANTA_ODOTTAVAT].sort();
   assert.deepEqual(
     rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
     odotetutMuuttuneet,
