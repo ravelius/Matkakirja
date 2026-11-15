@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 9b9392de6abb */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 69ce7047fbdd */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -188,6 +188,14 @@ body.paivittyy .app { visibility: hidden; }
   --tk-harmaa-kuulto-toiminto: rgba(130, 130, 130, 0.42);
   --tk-harmaa-kuulto-nappi-reunus: rgba(224, 224, 224, 0.15);
   --tk-harmaa-kuulto-nappi-kuvake: rgba(240, 240, 240, 0.65);
+  --tk-kartta-pinta: rgba(245, 240, 226, 0.55);
+  --tk-kartta-pinta-kuvake: rgba(245, 240, 226, 0.35);
+  --tk-kartta-muste: #46331f;
+  --tk-kartta-muste-pehmea: rgba(70, 51, 31, 0.45);
+  --tk-kartta-korostus: #7a5514;
+  --tk-kartta-reunus: rgba(70, 51, 31, 0.3);
+  --tk-kartta-sisaviiva: rgba(70, 51, 31, 0.18);
+  --tk-kartta-toiminto: #d9a13b;
   --tk-lcd-pinta: #0c2214;
   --tk-lcd-pinta-peitto: #0c2214;
   --tk-lcd-muste: #84ffa0;
@@ -331,6 +339,16 @@ body.paivittyy .app { visibility: hidden; }
   --tk-toiminto: var(--tk-harmaa-kuulto-toiminto);
   --tk-nappi-reunus: var(--tk-harmaa-kuulto-nappi-reunus);
   --tk-nappi-kuvake: var(--tk-harmaa-kuulto-nappi-kuvake);
+}
+.tk-teema-kartta {
+  --tk-pinta: var(--tk-kartta-pinta);
+  --tk-pinta-kuvake: var(--tk-kartta-pinta-kuvake);
+  --tk-muste: var(--tk-kartta-muste);
+  --tk-muste-pehmea: var(--tk-kartta-muste-pehmea);
+  --tk-korostus: var(--tk-kartta-korostus);
+  --tk-reunus: var(--tk-kartta-reunus);
+  --tk-sisaviiva: var(--tk-kartta-sisaviiva);
+  --tk-toiminto: var(--tk-kartta-toiminto);
 }
 .tk-teema-lcd {
   --tk-pinta: var(--tk-lcd-pinta);
