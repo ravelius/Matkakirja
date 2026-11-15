@@ -95,3 +95,12 @@ Colosseumin ja Meta Sudansin yhteyskuva on jo pelissä; sitä ei toistettu.
 - Waag op de Dam: rakennus 1561-n.1565 ja purku 1808 (Louis Napoleon) 2L; purkukuukausi RIIDAT; 1974-perustusten löytö ja "näköalasyy" 1L
 - Paleis voor Volksvlijt: rakennus 1859-64, avaus 16.8.1864 ja nykytila (DNB) 2L; palon yö 17.-18. vs 18.-19.4.1929 RIIDAT, galleria 1960/61 RIIDAT
 - Meta Sudans: purku 1936 (Mussolini) 2L; rakennusvuosi 89-96 / Domitianus RIIDAT; nykyasu (levy / vaalea kivi / ruoho) RIIDAT; 1873 kyllä rauniona 2L
+
+---------------------------------------------------------------------
+
+## Lisäys 16.11.2026 (KK:n päätökset 01.21; sivuilta luettu itse)
+
+- Haringpakkerstoren: KNOB-artikkelin leipäteksti, Rijksmuseon kohdekuvaukset (KOG-AA-1-29-6000; RP-P-1931-123), Tate (Turner 1825) ja stadsherstel.nl (etusivu, uutiset) eivät kerro tornin ikää eivätkä nimen syytä. a) keskiaikainen muuritorni: vain nl-WP → 1L. b) nimi sillin pakkaamisesta: vain nl-WP (+ kauppiaan kuvaus, ei kelpaa) → 1L. 2L-väite: linnoitukseen kuulunut torni IJ:n rannalla (nl-WP "vestingwerk" + Rijksmuseon vedos RP-P-1931-123, aihe "towers ~ fortified city", nimi "Vue de la tour de la S. Croix"). Nimi "Pyhän Ristin torni" kuvassa tukee vain vaihtoehtoista nimeä.
+- Paleis: ONH (sivulta) "geïnspireerd op het Crystal Palace (1855) in Londen" + nl-WP → esikuva 2L. ONH: avattu 16.8.1864, yö 17.–18.4.1929, "staal en glas". "Onbrandbaar" vain Andere Tijden → 1L.
+- Waag: iamexpat.nl (sivulta): "In 1808, King Lodewijk Napolean Bonaparte, otherwise known as Louis Bonaparte ... transformed Amsterdam's town hall into a palace", valtakausi 1810 asti. Veli-väite (Napoleonin veli) ei sivulta luettuna kahdesta lähteestä (royal-house.nl latautuu skriptillä, ei tekstiä) → pois.
+- Meta Sudans: 1936 sivulta luettu: en-WP ("survived until 1936, when Benito Mussolini had its remains demolished") + Pearse/Marlowe ("Both were razed in 1936").
