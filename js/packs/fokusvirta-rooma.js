@@ -284,15 +284,14 @@ export const FOKUSVIRTA_ROOMA = {
      * pulu-cam-rooma-01 (Pantheon) pois. Tiedosto: Adrian Farwell, 14.3.2007, CC BY 3.0, 2304×3072,
      * https://commons.wikimedia.org/wiki/File:Greenery_in_the_Colosseum_-_panoramio.jpg. Kuvaa itseään ei muokata.
      * RAJAUS pyöreään kehykseen (omistaja valitsi esikatselun c1): keskipiste kuvan leveyden ja korkeuden suhteina [x, y],
-     * halkaisija leveyden suhteena; vihreä rinne ja hypogeumin tiilikaaret, väkijoukko pois. Kasvit ovat ruohoa ja sammalta
-     * maanalaisissa osissa (ei muurilla): faktat Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+     * halkaisija leveyden suhteena; vihreä rinne ja hypogeumin tiilikaaret, väkijoukko pois. Kuvassa ruoho ja sammal peittävät rinnettä ja käytävien pohjaa (ei muureja; kuva 2007): faktat Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
      * `lyhyt` ja `selite` ovat SK:n luonnos, KK tarkistaa.
      */
     kuvat: [
       {
         tiedosto: 'Greenery in the Colosseum - panoramio.jpg',
-        lyhyt: 'Colosseumin maanalaiset osat nykyään: ruoho ja sammal peittävät muureja.',
-        selite: 'Colosseumin hypogeum eli maanalaiset käytävät, joita ruoho ja sammal peittävät nykyään. Yli kaksisataa lajia kasvaa Colosseumilla yhä, enimmäkseen maanalaisissa osissa.',
+        lyhyt: 'Vihreää Colosseumin maanalaisissa osissa (2007).',
+        selite: 'Ruoho ja sammal peittävät Colosseumin maanalaisia käytäviä eli hypogeumia vuonna 2007. Colosseumilla kasvaa yhä yli kaksisataa kasvilajia.',
         lahde: 'Adrian Farwell, Wikimedia Commons (CC BY 3.0)',
         rajaus: { keskipiste: [0.33, 0.76], halkaisija: 0.62 },
         lahteet: [
