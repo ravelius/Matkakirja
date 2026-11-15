@@ -2,20 +2,70 @@
 
 *(lyhyesti Matkakirja)*
 
-## Pelin kuvaus
+## Pelin esittely
 
-1. Matkakirja on suomenkielinen seikkailupeli 13 vuotta täyttäneille ja aikuisille. Se ei ole lastenpeli.
-2. Pelaaja on nuori Fogg, joka löytää vintiltä isoisänsä matkalaukun ja matkapäiväkirjan vuodelta 1873.
-3. Fogg lähtee isoisän jäljille maailman ympäri ja etsii Aarnin luettelon unohdettuja aarteita.
-4. Matka tehdään tämän päivän maailmassa. Vain ulkoasu on vanha: paperia, mustetta ja isoisän ääni.
-5. Pelaaja kulkee kartalla maasta ja kaupungista toiseen, tutkii nähtävyyksiä, kuulee tarinoita ja pelaa matkan varrella pelejä.
-6. Tavoite on kiertää maailma alle 80 päivässä. Raja kannustaa, mutta sen ylittämisestä ei rangaista.
-7. Peli herättää uteliaisuuden pienellä asialla, vaikka paikallisella herkulla. Siitä avautuu koko maa: historia, kieli, luonto ja nykypäivä.
-8. Mikään ei tunnu koululta. Silti kaikki, mitä peli kertoo, on tarkistettua, ja jokainen maa näytetään asukkaidensa silmin.
-9. Isoisän tarinat kertovat usein maailmasta, jota ei enää ole. Matkan aikana lapsenlapsi oppii ymmärtämään isoisäänsä.
-10. Unohdettu aarre on myös pelin ajatus: maailman kulttuuri, taide ja tiede ovat aarre, joka hukkuu helposti somen ja tekoälyn roskaan. Peli käyttää tekoälyä tämän aarteen löytämiseen, ja ihminen valitsee ja hyväksyy kaiken.
+**Seikkailu maailman ympäri. iPhonelle ja iPadille, 13 vuotta täyttäneille ja aikuisille.**
 
-*(Omistaja hyväksyi 12.11.2026; sama teksti on Raamatun kortissa [docs/raamattu/A-peli.md](docs/raamattu/A-peli.md).)*
+<img src="assets/apuraha/pariisi-kartta-louvre.jpg" alt="Pariisi vinosti ylhäältä: Louvre, Seine ja Cité-saari." width="640">
+
+Sinä olet nuori Fogg. Löydät vintiltä isoisäsi matkalaukun ja matkapäiväkirjan vuodelta 1873. Lähdet hänen jäljilleen maailman ympäri ja etsit aarteita, jotka maailma on unohtanut. Tavoite on kiertää maailma alle 80 päivässä.
+
+Maailma on tämän päivän maailma. Vain ulkoasu on vanha: paperia, mustetta ja isoisän ääni.
+
+### Lennä kaupungin ylle
+
+Kartta on yksi pyöritettävä pallo. Pariisi on piirretty kaupunki, jossa Louvre ja Eiffel-torni seisovat kartalla. Kierrät nähtävyydet, ja kertoja kertoo niiden tarinat.
+
+<p><img src="assets/apuraha/nahtavyyden-esittely-eiffel.jpg" alt="Kaupunkikierros etenee kohde kerrallaan; kuvassa Eiffel-torni." width="320"></p>
+
+### Ratkaise aarteen arvoitus
+
+Pariisissa yhdistät rakennuksiin nimet ja rakennusvuodet. Löydöstä saat lyhyen, tosi faktan ja onnentoivotuksen. Jokainen uusi kaupunki tuo oman tehtävänsä.
+
+<p><img src="assets/apuraha/aarretehtava-nimet.jpg" alt="Aarretehtävässä pelaaja yhdistää neljään pariisilaiseen rakennukseen niiden nimet." width="320"></p>
+
+### Lähde avaruuteen
+
+Raketti nousee Pohjois-Norjasta avaruusasemalle. Asemalta kuvaat minkä tahansa paikan Maasta omaksi julisteeksesi.
+
+<p><img src="assets/apuraha/iss-lahestyminen.jpg" alt="Miehistökapseli lähestyy avaruusasemaa 402 kilometrin korkeudessa." width="320"> <img src="assets/apuraha/iss-kupola-lansi-eurooppa.jpg" alt="Aseman kupolista näkyy Länsi-Eurooppa." width="320"></p>
+
+### Juokse Kielletyssä kaupungissa *(tekeillä)*
+
+Peking. Pelissä pieni Puyi, Kiinan viimeinen keisari, lähtee karkumatkalle Kielletyn kaupungin kujille ja pihoille. Sinä ohjaat häntä ja väistät takaa-ajajia.
+
+### Hiivi Olavinlinnaan *(tekeillä)*
+
+Savonlinna, elokuun yö 1499. Hiivit Olavinlinnaan, ratkaiset arvoituksen ja löydät aarteen.
+
+<p><img src="assets/apuraha/olavinlinna-hamara.jpg" alt="Olavinlinna hämärässä." width="320"></p>
+
+### Katso maailmaa linssin läpi
+
+Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät, miten ihminen levisi maapallolle, mitä maailman radioissa soi juuri nyt.
+
+<p><img src="assets/apuraha/linssi-keksinnot.jpg" alt="Keksintöjen linssi: Rudolf Diesel ja hänen moottorinsa vuodelta 1897." width="320"> <img src="assets/apuraha/linssi-ihmisen-matka.jpg" alt="Ihmisen matka -linssi näyttää, miten ihminen levisi Afrikasta maapallolle." width="320"> <img src="assets/apuraha/linssi-topografia.jpg" alt="Topografian linssi korostaa maaston muodot: Himalaja ja Tiibetin ylätasanko." width="320"></p>
+
+### Pelin ajatus
+
+Maailman kulttuuri, taide ja tiede ovat aarre, joka hukkuu helposti somen ja tekoälyn roskaan. Matkakirja kaivaa sen esiin. Uteliaisuus herää pienestä asiasta, vaikka paikallisesta herkusta, ja siitä avautuu koko maa. Mikään ei tunnu koululta. Silti kaikki, mitä peli kertoo, on tarkistettua, ja jokainen maa näytetään asukkaidensa silmin. Tekoäly auttaa etsimään. Ihminen valitsee ja hyväksyy kaiken.
+
+### Pelattavissa nyt
+
+Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista.
+
+### Seuraavaksi
+
+Amsterdam, Lontoo, Rooma ja Wien. Jokaisessa on oma tehtävä.
+
+- Amsterdam: pelaaja erottaa hollantilaisten taiteilijoiden maalaukset muiden joukosta.
+- Lontoo: pelaaja yhdistää keksinnön sen keksijään.
+- Rooma: pelaaja löytää patsaiden joukosta sen, joka on peräisin toisesta kaupungista, ja valitsee neljästä samannäköisestä lipusta Italian lipun.
+- Wien: pelaaja kuuntelee sävelmiä ja yhdistää ne säveltäjiin.
+
+Täysi peli on iPhonen ja iPadin sovellus. Selainversio on suppeampi.
+
+*(Omistaja hyväksyi 15.11.2026; sama esittely on pelin etusivun kortissa ja sovelluksessa: [assets/apuraha/esittely.json](assets/apuraha/esittely.json).)*
 
 **Suomenkielinen seikkailupeli selaimessa.** Nuori Fogg perii
 vintiltä isoisänsä matkalaukun ja lähtee maailman ympäri isoisän vuoden
