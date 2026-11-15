@@ -943,37 +943,32 @@
   },
   "pariisi": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "3b524abb834d06e629bef36e5d672a0c118e71cbee05b7ae24099d0df7171230",
+   "tekstiSha256": "554d3023d10ac976e8c7fccb814e26d6a1dd77e6cba1a14dfd52e10abbeb8534",
    "tila": "ok",
    "aani": {
-    "tavut": 487174,
-    "sha256": "6e6f3f14c155f887fcb2034a0540fe0216fabd87d9063cde5a3064846017e344"
+    "tavut": 268372,
+    "sha256": "968f11186a5745be9d508c4821e21dfa62d5abca300b6643671d50bc9adcb3c6"
    },
    "eleet": [
     {
      "id": "pariisi.livia.c1",
-     "alku": 140,
-     "loppu": 4280
+     "alku": 320,
+     "loppu": 2920
     },
     {
      "id": "pariisi.livia.c2",
-     "alku": 4280,
-     "loppu": 7720
+     "alku": 2920,
+     "loppu": 6280
     },
     {
      "id": "pariisi.livia.c3",
-     "alku": 7720,
-     "loppu": 13400
+     "alku": 6280,
+     "loppu": 9060
     },
     {
      "id": "pariisi.livia.c4",
-     "alku": 13400,
-     "loppu": 17820
-    },
-    {
-     "id": "pariisi.livia.c5",
-     "alku": 17820,
-     "loppu": 19960
+     "alku": 9060,
+     "loppu": 10860
     }
    ]
   },
