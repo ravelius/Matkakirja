@@ -172,15 +172,23 @@ export const FOKUSVIRTA_ROOMA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469. */
+    /*
+     * Isoisän kuva (omistaja 15.11.2026 klo 19.19 tekstin yhteydessä, kuvalinja 12.11. P-261112-29): Codexin havainnekuva Colosseumin
+     * kitkennästä, vanhan valokuvan ilme, isoisää ei näytetä (tehtävä #2258, 1536×1024, SHA-256 aee54ee50b91a67455e2913df5a6f3ddd7290e772a4d3403e28b1e01ae8e3980,
+     * postilaatikkohaara _review-isoisa-rooma-kitkenta-20261115/, commit 0682353882). Vanha Pantheon-kuva (r20260909-paper-v4) ja luentakuva2 pois.
+     * KK:n silmä ja omistajan sana ennen yhdistämistä; kuva viedään ämpäriin kuten Pariisin isoisa-pariisi-valokuva-v2.png (JU/PT).
+     */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
-      lyhyt: "Rooma, 1873. Katto antoi sateelle luvan.",
-      selite: 'Pantheonin avoimesta kattoaukosta sade putoaa suoraan marmorilattialle ja löytää tiensä viemäriin. Asetin kameran kuivalle kohdalle; näin vanhalle talolle en tohtinut huomauttaa katosta.',
+      osoite: "https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-rooma-kitkenta-v1.png",
+      lyhyt: "Rooma, 1873. Colosseumin muurin kasvit kitkettiin pari vuotta aiemmin.",
+      selite: 'Työmiehet köysissä kitkevät kasveja Colosseumin ulkomuurilta. Kasvillisuus poistettiin muureilta noin vuosina 1870–1871, ettei se rikkoisi kiveä.',
       lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
+      // Kitkennän ajankohta: Vistanet 22.12.2020 (1870, Pietro Rosa) ja en-Wikipedia Colosseum (1871); ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+      lahteet: [
+        "https://www.vistanet.it/roma/2020/12/22/lo-sapevate-nel-colosseo-vivono-centinaia-di-specie-botaniche-esotiche-e-rare/",
+        "https://en.wikipedia.org/wiki/Colosseum",
+      ],
     },
-    /* Isoisällä yksi kuva (omistaja 12.11.): luentakuva2 pois (SK 15.11.2026). HUOM: luentakuva on vielä vanha Pantheon-kuva, uusi Codex-kuva (työmiehet köysissä Colosseumin muurilla, ei isoisää) tulee tilalle KK:n luvalla. */
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',
