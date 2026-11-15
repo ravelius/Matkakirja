@@ -285,7 +285,7 @@ namespace Matkakirja
         }
 
         /// <summary>Koko julkisivukirkko yhtenä verkkona kuten peli sen piirtää (luonnoksiin ja arkkeihin): runko venytettynä (sx, 1, sz), kupoli tasaisesti
-        /// min(sx, sz) jalustan päällä.</summary>
+        /// min(sx, sz) (rajattu 0,6–1,6) jalustan päällä.</summary>
         public static Verkko TyyppiKirkkoJulkisivuKoko(bool kupoli = true, float sx = 1f, float sz = 1f, bool kevyt = true)
         {
             var runko = TyyppiKirkkoJulkisivu(kupoli);
@@ -295,7 +295,7 @@ namespace Matkakirja
         /// <summary>Runko venytettynä (sx, 1, sz) ja lisäosa paikkaan (ox · sx, oy, 0) tasaisella mittakaavalla min(sx, sz); normaalit käänteisellä venytyksellä.</summary>
         public static Verkko TyYhdista(Verkko runko, float sx, float sz, Verkko osa, float ox, float oy)
         {
-            float s = Math.Min(sx, sz);
+            float s = Math.Max(0.6f, Math.Min(1.6f, Math.Min(sx, sz)));   // KK 15.11. 02.5x: testattu väli 0,6–1,6
             int n1 = runko.Paikat.Length, n2 = osa?.Paikat.Length ?? 0;
             var v = new Verkko { Paikat = new float[n1 + n2], Normaalit = new float[n1 + n2], Varit = new float[n1 + n2], Syvyys = new float[(n1 + n2) / 3] };
             void Kopioi(Verkko l, int o, float kx, float ky, float kz, float tx, float ty)

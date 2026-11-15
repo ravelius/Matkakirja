@@ -37,6 +37,8 @@ NIMILISTAT = {
         'way/59846865': ('kupolikirkko', 'keski', 'Val-de-Grâce'),
         'way/56046786': ('kupolikirkko', 'keski', 'Saint-Paul-Saint-Louis'),
         'way/67501490': ('kupolikirkko', 'keski', 'Saint-Augustin'),
+        # JULKISIVUKIRKKO (KK 15.11. 02.5x): tornittomat Commons-kuvasta (raportti-9); kupoli vain lähde + kuva. Lorette: portiikki + pieni kellotapuli, ei kupolia.
+        'way/25688622': ('kirkko', 'julkisivu', 'Notre-Dame-de-Lorette', {'kupoli': False, 'lahde': 'Commons File:Église_Notre-Dame-de-Lorette,_Paris_10_June_2019.jpg'}),
         # PYLVÄSTEMPPELIT (hyväksytty KK 23.32, seitsemäs tyyppi)
         'way/54180046': ('pylvastemppeli', 'keski', 'Madeleine', {'katto': 'harja'}),
         'way/54657155': ('pylvastemppeli', 'keski', 'Palais Brongniart', {'katto': 'attika'}),
