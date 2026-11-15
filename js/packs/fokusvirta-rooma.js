@@ -279,19 +279,26 @@ export const FOKUSVIRTA_ROOMA = {
      * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
      * tausta-aineisto (ei nay pelaajalle).
      */
+    /*
+     * PULUN KUVA (omistaja 15.11.2026 klo 19.58 "Kuva 1"; KK 19.59): Commonsin valokuva Colosseumin hypogeumista nykyään; vanha
+     * pulu-cam-rooma-01 (Pantheon) pois. Tiedosto: Adrian Farwell, 14.3.2007, CC BY 3.0, 2304×3072,
+     * https://commons.wikimedia.org/wiki/File:Greenery_in_the_Colosseum_-_panoramio.jpg. Kuvaa itseään ei muokata.
+     * RAJAUS pyöreään kehykseen (omistaja valitsi esikatselun c1): keskipiste kuvan leveyden ja korkeuden suhteina [x, y],
+     * halkaisija leveyden suhteena; vihreä rinne ja hypogeumin tiilikaaret, väkijoukko pois. Kasvit ovat ruohoa ja sammalta
+     * maanalaisissa osissa (ei muurilla): faktat Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+     * `lyhyt` ja `selite` ovat SK:n luonnos, KK tarkistaa.
+     */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg',
-        lyhyt: 'Rooma: isoisä katsoi aukosta ylös, minä katsoin alas.',
-        selite: 'Ylhäältä Pantheonin avoin kattoaukko näyttää valtavalta silmältä, jonka pohjalla lattian kuviot pienenevät. Isoisä katsoi siitä ylös; minä kurkistin varovasti alas.',
-        lahde: 'Matkakirjan havainnekuva',
+        tiedosto: 'Greenery in the Colosseum - panoramio.jpg',
+        lyhyt: 'Colosseumin maanalaiset osat nykyään: ruoho ja sammal peittävät muureja.',
+        selite: 'Colosseumin hypogeum eli maanalaiset käytävät, joita ruoho ja sammal peittävät nykyään. Yli kaksisataa lajia kasvaa Colosseumilla yhä, enimmäkseen maanalaisissa osissa.',
+        lahde: 'Adrian Farwell, Wikimedia Commons (CC BY 3.0)',
+        rajaus: { keskipiste: [0.33, 0.76], halkaisija: 0.62 },
         lahteet: [
-          'https://www.pantheonroma.com/en/pantheon-history/',
-          'https://www.pantheonroma.com/en/2025/04/24/the-oculus-of-the-pantheon/',
-          'https://www.vigilfuoco.tv/eventi/lancio-di-petali-dalla-cupola-del-pantheon',
-          'https://hrtprikazuje.hrt.hr/hrt1/rimski-panteon-anticka-megastruktura-0-12197405',
-          'https://www.flickr.com/photos/escriteur/28753433533',
-          'https://www.rainews.it/video/2025/06/pantheon-vigili-del-fuoco-pioggia-di-petali-in-occasione-della-pentecoste-d7ec84a1-0da1-4b59-8a0a-831713e71490.html',
+          'https://commons.wikimedia.org/wiki/File:Greenery_in_the_Colosseum_-_panoramio.jpg',
+          'https://link.springer.com/article/10.1080/11263500212331351199',
+          'https://www.vistanet.it/roma/2020/12/22/lo-sapevate-nel-colosseo-vivono-centinaia-di-specie-botaniche-esotiche-e-rare/',
         ],
       },
     ],
