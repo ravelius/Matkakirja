@@ -1,0 +1,76 @@
+{
+  "file": "kamjanets-2344-max-original-8k.glb",
+  "bytes": 79018672,
+  "sha256": "ef570722849eec624f74d7380cdf3a421fc3f54a75b1c651c0e8f76a72563d83",
+  "triangles": 1978467,
+  "vertices": 1176579,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_25d1dc69-efc0-41b0-99f7-08d4e427f441",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1441558
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_c8ea29ae-2f4b-4c49-a628-62ac7105210c_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 14320463
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_c8ea29ae-2f4b-4c49-a628-62ac7105210c_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1862249
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.4899292439222336,
+      0,
+      -0.4101868122816086
+    ],
+    "max": [
+      0.48980720341205597,
+      0.298004150390625,
+      0.41021735966205597
+    ],
+    "dimensions": [
+      0.9797364473342896,
+      0.298004150390625,
+      0.8204041719436646
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}

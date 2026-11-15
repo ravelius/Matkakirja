@@ -1,0 +1,100 @@
+{
+  "taskNumber": 2344,
+  "title": "Kamjanets-Podilskyin castle original, one authorized take",
+  "preparedAt": "2026-11-15T22:12:38.957692+00:00",
+  "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kamjanets-tripo-2344-20261115/kamjanets-2344-max-original-8k.glb",
+  "originalBytes": 79018672,
+  "originalSHA256": "ef570722849eec624f74d7380cdf3a421fc3f54a75b1c651c0e8f76a72563d83",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/linnat-jatko-2324-20261115/kamjanets-podilskyin-linna/kamjanets-podilskyin-linna-model-v1.png",
+  "sourceSHA256": "693516285f12a61d1e461451e077634126b8e90f41e73b438cacbde9d3786cba",
+  "sourceDecisionCommit": "8a491b83cf1d5ce3694c8f2466fb7954ffec1cc9",
+  "jobId": "f5afdcf8-4054-4191-9f61-6abf1acc2677",
+  "jobURL": "https://studio.tripo3d.ai/workspace/generate/f5afdcf8-4054-4191-9f61-6abf1acc2677",
+  "settings": {
+    "model": "H3.1 Best Quality",
+    "workflow": "single",
+    "ultraMesh": true,
+    "aiComplete": false,
+    "texture": 8192,
+    "pbr": true,
+    "removeLighting": true,
+    "topology": "triangle",
+    "targetTriangles": 2000000,
+    "generateInParts": false
+  },
+  "callsSubmitted": 1,
+  "callsAllowed": 1,
+  "creditsBefore": 14125,
+  "creditsAfter": 14060,
+  "creditsSpent": 65,
+  "startedAt": "2026-11-15T22:05:13.133053+00:00",
+  "estimatedMinutes": 8,
+  "exportedAt": "2026-11-15T22:09:27.055979+00:00",
+  "triangles": 1978467,
+  "textureDimensions": {
+    "normal": [
+      4096,
+      4096
+    ],
+    "baseColor": [
+      8192,
+      8192
+    ],
+    "metallicRoughness": [
+      4096,
+      4096
+    ]
+  },
+  "technicalVerdict": "PASS",
+  "visualVerdict": "WARNING",
+  "uncertainty": "South silhouette and e wall gap preserved; open stepped stone surfaces; northern perimeter, tower depths and source small western tower remain interpretations. Light baseplate is preserved for later simplification.",
+  "KKAccepted": false,
+  "gameIntegrated": false,
+  "reductionsNotBefore": "after 2026-11-18",
+  "geographicRegistration": false,
+  "reviewFiles": {
+    "glb-metrics.json": {
+      "sha256": "ffc4c0bf25acb8d13f7535143d7b5ea71e2b861dd7879fe91966a3ff415b8187",
+      "bytes": 1792
+    },
+    "kamjanets-01-plusX.jpg": {
+      "sha256": "c98c74f7fc02a6d34c94b11e075a0f55992f1a097c9c69ba37257c3e20ede1b2",
+      "bytes": 82425
+    },
+    "kamjanets-02-plusZ.jpg": {
+      "sha256": "30bd8788ce7f3c21924da98276be87e0238144f972df14e6e4210108ae627d88",
+      "bytes": 52838
+    },
+    "kamjanets-03-minusX.jpg": {
+      "sha256": "31157d126d67d8ef5f8f419af9d268f8c379178efd278a57c9c370dee472b6c3",
+      "bytes": 70105
+    },
+    "kamjanets-04-minusZ.jpg": {
+      "sha256": "ac41bb35bcf712e4fd86f5bb756f85bc29ea3c0e4e349236e11bf814537ac817",
+      "bytes": 55265
+    },
+    "kamjanets-05-upper.jpg": {
+      "sha256": "fda3b5f68932b9e3f79f1272b2b87e1794532501fab794b30a7fce0104458459",
+      "bytes": 144345
+    },
+    "kamjanets-5views-1000.jpg": {
+      "sha256": "ce2baf097a3d9e62c370ed71612ec9c0108139a2b13f71b9090f48b7b529f308",
+      "bytes": 157333
+    },
+    "qa-independent.md": {
+      "sha256": "176655938970fd8cde2a439fdb01d548872c5084b09780f9b6ccff886e9f0049",
+      "bytes": 4593
+    },
+    "qa-root.md": {
+      "sha256": "47d3ff74b92fb881a6130adef2db5736ccd151fd1e470b07f74330c17bb5575a",
+      "bytes": 2065
+    },
+    "view-crops.json": {
+      "sha256": "931d84ca7d82818eac793d58777ac8d2a9dd5125f0d906f9f8f46862a9b901f6",
+      "bytes": 690
+    }
+  },
+  "sourceFilesPreserved": true,
+  "newAccountCreated": false,
+  "newSubscriptionPurchased": false
+}

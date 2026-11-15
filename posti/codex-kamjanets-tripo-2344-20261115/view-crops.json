@@ -1,0 +1,46 @@
+{
+  "method": "Crop existing browser screenshots only; new process per model, text drawn last with fresh fonts",
+  "cropBoxes": {
+    "kamjanets": [
+      [
+        845,
+        515,
+        1745,
+        870
+      ],
+      [
+        945,
+        510,
+        1675,
+        850
+      ],
+      [
+        845,
+        520,
+        1755,
+        845
+      ],
+      [
+        920,
+        510,
+        1710,
+        860
+      ],
+      [
+        905,
+        405,
+        1730,
+        1080
+      ]
+    ]
+  },
+  "rawNames": [
+    "01-plusX.png",
+    "02-plusZ.png",
+    "03-minusX.png",
+    "04-minusZ.png",
+    "05-upper.png"
+  ],
+  "geographicRegistration": false,
+  "maxReviewPixels": 1000
+}
