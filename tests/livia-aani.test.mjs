@@ -302,7 +302,7 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
-const AANTA_ODOTTAVAT = new Set(['pariisi-3']);
+const AANTA_ODOTTAVAT = new Set([]);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
@@ -426,7 +426,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
  * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
  * josta omistaja valitti.
  */
-test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]-tagia', () => {
+test('ateena-3 ja sofia-3 soivat v4:llä tasoitettuina ilman [softly]-tagia (pariisi-3 uusittu 15.11.)', () => {
   /*
    * 28.9.2026: omistaja valitsi eleven_v4:n (erä pulu-3eaad28481f0aa2ef5a9),
    * ja samana iltana [softly] poistettiin Pulun tageista ("pulu kuulostaa
@@ -435,7 +435,8 @@ test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]
    * tiivisteet ovat samat kuin ennen uusintoja. Peli soittaa tasoitetun
    * kopion (tools/tasoita-pulu.mjs, −17,2 LUFS).
    */
-  for (const avain of ['ateena-3', 'sofia-3', 'pariisi-3']) {
+  // pariisi-3 uusittu 15.11.2026 (ÄÄ, kaupunki-intro-v3): ei tasoitettu/-polkua eikä V4_ERAT-erää; tiiviste uudesta tekstistä.
+  for (const avain of ['ateena-3', 'sofia-3']) {
     const polku = LIVIAN_VERSIOIDUT_AANET[avain];
     assert.match(polku, new RegExp(`/tasoitettu/livia-${avain}\\.mp3$`), avain);
     assert.ok(V4_ERAT.some((era) => polku.includes(`/${era}/`)), `${avain}: v4-erä`);
@@ -443,7 +444,9 @@ test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]
   }
   assert.equal(LIVIAN_AANITETYT['ateena-3'], '572e0e85');
   assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
-  assert.equal(LIVIAN_AANITETYT['pariisi-3'], '3402cfd2');
+  assert.equal(LIVIAN_AANITETYT['pariisi-3'], 'b67b8821');
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['pariisi-3'], 'aanet/kaupunki-intro-v3/pulu-pariisi-3.mp3');
+  assert.ok(LIVIAN_KESTOT['pariisi-3'] > 0);
 });
 
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
