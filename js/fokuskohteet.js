@@ -4991,6 +4991,11 @@ function kysyKohteesta(ui, kysymys) {
 // "Unohdettu aarre, kaytetaan sita kaikkiin") - sama kaikilla
 // ihmekuvilla, kadonneilla ja sailyneilla.
 const KOHDE_IHMENAUHA = 'Unohdettu aarre';
+// KADONNEEN KOHTEEN NAUHA (omistaja 16.11.2026 klo 22.47 "Pidetään kadonnut
+// aarre", KK 17.11.): kun ihme.kadonnut on tosi, nauha on "Kadonnut aarre"
+// kuten natiivissa (ui.nosto.ihmenauha); säilyneen kohteen kuvissa nauha
+// pysyy pelin alaotsikkona "Unohdettu aarre".
+const KOHDE_KADONNUT_NAUHA = 'Kadonnut aarre';
 
 /*
  * NAUHAN SÄVY: yksi rivi, kaksi valmista väriryhmää (omistajan tilaus
@@ -5054,7 +5059,7 @@ function kohteenIhmekuva(kohde) {
      * eikä kuudentoista datalohkon kierros.
      */
     url: ihme.url ?? '',
-    nauha: KOHDE_IHMENAUHA,
+    nauha: ihme.kadonnut ? KOHDE_KADONNUT_NAUHA : KOHDE_IHMENAUHA,
     /*
      * IHMEKUVAN LIPPU (omistajan lisäys 1.9.2026). Kadonneen ihmeen
      * rekonstruktio saa lähderivin selitepopupista oman tekstinsä

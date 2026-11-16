@@ -50,3 +50,10 @@ test('ihmekuvan alla lyhyt kuvateksti, pitkä selite suurennokseen (Natiivi-UI:n
   const ilman = kohteenKuvalista({ ihme: { osoite: 'a.webp', selite: 'Pitkä.' } })[0];
   assert.equal(kuvatekstiLyhyt(ilman), 'Pitkä.', 'ilman lyhyttä pitkä kelpaa');
 });
+
+test('nauha: kadonneella "Kadonnut aarre", säilyneellä "Unohdettu aarre" (KK 17.11.2026)', () => {
+  const kadonnut = { nimi: 'Koe', ihme: { osoite: 'assets/kartat/ihmeet/koe.webp', kadonnut: true } };
+  assert.equal(kohteenKuvalista(kadonnut)[0].nauha, 'Kadonnut aarre');
+  assert.equal(kohteenKuvalista(olympia)[0].nauha, 'Unohdettu aarre');
+  assert.equal(matkakirjanIhme('Olympia').nauha, 'Unohdettu aarre');
+});
