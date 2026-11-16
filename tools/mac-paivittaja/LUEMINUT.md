@@ -9,3 +9,9 @@ Ei salasanaa (jos vanha app ei ole kirjoitettava, pyytää vetämään sen roska
 
 Julkaisu: `ditto -c -k --norsrc "Päivitä Matkakirja.command" proto-3d/jako/Paivita-Matkakirja.zip` (zip säilyttää suoritusoikeuden).
 Testi: MATKAKIRJA_KOHDE / _LATAUKSET / _ROSKA / _LOKI ohjaavat kansiot testikansioon.
+
+## Päivitä Matkakirja.app (omistaja 17.2x, KK; allekirjoitus omistajan päätös 17.22)
+`zsh rakenna.zsh <ulos> <pelin PlayerIcon.icns>` → applet (paivita.applescript) + Resources/paivita.zsh (= .command) + kuvake (kuvake.py).
+Edistyminen pienessä ikkunassa (MATKAKIRJA_TILA), ei Terminalia; lopuksi ilmoitus tai virhedialogi. Peli suljetaan SIGTERMillä (ei Apple Events -lupaa).
+Allekirjoitus: codesign -f -s "Developer ID Application: …" --options runtime --timestamp=none (ei notarointia, Applelle ei mitään).
+Jakoon: ditto -c -k --sequesterRsrc --keepParent → proto-3d/jako/Paivita-Matkakirja-app.zip.

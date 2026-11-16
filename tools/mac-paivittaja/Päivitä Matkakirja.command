@@ -8,8 +8,10 @@ OSOITE=${MATKAKIRJA_OSOITE:-https://samimacstudio2.tail9af251.ts.net}
 KOHDE=${MATKAKIRJA_KOHDE:-/Applications}; APP=$KOHDE/Matkakirja.app; TUNNUS=app.matkakirja.proto3d
 LATAUKSET=${MATKAKIRJA_LATAUKSET:-$HOME/Downloads}; ROSKA=${MATKAKIRJA_ROSKA:-$HOME/.Trash}
 LOKI=${MATKAKIRJA_LOKI:-$HOME/Library/Logs/Matkakirja-paivitys.log}; mkdir -p ${LOKI:h}
-sano() { print -r -- "$*"; print -r -- "$(date '+%d.%m. %H.%M.%S') $*" >> $LOKI }
-loppu() { print; print "Ikkunan voi sulkea."; exit ${1:-0} }
+# MATKAKIRJA_TILA=<tiedosto>: Päivitä Matkakirja.app lukee edistymisen tästä (viimeinen rivi; lopuksi "LOPPU <rc>").
+TILA=${MATKAKIRJA_TILA:-}
+sano() { print -r -- "$*"; print -r -- "$(date '+%d.%m. %H.%M.%S') $*" >> $LOKI; [[ -n $TILA ]] && print -r -- "$*" >> $TILA }
+loppu() { [[ -n $TILA ]] && print -r -- "LOPPU ${1:-0}" >> $TILA; [[ -z $TILA ]] && { print; print "Ikkunan voi sulkea."; }; exit ${1:-0} }
 TMP=""; M=""
 siivoa() { [[ -n $M ]] && hdiutil detach -quiet "$M" 2>/dev/null; [[ -n $TMP ]] && rm -rf "$TMP" }
 trap siivoa EXIT
@@ -40,9 +42,10 @@ codesign --verify --deep --strict "$M/Matkakirja.app" 2>/dev/null || { sano "Uud
 # Käynnissä oleva Matkakirja kiinni
 if pgrep -f "$APP/Contents/MacOS/" >/dev/null; then
   sano "Suljetaan käynnissä oleva Matkakirja…"
-  osascript -e "tell application id \"$TUNNUS\" to quit" >/dev/null 2>&1
+  # SIGTERM (Unity sulkeutuu siististi); ei Apple Events -lupakyselyä appiversiossa
+  for p in $(pgrep -f "$APP/Contents/MacOS/"); do kill -TERM $p 2>/dev/null; done
   for i in {1..20}; do pgrep -f "$APP/Contents/MacOS/" >/dev/null || break; sleep 0.5; done
-  for p in $(pgrep -f "$APP/Contents/MacOS/"); do kill $p 2>/dev/null; done; sleep 1
+  for p in $(pgrep -f "$APP/Contents/MacOS/"); do kill -KILL $p 2>/dev/null; done; sleep 1
 fi
 
 # Korvaus: kopio viereen, sitten vaihto (vanha jää, jos kopio epäonnistuu)
