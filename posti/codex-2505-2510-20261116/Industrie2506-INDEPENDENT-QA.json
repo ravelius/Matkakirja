@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "request": "PT2506",
+  "reviewer": "bc_independent_qa, independent of producer",
+  "reviewedAt": "2026-11-16T20:33:32.802306+00:00",
+  "status": "REJECT_WHOLE_COMPLEX_DEPTH_PROPORTION_FAIL",
+  "eligibleAsWholeComplexTripoInput": false,
+  "selectedWholeComplexFiles": [],
+  "rejectedWholeComplexFiles": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/industrie2506-final-oblique/original.png",
+      "sha256": "e7c32161d03a7b51e49a5278f90815cb487ca22c2005ff0fd0e96a69dbf8f00e"
+    }
+  ],
+  "decision": "Do not use this final candidate as the complete Industrie Tripo starting image. The restored long front and complete vault pass, but depth remains materially too shallow for the commissioned approximately 2.4:1 rectangle. Under the one-final-attempt boundary, omit the whole-complex candidate; no automatic regeneration. Root retains queue decision.",
+  "threeReasons": [
+    "PASS front identity: the central single arch/attic, paired flanking five-bay pavilions and both major long recessed wings remain readable against approved front and actual P6/P1/P3 photographs. This is not the former short-wing failure.",
+    "FAIL dominant envelope: the visible right short end and roof span form a thin hall behind the very long frontage. A perspective-aware approximate axis check under the requested near-orthographic assumption indicates roughly 4.5–5.5:1 length/depth and a lower approximately 25–30 degree elevation. This is a qualitative material mismatch with approximately 2.4:1 / high45deg, not a measured historical ratio.",
+    "PASS full continuous longitudinal glazed barrel vault and complete isolated object are visible; P5 supports the vault principle. However those successes do not provide the missing hall depth, and the sources do not prove the complete rear/end dimensions."
+  ],
+  "projectionCheck": {
+    "method": "Manual approximate native-image same-ground-level corner picks, followed by near-orthographic projection compensation for orthogonal ground axes. Raw screen length/depth is NOT treated as a world-space ratio.",
+    "assumptions": [
+      "Rectangular ground footprint; perpendicular long and short axes.",
+      "Near-orthographic camera as requested; native image has square pixels.",
+      "Picked terminal outer-wall ground corners are approximate; facade projections and generative inconsistencies are not calibrated."
+    ],
+    "approximateNativePixelPoints": {
+      "frontLeft": [
+        31,
+        402
+      ],
+      "frontRight": [
+        1760,
+        736
+      ],
+      "backRight": [
+        1908,
+        573
+      ]
+    },
+    "projectedLongAxis": [
+      1729,
+      334
+    ],
+    "projectedDepthAxis": [
+      148,
+      -163
+    ],
+    "formula": "For orthographic ground axes: sin(elevation)^2 = -slopeLong*slopeDepth; tan(azimuth) = slopeLong/sin(elevation); L/D = abs(dxLong/dxDepth)*tan(azimuth).",
+    "illustrativeElevationDegrees": 27.5,
+    "illustrativeCompensatedLengthDepth": 4.9,
+    "interpretation": "Approximate picks produce about 4.9:1 after compensation, rather than merely reporting the much larger raw projected ratio. Edge/eave direction and short-end bay-span reading support a shallow volume. No exact camera or dimension certificate is claimed. If the rendering violates orthographic consistency, it is also unsuitable for reliably communicating the requested envelope."
+  },
+  "historicalScope": {
+    "P6_P1_P3": "Actual exterior photos support front hierarchy and detail; not a full depth survey.",
+    "P5": "Actual interior supports iron/glass barrel vault and galleries, not a complete measured external envelope.",
+    "approvedFront": "Appearance anchor separately authorised by PT2506; generated raster, not historical evidence.",
+    "workingEnvelope": "Approximately 2.4:1 /250x105m is commissioned modelling proportion, not asserted exact historical measurement.",
+    "rearAndEnds": "Restrained interpretation is allowed and is not itself a rejection reason."
+  },
+  "preserveFront": {
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/original.png",
+    "sha256": "33c0b206793959f0242ab9a6ee10c037bd22a799f9c5b12ac2e0487750d9814c",
+    "status": "Approved front remains a separate valid appearance anchor; it is not upgraded to whole-volume completion."
+  },
+  "imageEvidence": [
+    {
+      "id": "final2506",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/industrie2506-final-oblique/original.png",
+      "sha256": "e7c32161d03a7b51e49a5278f90815cb487ca22c2005ff0fd0e96a69dbf8f00e",
+      "recordedSHA256Matches": true,
+      "actuallyViewed": true,
+      "role": "final whole-complex candidate"
+    },
+    {
+      "id": "approved-front-2495",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/original.png",
+      "sha256": "33c0b206793959f0242ab9a6ee10c037bd22a799f9c5b12ac2e0487750d9814c",
+      "recordedSHA256Matches": true,
+      "actuallyViewed": true,
+      "role": "Approved front-appearance/massing anchor. Explicit PT2506 exception permits use as actual reference input; not historical source evidence."
+    },
+    {
+      "id": "P6",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P6.jpg",
+      "sha256": "3384b712498079ff381be6b44a3d2cd6d2997cfceda3127e87aabdc4fb536329",
+      "recordedSHA256Matches": true,
+      "actuallyViewed": true,
+      "role": "Primary as-built broad exterior photograph. Actual projecting central portal flanked by five-bay pavilions, then long recessed lower wings; visible low curved/sloping glazed roof portions."
+    },
+    {
+      "id": "P1",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P1.jpg",
+      "sha256": "4f99563a73e3fda3e6c14cd23b5e94b99ecd2bb411029f2d6ce58a403854e7c2",
+      "recordedSHA256Matches": true,
+      "actuallyViewed": true,
+      "role": "Actual exterior photograph catalogued1889; central portal depth, tall single arch, paired Corinthian columns, sculpture groups, long arcade and part of curved roof."
+    },
+    {
+      "id": "P3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P3.jpg",
+      "sha256": "d4fff1eb8dbb0dfd2c915f577074df13c36f35516f07dece28f26787d7e7d02c",
+      "recordedSHA256Matches": true,
+      "actuallyViewed": true,
+      "role": "Actual Baldus exterior photograph1850s–60s: central portal and flanking five-bay pavilions, real roof eaves/sloping material, facade proportions."
+    },
+    {
+      "id": "P5",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P5.jpg",
+      "sha256": "4a5d9004093328ac794e4a61a9c69e7669a8ce7ce18be859bc54ac0a3e53c9f8",
+      "recordedSHA256Matches": true,
+      "actuallyViewed": true,
+      "role": "Actual interior photograph catalogued1857: central longitudinal iron-and-glass barrel vault and two-level internal galleries only. Do not reproduce garden, stereo borders or interior as exterior."
+    }
+  ],
+  "recordsRead": [
+    "manifest.json",
+    "sources.json",
+    "prompt.txt",
+    "producer-QA.json"
+  ],
+  "gaps": [
+    "No exact mesh/camera/world dimensions available.",
+    "Rear exterior roof and short ends remain authorised interpretations.",
+    "Whole-volume depth failure is sufficient for rejection even though front and vault pass."
+  ],
+  "boundaries": {
+    "generation": false,
+    "retry": false,
+    "browser": false,
+    "downloads": false,
+    "queueMutation": false,
+    "mail": false,
+    "Blender": false,
+    "Tripo": false,
+    "onlyWrittenFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/industrie2506-final-oblique/INDEPENDENT-QA.json"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "key": "GC-MV-1",
+  "label": "Grand Chatelet Giraud1802 front-back pilot",
+  "status": "DOWNLOADED",
+  "inputImage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/grand-chatelet-late1802-2492-original.png",
+  "inputSHA256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71",
+  "inputImages": [
+    {
+      "slot": "Front",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/grand-chatelet-late1802-2492-original.png",
+      "sha256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71"
+    },
+    {
+      "slot": "Back",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/grand-chatelet-2503-back-original.png",
+      "sha256": "32604ae57180f945bbc5a5df9fe46fb649fc7c69cedea895d17220615edccc38"
+    }
+  ],
+  "approval": "c4f3aa8ba17ccf108dfa576b93709f316ecf28cb:posti/pt-codex-kk-paatokset-d5f3b87050-20261116.md#2503",
+  "settings": {
+    "model": "H3.1 Best Quality",
+    "mode": "HD Model",
+    "UltraMeshQuality": true,
+    "AIComplete": false,
+    "texture": true,
+    "textureResolution": "8K",
+    "removeLighting": true,
+    "PBR": true,
+    "topology": "Triangle",
+    "polycount": 2000000,
+    "generateInParts": false,
+    "UIVerified": true,
+    "inputMode": "MultiView",
+    "viewCount": 2,
+    "UIPrice": 65
+  },
+  "costCredits": 65,
+  "jobId": "347772ac-abe4-4a0b-bb28-7e12f796556b",
+  "reservationID": "f92a2652-398b-476c-b44a-6825ef37f74f",
+  "rootInputQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/INDEPENDENT-QA.json",
+  "maxNewTakesCurrentDecision": 1,
+  "expectedFinish": "2026-11-16 22:45–23:00 Europe/Helsinki estimate",
+  "topViewUsage": "QA/reference only; officialTripo warns top-down input distorts proportions",
+  "sourceInstruction": "Giraud35/37 andG4057 late1802; no phase merge",
+  "uiCheckedAt": "2026-11-16T20:36:10.394720+00:00",
+  "reservationAt": "2026-11-16T20:36:10.458827+00:00",
+  "submittedAt": "2026-11-16T20:36:58.892665+00:00",
+  "submissionConfirmed": true,
+  "uiProgressPercent": 19,
+  "observedCreditBalanceAfter": 13215,
+  "cloudGenerationComplete": true,
+  "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo/GC-MV-1/original.glb",
+  "originalBytes": 86651552,
+  "originalSHA256": "04b6a4a98af706c7a884d489f88cd2d4c31ea66b05fea2cd6a61140e19d32b71",
+  "originalTriangles": 1943243,
+  "downloadedAt": "2026-11-16T20:41:42.963808+00:00"
+}

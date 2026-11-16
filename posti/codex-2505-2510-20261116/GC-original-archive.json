@@ -1,0 +1,13 @@
+{
+  "jobId": "347772ac-abe4-4a0b-bb28-7e12f796556b",
+  "building": "paris-grand-chatelet-late1802",
+  "part": "GC-MV-1",
+  "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_6ad483b1-9b26-4dca-a85d-c9b4b2000d16.glb",
+  "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo/GC-MV-1/original.glb",
+  "bytes": 86651552,
+  "sha256": "04b6a4a98af706c7a884d489f88cd2d4c31ea66b05fea2cd6a61140e19d32b71",
+  "triangles": 1943243,
+  "associationEvidence": "Operator supplied download and visible UI triangle count",
+  "formatRequested": "GLB",
+  "validationScope": "GLB header, chunk boundaries, JSON triangle index counts and SHA-256 only; not full technical QA"
+}

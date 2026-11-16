@@ -1,0 +1,95 @@
+{
+  "parts": [
+    {
+      "key": "B-MV-1",
+      "jobId": "0fed6eae-8aa9-4817-a0c9-53ce8e0746c2",
+      "inputImages": [
+        {
+          "slot": "Front",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/multiview-bc-2479/B/B-SW-anchor-original.png",
+          "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49"
+        },
+        {
+          "slot": "Right",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/multiview-bc-2479/B/B-SE-v1.png",
+          "sha256": "c6fc9088a48e52a5b47487c8aac349518a319ab52c174f77e7c456a5d84b1027"
+        }
+      ],
+      "approval": "c17b34b99ce47c1e5cbb7a5012a827c9ccd08a16:posti/pt-codex-kk-paatokset-22b0440327-20261116.md",
+      "settings": {
+        "model": "H3.1 Best Quality",
+        "mode": "HD Model",
+        "UltraMeshQuality": true,
+        "AIComplete": false,
+        "texture": true,
+        "textureResolution": "8K",
+        "removeLighting": true,
+        "PBR": true,
+        "topology": "Triangle",
+        "polycount": 2000000,
+        "generateInParts": false,
+        "UIVerified": true,
+        "inputMode": "MultiView",
+        "viewCount": 2,
+        "UIPrice": 65
+      },
+      "costCredits": 65,
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/B-MV-1/original.glb",
+      "originalSHA256": "839d5c6b4920c0e3dbf61af20a615bbb6d16a71dcc0ef565182680d52cd996c5",
+      "originalBytes": 76988404,
+      "originalTriangles": 1974072,
+      "downloadedAt": "2026-11-16T20:34:54.411957+00:00"
+    },
+    {
+      "key": "C-MV-1",
+      "jobId": "6faeabfd-ac27-4940-92b4-e68a92c37797",
+      "inputImages": [
+        {
+          "slot": "Front",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/multiview-bc-2479/C/C-SE-anchor-original.png",
+          "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9"
+        },
+        {
+          "slot": "Left",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/multiview-bc-2479/C/C-SW-v1.png",
+          "sha256": "574d85c6972029df6000c3ca992afd64443f35c564a792b499e7fa580700a600"
+        },
+        {
+          "slot": "Back",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/multiview-bc-2479/C/C-NW-v1.png",
+          "sha256": "9e62d7de1921b43e903b412315b0f9f23ec6255c879fbe7fda92361c5fdc705f"
+        }
+      ],
+      "approval": "c4f3aa8ba17ccf108dfa576b93709f316ecf28cb:posti/pt-codex-kk-paatokset-d5f3b87050-20261116.md",
+      "settings": {
+        "model": "H3.1 Best Quality",
+        "mode": "HD Model",
+        "UltraMeshQuality": true,
+        "AIComplete": false,
+        "texture": true,
+        "textureResolution": "8K",
+        "removeLighting": true,
+        "PBR": true,
+        "topology": "Triangle",
+        "polycount": 2000000,
+        "generateInParts": false,
+        "UIVerified": true,
+        "inputMode": "MultiView",
+        "viewCount": 3,
+        "UIPrice": 65
+      },
+      "costCredits": 65,
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/C-MV-1/original.glb",
+      "originalSHA256": "d09e482be4f2684acf42170c01f3bc363a98f7de30bef91b99fbd933c7706846",
+      "originalBytes": 80263336,
+      "originalTriangles": 1977019,
+      "downloadedAt": "2026-11-16T20:28:00.600030+00:00"
+    }
+  ],
+  "technicalQA": "PASS limited scope in attachedinventory",
+  "visualQA": "NOT_COMPLETE",
+  "assemblyFitAccepted": false,
+  "originalsUnchanged": true,
+  "alignment": "New originals delivered in source coordinates; LAV owns rectangle fit. Prior A-MV alignment remains available in earlier delivery d5f3b87050. No guessed transform applied to newB/C.",
+  "assemblyInstruction": "KK2501:66m long rectangular footprint; opposed tower pairs; seamsclosed;wallcrestat towerheight;omitCifunfit."
+}

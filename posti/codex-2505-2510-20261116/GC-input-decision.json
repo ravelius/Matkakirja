@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-16T20:35:34.241677+00:00",
+  "sourceURL": "https://www.tripo3d.ai/help/features/how-to-use-multi-view-input-effectively",
+  "finding": "Official help recommends front/back three-quarter for two inputs and warns top-down may distort proportions. UI onlyFront/Left/Right/Back.",
+  "decision": "GC Front approved2492 +Back2503;trueTOP2503 for geometryQA only. No newimage call.",
+  "approval": "c4f3aa8ba17ccf108dfa576b93709f316ecf28cb:posti/pt-codex-kk-paatokset-d5f3b87050-20261116.md#2503",
+  "newTripoCallsLimit": 1,
+  "pricePendingUI": 65
+}

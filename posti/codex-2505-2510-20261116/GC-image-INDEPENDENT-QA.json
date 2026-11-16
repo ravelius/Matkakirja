@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "request": "PT2503",
+  "reviewer": "bc_independent_qa subagent, independent of producer",
+  "reviewedAt": "2026-11-16T20:23:23.907377+00:00",
+  "status": "ELIGIBLE_THREE_VIEW_APPROXIMATE_PILOT_WITH_ROOF_DETAIL_WARNING",
+  "recommendation": "Anchor + BACK + TOP are consistent enough in dominant geometry for the authorized approximate MultiView pilot. No contradictory dominant footprint or missing dominant mass observed. Root retains final choice. This is not a same-mesh or historical-metric certification.",
+  "ownerApprovalClaim": false,
+  "selectedFiles": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/grand-chatelet-late1802-2492-original.png",
+      "sha256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/grand-chatelet-2503-back-original.png",
+      "sha256": "32604ae57180f945bbc5a5df9fe46fb649fc7c69cedea895d17220615edccc38"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/grand-chatelet-2503-top-original.png",
+      "sha256": "e7cd92d747b880c7ec71009151dbb5f5e68f47c465e92aa0c698c623a44a93f7"
+    }
+  ],
+  "rejectedFiles": [],
+  "readRecords": [
+    "manifest.json",
+    "QA.json",
+    "README.md",
+    "../source-audit2492/source-index.json",
+    "../source-audit2492/bounded-brief.md",
+    "input/authority-PT2503.md",
+    "prompt-back.txt",
+    "prompt-top.txt"
+  ],
+  "viewEvidence": {
+    "anchor": {
+      "role": "Unchanged owner-approved identity anchor, not historical evidence",
+      "checks": [
+        "One large grounded northeast round tower at image left.",
+        "Two much smaller corbelled portal turrets terminate above ground; pointed northern portal, clock, asymmetric facade.",
+        "One smaller gray inferred stair turret behind gate on east block; two unequal longitudinal masses and central street."
+      ]
+    },
+    "back": {
+      "camera": "PASS visually straight south-to-north rear with modest elevation; no diagonal front substitution",
+      "checks": [
+        "Large northeast tower correctly at far right, partially naturally occluded.",
+        "Two small orange gate-turret roof tips remain at far north; gray stair turret is on east/image-right block. Corbel bases hidden and not newly proven.",
+        "South opening of street is clear; passage continues to pointed far-north arch. No second clock/decorated portal on south wall.",
+        "Unequal blocks, projecting low southwest wing at left, stepped east masses at right remain readable.",
+        "Rear windows and roof junctions are allowed interpretations; they are not rejected merely for lacking direct source evidence."
+      ],
+      "warning": "Prominent pair of south-facing dormers on west/south block is not represented on TOP corresponding southwest roof closure."
+    },
+    "top": {
+      "camera": "PASS visually true overhead/nadir roof-plan view rather than isometric. No broad vertical facade or horizon; circular tower roof nearly circular and no front clock/portal face is forced into projection. Exact 90-degree camera metadata is unavailable.",
+      "checks": [
+        "North up; dominant circular northeast tower at upper right, two smaller orange gate roofs along northern face, gray small stair turret just south on east block.",
+        "Continuous narrow north-south street negative space between two unequal blocks, with bridge roof confined to north portal end.",
+        "Diagonal northwest outer edge, stepped eastern roof perimeter and southwest projecting mass are present.",
+        "Whole roofed complex is visible, not a floorplan/cutaway; no extra giant corner towers or closed rectangular courtyard."
+      ],
+      "warning": "Two BACK southwest dormers are absent from corresponding TOP roof; exact street kink/width and source-plan boundary alignment remain unmeasured."
+    }
+  },
+  "crossViewDecision": {
+    "dominantTowerRoles": "PASS visible hierarchy and cardinal placement; hidden corbel bases rely on approved anchor",
+    "blocksAndThroughStreet": "PASS major topology continuous and compatible",
+    "footprint": "PASS qualitative NW diagonal/east steps/SW wing; not exact traced Giraud35 match",
+    "topCamera": "PASS visual overhead requirement; exact orthographic camera cannot be certified from raster",
+    "secondaryRoofDetail": "WARN known local inconsistency: pair of BACK south-facing west-block dormers absent from TOP; retain explicit gap",
+    "materialGeometryFailure": "NONE observed at dominant mass/footprint level",
+    "whyNotReject": "Rear interpretation is explicitly allowed. The observed dormer discrepancy is a secondary roof-detail conflict, not a changed dominant block, displaced major tower, blocked street or missing wing. It lowers consistency confidence and prevents a claim of exact shared geometry."
+  },
+  "historicalSourceDistinctions": [
+    "Giraud35 is a plan with redevelopment overlays, not direct roof evidence; no colored proposal boundary is promoted to proven standing wall.",
+    "Giraud37 is tower/dungeon plan and section/elevation with below-grade parts, not proof of northern portal or extra above-ground storeys.",
+    "G4057 supports northern facade, clock and unequal tower roles; it does not establish rear roof closures."
+  ],
+  "gaps": [
+    "Exact shared mesh identity, dimensions, rear roof ridges, chimney rhythm and minor annex alignment not proven.",
+    "Exact source-plan extant boundary and street irregularity not measured.",
+    "BACK and TOP cannot independently prove the hidden clock face/corbel undersides.",
+    "Pair of BACK southwest dormers is visibly absent from TOP; root must retain this warning if using all three.",
+    "Interpreted roof geometry and rear fenestration remain historical approximations."
+  ],
+  "imageEvidence": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/grand-chatelet-late1802-2492-original.png",
+      "sha256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71",
+      "manifestHashMatches": true,
+      "passedCopyHashMatches": true,
+      "actuallyViewed": true,
+      "role": "APPROVED model identity; generated raster, not independent historical evidence"
+    },
+    {
+      "file": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/esikuvat/chatelet/giraud-35.jpg",
+      "sha256": "3b0ef21b022720e78538016c507321558c0184cfa3dca04c94f985e5f500e1e3",
+      "manifestHashMatches": true,
+      "passedCopyHashMatches": true,
+      "actuallyViewed": true,
+      "role": "PRIMARY: late-phase footprint and through-street; plan includes proposed street/demolition overlays"
+    },
+    {
+      "file": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/esikuvat/chatelet/giraud-37.jpg",
+      "sha256": "f93df5bbaa550ac7dea0db0f192380aa916cf1d964dca3cce6799a1c178981cd",
+      "manifestHashMatches": true,
+      "passedCopyHashMatches": true,
+      "actuallyViewed": true,
+      "role": "PRIMARY: tower/dungeon plan, section and elevation; preserve distinction from north portal facade"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-ulko-2233-20261115/references/A-G4057.jpg",
+      "sha256": "bf0594b6bfef83a49df8a37429162f7144f59ef55cc2d5ec593dfc201dd04877",
+      "manifestHashMatches": true,
+      "passedCopyHashMatches": true,
+      "actuallyViewed": true,
+      "role": "PRIMARY: north facade from Rue Saint-Denis; Sergent/Le Campion 1786–1787"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/grand-chatelet-2503-back-original.png",
+      "sha256": "32604ae57180f945bbc5a5df9fe46fb649fc7c69cedea895d17220615edccc38",
+      "manifestHashMatches": true,
+      "actuallyViewed": true,
+      "view": "back"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/grand-chatelet-2503-top-original.png",
+      "sha256": "e7cd92d747b880c7ec71009151dbb5f5e68f47c465e92aa0c698c623a44a93f7",
+      "manifestHashMatches": true,
+      "actuallyViewed": true,
+      "view": "top"
+    }
+  ],
+  "boundaries": {
+    "TripoStarted": false,
+    "generationOrRetry": false,
+    "browser": false,
+    "downloads": false,
+    "render": false,
+    "mail": false,
+    "queueMutation": false,
+    "onlyWrittenFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/multiview-2503/INDEPENDENT-QA.json"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "GC": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo/GC-MV-1/original.glb",
+    "sourceSHA256": "04b6a4a98af706c7a884d489f88cd2d4c31ea66b05fea2cd6a61140e19d32b71",
+    "bytes": 86651552,
+    "glbVersion": 2,
+    "chunks": [
+      {
+        "type": "0x4e4f534a",
+        "bytes": 2228
+      },
+      {
+        "type": "0x4e4942",
+        "bytes": 86649296
+      }
+    ],
+    "triangles": 1943243,
+    "primitives": [
+      {
+        "vertices": 1247960,
+        "triangles": 1943243,
+        "indexMin": 0,
+        "indexMax": 1247959,
+        "positionBounds": {
+          "min": [
+            -0.4152985215187073,
+            0.0,
+            -0.4905853569507599
+          ],
+          "max": [
+            0.4152985215187073,
+            0.5843505859375,
+            0.4905853569507599
+          ]
+        },
+        "declaredBounds": {
+          "min": [
+            -0.4152985215187073,
+            0,
+            -0.4905853569507599
+          ],
+          "max": [
+            0.4152985215187073,
+            0.5843505859375,
+            0.4905853569507599
+          ]
+        },
+        "attributes": {
+          "POSITION": 0,
+          "NORMAL": 1,
+          "TEXCOORD_0": 2
+        },
+        "material": 0
+      }
+    ],
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "tripo_node_6ad483b1-9b26-4dca-a85d-c9b4b2000d16",
+        "translation": [
+          0.0008086860179901123,
+          0,
+          -1.52587890625e-05
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "name": "Scene",
+        "nodes": [
+          0
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "tripo_mat_6ad483b1-9b26-4dca-a85d-c9b4b2000d16",
+        "normalTexture": {
+          "index": 0
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        }
+      }
+    ],
+    "textures": [
+      {
+        "sampler": 0,
+        "source": 0
+      },
+      {
+        "sampler": 0,
+        "source": 1
+      },
+      {
+        "sampler": 0,
+        "source": 2
+      }
+    ],
+    "images": [
+      {
+        "name": "NormalGL_b36292ed-4c33-4c48-a158-13796f367cb4",
+        "mimeType": "image/jpeg",
+        "bytes": 1551610,
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "sha256": "db9bd2c552933658087ee6e6406cc848239a20efc4c10d38f37866a8327085c2"
+      },
+      {
+        "name": "tripo_image_6ad483b1-9b26-4dca-a85d-c9b4b2000d16_0",
+        "mimeType": "image/jpeg",
+        "bytes": 20130309,
+        "dimensions": [
+          8192,
+          8192
+        ],
+        "sha256": "08677b45227f85fdd263db3656e6ccc9a1cbb87c24053d26b51bf498f93daf71"
+      },
+      {
+        "name": "tripo_image_6ad483b1-9b26-4dca-a85d-c9b4b2000d16_1",
+        "mimeType": "image/jpeg",
+        "bytes": 1713733,
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "sha256": "d813ae22d542c224cc3d1cb3998f1ef45bb263088f893eb469cb0ca6d1494014"
+      }
+    ],
+    "accessorCount": 4,
+    "bufferViewCount": 7,
+    "status": "PASS",
+    "coverage": "Entire file SHA; GLB header and chunk bounds; all bufferView/accessor byte bounds; all position values finite and bounds computed; all triangle indices checked against position count; indexed triangle count; image header dimensions. No image full decode, triangle degeneracy, normals/UV value checks, transforms/assembly alignment, or visual QA."
+  }
+}
