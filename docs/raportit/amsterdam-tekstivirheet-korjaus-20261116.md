@@ -71,3 +71,5 @@ Pino PR 6882:n päälle (haara sk/amsterdam-tekstivirheet-2); KK lukee ennen yhd
 
 Ei korjattu: Yövartion kuvateksti "oikea nimi … lakka lähes musta" (alkuperäistä nimeä ei ole, RM: teos oli alun perin nimetön; KK:n lista ei kata), 1969 "vesi laski" -tarina (kaksi kilpailevaa selitystä: matala vesi vs viemärityömaa) ja siihen sidottu visa.
 Äänitysjono: tarkista.mjs --lisaa lisäsi 4 riviä (Amsterdam-laiva, Yövartio, täkynosto Yövartio, fokusvirta voc-hylky 2). npm test 0 virhettä.
+
+KK 20.32 hionta (samassa PR:ssä): "useita hahmoja" → "kolme hahmoa" (NG289: kaksi miestä ja lapsi); visa-fakta "Nimi Yövartio on peräisin vasta 1700-luvun lopulta" (Rijksmuseum "10 things": nimi ensi kerran asiakirjassa 1797); kuvateksti "oikea nimi" → "teoksella ei alun perin ollut nimeä, nimi tunnetaan asiakirjasta vasta 1700-luvun lopulta" (Rijksmuseum: teos alun perin nimetön). 1969 "vesi laski" jää ennalleen.

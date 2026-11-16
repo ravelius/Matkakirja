@@ -7626,17 +7626,15 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-amsterdamin-yovartio',
       teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan. Vuonna 1715 '
         + 'taulu siirrettiin kaupungintaloon, eikä se mahtunut sille '
-        + 'varatulle seinälle — joten sitä leikattiin joka reunalta, eniten '
-        + 'vasemmalta, mistä katosi useita hahmoja. Palasia ei ole '
+        + 'varatulle seinälle — joten sitä leikattiin joka reunalta, eniten vasemmalta, mistä katosi kolme hahmoa. Palasia ei ole '
         + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, jota poistettiin vuosina '
         + '1946–47 ja 1975–76.',
       kuvat: [
         {
           tiedosto: 'The Night Watch - cropped.jpg',
-          lyhyt: 'Yövartioksi kutsuttiin taulua vasta, kun sen oikea nimi unohtui lakan tummuttua mustaksi.',
-          selite: 'Teoksen oikea nimi on kaartinkapteeni Frans Banning Cocqin '
-            + 'komppania, ja Yövartioksi sitä alettiin kutsua vasta kun lakka '
-            + 'oli tummunut lähes mustaksi.',
+          lyhyt: 'Teos oli alun perin nimetön, ja nimi Yövartio tunnetaan vasta 1700-luvun lopulta.',
+          selite: 'Rijksmuseumin mukaan teoksella ei alun perin ollut nimeä, ja '
+            + 'nimi Yövartio tunnetaan asiakirjasta vasta 1700-luvun lopulta.',
           lahde: 'Rembrandt, Wikimedia Commons (PD)',
         },
         {
