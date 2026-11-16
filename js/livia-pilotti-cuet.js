@@ -241,34 +241,34 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.5
   }
 ]),
-  wien: pilotti("wien", LIVIAN_EUROOPAN_REVISION, "99deb3d702990d1fec29d2e2b4c02cac6b8bdde0f03435dfcd26bc9fa077c03b", [
+  wien: pilotti("wien", LIVIAN_EUROOPAN_REVISION, "ca1ae714405a11cb6735fd19397adf128acef5d5d443aab480c7281bb9baf301", [
   {
     "id": "wien.livia.c1",
-    "ankkuri": "Wieniin johdetaan nyt juomavettä vuoristolähteistä",
-    "esiintyma": 1,
-    "tarkoitus": "selittaa",
-    "voimakkuus": 0.45
-  },
-  {
-    "id": "wien.livia.c2",
-    "ankkuri": "odotin pisaraa nokka auki",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.45
-  },
-  {
-    "id": "wien.livia.c3",
-    "ankkuri": "Kokonainen matka vuorilta asti",
-    "esiintyma": 1,
-    "tarkoitus": "hammastys",
-    "voimakkuus": 0.45
-  },
-  {
-    "id": "wien.livia.c4",
-    "ankkuri": "minä vain ojensin kaulaani",
+    "ankkuri": "Arvaa, mitä Wien teki romahduksen jälkeen",
     "esiintyma": 1,
     "tarkoitus": "miettiva",
     "voimakkuus": 0.4
+  },
+  {
+    "id": "wien.livia.c2",
+    "ankkuri": "Avasi kahvilan",
+    "esiintyma": 1,
+    "tarkoitus": "ilo",
+    "voimakkuus": 0.5
+  },
+  {
+    "id": "wien.livia.c3",
+    "ankkuri": "samana syksynä",
+    "esiintyma": 1,
+    "tarkoitus": "selittaa",
+    "voimakkuus": 0.4
+  },
+  {
+    "id": "wien.livia.c4",
+    "ankkuri": "kahviin luotetaan enemmän kuin pankkeihin",
+    "esiintyma": 1,
+    "tarkoitus": "hammastys",
+    "voimakkuus": 0.45
   }
 ]),
   pariisi: pilotti("pariisi", LIVIAN_EUROOPAN_REVISION, "554d3023d10ac976e8c7fccb814e26d6a1dd77e6cba1a14dfd52e10abbeb8534", [

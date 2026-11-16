@@ -101,14 +101,8 @@ export const FOKUSVIRTA_WIEN = {
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
     /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 272aba9c4904bb61e5462b54ade8fad9e64a627cec32eb8440f785e3a3f45028. */
+    /* Isoisällä yksi kuva (omistaja 12.11.): kahvilakuva (entinen luentakuva2, pörssin uutinen) jää; painokonekuva pois uuden tekstin takia (SK 15.11.2026). */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
-      lyhyt: "Wien, 1873. Kone teki lehteä ilman mielipidettä.",
-      selite: 'Maailmannäyttelyn hallissa mies valvoo painokonetta Rotunden rautapylväiden alla. Kone tekee lehteä ajattelematta sanaakaan; lukijan ajatukset jäävät myöhemmäksi.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/","https://www.technischesmuseum.at/presse/women_at_work","https://www.technischesmuseum.at/ausstellung/women_at_work"],
-    },
-    luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260911-paper2-v1.jpg",
       lyhyt: "Wien, 1873. Lehti pieneni pöydällä, uutinen ei.",
       selite: 'Kahvilan herra taitteli lehteä yhä pienemmäksi, kun kahvi laskettiin hänen eteensä. Pörssin uutinen ei suostunut samaan temppuun.',
@@ -120,9 +114,9 @@ export const FOKUSVIRTA_WIEN = {
      * faktoja: näyttely avattiin 1.5.1873 ja pörssi kaatui kahdeksan
      * päivää myöhemmin, joten isoisä oli Wienissä toukokuussa.
      */
-    paikkarivi: "Wien, heinäkuussa 1873. Koneiden kolinaa; levottomia uutisia.",
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: "Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.",
+    paikkarivi: "Wien, toukokuussa 1873. Koneiden kolinaa; levottomia uutisia.",
+    /* KAANON: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 18.58 "kelpaa"; SK:n luonnos docs/raportit/wien-isoisa-pulu-luonnos-20261115.md, PR 6814). Sanasta sanaan. 243 merkkiä. */
+    teksti: "Maailmannäyttely oli ollut auki kahdeksan päivää, kun poliisi sulki Wienin pörssin. Menin kahvilaan ja tilasin kupin. Tarjoilija kysyi, maksanko heti, koska huomisesta ei tiedä. Maksoin heti. Hän kumarsi syvemmin kuin kenellekään sinä päivänä.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -147,48 +141,40 @@ export const FOKUSVIRTA_WIEN = {
     reaktiot: [
   {
     "id": "wien.r1",
-    "ankkuri": "kone painoi sanomalehteä",
-    "tarkoitus": "hammastyy",
-    "voimakkuus": 0.3,
+    "ankkuri": "poliisi sulki Wienin pörssin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 18.58) sisältöön sidottu kuuntelureaktio."
   },
   {
     "id": "wien.r2",
-    "ankkuri": "kolerapuheet olivat liioittelua",
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.4,
+    "ankkuri": "maksanko heti",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 18.58) sisältöön sidottu kuuntelureaktio."
   },
   {
     "id": "wien.r3",
-    "ankkuri": "aamiaista tarjoillut nainen sairastui",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
+    "ankkuri": "Maksoin heti",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 18.58) sisältöön sidottu kuuntelureaktio."
   },
   {
     "id": "wien.r4",
-    "ankkuri": "tarvitsisiko nainen lääkäriä",
-    "tarkoitus": "myotailee",
+    "ankkuri": "kumarsi syvemmin",
+    "tarkoitus": "huvittuu",
     "voimakkuus": 0.45,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "wien.r5",
-    "ankkuri": "Olin ajatellut vain lähtöäni",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 18.58) sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. [softly] Olin ajatellut vain lähtöäni.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, ÄÄ otto, teksti ilman tageja, 17,03 s; JU vienyt 16.11.2026 11.09), ämpärin täysi osoite kuten Pariisissa ja Lontoossa. */
+    luenta: "[curious] Maailmannäyttely oli ollut auki kahdeksan päivää, kun poliisi sulki Wienin pörssin. Menin kahvilaan ja tilasin kupin. [warmly] Tarjoilija kysyi, maksanko heti, koska huomisesta ei tiedä. Maksoin heti. Hän kumarsi syvemmin kuin kenellekään sinä päivänä.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-wien.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
@@ -200,15 +186,24 @@ export const FOKUSVIRTA_WIEN = {
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
      * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-wien-01-r20260909-euv1-v1.jpg.
      */
+    /*
+     * PULUN KUVA (omistaja 16.11.2026 klo 09.21, KK:n välittämänä; PT): Codexin havainnekuva #2372 (varpunen kahvilan tuolilla ja
+     * kahvikuppi marmoripöydällä); Commonsin valokuva (Geolina163, CC BY-SA 4.0) pois. Lähde: Codexin commit a6e95281db
+     * (claude/postilaatikko), _review-pulu-wien-cafe-landtmann-20261116/v2/pulu-wien-cafe-landtmann-v2.jpg, SHA256 5d5bea34…
+     * (kopio /Users/Shared/Claude/pulu-kuvaesikatselut/wien-cafe-landtmann-codex-v2.jpg; neliö 1254 px; rajaus = koko neliö ympyrään,
+     * ei `rajaus`-kenttää). Kuva viedään ämpäriin osoitteeseen alla ennen yhdistämistä. Lähderivi: Matkakirjan havainnekuva.
+     * `lyhyt` ja `selite` tehty kuvan mukaan (varpunen ja kahvi); fakta Café Landtmann, avattu 1.10.1873 (docs/raportit/
+     * shakki-wien-1873-faktat-20261012.md rivi 28). SK:n luonnos, KK tarkistaa.
+     */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-wien-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Wien: kahvi saapui, vaikka uutinen ei parantunut.',
-        selite: 'Wieniläisen kahvilan terassilla tarjoilija laskee kupin samaan pöytään sanomalehden kanssa. En tiedä, mitä sivulla luki, mutta kahvin tuoman pienen tauon osasin kuvata.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-wien-cafe-landtmann-codex-v2.jpg',
+        lyhyt: 'Varpunen kahvilan tuolilla Wienissä.',
+        selite: 'Varpunen istuu kahvilan tuolin selkänojalla, ja marmoripöydällä on kahvikuppi. Wienin Café Landtmann avattiin 1.10.1873.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://www.wien.info/en/dine-drink/coffeehouses/top-traditional-coffee-houses-in-vienna-361666',
-          'https://www.wien.gv.at/en/leisure/viennese-coffee-culture',
+          'https://www.landtmann.at/en/the-landtmann/the-landtmann-story.html',
+          'https://en.wikipedia.org/wiki/Caf%C3%A9_Landtmann',
         ],
       },
     ],
@@ -248,10 +243,10 @@ export const FOKUSVIRTA_WIEN = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Wieniin johdetaan nyt juomavettä vuoristolähteistä. Kahvilan pihalla löysin tiputtavan hanan ja odotin pisaraa nokka auki. Kokonainen matka vuorilta asti, ja minä vain ojensin kaulaani."],
+    /* KUPLA: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 18.58 "kelpaa"). Sanasta sanaan. 156 merkkiä. */
+    kommentti: ["Arvaa, mitä Wien teki romahduksen jälkeen? Avasi kahvilan! Café Landtmann aloitti Ringillä samana syksynä. Täällä kahviin luotetaan enemmän kuin pankkeihin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
-    tunne: { tunne: 'lammin', voimakkuus: 0.55 },
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
