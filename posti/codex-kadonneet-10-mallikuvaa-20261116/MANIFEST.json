@@ -1,0 +1,2569 @@
+{
+  "status": "OWNER_COMPARISON_ONLY",
+  "items": [
+    {
+      "index": 1,
+      "key": "london-old-st-pauls-cathedral-historic",
+      "name": "Old St Paul’s — Lontoo",
+      "status": "WARN",
+      "confidence": "osin arvio",
+      "note": "Päämuoto tunnistettava. Yläikkunat ja piharakennus poikkeavat lähteestä.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-old-st-pauls-cathedral-historic/model-image-original.png",
+      "modelSHA256": "41d2295063fd542f473b8f53ba24340c77cbf9bd31c6eb8f8907845cf5085578",
+      "preview": "01-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg",
+      "sourceSHA256": "4385d1fc79f4a98cfab0df0b76fe8c6e17ee3e3779afa2386e5a106569087670",
+      "sourceMetadata": {
+        "key": "london-old-st-pauls-cathedral-historic",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls",
+        "reference_candidates": [
+          {
+            "id": "S1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S1.jpg",
+            "sha256": "a8553ac031e4ce3e4e2bb7786bd6f09f9195e2cd518d4f2cb9039b3231cf768a",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St._Paul%27s._Ground_plan_(State_1).jpg",
+            "view": "ground plan",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "S2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S2.jpg",
+            "sha256": "c167969d19e438e90e1c5afa0b9172de6e93a65b840c2bb746f6d64fc8b99b19",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St._Paul%27s._West_front_(State_2).jpg",
+            "view": "west/front oblique",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "S3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S3.jpg",
+            "sha256": "3bb300b8448d7f91232314f7a4f8e3337307978318a36ea749b9dd946bfacc9b",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St_Paul%27s._East_end_(State_2)_2.jpg",
+            "view": "east/rear oblique",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "S4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S4.jpg",
+            "sha256": "380b8a0489d96b52df67c52e1a50caa6507e89a963637c5bb74cebda0f12da63",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St_Paul%27s._North_side_(State_1).jpg",
+            "view": "north elevation / labeled A SEPTENTRIONE",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "S5",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg",
+            "sha256": "4385d1fc79f4a98cfab0df0b76fe8c6e17ee3e3779afa2386e5a106569087670",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St_Paul%27s._South_side_(State_1).jpg",
+            "view": "south elevation / labeled A MERIDIE",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          }
+        ],
+        "original_metadata": {
+          "schemaVersion": 1,
+          "checked_at": "2026-11-16",
+          "key": "london-old-st-pauls-cathedral-historic",
+          "name": "Old St Paul’s Cathedral, London",
+          "era": "Hollar later pre-1666 state: classical west portico and square central tower WITHOUT the medieval tall spire. Exact snapshot year not claimed.",
+          "status": "ready",
+          "reason": "Coherent Hollar series supplies all four exterior orientations and scaled ground plan, adequate for major masses/roof silhouette/large openings in a preparation sheet.",
+          "coverage": {
+            "front": "S2 west",
+            "back": "S3 east",
+            "left": "S4 north",
+            "right": "S5 south",
+            "top_or_measured_plan": "S1 graphic-scale plan"
+          },
+          "geometry": [
+            "Long cruciform church: nave, projecting transepts, choir, massive square crossing tower.",
+            "Do not add the lost medieval spire: all selected elevation prints consistently show the later truncated tower.",
+            "West: classical colonnaded portico below gabled nave, paired small turret peaks. East: tall Gothic gable with very large rose/tracery opening.",
+            "North and south elevations differ in annexes and treatment; trace them independently.",
+            "Steep longitudinal roofs over nave/choir, transverse roofs at transepts, lower aisle roofs; Gothic choir has pinnacled buttresses.",
+            "S1 establishes footprint and side chapter-house/cloister relation. Upper surfaces invisible in prints may be simplified explicitly, not labeled surveyed."
+          ],
+          "gaps": [
+            "Ready means reference eligibility for proportion-based major-volume preparation, not a metric-accurate reconstruction or owner acceptance.",
+            "Exact print date is unspecified in Commons metadata; preserve Hollar attribution and depicted-phase interpretation.",
+            "All views are one artist/collection series, not independent surveys. Graphic scale has not been cross-checked with a second dimensional source."
+          ],
+          "refs": [
+            {
+              "id": "S1",
+              "title": "File:Wenceslas Hollar - St. Paul's. Ground plan (State 1).jpg",
+              "creator": "Wenceslaus Hollar",
+              "date": "Unknown date (author lived 1607-1677)",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St._Paul%27s._Ground_plan_(State_1).jpg",
+              "institution_or_origin": "Artwork from  University of Toronto Wenceslaus Hollar Digital Collection  \n Scanned by University of Toronto \n High-resolution version extracted using custom tool by  User:Dcoetzee",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Wenceslas_Hollar_-_St._Paul%27s._Ground_plan_%28State_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Wenceslas_Hollar_-_St._Paul%27s._Ground_plan_%28State_1%29.jpg/1920px-Wenceslas_Hollar_-_St._Paul%27s._Ground_plan_%28State_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S1.jpg",
+              "sha256": "a8553ac031e4ce3e4e2bb7786bd6f09f9195e2cd518d4f2cb9039b3231cf768a",
+              "view": "ground plan",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Cruciform cathedral plan with long nave, crossing, choir and transepts. Octagonal chapter-house/cloister group on one side. Graphic scale visible but no absolute building dimension independently corroborated.",
+              "downloaded_dimensions_px": [
+                1920,
+                1392
+              ]
+            },
+            {
+              "id": "S2",
+              "title": "File:Wenceslas Hollar - St. Paul's. West front (State 2).jpg",
+              "creator": "Wenceslaus Hollar",
+              "date": "Unknown date (author lived 1607-1677)",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St._Paul%27s._West_front_(State_2).jpg",
+              "institution_or_origin": "Artwork from  University of Toronto Wenceslaus Hollar Digital Collection  \n Scanned by University of Toronto \n High-resolution version extracted using custom tool by  User:Dcoetzee",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Wenceslas_Hollar_-_St._Paul%27s._West_front_%28State_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Wenceslas_Hollar_-_St._Paul%27s._West_front_%28State_2%29.jpg/1920px-Wenceslas_Hollar_-_St._Paul%27s._West_front_%28State_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S2.jpg",
+              "sha256": "c167969d19e438e90e1c5afa0b9172de6e93a65b840c2bb746f6d64fc8b99b19",
+              "view": "west/front oblique",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Classical columned west portico below steep nave gable, paired small western turrets, and tall square crossing tower without tall spire. Side roofs and low annex partly visible. Coherent intact later pre-fire state.",
+              "downloaded_dimensions_px": [
+                1920,
+                1459
+              ]
+            },
+            {
+              "id": "S3",
+              "title": "File:Wenceslas Hollar - St Paul's. East end (State 2) 2.jpg",
+              "creator": "Wenceslaus Hollar",
+              "date": "Unknown date (author lived 1607-1677)",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St_Paul%27s._East_end_(State_2)_2.jpg",
+              "institution_or_origin": "Artwork from  University of Toronto Wenceslaus Hollar Digital Collection  \n Scanned by University of Toronto \n High-resolution version extracted using custom tool by  User:Dcoetzee",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Wenceslas_Hollar_-_St_Paul%27s._East_end_%28State_2%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Wenceslas_Hollar_-_St_Paul%27s._East_end_%28State_2%29_2.jpg/1920px-Wenceslas_Hollar_-_St_Paul%27s._East_end_%28State_2%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S3.jpg",
+              "sha256": "3bb300b8448d7f91232314f7a4f8e3337307978318a36ea749b9dd946bfacc9b",
+              "view": "east/rear oblique",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Gothic east choir gable has large circular tracery window above tall pointed windows; pinnacled buttresses and choir flank visible. Square crossing tower lacks tall spire.",
+              "downloaded_dimensions_px": [
+                1920,
+                1549
+              ]
+            },
+            {
+              "id": "S4",
+              "title": "File:Wenceslas Hollar - St Paul's. North side (State 1).jpg",
+              "creator": "Wenceslaus Hollar",
+              "date": "Unknown date (author lived 1607-1677)",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St_Paul%27s._North_side_(State_1).jpg",
+              "institution_or_origin": "Artwork from  University of Toronto Wenceslaus Hollar Digital Collection  \n Scanned by University of Toronto \n High-resolution version extracted using custom tool by  User:Dcoetzee",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Wenceslas_Hollar_-_St_Paul%27s._North_side_%28State_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Wenceslas_Hollar_-_St_Paul%27s._North_side_%28State_1%29.jpg/1920px-Wenceslas_Hollar_-_St_Paul%27s._North_side_%28State_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S4.jpg",
+              "sha256": "380b8a0489d96b52df67c52e1a50caa6507e89a963637c5bb74cebda0f12da63",
+              "view": "north elevation / labeled A SEPTENTRIONE",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Long nave and choir with steep longitudinal roofs; crossing tower square and open-windowed at top, no spire; transverse gable with circular opening, tall entrance beneath. West end and east end identifiable.",
+              "downloaded_dimensions_px": [
+                1920,
+                1049
+              ]
+            },
+            {
+              "id": "S5",
+              "title": "File:Wenceslas Hollar - St Paul's. South side (State 1).jpg",
+              "creator": "Wenceslaus Hollar",
+              "date": "Unknown date (author lived 1607-1677)",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_St_Paul%27s._South_side_(State_1).jpg",
+              "institution_or_origin": "Artwork from  University of Toronto Wenceslaus Hollar Digital Collection  \n Scanned by University of Toronto \n High-resolution version extracted using custom tool by  User:Dcoetzee",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Wenceslas_Hollar_-_St_Paul%27s._South_side_%28State_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Wenceslas_Hollar_-_St_Paul%27s._South_side_%28State_1%29.jpg/1920px-Wenceslas_Hollar_-_St_Paul%27s._South_side_%28State_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg",
+              "sha256": "4385d1fc79f4a98cfab0df0b76fe8c6e17ee3e3779afa2386e5a106569087670",
+              "view": "south elevation / labeled A MERIDIE",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Opposite long side confirms asymmetry: Gothic choir buttresses, nave treatment and low ancillary range. Do not mirror north-side annexes; common main silhouette agrees with S2/S3/S4.",
+              "downloaded_dimensions_px": [
+                1920,
+                1071
+              ]
+            }
+          ],
+          "local_images": 5,
+          "status_scope": "Source modelling eligibility for major-mass preparation only; no owner approval, generation, production or game acceptance.",
+          "dimensional_policy": "Do not assert exact physical dimensions: no metric number independently corroborated twice. Printed scale is ratio evidence until cross-checked.",
+          "local_context_check": {
+            "paths": [
+              "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/H-LAHTEET*.md",
+              "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/H-PAIKAT.md"
+            ],
+            "result": "Searched assigned building names; no matching existing section found."
+          },
+          "download_method": "Official Commons API imageinfo url/extmetadata/size; returned thumburl1600; research User-Agent. No proxy/browser.",
+          "source_metadata": "selected-api.json and selected.json retain original API records; discovery.json may include metadata-only rejected PDF hits, no PDFs downloaded."
+        }
+      },
+      "qa": {
+        "key": "london-old-st-pauls-cathedral-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-old-st-pauls-cathedral-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-old-st-pauls-cathedral-historic/sources-used.json",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/QA-contact.jpg",
+        "references_inspected_in_contact": [
+          {
+            "id": "S1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S1.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "S2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S2.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "S3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S3.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "S4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S4.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "S5",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg",
+            "supplied_to_generator": true
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "41d2295063fd542f473b8f53ba24340c77cbf9bd31c6eb8f8907845cf5085578"
+        },
+        "status": "WARN",
+        "confidence_label": "osin arvio",
+        "historical_phase": "Consistent with selected Hollar later pre-1666 state: classical west portico, square crossing tower without medieval tall spire.",
+        "main_shape": "Long cruciform body, nave/choir roofs, projecting transept, portico and crossing tower agree in broad form with S1-S5. No serious main-cathedral silhouette error identified.",
+        "issues": [
+          {
+            "severity": "moderate",
+            "region": "Visible south nave clerestory, above aisle roof",
+            "image_bbox_normalized": [
+              0.32,
+              0.49,
+              0.59,
+              0.63
+            ],
+            "finding": "Generated upper nave windows are circular oculi; S5 shows small upright round-headed windows. This is a visible source disagreement, not simply an undocumented hidden detail.",
+            "source_refs": [
+              "S4",
+              "S5"
+            ]
+          },
+          {
+            "severity": "moderate",
+            "region": "South nave ancillary range and walled courtyard before transept",
+            "image_bbox_normalized": [
+              0.3,
+              0.69,
+              0.7,
+              0.98
+            ],
+            "finding": "Small roofed annex is freely regularized and S1 octagonal chapter-house/cloister relation is not represented reliably; image must not imply accurate complete precinct reconstruction.",
+            "source_refs": [
+              "S1",
+              "S2",
+              "S5"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Main cathedral mass and selected historical phase",
+            "Square tower, west portico, Gothic choir division"
+          ],
+          "osin_arvio": [
+            "Nave/choir relative dimensions",
+            "Transept and nave bay spacing"
+          ],
+          "arvio": [
+            "Hidden east end/rose-window treatment and north side",
+            "South ancillary precinct, roofing and small ornament"
+          ]
+        },
+        "framing_3d": "Complete isolated church; usable oblique with visible roof and south/west faces. East facade and far side remain hidden; those are explicitly inferred, not validated by this image.",
+        "review_disposition": "May appear in KK comparison as WARN with nave-window and chapter-house/cloister mismatch explicitly beside the image; no owner approval or Tripo readiness inferred.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg"
+        ]
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 2,
+      "key": "london-crystal-palace-historic",
+      "name": "Crystal Palace — Hyde Park 1851",
+      "status": "WARN",
+      "confidence": "osin arvio",
+      "note": "Päämuoto tuettu. Piilojulkisivu ja tarkka moduulijako tulkittuja.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-crystal-palace-historic/model-image-original.png",
+      "modelSHA256": "911bd338676f3ce5e7a7d6619fb069ac3ba20136a388c4a52de5cc5b2e8ffaa2",
+      "preview": "02-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C2.jpg",
+      "sourceSHA256": "8ef13a8589a02055bed23d80971f9f7af0f8eec3b5e01a4d32a17e7e1908cfe8",
+      "sourceMetadata": {
+        "key": "london-crystal-palace-historic",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal",
+        "reference_candidates": [
+          {
+            "id": "C1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C1.jpg",
+            "sha256": "731170689485a79456d2dc747d0414acffea68b4ac6fde26c9101f6f5e280e2a",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Bird%27s-Eye_View_of_the_Crystal_Palace,_London,_1851.jpg",
+            "view": "elevated retrospective overview",
+            "qa_result": "pass-context-only",
+            "supplied_to_generator": true,
+            "role": "retrospective supporting silhouette only"
+          },
+          {
+            "id": "C2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C2.jpg",
+            "sha256": "8ef13a8589a02055bed23d80971f9f7af0f8eec3b5e01a4d32a17e7e1908cfe8",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg",
+            "view": "northeast exterior oblique",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "C3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C3.jpg",
+            "sha256": "cdaae41bab8ca6c6be261e5f81e77db9b10e5643684af4fb2f1cca6961772cb5",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Great_Exhibition,_NW_corner_of_building,_HF_Talbot,_1851.jpg",
+            "view": "northwest corner historical photograph",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "C4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C4.jpg",
+            "sha256": "7b6ccf10649a68e0ffa0dc377e583a000428af8171ab7857da1f022b64f109ee",
+            "source_page": "https://commons.wikimedia.org/wiki/File:The_Crystal_Palace_page_34.jpg",
+            "view": "ground plan with feet scale",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          }
+        ],
+        "original_metadata": {
+          "schemaVersion": 1,
+          "checked_at": "2026-11-16",
+          "key": "london-crystal-palace-historic",
+          "name": "Crystal Palace, Hyde Park 1851",
+          "era": "Original Great Exhibition building in Hyde Park,1851. EXCLUDE later Sydenham rebuild, multiple enlarged transepts, water towers and terraces.",
+          "status": "ready",
+          "reason": "Contemporary plan plus contemporary NW photograph and NE exterior illustration provide coherent original footprint, bay rhythm and roof silhouette; later bird-view is support only.",
+          "coverage": {
+            "front": "North long elevation: C2 NE and C3 NW obliques",
+            "back": "South long elevation not independently established; do not claim complete rear facade",
+            "left": "NW end/side junction C3",
+            "right": "NE end/side junction C2",
+            "top_or_measured_plan": "C4 scaled1851 plan + C1 retrospective overview, compass viewpoint of C1 unverified"
+          },
+          "geometry": [
+            "Very long low rectangular iron-and-glass hall, stepped subsidiary side roofs, one high transverse barrel-vaulted center.",
+            "Keep original HydePark footprint and singular transept form: no Sydenham giant multiple barrel-vault silhouette.",
+            "Repetitive modular facade bays and transparent/lightweight iron framing dominate; model glazed openings rather than an opaque stone palace.",
+            "C4 defines long main-axis aisles, cross-axis and entrance projections; use ratios from plan.",
+            "C3 checks actual corner bay geometry; C2 illustrates full major masses. C1 is retrospective, subordinate to contemporaneous evidence.",
+            "A preparation sheet may simplify glazing and repeated bay counts explicitly; hidden service details remain inference."
+          ],
+          "gaps": [
+            "Ready only for source-based major-volume preparation, no owner approval or 3D generation.",
+            "No exact overall lengths/heights asserted without two independent dimensional sources.",
+            "C2 filename says1854, API dates1852; depict1851 clearly but publication date remains source conflict.",
+            "C1 published1877, so label retrospective. Roof microdetails and every unseen service elevation are not proved.",
+            "NE/NW views cover opposite ends of the same north side, not opposite long facades. South facade remains an explicitly interpreted preparation-sheet surface."
+          ],
+          "refs": [
+            {
+              "id": "C1",
+              "title": "File:Bird's-Eye View of the Crystal Palace, London, 1851.jpg",
+              "creator": "Frank Norton, Editor",
+              "date": "1877",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Bird%27s-Eye_View_of_the_Crystal_Palace,_London,_1851.jpg",
+              "institution_or_origin": "https://archive.org/details/frankleslieshis00lesl/",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Bird%27s-Eye_View_of_the_Crystal_Palace%2C_London%2C_1851.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Bird%27s-Eye_View_of_the_Crystal_Palace%2C_London%2C_1851.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C1.jpg",
+              "sha256": "731170689485a79456d2dc747d0414acffea68b4ac6fde26c9101f6f5e280e2a",
+              "view": "elevated retrospective overview",
+              "visual_qa": true,
+              "qa_result": "pass-context-only",
+              "qa_note": "Hyde Park form: a very long low rectangular glass hall with single raised transverse barrel-vault center and park around it. Later 1877 engraving of 1851; do not treat as photograph or measured survey.",
+              "downloaded_dimensions_px": [
+                1736,
+                1362
+              ]
+            },
+            {
+              "id": "C2",
+              "title": "File:Crystal Palace from the northeast from Dickinson's Comprehensive Pictures of the Great Exhibition of 1851. 1854.jpg",
+              "creator": "Dickinson Brothers",
+              "date": "1852",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg",
+              "institution_or_origin": "Dickinsons' comprehensive pictures of the Great Exhibition of 1851",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg/1920px-Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C2.jpg",
+              "sha256": "8ef13a8589a02055bed23d80971f9f7af0f8eec3b5e01a4d32a17e7e1908cfe8",
+              "view": "northeast exterior oblique",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Intact original Hyde Park hall: repetitive iron/glass bays, stepped lower side ranges, long main hall and one high rounded transverse roof. Trees and perspective partly occlude base; color is illustration evidence only.",
+              "downloaded_dimensions_px": [
+                1920,
+                1038
+              ]
+            },
+            {
+              "id": "C3",
+              "title": "File:Great Exhibition, NW corner of building, HF Talbot, 1851.jpg",
+              "creator": "William Henry Fox Talbot",
+              "date": "1851",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Great_Exhibition,_NW_corner_of_building,_HF_Talbot,_1851.jpg",
+              "institution_or_origin": "Bonhams",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Great_Exhibition%2C_NW_corner_of_building%2C_HF_Talbot%2C_1851.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Great_Exhibition%2C_NW_corner_of_building%2C_HF_Talbot%2C_1851.jpg/1920px-Great_Exhibition%2C_NW_corner_of_building%2C_HF_Talbot%2C_1851.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C3.jpg",
+              "sha256": "cdaae41bab8ca6c6be261e5f81e77db9b10e5643684af4fb2f1cca6961772cb5",
+              "view": "northwest corner historical photograph",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Talbot calotype confirms repeated arched iron/glass wall bays and shallow stepped roof mass at original Hyde Park hall; corner and adjacent long side visible. Not the rebuilt Sydenham palace.",
+              "downloaded_dimensions_px": [
+                1920,
+                1342
+              ]
+            },
+            {
+              "id": "C4",
+              "title": "File:The Crystal Palace page 34.jpg",
+              "creator": "Peter Berlyn, and Charles Fowler, Jnr. Engravings by George Measom (1818-1901).",
+              "date": "1851",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:The_Crystal_Palace_page_34.jpg",
+              "institution_or_origin": "The Crystal Palace: Its Architectural History and Constructive Marvels.  https://archive.org/details/crystalpalaceits00berl",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Crystal_Palace_page_34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/The_Crystal_Palace_page_34.jpg/1920px-The_Crystal_Palace_page_34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C4.jpg",
+              "sha256": "7b6ccf10649a68e0ffa0dc377e583a000428af8171ab7857da1f022b64f109ee",
+              "view": "ground plan with feet scale",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "1851 plan shows long rectangular footprint, central cross-axis, projecting entrance, internal long aisles/courts and perimeter rhythm. Printed scale in feet; relative proportions usable without asserting an exact metric dimension.",
+              "downloaded_dimensions_px": [
+                1920,
+                668
+              ]
+            }
+          ],
+          "local_images": 4,
+          "status_scope": "Source modelling eligibility for major-mass preparation only; no owner approval, generation, production or game acceptance.",
+          "dimensional_policy": "Do not assert exact physical dimensions: no metric number independently corroborated twice. Printed scale is ratio evidence until cross-checked.",
+          "local_context_check": {
+            "paths": [
+              "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/H-LAHTEET*.md",
+              "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/H-PAIKAT.md"
+            ],
+            "result": "Searched assigned building names; no matching existing section found."
+          },
+          "download_method": "Official Commons API imageinfo url/extmetadata/size; returned thumburl1600; research User-Agent. No proxy/browser.",
+          "source_metadata": "selected-api.json and selected.json retain original API records; discovery.json may include metadata-only rejected PDF hits, no PDFs downloaded."
+        }
+      },
+      "qa": {
+        "key": "london-crystal-palace-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-crystal-palace-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-crystal-palace-historic/sources-used.json",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/QA-contact.jpg",
+        "references_inspected_in_contact": [
+          {
+            "id": "C1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C1.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "C2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C2.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "C3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C3.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "C4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C4.jpg",
+            "supplied_to_generator": true
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "911bd338676f3ce5e7a7d6619fb069ac3ba20136a388c4a52de5cc5b2e8ffaa2"
+        },
+        "status": "WARN",
+        "confidence_label": "osin arvio",
+        "historical_phase": "Matches original Hyde Park 1851 phase; no Sydenham multiple transepts, water towers or terraces.",
+        "main_shape": "Very long low rectangular glass hall, stepped tiers and one transverse high barrel-vault centre agree with C2-C4 and subordinate retrospective C1. No serious principal-mass contradiction identified.",
+        "issues": [
+          {
+            "severity": "minor",
+            "region": "Roof module pattern, repeated facade bays and centre entrance",
+            "image_bbox_normalized": [
+              0.02,
+              0.15,
+              0.99,
+              0.84
+            ],
+            "finding": "The image is a regularized reconstruction: exact bay counts, roof microprofiles, centre entrance details and back elevation are not individually established. Keep these as osin arvio/arvio rather than verified exact geometry.",
+            "source_refs": [
+              "C1",
+              "C2",
+              "C3",
+              "C4"
+            ]
+          },
+          {
+            "severity": "minor",
+            "region": "Far right end / canvas edge",
+            "image_bbox_normalized": [
+              0.97,
+              0.27,
+              1.0,
+              0.48
+            ],
+            "finding": "Whole silhouette is present but right margin is narrow; avoid any automatic additional crop before a future 3D input review.",
+            "source_refs": []
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "1851 Hyde Park major form and singular transept",
+            "Long modular iron/glass body and stepped roof masses"
+          ],
+          "osin_arvio": [
+            "Exact relative dimensions and glazing/bay counts",
+            "Central entrance decoration and roof module layout"
+          ],
+          "arvio": [
+            "Hidden south elevation and service details",
+            "Material colour and reflection"
+          ]
+        },
+        "framing_3d": "Whole building isolated in one image; useful long-side/end/roof coverage. Extreme elongated form means small details are tiny; opposite long elevation is hidden.",
+        "review_disposition": "May appear as WARN in KK comparison with regularized bays and unseen south side labeled; no main-shape rejection indicated.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C4.jpg"
+        ]
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 3,
+      "key": "amsterdam-paleis-voor-volksvlijt-historic",
+      "name": "Paleis voor Volksvlijt — Amsterdam",
+      "status": "WARN",
+      "confidence": "osin arvio",
+      "note": "Pääpalatsi ja kupoli tuettu. Pienet yksityiskohdat tulkittuja.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/amsterdam-paleis-voor-volksvlijt-historic/model-image-original.png",
+      "modelSHA256": "4fcd73077d3716778a6eba6826673514a970429fc6baae2fb2826d268e0d26a5",
+      "preview": "03-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V3.jpg",
+      "sourceSHA256": "aec10d4a7bd76bc5cb25d30a4dc3e1b84f2e9a6b9f20ac32b0e7901ee78e3daf",
+      "sourceMetadata": {
+        "key": "amsterdam-paleis-voor-volksvlijt-historic",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt",
+        "reference_candidates": [
+          {
+            "id": "V1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V1.jpg",
+            "sha256": "755f575a111cbaf0295104575dc9a986132f6051ddf0a3844987b121c661542c",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Emrik_en_Binger_(1830-1916),_Afb_KOKA00328000001.jpg",
+            "view": "contextual historic-map overlay",
+            "qa_result": "context-only",
+            "supplied_to_generator": false,
+            "role": "context only; inspected; not passed to generator"
+          },
+          {
+            "id": "V2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V2.jpg",
+            "sha256": "5eeb078aea2fb5e665df2dd93f08a8268a8edb3725594bd1d7fb4dc7ad56270c",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Het_Paleis_voor_Volksvlijt,_Frederiksplein_56,_gezien_vanaf_het_Westeinde.jpg",
+            "view": "Westeinde oblique exterior photograph",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "V3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V3.jpg",
+            "sha256": "aec10d4a7bd76bc5cb25d30a4dc3e1b84f2e9a6b9f20ac32b0e7901ee78e3daf",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Het_Paleis_voor_Volksvlijt,_Frederiksplein_56,_gezien_vanuit_de_tuin.jpg",
+            "view": "garden-side exterior photograph",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "V4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V4.jpg",
+            "sha256": "39c0b7fc817e72d11ac9e11dc67e9d783c1a0cb77335409138a586fb30c51472",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Paleis_voor_Volksvlijt_Amsterdam_NL_1.jpg",
+            "view": "architect elevation + ground plan",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          }
+        ],
+        "original_metadata": {
+          "schemaVersion": 1,
+          "checked_at": "2026-11-16",
+          "key": "amsterdam-paleis-voor-volksvlijt-historic",
+          "name": "Paleis voor Volksvlijt, Amsterdam",
+          "era": "Intact main palace, approximately late nineteenth century; distinguish main iron/glass hall from later surrounding arcades and fire ruins.",
+          "status": "ready",
+          "reason": "Architect ground plan/elevation and two complementary historical exterior photographs agree on main hall, central dome, stepped roofs and entrance forms.",
+          "coverage": {
+            "front": "V2 Westeinde oblique; V4 architect elevation",
+            "back": "V3 garden-side long facade",
+            "left": "V2 visible side/end and V4 footprint",
+            "right": "footprint V4; unseen exact openings remain interpretation",
+            "top_or_plan": "V4 architect plan, visible roofs V2/V3"
+          },
+          "geometry": [
+            "Long rectangular iron/glass exhibition body, very high central cylindrical drum/dome and top statue.",
+            "Central cross-axis/projection and decorated arched end/front gables; lower side roofs step down from main nave.",
+            "Garden-side portal and central dome align; do not merge foreground bandstand into building.",
+            "V4 is the building plan; V1 old-city map overlay is context only.",
+            "Prepare main-palace mass alone unless surrounding arcade scope explicitly selected; no hidden facade should be presented as independently photographed."
+          ],
+          "gaps": [
+            "Ready only for reference-based preparation of main palace; peripheral later arcades not fully sourced.",
+            "V2/V3 date ranges differ slightly and are approximate; exact snapshot year not fixed.",
+            "V4 scale/absolute dimensions not cross-checked with independent source."
+          ],
+          "context": [],
+          "refs": [
+            {
+              "id": "V1",
+              "title": "File:Emrik en Binger (1830-1916), Afb KOKA00328000001.jpg",
+              "creator": "Emrik en Binger (1830-1916)",
+              "source_date": "circa 1863",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Emrik_en_Binger_(1830-1916),_Afb_KOKA00328000001.jpg",
+              "origin": "http://beeldbank.amsterdam.nl/afbeelding/KOKA00328000001  \n \n+ \n- \n70% \n \nLeaflet",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Emrik_en_Binger_%281830-1916%29%2C_Afb_KOKA00328000001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Emrik_en_Binger_%281830-1916%29%2C_Afb_KOKA00328000001.jpg/1920px-Emrik_en_Binger_%281830-1916%29%2C_Afb_KOKA00328000001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V1.jpg",
+              "sha256": "755f575a111cbaf0295104575dc9a986132f6051ddf0a3844987b121c661542c",
+              "view": "contextual historic-map overlay",
+              "visual_qa": true,
+              "qa_result": "context-only",
+              "qa_note": "Map of area outside former city gate with later palace footprint overlaid. It is not a building floor plan and cannot set roof or final footprint dimensions.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                1920,
+                2543
+              ]
+            },
+            {
+              "id": "V2",
+              "title": "File:Het Paleis voor Volksvlijt, Frederiksplein 56, gezien vanaf het Westeinde.jpg",
+              "creator": "Andries Jager",
+              "source_date": "circa 1875",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Het_Paleis_voor_Volksvlijt,_Frederiksplein_56,_gezien_vanaf_het_Westeinde.jpg",
+              "origin": "http://beeldbank.amsterdam.nl/afbeelding/010005000730",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Het_Paleis_voor_Volksvlijt%2C_Frederiksplein_56%2C_gezien_vanaf_het_Westeinde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Het_Paleis_voor_Volksvlijt%2C_Frederiksplein_56%2C_gezien_vanaf_het_Westeinde.jpg/1920px-Het_Paleis_voor_Volksvlijt%2C_Frederiksplein_56%2C_gezien_vanaf_het_Westeinde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V2.jpg",
+              "sha256": "5eeb078aea2fb5e665df2dd93f08a8268a8edb3725594bd1d7fb4dc7ad56270c",
+              "view": "Westeinde oblique exterior photograph",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Intact main glass/iron palace with high central drum/dome and statue, long arched halls, lower side roofs and decorated end gables. Trees obscure lower wall; later shopping arcade is not the main hall.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                1920,
+                1252
+              ]
+            },
+            {
+              "id": "V3",
+              "title": "File:Het Paleis voor Volksvlijt, Frederiksplein 56, gezien vanuit de tuin.jpg",
+              "creator": "Andries Jager",
+              "source_date": "circa 1880",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Het_Paleis_voor_Volksvlijt,_Frederiksplein_56,_gezien_vanuit_de_tuin.jpg",
+              "origin": "http://beeldbank.amsterdam.nl/afbeelding/010005001723",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Het_Paleis_voor_Volksvlijt%2C_Frederiksplein_56%2C_gezien_vanuit_de_tuin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Het_Paleis_voor_Volksvlijt%2C_Frederiksplein_56%2C_gezien_vanuit_de_tuin.jpg/1920px-Het_Paleis_voor_Volksvlijt%2C_Frederiksplein_56%2C_gezien_vanuit_de_tuin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V3.jpg",
+              "sha256": "aec10d4a7bd76bc5cb25d30a4dc3e1b84f2e9a6b9f20ac32b0e7901ee78e3daf",
+              "view": "garden-side exterior photograph",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Garden-facing long elevation with central round-arched portal under dome, low stepped side roofs and elongated glazing. Foreground bandstand is separate object, not entrance structure to fuse into model.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                1920,
+                1271
+              ]
+            },
+            {
+              "id": "V4",
+              "title": "File:Paleis voor Volksvlijt Amsterdam NL 1.jpg",
+              "creator": "Cornelis Outshoorn (1812-1875)",
+              "source_date": "circa 1866",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Paleis_voor_Volksvlijt_Amsterdam_NL_1.jpg",
+              "origin": "http://www.library.tudelft.nl/tresor/books/Architectuur/De_Opmerker/dvd1/jrg01_02/mm0_0009.jpg",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Paleis_voor_Volksvlijt_Amsterdam_NL_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Paleis_voor_Volksvlijt_Amsterdam_NL_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V4.jpg",
+              "sha256": "39c0b7fc817e72d11ac9e11dc67e9d783c1a0cb77335409138a586fb30c51472",
+              "view": "architect elevation + ground plan",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Architect plate shows long symmetrical glazed elevation and a rectangular hall footprint with central dome/cross-axis, projecting entrances and subsidiary rooms. Main outline agrees with photographs; scale not independently verified.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                628,
+                707
+              ]
+            }
+          ],
+          "local_images": 4,
+          "status_scope": "Source eligibility for main-mass preparation only. No owner approval, generation, Tripo, production or game acceptance.",
+          "dimensional_policy": "No exact physical dimensions or exact snapshot dates claimed without independent corroboration. Use approximate wording and relative ratios; preserve catalogued source dates as attributed metadata.",
+          "download_method": "Official Commons API imageinfo, returned raster thumbnail URLs, research User-Agent; bounded normal retry after transient429. Remaining429 retained, no proxy/403 bypass.",
+          "visual_qa_summary": "All locally downloaded rasters inspected via per-building contact sheets; Industrie I4 additionally inspected individually. Blocked refs explicitly not inspected."
+        }
+      },
+      "qa": {
+        "key": "amsterdam-paleis-voor-volksvlijt-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/amsterdam-paleis-voor-volksvlijt-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/amsterdam-paleis-voor-volksvlijt-historic/sources-used.json",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/QA-contact.jpg",
+        "references_inspected_in_contact": [
+          {
+            "id": "V1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V1.jpg",
+            "supplied_to_generator": false
+          },
+          {
+            "id": "V2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V2.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "V3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V3.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "V4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V4.jpg",
+            "supplied_to_generator": true
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "4fcd73077d3716778a6eba6826673514a970429fc6baae2fb2826d268e0d26a5"
+        },
+        "status": "WARN",
+        "confidence_label": "osin arvio",
+        "historical_phase": "Intact main palace, approximately later nineteenth century; no fire ruins, later surrounding shopping arcades or separate garden bandstand fused in.",
+        "main_shape": "Long iron/glass body, central tall drum/dome/statue, central transverse entrance projection, decorated end arches and lower side roofs broadly agree with V2/V3/V4. No serious main-mass contradiction identified.",
+        "issues": [
+          {
+            "severity": "minor",
+            "region": "Central lower entrance, subsidiary end arches, roof ornaments and statue",
+            "image_bbox_normalized": [
+              0.23,
+              0.01,
+              0.95,
+              0.91
+            ],
+            "finding": "Exact lower entrance structure is partially obscured in photographs; repeated glazing, subsidiary gables, statue identity/detail and ornament have been regularized. Label these as interpretation; principal hall and dome remain source supported.",
+            "source_refs": [
+              "V2",
+              "V3",
+              "V4"
+            ]
+          },
+          {
+            "severity": "minor",
+            "region": "Top statue / upper canvas margin",
+            "image_bbox_normalized": [
+              0.43,
+              0.0,
+              0.48,
+              0.12
+            ],
+            "finding": "Statue is fully present but sits close to top edge; preserve full silhouette in any later 3D input framing.",
+            "source_refs": []
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Main palace rather than later arcades",
+            "High central drum/dome and statue; longitudinal halls and lower side roofs"
+          ],
+          "osin_arvio": [
+            "Relative dome/body proportions",
+            "Visible entrance and end-gable reconstruction"
+          ],
+          "arvio": [
+            "Unseen opposite side and roof junctions",
+            "Exact statue, minor ornament and material appearance"
+          ]
+        },
+        "framing_3d": "Whole palace isolated; roof, long facade and end are legible. Top silhouette has narrow margin and far side remains inferred.",
+        "review_disposition": "May appear as WARN in KK comparison; evidence supports principal form while fine geometry remains interpretation.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V2.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V4.jpg"
+        ]
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 4,
+      "key": "paris-galerie-des-machines-historic",
+      "name": "Galerie des Machines — Pariisi",
+      "status": "FAIL",
+      "confidence": "arvio",
+      "note": "EI TRIPOON: sivugalleriat liian matalat; hallin poikkileikkaus poikkeaa.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/paris-galerie-des-machines-historic/model-image-original.png",
+      "modelSHA256": "f131e2c44c8175215d9b2240de82ae176e210d4308c8990d09d8d9965664255c",
+      "preview": "04-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+      "sourceSHA256": "0c1a77eff91f7fbdcc9a50c85e796fb057a9801f4fa1fbbff77a9a32b1e57ca0",
+      "sourceMetadata": {
+        "key": "paris-galerie-des-machines-historic",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines",
+        "reference_candidates": [
+          {
+            "id": "M1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+            "sha256": "bbdcdc74ace320246ab150cf63ceba90d7db538b3e09b820f2fcbf250fdc4b20",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_principale_de_la_Galerie_des_machines,_7e_arrondissement,_Paris._PH77403.jpg",
+            "view": "principal gabled end, oblique",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "M2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M2.jpg",
+            "sha256": "e573fb2f62b85373be72d37b211fdeeda9813070062b9068dc1535409a8a93f3",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Galerie_des_Machines_(Engineering)_1.jpg",
+            "view": "structural plan + erection diagrams",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          },
+          {
+            "id": "M3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+            "sha256": "0c1a77eff91f7fbdcc9a50c85e796fb057a9801f4fa1fbbff77a9a32b1e57ca0",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Galerie_des_Machines_(Engineering)_2.jpg",
+            "view": "transverse roof frame section",
+            "qa_result": "pass",
+            "supplied_to_generator": true,
+            "role": "geometry reference"
+          }
+        ],
+        "original_metadata": {
+          "schemaVersion": 1,
+          "checked_at": "2026-11-16",
+          "key": "paris-galerie-des-machines-historic",
+          "name": "Galerie des Machines, Paris",
+          "era": "Circa1889 exhibition hall by Dutert/Contamin, not earlier exhibition machine halls or later1900 decorative fit-out.",
+          "status": "ready",
+          "reason": "Historical principal-end photograph plus contemporary structural footprint and frame section resolve the major volume and roof profile for a preparation sheet.",
+          "coverage": {
+            "front": "M1 principal end",
+            "back": "not independently photographed; use explicitly interpreted generic frame-end treatment only",
+            "left": "side-gallery section M3; exterior glazing incomplete",
+            "right": "structural relation in M2/M3, hidden facade not proved",
+            "top_or_plan": "M2 structural footprint; M3 roof frame profile"
+          },
+          "geometry": [
+            "Very long rectangular column-free iron/glass hall with lower side galleries.",
+            "Main transverse truss profile is a low pointed arch; do not turn into semicircular Crystal Palace roof.",
+            "Large glazed gable end follows main roof outline; lower adjacent roofs and entrance/structural details remain separate.",
+            "Footprint/frame repetition from M2/M3 sets ratios. Exact metric lengths/heights not asserted.",
+            "M4 erection image blocked; it is not required to invent a different main form."
+          ],
+          "gaps": [
+            "Ready only for main-mass preparation; rear facade and complete long-side openings still require explicitly labeled interpretation.",
+            "M4 normal thumbnail request received429 twice, no further retry.",
+            "Prior H-LAHTEET height values conflict; none adopted as exact."
+          ],
+          "context": [
+            "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/H-LAHTEET.md: Galerie des Machines section"
+          ],
+          "refs": [
+            {
+              "id": "M1",
+              "title": "File:Façade principale de la Galerie des machines, 7e arrondissement, Paris. PH77403.jpg",
+              "creator": "Blancard, Hippolyte (1843 - 1924), photographe",
+              "source_date": "Vers 1889",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "CC0",
+              "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_principale_de_la_Galerie_des_machines,_7e_arrondissement,_Paris._PH77403.jpg",
+              "origin": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/facade-principale-de-la-galerie-des-machines-7e-arrondissement-paris#infos-principales",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Fa%C3%A7ade_principale_de_la_Galerie_des_machines%2C_7e_arrondissement%2C_Paris._PH77403.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Fa%C3%A7ade_principale_de_la_Galerie_des_machines%2C_7e_arrondissement%2C_Paris._PH77403.jpg/1920px-Fa%C3%A7ade_principale_de_la_Galerie_des_machines%2C_7e_arrondissement%2C_Paris._PH77403.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+              "sha256": "bbdcdc74ace320246ab150cf63ceba90d7db538b3e09b820f2fcbf250fdc4b20",
+              "view": "principal gabled end, oblique",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Historical photo of vast glazed arched gable, low pointed main roof and lower side gallery. Trees obscure entrance base, street neighbours are separate. Coherent circa1889 hall.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                1920,
+                1430
+              ]
+            },
+            {
+              "id": "M2",
+              "title": "File:Galerie des Machines (Engineering) 1.jpg",
+              "creator": "Engineering [Journal]",
+              "source_date": "1889-05-03",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Galerie_des_Machines_(Engineering)_1.jpg",
+              "origin": "https://vrc-cbe-uw.blogspot.com.es/2008/06/galerie-des-machines-paris-1889-iron-or.html \n \n(Engineering, The Paris Exhibition, May 3, 1889 (Vol. XLVII))",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Galerie_des_Machines_%28Engineering%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Galerie_des_Machines_%28Engineering%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M2.jpg",
+              "sha256": "e573fb2f62b85373be72d37b211fdeeda9813070062b9068dc1535409a8a93f3",
+              "view": "structural plan + erection diagrams",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Engineering plate has rectangular pier/staircase plan and column-free hall footprint; lower images are erection details, not extra building wings.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                768,
+                1000
+              ]
+            },
+            {
+              "id": "M3",
+              "title": "File:Galerie des Machines (Engineering) 2.jpg",
+              "creator": "Engineering [Journal]",
+              "source_date": "1889-05-03",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Galerie_des_Machines_(Engineering)_2.jpg",
+              "origin": "http://vrc-cbe-uw.blogspot.com.es/2008/06/galerie-des-machines-paris-1889-iron-or.html \n \n(Engineering, The Paris Exhibition, May 3, 1889 (Vol. XLVII))",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Galerie_des_Machines_%28Engineering%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Galerie_des_Machines_%28Engineering%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+              "sha256": "0c1a77eff91f7fbdcc9a50c85e796fb057a9801f4fa1fbbff77a9a32b1e57ca0",
+              "view": "transverse roof frame section",
+              "visual_qa": true,
+              "qa_result": "pass",
+              "qa_note": "Engineering plate shows half of main low pointed arch, side-gallery section and ridge joint. Use arch profile and relative height; do not substitute a semicircular barrel.",
+              "download_error": null,
+              "retry_after": null,
+              "downloaded_dimensions_px": [
+                717,
+                1000
+              ]
+            },
+            {
+              "id": "M4",
+              "title": "File:Galerie des Machines (Engineering) 8.jpg",
+              "creator": "Fives-Lille//Cail",
+              "source_date": "1889-12-31",
+              "date_policy": "Catalogued source date only; exact depicted-building date not independently claimed.",
+              "license": "Public domain",
+              "license_url": null,
+              "license_verified": true,
+              "source_page": "https://commons.wikimedia.org/wiki/File:Galerie_des_Machines_(Engineering)_8.jpg",
+              "origin": "http://polipapers.upv.es/index.php/VLC/article/view/3598/4521 \nLa Galería de las Máquinas de 1889. Reflexiones histórico-estructurales\nThe Palais des Machines of 1889. Historical-structural reflections\n \nJavier Estévez Cimadevilaa, Isaac López Césarb",
+              "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Galerie_des_Machines_%28Engineering%29_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Galerie_des_Machines_%28Engineering%29_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "local_image_path": null,
+              "sha256": null,
+              "view": "metadata-only reference",
+              "visual_qa": false,
+              "qa_result": "blocked",
+              "qa_note": "Raster thumbnail download blocked429; image not inspected; do not use as visually verified geometry.",
+              "download_error": "HTTP Error 429: Too many requests (f061ab2)",
+              "retry_after": "1"
+            }
+          ],
+          "local_images": 3,
+          "status_scope": "Source eligibility for main-mass preparation only. No owner approval, generation, Tripo, production or game acceptance.",
+          "dimensional_policy": "No exact physical dimensions or exact snapshot dates claimed without independent corroboration. Use approximate wording and relative ratios; preserve catalogued source dates as attributed metadata.",
+          "download_method": "Official Commons API imageinfo, returned raster thumbnail URLs, research User-Agent; bounded normal retry after transient429. Remaining429 retained, no proxy/403 bypass.",
+          "visual_qa_summary": "All locally downloaded rasters inspected via per-building contact sheets; Industrie I4 additionally inspected individually. Blocked refs explicitly not inspected."
+        }
+      },
+      "qa": {
+        "key": "paris-galerie-des-machines-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/paris-galerie-des-machines-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/paris-galerie-des-machines-historic/sources-used.json",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/QA-contact.jpg",
+        "references_inspected_in_contact": [
+          {
+            "id": "M1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "M2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M2.jpg",
+            "supplied_to_generator": true
+          },
+          {
+            "id": "M3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+            "supplied_to_generator": true
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "f131e2c44c8175215d9b2240de82ae176e210d4308c8990d09d8d9965664255c"
+        },
+        "status": "FAIL",
+        "confidence_label": "arvio - material main-section disagreement",
+        "historical_phase": "Recognizable circa-1889 principal end, with low pointed roof outline and large fan-shaped glazing; no obvious different-period palace substituted.",
+        "main_shape": "Front gable is recognizable, but generated longitudinal body/side-gallery section materially differs from the supplied structural section. This is larger than uncertain ornament.",
+        "issues": [
+          {
+            "severity": "major",
+            "region": "Near-side long gallery, exposed main sidewall and roof spring/eave relation",
+            "image_bbox_normalized": [
+              0.01,
+              0.17,
+              0.43,
+              0.9
+            ],
+            "finding": "M3 shows a two-level side gallery whose roof reaches approximately the main roof spring/eave height, near half the overall arch height. Generated image has a very low single-strip gallery and a large extra exposed tall glazed sidewall above it, with main roof spring/eaves substantially higher. This changes the principal transverse section and longitudinal silhouette. The original M1 photo also shows a substantially taller side-gallery body relative to the main front, though its lower portion is obscured.",
+            "source_refs": [
+              "M3",
+              "M1"
+            ]
+          },
+          {
+            "severity": "moderate",
+            "region": "Hidden rear, long facade bay treatment and roof glazing",
+            "image_bbox_normalized": [
+              0.02,
+              0.08,
+              0.69,
+              0.61
+            ],
+            "finding": "Exterior regularization and hidden surfaces remain interpretation. These alone would warrant WARN, but do not account for the major side-gallery/main-roof relationship error.",
+            "source_refs": [
+              "M1",
+              "M2",
+              "M3"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Recognizable source-based principal front motif",
+            "Long rectangular single great hall; pointed rather than semicircular ridge"
+          ],
+          "osin_arvio": [
+            "Front glazing/fan and truss decoration",
+            "Footprint repetition and rear treatment"
+          ],
+          "arvio": [
+            "Current generated gallery/body section is materially unreliable",
+            "Long-side glazing and exact roof panel layout"
+          ]
+        },
+        "framing_3d": "Complete isolated silhouette with useful oblique roof coverage, but the low side gallery and extra tall main sidewall would be promoted directly into 3D geometry if used uncorrected.",
+        "review_disposition": "Show only as FAIL/diagnostic in KK comparison with M3 directly beside it. Do not promote as an acceptable historic main-shape candidate. No regeneration or correction authorized by this audit.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg"
+        ]
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 5,
+      "key": "amsterdam-haringpakkerstoren-historic",
+      "name": "Haringpakkerstoren — Amsterdam",
+      "status": "WARN",
+      "confidence": "osin arvio",
+      "note": "Tornin vaiheet ja kerrossuhteet likimääräisiä. Yläpinnat näkyvät niukasti.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/model-image-original.png",
+      "modelSHA256": "cd919d36a66460f77f4b912fe91de8fe0482764ae329848a2c26bb8b1878dffe",
+      "preview": "05-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg",
+      "sourceSHA256": "a8996d638f8fc40bebc637e10d12bb4eef914828da329598e3958d396bf01e8a",
+      "sourceMetadata": {
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker",
+        "source_status": "ready",
+        "references": [
+          {
+            "id": "H1",
+            "title": "File:Abraham van der Hart, Afb 010056915634.jpg",
+            "creator": "Abraham van der Hart",
+            "source_date": "1807-08",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "Public domain",
+            "license_url": null,
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Abraham_van_der_Hart,_Afb_010056915634.jpg",
+            "origin": "http://archief.amsterdam/beeldbank/afbeelding/010056915634",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Abraham_van_der_Hart%2C_Afb_010056915634.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Abraham_van_der_Hart%2C_Afb_010056915634.jpg/960px-Abraham_van_der_Hart%2C_Afb_010056915634.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H1.jpg",
+            "sha256": "d879ea4ac8094f19bb25bb509fa924add29d572ae758c686d022252a48d440ab",
+            "view": "tower/site ground plan",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Polygonal masonry tower footprint with round inner space and spiral stairs, adjoining small rooms/yards, compass and graphic scale. Neighbouring ferry/house parcels must not become the tower base mass.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              682
+            ],
+            "actual_sha256": "d879ea4ac8094f19bb25bb509fa924add29d572ae758c686d022252a48d440ab",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "H2",
+            "title": "File:Abraham van der Hart, Afb 010056915635.jpg",
+            "creator": "Abraham van der Hart",
+            "source_date": "1813-09",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "Public domain",
+            "license_url": null,
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Abraham_van_der_Hart,_Afb_010056915635.jpg",
+            "origin": "http://archief.amsterdam/beeldbank/afbeelding/010056915635",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Abraham_van_der_Hart%2C_Afb_010056915635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Abraham_van_der_Hart%2C_Afb_010056915635.jpg/960px-Abraham_van_der_Hart%2C_Afb_010056915635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg",
+            "sha256": "a8996d638f8fc40bebc637e10d12bb4eef914828da329598e3958d396bf01e8a",
+            "view": "section/elevation + plans of upper stages",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Full tower profile and stacked stage plans show broad masonry shaft/base, narrower clock stage, open belfry/lantern tiers, curved cap and small finial. Profile matches main silhouette of historical scenes; exact alteration status remains catalogued rather than assumed.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              1332
+            ],
+            "actual_sha256": "a8996d638f8fc40bebc637e10d12bb4eef914828da329598e3958d396bf01e8a",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "H3",
+            "title": "File:Willem Writs, Afb 010097011477.jpg",
+            "creator": "Writs, Willem (1731-1786)",
+            "source_date": "circa 1766",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "Public domain",
+            "license_url": null,
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Willem_Writs,_Afb_010097011477.jpg",
+            "origin": "http://beeldbank.amsterdam.nl/afbeelding/010097011477",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Willem_Writs%2C_Afb_010097011477.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Willem_Writs%2C_Afb_010097011477.jpg/960px-Willem_Writs%2C_Afb_010097011477.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H3.jpg",
+            "sha256": "94980c1bb94b408a06a984dedc7e2c3b0970a882122e98147f68c60ff4edbae0",
+            "view": "historical quay-side optical print",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Tall faceted masonry base and stepped-narrowing open upper tower with cap; low neighbouring houses and harbour. Optical-print captions include mirrored display text; do not infer compass orientation only from that text.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              743
+            ],
+            "actual_sha256": "94980c1bb94b408a06a984dedc7e2c3b0970a882122e98147f68c60ff4edbae0",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "H4",
+            "title": "File:SA 20797-De Haringpakkerstoren gezien vanaf het IJ-De Haringpakkerstoren gezien naar de Haarlemmersluis.jpg",
+            "creator": "Jan de Beijer",
+            "source_date": "between 1765 and 1770",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "Public domain",
+            "license_url": null,
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:SA_20797-De_Haringpakkerstoren_gezien_vanaf_het_IJ-De_Haringpakkerstoren_gezien_naar_de_Haarlemmersluis.jpg",
+            "origin": "http://hdl.handle.net/11259/collection.38832",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/SA_20797-De_Haringpakkerstoren_gezien_vanaf_het_IJ-De_Haringpakkerstoren_gezien_naar_de_Haarlemmersluis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/SA_20797-De_Haringpakkerstoren_gezien_vanaf_het_IJ-De_Haringpakkerstoren_gezien_naar_de_Haarlemmersluis.jpg/960px-SA_20797-De_Haringpakkerstoren_gezien_vanaf_het_IJ-De_Haringpakkerstoren_gezien_naar_de_Haarlemmersluis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H4.jpg",
+            "sha256": "e941a41dd98c0e7d65726d3a27fc10aab5ee9e979d6bb30e6d510f8bc77e86e7",
+            "view": "IJ-side historical painting",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Tower seen above waterfront houses, broad lower shaft, visible clock face, upper open stages and cupola; large round church dome behind is separate Ronde Lutherse Kerk, not part of tower.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              718
+            ],
+            "actual_sha256": "e941a41dd98c0e7d65726d3a27fc10aab5ee9e979d6bb30e6d510f8bc77e86e7",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          }
+        ],
+        "input_method": "Local historical reference pixels inspected with view_image; structured source-informed textual prompt used for a completely new image. No existing generated image edited.",
+        "gaps": [
+          "Ready means main-mass/roof preparation eligibility, not owner approval or metric-exact model.",
+          "H2 catalogue date is later than harbour scenes; exact restoration/alteration status must be preserved as a caveat. Separate new-cupola proposal file010056915636 was deliberately not used as built-state proof.",
+          "No exact physical dimensions independently corroborated twice; use relative stage proportions."
+        ],
+        "confidence": "osin arvio",
+        "referenceImagesActuallyPassedToTool": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "workflowDeviation": true,
+        "tripo_ready": false
+      },
+      "qa": {
+        "key": "amsterdam-haringpakkerstoren-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/sources-used.json",
+        "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/QA.md",
+        "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/SOURCE-BRIEF.md",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/QA-contact.jpg",
+        "references": [
+          {
+            "id": "H1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H1.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Abraham_van_der_Hart,_Afb_010056915634.jpg",
+            "sha256": "d879ea4ac8094f19bb25bb509fa924add29d572ae758c686d022252a48d440ab",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "H2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Abraham_van_der_Hart,_Afb_010056915635.jpg",
+            "sha256": "a8996d638f8fc40bebc637e10d12bb4eef914828da329598e3958d396bf01e8a",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "H3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H3.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Willem_Writs,_Afb_010097011477.jpg",
+            "sha256": "94980c1bb94b408a06a984dedc7e2c3b0970a882122e98147f68c60ff4edbae0",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "H4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H4.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:SA_20797-De_Haringpakkerstoren_gezien_vanaf_het_IJ-De_Haringpakkerstoren_gezien_naar_de_Haarlemmersluis.jpg",
+            "sha256": "e941a41dd98c0e7d65726d3a27fc10aab5ee9e979d6bb30e6d510f8bc77e86e7",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "cd919d36a66460f77f4b912fe91de8fe0482764ae329848a2c26bb8b1878dffe"
+        },
+        "status": "WARN",
+        "confidence_label": "osin arvio",
+        "confidence_in_finding": "high",
+        "historical_phase": "Historic Haringpakkerstoren type; H2 is a later catalogued technical sheet than H3/H4 harbour scenes, so exact cross-period stage details are not asserted.",
+        "main_shape": "Broad faceted masonry shaft, much narrower clock transition, two narrowing open upper stages and curved cap/fish vane retain the characteristic stepped tower silhouette. Main shaft-to-superstructure balance is broadly compatible with H2-H4.",
+        "issues": [
+          {
+            "severity": "moderate",
+            "region": "Transition between lower belfry and upper open lantern",
+            "image_bbox_normalized": [
+              0.39,
+              0.16,
+              0.61,
+              0.27
+            ],
+            "finding": "Generated curved roof is below the balustraded collar; H2 puts its balustraded collar below the intervening curved stage. The order/shape of this silhouette transition is regularized rather than a faithful profile.",
+            "source_refs": [
+              "H2"
+            ]
+          },
+          {
+            "severity": "minor",
+            "region": "Masonry/clock stage and upper details",
+            "finding": "Clock surround, decorative finials and apparent exposed bell are interpretive. These do not independently invalidate the recognisable main tower, but the source phase and openings should stay qualified.",
+            "source_refs": [
+              "H2",
+              "H3",
+              "H4"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Stepped polygonal shaft and narrowing tower identity",
+            "No adjacent church dome incorporated"
+          ],
+          "osin_arvio": [
+            "Relative stage widths and heights",
+            "Clock transition and curved upper-stage geometry"
+          ],
+          "arvio": [
+            "Fine openings and hidden faces",
+            "Exact consistency of technical-sheet and harbour-scene phases"
+          ]
+        },
+        "framing_3d": "Entire tower and finial visible; camera is nearly level, with little roof-top or footprint visibility. Image alone cannot establish full polygonal geometry.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg"
+        ],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "referenceImagesActuallyPassedToTool": [],
+        "workflowDeviation": true,
+        "tripo_ready": false,
+        "owner_approved": false,
+        "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 6,
+      "key": "amsterdam-medieval-town-hall-historic",
+      "name": "Keskiaikainen raatihuone — Amsterdam",
+      "status": "WARN",
+      "confidence": "osin arvio",
+      "note": "Pääryhmä tuettu. Arkadit liian suippokaarisia ja torni yksinkertaistettu.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/model-image-original.png",
+      "modelSHA256": "4d597878d5bad55628214695537e06ef2695b64ccf0965c7ea07a2c71459d59c",
+      "preview": "06-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T2.jpg",
+      "sourceSHA256": "d819c14d1f5a2b8b31871e2d8f24e556305cce1855a56eceab2a291ab25ae9bb",
+      "sourceMetadata": {
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall",
+        "source_status": "ready",
+        "references": [
+          {
+            "id": "T1",
+            "title": "File:Oude stadhuis op de Dam Amsterdam 001.jpg",
+            "creator": "anonymous",
+            "source_date": "17 th  century",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "Public domain",
+            "license_url": null,
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Oude_stadhuis_op_de_Dam_Amsterdam_001.jpg",
+            "origin": "archief.amsterdam/beeldbank :  Home  (record 010001000677)",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Oude_stadhuis_op_de_Dam_Amsterdam_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Oude_stadhuis_op_de_Dam_Amsterdam_001.jpg/960px-Oude_stadhuis_op_de_Dam_Amsterdam_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T1.jpg",
+            "sha256": "69f3b8ed629c3c2b5b6ecb349132c6b74c7184afc8c0c2c4ce5b3dd94d01ef43",
+            "view": "historical irregular compound floor plan",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Labelled old Amsterdam town-hall plan has asymmetric rooms, passage and tower/stair components. Clearly unlike symmetrical later Royal Palace/Stadhuis plan. Graphic dimensional marks not independently transcribed.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              660
+            ],
+            "actual_sha256": "69f3b8ed629c3c2b5b6ecb349132c6b74c7184afc8c0c2c4ce5b3dd94d01ef43",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "T2",
+            "title": "File:Reproductie van tekening door P.Saenredam 1641 verzameling Teylers Stichting Haarlem - Amsterdam - 20011569 - RCE.jpg",
+            "creator": "Original drawing attributed to Pieter Jansz. Saenredam1641; reproduction photograph credited MONUMENTENZORG/RCE1961",
+            "source_date": "1961",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Reproductie_van_tekening_door_P.Saenredam_1641_verzameling_Teylers_Stichting_Haarlem_-_Amsterdam_-_20011569_-_RCE.jpg",
+            "origin": "Rijksdienst voor het Cultureel Erfgoed",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Reproductie_van_tekening_door_P.Saenredam_1641_verzameling_Teylers_Stichting_Haarlem_-_Amsterdam_-_20011569_-_RCE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Reproductie_van_tekening_door_P.Saenredam_1641_verzameling_Teylers_Stichting_Haarlem_-_Amsterdam_-_20011569_-_RCE.jpg/960px-Reproductie_van_tekening_door_P.Saenredam_1641_verzameling_Teylers_Stichting_Haarlem_-_Amsterdam_-_20011569_-_RCE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T2.jpg",
+            "sha256": "d819c14d1f5a2b8b31871e2d8f24e556305cce1855a56eceab2a291ab25ae9bb",
+            "view": "photographic reproduction of Saenredam drawing",
+            "visual_qa": true,
+            "qa_result": "pass-reproduction",
+            "qa_note": "Photograph reproduces drawing attributed to Saenredam1641: old hall frontage with open ground arches, hipped roof, square tower and adjoining high gabled house. Digital/photo date1961 is not building snapshot date.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              1308
+            ],
+            "actual_sha256": "d819c14d1f5a2b8b31871e2d8f24e556305cce1855a56eceab2a291ab25ae9bb",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "T3",
+            "title": "File:Gezicht op het Oude Stadhuis te Amsterdam 't Oude Stadt huys (titel op object), RP-P-AO-21-3-2.jpg",
+            "creator": "Jacob van Meurs (possibly engraver/publisher), Joachim Nosche (possible publisher); Rijksmuseum",
+            "source_date": "between 1663 and 1664",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_het_Oude_Stadhuis_te_Amsterdam_%27t_Oude_Stadt_huys_(titel_op_object),_RP-P-AO-21-3-2.jpg",
+            "origin": "http://hdl.handle.net/10934/RM0001.COLLECT.233729",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Gezicht_op_het_Oude_Stadhuis_te_Amsterdam_%27t_Oude_Stadt_huys_%28titel_op_object%29%2C_RP-P-AO-21-3-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Gezicht_op_het_Oude_Stadhuis_te_Amsterdam_%27t_Oude_Stadt_huys_%28titel_op_object%29%2C_RP-P-AO-21-3-2.jpg/960px-Gezicht_op_het_Oude_Stadhuis_te_Amsterdam_%27t_Oude_Stadt_huys_%28titel_op_object%29%2C_RP-P-AO-21-3-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T3.jpg",
+            "sha256": "78fac082042316a84490ad20174c17924db12ef70be6a4d071fe6e1d278a8562",
+            "view": "later engraved old-town-hall front/side view",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Old civic compound: arched open ground-floor front, lower broad hipped roof, square tower and distinct gabled adjoining range; long side recedes into street. Later print broadly agrees with drawing, not an independent metric survey.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              652
+            ],
+            "actual_sha256": "78fac082042316a84490ad20174c17924db12ef70be6a4d071fe6e1d278a8562",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          }
+        ],
+        "input_method": "Local historical reference pixels inspected with view_image; structured source-informed textual prompt used for a completely new image. No existing generated image edited.",
+        "gaps": [
+          "Ready only for relative main-mass preparation; complete rear survey missing.",
+          "T2 photograph is twentieth-century reproduction of earlier drawing; T3 is a later print, and their similar view may share earlier source tradition. Not two independent dimensional surveys.",
+          "Exact dated snapshot and metric dimensions not asserted."
+        ],
+        "confidence": "osin arvio",
+        "referenceImagesActuallyPassedToTool": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "workflowDeviation": true,
+        "tripo_ready": false
+      },
+      "qa": {
+        "key": "amsterdam-medieval-town-hall-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/sources-used.json",
+        "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/QA.md",
+        "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/SOURCE-BRIEF.md",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/QA-contact.jpg",
+        "references": [
+          {
+            "id": "T1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T1.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Oude_stadhuis_op_de_Dam_Amsterdam_001.jpg",
+            "sha256": "69f3b8ed629c3c2b5b6ecb349132c6b74c7184afc8c0c2c4ce5b3dd94d01ef43",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "T2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T2.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Reproductie_van_tekening_door_P.Saenredam_1641_verzameling_Teylers_Stichting_Haarlem_-_Amsterdam_-_20011569_-_RCE.jpg",
+            "sha256": "d819c14d1f5a2b8b31871e2d8f24e556305cce1855a56eceab2a291ab25ae9bb",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "T3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T3.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_het_Oude_Stadhuis_te_Amsterdam_%27t_Oude_Stadt_huys_(titel_op_object),_RP-P-AO-21-3-2.jpg",
+            "sha256": "78fac082042316a84490ad20174c17924db12ef70be6a4d071fe6e1d278a8562",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "4d597878d5bad55628214695537e06ef2695b64ccf0965c7ea07a2c71459d59c"
+        },
+        "status": "WARN",
+        "confidence_label": "osin arvio",
+        "confidence_in_finding": "high",
+        "historical_phase": "Old asymmetric civic compound represented by T2/T3, not the later classical Royal Palace. T2/T3 are related historical visual traditions, not independent dimensional surveys.",
+        "main_shape": "Three-bay arcaded hall, broad hipped roof, rising square tower, separate right gabled range and receding left ranges preserve the key asymmetric mass hierarchy.",
+        "issues": [
+          {
+            "severity": "moderate",
+            "region": "Main ground-floor arcade",
+            "image_bbox_normalized": [
+              0.3,
+              0.73,
+              0.7,
+              0.97
+            ],
+            "finding": "All three generated arcade heads are pointed; T2/T3 show broad round/segmental heads. Bay count and arcade location match, but this prominent facade form is a visible source disagreement.",
+            "source_refs": [
+              "T2",
+              "T3"
+            ]
+          },
+          {
+            "severity": "moderate",
+            "region": "Square tower and connection to right gabled range",
+            "image_bbox_normalized": [
+              0.49,
+              0.02,
+              0.75,
+              0.56
+            ],
+            "finding": "Tower is widened and treated as a generic church-like block with large open pointed belfry windows. T2/T3 show a narrower, more vertically articulated civic tower. Right range and intervening passage are regularized; rear roof junctions are not established.",
+            "source_refs": [
+              "T1",
+              "T2",
+              "T3"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Asymmetric compound identity",
+            "Arcaded front hall, hipped roof, tower and right gabled range"
+          ],
+          "osin_arvio": [
+            "Relative principal mass dimensions",
+            "Arcade bay arrangement"
+          ],
+          "arvio": [
+            "Tower openings and articulation",
+            "Rear roof intersections, passage and unseen footprint"
+          ]
+        },
+        "framing_3d": "Whole isolated compound shown in a useful front/side oblique; rear mass and roof connections are inferred. No claim of exact tracing of T1.",
+        "specific_reference_files_inspected": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "referenceImagesActuallyPassedToTool": [],
+        "workflowDeviation": true,
+        "tripo_ready": false,
+        "owner_approved": false,
+        "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 7,
+      "key": "amsterdam-waag-op-dam-historic",
+      "name": "Waag op de Dam — Amsterdam",
+      "status": "PASS",
+      "confidence": "osin arvio",
+      "note": "Päämuoto sopii lähteisiin. Tarkat mittasuhteet ja pienaukotus likimääräisiä.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/model-image-original.png",
+      "modelSHA256": "298674c8766cd4318b4f9ba81ce99d9df0be7e313b86f723acb671abf2a720d2",
+      "preview": "07-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W1.jpg",
+      "sourceSHA256": "194e3134e28bfee545594d733b4ededd2a126a227c7d042ad6ba2f1d52dc7e6d",
+      "sourceMetadata": {
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag",
+        "source_status": "ready",
+        "references": [
+          {
+            "id": "W1",
+            "title": "File:Gezicht op de Waag op de Dam te Amsterdam De Waegh op den Dam (titel op object), RP-P-AO-25-16.jpg",
+            "creator": "Jacob van Meurs (possibly engraver/publisher), Joachim Nosche (possible publisher); Rijksmuseum",
+            "source_date": "between 1663 and 1664",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Waag_op_de_Dam_te_Amsterdam_De_Waegh_op_den_Dam_(titel_op_object),_RP-P-AO-25-16.jpg",
+            "origin": "http://hdl.handle.net/10934/RM0001.COLLECT.232877",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Gezicht_op_de_Waag_op_de_Dam_te_Amsterdam_De_Waegh_op_den_Dam_%28titel_op_object%29%2C_RP-P-AO-25-16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gezicht_op_de_Waag_op_de_Dam_te_Amsterdam_De_Waegh_op_den_Dam_%28titel_op_object%29%2C_RP-P-AO-25-16.jpg/1920px-Gezicht_op_de_Waag_op_de_Dam_te_Amsterdam_De_Waegh_op_den_Dam_%28titel_op_object%29%2C_RP-P-AO-25-16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W1.jpg",
+            "sha256": "194e3134e28bfee545594d733b4ededd2a126a227c7d042ad6ba2f1d52dc7e6d",
+            "view": "close weigh-house corner/exterior engraving",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Compact rectangular multi-storey weigh house with high steep hipped roof, stepped rows of dormers, corner pinnacles/finials, large upper windows and paired external stairs to upper entrance. Main stair-facing end and long side visible.1920px derivative inspected for main silhouette.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              1920,
+              1609
+            ],
+            "actual_sha256": "194e3134e28bfee545594d733b4ededd2a126a227c7d042ad6ba2f1d52dc7e6d",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "W2",
+            "title": "File:Gezicht op het Stadhuis, de Nieuwe Kerk en de Waag op de Dam te Amsterdam Gezicht van het Stadhuis, de Nieuwe Kerk en de Waag op den Dam Vue de la Maison de Ville, l'Eglise Neuve et le Poids sur le Dam (titel op object), RP-P-H-H-1346.jpg",
+            "creator": "Simon Fokke (engraver/designer), publisher Pierre Fouquet; Rijksmuseum",
+            "source_date": "between 1762 and 1783",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_het_Stadhuis,_de_Nieuwe_Kerk_en_de_Waag_op_de_Dam_te_Amsterdam_Gezicht_van_het_Stadhuis,_de_Nieuwe_Kerk_en_de_Waag_op_den_Dam_Vue_de_la_Maison_de_Ville,_l%27Eglise_Neuve_et_le_Poids_sur_le_Dam_(titel_op_object),_RP-P-H-H-1346.jpg",
+            "origin": "http://hdl.handle.net/10934/RM0001.COLLECT.110995",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Gezicht_op_het_Stadhuis%2C_de_Nieuwe_Kerk_en_de_Waag_op_de_Dam_te_Amsterdam_Gezicht_van_het_Stadhuis%2C_de_Nieuwe_Kerk_en_de_Waag_op_den_Dam_Vue_de_la_Maison_de_Ville%2C_l%27Eglise_Neuve_et_le_Poids_sur_le_Dam_%28titel_op_object%29%2C_RP-P-H-H-1346.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Gezicht_op_het_Stadhuis%2C_de_Nieuwe_Kerk_en_de_Waag_op_de_Dam_te_Amsterdam_Gezicht_van_het_Stadhuis%2C_de_Nieuwe_Kerk_en_de_Waag_op_den_Dam_Vue_de_la_Maison_de_Ville%2C_l%27Eglise_Neuve_et_le_Poids_sur_le_Dam_%28titel_op_object%29%2C_RP-P-H-H-1346.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W2.jpg",
+            "sha256": "075f22a76cef32f71fac0933057b9f30b5d68ce4c3b35d60be2536dec92b984a",
+            "view": "opposite square-side context/exterior",
+            "visual_qa": true,
+            "qa_result": "pass",
+            "qa_note": "Waag is compact freestanding building at right; another square-side view shows lower canopy and roof/dormer skyline. Exact rear/compass side requires plan alignment. Large classical town hall at left and Nieuwe Kerk behind are separate; not Nieuwmarkt Waag.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              707
+            ],
+            "actual_sha256": "075f22a76cef32f71fac0933057b9f30b5d68ce4c3b35d60be2536dec92b984a",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "W3",
+            "title": "File:Plattegrond van de Dam met de posities van de schutterijen, 28 juni 1748 Plan van den Dam te Amsterdam, met aanwyzing van de posteringen der Burger Compagnien, den 28 juny. 1748 (titel op object), RP-P-AO-28-67.jpg",
+            "creator": "Anonymous printmaker; Rijksmuseum",
+            "source_date": "in of na ca. 1748",
+            "date_policy": "Attributed catalogue/source date; exact depicted-building snapshot date not independently claimed.",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "license_verified": true,
+            "source_page": "https://commons.wikimedia.org/wiki/File:Plattegrond_van_de_Dam_met_de_posities_van_de_schutterijen,_28_juni_1748_Plan_van_den_Dam_te_Amsterdam,_met_aanwyzing_van_de_posteringen_der_Burger_Compagnien,_den_28_juny._1748_(titel_op_object),_RP-P-AO-28-67.jpg",
+            "origin": "http://hdl.handle.net/10934/RM0001.COLLECT.695691",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Plattegrond_van_de_Dam_met_de_posities_van_de_schutterijen%2C_28_juni_1748_Plan_van_den_Dam_te_Amsterdam%2C_met_aanwyzing_van_de_posteringen_der_Burger_Compagnien%2C_den_28_juny._1748_%28titel_op_object%29%2C_RP-P-AO-28-67.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Plattegrond_van_de_Dam_met_de_posities_van_de_schutterijen%2C_28_juni_1748_Plan_van_den_Dam_te_Amsterdam%2C_met_aanwyzing_van_de_posteringen_der_Burger_Compagnien%2C_den_28_juny._1748_%28titel_op_object%29%2C_RP-P-AO-28-67.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W3.jpg",
+            "sha256": "cdac143b5914bce93f69e1f67dcd9034a96080d3fdb3df5fb826033a0cebf93b",
+            "view": "Dam site plan with labelled weigh-house footprint",
+            "visual_qa": true,
+            "qa_result": "pass-context-scale",
+            "qa_note": "Plan labels Waag as compact rectangular island in square. It is a troop-position/city plan, not internal measured floor plan; use approximate footprint ratio/context only.",
+            "eligible_for_target": true,
+            "download_error": null,
+            "dimensions_px": [
+              960,
+              816
+            ],
+            "actual_sha256": "cdac143b5914bce93f69e1f67dcd9034a96080d3fdb3df5fb826033a0cebf93b",
+            "inspected": true,
+            "role": "historical source reference, not edit target",
+            "direct_image_tool_input": false
+          }
+        ],
+        "input_method": "Local historical reference pixels inspected with view_image; structured source-informed textual prompt used for a completely new image. No existing generated image edited.",
+        "gaps": [
+          "Ready for main-volume preparation, not exact measured reconstruction.",
+          "W3 is contextual city/troop-position plan; internal floor layout and metric scale not verified.",
+          "Artwork dates span different periods; exact architectural microchanges not independently reconciled."
+        ],
+        "confidence": "osin arvio",
+        "referenceImagesActuallyPassedToTool": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "workflowDeviation": true,
+        "tripo_ready": false
+      },
+      "qa": {
+        "key": "amsterdam-waag-op-dam-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/sources-used.json",
+        "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/QA.md",
+        "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/SOURCE-BRIEF.md",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag",
+        "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/QA-contact.jpg",
+        "references": [
+          {
+            "id": "W1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W1.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Waag_op_de_Dam_te_Amsterdam_De_Waegh_op_den_Dam_(titel_op_object),_RP-P-AO-25-16.jpg",
+            "sha256": "194e3134e28bfee545594d733b4ededd2a126a227c7d042ad6ba2f1d52dc7e6d",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "W2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W2.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_het_Stadhuis,_de_Nieuwe_Kerk_en_de_Waag_op_de_Dam_te_Amsterdam_Gezicht_van_het_Stadhuis,_de_Nieuwe_Kerk_en_de_Waag_op_den_Dam_Vue_de_la_Maison_de_Ville,_l%27Eglise_Neuve_et_le_Poids_sur_le_Dam_(titel_op_object),_RP-P-H-H-1346.jpg",
+            "sha256": "075f22a76cef32f71fac0933057b9f30b5d68ce4c3b35d60be2536dec92b984a",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "W3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W3.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Plattegrond_van_de_Dam_met_de_posities_van_de_schutterijen,_28_juni_1748_Plan_van_den_Dam_te_Amsterdam,_met_aanwyzing_van_de_posteringen_der_Burger_Compagnien,_den_28_juny._1748_(titel_op_object),_RP-P-AO-28-67.jpg",
+            "sha256": "cdac143b5914bce93f69e1f67dcd9034a96080d3fdb3df5fb826033a0cebf93b",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": true,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "298674c8766cd4318b4f9ba81ce99d9df0be7e313b86f723acb671abf2a720d2"
+        },
+        "status": "PASS",
+        "confidence_label": "osin arvio",
+        "confidence_in_finding": "medium-high",
+        "historical_phase": "Historical freestanding Dam weigh house type shown by W1/W2, distinct from the surviving towered Nieuwmarkt Waag. Artwork phase differences remain unresolved.",
+        "main_shape": "Compact masonry weigh-house, steep hipped roof with tiered dormers, paired external stairs meeting a raised end entrance, lower central opening and subordinate side canopy all agree with the distinctive W1 form. No serious main-form substitution identified.",
+        "issues": [
+          {
+            "severity": "minor",
+            "region": "Roof shoulder, dormers and stairs",
+            "finding": "Historical engraved roof-edge balustrade is simplified to a plain cornice; chimney/dormer detailing and stair balustrades are regularized. Exact counts and ornament remain interpretive and are not grounds for main-form rejection.",
+            "source_refs": [
+              "W1",
+              "W2"
+            ]
+          },
+          {
+            "severity": "uncertainty",
+            "region": "Long axis and hidden rear",
+            "finding": "Generated long-axis proportion cannot be certified from the unscaled contextual W3 plan and perspective artwork. Keep footprint/depth approximate; PASS applies only to principal visible form for KK comparison.",
+            "source_refs": [
+              "W1",
+              "W3"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Distinctive stair-end facade",
+            "Steep hipped roof, tiered dormer skyline and side canopy"
+          ],
+          "osin_arvio": [
+            "Width/height and long-axis balance",
+            "Broad stair and canopy geometry"
+          ],
+          "arvio": [
+            "Exact measured footprint and rear",
+            "Fine dormer, chimney and ornament counts"
+          ]
+        },
+        "framing_3d": "Entire building visible with useful stair-end/long-side oblique and visible roof. Far side/rear geometry remains unverified.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/QA-W1-detail.jpg"
+        ],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "referenceImagesActuallyPassedToTool": [],
+        "workflowDeviation": true,
+        "tripo_ready": false,
+        "owner_approved": false,
+        "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 8,
+      "key": "london-euston-arch-historic",
+      "name": "Euston Arch — Lontoo",
+      "status": "WARN",
+      "confidence": "arvio",
+      "note": "Tukien perusjako vastaa lähdettä, mutta kokonaisuus liian leveä/matala.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/model-image-original.png",
+      "modelSHA256": "f93f4c061cc15679df75314f0262bf317ad049fc2b66dae0a87f4313569154da",
+      "preview": "08-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+      "sourceSHA256": "d910e87eb3f474aad1e748d42175311574c254ee58aaa345d5a678a4eef2fc96",
+      "sourceMetadata": {
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961",
+        "source_status": "uncertain",
+        "references": [
+          {
+            "id": "E1",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Euston_Arch_(8764275779).jpg",
+            "creator": "Photographer unknown; Tekniska museet source account",
+            "date": "1860–1880; nominal 1870 is metadata convention",
+            "license": "CC BY 2.0",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Credit Tekniska museet, link license, identify changes. Original web fetch timeout; no retry.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+            "sha256": "d910e87eb3f474aad1e748d42175311574c254ee58aaa345d5a678a4eef2fc96",
+            "visual_qa": true,
+            "api_license": "CC BY 2.0",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Euston_Arch_%288764275779%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "front",
+            "visual_qa_note": "Intact Doric entrance in paired stereo views; pediment, entablature, column shafts and entrance visible. Stereo pair is one camera view, not two independent sides. Historical photographic print matches pre-demolition era.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Euston_Arch_%288764275779%29.jpg/1280px-Euston_Arch_%288764275779%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              632
+            ],
+            "actual_sha256": "d910e87eb3f474aad1e748d42175311574c254ee58aaa345d5a678a4eef2fc96",
+            "inspected": true,
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "E2",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Euston_Arch_1896.jpg",
+            "creator": "Unknown author; source UCL",
+            "date": "1896",
+            "license": "PD-UK-unknown on file page",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Low resolution 593×414. Anonymous-work tag has qualification; preferable E1 for clear reusable license.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg",
+            "sha256": "22c080a406a0babf72be9107aa67d380570be7995261411cb7151d73d9046450",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Euston_Arch_1896.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "front slightly oblique",
+            "visual_qa_note": "Intact Doric portico with triangular pediment and four front columns; neighbouring facade visible. Lower-resolution image suitable for silhouette, not measured depth.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Euston_Arch_1896.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "downloaded_dimensions_px": [
+              593,
+              414
+            ],
+            "actual_sha256": "22c080a406a0babf72be9107aa67d380570be7995261411cb7151d73d9046450",
+            "inspected": true,
+            "direct_image_tool_input": false
+          }
+        ],
+        "input_method": "Local historical reference pixels inspected with view_image; structured source-informed textual prompt used for a completely new image. No existing generated image edited.",
+        "gaps": [
+          "Measured plan catalogued but inaccessible; no dimensions or plan tracing extracted.",
+          "Historic England sheet dated 1962 documents object; do not present it as pre-1961 photography.",
+          "Full 360-degree geometry remains incomplete. Verified local images do not authorize inventing hidden faces or assuming exact dimensions."
+        ],
+        "confidence": "arvio",
+        "referenceImagesActuallyPassedToTool": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "workflowDeviation": true,
+        "tripo_ready": false
+      },
+      "qa": {
+        "key": "london-euston-arch-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/sources-used.json",
+        "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/QA.md",
+        "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/SOURCE-BRIEF.md",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961",
+        "source_contact_path": null,
+        "references": [
+          {
+            "id": "E1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Euston_Arch_(8764275779).jpg",
+            "sha256": "d910e87eb3f474aad1e748d42175311574c254ee58aaa345d5a678a4eef2fc96",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "E2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Euston_Arch_1896.jpg",
+            "sha256": "22c080a406a0babf72be9107aa67d380570be7995261411cb7151d73d9046450",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "f93f4c061cc15679df75314f0262bf317ad049fc2b66dae0a87f4313569154da"
+        },
+        "status": "WARN",
+        "confidence_label": "osin arvio",
+        "confidence_in_finding": "high",
+        "historical_phase": "Intact Euston entrance portico type in historical E1/E2 photographs, before demolition; exact rear depth remains unsupported.",
+        "main_shape": "Triangular pediment, Doric entablature, outer square piers, two visible central fluted columns and three intervening openings match the photographed support composition. Generated form is visibly broader/squatter.",
+        "issues": [
+          {
+            "severity": "moderate",
+            "region": "Whole portico elevation",
+            "image_bbox_normalized": [
+              0.08,
+              0.03,
+              0.94,
+              0.95
+            ],
+            "finding": "Generated front is wider relative to its column/pier height than E1/E2; the roof/entablature dominates more and the supporting shafts read shorter. This is a proportional correction issue while the principal portico type remains legible.",
+            "source_refs": [
+              "E1",
+              "E2"
+            ]
+          },
+          {
+            "severity": "uncertainty",
+            "region": "Visible side depth and rear support masses",
+            "finding": "Deep roof and rear/side masonry masses are inferred. E1/E2 are frontal views and do not prove this depth or rear arrangement.",
+            "source_refs": [
+              "E1",
+              "E2"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Pediment and Doric portico identity",
+            "Outer square piers and two visible central fluted columns in photographed front"
+          ],
+          "osin_arvio": [
+            "Overall front proportions"
+          ],
+          "arvio": [
+            "Roof depth and rear supports",
+            "Hidden geometry"
+          ]
+        },
+        "framing_3d": "Complete isolated structure with slightly elevated front/side view. This camera exposes an inferred deep side; use photos for front proportions and do not infer validated 360-degree geometry.",
+        "source_metadata_correction": "E2 visual_qa_note says four front columns; inspected pixels show outer square piers and two central fluted columns. No missing-column failure is asserted from that prose.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg"
+        ],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "referenceImagesActuallyPassedToTool": [],
+        "workflowDeviation": true,
+        "tripo_ready": false,
+        "owner_approved": false,
+        "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 9,
+      "key": "paris-trocadero-historic",
+      "name": "Vanha Trocadéro — Pariisi",
+      "status": "FAIL",
+      "confidence": "arvio",
+      "note": "EI TRIPOON: siivet olennaisesti liian lyhyet suhteessa keskiosaan.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/model-image-original.png",
+      "modelSHA256": "57e573efd70578b5661561a39342c65fc57436aedd7e687f40ed599b65c980e2",
+      "preview": "09-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+      "sourceSHA256": "0aab2cf5769ff5540d94662fbdd1ae690f1940ed24e8ac710d5f028a6fc33c1a",
+      "sourceMetadata": {
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937",
+        "source_status": "uncertain",
+        "references": [
+          {
+            "id": "T1",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Palais_du_Trocadero_1890s.jpg",
+            "creator": "Unknown photographer; Metropolitan Museum of Art",
+            "date": "1890s",
+            "license": "CC0 1.0",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Object and main-front direction confirmed by visual QA; close front photograph crops much of each wing.",
+            "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Palais_du_Trocadero_1890s.jpg",
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+            "sha256": "f599e58582884da10d972de65dadc69c64324750bd7d9525125eb2ed6cf7f469",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Palais_du_Trocadero_1890s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "Seine-facing main front",
+            "visual_qa_note": "Intact round concert-hall front with two-level arched loggia, twin tall towers, shallow conical roof and lantern; fountain foreground. Wings extend beyond crop.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Palais_du_Trocadero_1890s.jpg/1280px-Palais_du_Trocadero_1890s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              798
+            ],
+            "actual_sha256": "f599e58582884da10d972de65dadc69c64324750bd7d9525125eb2ed6cf7f469",
+            "inspected": true,
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "T2",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Le_palais_du_Trocad%C3%A9ro,_1878.jpg",
+            "creator": "Trichon; Brown University Library",
+            "date": "1878",
+            "license": "PD-old-70 on file page; US tag requested by template",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "CRITICAL CORRECTION: description explicitly says Place du Trocadéro rear view, not main facade. Main facade faces Champ-de-Mars.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T2.jpg",
+            "sha256": "8ecdb1111d54366fd6e4663388dcdbbaee0f0f5dfb0e9d68eadd14aa9f479b68",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Le_palais_du_Trocad%C3%A9ro%2C_1878.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "Place du Trocadero rear",
+            "visual_qa_note": "Rear central facade is flatter than convex main-front rotunda, with tall window composition between towers and dome pavilions at sides; central rear pool. Confirms file-page rear orientation; do not use as main-front facade. Outer wings cropped.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Le_palais_du_Trocad%C3%A9ro%2C_1878.jpg/1280px-Le_palais_du_Trocad%C3%A9ro%2C_1878.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              937
+            ],
+            "actual_sha256": "8ecdb1111d54366fd6e4663388dcdbbaee0f0f5dfb0e9d68eadd14aa9f479b68",
+            "inspected": true,
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "T3",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Panorama_du_Trocad%C3%A9ro,_vue_prise_de_la_tour_Eiffel,_Paris,_7%C3%A8me_et_16%C3%A8me_arrondissement,_Paris._PH2792.jpg",
+            "creator": "Neurdein Frères; Musée Carnavalet PH2792",
+            "date": "1880–1900 per institution; viewpoint necessarily after Eiffel Tower existed",
+            "license": "CC0 1.0",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Date range is catalogue metadata, not an exact exposure date. Useful roof/wing geometry; not a measured plan.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+            "sha256": "0aab2cf5769ff5540d94662fbdd1ae690f1940ed24e8ac710d5f028a6fc33c1a",
+            "visual_qa": true,
+            "api_license": "CC0",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Panorama_du_Trocad%C3%A9ro%2C_vue_prise_de_la_tour_Eiffel%2C_Paris%2C_7%C3%A8me_et_16%C3%A8me_arrondissement%2C_Paris._PH2792.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "Seine-facing elevated oblique",
+            "visual_qa_note": "Full palace silhouette with twin towers, central round hall, left/right curved wings and end pavilions. Roofs visible obliquely; not a measured top view. Intact old palace, not Chaillot.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Panorama_du_Trocad%C3%A9ro%2C_vue_prise_de_la_tour_Eiffel%2C_Paris%2C_7%C3%A8me_et_16%C3%A8me_arrondissement%2C_Paris._PH2792.jpg/1280px-Panorama_du_Trocad%C3%A9ro%2C_vue_prise_de_la_tour_Eiffel%2C_Paris%2C_7%C3%A8me_et_16%C3%A8me_arrondissement%2C_Paris._PH2792.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              977
+            ],
+            "actual_sha256": "0aab2cf5769ff5540d94662fbdd1ae690f1940ed24e8ac710d5f028a6fc33c1a",
+            "inspected": true,
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "T4",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Palais_du_Trocad%C3%A9ro_Salle_des_f%C3%AAtes_-_coupe_transversale.jpg",
+            "creator": "Unknown artist; Ducher et Cie publisher, Lemercier printer; Library of Congress cph.3c27595",
+            "date": "circa 1882 publication",
+            "license": "PD-old-100 + Public Domain Mark",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Section only; not whole-building ground plan.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg",
+            "sha256": "0b8c00ad925d27e3b9482744b34eaadb725e1bb7fa4ac9a234dba05d4f89a844",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Palais_du_Trocad%C3%A9ro_Salle_des_f%C3%AAtes_-_coupe_transversale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "central hall transverse section",
+            "visual_qa_note": "Labeled Trocadero concert-hall cross-section through roof and auditorium with adjacent towers; useful vertical relative proportions, not whole plan. No building dimensions transcribed in this pass.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Palais_du_Trocad%C3%A9ro_Salle_des_f%C3%AAtes_-_coupe_transversale.jpg/1280px-Palais_du_Trocad%C3%A9ro_Salle_des_f%C3%AAtes_-_coupe_transversale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              1033
+            ],
+            "actual_sha256": "0b8c00ad925d27e3b9482744b34eaadb725e1bb7fa4ac9a234dba05d4f89a844",
+            "inspected": true,
+            "direct_image_tool_input": false
+          }
+        ],
+        "input_method": "Local historical reference pixels inspected with view_image; structured source-informed textual prompt used for a completely new image. No existing generated image edited.",
+        "gaps": [
+          "No measured full plan; tower bases, tower spacing and hidden facade openings remain unresolved.",
+          "Full 360-degree geometry remains incomplete. Verified local images do not authorize inventing hidden faces or assuming exact dimensions."
+        ],
+        "confidence": "osin arvio",
+        "referenceImagesActuallyPassedToTool": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "workflowDeviation": true,
+        "tripo_ready": false
+      },
+      "qa": {
+        "key": "paris-trocadero-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/sources-used.json",
+        "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/QA.md",
+        "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/SOURCE-BRIEF.md",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937",
+        "source_contact_path": null,
+        "references": [
+          {
+            "id": "T1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Palais_du_Trocadero_1890s.jpg",
+            "sha256": "f599e58582884da10d972de65dadc69c64324750bd7d9525125eb2ed6cf7f469",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "T2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T2.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Le_palais_du_Trocad%C3%A9ro,_1878.jpg",
+            "sha256": "8ecdb1111d54366fd6e4663388dcdbbaee0f0f5dfb0e9d68eadd14aa9f479b68",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "T3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Panorama_du_Trocad%C3%A9ro,_vue_prise_de_la_tour_Eiffel,_Paris,_7%C3%A8me_et_16%C3%A8me_arrondissement,_Paris._PH2792.jpg",
+            "sha256": "0aab2cf5769ff5540d94662fbdd1ae690f1940ed24e8ac710d5f028a6fc33c1a",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "T4",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Palais_du_Trocad%C3%A9ro_Salle_des_f%C3%AAtes_-_coupe_transversale.jpg",
+            "sha256": "0b8c00ad925d27e3b9482744b34eaadb725e1bb7fa4ac9a234dba05d4f89a844",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "57e573efd70578b5661561a39342c65fc57436aedd7e687f40ed599b65c980e2"
+        },
+        "status": "FAIL",
+        "confidence_label": "osin arvio",
+        "confidence_in_finding": "high",
+        "historical_phase": "Recognisably old Palais du Trocadero, with rotunda and twin towers rather than the later Chaillot palace.",
+        "main_shape": "Central rotunda, twin towers and end pavilions are recognisable, but lateral galleries are compressed so severely that the overall footprint/mass balance is wrong.",
+        "issues": [
+          {
+            "severity": "major",
+            "region": "Both wings and central-body-to-overall-width ratio",
+            "image_bbox_normalized": [
+              0.02,
+              0.51,
+              0.99,
+              0.92
+            ],
+            "finding": "T3 full-width photograph shows very long low galleries extending far beyond the compact central body; generated wings are much shorter relative to the rotunda/twin-tower group. Central body occupies a substantially larger share of the whole palace. This is a principal footprint/mass error, not microornament uncertainty.",
+            "source_refs": [
+              "T3"
+            ]
+          },
+          {
+            "severity": "moderate",
+            "region": "Rotunda upper facade and tower/roof profile",
+            "image_bbox_normalized": [
+              0.31,
+              0.02,
+              0.71,
+              0.65
+            ],
+            "finding": "Generated rotunda drum becomes a regular set of tall glazed arches and simplified conical roof; T1/T3/T4 show more articulated bays and roof transitions. Tower caps and pavilion roofs are also simplified. These reinforce caution but the decisive FAIL is the shortened wings.",
+            "source_refs": [
+              "T1",
+              "T3",
+              "T4"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "Old palace identity",
+            "Twin towers and projecting circular hall"
+          ],
+          "osin_arvio": [
+            "Tower proportions and rotunda height"
+          ],
+          "arvio": [
+            "Generated shortened wing footprint",
+            "Hidden rear and end-pavilion depth"
+          ]
+        },
+        "framing_3d": "Entire palace visible in a useful elevated oblique, but apparent completeness does not validate its materially shortened footprint.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg"
+        ],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "referenceImagesActuallyPassedToTool": [],
+        "workflowDeviation": true,
+        "tripo_ready": false,
+        "owner_approved": false,
+        "review_disposition": "May be shown in KK review only with prominent red FAIL and the concrete main-form error beside the image. Must not advance to Tripo."
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    },
+    {
+      "index": 10,
+      "key": "paris-tuileries-historic",
+      "name": "Tuileries — Pariisi",
+      "status": "FAIL",
+      "confidence": "arvio",
+      "note": "EI TRIPOON: kupoli liian suuri ja paviljonkien rytmi kadonnut.",
+      "modelOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/model-image-original.png",
+      "modelSHA256": "a9186c3d133a841b5f47a40199690f430d79fa38bd5aead4b2bd9bc05e63773b",
+      "preview": "10-model.jpg",
+      "sourceShown": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+      "sourceSHA256": "d0def5ea241ac796a2ce578dd4cdc11bc4cfb550f9acd9adcc67af3d602cf919",
+      "sourceMetadata": {
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871",
+        "source_status": "uncertain",
+        "references": [
+          {
+            "id": "U1",
+            "source_page": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Baldus,_Tuileries_from_the_Louvre,_between_1851_and_1870.jpg",
+            "creator": "Édouard Baldus (1813–1889); Library of Congress ds.04860",
+            "date": "1851–1870",
+            "license": "PD-old-100 + Public Domain Mark",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "View from Louvre identifies courtyard side. Date sits in depicted-place field; treat as catalogued range, not precise year.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+            "sha256": "d0def5ea241ac796a2ce578dd4cdc11bc4cfb550f9acd9adcc67af3d602cf919",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/%C3%89douard_Baldus%2C_Tuileries_from_the_Louvre%2C_between_1851_and_1870.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass",
+            "verified_view": "east / Carrousel-facing facade",
+            "visual_qa_note": "Intact long palace range from Louvre; central high domed pavilion and repeated windows visible, Carrousel monument in foreground. No fire damage; side/end geometry partly occluded.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/%C3%89douard_Baldus%2C_Tuileries_from_the_Louvre%2C_between_1851_and_1870.jpg/1280px-%C3%89douard_Baldus%2C_Tuileries_from_the_Louvre%2C_between_1851_and_1870.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              933
+            ],
+            "actual_sha256": "d0def5ea241ac796a2ce578dd4cdc11bc4cfb550f9acd9adcc67af3d602cf919",
+            "inspected": true,
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "U2",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Plan_of_the_Palaces_of_the_Tuileries_and_Louvre_-_btv1b84448717.jpg",
+            "creator": "Capt. Batty (drawing), S. Porter (engraving), visible on sheet; publisher Rodwell and Martin; BnF GED-5932",
+            "date": "1850s per file page",
+            "license": "PD-old-assumed, PD-US-expired and PD-France on file page",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Public domain asserted, but first tag explicitly assumes author died sufficiently long ago. Not independently measured; scale and revision to be inspected.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg",
+            "sha256": "993590044143b6624afae5317279adabb3566e8f056256a0ceed57037e1954ae",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Plan_of_the_Palaces_of_the_Tuileries_and_Louvre_-_btv1b84448717.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass-context-only",
+            "verified_view": "historical unscaled site plan",
+            "visual_qa_note": "Labeled Tuileries palace as range A, Louvre F, Carrousel B; footprint relation visible. No reliable printed metric scale identified. Drawing credited in image to Capt. Batty and engraving to S. Porter; publication phase differs from final pre-fire phase.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Plan_of_the_Palaces_of_the_Tuileries_and_Louvre_-_btv1b84448717.jpg/1280px-Plan_of_the_Palaces_of_the_Tuileries_and_Louvre_-_btv1b84448717.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              1616
+            ],
+            "actual_sha256": "993590044143b6624afae5317279adabb3566e8f056256a0ceed57037e1954ae",
+            "inspected": true,
+            "direct_image_tool_input": false
+          },
+          {
+            "id": "U3",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Paris_-_Jardin_des_Tuileries_-_avant_1871.jpg",
+            "creator": "Anonymous nineteenth-century postcard",
+            "date": "Before 1871 per description; 2013 is digital/upload metadata",
+            "license": "PD-old-100 + Public Domain Mark",
+            "license_verified_on_file_page": true,
+            "role": "historical source reference, not edit target",
+            "note": "Palace visible at far end from Place de la Concorde. Insufficient facade detail; dating is inferred from intact dome.",
+            "original_url": null,
+            "local_image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U3.jpg",
+            "sha256": "8097f09a09de7fdee7db53b4f8c4b8843ab9776340027929a2bf50ba5a4dc4b8",
+            "visual_qa": true,
+            "api_license": "Public domain",
+            "api_original_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Paris_-_Jardin_des_Tuileries_-_avant_1871.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "download_error": null,
+            "visual_qa_result": "pass-context-only",
+            "verified_view": "west / garden distant",
+            "visual_qa_note": "View through garden entrance down long tree-lined axis; palace dome faint in far background. Confirms intact garden-axis silhouette only, inadequate for facade modelling.",
+            "era_qa": "matches historical target broadly; date relies on catalogue except explicit 1724 contextual mismatch",
+            "api_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Paris_-_Jardin_des_Tuileries_-_avant_1871.jpg/1280px-Paris_-_Jardin_des_Tuileries_-_avant_1871.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "downloaded_dimensions_px": [
+              1280,
+              984
+            ],
+            "actual_sha256": "8097f09a09de7fdee7db53b4f8c4b8843ab9776340027929a2bf50ba5a4dc4b8",
+            "inspected": true,
+            "direct_image_tool_input": false
+          }
+        ],
+        "input_method": "Local historical reference pixels inspected with view_image; structured source-informed textual prompt used for a completely new image. No existing generated image edited.",
+        "gaps": [
+          "Close garden elevation, north/south ends, roof heights and measured scale remain missing.",
+          "The 1850s plan and 1851–1870 photo span renovations; target a specific consistent phase before detailed reconstruction.",
+          "Full 360-degree geometry remains incomplete. Verified local images do not authorize inventing hidden faces or assuming exact dimensions.",
+          "U2 author credits read from pixels, but date and construction phase still require institutional clarification; no metric scale identified."
+        ],
+        "confidence": "arvio",
+        "referenceImagesActuallyPassedToTool": [],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "workflowDeviation": true,
+        "tripo_ready": false
+      },
+      "qa": {
+        "key": "paris-tuileries-historic",
+        "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/model-image-original.png",
+        "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/sources-used.json",
+        "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/QA.md",
+        "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/SOURCE-BRIEF.md",
+        "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871",
+        "source_contact_path": null,
+        "references": [
+          {
+            "id": "U1",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Baldus,_Tuileries_from_the_Louvre,_between_1851_and_1870.jpg",
+            "sha256": "d0def5ea241ac796a2ce578dd4cdc11bc4cfb550f9acd9adcc67af3d602cf919",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "U2",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Plan_of_the_Palaces_of_the_Tuileries_and_Louvre_-_btv1b84448717.jpg",
+            "sha256": "993590044143b6624afae5317279adabb3566e8f056256a0ceed57037e1954ae",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": true,
+            "supplied_to_generator": false
+          },
+          {
+            "id": "U3",
+            "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U3.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Paris_-_Jardin_des_Tuileries_-_avant_1871.jpg",
+            "sha256": "8097f09a09de7fdee7db53b4f8c4b8843ab9776340027929a2bf50ba5a4dc4b8",
+            "source_record_sha256_matches": true,
+            "inspected_in_contact": false,
+            "inspected_individually": false,
+            "supplied_to_generator": false
+          }
+        ],
+        "image_integrity": {
+          "manifest_sha256_matches": true,
+          "sha256": "a9186c3d133a841b5f47a40199690f430d79fa38bd5aead4b2bd9bc05e63773b"
+        },
+        "status": "FAIL",
+        "confidence_label": "arvio",
+        "confidence_in_finding": "high",
+        "historical_phase": "Intact pre-fire palace concept, but generated generic central range does not reproduce the articulated facade/roof hierarchy in U1. U2 is contextual and from a potentially different renovation phase.",
+        "main_shape": "Long palace range with central domed pavilion is recognisable at the type level. The central dome/pavilion is oversized and intermediate pavilion changes are lost, creating a substantially altered main silhouette.",
+        "issues": [
+          {
+            "severity": "major",
+            "region": "Central dome and pavilion",
+            "image_bbox_normalized": [
+              0.35,
+              0.05,
+              0.52,
+              0.88
+            ],
+            "finding": "Generated central dome/pavilion occupies much more of the range width and height than in U1, and adds a tall glazed lantern where U1 shows a low cap. This changes the principal roof silhouette and central mass hierarchy.",
+            "source_refs": [
+              "U1"
+            ]
+          },
+          {
+            "severity": "major",
+            "region": "Wings and intermediate/end pavilion sequence",
+            "image_bbox_normalized": [
+              0.03,
+              0.2,
+              0.97,
+              0.89
+            ],
+            "finding": "Generated uniform long wings connect directly to two large terminal blocks. U1 shows distinct intermediate roof/pavilion height changes and longer lower outer ranges. U2 also shows an articulated transverse range A, not enough to certify this simplified rectangle. Scope/phase and terminal extent need resolution before geometry work.",
+            "source_refs": [
+              "U1",
+              "U2"
+            ]
+          }
+        ],
+        "confidence_map": {
+          "varma": [
+            "General long transverse palace concept",
+            "Intact pre-fire type rather than ruins"
+          ],
+          "osin_arvio": [
+            "Central position of domed pavilion"
+          ],
+          "arvio": [
+            "Dome scale/profile and lantern",
+            "Intermediate pavilion sequence, terminal extent, footprint and hidden elevations"
+          ]
+        },
+        "framing_3d": "Complete isolated front and slight side view; roof visibility is adequate to see the principal errors. Very shallow inferred back/side extent is not validated.",
+        "specific_reference_files_inspected": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg"
+        ],
+        "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+        "referenceImagesActuallyPassedToTool": [],
+        "workflowDeviation": true,
+        "tripo_ready": false,
+        "owner_approved": false,
+        "review_disposition": "May be shown in KK review only with prominent red FAIL and the concrete main-form error beside the image. Must not advance to Tripo."
+      },
+      "ownerApproved": false,
+      "tripoStarted": false
+    }
+  ],
+  "counts": {
+    "total": 10,
+    "PASS": 1,
+    "WARN": 6,
+    "FAIL": 3
+  },
+  "imagegenCalls": 10,
+  "TripoCalls": 0,
+  "retryCalls": 0,
+  "sourceInputDeviationItems": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "rootVisualSheetReview": "PASS_LAYOUT_AND_STATUS_LABELS; root viewed all10 in source-paired sheets;3FAIL not eligible forTripo",
+  "gameIntegration": false
+}

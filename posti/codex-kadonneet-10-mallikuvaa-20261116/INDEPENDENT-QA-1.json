@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "audit": "Independent visual QA of four already-generated preparation images",
+  "completed_at": "2026-11-16T19:06:27.315929+00:00",
+  "reviewer": "lost_images_independent_qa_01",
+  "scope": "Original rasters and selected source-pack contact sheets plus individual decisive references; producer QA read only after independent initial image/source comparison. No external factual claims or new sources required.",
+  "policy": "PT2470 allows varma/osin arvio/arvio. Unknown microornament alone is not a rejection. Serious principal-form disagreement is FAIL. PASS/WARN/FAIL are audit findings only, not KK approval.",
+  "owner_approved": false,
+  "tripo_started": false,
+  "queue_modified": false,
+  "imagegen_calls": 0,
+  "regenerations": 0,
+  "browser_used": false,
+  "counts": {
+    "PASS": 0,
+    "WARN": 3,
+    "FAIL": 1
+  },
+  "items": [
+    {
+      "key": "london-old-st-pauls-cathedral-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-old-st-pauls-cathedral-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-old-st-pauls-cathedral-historic/sources-used.json",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/QA-contact.jpg",
+      "references_inspected_in_contact": [
+        {
+          "id": "S1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S1.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "S2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S2.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "S3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S3.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "S4",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S4.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "S5",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg",
+          "supplied_to_generator": true
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "41d2295063fd542f473b8f53ba24340c77cbf9bd31c6eb8f8907845cf5085578"
+      },
+      "status": "WARN",
+      "confidence_label": "osin arvio",
+      "historical_phase": "Consistent with selected Hollar later pre-1666 state: classical west portico, square crossing tower without medieval tall spire.",
+      "main_shape": "Long cruciform body, nave/choir roofs, projecting transept, portico and crossing tower agree in broad form with S1-S5. No serious main-cathedral silhouette error identified.",
+      "issues": [
+        {
+          "severity": "moderate",
+          "region": "Visible south nave clerestory, above aisle roof",
+          "image_bbox_normalized": [
+            0.32,
+            0.49,
+            0.59,
+            0.63
+          ],
+          "finding": "Generated upper nave windows are circular oculi; S5 shows small upright round-headed windows. This is a visible source disagreement, not simply an undocumented hidden detail.",
+          "source_refs": [
+            "S4",
+            "S5"
+          ]
+        },
+        {
+          "severity": "moderate",
+          "region": "South nave ancillary range and walled courtyard before transept",
+          "image_bbox_normalized": [
+            0.3,
+            0.69,
+            0.7,
+            0.98
+          ],
+          "finding": "Small roofed annex is freely regularized and S1 octagonal chapter-house/cloister relation is not represented reliably; image must not imply accurate complete precinct reconstruction.",
+          "source_refs": [
+            "S1",
+            "S2",
+            "S5"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Main cathedral mass and selected historical phase",
+          "Square tower, west portico, Gothic choir division"
+        ],
+        "osin_arvio": [
+          "Nave/choir relative dimensions",
+          "Transept and nave bay spacing"
+        ],
+        "arvio": [
+          "Hidden east end/rose-window treatment and north side",
+          "South ancillary precinct, roofing and small ornament"
+        ]
+      },
+      "framing_3d": "Complete isolated church; usable oblique with visible roof and south/west faces. East facade and far side remain hidden; those are explicitly inferred, not validated by this image.",
+      "review_disposition": "May appear in KK comparison as WARN with nave-window and chapter-house/cloister mismatch explicitly beside the image; no owner approval or Tripo readiness inferred.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/stpauls/refs/S5.jpg"
+      ]
+    },
+    {
+      "key": "london-crystal-palace-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-crystal-palace-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/london-crystal-palace-historic/sources-used.json",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/QA-contact.jpg",
+      "references_inspected_in_contact": [
+        {
+          "id": "C1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C1.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "C2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C2.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "C3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C3.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "C4",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C4.jpg",
+          "supplied_to_generator": true
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "911bd338676f3ce5e7a7d6619fb069ac3ba20136a388c4a52de5cc5b2e8ffaa2"
+      },
+      "status": "WARN",
+      "confidence_label": "osin arvio",
+      "historical_phase": "Matches original Hyde Park 1851 phase; no Sydenham multiple transepts, water towers or terraces.",
+      "main_shape": "Very long low rectangular glass hall, stepped tiers and one transverse high barrel-vault centre agree with C2-C4 and subordinate retrospective C1. No serious principal-mass contradiction identified.",
+      "issues": [
+        {
+          "severity": "minor",
+          "region": "Roof module pattern, repeated facade bays and centre entrance",
+          "image_bbox_normalized": [
+            0.02,
+            0.15,
+            0.99,
+            0.84
+          ],
+          "finding": "The image is a regularized reconstruction: exact bay counts, roof microprofiles, centre entrance details and back elevation are not individually established. Keep these as osin arvio/arvio rather than verified exact geometry.",
+          "source_refs": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ]
+        },
+        {
+          "severity": "minor",
+          "region": "Far right end / canvas edge",
+          "image_bbox_normalized": [
+            0.97,
+            0.27,
+            1.0,
+            0.48
+          ],
+          "finding": "Whole silhouette is present but right margin is narrow; avoid any automatic additional crop before a future 3D input review.",
+          "source_refs": []
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "1851 Hyde Park major form and singular transept",
+          "Long modular iron/glass body and stepped roof masses"
+        ],
+        "osin_arvio": [
+          "Exact relative dimensions and glazing/bay counts",
+          "Central entrance decoration and roof module layout"
+        ],
+        "arvio": [
+          "Hidden south elevation and service details",
+          "Material colour and reflection"
+        ]
+      },
+      "framing_3d": "Whole building isolated in one image; useful long-side/end/roof coverage. Extreme elongated form means small details are tiny; opposite long elevation is hidden.",
+      "review_disposition": "May appear as WARN in KK comparison with regularized bays and unseen south side labeled; no main-shape rejection indicated.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/crystal/refs/C4.jpg"
+      ]
+    },
+    {
+      "key": "amsterdam-paleis-voor-volksvlijt-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/amsterdam-paleis-voor-volksvlijt-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/amsterdam-paleis-voor-volksvlijt-historic/sources-used.json",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/QA-contact.jpg",
+      "references_inspected_in_contact": [
+        {
+          "id": "V1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V1.jpg",
+          "supplied_to_generator": false
+        },
+        {
+          "id": "V2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V2.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "V3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V3.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "V4",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V4.jpg",
+          "supplied_to_generator": true
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "4fcd73077d3716778a6eba6826673514a970429fc6baae2fb2826d268e0d26a5"
+      },
+      "status": "WARN",
+      "confidence_label": "osin arvio",
+      "historical_phase": "Intact main palace, approximately later nineteenth century; no fire ruins, later surrounding shopping arcades or separate garden bandstand fused in.",
+      "main_shape": "Long iron/glass body, central tall drum/dome/statue, central transverse entrance projection, decorated end arches and lower side roofs broadly agree with V2/V3/V4. No serious main-mass contradiction identified.",
+      "issues": [
+        {
+          "severity": "minor",
+          "region": "Central lower entrance, subsidiary end arches, roof ornaments and statue",
+          "image_bbox_normalized": [
+            0.23,
+            0.01,
+            0.95,
+            0.91
+          ],
+          "finding": "Exact lower entrance structure is partially obscured in photographs; repeated glazing, subsidiary gables, statue identity/detail and ornament have been regularized. Label these as interpretation; principal hall and dome remain source supported.",
+          "source_refs": [
+            "V2",
+            "V3",
+            "V4"
+          ]
+        },
+        {
+          "severity": "minor",
+          "region": "Top statue / upper canvas margin",
+          "image_bbox_normalized": [
+            0.43,
+            0.0,
+            0.48,
+            0.12
+          ],
+          "finding": "Statue is fully present but sits close to top edge; preserve full silhouette in any later 3D input framing.",
+          "source_refs": []
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Main palace rather than later arcades",
+          "High central drum/dome and statue; longitudinal halls and lower side roofs"
+        ],
+        "osin_arvio": [
+          "Relative dome/body proportions",
+          "Visible entrance and end-gable reconstruction"
+        ],
+        "arvio": [
+          "Unseen opposite side and roof junctions",
+          "Exact statue, minor ornament and material appearance"
+        ]
+      },
+      "framing_3d": "Whole palace isolated; roof, long facade and end are legible. Top silhouette has narrow margin and far side remains inferred.",
+      "review_disposition": "May appear as WARN in KK comparison; evidence supports principal form while fine geometry remains interpretation.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/volksvlijt/refs/V4.jpg"
+      ]
+    },
+    {
+      "key": "paris-galerie-des-machines-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/paris-galerie-des-machines-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost01/paris-galerie-des-machines-historic/sources-used.json",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/QA-contact.jpg",
+      "references_inspected_in_contact": [
+        {
+          "id": "M1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "M2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M2.jpg",
+          "supplied_to_generator": true
+        },
+        {
+          "id": "M3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+          "supplied_to_generator": true
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "f131e2c44c8175215d9b2240de82ae176e210d4308c8990d09d8d9965664255c"
+      },
+      "status": "FAIL",
+      "confidence_label": "arvio - material main-section disagreement",
+      "historical_phase": "Recognizable circa-1889 principal end, with low pointed roof outline and large fan-shaped glazing; no obvious different-period palace substituted.",
+      "main_shape": "Front gable is recognizable, but generated longitudinal body/side-gallery section materially differs from the supplied structural section. This is larger than uncertain ornament.",
+      "issues": [
+        {
+          "severity": "major",
+          "region": "Near-side long gallery, exposed main sidewall and roof spring/eave relation",
+          "image_bbox_normalized": [
+            0.01,
+            0.17,
+            0.43,
+            0.9
+          ],
+          "finding": "M3 shows a two-level side gallery whose roof reaches approximately the main roof spring/eave height, near half the overall arch height. Generated image has a very low single-strip gallery and a large extra exposed tall glazed sidewall above it, with main roof spring/eaves substantially higher. This changes the principal transverse section and longitudinal silhouette. The original M1 photo also shows a substantially taller side-gallery body relative to the main front, though its lower portion is obscured.",
+          "source_refs": [
+            "M3",
+            "M1"
+          ]
+        },
+        {
+          "severity": "moderate",
+          "region": "Hidden rear, long facade bay treatment and roof glazing",
+          "image_bbox_normalized": [
+            0.02,
+            0.08,
+            0.69,
+            0.61
+          ],
+          "finding": "Exterior regularization and hidden surfaces remain interpretation. These alone would warrant WARN, but do not account for the major side-gallery/main-roof relationship error.",
+          "source_refs": [
+            "M1",
+            "M2",
+            "M3"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Recognizable source-based principal front motif",
+          "Long rectangular single great hall; pointed rather than semicircular ridge"
+        ],
+        "osin_arvio": [
+          "Front glazing/fan and truss decoration",
+          "Footprint repetition and rear treatment"
+        ],
+        "arvio": [
+          "Current generated gallery/body section is materially unreliable",
+          "Long-side glazing and exact roof panel layout"
+        ]
+      },
+      "framing_3d": "Complete isolated silhouette with useful oblique roof coverage, but the low side gallery and extra tall main sidewall would be promoted directly into 3D geometry if used uncorrected.",
+      "review_disposition": "Show only as FAIL/diagnostic in KK comparison with M3 directly beside it. Do not promote as an acceptable historic main-shape candidate. No regeneration or correction authorized by this audit.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg"
+      ]
+    }
+  ]
+}

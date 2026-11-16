@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "audit": "Independent visual QA of six already-generated lost02 preparation images",
+  "completed_at": "2026-11-16T19:12:41.494165+00:00",
+  "reviewer": "lost_images_independent_qa_02",
+  "scope": "Inspected all six original rasters; Haringpakker, townhall and Waag historical contact sheets plus decisive individual source images; Euston E1/E2, Trocadero T1/T3/T4, Tuileries U1/U2 individually. Producer manifest, sources-used, QA and source briefs read. No new source research or generative calls.",
+  "policy": "Judge principal mass, footprint, towers, roof profile and major arcade. Unknown fine ornament alone does not fail. PASS/WARN/FAIL describe visual fitness for the ten-object KK comparison, never production approval. The text-only tool-input deviation is recorded separately and is not itself a visual failure.",
+  "owner_approved": false,
+  "tripo_started": false,
+  "queue_modified": false,
+  "imagegen_calls": 0,
+  "regenerations": 0,
+  "browser_used": false,
+  "workflowDeviation": true,
+  "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+  "referenceImagesActuallyPassedToTool": [],
+  "counts": {
+    "WARN": 3,
+    "PASS": 1,
+    "FAIL": 2
+  },
+  "items": [
+    {
+      "key": "amsterdam-haringpakkerstoren-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/sources-used.json",
+      "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/QA.md",
+      "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-haringpakkerstoren-historic/SOURCE-BRIEF.md",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/QA-contact.jpg",
+      "references": [
+        {
+          "id": "H1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H1.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Abraham_van_der_Hart,_Afb_010056915634.jpg",
+          "sha256": "d879ea4ac8094f19bb25bb509fa924add29d572ae758c686d022252a48d440ab",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "H2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Abraham_van_der_Hart,_Afb_010056915635.jpg",
+          "sha256": "a8996d638f8fc40bebc637e10d12bb4eef914828da329598e3958d396bf01e8a",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "H3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H3.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Willem_Writs,_Afb_010097011477.jpg",
+          "sha256": "94980c1bb94b408a06a984dedc7e2c3b0970a882122e98147f68c60ff4edbae0",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "H4",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H4.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:SA_20797-De_Haringpakkerstoren_gezien_vanaf_het_IJ-De_Haringpakkerstoren_gezien_naar_de_Haarlemmersluis.jpg",
+          "sha256": "e941a41dd98c0e7d65726d3a27fc10aab5ee9e979d6bb30e6d510f8bc77e86e7",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "cd919d36a66460f77f4b912fe91de8fe0482764ae329848a2c26bb8b1878dffe"
+      },
+      "status": "WARN",
+      "confidence_label": "osin arvio",
+      "confidence_in_finding": "high",
+      "historical_phase": "Historic Haringpakkerstoren type; H2 is a later catalogued technical sheet than H3/H4 harbour scenes, so exact cross-period stage details are not asserted.",
+      "main_shape": "Broad faceted masonry shaft, much narrower clock transition, two narrowing open upper stages and curved cap/fish vane retain the characteristic stepped tower silhouette. Main shaft-to-superstructure balance is broadly compatible with H2-H4.",
+      "issues": [
+        {
+          "severity": "moderate",
+          "region": "Transition between lower belfry and upper open lantern",
+          "image_bbox_normalized": [
+            0.39,
+            0.16,
+            0.61,
+            0.27
+          ],
+          "finding": "Generated curved roof is below the balustraded collar; H2 puts its balustraded collar below the intervening curved stage. The order/shape of this silhouette transition is regularized rather than a faithful profile.",
+          "source_refs": [
+            "H2"
+          ]
+        },
+        {
+          "severity": "minor",
+          "region": "Masonry/clock stage and upper details",
+          "finding": "Clock surround, decorative finials and apparent exposed bell are interpretive. These do not independently invalidate the recognisable main tower, but the source phase and openings should stay qualified.",
+          "source_refs": [
+            "H2",
+            "H3",
+            "H4"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Stepped polygonal shaft and narrowing tower identity",
+          "No adjacent church dome incorporated"
+        ],
+        "osin_arvio": [
+          "Relative stage widths and heights",
+          "Clock transition and curved upper-stage geometry"
+        ],
+        "arvio": [
+          "Fine openings and hidden faces",
+          "Exact consistency of technical-sheet and harbour-scene phases"
+        ]
+      },
+      "framing_3d": "Entire tower and finial visible; camera is nearly level, with little roof-top or footprint visibility. Image alone cannot establish full polygonal geometry.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg"
+      ],
+      "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+      "referenceImagesActuallyPassedToTool": [],
+      "workflowDeviation": true,
+      "tripo_ready": false,
+      "owner_approved": false,
+      "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+    },
+    {
+      "key": "amsterdam-medieval-town-hall-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/sources-used.json",
+      "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/QA.md",
+      "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-medieval-town-hall-historic/SOURCE-BRIEF.md",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/QA-contact.jpg",
+      "references": [
+        {
+          "id": "T1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T1.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Oude_stadhuis_op_de_Dam_Amsterdam_001.jpg",
+          "sha256": "69f3b8ed629c3c2b5b6ecb349132c6b74c7184afc8c0c2c4ce5b3dd94d01ef43",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "T2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Reproductie_van_tekening_door_P.Saenredam_1641_verzameling_Teylers_Stichting_Haarlem_-_Amsterdam_-_20011569_-_RCE.jpg",
+          "sha256": "d819c14d1f5a2b8b31871e2d8f24e556305cce1855a56eceab2a291ab25ae9bb",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "T3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T3.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_het_Oude_Stadhuis_te_Amsterdam_%27t_Oude_Stadt_huys_(titel_op_object),_RP-P-AO-21-3-2.jpg",
+          "sha256": "78fac082042316a84490ad20174c17924db12ef70be6a4d071fe6e1d278a8562",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "4d597878d5bad55628214695537e06ef2695b64ccf0965c7ea07a2c71459d59c"
+      },
+      "status": "WARN",
+      "confidence_label": "osin arvio",
+      "confidence_in_finding": "high",
+      "historical_phase": "Old asymmetric civic compound represented by T2/T3, not the later classical Royal Palace. T2/T3 are related historical visual traditions, not independent dimensional surveys.",
+      "main_shape": "Three-bay arcaded hall, broad hipped roof, rising square tower, separate right gabled range and receding left ranges preserve the key asymmetric mass hierarchy.",
+      "issues": [
+        {
+          "severity": "moderate",
+          "region": "Main ground-floor arcade",
+          "image_bbox_normalized": [
+            0.3,
+            0.73,
+            0.7,
+            0.97
+          ],
+          "finding": "All three generated arcade heads are pointed; T2/T3 show broad round/segmental heads. Bay count and arcade location match, but this prominent facade form is a visible source disagreement.",
+          "source_refs": [
+            "T2",
+            "T3"
+          ]
+        },
+        {
+          "severity": "moderate",
+          "region": "Square tower and connection to right gabled range",
+          "image_bbox_normalized": [
+            0.49,
+            0.02,
+            0.75,
+            0.56
+          ],
+          "finding": "Tower is widened and treated as a generic church-like block with large open pointed belfry windows. T2/T3 show a narrower, more vertically articulated civic tower. Right range and intervening passage are regularized; rear roof junctions are not established.",
+          "source_refs": [
+            "T1",
+            "T2",
+            "T3"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Asymmetric compound identity",
+          "Arcaded front hall, hipped roof, tower and right gabled range"
+        ],
+        "osin_arvio": [
+          "Relative principal mass dimensions",
+          "Arcade bay arrangement"
+        ],
+        "arvio": [
+          "Tower openings and articulation",
+          "Rear roof intersections, passage and unseen footprint"
+        ]
+      },
+      "framing_3d": "Whole isolated compound shown in a useful front/side oblique; rear mass and roof connections are inferred. No claim of exact tracing of T1.",
+      "specific_reference_files_inspected": [],
+      "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+      "referenceImagesActuallyPassedToTool": [],
+      "workflowDeviation": true,
+      "tripo_ready": false,
+      "owner_approved": false,
+      "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+    },
+    {
+      "key": "amsterdam-waag-op-dam-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/sources-used.json",
+      "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/QA.md",
+      "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/amsterdam-waag-op-dam-historic/SOURCE-BRIEF.md",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag",
+      "source_contact_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/QA-contact.jpg",
+      "references": [
+        {
+          "id": "W1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W1.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Waag_op_de_Dam_te_Amsterdam_De_Waegh_op_den_Dam_(titel_op_object),_RP-P-AO-25-16.jpg",
+          "sha256": "194e3134e28bfee545594d733b4ededd2a126a227c7d042ad6ba2f1d52dc7e6d",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "W2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Gezicht_op_het_Stadhuis,_de_Nieuwe_Kerk_en_de_Waag_op_de_Dam_te_Amsterdam_Gezicht_van_het_Stadhuis,_de_Nieuwe_Kerk_en_de_Waag_op_den_Dam_Vue_de_la_Maison_de_Ville,_l%27Eglise_Neuve_et_le_Poids_sur_le_Dam_(titel_op_object),_RP-P-H-H-1346.jpg",
+          "sha256": "075f22a76cef32f71fac0933057b9f30b5d68ce4c3b35d60be2536dec92b984a",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "W3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/refs/W3.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Plattegrond_van_de_Dam_met_de_posities_van_de_schutterijen,_28_juni_1748_Plan_van_den_Dam_te_Amsterdam,_met_aanwyzing_van_de_posteringen_der_Burger_Compagnien,_den_28_juny._1748_(titel_op_object),_RP-P-AO-28-67.jpg",
+          "sha256": "cdac143b5914bce93f69e1f67dcd9034a96080d3fdb3df5fb826033a0cebf93b",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": true,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "298674c8766cd4318b4f9ba81ce99d9df0be7e313b86f723acb671abf2a720d2"
+      },
+      "status": "PASS",
+      "confidence_label": "osin arvio",
+      "confidence_in_finding": "medium-high",
+      "historical_phase": "Historical freestanding Dam weigh house type shown by W1/W2, distinct from the surviving towered Nieuwmarkt Waag. Artwork phase differences remain unresolved.",
+      "main_shape": "Compact masonry weigh-house, steep hipped roof with tiered dormers, paired external stairs meeting a raised end entrance, lower central opening and subordinate side canopy all agree with the distinctive W1 form. No serious main-form substitution identified.",
+      "issues": [
+        {
+          "severity": "minor",
+          "region": "Roof shoulder, dormers and stairs",
+          "finding": "Historical engraved roof-edge balustrade is simplified to a plain cornice; chimney/dormer detailing and stair balustrades are regularized. Exact counts and ornament remain interpretive and are not grounds for main-form rejection.",
+          "source_refs": [
+            "W1",
+            "W2"
+          ]
+        },
+        {
+          "severity": "uncertainty",
+          "region": "Long axis and hidden rear",
+          "finding": "Generated long-axis proportion cannot be certified from the unscaled contextual W3 plan and perspective artwork. Keep footprint/depth approximate; PASS applies only to principal visible form for KK comparison.",
+          "source_refs": [
+            "W1",
+            "W3"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Distinctive stair-end facade",
+          "Steep hipped roof, tiered dormer skyline and side canopy"
+        ],
+        "osin_arvio": [
+          "Width/height and long-axis balance",
+          "Broad stair and canopy geometry"
+        ],
+        "arvio": [
+          "Exact measured footprint and rear",
+          "Fine dormer, chimney and ornament counts"
+        ]
+      },
+      "framing_3d": "Entire building visible with useful stair-end/long-side oblique and visible roof. Far side/rear geometry remains unverified.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/waag/QA-W1-detail.jpg"
+      ],
+      "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+      "referenceImagesActuallyPassedToTool": [],
+      "workflowDeviation": true,
+      "tripo_ready": false,
+      "owner_approved": false,
+      "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+    },
+    {
+      "key": "london-euston-arch-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/sources-used.json",
+      "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/QA.md",
+      "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/london-euston-arch-historic/SOURCE-BRIEF.md",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961",
+      "source_contact_path": null,
+      "references": [
+        {
+          "id": "E1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Euston_Arch_(8764275779).jpg",
+          "sha256": "d910e87eb3f474aad1e748d42175311574c254ee58aaa345d5a678a4eef2fc96",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "E2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Euston_Arch_1896.jpg",
+          "sha256": "22c080a406a0babf72be9107aa67d380570be7995261411cb7151d73d9046450",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "f93f4c061cc15679df75314f0262bf317ad049fc2b66dae0a87f4313569154da"
+      },
+      "status": "WARN",
+      "confidence_label": "osin arvio",
+      "confidence_in_finding": "high",
+      "historical_phase": "Intact Euston entrance portico type in historical E1/E2 photographs, before demolition; exact rear depth remains unsupported.",
+      "main_shape": "Triangular pediment, Doric entablature, outer square piers, two visible central fluted columns and three intervening openings match the photographed support composition. Generated form is visibly broader/squatter.",
+      "issues": [
+        {
+          "severity": "moderate",
+          "region": "Whole portico elevation",
+          "image_bbox_normalized": [
+            0.08,
+            0.03,
+            0.94,
+            0.95
+          ],
+          "finding": "Generated front is wider relative to its column/pier height than E1/E2; the roof/entablature dominates more and the supporting shafts read shorter. This is a proportional correction issue while the principal portico type remains legible.",
+          "source_refs": [
+            "E1",
+            "E2"
+          ]
+        },
+        {
+          "severity": "uncertainty",
+          "region": "Visible side depth and rear support masses",
+          "finding": "Deep roof and rear/side masonry masses are inferred. E1/E2 are frontal views and do not prove this depth or rear arrangement.",
+          "source_refs": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Pediment and Doric portico identity",
+          "Outer square piers and two visible central fluted columns in photographed front"
+        ],
+        "osin_arvio": [
+          "Overall front proportions"
+        ],
+        "arvio": [
+          "Roof depth and rear supports",
+          "Hidden geometry"
+        ]
+      },
+      "framing_3d": "Complete isolated structure with slightly elevated front/side view. This camera exposes an inferred deep side; use photos for front proportions and do not infer validated 360-degree geometry.",
+      "source_metadata_correction": "E2 visual_qa_note says four front columns; inspected pixels show outer square piers and two central fluted columns. No missing-column failure is asserted from that prose.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg"
+      ],
+      "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+      "referenceImagesActuallyPassedToTool": [],
+      "workflowDeviation": true,
+      "tripo_ready": false,
+      "owner_approved": false,
+      "review_disposition": "May be shown in KK comparison with status and listed uncertainty/mismatch beside image. This audit is not owner approval and does not authorize Tripo."
+    },
+    {
+      "key": "paris-trocadero-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/sources-used.json",
+      "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/QA.md",
+      "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-trocadero-historic/SOURCE-BRIEF.md",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937",
+      "source_contact_path": null,
+      "references": [
+        {
+          "id": "T1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Palais_du_Trocadero_1890s.jpg",
+          "sha256": "f599e58582884da10d972de65dadc69c64324750bd7d9525125eb2ed6cf7f469",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "T2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Le_palais_du_Trocad%C3%A9ro,_1878.jpg",
+          "sha256": "8ecdb1111d54366fd6e4663388dcdbbaee0f0f5dfb0e9d68eadd14aa9f479b68",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "T3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Panorama_du_Trocad%C3%A9ro,_vue_prise_de_la_tour_Eiffel,_Paris,_7%C3%A8me_et_16%C3%A8me_arrondissement,_Paris._PH2792.jpg",
+          "sha256": "0aab2cf5769ff5540d94662fbdd1ae690f1940ed24e8ac710d5f028a6fc33c1a",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "T4",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Palais_du_Trocad%C3%A9ro_Salle_des_f%C3%AAtes_-_coupe_transversale.jpg",
+          "sha256": "0b8c00ad925d27e3b9482744b34eaadb725e1bb7fa4ac9a234dba05d4f89a844",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "57e573efd70578b5661561a39342c65fc57436aedd7e687f40ed599b65c980e2"
+      },
+      "status": "FAIL",
+      "confidence_label": "osin arvio",
+      "confidence_in_finding": "high",
+      "historical_phase": "Recognisably old Palais du Trocadero, with rotunda and twin towers rather than the later Chaillot palace.",
+      "main_shape": "Central rotunda, twin towers and end pavilions are recognisable, but lateral galleries are compressed so severely that the overall footprint/mass balance is wrong.",
+      "issues": [
+        {
+          "severity": "major",
+          "region": "Both wings and central-body-to-overall-width ratio",
+          "image_bbox_normalized": [
+            0.02,
+            0.51,
+            0.99,
+            0.92
+          ],
+          "finding": "T3 full-width photograph shows very long low galleries extending far beyond the compact central body; generated wings are much shorter relative to the rotunda/twin-tower group. Central body occupies a substantially larger share of the whole palace. This is a principal footprint/mass error, not microornament uncertainty.",
+          "source_refs": [
+            "T3"
+          ]
+        },
+        {
+          "severity": "moderate",
+          "region": "Rotunda upper facade and tower/roof profile",
+          "image_bbox_normalized": [
+            0.31,
+            0.02,
+            0.71,
+            0.65
+          ],
+          "finding": "Generated rotunda drum becomes a regular set of tall glazed arches and simplified conical roof; T1/T3/T4 show more articulated bays and roof transitions. Tower caps and pavilion roofs are also simplified. These reinforce caution but the decisive FAIL is the shortened wings.",
+          "source_refs": [
+            "T1",
+            "T3",
+            "T4"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "Old palace identity",
+          "Twin towers and projecting circular hall"
+        ],
+        "osin_arvio": [
+          "Tower proportions and rotunda height"
+        ],
+        "arvio": [
+          "Generated shortened wing footprint",
+          "Hidden rear and end-pavilion depth"
+        ]
+      },
+      "framing_3d": "Entire palace visible in a useful elevated oblique, but apparent completeness does not validate its materially shortened footprint.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg"
+      ],
+      "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+      "referenceImagesActuallyPassedToTool": [],
+      "workflowDeviation": true,
+      "tripo_ready": false,
+      "owner_approved": false,
+      "review_disposition": "May be shown in KK review only with prominent red FAIL and the concrete main-form error beside the image. Must not advance to Tripo."
+    },
+    {
+      "key": "paris-tuileries-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/model-image-original.png",
+      "sources_used_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/sources-used.json",
+      "producer_qa_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/QA.md",
+      "source_brief_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost02/paris-tuileries-historic/SOURCE-BRIEF.md",
+      "source_package": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871",
+      "source_contact_path": null,
+      "references": [
+        {
+          "id": "U1",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Baldus,_Tuileries_from_the_Louvre,_between_1851_and_1870.jpg",
+          "sha256": "d0def5ea241ac796a2ce578dd4cdc11bc4cfb550f9acd9adcc67af3d602cf919",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "U2",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Plan_of_the_Palaces_of_the_Tuileries_and_Louvre_-_btv1b84448717.jpg",
+          "sha256": "993590044143b6624afae5317279adabb3566e8f056256a0ceed57037e1954ae",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": true,
+          "supplied_to_generator": false
+        },
+        {
+          "id": "U3",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U3.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Paris_-_Jardin_des_Tuileries_-_avant_1871.jpg",
+          "sha256": "8097f09a09de7fdee7db53b4f8c4b8843ab9776340027929a2bf50ba5a4dc4b8",
+          "source_record_sha256_matches": true,
+          "inspected_in_contact": false,
+          "inspected_individually": false,
+          "supplied_to_generator": false
+        }
+      ],
+      "image_integrity": {
+        "manifest_sha256_matches": true,
+        "sha256": "a9186c3d133a841b5f47a40199690f430d79fa38bd5aead4b2bd9bc05e63773b"
+      },
+      "status": "FAIL",
+      "confidence_label": "arvio",
+      "confidence_in_finding": "high",
+      "historical_phase": "Intact pre-fire palace concept, but generated generic central range does not reproduce the articulated facade/roof hierarchy in U1. U2 is contextual and from a potentially different renovation phase.",
+      "main_shape": "Long palace range with central domed pavilion is recognisable at the type level. The central dome/pavilion is oversized and intermediate pavilion changes are lost, creating a substantially altered main silhouette.",
+      "issues": [
+        {
+          "severity": "major",
+          "region": "Central dome and pavilion",
+          "image_bbox_normalized": [
+            0.35,
+            0.05,
+            0.52,
+            0.88
+          ],
+          "finding": "Generated central dome/pavilion occupies much more of the range width and height than in U1, and adds a tall glazed lantern where U1 shows a low cap. This changes the principal roof silhouette and central mass hierarchy.",
+          "source_refs": [
+            "U1"
+          ]
+        },
+        {
+          "severity": "major",
+          "region": "Wings and intermediate/end pavilion sequence",
+          "image_bbox_normalized": [
+            0.03,
+            0.2,
+            0.97,
+            0.89
+          ],
+          "finding": "Generated uniform long wings connect directly to two large terminal blocks. U1 shows distinct intermediate roof/pavilion height changes and longer lower outer ranges. U2 also shows an articulated transverse range A, not enough to certify this simplified rectangle. Scope/phase and terminal extent need resolution before geometry work.",
+          "source_refs": [
+            "U1",
+            "U2"
+          ]
+        }
+      ],
+      "confidence_map": {
+        "varma": [
+          "General long transverse palace concept",
+          "Intact pre-fire type rather than ruins"
+        ],
+        "osin_arvio": [
+          "Central position of domed pavilion"
+        ],
+        "arvio": [
+          "Dome scale/profile and lantern",
+          "Intermediate pavilion sequence, terminal extent, footprint and hidden elevations"
+        ]
+      },
+      "framing_3d": "Complete isolated front and slight side view; roof visibility is adequate to see the principal errors. Very shallow inferred back/side extent is not validated.",
+      "specific_reference_files_inspected": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg"
+      ],
+      "sourceInputMode": "text-only; references viewed by agent but not supplied to image tool",
+      "referenceImagesActuallyPassedToTool": [],
+      "workflowDeviation": true,
+      "tripo_ready": false,
+      "owner_approved": false,
+      "review_disposition": "May be shown in KK review only with prominent red FAIL and the concrete main-form error beside the image. Must not advance to Tripo."
+    }
+  ]
+}
