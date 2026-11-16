@@ -1,0 +1,152 @@
+{
+  "task": "PT2479 Bastille Bv2/C multiview 2D preparation",
+  "tool": "built-in image_gen__imagegen",
+  "max_calls": 4,
+  "actual_calls": 4,
+  "per_part_calls": {
+    "B": 2,
+    "C": 2
+  },
+  "automatic_retries": 0,
+  "new_complete_generation_each": true,
+  "local_pixel_edits": false,
+  "old_3D_inputs": false,
+  "Tripo_actions": false,
+  "browser_actions": false,
+  "mail_queue_actions": false,
+  "anchors": [
+    {
+      "part": "B",
+      "source": "../model-sheet/B-east-south-v2.png",
+      "file": "B/B-SW-anchor-original.png",
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+      "bytes": 1336917,
+      "dimensions": [
+        1306,
+        1205
+      ],
+      "mode": "RGB",
+      "source_unchanged": true
+    },
+    {
+      "part": "C",
+      "source": "../model-sheet/C-low-division-wing-v1.png",
+      "file": "C/C-SE-anchor-original.png",
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9",
+      "bytes": 1912586,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "source_unchanged": true
+    }
+  ],
+  "reference_hashes": [
+    {
+      "file": "../model-sheet/B-east-south-v2.png",
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49"
+    },
+    {
+      "file": "../model-sheet/B-v2-footprint-geometry-reference.png",
+      "sha256": "f32c2a86f7815f987eb12014198b7475f7c9025daeec39b42674f86b147b9e98"
+    },
+    {
+      "file": "../model-sheet/C-low-division-wing-v1.png",
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9"
+    },
+    {
+      "file": "../model-sheet/assembly-fit-plan-v2.png",
+      "sha256": "d852ddff9e882014ca823f54a3cfb249aa8bb1da68c2486647a7d34bb48b755a"
+    },
+    {
+      "file": "../model-sheet/assembly-fit-plan-v2.svg",
+      "sha256": "5dd1bf2d41575699b23a3e03636003dfd7af6f0f8b3f306212d46ccf88c224ec"
+    }
+  ],
+  "generations": [
+    {
+      "part": "B",
+      "view": "SE",
+      "request_file": "B/request-SE-v1.json",
+      "prompt_file": "B/prompt-SE-v1.txt",
+      "output_file": "B/B-SE-v1.png",
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-9a86f541-9a62-4494-9596-32fc166dcf96.png",
+      "started_utc": "2026-11-16 20:10:15 UTC",
+      "output_hint": "Generated images are saved to /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6 as /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-9a86f541-9a62-4494-9596-32fc166dcf96.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "c6fc9088a48e52a5b47487c8aac349518a319ab52c174f77e7c456a5d84b1027",
+      "bytes": 1369169,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "copy_matches_tool_original": true,
+      "request_sha256": "4180f1caa3be85df23a298a7012e486bf1bbbf8f306893f0b99d269ff63f41f8",
+      "prompt_sha256": "13ce2f6c87240a0c0a6cc5c68bf8f052eebf5aeac035334222b86a79f625acdf"
+    },
+    {
+      "part": "B",
+      "view": "NW",
+      "request_file": "B/request-NW-v1.json",
+      "prompt_file": "B/prompt-NW-v1.txt",
+      "output_file": "B/B-NW-v1.png",
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-f1e94b54-d304-43a8-a53c-e976e0c6812a.png",
+      "started_utc": "2026-11-16 20:10:49 UTC",
+      "output_hint": "Generated images are saved to /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6 as /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-f1e94b54-d304-43a8-a53c-e976e0c6812a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "c1b943276bf3c19ae4a5e034721e8198e1c32f14def5aa939c465e520d4502da",
+      "bytes": 1395444,
+      "dimensions": [
+        1306,
+        1205
+      ],
+      "mode": "RGB",
+      "copy_matches_tool_original": true,
+      "request_sha256": "eb467e56cf21b18f3bb28cd847204b18aeaa1fec49300e0965aefd78238d7732",
+      "prompt_sha256": "d9a68a43c45e61f5fa4c46d1c0a04a803741fe4c5e0ef7320ae6657913ca94ff"
+    },
+    {
+      "part": "C",
+      "view": "NW",
+      "request_file": "C/request-NW-v1.json",
+      "prompt_file": "C/prompt-NW-v1.txt",
+      "output_file": "C/C-NW-v1.png",
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-0dc01f83-c407-4b86-b59e-70b670ad1da4.png",
+      "started_utc": "2026-11-16 20:11:19 UTC",
+      "output_hint": "Generated images are saved to /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6 as /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-0dc01f83-c407-4b86-b59e-70b670ad1da4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "9e62d7de1921b43e903b412315b0f9f23ec6255c879fbe7fda92361c5fdc705f",
+      "bytes": 1788948,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "copy_matches_tool_original": true,
+      "request_sha256": "5034650c7ccc0810d41720ca2f7f948c6d2bdaa5942733259af4163172a596be",
+      "prompt_sha256": "2168da851dc50a875a1e2665a1a6d37f2030f6d432c5e28b58a63d12ad4405e9"
+    },
+    {
+      "part": "C",
+      "view": "SW",
+      "request_file": "C/request-SW-v1.json",
+      "prompt_file": "C/prompt-SW-v1.txt",
+      "output_file": "C/C-SW-v1.png",
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-3dc71476-6a89-4d8c-be08-7ec9c528139b.png",
+      "started_utc": "2026-11-16 20:11:42 UTC",
+      "output_hint": "Generated images are saved to /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6 as /Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5f9-4979-7901-96b6-afa6d4941ad6/exec-3dc71476-6a89-4d8c-be08-7ec9c528139b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "sha256": "574d85c6972029df6000c3ca992afd64443f35c564a792b499e7fa580700a600",
+      "bytes": 1844269,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "copy_matches_tool_original": true,
+      "request_sha256": "1c536eec667125aeb2c3fc27c5f8f289ad3156a81c2b4d5799509966456b4c38",
+      "prompt_sha256": "295850f236d65c81c083505df61458f6fffff2a552d029dfa30860fffc22d791"
+    }
+  ],
+  "completed_utc": "2026-11-16T20:12:37.156600+00:00",
+  "status": "WARN: producer visual QA; exact cross-view mesh identity and metric assembly not proven",
+  "approval_claim": false
+}

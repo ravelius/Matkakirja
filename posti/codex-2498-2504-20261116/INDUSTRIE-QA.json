@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reportType": "Independent full-new-candidate QA",
+  "createdAt": "2026-11-16T20:11:51.381703+00:00",
+  "reviewer": "qa2496_7 independent agent",
+  "method": "Viewed complete new original, all actual passed references again, and corresponding preserved previous candidate. Recomputed source/new/previous/tool-original hashes; compared input to preflight and checked actual producer invocation. No generation, external research, browser, downloads, queue, mail, game or Tripo action. This is the ninth/tenth assigned candidate review only.",
+  "entries": [
+    {
+      "buildingKey": "paris-palais-de-lindustrie-built1855-1897-oblique2498",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/industrie2498-oblique/original.png",
+      "imageSHA256": "73f846850455683796db738dc020a9171ee5d63358f102ce5c530df93b5660a4",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-d4cd-7b93-88f6-0a2c4f535551/exec-7a102031-a336-427e-8e64-911df057fa05.png",
+      "originalToolOutputSHA256Match": true,
+      "independentlyViewedFullOriginal": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P6.jpg",
+          "sourceRole": "Primary as-built broad exterior photograph. Actual projecting central portal flanked by five-bay pavilions, then long recessed lower wings; visible low curved/sloping glazed roof portions.",
+          "expectedSHA256": "3384b712498079ff381be6b44a3d2cd6d2997cfceda3127e87aabdc4fb536329",
+          "actualSHA256": "3384b712498079ff381be6b44a3d2cd6d2997cfceda3127e87aabdc4fb536329",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P1.jpg",
+          "sourceRole": "Actual exterior photograph catalogued1889; central portal depth, tall single arch, paired Corinthian columns, sculpture groups, long arcade and part of curved roof.",
+          "expectedSHA256": "4f99563a73e3fda3e6c14cd23b5e94b99ecd2bb411029f2d6ce58a403854e7c2",
+          "actualSHA256": "4f99563a73e3fda3e6c14cd23b5e94b99ecd2bb411029f2d6ce58a403854e7c2",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P3.jpg",
+          "sourceRole": "Actual Baldus exterior photograph1850s–60s: central portal and flanking five-bay pavilions, real roof eaves/sloping material, facade proportions.",
+          "expectedSHA256": "d4fff1eb8dbb0dfd2c915f577074df13c36f35516f07dece28f26787d7e7d02c",
+          "actualSHA256": "d4fff1eb8dbb0dfd2c915f577074df13c36f35516f07dece28f26787d7e7d02c",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/refs/P5.jpg",
+          "sourceRole": "Actual interior photograph catalogued1857: central longitudinal iron-and-glass barrel vault and two-level internal galleries only. Do not reproduce garden, stereo borders or interior as exterior.",
+          "expectedSHA256": "4a5d9004093328ac794e4a61a9c69e7669a8ce7ce18be859bc54ac0a3e53c9f8",
+          "actualSHA256": "4a5d9004093328ac794e4a61a9c69e7669a8ce7ce18be859bc54ac0a3e53c9f8",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/industrie2498-oblique/imagegen-input.json",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "referenceOrderMatches": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-52-01a1e5e6-d4cd-7b93-88f6-0a2c4f535551.jsonl",
+        "line": 218,
+        "callId": "call_606c85539c4748e997de9174f127ec9c",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 1000}\nconst r=await tools.exec_command({cmd:\"cat output/tripo-massavalmistelu-2461-2464-20261116/model-images/industrie2498-oblique/imagegen-input.json\",max_output_tokens:12000});const spec=JSON.parse(r.output);store(\"industrie2498Started\",new Date().toISOString());const result=await tools.image_gen__imagegen(spec.toolArguments);store(\"industrie2498Result\",result);store(\"industrie2498Finished\",new Date().toISOString());generatedImage(result);\n"
+      },
+      "ownerApprovedByReviewer": false,
+      "kkApprovedByReviewer": false,
+      "tripoAuthorizedByReviewer": false,
+      "status": "FAIL",
+      "PASS-WARN-FAIL": "FAIL",
+      "requirementChecks": {
+        "highThreeQuarterView": "PASS",
+        "substantialVisibleDepth": "PASS",
+        "completeGlassRoofVisible": "PASS",
+        "singleBarrelVaultPrinciple": "PASS",
+        "knownLongFrontFidelity": "FAIL",
+        "rearInterpretationPermissionRespected": "PASS",
+        "no1854DesignReferencePassed": "PASS"
+      },
+      "priorCandidateComparison": {
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2495-industrie/original.png",
+        "sha256": "33c0b206793959f0242ab9a6ee10c037bd22a799f9c5b12ac2e0487750d9814c",
+        "independentlyViewedFullOriginal": true,
+        "finding": "The formerly accepted front candidate has visibly longer recessed lateral arcade wings. The new high view retains the central portal and five-bay pavilion motifs, but abbreviates the known front wings into short runs."
+      },
+      "visualMatch": "High three-quarter view, substantial rectangular depth, continuous short-end wall and a clearly legible single broad longitudinal glass barrel roof are achieved. The central single arch, paired columns, sculptured attic and five-bay flanking pavilions retain the known building identity. However, the recessed front lateral wings are substantially shortened relative to those pavilions: they terminate after only short runs of repeated windows (roughly five to seven visible upper bays per side), whereas actual P6/P1 and the accepted prior front show long continuing arcades. This changes the known long-front mass hierarchy, beyond minor ornament simplification.",
+      "phaseConfidence": "As-built1855–1897 is the intended phase, supported by the same four actual photographs. No1854 design plate was supplied in actual inputs. Hidden rear, depth ratio and exact exterior roof assembly remain interpreted, as expressly permitted for this candidate.",
+      "criticalIssues": [
+        "The long recessed FRONT lateral wings are abbreviated, so the central portal/pavilion group occupies too much of the known front composition. Source P6 shows a long run of right-wing arcades beyond its five-bay pavilion, and P1 a long opposite run; the new candidate closes the front after much shorter runs. This is a dominant front-mass/length issue, not a demand for exact ornament or every bay.",
+        "Permission to interpret the hidden rear symmetrically does not authorize shrinking the photograph-established front wings. The prior front-only KK acceptance cannot be treated as acceptance of this changed frontage."
+      ],
+      "minorIssues": [
+        "Sculptural relief, glazing ribs and exact window divisions remain approximate.",
+        "Material colours are reconstructed from monochrome sources."
+      ],
+      "authorizedInterpretation": {
+        "status": "Explicitly allowed by KK2498 as supplied in assignment/input record; not a failure by itself.",
+        "rear": "Restrained symmetrical rear and short-end treatment is authorized interpretation, not verified historical evidence.",
+        "depth": "Substantial complete-hall depth is achieved; exact ratio is not externally established by the four photos.",
+        "roof": "P5 supports an interior longitudinal iron-and-glass barrel-vault principle. It does not prove the exact external barrel section, full lower roof junctions or complete exterior roof plan. Those remain disclosed approximate interpretation.",
+        "no1854Mix": "Actual tool inputs contain P6/P1/P3/P5 only; no1854 design reference or obvious design-specific extra dome/multivault scheme was introduced. This is an input/visible-form observation, not proof of all hidden historical geometry."
+      },
+      "nextAction": "Hold this candidate for root/PT/KK review of the front-wing shortening. High-view/depth/roof success does not remove that front-form contradiction. Do not approve, queue, run Tripo, or generate another candidate from this report."
+    }
+  ],
+  "counts": {
+    "PASS": 0,
+    "WARN": 0,
+    "FAIL": 1
+  },
+  "approvalBoundary": "Reviewer reports visual evidence only; owner/KK/root decisions and downstream gates remain with root. No approval or queue mutation performed."
+}

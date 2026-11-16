@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "reportType": "Independent full-new-candidate QA",
+  "createdAt": "2026-11-16T20:11:51.349903+00:00",
+  "reviewer": "qa2496_7 independent agent",
+  "method": "Viewed complete new original, all actual passed references again, and corresponding preserved previous candidate. Recomputed source/new/previous/tool-original hashes; compared input to preflight and checked actual producer invocation. No generation, external research, browser, downloads, queue, mail, game or Tripo action. This is the ninth/tenth assigned candidate review only.",
+  "entries": [
+    {
+      "buildingKey": "vilna-gediminas-current-no-flag-2499",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/gediminas2499-no-flag/model-image-original.png",
+      "imageSHA256": "d24885a5c8ecb014a9ec895c2b7e9576b83e391431e014dc03a3ea6dd15fc7e9",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-6a7f-7651-99ac-71dee0401d5c/exec-10d26cd3-b2b2-4c43-a6b2-ad65fb21aad6.png",
+      "originalToolOutputSHA256Match": true,
+      "independentlyViewedFullOriginal": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/gediminas/refs/01-Gedimino kalnas 139.jpg",
+          "sourceRole": "COURTYARD_AERIAL",
+          "expectedSHA256": "9eebb4aa46caf46eaa4489119a23c6304c9ac193a9e2275e1b40515c15c93004",
+          "actualSHA256": "9eebb4aa46caf46eaa4489119a23c6304c9ac193a9e2275e1b40515c15c93004",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/gediminas/refs/02-Gedimino pilis by Augustas Didzgalvis.jpg",
+          "sourceRole": "OUTER_FACES_AERIAL",
+          "expectedSHA256": "a9b331c8edfd2f917cb9f6bd40e9a1701cca7d7dfb27f94320b194e7659930ed",
+          "actualSHA256": "a9b331c8edfd2f917cb9f6bd40e9a1701cca7d7dfb27f94320b194e7659930ed",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/gediminas/refs/23-Gediminas' Tower 03.jpg",
+          "sourceRole": "ENTRANCE_AND_STAIR_TURRET",
+          "expectedSHA256": "b67b50e183e6e7dbe50cfc88a434b07be0c9126f74c2332f83dcaf18a1e84925",
+          "actualSHA256": "b67b50e183e6e7dbe50cfc88a434b07be0c9126f74c2332f83dcaf18a1e84925",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/gediminas2499-no-flag/imagegen-input.json",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "referenceOrderMatches": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-25-01a1e5e6-6a7f-7651-99ac-71dee0401d5c.jsonl",
+        "line": 176,
+        "callId": "call_0f39ae35f0b148cb9a2f5211732595d4",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 1000}\nconst result=await tools.image_gen__imagegen(load(\"gediminas2499Spec\").toolArguments);store(\"gediminas2499Result\",result);generatedImage(result);\n"
+      },
+      "ownerApprovedByReviewer": false,
+      "kkApprovedByReviewer": false,
+      "tripoAuthorizedByReviewer": false,
+      "status": "WARN",
+      "PASS-WARN-FAIL": "WARN",
+      "changeRequestStatus": "PASS",
+      "requirementChecks": {
+        "noFlag": "PASS",
+        "noPole": "PASS",
+        "visibleTerrace": "PASS",
+        "principalTowerSilhouetteRetained": "PASS"
+      },
+      "priorCandidateComparison": {
+        "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/gediminas/model-image-original.png",
+        "sha256": "dfca025cd4ae1c113c7ba2b12a2661333a931aca8cdd59b071149ceb89952e17",
+        "independentlyViewedFullOriginal": true,
+        "finding": "A complete new candidate: elevated camera now reveals the open terrace. Both prior flag and pole are gone. Octagonal three-level brick mass, sparse arched windows and attached rounded entrance/stair turret remain recognizable. The stone foundation is more angular than the previous rounded skirt."
+      },
+      "visualMatch": "The requested no-flag/no-pole condition is visibly satisfied across the complete image, including the clear empty terrace and its skyline. The restored tower retains its octagonal masonry mass, three brick levels separated by dark bands, low alternating parapet/rails, and attached rounded stair turret. The higher camera is consistent with the authorized terrace-view change. No new roof or lost medieval upper storey has been introduced.",
+      "phaseConfidence": "High for current restored tower phase with deliberate owner-requested omission of flag and flagpole. This is not an assertion that the real building normally lacks them.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "The isolated foundation still interprets the asymmetrical hillside exposure: a sloping angular stone wedge is prominent on the left, while actual reference02 shows the plinth in its hillside/wall context and courtyard23 exposes much less foundation.",
+        "Parapet segment lengths, rail arrangement and masonry patch distribution are normalized. These do not undermine the conditional no-flag requirement or principal tower identity."
+      ],
+      "nextAction": "Root may assess binding KK2499 conditional acceptance using the independent no-flag/no-pole PASS. Preserve these explicit minor geometry caveats; this report itself does not mutate approval, queue or Tripo state."
+    }
+  ],
+  "counts": {
+    "PASS": 0,
+    "WARN": 1,
+    "FAIL": 0
+  },
+  "approvalBoundary": "Reviewer reports visual evidence only; owner/KK/root decisions and downstream gates remain with root. No approval or queue mutation performed."
+}

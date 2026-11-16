@@ -1,0 +1,133 @@
+{
+  "task": "PT2479 independent bounded visual QA",
+  "reviewer": "bc_independent_qa subagent",
+  "created_utc": "2026-11-16T20:16:41.888374+00:00",
+  "scope": "Read manifest.json, QA.json and README.md; actually viewed all six candidate PNGs and both specified geometry-reference PNGs. Independent selection recommendation; root retains decision.",
+  "overall_status": "ELIGIBLE_SUBSETS_WITH_B_NW_REJECTED",
+  "approval_claim": false,
+  "selected_files": {
+    "B": [
+      "B/B-SW-anchor-original.png",
+      "B/B-SE-v1.png"
+    ],
+    "C": [
+      "C/C-SE-anchor-original.png",
+      "C/C-NW-v1.png",
+      "C/C-SW-v1.png"
+    ]
+  },
+  "rejected_files": [
+    "B/B-NW-v1.png"
+  ],
+  "material_geometry_failure": "B-NW does not preserve same-side outward displacement of both middle towers; reject despite correct tower count and return-end face.",
+  "unknown_metric_properties": [
+    "Exact 0,+6,+6,0m tower offsets, spacing, diameter, wall thickness and crest equality are not measured from generated oblique views.",
+    "Exact camera compass/projection cannot be certified.",
+    "C exact dimensions, roof pitch/depth and relative 13m versus outer-wall 24m height cannot be certified from isolated differently framed images.",
+    "Assembly-fit plan is target geometry, not a measurement of a completed 3D model.",
+    "C opposite/back facade is interpretive, not historical evidence.",
+    "No exact same mesh identity or downstream readiness is claimed."
+  ],
+  "selection_rationale": {
+    "B": "Two visually compatible images accepted; B-NW excluded for a material footprint conflict rather than metric uncertainty.",
+    "C": "All three preserve required wing topology, levels, door-facade pattern and plain ends; back view remains an explicit interpretation."
+  },
+  "image_evidence": [
+    {
+      "file": "B/B-SW-anchor-original.png",
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "view": "SW anchor, inside",
+      "decision": "SELECT",
+      "evidence": [
+        "Exactly four round open-terrace towers; open east row plus one south return only.",
+        "Both middle tower tops visibly displaced outward from endpoint-top baseline, matching the bowed footprint.",
+        "South return ends with full-height vertical silhouette; no wedge or added corner tower."
+      ]
+    },
+    {
+      "file": "B/B-SE-v1.png",
+      "sha256": "c6fc9088a48e52a5b47487c8aac349518a319ab52c174f77e7c456a5d84b1027",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "view": "SE exterior, plausible requested direction",
+      "decision": "SELECT_WITH_METRIC_UNCERTAINTY",
+      "evidence": [
+        "Exactly four tower terraces; both middle tower centers on same outward side of projected north/south endpoint baseline. Three connecting segments retain a convex bow.",
+        "South return alone projects left from foreground south tower; north remains open. No floor, extra return or tower.",
+        "Return free end has full-height vertical silhouette; broad butt face is mostly turned away, so its detailed face is not proven here.",
+        "No material topology conflict with unchanged anchor observed."
+      ]
+    },
+    {
+      "file": "B/B-NW-v1.png",
+      "sha256": "c1b943276bf3c19ae4a5e034721e8198e1c32f14def5aa939c465e520d4502da",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "view": "NW courtyard side, plausible requested direction",
+      "decision": "REJECT_MATERIAL_GEOMETRY_CONFLICT",
+      "evidence": [
+        "Four towers, south-only return and full-height flat vertical free end are present, but these do not repair the row geometry.",
+        "North-middle tower top lies nearly on endpoint baseline, while south-middle top lies on the opposite side relative to north-middle: same-side outward displacement of both middle towers is lost.",
+        "Approximate manually read top centers in native pixels: N=(225,845), N-middle=(397,593), S-middle=(514,342), S=(729,90). Endpoint baseline at y593 is x393; at y342 is x561. Middle residuals approximately +4px and -47px. These are illustrative screen-space observations, not calibrated metric measurements.",
+        "Anchor middle tops both visibly bow outward on one side; NW is flattened/partly inverted and unsuitable for selected same-object multiview subset."
+      ]
+    },
+    {
+      "file": "C/C-SE-anchor-original.png",
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "view": "SE anchor, door facade plus right blank end",
+      "decision": "SELECT",
+      "evidence": [
+        "Single rectangular three-storey wing, low dark hipped roof; long facade has 5 upper, 5 middle, 4 lower barred windows around central door.",
+        "Plain full-height short end; no tower, chimney, floor plate or extra wing."
+      ]
+    },
+    {
+      "file": "C/C-NW-v1.png",
+      "sha256": "9e62d7de1921b43e903b412315b0f9f23ec6255c879fbe7fda92361c5fdc705f",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "view": "NW, opposite long facade plus left blank end",
+      "decision": "SELECT_WITH_INTERPRETIVE_BACK_UNCERTAINTY",
+      "evidence": [
+        "Single rectangular three-storey wing with low dark hipped roof and blank short end.",
+        "Opposite long facade has 5/5/5 barred windows and no door. This is an inferred back face, not a contradiction of anchor door facade.",
+        "No extra architecture or evident material topology conflict; roof pitch, proportions and masonry differ slightly/unmeasured."
+      ]
+    },
+    {
+      "file": "C/C-SW-v1.png",
+      "sha256": "574d85c6972029df6000c3ca992afd64443f35c564a792b499e7fa580700a600",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "view": "SW, door facade plus left blank end",
+      "decision": "SELECT_WITH_METRIC_UNCERTAINTY",
+      "evidence": [
+        "Same 5 upper + 5 middle + 4 lower windows around central closed door as anchor; complementary plain short end.",
+        "Three-storey rectangular volume, low hipped roof, no added structures.",
+        "Masonry/opening detail varies; no material silhouette/topology conflict observed."
+      ]
+    },
+    {
+      "file": "../model-sheet/B-v2-footprint-geometry-reference.png",
+      "sha256": "f32c2a86f7815f987eb12014198b7475f7c9025daeec39b42674f86b147b9e98",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "role": "geometry reference",
+      "decision": "REFERENCE_ONLY"
+    },
+    {
+      "file": "../model-sheet/assembly-fit-plan-v2.png",
+      "sha256": "d852ddff9e882014ca823f54a3cfb249aa8bb1da68c2486647a7d34bb48b755a",
+      "actually_viewed": true,
+      "manifest_hash_matches": true,
+      "role": "geometry reference",
+      "decision": "REFERENCE_ONLY"
+    }
+  ],
+  "mutations": "Only this independent QA JSON was written. No generation, retries, browser, Tripo, rendering, mail or queue actions."
+}
