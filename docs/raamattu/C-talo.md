@@ -34,4 +34,4 @@ KONE JA TURVA
 23. Tilien käyttö ja vaihto: kortti tilit-ja-kiintio. Laitteet ja simulaattorit: kortti laitteet-ja-simulaattorit.
 
 KK:N JUNASANA JA TARKISTUS
-24. Junasana menee roolille ja sama rivi PT:lle. Junasana = junasana.zsh:n leima (merge-tree, testisarjat, versiorivi), KK lukee diffin itse (juna-ja-julkaisu 2). Versiorivi vain koodista varmistetusta näkyvästä muutoksesta. Kiirepyyntö kertoo, mitä se ei saa pysäyttää. Hiljaisuus ei ole etenemistä. Työtapapäätös kirjataan korttiin samassa vuorossa. Palautuksen portti ei korvaudu junasanalla (valmiin-maaritelma 15).
+24. Junasana menee roolille ja sama rivi PT:lle. Junasana = KK:n sana sha:lle ja versiorivi, KK lukee diffin itse; testit yöllä (juna-ja-julkaisu 2). Versiorivi vain koodista varmistetusta näkyvästä muutoksesta. Kiirepyyntö kertoo, mitä se ei saa pysäyttää. Hiljaisuus ei ole etenemistä. Työtapapäätös kirjataan korttiin samassa vuorossa. Palautus: M-rivien vastaukset (valmiin-maaritelma 15).

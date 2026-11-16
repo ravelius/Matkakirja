@@ -1,12 +1,12 @@
-# juna-ja-julkaisu · vastuu JU · tarkistettu 12.11.2026
+# juna-ja-julkaisu · vastuu JU · tarkistettu 16.11.2026
 
 TAVOITE: Omistaja saa asennuslinkistä aina uusimman toimivan version ja testaaja TestFlightista yhden kokonaisen, joka ei riko vanhaa asennusta.
 
 SÄÄNNÖT:
 1. Auki on yksi juna; hyväksytty yhdistetään siihen heti, keskeneräinen odottaa. [R-10.2]
-2. Junaan vain junasana.zsh:n leimalla (KK ajaa; rooli antaa sha:n ja versiorivi-ehdotuksen) ja PT:n pt-ok:lla; juna-yhdista.zsh ei yhdistä ilman. Myöhempi muutos vaatii uuden leiman. [P-261111-6] [R-10.9] [P-261116-16]
+2. Junaan KK:n sanalla (sha + versiorivi); pysäyttää vain yhdistymisristiriita tai kääntymätön versio. Sarjat, vahdit, tarkista.sh yöllä junan kärjelle; punaiset aamulla rooleille. [P-261111-6] [R-10.9] [P-261116-21]
 3. KK:n asettama ehto pitää numeron poissa linkistä, kunnes ehto on näytetty; muut saavat mennä ohi. [P-261112-5]
-4. Ennen linkkiä: testit läpi, käännös virheetön, sisältö ja media palvelimella, Uutta-rivi selkokielellä. [P-261112-5]
+4. Ennen linkkiä: käännös virheetön (testit: 2), sisältö ja media palvelimella, Uutta-rivi selkokielellä. [P-261112-5]
 5. Linkistä rivi tekijälle ja PT:lle; KK:lle, kun KK asetti ehdon tai asia kerrotaan omistajalle. Omistajalle kerrotaan kerran per versio, vain linkissä oleva. [P-261112-5]
 6. Käännös ja linkki enintään neljästi päivässä, kun junassa on uutta (ajat JU ja PT), ylimääräinen vain KK:n sanalla. TestFlight-junia lähtee enintään kaksi päivässä, ellei omistaja pyydä. [R-10.2] [P-261114-9]
 7. TestFlight ja lukitus vain omistajan pyynnöstä, jonka KK välittää sanatarkasti. [R-10.2] [P-261111-5]
@@ -28,6 +28,6 @@ EI VIKA:
 
 TEKOTAPA:
 - Junarivit: tools/asemataulu/juna.py, tarkista-junat.py.
-- Jono, pt-ok ja leimat: julkaisija-tyokalut/linkki-224-uutta/.
+- Jono ja versiorivit: julkaisija-tyokalut/linkki-224-uutta/.
 - Uutta-tekstin tarkistus: jako-paketoi.zsh. Vanhan sisällön esto: osoittimen minSovellus.
 - Muutosloki: tools/vienti/muutosloki-natiivi.json. Sisällön vienti: vie-sisalto.yml.
