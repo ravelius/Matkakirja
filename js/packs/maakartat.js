@@ -5127,12 +5127,15 @@ export const KAUPUNKIKARTAT = {
        * amsterdam); tests/nostot-kartalla.test.mjs vertaa ne merkki
        * merkiltä.
        */
+      // Tarinapaikka KK 16.11.2026 (Amsterdamin 9 tarinapaikkaa, SK:n data-luonnos). Koordinaatti: Nieuwe Uilenburgerstraat 173
+      // (Wikidata 52,369597 / 4,904051; OSM 52,36959 / 4,90407).
       {
-        nimi: 'Timanttihiomo', tyyppi: 'ilmio', lat: 52.3696, lon: 4.904,
+        nimi: 'Timanttihiomo', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3696, lon: 4.904,
         nosto: 'syvennys-amsterdam-timantit',
       },
+      // Tarinapaikka KK 16.11.2026. Piste: merkkimuseon laituri (kopio); hylky on Englannissa, ei kartalla.
       {
-        nimi: 'Amsterdam-laiva', tyyppi: 'esine', lat: 52.3714, lon: 4.9147,
+        nimi: 'Amsterdam-laiva', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 52.3714, lon: 4.9147,
         nosto: 'syvennys-amsterdam-voc-hylky',
       },
       /*
@@ -5144,27 +5147,45 @@ export const KAUPUNKIKARTAT = {
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js).
        */
+      // Tarinapaikat KK 16.11.2026 (Amsterdamin 9 tarinapaikkaa, SK:n data-luonnos): jokaiselle `tarinapaikka` ja `merkki`;
+      // Kapein talo ja Herengracht 537 saivat tyypin 'ilmio' (tarinapaikka vaatii ei-paikan, ks. tools/vienti/lehdet.mjs).
+      // Kapein talo ja Yövartio ovat 116 m päässä toisistaan (sama leveysaste): nimiöt vastakkaisille puolille.
       {
-        nimi: 'Kapein talo', lat: 52.3712, lon: 4.8977,
-        nosto: 'nosto-amsterdamin-kapein-talo',
+        nimi: 'Kapein talo', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3712, lon: 4.8977,
+        nosto: 'nosto-amsterdamin-kapein-talo', nimiPuoli: 'vasen',
       },
       {
-        nimi: 'Maitotyttö', tyyppi: 'taide', lat: 52.3599, lon: 4.885,
+        nimi: 'Maitotyttö', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'taide', lat: 52.3599, lon: 4.885,
         nosto: 'nosto-amsterdamin-maitotytto',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Kissalaiva', tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
+        nimi: 'Kissalaiva', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
         nosto: 'nosto-amsterdamin-kissalaiva',
       },
       {
-        nimi: 'Herengracht 537', lat: 52.3649, lon: 4.8946,
+        nimi: 'Herengracht 537', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3649, lon: 4.8946,
         nosto: 'nosto-amsterdamin-puupaalut',
       },
+      // Yövartion piste on Trippenhuis (Kloveniersburgwal 29), jossa taulu oli 1873 (KK 16.11.2026); ennen Kuninkaanpalatsin
+      // kohdalla (Dam), jossa taulu oli vain 1715–1808. Kapeimman talon kanssa ei enää samaa pistettä, siirto-kenttä pois.
       {
-        nimi: 'Yövartio', tyyppi: 'taide', lat: 52.3731, lon: 4.8913,
+        nimi: 'Yövartio', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'taide', lat: 52.3712, lon: 4.8994,
         nosto: 'nosto-amsterdamin-yovartio',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+        nimiPuoli: 'oikea',
+      },
+      // Uudet tarinapaikat KK 16.11.2026 (korvaavat Rembrandtin talon ja Anne Frankin talon ehdokkaina; ne pysyvät kartalla
+      // nähtävyyksinä). Tyyppi 'ilmio' (ei 'rakennus'), jotta kohde on tarinapaikka eikä nähtävyyskartan paikka.
+      // KOORDINAATTI: 1 lähde, tarkistettava kuvasta (KK 16.11.: yksi lähde riittää yksiselitteiselle rakennukselle).
+      // Portugalilainen synagoga, Mr. Visserplein 3 (Wikidata Q1853707 52,3675 / 4,905278; en-Wikipedia 52,3675 / 4,9054).
+      {
+        nimi: 'Portugalilainen synagoga', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3675, lon: 4.9053,
+        nosto: 'nosto-amsterdamin-portugalilainen-synagoga', nimiPuoli: 'oikea',
+      },
+      // Montelbaanstoren, Oudeschans 2 (Wikidata Q1946061 52,37204 / 4,90563; nl-Wikipedia 52,37194 / 4,90556; en-Wikipedia 52,37206 / 4,90568).
+      {
+        nimi: 'Montelbaanstoren', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.372, lon: 4.9056,
+        nosto: 'nosto-amsterdamin-montelbaanstoren', nimiPuoli: 'oikea',
       },
       // KADONNEET IHMEET (KK 16.11.2026 erä 2): paikat KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
       { nimi: 'Haringpakkerstoren', lat: 52.37917, lon: 4.89528 },

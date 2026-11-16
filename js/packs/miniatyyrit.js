@@ -303,6 +303,10 @@ export const MINIATYYRIT = {
     Kissalaiva: 'assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
     'Herengracht 537': 'assets/kartat/miniatyyrit/amsterdam-herengracht-537.webp',
     Yövartio: 'assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
+    // Portugalilainen synagoga ja Montelbaanstoren (KK 16.11.2026): ämpäritunnus, kuva tilataan erikseen;
+    // puuttuva kuva putoaa varatäpläksi (sama tapa kuin Lontoon Baird 1926).
+    'Portugalilainen synagoga': 'amsterdam-portugalilainen-synagoga',
+    Montelbaanstoren: 'amsterdam-montelbaanstoren',
   },
   tukholma: {
     'Kustaa III:n ooppera': 'assets/kartat/miniatyyrit/tukholma-kustaa-iiin-ooppera.webp',  // kadonnut ihme (31.10.2026)
