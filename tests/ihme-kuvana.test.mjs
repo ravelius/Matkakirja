@@ -19,7 +19,7 @@ test('Olympia: ihme on olemassa olevan kohteen ihme', () => {
 test('olemassa oleva: ihmekuva kortin ensimmäisenä, nykyinen valokuva ei sarjassa', () => {
   const lista = kohteenKuvalista(olympia);
   assert.equal(lista[0].osoite, olympia.ihme.osoite, 'ihmekuva ensimmäisenä');
-  assert.ok(lista[0].nauha, 'nauha mukana');
+  assert.equal(lista[0].nauha, null, 'säilyneellä ei nauhaa (omistaja 17.11. 00.2x)');
   const nyky = kohteenNykykuva(olympia);
   assert.equal(nyky, olympia.kuva, 'nykyinen valokuva tekstin kylkeen');
   assert.ok(!lista.some((k) => (k.tiedosto ?? k.osoite) === (nyky.tiedosto ?? nyky.osoite)), 'nykykuva ei kahdesti');
@@ -49,4 +49,11 @@ test('ihmekuvan alla lyhyt kuvateksti, pitkä selite suurennokseen (Natiivi-UI:n
   assert.equal(kuvatekstiLyhyt(matkakirjanIhme('Olympia')), olympia.ihme.lyhyt, 'nähtävyysikkuna samoin');
   const ilman = kohteenKuvalista({ ihme: { osoite: 'a.webp', selite: 'Pitkä.' } })[0];
   assert.equal(kuvatekstiLyhyt(ilman), 'Pitkä.', 'ilman lyhyttä pitkä kelpaa');
+});
+
+test('nauha vain kadonneella: "Kadonnut aarre"; säilyneellä ei nauhaa (omistaja 17.11.2026 00.2x)', () => {
+  const kadonnut = { nimi: 'Koe', ihme: { osoite: 'assets/kartat/ihmeet/koe.webp', kadonnut: true } };
+  assert.equal(kohteenKuvalista(kadonnut)[0].nauha, 'Kadonnut aarre');
+  assert.equal(kohteenKuvalista(olympia)[0].nauha, null);
+  assert.equal(matkakirjanIhme('Olympia').nauha, null);
 });

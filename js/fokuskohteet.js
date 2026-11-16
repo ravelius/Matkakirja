@@ -4990,7 +4990,13 @@ function kysyKohteesta(ui, kysymys) {
 // Nauhan teksti on pelin alaotsikko (omistajan valinta 28.8.2026:
 // "Unohdettu aarre, kaytetaan sita kaikkiin") - sama kaikilla
 // ihmekuvilla, kadonneilla ja sailyneilla.
-const KOHDE_IHMENAUHA = 'Unohdettu aarre';
+// KADONNEEN KOHTEEN NAUHA (omistaja 16.11.2026 klo 22.47 "Pidetään kadonnut
+// aarre", KK 17.11.; omistaja 17.11. 00.2x "Ei pitäisi olla nauhaa sellaisessa
+// kohteessa ollenkaan joka on vielä olemassa"): nauha VAIN kun ihme.kadonnut
+// on tosi, teksti "Kadonnut aarre" kuten natiivissa (ui.nosto.ihmenauha).
+// Säilyneen kohteen ihmekuvassa ei ole nauhaa (nauha null → piirraIhmenauha
+// ei piirrä). KOHDE_IHMENAUHA jää vain historiaksi tähän kommenttiin.
+const KOHDE_KADONNUT_NAUHA = 'Kadonnut aarre';
 
 /*
  * NAUHAN SÄVY: yksi rivi, kaksi valmista väriryhmää (omistajan tilaus
@@ -5054,7 +5060,7 @@ function kohteenIhmekuva(kohde) {
      * eikä kuudentoista datalohkon kierros.
      */
     url: ihme.url ?? '',
-    nauha: KOHDE_IHMENAUHA,
+    nauha: ihme.kadonnut ? KOHDE_KADONNUT_NAUHA : null,
     /*
      * IHMEKUVAN LIPPU (omistajan lisäys 1.9.2026). Kadonneen ihmeen
      * rekonstruktio saa lähderivin selitepopupista oman tekstinsä
