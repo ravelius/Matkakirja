@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-16T17:34:00.052577+00:00",
+  "syntheticTestsPassed": 9,
+  "productionQueueModifiedByTests": false,
+  "guards": [
+    "KKpilotgate",
+    "ownergamemassgate",
+    "additionalcandidatelistgate",
+    "inputhash",
+    "aliasduplicateinput",
+    "concurrentreservation",
+    "budgetwithactivejobs",
+    "deadline",
+    "unknownstatus"
+  ],
+  "activeProductionQueue": {
+    "buildings": 40,
+    "readyForTripo": 0,
+    "pilotImagesInProgress": 1
+  },
+  "importantLimits": [
+    "manualUIgateenforcedbyrootworkflow;notTripoaccountserverrestriction",
+    "Noautomaticdaemon",
+    "Actualtokensavingsunmeasured",
+    "Wholecloudarchivecoverageunverified"
+  ],
+  "helperRolesUsed": [
+    {
+      "task": "bastille_sources_2465",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "outcome": "sourcesdelivered"
+    },
+    {
+      "task": "production_queue_guard",
+      "model": "gpt-6.1-terra",
+      "effort": "medium",
+      "outcome": "7testspassed;rootreviewadded2tests"
+    },
+    {
+      "task": "candidate_inventory_2472",
+      "model": "gpt-6-luna",
+      "effort": "medium",
+      "outcome": "insufficient21roughentries;escalatedbecausemissedsourcehierarchy"
+    },
+    {
+      "task": "candidate_inventory_review_2472",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "outcome": "inprogress;currentrepoandmissedpackstructurefound"
+    },
+    {
+      "task": "bastille_model_sheet_2466",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "outcome": "inprogress;3partsmax3imagegencalls"
+    }
+  ]
+}
