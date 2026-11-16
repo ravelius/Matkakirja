@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-11-16T14:49:09.333740+00:00",
+  "originalABC": [
+    {
+      "part": "A",
+      "jobId": "2967ace5-d69a-4245-ada2-91a5e29c5578",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/A-max-original-8k.glb",
+      "bytes": 86784224,
+      "sha256": "760685293ac2be15e347a08ddcdbb80b09a53c7696b9a020c2bb5f4064a5f7fe",
+      "triangles": 1923649
+    },
+    {
+      "part": "B",
+      "jobId": "2e4bcc62-e21b-44c5-a17b-fd07b4f3e590",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/B-max-original-8k.glb",
+      "bytes": 81277584,
+      "sha256": "903fb5e2acd66baff9bbd28218898ddefc8f80d77dc8249db2ddd4d499a550ba",
+      "triangles": 1899037
+    },
+    {
+      "part": "C",
+      "jobId": "cd74025c-1ebf-4338-b3cd-727eaede60fb",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/tripo-2253/C-max-original-8k.glb",
+      "bytes": 84110468,
+      "sha256": "abb34f040a6fcf68f30075d2f0be4b7a0d249d332f819203ddab12c61f5a83f7",
+      "triangles": 1833074
+    }
+  ],
+  "allOriginalHashesPass": true,
+  "final2269": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/correction-2269/grand-chatelet-2269-fallback.glb",
+    "sha256": "71a90db9811cd23ebe46df759264ac69272c468963252be57549393c71f7d033",
+    "bytes": 9864536
+  },
+  "finalDeliveryCommit": "6158644c14824f0d0a35ae22754af111650e3512",
+  "finalPackageCurrentMailboxMatchesReceipt": true,
+  "finalPackageFileCount": 11,
+  "recipe2434": {
+    "commit": "631548f210bb8d45397c9f09e47f27b7423c40ec",
+    "path": "posti/codex-pt-temple-2434-2435-resepti-ja-ehdokas-20261116.md",
+    "blob": "ea3be21f6e5c1e2f5c6f560dbc73ea335c3a3c0c",
+    "sha256": "1f4e30dbe4fd5ea951cfbe61a0a8330d4e271862986b33c1f03f9b53018681ce",
+    "remoteReadbackVerifiedNow": true,
+    "meaning": "Document of 2251 ImageGen+Tripo experiment; not completed2403 cleanup or Turku-A-preserving implementation"
+  },
+  "verifiedMailboxHead": "2de6ec41bbf89c767f8e76132122b908ef56df09",
+  "remainingGCProductionOrArchive": [],
+  "gameIntegrationVerified": false,
+  "resourceCheck": {
+    "load1_5_15": [
+      10.35888671875,
+      7.8359375,
+      9.189453125
+    ],
+    "heavyProcesses": [
+      "/Users/Shared/Claude/unity/6000.7.0b9/Unity.app/Contents/MacOS/Unity"
+    ],
+    "canStartHeavyRender": false
+  }
+}
