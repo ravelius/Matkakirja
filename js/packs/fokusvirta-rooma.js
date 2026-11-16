@@ -288,22 +288,20 @@ export const FOKUSVIRTA_ROOMA = {
      * tausta-aineisto (ei nay pelaajalle).
      */
     /*
-     * PULUN KUVA (omistaja 15.11.2026 klo 19.58 "Kuva 1"; KK 19.59): Commonsin valokuva Colosseumin hypogeumista nykyään; vanha
-     * pulu-cam-rooma-01 (Pantheon) pois. Tiedosto: Adrian Farwell, 14.3.2007, CC BY 3.0, 2304×3072,
-     * https://commons.wikimedia.org/wiki/File:Greenery_in_the_Colosseum_-_panoramio.jpg. Kuvaa itseään ei muokata.
-     * RAJAUS pyöreään kehykseen (omistaja valitsi esikatselun c1): keskipiste kuvan leveyden ja korkeuden suhteina [x, y],
-     * halkaisija leveyden suhteena; vihreä rinne ja hypogeumin tiilikaaret, väkijoukko pois. Kuvassa ruoho ja sammal peittävät rinnettä ja käytävien pohjaa (ei muureja; kuva 2007): faktat Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+     * PULUN KUVA (omistaja 16.11.2026 klo 09.09; PT): Codexin havainnekuva Colosseumin kasvit, tehtävä #2351 (fc28d28de2);
+     * Commonsin valokuva (Adrian Farwell, CC BY 3.0) pois. Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/rooma-colosseum-codex-v2.jpg
+     * (neliö 1254 px; rajaus = koko neliö ympyrään, ei `rajaus`-kenttää). Kuva viedään ämpäriin (JU/PT) osoitteeseen alla ennen
+     * yhdistämistä. Lähderivi: Matkakirjan havainnekuva, ei valokuvaajaa. Kuvassa ei enää ole vuotta 2007, joten se on pois
+     * `lyhyt`- ja `selite`-tekstistä. Faktat (kasvilajit) Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
      * `lyhyt` ja `selite` ovat SK:n luonnos, KK tarkistaa.
      */
     kuvat: [
       {
-        tiedosto: 'Greenery in the Colosseum - panoramio.jpg',
-        lyhyt: 'Vihreää Colosseumin maanalaisissa osissa (2007).',
-        selite: 'Ruoho ja sammal peittävät Colosseumin maanalaisia käytäviä eli hypogeumia vuonna 2007. Colosseumilla kasvaa yhä yli kaksisataa kasvilajia.',
-        lahde: 'Adrian Farwell, Wikimedia Commons (CC BY 3.0)',
-        rajaus: { keskipiste: [0.33, 0.76], halkaisija: 0.62 },
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-rooma-colosseum-kasvit-codex-v2.jpg',
+        lyhyt: 'Vihreää Colosseumin maanalaisissa osissa.',
+        selite: 'Ruoho ja sammal peittävät Colosseumin maanalaisia käytäviä eli hypogeumia. Colosseumilla kasvaa yhä yli kaksisataa kasvilajia.',
+        lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://commons.wikimedia.org/wiki/File:Greenery_in_the_Colosseum_-_panoramio.jpg',
           'https://link.springer.com/article/10.1080/11263500212331351199',
           'https://www.vistanet.it/roma/2020/12/22/lo-sapevate-nel-colosseo-vivono-centinaia-di-specie-botaniche-esotiche-e-rare/',
         ],
