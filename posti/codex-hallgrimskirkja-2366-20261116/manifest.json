@@ -1,0 +1,76 @@
+{
+  "task": 2366,
+  "subject": "hallgrimskirkja",
+  "sourceCommit": "f8bdf9b35922f8fbb51d9b5d0f90e45166281861",
+  "sourceBlobSha": "6ec4e4cb9e0ecbb8435536f2d72e93bfc79a7da6",
+  "sourceFiles": [
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/hallgrimskirkja.jpg",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2366-hallgrimskirkja/sources/hallgrimskirkja.jpg",
+      "sha256": "ab592c7ae1b3c0b97f1d26f42d8d2db68d9474c8b58b638db5981e03e25e1429"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/hallgrimskirkja.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2366-hallgrimskirkja/sources/hallgrimskirkja.md",
+      "sha256": "d36fb0ee53f6164b8911d7fb2ae3b568bcb1fb1c089a70899307eb289295a403"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/hallgrimskirkja-huomiot.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2366-hallgrimskirkja/sources/hallgrimskirkja-huomiot.md",
+      "sha256": "ffc1352bdec8ad8264f26d6f006acc4af1c769d75c12b4e47cd835b32d330241"
+    }
+  ],
+  "imageGenerationMode": "built-in image_gen",
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "imageStartedAt": "2026-11-16T07:12:12.796938+00:00",
+  "imageCompletedAt": "2026-11-16T07:13:20.206807+00:00",
+  "estimatedImageCompleteAt": "2026-11-16T07:17:12.796938+00:00",
+  "imageArtifactId": "exec-e3ffaa5c-4b05-4660-b8f7-90d463445f22",
+  "jobId": null,
+  "cost": null,
+  "costStatus": "Built-in image price and provider job ID are not exposed; Tripo credits 0.",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2366-hallgrimskirkja/hallgrimskirkja-2366-native.png",
+  "nativeSha256": "2d6c1dbc35dbb883b1e1a4a79e4234e69d6526e80dc6ba21563fb9bd4db23fca",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPixels": [
+    1000,
+    667
+  ],
+  "tripoCallsStarted": 0,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "qaStatus": "PASS_WITH_SOURCE_RESERVATIONS",
+  "preparedAt": "2026-11-16T07:26:07.317351+00:00",
+  "reviewOnly": true,
+  "sourceModelsPreserved": true,
+  "files": {
+    "hallgrimskirkja-2366-review.jpg": {
+      "bytes": 124976,
+      "sha256": "105b1f89ba706c95cf271ccc248db1f27e6347d045d3c4656386a30cc785d8c1"
+    },
+    "prompt.txt": {
+      "bytes": 2543,
+      "sha256": "a40f46590456956389e7bce3d84e47735435f0feb749edac97ee29a4cc0355e7"
+    },
+    "qa-independent.md": {
+      "bytes": 588,
+      "sha256": "b17dd0e56b58a22384e96ae37b969bed22277a4ffab9b94963940848acdc77dc"
+    },
+    "qa-root.md": {
+      "bytes": 824,
+      "sha256": "3c59deb196d68dd2dee377ef0bbf0145f06bea9ae79ba61f51430c20ab297f5b"
+    },
+    "source-attribution.md": {
+      "bytes": 3454,
+      "sha256": "d36fb0ee53f6164b8911d7fb2ae3b568bcb1fb1c089a70899307eb289295a403"
+    },
+    "source-order.md": {
+      "bytes": 2725,
+      "sha256": "8c50f26422288016ea6020033a9e7105cb2d0979b13df32ea27525eca747a036"
+    }
+  }
+}
