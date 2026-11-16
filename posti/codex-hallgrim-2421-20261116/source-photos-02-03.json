@@ -1,0 +1,38 @@
+[
+  {
+    "file": "photo-02.jpg",
+    "sourceURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/HallgrimskirkjaProfile.jpg/1280px-HallgrimskirkjaProfile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "filepage": "https://commons.wikimedia.org/wiki/File:HallgrimskirkjaProfile.jpg",
+    "author": "Andreas Tille",
+    "license": "CC BY-SA 4.0",
+    "originalDimensions": {
+      "width": 2978,
+      "height": 1994
+    },
+    "downloadedDimensions": {
+      "width": 1280,
+      "height": 857
+    },
+    "format": "JPEG",
+    "sha256": "27508284a0d79651caf4bb0e7b2991635b9904acde108d5c7fbde18350b51468",
+    "actualModifications": "None; downloaded Wikimedia Commons thumbnail directly."
+  },
+  {
+    "file": "photo-03.jpg",
+    "sourceURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Exterior_of_Hallgr%C3%ADmskirkja_in_Reykjav%C3%ADk%2C_Iceland_April_2016_03.jpg/1280px-Exterior_of_Hallgr%C3%ADmskirkja_in_Reykjav%C3%ADk%2C_Iceland_April_2016_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "filepage": "https://commons.wikimedia.org/wiki/File:Exterior_of_Hallgr%C3%ADmskirkja_in_Reykjav%C3%ADk,_Iceland_April_2016_03.jpg",
+    "author": "Geraldshields11",
+    "license": "CC BY-SA 4.0",
+    "originalDimensions": {
+      "width": 4912,
+      "height": 3264
+    },
+    "downloadedDimensions": {
+      "width": 1280,
+      "height": 851
+    },
+    "format": "JPEG",
+    "sha256": "58cd90288f0538d8a6721d9e249c74b12e81f5ffa85958a3758cfbb9a73cafe4",
+    "actualModifications": "None; downloaded Wikimedia Commons thumbnail directly."
+  }
+]

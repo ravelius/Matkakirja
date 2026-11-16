@@ -1,0 +1,47 @@
+{
+  "reservationSourceCommit": "beee6c0e0c5b1c174d548be8cd3d3cd792d04fdb",
+  "reservationSourceBlob": "2b9bf3cfb7e12ebdac6cdd346193c49d06bce2f7",
+  "start": "2026-11-16T12:00:00+00:00",
+  "end": "2026-11-16T12:10:00+00:00",
+  "attemptCheckedAt": "2026-11-16T12:00:14.355827+00:00",
+  "jobs": [
+    {
+      "script": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/render_review.py",
+      "checkedAt": "2026-11-16T12:00:14.356596+00:00",
+      "load": [
+        6.1455078125,
+        7.251953125,
+        7.53271484375
+      ],
+      "blockingProcesses": [],
+      "renderStarted": true,
+      "status": "OUTPUTS_READY_FOR_VISUAL_QA",
+      "startedAt": "2026-11-16T12:00:14.531424+00:00",
+      "pid": 30534,
+      "exitCode": 0,
+      "finishedAt": "2026-11-16T12:00:24.191967+00:00",
+      "expectedOutputsPresent": true,
+      "candidateUnchanged": true
+    },
+    {
+      "script": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-floor-2416-20261116/inspect_v2.py",
+      "checkedAt": "2026-11-16T12:00:24.192429+00:00",
+      "load": [
+        5.72900390625,
+        7.12744140625,
+        7.48486328125
+      ],
+      "blockingProcesses": [],
+      "renderStarted": true,
+      "status": "OUTPUTS_READY_FOR_VISUAL_QA",
+      "startedAt": "2026-11-16T12:00:24.399546+00:00",
+      "pid": 31059,
+      "exitCode": 0,
+      "finishedAt": "2026-11-16T12:00:29.555034+00:00",
+      "expectedOutputsPresent": true,
+      "candidateUnchanged": true
+    }
+  ],
+  "assetDeliveryCompleted": false,
+  "attemptFinishedAt": "2026-11-16T12:00:29.555333+00:00"
+}

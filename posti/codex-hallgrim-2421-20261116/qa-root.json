@@ -1,0 +1,36 @@
+{
+  "task": 2421,
+  "reviewedAt": "2026-11-16T12:03:53.805692+00:00",
+  "technicalResult": "PASS",
+  "visualResult": "WARN_TO_KK_REVIEW",
+  "productionApproved": false,
+  "KKAccepted": false,
+  "gameIntegrated": false,
+  "imagesPersonallyInspected": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/01-front.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/02-side.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/03-rear.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/04-other-side.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/05-upper.png"
+  ],
+  "imageSHA256": {
+    "01-front.png": "86f4a8656544919179a327021ff0e593921dcb23d17086bb21aa37db1b35f15e",
+    "02-side.png": "107f8a9b1b017a1303d680dfec610acde580aa53c41599cf68801183ea4de433",
+    "03-rear.png": "c642279369226bb48d64dc7dfd589136d08b4b6ca1229424aaf043da328a6a06",
+    "04-other-side.png": "3d82440a9b95ee4a794474046b021865ef6ab96e3ff4d230cdbb3bfe3f6b0f84",
+    "05-upper.png": "2522fc9880828dc922d75024e8443c517d1f8b13d38de53065957b96d2f67df7"
+  },
+  "comparison": "Previous 2418 side and current 5-view composite beside source photos2/3",
+  "findings": [
+    "Tower depth visibly improved from 2418; nave ridge visibly lower.",
+    "Front silhouette retained; current rear/upper views show complete model without obvious open tears.",
+    "Both tower flanks toward nave roof have a visible narrow diagonal/curved deformation strip; strongest in 02-side. Local roof junction kink visible. Rendering alone cannot distinguish UV stretch from geometric crease.",
+    "Do not present as seamless or finally approved. Submit issue to KK under the conditional (c) instruction; no new Tripo without explicit KK word."
+  ],
+  "sourceFootprintToUpperShaftAssumptionDisclosed": true,
+  "candidateSHA256": "bb841497f4773b37200fc46794408d4c161780081bbe0bc0f2bbcf139a67b82e",
+  "original2418SHA256VerifiedUnchanged": true,
+  "renderEvidence": "window-1400-run.json",
+  "newTripoCalls": 0,
+  "credits": 0
+}

@@ -1,0 +1,62 @@
+{
+  "task": 2421,
+  "status": "LOCAL_CORRECTION_CANDIDATE_AWAITING_VISUAL_QA",
+  "createdAt": "2026-11-16T10:35:56.969940+00:00",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-scale-2418-20261116/hallgrimskirkja-2418-scaled-candidate.glb",
+  "sourceSHA256": "6a6a679022fe7e08aa9e834247a04998e12c4d3fb7c5f581b533024cbec4e073",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/hallgrimskirkja-2421-proportions-candidate.glb",
+  "outputSHA256": "bb841497f4773b37200fc46794408d4c161780081bbe0bc0f2bbcf139a67b82e",
+  "original2387And2418Preserved": true,
+  "trianglesUnchanged": 1886625,
+  "UVIndicesMaterialsTextureBytesUnchanged": true,
+  "changedBinaryFields": [
+    "POSITION",
+    "NORMAL"
+  ],
+  "oldTowerDepthAtY40to45": 5.68794483882764,
+  "targetOSMTowerDepthMeters": 9.398963496081926,
+  "newTowerDepthAtSameReferenceVertices": 9.398963496081922,
+  "towerDepthFactor": 1.652435767646997,
+  "oldNaveRidge": 34.70930449936629,
+  "targetNaveRidge": 27.9375,
+  "newNaveRidge": 27.9375,
+  "naveRidgeToTowerHeightRatio": 0.375,
+  "worldBounds": [
+    [
+      -24.795797733890037,
+      0.0,
+      -33.84695711906385
+    ],
+    [
+      24.803328449810376,
+      74.5,
+      33.86384155031502
+    ]
+  ],
+  "frontElevationXYUnchangedForOriginalZAtLeast": 27,
+  "transitions": {
+    "longitudinalKnotOriginalZ": 24.8,
+    "frontAnchorOriginalZ": 31.75,
+    "naveCompressionFactor": 0.922682628257406,
+    "rearLowerTowerHeightTransitionZ": [
+      25.6,
+      27
+    ],
+    "heightTransitionY": [
+      34.70930449936629,
+      40.0
+    ]
+  },
+  "orientationPreservingJacobian": true,
+  "minJacobianDiagonal": [
+    0.8048994470779463,
+    0.922682628257406
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "remaining": [
+    "Five same-layout views and sourcephotos2/3",
+    "Inspect stretched textures and rear lower tower junction",
+    "KK decision; no game integration"
+  ]
+}

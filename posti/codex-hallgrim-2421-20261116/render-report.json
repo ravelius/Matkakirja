@@ -1,0 +1,90 @@
+{
+  "status": "FIVE_VIEWS_RENDERED_AWAITING_VISUAL_REVIEW",
+  "candidateSHA256": "bb841497f4773b37200fc46794408d4c161780081bbe0bc0f2bbcf139a67b82e",
+  "candidateUnchanged": true,
+  "renderer": "Blender Workbench texture studio, 2 CPU threads, 8 AA, 1000 square; not game lighting",
+  "blenderDimensionsXYZ": [
+    49.599124908447266,
+    67.71080017089844,
+    74.5
+  ],
+  "views": [
+    {
+      "name": "01-front",
+      "camera": [
+        0.003765106201171875,
+        -238.2988739013672,
+        65.8448486328125
+      ],
+      "target": [
+        0.003765106201171875,
+        -0.008441925048828125,
+        37.25
+      ],
+      "orthoScale": 92.7015151977539,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/01-front.png"
+    },
+    {
+      "name": "02-side",
+      "camera": [
+        238.29420471191406,
+        -0.008441925048828125,
+        65.8448486328125
+      ],
+      "target": [
+        0.003765106201171875,
+        -0.008441925048828125,
+        37.25
+      ],
+      "orthoScale": 90.26307678222656,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/02-side.png"
+    },
+    {
+      "name": "03-rear",
+      "camera": [
+        0.003765106201171875,
+        238.28199768066406,
+        65.8448486328125
+      ],
+      "target": [
+        0.003765106201171875,
+        -0.008441925048828125,
+        37.25
+      ],
+      "orthoScale": 92.70153045654297,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/03-rear.png"
+    },
+    {
+      "name": "04-other-side",
+      "camera": [
+        -238.2866668701172,
+        -0.008441925048828125,
+        65.8448486328125
+      ],
+      "target": [
+        0.003765106201171875,
+        -0.008441925048828125,
+        37.25
+      ],
+      "orthoScale": 90.26307678222656,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/04-other-side.png"
+    },
+    {
+      "name": "05-upper",
+      "camera": [
+        140.87591552734375,
+        -140.88058471679688,
+        171.0785369873047
+      ],
+      "target": [
+        0.003765106201171875,
+        -0.008441925048828125,
+        37.25
+      ],
+      "orthoScale": 122.14969635009766,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/05-upper.png"
+    }
+  ],
+  "elapsedSeconds": 8.356812250000075,
+  "completedAt": "2026-11-16T12:00:24.084522+00:00"
+}
