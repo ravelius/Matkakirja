@@ -1,0 +1,55 @@
+{
+  "task": 2381,
+  "subject": "suleymaniyen-moskeija",
+  "status": "QA_COMPLETE_AWAITING_DELIVERY",
+  "imageGenerationMode": "built-in image_gen",
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "tripoCallsAllowed": 0,
+  "tripoCallsStarted": 0,
+  "sourceCommit": "f244c12c857e943c18631ce32345de88ecd6e0ac",
+  "sourceBlobSha": "94b783657dd555e926fa6414dc9080e269587beb",
+  "sourceFiles": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/suleymaniye-2381-20261116/sources/suleymaniyen-moskeija-huomiot.md",
+      "sha256": "146a21d03ad6b58fb247e8801176b30a1238a82f639486c7e0d2aad541e4fbde"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/suleymaniye-2381-20261116/sources/suleymaniyen-moskeija.jpg",
+      "sha256": "dc5bfc1de45276f168baf9973c9f4d46762731085e5043ae94b60af1e3b5ddfa"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/suleymaniye-2381-20261116/sources/suleymaniyen-moskeija.md",
+      "sha256": "4de0741cdb93d45106080613c4e667c691724253b3c43bfba40ed8482db5ad60"
+    }
+  ],
+  "sourceReadFully": true,
+  "sourceImageViewed": true,
+  "sourceReview": "source-check.md",
+  "preparedAt": "2026-11-16T07:29:53.850539+00:00",
+  "jobId": null,
+  "cost": null,
+  "costStatus": "Built-in image price and provider job ID not exposed; Tripo credits0",
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "ackCommit": "8ed399ed54e2bb39e79d7883e2e244c429859837",
+  "startedAt": "2026-11-16T07:37:24.408421+00:00",
+  "estimatedCompleteAt": "2026-11-16T07:42:24.408421+00:00",
+  "productionActive": false,
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/suleymaniye-2381-20261116/suleymaniyen-moskeija-2381-native.png",
+  "nativeSha256": "725d9d861e03f6840f77e779e6f8f33e4a0ff2b6067ba07e5c1f9ece248435c6",
+  "nativePixels": [
+    1254,
+    1254
+  ],
+  "reviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/suleymaniye-2381-20261116/delivery-review/suleymaniyen-moskeija-2381-review.jpg",
+  "reviewPixels": [
+    1000,
+    1000
+  ],
+  "imageArtifactId": "exec-8a77abe7-0283-41b9-8287-8ffb4bc39a27",
+  "imageCompletedAt": "2026-11-16T07:38:27.878981+00:00",
+  "qaStatus": "WARNING",
+  "qaRoot": "qa-root.md",
+  "qaIndependent": "qa-independent.md"
+}
