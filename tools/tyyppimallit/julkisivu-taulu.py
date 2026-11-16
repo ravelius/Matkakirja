@@ -10,7 +10,7 @@ print('|---|---|---|---|---|---|---|---|')
 for k in [k for k in ('rooma', 'wien', 'amsterdam') if os.path.exists(f'{TY}/koe-rw/{k}/merkit-{k}.json')]:
     ms = json.load(open(f'{TY}/koe-rw/{k}/merkit-{k}.json'))['merkit']
     ennen = {}
-    if vanha:
+    if vanha and os.path.exists(f'{vanha}/{k}/merkit-{k}.json'):
         for m in json.load(open(f'{vanha}/{k}/merkit-{k}.json'))['merkit']:
             p = m.get('parametrit') or {}; s = p.get('julkisivu') if m['tyyppi'] == 'palatsi' else p.get('julkisivu_paa')
             if s: ennen[m['osm']] = ilma(m['akseli'], s)

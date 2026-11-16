@@ -55,8 +55,25 @@
 | wien | relation/2458835 | Palais Kinsky | +x | koillinen | OSM entrance=main node/567005972 | +x50 -x0 +z0 -z0 |  |
 | wien | way/121542619 | Palais Coburg | +z | luode | sääntö 3 (avoimuus) | +x5 -x0 +z17 -z0 |  |
 | wien | relation/1541444 | Palais Pallavicini | -z | lounas | sääntö 3 (avoimuus) | +x0 -x5 +z0 -z69 |  |
-Traceback (most recent call last):
-  File "/Volumes/T7 4TB/koodaus/proto-arkisto/_tyo/valoseppa/tyyppitalot/julkisivu-taulu.py", line 14, in <module>
-    for m in json.load(open(f'{vanha}/{k}/merkit-{k}.json'))['merkit']:
-                       ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'koe-rw/vanha-ovet/amsterdam/merkit-amsterdam.json'
+| amsterdam | relation/3697339 | Koninklijk Instituut voor de Tropen | +x | koillinen | sääntö 3 (avoimuus) | +x85 -x0 +z48 -z0 |  |
+| amsterdam | relation/3580875 | Koninklijk Paleis | -z | itä | käsitaulu: itä, Dam | +x25 -x18 +z67 -z114 |  |
+| amsterdam | way/46696080 | Concertgebouw | +x | koillinen | sääntö 3 (avoimuus) | +x107 -x6 +z23 -z43 |  |
+| amsterdam | way/57863115 | Stadsschouwburg Amsterdam | +x | kaakko | sääntö 3 (avoimuus) | +x93 -x0 +z27 -z10 |  |
+| amsterdam | relation/3584291 | Oost-Indisch Huis | -z | kaakko | OSM entrance=main node/2724827001 | +x0 -x0 +z0 -z10 |  |
+| amsterdam | way/266908022 | Maagdenhuis | -x | pohjoinen | käsitaulu: pohjoinen, Spui | +x0 -x37 +z6 -z6 |  |
+| amsterdam | way/30044304 | Felix Meritis | +x | itä | sääntö 3 (avoimuus) | +x12 -x8 +z0 -z0 | kaikki sivut ahtaita (avoimin +x 12 m) |
+| amsterdam | way/267103172 | Trippenhuis | +z | luode | sääntö 3 (avoimuus) | +x0 -x0 +z10 -z0 | kaikki sivut ahtaita (avoimin +z 10 m) |
+
+## Amsterdamin epävarmat: katutarkistus (Valoseppä 17.11., katusivu.py, kadun OSM-pisteet sivun edessä)
+
+| nimi | sääntö 3 | katu (osoite) | katusivu.py | tulos |
+|---|---|---|---|---|
+| Trippenhuis | +z luode | Kloveniersburgwal 29 | +z luode 100 % | vahvistettu (julkisivu kanavalle) |
+| Felix Meritis | +x itä | Keizersgracht 324 | +x itä 100 % | vahvistettu (julkisivu kanavalle) |
+| Concertgebouw | +x koillinen | Van Baerlestraat / Museumplein | +x koillinen 100 % | vahvistettu |
+| Maagdenhuis | -x pohjoinen (käsitaulu) | Spui 21 | -x pohjoinen 77 % | vahvistettu |
+| Stadsschouwburg | +x kaakko | Leidseplein 26 | +x 38 %, +z 38 %, -z 23 % | aukio kahdella sivulla; sääntö 3 (+x, avoimin 93 m) jää; tarkista kuvasta, jos KK haluaa |
+| KIT Tropen | +x koillinen | Mauritskade 63 | +z luode 88 % | ristiriita, mutta malli ei sovi (2 sivua auki): ei pelissä |
+| Koninklijk Paleis | -z itä (käsitaulu) | Dam | haku osuu myös Damrakiin ja Damstraatiin | käsitaulu jää |
+
+Pelipaketti ei muutu (sääntö 3 antoi jo samat sivut).
