@@ -172,9 +172,9 @@ export const FOKUSVIRTA_WIEN = {
     "perustelu": "Uuden tekstin (omistaja 15.11.2026 18.58) sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: vanha (9.9.2026) ääni ei vastaa uutta tekstiä; uusi ääni tulee Äänittäjän ajosta, ja aanite-kenttä sidotaan silloin (teksti ja ääni samaan vientiin). */
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, ÄÄ otto, teksti ilman tageja, 17,03 s; JU vienyt 16.11.2026 11.09), ämpärin täysi osoite kuten Pariisissa ja Lontoossa. */
     luenta: "[curious] Maailmannäyttely oli ollut auki kahdeksan päivää, kun poliisi sulki Wienin pörssin. Menin kahvilaan ja tilasin kupin. [warmly] Tarjoilija kysyi, maksanko heti, koska huomisesta ei tiedä. Maksoin heti. Hän kumarsi syvemmin kuin kenellekään sinä päivänä.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-wien.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
