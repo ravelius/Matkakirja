@@ -691,7 +691,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.4
   }
 ]),
-  amsterdam: pilotti("amsterdam", LIVIAN_EUROOPAN_REVISION, "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378", [
+  amsterdam: pilotti("amsterdam", LIVIAN_EUROOPAN_REVISION, "c67bd2bdaef9cc6c78f2720f3150a8784558a9b9b214b638ee11d7cdd35f46e0", [
   {
     "id": "amsterdam.livia.c1",
     "ankkuri": "pyörähalli veden alla",
@@ -701,31 +701,24 @@ const LUENTA_CUET_20260914 = Object.freeze({
   },
   {
     "id": "amsterdam.livia.c2",
-    "ankkuri": "Seitsemälletuhannelle pyörälle",
+    "ankkuri": "seitsemälletuhannelle pyörälle",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.6
   },
   {
     "id": "amsterdam.livia.c3",
-    "ankkuri": "Kävin kurkistamassa sisään ja palasin rantaan",
+    "ankkuri": "Kurkistin sisään",
     "esiintyma": 1,
     "tarkoitus": "ilo",
     "voimakkuus": 0.45
   },
   {
     "id": "amsterdam.livia.c4",
-    "ankkuri": "Sen alla minä olin juuri kävellyt, kuivin jaloin",
+    "ankkuri": "kävelin sen alla kuivin jaloin",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.5
-  },
-  {
-    "id": "amsterdam.livia.c5",
-    "ankkuri": "nähdä sen ilmeen, jos se olisi tiennyt",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.45
   }
 ]),
   dublin: pilotti("dublin", LIVIAN_EUROOPAN_REVISION, "35b090c4334a2ed02ef719637ad22bde613a9dbb87251d680b163db36f74dc06", [

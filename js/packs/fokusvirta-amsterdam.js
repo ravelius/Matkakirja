@@ -145,21 +145,13 @@ export const FOKUSVIRTA_AMSTERDAM = {
         'https://opsolder.nl/en/the-monument/',
       ],
     },
-    luentakuva2: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg',
-      lyhyt: 'Amsterdam, 1873. Ullakkokirkon urut salin toisessa päädyssä.',
-      selite: 'Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella. Kaksikerroksiset parvet kiertävät salia, ja soitin täyttää sen ahtaan päädyn kokonaan.',
-      lahde: 'Matkakirjan havainnekuva',
-      lahteet: [
-        'https://opsolder.nl/wp-content/uploads/2024/04/haantje36.pdf',
-      ],
-    },
+    /* Isoisällä yksi kuva (omistaja 12.11.): ullakkokirkon i1 jää; urkukuva (i2) pois (SK 16.11.2026, KK 01.08). */
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '
       + 'puntari putoaa.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
+    /* KAANON: lyhennetty nykyinen teksti (KK 16.11.2026 klo 01.08; SK:n luonnos docs/raportit/amsterdam-isoisa-pulu-luonnos-20261116.md, PR 6830). Sanasta sanaan. 253 merkkiä. */
+    teksti: "Kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se rakennettiin aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut soivat, ja penkki värisi.",
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
@@ -211,16 +203,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
   },
   {
     "id": "amsterdam.r5",
-    "ankkuri": "urut alkoivat soida niin, että penkki värisi",
+    "ankkuri": "urut soivat, ja penkki värisi",
     "tarkoitus": "hammastyy",
     "voimakkuus": 0.45,
     "siirtyma": 0,
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. [warmly] Sitten urut alkoivat soida niin, että penkki värisi.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, ÄÄ otto, teksti ilman tageja, 18,55 s; JU vienyt 16.11.2026 11.49), ämpärin täysi osoite kuten Pariisissa, Lontoossa, Wienissä ja Roomassa. */
+    luenta: "[curious] Kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se rakennettiin aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. [warmly] Sitten urut soivat, ja penkki värisi.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-amsterdam.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
@@ -232,29 +224,29 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
      * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
+    /*
+     * PULUN KUVA (omistaja 16.11.2026 klo 08.44 "Tämä kuva (Recommended)"; KK 08.44): Codexin havainnekuva Stationsplein-pyörähallista,
+     * tehtävä #2349 (22b5804e2e); vanhat havainnekuvat p1/p2 ja Hay Kranenin Commons-valokuva (hylätty 08.16) pois.
+     * Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/amsterdam-pyorahalli-codex-v2.jpg (neliö 1254 px; rajaus = koko neliö ympyrään, KK katsoi).
+     * Kuva viedään ämpäriin (JU/PT) osoitteeseen alla ennen yhdistämistä. Lähderivi: Codex-havainnekuva, ei valokuvaajaa.
+     * `lyhyt` ja `selite` ovat SK:n luonnos (faktat: Stationsplein-halli avattiin tammikuussa 2023, tilaa 7 000 pyörälle;
+     * cities-today.com, bicyclenetwork.com.au, iamexpat.nl), KK tarkistaa.
+     */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg',
-        lyhyt: 'Amsterdam: pyörät parkissa veden alla, kuivin renkain.',
-        selite: 'Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä. Halli on rakennettu veden alle aseman edustan satama-altaaseen.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-amsterdam-pyorahalli-codex-v2.jpg',
+        lyhyt: 'Amsterdam: pyörähalli aseman edessä veden alla.',
+        selite: 'Stationsplein-pyörähalli on rakennettu Amsterdamin keskusaseman edustan satama-altaan alle. Se avattiin tammikuussa 2023, ja siihen mahtuu 7 000 pyörää.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
-        ],
-      },
-      {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg',
-        lyhyt: 'Amsterdam: ankka ui pyörähallin katon yllä.',
-        selite: 'Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli. Pinnan alla on tilaa tuhansille polkupyörille.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
+          'https://cities-today.com/?p=57219',
+          'https://bicyclenetwork.com.au/newsroom/2023/01/31/amsterdams-underwater-bike-garage-opens-with-7000-spaces/',
         ],
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt."],
+    /* KUPLA: lyhennetty nykyinen teksti (KK 16.11.2026 klo 01.08). Sanasta sanaan. 152 merkkiä. */
+    kommentti: ["Aseman edessä on pyörähalli veden alla, seitsemälletuhannelle pyörälle! Kurkistin sisään. Ankka ui yllä tietämättä, että kävelin sen alla kuivin jaloin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */
