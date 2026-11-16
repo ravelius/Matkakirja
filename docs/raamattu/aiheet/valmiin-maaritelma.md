@@ -9,7 +9,7 @@ SÄÄNNÖT:
 4. Työ on valmis vasta, kun korvattu toteutus on poistettu; poikkeama päätöksestä ei kelpaa väliaikaisena. [P-261112-6] [R-7.27]
 5. KK antaa ennen näkyvää työtä (mallit, merkit, ilme, valikot, valo) tavoitekuvan: oikea esikuva, tunnistettavat piirteet, värit, arviointietäisyydet. [P-261110-6]
 6. Ensimmäinen karkea kuva KK:lle ennen hiomista; palaute suoraan tekijälle, kopio PT:lle. [P-261110-6]
-7. Näkyvä työ junaan/omistajalle vasta KK:n katsottua täysikokoisen rajauksen tavoitekuvaa ja omistajan päätöksiä vasten (PT:n kuittaus: toimii); omistajalle vain peliin jäävä, kokeet ja välivaiheet ratkaisee KK. Poikkeus: omistajan pyytämä valmis työ linkkiin ilman kuva-ajoa, omistaja testaa (junasana, PALAUTUS OK pysyvät). [P-261110-6] [P-261111-5] [P-261116-20]
+7. Näkyvä työ junaan/omistajalle vasta KK:n katsottua täysikokoisen rajauksen tavoitekuvaa ja omistajan päätöksiä vasten (PT:n kuittaus: toimii); omistajalle vain peliin jäävä, kokeet ja välivaiheet ratkaisee KK. Poikkeus: omistajan pyytämä valmis työ linkkiin ilman kuva-ajoa, omistaja testaa (testit yöllä). [P-261110-6] [P-261111-5] [P-261116-20] [P-261116-21]
 8. Hyväksyjä käy läpi pyynnön kohdat, aiheen aiemmat päätökset ja kokonaislaadun (myös liike); makulinjaa ei muuteta omin päin. [R-9.5]
 9. Kuva arvioidaan tästä ajosta täysikokoisena tai alkuperäisen tarkkuuden rajauksena; pienennetystä ei päätellä vian puuttumista. [P-261104-1]
 10. Tunnun ja ulkonäön (kesto, tehosteet, värit, asettelu, ääni, teksti) mittari on omistajan kokeilu. KK:lle yksi ehjä kuva/ruutusarja junan kärjestä + testit nimeltä; ei mittauspareja, ei makuhiontaa. Pari: sama kohde kokonaan, rajaus, mittakaava; suunta koko ruutuna, keskikohta merkitty. [P-261114-7] [P-261104-1] [P-261108-1]
