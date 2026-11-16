@@ -7492,12 +7492,10 @@ export const NAHTAVYYSJUTUT = {
         + 'rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja yli kaksikymmentä arkkua hopeaa. Lounaismyrsky ei antanut periksi. Laiva '
         + 'ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja '
         + 'tammikuun 26. päivänä kapteeni teki ainoan jäljellä olevan '
-        + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. Miehistö pääsi '
-        + 'maihin ja sai suurimman osan hopeasta mukanaan, loput veivät '
-        + 'rannalle ryntäneet ryöstelijät. Runsaan kuukauden yhtiö yritti saada laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
+        + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. Miehistö pääsi maihin, ja suurin osa hopeasta pelastettiin; osan '
+        + 'veivät rannalle ryntäneet salakuljettajat. Runsaan kuukauden yhtiö yritti saada laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
         + 'ja jäi sinne. Kaksisataa kaksikymmentä vuotta myöhemmin, vuonna '
-        + '1969, vesi laski poikkeuksellisen matalalle ja paljasti sen: runko '
-        + 'oli tallella, koska savi ei päästä happea puuhun. Nykyään hylky on '
+        + '1969, vesi laski poikkeuksellisen matalalle ja paljasti sen: noin kaksi kolmasosaa laivasta oli tallella. Nykyään hylky on '
         + 'suojeltu, sen kylkiluut näkyvät rannalla vain harvoina päivinä '
         + 'vuodessa, ja siitä nostetut esineet ovat Hastingsin '
         + 'haaksirikkomuseossa. Amsterdamissa on lisäksi laiva itse — tai sen '
@@ -7626,11 +7624,10 @@ export const NAHTAVYYSJUTUT = {
     },
     'Yövartio': {
       nosto: 'nosto-amsterdamin-yovartio',
-      teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään '
-        + '363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin '
-        + 'kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten '
-        + 'sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja '
-        + 'alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole '
+      teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan. Vuonna 1715 '
+        + 'taulu siirrettiin kaupungintaloon, eikä se mahtunut sille '
+        + 'varatulle seinälle — joten sitä leikattiin joka reunalta, eniten '
+        + 'vasemmalta, mistä katosi useita hahmoja. Palasia ei ole '
         + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, jota poistettiin vuosina '
         + '1946–47 ja 1975–76.',
       kuvat: [
@@ -7644,9 +7641,8 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
-          lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
-          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '
-            + 'säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
+          lyhyt: 'Gerrit Lundensin pienoiskopio on tärkein todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
+          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on tärkein säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
             + '1715.',
           lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
         },
