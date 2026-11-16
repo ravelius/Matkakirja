@@ -1,0 +1,32 @@
+# Turun linna: tarinahuoneet halkaisukokeelle (SK 16.11.2026, KK 15.5x ja 16.00; Codex #2435)
+
+Tila: LUONNOS, kerros + siipi + sivu luettu päälähteestä. Päälähde: Järvinen & Nieminen arkkitehdit, *Turun linna / päälinna, rakennushistoriaselvitys 1280-luvulta vuoteen 1936, osa 1* (Senaatti-kiinteistöt, 15.1.2023; "RHS"), https://www.senaatti.fi/app/uploads/2024/04/978-952-368-117-0_2023_Kari-Jarvinen-ja-Merja-Nieminen-arkkitehdit_Turun-linna-paalinna_RHS_s.pdf. Lataus KK:n ehdolla: robots.txt (senaatti.fi/robots.txt) = 404, ei kieltoa; PDF 40 MB ladattu vain työhakemistoon, ei peliin, ei kuvia selvityksestä. Sivunumerot ovat selvityksen PAINETTUJA sivuja (pdf-sivu = painettu + 1). Verkkolähteet (fi-/en-Wikipedia, Reveel-opasalusta reveel.now, joulukaupunkiturku.fi) vain tapahtumille ja vertailuun; Wikipedian kieliversiot eivät ole kaksi lähdettä. Finnasta ei haettu.
+
+## Miten RHS numeroi huoneet (luettava ennen taulukkoa)
+RHS (s. 4) jakaa päälinnan osiin: **F** eteläinen porrastorni, **G** eteläsiipi länsipuoli, **H** länsitorni, **J** pohjoissiipi länsipuoli, **K** pohjoissiipi itäpuoli, **L** koillinen porrastorni, **M** itätorni, **N** eteläsiipi itäpuoli. Huonekoodin ensimmäinen numero on NYKYINEN kerros (JOHDETTU: s. 137 kuvatekstit "2. kerros [nyk. 3. kerros]" ja "3. kerros [nyk. 5. kerros]" 1865 pohjapiirroksista, joissa G302, M301, M303 ja kirkko N501 on listattu; ylin asuttu kerros pohjoissiivessä = 5.). Siis J503 = pohjoissiipi länsipuoli, 5. kerros. Koodin ja kerroksen yhteyttä ei selvitys sano yhdellä lauseella: viidennen kerroksen koodit M501, G501, J503 (ja J501, K503) ovat RHS:n painetulla sivulla 205 (5. kerroksen ajoituskaavio, KK tarkisti silmin 16.11.); 3. kerroksen koodit s. 137 ja 203, jos Codex tarvitsee varmuuden.
+
+## Kuusi huonetta: siipi, kerros, tapahtuma (valitse 3–4)
+
+| # | Huone (RHS-koodi) | Siipi/osa | Kerros (nyk.) | Tapahtuma | Lähde (RHS sivu; muut) |
+|---|---|---|---|---|---|
+| 1 | **Jordanin kamari** (M303; vieressä portinvartijan kamari M301 portin yläpuolella) | **itätorni (M), itäpää** | 3. | 1700-luvun puolivälissä käytetty eristyssellinä; 1865 käyttämättömänä viljamakasiinikaudella. Tarina: kornetti Carl Jordan, vankina kaksinnaimisesta, teloitettiin Turussa 16.4.1662 (kuolemantuomio vahvistettu 3.3.1662) | RHS s. 117, 134, 137 (huone, sijainti, eristyssellinä). Teloitus 1662: fi-WP "Turun linna" + Reveel https://reveel.now/c/4lx8 (RHS ei kerro Jordanin tarinaa). **Huom. ristiriita:** Wikipedia ja Reveel sanovat "porrastornin ylin/yläkerta"; RHS sijoittaa huoneen itätorniin, 3. kerrokseen. RHS voittaa sijainnissa. |
+| 2 | **Herttuan kamari** (M501; myöh. sakaristo) | **itätorni (M), itäpää** | 5. (ylin) | Juhana-herttuan asuinkamari 1558; ovi vei suoraan itätornista eteläsiiven uuteen suureen pitosaliin (stora salen N501; muutettiin linnan kirkoksi 1705–06) | RHS s. 76 ("nyk. sakaristo M501"), s. 88 (ovi N501:een, 1558), s. 141. Reveel https://reveel.now/c/p8hl (itätorni, takka 1558, sakaristo 1706): yhtyy |
+| 3 | **Iso linnantupa** (G301) ja sen yllä **eteläinen sali** (G501) | **eteläsiipi, länsipuoli (G)** | 3. (linnantupa), 5. (eteläinen sali) | Linnantupa holvattu Sturen aikana 1400-luvun lopulla; Juhana-herttua purki holvit 1558 ja rakensi niiden päälle suurin ikkunoin eteläisen salin | RHS s. 59 (linnantupa, Sture-aika), s. 88 (1558, G501). Ei toista lähdettä tapahtumalle |
+| 4 | **Stora salen / suuri pitosali** (N501) | **eteläsiipi, itäpuoli (N)** | 5. | Rakennettu 1556–59 herttuaparin aikaan; myöhemmin linnan kirkko 1705–06; 1941 tuhoutui | RHS s. 88 (suuri pitosali, kirkoksi 1705–06). Kirkon tuho 1941: fi-WP |
+| 5 | **Kuningattaren sali / Herttuattaren sali** (J503; s. 205 "Kuningattaren sali") | **pohjoissiipi, länsipuoli (J)** | 5. (ylin) | Rakennettu ylimpään kerrokseen suurin ikkunoin herttuattaren huoneistoksi (1556–57 pohjoissiiven muutokset); Katariina Jagellonica saapui Turkuun jouluaattona 1562; kuningattaren salin kaakeliuuni 1560–63 | RHS s. 87 (sali J503), s. 84 (saapuminen jouluaattona 1562), s. 99–100 (paneloinnin jäljet; kaakeliuuni). RHS s. 205 (koodi ja kerros). Reveel https://reveel.now/c/edzf (jouluaatto 1562; 1614 palo) yhtyy |
+| 5b | **Kuningattaren kamari** (J501) | **pohjoissiipi, länsipää (J)** | 5. (ylin) | Katariina Jagellonican makuuhuone 1562–63 (Reveel https://reveel.now/c/twrd; ei RHS:stä) | RHS s. 205 nimeää J501:n Kuningattaren kamariksi; J503 on erillinen Kuningattaren sali |
+| 6 | **Keskiaikainen kuninkaansali** (J307; EI s. 205:n K503 "Kuninkaansali", joka on 5. kerroksen oma tila) ja kuninkaan kamari (J301) | **pohjoissiipi, länsipuoli (J)** | 3. | Rakennettu 1365 jälkeen pohjoissiiven ylimpään asuttuun kerrokseen; holvattu uudelleen 1480-luvulla; Juhana-herttua purki holvit 1556 ja huoneesta tuli hänen henkivartiosoturiensa linnantupa | RHS s. 41, 53, 87. fi-WP yhtyy |
+| – | Nunnakappeli (K302) ja Sturekirkko (K303) | pohjoissiipi, itäpuoli (K) | 3. | Rakennettu samanaikaisesti 1480-luvulla; RHS: ei kirkkotila, vaan pitosali (lämmitetty) | RHS s. 56 |
+
+## Suositus leikkaustasolle (neljä huonetta, kolme osaa)
+1. **Jordanin kamari**, itätorni 3. krs (vankitarina 1662; ristiriita kerroksessa kirjattu).
+2. **Herttuan kamari M501**, itätorni 5. krs, jonka ovi vie eteläsiiven suureen pitosaliin (sama torni, ylä- ja alakerta).
+3. **Iso linnantupa G301 + eteläinen sali G501**, eteläsiipi (länsipuoli), 1558 holvien purku.
+4. **Kuningattarensali J503**, pohjoissiipi 5. krs, Katariinan saapuminen jouluaattona 1562.
+Näin leikkaus näyttää itäpään (torni), eteläsiiven ja pohjoissiiven; varavalinta on nimenomaan J307 (keskiaikainen kuninkaansali, pohjoissiipi 3. kerros), ei s. 205:n K503.
+
+## Ei lähteessä / avoimia
+- Kuningattaren kamari löytyi: J501, pohjoissiiven länsipää, 5. kerros (RHS s. 205, KK:n silmätarkistus 16.11.; Codexin tarkistus posti/codex-*-turku-rhs-2441-2444-silmatarkistus-20261116.md). Aiempi "ei lähteessä" oli virhe: etsin vain tekstistä, en pohjapiirroksen nimiöistä.
+- Jordanin vankeuden alku (1656 fi-WP vs. "1655 jälkeen" Reveel): RHS ei mainitse; kirjoita "1650-luvun puolivälistä".
+- Jordanin kamarin varsinaisen ikkunan/ovisuuntaa tai huoneen kokoa en lukenut; RHS:n huonekohtaiset selostukset julkaistaan erillisessä "tilakohtaisessa" osassa (RHS s. 10–11), jota ei ole.
+- Tämän raportin tilakoodit ja sivut ovat luettu tekstistä (pdftotext); sivut 134, 137 ja 203 ovat pohjapiirroksia: koodien paikka piirroksessa on tarkistettava silmin ennen mallikuvaa.
