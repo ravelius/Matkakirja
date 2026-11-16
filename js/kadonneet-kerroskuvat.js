@@ -9,7 +9,7 @@
  */
 import TEMPLE_TORNI from '../data/temple-torni-kerroskuvat.json' with { type: 'json' };
 
-/** kohde → [{ tarinat, taso, tiedosto }] */
+/** kohde → [{ tarinat, taso, tiedosto, tekija, lisenssi, lahde }] (tekijätiedot tools/kuvatekijat.mjs:lle) */
 export const KERROSKUVAT = {
-  [TEMPLE_TORNI.kohde]: TEMPLE_TORNI.kuvat.map(({ tarinat, taso, tiedosto }) => ({ tarinat, taso, tiedosto })),
+  [TEMPLE_TORNI.kohde]: TEMPLE_TORNI.kuvat.map(({ tarinat, taso, tiedosto, tekija, lisenssi, lahde }) => ({ tarinat, taso, tiedosto, tekija, lisenssi, lahde })),
 };

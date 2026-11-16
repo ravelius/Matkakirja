@@ -88,6 +88,7 @@ const SHELL = [
   // Gallerioiden selauskaistat (omistaja 9.9.2026): ui.js tuo staattisesti.
   './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
+  './js/kadonneet-kerroskuvat.js',
   './js/kuvatekija.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',
