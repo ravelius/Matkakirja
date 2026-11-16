@@ -52,19 +52,39 @@ SEINA = {None: 0, 'portland': None, 'tiili': None}
 # Asemahallien kattoväri (KK 15.11. 05.22): kaupungin talokattojen perusväri SAMASTA LÄHTEESTÄ kuin talopalat. Kaupunkirivin katot.paletti
 # (kaupungit-talot.json): vaihtelu-perhe → paletti → KATTO, kustakin suurimman osuuden sävy (KK 15.11. 05.26). Testi: testi_kattovari.py.
 KATTOVARI = (0, '-')
-KAUPUNKI_TYOKALU = '/Users/Shared/Claude/wt/proto-karttaseppa-tyokalu1/tyokalut/kaupunki'
+# Ohitus ympäristömuuttujalla VS_KATOT_KANSIO (kansio, jossa katot.py), esim. KS:n commitista irrotettu kopio ennen kuin KS:n työpuu on sen haarassa.
+KAUPUNKI_TYOKALU = os.environ.get('VS_KATOT_KANSIO') or '/Users/Shared/Claude/wt/proto-karttaseppa-tyokalu1/tyokalut/kaupunki'
 # Kaupungit, joiden talopalat tehdään jo tyyliperheellä, vaikka kaupunkirivi (kaupungit-talot.json katot.vaihtelu.perhe) ei vielä ole KS:n haarassa:
 # Lontoo l3d (KK 15.11. 07.05; KS katot.py 380dd4ae3, raakapalat karttaseppa/lontoo-tyyliperhe-20261115/l-l3d, rivi TYYLIPERHE.md). Kun rivi tulee, tämä ei muuta mitään.
-PERHE_OHITUS = {'lontoo': 'lontoo'}
+PERHE_OHITUS = {'lontoo': 'lontoo', 'rooma': 'rooma', 'wien': 'wien'}  # rooma, wien: KS 797a3bf17 (KK 16.11. 23.5x; KOE)
 TEE_PALAT = '/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/tee-palat.py'
+
+
+def _perheen_kentta(lahde, perhe, kentta):
+    """katot.py:n PERHEET[perhe][kentta] lähdetekstistä AST:lla (ei katot.py:n tuontia). Kentän lauseke saa viitata moduulin literaalivakioihin
+    ja kutsua sorted/sum/len/abs (KS 797a3bf17: Rooman katot=sorted(TERRAKOTTA, key=lambda c: -sum(c[0])))."""
+    import ast
+    puu = ast.parse(lahde)
+    vakiot = {}
+    for n in puu.body:
+        if isinstance(n, ast.Assign) and len(n.targets) == 1 and isinstance(n.targets[0], ast.Name):
+            try: vakiot[n.targets[0].id] = ast.literal_eval(n.value)
+            except ValueError: pass
+    for n in puu.body:
+        if isinstance(n, ast.Assign) and isinstance(n.targets[0], ast.Name) and n.targets[0].id == 'PERHEET':
+            for avain, arvo in zip(n.value.keys, n.value.values):
+                if isinstance(avain, ast.Constant) and avain.value == perhe:
+                    for kw in arvo.keywords:
+                        if kw.arg == kentta:
+                            koodi = compile(ast.Expression(kw.value), 'katot.py', 'eval')
+                            return eval(koodi, {'__builtins__': {'sorted': sorted, 'sum': sum, 'len': len, 'abs': abs}}, dict(vakiot))
+                    raise KeyError(f"PERHEET['{perhe}'] ilman kenttää {kentta}")
+    raise KeyError(f"katot.py PERHEET ilman perhettä '{perhe}'")
 
 
 def perheen_katot(lahde, perhe):
     """katot.py:n PERHEET[perhe]['katot'] (lista ((r, g, b), osuus)) lähdetekstistä."""
-    import ast, re
-    lohko = lahde[lahde.index('PERHEET = {'):]
-    lohko = lohko[lohko.index(f"'{perhe}': dict("):]
-    return ast.literal_eval(re.search(r'katot=(\[[^\]]*\])', lohko).group(1))
+    return _perheen_kentta(lahde, perhe, 'katot')
 
 
 def kattovari(k):
@@ -116,10 +136,7 @@ def seinavari(k):
 
 def perheen_seinat(lahde, perhe):
     """katot.py:n PERHEET[perhe]['seinat'] (lista ((r, g, b), osuus)) lähdetekstistä."""
-    import ast, re
-    lohko = lahde[lahde.index('PERHEET = {'):]
-    lohko = lohko[lohko.index(f"'{perhe}': dict("):]
-    return ast.literal_eval(re.search(r'seinat=(\[[^\]]*\])', lohko).group(1))
+    return _perheen_kentta(lahde, perhe, 'seinat')
 
 
 def alueella(k, merkit):
