@@ -1,0 +1,26 @@
+{
+  "sheet": "E",
+  "taskNumber": 2359,
+  "reviewedAt": "2026-11-16T07:13:09.761942+00:00",
+  "selectedAttempt": 1,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kaksi erillistä tummanpunaista esiripun puoliskoa, suorina suljettuun asentoon, välissä läpinäkyvä rako. Pystysuuntaiset poimut, kullanvärinen hapsunauha alareunassa, paperiteatterin muste ja laakea väritys. Ei valokeilaa, näyttämön lattiaa tai hahmoja.",
+  "checks": {
+    "twoSeparateCurtainHalves": true,
+    "centralAlphaGap": true,
+    "regularVerticalPleats": true,
+    "goldFringe": true,
+    "noSpotlightOrCastShadow": true,
+    "noTextFrameCharacters": true,
+    "transparentOuterMargins": true,
+    "nativeUnedited": true,
+    "landscape3to2": true
+  },
+  "notes": [
+    "Ensimmäinen otto valittu; 1/2 kutsua käytetty. Toinen otto ei käynnisty automaattisesti.",
+    "Valaistus on tasainen; poimujen tumma/vaalea vaihtelu on maalattua muotoa, ei erillistä näyttämövaloa.",
+    "Poimurytmi sopii venytyksen ja toiston kokeiluun. Pikselintarkkaa saumatonta vaakatoistoa ei ole varmennettu, ja vaalea leikkausreunus näkyy puoliskojen reunoissa. NS/KK arvioi toistotavan pelissä.",
+    "Natiivi 1536 × 1024 px; RGBA-tausta ja keskirako tarkistettu vaalealla ja tummalla alustalla. Ei skaalausta, rajausta tai alfan muokkausta.",
+    "KK-hyväksyntä, omistajahyväksyntä, pelin liike/valokeila ja julkaisu ovat erillisiä."
+  ]
+}
