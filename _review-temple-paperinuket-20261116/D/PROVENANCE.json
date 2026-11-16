@@ -1,0 +1,92 @@
+{
+  "taskNumber": 2358,
+  "sheet": "D",
+  "package": "_review-temple-paperinuket-20261116/D",
+  "slug": "temple-arkki-d",
+  "report": "codex-paatoimittaja-temple-arkki-d-20261116-toimitus.md",
+  "sourcePath": "posti/paatoimittaja-codex-temple-nuket-lisays-DE-20261116.md",
+  "sourceBlob": "697a0b41832fe444b3a46071e6374e0edc188d0f",
+  "sourceCommit": "e45b9ad0161a4a15a450eeab8a0796abd7a8f5c9",
+  "nextAction": "KK arvioi täysikokoisena; hyväksynnän jälkeen NS leikkaa ja kytkee peliin. Ei pelikytkentää eikä julkaisua tässä toimituksessa.",
+  "tool": "built-in image_gen",
+  "useCase": "illustration-story",
+  "selectedAttempt": 2,
+  "generationCalls": 2,
+  "generationLimitPerSheet": 2,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "generated-rejected-headroom",
+      "startedAt": "2026-11-16T07:08:42.052588+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple-paperinuket-2355-2358-2359-20261116/D/prompts/attempt001.txt",
+      "tool": "built-in image_gen",
+      "transparentBackgroundRequested": true,
+      "completedAt": "2026-11-16T07:10:16.341549+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1b73e621-14ad-417d-86e3-844964289a49.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple-paperinuket-2355-2358-2359-20261116/D/native/temple-arkki-d-attempt001.png",
+      "sha256": "2aaa4cfdddcae811b8d4284a6f769e1dc3922f2cd5ffcc9c6af9c1e8b46d4397",
+      "bytes": 2330736,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "nonTransparentBbox": [
+        0,
+        25,
+        1518,
+        1010
+      ],
+      "selected": false,
+      "qaReason": "Clothes and poses good; figures approximately 94% height with too little headroom for names. Second whole generation for 85–86% scale and clear top strip."
+    },
+    {
+      "attempt": 2,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T07:10:18.128566+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple-paperinuket-2355-2358-2359-20261116/D/prompts/attempt002.txt",
+      "tool": "built-in image_gen",
+      "transparentBackgroundRequested": true,
+      "completedAt": "2026-11-16T07:11:25.014902+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0220ba5f-79a9-4d27-a987-0441afd79d2c.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple-paperinuket-2355-2358-2359-20261116/D/native/temple-arkki-d-attempt002.png",
+      "sha256": "0c6ade209770f017692c0003d15e38e4b6d7fb14a22708b651f445c33a37fcd5",
+      "bytes": 2087519,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "nonTransparentBbox": [
+        0,
+        53,
+        1516,
+        1011
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativePreservedUnedited": true,
+  "pngSha256": "0c6ade209770f017692c0003d15e38e4b6d7fb14a22708b651f445c33a37fcd5",
+  "pngBytes": 2087519,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "referenceRole": "Costume observations only; generated A used as visual style reference for later sheets",
+  "sourceLabel": "Matkakirjan havainnekuva"
+}

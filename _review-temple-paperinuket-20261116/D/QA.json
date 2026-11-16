@@ -1,0 +1,27 @@
+{
+  "sheet": "D",
+  "taskNumber": 2358,
+  "reviewedAt": "2026-11-16T07:11:27.208136+00:00",
+  "selectedAttempt": 2,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kaksi erillistä seisovaa päähenkilöä: kuningas A1:n ruskeassa takissa punainen kirja kädessään ja kuningatar siniharmaassa leningissä valkoisen nenäliinan kanssa. Hahmot kääntyvät toisiinsa päin. Kasvot, puvut, musteviiva ja jalustat seuraavat A/B-mallia.",
+  "checks": {
+    "twoFullLengthStandingFigures": true,
+    "matchingCostumes": true,
+    "noBlackMourningDress": true,
+    "simpleFaces": true,
+    "headroomPresent": true,
+    "separateCutouts": true,
+    "paleBorderAndStraightTabs": true,
+    "transparentGaps": true,
+    "noObservedTextOrExtras": true,
+    "landscape3to2": true,
+    "nativeUnedited": true
+  },
+  "notes": [
+    "Toinen otto valittu. Ensimmäisen oton hahmot olivat liian suuria ja nimikylttien ylätila niukka. V2:ssa korkeus noin 86–87 % ja ylätila noin 10–11 %, lähteen A-hyväksynnän 86 % mittakaavaa lähellä.",
+    "Kuningas on A1:n mukainen uudelleen piirretty hahmo, ei pikselintarkka suurennos. Puvun yksityiskohtiin tulee pieniä eroja; kasvot pysyvät pelkistettyinä.",
+    "Natiivi 1536 × 1024 px. Alfa ja aukot tarkistettu sekä valkoisella että tummalla alustalla. Ei retusointia, skaalausta eikä rajausta.",
+    "A:n hyväksyntä 9a24bdf0232d802b83ed7cece1fc9609dd89f02d koskee tyylimallia; D:n KK-hyväksyntä, omistajahyväksyntä ja pelikytkentä vielä erillisiä."
+  ]
+}
