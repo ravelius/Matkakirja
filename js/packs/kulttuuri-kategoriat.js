@@ -2759,28 +2759,28 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
           tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
-          teksti: 'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
-            + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
-            + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua '
-            + 'kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi '
-            + 'huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja '
-            + 'ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat '
-            + 'siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä '
+          teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+            + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
+            + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
+            + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+            + '\n\n'
+            + 'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
+            + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
+            + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
+            + 'paloi 1937.',
+          lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä '
             + 'tunnissa.',
-          lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
-          selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja '
-            + 'ovineen ja ikkunoineen, ja ratas kulkee 2,7 kilometriä '
-            + 'tunnissa.',
+          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin puusta 2016, ja ratas '
+            + 'kulkee enintään 2,7 kilometriä tunnissa.',
           lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Prater',
           galleria: [
             {
               otsikko: 'Koko ratas kerralla',
               tiedosto: 'Wiener Riesenrad DSC02378.JPG',
-              lyhyt: 'Jättiratas on kolmikymmenkulmio; 1945 palon jälkeen vaunuja ripustettiin takaisin vain viisitoista.',
-              selite: 'Jättiratas ei ole ympyrä vaan kolmikymmenkulmio, ja '
-                + 'vuoden 1945 palon jälkeen vaunuja ripustettiin takaisin '
-                + 'vain viisitoista, joka toiseen kulmaan.',
+              lyhyt: 'Praterin jättiratas kokonaisuudessaan; vaunut uusittiin puusta 2016.',
+              selite: 'Praterin jättiratas kokonaisuudessaan. Vuonna 2016 vaunut uusittiin puusta '
+                + 'alkuperäisten piirustusten mukaan.',
               lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
             },
           ],
@@ -3177,9 +3177,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-beethoven-yhdeksas-1824',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Beethoven 1824',
-      johdanto: 'Kärntnertor-teatterissa nousi toukokuussa 1824 sali seisomaan '
-        + 'viisi kertaa, ja kuuro säveltäjä näki sen vasta, kun nuori '
-        + 'alttolaulaja käänsi hänet yleisöön päin.',
+      johdanto: 'Kärntnertor-teatterissa kantaesitettiin 7. toukokuuta 1824 '
+        + 'Beethovenin yhdeksäs sinfonia: säveltäjä oli lavalla ja osoitti '
+        + 'tempot, mutta kokonaisjohdosta vastasi kapellimestari Michael Umlauf.',
       tehtava: {
         kysymys: 'Kuka johti yhdeksännen sinfonian kantaesityksen virallisesti?',
         vaihtoehdot: [
@@ -3189,8 +3189,8 @@ export const KULTTUURI_KATEGORIAT = {
           'Caroline Unger',
         ],
         oikea: 2,
-        fakta: 'Umlauf oli neuvonut soittajia seuraamaan häntä eikä lähes kuuroa '
-          + 'säveltäjää, joka löi tahtia lavan reunassa.',
+        fakta: 'Beethoven oli lavalla ja osoitti tempot, mutta virallisesti '
+          + 'kokonaisjohdosta vastasi kapellimestari Michael Umlauf.',
       },
       nostot: [
         {
@@ -3198,44 +3198,46 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '7.5.1824',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
-          teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta '
-            + 'Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. '
-            + 'toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on '
-            + 'juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä '
-            + 'selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä '
-            + 'kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut '
-            + 'soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin '
-            + 'hän näki Beethovenin Fidelio-harjoituksen romahtavan. '
-            + 'Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta '
-            + 'ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset '
-            + 'heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, mitä '
-            + 'ei kuule. Ovaatioita tulee viisi. Yleisössä ovat Schubert, Czerny '
-            + 'ja kansleri Metternich. Sinfonia on ensimmäinen, jossa suuri '
-            + 'orkesteri saa rinnalleen kuoron ja solistit — Schillerin Oodi '
-            + 'ilolle, tekstinä, jota Beethoven on kantanut mukanaan '
-            + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen '
-            + 'kolme osaa. Sävel on nyt Euroopan hymni.',
-          lyhyt: 'Kuuro Beethoven ei kuule Yhdeksännen sinfonian '
-            + 'suosionosoituksia, ennen kuin Unger kääntää hänet.',
-          selite: 'Caroline Unger koskettaa Beethovenin hihaa ja kääntää hänet '
-            + 'kohti salia. Säveltäjä ei kuule suosionosoituksia; hetken ajan hän '
-            + 'joutuu lukemaan oman teoksensa vastaanoton kasvoista, kohoavista '
-            + 'käsistä ja lattian värinästä.',
-          lahde: 'Matkakirjan havainnekuva. Faktat: Beethoven-Haus Bonn — Ninth '
-            + 'Symphony, tarkistettu 5.9.2026.',
+          teksti: 'Beethovenin yhdeksäs sinfonia kantaesitettiin Wienissä 7. '
+            + 'toukokuuta 1824 Kärntnertor-teatterissa, ja konsertti alkoi '
+            + 'seitsemältä illalla. Beethoven oli 53-vuotias ja jo lähes täysin '
+            + 'kuuro. Hän oli lavalla ja osoitti tempot, mutta virallisesti '
+            + 'kokonaisjohdosta vastasi kapellimestari Michael Umlauf.\n\nSinfonian '
+            + 'lopussa solistit ja kuoro laulavat Schillerin runon Oodi ilolle. '
+            + 'Kertoman mukaan Beethoven oli ajatellut sen säveltämistä jo '
+            + 'nuorena. Samassa konsertissa kuultiin myös kolme osaa hänen Missa '
+            + 'solemnis -messustaan. Kertoman mukaan laulaja Caroline Unger '
+            + 'kosketti Beethovenia hihasta ja käänsi hänet katsomaan yleisöä, '
+            + 'joka taputti ja heilutti hattuja ja nenäliinoja. Tarinan '
+            + 'ajankohdasta ollaan eri mieltä: joidenkin mukaan se tapahtui '
+            + 'sinfonian lopussa, toisten mukaan jo scherzon jälkeen.\n\nEuroopan '
+            + 'unionin sivujen mukaan sinfonian ilon sävel on nykyään Euroopan '
+            + 'hymni: Euroopan neuvosto otti sen käyttöön 1972 ja EU:n johtajat '
+            + '1985. Hymnissä ei ole sanoja, vain sävel.\n\nIsoisäsi matkavuonna '
+            + '1873 Kärntnertor-teatteria ei enää käytetty. Sen viimeinen esitys '
+            + 'oli ollut jo huhtikuussa 1870, ja talo purettiin sen jälkeen. '
+            + 'Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
+            + 'Valtionoopperassa.',
+          lyhyt: 'Kertoman mukaan Caroline Unger kääntää Beethovenin kohti '
+            + 'yleisöä, joka taputtaa ja heiluttaa hattuja.',
+          selite: 'Kertoman mukaan laulaja Caroline Unger kosketti Beethovenia '
+            + 'hihasta ja käänsi hänet katsomaan yleisöä, joka taputti ja '
+            + 'heilutti hattuja ja nenäliinoja.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: A. W. Thayer, The Life of '
+            + 'Ludwig van Beethoven, ja Beethoven-Haus Bonn — Ninth Symphony, '
+            + 'tarkistettu 16.11.2026.',
           galleria: [
             {
               otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
-              lyhyt: 'Muusikot seuraavat Umlaufin tahtipuikkoa, jotta kuuron '
-                + 'Beethovenin partituuri pysyy koossa.',
-              selite: 'Orkesterin alttoviulisti pitää katseensa Umlaufin '
-                + 'tahtipuikossa, vaikka Beethoven merkitsee vieressä tempoja '
-                + 'koko kehollaan. Muusikot ovat sopineet seuraavansa varsinaista '
-                + 'kapellimestaria — raskas mutta välttämätön ratkaisu, jotta '
-                + 'kuuron säveltäjän valtava partituuri pysyy koossa.',
-              lahde: 'Matkakirjan havainnekuva. Faktat: Beethoven-Haus Bonn — '
-                + 'Ninth Symphony, tarkistettu 5.9.2026.',
+              lyhyt: 'Beethoven oli lavalla ja osoitti tempot, mutta '
+                + 'kapellimestari Michael Umlauf vastasi kokonaisjohdosta.',
+              selite: 'Beethoven oli lavalla ja osoitti tempot, mutta '
+                + 'virallisesti kokonaisjohdosta vastasi kapellimestari Michael '
+                + 'Umlauf.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: A. W. Thayer, The Life of '
+                + 'Ludwig van Beethoven, ja Beethoven-Haus Bonn — Ninth Symphony, '
+                + 'tarkistettu 16.11.2026.',
             },
           ],
         },
@@ -3256,9 +3258,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-mozart-wien-1786',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Mozart 1786',
-      johdanto: 'Hofburgin vieressä sijainneessa hoviteatterissa kantaesitettiin '
-        + 'toukokuussa 1786 ooppera kielletystä näytelmästä, ja yleisö vaati '
-        + 'numeroita uusiksi niin, että keisarin oli puututtava asiaan.',
+      johdanto: 'Hofburgin vieressä sijainneessa Burgtheaterissa kantaesitettiin '
+        + '1. toukokuuta 1786 ooppera Beaumarchais\'n näytelmästä, jonka '
+        + 'saksankielinen esitys oli kielletty Wienissä, ja keisari rajoitti '
+        + 'numeroiden toistamista.',
       tehtava: {
         kysymys: 'Miksi keisari Joosef II rajoitti Figaron häiden uusintapyyntöjä?',
         vaihtoehdot: [
@@ -3268,8 +3271,8 @@ export const KULTTUURI_KATEGORIAT = {
           'Da Ponte oli loukannut häntä',
         ],
         oikea: 0,
-        fakta: 'Mozart johti kaksi ensimmäistä esitystä cembalon äärestä ja sai '
-          + 'työstä 450 floriinia.',
+        fakta: 'Keisari määräsi 9. toukokuuta 1786, ettei useamman kuin yhden '
+          + 'laulajan numeroita saa toistaa, koska esitys venyi liian pitkäksi.',
       },
       nostot: [
         {
@@ -3277,46 +3280,44 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '1.5.1786',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg',
-          teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. '
-            + 'Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus '
-            + 'Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa '
-            + 'on. Ooppera perustuu Beaumarchais\'n näytelmään, jonka keisari '
-            + 'Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija '
-            + 'nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa '
-            + 'viikossa, poisti poliittiset puheet ja sai keisarilta luvan '
-            + 'oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa '
-            + 'Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa '
-            + 'uudelleen ja toisessa esityksessä seitsemän, kunnes keisari '
-            + 'määrää, ettei useamman laulajan numeroita saa toistaa — esitys '
-            + 'venyy muuten yöhön. Mozart on saanut työstä 450 floriinia, kolme '
-            + 'kertaa Salzburgin hovimuusikon vuosipalkan. Esityksiä tulee '
-            + 'Wienissä yhdeksän, eikä menestys ole valtava. Prahassa ooppera '
-            + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat '
-            + 'Mozartin matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don '
-            + 'Giovannille.',
-          lyhyt: 'Anna Storace etsii Mozartin katseesta vihjettä Figaron häiden '
-            + 'ensi-illassa Burgtheaterissa.',
-          selite: 'Anna Storace odottaa Susannan seuraavaa repliikkiä ja etsii '
-            + 'Mozartin katseesta sisääntulon. Cembalon äärestä johtava säveltäjä '
-            + 'voi auttaa vain pienellä nyökkäyksellä — näyttämöllä laulajan on '
-            + 'muutettava kuukausien hovijuorut, peruutukset ja harjoitukset '
-            + 'yhdeksi vaivattomalta kuulostavaksi lauseeksi.',
+          teksti: 'Mozartin ooppera Figaron häät sai ensi-iltansa Wienin '
+            + 'Burgtheaterissa 1. toukokuuta 1786. Mozart oli 30-vuotias. Neue '
+            + 'Mozart-Ausgaben mukaan hän johti ensi-illan ja toisen esityksen '
+            + 'cembalon ääreltä.\n\nOoppera perustuu Beaumarchais\'n näytelmään, '
+            + 'jonka saksankielinen esitys Wienissä kiellettiin 1785 keisari '
+            + 'Joosef II:n käskystä poliittisen taustansa vuoksi. Librettisti '
+            + 'Lorenzo Da Ponte lievensi näytelmän pilkkaa ja jätti pois Figaron '
+            + 'suuren poliittisen puheen. Da Ponten oman kertomuksen mukaan hän '
+            + 'kirjoitti libreton kuudessa viikossa, mutta hänen muistelmiinsa ei '
+            + 'voi aina luottaa. Susannaa lauloi Nancy Storace ja Figaroa '
+            + 'Francesco Benucci.\n\nYleisö vaati niin monta numeroa uudelleen, '
+            + 'että keisari antoi 9. toukokuuta 1786 määräyksen: numeroita, joita '
+            + 'laulaa useampi kuin yksi laulaja, ei saa enää toistaa, koska '
+            + 'esitys venyi liian pitkäksi. Leopold Mozartin kirjeen mukaan '
+            + 'toisessa esityksessä toistettiin viisi ja kolmannessa seitsemän '
+            + 'numeroa.\n\nJoulukuussa 1786 prahalainen sanomalehti kirjoitti, '
+            + 'ettei mikään teos ollut koskaan herättänyt niin paljon huomiota '
+            + 'kuin Figaron häät. Tammikuussa 1787 Mozart matkusti Prahaan, jossa '
+            + 'ooppera esitettiin hänen läsnä ollessaan. NMA:n mukaan menestys '
+            + 'johti Don Giovannin tilaukseen.\n\nIsoisäsi matkavuonna 1873 sama '
+            + 'Burgtheater Michaelerplatzilla oli yhä käytössä. Se suljettiin '
+            + 'vasta 1888, kun uusi Burgtheater avattiin Ringillä.',
+          lyhyt: 'Nancy Storace lauloi Susannaa Figaron häiden ensi-illassa '
+            + 'Burgtheaterissa.',
+          selite: 'Nancy Storace, joka lauloi Susannaa ensi-illassa, ja Mozart '
+            + 'cembalon ääressä.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Mozarteum — Le nozze di '
-            + 'Figaro critical edition, tarkistettu 5.9.2026.',
+            + 'Figaro critical edition, tarkistettu 16.11.2026.',
           galleria: [
             {
               otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
-              lyhyt: 'Mozart johtaa Figaron häiden ensiesityksiä cembalosta '
-                + 'hoviteatterin tiiviin yleisön edessä.',
-              selite: 'Mozart johtaa Figaron kahta ensimmäistä esitystä '
-                + 'cembalosta, keskellä laulajia, soittajia ja pienen '
-                + 'hoviteatterin tiivistä yleisöä. Parterren nuori nuotinkääntäjä '
-                + 'kuulee salin naurun siirtyvän kohtauksesta toiseen ja tajuaa '
-                + 'ennen arvostelijoita, että yleisö seuraa palvelijoiden juonta '
-                + 'yhtä tarkasti kuin aatelisia.',
+              lyhyt: 'Mozart johti Figaron häiden kaksi ensimmäistä esitystä '
+                + 'cembalon äärestä.',
+              selite: 'Neue Mozart-Ausgaben mukaan Mozart johti ensi-illan ja '
+                + 'toisen esityksen cembalon ääreltä.',
               lahde: 'Matkakirjan havainnekuva. Faktat: Mozarteum — Le nozze di '
-                + 'Figaro critical edition, tarkistettu 5.9.2026.',
+                + 'Figaro critical edition, tarkistettu 16.11.2026.',
             },
           ],
         },
@@ -3337,11 +3338,11 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-wienin-porssikrahi-1873',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Wienin krahi 1873',
-      johdanto: 'Wienin pörssi romahti 9. toukokuuta 1873 vain viikko '
-        + 'maailmannäyttelyn avajaisten jälkeen — ”Der Krach” painoi Itävallan '
-        + 'talouden vuosien lamaan.',
+      johdanto: 'Wienin pörssi romahti perjantaina 9. toukokuuta 1873, runsaan '
+        + 'viikon maailmannäyttelyn avajaisten jälkeen, ja päivää kutsutaan '
+        + 'Mustaksi perjantaiksi.',
       tehtava: {
-        kysymys: 'Mikä avattiin Wienissä vain viikkoa ennen pörssiromahdusta 1873?',
+        kysymys: 'Mikä avattiin Wienissä runsas viikko ennen pörssiromahdusta 1873?',
         vaihtoehdot: [
           'Maailmannäyttely',
           'Uusi rautatieasema',
@@ -3349,8 +3350,7 @@ export const KULTTUURI_KATEGORIAT = {
           'Pörssin uusi rakennus',
         ],
         oikea: 0,
-        fakta: 'Keisari Franz Joseph avasi Wienin maailmannäyttelyn Praterissa '
-          + '1.5.1873; pörssi romahti kahdeksan päivää myöhemmin 9.5.1873.',
+        fakta: 'Maailmannäyttely avattiin Praterissa 1.5.1873; pörssi romahti 9.5.1873.',
       },
       nostot: [
         {
@@ -3358,36 +3358,34 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '9.5.1873',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-lahi-photo-v4.jpg',
-          teksti: 'Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet '
-            + 'huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. '
-            + 'Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai '
-            + '9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin '
-            + 'jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen '
-            + 'edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz '
-            + 'Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli '
-            + 'tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja '
-            + 'rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä '
-            + 'lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki '
-            + 'toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutuu '
-            + 'hajottamaan pörssisalin edustalle kerääntyneen väkijoukon. Krahi, '
-            + 'jota jälkipolvet kutsuvat nimellä ”Der Krach”, painaa Itävallan '
-            + 'talouden vuosien lamaan juuri samaan aikaan kun näyttelyvieraiden '
-            + 'mukana kaupunkiin leviää koleraepidemia. Seuraavien viikkojen '
-            + 'aikana yli kuusikymmentä pankkia ja rakennusyhtiötä ajautuu '
-            + 'vararikkoon, ja moni pieni säästäjä menettää elämänsä säästöt '
-            + 'yhden ainoan aamupäivän aikana.',
+          teksti: 'Wienin maailmannäyttely avattiin Praterissa 1. toukokuuta '
+            + '1873. Runsas viikko avajaisten jälkeen, perjantaina 9. toukokuuta '
+            + '1873, Wienin pörssi romahti. Siksi päivää kutsutaan Mustaksi '
+            + 'perjantaiksi.\n\nPörssi toimi tuolloin väliaikaisessa rakennuksessa '
+            + 'Schottenringillä; nykyinen pörssirakennus valmistui vasta 1877. '
+            + 'Edellisinä vuosina oli perustettu yli sata osakeyhtiötä, ja '
+            + 'monella niistä oli vähän muuta kuin paperi, jolle osakkeet oli '
+            + 'painettu. Romahduspäivänä noin 120 yritystä ajautui konkurssiin. '
+            + 'Sen jälkeen alkoi pitkä talouslama.\n\nSamana vuonna Wienissä riehui '
+            + 'myös koleraepidemia, joka vei noin 3000 ihmisen hengen. Näyttelyyn '
+            + 'tuli noin 7 miljoonaa kävijää, vähemmän kuin odotettiin.\n\nIsoisäsi '
+            + 'matkavuonna 1873 Prateria hallitsi maailmannäyttelyn Rotunde, 108 '
+            + 'metriä leveä kupolirakennus, joka oli aikansa suurin laatuaan. '
+            + 'Rotunde paloi 17. syyskuuta 1937.',
           lyhyt: 'Pörssimeklari tuntee kurssien romahtavan toukokuussa 1873.',
           selite: 'Pörssimeklari tuntee kurssien romahtavan toukokuussa 1873.',
-          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Wiener Börse, '
-            + 'pörssin historia; tarkistettu 28.9.2026.',
+          lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: AEIOU, '
+            + 'Deutsches Historisches Museum ja Wien Geschichte Wiki; tarkistettu '
+            + '16.11.2026.',
           galleria: [
             {
               otsikko: 'Wienin krahi 1873 — pörssi romahtaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-kauko-photo-v4.jpg',
-              lyhyt: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
-              selite: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
-              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: Wiener '
-                + 'Börse, pörssin historia; tarkistettu 28.9.2026.',
+              lyhyt: 'Wienin pörssisalissa puhkeaa paniikki.',
+              selite: 'Wienin pörssisalissa puhkeaa paniikki.',
+              lahde: 'Matkakirjan havainnekuva (dramatisoitu). Faktat: AEIOU, '
+                + 'Deutsches Historisches Museum ja Wien Geschichte Wiki; '
+                + 'tarkistettu 16.11.2026.',
             },
           ],
         },
