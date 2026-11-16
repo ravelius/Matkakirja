@@ -118,7 +118,7 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 - Lehtitekstin korjattavaa: "kuusi metriä" → "viisi", verolause pois, "siksi jyrkät" (syy verosta).
 
 ### 8. Portugalilainen synagoga (Esnoga, Mr. Visserplein 3) – uusi, korvaa Rembrandtin talon (KK 16.11.)
-- Data: uusi tarinapaikka: `nimi: 'Portugalilainen synagoga', tyyppi: 'rakennus'` (tyyppi tarkistettava tarkista.mjs:stä), `lat: 52.3675, lon: 4.9053, tarinapaikka: true, merkki: 'tiimalasi', nosto: 'nosto-amsterdamin-portugalilainen-synagoga'` (uusi nosto). Koordinaatti: Wikidata Q1853707 (52,3675/4,905278) + en-Wikipedia (52,3675/4,9054); toinen itsenäinen lähde puuttuu (OSM-rajapinta robots-kiellossa).
+- Data: uusi tarinapaikka: `nimi: 'Portugalilainen synagoga', tyyppi: 'rakennus'` (tyyppi tarkistettava tarkista.mjs:stä), `lat: 52.3675, lon: 4.9053, tarinapaikka: true, merkki: 'tiimalasi', nosto: 'nosto-amsterdamin-portugalilainen-synagoga'` (uusi nosto). Koordinaatti: 1 lähde, tarkistettava kuvasta (KK 16.11.: yksi lähde riittää yksiselitteiselle rakennukselle; Wikidata Q1853707 52,3675/4,905278, en-WP 52,3675/4,9054 eivät ole itsenäisiä).
 - aika: `1675`
 - Teksti:
   > Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa 1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.
@@ -131,7 +131,7 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 - Kuvat: `Fotoreproductie van een pentekening door J. Sequeira … 1875 … RP-F-00-1715.jpg` (CC0, Rijksmuseum; 200-vuotissouvenir, sisätila; koko tiedostonimi Commonsista), `Exterieur OVERZICHT VOORGEVEL - Amsterdam - 20311779 - RCE.jpg` (CC BY-SA 4.0, A. J. van der Wal / RCE, 1997), vaihtoehto `Portugees-Israëlietische Synagoge 20180702.jpg` (CC BY-SA 4.0, Suicasmo). Stadsarchief-alkuperäiset kuvat (Hilverdink n. 1844) vältetty.
 
 ### 9. Montelbaanstoren (Oudeschans 2) – uusi, korvaa Anne Frankin talon (KK 16.11.)
-- Data: uusi tarinapaikka: `nimi: 'Montelbaanstoren', tyyppi: 'rakennus'` (tarkistettava), `lat: 52.3720, lon: 4.9056, tarinapaikka: true, merkki: 'tiimalasi', nosto: 'nosto-amsterdamin-montelbaanstoren'` (uusi nosto). Koordinaatti: Wikidata Q1946061 (52,37204/4,90563), nl-WP (52,37194/4,90556), en-WP (52,37206/4,90568); ei itsenäistä toista lähdettä. Piste ei ole päällekkäinen Kapeimman talon kanssa (≈ 430 m).
+- Data: uusi tarinapaikka: `nimi: 'Montelbaanstoren', tyyppi: 'rakennus'` (tarkistettava), `lat: 52.3720, lon: 4.9056, tarinapaikka: true, merkki: 'tiimalasi', nosto: 'nosto-amsterdamin-montelbaanstoren'` (uusi nosto). Koordinaatti: 1 lähde, tarkistettava kuvasta (KK 16.11.; Wikidata Q1946061 52,37204/4,90563, nl-WP 52,37194/4,90556, en-WP 52,37206/4,90568). Piste ei ole päällekkäinen Kapeimman talon kanssa (≈ 430 m).
 - aika: `1606`
 - Teksti:
   > Montelbaanstoren on yksi Amsterdamin tunnetuimmista torneista. Hendrick de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja renessanssihuipun, johon tuli kello ja useita soittokelloja. Vuonna 1610 torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.
