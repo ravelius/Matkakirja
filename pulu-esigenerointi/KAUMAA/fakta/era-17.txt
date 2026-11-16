@@ -256,7 +256,7 @@ VASTAUS: Rembrandt van Rijn syntyi vuonna 1606 Leidenissä ja asettui Amsterdami
 ### v2-941
 KOHDE: kaupunki:amsterdam
 KYSYMYS: Kerro lisää: Yövartio
-VASTAUS: Yövartio on Rembrandtin vuonna 1642 maalaama kaartin ryhmäkuva, ja se on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle, joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu, eikä palasia ole löydetty. Nimikin on harhaanjohtava: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla. Kuvan keskellä on kaartin kapteeni [[Frans Banninck Cocq]], ja teos on esillä [[Rijksmuseumissa]].
+VASTAUS: Yövartio on Rembrandtin vuonna 1642 maalaama kaartin ryhmäkuva. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle, joten sitä leikattiin joka reunalta. Eniten katosi vasemmalta, mistä lähti kolme hahmoa, eikä palasia ole löydetty. Nimikin on harhaanjohtava: teos ei esitä yötä, vaan pinta oli tummunut lakasta, jota poistettiin vuosina 1946–47 ja 1975–76. Kuvan keskellä on kaartin kapteeni [[Frans Banninck Cocq]], ja teos on esillä [[Rijksmuseumissa]].
 
 ### v2-942
 KOHDE: kaupunki:amsterdam
@@ -266,7 +266,7 @@ VASTAUS: Johannes Vermeer eli Jan Vermeer syntyi vuonna 1632 [[Delftissä]] ja k
 ### v2-943
 KOHDE: kaupunki:amsterdam
 KYSYMYS: Kerro lisää: Amsterdam-laiva
-VASTAUS: Amsterdam oli Hollannin Itä-Intian komppanian kauppalaiva, jonka yhtiö rakennutti omalla telakallaan vuonna 1748. Se lähti ensimmäiselle matkalleen [[Texelin]] redeltä 8. tammikuuta 1749 kohti Bataviaa, ja kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastiin kuului kangasta, viiniä, rakennuskiveä, tykkejä, paperia ja kaksikymmentäseitsemän arkkua hopeaa, joiden arvo oli noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi, eikä laiva päässyt Atlantille. Se päätyi Englannin etelärannikolle [[Hastingsin]] lähelle, missä hylky on lähteiden mukaan yhä rannalla, ja sen kopio on nähtävillä Amsterdamissa [[Scheepvaartmuseumin]] luona.
+VASTAUS: Amsterdam oli Hollannin Itä-Intian komppanian kauppalaiva, jonka yhtiö rakennutti omalla telakallaan vuonna 1748. Se lähti ensimmäiselle matkalleen [[Texelin]] redeltä 8. tammikuuta 1749 kohti Bataviaa, ja kannella oli yli 330 ihmistä, kapteenina 33-vuotias Willem Klump. Lastiin kuului kangasta, viiniä, rakennuskiveä, tykkejä, paperia ja yli kaksikymmentä arkkua hopeaa. Lounaismyrsky ei antanut periksi, eikä laiva päässyt Atlantille. Se päätyi Englannin etelärannikolle [[Hastingsin]] lähelle, missä hylky on lähteiden mukaan yhä rannalla, ja sen kopio on nähtävillä Amsterdamissa [[Scheepvaartmuseumin]] luona.
 
 ### v2-944
 KOHDE: kaupunki:amsterdam
