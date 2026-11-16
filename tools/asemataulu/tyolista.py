@@ -57,6 +57,17 @@ def paiva(nyt_s):
     return "%d.%d." % (t.tm_mday, t.tm_mon)
 
 
+OMISTAJA_VAIHEET = ("ei aloitettu", "kesken", "seuraavaan", "valmis")
+
+
+def omistajalle_teksti(t):
+    """Omistajan kielellä, enintään 12 sanaa (KK 16.11. 16.1x, omistaja 15.50/15.55): asennussivun rivi = versiorivi."""
+    t = " ".join(str(t).split())
+    if not t or len(t.split()) > 12:
+        raise Virhe("--omistajalle: 1–12 sanaa (nyt %d)" % len(t.split()))
+    return t
+
+
 def etsi_kansio(arg):
     if arg:
         return arg
@@ -232,6 +243,9 @@ def toiminta(args):
                 rivi["jarj"] = args.jarj if args.jarj is not None else 100
                 if tyossa:
                     rivi["tila"] = "jonossa"
+        if args.omistajalle:
+            rivi["omistajalle"] = omistajalle_teksti(args.omistajalle)
+            rivi["omistaja_vaihe"] = "ei aloitettu"
         if args.tilanne:
             rivi["tilanne"] = "%s: %s" % (aikaleima(nyt_s), " ".join(args.tilanne.split()))
         rivi["ts"] = nyt
@@ -246,6 +260,11 @@ def toiminta(args):
             if args.juna is not None:
                 junavaihe("lisaa", args.juna, args.teksti, kansio)
             rivi["tilanne"] = uusi_tilanne(rivi, args.teksti, nyt_s)
+            if args.omistajalle:
+                rivi["omistajalle"] = omistajalle_teksti(args.omistajalle)
+                rivi.setdefault("omistaja_vaihe", "ei aloitettu")
+            if rivi.get("omistaja_vaihe") == "ei aloitettu":
+                rivi["omistaja_vaihe"] = "kesken"
             if args.edistys is not None:
                 rivi["edistys"] = args.edistys
             if str(rivi.get("tila", "")).lower().startswith(("pidossa", "odottaa")):
@@ -266,6 +285,15 @@ def toiminta(args):
                 seur = seuraava_tyon_alle(tl, rivi.get("tekija"), nyt)
                 if seur:
                     print("SEURAAVA %s: %s" % (rivi.get("tekija"), seur["otsikko"]))
+        elif args.komento == "vaihe":
+            if not rivi.get("omistajalle"):
+                raise Virhe("rivillä '%s' ei ole omistajalle-tekstiä; lisää se: tilanne --omistajalle" % nimi)
+            rivi["omistaja_vaihe"] = args.vaihe
+            if args.versio:
+                rivi["omistaja_versio"] = args.versio
+            elif args.vaihe != "valmis":
+                rivi.pop("omistaja_versio", None)
+            print("%s: %s%s" % (nimi, args.vaihe, " (%s)" % args.versio if args.versio else ""))
         elif args.komento == "jono":
             if args.tekija is not None:
                 rivi["tekija"] = args.tekija
@@ -316,6 +344,7 @@ def main(argv):
     s.add_argument("--jarj", type=int)
     s.add_argument("--karki")
     s.add_argument("--nyt", action="store_true")
+    s.add_argument("--omistajalle", help="≤ 12 sanaa omistajan kielellä: asennussivun rivi ja versiorivi")
     s = sub.add_parser("jono")
     s.add_argument("otsikko")
     s.add_argument("--tekija")
@@ -336,6 +365,11 @@ def main(argv):
     s.add_argument("teksti")
     s.add_argument("--edistys", type=int)
     s.add_argument("--juna", type=int)
+    s.add_argument("--omistajalle", help="≤ 12 sanaa omistajan kielellä (asettaa tai korvaa)")
+    s = sub.add_parser("vaihe", help="asennussivun tila: juna-yhdista.zsh (seuraavaan) ja linkin julkaisu (valmis --versio)")
+    s.add_argument("otsikko")
+    s.add_argument("vaihe", choices=OMISTAJA_VAIHEET)
+    s.add_argument("--versio")
     s = sub.add_parser("valmis")
     s.add_argument("otsikko")
     s.add_argument("teksti")
