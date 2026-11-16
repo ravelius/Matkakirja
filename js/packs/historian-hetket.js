@@ -3922,32 +3922,33 @@ export const HISTORIAN_HETKET = [
     iso: 'ITA',
     lat: 41.9031, lon: 12.4544,
     kuvaversio: 4,
-    teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
-      + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
-      + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen '
-      + 'kappelin holvia. Paavi Julius II pakotti hänet työhön 1508, vaikka '
-      + 'hän on kuvanveistäjä eikä freskomaalari; sopimus lupaa 3 000 '
-      + 'dukaattia. Freskoa tehdään tuoreelle kalkkirappaukselle, giornata '
-      + 'kerrallaan: apulainen levittää aamulla sen verran laastia kuin '
-      + 'päivässä ehtii maalata, ja mikä ei ehdi, hakataan pois. Rappauksen '
-      + 'kosteus tuo homeen, ja ensimmäiset kuukaudet joudutaan tekemään '
-      + 'uudelleen. Syyskuussa 1510 holvin ensimmäinen puolisko, Nooan '
-      + 'juopumuksesta Eevan luomiseen, on valmis, ja työ katkeaa: paavi on '
-      + 'lähtenyt sotaan Bolognaan eikä maksa, eikä uutta telinettä ole. '
-      + 'Puolisko paljastetaan yleisölle 15. elokuuta 1511. Toinen puoli, '
-      + 'Aadamin luominen mukaan lukien, syntyy nopeammin ja suuremmin '
-      + 'hahmoin, ja koko katto — yli 300 hahmoa — avataan pyhäinpäiväksi '
-      + '1512. Michelangelo on 37.',
+    teksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisten, ei selällään '
+      + 'makaamalla, vaikka niin kerrotaan. Getty-museon mukaan hän työskenteli '
+      + 'seisaaltaan pensseli pään yläpuolella, ja EBSCO Research Startersin '
+      + 'mukaan makaamistarina on pitkäikäinen myytti.'
+      + '\n\n'
+      + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
+      + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
+      + 'tehtävästä. Ensimmäinen suunnitelma oli maalata kaksitoista apostolia, '
+      + 'mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.'
+      + '\n\n'
+      + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta sekä '
+      + 'kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden mukaan holvin '
+      + 'ensimmäinen puolisko oli valmis jo elokuussa 1510, ja yleisölle se '
+      + 'paljastettiin elokuussa 1511. Toisen puoliskon hahmot ovat suurempia, '
+      + 'koska Michelangelo oli nähnyt valmiin osan lattialta käsin. Aadamin '
+      + 'luominen on tällä toisella puoliskolla. Koko katto avattiin '
+      + 'pyhäinpäivän aattona 1512.'
+      + '\n\n'
+      + 'Isoisäsi matkavuonna 1873 katto oli ollut valmiina jo yli 360 vuotta.',
     kuvat: [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
-        lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa märän rappauksen ehdoilla, giornata kerrallaan.',
-        kuvateksti: 'Freskomaalarilla on vain märän rappauksen verran aikaa. '
-          + 'Michelangelo kurottaa päivän uutta giornataa kohti, kun apulainen '
-          + 'odottaa värikupin kanssa ja tarkkailee pinnan kuivumista; jos '
-          + 'kalkki ehtii sitoutua, sävy ei enää uppoa seinään eikä virhettä '
-          + 'voi peittää seuraavana aamuna.',
+        lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa seisaaltaan, pää '
+          + 'taaksepäin taivutettuna.',
+        kuvateksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisaaltaan, pensseli '
+          + 'pään yläpuolella, eikä selällään makaamalla.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Vatican Museums — Sistine '
           + 'Chapel ceiling, tarkistettu 5.9.2026.',
         url: 'https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html',
@@ -3973,9 +3974,9 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Rooman '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'rooma' },
-    lehtiJohdanto: 'Vatikaanin kappelin holvin alla seisoi vuonna 1510 '
-      + 'kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti '
-      + 'päivän laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.',
+    lehtiJohdanto: 'Sikstuksen kappelin holvin alla seisoi vuonna 1510 kuvanveistäjä, joka '
+      + 'yritti ensin päästä koko työstä ja maalasi katon silti valmiiksi '
+      + 'vuosina 1508–1512.',
     lehtiTehtava: {
       kysymys: 'Missä asennossa Michelangelo maalasi Sikstuksen kappelin '
         + 'kattoa?',
@@ -3986,8 +3987,9 @@ export const HISTORIAN_HETKET = [
         'Seisten pää taaksepäin taivutettuna',
       ],
       oikea: 3,
-      fakta: 'Katon ensimmäinen puolisko näytettiin 15. elokuuta 1511 ja '
-        + 'koko holvi pyhäinpäivänä 1512; Michelangelo oli 37.',
+      fakta: 'Vatikaanin museoiden mukaan katon ensimmäinen puolisko oli valmis '
+        + 'elokuussa 1510 ja paljastettiin elokuussa 1511, ja koko katto avattiin '
+        + 'pyhäinpäivän aattona 1512.',
     },
   },
   /*

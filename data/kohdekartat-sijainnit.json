@@ -20728,12 +20728,12 @@
    "id": "rooma:Banca Romana",
    "nimi": "Banca Romana",
    "qid": null,
-   "lat": 41.9009,
-   "lon": 12.4785,
-   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "lat": 41.897,
+   "lon": 12.4775,
+   "lahde": "kartan piste (Palazzo Maffei Marescotti, Via della Pigna; Turismo Roma ja Wikidata Q20650127 täsmäävät; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 41.9009,
-    "lon": 12.4785
+    "lat": 41.897,
+    "lon": 12.4775
    },
    "eroKartanPisteesta_m": 0
   },
@@ -20810,15 +20810,27 @@
    "id": "rooma:Nasone",
    "nimi": "Nasone",
    "qid": null,
-   "lat": 41.89861,
-   "lon": 12.47694,
-   "lahde": "sama paikka kuin Pantheon (kartan piste 3 m päässä)",
+   "lat": 41.8993,
+   "lon": 12.4768,
+   "lahde": "kartan piste (Piazza della Rotonda; Wikidata Q3457157 41,89931 / 12,47675; KK 16.11.2026, sijoitus tarkistettava kuvasta)",
    "kartanPiste": {
-    "lat": 41.8986,
-    "lon": 12.4769
+    "lat": 41.8993,
+    "lon": 12.4768
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "rooma:Pantheon"
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "rooma:Meta Sudans",
+   "nimi": "Meta Sudans",
+   "qid": "Q1924755",
+   "lat": 41.89008,
+   "lon": 12.49067,
+   "lahde": "wikidata Q1924755 P625 ja OpenStreetMap relation 1835448 (KK 16.11.2026)",
+   "kartanPiste": {
+    "lat": 41.89008,
+    "lon": 12.49067
+   },
+   "eroKartanPisteesta_m": 0
   }
  ],
  "roseau": [
