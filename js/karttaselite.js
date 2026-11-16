@@ -122,7 +122,7 @@ const KARTTASELITE_NIMET = {
   ...Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.nimi])),
   // Pitkät nimet lyhyinä (omistaja 22.9.2026: paneeli mahdollisimman kapea);
   // koko nimi on rivin title-attribuutissa (KARTTASELITE_KOKONIMET).
-  ihmeet: 'Aarteet',
+  ihmeet: 'Kadonneet',
   hetket: 'Hetket',
   kulttuuri: 'Kulttuuri…',
   kauppa: 'Kauppa…',
