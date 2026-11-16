@@ -10251,8 +10251,8 @@ export const NAHTAVYYSJUTUT = {
       aika: '1732–1762',
       teksti: 'Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset '
           + 'johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää '
-          + 'Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi '
-          + 'peräti 22 kilometriä. Nykyinen upea lähde on paljon '
+          + 'Aqua Virgo -vesijohtoa pitkin, joka kulki lähes koko '
+          + 'matkansa maan alla. Nykyinen upea lähde on paljon '
           + 'uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen '
           + '1732, ja se valmistui vasta 1762, 11 vuotta hänen '
           + 'kuolemansa jälkeen.'
@@ -10286,8 +10286,8 @@ export const NAHTAVYYSJUTUT = {
           lyhyt: 'Noin 1890-luvulla Trevin lähde oli jo sata vuotta vanha, vesi tulee Aqua Virgo -vesijohdosta.',
           selite: 'Noin 1890-luvun valokuvan aikaan lähde oli jo yli sata '
             + 'vuotta vanha: sen vesi tulee Aqua Virgo -vesijohtoa pitkin, '
-            + 'jota roomalaiset rakensivat 22 kilometriä maan alle jo '
-            + 'vuonna 19 eaa.',
+            + 'jonka roomalaiset rakensivat jo vuonna 19 eaa. ja joka '
+            + 'kulki lähes koko matkansa maan alla.',
           lahde: 'Tuntematon (Library of Congress -kokoelma), Wikimedia Commons (Public domain)',
         },
       ],
