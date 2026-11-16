@@ -145,8 +145,8 @@ export const FOKUSVIRTA_PARIISI = {
     // Uusi avain, koska vanha isoisa-pariisi.png on välimuisteissa muuttumattomana (immutable).
     luentakuva: {
       osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi-valokuva-v2.png',
-      lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries’n puutarhasta.',
-      selite: 'Isoisä päästää kirjekyyhkyn lentoon poltetun Tuileries’n palatsin edessä. Palatsi paloi vuonna 1871, ja sen rauniot purettiin 1883.',
+      lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries\'n puutarhasta.',
+      selite: 'Isoisä päästää kirjekyyhkyn lentoon poltetun Tuileries\'n palatsin edessä. Palatsi paloi vuonna 1871, ja sen rauniot purettiin 1883.',
       lahde: 'Matkakirjan havainnekuva',
       // Raunioiden esikuva: Alphonse J. Liébert, Tuileries Palace, Burned. General View (Metropolitan Museum, Public Domain).
       lahteet: [
@@ -285,8 +285,8 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-        lyhyt: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
-        selite: 'Tuileriain palatsin palanut runko puutarhan puolelta: '
+        lyhyt: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
+        selite: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: '
           + 'katto poissa, kivimuurit ehjät, lauta-aita raunion edessä '
           + 'ja kaupunkilaisia altaan äärellä.',
         lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
@@ -303,8 +303,8 @@ export const FOKUSVIRTA_PARIISI = {
        */
       valokuva: {
         tiedosto: "Vue des Tuileries après l'incendie de 1871, PH83415.jpg",
-        lyhyt: 'Tuileriain palatsi palon jälkeen; rauniot seisoivat vielä kaupungin keskellä samalta ajalta.',
-        selite: 'Tuileriain palatsi palon jälkeen. Valokuva on samalta '
+        lyhyt: 'Tuileries\'n palatsi palon jälkeen; rauniot seisoivat vielä kaupungin keskellä samalta ajalta.',
+        selite: 'Tuileries\'n palatsi palon jälkeen. Valokuva on samalta '
           + 'ajalta, jona rauniot seisoivat kaupungin keskellä.',
         // Tekijän nimi Commonsin omassa muodossa (tools/
         // tarkista-tekijat.mjs vertaa merkintää suoraan siihen).

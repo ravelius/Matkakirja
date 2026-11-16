@@ -5805,8 +5805,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-          lyhyt: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
-          selite: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto '
+          lyhyt: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
+          selite: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto '
             + 'poissa, kivimuurit ehjät, lauta-aita raunion edessä ja '
             + 'kaupunkilaisia altaan äärellä.',
           lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
