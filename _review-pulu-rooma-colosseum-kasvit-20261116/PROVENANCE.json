@@ -1,0 +1,63 @@
+{
+  "taskNumber": 2351,
+  "sourcePath": "posti/paatoimittaja-codex-pulu-rooma-20261116.md",
+  "sourceCommit": "b91a21fc0c5e139598428d60344a49f3592ae08d",
+  "sourceBlob": "abdd71b8bb4a565f1c574cae5b5146f2c24d4f71",
+  "tool": "built-in image_gen",
+  "useCase": "photorealistic-natural",
+  "selectedAttempt": 2,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "generated-rejected-viewpoint",
+      "startedAt": "2026-11-16T06:45:33.587815+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-rooma-colosseum-kasvit-2351-20261116/prompts/attempt001.txt",
+      "referenceInput": "Text only; inspected source images, no editing target.",
+      "completedAt": "2026-11-16T06:47:02.407775+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-30fd4c13-3e45-430a-a4fe-08afa00dfee7.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-rooma-colosseum-kasvit-2351-20261116/native/pulu-rooma-colosseum-kasvit-attempt001.png",
+      "sha256": "e0579802f7bcad6404bb371e5b9c2dc1900b0dbc1c6fd002d683a252dacb7c65",
+      "bytes": 3613896,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": false,
+      "qaReason": "Plants and photographic quality work, but masonry rises above the camera at upper left; highest outer-wall airborne viewpoint is not clear. Use second whole generation for higher viewpoint."
+    },
+    {
+      "attempt": 2,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T06:47:03.273941+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-rooma-colosseum-kasvit-2351-20261116/prompts/attempt002.txt",
+      "referenceInput": "Text only; inspected source images, no editing target.",
+      "completedAt": "2026-11-16T06:48:15.166522+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-b9e95ce7-7c9c-4ec6-8c2e-87a3f80ab4f3.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-rooma-colosseum-kasvit-2351-20261116/native/pulu-rooma-colosseum-kasvit-attempt002.png",
+      "sha256": "d45dbec53bfdb4f371bf400c64afaa80b593f542460968fcc13045453d41dc82",
+      "bytes": 3618900,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativeFile": "pulu-rooma-colosseum-kasvit-v2.png",
+  "nativeSha256": "d45dbec53bfdb4f371bf400c64afaa80b593f542460968fcc13045453d41dc82",
+  "deliveryFile": "pulu-rooma-colosseum-kasvit-v2.jpg",
+  "deliverySha256": "219d7f6c2d88d4aa013562afb4a8609511be90139cadbc3bfe344555b6c1f3a1",
+  "deliveryBytes": 2672501,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "conversion": "macOS sips PNG to JPEG, best quality; no resize, crop or retouch",
+  "sourceLabel": "Matkakirjan havainnekuva",
+  "referenceRole": "Inspected architecture reference only; no copied reference pixels or edit input",
+  "puluTextChanged": false,
+  "acceptanceFlow": "KK -> owner shown image -> SK data PR6822; source Matkakirjan havainnekuva. Separate from grandfather image2258."
+}

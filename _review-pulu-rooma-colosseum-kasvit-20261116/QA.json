@@ -1,0 +1,38 @@
+{
+  "selectedAttempt": 2,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kasvit kasvavat travertiinin raoista ylimmän muurin harjalla. Kamerasta nähdään alas kaartuviin arkadeihin ja areenan alarakenteisiin. Kapriksen kaltainen kasvi kukkineen, saniainen, heinät ja pienet kukat pysyvät ympyrän sisällä. Luonnollinen iltapäivän valo, ei havaittuja ihmisiä, tekstiä, logoja, telineitä tai Pulua.",
+  "checks": {
+    "squareAspect": true,
+    "aboveWallDownwardView": true,
+    "plantsGrowingFromStoneCracks": true,
+    "curvedArcadesAndArenaBelow": true,
+    "centralPlantsSafeInCircle": true,
+    "photographicTextureAndLighting": true,
+    "noObservedPeopleTextLogosScaffoldsPigeon": true,
+    "nativeUnedited": true
+  },
+  "notes": [
+    "V1 jäi liian alas korkean muurin viereen; säilytetty paikallisena hylättynä ehdokkaana. V2 korjaa korkeaa näkökulmaa.",
+    "Kasvillisuus ja rakennuksen yksityiskohdat ovat havainnollistavia, eivät paikkakohtainen kasvilajikartoitus tai mittatarkka dokumenttivalokuva. KK arvioi tunnistettavuuden.",
+    "Natiivi 1254 × 1254 px, ei suurennusta. Molemmat kaksi kokonaista ottoa käytetty; ei kolmatta ottoa.",
+    "Tämä on nykyajan Pulun kuva, eri tilaus kuin isoisän Rooma-kuva #2258."
+  ],
+  "taskNumber": 2351,
+  "reviewedAt": "2026-11-16T06:48:37.960585+00:00",
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeSha256": "d45dbec53bfdb4f371bf400c64afaa80b593f542460968fcc13045453d41dc82",
+  "jpgSha256": "219d7f6c2d88d4aa013562afb4a8609511be90139cadbc3bfe344555b6c1f3a1",
+  "reviewMethod": "Native image, browser-rendered square/circle preview and details visually inspected. Native content not modified.",
+  "editorAccepted": false,
+  "ownerAccepted": false,
+  "receiverAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "sizeNote": "Actual native dimensions reported; no resize or upscale. JPEG is format conversion only."
+}
