@@ -63,7 +63,9 @@ test('lähderivi nimeää lähteen eikä ole täytettä', () => {
     // Lähde on joko nimetty ulkoinen lähde tai pelin oma tarkistettu
     // aineisto polkuna — kumpikin on jäljitettävissä, "tarkistettu"
     // yksinään ei ole.
-    assert.match(lahde, /Wikipedia|wikipedia\.org|js\/packs\/|docs\//,
+    // 16.11.2026: myös "Matkakirjan oma teksti · lähteinä <nimetyt lähteet>" (Lontoon, Pariisin ja Amsterdamin tarinapaikat)
+    // nimeää lähteen; kaikissa kahden lähteen teksteissä ei ole Wikipediaa.
+    assert.match(lahde, /Wikipedia|wikipedia\.org|js\/packs\/|docs\/|lähteinä [A-ZÅÄÖ]/,
       `${nimi}: lähderivi "${lahde}" ei nimeä lähdettä`);
   }
 });

@@ -333,7 +333,8 @@ test('kartalle siirtyneet jutut palaavat aihesivulle', () => {
   assert.equal(yovartio.karttaKohde, 'nosto-amsterdamin-yovartio');
   assert.equal(yovartio.tiedosto, 'The Night Watch - cropped.jpg');
   assert.equal(yovartio.galleria?.[0]?.tiedosto, 'Lundens - Nachtwache-Kopie.jpg');
-  assert.match(yovartio.teksti, /^Rembrandt maalasi vuonna 1642 /);
+  // 16.11.2026: Yövartion teksti kirjoitettu uusiksi tarinapaikkana (docs/raportit/amsterdam-9-tarinapaikkaa-dataluonnos-20261116.md).
+  assert.match(yovartio.teksti, /^Rembrandt valmisti kaartin ryhmäkuvan vuonna 1642\./);
   assert.equal(maitotytto.otsikko, 'Vermeer peitti omat esineensä maalilla');
   assert.equal(maitotytto.karttaKohde, 'nosto-amsterdamin-maitotytto');
   assert.equal(maitotytto.tiedosto, 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg');

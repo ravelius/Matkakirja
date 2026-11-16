@@ -7448,27 +7448,22 @@ export const NAHTAVYYSJUTUT = {
      * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
      */
     Timanttihiomo: {
+      aika: '1870–1879',
       nosto: 'syvennys-amsterdam-timantit',
-      teksti: 'Isoisäsi käveli hiomoiden ohi keskellä timanttinousua eikä '
-        + 'tiennyt sitä. Amsterdam oli tuolloin maailman tärkein '
-        + 'timanttikeskus, ja ala oli päätynyt sinne kiertotietä: 1500-luvulla '
-        + 'Portugalista tulleet sefardijuutalaiset toivat mukanaan '
-        + 'kauppasuhteet, ja hionta oli yksi niistä harvoista ammateista, '
-        + 'joihin ei tarvinnut kuulua kiltaan — kiltoihin heitä ei olisi '
-        + 'otettu. Työ tehtiin aluksi kotona. Noin 1820 alkaen hiomapyöriä '
-        + 'pyörittivät hevoset, noin 1840 alkaen höyry, ja pienet verstaat väistyivät tehtaiden '
-        + 'tieltä. Sitten Etelä-Afrikasta alkoi vuonna 1870 nousta raakaa timanttia '
-        + 'enemmän kuin kukaan osasi odottaa, ja Amsterdamiin tuli kausi, jota '
-        + 'täällä sanotaan yhä Kaapin ajaksi. Veljekset Boas perustivat noin samoihin aikoihin hiomon, jonka '
-        + 'höyrytehdas valmistui 1879. Nousu ei kestänyt: 1870-luvun '
-        + 'puolivälin tienoilla länsimaiden talouskriisi pysäytti sen, ja luksuskivi on juuri '
-        + 'sellainen tavara, joka jää ensimmäisenä myymättä. Huippuaikoina alalla oli useita tuhansia työntekijöitä, joista '
-        + 'suurin osa oli juutalaisia, ja työ oli sitä mitä kimalluksesta '
-        + 'ei näy: pitkiä päiviä hämärissä huoneissa, ja '
-        + 'silmät ja keuhkot maksoivat siitä. Vuonna 1894 juuri nämä työläiset '
-        + 'perustivat oman ammattiliittonsa. Boasin tehdas seisoo yhä '
-        + 'Nieuwe Uilenburgerstraatilla, ja siellä on nykyään '
-        + 'timanttitehdas, jossa järjestetään kierroksia vierailijoille.',
+      teksti: 'Amsterdam oli 1600-luvun lopulta maailman timanttikaupunki. Hionta ei '
+        + 'kuulunut kiltoihin, eikä juutalaisia olisi kiltoihin otettukaan; työ '
+        + 'tehtiin aluksi kotona. Hiomapyöriä pyörittivät ensin naiset ja lapset, '
+        + '1820-luvulta hevoset ja 1840-luvulta höyry.'
+        + '\n\n'
+        + 'Vuonna 1870 Etelä-Afrikasta saapui Amsterdamiin ensimmäinen '
+        + 'raakatimanttien erä, ja alkoi Kaapin aika: nousukausi, jota kesti '
+        + '1870-luvun puoliväliin. Työ oli raskasta, ja tuberkuloosi vaivasi alan '
+        + 'työläisiä. Vuonna 1894 timanttityöläiset perustivat oman '
+        + 'ammattiliittonsa, Algemene Nederlandse Diamantbewerkersbondin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kaapin aika oli täydessä vauhdissa. Boasin '
+        + 'veljesten tehdas Nieuwe Uilenburgerstraatilla valmistui vasta 1879; '
+        + 'nykyään talossa on Gassanin timanttitehdas.',
       kuvat: [
         {
           tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
@@ -7479,29 +7474,25 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Diamantmuseum Amsterdam, Bronseman PIE-raportti 14 (1994), Algemene Nederlandse Diamantbewerkersbond, J. Kokin tutkimus ja Gassan',
     },
     'Amsterdam-laiva': {
+      aika: '1749',
       nosto: 'syvennys-amsterdam-voc-hylky',
-      teksti: 'Kompanian laivat menivät itään hopea lastinaan ja palasivat '
-        + 'mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. '
-        + 'Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 '
-        + 'yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen '
-        + 'Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli yli 330 ihmistä, kapteenina 33-vuotias Willem '
-        + 'Klump. Lastina oli kangasta, viiniä, '
-        + 'rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja yli kaksikymmentä arkkua hopeaa. Lounaismyrsky ei antanut periksi. Laiva '
-        + 'ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja '
-        + 'tammikuun 26. päivänä kapteeni teki ainoan jäljellä olevan '
-        + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. Miehistö pääsi maihin, ja suurin osa hopeasta pelastettiin; osan '
-        + 'veivät rannalle ryntäneet salakuljettajat. Runsaan kuukauden yhtiö yritti saada laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
-        + 'ja jäi sinne. Kaksisataa kaksikymmentä vuotta myöhemmin, vuonna '
-        + '1969, vesi laski poikkeuksellisen matalalle ja paljasti sen: noin kaksi kolmasosaa laivasta oli tallella. Nykyään hylky on '
-        + 'suojeltu, sen kylkiluut näkyvät rannalla vain harvoina päivinä '
-        + 'vuodessa, ja siitä nostetut esineet ovat Hastingsin '
-        + 'haaksirikkomuseossa. Amsterdamissa on lisäksi laiva itse — tai sen '
-        + 'kokoinen kopio, jonka satoja vapaaehtoisia rakensi 1980-luvulla alkaneessa '
-        + 'hankkeessa. Se on merimuseon laiturissa, ja sinne pääsee kävelemään '
-        + 'kuivin jaloin.',
+      teksti: 'Vuoden 1749 tammikuussa VOC:n laiva Amsterdam lähti ensimmäiselle '
+        + 'matkalleen Bataviaan. Kapteeni Willem Klump oli 33-vuotias, ja laivassa '
+        + 'oli yli 330 ihmistä. Jo ennen rantaa noin viisikymmentä miehistön '
+        + 'jäsentä oli kuollut tautiin. Myrsky ja hiekkasärkkä veivät laivalta '
+        + 'peräsimen, ja 26. tammikuuta 1749 laiva ajettiin rantaan Hastingsin '
+        + 'lähellä Englannissa.'
+        + '\n\n'
+        + 'Laivan irrottamisyritys päättyi 11. maaliskuuta 1749, ja Amsterdam '
+        + 'vajosi rannan saveen. Noin kaksi kolmasosaa laivasta on tallella: hylky '
+        + 'tuli näkyviin 1969 ja on suojeltu 1970-luvulta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 hylky oli maannut Englannin rannalla jo 124 '
+        + 'vuotta. Amsterdamissa seisova laiva on nykyaikainen kopio, joka '
+        + 'rakennettiin 1980-luvulla.',
       kuvat: [
         {
           tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
@@ -7512,7 +7503,7 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Adrian Diack, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Shipwreck Museum Hastings, Het Scheepvaartmuseum, The Past, Hastings Independent Press ja Sussex Smuggler',
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -7523,16 +7514,20 @@ export const NAHTAVYYSJUTUT = {
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
     'Kapein talo': {
+      aika: '1738',
       nosto: 'nosto-amsterdamin-kapein-talo',
-      teksti: 'Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
-        + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
-        + 'epäilevät sitä. Joka tapauksessa kanavien varren talot ovat '
-        + 'kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 '
-        + 'metriä leveä ja viisi metriä syvä. Portaat ovat jyrkät kuin '
-        + 'tikkaat, eikä sohvaa saa niitä '
-        + 'pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, '
-        + 'hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta '
-        + 'sisään.',
+      teksti: 'Oude Hoogstraat 22 on Amsterdamin kapein koko talo: julkisivu on 2,02 '
+        + 'metriä leveä ja talo viisi metriä syvä. Kanavien varren talot ovat '
+        + 'kapeita ja syviä, ja niissä on usein katonrajassa nostopuu, hijsbalk, '
+        + 'jonka avulla huonekalut nostetaan köydellä ikkunasta sisään, sillä '
+        + 'portaat ovat jyrkät ja kapeat.'
+        + '\n\n'
+        + 'Singel 7:n talon takajulkisivu on vain noin metrin levyinen, mutta '
+        + 'etuosa on selvästi leveämpi, joten kapein koko talo on silti Oude '
+        + 'Hoogstraatilla.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
+        + 'vuotta: se mainitaan ensi kerran 1738. Nykyään siinä on teekauppa.',
       kuvat: [
         {
           tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
@@ -7543,45 +7538,56 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä iAmsterdam, Het Kleinste Huis, DutchReview, Amsterdam Oude Stad, Amsterdamian ja Wikipedia',
     },
     'Maitotyttö': {
+      aika: 'n. 1660',
       nosto: 'nosto-amsterdamin-maitotytto',
-      teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä '
-        + 'korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, '
-        + 'ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä '
-        + 'työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. '
-        + 'Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle '
-        + 'kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse '
-        + 'umpeen, niin että katse jää maitoon ja käsiin.',
+      teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea '
+        + 'ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja hänen '
+        + 'tuotannostaan tunnetaan vain noin 35 maalausta.'
+        + '\n\n'
+        + 'Rijksmuseo tutki taulua vuonna 2022 röntgen- ja infrapunatekniikoilla. '
+        + 'Maalin alta paljastui, että Vermeer oli suunnitellut seinälle '
+        + 'kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten pois, jolloin '
+        + 'katse jää naiseen ja maitoon.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 taulua ei vielä ollut Rijksmuseossa. Se kuului '
+        + 'Six-suvun yksityiskokoelmaan, ja museo osti sen vasta 1908 Vereniging '
+        + 'Rembrandtin tuella. Rijksmuseo toimi tuolloin Trippenhuisissa; nykyinen '
+        + 'rakennus avattiin 1885.',
       kuvat: [
         {
           tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
-          lyhyt: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, Rijksmuseumin keskeisimpiä teoksia.',
-          selite: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, ja '
-            + 'Rijksmuseum pitää sitä yhtenä kokoelmansa keskeisimmistä '
-            + 'teoksista.',
+          lyhyt: 'Johannes Vermeerin Maitotyttö, maalattu noin vuonna 1660.',
+          selite: 'Johannes Vermeerin Maitotyttö, jonka hän maalasi noin vuonna '
+            + '1660.',
           lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum, Essential Vermeer ja DutchNews',
     },
     'Kissalaiva': {
+      aika: '1966–1968',
       nosto: 'nosto-amsterdamin-kissalaiva',
-      teksti: 'Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu '
-        + 'satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. '
-        + 'Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja '
-        + 'kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 '
-        + 'oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä '
-        + 'siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat '
-        + 'vapaana kannella, ja vieraat saavat tulla katsomaan.',
+      teksti: 'Vuonna 1966 Henriëtte van Weelde alkoi ottaa kotiinsa Herengrachtille '
+        + 'kulkukissoja, ensimmäisenä emokissan pentuineen. Kun kissoja tuli lisää, '
+        + 'hän osti vuonna 1968 asuntolaivan Singel-kanavasta. Siitä tuli kissoille '
+        + 'turvakoti: osa niistä saa uuden kodin, ja laivalla vierailee kerrallaan '
+        + 'vain kuusi ihmistä.'
+        + '\n\n'
+        + 'Sisäänpääsy laivalle on ilmainen. Kissat ovat turvakodin asukkaita, '
+        + 'eivät nähtävyys.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kissalaivaa ei vielä ollut: ensimmäinen laiva '
+        + 'ostettiin vasta 1968, 95 vuotta myöhemmin. Singel-kanavassa on nykyään '
+        + 'uusi laiva, joka otettiin käyttöön syyskuussa 2023.',
       kuvat: [
         {
           tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
-          lyhyt: 'Poezenboot avattiin Singel-kanavaan 1968, kun kerätyt kulkukissat eivät enää mahtuneet kotiin.',
-          selite: 'Poezenboot avattiin Singel-kanavaan vuonna 1968, kun Henriëtte '
-            + 'van Weelde ei enää saanut keräämiään kulkukissoja mahtumaan '
-            + 'kotiinsa.',
+          lyhyt: 'Poezenboot Singel-kanavassa vuonna 2006; kuvan laiva on vanha, nykyinen otettiin käyttöön 2023.',
+          selite: 'Poezenboot Singel-kanavassa vuonna 2006. Kuvan laiva on vanha '
+            + 'asuntolaiva; nykyinen laiva otettiin käyttöön syyskuussa 2023.',
           lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -7599,36 +7605,52 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Stichting De Poezenboot, Holland Times, DutchReview ja Mental Floss',
     },
     'Herengracht 537': {
+      aika: '1648–1961',
       nosto: 'nosto-amsterdamin-puupaalut',
-      teksti: 'Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. '
-        + 'Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, '
-        + 'jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. '
-        + 'Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, '
-        + 'lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy '
-        + 'veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa '
-        + 'naapuriinsa.',
+      teksti: 'Amsterdamin keskusta on rakennettu pehmeälle, vetiselle maalle, joten '
+        + 'vanhojen talojen alla on maahan lyötyjä puupaaluja. Dam-torin '
+        + 'kaupungintalon, nykyisen kuninkaanpalatsin, alle lyötiin 13 659 paalua '
+        + 'norjalaisesta kuusesta; ensimmäinen kivi laskettiin 28. lokakuuta 1648.'
+        + '\n\n'
+        + 'Paalu kestää niin kauan kuin se pysyy veden alla. Jos pohjavesi laskee, '
+        + 'happi pääsee puuhun, ja sienet ja bakteerit alkavat lahottaa sitä. '
+        + 'Maaliskuussa 1961 Herengracht 537:n eteen pystytettiin tukipaaluja, ja '
+        + 'kuvan otti valokuvaaja Harry Pot.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Dam-torin rakennus oli jo kuninkaan palatsi, '
+        + 'mutta sen alla olivat yhä samat 13 659 paalua.',
       kuvat: [
         {
           tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
-          lyhyt: 'Herengracht 537 tuettiin puupaaluin 1961, kun pohjaveden lasku lahottaa talojen paalutuksia.',
-          selite: 'Herengracht 537 jouduttiin tukemaan väliaikaisilla puupaaluilla '
-            + 'maaliskuussa 1961, sillä Amsterdamin talot lepäävät paalutuksen '
-            + 'varassa, joka lahoaa pohjaveden laskiessa.',
+          lyhyt: 'Herengracht 537:n eteen pystytettiin tukipaaluja maaliskuussa 1961.',
+          selite: 'Herengracht 537:n eteen pystytettiin tukipaaluja maaliskuussa '
+            + '1961. Kuvan otti valokuvaaja Harry Pot.',
           lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Paleis Amsterdam, Alankomaiden kuningashuone, M for Amsterdam, RVO, Rotterdamin kaupungin esite ja Nationaal Archief',
     },
     'Yövartio': {
+      aika: '1642–1715',
       nosto: 'nosto-amsterdamin-yovartio',
-      teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan. Vuonna 1715 '
-        + 'taulu siirrettiin kaupungintaloon, eikä se mahtunut sille '
-        + 'varatulle seinälle — joten sitä leikattiin joka reunalta, eniten vasemmalta, mistä katosi kolme hahmoa. Palasia ei ole '
-        + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, jota poistettiin vuosina '
-        + '1946–47 ja 1975–76.',
+      teksti: 'Rembrandt valmisti kaartin ryhmäkuvan vuonna 1642. Teoksella ei alun '
+        + 'perin ollut nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta '
+        + '1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan '
+        + 'kulkevaa joukkoa, vaikka sävyt ovat tummat.'
+        + '\n\n'
+        + 'Vuonna 1715 taulu siirrettiin kaupungintaloon Dam-torille, ja koska se '
+        + 'oli liian suuri uudelle paikalle, siitä leikattiin kaistale joka '
+        + 'reunalta. Eniten katosi vasemmalta, ja palasia ei ole koskaan löydetty. '
+        + 'Gerrit Lundensin pieni 1600-luvun kopio näyttää, miltä koko taulu '
+        + 'näytti.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
+        + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseo avattiin vasta 1885; '
+        + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; '
+        + 'puhdistukset tehtiin vasta 1946–47 ja 1975–76.',
       kuvat: [
         {
           tiedosto: 'The Night Watch - cropped.jpg',
@@ -7639,13 +7661,69 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
-          lyhyt: 'Gerrit Lundensin pienoiskopio on tärkein todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
-          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on tärkein säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
-            + '1715.',
+          lyhyt: 'Gerrit Lundensin pieni kopio näyttää, miltä Yövartio näytti ennen leikkausta 1715.',
+          selite: 'Gerrit Lundensin 1600-luvulla maalaama pieni kopio näyttää, miltä koko Yövartio näytti ennen vuoden '
+            + '1715 leikkausta.',
           lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum (objektisivu, lehdistötiedote ja Bulletin 1976) ja National Gallery',
+    },
+    /*
+     * TARINAPAIKKA 'Portugalilainen synagoga' (KK 16.11.2026, Amsterdamin 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on
+     * täkynoston lunastuksena (js/packs/fokusvirta-amsterdam.js 'amsterdamin-portugalilainen-synagoga').
+     * Koordinaatti: 1 lähde, tarkistettava kuvasta. Kuva ei vielä pelin mediassa (docs/raportit/amsterdam-9-mediapyynto-20261116.md).
+     */
+    'Portugalilainen synagoga': {
+      aika: '1675',
+      nosto: 'nosto-amsterdamin-portugalilainen-synagoga',
+      teksti: 'Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti '
+        + 'Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa '
+        + '1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.'
+        + '\n\n'
+        + 'Synagogan päähalli ei ole koskaan saanut sähkövaloa eikä lämmitystä. '
+        + 'Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se '
+        + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
+        + 'valurautakehyksisiksi.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 '
+        + 'vuotta, ja seurakunta valmistautui sen kaksisataavuotisjuhlaan 1875.',
+      kuvat: [
+        {
+          tiedosto: 'Exterieur OVERZICHT VOORGEVEL - Amsterdam - 20311779 - RCE.jpg',
+          lyhyt: 'Portugalilaisen synagogan julkisivu vuonna 1997.',
+          selite: 'Portugalilaisen synagogan julkisivu Rijksdienst voor het Cultureel Erfgoedin kuvassa vuodelta 1997.',
+          lahde: 'A. J. van der Wal / RCE, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Rijksdienst voor het Cultureel Erfgoedin monografia (2013), Joods Amsterdam ja Wikipedia',
+    },
+    /*
+     * TARINAPAIKKA 'Montelbaanstoren' (KK 16.11.2026, Amsterdamin 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on
+     * täkynoston lunastuksena (js/packs/fokusvirta-amsterdam.js 'amsterdamin-montelbaanstoren').
+     * Koordinaatti: 1 lähde, tarkistettava kuvasta. Kuva ei vielä pelin mediassa (docs/raportit/amsterdam-9-mediapyynto-20261116.md).
+     */
+    'Montelbaanstoren': {
+      aika: '1606',
+      nosto: 'nosto-amsterdamin-montelbaanstoren',
+      teksti: 'Montelbaanstoren on yksi Amsterdamin tunnetuimmista torneista. Hendrick '
+        + 'de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja '
+        + 'renessanssihuipun, johon tuli kello ja useita soittokelloja. Vuonna 1610 '
+        + 'torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella yli '
+        + 'kaksisataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta '
+        + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
+        + 'vasta 1878.',
+      kuvat: [
+        {
+          tiedosto: 'Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg',
+          lyhyt: 'Montelbaanstoren Rijksmuseon stereokuvassa 1860–1885.',
+          selite: 'Rijksmuseon kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, isoisän matkan aikoihin.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Open Nederlands Heritage (ONH), ARCAM, Geschiedenis Extra, Jordaanweb ja Wikipedia',
     },
     // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
     Haringpakkerstoren: {

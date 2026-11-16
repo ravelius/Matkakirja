@@ -934,15 +934,40 @@
    "id": "amsterdam:Yövartio",
    "nimi": "Yövartio",
    "qid": null,
-   "lat": 52.37317,
-   "lon": 4.89136,
-   "lahde": "sama paikka kuin Kuninkaanpalatsi (kartan piste 9 m päässä)",
+   "lat": 52.3712,
+   "lon": 4.8994,
+   "lahde": "kartan piste (Trippenhuis, Kloveniersburgwal 29, jossa taulu oli 1873; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 52.3731,
-    "lon": 4.8913
+    "lat": 52.3712,
+    "lon": 4.8994
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "amsterdam:Kuninkaanpalatsi"
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "amsterdam:Portugalilainen synagoga",
+   "nimi": "Portugalilainen synagoga",
+   "qid": null,
+   "lat": 52.3675,
+   "lon": 4.9053,
+   "lahde": "kartan piste (nostokohde ilman wikiä; koordinaatti: 1 lähde, tarkistettava kuvasta)",
+   "kartanPiste": {
+    "lat": 52.3675,
+    "lon": 4.9053
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "amsterdam:Montelbaanstoren",
+   "nimi": "Montelbaanstoren",
+   "qid": null,
+   "lat": 52.372,
+   "lon": 4.9056,
+   "lahde": "kartan piste (nostokohde ilman wikiä; koordinaatti: 1 lähde, tarkistettava kuvasta)",
+   "kartanPiste": {
+    "lat": 52.372,
+    "lon": 4.9056
+   },
+   "eroKartanPisteesta_m": 0
   }
  ],
  "anchorage": [
