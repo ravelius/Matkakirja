@@ -1,0 +1,19 @@
+{
+  "task": 2386,
+  "checkedAt": "2026-11-16T09:18:42.279702+00:00",
+  "visualStatus": "PASS",
+  "observations": "Tunnistettava monivärinen sipulikupoliryhmä ja korkea keskitorni säilyvät. Tarkat pienkoristeet ovat likimääräisiä.",
+  "fiveViewsReviewed": true,
+  "archiveVerified": true,
+  "compassRegistration": false,
+  "metricScaleVerified": false,
+  "KKAcceptance": false,
+  "gameIntegrated": false,
+  "localChecks": [
+    "GLB parse and embedded texture dimensions",
+    "Source and download/archive SHA256",
+    "Five whole-model browser views",
+    "Independent visual review"
+  ],
+  "warnings": []
+}
