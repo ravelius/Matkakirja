@@ -1,0 +1,113 @@
+# Valoseppä 16.11.2026 kierros 10 LAITEAJO (pelihaara 5b98d6c86; KÄYTETÄÄN VASTA, JOS VS9B-C näyttää varjot GPU-nousun syyksi ja KK haluaa rajan luvut).
+# Kuten 9c, mutta merkit päällä -mittausten jälkeen varjoraja 3000 ja 1500 m (ui kartanelama merkit varjot raja <m>), lopuksi raja pois. Tila-rivi kertoo piirretyt/kaikki varjopalat.
+alku odota-tila Aloitus 40;uusi-peli 5 pariisi;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento kallista 58
+komento suunta 10
+komento lahizoomi 0
+komento aja 48.877 2.3251 0.012 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+komento talot nousu 1
+odota 2
+ui kartanelama merkit 0
+odota 4
+ui lasi mittaa 15 p5-merkit-pois-1
+odota 17
+ui kartanelama merkit 1
+odota 4
+ui lasi mittaa 15 p5-merkit-paalla-1
+odota 17
+komento talot nousu 1
+odota 2
+ui kartanelama merkit 0
+odota 4
+ui lasi mittaa 15 p5-merkit-pois-2
+odota 17
+ui kartanelama merkit 1
+odota 4
+ui lasi mittaa 15 p5-merkit-paalla-2
+odota 17
+ui kartanelama merkit varjot 0
+odota 4
+ui lasi mittaa 15 p5-merkit-ilman-varjoja
+odota 17
+ui kartanelama merkit varjot 1
+odota 2
+odota 2
+ui kartanelama merkit varjot raja 3000
+odota 4
+ui lasi mittaa 15 p5-varjoraja-3000
+odota 17
+ui kartanelama tila
+ui kartanelama merkit varjot raja 1500
+odota 4
+ui lasi mittaa 15 p5-varjoraja-1500
+odota 17
+ui kartanelama tila
+ui kartanelama merkit varjot raja pois
+odota 2
+ui kartanelama tila
+komento talot nousu pois
+linssi kaista
+komento kallista 50
+komento suunta 10
+komento lahizoomi 3
+komento aja 48.86355 2.33685 0.004 2
+odota 20
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 6
+komento talot nousu 1
+odota 2
+ui kartanelama merkit 0
+odota 4
+ui lasi mittaa 15 p9-merkit-pois-1
+odota 17
+ui kartanelama merkit 1
+odota 4
+ui lasi mittaa 15 p9-merkit-paalla-1
+odota 17
+komento talot nousu 1
+odota 2
+ui kartanelama merkit 0
+odota 4
+ui lasi mittaa 15 p9-merkit-pois-2
+odota 17
+ui kartanelama merkit 1
+odota 4
+ui lasi mittaa 15 p9-merkit-paalla-2
+odota 17
+ui kartanelama merkit varjot 0
+odota 4
+ui lasi mittaa 15 p9-merkit-ilman-varjoja
+odota 17
+ui kartanelama merkit varjot 1
+odota 2
+odota 2
+ui kartanelama merkit varjot raja 3000
+odota 4
+ui lasi mittaa 15 p9-varjoraja-3000
+odota 17
+ui kartanelama tila
+ui kartanelama merkit varjot raja 1500
+odota 4
+ui lasi mittaa 15 p9-varjoraja-1500
+odota 17
+ui kartanelama tila
+ui kartanelama merkit varjot raja pois
+odota 2
+ui kartanelama tila
+komento talot nousu pois
+linssi kaista
+odota 3

@@ -31,3 +31,10 @@ kimpuista, mutta sitä ei ole aiemmin mitattu laitteella. Muut: (b) mallien Forw
 (worldBounds koko maailma, kuten kierros 8) — kumpikin pieni laajassa näkymässä verrattuna varjoihin.
 Erottelu samassa yöajossa: komento `ui kartanelama merkit varjot 0|1` (pelihaara, uusi sha) ja skenaario 9c-laite-pariisi mittaa p5:ssä ja p9:ssä myös "merkit päällä ilman varjoja".
 Jos varjot ovat syy: korjausehdotus = varjokimppu vain lähelle (palan etäisyys < ~1,5 km) tai kova varjo merkeiltä pois laajassa näkymässä; KK päättää luvuista.
+
+## VS 16.11. 20.xx: varjoraja valmiina (ei ajettu, ei junaan)
+Pelihaara 5b98d6c86: `ui kartanelama merkit varjot raja <m>|pois`. Varjokimpusta piirretään vain palat, joiden keskipiste on alle <m> m kamerasta
+(kaukaiselle palalle _PalaNousu 0 → kärjet ruudun ulkopuolelle; ei uusia kutsuja, ei uutta muistia paitsi 12 t/pala). Oletus pois = piirto ennallaan.
+Tila-rivi: "varjoraja 1500 m: piirretty/kaikki palaa". Testit: Kartta 857/857, Linssit 2342/2342, unity-tarkistus 0.
+Käyttö: jos VS9B-C:ssä p5-merkit-ilman-varjoja ≈ p5-merkit-pois (varjot syy), KK valitsee: (a) raja oletukseksi (esim. 1500 m; laaja näkymä ≈ ei merkkivarjoja),
+(b) mittaus ensin: skenaario sk-tyyppimallit10-laite-pariisi.txt (9c + raja 3000/1500 p5:ssä ja p9:ssä), YÖAJO. Jos varjot eivät ole syy, raja jää käyttämättä.
