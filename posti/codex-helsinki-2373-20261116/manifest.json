@@ -1,0 +1,61 @@
+{
+  "task": 2373,
+  "preparedAt": "2026-11-16T07:36:14.318782+00:00",
+  "jobId": "f6d1817c-b9d2-4a08-b5c3-2e9202037409",
+  "inputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsingin-tuomiokirkko-2360-20261116/helsingin-tuomiokirkko-2360-native.png",
+  "inputSha256": "9e413086c953611ed10c2c630dea6553795f1744935e8950d6ff993365e23ecc",
+  "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsinki-tripo-2373-20261116/helsinki-2373-max-original-8k.glb",
+  "originalSha256": "2ad094a0e16b82b5341f3f0b12622f5490467690eae5545aa43dff45783b702d",
+  "originalBytes": 74238588,
+  "tripoCalls": 1,
+  "costCredits": 65,
+  "reviewOnly": true,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "files": {
+    "glb-metrics.json": {
+      "bytes": 1784,
+      "sha256": "324c2eeb77072b77254a4bd3084928c06bc610a18ab1b1b3b76aeb690adb862f"
+    },
+    "helsinki-01-plusX.jpg": {
+      "bytes": 115396,
+      "sha256": "6ad9b7a2c6f387cf316cd07338a2c01cf65cd9a0ed5d95804c59a8666d5c7aaf"
+    },
+    "helsinki-02-plusZ.jpg": {
+      "bytes": 113875,
+      "sha256": "9847a996ea726dc3fae52195eb9fb3201d7280feb6b09a00f086e4d1657ba58f"
+    },
+    "helsinki-03-minusX.jpg": {
+      "bytes": 106319,
+      "sha256": "a4ddc83fe33fc098120ae742a473354112b6e6fd090fd9e0d4bf0858ba8c50c0"
+    },
+    "helsinki-04-minusZ.jpg": {
+      "bytes": 101066,
+      "sha256": "0ba46cc879eed88315ab07df5259892c16a180c6eed0f9e31c793735f94fe015"
+    },
+    "helsinki-05-upper.jpg": {
+      "bytes": 102769,
+      "sha256": "e6b91e89e1a03ebc5e40aa81fe53a637efcf6c1fb71db4732f9149b5b2d2be7d"
+    },
+    "helsinki-5views-1000.jpg": {
+      "bytes": 152208,
+      "sha256": "6d7317057a7bfe24e5c1bc0f75a504cf52ef766063efae990437775984f3c0fd"
+    },
+    "qa-independent.md": {
+      "bytes": 1206,
+      "sha256": "ac2588ae64b78d8bbf53c26b8cafddc8f47556550809220e52dfd84f0181fd54"
+    },
+    "qa-root.md": {
+      "bytes": 1416,
+      "sha256": "e82e7174deb1069c9ef21f9b2cf8e7bada793ad747ae4faf580e8a2b04e4548f"
+    },
+    "source-order.md": {
+      "bytes": 647,
+      "sha256": "5a13b0868d2fb60f5acfd8b4cd66a12a8139ea682145224c3d801962951a4707"
+    },
+    "view-crops.json": {
+      "bytes": 693,
+      "sha256": "0723d6b6413612ebac8d1f9601f75c45e6a67f787899221028980dbd5956b82c"
+    }
+  }
+}

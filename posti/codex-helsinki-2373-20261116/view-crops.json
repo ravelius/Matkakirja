@@ -1,0 +1,46 @@
+{
+  "method": "Crop existing browser screenshots only; new process per model, text drawn last with fresh fonts",
+  "cropBoxes": {
+    "helsinki": [
+      [
+        800,
+        350,
+        1810,
+        1060
+      ],
+      [
+        780,
+        350,
+        1750,
+        1040
+      ],
+      [
+        800,
+        340,
+        1760,
+        1040
+      ],
+      [
+        800,
+        350,
+        1750,
+        1040
+      ],
+      [
+        950,
+        480,
+        1670,
+        1090
+      ]
+    ]
+  },
+  "rawNames": [
+    "01-plusX.jpg",
+    "02-plusZ.jpg",
+    "03-minusX.jpg",
+    "04-minusZ.jpg",
+    "05-upper.jpg"
+  ],
+  "geographicRegistration": false,
+  "maxReviewPixels": 1000
+}
