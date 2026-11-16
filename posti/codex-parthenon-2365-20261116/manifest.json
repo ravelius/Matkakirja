@@ -1,0 +1,76 @@
+{
+  "task": 2365,
+  "subject": "parthenon",
+  "sourceCommit": "f8bdf9b35922f8fbb51d9b5d0f90e45166281861",
+  "sourceBlobSha": "6ec4e4cb9e0ecbb8435536f2d72e93bfc79a7da6",
+  "sourceFiles": [
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/parthenon.jpg",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2365-parthenon/sources/parthenon.jpg",
+      "sha256": "0238e3d3670dc7e24756e9cd55b021675db8aeec56c7451376e7e5b1dfcd5274"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/parthenon.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2365-parthenon/sources/parthenon.md",
+      "sha256": "87dd66458298c0243c571c1edf52dc1f3f7118cc612508bdf5c9c023ddc7b9c0"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/parthenon-huomiot.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2365-parthenon/sources/parthenon-huomiot.md",
+      "sha256": "ede3dcb766af7db8927272ab42762d13c363e3804cef7937039ef8bee1fb8718"
+    }
+  ],
+  "imageGenerationMode": "built-in image_gen",
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "imageStartedAt": "2026-11-16T07:10:47.861512+00:00",
+  "imageCompletedAt": "2026-11-16T07:11:42.896221+00:00",
+  "estimatedImageCompleteAt": "2026-11-16T07:15:47.861512+00:00",
+  "imageArtifactId": "exec-61a261bd-d0a1-4452-badd-315385fda09f",
+  "jobId": null,
+  "cost": null,
+  "costStatus": "Built-in image price and provider job ID are not exposed; Tripo credits 0.",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2365-parthenon/parthenon-2365-native.png",
+  "nativeSha256": "b7622503dd8665957973b00536a75ec6078fa2a2f3c682aa13d41c24f23fa55b",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPixels": [
+    1000,
+    667
+  ],
+  "tripoCallsStarted": 0,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "qaStatus": "FAIL_PEDIMENT_RUIN_FORM",
+  "preparedAt": "2026-11-16T07:25:56.339257+00:00",
+  "reviewOnly": true,
+  "sourceModelsPreserved": true,
+  "files": {
+    "parthenon-2365-review.jpg": {
+      "bytes": 256406,
+      "sha256": "86396fb55eaad7a2a07df8f6c7e8c3d8e7b6f8cd372db446c0586d63bd22dc64"
+    },
+    "prompt.txt": {
+      "bytes": 2573,
+      "sha256": "07d1863adad3b61903001c068808934029192bebdde72402483c298495e3d0d7"
+    },
+    "qa-independent.md": {
+      "bytes": 986,
+      "sha256": "4e0799286ce76cf6ee19f6ed5c14c71760b1251092f34c90bb25e963446de49e"
+    },
+    "qa-root.md": {
+      "bytes": 940,
+      "sha256": "844c010a3187a86e4c97c729c15d1d02841323ea2be186689b5f19572c8fdb83"
+    },
+    "source-attribution.md": {
+      "bytes": 4254,
+      "sha256": "87dd66458298c0243c571c1edf52dc1f3f7118cc612508bdf5c9c023ddc7b9c0"
+    },
+    "source-order.md": {
+      "bytes": 2725,
+      "sha256": "8c50f26422288016ea6020033a9e7105cb2d0979b13df32ea27525eca747a036"
+    }
+  }
+}
