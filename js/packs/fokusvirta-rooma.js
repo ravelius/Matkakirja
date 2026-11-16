@@ -253,9 +253,9 @@ export const FOKUSVIRTA_ROOMA = {
     "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: vanha (9.9.2026) ääni ei vastaa uutta tekstiä; uusi ääni tulee Äänittäjän ajosta, ja aanite-kenttä sidotaan silloin (teksti ja ääni samaan vientiin). */
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, ÄÄ otto, teksti ilman tageja, 15,62 s; JU vienyt 16.11.2026 11.09), ämpärin täysi osoite kuten Pariisissa, Lontoossa ja Wienissä. */
     luenta: "[curious] Colosseumin muureilla oli kasvanut yli neljäsataa kasvilajia. Pari vuotta sitten ne kitkettiin pois, etteivät juuret rikkoisi kiveä. Kysyin vartijalta, pysyvätkö ne poissa. [warmly] Hän sanoi, että kasvit tietävät sen paremmin kuin kaupunki.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
      * valokuva Porta Pian murtumasta, otettu jo seuraavana päivänä
