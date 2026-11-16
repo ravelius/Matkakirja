@@ -1,0 +1,19 @@
+{
+  "task": 2402,
+  "checkedAt": "2026-11-16T09:18:42.279702+00:00",
+  "visualStatus": "WARNING",
+  "observations": "Tilattu pitkän sivun pylväs- ja yläpalkkikatkos sekä avoin katto säilyvät. Yläviistokuvassa näkyy erillinen pieni tumma lattia-aukko: tarkastettava ennen käyttöhyväksyntää. Tarkkaa pylväslukua tai ilmansuuntaa ei väitetä varmennetuksi.",
+  "fiveViewsReviewed": true,
+  "archiveVerified": true,
+  "compassRegistration": false,
+  "metricScaleVerified": false,
+  "KKAcceptance": false,
+  "gameIntegrated": false,
+  "localChecks": [
+    "GLB parse and embedded texture dimensions",
+    "Source and download/archive SHA256",
+    "Five whole-model browser views",
+    "Independent visual review"
+  ],
+  "warnings": []
+}

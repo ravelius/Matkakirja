@@ -1,0 +1,76 @@
+{
+  "file": "parthenon-2402-max-original-8k.glb",
+  "bytes": 77829656,
+  "sha256": "61f41d2a5b56cd96d183d2a829e0263a0a1966a39d6a5f0b538237eca4faf2d2",
+  "triangles": 1911001,
+  "vertices": 1155354,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_74b89cb3-43ac-4c8d-92e7-645f15ed7e53",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1704998
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_4e36bf94-6f40-4897-8db4-d0d706e894a2_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 14472369
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_4e36bf94-6f40-4897-8db4-d0d706e894a2_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1746682
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.23030099272727966,
+      0,
+      -0.4900208115577698
+    ],
+    "max": [
+      0.2300872802734375,
+      0.282806396484375,
+      0.4900818467140198
+    ],
+    "dimensions": [
+      0.46038827300071716,
+      0.282806396484375,
+      0.9801026582717896
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}
