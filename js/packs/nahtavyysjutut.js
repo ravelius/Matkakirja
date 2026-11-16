@@ -7333,10 +7333,10 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     Kuninkaanpalatsi: {
-      aika: '1648–1655',
+      aika: '1648–',
       teksti: 'Dam-aukion laidalla kohoava komea rakennus ei ollut alun '
-          + 'perin palatsi lainkaan, vaan Amsterdamin raatihuone. Se '
-          + 'rakennettiin vuosina 1648–1655 vanhan raatihuoneen '
+          + 'perin palatsi lainkaan, vaan Amsterdamin raatihuone. Sen '
+          + 'rakentaminen alkoi vuonna 1648 vanhan raatihuoneen '
           + 'paikalle, joka oli palanut poroksi vuonna 1652.'
         + '\n\n'
         + 'Rakennus on niin painava, että sen alle piti lyödä lähes '
@@ -7350,8 +7350,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Amsterdam - Koninklijk Paleis (30265843216).jpg',
-          lyhyt: 'Rakennus valmistui 1655 Amsterdamin raatihuoneeksi, kuninkaalliseksi palatsiksi vasta 1800-luvulla.',
-          selite: 'Rakennus valmistui vuonna 1655 Amsterdamin raatihuoneeksi, ja kuninkaalliseksi palatsiksi se muuttui vasta 1800-luvun alussa.',
+          lyhyt: 'Rakennustyöt alkoivat 1648; talo oli ensin raatihuone ja vasta 1800-luvulla kuninkaallinen palatsi.',
+          selite: 'Rakennustyöt alkoivat vuonna 1648, ja talosta tuli Amsterdamin raatihuone; kuninkaalliseksi palatsiksi se muuttui vasta 1800-luvun alussa.',
           lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
         },
       ],

@@ -425,7 +425,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Yövartio on saanut nimensä, vaikka se ei esitä yötä?",
-        "vastaus": "Rembrandtin maalauksella ei ollut alun perin lainkaan nimeä, ja nimi Yövartio mainitaan asiakirjassa ensimmäisen kerran vuonna 1797. Kohtaus ei kuitenkaan ole yöllinen: vuosisatojen aikana maalauksen päälle kertynyt tumma vernissa sai sen näyttämään yölliseltä, ja tummuneesta vernissasta poistettiin osa vasta 1940-luvulla (1946–47). Teoksen virallinen nimi on pitkä kuvaus kapteeni Frans Banninck Cocqin johtamasta miliisikomppaniasta.",
+        "vastaus": "Rembrandtin maalauksella ei ollut alun perin nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta 1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan kulkevaa joukkoa, vaikka sävyt ovat tummat. Pinnalla oli paksu, tummunut lakka; puhdistukset tehtiin 1946–47 ja 1975–76.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/The_Night_Watch_(painting)",
@@ -439,7 +439,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miksi Yövartion reunoja leikattiin pois vuonna 1715?",
-        "vastaus": "Maalaus siirrettiin vuonna 1715 Amsterdamin kaupungintaloon Damin torille, nykyiseen kuninkaanlinnaan. Jotta se sopisi uuteen paikkaan, siitä leikattiin pois neljä kaistaletta, suurin vasemmalta puolelta; vasemmalta katosi muun muassa kaksi hahmoa. Leikattuja kaistaleita ei ole koskaan löydetty.",
+        "vastaus": "Maalaus siirrettiin vuonna 1715 Amsterdamin kaupungintaloon Damin torille, nykyiseen kuninkaanlinnaan. Koska se oli liian suuri uudelle paikalle, siitä leikattiin kaistale joka reunalta. Eniten katosi vasemmalta, eikä palasia ole koskaan löydetty.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch",

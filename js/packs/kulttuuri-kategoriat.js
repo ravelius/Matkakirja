@@ -8541,7 +8541,9 @@ export const KULTTUURI_KATEGORIAT = {
        * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
        * kummassakaan vaiheessa.
        *
-       * YKSI NOSTO JÄI: "Verotettiinko julkisivun leveydestä?" pysyy sivulla,
+       * YKSI NOSTO JÄI: "Kapein koko talo Amsterdamissa" (ent. "Verotettiinko
+       * julkisivun leveydestä?"; verolegenda poistettu 16.11.2026, ks.
+       * docs/raportit/amsterdam-virheet-muualla-20261116.md) pysyy sivulla,
        * koska se on kaupungin KULTTUURIVISAN lähdejuttu
        * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
        * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
@@ -8556,17 +8558,18 @@ export const KULTTUURI_KATEGORIAT = {
        */
       nostot: [
         {
-          otsikko: 'Verotettiinko julkisivun leveydestä?',
+          otsikko: 'Kapein koko talo Amsterdamissa',
           tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
-          teksti: 'Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
-            + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
-            + 'epäilevät sitä. Joka tapauksessa kanavien varren talot ovat '
-            + 'kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 '
-            + 'metriä leveä ja viisi metriä syvä. Portaat ovat jyrkät kuin '
-            + 'tikkaat, eikä '
-            + 'sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta '
-            + 'työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut '
-            + 'vedetään köydellä ikkunasta sisään.',
+          teksti: 'Oude Hoogstraat 22 on Amsterdamin kapein koko talo: julkisivu '
+            + 'on 2,02 metriä leveä ja talo viisi metriä syvä. Kanavien '
+            + 'varren talot ovat kapeita ja syviä, ja niissä on usein '
+            + 'katonrajassa nostopuu, hijsbalk, jonka avulla huonekalut '
+            + 'nostetaan köydellä ikkunasta sisään, sillä portaat ovat jyrkät '
+            + 'ja kapeat.'
+            + '\n\n'
+            + 'Singel 7:n talon takajulkisivu on vain noin metrin levyinen, '
+            + 'mutta etuosa on selvästi leveämpi, joten kapein koko talo on '
+            + 'silti Oude Hoogstraatilla.',
           lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
           selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä '
             + 'käytössä, ja talot rakennettiin hieman eteenpäin kallelleen, '

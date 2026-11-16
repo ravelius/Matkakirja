@@ -795,10 +795,12 @@ export const KAARI_PAKETIT = {
        * Alpit), joten Amsterdam, Islanti, Tallinna ja Tromssa vievät
        * paletin muihin päätyyppeihin.
        *
-       * FAKTAT: nostopuu (hijsbalk), kapeat jyrkät portaat ja
-       * julkisivuleveyden mukaan peritty vero — kaikki pelin omasta
-       * tarkistetusta aineistosta, js/packs/fokusvirta-amsterdam.js:n
+       * FAKTAT: nostopuu (hijsbalk) ja kapeat jyrkät portaat — pelin
+       * omasta tarkistetusta aineistosta, js/packs/fokusvirta-amsterdam.js:n
        * oppitunti ja js/packs/kulttuuri-kategoriat.js, amsterdam/kaupunki.
+       * Verolegenda (julkisivun leveyden mukaan peritty vero) poistettu
+       * 16.11.2026: mikään lähde ei yhdistä sitä Oude Hoogstraat 22:n
+       * kapeuteen (docs/raportit/amsterdam-virheet-muualla-20261116.md).
        */
       saapuminen: 'Mittasin yhden talon nojauksen ja sain kaksi jalkaa: se '
         + 'kallistuu kadulle tahallaan, jottei nostettava tavara kolhisi '
@@ -823,8 +825,8 @@ export const KAARI_PAKETIT = {
           'Tulvan aikaan siihen kiinnitettiin veneiden köydet',
         ],
         oikea: 1,
-        fakta: 'Kiinteistövero perittiin julkisivun leveydestä, joten talot '
-          + 'tehtiin kapeiksi ja portaista tuli jyrkkiä kuin tikkaat. '
+        fakta: 'Kanavien varren talot ovat kapeita ja syviä, ja niiden '
+          + 'portaat ovat jyrkät ja kapeat. '
           + 'Päädystä ulos työntyvää palkkia sanotaan nostopuuksi, '
           + 'hijsbalk, ja sen koukun varassa sohvat ja kaapit hilataan yhä '
           + 'sisään ikkunasta. Talot rakennettiin siksi hieman etunojaan.',
