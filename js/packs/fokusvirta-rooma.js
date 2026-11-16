@@ -291,15 +291,14 @@ export const FOKUSVIRTA_ROOMA = {
      * PULUN KUVA (omistaja 16.11.2026 klo 09.09; PT): Codexin havainnekuva Colosseumin kasvit, tehtävä #2351 (fc28d28de2);
      * Commonsin valokuva (Adrian Farwell, CC BY 3.0) pois. Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/rooma-colosseum-codex-v2.jpg
      * (neliö 1254 px; rajaus = koko neliö ympyrään, ei `rajaus`-kenttää). Kuva viedään ämpäriin (JU/PT) osoitteeseen alla ennen
-     * yhdistämistä. Lähderivi: Matkakirjan havainnekuva, ei valokuvaajaa. Kuvassa ei enää ole vuotta 2007, joten se on pois
-     * `lyhyt`- ja `selite`-tekstistä. Faktat (kasvilajit) Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
-     * `lyhyt` ja `selite` ovat SK:n luonnos, KK tarkistaa.
+     * yhdistämistä. Lähderivi: Matkakirjan havainnekuva, ei valokuvaajaa. Kuvateksti uuden kuvan mukaan (KK 16.11. klo 09.17): muurin harja, kukkiva pensas ja saniainen. Faktat (kasvilajit) Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+     * `lyhyt` ja `selite` ovat KK:n sanelemat.
      */
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-rooma-colosseum-kasvit-codex-v2.jpg',
-        lyhyt: 'Vihreää Colosseumin maanalaisissa osissa.',
-        selite: 'Ruoho ja sammal peittävät Colosseumin maanalaisia käytäviä eli hypogeumia. Colosseumilla kasvaa yhä yli kaksisataa kasvilajia.',
+        lyhyt: 'Vihreää Colosseumin muurin harjalla.',
+        selite: 'Kukkiva pensas ja saniainen kasvavat Colosseumin muurin raoissa. Colosseumilla kasvaa yhä yli kaksisataa kasvilajia.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://link.springer.com/article/10.1080/11263500212331351199',
