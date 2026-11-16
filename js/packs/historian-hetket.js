@@ -4024,8 +4024,7 @@ export const HISTORIAN_HETKET = [
       + 'hymni: Euroopan neuvosto otti sen käyttöön 1972 ja EU:n johtajat 1985. '
       + 'Hymnissä ei ole sanoja, vain sävel.'
       + '\n\n'
-      + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Sen '
-      + 'viimeinen esitys oli ollut jo huhtikuussa 1870, ja talo purettiin sen '
+      + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Teatteri oli suljettu jo vuonna 1870, ja talo purettiin sen '
       + 'jälkeen. Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
       + 'Valtionoopperassa.',
     kuvat: [
@@ -4185,27 +4184,22 @@ export const HISTORIAN_HETKET = [
     lat: 48.2078, lon: 16.3665,
     kuvaversio: 4,
     teksti: 'Mozartin ooppera Figaron häät sai ensi-iltansa Wienin Burgtheaterissa 1. '
-      + 'toukokuuta 1786. Mozart oli 30-vuotias. Neue Mozart-Ausgaben mukaan hän '
-      + 'johti ensi-illan ja toisen esityksen cembalon ääreltä.'
+      + 'toukokuuta 1786. Mozart oli 30-vuotias. Hän johti ensimmäiset esitykset cembalon ääreltä.'
       + '\n\n'
       + 'Ooppera perustuu Beaumarchais\'n näytelmään, jonka saksankielinen esitys '
       + 'Wienissä kiellettiin 1785 keisari Joosef II:n käskystä poliittisen '
       + 'taustansa vuoksi. Librettisti Lorenzo Da Ponte lievensi näytelmän pilkkaa '
       + 'ja jätti pois Figaron suuren poliittisen puheen. Da Ponten oman '
-      + 'kertomuksen mukaan hän kirjoitti libreton kuudessa viikossa, mutta hänen '
+      + 'kertomuksen mukaan ooppera valmistui kuudessa viikossa, mutta hänen '
       + 'muistelmiinsa ei voi aina luottaa. Susannaa lauloi Nancy Storace ja '
       + 'Figaroa Francesco Benucci.'
       + '\n\n'
       + 'Yleisö vaati niin monta numeroa uudelleen, että keisari antoi 9. '
       + 'toukokuuta 1786 määräyksen: numeroita, joita laulaa useampi kuin yksi '
-      + 'laulaja, ei saa enää toistaa, koska esitys venyi liian pitkäksi. Leopold '
-      + 'Mozartin kirjeen mukaan toisessa esityksessä toistettiin viisi ja '
-      + 'kolmannessa seitsemän numeroa.'
+      + 'laulaja, ei saa enää toistaa, koska esitys venyi liian pitkäksi.'
       + '\n\n'
-      + 'Joulukuussa 1786 prahalainen sanomalehti kirjoitti, ettei mikään teos '
-      + 'ollut koskaan herättänyt niin paljon huomiota kuin Figaron häät. '
       + 'Tammikuussa 1787 Mozart matkusti Prahaan, jossa ooppera esitettiin hänen '
-      + 'läsnä ollessaan. NMA:n mukaan menestys johti Don Giovannin tilaukseen.'
+      + 'läsnä ollessaan. Menestys johti Don Giovannin tilaukseen.'
       + '\n\n'
       + 'Isoisäsi matkavuonna 1873 sama Burgtheater Michaelerplatzilla oli yhä '
       + 'käytössä. Se suljettiin vasta 1888, kun uusi Burgtheater avattiin '
@@ -4224,9 +4218,8 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-mozart-wien-1786-kauko-photo-v4.jpg',
-        lyhyt: 'Mozart johti Figaron häiden kaksi ensimmäistä esitystä cembalon äärestä.',
-        kuvateksti: 'Neue Mozart-Ausgaben mukaan Mozart johti ensi-illan ja '
-          + 'toisen esityksen cembalon ääreltä.',
+        lyhyt: 'Mozart johti Figaron häiden ensimmäiset esitykset cembalon äärestä.',
+        kuvateksti: 'Mozart johti Figaron häiden ensimmäiset esitykset cembalon ääreltä.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Mozarteum — Le nozze di Figaro critical '
           + 'edition, tarkistettu 16.11.2026.',
         url: 'https://dme.mozarteum.at/DME/objs/pdf/nma_305_-30_-3_eng.pdf',
@@ -5064,8 +5057,7 @@ export const HISTORIAN_HETKET = [
       + 'romahti. Siksi päivää kutsutaan Mustaksi perjantaiksi.'
       + '\n\n'
       + 'Pörssi toimi tuolloin väliaikaisessa rakennuksessa Schottenringillä; '
-      + 'nykyinen pörssirakennus valmistui vasta 1877. Edellisinä vuosina oli '
-      + 'perustettu yli sata osakeyhtiötä, ja monella niistä oli vähän muuta kuin '
+      + 'nykyinen pörssirakennus valmistui vasta 1877. Edellisinä vuosina oli perustettu satoja osakeyhtiöitä, ja monella niistä oli vähän muuta kuin '
       + 'paperi, jolle osakkeet oli painettu. Romahduspäivänä noin 120 yritystä '
       + 'ajautui konkurssiin. Sen jälkeen alkoi pitkä talouslama.'
       + '\n\n'

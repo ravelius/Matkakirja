@@ -778,17 +778,17 @@ export const EUROOPAN_KADONNEET = {
       id: 'karntnertor',
       nimi: 'Kärntnertor-teatteri',
       nimio: 'Kärntnertor',
-      kysymykset: ['Minkä sinfonian kantaesitys oli Kärntnertor-teatterissa 1824?', 'Mikä ooppera oli teatterin viimeinen esitys 1870?'],
+      kysymykset: ['Minkä sinfonian kantaesitys oli Kärntnertor-teatterissa 1824?', 'Minkä Beethovenin oopperan lopullinen versio kuultiin teatterissa 1814?'],
       korostukset: ['Ludwig van Beethoven|Ludwig van Beethovenin', 'Fidelio|Fidelion'],
       nappi: 'Teatteri, jossa Beethovenin yhdeksäs kuultiin ensi kerran',
       laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
       // Tarkistettu 17.11.2026 (WGW, ÖML, habsburger.net): Beduzzi ja 1709, tulipalo 1761, Pacassi ja 1763, Fidelio 1814 ja
-      // Wilhelm Tell 17.4.1870 jäivät; Chopin 1829, Mozartin pianokonsertto nro 25, Hotel Sacher ja orkesterin koko poistettiin.
-      teksti: 'Kärntnertor-teatteri oli Wienin hovin teatteri, jonka Antonio Beduzzi suunnitteli ja joka '
-        + 'avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
+      // teatterin sulkeminen 1870 (viimeinen esitys Wilhelm Tell 17.4.1870; päivää ei tekstissä) jäivät; Chopin 1829,
+      // Mozartin pianokonsertto nro 25, Hotel Sacher ja orkesterin koko poistettiin.
+      teksti: 'Kärntnertor-teatterin suunnitteli Antonio Beduzzi, ja se avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
         + 'uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio '
         + '1814. Huipentuma oli 7. toukokuuta 1824: Beethovenin yhdeksännen sinfonian '
-        + 'kantaesitys. Viimeinen ooppera, Rossinin Wilhelm Tell, esitettiin 17. huhtikuuta 1870, ja uusi '
+        + 'kantaesitys. Teatteri suljettiin vuonna 1870, ja uusi '
         + 'hovioopperatalo oli avattu jo 1869. Talo purettiin myöhemmin. '
         + 'Isoisän matkavuonna 1873 teatteri oli jo suljettu.',
       lahde: 'Österreichisches Musiklexikon online, ”Kärntnertortheater”; habsburger.net, ”Die Heimstatt der Oper: Das '
@@ -796,11 +796,11 @@ export const EUROOPAN_KADONNEET = {
         + '(yhdeksännen sinfonian kantaesitys); tarkistettu 17.11.2026.',
       kuva: 'ihme-karntnertor-loistoaika.jpg',
       lyhyt: 'Toukokuun 7. päivänä 1824 kuuroutunut säveltäjä on lavalla ja osoittaa tempot Yhdeksännen sinfonian '
-        + 'kantaesityksessä; huhtikuussa 1870 teatterin viimeinen ooppera esitetään, ja talo puretaan myöhemmin.',
+        + 'kantaesityksessä; vuonna 1870 teatteri suljetaan, ja talo puretaan myöhemmin.',
       selite: 'Toukokuun 7. päivänä 1824 Kärntnertor-teatterissa kantaesitetään Beethovenin yhdeksäs sinfonia. '
         + 'Samassa salissa on kuultu Beethovenin Fideliota. Lähes kuuro Beethoven on lavalla ja osoittaa '
         + 'tempot, vaikka ei kuule soittoa; virallisesti kokonaisjohdosta vastaa kapellimestari Michael Umlauf. '
-        + 'Huhtikuussa 1870 teatterin viimeinen ooppera on soitettu, ja talo puretaan myöhemmin.',
+        + 'Vuonna 1870 teatteri on suljettu, ja talo puretaan myöhemmin.',
       ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1824). Faktat: '
         + 'Österreichisches Musiklexikon online ja habsburger.net (Kärntnertortheater) sekä Thayer ja '
         + 'Beethoven-Haus Bonn (kantaesitys), tarkistettu 16.11.2026.',

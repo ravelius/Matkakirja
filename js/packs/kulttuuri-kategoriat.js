@@ -2762,7 +2762,7 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
             + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
             + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
-            + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+            + 'vaunut uusittiin alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
             + '\n\n'
             + 'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
             + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
@@ -2770,7 +2770,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paloi 1937.',
           lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä '
             + 'tunnissa.',
-          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin puusta 2016, ja ratas '
+          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin 2016, ja ratas '
             + 'kulkee enintään 2,7 kilometriä tunnissa.',
           lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Prater',
@@ -2778,8 +2778,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Koko ratas kerralla',
               tiedosto: 'Wiener Riesenrad DSC02378.JPG',
-              lyhyt: 'Praterin jättiratas kokonaisuudessaan; vaunut uusittiin puusta 2016.',
-              selite: 'Praterin jättiratas kokonaisuudessaan. Vuonna 2016 vaunut uusittiin puusta '
+              lyhyt: 'Praterin jättiratas kokonaisuudessaan; vaunut uusittiin 2016.',
+              selite: 'Praterin jättiratas kokonaisuudessaan. Vuonna 2016 vaunut uusittiin '
                 + 'alkuperäisten piirustusten mukaan.',
               lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
             },
@@ -3214,10 +3214,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'unionin sivujen mukaan sinfonian ilon sävel on nykyään Euroopan '
             + 'hymni: Euroopan neuvosto otti sen käyttöön 1972 ja EU:n johtajat '
             + '1985. Hymnissä ei ole sanoja, vain sävel.\n\nIsoisäsi matkavuonna '
-            + '1873 Kärntnertor-teatteria ei enää käytetty. Sen viimeinen esitys '
-            + 'oli ollut jo huhtikuussa 1870, ja talo purettiin sen jälkeen. '
-            + 'Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
-            + 'Valtionoopperassa.',
+            + '1873 Kärntnertor-teatteria ei enää käytetty. Teatteri oli suljettu '
+            + 'jo vuonna 1870, ja talo purettiin sen jälkeen. Oopperaa esitettiin '
+            + 'silloin jo uudessa hovioopperassa, nykyisessä Valtionoopperassa.',
           lyhyt: 'Kertoman mukaan Caroline Unger kääntää Beethovenin kohti '
             + 'yleisöä, joka taputtaa ja heiluttaa hattuja.',
           selite: 'Kertoman mukaan laulaja Caroline Unger kosketti Beethovenia '
@@ -3281,27 +3280,23 @@ export const KULTTUURI_KATEGORIAT = {
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg',
           teksti: 'Mozartin ooppera Figaron häät sai ensi-iltansa Wienin '
-            + 'Burgtheaterissa 1. toukokuuta 1786. Mozart oli 30-vuotias. Neue '
-            + 'Mozart-Ausgaben mukaan hän johti ensi-illan ja toisen esityksen '
-            + 'cembalon ääreltä.\n\nOoppera perustuu Beaumarchais\'n näytelmään, '
-            + 'jonka saksankielinen esitys Wienissä kiellettiin 1785 keisari '
-            + 'Joosef II:n käskystä poliittisen taustansa vuoksi. Librettisti '
-            + 'Lorenzo Da Ponte lievensi näytelmän pilkkaa ja jätti pois Figaron '
-            + 'suuren poliittisen puheen. Da Ponten oman kertomuksen mukaan hän '
-            + 'kirjoitti libreton kuudessa viikossa, mutta hänen muistelmiinsa ei '
-            + 'voi aina luottaa. Susannaa lauloi Nancy Storace ja Figaroa '
-            + 'Francesco Benucci.\n\nYleisö vaati niin monta numeroa uudelleen, '
-            + 'että keisari antoi 9. toukokuuta 1786 määräyksen: numeroita, joita '
-            + 'laulaa useampi kuin yksi laulaja, ei saa enää toistaa, koska '
-            + 'esitys venyi liian pitkäksi. Leopold Mozartin kirjeen mukaan '
-            + 'toisessa esityksessä toistettiin viisi ja kolmannessa seitsemän '
-            + 'numeroa.\n\nJoulukuussa 1786 prahalainen sanomalehti kirjoitti, '
-            + 'ettei mikään teos ollut koskaan herättänyt niin paljon huomiota '
-            + 'kuin Figaron häät. Tammikuussa 1787 Mozart matkusti Prahaan, jossa '
-            + 'ooppera esitettiin hänen läsnä ollessaan. NMA:n mukaan menestys '
-            + 'johti Don Giovannin tilaukseen.\n\nIsoisäsi matkavuonna 1873 sama '
-            + 'Burgtheater Michaelerplatzilla oli yhä käytössä. Se suljettiin '
-            + 'vasta 1888, kun uusi Burgtheater avattiin Ringillä.',
+            + 'Burgtheaterissa 1. toukokuuta 1786. Mozart oli 30-vuotias. Hän '
+            + 'johti ensimmäiset esitykset cembalon ääreltä.\n\nOoppera perustuu '
+            + 'Beaumarchais\'n näytelmään, jonka saksankielinen esitys Wienissä '
+            + 'kiellettiin 1785 keisari Joosef II:n käskystä poliittisen '
+            + 'taustansa vuoksi. Librettisti Lorenzo Da Ponte lievensi näytelmän '
+            + 'pilkkaa ja jätti pois Figaron suuren poliittisen puheen. Da Ponten '
+            + 'oman kertomuksen mukaan ooppera valmistui kuudessa viikossa, mutta '
+            + 'hänen muistelmiinsa ei voi aina luottaa. Susannaa lauloi Nancy '
+            + 'Storace ja Figaroa Francesco Benucci.\n\nYleisö vaati niin monta '
+            + 'numeroa uudelleen, että keisari antoi 9. toukokuuta 1786 '
+            + 'määräyksen: numeroita, joita laulaa useampi kuin yksi laulaja, ei '
+            + 'saa enää toistaa, koska esitys venyi liian pitkäksi.\n\nTammikuussa '
+            + '1787 Mozart matkusti Prahaan, jossa ooppera esitettiin hänen läsnä '
+            + 'ollessaan. Menestys johti Don Giovannin tilaukseen.\n\nIsoisäsi '
+            + 'matkavuonna 1873 sama Burgtheater Michaelerplatzilla oli yhä '
+            + 'käytössä. Se suljettiin vasta 1888, kun uusi Burgtheater avattiin '
+            + 'Ringillä.',
           lyhyt: 'Nancy Storace lauloi Susannaa Figaron häiden ensi-illassa '
             + 'Burgtheaterissa.',
           selite: 'Nancy Storace, joka lauloi Susannaa ensi-illassa, ja Mozart '
@@ -3312,10 +3307,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
-              lyhyt: 'Mozart johti Figaron häiden kaksi ensimmäistä esitystä '
-                + 'cembalon äärestä.',
-              selite: 'Neue Mozart-Ausgaben mukaan Mozart johti ensi-illan ja '
-                + 'toisen esityksen cembalon ääreltä.',
+              lyhyt: 'Mozart johti Figaron häiden ensimmäiset esitykset cembalon äärestä.',
+              selite: 'Mozart johti Figaron häiden ensimmäiset esitykset cembalon ääreltä.',
               lahde: 'Matkakirjan havainnekuva. Faktat: Mozarteum — Le nozze di '
                 + 'Figaro critical edition, tarkistettu 16.11.2026.',
             },
@@ -3363,12 +3356,12 @@ export const KULTTUURI_KATEGORIAT = {
             + '1873, Wienin pörssi romahti. Siksi päivää kutsutaan Mustaksi '
             + 'perjantaiksi.\n\nPörssi toimi tuolloin väliaikaisessa rakennuksessa '
             + 'Schottenringillä; nykyinen pörssirakennus valmistui vasta 1877. '
-            + 'Edellisinä vuosina oli perustettu yli sata osakeyhtiötä, ja '
-            + 'monella niistä oli vähän muuta kuin paperi, jolle osakkeet oli '
-            + 'painettu. Romahduspäivänä noin 120 yritystä ajautui konkurssiin. '
-            + 'Sen jälkeen alkoi pitkä talouslama.\n\nSamana vuonna Wienissä riehui '
-            + 'myös koleraepidemia, joka vei noin 3000 ihmisen hengen. Näyttelyyn '
-            + 'tuli noin 7 miljoonaa kävijää, vähemmän kuin odotettiin.\n\nIsoisäsi '
+            + 'Edellisinä vuosina oli perustettu satoja osakeyhtiöitä, ja monella '
+            + 'niistä oli vähän muuta kuin paperi, jolle osakkeet oli painettu. '
+            + 'Romahduspäivänä noin 120 yritystä ajautui konkurssiin. Sen jälkeen '
+            + 'alkoi pitkä talouslama.\n\nSamana vuonna Wienissä riehui myös '
+            + 'koleraepidemia, joka vei noin 3000 ihmisen hengen. Näyttelyyn tuli '
+            + 'noin 7 miljoonaa kävijää, vähemmän kuin odotettiin.\n\nIsoisäsi '
             + 'matkavuonna 1873 Prateria hallitsi maailmannäyttelyn Rotunde, 108 '
             + 'metriä leveä kupolirakennus, joka oli aikansa suurin laatuaan. '
             + 'Rotunde paloi 17. syyskuuta 1937.',
