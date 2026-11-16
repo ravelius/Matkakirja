@@ -29,10 +29,17 @@ namespace Matkakirja
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiAsema(h > 0 ? h : OhjelmaKohdeGeometria.AsemanHallit(W), L, W), 1500) };
             }
             // Luonnos.dll <kansio> <nimi> malli <tyyppi> <a> <b> <c> <p0> <p1> [p2] [p3bitit] [varattu]: MK01-rivi kuten pelissä (OhjelmaKohdeGeometria.TyyppiMalli; KK 15.11. 01.13 arkki).
+            // VS 17.11. (korttelikuva, KK RAJAT 1–4): VS_PALETTI=RRGGBB,RRGGBB (katto, seinä; MK01:n palettirivi kuten pelissä) ja VS_VENYTYS=sx,sz
+            // (jaettujen tyyppien merkkikohtainen venytys kuten peli: runko (sx, 1, sz), lisäosa tasaisesti min(sx, sz)). Ilman niitä kuten ennen.
+            int pKatto = 0, pSeina = 0; float vx = 1f, vz = 1f; bool venyta = false;
+            var pal = Environment.GetEnvironmentVariable("VS_PALETTI");
+            if (!string.IsNullOrEmpty(pal)) { var q = pal.Split(','); pKatto = Convert.ToInt32(q[0], 16); pSeina = Convert.ToInt32(q[1], 16); }
+            var ven = Environment.GetEnvironmentVariable("VS_VENYTYS");
+            if (!string.IsNullOrEmpty(ven)) { var q = ven.Split(','); vx = float.Parse(q[0], ci); vz = float.Parse(q[1], ci); venyta = true; }
             if (a.Length >= 9 && a[2] == "malli")
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiMalli(int.Parse(a[3]), int.Parse(a[4]),
                     int.Parse(a[5]), int.Parse(a[6]), float.Parse(a[7], ci), float.Parse(a[8], ci), a.Length >= 10 ? float.Parse(a[9], ci) : 0f,
-                    a.Length >= 11 ? uint.Parse(a[10]) : 0u, a.Length >= 12 ? uint.Parse(a[11]) : 0u), 1500) };
+                    a.Length >= 11 ? uint.Parse(a[10]) : 0u, a.Length >= 12 ? uint.Parse(a[11]) : 0u, null, pKatto, pSeina), 1500) };
             // Luonnos.dll <kansio> <nimi> julkisivu <kupoli 0|1> <sx> <sz> [raskas]: julkisivukirkko kuten peli piirtää (runko venyy, kupoli min(sx, sz); KK 15.11. ehto a).
             if (a.Length >= 6 && a[2] == "julkisivu")
                 lista = new System.Collections.Generic.List<(string, OhjelmaKohdeGeometria.Verkko, int)> { (a[1], OhjelmaKohdeGeometria.TyyppiKirkkoJulkisivuKoko(a[3] != "0",
@@ -40,8 +47,8 @@ namespace Matkakirja
             // Mallirivin lisäosa (julkisivukirkon kupoli) mukaan kuten pelissä.
             if (a.Length >= 9 && a[2] == "malli")
             {
-                var osa = OhjelmaKohdeGeometria.TyyppiLisaosa(int.Parse(a[3]), int.Parse(a[4]), out float ox, out float oy);
-                if (osa != null) lista[0] = (lista[0].Item1, OhjelmaKohdeGeometria.TyYhdista(lista[0].Item2, 1f, 1f, osa, ox, oy), lista[0].Item3);
+                var osa = OhjelmaKohdeGeometria.TyyppiLisaosa(int.Parse(a[3]), int.Parse(a[4]), out float ox, out float oy, pKatto, pSeina);
+                if (osa != null || venyta) lista[0] = (lista[0].Item1, OhjelmaKohdeGeometria.TyYhdista(lista[0].Item2, vx, vz, osa, ox, oy), lista[0].Item3);
             }
             foreach (var (nimi, v, raja) in lista)
             {
