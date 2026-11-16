@@ -915,7 +915,7 @@ export const FOKUSVIRTA_WIEN = {
         lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
       },
       kysymykset: [
-        'Mistä lipizzanit tulivat Wieniin ennen Piberin siitostallia?',
+        'Mistä lipizzanit tulivat Wieniin ennen vuotta 1920?',
         'Miten lipizzanien väri muuttuu vuosien kuluessa?',
         'Milloin ratsastuskoulun talvikoulu valmistui?',
       ],

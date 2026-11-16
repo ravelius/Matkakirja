@@ -783,7 +783,8 @@ export const EUROOPAN_KADONNEET = {
       nappi: 'Teatteri, jossa Beethovenin yhdeksäs kuultiin ensi kerran',
       laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
       // Tarkistettu 17.11.2026 (WGW, ÖML, habsburger.net): Beduzzi ja 1709, tulipalo 1761, Pacassi ja 1763, Fidelio 1814 ja
-      // Wilhelm Tell 17.4.1870 jäivät; Chopin 1829, Mozartin pianokonsertto nro 25, Hotel Sacher ja orkesterin koko poistettiin.
+      // teatterin sulkeminen 1870 (viimeinen esitys Wilhelm Tell 17.4.1870; päivää ei tekstissä) jäivät; Chopin 1829,
+      // Mozartin pianokonsertto nro 25, Hotel Sacher ja orkesterin koko poistettiin.
       teksti: 'Kärntnertor-teatterin suunnitteli Antonio Beduzzi, ja se avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
         + 'uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio '
         + '1814. Huipentuma oli 7. toukokuuta 1824: Beethovenin yhdeksännen sinfonian '
