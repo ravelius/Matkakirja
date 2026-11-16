@@ -1,0 +1,62 @@
+{
+  "status": "RAW_ORIGINALS_ARCHIVED_ALIGNMENT_PENDING",
+  "originals": [
+    {
+      "archivedAt": "2026-11-16T18:23:48.781141+00:00",
+      "jobId": "ecb85235-5bec-4b8b-89b0-9c3a7e0f2047",
+      "exportId": "8181b424-9ada-460b-b305-f68d9027d69a",
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_8181b424-9ada-460b-b305-f68d9027d69a.glb",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/A/original.glb",
+      "bytes": 80285576,
+      "sha256": "9410d02ae15b00a584361b3ec0f25ccbe25a3fb89d355aff1e9c30b84fdee22b",
+      "triangles": 1961284,
+      "associationEvidence": "Only A exported at this time; completed export UI; fresh sole Downloads GLB; Tripo triangle count exactly matches UI1961284. Export conversion UUID differs from generation UUID.",
+      "browserDownloadEvent": "unavailable: Browser Use could not read requirements",
+      "formatRequested": "GLB",
+      "textureRequested": "8k Current",
+      "sourceRemovedAfterVerifiedCopy": true
+    },
+    {
+      "archivedAt": "2026-11-16T18:42:42.685977+00:00",
+      "jobId": "98976c4e-9c62-42b3-a9f6-e8bd72ac39e4",
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_afed65ec-0d7c-4517-94b2-9d3f503ce5d3.glb",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/B/original.glb",
+      "bytes": 78011792,
+      "sha256": "248637fba42a41c9dcdc532182a3900ee7624b16a8d2f66f1a6a7c543f47bcbc",
+      "triangles": 1995872,
+      "associationEvidence": "Download event tied to this model normal Export; GLB triangle count exactly matches visible Tripo model count.",
+      "formatRequested": "GLB",
+      "textureRequested": "8k Current",
+      "sourceRemovedAfterVerifiedCopy": true
+    },
+    {
+      "archivedAt": "2026-11-16T18:44:38.724845+00:00",
+      "jobId": "eb7478d1-9de1-4738-857b-f9cca4a1990a",
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_c1d548dc-71b0-493e-963e-facab55c3ddb.glb",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/C/original.glb",
+      "bytes": 79676032,
+      "sha256": "48f2abe5cc12363500d74c86b9a92b9464b6c86f72a7c801d0d7a3a4a8f6695d",
+      "triangles": 1944305,
+      "associationEvidence": "C was the only active export after B was archived and boot copy removed; sole fresh GLB appears after normal Export. UI count1944305 matches file exactly. Browser tool timed out after export; no returned download-event path.",
+      "formatRequested": "GLB",
+      "textureRequested": "8k Current",
+      "sourceRemovedAfterVerifiedCopy": true
+    },
+    {
+      "archivedAt": "2026-11-16T18:46:10.935585+00:00",
+      "jobId": "97f66d17-a103-417c-b0c9-9962c0fa12fa",
+      "sourceDownloadPath": "/Users/samireivinen/Downloads/tripo_convert_6d3ce15a-d74b-4a2d-ae6b-b33d1adeedeb.glb",
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/A-MV/original.glb",
+      "bytes": 79306540,
+      "sha256": "5abd3d5fc9f06a85372749f06b86d48fceab2bad9dca3e899d7cbd88efddb9e2",
+      "triangles": 1949010,
+      "associationEvidence": "Download event tied to this model normal Export; GLB triangle count exactly matches visible Tripo model count.",
+      "formatRequested": "GLB",
+      "textureRequested": "8k Current",
+      "sourceRemovedAfterVerifiedCopy": true
+    }
+  ],
+  "activeTripoJobs": [],
+  "credits": 260,
+  "observedBalance": 13410
+}

@@ -1,0 +1,6 @@
+{
+  "commit": "580cf058ee3b01af7a1a3163913329f5b57be4cf",
+  "path": "posti/pt-codex-kevennys-lavlle-20261116.md",
+  "blob": "ce7b03c439e4fc115606e58874f7c616c91514ed",
+  "text": "# PT → Codex: KEVENNYS SIIRTYY LAV:lle — kolmen kevennyksen vertailu PERUTTU (KK 20.48; korvaa 4fc36b8883)\n\nLAV teki GC 2269:lle kevennysreseptin v2 (terävämpi, venymät pois, gz 18,0 vs 20,7 Mt); **KK hyväksyi sen vakioksi.** Kevennyksen tekee jatkossa LAV:n era.zsh.\n\n1. **Kolmen kevennystavan vertailu (4fc36b8883) EI ole enää tarpeen** — älä aja sitä.\n2. **IKKUNA5 22–24 käytetään:** (a) MultiView a|b -vertailuarkki Bastilji A:sta (Tripo-alkuperäiset, sama kulma + lähikuvat muuri/tornin harja), (b) B:n ja C:n alkuperäisten lataukset, (c) GC:n uusi mallikuva (muoto: Giraud 1802, Silvestre — linnake torneineen).\n3. **Toimita LAV:lle alkuperäiset GLB:t kohdistettuina osina** (A, B, C; ja A-b jos parempi) + SHA256 → postiin polut, PT vie LAV:lle.\n4. Massaotot pysyvät omistajan katseen takana. Kuittaa ETA.\n"
+}
