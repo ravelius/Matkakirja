@@ -5166,6 +5166,10 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-yovartio',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // KADONNEET IHMEET (KK 16.11.2026 erä 2): paikat KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
+      { nimi: 'Haringpakkerstoren', lat: 52.37917, lon: 4.89528 },
+      { nimi: 'Waag op de Dam', lat: 52.3731, lon: 4.8927 },
+      { nimi: 'Paleis voor Volksvlijt', lat: 52.359768, lon: 4.899973 },
     ],
   },
   dublin: {
@@ -6938,6 +6942,8 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // KADONNUT IHME (KK 16.11.2026 erä 2): paikka KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
+      { nimi: 'Meta Sudans', lat: 41.8900812, lon: 12.4906909 },
     ],
   },
   krakova: {

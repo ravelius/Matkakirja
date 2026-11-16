@@ -1,0 +1,445 @@
+### v2-178
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: patenttivirasto
+VASTAUS: Bernin patenttivirasto oli liittovaltion henkisen omaisuuden toimisto, jossa [[Albert Einstein]] aloitti työt vuonna 1902. Hän arvioi hakemuksia kolmannen luokan teknisenä asiantuntijana, ja virasto antoi hänelle vakaan toimeentulon, kun yksikään haettu opettajanpaikka ei auennut. Työ vaati tarkkuutta, ja sen sanotaan sopineen hänen ajattelutapaansa. Iltaisin hän keskusteli fysiikan kysymyksistä ystävänsä ja työtoverinsa [[Michele Besson]] kanssa sekä [[Olympia-akatemian]] jäsenten kanssa.
+
+### v2-179
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Olympia-akatemia
+VASTAUS: Olympia-akatemia oli vuonna 1902 Bernissä syntynyt keskusteluryhmä, jonka perustajia olivat Albert Einstein ja hänen ystävänsä Maurice Solovine ja Conrad Habicht. Jäsenet kutsuivat itseään leikillään akatemiaksi, ja he kokoontuivat iltaisin lukemaan ja keskustelemaan fysiikasta ja filosofiasta. Luettavana oli muun muassa [[Ernst Machin]], [[Henri Poincarén]] ja [[David Humen]] kirjoja. Ryhmä hajosi, kun jäsenet muuttivat pois Bernistä.
+
+### v2-180
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Bernin vanhakaupunki
+VASTAUS: Bernin vanhakaupunki on yksi Euroopan parhaiten säilyneistä keskiaikaisista kaupunkikeskuksista, ja Unesco merkitsi sen maailmanperintökohteeksi vuonna 1983. Kaupunki rakennettiin vuoden 1405 suurpalon jälkeen uudelleen hiekkakivestä, ja Unesco on perustellut listausta muun muassa poikkeuksellisen johdonmukaisella kaavoituksella. Katujen varsilla on 1500-luvulta peräisin olevia veistoksellisia [[Figurenbrunnen]]-kaivoja, ja tunnettu maamerkki on keskiaikainen [[Zytglogge]]-kellotorni. Kaupungin yllä kohoaa tuomiokirkko [[Münster]], jonka torni valmistui vasta 1893.
+
+### v2-181
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: holvikäytäviä
+VASTAUS: Bernin holvikäytävät syntyivät 1400-luvulla, kun talojen yläkerrat laajenivat kadun päälle. Käytäviä on yhteensä noin kuusi kilometriä, ja niitä pidetään yhtenä Euroopan pisimmistä katetuista ostoskaduista. Niiden alla ovat kaupat ja kahvilat, ja ne suojaavat sateelta ja lumelta. Käytävät kuuluvat siihen kokonaisuuteen, jonka vuoksi [[Unesco]] listasi vanhankaupungin maailmanperintökohteeksi. Ne liittyvät [[hiekkakivestä]] rakennettuun kaupunkikuvaan, joka syntyi [[vuoden 1405 suurpalon]] jälkeen.
+
+### v2-182
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Vuoden 1405 suurpalo
+VASTAUS: Vuoden 1405 suurpalo tuhosi suurimman osan Bernin puurakennuksista. Kaupunki rakennettiin vähitellen uudelleen, ensin [[ristikkotaloina]] ja sitten hiekkakivitaloina, ja ne ovat vanhankaupungin tunnusmerkki yhä. Puuta korvannut kivi muutti kaupungin yleisilmeen yhtenäisemmäksi. [[Holvikäytävät]] syntyivät 1400-luvulla, kun talojen yläkerrat laajenivat kadun päälle. Tuomiokirkon [[Münsterin]] rakentaminen aloitettiin 11. maaliskuuta 1421, vain muutamia vuosikymmeniä palon jälkeen.
+
+### v2-183
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: vanhakaupunki
+VASTAUS: Vanhakaupunki on Bernin historiallinen ydin, ja se nousee Aare-joen ympäröimälle mäkiniemelle. Se on säilynyt keskiaikaisena kokonaisuutena, ja sen hiekkakivitalot ja noin kuuden kilometrin [[holvikäytävät]] ovat nähtävissä yhä. Kaupungin tunnetuimpia maamerkkejä ovat [[Zytglogge]]-kellotorni ja tuomiokirkko. Perimätiedon mukaan herttua [[Berchtold V]] perusti kaupungin vuonna 1191, ja vanhakaupunki on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+### v2-184
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Berner Münster
+VASTAUS: Bernin tuomiokirkon Münsterin rakentaminen aloitettiin 11. maaliskuuta 1421 [[Matthäus Ensinger]]in johdolla. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1500-luvun lopulla, ja noin sadan metrin torni valmistui lopulta vuonna 1893. Se on Sveitsin korkein kirkontorni. Suurin kello painaa noin kymmenen tonnia, ja kellot soivat päivittäin. [[Reformaation]] myötä vuonna 1528 sivualttarit poistettiin, mutta sisätilassa on säilynyt 1440-luvun lasimaalauksia ja kuoripenkit. Päätuloportaalin yllä on myöhäisgoottilainen [[viimeinen tuomio]] -veistoskokoelma, jonka alkuperäiset patsaat säilytetään nykyään historiallisessa museossa.
+
+### v2-185
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Mont Blanc
+VASTAUS: Mont Blancin huippu on noin 4 800 metrin korkeudessa, ja tarkka korkeus vaihtelee hieman mittauksesta ja lumi- ja jääkerroksen paksuudesta riippuen. Ensimmäisen kerran huipulle nousivat vuonna 1786 [[Jacques Balmat]] ja [[Michel-Gabriel Paccard]], mitä pidetään usein nykyaikaisen alpinismin alkuna. Vuoren juurella on ranskalainen [[Chamonix]]n kylä, ja vuoren ali kulkee [[Mont Blancin tunneli]], joka avattiin vuonna 1965.
+
+### v2-186
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Alpeilla
+VASTAUS: Alpeilla elää monia vuoristoeläimiä, ja tunnetuin niistä on [[alppikauris]]. Sitä oli 1800-luvun puolivälissä jäljellä alle sata yksilöä, kaikki yhdessä laaksossa [[Gran Paradison]] vuorilla Italiassa, koska muualta Alpeilta se oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman metsästysmaakseen, ja alueesta tuli vuonna 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla elää taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Vuoristossa on myös perinteitä, kuten [[alppitorvi]], jolla viestittiin laaksosta toiseen.
+
+### v2-187
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Alppien
+VASTAUS: Alpit ovat Länsi-Euroopan korkein vuoristo, noin 1 200 kilometrin kaari Välimereltä Wienin liepeille. Kahdeksan maata jakaa vuoriston, ja siellä asuu noin 13,6 miljoonaa ihmistä, joten se on asuttu seutu eikä erämaa. Yli neljän kilometrin huippuja on 82, ja korkein on [[Mont Blanc]]. Vuoristossa on aina eletty karjan ehdoilla, ja samoista laaksoista ovat peräisin [[alppitorvi]], jolla kutsuttiin karja kotiin, sekä lumivyöryjen hallinnan taito, jonka [[Unesco]] lisäsi kulttuuriperintöluetteloonsa vuonna 2018. Solat ovat olleet kauppateitä kivikaudelta asti.
+
+### v2-188
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: alppilaitumet
+VASTAUS: Alppilaitumet ovat korkealla vuoristossa sijaitsevia kesälaitumia, joille karja viedään keväällä ja joilta se tuodaan syksyllä alas laaksoon. Kesän maito tehdään ylhäällä juustoksi, koska juusto kestää kantamisen mutta maito ei. Saksankielisessä Sveitsissä laidunta ja sen rakennuksia kutsutaan sanalla Alp, ja alppilaitumilla tehtyä juustoa myydään usein [[alppijuustona]]. Laiduntaminen pitää maiseman avoimena ja on osa tapaa, jolla vuoristo on asuttu. Karjaa kutsuttiin kotiin [[alppitorvella]], jonka ääni kantaa laaksosta toiseen.
+
+### v2-189
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: karjan paluujuhlat
+VASTAUS: Karjan paluujuhlissa laitumilta laaksoon palaava karja tuodaan kylään seremonialla. Sveitsissä niitä kutsutaan nimellä [[Alpabzug]] tai ranskankielisellä alueella [[désalpe]]. Perinteen mukaan lehmät koristellaan kukkaseppelein ja suurin kellokoristein, etenkin jos kesä on sujunut ilman onnettomuuksia. Kulkueen mukana kulkevat paimenet kansanpuvuissa, ja kylissä on usein toritapahtuma ja musiikkia, jossa soi myös [[alppitorvi]]. Juhlat ajoittuvat syksyyn.
+
+### v2-190
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Alppitorvi
+VASTAUS: Alppitorvi on puinen, usein useita metrejä pitkä torvi, jonka pää lepää maassa soitettaessa. Se tehdään tavallisesti kuusesta, ja sen ääni kantaa vuoristossa kauas ja kaikuu kallioseinämistä. Paimenet käyttivät sitä karjan kutsumiseen ja viestien lähettämiseen laaksosta toiseen. Keski-Sveitsissä siihen liittyi myös perinne, jossa paimen lausui illalla rukouskutsun, [[Betruf]], torven läpi. Nykyään alppitorvea soitetaan [[kansanmusiikissa]] ja torvisoittajien tapaamisissa.
+
+### v2-191
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: lumivyöryjen hallinta
+VASTAUS: Lumivyöryjen hallinta on laaja joukko tapoja ja tietoa, joilla vuoristoyhteisöt ovat oppineet elämään lumivyöryjen kanssa. Siihen kuuluvat [[suojametsät]], rinteisiin rakennetut tuet ja sulut, vaara-alueiden kartoitus sekä lumitilanteen seuranta ja varoitukset. [[Unesco]] lisäsi lumivyöryriskin hallinnan aineettoman kulttuuriperintönsä luetteloon vuonna 2018 Sveitsin ja Itävallan yhteisestä hakemuksesta. [[Davosissa]] toimii lumi- ja lumivyörytutkimuksen laitos [[SLF]].
+
+### v2-192
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Grindelwaldin
+VASTAUS: Grindelwald on kylä Bernin kantonissa, [[Eigerin]] pohjoisseinämän juurella. Kylän yläpuolella laskeutuu kaksi jäätikköä, Ylä- ja Ala-Grindelwaldin jäätikkö, ja ne kuuluivat 1800-luvulla matkailijoiden suosituimpiin nähtävyyksiin. Isoisäkin ihaili niiden sinistä jäätä. Jäätiköt ovat vetäytyneet ja ohentuneet viime vuosikymmeninä. Kylä on nykyään tunnettu matkailukohde [[Jungfraun]] alueella.
+
+### v2-193
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: jäätikkö
+VASTAUS: Jäätikkö on pysyvästä lumesta kertyneestä jäästä muodostunut massa, joka valuu hitaasti omalla painollaan alas rinnettä. Alppien suurin on Sveitsissä sijaitseva [[Aletschin jäätikkö]], joka on noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdaltaan lähes tuhat metriä syvä. Jäätikkö ei ole paikallaan: sen pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. [[Unesco]] otti sen ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti, ja sama koskee muita Alppien jäätiköitä.
+
+### v2-194
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Fréjus-tunneli
+VASTAUS: Fréjus-tunneli eli Mont Cenisin rautatietunneli kulkee Ranskan ja Italian välillä [[Alppien]] ali, ja se avattiin syyskuussa 1871. Tunnelin pituus on noin 13 kilometriä, ja se yhdistää ranskalaisen [[Modane]]n ja italialaisen [[Bardonecchia]]n. Louhinnassa käytettiin paineilmaporia, mikä nopeutti työtä ja oli aikansa uutuus. Tunneli oli aikansa pisin rautatietunneli, kunnes sen ohitti [[Gotthardin rautatietunneli]], jonka läpilyönti tehtiin vuonna 1880.
+
+### v2-195
+KOHDE: kaupunki:alpit
+KYSYMYS: Kerro lisää: Gotthardin pohjatunneli
+VASTAUS: Gotthardin pohjatunneli on 57 kilometrin pituinen rautatietunneli, ja se avattiin 1. kesäkuuta 2016. Louhinta kesti seitsemäntoista vuotta, ja paksimmillaan kalliota on tunnelin päällä yli kaksi kilometriä. Vanha rata kiipesi vuoren rinteitä mutkitellen, mutta pohjatunneli kulkee lähes vaakasuorassa, joten junat kulkevat siellä nopeammin kuin ennen vuoren yli. Vanha [[Gotthardin rautatietunneli]] louhittiin vuodesta 1872 alkaen, ja pohjoisesta [[Göschenen]]istä ja etelästä [[Airolo]]sta edenneet työryhmät kohtasivat 29. helmikuuta 1880. Louhintaa johtanut insinööri [[Louis Favre]] oli kuollut tunnelissa heinäkuussa 1879.
+
+### v2-196
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: Troodos
+VASTAUS: Troodos on Kyproksen keskiosan vuoristo, jonka korkein huippu on Olympos-vuori noin 1 950 metrin korkeudessa. Vuoristo on tunnettu [[ophioliitista]] eli muinaisen merenpohjan kivilajeista, jotka ovat kohonneet maalle, ja se on tärkeä geologinen tutkimuskohde. Vuorilla on viileämpää kuin rannikolla, ja talvella huipuilla voi olla lunta. Troodoksen kylissä on maalauksin koristettuja bysanttilaisia kirkkoja, joista osa kuuluu [[Unescon]] maailmanperintöön.
+
+### v2-197
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: Kypros
+VASTAUS: Kypros on Itäisen Välimeren saari ja Välimeren kolmanneksi suurin. Se on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saaren keskiosassa kohoaa [[Troodos]]-vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä. Pääkaupunki on [[Nikosia]], ja saari liittyi [[Euroopan unioniin]] vuonna 2004. Saari on ollut jaettu kahteen osaan vuodesta 1974, mutta tilanteen viimeisimpiä käänteitä en ole varma.
+
+### v2-198
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: kyproksenmuflon
+VASTAUS: Kyproksenmuflon on Kyproksen vuoristossa elävä villilammas, jota tavataan luonnonvaraisena vain tällä saarella. Se elää pääosin [[Troodoksen]] vuoristoseudun metsissä, muun muassa [[Paphoksen metsässä]]. Koiraalla on tyypillisesti kaareutuvat sarvet, ja eläin on arka. Sitä on metsästetty pitkään, ja kanta on ollut pienimmillään pahasti uhattuna, mutta suojelun ansiosta se on elpynyt; tarkkoja määriä en ole varma antamaan.
+
+### v2-199
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: arkeologia
+VASTAUS: Kyproksen arkeologia kertoo tuhansien vuosien asutuksesta, ja saarella on kohteita kivikaudelta roomalaisaikaan. [[Khirokitia]] on kivikautinen kylä, joka kuuluu Unescon maailmanperintöön ja jonka ikä on useita tuhansia vuosia. [[Pafos]]in arkeologisessa puistossa on roomalaisajan lattiamosaiikkeja, ja [[Kourion]] on antiikin kaupungin raunio meren yläpuolella rinteellä. Kypros oli tärkeä paikka muinaisessa merenkulussa, ja saaren kuparin sanotaan antaneen sille nimenkin, mutta tästä en ole aivan varma.
+
+### v2-200
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: halloumi
+VASTAUS: Halloumi on kyproslainen juusto, joka valmistetaan perinteisesti lampaan- ja vuohenmaidosta, nykyään usein myös lehmänmaidon kanssa. Sen erikoisuus on korkea sulamispiste, minkä vuoksi sitä voi paistaa tai grillata sen sulamatta. Juustoon lisätään usein mintunlehtiä, ja sitä säilytetään suolaliemessä. Halloumi sai [[Euroopan unionin]] suojatun nimityksen vuonna 2021, mutta tarkkoja yksityiskohtia vaatimuksista en ole varma. Sitä syödään sellaisenaan, leivän välissä tai [[meze]]-pöydässä.
+
+### v2-201
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: meze
+VASTAUS: Meze on kyproslainen ateriamuoto, jossa pöytään tuodaan peräkkäin useita pieniä annoksia, joita jaetaan yhdessä pitkän ruokailun aikana. Annoksia voi olla kymmenittäin, ja ateria jakautuu usein kylmiin alkupaloihin ja lämpimiin ruokiin. Tavallisia annoksia ovat esimerkiksi [[halloumi]], oliivit, jogurttipohjainen [[talattouri]] sekä grillattu liha tai kala. Tarkka valikoima vaihtelee ravintolan ja alueen mukaan, enkä ole varma kaikista yksityiskohdista.
+
+### v2-202
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: kreikkaa
+VASTAUS: Kreikka on Kyproksen virallinen kieli yhdessä turkin kanssa, ja sitä puhuvat saaren kreikankieliset yhteisöt. Saarella puhutaan oman murteensa, [[kyproksenkreikan]], muotoa, joka eroaa mantereen yleiskielestä ääntämyksessä ja sanastossa. Kieli kirjoitetaan kreikkalaisin aakkosin. Antiikin aikana saarella käytettiin myös omaa tavukirjoitusta, [[Kyproksen tavukirjoitus]], jolla kirjoitettiin kreikkaa. Kreikan kielen kirjoitettu historia ulottuu yli kolmen tuhannen vuoden taakse.
+
+### v2-203
+KOHDE: maa:CYP
+KYSYMYS: Kerro lisää: turkkia
+VASTAUS: Turkki on Kyproksella toinen virallinen kieli, ja sitä puhuvat saaren turkinkieliset yhteisöt. Saaren oma murre, [[kyproksenturkki]], eroaa jonkin verran Turkin yleiskielestä sanastossa ja ääntämyksessä. Turkki kuuluu [[turkkilaisiin kieliin]], ja se on liittävä kieli, jossa sanoihin lisätään päätteitä peräkkäin. Turkissa siirryttiin [[latinalaisiin aakkosiin]] vuonna 1928, ja samaa kirjoitusta käytetään Kyproksella.
+
+### v2-204
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Nikosia
+VASTAUS: Nikosia on Kyproksen pääkaupunki sekä hallinnon ja rahan kaupunki: saaren kaikkien pankkien pääkonttorit ovat täällä, samoin viisi yliopistoa ja saaren vanhin ja suurin arkeologinen museo. Vanhakaupunki on venetsialaisten vuosina 1567–1570 rakentaman muurin sisällä, ja muurissa on yksitoista viisikulmaista [[bastioni]]a. Kaupunki on ollut jaettu kahteen osaan vuodesta 1974, ja jaon kohdalla kulkee [[puskurivyöhyke]]. Britannian hallinto alkoi saarella heinäkuussa 1878.
+
+### v2-205
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: bastioni
+VASTAUS: Bastioni on linnoituksen muurista ulospäin työntyvä, usein viisikulmainen puolustusrakenne, josta puolustajat voivat ampua muurin vierustalle ja hyökkääjiä vastaan ristitulessa. Tähtimäinen bastionilinnoitus kehittyi Italiassa 1400- ja 1500-luvuilla, kun [[tykistö]] teki korkeista keskiaikaisista muureista haavoittuvia. [[Nikosian]] venetsialaisessa muurissa on yksitoista bastionia, ja ne antavat vanhallekaupungille sen tähtimäisen muodon. Bastionit on nimetty venetsialaisten sukujen mukaan, mutta yksityiskohdista en ole varma. Esimerkki tähtilinnoitetusta kaupungista on italialainen [[Palmanova]].
+
+### v2-206
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Union Jack
+VASTAUS: Union Jack eli Union Flag on Yhdistyneen kuningaskunnan lippu. Se yhdistää kolmen maan tunnukset: Englannin [[Pyhän Yrjön risti]], Skotlannin [[Pyhän Andreaksen risti]] ja Irlannin Pyhän Patrickin risti, ja nykyinen asu otettiin käyttöön vuonna 1801. Nimestä Union Jack kiistellään, koska osa pitää oikeana muotona nimeä Union Flag. Nikosiassa lippu nostettiin 12. heinäkuuta 1878, kun saaren hallinto siirtyi Britannialle, vaikka saari pysyi muodollisesti [[Osmanien valtakunnan]] osana.
+
+### v2-207
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Osmanien valtakunta
+VASTAUS: Osmanien valtakunta oli laaja valtio, joka syntyi 1200–1300-lukujen vaihteessa Vähässä-Aasiassa ja kasvoi vuosisatojen kuluessa Balkanille, Lähi-itään ja Pohjois-Afrikkaan. Sulttaani Mehmed II valloitti [[Konstantinopolin]] vuonna 1453, ja kaupungista tuli valtakunnan pääkaupunki. Osmanit valtasivat [[Kyproksen]] [[Venetsian]] tasavallalta vuosina 1570–1571, ja saari pysyi osmanien alaisuudessa vuoteen 1878, jolloin hallinto siirtyi sopimuksella Britannialle. Valtakunta lakkasi olemasta 1920-luvun alussa Turkin tasavallan perustamisen myötä.
+
+### v2-208
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Garnet Wolseley
+VASTAUS: Garnet Wolseley oli brittiläinen upseeri, joka toimi Kyproksen ensimmäisenä korkeana komissaarina vuonna 1878. Hän syntyi [[Dublinissa]] vuonna 1833 ja eteni urallaan kenttämarsalkaksi. Wolseley johti brittijoukkoja useissa siirtomaasodissa, muun muassa Ashantin sodassa 1873–1874 ja Egyptissä vuoden 1882 sodassa. Hänet tunnettiin uudistajana, joka yritti nykyaikaistaa Britannian armeijaa, ja aikalaiset pitivät häntä sekä ihailtuna että kiistanalaisena. [[Kyproksella]] hän aloitti uuden hallinnon kokoamisen heinäkuun lopussa 1878.
+
+### v2-209
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: puskurivyöhyke
+VASTAUS: Kyproksen puskurivyöhyke eli niin sanottu [[vihreä linja]] kulkee halki koko saaren, noin 180 kilometrin matkan. Se on kapeimmillaan Nikosian vanhassakaupungissa, missä vyöhykkeen leveys on vain joitakin metrejä, ja leveimmillään useita kilometrejä. Vyöhykettä valvoo YK:n rauhanturvaoperaatio [[UNFICYP]], joka on toiminut saarella vuodesta 1964. Vyöhyke vakiintui käytännön rajaksi vuonna 1974, kun saari jakautui. Saaren tulevaisuus on aidosti kiistanalainen kysymys, jossa kreikkalaiskyproslaisten ja turkkilaiskyproslaisten näkemykset eroavat, enkä valitse puolta. Vyöhykkeen sisällä on myös autioituneita alueita, kuten [[Varosha]].
+
+### v2-210
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Yhdistyneiden kansakuntien rauhanturvaajat
+VASTAUS: YK:n rauhanturvaajat ovat sotilaita, poliiseja ja siviilejä, jotka valvovat tulitaukoja ja rauhansopimuksia konfliktialueilla Yhdistyneiden kansakuntien valtuutuksella. Heitä kutsutaan usein [[sinikypäräisiksi]]. YK:n ensimmäinen rauhanturvaoperaatio alkoi vuonna 1948. Kyproksella toimiva [[UNFICYP]] aloitti maaliskuussa 1964, ja se valvoo puskurivyöhykettä saaren kahden osan välissä. Rauhanturvaajat saivat Nobelin rauhanpalkinnon vuonna 1988. Myös [[Suomi]] on osallistunut rauhanturvaamiseen vuodesta 1956.
+
+### v2-211
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Nikosiassa
+VASTAUS: Nikosiassa on monta historiallista kerrostumaa. Yksi tunnetuimmista taloista on Hadjigeorgakis Kornesioksen kartano, jonka rakennutti Kyproksen hallinnon tulkki eli [[dragomaani]], joka palveli vuosina 1779–1809. Vuoden 1804 kapinassa väkijoukko ryösti talon, ja Kornesios teloitettiin [[Konstantinopolissa]] vuonna 1809; nuorin poika osti talon takaisin vuonna 1830. Viimeinen asukas kuoli vuonna 1979, ja nyt talossa on etnologinen museo. Kaupungin halki virtaa kausittain kuivuva [[Pedieos]], Kyproksen pisin joki, ja Nikosiassa mitattiin 4. syyskuuta 2020 koko saaren korkein lämpötila, 46,2 astetta.
+
+### v2-212
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: arkeologinen museo
+VASTAUS: Kyproksen museo on Nikosian arkeologinen museo ja saaren vanhin ja suurin. Se perustettiin vuonna 1882, ja nykyinen rakennus avattiin vuonna 1908. Kokoelmat kattavat saaren asutuksen vaiheet kivikaudelta roomalaisaikaan. Museossa on esimerkiksi [[Agia Irinin]] pyhäkön terrakottahahmoja sekä muinaista keramiikkaa ja pronssiesineitä; tarkkaa esineluetteloa en ole varma kuvaamaan. Museo sijaitsee [[Nikosian]] keskustassa, ja sen kokoelmat auttavat ymmärtämään saaren pitkää menneisyyttä.
+
+### v2-213
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Kyproksen
+VASTAUS: Kypros on Välimeren kolmanneksi suurin saari ja itsenäinen tasavalta, jonka pääkaupunki on [[Nikosia]]. Saari itsenäistyi Britannian vallasta vuonna 1960 ja liittyi Euroopan unioniin vuonna 2004; euro otettiin käyttöön vuonna 2008. Saaren keskiosassa kohoaa [[Troodos]]-vuoristo, ja siellä on omaa lajistoa, joka on kehittynyt eristyksissä mantereesta. Vuodesta 1974 saari on ollut jaettu kahteen osaan, ja [[puskurivyöhyke]] kulkee sen poikki. Britannian hallinto alkoi saarella 12. heinäkuuta 1878.
+
+### v2-214
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: Mesaorian tasangon
+VASTAUS: Mesaorian tasanko on Kyproksen keskiosan laaja tasanko, jonka nimi tarkoittaa vuorten välistä. Se sijaitsee pohjoisessa [[Kyrenian vuorijonon]] ja etelässä [[Troodos]]-vuoriston välissä ja ulottuu itään kohti Famagustan lahtea. Tasangon poikki virtaa [[Pedieos]], Kyproksen pisin joki, 98 kilometrin matkan; se alkaa Troodoksen Machairas-metsästä ja virtaa Nikosian halki. Tasanko on kesäisin kuuma ja kuiva, ja siellä viljellään muun muassa viljaa.
+
+### v2-215
+KOHDE: kaupunki:nikosia
+KYSYMYS: Kerro lisää: sataman
+VASTAUS: Satama on suojainen paikka, jossa alukset voivat laskea laituriin, lastata ja purkaa lastinsa ja etsiä suojaa myrskyltä. Monet kaupungit ovat kasvaneet sataman ympärille, koska meriliikenne toi kauppaa ja ihmisiä. Kyproksen tärkeimpiä satamakaupunkeja ovat [[Limassol]] ja [[Larnaka]], kun taas [[Nikosia]] sijaitsee sisämaassa. Maltan [[Valletta]]a ympäröi kaksi satamaa, Grand Harbour ja Marsamxett, ja niiden suulla vartioi Pyhän Elmon linnake, joka rakennettiin vuonna 1552.
+
+### v2-216
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Pravčická brána
+VASTAUS: Pravčická brána on Euroopan suurin luonnon hiekkakiviportti, ja se sijaitsee Tšekin luoteisosassa [[Böömin Sveitsin kansallispuistossa]] lähellä Saksan rajaa. Portin jännemitta on noin 26 metriä, mutta tarkkoja mittoja en ole varma antamaan. Portin vieressä on kalliolla pieni linnamainen rakennus, [[Sokolí hnízdo]] eli Haukanpesä, joka rakennettiin 1800-luvun lopulla matkailijoita varten. Alueelle pääsee vaelluspolkuja pitkin. Portin sanotaan olleen kuvauspaikkana elokuvassa Narnian tarinat: Prinssi Kaspian.
+
+### v2-217
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Böömin
+VASTAUS: Böömi on Tšekin läntinen historiallinen maakunta, jota ympäröivät vuoret ja jonka keskus on [[Praha]]. Se oli keskiajalla Böömin kuningaskunta ja kuului Pyhään saksalais-roomalaiseen keisarikuntaan. Luoteis-Böömissä avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal, nykyinen [[Jáchymov]]. Siellä lyötiin ensimmäiset isot hopeakolikot, joita kutsuttiin vuodesta 1520 joachimsthalereiksi; nimi lyheni [[taaleriksi]], ja samasta sanasta on kasvanut sana dollari. Böömin länsiosassa on kuuluisa kylpyläkaupunki [[Karlovy Vary]].
+
+### v2-218
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Böömistä
+VASTAUS: Böömi on Tšekin läntinen ja suurin historiallinen maakunta, ja sitä ympäröivät joka suunnalta vuoret. Sen keskus on Praha. Böömin kuningaskunta oli keskiajalla osa Pyhää saksalais-roomalaista keisarikuntaa, ja 1400-luvun alussa maakunnassa käytiin [[hussilaissodat]]. Vuonna 1620 [[Valkoisen vuoren taistelu]] vahvisti Habsburgien vallan, ja Böömi pysyi Habsburgien hallinnassa vuoteen 1918. Maakunta tunnetaan myös [[Plzeňin]] oluesta ja lasiteollisuudesta.
+
+### v2-219
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Määristä
+VASTAUS: Määri on Tšekin itäinen historiallinen maakunta, jonka suurin kaupunki on [[Brno]]. Aiemmin maakunnan keskus oli [[Olomouc]]. Määri kuului 800-luvulla [[Suur-Määrin]] valtakuntaan ja myöhemmin Böömin kruunun maihin. Sen eteläosa on tunnettua viinialuetta. Määrin karstissa Brnon pohjoispuolella on Macocha-niminen kuilu, joka on 138,5 metriä syvä; päivänvalo yltää pohjalle asti, ja pohjalla virtaa Punkva-joki.
+
+### v2-220
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: knedlíky
+VASTAUS: Knedlíky ovat tšekkiläisten ruokien tavallinen lisuke: keitettyjä tai höyrytettyjä taikinaklimppejä, jotka leikataan viipaleiksi ja kastellaan kastikkeessa. Yleisimpiä ovat leivästä tehdyt [[houskové knedlíky]] ja perunataikinasta tehdyt bramborové knedlíky. Tunnettu yhdistelmä on paahdettu sianliha, [[hapankaali]] ja knedlíky, jota usein pidetään maan kansallisruokana. [[Svíčková]], naudanlihaa smetanakastikkeessa, tarjotaan perinteisesti knedlíkyn kanssa. Taikinapalloja on myös makeina, esimerkiksi hedelmätäytteisinä.
+
+### v2-221
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: oluesta
+VASTAUS: Tšekki on yksi maailman tunnetuimpia oluen valmistusmaita, ja sen olutperinne ulottuu keskiaikaan. Pilsneri-olut syntyi [[Plzeňissä]] vuonna 1842, ja sen vaalea, kirkas ja humalainen tyyli levisi sieltä ympäri maailmaa. Tunnettuja panimoita ovat [[Pilsner Urquell]] Plzeňissä ja [[Budějovický Budvar]] České Budějovicessa. Tšekit kuuluvat asukasta kohti maailman suurimpiin oluen juojiin, mutta tarkkoja tilastoja en ole varma antamaan.
+
+### v2-222
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Saksa
+VASTAUS: Saksa on Tšekin lännessä ja luoteessa sijaitseva naapurimaa, ja maiden historia on pitkälti yhteinen. Böömi ja Määri kuuluivat keskiajalta Pyhään saksalais-roomalaiseen keisarikuntaan, ja Prahassa asuneen [[Kaarle IV:n]] hallitsemaa keisarikuntaa kutsuttiin Saksalais-roomalaiseksi. Maiden rajaseutu, [[Sudeettialueet]], oli ennen toista maailmansotaa vahvasti saksankielistä aluetta. Nykyään Saksa on Tšekin suurin kauppakumppani, ja molemmat maat kuuluvat [[Euroopan unioniin]] ja Schengen-alueeseen.
+
+### v2-223
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Puola
+VASTAUS: Puola on Tšekin pohjoinen naapurimaa, ja maiden raja kulkee suurelta osin vuoristossa. Rajalla kohoavat [[Krkonošet]] eli Riesengebirge, ja niiden korkein huippu [[Sněžka]] on Tšekin korkein kohta. Rajan itäpäässä on [[Tšekin Sleesia]], ja alueen kaupunki Těšín jaettiin vuonna 1920 Tšekkoslovakian ja Puolan kesken: nykyään Tšekin puolella on Český Těšín ja Puolan puolella Cieszyn. Molemmat maat ovat Euroopan unionin jäseniä.
+
+### v2-224
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Slovakia
+VASTAUS: Slovakia on Tšekin itäinen naapurimaa, ja se erosi Tšekistä Tšekkoslovakian rauhanomaisessa jakautumisessa vuoden 1993 alussa. Slovakian pääkaupunki on [[Bratislava]], joka sijaitsee [[Tonavan]] rannalla lähellä Itävallan ja Unkarin rajaa. Maassa kohoaa [[Tatra]]-vuoristo, jonka korkein huippu Gerlachovský štít on noin 2 650 metriä. Slovakia liittyi Euroopan unioniin vuonna 2004 ja otti euron käyttöön vuonna 2009. Tšekin ja slovakin kielet ovat niin läheisiä, että puhujat ymmärtävät yleensä toisiaan.
+
+### v2-225
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Itävalta
+VASTAUS: Itävalta on Tšekin eteläinen naapurimaa, ja maiden historia on kietoutunut yhteen vuosisatojen ajan. Böömi ja Määri kuuluivat [[Habsburgien]] hallitsemaan monarkiaan, ja Itävalta-Unkarin hajottua vuonna 1918 syntyi itsenäinen Tšekkoslovakia. Itävallan pääkaupunki on [[Wien]], joka on muutaman sadan kilometrin päässä Prahasta. Itävalta liittyi Euroopan unioniin vuonna 1995, yhdeksän vuotta ennen Tšekkiä. Maiden välillä on vilkas matkailu ja kauppa.
+
+### v2-226
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Euroopan unioniin
+VASTAUS: Tšekki liittyi Euroopan unioniin 1. toukokuuta 2004 laajentumisessa, jossa unioniin tuli kerralla kymmenen uutta jäsentä. Maa kuuluu myös [[Schengen-alueeseen]] vuoden 2007 lopusta ja [[Natoon]] vuodesta 1999. Euroa Tšekki ei ole ottanut käyttöön, vaan maksuvälineenä on kruunu. Unionin jäsenyyden myötä tšekeillä on oikeus asua ja työskennellä muissa jäsenmaissa, ja maa saa unionilta rahoitusta muun muassa infrastruktuuriin; tarkkoja summia en ole varma antamaan.
+
+### v2-227
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: Tšekin koruna
+VASTAUS: Tšekin koruna eli kruunu on Tšekin valuutta, ja sen lyhenne on Kč tai koodi CZK. Se otettiin käyttöön vuonna 1993 Tšekkoslovakian jakautumisen jälkeen korvaamaan [[Tšekkoslovakian kruunun]]. Yksi koruna jakautuu sataan haléřiin, mutta pienet haléř-kolikot poistettiin käytöstä, joten hinnat pyöristetään nykyään kokonaisiin kruunuihin. Setelien kuvissa on tunnettuja tšekkiläisiä historiallisia henkilöitä, esimerkiksi [[Kaarle IV]]; tarkkaa kokoelmaa en ole varma luettelemaan. Kruunu ei ole sidottu euroon, vaikka maa kuuluu [[Euroopan unioniin]].
+
+### v2-228
+KOHDE: maa:CZE
+KYSYMYS: Kerro lisää: euroon
+VASTAUS: Euro on Euroopan unionin yhteinen rahayksikkö, jonka noin kaksikymmentä jäsenmaata on ottanut käyttöön. Se otettiin käyttöön kirjavaluuttana vuonna 1999, ja setelit ja kolikot tulivat maksuvälineiksi vuoden 2002 alussa. Tšekki on liittymissopimuksessaan sitoutunut ottamaan euron käyttöön, mutta ajankohdasta ei ole päätetty. Hidastelun syiksi on mainittu muun muassa halu säilyttää oma rahapolitiikka. [[Euroopan keskuspankki]] vastaa euroalueen rahapolitiikasta [[Frankfurtissa]].
+
+### v2-229
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Prahan tähtitieteellinen kello
+VASTAUS: Prahan tähtitieteellinen kello eli Orloj on Vanhankaupungin raatihuoneen seinässä, ja sitä pidetään vanhimpana yhä toimivana tähtitieteellisenä kellona. Se asennettiin vuonna 1410. Kello koostuu tähtitieteellisestä taulusta, joka näyttää auringon ja kuun paikan, sekä kalenteritaulusta. Täysinä tunteina kuolemaa esittävä luurankohahmo kääntää tiimalasia, ja ikkunoissa kulkevat [[apostolien]] hahmot. Kellon ympärillä on myös muita liikkuvia hahmoja, jotka esittävät ihmisen heikkouksia. Kello kuuluu [[Vanhankaupungin raatihuoneen]] nähtävyyksiin.
+
+### v2-230
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Vanhankaupungin tori
+VASTAUS: Vanhankaupungin tori on Prahan vanhimman osan keskus ja yksi Euroopan tunnetuimmista aukioista. Sen ympärillä on Vanhankaupungin raatihuone tähtitieteellisine kelloineen, goottilainen [[Týnin kirkko]] ja barokkinen Pyhän Nikolauksen kirkko. Aukion keskellä on vuonna 1915 paljastettu uskonpuhdistaja [[Jan Hus]]in muistomerkki. Aukio on ollut kaupungin kauppa- ja kokoontumispaikka keskiajalta asti, ja nykyään siellä pidetään markkinoita ja joulutori.
+
+### v2-231
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Kaarlen silta
+VASTAUS: Kaarlen silta on Prahan Vltava-joen ylittävä kivisilta, jonka keisari Kaarle IV aloitti vuonna 1357 korvaamaan tulvan tuhoaman [[Judit-sillan]]. Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. Legendan mukaan rakennustyöt aloitettiin 9. heinäkuuta 1357 kello 5.31, ja päivämäärä ja kellonaika muodostavat palindromin, jonka uskottiin tekevän sillasta vahvemman. Sillan kaiteille pystytettiin vuosina 1683–1714 kolmekymmentä barokkipatsasta pyhimyksistä, ja vanhin niistä esittää [[Nepomukin Johannesta]].
+
+### v2-232
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Vltavan
+VASTAUS: Vltava on Tšekin pisin joki, ja sen pituus on noin 430 kilometriä. Se saa alkunsa [[Šumavan]] vuoristosta lounaisessa Böömissä, virtaa Prahan halki ja yhtyy Mělníkin kohdalla [[Elbeen]]. Säveltäjä [[Bedřich Smetana]] sävelsi joesta teoksen Vltava, joka kuuluu sarjaan [[Má vlast]]. Hän menetti kuulonsa kokonaan lokakuussa 1874 ja sävelsi teoksen alle kahdessa kuukaudessa, eikä kuullut sitä koskaan. Teos seuraa jokea kahdesta pienestä lähteestä Prahaan asti, ja Prahan kevät -festivaali on vuodesta 1952 alkanut joka 12. toukokuuta tällä musiikilla.
+
+### v2-233
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Kaarle IV:n
+VASTAUS: Kaarle IV oli Böömin kuningas vuodesta 1346 ja Pyhän saksalais-roomalaisen keisarikunnan keisari vuodesta 1355. Hän syntyi Prahassa vuonna 1316 ja kuoli siellä vuonna 1378. Hän teki Prahasta valtakuntansa pääkaupungin: hänen aikanaan kaupunki sai yliopiston, [[Kaarlen yliopiston]], kokonaan uuden kaupunginosan, Uudenkaupungin, ja kivisillan Vltavan yli. Hän rakennutti myös linnan [[Karlštejn]]in, jossa säilytettiin valtakunnan aarteita, ja hän antoi vuonna 1356 [[Kultaisen bullan]], joka määritti keisarin valintatavan.
+
+### v2-234
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Golem
+VASTAUS: Golem on savesta muovattu apuri, joka herää henkiin sanan tai lapun voimasta; juutalaisessa kansanperinteessä tällaisia hahmoja on kerrottu jo vuosisatojen ajan. Prahan tarinan mukaan rabbi [[Löw]] muovasi 1500-luvulla Vltavan savesta ihmisen kokoisen Golemin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon juutalaiskorttelin vanhimman synagogan, [[Vanhanuuden synagogan]], ullakolle, jonne tarinan mukaan ei saa nousta. Synagoga valmistui 1200-luvulla ja on yhä käytössä. Tarina on tunnettu myös kirjallisuudessa: [[Gustav Meyrink]] julkaisi romaanin Golem vuonna 1915.
+
+### v2-235
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Praha
+VASTAUS: Praha on Tšekin pääkaupunki ja suurin kaupunki, jossa asuu noin 1,3 miljoonaa ihmistä. Kaupunki sijaitsee Vltava-joen varrella, ja sen historiallinen keskusta on kuulunut Unescon maailmanperintöön vuodesta 1992. Kaupunkia kutsutaan sadan tornin kaupungiksi, ja sen tunnetuimpia kohteita ovat [[Prahan linna]], [[Kaarlen silta]] ja tähtitieteellinen kello. Linnan rakentaminen alkoi vuonna 870, ja Guinnessin ennätystenkirjan mukaan se on maailman suurin muinainen linnakokonaisuus; nykyään linna on Tšekin presidentin virka-asunto. Prahan eläintarha on pitänyt vuodesta 1959 [[Przewalskin hevosen]] kansainvälistä kantakirjaa.
+
+### v2-236
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Prahan kevät
+VASTAUS: Prahan kevät oli Tšekkoslovakian kommunistisen puolueen sisällä käynnistynyt uudistuskausi, joka alkoi tammikuussa 1968, kun [[Alexander Dubček]] valittiin puolueen johtoon. Uudistajat tavoittelivat niin sanottua ihmiskasvoista sosialismia: sensuuria lievennettiin, lehdistö sai enemmän vapautta ja kansalaiset puhuivat avoimemmin. Elokuun 20. ja 21. päivän välisenä yönä 1968 Varsovan liiton joukot miehittivät maan ja uudistukset pysäytettiin. Seuraavina vuosina alkoi [[normalisaatio]], joka palautti tiukemman valvonnan. Kommunistinen yksinvalta päättyi vasta vuoden 1989 [[samettivallankumouksessa]]. Tapahtumat muistetaan Tšekissä ja Slovakiassa yhä.
+
+### v2-237
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Tšekkoslovakiassa
+VASTAUS: Tšekkoslovakia oli valtio, joka syntyi vuonna 1918 Itävalta-Unkarin hajottua, ja sen pääkaupunki oli Praha. Ensimmäinen presidentti oli [[Tomáš Garrigue Masaryk]], ja sotien välillä maa oli Keski-Euroopan harvoja toimivia demokratioita. Vuonna 1938 [[Münchenin sopimus]] pakotti maan luovuttamaan rajaseutuja Saksalle, ja vuonna 1939 maa miehitettiin. Kommunistit ottivat vallan vuonna 1948, ja Prahan kevään uudistusyritys päättyi vuoden 1968 miehitykseen. Marraskuun 1989 mielenosoitukset, joissa ihmiset helistivät avaimiaan, johtivat kommunistisen yksinvallan päättymiseen, ja näytelmäkirjailija [[Václav Havel]] valittiin presidentiksi. Valtio jakautui rauhanomaisesti Tšekiksi ja Slovakiaksi vuoden 1993 alussa.
+
+### v2-238
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Varsovan liiton
+VASTAUS: Varsovan liitto oli Neuvostoliiton johtama sotilasliitto, jonka Itä-Euroopan sosialistiset maat perustivat Varsovassa vuonna 1955. Sen perustaminen liittyi Länsi-Saksan liittymiseen [[Naton]] jäseneksi. Liiton jäseniä olivat Neuvostoliiton lisäksi muun muassa Puola, Tšekkoslovakia, Itä-Saksa, Unkari, Romania ja Bulgaria. Elokuussa 1968 liiton joukot miehittivät Tšekkoslovakian; mukana olivat Neuvostoliiton lisäksi muun muassa Puolan, Bulgarian ja Unkarin joukot, kun taas Romania kieltäytyi osallistumasta. Prahan [[kansallismuseon]] julkisivussa on sanottu erottuvan yhä korjausjälkiä tuon ajan luodeista. Liitto purettiin 1. heinäkuuta 1991.
+
+### v2-239
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: Toinen maailmansota
+VASTAUS: Toinen maailmansota kesti vuodesta 1939 vuoteen 1945. Tšekkoslovakia menetti itsenäisyytensä jo ennen sodan alkua: Saksa miehitti Böömin ja Määrin maaliskuussa 1939 ja perusti niihin [[protektoraatin]]. Miehitysaika oli raskas: tšekkiläistä vastarintaa tukahdutettiin ja juutalaisia vainottiin. [[Prahan kansannousu]] alkoi 5. toukokuuta 1945, ja kaupunki vapautui sodan viimeisinä päivinä. Prahan keskusta säästyi pitkälti suurilta tuhoilta, minkä vuoksi vanhoja rakennuksia on säilynyt. Tapahtumista on kulunut yli kahdeksan vuosikymmentä, ja maa on sen jälkeen rakentunut uudelleen.
+
+### v2-240
+KOHDE: kaupunki:praha
+KYSYMYS: Kerro lisää: jugendtalo
+VASTAUS: Jugend eli art nouveau on 1800-luvun lopun ja 1900-luvun alun koristetyyli, jossa suosittiin kasvimaisia, kaarevia muotoja ja runsasta yksityiskohtaista koristelua. Prahassa sen tunnetuimpia esimerkkejä on [[Kunnallistalo]], joka valmistui vuonna 1912 ja jonka sisätilojen koristeluun osallistui muun muassa taiteilija [[Alfons Mucha]]. Jugendtaloja on myös [[Vaclavin aukion]] ympäristössä ja kaupungin pääjuna-aseman vanhassa osassa. Koska keskusta selvisi sodasta lähes ehjänä, nämä rakennukset ovat yhä paikoillaan keskiaikaisten ja barokkitalojen vieressä.
+
+### v2-241
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Berliinin muuri
+VASTAUS: Berliinin muuri rakennettiin elokuussa 1961, ja se ympäröi Länsi-Berliiniä noin 155 kilometrin matkalla. Rakenne ei ollut pelkkä seinä, vaan sen takana oli rajavyöhyke, jota vartioitiin tarkasti. Kaupungin sisällä rajan sai ylittää vain virallisilla rajanylityspaikoilla, joista tunnetuin oli [[Checkpoint Charlie]]. Muuri oli pystyssä 28 vuotta, ja siitä on säilynyt pätkiä: pisin on [[East Side Gallery]], jonka seinään on maalattu taideteoksia. Ympäristöä ja muurin vaiheita esitellään [[Bernauer Straßen]] muistopaikalla.
+
+### v2-242
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Saksan yhdistymiseen
+VASTAUS: Saksan yhdistyminen toteutui 3. lokakuuta 1990, kun Itä-Saksa liittyi Saksan liittotasavaltaan ja maa oli ollut jaettuna 41 vuotta. Ennen sitä neuvoteltiin [[kaksi plus neljä -sopimus]], jossa Saksan kaksi valtiota ja neljä voittajavaltaa sopivat maan asemasta. Itä-Saksan alueelle perustettiin uudelleen osavaltioita, ja päivästä tuli [[Saksan yhtenäisyyden päivä]], maan kansallinen juhlapäivä. Muutos oli suuri talouteen ja arkeen, ja sen vaikutukset näkyvät maassa yhä.
+
+### v2-243
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Leipzigissa
+VASTAUS: Leipzig on Saksin osavaltion suurimpia kaupunkeja ja vanha kauppa- ja kirjakaupunki. Clara Wieck syntyi siellä, ja kaupungin musiikkiperinne on pitkä: [[Johann Sebastian Bach]] toimi 1700-luvulla [[Thomaskirkon]] kanttorina, ja Felix Mendelssohn johti kaupungin [[Gewandhaus]]-orkesteria. Leipzigin yliopisto perustettiin vuonna 1409. Syksyllä 1989 kaupungin kirkoista alkoivat maanantaisin kokoontuneet rauhanomaiset mielenosoitukset, jotka vaikuttivat Itä-Saksan muutokseen.
+
+### v2-244
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Robert Schumann
+VASTAUS: Robert Schumann oli saksalainen säveltäjä, joka syntyi vuonna 1810 [[Zwickaussa]] ja kuoli vuonna 1856. Hän kirjoitti paljon pianomusiikkia ja lauluja, ja hänen tunnettuihin teoksiinsa kuuluvat Kinderszenen ja Carnaval. Schumann perusti vuonna 1834 myös [[Neue Zeitschrift für Musik]] -lehden ja kirjoitti siihen musiikkikritiikkiä. Hän tuki nuorta säveltäjää [[Johannes Brahmsia]] ja meni naimisiin Clara Wieckin kanssa vuonna 1840. Hänen viimeisinä vuosinaan sairaus vaikeutti elämää, ja hän kuoli sairaalassa Bonnin lähellä.
+
+### v2-245
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Clara Schumann
+VASTAUS: Clara Schumann syntyi vuonna 1819 Leipzigissa ja kuoli vuonna 1896 Frankfurtissa. Hänen isänsä, pianonopettaja [[Friedrich Wieck]], koulutti hänet lapsesta asti ja johdatti hänet konserttilavoille. Clara meni vuonna 1840 naimisiin säveltäjä [[Robert Schumannin]] kanssa, vaikka isä vastusti liittoa. Hän sävelsi esimerkiksi pianokonserton ja pianotrion, ja Robertin kuoleman jälkeen hän jatkoi konserttiuraansa ja opetti Frankfurtissa. Hän oli myös säveltäjä [[Johannes Brahmsin]] pitkäaikainen ystävä.
+
+### v2-246
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Grimmin veljekset
+VASTAUS: Jacob ja Wilhelm Grimm olivat saksalaisia veljeksiä, jotka syntyivät [[Hanaussa]] 1780-luvun puolivälissä. Heidän kokoelmansa Lasten- ja kotisatuja ilmestyi vuonna 1812, ja siihen kuuluvat muun muassa Punahilkka, Tuhkimo ja Hannu ja Kerttu. He eivät keksineet satuja itse, vaan keräsivät ja kirjoittivat muistiin kuulemiaan tarinoita. Veljekset olivat myös kielentutkijoita ja työskentelivät [[Göttingenin yliopistossa]]. He aloittivat saksan kielen suursanakirjan [[Deutsches Wörterbuch]], joka valmistui vasta yli sata vuotta heidän kuolemansa jälkeen.
+
+### v2-247
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: kansansatuja
+VASTAUS: Kansansadut ovat suullisesti kulkeneita tarinoita, joita kerrotaan sukupolvelta toiselle ilman tiedossa olevaa yksittäistä kirjoittajaa. Samasta sadusta on usein monta versiota, koska kertoja muokkaa tarinaa kuulijoidensa mukaan. Ranskalainen [[Charles Perrault]] julkaisi satuja jo vuonna 1697, ja [[Grimmin veljekset]] keräsivät saksalaisia tarinoita 1800-luvun alussa. Tanskalaisen [[H. C. Andersenin]] sadut taas ovat taidesatuja, jotka hän kirjoitti itse. Kansansaduissa toistuvat usein samat aiheet, kuten köyhä sankari, kolme tehtävää ja ovela apulainen.
+
+### v2-248
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: pillipiiparin tarina
+VASTAUS: Pillipiiparin tarina kertoo Hamelnin kaupungista, jonka rottaongelma sai kaupunkilaiset palkkaamaan kiertävän pillinsoittajan. Kun soittaja oli saanut rotat seuraamaan musiikkiaan Weser-jokeen, kaupunki ei maksanut sovittua palkkaa. Tarun mukaan hän vei soittamalla kaupungin lapset mukanaan, eivätkä he palanneet. Tarinan ajaksi mainitaan vuosi 1284, ja se on tunnettu [[Hameln]]in paikallisperinteenä. Se on mukana Grimmin veljesten kokoamassa saksalaisten tarujen kokoelmassa, ja englantilainen [[Robert Browning]] kirjoitti siitä runon vuonna 1842.
+
+### v2-249
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Saksassa
+VASTAUS: Saksa on liittotasavalta, jonka pääkaupunki on [[Berliini]] ja jossa on kuusitoista osavaltiota. Maa on [[Euroopan unionin]] väkirikkain jäsen, ja sen maisemat ulottuvat Pohjanmeren ja Itämeren rannoilta Alpeille. Korkein huippu on Alpeilla sijaitseva [[Zugspitze]], noin 2 960 metriä. Vuodenaikoihin kuuluvat joulumarkkinat, joista [[Nürnbergin]] Christkindlesmarkt mainitaan asiakirjoissa jo vuonna 1628. Saksa on ollut yhtenäinen valtio vuodesta 1871, mutta 41 vuotta siitä ajasta se oli jaettuna kahtia.
+
+### v2-250
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: leipälajia
+VASTAUS: Saksalaisessa leipäkulttuurissa on kolmisentuhatta lajia, ja leipurintaito on Saksan aineettoman kulttuuriperinnön luettelossa. Tunnettuja ovat esimerkiksi tiivis ja tumma [[Pumpernickel]], joka on perinteisesti kotoisin Westfalenista, ja vaaleat sämpylät, jotka tunnetaan alueesta riippuen nimillä Brötchen tai Semmel. Myös [[Brezel]] eli rinkilä kuuluu leipomoiden valikoimaan. Tavallisesti leipä jaotellaan sen mukaan, onko se tehty pääosin ruisjauhoista, vehnäjauhoista vai näiden sekoituksesta. Tarkkaa lukua lajeista ei ole, koska leipomot kehittävät omia versioitaan.
+
+### v2-251
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: ruisleipää
+VASTAUS: Ruis on viljalaji, joka menestyy viileässä ilmastossa ja köyhässä maassa, minkä vuoksi sitä on viljelty paljon Pohjois-Euroopassa. Saksassa ruisleipää syödään erityisesti pohjoisessa ja idässä, ja siitä tunnetaan muun muassa [[Schwarzbrot]] eli mustaleipä sekä [[Pumpernickel]]. Ruisleipätaikina tehdään tavallisesti [[hapanjuurella]], koska ruisjauho ei muodosta vehnän tapaista kimmoisaa taikinaa. Hapanjuuri antaa leivälle hapokkaan maun ja pitää sen tuoreena pidempään.
+
+### v2-252
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Rein
+VASTAUS: Rein on noin 1 230 kilometriä pitkä joki, joka saa alkunsa Sveitsin Alpeilta. Se virtaa [[Bodenjärven]] kautta Saksan ja Ranskan rajalle, kulkee Saksan halki ja laskee Alankomaiden kautta Pohjanmereen. Joen varrella ovat esimerkiksi Mainz, Koblenz ja [[Köln]]. Tunnetuin osuus on Bingenin ja Koblenzin välinen rotkolaakso, jossa kallioilla on linnoja ja viinitarhoja. Laakson tunnetuimpia paikkoja on [[Loreley]]-kallio, ja alue on Unescon maailmanperintökohde.
+
+### v2-253
+KOHDE: maa:DEU
+KYSYMYS: Kerro lisää: Alpeilta
+VASTAUS: Alpit ovat Euroopan korkein vuoristo, joka kaartuu noin tuhannen kilometrin pituisena Ranskasta Italian, Sveitsin, Liechtensteinin, Itävallan ja Saksan kautta Sloveniaan. Korkein huippu on [[Mont Blanc]], noin 4 800 metriä, ja tunnetuimpia on [[Matterhorn]], 4 478 metriä Sveitsin ja Italian rajalla. Alpeilla elää harvinaisia eläimiä: [[alppikauris]] pelastui sukupuutolta Gran Paradison alueella, ja [[partakorppikotka]] palautettiin vuorille vuonna 1986. Reinin lisäksi vuoristosta saavat alkunsa monet muutkin Euroopan joet.
+
+### v2-254
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: muuri
+VASTAUS: Berliinin muuri kulki keskellä kaupunkia, ja sen jäljet näkyvät yhä. Muurin linja on merkitty keskustan katuihin kaksinkertaisella kivirivillä, jota kävelijä huomaa helposti. [[Bernauer Straßen]] muistopaikalla säilyneellä jaksolla näkee, miten rajavyöhyke jakoi kadun ja talot. [[Brandenburgin portti]] jäi muurin ja rajavyöhykkeen sulkemaksi vuosiksi, ja sen avautuminen oli yksi muuttuneen Berliinin tärkeimmistä hetkistä. Raja oli suljettu 28 vuotta, ja sen pituus ympäri Länsi-Berliiniä oli 155 kilometriä. Maalauksia on säilynyt [[East Side Galleryssa]].
+
+### v2-255
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: Saksan yhdistyminen
+VASTAUS: Saksan yhdistyminen toteutui 3. lokakuuta 1990, ja Berliini oli sen keskus. Yhdistymisen yönä ihmiset kokoontuivat juhlimaan valtiopäivätalon edustalle. Berliinistä tuli yhdistyneen Saksan pääkaupunki, mutta hallitus ja parlamentti pysyivät aluksi [[Bonnissa]]. Vuonna 1991 [[Bundestag]] päätti siirtää toimintansa Berliiniin, ja muutto valmistui 1990-luvun lopulla. Päivästä tuli [[Saksan yhtenäisyyden päivä]], joka on maan kansallinen juhlapäivä.
+
+### v2-256
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+VASTAUS: Unescon maailmanperintöluettelo perustuu vuonna 1972 tehtyyn sopimukseen, ja siihen valitaan kohteita, joilla on poikkeuksellinen kulttuurinen tai luonnonarvo. Berliinissä luetteloon kuuluu [[Museosaari]], jonka Unesco liitti luetteloon vuonna 1999. Samaan luetteloon kuuluvat myös [[Berliinin modernismin asuinalueet]], jotka liitettiin siihen vuonna 2008. Berliinin ja [[Potsdamin]] Preussin kuninkaiden linnat ja puutarhat ovat myös maailmanperintökohde. Luettelo muistuttaa, että kaupungin menneisyys ulottuu kuninkaiden ajoista nykyaikaan.
+
+### v2-257
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: Pergamon-museo
+VASTAUS: Pergamon-museo avattiin vuonna 1930 Museosaaren viimeisenä museona. Sen erikoisuus on, että siellä on koottuna kokonaisia muinaisia rakennuksia oikeassa koossa. Tunnetuimpia ovat [[Pergamonin alttari]], jonka mukaan museo on nimetty, ja [[Miletoksen markkinaportti]]. Museossa on myös Babylonin Ištar-portti, joka hohtaa sinisenä. Rakennus on ollut laajassa remontissa, enkä ole varma, mitkä osat ovat tällä hetkellä avoinna.
+
+### v2-258
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: Herta Heuwer
+VASTAUS: Herta Heuwer piti ruokakioskia Berliinin Charlottenburgissa Kantstraßen ja Kaiser-Friedrich-Straßen kulmassa. Hänen kertomansa mukaan hän sekoitti 4. syyskuuta 1949 tomaatista ja mausteista kastikkeen ja kaatoi sen paistetun makkaran päälle sekä ripotteli pinnalle currya. Ainekset hän sai brittisotilailta. Kastikkeen hän rekisteröi vuonna 1959 nimellä [[Chillup]], joka tulee sanoista chili ja ketsuppi. Kulmassa on nykyään hänen muistolaattansa. Hänen kioskinsa sijaitsi kaupunginosassa, joka tunnetaan nimellä [[Charlottenburg]].
+
+### v2-259
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: currywurst
+VASTAUS: Currywurst on Berliinin tunnetuin pikaruoka, ja sitä myydään kioskeilla ja ruokakojuissa ympäri kaupunkia. Makkara tarjoillaan paloina, ja sen päälle tulee tomaattikastiketta ja currya; lisukkeena on usein ranskalaisia perunoita tai sämpylä. Tunnettuja myyntipisteitä ovat esimerkiksi [[Konnopke's Imbiss]] Prenzlauer Bergissä ja [[Curry 36]] Kreuzbergissä. Myös [[Hampuri]] vaatii itselleen kunniaa ruoan keksimisestä, mutta Berliinissä Herta Heuwerin tarina on vakiintunut. Ruoka kuuluu kaupungin arkeen, ja sitä syödään usein seisaaltaan kadunkulmassa.
+
+### v2-260
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: Brandenburgin portti
+VASTAUS: Brandenburgin portti rakennettiin vuosina 1788–1791 antiikin temppelien mallin mukaan, ja sen suunnitteli arkkitehti [[Carl Gotthard Langhans]]. Harjalla seisova pronssinen nelivaljakko eli kvadriga on kuvanveistäjä [[Johann Gottfried Schadowin]] työ. Napoleon vei valjakon sotasaaliina Pariisiin vuonna 1806, ja se palautettiin Berliiniin vuonna 1814. Kun muuri nousi vuonna 1961, se kulki portin ohi, ja portti seisoi lähes kolmekymmentä vuotta rajavyöhykkeen sulkemana. Nykyään portin edustalla on autoton aukio [[Pariser Platz]], ja portista alkaa bulevardi [[Unter den Linden]].
+
+### v2-261
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: valtiopäivätalo
+VASTAUS: Valtiopäivätalon suunnitteli arkkitehti [[Paul Wallot]], ja se valmistui vuonna 1894. Rakennus paloi 27. helmikuuta 1933, ja [[Reichstagin palo]] toimi tekosyynä kansalaisoikeuksien kaventamiseen. Toisessa maailmansodassa talo raunioitui, ja sodan jälkeen se kunnostettiin vain osittain. Parlamentin varsinaiseksi istuntopaikaksi se tuli vasta Saksan yhdistymisen jälkeen. Uuden lasikupolin suunnitteli arkkitehti [[Norman Foster]], ja nykyään talossa kokoontuu Saksan parlamentin alahuone [[Bundestag]].
+
+### v2-262
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: teknomusiikin
+VASTAUS: Tekno on elektronisen tanssimusiikin laji, jonka juuret ovat Yhdysvalloissa Detroitissa. Berliinissä se löysi muurin kaatumisen jälkeen runsaasti tyhjiä tiloja, ja [[Tresor]]-klubi aloitti tavaratalon vanhassa holvikellarissa, jonka teräsovet olivat jääneet paikoilleen. Ensimmäinen [[Love Parade]] kuljettiin Berliinissä vuonna 1989, ja siitä kasvoi suuri tekno-kulkue. Berliinin teknokulttuuri otettiin maaliskuussa 2024 Saksan aineettoman kulttuuriperinnön luetteloon. Tunnettuihin klubeihin kuuluu myös [[Berghain]], joka toimii entisessä voimalaitoksessa.
+
+### v2-263
+KOHDE: kaupunki:berliini
+KYSYMYS: Kerro lisää: taidekenttä
+VASTAUS: Berliinin taidekenttä on laaja ja vilkas, ja sen kasvuun vaikuttivat muurin kaatumisen jälkeen vapautuneet halvat tilat, joita taiteilijat ottivat ateljeiksi ja gallerioiksi. [[Hamburger Bahnhof]] on entiseen asemarakennukseen sijoitettu nykytaiteen museo. Kaupungissa järjestetään myös [[Berlin Biennale]] -näyttely, ja katutaide kuuluu kaupunkikuvaan. Pitkä pätkä muuria on maalattu taideteoksilla [[East Side Galleryssa]]. Kaupungin taiteilijayhteisö on kansainvälinen, ja siellä asuu paljon ulkomailta muuttaneita taiteilijoita.
+
+### v2-264
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: riimukiveen
+VASTAUS: Jellingissä on kaksi riimukiveä. Pienemmän kiven pystytti kuningas [[Gorm vanha]] muistoksi puolisolleen [[Thyralle]], ja suuremman pystytti hänen poikansa Harald Sinihammas noin vuonna 965. Suuremman kiven kyljessä on Kristuksen kuva, jota pidetään Tanskan vanhimpana Kristuksen kuvana. Riimut luetaan pystysuorina riveinä, ja kivi on koristeltu eläinkuvioilla. Jellingin kumpuhaudat, kirkko ja riimukivet ovat Unescon maailmanperintökohde.
+
+### v2-265
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Harald Sinihammas
+VASTAUS: Harald Sinihammas oli Tanskan kuningas, joka hallitsi noin 950-luvulta 980-luvulle. Hän oli [[Gorm vanhan]] poika ja teki lähteiden mukaan Tanskasta kristityn maan. Hänen aikaansa liitetään myös Trelleborgin tapaiset pyöreät [[linnoitukset]], jotka rakennettiin ympäri maata. Hänen vaiheensa loppuivat kapinaan, jota johti hänen poikansa [[Sven Haarapartainen]]. Tarkat vuosiluvut ovat epävarmoja, koska lähteitä on vähän. Nimi Sinihammas elää nykyään Bluetooth-tekniikassa.
+
+### v2-266
+KOHDE: maa:DNK
+KYSYMYS: Kerro lisää: Bluetooth
+VASTAUS: Bluetooth on lyhyen kantaman langaton tekniikka, jolla laitteet voivat yhdistyä toisiinsa, esimerkiksi puhelin ja kuulokkeet. Tekniikan kehittämisen aloitti ruotsalainen [[Ericsson]] 1990-luvulla. Nimi viittaa kuningas Harald Sinihammakseen, koska hänen kerrotaan yhdistäneen Tanskan ja Norjan, ja tekniikan tarkoitus oli yhdistää eri valmistajien laitteet. Tunnuksessa on yhdistettynä kaksi [[riimua]], jotka vastaavat Haraldin nimikirjaimia H ja B.
+

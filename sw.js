@@ -89,6 +89,7 @@ const SHELL = [
   './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
   './js/kadonneet-kerroskuvat.js',
+  './js/temple-kopina-aanet.js',
   './js/kuvatekija.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',

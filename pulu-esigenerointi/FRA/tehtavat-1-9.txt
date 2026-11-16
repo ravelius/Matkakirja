@@ -1,0 +1,229 @@
+================ KOHTA 41 (kohde:hahmotelma-nimesin-areena) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Keksinnöt: Ensimmäinen elokuvayleisö mahtui yhteen huoneeseen] 1895 — Veljekset Auguste ja Louis Lumière tekivät valokuvaustarvikkeita Lyonissa. Helmikuussa 1895 he patentoivat cinématographen, laatikon, joka toimi yhtä aikaa kameran, kopiokoneen ja projektorin virkaa. Ensimmäinen maksullinen näytös pidettiin 28. joulukuuta 1895, ja yleisöä oli noin neljäkymmentä. Elokuvia esitettiin kymmenen, ja jokainen kesti alle minuutin: työläiset kävelevät ulos tehtaan portista, vauva syö lusikasta, meri lyö rantaan. Joukossa oli ensimmäinen elokuvakomedia, jossa poika astuu puutarhurin letkun päälle.
+- [Winnipeg — kohdekartta / Kohdekartta: Manitoban parlamenttitalo] 1913–1920 Manitoban kolmas lakiasäätävä rakennus valmistui 1920, ja se on 77 metriä korkea uusklassinen beaux-arts-talo. Kaksi edellistä olivat vaatimattomampia: ensimmäinen oli hirsitalo Main Streetin ja McDermot Avenuen kulmassa, ja se paloi 1873 — samana vuonna, jona Winnipegistä tuli kaupunki. Toinen avattiin 1884. Vuonna 1911 maakunta julisti arkkitehtuurikilpailun kaikille Brittiläisen imperiumin arkkitehdeille; palkinto oli kymmenentuhatta dollaria ja työstä maksettiin sata tuhatta. Kuudestakymmenestäseitsemästä ehdotuksesta valittiin Frank Worthington Simonin työ. Rakentaminen alkoi kesällä 1913 manitobalaisella Tyndall-kivellä, joka louhittiin Garsonista parinkymmenen kilometrin pä…
+
+### 41.1
+KYSYMYS: Kuinka moni katsoja tänne mahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Keksinnöt: Ensimmäinen elokuvayleisö mahtui yhteen huoneeseen] 1895 — Veljekset Auguste ja Louis Lumière tekivät valokuvaustarvikkeita Lyonissa. Helmikuussa 1895 he patentoivat cinématographen, laatikon, joka toimi yhtä aikaa kameran, kopiokoneen ja projektorin virkaa. Ensimmäinen maksullinen näytös pidettiin 28. joulukuuta 1895, ja yleisöä oli noin neljäkymmentä. Elokuvia esitettiin kymmenen, ja jokainen kesti alle minuutin: työläiset kävelevät ulos tehtaan portista, vauva syö lusikasta, meri lyö rantaan. Joukossa oli ensimmäinen elokuvakomedia, jossa poika astuu puutarhurin letkun päälle.
+
+### 41.2
+KYSYMYS: Miksi juuri tämä amfiteatteri säilyi näin ehjänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Manitoban parlamenttitalo] 1913–1920 Manitoban kolmas lakiasäätävä rakennus valmistui 1920, ja se on 77 metriä korkea uusklassinen beaux-arts-talo. Kaksi edellistä olivat vaatimattomampia: ensimmäinen oli hirsitalo Main Streetin ja McDermot Avenuen kulmassa, ja se paloi 1873 — samana vuonna, jona Winnipegistä tuli kaupunki. Toinen avattiin 1884. Vuonna 1911 maakunta julisti arkkitehtuurikilpailun kaikille Brittiläisen imperiumin arkkitehdeille; palkinto oli kymmenentuhatta dollaria ja työstä maksettiin sata tuhatta. Kuudestakymmenestäseitsemästä ehdotuksesta valittiin Frank Worthington Simonin työ. Rakentaminen alkoi kesällä 1913 manitobalaisella Tyndall-kivellä, joka louhittiin Garsonista parinkymmenen kilometrin pä…
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-rouen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kaupunkilehti / Moskova: Kirkko, uimahalli ja taas kirkko] Kristus Vapahtajan katedraali räjäytettiin joulukuussa 1931. Tilalle piti nousta maailman korkein rakennus, Neuvostojen palatsi, mutta sitä ei koskaan saatu pystyyn: sota vei teräkset muualle. Valmiiseen perustuskuoppaan tehtiin sen sijaan ulkouima-allas, jonka vesiympyrän halkaisija oli 130 metriä. Vesi lämmitettiin, joten siellä uitiin pakkasellakin. Allas suljettiin 1994, ja kirkko rakennettiin samalle paikalle uudelleen.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Maailman korkein purjehduskelpoinen järvi] Titicaca kohoaa Andeilla 3 812 metrin korkeuteen ja on maailman korkein järvi, jolla kulkee säännöllistä laivaliikennettä suurilla aluksilla – pienempiä lampia toki löytyy vieläkin ylempää. Vettä on 8 372 neliökilometrin alalla, ja järvi jakautuu kapean Tiquina-salmen kohdalla kahteen altaaseen: pohjoiseen suureen ja eteläiseen pienempään. Rajaviiva Perun ja Bolivian välillä kulkee keskeltä järveä, joten kumpikin maa pitää sitä osittain omanaan. Syvimmillään vesi ulottuu lähes 280 metrin syvyyteen, mutta suurin osa altaasta on matalampaa ja lämpenee auringossa hitaasti ohuen ilman takia.
+
+### 42.1
+KYSYMYS: Miksi kolme tornia ovat kaikki erinäköisiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kaupunkilehti / Historia: Muurit, jotka korttipeli maksoi] Kun kiinalainen merirosvolaivasto poltti kaupungin vuonna 1574, espanjalaiset päättivät rakentaa kiveä. Kuninkaan määräys kuului: ympäröikää kaupunki kivimuurilla ja pystyttäkää sopiva linnoitus siihen, missä meri ja joki kohtaavat. Työ alkoi 1590 ja jatkui vuoteen 1872, aina eri kuvernöörien aikana ja ilman yhtenäistä suunnitelmaa — siksi bastionit ovat keskenään erinäköisiä. Rahat tulivat pelikorttien myyntimonopolista ja liiallisesta pelaamisesta määrätyistä sakoista, ja muurit ladottiin kiinalaisin ja filippiiniläisin käsin. Tulos kiertää 64 hehtaarin alan: kuutisen metriä korkea ja pari ja puoli metriä paksu kehä vallihautoineen.
+
+### 42.2
+KYSYMYS: Kauanko kirkko ehti olla maailman korkein rakennus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kaupunkilehti / Moskova: Kirkko, uimahalli ja taas kirkko] Kristus Vapahtajan katedraali räjäytettiin joulukuussa 1931. Tilalle piti nousta maailman korkein rakennus, Neuvostojen palatsi, mutta sitä ei koskaan saatu pystyyn: sota vei teräkset muualle. Valmiiseen perustuskuoppaan tehtiin sen sijaan ulkouima-allas, jonka vesiympyrän halkaisija oli 130 metriä. Vesi lämmitettiin, joten siellä uitiin pakkasellakin. Allas suljettiin 1994, ja kirkko rakennettiin samalle paikalle uudelleen.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Maailman korkein purjehduskelpoinen järvi] Titicaca kohoaa Andeilla 3 812 metrin korkeuteen ja on maailman korkein järvi, jolla kulkee säännöllistä laivaliikennettä suurilla aluksilla – pienempiä lampia toki löytyy vieläkin ylempää. Vettä on 8 372 neliökilometrin alalla, ja järvi jakautuu kapean Tiquina-salmen kohdalla kahteen altaaseen: pohjoiseen suureen ja eteläiseen pienempään. Rajaviiva Perun ja Bolivian välillä kulkee keskeltä järveä, joten kumpikin maa pitää sitä osittain omanaan. Syvimmillään vesi ulottuu lähes 280 metrin syvyyteen, mutta suurin osa altaasta on matalampaa ja lämpenee auringossa hitaasti ohuen ilman takia.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-rocamadour) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tokio — kaupunkilehti / Arki ja alakaupunki: Kertoja istuu polvillaan eikä nouse kertaakaan] Yose on puhutun teatterin talo. Nimi on lyhenne sanoista hito yose seki, paikka johon väki kokoontuu. Edon lopulla taloja oli useita satoja, suunnilleen yksi kaupunginosaa kohti, ja pääsymaksu oli pieni; sali vetää tavallisesti 200 katsojaa. Vuoden 1900 tienoilla niitä laskettiin 70, ja tunnetuimmat olivat Suehiro-tei Shinjukussa, Tachibana-tei Kandassa ja Suzumoto-tei Uenossa. Lavan laji on rakugo eli tarina jolla on putous. Kertoja istuu korokkeella polvillaan. Välineitä on kaksi: viuhka ja liina.
+- [Kuwait — maalehti / Aavikko: Teltta kudotaan lampaan ja vuohen villasta] Beduiinien teltta on nimeltään bait al-shaar. Se kudotaan lampaan ja vuohen villasta ja kamelinkarvasta. Kangaspuut levitetään maahan: kaksi puuta päihin, loimilangat niiden väliin, ja kutoja istuu maassa työnsä vieressä ja siirtyy eteenpäin sitä mukaa kun kangas valmistuu. Kuviot ovat kolmioita ja vinoneliöitä, ja jokainen suku tunnisti omansa. Samalla tavalla tehtiin telttaa jakavat väliverhot ja kamelin selkään sidottavat säkit. Kuwaitissa perustettiin vuonna 1978 yhdistys ja pari vuotta myöhemmin Sadu-talo, jotta taito ei katoaisi, ja vuonna 2020 sadu-kudonta otettiin Unescon perintöluetteloon.
+
+### 43.1
+KYSYMYS: Kuka kiipesi näitä portaita polvillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tokio — kaupunkilehti / Arki ja alakaupunki: Kertoja istuu polvillaan eikä nouse kertaakaan] Yose on puhutun teatterin talo. Nimi on lyhenne sanoista hito yose seki, paikka johon väki kokoontuu. Edon lopulla taloja oli useita satoja, suunnilleen yksi kaupunginosaa kohti, ja pääsymaksu oli pieni; sali vetää tavallisesti 200 katsojaa. Vuoden 1900 tienoilla niitä laskettiin 70, ja tunnetuimmat olivat Suehiro-tei Shinjukussa, Tachibana-tei Kandassa ja Suzumoto-tei Uenossa. Lavan laji on rakugo eli tarina jolla on putous. Kertoja istuu korokkeella polvillaan. Välineitä on kaksi: viuhka ja liina.
+
+### 43.2
+KYSYMYS: Mistä pieni vuohenjuusto sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — maalehti / Aavikko: Teltta kudotaan lampaan ja vuohen villasta] Beduiinien teltta on nimeltään bait al-shaar. Se kudotaan lampaan ja vuohen villasta ja kamelinkarvasta. Kangaspuut levitetään maahan: kaksi puuta päihin, loimilangat niiden väliin, ja kutoja istuu maassa työnsä vieressä ja siirtyy eteenpäin sitä mukaa kun kangas valmistuu. Kuviot ovat kolmioita ja vinoneliöitä, ja jokainen suku tunnisti omansa. Samalla tavalla tehtiin telttaa jakavat väliverhot ja kamelin selkään sidottavat säkit. Kuwaitissa perustettiin vuonna 1978 yhdistys ja pari vuotta myöhemmin Sadu-talo, jotta taito ei katoaisi, ja vuonna 2020 sadu-kudonta otettiin Unescon perintöluetteloon.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-saint-emilion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Sana — kohdekartta / Kohdekartta: Suolatori] vanhempi kuin 600-luvun moskeija Suq al-Milh eli suolatori ei ole yksi tori vaan korttelillinen niitä. Nimi on jäänyt yhdestä tavarasta, mutta samalla alueella on omat nimensä saaneita osatoreja kuten Suq al-Buqar ja Suq az-Zumar, ja kokonaisuus on kaupungin vanhin yhä käytössä oleva rakenne — vanhempi kuin viereinen Suuri moskeija. Tori teki Sanasta sen, mistä se tunnettiin. Kaupungin ympärillä olevista kukkuloista louhittiin onyksia, kalsedonia ja karneolia, ja niitä työstettiin täällä. Metallityöstä kaupunki oli kuuluisa: britit kuvasivat sen 1900-luvun alussa sanalla "famous", vaikka huomauttivat samalla, että ala oli hiipumassa. Torilla vaihtui myös kaikki muu, mitä ympäröivä maatalous…
+
+### 44.1
+KYSYMYS: Miten kokonainen kirkko louhitaan kallion sisään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+
+### 44.2
+KYSYMYS: Mikä tekee näistä kukkuloista niin hyviä viinille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Émilion (ruoka)
+Tietoruudun teksti: Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa Lounais-Ranskassa, viinikukkuloiden keskellä Libournais'n sydämessä. Se seisoo kalkkikivikummulla Bordeaux'n, Saintongen ja Périgord'n risteyskohdassa, ja asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna 1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suolatori] vanhempi kuin 600-luvun moskeija Suq al-Milh eli suolatori ei ole yksi tori vaan korttelillinen niitä. Nimi on jäänyt yhdestä tavarasta, mutta samalla alueella on omat nimensä saaneita osatoreja kuten Suq al-Buqar ja Suq az-Zumar, ja kokonaisuus on kaupungin vanhin yhä käytössä oleva rakenne — vanhempi kuin viereinen Suuri moskeija. Tori teki Sanasta sen, mistä se tunnettiin. Kaupungin ympärillä olevista kukkuloista louhittiin onyksia, kalsedonia ja karneolia, ja niitä työstettiin täällä. Metallityöstä kaupunki oli kuuluisa: britit kuvasivat sen 1900-luvun alussa sanalla "famous", vaikka huomauttivat samalla, että ala oli hiipumassa. Torilla vaihtui myös kaikki muu, mitä ympäröivä maatalous…
+- [Amsterdam — kohdekartta / Kohdekartta: Anne Frankin talo] 1960 Kanaalin varrella Prinsengrachtilla seisova talo rakennettiin jo vuonna 1635, mutta maailmankuuluksi se tuli toisen maailmansodan aikana. Vuonna 1942 juutalainen Frank-perhe piiloutui talon takaosaan salaiseen kätköön, jonne pääsi vain kääntyvän kirjahyllyn takaa. Perhe ja neljä muuta piileskelivät siellä lähes kaksi vuotta. Nuori Anne kirjoitti koko ajan päiväkirjaa, josta tuli sodan jälkeen yksi maailman luetuimmista kirjoista — isä Otto oli perheestä ainoa, joka selvisi hengissä. Talo avattiin museona vuonna 1960, ja nykyään siellä vierailee joka vuosi yli miljoona ihmistä ympäri maailman. "Uskon yhä, kaikesta huolimatta, että ihmiset ovat sisimmältään hyviä." — Anne Frank, päiväkir…
+- [Buenos Aires — kaupunkilehti / Buenos Aires] Río de la Platan rannalle noussut satamakaupunki, jonka nimi tarkoittaa hyviä tuulia. Isoisän vierailun aikaan 1873 se oli nuoren tasavallan pääkaupunki täynnä eurooppalaisia siirtolaisia — ja tango oli vielä syntymättä.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-cognac) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Ruoka: Juoma, joka sai nimensä satamasta] 1764 — Pisco tislataan käyneestä rypälemehusta. Espanjalaiset siirtolaiset kehittivät sen 1500-luvulla korvaamaan Espanjasta tuotua orujoa: rypäleitä kasvoi paikan päällä, ja väkevää juomaa mahtui laivaan vähemmällä tilalla. Vanhin tunnettu maininta sanasta perulaisesta paloviinasta on vuodelta 1764, ja nimi tulee Piscon satamakaupungista, josta juomaa vietiin Eurooppaan. Wieniläinen lehti kertoi 1835, että Chilessä juotiin paljon perulaista piscoa, kunnes tullit synnyttivät sinne oman version. Nimestä kiistellään yhä.
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+
+### 45.1
+KYSYMYS: Miksi juoma sai nimensä juuri tästä kaupungista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Ruoka: Juoma, joka sai nimensä satamasta] 1764 — Pisco tislataan käyneestä rypälemehusta. Espanjalaiset siirtolaiset kehittivät sen 1500-luvulla korvaamaan Espanjasta tuotua orujoa: rypäleitä kasvoi paikan päällä, ja väkevää juomaa mahtui laivaan vähemmällä tilalla. Vanhin tunnettu maininta sanasta perulaisesta paloviinasta on vuodelta 1764, ja nimi tulee Piscon satamakaupungista, josta juomaa vietiin Eurooppaan. Wieniläinen lehti kertoi 1835, että Chilessä juotiin paljon perulaista piscoa, kunnes tullit synnyttivät sinne oman version. Nimestä kiistellään yhä.
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+
+### 45.2
+KYSYMYS: Mihin kuparipannua tarvitaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cognac (ruoka)
+Tietoruudun teksti: Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut kulttuuriministeriön myöntämää Ville d'art et d'histoire -nimitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

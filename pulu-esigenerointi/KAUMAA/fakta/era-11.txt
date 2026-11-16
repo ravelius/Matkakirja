@@ -1,0 +1,445 @@
+### v2-356
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Hansa
+VASTAUS: Hansa oli pohjoiseurooppalaisten kauppiaiden ja kauppakaupunkien liitto, joka hallitsi suurta osaa Itämeren ja Pohjanmeren kaupasta keskiajalla. Sen johtava kaupunki oli [[Lyypekki]], ja jäseniä oli kymmeniä kaupunkeja Pohjois-Saksasta Baltiaan. Hansalla oli ulkomaisia kauppa-asemia, joita kutsuttiin kontooreiksi, muun muassa [[Bergenissä]] ja [[Novgorodissa]]. Tallinna oli sen tärkeimpiä itäisiä kaupunkeja, ja sen kauppiaat välittivät suolaa, silliä ja vahaa lännen ja Novgorodin välillä. Hansan merkitys väheni 1500- ja 1600-luvuilla, kun kauppareitit muuttuivat ja valtiot vahvistuivat; viimeinen yleinen hansapäivä pidettiin muistini mukaan vuonna 1669.
+
+### v2-357
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Raeapteek
+VASTAUS: Raeapteek eli Raatihuoneentorin apteekki toimii Tallinnassa samassa talossa ainakin vuodesta 1422, jolloin kirjattiin ylös jo sen kolmas omistaja. Vuoden 1695 hinnastossa oli 128 erilaista öljyä, 71 yrttiteetä ja 49 voidetta, mutta myös poltettuja mehiläisiä, poltettuja siilejä, oriin kavioita ja kastematojen öljyä. Listalla oli myös [[marsipaani]], jota myytiin sydänsuruun ja muistin parantamiseen, ja sitä saa tiskiltä yhä. Apteekki sijaitsee [[Raatihuoneentorin]] laidalla, ja sitä pidetään yhtenä Euroopan vanhimmista yhä toimivista apteekeista.
+
+### v2-358
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Raatihuoneentori
+VASTAUS: Raatihuoneentori on Tallinnan Vanhankaupungin keskeinen tori, joka on ollut kaupungin kauppa- ja kokoontumispaikka keskiajalta lähtien. Sen laidalla seisoo Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone, jonka tornin huipulla pyörii tuuliviiri [[Vana Toomas]]. Torin laidalla toimii myös apteekki [[Raeapteek]], joka on ollut samassa talossa ainakin vuodesta 1422. Tallinna väittää, että maailman ensimmäinen julkinen joulukuusi pystytettiin juuri tälle torille, mutta väitteen tarkkuudesta en ole varma. Joka tapauksessa torilla järjestetään nykyään [[joulumarkkinat]].
+
+### v2-359
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Toompea
+VASTAUS: Toompea on Tallinnan kalkkikivikallio, jonka päällä on linna. Keskiajalla se oli oma kaupunkinsa omine herroineen ja lakeineen, kun alhaalla kauppiaiden kaupunki hallitsi itseään raatinsa kautta, ja osat yhdistettiin vasta vuonna 1878. Ylös pääsi vain kahta katua, [[Pitkää jalkaa]] ja Lyhyttä jalkaa, ja kummankin päässä oli porttitorni. [[Lyhyen jalan torniin]] hakattiin 1400-luvulla ampuma-aukkoja, jotka osoittavat ylös Toompealle, ja siksi tornia on kutsuttu Epäluulon torniksi. Kahden eripituisen jalan takia Tallinnaa sanotaan leikillään ontuvaksi kaupungiksi. Nykyään Toompealla toimii [[Viron parlamentti]], ja alue on yksi keskustan tunnetuimmista näköalapaikoista.
+
+### v2-360
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Viron parlamentti
+VASTAUS: Viron parlamentti on nimeltään [[Riigikogu]], ja siinä on 101 jäsentä. Kansanedustajat valitaan neljäksi vuodeksi, ja parlamentissa on vain yksi kamari. Se kokoontuu Tallinnassa [[Toompean linnassa]], jonka nykyinen vaaleanpunainen barokkirakennus on peräisin 1700-luvun lopulta. Linnan kulmassa kohoavassa tornissa, jota kutsutaan nimellä [[Pikk Hermann]], liehuu Viron lippu. Toompea on ollut vuosisatoja vallan paikka, ja siellä ovat sijainneet maan hallitsijoiden, herrojen ja nykyisin parlamentin tilat.
+
+### v2-361
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Lübeck
+VASTAUS: Lyypekki, saksaksi Lübeck, on Pohjois-Saksan kaupunki Trave-joen varrella lähellä Itämerta. Siitä tuli keskiajalla [[Hansan]] johtava kaupunki, ja sitä on kutsuttu Hansan kuningattareksi. Kaupungin vanhakaupunki, jonka tunnetuin maamerkki on tiilinen [[Holstentor]]-portti, kuuluu Unescon maailmanperintökohteisiin. Lyypekin kaupunkioikeus levisi Itämeren rannan kaupunkeihin, myös Tallinnaan. Kaupunki tunnetaan myös marsipaanistaan, jota valmistaa muun muassa yritys [[Niederegger]], mutta marsipaanin alkuperästä kiistellään, enkä ota kantaa. Kirjailija [[Thomas Mann]] syntyi Lyypekissä.
+
+### v2-362
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: Toledo
+VASTAUS: Toledo on Keski-Espanjan kaupunki [[Tejo-joen]] mutkassa kukkulalla, ja sen historiallinen keskusta kuuluu Unescon maailmanperintökohteisiin. Kaupunkia kutsutaan usein kolmen kulttuurin kaupungiksi, koska siellä asuivat vuosisatoja kristityt, muslimit ja juutalaiset. Toledo oli pitkään Kastilian tärkeä keskus, ja siellä on suuri katedraali ja Alcázar-linnoitus. Kaupunki tunnetaan myös teräsaseistaan ja marsipaanistaan. Kreetalla syntynyt [[El Greco]], joka opiskeli Venetsiassa ja asettui Toledoon, maalasi siellä muun muassa teoksen [[Orgazin kreivin hautaus]], joka on yhä siinä kirkossa, jota varten se maalattiin vuonna 1586.
+
+### v2-363
+KOHDE: kaupunki:tallinna
+KYSYMYS: Kerro lisää: marsipaani
+VASTAUS: Marsipaani on manteleista ja sokerista valmistettu taikina, jota käytetään makeisissa ja leivonnaisten koristeluun. Sen alkuperästä kiistellään: Tallinna, [[Lyypekki]] ja [[Toledo]] vaativat kaikki kunniaa, eikä kysymystä ole ratkaistu varmasti. Tallinnan [[Raatihuoneentorin]] apteekin vuoden 1695 hinnastossa oli marsipaania, jota myytiin lääkkeenä sydänsuruun ja muistin parantamiseen, ja sitä saa tiskiltä yhä. Marsipaanista muotoillaan perinteisesti pieniä hedelmiä ja eläimiä, ja sitä käytetään myös joulun ja pääsiäisen herkuissa.
+
+### v2-364
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: jääkauden
+VASTAUS: Jääkaudella tarkoitetaan ajanjaksoa, jolloin suuri osa Pohjois-Euroopasta oli mannerjään peitossa. Viimeisimmän jääkauden huippuvaiheessa noin kaksikymmentätuhatta vuotta sitten Suomen yllä oli useiden kilometrien paksuinen jäämassa. Jää hioi kallioperää, kuljetti maa-ainesta mukanaan ja kasasi sitä moreeniksi ja [[harjuiksi]], kun se sulaessaan vetäytyi. Suomi vapautui jäästä noin yhdentoista ja yhdeksän tuhannen vuoden välillä sitten. [[Salpausselät]] syntyivät jäätikön reunan kohdalle, ja [[maankohoaminen]] jatkuu yhä, koska maa nousee vapauduttuaan jään painosta.
+
+### v2-365
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Järvi-Suomi
+VASTAUS: Järvi-Suomi on Suomen keski- ja itäosien laaja järvialue, jossa vesistöt, metsät ja kapeat harjut vuorottelevat. Suomessa on yhteensä 187 888 järveä, ja ne ovat tiheimmillään juuri tällä alueella. Suurin järvi on [[Saimaa]], jossa elää uhanalainen [[saimaannorppa]], vain Saimaalla elävä sisävesihylje. Alue syntyi, kun [[mannerjää]] sulaessaan jätti jälkeensä painanteita, jotka täyttyivät vedellä. Järvet ovat vuosisatoja olleet kulkuväyliä ja kalavesiä, ja nykyisin ne ovat myös tärkeä virkistysalue.
+
+### v2-366
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Elias Lönnrot
+VASTAUS: Elias Lönnrot oli suomalainen lääkäri ja kielentutkija, joka syntyi vuonna 1802 Sammatissa ja kuoli vuonna 1884. Hän keräsi kansanrunoutta laajoilla matkoillaan ja kokosi niistä [[Kalevalan]], jonka ensimmäinen laitos ilmestyi 1835 ja laajempi nykyinen laitos 1849. Hän julkaisi myös [[Kantelettaren]], suomalaisen lyyrisen kansanrunouden kokoelman. Lönnrot toimi piirilääkärinä Kajaanissa ja myöhemmin Helsingin yliopiston suomen kielen professorina, ja hän oli mukana perustamassa [[Suomalaisen Kirjallisuuden Seuraa]]. Hän laati myös suomi-ruotsi-sanakirjan ja vaikutti suomen kirjakielen kehitykseen.
+
+### v2-367
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Karjalassa
+VASTAUS: Karjala on historiallinen alue Itämeren ja [[Laatokan]] välissä, ja se on jaettu nykyisin Suomen ja Venäjän kesken. Suomessa siihen kuuluvat muun muassa Pohjois-Karjala ja Etelä-Karjala, ja Venäjän puolella sijaitsee Karjalan tasavalta. Suuri osa alueesta luovutettiin Neuvostoliitolle toisen maailmansodan yhteydessä, ja noin 400 000 karjalaista asutettiin [[evakkoina]] muualle Suomeen. Alueen kansanrunoutta kerättiin 1800-luvulla, ja sen pohjalta syntyi Kalevala. Karjalan perinneruokiin kuuluu [[karjalanpiirakka]], riisipuurolla täytetty ruisleipäpiirakka.
+
+### v2-368
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Väinämöisestä
+VASTAUS: Väinämöinen on Kalevalan keskeinen hahmo, vanha ja viisas tietäjä ja laulaja, jonka taidot perustuvat sanojen voimaan. Kalevalassa hän rakentaa kanteleen hauen leukaluusta ja soittaa [[kantelea]] niin kauniisti, että luonto kuuntelee. Hän käy laulukilpailun nuoren [[Joukahaisen]] kanssa ja voittaa tämän, ja hän osallistuu retkeen, jonka tarkoitus on hankkia [[Sampo]] Pohjolasta. Kalevalan lopussa Väinämöinen lähtee pois veneellä ja jättää kantelensa ja laulunsa kansalle.
+
+### v2-369
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Löylyä
+VASTAUS: Löyly on kuumalle [[kiukaalle]] heitetystä vedestä syntyvä höyry, joka tuntuu iholla kuumana ja kosteana. Suomalaisessa saunassa lämpötila on tavallisesti seitsemänkymmenen ja sadan asteen välillä, ja löylyn voimakkuus riippuu kiukaan kivistä ja heitetyn veden määrästä. Saunomiseen kuuluu usein jäähtyminen ulkona tai [[avannossa]]. Unesco lisäsi suomalaisen saunomisen ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna 2020. Helsingin Kalliossa on yhä yleisiä saunoja, ja vanhin niistä, [[Kotiharjun sauna]], avattiin vuonna 1928 ja on kaupungin viimeinen alkuperäisessä käytössä säilynyt puulämmitteinen yleinen sauna.
+
+### v2-370
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: saunakulttuuri
+VASTAUS: Saunakulttuuri on Suomessa arkinen perinne: maassa on noin kolme miljoonaa saunaa ja noin 5,6 miljoonaa asukasta, joten saunoja on enemmän kuin autoja. Saunat kuuluvat kerrostaloasuntoihinkin. Vanhin saunatyyppi on [[savusauna]], jossa kiuas lämmitetään ilman savupiippua ja savu poistetaan ennen löylyä. [[Unesco]] lisäsi suomalaisen saunomisen ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna 2020. Helsingin Kalliossa on yhä yleisiä saunoja, joihin ostetaan lippu kuin elokuviin, ja vanhin niistä on vuonna 1928 avattu [[Kotiharjun sauna]]. Löylyn jälkeen mennään jäähtymään ulos, ja talvella osa uskaltautuu jäähän sahattuun avantoon.
+
+### v2-371
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on Pariisissa. Se edistää yhteistyötä koulutuksessa, tieteessä ja kulttuurissa. Tunnetuin osa sen työstä on [[maailmanperintöluettelo]], johon on kirjattu kulttuuri- ja luontokohteita; Suomen kohteita ovat muun muassa [[Suomenlinna]], joka liitettiin luetteloon vuonna 1991. Unescolla on myös [[aineettoman kulttuuriperinnön luettelo]], jossa on perinteitä, taitoja ja tapoja, ja siihen lisättiin vuonna 2020 suomalainen saunominen. Suomi liittyi Unescoon muistini mukaan vuonna 1956.
+
+### v2-372
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Jokamiehenoikeudet
+VASTAUS: Jokamiehenoikeudet ovat Suomessa vanhaan tapaoikeuteen perustuvia oikeuksia, joiden nojalla jokainen saa liikkua luonnossa ja oleskella siellä ilman maanomistajan lupaa. Oikeuteen kuuluvat muun muassa kävely, hiihto ja pyöräily, telttailu hetkeksi pois asutuksen läheltä, uiminen, soutu sekä [[luonnonmarjojen]] ja sienten poimiminen. Maanomistajan lupa tarvitaan esimerkiksi tulenpitoon, kasvavia puita ei saa vahingoittaa eikä toisen pihapiiriin saa mennä. Olennaista on, ettei toiselle aiheuteta haittaa eikä luontoa vahingoiteta. Vastaavanlainen järjestelmä on myös muissa Pohjoismaissa, muun muassa [[Ruotsissa]] ja [[Norjassa]].
+
+### v2-373
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: luonnonmarjoja
+VASTAUS: Luonnonmarjat ovat Suomen metsien ja soiden marjoja, joita saa jokamiehenoikeuden nojalla poimia vapaasti, kunhan ne eivät kasva toisen pihapiirissä eikä alue ole suojeltu. Tavallisimmat ovat [[mustikka]], [[puolukka]] ja suomuurain eli [[lakka]], jota kasvaa soilla erityisesti pohjoisessa. Mustikka kypsyy yleensä heinä- ja elokuussa ja puolukka elokuusta syyskuuhun. Marjoista valmistetaan hilloja, mehuja ja piirakoita, ja ne ovat ravintoaineiltaan arvokkaita.
+
+### v2-374
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: tulenpitoa
+VASTAUS: Tulenpito luonnossa edellyttää Suomessa maanomistajan lupaa, eikä tulenteko kuulu jokamiehenoikeuksiin. Tulen saa tehdä esimerkiksi omalla maalla, luvalla toisen maalla tai merkityillä [[nuotiopaikoilla]], joita on muun muassa [[kansallispuistoissa]] ja retkikohteissa. Tulen on pysyttävä hallinnassa, eikä sen saa antaa levitä, ja nuotio pitää sammuttaa kunnolla. Kuivina kausina alueen pelastuslaitos antaa [[metsäpalovaroituksen]], jolloin avotulen teko on yleensä kielletty myös omalla maalla; tilanne kannattaa tarkistaa aina ennen tulenpolttoa.
+
+### v2-375
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Ruotsin valtakuntaan
+VASTAUS: Suomi kuului osana Ruotsin valtakuntaa noin kuusisataa vuotta, 1100- tai 1200-luvulta vuoteen 1809, vaikka tarkka aloitusajankohta on tutkijoille epäselvä. Ruotsin kruunun alaisena Suomeen vakiintuivat ruotsalainen hallinto, laki ja kirkko, ja ruotsista tuli hallinnon ja sivistyneistön kieli. Tärkeitä vaiheita olivat [[Pähkinäsaaren rauha]] vuonna 1323, joka määritti rajan Novgorodin kanssa, [[Kustaa Vaasan]] valtakausi 1500-luvulla sekä [[isoviha]] 1713–1721, jolloin Venäjä miehitti Suomen. Vuosien 1808–1809 sodan jälkeen Suomi liitettiin Venäjään autonomiseksi suuriruhtinaskunnaksi.
+
+### v2-376
+KOHDE: maa:FIN
+KYSYMYS: Kerro lisää: Ahvenanmaa
+VASTAUS: Ahvenanmaa on Suomen itsehallinnollinen, ruotsinkielinen maakunta [[Saaristomeren]] ja Pohjanlahden välissä. Se on alueen suurin saariryhmä, ja siihen kuuluu useita tuhansia saaria, joista vain osa on asuttuja. Maakunnan pääkaupunki on [[Maarianhamina]]. Ahvenanmaalla on oma lainsäädäntöelin, ja alue on demilitarisoitu, mikä tarkoittaa, ettei siellä saa pitää sotilaallisia tukikohtia. Alueen asema vahvistettiin [[Kansainliiton]] ratkaisussa vuonna 1921. Asukkaita on noin kolmekymmentätuhatta, mutta tarkasta luvusta en ole varma.
+
+### v2-377
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Augustin Ehrensvärd
+VASTAUS: Augustin Ehrensvärd oli ruotsalainen upseeri ja linnoitusrakentaja, jonka johdolla Helsingin edustan saarille alettiin vuonna 1748 rakentaa merilinnoitusta, myöhemmin nimeltään [[Suomenlinna]] eli [[Sveaborg]]. Linnoituksen tarkoitus oli vahvistaa Ruotsin itäosan puolustusta Venäjän uhkaa vastaan. Työmaalla riitti väkeä, ja parhaimmillaan vuonna 1755 linnoitusta rakensi yhtä aikaa noin 7 000 työntekijää. Ehrensvärd kuoli vuonna 1772, ja hänet on muistini mukaan haudattu Suomenlinnaan. Linnoitus antautui venäläisille vuonna 1808 vain parin kuukauden piirityksen jälkeen, ja vuonna 1855 Englannin ja Ranskan laivastot pommittivat sitä [[Krimin sodan]] aikana.
+
+### v2-378
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Sveaborg
+VASTAUS: Sveaborg on Suomenlinnan alkuperäinen ruotsinkielinen nimi, joka tarkoittaa Ruotsin linnaa. Ruotsin kruunu aloitti merilinnoituksen rakentamisen Helsingin edustan saarilla vuonna 1748, koska se halusi vahvan tukikohdan Venäjää vastaan, ja suunnittelusta vastasi [[Augustin Ehrensvärd]]. Parhaimmillaan vuonna 1755 linnoitusta rakensi yhtä aikaa noin 7 000 työntekijää. Linnoitusta kutsuttiin Pohjolan [[Gibraltariksi]], mutta se antautui venäläisille jo vuonna 1808 parin kuukauden piirityksen jälkeen. Vuonna 1855 [[Krimin sodan]] aikana Englannin ja Ranskan laivastot pommittivat saaria voimakkaasti. Suomenkielisen nimensä linnoitus sai vasta vuonna 1918, ja vuonna 1991 siitä tuli [[Unescon maailmanperintökohde]].
+
+### v2-379
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+VASTAUS: Unescon maailmanperintökohde on kulttuuri- tai luontokohde, jonka Unescon maailmanperintökomitea on hyväksynyt maailmanperintöluetteloon vuoden 1972 yleissopimuksen perusteella. Kohteen tulee olla poikkeuksellisen arvokas koko ihmiskunnalle, ja sen suojelusta vastaa ensisijaisesti sijaintivaltio. Luettelossa on yli tuhat kohdetta eri puolilla maailmaa. Suomessa maailmanperintökohteita on muistini mukaan seitsemän, ja niihin kuuluvat [[Suomenlinna]], [[Vanha Rauma]], [[Petäjäveden vanha kirkko]], [[Verlan]] tehdasalue ja [[Sammallahdenmäki]] sekä Struven ketju ja Merenkurkun saaristo. Suomenlinna liitettiin luetteloon vuonna 1991.
+
+### v2-380
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Havis Amanda
+VASTAUS: Havis Amanda on Helsingin [[Kauppatorin]] reunalla seisova suihkulähdepatsas, jonka loi kuvanveistäjä [[Ville Vallgren]]. Pronssinen patsas paljastettiin vuonna 1908, ja se esittää alastonta naista, joka nousee aalloista; ympärillä on hylkeitä ja kaloja. Patsas herätti aikanaan keskustelua alastomuutensa vuoksi, mutta siitä tuli yksi Helsingin rakastetuimmista symboleista. Vappuaattona ylioppilaat nostavat patsaan päähän [[ylioppilaslakin]], mikä on kuulunut kaupungin vappuperinteeseen vuosikymmenten ajan. Nimen alkuperästä on useita selityksiä, enkä ole varma, mikä niistä on oikea.
+
+### v2-381
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Silakkamarkkinat
+VASTAUS: Silakkamarkkinat ovat Helsingin vanha syksyinen kalamarkkinaperinne. Helsinki sai vuonna 1743 kuninkaalliselta päätökseltä oikeuden kahteen vuosimarkkinaan, ja niitä on pidetty siitä lähtien. Vuonna 1891 markkinoista lakkautettiin kaikki muu paitsi suolatun kalan kauppa, ja siksi jäljelle jäivät silakkamarkkinat. Joka lokakuu [[Eteläsataman]] rantaan purjehtii kalastajia myymään suolattua ja maustettua [[silakkaa]] suoraan veneen kannelta, ja raati valitsee vuoden parhaan maustekalan. Markkinat kuuluvat Helsingin [[Kauppatorin]] vanhimpiin perinteisiin.
+
+### v2-382
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Helsingin metro
+VASTAUS: Helsingin metro on Suomen ainoa metro, ja sen liikenne alkoi vuonna 1982. Verkko haarautuu idässä kahteen suuntaan, Mellunmäkeen ja Vuosaareen, ja kulkee keskustan kautta länteen Espooseen. [[Länsimetro]] Espooseen avattiin vuonna 2017 Matinkylään asti, ja liikenne jatkui [[Kivenlahteen]] vuonna 2022. Metro on yksi Helsingin seudun joukkoliikenteen selkärangoista, ja osa sen asemista on louhittu syvälle kallioon.
+
+### v2-383
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: raitiovaunut
+VASTAUS: Helsingin raitiovaunuliikenne on vanhaa: hevosvetoinen raitiotie aloitti Helsingissä vuonna 1891, ja sähköraitiovaunut otettiin käyttöön vuonna 1900. Raitiovaunut ovat edelleen tärkeä osa kaupungin keskustan joukkoliikennettä, ja ne kulkevat osin samoja katulinjoja kuin vuosikymmenten takaiset vaunut. Linjastoa on laajennettu uusilla radoilla, muun muassa [[Jätkäsaareen]] ja [[Kalasatamaan]]. Lisäksi vuonna 2024 avattiin [[Raide-Jokeri]], nopea poikittainen raitiotie Itäkeskuksen ja Keilaniemen välillä.
+
+### v2-384
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Alvar Aalto
+VASTAUS: Alvar Aalto oli suomalainen arkkitehti ja muotoilija, joka syntyi vuonna 1898 Kuortaneella ja kuoli vuonna 1976. Häntä pidetään yhtenä modernin arkkitehtuurin merkittävimmistä suunnittelijoista. Tunnettuja töitä ovat [[Paimion parantola]], [[Viipurin kirjasto]], [[Villa Mairea]] ja Helsingin [[Finlandia-talo]]. Aallon työlle ominaisia ovat orgaaniset muodot, luonnonmateriaalit ja valon huolellinen käsittely. Hän suunnitteli myös huonekaluja ja esineitä, ja muistini mukaan vuonna 1935 perustettiin yhtiö [[Artek]] myymään niitä; Aalto-maljakko ja jakkara 60 ovat yhä tuotannossa.
+
+### v2-385
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Finlandia-talo
+VASTAUS: Finlandia-talo on Helsingin Töölönlahden rannalla sijaitseva kongressi- ja konserttitalo, jonka suunnitteli [[Alvar Aalto]]. Konserttisiipi valmistui vuonna 1971 ja kongressisiipi vuonna 1975. Rakennuksen julkisivua verhoavat vaaleat marmorilaatat, jotka ovat joutuneet pohjoisessa ilmastossa kovalle rasitukselle, ja osa niistä on vaihdettu myöhemmin. Talossa allekirjoitettiin vuonna 1975 Euroopan turvallisuus- ja yhteistyökonferenssin [[Helsingin päätösasiakirja]]. Talo sijaitsee [[Töölönlahden]] rannalla keskustan tuntumassa.
+
+### v2-386
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: Suomenlahti
+VASTAUS: Suomenlahti on [[Itämeren]] itäinen lahti, joka ulottuu Suomen, Viron ja Venäjän rantojen väliin. Se on pituudeltaan noin 400 kilometriä, ja leveys vaihtelee noin 50 ja 130 kilometrin välillä. Lahti on matala ja murtovetinen, koska siihen laskee runsaasti jokivettä, ja useimpina talvina sen pohjukka jäätyy. Helsingissä jäänmurtajat pitävät kaupungin satamaan johtavat väylät auki. Lahden poikki kulkee vilkas laivaliikenne: Helsingistä Tallinnaan on noin kahdeksankymmentä kilometriä. Itäisessä päässä [[Nevan]] suulla sijaitsee [[Pietari]].
+
+### v2-387
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: jäänmurtajat
+VASTAUS: Jäänmurtajat ovat laivoja, joiden runko ja koneisto on suunniteltu jään murtamiseen, jotta muu meriliikenne pääsee kulkemaan talvella. Suomessa jäänmurtajat pitävät talvisin satamiin johtavat väylät auki, koska maan ulkomaankauppa kulkee suurelta osin meriteitse ja [[Suomenlahti]] sekä [[Pohjanlahti]] jäätyvät. Jäänmurtaja murtaa jään yleensä ajamalla keulan jään päälle, jolloin laivan paino rikkoo sen. Valtion jäänmurtajia hoitaa [[Arctia]]-yhtiö. Suomalaiset telakat ovat rakentaneet suuren osan maailman jäänmurtajista, mutta tarkasta osuudesta en ole varma.
+
+### v2-388
+KOHDE: kaupunki:helsinki
+KYSYMYS: Kerro lisää: avantouintia
+VASTAUS: Avantouinti on talvista uintia jäähän sahatussa aukossa eli avannossa. Sitä harrastetaan Suomessa laajalti, usein saunan yhteydessä: kuumasta saunasta mennään avantoon ja takaisin lämpimään. Helsingin [[Kallion]] yleisten saunojen perinne on kulkenut käsi kädessä kylmän veden kanssa, ja talvella osa löylyn jälkeen jäähtyvistä menee pidemmälle: jäähän sahataan neliön muotoinen aukko. Veden lämpötila on lähellä nollaa, joten avannossa ollaan tavallisesti vain muutama minuutti. Terveyshyödyistä kiistellään, ja sydän- tai verenpaineongelmista kärsivän on syytä neuvotella lääkärin kanssa. Harrastajia edustaa muun muassa [[Suomen Talviuimariliitto]].
+
+### v2-389
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: James Finlayson
+VASTAUS: James Finlayson oli skotlantilainen konepajamies, joka oli työskennellyt Pietarissa, ennen kuin hän vuonna 1820 perusti konepajan [[Tammerkosken]] yläjuoksulle. Paikka oli valittu kosken takia: se antoi voiman, jota Suomessa ei muualta saanut. Tarkoitus oli valmistaa kehruukoneita, mutta koneet eivät menneet kaupaksi, joten tehdas alkoi kehrätä itse. Finlayson myi tehtaan vuonna 1836 pietarilaisille liikemiehille [[Carl Samuel Nottbeckille]] ja Georg Adolf Rauchille, ja vasta siitä alkoi tehtaan kasvu. Vuonna 1837 valmistui talo, jota kutsutaan yhä [[Kuusvooninkiksi]]: nimi tulee ruotsin sanoista sex våningar eli kuusi kerrosta.
+
+### v2-390
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Tammerkosken
+VASTAUS: Tammerkoski on Tampereen keskustan halki virtaava koski, joka yhdistää Näsijärven ja Pyhäjärven. Järvien välinen korkeusero on kahdeksantoista metriä, ja se purkautuu kosken kautta. Koski antoi tehtaille voimaa, ja sen rannoille nousivat 1800-luvulla [[Finlaysonin tehdasalue]] länsirannalle ja [[Tampella]] toiselle rannalle. Finlaysonin alueen kuuluisin sali on Plevna, jonne sytytettiin maaliskuussa 1882 sähkövalot ensimmäisenä koko Pohjolassa; virta tuli tehtaan omasta voimalaitoksesta koskessa. Kosken yli kulkee [[Hämeensilta]], joka valmistui nykymuodossaan vuonna 2019 mutta rakennettiin edeltäjänsä, vuoden 1929 kivisillan, näköiseksi. Sillan kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta.
+
+### v2-391
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Mustamakkara
+VASTAUS: Mustamakkara on tamperelainen erikoisuus, makkara, jonka raaka-aineita ovat sianliha, veri ja ryynit, ja siinä on usein mausteita. Se syödään kuumana tavallisesti [[puolukkahillon]] kanssa, ja kaverina on maito. Mustamakkaraa myydään muun muassa [[Tampereen kauppahallissa]] ja torilla. Maku on voimakas ja hieman mausteinen. Veriruoka kuuluu suomalaiseen perinneruokaan, ja toinen tunnettu esimerkki on pohjoisen [[veripalttu]].
+
+### v2-392
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Tampereen kauppahalli
+VASTAUS: Tampereen kauppahalli on Tampereen keskustassa sijaitseva kauppahalli, jossa myydään ruokaa, tuoretuotteita ja paikallisia herkkuja. Se avattiin 1900-luvun alussa, muistini mukaan vuonna 1901, mutta tarkasta vuodesta en ole varma. Halli on paikka, josta saa tamperelaisen [[mustamakkaran]]. Kauppahallit olivat Suomessa 1800-luvun lopulta alkanut perinne: Helsingin [[Vanha kauppahalli]] avattiin vuonna 1889.
+
+### v2-393
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Näsinneula
+VASTAUS: Näsinneula on Tampereen Särkänniemen niemenkärkeen vuonna 1971 avattu näkötorni. Kokonaiskorkeus on 168 metriä, josta itse torniosaa on 134,5 metriä ja loppu on huipun antennimasto. Tornia pidettiin Suomen korkeimpana rakennuksena yli viisikymmentä vuotta, ja näkötornina se on maan korkein yhä. Huipulla on kaksi kerrosta: alempi on näköalatasanne ja ylempi ravintola, joka pyörii akselinsa ympäri, ja yksi kierros kestää tunnin. Aterian aikana ehtii siis nähdä sekä [[Näsijärven]] pohjoiseen että [[Pyhäjärven]] etelään ja niiden välissä koko kaupungin. Tornin juurella on huvipuisto, akvaario ja [[Sara Hildénin taidemuseo]]. Se sijaitsee [[Särkänniemen]] niemellä.
+
+### v2-394
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Särkänniemessä
+VASTAUS: Särkänniemi on Näsijärveen työntyvä niemi Tampereen keskustan tuntumassa. Niemen kärjessä seisoo vuonna 1971 avattu [[Näsinneula]], ja tornin juurella on huvipuisto, akvaario ja [[Sara Hildénin taidemuseo]]. Näsinneula on 168 metriä korkea, ja sen huipulla pyörii ravintola, joka tekee täyden kierroksen tunnissa. Niemeltä avautuvat näkymät [[Näsijärveen]] ja kaupungille, ja alue on yksi Tampereen suosituimmista käyntikohteista.
+
+### v2-395
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Näsijärvelle
+VASTAUS: Näsijärvi on Tampereen pohjoispuolella oleva suuri järvi, jonka vedet virtaavat [[Tammerkosken]] kautta [[Pyhäjärveen]]. Näsijärven ja Pyhäjärven välillä on noin kahdeksantoista metrin korkeusero, ja juuri se on antanut Tammerkoskelle voiman, jota tehtaat käyttivät. Tampere on rakentunut kannakselle järvien väliin, ja Särkänniemen niemi työntyy Näsijärveen. [[Näsinneulan]] huipulta järvi näkyy pohjoisessa. Järvi on tärkeä virkistysalue: sillä liikutaan veneillä ja talvella jäällä hiihtäen.
+
+### v2-396
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Muumimuseo
+VASTAUS: Muumimuseo toimii Tampere-talon tiloissa, ja sen kokoelma perustuu [[Tove Janssonin]] ja hänen kumppaninsa, graafikko [[Tuulikki Pietilän]], vuonna 1986 tekemään lahjoitukseen. Lahjoitus Tampereen taidemuseolle sisälsi yli tuhat piirustusta ja maalausta sekä useita satoja pienoismalleja Muumilaaksosta. Kokoelma oli aluksi esillä nimellä Muumilaakso vuoteen 2016 asti, jolloin se sai nykyisen nimensä ja muutti [[Tampere-talon]] uusiin tiloihin. Tampereella on yhä maailman ainoa Muumimuseo.
+
+### v2-397
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Muumilaakson
+VASTAUS: Muumilaakso on [[Tove Janssonin]] kirjojen kuvitteellinen laakso, jossa [[Muumipeikko]] ja hänen perheensä asuvat. Ensimmäinen muumikirja ilmestyi vuonna 1945, ja Jansson kirjoitti muumiaiheisia teoksia vuosikymmenten ajan. Laakson asukkaita ovat muun muassa Muumipeikko, Muumimamma, Muumipappa, Niiskuneiti ja [[Nuuskamuikkunen]]. Tampereen Muumimuseon kokoelma oli aluksi esillä nimellä Muumilaakso vuoteen 2016 asti. Naantalissa sijaitsee [[Muumimaailma]], muumeihin perustuva teemapuisto.
+
+### v2-398
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Tove Jansson
+VASTAUS: Tove Jansson oli suomenruotsalainen taiteilija ja kirjailija, joka syntyi Helsingissä vuonna 1914 ja kuoli vuonna 2001. Hänet tunnetaan muumikirjojen luojana, mutta hän oli myös maalari ja kuvittaja. Ennen kuin muumeista tuli lastenkirjahahmoja, Jansson piirsi 1930- ja 1940-luvuilla poliittisia pilakuvia ruotsinkieliseen satiirilehteen [[Garm]]; yhdessä kuuluisimmista kuvista Adolf Hitler kuvataan itkevänä vauvana muiden diktaattoreiden keskellä. [[Muumimuseon]] kokoelmassa on yli viisisataa Janssonin kuvitusta ja kansikuvaa tältä ajalta, ennen ensimmäistä muumikirjaa vuodelta 1945. Hän sai vuonna 1966 [[Hans Christian Andersen -palkinnon]].
+
+### v2-399
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: Pyynikinharju
+VASTAUS: Pyynikinharju on Tampereella Näsijärven ja Pyhäjärven välissä kohoava harju, joka nousee noin 160 metriin merenpinnasta ja noin 80 metriä [[Pyhäjärven]] pintaa ylemmäs. Sen sanotaan olevan maailman korkein pitkittäisharju. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun hiekka vierii vuosien mittaan alaspäin. Harjun laella on vuonna 1929 valmistunut [[Pyynikin näkötorni]], 26 metriä korkea ja [[Ahvenanmaalta]] louhitusta punagraniitista tehty, ja sen tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Tornin juurella toimii munkkikahvila, joka on ainakin yhtä kuuluisa kuin näköala.
+
+### v2-400
+KOHDE: kaupunki:tampere
+KYSYMYS: Kerro lisää: munkki
+VASTAUS: Munkki on rasvassa uppopaistettu hiivataikinaleivonnainen, joka on Suomessa tavallisesti pyöreä ja sokerilla kuorrutettu. Se valmistetaan [[hiivataikinasta]], joka nostatetaan ennen paistamista, ja siksi munkki on ilmava ja pehmeä. Tamperelaisessa kahvilakulttuurissa sillä on erityinen asema: [[Pyynikin Munkkikahvila]] on tunnettu isoista, tuoreena tarjottavista munkeistaan, ja jono tiskille voi venyä pitkäksi etenkin viikonloppuisin. Perinteisesti munkki nautitaan kahvin tai maidon kanssa, ja moni syö sen kävelyllä [[Pyynikin näkötornin]] lähimaastossa. En ole varma, minä vuonna kahvila aloitti, mutta se on toiminut vuosikymmeniä.
+
+### v2-401
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: Alvar Aalto
+VASTAUS: Alvar Aalto syntyi vuonna 1898 Kuortaneella ja kuoli Helsingissä 1976. Hän oli suomalainen arkkitehti ja muotoilija, joka tunnetaan modernismin ja inhimillisen, luonnonmateriaaleja suosivan muotokielen yhdistäjänä. Tunnetuimpia töitä ovat [[Paimion parantola]], [[Viipurin kirjasto]] ja Helsingin [[Finlandia-talo]]. Hänen ja vaimonsa Ainon perustama [[Artek]]-yritys toi Aallon kalusteet laajaan jakeluun 1930-luvulla. Rovaniemellä Aallon kädenjälki näkyy paitsi kaupungin asemakaavassa myös kirjastossa ja kulttuuritalossa.
+
+### v2-402
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: poronsarvet
+VASTAUS: Rovaniemen asemakaava laadittiin Lapin sodan jälkeen, kun kaupunki oli suurelta osin tuhoutunut. Aalto sijoitti pääkadut siten, että ne muodostavat kartalla poronsarven muotoisen kuvion, jonka sarvien väliin jää urheilukenttä. Kaavassa kadut hahmottuvat kaupungin keskustasta kohti Kemijoen rantaa, ja uusi rakennuskanta nousi kaavan mukaisesti. En ole varma, kuinka suuri osa Aallon alkuperäisestä suunnitelmasta toteutui sellaisenaan, mutta kuvio on yhä tunnistettavissa kartalta. Aallon suunnittelemia rakennuksia kaupungissa ovat [[Rovaniemen kaupunginkirjasto]] ja [[Lappia-talo]].
+
+### v2-403
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: kaamos
+VASTAUS: Kaamos tarkoittaa aikaa, jolloin aurinko ei nouse lainkaan horisontin yläpuolelle. Tarkasti ottaen se koskee aluetta napapiirin pohjoispuolella, joten Rovaniemellä aurinko nousee pimeimpinäkin joulukuun päivinä muutamaksi tunniksi aivan horisontin tuntumaan, ja valo on silloin hämärää ja pehmeää. Varsinainen kaamos koetaan pohjoisimmassa Lapissa, esimerkiksi [[Utsjoella]], jossa aurinko pysyy pois yli kuukauden. Pimeänä aikana taivas hehkuu usein sinisenä, ja tätä hetkeä kutsutaan [[siniseksi hetkeksi]]. Pitkä pimeys vaikuttaa monen mielialaan, ja Lapissa siihen varaudutaan valoilla ja ulkoilulla.
+
+### v2-404
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: revontulet
+VASTAUS: Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan. Happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Maapallon [[magneettikenttä]] ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille, ja Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla ilmiö näkyy useimmin. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä [[aurora borealis]], ja [[Lapin]] talvimatkailu perustuu pitkälti revontulten katseluun.
+
+### v2-405
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: Joulupukin pajakylä
+VASTAUS: Joulupukin pajakylä sijaitsee Rovaniemellä napapiirin kohdalla, ja sen alueella napapiiri on merkitty näkyvällä viivalla, jonka vierailijat ylittävät. Kylä avattiin 1980-luvun puolivälissä, ja sen tunnetuin osa on [[Joulupukin pääposti]], johon saapuu kirjeitä lapsilta eri puolilta maailmaa. Alueella on myös pieniä myymälöitä, käsityöpajoja ja ravintoloita, ja viereen on rakennettu [[Santa Park]] -niminen huvipuisto. Kylä on avoinna ympäri vuoden, ja sinne on matkaa kaupungin keskustasta vain muutama kilometri. Sijainti [[napapiirin]] tuntumassa tekee paikasta matkailijoille helposti selitettävän: täällä alkaa pohjoinen.
+
+### v2-406
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: Korvatunturilla
+VASTAUS: Korvatunturi on tunturi Itä-Lapissa, [[Savukosken]] kunnan alueella lähellä Venäjän rajaa. Se on noin neljänsadan kahdeksankymmenen metrin korkuinen, mutta en ole aivan varma tarkasta luvusta. Joulupukin kotipaikaksi tunturin nosti Yleisradion toimittaja [[Markus Rautio]], joka kertoi 1920-luvun lopulla radiossa Joulupukin asuvan siellä. Ennen sitä pukin ajateltiin asuvan eri puolilla pohjoista. Tunturi ei ole helposti saavutettavissa, sillä se sijaitsee syrjäisellä raja-alueella, ja sinne vaeltaminen vaatii suunnittelua ja lupia. Tarina on silti tehnyt tunturin tunnetuksi kaikkialla Suomessa, ja [[Yleisradion]] rooli sen levittäjänä on edelleen osa Joulupukin historiaa.
+
+### v2-407
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: poronkäristys
+VASTAUS: Poronkäristys on Lapin tunnetuin ruoka, ja se valmistetaan ohueksi leikatusta [[poronlihaa]] käyttäen. Liha, usein pakastettuna siivutettua, kypsennetään pannulla voissa tai rasvassa vähäisen nesteen kanssa, ja mausteeksi riittävät yleensä suola ja pippuri. Annoksen vakiokumppanit ovat perunamuusi ja [[puolukkahilloa]], jonka hapokkuus tasapainottaa lihan voimakasta makua. Poronliha on Lapissa tuttua, koska [[poronhoito]] on alueen vanha elinkeino, ja poroja pidetään puoliksi vapaina laumoina. Ruoka on yleinen sekä kotona että ravintoloissa, ja se on yksi tavallisimmista tilauksista matkailijoiden pöydissä.
+
+### v2-408
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: leipäjuusto
+VASTAUS: Leipäjuusto, jota kutsutaan myös juustoleiväksi, on suomalainen juustoerikoisuus, joka valmistetaan maidosta juoksuttamalla. Juustomassa puristetaan litteäksi ja paistetaan pinnalta uunissa tai grillissä, jolloin sen pinnalle syntyy tummia paistojälkiä. Perinteisesti sitä on tehty [[Pohjanmaalla]] ja Pohjois-Suomessa. Juusto on tiivistä ja hieman narisevaa, ja sitä tarjoillaan usein lämpimänä [[lakkahillon]] kanssa. Monissa perheissä sitä syödään myös kahvin kanssa. Moderni juustotuotanto on laajentanut sen saatavuutta, ja leipäjuustoa myydään nykyään kaupoissa pakattuna sekä Lapissa että muualla.
+
+### v2-409
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: lakka
+VASTAUS: Lakka eli [[suomuurain]] on pohjoisen soiden marja, joka kypsyy tavallisesti heinä-elokuussa ja muuttuu punaisesta keltaoranssiksi. Se kasvaa kosteilla soilla eikä sitä viljellä juuri lainkaan, joten satoa kerätään luonnosta. Kasvi on herkkä hallalle kukinnan aikaan, ja siksi lakkasato vaihtelee voimakkaasti vuodesta toiseen. Marjan maku on makea, hieman hapan ja aromikas, ja sitä käytetään hillona, kiisselinä ja jälkiruokien täytteenä. Marjastus on Suomessa mahdollista [[jokamiehenoikeuksien]] nojalla lähes kaikilla maa-alueilla, mutta [[lakkahillo]] on silti arvokas ja varsin kallis herkku.
+
+### v2-410
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: Arktikum
+VASTAUS: Arktikum on Rovaniemellä Ounasjoen rannalla sijaitseva rakennus, jossa toimivat [[Lapin maakuntamuseo]] ja [[Arktinen keskus]]. Se avattiin 1990-luvun alussa, ja sen tunnuspiirre on pitkä, lasikattoinen käytävä, joka suuntautuu kohti jokea. Näyttelyissä esitellään pohjoisen luontoa, arktisten alueiden ihmisten elämää ja Lapin asutushistoriaa. Arktinen keskus tekee tutkimusta pohjoisista oloista ja ilmastonmuutoksesta, ja rakennus toimii myös vierailijoiden ja tutkijoiden kohtaamispaikkana. Kokonaisuus tarjoaa laajan kuvan siitä, millaisissa oloissa pohjoisen asukkaat ovat eläneet vuosisatojen ajan.
+
+### v2-411
+KOHDE: kaupunki:lappi
+KYSYMYS: Kerro lisää: saamelaiset
+VASTAUS: Saamelaiset ovat Euroopan unionin alueen ainoa alkuperäiskansa, ja heidän perinteinen asuinalueensa [[Sápmi]] ulottuu Norjan, Ruotsin, Suomen ja Venäjän Kuolan niemimaan pohjoisosiin. Suomessa saamelaisten kotiseutualueeseen kuuluvat Enontekiö, Inari, Utsjoki ja Sodankylän pohjoisosa, ja saamelaisia on maassa noin kymmenentuhatta. Heidän kielensä ovat pohjoissaame, inarinsaame ja koltansaame. Perinteisiä elinkeinoja ovat poronhoito, kalastus ja käsityöt, ja juhlissa käytetään värikästä kansallispukua. [[Saamelaiskäräjät]] edustaa saamelaisia Suomessa kulttuuri-itsehallinnon asioissa, ja [[joiku]] on yksi tunnetuimmista perinteisistä ilmaisumuodoista.
+
+### v2-412
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Bastiljin
+VASTAUS: Bastilji oli Pariisin itäosassa sijainnut keskiaikainen linnoitus, joka rakennettiin 1300-luvun lopulla kaupungin puolustukseksi ja jota käytettiin myöhemmin valtionvankilana. Heinäkuun 14. päivänä 1789 siellä oli vain seitsemän vankia, mutta linnoitus oli muuttunut kuninkaallisen vallan vertauskuvaksi. Pariisilaiset hakivat sieltä ruutia, ja valtauksesta tuli vallankumouksen käännekohta. Linnoitus purettiin pian valtauksen jälkeen, ja sen paikalla on nykyään [[Place de la Bastille]] -aukio. Aukion keskellä seisoo [[Julikuun pylväs]], ja uusi [[Opéra Bastille]] avattiin vuonna 1989 vallankumouksen kaksisataavuotisjuhlien aikaan. Heinäkuun neljästoista on yhä Ranskan kansallispäivä.
+
+### v2-413
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Ihmisoikeuksien ja kansalaisoikeuksien julistus
+VASTAUS: Ihmisoikeuksien ja kansalaisoikeuksien julistuksen hyväksyi Ranskan kansalliskokous elokuun lopulla 1789. Siinä on seitsemäntoista artiklaa, joiden mukaan ihmiset syntyvät ja pysyvät vapaina ja yhtäläisin oikeuksin, ja luonnollisia oikeuksia ovat vapaus, omaisuus, turvallisuus ja sorron vastustaminen. Lain tuli olla kaikille sama, ja valta kuului kansakunnalle. Julistuksen valmisteluun osallistui muun muassa [[Lafayette]], ja sen ajatukset ovat vaikuttaneet myöhempiin ihmisoikeusasiakirjoihin. Naisia julistus ei kuitenkaan käsitellyt yhdenvertaisina, ja siksi [[Olympe de Gouges]] kirjoitti vuonna 1791 vastineeksi naisten oikeuksien julistuksen. Teksti on yhä osa Ranskan perustuslakia.
+
+### v2-414
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Camembert
+VASTAUS: Camembert on Normandiasta peräisin oleva pehmeä, valkohomekuorinen lehmänmaidosta tehty juusto. Nimi tulee [[Normandiassa]] sijaitsevasta Camembertin kylästä. Tarinan mukaan juuston kehittämisessä oli osallisena [[Marie Harel]], normandialainen maanviljelijän vaimo, joka eli 1700-luvun lopulla, mutta tarinan tarkkuudesta en ole varma. Aito [[Camembert de Normandie]] valmistetaan raakamaidosta tiukkojen sääntöjen mukaan ja kuuluu suojattujen alkuperänimien piiriin. Juusto tuli laajasti tunnetuksi 1800-luvun lopulla, kun pyöreät puiset rasiat mahdollistivat sen kuljetuksen kauas. Täysin kypsynyt juusto on sisältä pehmeää ja tuoksultaan voimakasta.
+
+### v2-415
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Roquefort
+VASTAUS: Roquefort on lampaanmaidosta valmistettu sinihomejuusto, jota saa kutsua tuolla nimellä vain, jos se on kypsytetty Roquefort-sur-Soulzonin kylässä [[Combalou]]-vuoren luonnonluolissa. Vuori on aikoinaan sortunut, ja lohkareiden väliin jääneet halkeamat puhaltavat luoliin kosteaa ilmaa ja pitävät lämpötilan tasaisena. Yhteen kiloon juustoa menee noin neljä ja puoli litraa maitoa. [[Kaarle VI]] antoi kyläläisille yksinoikeuden kypsytykseen vuonna 1411, ja Roquefort sai vuonna 1925 ensimmäisenä ranskalaisena juustona virallisen alkuperäsuojan. Juusto on suolainen ja voimakas, ja sen lähtöpaikkana toimii [[Roquefort-sur-Soulzon]].
+
+### v2-416
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Brie
+VASTAUS: Brie on pehmeä, valkohomekuorinen lehmänmaitojuusto, joka on saanut nimensä Brie-alueesta Pariisin itäpuolella. Tunnetuimmat lajit ovat [[Brie de Meaux]] ja [[Brie de Melun]], ja molemmat kuuluvat suojattujen alkuperänimien piiriin. Juusto on sisältä pehmeää ja kermaista, ja sen kuori on syötävä. Sitä on kutsuttu juustojen kuninkaaksi, ja tarinan mukaan [[Talleyrand]] sai Brie de Meaux'n valituksi parhaaksi juustoksi Wienin kongressissa 1800-luvun alussa, mutta tarinan todenperäisyydestä en ole varma. Brie syödään tavallisesti huoneenlämpöisenä leivän, hedelmien tai viinin kanssa.
+
+### v2-417
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Mont Blanc
+VASTAUS: Mont Blanc on Alppien korkein vuori, ja sen huippu kohoaa noin 4 800 metrin korkeuteen merenpinnasta. Ensimmäisen kerran huipulle nousivat vuonna 1786 [[Jacques Balmat]] ja lääkäri [[Michel-Gabriel Paccard]], ja se katsotaan nykyaikaisen alppikiipeilyn alkuhetkeksi. Vuoren juurella sijaitseva Chamonix on pitkään ollut kiipeilijöiden ja hiihtäjien keskus. Vuoren alitse kulkee yli yksitoistakilometrinen [[Mont Blancin tunneli]], joka avattiin liikenteelle 1960-luvun puolivälissä. Huipun tarkka rajanveto Ranskan ja Italian välillä on ollut maiden kesken kiistanalainen, ja kysymys on herättänyt keskustelua vuosikymmeniä.
+
+### v2-418
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Alppien
+VASTAUS: Alpit ovat Euroopan suurin vuoristo, ja se kaartuu yli tuhannen kilometrin matkan Ranskan kaakkoisosista Italian, Sveitsin, Itävallan ja Slovenian halki. Vuoristo syntyi miljoonien vuosien aikana, kun Afrikan ja Euraasian mannerlaatat painuivat toisiaan vasten. Korkein huippu on Mont Blanc, ja tunnettuja huippuja ovat myös Sveitsin ja Italian rajalla kohoava [[Matterhorn]]. Alpeilla on aina ollut merkitystä liikenteelle ja sodankäynnille: karthagolainen [[Hannibal]] marssitti armeijansa norsuineen vuoriston yli Italiaan toisessa puunilaissodassa vuonna 218 eaa. Nykyään vuoristoa uhkaa ilmastonmuutos, sillä alppien [[jäätiköt]] ovat vetäytyneet voimakkaasti.
+
+### v2-419
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Chamonix
+VASTAUS: Chamonix on Ranskan Haute-Savoien alueella Mont Blancin juurella sijaitseva vuoristokaupunki, joka tunnetaan hiihdosta, vuorikiipeilystä ja vaelluksesta. Siellä järjestettiin vuonna 1924 ensimmäiset [[talviolympialaiset]], mikä vakiinnutti sen asemaa talviurheilun keskuksena. Kaupungista pääsee köysiradalla [[Aiguille du Midin]] huipulle, joka on noin 3 800 metrin korkeudessa, ja sieltä avautuu näkymä Mont Blancille. Lähistöllä on myös [[Mer de Glace]] -jäätikkö, Ranskan suurimpia. Kaupungin historia kiipeilykeskuksena alkoi 1700-luvun lopulla, kun matkailijat alkoivat kiinnostua jäätiköistä ja huipuista.
+
+### v2-420
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Champs-Élysées
+VASTAUS: Champs-Élysées on Pariisin tunnetuin katu, ja se kulkee noin kahden kilometrin matkan Place de la Concordelta Riemukaarelle. Nimi tulee kreikkalaisen mytologian autuaiden kentistä, Elysionista. Kadun alue istutettiin puistotieksi 1600-luvulla, ja suunnittelijana pidetään puutarhataiteilija [[André Le Nôtrea]], joka laati myös Tuileries'n puutarhan. Kadun päässä seisoo [[Riemukaari]], jonka Napoleon tilasi ja joka valmistui vuonna 1836. Nykyään kadun varrella on teattereita, kahviloita ja liikkeitä, ja sillä järjestetään Ranskan kansallispäivän sotilasparaati sekä Tour de Francen päätösetappi. Kadun alkupäässä on [[Place de la Concorde]], jonka keskellä seisoo egyptiläinen obeliski.
+
+### v2-421
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: keltaista paitaa
+VASTAUS: Tour de Francen keltainen paita, ranskaksi [[maillot jaune]], on kokonaiskilpailun johtajan tunnus. Se otettiin käyttöön vuonna 1919, ja ensimmäisenä sitä kantoi ranskalainen [[Eugène Christophe]]. Väri valittiin siksi, että kilpailua järjestänyt L'Auto-lehti painettiin keltaiselle paperille. Paita vaihtaa omistajaa jokaisen etapin jälkeen, ja kokonaiskilpailun voittaja saa sen yllä ajaa Pariisiin. Muita tunnuspaitoja ovat pistekilpailun vihreä paita, nuorten valkoinen paita ja mäkikilpailun voittajan [[pilkkupaita]], joka on valkoinen punaisin pilkuin. Keltaisesta paidasta on tullut koko pyöräilyn tunnetuin symboli.
+
+### v2-422
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: L'Auto
+VASTAUS: L'Auto oli Pariisissa 1900-luvun alussa ilmestynyt urheilulehti, jota johti [[Henri Desgrange]]. Lehti perusti Tour de Francen vuonna 1903 lisätäkseen levikkiään kilpailijansa [[Le Vélon]] rinnalla, ja idea osoittautui menestykseksi. Lehti painettiin keltaiselle paperille, mikä antoi aikanaan nimensä kokonaiskilpailun johtajan paidalle. L'Auto lakkasi ilmestymästä toisen maailmansodan lopulla, ja sen perinnön jatkajaksi syntyi urheilulehti [[L'Équipe]], jonka omistuksessa Tour de France on yhä. Lehdellä oli siis ratkaiseva rooli koko kilpailun synnyssä ja sen ensimmäisten vuosikymmenten kehityksessä.
+
+### v2-423
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Académie française
+VASTAUS: Académie française perustettiin vuonna 1635, ja se on Ranskan kielen virallinen vaalija. Sen jäseniä on neljäkymmentä, ja heidät valitaan elinikäisiksi, joten uusi jäsen valitaan vasta, kun yksi istuimista vapautuu. Akatemian tunnetuin tehtävä on sanakirjan, [[Dictionnaire de l'Académie française]], ylläpito. Ensimmäinen painos ilmestyi 1600-luvun lopulla, ja uusinta painosta on valmisteltu vuosikymmeniä. Ensimmäinen naisjäsen oli kirjailija [[Marguerite Yourcenar]], joka valittiin vuonna 1980. Akatemia kuuluu laajempaan [[Institut de France]] -laitokseen, joka kokoaa yhteen useita eri tieteen ja taiteen akatemioita.
+
+### v2-424
+KOHDE: maa:FRA
+KYSYMYS: Kerro lisää: Richelieu
+VASTAUS: Kardinaali Richelieu, Armand Jean du Plessis, eli vuosina 1585–1642 ja toimi Ludvig XIII:n ensimmäisenä ministerinä. Hän vahvisti kuninkaan valtaa, rajoitti ylimystön itsenäisyyttä ja vei läpi keskusvaltaa korostavan politiikan, joka on vaikuttanut Ranskan hallintoon pitkään. Hänen aikanaan kukistettiin protestanttien tukikohta [[La Rochellen]] piiritys vuosina 1627–1628. Vuonna 1635 Ranska liittyi kolmikymmenvuotiseen sotaan, vaikka se oli katolinen maa, koska Richelieu pyrki heikentämään Habsburgeja. Hän perusti myös Académie françaisen, ja hänen asuntonsa oli nimeltään Palais-Cardinal, josta tuli myöhemmin [[Palais-Royal]]. Hän palveli hallitsijaa, jonka nimi oli [[Ludvig XIII]].
+
+### v2-425
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: Île de la Citén
+VASTAUS: Île de la Cité on Seinen keskellä sijaitseva saari, jossa Pariisi sai alkunsa. Siellä asui gallialainen parisii-heimo, ja roomalaiset perustivat paikalle kaupungin nimeltä [[Lutetia]]. Saarella seisovat Notre-Damen lisäksi kuningas Ludvig IX:n 1200-luvulla rakennuttama [[Sainte-Chapelle]], jonka värikkäät lasimaalaukset ovat kuuluisia, sekä [[Conciergerie]], entinen kuninkaanlinna ja myöhemmin vankila. Saaren länsikärjessä on Pariisin vanhin säilynyt silta [[Pont Neuf]], joka valmistui 1600-luvun alussa. Saari on pieni, mutta sen historiallinen merkitys on suuri, sillä siellä sijaitsivat sekä kirkon että oikeuslaitoksen vanhimmat keskukset.
+
+### v2-426
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: Victor Hugo
+VASTAUS: Victor Hugo eli vuosina 1802–1885, ja hän oli Ranskan merkittävimpiä kirjailijoita, runoilijoita ja yhteiskunnallisia vaikuttajia. Hänen tunnetuimpia romaaneitaan ovat vuonna 1831 julkaistu [[Notre-Damen kellonsoittaja]] ja vuonna 1862 ilmestynyt [[Kurjat]]. Hugo vastusti keisari Napoleon III:n valtaa ja eli maanpaossa lähes kahdenkymmenen vuoden ajan, kunnes palasi Ranskaan tasavallan palautuessa vuonna 1870. Hänen kuolemansa jälkeen hänet haudattiin juhlallisin menoin [[Panthéoniin]]. Hugon romaani herätti uutta kiinnostusta keskiaikaisiin rakennuksiin, ja se vaikutti osaltaan Notre-Damen kunnostukseen 1800-luvulla.
+
+### v2-427
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: maailmannäyttelyn
+VASTAUS: Maailmannäyttely oli suuri kansainvälinen näyttely, jossa maat esittelivät teollisuuttaan, tekniikkaansa ja taidettaan. Ensimmäinen järjestettiin Lontoossa vuonna 1851 [[Crystal Palace]] -lasipalatsissa, ja Pariisi isännöi niitä useita, muun muassa vuosina 1855, 1867, 1878, 1889 ja 1900. Vuoden 1889 näyttely juhli vallankumouksen satavuotispäivää, ja sen tunnusmerkiksi nousi Eiffel-torni. Vuoden 1900 näyttelyn perintöä ovat [[Grand Palais]] ja [[Pont Alexandre III]] -silta. Näyttelyt toivat pariisilaisille uutta tekniikkaa, ja monet rakennelmat ovat jääneet kaupunkiin vielä pitkäksi aikaa.
+
+### v2-428
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: Gustave Eiffel
+VASTAUS: Gustave Eiffel eli vuosina 1832–1923, ja hän oli ranskalainen insinööri, joka tunnettiin erityisesti rautarakenteistaan. Ennen tornia hän suunnitteli siltoja ja viadukteja, muun muassa Portossa sijaitsevan [[Maria Pia -sillan]] ja Ranskan keskiosan [[Garabit'n viadukin]]. Hänen toimistonsa teki myös Vapaudenpatsaan sisäisen rautarungon. Eiffel-torni rakennettiin vuosina 1887–1889, ja sen valmistuttua Eiffel jatkoi tieteellisiä kokeita, esimerkiksi tuulen ja ilmanvastuksen tutkimista. Myöhemmällä iällä hän rakensi myös tuulitunnelin, ja hänen töitään pidetään yhtenä [[aerodynamiikan]] varhaisista sovelluksista.
+
+### v2-429
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: croissant
+VASTAUS: Croissant eli voisarvi on kuoreltaan rapea ja sisältä kerroksellinen leivonnainen, joka valmistetaan hiivalla nostatetusta voitaikinasta. Taikinaa taitellaan ja kaulitaan voin kanssa toistuvasti, jolloin syntyvät ohuet kerrokset. Leivonnaisen esikuvana pidetään itävaltalaista [[kipferl]]-leivonnaista, joka tuli Ranskaan 1800-luvulla [[Wienistä]], mutta tarkka historia on osin epäselvä. Nykyisen kaltainen kerroksellinen croissant vakiintui Ranskassa vasta 1900-luvun alkupuolella. Croissant syödään tavallisesti aamiaisella kahvin kanssa, ja sen valmistuksessa vaaditaan tarkkaa lämpötilaa, jotta [[voitaikina]] ei sula ennen uunia.
+
+### v2-430
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: patonki
+VASTAUS: Patonki on pitkä, ohut ja rapeakuorinen vehnäleipä, jonka nimi tarkoittaa ranskaksi sauvaa. Perinteinen patonki valmistetaan vain vehnäjauhoista, vedestä, suolasta ja hiivasta, eikä taikinaa saa pakastaa missään vaiheessa. Pariisissa järjestetään vuodesta 1994 kilpailu [[Grand Prix de la Baguette]], jossa raati arvioi anonyymeja leipiä, ja voittaja toimittaa presidentin [[Élysée-palatsin]] leivät seuraavan vuoden ajan. Leivän pituudelle ja painolle on kilpailussa omat rajansa. Patongin valmistustaito ja kulttuuri lisättiin vuonna 2022 [[UNESCO]]n aineettoman kulttuuriperinnön luetteloon, ja moni ranskalainen ostaa sen päivittäin omasta leipomostaan.
+
+### v2-431
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: brioche
+VASTAUS: Brioche on ranskalainen vehnäleivonnainen, jonka taikinaan lisätään runsaasti voita ja munia. Siksi se on pehmeä, kullanruskea ja hieman makea, muistuttaen jossain määrin suomalaista pullaa. Perinteinen muoto on pieni, pyöreä nupilla koristeltu leivonnainen, jota kutsutaan nimellä [[brioche à tête]]. Leivonnaisen on kerrottu kehittyneen [[Normandiasta]], mutta en ole varma tarkasta alkuperästä. Tunnettu lause syödä briossia on liitetty virheellisesti [[Marie Antoinetten]] nimeen, eikä kuningatar todennäköisesti sanonut sitä koskaan. Briossia syödään aamiaisella, mutta sitä käytetään myös hampurilaispihvin leipänä ja jälkiruokien pohjana.
+
+### v2-432
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: Hector Guimard
+VASTAUS: Hector Guimard syntyi Lyonissa vuonna 1867 ja kuoli vuonna 1942. Hän oli ranskalainen arkkitehti, joka muodosti ranskalaisen jugendtyylin, art nouveaun, tunnetuimman kuvan. Hänen varhainen päätyönsä oli pariisilainen kerrostalo [[Castel Béranger]], joka valmistui 1890-luvun lopulla. Pariisin metron sisäänkäynneistä hän suunnitteli valurautaisia vakio-osia, jotka voitiin koota eri kadunkulmiin sopiviksi. Niitä rakennettiin satoja, ja nykyään noin kahdeksankymmentäkuusi on rauhoitettu. Hyvin säilyneitä näkee esimerkiksi [[Abbessesin]] ja [[Porte Dauphinen]] asemilla. Guimardin tyyli väistyi muodista 1900-luvun alussa, ja hän asui viimeiset vuotensa Yhdysvalloissa.
+
+### v2-433
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: art nouveau
+VASTAUS: Art nouveau on 1890-luvun alusta noin ensimmäiseen maailmansotaan vallinnut tyylisuunta, jossa luonnon muodot, kaareva viiva ja kasviaiheet korvasivat historiallisten tyylien jäljittelyn. Nimi tarkoittaa ranskaksi uutta taidetta, ja se otettiin käyttöön pariisilaisen taidekauppiaan [[Siegfried Bingin]] liikkeen mukaan. Eri maissa tyylillä on oma nimensä: Saksassa Jugendstil, Wienissä Secession ja Suomessa [[jugendiksi]] kutsuttu suuntaus. Tunnettuja edustajia ovat Pariisissa Hector Guimard ja Barcelonassa [[Antoni Gaudí]]. Tyyliä sovellettiin arkkitehtuuriin, huonekaluihin, lasitöihin ja julisteisiin, ja se tuotti rakennuksia, joissa jokaisella yksityiskohdalla oli oma kaarensa.
+
+### v2-434
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: valistuksen
+VASTAUS: Valistus oli 1700-luvun aatteellinen liike, joka korosti järkeä, tiedettä, suvaitsevaisuutta ja ihmisten oikeuksia perinteen ja hallitsijan auktoriteetin sijaan. Ranskassa aikaa kutsutaan nimellä Valon vuosisata, ja sen keskus oli Pariisi, jossa ajattelijat kokoontuivat salonkeihin. Tunnettuja valistusajattelijoita olivat [[Voltaire]], [[Jean-Jacques Rousseau]] ja [[Montesquieu]], joka kehitti ajatusta vallanjaosta. Denis Diderot toimitti yhdessä Jean d'Alembertin kanssa [[Encyclopédien]], suurta tietosanakirjaa, joka ilmestyi 1700-luvun puolivälissä. Valistuksen ajatukset vaikuttivat vahvasti Ranskan vallankumoukseen sekä uusiin perustuslakeihin.
+
+### v2-435
+KOHDE: kaupunki:pariisi
+KYSYMYS: Kerro lisää: kaasuvalaistus
+VASTAUS: Kaasuvalaistus tarkoittaa katujen ja rakennusten valaisemista palavalla kaasulla. Ensimmäisiä katuvalaistusjärjestelmiä rakennettiin Lontoossa 1800-luvun alussa, ja [[Pall Mall]] -katu valaistiin kaasulla vuonna 1807. Pariisiin kaasuvalot yleistyivät 1800-luvun alkupuoliskolla, ja laajimmillaan verkosto oli Haussmannin suurten uudistusten aikaan. Kaasulamput sytytettiin käsin, ja työtä tekivät [[lyhdynsytyttäjät]], jotka kiersivät kaupunkia illoin ja aamuin. Sähkövalaistus tuli kaupunkiin 1870-luvun lopulla, ja ensimmäisiä sähkövaloilla valaistuja katuja oli [[Avenue de l'Opéralla]]. Sähkö korvasi kaasun vähitellen, mutta kaasulamppuja nähtiin vielä vuosikymmeniä.
+
+### v2-436
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: Massalia
+VASTAUS: Massalia oli antiikin kreikkalainen siirtokunta, jonka perustivat foikealaiset merenkulkijat noin vuonna 600 eaa. nykyisen Marseillen paikalle. Kaupunki kasvoi tärkeäksi kauppasatamaksi, ja sen kauppa ulottui [[Rhônea]] pitkin sisämaahan. Massalia oli pitkään Rooman liittolainen, mutta joutui vastakkain [[Caesarin]] kanssa kansalaissodassa, ja Caesar piiritti kaupunkia vuonna 49 eaa. Kaupungista oli kotoisin merenkulkija ja tutkimusmatkailija [[Pytheas]], joka tiettävästi purjehti pohjoiseen Britannian saarille 300-luvulla eaa. Massalia säilyi merkittävänä kulttuurikaupunkina, ja sen kreikkalainen perintö näkyy yhä Marseillen nimessä ja asemassa.
+
+### v2-437
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: Vanhasatama
+VASTAUS: Vanhasatama, ranskaksi Vieux-Port, on Marseillen sydän ja se luonnonsatama, johon kreikkalaiset asettuivat noin 600 eaa. Satama on pitkä, kapea poukama, jonka suuta vartioivat [[Fort Saint-Jean]] ja Fort Saint-Nicolas. Aamuisin satamassa pidetään kalatori, jossa kalastajat myyvät saaliinsa suoraan veneistä. Kukkulalla satamaa hallitsee Notre-Dame de la Garde -basilika. Satama uudistettiin laajasti, kun Marseille oli vuonna 2013 [[Euroopan kulttuuripääkaupungiksi]] nimetty, ja uudistuksen tunnetuin osa on peilikattoinen paviljonki [[L'Ombrière]]. Nykyään alue on kävelyvaltaista tilaa, joka toimii kaupungin olohuoneena.
+
+### v2-438
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: Protis
+VASTAUS: Protis oli antiikin kreikkalainen merenkulkija, jota pidetään Massalian eli nykyisen Marseillen perustajana. Perimätiedon mukaan hän saapui foikealaisten mukana paikalle, jossa paikallisen heimon päällikkö [[Nannos]] järjesti juhlan tyttärensä [[Gyptiksen]] avioliittoa varten. Gyptis valitsi puolisonsa ojentamalla vesimaljan Protisille, ja päällikkö antoi kreikkalaisille maata kaupungin perustamiseen. Tarinan välittää muun muassa roomalainen historioitsija [[Justinus]], jonka lähteenä oli aikaisempi kirjoittaja. Kertomus on legenda, jota ei voi pitää täsmällisenä historiana, mutta se kuvaa Marseillen syntyä ystävällisenä kohtaamisena eikä valloituksena.
+
+### v2-439
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: sahrami
+VASTAUS: Sahrami on maailman kalleimpia mausteita, ja se saadaan [[Crocus sativus]] -kasvin kukan punaisista emin ruodeista. Jokainen kukka antaa vain muutaman ruodin, ja ne poimitaan käsin, minkä vuoksi yhteen grammaan tarvitaan satoja kukkia. Mauste antaa ruoalle voimakkaan keltaisen värin sekä hieman kukkaisen, kitkerän maun. Suurin osa maailman sahramista tuotetaan Iranissa, ja Euroopassa sitä viljellään muun muassa Espanjan [[La Manchassa]]. Sahramia käytetään marseillelaisessa kalakeitossa, [[paellassa]] ja monissa leivonnaisissa. Keittoon riittää vain muutama rihma, ja ne liotetaan ensin lämpimässä nesteessä.
+
+### v2-440
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: rouille
+VASTAUS: Rouille on provencelainen kastike, jonka nimi tarkoittaa ranskaksi ruostetta, ja se viittaa kastikkeen punertavaan väriin. Perusaineet ovat valkosipuli, oliiviöljy, sahrami ja chili, ja kastikkeen sakeuttamiseksi käytetään tavallisesti leivänmuruja tai keitettyä perunaa. Rakenne on lähellä [[aïolia]], mutta rouillessa on voimakkaampi maku ja punaisempi väri. Kastike tarjoillaan perinteisesti [[bouillabaisseen]] kanssa: se levitetään paahdetun leivän päälle, ja leipä upotetaan keittoon. Kastike on tyypillinen [[Provencen]] keittiölle, jossa oliiviöljy, valkosipuli ja yrtit ovat arkisia perusaineita.
+
+### v2-441
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: oliiviöljystä
+VASTAUS: Oliiviöljy puristetaan oliiveista, ja se on Välimeren alueen ruokakulttuurin tärkein rasva. Laadukkain luokka on [[ekstraneitsytoliiviöljy]], joka valmistetaan mekaanisesti ilman kemiallisia apuaineita, ja jonka pitää täyttää tarkat happamuuden sekä maun vaatimukset. Espanja tuottaa noin puolet koko maailman oliiviöljystä, ja suurin osa tulee Andalusian [[Jaénissa]], jossa kasvaa miljoonia puita rivissä. Satoa korjataan talvella, ja öljy puristetaan nopeasti, koska viive heikentää makua. [[Oliivipuu]] elää satoja vuosia ja kestää kuivuutta paremmin kuin useimmat viljelykasvit, mikä tekee siitä tärkeän ilmastonmuutoksen aikana.
+
+### v2-442
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: Provencen
+VASTAUS: Provence on Etelä-Ranskan historiallinen alue Välimeren rannikolla ja Alppien tuntumassa. Nimi tulee roomalaisten käyttämästä sanasta provincia, sillä alue oli Rooman ensimmäisiä provinsseja Alppien pohjoispuolella. Maisemaa hallitsevat laventelipellot, oliivilehdot ja viinitarhat, ja kesäisin laventeli kukkii heinäkuun tienoilla. Alueen historiaan kuuluu [[Avignon]], jossa paavit asuivat 1300-luvulla, sekä roomalainen akvedukti [[Pont du Gard]]. Taidemaalari [[Cézanne]] syntyi Aix-en-Provencessa ja kuvasi alueen vuoria. Alueen tuuli, [[mistral]], puhaltaa pohjoisesta ja voi olla kova ja kylmä.
+
+### v2-443
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: basilika
+VASTAUS: Basilika on alun perin roomalaisten julkinen suurrakennus, jota käytettiin oikeudenkäyntiin ja kauppaan. Myöhemmin nimeä alettiin käyttää kirkkorakennuksista, joiden pohjapiirros noudatti tätä mallia: pitkä keskilaiva ja sivulaivat sekä apsis päädyssä. Nykyään katolisessa kirkossa basilika on myös arvonimi, jonka paavi myöntää tärkeille kirkoille. Rooman suurimpia ovat [[Pietarinkirkko]], [[Lateraanin arkkibasilika]] ja [[Santa Maria Maggiore]]. Pienempiä kirkkoja kutsutaan nimellä basilica minor, ja Marseillen Notre-Dame de la Garde on tällainen arvonimen kantaja, vaikka en ole varma arvonimen tarkasta ajankohdasta.
+
+### v2-444
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: Neitsyt Marian
+VASTAUS: Neitsyt Maria on Jeesuksen äiti, ja hän on kristinuskossa erityisen kunnioitettu henkilö etenkin katolisessa ja ortodoksisessa kirkossa. Hänen kunniakseen on pyhitetty lukemattomia kirkkoja, ja hänen nimeään kantaa myös Marseillen basilika. Kirkkovuodessa Marian elämään liittyy useita juhlia, kuten [[Marian ilmestyspäivä]] maaliskuun lopulla sekä [[Marian taivaaseenastumisen]] juhla elokuun puolivälissä. Ranskassa tunnettu pyhiinvaelluskohde on [[Lourdesin]] luola, jossa Neitsyt Marian kerrotaan ilmestyneen nuorelle tytölle vuonna 1858. Myös islamissa Maria, Maryam, on arvostettu hahmo.
+

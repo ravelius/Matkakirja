@@ -1,0 +1,1456 @@
+### 881
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Pastizzi täyttää aamun] nykyään — Maltalaisessa pastizzerijassa aamu alkaa pastizzeista. Piiras on suikea tai pyöreä, ja sen taikina muistuttaa kreikkalaista filotaikinaa, vaikka lehtitaikinaversiokin on olemassa. Perinteisiä täytteitä on kaksi: ricotta eli irkotta tai currylla maustetut herneet eli piżelli. Täytteen tunnistaa taitteesta, sillä ricottapiiraat taitetaan keskeltä ja hernepiiraat sivulta. Kylissä pastizzit ovat suosittu aamiainen. Maltaksi hyvin kaupaksi menevän tuotteen sanotaan myyvän kuin pastizzi.
+AIEMPI KYSYMYS: Mitä maltalaiset syövät ja juovat?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä asiassa minulla on mielipiteitä. Maltalaisten arkeen kuuluu [[pastizzi]], juustolla tai herneillä täytetty lehtitaikinatasku, jota syödään usein välipalana. Perinteinen jokapäiväinen pata on [[stuffat tal-fenek]], kaniinipata viinin ja tomaatin kanssa. Virvoitusjuomista suosittu on [[Kinnie]], katkerahko appelsiininen limonadi. Ruokakulttuuriin on vaikuttanut Sisilia ja Italia. Pastizzi on sentään lähinnä pullaa, mitä täältä saa.
+KYSYMYS: Kerro lisää: pastizzi
+
+### 882
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Kaniinipata kapinan makuna] n. 1700-luku — Stuffat tal-fenek, kaniinipata, on Maltan kansallisruoka. Sen uskotaan saaneen alkunsa hiljaisena vastarintana: Pyhän Johanneksen ritarit rajoittivat metsästystä ja varasivat riistan itselleen, joten kaniinin syöminen oli pienoista uhmaa. Ruoka yleistyi 1700-luvun lopulla, kun rajoitukset purettiin, saarten oma Tax-Xiber-kaniini oli lisääntynyt ja hinnat laskivat. Kesyjen kaniinien kasvatuksen arvellaan levinneen Maltalle ranskalaisten ritarien mukana. Ruokalajin nimessä fenek tarkoittaa kaniinia.
+AIEMPI KYSYMYS: Mitä maltalaiset syövät ja juovat?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä asiassa minulla on mielipiteitä. Maltalaisten arkeen kuuluu [[pastizzi]], juustolla tai herneillä täytetty lehtitaikinatasku, jota syödään usein välipalana. Perinteinen jokapäiväinen pata on [[stuffat tal-fenek]], kaniinipata viinin ja tomaatin kanssa. Virvoitusjuomista suosittu on [[Kinnie]], katkerahko appelsiininen limonadi. Ruokakulttuuriin on vaikuttanut Sisilia ja Italia. Pastizzi on sentään lähinnä pullaa, mitä täältä saa.
+KYSYMYS: Kerro lisää: stuffat tal-fenek
+
+### 883
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+AIEMPI KYSYMYS: Mitä maltalaiset syövät ja juovat?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä asiassa minulla on mielipiteitä. Maltalaisten arkeen kuuluu [[pastizzi]], juustolla tai herneillä täytetty lehtitaikinatasku, jota syödään usein välipalana. Perinteinen jokapäiväinen pata on [[stuffat tal-fenek]], kaniinipata viinin ja tomaatin kanssa. Virvoitusjuomista suosittu on [[Kinnie]], katkerahko appelsiininen limonadi. Ruokakulttuuriin on vaikuttanut Sisilia ja Italia. Pastizzi on sentään lähinnä pullaa, mitä täältä saa.
+KYSYMYS: Kerro lisää: Kinnie
+
+### 884
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Miksi Valletta perustettiin vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuonna 1565 osmanit piirittivät Maltaa neljä kuukautta, ja ritarikunnan suurmestari [[Jean Parisot de Valette]] johti puolustusta. Piirityksen jälkeen ritarikunta halusi rakentaa uuden, vahvasti linnoitetun kaupungin, ja paikaksi valittiin [[Sciberrasin niemi]] kahden sataman välillä. Kaupunki rakennettiin ruutukaavalla, ja sen perustaminen aloitettiin vuonna 1566. Nimi tulee suurmestarilta, joka ei elänyt nähdäkseen sitä valmiina. Pitkälle meni nuo kivet jo silloin.
+KYSYMYS: Kerro lisää: Jean Parisot de Valette
+
+### 885
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Pyhä Elmo 1565 — viimeinen aamu muurilla] 23.6.1565 — Onko tänä aamuna enää mitään puolustettavaa? Pyhän Elmon linnakkeen viimeiset puolustajat, uupuneita ja lähes kaikki haavoittuneita, ovat taistelleet kaksikymmentäkahdeksan päivää Mustafa Pashan tykistöä ja jatkuvia rynnäköitä vastaan pienellä hiekkakivilinnakkeella Sciberras-niemen kärjessä. Torstaina 23. kesäkuuta 1565 osmanijoukot murtautuvat vihdoin sisään, ja suurmestari Jean de Vallette, joka on yöllä lähettänyt viestejä uimarien mukana linnakkeen ja pääkaupungin Birgun välillä, tietää jo, ettei apua ehdi tulla ajoissa. Lähes koko St Elmon noin 1 500 hengen varuskunta kaatuu tai teloitetaan; muutama ritari onnistuu uimaan yli sataman. Osmaanit menettävät piirityksessä vall…
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+AIEMPI KYSYMYS: Miksi Valletta perustettiin vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuonna 1565 osmanit piirittivät Maltaa neljä kuukautta, ja ritarikunnan suurmestari [[Jean Parisot de Valette]] johti puolustusta. Piirityksen jälkeen ritarikunta halusi rakentaa uuden, vahvasti linnoitetun kaupungin, ja paikaksi valittiin [[Sciberrasin niemi]] kahden sataman välillä. Kaupunki rakennettiin ruutukaavalla, ja sen perustaminen aloitettiin vuonna 1566. Nimi tulee suurmestarilta, joka ei elänyt nähdäkseen sitä valmiina. Pitkälle meni nuo kivet jo silloin.
+KYSYMYS: Kerro lisää: Sciberrasin niemi
+
+### 886
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon ”Johannes Kastajan mestauksen” — ainoan teoksensa, jonka hä…
+AIEMPI KYSYMYS: Mitä Pyhän Johanneksen konkatedraalin sisällä on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, ulkoa se näyttää vaatimattomalta. Sisältä Pyhän Johanneksen konkatedraali on kuitenkin täynnä kullattuja koristeita, maalauksia ja marmorilaattoja, joiden alla ritarikunnan jäseniä on haudattu. Kirkon rukoushuoneessa on [[Caravaggion]] maalaama teos [[Johannes Kastajan mestaus]], jota pidetään yhtenä Maltan kuuluisimmista taideteoksista. Sisustuksen suuri tyyli on peräisin ritarikunnan ajalta. Jos katosta olisi saanut lentää, olisin lentänyt.
+KYSYMYS: Kerro lisää: Caravaggion
+
+### 887
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Mitä Pyhän Johanneksen konkatedraalin sisällä on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, ulkoa se näyttää vaatimattomalta. Sisältä Pyhän Johanneksen konkatedraali on kuitenkin täynnä kullattuja koristeita, maalauksia ja marmorilaattoja, joiden alla ritarikunnan jäseniä on haudattu. Kirkon rukoushuoneessa on [[Caravaggion]] maalaama teos [[Johannes Kastajan mestaus]], jota pidetään yhtenä Maltan kuuluisimmista taideteoksista. Sisustuksen suuri tyyli on peräisin ritarikunnan ajalta. Jos katosta olisi saanut lentää, olisin lentänyt.
+KYSYMYS: Kerro lisää: Johannes Kastajan mestaus
+
+### 888
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kohdekartta / Kohdekartta: Queens Gardens] 1904 Queens Gardens on karkeasti kolmion muotoinen puu- ja nurmialue aivan Warehouse Precinctin pohjoispäässä, noin kaksisataa metriä itään Exchangesta, joka oli kaupungin vanha kauppakeskus Princes Streetillä. Puisto seisoo täyttömaalla hyvin lähellä sitä paikkaa, johon maorien waka-kanootit aikanaan rantautuivat; lahden osa täytettiin 1800-luvun viimeisinä vuosina. Aluetta kutsuttiin aluksi nimellä The Triangle, se nimettiin virallisesti Victoria Gardensiksi 1904 ja siitä tuli puhekielessä Queenʼs Gardens. Puistoa hallitsee kaupungin päämuistomerkki, 28 metriä korkea kahdeksankulmainen kenotafi, joka rakennettiin 1924–1927. Sen vieressä on pienempi muistomerkki, johon on kirjattu Uuden-Se…
+- [Colombo — kohdekartta / Kohdekartta: Punainen moskeija] 1908–1909 Jami Ul-Alfarin moskeija Pettahin Second Cross Streetillä on Colombon vanhimpia moskeijoita. Sen tilasi kaupunginosan intialaistaustainen muslimiyhteisö omia päivittäisiä rukoushetkiään ja perjantairukousta varten. Rakentaminen alkoi 1908 ja rakennus valmistui 1909. Suunnittelija ja rakentaja oli Habibu Lebbe Saibu Lebbe, joka ei ollut käynyt koulua eikä opiskellut arkkitehtuuria: hän työskenteli niiden kuvien varassa, joita eteläintialaiset kauppiaat toivat hänelle indo-saraseenisista rakennuksista. Lopputulos on sekoitus: pohjana on indo-islamilainen ja intialainen perinne, ja siihen on yhdistetty uusgotiikkaa ja uusklassisia piirteitä. Talo on kaksikerroksinen, punavalkoisin ra…
+AIEMPI KYSYMYS: Mitä jälkiä britit ovat jättäneet Maltalle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Britit hallitsivat Maltaa 1800-luvun alusta vuoteen 1964, ja vaikutus näkyy edelleen. Englanti on maltan rinnalla toinen virallinen kieli, ja liikenne kulkee vasemmanpuoleisena. Toisen maailmansodan pommitusten jälkeen kuningas Yrjö VI myönsi saarelle [[George Cross]] -kunniamerkin urheudesta. [[Grand Harbour]] oli pitkään Britannian laivaston tärkeä tukikohta Välimerellä. Täältä minä katsoin laivojen laskevan ankkuriin ja ajattelin: kylläpä on siistiä.
+KYSYMYS: Kerro lisää: George Cross
+
+### 889
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Linnake Grand Harbourin sydämessä] n. 1530–1690-luku — Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina 1800–1979.
+AIEMPI KYSYMYS: Mitä jälkiä britit ovat jättäneet Maltalle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Britit hallitsivat Maltaa 1800-luvun alusta vuoteen 1964, ja vaikutus näkyy edelleen. Englanti on maltan rinnalla toinen virallinen kieli, ja liikenne kulkee vasemmanpuoleisena. Toisen maailmansodan pommitusten jälkeen kuningas Yrjö VI myönsi saarelle [[George Cross]] -kunniamerkin urheudesta. [[Grand Harbour]] oli pitkään Britannian laivaston tärkeä tukikohta Välimerellä. Täältä minä katsoin laivojen laskevan ankkuriin ja ajattelin: kylläpä on siistiä.
+KYSYMYS: Kerro lisää: Grand Harbour
+
+### 890
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Linnake Grand Harbourin sydämessä] n. 1530–1690-luku — Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina 1800–1979.
+AIEMPI KYSYMYS: Mikä Upper Barrakka on ja mitä sieltä näkee?
+AIEMPI VASTAUS (Livia):
+Mmm— tänne minä laskeudun mielelläni. Upper Barrakka on puutarha Vallettan muurin päällä, ja sieltä avautuu laaja näkymä [[Grand Harbourin]] yli vastarannan kaupunkeihin. Puutarhassa on perinteinen tykkien tervehdys, jota ammutaan päivittäin keskipäivällä ja iltapäivällä, ja ääni kuuluu pitkälle. Puutarha on osa [[Vallettan linnoitusten]] kokonaisuutta. Maisema on sellainen, että kyyhkykin pysähtyy.
+KYSYMYS: Kerro lisää: Grand Harbourin
+
+### 891
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Valletta — kaupunkilehti / Historia: Ritarikunnan loppu ja ranskalaisten kaksi vuotta] Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. syyskuuta 1800, kun heidän ruokavaransa…
+AIEMPI KYSYMYS: Mikä Upper Barrakka on ja mitä sieltä näkee?
+AIEMPI VASTAUS (Livia):
+Mmm— tänne minä laskeudun mielelläni. Upper Barrakka on puutarha Vallettan muurin päällä, ja sieltä avautuu laaja näkymä [[Grand Harbourin]] yli vastarannan kaupunkeihin. Puutarhassa on perinteinen tykkien tervehdys, jota ammutaan päivittäin keskipäivällä ja iltapäivällä, ja ääni kuuluu pitkälle. Puutarha on osa [[Vallettan linnoitusten]] kokonaisuutta. Maisema on sellainen, että kyyhkykin pysähtyy.
+KYSYMYS: Kerro lisää: Vallettan linnoitusten
+
+### 892
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Vallettan kaupunkisuunnitelman laati italialainen sotilasinsinööri [[Francesco Laparelli]], jonka ritarikunta kutsui apuun piirityksen jälkeen. Kaupunki rakennettiin säännölliseen ruutukaavaan [[Sciberrasin niemelle]], ja katujen päät avautuvat usein merelle päin. Kadut nousevat ja laskevat jyrkkinä portaina, koska niemi on kumpuileva. Linnoitukset suojaavat kahta satamaa, [[Grand Harbouria]] ja [[Marsamxettia]]. Viivoitin ja kalkkikivi, siinä koko resepti.
+KYSYMYS: Kerro lisää: Francesco Laparelli
+
+### 893
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Pyhä Elmo 1565 — viimeinen aamu muurilla] 23.6.1565 — Onko tänä aamuna enää mitään puolustettavaa? Pyhän Elmon linnakkeen viimeiset puolustajat, uupuneita ja lähes kaikki haavoittuneita, ovat taistelleet kaksikymmentäkahdeksan päivää Mustafa Pashan tykistöä ja jatkuvia rynnäköitä vastaan pienellä hiekkakivilinnakkeella Sciberras-niemen kärjessä. Torstaina 23. kesäkuuta 1565 osmanijoukot murtautuvat vihdoin sisään, ja suurmestari Jean de Vallette, joka on yöllä lähettänyt viestejä uimarien mukana linnakkeen ja pääkaupungin Birgun välillä, tietää jo, ettei apua ehdi tulla ajoissa. Lähes koko St Elmon noin 1 500 hengen varuskunta kaatuu tai teloitetaan; muutama ritari onnistuu uimaan yli sataman. Osmaanit menettävät piirityksessä vall…
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Vallettan kaupunkisuunnitelman laati italialainen sotilasinsinööri [[Francesco Laparelli]], jonka ritarikunta kutsui apuun piirityksen jälkeen. Kaupunki rakennettiin säännölliseen ruutukaavaan [[Sciberrasin niemelle]], ja katujen päät avautuvat usein merelle päin. Kadut nousevat ja laskevat jyrkkinä portaina, koska niemi on kumpuileva. Linnoitukset suojaavat kahta satamaa, [[Grand Harbouria]] ja [[Marsamxettia]]. Viivoitin ja kalkkikivi, siinä koko resepti.
+KYSYMYS: Kerro lisää: Sciberrasin niemelle
+
+### 894
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [null — kohdekartta / Kohdekartta: Bahrain Financial Harbour] 2000-luvun alusta Bahrain Financial Harbour on kaupallinen rantakompleksi Manaman pohjoisrannalla King Faisal Highwayn varrella. Se on rakennettu pääosin täytemaalle entisen Manaman laiturin paikalle. Rakentaminen alkoi 2000-luvun alussa, ja tornit valmistuivat 2000-luvun puolivälissä. Kompleksin kaksi päätornia ovat yli 250 metriä korkeat, ja niissä on yli 50 kerrosta. Torneissa toimii pankkeja ja kansainvälisiä yrityksiä. Harbour Gate -rakennuksessa toimii Bahrainin pörssi. Finanssikriisi viivästytti joitakin hankkeen osia. Isoisän matkavuonna 1873 kompleksia ei vielä ollut.
+- [bridgetown — kaupunkilehti / Bridgetown: Kaupunki kahden sataman välissä] Careenage ja suuri kauppasatama ovat eri paikkoja. Keskustan vesiväylässä liikkuu pienveneitä, kun taas risteily- ja rahtialukset käyttävät Deep Water Harbouria Carlisle Bayn toisella puolella. Nimet voivat hämätä: Constitution River liittyy Careenageen, ei suureen satama-altaaseen. Parlamentin edustalla kuljetaan siltojen yli, mutta suuret alukset tarvitsevat toisenlaiset laiturit.
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Vallettan kaupunkisuunnitelman laati italialainen sotilasinsinööri [[Francesco Laparelli]], jonka ritarikunta kutsui apuun piirityksen jälkeen. Kaupunki rakennettiin säännölliseen ruutukaavaan [[Sciberrasin niemelle]], ja katujen päät avautuvat usein merelle päin. Kadut nousevat ja laskevat jyrkkinä portaina, koska niemi on kumpuileva. Linnoitukset suojaavat kahta satamaa, [[Grand Harbouria]] ja [[Marsamxettia]]. Viivoitin ja kalkkikivi, siinä koko resepti.
+KYSYMYS: Kerro lisää: Grand Harbouria
+
+### 895
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valletta (kaupunki)
+Tietoruudun teksti: Valletta on brittiläisen Maltan pääkaupunki kapealla kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin rauha 1814 vahvisti Maltan kruununsiirtomaaksi; kaupunki on nyt tärkeä laivastotukikohta, josta kuningatar Victorian laivasto valvoo koko Välimerta.
+
+Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari Jean Parisot de Valette, joka vuotta aiemmin oli johtanut ritarikunnan puolustusta osmanien nelikuukautista suurta piiritystä vastaan. Uusi kaupunki nousi ennen lähes asumattomalle Sciberrasin niemelle säännölliseen ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan.
+
+Kaduilla kohtaavat maltan kieli, italia ja englanti. Keskustaa hallitsee Pyhän Johanneksen konkatedraali, jonka koruton hiekkakivijulkisivu kätkee ylellisen sisustuksen, ja ritarikunna…
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Vallettan kaupunkisuunnitelman laati italialainen sotilasinsinööri [[Francesco Laparelli]], jonka ritarikunta kutsui apuun piirityksen jälkeen. Kaupunki rakennettiin säännölliseen ruutukaavaan [[Sciberrasin niemelle]], ja katujen päät avautuvat usein merelle päin. Kadut nousevat ja laskevat jyrkkinä portaina, koska niemi on kumpuileva. Linnoitukset suojaavat kahta satamaa, [[Grand Harbouria]] ja [[Marsamxettia]]. Viivoitin ja kalkkikivi, siinä koko resepti.
+KYSYMYS: Kerro lisää: Marsamxettia
+
+### 896
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Miksi Prokletije-vuoriston nimi tarkoittaa kirottuja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimen alkuperästä ei ole yhtä varmaa selitystä, mutta sen tulkitaan viittaavan vuoriston ankaraan ja vaikeakulkuiseen maastoon. Montenegron puolella vuoriston korkein huippu on [[Zla Kolata]], 2 534 metriä, vaikka koko vuoriston korkein huippu [[Maja Jezercë]] on Albanian puolella. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä noin 20 jäätikköjärveä, kuten [[Hridsko jezero]]. Kirottu tai ei, katolta se näyttää ihan kauniilta.
+KYSYMYS: Kerro lisää: Zla Kolata
+
+### 897
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Miksi Prokletije-vuoriston nimi tarkoittaa kirottuja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimen alkuperästä ei ole yhtä varmaa selitystä, mutta sen tulkitaan viittaavan vuoriston ankaraan ja vaikeakulkuiseen maastoon. Montenegron puolella vuoriston korkein huippu on [[Zla Kolata]], 2 534 metriä, vaikka koko vuoriston korkein huippu [[Maja Jezercë]] on Albanian puolella. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä noin 20 jäätikköjärveä, kuten [[Hridsko jezero]]. Kirottu tai ei, katolta se näyttää ihan kauniilta.
+KYSYMYS: Kerro lisää: Maja Jezercë
+
+### 898
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Miksi Prokletije-vuoriston nimi tarkoittaa kirottuja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimen alkuperästä ei ole yhtä varmaa selitystä, mutta sen tulkitaan viittaavan vuoriston ankaraan ja vaikeakulkuiseen maastoon. Montenegron puolella vuoriston korkein huippu on [[Zla Kolata]], 2 534 metriä, vaikka koko vuoriston korkein huippu [[Maja Jezercë]] on Albanian puolella. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä noin 20 jäätikköjärveä, kuten [[Hridsko jezero]]. Kirottu tai ei, katolta se näyttää ihan kauniilta.
+KYSYMYS: Kerro lisää: Hridsko jezero
+
+### 899
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+AIEMPI KYSYMYS: Mikä Skutarijärvi on ja miksi se on tärkeä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Skutarijärvi on Montenegron ja Albanian rajalla sijaitseva suuri järvi, joka on yksi Balkanin suurimmista. Montenegron puoli on kansallispuistoa, ja kosteikot ovat tärkeä pesimä- ja levähdyspaikka vesilinnuille. Järven rannalla sijaitsee pieni [[Virpazarin]] kylä, josta lähtevät veneretket kosteikoille. Rajan toisella puolella järvi jatkuu [[Albanian]] alueelle. Vesilinnut ovat minun silmissäni vähän kuin kaukaisia serkkuja.
+KYSYMYS: Kerro lisää: Virpazarin
+
+### 900
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Mikä Skutarijärvi on ja miksi se on tärkeä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Skutarijärvi on Montenegron ja Albanian rajalla sijaitseva suuri järvi, joka on yksi Balkanin suurimmista. Montenegron puoli on kansallispuistoa, ja kosteikot ovat tärkeä pesimä- ja levähdyspaikka vesilinnuille. Järven rannalla sijaitsee pieni [[Virpazarin]] kylä, josta lähtevät veneretket kosteikoille. Rajan toisella puolella järvi jatkuu [[Albanian]] alueelle. Vesilinnut ovat minun silmissäni vähän kuin kaukaisia serkkuja.
+KYSYMYS: Kerro lisää: Albanian
+
+### 901
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Muuri joka kiipeää vuorelle] 9.–18. vuosisata — Kotor kätkeytyy Euroopan eteläisimmän vuonon perukkaan, jyrkkien vuorten ja meren väliin. Kaupunki on ollut asutettu yli 2000 vuotta, ja roomalaiset, bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit ovat jättäneet siihen jälkensä – vanhankaupungin sydämessä kohoaa vuonna 1166 vihitty Pyhän Tryphonin katedraali. Suurin osa muureista nousi venetsialaisvallan aikana: ne kiipeävät 260 metrin korkeuteen kaupungin yllä, ja pituutta niillä on lähes 4,5 kilometriä. Unesco listasi Kotorin maailmanperinnöksi jo 1979, ja 2017 muurit liitettiin vielä venetsialaisten puolustusrakennelmien sarjaan.
+AIEMPI KYSYMYS: Mikä Kotorinlahti on ja miksi se on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kotorinlahti on Montenegron rannikolla oleva syvälle sisämaahan pistävä merenlahti, jota ympäröivät jyrkät vuoret. Se on usein sanottu Euroopan eteläisimmäksi vuonoksi, mutta oikeasti kyse on jokilaakson muovaamasta lahdesta, ja asiasta on eri näkemyksiä. Lahden pohjukassa sijaitseva [[Kotorin vanhakaupunki]] on ollut vuodesta 1979 [[Unescon maailmanperintökohde]]. Lahden rannalla on myös [[Perast]], pieni barokkikaupunki, jossa on merellä kaksi pientä kirkkosaarta. Hienoa katsottavaa ylhäältä, vaikka vuoret ovat tiellä.
+KYSYMYS: Kerro lisää: Kotorin vanhakaupunki
+
+### 902
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Kotorinlahti on ja miksi se on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kotorinlahti on Montenegron rannikolla oleva syvälle sisämaahan pistävä merenlahti, jota ympäröivät jyrkät vuoret. Se on usein sanottu Euroopan eteläisimmäksi vuonoksi, mutta oikeasti kyse on jokilaakson muovaamasta lahdesta, ja asiasta on eri näkemyksiä. Lahden pohjukassa sijaitseva [[Kotorin vanhakaupunki]] on ollut vuodesta 1979 [[Unescon maailmanperintökohde]]. Lahden rannalla on myös [[Perast]], pieni barokkikaupunki, jossa on merellä kaksi pientä kirkkosaarta. Hienoa katsottavaa ylhäältä, vaikka vuoret ovat tiellä.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+
+### 903
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+AIEMPI KYSYMYS: Mikä Kotorinlahti on ja miksi se on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kotorinlahti on Montenegron rannikolla oleva syvälle sisämaahan pistävä merenlahti, jota ympäröivät jyrkät vuoret. Se on usein sanottu Euroopan eteläisimmäksi vuonoksi, mutta oikeasti kyse on jokilaakson muovaamasta lahdesta, ja asiasta on eri näkemyksiä. Lahden pohjukassa sijaitseva [[Kotorin vanhakaupunki]] on ollut vuodesta 1979 [[Unescon maailmanperintökohde]]. Lahden rannalla on myös [[Perast]], pieni barokkikaupunki, jossa on merellä kaksi pientä kirkkosaarta. Hienoa katsottavaa ylhäältä, vaikka vuoret ovat tiellä.
+KYSYMYS: Kerro lisää: Perast
+
+### 904
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+AIEMPI KYSYMYS: Miksi Montenegro tarkoittaa mustaa vuorta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nimi on hauska. Montenegro on venetsialainen muoto sanoista musta vuori, ja paikallinen nimi on [[Crna Gora]], joka tarkoittaa samaa. Nimen arvellaan viittaavan [[Lovćen]]-vuoren tummiin metsiin, mutta selityksiä on useita eikä asiasta ole täyttä varmuutta. Lovćenin juurella on vanha kuninkaallinen pääkaupunki [[Cetinje]], joka on yhä maan kulttuurikeskus. Maa tunnettiin pitkään vuoristolaisten linnakkeena. Musta vuori kuulostaa dramaattiselta, mutta pullaa siellä kyllä leivottiin.
+KYSYMYS: Kerro lisää: Crna Gora
+
+### 905
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Miksi Montenegro tarkoittaa mustaa vuorta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nimi on hauska. Montenegro on venetsialainen muoto sanoista musta vuori, ja paikallinen nimi on [[Crna Gora]], joka tarkoittaa samaa. Nimen arvellaan viittaavan [[Lovćen]]-vuoren tummiin metsiin, mutta selityksiä on useita eikä asiasta ole täyttä varmuutta. Lovćenin juurella on vanha kuninkaallinen pääkaupunki [[Cetinje]], joka on yhä maan kulttuurikeskus. Maa tunnettiin pitkään vuoristolaisten linnakkeena. Musta vuori kuulostaa dramaattiselta, mutta pullaa siellä kyllä leivottiin.
+KYSYMYS: Kerro lisää: Lovćen
+
+### 906
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historian hetki: Obod 1494 — musteen viimeinen arkki] 4.1.1494 — Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka eteläslaavila…
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Miksi Montenegro tarkoittaa mustaa vuorta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nimi on hauska. Montenegro on venetsialainen muoto sanoista musta vuori, ja paikallinen nimi on [[Crna Gora]], joka tarkoittaa samaa. Nimen arvellaan viittaavan [[Lovćen]]-vuoren tummiin metsiin, mutta selityksiä on useita eikä asiasta ole täyttä varmuutta. Lovćenin juurella on vanha kuninkaallinen pääkaupunki [[Cetinje]], joka on yhä maan kulttuurikeskus. Maa tunnettiin pitkään vuoristolaisten linnakkeena. Musta vuori kuulostaa dramaattiselta, mutta pullaa siellä kyllä leivottiin.
+KYSYMYS: Kerro lisää: Cetinje
+
+### 907
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historia: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee ”olen Berliinin porvarien sinetti”. Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee ”olen Berliinin porvarien sinetti”. Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Milloin Montenegrosta tuli itsenäinen valtio?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Montenegro tunnustettiin itsenäiseksi ruhtinaskunnaksi [[Berliinin kongressissa]] vuonna 1878. Myöhemmin maa oli osa [[Jugoslaviaa]], ja viimeisenä vaiheena Serbian kanssa muodostetun valtioliiton jäsen. Kansanäänestys toukokuussa 2006 johti itsenäisyysjulistukseen kesäkuussa 2006, joten nykyinen itsenäinen valtio on nuori. Maan valuutta on euro, vaikka se ei kuulu euroalueeseen virallisesti. Ei hassumpaa lentomatkaa tuohon historiaan.
+KYSYMYS: Kerro lisää: Berliinin kongressissa
+
+### 908
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Montenegro (maa)
+Tietoruudun teksti: Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan valuutta on euro.
+AIEMPI KYSYMYS: Milloin Montenegrosta tuli itsenäinen valtio?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Montenegro tunnustettiin itsenäiseksi ruhtinaskunnaksi [[Berliinin kongressissa]] vuonna 1878. Myöhemmin maa oli osa [[Jugoslaviaa]], ja viimeisenä vaiheena Serbian kanssa muodostetun valtioliiton jäsen. Kansanäänestys toukokuussa 2006 johti itsenäisyysjulistukseen kesäkuussa 2006, joten nykyinen itsenäinen valtio on nuori. Maan valuutta on euro, vaikka se ei kuulu euroalueeseen virallisesti. Ei hassumpaa lentomatkaa tuohon historiaan.
+KYSYMYS: Kerro lisää: Jugoslaviaa
+
+### 909
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kohdekartta / Kohdekartta: Sarajevon katedraali] 1884–1889 Sarajevon suurin katolinen kirkko, Pyhän Sydämen katedraali, kohoaa kahdella tornillaan keskustan sydämessä. Rakennustyöt alkoivat vuonna 1884, ja kirkko vihittiin käyttöön jo viiden vuoden kuluttua, vuonna 1889. Arkkitehti Josip Vancaš otti mallia kaukaisesta Ranskan Dijonista, Notre-Damen kirkosta, ja niin Sarajevoon syntyi oma pieni sisarrakennus sille. Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja koko rakennus on lähes 42 metriä pitkä. Sen suippokaariset ikkunat ja pyöreät tornit ovat niin tunnettuja, että ne on kuvattu Sarajevon kaupungin vaakunassa ja koko kantonin lipussa — katedraali on siis virallisesti osa kaupungin tunnusta. 1990-luvun alussa Sarajevoa…
+AIEMPI KYSYMYS: Miksi Podgorica oli aikoinaan nimeltään Titograd?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuosina 1946–1992 kaupungin nimi oli Titograd, koska kaupunki nimettiin [[Josip Broz Titon]] mukaan. Tito johti sodanjälkeistä [[Jugoslaviaa]], jonka osana Montenegro silloin oli. Kun Jugoslavian hajoaminen alkoi 1990-luvun alussa, kaupungin entinen nimi palautettiin vuonna 1992. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica-kukkula. Nimiä on ollut monta, mutta kukkula on pysynyt paikallaan.
+KYSYMYS: Kerro lisää: Josip Broz Titon
+
+### 910
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+AIEMPI KYSYMYS: Miksi Podgorica oli aikoinaan nimeltään Titograd?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuosina 1946–1992 kaupungin nimi oli Titograd, koska kaupunki nimettiin [[Josip Broz Titon]] mukaan. Tito johti sodanjälkeistä [[Jugoslaviaa]], jonka osana Montenegro silloin oli. Kun Jugoslavian hajoaminen alkoi 1990-luvun alussa, kaupungin entinen nimi palautettiin vuonna 1992. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica-kukkula. Nimiä on ollut monta, mutta kukkula on pysynyt paikallaan.
+KYSYMYS: Kerro lisää: Jugoslaviaa
+
+### 911
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kohdekartta / Kohdekartta: Vanha silta Ribnican yli] uusittu 1700-luvulla Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan. Silta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea. Silta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.
+- [Podgorica — kohdekartta / Kohdekartta: Ribnican linnoitus] 1400-luvun loppu Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta. Linnoitus oli pitkään ammusvarastona. Salamanisku sytytti myöhemmin 1800-luvun lopulla räjähdyksen, joka vaurioitti linnoitusta pahoin, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut. Uskotaan, että linnoitus periytyy 1100-luvulta.
+AIEMPI KYSYMYS: Mikä on Sahat kula ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sahat kula on kivinen kellotorni Podgoricassa Stara Varošin vanhassa kaupunginosassa. Se on ottomaanikaudelta ja useamman sadan vuoden ikäinen; lähteet eroavat tarkasta rakennusajasta, joten sanon vain 1600-luvun paikkeilla. Torni sijaitsee [[Ribnican]] rannan lähellä, ja se kuuluu vanhan ytimen harvoihin säilyneisiin rakennuksiin. Podgoricasta suuri osa tuhoutui sodassa, minkä jälkeen kaupunki rakennettiin uudelleen, ja [[Stara Varoš]] on yksi tämän ajan jäännöksistä. Torni on kyllä sitkeä, kuten kyyhkyn suku.
+KYSYMYS: Kerro lisää: Ribnican
+
+### 912
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kohdekartta / Kohdekartta: Vanha silta Ribnican yli] uusittu 1700-luvulla Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan. Silta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea. Silta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.
+- [Podgorica — kohdekartta / Kohdekartta: Sahat kula -kellotorni] 1667 Sahat kula on noin 16–19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista. Isoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle. Kellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.
+AIEMPI KYSYMYS: Mikä on Sahat kula ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sahat kula on kivinen kellotorni Podgoricassa Stara Varošin vanhassa kaupunginosassa. Se on ottomaanikaudelta ja useamman sadan vuoden ikäinen; lähteet eroavat tarkasta rakennusajasta, joten sanon vain 1600-luvun paikkeilla. Torni sijaitsee [[Ribnican]] rannan lähellä, ja se kuuluu vanhan ytimen harvoihin säilyneisiin rakennuksiin. Podgoricasta suuri osa tuhoutui sodassa, minkä jälkeen kaupunki rakennettiin uudelleen, ja [[Stara Varoš]] on yksi tämän ajan jäännöksistä. Torni on kyllä sitkeä, kuten kyyhkyn suku.
+KYSYMYS: Kerro lisää: Stara Varoš
+
+### 913
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kohdekartta / Kohdekartta: Vanha silta Ribnican yli] uusittu 1700-luvulla Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan. Silta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea. Silta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.
+- [Podgorica — kohdekartta / Kohdekartta: Millennium-silta] 2005 Millennium-silta on vinoköysisilta Moračan yli. Se avattiin liikenteelle 13.7.2005, Montenegron kansallispäivänä, ja se yhdistää Ivan Crnojevićin bulevardin ja 13. heinäkuuta -kadun. Isoisän matkavuonna 1873 siltaa ei ollut, ja Moračan yli kuljettiin muilla silloilla. Sillan suunnittelijat ovat Marjan Pipenbaher (Ponting Bridges) ja Mladen Ulićević, ja rakentaja oli slovenialainen Primorje. Pituutta sillalla on 173 metriä, ja pylon nousee 57 metriä tien yläpuolelle. Kaksitoista köyttä kantaa kantta, ja 24 muuta kiinnittyy vastapainoihin. Sillan kustannus oli noin 7 miljoonaa euroa. Siinä on kaksi ajokaistaa sekä jalkakäytävä kumpaankin suuntaan.
+AIEMPI KYSYMYS: Mitkä joet virtaavat Podgorican kautta?
+AIEMPI VASTAUS (Livia):
+No jopas. Kaupunki on syntynyt kahden joen yhtymäkohtaan: [[Morača]] virtaa kaupungin lävitse ja [[Ribnica]] yhtyy siihen vanhan kaupungin kohdalla. Morača jatkaa matkaansa kohti [[Skutarijärveä]], ja jokilaakso on kaupungille tärkeä. Joen yli kulkee myös nykyaikainen [[Millennium-silta]], jonka kaapelit nousevat korkealle kaupungin ylle. Vesi on kuin tiheä katuverkko, ylhäältä näkee kaiken.
+KYSYMYS: Kerro lisää: Morača
+
+### 914
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kohdekartta / Kohdekartta: Vanha silta Ribnican yli] uusittu 1700-luvulla Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan. Silta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea. Silta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.
+- [Podgorica — kaupunkilehti / Podgorica: Kukkulan alla] Podgorican nimi tarkoittaa kukkulan alla. Gorica tarkoittaa pientä kukkulaa, ja se on yksi kaupungin ylle kohoavista sypressikukkuloista; sen korkeus on noin 130 metriä. Muita kukkuloita ovat Malo brdo noin 205 metriä, Velje brdo noin 280 metriä ja Ljubović noin 100 metriä. Itse kaupunki on lähes tasaisella maalla noin 40 metriä merenpinnan yläpuolella Zetan tasangon pohjoispäässä. Nimi mainitaan ensi kerran vuonna 1326 Kotorin arkiston asiakirjassa, ja keskiajalla kaupunki tunnettiin nimellä Ribnica.
+AIEMPI KYSYMYS: Mitkä joet virtaavat Podgorican kautta?
+AIEMPI VASTAUS (Livia):
+No jopas. Kaupunki on syntynyt kahden joen yhtymäkohtaan: [[Morača]] virtaa kaupungin lävitse ja [[Ribnica]] yhtyy siihen vanhan kaupungin kohdalla. Morača jatkaa matkaansa kohti [[Skutarijärveä]], ja jokilaakso on kaupungille tärkeä. Joen yli kulkee myös nykyaikainen [[Millennium-silta]], jonka kaapelit nousevat korkealle kaupungin ylle. Vesi on kuin tiheä katuverkko, ylhäältä näkee kaiken.
+KYSYMYS: Kerro lisää: Ribnica
+
+### 915
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+AIEMPI KYSYMYS: Mitkä joet virtaavat Podgorican kautta?
+AIEMPI VASTAUS (Livia):
+No jopas. Kaupunki on syntynyt kahden joen yhtymäkohtaan: [[Morača]] virtaa kaupungin lävitse ja [[Ribnica]] yhtyy siihen vanhan kaupungin kohdalla. Morača jatkaa matkaansa kohti [[Skutarijärveä]], ja jokilaakso on kaupungille tärkeä. Joen yli kulkee myös nykyaikainen [[Millennium-silta]], jonka kaapelit nousevat korkealle kaupungin ylle. Vesi on kuin tiheä katuverkko, ylhäältä näkee kaiken.
+KYSYMYS: Kerro lisää: Skutarijärveä
+
+### 916
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kohdekartta / Kohdekartta: Millennium-silta] 2005 Millennium-silta on vinoköysisilta Moračan yli. Se avattiin liikenteelle 13.7.2005, Montenegron kansallispäivänä, ja se yhdistää Ivan Crnojevićin bulevardin ja 13. heinäkuuta -kadun. Isoisän matkavuonna 1873 siltaa ei ollut, ja Moračan yli kuljettiin muilla silloilla. Sillan suunnittelijat ovat Marjan Pipenbaher (Ponting Bridges) ja Mladen Ulićević, ja rakentaja oli slovenialainen Primorje. Pituutta sillalla on 173 metriä, ja pylon nousee 57 metriä tien yläpuolelle. Kaksitoista köyttä kantaa kantta, ja 24 muuta kiinnittyy vastapainoihin. Sillan kustannus oli noin 7 miljoonaa euroa. Siinä on kaksi ajokaistaa sekä jalkakäytävä kumpaankin suuntaan.
+AIEMPI KYSYMYS: Mitkä joet virtaavat Podgorican kautta?
+AIEMPI VASTAUS (Livia):
+No jopas. Kaupunki on syntynyt kahden joen yhtymäkohtaan: [[Morača]] virtaa kaupungin lävitse ja [[Ribnica]] yhtyy siihen vanhan kaupungin kohdalla. Morača jatkaa matkaansa kohti [[Skutarijärveä]], ja jokilaakso on kaupungille tärkeä. Joen yli kulkee myös nykyaikainen [[Millennium-silta]], jonka kaapelit nousevat korkealle kaupungin ylle. Vesi on kuin tiheä katuverkko, ylhäältä näkee kaiken.
+KYSYMYS: Kerro lisää: Millennium-silta
+
+### 917
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kohdekartta / Kohdekartta: Kristuksen ylösnousemuksen katedraali] 1993–2013 Kristuksen ylösnousemuksen katedraali on Montenegron ja Rannikon metropoliitan kirkko, Serbian kirkon alainen. Sen rakentaminen alkoi vuonna 1993 Predrag Ristićin suunnitelmin, ja se pyhitettiin vuonna 2013 Milanon ediktin 1 700-vuotisjuhlan yhteydessä. Isoisän matkavuonna 1873 katedraalia ei vielä ollut. Arkkitehtuurissa on kaksi tornia ja näkyvä kaari, ja esikuvana oli keskiaikainen Pyhän Tryfonin katedraali Kotorissa. Siinä on romaanisia, italialaisia ja bysanttilaisia vaikutteita. Sisätilat ovat täynnä kultataustaisia ikonimaalauksia, ja lattiat ovat marmoria. Pyhitykseen osallistui useita patriarkkoja, muun muassa Serbian patriarkka Irinej ja ekumeeninen patriarkka Bartolomeo…
+AIEMPI KYSYMYS: Mitä Podgoricassa kannattaa nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä on valinnanvaraa. Kaupungin vanha ydin on [[Stara Varoš]], jossa on säilynyt kellotorni, moskeijoita ja kapeita katuja. Uudempaa aikaa edustavat [[Millennium-silta]] ja valtava [[Kristuksen ylösnousemuksen katedraali]], joka valmistui 2010-luvulla. Kaupunkia ympäröivät sypressikukkulat, kuten [[Gorica]], joka antoi nimen koko kaupungille. Suuri osa nykyisestä kaupungista on sodanjälkeistä, joten rakennukset ovat melko nuoria. Ylhäältä kaikki näkyy tosi hyvin, kunhan tuuli ei vie.
+KYSYMYS: Kerro lisää: Kristuksen ylösnousemuksen katedraali
+
+### 918
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Podgorica — kaupunkilehti / Podgorica: Kukkulan alla] Podgorican nimi tarkoittaa kukkulan alla. Gorica tarkoittaa pientä kukkulaa, ja se on yksi kaupungin ylle kohoavista sypressikukkuloista; sen korkeus on noin 130 metriä. Muita kukkuloita ovat Malo brdo noin 205 metriä, Velje brdo noin 280 metriä ja Ljubović noin 100 metriä. Itse kaupunki on lähes tasaisella maalla noin 40 metriä merenpinnan yläpuolella Zetan tasangon pohjoispäässä. Nimi mainitaan ensi kerran vuonna 1326 Kotorin arkiston asiakirjassa, ja keskiajalla kaupunki tunnettiin nimellä Ribnica.
+AIEMPI KYSYMYS: Mitä Podgoricassa kannattaa nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tässä on valinnanvaraa. Kaupungin vanha ydin on [[Stara Varoš]], jossa on säilynyt kellotorni, moskeijoita ja kapeita katuja. Uudempaa aikaa edustavat [[Millennium-silta]] ja valtava [[Kristuksen ylösnousemuksen katedraali]], joka valmistui 2010-luvulla. Kaupunkia ympäröivät sypressikukkulat, kuten [[Gorica]], joka antoi nimen koko kaupungille. Suuri osa nykyisestä kaupungista on sodanjälkeistä, joten rakennukset ovat melko nuoria. Ylhäältä kaikki näkyy tosi hyvin, kunhan tuuli ei vie.
+KYSYMYS: Kerro lisää: Gorica
+
+### 919
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pelikaanien järvi, joka hengittää] vuodesta 1983 — Skutarijärvi on Balkanin suurin järvi, ja siitä noin kaksi kolmasosaa kuuluu Montenegrolle. Järven pinta-ala vaihtelee vuodenaikojen mukaan 370 ja 530 neliökilometrin välillä, mutta syvimmilläänkin vettä on vain noin 44 metriä. Montenegron puoli sai kansallispuiston aseman vuonna 1983, ja alueella on tavattu noin 270 lintulajia sekä 34 alkuperäistä kalalajia, joista seitsemän on järven omia. Tunnetuimpia asukkaita ovat kiharapelikaanit, joiden siipiväli voi ylittää kolme metriä. Järven vedestä noin 62 prosenttia tulee Morača-joesta, ja Buna-joki laskee järvestä Adrianmerelle.
+AIEMPI KYSYMYS: Millaista elämä on Podgoricassa nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Podgorica on Montenegron pääkaupunki, ja siellä asuu vuoden 2023 väestölaskennan mukaan 179 505 ihmistä. Kaupunki on maan hallinnon ja kaupan keskus. Kesät ovat kuumia, ja kaupungin kahvilat täyttyvät illalla ihmisistä, jotka istuvat ulkona. Lähellä sijaitsevat sekä [[Skutarijärvi]] että [[Dinaaristen Alppien]] eteläiset juuret, joten luontoon pääsee nopeasti. Kyllä siellä pulla maistuisi aamukahvin kanssa.
+KYSYMYS: Kerro lisää: Skutarijärvi
+
+### 920
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Podgorica
+Maa, jossa pelaaja on: Montenegro
+Näkymä: kartta
+Pelaaja katsoo kartalla: Podgorica (kaupunki)
+Tietoruudun teksti: Podgorica on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.
+
+Isoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli Stara Varoš Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.
+Isoisän matkakirjamerkintä: Podgorica, toukokuussa 1873. Nimi tarkoittaa kukkulan alla, ja kaupunki on ottomaanien. Ribnican rannalla Stara Varošin kapeat kujat kiertävät linnoitusta ja Sahat kulaa, kivistä kellotornia, joka on seissyt täällä yli kaksisataa vuotta. Kolmen uskon väki kulkee samoja katuja. Idässä ei ole muuria, vain kaivanto, ja torni toimii vahtina vuorille päin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Millaista elämä on Podgoricassa nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Podgorica on Montenegron pääkaupunki, ja siellä asuu vuoden 2023 väestölaskennan mukaan 179 505 ihmistä. Kaupunki on maan hallinnon ja kaupan keskus. Kesät ovat kuumia, ja kaupungin kahvilat täyttyvät illalla ihmisistä, jotka istuvat ulkona. Lähellä sijaitsevat sekä [[Skutarijärvi]] että [[Dinaaristen Alppien]] eteläiset juuret, joten luontoon pääsee nopeasti. Kyllä siellä pulla maistuisi aamukahvin kanssa.
+KYSYMYS: Kerro lisää: Dinaaristen Alppien
+
+### 921
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Miten Alankomaat on kuivattu merestä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on Alankomaiden ylpeys. Maata on saatu lisää kuivattamalla se vedestä, ja kuivattu alue on jaettu suorakulmaisiin [[poldereihin]]. Alueelta pumpataan vesi pois, ensin tuulimyllyillä ja nykyään sähköpumpuilla. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki entisen [[Zuiderzeen]] merenlahden järveksi, ja myöhemmin osa pohjasta kuivattiin maaksi, josta syntyi [[Flevolandin]] maakunta. Vettä on padottu tuhat vuotta, ja se näkyy. Tämän lennon jälkeen kaipaan lepoa.
+KYSYMYS: Kerro lisää: poldereihin
+
+### 922
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen ”de Vlieterin” kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+AIEMPI KYSYMYS: Miten Alankomaat on kuivattu merestä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on Alankomaiden ylpeys. Maata on saatu lisää kuivattamalla se vedestä, ja kuivattu alue on jaettu suorakulmaisiin [[poldereihin]]. Alueelta pumpataan vesi pois, ensin tuulimyllyillä ja nykyään sähköpumpuilla. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki entisen [[Zuiderzeen]] merenlahden järveksi, ja myöhemmin osa pohjasta kuivattiin maaksi, josta syntyi [[Flevolandin]] maakunta. Vettä on padottu tuhat vuotta, ja se näkyy. Tämän lennon jälkeen kaipaan lepoa.
+KYSYMYS: Kerro lisää: Afsluitdijk
+
+### 923
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historian hetki: De Vlieter 1932 — meri lakkaa kahtia jakamasta] 28.5.1932 — Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen ”de Vlieterin” kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä p…
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miten Alankomaat on kuivattu merestä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on Alankomaiden ylpeys. Maata on saatu lisää kuivattamalla se vedestä, ja kuivattu alue on jaettu suorakulmaisiin [[poldereihin]]. Alueelta pumpataan vesi pois, ensin tuulimyllyillä ja nykyään sähköpumpuilla. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki entisen [[Zuiderzeen]] merenlahden järveksi, ja myöhemmin osa pohjasta kuivattiin maaksi, josta syntyi [[Flevolandin]] maakunta. Vettä on padottu tuhat vuotta, ja se näkyy. Tämän lennon jälkeen kaipaan lepoa.
+KYSYMYS: Kerro lisää: Zuiderzeen
+
+### 924
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miten Alankomaat on kuivattu merestä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on Alankomaiden ylpeys. Maata on saatu lisää kuivattamalla se vedestä, ja kuivattu alue on jaettu suorakulmaisiin [[poldereihin]]. Alueelta pumpataan vesi pois, ensin tuulimyllyillä ja nykyään sähköpumpuilla. Vuonna 1932 valmistunut [[Afsluitdijk]]-pato sulki entisen [[Zuiderzeen]] merenlahden järveksi, ja myöhemmin osa pohjasta kuivattiin maaksi, josta syntyi [[Flevolandin]] maakunta. Vettä on padottu tuhat vuotta, ja se näkyy. Tämän lennon jälkeen kaipaan lepoa.
+KYSYMYS: Kerro lisää: Flevolandin
+
+### 925
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Miksi Alankomaat tunnetaan tulppaaneista?
+AIEMPI VASTAUS (Livia):
+Ai se. Tulppaanit tulivat Alankomaihin 1500-luvun lopulla, ja kasvitieteilijä [[Carolus Clusius]] kuuluu niiden ensimmäisiin viljelijöihin. Seuraavalla vuosisadalla tulppaaneista tuli niin haluttuja, että niiden hinnat nousivat huimasti, ja ilmiötä kutsutaan nimellä [[tulppaanimania]]. Nykyään sipulit ovat tärkeä vientituote, ja keväisin ihmiset käyvät katsomassa kukkapeltoja ja [[Keukenhof]]in puistoa. Muistaakseni väri on tärkein myyntivaltti, mutta en ole varma. Pulla oli silti edelleen halvempaa.
+KYSYMYS: Kerro lisää: Carolus Clusius
+
+### 926
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdestä kukkasipulista maksettiin talon hinta] 1637 — Tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Kukaan ei tiennyt, mistä raidat johtuivat: ne olivat virustaudin jälkiä, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina — ostaja ei ollut nähnyt kukkaa. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo pysähtynyt.
+AIEMPI KYSYMYS: Miksi Alankomaat tunnetaan tulppaaneista?
+AIEMPI VASTAUS (Livia):
+Ai se. Tulppaanit tulivat Alankomaihin 1500-luvun lopulla, ja kasvitieteilijä [[Carolus Clusius]] kuuluu niiden ensimmäisiin viljelijöihin. Seuraavalla vuosisadalla tulppaaneista tuli niin haluttuja, että niiden hinnat nousivat huimasti, ja ilmiötä kutsutaan nimellä [[tulppaanimania]]. Nykyään sipulit ovat tärkeä vientituote, ja keväisin ihmiset käyvät katsomassa kukkapeltoja ja [[Keukenhof]]in puistoa. Muistaakseni väri on tärkein myyntivaltti, mutta en ole varma. Pulla oli silti edelleen halvempaa.
+KYSYMYS: Kerro lisää: tulppaanimania
+
+### 927
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Miksi Alankomaat tunnetaan tulppaaneista?
+AIEMPI VASTAUS (Livia):
+Ai se. Tulppaanit tulivat Alankomaihin 1500-luvun lopulla, ja kasvitieteilijä [[Carolus Clusius]] kuuluu niiden ensimmäisiin viljelijöihin. Seuraavalla vuosisadalla tulppaaneista tuli niin haluttuja, että niiden hinnat nousivat huimasti, ja ilmiötä kutsutaan nimellä [[tulppaanimania]]. Nykyään sipulit ovat tärkeä vientituote, ja keväisin ihmiset käyvät katsomassa kukkapeltoja ja [[Keukenhof]]in puistoa. Muistaakseni väri on tärkein myyntivaltti, mutta en ole varma. Pulla oli silti edelleen halvempaa.
+KYSYMYS: Kerro lisää: Keukenhof
+
+### 928
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Vanhemmat menivät kadulle, ja maa sai pyörätiet] 1972 — Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua. Vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, ja heidän joukossaan oli satoja lapsia. Vanhemmat perustivat liikkeen nimeltä Stop de Kindermoord, marssivat parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+AIEMPI KYSYMYS: Miksi hollantilaiset ajavat niin paljon pyörällä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Maa on tasainen, matkat ovat lyhyitä ja pyöräteitä on rakennettu kaupunkeihin ja niiden välille tiheästi. 1970-luvulla öljykriisi ja liikenneonnettomuuksien vastainen kansanliike nostivat pyöräilyn poliittiseksi aiheeksi, ja liike tunnetaan nimellä [[Stop de Kindermoord]]. [[Öljykriisin]] jälkeen pyöräilyn tukeminen sai uutta vauhtia. Nykyään pyörä on monelle nopein tapa liikkua kaupungissa. Itse en ole koskaan tarvinnut ketjua.
+KYSYMYS: Kerro lisää: Stop de Kindermoord
+
+### 929
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Miksi hollantilaiset ajavat niin paljon pyörällä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Maa on tasainen, matkat ovat lyhyitä ja pyöräteitä on rakennettu kaupunkeihin ja niiden välille tiheästi. 1970-luvulla öljykriisi ja liikenneonnettomuuksien vastainen kansanliike nostivat pyöräilyn poliittiseksi aiheeksi, ja liike tunnetaan nimellä [[Stop de Kindermoord]]. [[Öljykriisin]] jälkeen pyöräilyn tukeminen sai uutta vauhtia. Nykyään pyörä on monelle nopein tapa liikkua kaupungissa. Itse en ole koskaan tarvinnut ketjua.
+KYSYMYS: Kerro lisää: Öljykriisin
+
+### 930
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [PRI — maalehti / Luonto: Neljä viikkoa raivonnut myrsky] 1899 — Elokuun 8. päivänä 1899, vain vuosi sen jälkeen kun Puerto Rico oli siirtynyt Yhdysvalloille, hirmumyrsky San Ciriaco pyyhkäisi saaren yli kuudesta yhdeksään tuntiin ja jätti jälkeensä yli 3 000 kuollutta. Myrsky oli koko Atlantin historian pisimpään elänyt, lähes neljä viikkoa, ja se saavutti nelosluokan voiman. Sen mukanaan tuoma runsas sadekertymä tuhosi kahvi- ja sokeriviljelmät juuri ennen satokautta, ja arviolta neljäsosa saaren väestöstä jäi ilman ruokaa tai kattoa pään päälle. Aikalaislehdet julkaisivat piirroskuvia sortuneista taloista ja raunioituneesta keskustorista dokumentoidakseen tuhon laajuutta.
+- [Belgia — maalehti / Luonto: Myrsky avasi Bruggelle tien merelle] 1134 — Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.
+AIEMPI KYSYMYS: Mitä Deltatyöt ovat ja miksi ne rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kääk. Tämä on vakava aihe. Vuoden 1953 alussa voimakas [[myrskytulva]] tulvi Alankomaiden lounaisosaan, ja yli tuhat ihmistä menehtyi. Tulvan jälkeen aloitettiin [[Deltatyöt]], laaja patojen ja myrskyesteiden järjestelmä Zeelandin alueella. Tunnetuin rakennelma on [[Oosterscheldekeering]], myrskyeste, joka on yleensä auki, mutta sulkeutuu myrskyn uhatessa. Siitä on kulunut jo yli seitsemänkymmentä vuotta, ja suoja on pitänyt.
+KYSYMYS: Kerro lisää: myrskytulva
+
+### 931
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Mitä Deltatyöt ovat ja miksi ne rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kääk. Tämä on vakava aihe. Vuoden 1953 alussa voimakas [[myrskytulva]] tulvi Alankomaiden lounaisosaan, ja yli tuhat ihmistä menehtyi. Tulvan jälkeen aloitettiin [[Deltatyöt]], laaja patojen ja myrskyesteiden järjestelmä Zeelandin alueella. Tunnetuin rakennelma on [[Oosterscheldekeering]], myrskyeste, joka on yleensä auki, mutta sulkeutuu myrskyn uhatessa. Siitä on kulunut jo yli seitsemänkymmentä vuotta, ja suoja on pitänyt.
+KYSYMYS: Kerro lisää: Deltatyöt
+
+### 932
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Mitä Deltatyöt ovat ja miksi ne rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kääk. Tämä on vakava aihe. Vuoden 1953 alussa voimakas [[myrskytulva]] tulvi Alankomaiden lounaisosaan, ja yli tuhat ihmistä menehtyi. Tulvan jälkeen aloitettiin [[Deltatyöt]], laaja patojen ja myrskyesteiden järjestelmä Zeelandin alueella. Tunnetuin rakennelma on [[Oosterscheldekeering]], myrskyeste, joka on yleensä auki, mutta sulkeutuu myrskyn uhatessa. Siitä on kulunut jo yli seitsemänkymmentä vuotta, ja suoja on pitänyt.
+KYSYMYS: Kerro lisää: Oosterscheldekeering
+
+### 933
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Portin sulkemisesta päättää kone] 1997 — Rotterdamin satamaan johtavaa väylää ei voitu padota, koska laivojen on päästävä sisään. Siksi molemmille rannoille rakennettiin ovi: kaarevat teräsleuat, joiden ristikkovarsi on 210 metriä pitkä ja 22 metriä korkea. Kun myrsky uhkaa nostaa veden Rotterdamissa yli kolmen metrin, ovet kääntyvät ulos vedelle, täyttyvät vedellä ja vajoavat pohjaan. Päätöksen tekee tietokone, ei ihminen. Portti otettiin käyttöön 1997 ja koekäytetään joka syksy; oikeassa myrskyssä se suljettiin ensimmäisen kerran marraskuussa 2007.
+AIEMPI KYSYMYS: Mitä Alankomaat myy maailmalle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Alankomaat on pieni maa, mutta se vie paljon: tuoretta ruokaa, kukkia ja kasvihuonetuotteita, mutta myös koneita ja laitteita. Maa on yksi maailman suurimmista maataloustuotteiden viejistä arvolla mitattuna. [[Rotterdamin]] satama on Euroopan vilkkaimpia, ja sen kautta kulkee valtava osa tavaroista. Hollantilaisia juustoja, kuten [[Goudaa]] ja [[Edamia]], on viety jo vuosisatoja. Kyllä pienikin maa voi olla iso, jos on vain oikea satama.
+KYSYMYS: Kerro lisää: Rotterdamin
+
+### 934
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Mitä Alankomaat myy maailmalle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Alankomaat on pieni maa, mutta se vie paljon: tuoretta ruokaa, kukkia ja kasvihuonetuotteita, mutta myös koneita ja laitteita. Maa on yksi maailman suurimmista maataloustuotteiden viejistä arvolla mitattuna. [[Rotterdamin]] satama on Euroopan vilkkaimpia, ja sen kautta kulkee valtava osa tavaroista. Hollantilaisia juustoja, kuten [[Goudaa]] ja [[Edamia]], on viety jo vuosisatoja. Kyllä pienikin maa voi olla iso, jos on vain oikea satama.
+KYSYMYS: Kerro lisää: Goudaa
+
+### 935
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alankomaat (maa)
+Tietoruudun teksti: Alankomaat tarkoittaa matalia maita, ja nimi on tarkka: noin neljäsosa maasta on merenpinnan alapuolella, ja siellä asuu viidesosa väestöstä. Noin 17 prosenttia maa-alasta on kuivattu merestä ja järvistä — ilman patoja ja pumppuja se olisi taas vettä.
+
+Kartalla ei ole vuoria: maa on tasainen kuin pöytä, ja korkeimmat kohdat jäävät kaukaiseen kaakkoiskärkeen. Lounaassa Zeelandin saaret ja merenlahdet rikkovat rannikon sirpaleiksi, pohjoisessa Friisein saaret suojaavat matalaa Waddenmerta. Keskellä on IJsselmeer, joka oli ennen merenlahti: 32 kilometrin Afsluitdijk-pato sulki sen järveksi vuonna 1932, ja sen rannoilta erottuvat suorakulmaiset polderit, merestä kuivatut maapalat.
+
+Vettä on padottu tuhat vuotta: polderit tyhjennettiin ennen tuulimyllyillä, nykyään sähköpumpuilla. Alankomaat on Euroopan tiheimmin asuttuja maita, ja silti maailman toiseksi suurin ruoan viejä arvolla mitattuna…
+AIEMPI KYSYMYS: Mitä Alankomaat myy maailmalle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Alankomaat on pieni maa, mutta se vie paljon: tuoretta ruokaa, kukkia ja kasvihuonetuotteita, mutta myös koneita ja laitteita. Maa on yksi maailman suurimmista maataloustuotteiden viejistä arvolla mitattuna. [[Rotterdamin]] satama on Euroopan vilkkaimpia, ja sen kautta kulkee valtava osa tavaroista. Hollantilaisia juustoja, kuten [[Goudaa]] ja [[Edamia]], on viety jo vuosisatoja. Kyllä pienikin maa voi olla iso, jos on vain oikea satama.
+KYSYMYS: Kerro lisää: Edamia
+
+### 936
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Vesi: Kolme kanaalia, yksi suunnitelma] Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja Prinsengracht, kaivettiin vanhan kaupungin ympärille kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+AIEMPI KYSYMYS: Miksi Amsterdamin talot ovat kapeita ja kallellaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Amsterdamin kanavatalot ovat usein kapeita, ja yleinen selitys on, että vero perustui talon julkisivun leveyteen, joten kapea talo oli halvempi. Monessa talossa on myös ullakolla koukku, jolla huonekaluja nostettiin ulkokautta, koska portaikot ovat jyrkkiä. Siksi talot saatetaan rakentaa hieman eteenpäin kallellaan. Kaupunki on rakennettu pehmeälle maalle, joten talot seisovat puupaalujen varassa, ja kanavat kuten [[Herengracht]] ja [[Keizersgracht]] kuuluvat Unescon maailmanperintöön. Puun varaan voi rakentaa pitkälle, jos tietää miten.
+KYSYMYS: Kerro lisää: Herengracht
+
+### 937
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Vesi: Kolme kanaalia, yksi suunnitelma] Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja Prinsengracht, kaivettiin vanhan kaupungin ympärille kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+AIEMPI KYSYMYS: Miksi Amsterdamin talot ovat kapeita ja kallellaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Amsterdamin kanavatalot ovat usein kapeita, ja yleinen selitys on, että vero perustui talon julkisivun leveyteen, joten kapea talo oli halvempi. Monessa talossa on myös ullakolla koukku, jolla huonekaluja nostettiin ulkokautta, koska portaikot ovat jyrkkiä. Siksi talot saatetaan rakentaa hieman eteenpäin kallellaan. Kaupunki on rakennettu pehmeälle maalle, joten talot seisovat puupaalujen varassa, ja kanavat kuten [[Herengracht]] ja [[Keizersgracht]] kuuluvat Unescon maailmanperintöön. Puun varaan voi rakentaa pitkälle, jos tietää miten.
+KYSYMYS: Kerro lisää: Keizersgracht
+
+### 938
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Vesi: Kolme kanaalia, yksi suunnitelma] Vuonna 1613 kaupunki päätti laajentua järjestelmällisesti: kolme puolikaarista kanaalia, Herengracht, Keizersgracht ja Prinsengracht, kaivettiin vanhan kaupungin ympärille kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät ja reunustettu tuhansilla kauppiastaloilla — kunnianhimoisin kaupunkisuunnitteluhanke aikansa Euroopassa. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+AIEMPI KYSYMYS: Mikä on Anne Frankin talo?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava asia. Anne Frankin talo on [[Prinsengracht]]in varrella sijaitseva rakennus, jonka takaosassa Anne Frankin perhe ja muita ihmisiä piileskeli juutalaisvainojen aikana vuosina 1942–1944. Piilopaikka löydettiin elokuussa 1944, ja useimmat piiloutuneista menehtyivät keskitysleireillä. Vain [[Otto Frank]] selvisi, ja hän julkaisi tyttärensä [[Anne Frankin päiväkirjan]] vuonna 1947. Talosta on tehty museo, jossa piilopaikan huoneet voi nähdä. Siitä on onneksi jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Prinsengracht
+
+### 939
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Anne Frankin talo] 1960 Kanaalin varrella Prinsengrachtilla seisova talo rakennettiin jo vuonna 1635, mutta maailmankuuluksi se tuli toisen maailmansodan aikana. Vuonna 1942 juutalainen Frank-perhe piiloutui talon takaosaan salaiseen kätköön, jonne pääsi vain kääntyvän kirjahyllyn takaa. Perhe ja neljä muuta piileskelivät siellä lähes kaksi vuotta. Nuori Anne kirjoitti koko ajan päiväkirjaa, josta tuli sodan jälkeen yksi maailman luetuimmista kirjoista — isä Otto oli perheestä ainoa, joka selvisi hengissä. Talo avattiin museona vuonna 1960, ja nykyään siellä vierailee joka vuosi yli miljoona ihmistä ympäri maailman. "Uskon yhä, kaikesta huolimatta, että ihmiset ovat sisimmältään hyviä." — Anne Frank, päiväkir…
+AIEMPI KYSYMYS: Mikä on Anne Frankin talo?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava asia. Anne Frankin talo on [[Prinsengracht]]in varrella sijaitseva rakennus, jonka takaosassa Anne Frankin perhe ja muita ihmisiä piileskeli juutalaisvainojen aikana vuosina 1942–1944. Piilopaikka löydettiin elokuussa 1944, ja useimmat piiloutuneista menehtyivät keskitysleireillä. Vain [[Otto Frank]] selvisi, ja hän julkaisi tyttärensä [[Anne Frankin päiväkirjan]] vuonna 1947. Talosta on tehty museo, jossa piilopaikan huoneet voi nähdä. Siitä on onneksi jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Otto Frank
+
+### 940
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Anne Frankin talo] 1960 Kanaalin varrella Prinsengrachtilla seisova talo rakennettiin jo vuonna 1635, mutta maailmankuuluksi se tuli toisen maailmansodan aikana. Vuonna 1942 juutalainen Frank-perhe piiloutui talon takaosaan salaiseen kätköön, jonne pääsi vain kääntyvän kirjahyllyn takaa. Perhe ja neljä muuta piileskelivät siellä lähes kaksi vuotta. Nuori Anne kirjoitti koko ajan päiväkirjaa, josta tuli sodan jälkeen yksi maailman luetuimmista kirjoista — isä Otto oli perheestä ainoa, joka selvisi hengissä. Talo avattiin museona vuonna 1960, ja nykyään siellä vierailee joka vuosi yli miljoona ihmistä ympäri maailman. "Uskon yhä, kaikesta huolimatta, että ihmiset ovat sisimmältään hyviä." — Anne Frank, päiväkir…
+AIEMPI KYSYMYS: Mikä on Anne Frankin talo?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vakava asia. Anne Frankin talo on [[Prinsengracht]]in varrella sijaitseva rakennus, jonka takaosassa Anne Frankin perhe ja muita ihmisiä piileskeli juutalaisvainojen aikana vuosina 1942–1944. Piilopaikka löydettiin elokuussa 1944, ja useimmat piiloutuneista menehtyivät keskitysleireillä. Vain [[Otto Frank]] selvisi, ja hän julkaisi tyttärensä [[Anne Frankin päiväkirjan]] vuonna 1947. Talosta on tehty museo, jossa piilopaikan huoneet voi nähdä. Siitä on onneksi jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Anne Frankin päiväkirjan
+
+### 941
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Rembrandtin talo] 1911 Taidemaalari Rembrandt osti tämän talon Jodenbreestraatilta vuonna 1639 peräti 13 000 guldenilla. Talo itse oli rakennettu jo vuonna 1606, mutta Rembrandt asui ja työskenteli siinä 19 vuoden ajan, maalasi mestariteoksiaan yläkerrassa ja piti taidekauppaa alakerrassa. Onni ei kestänyt: Rembrandt joutui rahavaikeuksiin, ja talo myytiin huutokaupalla vuonna 1658 tappiolla. Vuosisatojen kuluessa talo rapistui, kunnes kaupunki osti ja kunnosti sen 1900-luvun alussa. Museo avattiin vuonna 1911. Vuonna 1997 talon vanhasta käymäläkuopasta löytyi yllättäen kaksi savista ruukkua, joita Rembrandt oli aikoinaan käyttänyt maalauskankaidensa valmisteluun.
+- [Amsterdam — kaupunkilehti / Taide: Yövartiosta sahattiin palat pois] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+AIEMPI KYSYMYS: Mitä Rijksmuseumissa on nähtävää?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän tiedän. Rijksmuseum on Alankomaiden kansallismuseo, ja sen tunnetuimpiin teoksiin kuuluu [[Rembrandtin]] suurikokoinen maalaus [[Yövartio]]. Siellä on myös [[Vermeerin]] maalauksia, ja kokoelma esittelee 1600-luvun hollantilaista kultaista aikaa. Museon kokoelmasta suuri osa on nähtävissä myös verkossa korkealla tarkkuudella, joten niihin voi tutustua kotoakin. Oli minulla itsellä kerran näkymä museon katolta, mutta se oli sateinen päivä.
+KYSYMYS: Kerro lisää: Rembrandtin
+
+### 942
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Taide: Yövartiosta sahattiin palat pois] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+- [Amsterdam — kohdekartta / Kohdekartta: Yövartio] Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla.
+AIEMPI KYSYMYS: Mitä Rijksmuseumissa on nähtävää?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän tiedän. Rijksmuseum on Alankomaiden kansallismuseo, ja sen tunnetuimpiin teoksiin kuuluu [[Rembrandtin]] suurikokoinen maalaus [[Yövartio]]. Siellä on myös [[Vermeerin]] maalauksia, ja kokoelma esittelee 1600-luvun hollantilaista kultaista aikaa. Museon kokoelmasta suuri osa on nähtävissä myös verkossa korkealla tarkkuudella, joten niihin voi tutustua kotoakin. Oli minulla itsellä kerran näkymä museon katolta, mutta se oli sateinen päivä.
+KYSYMYS: Kerro lisää: Yövartio
+
+### 943
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kaupunkilehti / Taide: Vermeer peitti omat esineensä maalilla] Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse umpeen, niin että katse jää maitoon ja käsiin.
+- [Amsterdam — kohdekartta / Kohdekartta: Rijksmuseum] 1885 Alankomaiden valtakunnanmuseo perustettiin jo vuonna 1798, mutta se muutti nykyiseen komeaan rakennukseensa vasta vuonna 1885. Talon suunnitteli arkkitehti Pierre Cuypers, sama mies joka rakensi Amsterdamin keskusrautatieaseman — siksi ne muistuttavatkin hieman toisiaan. Museossa on lähes miljoona esinettä, joista noin 8 000 on esillä kerralla. Niiden joukossa on Rembrandtin jättimäinen maalaus Yövartio ja Vermeerin kuuluisa Maitotyttö. Vuonna 2013 koko museo avattiin uudelleen kymmenen vuotta kestäneen jättiremontin jälkeen. Museo houkuttelee nykyään vuosittain miljoonia kävijöitä.
+AIEMPI KYSYMYS: Mitä Rijksmuseumissa on nähtävää?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän tiedän. Rijksmuseum on Alankomaiden kansallismuseo, ja sen tunnetuimpiin teoksiin kuuluu [[Rembrandtin]] suurikokoinen maalaus [[Yövartio]]. Siellä on myös [[Vermeerin]] maalauksia, ja kokoelma esittelee 1600-luvun hollantilaista kultaista aikaa. Museon kokoelmasta suuri osa on nähtävissä myös verkossa korkealla tarkkuudella, joten niihin voi tutustua kotoakin. Oli minulla itsellä kerran näkymä museon katolta, mutta se oli sateinen päivä.
+KYSYMYS: Kerro lisää: Vermeerin
+
+### 944
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Mikä oli Hollannin Itä-Intian komppania?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hollannin Itä-Intian komppania eli VOC perustettiin vuonna 1602, ja se kävi kauppaa Aasiassa, Amsterdamin ollessa yksi sen tärkeistä keskuksista. Yhtiön laivat veivät hopeaa itään ja toivat takaisin mausteita, kankaita ja posliinia. Esimerkiksi [[Amsterdam-laiva]] lähti ensimmäiselle matkalleen vuonna 1749 [[Texelin]] redeltä, mutta joutui myrskyyn eikä päässyt Atlantille. Yhtiön historiaan kuuluu myös siirtomaiden hyväksikäyttö, jota nykyään arvioidaan kriittisesti. Pitkä historia, vähän kuivaa, mutta tärkeä.
+KYSYMYS: Kerro lisää: Amsterdam-laiva
+
+### 945
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Mikä oli Hollannin Itä-Intian komppania?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hollannin Itä-Intian komppania eli VOC perustettiin vuonna 1602, ja se kävi kauppaa Aasiassa, Amsterdamin ollessa yksi sen tärkeistä keskuksista. Yhtiön laivat veivät hopeaa itään ja toivat takaisin mausteita, kankaita ja posliinia. Esimerkiksi [[Amsterdam-laiva]] lähti ensimmäiselle matkalleen vuonna 1749 [[Texelin]] redeltä, mutta joutui myrskyyn eikä päässyt Atlantille. Yhtiön historiaan kuuluu myös siirtomaiden hyväksikäyttö, jota nykyään arvioidaan kriittisesti. Pitkä historia, vähän kuivaa, mutta tärkeä.
+KYSYMYS: Kerro lisää: Texelin
+
+### 946
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+AIEMPI KYSYMYS: Mitä Amsterdamin kanavilla tehdään nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kanavilla risteilee kiertoajeluveneitä, ja osa ihmisistä asuu kanavan rannalla kelluvissa [[asuinveneissä]]. Kuninkaanpäivänä huhtikuussa kanavat täyttyvät juhlivista veneistä, ja kaupunki saa oranssin sävyn. Kanavat ovat myös liikennereittejä, ja ne kuuluvat [[Unescon maailmanperintöluetteloon]]. Täältä ylhäältä näkee, kuinka monta ihmistä mahtuu yhteen laiturin viereen. Kyllä sieltä löytyisi paikka kyyhkyllekin.
+KYSYMYS: Kerro lisää: asuinveneissä
+
+### 947
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Amsterdam
+Maa, jossa pelaaja on: Alankomaat
+Näkymä: kartta
+Pelaaja katsoo kartalla: Amsterdam (kaupunki)
+Tietoruudun teksti: Amsterdam on Alankomaiden pääkaupunki, ja siinä asuu vajaa miljoona ihmistä. Nimi tulee padosta: Amstel-joki laski ennen suoraan IJ-lahteen, ja noin vuonna 1270 se padottiin, jolloin padon päälle kasvoi kylä Amstelredam. Maa on pehmeää suota, joten talot seisovat maahan lyötyjen puupaalujen varassa.
+
+1600-luvulla Amsterdam oli yksi maailman vilkkaimmista satamista, ja väkiluku kasvoi sadassa vuodessa noin 30 000:sta yli 200 000:een. Kasvua varten kaivettiin kokonaan uusi kanavavyöhyke vuosina 1613–1665, ja Herengracht, Keizersgracht ja Prinsengracht ovat yhä paikallaan Unescon maailmanperintöluettelossa. Varallisuus kertyi merikaupasta ja siirtomaista, ja kaupunkiin muutti väkeä ympäri Eurooppaa.
+
+Toinen maailmansota katkaisi tämän: Saksa miehitti Alankomaat vuonna 1940, ja Amsterdamin juutalaisyhteisöstä suurin osa surmattiin. Nykyään kaupunki on tasainen kuin lattia ja pyörä on nopein…
+Isoisän matkakirjamerkintä: Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä Amsterdamin kanavilla tehdään nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kanavilla risteilee kiertoajeluveneitä, ja osa ihmisistä asuu kanavan rannalla kelluvissa [[asuinveneissä]]. Kuninkaanpäivänä huhtikuussa kanavat täyttyvät juhlivista veneistä, ja kaupunki saa oranssin sävyn. Kanavat ovat myös liikennereittejä, ja ne kuuluvat [[Unescon maailmanperintöluetteloon]]. Täältä ylhäältä näkee, kuinka monta ihmistä mahtuu yhteen laiturin viereen. Kyllä sieltä löytyisi paikka kyyhkyllekin.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+
+### 948
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+AIEMPI KYSYMYS: Miten Norjan vuonot ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonot ovat jääkauden jälki: kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja kun jää suli, meri täytti ne. Pisin vuono on [[Sognefjord]], joka työntyy 205 kilometriä sisämaahan. Vuonon suulla on usein matala kynnys, vaikka sisällä vesi on hyvin syvää; Sognefjordissa syvyyttä on noin 1 308 metriä. Toinen tunnettu vuono on [[Geirangerfjord]]. Jää on tehnyt kovasti töitä, ja meri on päässyt helpolla.
+KYSYMYS: Kerro lisää: Sognefjord
+
+### 949
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+AIEMPI KYSYMYS: Miten Norjan vuonot ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonot ovat jääkauden jälki: kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja kun jää suli, meri täytti ne. Pisin vuono on [[Sognefjord]], joka työntyy 205 kilometriä sisämaahan. Vuonon suulla on usein matala kynnys, vaikka sisällä vesi on hyvin syvää; Sognefjordissa syvyyttä on noin 1 308 metriä. Toinen tunnettu vuono on [[Geirangerfjord]]. Jää on tehnyt kovasti töitä, ja meri on päässyt helpolla.
+KYSYMYS: Kerro lisää: Geirangerfjord
+
+### 950
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Mikä Norjan öljyrahasto on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuonna 1969 Pohjanmerellä löytyi [[Ekofisk]]in kenttä, ja Norja päätti, ettei öljytuloja käytetä suoraan, vaan ne siirretään rahastoon. Rahaston tarkoitus on turvata varallisuutta myös tuleville sukupolville. Siitä kasvoi maailman suurin [[valtiollinen sijoitusrahasto]], ja öljyn ansiosta maa rikastui nopeasti. Nykyään Norja miettii, mitä tehdä, kun öljy loppuu. Hyvä päätös, jos kyyhkyltä kysytään.
+KYSYMYS: Kerro lisää: Ekofisk
+
+### 951
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Mikä Norjan öljyrahasto on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuonna 1969 Pohjanmerellä löytyi [[Ekofisk]]in kenttä, ja Norja päätti, ettei öljytuloja käytetä suoraan, vaan ne siirretään rahastoon. Rahaston tarkoitus on turvata varallisuutta myös tuleville sukupolville. Siitä kasvoi maailman suurin [[valtiollinen sijoitusrahasto]], ja öljyn ansiosta maa rikastui nopeasti. Nykyään Norja miettii, mitä tehdä, kun öljy loppuu. Hyvä päätös, jos kyyhkyltä kysytään.
+KYSYMYS: Kerro lisää: valtiollinen sijoitusrahasto
+
+### 952
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan silta] 1960 Tromssan silta on jättimäinen betoninen kaari, joka yhdistää Tromsøyan saaren mantereeseen yli Tromsøysundetin salmen. Se on peräti 1036 metriä pitkä - siinä on 58 erillistä siltakaarta peräkkäin! Sillan pisin yksittäinen jänneväli on 80 metriä, ja laivat mahtuvat kulkemaan sen alta jopa 38 metrin korkeudessa. Sillan rakentaminen alkoi vuonna 1958, ja se avattiin liikenteelle 3. heinäkuuta 1960. Valmistuessaan se oli koko Pohjois-Euroopan pisin silta - ja samalla ensimmäinen ulokerakenteinen (konsoli-) silta koko Norjassa! Ennen siltaa saarelle pääsi vain lautalla, joten silta muutti koko kaupungin elämän ja kasvun. Nykyään silta on niin arvokas rakennelma, että Norjan muinaismuistovir…
+AIEMPI KYSYMYS: Missä ja milloin Norjassa näkee revontulia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Revontulia nähdään parhaiten Pohjois-Norjassa, esimerkiksi [[Tromssan]] seudulla ja [[Finnmarkin]] maakunnassa. Paras aika on syksystä kevääseen, kun yöt ovat pimeitä, tyypillisesti syyskuusta maaliskuuhun. Taivaan on oltava selkeä, joten pilvinen sää peittää näytöksen. Norjassa on myös karttoja, jotka ennustavat revontulien todennäköisyyttä. Pohjoisessa on hyvä katsoa ylös, minä katson aina.
+KYSYMYS: Kerro lisää: Tromssan
+
+### 953
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+AIEMPI KYSYMYS: Missä ja milloin Norjassa näkee revontulia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Revontulia nähdään parhaiten Pohjois-Norjassa, esimerkiksi [[Tromssan]] seudulla ja [[Finnmarkin]] maakunnassa. Paras aika on syksystä kevääseen, kun yöt ovat pimeitä, tyypillisesti syyskuusta maaliskuuhun. Taivaan on oltava selkeä, joten pilvinen sää peittää näytöksen. Norjassa on myös karttoja, jotka ennustavat revontulien todennäköisyyttä. Pohjoisessa on hyvä katsoa ylös, minä katson aina.
+KYSYMYS: Kerro lisää: Finnmarkin
+
+### 954
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Milloin Norja oli unionissa Ruotsin kanssa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Norja kuului yli neljäsataa vuotta Tanskaan, ja vuonna 1814 se sai oman perustuslakinsa [[Eidsvollin]] kokouksessa. Samana vuonna Norja joutui kuitenkin unioniin [[Ruotsin]] kanssa, vaikka sillä oli oma perustuslaki ja hallinto. Unioni purettiin rauhanomaisesti vuonna 1905. Perustuslakipäivää vietetään yhä 17. toukokuuta. Norjalaiset pitävät omaa päiväänsä juhlana, jossa pukeudutaan kansallispukuihin, joita kutsutaan nimellä [[bunad]].
+KYSYMYS: Kerro lisää: Eidsvollin
+
+### 955
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Milloin Norja oli unionissa Ruotsin kanssa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Norja kuului yli neljäsataa vuotta Tanskaan, ja vuonna 1814 se sai oman perustuslakinsa [[Eidsvollin]] kokouksessa. Samana vuonna Norja joutui kuitenkin unioniin [[Ruotsin]] kanssa, vaikka sillä oli oma perustuslaki ja hallinto. Unioni purettiin rauhanomaisesti vuonna 1905. Perustuslakipäivää vietetään yhä 17. toukokuuta. Norjalaiset pitävät omaa päiväänsä juhlana, jossa pukeudutaan kansallispukuihin, joita kutsutaan nimellä [[bunad]].
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 956
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+AIEMPI KYSYMYS: Milloin Norja oli unionissa Ruotsin kanssa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Norja kuului yli neljäsataa vuotta Tanskaan, ja vuonna 1814 se sai oman perustuslakinsa [[Eidsvollin]] kokouksessa. Samana vuonna Norja joutui kuitenkin unioniin [[Ruotsin]] kanssa, vaikka sillä oli oma perustuslaki ja hallinto. Unioni purettiin rauhanomaisesti vuonna 1905. Perustuslakipäivää vietetään yhä 17. toukokuuta. Norjalaiset pitävät omaa päiväänsä juhlana, jossa pukeudutaan kansallispukuihin, joita kutsutaan nimellä [[bunad]].
+KYSYMYS: Kerro lisää: bunad
+
+### 957
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+AIEMPI KYSYMYS: Mitä friluftsliv tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Friluftsliv tarkoittaa suunnilleen ulkoilmaelämää, eli luonnossa liikkumista ja oleskelua osana arkea. Norjassa pidetään tärkeänä oikeutta kulkea luonnossa, joka muistuttaa suomalaista [[jokamiehenoikeutta]]. Monella on myös oma mökki eli [[hytte]], jossa vietetään viikonloppuja, ja hiihto on perinteisesti iso osa talvea. Kerron tämän havaintona, en ohjeena. Ei kyyhky muuten ulos halua, mutta tämä kuulostaa hyvältä.
+KYSYMYS: Kerro lisää: jokamiehenoikeutta
+
+### 958
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Norja (maa)
+Tietoruudun teksti: Norjan rantaviiva on saarineen 100 915 kilometriä — kaksi ja puoli kertaa maapallon ympärysmitta. Saaria on yli 239 000 ja vuonoja satoja, ja pisin niistä, Sognefjord, työntyy 205 kilometriä sisämaahan.
+
+Korkokartalla maa on kapea ja pitkä: ruskea tunturiselkä kulkee Ruotsin rajaa pitkin, ja sen länsipuolella rannikko on revitty vuonoiksi ja saariksi. Ne ovat jääkauden jälki — kilometrien paksuinen jää kaivoi laaksot merenpinnan alapuolelle, ja meri täytti ne, kun jää suli. Kapeimmillaan maa on vain 6,3 kilometriä leveä, ja pohjoisessa se kaartuu Suomen yläpuolelta itään asti.
+
+Vuono on syvä, mutta sen suulla on usein matala kynnys: Sognefjord ylettyy 1 308 metrin syvyyteen, vaikka suussa vettä on vain noin sata metriä. Kun meri nousee ja laskee, sen on mahduttava juuri näistä kapeikoista — eikä se kaikkialla mahdu rauhassa.
+AIEMPI KYSYMYS: Mitä friluftsliv tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Friluftsliv tarkoittaa suunnilleen ulkoilmaelämää, eli luonnossa liikkumista ja oleskelua osana arkea. Norjassa pidetään tärkeänä oikeutta kulkea luonnossa, joka muistuttaa suomalaista [[jokamiehenoikeutta]]. Monella on myös oma mökki eli [[hytte]], jossa vietetään viikonloppuja, ja hiihto on perinteisesti iso osa talvea. Kerron tämän havaintona, en ohjeena. Ei kyyhky muuten ulos halua, mutta tämä kuulostaa hyvältä.
+KYSYMYS: Kerro lisää: hytte
+
+### 959
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Oslo (kaupunki)
+Tietoruudun teksti: Oslo on Norjan pääkaupunki ja suurin kaupunki; sen viidessätoista kaupunginosassa asuu runsaat 717 000 ihmistä. Kaupunki on Oslovuonon pohjukassa, siinä missä vuono loppuu ja metsäiset kukkulat alkavat. Rajojen sisällä on 301 neliökilometriä metsää, 343 järveä ja 40 saarta, ja metsäalueella asuu vain 1 610 ihmistä — metsä ja vesi ovat kaupunkia, eivät sen ulkopuolta.
+
+Asutus alkoi vuonon rannalla noin vuonna 1040. Vuoden 1624 palon jälkeen Tanskan kuningas Kristian IV siirsi kaupungin linnoituksen kupeeseen ja nimesi sen itsensä mukaan Christianiaksi; vanha nimi palautettiin vasta 1925. Norja kuului Tanskaan yli neljäsataa vuotta ja sen jälkeen unioniin Ruotsin kanssa, joka purettiin rauhanomaisesti 1905.
+
+Öljy muutti maan: Ekofiskin kentältä löytyi öljyä 1969, ja tuotot päätettiin siirtää rahastoon. Pääkaupunki laati 2017 maailman ensimmäisen kaupungin ilmastobudjetin, ja kunnassa reki…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Oslon tuomiokirkko] 1694–1697 Oslon tuomiokirkko on kaupungin pääkirkko, mutta se on jo kolmas kirkko, joka on kantanut tätä tehtävää. Ensimmäinen, keskiaikainen Hallvardin katedraali, jäi liian kauas uudesta kaupungista, kun kuningas Kristian IV siirsi koko Oslon lähemmäs Akershusin linnoitusta suuren tulipalon jälkeen vuonna 1624. Toinen kirkko paloi vain 50 vuoden käytön jälkeen, joten uuden peruskivi muurattiin vuonna 1694. Kirkko vihittiin käyttöön marraskuussa 1697, ja se on seissyt Stortorvetin torin laidalla siitä asti. Kirkon ovet ovat pronssia, ja ikkunoissa on taiteilija Emanuel Vigelandin suunnittelemia lasimaalauksia. Kirkossa on vietetty kuuluisia kuninkaallisia häitä: kuningas Harald ja kuningat…
+- [Oslo — kohdekartta / Kohdekartta: Akershusin linnoitus] 1290-luku Akershusin linnoitus kohoaa kalliolla Oslon rannalla, ja se on vartioinut kaupunkia jo yli 700 vuotta. Kuningas Haakon V käski rakentaa sen 1290-luvun lopulla, sen jälkeen kun kaupunki oli osoittautunut liian helposti hyökättäväksi vuonna 1287. Linnoitusta on piiritetty monta kertaa – ruotsalaiset yrittivät vuonna 1308 ja Kaarle Knuutinpoika vuosina 1449–1450 – mutta mikään vieras armeija ei ole koskaan onnistunut valtaamaan sitä taistelemalla. Kuningas Kristian IV muutti vanhan linnan 1600-luvulla hienoksi renessanssipalatsiksi. Toisen maailmansodan aikana saksalaiset miehittivät linnoituksen ja teloittivat siellä vankeja, mutta Norjan vastarintaliike vapautti sen 11. toukokuuta …
+AIEMPI KYSYMYS: Miksi Oslo oli aiemmin nimeltä Christiania?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on tarina. Vuoden 1624 suuren palon jälkeen Tanskan kuningas [[Kristian IV]] siirsi kaupungin [[Akershusin linnoituksen]] kupeeseen ja nimesi uuden kaupungin itsensä mukaan Christianiaksi. Norja kuului tuolloin Tanskaan, ja nimi pysyi käytössä yli kolmesataa vuotta. Vanha nimi Oslo palautettiin vuonna 1925. Asutus vuonon rannalla oli alkanut jo noin vuonna 1040. Nimi vaihtui, mutta vuono pysyi paikallaan.
+KYSYMYS: Kerro lisää: Kristian IV
+
+### 960
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Pelaaja katsoo kartalla: Oslo (kaupunki)
+Tietoruudun teksti: Oslo on Norjan pääkaupunki ja suurin kaupunki; sen viidessätoista kaupunginosassa asuu runsaat 717 000 ihmistä. Kaupunki on Oslovuonon pohjukassa, siinä missä vuono loppuu ja metsäiset kukkulat alkavat. Rajojen sisällä on 301 neliökilometriä metsää, 343 järveä ja 40 saarta, ja metsäalueella asuu vain 1 610 ihmistä — metsä ja vesi ovat kaupunkia, eivät sen ulkopuolta.
+
+Asutus alkoi vuonon rannalla noin vuonna 1040. Vuoden 1624 palon jälkeen Tanskan kuningas Kristian IV siirsi kaupungin linnoituksen kupeeseen ja nimesi sen itsensä mukaan Christianiaksi; vanha nimi palautettiin vasta 1925. Norja kuului Tanskaan yli neljäsataa vuotta ja sen jälkeen unioniin Ruotsin kanssa, joka purettiin rauhanomaisesti 1905.
+
+Öljy muutti maan: Ekofiskin kentältä löytyi öljyä 1969, ja tuotot päätettiin siirtää rahastoon. Pääkaupunki laati 2017 maailman ensimmäisen kaupungin ilmastobudjetin, ja kunnassa reki…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Akershusin linnoitus] 1290-luku Akershusin linnoitus kohoaa kalliolla Oslon rannalla, ja se on vartioinut kaupunkia jo yli 700 vuotta. Kuningas Haakon V käski rakentaa sen 1290-luvun lopulla, sen jälkeen kun kaupunki oli osoittautunut liian helposti hyökättäväksi vuonna 1287. Linnoitusta on piiritetty monta kertaa – ruotsalaiset yrittivät vuonna 1308 ja Kaarle Knuutinpoika vuosina 1449–1450 – mutta mikään vieras armeija ei ole koskaan onnistunut valtaamaan sitä taistelemalla. Kuningas Kristian IV muutti vanhan linnan 1600-luvulla hienoksi renessanssipalatsiksi. Toisen maailmansodan aikana saksalaiset miehittivät linnoituksen ja teloittivat siellä vankeja, mutta Norjan vastarintaliike vapautti sen 11. toukokuuta …
+AIEMPI KYSYMYS: Miksi Oslo oli aiemmin nimeltä Christiania?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on tarina. Vuoden 1624 suuren palon jälkeen Tanskan kuningas [[Kristian IV]] siirsi kaupungin [[Akershusin linnoituksen]] kupeeseen ja nimesi uuden kaupungin itsensä mukaan Christianiaksi. Norja kuului tuolloin Tanskaan, ja nimi pysyi käytössä yli kolmesataa vuotta. Vanha nimi Oslo palautettiin vuonna 1925. Asutus vuonon rannalla oli alkanut jo noin vuonna 1040. Nimi vaihtui, mutta vuono pysyi paikallaan.
+KYSYMYS: Kerro lisää: Akershusin linnoituksen

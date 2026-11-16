@@ -88772,7 +88772,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja järjesti suunnittelukilpailun, jonka voitti lissabonilainen '
             + 'toimisto. Työt alkoivat 1884 italialaisen Celestial '
             + 'Sacardimin johdolla ja etenivät pysähdyksin 1885–1892. '
-            + 'Kattotiilet tuotiin Alsacesta, teräsrakenteet Glasgow\'sta '
+            + 'Kattotiilet tuotiin Elsassista, teräsrakenteet Glasgow\'sta '
             + 'ja Carrara-marmori Italiasta; kupolissa on 36 000 kaakelia '
             + 'Brasilian lipun väreissä ja salissa 198 kruunua. Talo '
             + 'vihittiin 31. joulukuuta 1896. Heinäkuussa 2026 se liitettiin '

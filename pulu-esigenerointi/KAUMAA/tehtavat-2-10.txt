@@ -1,0 +1,1449 @@
+### 721
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+AIEMPI KYSYMYS: Millainen on Liettuan hiekkakaistale lännessä?
+AIEMPI VASTAUS (Livia):
+Ai se. Lännessä erottuu ohut hiekkakaistale, [[Kuurinkynnäs]], joka sulkee taakseen oman lahtensa, [[Kuurinlahden]]. Sen dyynit nousevat noin kuudenkymmenen metrin korkeuteen. Liettuan puolen tunnetuin kylä on tietojeni mukaan [[Nida]]. Hiekkaa ja merta, ylhäältä kaunista.
+KYSYMYS: Kerro lisää: Kuurinlahden
+
+### 722
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+AIEMPI KYSYMYS: Millainen on Liettuan hiekkakaistale lännessä?
+AIEMPI VASTAUS (Livia):
+Ai se. Lännessä erottuu ohut hiekkakaistale, [[Kuurinkynnäs]], joka sulkee taakseen oman lahtensa, [[Kuurinlahden]]. Sen dyynit nousevat noin kuudenkymmenen metrin korkeuteen. Liettuan puolen tunnetuin kylä on tietojeni mukaan [[Nida]]. Hiekkaa ja merta, ylhäältä kaunista.
+KYSYMYS: Kerro lisää: Nida
+
+### 723
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+AIEMPI KYSYMYS: Miksi liettuan kieltä pidetään arkaaisena?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Liettuan kieli on elävistä [[indoeurooppalaisista kielistä]] arkaaisin, eli se on säilyttänyt vanhoja piirteitä, jotka monet muut kielet ovat kadottaneet. Sen lähin elävä sukukieli on [[latvia]], ja yhdessä ne kuuluvat [[baltin kieliin]]. Kielitieteilijät hyödyntävät liettuaa kielten historian tutkimuksessa. Vanhaa kieltä, ja minun sukuni on vanhaa sekin.
+KYSYMYS: Kerro lisää: indoeurooppalaisista kielistä
+
+### 724
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Vapaudenpatsas] 1935 Riian keskustassa kohoaa 42 metriä korkea Vapaudenpatsas, joka pystytettiin vuonna 1935 muistoksi Latvian itsenäisyyssodassa 1918–1920 kaatuneille sotilaille. Patsaan huipulla seisoo Vapaus-niminen naishahmo, jota latvialaiset kutsuvat hellästi Mildaksi. Hän pitelee käsissään kolmea kultaista tähteä, jotka kuvaavat Latvian kolmea vanhaa maakuntaa: Vidzemeä, Latgalea ja Kuurinmaata. Patsaan kivi- ja graniittiosien veistämiseen kului yli 300 000 työtuntia – yhdeltä kivenveistäjältä olisi mennyt siihen yli sata vuotta! Patsas seisoo paikalla, jossa aiemmin oli Venäjän tsaari Pietari Suuren ratsastajapatsas. Kun Neuvostoliitto miehitti Latvian, monet pelkäsivät patsaan tuhoamista, mutta se…
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Latvia — maalehti / Menovinkit] Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa museoesinettä, sanomalehdet vuodesta 1822, ensimmäisten laulujuhlien jäljet vuodelta 1873 ja kolmetoista kameraa lintujen pesissä.
+AIEMPI KYSYMYS: Miksi liettuan kieltä pidetään arkaaisena?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Liettuan kieli on elävistä [[indoeurooppalaisista kielistä]] arkaaisin, eli se on säilyttänyt vanhoja piirteitä, jotka monet muut kielet ovat kadottaneet. Sen lähin elävä sukukieli on [[latvia]], ja yhdessä ne kuuluvat [[baltin kieliin]]. Kielitieteilijät hyödyntävät liettuaa kielten historian tutkimuksessa. Vanhaa kieltä, ja minun sukuni on vanhaa sekin.
+KYSYMYS: Kerro lisää: latvia
+
+### 725
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+AIEMPI KYSYMYS: Miksi liettuan kieltä pidetään arkaaisena?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Liettuan kieli on elävistä [[indoeurooppalaisista kielistä]] arkaaisin, eli se on säilyttänyt vanhoja piirteitä, jotka monet muut kielet ovat kadottaneet. Sen lähin elävä sukukieli on [[latvia]], ja yhdessä ne kuuluvat [[baltin kieliin]]. Kielitieteilijät hyödyntävät liettuaa kielten historian tutkimuksessa. Vanhaa kieltä, ja minun sukuni on vanhaa sekin.
+KYSYMYS: Kerro lisää: baltin kieliin
+
+### 726
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+AIEMPI KYSYMYS: Mikä on järvellä seisova punatiilinen linna Liettuassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyseessä on tiettävästi [[Trakain]] saarilinna, joka seisoo [[Galvė-järven]] saarella lähellä pääkaupunkia [[Vilnan]]. Linna on punatiilinen, ja se kuuluu Liettuan tunnetuimpiin nähtävyyksiin. En ole varma tarkoista rakennusvuosista. Linna keskellä järveä, lentäjälle ihan täydellinen laskeutumispaikka.
+KYSYMYS: Kerro lisää: Trakain
+
+### 727
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+AIEMPI KYSYMYS: Mikä on järvellä seisova punatiilinen linna Liettuassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyseessä on tiettävästi [[Trakain]] saarilinna, joka seisoo [[Galvė-järven]] saarella lähellä pääkaupunkia [[Vilnan]]. Linna on punatiilinen, ja se kuuluu Liettuan tunnetuimpiin nähtävyyksiin. En ole varma tarkoista rakennusvuosista. Linna keskellä järveä, lentäjälle ihan täydellinen laskeutumispaikka.
+KYSYMYS: Kerro lisää: Galvė-järven
+
+### 728
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause ’Hinc itur ad astra’ tarkoittaa ’täältä tie vie tähtiin’, ja se sopii hyvin paikkaa…
+- [Vilna — kohdekartta / Kohdekartta: Vilnan tuomiokirkko] 1783 Vilnan tuomiokirkko näyttää ulkoa kreikkalaiselta temppeliltä pylväineen, mutta sen alla piileskelee yli 700 vuoden historia. Paikalla on seissyt kirkko jo 1200-luvulta lähtien, ja arkeologit ovat löytäneet maan alta jopa vanhan pakanatemppelin jäänteitä. Nykyinen valkoinen kirkko sai lopullisen muotonsa vuonna 1783, kun se rakennettiin uudelleen aiempien tulipalojen tuhottua edelliset kirkot. Katolla seisoo kolme kivipatsasta, ja keskimmäisen, Pyhän Helenan, käsissä kohoaa yhdeksän metriä korkea kultainen risti. Neuvostoaikana patsaat purettiin katolta vuonna 1950, koska uskonto ei silloin ollut suosiossa – ne nostettiin takaisin paikoilleen vasta vuonna 1997. Kirkon alla olevissa hol…
+AIEMPI KYSYMYS: Mikä on järvellä seisova punatiilinen linna Liettuassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyseessä on tiettävästi [[Trakain]] saarilinna, joka seisoo [[Galvė-järven]] saarella lähellä pääkaupunkia [[Vilnan]]. Linna on punatiilinen, ja se kuuluu Liettuan tunnetuimpiin nähtävyyksiin. En ole varma tarkoista rakennusvuosista. Linna keskellä järveä, lentäjälle ihan täydellinen laskeutumispaikka.
+KYSYMYS: Kerro lisää: Vilnan
+
+### 729
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Kirjankantajat] Isoisäsi kuuli tässä kaupungissa neljää kieltä, ja yksi niistä oli sinä kesänä kielletty painokoneesta. Vuonna 1864 keisarikunta määräsi, että liettuaa ei saa painaa latinalaisin kirjaimin — kyrillisin sai, ja siihen jopa kannustettiin. Lähteet aloittavat kiellon vuodesta 1864 tai 1865 sen mukaan, lasketaanko alku hallinnollisesta määräyksestä vai sitä seuranneesta täydestä kiellosta; sitä ei kannata pyöristää, koska kyse oli juuri siitä, ettei kieltoa koskaan säädetty laiksi. Se ei toiminut. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kannettiin takaisin. Kantajia sanottiin knygnešiai, kirjankantajat: he kulkivat öisin metsäpolkuja säkit selässä, j…
+- [Liettua — maalehti / Historia: Kirjat kannettiin rajan yli selässä] 1864 — Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä vuotta, kunnes kielto kumottiin vuonna 1904.
+AIEMPI KYSYMYS: Miksi liettuan painaminen latinalaisin kirjaimin kiellettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Venäjän keisarikunta kielsi liettuan painamisen latinalaisin kirjaimin vuosiksi 1865–1904, ja kiellon tarkoituksena oli sitoa liettualaiset lähemmäs venäläistä kulttuuria ja kyrillistä kirjaimistoa. Kielto ei kuitenkaan pysäyttänyt kirjoittamista: liettuankielisiä kirjoja painettiin esimerkiksi [[Itä-Preussissa]] ja ne salakuljetettiin rajan yli, ja salakuljettajia kutsuttiin [[kirjansalakuljettajiksi]]. Kielto kumottiin vuonna 1904, ja se on yksi syy siihen, että liettuan kieli on kansallisessa muistissa niin tärkeä. [[Venäjän keisarikunnan]] aikana oppikirjan hallussapito saattoi olla riski. Kirjoja ne kantoivat, minä vain kirjeitä.
+KYSYMYS: Kerro lisää: Itä-Preussissa
+
+### 730
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Miksi liettuan painaminen latinalaisin kirjaimin kiellettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Venäjän keisarikunta kielsi liettuan painamisen latinalaisin kirjaimin vuosiksi 1865–1904, ja kiellon tarkoituksena oli sitoa liettualaiset lähemmäs venäläistä kulttuuria ja kyrillistä kirjaimistoa. Kielto ei kuitenkaan pysäyttänyt kirjoittamista: liettuankielisiä kirjoja painettiin esimerkiksi [[Itä-Preussissa]] ja ne salakuljetettiin rajan yli, ja salakuljettajia kutsuttiin [[kirjansalakuljettajiksi]]. Kielto kumottiin vuonna 1904, ja se on yksi syy siihen, että liettuan kieli on kansallisessa muistissa niin tärkeä. [[Venäjän keisarikunnan]] aikana oppikirjan hallussapito saattoi olla riski. Kirjoja ne kantoivat, minä vain kirjeitä.
+KYSYMYS: Kerro lisää: kirjansalakuljettajiksi
+
+### 731
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miksi liettuan painaminen latinalaisin kirjaimin kiellettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Venäjän keisarikunta kielsi liettuan painamisen latinalaisin kirjaimin vuosiksi 1865–1904, ja kiellon tarkoituksena oli sitoa liettualaiset lähemmäs venäläistä kulttuuria ja kyrillistä kirjaimistoa. Kielto ei kuitenkaan pysäyttänyt kirjoittamista: liettuankielisiä kirjoja painettiin esimerkiksi [[Itä-Preussissa]] ja ne salakuljetettiin rajan yli, ja salakuljettajia kutsuttiin [[kirjansalakuljettajiksi]]. Kielto kumottiin vuonna 1904, ja se on yksi syy siihen, että liettuan kieli on kansallisessa muistissa niin tärkeä. [[Venäjän keisarikunnan]] aikana oppikirjan hallussapito saattoi olla riski. Kirjoja ne kantoivat, minä vain kirjeitä.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 732
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Vilna: Tasavalta, jonka perustuslaissa on 41 pykälää] Užupis on Vilnian kaupunginosa joen toisella puolen. Taiteilijat julistivat sen omaksi tasavallakseen aprillipäivänä, ja sillä on presidentti, lippu ja perustuslaki, jossa on 41 pykälää. Ne on kiinnitetty kadun seinään kiiltäville metallilaatoille, yksi laatta kutakin kieltä kohti.
+AIEMPI KYSYMYS: Mikä on Užupis, Vilnan oma tasavalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tästä minä olen kuullut katolta. Užupis on Vilnan vanhankaupungin kupeessa, [[Vilnia-joen]] toisella puolella sijaitseva taiteilijakortteli, joka julistautui itsenäiseksi tasavallaksi huhtikuun ensimmäisenä päivänä 1997. Julistus on leikkimielinen, mutta sitä noudatetaan huolella: alueella on oma perustuslaki, joka on kirjoitettu seinälle usealla kielellä, ja sen kohtiin kuuluvat muun muassa oikeus olla onnellinen ja se, että koiralla on oikeus olla koira. Kortteli on tunnettu kahviloistaan ja gallerioistaan, ja sen keskusaukiolla seisoo [[enkelipatsas]], joka on korttelin tunnus. Kävijä voi tutustua myös [[Vilnan vanhankaupungin]] muihin osiin kävelemällä joen yli. Pieni tasavalta, iso sydän, ja minä en tarvitse passia.
+KYSYMYS: Kerro lisää: Vilnia-joen
+
+### 733
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Užupis] 1997 Užupis on pieni Vilnan kaupunginosa joen toisella puolella – nimikin tarkoittaa suunnilleen ’joen takana’. Aprillipäivänä eli huhtikuun 1. päivänä 1997 alueen taiteilijat julistivat sen leikkimielisesti omaksi tasavallakseen, jolla on oma lippu, oma pieni armeija ja yli 500 suurlähettilästä ympäri maailmaa. Tasavallalla on oma perustuslaki, jossa on 41 pykälää ja jotka on käännetty jo yli 40 kielelle. Yksi suosikkipykälistä kuuluu: ’Koiralla on oikeus olla koira.’ Toinen muistuttaa, että jokaisella on oikeus olla sekä onnellinen että onneton, aivan miten itse haluaa. Vuonna 2002 Užupikseen pystytettiin pronssinen enkelipatsas, joka puhaltaa trumpettia korkean pylvään huipulla – se korv…
+AIEMPI KYSYMYS: Mikä on Užupis, Vilnan oma tasavalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tästä minä olen kuullut katolta. Užupis on Vilnan vanhankaupungin kupeessa, [[Vilnia-joen]] toisella puolella sijaitseva taiteilijakortteli, joka julistautui itsenäiseksi tasavallaksi huhtikuun ensimmäisenä päivänä 1997. Julistus on leikkimielinen, mutta sitä noudatetaan huolella: alueella on oma perustuslaki, joka on kirjoitettu seinälle usealla kielellä, ja sen kohtiin kuuluvat muun muassa oikeus olla onnellinen ja se, että koiralla on oikeus olla koira. Kortteli on tunnettu kahviloistaan ja gallerioistaan, ja sen keskusaukiolla seisoo [[enkelipatsas]], joka on korttelin tunnus. Kävijä voi tutustua myös [[Vilnan vanhankaupungin]] muihin osiin kävelemällä joen yli. Pieni tasavalta, iso sydän, ja minä en tarvitse passia.
+KYSYMYS: Kerro lisää: enkelipatsas
+
+### 734
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Vilnan tuomiokirkko] 1783 Vilnan tuomiokirkko näyttää ulkoa kreikkalaiselta temppeliltä pylväineen, mutta sen alla piileskelee yli 700 vuoden historia. Paikalla on seissyt kirkko jo 1200-luvulta lähtien, ja arkeologit ovat löytäneet maan alta jopa vanhan pakanatemppelin jäänteitä. Nykyinen valkoinen kirkko sai lopullisen muotonsa vuonna 1783, kun se rakennettiin uudelleen aiempien tulipalojen tuhottua edelliset kirkot. Katolla seisoo kolme kivipatsasta, ja keskimmäisen, Pyhän Helenan, käsissä kohoaa yhdeksän metriä korkea kultainen risti. Neuvostoaikana patsaat purettiin katolta vuonna 1950, koska uskonto ei silloin ollut suosiossa – ne nostettiin takaisin paikoilleen vasta vuonna 1997. Kirkon alla olevissa hol…
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause ’Hinc itur ad astra’ tarkoittaa ’täältä tie vie tähtiin’, ja se sopii hyvin paikkaa…
+AIEMPI KYSYMYS: Mikä on Užupis, Vilnan oma tasavalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tästä minä olen kuullut katolta. Užupis on Vilnan vanhankaupungin kupeessa, [[Vilnia-joen]] toisella puolella sijaitseva taiteilijakortteli, joka julistautui itsenäiseksi tasavallaksi huhtikuun ensimmäisenä päivänä 1997. Julistus on leikkimielinen, mutta sitä noudatetaan huolella: alueella on oma perustuslaki, joka on kirjoitettu seinälle usealla kielellä, ja sen kohtiin kuuluvat muun muassa oikeus olla onnellinen ja se, että koiralla on oikeus olla koira. Kortteli on tunnettu kahviloistaan ja gallerioistaan, ja sen keskusaukiolla seisoo [[enkelipatsas]], joka on korttelin tunnus. Kävijä voi tutustua myös [[Vilnan vanhankaupungin]] muihin osiin kävelemällä joen yli. Pieni tasavalta, iso sydän, ja minä en tarvitse passia.
+KYSYMYS: Kerro lisää: Vilnan vanhankaupungin
+
+### 735
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Peruna sai nimen ilmalaivasta] 1920-luku — Cepelinai on Liettuan tunnetuin ruokalaji: raastetusta ja keitetystä perunataikinasta muotoillut, jauhelihalla, raejuustolla tai sienillä täytetyt pallot, joita tarjoillaan silava- tai smetanakastikkeen kanssa. Ruokalaji tunnettiin jo 1800-luvulla nimellä didžkukuliai, mutta nykyinen nimi ja soikea muoto vakiintuivat 1920- ja 1930-luvuilla, kun kreivi Ferdinand von Zeppelinin ilmalaivat olivat lehtiotsikoissa ja pallojen muoto muistutti niitä. Samalla cepelinaista tuli tuoreen itsenäisen Liettuan uudistetun maatalouden symboli.
+AIEMPI KYSYMYS: Mitä liettualaisessa ruokapöydässä on tavallisesti?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys. Perinteinen liettualainen ruoka on perunapainotteista ja tuhtia, sillä peruna on ollut maan arkiruokaa vuosisatoja. Tunnetuin ruoka on [[cepelinai]], zeppeliinin muotoiset perunataikinaklimpit, joiden sisällä on yleensä lihaa ja joiden päälle lisätään kermaviiliä ja pekonikastiketta. Kesällä syödään [[šaltibarščiai]], kylmää punajuurikeittoa, jonka väri on kirkkaan vaaleanpunainen ja joka tarjoillaan kuumien keitettyjen perunoiden kanssa. Vilnan lähellä Trakaissa tunnetaan lisäksi [[kibinai]], karaiiteilta peräisin olevat lihatäytteiset piiraat. Ja nyt minulle tuli nälkä.
+KYSYMYS: Kerro lisää: cepelinai
+
+### 736
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Keitto joka väriytyy pinkiksi] Kesällä — Šaltibarščiai on kylmä, kirkkaanpinkki keitto, joka tehdään keitetystä punajuuresta ja hapanmaitotuotteesta, useimmiten kefiiristä tai piimästä. Sitä tarjoillaan kesällä kylmänä, usein keitetyn munan, tillin ja lämpimien perunoiden kanssa. Keiton juuret ulottuvat Liettuan suuriruhtinaskunnan aikaan, jolloin ylimystön pöydässä kylmiin keittoihin lisättiin ylellisiä aineksia kuten rapua tai riistaa isännän varallisuuden osoitukseksi. Ajan myötä yksinkertaisempi versio levisi tavallisiin koteihin, ja siitä tuli koko maan rakastama kesäruoka.
+AIEMPI KYSYMYS: Mitä liettualaisessa ruokapöydässä on tavallisesti?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys. Perinteinen liettualainen ruoka on perunapainotteista ja tuhtia, sillä peruna on ollut maan arkiruokaa vuosisatoja. Tunnetuin ruoka on [[cepelinai]], zeppeliinin muotoiset perunataikinaklimpit, joiden sisällä on yleensä lihaa ja joiden päälle lisätään kermaviiliä ja pekonikastiketta. Kesällä syödään [[šaltibarščiai]], kylmää punajuurikeittoa, jonka väri on kirkkaan vaaleanpunainen ja joka tarjoillaan kuumien keitettyjen perunoiden kanssa. Vilnan lähellä Trakaissa tunnetaan lisäksi [[kibinai]], karaiiteilta peräisin olevat lihatäytteiset piiraat. Ja nyt minulle tuli nälkä.
+KYSYMYS: Kerro lisää: šaltibarščiai
+
+### 737
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Mitä liettualaisessa ruokapöydässä on tavallisesti?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys. Perinteinen liettualainen ruoka on perunapainotteista ja tuhtia, sillä peruna on ollut maan arkiruokaa vuosisatoja. Tunnetuin ruoka on [[cepelinai]], zeppeliinin muotoiset perunataikinaklimpit, joiden sisällä on yleensä lihaa ja joiden päälle lisätään kermaviiliä ja pekonikastiketta. Kesällä syödään [[šaltibarščiai]], kylmää punajuurikeittoa, jonka väri on kirkkaan vaaleanpunainen ja joka tarjoillaan kuumien keitettyjen perunoiden kanssa. Vilnan lähellä Trakaissa tunnetaan lisäksi [[kibinai]], karaiiteilta peräisin olevat lihatäytteiset piiraat. Ja nyt minulle tuli nälkä.
+KYSYMYS: Kerro lisää: kibinai
+
+### 738
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Uskonto: Museo, joka kantaa hänen nimeään] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa ja kukoistava juutalainen yhteisö, jota kutsuttiin Liettuan Jerusalemiksi. Suuri synagoga, yhteisön sydän, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana. Nykyinen Vilnan Gaonin juutalainen valtionmuseo, nimetty samaisen oppineen mukaan, on Liettuan juutalaisen yhteisön nykyinen koti ja vaalii sitä historiaa, jonka rakennukset eivät enää voi kertoa.
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause ’Hinc itur ad astra’ tarkoittaa ’täältä tie vie tähtiin’, ja se sopii hyvin paikkaa…
+AIEMPI KYSYMYS: Miksi Vilnaa sanottiin pohjoisen Jerusalemiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, kerron tämän rauhassa. Ennen toista maailmansotaa Vilnassa asui suuri juutalaisyhteisö, joka oli kaupungin väestöstä merkittävä osa, ja kaupunki oli itäeurooppalaisen juutalaisen oppineisuuden keskus. Siellä oli lukuisia synagogia, kouluja ja kustantamoita, ja 1700-luvulla kaupungissa vaikutti oppinut [[Vilnan Gaon]], jonka opetukset levisivät laajalle. Jiddišin kielen tutkimuslaitos [[YIVO]] perustettiin Vilnassa vuonna 1925. Saksan miehityksen aikana 1941–1944 suurin osa kaupungin juutalaisista surmattiin, ja nykyisin yhteisön perintöä muistetaan museoilla ja muistomerkeillä sekä [[jiddišin]] opiskelulla. Tämä on sellainen asia, jota on hyvä muistaa.
+KYSYMYS: Kerro lisää: Vilnan Gaon
+
+### 739
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Miksi Vilnaa sanottiin pohjoisen Jerusalemiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, kerron tämän rauhassa. Ennen toista maailmansotaa Vilnassa asui suuri juutalaisyhteisö, joka oli kaupungin väestöstä merkittävä osa, ja kaupunki oli itäeurooppalaisen juutalaisen oppineisuuden keskus. Siellä oli lukuisia synagogia, kouluja ja kustantamoita, ja 1700-luvulla kaupungissa vaikutti oppinut [[Vilnan Gaon]], jonka opetukset levisivät laajalle. Jiddišin kielen tutkimuslaitos [[YIVO]] perustettiin Vilnassa vuonna 1925. Saksan miehityksen aikana 1941–1944 suurin osa kaupungin juutalaisista surmattiin, ja nykyisin yhteisön perintöä muistetaan museoilla ja muistomerkeillä sekä [[jiddišin]] opiskelulla. Tämä on sellainen asia, jota on hyvä muistaa.
+KYSYMYS: Kerro lisää: YIVO
+
+### 740
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Kiinalaiskaupunki] 1890-luku Montrealin kiinalaiskaupunki on De la Gauchetière -kadun ympärillä, ja ennen kiinalaisia siellä asuivat juutalaiset: vuosina 1890–1920 alueelle asettui tuhansia jiddišinkielisiä siirtolaisia osana Saint Laurent -bulevardin ympärille syntynyttä juutalaiskorttelia. Ensimmäiset kiinalaiset siirtolaiset saapuivat Montrealiin maaliskuussa 1877 — neljä vuotta isoisän matkan jälkeen. Kiinalaiskaupunki muodostui 1890-luvulla, ja se rakentui sukuryhmien varaan: Chan, Hom eli Tam, Lee ja Wong. Moni tulija oli kotoisin Taishanista ja seurasi Leungin sukua; he olivat töissä rautateillä, ja alue oli sijainniltaan sopiva. Ensimmäisiä asukkaita oli Jos Song Long, joka avasi pesulan Craig-kadulle…
+- [Minsk — kaupunkilehti / Kirjat, kieli ja näyttämö: Monta kieltä samoilla kaduilla] Minskin kaduilla on kuultu monia kieliä. Alussa asukkaat puhuivat ruteenia, josta kehittyi valkovenäjä. Lublinin unionin 1569 jälkeen virallinen kieli oli puola, ja 1800-luvulla venäjästä tuli virallinen kieli, joka vuosisadan lopulla oli hallinnon, koulujen ja lehtien kieli. Valkovenäjän kielen käyttö kasvoi 1890-luvulta sivistyneistön keskuudessa. Vuoden 1897 väestönlaskennassa noin puolet asukkaista (52 %) oli juutalaisia, ja jiddiš oli kaupungin yleisimpiä kieliä; venäjän äidinkielekseen ilmoitti lähteen mukaan 25,5 prosenttia, puolan 11,4 ja valkovenäjän 9,0 prosenttia. 1920- ja 1930-luvun alussa valkovenäjä oli kaupungin pääkieli, myös hallinnossa ja koulutuksessa.
+AIEMPI KYSYMYS: Miksi Vilnaa sanottiin pohjoisen Jerusalemiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, kerron tämän rauhassa. Ennen toista maailmansotaa Vilnassa asui suuri juutalaisyhteisö, joka oli kaupungin väestöstä merkittävä osa, ja kaupunki oli itäeurooppalaisen juutalaisen oppineisuuden keskus. Siellä oli lukuisia synagogia, kouluja ja kustantamoita, ja 1700-luvulla kaupungissa vaikutti oppinut [[Vilnan Gaon]], jonka opetukset levisivät laajalle. Jiddišin kielen tutkimuslaitos [[YIVO]] perustettiin Vilnassa vuonna 1925. Saksan miehityksen aikana 1941–1944 suurin osa kaupungin juutalaisista surmattiin, ja nykyisin yhteisön perintöä muistetaan museoilla ja muistomerkeillä sekä [[jiddišin]] opiskelulla. Tämä on sellainen asia, jota on hyvä muistaa.
+KYSYMYS: Kerro lisää: jiddišin
+
+### 741
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Mikä on Gediminasin torni ja miksi se on kaupungin tunnus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Gediminasin torni on linnavuoren päällä seisova linnan jäänne, ja se on Vilnan tunnetuin tunnus. Vuori kohoaa [[Neris-joen]] ja Vilnian yhtymäkohdan lähellä, ja siitä on kaupunkiin laaja näkymä. Legendan mukaan suuriruhtinas Gediminas näki metsästysretkellä unessa [[rautaisen suden]], joka ulvoi kuin sata sutta, ja unen tulkittiin tarkoittavan, että paikalle pitäisi perustaa pääkaupunki. Kaupunki mainitaan ensi kerran suuriruhtinas [[Gediminaksen]] kirjeissä vuonna 1323. Sudet minä jätän muille, kyyhkyllä on omat huolensa.
+KYSYMYS: Kerro lisää: Neris-joen
+
+### 742
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+AIEMPI KYSYMYS: Mikä on Gediminasin torni ja miksi se on kaupungin tunnus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Gediminasin torni on linnavuoren päällä seisova linnan jäänne, ja se on Vilnan tunnetuin tunnus. Vuori kohoaa [[Neris-joen]] ja Vilnian yhtymäkohdan lähellä, ja siitä on kaupunkiin laaja näkymä. Legendan mukaan suuriruhtinas Gediminas näki metsästysretkellä unessa [[rautaisen suden]], joka ulvoi kuin sata sutta, ja unen tulkittiin tarkoittavan, että paikalle pitäisi perustaa pääkaupunki. Kaupunki mainitaan ensi kerran suuriruhtinas [[Gediminaksen]] kirjeissä vuonna 1323. Sudet minä jätän muille, kyyhkyllä on omat huolensa.
+KYSYMYS: Kerro lisää: rautaisen suden
+
+### 743
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Gediminaksen torni] 1409 Legenda kertoo, että suurruhtinas Gediminas näki noin vuonna 1323 metsästysretkellä unta rautaisesta sudesta, joka ulvoi kukkulan laella niin kovaa kuin sata sutta yhdessä. Hovin tietäjä Lizdeika selitti unen tarkoittavan, että juuri sille kukkulalle pitäisi rakentaa mahtava linnoituskaupunki. Näin sai alkunsa Vilna. Ensin kukkulalle nousi puulinnoitus, mutta vuonna 1409 suurruhtinas Vytautas rakennutti tilalle punatiilisen linnan. Vuosisatojen saatossa suurin osa linnasta romahti tai purettiin, ja jäljelle jäi vain yksi kolmikerroksinen torni. Se, mitä tornista näkyy tänään, on suurelta osin vuonna 1933 tehdyn jälleenrakennuksen näköinen. Torni on tärkeä koko Liettualle: kun maa alkoi…
+AIEMPI KYSYMYS: Mikä on Gediminasin torni ja miksi se on kaupungin tunnus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Gediminasin torni on linnavuoren päällä seisova linnan jäänne, ja se on Vilnan tunnetuin tunnus. Vuori kohoaa [[Neris-joen]] ja Vilnian yhtymäkohdan lähellä, ja siitä on kaupunkiin laaja näkymä. Legendan mukaan suuriruhtinas Gediminas näki metsästysretkellä unessa [[rautaisen suden]], joka ulvoi kuin sata sutta, ja unen tulkittiin tarkoittavan, että paikalle pitäisi perustaa pääkaupunki. Kaupunki mainitaan ensi kerran suuriruhtinas [[Gediminaksen]] kirjeissä vuonna 1323. Sudet minä jätän muille, kyyhkyllä on omat huolensa.
+KYSYMYS: Kerro lisää: Gediminaksen
+
+### 744
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Sopimus, joka purki linnoituksen] 1867 — Lontoossa 11. toukokuuta 1867 suurvaltojen edustajat panivat nimensä ja vahasinettinsä paperille, joka lopetti Luxemburgin kriisin. Ranskan keisari Napoleon III oli yrittänyt ostaa maan Hollannin kuninkaalta, eikä Preussi sietänyt ajatusta. Sopimus vahvisti Luxemburgin puolueettomuuden, ja Preussin varuskunta lähti. Kaupungin linnoitukset piti purkaa eikä koskaan rakentaa uudelleen. Työ kesti 16 vuotta ja maksoi 1,5 miljoonaa kultafrangia, ja pois meni yli 24 kilometriä maanalaisia käytäviä.
+AIEMPI KYSYMYS: Miten Luxemburgin linnoitus purettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minulla on paljon sanottavaa. [[Lontoon sopimus]] vuonna 1867 julisti Luxemburgin ainaisesti puolueettomaksi ja velvoitti purkamaan kaupungin linnoitukset. Työ kesti reilusti toista vuosikymmentä: muureja, bastioneja ja suurta osaa kallion alle louhituista käytävistä purettiin tai räjäytettiin. Osa kuitenkin säilytettiin, ja [[Bockin kasemaatit]] sekä kaupungin vanha osa kuuluvat nykyään [[Unescon maailmanperintöluetteloon]]. Linnoituksen paikalle syntyi puistoja ja katuja, ja kaupunki sai tilaa kasvaa. Kallio jäi, ja hyvä niin, kyyhky tarvitsee kiinnekohtansa.
+KYSYMYS: Kerro lisää: Lontoon sopimus
+
+### 745
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kohdekartta / Kohdekartta: Bockin kauppa 963] Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympäril…
+AIEMPI KYSYMYS: Miten Luxemburgin linnoitus purettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minulla on paljon sanottavaa. [[Lontoon sopimus]] vuonna 1867 julisti Luxemburgin ainaisesti puolueettomaksi ja velvoitti purkamaan kaupungin linnoitukset. Työ kesti reilusti toista vuosikymmentä: muureja, bastioneja ja suurta osaa kallion alle louhituista käytävistä purettiin tai räjäytettiin. Osa kuitenkin säilytettiin, ja [[Bockin kasemaatit]] sekä kaupungin vanha osa kuuluvat nykyään [[Unescon maailmanperintöluetteloon]]. Linnoituksen paikalle syntyi puistoja ja katuja, ja kaupunki sai tilaa kasvaa. Kallio jäi, ja hyvä niin, kyyhky tarvitsee kiinnekohtansa.
+KYSYMYS: Kerro lisää: Bockin kasemaatit
+
+### 746
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miten Luxemburgin linnoitus purettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minulla on paljon sanottavaa. [[Lontoon sopimus]] vuonna 1867 julisti Luxemburgin ainaisesti puolueettomaksi ja velvoitti purkamaan kaupungin linnoitukset. Työ kesti reilusti toista vuosikymmentä: muureja, bastioneja ja suurta osaa kallion alle louhituista käytävistä purettiin tai räjäytettiin. Osa kuitenkin säilytettiin, ja [[Bockin kasemaatit]] sekä kaupungin vanha osa kuuluvat nykyään [[Unescon maailmanperintöluetteloon]]. Linnoituksen paikalle syntyi puistoja ja katuja, ja kaupunki sai tilaa kasvaa. Kallio jäi, ja hyvä niin, kyyhky tarvitsee kiinnekohtansa.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+
+### 747
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Mitä kieliä Luxemburgissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Luxemburgilla on kolme virallista kieltä: [[luxemburgin kieli]], ranska ja saksa. Luxemburgin kieli on kansallinen kieli ja arkipuheen kieli, ja se kuuluu länsigermaanisiin kieliin ja muistuttaa [[Moselin]] seudun saksalaisia murteita. Ranska on lakien ja hallinnon kieli, ja saksa on tärkeä esimerkiksi lehdistössä ja koulun alkuvaiheessa. Koululaiset oppivat yleensä kaikki kolme kieltä ja usein englannin lisäksi, joten monikielisyys on arkea. Minulle riittää kyl kuherrus.
+KYSYMYS: Kerro lisää: luxemburgin kieli
+
+### 748
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Mitä kieliä Luxemburgissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Luxemburgilla on kolme virallista kieltä: [[luxemburgin kieli]], ranska ja saksa. Luxemburgin kieli on kansallinen kieli ja arkipuheen kieli, ja se kuuluu länsigermaanisiin kieliin ja muistuttaa [[Moselin]] seudun saksalaisia murteita. Ranska on lakien ja hallinnon kieli, ja saksa on tärkeä esimerkiksi lehdistössä ja koulun alkuvaiheessa. Koululaiset oppivat yleensä kaikki kolme kieltä ja usein englannin lisäksi, joten monikielisyys on arkea. Minulle riittää kyl kuherrus.
+KYSYMYS: Kerro lisää: Moselin
+
+### 749
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+AIEMPI KYSYMYS: Miten Luxemburgin masuunit sammuivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luxemburgin eteläosa oli pitkään teollisuusaluetta, jossa louhittiin punaista [[minette-malmia]] ja jalostettiin sitä teräkseksi. Teollisuuden keskuksia oli esimerkiksi [[Esch-sur-Alzetten]] seutu. Terästeollisuus joutui kriisiin 1970-luvulla, ja masuuneja suljettiin vähitellen vuosikymmenten kuluessa. Vanhoja masuuneja on säilytetty [[Belvalin]] alueella, jonka teollisuusrakennuksiin on rakennettu yliopisto ja kulttuuritiloja. Nykyisin Luxemburgin talous perustuu pääosin rahoitusalaan ja palveluihin. Taivas on siellä nykyään kyyhkyllekin siistimpi.
+KYSYMYS: Kerro lisää: minette-malmia
+
+### 750
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Arki: Lause kaupungintalon päädyssä] 1859 — Esch-sur-Alzetten kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat kaupungin vaakunaa, ja alla lukee vanhalla kirjoitusasulla Mir wölle bleiwe wat mer sin, Haluamme pysyä sellaisina kuin olemme. Lause on maan tunnuslause, ja se on peräisin Michel Lentzin runosta De Feierwon, jonka hän kirjoitti 1859 kaupungin rautatien vihkiäisiin. Luxemburgin kieltä puhuu noin 400 000 ihmistä. Sen vanhin tunnettu teksti on 1300-luvun alun Codex Mariendalensis.
+AIEMPI KYSYMYS: Miten Luxemburgin masuunit sammuivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luxemburgin eteläosa oli pitkään teollisuusaluetta, jossa louhittiin punaista [[minette-malmia]] ja jalostettiin sitä teräkseksi. Teollisuuden keskuksia oli esimerkiksi [[Esch-sur-Alzetten]] seutu. Terästeollisuus joutui kriisiin 1970-luvulla, ja masuuneja suljettiin vähitellen vuosikymmenten kuluessa. Vanhoja masuuneja on säilytetty [[Belvalin]] alueella, jonka teollisuusrakennuksiin on rakennettu yliopisto ja kulttuuritiloja. Nykyisin Luxemburgin talous perustuu pääosin rahoitusalaan ja palveluihin. Taivas on siellä nykyään kyyhkyllekin siistimpi.
+KYSYMYS: Kerro lisää: Esch-sur-Alzetten
+
+### 751
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Miten Luxemburgin masuunit sammuivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luxemburgin eteläosa oli pitkään teollisuusaluetta, jossa louhittiin punaista [[minette-malmia]] ja jalostettiin sitä teräkseksi. Teollisuuden keskuksia oli esimerkiksi [[Esch-sur-Alzetten]] seutu. Terästeollisuus joutui kriisiin 1970-luvulla, ja masuuneja suljettiin vähitellen vuosikymmenten kuluessa. Vanhoja masuuneja on säilytetty [[Belvalin]] alueella, jonka teollisuusrakennuksiin on rakennettu yliopisto ja kulttuuritiloja. Nykyisin Luxemburgin talous perustuu pääosin rahoitusalaan ja palveluihin. Taivas on siellä nykyään kyyhkyllekin siistimpi.
+KYSYMYS: Kerro lisää: Belvalin
+
+### 752
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+AIEMPI KYSYMYS: Mitä Schengenin sopimus tarkoittaa Luxemburgille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Schengen on Moselin rannalla sijaitseva luxemburgilainen kylä, jossa Luxemburgin, Saksan ja Ranskan rajat kohtaavat. Siellä allekirjoitettiin vuonna 1985 sopimus rajatarkastusten asteittaisesta poistamisesta, ja allekirjoitus tehtiin laivalla [[Moselin]] vesillä. Sopimuksen ensimmäisiä osapuolia olivat [[Benelux-maat]], Saksa ja Ranska, ja se laajeni myöhemmin [[Schengen-alueeksi]], jolla matkustaja ylittää rajat ilman passintarkastusta. Kyyhky ei ole koskaan tarvinnut passia.
+KYSYMYS: Kerro lisää: Benelux-maat
+
+### 753
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Mitä Schengenin sopimus tarkoittaa Luxemburgille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Schengen on Moselin rannalla sijaitseva luxemburgilainen kylä, jossa Luxemburgin, Saksan ja Ranskan rajat kohtaavat. Siellä allekirjoitettiin vuonna 1985 sopimus rajatarkastusten asteittaisesta poistamisesta, ja allekirjoitus tehtiin laivalla [[Moselin]] vesillä. Sopimuksen ensimmäisiä osapuolia olivat [[Benelux-maat]], Saksa ja Ranska, ja se laajeni myöhemmin [[Schengen-alueeksi]], jolla matkustaja ylittää rajat ilman passintarkastusta. Kyyhky ei ole koskaan tarvinnut passia.
+KYSYMYS: Kerro lisää: Schengen-alueeksi
+
+### 754
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Luonto: Hiekkakivi on veistetty tuulella] Pohjois-Saudi-Arabiassa Hailin seudulla kohoaa hiekkakivimuodostumia, joiden väliin jää kapeita laaksoja. Kivi on kerroksellista, ja tuuli ja harvat rankkasateet ovat kuluttaneet pehmeämmät kerrokset nopeammin kuin kovat: siitä syntyvät ulokkeet, kielekkeet ja onkalot. Alue kuuluu Kuningas Salmanin suojelualueeseen, ja sen halki on kuljettu vanhoja karavaanireittejä. Aamulla ja illalla kivi hehkuu oranssina, koska matala aurinko korostaa hiekkakiven rautapitoista pintaa.
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mikä on Mullerthal, Luxemburgin pikku-Sveitsi?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis paikka. Mullerthal on Luxemburgin itäosassa sijaitseva metsäinen kallioalue, jota kutsutaan pikku-Sveitsiksi. Maisemaa hallitsevat [[hiekkakivi]]kalliot, kapeat rotkot ja käytävät, ja alue on suosittu retkeilykohde. Siellä kulkee merkitty vaellusreitti [[Mullerthal Trail]], ja lähistöllä sijaitsee vanha luostarikaupunki Echternach, jossa järjestetään vuosittain [[Echternachin hyppelykulkue]]. Ylhäältä katsoen koko metsä on yhtä vihreää hyrinää.
+KYSYMYS: Kerro lisää: hiekkakivi
+
+### 755
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+AIEMPI KYSYMYS: Mikä on Mullerthal, Luxemburgin pikku-Sveitsi?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis paikka. Mullerthal on Luxemburgin itäosassa sijaitseva metsäinen kallioalue, jota kutsutaan pikku-Sveitsiksi. Maisemaa hallitsevat [[hiekkakivi]]kalliot, kapeat rotkot ja käytävät, ja alue on suosittu retkeilykohde. Siellä kulkee merkitty vaellusreitti [[Mullerthal Trail]], ja lähistöllä sijaitsee vanha luostarikaupunki Echternach, jossa järjestetään vuosittain [[Echternachin hyppelykulkue]]. Ylhäältä katsoen koko metsä on yhtä vihreää hyrinää.
+KYSYMYS: Kerro lisää: Mullerthal Trail
+
+### 756
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+AIEMPI KYSYMYS: Mikä on Mullerthal, Luxemburgin pikku-Sveitsi?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis paikka. Mullerthal on Luxemburgin itäosassa sijaitseva metsäinen kallioalue, jota kutsutaan pikku-Sveitsiksi. Maisemaa hallitsevat [[hiekkakivi]]kalliot, kapeat rotkot ja käytävät, ja alue on suosittu retkeilykohde. Siellä kulkee merkitty vaellusreitti [[Mullerthal Trail]], ja lähistöllä sijaitsee vanha luostarikaupunki Echternach, jossa järjestetään vuosittain [[Echternachin hyppelykulkue]]. Ylhäältä katsoen koko metsä on yhtä vihreää hyrinää.
+KYSYMYS: Kerro lisää: Echternachin hyppelykulkue
+
+### 757
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kohdekartta / Kohdekartta: Bockin kauppa 963] Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympäril…
+AIEMPI KYSYMYS: Mitä Bockin kasemaatit ovat?
+AIEMPI VASTAUS (Livia):
+No jopas. Bockin kasemaatit ovat kallion sisään louhittuja käytäviä ja suojia, joita Luxemburgin linnoituksen puolustajat rakensivat vuosisatojen kuluessa. Ne ulottuvat sen kallionnokan alle, jolle [[kreivi Siegfried]] rakensi ensimmäisen linnansa vuonna 963, ja laajenivat eri valtojen hallinnon aikana. Kun [[Lontoon sopimus]] vaati linnoituksen purkamista, suuri osa rakennelmista purettiin, mutta osa käytävistä säilyi ja on nykyään avoinna vierailijoille. Kallion juurella virtaa [[Alzette-joki]]. Täällä on kyl pimeämpää kuin pöllön pesässä.
+KYSYMYS: Kerro lisää: kreivi Siegfried
+
+### 758
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Sopimus, joka purki linnoituksen] 1867 — Lontoossa 11. toukokuuta 1867 suurvaltojen edustajat panivat nimensä ja vahasinettinsä paperille, joka lopetti Luxemburgin kriisin. Ranskan keisari Napoleon III oli yrittänyt ostaa maan Hollannin kuninkaalta, eikä Preussi sietänyt ajatusta. Sopimus vahvisti Luxemburgin puolueettomuuden, ja Preussin varuskunta lähti. Kaupungin linnoitukset piti purkaa eikä koskaan rakentaa uudelleen. Työ kesti 16 vuotta ja maksoi 1,5 miljoonaa kultafrangia, ja pois meni yli 24 kilometriä maanalaisia käytäviä.
+AIEMPI KYSYMYS: Mitä Bockin kasemaatit ovat?
+AIEMPI VASTAUS (Livia):
+No jopas. Bockin kasemaatit ovat kallion sisään louhittuja käytäviä ja suojia, joita Luxemburgin linnoituksen puolustajat rakensivat vuosisatojen kuluessa. Ne ulottuvat sen kallionnokan alle, jolle [[kreivi Siegfried]] rakensi ensimmäisen linnansa vuonna 963, ja laajenivat eri valtojen hallinnon aikana. Kun [[Lontoon sopimus]] vaati linnoituksen purkamista, suuri osa rakennelmista purettiin, mutta osa käytävistä säilyi ja on nykyään avoinna vierailijoille. Kallion juurella virtaa [[Alzette-joki]]. Täällä on kyl pimeämpää kuin pöllön pesässä.
+KYSYMYS: Kerro lisää: Lontoon sopimus
+
+### 759
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kohdekartta / Kohdekartta: Bockin kauppa 963] Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympäril…
+AIEMPI KYSYMYS: Mitä Bockin kasemaatit ovat?
+AIEMPI VASTAUS (Livia):
+No jopas. Bockin kasemaatit ovat kallion sisään louhittuja käytäviä ja suojia, joita Luxemburgin linnoituksen puolustajat rakensivat vuosisatojen kuluessa. Ne ulottuvat sen kallionnokan alle, jolle [[kreivi Siegfried]] rakensi ensimmäisen linnansa vuonna 963, ja laajenivat eri valtojen hallinnon aikana. Kun [[Lontoon sopimus]] vaati linnoituksen purkamista, suuri osa rakennelmista purettiin, mutta osa käytävistä säilyi ja on nykyään avoinna vierailijoille. Kallion juurella virtaa [[Alzette-joki]]. Täällä on kyl pimeämpää kuin pöllön pesässä.
+KYSYMYS: Kerro lisää: Alzette-joki
+
+### 760
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Luxemburg] Kaupunki seisoo kalliolla, jonka Alzette- ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen Gibraltariksi.
+AIEMPI KYSYMYS: Mikä on Adolphe-silta ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Adolphe-silta on kaksikerroksinen kaarisilta [[Pétrussen]] laakson yli, ja se on kaupunkikuvan tunnetuimpia rakennelmia. Se valmistui vuonna 1903 hiekkakivestä, ja nimensä se on saanut [[suurherttua Adolphen]] mukaan. Lähteiden mukaan se oli valmistuessaan yksi aikansa suurimmista kivisistä kaarisilloista. Silta yhdistää kaupungin vanhan osan ja uudemmat asuinalueet, ja sen alta aukeaa näkymä syvään rotkoon. Siltoja minä arvostan, kun en itse tarvitse niitä.
+KYSYMYS: Kerro lisää: Pétrussen
+
+### 761
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Kaupungintalosta suurherttuan palatsiksi] 1572 — Rakennus oli Luxemburgin kaupungintalo vuosina 1572–1795, ja sen jälkeen siellä toimivat prefektuuri ja hallitus. Vuodesta 1817 siellä asui Hollannin suurherttuiden edustaja. Kun Nassau-Weilburgin suku nousi valtaan 1890, palatsi varattiin suurherttuan perheelle, ja Adolphen aikana siihen lisättiin uusi siipi. Nykyään palatsi on suurherttuan virallinen työpaikka, mutta varsinainen koti on Bergin linna Colmar-Bergissä. Jouluaattona suurherttuan tervehdys lähetetään palatsin Keltaisesta salista.
+AIEMPI KYSYMYS: Mikä on Adolphe-silta ja miksi se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Adolphe-silta on kaksikerroksinen kaarisilta [[Pétrussen]] laakson yli, ja se on kaupunkikuvan tunnetuimpia rakennelmia. Se valmistui vuonna 1903 hiekkakivestä, ja nimensä se on saanut [[suurherttua Adolphen]] mukaan. Lähteiden mukaan se oli valmistuessaan yksi aikansa suurimmista kivisistä kaarisilloista. Silta yhdistää kaupungin vanhan osan ja uudemmat asuinalueet, ja sen alta aukeaa näkymä syvään rotkoon. Siltoja minä arvostan, kun en itse tarvitse niitä.
+KYSYMYS: Kerro lisää: suurherttua Adolphen
+
+### 762
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+AIEMPI KYSYMYS: Mitä luxemburgilaiset syövät kansallisruokanaan?
+AIEMPI VASTAUS (Livia):
+Ai se, no sehän on selvä. Luxemburgin kansallisruokana pidetään ruokaa [[Judd mat Gaardebounen]], savustettua porsaan niskaa leveiden papujen ja perunoiden kera. Arjen keittona tunnetaan [[Bouneschlupp]], papukeitto, ja Moselin rannoilla syödään perinteisesti paistettua pikkukalaa. Jälkiruoaksi tai kahvin kanssa nautitaan usein luumupiirakkaa, jota kutsutaan nimellä [[Quetschentaart]]. Jos joku kysyy pullaa, luumupiirakka on lähin vastine, mitä tiedän.
+KYSYMYS: Kerro lisää: Judd mat Gaardebounen
+
+### 763
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Papukeitto, joka ylittää rajat] nykyään — Bouneschlupp on vihreistä pavuista, perunoista, pekonista ja sipulista keitetty sakea keitto. Sitä pidetään luxemburgilaisena kansallisruokana, mutta sama keitto löytyy myös Saarlandista, Belgian Gaumesta ja Arelerlandista sekä Lorrainesta. Resepti ei siis pysähtynyt rajalle. Luxemburgin keittiö onkin rajaseudun sekoitus: arkiruoat ovat talonpoikaisia kuten Saksassa, mutta ranskalainen vaikutus näkyy ravintoloiden listoilla. Kuvan keitossa on myös makkaraviipaleita ja porkkanaa.
+AIEMPI KYSYMYS: Mitä luxemburgilaiset syövät kansallisruokanaan?
+AIEMPI VASTAUS (Livia):
+Ai se, no sehän on selvä. Luxemburgin kansallisruokana pidetään ruokaa [[Judd mat Gaardebounen]], savustettua porsaan niskaa leveiden papujen ja perunoiden kera. Arjen keittona tunnetaan [[Bouneschlupp]], papukeitto, ja Moselin rannoilla syödään perinteisesti paistettua pikkukalaa. Jälkiruoaksi tai kahvin kanssa nautitaan usein luumupiirakkaa, jota kutsutaan nimellä [[Quetschentaart]]. Jos joku kysyy pullaa, luumupiirakka on lähin vastine, mitä tiedän.
+KYSYMYS: Kerro lisää: Bouneschlupp
+
+### 764
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Mitä luxemburgilaiset syövät kansallisruokanaan?
+AIEMPI VASTAUS (Livia):
+Ai se, no sehän on selvä. Luxemburgin kansallisruokana pidetään ruokaa [[Judd mat Gaardebounen]], savustettua porsaan niskaa leveiden papujen ja perunoiden kera. Arjen keittona tunnetaan [[Bouneschlupp]], papukeitto, ja Moselin rannoilla syödään perinteisesti paistettua pikkukalaa. Jälkiruoaksi tai kahvin kanssa nautitaan usein luumupiirakkaa, jota kutsutaan nimellä [[Quetschentaart]]. Jos joku kysyy pullaa, luumupiirakka on lähin vastine, mitä tiedän.
+KYSYMYS: Kerro lisää: Quetschentaart
+
+### 765
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Tuomioistuin taiteilijahuvilassa] Villa Vauban rakennettiin 1873 yksityisasunnoksi tontille, joka vapautui, kun kaupungin linnoitukset purettiin, ja nimensä se sai paikalla aiemmin seisseestä Vaubanin linnakkeesta. Kaupunki osti huvilan 1949 taidekokoelmilleen, mutta hiili- ja teräsyhteisön tuomioistuin tarvitsi tilat, ja se piti huvilassa ensimmäisen istuntonsa 28. marraskuuta 1954. Talo jäi pian ahtaaksi: tuomioistuin muutti 1959 Côte d'Eichin rakennukseen ja 1972 omaan palatsiinsa Kirchbergiin. Tuomarit neuvottelevat yhä ranskaksi, ja tuomio kirjoitetaan ensin sillä kielellä, oli asian kieli mikä tahansa.
+- [Luxemburg — kaupunkilehti / Eurooppa: Punainen silta Euroopan kortteleihin] Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli 69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, Euroopan investointipankki ja parlamentin sihteeristö, jossa työskentelee yli 4 000 ihmistä.
+AIEMPI KYSYMYS: Miksi Luxemburgissa on niin paljon pankkeja ja EU-virastoja?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Luxemburg on yksi Euroopan merkittävimmistä rahoituskeskuksista. Maan pieni koko, vakaa asema ja aiemmin ankara pankkisalaisuus houkuttelivat pankkeja ja rahastoja vuosikymmenten ajan, ja rahoitusala on nykyään talouden suurin osa. Lisäksi kaupunki on yksi Euroopan unionin toimielinten kotikaupungeista: [[Euroopan unionin tuomioistuin]] ja [[Euroopan investointipankki]] toimivat Kirchbergin kaupunginosassa. Rahaa täällä on ainakin enemmän kuin jyviä.
+KYSYMYS: Kerro lisää: Euroopan unionin tuomioistuin
+
+### 766
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Punainen silta Euroopan kortteleihin] Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli 69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, Euroopan investointipankki ja parlamentin sihteeristö, jossa työskentelee yli 4 000 ihmistä.
+AIEMPI KYSYMYS: Miksi Luxemburgissa on niin paljon pankkeja ja EU-virastoja?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Luxemburg on yksi Euroopan merkittävimmistä rahoituskeskuksista. Maan pieni koko, vakaa asema ja aiemmin ankara pankkisalaisuus houkuttelivat pankkeja ja rahastoja vuosikymmenten ajan, ja rahoitusala on nykyään talouden suurin osa. Lisäksi kaupunki on yksi Euroopan unionin toimielinten kotikaupungeista: [[Euroopan unionin tuomioistuin]] ja [[Euroopan investointipankki]] toimivat Kirchbergin kaupunginosassa. Rahaa täällä on ainakin enemmän kuin jyviä.
+KYSYMYS: Kerro lisää: Euroopan investointipankki
+
+### 767
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+AIEMPI KYSYMYS: Millainen paikka on Grund Luxemburgin alakaupungissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Grund on Alzette-joen rotkossa, kallion juurella sijaitseva vanha kaupunginosa. Ylhäältä sinne laskeudutaan portaita ja hissillä, ja alhaalla vanhat talot seisovat tiiviisti joen mutkassa. Nykyisin siellä on ravintoloita, kahviloita ja baareja, ja sen keskeinen rakennus on entinen [[Neumünsterin luostari]], jossa toimii kulttuurikeskus. Lähellä on myös [[Pfaffenthalin]] kaupunginosa, joka sekin sijaitsee rotkon pohjalla. Hyvän pesäpaikan kyyhky kyl tunnistaa.
+KYSYMYS: Kerro lisää: Neumünsterin luostari
+
+### 768
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Punainen silta Euroopan kortteleihin] Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli 69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, Euroopan investointipankki ja parlamentin sihteeristö, jossa työskentelee yli 4 000 ihmistä.
+AIEMPI KYSYMYS: Millainen paikka on Grund Luxemburgin alakaupungissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Grund on Alzette-joen rotkossa, kallion juurella sijaitseva vanha kaupunginosa. Ylhäältä sinne laskeudutaan portaita ja hissillä, ja alhaalla vanhat talot seisovat tiiviisti joen mutkassa. Nykyisin siellä on ravintoloita, kahviloita ja baareja, ja sen keskeinen rakennus on entinen [[Neumünsterin luostari]], jossa toimii kulttuurikeskus. Lähellä on myös [[Pfaffenthalin]] kaupunginosa, joka sekin sijaitsee rotkon pohjalla. Hyvän pesäpaikan kyyhky kyl tunnistaa.
+KYSYMYS: Kerro lisää: Pfaffenthalin
+
+### 769
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+AIEMPI KYSYMYS: Miksi Kuldīgan Venta-putous on niin leveä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se kuuluisa leveä putous. Venta-joki virtaa Kuldīgan kohdalla tasaisen kalkkikivikynnyksen yli, ja koska joki leviää kynnyksellä koko leveydelleen, syntyy matala mutta poikkeuksellisen leveä putous. [[Ventas rumba]] on noin 250 metriä leveä, mutta pudotus on vain pari metriä, ja lähteiden mukaan se on Euroopan leveimpiä putouksia. Kuldīgan vanha kaupunki on kirjattu [[Unescon maailmanperintöluetteloon]], ja siellä on tiilisiltoja ja puutaloja. Putous on leveä, mutta ei korkea, ihan kuin minun lentoni.
+KYSYMYS: Kerro lisää: Ventas rumba
+
+### 770
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi Kuldīgan Venta-putous on niin leveä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se kuuluisa leveä putous. Venta-joki virtaa Kuldīgan kohdalla tasaisen kalkkikivikynnyksen yli, ja koska joki leviää kynnyksellä koko leveydelleen, syntyy matala mutta poikkeuksellisen leveä putous. [[Ventas rumba]] on noin 250 metriä leveä, mutta pudotus on vain pari metriä, ja lähteiden mukaan se on Euroopan leveimpiä putouksia. Kuldīgan vanha kaupunki on kirjattu [[Unescon maailmanperintöluetteloon]], ja siellä on tiilisiltoja ja puutaloja. Putous on leveä, mutta ei korkea, ihan kuin minun lentoni.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+
+### 771
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Kuoro, johon kuka tahansa voi liittyä] Laulujuhlaan ei tarvitse olla ammattilaulaja osallistuakseen: mukaan pääsevät koulujen, yliopistojen, työpaikkojen ja harrastuskuorojen jäsenet ympäri Latviaa, kunhan he läpäisevät paikallisen karsinnan ja harjoittelevat yhteisen ohjelmiston. Latvian nykyisessä, alle kahden miljoonan asukkaan maassa tuhannet ihmiset osallistuvat samaan juhlaan joka kerta. Moni osallistuja kuvailee kokemusta elämänsä vahvimmaksi yhteisöllisyyden hetkeksi: kun kolmekymmentätuhatta ääntä laulaa saman kansallislaulun yhtä aikaa Mežaparksin lavalla, ero yleisön ja esiintyjien välillä hämärtyy.
+- [Riika — kaupunkilehti / Musiikki: Lava, joka mahtuu kolmellekymmenelletuhannelle laulajalle] Nykyinen laulujuhla huipentuu Mežaparksin suurella lavalla Riiassa, jonne mahtuu esiintymään jopa kolmekymmentätuhatta laulajaa ja tanssijaa samaan aikaan — yksi maailman suurimmista pysyvistä esiintymislavoista. Yleisöä juhlaan kokoontuu vielä moninkertainen määrä ympäri Latviaa ja ulkomaita. Osallistujat harjoittelevat kuukausia omissa paikallisissa kuoroissaan ympäri maata ennen kuin kaikki kokoontuvat samaan aikaan samalle lavalle — logistinen ja musiikillinen ponnistus, joka toistuu nyt viidennen sukupolven latvialaisten kesken.
+AIEMPI KYSYMYS: Mikä on Latvian laulujuhla ja miksi se on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Latvian laulujuhla on suuri kuoro- ja tanssijuhla, jota on järjestetty jo vuodesta 1873, ja nykyisin se pidetään noin viiden vuoden välein. Tuhannet laulajat ja tanssijat kokoontuvat yhteen, ja suuri loppukonsertti pidetään Riian [[Mežaparksin]] laulukentällä. Perinne on tärkeä latvialaisen kansallistunteen ilmaus, ja se nousi vahvasti esiin 1980-luvun lopun [[laulavassa vallankumouksessa]]. Baltian laulu- ja tanssijuhlien perinne on myös kirjattu [[Unescon aineettomaan kulttuuriperintöön]]. Tuhat ääntä yhdessä, siinä vasta konsertti kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: Mežaparksin
+
+### 772
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Kuoro, joka lauloi maan vapaaksi] 1869 — Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja 1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä isänmaallisia lauluja niin sanotussa laulavassa vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mikä on Latvian laulujuhla ja miksi se on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Latvian laulujuhla on suuri kuoro- ja tanssijuhla, jota on järjestetty jo vuodesta 1873, ja nykyisin se pidetään noin viiden vuoden välein. Tuhannet laulajat ja tanssijat kokoontuvat yhteen, ja suuri loppukonsertti pidetään Riian [[Mežaparksin]] laulukentällä. Perinne on tärkeä latvialaisen kansallistunteen ilmaus, ja se nousi vahvasti esiin 1980-luvun lopun [[laulavassa vallankumouksessa]]. Baltian laulu- ja tanssijuhlien perinne on myös kirjattu [[Unescon aineettomaan kulttuuriperintöön]]. Tuhat ääntä yhdessä, siinä vasta konsertti kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: laulavassa vallankumouksessa
+
+### 773
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+AIEMPI KYSYMYS: Mikä on Latvian laulujuhla ja miksi se on tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Latvian laulujuhla on suuri kuoro- ja tanssijuhla, jota on järjestetty jo vuodesta 1873, ja nykyisin se pidetään noin viiden vuoden välein. Tuhannet laulajat ja tanssijat kokoontuvat yhteen, ja suuri loppukonsertti pidetään Riian [[Mežaparksin]] laulukentällä. Perinne on tärkeä latvialaisen kansallistunteen ilmaus, ja se nousi vahvasti esiin 1980-luvun lopun [[laulavassa vallankumouksessa]]. Baltian laulu- ja tanssijuhlien perinne on myös kirjattu [[Unescon aineettomaan kulttuuriperintöön]]. Tuhat ääntä yhdessä, siinä vasta konsertti kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: Unescon aineettomaan kulttuuriperintöön
+
+### 774
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+AIEMPI KYSYMYS: Mikä on latgalin kieli ja missä sitä puhutaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Latgali on itäisen [[Latgalen]] maakunnan kieli, jota pidetään joko latvian kielen kirjoitusmuotona tai omana kielenään, ja se kuuluu balttilaisiin kieliin. Latvian ja liettuan lisäksi muita eläviä balttilaisia kieliä ei ole, joten [[balttilaiset kielet]] ovat harvinaisia. Latgalen suurin kaupunki on [[Daugavpils]], ja alueella on myös katolilaisuuden vahva perinne. Lähteiden mukaan Latvian laki tunnustaa latgalin historialliseksi kirjakieleksi. Kielellinen kuhina on minun lajini juttu.
+KYSYMYS: Kerro lisää: Latgalen
+
+### 775
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Mikä on latgalin kieli ja missä sitä puhutaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Latgali on itäisen [[Latgalen]] maakunnan kieli, jota pidetään joko latvian kielen kirjoitusmuotona tai omana kielenään, ja se kuuluu balttilaisiin kieliin. Latvian ja liettuan lisäksi muita eläviä balttilaisia kieliä ei ole, joten [[balttilaiset kielet]] ovat harvinaisia. Latgalen suurin kaupunki on [[Daugavpils]], ja alueella on myös katolilaisuuden vahva perinne. Lähteiden mukaan Latvian laki tunnustaa latgalin historialliseksi kirjakieleksi. Kielellinen kuhina on minun lajini juttu.
+KYSYMYS: Kerro lisää: balttilaiset kielet
+
+### 776
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+AIEMPI KYSYMYS: Mikä on latgalin kieli ja missä sitä puhutaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Latgali on itäisen [[Latgalen]] maakunnan kieli, jota pidetään joko latvian kielen kirjoitusmuotona tai omana kielenään, ja se kuuluu balttilaisiin kieliin. Latvian ja liettuan lisäksi muita eläviä balttilaisia kieliä ei ole, joten [[balttilaiset kielet]] ovat harvinaisia. Latgalen suurin kaupunki on [[Daugavpils]], ja alueella on myös katolilaisuuden vahva perinne. Lähteiden mukaan Latvian laki tunnustaa latgalin historialliseksi kirjakieleksi. Kielellinen kuhina on minun lajini juttu.
+KYSYMYS: Kerro lisää: Daugavpils
+
+### 777
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Musta juoma joka pelasti keisarinnan] 1752 — Riianmustabalsami on tumma yrttilikööri, jonka resepti syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti kaupungissaan parikymmentä yrttiä, juurta ja maustetta korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se paransi Venäjän keisarinna Katariina Suuren, kun tämä sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan reseptin tuntee vain harva mestari ja hänen oppilaansa. Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, ja sitä viedään yli kolmeenkymmeneen maahan.
+AIEMPI KYSYMYS: Millaisia eläimiä Latvian metsissä elää?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Metsä peittää suunnilleen puolet Latvian pinta-alasta, ja siellä elää hirviä, susia ja ilveksiä. Lintulajeista tärkeitä ovat [[mustahaikara]] ja monet petolinnut, ja Latvia on tunnettu runsaista linnuistaan. Latvian vanhin suojelualue [[Gaujan kansallispuisto]] on yksi suosituimpia luontokohteita, ja siellä on hiekkakivirinteitä ja jokimaisemia. Metsässä minä lennän mieluummin kaupungin puolelle, siellä on enemmän leivänmuruja.
+KYSYMYS: Kerro lisää: mustahaikara
+
+### 778
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Jyrkänne, jonka voi raapia kynnellä] 1973 — Gaujan laaksossa joki on kuluttanut rantaan punertavia jyrkänteitä, jotka ovat devonikautista hiekkakiveä — niin pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät kohoavat parikymmentä metriä, ja niiden juurella on luolia. Tunnetuimman luolan seinissä on nimikirjaimia jo 1600-luvulta, joten turistien tapa kaivertaa nimensä kiveen on paljon vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin 1973, ja se on Latvian suurin.
+AIEMPI KYSYMYS: Millaisia eläimiä Latvian metsissä elää?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Metsä peittää suunnilleen puolet Latvian pinta-alasta, ja siellä elää hirviä, susia ja ilveksiä. Lintulajeista tärkeitä ovat [[mustahaikara]] ja monet petolinnut, ja Latvia on tunnettu runsaista linnuistaan. Latvian vanhin suojelualue [[Gaujan kansallispuisto]] on yksi suosituimpia luontokohteita, ja siellä on hiekkakivirinteitä ja jokimaisemia. Metsässä minä lennän mieluummin kaupungin puolelle, siellä on enemmän leivänmuruja.
+KYSYMYS: Kerro lisää: Gaujan kansallispuisto
+
+### 779
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+AIEMPI KYSYMYS: Miten Latvia viettää kesäpäivänseisausta eli Jāņia?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Jāņi eli Līgo-juhla vietetään kesäkuun 23. ja 24. päivänä, ja se on yksi Latvian tärkeimmistä juhlista. Ihmiset lähtevät maaseudulle, tekevät seppeleitä tammenlehdistä ja kukista, sytyttävät kokkoja ja valvovat aamuun asti. Juhlassa lauletaan [[Līgo-lauluja]], ja perinneruokiin kuuluu kuminalla maustettu juusto [[Jāņu siers]] ja olut. Seppeleet ja juhlaan liittyvät tavat ovat peräisin esikristillisiltä ajoilta. Kokko on kyl hyvä paikka kuivattaa siipiä, mutta ei liian lähellä.
+KYSYMYS: Kerro lisää: Līgo-lauluja
+
+### 780
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Miten Latvia viettää kesäpäivänseisausta eli Jāņia?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Jāņi eli Līgo-juhla vietetään kesäkuun 23. ja 24. päivänä, ja se on yksi Latvian tärkeimmistä juhlista. Ihmiset lähtevät maaseudulle, tekevät seppeleitä tammenlehdistä ja kukista, sytyttävät kokkoja ja valvovat aamuun asti. Juhlassa lauletaan [[Līgo-lauluja]], ja perinneruokiin kuuluu kuminalla maustettu juusto [[Jāņu siers]] ja olut. Seppeleet ja juhlaan liittyvät tavat ovat peräisin esikristillisiltä ajoilta. Kokko on kyl hyvä paikka kuivattaa siipiä, mutta ei liian lähellä.
+KYSYMYS: Kerro lisää: Jāņu siers
+
+### 781
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miksi Riian jugendtalot ovat niin erikoisia?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nämä ovat näkemisen arvoisia. Riian jugendtalot ovat erikoisia, koska niitä on poikkeuksellisen paljon ja ne on koristeltu runsailla kasvi-, kasvo- ja eläinaiheilla. Vuosisadan vaihteessa kaupunki kasvoi nopeasti, ja rikkaat rakennuttajat tilasivat uusiin kortteleihin vuokrataloja, joita on säilynyt yli seitsemänsataa. Tunnettuja suunnittelijoita oli arkkitehti [[Mihails Eizenšteins]], jonka töitä on erityisesti [[Alberta ielalla]], jossa julkisivuja koristavat naamiot ja veistokset. Ylhäältä näkee vain katot, mutta ne naamiot minä olen tarkistanut.
+KYSYMYS: Kerro lisää: Mihails Eizenšteins
+
+### 782
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miksi Riian jugendtalot ovat niin erikoisia?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nämä ovat näkemisen arvoisia. Riian jugendtalot ovat erikoisia, koska niitä on poikkeuksellisen paljon ja ne on koristeltu runsailla kasvi-, kasvo- ja eläinaiheilla. Vuosisadan vaihteessa kaupunki kasvoi nopeasti, ja rikkaat rakennuttajat tilasivat uusiin kortteleihin vuokrataloja, joita on säilynyt yli seitsemänsataa. Tunnettuja suunnittelijoita oli arkkitehti [[Mihails Eizenšteins]], jonka töitä on erityisesti [[Alberta ielalla]], jossa julkisivuja koristavat naamiot ja veistokset. Ylhäältä näkee vain katot, mutta ne naamiot minä olen tarkistanut.
+KYSYMYS: Kerro lisää: Alberta ielalla
+
+### 783
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Mustapäiden talo] 1334 (jälleenrakennettu 1999) Mustapäiden talo rakennettiin Riian vanhaan kaupunkiin jo vuonna 1334 kauppiaiden varastoksi ja kokoontumispaikaksi. 1400-luvun puolivälistä lähtien taloa käytti myös Mustapäiden veljeskunta – naimattomien kauppiaiden, laivanomistajien ja ulkomaalaisten kilta, joka piti talossa juhlia ja kokouksia. Talon kerrotaan olevan paikka, jonne pystytettiin ensimmäinen koristeltu joulukuusi vuonna 1510! Talo säilyi näyttävänä satoja vuosia, kunnes toinen maailmansota pommitti sen raunioiksi kesäkuussa 1941. Neuvostoviranomaiset purkivat jäljellä olleet seinät kokonaan vuonna 1948, vaikka riikalaiset vastustivat sitä voimakkaasti. Talo rakennettiin kokonaan uudelleen vuos…
+- [Riika — kaupunkilehti / Vanhakaupunki: Talo, jossa juhlivat naimattomat kauppiaat] Mustapäiden talo rakennettiin vuonna 1334 varastoksi ja kokoontumispaikaksi. Myöhemmin sitä käytti Mustapäiden veljeskunta, kilta, johon kuuluivat kaupungin naimattomat kauppiaat ja ulkomaalaiset. Talon edustalle kerrotaan pystytetyn koristeltu joulukuusi jo vuonna 1510. Toisen maailmansodan pommitus tuhosi rakennuksen vuonna 1941, ja rauniot purettiin. Nykyinen talo muurattiin uudelleen 1990-luvulla vanhojen piirustusten ja valokuvien mukaan, ja se valmistui juuri ennen kaupungin 800-vuotisjuhlia.
+AIEMPI KYSYMYS: Mikä on Riian Mustapäiden talo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Mustapäiden talo on Riian Raatihuoneentorilla sijaitseva koristeellinen julkisivurakennus, joka oli alun perin 1300-luvulla rakennettu naimattomien kauppiaiden ja laivanvarustajien yhdistyksen juhlatila. Yhdistys oli nimeltään [[Mustapäiden veljeskunta]], ja se oli osa [[Hansaliiton]] kauppaverkostoa. Talo tuhoutui toisessa maailmansodassa, ja se rakennettiin uudelleen 1990-luvulla niin, että työ valmistui vuonna 1999. Rakennus seisoo [[Raatihuoneentorin]] laidalla ja kuuluu Riian tunnetuimpiin nähtävyyksiin. Kiltaveljet sentään jakoivat ruoan, sitä minäkin arvostan.
+KYSYMYS: Kerro lisää: Mustapäiden veljeskunta
+
+### 784
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+AIEMPI KYSYMYS: Mikä on Riian Mustapäiden talo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Mustapäiden talo on Riian Raatihuoneentorilla sijaitseva koristeellinen julkisivurakennus, joka oli alun perin 1300-luvulla rakennettu naimattomien kauppiaiden ja laivanvarustajien yhdistyksen juhlatila. Yhdistys oli nimeltään [[Mustapäiden veljeskunta]], ja se oli osa [[Hansaliiton]] kauppaverkostoa. Talo tuhoutui toisessa maailmansodassa, ja se rakennettiin uudelleen 1990-luvulla niin, että työ valmistui vuonna 1999. Rakennus seisoo [[Raatihuoneentorin]] laidalla ja kuuluu Riian tunnetuimpiin nähtävyyksiin. Kiltaveljet sentään jakoivat ruoan, sitä minäkin arvostan.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 785
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Raatihuone, joka on Pohjois-Euroopan vanhin] 1404 — Tallinnan raatihuone sai nykyisen muotonsa vuosina 1401–1404, mutta rakennuksesta on mainintoja jo 1300-luvulta. Se on Pohjois-Euroopan ainoa säilynyt goottilaistyylinen raatihuone ja seisoo yhä keskiajan Raatihuoneentorin laidalla. Torninhuippua koristaa Vanha Toomas, vartijaa esittävä tuuliviiri, josta on tullut koko kaupungin tunnus. Toisessa maailmansodassa pommitus tuhosi tornin maaliskuussa 1944, ja se rakennettiin uudelleen vasta 1952. Raatihuoneen kellarissa toimi keskiajalla viinikellari, ja rakennus oli vuosisatoja kaupunginhallinnon keskus.
+- [Tallinna — kaupunkilehti / Tallinna: Poltettuja siilejä ja marsipaania lääkkeeksi] Raatihuoneentorin laidalla toimii apteekki, joka on ollut samassa talossa ainakin vuodesta 1422 — silloin kirjattiin ylös jo sen kolmas omistaja. Vuoden 1695 hinnastossa oli 128 erilaista öljyä, 71 yrttiteetä ja 49 voidetta, mutta myös poltettuja mehiläisiä, poltettuja siilejä, oriin kavioita ja kastematojen öljyä. Listalla oli marsipaani, jota myytiin sydänsuruun ja muistin parantamiseen. Sitä saa tiskiltä yhä.
+AIEMPI KYSYMYS: Mikä on Riian Mustapäiden talo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Mustapäiden talo on Riian Raatihuoneentorilla sijaitseva koristeellinen julkisivurakennus, joka oli alun perin 1300-luvulla rakennettu naimattomien kauppiaiden ja laivanvarustajien yhdistyksen juhlatila. Yhdistys oli nimeltään [[Mustapäiden veljeskunta]], ja se oli osa [[Hansaliiton]] kauppaverkostoa. Talo tuhoutui toisessa maailmansodassa, ja se rakennettiin uudelleen 1990-luvulla niin, että työ valmistui vuonna 1999. Rakennus seisoo [[Raatihuoneentorin]] laidalla ja kuuluu Riian tunnetuimpiin nähtävyyksiin. Kiltaveljet sentään jakoivat ruoan, sitä minäkin arvostan.
+KYSYMYS: Kerro lisää: Raatihuoneentorin
+
+### 786
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Millainen on Riian Keskustori?
+AIEMPI VASTAUS (Livia):
+Kato, ruoasta minä tykkään puhua. Riian Keskustori toimii viidessä suuressa hallissa, jotka olivat alun perin saksalaisia [[ilmalaivahalleja]] ensimmäisen maailmansodan ajalta ja jotka siirrettiin torille 1920-luvulla ja muutettiin torikäyttöön. Hallit ovat nykyään osa Riian historiallista keskustaa, joka on kirjattu Unescon maailmanperintöön. Torilla myydään kalaa, lihaa, maitotuotteita ja leipää, ja perinteisistä tuotteista tunnetaan erityisesti [[savustettu kala]] ja [[ruisleipä]]. Torilla on aina muruja, ja minä tiedän sen.
+KYSYMYS: Kerro lisää: ilmalaivahalleja
+
+### 787
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Ruoka: Kaksi tapaa säilöä kala] Kala on Tšadin tavallisin proteiinin lähde, ja se myydään kahdessa muodossa: salanga on aurinkokuivattua ja kevyesti savustettua alestes- ja hydrocynus-kalaa, banda savustettua isoa kalaa. Kotokot kalastavat pitkillä ruuhillaan ja kuivaavat tai savustavat saaliinsa torille vietäväksi. Budumat eli yedinat asuvat Tšadjärven saarilla ja rakentavat papyrusruo'osta sekä veneensä että kevyet majansa, jotka voi siirtää ylemmäs jos vesi nousee. Heidän nautansa on jalostettu suurisarvisiksi: ontot sarvet auttavat eläintä kellumaan, kun karja siirretään saarelta toiselle.
+AIEMPI KYSYMYS: Millainen on Riian Keskustori?
+AIEMPI VASTAUS (Livia):
+Kato, ruoasta minä tykkään puhua. Riian Keskustori toimii viidessä suuressa hallissa, jotka olivat alun perin saksalaisia [[ilmalaivahalleja]] ensimmäisen maailmansodan ajalta ja jotka siirrettiin torille 1920-luvulla ja muutettiin torikäyttöön. Hallit ovat nykyään osa Riian historiallista keskustaa, joka on kirjattu Unescon maailmanperintöön. Torilla myydään kalaa, lihaa, maitotuotteita ja leipää, ja perinteisistä tuotteista tunnetaan erityisesti [[savustettu kala]] ja [[ruisleipä]]. Torilla on aina muruja, ja minä tiedän sen.
+KYSYMYS: Kerro lisää: savustettu kala
+
+### 788
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Ruisleipä, joka ei koskaan lopu pöydästä] Joka ateria — Musta ruisleipä eli must leib kuuluu virolaisilla lähes jokaiseen ateriaan, aamiaisesta illalliseen. Se leivotaan täysjyvärukiista hapanjuurella, ja taikinan annetaan kohota vuorokausia ennen paistamista — siksi leipä on tiivis, tumma ja hieman hapan. Neuvostoaikana leipää ei saanut heittää pois, ja monissa perheissä tapa on säilynyt: vanhasta leivästä paistetaan korppuja tai tehdään kylmää leipäkeittoa kermavaahdolla. Ravintoloissa leipää tarjoillaan nykyään myös paistettuina tikkuina valkosipulin kanssa, oluen kylkiäisenä. Yksi leipä painaa perinteisesti 800 tai 400 grammaa, ja paino on painettu jo pakkaukseen.
+AIEMPI KYSYMYS: Millainen on Riian Keskustori?
+AIEMPI VASTAUS (Livia):
+Kato, ruoasta minä tykkään puhua. Riian Keskustori toimii viidessä suuressa hallissa, jotka olivat alun perin saksalaisia [[ilmalaivahalleja]] ensimmäisen maailmansodan ajalta ja jotka siirrettiin torille 1920-luvulla ja muutettiin torikäyttöön. Hallit ovat nykyään osa Riian historiallista keskustaa, joka on kirjattu Unescon maailmanperintöön. Torilla myydään kalaa, lihaa, maitotuotteita ja leipää, ja perinteisistä tuotteista tunnetaan erityisesti [[savustettu kala]] ja [[ruisleipä]]. Torilla on aina muruja, ja minä tiedän sen.
+KYSYMYS: Kerro lisää: ruisleipä
+
+### 789
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Vapaudenpatsas] 1935 Riian keskustassa kohoaa 42 metriä korkea Vapaudenpatsas, joka pystytettiin vuonna 1935 muistoksi Latvian itsenäisyyssodassa 1918–1920 kaatuneille sotilaille. Patsaan huipulla seisoo Vapaus-niminen naishahmo, jota latvialaiset kutsuvat hellästi Mildaksi. Hän pitelee käsissään kolmea kultaista tähteä, jotka kuvaavat Latvian kolmea vanhaa maakuntaa: Vidzemeä, Latgalea ja Kuurinmaata. Patsaan kivi- ja graniittiosien veistämiseen kului yli 300 000 työtuntia – yhdeltä kivenveistäjältä olisi mennyt siihen yli sata vuotta! Patsas seisoo paikalla, jossa aiemmin oli Venäjän tsaari Pietari Suuren ratsastajapatsas. Kun Neuvostoliitto miehitti Latvian, monet pelkäsivät patsaan tuhoamista, mutta se…
+AIEMPI KYSYMYS: Mikä on Riian Vapaudenmuistomerkki?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis. Vapaudenmuistomerkki on Riian keskustassa seisova korkea pylväs, jonka huipulla naishahmo kohottaa kolmea tähteä. Se valmistui vuonna 1935, ja se kunnioittaa [[Latvian vapaussotaan]] 1918–1920 osallistuneita. Tähdet edustavat yleensä Latvian historiallisia alueita. Muistomerkin lempinimi on [[Milda]], ja se seisoo [[Vanhankaupungin]] reunalla; neuvostoaikana patsas säilyi paikallaan. Korkealla lentäminen on kyl kyyhkyn lempiharrastus.
+KYSYMYS: Kerro lisää: Latvian vapaussotaan
+
+### 790
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+AIEMPI KYSYMYS: Mikä on Riian Vapaudenmuistomerkki?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis. Vapaudenmuistomerkki on Riian keskustassa seisova korkea pylväs, jonka huipulla naishahmo kohottaa kolmea tähteä. Se valmistui vuonna 1935, ja se kunnioittaa [[Latvian vapaussotaan]] 1918–1920 osallistuneita. Tähdet edustavat yleensä Latvian historiallisia alueita. Muistomerkin lempinimi on [[Milda]], ja se seisoo [[Vanhankaupungin]] reunalla; neuvostoaikana patsas säilyi paikallaan. Korkealla lentäminen on kyl kyyhkyn lempiharrastus.
+KYSYMYS: Kerro lisää: Milda
+
+### 791
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Mikä on Riian Vapaudenmuistomerkki?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis. Vapaudenmuistomerkki on Riian keskustassa seisova korkea pylväs, jonka huipulla naishahmo kohottaa kolmea tähteä. Se valmistui vuonna 1935, ja se kunnioittaa [[Latvian vapaussotaan]] 1918–1920 osallistuneita. Tähdet edustavat yleensä Latvian historiallisia alueita. Muistomerkin lempinimi on [[Milda]], ja se seisoo [[Vanhankaupungin]] reunalla; neuvostoaikana patsas säilyi paikallaan. Korkealla lentäminen on kyl kyyhkyn lempiharrastus.
+KYSYMYS: Kerro lisää: Vanhankaupungin
+
+### 792
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Musta juoma joka pelasti keisarinnan] 1752 — Riianmustabalsami on tumma yrttilikööri, jonka resepti syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti kaupungissaan parikymmentä yrttiä, juurta ja maustetta korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se paransi Venäjän keisarinna Katariina Suuren, kun tämä sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan reseptin tuntee vain harva mestari ja hänen oppilaansa. Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, ja sitä viedään yli kolmeenkymmeneen maahan.
+AIEMPI KYSYMYS: Mikä on Riian Musta Palsami?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Riian Musta Palsami on tummaa, yrteillä maustettua likööriä, jota on valmistettu Riiassa 1700-luvulta lähtien. Lähteiden mukaan sen kehitti apteekkari [[Abraham Kunze]], ja reseptiä pidetään salaisena. Juoman sanotaan sisältävän kymmeniä yrttejä, kukkia, juuria ja marjoja. Legendan mukaan palsami paransi [[Katariina Suuren]] sairauden, mutta tästä en ole varma. Minä pysyn kyl vedessä, lentäminen ja palsami eivät sovi yhteen.
+KYSYMYS: Kerro lisää: Abraham Kunze
+
+### 793
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Musta juoma joka pelasti keisarinnan] 1752 — Riianmustabalsami on tumma yrttilikööri, jonka resepti syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti kaupungissaan parikymmentä yrttiä, juurta ja maustetta korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se paransi Venäjän keisarinna Katariina Suuren, kun tämä sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan reseptin tuntee vain harva mestari ja hänen oppilaansa. Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, ja sitä viedään yli kolmeenkymmeneen maahan.
+AIEMPI KYSYMYS: Mikä on Riian Musta Palsami?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Riian Musta Palsami on tummaa, yrteillä maustettua likööriä, jota on valmistettu Riiassa 1700-luvulta lähtien. Lähteiden mukaan sen kehitti apteekkari [[Abraham Kunze]], ja reseptiä pidetään salaisena. Juoman sanotaan sisältävän kymmeniä yrttejä, kukkia, juuria ja marjoja. Legendan mukaan palsami paransi [[Katariina Suuren]] sairauden, mutta tästä en ole varma. Minä pysyn kyl vedessä, lentäminen ja palsami eivät sovi yhteen.
+KYSYMYS: Kerro lisää: Katariina Suuren
+
+### 794
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Port Hercule] antiikista, nykyinen satama 1926 Port Hercule on Monacon syvänmeren satama, jonka pinta-ala on noin 16 hehtaaria. Nimi liittyy Herkuleeseen: kreikkalaiset siirtokuntalaiset perustivat Monoikoksen 500-luvulla eaa. Plinius vanhempi ja Tacitus mainitsevat sataman, ja Virgilius kuvaa Aeneiksessa linnoitettua kalliota, Monoecusta, meren rannalla. Isoisän matkavuonna 1873 satama oli nykyistä vanhempi, sillä nykyinen satama valmistui vasta 1926. Sitä uudistettiin 1970-luvulla, ja suomalainen Marinetek toimitti kolme uutta ponttonia vuoteen 2011 mennessä. Satamassa voi ankkuroida jopa 700 alusta. Vesi on tavallisilla laitureilla seitsemän metriä syvää ja ulkolaitureilla jopa 40 metriä. Satamasta ku…
+AIEMPI KYSYMYS: Miten Monacon Formula 1 -kilpailu kierretään kaupungin kaduilla?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kovaääninen aihe. Monacon Grand Prix ajetaan ruhtinaskunnan tavallisilla kaduilla, joten kilpailua varten kadut suljetaan ja reunoille rakennetaan suojia ja katsomoita. Rata kulkee [[Port Hercule]] -sataman tuntumasta [[Monte Carlon kasinon]] ohi ja tunnelin läpi, ja se on kapea ja mutkainen. Ensimmäinen Monacon Grand Prix ajettiin vuonna 1929, ja kilpailu kuuluu nykyisin [[Formula 1 -sarjaan]]. Autot ovat kovin äänekkäitä, kyyhky pysyy mieluummin ylempänä.
+KYSYMYS: Kerro lisää: Port Hercule
+
+### 795
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kaupunkilehti / Meri, kallio ja todennäköisyys: Kasinon nimi laskennassa] Monte Carlo -menetelmät käyttävät toistuvaa satunnaisotantaa vaikeiden laskentatehtävien ratkaisemiseen. Ajatuksen kehitti matemaatikko Stanisław Ulam, ja nimen valitsi hänen kollegansa Nicholas Metropolis viitaten Monte Carlon kasinoon, jossa Ulamin setä pelasi. Menetelmää kehitettiin 1940-luvun lopulla Los Alamosin laboratoriossa, kun neutronien kulkua ei saatu ratkaistua tavallisella laskennalla. Ensimmäiset täysin automaattiset Monte Carlo -laskut ajettiin ENIAC-tietokoneella keväällä 1948. Nykyään menetelmää käytetään laajasti fysiikassa, kemiassa, biologiassa ja tilastotieteessä.
+- [Monaco — kohdekartta / Kohdekartta: Monte Carlon kasino] 1863, laajennettu 1878–81 Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863. Isoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier…
+AIEMPI KYSYMYS: Miten Monacon Formula 1 -kilpailu kierretään kaupungin kaduilla?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kovaääninen aihe. Monacon Grand Prix ajetaan ruhtinaskunnan tavallisilla kaduilla, joten kilpailua varten kadut suljetaan ja reunoille rakennetaan suojia ja katsomoita. Rata kulkee [[Port Hercule]] -sataman tuntumasta [[Monte Carlon kasinon]] ohi ja tunnelin läpi, ja se on kapea ja mutkainen. Ensimmäinen Monacon Grand Prix ajettiin vuonna 1929, ja kilpailu kuuluu nykyisin [[Formula 1 -sarjaan]]. Autot ovat kovin äänekkäitä, kyyhky pysyy mieluummin ylempänä.
+KYSYMYS: Kerro lisää: Monte Carlon kasinon
+
+### 796
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Kuljettaja, joka ajoi silmäluomet palaneina] 1976 — Niki Lauda voitti formula ykkösten maailmanmestaruuden vuonna 1975. Seuraavana kesänä, 1. elokuuta 1976, hänen Ferrarinsa syttyi tuleen Nürburgringin Nordschleifellä. Lauda sai pahat palovammat kasvoihinsa ja hengitti kuumia kaasuja keuhkoihinsa. Hän palasi rataan 42 päivää eli kuusi viikkoa myöhemmin Monzan kilpailuun ja tuli neljänneksi. Haavat vuotivat kypärän alla, eikä hän palaneiden silmäluomiensa takia pystynyt räpyttämään kunnolla. Mestaruuksia hänelle kertyi kolme.
+AIEMPI KYSYMYS: Miten Monacon Formula 1 -kilpailu kierretään kaupungin kaduilla?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kovaääninen aihe. Monacon Grand Prix ajetaan ruhtinaskunnan tavallisilla kaduilla, joten kilpailua varten kadut suljetaan ja reunoille rakennetaan suojia ja katsomoita. Rata kulkee [[Port Hercule]] -sataman tuntumasta [[Monte Carlon kasinon]] ohi ja tunnelin läpi, ja se on kapea ja mutkainen. Ensimmäinen Monacon Grand Prix ajettiin vuonna 1929, ja kilpailu kuuluu nykyisin [[Formula 1 -sarjaan]]. Autot ovat kovin äänekkäitä, kyyhky pysyy mieluummin ylempänä.
+KYSYMYS: Kerro lisää: Formula 1 -sarjaan
+
+### 797
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kaupunkilehti / Monaco: Munkki linnoituksen portilla] Monacon kallio oli asuttu jo antiikissa, kun fokaialaiset kreikkalaiset Massaliasta perustivat sinne 500-luvulla eaa. Monoikoksen siirtokunnan. Keskiajalla kalliolle nousi genovalaisten linnoitus, ja 8. tammikuuta 1297 François Grimaldi, lempinimeltään Malizia, otti sen haltuunsa pukeutuneena fransiskaanimunkiksi. Tapahtuma näkyy yhä Monacon vaakunassa, jossa kaksi fransiskaania pitelee miekkoja. Grimaldin ote ei kestänyt: genovalaiset karkottivat hänet muutaman vuoden kuluttua, ja kiista jatkui vielä noin vuosisadan. Grimaldit ostivat Monacon Aragonian kruunulta 1419, ja Honoré II alkoi käyttää ruhtinaan arvonimeä 1612.
+AIEMPI KYSYMYS: Miten Grimaldien suku sai Monacon kallion haltuunsa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tarina on hyvä. Tarinan mukaan genovalainen [[François Grimaldi]] valtasi kallion linnoituksen vuonna 1297 pukeutuneena munkiksi. Hän ja hänen seuralaisensa pyysivät yösijaa, ja kun portti avattiin, he hyökkäsivät sisään. Tapahtumaa pidetään Grimaldien hallinnon alkuna, ja suku on hallinnut kalliota siitä lähtien, joskin lyhyin keskeytyksin. Monacon [[vaakunan munkit]] muistuttavat tästä tarinasta, ja Genovan tasavalta [[Genova]] oli aikoinaan alueen vahva vaikuttaja. Munkin kaavussa murtautuminen on röyhkeä temppu, mutta siitä on tullut suvun tunnus.
+KYSYMYS: Kerro lisää: François Grimaldi
+
+### 798
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Miten Grimaldien suku sai Monacon kallion haltuunsa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tarina on hyvä. Tarinan mukaan genovalainen [[François Grimaldi]] valtasi kallion linnoituksen vuonna 1297 pukeutuneena munkiksi. Hän ja hänen seuralaisensa pyysivät yösijaa, ja kun portti avattiin, he hyökkäsivät sisään. Tapahtumaa pidetään Grimaldien hallinnon alkuna, ja suku on hallinnut kalliota siitä lähtien, joskin lyhyin keskeytyksin. Monacon [[vaakunan munkit]] muistuttavat tästä tarinasta, ja Genovan tasavalta [[Genova]] oli aikoinaan alueen vahva vaikuttaja. Munkin kaavussa murtautuminen on röyhkeä temppu, mutta siitä on tullut suvun tunnus.
+KYSYMYS: Kerro lisää: vaakunan munkit
+
+### 799
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+AIEMPI KYSYMYS: Miten Grimaldien suku sai Monacon kallion haltuunsa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tarina on hyvä. Tarinan mukaan genovalainen [[François Grimaldi]] valtasi kallion linnoituksen vuonna 1297 pukeutuneena munkiksi. Hän ja hänen seuralaisensa pyysivät yösijaa, ja kun portti avattiin, he hyökkäsivät sisään. Tapahtumaa pidetään Grimaldien hallinnon alkuna, ja suku on hallinnut kalliota siitä lähtien, joskin lyhyin keskeytyksin. Monacon [[vaakunan munkit]] muistuttavat tästä tarinasta, ja Genovan tasavalta [[Genova]] oli aikoinaan alueen vahva vaikuttaja. Munkin kaavussa murtautuminen on röyhkeä temppu, mutta siitä on tullut suvun tunnus.
+KYSYMYS: Kerro lisää: Genova
+
+### 800
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Albert Park] 1870–1880-luku Puiston paikalla oli maorien kāinga eli kylä nimeltä Rangipuke, ja sen luoteiskulmassa seisoi Te Horotiun pā. Alueella oli myös Waiohuan kylä Mangahekea, jonka Ngāti Whātua valtasi 1740-luvulla. Maaperä on hiekkakiveä, mutta luoteessa on oma tulivuorensa: Albert Parkin kuonakartio purkautui noin 145 000 vuotta sitten ja peitti suuren osan nykyisestä puistosta tuhkaan. Suurin osa puiston alasta oli 1800-luvun puolivälissä Albert Barracksia, kaupungin varhaisinta eurooppalaista varuskuntaa. 1850- ja 1860-luvuilla siellä majaili sotilaita, muun muassa 58. rykmentti, ja puu- ja kivirakennuksia ympäröi paikallisesta tulivuorikivestä muurattu valli. Pala muuria seisoo yhä yliopisto…
+AIEMPI KYSYMYS: Mitä Monacon valtamerimuseossa voi nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valtamerimuseo seisoo kalliolla meren yllä, ja sen avasi vuonna 1910 ruhtinas [[Albert I]], joka oli myös merentutkija. Museossa on akvaario, jossa on [[Välimeren]] ja trooppisten merien kaloja, sekä kokoelmia merentutkimuksen välineistä ja eläinlajeista. Ranskalainen merentutkija [[Jacques Cousteau]] johti museota vuosina 1957–1988, ja hän teki sen tunnetuksi maailmalla. Minä katson kaloja mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Albert I

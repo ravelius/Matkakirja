@@ -1,0 +1,41 @@
+### v1-368
+VANHA: Musta vuori kuulostaa dramaattiselta, mutta pullaa siellä kyllä leivottiin.
+UUSI: Musta vuori kuulostaa dramaattiselta, ja ylhäältä katsoen nimi kyllä sopii.
+SYY: pulla-heitto ilman perustetta
+
+### v1-369
+VANHA: Ei hassumpaa lentomatkaa tuohon historiaan.
+UUSI: Nuori valtio, vaikka vuoret ovat sen ympärillä vanhoja.
+SYY: merkityksetön loppulause
+
+### v1-375
+VANHA: Tämän lennon jälkeen kaipaan lepoa.
+UUSI: Ylhäältä nuo suorakulmaiset palstat näyttävät ruutupaperilta.
+SYY: irrallinen, ei liity aiheeseen
+
+### v1-376
+VANHA: Muistaakseni väri on tärkein myyntivaltti, mutta en ole varma. Pulla oli silti edelleen halvempaa.
+UUSI: Ylhäältä kukkapellot näyttävät raidalliselta matolta.
+SYY: turha epävarmuus ja irrallinen pulla-vertaus
+
+### v1-377
+VANHA: Itse en ole koskaan tarvinnut ketjua.
+UUSI: Kyyhky ei polkimia tarvitse, siivet riittävät.
+SYY: epäselvä viittaus (ketju)
+
+### v1-389
+VANHA: Kerron tämän havaintona, en ohjeena. Ei kyyhky muuten ulos halua, mutta tämä kuulostaa hyvältä.
+UUSI: Kyyhky on ulkoilmaeläin muutenkin, joten tämä kuulostaa hyvältä.
+SYY: turha metalause ja ristiriitainen kommentti
+
+### v1-403
+VANHA: kuivumaan, mutta tarkkoja paikallisia reseptejä en ole varma.
+UUSI: kuivumaan.
+SYY: reseptejä ei kysytty, turha epävarmuus
+
+### v1-403
+VANHA: Täällä on varmasti oma versionsa pullastakin, en vaan tiedä sen nimee.
+UUSI: Kalan kyyhky jättää mieluusti kalastajille.
+SYY: irrallinen pulla-arvaus
+
+LOPPU: tarkistettu 45 vastausta (v1-360…v1-404), korjauksia 8

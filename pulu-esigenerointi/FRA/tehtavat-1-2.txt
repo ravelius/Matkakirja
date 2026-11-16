@@ -1,0 +1,223 @@
+================ KOHTA 6 (kohde:biskajanlahti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kaupunkilehti / Järvi, jää ja kesäyö: Talot, jotka kelluvat lahdella] Yellowknife Bayssä on Jolliffe Island, joka siirtyi kaupungin julkiseksi maaksi, kun öljy-yhtiö luopui paikasta. Saarta ympäröi asuntolaivayhteisö, jossa on asuttu sähköverkon ulkopuolella vuodesta 1978. Suhde kaupunkiin on mutkikas: laivat ovat matkailijoiden suosikkinäky, mutta asukkaat ovat kaupungin veropiirin ulkopuolella ja käyttävät silti kaupungin palveluja, ja siitä on seurannut oikeudenkäyntejä ja kitkaa. Saaren takana kohoaa Old Townin kalliokärki, jonne kaupunki alun perin rakennettiin ja jossa ovat sen vanhimmat talot.
+- [Norfolk — kaupunkilehti / Norfolk] Norfolkinsaari oli isoisän matkavuonna 1873 nuori mutta jo värikäs paikka: rangaistussiirtolan pahamaineinen historia oli päättynyt vasta 1855, ja sen tyhjät kasarmit asutti nyt kokonainen yhteisö Bounty-kapinallisten jälkeläisiä.
+
+### 6.1
+KYSYMYS: Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norfolk — kaupunkilehti / Norfolk] Norfolkinsaari oli isoisän matkavuonna 1873 nuori mutta jo värikäs paikka: rangaistussiirtolan pahamaineinen historia oli päättynyt vasta 1855, ja sen tyhjät kasarmit asutti nyt kokonainen yhteisö Bounty-kapinallisten jälkeläisiä.
+
+### 6.2
+KYSYMYS: Mitä eläimiä lahdella tapaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskajanlahti (meri)
+Tietoruudun teksti: Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kaupunkilehti / Järvi, jää ja kesäyö: Talot, jotka kelluvat lahdella] Yellowknife Bayssä on Jolliffe Island, joka siirtyi kaupungin julkiseksi maaksi, kun öljy-yhtiö luopui paikasta. Saarta ympäröi asuntolaivayhteisö, jossa on asuttu sähköverkon ulkopuolella vuodesta 1978. Suhde kaupunkiin on mutkikas: laivat ovat matkailijoiden suosikkinäky, mutta asukkaat ovat kaupungin veropiirin ulkopuolella ja käyttävät silti kaupungin palveluja, ja siitä on seurannut oikeudenkäyntejä ja kitkaa. Saaren takana kohoaa Old Townin kalliokärki, jonne kaupunki alun perin rakennettiin ja jossa ovat sen vanhimmat talot.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:loire) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+### 7.1
+KYSYMYS: Miksi Loiren varrella on niin paljon linnoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+### 7.2
+KYSYMYS: Miksi Loire on niin matala kesäisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loire (luonto · joki)
+Tietoruudun teksti: Loire on Ranskan pisin joki: 1 006 kilometriä ja maailman jokien pituusjärjestyksessä sadaskahdeksaskymmenesensimmäinen. Sen valuma-alue on 117 054 neliökilometriä eli yli viidennes koko Ranskasta, mutta virtaama on silti vain puolet Rhônen vastaavasta. Joki kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti Atlanttia.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:rhone~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+
+### 8.1
+KYSYMYS: Mikä Camargue on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+
+### 8.2
+KYSYMYS: Miten Rhône muuttuu Genevenjärvessä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:mont-saint-michel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+
+### 9.1
+KYSYMYS: Miksi saarta ei koskaan vallattu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+
+### 9.2
+KYSYMYS: Mihin luostaria käytettiin Ancien régimen aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont-Saint-Michel (kulttuuri)
+Tietoruudun teksti: Mont-Saint-Michel on vuorovesisaari ja kunta Normandiassa. Saari on noin kilometrin päässä Ranskan luoteisrannikosta Couesnon-joen suulla lähellä Avranchesia, ja sen pinta-ala on seitsemän hehtaaria. Vuonna 2023 saarella asui 23 ihmistä.
+
+Sijainti teki saaresta sekä helposti tavoitettavan että vaikeasti valloitettavan. Luostariin pyrkivät pyhiinvaeltajat pääsivät perille laskuveden aikaan, mutta nouseva vuorovesi jätti jalan liikkuvan hyökkääjän loukkuun, ajoi hänet takaisin tai hukutti hänet. Saari säilyi valtaamattomana koko satavuotisen sodan ajan: pieni varuskunta torjui englantilaisten täysimittaisen hyökkäyksen 1433.
+
+Ludvig XI ymmärsi luonnonpuolustuksen hyödyn ja teki saaresta vankilan, ja luostaria käytettiin vankilana säännöllisesti koko Ancien régimen ajan. Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon 1979. Kävijöitä on yli kolme miljoonaa vuod…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:carcassonnen-linnoituskaupunki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+### 10.1
+KYSYMYS: Kuka ennallisti kaupungin 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+### 10.2
+KYSYMYS: Kuinka pitkä kaksoismuuri on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carcassonnen linnoituskaupunki (historia)
+Tietoruudun teksti: Carcassonnen linnoituskaupunki on keskiaikainen linnoitettu kaupunki Auden departementissa Etelä-Ranskassa. Se kohoaa kukkulalla Aude-joen oikealla rannalla nykyisen Carcassonnen kaakkoisosassa. Maineensa se saa kolme kilometriä pitkästä kaksoismuurista, jota rytmittää 52 tornia.
+
+Paikalla on noin 2 500 vuoden historia. Ensin siinä oli gallialainen asuinpaikka; 200-luvulla jaa. roomalaiset päättivät tehdä siitä linnoitetun kaupungin, ja puolustuslaitteet olivat valmiit vuoteen 333 mennessä, jolloin paikkaa kuvattiin sanalla castellum. Alkuperäistä muuria tuki 34–40 tornia, joiden väli oli 18–30 metriä; kukin torni oli puoliympyrän muotoinen ja noin neljätoista metriä korkea. Visigootit rakensivat muurit uudelleen 400- ja 500-luvuilla, mutta alkuperäinen rakenne säilyi.
+
+1800-luvun lopulla arkkitehti ja teoreetikko Eugène Viollet-le-Duc ennallisti linnoituksen. Vuonna 1997 se otettiin ma…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

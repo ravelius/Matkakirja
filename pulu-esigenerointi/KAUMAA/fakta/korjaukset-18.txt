@@ -1,0 +1,41 @@
+### v2-982
+VANHA: ja se on maailman pohjoisin yliopisto
+UUSI: ja se on yksi maailman pohjoisimmista yliopistoista
+SYY: liioittelu
+
+### v2-984
+VANHA: Kellotorni valmistui vuotta myöhemmin, vuonna 1862.
+UUSI: Kellotorni valmistui hieman myöhemmin.
+SYY: epävarma vuosiluku
+
+### v2-990
+VANHA: joka lähtee vasta puoli yhdeltätoista illalla
+UUSI: joka lähtee vasta illalla
+SYY: epävarma kellonaika
+
+### v2-1005
+VANHA: yli viidensadan vuoden ajan
+UUSI: yli neljänsadan vuoden ajan
+SYY: väärä luku (kruunajaiset Wawelissa 1320-1734)
+
+### v2-1010
+VANHA: ja vuonna 1882 se muurattiin
+UUSI: ja se muurattiin
+SYY: epävarma vuosiluku
+
+### v2-1012
+VANHA: ja hetken aikaa se oli maailman suurin [[kellotorni]]
+UUSI: ja siitä tuli myös [[kellotorni]]
+SYY: liioittelu
+
+### v2-1051
+VANHA: Suurin osa sadosta käytetään kuitenkin
+UUSI: Merkittävä osa sadosta käytetään kuitenkin
+SYY: epävarma väite
+
+### v2-1060
+VANHA: Pinta-alaa on lähes 15 hehtaaria
+UUSI: Pinta-alaa on noin 15 hehtaaria
+SYY: epävarma luku
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 8

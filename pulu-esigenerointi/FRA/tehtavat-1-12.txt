@@ -1,0 +1,269 @@
+================ KOHTA 56 (nosto:notre-damen-kukko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukko putosi ja löytyi seuraavana päivänä
+Tietoruudun teksti: Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Damen kukko] Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+
+### 56.1
+KYSYMYS: Mitä tornin huipun kukon sisään oli suljettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukko putosi ja löytyi seuraavana päivänä
+Tietoruudun teksti: Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Damen kukko] Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+
+### 56.2
+KYSYMYS: Miksi kuusitoista kuparipatsasta oli poissa katolta palon aikaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukko putosi ja löytyi seuraavana päivänä
+Tietoruudun teksti: Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Damen kukko] Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+
+### 56.3
+KYSYMYS: Mitä uuden kukon sisään pantiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukko putosi ja löytyi seuraavana päivänä
+Tietoruudun teksti: Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Damen kukko] Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon sisään pantiin samat pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+================ KOHTA 57 (nosto:pariisin-patonki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Paras patonki valitaan sokkona
+Tietoruudun teksti: Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Pariisi: Paras patonki valitaan sokkona] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+- [Pariisi — kohdekartta / Kohdekartta: Paras patonki] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+
+### 57.1
+KYSYMYS: Miksi leivät numeroidaan ennen maistamista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Paras patonki valitaan sokkona
+Tietoruudun teksti: Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Pariisi: Paras patonki valitaan sokkona] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+- [Pariisi — kohdekartta / Kohdekartta: Paras patonki] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+
+### 57.2
+KYSYMYS: Mitä patongissa saa lain mukaan olla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Paras patonki valitaan sokkona
+Tietoruudun teksti: Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Pariisi: Paras patonki valitaan sokkona] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+- [Pariisi — kohdekartta / Kohdekartta: Paras patonki] Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+
+### 57.3
+KYSYMYS: Mikä velvollisuus voittajalle tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Paras patonki valitaan sokkona
+Tietoruudun teksti: Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä patongissa saa olla, on määrätty laissa — käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei raati tiedä kenen leipää se arvostelee, ja raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+### 57.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+================ KOHTA 58 (nosto:pariisi-soi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+- [Indonesia — maalehti / Musiikki: Pariisissa 1889 kuultiin jotain aivan uutta] 1889 — Gamelan on pronssisoittimien orkesteri: gongeja, rumpuja ja metallilaattoja, joita lyödään nuijilla. Paras pronssi seostetaan kymmenestä osasta kuparia ja kolmesta osasta tinaa. Vireitä on kaksi, viisisävelinen slendro ja seitsensävelinen pelog, ja jokainen orkesteri viritetään omaksi kokonaisuudekseen — soittimia ei vaihdella orkesterista toiseen. Kun Pariisin maailmannäyttelyssä 1889 soitti keskijaavalainen gamelan, kuulijoiden joukossa olivat Claude Debussy ja Erik Satie. Unesco merkitsi gamelanin luetteloonsa joulukuussa 2021.
+
+### 58.1
+KYSYMYS: Mistä lempinimi la Môme Piaf tuli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+
+### 58.2
+KYSYMYS: Miten Django Reinhardt opetteli soittamaan uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukki…
+
+### 58.3
+KYSYMYS: Millaista musiikkia Pariisin kaduilla kuultiin 1930-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen
+Tietoruudun teksti: Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen sanat hän kirjoitti itse.
+
+Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan soolot kahdella sormell…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Indonesia — maalehti / Musiikki: Pariisissa 1889 kuultiin jotain aivan uutta] 1889 — Gamelan on pronssisoittimien orkesteri: gongeja, rumpuja ja metallilaattoja, joita lyödään nuijilla. Paras pronssi seostetaan kymmenestä osasta kuparia ja kolmesta osasta tinaa. Vireitä on kaksi, viisisävelinen slendro ja seitsensävelinen pelog, ja jokainen orkesteri viritetään omaksi kokonaisuudekseen — soittimia ei vaihdella orkesterista toiseen. Kun Pariisin maailmannäyttelyssä 1889 soitti keskijaavalainen gamelan, kuulijoiden joukossa olivat Claude Debussy ja Erik Satie. Unesco merkitsi gamelanin luetteloonsa joulukuussa 2021.
+
+### 58.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+================ KOHTA 59 (nosto:pariisin-vuosisadat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+- [Kimberley — kaupunkilehti / Kimberley: Timantit pöydällä] Kaivetusta soralouheesta vain murto-osa oli timantteja, joten suuri osa työstä tehtiin lopulta pöytien ääressä, ei kuopan pohjalla. Louhe murskattiin, pestiin ja seulottiin, minkä jälkeen lajittelijat kävivät läpi jäljelle jääneen rakeisen aineksen käsin, poimien esiin kiiltävät kivet yksi kerrallaan. Työ vaati tarkkuutta: samalla pöydällä saattoi liikkua päivässä omaisuuksia, joita mikään vartija ei pystynyt täysin valvomaan. Lajitellut timantit lähetettiin Kimberleystä edelleen Lontooseen, ja juuri tämä kauppaketju teki savannin keskelle nousseesta kaivoskaupungista yhden Etelä-Afrikan vauraimmista paikoista.
+
+### 59.1
+KYSYMYS: Miksi kardinaali uskoi väärennetyt kirjeet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+
+### 59.2
+KYSYMYS: Mihin kaulanauhan timantit lopulta päätyivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kimberley — kaupunkilehti / Kimberley: Timantit pöydällä] Kaivetusta soralouheesta vain murto-osa oli timantteja, joten suuri osa työstä tehtiin lopulta pöytien ääressä, ei kuopan pohjalla. Louhe murskattiin, pestiin ja seulottiin, minkä jälkeen lajittelijat kävivät läpi jäljelle jääneen rakeisen aineksen käsin, poimien esiin kiiltävät kivet yksi kerrallaan. Työ vaati tarkkuutta: samalla pöydällä saattoi liikkua päivässä omaisuuksia, joita mikään vartija ei pystynyt täysin valvomaan. Lajitellut timantit lähetettiin Kimberleystä edelleen Lontooseen, ja juuri tämä kauppaketju teki savannin keskelle nousseesta kaivoskaupungista yhden Etelä-Afrikan vauraimmista paikoista.
+
+### 59.3
+KYSYMYS: Miksi Chasles piti kokoelmastaan kiinni vuosia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, joita ei ollut
+Tietoruudun teksti: Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidätettiin Versailles'ssa. Oikeus vapautti Rohanin 1786, mutta kuningattaren maine ei toipunut.
+
+Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles'lle noin 27 000 käsin kirjoitettua kirjettä,…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+
+### 59.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI

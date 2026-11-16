@@ -33,6 +33,9 @@ Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push →
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
 ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: <rooli>". Seuraava rivi otetaan VAIN, jos se ei odota KK:n päätöstä eikä riko voimassa olevaa "älä aja vielä" -sanaa (KK 10.29); vanhentuneelta näyttävästä rivistä yksi rivi PT:lle, ei työn aloitusta. Kirjoita sama rivi luovutukseesi.
+AJOPYYNTÖ (omistaja 16.11. 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12): jokaiseen Mac-/Unity-ajopyyntöön JU:lle LUOKKA (linkki, juna, omistaja, kuva, vika, yo). Ei pareja (Nyt | Uusi), ei toista laitetta, ei omia mittauksia: ne ovat yo-luokkaa, ja ajojonon portti pitää ne yössä.
+JUNAPYYNTÖ (omistaja 16.11. 15.01, P-261116-21, kortti juna-ja-julkaisu 2): sha + versiorivin ehdotus (tai "ei versioriviä") KK:lle; KK:n sanalla suoraan junaan. Ei junasana.zsh:ää eikä testisarjoja ennen junaa: ne ajetaan yöllä junan kärjelle, punaiset aamulla korjattavaksi.
+PALAUTUS (KK 16.11. 14.28 ja 15.02, P-261116-19/-21, kortti valmiin-maaritelma 15): palautukseen tehtäväkansion PALAUTUS.md (jokaiselle TEHTAVA.md:n M-riville "M<n>: KYLLÄ | EI — <kuva, loki tai luku>") ja `zsh /Users/Shared/Claude/julkaisija-tyokalut/palautus.zsh <rooli> <sha> <tehtäväkansio>` -rivi (vain M-rivit, sekunteja).
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 

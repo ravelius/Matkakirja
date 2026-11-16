@@ -20,7 +20,7 @@ export const MAAKUNTIEN_PULU = {
     ],
     "Grand Est": [
       { q: "Miksi juuri Strasbourgissa istuu Euroopan parlamentti?", a: "Kaupunki valittiin symboliseksi paikaksi Ranskan ja Saksan sodan jälkeisen sovinnon merkiksi – samasta kaupungista, josta alue riistettiin Saksalle 1871 ja palautettiin 1918. Euroopan neuvosto perustettiin sinne jo 1949, ja parlamentti sai istuntopaikakseen Strasbourgin virallisesti 1992." },
-      { q: "Kuinka monesti Alsace vaihtoi omistajaa noin 70 vuoden aikana?", a: "Alue siirtyi Ranskalta Saksalle 1871, takaisin Ranskalle 1918, uudelleen Saksalle natsimiehityksessä 1940 ja lopulta Ranskalle 1945. Neljä omistajanvaihdosta yhden ihmiselämän aikana selittää, miksi moni kylä käyttää yhä sekä ranskan- että saksankielistä nimeään." },
+      { q: "Kuinka monesti Elsass vaihtoi omistajaa noin 70 vuoden aikana?", a: "Alue siirtyi Ranskalta Saksalle 1871, takaisin Ranskalle 1918, uudelleen Saksalle natsimiehityksessä 1940 ja lopulta Ranskalle 1945. Neljä omistajanvaihdosta yhden ihmiselämän aikana selittää, miksi moni kylä käyttää yhä sekä ranskan- että saksankielistä nimeään." },
       { q: "Kuinka vanhoja Strasbourgin joulumarkkinat oikein ovat?", a: "Christkindelsmärik-markkinat on järjestetty jo vuodesta 1570 lähtien, joten ne ovat yksi Euroopan vanhimmista joulumarkkinoista. Perinne on säilynyt käytännössä keskeytyksettä yli 450 vuotta." },
     ],
     "Provence-Alpes-Côte-d'Azur": [
@@ -2410,7 +2410,7 @@ export const MAAKUNTIEN_PULU = {
     "Grevenmacher": [
       { q: "Mitä Echternachin hyppykulkueessa tapahtuu?", a: "Helluntaitiistaina tuhannet pyhiinvaeltajat ja katsojat etenevät kaupungin läpi hyppien, valkoiset nenäliinat käsissä ja torvisoittokuntien soittaessa. Perinne juontaa 1400-luvun lopulta, ja Unesco lisäsi sen aineettoman perinnön luetteloonsa 2010." },
       { q: "Mikä tekee Mullerthalista Luxemburgin Pikku-Sveitsin?", a: "Alue on nimetty maisemansa mukaan, ei korkeuden: siellä on hiekkakivikallioita, kapeita rotkoja ja luolia. Mullerthal Trail kiertää seutua kolmena reittinä, yhteensä noin 112 kilometriä." },
-      { q: "Miksi Luxemburgin viinit ovat lähinnä kuivia valkoviinejä ja kuohuvia?", a: "Viileän ilmaston viinialueen erikoisuutta ovat kuivat, Alsacen tyyliä muistuttavat valkoviinit, ja perinteisellä menetelmällä tehtyä kuohuviiniä myydään nimellä Crémant de Luxembourg. Yleisimpiä lajikkeita ovat Rivaner, Auxerrois, Pinot gris ja Riesling." },
+      { q: "Miksi Luxemburgin viinit ovat lähinnä kuivia valkoviinejä ja kuohuvia?", a: "Viileän ilmaston viinialueen erikoisuutta ovat kuivat, Elsassin tyyliä muistuttavat valkoviinit, ja perinteisellä menetelmällä tehtyä kuohuviiniä myydään nimellä Crémant de Luxembourg. Yleisimpiä lajikkeita ovat Rivaner, Auxerrois, Pinot gris ja Riesling." },
     ],
     "Luxembourg": [
       { q: "Mistä Luxemburgin nimi tulee?", a: "Nimi juontuu sanasta Lucilinburhuc, ’pieni linnoitus’. Kreivi Siegfried vaihtoi Bock-kalliolla sijainneen linnan omiin maihinsa Feulenissa Trierin apotin kanssa 7. huhtikuuta 963." },

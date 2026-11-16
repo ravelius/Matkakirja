@@ -114,34 +114,27 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.5
   }
 ]),
-  rooma: pilotti("rooma", LIVIAN_EUROOPAN_REVISION, "720c7925c99a9c9977292a86530a419f73ce372d816df17c78606cfafcdcc6c0", [
+  rooma: pilotti("rooma", LIVIAN_EUROOPAN_REVISION, "0a36b6ffdb05c1bba84f55f87aea12236ad4fd466d93985097e991ac730bd89f", [
   {
     "id": "rooma.livia.c1",
-    "ankkuri": "Pantheoniin ostetaan nyt pääsylippu",
+    "ankkuri": "Vartija oli oikeassa",
+    "esiintyma": 1,
+    "tarkoitus": "ilo",
+    "voimakkuus": 0.5
+  },
+  {
+    "id": "rooma.livia.c2",
+    "ankkuri": "kasvaa yhä yli kaksisataa lajia",
     "esiintyma": 1,
     "tarkoitus": "selittaa",
     "voimakkuus": 0.4
   },
   {
-    "id": "rooma.livia.c2",
-    "ankkuri": "kiersin kattoaukkoa juuri, kun sade alkoi",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.45
-  },
-  {
     "id": "rooma.livia.c3",
-    "ankkuri": "Alhaalla ihmiset siirtyivät kuivaan",
+    "ankkuri": "Kitkijät eivät saaneet viimeistä sanaa",
     "esiintyma": 1,
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.35
-  },
-  {
-    "id": "rooma.livia.c4",
-    "ankkuri": "ensin oli pakko katsoa, mihin sade sisällä menee",
-    "esiintyma": 1,
-    "tarkoitus": "miettiva",
-    "voimakkuus": 0.5
+    "tarkoitus": "hammastys",
+    "voimakkuus": 0.45
   }
 ]),
   bukarest: pilotti("bukarest", LIVIAN_EUROOPAN_REVISION, "130666b9dd63aeb3413a7e1c190dbb14840b57a14d91c992e9ff1a3ade979d53", [
@@ -248,34 +241,34 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.5
   }
 ]),
-  wien: pilotti("wien", LIVIAN_EUROOPAN_REVISION, "99deb3d702990d1fec29d2e2b4c02cac6b8bdde0f03435dfcd26bc9fa077c03b", [
+  wien: pilotti("wien", LIVIAN_EUROOPAN_REVISION, "ca1ae714405a11cb6735fd19397adf128acef5d5d443aab480c7281bb9baf301", [
   {
     "id": "wien.livia.c1",
-    "ankkuri": "Wieniin johdetaan nyt juomavettä vuoristolähteistä",
-    "esiintyma": 1,
-    "tarkoitus": "selittaa",
-    "voimakkuus": 0.45
-  },
-  {
-    "id": "wien.livia.c2",
-    "ankkuri": "odotin pisaraa nokka auki",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.45
-  },
-  {
-    "id": "wien.livia.c3",
-    "ankkuri": "Kokonainen matka vuorilta asti",
-    "esiintyma": 1,
-    "tarkoitus": "hammastys",
-    "voimakkuus": 0.45
-  },
-  {
-    "id": "wien.livia.c4",
-    "ankkuri": "minä vain ojensin kaulaani",
+    "ankkuri": "Arvaa, mitä Wien teki romahduksen jälkeen",
     "esiintyma": 1,
     "tarkoitus": "miettiva",
     "voimakkuus": 0.4
+  },
+  {
+    "id": "wien.livia.c2",
+    "ankkuri": "Avasi kahvilan",
+    "esiintyma": 1,
+    "tarkoitus": "ilo",
+    "voimakkuus": 0.5
+  },
+  {
+    "id": "wien.livia.c3",
+    "ankkuri": "samana syksynä",
+    "esiintyma": 1,
+    "tarkoitus": "selittaa",
+    "voimakkuus": 0.4
+  },
+  {
+    "id": "wien.livia.c4",
+    "ankkuri": "kahviin luotetaan enemmän kuin pankkeihin",
+    "esiintyma": 1,
+    "tarkoitus": "hammastys",
+    "voimakkuus": 0.45
   }
 ]),
   pariisi: pilotti("pariisi", LIVIAN_EUROOPAN_REVISION, "554d3023d10ac976e8c7fccb814e26d6a1dd77e6cba1a14dfd52e10abbeb8534", [
@@ -698,7 +691,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.4
   }
 ]),
-  amsterdam: pilotti("amsterdam", LIVIAN_EUROOPAN_REVISION, "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378", [
+  amsterdam: pilotti("amsterdam", LIVIAN_EUROOPAN_REVISION, "c67bd2bdaef9cc6c78f2720f3150a8784558a9b9b214b638ee11d7cdd35f46e0", [
   {
     "id": "amsterdam.livia.c1",
     "ankkuri": "pyörähalli veden alla",
@@ -708,31 +701,24 @@ const LUENTA_CUET_20260914 = Object.freeze({
   },
   {
     "id": "amsterdam.livia.c2",
-    "ankkuri": "Seitsemälletuhannelle pyörälle",
+    "ankkuri": "seitsemälletuhannelle pyörälle",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.6
   },
   {
     "id": "amsterdam.livia.c3",
-    "ankkuri": "Kävin kurkistamassa sisään ja palasin rantaan",
+    "ankkuri": "Kurkistin sisään",
     "esiintyma": 1,
     "tarkoitus": "ilo",
     "voimakkuus": 0.45
   },
   {
     "id": "amsterdam.livia.c4",
-    "ankkuri": "Sen alla minä olin juuri kävellyt, kuivin jaloin",
+    "ankkuri": "kävelin sen alla kuivin jaloin",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.5
-  },
-  {
-    "id": "amsterdam.livia.c5",
-    "ankkuri": "nähdä sen ilmeen, jos se olisi tiennyt",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.45
   }
 ]),
   dublin: pilotti("dublin", LIVIAN_EUROOPAN_REVISION, "35b090c4334a2ed02ef719637ad22bde613a9dbb87251d680b163db36f74dc06", [

@@ -172,26 +172,28 @@ export const FOKUSVIRTA_ROOMA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469. */
+    /*
+     * Isoisän kuva (omistaja 15.11.2026 klo 19.19 tekstin yhteydessä, kuvalinja 12.11. P-261112-29): Codexin havainnekuva Colosseumin
+     * kitkennästä, vanhan valokuvan ilme, isoisää ei näytetä (tehtävä #2258, 1536×1024, SHA-256 aee54ee50b91a67455e2913df5a6f3ddd7290e772a4d3403e28b1e01ae8e3980,
+     * postilaatikkohaara _review-isoisa-rooma-kitkenta-20261115/, commit 0682353882). Vanha Pantheon-kuva (r20260909-paper-v4) ja luentakuva2 pois.
+     * KK:n silmä ja omistajan sana ennen yhdistämistä; kuva viedään ämpäriin kuten Pariisin isoisa-pariisi-valokuva-v2.png (JU/PT).
+     */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
-      lyhyt: "Rooma, 1873. Katto antoi sateelle luvan.",
-      selite: 'Pantheonin avoimesta kattoaukosta sade putoaa suoraan marmorilattialle ja löytää tiensä viemäriin. Asetin kameran kuivalle kohdalle; näin vanhalle talolle en tohtinut huomauttaa katosta.',
+      osoite: "https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-rooma-kitkenta-v1.png",
+      lyhyt: "Rooma, noin 1871. Työmiehet kitkevät kasveja Colosseumin muurilta.",
+      selite: 'Työmiehet köysissä kitkevät kasveja Colosseumin ulkomuurilta. Kasvillisuus poistettiin muureilta noin vuosina 1870–1871, ettei se rikkoisi kiveä.',
       lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
-    },
-    luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260911-paper2-v1.jpg",
-      lyhyt: "Rooma, 1873. Uusi virkamies kulki vanhan keisarin ohi.",
-      selite: 'Uusi virkamies kantoi paperinsa kuivina vanhan keisarin ohi. Rooma oli vaihtanut tehtävää, mutta kaikki hallitsijat eivät olleet poistuneet — osa vain hoiti virkaansa kivestä.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
+      // Kitkennän ajankohta: Vistanet 22.12.2020 (1870, Pietro Rosa) ja en-Wikipedia Colosseum (1871); ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+      lahteet: [
+        "https://www.vistanet.it/roma/2020/12/22/lo-sapevate-nel-colosseo-vivono-centinaia-di-specie-botaniche-esotiche-e-rare/",
+        "https://en.wikipedia.org/wiki/Colosseum",
+      ],
     },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 344 merkkiä (yläraja 400). */
-    teksti: "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+    /* KAANON: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 19.19 "kelpaa"; SK:n luonnos docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md, PR 6815). Sanasta sanaan. 232 merkkiä. */
+    teksti: "Colosseumin muureilla oli kasvanut yli neljäsataa kasvilajia. Pari vuotta sitten ne kitkettiin pois, etteivät juuret rikkoisi kiveä. Kysyin vartijalta, pysyvätkö ne poissa. Hän sanoi, että kasvit tietävät sen paremmin kuin kaupunki.",
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -220,48 +222,40 @@ export const FOKUSVIRTA_ROOMA = {
     reaktiot: [
   {
     "id": "rooma.r1",
-    "ankkuri": "kattoaukosta satoi sisään",
-    "tarkoitus": "hammastyy",
+    "ankkuri": "neljäsataa kasvilajia",
+    "tarkoitus": "myotailee",
     "voimakkuus": 0.35,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   },
   {
     "id": "rooma.r2",
-    "ankkuri": "Vesi katosi lattian pieniin reikiin",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "rooma.r3",
-    "ankkuri": "ei kai tohtinut huomauttaa katosta",
-    "tarkoitus": "huvittuu",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "rooma.r4",
-    "ankkuri": "Kaupungin hallitsijat olivat vaihtuneet monta kertaa",
+    "ankkuri": "kitkettiin pois",
     "tarkoitus": "vakavoituu",
     "voimakkuus": 0.4,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   },
   {
-    "id": "rooma.r5",
-    "ankkuri": "taivaan sisään kysymättä nimeä",
-    "tarkoitus": "myotailee",
+    "id": "rooma.r3",
+    "ankkuri": "pysyvätkö ne poissa",
+    "tarkoitus": "epailee",
     "voimakkuus": 0.35,
     "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r4",
+    "ankkuri": "kasvit tietävät sen paremmin kuin kaupunki",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Uuden tekstin (omistaja 15.11.2026 19.19) sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. [thoughtfully] Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, ÄÄ otto, teksti ilman tageja, 15,62 s; JU vienyt 16.11.2026 11.09), ämpärin täysi osoite kuten Pariisissa, Lontoossa ja Wienissä. */
+    luenta: "[curious] Colosseumin muureilla oli kasvanut yli neljäsataa kasvilajia. Pari vuotta sitten ne kitkettiin pois, etteivät juuret rikkoisi kiveä. Kysyin vartijalta, pysyvätkö ne poissa. [warmly] Hän sanoi, että kasvit tietävät sen paremmin kuin kaupunki.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
      * valokuva Porta Pian murtumasta, otettu jo seuraavana päivänä
@@ -293,27 +287,30 @@ export const FOKUSVIRTA_ROOMA = {
      * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
      * tausta-aineisto (ei nay pelaajalle).
      */
+    /*
+     * PULUN KUVA (omistaja 16.11.2026 klo 09.09; PT): Codexin havainnekuva Colosseumin kasvit, tehtävä #2351 (fc28d28de2);
+     * Commonsin valokuva (Adrian Farwell, CC BY 3.0) pois. Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/rooma-colosseum-codex-v2.jpg
+     * (neliö 1254 px; rajaus = koko neliö ympyrään, ei `rajaus`-kenttää). Kuva viedään ämpäriin (JU/PT) osoitteeseen alla ennen
+     * yhdistämistä. Lähderivi: Matkakirjan havainnekuva, ei valokuvaajaa. Kuvateksti uuden kuvan mukaan (KK 16.11. klo 09.17): muurin harja, kukkiva pensas ja saniainen. Faktat (kasvilajit) Caneva ym. 2002 ja Vistanet 22.12.2020, ks. docs/raportit/rooma-isoisa-pulu-luonnos-20261115.md.
+     * `lyhyt` ja `selite` ovat KK:n sanelemat.
+     */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg',
-        lyhyt: 'Rooma: isoisä katsoi aukosta ylös, minä katsoin alas.',
-        selite: 'Ylhäältä Pantheonin avoin kattoaukko näyttää valtavalta silmältä, jonka pohjalla lattian kuviot pienenevät. Isoisä katsoi siitä ylös; minä kurkistin varovasti alas.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-rooma-colosseum-kasvit-codex-v2.jpg',
+        lyhyt: 'Vihreää Colosseumin muurin harjalla.',
+        selite: 'Kukkiva pensas ja saniainen kasvavat Colosseumin muurin raoissa. Colosseumilla kasvaa yhä yli kaksisataa kasvilajia.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://www.pantheonroma.com/en/pantheon-history/',
-          'https://www.pantheonroma.com/en/2025/04/24/the-oculus-of-the-pantheon/',
-          'https://www.vigilfuoco.tv/eventi/lancio-di-petali-dalla-cupola-del-pantheon',
-          'https://hrtprikazuje.hrt.hr/hrt1/rimski-panteon-anticka-megastruktura-0-12197405',
-          'https://www.flickr.com/photos/escriteur/28753433533',
-          'https://www.rainews.it/video/2025/06/pantheon-vigili-del-fuoco-pioggia-di-petali-in-occasione-della-pentecoste-d7ec84a1-0da1-4b59-8a0a-831713e71490.html',
+          'https://link.springer.com/article/10.1080/11263500212331351199',
+          'https://www.vistanet.it/roma/2020/12/22/lo-sapevate-nel-colosseo-vivono-centinaia-di-specie-botaniche-esotiche-e-rare/',
         ],
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Pantheoniin ostetaan nyt pääsylippu. Minä kiersin kattoaukkoa juuri, kun sade alkoi. Alhaalla ihmiset siirtyivät kuivaan. Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee."],
+    /* KUPLA: OMISTAJAN TEKSTI (omistaja 15.11.2026 klo 19.19 "kelpaa"). Sanasta sanaan. 108 merkkiä. */
+    kommentti: ["Vartija oli oikeassa! Colosseumilla kasvaa yhä yli kaksisataa lajia. Kitkijät eivät saaneet viimeistä sanaa."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
-    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
       + 'samat.',

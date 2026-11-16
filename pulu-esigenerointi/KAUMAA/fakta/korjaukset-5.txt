@@ -1,0 +1,53 @@
+### v1-365
+VANHA: vuoristossa on yhä noin 20 jäätikköjärveä
+UUSI: vuoristossa on yhä useita jäätikköjärviä
+SYY: epävarma luku
+### v1-367
+VANHA: Se on usein sanottu Euroopan eteläisimmäksi vuonoksi
+UUSI: Sitä on usein sanottu Euroopan eteläisimmäksi vuonoksi
+SYY: kielivirhe
+### v1-396
+VANHA: ja sateisin kuukausi on joulukuu
+UUSI: ja sateisinta on syksyllä ja alkutalvella
+SYY: epävarma tai väärä yksityiskohta (sateisin kuukausi yleensä syys-lokakuu)
+### v1-409
+VANHA: Maan kokoelmat ovat jopa julkaisseet kirjan, jossa on jokainen maailman [[visentti]].
+UUSI: Puolassa pidetään myös sukukirjaa [[visentti]]en sukulinjoista.
+SYY: liioittelu ja epäselvä väite
+### v1-411
+VANHA: Linnan kello käynnistettiin uudelleen siitä minuutista, mihin se oli pysähtynyt.
+UUSI: Linnan kellon kerrotaan käynnistetyn uudelleen siitä minuutista, mihin se oli pysähtynyt.
+SYY: epävarma yksityiskohta
+### v1-430
+VANHA: Romania onkin Kaakkois-Euroopan ainoa maa, jonka kieli polveutuu latinasta
+UUSI: Romania onkin Kaakkois-Euroopassa poikkeus, sillä sen kieli polveutuu latinasta
+SYY: liioittelu (myös Moldovassa puhutaan romaniaa)
+### v1-432
+VANHA: Romania on maailman neljänneksi suurin luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy țuicaan.
+UUSI: Romania on yksi maailman suurimmista luumuntuottajista, ja merkittävä osa sadosta päätyy țuicaan.
+SYY: epävarma sijoitus ja luku
+### v1-432
+VANHA: mäski käy 6–8 viikkoa suurissa tynnyreissä, ja tislaus tehdään loka–joulukuussa
+UUSI: mäski käy useita viikkoja suurissa tynnyreissä, ja tislaus tehdään syksyllä ja alkutalvella
+SYY: epävarma yksityiskohta
+### v1-433
+VANHA: Hän kirjoitti sen päättötyökseen [[Bukarestin konservatoriossa]].
+UUSI: Sen kerrotaan syntyneen hänen opiskeluaikanaan [[Bukarestin konservatoriossa]].
+SYY: epävarma yksityiskohta
+### v1-433
+VANHA: joten siitä tuli viulistien näytösnumero kaikkialla maailmassa. Wienin konservatorion stipendi jäi hänellä käyttämättä, koska romania ei päästetty lähtemään.
+UUSI: joten siitä tuli viulistien näytösnumero kaikkialla maailmassa.
+SYY: vahvistamaton yksityiskohta
+### v1-435
+VANHA: avattiin jo vuonna 1847
+UUSI: perustettiin jo 1800-luvun puolivälissä
+SYY: epävarma vuosiluku
+### v1-446
+VANHA: Kirkossa on yhdeksän värikästä kupolia
+UUSI: Kirkossa on useita värikkäitä kupoleja
+SYY: epävarma luku
+### v1-446
+VANHA: kreml-muurin vieressä
+UUSI: Kremlin muurin vieressä
+SYY: kielivirhe
+LOPPU: tarkistettu 90 vastausta, korjauksia 14

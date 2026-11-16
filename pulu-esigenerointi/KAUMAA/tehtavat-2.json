@@ -1,0 +1,7982 @@
+[
+ {
+  "n": 1,
+  "kohta": "maa:ALB",
+  "kasite": "Shqipëria",
+  "kysymys": "Kerro lisää: Shqipëria"
+ },
+ {
+  "n": 2,
+  "kohta": "maa:ALB",
+  "kasite": "Kaksipäinen musta kotka",
+  "kysymys": "Kerro lisää: Kaksipäinen musta kotka"
+ },
+ {
+  "n": 3,
+  "kohta": "maa:ALB",
+  "kasite": "Skanderbegin",
+  "kysymys": "Kerro lisää: Skanderbegin"
+ },
+ {
+  "n": 4,
+  "kohta": "maa:ALB",
+  "kasite": "Albaniassa",
+  "kysymys": "Kerro lisää: Albaniassa"
+ },
+ {
+  "n": 5,
+  "kohta": "maa:ALB",
+  "kasite": "betonibunkkereita",
+  "kysymys": "Kerro lisää: betonibunkkereita"
+ },
+ {
+  "n": 6,
+  "kohta": "maa:ALB",
+  "kasite": "Enver Hoxhan",
+  "kysymys": "Kerro lisää: Enver Hoxhan"
+ },
+ {
+  "n": 7,
+  "kohta": "maa:ALB",
+  "kasite": "Bulgariassa",
+  "kysymys": "Kerro lisää: Bulgariassa"
+ },
+ {
+  "n": 8,
+  "kohta": "maa:ALB",
+  "kasite": "Balkanin",
+  "kysymys": "Kerro lisää: Balkanin"
+ },
+ {
+  "n": 9,
+  "kohta": "maa:ALB",
+  "kasite": "Sarandën",
+  "kysymys": "Kerro lisää: Sarandën"
+ },
+ {
+  "n": 10,
+  "kohta": "maa:ALB",
+  "kasite": "Butrint",
+  "kysymys": "Kerro lisää: Butrint"
+ },
+ {
+  "n": 11,
+  "kohta": "maa:ALB",
+  "kasite": "Kanunin",
+  "kysymys": "Kerro lisää: Kanunin"
+ },
+ {
+  "n": 12,
+  "kohta": "maa:ALB",
+  "kasite": "Toisen maailmansodan",
+  "kysymys": "Kerro lisää: Toisen maailmansodan"
+ },
+ {
+  "n": 13,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Tiranan",
+  "kysymys": "Kerro lisää: Tiranan"
+ },
+ {
+  "n": 14,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Edi Rama",
+  "kysymys": "Kerro lisää: Edi Rama"
+ },
+ {
+  "n": 15,
+  "kohta": "kaupunki:tirana",
+  "kasite": "kommunistiajan",
+  "kysymys": "Kerro lisää: kommunistiajan"
+ },
+ {
+  "n": 16,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Enver Hoxhan",
+  "kysymys": "Kerro lisää: Enver Hoxhan"
+ },
+ {
+  "n": 17,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Kommunismin",
+  "kysymys": "Kerro lisää: Kommunismin"
+ },
+ {
+  "n": 18,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Blloku",
+  "kysymys": "Kerro lisää: Blloku"
+ },
+ {
+  "n": 19,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Dajtin",
+  "kysymys": "Kerro lisää: Dajtin"
+ },
+ {
+  "n": 20,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Adrianmerelle",
+  "kysymys": "Kerro lisää: Adrianmerelle"
+ },
+ {
+  "n": 21,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Skanderbeg",
+  "kysymys": "Kerro lisää: Skanderbeg"
+ },
+ {
+  "n": 22,
+  "kohta": "kaupunki:tirana",
+  "kasite": "Venetsialta",
+  "kysymys": "Kerro lisää: Venetsialta"
+ },
+ {
+  "n": 23,
+  "kohta": "maa:AUT",
+  "kasite": "Tirolissa",
+  "kysymys": "Kerro lisää: Tirolissa"
+ },
+ {
+  "n": 24,
+  "kohta": "maa:AUT",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 25,
+  "kohta": "maa:AUT",
+  "kasite": "Itävallassa",
+  "kysymys": "Kerro lisää: Itävallassa"
+ },
+ {
+  "n": 26,
+  "kohta": "maa:AUT",
+  "kasite": "Wiener Schnitzel",
+  "kysymys": "Kerro lisää: Wiener Schnitzel"
+ },
+ {
+  "n": 27,
+  "kohta": "maa:AUT",
+  "kasite": "Buchteln",
+  "kysymys": "Kerro lisää: Buchteln"
+ },
+ {
+  "n": 28,
+  "kohta": "maa:AUT",
+  "kasite": "Unkari",
+  "kysymys": "Kerro lisää: Unkari"
+ },
+ {
+  "n": 29,
+  "kohta": "maa:AUT",
+  "kasite": "Slovenia",
+  "kysymys": "Kerro lisää: Slovenia"
+ },
+ {
+  "n": 30,
+  "kohta": "maa:AUT",
+  "kasite": "Italia",
+  "kysymys": "Kerro lisää: Italia"
+ },
+ {
+  "n": 31,
+  "kohta": "maa:AUT",
+  "kasite": "Sveitsi",
+  "kysymys": "Kerro lisää: Sveitsi"
+ },
+ {
+  "n": 32,
+  "kohta": "maa:AUT",
+  "kasite": "Liechtenstein",
+  "kysymys": "Kerro lisää: Liechtenstein"
+ },
+ {
+  "n": 33,
+  "kohta": "maa:AUT",
+  "kasite": "Hallstatt",
+  "kysymys": "Kerro lisää: Hallstatt"
+ },
+ {
+  "n": 34,
+  "kohta": "maa:AUT",
+  "kasite": "Salzkammergutin",
+  "kysymys": "Kerro lisää: Salzkammergutin"
+ },
+ {
+  "n": 35,
+  "kohta": "maa:AUT",
+  "kasite": "rautakauden Hallstatt-kulttuuri",
+  "kysymys": "Kerro lisää: rautakauden Hallstatt-kulttuuri"
+ },
+ {
+  "n": 36,
+  "kohta": "maa:AUT",
+  "kasite": "Wolfgang Amadeus Mozart",
+  "kysymys": "Kerro lisää: Wolfgang Amadeus Mozart"
+ },
+ {
+  "n": 37,
+  "kohta": "maa:AUT",
+  "kasite": "Hohensalzburgin",
+  "kysymys": "Kerro lisää: Hohensalzburgin"
+ },
+ {
+  "n": 38,
+  "kohta": "maa:AUT",
+  "kasite": "Wieniin",
+  "kysymys": "Kerro lisää: Wieniin"
+ },
+ {
+  "n": 39,
+  "kohta": "kaupunki:wien",
+  "kasite": "Wienin",
+  "kysymys": "Kerro lisää: Wienin"
+ },
+ {
+  "n": 40,
+  "kohta": "kaupunki:wien",
+  "kasite": "melange",
+  "kysymys": "Kerro lisää: melange"
+ },
+ {
+  "n": 41,
+  "kohta": "kaupunki:wien",
+  "kasite": "Café Central",
+  "kysymys": "Kerro lisää: Café Central"
+ },
+ {
+  "n": 42,
+  "kohta": "kaupunki:wien",
+  "kasite": "Hofburgin",
+  "kysymys": "Kerro lisää: Hofburgin"
+ },
+ {
+  "n": 43,
+  "kohta": "kaupunki:wien",
+  "kasite": "lipizzanhevosista",
+  "kysymys": "Kerro lisää: lipizzanhevosista"
+ },
+ {
+  "n": 44,
+  "kohta": "kaupunki:wien",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 45,
+  "kohta": "kaupunki:wien",
+  "kasite": "Prater",
+  "kysymys": "Kerro lisää: Prater"
+ },
+ {
+  "n": 46,
+  "kohta": "kaupunki:wien",
+  "kasite": "Kolmas mies",
+  "kysymys": "Kerro lisää: Kolmas mies"
+ },
+ {
+  "n": 47,
+  "kohta": "kaupunki:wien",
+  "kasite": "Musikvereinin",
+  "kysymys": "Kerro lisää: Musikvereinin"
+ },
+ {
+  "n": 48,
+  "kohta": "kaupunki:wien",
+  "kasite": "Straussin",
+  "kysymys": "Kerro lisää: Straussin"
+ },
+ {
+  "n": 49,
+  "kohta": "kaupunki:wien",
+  "kasite": "Tonava-valssi",
+  "kysymys": "Kerro lisää: Tonava-valssi"
+ },
+ {
+  "n": 50,
+  "kohta": "kaupunki:wien",
+  "kasite": "Radetzky-marssi",
+  "kysymys": "Kerro lisää: Radetzky-marssi"
+ },
+ {
+  "n": 51,
+  "kohta": "kaupunki:wien",
+  "kasite": "Wien",
+  "kysymys": "Kerro lisää: Wien"
+ },
+ {
+  "n": 52,
+  "kohta": "kaupunki:wien",
+  "kasite": "vuokra-asunnoissa",
+  "kysymys": "Kerro lisää: vuokra-asunnoissa"
+ },
+ {
+  "n": 53,
+  "kohta": "kaupunki:wien",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 54,
+  "kohta": "maa:BEL",
+  "kasite": "Flanderissa",
+  "kysymys": "Kerro lisää: Flanderissa"
+ },
+ {
+  "n": 55,
+  "kohta": "maa:BEL",
+  "kasite": "Vallonian",
+  "kysymys": "Kerro lisää: Vallonian"
+ },
+ {
+  "n": 56,
+  "kohta": "maa:BEL",
+  "kasite": "Bryssel",
+  "kysymys": "Kerro lisää: Bryssel"
+ },
+ {
+  "n": 57,
+  "kohta": "maa:BEL",
+  "kasite": "Maas-joen",
+  "kysymys": "Kerro lisää: Maas-joen"
+ },
+ {
+  "n": 58,
+  "kohta": "maa:BEL",
+  "kasite": "ensimmäisen maailmansodan",
+  "kysymys": "Kerro lisää: ensimmäisen maailmansodan"
+ },
+ {
+  "n": 59,
+  "kohta": "maa:BEL",
+  "kasite": "friteeraajat",
+  "kysymys": "Kerro lisää: friteeraajat"
+ },
+ {
+  "n": 60,
+  "kohta": "maa:BEL",
+  "kasite": "Westmalle",
+  "kysymys": "Kerro lisää: Westmalle"
+ },
+ {
+  "n": 61,
+  "kohta": "maa:BEL",
+  "kasite": "Chimay",
+  "kysymys": "Kerro lisää: Chimay"
+ },
+ {
+  "n": 62,
+  "kohta": "maa:BEL",
+  "kasite": "Orval",
+  "kysymys": "Kerro lisää: Orval"
+ },
+ {
+  "n": 63,
+  "kohta": "maa:BEL",
+  "kasite": "Rochefort",
+  "kysymys": "Kerro lisää: Rochefort"
+ },
+ {
+  "n": 64,
+  "kohta": "maa:BEL",
+  "kasite": "Westvleteren",
+  "kysymys": "Kerro lisää: Westvleteren"
+ },
+ {
+  "n": 65,
+  "kohta": "maa:BEL",
+  "kasite": "Brugge",
+  "kysymys": "Kerro lisää: Brugge"
+ },
+ {
+  "n": 66,
+  "kohta": "maa:BEL",
+  "kasite": "Belfort",
+  "kysymys": "Kerro lisää: Belfort"
+ },
+ {
+  "n": 67,
+  "kohta": "maa:BEL",
+  "kasite": "Tintti",
+  "kysymys": "Kerro lisää: Tintti"
+ },
+ {
+  "n": 68,
+  "kohta": "maa:BEL",
+  "kasite": "Hergé",
+  "kysymys": "Kerro lisää: Hergé"
+ },
+ {
+  "n": 69,
+  "kohta": "maa:BEL",
+  "kasite": "Smurffit",
+  "kysymys": "Kerro lisää: Smurffit"
+ },
+ {
+  "n": 70,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Manneken Pis",
+  "kysymys": "Kerro lisää: Manneken Pis"
+ },
+ {
+  "n": 71,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Brysselin",
+  "kysymys": "Kerro lisää: Brysselin"
+ },
+ {
+  "n": 72,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "legendoja",
+  "kysymys": "Kerro lisää: legendoja"
+ },
+ {
+  "n": 73,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Atomium",
+  "kysymys": "Kerro lisää: Atomium"
+ },
+ {
+  "n": 74,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "rautakiteen",
+  "kysymys": "Kerro lisää: rautakiteen"
+ },
+ {
+  "n": 75,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Brysselin maailmannäyttelyä",
+  "kysymys": "Kerro lisää: Brysselin maailmannäyttelyä"
+ },
+ {
+  "n": 76,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Euroopan komissio",
+  "kysymys": "Kerro lisää: Euroopan komissio"
+ },
+ {
+  "n": 77,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Strasbourg",
+  "kysymys": "Kerro lisää: Strasbourg"
+ },
+ {
+  "n": 78,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Naton",
+  "kysymys": "Kerro lisää: Naton"
+ },
+ {
+  "n": 79,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Belgiassa",
+  "kysymys": "Kerro lisää: Belgiassa"
+ },
+ {
+  "n": 80,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "brysseliläinen vohveli",
+  "kysymys": "Kerro lisää: brysseliläinen vohveli"
+ },
+ {
+  "n": 81,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Liègeläinen vohveli",
+  "kysymys": "Kerro lisää: Liègeläinen vohveli"
+ },
+ {
+  "n": 82,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "Grand-Placen",
+  "kysymys": "Kerro lisää: Grand-Placen"
+ },
+ {
+  "n": 83,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "begonioilla",
+  "kysymys": "Kerro lisää: begonioilla"
+ },
+ {
+  "n": 84,
+  "kohta": "kaupunki:bryssel",
+  "kasite": "kiltatalot",
+  "kysymys": "Kerro lisää: kiltatalot"
+ },
+ {
+  "n": 85,
+  "kohta": "maa:BGR",
+  "kasite": "Bulgariaan",
+  "kysymys": "Kerro lisää: Bulgariaan"
+ },
+ {
+  "n": 86,
+  "kohta": "maa:BGR",
+  "kasite": "Preslavin",
+  "kysymys": "Kerro lisää: Preslavin"
+ },
+ {
+  "n": 87,
+  "kohta": "maa:BGR",
+  "kasite": "Kyrilloksen ja Metodiuksen",
+  "kysymys": "Kerro lisää: Kyrilloksen ja Metodiuksen"
+ },
+ {
+  "n": 88,
+  "kohta": "maa:BGR",
+  "kasite": "kiselo mljako",
+  "kysymys": "Kerro lisää: kiselo mljako"
+ },
+ {
+  "n": 89,
+  "kohta": "maa:BGR",
+  "kasite": "Stamen Grigorovin",
+  "kysymys": "Kerro lisää: Stamen Grigorovin"
+ },
+ {
+  "n": 90,
+  "kohta": "maa:BGR",
+  "kasite": "tarator-keitossa",
+  "kysymys": "Kerro lisää: tarator-keitossa"
+ },
+ {
+  "n": 91,
+  "kohta": "maa:BGR",
+  "kasite": "Rilan luostari",
+  "kysymys": "Kerro lisää: Rilan luostari"
+ },
+ {
+  "n": 92,
+  "kohta": "maa:BGR",
+  "kasite": "Iivan Rilskiin",
+  "kysymys": "Kerro lisää: Iivan Rilskiin"
+ },
+ {
+  "n": 93,
+  "kohta": "maa:BGR",
+  "kasite": "Pohjois-Makedoniassa",
+  "kysymys": "Kerro lisää: Pohjois-Makedoniassa"
+ },
+ {
+  "n": 94,
+  "kohta": "maa:BGR",
+  "kasite": "Romaniassa",
+  "kysymys": "Kerro lisää: Romaniassa"
+ },
+ {
+  "n": 95,
+  "kohta": "maa:BGR",
+  "kasite": "Moldovassa",
+  "kysymys": "Kerro lisää: Moldovassa"
+ },
+ {
+  "n": 96,
+  "kohta": "maa:BGR",
+  "kasite": "Nessebar",
+  "kysymys": "Kerro lisää: Nessebar"
+ },
+ {
+  "n": 97,
+  "kohta": "maa:BGR",
+  "kasite": "Mustanmeren",
+  "kysymys": "Kerro lisää: Mustanmeren"
+ },
+ {
+  "n": 98,
+  "kohta": "maa:BGR",
+  "kasite": "traakialaisten",
+  "kysymys": "Kerro lisää: traakialaisten"
+ },
+ {
+  "n": 99,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Aleksandr Nevskin katedraali",
+  "kysymys": "Kerro lisää: Aleksandr Nevskin katedraali"
+ },
+ {
+  "n": 100,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Venäjän ja Ottomaanien sodassa",
+  "kysymys": "Kerro lisää: Venäjän ja Ottomaanien sodassa"
+ },
+ {
+  "n": 101,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Balkanin",
+  "kysymys": "Kerro lisää: Balkanin"
+ },
+ {
+  "n": 102,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Vitosha",
+  "kysymys": "Kerro lisää: Vitosha"
+ },
+ {
+  "n": 103,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Cherni Vrăh",
+  "kysymys": "Kerro lisää: Cherni Vrăh"
+ },
+ {
+  "n": 104,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Boyanan kirkko",
+  "kysymys": "Kerro lisää: Boyanan kirkko"
+ },
+ {
+  "n": 105,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Serdican",
+  "kysymys": "Kerro lisää: Serdican"
+ },
+ {
+  "n": 106,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Pyhän Yrjön rotunda",
+  "kysymys": "Kerro lisää: Pyhän Yrjön rotunda"
+ },
+ {
+  "n": 107,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Rooman valtakunnassa",
+  "kysymys": "Kerro lisää: Rooman valtakunnassa"
+ },
+ {
+  "n": 108,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Banitsa",
+  "kysymys": "Kerro lisää: Banitsa"
+ },
+ {
+  "n": 109,
+  "kohta": "kaupunki:sofia",
+  "kasite": "ayranin",
+  "kysymys": "Kerro lisää: ayranin"
+ },
+ {
+  "n": 110,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Uudenvuodenaattona",
+  "kysymys": "Kerro lisää: Uudenvuodenaattona"
+ },
+ {
+  "n": 111,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Banya Bashi -moskeija",
+  "kysymys": "Kerro lisää: Banya Bashi -moskeija"
+ },
+ {
+  "n": 112,
+  "kohta": "kaupunki:sofia",
+  "kasite": "Kaakkois-Euroopan",
+  "kysymys": "Kerro lisää: Kaakkois-Euroopan"
+ },
+ {
+  "n": 113,
+  "kohta": "kaupunki:sofia",
+  "kasite": "suvaitsevaisuuden kolmio",
+  "kysymys": "Kerro lisää: suvaitsevaisuuden kolmio"
+ },
+ {
+  "n": 114,
+  "kohta": "maa:BIH",
+  "kasite": "Stari Most",
+  "kysymys": "Kerro lisää: Stari Most"
+ },
+ {
+  "n": 115,
+  "kohta": "maa:BIH",
+  "kasite": "Neretva-joen",
+  "kysymys": "Kerro lisää: Neretva-joen"
+ },
+ {
+  "n": 116,
+  "kohta": "maa:BIH",
+  "kasite": "Bosnian sodan",
+  "kysymys": "Kerro lisää: Bosnian sodan"
+ },
+ {
+  "n": 117,
+  "kohta": "maa:BIH",
+  "kasite": "džezvassa",
+  "kysymys": "Kerro lisää: džezvassa"
+ },
+ {
+  "n": 118,
+  "kohta": "maa:BIH",
+  "kasite": "lokumin",
+  "kysymys": "Kerro lisää: lokumin"
+ },
+ {
+  "n": 119,
+  "kohta": "maa:BIH",
+  "kasite": "Baščaršijassa",
+  "kysymys": "Kerro lisää: Baščaršijassa"
+ },
+ {
+  "n": 120,
+  "kohta": "maa:BIH",
+  "kasite": "Perućica",
+  "kysymys": "Kerro lisää: Perućica"
+ },
+ {
+  "n": 121,
+  "kohta": "maa:BIH",
+  "kasite": "Sutjeskan kansallispuistossa",
+  "kysymys": "Kerro lisää: Sutjeskan kansallispuistossa"
+ },
+ {
+  "n": 122,
+  "kohta": "maa:BIH",
+  "kasite": "Maglić",
+  "kysymys": "Kerro lisää: Maglić"
+ },
+ {
+  "n": 123,
+  "kohta": "maa:BIH",
+  "kasite": "Venetsian",
+  "kysymys": "Kerro lisää: Venetsian"
+ },
+ {
+  "n": 124,
+  "kohta": "maa:BIH",
+  "kasite": "Kroatian",
+  "kysymys": "Kerro lisää: Kroatian"
+ },
+ {
+  "n": 125,
+  "kohta": "maa:BIH",
+  "kasite": "Stećakit",
+  "kysymys": "Kerro lisää: Stećakit"
+ },
+ {
+  "n": 126,
+  "kohta": "maa:BIH",
+  "kasite": "Bosniassa ja Hertsegovinassa",
+  "kysymys": "Kerro lisää: Bosniassa ja Hertsegovinassa"
+ },
+ {
+  "n": 127,
+  "kohta": "maa:BIH",
+  "kasite": "Montenegrossa",
+  "kysymys": "Kerro lisää: Montenegrossa"
+ },
+ {
+  "n": 128,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Ćevapi",
+  "kysymys": "Kerro lisää: Ćevapi"
+ },
+ {
+  "n": 129,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "somun-leivän",
+  "kysymys": "Kerro lisää: somun-leivän"
+ },
+ {
+  "n": 130,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Baščaršijan",
+  "kysymys": "Kerro lisää: Baščaršijan"
+ },
+ {
+  "n": 131,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Jugoslaviaa",
+  "kysymys": "Kerro lisää: Jugoslaviaa"
+ },
+ {
+  "n": 132,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Jahorinan",
+  "kysymys": "Kerro lisää: Jahorinan"
+ },
+ {
+  "n": 133,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Vučko-susi",
+  "kysymys": "Kerro lisää: Vučko-susi"
+ },
+ {
+  "n": 134,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Sebilj",
+  "kysymys": "Kerro lisää: Sebilj"
+ },
+ {
+  "n": 135,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Sarajevon",
+  "kysymys": "Kerro lisää: Sarajevon"
+ },
+ {
+  "n": 136,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Baščaršija",
+  "kysymys": "Kerro lisää: Baščaršija"
+ },
+ {
+  "n": 137,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "itävaltalais-unkarilaisten",
+  "kysymys": "Kerro lisää: itävaltalais-unkarilaisten"
+ },
+ {
+  "n": 138,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Ferhadija-katu",
+  "kysymys": "Kerro lisää: Ferhadija-katu"
+ },
+ {
+  "n": 139,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "Trebevićin köysirata",
+  "kysymys": "Kerro lisää: Trebevićin köysirata"
+ },
+ {
+  "n": 140,
+  "kohta": "kaupunki:sarajevo",
+  "kasite": "olympiarekirata",
+  "kysymys": "Kerro lisää: olympiarekirata"
+ },
+ {
+  "n": 141,
+  "kohta": "maa:BLR",
+  "kasite": "Belovežin metsä",
+  "kysymys": "Kerro lisää: Belovežin metsä"
+ },
+ {
+  "n": 142,
+  "kohta": "maa:BLR",
+  "kasite": "visentti",
+  "kysymys": "Kerro lisää: visentti"
+ },
+ {
+  "n": 143,
+  "kohta": "maa:BLR",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan"
+ },
+ {
+  "n": 144,
+  "kohta": "maa:BLR",
+  "kasite": "draniki",
+  "kysymys": "Kerro lisää: draniki"
+ },
+ {
+  "n": 145,
+  "kohta": "maa:BLR",
+  "kasite": "Itä-Euroopassa",
+  "kysymys": "Kerro lisää: Itä-Euroopassa"
+ },
+ {
+  "n": 146,
+  "kohta": "maa:BLR",
+  "kasite": "Liettuan suurruhtinaskunta",
+  "kysymys": "Kerro lisää: Liettuan suurruhtinaskunta"
+ },
+ {
+  "n": 147,
+  "kohta": "maa:BLR",
+  "kasite": "Mirin linna",
+  "kysymys": "Kerro lisää: Mirin linna"
+ },
+ {
+  "n": 148,
+  "kohta": "maa:BLR",
+  "kasite": "Njasvižin linna",
+  "kysymys": "Kerro lisää: Njasvižin linna"
+ },
+ {
+  "n": 149,
+  "kohta": "maa:BLR",
+  "kasite": "Narach",
+  "kysymys": "Kerro lisää: Narach"
+ },
+ {
+  "n": 150,
+  "kohta": "maa:BLR",
+  "kasite": "Narachin kansallispuisto",
+  "kysymys": "Kerro lisää: Narachin kansallispuisto"
+ },
+ {
+  "n": 151,
+  "kohta": "maa:BLR",
+  "kasite": "valkovenäjä",
+  "kysymys": "Kerro lisää: valkovenäjä"
+ },
+ {
+  "n": 152,
+  "kohta": "maa:BLR",
+  "kasite": "venäjä",
+  "kysymys": "Kerro lisää: venäjä"
+ },
+ {
+  "n": 153,
+  "kohta": "kaupunki:minsk",
+  "kasite": "Nemihan taistelu",
+  "kysymys": "Kerro lisää: Nemihan taistelu"
+ },
+ {
+  "n": 154,
+  "kohta": "kaupunki:minsk",
+  "kasite": "Svislač",
+  "kysymys": "Kerro lisää: Svislač"
+ },
+ {
+  "n": 155,
+  "kohta": "kaupunki:minsk",
+  "kasite": "Valko-Venäjän",
+  "kysymys": "Kerro lisää: Valko-Venäjän"
+ },
+ {
+  "n": 156,
+  "kohta": "kaupunki:minsk",
+  "kasite": "Yläkaupunki",
+  "kysymys": "Kerro lisää: Yläkaupunki"
+ },
+ {
+  "n": 157,
+  "kohta": "kaupunki:minsk",
+  "kasite": "ratasolmu",
+  "kysymys": "Kerro lisää: ratasolmu"
+ },
+ {
+  "n": 158,
+  "kohta": "kaupunki:minsk",
+  "kasite": "vesijohto",
+  "kysymys": "Kerro lisää: vesijohto"
+ },
+ {
+  "n": 159,
+  "kohta": "kaupunki:minsk",
+  "kasite": "Valko-Venäjä",
+  "kysymys": "Kerro lisää: Valko-Venäjä"
+ },
+ {
+  "n": 160,
+  "kohta": "maa:CHE",
+  "kasite": "kansanäänestys",
+  "kysymys": "Kerro lisää: kansanäänestys"
+ },
+ {
+  "n": 161,
+  "kohta": "maa:CHE",
+  "kasite": "kantoni",
+  "kysymys": "Kerro lisää: kantoni"
+ },
+ {
+  "n": 162,
+  "kohta": "maa:CHE",
+  "kasite": "Gotthardin pohjatunneli",
+  "kysymys": "Kerro lisää: Gotthardin pohjatunneli"
+ },
+ {
+  "n": 163,
+  "kohta": "maa:CHE",
+  "kasite": "Alpit",
+  "kysymys": "Kerro lisää: Alpit"
+ },
+ {
+  "n": 164,
+  "kohta": "maa:CHE",
+  "kasite": "puolueettomuus",
+  "kysymys": "Kerro lisää: puolueettomuus"
+ },
+ {
+  "n": 165,
+  "kohta": "maa:CHE",
+  "kasite": "Sveitsin",
+  "kysymys": "Kerro lisää: Sveitsin"
+ },
+ {
+  "n": 166,
+  "kohta": "maa:CHE",
+  "kasite": "fondue",
+  "kysymys": "Kerro lisää: fondue"
+ },
+ {
+  "n": 167,
+  "kohta": "maa:CHE",
+  "kasite": "raclette",
+  "kysymys": "Kerro lisää: raclette"
+ },
+ {
+  "n": 168,
+  "kohta": "maa:CHE",
+  "kasite": "rösti",
+  "kysymys": "Kerro lisää: rösti"
+ },
+ {
+  "n": 169,
+  "kohta": "maa:CHE",
+  "kasite": "Retoromaani",
+  "kysymys": "Kerro lisää: Retoromaani"
+ },
+ {
+  "n": 170,
+  "kohta": "maa:CHE",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 171,
+  "kohta": "maa:CHE",
+  "kasite": "Graubündenin",
+  "kysymys": "Kerro lisää: Graubündenin"
+ },
+ {
+  "n": 172,
+  "kohta": "kaupunki:bern",
+  "kasite": "Bern",
+  "kysymys": "Kerro lisää: Bern"
+ },
+ {
+  "n": 173,
+  "kohta": "kaupunki:bern",
+  "kasite": "parlamentti",
+  "kysymys": "Kerro lisää: parlamentti"
+ },
+ {
+  "n": 174,
+  "kohta": "kaupunki:bern",
+  "kasite": "liittopalatsi",
+  "kysymys": "Kerro lisää: liittopalatsi"
+ },
+ {
+  "n": 175,
+  "kohta": "kaupunki:bern",
+  "kasite": "Bernin",
+  "kysymys": "Kerro lisää: Bernin"
+ },
+ {
+  "n": 176,
+  "kohta": "kaupunki:bern",
+  "kasite": "Berchtold V",
+  "kysymys": "Kerro lisää: Berchtold V"
+ },
+ {
+  "n": 177,
+  "kohta": "kaupunki:bern",
+  "kasite": "karhu",
+  "kysymys": "Kerro lisää: karhu"
+ },
+ {
+  "n": 178,
+  "kohta": "kaupunki:bern",
+  "kasite": "Albert Einstein",
+  "kysymys": "Kerro lisää: Albert Einstein"
+ },
+ {
+  "n": 179,
+  "kohta": "kaupunki:bern",
+  "kasite": "patenttivirasto",
+  "kysymys": "Kerro lisää: patenttivirasto"
+ },
+ {
+  "n": 180,
+  "kohta": "kaupunki:bern",
+  "kasite": "Olympia-akatemia",
+  "kysymys": "Kerro lisää: Olympia-akatemia"
+ },
+ {
+  "n": 181,
+  "kohta": "kaupunki:bern",
+  "kasite": "Bernin vanhakaupunki",
+  "kysymys": "Kerro lisää: Bernin vanhakaupunki"
+ },
+ {
+  "n": 182,
+  "kohta": "kaupunki:bern",
+  "kasite": "holvikäytäviä",
+  "kysymys": "Kerro lisää: holvikäytäviä"
+ },
+ {
+  "n": 183,
+  "kohta": "kaupunki:bern",
+  "kasite": "Vuoden 1405 suurpalo",
+  "kysymys": "Kerro lisää: Vuoden 1405 suurpalo"
+ },
+ {
+  "n": 184,
+  "kohta": "kaupunki:bern",
+  "kasite": "vanhakaupunki",
+  "kysymys": "Kerro lisää: vanhakaupunki"
+ },
+ {
+  "n": 185,
+  "kohta": "kaupunki:bern",
+  "kasite": "Berner Münster",
+  "kysymys": "Kerro lisää: Berner Münster"
+ },
+ {
+  "n": 186,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Mont Blanc",
+  "kysymys": "Kerro lisää: Mont Blanc"
+ },
+ {
+  "n": 187,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Alpeilla",
+  "kysymys": "Kerro lisää: Alpeilla"
+ },
+ {
+  "n": 188,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 189,
+  "kohta": "kaupunki:alpit",
+  "kasite": "alppilaitumet",
+  "kysymys": "Kerro lisää: alppilaitumet"
+ },
+ {
+  "n": 190,
+  "kohta": "kaupunki:alpit",
+  "kasite": "karjan paluujuhlat",
+  "kysymys": "Kerro lisää: karjan paluujuhlat"
+ },
+ {
+  "n": 191,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Alppitorvi",
+  "kysymys": "Kerro lisää: Alppitorvi"
+ },
+ {
+  "n": 192,
+  "kohta": "kaupunki:alpit",
+  "kasite": "lumivyöryjen hallinta",
+  "kysymys": "Kerro lisää: lumivyöryjen hallinta"
+ },
+ {
+  "n": 193,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Grindelwaldin",
+  "kysymys": "Kerro lisää: Grindelwaldin"
+ },
+ {
+  "n": 194,
+  "kohta": "kaupunki:alpit",
+  "kasite": "jäätikkö",
+  "kysymys": "Kerro lisää: jäätikkö"
+ },
+ {
+  "n": 195,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Fréjus-tunneli",
+  "kysymys": "Kerro lisää: Fréjus-tunneli"
+ },
+ {
+  "n": 196,
+  "kohta": "kaupunki:alpit",
+  "kasite": "Gotthardin pohjatunneli",
+  "kysymys": "Kerro lisää: Gotthardin pohjatunneli"
+ },
+ {
+  "n": 197,
+  "kohta": "maa:CYP",
+  "kasite": "Troodos",
+  "kysymys": "Kerro lisää: Troodos"
+ },
+ {
+  "n": 198,
+  "kohta": "maa:CYP",
+  "kasite": "Kypros",
+  "kysymys": "Kerro lisää: Kypros"
+ },
+ {
+  "n": 199,
+  "kohta": "maa:CYP",
+  "kasite": "kyproksenmuflon",
+  "kysymys": "Kerro lisää: kyproksenmuflon"
+ },
+ {
+  "n": 200,
+  "kohta": "maa:CYP",
+  "kasite": "arkeologia",
+  "kysymys": "Kerro lisää: arkeologia"
+ },
+ {
+  "n": 201,
+  "kohta": "maa:CYP",
+  "kasite": "halloumi",
+  "kysymys": "Kerro lisää: halloumi"
+ },
+ {
+  "n": 202,
+  "kohta": "maa:CYP",
+  "kasite": "meze",
+  "kysymys": "Kerro lisää: meze"
+ },
+ {
+  "n": 203,
+  "kohta": "maa:CYP",
+  "kasite": "kreikkaa",
+  "kysymys": "Kerro lisää: kreikkaa"
+ },
+ {
+  "n": 204,
+  "kohta": "maa:CYP",
+  "kasite": "turkkia",
+  "kysymys": "Kerro lisää: turkkia"
+ },
+ {
+  "n": 205,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Nikosia",
+  "kysymys": "Kerro lisää: Nikosia"
+ },
+ {
+  "n": 206,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "bastioni",
+  "kysymys": "Kerro lisää: bastioni"
+ },
+ {
+  "n": 207,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Union Jack",
+  "kysymys": "Kerro lisää: Union Jack"
+ },
+ {
+  "n": 208,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Osmanien valtakunta",
+  "kysymys": "Kerro lisää: Osmanien valtakunta"
+ },
+ {
+  "n": 209,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Garnet Wolseley",
+  "kysymys": "Kerro lisää: Garnet Wolseley"
+ },
+ {
+  "n": 210,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "puskurivyöhyke",
+  "kysymys": "Kerro lisää: puskurivyöhyke"
+ },
+ {
+  "n": 211,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Yhdistyneiden kansakuntien rauhanturvaajat",
+  "kysymys": "Kerro lisää: Yhdistyneiden kansakuntien rauhanturvaajat"
+ },
+ {
+  "n": 212,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Nikosiassa",
+  "kysymys": "Kerro lisää: Nikosiassa"
+ },
+ {
+  "n": 213,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "arkeologinen museo",
+  "kysymys": "Kerro lisää: arkeologinen museo"
+ },
+ {
+  "n": 214,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Kyproksen",
+  "kysymys": "Kerro lisää: Kyproksen"
+ },
+ {
+  "n": 215,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "Mesaorian tasangon",
+  "kysymys": "Kerro lisää: Mesaorian tasangon"
+ },
+ {
+  "n": 216,
+  "kohta": "kaupunki:nikosia",
+  "kasite": "sataman",
+  "kysymys": "Kerro lisää: sataman"
+ },
+ {
+  "n": 217,
+  "kohta": "maa:CZE",
+  "kasite": "Pravčická brána",
+  "kysymys": "Kerro lisää: Pravčická brána"
+ },
+ {
+  "n": 218,
+  "kohta": "maa:CZE",
+  "kasite": "Böömin",
+  "kysymys": "Kerro lisää: Böömin"
+ },
+ {
+  "n": 219,
+  "kohta": "maa:CZE",
+  "kasite": "Böömistä",
+  "kysymys": "Kerro lisää: Böömistä"
+ },
+ {
+  "n": 220,
+  "kohta": "maa:CZE",
+  "kasite": "Määristä",
+  "kysymys": "Kerro lisää: Määristä"
+ },
+ {
+  "n": 221,
+  "kohta": "maa:CZE",
+  "kasite": "knedlíky",
+  "kysymys": "Kerro lisää: knedlíky"
+ },
+ {
+  "n": 222,
+  "kohta": "maa:CZE",
+  "kasite": "oluesta",
+  "kysymys": "Kerro lisää: oluesta"
+ },
+ {
+  "n": 223,
+  "kohta": "maa:CZE",
+  "kasite": "Saksa",
+  "kysymys": "Kerro lisää: Saksa"
+ },
+ {
+  "n": 224,
+  "kohta": "maa:CZE",
+  "kasite": "Puola",
+  "kysymys": "Kerro lisää: Puola"
+ },
+ {
+  "n": 225,
+  "kohta": "maa:CZE",
+  "kasite": "Slovakia",
+  "kysymys": "Kerro lisää: Slovakia"
+ },
+ {
+  "n": 226,
+  "kohta": "maa:CZE",
+  "kasite": "Itävalta",
+  "kysymys": "Kerro lisää: Itävalta"
+ },
+ {
+  "n": 227,
+  "kohta": "maa:CZE",
+  "kasite": "Euroopan unioniin",
+  "kysymys": "Kerro lisää: Euroopan unioniin"
+ },
+ {
+  "n": 228,
+  "kohta": "maa:CZE",
+  "kasite": "Tšekin koruna",
+  "kysymys": "Kerro lisää: Tšekin koruna"
+ },
+ {
+  "n": 229,
+  "kohta": "maa:CZE",
+  "kasite": "euroon",
+  "kysymys": "Kerro lisää: euroon"
+ },
+ {
+  "n": 230,
+  "kohta": "kaupunki:praha",
+  "kasite": "Prahan tähtitieteellinen kello",
+  "kysymys": "Kerro lisää: Prahan tähtitieteellinen kello"
+ },
+ {
+  "n": 231,
+  "kohta": "kaupunki:praha",
+  "kasite": "Vanhankaupungin tori",
+  "kysymys": "Kerro lisää: Vanhankaupungin tori"
+ },
+ {
+  "n": 232,
+  "kohta": "kaupunki:praha",
+  "kasite": "Kaarlen silta",
+  "kysymys": "Kerro lisää: Kaarlen silta"
+ },
+ {
+  "n": 233,
+  "kohta": "kaupunki:praha",
+  "kasite": "Vltavan",
+  "kysymys": "Kerro lisää: Vltavan"
+ },
+ {
+  "n": 234,
+  "kohta": "kaupunki:praha",
+  "kasite": "Kaarle IV:n",
+  "kysymys": "Kerro lisää: Kaarle IV:n"
+ },
+ {
+  "n": 235,
+  "kohta": "kaupunki:praha",
+  "kasite": "Golem",
+  "kysymys": "Kerro lisää: Golem"
+ },
+ {
+  "n": 236,
+  "kohta": "kaupunki:praha",
+  "kasite": "Praha",
+  "kysymys": "Kerro lisää: Praha"
+ },
+ {
+  "n": 237,
+  "kohta": "kaupunki:praha",
+  "kasite": "Prahan kevät",
+  "kysymys": "Kerro lisää: Prahan kevät"
+ },
+ {
+  "n": 238,
+  "kohta": "kaupunki:praha",
+  "kasite": "Tšekkoslovakiassa",
+  "kysymys": "Kerro lisää: Tšekkoslovakiassa"
+ },
+ {
+  "n": 239,
+  "kohta": "kaupunki:praha",
+  "kasite": "Varsovan liiton",
+  "kysymys": "Kerro lisää: Varsovan liiton"
+ },
+ {
+  "n": 240,
+  "kohta": "kaupunki:praha",
+  "kasite": "Toinen maailmansota",
+  "kysymys": "Kerro lisää: Toinen maailmansota"
+ },
+ {
+  "n": 241,
+  "kohta": "kaupunki:praha",
+  "kasite": "jugendtalo",
+  "kysymys": "Kerro lisää: jugendtalo"
+ },
+ {
+  "n": 242,
+  "kohta": "maa:DEU",
+  "kasite": "Berliinin muuri",
+  "kysymys": "Kerro lisää: Berliinin muuri"
+ },
+ {
+  "n": 243,
+  "kohta": "maa:DEU",
+  "kasite": "Saksan yhdistymiseen",
+  "kysymys": "Kerro lisää: Saksan yhdistymiseen"
+ },
+ {
+  "n": 244,
+  "kohta": "maa:DEU",
+  "kasite": "Leipzigissa",
+  "kysymys": "Kerro lisää: Leipzigissa"
+ },
+ {
+  "n": 245,
+  "kohta": "maa:DEU",
+  "kasite": "Robert Schumann",
+  "kysymys": "Kerro lisää: Robert Schumann"
+ },
+ {
+  "n": 246,
+  "kohta": "maa:DEU",
+  "kasite": "Clara Schumann",
+  "kysymys": "Kerro lisää: Clara Schumann"
+ },
+ {
+  "n": 247,
+  "kohta": "maa:DEU",
+  "kasite": "Grimmin veljekset",
+  "kysymys": "Kerro lisää: Grimmin veljekset"
+ },
+ {
+  "n": 248,
+  "kohta": "maa:DEU",
+  "kasite": "kansansatuja",
+  "kysymys": "Kerro lisää: kansansatuja"
+ },
+ {
+  "n": 249,
+  "kohta": "maa:DEU",
+  "kasite": "pillipiiparin tarina",
+  "kysymys": "Kerro lisää: pillipiiparin tarina"
+ },
+ {
+  "n": 250,
+  "kohta": "maa:DEU",
+  "kasite": "Saksassa",
+  "kysymys": "Kerro lisää: Saksassa"
+ },
+ {
+  "n": 251,
+  "kohta": "maa:DEU",
+  "kasite": "leipälajia",
+  "kysymys": "Kerro lisää: leipälajia"
+ },
+ {
+  "n": 252,
+  "kohta": "maa:DEU",
+  "kasite": "ruisleipää",
+  "kysymys": "Kerro lisää: ruisleipää"
+ },
+ {
+  "n": 253,
+  "kohta": "maa:DEU",
+  "kasite": "Rein",
+  "kysymys": "Kerro lisää: Rein"
+ },
+ {
+  "n": 254,
+  "kohta": "maa:DEU",
+  "kasite": "Alpeilta",
+  "kysymys": "Kerro lisää: Alpeilta"
+ },
+ {
+  "n": 255,
+  "kohta": "kaupunki:berliini",
+  "kasite": "muuri",
+  "kysymys": "Kerro lisää: muuri"
+ },
+ {
+  "n": 256,
+  "kohta": "kaupunki:berliini",
+  "kasite": "Saksan yhdistyminen",
+  "kysymys": "Kerro lisää: Saksan yhdistyminen"
+ },
+ {
+  "n": 257,
+  "kohta": "kaupunki:berliini",
+  "kasite": "Unescon maailmanperintökohde",
+  "kysymys": "Kerro lisää: Unescon maailmanperintökohde"
+ },
+ {
+  "n": 258,
+  "kohta": "kaupunki:berliini",
+  "kasite": "Pergamon-museo",
+  "kysymys": "Kerro lisää: Pergamon-museo"
+ },
+ {
+  "n": 259,
+  "kohta": "kaupunki:berliini",
+  "kasite": "Herta Heuwer",
+  "kysymys": "Kerro lisää: Herta Heuwer"
+ },
+ {
+  "n": 260,
+  "kohta": "kaupunki:berliini",
+  "kasite": "currywurst",
+  "kysymys": "Kerro lisää: currywurst"
+ },
+ {
+  "n": 261,
+  "kohta": "kaupunki:berliini",
+  "kasite": "Brandenburgin portti",
+  "kysymys": "Kerro lisää: Brandenburgin portti"
+ },
+ {
+  "n": 262,
+  "kohta": "kaupunki:berliini",
+  "kasite": "valtiopäivätalo",
+  "kysymys": "Kerro lisää: valtiopäivätalo"
+ },
+ {
+  "n": 263,
+  "kohta": "kaupunki:berliini",
+  "kasite": "teknomusiikin",
+  "kysymys": "Kerro lisää: teknomusiikin"
+ },
+ {
+  "n": 264,
+  "kohta": "kaupunki:berliini",
+  "kasite": "taidekenttä",
+  "kysymys": "Kerro lisää: taidekenttä"
+ },
+ {
+  "n": 265,
+  "kohta": "maa:DNK",
+  "kasite": "riimukiveen",
+  "kysymys": "Kerro lisää: riimukiveen"
+ },
+ {
+  "n": 266,
+  "kohta": "maa:DNK",
+  "kasite": "Harald Sinihammas",
+  "kysymys": "Kerro lisää: Harald Sinihammas"
+ },
+ {
+  "n": 267,
+  "kohta": "maa:DNK",
+  "kasite": "Bluetooth",
+  "kysymys": "Kerro lisää: Bluetooth"
+ },
+ {
+  "n": 268,
+  "kohta": "maa:DNK",
+  "kasite": "Hygge",
+  "kysymys": "Kerro lisää: Hygge"
+ },
+ {
+  "n": 269,
+  "kohta": "maa:DNK",
+  "kasite": "pitkiin pimeisiin talviin",
+  "kysymys": "Kerro lisää: pitkiin pimeisiin talviin"
+ },
+ {
+  "n": 270,
+  "kohta": "maa:DNK",
+  "kasite": "tasa-arvoa",
+  "kysymys": "Kerro lisää: tasa-arvoa"
+ },
+ {
+  "n": 271,
+  "kohta": "maa:DNK",
+  "kasite": "Tanskan kuningaskuntaan",
+  "kysymys": "Kerro lisää: Tanskan kuningaskuntaan"
+ },
+ {
+  "n": 272,
+  "kohta": "maa:DNK",
+  "kasite": "Färsaaret",
+  "kysymys": "Kerro lisää: Färsaaret"
+ },
+ {
+  "n": 273,
+  "kohta": "maa:DNK",
+  "kasite": "Skotlannin",
+  "kysymys": "Kerro lisää: Skotlannin"
+ },
+ {
+  "n": 274,
+  "kohta": "maa:DNK",
+  "kasite": "H. C. Andersen",
+  "kysymys": "Kerro lisää: H. C. Andersen"
+ },
+ {
+  "n": 275,
+  "kohta": "maa:DNK",
+  "kasite": "Kööpenhaminassa",
+  "kysymys": "Kerro lisää: Kööpenhaminassa"
+ },
+ {
+  "n": 276,
+  "kohta": "maa:DNK",
+  "kasite": "Odense",
+  "kysymys": "Kerro lisää: Odense"
+ },
+ {
+  "n": 277,
+  "kohta": "maa:DNK",
+  "kasite": "Billundin",
+  "kysymys": "Kerro lisää: Billundin"
+ },
+ {
+  "n": 278,
+  "kohta": "maa:DNK",
+  "kasite": "LEGO",
+  "kysymys": "Kerro lisää: LEGO"
+ },
+ {
+  "n": 279,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Pyöräily",
+  "kysymys": "Kerro lisää: Pyöräily"
+ },
+ {
+  "n": 280,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "pyöräsilloistaan",
+  "kysymys": "Kerro lisää: pyöräsilloistaan"
+ },
+ {
+  "n": 281,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "H. C. Andersenin",
+  "kysymys": "Kerro lisää: H. C. Andersenin"
+ },
+ {
+  "n": 282,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Pikku merenneito",
+  "kysymys": "Kerro lisää: Pikku merenneito"
+ },
+ {
+  "n": 283,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Christiania",
+  "kysymys": "Kerro lisää: Christiania"
+ },
+ {
+  "n": 284,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Christianshavn",
+  "kysymys": "Kerro lisää: Christianshavn"
+ },
+ {
+  "n": 285,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Tivoli",
+  "kysymys": "Kerro lisää: Tivoli"
+ },
+ {
+  "n": 286,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Georg Carstensen",
+  "kysymys": "Kerro lisää: Georg Carstensen"
+ },
+ {
+  "n": 287,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Smørrebrød",
+  "kysymys": "Kerro lisää: Smørrebrød"
+ },
+ {
+  "n": 288,
+  "kohta": "kaupunki:kobenhavn",
+  "kasite": "Ruisleipä",
+  "kysymys": "Kerro lisää: Ruisleipä"
+ },
+ {
+  "n": 289,
+  "kohta": "maa:ESP",
+  "kasite": "Flamenco",
+  "kysymys": "Kerro lisää: Flamenco"
+ },
+ {
+  "n": 290,
+  "kohta": "maa:ESP",
+  "kasite": "cante",
+  "kysymys": "Kerro lisää: cante"
+ },
+ {
+  "n": 291,
+  "kohta": "maa:ESP",
+  "kasite": "tapaksilla",
+  "kysymys": "Kerro lisää: tapaksilla"
+ },
+ {
+  "n": 292,
+  "kohta": "maa:ESP",
+  "kasite": "illallinen",
+  "kysymys": "Kerro lisää: illallinen"
+ },
+ {
+  "n": 293,
+  "kohta": "maa:ESP",
+  "kasite": "Camino Francés",
+  "kysymys": "Kerro lisää: Camino Francés"
+ },
+ {
+  "n": 294,
+  "kohta": "maa:ESP",
+  "kasite": "Santiago de Compostelan",
+  "kysymys": "Kerro lisää: Santiago de Compostelan"
+ },
+ {
+  "n": 295,
+  "kohta": "maa:ESP",
+  "kasite": "katalaania",
+  "kysymys": "Kerro lisää: katalaania"
+ },
+ {
+  "n": 296,
+  "kohta": "maa:ESP",
+  "kasite": "galegoa",
+  "kysymys": "Kerro lisää: galegoa"
+ },
+ {
+  "n": 297,
+  "kohta": "maa:ESP",
+  "kasite": "baskia",
+  "kysymys": "Kerro lisää: baskia"
+ },
+ {
+  "n": 298,
+  "kohta": "maa:ESP",
+  "kasite": "Teide",
+  "kysymys": "Kerro lisää: Teide"
+ },
+ {
+  "n": 299,
+  "kohta": "maa:ESP",
+  "kasite": "Sierra Nevadassa",
+  "kysymys": "Kerro lisää: Sierra Nevadassa"
+ },
+ {
+  "n": 300,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Velázquezin",
+  "kysymys": "Kerro lisää: Velázquezin"
+ },
+ {
+  "n": 301,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Goyan",
+  "kysymys": "Kerro lisää: Goyan"
+ },
+ {
+  "n": 302,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Prado",
+  "kysymys": "Kerro lisää: Prado"
+ },
+ {
+  "n": 303,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Filip II",
+  "kysymys": "Kerro lisää: Filip II"
+ },
+ {
+  "n": 304,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Plaza Mayor",
+  "kysymys": "Kerro lisää: Plaza Mayor"
+ },
+ {
+  "n": 305,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Karhu ja mansikkapuu",
+  "kysymys": "Kerro lisää: Karhu ja mansikkapuu"
+ },
+ {
+  "n": 306,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Puerta del Solin",
+  "kysymys": "Kerro lisää: Puerta del Solin"
+ },
+ {
+  "n": 307,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Cocido madrileño",
+  "kysymys": "Kerro lisää: Cocido madrileño"
+ },
+ {
+  "n": 308,
+  "kohta": "kaupunki:madrid",
+  "kasite": "madridilaista",
+  "kysymys": "Kerro lisää: madridilaista"
+ },
+ {
+  "n": 309,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Real Madrid",
+  "kysymys": "Kerro lisää: Real Madrid"
+ },
+ {
+  "n": 310,
+  "kohta": "kaupunki:madrid",
+  "kasite": "Atlético Madrid",
+  "kysymys": "Kerro lisää: Atlético Madrid"
+ },
+ {
+  "n": 311,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Ildefons Cerdà",
+  "kysymys": "Kerro lisää: Ildefons Cerdà"
+ },
+ {
+  "n": 312,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Eixample",
+  "kysymys": "Kerro lisää: Eixample"
+ },
+ {
+  "n": 313,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "castellereiksi",
+  "kysymys": "Kerro lisää: castellereiksi"
+ },
+ {
+  "n": 314,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Unescon aineettomaan kulttuuriperintöön",
+  "kysymys": "Kerro lisää: Unescon aineettomaan kulttuuriperintöön"
+ },
+ {
+  "n": 315,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Antoni Gaudí",
+  "kysymys": "Kerro lisää: Antoni Gaudí"
+ },
+ {
+  "n": 316,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Sagrada Família",
+  "kysymys": "Kerro lisää: Sagrada Família"
+ },
+ {
+  "n": 317,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Olympialaiset",
+  "kysymys": "Kerro lisää: Olympialaiset"
+ },
+ {
+  "n": 318,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Montjuïc",
+  "kysymys": "Kerro lisää: Montjuïc"
+ },
+ {
+  "n": 319,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Pa amb tomàquet",
+  "kysymys": "Kerro lisää: Pa amb tomàquet"
+ },
+ {
+  "n": 320,
+  "kohta": "kaupunki:barcelona",
+  "kasite": "Katalonian",
+  "kysymys": "Kerro lisää: Katalonian"
+ },
+ {
+  "n": 321,
+  "kohta": "kaupunki:granada",
+  "kasite": "Alhambraa",
+  "kysymys": "Kerro lisää: Alhambraa"
+ },
+ {
+  "n": 322,
+  "kohta": "kaupunki:granada",
+  "kasite": "Leijonien piha",
+  "kysymys": "Kerro lisää: Leijonien piha"
+ },
+ {
+  "n": 323,
+  "kohta": "kaupunki:granada",
+  "kasite": "Tapas",
+  "kysymys": "Kerro lisää: Tapas"
+ },
+ {
+  "n": 324,
+  "kohta": "kaupunki:granada",
+  "kasite": "Granadassa",
+  "kysymys": "Kerro lisää: Granadassa"
+ },
+ {
+  "n": 325,
+  "kohta": "kaupunki:granada",
+  "kasite": "Zambra",
+  "kysymys": "Kerro lisää: Zambra"
+ },
+ {
+  "n": 326,
+  "kohta": "kaupunki:granada",
+  "kasite": "Sacromonte",
+  "kysymys": "Kerro lisää: Sacromonte"
+ },
+ {
+  "n": 327,
+  "kohta": "kaupunki:granada",
+  "kasite": "Albaicín",
+  "kysymys": "Kerro lisää: Albaicín"
+ },
+ {
+  "n": 328,
+  "kohta": "kaupunki:granada",
+  "kasite": "Mulhacén",
+  "kysymys": "Kerro lisää: Mulhacén"
+ },
+ {
+  "n": 329,
+  "kohta": "kaupunki:granada",
+  "kasite": "Sierra Nevada",
+  "kysymys": "Kerro lisää: Sierra Nevada"
+ },
+ {
+  "n": 330,
+  "kohta": "kaupunki:granada",
+  "kasite": "Boabdil",
+  "kysymys": "Kerro lisää: Boabdil"
+ },
+ {
+  "n": 331,
+  "kohta": "kaupunki:granada",
+  "kasite": "Isabelle ja Ferdinandille",
+  "kysymys": "Kerro lisää: Isabelle ja Ferdinandille"
+ },
+ {
+  "n": 332,
+  "kohta": "kaupunki:granada",
+  "kasite": "Granadan",
+  "kysymys": "Kerro lisää: Granadan"
+ },
+ {
+  "n": 333,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "traje de gitana",
+  "kysymys": "Kerro lisää: traje de gitana"
+ },
+ {
+  "n": 334,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Feria de Abril",
+  "kysymys": "Kerro lisää: Feria de Abril"
+ },
+ {
+  "n": 335,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Giraldillo",
+  "kysymys": "Kerro lisää: Giraldillo"
+ },
+ {
+  "n": 336,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Giralda",
+  "kysymys": "Kerro lisää: Giralda"
+ },
+ {
+  "n": 337,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Sevillan katedraali",
+  "kysymys": "Kerro lisää: Sevillan katedraali"
+ },
+ {
+  "n": 338,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Intian arkisto",
+  "kysymys": "Kerro lisää: Intian arkisto"
+ },
+ {
+  "n": 339,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Alcázarin",
+  "kysymys": "Kerro lisää: Alcázarin"
+ },
+ {
+  "n": 340,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Kitkerät appelsiinit",
+  "kysymys": "Kerro lisää: Kitkerät appelsiinit"
+ },
+ {
+  "n": 341,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Appelsiininkukat",
+  "kysymys": "Kerro lisää: Appelsiininkukat"
+ },
+ {
+  "n": 342,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Tupakkatehdas",
+  "kysymys": "Kerro lisää: Tupakkatehdas"
+ },
+ {
+  "n": 343,
+  "kohta": "kaupunki:sevilla",
+  "kasite": "Carmen",
+  "kysymys": "Kerro lisää: Carmen"
+ },
+ {
+  "n": 344,
+  "kohta": "maa:EST",
+  "kasite": "Kaalin kraatteri",
+  "kysymys": "Kerro lisää: Kaalin kraatteri"
+ },
+ {
+  "n": 345,
+  "kohta": "maa:EST",
+  "kasite": "Saarenmaa",
+  "kysymys": "Kerro lisää: Saarenmaa"
+ },
+ {
+  "n": 346,
+  "kohta": "maa:EST",
+  "kasite": "Skypeä",
+  "kysymys": "Kerro lisää: Skypeä"
+ },
+ {
+  "n": 347,
+  "kohta": "maa:EST",
+  "kasite": "Sähköinen äänestys",
+  "kysymys": "Kerro lisää: Sähköinen äänestys"
+ },
+ {
+  "n": 348,
+  "kohta": "maa:EST",
+  "kasite": "Laulujuhla",
+  "kysymys": "Kerro lisää: Laulujuhla"
+ },
+ {
+  "n": 349,
+  "kohta": "maa:EST",
+  "kasite": "laulava vallankumous",
+  "kysymys": "Kerro lisää: laulava vallankumous"
+ },
+ {
+  "n": 350,
+  "kohta": "maa:EST",
+  "kasite": "Soomaa",
+  "kysymys": "Kerro lisää: Soomaa"
+ },
+ {
+  "n": 351,
+  "kohta": "maa:EST",
+  "kasite": "tulvista",
+  "kysymys": "Kerro lisää: tulvista"
+ },
+ {
+  "n": 352,
+  "kohta": "maa:EST",
+  "kasite": "Viron kieli",
+  "kysymys": "Kerro lisää: Viron kieli"
+ },
+ {
+  "n": 353,
+  "kohta": "maa:EST",
+  "kasite": "karjalalle",
+  "kysymys": "Kerro lisää: karjalalle"
+ },
+ {
+  "n": 354,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Vana Toomas",
+  "kysymys": "Kerro lisää: Vana Toomas"
+ },
+ {
+  "n": 355,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "raatihuoneen",
+  "kysymys": "Kerro lisää: raatihuoneen"
+ },
+ {
+  "n": 356,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "hansakaupunki",
+  "kysymys": "Kerro lisää: hansakaupunki"
+ },
+ {
+  "n": 357,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Hansa",
+  "kysymys": "Kerro lisää: Hansa"
+ },
+ {
+  "n": 358,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Raeapteek",
+  "kysymys": "Kerro lisää: Raeapteek"
+ },
+ {
+  "n": 359,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Raatihuoneentori",
+  "kysymys": "Kerro lisää: Raatihuoneentori"
+ },
+ {
+  "n": 360,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Toompea",
+  "kysymys": "Kerro lisää: Toompea"
+ },
+ {
+  "n": 361,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Viron parlamentti",
+  "kysymys": "Kerro lisää: Viron parlamentti"
+ },
+ {
+  "n": 362,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Lübeck",
+  "kysymys": "Kerro lisää: Lübeck"
+ },
+ {
+  "n": 363,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "Toledo",
+  "kysymys": "Kerro lisää: Toledo"
+ },
+ {
+  "n": 364,
+  "kohta": "kaupunki:tallinna",
+  "kasite": "marsipaani",
+  "kysymys": "Kerro lisää: marsipaani"
+ },
+ {
+  "n": 365,
+  "kohta": "maa:FIN",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 366,
+  "kohta": "maa:FIN",
+  "kasite": "Järvi-Suomi",
+  "kysymys": "Kerro lisää: Järvi-Suomi"
+ },
+ {
+  "n": 367,
+  "kohta": "maa:FIN",
+  "kasite": "Elias Lönnrot",
+  "kysymys": "Kerro lisää: Elias Lönnrot"
+ },
+ {
+  "n": 368,
+  "kohta": "maa:FIN",
+  "kasite": "Karjalassa",
+  "kysymys": "Kerro lisää: Karjalassa"
+ },
+ {
+  "n": 369,
+  "kohta": "maa:FIN",
+  "kasite": "Väinämöisestä",
+  "kysymys": "Kerro lisää: Väinämöisestä"
+ },
+ {
+  "n": 370,
+  "kohta": "maa:FIN",
+  "kasite": "Löylyä",
+  "kysymys": "Kerro lisää: Löylyä"
+ },
+ {
+  "n": 371,
+  "kohta": "maa:FIN",
+  "kasite": "saunakulttuuri",
+  "kysymys": "Kerro lisää: saunakulttuuri"
+ },
+ {
+  "n": 372,
+  "kohta": "maa:FIN",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 373,
+  "kohta": "maa:FIN",
+  "kasite": "Jokamiehenoikeudet",
+  "kysymys": "Kerro lisää: Jokamiehenoikeudet"
+ },
+ {
+  "n": 374,
+  "kohta": "maa:FIN",
+  "kasite": "luonnonmarjoja",
+  "kysymys": "Kerro lisää: luonnonmarjoja"
+ },
+ {
+  "n": 375,
+  "kohta": "maa:FIN",
+  "kasite": "tulenpitoa",
+  "kysymys": "Kerro lisää: tulenpitoa"
+ },
+ {
+  "n": 376,
+  "kohta": "maa:FIN",
+  "kasite": "Ruotsin valtakuntaan",
+  "kysymys": "Kerro lisää: Ruotsin valtakuntaan"
+ },
+ {
+  "n": 377,
+  "kohta": "maa:FIN",
+  "kasite": "Ahvenanmaa",
+  "kysymys": "Kerro lisää: Ahvenanmaa"
+ },
+ {
+  "n": 378,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Augustin Ehrensvärd",
+  "kysymys": "Kerro lisää: Augustin Ehrensvärd"
+ },
+ {
+  "n": 379,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Sveaborg",
+  "kysymys": "Kerro lisää: Sveaborg"
+ },
+ {
+  "n": 380,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Unescon maailmanperintökohde",
+  "kysymys": "Kerro lisää: Unescon maailmanperintökohde"
+ },
+ {
+  "n": 381,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Havis Amanda",
+  "kysymys": "Kerro lisää: Havis Amanda"
+ },
+ {
+  "n": 382,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Silakkamarkkinat",
+  "kysymys": "Kerro lisää: Silakkamarkkinat"
+ },
+ {
+  "n": 383,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Helsingin metro",
+  "kysymys": "Kerro lisää: Helsingin metro"
+ },
+ {
+  "n": 384,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "raitiovaunut",
+  "kysymys": "Kerro lisää: raitiovaunut"
+ },
+ {
+  "n": 385,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Alvar Aalto",
+  "kysymys": "Kerro lisää: Alvar Aalto"
+ },
+ {
+  "n": 386,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Finlandia-talo",
+  "kysymys": "Kerro lisää: Finlandia-talo"
+ },
+ {
+  "n": 387,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "Suomenlahti",
+  "kysymys": "Kerro lisää: Suomenlahti"
+ },
+ {
+  "n": 388,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "jäänmurtajat",
+  "kysymys": "Kerro lisää: jäänmurtajat"
+ },
+ {
+  "n": 389,
+  "kohta": "kaupunki:helsinki",
+  "kasite": "avantouintia",
+  "kysymys": "Kerro lisää: avantouintia"
+ },
+ {
+  "n": 390,
+  "kohta": "kaupunki:tampere",
+  "kasite": "James Finlayson",
+  "kysymys": "Kerro lisää: James Finlayson"
+ },
+ {
+  "n": 391,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Tammerkosken",
+  "kysymys": "Kerro lisää: Tammerkosken"
+ },
+ {
+  "n": 392,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Mustamakkara",
+  "kysymys": "Kerro lisää: Mustamakkara"
+ },
+ {
+  "n": 393,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Tampereen kauppahalli",
+  "kysymys": "Kerro lisää: Tampereen kauppahalli"
+ },
+ {
+  "n": 394,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Näsinneula",
+  "kysymys": "Kerro lisää: Näsinneula"
+ },
+ {
+  "n": 395,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Särkänniemessä",
+  "kysymys": "Kerro lisää: Särkänniemessä"
+ },
+ {
+  "n": 396,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Näsijärvelle",
+  "kysymys": "Kerro lisää: Näsijärvelle"
+ },
+ {
+  "n": 397,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Muumimuseo",
+  "kysymys": "Kerro lisää: Muumimuseo"
+ },
+ {
+  "n": 398,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Muumilaakson",
+  "kysymys": "Kerro lisää: Muumilaakson"
+ },
+ {
+  "n": 399,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Tove Jansson",
+  "kysymys": "Kerro lisää: Tove Jansson"
+ },
+ {
+  "n": 400,
+  "kohta": "kaupunki:tampere",
+  "kasite": "Pyynikinharju",
+  "kysymys": "Kerro lisää: Pyynikinharju"
+ },
+ {
+  "n": 401,
+  "kohta": "kaupunki:tampere",
+  "kasite": "munkki",
+  "kysymys": "Kerro lisää: munkki"
+ },
+ {
+  "n": 402,
+  "kohta": "kaupunki:lappi",
+  "kasite": "Alvar Aalto",
+  "kysymys": "Kerro lisää: Alvar Aalto"
+ },
+ {
+  "n": 403,
+  "kohta": "kaupunki:lappi",
+  "kasite": "poronsarvet",
+  "kysymys": "Kerro lisää: poronsarvet"
+ },
+ {
+  "n": 404,
+  "kohta": "kaupunki:lappi",
+  "kasite": "kaamos",
+  "kysymys": "Kerro lisää: kaamos"
+ },
+ {
+  "n": 405,
+  "kohta": "kaupunki:lappi",
+  "kasite": "revontulet",
+  "kysymys": "Kerro lisää: revontulet"
+ },
+ {
+  "n": 406,
+  "kohta": "kaupunki:lappi",
+  "kasite": "Joulupukin pajakylä",
+  "kysymys": "Kerro lisää: Joulupukin pajakylä"
+ },
+ {
+  "n": 407,
+  "kohta": "kaupunki:lappi",
+  "kasite": "Korvatunturilla",
+  "kysymys": "Kerro lisää: Korvatunturilla"
+ },
+ {
+  "n": 408,
+  "kohta": "kaupunki:lappi",
+  "kasite": "poronkäristys",
+  "kysymys": "Kerro lisää: poronkäristys"
+ },
+ {
+  "n": 409,
+  "kohta": "kaupunki:lappi",
+  "kasite": "leipäjuusto",
+  "kysymys": "Kerro lisää: leipäjuusto"
+ },
+ {
+  "n": 410,
+  "kohta": "kaupunki:lappi",
+  "kasite": "lakka",
+  "kysymys": "Kerro lisää: lakka"
+ },
+ {
+  "n": 411,
+  "kohta": "kaupunki:lappi",
+  "kasite": "Arktikum",
+  "kysymys": "Kerro lisää: Arktikum"
+ },
+ {
+  "n": 412,
+  "kohta": "kaupunki:lappi",
+  "kasite": "saamelaiset",
+  "kysymys": "Kerro lisää: saamelaiset"
+ },
+ {
+  "n": 413,
+  "kohta": "maa:FRA",
+  "kasite": "Bastiljin",
+  "kysymys": "Kerro lisää: Bastiljin"
+ },
+ {
+  "n": 414,
+  "kohta": "maa:FRA",
+  "kasite": "Ihmisoikeuksien ja kansalaisoikeuksien julistus",
+  "kysymys": "Kerro lisää: Ihmisoikeuksien ja kansalaisoikeuksien julistus"
+ },
+ {
+  "n": 415,
+  "kohta": "maa:FRA",
+  "kasite": "Camembert",
+  "kysymys": "Kerro lisää: Camembert"
+ },
+ {
+  "n": 416,
+  "kohta": "maa:FRA",
+  "kasite": "Roquefort",
+  "kysymys": "Kerro lisää: Roquefort"
+ },
+ {
+  "n": 417,
+  "kohta": "maa:FRA",
+  "kasite": "Brie",
+  "kysymys": "Kerro lisää: Brie"
+ },
+ {
+  "n": 418,
+  "kohta": "maa:FRA",
+  "kasite": "Mont Blanc",
+  "kysymys": "Kerro lisää: Mont Blanc"
+ },
+ {
+  "n": 419,
+  "kohta": "maa:FRA",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 420,
+  "kohta": "maa:FRA",
+  "kasite": "Chamonix",
+  "kysymys": "Kerro lisää: Chamonix"
+ },
+ {
+  "n": 421,
+  "kohta": "maa:FRA",
+  "kasite": "Champs-Élysées",
+  "kysymys": "Kerro lisää: Champs-Élysées"
+ },
+ {
+  "n": 422,
+  "kohta": "maa:FRA",
+  "kasite": "keltaista paitaa",
+  "kysymys": "Kerro lisää: keltaista paitaa"
+ },
+ {
+  "n": 423,
+  "kohta": "maa:FRA",
+  "kasite": "L'Auto",
+  "kysymys": "Kerro lisää: L'Auto"
+ },
+ {
+  "n": 424,
+  "kohta": "maa:FRA",
+  "kasite": "Académie française",
+  "kysymys": "Kerro lisää: Académie française"
+ },
+ {
+  "n": 425,
+  "kohta": "maa:FRA",
+  "kasite": "Richelieu",
+  "kysymys": "Kerro lisää: Richelieu"
+ },
+ {
+  "n": 426,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "Île de la Citén",
+  "kysymys": "Kerro lisää: Île de la Citén"
+ },
+ {
+  "n": 427,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "Victor Hugo",
+  "kysymys": "Kerro lisää: Victor Hugo"
+ },
+ {
+  "n": 428,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "maailmannäyttelyn",
+  "kysymys": "Kerro lisää: maailmannäyttelyn"
+ },
+ {
+  "n": 429,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "Gustave Eiffel",
+  "kysymys": "Kerro lisää: Gustave Eiffel"
+ },
+ {
+  "n": 430,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "croissant",
+  "kysymys": "Kerro lisää: croissant"
+ },
+ {
+  "n": 431,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "patonki",
+  "kysymys": "Kerro lisää: patonki"
+ },
+ {
+  "n": 432,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "brioche",
+  "kysymys": "Kerro lisää: brioche"
+ },
+ {
+  "n": 433,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "Hector Guimard",
+  "kysymys": "Kerro lisää: Hector Guimard"
+ },
+ {
+  "n": 434,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "art nouveau",
+  "kysymys": "Kerro lisää: art nouveau"
+ },
+ {
+  "n": 435,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "valistuksen",
+  "kysymys": "Kerro lisää: valistuksen"
+ },
+ {
+  "n": 436,
+  "kohta": "kaupunki:pariisi",
+  "kasite": "kaasuvalaistus",
+  "kysymys": "Kerro lisää: kaasuvalaistus"
+ },
+ {
+  "n": 437,
+  "kohta": "kaupunki:marseille",
+  "kasite": "Massalia",
+  "kysymys": "Kerro lisää: Massalia"
+ },
+ {
+  "n": 438,
+  "kohta": "kaupunki:marseille",
+  "kasite": "Vanhasatama",
+  "kysymys": "Kerro lisää: Vanhasatama"
+ },
+ {
+  "n": 439,
+  "kohta": "kaupunki:marseille",
+  "kasite": "Protis",
+  "kysymys": "Kerro lisää: Protis"
+ },
+ {
+  "n": 440,
+  "kohta": "kaupunki:marseille",
+  "kasite": "sahrami",
+  "kysymys": "Kerro lisää: sahrami"
+ },
+ {
+  "n": 441,
+  "kohta": "kaupunki:marseille",
+  "kasite": "rouille",
+  "kysymys": "Kerro lisää: rouille"
+ },
+ {
+  "n": 442,
+  "kohta": "kaupunki:marseille",
+  "kasite": "oliiviöljystä",
+  "kysymys": "Kerro lisää: oliiviöljystä"
+ },
+ {
+  "n": 443,
+  "kohta": "kaupunki:marseille",
+  "kasite": "Provencen",
+  "kysymys": "Kerro lisää: Provencen"
+ },
+ {
+  "n": 444,
+  "kohta": "kaupunki:marseille",
+  "kasite": "basilika",
+  "kysymys": "Kerro lisää: basilika"
+ },
+ {
+  "n": 445,
+  "kohta": "kaupunki:marseille",
+  "kasite": "Neitsyt Marian",
+  "kysymys": "Kerro lisää: Neitsyt Marian"
+ },
+ {
+  "n": 446,
+  "kohta": "kaupunki:marseille",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 447,
+  "kohta": "kaupunki:marseille",
+  "kasite": "kalkkikiven",
+  "kysymys": "Kerro lisää: kalkkikiven"
+ },
+ {
+  "n": 448,
+  "kohta": "kaupunki:marseille",
+  "kasite": "kansallispuisto",
+  "kysymys": "Kerro lisää: kansallispuisto"
+ },
+ {
+  "n": 449,
+  "kohta": "maa:GBR",
+  "kasite": "Englanti",
+  "kysymys": "Kerro lisää: Englanti"
+ },
+ {
+  "n": 450,
+  "kohta": "maa:GBR",
+  "kasite": "Skotlanti",
+  "kysymys": "Kerro lisää: Skotlanti"
+ },
+ {
+  "n": 451,
+  "kohta": "maa:GBR",
+  "kasite": "Wales",
+  "kysymys": "Kerro lisää: Wales"
+ },
+ {
+  "n": 452,
+  "kohta": "maa:GBR",
+  "kasite": "Pohjois-Irlanti",
+  "kysymys": "Kerro lisää: Pohjois-Irlanti"
+ },
+ {
+  "n": 453,
+  "kohta": "maa:GBR",
+  "kasite": "vasemmanpuoleisen liikenteen",
+  "kysymys": "Kerro lisää: vasemmanpuoleisen liikenteen"
+ },
+ {
+  "n": 454,
+  "kohta": "maa:GBR",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 455,
+  "kohta": "maa:GBR",
+  "kasite": "Iltapäivätee",
+  "kysymys": "Kerro lisää: Iltapäivätee"
+ },
+ {
+  "n": 456,
+  "kohta": "maa:GBR",
+  "kasite": "scones",
+  "kysymys": "Kerro lisää: scones"
+ },
+ {
+  "n": 457,
+  "kohta": "maa:GBR",
+  "kasite": "höyrykone",
+  "kysymys": "Kerro lisää: höyrykone"
+ },
+ {
+  "n": 458,
+  "kohta": "maa:GBR",
+  "kasite": "James Watt",
+  "kysymys": "Kerro lisää: James Watt"
+ },
+ {
+  "n": 459,
+  "kohta": "maa:GBR",
+  "kasite": "Manchester",
+  "kysymys": "Kerro lisää: Manchester"
+ },
+ {
+  "n": 460,
+  "kohta": "maa:GBR",
+  "kasite": "Football Association",
+  "kysymys": "Kerro lisää: Football Association"
+ },
+ {
+  "n": 461,
+  "kohta": "maa:GBR",
+  "kasite": "rugby",
+  "kysymys": "Kerro lisää: rugby"
+ },
+ {
+  "n": 462,
+  "kohta": "maa:GBR",
+  "kasite": "kriketti",
+  "kysymys": "Kerro lisää: kriketti"
+ },
+ {
+  "n": 463,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Pudding Lane",
+  "kysymys": "Kerro lisää: Pudding Lane"
+ },
+ {
+  "n": 464,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Samuel Pepys",
+  "kysymys": "Kerro lisää: Samuel Pepys"
+ },
+ {
+  "n": 465,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Pyhän Paavalin katedraali",
+  "kysymys": "Kerro lisää: Pyhän Paavalin katedraali"
+ },
+ {
+  "n": 466,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Metropolitan Railway",
+  "kysymys": "Kerro lisää: Metropolitan Railway"
+ },
+ {
+  "n": 467,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Tube",
+  "kysymys": "Kerro lisää: Tube"
+ },
+ {
+  "n": 468,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Englannin pankki",
+  "kysymys": "Kerro lisää: Englannin pankki"
+ },
+ {
+  "n": 469,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Westminster",
+  "kysymys": "Kerro lisää: Westminster"
+ },
+ {
+  "n": 470,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Big Ben",
+  "kysymys": "Kerro lisää: Big Ben"
+ },
+ {
+  "n": 471,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "mustien taksien",
+  "kysymys": "Kerro lisää: mustien taksien"
+ },
+ {
+  "n": 472,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "the Knowledge",
+  "kysymys": "Kerro lisää: the Knowledge"
+ },
+ {
+  "n": 473,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Brick Lane",
+  "kysymys": "Kerro lisää: Brick Lane"
+ },
+ {
+  "n": 474,
+  "kohta": "kaupunki:lontoo",
+  "kasite": "Notting Hillin",
+  "kysymys": "Kerro lisää: Notting Hillin"
+ },
+ {
+  "n": 475,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Skotlannin kruununjalokivet",
+  "kysymys": "Kerro lisää: Skotlannin kruununjalokivet"
+ },
+ {
+  "n": 476,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Kohtalonkivi",
+  "kysymys": "Kerro lisää: Kohtalonkivi"
+ },
+ {
+  "n": 477,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Edinburgh Fringe",
+  "kysymys": "Kerro lisää: Edinburgh Fringe"
+ },
+ {
+  "n": 478,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Royal Mile",
+  "kysymys": "Kerro lisää: Royal Mile"
+ },
+ {
+  "n": 479,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Robert Burns",
+  "kysymys": "Kerro lisää: Robert Burns"
+ },
+ {
+  "n": 480,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "haggis",
+  "kysymys": "Kerro lisää: haggis"
+ },
+ {
+  "n": 481,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "whisky",
+  "kysymys": "Kerro lisää: whisky"
+ },
+ {
+  "n": 482,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "James Craig",
+  "kysymys": "Kerro lisää: James Craig"
+ },
+ {
+  "n": 483,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 484,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "David Hume",
+  "kysymys": "Kerro lisää: David Hume"
+ },
+ {
+  "n": 485,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "Adam Smith",
+  "kysymys": "Kerro lisää: Adam Smith"
+ },
+ {
+  "n": 486,
+  "kohta": "kaupunki:edinburgh",
+  "kasite": "James Hutton",
+  "kysymys": "Kerro lisää: James Hutton"
+ },
+ {
+  "n": 487,
+  "kohta": "maa:GRC",
+  "kasite": "Olympos",
+  "kysymys": "Kerro lisää: Olympos"
+ },
+ {
+  "n": 488,
+  "kohta": "maa:GRC",
+  "kasite": "Zeus",
+  "kysymys": "Kerro lisää: Zeus"
+ },
+ {
+  "n": 489,
+  "kohta": "maa:GRC",
+  "kasite": "Litochoron",
+  "kysymys": "Kerro lisää: Litochoron"
+ },
+ {
+  "n": 490,
+  "kohta": "maa:GRC",
+  "kasite": "horiátiki",
+  "kysymys": "Kerro lisää: horiátiki"
+ },
+ {
+  "n": 491,
+  "kohta": "maa:GRC",
+  "kasite": "fetaa",
+  "kysymys": "Kerro lisää: fetaa"
+ },
+ {
+  "n": 492,
+  "kohta": "maa:GRC",
+  "kasite": "Peloponnesoksella",
+  "kysymys": "Kerro lisää: Peloponnesoksella"
+ },
+ {
+  "n": 493,
+  "kohta": "maa:GRC",
+  "kasite": "Navarinon",
+  "kysymys": "Kerro lisää: Navarinon"
+ },
+ {
+  "n": 494,
+  "kohta": "maa:GRC",
+  "kasite": "Otto",
+  "kysymys": "Kerro lisää: Otto"
+ },
+ {
+  "n": 495,
+  "kohta": "maa:GRC",
+  "kasite": "Meteora",
+  "kysymys": "Kerro lisää: Meteora"
+ },
+ {
+  "n": 496,
+  "kohta": "maa:GRC",
+  "kasite": "Thessalian",
+  "kysymys": "Kerro lisää: Thessalian"
+ },
+ {
+  "n": 497,
+  "kohta": "maa:GRC",
+  "kasite": "Pireuksen",
+  "kysymys": "Kerro lisää: Pireuksen"
+ },
+ {
+  "n": 498,
+  "kohta": "maa:GRC",
+  "kasite": "kauppalaivasto",
+  "kysymys": "Kerro lisää: kauppalaivasto"
+ },
+ {
+  "n": 499,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Athenan",
+  "kysymys": "Kerro lisää: Athenan"
+ },
+ {
+  "n": 500,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Akropoliin",
+  "kysymys": "Kerro lisää: Akropoliin"
+ },
+ {
+  "n": 501,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Kleisthenesta",
+  "kysymys": "Kerro lisää: Kleisthenesta"
+ },
+ {
+  "n": 502,
+  "kohta": "kaupunki:ateena",
+  "kasite": "kansankokous",
+  "kysymys": "Kerro lisää: kansankokous"
+ },
+ {
+  "n": 503,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Spyridon Louis",
+  "kysymys": "Kerro lisää: Spyridon Louis"
+ },
+ {
+  "n": 504,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Marathonin",
+  "kysymys": "Kerro lisää: Marathonin"
+ },
+ {
+  "n": 505,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Panathinaikon stadionilla",
+  "kysymys": "Kerro lisää: Panathinaikon stadionilla"
+ },
+ {
+  "n": 506,
+  "kohta": "kaupunki:ateena",
+  "kasite": "souvlakia",
+  "kysymys": "Kerro lisää: souvlakia"
+ },
+ {
+  "n": 507,
+  "kohta": "kaupunki:ateena",
+  "kasite": "gyrosta",
+  "kysymys": "Kerro lisää: gyrosta"
+ },
+ {
+  "n": 508,
+  "kohta": "kaupunki:ateena",
+  "kasite": "koulourin",
+  "kysymys": "Kerro lisää: koulourin"
+ },
+ {
+  "n": 509,
+  "kohta": "kaupunki:ateena",
+  "kasite": "Syntagman",
+  "kysymys": "Kerro lisää: Syntagman"
+ },
+ {
+  "n": 510,
+  "kohta": "kaupunki:ateena",
+  "kasite": "metro",
+  "kysymys": "Kerro lisää: metro"
+ },
+ {
+  "n": 511,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "Arthur Evans",
+  "kysymys": "Kerro lisää: Arthur Evans"
+ },
+ {
+  "n": 512,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "lineaari A",
+  "kysymys": "Kerro lisää: lineaari A"
+ },
+ {
+  "n": 513,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "Minotauroksesta",
+  "kysymys": "Kerro lisää: Minotauroksesta"
+ },
+ {
+  "n": 514,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "Valkoisissa vuorissa",
+  "kysymys": "Kerro lisää: Valkoisissa vuorissa"
+ },
+ {
+  "n": 515,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "kri-kri",
+  "kysymys": "Kerro lisää: kri-kri"
+ },
+ {
+  "n": 516,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "laoutoa",
+  "kysymys": "Kerro lisää: laoutoa"
+ },
+ {
+  "n": 517,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "pentozalista",
+  "kysymys": "Kerro lisää: pentozalista"
+ },
+ {
+  "n": 518,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "mantinadoiksi",
+  "kysymys": "Kerro lisää: mantinadoiksi"
+ },
+ {
+  "n": 519,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "oliiviöljyyn",
+  "kysymys": "Kerro lisää: oliiviöljyyn"
+ },
+ {
+  "n": 520,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "dakos",
+  "kysymys": "Kerro lisää: dakos"
+ },
+ {
+  "n": 521,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "rakia",
+  "kysymys": "Kerro lisää: rakia"
+ },
+ {
+  "n": 522,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "maanjäristyksessä",
+  "kysymys": "Kerro lisää: maanjäristyksessä"
+ },
+ {
+  "n": 523,
+  "kohta": "kaupunki:kreeta",
+  "kasite": "Polyrrhenian",
+  "kysymys": "Kerro lisää: Polyrrhenian"
+ },
+ {
+  "n": 524,
+  "kohta": "maa:HRV",
+  "kasite": "Dinaarien Alppien",
+  "kysymys": "Kerro lisää: Dinaarien Alppien"
+ },
+ {
+  "n": 525,
+  "kohta": "maa:HRV",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 526,
+  "kohta": "maa:HRV",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 527,
+  "kohta": "maa:HRV",
+  "kasite": "Kyrilloksen",
+  "kysymys": "Kerro lisää: Kyrilloksen"
+ },
+ {
+  "n": 528,
+  "kohta": "maa:HRV",
+  "kasite": "Baškan tauluksi",
+  "kysymys": "Kerro lisää: Baškan tauluksi"
+ },
+ {
+  "n": 529,
+  "kohta": "maa:HRV",
+  "kasite": "Dalmatian",
+  "kysymys": "Kerro lisää: Dalmatian"
+ },
+ {
+  "n": 530,
+  "kohta": "maa:HRV",
+  "kasite": "karnevaalin",
+  "kysymys": "Kerro lisää: karnevaalin"
+ },
+ {
+  "n": 531,
+  "kohta": "maa:HRV",
+  "kasite": "kolmikymmenvuotisen sodan",
+  "kysymys": "Kerro lisää: kolmikymmenvuotisen sodan"
+ },
+ {
+  "n": 532,
+  "kohta": "maa:HRV",
+  "kasite": "Ludvig XIV:n",
+  "kysymys": "Kerro lisää: Ludvig XIV:n"
+ },
+ {
+  "n": 533,
+  "kohta": "maa:HRV",
+  "kasite": "travertiinia",
+  "kysymys": "Kerro lisää: travertiinia"
+ },
+ {
+  "n": 534,
+  "kohta": "maa:HRV",
+  "kasite": "Unescon maailmanperintölistalle",
+  "kysymys": "Kerro lisää: Unescon maailmanperintölistalle"
+ },
+ {
+  "n": 535,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Hermann Bollén",
+  "kysymys": "Kerro lisää: Hermann Bollén"
+ },
+ {
+  "n": 536,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Alakaupungin",
+  "kysymys": "Kerro lisää: Alakaupungin"
+ },
+ {
+  "n": 537,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Yläkaupungin",
+  "kysymys": "Kerro lisää: Yläkaupungin"
+ },
+ {
+  "n": 538,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Lotrščak-torni",
+  "kysymys": "Kerro lisää: Lotrščak-torni"
+ },
+ {
+  "n": 539,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Zagorjen",
+  "kysymys": "Kerro lisää: Zagorjen"
+ },
+ {
+  "n": 540,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "tuorejuusto",
+  "kysymys": "Kerro lisää: tuorejuusto"
+ },
+ {
+  "n": 541,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Jelačićin aukion",
+  "kysymys": "Kerro lisää: Jelačićin aukion"
+ },
+ {
+  "n": 542,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Olinka Vištica",
+  "kysymys": "Kerro lisää: Olinka Vištica"
+ },
+ {
+  "n": 543,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Dražen Grubišić",
+  "kysymys": "Kerro lisää: Dražen Grubišić"
+ },
+ {
+  "n": 544,
+  "kohta": "kaupunki:zagreb",
+  "kasite": "Yläkaupungissa",
+  "kysymys": "Kerro lisää: Yläkaupungissa"
+ },
+ {
+  "n": 545,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Minčetan",
+  "kysymys": "Kerro lisää: Minčetan"
+ },
+ {
+  "n": 546,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Lovrijenacin",
+  "kysymys": "Kerro lisää: Lovrijenacin"
+ },
+ {
+  "n": 547,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Ragusan tasavallan",
+  "kysymys": "Kerro lisää: Ragusan tasavallan"
+ },
+ {
+  "n": 548,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 549,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Fransiskaaniluostarin",
+  "kysymys": "Kerro lisää: Fransiskaaniluostarin"
+ },
+ {
+  "n": 550,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "karanteenin",
+  "kysymys": "Kerro lisää: karanteenin"
+ },
+ {
+  "n": 551,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "rozulin",
+  "kysymys": "Kerro lisää: rozulin"
+ },
+ {
+  "n": 552,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Dalmatian",
+  "kysymys": "Kerro lisää: Dalmatian"
+ },
+ {
+  "n": 553,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Risteilyalusten",
+  "kysymys": "Kerro lisää: Risteilyalusten"
+ },
+ {
+  "n": 554,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Stradunin",
+  "kysymys": "Kerro lisää: Stradunin"
+ },
+ {
+  "n": 555,
+  "kohta": "kaupunki:dubrovnik",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 556,
+  "kohta": "maa:HUN",
+  "kasite": "Karpaattien altaan",
+  "kysymys": "Kerro lisää: Karpaattien altaan"
+ },
+ {
+  "n": 557,
+  "kohta": "maa:HUN",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 558,
+  "kohta": "maa:HUN",
+  "kasite": "Hévíz",
+  "kysymys": "Kerro lisää: Hévíz"
+ },
+ {
+  "n": 559,
+  "kohta": "maa:HUN",
+  "kasite": "paprikaa",
+  "kysymys": "Kerro lisää: paprikaa"
+ },
+ {
+  "n": 560,
+  "kohta": "maa:HUN",
+  "kasite": "uralilaisiin kieliin",
+  "kysymys": "Kerro lisää: uralilaisiin kieliin"
+ },
+ {
+  "n": 561,
+  "kohta": "maa:HUN",
+  "kasite": "saame",
+  "kysymys": "Kerro lisää: saame"
+ },
+ {
+  "n": 562,
+  "kohta": "maa:HUN",
+  "kasite": "puszta",
+  "kysymys": "Kerro lisää: puszta"
+ },
+ {
+  "n": 563,
+  "kohta": "maa:HUN",
+  "kasite": "csikós",
+  "kysymys": "Kerro lisää: csikós"
+ },
+ {
+  "n": 564,
+  "kohta": "maa:HUN",
+  "kasite": "Ernő Rubik",
+  "kysymys": "Kerro lisää: Ernő Rubik"
+ },
+ {
+  "n": 565,
+  "kohta": "maa:HUN",
+  "kasite": "Budapestin",
+  "kysymys": "Kerro lisää: Budapestin"
+ },
+ {
+  "n": 566,
+  "kohta": "kaupunki:budapest",
+  "kasite": "István Széchenyiltä",
+  "kysymys": "Kerro lisää: István Széchenyiltä"
+ },
+ {
+  "n": 567,
+  "kohta": "kaupunki:budapest",
+  "kasite": "William Tierney Clark",
+  "kysymys": "Kerro lisää: William Tierney Clark"
+ },
+ {
+  "n": 568,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 569,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Városligetin",
+  "kysymys": "Kerro lisää: Városligetin"
+ },
+ {
+  "n": 570,
+  "kohta": "kaupunki:budapest",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 571,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Andrássy-kadun",
+  "kysymys": "Kerro lisää: Andrássy-kadun"
+ },
+ {
+  "n": 572,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 573,
+  "kohta": "kaupunki:budapest",
+  "kasite": "juutalaiskorttelissa",
+  "kysymys": "Kerro lisää: juutalaiskorttelissa"
+ },
+ {
+  "n": 574,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Szimpla",
+  "kysymys": "Kerro lisää: Szimpla"
+ },
+ {
+  "n": 575,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Imre Steindl",
+  "kysymys": "Kerro lisää: Imre Steindl"
+ },
+ {
+  "n": 576,
+  "kohta": "kaupunki:budapest",
+  "kasite": "Pyhän Tapanin kruunu",
+  "kysymys": "Kerro lisää: Pyhän Tapanin kruunu"
+ },
+ {
+  "n": 577,
+  "kohta": "maa:IRL",
+  "kasite": "Boynen",
+  "kysymys": "Kerro lisää: Boynen"
+ },
+ {
+  "n": 578,
+  "kohta": "maa:IRL",
+  "kasite": "talvipäivänseisauksen",
+  "kysymys": "Kerro lisää: talvipäivänseisauksen"
+ },
+ {
+  "n": 579,
+  "kohta": "maa:IRL",
+  "kasite": "Trinity Collegen",
+  "kysymys": "Kerro lisää: Trinity Collegen"
+ },
+ {
+  "n": 580,
+  "kohta": "maa:IRL",
+  "kasite": "Brian Borun",
+  "kysymys": "Kerro lisää: Brian Borun"
+ },
+ {
+  "n": 581,
+  "kohta": "maa:IRL",
+  "kasite": "Gaeltacht",
+  "kysymys": "Kerro lisää: Gaeltacht"
+ },
+ {
+  "n": 582,
+  "kohta": "maa:IRL",
+  "kasite": "Connemarassa",
+  "kysymys": "Kerro lisää: Connemarassa"
+ },
+ {
+  "n": 583,
+  "kohta": "maa:IRL",
+  "kasite": "lunneja",
+  "kysymys": "Kerro lisää: lunneja"
+ },
+ {
+  "n": 584,
+  "kohta": "maa:IRL",
+  "kasite": "Claren",
+  "kysymys": "Kerro lisää: Claren"
+ },
+ {
+  "n": 585,
+  "kohta": "maa:IRL",
+  "kasite": "apilan",
+  "kysymys": "Kerro lisää: apilan"
+ },
+ {
+  "n": 586,
+  "kohta": "maa:IRL",
+  "kasite": "Armaghin",
+  "kysymys": "Kerro lisää: Armaghin"
+ },
+ {
+  "n": 587,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Trinity Collegen",
+  "kysymys": "Kerro lisää: Trinity Collegen"
+ },
+ {
+  "n": 588,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Long Room",
+  "kysymys": "Kerro lisää: Long Room"
+ },
+ {
+  "n": 589,
+  "kohta": "kaupunki:dublin",
+  "kasite": "James Joycen",
+  "kysymys": "Kerro lisää: James Joycen"
+ },
+ {
+  "n": 590,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Leopold Bloom",
+  "kysymys": "Kerro lisää: Leopold Bloom"
+ },
+ {
+  "n": 591,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Arthur Guinness",
+  "kysymys": "Kerro lisää: Arthur Guinness"
+ },
+ {
+  "n": 592,
+  "kohta": "kaupunki:dublin",
+  "kasite": "St. James's Gate",
+  "kysymys": "Kerro lisää: St. James's Gate"
+ },
+ {
+  "n": 593,
+  "kohta": "kaupunki:dublin",
+  "kasite": "georgiaaniset",
+  "kysymys": "Kerro lisää: georgiaaniset"
+ },
+ {
+  "n": 594,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Merrion Squaren",
+  "kysymys": "Kerro lisää: Merrion Squaren"
+ },
+ {
+  "n": 595,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Dyflinn",
+  "kysymys": "Kerro lisää: Dyflinn"
+ },
+ {
+  "n": 596,
+  "kohta": "kaupunki:dublin",
+  "kasite": "Clontarfin",
+  "kysymys": "Kerro lisää: Clontarfin"
+ },
+ {
+  "n": 597,
+  "kohta": "maa:ISL",
+  "kasite": "Keski-Atlantin harjanteella",
+  "kysymys": "Kerro lisää: Keski-Atlantin harjanteella"
+ },
+ {
+  "n": 598,
+  "kohta": "maa:ISL",
+  "kasite": "mannerlaatat",
+  "kysymys": "Kerro lisää: mannerlaatat"
+ },
+ {
+  "n": 599,
+  "kohta": "maa:ISL",
+  "kasite": "kuumia lähteitä",
+  "kysymys": "Kerro lisää: kuumia lähteitä"
+ },
+ {
+  "n": 600,
+  "kohta": "maa:ISL",
+  "kasite": "pankkia",
+  "kysymys": "Kerro lisää: pankkia"
+ },
+ {
+  "n": 601,
+  "kohta": "maa:ISL",
+  "kasite": "Alþingin",
+  "kysymys": "Kerro lisää: Alþingin"
+ },
+ {
+  "n": 602,
+  "kohta": "maa:ISL",
+  "kasite": "kattilakumous",
+  "kysymys": "Kerro lisää: kattilakumous"
+ },
+ {
+  "n": 603,
+  "kohta": "maa:ISL",
+  "kasite": "troolarit",
+  "kysymys": "Kerro lisää: troolarit"
+ },
+ {
+  "n": 604,
+  "kohta": "maa:ISL",
+  "kasite": "turskasodassa",
+  "kysymys": "Kerro lisää: turskasodassa"
+ },
+ {
+  "n": 605,
+  "kohta": "maa:ISL",
+  "kasite": "rannikkovartioston",
+  "kysymys": "Kerro lisää: rannikkovartioston"
+ },
+ {
+  "n": 606,
+  "kohta": "maa:ISL",
+  "kasite": "ylänköä",
+  "kysymys": "Kerro lisää: ylänköä"
+ },
+ {
+  "n": 607,
+  "kohta": "maa:ISL",
+  "kasite": "jäätiköitä",
+  "kysymys": "Kerro lisää: jäätiköitä"
+ },
+ {
+  "n": 608,
+  "kohta": "maa:ISL",
+  "kasite": "Vatnajökull",
+  "kysymys": "Kerro lisää: Vatnajökull"
+ },
+ {
+  "n": 609,
+  "kohta": "maa:ISL",
+  "kasite": "Alþingi",
+  "kysymys": "Kerro lisää: Alþingi"
+ },
+ {
+  "n": 610,
+  "kohta": "maa:ISL",
+  "kasite": "Reykjavikissa",
+  "kysymys": "Kerro lisää: Reykjavikissa"
+ },
+ {
+  "n": 611,
+  "kohta": "kaupunki:islanti",
+  "kasite": "saagoja",
+  "kysymys": "Kerro lisää: saagoja"
+ },
+ {
+  "n": 612,
+  "kohta": "kaupunki:islanti",
+  "kasite": "kielenhuolto",
+  "kysymys": "Kerro lisää: kielenhuolto"
+ },
+ {
+  "n": 613,
+  "kohta": "kaupunki:islanti",
+  "kasite": "saagoissa",
+  "kysymys": "Kerro lisää: saagoissa"
+ },
+ {
+  "n": 614,
+  "kohta": "kaupunki:islanti",
+  "kasite": "Jólabókaflóð",
+  "kysymys": "Kerro lisää: Jólabókaflóð"
+ },
+ {
+  "n": 615,
+  "kohta": "kaupunki:islanti",
+  "kasite": "geotermisellä energialla",
+  "kysymys": "Kerro lisää: geotermisellä energialla"
+ },
+ {
+  "n": 616,
+  "kohta": "kaupunki:islanti",
+  "kasite": "maanalaisella lämmöllä",
+  "kysymys": "Kerro lisää: maanalaisella lämmöllä"
+ },
+ {
+  "n": 617,
+  "kohta": "kaupunki:islanti",
+  "kasite": "lammas",
+  "kysymys": "Kerro lisää: lammas"
+ },
+ {
+  "n": 618,
+  "kohta": "kaupunki:islanti",
+  "kasite": "skyr",
+  "kysymys": "Kerro lisää: skyr"
+ },
+ {
+  "n": 619,
+  "kohta": "kaupunki:islanti",
+  "kasite": "hákarl",
+  "kysymys": "Kerro lisää: hákarl"
+ },
+ {
+  "n": 620,
+  "kohta": "kaupunki:islanti",
+  "kasite": "tulivuoria",
+  "kysymys": "Kerro lisää: tulivuoria"
+ },
+ {
+  "n": 621,
+  "kohta": "kaupunki:islanti",
+  "kasite": "jäätiköitä",
+  "kysymys": "Kerro lisää: jäätiköitä"
+ },
+ {
+  "n": 622,
+  "kohta": "kaupunki:islanti",
+  "kasite": "Vatnajökull",
+  "kysymys": "Kerro lisää: Vatnajökull"
+ },
+ {
+  "n": 623,
+  "kohta": "maa:ITA",
+  "kasite": "kaupunkivaltioita",
+  "kysymys": "Kerro lisää: kaupunkivaltioita"
+ },
+ {
+  "n": 624,
+  "kohta": "maa:ITA",
+  "kasite": "Giuseppe Garibaldi",
+  "kysymys": "Kerro lisää: Giuseppe Garibaldi"
+ },
+ {
+  "n": 625,
+  "kohta": "maa:ITA",
+  "kasite": "kaupunkivaltioiden",
+  "kysymys": "Kerro lisää: kaupunkivaltioiden"
+ },
+ {
+  "n": 626,
+  "kohta": "maa:ITA",
+  "kasite": "murteet",
+  "kysymys": "Kerro lisää: murteet"
+ },
+ {
+  "n": 627,
+  "kohta": "maa:ITA",
+  "kasite": "Alpeilta",
+  "kysymys": "Kerro lisää: Alpeilta"
+ },
+ {
+  "n": 628,
+  "kohta": "maa:ITA",
+  "kasite": "Po-joen",
+  "kysymys": "Kerro lisää: Po-joen"
+ },
+ {
+  "n": 629,
+  "kohta": "maa:ITA",
+  "kasite": "Apenniinien",
+  "kysymys": "Kerro lisää: Apenniinien"
+ },
+ {
+  "n": 630,
+  "kohta": "maa:ITA",
+  "kasite": "tulivuoret",
+  "kysymys": "Kerro lisää: tulivuoret"
+ },
+ {
+  "n": 631,
+  "kohta": "maa:ITA",
+  "kasite": "risottoa",
+  "kysymys": "Kerro lisää: risottoa"
+ },
+ {
+  "n": 632,
+  "kohta": "maa:ITA",
+  "kasite": "Napolia",
+  "kysymys": "Kerro lisää: Napolia"
+ },
+ {
+  "n": 633,
+  "kohta": "maa:ITA",
+  "kasite": "panettone",
+  "kysymys": "Kerro lisää: panettone"
+ },
+ {
+  "n": 634,
+  "kohta": "maa:ITA",
+  "kasite": "Vatikaani",
+  "kysymys": "Kerro lisää: Vatikaani"
+ },
+ {
+  "n": 635,
+  "kohta": "maa:ITA",
+  "kasite": "San Marino",
+  "kysymys": "Kerro lisää: San Marino"
+ },
+ {
+  "n": 636,
+  "kohta": "maa:ITA",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 637,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "laguuniin",
+  "kysymys": "Kerro lisää: laguuniin"
+ },
+ {
+  "n": 638,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "puupaalujen",
+  "kysymys": "Kerro lisää: puupaalujen"
+ },
+ {
+  "n": 639,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "La Serenissima",
+  "kysymys": "Kerro lisää: La Serenissima"
+ },
+ {
+  "n": 640,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "dogen palatsin",
+  "kysymys": "Kerro lisää: dogen palatsin"
+ },
+ {
+  "n": 641,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "Napoleoniin",
+  "kysymys": "Kerro lisää: Napoleoniin"
+ },
+ {
+  "n": 642,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "acqua alta",
+  "kysymys": "Kerro lisää: acqua alta"
+ },
+ {
+  "n": 643,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "MOSE",
+  "kysymys": "Kerro lisää: MOSE"
+ },
+ {
+  "n": 644,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "Canal Grande",
+  "kysymys": "Kerro lisää: Canal Grande"
+ },
+ {
+  "n": 645,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "vaporetoilla",
+  "kysymys": "Kerro lisää: vaporetoilla"
+ },
+ {
+  "n": 646,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "gondoli",
+  "kysymys": "Kerro lisää: gondoli"
+ },
+ {
+  "n": 647,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "Mestressä",
+  "kysymys": "Kerro lisää: Mestressä"
+ },
+ {
+  "n": 648,
+  "kohta": "kaupunki:venetsia",
+  "kasite": "matkailun",
+  "kysymys": "Kerro lisää: matkailun"
+ },
+ {
+  "n": 649,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Santa Maria del Fiore",
+  "kysymys": "Kerro lisää: Santa Maria del Fiore"
+ },
+ {
+  "n": 650,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Filippo Brunelleschi",
+  "kysymys": "Kerro lisää: Filippo Brunelleschi"
+ },
+ {
+  "n": 651,
+  "kohta": "kaupunki:firenze",
+  "kasite": "villakankaalla",
+  "kysymys": "Kerro lisää: villakankaalla"
+ },
+ {
+  "n": 652,
+  "kohta": "kaupunki:firenze",
+  "kasite": "floriinia",
+  "kysymys": "Kerro lisää: floriinia"
+ },
+ {
+  "n": 653,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Medici",
+  "kysymys": "Kerro lisää: Medici"
+ },
+ {
+  "n": 654,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Donatellosta",
+  "kysymys": "Kerro lisää: Donatellosta"
+ },
+ {
+  "n": 655,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Michelangeloon",
+  "kysymys": "Kerro lisää: Michelangeloon"
+ },
+ {
+  "n": 656,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Jumalainen näytelmä",
+  "kysymys": "Kerro lisää: Jumalainen näytelmä"
+ },
+ {
+  "n": 657,
+  "kohta": "kaupunki:firenze",
+  "kasite": "toscanan",
+  "kysymys": "Kerro lisää: toscanan"
+ },
+ {
+  "n": 658,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Ravennassa",
+  "kysymys": "Kerro lisää: Ravennassa"
+ },
+ {
+  "n": 659,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Ponte Vecchio",
+  "kysymys": "Kerro lisää: Ponte Vecchio"
+ },
+ {
+  "n": 660,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Uffizin",
+  "kysymys": "Kerro lisää: Uffizin"
+ },
+ {
+  "n": 661,
+  "kohta": "kaupunki:firenze",
+  "kasite": "Piazza della Signoria",
+  "kysymys": "Kerro lisää: Piazza della Signoria"
+ },
+ {
+  "n": 662,
+  "kohta": "kaupunki:rooma",
+  "kasite": "Colosseumin",
+  "kysymys": "Kerro lisää: Colosseumin"
+ },
+ {
+  "n": 663,
+  "kohta": "kaupunki:rooma",
+  "kasite": "hypogeum",
+  "kysymys": "Kerro lisää: hypogeum"
+ },
+ {
+  "n": 664,
+  "kohta": "kaupunki:rooma",
+  "kasite": "akveduktia",
+  "kysymys": "Kerro lisää: akveduktia"
+ },
+ {
+  "n": 665,
+  "kohta": "kaupunki:rooma",
+  "kasite": "Acqua Vergine",
+  "kysymys": "Kerro lisää: Acqua Vergine"
+ },
+ {
+  "n": 666,
+  "kohta": "kaupunki:rooma",
+  "kasite": "betoni",
+  "kysymys": "Kerro lisää: betoni"
+ },
+ {
+  "n": 667,
+  "kohta": "kaupunki:rooma",
+  "kasite": "oculus",
+  "kysymys": "Kerro lisää: oculus"
+ },
+ {
+  "n": 668,
+  "kohta": "kaupunki:rooma",
+  "kasite": "Forumilla",
+  "kysymys": "Kerro lisää: Forumilla"
+ },
+ {
+  "n": 669,
+  "kohta": "kaupunki:rooma",
+  "kasite": "paavit",
+  "kysymys": "Kerro lisää: paavit"
+ },
+ {
+  "n": 670,
+  "kohta": "kaupunki:rooma",
+  "kasite": "Pietarinkirkko",
+  "kysymys": "Kerro lisää: Pietarinkirkko"
+ },
+ {
+  "n": 671,
+  "kohta": "kaupunki:rooma",
+  "kasite": "Tiber-joen",
+  "kysymys": "Kerro lisää: Tiber-joen"
+ },
+ {
+  "n": 672,
+  "kohta": "kaupunki:rooma",
+  "kasite": "Palatinuksen",
+  "kysymys": "Kerro lisää: Palatinuksen"
+ },
+ {
+  "n": 673,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Etna",
+  "kysymys": "Kerro lisää: Etna"
+ },
+ {
+  "n": 674,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Catania",
+  "kysymys": "Kerro lisää: Catania"
+ },
+ {
+  "n": 675,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Foinikialaiset",
+  "kysymys": "Kerro lisää: Foinikialaiset"
+ },
+ {
+  "n": 676,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "arabit",
+  "kysymys": "Kerro lisää: arabit"
+ },
+ {
+  "n": 677,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "normannit",
+  "kysymys": "Kerro lisää: normannit"
+ },
+ {
+  "n": 678,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Agrigenton",
+  "kysymys": "Kerro lisää: Agrigenton"
+ },
+ {
+  "n": 679,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Piazza Armerinan",
+  "kysymys": "Kerro lisää: Piazza Armerinan"
+ },
+ {
+  "n": 680,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Syrakusa",
+  "kysymys": "Kerro lisää: Syrakusa"
+ },
+ {
+  "n": 681,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Calabria",
+  "kysymys": "Kerro lisää: Calabria"
+ },
+ {
+  "n": 682,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "Messina",
+  "kysymys": "Kerro lisää: Messina"
+ },
+ {
+  "n": 683,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "sitrushedelmät",
+  "kysymys": "Kerro lisää: sitrushedelmät"
+ },
+ {
+  "n": 684,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "cannolo",
+  "kysymys": "Kerro lisää: cannolo"
+ },
+ {
+  "n": 685,
+  "kohta": "kaupunki:sisilia",
+  "kasite": "arancini",
+  "kysymys": "Kerro lisää: arancini"
+ },
+ {
+  "n": 686,
+  "kohta": "maa:LIE",
+  "kasite": "ruhtinaalla",
+  "kysymys": "Kerro lisää: ruhtinaalla"
+ },
+ {
+  "n": 687,
+  "kohta": "maa:LIE",
+  "kasite": "Hans-Adam II",
+  "kysymys": "Kerro lisää: Hans-Adam II"
+ },
+ {
+  "n": 688,
+  "kohta": "maa:LIE",
+  "kasite": "Landtag",
+  "kysymys": "Kerro lisää: Landtag"
+ },
+ {
+  "n": 689,
+  "kohta": "maa:LIE",
+  "kasite": "Kunstmuseum Liechtenstein",
+  "kysymys": "Kerro lisää: Kunstmuseum Liechtenstein"
+ },
+ {
+  "n": 690,
+  "kohta": "maa:LIE",
+  "kasite": "mustaa basalttia",
+  "kysymys": "Kerro lisää: mustaa basalttia"
+ },
+ {
+  "n": 691,
+  "kohta": "maa:LIE",
+  "kasite": "Hilti Art Foundation",
+  "kysymys": "Kerro lisää: Hilti Art Foundation"
+ },
+ {
+  "n": 692,
+  "kohta": "maa:LIE",
+  "kasite": "Sveitsin",
+  "kysymys": "Kerro lisää: Sveitsin"
+ },
+ {
+  "n": 693,
+  "kohta": "maa:LIE",
+  "kasite": "Itävallan",
+  "kysymys": "Kerro lisää: Itävallan"
+ },
+ {
+  "n": 694,
+  "kohta": "maa:LIE",
+  "kasite": "Vaduz",
+  "kysymys": "Kerro lisää: Vaduz"
+ },
+ {
+  "n": 695,
+  "kohta": "maa:LIE",
+  "kasite": "Liechtensteinin suku",
+  "kysymys": "Kerro lisää: Liechtensteinin suku"
+ },
+ {
+  "n": 696,
+  "kohta": "maa:LIE",
+  "kasite": "Kaarle VI",
+  "kysymys": "Kerro lisää: Kaarle VI"
+ },
+ {
+  "n": 697,
+  "kohta": "maa:LIE",
+  "kasite": "Sveitsin frangilla",
+  "kysymys": "Kerro lisää: Sveitsin frangilla"
+ },
+ {
+  "n": 698,
+  "kohta": "maa:LIE",
+  "kasite": "tulliliitossa",
+  "kysymys": "Kerro lisää: tulliliitossa"
+ },
+ {
+  "n": 699,
+  "kohta": "maa:LIE",
+  "kasite": "Euroopan talousalueeseen",
+  "kysymys": "Kerro lisää: Euroopan talousalueeseen"
+ },
+ {
+  "n": 700,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Werdenbergin kreivikunnan",
+  "kysymys": "Kerro lisää: Werdenbergin kreivikunnan"
+ },
+ {
+  "n": 701,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Liechtensteinin suku",
+  "kysymys": "Kerro lisää: Liechtensteinin suku"
+ },
+ {
+  "n": 702,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Švaabin sodan",
+  "kysymys": "Kerro lisää: Švaabin sodan"
+ },
+ {
+  "n": 703,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Reinin",
+  "kysymys": "Kerro lisää: Reinin"
+ },
+ {
+  "n": 704,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 705,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "rautatie",
+  "kysymys": "Kerro lisää: rautatie"
+ },
+ {
+  "n": 706,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Schaanin",
+  "kysymys": "Kerro lisää: Schaanin"
+ },
+ {
+  "n": 707,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Wienissä",
+  "kysymys": "Kerro lisää: Wienissä"
+ },
+ {
+  "n": 708,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Schaan",
+  "kysymys": "Kerro lisää: Schaan"
+ },
+ {
+  "n": 709,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Liechtenstein",
+  "kysymys": "Kerro lisää: Liechtenstein"
+ },
+ {
+  "n": 710,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "ruhtinaskunnan",
+  "kysymys": "Kerro lisää: ruhtinaskunnan"
+ },
+ {
+  "n": 711,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Kunstmuseum Liechtenstein",
+  "kysymys": "Kerro lisää: Kunstmuseum Liechtenstein"
+ },
+ {
+  "n": 712,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Hilti Art Foundation",
+  "kysymys": "Kerro lisää: Hilti Art Foundation"
+ },
+ {
+  "n": 713,
+  "kohta": "kaupunki:vaduz",
+  "kasite": "Landesmuseum",
+  "kysymys": "Kerro lisää: Landesmuseum"
+ },
+ {
+  "n": 714,
+  "kohta": "maa:LTU",
+  "kasite": "Šiauliain",
+  "kysymys": "Kerro lisää: Šiauliain"
+ },
+ {
+  "n": 715,
+  "kohta": "maa:LTU",
+  "kasite": "Ristien mäelle",
+  "kysymys": "Kerro lisää: Ristien mäelle"
+ },
+ {
+  "n": 716,
+  "kohta": "maa:LTU",
+  "kasite": "Johannes Paavali II",
+  "kysymys": "Kerro lisää: Johannes Paavali II"
+ },
+ {
+  "n": 717,
+  "kohta": "maa:LTU",
+  "kasite": "Mustallemerelle",
+  "kysymys": "Kerro lisää: Mustallemerelle"
+ },
+ {
+  "n": 718,
+  "kohta": "maa:LTU",
+  "kasite": "kristinusko",
+  "kysymys": "Kerro lisää: kristinusko"
+ },
+ {
+  "n": 719,
+  "kohta": "maa:LTU",
+  "kasite": "suuriruhtinaskunnan",
+  "kysymys": "Kerro lisää: suuriruhtinaskunnan"
+ },
+ {
+  "n": 720,
+  "kohta": "maa:LTU",
+  "kasite": "Kuurinkynnäs",
+  "kysymys": "Kerro lisää: Kuurinkynnäs"
+ },
+ {
+  "n": 721,
+  "kohta": "maa:LTU",
+  "kasite": "Kuurinlahden",
+  "kysymys": "Kerro lisää: Kuurinlahden"
+ },
+ {
+  "n": 722,
+  "kohta": "maa:LTU",
+  "kasite": "Nida",
+  "kysymys": "Kerro lisää: Nida"
+ },
+ {
+  "n": 723,
+  "kohta": "maa:LTU",
+  "kasite": "indoeurooppalaisista kielistä",
+  "kysymys": "Kerro lisää: indoeurooppalaisista kielistä"
+ },
+ {
+  "n": 724,
+  "kohta": "maa:LTU",
+  "kasite": "latvia",
+  "kysymys": "Kerro lisää: latvia"
+ },
+ {
+  "n": 725,
+  "kohta": "maa:LTU",
+  "kasite": "baltin kieliin",
+  "kysymys": "Kerro lisää: baltin kieliin"
+ },
+ {
+  "n": 726,
+  "kohta": "maa:LTU",
+  "kasite": "Trakain",
+  "kysymys": "Kerro lisää: Trakain"
+ },
+ {
+  "n": 727,
+  "kohta": "maa:LTU",
+  "kasite": "Galvė-järven",
+  "kysymys": "Kerro lisää: Galvė-järven"
+ },
+ {
+  "n": 728,
+  "kohta": "maa:LTU",
+  "kasite": "Vilnan",
+  "kysymys": "Kerro lisää: Vilnan"
+ },
+ {
+  "n": 729,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Itä-Preussissa",
+  "kysymys": "Kerro lisää: Itä-Preussissa"
+ },
+ {
+  "n": 730,
+  "kohta": "kaupunki:vilna",
+  "kasite": "kirjansalakuljettajiksi",
+  "kysymys": "Kerro lisää: kirjansalakuljettajiksi"
+ },
+ {
+  "n": 731,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Venäjän keisarikunnan",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnan"
+ },
+ {
+  "n": 732,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Vilnia-joen",
+  "kysymys": "Kerro lisää: Vilnia-joen"
+ },
+ {
+  "n": 733,
+  "kohta": "kaupunki:vilna",
+  "kasite": "enkelipatsas",
+  "kysymys": "Kerro lisää: enkelipatsas"
+ },
+ {
+  "n": 734,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Vilnan vanhankaupungin",
+  "kysymys": "Kerro lisää: Vilnan vanhankaupungin"
+ },
+ {
+  "n": 735,
+  "kohta": "kaupunki:vilna",
+  "kasite": "cepelinai",
+  "kysymys": "Kerro lisää: cepelinai"
+ },
+ {
+  "n": 736,
+  "kohta": "kaupunki:vilna",
+  "kasite": "šaltibarščiai",
+  "kysymys": "Kerro lisää: šaltibarščiai"
+ },
+ {
+  "n": 737,
+  "kohta": "kaupunki:vilna",
+  "kasite": "kibinai",
+  "kysymys": "Kerro lisää: kibinai"
+ },
+ {
+  "n": 738,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Vilnan Gaon",
+  "kysymys": "Kerro lisää: Vilnan Gaon"
+ },
+ {
+  "n": 739,
+  "kohta": "kaupunki:vilna",
+  "kasite": "YIVO",
+  "kysymys": "Kerro lisää: YIVO"
+ },
+ {
+  "n": 740,
+  "kohta": "kaupunki:vilna",
+  "kasite": "jiddišin",
+  "kysymys": "Kerro lisää: jiddišin"
+ },
+ {
+  "n": 741,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Neris-joen",
+  "kysymys": "Kerro lisää: Neris-joen"
+ },
+ {
+  "n": 742,
+  "kohta": "kaupunki:vilna",
+  "kasite": "rautaisen suden",
+  "kysymys": "Kerro lisää: rautaisen suden"
+ },
+ {
+  "n": 743,
+  "kohta": "kaupunki:vilna",
+  "kasite": "Gediminaksen",
+  "kysymys": "Kerro lisää: Gediminaksen"
+ },
+ {
+  "n": 744,
+  "kohta": "maa:LUX",
+  "kasite": "Lontoon sopimus",
+  "kysymys": "Kerro lisää: Lontoon sopimus"
+ },
+ {
+  "n": 745,
+  "kohta": "maa:LUX",
+  "kasite": "Bockin kasemaatit",
+  "kysymys": "Kerro lisää: Bockin kasemaatit"
+ },
+ {
+  "n": 746,
+  "kohta": "maa:LUX",
+  "kasite": "Unescon maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: Unescon maailmanperintöluetteloon"
+ },
+ {
+  "n": 747,
+  "kohta": "maa:LUX",
+  "kasite": "luxemburgin kieli",
+  "kysymys": "Kerro lisää: luxemburgin kieli"
+ },
+ {
+  "n": 748,
+  "kohta": "maa:LUX",
+  "kasite": "Moselin",
+  "kysymys": "Kerro lisää: Moselin"
+ },
+ {
+  "n": 749,
+  "kohta": "maa:LUX",
+  "kasite": "minette-malmia",
+  "kysymys": "Kerro lisää: minette-malmia"
+ },
+ {
+  "n": 750,
+  "kohta": "maa:LUX",
+  "kasite": "Esch-sur-Alzetten",
+  "kysymys": "Kerro lisää: Esch-sur-Alzetten"
+ },
+ {
+  "n": 751,
+  "kohta": "maa:LUX",
+  "kasite": "Belvalin",
+  "kysymys": "Kerro lisää: Belvalin"
+ },
+ {
+  "n": 752,
+  "kohta": "maa:LUX",
+  "kasite": "Benelux-maat",
+  "kysymys": "Kerro lisää: Benelux-maat"
+ },
+ {
+  "n": 753,
+  "kohta": "maa:LUX",
+  "kasite": "Schengen-alueeksi",
+  "kysymys": "Kerro lisää: Schengen-alueeksi"
+ },
+ {
+  "n": 754,
+  "kohta": "maa:LUX",
+  "kasite": "hiekkakivi",
+  "kysymys": "Kerro lisää: hiekkakivi"
+ },
+ {
+  "n": 755,
+  "kohta": "maa:LUX",
+  "kasite": "Mullerthal Trail",
+  "kysymys": "Kerro lisää: Mullerthal Trail"
+ },
+ {
+  "n": 756,
+  "kohta": "maa:LUX",
+  "kasite": "Echternachin hyppelykulkue",
+  "kysymys": "Kerro lisää: Echternachin hyppelykulkue"
+ },
+ {
+  "n": 757,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "kreivi Siegfried",
+  "kysymys": "Kerro lisää: kreivi Siegfried"
+ },
+ {
+  "n": 758,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Lontoon sopimus",
+  "kysymys": "Kerro lisää: Lontoon sopimus"
+ },
+ {
+  "n": 759,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Alzette-joki",
+  "kysymys": "Kerro lisää: Alzette-joki"
+ },
+ {
+  "n": 760,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Pétrussen",
+  "kysymys": "Kerro lisää: Pétrussen"
+ },
+ {
+  "n": 761,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "suurherttua Adolphen",
+  "kysymys": "Kerro lisää: suurherttua Adolphen"
+ },
+ {
+  "n": 762,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Judd mat Gaardebounen",
+  "kysymys": "Kerro lisää: Judd mat Gaardebounen"
+ },
+ {
+  "n": 763,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Bouneschlupp",
+  "kysymys": "Kerro lisää: Bouneschlupp"
+ },
+ {
+  "n": 764,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Quetschentaart",
+  "kysymys": "Kerro lisää: Quetschentaart"
+ },
+ {
+  "n": 765,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Euroopan unionin tuomioistuin",
+  "kysymys": "Kerro lisää: Euroopan unionin tuomioistuin"
+ },
+ {
+  "n": 766,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Euroopan investointipankki",
+  "kysymys": "Kerro lisää: Euroopan investointipankki"
+ },
+ {
+  "n": 767,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Neumünsterin luostari",
+  "kysymys": "Kerro lisää: Neumünsterin luostari"
+ },
+ {
+  "n": 768,
+  "kohta": "kaupunki:luxemburg",
+  "kasite": "Pfaffenthalin",
+  "kysymys": "Kerro lisää: Pfaffenthalin"
+ },
+ {
+  "n": 769,
+  "kohta": "maa:LVA",
+  "kasite": "Ventas rumba",
+  "kysymys": "Kerro lisää: Ventas rumba"
+ },
+ {
+  "n": 770,
+  "kohta": "maa:LVA",
+  "kasite": "Unescon maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: Unescon maailmanperintöluetteloon"
+ },
+ {
+  "n": 771,
+  "kohta": "maa:LVA",
+  "kasite": "Mežaparksin",
+  "kysymys": "Kerro lisää: Mežaparksin"
+ },
+ {
+  "n": 772,
+  "kohta": "maa:LVA",
+  "kasite": "laulavassa vallankumouksessa",
+  "kysymys": "Kerro lisää: laulavassa vallankumouksessa"
+ },
+ {
+  "n": 773,
+  "kohta": "maa:LVA",
+  "kasite": "Unescon aineettomaan kulttuuriperintöön",
+  "kysymys": "Kerro lisää: Unescon aineettomaan kulttuuriperintöön"
+ },
+ {
+  "n": 774,
+  "kohta": "maa:LVA",
+  "kasite": "Latgalen",
+  "kysymys": "Kerro lisää: Latgalen"
+ },
+ {
+  "n": 775,
+  "kohta": "maa:LVA",
+  "kasite": "balttilaiset kielet",
+  "kysymys": "Kerro lisää: balttilaiset kielet"
+ },
+ {
+  "n": 776,
+  "kohta": "maa:LVA",
+  "kasite": "Daugavpils",
+  "kysymys": "Kerro lisää: Daugavpils"
+ },
+ {
+  "n": 777,
+  "kohta": "maa:LVA",
+  "kasite": "mustahaikara",
+  "kysymys": "Kerro lisää: mustahaikara"
+ },
+ {
+  "n": 778,
+  "kohta": "maa:LVA",
+  "kasite": "Gaujan kansallispuisto",
+  "kysymys": "Kerro lisää: Gaujan kansallispuisto"
+ },
+ {
+  "n": 779,
+  "kohta": "maa:LVA",
+  "kasite": "Līgo-lauluja",
+  "kysymys": "Kerro lisää: Līgo-lauluja"
+ },
+ {
+  "n": 780,
+  "kohta": "maa:LVA",
+  "kasite": "Jāņu siers",
+  "kysymys": "Kerro lisää: Jāņu siers"
+ },
+ {
+  "n": 781,
+  "kohta": "kaupunki:riika",
+  "kasite": "Mihails Eizenšteins",
+  "kysymys": "Kerro lisää: Mihails Eizenšteins"
+ },
+ {
+  "n": 782,
+  "kohta": "kaupunki:riika",
+  "kasite": "Alberta ielalla",
+  "kysymys": "Kerro lisää: Alberta ielalla"
+ },
+ {
+  "n": 783,
+  "kohta": "kaupunki:riika",
+  "kasite": "Mustapäiden veljeskunta",
+  "kysymys": "Kerro lisää: Mustapäiden veljeskunta"
+ },
+ {
+  "n": 784,
+  "kohta": "kaupunki:riika",
+  "kasite": "Hansaliiton",
+  "kysymys": "Kerro lisää: Hansaliiton"
+ },
+ {
+  "n": 785,
+  "kohta": "kaupunki:riika",
+  "kasite": "Raatihuoneentorin",
+  "kysymys": "Kerro lisää: Raatihuoneentorin"
+ },
+ {
+  "n": 786,
+  "kohta": "kaupunki:riika",
+  "kasite": "ilmalaivahalleja",
+  "kysymys": "Kerro lisää: ilmalaivahalleja"
+ },
+ {
+  "n": 787,
+  "kohta": "kaupunki:riika",
+  "kasite": "savustettu kala",
+  "kysymys": "Kerro lisää: savustettu kala"
+ },
+ {
+  "n": 788,
+  "kohta": "kaupunki:riika",
+  "kasite": "ruisleipä",
+  "kysymys": "Kerro lisää: ruisleipä"
+ },
+ {
+  "n": 789,
+  "kohta": "kaupunki:riika",
+  "kasite": "Latvian vapaussotaan",
+  "kysymys": "Kerro lisää: Latvian vapaussotaan"
+ },
+ {
+  "n": 790,
+  "kohta": "kaupunki:riika",
+  "kasite": "Milda",
+  "kysymys": "Kerro lisää: Milda"
+ },
+ {
+  "n": 791,
+  "kohta": "kaupunki:riika",
+  "kasite": "Vanhankaupungin",
+  "kysymys": "Kerro lisää: Vanhankaupungin"
+ },
+ {
+  "n": 792,
+  "kohta": "kaupunki:riika",
+  "kasite": "Abraham Kunze",
+  "kysymys": "Kerro lisää: Abraham Kunze"
+ },
+ {
+  "n": 793,
+  "kohta": "kaupunki:riika",
+  "kasite": "Katariina Suuren",
+  "kysymys": "Kerro lisää: Katariina Suuren"
+ },
+ {
+  "n": 794,
+  "kohta": "maa:MCO",
+  "kasite": "Port Hercule",
+  "kysymys": "Kerro lisää: Port Hercule"
+ },
+ {
+  "n": 795,
+  "kohta": "maa:MCO",
+  "kasite": "Monte Carlon kasinon",
+  "kysymys": "Kerro lisää: Monte Carlon kasinon"
+ },
+ {
+  "n": 796,
+  "kohta": "maa:MCO",
+  "kasite": "Formula 1 -sarjaan",
+  "kysymys": "Kerro lisää: Formula 1 -sarjaan"
+ },
+ {
+  "n": 797,
+  "kohta": "maa:MCO",
+  "kasite": "François Grimaldi",
+  "kysymys": "Kerro lisää: François Grimaldi"
+ },
+ {
+  "n": 798,
+  "kohta": "maa:MCO",
+  "kasite": "vaakunan munkit",
+  "kysymys": "Kerro lisää: vaakunan munkit"
+ },
+ {
+  "n": 799,
+  "kohta": "maa:MCO",
+  "kasite": "Genova",
+  "kysymys": "Kerro lisää: Genova"
+ },
+ {
+  "n": 800,
+  "kohta": "maa:MCO",
+  "kasite": "Albert I",
+  "kysymys": "Kerro lisää: Albert I"
+ },
+ {
+  "n": 801,
+  "kohta": "maa:MCO",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 802,
+  "kohta": "maa:MCO",
+  "kasite": "Jacques Cousteau",
+  "kysymys": "Kerro lisää: Jacques Cousteau"
+ },
+ {
+  "n": 803,
+  "kohta": "maa:MCO",
+  "kasite": "monégasque",
+  "kysymys": "Kerro lisää: monégasque"
+ },
+ {
+  "n": 804,
+  "kohta": "maa:MCO",
+  "kasite": "Ligurian",
+  "kysymys": "Kerro lisää: Ligurian"
+ },
+ {
+  "n": 805,
+  "kohta": "maa:MCO",
+  "kasite": "Charles III",
+  "kysymys": "Kerro lisää: Charles III"
+ },
+ {
+  "n": 806,
+  "kohta": "maa:MCO",
+  "kasite": "Ranskan",
+  "kysymys": "Kerro lisää: Ranskan"
+ },
+ {
+  "n": 807,
+  "kohta": "maa:MCO",
+  "kasite": "Monte Carlon kasino",
+  "kysymys": "Kerro lisää: Monte Carlon kasino"
+ },
+ {
+  "n": 808,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Charles Garnier",
+  "kysymys": "Kerro lisää: Charles Garnier"
+ },
+ {
+  "n": 809,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Pariisin oopperatalosta",
+  "kysymys": "Kerro lisää: Pariisin oopperatalosta"
+ },
+ {
+  "n": 810,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Monte Carlon ooppera",
+  "kysymys": "Kerro lisää: Monte Carlon ooppera"
+ },
+ {
+  "n": 811,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Rainier III",
+  "kysymys": "Kerro lisää: Rainier III"
+ },
+ {
+  "n": 812,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Louis Bréan",
+  "kysymys": "Kerro lisää: Louis Bréan"
+ },
+ {
+  "n": 813,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Monacon kallion",
+  "kysymys": "Kerro lisää: Monacon kallion"
+ },
+ {
+  "n": 814,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 815,
+  "kohta": "kaupunki:monaco",
+  "kasite": "MM-rallin",
+  "kysymys": "Kerro lisää: MM-rallin"
+ },
+ {
+  "n": 816,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Fontvieillen",
+  "kysymys": "Kerro lisää: Fontvieillen"
+ },
+ {
+  "n": 817,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Monte Carlon",
+  "kysymys": "Kerro lisää: Monte Carlon"
+ },
+ {
+  "n": 818,
+  "kohta": "kaupunki:monaco",
+  "kasite": "Pyhän Nikolauksen katedraalin",
+  "kysymys": "Kerro lisää: Pyhän Nikolauksen katedraalin"
+ },
+ {
+  "n": 819,
+  "kohta": "kaupunki:monaco",
+  "kasite": "ruhtinaspalatsin",
+  "kysymys": "Kerro lisää: ruhtinaspalatsin"
+ },
+ {
+  "n": 820,
+  "kohta": "maa:MDA",
+  "kasite": "kalkkikivilouhoksiin",
+  "kysymys": "Kerro lisää: kalkkikivilouhoksiin"
+ },
+ {
+  "n": 821,
+  "kohta": "maa:MDA",
+  "kasite": "Moldovan viinintuotannon",
+  "kysymys": "Kerro lisää: Moldovan viinintuotannon"
+ },
+ {
+  "n": 822,
+  "kohta": "maa:MDA",
+  "kasite": "Chișinăun",
+  "kysymys": "Kerro lisää: Chișinăun"
+ },
+ {
+  "n": 823,
+  "kohta": "maa:MDA",
+  "kasite": "maissijauhosta",
+  "kysymys": "Kerro lisää: maissijauhosta"
+ },
+ {
+  "n": 824,
+  "kohta": "maa:MDA",
+  "kasite": "brynza",
+  "kysymys": "Kerro lisää: brynza"
+ },
+ {
+  "n": 825,
+  "kohta": "maa:MDA",
+  "kasite": "smetanalla",
+  "kysymys": "Kerro lisää: smetanalla"
+ },
+ {
+  "n": 826,
+  "kohta": "maa:MDA",
+  "kasite": "Dnestr-joen",
+  "kysymys": "Kerro lisää: Dnestr-joen"
+ },
+ {
+  "n": 827,
+  "kohta": "maa:MDA",
+  "kasite": "Tiraspol",
+  "kysymys": "Kerro lisää: Tiraspol"
+ },
+ {
+  "n": 828,
+  "kohta": "maa:MDA",
+  "kasite": "punavalkoinen nauha",
+  "kysymys": "Kerro lisää: punavalkoinen nauha"
+ },
+ {
+  "n": 829,
+  "kohta": "maa:MDA",
+  "kasite": "martenitsa",
+  "kysymys": "Kerro lisää: martenitsa"
+ },
+ {
+  "n": 830,
+  "kohta": "maa:MDA",
+  "kasite": "Moldavian ruhtinaskunnasta",
+  "kysymys": "Kerro lisää: Moldavian ruhtinaskunnasta"
+ },
+ {
+  "n": 831,
+  "kohta": "maa:MDA",
+  "kasite": "Dragoș",
+  "kysymys": "Kerro lisää: Dragoș"
+ },
+ {
+  "n": 832,
+  "kohta": "maa:MDA",
+  "kasite": "Bessarabiaa",
+  "kysymys": "Kerro lisää: Bessarabiaa"
+ },
+ {
+  "n": 833,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Suuren kansalliskokouksen aukion",
+  "kysymys": "Kerro lisää: Suuren kansalliskokouksen aukion"
+ },
+ {
+  "n": 834,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Kristuksen syntymän katedraali",
+  "kysymys": "Kerro lisää: Kristuksen syntymän katedraali"
+ },
+ {
+  "n": 835,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Aleksandr Pushkin",
+  "kysymys": "Kerro lisää: Aleksandr Pushkin"
+ },
+ {
+  "n": 836,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Jevgeni Oneginin",
+  "kysymys": "Kerro lisää: Jevgeni Oneginin"
+ },
+ {
+  "n": 837,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Klassikoiden kuja",
+  "kysymys": "Kerro lisää: Klassikoiden kuja"
+ },
+ {
+  "n": 838,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Vrancean",
+  "kysymys": "Kerro lisää: Vrancean"
+ },
+ {
+  "n": 839,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Karpaattien",
+  "kysymys": "Kerro lisää: Karpaattien"
+ },
+ {
+  "n": 840,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "brynza-juustoa",
+  "kysymys": "Kerro lisää: brynza-juustoa"
+ },
+ {
+  "n": 841,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Piața Centrală",
+  "kysymys": "Kerro lisää: Piața Centrală"
+ },
+ {
+  "n": 842,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "maršrutkoiksi",
+  "kysymys": "Kerro lisää: maršrutkoiksi"
+ },
+ {
+  "n": 843,
+  "kohta": "kaupunki:chisinau",
+  "kasite": "Chișinăun rautatieasemalle",
+  "kysymys": "Kerro lisää: Chișinăun rautatieasemalle"
+ },
+ {
+  "n": 844,
+  "kohta": "maa:MKD",
+  "kasite": "Ohridin kaupungin",
+  "kysymys": "Kerro lisää: Ohridin kaupungin"
+ },
+ {
+  "n": 845,
+  "kohta": "maa:MKD",
+  "kasite": "Unescon maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: Unescon maailmanperintöluetteloon"
+ },
+ {
+  "n": 846,
+  "kohta": "maa:MKD",
+  "kasite": "Pyhän Naumin luostari",
+  "kysymys": "Kerro lisää: Pyhän Naumin luostari"
+ },
+ {
+  "n": 847,
+  "kohta": "maa:MKD",
+  "kasite": "Vardar-joen",
+  "kysymys": "Kerro lisää: Vardar-joen"
+ },
+ {
+  "n": 848,
+  "kohta": "maa:MKD",
+  "kasite": "vanha basaari",
+  "kysymys": "Kerro lisää: vanha basaari"
+ },
+ {
+  "n": 849,
+  "kohta": "maa:MKD",
+  "kasite": "ajvar",
+  "kysymys": "Kerro lisää: ajvar"
+ },
+ {
+  "n": 850,
+  "kohta": "maa:MKD",
+  "kasite": "rakijaa",
+  "kysymys": "Kerro lisää: rakijaa"
+ },
+ {
+  "n": 851,
+  "kohta": "maa:MKD",
+  "kasite": "Tikvešin",
+  "kysymys": "Kerro lisää: Tikvešin"
+ },
+ {
+  "n": 852,
+  "kohta": "maa:MKD",
+  "kasite": "Treska-joen",
+  "kysymys": "Kerro lisää: Treska-joen"
+ },
+ {
+  "n": 853,
+  "kohta": "maa:MKD",
+  "kasite": "Pyhän Andreaksen luostari",
+  "kysymys": "Kerro lisää: Pyhän Andreaksen luostari"
+ },
+ {
+  "n": 854,
+  "kohta": "maa:MKD",
+  "kasite": "Vrelo-luola",
+  "kysymys": "Kerro lisää: Vrelo-luola"
+ },
+ {
+  "n": 855,
+  "kohta": "maa:MKD",
+  "kasite": "kyrillisin kirjaimin",
+  "kysymys": "Kerro lisää: kyrillisin kirjaimin"
+ },
+ {
+  "n": 856,
+  "kohta": "maa:MKD",
+  "kasite": "Tetovon",
+  "kysymys": "Kerro lisää: Tetovon"
+ },
+ {
+  "n": 857,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Üskübin",
+  "kysymys": "Kerro lisää: Üskübin"
+ },
+ {
+  "n": 858,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Kalen linnoitus",
+  "kysymys": "Kerro lisää: Kalen linnoitus"
+ },
+ {
+  "n": 859,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Vanha basaari",
+  "kysymys": "Kerro lisää: Vanha basaari"
+ },
+ {
+  "n": 860,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Jugoslavian",
+  "kysymys": "Kerro lisää: Jugoslavian"
+ },
+ {
+  "n": 861,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Kivisilta",
+  "kysymys": "Kerro lisää: Kivisilta"
+ },
+ {
+  "n": 862,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Čaršija",
+  "kysymys": "Kerro lisää: Čaršija"
+ },
+ {
+  "n": 863,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Mustafa Pašan moskeija",
+  "kysymys": "Kerro lisää: Mustafa Pašan moskeija"
+ },
+ {
+  "n": 864,
+  "kohta": "kaupunki:skopje",
+  "kasite": "burek",
+  "kysymys": "Kerro lisää: burek"
+ },
+ {
+  "n": 865,
+  "kohta": "kaupunki:skopje",
+  "kasite": "tavče gravče",
+  "kysymys": "Kerro lisää: tavče gravče"
+ },
+ {
+  "n": 866,
+  "kohta": "kaupunki:skopje",
+  "kasite": "ajvar",
+  "kysymys": "Kerro lisää: ajvar"
+ },
+ {
+  "n": 867,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Nobelin rauhanpalkinnon",
+  "kysymys": "Kerro lisää: Nobelin rauhanpalkinnon"
+ },
+ {
+  "n": 868,
+  "kohta": "kaupunki:skopje",
+  "kasite": "Äiti Teresan muistotalo",
+  "kysymys": "Kerro lisää: Äiti Teresan muistotalo"
+ },
+ {
+  "n": 869,
+  "kohta": "maa:MLT",
+  "kasite": "Ġgantija",
+  "kysymys": "Kerro lisää: Ġgantija"
+ },
+ {
+  "n": 870,
+  "kohta": "maa:MLT",
+  "kasite": "Ħaġar Qim",
+  "kysymys": "Kerro lisää: Ħaġar Qim"
+ },
+ {
+  "n": 871,
+  "kohta": "maa:MLT",
+  "kasite": "Mnajdra",
+  "kysymys": "Kerro lisää: Mnajdra"
+ },
+ {
+  "n": 872,
+  "kohta": "maa:MLT",
+  "kasite": "Il-Kantilena",
+  "kysymys": "Kerro lisää: Il-Kantilena"
+ },
+ {
+  "n": 873,
+  "kohta": "maa:MLT",
+  "kasite": "Unescon Muisti maailmassa -luetteloon",
+  "kysymys": "Kerro lisää: Unescon Muisti maailmassa -luetteloon"
+ },
+ {
+  "n": 874,
+  "kohta": "maa:MLT",
+  "kasite": "Sisilian arabian",
+  "kysymys": "Kerro lisää: Sisilian arabian"
+ },
+ {
+  "n": 875,
+  "kohta": "maa:MLT",
+  "kasite": "suuri piiritys",
+  "kysymys": "Kerro lisää: suuri piiritys"
+ },
+ {
+  "n": 876,
+  "kohta": "maa:MLT",
+  "kasite": "Valletta",
+  "kysymys": "Kerro lisää: Valletta"
+ },
+ {
+  "n": 877,
+  "kohta": "maa:MLT",
+  "kasite": "Napoleon",
+  "kysymys": "Kerro lisää: Napoleon"
+ },
+ {
+  "n": 878,
+  "kohta": "maa:MLT",
+  "kasite": "Dinglin",
+  "kysymys": "Kerro lisää: Dinglin"
+ },
+ {
+  "n": 879,
+  "kohta": "maa:MLT",
+  "kasite": "Ta' Dmejrek",
+  "kysymys": "Kerro lisää: Ta' Dmejrek"
+ },
+ {
+  "n": 880,
+  "kohta": "maa:MLT",
+  "kasite": "Filfla",
+  "kysymys": "Kerro lisää: Filfla"
+ },
+ {
+  "n": 881,
+  "kohta": "maa:MLT",
+  "kasite": "pastizzi",
+  "kysymys": "Kerro lisää: pastizzi"
+ },
+ {
+  "n": 882,
+  "kohta": "maa:MLT",
+  "kasite": "stuffat tal-fenek",
+  "kysymys": "Kerro lisää: stuffat tal-fenek"
+ },
+ {
+  "n": 883,
+  "kohta": "maa:MLT",
+  "kasite": "Kinnie",
+  "kysymys": "Kerro lisää: Kinnie"
+ },
+ {
+  "n": 884,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Jean Parisot de Valette",
+  "kysymys": "Kerro lisää: Jean Parisot de Valette"
+ },
+ {
+  "n": 885,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Sciberrasin niemi",
+  "kysymys": "Kerro lisää: Sciberrasin niemi"
+ },
+ {
+  "n": 886,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Caravaggion",
+  "kysymys": "Kerro lisää: Caravaggion"
+ },
+ {
+  "n": 887,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Johannes Kastajan mestaus",
+  "kysymys": "Kerro lisää: Johannes Kastajan mestaus"
+ },
+ {
+  "n": 888,
+  "kohta": "kaupunki:valletta",
+  "kasite": "George Cross",
+  "kysymys": "Kerro lisää: George Cross"
+ },
+ {
+  "n": 889,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Grand Harbour",
+  "kysymys": "Kerro lisää: Grand Harbour"
+ },
+ {
+  "n": 890,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Grand Harbourin",
+  "kysymys": "Kerro lisää: Grand Harbourin"
+ },
+ {
+  "n": 891,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Vallettan linnoitusten",
+  "kysymys": "Kerro lisää: Vallettan linnoitusten"
+ },
+ {
+  "n": 892,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Francesco Laparelli",
+  "kysymys": "Kerro lisää: Francesco Laparelli"
+ },
+ {
+  "n": 893,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Sciberrasin niemelle",
+  "kysymys": "Kerro lisää: Sciberrasin niemelle"
+ },
+ {
+  "n": 894,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Grand Harbouria",
+  "kysymys": "Kerro lisää: Grand Harbouria"
+ },
+ {
+  "n": 895,
+  "kohta": "kaupunki:valletta",
+  "kasite": "Marsamxettia",
+  "kysymys": "Kerro lisää: Marsamxettia"
+ },
+ {
+  "n": 896,
+  "kohta": "maa:MNE",
+  "kasite": "Zla Kolata",
+  "kysymys": "Kerro lisää: Zla Kolata"
+ },
+ {
+  "n": 897,
+  "kohta": "maa:MNE",
+  "kasite": "Maja Jezercë",
+  "kysymys": "Kerro lisää: Maja Jezercë"
+ },
+ {
+  "n": 898,
+  "kohta": "maa:MNE",
+  "kasite": "Hridsko jezero",
+  "kysymys": "Kerro lisää: Hridsko jezero"
+ },
+ {
+  "n": 899,
+  "kohta": "maa:MNE",
+  "kasite": "Virpazarin",
+  "kysymys": "Kerro lisää: Virpazarin"
+ },
+ {
+  "n": 900,
+  "kohta": "maa:MNE",
+  "kasite": "Albanian",
+  "kysymys": "Kerro lisää: Albanian"
+ },
+ {
+  "n": 901,
+  "kohta": "maa:MNE",
+  "kasite": "Kotorin vanhakaupunki",
+  "kysymys": "Kerro lisää: Kotorin vanhakaupunki"
+ },
+ {
+  "n": 902,
+  "kohta": "maa:MNE",
+  "kasite": "Unescon maailmanperintökohde",
+  "kysymys": "Kerro lisää: Unescon maailmanperintökohde"
+ },
+ {
+  "n": 903,
+  "kohta": "maa:MNE",
+  "kasite": "Perast",
+  "kysymys": "Kerro lisää: Perast"
+ },
+ {
+  "n": 904,
+  "kohta": "maa:MNE",
+  "kasite": "Crna Gora",
+  "kysymys": "Kerro lisää: Crna Gora"
+ },
+ {
+  "n": 905,
+  "kohta": "maa:MNE",
+  "kasite": "Lovćen",
+  "kysymys": "Kerro lisää: Lovćen"
+ },
+ {
+  "n": 906,
+  "kohta": "maa:MNE",
+  "kasite": "Cetinje",
+  "kysymys": "Kerro lisää: Cetinje"
+ },
+ {
+  "n": 907,
+  "kohta": "maa:MNE",
+  "kasite": "Berliinin kongressissa",
+  "kysymys": "Kerro lisää: Berliinin kongressissa"
+ },
+ {
+  "n": 908,
+  "kohta": "maa:MNE",
+  "kasite": "Jugoslaviaa",
+  "kysymys": "Kerro lisää: Jugoslaviaa"
+ },
+ {
+  "n": 909,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Josip Broz Titon",
+  "kysymys": "Kerro lisää: Josip Broz Titon"
+ },
+ {
+  "n": 910,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Jugoslaviaa",
+  "kysymys": "Kerro lisää: Jugoslaviaa"
+ },
+ {
+  "n": 911,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Ribnican",
+  "kysymys": "Kerro lisää: Ribnican"
+ },
+ {
+  "n": 912,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Stara Varoš",
+  "kysymys": "Kerro lisää: Stara Varoš"
+ },
+ {
+  "n": 913,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Morača",
+  "kysymys": "Kerro lisää: Morača"
+ },
+ {
+  "n": 914,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Ribnica",
+  "kysymys": "Kerro lisää: Ribnica"
+ },
+ {
+  "n": 915,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Skutarijärveä",
+  "kysymys": "Kerro lisää: Skutarijärveä"
+ },
+ {
+  "n": 916,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Millennium-silta",
+  "kysymys": "Kerro lisää: Millennium-silta"
+ },
+ {
+  "n": 917,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Kristuksen ylösnousemuksen katedraali",
+  "kysymys": "Kerro lisää: Kristuksen ylösnousemuksen katedraali"
+ },
+ {
+  "n": 918,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Gorica",
+  "kysymys": "Kerro lisää: Gorica"
+ },
+ {
+  "n": 919,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Skutarijärvi",
+  "kysymys": "Kerro lisää: Skutarijärvi"
+ },
+ {
+  "n": 920,
+  "kohta": "kaupunki:podgorica",
+  "kasite": "Dinaaristen Alppien",
+  "kysymys": "Kerro lisää: Dinaaristen Alppien"
+ },
+ {
+  "n": 921,
+  "kohta": "maa:NLD",
+  "kasite": "poldereihin",
+  "kysymys": "Kerro lisää: poldereihin"
+ },
+ {
+  "n": 922,
+  "kohta": "maa:NLD",
+  "kasite": "Afsluitdijk",
+  "kysymys": "Kerro lisää: Afsluitdijk"
+ },
+ {
+  "n": 923,
+  "kohta": "maa:NLD",
+  "kasite": "Zuiderzeen",
+  "kysymys": "Kerro lisää: Zuiderzeen"
+ },
+ {
+  "n": 924,
+  "kohta": "maa:NLD",
+  "kasite": "Flevolandin",
+  "kysymys": "Kerro lisää: Flevolandin"
+ },
+ {
+  "n": 925,
+  "kohta": "maa:NLD",
+  "kasite": "Carolus Clusius",
+  "kysymys": "Kerro lisää: Carolus Clusius"
+ },
+ {
+  "n": 926,
+  "kohta": "maa:NLD",
+  "kasite": "tulppaanimania",
+  "kysymys": "Kerro lisää: tulppaanimania"
+ },
+ {
+  "n": 927,
+  "kohta": "maa:NLD",
+  "kasite": "Keukenhof",
+  "kysymys": "Kerro lisää: Keukenhof"
+ },
+ {
+  "n": 928,
+  "kohta": "maa:NLD",
+  "kasite": "Stop de Kindermoord",
+  "kysymys": "Kerro lisää: Stop de Kindermoord"
+ },
+ {
+  "n": 929,
+  "kohta": "maa:NLD",
+  "kasite": "Öljykriisin",
+  "kysymys": "Kerro lisää: Öljykriisin"
+ },
+ {
+  "n": 930,
+  "kohta": "maa:NLD",
+  "kasite": "myrskytulva",
+  "kysymys": "Kerro lisää: myrskytulva"
+ },
+ {
+  "n": 931,
+  "kohta": "maa:NLD",
+  "kasite": "Deltatyöt",
+  "kysymys": "Kerro lisää: Deltatyöt"
+ },
+ {
+  "n": 932,
+  "kohta": "maa:NLD",
+  "kasite": "Oosterscheldekeering",
+  "kysymys": "Kerro lisää: Oosterscheldekeering"
+ },
+ {
+  "n": 933,
+  "kohta": "maa:NLD",
+  "kasite": "Rotterdamin",
+  "kysymys": "Kerro lisää: Rotterdamin"
+ },
+ {
+  "n": 934,
+  "kohta": "maa:NLD",
+  "kasite": "Goudaa",
+  "kysymys": "Kerro lisää: Goudaa"
+ },
+ {
+  "n": 935,
+  "kohta": "maa:NLD",
+  "kasite": "Edamia",
+  "kysymys": "Kerro lisää: Edamia"
+ },
+ {
+  "n": 936,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Herengracht",
+  "kysymys": "Kerro lisää: Herengracht"
+ },
+ {
+  "n": 937,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Keizersgracht",
+  "kysymys": "Kerro lisää: Keizersgracht"
+ },
+ {
+  "n": 938,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Prinsengracht",
+  "kysymys": "Kerro lisää: Prinsengracht"
+ },
+ {
+  "n": 939,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Otto Frank",
+  "kysymys": "Kerro lisää: Otto Frank"
+ },
+ {
+  "n": 940,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Anne Frankin päiväkirjan",
+  "kysymys": "Kerro lisää: Anne Frankin päiväkirjan"
+ },
+ {
+  "n": 941,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Rembrandtin",
+  "kysymys": "Kerro lisää: Rembrandtin"
+ },
+ {
+  "n": 942,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Yövartio",
+  "kysymys": "Kerro lisää: Yövartio"
+ },
+ {
+  "n": 943,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Vermeerin",
+  "kysymys": "Kerro lisää: Vermeerin"
+ },
+ {
+  "n": 944,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Amsterdam-laiva",
+  "kysymys": "Kerro lisää: Amsterdam-laiva"
+ },
+ {
+  "n": 945,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Texelin",
+  "kysymys": "Kerro lisää: Texelin"
+ },
+ {
+  "n": 946,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "asuinveneissä",
+  "kysymys": "Kerro lisää: asuinveneissä"
+ },
+ {
+  "n": 947,
+  "kohta": "kaupunki:amsterdam",
+  "kasite": "Unescon maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: Unescon maailmanperintöluetteloon"
+ },
+ {
+  "n": 948,
+  "kohta": "maa:NOR",
+  "kasite": "Sognefjord",
+  "kysymys": "Kerro lisää: Sognefjord"
+ },
+ {
+  "n": 949,
+  "kohta": "maa:NOR",
+  "kasite": "Geirangerfjord",
+  "kysymys": "Kerro lisää: Geirangerfjord"
+ },
+ {
+  "n": 950,
+  "kohta": "maa:NOR",
+  "kasite": "Ekofisk",
+  "kysymys": "Kerro lisää: Ekofisk"
+ },
+ {
+  "n": 951,
+  "kohta": "maa:NOR",
+  "kasite": "valtiollinen sijoitusrahasto",
+  "kysymys": "Kerro lisää: valtiollinen sijoitusrahasto"
+ },
+ {
+  "n": 952,
+  "kohta": "maa:NOR",
+  "kasite": "Tromssan",
+  "kysymys": "Kerro lisää: Tromssan"
+ },
+ {
+  "n": 953,
+  "kohta": "maa:NOR",
+  "kasite": "Finnmarkin",
+  "kysymys": "Kerro lisää: Finnmarkin"
+ },
+ {
+  "n": 954,
+  "kohta": "maa:NOR",
+  "kasite": "Eidsvollin",
+  "kysymys": "Kerro lisää: Eidsvollin"
+ },
+ {
+  "n": 955,
+  "kohta": "maa:NOR",
+  "kasite": "Ruotsin",
+  "kysymys": "Kerro lisää: Ruotsin"
+ },
+ {
+  "n": 956,
+  "kohta": "maa:NOR",
+  "kasite": "bunad",
+  "kysymys": "Kerro lisää: bunad"
+ },
+ {
+  "n": 957,
+  "kohta": "maa:NOR",
+  "kasite": "jokamiehenoikeutta",
+  "kysymys": "Kerro lisää: jokamiehenoikeutta"
+ },
+ {
+  "n": 958,
+  "kohta": "maa:NOR",
+  "kasite": "hytte",
+  "kysymys": "Kerro lisää: hytte"
+ },
+ {
+  "n": 959,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Kristian IV",
+  "kysymys": "Kerro lisää: Kristian IV"
+ },
+ {
+  "n": 960,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Akershusin linnoituksen",
+  "kysymys": "Kerro lisää: Akershusin linnoituksen"
+ },
+ {
+  "n": 961,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Gustav Vigeland",
+  "kysymys": "Kerro lisää: Gustav Vigeland"
+ },
+ {
+  "n": 962,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Monoliitti",
+  "kysymys": "Kerro lisää: Monoliitti"
+ },
+ {
+  "n": 963,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Edvard Munch",
+  "kysymys": "Kerro lisää: Edvard Munch"
+ },
+ {
+  "n": 964,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Huuto",
+  "kysymys": "Kerro lisää: Huuto"
+ },
+ {
+  "n": 965,
+  "kohta": "kaupunki:oslo",
+  "kasite": "sähköautoja",
+  "kysymys": "Kerro lisää: sähköautoja"
+ },
+ {
+  "n": 966,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Ekofiskin",
+  "kysymys": "Kerro lisää: Ekofiskin"
+ },
+ {
+  "n": 967,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Bjørvikaan",
+  "kysymys": "Kerro lisää: Bjørvikaan"
+ },
+ {
+  "n": 968,
+  "kohta": "kaupunki:oslo",
+  "kasite": "Snøhetta",
+  "kysymys": "Kerro lisää: Snøhetta"
+ },
+ {
+  "n": 969,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Hansaliiton",
+  "kysymys": "Kerro lisää: Hansaliiton"
+ },
+ {
+  "n": 970,
+  "kohta": "kaupunki:bergen",
+  "kasite": "kuivattu turska",
+  "kysymys": "Kerro lisää: kuivattu turska"
+ },
+ {
+  "n": 971,
+  "kohta": "kaupunki:bergen",
+  "kasite": "seitsemän vuoren kaupunki",
+  "kysymys": "Kerro lisää: seitsemän vuoren kaupunki"
+ },
+ {
+  "n": 972,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Fløyen",
+  "kysymys": "Kerro lisää: Fløyen"
+ },
+ {
+  "n": 973,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Ulriken",
+  "kysymys": "Kerro lisää: Ulriken"
+ },
+ {
+  "n": 974,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Fløibanen",
+  "kysymys": "Kerro lisää: Fløibanen"
+ },
+ {
+  "n": 975,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Håkon Håkonsson",
+  "kysymys": "Kerro lisää: Håkon Håkonsson"
+ },
+ {
+  "n": 976,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Håkonshallen",
+  "kysymys": "Kerro lisää: Håkonshallen"
+ },
+ {
+  "n": 977,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Bergenhus",
+  "kysymys": "Kerro lisää: Bergenhus"
+ },
+ {
+  "n": 978,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Fisketorget",
+  "kysymys": "Kerro lisää: Fisketorget"
+ },
+ {
+  "n": 979,
+  "kohta": "kaupunki:bergen",
+  "kasite": "Vågen",
+  "kysymys": "Kerro lisää: Vågen"
+ },
+ {
+  "n": 980,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "arktisen pyynnin",
+  "kysymys": "Kerro lisää: arktisen pyynnin"
+ },
+ {
+  "n": 981,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "Huippuvuorille",
+  "kysymys": "Kerro lisää: Huippuvuorille"
+ },
+ {
+  "n": 982,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "puutalot",
+  "kysymys": "Kerro lisää: puutalot"
+ },
+ {
+  "n": 983,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "revontuliobservatorio",
+  "kysymys": "Kerro lisää: revontuliobservatorio"
+ },
+ {
+  "n": 984,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "kaamos",
+  "kysymys": "Kerro lisää: kaamos"
+ },
+ {
+  "n": 985,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "Tromssan tuomiokirkko",
+  "kysymys": "Kerro lisää: Tromssan tuomiokirkko"
+ },
+ {
+  "n": 986,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "Christian Heinrich Groschin",
+  "kysymys": "Kerro lisää: Christian Heinrich Groschin"
+ },
+ {
+  "n": 987,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "Håkon IV",
+  "kysymys": "Kerro lisää: Håkon IV"
+ },
+ {
+  "n": 988,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "turska",
+  "kysymys": "Kerro lisää: turska"
+ },
+ {
+  "n": 989,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "kuivattu kala",
+  "kysymys": "Kerro lisää: kuivattu kala"
+ },
+ {
+  "n": 990,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "Jäämeren",
+  "kysymys": "Kerro lisää: Jäämeren"
+ },
+ {
+  "n": 991,
+  "kohta": "kaupunki:tromssa",
+  "kasite": "keskiyön aurinko",
+  "kysymys": "Kerro lisää: keskiyön aurinko"
+ },
+ {
+  "n": 992,
+  "kohta": "maa:POL",
+  "kasite": "Rysy",
+  "kysymys": "Kerro lisää: Rysy"
+ },
+ {
+  "n": 993,
+  "kohta": "maa:POL",
+  "kasite": "Tatravuorilla",
+  "kysymys": "Kerro lisää: Tatravuorilla"
+ },
+ {
+  "n": 994,
+  "kohta": "maa:POL",
+  "kasite": "Karpaattien",
+  "kysymys": "Kerro lisää: Karpaattien"
+ },
+ {
+  "n": 995,
+  "kohta": "maa:POL",
+  "kasite": "Puolan jaoissa",
+  "kysymys": "Kerro lisää: Puolan jaoissa"
+ },
+ {
+  "n": 996,
+  "kohta": "maa:POL",
+  "kasite": "Oderin",
+  "kysymys": "Kerro lisää: Oderin"
+ },
+ {
+  "n": 997,
+  "kohta": "maa:POL",
+  "kasite": "Malborkin tiililinna",
+  "kysymys": "Kerro lisää: Malborkin tiililinna"
+ },
+ {
+  "n": 998,
+  "kohta": "maa:POL",
+  "kasite": "Saksalaisen ritarikunnan",
+  "kysymys": "Kerro lisää: Saksalaisen ritarikunnan"
+ },
+ {
+  "n": 999,
+  "kohta": "maa:POL",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 1000,
+  "kohta": "maa:POL",
+  "kasite": "pierogit",
+  "kysymys": "Kerro lisää: pierogit"
+ },
+ {
+  "n": 1001,
+  "kohta": "maa:POL",
+  "kasite": "bigos",
+  "kysymys": "Kerro lisää: bigos"
+ },
+ {
+  "n": 1002,
+  "kohta": "maa:POL",
+  "kasite": "żurek",
+  "kysymys": "Kerro lisää: żurek"
+ },
+ {
+  "n": 1003,
+  "kohta": "maa:POL",
+  "kasite": "Białowieżan metsässä",
+  "kysymys": "Kerro lisää: Białowieżan metsässä"
+ },
+ {
+  "n": 1004,
+  "kohta": "maa:POL",
+  "kasite": "visentti",
+  "kysymys": "Kerro lisää: visentti"
+ },
+ {
+  "n": 1005,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Sigismund III",
+  "kysymys": "Kerro lisää: Sigismund III"
+ },
+ {
+  "n": 1006,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Krakovasta",
+  "kysymys": "Kerro lisää: Krakovasta"
+ },
+ {
+  "n": 1007,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Bernardo Bellotton",
+  "kysymys": "Kerro lisää: Bernardo Bellotton"
+ },
+ {
+  "n": 1008,
+  "kohta": "kaupunki:varsova",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 1009,
+  "kohta": "kaupunki:varsova",
+  "kasite": "polonium",
+  "kysymys": "Kerro lisää: polonium"
+ },
+ {
+  "n": 1010,
+  "kohta": "kaupunki:varsova",
+  "kasite": "radium",
+  "kysymys": "Kerro lisää: radium"
+ },
+ {
+  "n": 1011,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Chopinin",
+  "kysymys": "Kerro lisää: Chopinin"
+ },
+ {
+  "n": 1012,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Père-Lachaisen",
+  "kysymys": "Kerro lisää: Père-Lachaisen"
+ },
+ {
+  "n": 1013,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Kulttuuri- ja tiedepalatsi",
+  "kysymys": "Kerro lisää: Kulttuuri- ja tiedepalatsi"
+ },
+ {
+  "n": 1014,
+  "kohta": "kaupunki:varsova",
+  "kasite": "Neuvostoliiton",
+  "kysymys": "Kerro lisää: Neuvostoliiton"
+ },
+ {
+  "n": 1015,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Sukiennice",
+  "kysymys": "Kerro lisää: Sukiennice"
+ },
+ {
+  "n": 1016,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Mariakirkko",
+  "kysymys": "Kerro lisää: Mariakirkko"
+ },
+ {
+  "n": 1017,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Mariakirkon",
+  "kysymys": "Kerro lisää: Mariakirkon"
+ },
+ {
+  "n": 1018,
+  "kohta": "kaupunki:krakova",
+  "kasite": "hejnał",
+  "kysymys": "Kerro lisää: hejnał"
+ },
+ {
+  "n": 1019,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Smok Wawelski",
+  "kysymys": "Kerro lisää: Smok Wawelski"
+ },
+ {
+  "n": 1020,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Veikselistä",
+  "kysymys": "Kerro lisää: Veikselistä"
+ },
+ {
+  "n": 1021,
+  "kohta": "kaupunki:krakova",
+  "kasite": "tähtitieteeseen",
+  "kysymys": "Kerro lisää: tähtitieteeseen"
+ },
+ {
+  "n": 1022,
+  "kohta": "kaupunki:krakova",
+  "kasite": "aurinkokeskeisen",
+  "kysymys": "Kerro lisää: aurinkokeskeisen"
+ },
+ {
+  "n": 1023,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Vanhan synagogan",
+  "kysymys": "Kerro lisää: Vanhan synagogan"
+ },
+ {
+  "n": 1024,
+  "kohta": "kaupunki:krakova",
+  "kasite": "Plac Nowyn",
+  "kysymys": "Kerro lisää: Plac Nowyn"
+ },
+ {
+  "n": 1025,
+  "kohta": "maa:PRT",
+  "kasite": "Alcañicesin sopimus",
+  "kysymys": "Kerro lisää: Alcañicesin sopimus"
+ },
+ {
+  "n": 1026,
+  "kohta": "maa:PRT",
+  "kasite": "Douro",
+  "kysymys": "Kerro lisää: Douro"
+ },
+ {
+  "n": 1027,
+  "kohta": "maa:PRT",
+  "kasite": "Tordesillasin",
+  "kysymys": "Kerro lisää: Tordesillasin"
+ },
+ {
+  "n": 1028,
+  "kohta": "maa:PRT",
+  "kasite": "Espanjalle",
+  "kysymys": "Kerro lisää: Espanjalle"
+ },
+ {
+  "n": 1029,
+  "kohta": "maa:PRT",
+  "kasite": "Jerónimosin luostarissa",
+  "kysymys": "Kerro lisää: Jerónimosin luostarissa"
+ },
+ {
+  "n": 1030,
+  "kohta": "maa:PRT",
+  "kasite": "Pastéis de Belémin",
+  "kysymys": "Kerro lisää: Pastéis de Belémin"
+ },
+ {
+  "n": 1031,
+  "kohta": "maa:PRT",
+  "kasite": "Mondego-joki",
+  "kysymys": "Kerro lisää: Mondego-joki"
+ },
+ {
+  "n": 1032,
+  "kohta": "maa:PRT",
+  "kasite": "Serra da Estrelan juustoa",
+  "kysymys": "Kerro lisää: Serra da Estrelan juustoa"
+ },
+ {
+  "n": 1033,
+  "kohta": "maa:PRT",
+  "kasite": "Amália Rodrigues",
+  "kysymys": "Kerro lisää: Amália Rodrigues"
+ },
+ {
+  "n": 1034,
+  "kohta": "maa:PRT",
+  "kasite": "saudade",
+  "kysymys": "Kerro lisää: saudade"
+ },
+ {
+  "n": 1035,
+  "kohta": "maa:PRT",
+  "kasite": "UNESCO",
+  "kysymys": "Kerro lisää: UNESCO"
+ },
+ {
+  "n": 1036,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Baixa",
+  "kysymys": "Kerro lisää: Baixa"
+ },
+ {
+  "n": 1037,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "gaiola",
+  "kysymys": "Kerro lisää: gaiola"
+ },
+ {
+  "n": 1038,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Pombalin markiisiksi",
+  "kysymys": "Kerro lisää: Pombalin markiisiksi"
+ },
+ {
+  "n": 1039,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Vasco da Gama",
+  "kysymys": "Kerro lisää: Vasco da Gama"
+ },
+ {
+  "n": 1040,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Tejo-joen",
+  "kysymys": "Kerro lisää: Tejo-joen"
+ },
+ {
+  "n": 1041,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "kuningas Manuel I",
+  "kysymys": "Kerro lisää: kuningas Manuel I"
+ },
+ {
+  "n": 1042,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Albrecht Dürerin",
+  "kysymys": "Kerro lisää: Albrecht Dürerin"
+ },
+ {
+  "n": 1043,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Alfamassa",
+  "kysymys": "Kerro lisää: Alfamassa"
+ },
+ {
+  "n": 1044,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "linja 28",
+  "kysymys": "Kerro lisää: linja 28"
+ },
+ {
+  "n": 1045,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "neilikkavallankumoukseksi",
+  "kysymys": "Kerro lisää: neilikkavallankumoukseksi"
+ },
+ {
+  "n": 1046,
+  "kohta": "kaupunki:lissabon",
+  "kasite": "Cristo Rei",
+  "kysymys": "Kerro lisää: Cristo Rei"
+ },
+ {
+  "n": 1047,
+  "kohta": "maa:ROU",
+  "kasite": "Trajanuksen",
+  "kysymys": "Kerro lisää: Trajanuksen"
+ },
+ {
+  "n": 1048,
+  "kohta": "maa:ROU",
+  "kasite": "Dacia",
+  "kysymys": "Kerro lisää: Dacia"
+ },
+ {
+  "n": 1049,
+  "kohta": "maa:ROU",
+  "kasite": "Mustameri",
+  "kysymys": "Kerro lisää: Mustameri"
+ },
+ {
+  "n": 1050,
+  "kohta": "maa:ROU",
+  "kasite": "pelikaaneja",
+  "kysymys": "Kerro lisää: pelikaaneja"
+ },
+ {
+  "n": 1051,
+  "kohta": "maa:ROU",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 1052,
+  "kohta": "maa:ROU",
+  "kasite": "Luumut",
+  "kysymys": "Kerro lisää: Luumut"
+ },
+ {
+  "n": 1053,
+  "kohta": "maa:ROU",
+  "kasite": "häissä",
+  "kysymys": "Kerro lisää: häissä"
+ },
+ {
+  "n": 1054,
+  "kohta": "maa:ROU",
+  "kasite": "sarmale",
+  "kysymys": "Kerro lisää: sarmale"
+ },
+ {
+  "n": 1055,
+  "kohta": "maa:ROU",
+  "kasite": "Grigoraș Dinicu",
+  "kysymys": "Kerro lisää: Grigoraș Dinicu"
+ },
+ {
+  "n": 1056,
+  "kohta": "maa:ROU",
+  "kasite": "Bukarestin konservatoriossa",
+  "kysymys": "Kerro lisää: Bukarestin konservatoriossa"
+ },
+ {
+  "n": 1057,
+  "kohta": "maa:ROU",
+  "kasite": "Karpaattien",
+  "kysymys": "Kerro lisää: Karpaattien"
+ },
+ {
+  "n": 1058,
+  "kohta": "maa:ROU",
+  "kasite": "transilvaniansaksalaisia",
+  "kysymys": "Kerro lisää: transilvaniansaksalaisia"
+ },
+ {
+  "n": 1059,
+  "kohta": "maa:ROU",
+  "kasite": "Brașov",
+  "kysymys": "Kerro lisää: Brașov"
+ },
+ {
+  "n": 1060,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "Romanian ateneum",
+  "kysymys": "Kerro lisää: Romanian ateneum"
+ },
+ {
+  "n": 1061,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "Cișmigiun",
+  "kysymys": "Kerro lisää: Cișmigiun"
+ },
+ {
+  "n": 1062,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "Nicolae Ceaușescu",
+  "kysymys": "Kerro lisää: Nicolae Ceaușescu"
+ },
+ {
+  "n": 1063,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "Vrancean maanjäristys",
+  "kysymys": "Kerro lisää: Vrancean maanjäristys"
+ },
+ {
+  "n": 1064,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "Mihai Vodăn luostari",
+  "kysymys": "Kerro lisää: Mihai Vodăn luostari"
+ },
+ {
+  "n": 1065,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "Ceaușescun",
+  "kysymys": "Kerro lisää: Ceaușescun"
+ },
+ {
+  "n": 1066,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "George Enescun",
+  "kysymys": "Kerro lisää: George Enescun"
+ },
+ {
+  "n": 1067,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "filharmoninen orkesteri",
+  "kysymys": "Kerro lisää: filharmoninen orkesteri"
+ },
+ {
+  "n": 1068,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "sarmale",
+  "kysymys": "Kerro lisää: sarmale"
+ },
+ {
+  "n": 1069,
+  "kohta": "kaupunki:bukarest",
+  "kasite": "mămăligaa",
+  "kysymys": "Kerro lisää: mămăligaa"
+ },
+ {
+  "n": 1070,
+  "kohta": "maa:RUS",
+  "kasite": "Kaliningradin",
+  "kysymys": "Kerro lisää: Kaliningradin"
+ },
+ {
+  "n": 1071,
+  "kohta": "maa:RUS",
+  "kasite": "Uralvuorten",
+  "kysymys": "Kerro lisää: Uralvuorten"
+ },
+ {
+  "n": 1072,
+  "kohta": "maa:RUS",
+  "kasite": "Nižni Novgorod",
+  "kysymys": "Kerro lisää: Nižni Novgorod"
+ },
+ {
+  "n": 1073,
+  "kohta": "maa:RUS",
+  "kasite": "Kazan",
+  "kysymys": "Kerro lisää: Kazan"
+ },
+ {
+  "n": 1074,
+  "kohta": "maa:RUS",
+  "kasite": "Volgograd",
+  "kysymys": "Kerro lisää: Volgograd"
+ },
+ {
+  "n": 1075,
+  "kohta": "maa:RUS",
+  "kasite": "Pietari",
+  "kysymys": "Kerro lisää: Pietari"
+ },
+ {
+  "n": 1076,
+  "kohta": "maa:RUS",
+  "kasite": "Aleksanteri II",
+  "kysymys": "Kerro lisää: Aleksanteri II"
+ },
+ {
+  "n": 1077,
+  "kohta": "maa:RUS",
+  "kasite": "suuriruhtinaskuntana",
+  "kysymys": "Kerro lisää: suuriruhtinaskuntana"
+ },
+ {
+  "n": 1078,
+  "kohta": "maa:RUS",
+  "kasite": "borssi",
+  "kysymys": "Kerro lisää: borssi"
+ },
+ {
+  "n": 1079,
+  "kohta": "maa:RUS",
+  "kasite": "pelmenit",
+  "kysymys": "Kerro lisää: pelmenit"
+ },
+ {
+  "n": 1080,
+  "kohta": "maa:RUS",
+  "kasite": "blinejä",
+  "kysymys": "Kerro lisää: blinejä"
+ },
+ {
+  "n": 1081,
+  "kohta": "maa:RUS",
+  "kasite": "samovaarissa",
+  "kysymys": "Kerro lisää: samovaarissa"
+ },
+ {
+  "n": 1082,
+  "kohta": "maa:RUS",
+  "kasite": "Kyrilloksen ja Methodiuksen",
+  "kysymys": "Kerro lisää: Kyrilloksen ja Methodiuksen"
+ },
+ {
+  "n": 1083,
+  "kohta": "maa:RUS",
+  "kasite": "Bulgariassa",
+  "kysymys": "Kerro lisää: Bulgariassa"
+ },
+ {
+  "n": 1084,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Tsaarinkello",
+  "kysymys": "Kerro lisää: Tsaarinkello"
+ },
+ {
+  "n": 1085,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Tsaaritykki",
+  "kysymys": "Kerro lisää: Tsaaritykki"
+ },
+ {
+  "n": 1086,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Punaiselle torille",
+  "kysymys": "Kerro lisää: Punaiselle torille"
+ },
+ {
+  "n": 1087,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Iivana IV",
+  "kysymys": "Kerro lisää: Iivana IV"
+ },
+ {
+  "n": 1088,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Komsomolskajan",
+  "kysymys": "Kerro lisää: Komsomolskajan"
+ },
+ {
+  "n": 1089,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Majakovskajan",
+  "kysymys": "Kerro lisää: Majakovskajan"
+ },
+ {
+  "n": 1090,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Borodinon",
+  "kysymys": "Kerro lisää: Borodinon"
+ },
+ {
+  "n": 1091,
+  "kohta": "kaupunki:moskova",
+  "kasite": "Kutuzov",
+  "kysymys": "Kerro lisää: Kutuzov"
+ },
+ {
+  "n": 1092,
+  "kohta": "kaupunki:moskova",
+  "kasite": "ushanka",
+  "kysymys": "Kerro lisää: ushanka"
+ },
+ {
+  "n": 1093,
+  "kohta": "kaupunki:moskova",
+  "kasite": "valenki",
+  "kysymys": "Kerro lisää: valenki"
+ },
+ {
+  "n": 1094,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Petrograd",
+  "kysymys": "Kerro lisää: Petrograd"
+ },
+ {
+  "n": 1095,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Leningradiksi",
+  "kysymys": "Kerro lisää: Leningradiksi"
+ },
+ {
+  "n": 1096,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Venäjän keisarikunnan",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnan"
+ },
+ {
+  "n": 1097,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Talvipalatsissa",
+  "kysymys": "Kerro lisää: Talvipalatsissa"
+ },
+ {
+  "n": 1098,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Katariina Suuri",
+  "kysymys": "Kerro lisää: Katariina Suuri"
+ },
+ {
+  "n": 1099,
+  "kohta": "kaupunki:pietari",
+  "kasite": "borssi",
+  "kysymys": "Kerro lisää: borssi"
+ },
+ {
+  "n": 1100,
+  "kohta": "kaupunki:pietari",
+  "kasite": "pelmenit",
+  "kysymys": "Kerro lisää: pelmenit"
+ },
+ {
+  "n": 1101,
+  "kohta": "kaupunki:pietari",
+  "kasite": "blinit",
+  "kysymys": "Kerro lisää: blinit"
+ },
+ {
+  "n": 1102,
+  "kohta": "kaupunki:pietari",
+  "kasite": "samovaarista",
+  "kysymys": "Kerro lisää: samovaarista"
+ },
+ {
+  "n": 1103,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Nevan",
+  "kysymys": "Kerro lisää: Nevan"
+ },
+ {
+  "n": 1104,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Palatsisilta",
+  "kysymys": "Kerro lisää: Palatsisilta"
+ },
+ {
+  "n": 1105,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Pietarin metro",
+  "kysymys": "Kerro lisää: Pietarin metro"
+ },
+ {
+  "n": 1106,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Leningradissa",
+  "kysymys": "Kerro lisää: Leningradissa"
+ },
+ {
+  "n": 1107,
+  "kohta": "kaupunki:pietari",
+  "kasite": "Admiraltejskaja",
+  "kysymys": "Kerro lisää: Admiraltejskaja"
+ },
+ {
+  "n": 1108,
+  "kohta": "maa:SRB",
+  "kasite": "Karađorđe",
+  "kysymys": "Kerro lisää: Karađorđe"
+ },
+ {
+  "n": 1109,
+  "kohta": "maa:SRB",
+  "kasite": "Berliinin kongressissa",
+  "kysymys": "Kerro lisää: Berliinin kongressissa"
+ },
+ {
+  "n": 1110,
+  "kohta": "maa:SRB",
+  "kasite": "Ottomaanien valtakunnan",
+  "kysymys": "Kerro lisää: Ottomaanien valtakunnan"
+ },
+ {
+  "n": 1111,
+  "kohta": "maa:SRB",
+  "kasite": "Studenica",
+  "kysymys": "Kerro lisää: Studenica"
+ },
+ {
+  "n": 1112,
+  "kohta": "maa:SRB",
+  "kasite": "Stefan Nemanjan",
+  "kysymys": "Kerro lisää: Stefan Nemanjan"
+ },
+ {
+  "n": 1113,
+  "kohta": "maa:SRB",
+  "kasite": "Fruška Goran",
+  "kysymys": "Kerro lisää: Fruška Goran"
+ },
+ {
+  "n": 1114,
+  "kohta": "maa:SRB",
+  "kasite": "ćevapi",
+  "kysymys": "Kerro lisää: ćevapi"
+ },
+ {
+  "n": 1115,
+  "kohta": "maa:SRB",
+  "kasite": "pljeskavica",
+  "kysymys": "Kerro lisää: pljeskavica"
+ },
+ {
+  "n": 1116,
+  "kohta": "maa:SRB",
+  "kasite": "sarma",
+  "kysymys": "Kerro lisää: sarma"
+ },
+ {
+  "n": 1117,
+  "kohta": "maa:SRB",
+  "kasite": "kajmakia",
+  "kysymys": "Kerro lisää: kajmakia"
+ },
+ {
+  "n": 1118,
+  "kohta": "maa:SRB",
+  "kasite": "rakijaa",
+  "kysymys": "Kerro lisää: rakijaa"
+ },
+ {
+  "n": 1119,
+  "kohta": "maa:SRB",
+  "kasite": "Tonava",
+  "kysymys": "Kerro lisää: Tonava"
+ },
+ {
+  "n": 1120,
+  "kohta": "maa:SRB",
+  "kasite": "Rautaporttien",
+  "kysymys": "Kerro lisää: Rautaporttien"
+ },
+ {
+  "n": 1121,
+  "kohta": "maa:SRB",
+  "kasite": "Taran",
+  "kysymys": "Kerro lisää: Taran"
+ },
+ {
+  "n": 1122,
+  "kohta": "maa:SRB",
+  "kasite": "Exit",
+  "kysymys": "Kerro lisää: Exit"
+ },
+ {
+  "n": 1123,
+  "kohta": "maa:SRB",
+  "kasite": "Novi Sadissa",
+  "kysymys": "Kerro lisää: Novi Sadissa"
+ },
+ {
+  "n": 1124,
+  "kohta": "maa:SRB",
+  "kasite": "Petrovaradinin linnoituksessa",
+  "kysymys": "Kerro lisää: Petrovaradinin linnoituksessa"
+ },
+ {
+  "n": 1125,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Mehmed II",
+  "kysymys": "Kerro lisää: Mehmed II"
+ },
+ {
+  "n": 1126,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "János Hunyadi",
+  "kysymys": "Kerro lisää: János Hunyadi"
+ },
+ {
+  "n": 1127,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Giovanni da Capistrano",
+  "kysymys": "Kerro lisää: Giovanni da Capistrano"
+ },
+ {
+  "n": 1128,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Singidunum",
+  "kysymys": "Kerro lisää: Singidunum"
+ },
+ {
+  "n": 1129,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Pobednik",
+  "kysymys": "Kerro lisää: Pobednik"
+ },
+ {
+  "n": 1130,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "ćevapčićeja",
+  "kysymys": "Kerro lisää: ćevapčićeja"
+ },
+ {
+  "n": 1131,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "rakija",
+  "kysymys": "Kerro lisää: rakija"
+ },
+ {
+  "n": 1132,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Skadarlija",
+  "kysymys": "Kerro lisää: Skadarlija"
+ },
+ {
+  "n": 1133,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Ada Ciganlija",
+  "kysymys": "Kerro lisää: Ada Ciganlija"
+ },
+ {
+  "n": 1134,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Veliko ratno ostrvo",
+  "kysymys": "Kerro lisää: Veliko ratno ostrvo"
+ },
+ {
+  "n": 1135,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "splavit",
+  "kysymys": "Kerro lisää: splavit"
+ },
+ {
+  "n": 1136,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Savan",
+  "kysymys": "Kerro lisää: Savan"
+ },
+ {
+  "n": 1137,
+  "kohta": "kaupunki:belgrad",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 1138,
+  "kohta": "maa:SVK",
+  "kasite": "Tšekkoslovakiaan",
+  "kysymys": "Kerro lisää: Tšekkoslovakiaan"
+ },
+ {
+  "n": 1139,
+  "kohta": "maa:SVK",
+  "kasite": "samettivallankumouksessa",
+  "kysymys": "Kerro lisää: samettivallankumouksessa"
+ },
+ {
+  "n": 1140,
+  "kohta": "maa:SVK",
+  "kasite": "samettieroksi",
+  "kysymys": "Kerro lisää: samettieroksi"
+ },
+ {
+  "n": 1141,
+  "kohta": "maa:SVK",
+  "kasite": "Spišin linna",
+  "kysymys": "Kerro lisää: Spišin linna"
+ },
+ {
+  "n": 1142,
+  "kohta": "maa:SVK",
+  "kasite": "Oravan linna",
+  "kysymys": "Kerro lisää: Oravan linna"
+ },
+ {
+  "n": 1143,
+  "kohta": "maa:SVK",
+  "kasite": "Nosferatu",
+  "kysymys": "Kerro lisää: Nosferatu"
+ },
+ {
+  "n": 1144,
+  "kohta": "maa:SVK",
+  "kasite": "bryndzové halušky",
+  "kysymys": "Kerro lisää: bryndzové halušky"
+ },
+ {
+  "n": 1145,
+  "kohta": "maa:SVK",
+  "kasite": "bryndzalla",
+  "kysymys": "Kerro lisää: bryndzalla"
+ },
+ {
+  "n": 1146,
+  "kohta": "maa:SVK",
+  "kasite": "Tokajin",
+  "kysymys": "Kerro lisää: Tokajin"
+ },
+ {
+  "n": 1147,
+  "kohta": "maa:SVK",
+  "kasite": "Karpaatit",
+  "kysymys": "Kerro lisää: Karpaatit"
+ },
+ {
+  "n": 1148,
+  "kohta": "maa:SVK",
+  "kasite": "Korkeat Tatrat",
+  "kysymys": "Kerro lisää: Korkeat Tatrat"
+ },
+ {
+  "n": 1149,
+  "kohta": "maa:SVK",
+  "kasite": "Gerlachovský štít",
+  "kysymys": "Kerro lisää: Gerlachovský štít"
+ },
+ {
+  "n": 1150,
+  "kohta": "maa:SVK",
+  "kasite": "Volkswagenin",
+  "kysymys": "Kerro lisää: Volkswagenin"
+ },
+ {
+  "n": 1151,
+  "kohta": "maa:SVK",
+  "kasite": "Žilinassa",
+  "kysymys": "Kerro lisää: Žilinassa"
+ },
+ {
+  "n": 1152,
+  "kohta": "maa:SVK",
+  "kasite": "Trnavassa",
+  "kysymys": "Kerro lisää: Trnavassa"
+ },
+ {
+  "n": 1153,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Budan",
+  "kysymys": "Kerro lisää: Budan"
+ },
+ {
+  "n": 1154,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Pyhän Martinin tuomiokirkossa",
+  "kysymys": "Kerro lisää: Pyhän Martinin tuomiokirkossa"
+ },
+ {
+  "n": 1155,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Maria Teresia",
+  "kysymys": "Kerro lisää: Maria Teresia"
+ },
+ {
+  "n": 1156,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Mikaelin portti",
+  "kysymys": "Kerro lisää: Mikaelin portti"
+ },
+ {
+  "n": 1157,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Tonava",
+  "kysymys": "Kerro lisää: Tonava"
+ },
+ {
+  "n": 1158,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Pressburger Beugel",
+  "kysymys": "Kerro lisää: Pressburger Beugel"
+ },
+ {
+  "n": 1159,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Unkarissa",
+  "kysymys": "Kerro lisää: Unkarissa"
+ },
+ {
+  "n": 1160,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Pienet Karpaatit",
+  "kysymys": "Kerro lisää: Pienet Karpaatit"
+ },
+ {
+  "n": 1161,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Morava",
+  "kysymys": "Kerro lisää: Morava"
+ },
+ {
+  "n": 1162,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Devínin linna",
+  "kysymys": "Kerro lisää: Devínin linna"
+ },
+ {
+  "n": 1163,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Wienin",
+  "kysymys": "Kerro lisää: Wienin"
+ },
+ {
+  "n": 1164,
+  "kohta": "kaupunki:bratislava",
+  "kasite": "Twin City Liner",
+  "kysymys": "Kerro lisää: Twin City Liner"
+ },
+ {
+  "n": 1165,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Pyhän Elisabetin tuomiokirkko",
+  "kysymys": "Kerro lisää: Pyhän Elisabetin tuomiokirkko"
+ },
+ {
+  "n": 1166,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Immaculata",
+  "kysymys": "Kerro lisää: Immaculata"
+ },
+ {
+  "n": 1167,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Košicen valtionteatterin",
+  "kysymys": "Kerro lisää: Košicen valtionteatterin"
+ },
+ {
+  "n": 1168,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Hlavná-katu",
+  "kysymys": "Kerro lisää: Hlavná-katu"
+ },
+ {
+  "n": 1169,
+  "kohta": "kaupunki:kosice",
+  "kasite": "guláš",
+  "kysymys": "Kerro lisää: guláš"
+ },
+ {
+  "n": 1170,
+  "kohta": "kaupunki:kosice",
+  "kasite": "lángos",
+  "kysymys": "Kerro lisää: lángos"
+ },
+ {
+  "n": 1171,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Tokajin",
+  "kysymys": "Kerro lisää: Tokajin"
+ },
+ {
+  "n": 1172,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Slovenský kras",
+  "kysymys": "Kerro lisää: Slovenský kras"
+ },
+ {
+  "n": 1173,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Slovenský raj",
+  "kysymys": "Kerro lisää: Slovenský raj"
+ },
+ {
+  "n": 1174,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Hornád",
+  "kysymys": "Kerro lisää: Hornád"
+ },
+ {
+  "n": 1175,
+  "kohta": "kaupunki:kosice",
+  "kasite": "rauhanmaraton",
+  "kysymys": "Kerro lisää: rauhanmaraton"
+ },
+ {
+  "n": 1176,
+  "kohta": "kaupunki:kosice",
+  "kasite": "Euroopan kulttuuripääkaupunki",
+  "kysymys": "Kerro lisää: Euroopan kulttuuripääkaupunki"
+ },
+ {
+  "n": 1177,
+  "kohta": "maa:SVN",
+  "kasite": "Idrijassa",
+  "kysymys": "Kerro lisää: Idrijassa"
+ },
+ {
+  "n": 1178,
+  "kohta": "maa:SVN",
+  "kasite": "Habsburgit",
+  "kysymys": "Kerro lisää: Habsburgit"
+ },
+ {
+  "n": 1179,
+  "kohta": "maa:SVN",
+  "kasite": "Almadénin",
+  "kysymys": "Kerro lisää: Almadénin"
+ },
+ {
+  "n": 1180,
+  "kohta": "maa:SVN",
+  "kasite": "Julian Alppien",
+  "kysymys": "Kerro lisää: Julian Alppien"
+ },
+ {
+  "n": 1181,
+  "kohta": "maa:SVN",
+  "kasite": "pletna",
+  "kysymys": "Kerro lisää: pletna"
+ },
+ {
+  "n": 1182,
+  "kohta": "maa:SVN",
+  "kasite": "Triglav",
+  "kysymys": "Kerro lisää: Triglav"
+ },
+ {
+  "n": 1183,
+  "kohta": "maa:SVN",
+  "kasite": "Kranjska klobasa",
+  "kysymys": "Kerro lisää: Kranjska klobasa"
+ },
+ {
+  "n": 1184,
+  "kohta": "maa:SVN",
+  "kasite": "Krainin",
+  "kysymys": "Kerro lisää: Krainin"
+ },
+ {
+  "n": 1185,
+  "kohta": "maa:SVN",
+  "kasite": "suojatun maantieteellisen merkinnän",
+  "kysymys": "Kerro lisää: suojatun maantieteellisen merkinnän"
+ },
+ {
+  "n": 1186,
+  "kohta": "maa:SVN",
+  "kasite": "Carniolan mehiläinen",
+  "kysymys": "Kerro lisää: Carniolan mehiläinen"
+ },
+ {
+  "n": 1187,
+  "kohta": "maa:SVN",
+  "kasite": "Anton Janša",
+  "kysymys": "Kerro lisää: Anton Janša"
+ },
+ {
+  "n": 1188,
+  "kohta": "maa:SVN",
+  "kasite": "Maailman mehiläispäivä",
+  "kysymys": "Kerro lisää: Maailman mehiläispäivä"
+ },
+ {
+  "n": 1189,
+  "kohta": "maa:SVN",
+  "kasite": "Jugoslaviasta",
+  "kysymys": "Kerro lisää: Jugoslaviasta"
+ },
+ {
+  "n": 1190,
+  "kohta": "maa:SVN",
+  "kasite": "Euroopan unioniin",
+  "kysymys": "Kerro lisää: Euroopan unioniin"
+ },
+ {
+  "n": 1191,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Pyhän Yrjön",
+  "kysymys": "Kerro lisää: Pyhän Yrjön"
+ },
+ {
+  "n": 1192,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Jason",
+  "kysymys": "Kerro lisää: Jason"
+ },
+ {
+  "n": 1193,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Lohikäärmesillan",
+  "kysymys": "Kerro lisää: Lohikäärmesillan"
+ },
+ {
+  "n": 1194,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Kolmoissilta",
+  "kysymys": "Kerro lisää: Kolmoissilta"
+ },
+ {
+  "n": 1195,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Kansallis- ja yliopistokirjasto",
+  "kysymys": "Kerro lisää: Kansallis- ja yliopistokirjasto"
+ },
+ {
+  "n": 1196,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Odprta kuhna",
+  "kysymys": "Kerro lisää: Odprta kuhna"
+ },
+ {
+  "n": 1197,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "potica",
+  "kysymys": "Kerro lisää: potica"
+ },
+ {
+  "n": 1198,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Tivoli",
+  "kysymys": "Kerro lisää: Tivoli"
+ },
+ {
+  "n": 1199,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Rožnik",
+  "kysymys": "Kerro lisää: Rožnik"
+ },
+ {
+  "n": 1200,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Ljubljanan suo",
+  "kysymys": "Kerro lisää: Ljubljanan suo"
+ },
+ {
+  "n": 1201,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Ljubljanica",
+  "kysymys": "Kerro lisää: Ljubljanica"
+ },
+ {
+  "n": 1202,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Euroopan vihreä pääkaupunki",
+  "kysymys": "Kerro lisää: Euroopan vihreä pääkaupunki"
+ },
+ {
+  "n": 1203,
+  "kohta": "kaupunki:ljubljana",
+  "kasite": "Prešernin aukio",
+  "kysymys": "Kerro lisää: Prešernin aukio"
+ },
+ {
+  "n": 1204,
+  "kohta": "maa:SWE",
+  "kasite": "Norjaa",
+  "kysymys": "Kerro lisää: Norjaa"
+ },
+ {
+  "n": 1205,
+  "kohta": "maa:SWE",
+  "kasite": "Suomen sodassa",
+  "kysymys": "Kerro lisää: Suomen sodassa"
+ },
+ {
+  "n": 1206,
+  "kohta": "maa:SWE",
+  "kasite": "puolueettomuuteen",
+  "kysymys": "Kerro lisää: puolueettomuuteen"
+ },
+ {
+  "n": 1207,
+  "kohta": "maa:SWE",
+  "kasite": "NATOon",
+  "kysymys": "Kerro lisää: NATOon"
+ },
+ {
+  "n": 1208,
+  "kohta": "maa:SWE",
+  "kasite": "Vasa",
+  "kysymys": "Kerro lisää: Vasa"
+ },
+ {
+  "n": 1209,
+  "kohta": "maa:SWE",
+  "kasite": "Djurgårdenin",
+  "kysymys": "Kerro lisää: Djurgårdenin"
+ },
+ {
+  "n": 1210,
+  "kohta": "maa:SWE",
+  "kasite": "Kustaa II Aadolfin",
+  "kysymys": "Kerro lisää: Kustaa II Aadolfin"
+ },
+ {
+  "n": 1211,
+  "kohta": "maa:SWE",
+  "kasite": "kanelbulle",
+  "kysymys": "Kerro lisää: kanelbulle"
+ },
+ {
+  "n": 1212,
+  "kohta": "maa:SWE",
+  "kasite": "Kanelbullens dag",
+  "kysymys": "Kerro lisää: Kanelbullens dag"
+ },
+ {
+  "n": 1213,
+  "kohta": "maa:SWE",
+  "kasite": "köttbullar",
+  "kysymys": "Kerro lisää: köttbullar"
+ },
+ {
+  "n": 1214,
+  "kohta": "maa:SWE",
+  "kasite": "allemansrätten",
+  "kysymys": "Kerro lisää: allemansrätten"
+ },
+ {
+  "n": 1215,
+  "kohta": "maa:SWE",
+  "kasite": "Kungsleden",
+  "kysymys": "Kerro lisää: Kungsleden"
+ },
+ {
+  "n": 1216,
+  "kohta": "maa:SWE",
+  "kasite": "euroviisujen",
+  "kysymys": "Kerro lisää: euroviisujen"
+ },
+ {
+  "n": 1217,
+  "kohta": "maa:SWE",
+  "kasite": "ABBA",
+  "kysymys": "Kerro lisää: ABBA"
+ },
+ {
+  "n": 1218,
+  "kohta": "maa:SWE",
+  "kasite": "Irlanti",
+  "kysymys": "Kerro lisää: Irlanti"
+ },
+ {
+  "n": 1219,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Birger Jarl",
+  "kysymys": "Kerro lisää: Birger Jarl"
+ },
+ {
+  "n": 1220,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Mälaren",
+  "kysymys": "Kerro lisää: Mälaren"
+ },
+ {
+  "n": 1221,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Hansaliitosta",
+  "kysymys": "Kerro lisää: Hansaliitosta"
+ },
+ {
+  "n": 1222,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Tukholman kuninkaanlinna",
+  "kysymys": "Kerro lisää: Tukholman kuninkaanlinna"
+ },
+ {
+  "n": 1223,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Storkyrkan",
+  "kysymys": "Kerro lisää: Storkyrkan"
+ },
+ {
+  "n": 1224,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Stortorget",
+  "kysymys": "Kerro lisää: Stortorget"
+ },
+ {
+  "n": 1225,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Mårten Trotzigs gränd",
+  "kysymys": "Kerro lisää: Mårten Trotzigs gränd"
+ },
+ {
+  "n": 1226,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "köttbullar",
+  "kysymys": "Kerro lisää: köttbullar"
+ },
+ {
+  "n": 1227,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "räksmörgås",
+  "kysymys": "Kerro lisää: räksmörgås"
+ },
+ {
+  "n": 1228,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Östermalms Saluhall",
+  "kysymys": "Kerro lisää: Östermalms Saluhall"
+ },
+ {
+  "n": 1229,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Vaxholm",
+  "kysymys": "Kerro lisää: Vaxholm"
+ },
+ {
+  "n": 1230,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Sandhamn",
+  "kysymys": "Kerro lisää: Sandhamn"
+ },
+ {
+  "n": 1231,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Waxholmsbolaget",
+  "kysymys": "Kerro lisää: Waxholmsbolaget"
+ },
+ {
+  "n": 1232,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Alfred Nobelin",
+  "kysymys": "Kerro lisää: Alfred Nobelin"
+ },
+ {
+  "n": 1233,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Tukholman konserttitalossa",
+  "kysymys": "Kerro lisää: Tukholman konserttitalossa"
+ },
+ {
+  "n": 1234,
+  "kohta": "kaupunki:tukholma",
+  "kasite": "Oslossa",
+  "kysymys": "Kerro lisää: Oslossa"
+ },
+ {
+  "n": 1235,
+  "kohta": "maa:TUR",
+  "kasite": "Antiokhos I",
+  "kysymys": "Kerro lisää: Antiokhos I"
+ },
+ {
+  "n": 1236,
+  "kohta": "maa:TUR",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 1237,
+  "kohta": "maa:TUR",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 1238,
+  "kohta": "maa:TUR",
+  "kasite": "helmisärki",
+  "kysymys": "Kerro lisää: helmisärki"
+ },
+ {
+  "n": 1239,
+  "kohta": "maa:TUR",
+  "kasite": "Van-kissa",
+  "kysymys": "Kerro lisää: Van-kissa"
+ },
+ {
+  "n": 1240,
+  "kohta": "maa:TUR",
+  "kasite": "Göbekli Tepe",
+  "kysymys": "Kerro lisää: Göbekli Tepe"
+ },
+ {
+  "n": 1241,
+  "kohta": "maa:TUR",
+  "kasite": "Çatalhöyükin",
+  "kysymys": "Kerro lisää: Çatalhöyükin"
+ },
+ {
+  "n": 1242,
+  "kohta": "maa:TUR",
+  "kasite": "hetiitit",
+  "kysymys": "Kerro lisää: hetiitit"
+ },
+ {
+  "n": 1243,
+  "kohta": "maa:TUR",
+  "kasite": "Marmaray",
+  "kysymys": "Kerro lisää: Marmaray"
+ },
+ {
+  "n": 1244,
+  "kohta": "maa:TUR",
+  "kasite": "lauttoja",
+  "kysymys": "Kerro lisää: lauttoja"
+ },
+ {
+  "n": 1245,
+  "kohta": "maa:TUR",
+  "kasite": "Rize",
+  "kysymys": "Kerro lisää: Rize"
+ },
+ {
+  "n": 1246,
+  "kohta": "maa:TUR",
+  "kasite": "turkkilainen kahvi",
+  "kysymys": "Kerro lisää: turkkilainen kahvi"
+ },
+ {
+  "n": 1247,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Justinianus",
+  "kysymys": "Kerro lisää: Justinianus"
+ },
+ {
+  "n": 1248,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Mehmet II",
+  "kysymys": "Kerro lisää: Mehmet II"
+ },
+ {
+  "n": 1249,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Hagia Sofia",
+  "kysymys": "Kerro lisää: Hagia Sofia"
+ },
+ {
+  "n": 1250,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Galata",
+  "kysymys": "Kerro lisää: Galata"
+ },
+ {
+  "n": 1251,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Galatan silta",
+  "kysymys": "Kerro lisää: Galatan silta"
+ },
+ {
+  "n": 1252,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Byzantionin",
+  "kysymys": "Kerro lisää: Byzantionin"
+ },
+ {
+  "n": 1253,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 1254,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Kedi",
+  "kysymys": "Kerro lisää: Kedi"
+ },
+ {
+  "n": 1255,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Basilikasäiliö",
+  "kysymys": "Kerro lisää: Basilikasäiliö"
+ },
+ {
+  "n": 1256,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Medusan",
+  "kysymys": "Kerro lisää: Medusan"
+ },
+ {
+  "n": 1257,
+  "kohta": "kaupunki:istanbul",
+  "kasite": "Tünel",
+  "kysymys": "Kerro lisää: Tünel"
+ },
+ {
+  "n": 1258,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Aydınin",
+  "kysymys": "Kerro lisää: Aydınin"
+ },
+ {
+  "n": 1259,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Smyrna",
+  "kysymys": "Kerro lisää: Smyrna"
+ },
+ {
+  "n": 1260,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Kadifekale",
+  "kysymys": "Kerro lisää: Kadifekale"
+ },
+ {
+  "n": 1261,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Aleksanteri Suuri",
+  "kysymys": "Kerro lisää: Aleksanteri Suuri"
+ },
+ {
+  "n": 1262,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Konakin",
+  "kysymys": "Kerro lisää: Konakin"
+ },
+ {
+  "n": 1263,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Karşıyakan",
+  "kysymys": "Kerro lisää: Karşıyakan"
+ },
+ {
+  "n": 1264,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Asansör",
+  "kysymys": "Kerro lisää: Asansör"
+ },
+ {
+  "n": 1265,
+  "kohta": "kaupunki:izmir",
+  "kasite": "boyoz",
+  "kysymys": "Kerro lisää: boyoz"
+ },
+ {
+  "n": 1266,
+  "kohta": "kaupunki:izmir",
+  "kasite": "sefardijuutalaisilta",
+  "kysymys": "Kerro lisää: sefardijuutalaisilta"
+ },
+ {
+  "n": 1267,
+  "kohta": "kaupunki:izmir",
+  "kasite": "simitiä",
+  "kysymys": "Kerro lisää: simitiä"
+ },
+ {
+  "n": 1268,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Efesos",
+  "kysymys": "Kerro lisää: Efesos"
+ },
+ {
+  "n": 1269,
+  "kohta": "kaupunki:izmir",
+  "kasite": "Pergamon",
+  "kysymys": "Kerro lisää: Pergamon"
+ },
+ {
+  "n": 1270,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Atatürkin",
+  "kysymys": "Kerro lisää: Atatürkin"
+ },
+ {
+  "n": 1271,
+  "kohta": "kaupunki:ankara",
+  "kasite": "kansalliskokous",
+  "kysymys": "Kerro lisää: kansalliskokous"
+ },
+ {
+  "n": 1272,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Angora",
+  "kysymys": "Kerro lisää: Angora"
+ },
+ {
+  "n": 1273,
+  "kohta": "kaupunki:ankara",
+  "kasite": "mohairia",
+  "kysymys": "Kerro lisää: mohairia"
+ },
+ {
+  "n": 1274,
+  "kohta": "kaupunki:ankara",
+  "kasite": "angorakani",
+  "kysymys": "Kerro lisää: angorakani"
+ },
+ {
+  "n": 1275,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Augustuksen ja Rooman temppeli",
+  "kysymys": "Kerro lisää: Augustuksen ja Rooman temppeli"
+ },
+ {
+  "n": 1276,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Res Gestae",
+  "kysymys": "Kerro lisää: Res Gestae"
+ },
+ {
+  "n": 1277,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Anıtkabir",
+  "kysymys": "Kerro lisää: Anıtkabir"
+ },
+ {
+  "n": 1278,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Atatürk",
+  "kysymys": "Kerro lisää: Atatürk"
+ },
+ {
+  "n": 1279,
+  "kohta": "kaupunki:ankara",
+  "kasite": "leijonatie",
+  "kysymys": "Kerro lisää: leijonatie"
+ },
+ {
+  "n": 1280,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Tuz-järvi",
+  "kysymys": "Kerro lisää: Tuz-järvi"
+ },
+ {
+  "n": 1281,
+  "kohta": "kaupunki:ankara",
+  "kasite": "Anatolian ylätasangon",
+  "kysymys": "Kerro lisää: Anatolian ylätasangon"
+ },
+ {
+  "n": 1282,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "tuffiin",
+  "kysymys": "Kerro lisää: tuffiin"
+ },
+ {
+  "n": 1283,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Derinkuyu",
+  "kysymys": "Kerro lisää: Derinkuyu"
+ },
+ {
+  "n": 1284,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "freskoilla",
+  "kysymys": "Kerro lisää: freskoilla"
+ },
+ {
+  "n": 1285,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Karanlık kilise",
+  "kysymys": "Kerro lisää: Karanlık kilise"
+ },
+ {
+  "n": 1286,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 1287,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "keijupiiput",
+  "kysymys": "Kerro lisää: keijupiiput"
+ },
+ {
+  "n": 1288,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Erciyes",
+  "kysymys": "Kerro lisää: Erciyes"
+ },
+ {
+  "n": 1289,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Uçhisarin",
+  "kysymys": "Kerro lisää: Uçhisarin"
+ },
+ {
+  "n": 1290,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Kyyhkyslaakson",
+  "kysymys": "Kerro lisää: Kyyhkyslaakson"
+ },
+ {
+  "n": 1291,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "testikebab",
+  "kysymys": "Kerro lisää: testikebab"
+ },
+ {
+  "n": 1292,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Kızılırmak",
+  "kysymys": "Kerro lisää: Kızılırmak"
+ },
+ {
+  "n": 1293,
+  "kohta": "kaupunki:kapadokia",
+  "kasite": "Avanos",
+  "kysymys": "Kerro lisää: Avanos"
+ },
+ {
+  "n": 1294,
+  "kohta": "maa:UKR",
+  "kasite": "tšernozjomia",
+  "kysymys": "Kerro lisää: tšernozjomia"
+ },
+ {
+  "n": 1295,
+  "kohta": "maa:UKR",
+  "kasite": "vehnää",
+  "kysymys": "Kerro lisää: vehnää"
+ },
+ {
+  "n": 1296,
+  "kohta": "maa:UKR",
+  "kasite": "auringonkukkaa",
+  "kysymys": "Kerro lisää: auringonkukkaa"
+ },
+ {
+  "n": 1297,
+  "kohta": "maa:UKR",
+  "kasite": "Hoverla",
+  "kysymys": "Kerro lisää: Hoverla"
+ },
+ {
+  "n": 1298,
+  "kohta": "maa:UKR",
+  "kasite": "huculit",
+  "kysymys": "Kerro lisää: huculit"
+ },
+ {
+  "n": 1299,
+  "kohta": "maa:UKR",
+  "kasite": "pyökkimetsistä",
+  "kysymys": "Kerro lisää: pyökkimetsistä"
+ },
+ {
+  "n": 1300,
+  "kohta": "maa:UKR",
+  "kasite": "Dnepr",
+  "kysymys": "Kerro lisää: Dnepr"
+ },
+ {
+  "n": 1301,
+  "kohta": "maa:UKR",
+  "kasite": "Kiova",
+  "kysymys": "Kerro lisää: Kiova"
+ },
+ {
+  "n": 1302,
+  "kohta": "maa:UKR",
+  "kasite": "kasakat",
+  "kysymys": "Kerro lisää: kasakat"
+ },
+ {
+  "n": 1303,
+  "kohta": "maa:UKR",
+  "kasite": "pysankat",
+  "kysymys": "Kerro lisää: pysankat"
+ },
+ {
+  "n": 1304,
+  "kohta": "maa:UKR",
+  "kasite": "kistka",
+  "kysymys": "Kerro lisää: kistka"
+ },
+ {
+  "n": 1305,
+  "kohta": "maa:UKR",
+  "kasite": "Kolomyjassa",
+  "kysymys": "Kerro lisää: Kolomyjassa"
+ },
+ {
+  "n": 1306,
+  "kohta": "maa:UKR",
+  "kasite": "borssi",
+  "kysymys": "Kerro lisää: borssi"
+ },
+ {
+  "n": 1307,
+  "kohta": "maa:UKR",
+  "kasite": "pampuškeja",
+  "kysymys": "Kerro lisää: pampuškeja"
+ },
+ {
+  "n": 1308,
+  "kohta": "maa:UKR",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 1309,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Jaroslav Viisas",
+  "kysymys": "Kerro lisää: Jaroslav Viisas"
+ },
+ {
+  "n": 1310,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Oranta",
+  "kysymys": "Kerro lisää: Oranta"
+ },
+ {
+  "n": 1311,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 1312,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Arsenalna",
+  "kysymys": "Kerro lisää: Arsenalna"
+ },
+ {
+  "n": 1313,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Kiovan metro",
+  "kysymys": "Kerro lisää: Kiovan metro"
+ },
+ {
+  "n": 1314,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Luolaluostarista",
+  "kysymys": "Kerro lisää: Luolaluostarista"
+ },
+ {
+  "n": 1315,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Kiovan Rusin",
+  "kysymys": "Kerro lisää: Kiovan Rusin"
+ },
+ {
+  "n": 1316,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Kultainen portti",
+  "kysymys": "Kerro lisää: Kultainen portti"
+ },
+ {
+  "n": 1317,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Konstantinopolin",
+  "kysymys": "Kerro lisää: Konstantinopolin"
+ },
+ {
+  "n": 1318,
+  "kohta": "kaupunki:kiova",
+  "kasite": "funikulaari",
+  "kysymys": "Kerro lisää: funikulaari"
+ },
+ {
+  "n": 1319,
+  "kohta": "kaupunki:kiova",
+  "kasite": "Podil",
+  "kysymys": "Kerro lisää: Podil"
+ },
+ {
+  "n": 1320,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Sergei Eisenstein",
+  "kysymys": "Kerro lisää: Sergei Eisenstein"
+ },
+ {
+  "n": 1321,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Panssarilaiva Potemkin",
+  "kysymys": "Kerro lisää: Panssarilaiva Potemkin"
+ },
+ {
+  "n": 1322,
+  "kohta": "kaupunki:odessa",
+  "kasite": "simpukkakalkkikivestä",
+  "kysymys": "Kerro lisää: simpukkakalkkikivestä"
+ },
+ {
+  "n": 1323,
+  "kohta": "kaupunki:odessa",
+  "kasite": "katakombeiksi",
+  "kysymys": "Kerro lisää: katakombeiksi"
+ },
+ {
+  "n": 1324,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Deribasivska",
+  "kysymys": "Kerro lisää: Deribasivska"
+ },
+ {
+  "n": 1325,
+  "kohta": "kaupunki:odessa",
+  "kasite": "José de Ribasin",
+  "kysymys": "Kerro lisää: José de Ribasin"
+ },
+ {
+  "n": 1326,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Katariina",
+  "kysymys": "Kerro lisää: Katariina"
+ },
+ {
+  "n": 1327,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Humorina",
+  "kysymys": "Kerro lisää: Humorina"
+ },
+ {
+  "n": 1328,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Mihail Žvanetski",
+  "kysymys": "Kerro lisää: Mihail Žvanetski"
+ },
+ {
+  "n": 1329,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Fellner ja Helmer",
+  "kysymys": "Kerro lisää: Fellner ja Helmer"
+ },
+ {
+  "n": 1330,
+  "kohta": "kaupunki:odessa",
+  "kasite": "Wienin",
+  "kysymys": "Kerro lisää: Wienin"
+ }
+]

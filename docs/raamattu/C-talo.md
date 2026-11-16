@@ -34,4 +34,4 @@ KONE JA TURVA
 23. Tilien käyttö ja vaihto: kortti tilit-ja-kiintio. Laitteet ja simulaattorit: kortti laitteet-ja-simulaattorit.
 
 KK:N JUNASANA JA TARKISTUS
-24. Junasana menee roolille ja sama rivi PT:lle. Ennen sitä: git diff juna...haara ja merge-tree juuri haetun kärjen päälle, testisarjat nimeltä ("vihreät" ei riitä) ja ajon skriptin komennot. Versiorivi vain koodista varmistetusta näkyvästä muutoksesta. Kiirepyyntö kertoo, mitä se ei saa pysäyttää. Hiljaisuus ei ole etenemistä. Työtapapäätös kirjataan korttiin samassa vuorossa.
+24. Junasana menee roolille ja sama rivi PT:lle. Junasana = KK:n sana sha:lle ja versiorivi, KK lukee diffin itse; testit yöllä (juna-ja-julkaisu 2). Versiorivi vain koodista varmistetusta näkyvästä muutoksesta. Kiirepyyntö kertoo, mitä se ei saa pysäyttää. Hiljaisuus ei ole etenemistä. Työtapapäätös kirjataan korttiin samassa vuorossa. Palautus: M-rivien vastaukset (valmiin-maaritelma 15).

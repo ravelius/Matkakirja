@@ -36,37 +36,32 @@
   },
   "amsterdam": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378",
+   "tekstiSha256": "c67bd2bdaef9cc6c78f2720f3150a8784558a9b9b214b638ee11d7cdd35f46e0",
    "tila": "ok",
    "aani": {
-    "tavut": 431376,
-    "sha256": "b788530f4fe78a661a962097d24c0aa52d6d58c69b1eb0e78d941b40b5e1b526"
+    "tavut": 284046,
+    "sha256": "9275266c6d807cbc412cfa3362e60629486cba021cb7fa5a2339d27a92856e51"
    },
    "eleet": [
     {
      "id": "amsterdam.livia.c1",
-     "alku": 2060,
-     "loppu": 4019
+     "alku": 1520,
+     "loppu": 3360
     },
     {
      "id": "amsterdam.livia.c2",
-     "alku": 4019,
-     "loppu": 6480
+     "alku": 3360,
+     "loppu": 5920
     },
     {
      "id": "amsterdam.livia.c3",
-     "alku": 6480,
-     "loppu": 11380
+     "alku": 5920,
+     "loppu": 9720
     },
     {
      "id": "amsterdam.livia.c4",
-     "alku": 11380,
-     "loppu": 15400
-    },
-    {
-     "id": "amsterdam.livia.c5",
-     "alku": 15400,
-     "loppu": 17660
+     "alku": 9720,
+     "loppu": 11840
     }
    ]
   },
@@ -1057,32 +1052,27 @@
   },
   "rooma": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "720c7925c99a9c9977292a86530a419f73ce372d816df17c78606cfafcdcc6c0",
+   "tekstiSha256": "0a36b6ffdb05c1bba84f55f87aea12236ad4fd466d93985097e991ac730bd89f",
    "tila": "ok",
    "aani": {
-    "tavut": 353009,
-    "sha256": "a8c6487f96802e310c07bc737bee6830fa2e2b24e2e556f1876545a13d632ec8"
+    "tavut": 208813,
+    "sha256": "de576044ecbf6be322693ee7b11b33fc22bfea84e3807e5c1f896cae1f425525"
    },
    "eleet": [
     {
      "id": "rooma.livia.c1",
-     "alku": 140,
-     "loppu": 2900
+     "alku": 240,
+     "loppu": 3200
     },
     {
      "id": "rooma.livia.c2",
-     "alku": 2900,
-     "loppu": 6140
+     "alku": 3200,
+     "loppu": 6160
     },
     {
      "id": "rooma.livia.c3",
-     "alku": 6140,
-     "loppu": 11400
-    },
-    {
-     "id": "rooma.livia.c4",
-     "alku": 11400,
-     "loppu": 14440
+     "alku": 6160,
+     "loppu": 8720
     }
    ]
   },
@@ -1449,32 +1439,32 @@
   },
   "wien": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "99deb3d702990d1fec29d2e2b4c02cac6b8bdde0f03435dfcd26bc9fa077c03b",
+   "tekstiSha256": "ca1ae714405a11cb6735fd19397adf128acef5d5d443aab480c7281bb9baf301",
    "tila": "ok",
    "aani": {
-    "tavut": 306616,
-    "sha256": "0b54e1e90862e3e88a66922f92102c4d7f2a00121f1f996216526676445d7fe5"
+    "tavut": 266492,
+    "sha256": "3728c0023e3955637c6d7078df6a90b5db53233156b04d963f6d98795a73064c"
    },
    "eleet": [
     {
      "id": "wien.livia.c1",
-     "alku": 180,
-     "loppu": 6180
+     "alku": 160,
+     "loppu": 3200
     },
     {
      "id": "wien.livia.c2",
-     "alku": 6180,
-     "loppu": 8600
+     "alku": 3200,
+     "loppu": 6720
     },
     {
      "id": "wien.livia.c3",
-     "alku": 8600,
-     "loppu": 10960
+     "alku": 6720,
+     "loppu": 8600
     },
     {
      "id": "wien.livia.c4",
-     "alku": 10960,
-     "loppu": 12460
+     "alku": 8600,
+     "loppu": 11120
     }
    ]
   }

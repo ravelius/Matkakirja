@@ -1,0 +1,36 @@
+### v2-1170
+VANHA: Alueen kellarit ovat suurimmaksi osaksi peräisin ajalta, jolloin seutu oli turkkilaisten vallan alla.
+UUSI: Alueella on vuosisatoja vanhoja kalliokellareita.
+SYY: väärä fakta (Tokaj ei ollut ottomaanien vallassa)
+
+### v2-1172
+VANHA: kun seura syntyi Popradissa vuonna 1873
+UUSI: kun seura syntyi Spišin seudulla vuonna 1873
+SYY: epävarma yksityiskohta (perustamispaikka)
+
+### v2-1186
+VANHA: lähti lukutaidottomana opiskelemaan maalariksi
+UUSI: lähti opiskelemaan maalariksi
+SYY: väärä fakta (lukutaidottomuus ei pidä paikkaansa)
+
+### v2-1188
+VANHA: Serbia, Montenegro ja Pohjois-Makedonia
+UUSI: Serbia, Montenegro ja Makedonia
+SYY: anakronismi (nimi Pohjois-Makedonia vasta 2019)
+
+### v2-1207
+VANHA: Museossa on käynyt yli 45 miljoonaa kävijää.
+UUSI: Museossa on käynyt miljoonia kävijöitä.
+SYY: epävarma luku
+
+### v2-1210
+VANHA: jolla juodaan kahvia tai teetä
+UUSI: jonka aikana juodaan kahvia tai teetä
+SYY: kielivirhe
+
+### v2-1238
+VANHA: Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955.
+UUSI: Kaksi brittiläistä naista toi rodun Eurooppaan vuonna 1955.
+SYY: väärä fakta (eivät olleet tutkijoita)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 7

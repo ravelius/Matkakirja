@@ -577,6 +577,10 @@ test('alkuerän retain-kuvat käyttävät hyväksyttyä versiota', async () => {
   assert.match(FOKUSVIRRAT.pariisi.matkakirja.luentakuva.osoite,
     /\/kaupunki-intro-v3\/isoisa-pariisi-valokuva-v2\.png$/, 'pariisi');
   assert.equal(FOKUSVIRRAT.pariisi.matkakirja.luentakuva2, undefined, 'pariisi: yksi kuva');
+  // Rooman luentakuva: Colosseumin kitkentä (Codex #2258, 15.11.2026; luonnos-PR 6822); yksi kuva.
+  assert.match(FOKUSVIRRAT.rooma.matkakirja.luentakuva.osoite,
+    /\/kaupunki-intro-v3\/isoisa-rooma-kitkenta-v1\.png$/, 'rooma');
+  assert.equal(FOKUSVIRRAT.rooma.matkakirja.luentakuva2, undefined, 'rooma: yksi kuva');
 });
 
 /* ---------------------------------------------------------------- */

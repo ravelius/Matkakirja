@@ -1,0 +1,36 @@
+### v2-92
+VANHA: liitettiin Unescon maailmanperintöluetteloon vuonna 1979
+UUSI: liitettiin Unescon maailmanperintöluetteloon vuosina 1979–1980
+SYY: Ohridin luonto liitettiin luetteloon 1979 ja kulttuuriperintö 1980
+
+### v2-98
+VANHA: ja teki Bulgariasta jälleen itsenäisen
+UUSI: ja johti Bulgarian valtion uudelleen syntymiseen
+SYY: anakronismi, Bulgaria oli 1878 vasallina ruhtinaskunta, täysi itsenäisyys 1908
+
+### v2-103
+VANHA: Se rakennettiin kolmessa vaiheessa noin 300 vuoden aikana.
+UUSI: Se rakennettiin kolmessa vaiheessa 900-luvulta 1800-luvulle.
+SYY: väärä fakta, vaiheet 900/1000-luvulla, 1259 ja 1800-luvulla
+
+### v2-150
+VANHA: Lublinin unionin jälkeen vuonna 1569 virallinen kieli oli puola
+UUSI: Lublinin unionin jälkeen vuonna 1569 puolan asema vahvistui, ja se korvasi ruteenin virallisena kielenä 1600-luvun lopulla
+SYY: väärä fakta, ruteeni säilyi virallisena kielenä vuoteen 1697
+
+### v2-154
+VANHA: järviä noin 4 000
+UUSI: järviä noin 11 000
+SYY: väärä luku, Valko-Venäjällä on noin 11 000 järveä
+
+### v2-158
+VANHA: noin 10 miljoonaa nimekettä
+UUSI: miljoonia nimikkeitä
+SYY: kielivirhe (nimeke) ja epävarma luku
+
+### v2-161
+VANHA: Louhinta kesti seitsemäntoista vuotta
+UUSI: Rakentaminen kesti seitsemäntoista vuotta
+SYY: väärä fakta, louhinta kesti noin 11 vuotta, koko rakentaminen 1999–2016
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 7

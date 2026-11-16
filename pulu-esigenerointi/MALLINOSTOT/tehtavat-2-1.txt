@@ -1,0 +1,415 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Tavat: Seinen vihreät kirjalaatikot] 2024 — Seinen kaiteisiin on pultattu vihreitä peltilaatikoita, joissa myydään käytettyjä kirjoja. Kauppiaita on runsaat kaksisataa ja laatikoita lähes yhdeksänsataa kolmen kilometrin matkalla. Kaupunki päättää säännöt: yksi myyjä saa kahdeksan metriä kaidetta ja enintään neljä laatikkoa, ne on avattava vähintään neljänä päivänä viikossa, ja maali on aina sama vaunuvihreä, jota käytettiin jo ensimmäisessä metrossa. Kesällä 2024 laatikot piti purkaa olympialaisten avajaisten tieltä, mutta päätös peruttiin ja ne saivat jäädä.
+AIEMPI KYSYMYS: Miksi Napoleon on haudattu juuri Invalideihin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä tiedän. Napoleon toivoi testamentissaan lepäävänsä [[Seinen]] rannalla Ranskan kansan keskellä. Kun [[Britannia]] luovutti jäännökset vuonna 1840, hallitus valitsi sotilaiden kodin [[kupolikirkon]], koska se oli jo armeijan kunniapaikka. [[Sarkofagi]] valmistui vuonna 1861. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Seinen
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi Napoleon on haudattu juuri Invalideihin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä tiedän. Napoleon toivoi testamentissaan lepäävänsä [[Seinen]] rannalla Ranskan kansan keskellä. Kun [[Britannia]] luovutti jäännökset vuonna 1840, hallitus valitsi sotilaiden kodin [[kupolikirkon]], koska se oli jo armeijan kunniapaikka. [[Sarkofagi]] valmistui vuonna 1861. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Britannia
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi Napoleon on haudattu juuri Invalideihin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä tiedän. Napoleon toivoi testamentissaan lepäävänsä [[Seinen]] rannalla Ranskan kansan keskellä. Kun [[Britannia]] luovutti jäännökset vuonna 1840, hallitus valitsi sotilaiden kodin [[kupolikirkon]], koska se oli jo armeijan kunniapaikka. [[Sarkofagi]] valmistui vuonna 1861. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: kupolikirkon
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Miksi Napoleon on haudattu juuri Invalideihin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tän minä tiedän. Napoleon toivoi testamentissaan lepäävänsä [[Seinen]] rannalla Ranskan kansan keskellä. Kun [[Britannia]] luovutti jäännökset vuonna 1840, hallitus valitsi sotilaiden kodin [[kupolikirkon]], koska se oli jo armeijan kunniapaikka. [[Sarkofagi]] valmistui vuonna 1861. Ja tän kaiken minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Sarkofagi
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: San Franciscon kaupungintalo] 1870–1915 Edellinen kaupungintalo oli varoittava esimerkki. Sen rakentaminen alkoi 1870 vanhan hautausmaan paikalle kolmion muotoiselle tontille, ja Augustus Laverin ja Thomas Stentin suunnitelma valmistui vasta 1897 — kaksikymmentäseitsemän vuotta ja seitsemän pääarkkitehtia myöhemmin. Työtä varjosti korruptio: tiilien huhuttiin olevan kelvottomia ja seinien täytteenä todettiin olevan hiekkaa, lattiat olivat vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys kaatoi talon vajaat kymmenen vuotta sen valmistumisen jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta jäljellä. Uus…
+AIEMPI KYSYMYS: Asuuko Invalideissa vielä sotilaita?
+AIEMPI VASTAUS (Livia):
+Joo, tohon osaan vastata suoraan. Asuu, mutta vain pieni määrä: [[Institution nationale des Invalides]] hoitaa yhä vakavasti vammautuneita [[sotaveteraaneja]]. Suurin osa rakennuksesta on kuitenkin [[armeijamuseota]]. Lyhyt vastaus, mut täsmällinen.
+KYSYMYS: Kerro lisää: Institution nationale des Invalides
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Asuuko Invalideissa vielä sotilaita?
+AIEMPI VASTAUS (Livia):
+Joo, tohon osaan vastata suoraan. Asuu, mutta vain pieni määrä: [[Institution nationale des Invalides]] hoitaa yhä vakavasti vammautuneita [[sotaveteraaneja]]. Suurin osa rakennuksesta on kuitenkin [[armeijamuseota]]. Lyhyt vastaus, mut täsmällinen.
+KYSYMYS: Kerro lisää: sotaveteraaneja
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Historia: Kultainen sulttaani ja retki Nigerille] 1590–1591 — Taistelun voittajaksi jäi Ahmad al-Mansur, jota kutsuttiin nimellä al-Dhahabī, kultainen. Lunnasrahoilla hän rakensi Marrakechiin El Badin palatsin, jonka työ alkoi jo joulukuussa 1578 ja kesti viisitoista vuotta. Kultaa hän halusi lisää, ja se oli Saharan takana: 16. lokakuuta 1590 lähti aavikon yli neljäntuhannen miehen armeija, jota johti espanjalaissyntyinen Judar Pasha. Tondibin taistelussa songhailaisia oli nelinkymmentätuhatta, mutta heillä ei ollut ruutiaseita. Marokkolaiset ryöstivät Timbuktun, Djennén ja pääkaupunki Gaon — ja huomasivat, ettei Saharan takaista valtakuntaa voi hallita. Kaupungit menetettiin pian vuoden 1620 jälkeen.
+- [Vaduz — kaupunkilehti / Pieni valtio kaupungin ympärillä: Armeija, joka palasi ehkä yhden miehen isompana] Itävalta-Preussin sodassa 1866 ruhtinas Johann II asetti sotilaansa Saksan liiton käyttöön vain Tirolin puolustamiseksi. Maan joukot asettuivat Stilfser Jochille Peter Rheinbergerin johdolla, ja pieni reservi jäi Vaduzin linnaan. Kun sota päättyi heinäkuussa, armeija marssi kotiin ja sai juhlallisen vastaanoton Vaduzissa. Kansantarun mukaan lähti 80 miestä ja palasi 81, ja lisämiehen henkilöllisyys on kiistanalainen: hän oli itävaltalainen yhteysupseeri tai italialainen maanviljelijä. Armeija lakkautettiin 12.2.1868, kun Saksan liitto oli hajonnut ja ylläpito oli käynyt kalliiksi. Viimeinen elossa ollut veteraani Andreas Kieber kuoli 1939.
+AIEMPI KYSYMYS: Asuuko Invalideissa vielä sotilaita?
+AIEMPI VASTAUS (Livia):
+Joo, tohon osaan vastata suoraan. Asuu, mutta vain pieni määrä: [[Institution nationale des Invalides]] hoitaa yhä vakavasti vammautuneita [[sotaveteraaneja]]. Suurin osa rakennuksesta on kuitenkin [[armeijamuseota]]. Lyhyt vastaus, mut täsmällinen.
+KYSYMYS: Kerro lisää: armeijamuseota
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Raha puhuu, ja kyyhky kuuntelee. [[Orjantappurakruunu]] oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki [[Pariisista]] kristikunnan keskuksen ja [[Ludvig IX:stä]] sen suojelijan. Ludvig maksoi jäännöksestä 135 000 [[livreä]], yli kolme kertaa enemmän kuin sen säilytykseen rakennettu kappeli maksoi. Kallis kruunu, halvempi kotelo.
+KYSYMYS: Kerro lisää: Orjantappurakruunu
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Kuvataide: Pariisista Siglapiin, nimeksi santelipuu] 1953–1982 — Georgette Chen syntyi antiikkikauppiaan perheeseen ja vietti lapsuuden Pariisin ja Kiinan väliä. Vuonna 1930 kaksi hänen työtään valittiin Salon d’Automneen ja yhden osti pariisilainen museo, mikä oli tuolloin aasialaiselle harvinaista. Sota vei hänet Hongkongiin, japanilaiset pidättivät pariskunnan 1944 ja hän jäi leskeksi. Vuonna 1953 hän piti Singaporessa kahdeksankymmenen työn näyttelyn ja jäi kaupunkiin lopuksi ikäänsä. Hän opetteli malaijia ja otti nimekseen Chendana, santelipuu, jonka hänen malaijilaiset ystävänsä keksivät. Hän maalasi rambutaneja, jokinäkymiä sekä sikhivartijoita turbaaniensa värien takia.
+- [NCL — maalehti / Rakennukset: Majakka joka purjehti Pariisista] 1865 — Amédéen majakka valettiin ja koottiin ensin kokeeksi Pariisissa vuonna 1862 ja esiteltiin Lontoon maailmannäyttelyssä samana vuonna. Sen jälkeen 56 metriä korkea rautatorni purettiin 1 265 osaan, pakattiin lähes 388 tonnin painoisiksi kuormiksi ja purjehdittiin Uuteen-Kaledoniaan, missä sen kokoaminen Amédéen saarelle kesti kymmenen kuukautta. Peruskivi laskettiin tammikuussa 1865, ja majakka sytytettiin ensimmäisen kerran marraskuussa 1865. Se oli Ranskan ensimmäinen kokonaan metallinen majakka ja on yhä yksi maailman korkeimmista, 24 kilometrin päässä Nouméasta laivaväylää valaisemassa.
+AIEMPI KYSYMYS: Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Raha puhuu, ja kyyhky kuuntelee. [[Orjantappurakruunu]] oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki [[Pariisista]] kristikunnan keskuksen ja [[Ludvig IX:stä]] sen suojelijan. Ludvig maksoi jäännöksestä 135 000 [[livreä]], yli kolme kertaa enemmän kuin sen säilytykseen rakennettu kappeli maksoi. Kallis kruunu, halvempi kotelo.
+KYSYMYS: Kerro lisää: Pariisista
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historian hetki: Bernauer Straße 1961 — piikkilanka kadun poikki] 13.8.1961 — Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on l…
+- [Berliini — kohdekartta / Kohdekartta: Muuri 1961] Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on lähtenyt vuod…
+AIEMPI KYSYMYS: Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Raha puhuu, ja kyyhky kuuntelee. [[Orjantappurakruunu]] oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki [[Pariisista]] kristikunnan keskuksen ja [[Ludvig IX:stä]] sen suojelijan. Ludvig maksoi jäännöksestä 135 000 [[livreä]], yli kolme kertaa enemmän kuin sen säilytykseen rakennettu kappeli maksoi. Kallis kruunu, halvempi kotelo.
+KYSYMYS: Kerro lisää: Ludvig IX:stä
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja ka…
+AIEMPI KYSYMYS: Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Raha puhuu, ja kyyhky kuuntelee. [[Orjantappurakruunu]] oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki [[Pariisista]] kristikunnan keskuksen ja [[Ludvig IX:stä]] sen suojelijan. Ludvig maksoi jäännöksestä 135 000 [[livreä]], yli kolme kertaa enemmän kuin sen säilytykseen rakennettu kappeli maksoi. Kallis kruunu, halvempi kotelo.
+KYSYMYS: Kerro lisää: livreä
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Luxembourgin puisto] 1612 Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä viihtynyt Louvressa. Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, joka jäljitteli hänen kotikaupunkinsa Firenzen Palazzo Pittiä. Puistoon istutettiin 2 000 jalavaa, ja firenzeläinen suihkulähdemestari Tommaso Francini muotoili maisemasta sellaisen, jollaisen kuningatar oli lapsena tuntenut. Puisto on kasvanut ja kutistunut vallanpitäjien mukana. Alun kahdeksasta hehtaarista se laajeni kolmeenkymmeneen 1630-luvulla ja vallankumouksen jälkeen neljäänkymmeneen, kun naapuriluostarin maat takavarikoitiin. Napoleon III:n katutyöt veivät 1…
+- [Pariisi — kohdekartta / Kohdekartta: Louvre] 1793 Louvre ei ollut alun perin museo vaan linnoitus: kuningas Filip II rakennutti sen 1100-luvun lopulla puolustamaan Pariisia. Vuosisatojen kuluessa siitä tehtiin kuninkaallinen palatsi, kunnes Ranskan vallankumouksen jälkeen se avattiin kaikille kansalaisille museona elokuussa 1793. Nykyään Louvressa on esillä noin 35 000 taideteosta, ja koko kokoelmassa on peräti 500 000 esinettä. Museo on maailman suurin, ja sen käytävät ovat kilometrien mittaiset. Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: arkkitehti I. M. Pein suunnittelema lasinen pyramidi, josta tuli museon pääsisäänkäynti. Aluksi moni pariisilainen paheksui lasirakennelmaa vanhan palatsin edessä, mutta siitä tuli pia…
+AIEMPI KYSYMYS: Miten lasit selvisivät vallankumouksesta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä kerrottiin kerran ikkunalaudalla. [[Ranskan vallankumouksen]] jälkeen kappeli muutettiin oikeuslaitoksen arkistoksi: ikkunoiden alaosia poistettiin, ja asiakirjakaapit peittivät seinien alaosat. Vuosien 1840–1860 [[restauroinnissa]] ikkunat korjattiin ja puuttuvat osat tehtiin uudelleen, ja noin kaksi kolmasosaa [[lasimaalauksista]] on silti peräisin 1200-luvulta. Ikkunoiden kanssa ei kyl pidä kiirehtiä.
+KYSYMYS: Kerro lisää: Ranskan vallankumouksen
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Pyhän Joosefin katedraali] 1893–1898 Ranskalaiset lähetyssaarnaajat rakensivat roomalaiskatolisen katedraalin vuosina 1893–1898 Baghanin alueelle Kenyatta Roadin tuntumaan. Suunnittelun esikuvana oli Marseillen katedraali, ja kirkot muistuttavat toisiaan — Kivikaupungin katedraali on vain paljon pienempi. Sen tunnusmerkki on kaksi tornia. Ne näkyvät kauas Kivikaupungin ylitse ja mereltä saavuttaessa, ja ne ovat helpoimmin tunnistettava osa kaupungin siluettia. Itse kirkkoa on silti vaikea löytää: Baghanin kujat kiertävät niin, että tornit näkyvät koko ajan mutta ovi ei. Helpoin reitti on Kenyatta Roadia Gizenga Streetille ja siitä ensimmäinen katu oikealle. Laatat ja lasimaalaukset tuotiin aikoinaan Ranskasta. Sisäse…
+- [Zagreb — kohdekartta / Kohdekartta: Lotrščakin torni] 1200-luku Lotrščakin torni rakennettiin osana Gradecin muureja, jotka valmistuivat 1260-luvulla, puolustamaan eteläistä Dverce-porttia. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello. Kello soi merkiksi porttien sulkemisesta, ja Dverce-portti purettiin 1812 eteläisen kävelykadun tieltä. Vuonna 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta ja puinen palotähystys. Isoisän matkavuonna 1873 nämä lisäykset olivat jo paikallaan, mutta tykkiä ei vielä ollut. Kaupunki päätti hankkia sen myöhemmin 1800-luvulla, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus toimi merkkinä kirkonkellojen soittajille. Tykki ammutaan neljännen kerroksen eteläikkunasta. Lauk…
+AIEMPI KYSYMYS: Miten lasit selvisivät vallankumouksesta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä kerrottiin kerran ikkunalaudalla. [[Ranskan vallankumouksen]] jälkeen kappeli muutettiin oikeuslaitoksen arkistoksi: ikkunoiden alaosia poistettiin, ja asiakirjakaapit peittivät seinien alaosat. Vuosien 1840–1860 [[restauroinnissa]] ikkunat korjattiin ja puuttuvat osat tehtiin uudelleen, ja noin kaksi kolmasosaa [[lasimaalauksista]] on silti peräisin 1200-luvulta. Ikkunoiden kanssa ei kyl pidä kiirehtiä.
+KYSYMYS: Kerro lisää: restauroinnissa
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Anglikaaninen katedraali] 1847–1905 Anglikaaninen seurakunta perustettiin 1699 vetoomuksella Lontoon piispalle Henry Comptonille. Vetoomuksessa pyydettiin apua myös kirkon jälleenrakentamiseen: ranskalaiset olivat tuhonneet sen ja koko kaupungin 1696. Paikalla tai sen lähellä on ollut ainakin kuusi puukirkkoa, ja jokainen niistä tuhoutui sotatoimissa. Ensimmäinen kivikirkko aloitettiin 1843, mutta se paloi vuoden 1846 suurpalossa ennen kuin siitä ehti tulla muuta kuin peruskivi ja alkua. Nykyisen katedraalin aloitti 1847 piispa Edward Feild, ja piirustukset tilattiin uusgotiikan johtavalta arkkitehdilta George Gilbert Scottilta. Kirkkosali rakennettiin 1847–1850, ja se sai toimia yksinään koko katedraalina 35 vuotta…
+- [Hobart — kohdekartta / Kohdekartta: St Maryn katedraali] 1866 Katolisen arkkihiippakunnan pääkirkon juuret ovat vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen pappi Philip Conolly rakensi nykyisen paikan lähelle väliaikaisen puukappelin. Varsinaisen katedraalin peruskivi laskettiin 1860. Piirustukset teki William Wardell, Augustus Puginin oppilas, ja kirkko vihittiin 1866 uusgoottilaisena. Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja katedraali purettiin lopulta lähes kokonaan. Se rakennettiin uudelleen Wardellin alkuperäisiin suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja työstä vastasi hobartilainen Henry Hunter — sama arkkitehti, joka oli voittanut Tasmanian museon suunnittelukilpailun. Hunter laski uuden peruskive…
+AIEMPI KYSYMYS: Miten lasit selvisivät vallankumouksesta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä kerrottiin kerran ikkunalaudalla. [[Ranskan vallankumouksen]] jälkeen kappeli muutettiin oikeuslaitoksen arkistoksi: ikkunoiden alaosia poistettiin, ja asiakirjakaapit peittivät seinien alaosat. Vuosien 1840–1860 [[restauroinnissa]] ikkunat korjattiin ja puuttuvat osat tehtiin uudelleen, ja noin kaksi kolmasosaa [[lasimaalauksista]] on silti peräisin 1200-luvulta. Ikkunoiden kanssa ei kyl pidä kiirehtiä.
+KYSYMYS: Kerro lisää: lasimaalauksista
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Mitä Grand Palais'n paikalla oli ennen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Paikalla oli vuoden 1855 [[maailmannäyttelyn]] [[Palais de l'Industrie]], suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä. Samaan näyttelyyn valmistui Seinen yli [[Aleksanteri III:n silta]], joka yhdistää palatsin ja [[Petit Palais]]'n välisen kadun Invalideihin. Ylhäältä katsoen koko alue näyttää edelleen suurelta näyttelyltä.
+KYSYMYS: Kerro lisää: maailmannäyttelyn
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Mitä Grand Palais'n paikalla oli ennen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Paikalla oli vuoden 1855 [[maailmannäyttelyn]] [[Palais de l'Industrie]], suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä. Samaan näyttelyyn valmistui Seinen yli [[Aleksanteri III:n silta]], joka yhdistää palatsin ja [[Petit Palais]]'n välisen kadun Invalideihin. Ylhäältä katsoen koko alue näyttää edelleen suurelta näyttelyltä.
+KYSYMYS: Kerro lisää: Palais de l'Industrie
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mitä Grand Palais'n paikalla oli ennen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Paikalla oli vuoden 1855 [[maailmannäyttelyn]] [[Palais de l'Industrie]], suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä. Samaan näyttelyyn valmistui Seinen yli [[Aleksanteri III:n silta]], joka yhdistää palatsin ja [[Petit Palais]]'n välisen kadun Invalideihin. Ylhäältä katsoen koko alue näyttää edelleen suurelta näyttelyltä.
+KYSYMYS: Kerro lisää: Aleksanteri III:n silta
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Mitä Grand Palais'n paikalla oli ennen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Paikalla oli vuoden 1855 [[maailmannäyttelyn]] [[Palais de l'Industrie]], suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä. Samaan näyttelyyn valmistui Seinen yli [[Aleksanteri III:n silta]], joka yhdistää palatsin ja [[Petit Palais]]'n välisen kadun Invalideihin. Ylhäältä katsoen koko alue näyttää edelleen suurelta näyttelyltä.
+KYSYMYS: Kerro lisää: Petit Palais
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Rakennukset: Lasikatto, joka tuli katujen päälle 1847] Saint-Hubertin kuninkaalliset galleriat avattiin kesäkuussa 1847, ja niitä pidetään Euroopan ensimmäisinä aidosti julkisina katettuina kauppakujina. Arkkitehti Jean-Pierre Cluysenaar korvasi hämärien kujien vyyhdin yli 200 metriä pitkällä lasikattoisella käytävällä. Kokonaisuuteen kuuluu kolme osaa: Kuninkaan, Kuningattaren ja Ruhtinaiden galleria. Esikuvana oli Pariisin Galerie d'Orléans, ja Milanon kuuluisa Galleria Vittorio Emanuele II otti puolestaan mallia Brysselistä.
+AIEMPI KYSYMYS: Miksi halli suljettiin 1990-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Katto oli semmonen juttu. Grand Palais'n [[lasikatto]] oli ruostunut ja vuotanut vuosikymmeniä, ja kun katosta putosi [[niitti]] vuonna 1993, päähalli suljettiin turvallisuussyistä. Se avattiin uudelleen korjausten jälkeen 2000-luvun puolivälissä, ja vuoden 2024 [[olympialaisissa]] lasikaton alla miekkailtiin. Kyl minä pysyn mieluummin ulkopuolella, jos katosta putoilee jotain.
+KYSYMYS: Kerro lisää: lasikatto
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle] elokuu 1888 — Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave…
+AIEMPI KYSYMYS: Miksi halli suljettiin 1990-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Katto oli semmonen juttu. Grand Palais'n [[lasikatto]] oli ruostunut ja vuotanut vuosikymmeniä, ja kun katosta putosi [[niitti]] vuonna 1993, päähalli suljettiin turvallisuussyistä. Se avattiin uudelleen korjausten jälkeen 2000-luvun puolivälissä, ja vuoden 2024 [[olympialaisissa]] lasikaton alla miekkailtiin. Kyl minä pysyn mieluummin ulkopuolella, jos katosta putoilee jotain.
+KYSYMYS: Kerro lisää: niitti
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Musiikki: Amis-laulu olympialaisissa] 1988–1999 — Difang ja Igay Duana olivat amis-kansaan kuuluva viljelijäpariskunta Taitungista. Vuonna 1988 heidät kutsuttiin Pariisiin esiintymään, ja ranskalainen kulttuuri-instituutti äänitti heidän vanhusten juomalaulunsa nimettömälle opetuskokoelmalle; esiintyjille maksettiin viisitoista dollaria päivässä. Kuusi vuotta myöhemmin Enigma-yhtye käytti äänitteestä näytettä kappaleessaan Return to Innocence uskoen sen olevan vapaasti käytettävissä, ja kappaleesta tuli vuoden 1996 olympialaisten tunnusmusiikkia. Riita sovittiin oikeuden ulkopuolella 1999, ja osalla korvauksesta perustettiin stipendirahasto amis-lapsille.
+AIEMPI KYSYMYS: Miksi halli suljettiin 1990-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Katto oli semmonen juttu. Grand Palais'n [[lasikatto]] oli ruostunut ja vuotanut vuosikymmeniä, ja kun katosta putosi [[niitti]] vuonna 1993, päähalli suljettiin turvallisuussyistä. Se avattiin uudelleen korjausten jälkeen 2000-luvun puolivälissä, ja vuoden 2024 [[olympialaisissa]] lasikaton alla miekkailtiin. Kyl minä pysyn mieluummin ulkopuolella, jos katosta putoilee jotain.
+KYSYMYS: Kerro lisää: olympialaisissa
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Tour Montparnasse (Pariisi) (nähtävyys)
+Tietoruudun teksti: Tornin paikalla seisoi vanha Montparnassen rautatieasema. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja 59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä tyyliä, jossa koristeet karsittiin pois. Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Mitä tornin paikalla oli ennen?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on hyvä. Tornin paikalla seisoi vanha [[Montparnassen rautatieasema]], josta [[veturi]] syöksyi seinän läpi kadulle vuonna 1895 Granvillesta tullessaan. Asema purettiin 1960-luvulla, ja uusi rakennettiin etelämmäs. Siitä otettu valokuva on niin kuuluisa, että minäkin oon nähnyt sen.
+KYSYMYS: Kerro lisää: Montparnassen rautatieasema
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Tour Montparnasse (Pariisi) (nähtävyys)
+Tietoruudun teksti: Tornin paikalla seisoi vanha Montparnassen rautatieasema. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja 59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä tyyliä, jossa koristeet karsittiin pois. Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie: Veturi numero 18 seisoo yhä asemapihalla] Rata liikennöi lopulta vuoteen 1972 asti, jolloin uusi maantie BR-364 teki siitä tarpeettoman ja liikenne lakkautettiin kokonaan. Porto Velhon vanhalle rautatieasemalle jäi kuitenkin useita alkuperäisiä höyryvetureita, jotka on sittemmin kunnostettu museoksi Complexo Madeira-Mamoré -nimisen puiston alueelle. Yksi näkyvimmistä on veturi numero 18, jonka kylkeen on maalattu radan lyhenne E.F.M-M. Museoalueella kiertää nykyään myös matkailijajuna lyhyen pätkän vanhaa rataa pitkin muutaman kerran vuodessa, ja paikalliset pitävät rataa yhtenä kaupungin tärkeimmistä historiallisista muistomerkeistä, vaikka se syntyi niin raskaan hinnan kustannuksella.
+AIEMPI KYSYMYS: Mitä tornin paikalla oli ennen?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on hyvä. Tornin paikalla seisoi vanha [[Montparnassen rautatieasema]], josta [[veturi]] syöksyi seinän läpi kadulle vuonna 1895 Granvillesta tullessaan. Asema purettiin 1960-luvulla, ja uusi rakennettiin etelämmäs. Siitä otettu valokuva on niin kuuluisa, että minäkin oon nähnyt sen.
+KYSYMYS: Kerro lisää: veturi
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Tour Montparnasse (Pariisi) (nähtävyys)
+Tietoruudun teksti: Tornin paikalla seisoi vanha Montparnassen rautatieasema. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja 59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä tyyliä, jossa koristeet karsittiin pois. Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Palais Garnier] 1875 Uuden oopperatalon suunnittelukilpailu julkistettiin joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. Voittajaksi julistettiin toukokuussa 1861 yksimielisesti nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut asemaansa — viimeinen sana valinnassa oli keisari Napoleon III:lla. Paikka oli hankala: paroni Haussmannin osoittama tontti oli vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita taloja. Garnier ratkaisi asian tekemällä talosta näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat yhtä koreat kuin katsomo. Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra Bastille valmistui; nykyään Palais G…
+AIEMPI KYSYMYS: Miksi Pariisiin ei rakennettu lisää pilvenpiirtäjiä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuonna 1973 valmistunut 210-metrinen torni herätti pariisilaisissa niin paljon vastustusta, että kaupunki rajasi pian sen jälkeen uusien rakennusten korkeuden: keskustassa noin 25 metriin ja reuna-alueilla noin 31–37 metriin. Raja jatkoi [[Haussmannin]] ajan perinnettä, jossa kadun talot olivat suunnilleen samankorkuisia, ja korkeat toimistotalot sijoitettiin [[La Défenseen]] kaupungin rajan ulkopuolelle. Pariisin taivas on siis jäänyt kyyhkyille.
+KYSYMYS: Kerro lisää: Haussmannin
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Tour Montparnasse (Pariisi) (nähtävyys)
+Tietoruudun teksti: Tornin paikalla seisoi vanha Montparnassen rautatieasema. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja 59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä tyyliä, jossa koristeet karsittiin pois. Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Miksi Pariisiin ei rakennettu lisää pilvenpiirtäjiä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuonna 1973 valmistunut 210-metrinen torni herätti pariisilaisissa niin paljon vastustusta, että kaupunki rajasi pian sen jälkeen uusien rakennusten korkeuden: keskustassa noin 25 metriin ja reuna-alueilla noin 31–37 metriin. Raja jatkoi [[Haussmannin]] ajan perinnettä, jossa kadun talot olivat suunnilleen samankorkuisia, ja korkeat toimistotalot sijoitettiin [[La Défenseen]] kaupungin rajan ulkopuolelle. Pariisin taivas on siis jäänyt kyyhkyille.
+KYSYMYS: Kerro lisää: La Défenseen

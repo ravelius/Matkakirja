@@ -1,0 +1,179 @@
+================ KOHTA 11 (maa:BLR) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Valko-Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Valko-Venäjä (maa)
+Tietoruudun teksti: Valko-Venäjä on Itä-Euroopan sisämaavaltio, jonka naapureita ovat Venäjä, Ukraina, Puola, Liettua ja Latvia. Sen pinta-ala on noin 207 600 neliökilometriä ja asukkaita arvioidaan olevan 9,1 miljoonaa. Maa on enimmäkseen matalaa tasankoa: korkein kohta, Dzjaržynskaja-vuori, yltää vain 346 metriin. Metsää on noin 43 prosenttia maa-alasta, järviä noin 4 000, ja Länsi-Väinä ja Nemunas virtaavat kohti länttä sekä Dnepr sivujokineen etelään. Etelän Polesien alavaa suoseutua leimaavat laajat kosteikot. Viralliset kielet ovat valkovenäjä ja venäjä, ja vuoden 2019 laskennassa valkovenäläisiä oli 84,9 prosenttia asukkaista. Pääkaupunki ja suurin kaupunki on Minsk, jolla on oma hallinnollinen asemansa. Ilmasto on hemiboreaalinen, ja tammikuun keskilämpötila on noin −6 astetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Jelnjan suo, laaja suokompleksi] vuodesta 1968 — Jelnjan suo Vitebskin alueella on Valko-Venäjän laajin suokompleksi: sen pinta-ala on 253,01 neliökilometriä, ja sen arvioidaan olevan yli 9 000 vuotta vanha. Maisemansuojelualue Jelnja perustettiin 1968, ja se nimettiin Ramsar-kosteikoksi 21. lokakuuta 2002. Suolla kasvaa yli 405 kasvilajia, joista 13 on uhanalaisia, ja siellä elää noin 150 lintulajia. Noin 50 kurkiparia pesii alueella, ja suon ympärillä on moreeni- ja järvimaisemaa lukuisine järvineen. Suo on pysähdyspaikka pohjoisesta muuttaville linnuille, jotka talvehtivat muun muassa Israelissa ja Pohjois-Afrikassa.
+- [Valko-Venäjä — maalehti / Luonto: Narach, maan suurin järvi] vuodesta 1999 — Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston lintuja ovat esimerkiksi kaulushaikara, kalasääski ja kurki, ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia, kun taas järven kalastoon kuuluvat muun muassa ankerias, hauki ja made.
+
+### 11.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kaupunki:minsk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Minsk
+Maa, jossa pelaaja on: Valko-Venäjä
+Näkymä: kartta
+Pelaaja katsoo kartalla: Minsk (kaupunki)
+Tietoruudun teksti: Minsk on Valko-Venäjän pääkaupunki ja maan suurin kaupunki. Se sijaitsee Svislač-joen varrella noin 220 metrin korkeudessa, ja asukkaita on 1 995 091 (1.1.2026, Belstat) eli noin viidennes maan väestöstä. Ensimmäinen maininta nimellä Měneskъ on vuoden 1067 kronikassa Nemihan taistelun yhteydessä, ja kaupunki oli lähteen mukaan ollut olemassa jo sitä ennen.
+
+Isoisän matkavuonna 1873 Minsk oli Venäjän keisarikunnan Minskin kuvernementin keskus ja kasvava ratasolmu. Moskova–Brest-rata kulki kaupungin kautta vuodesta 1871, ja tammikuussa 1873 avattiin Libava–Romny-radan Vilnan ja Minskin välinen osa; koko rata Romnyyn valmistui 1874. Kunnallinen vesijohto otettiin käyttöön lähteiden mukaan 1870-luvun alkupuolella (1872 tai 1874), ja Yläkaupunkiin nousi kaksi- ja kolmikerroksisia tiili- ja kivitaloja.
+
+Toinen maailmansota muutti kaupungin kasvot: Minsk oli miehitettynä 1941–1944, ja vapautuk…
+Isoisän matkakirjamerkintä: Minsk, lokakuussa 1873. Kuvernementin kaupunki Venäjän keisarikunnassa ja nyt myös ratasolmu: Moskovan ja Varsovan rata on kulkenut tästä jo kaksi vuotta, ja tänä vuonna siihen risteää uusi rata Vilnasta. Asema on vielä pelkkä puurakennus, mutta kaupunki kasvaa sen ympärille. Pyhän Hengen katedraali, jonka luostari on palanut kahdesti, vihittiin uudelleen kolme vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Minsk — kaupunkilehti / Minsk] Minsk on Valko-Venäjän pääkaupunki, ja sen ensimmäinen maininta on vuodelta 1067. Isoisän matkavuonna 1873 se oli vilkas kuvernementtikaupunki rautateiden risteyksessä.
+
+### 12.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (maa:CHE) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sveitsi (maa)
+Tietoruudun teksti: Sveitsissä on neljä virallista kieltä: saksaa puhuu 62, ranskaa 23, italiaa 8 ja retoromaania puoli prosenttia asukkaista. Maata ei pidä koossa yhteinen kieli vaan yhteinen tapa päättää asioista: kansanäänestyksiä on noin neljä kertaa vuodessa, ja kantoneja on 26, jokaisella oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+Alpit peittävät maasta noin kolme viidesosaa, ja korkein huippu Dufourspitze yltää 4 634 metriin. Kartalla vuoret täyttävät koko eteläpuoliskon; pohjoisempana kulkee matalampi vyöhyke järvineen ja kaupunkeineen, ja luoteessa nousee vielä erillinen Jura-vuoristo. Vuorten läpi on kaivettu: Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli.
+
+Maa on ollut puolueeton vuodesta 1815, se liittyi YK:hon vasta 2002 eikä ole EU:n jäsen. Lippukin on oma tapauksensa: se on neliö, kuten maailmassa vain Vatikaanin lippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Menovinkit] Sveitsi on pieni maa, mutta sen verkkoon mahtuu paljon: 3 049 keskiaikaista kirjaa, viisi petatavua hiukkasfysiikkaa, 3,5 miljoonaa vanhaa valokuvaa, 10 000 kelloa ja Matterhorn sellaisena kuin se juuri nyt näyttää.
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+
+### 13.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kaupunki:bern) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bern
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Bern (kaupunki)
+Tietoruudun teksti: Bern on Sveitsin liittokaupunki, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee Aare-joen ympäröimälle mäkiniemelle, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.
+
+Perimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.
+
+Isoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, m…
+Isoisän matkakirjamerkintä: Bern, syyskuussa 1873. Kysyn, missä on Sveitsin pääkaupunki, ja saan korjauksen: Bern on Bundesstadt, liittokaupunki, sillä sveitsiläiset eivät halunneet yhtä ylivoimaista pääkaupunkia. Hallitus ja parlamentti istuvat saman katon alla Bundes-Rathausissa, joka valmistui kuusitoista vuotta sitten. Kuljen holvikäytävissä kuivin jaloin, ja tuomiokirkon torni on yhä vailla huippuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bern — kaupunkilehti / Bern] Bern on Sveitsin liittokaupunki, jonka vanhakaupunki nousee Aare-joen mäkiniemelle ja jossa hiekkakivinen keskiaika on säilynyt ehjänä. Täällä on liittovaltion hallituksen ja parlamentin kotipaikka, ja kaupungin kilvessä kävelee karhu.
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+
+### 14.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kaupunki:alpit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Alpit
+Maa, jossa pelaaja on: Sveitsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Alpit (kaupunki)
+Tietoruudun teksti: Alpit ovat Länsi-Euroopan korkein vuoristo: 1 200 kilometrin kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa sen keskenään, ja vuoristossa asuu noin 13,6 miljoonaa ihmistä — se ei siis ole erämaa vaan asuttu seutu. Yli neljän kilometrin huippuja on 82, ja korkein niistä on Mont Blanc.
+
+Vuoristossa on aina eletty karjan ehdoilla. Lehmät viedään keväällä ylös alppilaitumille ja tuodaan syksyllä alas, ja kesän maito tehdään juustoksi ylhäällä, koska juusto kestää kantamisen ja maito ei. Samoista laaksoista ovat myös alppitorvi, jolla kutsuttiin karja kotiin ja viestittiin naapurilaaksoon, ja lumivyöryjen hallinnan taito, jonka Unesco lisäsi kulttuuriperintöluetteloonsa 2018.
+
+Muuri Alpit eivät ole koskaan olleet. Solat ovat olleet kauppateitä kivikaudelta asti, ja isoisän matkan aikaan vuoren läpi päästiin jo junalla: Fréjus-tunneli avattiin syyskuussa 1…
+Isoisän matkakirjamerkintä: Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+
+### 15.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

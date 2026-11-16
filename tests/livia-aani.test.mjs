@@ -302,6 +302,7 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
+/* Wienin, Rooman ja Amsterdamin pulun ääni sidottu 16.11.2026 (JU vienyt 11.09 ja 11.49); lista tyhjä. */
 const AANTA_ODOTTAVAT = new Set([]);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
@@ -328,7 +329,7 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
    * Portti ei siis heikkene, se saa yhden kirjatun poikkeuksen.
    */
   const KATONNOSTON_POIKKEUKSET = new Set([
-    'bukarest-3', 'budapest-3', 'amsterdam-3',
+    'bukarest-3', 'budapest-3',
     'berliini-3', 'dubrovnik-3', 'tukholma-3', 'kobenhavn-3',
   ]);
   const kaytetyt = new Set();

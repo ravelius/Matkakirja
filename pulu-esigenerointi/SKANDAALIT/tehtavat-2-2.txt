@@ -1,0 +1,138 @@
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Thamesin laskuvesiranta
+Tietoruudun teksti: Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, mutta se mitä se antaa, ei aina jää löytäjälle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Lontoon silmä] 2000 Pyörä on 135 metriä korkea, mutta oudointa siinä on tuki: se roikkuu vain toiselta puolelta, kuten polkupyörän eturenkaan pinnat yhdellä haarukalla. Toista yhtä korkeaa näin tuettua maisemapyörää ei maailmassa ole. Pyörää ei nostettu paikalleen valmiina. Koko kehä koottiin makuulleen Thamesin päälle rakennetuille lautoille, ja sitten sitä nostettiin pystyyn hitaasti, pari astetta tunnissa. Kapseleita on 32, numeroitu 1–33, koska numeroa 13 ei ole lainkaan. Pyörä pyörii hitaammin kuin ihminen kävelee eikä pysähdy koskaan — kyytiin astutaan sen liikkuessa.
+- [Lontoo — kaupunkilehti / Joki ja puisto: Thamesin laskuvesiranta] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Mitä mudlarkit etsivät Thamesin kivirannalta laskuveden aikaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Minä olen nähnyt ne ylhäältä, kumarassa ja polvet märkinä. [[Mudlarkit]] etsivät Thamesin rannalta muun muassa [[savipiippuja]] ja astiansirpaleita, jotka vuorovesi on huuhtonut esiin. Thames on vuorovesijoki Teddingtonin sulkuun asti, ja laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia. Ammatti on vanhempi kuin isoisäsi aika. Löytöjä ei kuitenkaan saa pitää ihan vapaasti: yli kolmesataa vuotta vanhat esineet on ilmoitettava [[Lontoon museolle]]. Itse etsisin kyl vain pullanmuruja.
+KYSYMYS: Kerro lisää: Lontoon museolle
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Thamesin laskuvesiranta
+Tietoruudun teksti: Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, mutta se mitä se antaa, ei aina jää löytäjälle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Lontoo — kaupunkilehti / Joki ja puisto: Thamesin laskuvesiranta] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Miksi Thamesin rannalla ei saa etsiä aarteita vapaasti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Moni luulee, että ranta on ihan kenen tahansa kaivettavissa. Ei se kuitenkaan ole: etsimiseen tarvitaan lupa, joka ostetaan [[satamaviranomaiselta]], ja lupien määrää on rajoitettu. Kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, ja nyt lupia jaetaan enintään 4 000. Lisäksi yli kolmesataa vuotta vanhat löydöt on ilmoitettava [[Lontoon museolle]], joten kaikki löydetty ei jää löytäjälle. Ja minä kun luulin, että lupa tarvitaan vain lentämiseen.
+KYSYMYS: Kerro lisää: satamaviranomaiselta
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Cheapsiden kätkö
+Tietoruudun teksti: Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuuss…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Cheapsiden kätkö] Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yk…
+AIEMPI KYSYMYS: Miten yksi pieni sinettikivi paljasti, milloin laatikko kätkettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on oikeasti hieno pikku salapoliisijuttu. Kun työmiehet vuonna 1912 hakkasivat kellarin lattiaa osoitteessa 30–32 [[Cheapside]], lattian alta löytyi puinen laatikko, jossa oli yli neljäsataa korukappaletta. Yhdessä sinettikivessä oli [[Staffordin viscountin]] vaakuna, jonka hän sai marraskuussa 1640, joten laatikkoa ei voinut kätkeä sitä ennen. Kellarin päällä ollut talo taas paloi [[Lontoon suurpalossa]] syyskuussa 1666, ja laatikko oli silloin jo piilossa. Kätkemisen ajankohta rajautuu siis noin neljännesvuosisadan väliin. Pienikin kivi kertoo kyl paljon, kun joku jaksaa katsoa.
+KYSYMYS: Kerro lisää: Cheapside
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Cheapsiden kätkö
+Tietoruudun teksti: Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuuss…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Cheapsiden kätkö] Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yk…
+AIEMPI KYSYMYS: Miten yksi pieni sinettikivi paljasti, milloin laatikko kätkettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on oikeasti hieno pikku salapoliisijuttu. Kun työmiehet vuonna 1912 hakkasivat kellarin lattiaa osoitteessa 30–32 [[Cheapside]], lattian alta löytyi puinen laatikko, jossa oli yli neljäsataa korukappaletta. Yhdessä sinettikivessä oli [[Staffordin viscountin]] vaakuna, jonka hän sai marraskuussa 1640, joten laatikkoa ei voinut kätkeä sitä ennen. Kellarin päällä ollut talo taas paloi [[Lontoon suurpalossa]] syyskuussa 1666, ja laatikko oli silloin jo piilossa. Kätkemisen ajankohta rajautuu siis noin neljännesvuosisadan väliin. Pienikin kivi kertoo kyl paljon, kun joku jaksaa katsoa.
+KYSYMYS: Kerro lisää: Staffordin viscountin
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Cheapsiden kätkö
+Tietoruudun teksti: Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuuss…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Cheapsiden kätkö] Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yk…
+AIEMPI KYSYMYS: Miten yksi pieni sinettikivi paljasti, milloin laatikko kätkettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on oikeasti hieno pikku salapoliisijuttu. Kun työmiehet vuonna 1912 hakkasivat kellarin lattiaa osoitteessa 30–32 [[Cheapside]], lattian alta löytyi puinen laatikko, jossa oli yli neljäsataa korukappaletta. Yhdessä sinettikivessä oli [[Staffordin viscountin]] vaakuna, jonka hän sai marraskuussa 1640, joten laatikkoa ei voinut kätkeä sitä ennen. Kellarin päällä ollut talo taas paloi [[Lontoon suurpalossa]] syyskuussa 1666, ja laatikko oli silloin jo piilossa. Kätkemisen ajankohta rajautuu siis noin neljännesvuosisadan väliin. Pienikin kivi kertoo kyl paljon, kun joku jaksaa katsoa.
+KYSYMYS: Kerro lisää: Lontoon suurpalossa
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Cheapsiden kätkö
+Tietoruudun teksti: Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuuss…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Cheapsiden kätkö] Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yk…
+AIEMPI KYSYMYS: Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän minä vastaan mielelläni, koska minä rakastan reittejä. Kätkön kivet olivat tulleet ympäri maailmaa: [[smaragdi]] Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta ja helmet Bahrainista. Oudoin esine oli omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 [[sveitsiläinen kellokoneisto]]. Tarkkaa reittiä, jota pitkin kaikki nämä esineet päätyivät [[Cheapsiden kätkön]] omistajalle, ei tiedetä varmasti. Ihan kunnon maailmanympärimatka kivelle, joka ei itse lentänyt.
+KYSYMYS: Kerro lisää: smaragdi
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Cheapsiden kätkö
+Tietoruudun teksti: Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuuss…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Cheapsiden kätkö] Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yk…
+- [Mekka — kaupunkilehti / Historia: Sveitsiläinen šeikki Ibrahim] Johann Ludwig Burckhardt oli sveitsiläinen maantieteilijä Afrikan-tutkimusseuran palveluksessa. Määränpää oli Timbuktu, jonne hän ei koskaan päässyt. Hän opiskeli Cambridgessa arabiaa, muutti vuonna 1809 Aleppoon ja otti nimen šeikki Ibrahim ibn Abdallah. Matkan varrella hän näki eurooppalaisista ensimmäisenä Petran rauniot vuonna 1812 ja Abu Simbelin hiekkaan hautautuneen temppelin seuraavana vuonna; hän piirsi myös Medinan vanhan asemakaavan. Jeddaan hän astui 18. heinäkuuta 1814, todisti olevansa muslimi ja pääsi Mekkaan, jossa vietti useita kuukausia ja teki pyhiinvaelluksen riitit. Muistiinpanot julkaistiin vasta kuoleman jälkeen, vuonna 1829.
+AIEMPI KYSYMYS: Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän minä vastaan mielelläni, koska minä rakastan reittejä. Kätkön kivet olivat tulleet ympäri maailmaa: [[smaragdi]] Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta ja helmet Bahrainista. Oudoin esine oli omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 [[sveitsiläinen kellokoneisto]]. Tarkkaa reittiä, jota pitkin kaikki nämä esineet päätyivät [[Cheapsiden kätkön]] omistajalle, ei tiedetä varmasti. Ihan kunnon maailmanympärimatka kivelle, joka ei itse lentänyt.
+KYSYMYS: Kerro lisää: sveitsiläinen kellokoneisto
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Cheapsiden kätkö
+Tietoruudun teksti: Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuuss…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Cheapsiden kätkö] Isoisäsi sääntö sai Lontoossa todisteen — vain nelisenkymmentä vuotta hänen käyntinsä jälkeen. Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. Sen sisällä oli yli neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja kameoita. Kivet olivat ympäri maailmaa — smaragdi Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, helmet Bahrainista. Oudoin esine on omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yk…
+AIEMPI KYSYMYS: Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän minä vastaan mielelläni, koska minä rakastan reittejä. Kätkön kivet olivat tulleet ympäri maailmaa: [[smaragdi]] Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta ja helmet Bahrainista. Oudoin esine oli omenan kokoinen kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli sovitettu noin vuoden 1600 [[sveitsiläinen kellokoneisto]]. Tarkkaa reittiä, jota pitkin kaikki nämä esineet päätyivät [[Cheapsiden kätkön]] omistajalle, ei tiedetä varmasti. Ihan kunnon maailmanympärimatka kivelle, joka ei itse lentänyt.
+KYSYMYS: Kerro lisää: Cheapsiden kätkön

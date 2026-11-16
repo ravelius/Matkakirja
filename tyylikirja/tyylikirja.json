@@ -725,6 +725,9 @@
       "Museo": [["EB Garamond", "Regular"]],
       "MuseoLihava": [["EB Garamond", "SemiBold"]],
       "MuseoVahva": [["EB Garamond", "ExtraBold"]],
+      "Teatteri": [["Abril Fatface", "Regular"]],
+      "Kyltti": [["Patrick Hand SC", "Regular"]],
+      "_teatteri": "TEATTERI ja KYLTTI (omistaja 16.11.2026 08.37, KK 08.49 ja 09.05; vain natiivi, Temple-tornin nukkekoti): kohtausotsikko Abril Fatface 19 pt leikatulla paperiliuskalla ilman hehkua (Teatteri) ja aloitusjulisteen nimikyltti Patrick Hand SC (Kyltti). Natiivissa sovelluksen mukana tulevat SIL OFL 1.1 -fontit (UI/Resources/Fontit/AbrilFatface-Regular.ttf ja PatrickHandSC-Regular.ttf, lisenssit samassa kansiossa), ei järjestelmäfontti. Ei muualle peliin.",
       "_museovahva": "MUSEOVAHVA (omistaja 24.10.2026 10.46 PT:n kautta: 'tee kielletty kaupunki yms. teksti vahvemmalla fontilla'): juoksupelin alkulennon nimitekstit (KIELLETTY KAUPUNKI, BEIJING, 1914) EB Garamond ExtraBold 800, ohut tumma ääriviiva. Natiivissa kiinteä paino samasta muuttuvasta OFL-fontista (UI/Resources/Fontit/EBGaramond-ExtraBold.ttf, fontTools instancer wght 800).",
       "_museo": "MUSEO (omistaja 16.10.2026 22.26 PT:n kautta: 'fontti ei näytä taidegalleriaan sopivalle'; hyväksytty KK:n kautta 16.10. ~23.5x, juna 197): taidemuseon tekstit (nimi ja tekijärivi seinällä, salikortti, teoskortti, i-kortti, ympyräkortti) EB Garamondilla; nimi SemiBold 600, muut Regular 400. Natiivissa kiinteät painot projektin muuttuvasta OFL-fontista (UI/Resources/Fontit/EBGaramond-Regular.ttf ja -SemiBold.ttf, fontTools instancer), ei järjestelmäfontti.", "_moderni": "MODERNI ja MODERNILIHAVA (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro VAIN nykyajan näkymiin (elävä opas), ei muualle peliin."
     }

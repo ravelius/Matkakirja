@@ -1,0 +1,1502 @@
+### 1201
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ljubljana
+Maa, jossa pelaaja on: Slovenia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ljubljana (kaupunki)
+Tietoruudun teksti: Ljubljana on Krainin herttuakunnan pääkaupunki Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan Laibachiksi. Kaupunki kuuluu Itävallan keisarikuntaan, ja se on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. Slovenit ja saksalaiset asuvat samoilla kaduilla.
+
+Kaupungin yllä kohoaa Ljubljanan linna Linnavuoren huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus on lohikäärme, joka koristaa linnan tornia ja vaakunaa; se periytyy Pyhän Yrjön legendasta.
+
+Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit ja saksalaiset kilpailevat keskenään yhdistyksissä ja urheiluseuroissa.
+Isoisän matkakirjamerkintä: Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Keskustori] 1940–1942 Keskustori levittäytyy Vodnikin aukiolle Tromostovjen ja Lohikäärmesillan väliin Ljubljanica-joen oikealle rannalle. Aukio on nimetty Valentin Vodnikin mukaan: hän oli valistusajan lopun pappi, toimittaja ja runoilija. Isoisän aikaan aukiolla ei ole toria eikä Vodnikin patsasta, joka paljastettiin vasta 1889. Paikalla seisoo vanha luostari, jossa toimivat hiippakunnan tyttökoulu ja kirjasto. Vuoden 1895 maanjäristys tuhosi luostarin niin pahoin, että se purettiin kokonaan, ja tyhjälle aukiolle syntyi ulkotori. Torihallin suunnitteli Jože Plečnik 1931–1939, ja se rakennettiin 1940–1942. Kaksikerroksinen halli seuraa joen kaarta: jokipuolella on suuret puolipyöreät ikkunat, katupuol…
+- [Ljubljana — kaupunkilehti / Ruoka ja juoma: Tori Plečnikin kaarien alla] Ljubljanan keskustori (Osrednja ljubljanska tržnica) sijaitsee Ljubljanica-joen oikealla rannalla Kolmoissillan ja Lohikäärmesillan välissä. Rakennuksen suunnitteli Jože Plečnik: kaksikerroksinen halli seuraa joen kaarta, jokipuolella on suuret puolipyöreät ikkunat ja katupuolella pylväskäytävä. Tori on auki päivittäin sunnuntaita lukuun ottamatta. Alakerrassa myydään kalaa ja kuivattuja hedelmiä, molemmissa kerroksissa leipomo-, maito- ja lihakojuja, ja pylväskäytävän alla yrttejä, mausteita ja käsitöitä. Vuodesta 2021 tori kuuluu Plečnikin perintönä UNESCOn maailmanperintöluetteloon.
+AIEMPI KYSYMYS: Miksi Ljubljanan keskusta on autoton?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vanhakaupunki on suljettu autoliikenteeltä, ja se on tehnyt keskustasta kävelijöiden ja pyöräilijöiden alueen, jossa [[Ljubljanica]]-joen rannat ovat kahviloiden käytössä. Kaupunki sai vuonna 2016 arvonimen [[Euroopan vihreä pääkaupunki]], mikä liittyy tähän työhön. Keskustan aukiona toimii [[Prešernin aukio]]. Ylhäältä liikenne näyttää kaupungissa mukavan hiljaiselta.
+KYSYMYS: Kerro lisää: Ljubljanica
+
+### 1202
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ljubljana
+Maa, jossa pelaaja on: Slovenia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ljubljana (kaupunki)
+Tietoruudun teksti: Ljubljana on Krainin herttuakunnan pääkaupunki Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan Laibachiksi. Kaupunki kuuluu Itävallan keisarikuntaan, ja se on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. Slovenit ja saksalaiset asuvat samoilla kaduilla.
+
+Kaupungin yllä kohoaa Ljubljanan linna Linnavuoren huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus on lohikäärme, joka koristaa linnan tornia ja vaakunaa; se periytyy Pyhän Yrjön legendasta.
+
+Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit ja saksalaiset kilpailevat keskenään yhdistyksissä ja urheiluseuroissa.
+Isoisän matkakirjamerkintä: Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosambik — kaupunkilehti / Mosambik: Vihreä moskeija ja swahilikulttuuri] Ennen Vasco da Gaman saapumista 1498 saarella kävivät kauppaa swahilinkieliset ja arabikauppiaat jo 900-luvulta lähtien, ja he toivat mukanaan islamin, joka on yhä tänäkin päivänä suuren osan saarelaisista uskonto. Vihreä väri on islamissa pyhä väri, ja se toistuu saaren moskeijoiden julkisivuissa – tämä moskeija sijaitsee Makuti-kaupunginosassa, tavallisten asukkaiden puolella saarta, toisin kuin Portugalin ajan kivirakennukset saaren pohjoiskärjessä. Swahilikulttuurin ja Portugalin siirtomaakulttuurin kerrostumat näkyvät saarella yhä rinnakkain, samaan tapaan kuin isoisän aikana 1870-luvulla.
+- [Iso-Britannia — maalehti / Ruoka: Piirakka, muusi ja vihreä liquor] Pie and mash on Lontoon satamakortteleiden ruokaa: jauhelihapiirakka, perunamuusia ja päälle liquor eli vihreä persiljakastike — nimestä huolimatta siinä ei ole tippaakaan väkijuomaa. Ennen piirakat tehtiin ankeriaasta, sillä Thames oli niitä täynnä ja ne olivat halvinta lihaa mitä sai.
+- [niamey — kaupunkilehti / Niamey: Kylät ennen pääkaupunkia] Niameyn varhaisessa historiassa on monta kylää ja monta kertomusta. Goudel ja Gamkalé sijaitsivat Nigerin vasemmalla rannalla, Lamordé ja Nogaré oikealla. Niiden väliin ja rinnalle syntyi lisää asutusta, josta myöhempi pääkaupunki kasvoi. Kaupungin nimen alkuperästä kerrotaan eri yhteisöissä erilaisia tarinoita. Alueella asui fula-, zarma-, maouri- ja songhai-yhteisöjä.
+AIEMPI KYSYMYS: Miksi Ljubljanan keskusta on autoton?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vanhakaupunki on suljettu autoliikenteeltä, ja se on tehnyt keskustasta kävelijöiden ja pyöräilijöiden alueen, jossa [[Ljubljanica]]-joen rannat ovat kahviloiden käytössä. Kaupunki sai vuonna 2016 arvonimen [[Euroopan vihreä pääkaupunki]], mikä liittyy tähän työhön. Keskustan aukiona toimii [[Prešernin aukio]]. Ylhäältä liikenne näyttää kaupungissa mukavan hiljaiselta.
+KYSYMYS: Kerro lisää: Euroopan vihreä pääkaupunki
+
+### 1203
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ljubljana
+Maa, jossa pelaaja on: Slovenia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ljubljana (kaupunki)
+Tietoruudun teksti: Ljubljana on Krainin herttuakunnan pääkaupunki Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan Laibachiksi. Kaupunki kuuluu Itävallan keisarikuntaan, ja se on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. Slovenit ja saksalaiset asuvat samoilla kaduilla.
+
+Kaupungin yllä kohoaa Ljubljanan linna Linnavuoren huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus on lohikäärme, joka koristaa linnan tornia ja vaakunaa; se periytyy Pyhän Yrjön legendasta.
+
+Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit ja saksalaiset kilpailevat keskenään yhdistyksissä ja urheiluseuroissa.
+Isoisän matkakirjamerkintä: Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Prešernin aukio] 1600-luku Prešernin aukio on Ljubljanan keskusaukio vanhan kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa 1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja kivettiin. Wolfin ja Čopin kadun välissä seisova Hauptmannin talo rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen jälkeen: Max Fabiani suunnitteli sen nel…
+AIEMPI KYSYMYS: Miksi Ljubljanan keskusta on autoton?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vanhakaupunki on suljettu autoliikenteeltä, ja se on tehnyt keskustasta kävelijöiden ja pyöräilijöiden alueen, jossa [[Ljubljanica]]-joen rannat ovat kahviloiden käytössä. Kaupunki sai vuonna 2016 arvonimen [[Euroopan vihreä pääkaupunki]], mikä liittyy tähän työhön. Keskustan aukiona toimii [[Prešernin aukio]]. Ylhäältä liikenne näyttää kaupungissa mukavan hiljaiselta.
+KYSYMYS: Kerro lisää: Prešernin aukio
+
+### 1204
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Miksi Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, vakava aihe. Ruotsin viimeinen sota päättyi vuonna 1814 [[Norjaa]] vastaan, ja siitä lähtien maa on pysynyt sotimatta, pidempään kuin lähes mikään muu valtio. Edellä Ruotsi oli menettänyt [[Suomen sodassa]] 1808–1809 itäisen osansa, ja sen jälkeen ulkopolitiikka kääntyi liittoutumattomuuteen ja [[puolueettomuuteen]]. Ruotsi liittyi [[NATOon]] vasta vuonna 2024. Onpa siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Norjaa
+
+### 1205
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Dynamiitin keksijän testamentti] Alfred Nobel keksi dynamiitin 1867 ja rikastui räjähteillä, joita käytettiin sekä tunneleiden louhimiseen että sodassa. Vuonna 1888 eräs lehti luuli hänen kuolleen ja julkaisi muistokirjoituksen otsikolla ”kuoleman kauppias on kuollut”. Nobel luki oman muistokirjoituksensa ja kirjoitti myöhemmin testamentin, jossa hän määräsi lähes koko omaisuutensa palkinnoiksi. Ensimmäiset Nobelin palkinnot jaettiin 1901, ja juhlaillallista on vietetty Tukholman kaupungintalolla 1930-luvulta asti.
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+AIEMPI KYSYMYS: Miksi Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, vakava aihe. Ruotsin viimeinen sota päättyi vuonna 1814 [[Norjaa]] vastaan, ja siitä lähtien maa on pysynyt sotimatta, pidempään kuin lähes mikään muu valtio. Edellä Ruotsi oli menettänyt [[Suomen sodassa]] 1808–1809 itäisen osansa, ja sen jälkeen ulkopolitiikka kääntyi liittoutumattomuuteen ja [[puolueettomuuteen]]. Ruotsi liittyi [[NATOon]] vasta vuonna 2024. Onpa siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Suomen sodassa
+
+### 1206
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Ritarikunnan loppu ja ranskalaisten kaksi vuotta] Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. syyskuuta 1800, kun heidän ruokavaransa…
+AIEMPI KYSYMYS: Miksi Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, vakava aihe. Ruotsin viimeinen sota päättyi vuonna 1814 [[Norjaa]] vastaan, ja siitä lähtien maa on pysynyt sotimatta, pidempään kuin lähes mikään muu valtio. Edellä Ruotsi oli menettänyt [[Suomen sodassa]] 1808–1809 itäisen osansa, ja sen jälkeen ulkopolitiikka kääntyi liittoutumattomuuteen ja [[puolueettomuuteen]]. Ruotsi liittyi [[NATOon]] vasta vuonna 2024. Onpa siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: puolueettomuuteen
+
+### 1207
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+AIEMPI KYSYMYS: Miksi Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin, vakava aihe. Ruotsin viimeinen sota päättyi vuonna 1814 [[Norjaa]] vastaan, ja siitä lähtien maa on pysynyt sotimatta, pidempään kuin lähes mikään muu valtio. Edellä Ruotsi oli menettänyt [[Suomen sodassa]] 1808–1809 itäisen osansa, ja sen jälkeen ulkopolitiikka kääntyi liittoutumattomuuteen ja [[puolueettomuuteen]]. Ruotsi liittyi [[NATOon]] vasta vuonna 2024. Onpa siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: NATOon
+
+### 1208
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Vasa-museo] 1628 Vasa oli komea, 64-tykkinen sotalaiva, mutta se kaatui ja upposi jo neitsytmatkallaan 10. elokuuta 1628 — vain 1 300 metrin päässä satamasta. Tuulenpuuska kallisti laivan kyljelleen, vesi tulvi sisään avoimista tykkiluukuista, ja noin 30 ihmistä hukkui. Laiva oli liian epävakaa: yläosat olivat liian raskaita, ja kannen palkit oli tehty liian isoiksi. Laiva nostettiin vedestä vasta 1961, yli 330 vuotta myöhemmin, lähes ehjänä. Vasan runkoa koristaa lähes 500 puuveistosta. Museo avattiin 15. kesäkuuta 1990, ja siitä lähtien laivaa on käynyt katsomassa jo yli 45 miljoonaa ihmistä.
+AIEMPI KYSYMYS: Miksi Vasa-laiva on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä on tarina. Sotalaiva [[Vasa]] upposi Tukholman satamassa neitsytmatkallaan vuonna 1628, vain lyhyen purjehduksen jälkeen. Se nostettiin pohjasta vuonna 1961, ja nykyään se on esillä [[Djurgårdenin]] saarella omassa museossaan. Alus teetettiin kuningas [[Kustaa II Aadolfin]] käskystä, ja se on säilynyt poikkeuksellisen hyvin, koska Itämeren vähäsuolainen vesi ei syönyt puuta samalla tavalla. Muistan tämän kuin eilisen.
+KYSYMYS: Kerro lisää: Vasa
+
+### 1209
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Eläimet kaupungissa: Visentti pelastui kaupungin mäellä] 1891 — Djurgårdenin Skansen avattiin 1891, ja sinne siirrettiin kokonaisia taloja ympäri Ruotsia. Malli levisi niin laajalle, että monessa kielessä sana skansen tarkoittaa yhä ulkoilmamuseota. Skansenilla pidettiin myös visenttejä, Euroopan raskaimpia maaeläimiä. Kun laji oli 1920-luvulla katoamassa, koko maailmassa oli enää 54 visenttiä — ja kaksi niistä eli täällä. Vuonna 1929 Skansenilta lähetettiin hiehoja Puolan Białowieżaan, jonne laji päästettiin takaisin metsään 1952.
+- [Ruotsi — maalehti / Eläimet kaupungissa] Keskellä pääkaupunkia nostetaan lohia, ja Djurgårdenin mäellä laiduntaa eläin, joka oli kerran kadota koko maailmasta.
+AIEMPI KYSYMYS: Miksi Vasa-laiva on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä on tarina. Sotalaiva [[Vasa]] upposi Tukholman satamassa neitsytmatkallaan vuonna 1628, vain lyhyen purjehduksen jälkeen. Se nostettiin pohjasta vuonna 1961, ja nykyään se on esillä [[Djurgårdenin]] saarella omassa museossaan. Alus teetettiin kuningas [[Kustaa II Aadolfin]] käskystä, ja se on säilynyt poikkeuksellisen hyvin, koska Itämeren vähäsuolainen vesi ei syönyt puuta samalla tavalla. Muistan tämän kuin eilisen.
+KYSYMYS: Kerro lisää: Djurgårdenin
+
+### 1210
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Miksi Vasa-laiva on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä on tarina. Sotalaiva [[Vasa]] upposi Tukholman satamassa neitsytmatkallaan vuonna 1628, vain lyhyen purjehduksen jälkeen. Se nostettiin pohjasta vuonna 1961, ja nykyään se on esillä [[Djurgårdenin]] saarella omassa museossaan. Alus teetettiin kuningas [[Kustaa II Aadolfin]] käskystä, ja se on säilynyt poikkeuksellisen hyvin, koska Itämeren vähäsuolainen vesi ei syönyt puuta samalla tavalla. Muistan tämän kuin eilisen.
+KYSYMYS: Kerro lisää: Kustaa II Aadolfin
+
+### 1211
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+AIEMPI KYSYMYS: Mitä on ruotsalainen fika?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Fika tarkoittaa kahvi- tai teetaukoa, jolla syödään jotain makeaa ja juodaan sekä seurustellaan. Tyypillinen leivonnainen on [[kanelbulle]] eli korvapuusti, ja sille on oma juhlapäivänsä, [[Kanelbullens dag]], joka vietetään lokakuun alussa. Lihapullat eli [[köttbullar]] kuuluvat taas arkiruokaan. Pulla, kyllä, vihdoin aihe, jota ymmärrän.
+KYSYMYS: Kerro lisää: kanelbulle
+
+### 1212
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+AIEMPI KYSYMYS: Mitä on ruotsalainen fika?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Fika tarkoittaa kahvi- tai teetaukoa, jolla syödään jotain makeaa ja juodaan sekä seurustellaan. Tyypillinen leivonnainen on [[kanelbulle]] eli korvapuusti, ja sille on oma juhlapäivänsä, [[Kanelbullens dag]], joka vietetään lokakuun alussa. Lihapullat eli [[köttbullar]] kuuluvat taas arkiruokaan. Pulla, kyllä, vihdoin aihe, jota ymmärrän.
+KYSYMYS: Kerro lisää: Kanelbullens dag
+
+### 1213
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+AIEMPI KYSYMYS: Mitä on ruotsalainen fika?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Fika tarkoittaa kahvi- tai teetaukoa, jolla syödään jotain makeaa ja juodaan sekä seurustellaan. Tyypillinen leivonnainen on [[kanelbulle]] eli korvapuusti, ja sille on oma juhlapäivänsä, [[Kanelbullens dag]], joka vietetään lokakuun alussa. Lihapullat eli [[köttbullar]] kuuluvat taas arkiruokaan. Pulla, kyllä, vihdoin aihe, jota ymmärrän.
+KYSYMYS: Kerro lisää: köttbullar
+
+### 1214
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Luonto: Jokaisella on oikeus metsään] Allemansrätten eli jokamiehenoikeus antaa kenelle tahansa luvan kulkea, uida, telttailla yön ja poimia marjoja ja sieniä myös toisen mailla. Sääntö tiivistyy kahteen sanaan: inte störa, inte förstöra — ei saa häiritä eikä tuhota. Pihan lähelle ei mennä, viljelyksiä ei talloa eikä nuotiota tehdä kalliolle, joka halkeaa kuumuudesta. Oikeutta ei ole kirjoitettu yhdeksi laiksi vaan se on tapa, joka on aikojen kuluessa vahvistettu. Sama oikeus on Suomessa ja Norjassa, mutta suuressa osassa Eurooppaa metsään ei saa mennä ilman lupaa.
+AIEMPI KYSYMYS: Mikä on jokamiehenoikeus Ruotsissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ruotsalainen [[allemansrätten]] tarkoittaa, että kaikilla on oikeus liikkua luonnossa, poimia marjoja ja sieniä sekä yöpyä telttailemalla, kunhan ei häiritse eikä vahingoita. Tunnettu patikointireitti on pohjoisen vuoriston läpi kulkeva [[Kungsleden]], noin 440 kilometrin mittainen. Luonto on kaikkien, mutta roskat eivät. Kyyhky kunnioittaa tätä.
+KYSYMYS: Kerro lisää: allemansrätten
+
+### 1215
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+AIEMPI KYSYMYS: Mikä on jokamiehenoikeus Ruotsissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ruotsalainen [[allemansrätten]] tarkoittaa, että kaikilla on oikeus liikkua luonnossa, poimia marjoja ja sieniä sekä yöpyä telttailemalla, kunhan ei häiritse eikä vahingoita. Tunnettu patikointireitti on pohjoisen vuoriston läpi kulkeva [[Kungsleden]], noin 440 kilometrin mittainen. Luonto on kaikkien, mutta roskat eivät. Kyyhky kunnioittaa tätä.
+KYSYMYS: Kerro lisää: Kungsleden
+
+### 1216
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+AIEMPI KYSYMYS: Miten Melodifestivalen vaikuttaa ruotsalaisten kevääseen?
+AIEMPI VASTAUS (Livia):
+Ai se, kevään suurtapahtuma. Joka kevät kilpailu valitsee maan [[euroviisujen]] edustajan, ja finaali on vuoden katsotuin televisiolähetys. Kilpailu kiertää viikkokausia eri kaupungeissa. Tätä kautta [[ABBA]] lähti vuonna 1974 voittamaan euroviisut, ja Ruotsi on voittanut kisan seitsemän kertaa, yhtä monta kertaa kuin [[Irlanti]]. Hyvä biisi jää päähän ja pyörii siellä.
+KYSYMYS: Kerro lisää: euroviisujen
+
+### 1217
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Musiikki: Neljä nimeä, joista tuli ABBA] Kun Agnetha, Björn, Benny ja Anni-Frid voittivat euroviisut Brightonissa 6. huhtikuuta 1974 kappaleella Waterloo, yhtyeen nimi oli koottu heidän etunimiensä alkukirjaimista. Voitto käänsi koko maan musiikkiviennin kasvuun: Tukholmassa toimii yhä poikkeuksellisen paljon studioita ja lauluntekijöitä, ja ruotsalaisia hittejä laulavat muidenkin maiden tähdet. Esiintymisasut tehtiin tahallaan mahdottomiksi — ne sai vähentää verotuksessa vain, jos niitä ei voinut käyttää arkena.
+AIEMPI KYSYMYS: Miten Melodifestivalen vaikuttaa ruotsalaisten kevääseen?
+AIEMPI VASTAUS (Livia):
+Ai se, kevään suurtapahtuma. Joka kevät kilpailu valitsee maan [[euroviisujen]] edustajan, ja finaali on vuoden katsotuin televisiolähetys. Kilpailu kiertää viikkokausia eri kaupungeissa. Tätä kautta [[ABBA]] lähti vuonna 1974 voittamaan euroviisut, ja Ruotsi on voittanut kisan seitsemän kertaa, yhtä monta kertaa kuin [[Irlanti]]. Hyvä biisi jää päähän ja pyörii siellä.
+KYSYMYS: Kerro lisää: ABBA
+
+### 1218
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ruotsi (maa)
+Tietoruudun teksti: Ruotsi ulottuu 1 572 kilometriä etelästä pohjoiseen — suunnilleen sama matka kuin Kööpenhaminasta Roomaan. Pohjoisessa maa nousee tuntureiksi, joiden takana on Norja, ja etelässä se laskeutuu viljalakeuksiksi; välissä on metsää, jota riittää yli puolelle pinta-alasta.
+
+Saaria on 267 570, enemmän kuin missään muussa maassa, mutta valtaosa 10,6 miljoonasta asukkaasta asuu eteläisessä kolmanneksessa.
+
+Maan vauraus rakennettiin raudasta, puusta ja vesivoimasta, ja sen tunnetuimmat vientituotteet ovat nykyään huonekaluja, autoja ja popmusiikkia. Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen — yhtäjaksoisesti pidempään kuin juuri mikään muu valtio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Musiikki: Koko kansan laulukilpailu] Joka kevät Ruotsi pysähtyy television ääreen, kun Melodifestivalen valitsee maan euroviisukappaleen. Kilpailu kiertää viikkokausia kaupungista toiseen kuin sirkus, ja finaali on vuoden katsotuin tv-lähetys — moni oppii kappaleet ulkoa ennen kuin euroviisuista on kuultu sanaakaan. Tulokset näkyvät: juuri tätä kautta ABBA lähti Waterloineen maailmalle 1974, ja Ruotsi on voittanut euroviisut seitsemän kertaa — yhtä moneen voittoon on yltänyt vain Irlanti.
+AIEMPI KYSYMYS: Miten Melodifestivalen vaikuttaa ruotsalaisten kevääseen?
+AIEMPI VASTAUS (Livia):
+Ai se, kevään suurtapahtuma. Joka kevät kilpailu valitsee maan [[euroviisujen]] edustajan, ja finaali on vuoden katsotuin televisiolähetys. Kilpailu kiertää viikkokausia eri kaupungeissa. Tätä kautta [[ABBA]] lähti vuonna 1974 voittamaan euroviisut, ja Ruotsi on voittanut kisan seitsemän kertaa, yhtä monta kertaa kuin [[Irlanti]]. Hyvä biisi jää päähän ja pyörii siellä.
+KYSYMYS: Kerro lisää: Irlanti
+
+### 1219
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Miten Tukholma sai alkunsa 1200-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, katotaas. Tukholman perustamisvuotena pidetään 1252. Perinteisesti perustajana mainitaan [[Birger Jarl]], vaikka lähteet eivät ole täysin yksiselitteisiä. Paikka valittiin, koska [[Mälaren]]-järven purkautumiskohta oli helppo sulkea: salmeen lyödyt paalut pysäyttivät vieraat laivat. Pian kaupunki kasvoi kauppapaikaksi, ja saksalaiset kauppiaat [[Hansaliitosta]] vaikuttivat siihen. Siis vanha kaupunki, mutta minun suku on vanhempi.
+KYSYMYS: Kerro lisää: Birger Jarl
+
+### 1220
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Polhem sai sulkutyön yli 80-vuotiaana] Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, rakennussopimus tehtiin 1744 Christopher Polhemin kanssa, joka oli silloin yli 80-vuotias. Hän kuoli 1751 kesken hankkeen, ja sulku avattiin 1755.
+AIEMPI KYSYMYS: Miten Tukholma sai alkunsa 1200-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, katotaas. Tukholman perustamisvuotena pidetään 1252. Perinteisesti perustajana mainitaan [[Birger Jarl]], vaikka lähteet eivät ole täysin yksiselitteisiä. Paikka valittiin, koska [[Mälaren]]-järven purkautumiskohta oli helppo sulkea: salmeen lyödyt paalut pysäyttivät vieraat laivat. Pian kaupunki kasvoi kauppapaikaksi, ja saksalaiset kauppiaat [[Hansaliitosta]] vaikuttivat siihen. Siis vanha kaupunki, mutta minun suku on vanhempi.
+KYSYMYS: Kerro lisää: Mälaren
+
+### 1221
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Miten Tukholma sai alkunsa 1200-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, katotaas. Tukholman perustamisvuotena pidetään 1252. Perinteisesti perustajana mainitaan [[Birger Jarl]], vaikka lähteet eivät ole täysin yksiselitteisiä. Paikka valittiin, koska [[Mälaren]]-järven purkautumiskohta oli helppo sulkea: salmeen lyödyt paalut pysäyttivät vieraat laivat. Pian kaupunki kasvoi kauppapaikaksi, ja saksalaiset kauppiaat [[Hansaliitosta]] vaikuttivat siihen. Siis vanha kaupunki, mutta minun suku on vanhempi.
+KYSYMYS: Kerro lisää: Hansaliitosta
+
+### 1222
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+AIEMPI KYSYMYS: Mitä Gamla stanissa kannattaa nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vanhaa kaupunkia. Gamla stanin kapeilla kujilla kannattaa nähdä [[Tukholman kuninkaanlinna]], tuomiokirkko [[Storkyrkan]] ja aukio [[Stortorget]]. Kapein kuja, [[Mårten Trotzigs gränd]], on leveydeltään noin metrin. Nimi Gamla stan tarkoittaa vanhaa kaupunkia, ja vuoteen 1980 asti virallinen nimi oli Staden mellan broarna. Ylhäältä se näyttää sokkelolta.
+KYSYMYS: Kerro lisää: Tukholman kuninkaanlinna
+
+### 1223
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Vädersolstavlan] Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, ja siitä teetettiin maalaus — perimätiedon mukaan pappi Olaus Petrin toimesta. Samalla syntyi vanhin tunnettu värikuva Tukholmasta: kaupunki porttitorneineen, kirkkoineen ja veteen lyötyine paalurivineen. Ja tässä on se kohta, joka isoisääsi kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on öljymaalaus puupaneelille, 163 senttiä leveä ja 110 korkea, ja siihen on kirjoitettu kaksi vuosilukua: 1535 ja ”renovoitu 1636”. Vuonna 1999 taulu tutkittiin, ja se osoitt…
+- [Tukholma — kaupunkilehti / Tukholma: Kaupungin vanhin värikuva on kuva kuvasta] Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, ja siitä teetettiin maalaus — samalla syntyi vanhin tunnettu värikuva Tukholmasta porttitorneineen ja kirkkoineen. Storkyrkanissa riippuvaan tauluun on kirjoitettu kaksi vuosilukua, 1535 ja renovoitu 1636. Vuonna 1999 taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich Elbfas. Alkuperäinen on kadonnut.
+AIEMPI KYSYMYS: Mitä Gamla stanissa kannattaa nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vanhaa kaupunkia. Gamla stanin kapeilla kujilla kannattaa nähdä [[Tukholman kuninkaanlinna]], tuomiokirkko [[Storkyrkan]] ja aukio [[Stortorget]]. Kapein kuja, [[Mårten Trotzigs gränd]], on leveydeltään noin metrin. Nimi Gamla stan tarkoittaa vanhaa kaupunkia, ja vuoteen 1980 asti virallinen nimi oli Staden mellan broarna. Ylhäältä se näyttää sokkelolta.
+KYSYMYS: Kerro lisää: Storkyrkan
+
+### 1224
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä Gamla stanissa kannattaa nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vanhaa kaupunkia. Gamla stanin kapeilla kujilla kannattaa nähdä [[Tukholman kuninkaanlinna]], tuomiokirkko [[Storkyrkan]] ja aukio [[Stortorget]]. Kapein kuja, [[Mårten Trotzigs gränd]], on leveydeltään noin metrin. Nimi Gamla stan tarkoittaa vanhaa kaupunkia, ja vuoteen 1980 asti virallinen nimi oli Staden mellan broarna. Ylhäältä se näyttää sokkelolta.
+KYSYMYS: Kerro lisää: Stortorget
+
+### 1225
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Kuja, jonne mahtuu yksi kerrallaan] Gamla stanin kortteleiden välissä kulkee Mårten Trotzigs gränd, kapeimmalta kohdaltaan 90 senttimetriä leveä. Se on Tukholman kapein kuja, ja sen 36 porrasaskelmaa laskevat Prästgatanilta alas Västerlånggatanille. Nimi tuli saksalaiselta kauppiaalta, joka muutti kaupunkiin 1581 ja osti kujan varrelta taloja. 1800-luvun puolivälissä kuja suljettiin molemmista päistä lankkuseinällä, ja se avattiin uudelleen vasta 1945.
+AIEMPI KYSYMYS: Mitä Gamla stanissa kannattaa nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, vanhaa kaupunkia. Gamla stanin kapeilla kujilla kannattaa nähdä [[Tukholman kuninkaanlinna]], tuomiokirkko [[Storkyrkan]] ja aukio [[Stortorget]]. Kapein kuja, [[Mårten Trotzigs gränd]], on leveydeltään noin metrin. Nimi Gamla stan tarkoittaa vanhaa kaupunkia, ja vuoteen 1980 asti virallinen nimi oli Staden mellan broarna. Ylhäältä se näyttää sokkelolta.
+KYSYMYS: Kerro lisää: Mårten Trotzigs gränd
+
+### 1226
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä tukholmalaiset syövät lounaaksi?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota niin. Arkilounas on usein päivän ateria, jossa on pääruoka, salaatti ja juoma. Tunnettuja ruokia ovat lihapullat eli [[köttbullar]] puolukkahillolla ja katkarapuvoileipä [[räksmörgås]]. Ruokatorilla [[Östermalms Saluhall]] on tarjolla tuoretta kalaa ja lihaa. Fettisdagen eli laskiaistiistaina syödään vielä semla-pullia. Semla, niin, minä tietysti muistan sen.
+KYSYMYS: Kerro lisää: köttbullar
+
+### 1227
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä tukholmalaiset syövät lounaaksi?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota niin. Arkilounas on usein päivän ateria, jossa on pääruoka, salaatti ja juoma. Tunnettuja ruokia ovat lihapullat eli [[köttbullar]] puolukkahillolla ja katkarapuvoileipä [[räksmörgås]]. Ruokatorilla [[Östermalms Saluhall]] on tarjolla tuoretta kalaa ja lihaa. Fettisdagen eli laskiaistiistaina syödään vielä semla-pullia. Semla, niin, minä tietysti muistan sen.
+KYSYMYS: Kerro lisää: räksmörgås
+
+### 1228
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä tukholmalaiset syövät lounaaksi?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota niin. Arkilounas on usein päivän ateria, jossa on pääruoka, salaatti ja juoma. Tunnettuja ruokia ovat lihapullat eli [[köttbullar]] puolukkahillolla ja katkarapuvoileipä [[räksmörgås]]. Ruokatorilla [[Östermalms Saluhall]] on tarjolla tuoretta kalaa ja lihaa. Fettisdagen eli laskiaistiistaina syödään vielä semla-pullia. Semla, niin, minä tietysti muistan sen.
+KYSYMYS: Kerro lisää: Östermalms Saluhall
+
+### 1229
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä Tukholman saaristossa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, merelle. Saaristossa on yli 24 000 saarta ja luotoa, ja sinne pääsee höyrylaivalla tai lautalla. [[Vaxholm]] on lähin pieni kaupunki, ja [[Sandhamn]] on tunnettu purjehduspaikka. Tukholman itäpuolella liikennöi laivoja, joita ylläpitää muun muassa [[Waxholmsbolaget]]. Vähäsuolaisessa vedessä voi uida, ja kesällä rannat täyttyvät. Merellä en laskeudu, jalkojen alla pitää olla jotain.
+KYSYMYS: Kerro lisää: Vaxholm
+
+### 1230
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä Tukholman saaristossa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, merelle. Saaristossa on yli 24 000 saarta ja luotoa, ja sinne pääsee höyrylaivalla tai lautalla. [[Vaxholm]] on lähin pieni kaupunki, ja [[Sandhamn]] on tunnettu purjehduspaikka. Tukholman itäpuolella liikennöi laivoja, joita ylläpitää muun muassa [[Waxholmsbolaget]]. Vähäsuolaisessa vedessä voi uida, ja kesällä rannat täyttyvät. Merellä en laskeudu, jalkojen alla pitää olla jotain.
+KYSYMYS: Kerro lisää: Sandhamn
+
+### 1231
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+AIEMPI KYSYMYS: Mitä Tukholman saaristossa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, merelle. Saaristossa on yli 24 000 saarta ja luotoa, ja sinne pääsee höyrylaivalla tai lautalla. [[Vaxholm]] on lähin pieni kaupunki, ja [[Sandhamn]] on tunnettu purjehduspaikka. Tukholman itäpuolella liikennöi laivoja, joita ylläpitää muun muassa [[Waxholmsbolaget]]. Vähäsuolaisessa vedessä voi uida, ja kesällä rannat täyttyvät. Merellä en laskeudu, jalkojen alla pitää olla jotain.
+KYSYMYS: Kerro lisää: Waxholmsbolaget
+
+### 1232
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Tiede: Dynamiitin keksijän testamentti] Alfred Nobel keksi dynamiitin 1867 ja rikastui räjähteillä, joita käytettiin sekä tunneleiden louhimiseen että sodassa. Vuonna 1888 eräs lehti luuli hänen kuolleen ja julkaisi muistokirjoituksen otsikolla ”kuoleman kauppias on kuollut”. Nobel luki oman muistokirjoituksensa ja kirjoitti myöhemmin testamentin, jossa hän määräsi lähes koko omaisuutensa palkinnoiksi. Ensimmäiset Nobelin palkinnot jaettiin 1901, ja juhlaillallista on vietetty Tukholman kaupungintalolla 1930-luvulta asti.
+AIEMPI KYSYMYS: Miksi Nobel-palkinnot jaetaan Tukholmassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on hyvä. Palkinnot perustuvat ruotsalaisen kemistin [[Alfred Nobelin]] testamenttiin, jonka hän laati vuonna 1895. Hän kuoli 10. joulukuuta 1896, ja siksi juhlallisuudet pidetään joka vuosi samana päivänä. Palkinnot jaetaan [[Tukholman konserttitalossa]], mutta rauhanpalkinto luovutetaan [[Oslossa]]. Hieno juhla, jota en pääse katsomaan sisältä.
+KYSYMYS: Kerro lisää: Alfred Nobelin
+
+### 1233
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Martin piirsi Tukholman ennen valokuvaa] Elias Martin oppi ammattinsa Lontoossa, jossa hän asui yli kaksitoista vuotta ja kehitti vesiväritaitojaan. Kotiin palattuaan 1780-luvun alussa hän kääntyi kaupunkiin, jota harvat olivat piirtäneet sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan Fredrik teki kuvista akvatintoja eli kuparipainokuvia, joiden sävy on vesivärimäinen, ja niitä myytiin sarjoina. Ne ovat yksi tarkimmista näkymistä Tukholmaan ennen valokuvaa.
+AIEMPI KYSYMYS: Miksi Nobel-palkinnot jaetaan Tukholmassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on hyvä. Palkinnot perustuvat ruotsalaisen kemistin [[Alfred Nobelin]] testamenttiin, jonka hän laati vuonna 1895. Hän kuoli 10. joulukuuta 1896, ja siksi juhlallisuudet pidetään joka vuosi samana päivänä. Palkinnot jaetaan [[Tukholman konserttitalossa]], mutta rauhanpalkinto luovutetaan [[Oslossa]]. Hieno juhla, jota en pääse katsomaan sisältä.
+KYSYMYS: Kerro lisää: Tukholman konserttitalossa
+
+### 1234
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tukholma
+Maa, jossa pelaaja on: Ruotsi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tukholma (kaupunki)
+Tietoruudun teksti: Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin kaupunki: kunnassa asuu noin miljoona ja kaupunkiseudulla 1,6 miljoonaa ihmistä. Se on rakennettu neljälletoista saarelle kapeikkoon, jossa Mälaren purkautuu Itämereen; nimi tarkoittaa suunnilleen paalusaarta. Vuonna 1252 perustettu kaupunki sai merkityksensä väylästä: salmeen lyödyt paalut pysäyttivät vieraat laivat ennen järveä.
+
+Vanhin osa on Gamla stan, pääosin yksi saari, jonka kujat kiertelevät kuten keskiajalla; vuoteen 1980 asti sen virallinen nimi oli Staden mellan broarna, kaupunki siltojen välissä. Keskustan itäpuolella alkaa saaristo, jossa on yli 24 000 saarta ja luotoa, ja sen murtovesi on niin vähäsuolaista, ettei se maistu merivedeltä.
+
+Ruotsi ei ole ollut sodassa vuoden 1814 jälkeen, ja sotien jälkeen maa rakensi kansankodiksi kutsuttua hyvinvointivaltiota. Joka vuosi 10. joulukuuta kaupungissa jaetaan Nobel-palkin…
+Isoisän matkakirjamerkintä: Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Laivat: Lautta balsapuista Tyynenmeren yli] Thor Heyerdahl uskoi, että Etelä-Amerikasta oli voitu purjehtia Tyynenmeren saarille jo kauan sitten. Väitettä ei uskottu, joten hän päätti näyttää sen. Vuonna 1947 hän sitoi yhdeksän balsapuun runkoa yhteen köysillä ilman ainuttakaan naulaa, nosti purjeen ja lähti viiden miehen kanssa Perusta länteen. Matka kesti 101 päivää ja lautta ajelehti lähes seitsemäntuhatta kilometriä, kunnes se ajautui riutalle Tuamotusaarilla. Lautta on nyt museossa Oslossa.
+- [Tampere — kaupunkilehti / Historia: Valo syttyi kutomosalissa] Maaliskuussa 1882 Finlaysonin uuteen kutomosaliin sytytettiin sähkövalot. Ne olivat ensimmäiset koko Pohjolassa — aiemmin kuin Tukholmassa, Kööpenhaminassa tai Oslossa. Virta tuli tehtaan omasta voimalaitoksesta Tammerkoskessa, ja syy oli käytännöllinen: kutojan on nähtävä lanka myös pimeällä, ja avoliekki oli puuvillasalissa jatkuva palonvaara. Sali sai nimekseen Plevna, ja siinä toimii nykyään elokuvateatteri.
+- [Oslo — kaupunkilehti / Taide: Perintö, joka täytti museon] Munchin testamentti sisälsi noin 1 150 maalausta, 17 800 vedosta, 4 500 akvarellia ja piirustusta sekä kolmetoista veistosta — yksi historian suurimmista yhden taiteilijan jäämistöistä. Kokoelma muodosti pohjan Munch-museolle, joka avattiin Oslossa 1963 taiteilijan syntymän satavuotispäivänä. Nykyään museon kokoelmassa on lähes 27 000 Munchin teosta, joista suurin osa perustuu juuri tähän lahjoitukseen.
+- [Oslo — kaupunkilehti / Laivat] Oslossa on kolme museota ja niissä kolme laivaa. Yksi kaivettiin maasta, yksi rakennettiin jäätä varten ja yksi sidottiin kasaan balsapuun rungoista.
+AIEMPI KYSYMYS: Miksi Nobel-palkinnot jaetaan Tukholmassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on hyvä. Palkinnot perustuvat ruotsalaisen kemistin [[Alfred Nobelin]] testamenttiin, jonka hän laati vuonna 1895. Hän kuoli 10. joulukuuta 1896, ja siksi juhlallisuudet pidetään joka vuosi samana päivänä. Palkinnot jaetaan [[Tukholman konserttitalossa]], mutta rauhanpalkinto luovutetaan [[Oslossa]]. Hieno juhla, jota en pääse katsomaan sisältä.
+KYSYMYS: Kerro lisää: Oslossa
+
+### 1235
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+AIEMPI KYSYMYS: Keitä ovat Nemrut-vuoren päättömät jättiläispatsaat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Patsaat esittävät jumalia ja kuningasta itseään, ja ne pystytti vuoren huipulle Kommagenen kuningas [[Antiokhos I]] ensimmäisellä vuosisadalla eaa. Hän yhdisti kreikkalaisia ja persialaisia jumalia, esimerkiksi [[Zeuksen]] ja Oromasdeen, ja rakennutti itselleen myös suuren hautakumpuhaudan. Päät ovat pudonneet maahan luultavasti maanjäristysten ja ajan vaikutuksesta, ja paikka on [[Unescon]] maailmanperintökohde. Ei oo helppoa olla jumala ilman päätä.
+KYSYMYS: Kerro lisää: Antiokhos I
+
+### 1236
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+AIEMPI KYSYMYS: Keitä ovat Nemrut-vuoren päättömät jättiläispatsaat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Patsaat esittävät jumalia ja kuningasta itseään, ja ne pystytti vuoren huipulle Kommagenen kuningas [[Antiokhos I]] ensimmäisellä vuosisadalla eaa. Hän yhdisti kreikkalaisia ja persialaisia jumalia, esimerkiksi [[Zeuksen]] ja Oromasdeen, ja rakennutti itselleen myös suuren hautakumpuhaudan. Päät ovat pudonneet maahan luultavasti maanjäristysten ja ajan vaikutuksesta, ja paikka on [[Unescon]] maailmanperintökohde. Ei oo helppoa olla jumala ilman päätä.
+KYSYMYS: Kerro lisää: Zeuksen
+
+### 1237
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+AIEMPI KYSYMYS: Keitä ovat Nemrut-vuoren päättömät jättiläispatsaat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Patsaat esittävät jumalia ja kuningasta itseään, ja ne pystytti vuoren huipulle Kommagenen kuningas [[Antiokhos I]] ensimmäisellä vuosisadalla eaa. Hän yhdisti kreikkalaisia ja persialaisia jumalia, esimerkiksi [[Zeuksen]] ja Oromasdeen, ja rakennutti itselleen myös suuren hautakumpuhaudan. Päät ovat pudonneet maahan luultavasti maanjäristysten ja ajan vaikutuksesta, ja paikka on [[Unescon]] maailmanperintökohde. Ei oo helppoa olla jumala ilman päätä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 1238
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Kissa, joka menee veteen] 1955 — Vanjärven seudulla Itä-Turkissa elää kissarotu, joka poikkeaa useimmista kissoista yhdessä asiassa: se ui mielellään. Van-kissan turkki on lähes kokonaan valkoinen, ja väriä on vain päässä ja hännässä. Monella yksilöllä silmät ovat eriväriset, toinen sininen ja toinen kullanruskea. Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on niin emäksistä, että siinä elää vain yksi kalalaji, helmisärki, joka nousee keväisin jokiin kutemaan.
+AIEMPI KYSYMYS: Miksi Vanjärvessä elää vain yksi kalalaji?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hauska juttu. Syy on veden kemiassa: Vanjärven vesi on hyvin emäksistä, ja siinä viihtyy vain yksi kalalaji, [[helmisärki]]. Se nousee keväisin järveen laskeviin jokiin kutemaan, koska makea vesi sopii sille kutupaikaksi. Järvi on Turkin suurin, ja sen rannoilla elää myös ainutlaatuinen [[Van-kissa]], joka ui mielellään ja jolla on usein eriväriset silmät. Siinä menee kalaopas lyhyeen.
+KYSYMYS: Kerro lisää: helmisärki
+
+### 1239
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Kissa, joka menee veteen] 1955 — Vanjärven seudulla Itä-Turkissa elää kissarotu, joka poikkeaa useimmista kissoista yhdessä asiassa: se ui mielellään. Van-kissan turkki on lähes kokonaan valkoinen, ja väriä on vain päässä ja hännässä. Monella yksilöllä silmät ovat eriväriset, toinen sininen ja toinen kullanruskea. Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on niin emäksistä, että siinä elää vain yksi kalalaji, helmisärki, joka nousee keväisin jokiin kutemaan.
+AIEMPI KYSYMYS: Miksi Vanjärvessä elää vain yksi kalalaji?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hauska juttu. Syy on veden kemiassa: Vanjärven vesi on hyvin emäksistä, ja siinä viihtyy vain yksi kalalaji, [[helmisärki]]. Se nousee keväisin järveen laskeviin jokiin kutemaan, koska makea vesi sopii sille kutupaikaksi. Järvi on Turkin suurin, ja sen rannoilla elää myös ainutlaatuinen [[Van-kissa]], joka ui mielellään ja jolla on usein eriväriset silmät. Siinä menee kalaopas lyhyeen.
+KYSYMYS: Kerro lisää: Van-kissa
+
+### 1240
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Kabul: Museo, jota pidettiin maailman parhaiden joukossa] Afganistanin kansallismuseo avattiin 1919 kuningas Amanullah Khanin aikana. Kokoelma oli aluksi Bagh-e Balan palatsissa ja muutti 1922 omiin tiloihinsa — museon oma infoboksi laskee perustamisvuodeksi juuri tuon — ja sai nykyisen paikkansa Darulamanin alueelta 1931. Museota pidettiin aikanaan yhtenä maailman hienoimmista. Vuoteen 1978 mennessä kokoelmassa oli yli satatuhatta esinettä: Bagramin norsunluukaiverruksia ensimmäiseltä vuosisadalta, Ai-Khanoumin kreikkalaisia pylväänpäitä, Tepe Fullolin hopeamaljan sirpaleita kolmannelta vuosituhannelta eaa. ja Surkh Kotalin kreikkalaisin kirjaimin kirjoitettu bakriankielinen piirtokirjoitus.
+AIEMPI KYSYMYS: Mikä on Anatolia ja miksi se on niin vanha asuinseutu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Anatolia on Turkin Aasian puoleinen suuralue, joka kattaa lähes koko maan, ja ihmiset ovat asuneet siellä jo yli kymmenentuhatta vuotta. Kaakkoisessa Anatoliassa sijaitseva [[Göbekli Tepe]] on yksi vanhimmista tunnetuista monumenttikohteista, ja [[Çatalhöyükin]] asuinkylä on kasvanut jo uuden kivikauden aikana. Myöhemmin alueella hallitsivat esimerkiksi [[hetiitit]], ja sama maaperä on kantanut kreikkalaisia, roomalaisia, bysanttilaisia ja ottomaaneja. Ylätasanko on nähnyt paljon, vaikka se on sijaintina vähän kuivakka.
+KYSYMYS: Kerro lisää: Göbekli Tepe
+
+### 1241
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Anatolian sivilisaatioiden museo] Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, esitelmäsali ja laboratorio. Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja siinä seisovat suuret kivireliefit ja patsaat myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, sotavaunuja, hierogly…
+AIEMPI KYSYMYS: Mikä on Anatolia ja miksi se on niin vanha asuinseutu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Anatolia on Turkin Aasian puoleinen suuralue, joka kattaa lähes koko maan, ja ihmiset ovat asuneet siellä jo yli kymmenentuhatta vuotta. Kaakkoisessa Anatoliassa sijaitseva [[Göbekli Tepe]] on yksi vanhimmista tunnetuista monumenttikohteista, ja [[Çatalhöyükin]] asuinkylä on kasvanut jo uuden kivikauden aikana. Myöhemmin alueella hallitsivat esimerkiksi [[hetiitit]], ja sama maaperä on kantanut kreikkalaisia, roomalaisia, bysanttilaisia ja ottomaaneja. Ylätasanko on nähnyt paljon, vaikka se on sijaintina vähän kuivakka.
+KYSYMYS: Kerro lisää: Çatalhöyükin
+
+### 1242
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+AIEMPI KYSYMYS: Mikä on Anatolia ja miksi se on niin vanha asuinseutu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Anatolia on Turkin Aasian puoleinen suuralue, joka kattaa lähes koko maan, ja ihmiset ovat asuneet siellä jo yli kymmenentuhatta vuotta. Kaakkoisessa Anatoliassa sijaitseva [[Göbekli Tepe]] on yksi vanhimmista tunnetuista monumenttikohteista, ja [[Çatalhöyükin]] asuinkylä on kasvanut jo uuden kivikauden aikana. Myöhemmin alueella hallitsivat esimerkiksi [[hetiitit]], ja sama maaperä on kantanut kreikkalaisia, roomalaisia, bysanttilaisia ja ottomaaneja. Ylätasanko on nähnyt paljon, vaikka se on sijaintina vähän kuivakka.
+KYSYMYS: Kerro lisää: hetiitit
+
+### 1243
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Sirkecin asema] 1890 Rata Euroopasta Istanbuliin valmistui vaiheittain: ensimmäiset viisitoista kilometriä Halkalıin rakennettiin 1870–1871, ja jatke Sirkeciin valmistui heinäkuussa 1872. Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin ”väliaikainen” asema. Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli preussilainen August Jasmund, jonka Saksan hallitus oli lähettänyt Istanbuliin tutkimaan osmanilaista arkkitehtuuria. Tulos on tunnetuimpia esimerkkejä eurooppalaisesta orientalismista: 1 200 neliömetriä, kaasuvalaistus ja t…
+- [Istanbul — kohdekartta / Kohdekartta: Üsküdar] 600-luku eaa. Üsküdar sijaitsee Istanbulin Aasian-puoleisella rannalla, vastapäätä vanhaa kaupunkia. Kreikkalaiset siirtolaiset Megarasta perustivat sen jo 600-luvulla eaa. ja antoivat sille nimen Khrysopolis, ”Kultainen kaupunki”. Osmanit valtasivat sen jo vuonna 1338 — yli sata vuotta ennen kuin Konstantinopoli itse kaatui vuonna 1453. Nykyään Üsküdar on Istanbulin vilkkaimpia liikenteen solmukohtia: laivat kuljettavat matkustajia Bosporin yli Eurooppaan, ja Marmaray-junat kulkevat salmen alittavassa tunnelissa. Aivan lauttarannan edustalla, omalla pienellä saarellaan, kohoaa Kız Kulesi eli Neitsyttorni — se on toiminut muun muassa majakkana ja tullitalona. Üsküdaria kutsutaan joskus mosk…
+AIEMPI KYSYMYS: Miten ihmiset ylittävät Bosporinsalmen joka päivä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Salmen yli kulkee kolme siltaa, ja lisäksi sen alitse kulkee [[Marmaray]]-rautatietunneli, joka avattiin vuonna 2013. Autot, bussit, junat ja paljon matkustajia kulkee päivittäin näitä reittejä, ja lisäksi vanhan ajan tapaan käytetään [[lauttoja]], jotka kuljettavat ihmisiä Euroopan ja Aasian välillä muutamassa kymmenessä minuutissa. Salmen ylittäminen on monelle istanbulilaiselle työmatkaa. Minä ylitän sen tyylikkäästi siivillä.
+KYSYMYS: Kerro lisää: Marmaray
+
+### 1244
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kohdekartta / Kohdekartta: Fort Amador] 1912 Fort Amador ja sen vieressä ollut Fort Grant rakennettiin suojaamaan kanavan Tyynenmeren päätä. Amador oli mantereen puoleinen tukikohta Amerikkojen sillan alapuolella, Grant taas sarja saaria hieman kauempana rannikosta. Molemmat nimettiin virallisesti 1912, kun aallonmurtaja valmistui: Amador ensimmäisen presidentin Manuel Amador Guerreron ja Grant Ulysses S. Grantin mukaan, joka oli kapteenina ylittänyt kannaksen juuri siltä kohdalta 1852. Aallonmurtaja itse on kanavan jäte. Culebran leikkauksen kaivumassat ajettiin mangrovesuolle, jota kutsuttiin Balboan kaatopaikaksi, ja täyttö kasvoi vähitellen penkereeksi lähimmälle saarelle Naosille. Myöhemmin pengertä jatkettiin Culebran, Peri…
+- [Dublin — kohdekartta / Kohdekartta: Ha’penny-silta] 1816 Ha'penny-silta on Dublinin tunnetuimpia maamerkkejä. Se valmistui toukokuussa 1816 Liffey-joen yli, ja se valettiin kokonaan raudasta Englannissa — malmi oli kaivettu Irlannin Leitrimin kreivikunnasta. Silta on 43 metriä pitkä ja vain reilut kolme ja puoli metriä leveä. Silta sai lempinimensä tulliltaan. Ennen siltaa joen yli kuljettiin lautoilla, ja lauttoja pyörittänyt William Walsh sai luvan periä sillan käyttäjiltä puolen pennyn eli ”ha'pennyn” maksun peräti 100 vuoden ajan, kunnes se lopulta poistettiin vuonna 1919. Sillan virallinen nimi oli aluksi Wellingtonin silta, mutta dublinilaiset kutsuvat sitä yhä Ha'penny-sillaksi. Vuosina 2012–2013 sillasta jouduttiin poistamaan tuhansi…
+AIEMPI KYSYMYS: Miten ihmiset ylittävät Bosporinsalmen joka päivä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Salmen yli kulkee kolme siltaa, ja lisäksi sen alitse kulkee [[Marmaray]]-rautatietunneli, joka avattiin vuonna 2013. Autot, bussit, junat ja paljon matkustajia kulkee päivittäin näitä reittejä, ja lisäksi vanhan ajan tapaan käytetään [[lauttoja]], jotka kuljettavat ihmisiä Euroopan ja Aasian välillä muutamassa kymmenessä minuutissa. Salmen ylittäminen on monelle istanbulilaiselle työmatkaa. Minä ylitän sen tyylikkäästi siivillä.
+KYSYMYS: Kerro lisää: lauttoja
+
+### 1245
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+AIEMPI KYSYMYS: Miksi teetä juodaan Turkissa joka paikassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tee on turkkilaisen arjen perusjuoma: sitä tarjotaan kotona, kaupassa, toreilla ja neuvotteluissa pienistä tulppaanin muotoisista laseista. Teetä viljellään Mustanmeren rannikon kosteilla rinteillä, ja tunnetuin teealue on [[Rize]]. Kahvilla on turkkilaisessa kulttuurissa oma arvonsa, ja [[turkkilainen kahvi]] on kuulunut Unescon aineettoman perinnön luetteloon, mutta teetä juodaan päivän mittaan huomattavasti enemmän. Lasillinen on pieni, joten niitä tulee monta.
+KYSYMYS: Kerro lisää: Rize
+
+### 1246
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Turkki (maa)
+Tietoruudun teksti: Turkki on kahdella mantereella: 97 prosenttia sen maasta on Aasiassa ja loput Euroopassa. Istanbul on maailman ainoa suurkaupunki, joka seisoo molemmilla. Bosporinsalmi halkaisee sen, ja kapeimmillaan maanosat ovat noin 700 metrin päässä toisistaan.
+
+Kartalla maa levittäytyy pitkänä laatikkona idästä länteen. Keskellä kohoaa Anatolian ylätasanko, ja sitä puristavat kahden puolen vuorijonot: pohjoisessa Mustanmeren rannikkoa seuraavat Pontiset vuoret, etelässä Taurus. Itään päin maa nousee koko ajan korkeammalle, ja siellä on maan suurin järvi, Vanjärvi.
+
+Euroopan puoli on vain pieni kolkka kartan luoteiskulmassa, ja kaikki muu on Anatoliaa — yhtä ihmiskunnan vanhimmista asuinseuduista. Kaakkoisrajan tuntumassa erään vuoren huipulle nostettiin kaksituhatta vuotta sitten rivi jättiläispatsaita, ja niiden päät ovat nyt maassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Käsityö: Solmu kiertää kaksi lankaa] 1200-luvulta — Turkkilainen matto solmitaan pystyyn pingotettujen loimilankojen ympärille. Solmu on kaksinkertainen: lanka kiertää kahden loimen ympäri ja tulee ulos niiden välistä. Persialainen solmu kiertää vain yhtä loimea, joten turkkilainen solmu on tukevampi mutta karkeampi. Solmuja lasketaan neliödesimetreittäin, ja tiheässä matossa niitä on useita tuhansia. Iso matto vie kutojalta kuukausia. Kilim on eri asia: siinä ei ole solmuja lainkaan, vaan kuvio syntyy pelkästä kudonnasta, eikä kilimissä siksi ole nukkaa.
+AIEMPI KYSYMYS: Miksi teetä juodaan Turkissa joka paikassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tee on turkkilaisen arjen perusjuoma: sitä tarjotaan kotona, kaupassa, toreilla ja neuvotteluissa pienistä tulppaanin muotoisista laseista. Teetä viljellään Mustanmeren rannikon kosteilla rinteillä, ja tunnetuin teealue on [[Rize]]. Kahvilla on turkkilaisessa kulttuurissa oma arvonsa, ja [[turkkilainen kahvi]] on kuulunut Unescon aineettoman perinnön luetteloon, mutta teetä juodaan päivän mittaan huomattavasti enemmän. Lasillinen on pieni, joten niitä tulee monta.
+KYSYMYS: Kerro lisää: turkkilainen kahvi
+
+### 1247
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+AIEMPI KYSYMYS: Miten Hagia Sofia on muuttunut vuosisatojen aikana?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keisari [[Justinianus]] rakennutti Hagia Sofian valmiiksi vuonna 537, ja se oli ensin kristillinen kirkko. Kun [[Mehmet II]] valtasi kaupungin vuonna 1453, rakennus muutettiin moskeijaksi, ja ulkopuolelle lisättiin minareetit. Vuonna 1934 se muutettiin museoksi, ja vuonna 2020 siitä tehtiin jälleen moskeija. Kupolin loisto on silti pysynyt, ja [[Hagia Sofia]] on yksi Istanbulin tunnetuimmista rakennuksista. Neljä muutosta yhdelle talolle on aika paljon.
+KYSYMYS: Kerro lisää: Justinianus
+
+### 1248
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+AIEMPI KYSYMYS: Miten Hagia Sofia on muuttunut vuosisatojen aikana?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keisari [[Justinianus]] rakennutti Hagia Sofian valmiiksi vuonna 537, ja se oli ensin kristillinen kirkko. Kun [[Mehmet II]] valtasi kaupungin vuonna 1453, rakennus muutettiin moskeijaksi, ja ulkopuolelle lisättiin minareetit. Vuonna 1934 se muutettiin museoksi, ja vuonna 2020 siitä tehtiin jälleen moskeija. Kupolin loisto on silti pysynyt, ja [[Hagia Sofia]] on yksi Istanbulin tunnetuimmista rakennuksista. Neljä muutosta yhdelle talolle on aika paljon.
+KYSYMYS: Kerro lisää: Mehmet II
+
+### 1249
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+- [Istanbul — kaupunkilehti / Historian hetki: Konstantinopoli 1453 — aamu tulee rumpujen mukana] 29.5.1453 — Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt kaupunkia 6. huhtikuuta lähtien — 53 päivää — ja unkarilaisen Orbanin valama jättiläistykki on murtanut muuria viikkokausia niin, että puolustajat täyttävät aukkoja öisin. Kaupungissa on alle 50 000 asukasta ja vain noin 7 000–8 000 aseellista miestä kahdentoista mailin muureille; ulkopuolella on 50 000–80 000 osmania. Edellisenä iltana keisari Konstantinos XI kävi Hagia Sofiassa viimeisessä vesperissä, jossa latinalaiset ja kreikkalaiset rukoilivat samassa kirkossa. Hyökkäys tulee aalloittain: ensin p…
+AIEMPI KYSYMYS: Miten Hagia Sofia on muuttunut vuosisatojen aikana?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keisari [[Justinianus]] rakennutti Hagia Sofian valmiiksi vuonna 537, ja se oli ensin kristillinen kirkko. Kun [[Mehmet II]] valtasi kaupungin vuonna 1453, rakennus muutettiin moskeijaksi, ja ulkopuolelle lisättiin minareetit. Vuonna 1934 se muutettiin museoksi, ja vuonna 2020 siitä tehtiin jälleen moskeija. Kupolin loisto on silti pysynyt, ja [[Hagia Sofia]] on yksi Istanbulin tunnetuimmista rakennuksista. Neljä muutosta yhdelle talolle on aika paljon.
+KYSYMYS: Kerro lisää: Hagia Sofia
+
+### 1250
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Galatan torni] 1348 Genovalaiset kauppiaat rakensivat Galatan tornin vuonna 1348 osana kaupunkinsa laajennusta. Torni tunnettiin alun perin nimellä Kristuksen torni, ja se oli valmistuessaan kaupungin korkein rakennus, lähes 63 metriä korkea. Osmannien valloitettua Istanbulin 1453 tornia käytettiin muun muassa vankilana. Vuodesta 1717 alkaen sen huipulla vartioitiin kaupunkia tulipalojen varalta — puukaupunki syttyi herkästi, ja vartijat tähyilivät savua yli 50 metrin korkeudesta. Tornin tarinaan kuuluu legenda vuodelta 1638: Hezarfen Ahmed Çelebin kerrotaan sitoneen siivet käsiinsä ja liitäneen tornin huipulta yli Bosporin salmen aina Üsküdariin asti. Nykyään tornissa on museo ja näköalatasanne.
+AIEMPI KYSYMYS: Mikä on Kultainen sarvi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kultainen sarvi on Bosporinsalmen kapea lahti Istanbulin Euroopan puolella, ja sen suojainen vesi teki siitä jo antiikissa luonnonsataman. Kaupungin historiallinen niemi on lahden eteläpuolella ja [[Galata]] pohjoispuolella, ja niitä yhdistää muun muassa [[Galatan silta]]. [[Byzantionin]] perustajat valitsivat paikan juuri tämän sataman ja niemen vuoksi. Ylhäältä katsottuna se on kyllä hieno vesikäytävä.
+KYSYMYS: Kerro lisää: Galata
+
+### 1251
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+- [Istanbul — kohdekartta / Kohdekartta: Galatan torni] 1348 Genovalaiset kauppiaat rakensivat Galatan tornin vuonna 1348 osana kaupunkinsa laajennusta. Torni tunnettiin alun perin nimellä Kristuksen torni, ja se oli valmistuessaan kaupungin korkein rakennus, lähes 63 metriä korkea. Osmannien valloitettua Istanbulin 1453 tornia käytettiin muun muassa vankilana. Vuodesta 1717 alkaen sen huipulla vartioitiin kaupunkia tulipalojen varalta — puukaupunki syttyi herkästi, ja vartijat tähyilivät savua yli 50 metrin korkeudesta. Tornin tarinaan kuuluu legenda vuodelta 1638: Hezarfen Ahmed Çelebin kerrotaan sitoneen siivet käsiinsä ja liitäneen tornin huipulta yli Bosporin salmen aina Üsküdariin asti. Nykyään tornissa on museo ja näköalatasanne.
+AIEMPI KYSYMYS: Mikä on Kultainen sarvi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kultainen sarvi on Bosporinsalmen kapea lahti Istanbulin Euroopan puolella, ja sen suojainen vesi teki siitä jo antiikissa luonnonsataman. Kaupungin historiallinen niemi on lahden eteläpuolella ja [[Galata]] pohjoispuolella, ja niitä yhdistää muun muassa [[Galatan silta]]. [[Byzantionin]] perustajat valitsivat paikan juuri tämän sataman ja niemen vuoksi. Ylhäältä katsottuna se on kyllä hieno vesikäytävä.
+KYSYMYS: Kerro lisää: Galatan silta
+
+### 1252
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+AIEMPI KYSYMYS: Mikä on Kultainen sarvi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kultainen sarvi on Bosporinsalmen kapea lahti Istanbulin Euroopan puolella, ja sen suojainen vesi teki siitä jo antiikissa luonnonsataman. Kaupungin historiallinen niemi on lahden eteläpuolella ja [[Galata]] pohjoispuolella, ja niitä yhdistää muun muassa [[Galatan silta]]. [[Byzantionin]] perustajat valitsivat paikan juuri tämän sataman ja niemen vuoksi. Ylhäältä katsottuna se on kyllä hieno vesikäytävä.
+KYSYMYS: Kerro lisää: Byzantionin
+
+### 1253
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Miksi Istanbulissa on niin paljon katukissoja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Istanbulin kissat ovat osa kaupunkikuvaa: niille jätetään ruokaa ja vettä oviin ja kulmiin, ja monet asukkaat pitävät huolta tutuista yksilöistä. Perinteeseen kuuluu usein kunnioitus eläimiä kohtaan, jonka juuret ulottuvat [[ottomaanien]] aikaan, ja ilmiöstä on tehty dokumenttielokuva [[Kedi]] vuodelta 2016. Kissat nukkuvat kaupoissa, kahviloissa ja moskeijoiden pihoilla. Ne vievät kyllä parhaat paikat auringossa.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 1254
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+AIEMPI KYSYMYS: Miksi Istanbulissa on niin paljon katukissoja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Istanbulin kissat ovat osa kaupunkikuvaa: niille jätetään ruokaa ja vettä oviin ja kulmiin, ja monet asukkaat pitävät huolta tutuista yksilöistä. Perinteeseen kuuluu usein kunnioitus eläimiä kohtaan, jonka juuret ulottuvat [[ottomaanien]] aikaan, ja ilmiöstä on tehty dokumenttielokuva [[Kedi]] vuodelta 2016. Kissat nukkuvat kaupoissa, kahviloissa ja moskeijoiden pihoilla. Ne vievät kyllä parhaat paikat auringossa.
+KYSYMYS: Kerro lisää: Kedi
+
+### 1255
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä on pylväiden kannattama vesisäiliö Istanbulin alla?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Kyseessä on [[Basilikasäiliö]], jonka Justinianuksen aikaan rakennettu holvikellari säilytti vettä kaupungille. Pylväitä on kolmesataakolmekymmentäkuusi, ja ne kannattavat tiilistä holvikattoa. Kahden pylvään jalustana on [[Medusan]] pää, ja syy tähän on edelleen jossain määrin epäselvä, sillä päät otettiin todennäköisesti uudelleenkäyttöön vanhemmista rakennuksista. Rakennus on avoinna matkailijoille, ja viileydestä pääsee nauttimaan kesäkuumallakin. Ylhäältä sitä ei näe, mikä on vähän harmi.
+KYSYMYS: Kerro lisää: Basilikasäiliö
+
+### 1256
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul: Medusa kannattelee pylvästä ylösalaisin] Hagia Sofiasta 150 metrin päässä laskeutuu 52 porrasta maan alle. Siellä on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama vesisäiliö: 336 yhdeksänmetristä pylvästä. Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla ranskalainen matkaaja ihmetteli, miksi talojen lattioissa on reikiä, joista lasketaan ämpäri — ja joistakin nousee kaloja. Kahden pylvään jalustaksi on pantu kivi, johon on veistetty Medusan kasvot: toinen kyljellään, toinen ylösalaisin. Varmaa syytä ei tiedetä. Tarina kertoo, että pää käännettiin, jottei kivettävä katse osuisi keneenkään; tutkijoiden mukaan kivet ovat roomalaisajan rakennuksesta otettua kierrätyskiveä.
+AIEMPI KYSYMYS: Mikä on pylväiden kannattama vesisäiliö Istanbulin alla?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Kyseessä on [[Basilikasäiliö]], jonka Justinianuksen aikaan rakennettu holvikellari säilytti vettä kaupungille. Pylväitä on kolmesataakolmekymmentäkuusi, ja ne kannattavat tiilistä holvikattoa. Kahden pylvään jalustana on [[Medusan]] pää, ja syy tähän on edelleen jossain määrin epäselvä, sillä päät otettiin todennäköisesti uudelleenkäyttöön vanhemmista rakennuksista. Rakennus on avoinna matkailijoille, ja viileydestä pääsee nauttimaan kesäkuumallakin. Ylhäältä sitä ei näe, mikä on vähän harmi.
+KYSYMYS: Kerro lisää: Medusan
+
+### 1257
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Istanbul (kaupunki)
+Tietoruudun teksti: Istanbul on Turkin suurin kaupunki ja maan talouden ja kulttuurin keskus: siellä asuu noin kuusitoista miljoonaa ihmistä, lähes viidennes koko maan väestöstä. Se on maailman ainoa suurkaupunki kahdella mantereella — Bosporinsalmi jakaa sen Euroopan ja Aasian puoleen, ja kaksi kolmasosaa asukkaista asuu Euroopan puolella. Kreikkalaiset perustivat salmen suulle Byzantionin 600-luvulla eaa., ja paikka valittiin veden takia: niemellä on vettä kolmella sivulla ja sen pohjoispuolella Kultaisen sarven luonnonsatama.
+
+Vuonna 330 keisari Konstantinus teki kaupungista Rooman valtakunnan uuden pääkaupungin, ja se oli tuhannen vuoden ajan kristikunnan suurin kaupunki. Vuonna 537 valmistui Hagia Sofia, joka on ollut vuorollaan kirkko, moskeija, museo ja jälleen moskeija. Osmanisulttaani Mehmet II valtasi kaupungin 1453; Turkin tasavallan pääkaupungiksi tuli 1923 Ankara, mutta Istanbul pysyi maan suu…
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+AIEMPI KYSYMYS: Miten Galatan jyrkkä mäki on voitettu junalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Istanbulin vanhan kaupungin ja Galatan mäen välillä kulkee lyhyt maanalainen köysirata, jota sanotaan nimellä [[Tünel]]. Se avattiin vuonna 1875, ja sen tarkoitus oli helpottaa nousua rannasta mäen päälle, jossa [[Galata]] ja Beyoğlu sijaitsevat. Rata kulkee vain alle kilometrin matkan, mutta säästää monta nousua. Isoisäsi kantajan olisi pitänyt odottaa pari vuotta.
+KYSYMYS: Kerro lisää: Tünel
+
+### 1258
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: İzmirin kellotorni] 1901 Torni on 25 metriä korkea ja seisoo 81 neliömetrin alalla. Pohjakaava on kahdeksankulmainen ja kerroksia on neljä. Runko on rautaa ja lyijyä, pinta marmoria ja kiveä. Jalustan ympärille on ladottu kehäksi neljä şadırvania eli suihkulähdettä. Kellotauluja on niin ikään neljä, halkaisijaltaan 75 senttiä, ja neljännessä kerroksessa riippuu soittokello, jota kannattaa kaksitoista pylvästä. Aydınin vilajetin kuvernööri Kâmil Pasha kutsui İzmirin vaikutusvaltaiset koolle 1. elokuuta 1900. Kokouksessa päätettiin kellotornista, joka pystytettäisiin sulttaani Abdülhamid II:n valtaistuimelle nousun 25-vuotispäivän kunniaksi. Peruskivi laskettiin 1. syyskuuta 1900, torni valmistui elokuussa 1901 …
+AIEMPI KYSYMYS: Miksi İzmirin viikunat ovat niin kuuluisia?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Viikuna on İzmirin alueen tunnusmerkki, sillä Egeanmeren ilmasto ja [[Aydınin]] tasangon maa sopivat sille erinomaisesti. Hedelmät kuljetettiin satamaan rautatietä pitkin, jonka ensimmäinen osuus avattiin vuonna 1858. Kaupungin vanha nimi [[Smyrna]] elää viikunalajikkeiden nimissä, ja Turkki on yksi maailman suurimmista viikunantuottajista. Kyllä pullakin kelpaisi, mutta viikuna on sentään terveellisempää.
+KYSYMYS: Kerro lisää: Aydınin
+
+### 1259
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / İzmir: Unessa käskettiin muuttaa kukkulalle] Kadifekale seisoo Pagos-vuoren laella 186 metrin korkeudessa, noin kahden kilometrin päässä rantaviivasta. Ensimmäiset tunnetut muurit rakennutti Lysimakhos, yksi Aleksanteri Suuren seuraajista, ja samoihin aikoihin Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, jolle mahtui vain muutama tuhat asukasta. Pausanias kertoo tarinan, jonka mukaan Aleksanteri nukahti metsästysretkellä plataanin alle ja näki unessa kaksi jumalatarta, jotka käskivät perustaa kaupungin juuri sille kukkulalle. Nykyiset muurit ovat keskiajalta.
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+AIEMPI KYSYMYS: Miksi İzmirin viikunat ovat niin kuuluisia?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Viikuna on İzmirin alueen tunnusmerkki, sillä Egeanmeren ilmasto ja [[Aydınin]] tasangon maa sopivat sille erinomaisesti. Hedelmät kuljetettiin satamaan rautatietä pitkin, jonka ensimmäinen osuus avattiin vuonna 1858. Kaupungin vanha nimi [[Smyrna]] elää viikunalajikkeiden nimissä, ja Turkki on yksi maailman suurimmista viikunantuottajista. Kyllä pullakin kelpaisi, mutta viikuna on sentään terveellisempää.
+KYSYMYS: Kerro lisää: Smyrna
+
+### 1260
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / İzmir: Unessa käskettiin muuttaa kukkulalle] Kadifekale seisoo Pagos-vuoren laella 186 metrin korkeudessa, noin kahden kilometrin päässä rantaviivasta. Ensimmäiset tunnetut muurit rakennutti Lysimakhos, yksi Aleksanteri Suuren seuraajista, ja samoihin aikoihin Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, jolle mahtui vain muutama tuhat asukasta. Pausanias kertoo tarinan, jonka mukaan Aleksanteri nukahti metsästysretkellä plataanin alle ja näki unessa kaksi jumalatarta, jotka käskivät perustaa kaupungin juuri sille kukkulalle. Nykyiset muurit ovat keskiajalta.
+AIEMPI KYSYMYS: Mitä Pagos-vuoren linna kertoo kaupungin historiasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnan nimi on [[Kadifekale]], ja se rakennettiin antiikin Smyrnan siirtämisen yhteydessä Pagos-vuoren rinteelle. Tarinan mukaan [[Aleksanteri Suuri]] uneksi paikasta ennen kuolemaansa, ja hänen seuraajansa siirsivät kaupungin nykyiselle paikalleen. Linnasta on tarjolla laaja näkymä lahdelle, ja se muistuttaa, miten kauan sama laakso on kelvannut asuinpaikaksi. Ylös pääsee vähän hikoilematta vain siivin.
+KYSYMYS: Kerro lisää: Kadifekale
+
+### 1261
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mitä Pagos-vuoren linna kertoo kaupungin historiasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnan nimi on [[Kadifekale]], ja se rakennettiin antiikin Smyrnan siirtämisen yhteydessä Pagos-vuoren rinteelle. Tarinan mukaan [[Aleksanteri Suuri]] uneksi paikasta ennen kuolemaansa, ja hänen seuraajansa siirsivät kaupungin nykyiselle paikalleen. Linnasta on tarjolla laaja näkymä lahdelle, ja se muistuttaa, miten kauan sama laakso on kelvannut asuinpaikaksi. Ylös pääsee vähän hikoilematta vain siivin.
+KYSYMYS: Kerro lisää: Aleksanteri Suuri
+
+### 1262
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / Arki: Yhdeksän laituria, 210 vuoroa] İzmirin lahden yli kulkevista lautoista vastaa kaupungin oma yhtiö İzdeniz. Se perustettiin 1992 ja sai nykyisen nimensä 1999, ja vuonna 2000 valtion yhtiöltä siirtyi sille 104 työntekijää ja yksitoista lauttaa, joista kolme oli autolauttoja. Omia aluksia on nyt kolmetoista ja vuokrattuja kolmetoista, eli yhteensä 26. Vuoroja ajetaan päivässä 210 ja laitureita on yhdeksän: Alsancak, Bostanlı, Göztepe, Güzelbahçe, Karantina, Karşıyaka, Konak, Pasaport ja Üçkuyular. Matkustajia kertyy päivässä yli 50 000 ja ajoneuvoja yli 1 500.
+AIEMPI KYSYMYS: Miten İzmirissä liikutaan lahden yli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lahden poikki kulkee lauttoja, jotka yhdistävät kaupungin eri rantoja, esimerkiksi [[Konakin]] ja [[Karşıyakan]] alueen. Lautat ovat tavallisten asukkaiden päivittäinen kulkuneuvo, ja matka on edullinen. Rinteiden vuoksi kaupungissa on myös [[Asansör]], tunnettu hissitorni, joka nostaa jalankulkijoita jyrkän rinteen päälle. Kyyti merellä on parempi kuin ruuhkassa.
+KYSYMYS: Kerro lisää: Konakin
+
+### 1263
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: İzmirin kellotorni] 1901 Torni on 25 metriä korkea ja seisoo 81 neliömetrin alalla. Pohjakaava on kahdeksankulmainen ja kerroksia on neljä. Runko on rautaa ja lyijyä, pinta marmoria ja kiveä. Jalustan ympärille on ladottu kehäksi neljä şadırvania eli suihkulähdettä. Kellotauluja on niin ikään neljä, halkaisijaltaan 75 senttiä, ja neljännessä kerroksessa riippuu soittokello, jota kannattaa kaksitoista pylvästä. Aydınin vilajetin kuvernööri Kâmil Pasha kutsui İzmirin vaikutusvaltaiset koolle 1. elokuuta 1900. Kokouksessa päätettiin kellotornista, joka pystytettäisiin sulttaani Abdülhamid II:n valtaistuimelle nousun 25-vuotispäivän kunniaksi. Peruskivi laskettiin 1. syyskuuta 1900, torni valmistui elokuussa 1901 …
+AIEMPI KYSYMYS: Miten İzmirissä liikutaan lahden yli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lahden poikki kulkee lauttoja, jotka yhdistävät kaupungin eri rantoja, esimerkiksi [[Konakin]] ja [[Karşıyakan]] alueen. Lautat ovat tavallisten asukkaiden päivittäinen kulkuneuvo, ja matka on edullinen. Rinteiden vuoksi kaupungissa on myös [[Asansör]], tunnettu hissitorni, joka nostaa jalankulkijoita jyrkän rinteen päälle. Kyyti merellä on parempi kuin ruuhkassa.
+KYSYMYS: Kerro lisää: Karşıyakan
+
+### 1264
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / İzmir: Hissi rakennettiin kadun jatkoksi] Karataşin kaupunginosassa Konakissa rannan kapean kaistaleen ja ylärinteen korttelit erottaa jyrkkä kallioseinämä. Vuonna 1907 varakas juutalainen pankkiiri ja kauppias Nesim Levi Bayraklıoğlu rakennutti seinämään tornin, jonka sisällä hissi nostaa ihmiset ja tavarat alhaalta ylätasolle. Torni tehtiin kaupunkilaisten käyttöön, ja sen nimi on yksinkertaisesti Asansör, hissi. Nimi tarttui myös alla kulkevaan kujaan. Kujalla asui 1940-luvulla laulaja Dario Moreno, joka teki myöhemmin uran Ranskassa, ja katu on nimetty hänen mukaansa.
+AIEMPI KYSYMYS: Miten İzmirissä liikutaan lahden yli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lahden poikki kulkee lauttoja, jotka yhdistävät kaupungin eri rantoja, esimerkiksi [[Konakin]] ja [[Karşıyakan]] alueen. Lautat ovat tavallisten asukkaiden päivittäinen kulkuneuvo, ja matka on edullinen. Rinteiden vuoksi kaupungissa on myös [[Asansör]], tunnettu hissitorni, joka nostaa jalankulkijoita jyrkän rinteen päälle. Kyyti merellä on parempi kuin ruuhkassa.
+KYSYMYS: Kerro lisää: Asansör
+
+### 1265
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / Arki: Taikina lepää tuntikausia] Boyoz on İzmirin oma leivonnainen. Nimi tulee ladinon sanasta boyo, pieni pyöreä pulla; sefardijuutalaiset toivat leivonnaisen kaupunkiin sen jälkeen, kun heidät karkotettiin Espanjasta 1492. Taikinaan tulee jauhoja, auringonkukkaöljyä ja hieman tahinia, alun perin seesamiöljyä. Taikinaa vaivataan käsin ja levätetään useaan kertaan, ensin kaksi tuntia ja lopuksi useita tunteja, ja palasista pyöritellään pieniä palloja, jotka marinoituvat öljyssä puolesta tunnista tuntiin. Uuni on hyvin kuuma, ja pinnasta tulee kerroksinen. Seuraksi otetaan tummaa teetä ja kovaksi keitetty muna, jonka päälle ripotellaan runsaasti mustapippuria.
+AIEMPI KYSYMYS: Millainen leivonnainen on tyypillinen izmirilainen aamiainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on minun heikko kohtani. İzmirin tunnettu leivonnainen on [[boyoz]], kerroksinen ja öljyinen pulla, jonka perinteen kerrotaan tulleen kaupunkiin [[sefardijuutalaisilta]]. Sitä syödään usein keitetyn munan ja teen kanssa. Lisäksi alueella on suosittu seesamirinkeli, joka on lähellä tavallista [[simitiä]] mutta kovempi ja rapeampi. Boyoz kuulostaa minusta juuri sellaiselta, jota ikkunalaudalta ei jaksaisi jättää.
+KYSYMYS: Kerro lisää: boyoz
+
+### 1266
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+AIEMPI KYSYMYS: Millainen leivonnainen on tyypillinen izmirilainen aamiainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on minun heikko kohtani. İzmirin tunnettu leivonnainen on [[boyoz]], kerroksinen ja öljyinen pulla, jonka perinteen kerrotaan tulleen kaupunkiin [[sefardijuutalaisilta]]. Sitä syödään usein keitetyn munan ja teen kanssa. Lisäksi alueella on suosittu seesamirinkeli, joka on lähellä tavallista [[simitiä]] mutta kovempi ja rapeampi. Boyoz kuulostaa minusta juuri sellaiselta, jota ikkunalaudalta ei jaksaisi jättää.
+KYSYMYS: Kerro lisää: sefardijuutalaisilta
+
+### 1267
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+AIEMPI KYSYMYS: Millainen leivonnainen on tyypillinen izmirilainen aamiainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on minun heikko kohtani. İzmirin tunnettu leivonnainen on [[boyoz]], kerroksinen ja öljyinen pulla, jonka perinteen kerrotaan tulleen kaupunkiin [[sefardijuutalaisilta]]. Sitä syödään usein keitetyn munan ja teen kanssa. Lisäksi alueella on suosittu seesamirinkeli, joka on lähellä tavallista [[simitiä]] mutta kovempi ja rapeampi. Boyoz kuulostaa minusta juuri sellaiselta, jota ikkunalaudalta ei jaksaisi jättää.
+KYSYMYS: Kerro lisää: simitiä
+
+### 1268
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+AIEMPI KYSYMYS: Mitä antiikin kohteita İzmirin lähellä on?
+AIEMPI VASTAUS (Livia):
+Hmm, annas ku mietin. Lähistöllä on useita antiikin kohteita, ja tunnetuin on [[Efesos]], jonka rauniot kuuluvat Unescon maailmanperintöön. Pohjoisessa sijaitsee [[Pergamon]], joka oli hellenistisen ajan kuninkaiden pääkaupunki; sen kuuluisa alttari on nykyään Berliinissä, ei Turkissa. Alueella on myös muita pienempiä kreikkalaisia ja roomalaisia kaupunkeja. Kannattaa varata niille päivä, tai kaksi.
+KYSYMYS: Kerro lisää: Efesos
+
+### 1269
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Izmir (kaupunki)
+Tietoruudun teksti: İzmir on Turkin kolmanneksi suurin kaupunki ja Egeanmeren suurin kaupunkialue: yhdessätoista kaupunkipiirissä asuu lähes kolme miljoonaa ihmistä. Se on rakennettu syvän lahden pohjukkaan merenpinnan tasoon, ja rinteet nousevat jyrkkinä heti rannan takaa — ylös mennään portaita, vastarannalle lautalla. Vanha nimi Smyrna elää yhä englannin kielessä ja viikunalajikkeiden nimissä.
+
+Antiikin Smyrna siirrettiin nykyiselle paikalleen Aleksanteri Suuren seuraajien aikana, ja Pagos-vuoren laella seisova Kadifekale on siitä muistona. Kaupungin syy on aina ollut lahti: laivat pääsevät suojaan, ja tavara siirtyy Anatolian ylängölle vievälle tielle. Hedelmää varten rakennettiin myös Anatolian ensimmäinen rautatie: sen ensimmäinen osuus avattiin vuonna 1858 tuomaan Aydınin tasangon viikunoita satamaan.
+
+Viikuna on yhä alueen tunnusmerkki, ja Turkki on maailman suurin viikunantuottaja. Pohjoisessa auk…
+AIEMPI KYSYMYS: Mitä antiikin kohteita İzmirin lähellä on?
+AIEMPI VASTAUS (Livia):
+Hmm, annas ku mietin. Lähistöllä on useita antiikin kohteita, ja tunnetuin on [[Efesos]], jonka rauniot kuuluvat Unescon maailmanperintöön. Pohjoisessa sijaitsee [[Pergamon]], joka oli hellenistisen ajan kuninkaiden pääkaupunki; sen kuuluisa alttari on nykyään Berliinissä, ei Turkissa. Alueella on myös muita pienempiä kreikkalaisia ja roomalaisia kaupunkeja. Kannattaa varata niille päivä, tai kaksi.
+KYSYMYS: Kerro lisää: Pergamon
+
+### 1270
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Presidentti opetti liitutaululla] 1928 — Turkkia oli kirjoitettu arabialaisin kirjaimin lähes tuhat vuotta, mutta ne sopivat huonosti turkin kielen vokaaleihin. Marraskuussa 1928 säädettiin laki, jolla siirryttiin latinalaisiin kirjaimiin. Uudessa aakkostossa on 29 kirjainta: mukaan otettiin ç, ğ, ı, ö, ş ja ü, ja pois jäivät q, w ja x. Mustafa Kemal Atatürk kiersi maata liitutaulun kanssa ja opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli lukemaan uudestaan muutamassa vuodessa.
+AIEMPI KYSYMYS: Miksi Ankara tehtiin pääkaupungiksi Istanbulin sijaan?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kiistelty. Ankara oli [[Atatürkin]] johtaman kansallisen vastarintaliikkeen keskus Turkin vapaussodan aikaan, ja sinne kokoontui vuonna 1920 uusi [[kansalliskokous]]. Se sijaitsee keskellä Anatoliaa, kaukana rannikon uhista, ja sinne oli rautatieyhteys. Kun tasavalta julistettiin, Ankara nimettiin pääkaupungiksi 13. lokakuuta 1923, ja Istanbul jäi maan suurimmaksi kaupungiksi. Kyllä Istanbulin näkymät olisivat olleet hienommat.
+KYSYMYS: Kerro lisää: Atatürkin
+
+### 1271
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Miksi Ankara tehtiin pääkaupungiksi Istanbulin sijaan?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kiistelty. Ankara oli [[Atatürkin]] johtaman kansallisen vastarintaliikkeen keskus Turkin vapaussodan aikaan, ja sinne kokoontui vuonna 1920 uusi [[kansalliskokous]]. Se sijaitsee keskellä Anatoliaa, kaukana rannikon uhista, ja sinne oli rautatieyhteys. Kun tasavalta julistettiin, Ankara nimettiin pääkaupungiksi 13. lokakuuta 1923, ja Istanbul jäi maan suurimmaksi kaupungiksi. Kyllä Istanbulin näkymät olisivat olleet hienommat.
+KYSYMYS: Kerro lisää: kansalliskokous
+
+### 1272
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+AIEMPI KYSYMYS: Mistä angoravuohi ja angorakani ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi tulee kaupungin vanhasta nimestä [[Angora]], jota käytettiin vuosisatojen ajan ennen kuin Ankara vakiintui. Alueen vuohien pitkästä, pehmeästä karvasta kehrätään [[mohairia]], ja kaupungin mukaan on nimetty myös [[angorakani]] ja angorakissa. Villa saa kuitenkin eri nimen riippuen eläimestä: vuohen karvasta tulee mohairia ja kanin karvasta angoraa. Kyllä minäkin pitäisin lämpimästä kaulaliinasta.
+KYSYMYS: Kerro lisää: Angora
+
+### 1273
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+AIEMPI KYSYMYS: Mistä angoravuohi ja angorakani ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi tulee kaupungin vanhasta nimestä [[Angora]], jota käytettiin vuosisatojen ajan ennen kuin Ankara vakiintui. Alueen vuohien pitkästä, pehmeästä karvasta kehrätään [[mohairia]], ja kaupungin mukaan on nimetty myös [[angorakani]] ja angorakissa. Villa saa kuitenkin eri nimen riippuen eläimestä: vuohen karvasta tulee mohairia ja kanin karvasta angoraa. Kyllä minäkin pitäisin lämpimästä kaulaliinasta.
+KYSYMYS: Kerro lisää: mohairia
+
+### 1274
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+AIEMPI KYSYMYS: Mistä angoravuohi ja angorakani ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi tulee kaupungin vanhasta nimestä [[Angora]], jota käytettiin vuosisatojen ajan ennen kuin Ankara vakiintui. Alueen vuohien pitkästä, pehmeästä karvasta kehrätään [[mohairia]], ja kaupungin mukaan on nimetty myös [[angorakani]] ja angorakissa. Villa saa kuitenkin eri nimen riippuen eläimestä: vuohen karvasta tulee mohairia ja kanin karvasta angoraa. Kyllä minäkin pitäisin lämpimästä kaulaliinasta.
+KYSYMYS: Kerro lisää: angorakani
+
+### 1275
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+AIEMPI KYSYMYS: Mitä roomalaisaikaa Ankarassa on yhä nähtävissä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ulusin vanhassa kaupunginosassa seisoo [[Augustuksen ja Rooman temppeli]], jonka seiniin on kaiverrettu keisarin elämäntyötä kuvaava teksti, [[Res Gestae]], sekä latinaksi että kreikaksi. Kaupungissa on myös roomalaisia kylpylän raunioita ja roomalainen pylväs. Lisäksi linnavuoren juurella on bysanttilaisia ja ottomaanisia rakennuksia, joten kerrokset ovat päällekkäin. Hienoa, että joku jaksoi kaivertaa koko tekstin.
+KYSYMYS: Kerro lisää: Augustuksen ja Rooman temppeli
+
+### 1276
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+AIEMPI KYSYMYS: Mitä roomalaisaikaa Ankarassa on yhä nähtävissä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ulusin vanhassa kaupunginosassa seisoo [[Augustuksen ja Rooman temppeli]], jonka seiniin on kaiverrettu keisarin elämäntyötä kuvaava teksti, [[Res Gestae]], sekä latinaksi että kreikaksi. Kaupungissa on myös roomalaisia kylpylän raunioita ja roomalainen pylväs. Lisäksi linnavuoren juurella on bysanttilaisia ja ottomaanisia rakennuksia, joten kerrokset ovat päällekkäin. Hienoa, että joku jaksoi kaivertaa koko tekstin.
+KYSYMYS: Kerro lisää: Res Gestae
+
+### 1277
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+AIEMPI KYSYMYS: Millainen paikka Atatürkin mausoleumi on?
+AIEMPI VASTAUS (Livia):
+Ai se. Mausoleumi, [[Anıtkabir]], rakennettiin kaupungin kukkulalle, ja se valmistui vuonna 1953. Sinne on haudattu Turkin tasavallan perustaja Mustafa Kemal [[Atatürk]]. Rakennukselle johtaa pitkä [[leijonatie]], jonka reunoilla on leijonapatsaita hetiittiläisen taiteen tyyliin, ja sisällä on museo. Paikka on turkkilaisille tärkeä kunnioituksen kohde, ja siellä käy paljon kävijöitä. Hiljaisuus sopii paikkaan, vaikka kyyhky ei sitä aina osaa.
+KYSYMYS: Kerro lisää: Anıtkabir
+
+### 1278
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Presidentti opetti liitutaululla] 1928 — Turkkia oli kirjoitettu arabialaisin kirjaimin lähes tuhat vuotta, mutta ne sopivat huonosti turkin kielen vokaaleihin. Marraskuussa 1928 säädettiin laki, jolla siirryttiin latinalaisiin kirjaimiin. Uudessa aakkostossa on 29 kirjainta: mukaan otettiin ç, ğ, ı, ö, ş ja ü, ja pois jäivät q, w ja x. Mustafa Kemal Atatürk kiersi maata liitutaulun kanssa ja opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli lukemaan uudestaan muutamassa vuodessa.
+AIEMPI KYSYMYS: Millainen paikka Atatürkin mausoleumi on?
+AIEMPI VASTAUS (Livia):
+Ai se. Mausoleumi, [[Anıtkabir]], rakennettiin kaupungin kukkulalle, ja se valmistui vuonna 1953. Sinne on haudattu Turkin tasavallan perustaja Mustafa Kemal [[Atatürk]]. Rakennukselle johtaa pitkä [[leijonatie]], jonka reunoilla on leijonapatsaita hetiittiläisen taiteen tyyliin, ja sisällä on museo. Paikka on turkkilaisille tärkeä kunnioituksen kohde, ja siellä käy paljon kävijöitä. Hiljaisuus sopii paikkaan, vaikka kyyhky ei sitä aina osaa.
+KYSYMYS: Kerro lisää: Atatürk
+
+### 1279
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Leijona, jonka harja ulottui kyynärpäihin] 1960-luku — Atlasleijona eli Pohjois-Afrikassa Marokosta Egyptiin. Metsästys- ja havaintotietojen läpikäynti osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa 1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; sen jälkeen laji on luonnosta hävinnyt. Museoiden täytetyt urokset ovat kuonosta hännänpäähän 2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 senttimetriä pitkiä; osalla harja jatkui hartioiden yli ja vatsan alta kyynärpäihin asti. Selitykseksi on tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. Rabatin eläintarhan leijonat olivat aatelisten ja berberien lahjoja kuningasperheelle: kun perhe joutui 1953 maanpakoon, niitä oli 21.
+- [Dublin — kaupunkilehti / Historia: Dublinin leijona Hollywoodissa] Phoenix Parkin eläintarha avattiin yleisölle 1. syyskuuta 1831. Ensimmäinen leijonapari ostettiin 1855 ja se sai poikasia 1857. Siitä alkoi maine: Dublinin leijonat olivat 1800-luvulla maailmankuuluja. Maaliskuun 20. päivänä 1919 siellä syntyi poikanen, jolle annettiin nimeksi Cairbre, iiriksi vaunumies. Amerikassa hänet nimettiin uudestaan Slatsiksi, ja hänestä tuli vastaperustetun Metro-Goldwyn-Mayerin ensimmäinen tunnusleijona vuosina 1924–1928. Kausi osui mykkäelokuvan aikaan: toisin kuin yksikään seuraajansa hän ei tunnuksessa karjaise, vaan katselee ympärilleen.
+AIEMPI KYSYMYS: Millainen paikka Atatürkin mausoleumi on?
+AIEMPI VASTAUS (Livia):
+Ai se. Mausoleumi, [[Anıtkabir]], rakennettiin kaupungin kukkulalle, ja se valmistui vuonna 1953. Sinne on haudattu Turkin tasavallan perustaja Mustafa Kemal [[Atatürk]]. Rakennukselle johtaa pitkä [[leijonatie]], jonka reunoilla on leijonapatsaita hetiittiläisen taiteen tyyliin, ja sisällä on museo. Paikka on turkkilaisille tärkeä kunnioituksen kohde, ja siellä käy paljon kävijöitä. Hiljaisuus sopii paikkaan, vaikka kyyhky ei sitä aina osaa.
+KYSYMYS: Kerro lisää: leijonatie
+
+### 1280
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ankara (kaupunki)
+Tietoruudun teksti: Ankara on Turkin pääkaupunki ja maan toiseksi suurin kaupunki: keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Se on keskellä Anatolian ylänköä 938 metrin korkeudessa, kaukana merestä, ja ilmasto on sen mukainen: tammikuun keskilämpö on yksi aste ja elokuun 24,6. Kreikkalainen nimi Ánkyra tarkoittaa ankkuria.
+
+Ankara jakautuu kahtia. Pohjoisessa on Ulus, joka kiertyy linnavuoren juurelle; siinä roomalainen, bysanttilainen ja ottomaaninen kerros ovat päällekkäin, koska pieni maakuntakeskus ei koskaan rakentanut niitä pois. Lännessä kaupunki tunnettiin vuosisatojen ajan nimellä Angora, ja nimi tarttui angoravuoheen, angorakaniin ja angorakissaan; vuohen karvasta kehrätään mohairia.
+
+Kaikki muuttui 13. lokakuuta 1923, kun Angorasta tehtiin uuden tasavallan pääkaupunki. Asukkaita oli silloin noin 35 000, ja kasvu tuli niin nopeasti, ettei sitä osattu ohjata: vuoden 1927 kaupunkisuunnittelu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Parvi pesii suolan päällä] Kesäisin — Keski-Anatoliassa on Turkin toiseksi suurin järvi, Tuz Gölü eli Suolajärvi. Se on hyvin matala, ja kesän kuivuessa järven pinnalle jää paksu valkoinen suolakuori. Juuri matala ja suolainen vesi tekee siitä hyvän pesimäpaikan, koska maapedot eivät pääse pesille: se on Turkin tärkein flamingoalue, ja hyvänä kesänä siellä kuoriutuu kymmeniätuhansia poikasia. Aikuisen flamingon vaaleanpunainen väri tulee ravinnosta, pikkuäyriäisistä ja levistä, joita lintu siivilöi vedestä nokallaan. Poikaset ovat ensin harmaita.
+AIEMPI KYSYMYS: Millainen ilmasto Ankarassa on ja miksi talvet ovat kylmiä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ankara sijaitsee Anatolian ylätasangolla noin yhdeksänsadan metrin korkeudessa, kaukana merestä, joten ilmasto on mannerilmasto. Tammikuun keskilämpötila on noin yksi aste ja elokuun 24,6, joten talvi on kylmä ja kesä kuuma. Kaupungin eteläpuolella on suuri suolajärvi [[Tuz-järvi]], ja kuiva maasto muodostaa avaran [[Anatolian ylätasangon]] maiseman. Kyllä siellä lämmin takki kelpaa.
+KYSYMYS: Kerro lisää: Tuz-järvi
