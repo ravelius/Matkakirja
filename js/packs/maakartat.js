@@ -6904,7 +6904,7 @@ export const KAUPUNKIKARTAT = {
        * sivulla (v1421).
        */
       {
-        nimi: 'Torre Argentina', lat: 41.8953, lon: 12.4769,
+        nimi: 'Torre Argentina', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.8953, lon: 12.4769,
         nosto: ['syvennys-rooma-kissat', 'nosto-kissat'],
       },
       {
@@ -6923,8 +6923,10 @@ export const KAUPUNKIKARTAT = {
        * rooma); tests/nostot-kartalla.test.mjs vertaa ne merkki
        * merkiltä.
        */
+      // Tarinapaikat KK 17.11.2026 (Rooman 9 tarinapaikkaa, SK:n data-luonnos docs/raportit/rooma-9-tarinapaikkaa-dataluonnos-20261116.md).
+      // Banca Romana: piste Palazzo Maffei Marescotti, Via della Pigna (KK 16.11.2026; ennen 41,9009 / 12,4785); aika 1893. Paikka tarkistettava kuvasta.
       {
-        nimi: 'Banca Romana', tyyppi: 'henkilo', lat: 41.9009, lon: 12.4785,
+        nimi: 'Banca Romana', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.8970, lon: 12.4775,
         nosto: 'skandaali-banca-romana-1893',
       },
       /*
@@ -6938,7 +6940,7 @@ export const KAUPUNKIKARTAT = {
       // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
       // nimiö vasemmalle.
       {
-        nimi: 'Michelangelo 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
+        nimi: 'Michelangelo 1510', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6952,32 +6954,33 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Kolikko olan yli', tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
+        nimi: 'Kolikko olan yli', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-rooman-kolikko',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Areenan kellari', tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
+        nimi: 'Areenan kellari', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
         nosto: 'nosto-colosseumin-kellari',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Norsu ja obeliski', lat: 41.898, lon: 12.4776,
+        nimi: 'Norsu ja obeliski', merkki: 'lyyra', tarinapaikka: true, lat: 41.898, lon: 12.4776,
         nosto: 'nosto-minervan-norsu',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
       {
-        nimi: 'Aqua Virgo', tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
+        nimi: 'Aqua Virgo', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-aqua-virgo',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Nasone', tyyppi: 'esine', lat: 41.8986, lon: 12.4769,
+        nimi: 'Nasone', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 41.8993, lon: 12.4768,
         nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       // KADONNUT IHME (KK 16.11.2026 erä 2): paikka KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
-      { nimi: 'Meta Sudans', lat: 41.8900812, lon: 12.4906909 },
+      // Tarinapaikka KK 17.11.2026: piste 41,89008 / 12,49067 (Wikidata Q1924755 + OSM-relaatio 1835448); tarkistettava kuvasta.
+      { nimi: 'Meta Sudans', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.89008, lon: 12.49067 },
     ],
   },
   krakova: {

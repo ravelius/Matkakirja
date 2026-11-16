@@ -10254,9 +10254,10 @@ export const NAHTAVYYSJUTUT = {
           + 'kuvaamassa meren kahta puolta.'
         + '\n\n'
         + 'Perinteen mukaan olan yli lähteeseen heitetty kolikko '
-          + 'takaa paluun Roomaan. Kolikoita kertyy joka päivä noin 3 '
-          + '000 euron edestä, ja kaikki rahat lahjoitetaan '
-          + 'hyväntekeväisyysjärjestölle, joka auttaa vähävaraisia. '
+          + 'takaa paluun Roomaan. Kolikoita kertyy paljon: vuonna 2022 '
+          + 'niitä kerättiin altaasta yli 1,4 miljoonan euron arvosta, ja '
+          + 'ne lahjoitetaan hyväntekeväisyysjärjestölle, joka auttaa '
+          + 'vähävaraisia. '
           + 'Lähde on nähty monissa elokuvissa, kuuluisimmin filmissä '
           + 'La Dolce Vita (1960), jossa näyttelijä kahlaa iltapuvussa '
           + 'keskellä allasta.',
@@ -10418,19 +10419,32 @@ export const NAHTAVYYSJUTUT = {
      * Kenttä `nosto` kertoo, mistä karsitusta merkistä juttu on.
      */
     'Torre Argentina': {
+      aika: '1926–1929',
       nosto: 'syvennys-rooma-kissat',
-      teksti: 'Kun Roomaa rakennettiin uusiksi Italian yhdistymisen jälkeen ja '
-        + 'korttelia purettiin vuonna 1927, maasta tuli esiin jättiläispatsaan '
-        + 'pää ja käsivarret. Alta löytyi neljä tasavallan ajan temppeliä ja pala '
-        + 'Pompeiuksen teatteria — ja juuri se paikka, jossa Julius Caesarin '
-        + 'uskotaan tulleen murhatuksi. Kaivauskuoppaan alkoi kerääntyä '
-        + 'kulkukissoja. Ne asuvat siellä yhä: temppeli D:n kohdalla toimii '
-        + 'kissasuoja, jota on 1950-luvulta lähtien pidetty yllä avaimella, joka '
-        + 'on kulkenut näyttelijältä toiselle — mukana muun muassa Anna Magnani. '
-        + 'Vuodesta 1993 se on ollut virallinen, tappamaton suoja. Vuonna 2012 '
-        + 'arkeologiviranomaiset vaativat suojan häätöä raunioiden '
-        + 'suojelemiseksi; vetoomukseen kerättiin yli 30 000 nimeä, ja kissat '
-        + 'jäivät.',
+      teksti: 'Largo di Torre Argentina on Rooman keskustan aukio, jossa on '
+        + 'kaivauskuoppa. Kun vanhaa korttelia purettiin vuosina 1926–1929, '
+        + 'kuopasta paljastui neljä tasavallan ajan temppeliä. Temppeleitä '
+        + 'merkitään kirjaimilla A, B, C ja D, koska ei tiedetä varmasti, '
+        + 'mille jumalalle kukin kuului.'
+        + '\n\n'
+        + 'Temppeleiden takana on Pompeiuksen portiikin Curian eli senaatin '
+        + 'kokoushuoneen kivijalka. Perinteisen tunnistuksen mukaan Julius '
+        + 'Caesar murhattiin juuri tässä Curiassa vuonna 44 eaa.'
+        + '\n\n'
+        + 'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
+        + 'Näyttelijä Anna Magnani ruokki niitä taukojensa aikana läheisessä '
+        + 'Teatro Argentinassa. Vuonna 1993 perustettiin vapaaehtoisten '
+        + 'ylläpitämä kissasuoja, ja Discover-lehden mukaan siellä on yli 200 '
+        + 'kissaa. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
+        + 'poistamista, koska se oli rakennettu ilman lupaa ja haittasi '
+        + 'raunioiden säilymistä. NPR:n mukaan kissat saisivat kuitenkin '
+        + 'jäädä.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, sillä ne '
+        + 'olivat vielä maan alla. Paikalla oli tiivis kortteli, ja temppeli '
+        + 'A:n sisään rakennettu San Nicola de\' Cesarini -kirkko seisoi '
+        + 'vielä; se purettiin vasta 1926–1929. Kissoja ei ollut vielä, ja '
+        + 'kissasuoja tuli vasta 1993.',
       kuvat: [
         {
           tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
@@ -10439,7 +10453,7 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Sovrintendenza Capitolina, Turismo Roma, Treccani, Discover Magazine, History Blog, NPR ja Gatti di Roma',
     },
     'Vatikaanin palatsi': {
       nosto: 'syvennys-rooma-vatikaani',
@@ -10481,11 +10495,36 @@ export const NAHTAVYYSJUTUT = {
     'Banca Romana': {
       aika: '1893',
       nosto: 'skandaali-banca-romana-1893',
-      teksti: 'Kun setelipainossa loppuvat numerot kesken, voi tietysti painaa '
-        + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
-        + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
-        + 'Harva pankkikriisi on ollut näin tuottelias.',
-      lahde: 'Wikipedia',
+      teksti: 'Banca Romana oli pankki, jolla oli lupa painaa Italian seteleitä. '
+        + 'Treccanin mukaan lupa riitti noin 60 miljoonan liiran seteleihin, '
+        + 'mutta liikkeessä niitä oli noin 113 miljoonan liiran edestä. Noin '
+        + '40 miljoonaa liiraa oli kaksoisnumeroituja seteleitä eli '
+        + 'sellaisia, joilla oli sama sarjanumero kuin toisella setelillä.'
+        + '\n\n'
+        + 'Skandaali paljastui vuodenvaihteessa 1892–1893. Vuonna 1893 '
+        + 'annettiin laki, jolla perustettiin Banca d\'Italia, ja se on '
+        + 'päivätty 10. elokuuta. Banca Romana lakkautettiin, ja sen '
+        + 'purkaminen uskottiin uudelle pankille. Aluksi Banca d\'Italia oli '
+        + 'yksi kolmesta setelipankista, ja vasta vuonna 1926 siitä tuli '
+        + 'ainoa. Pääministeri Giovanni Giolitti erosi vuoden 1893 lopulla, '
+        + 'kun tutkimusten tulokset olivat tulleet julki. Oikeudenkäynnissä '
+        + 'syytetyt vapautettiin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
+        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
+        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
+        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
+      kuvat: [
+        {
+          tiedosto: 'Bernardo Tanlongo.jpg',
+          lyhyt: 'Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894; hän oli Banca Romanan johtaja.',
+          selite: 'Bernardo Tanlongo, Banca Romanan johtaja, aikalaispiirroksessa '
+            + 'vuodelta 1894.',
+          lahde: 'Illustrazione Italiana 1894, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Treccani, Banca d\'Italia ja Filodiritto',
     },
     /*
      * KARTAN OMAN KOHTEEN JUTTU (omistajan päätös 2.9.2026 illalla:
@@ -10525,22 +10564,38 @@ export const NAHTAVYYSJUTUT = {
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
     'Michelangelo 1510': {
+      aika: '1508–1512',
       nosto: 'hetki-michelangelo-sikstus-1510',
-      teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
-        + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
-        + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen kappelin '
-        + 'holvia. Paavi Julius II pakotti hänet työhön 1508, vaikka hän on '
-        + 'kuvanveistäjä eikä freskomaalari; sopimus lupaa 3 000 dukaattia. '
-        + 'Freskoa tehdään tuoreelle kalkkirappaukselle, giornata kerrallaan: '
-        + 'apulainen levittää aamulla sen verran laastia kuin päivässä ehtii '
-        + 'maalata, ja mikä ei ehdi, hakataan pois. Rappauksen kosteus tuo '
-        + 'homeen, ja ensimmäiset kuukaudet joudutaan tekemään uudelleen. '
-        + 'Syyskuussa 1510 holvin ensimmäinen puolisko, Nooan juopumuksesta Eevan '
-        + 'luomiseen, on valmis, ja työ katkeaa: paavi on lähtenyt sotaan '
-        + 'Bolognaan eikä maksa, eikä uutta telinettä ole. Puolisko paljastetaan '
-        + 'yleisölle 15. elokuuta 1511. Toinen puoli, Aadamin luominen mukaan '
-        + 'lukien, syntyy nopeammin ja suuremmin hahmoin, ja koko katto — yli 300 '
-        + 'hahmoa — avataan pyhäinpäiväksi 1512. Michelangelo on 37.',
+      teksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisten, ei '
+        + 'selällään makaamalla, vaikka niin kerrotaan. Getty-museon mukaan '
+        + 'hän työskenteli seisaaltaan pensseli pään yläpuolella, ja EBSCO '
+        + 'Research Startersin mukaan makaamistarina on pitkäikäinen myytti.'
+        + '\n\n'
+        + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
+        + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
+        + 'tehtävästä. Ensimmäinen suunnitelma oli maalata kaksitoista '
+        + 'apostolia, mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.'
+        + '\n\n'
+        + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta '
+        + 'sekä kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden '
+        + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510, '
+        + 'ja yleisölle se paljastettiin elokuussa 1511. Toisen puoliskon '
+        + 'hahmot ovat suurempia, koska Michelangelo oli nähnyt valmiin osan '
+        + 'lattialta käsin. Aadamin luominen on tällä toisella puoliskolla. '
+        + 'Koko katto avattiin pyhäinpäivän aattona 1512.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 katto oli ollut valmiina jo yli 360 '
+        + 'vuotta.',
+      kuvat: [
+        {
+          tiedosto: 'Sistine Chapel ceiling 02 (brightened).jpg',
+          lyhyt: 'Michelangelo maalasi Sikstuksen kappelin katon freskona 1508–1512 paavi Julius II:n toimeksiannosta.',
+          selite: 'Michelangelo maalasi Sikstuksen kappelin katon freskona '
+            + '1508–1512 paavi Julius II:n toimeksiannosta.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Vatikaanin museot, Treccani, Getty ja EBSCO Research Starters',
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -10551,14 +10606,21 @@ export const NAHTAVYYSJUTUT = {
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
     'Kolikko olan yli': {
+      aika: '1762',
       nosto: 'nosto-rooman-kolikko',
-      teksti: 'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan '
-        + 'yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa '
-        + 'veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään '
-        + 'pohjasta talteen. Rahat lahjoitetaan Caritakselle '
-        + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa '
-        + 'kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä '
-        + 'jää säännöllisesti kiinni.',
+      teksti: 'Trevin suihkulähteestä kerrotaan tarina: kun heittää kolikon olan '
+        + 'yli, palaa vielä Roomaan. Se on legenda, ei tosiasia. Kolikoita '
+        + 'kertyy paljon, ja vuonna 2022 niitä kerättiin altaasta yli 1,4 '
+        + 'miljoonan euron arvosta.'
+        + '\n\n'
+        + 'Kolikot kerätään altaan pohjasta talteen ja lahjoitetaan '
+        + 'Caritakselle, joka auttaa kaupungin vähävaraisia.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
+        + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
+        + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen '
+        + 'silloin vielä tapana: CoinsWeeklyn kirjoittajan Ursula Kampmannin '
+        + 'mukaan tapa alkoi vasta 1800-luvulla.',
       kuvat: [
         {
           tiedosto: 'Trevi Fountain - Roma.jpg',
@@ -10569,24 +10631,30 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
     },
     'Areenan kellari': {
+      aika: '1874',
       nosto: 'nosto-colosseumin-kellari',
-      teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa '
-        + '— latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. '
-        + 'Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja '
-        + 'kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin '
-        + 'lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa '
-        + 'kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä '
-        + 'kelasivat auki sotalaivaston merimiehet.',
+      teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
+        + 'hiekkaa.'
+        + '\n\n'
+        + 'Lattian alla oli kaksikerroksinen kellari eli hypogeum, jossa oli '
+        + 'käytäviä, häkkejä ja varastohuoneita. Walks of Italyn ja The '
+        + 'Collectorin mukaan kellarista johti areenalle noin 80 pystykuilua. '
+        + 'Köysien ja vintturien avulla häkki nostettiin ylös, ja eläin '
+        + 'ilmestyi areenalle luukusta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
+        + 'peitossa. Sitä alettiin kaivaa esiin vuosina 1874–1875, pian '
+        + 'isoisäsi käynnin jälkeen.',
       kuvat: [
         {
           tiedosto: 'Hypogeum 1 (15005526662).jpg',
           lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
           selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
-            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja '
-            + 'kahdeksankymmentä pystykuilua.',
+            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja Walks of '
+            + 'Italyn ja The Collectorin mukaan noin 80 pystykuilua.',
           lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -10599,19 +10667,27 @@ export const NAHTAVYYSJUTUT = {
             + '2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Cerone ym. (Colosseumin areenan lattia), The Collector ja Walks of Italy',
     },
     'Norsu ja obeliski': {
+      aika: '1667',
       nosto: 'nosto-minervan-norsu',
-      teksti: 'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
-        + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
-        + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
-        + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
-        + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
-        + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
-        + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen '
-        + 'pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli '
-        + 'heidän mielestään pieni ja pyöreä.',
+      teksti: 'Piazza della Minervan aukiolla Rooman keskustassa seisoo '
+        + 'norsupatsas, jonka selässä on punertava graniittiobeliski. Patsaan '
+        + 'suunnitteli Gian Lorenzo Bernini, Ercole Ferrata veisti sen, ja se '
+        + 'paljastettiin vuonna 1667. Paavi Aleksanteri VII kuoli ennen kuin '
+        + 'patsas ehdittiin paljastaa. Obeliski on noin 5,5 metriä korkea. '
+        + 'Roomassa on kaikkiaan kolmetoista muinaisobeliskia, ja tämä on '
+        + 'yksi niistä pienimmistä. Turismo Roman mukaan obeliski löytyi '
+        + 'vuonna 1665, kun dominikaanit rakensivat Santa Maria sopra Minerva '
+        + '-kirkon puutarhan muuria.'
+        + '\n\n'
+        + 'Patsasta kutsuttiin ensin possuksi, "Porcino della Minerva", ja '
+        + 'nimi vääntyi ääntämisen mukana muotoon "Pulcino della Minerva", '
+        + 'tipu. Nimen kerrotaan johtuneen norsun tanakasta muodosta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 norsu oli seissyt aukiolla jo 206 '
+        + 'vuotta.',
       kuvat: [
         {
           tiedosto: 'Elephant and Obelisk.jpg',
@@ -10621,67 +10697,101 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, Through Eternity, Romewise ja Rolf Gross (The Obelisks of Rome)',
     },
     'Aqua Virgo': {
+      aika: '19 eaa.',
       nosto: 'nosto-aqua-virgo',
-      teksti: 'Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta '
-        + 'vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä '
-        + 'painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä '
-        + 'kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. '
-        + 'ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä '
-        + 'kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin '
-        + 'lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti '
-        + 'janoisille sotilaille lähteen, josta vesi otettiin.',
+      teksti: 'Roomaan rakennettiin aikojen kuluessa jopa yksitoista akveduktia '
+        + 'eli vesijohtoa. Ne toimivat pelkällä painovoimalla, ja vesi '
+        + 'virtasi loivasti alamäkeen. Aqua Marcia oli noin 91 kilometriä '
+        + 'pitkä.'
+        + '\n\n'
+        + 'Aqua Virgo valmistui vuonna 19 eaa., kun Agrippa rakennutti sen. '
+        + 'Matkaa oli noin 20 kilometriä. Frontinuksen mukaan se kulki '
+        + 'suurimman osan matkaa maan alla. Nimi Virgo tarkoittaa neitoa. '
+        + 'Aqua Virgo syöttää yhä Trevin suihkulähdettä, ja se on Rooman '
+        + 'antiikin akvedukteista ainoa, joka toimii yhä.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Aqua Virgo oli ollut olemassa yli 1 800 '
+        + 'vuotta, ja Trevin suihkulähde, joka valmistui vuonna 1762, sai '
+        + 'vetensä siitä jo silloin.',
       kuvat: [
         {
           tiedosto: 'Aqueducts in Rome.jpg',
-          lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
-          selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
-            + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
+          lyhyt: 'Roomaan rakennettiin jopa yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
+          selite: 'Roomaan rakennettiin jopa yksitoista akveduktia, ja vesi '
+            + 'virtasi kaarien päällä kulkevassa kourussa pelkän painovoiman '
+            + 'voimalla.',
           lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä National Geographic, Engineering Rome, Frontinus (De aquaeductu), Encyclopaedia Romana ja Turismo Roma',
     },
     'Nasone': {
+      aika: '1870-luku',
       nosto: 'nosto-rooman-nasone',
-      teksti: 'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
-        + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin '
-        + '1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi '
-        + 'neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
-        + 'kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii '
-        + 'sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo '
-        + 'kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä '
-        + 'Piazza della Rotondalla.',
+      teksti: 'Rooman kaduilla on juomavesihanoja, joita sanotaan nasoneiksi, '
+        + 'isoiksi neniksi. Ne ovat alun perin valurautaisia pylväitä, ja '
+        + 'vesi virtaa niistä yleensä yötä päivää. Ensimmäiset nasonet '
+        + 'pystytettiin 1870-luvulla. Alkuperäisessä mallissa oli kolme '
+        + 'lohikäärmeen päätä, ja nimi nasone tuli vasta, kun myöhemmin tuli '
+        + 'yksi kaareva suu, joka näyttää nenältä.'
+        + '\n\n'
+        + 'Putken suun päällä on pieni reikä. Kun suun tukkii sormella, vesi '
+        + 'suihkuaa reiästä ylöspäin. Rooman vesilaitos Acean mukaan vesi on '
+        + 'samaa kuin kotien hanoissa. Nasoneja on kaupungissa noin 2 500, ja '
+        + 'lohikäärmesuisia on yhä esimerkiksi Pantheonin edessä Piazza della '
+        + 'Rotondalla.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 nasoneja ei ehkä vielä ollut. Turismo '
+        + 'Roman ja Acean mukaan ensimmäiset tulivat vuonna 1874, mutta yksi '
+        + 'lähde antaa vuodeksi 1872.',
       kuvat: [
         {
           tiedosto: 'Nasone in Trastevere, Rome.jpg',
-          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
-          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi '
-            + 'on samaa kuin roomalaisten kotihanoissa.',
+          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla; Acean mukaan niiden vesi on samaa kuin kotien hanoissa.',
+          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja Acean '
+            + 'mukaan niiden vesi on samaa kuin roomalaisten kotien hanoissa.',
           lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
-          selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
-            + 'Piazza della Rotondalla.',
+          selite: 'Lohikäärmesuinen nasone seisoo yhä Pantheonin edessä Piazza '
+            + 'della Rotondalla.',
           lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, Acea ja Engineering Rome',
     },
     // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
     'Meta Sudans': {
       aika: '1. vuosisata–1936',
-      teksti: 'Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä Roomassa. Nimi tarkoittaa '
-        + 'hikoilevaa käännepylvästä. Se rakennettiin 1. vuosisadan lopulla, vähän Colosseumin jälkeen.'
+      teksti: 'Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä '
+        + 'Roomassa. Nimi tarkoittaa hikoilevaa käännepylvästä: meta oli '
+        + 'sirkuksen käännepylväs, ja vesi tihkui kartiosta lukuisista '
+        + 'rei\'istä. Se rakennettiin 1. vuosisadalla jKr. flaviolaiskeisarien '
+        + 'aikana.'
         + '\n\n'
-        + 'Mussolini käski purkaa sen rauniot vuonna 1936, koska ne olivat paraatien ja liikenteen tiellä. '
-        + 'Suihkulähdettä ei ole enää.'
+        + 'Mussolinin käskystä rauniot purettiin vuonna 1936. Tutkija '
+        + 'Elizabeth Marlowen mukaan ne olivat paraatireitin tiellä. '
+        + 'Suihkulähdettä ei ole enää, mutta sen pohjapiirros on yhä '
+        + 'näkyvissä Konstantinuksen kaaren edessä, ja Marlowen mukaan '
+        + 'ääriviivat on merkitty vaaleammalla kivellä.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 tiilinen kartio seisoi vielä rauniona Colosseumin vieressä.',
-      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Platner & Ashby (1929) ja Elizabeth Marlowen tutkimus',
+        + 'Isoisäsi matkavuonna 1873 tiilinen kartio seisoi vielä rauniona '
+        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku '
+        + 'tuli vasta 63 vuotta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy LOC 4755211890.jpg',
+          lyhyt: 'Noin vuoden 1890 valokuvassa Colosseumin edessä seisoo vielä Meta Sudansin raunio.',
+          selite: 'Noin vuoden 1890 valokuvassa Colosseumin edessä seisoo vielä '
+            + 'Meta Sudansin tiilinen raunio.',
+          lahde: 'Tuntematon (Library of Congress -kokoelma), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Platner & Ashby (1929), Turismo Roma ja Elizabeth Marlowen tutkimus',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
