@@ -55,3 +55,7 @@ Perustelu: mikään lähde ei yhdistä Oude Hoogstraat 22:n kapeutta veroon (tal
 - Kaatunut: tests/natiivi-kultaiset.test.mjs "natiivin kultaiset jäljet vastaavat verkkopelin logiikkaa" (kysymysjalki.json): vartija laskee tiivisteen kysymyssisällöstä, ja kulttuurivisan (europe-kulttuuri.js) ja kaarivisan (tyohuone-kehitys-data.js) teksti muuttui tarkoituksella. Testin ohjeen mukaan ajettu `node tools/natiivi-kultaiset/vartija.mjs --paivita`; muuttui vain yksi rivi tools/natiivi-kultaiset/tiivisteet.json:ssa (kysymysjalki). Pelikoodari päivittää natiivin portin (kysymysjalan sisältö muuttui).
 - Päivityksen jälkeen kohdennettu ajo (natiivi-kultaiset, lehdet, museo-kysymykset, aanitysjono, ajattelijat-linssi, visajakauma): 24/24 läpi. tests/lehdet.test.mjs (kulttuurivisan vastaus löytyy lähdejutusta) meni läpi muuttamatta.
 - `node tools/aanitysjono/tarkista.mjs`: ÄÄNITYSJONO OK (puuttuvat 134, kaikki jonossa).
+
+## KK:n korjaukset PR 6887:ään (16.11. 21.5x)
+- Kuninkaanpalatsin kuvan lyhyt ja selite: "Rakennustyöt alkoivat vuonna 1648, ja talosta tuli Amsterdamin raatihuone; kuninkaalliseksi palatsiksi se muuttui vasta 1800-luvun alussa." (lyhyt vastaavasti).
+- aika-kenttä '1648–': Paleis Amsterdamin oma sivu (paleisamsterdam.nl/ontdek/een-nieuw-stadhuis-voor-amsterdam) antaa vain peruskiven 28.10.1648 eikä mainitse vuotta 1655 eikä valmistumista; KK:n ehdon mukaan '1648–' (ei loppuvuotta). Vuoden 1655 vihkiäiset ovat Arcamin ja Geschiedenisinfon varassa (kaksi muuta lähdettä, ei virallinen sivu): KK voi halutessaan palauttaa '1648–1655'.
