@@ -7,7 +7,7 @@ Lukee kaupungin OSM-otteen (KS:n planeettaote: <ote>/osm.json.gz, ways + rel) ja
                            Nämä EIVÄT ole poistoissa (perustalo jää), ellei KK siirrä niitä käsikorjauksella tyyppiin.
 Käsikorjaukset erillisessä tiedostossa (kasikorjaukset-<kaupunki>.json): {"tyyppi": {"way/1": "kirkko-keski"}, "ohita": ["way/2"],
   "torni": {"way/3": "risteys|2|neula"}, "ei_sovi": {"way/4": "syy"}} (tornin kentät paikka|torneja|huippu, tyhjä = oletus; KK 23.05 kohta 2).
-Käyttö: python3 -I tyypitys.py <ote-kansio> <kaupunki> <ulos-kansio> [--kasi <json>] [--otos 30]
+Käyttö: python3 -I tyypitys.py <ote-kansio> <kaupunki> <ulos-kansio> [--kasi <json>] [--otos 30] [--ovet ovet-<k>.json] [--julkisivu-kasin julkisivu-kasin.json]
 Säännöt ovat dataa (SAANNOT alla); ei käsityötä per rakennus."""
 import gzip, json, math, os, random, sys
 
@@ -455,6 +455,35 @@ def julkisivu_koneella(avo, sallitut=('+x', '-x', '+z', '-z')):
     return paras, syy
 
 
+# PÄÄOVI JA KÄSITAULU (KK 17.11. ~01.1x kohta 1): järjestys käsitaulu > OSM entrance=main yhdellä sivulla > avoimuussääntö (sääntö 3).
+# Ovet: ovet-hae.py → ovet-<kaupunki>.json (Overpass, ääriviivan solmut). Käsitaulu julkisivu-kasin.json: {"<kaupunki>": {"<osm>": {"suunta":
+# ilmansuunta, "katu": pääsisäänkäynnin katu tai aukio, "lahteet": [kaksi lähdettä]}}}.
+def oven_sivu(c, atsi, pit, lev, p):
+    """Ovipisteen (paikalliset metrit) lähin mallin suorakaiteen sivu."""
+    ux, uy = math.sin(math.radians(atsi)), math.cos(math.radians(atsi))
+    ex, ny = p[0] - c[0], p[1] - c[1]
+    x, z = ex * ux + ny * uy, -ex * uy + ny * ux
+    if pit / 2 - abs(x) < lev / 2 - abs(z): return '+x' if x > 0 else '-x'
+    return '+z' if z > 0 else '-z'
+
+
+def julkisivu_ohitus(oid, c, atsi, pit, lev, ovet, kasin, P, sallitut=('+x', '-x', '+z', '-z')):
+    """(sivu, lähde, huomio): sivu None = sääntö pätee; huomio = miksi ovesta ei ratkennut (epävarmuuteen)."""
+    if oid in kasin:
+        r = kasin[oid]; d = ILMANSUUNNAT[r['suunta']]
+        sivu = min(sallitut, key=lambda s_: abs((sivun_suunta(atsi, s_) - d + 180) % 360 - 180))
+        poikkeama = abs((sivun_suunta(atsi, sivu) - d + 180) % 360 - 180)
+        return sivu, f"käsitaulu: {r['suunta']}, {r['katu']}" + (f' (sivu poikkeaa {poikkeama:.0f}°)' if poikkeama > 45 else ''), None
+    paat = [o for o in ovet.get(oid, []) if o.get('entrance') == 'main']
+    sivut = sorted({oven_sivu(c, atsi, pit, lev, P(o['lat'], o['lon'])) for o in paat})
+    if len(sivut) == 1:
+        if sivut[0] in sallitut:
+            return sivut[0], 'OSM entrance=main ' + ', '.join(f"node/{o['node']}" for o in paat), None
+        return None, None, f'pääovi (entrance=main) sivulla {sivut[0]}, malli osaa vain {"/".join(sallitut)}'
+    if len(sivut) > 1: return None, None, f'entrance=main usealla sivulla ({", ".join(sivut)})'
+    return None, None, None
+
+
 def palatsin_sovitus(ulko, sisa, atsi0, julkisivu):
     """Palatsin suorakaide, piha, avoin sivu ja pääjulkisivun sivu (KK 14.11. 23.40 D). ulko/sisa = OSM-ulko- ja sisärenkaat paikallisissa metreissä.
     1) Akseli seinien vallitsevasta suunnasta (särmien pituuspainotettu suunta mod 90°), ei pienimmästä suorakaiteesta: vino kulma (Élysée) ei käännä mallia.
@@ -642,7 +671,12 @@ def main(a):
     if '--otos' in a: otos = int(a[a.index('--otos') + 1])
     ikonipolku = a[a.index('--ikonit') + 1] if '--ikonit' in a else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tulos', 'ikonit.json')
     os.makedirs(ulos, exist_ok=True)
-    meta = json.load(open(os.path.join(ote, 'ote.json')))
+    tama = os.path.dirname(os.path.abspath(__file__))
+    ovipolku = a[a.index('--ovet') + 1] if '--ovet' in a else os.path.join(tama, f'ovet-{kaupunki}.json')
+    ovet = json.load(open(ovipolku))['ovet'] if os.path.exists(ovipolku) else {}
+    kasinpolku = a[a.index('--julkisivu-kasin') + 1] if '--julkisivu-kasin' in a else os.path.join(tama, 'julkisivu-kasin.json')
+    kasin_js = json.load(open(kasinpolku)).get(kaupunki, {}) if os.path.exists(kasinpolku) else {}
+    meta =json.load(open(os.path.join(ote, 'ote.json')))
     d = json.load(gzip.open(os.path.join(ote, 'osm.json.gz')))
     P = projektori(meta['lat'], meta['lon'])
     ikonit = [(n, *P(la, lo), r) for n, la, lo, r in IKONIT.get(kaupunki, [])]
@@ -722,6 +756,10 @@ def main(a):
             if esteet is not None:   # KK 17.11. kohta 3: julkisivu koneellisesti, ei arviota
                 avo = sivujen_avoimuus(c, atsi, pit, lev, esteet, oid, kadut)
                 sivu, epa = julkisivu_koneella(avo)
+                ov, ovl, ovh = julkisivu_ohitus(oid, c, atsi, pit, lev, ovet, kasin_js, P)
+                if ov: sivu, epa = ov, None
+                elif ovh: epa = ovh + (f'; {epa}' if epa else '')
+                parametrit['julkisivu_lahde'] = ovl or 'sääntö 3 (avoimuus)'
                 parametrit['julkisivu_kasi'] = pp['julkisivu']; parametrit['julkisivu'] = sivu
                 parametrit['avoimuus'] = avo; parametrit['julkisivu_epavarma'] = epa; parametrit.pop('arvio', None)
                 ry, med = palatsin_raystas(h, esteet.naapurikorkeudet(c[0], c[1], max(pit, lev) / 2 + PALATSI_KORKEUS['naapurisade_lisa'], oid), parametrit.get('katto'))
@@ -783,6 +821,10 @@ def main(a):
             paa, epa = julkisivu_koneella(avo, ('+x', '-x'))
             pitka = max(('+z', '-z'), key=lambda s_: avo[s_])
             if avo[pitka] > AVOIN['pitka_sivu'] * avo[paa]: epa = f'pitkä sivu {pitka} avoimin ({avo[pitka]:.0f} m > pää {avo[paa]:.0f} m)' + (f'; {epa}' if epa else '')
+            ov, ovl, ovh = julkisivu_ohitus(oid, c, atsi, pit, lev, ovet, kasin_js, P, ('+x', '-x'))
+            if ov: paa, epa = ov, None
+            elif ovh: epa = ovh + (f'; {epa}' if epa else '')
+            parametrit['julkisivu_lahde'] = ovl or 'sääntö 3 (avoimuus)'
             ux_, uy_ = math.sin(math.radians(atsi)), math.cos(math.radians(atsi))
             lansi = (ux_, uy_) if paa == '+x' else (-ux_, -uy_)   # lansipaa = julkisivun pää (vie.akseli kääntää sen −x:ksi)
             parametrit['avoimuus'] = avo; parametrit['julkisivu_paa'] = paa; parametrit['julkisivu_epavarma'] = epa

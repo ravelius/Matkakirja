@@ -1,0 +1,745 @@
+{
+ "haettu": "2026-11-17 00:32",
+ "lahde": "OSM Overpass (ODbL), entrance=* rakennuksen ääriviivan solmuilla",
+ "merkit": "/Volumes/T7 4TB/koodaus/proto-arkisto/_tyo/valoseppa/tyyppitalot/koe-rw/wien/merkit-wien.json",
+ "ovet": {
+  "way/8756754": [
+   {
+    "node": 2147690519,
+    "lat": 48.1849637,
+    "lon": 16.3123118,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "private"
+   },
+   {
+    "node": 3447435736,
+    "lat": 48.1850254,
+    "lon": 16.3132979,
+    "entrance": "main",
+    "nimi": "Schlosseingang",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 3447435749,
+    "lat": 48.1854327,
+    "lon": 16.3116114,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/96257478": [],
+  "way/5887599": [
+   {
+    "node": 1601118245,
+    "lat": 48.1916888,
+    "lon": 16.38088,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 3761804039,
+    "lat": 48.1916011,
+    "lon": 16.3816791,
+    "entrance": "shop",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/31313338": [
+   {
+    "node": 1601297224,
+    "lat": 48.1964772,
+    "lon": 16.3794262,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 1601297241,
+    "lat": 48.1965858,
+    "lon": 16.3794027,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "customers"
+   },
+   {
+    "node": 1601297264,
+    "lat": 48.1968446,
+    "lon": 16.379012,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 2608189823,
+    "lat": 48.1967758,
+    "lon": 16.3792713,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 11705124597,
+    "lat": 48.1966631,
+    "lon": 16.3792817,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "customers"
+   }
+  ],
+  "way/121542619": [],
+  "way/158249818": [
+   {
+    "node": 9595758494,
+    "lat": 48.2224357,
+    "lon": 16.3596878,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/54286": [
+   {
+    "node": 10847066114,
+    "lat": 48.2084857,
+    "lon": 16.3579025,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847066115,
+    "lat": 48.2078634,
+    "lon": 16.357719,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847066116,
+    "lat": 48.2087496,
+    "lon": 16.3582832,
+    "entrance": "yes",
+    "nimi": "Wirtschaftstor 3",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847066117,
+    "lat": 48.208656,
+    "lon": 16.3589655,
+    "entrance": "yes",
+    "nimi": "Wirtschaftstor 4",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847066118,
+    "lat": 48.2074326,
+    "lon": 16.3586071,
+    "entrance": "yes",
+    "nimi": "Wirtschaftstor 1",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847066119,
+    "lat": 48.2075215,
+    "lon": 16.3579205,
+    "entrance": "yes",
+    "nimi": "Wirtschaftstor 2",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847124922,
+    "lat": 48.208324,
+    "lon": 16.3591764,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847124923,
+    "lat": 48.2076971,
+    "lon": 16.3589867,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847124924,
+    "lat": 48.2081165,
+    "lon": 16.3591817,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10847124925,
+    "lat": 48.2078789,
+    "lon": 16.3591127,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/57997": [],
+  "relation/5541555": [],
+  "relation/20165": [
+   {
+    "node": 436364008,
+    "lat": 48.2039855,
+    "lon": 16.361461,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/65155": [
+   {
+    "node": 2173166873,
+    "lat": 48.2013027,
+    "lon": 16.3657079,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 3520224256,
+    "lat": 48.2016701,
+    "lon": 16.3652778,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/11187": [
+   {
+    "node": 436364007,
+    "lat": 48.2050319,
+    "lon": 16.3600773,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/1527363": [],
+  "relation/2458835": [
+   {
+    "node": 567005972,
+    "lat": 48.2117013,
+    "lon": 16.3643634,
+    "entrance": "main",
+    "nimi": null,
+    "katu": "Freyung",
+    "numero": "4",
+    "access": null
+   }
+  ],
+  "relation/3898175": [
+   {
+    "node": 3030683723,
+    "lat": 48.2060795,
+    "lon": 16.3651688,
+    "entrance": "main",
+    "nimi": "Hofburg Kongresszentrum",
+    "katu": "Heldenplatz",
+    "numero": null,
+    "access": "private"
+   },
+   {
+    "node": 3030690531,
+    "lat": 48.2060586,
+    "lon": 16.3651982,
+    "entrance": "main",
+    "nimi": "OSCE",
+    "katu": null,
+    "numero": null,
+    "access": "no"
+   },
+   {
+    "node": 3443557034,
+    "lat": 48.2055619,
+    "lon": 16.3647187,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 5437938528,
+    "lat": 48.2054444,
+    "lon": 16.3646928,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 5437938537,
+    "lat": 48.2055664,
+    "lon": 16.3648962,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 7334610120,
+    "lat": 48.2070209,
+    "lon": 16.3658332,
+    "entrance": "staircase",
+    "nimi": "Säulenstiege",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 9151162046,
+    "lat": 48.2077465,
+    "lon": 16.3642546,
+    "entrance": "yes",
+    "nimi": "Adlerstiege",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 9151162047,
+    "lat": 48.2077221,
+    "lon": 16.3642473,
+    "entrance": "yes",
+    "nimi": "Lakaienstiege",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 9151162048,
+    "lat": 48.2073113,
+    "lon": 16.3647971,
+    "entrance": "yes",
+    "nimi": "Zuckerbäckerstiege",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 9151162049,
+    "lat": 48.2082091,
+    "lon": 16.3656639,
+    "entrance": "yes",
+    "nimi": "Zahlamtsstiege",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 9151162051,
+    "lat": 48.2068506,
+    "lon": 16.3656361,
+    "entrance": "yes",
+    "nimi": "Botschafterstiege",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10159128838,
+    "lat": 48.2079447,
+    "lon": 16.3645812,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10159128900,
+    "lat": 48.2067995,
+    "lon": 16.3657124,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10163990407,
+    "lat": 48.2079668,
+    "lon": 16.3650905,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10163990412,
+    "lat": 48.2077426,
+    "lon": 16.3653785,
+    "entrance": "main",
+    "nimi": "Kaisertor",
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10163990413,
+    "lat": 48.207921,
+    "lon": 16.3651503,
+    "entrance": "yes",
+    "nimi": "Marschalltor",
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/150055": [],
+  "relation/153359": [],
+  "relation/1534837": [],
+  "relation/1541444": [],
+  "relation/3934518": [],
+  "relation/2509778": [
+   {
+    "node": 4765856398,
+    "lat": 48.2055776,
+    "lon": 16.372996,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4765856403,
+    "lat": 48.2056411,
+    "lon": 16.3727255,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4765856404,
+    "lat": 48.2055256,
+    "lon": 16.37322,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/1441683": [
+   {
+    "node": 2703273540,
+    "lat": 48.212488,
+    "lon": 16.3608784,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "yes"
+   },
+   {
+    "node": 2703273549,
+    "lat": 48.2125547,
+    "lon": 16.360365,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 2703273551,
+    "lat": 48.2129083,
+    "lon": 16.3591974,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "private"
+   },
+   {
+    "node": 2703273554,
+    "lat": 48.2135164,
+    "lon": 16.3611804,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "yes"
+   },
+   {
+    "node": 2703273565,
+    "lat": 48.2135382,
+    "lon": 16.3609937,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 2703273568,
+    "lat": 48.2135527,
+    "lon": 16.36087,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 2703273570,
+    "lat": 48.2135627,
+    "lon": 16.3593913,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "yes"
+   },
+   {
+    "node": 2703273573,
+    "lat": 48.2135785,
+    "lon": 16.3606638,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4126966672,
+    "lat": 48.2125872,
+    "lon": 16.3601149,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4126966673,
+    "lat": 48.2126135,
+    "lon": 16.3599122,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4126966674,
+    "lat": 48.212646,
+    "lon": 16.3596618,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4126966681,
+    "lat": 48.2134467,
+    "lon": 16.3604214,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4126966682,
+    "lat": 48.2128031,
+    "lon": 16.3597529,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 4126966683,
+    "lat": 48.2127435,
+    "lon": 16.3602076,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 7574517261,
+    "lat": 48.2129977,
+    "lon": 16.3604432,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 7574517272,
+    "lat": 48.2131466,
+    "lon": 16.3604869,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 9556610688,
+    "lat": 48.2130023,
+    "lon": 16.360963,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 11540308526,
+    "lat": 48.2126723,
+    "lon": 16.3594591,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/29871": [
+   {
+    "node": 10760918328,
+    "lat": 48.2146963,
+    "lon": 16.3670643,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10760918329,
+    "lat": 48.2154234,
+    "lon": 16.3663205,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10760918330,
+    "lat": 48.2150988,
+    "lon": 16.3659434,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10760918333,
+    "lat": 48.2152805,
+    "lon": 16.3661161,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10760918337,
+    "lat": 48.214543,
+    "lon": 16.366607,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10760918340,
+    "lat": 48.2148249,
+    "lon": 16.3672764,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10760918349,
+    "lat": 48.2146068,
+    "lon": 16.3668061,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/6528362": [],
+  "relation/2162378": []
+ }
+}

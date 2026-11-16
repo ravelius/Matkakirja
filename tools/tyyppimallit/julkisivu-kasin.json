@@ -1,0 +1,141 @@
+{
+ "_ohje": "Julkisivun käsitaulu (KK 17.11. ~01.1x kohta 1): voittaa OSM entrance=main -oven ja säännön 3. suunta = pääjulkisivun ilmansuunta; katu = pääsisäänkäynnin katu tai aukio kahdesta lähteestä; sivu lasketaan mallin kehyksessä lähimmästä ilmansuunnasta (tarkistettu katusivu.py:llä: kadun OSM-pisteet sivun edessä).",
+ "rooma": {
+  "relation/325549": {
+   "nimi": "Palazzo delle Finanze",
+   "suunta": "luode",
+   "katu": "Via XX Settembre",
+   "lahteet": [
+    "https://romapedia.blogspot.com/2016/08/palace-of-ministry-of-treasure.html (julkisivu Via XX Settembrelle, Pietro Costa)",
+    "https://sigecweb.beniculturali.it/sigec/item/print/ICCD11719711 (sivusisäänkäynti Via Cernaialla)",
+    "OSM node/10300163381 entrance=main Via XX Settembren puolella"
+   ],
+   "huom": "OSM:ssä toinen entrance=main (node/10300163380) lounaispäässä"
+  },
+  "relation/1707363": {
+   "nimi": "Palazzo Doria Pamphilj",
+   "suunta": "itä",
+   "katu": "Via del Corso",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_Doria_Pamphilj (monumentaalijulkisivu Via del Corsolla)",
+    "https://en.wikipedia.org/wiki/Palazzo_Doria_Pamphilj (principal entrance Via del Corso)"
+   ]
+  },
+  "relation/2766788": {
+   "nimi": "Palazzo Montecitorio",
+   "suunta": "etelä",
+   "katu": "Piazza di Montecitorio (Berninin julkisivu, obeliski)",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_di_Montecitorio",
+    "https://visita.camera.it/sites/visita/files/media/documenti/baroccochiusura1-39.pdf"
+   ],
+   "huom": "Basilen julkisivu pohjoiseen Piazza del Parlamentolle; käyttöovi siellä"
+  },
+  "relation/1709796": {
+   "nimi": "Palazzo Braschi",
+   "suunta": "etelä",
+   "katu": "Piazza di San Pantaleo",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_Braschi",
+    "https://en.wikipedia.org/wiki/Palazzo_Braschi"
+   ]
+  },
+  "relation/1691910": {
+   "nimi": "Palazzo Senatorio",
+   "suunta": "luode",
+   "katu": "Piazza del Campidoglio",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_Senatorio",
+    "https://en.wikipedia.org/wiki/Palazzo_Senatorio"
+   ]
+  },
+  "relation/2916876": {
+   "nimi": "Palazzo Spada",
+   "suunta": "koillinen",
+   "katu": "Piazza Capo di Ferro",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_Spada",
+    "https://en.wikipedia.org/wiki/Palazzo_Spada"
+   ]
+  },
+  "relation/76432": {
+   "nimi": "Palazzo Madama",
+   "suunta": "länsi",
+   "katu": "Corso del Rinascimento",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_Madama_(Roma) (ingresso principale Corso del Rinascimento)",
+    "https://en.wikipedia.org/wiki/Palazzo_Madama,_Rome",
+    "KK 17.11. ~01.1x: LÄNSI"
+   ]
+  },
+  "way/140186882": {
+   "nimi": "Palazzo Venezia",
+   "suunta": "itä",
+   "katu": "Piazza Venezia (portale monumentale)",
+   "lahteet": [
+    "https://it.wikipedia.org/wiki/Palazzo_Venezia (Il portale monumentale su piazza Venezia)",
+    "https://en.wikipedia.org/wiki/Palazzo_Venezia (main eastern facade faces Piazza Venezia)"
+   ],
+   "huom": "OSM entrance=main node/7192784546 on museon ovi Via del Plebiscitolla (pohjoinen); käsitaulu voittaa"
+  }
+ },
+ "wien": {
+  "relation/54286": {
+   "nimi": "Parlament",
+   "suunta": "itä",
+   "katu": "Dr.-Karl-Renner-Ring (ramppi)",
+   "lahteet": [
+    "https://www.geschichtewiki.wien.gv.at/Parlament (Hauptfassade zum Ring)",
+    "https://de.wikipedia.org/wiki/Parlamentsgebäude_(Wien)"
+   ]
+  },
+  "way/158249818": {
+   "nimi": "Gartenpalais Liechtenstein",
+   "suunta": "etelä",
+   "katu": "Fürstengasse (kunniapiha)",
+   "lahteet": [
+    "https://de.wikipedia.org/wiki/Gartenpalais_Liechtenstein (palatsi tontin eteläosassa, puutarha pohjoiseen)",
+    "https://www.wien.info/en/sightseeing/museums-exhibitions/top/liechtenstein-garden-palace-351000 (pääsisäänkäynti Fürstengasse 1)",
+    "https://www.viennadesignweek.at/en/player/liechtenstein-museum/ (Südfassade)"
+   ]
+  },
+  "way/96257478": {
+   "nimi": "Palais Auersperg",
+   "suunta": "itä",
+   "katu": "Auerspergstraße 1",
+   "lahteet": [
+    "https://de.wikipedia.org/wiki/Palais_Auersperg (Hauptportal Auerspergstraße)",
+    "https://www.geschichtewiki.wien.gv.at/Palais_Auersperg (osoite Auerspergstraße 1, pylväsportiikki keskirisaliitissa)"
+   ],
+   "huom": "toinen lähde antaa osoitteen, ei sano portiikin katua"
+  },
+  "relation/1534837": {
+   "nimi": "Palais Esterházy",
+   "suunta": "lounas",
+   "katu": "Wallnerstraße 4",
+   "lahteet": [
+    "https://de.wikipedia.org/wiki/Palais_Esterházy_(Wallnerstraße)",
+    "https://www.ganz-wien.at/wien/sehenswuerdigkeiten/palais-esterhazy.html (Wallnerstraßen julkisivu 11 akselia)"
+   ]
+  },
+  "relation/3934518": {
+   "nimi": "Palais Modena",
+   "suunta": "itä",
+   "katu": "Herrengasse 7",
+   "lahteet": [
+    "https://de.wikipedia.org/wiki/Palais_Modena",
+    "https://austria-forum.org/web-books/burgenundschlos00de1991iicm/000467 (Herrengasse 7: 18 akselia, kaksi porttia)"
+   ]
+  },
+  "relation/29871": {
+   "nimi": "Börsegebäude",
+   "suunta": "luode",
+   "katu": "Schottenring 16",
+   "lahteet": [
+    "https://www.geschichtewiki.wien.gv.at/Börse (Hauptsitz 1., Schottenring 16)",
+    "https://austria-forum.org/af/AustriaWiki/B%C3%B6rsegasse (Hansenin pörssi, osoite Schottenring)"
+   ],
+   "huom": "OSM entrance=main kahdella päädyllä (+x, -x); lähteet antavat osoitteen, ei portaalin sivua; sääntö 3 valitsi kaakon (Börseplatz), osoitekatu Schottenring on luoteessa (katusivu.py) → VARMISTA KUVASTA"
+  }
+ }
+}

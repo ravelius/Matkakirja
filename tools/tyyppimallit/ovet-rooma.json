@@ -1,0 +1,314 @@
+{
+ "haettu": "2026-11-17 00:31",
+ "lahde": "OSM Overpass (ODbL), entrance=* rakennuksen ääriviivan solmuilla",
+ "merkit": "/Volumes/T7 4TB/koodaus/proto-arkisto/_tyo/valoseppa/tyyppitalot/koe-rw/rooma/merkit-rooma.json",
+ "ovet": {
+  "way/127942183": [
+   {
+    "node": 1414841645,
+    "lat": 41.8995823,
+    "lon": 12.4650199,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 13037394053,
+    "lat": 41.89969,
+    "lon": 12.4649249,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/29181216": [
+   {
+    "node": 1398590672,
+    "lat": 41.89819,
+    "lon": 12.4691456,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/25625603": [
+   {
+    "node": 1396574753,
+    "lat": 41.8963931,
+    "lon": 12.474335,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/117744827": [],
+  "way/50884075": [
+   {
+    "node": 1436613395,
+    "lat": 41.8997175,
+    "lon": 12.4715036,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/25610962": [
+   {
+    "node": 1396574537,
+    "lat": 41.8958138,
+    "lon": 12.4793482,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "way/140186882": [
+   {
+    "node": 1166425489,
+    "lat": 41.8957335,
+    "lon": 12.4813552,
+    "entrance": "yes",
+    "nimi": "Istituto Nazionale di Archeologia e Storia dell'Arte",
+    "katu": "Piazza di San Marco",
+    "numero": "49",
+    "access": null
+   },
+   {
+    "node": 1391511102,
+    "lat": 41.8958898,
+    "lon": 12.4804778,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": "Via degli Astalli",
+    "numero": "1",
+    "access": null
+   },
+   {
+    "node": 7192784546,
+    "lat": 41.8963875,
+    "lon": 12.4810903,
+    "entrance": "main",
+    "nimi": null,
+    "katu": "Via del Plebiscito",
+    "numero": "118",
+    "access": null
+   }
+  ],
+  "way/23442671": [
+   {
+    "node": 4561679189,
+    "lat": 41.9082248,
+    "lon": 12.482382,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": "Viale della Trinità dei Monti",
+    "numero": "1",
+    "access": null
+   }
+  ],
+  "relation/2916876": [],
+  "relation/1283512": [],
+  "relation/22289": [],
+  "relation/76432": [],
+  "relation/1709796": [
+   {
+    "node": 1397229721,
+    "lat": 41.8972375,
+    "lon": 12.472878,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/325578": [],
+  "relation/1709797": [
+   {
+    "node": 2628954427,
+    "lat": 41.8964714,
+    "lon": 12.4719271,
+    "entrance": "main",
+    "nimi": null,
+    "katu": "Piazza della Cancelleria",
+    "numero": "1",
+    "access": null
+   }
+  ],
+  "relation/2766788": [
+   {
+    "node": 1443767574,
+    "lat": 41.901011,
+    "lon": 12.4786769,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/537813": [],
+  "relation/1691910": [
+   {
+    "node": 13811620693,
+    "lat": 41.8930854,
+    "lon": 12.4833812,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/1834818": [
+   {
+    "node": 1445132012,
+    "lat": 41.8896614,
+    "lon": 12.4920498,
+    "entrance": "exit",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 1445132528,
+    "lat": 41.8899742,
+    "lon": 12.4932511,
+    "entrance": "exit",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 1489221903,
+    "lat": 41.8905551,
+    "lon": 12.4913648,
+    "entrance": "main",
+    "nimi": "Sperone Valadier",
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/1707363": [
+   {
+    "node": 1439825876,
+    "lat": 41.8978345,
+    "lon": 12.4806468,
+    "entrance": "yes",
+    "nimi": "Galleria Doria Pamphilj",
+    "katu": null,
+    "numero": "2",
+    "access": null
+   },
+   {
+    "node": 7192761765,
+    "lat": 41.896531,
+    "lon": 12.4809489,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": "Via del Plebiscito",
+    "numero": "104",
+    "access": null
+   },
+   {
+    "node": 7192761766,
+    "lat": 41.8965173,
+    "lon": 12.4808839,
+    "entrance": "no",
+    "nimi": null,
+    "katu": "Via del Plebiscito",
+    "numero": "103",
+    "access": null
+   }
+  ],
+  "relation/1849830": [
+   {
+    "node": 1270510175,
+    "lat": 41.8940388,
+    "lon": 12.4827036,
+    "entrance": "emergency",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": "private"
+   }
+  ],
+  "relation/2737120": [],
+  "relation/2766758": [],
+  "relation/2707110": [],
+  "relation/37216": [
+   {
+    "node": 12006737550,
+    "lat": 41.9043165,
+    "lon": 12.4837729,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": "Via dei Due Macelli",
+    "numero": "59",
+    "access": null
+   }
+  ],
+  "relation/325553": [],
+  "relation/2716050": [],
+  "relation/11153": [],
+  "relation/325549": [
+   {
+    "node": 10300163380,
+    "lat": 41.9050437,
+    "lon": 12.4966387,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 10300163381,
+    "lat": 41.9056545,
+    "lon": 12.4968761,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/2705998": [
+   {
+    "node": 10118339515,
+    "lat": 41.9012241,
+    "lon": 12.498822,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": "Piazza dei Cinquecento",
+    "numero": "67",
+    "access": null
+   },
+   {
+    "node": 12532452587,
+    "lat": 41.9015327,
+    "lon": 12.4980238,
+    "entrance": "main",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ]
+ }
+}
