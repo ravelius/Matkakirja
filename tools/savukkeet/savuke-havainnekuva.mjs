@@ -330,7 +330,7 @@ async function ajo(laite, viewport, deviceScaleFactor) {
     ihme.zoom && ihme.zoomlahde, JSON.stringify(ihme));
   await sivu.screenshot({ path: join(KAAPPAUKSET, `havainnekuva-${laite}-ihme-zeus.png`) });
   await tarkistaPinta(sivu, laite, 'ihmesuurennos (Zeus)',
-    '.fokuskohde-zoomlahde', 'Mihin ihmeen kuva perustuu?');
+    '.fokuskohde-zoomlahde', 'Mihin aarteen kuva perustuu?');
   await pyyhkaise(sivu, laite, 'ihmesuurennos');
   await sivu.evaluate(() => {
     document.querySelector('.fokuskohde-zoom')?.remove();
@@ -362,7 +362,7 @@ async function ajo(laite, viewport, deviceScaleFactor) {
   vaadi(`${laite} · nostokortti (Kastrin kylä) aukesi Delfoin leikekirjasta`,
     nosto.leikekirja && nosto.kortti, JSON.stringify(nosto));
   await tarkistaPinta(sivu, laite, 'nostokortti',
-    '.fokusnosto-kuvalahde', 'Mihin ihmeen kuva perustuu?');
+    '.fokusnosto-kuvalahde', 'Mihin aarteen kuva perustuu?');
   await pyyhkaise(sivu, laite, 'nostokortti');
   await sivu.screenshot({ path: join(KAAPPAUKSET, `havainnekuva-${laite}-nostokortti.png`) });
 
@@ -375,7 +375,7 @@ async function ajo(laite, viewport, deviceScaleFactor) {
   vaadi(`${laite} · nostokuvan suurennos aukesi`, nostoZoom === true);
   if (nostoZoom) {
     await tarkistaPinta(sivu, laite, 'nostokuvan suurennos',
-      '.fokuskohde-zoomlahde', 'Mihin ihmeen kuva perustuu?');
+      '.fokuskohde-zoomlahde', 'Mihin aarteen kuva perustuu?');
   }
   await sivu.evaluate(() => {
     document.querySelector('.fokuskohde-zoom')?.remove();
@@ -405,7 +405,7 @@ async function ajo(laite, viewport, deviceScaleFactor) {
   vaadi(`${laite} · syvennystarina aukesi (${syvennys.cityId ?? '—'}/${syvennys.id ?? '—'})`,
     syvennys.loytyi === true);
   await tarkistaPinta(sivu, laite, 'syvennystarina',
-    '.fokusnosto-kuvalahde', 'Mihin ihmeen kuva perustuu?');
+    '.fokusnosto-kuvalahde', 'Mihin aarteen kuva perustuu?');
   await pyyhkaise(sivu, laite, 'syvennystarina');
   await sivu.evaluate(() => document.querySelector('.syvennys-kerros')?.remove());
 

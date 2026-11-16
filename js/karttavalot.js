@@ -118,7 +118,7 @@ export const KARTTAVALO_AIHEET = [
   { aihe: 'luonto', nimi: 'Luonto', symboli: 'luonto' },
   { aihe: 'elaimet', nimi: 'Eläimet', symboli: 'elain' },
   { aihe: 'historia', nimi: 'Historia', symboli: 'historia' },
-  { aihe: 'ihmeet', nimi: 'Kadonneet ihmeet', symboli: 'ihme' },
+  { aihe: 'ihmeet', nimi: 'Kadonneet aarteet', symboli: 'ihme' },
   { aihe: 'hetket', nimi: 'Historian hetket', symboli: 'hetki' },
   { aihe: 'kulttuuri', nimi: 'Kulttuuri ja ruoka', symboli: 'kulttuuri' },
   { aihe: 'kauppa', nimi: 'Kauppa ja tekniikka', symboli: 'kauppa' },

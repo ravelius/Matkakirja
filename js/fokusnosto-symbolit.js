@@ -1432,7 +1432,7 @@ export const NOSTOSYM_LUOKAT = {
   kaupunki: 'Kaupungit',
   // Tähti on oma luokkansa eikä historian alalaji: kortin ylärivi
   // kertoo heti, että tästä kohteesta on jäljellä vain tarina.
-  ihme: 'Kadonneet ihmeet',
+  ihme: 'Kadonneet aarteet',
   // Tiimalasi on oma luokkansa eikä historian alalaji: murtunut pylväs
   // lupaa paikkaa, tiimalasi lupaa hetkeä (js/historian-hetket.js).
   hetki: 'Historian hetket',

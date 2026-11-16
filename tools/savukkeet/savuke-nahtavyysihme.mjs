@@ -303,8 +303,8 @@ vaadi('tähti istuu merkin yläreunassa',
 vaadi('tähti on sama kompassiruusu kuin pääkartalla (.nostosym-tahti)',
   merkit.kompassiruusuja === merkit.tahdelliset.length,
   `${merkit.kompassiruusuja} ruusua`);
-vaadi('kartalla on selite "Matkakirjan ihme" samalla tähdellä',
-  merkit.selite === 'Matkakirjan ihme' && merkit.seliteTahtia === 1,
+vaadi('kartalla on selite "Kadonnut aarre" samalla tähdellä',
+  merkit.selite === 'Kadonnut aarre' && merkit.seliteTahtia === 1,
   JSON.stringify({ selite: merkit.selite, tahtia: merkit.seliteTahtia }));
 
 await sivu.evaluate(() => window.matkakirja.ui.closeArrival());
