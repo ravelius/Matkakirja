@@ -1,0 +1,64 @@
+{
+  "taskNumber": 2372,
+  "sourcePath": "posti/paatoimittaja-codex-pulu-rooma-wien-paatos-20261116.md",
+  "sourceCommit": "af19637d5e9ee8812f1980396ee654ab553dd751",
+  "sourceBlob": "f6292a40427e4f9668057577737e0139a1807862",
+  "tool": "built-in image_gen",
+  "useCase": "photorealistic-natural",
+  "selectedAttempt": 2,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T06:50:17.256578+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-wien-cafe-landtmann-2352-20261116/prompts/attempt001.txt",
+      "referenceInput": "Text only; inspected source images, no editing target.",
+      "completedAt": "2026-11-16T06:51:00.951644+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-639a0860-dffb-4d58-b180-b60db52a8f39.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-wien-cafe-landtmann-2352-20261116/native/pulu-wien-cafe-landtmann-attempt001.png",
+      "sha256": "8d5db6d60ff9b5309acb4014dcb1483fce5991f7f4e1a25bae8bd6e3091adfa9",
+      "bytes": 2312040,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+      "historicalPriorTask": 2352
+    },
+    {
+      "attempt": 2,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T07:15:26.597702+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-wien-varpunen-2372-20261116/prompts/attempt002.txt",
+      "referenceInput": "Prior Vienna v1 used only as composition/atmosphere reference; complete new generation with sparrow, no partial edit.",
+      "completedAt": "2026-11-16T07:16:06.136612+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-85a7ad3d-ca33-441b-acbf-42a35fe4da01.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-wien-varpunen-2372-20261116/native/pulu-wien-cafe-landtmann-attempt002.png",
+      "sha256": "6db64673951da3f7fa121c4046582fa0b0f0f4362fd080557957e9b120e4eb15",
+      "bytes": 2385622,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativeFile": "pulu-wien-cafe-landtmann-v2.png",
+  "nativeSha256": "6db64673951da3f7fa121c4046582fa0b0f0f4362fd080557957e9b120e4eb15",
+  "deliveryFile": "pulu-wien-cafe-landtmann-v2.jpg",
+  "deliverySha256": "5d5bea346d2f72c3c7af3e38d2fbf48e5989594adba89e7c65f93dbb8f791b85",
+  "deliveryBytes": 1744740,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "conversion": "macOS sips PNG to JPEG, best quality; no resize, crop or retouch",
+  "sourceLabel": "Matkakirjan havainnekuva",
+  "referenceRole": "Inspected architecture source plus previous generated Vienna v1 as composition reference; whole new generation, no partial editing",
+  "puluTextChanged": false,
+  "acceptanceFlow": "KK -> owner shown image -> SK data PR6819; source Matkakirjan havainnekuva."
+}

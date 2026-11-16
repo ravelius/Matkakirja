@@ -1,0 +1,40 @@
+{
+  "selectedAttempt": 2,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kokonaan uusi Wienin terassikuva: kahvikuppi lautasineen ja vesilasi marmoripöydällä sekä varpunen punotun tuolin selkänojalla. Linnun pää, jalat ja pyrstö sekä astiat mahtuvat kokonaan myös ympyrärajaukseen. Matalan kuvakulman luonnollinen päivänvalo ja vanhojen julkisivujen tausta säilyvät.",
+  "checks": {
+    "squareAspect": true,
+    "lowTabletopView": true,
+    "wholeCupSaucerGlassAndSparrowInsideCircle": true,
+    "sparrowPerchedOnChairBack": true,
+    "uncoveredOutdoorTerrace": true,
+    "noFoodCrumbsPastries": true,
+    "naturalPhotographicLightAndMaterials": true,
+    "noObservedTextLogosFacesOrPigeon": true,
+    "nativeUnedited": true
+  },
+  "notes": [
+    "Tämä on alkuperäisen tilauksen toinen ja viimeinen otto (2/2), nimenomaisesti valtuutettu päätöksessä af19637d5e9ee8812f1980396ee654ab553dd751. V1 ja sen toimitushistoria säilyvät. Ei kolmatta ottoa.",
+    "Aiempi v1 oli vain sommittelu- ja tunnelmaviite; koko v2 generoitiin uudelleen. Lintua ei lisätty osittaisena muokkauksena.",
+    "Natiivi 1254 × 1254 px. Neliö, ympyrärajaus sekä linnun, kupin ja lasin yksityiskohdat katsottu. Ei rajausta tai suurennusta.",
+    "Kupin höyry on hyvin vähäinen eikä erotu selvästi esikatselussa. Miljöö on havainnollistava, ei täsmällinen dokumentointi kahvilan kalustuksesta.",
+    "KK arvioi tämän v2:n erikseen. Hyväksyntää, omistajan hyväksyntää, data-PR:n muutosta tai pelijulkaisua ei merkitä syntyneeksi toimituksesta."
+  ],
+  "taskNumber": 2372,
+  "reviewedAt": "2026-11-16T07:16:42.529710+00:00",
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeSha256": "6db64673951da3f7fa121c4046582fa0b0f0f4362fd080557957e9b120e4eb15",
+  "jpgSha256": "5d5bea346d2f72c3c7af3e38d2fbf48e5989594adba89e7c65f93dbb8f791b85",
+  "reviewMethod": "Native image, browser-rendered square/circle preview and details visually inspected. Native content not modified.",
+  "editorAccepted": false,
+  "ownerAccepted": false,
+  "receiverAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "sizeNote": "Actual native dimensions reported; no resize or upscale. JPEG is format conversion only."
+}
