@@ -1,0 +1,42 @@
+{
+  "task": "Bastilji B-v2: riippumaton rajattu visuaalinen uusintatarkistus",
+  "checked": "2026-11-16",
+  "scope": "Vain B-v2 ja sen johdettu pohjakaavio; aiempi v1-QA säilytetty. Ei kokoonpanon, C-kaavion tai 3D-mallin hyväksyntää.",
+  "files": {
+    "model-sheet/B-east-south-v2.png": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+    "model-sheet/B-v2-footprint-geometry-reference.png": "f32c2a86f7815f987eb12014198b7475f7c9025daeec39b42674f86b147b9e98"
+  },
+  "verdict": "CONDITIONAL_VISUAL_PASS_FOOTPRINT_HEIGHT_UNVERIFIED",
+  "footprint": {
+    "status": "PASS_VISIBLE",
+    "finding": "Kaksi keskitornia ovat selvästi päätytornien linjaa ulompana. Päätyjen yhdysmuurit taittuvat ja keskiosan ulkonema erottuu. B-v1:n olennainen lähes suoran rivin ongelma on korjattu näkyvässä kuvassa.",
+    "limit": "6 metriä on johdetun kaavion tavoite; perspektiivikuvasta ei ole tehty luotettavaa metrimittausta. Kaavio ei ole uusi riippumaton historiallinen lähde."
+  },
+  "towers_and_return": {
+    "status": "PASS_VISIBLE",
+    "finding": "Neljä pyöreää tornia ja yksi eteläpäästä sisäänpäin palaava muuri. Ei viidettä tornia, kartiokattoja, ympäristöä tai yhteistä jalustaa."
+  },
+  "height": {
+    "status": "UNVERIFIED_NOT_PROVEN_FAILURE",
+    "finding": "Harjakorkeus ei ole yhtä selvästi arvioitavissa kuin pohjamuoto. Pohjoisemman keskitornin näkyvä runko vaikuttaa muita pidemmältä. Keskimmäinen yhdysmuuri näkyy kapeana kuvatasossa lähes pystysuuntaisena kaistana; tämä ei yksin todista sen pinnan olevan 3D:ssä pystysuora tai harjan porrastuvan.",
+    "required_check": "Yhteisessä mittakaavassa sivunäkymä tai koottu geometria: torniterassien ja muurikäytävien ylätasot samaan lähes tasaiseen korkeuteen."
+  },
+  "south_return_height": {
+    "status": "PERSPECTIVE_AMBIGUOUS",
+    "finding": "Eteläpaluu näyttää kuvassa tornin näkyvää eturunkoa matalammalta. Tornin etummainen pohjareuna on kuitenkin myös kuvassa lähempänä ja alempana kuin takana sijaitsevan paluumuurin maalinja. Tämä selittää osan erosta. Kuvasta ei voi varmasti päätellä erillistä madallettua paluumuuria.",
+    "required_check": "Tarkista paluun ja etelätornin korkeus samasta maatasosta yhteisessä sivunäkymässä tai kokoonpanossa."
+  },
+  "gates": {
+    "status": "PASS_VISIBLE_WITH_OCCLUSION",
+    "finding": "Näkyvä kaarimuoto on tumma umpisyvennys; läpi näkyvää porttitunnelia ei näy. Osa seinästä jää tornien taakse."
+  },
+  "must_fix_confirmed_in_this_v2_review": [],
+  "must_verify_before_source_faithful_geometry_claim": [
+    "Tornien ja välimuurien yhteinen lähes tasainen harjakorkeus.",
+    "Eteläpaluu samassa korkeusjärjestelmässä etelätornin kanssa.",
+    "A/B:n yhteinen mittakaava ja saumat sekä C:n mataluus, pohjoiskolmanneksen paikka ja avoimet erikokoiset pihat; tämän tarkistuksen ulkopuolella."
+  ],
+  "conditional_owner_acceptance": "KK voi hyväksyä B-v2:n seuraavan kokeen kuvaksi tietoisena korkeuden ja kokoonpanon varmentamattomuudesta. Havaittu näkymä ei anna riittävää perustetta vaatia uutta generointia todistetun korkeusvirheen vuoksi. Ehdollinen kokeiluhyväksyntä ei tarkoita todennettua lähdeuskollista 3D-geometriaa eikä ole itsessään maksullisen ajon toteutus.",
+  "paid_tripo_recommendation": "B-v1:n pohjamuotovirhe ei enää yksin estä jatkoa. Lähdeuskolliseksi hyväksyttävää maksullista tuotantoajoa varten korkeus ja kokoonpano tulee ensin varmentaa. KK voi erikseen hyväksyä kokeen näillä avoimilla kohdilla.",
+  "actions": "Vain kuvien katselu ja tämän QA-parin kirjoitus. V1 säilytetty."
+}

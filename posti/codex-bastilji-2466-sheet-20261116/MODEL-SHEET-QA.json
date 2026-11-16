@@ -1,0 +1,206 @@
+{
+  "task": "PT2466 Bastilji mallikuva-arkki",
+  "checked_utc": "2026-11-16T17:44:14.256173+00:00",
+  "overall_status": "WARN",
+  "approval": "Owner/root review required; this is not an approved assembled footprint or Tripo model.",
+  "visual_inspection": "All 4 generated images, all input references, derived B footprint reference, final assembly-fit diagram and both contact sheets were viewed. Bv1 rejected and preserved. No generated image content was locally edited; contact sheets use whole-image thumbnails.",
+  "parts": {
+    "A": {
+      "status": "PASS",
+      "tower_count": 4,
+      "shape": "Single straight west row + north-only return, open L",
+      "flat_terraces": "PASS",
+      "common_curtain_tower_parapet_height": "PASS visual; exact metric height unverified",
+      "open_tunnels": "none visible",
+      "seam": "Plain north-wall end, to northeast tower inner tangent; assembly fit remains untested"
+    },
+    "C": {
+      "status": "WARN",
+      "tower_count": 0,
+      "shape": "One low rectangular transverse wing, closed door and three window levels",
+      "roof": "Low slate hipped roof: interpretive, not source-certified",
+      "height_dimensions": "~25x7m / ~13m: interpretive; images are not at common scale",
+      "seams": "Plain short end faces; roof eaves may need mesh join care in later authorized modeling"
+    },
+    "B-v1-rejected": {
+      "status": "FAIL",
+      "tower_count": 4,
+      "shape": "East row + south-only return, open L",
+      "middle_east_tower_projection": "WARN: requested ~6m outward projection is weak/uncertain in single perspective; not verified faithful to Sellier",
+      "flat_terraces": "PASS",
+      "common_curtain_tower_parapet_height": "PASS visual; exact metric height unverified",
+      "open_tunnels": "none visible; gate is closed shallow recess",
+      "seam": "Plain south-wall end, to southwest tower inner tangent; assembly fit remains untested",
+      "eligible_for_Tripo": false,
+      "rejection": "Root and independent geometry QA found east middle-tower projection too weak. Do not use Bv1 as Tripo input."
+    },
+    "B-v2": {
+      "status": "WARN",
+      "file": "B-east-south-v2.png",
+      "tower_count": 4,
+      "shape": "Bent east row with both middle towers clearly outward relative to endpoint towers; south-only return toward west, open L-like segment",
+      "middle_east_tower_projection": "PASS visual: clear 0/+6/+6/0 pattern. Exact 6m is approximate and not measurable/verified from perspective image.",
+      "flat_terraces": "PASS",
+      "common_curtain_tower_parapet_height": "WARN: relative roofline/curtain height cannot be verified from perspective. Shape accepted by root and independent QA; height and fit pending.",
+      "open_tunnels": "none visible; doorway closed",
+      "seams": "Plain south-return wall end; metric fit and orientation with A remain untested",
+      "eligible_for_Tripo": false,
+      "approval_gate": "Tripo gate closed; root delivers this explicitly approximate model-sheet for owner review.",
+      "visible_shape_qa": "PASS: root and independent QA accepted outward middle-tower displacement."
+    }
+  },
+  "constraints": {
+    "generated_exactly_one_new_image_per_part": "Root-authorized exception: A1+B1+C1 then one whole-new Bv2 after Bv1 FAIL; 4 calls total, 0 automatic retries.",
+    "eight_towers_total": "PASS: A4+B4+C0",
+    "no_spires_or_cone_roofs": "PASS",
+    "no_ninth_tower": "PASS",
+    "no_courtyard_floor_or_ground_slab": "PASS",
+    "no_through_portals": "PASS visually",
+    "two_unequal_courtyards": "WARN: target plan and C relative height/siting are explicitly shown in separate assembly-fit diagram. Actual assembled model not made/verified.",
+    "east_bulge": "PASS visually in Bv2; Bv1 FAIL and excluded.",
+    "warm_pale_limestone_soft_miniature_style": "PASS with modest material variation among parts",
+    "sources_immutable": "PASS: all 3 used historic originals match package SHA256",
+    "sheet_at_most_2000px": "PASS: current v2 sheet 2000x2000.",
+    "no_Blender_or_render_process": "PASS: no Blender started; SVG schematic rasterization only",
+    "no_Tripo_paid_service_publication_game_change": "PASS"
+  },
+  "source_checks": [
+    {
+      "file": "sources/bastille-exterior-1790-1791.jpg",
+      "sha256_expected": "189ad3d7611017a6b48d3f2b7234bbbd5f06736d167f409ab5a21cfe3ccbe554",
+      "sha256_actual": "189ad3d7611017a6b48d3f2b7234bbbd5f06736d167f409ab5a21cfe3ccbe554",
+      "status": "PASS",
+      "title": "File:Bastille Exterior 1790 or 1791.jpg",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Bastille_Exterior_1790_or_1791.jpg"
+    },
+    {
+      "file": "sources/bastille-1899-plan-actuel.jpg",
+      "sha256_expected": "f3bf5e0dbbb22d3f75aa0710f4337708f7a4f614f8d12b8601b7725ffd8516d7",
+      "sha256_actual": "f3bf5e0dbbb22d3f75aa0710f4337708f7a4f614f8d12b8601b7725ffd8516d7",
+      "status": "PASS",
+      "title": "File:Plan de la Bastille et de ses dépendances rapporté sur le plan actuel des Lieux (1899), Paris Musées 20230611135443.jpg",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Plan_de_la_Bastille_et_de_ses_d%C3%A9pendances_rapport%C3%A9_sur_le_plan_actuel_des_Lieux_(1899),_Paris_Mus%C3%A9es_20230611135443.jpg"
+    },
+    {
+      "file": "sources/bastille-courtyard-1785.jpg",
+      "sha256_expected": "049ed12533678adcd2b8330f09d765fba140628dff8c366dcdf7d476c83f4e09",
+      "sha256_actual": "049ed12533678adcd2b8330f09d765fba140628dff8c366dcdf7d476c83f4e09",
+      "status": "PASS",
+      "title": "File:Bastille Courtyard 1785.jpg",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Bastille_Courtyard_1785.jpg"
+    }
+  ],
+  "uncertainties": [
+    "All numeric dimensions approximate, single-source or interpretation; no exact dimensions claimed.",
+    "C roof form, depth and height are interpretive.",
+    "No assembled castle, mesh, game runtime, Tripo status or technical acceptance exists from this task.",
+    "Bv2 visibly preserves middle-tower outward displacement, but exact offset, common metric scale and actual seam closure are unverified until authorized assembly."
+  ],
+  "outputs": [
+    {
+      "file": "A-west-north-v1.png",
+      "sha256": "e3b6ff3003ad9deabf95e6f24178ff422201dcc116147fb05bd0a4f4850e4504",
+      "bytes": 1585596,
+      "selected": true,
+      "dimensions_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "B-east-south-v2.png",
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+      "bytes": 1336917,
+      "selected": true,
+      "dimensions_px": [
+        1306,
+        1205
+      ]
+    },
+    {
+      "file": "C-low-division-wing-v1.png",
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9",
+      "bytes": 1912586,
+      "selected": true,
+      "dimensions_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "BASTILJI-MODEL-SHEET-v2-2000px.jpg",
+      "sha256": "5a7a8350bcc2c7b1f7c887b1516afb25e5c8cd6e4d10eb46d2f0d8ece51ff2ad",
+      "bytes": 1175332,
+      "selected": true,
+      "dimensions_px": [
+        2000,
+        2000
+      ]
+    },
+    {
+      "file": "B-v2-footprint-geometry-reference.png",
+      "sha256": "f32c2a86f7815f987eb12014198b7475f7c9025daeec39b42674f86b147b9e98",
+      "bytes": 68008,
+      "selected": true,
+      "dimensions_px": [
+        1300,
+        1200
+      ]
+    },
+    {
+      "file": "assembly-fit-plan-v2.svg",
+      "sha256": "5dd1bf2d41575699b23a3e03636003dfd7af6f0f8b3f306212d46ccf88c224ec",
+      "bytes": 3203,
+      "selected": true
+    },
+    {
+      "file": "assembly-fit-plan-v2.png",
+      "sha256": "d852ddff9e882014ca823f54a3cfb249aa8bb1da68c2486647a7d34bb48b755a",
+      "bytes": 185797,
+      "selected": true,
+      "dimensions_px": [
+        1400,
+        900
+      ]
+    },
+    {
+      "file": "B-east-south-v1.png",
+      "sha256": "851ed8171c60e7e56d13f6bc6eb32803f1e45cc11f1dd84d386d5549057c99ee",
+      "bytes": 1730863,
+      "selected": false,
+      "dimensions_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "BASTILJI-MODEL-SHEET-v1-2000px.jpg",
+      "sha256": "2a24fc7a6a47951937d45807757c0997179701905a0eed397627205869f49a57",
+      "bytes": 1132728,
+      "selected": false,
+      "dimensions_px": [
+        2000,
+        1900
+      ]
+    }
+  ],
+  "job_id": null,
+  "cost": null,
+  "job_cost_note": "Built-in tool did not report job id or cost.",
+  "sheet": "BASTILJI-MODEL-SHEET-v2-2000px.jpg",
+  "selected_part_images": [
+    "A-west-north-v1.png",
+    "B-east-south-v2.png",
+    "C-low-division-wing-v1.png"
+  ],
+  "superseded_sheet": "BASTILJI-MODEL-SHEET-v1-2000px.jpg",
+  "root_independent_review": {
+    "B-v2_shape": "accepted",
+    "B-v2_height_fit": "unverified from perspective",
+    "overall": "WARN",
+    "sheet_label": "MUOTO OK; korkeus / sovitus vielä varmistamatta"
+  }
+}

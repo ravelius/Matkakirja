@@ -1,0 +1,89 @@
+{
+  "task": "PT2465 Bastilji 1789",
+  "checked": "2026-11-16",
+  "scope": "Sources and geometry brief only; no generation or model work. Commons period images and Sellier reconstruction.",
+  "sources": [
+    {
+      "title": "File:Bastille Exterior 1790 or 1791.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Bastille_Exterior_1790_or_1791.jpg",
+      "creator_catalogue": "<span lang=\"en\">Anonymous</span><span style=\"display:none\">Unknown author</span>",
+      "date_catalogue": "1790",
+      "license": "Public domain",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Bastille_Exterior_1790_or_1791.jpg",
+      "local_file": "sources/bastille-exterior-1790-1791.jpg",
+      "eligible_for_imagegen": true,
+      "sha256": "189ad3d7611017a6b48d3f2b7234bbbd5f06736d167f409ab5a21cfe3ccbe554"
+    },
+    {
+      "title": "File:Bastille towers profile.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Bastille_towers_profile.jpg",
+      "creator_catalogue": "Anonymous, 1750",
+      "date_catalogue": "1750",
+      "license": "Public domain",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Bastille_towers_profile.jpg",
+      "local_file": "sources/bastille-towers-profile-1750.jpg",
+      "eligible_for_imagegen": true,
+      "sha256": "2de26ac8d862edbfd335dfd1ae71987b66b65b34a4cb408e14fe088b18d876cd"
+    },
+    {
+      "title": "File:Plan de la Bastille et de ses dépendances rapporté sur le plan actuel des Lieux (1899), Paris Musées 20230611135443.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Plan_de_la_Bastille_et_de_ses_d%C3%A9pendances_rapport%C3%A9_sur_le_plan_actuel_des_Lieux_(1899),_Paris_Mus%C3%A9es_20230611135443.jpg",
+      "creator_catalogue": "Anonyme, illustrateur",
+      "date_catalogue": "En 08–04–1899",
+      "license": "CC0",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Plan_de_la_Bastille_et_de_ses_d%C3%A9pendances_rapport%C3%A9_sur_le_plan_actuel_des_Lieux_%281899%29%2C_Paris_Mus%C3%A9es_20230611135443.jpg",
+      "local_file": "sources/bastille-1899-plan-actuel.jpg",
+      "eligible_for_imagegen": true,
+      "sha256": "f3bf5e0dbbb22d3f75aa0710f4337708f7a4f614f8d12b8601b7725ffd8516d7"
+    },
+    {
+      "title": "File:Plan élévations et coupes de la Bastille - levé et dessiné par C. Caffieri ; gravé par N. Ransonnette - btv1b53136124g.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Plan_%C3%A9l%C3%A9vations_et_coupes_de_la_Bastille_-_lev%C3%A9_et_dessin%C3%A9_par_C._Caffieri_;_grav%C3%A9_par_N._Ransonnette_-_btv1b53136124g.jpg",
+      "creator_catalogue": "<div class=\"fn value\">\n<p>Caffieri, C. (18..?-....). Dessinateur\n</p>\nRansonnette, Nicolas (1745-1810). Graveur</div>",
+      "date_catalogue": "1851<div style=\"display: none;\">date QS:P571,+1851-00-00T00:00:00Z/9</div>",
+      "license": "Public domain",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Plan_%C3%A9l%C3%A9vations_et_coupes_de_la_Bastille_-_lev%C3%A9_et_dessin%C3%A9_par_C._Caffieri_%3B_grav%C3%A9_par_N._Ransonnette_-_btv1b53136124g.jpg",
+      "local_file": null,
+      "eligible_for_imagegen": false,
+      "reason": "Excluded: Commons catalogue dates edition 1851. Not verified as a contemporary 1789 image. Newly downloaded copy removed; metadata retained as diagnostic only."
+    },
+    {
+      "title": "File:Bastille Courtyard 1785.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Bastille_Courtyard_1785.jpg",
+      "creator_catalogue": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jean-Honor%C3%A9_Fragonard\" class=\"extiw\" title=\"w:en:Jean-Honoré Fragonard\"><span title=\"French painter (1732–1806)\">Jean-Honoré Fragonard</span></a></bdi>",
+      "date_catalogue": "1785",
+      "license": "Public domain",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Bastille_Courtyard_1785.jpg",
+      "local_file": "sources/bastille-courtyard-1785.jpg",
+      "eligible_for_imagegen": true,
+      "sha256": "049ed12533678adcd2b8330f09d765fba140628dff8c366dcdf7d476c83f4e09"
+    },
+    {
+      "title": "File:Bastille Interior 1785.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Bastille_Interior_1785.jpg",
+      "creator_catalogue": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jean-Honor%C3%A9_Fragonard\" class=\"extiw\" title=\"w:en:Jean-Honoré Fragonard\"><span title=\"French painter (1732–1806)\">Jean-Honoré Fragonard</span></a></bdi>",
+      "date_catalogue": "1785",
+      "license": "Public domain",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Bastille_Interior_1785.jpg",
+      "local_file": "sources/bastille-interior-1785.jpg",
+      "eligible_for_imagegen": true,
+      "sha256": "ca1e97abd36dcc17963ac8fdb8bec658b3ad848581f07772aabb9c15d22a9933"
+    }
+  ],
+  "geometry": {
+    "towers": "8 round towers, four on each long side; eastern two middle towers project outward.",
+    "courtyards": "Smaller northern Cour du Puits, larger southern Grande Cour separated by transverse building wing near northern third.",
+    "roofline": "Towers and curtain walls have one continuous, almost level fortified parapet; flat terraces, machicolations and crenellations, no tall cone roofs.",
+    "scale_approximation_m": {
+      "outer_envelope_towers_included": [
+        77,
+        44
+      ],
+      "tower_diameter": 10,
+      "height": 24
+    },
+    "scale_status": "Approximate only. Outer envelope from prior local Sellier measurement (single source); historical overall 66x34 / 68x37 uses ambiguous measurement bounds. Height circa 24m from Coeuret via local source report; not verified against two independent sources.",
+    "division_wing": "A lower transverse building is visible in Sellier. Three storeys / 1761 is only stated by Coeuret via local report, not independently verified.",
+    "modern_overlay_warning": "Sellier includes 1899 streets, metro line, current houses, July Column; omit all these from 1789 building geometry."
+  }
+}

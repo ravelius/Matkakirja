@@ -1,0 +1,129 @@
+{
+  "task": "Bastilji 2466",
+  "started_local": "2026-11-16 19:30 EET",
+  "eta_local": "2026-11-16 19:55–20:10 EET",
+  "tool": "built-in image_gen",
+  "max_calls": 4,
+  "one_new_generation_per_part": false,
+  "job_id": null,
+  "cost": null,
+  "references": [
+    "../sources/bastille-1899-plan-actuel.jpg",
+    "../sources/bastille-exterior-1790-1791.jpg",
+    "../sources/bastille-courtyard-1785.jpg",
+    "../../grand-chatelet-2237-20261115/references-parts-2253/A-reference-v1.png"
+  ],
+  "parts": [
+    {
+      "id": "A",
+      "prompt": "Use case: stylized-concept. Asset type: a SINGLE isolated 3D reconstruction reference PART for later image-to-3D, NOT a complete fortress.\nCreate a wholly new image, not an alteration of a supplied image. References: image 1 Sellier 1899 plan is GEOMETRY evidence for the old fortress outline ONLY; ignore ALL later street lines, Metro, modern buildings and July Column in that plan. Image 2 historic east elevation is evidence for height, nearly LEVEL roofline, barred tiny windows and parapet. Image 3 Fragonard courtyard is material/interior evidence. Image 4 Grand Chatelet is STYLE ONLY: warm pale limestone, soft restrained miniature realism, clean readable volumes. Absolutely DO NOT copy its pitched roofs, cones, dormers, gates or footprint.\nBastille 1789 language: massive warm pale cream limestone; subtle fine masonry, soft restrained miniature 3D studio rendering, believable scale, not toy brickwork. Small deep-set barred windows, mostly solid walls. Flat open stone roof terraces, modest projecting machicolation cornice beneath low crenellated parapets. Every exterior tower AND curtain wall has one common parapet height. NO conical roofs, pitched high roofs, domes or spires. No exaggerated rough or noisy relief. No modern elements. White seamless background, gentle diffuse studio light, restrained soft shadows. Fully visible subject with generous margins, SINGLE elevated orthographic three-quarter view, no labels, no diagrams, no other views or companion objects. No floor plate, no ground slab, no moat or terrain; empty white void around the wall part, including on its courtyard side. All wall ends must be solid flat vertical butt joints, not broken rubble and not cutaway architecture. No see-through portals: any gate is a shallow closed dark recess.\nApproximate scale only: outer assembled fortress about77m north-south by44m max east-west, 8 towers total divided between TWO main parts, tower diameter10m, external common height24m. Tower center north-south positions about0,22.3,43.7,66.5m. These figures guide proportions, no text.\nTHIS IMAGE IS PART A ONLY: exactly FOUR circular towers in ONE straight north-south WEST row, connected by a thick full-height curtain wall along all three intervals. Add the NORTH end-return curtain wall turning east at the NORTHMOST tower only, forming one empty L. This return is full height and stretches about16.5m beyond the inward tangent of the northmost west tower, ending with a plain flat butt joint ready to meet the inner tangent of a tower belonging to the other part. The return has NO tower at its free end. The SOUTH end has NO return. No east tower row, no east wall, no south enclosure, no low courtyard wing. The space east of the long west row must remain entirely empty and open. There are FOUR towers total in this image, one near end, two middle, one far end, all clearly countable; the north return is a wall ONLY, never a fifth tower. Keep all four towers evenly substantial, height about2.4 times diameter, curtain walls equally high as their parapets. A narrow flat wall walk with low parapets, not a thick raised rooftop room. Camera elevated from the southeast looking northwest, so the interior east-facing side, FOUR tower terraces and L return are all clear. The part must read as an isolated L-shaped segment, NOT a complete courtyard or a U-shaped castle.",
+      "status": "generated",
+      "file": "A-west-north-v1.png",
+      "started_utc": "2026-11-16T17:32:35Z",
+      "completed_utc": "2026-11-16T17:33:19Z",
+      "sha256": "e3b6ff3003ad9deabf95e6f24178ff422201dcc116147fb05bd0a4f4850e4504",
+      "job_id": null,
+      "cost": null,
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e568-4f1d-7492-866a-83f5eca4b3ff/exec-d75e02ab-047a-4c8b-a57a-130c3dca469c.png",
+      "copy_matches_tool_original": true
+    },
+    {
+      "id": "B",
+      "prompt": "Use case: stylized-concept. Asset type: a SINGLE isolated 3D reconstruction reference PART for later image-to-3D, NOT a complete fortress.\nCreate a wholly new image, not an alteration of a supplied image. References: image 1 Sellier 1899 plan is GEOMETRY evidence for the old fortress outline ONLY; ignore ALL later street lines, Metro, modern buildings and July Column in that plan. Image 2 historic east elevation is evidence for height, nearly LEVEL roofline, barred tiny windows and parapet. Image 3 Fragonard courtyard is material/interior evidence. Image 4 Grand Chatelet is STYLE ONLY: warm pale limestone, soft restrained miniature realism, clean readable volumes. Absolutely DO NOT copy its pitched roofs, cones, dormers, gates or footprint.\nBastille 1789 language: massive warm pale cream limestone; subtle fine masonry, soft restrained miniature 3D studio rendering, believable scale, not toy brickwork. Small deep-set barred windows, mostly solid walls. Flat open stone roof terraces, modest projecting machicolation cornice beneath low crenellated parapets. Every exterior tower AND curtain wall has one common parapet height. NO conical roofs, pitched high roofs, domes or spires. No exaggerated rough or noisy relief. No modern elements. White seamless background, gentle diffuse studio light, restrained soft shadows. Fully visible subject with generous margins, SINGLE elevated orthographic three-quarter view, no labels, no diagrams, no other views or companion objects. No floor plate, no ground slab, no moat or terrain; empty white void around the wall part, including on its courtyard side. All wall ends must be solid flat vertical butt joints, not broken rubble and not cutaway architecture. No see-through portals: any gate is a shallow closed dark recess.\nApproximate scale only: outer assembled fortress about77m north-south by44m max east-west, 8 towers total divided between TWO main parts, tower diameter10m, external common height24m. Tower center north-south positions about0,22.3,43.7,66.5m. These figures guide proportions, no text.\nTHIS IMAGE IS PART B ONLY: exactly FOUR circular towers in ONE north-south EAST row, connected by a thick full-height curtain wall along all three intervals. The two MIDDLE tower centers project east/outward about6m compared with the north and south endpoint towers, so the long row has a shallow outward bow/bulge, NOT a perfectly straight alignment. Approximate centers relative to west row: north x26.5 y0; upper middle x33.4 y22.3; lower middle x33.4 y43.7; south x27.9 y66.5. Add the SOUTH end-return curtain wall turning west at the SOUTHMOST tower only, forming one empty L. This return is full height and stretches about18m beyond the inward tangent of the southmost east tower, ending in a plain flat butt joint ready to meet the inward tangent of the other part's southwest tower. The return has NO tower at its free end. The NORTH end has NO return. No west tower row, no west wall, no north enclosure, no low courtyard wing. The space west of the long east row must remain entirely empty and open. FOUR towers total, all clearly countable; the south return is a wall ONLY, never a fifth tower. Height about2.4 times tower diameter; curtain walls and tower parapets equally high. One subtle closed shallow gate recess is allowed between the middle towers; it must NOT penetrate the wall. Camera elevated from the southwest looking northeast, so the interior west-facing side, all FOUR tower terraces, outward middle-tower displacement and L return are clear. Isolated L segment, NOT a complete courtyard or U-shaped castle.",
+      "status": "generated",
+      "started_utc": "2026-11-16T17:33:52.645583+00:00",
+      "file": "B-east-south-v1.png",
+      "completed_utc": "2026-11-16T17:35:09.164698+00:00",
+      "sha256": "851ed8171c60e7e56d13f6bc6eb32803f1e45cc11f1dd84d386d5549057c99ee",
+      "job_id": null,
+      "cost": null,
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e568-4f1d-7492-866a-83f5eca4b3ff/exec-290bf4c5-2061-42f2-8211-2d8f10b512e5.png",
+      "copy_matches_tool_original": true,
+      "qa_status": "FAIL: rejected for Tripo input, weak east bulge"
+    },
+    {
+      "id": "C",
+      "prompt": "Use case: stylized-concept. Asset type: a SINGLE isolated 3D reconstruction reference PART for later image-to-3D, NOT a complete fortress.\nCreate a wholly new image, not an alteration of a supplied image. References: image 1 Sellier 1899 plan is GEOMETRY evidence for the old fortress outline ONLY; ignore ALL later street lines, Metro, modern buildings and July Column in that plan. Image 2 historic east elevation is evidence for height, nearly LEVEL roofline, barred tiny windows and parapet. Image 3 Fragonard courtyard is material/interior evidence. Image 4 Grand Chatelet is STYLE ONLY: warm pale limestone, soft restrained miniature realism, clean readable volumes. Absolutely DO NOT copy its pitched roofs, cones, dormers, gates or footprint.\nBastille 1789 language: massive warm pale cream limestone; subtle fine masonry, soft restrained miniature 3D studio rendering, believable scale, not toy brickwork. Small deep-set barred windows, mostly solid walls. Flat open stone roof terraces, modest projecting machicolation cornice beneath low crenellated parapets. Every exterior tower AND curtain wall has one common parapet height. NO conical roofs, pitched high roofs, domes or spires. No exaggerated rough or noisy relief. No modern elements. White seamless background, gentle diffuse studio light, restrained soft shadows. Fully visible subject with generous margins, SINGLE elevated orthographic three-quarter view, no labels, no diagrams, no other views or companion objects. No floor plate, no ground slab, no moat or terrain; empty white void around the wall part, including on its courtyard side. All wall ends must be solid flat vertical butt joints, not broken rubble and not cutaway architecture. No see-through portals: any gate is a shallow closed dark recess.\nApproximate scale only: outer assembled fortress about77m north-south by44m max east-west, 8 towers total divided between TWO main parts, tower diameter10m, external common height24m. Tower center north-south positions about0,22.3,43.7,66.5m. These figures guide proportions, no text.\nTHIS IMAGE IS PART C ONLY: the low transverse dividing building wing between the small northern Cour du Puits and large southern Grande Cour. ONE simple narrow rectangular limestone building, about25m long east-west by7m deep north-south, about12–13m high to its low simple roof, which is much lower than the24m external ramparts that are NOT shown. Three modest window levels, small barred windows and one shallow closed doorway recess; no open tunnel or portico. Plain blunt undecorated east and west end faces for butt joining into inner curtain-wall faces of the separate parts. Use a very modest low-pitched dark muted slate hipped roof, about1m rise, with no dormers, no chimneys, no cupola. This exact roof form is an interpretive simplification. Do NOT include ANY towers or outer curtain wall, do NOT include a courtyard floor or any other buildings. The subject is ONLY one simple low transverse wing floating on white. Elevated orthographic three-quarter studio view from southeast with roof and both long/short surfaces readable, entire building visible with generous margins. No surrounding fortress, no ornamental palace treatment.",
+      "status": "generated",
+      "started_utc": "2026-11-16T17:35:09.168121+00:00",
+      "file": "C-low-division-wing-v1.png",
+      "completed_utc": "2026-11-16T17:36:45.113899+00:00",
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9",
+      "job_id": null,
+      "cost": null,
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e568-4f1d-7492-866a-83f5eca4b3ff/exec-b7703534-32c8-4d4b-91d9-e2eaf7ddf512.png",
+      "copy_matches_tool_original": true
+    },
+    {
+      "id": "B-v2",
+      "status": "generated",
+      "started_utc": "2026-11-16T17:40:38.312225+00:00",
+      "prompt": "Use case: stylized-concept. Create ONE WHOLE NEW IMAGE of Bastille PART B, not an edit, not a full castle.\nINPUT ROLES: Image1 is the technical footprint diagram for THIS PART ONLY, derived approximately from Sellier. It has 4 circles and a bent row, NOT a straight row. Image2 is Sellier's historical reconstruction plan, the PRIMARY truth of the old Bastille's bulging EAST flank; ignore all 1899 streets, Metro, houses, July Column, moat and bastion. Image3 historical exterior elevation gives full-height solid walls and flat common roofline. Image4 is PART A used for MATERIAL/STYLE ONLY, not footprint: restrained pale warm limestone, soft quiet miniature 3D, subtle masonry, small barred windows, simple flat terrace parapets.\nMOST IMPORTANT: Actually construct the footprint of image1 in 3D, with FOUR round towers at centers in meters (east x, south y): NORTH (0,0), UPPER MIDDLE (+6,22), LOWER MIDDLE (+6,45), SOUTH (0,67). Every tower diameter about10m. Thus BOTH MIDDLE TOWERS project EAST / OUTWARD by6m, more than half a tower diameter, compared with BOTH endpoint towers. The long EAST wall must BEND outward between tower1 and2, continue parallel on the offset line from2 to3, then BEND back inward from3 to4. TWO shallow diagonal doglegs are essential. Do NOT align all four circles on one straight line; this has to be clearly visible in the final 3D image. Thick curtain walls follow these three differently directed intervals, as drawn. Four towers total, all countable with terraces visible.\nAdd ONLY the SOUTH short return: from the southmost tower turn WEST / inward, a full-height straight wall reaching x=-23m at y67m with a plain blunt vertical wall end for joining to a separate part. There is NO tower at this free wall end. There is NO north return. There is NO west row, no west enclosure, no complete courtyard and no other building. This is one connected open L-like segment with a bent long row, empty white open space on the WEST/courtyard side.\nTower and curtain-wall crenellated parapet tops ALL share height about24m. Flat stone terraces and a projecting modest machicolation cornice; no roofs, no cones, no dome, no spire, no high rooftop rooms. Small recessed barred windows. A shallow closed gate recess may sit between middle towers, absolutely no see-through hole. No ground slab, courtyard floor, terrain, moat, rubble or modern objects.\nCamera must reveal the footprint: a HIGH OBLIQUE bird's eye orthographic/axonometric view about65degrees above horizontal from southwest, seeing all FOUR flat circular tower tops, both angled wall intervals, the eastward mid-row offset and the west-facing interior side, with the south return clearly separated. Prioritize visible doglegs rather than flattening them into a front facade. The long row runs diagonally through the frame with a plainly bent silhouette. Whole subject fully visible, generous white margins, single view, no text, no labels, no arrows, no footprint diagram embedded, no extra models. Pale warm limestone with gentle fine masonry, restrained soft miniature 3D studio lighting on a white seamless background. Exact photographic style match with A is secondary to correct bent footprint.",
+      "references": [
+        "B-v2-footprint-geometry-reference.png",
+        "../sources/bastille-1899-plan-actuel.jpg",
+        "../sources/bastille-exterior-1790-1791.jpg",
+        "A-west-north-v1.png"
+      ],
+      "job_id": null,
+      "cost": null,
+      "file": "B-east-south-v2.png",
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+      "completed_utc": "2026-11-16T17:41:39.283746+00:00",
+      "tool_original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e568-4f1d-7492-866a-83f5eca4b3ff/exec-4297fc43-77db-4dcb-8777-051f469f18d4.png",
+      "copy_matches_tool_original": true,
+      "qa_status": "WARN: shape accepted; relative roofline/curtain height and assembly fit unverified"
+    }
+  ],
+  "actual_calls": 4,
+  "retries": 0,
+  "completed_utc": "2026-11-16T17:43:41.642987+00:00",
+  "sheet": "BASTILJI-MODEL-SHEET-v2-2000px.jpg",
+  "qa_status": "WARN: Bv2 shape accepted; height, assembly fit and C roof remain unverified/interpretive; Tripo gate closed",
+  "qa_file": "MODEL-SHEET-QA.json",
+  "source_checks": [
+    {
+      "file": "sources/bastille-exterior-1790-1791.jpg",
+      "sha256_expected": "189ad3d7611017a6b48d3f2b7234bbbd5f06736d167f409ab5a21cfe3ccbe554",
+      "sha256_actual": "189ad3d7611017a6b48d3f2b7234bbbd5f06736d167f409ab5a21cfe3ccbe554",
+      "status": "PASS",
+      "title": "File:Bastille Exterior 1790 or 1791.jpg",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Bastille_Exterior_1790_or_1791.jpg"
+    },
+    {
+      "file": "sources/bastille-1899-plan-actuel.jpg",
+      "sha256_expected": "f3bf5e0dbbb22d3f75aa0710f4337708f7a4f614f8d12b8601b7725ffd8516d7",
+      "sha256_actual": "f3bf5e0dbbb22d3f75aa0710f4337708f7a4f614f8d12b8601b7725ffd8516d7",
+      "status": "PASS",
+      "title": "File:Plan de la Bastille et de ses dépendances rapporté sur le plan actuel des Lieux (1899), Paris Musées 20230611135443.jpg",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Plan_de_la_Bastille_et_de_ses_d%C3%A9pendances_rapport%C3%A9_sur_le_plan_actuel_des_Lieux_(1899),_Paris_Mus%C3%A9es_20230611135443.jpg"
+    },
+    {
+      "file": "sources/bastille-courtyard-1785.jpg",
+      "sha256_expected": "049ed12533678adcd2b8330f09d765fba140628dff8c366dcdf7d476c83f4e09",
+      "sha256_actual": "049ed12533678adcd2b8330f09d765fba140628dff8c366dcdf7d476c83f4e09",
+      "status": "PASS",
+      "title": "File:Bastille Courtyard 1785.jpg",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Bastille_Courtyard_1785.jpg"
+    }
+  ],
+  "limit_override": {
+    "authorized_by": "root independent QA",
+    "reason": "Bv1 east bulge too weak; rejected for Tripo input. One wholly new Bv2 authorized after diagnostic geometry diagram. No further iterations.",
+    "authorized_utc": "2026-11-16T17:39Z"
+  },
+  "retry_note": "One extra wholly new Bv2 specifically authorized by root after independent geometry QA; no automatic retries.",
+  "automatic_retries": 0,
+  "authorized_extra_new_candidates": 1,
+  "per_part_call_counts": {
+    "A": 1,
+    "B": 2,
+    "C": 1
+  },
+  "no_automatic_retries": true,
+  "final_sheet_sha256": "5a7a8350bcc2c7b1f7c887b1516afb25e5c8cd6e4d10eb46d2f0d8ece51ff2ad",
+  "sheet_label_updated_utc": "2026-11-16T17:44:14.256173+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "createdAt": "2026-11-16T17:44:38.876522+00:00",
+  "task": 2466,
+  "stage": "MODEL_IMAGE_SHEET_FOR_KK_REVIEW",
+  "localQA": "WARN",
+  "KKAccepted": false,
+  "imageGenCalls": 4,
+  "tripoCalls": 0,
+  "TripoCreditsSpent": 0,
+  "modelOriginalFiles": 0,
+  "gameIntegrated": false,
+  "files": {
+    "BASTILJI-MODEL-SHEET-v2-2000px.jpg": {
+      "sha256": "5a7a8350bcc2c7b1f7c887b1516afb25e5c8cd6e4d10eb46d2f0d8ece51ff2ad",
+      "bytes": 1175332
+    },
+    "A-west-north-v1.png": {
+      "sha256": "e3b6ff3003ad9deabf95e6f24178ff422201dcc116147fb05bd0a4f4850e4504",
+      "bytes": 1585596
+    },
+    "B-east-south-v2.png": {
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+      "bytes": 1336917
+    },
+    "C-low-division-wing-v1.png": {
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9",
+      "bytes": 1912586
+    },
+    "SOURCE-PACK.md": {
+      "sha256": "08198d49952bc375a62baf2db8984c76a17def68e56691260fb171fadb87d32a",
+      "bytes": 6003
+    },
+    "source-pack.json": {
+      "sha256": "8e1ca3015334d99fc47b3c7b0da32acb1afb023e97ae2f37d50c51ff2eb6eaff",
+      "bytes": 6094
+    },
+    "MODEL-SHEET-QA.json": {
+      "sha256": "ef127d46d5789e21f7c267e9df6b83c838e4aa52c4cc7fdcd4b1893a731b6b6a",
+      "bytes": 8952
+    },
+    "IMAGEGEN-LOG.json": {
+      "sha256": "8037ee1fe7e33749b5d7c29174473d19817d317d3a506fa4039401b250c0630d",
+      "bytes": 19283
+    },
+    "independent-image-QA-v2.md": {
+      "sha256": "21d2e85547f75262e7fe5f9a647b51d68032efb45e4c4a4bf47e467f0dd281b4",
+      "bytes": 3304
+    },
+    "independent-image-QA-v2.json": {
+      "sha256": "318e5874e050e4949ae564aadd892217d943158be076174227c5b93797d3c2af",
+      "bytes": 3660
+    }
+  }
+}
