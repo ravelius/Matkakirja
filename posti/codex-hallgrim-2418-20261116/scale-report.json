@@ -1,0 +1,44 @@
+{
+  "task": 2418,
+  "createdAt": "2026-11-16T09:35:22.235415+00:00",
+  "status": "CANDIDATE_NOT_VISUALLY_REVIEWED_NOT_DELIVERED",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrimskirkja-tripo-2387-20261116/hallgrimskirkja-2387-max-original-8k.glb",
+  "sourceSHA256": "1daad6ba8d93dd7ad242940adef50b7f56bca982e34c98f18a2a625fbe2b1a3c",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-scale-2418-20261116/hallgrimskirkja-2418-scaled-candidate.glb",
+  "outputSHA256": "6a6a679022fe7e08aa9e834247a04998e12c4d3fb7c5f581b533024cbec4e073",
+  "targetDimensionsXYZMeters": [
+    49.599126183700406,
+    74.5,
+    67.71079866937887
+  ],
+  "rootNodeScale": [
+    82.36274291404058,
+    123.76253485424589,
+    69.158630404816
+  ],
+  "worldBoundsMin": [
+    -24.795797733890037,
+    0.0,
+    -33.846957119063845
+  ],
+  "worldBoundsMax": [
+    24.803328449810373,
+    74.5,
+    33.86384155031502
+  ],
+  "trianglesUnchanged": 1886625,
+  "binaryGeometryUVNormalTextureBytesUnchanged": true,
+  "originalUnchanged": true,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "OSMSource": "https://www.openstreetmap.org/relation/6184378",
+  "OSMVersion": "22",
+  "attribution": "© OpenStreetMap contributors; ODbL 1.0",
+  "heightSource": "KK2418 prescribed 74.5m target",
+  "remaining": [
+    "Five-view renderer verification of nonuniform scale and normals",
+    "Source photos2/3 alongside new five-view sheet",
+    "Check visible texture stretching; report before any new generation",
+    "KK review; no game integration"
+  ]
+}
