@@ -242,23 +242,20 @@ export const FOKUSVIRTA_LONTOO = {
      * Lahteet on tausta-aineisto (ei nay pelaajalle). (Lontoon kuva vaihdettu 15.11.2026, ks. alla.)
      */
     /*
-     * PULUN KUVA (KK 15.11.2026, omistaja 08.33 "Nenäliina ja laituri"): Commonsin valokuva Baker Streetin Circle-linjan laiturista nykyään; vanha
-     * parlamenttikuva (pulu-cam-lontoo-01) pois. Tiedosto: Philafrenzy, 2.10.2016, CC BY-SA 4.0 (KK katsoi Commonsin sivulta 15.11.),
-     * https://commons.wikimedia.org/wiki/File:Baker_Street_Circle_Line_platform_01.jpg. Kuvaa itseään ei muokata.
-     * RAJAUS pyöreään kehykseen (KK 15.11.2026 klo 08.40, katsottu PT:n 1000 × 750 -viennistä pyöreänä): keskipiste kuvan leveyden
-     * ja korkeuden suhteina [x, y], halkaisija leveyden suhteena; holvi, valokuilut, laiturinumerot 6 ja 5, raiteet ja keltainen viiva
-     * mukana, penkkien matkustajat jäävät reunalle. `lyhyt` on KK:n hyväksymä selite-ehdotus; `selite` on SK:n luonnos (kaksi
-     * sisältölausetta, vain KK:n tarkistamia faktoja: Historic England 1239815, en-Wikipedia "Baker Street tube station").
+     * PULUN KUVA (PT 16.11.2026, omistaja 08.53 + KK: Codex #2350 hyväksytty sellaisenaan): Codexin havainnekuva Baker Streetin
+     * Circle-linjan laiturista; Commonsin valokuva (Philafrenzy, CC BY-SA 4.0) pois. Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/
+     * lontoo-baker-street-codex-v1.jpg (neliö 1254 px; rajaus = koko neliö ympyrään, ei `rajaus`-kenttää). Kuva viedään ämpäriin (JU/PT)
+     * osoitteeseen alla ennen yhdistämistä. Lähderivi: Matkakirjan havainnekuva, ei valokuvaajaa.
+     * `lyhyt` on KK:n hyväksymä selite-ehdotus; `selite` on SK:n luonnos (kaksi sisältölausetta, vain KK:n tarkistamia faktoja:
+     * Historic England 1239815, en-Wikipedia "Baker Street tube station").
      */
     kuvat: [
       {
-        tiedosto: 'Baker Street Circle Line platform 01.jpg',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-lontoo-baker-street-codex-v1.jpg',
         lyhyt: 'Baker Streetin laituri Lontoossa: asema avattiin 1863, ja laituri on yhä käytössä.',
         selite: 'Circle-linjan laituri Baker Streetin asemalla Lontoossa. Aseman alkuperäiset laiturit 5 ja 6 ovat vuodelta 1863, ja junat pysähtyvät niillä yhä.',
-        lahde: 'Philafrenzy, Wikimedia Commons (CC BY-SA 4.0)',
-        rajaus: { keskipiste: [0.47, 0.50], halkaisija: 0.70 },
+        lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://commons.wikimedia.org/wiki/File:Baker_Street_Circle_Line_platform_01.jpg',
           'https://historicengland.org.uk/listing/the-list/list-entry/1239815',
           'https://en.wikipedia.org/wiki/Baker_Street_tube_station',
           'https://www.lurs.org.uk/04_dec23_HIDDEN_LONDON_BAKER_STREET.pdf',
