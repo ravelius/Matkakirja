@@ -10444,11 +10444,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
         + 'Näyttelijä Anna Magnani ruokki niitä taukojensa aikana läheisessä '
         + 'Teatro Argentinassa. Vuonna 1993 perustettiin vapaaehtoisten '
-        + 'ylläpitämä kissasuoja, ja Discover-lehden mukaan siellä on yli 200 '
+        + 'ylläpitämä kissasuoja, ja arvioiden mukaan siellä on yli 200 '
         + 'kissaa. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
         + 'poistamista, koska se oli rakennettu ilman lupaa ja haittasi '
-        + 'raunioiden säilymistä. NPR:n mukaan kissat saisivat kuitenkin '
-        + 'jäädä.'
+        + 'raunioiden säilymistä. NPR:n mukaan kissoja itseään ei kuitenkaan '
+        + 'voitu häätää.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, sillä ne '
         + 'olivat vielä maan alla. Paikalla oli tiivis kortteli, ja temppeli '
@@ -10578,8 +10578,8 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'hetki-michelangelo-sikstus-1510',
       teksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisten, ei '
         + 'selällään makaamalla, vaikka niin kerrotaan. Getty-museon mukaan '
-        + 'hän työskenteli seisaaltaan pensseli pään yläpuolella, ja EBSCO '
-        + 'Research Startersin mukaan makaamistarina on pitkäikäinen myytti.'
+        + 'hän työskenteli seisaaltaan pensseli pään yläpuolella, ja '
+        + 'lähteiden mukaan makaamistarina on pitkäikäinen myytti.'
         + '\n\n'
         + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
         + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
@@ -10629,8 +10629,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
         + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
         + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen '
-        + 'silloin vielä tapana: CoinsWeeklyn kirjoittajan Ursula Kampmannin '
-        + 'mukaan tapa alkoi vasta 1800-luvulla.',
+        + 'silloin vielä tapana: erään kirjoittajan mukaan tapa alkoi vasta '
+        + '1800-luvulla.',
       kuvat: [
         {
           tiedosto: 'Trevi Fountain - Roma.jpg',
@@ -10650,10 +10650,9 @@ export const NAHTAVYYSJUTUT = {
         + 'hiekkaa.'
         + '\n\n'
         + 'Lattian alla oli kaksikerroksinen kellari eli hypogeum, jossa oli '
-        + 'käytäviä, häkkejä ja varastohuoneita. Walks of Italyn ja The '
-        + 'Collectorin mukaan kellarista johti areenalle noin 80 pystykuilua. '
-        + 'Köysien ja vintturien avulla häkki nostettiin ylös, ja eläin '
-        + 'ilmestyi areenalle luukusta.'
+        + 'käytäviä, häkkejä ja varastohuoneita. Lähteiden mukaan kellarista '
+        + 'johti areenalle noin 80 pystykuilua. Köysien ja vintturien avulla '
+        + 'häkki nostettiin ylös, ja eläin ilmestyi areenalle luukusta.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
         + 'peitossa. Sitä alettiin kaivaa esiin vuosina 1874–1875, pian '
@@ -10663,8 +10662,8 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Hypogeum 1 (15005526662).jpg',
           lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
           selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
-            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja Walks of '
-            + 'Italyn ja The Collectorin mukaan noin 80 pystykuilua.',
+            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja lähteiden '
+            + 'mukaan noin 80 pystykuilua.',
           lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -10688,8 +10687,8 @@ export const NAHTAVYYSJUTUT = {
         + 'paljastettiin vuonna 1667. Paavi Aleksanteri VII kuoli ennen kuin '
         + 'patsas ehdittiin paljastaa. Obeliski on noin 5,5 metriä korkea. '
         + 'Roomassa on kaikkiaan kolmetoista muinaisobeliskia, ja tämä on '
-        + 'yksi niistä pienimmistä. Turismo Roman mukaan obeliski löytyi '
-        + 'vuonna 1665, kun dominikaanit rakensivat Santa Maria sopra Minerva '
+        + 'yksi pienimmistä. Turismo Roman mukaan obeliski löytyi vuonna '
+        + '1665, kun dominikaanit rakensivat Santa Maria sopra Minerva '
         + '-kirkon puutarhan muuria.'
         + '\n\n'
         + 'Patsasta kutsuttiin ensin possuksi, "Porcino della Minerva", ja '
@@ -10742,11 +10741,11 @@ export const NAHTAVYYSJUTUT = {
       aika: '1870-luku',
       nosto: 'nosto-rooman-nasone',
       teksti: 'Rooman kaduilla on juomavesihanoja, joita sanotaan nasoneiksi, '
-        + 'isoiksi neniksi. Ne ovat alun perin valurautaisia pylväitä, ja '
-        + 'vesi virtaa niistä yleensä yötä päivää. Ensimmäiset nasonet '
-        + 'pystytettiin 1870-luvulla. Alkuperäisessä mallissa oli kolme '
-        + 'lohikäärmeen päätä, ja nimi nasone tuli vasta, kun myöhemmin tuli '
-        + 'yksi kaareva suu, joka näyttää nenältä.'
+        + 'isoiksi neniksi. Ne ovat valurautaisia pylväitä, ja vesi virtaa '
+        + 'niistä yleensä yötä päivää. Ensimmäiset nasonet pystytettiin '
+        + '1870-luvulla. Alkuperäisessä mallissa oli kolme lohikäärmeen '
+        + 'päätä, ja nimi nasone tuli vasta, kun myöhemmin tuli yksi kaareva '
+        + 'suu, joka näyttää nenältä.'
         + '\n\n'
         + 'Putken suun päällä on pieni reikä. Kun suun tukkii sormella, vesi '
         + 'suihkuaa reiästä ylöspäin. Rooman vesilaitos Acean mukaan vesi on '
