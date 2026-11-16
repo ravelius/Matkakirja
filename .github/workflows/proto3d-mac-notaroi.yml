@@ -1,0 +1,95 @@
+# MAC-VERSIO JAKOON: notarointi + staple (JU 16.11.2026; PT 10.4x / KK 10.31, päätös dp 15.11. 09.44).
+# Julkaisija allekirjoittaa .dmg:n paikallisesti Developer ID -varmenteella (julkaisija-tyokalut/mac-jako-allekirjoita.zsh,
+# hardened runtime + aikaleima). Tämä työnkulku lähettää valmiin .dmg:n Applen notarointiin App Store Connect
+# -avaimella (vain GitHub-salaisuutena), odottaa tuloksen, nitoo lipun (stapler) ja tarkistaa Gatekeeperin arvion.
+# Ajaja on sama Mac (self-hosted), joten .dmg luetaan ja kirjoitetaan paikallisesta polusta.
+#
+# TURVA (repo on julkinen): vain käsin, vain repon omistajan käynnistämänä. Loki on julkinen: ei tulosteta
+# avainta, varmenteen haltijan nimeä eikä notarointilokin henkilötietoja (loki tallennetaan vain paikallisesti).
+name: proto-3d Mac notarointi
+
+on:
+  workflow_dispatch:
+    inputs:
+      dmg_polku:
+        description: 'Allekirjoitettu .dmg (mac-jako-allekirjoita.zsh), sisäisellä levyllä'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: proto3d-mac-notaroi
+  cancel-in-progress: false
+
+env:
+  DMG: ${{ inputs.dmg_polku }}
+
+jobs:
+  notaroi:
+    if: github.actor == github.repository_owner
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 90
+    steps:
+      - name: Tarkista .dmg
+        run: |
+          set -euo pipefail
+          case "$DMG" in /Users/Shared/Claude/proto-3d/lokit/*.dmg) ;; *) echo "::error::polku ei ole proto-3d/lokit/*.dmg"; exit 1 ;; esac
+          test -f "$DMG" || { echo "::error title=Puuttuu::$DMG"; exit 1; }
+          codesign --verify --verbose=1 "$DMG" 2>&1 | tail -1
+          du -h "$DMG"
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Notaroi
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          tulos="${DMG%.dmg}.notarointi.json"
+          xcrun notarytool submit "$DMG" --key "$ASC_AVAIN_POLKU" --key-id "$ASC_KEY_ID" --issuer "$ASC_ISSUER_ID" \
+            --wait --timeout 75m --output-format json > "$tulos" || true
+          tila=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1])).get("status",""))' "$tulos" 2>/dev/null || true)
+          tunnus=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1])).get("id",""))' "$tulos" 2>/dev/null || true)
+          echo "Notarointi: tila=$tila"
+          if [ -n "$tunnus" ]; then
+            xcrun notarytool log "$tunnus" --key "$ASC_AVAIN_POLKU" --key-id "$ASC_KEY_ID" --issuer "$ASC_ISSUER_ID" \
+              "${DMG%.dmg}.notarointi-loki.json" > /dev/null 2>&1 || true
+            python3 - "${DMG%.dmg}.notarointi-loki.json" <<'PY' || true
+          import json, sys
+          d = json.load(open(sys.argv[1]))
+          print("status:", d.get("status"), "| issues:", len(d.get("issues") or []))
+          for i in (d.get("issues") or [])[:15]:
+              print("-", i.get("severity"), i.get("path"), "|", i.get("message"))
+          PY
+          fi
+          [ "$tila" = "Accepted" ] || { echo "::error title=Notarointi ei hyväksytty::$tila (loki ${DMG%.dmg}.notarointi-loki.json)"; exit 1; }
+
+      - name: Staple ja Gatekeeper
+        run: |
+          set -euo pipefail
+          xcrun stapler staple "$DMG"
+          xcrun stapler validate "$DMG"
+          spctl -a -vvv -t open --context context:primary-signature "$DMG" 2>&1 | grep -E "accepted|rejected|source=" || true
+          shasum -a 256 "$DMG"
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc"
