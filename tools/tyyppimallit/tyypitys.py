@@ -93,56 +93,81 @@ NIMILISTAT = {
         'relation/661011': ('kirkko', 'basilika', 'Friends House', {'ei_sovi': 'torniton (kveekarien kokoustalo; KK 15.11. kohta 1)'}),
         'way/27018154': ('kirkko', 'basilika', 'Metropolitan Tabernacle', {'ei_sovi': 'torniton (portiikki; KK 15.11. kohta 1)'}),
     },
-    # ROOMA + WIEN (ehdotus-listat-rooma-wien.md; KK 15.11. kohta 3): rivit 'odottaa'-tilassa, ei hyväksytty ennen kuin kaupunki tulee työhön.
-    # Rooman kirkot eivät saa länsitornia (odottaa julkisivukirkkoa); ikoniehdokkaat (San Pietro, Pantheon, Stephansdom, Hofburg, Schönbrunn, Belvedere) eivät listalla.
+    # ROOMA + WIEN (ehdotus-listat-rooma-wien.md; KK 16.11. 23.5x RAJAT 1–4): palatsit KOKEEKSI ('koe': ei peliin ennen KK:n kuvaa; 'arvio'-julkisivut
+    # tarkistettava ennen vientiä), katto attika molemmissa (ei mansardia). Rooman kirkot VAIN tältä listalta (KIRKOT_VAIN_NIMILISTALTA): kupolikirkot
+    # julkisivukirkkona (tyyppi 10, kupoli 1). Ikonit eivät tyypity (San Pietro, Pantheon, Altare della Patria, Colosseo; Stephansdom, Hofburg,
+    # Schönbrunn, Karlskirche, Belvedere): rivit 'ei_sovi', jotta syy näkyy listassa.
     'rooma': {
-        'relation/2707110': ('palatsi', 'keski', 'Palazzo del Quirinale', {'julkisivu': 'lounas', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2766788': ('palatsi', 'keski', 'Palazzo Montecitorio', {'julkisivu': 'etelä', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/76432': ('palatsi', 'keski', 'Palazzo Madama', {'julkisivu': 'länsi', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/22289': ('palatsi', 'keski', 'Palazzo Farnese', {'julkisivu': 'koillinen', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2716050': ('palatsi', 'keski', 'Palazzo Barberini', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1709797': ('palatsi', 'keski', 'Palazzo della Cancelleria', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2916876': ('palatsi', 'keski', 'Palazzo Spada', {'julkisivu': 'koillinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/537813': ('palatsi', 'keski', 'Palazzo Altemps', {'julkisivu': 'etelä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/325553': ('palatsi', 'keski', 'Palazzo Chigi', {'julkisivu': 'itä', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'way/140186882': ('palatsi', 'keski', 'Palazzo Venezia', {'julkisivu': 'itä', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1707363': ('palatsi', 'keski', 'Palazzo Doria Pamphilj', {'julkisivu': 'itä', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1283512': ('palatsi', 'keski', 'Palazzo Corsini', {'julkisivu': 'itä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2737120': ('palatsi', 'keski', 'Palazzo della Consulta', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/37216': ('palatsi', 'keski', 'Palazzo di Propaganda Fide', {'julkisivu': 'etelä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2766758': ('palatsi', 'keski', 'Palazzo Koch', {'julkisivu': 'koillinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/325578': ('palatsi', 'keski', 'Palazzo di Giustizia', {'julkisivu': 'itä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/325549': ('palatsi', 'keski', 'Palazzo delle Finanze', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/11153': ('palatsi', 'keski', 'Palazzo del Viminale', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2705998': ('palatsi', 'keski', 'Palazzo Massimo alle Terme', {'julkisivu': 'etelä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'way/23442671': ('palatsi', 'keski', 'Villa Medici', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1709796': ('palatsi', 'keski', 'Palazzo Braschi', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1691910': ('palatsi', 'keski', 'Palazzo Senatorio', {'julkisivu': 'luode', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
+        # JULKISIVUKIRKOT (KK 16.11. kohta 1): barokkijulkisivu + kupoli risteyksessä, pitkä laiva. LUONNOS: tunnetut kupolikirkot, Commons-tarkistus ennen vientiä.
+        'way/25610962': ('kirkko', 'julkisivu', 'Chiesa del Gesù', {'kupoli': 1, 'koe': True}),
+        'way/25625603': ('kirkko', 'julkisivu', "Sant'Andrea della Valle", {'kupoli': 1, 'koe': True}),
+        'way/52333460': ('kirkko', 'julkisivu', "Sant'Agnese in Agone", {'kupoli': 1, 'koe': True}),   # julkisivun kaksi kellotornia puuttuvat mallista
+        'way/117744827': ('kirkko', 'julkisivu', 'San Carlo ai Catinari', {'kupoli': 1, 'koe': True}),
+        'relation/3078796': ('kirkko', 'julkisivu', 'Santi Ambrogio e Carlo al Corso', {'kupoli': 1, 'koe': True}),
+        'way/127942183': ('kirkko', 'julkisivu', 'San Giovanni dei Fiorentini', {'kupoli': 1, 'koe': True}),
+        'way/29181216': ('kirkko', 'julkisivu', 'Chiesa Nuova (Santa Maria in Vallicella)', {'kupoli': 1, 'koe': True}),
+        'way/50884075': ('kirkko', 'julkisivu', 'Santa Maria della Pace', {'kupoli': 1, 'koe': True}),
+        # IKONIT (KK 16.11. kohta 2): ei tyypitetä.
+        'way/244159210': ('kirkko', 'suuri', 'Basilica di San Pietro', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'relation/3374342': ('kirkko', 'suuri', 'Pantheon', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'relation/1849830': ('palatsi', 'keski', 'Altare della Patria', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'relation/1834818': ('palatsi', 'keski', 'Colosseo', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'relation/2707110': ('palatsi', 'keski', 'Palazzo del Quirinale', {'julkisivu': 'lounas', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2766788': ('palatsi', 'keski', 'Palazzo Montecitorio', {'julkisivu': 'etelä', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/76432': ('palatsi', 'keski', 'Palazzo Madama', {'julkisivu': 'länsi', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/22289': ('palatsi', 'keski', 'Palazzo Farnese', {'julkisivu': 'koillinen', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/2716050': ('palatsi', 'keski', 'Palazzo Barberini', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/1709797': ('palatsi', 'keski', 'Palazzo della Cancelleria', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2916876': ('palatsi', 'keski', 'Palazzo Spada', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/537813': ('palatsi', 'keski', 'Palazzo Altemps', {'julkisivu': 'etelä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/325553': ('palatsi', 'keski', 'Palazzo Chigi', {'julkisivu': 'itä', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'way/140186882': ('palatsi', 'keski', 'Palazzo Venezia', {'julkisivu': 'itä', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/1707363': ('palatsi', 'keski', 'Palazzo Doria Pamphilj', {'julkisivu': 'itä', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/1283512': ('palatsi', 'keski', 'Palazzo Corsini', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2737120': ('palatsi', 'keski', 'Palazzo della Consulta', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/37216': ('palatsi', 'keski', 'Palazzo di Propaganda Fide', {'julkisivu': 'etelä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2766758': ('palatsi', 'keski', 'Palazzo Koch', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/325578': ('palatsi', 'keski', 'Palazzo di Giustizia', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/325549': ('palatsi', 'keski', 'Palazzo delle Finanze', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/11153': ('palatsi', 'keski', 'Palazzo del Viminale', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2705998': ('palatsi', 'keski', 'Palazzo Massimo alle Terme', {'julkisivu': 'etelä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/23442671': ('palatsi', 'keski', 'Villa Medici', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/1709796': ('palatsi', 'keski', 'Palazzo Braschi', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/1691910': ('palatsi', 'keski', 'Palazzo Senatorio', {'julkisivu': 'luode', 'arvio': False, 'katto': 'attika', 'koe': True}),
     },
     'wien': {
-        'relation/5541555': ('palatsi', 'keski', 'Palais Schwarzenberg', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'way/158249818': ('palatsi', 'keski', 'Palais Liechtenstein (Gartenpalais)', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/150055': ('palatsi', 'keski', 'Stadtpalais Liechtenstein', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'way/96257478': ('palatsi', 'keski', 'Palais Auersperg', {'julkisivu': 'itä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/57997': ('palatsi', 'keski', 'Palais Trautson', {'julkisivu': 'itä', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2509778': ('palatsi', 'keski', 'Winterpalais', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2458835': ('palatsi', 'keski', 'Palais Kinsky', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1527363': ('palatsi', 'keski', 'Palais Harrach', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/153359': ('palatsi', 'keski', 'Palais Ferstel', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/2162378': ('palatsi', 'keski', 'Palais Rasumofsky', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'way/121542619': ('palatsi', 'keski', 'Palais Coburg', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1541444': ('palatsi', 'keski', 'Palais Pallavicini', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/3934518': ('palatsi', 'keski', 'Palais Modena', {'julkisivu': 'pohjoinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1534837': ('palatsi', 'keski', 'Palais Esterházy', {'julkisivu': 'länsi', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/6528362': ('palatsi', 'keski', 'Palais Hansen', {'julkisivu': 'koillinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/20165': ('palatsi', 'keski', 'Kunsthistorisches Museum', {'julkisivu': 'koillinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/11187': ('palatsi', 'keski', 'Naturhistorisches Museum', {'julkisivu': 'koillinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/54286': ('palatsi', 'keski', 'Parlament', {'julkisivu': 'itä', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/1441683': ('palatsi', 'keski', 'Universität Wien', {'julkisivu': 'itä', 'arvio': False, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/29871': ('palatsi', 'keski', 'Börsegebäude', {'julkisivu': 'kaakko', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
-        'relation/65155': ('palatsi', 'keski', 'Akademie der bildenden Künste', {'julkisivu': 'koillinen', 'arvio': True, 'odottaa': 'KK 15.11.: lista odottaa, kunnes kaupunki tulee työhön'}),
+        # IKONIT (KK 16.11. kohta 2): ei tyypitetä; Stephansdom pois säännön tuloksesta.
+        'way/212496461': ('kirkko', 'suuri', 'Stephansdom', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'way/8097149': ('kirkko', 'keski', 'Karlskirche', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'relation/3898175': ('palatsi', 'keski', 'Hofburg', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'way/8756754': ('palatsi', 'keski', 'Schloss Schönbrunn', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'way/5887599': ('palatsi', 'keski', 'Oberes Belvedere', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'way/31313338': ('palatsi', 'keski', 'Unteres Belvedere', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
+        'relation/5541555': ('palatsi', 'keski', 'Palais Schwarzenberg', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/158249818': ('palatsi', 'keski', 'Palais Liechtenstein (Gartenpalais)', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/150055': ('palatsi', 'keski', 'Stadtpalais Liechtenstein', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/96257478': ('palatsi', 'keski', 'Palais Auersperg', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/57997': ('palatsi', 'keski', 'Palais Trautson', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2509778': ('palatsi', 'keski', 'Winterpalais', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2458835': ('palatsi', 'keski', 'Palais Kinsky', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/1527363': ('palatsi', 'keski', 'Palais Harrach', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/153359': ('palatsi', 'keski', 'Palais Ferstel', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/2162378': ('palatsi', 'keski', 'Palais Rasumofsky', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/121542619': ('palatsi', 'keski', 'Palais Coburg', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/1541444': ('palatsi', 'keski', 'Palais Pallavicini', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/3934518': ('palatsi', 'keski', 'Palais Modena', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/1534837': ('palatsi', 'keski', 'Palais Esterházy', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/6528362': ('palatsi', 'keski', 'Palais Hansen', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/20165': ('palatsi', 'keski', 'Kunsthistorisches Museum', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/11187': ('palatsi', 'keski', 'Naturhistorisches Museum', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/54286': ('palatsi', 'keski', 'Parlament', {'julkisivu': 'itä', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/1441683': ('palatsi', 'keski', 'Universität Wien', {'julkisivu': 'itä', 'arvio': False, 'katto': 'attika', 'koe': True}),
+        'relation/29871': ('palatsi', 'keski', 'Börsegebäude', {'julkisivu': 'kaakko', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/65155': ('palatsi', 'keski', 'Akademie der bildenden Künste', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
     },
 }
+# Kaupungit, joissa kirkkoja EI tyypitetä säännöllä (KK 16.11. kohta 1: Rooman kirkot ovat julkisivu + kupoli, ei länsitornia); vain nimilistalta.
+KIRKOT_VAIN_NIMILISTALTA = {'rooma'}
 NIMILISTA_TILA = {'kupolikirkko': 'hyväksytty', 'pylvastemppeli': 'hyväksytty', 'asema': 'hyväksytty', 'palatsi': 'hyväksytty'}
 # TORNIN OLETUKSET kokoluokittain (KK 23.05 kohta 2): paikka (lansi | risteys), torneja (1 | 2), huippu (pyramidi | neula | tasakatto).
 TORNI_OLETUS = {'pieni': ('lansi', 1, 'pyramidi'), 'keski': ('lansi', 1, 'neula'), 'levea': ('lansi', 1, 'neula'), 'basilika': ('lansi', 1, 'neula'), 'suuri': ('lansi', 2, 'tasakatto'),
@@ -167,6 +192,7 @@ SOVITUS = {
     'max_mittakaava': 1.2,         # suurempi → kokeillaan yhtä suurempaa kokoluokkaa, muuten ei sovi (KK 14.11. 23.40 A)
     'venytys_min': 0.6,            # pohja-sovituksen venytys kummallakin akselilla; ulkopuolella ei sovi, perustalo jää (KK 15.11. 00.16 kohta 2)
     'venytys_max': 1.6,
+    'venytys_max_tasainen': 1.9,   # julkisivukirkko tasaisesti suurennettuna (KK 16.11. Rooma)
     'kirkko_min_pituus': 20.0,     # m: lyhyempi kirkko jää perustaloksi (KK 15.11. 00.28 kohta 3)
     'min_tayttoaste': 0.55,        # ala / pienin suorakaide: pienempi = L-, U- tai sisäpihallinen pohja
 }
@@ -513,6 +539,8 @@ def main(a):
             saanto = f'nimilista ({NIMILISTA_TILA.get(tyyppi, "ehdotus")}): {ln}'
         elif tyyppi in ('asema', 'palatsi'):
             saanto = 'ei nimilistalla (KK 23.25: harvinaiset tyypit vain listalta)'
+        elif tyyppi == 'kirkko' and kaupunki in KIRKOT_VAIN_NIMILISTALTA:
+            tyyppi, koko, saanto = None, None, f'kirkko: {kaupunki} vain nimilistalta (KK 16.11. kohta 1)'
         if tyyppi is None and saanto is None: continue
         nimi = t.get('name', '')
         if oid in kasi.get('ohita', []): ohit.append((oid, nimi, 'käsikorjaus: ohita')); continue
@@ -593,8 +621,10 @@ def main(a):
                     if len(kk) > 1 and kk[1]: tn = int(kk[1])
                     if len(kk) > 2 and kk[2]: th = kk[2]
             sx, sz = venytys(koko)
-            if syy is None and not (SOVITUS['venytys_min'] <= sx <= SOVITUS['venytys_max'] and SOVITUS['venytys_min'] <= sz <= SOVITUS['venytys_max']):
-                syy = f"venytys (x {sx:.2f}, z {sz:.2f}; raja {SOVITUS['venytys_min']}–{SOVITUS['venytys_max']})"
+            # Julkisivukirkko tasaisesti suurennettuna (|sx/sz − 1| ≤ 0,15) säilyttää mittasuhteensa → yläraja 1,9 (KK 16.11.: Rooman Gesù 1,63/1,62, Sant'Andrea 1,77/1,85).
+            vmax = SOVITUS['venytys_max_tasainen'] if (tyyppi, koko) == ('kirkko', 'julkisivu') and abs(sx / max(sz, 1e-3) - 1) <= 0.15 else SOVITUS['venytys_max']
+            if syy is None and not (SOVITUS['venytys_min'] <= sx <= vmax and SOVITUS['venytys_min'] <= sz <= vmax):
+                syy = f"venytys (x {sx:.2f}, z {sz:.2f}; raja {SOVITUS['venytys_min']}–{vmax})"
         if tyyppi == 'kirkko' and syy is None and pit < SOVITUS['kirkko_min_pituus'] and not saanto.startswith(('nimilista', 'käsikorjaus')):
             syy = f"alle {SOVITUS['kirkko_min_pituus']:.0f} m (pituus {pit:.1f})"
         la_c = meta['lat'] + c[1] / 111320.0; lo_c = meta['lon'] + c[0] / (111320.0 * math.cos(math.radians(meta['lat'])))

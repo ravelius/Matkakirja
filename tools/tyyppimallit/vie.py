@@ -182,7 +182,8 @@ def main(a):
     mpolku = a[a.index('--merkit') + 1] if '--merkit' in a else os.path.join(TY, 'tulos', f'merkit-{k}.json')
     moduulit = a[a.index('--moduulit') + 1] if '--moduulit' in a else MAASTO_OLETUS
     kaikki = json.load(open(mpolku))['merkit']
-    sopivat = [m for m in kaikki if not m['ei_sovi']]
+    # KOE-rivit (KK 16.11.: Rooman ja Wienin palatsit ja julkisivukirkot kokeeksi, ei peliin ennen KK:n kuvaa): vain lipulla --koe.
+    sopivat = [m for m in kaikki if not m['ei_sovi'] and ('--koe' in sys.argv or not (m.get('parametrit') or {}).get('koe'))]
     ms = alueella(k, sopivat)
     ms.sort(key=lambda m: m['osm'])
     lat0, lon0 = ORIGO[k]
