@@ -834,7 +834,7 @@ export const FOKUSVIRTA_WIEN = {
         'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
           + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
           + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
-          + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.',
+          + 'vaunut uusittiin alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.',
         'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
           + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
           + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
@@ -844,7 +844,7 @@ export const FOKUSVIRTA_WIEN = {
       kuva: {
         tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
         lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä tunnissa.',
-        selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin puusta 2016, ja ratas '
+        selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin 2016, ja ratas '
           + 'kulkee enintään 2,7 kilometriä tunnissa.',
         lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
       },
@@ -858,9 +858,9 @@ export const FOKUSVIRTA_WIEN = {
         {
           otsikko: 'Koko ratas kerralla',
           tiedosto: 'Wiener Riesenrad DSC02378.JPG',
-          lyhyt: 'Praterin jättiratas kokonaisuudessaan; vaunut uusittiin puusta 2016.',
+          lyhyt: 'Praterin jättiratas kokonaisuudessaan; vaunut uusittiin 2016.',
           selite: 'Praterin jättiratas kokonaisuudessaan. Vuonna 2016 vaunut '
-            + 'uusittiin puusta alkuperäisten piirustusten mukaan.',
+            + 'uusittiin alkuperäisten piirustusten mukaan.',
           lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -895,9 +895,7 @@ export const FOKUSVIRTA_WIEN = {
       symboli: 'historia',
       lunastus: [
         'Espanjalainen ratsastuskoulu toimii Hofburgin palatsissa Wienissä salissa, '
-          + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salin '
-          + 'seinällä riippuu keisarin ratsastusmuotokuva, ja kerrotaan, että '
-          + 'ratsastajat tervehtivät sitä ennen ratsastusta.',
+          + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salia koristaa yhä hallitsijan ratsastusmuotokuva.',
         'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin '
           + 'kymmenvuotiaina ne ovat yleensä valkoisia. Ratsastuskoulun oman sivun '
           + 'mukaan perinteeseen kuuluu, että tallissa on aina vähintään yksi ruunikko, '
@@ -905,8 +903,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'Steiermarkista, ja ratsastuskoulun mukaan ne siirtyvät noin nelivuotiaina '
           + 'koulutukseen Heldenbergiin tai Wieniin.',
         'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
-          + 'salissa, mutta Piberin siitostallia ei vielä ollut: sieltä hevoset tulevat '
-          + 'vasta 1920 lähtien. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+          + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
           + 'hovitallista nykyisessä Sloveniassa.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Spanische Hofreitschule, Wien Geschichte Wiki, Austria Tourismus, Wien Tourismus ja AEIOU',
@@ -938,7 +935,7 @@ export const FOKUSVIRTA_WIEN = {
       symboli: 'kulttuuri',
       lunastus: [
         'Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Freihaustheaterissa '
-          + 'Wiedenin esikaupungissa, osoitteessa Wiedner Hauptstraße 10. Emanuel '
+          + 'Wiedenin esikaupungissa. Emanuel '
           + 'Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja '
           + 'esitti itse linnustaja Papagenoa. Ooppera ei syntynyt hovia varten: '
           + 'Schikaneder pyysi Mozartilta kansanomaista oopperaa omaan teatteriinsa. Se '
@@ -952,8 +949,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'sillä Freihaustheaterin viimeinen esitys oli ollut 1801. Theater an der '
           + 'Wienissä sai ensi-iltansa juuri 1873 Johann Strauss nuoremman operetti '
           + 'Carneval in Rom, ja Papageno-veistos oli jo portin päällä. '
-          + 'Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 '
-          + 'pörssiromahduksessa.',
+          + 'Wienin kaupungin historiasivuston mukaan Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 pörssiromahduksessa.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Bezirksmuseum Mariahilf',
       kuva: {

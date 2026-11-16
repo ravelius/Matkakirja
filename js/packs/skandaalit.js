@@ -201,7 +201,7 @@ export const SKANDAALIT = {
       // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
       // (87 professoria, syyttäjä 1901, Ledererin tuki, Moserin osto jne.) eivät täyttäneet kahden lähteen sääntöä.
       kortti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
-        + 'tilaajana oli opetusministeriö. Tilauksen sai taiteilija Gustav Klimt. '
+        + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
         + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
         + 'tiedekuntakuvat tuhoutuivat.'

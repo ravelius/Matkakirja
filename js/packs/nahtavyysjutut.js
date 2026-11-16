@@ -4435,7 +4435,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1894–1945',
       nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       teksti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
-        + 'tilaajana oli opetusministeriö. Tilauksen sai taiteilija Gustav Klimt. '
+        + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
         + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
         + 'tiedekuntakuvat tuhoutuivat.'
@@ -4485,8 +4485,7 @@ export const NAHTAVYYSJUTUT = {
         + 'hymni: Euroopan neuvosto otti sen käyttöön 1972 ja EU:n johtajat 1985. '
         + 'Hymnissä ei ole sanoja, vain sävel.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Sen '
-        + 'viimeinen esitys oli ollut jo huhtikuussa 1870, ja talo purettiin sen '
+        + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Teatteri oli suljettu jo vuonna 1870, ja talo purettiin sen '
         + 'jälkeen. Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
         + 'Valtionoopperassa.',
       kuvat: [
@@ -4504,27 +4503,22 @@ export const NAHTAVYYSJUTUT = {
       aika: '1786',
       nosto: 'hetki-mozart-wien-1786',
       teksti: 'Mozartin ooppera Figaron häät sai ensi-iltansa Wienin Burgtheaterissa 1. '
-        + 'toukokuuta 1786. Mozart oli 30-vuotias. Neue Mozart-Ausgaben mukaan hän '
-        + 'johti ensi-illan ja toisen esityksen cembalon ääreltä.'
+        + 'toukokuuta 1786. Mozart oli 30-vuotias. Hän johti ensimmäiset esitykset cembalon ääreltä.'
         + '\n\n'
         + 'Ooppera perustuu Beaumarchais\'n näytelmään, jonka saksankielinen esitys '
         + 'Wienissä kiellettiin 1785 keisari Joosef II:n käskystä poliittisen '
         + 'taustansa vuoksi. Librettisti Lorenzo Da Ponte lievensi näytelmän pilkkaa '
         + 'ja jätti pois Figaron suuren poliittisen puheen. Da Ponten oman '
-        + 'kertomuksen mukaan hän kirjoitti libreton kuudessa viikossa, mutta hänen '
+        + 'kertomuksen mukaan ooppera valmistui kuudessa viikossa, mutta hänen '
         + 'muistelmiinsa ei voi aina luottaa. Susannaa lauloi Nancy Storace ja '
         + 'Figaroa Francesco Benucci.'
         + '\n\n'
         + 'Yleisö vaati niin monta numeroa uudelleen, että keisari antoi 9. '
         + 'toukokuuta 1786 määräyksen: numeroita, joita laulaa useampi kuin yksi '
-        + 'laulaja, ei saa enää toistaa, koska esitys venyi liian pitkäksi. Leopold '
-        + 'Mozartin kirjeen mukaan toisessa esityksessä toistettiin viisi ja '
-        + 'kolmannessa seitsemän numeroa.'
+        + 'laulaja, ei saa enää toistaa, koska esitys venyi liian pitkäksi.'
         + '\n\n'
-        + 'Joulukuussa 1786 prahalainen sanomalehti kirjoitti, ettei mikään teos '
-        + 'ollut koskaan herättänyt niin paljon huomiota kuin Figaron häät. '
         + 'Tammikuussa 1787 Mozart matkusti Prahaan, jossa ooppera esitettiin hänen '
-        + 'läsnä ollessaan. NMA:n mukaan menestys johti Don Giovannin tilaukseen.'
+        + 'läsnä ollessaan. Menestys johti Don Giovannin tilaukseen.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 sama Burgtheater Michaelerplatzilla oli yhä '
         + 'käytössä. Se suljettiin vasta 1888, kun uusi Burgtheater avattiin '
@@ -4545,7 +4539,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
         + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
         + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
-        + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+        + 'vaunut uusittiin alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
         + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
@@ -4556,7 +4550,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
           lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä '
             + 'tunnissa.',
-          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin puusta 2016, ja ratas '
+          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin 2016, ja ratas '
             + 'kulkee enintään 2,7 kilometriä tunnissa.',
           lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -4567,9 +4561,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1735',
       nosto: 'nosto-lipizzanit',
       teksti: 'Espanjalainen ratsastuskoulu toimii Hofburgin palatsissa Wienissä salissa, '
-        + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salin '
-        + 'seinällä riippuu keisarin ratsastusmuotokuva, ja kerrotaan, että '
-        + 'ratsastajat tervehtivät sitä ennen ratsastusta.'
+        + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salia koristaa yhä hallitsijan ratsastusmuotokuva.'
         + '\n\n'
         + 'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin '
         + 'kymmenvuotiaina ne ovat yleensä valkoisia. Ratsastuskoulun oman sivun '
@@ -4579,8 +4571,7 @@ export const NAHTAVYYSJUTUT = {
         + 'koulutukseen Heldenbergiin tai Wieniin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
-        + 'salissa, mutta Piberin siitostallia ei vielä ollut: sieltä hevoset tulevat '
-        + 'vasta 1920 lähtien. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+        + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
         + 'hovitallista nykyisessä Sloveniassa.',
       kuvat: [
         {
@@ -4598,7 +4589,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1791',
       nosto: 'nosto-taikahuilu-wiedenissa',
       teksti: 'Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Freihaustheaterissa '
-        + 'Wiedenin esikaupungissa, osoitteessa Wiedner Hauptstraße 10. Emanuel '
+        + 'Wiedenin esikaupungissa. Emanuel '
         + 'Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja '
         + 'esitti itse linnustaja Papagenoa. Ooppera ei syntynyt hovia varten: '
         + 'Schikaneder pyysi Mozartilta kansanomaista oopperaa omaan teatteriinsa. Se '
@@ -4614,8 +4605,7 @@ export const NAHTAVYYSJUTUT = {
         + 'sillä Freihaustheaterin viimeinen esitys oli ollut 1801. Theater an der '
         + 'Wienissä sai ensi-iltansa juuri 1873 Johann Strauss nuoremman operetti '
         + 'Carneval in Rom, ja Papageno-veistos oli jo portin päällä. '
-        + 'Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 '
-        + 'pörssiromahduksessa.',
+        + 'Wienin kaupungin historiasivuston mukaan Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 pörssiromahduksessa.',
       kuvat: [
         {
           tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
