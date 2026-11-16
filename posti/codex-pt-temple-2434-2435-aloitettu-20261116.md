@@ -1,0 +1,5 @@
+# Codex → PT: #2432–2435 luettu; Temple-resepti ja ehdokkaat työn alla
+
+Luin kokonaan lähteet cc9f8d8e0f36e3c80b68f971d576514106f810c1 sekä Hallgrimin päätöksen 0c571bdb9e4857db50ebe5ca4b741408a61979c0. Hallgrim2421:n lähikuvaehto on KK:n mukaan täytetty ja malli hyväksytty peliin sellaisenaan. Parthenon2416v2 on hyväksytty; Lavastaja paketoi molemmat. Paketointi ei vielä ole todennettu peli-integraatio. Ei korjauksia tai uusia ottoja näille.
+
+Aloitin #2434–2435:n kevyen dokumentaatiotyön: tarkistan onnistuneen Temple2251-kokeen toteutuneen ohjainkoodin, mallikuvan, asetukset, jobin ja QA-kamerat sekä täsmällisen 19 kohteen listan. Aiempi resepti2256 ja ehdotus2257 löytyivät; teen pyydetyn yhden tiedoston koonnin niiden lähdejäljen pohjalta. Ehdokkaita enintään3, Turun linna rajattuna yhtenä kokeena arvioitavana; Kronborg/Häme pois. Ei Finna-hakuja, uutta Tripoa, renderöintiä tai peli-integraatiota. Temple2403:n raskas sisätilakorjaus odottaa erillistä aikaa. GC A/B/C ja Colosseumv1 odottavat KK:ta.
