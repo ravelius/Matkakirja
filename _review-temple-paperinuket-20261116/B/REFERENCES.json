@@ -1,0 +1,53 @@
+[
+  {
+    "id": "G",
+    "title": "File:Les Adieux de Louis seize à sa famille dans la Tour du Temple - estampe - J.J.H. Gründ - btv1b6948949s.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Les_Adieux_de_Louis_seize_à_sa_famille_dans_la_Tour_du_Temple_-_estampe_-_J.J.H._Gründ_-_btv1b6948949s.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Les_Adieux_de_Louis_seize_%C3%A0_sa_famille_dans_la_Tour_du_Temple_-_estampe_-_J.J.H._Gr%C3%BCnd_-_btv1b6948949s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "<div class=\"fn value\">\nGrund, J. J. H. (17..-1... ; graveur). Graveur</div>",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "usageTerms": "Public domain",
+    "copyrighted": "False",
+    "date": "between 1795 and 1799<div style=\"display: none;\">date QS:P571,+1795-00-00T00:00:00Z/8,P1319,+1795-00-00T00:00:00Z/9,P1326,+1799-00-00T00:00:00Z/9</div>",
+    "width": 5552,
+    "height": 7440,
+    "sha256": "708973c6f2add278939eed1a8ba8086809e65fb9b70f4e4681040ee008ed1801",
+    "bytes": 8286936,
+    "role": "Costume cuts and specified colours only; no composition, faces or background copied"
+  },
+  {
+    "id": "GA",
+    "title": "File:Garneray - Louis XVI au Temple - P2813 - Musée Carnavalet (cropped).jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Garneray_-_Louis_XVI_au_Temple_-_P2813_-_Musée_Carnavalet_(cropped).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Garneray_-_Louis_XVI_au_Temple_-_P2813_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jean-Fran%C3%A7ois_Garneray\" class=\"extiw\" title=\"w:en:Jean-François Garneray\"><span title=\"French painter (1755–1837)\">Jean-François Garneray</span></a></bdi>",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+    "copyrighted": "True",
+    "date": "1814 <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q104373367#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+    "width": 2298,
+    "height": 3178,
+    "sha256": "290a99facd18318718d94063146d40cef5fe8b6e644e5a017f966924b2b244d3",
+    "bytes": 1936937,
+    "role": "Costume cuts and specified colours only; no composition, faces or background copied"
+  },
+  {
+    "id": "H",
+    "title": "File:Jean-Jacques Hauer - Louis XVII séparé de sa mère.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Jean-Jacques_Hauer_-_Louis_XVII_séparé_de_sa_mère.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Jean-Jacques_Hauer_-_Louis_XVII_s%C3%A9par%C3%A9_de_sa_m%C3%A8re.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Tylwyth_Eldar\" title=\"User:Tylwyth Eldar\">Tylwyth Eldar</a>",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "usageTerms": "Public domain",
+    "copyrighted": "False",
+    "date": "2018-08-03 11:13:29",
+    "width": 1921,
+    "height": 2462,
+    "sha256": "c8ed4d4a21037ca3f64fe88b989424129caff7c07d38c881e2102ff15dba00ca",
+    "bytes": 2234449,
+    "role": "Costume cuts and specified colours only; no composition, faces or background copied"
+  }
+]
