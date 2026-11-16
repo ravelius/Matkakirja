@@ -977,7 +977,7 @@ export const HAHMOTELMA_LUX = [
       + 'paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin '
       + 'rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi '
       + 'kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta '
-      + 'Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja '
+      + 'Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Elsassin ja Lorrainen, ja '
       + 'kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. '
       + 'huhtikuuta 1886, tilanne parani.',
     lahde: 'en-Wikipedia "Mondorf-les-Bains", johdanto-osa ja osio "History" (tarkistettu '

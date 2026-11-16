@@ -5792,7 +5792,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-pariisi-tuileriat',
       teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
-        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
+        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileries\'n rauniot jäivät sen sijaan paikoilleen '
         + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '
         + 'ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas '
         + 'tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; '
@@ -5805,8 +5805,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-          lyhyt: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
-          selite: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto '
+          lyhyt: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
+          selite: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto '
             + 'poissa, kivimuurit ehjät, lauta-aita raunion edessä ja '
             + 'kaupunkilaisia altaan äärellä.',
           lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
