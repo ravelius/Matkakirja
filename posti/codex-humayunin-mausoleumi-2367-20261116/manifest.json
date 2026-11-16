@@ -1,0 +1,76 @@
+{
+  "task": 2367,
+  "subject": "humayunin-mausoleumi",
+  "sourceCommit": "f8bdf9b35922f8fbb51d9b5d0f90e45166281861",
+  "sourceBlobSha": "6ec4e4cb9e0ecbb8435536f2d72e93bfc79a7da6",
+  "sourceFiles": [
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/humayunin-mausoleumi.jpg",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2367-humayunin-mausoleumi/sources/humayunin-mausoleumi.jpg",
+      "sha256": "4aa2347cebf2cce03ad0635b703655d2a6ba517e9b9ae6794101f85587a30f2d"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/humayunin-mausoleumi.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2367-humayunin-mausoleumi/sources/humayunin-mausoleumi.md",
+      "sha256": "9dc336471c0293281cbef157dde69c5ab8866b9f721300d50981b7b763f26583"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/humayunin-mausoleumi-huomiot.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2367-humayunin-mausoleumi/sources/humayunin-mausoleumi-huomiot.md",
+      "sha256": "81d6e961d51b6c6364d9eaf2589efe43bb8119f9832ebbe45123d078f56eb909"
+    }
+  ],
+  "imageGenerationMode": "built-in image_gen",
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "imageStartedAt": "2026-11-16T07:13:36.371387+00:00",
+  "imageCompletedAt": "2026-11-16T07:14:31.263615+00:00",
+  "estimatedImageCompleteAt": "2026-11-16T07:18:36.371387+00:00",
+  "imageArtifactId": "exec-3f03f717-e047-46ed-9a28-91063130105b",
+  "jobId": null,
+  "cost": null,
+  "costStatus": "Built-in image price and provider job ID are not exposed; Tripo credits 0.",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2367-humayunin-mausoleumi/humayunin-mausoleumi-2367-native.png",
+  "nativeSha256": "4818c5e2a6783dd727a30cbbee6bfc956cd6b1824b6cd50142d91c8be392cb02",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPixels": [
+    1000,
+    667
+  ],
+  "tripoCallsStarted": 0,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "qaStatus": "WARNING_STAIRS_UNSUPPORTED",
+  "preparedAt": "2026-11-16T07:26:18.644981+00:00",
+  "reviewOnly": true,
+  "sourceModelsPreserved": true,
+  "files": {
+    "humayunin-mausoleumi-2367-review.jpg": {
+      "bytes": 221531,
+      "sha256": "d332de9f8aef92cb7571aef16cb456457ffe30fa35d989f71358edd54b6eda8f"
+    },
+    "prompt.txt": {
+      "bytes": 2729,
+      "sha256": "057ccd584b430dd581b3b5cfecf981e36a4bc67e1e83917d9f4a22d66637c55f"
+    },
+    "qa-independent.md": {
+      "bytes": 3349,
+      "sha256": "efebf468fa37c7a8ea4ac4b03c65bb2343c732a5fed145115407f44237f9998f"
+    },
+    "qa-root.md": {
+      "bytes": 912,
+      "sha256": "2b6c53738c63fb64911cb80c2cf9900b4d553d18641a24dc21ea76d3f4489922"
+    },
+    "source-attribution.md": {
+      "bytes": 3297,
+      "sha256": "9dc336471c0293281cbef157dde69c5ab8866b9f721300d50981b7b763f26583"
+    },
+    "source-order.md": {
+      "bytes": 2725,
+      "sha256": "8c50f26422288016ea6020033a9e7105cb2d0979b13df32ea27525eca747a036"
+    }
+  }
+}
