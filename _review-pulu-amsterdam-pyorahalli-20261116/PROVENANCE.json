@@ -1,0 +1,64 @@
+{
+  "taskNumber": 2349,
+  "sourcePath": "posti/paatoimittaja-codex-pulu-amsterdam-pyorahalli-20261116.md",
+  "sourceCommit": "804d2142551a6f39d4ee3c826b8949991b790a20",
+  "sourceBlob": "3646b4e2c9f78beb9ad355d5535c4075ae5b8e64",
+  "tool": "built-in image_gen",
+  "useCase": "photorealistic-natural",
+  "selectedAttempt": 2,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "generated-rejected-composition",
+      "startedAt": "2026-11-16T06:26:41.089784+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-amsterdam-pyorahalli-2349-20261116/prompts/attempt001.txt",
+      "referenceInput": "text only; inspected Commons architecture reference, no edit target",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fef4b8de-5cc8-4e92-bed1-12a46dd547ae.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-amsterdam-pyorahalli-2349-20261116/native/pulu-amsterdam-pyorahalli-attempt001.png",
+      "completedAt": "2026-11-16T06:28:01.658938+00:00",
+      "sha256": "ae944992f6c6f774848202f66c692a120221896827441c6be6546956fb062657",
+      "bytes": 2631384,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": false,
+      "qaReason": "Near left front wheel already clips square edge and fails circular safety; vanishing point low. Fresh second complete candidate required within original 2-call limit."
+    },
+    {
+      "attempt": 2,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T06:28:49.148701+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-amsterdam-pyorahalli-2349-20261116/prompts/attempt002.txt",
+      "reason": "Whole-image regeneration to keep near wheels inside circular safe area and vanishing point near centre; final permitted attempt.",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-ab502309-408b-431d-bd3a-08f703aee2c0.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-amsterdam-pyorahalli-2349-20261116/native/pulu-amsterdam-pyorahalli-attempt002.png",
+      "completedAt": "2026-11-16T06:30:26.547909+00:00",
+      "sha256": "b6938c37195e2279842d489fcb3e0b96ffe956ab4e30f3146ec354a68077b003",
+      "bytes": 2543722,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativeFile": "pulu-amsterdam-pyorahalli-v2.png",
+  "nativeSha256": "b6938c37195e2279842d489fcb3e0b96ffe956ab4e30f3146ec354a68077b003",
+  "deliveryFile": "pulu-amsterdam-pyorahalli-v2.jpg",
+  "deliverySha256": "432b61633654cc3c84a83b2f1dd7d97c37ee17a019225972f432aa1c6dfcaf70",
+  "deliveryBytes": 1789163,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "conversion": "macOS sips PNG to JPEG, best quality; no resize, crop or retouch",
+  "sourceLabel": "Matkakirjan havainnekuva",
+  "referenceAttribution": "Hay Kranen, CC BY 4.0; architecture observation only, not copied pixels or edit target. See REFERENCE.json and RIGHTS.md.",
+  "puluTextChanged": false,
+  "acceptanceFlow": "KK -> owner -> SK data PR6831",
+  "sourceCurrentVerifiedBeforePackaging": true
+}

@@ -1,0 +1,9 @@
+# Viitteet ja tämän kuvan oikeusraja
+
+Tilaus 2349, lähde luettu kokonaan commitista 804d2142551a6f39d4ee3c826b8949991b790a20 ja sama blob 3646b4e2c9f78beb9ad355d5535c4075ae5b8e64 varmennettu nykyisestä postilaatikosta.
+
+Tilan viite: [Hay Kranen, Fietsenstalling Stationsplein Amsterdam – Overzicht](https://commons.wikimedia.org/wiki/File:Fietsenstalling_Stationsplein_Amsterdam_-_Overzicht_-_(Q111657629).jpg), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Tekijä, lisenssi ja alkuperäiskoko tarkistettu Commonsin kuvaus- ja API-tiedoista. Viite ja hylätty paikallinen ympyräesikatselu katsottu. Viite toimii vain arkkitehtuurin havaintomallina: lähdevalokuvan sommittelua tai pikseleitä ei kopioida. Kuvageneraattorille annetaan uuden kuvan tekstiohje; lähdekuvaa ei käytetä muokattavana pohjana. Lähdevalokuvaa ei toimiteta uutena peliaineistona.
+
+Tilaus sisältää KK:n oikeusrajauksen. [Commonsin Alankomaiden FOP-yhteenveto](https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Netherlands#Freedom_of_panorama) kattaa julkisen ympäristön paikallaan kuvattua arkkitehtuuria; asematilat mainitaan, katettujen pysäköintitilojen soveltuminen on Commonsin tulkinta. [Parlamentin perustelut, art. 18](https://zoek.officielebekendmakingen.nl/kst-28482-5.html) mainitsevat asemien aulat ja teoksen kuvaamisen ympäristössään. Tämä ei ole yleislupa irrotetuille sisustus- tai veistoskuville.
+
+Tässä noudatetaan tilauksen konkreettista rajausta: kokonainen liikenteen käytössä oleva halli paikallaan, pylväät osana kokonaisuutta, ei erillistä pylväs- tai taideteoslähikuvaa. Parkkihallia koskeva soveltaminen kirjataan KK:n tilauskohtaisena tulkintana, ei uutena yleisenä oikeusvarmuusväitteenä. Uuden kuvan lähdemerkintä: Matkakirjan havainnekuva. KK:n ja omistajan hyväksyntä sekä pelikytkentä jäävät erillisiksi vaiheiksi.

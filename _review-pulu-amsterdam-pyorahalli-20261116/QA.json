@@ -1,0 +1,43 @@
+{
+  "taskNumber": 2349,
+  "reviewedAt": "2026-11-16T06:32:32.627478+00:00",
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "selectedAttempt": 2,
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "remainingAuthorizedAttempts": 0,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "requestedDimensions": [
+    1536,
+    1536
+  ],
+  "sizeNote": "Generator native output is 1254x1254, square as requested by the order; no resize or upscale.",
+  "nativeSha256": "b6938c37195e2279842d489fcb3e0b96ffe956ab4e30f3146ec354a68077b003",
+  "jpgSha256": "432b61633654cc3c84a83b2f1dd7d97c37ee17a019225972f432aa1c6dfcaf70",
+  "checks": {
+    "squareAspect": true,
+    "lowCameraAndCentralAisle": true,
+    "twoTierBicycleRowsBothSides": true,
+    "flaredColumnsAndBaseLightsInContext": true,
+    "keyBicyclesAndVanishingPointWithinCircle": true,
+    "photographicMaterialsAndLighting": true,
+    "noObservedPeopleOrPigeon": true,
+    "noObservedTextNumbersLogosSigns": true,
+    "nativePreservedUnedited": true
+  },
+  "reviewMethod": "Full native image, browser-rendered square/circle preview and enlarged bicycle details personally reviewed.",
+  "notes": [
+    "V1 rejected for foreground wheel crossing frame/circle; preserved locally only. V2 is selected.",
+    "V2 retains a substantial foreground floor and very regular repeated columns; KK should assess naturalness and composition, not only technical crop safety.",
+    "Hall is a generated interpretation based on the reference, not a survey-accurate reconstruction.",
+    "Both allowed full generations used. No third attempt. Native pixels not retouched. JPG is format conversion only."
+  ],
+  "editorAccepted": false,
+  "ownerAccepted": false,
+  "receiverAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false
+}
