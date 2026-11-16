@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "reportType": "Independent source-to-original visual QA",
+  "createdAt": "2026-11-16T19:57:54.666934+00:00",
+  "reviewer": "qa2496_7 independent agent",
+  "method": "Viewed all seven complete original PNGs and all 26 actual source photographs passed in recorded inputs, individually through view_image. Compared silhouette, dominant masses, roof structure, openings, towers, visible footprint and phase. Producer verdicts were not used as evidence. Hashes recomputed from files, original generated-tool artifacts compared, actual execution invocations checked against input/preflight chain. No new research, generation, retry, download, browser, mail, queue or game action.",
+  "counts": {
+    "PASS": 2,
+    "WARN": 5,
+    "FAIL": 0
+  },
+  "scope": "Visible principal landmark form. PASS is not KK acceptance, Tripo authorization, all-side geometry validation or game completion. WARN reflects described uncertainties or minor deviations; no certain dominant-form contradiction was demonstrated for these seven.",
+  "entries": [
+    {
+      "buildingKey": "helsinki-uspenski-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/uspenski/model-image-original.png",
+      "imageSHA256": "0f47ca33d88de496795f4fa9241a981258e949f282319f24ca8a39c43faad6ca",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-6a7f-7651-99ac-71dee0401d5c/exec-b7b2ea9e-fe70-4bb2-8101-ec3051c9aea0.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/uspenski/refs/02-Uspenski Cathedral from air.jpg",
+          "sourceRole": "DAY_FRONT_SIDE_DRONE",
+          "expectedSHA256": "3831ed873d7da9d4111b3e920affb549b71932ecdc059718efa965a063edc1a3",
+          "actualSHA256": "3831ed873d7da9d4111b3e920affb549b71932ecdc059718efa965a063edc1a3",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/uspenski/refs/04-Uspenskin katedraali takaa 2020-04-30.jpg",
+          "sourceRole": "REAR_DRONE",
+          "expectedSHA256": "1e459a79ce42ec3daaef6703c4b3f95e2eb6caa36750bc99b2924de543d19dec",
+          "actualSHA256": "1e459a79ce42ec3daaef6703c4b3f95e2eb6caa36750bc99b2924de543d19dec",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/uspenski/refs/05-Uspenskin katedraali vappuna 2020-04-30.jpg",
+          "sourceRole": "OPPOSITE_SIDE_DRONE",
+          "expectedSHA256": "9b69b543fa036437e4c52d291c14db7879d66265082070d4989cb5db59535b81",
+          "actualSHA256": "9b69b543fa036437e4c52d291c14db7879d66265082070d4989cb5db59535b81",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/uspenski/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/uspenski/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-25-01a1e5e6-6a7f-7651-99ac-71dee0401d5c.jsonl",
+        "line": 62,
+        "callId": "call_017a7283fe6047c4a1c0627a6a384fb6",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 1000}\nconst result=await tools.image_gen__imagegen(load(\"uspenskiSpec\").toolArguments);store(\"uspenskiResult\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The red-brick compact cruciform body, tall octagonal central drum with stepped patinated roof and gold finial, surrounding small turrets, projecting attached bell tower and its lower connector reproduce the source silhouette and mass hierarchy. The visible main wall openings and tiered roof breaks remain recognizable; no dominant roof, tower or footprint substitution is demonstrated.",
+      "status": "PASS",
+      "PASS-WARN-FAIL": "PASS",
+      "phaseConfidence": "High for the current photographed permanent exterior; no independent assertion of an exact 2026 day.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "Fine crosses, small gold finials, brick ornament and individual opening proportions are regularized. Rear portions remain occluded in the single candidate view."
+      ],
+      "nextAction": "Show this unchanged original to PT/KK for owner review. Visual PASS is scoped to the visible landmark form, not owner approval or a verified all-side 3D model.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    },
+    {
+      "buildingKey": "vilna-gediminas-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/gediminas/model-image-original.png",
+      "imageSHA256": "dfca025cd4ae1c113c7ba2b12a2661333a931aca8cdd59b071149ceb89952e17",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-6a7f-7651-99ac-71dee0401d5c/exec-1699b627-f04e-4846-91e7-979e103ecb29.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/gediminas/refs/01-Gedimino kalnas 139.jpg",
+          "sourceRole": "COURTYARD_AERIAL",
+          "expectedSHA256": "9eebb4aa46caf46eaa4489119a23c6304c9ac193a9e2275e1b40515c15c93004",
+          "actualSHA256": "9eebb4aa46caf46eaa4489119a23c6304c9ac193a9e2275e1b40515c15c93004",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/gediminas/refs/02-Gedimino pilis by Augustas Didzgalvis.jpg",
+          "sourceRole": "OUTER_FACES_AERIAL",
+          "expectedSHA256": "a9b331c8edfd2f917cb9f6bd40e9a1701cca7d7dfb27f94320b194e7659930ed",
+          "actualSHA256": "a9b331c8edfd2f917cb9f6bd40e9a1701cca7d7dfb27f94320b194e7659930ed",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/gediminas/refs/23-Gediminas' Tower 03.jpg",
+          "sourceRole": "ENTRANCE_AND_STAIR_TURRET",
+          "expectedSHA256": "b67b50e183e6e7dbe50cfc88a434b07be0c9126f74c2332f83dcaf18a1e84925",
+          "actualSHA256": "b67b50e183e6e7dbe50cfc88a434b07be0c9126f74c2332f83dcaf18a1e84925",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/gediminas/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/gediminas/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-25-01a1e5e6-6a7f-7651-99ac-71dee0401d5c.jsonl",
+        "line": 83,
+        "callId": "call_8dfc6e496e2f48f598da264fa2597963",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 1000}\nconst result=await tools.image_gen__imagegen(load(\"gediminasSpec\").toolArguments);store(\"gediminasResult\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The straight octagonal brick faces, three main levels, arched openings, horizontal bands, low open parapet and attached rounded stair turret match the photographed tower. The candidate uses a low camera close to reference 23, so it does not expose the terrace surface requested in the prompt. The bottom is softened into a broadly continuous stone skirt instead of showing the strongly angular, uneven outer foundation visible in reference 02.",
+      "status": "WARN",
+      "PASS-WARN-FAIL": "WARN",
+      "phaseConfidence": "High for the present restored tower phase shown by the three references.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "The continuous rounded lower stone skirt reduces confidence in the precise lower footprint; source 02 has an angular, asymmetrically exposed plinth.",
+        "Terrace surface is hidden, limiting single-image roof reconstruction evidence.",
+        "Masonry weathering and small rail details are simplified."
+      ],
+      "nextAction": "PT/KK should decide whether the lower-footprint and hidden-terrace limitations are acceptable. Keep current candidate; no retry or Tripo call authorized by QA.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    },
+    {
+      "buildingKey": "tallinna-oleviste-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/oleviste/model-image-original.png",
+      "imageSHA256": "6dc6d183c6065c6c20156184822cb859ce36b2609969790bc2906ad0d2232e51",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-6a7f-7651-99ac-71dee0401d5c/exec-1bc356ef-86c9-48c1-8e51-13326dae6ac4.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/oleviste/refs/04-Vanalinn päikeseloojangul.jpg",
+          "sourceRole": "DRONE_APSE_AND_OPPOSITE_SIDE",
+          "expectedSHA256": "001037608c9915afbadfa0ee7929f4be3fc99a5b590595f17dc030837420136a",
+          "actualSHA256": "001037608c9915afbadfa0ee7929f4be3fc99a5b590595f17dc030837420136a",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/oleviste/refs/21-Tallinn Olaikirche 1.jpg",
+          "sourceRole": "TOWER_PORTAL_SIDE_A",
+          "expectedSHA256": "c3feb01279566b537fc4ddf90a1f571448f10216232f97a85786d9ba10c4833e",
+          "actualSHA256": "c3feb01279566b537fc4ddf90a1f571448f10216232f97a85786d9ba10c4833e",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/oleviste/refs/25-Tallinn Olaikirche Chor 3.jpg",
+          "sourceRole": "EAST_END_OBLIQUE",
+          "expectedSHA256": "3c829453f32039383ee9bb2048cbd809d255762e7d15b5c87ddb2134b6e9439a",
+          "actualSHA256": "3c829453f32039383ee9bb2048cbd809d255762e7d15b5c87ddb2134b6e9439a",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional02/oleviste/refs/26-Oleviste church towers from Oleviste main tower.jpg",
+          "sourceRole": "DOWN_FROM_MAIN_TOWER",
+          "expectedSHA256": "faf0bcf2dc46cd718320f4d475bd5ee0fde9b65b8b142fce535e932323552b0c",
+          "actualSHA256": "faf0bcf2dc46cd718320f4d475bd5ee0fde9b65b8b142fce535e932323552b0c",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/oleviste/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-a/oleviste/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-25-01a1e5e6-6a7f-7651-99ac-71dee0401d5c.jsonl",
+        "line": 108,
+        "callId": "call_e5d4bc5defef45a0b8bec65a3fd718af",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 1000}\nconst result=await tools.image_gen__imagegen(load(\"olevisteSpec\").toolArguments);store(\"olevisteResult\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The exceptionally tall slender main spire, pale square west tower, corner pinnacles, long lower nave, aisle roof, two subsidiary roof turrets and distinct projecting choir/chapel masses are present. The candidate broadly tracks elevated reference 04, but its foreground polygonal choir and separate chapel are very prominent and the roof junction/length relationship is not fully resolved against the partly obscured sources. This is an uncertainty about proportions, not a demonstrated invented dominant transept.",
+      "status": "WARN",
+      "PASS-WARN-FAIL": "WARN",
+      "phaseConfidence": "High for current post-rebuilding appearance shown in the actual source photos.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "Relative choir/chapel breadth and nave length are less secure because the matching aerial reference partly obscures the ends and the close references do not establish the whole footprint.",
+        "Window tracery and buttresses are normalized.",
+        "Candidate camera exposes limited rear roof depth."
+      ],
+      "nextAction": "Present as WARN for PT/KK comparison of the foreground end masses and roof junctions; do not call a main-form FAIL without clearer contradictory evidence. No regeneration or Tripo authority follows.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    },
+    {
+      "buildingKey": "rosenborg-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/rosenborg/model-original.png",
+      "imageSHA256": "ffa1a52b23993cfbab10e5ace18f9bd664ea2d33f5ee4959b4f998d25e8b18d6",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-962f-7fa0-b746-5d249d2b2c01/exec-dc1f5d48-2b1c-4ee8-b7dc-151fc0453ec0.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/rosenborg/refs/22-Copenhagen - Rosenborg Slot v2.jpg",
+          "sourceRole": "LONG_SIDE_AND_GABLE",
+          "expectedSHA256": "e2739da28a5ae33900c4f99661d10d3ff75da62e142803e1bc294588f5ba9085",
+          "actualSHA256": "e2739da28a5ae33900c4f99661d10d3ff75da62e142803e1bc294588f5ba9085",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/rosenborg/refs/24-Castillo de Rosenborg 03.jpg",
+          "sourceRole": "GABLE_END",
+          "expectedSHA256": "50488d3ab2f6b10d72eabb0913513d21197d3ce09b19709e654285f58179a4cd",
+          "actualSHA256": "50488d3ab2f6b10d72eabb0913513d21197d3ce09b19709e654285f58179a4cd",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/rosenborg/refs/41-Rosenborg Castle.jpg",
+          "sourceRole": "OPPOSITE_LONG_SIDE",
+          "expectedSHA256": "ac93c1f9b1cc3e51f36c8ec8b3ab2aa7688a1a2b6a24becc1f8b47d9ba2c1858",
+          "actualSHA256": "ac93c1f9b1cc3e51f36c8ec8b3ab2aa7688a1a2b6a24becc1f8b47d9ba2c1858",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/rosenborg/refs/42-Rosenborg Castle(view from the park).jpg",
+          "sourceRole": "OPPOSITE_END_OBLIQUE",
+          "expectedSHA256": "6db49be42c19b2636852dbba4bae1b28ce9b158f797a739ea7a8ad2a29874438",
+          "actualSHA256": "6db49be42c19b2636852dbba4bae1b28ce9b158f797a739ea7a8ad2a29874438",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/rosenborg/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/rosenborg/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-36-01a1e5e6-962f-7fa0-b746-5d249d2b2c01.jsonl",
+        "line": 85,
+        "callId": "call_42ea52a413c24b1182c50dfa5e6bdf2f",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 300}\nconst base=\"/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/\";\nconst r=await tools.exec_command({cmd:\"cat '\"+base+\"rosenborg/imagegen-input.json'\",\"max_output_tokens\":6000});\nconst spec=JSON.parse(r.output);\nstore(\"b_base\",base);store(\"b_rosenborg_start\",new Date().toISOString());\nconst result=await tools.image_gen__imagegen(spec.toolArguments);store(\"b_rosenborg_result\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The long narrow three-storey red-brick body, steep green copper roof, large sculpted end gable with paired bay windows, tall projecting long-side tower with adjoining stair projection and lower opposite-side towers follow the complementary photos. The main tower remains asymmetrical rather than becoming four equivalent corner towers. Main visible roof and facade proportions track reference 22 closely.",
+      "status": "PASS",
+      "PASS-WARN-FAIL": "PASS",
+      "phaseConfidence": "High for current permanent photographed palace appearance.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "Small gable sculptures, lantern details and facade ornament are approximate.",
+        "The far-side tower bases and hidden footprint cannot be audited from this one output angle."
+      ],
+      "nextAction": "Send unchanged original to PT/KK for review. PASS concerns visible principal form only; all-side geometry and owner approval remain separate.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    },
+    {
+      "buildingKey": "riddarholmen-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/riddarholmen/model-original.png",
+      "imageSHA256": "c3c31aa60c5e0e68c3e93082b9ea960b32008e9ef114dd6209f6209e31c7a628",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-962f-7fa0-b746-5d249d2b2c01/exec-ea3b204f-afcb-4f2f-8d68-9084a829becb.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/riddarholmen/refs/02-Riddarholmskyrkan February 2013 01.jpg",
+          "sourceRole": "HELICOPTER_OPPOSITE_SECTOR",
+          "expectedSHA256": "608e345ef61407487c35607d15b6f1c129d91c86431f0660242a6d0bb668fd57",
+          "actualSHA256": "608e345ef61407487c35607d15b6f1c129d91c86431f0660242a6d0bb668fd57",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/riddarholmen/refs/03-Riddarholmskyrkan helikopter.jpg",
+          "sourceRole": "HELICOPTER_CHAPEL_SIDE",
+          "expectedSHA256": "4ec7686a27681ea83f7a3c5f627e95e93ab0149a8180005ac8859fc8f81c5350",
+          "actualSHA256": "4ec7686a27681ea83f7a3c5f627e95e93ab0149a8180005ac8859fc8f81c5350",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/riddarholmen/refs/22-Riddarholmskyrkan september 2011a.jpg",
+          "sourceRole": "FULL_SPIRE_AND_LONG_SIDE",
+          "expectedSHA256": "219c9bd3bd49f9c99c79384cfc579df0de366fa43fce85c01dc0180af6ccd0ee",
+          "actualSHA256": "219c9bd3bd49f9c99c79384cfc579df0de366fa43fce85c01dc0180af6ccd0ee",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/riddarholmen/refs/23-Riddarholmskyrkan juni 2005.jpg",
+          "sourceRole": "FULL_SPIRE_LONG_SIDE",
+          "expectedSHA256": "3d92a6b457842d4bfa41ee2b8812bada9df5c60e98473710137c97fba06096b9",
+          "actualSHA256": "3d92a6b457842d4bfa41ee2b8812bada9df5c60e98473710137c97fba06096b9",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/riddarholmen/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/riddarholmen/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-36-01a1e5e6-962f-7fa0-b746-5d249d2b2c01.jsonl",
+        "line": 91,
+        "callId": "call_a035d4e4ac3b4b699a38b6b90fd7dbd0",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 300}\nconst r=await tools.exec_command({cmd:\"cat '\"+load(\"b_base\")+\"riddarholmen/imagegen-input.json'\",\"max_output_tokens\":6000});store(\"b_riddarholmen_start\",new Date().toISOString());\nconst result=await tools.image_gen__imagegen(JSON.parse(r.output).toolArguments);store(\"b_riddarholmen_result\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The long brick nave, tall square west clock tower, see-through dark iron lattice spire with corner pinnacles, white gold-accented domed chapel, two red-brick side chapels and smaller west attachment match the actual sources. The candidate preserves an open iron spire rather than replacing it with a solid cone. The opposite-side chapel roofs are mostly hidden in the output although their tips are visible and aerial references establish their presence.",
+      "status": "WARN",
+      "PASS-WARN-FAIL": "WARN",
+      "phaseConfidence": "High for the permanent complete iron-spire state documented by 2005/2011/2013 references; exact temporary appearance on a day in 2026 is not established.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "Fine lattice pattern and relative openness are approximate; no claim of exact iron member topology.",
+        "Far-side chapel footprint and east-end depth remain occluded in this low oblique candidate.",
+        "Phase label must say permanent complete pre-restoration state. Temporary restoration/dismantling seen in more recent photography must not be silently equated with exact 2026 appearance."
+      ],
+      "nextAction": "Keep WARN and explicitly label permanent complete iron-spire state for PT/KK. Owner must resolve the desired temporal interpretation before accepting it as exact current-day appearance; no new research or generation performed in this QA.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    },
+    {
+      "buildingKey": "lovrijenac-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/lovrijenac/model-original.png",
+      "imageSHA256": "cfa96c62f0e6bf92707edb5478d71482a4047d328bfcf8ec188877242a321445",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-962f-7fa0-b746-5d249d2b2c01/exec-bc1ebea1-2161-486b-bcef-edc0ab0d4313.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/lovrijenac/refs/01-Fort Lovrijenac in Dubrovnik, Croatia (48612678188).jpg",
+          "sourceRole": "CLOSE_DRONE_SEA_OBLIQUE",
+          "expectedSHA256": "5363d5fa626d75c1d91f88bd038812418c2bbd0fc1d626f5e3422785243db482",
+          "actualSHA256": "5363d5fa626d75c1d91f88bd038812418c2bbd0fc1d626f5e3422785243db482",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/lovrijenac/refs/02-Fort Lovrijenac, Dubrovnik 01 (js).jpg",
+          "sourceRole": "CITY_SIDE_OBLIQUE",
+          "expectedSHA256": "340ce715c4e4045a525a799932db09e0ca27af61cc920265ceb2cf445620a494",
+          "actualSHA256": "340ce715c4e4045a525a799932db09e0ca27af61cc920265ceb2cf445620a494",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/lovrijenac/refs/04-Lovrijenac Fort, Dubrovnik, early 16th century (3) (29483629703).jpg",
+          "sourceRole": "LAND_APPROACH_OBLIQUE",
+          "expectedSHA256": "356ef96cad2da92418e879f6c014cbe4a951034bf1b6a34e2856259a1aa24426",
+          "actualSHA256": "356ef96cad2da92418e879f6c014cbe4a951034bf1b6a34e2856259a1aa24426",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional03/lovrijenac/refs/21-Dubrovnik Tvrđava Lovrjenac 01.jpg",
+          "sourceRole": "OPPOSITE_COAST_OBLIQUE",
+          "expectedSHA256": "c537d64a1bff7ef5de09d6c4c0d71d852bc193384a0af26bd762e90f3ae3b56f",
+          "actualSHA256": "c537d64a1bff7ef5de09d6c4c0d71d852bc193384a0af26bd762e90f3ae3b56f",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/lovrijenac/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/lovrijenac/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-36-01a1e5e6-962f-7fa0-b746-5d249d2b2c01.jsonl",
+        "line": 102,
+        "callId": "call_7b9d6e8988bb4216ad9c68d54c54bf73",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 300}\nconst r=await tools.exec_command({cmd:\"cat '\"+load(\"b_base\")+\"lovrijenac/imagegen-input.json'\",\"max_output_tokens\":6000});store(\"b_lovrijenac_start\",new Date().toISOString());\nconst result=await tools.image_gen__imagegen(JSON.parse(r.output).toolArguments);store(\"b_lovrijenac_result\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The irregular tapering fort, stepped wall heights, high rear terrace, lower open terraces, central recessed court, internal arched galleries and thick plain limestone walls closely reproduce reference 01. There are no invented roofed palace masses, battlements or tower groups. The minimal immediate rock support is within the assigned scope.",
+      "status": "WARN",
+      "PASS-WARN-FAIL": "WARN",
+      "phaseConfidence": "High for the current open fortress phase visible in supplied photos; temporary surface installations are not permanent-form evidence.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "A long flat grey strip in the rear upper court appears to copy a temporary surface feature from reference 01; it should not be treated as permanent architecture.",
+        "Small embrasure counts, arch widths and masonry are regularized.",
+        "Other supplied views are distant or backlit, limiting exact exterior-wall opening verification."
+      ],
+      "nextAction": "PT/KK should review the temporary grey strip and minor opening approximations; preserve the candidate and keep Tripo gate closed pending acceptance.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    },
+    {
+      "buildingKey": "bratislava-castle-current",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/bratislava-castle/model-original.png",
+      "imageSHA256": "51e0a70db3f7b7f0538c0f1da67a75ebe80c32b513e184bcbe977c0f71d87801",
+      "manifestSHA256Match": true,
+      "originalToolOutput": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a1e5e6-962f-7fa0-b746-5d249d2b2c01/exec-d09100a0-c8bd-4eaa-8566-7d80569bd13b.png",
+      "originalToolOutputSHA256Match": true,
+      "referenceChecks": [
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/bratislava-castle/refs/01-Bratislava Castle, 2021 (03).jpg",
+          "sourceRole": "DRONE_SECTOR_A",
+          "expectedSHA256": "83aa4af805535d54ce344bb17906b33b1d73e71f3699784738900c56ee120aff",
+          "actualSHA256": "83aa4af805535d54ce344bb17906b33b1d73e71f3699784738900c56ee120aff",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/bratislava-castle/refs/02-Bratislava Castle, 2021 (05).jpg",
+          "sourceRole": "OPPOSITE_DRONE_SECTOR",
+          "expectedSHA256": "1786047d52d5af31eddab5bc77eb36729addfae3cd3104ef6c32866627840e1c",
+          "actualSHA256": "1786047d52d5af31eddab5bc77eb36729addfae3cd3104ef6c32866627840e1c",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/bratislava-castle/refs/03-Bratislava Castle, 2021 (10).jpg",
+          "sourceRole": "DRONE_SIDE_B",
+          "expectedSHA256": "d4eb5a664627b490253bbb7fff6082829504a59ca76246ceb976eee2b1d3a5d7",
+          "actualSHA256": "d4eb5a664627b490253bbb7fff6082829504a59ca76246ceb976eee2b1d3a5d7",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        },
+        {
+          "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/additional04/bratislava-castle/refs/04-Bratislava Castle, 2021 (15).jpg",
+          "sourceRole": "DRONE_SECTOR_A_WIDER",
+          "expectedSHA256": "024889011f61e23e7f94fee5d710464c336693b1e5c529a8f627ca5537d86cca",
+          "actualSHA256": "024889011f61e23e7f94fee5d710464c336693b1e5c529a8f627ca5537d86cca",
+          "sha256Match": true,
+          "independentlyViewedFullSource": true
+        }
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/bratislava-castle/imagegen-input.json",
+      "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/additional2496-b/bratislava-castle/preflight-result.json",
+      "actualToolInputCheck": {
+        "status": "PASS",
+        "recordedArgumentsExactlyEqualPreflight": true,
+        "orderedReferencePathsEqualInputReferences": true,
+        "invocationLog": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/sessions/2026/11/16/rollout-2026-11-16T21-47-36-01a1e5e6-962f-7fa0-b746-5d249d2b2c01.jsonl",
+        "line": 108,
+        "callId": "call_5ea5e7aef15244a9ba78ca30033bfe5c",
+        "invocation": "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 300}\nconst r=await tools.exec_command({cmd:\"cat '\"+load(\"b_base\")+\"bratislava-castle/imagegen-input.json'\",\"max_output_tokens\":6000});store(\"b_bratislava-castle_start\",new Date().toISOString());\nconst result=await tools.image_gen__imagegen(JSON.parse(r.output).toolArguments);store(\"b_bratislava-castle_result\",result);generatedImage(result);\n",
+        "evidenceScope": "Actual invocation in producer execution log passes toolArguments loaded from the named imagegen-input.json; current input record equals preflight exactly. This is not inferred from the visual output."
+      },
+      "independentlyViewedFullOriginal": true,
+      "visualMatch": "The quadrangular roof ring with courtyard recess, four unequal corner towers, white palace walls, orange roofs, main portal, adjacent U-shaped low wings and compact front terrace reproduce the aerial reference composition. The main broad palace mass and lower-wing relationship are recognizable. Tower cap/neck proportions are somewhat exaggerated and the internal courtyard void is only partly visible; this does not demonstrate a missing main courtyard.",
+      "status": "WARN",
+      "PASS-WARN-FAIL": "WARN",
+      "phaseConfidence": "High for the reconstructed intact white palace and current low-wing arrangement photographed in 2021.",
+      "criticalIssues": [],
+      "minorIssues": [
+        "The largest near tower has a tall cap/neck and stronger triangular shoulder treatment than the aerial photographs; relative proportions deserve owner comparison.",
+        "Exact court void and hidden rear lower-wing continuation remain partly occluded.",
+        "Dormer/window counts and terrace sculpture are approximate."
+      ],
+      "nextAction": "Present WARN for PT/KK assessment of tower proportions and scope of adjacent wings. Do not infer all-complex completion, owner acceptance or Tripo readiness.",
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoReady": false
+    }
+  ],
+  "gates": {
+    "ownerReviewPending": true,
+    "kkReviewPending": true,
+    "tripoAuthorizedByThisReport": false,
+    "massTripoOwnerGate": "CLOSED",
+    "bastilleGameGate": "CLOSED"
+  },
+  "memoryUsedForVisualVerdict": false
+}
