@@ -174,9 +174,9 @@ export const EUROPE_KULTTUURI = {
         'Painovoimalla — putki laskee koko matkan',
       ],
       correct: 3,
-      fact: 'Kaltevuus oli paikoin vain 30 senttiä kilometrillä. Kaaret '
-        + 'rakennettiin juuri siksi: laakson yli piti pitää putki '
-        + 'täsmälleen oikeassa kulmassa.',
+      fact: 'Kaltevuus oli hyvin loiva. Kaaret rakennettiin juuri siksi: '
+        + 'laakson yli piti kuljettaa vesi niin, että se laski koko '
+        + 'matkan alamäkeen.',
     },
   },
 
