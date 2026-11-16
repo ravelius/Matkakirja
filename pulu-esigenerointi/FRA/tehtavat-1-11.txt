@@ -1,0 +1,332 @@
+================ KOHTA 51 (nosto:lustig-eiffel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mies myi Eiffel-tornin romuraudaksi — ja palasi samana vuonna myymään sen uudelleen
+Tietoruudun teksti: Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.
+
+Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni Yhdysvaltoihin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Torni romuraudaksi] Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua. Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuode…
+
+### 51.1
+KYSYMYS: Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mies myi Eiffel-tornin romuraudaksi — ja palasi samana vuonna myymään sen uudelleen
+Tietoruudun teksti: Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.
+
+Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni Yhdysvaltoihin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+### 51.2
+KYSYMYS: Miksi huijauksen uhri ei ilmoittanut poliisille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mies myi Eiffel-tornin romuraudaksi — ja palasi samana vuonna myymään sen uudelleen
+Tietoruudun teksti: Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.
+
+Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni Yhdysvaltoihin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Torni romuraudaksi] Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua. Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuode…
+
+### 51.3
+KYSYMYS: Oliko Eiffel-tornin purkamisesta oikeasti puhetta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mies myi Eiffel-tornin romuraudaksi — ja palasi samana vuonna myymään sen uudelleen
+Tietoruudun teksti: Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.
+
+Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni Yhdysvaltoihin.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (nosto:kirahvin-kavelymatka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — takki päällä ja kengät jalassa
+Tietoruudun teksti: Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät.
+
+Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des Plantes'ssa 18 vuotta.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Kirahvin kävelymatka] Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä …
+- [Marseille — kaupunkilehti / Historia: Linnoitussaari, josta tuli maailmankuulu vankila] Kuningas Frans I rakennutti If-linnoituksen pienelle saarelle Marseillen edustalle 1520-luvulla puolustamaan satamaa mereltä tulevilta hyökkäyksiltä. Linnoitus ei koskaan joutunut puolustamaan kaupunkia sotilaallisesti, mutta siitä tuli sen sijaan pelätty vankila, jonne suljettiin sekä poliittisia vankeja että protestantteja. Linnoitus tuli maailmankuuluksi Alexandre Dumasin romaanista Monte-Criston kreivi (1844), jossa päähenkilö Edmond Dantès vangitaan sinne vuosikausiksi perättömän syytöksen takia ja pakenee lopulta meritse. Saarelle tehdään yhä laivakierroksia tarinan takia, vaikka Dantès on täysin kuvitteellinen hahmo.
+
+### 52.1
+KYSYMYS: Miksi kirahvi käveli Marseillesta Pariisiin eikä matkustanut meritse?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — takki päällä ja kengät jalassa
+Tietoruudun teksti: Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät.
+
+Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des Plantes'ssa 18 vuotta.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Linnoitussaari, josta tuli maailmankuulu vankila] Kuningas Frans I rakennutti If-linnoituksen pienelle saarelle Marseillen edustalle 1520-luvulla puolustamaan satamaa mereltä tulevilta hyökkäyksiltä. Linnoitus ei koskaan joutunut puolustamaan kaupunkia sotilaallisesti, mutta siitä tuli sen sijaan pelätty vankila, jonne suljettiin sekä poliittisia vankeja että protestantteja. Linnoitus tuli maailmankuuluksi Alexandre Dumasin romaanista Monte-Criston kreivi (1844), jossa päähenkilö Edmond Dantès vangitaan sinne vuosikausiksi perättömän syytöksen takia ja pakenee lopulta meritse. Saarelle tehdään yhä laivakierroksia tarinan takia, vaikka Dantès on täysin kuvitteellinen hahmo.
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Oponen kuuluisin vientitavara] Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.
+
+### 52.2
+KYSYMYS: Miten eläin selvisi 900 kilometrin kävelystä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — takki päällä ja kengät jalassa
+Tietoruudun teksti: Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät.
+
+Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des Plantes'ssa 18 vuotta.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Porcellino] Kultaseppien sillalta on muutaman minuutin kävely kauppahallin holvien alle, jossa istuu pronssinen villisika kitansa auki. Firenzeläiset sanovat sitä porsaaksi, vaikka se ei ole porsas. Pietro Tacca valoi sen vähän ennen vuotta 1634, ja mallina oli marmoripatsas, joka oli itsekin kopio — roomalainen jäljennös hellenistisestä alkuperäisestä. Se marmori löytyi Roomasta, Medicit toivat sen Firenzeen 1500-luvun puolivälissä, ja jo silloin sitä sanottiin Kalydonian villisiaksi, tarujen pedoksi. Pronssi oli tarkoitettu Bobolin puutarhaan, mutta se päätyi kauppahallin kulmaan, ensin apteekin eteen — apteekki sai siitä nimekseen Villisian apteekki — ja myöhemmin sivummalle, jotta markkinoilla maht…
+- [Kreeta — kaupunkilehti / Maasto: Rotko, jonka läpi kävellään päivässä] Samarian rotko halkaisee Valkoiset vuoret ja laskee kuudentoista kilometrin matkalla noin 1 200 metrin korkeudesta merenrantaan. Kävely kestää aamusta iltapäivään, ja se tehdään aina alamäkeen: ylös kiipeäminen olisi kohtuutonta. Kapeimmassa kohdassa seinien väliin jää vain kolmisen metriä, ja siellä kalliot nousevat molemmin puolin satoja metrejä. Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä kulkee tuhansia kävijöitä päivässä.
+
+### 52.3
+KYSYMYS: Mitä muuta Jardin des Plantes'n eläintarhassa oli 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — takki päällä ja kengät jalassa
+Tietoruudun teksti: Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät.
+
+Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des Plantes'ssa 18 vuotta.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Kirahvin kävelymatka] Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä …
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (nosto:carmenin-ensi-ilta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Teatterin johtaja vastusti oopperaa niin kiivaasti, että erosi — ja ensi-illan jälkeen näytti siltä, että hän oli ollut oikeassa
+Tietoruudun teksti: Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.
+
+Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen näytös meni hyvin. Toreadorin laulun jälke…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Carmenin ensi-ilta] Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että h…
+
+### 53.1
+KYSYMYS: Miksi Opéra-Comiquen johto piti Carmenia sopimattomana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Teatterin johtaja vastusti oopperaa niin kiivaasti, että erosi — ja ensi-illan jälkeen näytti siltä, että hän oli ollut oikeassa
+Tietoruudun teksti: Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.
+
+Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen näytös meni hyvin. Toreadorin laulun jälke…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Carmenin ensi-ilta] Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että h…
+
+### 53.2
+KYSYMYS: Miten ooppera nousi epäonnistumisesta maailmanmaineeseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Teatterin johtaja vastusti oopperaa niin kiivaasti, että erosi — ja ensi-illan jälkeen näytti siltä, että hän oli ollut oikeassa
+Tietoruudun teksti: Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.
+
+Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen näytös meni hyvin. Toreadorin laulun jälke…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+### 53.3
+KYSYMYS: Millainen oopperatalo Opéra-Comique oli 1870-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Teatterin johtaja vastusti oopperaa niin kiivaasti, että erosi — ja ensi-illan jälkeen näytti siltä, että hän oli ollut oikeassa
+Tietoruudun teksti: Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.
+
+Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen näytös meni hyvin. Toreadorin laulun jälke…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Carmenin ensi-ilta] Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla 1873, ja ensimmäinen näytös oli valmis siihen kesään mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. Opéra-Comique oli valtion rahoittama talo, johon vietiin perhe, ja sen kahdesta johtajasta Adolphe de Leuven vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä täällä, yleisö pelästyy pois. Hänelle luvattiin, että nimihenkilön luonnetta pehmennetään, että romanihahmot esitetään koomisina ja että lopun kuolema jää kulkueiden, balettien ja riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi kuultuaan, että h…
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (nosto:pariisin-72-nimea) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tornissa on 72 nimeä kullalla
+Tietoruudun teksti: Gustave Eiffel halusi, että hänen torninsa on tieteen muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna 2027.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: 72 nimeä] Gustave Eiffel halusi, että hänen torninsa on tieteen muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna 2027.
+- [Brisbane — kaupunkilehti / Historia: Torni, joka jauhoi viljaa ja vahti sitten satamaa] Wickham Terracen tuulimylly on Queenslandin vanhin säilynyt rakennus. Perustuksia alettiin kaivaa heinäkuussa 1828, ensimmäinen vilja jauhettiin lokakuun viimeisenä päivänä, ja tornin kylkeen liitettiin polkumylly, joka toimi voimanlähteenä tuulettomina päivinä ja rangaistusvälineenä vankeja vastaan. Jauhaminen loppui 1845 ja polkumylly purettiin. Vuodesta 1855 tornia käytettiin signaaliasemana, ja vuoden 1861 kunnostuksessa siihen asennettiin aikapallo. Isoisä ei olisi nähnyt palloa putoavan: se korvattiin aikatykillä jo 1866, ja signaalimiehen mökki rakennettiin vasta 1883.
+
+### 54.1
+KYSYMYS: Miksi nimet peitettiin maalilla 1900-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tornissa on 72 nimeä kullalla
+Tietoruudun teksti: Gustave Eiffel halusi, että hänen torninsa on tieteen muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna 2027.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: 72 nimeä] Gustave Eiffel halusi, että hänen torninsa on tieteen muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna 2027.
+
+### 54.2
+KYSYMYS: Ketkä ovat sen toisen, vuonna 2026 julkistetun listan nimet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tornissa on 72 nimeä kullalla
+Tietoruudun teksti: Gustave Eiffel halusi, että hänen torninsa on tieteen muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna 2027.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+### 54.3
+KYSYMYS: Miten 72 nimeä valittiin tornin kylkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tornissa on 72 nimeä kullalla
+Tietoruudun teksti: Gustave Eiffel halusi, että hänen torninsa on tieteen muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna 2027.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Historia: Torni, joka jauhoi viljaa ja vahti sitten satamaa] Wickham Terracen tuulimylly on Queenslandin vanhin säilynyt rakennus. Perustuksia alettiin kaivaa heinäkuussa 1828, ensimmäinen vilja jauhettiin lokakuun viimeisenä päivänä, ja tornin kylkeen liitettiin polkumylly, joka toimi voimanlähteenä tuulettomina päivinä ja rangaistusvälineenä vankeja vastaan. Jauhaminen loppui 1845 ja polkumylly purettiin. Vuodesta 1855 tornia käytettiin signaaliasemana, ja vuoden 1861 kunnostuksessa siihen asennettiin aikapallo. Isoisä ei olisi nähnyt palloa putoavan: se korvattiin aikatykillä jo 1866, ja signaalimiehen mökki rakennettiin vasta 1883.
+- [Jordania — maalehti / Rauniot: Kahdeksansataa porrasta ylös kallion kylkeen] Petran tunnetuin julkisivu on Aarrekammio, mutta suurin on ad-Deir. Se hakattiin kallioseinään noin ensimmäisen vuosisadan puolivälissä, ja julkisivu on 47 metriä korkea ja 48 metriä leveä. Ylös noustaan lähes kahdeksansataa kallioon veistettyä porrasta, ja kävelyyn menee reilu puoli tuntia. Sisällä on vain yksi neliön muotoinen huone, jonka takaseinässä on syvennys — julkisivu on siis paljon suurempi kuin tila sen takana. Nimi Deir tarkoittaa luostaria ja juontuu myöhemmästä käytöstä: tutkijoiden mukaan salia käytettiin bysanttilaisaikana todennäköisesti kirkkona.
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (nosto:guimardin-metro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron sisäänkäynti koottiin palasista
+Tietoruudun teksti: Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Metron sisäänkäynti] Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+
+### 55.1
+KYSYMYS: Miksi arkkitehtikilpailun 21 ehdotuksesta yksikään ei kelvannut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron sisäänkäynti koottiin palasista
+Tietoruudun teksti: Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Metron sisäänkäynti] Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+
+### 55.2
+KYSYMYS: Mitä vakio-osista kasaaminen tarkoitti käytännössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron sisäänkäynti koottiin palasista
+Tietoruudun teksti: Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+
+### 55.3
+KYSYMYS: Miksi puolet sisäänkäynneistä purettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron sisäänkäynti koottiin palasista
+Tietoruudun teksti: Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Metron sisäänkäynti] Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli järjestetty arkkitehtikilpailu, mutta yksikään 21 ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin rakennussarja: samoista paloista sai kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevat 86 rauhoitettiin vuonna 1978.
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI

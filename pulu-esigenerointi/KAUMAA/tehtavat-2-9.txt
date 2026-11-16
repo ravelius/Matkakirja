@@ -1,0 +1,1561 @@
+### 641
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Millainen valtio Venetsian tasavalta oli?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä riittää kerrottavaa. Venetsia oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, siis lähes vuosituhannen, ja siitä käytettiin nimeä [[La Serenissima]]. Sen laivat hallitsivat idänkauppaa, ja vauraus näkyy yhä Pyhän Markuksen torilla basilikan kultamosaiikeissa ja [[dogen palatsin]] kaaririvistössä. Itsenäisyys päättyi [[Napoleoniin]], ja vuonna 1866 Venetsiasta tuli osa Italiaa. Tuhat vuotta tasavaltaa, siinä on kyl kyyhkyllekin sulateltavaa.
+KYSYMYS: Kerro lisää: Napoleoniin
+
+### 642
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Mitä Venetsiassa tapahtuu nousuveden aikaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syksyisin nousuvesi tulvii Venetsian toreille, ja ilmiötä kutsutaan italiaksi nimellä [[acqua alta]]. Pyhän Markuksen tori on yksi kaupungin matalimmista kohdista, ja tulvan aikana kaduille asennetaan korotettuja kävelyteitä. Tulvilta suojaamaan on rakennettu [[MOSE]]-niminen tulvaporttijärjestelmä, mutta en ole varma sen nykyisestä toiminnasta. Minä lennän vedenpinnan yli, siinä on se etu.
+KYSYMYS: Kerro lisää: acqua alta
+
+### 643
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Mitä Venetsiassa tapahtuu nousuveden aikaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syksyisin nousuvesi tulvii Venetsian toreille, ja ilmiötä kutsutaan italiaksi nimellä [[acqua alta]]. Pyhän Markuksen tori on yksi kaupungin matalimmista kohdista, ja tulvan aikana kaduille asennetaan korotettuja kävelyteitä. Tulvilta suojaamaan on rakennettu [[MOSE]]-niminen tulvaporttijärjestelmä, mutta en ole varma sen nykyisestä toiminnasta. Minä lennän vedenpinnan yli, siinä on se etu.
+KYSYMYS: Kerro lisää: MOSE
+
+### 644
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Canal Grande] 1631 Canal Grande on Venetsian pääkatu, vaikka se onkin oikeasti vesitie. Se mutkittelee kaupungin läpi käänteisen S-kirjaimen muotoisena, on 3,8 kilometriä pitkä ja 30–90 metriä leveä. Rannoilla seisoo yli 170 rakennusta, monet 1200–1700-luvuilta. Pitkään kanaalin yli pääsi vain yhtä ainoaa siltaa, Rialtoa — muuten piti mennä veneellä. Nykyään ylityspaikkoja on neljä, uusin on vuonna 2008 valmistunut lasinen Konstituutiosilta. Kanaalin varrella kohoaa valkoinen Santa Maria della Saluten kirkko. Sen rakentaminen alkoi 1631 kiitokseksi siitä, että hirveä ruttoepidemia vihdoin väistyi.
+AIEMPI KYSYMYS: Miksi Venetsiassa ei ole autoja?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Venetsiassa kaikki liikkuminen tapahtuu jalan tai vettä pitkin, sillä kaupunki koostuu saarista, joita yhdistävät sillat ja kanavat. Pääväylä on [[Canal Grande]], ja liikenne hoidetaan vesibusseilla eli [[vaporetoilla]] sekä veneillä. Perinteinen [[gondoli]] on nykyään pääosin matkailijoiden kulkuneuvo. Autoton kaupunki, jossa kyyhkyt hallitsevat toreja.
+KYSYMYS: Kerro lisää: Canal Grande
+
+### 645
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+AIEMPI KYSYMYS: Miksi Venetsiassa ei ole autoja?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Venetsiassa kaikki liikkuminen tapahtuu jalan tai vettä pitkin, sillä kaupunki koostuu saarista, joita yhdistävät sillat ja kanavat. Pääväylä on [[Canal Grande]], ja liikenne hoidetaan vesibusseilla eli [[vaporetoilla]] sekä veneillä. Perinteinen [[gondoli]] on nykyään pääosin matkailijoiden kulkuneuvo. Autoton kaupunki, jossa kyyhkyt hallitsevat toreja.
+KYSYMYS: Kerro lisää: vaporetoilla
+
+### 646
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Käsityö: Gondoli on tahallaan vino] Gondoli ei ole symmetrinen: sen vasen kylki on oikeaa leveämpi. Vinous on tarkoituksellista. Soutaja seisoo perässä ja soutaa yhdellä airolla veneen oikealta puolelta, ja vino runko kumoaa kaarron, jonka yksi airo muuten aiheuttaisi. Vene on noin 10,85 metriä pitkä, painaa 350 kiloa ja kootaan 280 osasta kahdeksaa eri puulajia. Näin jyrkäksi vinous kehittyi vasta 1900-luvun alussa. Tavallinen gondoli on musta, ja vain kilpaveneet ovat värikkäitä.
+AIEMPI KYSYMYS: Miksi Venetsiassa ei ole autoja?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Venetsiassa kaikki liikkuminen tapahtuu jalan tai vettä pitkin, sillä kaupunki koostuu saarista, joita yhdistävät sillat ja kanavat. Pääväylä on [[Canal Grande]], ja liikenne hoidetaan vesibusseilla eli [[vaporetoilla]] sekä veneillä. Perinteinen [[gondoli]] on nykyään pääosin matkailijoiden kulkuneuvo. Autoton kaupunki, jossa kyyhkyt hallitsevat toreja.
+KYSYMYS: Kerro lisää: gondoli
+
+### 647
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+AIEMPI KYSYMYS: Kuinka paljon ihmisiä Venetsiassa asuu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Venetsian kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000, ja suurin osa väestä asuu mantereen puolella, esimerkiksi [[Mestressä]]. Asukasmäärä on pienentynyt vuosikymmenten mittaan, ja syinä mainitaan usein asumisen kalleus sekä [[matkailun]] vaikutus; en ole varma tarkoista luvuista. Torilla on kyl aina enemmän turisteja kuin kyyhkyjä.
+KYSYMYS: Kerro lisää: Mestressä
+
+### 648
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+AIEMPI KYSYMYS: Kuinka paljon ihmisiä Venetsiassa asuu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Venetsian kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000, ja suurin osa väestä asuu mantereen puolella, esimerkiksi [[Mestressä]]. Asukasmäärä on pienentynyt vuosikymmenten mittaan, ja syinä mainitaan usein asumisen kalleus sekä [[matkailun]] vaikutus; en ole varma tarkoista luvuista. Torilla on kyl aina enemmän turisteja kuin kyyhkyjä.
+KYSYMYS: Kerro lisää: matkailun
+
+### 649
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Duomo] 1296–1436 Firenzen tuomiokirkon eli Santa Maria del Fioren peruskivi laskettiin vuonna 1296, ja rakennustyötä johti ensin Arnolfo di Cambio. Kirkosta tehtiin tahallaan valtava — kaupunki halusi Pisaa ja Sienaa suuremman — ja juuri siitä syntyi ongelma, jota kukaan ei osannut ratkaista: aukko kuorin päällä oli 45 metriä leveä, eikä sellaista holvia ollut Rooman jälkeen rakennettu. Aukko oli auki taivaalle yli sata vuotta. Vuonna 1418 kaupunki järjesti kilpailun, ja sen voitti kultaseppä Filippo Brunelleschi. Hänen ratkaisunsa oli kaksi kuorta sisäkkäin ja tiilet ladottuna kalanruotokuvioon, jolloin muuraus kannatti itse itsensä työn edetessä eikä koko aukon täyttävää puutelinettä tarvittu. T…
+AIEMPI KYSYMYS: Mikä on Firenzen tuomiokirkon kupoli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Firenzen tuomiokirkon, [[Santa Maria del Fiore]] -kirkon, kupoli valmistui vuonna 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Sen suunnitteli [[Filippo Brunelleschi]], ja kupoli näkyy kaupungissa lähes joka kadunkulmasta. Se on yksi renessanssin tunnetuimmista rakennusteknisistä saavutuksista. Ylhäältä se on punainen hattu kaupungin päässä.
+KYSYMYS: Kerro lisää: Santa Maria del Fiore
+
+### 650
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Duomo] 1296–1436 Firenzen tuomiokirkon eli Santa Maria del Fioren peruskivi laskettiin vuonna 1296, ja rakennustyötä johti ensin Arnolfo di Cambio. Kirkosta tehtiin tahallaan valtava — kaupunki halusi Pisaa ja Sienaa suuremman — ja juuri siitä syntyi ongelma, jota kukaan ei osannut ratkaista: aukko kuorin päällä oli 45 metriä leveä, eikä sellaista holvia ollut Rooman jälkeen rakennettu. Aukko oli auki taivaalle yli sata vuotta. Vuonna 1418 kaupunki järjesti kilpailun, ja sen voitti kultaseppä Filippo Brunelleschi. Hänen ratkaisunsa oli kaksi kuorta sisäkkäin ja tiilet ladottuna kalanruotokuvioon, jolloin muuraus kannatti itse itsensä työn edetessä eikä koko aukon täyttävää puutelinettä tarvittu. T…
+- [Firenze — kaupunkilehti / Firenze: Aukko, joka oli auki sata vuotta] Tuomiokirkko aloitettiin 1296 tahallaan liian isona: kuorin päälle jäi 45 metriä leveä aukko, jollaista ei ollut Rooman jälkeen katettu. Se oli auki taivaalle yli sata vuotta. Vuoden 1418 kilpailun voitti kultaseppä Filippo Brunelleschi, jonka ratkaisu oli kaksi kuorta sisäkkäin ja tiilet ladottuna kalanruotokuvioon: muuraus kannatti itse itsensä, joten koko aukon täyttävää puutelinettä ei tarvittu. Tiiliä kului yli neljä miljoonaa, ja kupoli valmistui 1436.
+AIEMPI KYSYMYS: Mikä on Firenzen tuomiokirkon kupoli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Firenzen tuomiokirkon, [[Santa Maria del Fiore]] -kirkon, kupoli valmistui vuonna 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Sen suunnitteli [[Filippo Brunelleschi]], ja kupoli näkyy kaupungissa lähes joka kadunkulmasta. Se on yksi renessanssin tunnetuimmista rakennusteknisistä saavutuksista. Ylhäältä se on punainen hattu kaupungin päässä.
+KYSYMYS: Kerro lisää: Filippo Brunelleschi
+
+### 651
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Arki: Villa pakataan paaleiksi] nykyään — Kerintäkauden jälkeen villa lajitellaan ja puristetaan suuriksi paaleiksi tilojen omissa villavajoissa, kuten West Point Islandin kuvassa näkyvässä rakennuksessa. Paalit kuljetetaan pienillä aluksilla tai lentäen Port Stanleyhin ja sieltä laivalla eteenpäin, sillä Falklandeilla ei ole omaa villatehdasta. Monilla syrjäisillä tiloilla koko perhe osallistuu kerintään ja pakkaamiseen muutaman viikon ajan vuodessa, ja työ on säilynyt lähes samanlaisena jo 1800-luvun lopulta asti. Villavaja on usein tilan suurin rakennus asuinrakennuksen jälkeen.
+- [abuja — kaupunkilehti / Kallio ja kaupungin ulkotilat: Aso on kallio] Aso Rock on suuri graniittinen paljastuma Abujan reunassa. Monoliitti kuuluu paikan luontoon, ja kaupungin rakennettu keskusta sijaitsee pääosin sen eteläpuolella. Lähellä on valtion rakennuksia, mutta Aso-kallio ja Aso Villa -palatsi ovat eri kohteet. Luonnonmaamerkki edeltää pääkaupunkiprojektia ja liittyy myös alueen Asokoro-paikannimeen. Keskustan alue ulottuu Aso-kalliolta kansallisstadionin suuntaan.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Miten Firenze vaurastui keskiajalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Firenze rikastui keskiajalla [[villakankaalla]] ja pankkitoiminnalla, ja vuodesta 1252 se löi omaa kultarahaansa, [[floriinia]], johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi [[Medici]], joka osti valtansa kaupalla ja tilaustöillä. Kultaa ja villaa, kyyhky tyytyy leivänmuruihin.
+KYSYMYS: Kerro lisää: villakankaalla
+
+### 652
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Burgtheater 1786 — palvelijat nolaavat isäntänsä] 1.5.1786 — Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys…
+- [Wien — kohdekartta / Kohdekartta: Figaro 1786] Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys venyy muut…
+AIEMPI KYSYMYS: Miten Firenze vaurastui keskiajalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Firenze rikastui keskiajalla [[villakankaalla]] ja pankkitoiminnalla, ja vuodesta 1252 se löi omaa kultarahaansa, [[floriinia]], johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi [[Medici]], joka osti valtansa kaupalla ja tilaustöillä. Kultaa ja villaa, kyyhky tyytyy leivänmuruihin.
+KYSYMYS: Kerro lisää: floriinia
+
+### 653
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Palazzo Vecchio] 1299–1314 Palazzo Vecchio rakennettiin kaupungin hallituksen taloksi vuosina 1299–1314. Se näyttää linnalta, ja se on linna: paksut kiviseinät, ampuma-aukot ja 94 metriä korkea torni kertovat ajasta, jolloin kaupungin sisäiset riidat ratkottiin aseilla. Talossa istui Signoria, kaupungin yhdeksän valittua hallitusmiestä, jotka asuivat virkakautensa ajan sisällä eivätkä saaneet poistua. Vuonna 1540 Cosimo I de' Medici muutti taloon, ja hän muutti sen palatsiksi. Kun hovi siirtyi 1565 joen toiselle puolelle Pitti-palatsiin, vanha talo sai nimen Palazzo Vecchio, ”vanha palatsi”. Sisällä on Viidensadan sali, joka rakennettiin 1494 suurta kansanneuvostoa varten ja jonka seiniä Leonardo da Vinci j…
+- [Firenze — kohdekartta / Kohdekartta: Uffizi] 1560–1581 Uffizi ei ole rakennettu museoksi vaan virastotaloksi. Nimi tarkoittaa italiaksi yksinkertaisesti ”virastoja”: Cosimo I halusi kaupungin hallinnon toimistot yhteen taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna 1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha johtaa Signorian aukiolta suoraan Arnon rannalle. Medicit alkoivat säilyttää talon ylimmässä kerroksessa omaa taidekokoelmaansa, jota sai käydä katsomassa pyynnöstä jo 1500-luvun lopulla. Yleisölle museo avattiin vuonna 1769. Kokoelma pysyi Firenzessä yhden ihmisen ansiosta: suvun viimeinen jäsen Anna Maria Luisa de' Medici testamenttasi kaiken kaupungille ehdolla, ettei mitään saa koskaan viedä sieltä pois. Koko…
+AIEMPI KYSYMYS: Miten Firenze vaurastui keskiajalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Firenze rikastui keskiajalla [[villakankaalla]] ja pankkitoiminnalla, ja vuodesta 1252 se löi omaa kultarahaansa, [[floriinia]], johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi [[Medici]], joka osti valtansa kaupalla ja tilaustöillä. Kultaa ja villaa, kyyhky tyytyy leivänmuruihin.
+KYSYMYS: Kerro lisää: Medici
+
+### 654
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Kuvataide] Yhdessä pikkukaupungissa työskentelivät sadan vuoden sisällä Donatello, Botticelli, Leonardo ja Michelangelo. Sitä aikaa alettiin myöhemmin kutsua renessanssiksi.
+AIEMPI KYSYMYS: Miksi renessanssi syntyi juuri Firenzessä?
+AIEMPI VASTAUS (Livia):
+Mmm— Yhtä selitystä ei ole, mutta Firenzen vauraus on tärkeä osa sitä. Pankkien ja villakaupan rikastama kaupunki pystyi maksamaan taiteesta, ja mahtavin pankkiirisuku [[Medici]] palkkasi tekijöitä [[Donatellosta]] [[Michelangeloon]]. Näin syntyi taiteen ja tieteen suunnanmuutos, jota myöhemmin alettiin kutsua renessanssiksi. Historioitsijat esittävät asiaan myös muita syitä. Rahaa, kykyä ja sopivasti kilpailua, eipä hullumpi resepti.
+KYSYMYS: Kerro lisää: Donatellosta
+
+### 655
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+AIEMPI KYSYMYS: Miksi renessanssi syntyi juuri Firenzessä?
+AIEMPI VASTAUS (Livia):
+Mmm— Yhtä selitystä ei ole, mutta Firenzen vauraus on tärkeä osa sitä. Pankkien ja villakaupan rikastama kaupunki pystyi maksamaan taiteesta, ja mahtavin pankkiirisuku [[Medici]] palkkasi tekijöitä [[Donatellosta]] [[Michelangeloon]]. Näin syntyi taiteen ja tieteen suunnanmuutos, jota myöhemmin alettiin kutsua renessanssiksi. Historioitsijat esittävät asiaan myös muita syitä. Rahaa, kykyä ja sopivasti kilpailua, eipä hullumpi resepti.
+KYSYMYS: Kerro lisää: Michelangeloon
+
+### 656
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä ”maa, jonka Jumala teki vihassaan”, ja portugalilaiset puhuivat ”helvetin porteista”. Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+AIEMPI KYSYMYS: Kuka Dante Alighieri oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: firenzeläinen runoilija Dante kirjoitti pääteoksensa [[Jumalainen näytelmä]] 1300-luvun alussa, ja sitä pidetään yhtenä Euroopan kirjallisuuden tärkeimmistä teoksista. Hän kirjoitti sen latinan sijaan kansankielellä, mikä vahvisti [[toscanan]] murteen asemaa kirjakielen pohjana. Dante joutui poliittisten riitojen vuoksi lähtemään Firenzestä pakkosiirtolaisuuteen eikä enää palannut, vaan kuoli [[Ravennassa]] vuonna 1321. Pakkosiirtolaisen kirjeet olisin kyl kantanut mielelläni.
+KYSYMYS: Kerro lisää: Jumalainen näytelmä
+
+### 657
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Kuka Dante Alighieri oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: firenzeläinen runoilija Dante kirjoitti pääteoksensa [[Jumalainen näytelmä]] 1300-luvun alussa, ja sitä pidetään yhtenä Euroopan kirjallisuuden tärkeimmistä teoksista. Hän kirjoitti sen latinan sijaan kansankielellä, mikä vahvisti [[toscanan]] murteen asemaa kirjakielen pohjana. Dante joutui poliittisten riitojen vuoksi lähtemään Firenzestä pakkosiirtolaisuuteen eikä enää palannut, vaan kuoli [[Ravennassa]] vuonna 1321. Pakkosiirtolaisen kirjeet olisin kyl kantanut mielelläni.
+KYSYMYS: Kerro lisää: toscanan
+
+### 658
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Santa Croce] 1294–1442 Santa Croce on fransiskaanien kirkko, ja se on maailman suurin: 115 metriä pitkä kolmilaivainen halli, jonka rakentaminen alkoi vuonna 1294 ja joka vihittiin 1442. Fransiskaanit olivat köyhyyslupauksen tehnyt veljeskunta, ja siksi kirkon katto on paljasta puuta eikä holvattu kivi — mutta kaupungin rikkaat suvut maksoivat sen kappelit ja saivat vastineeksi hautapaikkansa. Niin siitä tuli Firenzen hautakirkko. Lattian alla ja seinustoilla lepäävät Michelangelo, Galileo Galilei, Niccolò Machiavelli ja säveltäjä Gioacchino Rossini. Danten valtava muistomerkki on sekin täällä, mutta arkku on tyhjä: runoilija kuoli karkotettuna Ravennassa, eikä kaupunki ole saanut häntä takaisin. Sivuka…
+AIEMPI KYSYMYS: Kuka Dante Alighieri oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: firenzeläinen runoilija Dante kirjoitti pääteoksensa [[Jumalainen näytelmä]] 1300-luvun alussa, ja sitä pidetään yhtenä Euroopan kirjallisuuden tärkeimmistä teoksista. Hän kirjoitti sen latinan sijaan kansankielellä, mikä vahvisti [[toscanan]] murteen asemaa kirjakielen pohjana. Dante joutui poliittisten riitojen vuoksi lähtemään Firenzestä pakkosiirtolaisuuteen eikä enää palannut, vaan kuoli [[Ravennassa]] vuonna 1321. Pakkosiirtolaisen kirjeet olisin kyl kantanut mielelläni.
+KYSYMYS: Kerro lisää: Ravennassa
+
+### 659
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Kuvataide: Ruhtinaan oma käytävä] Kun Cosimo I muutti hovinsa joen eteläpuolelle Pitti-palatsiin, hän ei halunnut kulkea kaduilla kansan seassa. Giorgio Vasari rakennutti vuonna 1565 katetun käytävän, joka lähtee Palazzo Vecchiosta, kulkee Uffizin läpi, ylittää Arnon Ponte Vecchion kauppojen katon päällä ja päättyy Pitti-palatsiin. Matkaa on noin kilometri. Juuri tämän käytävän takia sillan teurastajat karkotettiin 1593: haju nousi ikkunoihin.
+- [Firenze — kohdekartta / Kohdekartta: Ponte Vecchio] 1345 Arnon kapeimmalla kohdalla on ollut silta roomalaisajoista asti. Nykyinen kivisilta rakennettiin vuonna 1345 sen jälkeen, kun edellinen oli hävinnyt vuoden 1333 tulvassa. Sillan päällä on ollut kauppoja alusta lähtien, ja niiden vuokrat maksoivat sillan kunnossapidon. Ensimmäiset kauppiaat olivat teurastajia, nahkureita ja kalakauppiaita — jokeen oli kätevä heittää se, mitä ei myyty. Vuonna 1593 suurherttua Ferdinando I sai tarpeekseen hajusta ja määräsi heidät pois: tilalle tulivat kultasepät ja jalokivikauppiaat, ja samat ammatit ovat sillalla yhä. Kauppojen takaseinistä työntyy joen ylle puisia lisäkkeitä, jotka on rakennettu sitä mukaa kuin tilaa on tarvittu. Kauppojen katon yllä k…
+AIEMPI KYSYMYS: Mitä Firenzessä kannattaa katsoa kävellen?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo kysymys. Vanhakaupunki on niin pieni, että reunasta reunaan on noin kaksi kilometriä, joten kaikki tärkeä on kävelymatkan päässä. Arno-joen yli kulkee kauppiaiden puoteineen tunnettu [[Ponte Vecchio]], ja taidekokoelmistaan tunnettu [[Uffizin]] galleria on lähellä. Kaupungin keskeinen tori on [[Piazza della Signoria]], jonka laidalla kohoaa Palazzo Vecchio. Kävellen kaikki ehtii, lentäen vielä nopeammin.
+KYSYMYS: Kerro lisää: Ponte Vecchio
+
+### 660
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Kuvataide: Ruhtinaan oma käytävä] Kun Cosimo I muutti hovinsa joen eteläpuolelle Pitti-palatsiin, hän ei halunnut kulkea kaduilla kansan seassa. Giorgio Vasari rakennutti vuonna 1565 katetun käytävän, joka lähtee Palazzo Vecchiosta, kulkee Uffizin läpi, ylittää Arnon Ponte Vecchion kauppojen katon päällä ja päättyy Pitti-palatsiin. Matkaa on noin kilometri. Juuri tämän käytävän takia sillan teurastajat karkotettiin 1593: haju nousi ikkunoihin.
+AIEMPI KYSYMYS: Mitä Firenzessä kannattaa katsoa kävellen?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo kysymys. Vanhakaupunki on niin pieni, että reunasta reunaan on noin kaksi kilometriä, joten kaikki tärkeä on kävelymatkan päässä. Arno-joen yli kulkee kauppiaiden puoteineen tunnettu [[Ponte Vecchio]], ja taidekokoelmistaan tunnettu [[Uffizin]] galleria on lähellä. Kaupungin keskeinen tori on [[Piazza della Signoria]], jonka laidalla kohoaa Palazzo Vecchio. Kävellen kaikki ehtii, lentäen vielä nopeammin.
+KYSYMYS: Kerro lisää: Uffizin
+
+### 661
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Historia: Sama tori, päinvastainen tuli] Savonarolan valta murtui nopeasti: paavi julisti hänet pannaan, ja firenzeläiset kääntyivät häntä vastaan kun luvatut ihmeet eivät toteutuneet. 23. toukokuuta 1498 hänet ja kaksi muuta munkkia hirtettiin ja poltettiin täsmälleen samalla Piazza della Signorian paikalla, jossa Turhuuksien rovio oli palanut vuotta aiemmin. Kansanjoukko, joka oli kerran kuunnellut häntä hurmoksissa, seurasi nyt hänen teloitustaan.
+- [Firenze — kaupunkilehti / Historia: Laatta, joka merkitsee paikan] Piazza della Signorian kivetykseen on upotettu pyöreä muistolaatta, joka merkitsee tarkan paikan, jossa Savonarola ja hänen kaksi kumppaniaan poltettiin. Laattaa uusitaan silloin tällöin — nykyinen versio kertoo tapahtuman lyhyesti latinaksi ja italiaksi. Tuhannet turistit astuvat sen yli joka päivä huomaamatta sitä, samalla torilla jolla Michelangelon Daavid-patsas seisoi alun perin vuosisatoja.
+AIEMPI KYSYMYS: Mitä Firenzessä kannattaa katsoa kävellen?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo kysymys. Vanhakaupunki on niin pieni, että reunasta reunaan on noin kaksi kilometriä, joten kaikki tärkeä on kävelymatkan päässä. Arno-joen yli kulkee kauppiaiden puoteineen tunnettu [[Ponte Vecchio]], ja taidekokoelmistaan tunnettu [[Uffizin]] galleria on lähellä. Kaupungin keskeinen tori on [[Piazza della Signoria]], jonka laidalla kohoaa Palazzo Vecchio. Kävellen kaikki ehtii, lentäen vielä nopeammin.
+KYSYMYS: Kerro lisää: Piazza della Signoria
+
+### 662
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi ’Colosseum’ tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mitä Rooman suuren areenan alla on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä kohta. Areenan eli [[Colosseumin]] alla on kellarikerros, jota kutsutaan nimellä [[hypogeum]] ja jossa oli käytäviä ja hissejä. Hisseillä eläimiä ja lavasteita nostettiin areenalle esitysten aikana. Rakenne kertoo siitä, että roomalaiset olivat ennen kaikkea insinöörejä. Antiikin hissit, ja minä luulin että siivet olivat ainoa kulkuväline.
+KYSYMYS: Kerro lisää: Colosseumin
+
+### 663
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi ’Colosseum’ tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mitä Rooman suuren areenan alla on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä kohta. Areenan eli [[Colosseumin]] alla on kellarikerros, jota kutsutaan nimellä [[hypogeum]] ja jossa oli käytäviä ja hissejä. Hisseillä eläimiä ja lavasteita nostettiin areenalle esitysten aikana. Rakenne kertoo siitä, että roomalaiset olivat ennen kaikkea insinöörejä. Antiikin hissit, ja minä luulin että siivet olivat ainoa kulkuväline.
+KYSYMYS: Kerro lisää: hypogeum
+
+### 664
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Arki ja vesi: Vesi kulkee yhä] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+- [Rooma — kohdekartta / Kohdekartta: Aqua Virgo] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+- [Rooma — kaupunkilehti / Rooma] Kaupunki, jonka areenan alla on kellari hisseineen, jonka aukiolla marmorinen norsu kantaa obeliskia ja jonka kuuluisimpaan lähteeseen vesi tulee yhä antiikin akveduktia pitkin.
+AIEMPI KYSYMYS: Miten Trevin suihkulähteeseen tulee vettä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Trevin suihkulähteen vesi tulee yhä antiikin [[akveduktia]] pitkin, tiettävästi nimeltään [[Acqua Vergine]]. Roomalaiset rakensivat yhteensä yksitoista akveduktia, ja ne toivat vettä vuorilta kaupunkiin painovoimalla. Yksi niistä syöttää siis edelleen tätä kuuluisinta lähdettä. Vesi on kulkenut sen läpi parituhatta vuotta, eikä minulle ole kertaakaan tarjottu kulausta.
+KYSYMYS: Kerro lisää: akveduktia
+
+### 665
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+AIEMPI KYSYMYS: Miten Trevin suihkulähteeseen tulee vettä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Trevin suihkulähteen vesi tulee yhä antiikin [[akveduktia]] pitkin, tiettävästi nimeltään [[Acqua Vergine]]. Roomalaiset rakensivat yhteensä yksitoista akveduktia, ja ne toivat vettä vuorilta kaupunkiin painovoimalla. Yksi niistä syöttää siis edelleen tätä kuuluisinta lähdettä. Vesi on kulkenut sen läpi parituhatta vuotta, eikä minulle ole kertaakaan tarjottu kulausta.
+KYSYMYS: Kerro lisää: Acqua Vergine
+
+### 666
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tirana — kaupunkilehti / Betoni, väri ja video] Tiranassa vanhoja rakennuksia on annettu uuteen käyttöön: pyramidi on nyt nuorten teknologiakeskus ja keskusaukio voitti eurooppalaisen palkinnon. Kaupungin muutosta on tulkinnut myös albanialainen videotaiteilija Anri Sala.
+AIEMPI KYSYMYS: Miksi Pantheon on säilynyt näin hyvin?
+AIEMPI VASTAUS (Livia):
+Ai se. Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli, ja roomalaisten keksimä [[betoni]] kovettuu veden alla. Kupolin keskellä on pyöreä aukko, [[oculus]], josta sisään tulee valoa ja sadettakin. Säilymiseen on vaikuttanut materiaalin lisäksi rakenteen suunnittelu sekä se, että rakennusta on käytetty jatkuvasti; yksityiskohdista en ole täysin varma. Katossa reikä ja talo kestää, minä pidän sellaisesta rakenteesta.
+KYSYMYS: Kerro lisää: betoni
+
+### 667
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli ’silmä’, jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Miksi Pantheon on säilynyt näin hyvin?
+AIEMPI VASTAUS (Livia):
+Ai se. Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli, ja roomalaisten keksimä [[betoni]] kovettuu veden alla. Kupolin keskellä on pyöreä aukko, [[oculus]], josta sisään tulee valoa ja sadettakin. Säilymiseen on vaikuttanut materiaalin lisäksi rakenteen suunnittelu sekä se, että rakennusta on käytetty jatkuvasti; yksityiskohdista en ole täysin varma. Katossa reikä ja talo kestää, minä pidän sellaisesta rakenteesta.
+KYSYMYS: Kerro lisää: oculus
+
+### 668
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Miten Rooma kutistui valtakunnan hajottua?
+AIEMPI VASTAUS (Livia):
+Mmm— Valtakunnan hajottua Rooma kutistui voimakkaasti: 1300-luvulla kaupungissa asui noin 20 000 ihmistä, ja karja laidunsi [[Forumilla]], muinaisen kaupunkielämän keskuksessa. Kaupunki ei kuitenkaan unohtunut, vaan [[paavit]] rakensivat sen uudelleen. Renessanssin ja barokin aikana syntyi muun muassa [[Pietarinkirkko]]. Karja Forumilla ja nyt siellä kävelee turisteja, aika on kyl outo kirjeenkantaja.
+KYSYMYS: Kerro lisää: Forumilla
+
+### 669
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+- [Rooma — kaupunkilehti / Historia: Vatikaanin vanki] Rooman valtaus kesti yhden aamupäivän. Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870, ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko Porta Pian viereen; siitä joukot virtasivat kaupunkiin, ja Pietarinkirkon kupoliin nostettiin valkoinen lippu. Paaville tarjottiin omaa pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin eikä poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen vuotta 1929. Pietarinaukiolle …
+AIEMPI KYSYMYS: Miten Rooma kutistui valtakunnan hajottua?
+AIEMPI VASTAUS (Livia):
+Mmm— Valtakunnan hajottua Rooma kutistui voimakkaasti: 1300-luvulla kaupungissa asui noin 20 000 ihmistä, ja karja laidunsi [[Forumilla]], muinaisen kaupunkielämän keskuksessa. Kaupunki ei kuitenkaan unohtunut, vaan [[paavit]] rakensivat sen uudelleen. Renessanssin ja barokin aikana syntyi muun muassa [[Pietarinkirkko]]. Karja Forumilla ja nyt siellä kävelee turisteja, aika on kyl outo kirjeenkantaja.
+KYSYMYS: Kerro lisää: paavit
+
+### 670
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pietarinkirkko] 1506–1626 Nykyisen kirkon paikalla seisoi ennen toinen, paljon vanhempi kirkko, jonka roomalainen keisari Konstantinus rakennutti jo 300-luvulla. Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. Monta kuuluisaa arkkitehtia ehti työstää sitä matkan varrella: Michelangelo suunnitteli kirkon jättimäisen kupolin, ja Bernini rakensi eteen aukion, jota kiertävät pylväskäytävät kuin avoimet käsivarret. Kupoli kohoaa lähes 137 metrin korkeuteen ja on maailman korkein kirkonkupoli. Sisään mahtuu seisomaan jopa 60 000 ihmistä yhtä aikaa. Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen…
+AIEMPI KYSYMYS: Miten Rooma kutistui valtakunnan hajottua?
+AIEMPI VASTAUS (Livia):
+Mmm— Valtakunnan hajottua Rooma kutistui voimakkaasti: 1300-luvulla kaupungissa asui noin 20 000 ihmistä, ja karja laidunsi [[Forumilla]], muinaisen kaupunkielämän keskuksessa. Kaupunki ei kuitenkaan unohtunut, vaan [[paavit]] rakensivat sen uudelleen. Renessanssin ja barokin aikana syntyi muun muassa [[Pietarinkirkko]]. Karja Forumilla ja nyt siellä kävelee turisteja, aika on kyl outo kirjeenkantaja.
+KYSYMYS: Kerro lisää: Pietarinkirkko
+
+### 671
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [null — kohdekartta / Kohdekartta: Kanavanvartijan talo] 1800-luku Kanavanvartijan talo on National Mallin länsilaidan pieni rakennus Constitution Avenuen ja 17th Streetin kulmassa. Se palveli sulkua, jossa C&O-kanavan itäinen jatke liittyi Washington City Canaliin. Georgetownista jatkettu kanava liittyi Tiber Creekin suunnalla Washington City Canaliin, joka kulki nykyisen National Mallin alueen läpi kohti Kapitolia. Talo auttaa paikantamaan vesireitin maisemassa, jossa kanava ei enää muodosta kaupungin näkyvää selkärankaa. C&O-kanavan alukset kuljettivat hiiltä ja monenlaisia muita tavaroita Cumberlandin ja Washingtonin välillä. Niitä vedettiin muuleilla rantapolkua pitkin, ja sulut rytmittivät kulkua eri vedenkorkeuksien välillä.
+AIEMPI KYSYMYS: Mitä Rooman perustamistarinasta kerrotaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tarun mukaan kaupungin perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa. Todellisuudessa Rooma kasvoi [[Tiber-joen]] varrella sijaitsevien kukkuloiden kylistä yhdeksi kaupungiksi. Perimätiedon mukaan Romulus perusti kaupungin [[Palatinuksen]] kukkulalle. Susi kasvattajana, minun sukuni olis kyl valinnut kyyhkyn.
+KYSYMYS: Kerro lisää: Tiber-joen
+
+### 672
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä Rooman perustamistarinasta kerrotaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tarun mukaan kaupungin perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa. Todellisuudessa Rooma kasvoi [[Tiber-joen]] varrella sijaitsevien kukkuloiden kylistä yhdeksi kaupungiksi. Perimätiedon mukaan Romulus perusti kaupungin [[Palatinuksen]] kukkulalle. Susi kasvattajana, minun sukuni olis kyl valinnut kyyhkyn.
+KYSYMYS: Kerro lisää: Palatinuksen
+
+### 673
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Miten tulivuori vaikuttaa Sisilian elämään?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Etna]] on Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä, ja se hallitsee saaren itäosaa. Tulivuorten ympäristö on yleensä hedelmällistä maata, ja Etnan rinteillä viljellään muun muassa viiniä. Kaupunki [[Catania]] sijaitsee sen juurella, ja purkaukset häiritsevät toisinaan lentoliikennettä. Etna kyl näkyy ylhäältä kauas.
+KYSYMYS: Kerro lisää: Etna
+
+### 674
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+AIEMPI KYSYMYS: Miten tulivuori vaikuttaa Sisilian elämään?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Etna]] on Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä, ja se hallitsee saaren itäosaa. Tulivuorten ympäristö on yleensä hedelmällistä maata, ja Etnan rinteillä viljellään muun muassa viiniä. Kaupunki [[Catania]] sijaitsee sen juurella, ja purkaukset häiritsevät toisinaan lentoliikennettä. Etna kyl näkyy ylhäältä kauas.
+KYSYMYS: Kerro lisää: Catania
+
+### 675
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+- [Tripoli — kaupunkilehti / Tripoli: Kolmesta kaupungista jäi yksi] Nimi Tripoli tulee kreikan sanoista treis poleis, kolme kaupunkia: Oea, Sabratha ja Leptis Magna. Foinikialaiset perustivat Oean 600-luvulla eaa., ja se on niistä ainoa, joka on ollut asuttu keskeytyksettä tähän päivään asti. Juuri siksi sen roomalaisesta ajasta on jäljellä niin vähän: kahden muun kaupungin rauniot säilyivät, koska niissä ei enää asuttu, mutta Oeassa vanhat rakennukset purettiin rakennusaineeksi tai jäivät uusien alle. Pystyssä on enää Marcus Aureliuksen riemukaari vuodelta 165. Arabiaksi kaupunkia sanotaan Tarabulus al-Gharbiksi, Lännen Tripoliksi, jotta se erottuu Libanonin Tripolista.
+AIEMPI KYSYMYS: Miksi Sisiliassa on niin monen kansan jälkiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Sisilia on ollut kaikkien maa. [[Foinikialaiset]] ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, [[arabit]] toivat sitrushedelmät ja sokeriruo'on, ja [[normannit]] rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan. Vieraita riitti, minä olen vain yksi lisää katolla.
+KYSYMYS: Kerro lisää: Foinikialaiset
+
+### 676
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Sisilia: Cannolo täytetään vasta tilauksesta] Cannolo on paistettu taikinaputki, joka täytetään makeutetulla ricotta-juustolla. Kunnon leipomossa se täytetään vasta kun asiakas tilaa — muuten kuori pehmenee. Ricotta tehdään lampaanmaidosta, ja arabit toivat sokeriruo’on saarelle 800-luvulla.
+AIEMPI KYSYMYS: Miksi Sisiliassa on niin monen kansan jälkiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Sisilia on ollut kaikkien maa. [[Foinikialaiset]] ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, [[arabit]] toivat sitrushedelmät ja sokeriruo'on, ja [[normannit]] rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan. Vieraita riitti, minä olen vain yksi lisää katolla.
+KYSYMYS: Kerro lisää: arabit
+
+### 677
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Miksi Sisiliassa on niin monen kansan jälkiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Sisilia on ollut kaikkien maa. [[Foinikialaiset]] ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, [[arabit]] toivat sitrushedelmät ja sokeriruo'on, ja [[normannit]] rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan. Vieraita riitti, minä olen vain yksi lisää katolla.
+KYSYMYS: Kerro lisää: normannit
+
+### 678
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+AIEMPI KYSYMYS: Mitä antiikin jäänteitä Sisiliassa on näkyvillä?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Agrigenton]] temppelilaakso on kreikkalaisten temppelirivi meren yllä, ja [[Piazza Armerinan]] roomalaishuvilassa on 3 500 neliömetriä mosaiikkia. Myös [[Syrakusa]] oli antiikin merkittävimpiä kreikkalaisia kaupunkeja, ja sen kalliolla on antiikin rakennuksia. Jäänteitä on siis sekä kreikkalaiselta että roomalaiselta ajalta. Mosaiikkia 3 500 neliötä, ja minä olen vaan katsellut sitä ylhäältä.
+KYSYMYS: Kerro lisää: Agrigenton
+
+### 679
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Muta piilotti mosaiikit seitsemäksisadaksi vuodeksi] Piazza Armerinan lähellä oleva roomalainen huvila rakennettiin 300-luvulla, ja sen lattioissa on noin 3 500 neliömetriä mosaiikkia — enemmän kuin missään muussa säilyneessä roomalaistalossa. Vuonna 1161 maanvyöry hautasi rakennuksen mutaan, ja juuri se pelasti kuvat: ne kaivettiin esiin vasta 1950-luvulla lähes ennallaan. Kuuluisin on kuusikymmentä metriä pitkä käytävä, jonka mosaiikissa pyydystetään villieläimiä eri puolilta valtakuntaa.
+AIEMPI KYSYMYS: Mitä antiikin jäänteitä Sisiliassa on näkyvillä?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Agrigenton]] temppelilaakso on kreikkalaisten temppelirivi meren yllä, ja [[Piazza Armerinan]] roomalaishuvilassa on 3 500 neliömetriä mosaiikkia. Myös [[Syrakusa]] oli antiikin merkittävimpiä kreikkalaisia kaupunkeja, ja sen kalliolla on antiikin rakennuksia. Jäänteitä on siis sekä kreikkalaiselta että roomalaiselta ajalta. Mosaiikkia 3 500 neliötä, ja minä olen vaan katsellut sitä ylhäältä.
+KYSYMYS: Kerro lisää: Piazza Armerinan
+
+### 680
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+AIEMPI KYSYMYS: Mitä antiikin jäänteitä Sisiliassa on näkyvillä?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Agrigenton]] temppelilaakso on kreikkalaisten temppelirivi meren yllä, ja [[Piazza Armerinan]] roomalaishuvilassa on 3 500 neliömetriä mosaiikkia. Myös [[Syrakusa]] oli antiikin merkittävimpiä kreikkalaisia kaupunkeja, ja sen kalliolla on antiikin rakennuksia. Jäänteitä on siis sekä kreikkalaiselta että roomalaiselta ajalta. Mosaiikkia 3 500 neliötä, ja minä olen vaan katsellut sitä ylhäältä.
+KYSYMYS: Kerro lisää: Syrakusa
+
+### 681
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+AIEMPI KYSYMYS: Miksi Messinansalmen yli ei ole siltaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Salmi on kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole, ja junat ajetaan yhä vaunuittain lautan kannelle. Silta on ollut suunnitelmissa vuosikymmeniä, ja syistä keskustellaan muun muassa kustannuksia ja maanjäristysalttiutta; en ole varma hankkeen nykytilasta. Mantereen puolella on [[Calabria]], ja saaren puolella [[Messina]]. Kolme kilometriä, ja minulta se sujuu kyl nopeasti.
+KYSYMYS: Kerro lisää: Calabria
+
+### 682
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+AIEMPI KYSYMYS: Miksi Messinansalmen yli ei ole siltaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Salmi on kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole, ja junat ajetaan yhä vaunuittain lautan kannelle. Silta on ollut suunnitelmissa vuosikymmeniä, ja syistä keskustellaan muun muassa kustannuksia ja maanjäristysalttiutta; en ole varma hankkeen nykytilasta. Mantereen puolella on [[Calabria]], ja saaren puolella [[Messina]]. Kolme kilometriä, ja minulta se sujuu kyl nopeasti.
+KYSYMYS: Kerro lisää: Messina
+
+### 683
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Ruoka: Kala joka kypsyy limessä] Ceviche on Perun kansallisruoka. Tuore kala leikataan paloiksi ja jätetään limemehuun, jonka happamuus kypsentää sen ilman lämpöä; mukaan tulevat suola, valkosipuli, sipuli ja chili. Alue vaihtelee reseptiä: pohjoisessa käytetään mustia simpukoita ja äyriäisiä, Andeilla taimenta ja jopa kanaa. Lime itsessään ei ole kotoisin Perusta – sitrushedelmät ovat peräisin Aasiasta ja tulivat mantereelle espanjalaisten mukana. Yhtä vanhaa ruokalajia, causa limeñaa, selitetään kolmella eri tarinalla, eikä yhtäkään niistä ole voitu todistaa.
+AIEMPI KYSYMYS: Mitä sisilialaiseen ruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on makea aihe. Sisilian ruoassa näkyvät saaren vaihtuneet valtaajat: arabit toivat [[sitrushedelmät]] ja sokeriruo'on, ja se maistuu leivonnaisissa. Tunnettu on [[cannolo]], ricottalla täytetty rapea leivos, joka täytetään usein vasta tilauksesta, sekä paistettu riisipallo [[arancini]]. Cannolo ei ole pulla, mutta kelpaa minulle.
+KYSYMYS: Kerro lisää: sitrushedelmät
+
+### 684
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Sisilia: Cannolo täytetään vasta tilauksesta] Cannolo on paistettu taikinaputki, joka täytetään makeutetulla ricotta-juustolla. Kunnon leipomossa se täytetään vasta kun asiakas tilaa — muuten kuori pehmenee. Ricotta tehdään lampaanmaidosta, ja arabit toivat sokeriruo’on saarelle 800-luvulla.
+AIEMPI KYSYMYS: Mitä sisilialaiseen ruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on makea aihe. Sisilian ruoassa näkyvät saaren vaihtuneet valtaajat: arabit toivat [[sitrushedelmät]] ja sokeriruo'on, ja se maistuu leivonnaisissa. Tunnettu on [[cannolo]], ricottalla täytetty rapea leivos, joka täytetään usein vasta tilauksesta, sekä paistettu riisipallo [[arancini]]. Cannolo ei ole pulla, mutta kelpaa minulle.
+KYSYMYS: Kerro lisää: cannolo
+
+### 685
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+AIEMPI KYSYMYS: Mitä sisilialaiseen ruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on makea aihe. Sisilian ruoassa näkyvät saaren vaihtuneet valtaajat: arabit toivat [[sitrushedelmät]] ja sokeriruo'on, ja se maistuu leivonnaisissa. Tunnettu on [[cannolo]], ricottalla täytetty rapea leivos, joka täytetään usein vasta tilauksesta, sekä paistettu riisipallo [[arancini]]. Cannolo ei ole pulla, mutta kelpaa minulle.
+KYSYMYS: Kerro lisää: arancini
+
+### 686
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+AIEMPI KYSYMYS: Miten Liechtensteinia hallitaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liechtenstein on perustuslaillinen perinnöllinen monarkia, ruhtinaskunta, jossa [[ruhtinaalla]] on vahva asema. Tietojeni mukaan ruhtinas [[Hans-Adam II]] on valtionpäämies ja hänen poikansa Alois hoitaa tehtäviä sijaisena vuodesta 2004. Maan parlamentti on [[Landtag]]. Pieni maa, mutta kruunu on kyl iso.
+KYSYMYS: Kerro lisää: ruhtinaalla
+
+### 687
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Edinburgh — kohdekartta / Kohdekartta: Charlotte Square] 1791–1820 Charlotte Square on yksi Edinburghin uuden kaupunginosan, New Townin, komeimmista aukioista. Arkkitehti Robert Adam suunnitteli sen vuonna 1791. Aukiosta tuli koko New Townin rakennushankkeen viimeinen ja hitain osa — se ”valmistui” vasta vuonna 1820, ja sen luoteiskulma jopa vasta vuonna 1990. Talossa numero 6, nimeltään Bute House, asuu nykyään Skotlannin pääministeri. Aukion kulmassa syntyi puhelimen keksijä Alexander Graham Bell. Puiston keskellä ratsastaa pronssinen prinssi Albert — patsaan paljasti itse kuningatar Victoria vuonna 1876. Elokuisin aukiolla pystytettiin vuosikymmenten ajan Edinburghin kirjallisuusfestivaalin valkoisia telttoja.
+AIEMPI KYSYMYS: Miten Liechtensteinia hallitaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liechtenstein on perustuslaillinen perinnöllinen monarkia, ruhtinaskunta, jossa [[ruhtinaalla]] on vahva asema. Tietojeni mukaan ruhtinas [[Hans-Adam II]] on valtionpäämies ja hänen poikansa Alois hoitaa tehtäviä sijaisena vuodesta 2004. Maan parlamentti on [[Landtag]]. Pieni maa, mutta kruunu on kyl iso.
+KYSYMYS: Kerro lisää: Hans-Adam II
+
+### 688
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+AIEMPI KYSYMYS: Miten Liechtensteinia hallitaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liechtenstein on perustuslaillinen perinnöllinen monarkia, ruhtinaskunta, jossa [[ruhtinaalla]] on vahva asema. Tietojeni mukaan ruhtinas [[Hans-Adam II]] on valtionpäämies ja hänen poikansa Alois hoitaa tehtäviä sijaisena vuodesta 2004. Maan parlamentti on [[Landtag]]. Pieni maa, mutta kruunu on kyl iso.
+KYSYMYS: Kerro lisää: Landtag
+
+### 689
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Kunstmuseum Liechtenstein] 2000 Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000. Ulkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin…
+- [Vaduz — kaupunkilehti / Vaduz: Taidemuseo mustana laatikkona] Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.
+AIEMPI KYSYMYS: Millainen on Liechtensteinin taidemuseo?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kunstmuseum Liechtenstein]] on valtion taidemuseo ja maan kansallinen taidekokoelma, ja se esittelee kansainvälistä modernia ja nykytaidetta. Kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus valmistui marraskuussa 2000 arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin suunnittelemana, ja ulkopinta on värjättyä betonia ja [[mustaa basalttia]], johon on upotettu jokikiviä. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus. Musta laatikko, jossa on kuusi näyttelytilaa, ja minä lennän sinne kyl tutkimaan.
+KYSYMYS: Kerro lisää: Kunstmuseum Liechtenstein
+
+### 690
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Khan As'ad Pashan] 1752 Pihaa ei jätetty auki taivaalle, vaan se katettiin. Kupoleja on kahdeksan, ja niiden keskellä on yksi suuri aukko, josta valo ja ilma pääsevät sisään. Kahdeksan kupolia noudattaa shiialaista perinnettä, ja keskiaukko muistuttaa persialaista rakennustapaa. Katto nostettiin korkealle, ja juuri korkeus pitää katetun pihan siedettävänä sekä kuumana kesänä että kylmänä talvena. Ottomaanien tapa koota rakennus kupoliyksiköistä yhdistyy tässä paikalliseen syyrialaiseen rakennustapaan. Kiveys on ablaq: vaaleaa ja tummaa kiveä vuorotellen kerros kerrokselta. Syyrian eteläosassa mustaa basalttia ja valkoista kalkkikiveä on suunnilleen yhtä paljon, joten raidoista tuli damaskoslaisen kivityön tun…
+- [Lissabon — kohdekartta / Kohdekartta: Calçada] Katso alas. Lissabonin jalkakäytävät eivät ole asfalttia vaan pieniä kivinuppeja, jotka on ladottu käsin hiekkaan ja kopautettu paikoilleen vasaralla. Kiviä on kahta lajia: mustaa basalttia ja valkoista kalkkikiveä, ja niistä syntyy kuvio. Tapa alkoi työmaalta, jota kukaan ei tullut katsomaan: vuosina 1840–1846 kenraali ja insinööri Eusebio Pinheiro Furtado johti São Jorgen linnan korjausta ja latoi linnan pihoihin mustavalkoisen siksakin, jota pidettiin aikaansa nähden kummallisena. Vuonna 1848 hän sai isomman tehtävän — Rossion aukion — ja latoi siihen aallon. Se oli kunnianosoitus merelle, jonka portugalilaiset olivat ylittäneet. Siitä kuvio lähti leviämään pitkin kaupunkia ja koko maata…
+AIEMPI KYSYMYS: Millainen on Liechtensteinin taidemuseo?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kunstmuseum Liechtenstein]] on valtion taidemuseo ja maan kansallinen taidekokoelma, ja se esittelee kansainvälistä modernia ja nykytaidetta. Kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus valmistui marraskuussa 2000 arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin suunnittelemana, ja ulkopinta on värjättyä betonia ja [[mustaa basalttia]], johon on upotettu jokikiviä. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus. Musta laatikko, jossa on kuusi näyttelytilaa, ja minä lennän sinne kyl tutkimaan.
+KYSYMYS: Kerro lisää: mustaa basalttia
+
+### 691
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Kunstmuseum Liechtenstein] 2000 Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000. Ulkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin…
+- [Vaduz — kaupunkilehti / Vaduz: Taidemuseo mustana laatikkona] Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.
+AIEMPI KYSYMYS: Millainen on Liechtensteinin taidemuseo?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kunstmuseum Liechtenstein]] on valtion taidemuseo ja maan kansallinen taidekokoelma, ja se esittelee kansainvälistä modernia ja nykytaidetta. Kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus valmistui marraskuussa 2000 arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin suunnittelemana, ja ulkopinta on värjättyä betonia ja [[mustaa basalttia]], johon on upotettu jokikiviä. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus. Musta laatikko, jossa on kuusi näyttelytilaa, ja minä lennän sinne kyl tutkimaan.
+KYSYMYS: Kerro lisää: Hilti Art Foundation
+
+### 692
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Millainen maa Liechtenstein maantieteellisesti on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Liechtenstein on pieni alppivaltio [[Sveitsin]] ja [[Itävallan]] välissä. Sen pääkaupunki [[Vaduz]] sijaitsee Reinin itärannalla Alppien juurella, ja maa on lähteen mukaan Euroopan neljänneksi pienin. Pinta-ala on noin 160 neliökilometriä, mutta en ole varma tarkasta luvusta. Maa on niin pieni, että minä ylitän sen kyl alle tunnissa.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 693
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Venetsia — kohdekartta / Kohdekartta: Markuksen hevoset] Isoisäsi näki ne siellä, missä ne olivat seisoneet kuusisataa vuotta: basilikan parvekkeella, katunäkymän yläpuolella. Sitä ennen ne olivat seisoneet Konstantinopolin hippodromilla, ja vuonna 1204 ne vietiin sieltä pois. Kuljetusta varten päät katkaistiin irti, ja samana vuonna kaulaan lisättiin pannat peittämään saumat — ne pannat ovat siinä yhä. Venetsiaan hevoset pystytettiin 1254, ja Petrarca kävi ihailemassa niitä. Vuonna 1797 Napoleon vei ne Pariisiin ja ne nostettiin Carrousel-riemukaareen; kahdeksantoista vuotta myöhemmin ne tuotiin takaisin, ja työn teki kapteeni nimeltä Dumaresq, jonka Itävallan keisari palkitsi kultaisella nuuskarasialla, kannessa timanteista tehdyt nimikirjaimet…
+AIEMPI KYSYMYS: Millainen maa Liechtenstein maantieteellisesti on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Liechtenstein on pieni alppivaltio [[Sveitsin]] ja [[Itävallan]] välissä. Sen pääkaupunki [[Vaduz]] sijaitsee Reinin itärannalla Alppien juurella, ja maa on lähteen mukaan Euroopan neljänneksi pienin. Pinta-ala on noin 160 neliökilometriä, mutta en ole varma tarkasta luvusta. Maa on niin pieni, että minä ylitän sen kyl alle tunnissa.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 694
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kaupunkilehti / Vaduz] Vaduz on Reinin laaksossa, jyrkän rinteen juurella, ja linna kohoaa kaupungin yllä lähes joka kulmasta näkyvänä. Pieni pääkaupunki on yhden ruhtinaskunnan hallinnon ja museoiden koti.
+- [Vaduz — kaupunkilehti / Pieni valtio kaupungin ympärillä: Vaduz, joka poltettiin 1499] Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Linnan rakentajiksi oletetaan Werdenberg-Sargansin kreivit, ja Liechtensteinin suku osti sen 1712.
+AIEMPI KYSYMYS: Millainen maa Liechtenstein maantieteellisesti on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Liechtenstein on pieni alppivaltio [[Sveitsin]] ja [[Itävallan]] välissä. Sen pääkaupunki [[Vaduz]] sijaitsee Reinin itärannalla Alppien juurella, ja maa on lähteen mukaan Euroopan neljänneksi pienin. Pinta-ala on noin 160 neliökilometriä, mutta en ole varma tarkasta luvusta. Maa on niin pieni, että minä ylitän sen kyl alle tunnissa.
+KYSYMYS: Kerro lisää: Vaduz
+
+### 695
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Liechtensteinin kansallismuseo] 1400-luku Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka. Feldkirchin ja Churin välisen kauppareitin tavarat tarkastettiin siellä. Hallitus toimi rakennuksessa 1800-luvun lopulta vuoteen 1905, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Rakennus vaurioitui 1992 ja museo suljettiin, ja laajennus avattiin 28.11.2003. Museossa on neljä osaa: päärakennus, postimuseo, aarrekammio (2015) ja maatalomuseo. Näyttely…
+- [Vaduz — kaupunkilehti / Vaduz: Kansallismuseo entisessä tavernassa] Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka, ja hallitus toimi siinä 1800-luvun lopulta vuoteen 1905. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Museossa on neljä osaa: päärakennus, postimuseo, aarrekammio ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta.
+AIEMPI KYSYMYS: Mistä Liechtensteinin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maa on saanut nimensä ruhtinassuvulta. Vuonna 1712 [[Liechtensteinin suku]] osti Vaduzin kreivikunnan, ja vuonna 1719 keisari [[Kaarle VI]] yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen. Raha ratkaisi, kuten niin usein.
+KYSYMYS: Kerro lisää: Liechtensteinin suku
+
+### 696
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mistä Liechtensteinin nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maa on saanut nimensä ruhtinassuvulta. Vuonna 1712 [[Liechtensteinin suku]] osti Vaduzin kreivikunnan, ja vuonna 1719 keisari [[Kaarle VI]] yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen. Raha ratkaisi, kuten niin usein.
+KYSYMYS: Kerro lisää: Kaarle VI
+
+### 697
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+AIEMPI KYSYMYS: Millä rahalla Liechtensteinissa maksetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liechtensteinissa maksetaan [[Sveitsin frangilla]], sillä maa on tiiviissä taloudellisessa yhteydessä Sveitsiin ja kuuluu sen kanssa [[tulliliitossa]]. Maa ei ole Euroopan unionin jäsen, mutta se kuuluu [[Euroopan talousalueeseen]]. Tällaiset tiedot voivat muuttua, joten ajankohtainen tilanne kannattaa tarkistaa. Frangi on minulle kyl liian painava kannettava.
+KYSYMYS: Kerro lisää: Sveitsin frangilla
+
+### 698
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+AIEMPI KYSYMYS: Millä rahalla Liechtensteinissa maksetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liechtensteinissa maksetaan [[Sveitsin frangilla]], sillä maa on tiiviissä taloudellisessa yhteydessä Sveitsiin ja kuuluu sen kanssa [[tulliliitossa]]. Maa ei ole Euroopan unionin jäsen, mutta se kuuluu [[Euroopan talousalueeseen]]. Tällaiset tiedot voivat muuttua, joten ajankohtainen tilanne kannattaa tarkistaa. Frangi on minulle kyl liian painava kannettava.
+KYSYMYS: Kerro lisää: tulliliitossa
+
+### 699
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+AIEMPI KYSYMYS: Millä rahalla Liechtensteinissa maksetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liechtensteinissa maksetaan [[Sveitsin frangilla]], sillä maa on tiiviissä taloudellisessa yhteydessä Sveitsiin ja kuuluu sen kanssa [[tulliliitossa]]. Maa ei ole Euroopan unionin jäsen, mutta se kuuluu [[Euroopan talousalueeseen]]. Tällaiset tiedot voivat muuttua, joten ajankohtainen tilanne kannattaa tarkistaa. Frangi on minulle kyl liian painava kannettava.
+KYSYMYS: Kerro lisää: Euroopan talousalueeseen
+
+### 700
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kaupunkilehti / Vaduz: Ostos, josta ruhtinaskunta syntyi] Liechtensteinin suku halusi paikan keisarikunnan valtiopäivillä, mutta sillä ei ollut maata suoraan keisarin alaisuudessa. Siksi se osti Schellenbergin herruuden 1699 ja Vaduzin kreivikunnan 1712 Hohenemsin suvulta. Vaduzin kreivikunta oli muodostettu jo 1342 Werdenbergin kreivikunnan osana, ja markkinaoikeudet kylälle oli antanut keisari Rudolf II 1592. Ruhtinaat eivät asuneet ostetulla maalla: lähteen mukaan suvereenin ruhtinaan ensimmäinen vierailu oli vasta 1842. Isoisän matkavuonna 1873 ruhtinas asui siis yhä muualla, ja vakituinen asuinpaikka siirtyi Vaduzin linnaan vasta 1938.
+- [Vaduz — kaupunkilehti / Pieni valtio kaupungin ympärillä: Vaduz, joka poltettiin 1499] Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Linnan rakentajiksi oletetaan Werdenberg-Sargansin kreivit, ja Liechtensteinin suku osti sen 1712.
+AIEMPI KYSYMYS: Mikä on Vaduzin linnan historia?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linna kohoaa jyrkän rinteen päällä ja on ruhtinassuvun asuinpaikka. Se mainitaan lähteissä vuonna 1322, ja Vaduzin kreivikunta muodostettiin vuonna 1342 [[Werdenbergin kreivikunnan]] osana. Švaabin sodassa vuonna 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän, mutta rakennus nousi uudelleen. Vuonna 1712 [[Liechtensteinin suku]] osti linnan, ja [[Švaabin sodan]] ajoista on kulunut yli viisisataa vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Werdenbergin kreivikunnan
+
+### 701
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Liechtensteinin kansallismuseo] 1400-luku Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka. Feldkirchin ja Churin välisen kauppareitin tavarat tarkastettiin siellä. Hallitus toimi rakennuksessa 1800-luvun lopulta vuoteen 1905, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Rakennus vaurioitui 1992 ja museo suljettiin, ja laajennus avattiin 28.11.2003. Museossa on neljä osaa: päärakennus, postimuseo, aarrekammio (2015) ja maatalomuseo. Näyttely…
+- [Vaduz — kaupunkilehti / Vaduz: Kansallismuseo entisessä tavernassa] Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka, ja hallitus toimi siinä 1800-luvun lopulta vuoteen 1905. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Museossa on neljä osaa: päärakennus, postimuseo, aarrekammio ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta.
+AIEMPI KYSYMYS: Mikä on Vaduzin linnan historia?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linna kohoaa jyrkän rinteen päällä ja on ruhtinassuvun asuinpaikka. Se mainitaan lähteissä vuonna 1322, ja Vaduzin kreivikunta muodostettiin vuonna 1342 [[Werdenbergin kreivikunnan]] osana. Švaabin sodassa vuonna 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän, mutta rakennus nousi uudelleen. Vuonna 1712 [[Liechtensteinin suku]] osti linnan, ja [[Švaabin sodan]] ajoista on kulunut yli viisisataa vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Liechtensteinin suku
+
+### 702
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Vaduzin linna] 1100-luku– Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja virallinen asuinpaikka sekä kaupungin tunnetuin maamerkki. Se kohoaa rinteellä kaupungin yllä ja näkyy lähes joka puolelle. Linnan vanhimmat osat ovat 1100-luvun torni ja itäpuolen rakenteet, ja linna mainitaan lähteissä 1322. Tornin pohja on noin 12 × 13 metriä ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit. Sveitsin valaliitto poltti linnan Švaabin sodassa 1499. Kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640, ja Liechtensteinin suku osti linnan 1712. Linnassa on Anna-kappeli, jossa on myöhäisgoottilainen pääalttari. Suurkunnostus tehtiin 1900-luv…
+- [Vaduz — kaupunkilehti / Vaduz: Linna rinteellä] Vaduzin linna kohoaa rinteellä kaupungin yllä, ja se on ruhtinaan palatsi ja virallinen asuinpaikka. Linnan vanhimmat osat ovat 1100-luvun torni ja itäosat. Tornin pohja on noin 12 × 13 metriä ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit. Sveitsin valaliitto poltti linnan Švaabin sodassa 1499, ja kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640. Liechtensteinin suku osti linnan 1712, ja vakituinen asuinpaikka siitä tuli 1938. Koska ruhtinassuku asuu linnassa yhä, se ei ole yleisölle avoin.
+AIEMPI KYSYMYS: Mikä on Vaduzin linnan historia?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linna kohoaa jyrkän rinteen päällä ja on ruhtinassuvun asuinpaikka. Se mainitaan lähteissä vuonna 1322, ja Vaduzin kreivikunta muodostettiin vuonna 1342 [[Werdenbergin kreivikunnan]] osana. Švaabin sodassa vuonna 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän, mutta rakennus nousi uudelleen. Vuonna 1712 [[Liechtensteinin suku]] osti linnan, ja [[Švaabin sodan]] ajoista on kulunut yli viisisataa vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Švaabin sodan
+
+### 703
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kaupunkilehti / Vaduz] Vaduz on Reinin laaksossa, jyrkän rinteen juurella, ja linna kohoaa kaupungin yllä lähes joka kulmasta näkyvänä. Pieni pääkaupunki on yhden ruhtinaskunnan hallinnon ja museoiden koti.
+AIEMPI KYSYMYS: Mitä Vaduz-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Lähteiden mukaan nimi on romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Kaupunki sijaitsee [[Reinin]] itärannalla [[Alppien]] juurella. En ole varma, miten nimi on aikojen kuluessa muuttunut. Vesijohto vuoren juurella, ihan järkevä nimi kaupungille.
+KYSYMYS: Kerro lisää: Reinin
+
+### 704
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mitä Vaduz-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Lähteiden mukaan nimi on romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Kaupunki sijaitsee [[Reinin]] itärannalla [[Alppien]] juurella. En ole varma, miten nimi on aikojen kuluessa muuttunut. Vesijohto vuoren juurella, ihan järkevä nimi kaupungille.
+KYSYMYS: Kerro lisää: Alppien
+
+### 705
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje: Üsküb ja rautatie 1873] Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, ja samana vuonna valmistui Skopje–Salonika-rautatie. Asema rakennettiin Vardarin eteläpuolelle, ja rata toi lähteiden mukaan lisää matkustajia. 1800-luvun alkupuolella Bitola ja Štip olivat Skopjea suurempia, mutta vuosisadan puolivälin jälkeen kaupunki alkoi toipua. 1800-luvun lopulla Skopjesta tuli Kosovon vilayetin pääkaupunki. Vuosisadan vaihteessa Skopjen kaupungissa oli noin 30 000 asukasta. 1900-luvun alussa talouden perustana olivat värjäys, kankaankudonta, nahkurintyö, rautatyö sekä viini- ja jauhotuotanto.
+AIEMPI KYSYMYS: Millainen Vaduz oli 1800-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: 1870-luvulla Vaduz oli kylä ja alueen hallintokeskus. Maan armeija oli lakkautettu vuonna 1868, ja [[rautatie]] oli rakennettu maan halki vuonna 1872, mutta asema on [[Schaanin]] kunnan puolella. Suvun postiperimätiedon mukaan ruhtinas asui tuolloin [[Wienissä]], vaikka linna katsoi kylää rinteeltä. Rautatie ohi, mutta kyyhky tulee aina perille.
+KYSYMYS: Kerro lisää: rautatie
+
+### 706
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+AIEMPI KYSYMYS: Millainen Vaduz oli 1800-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: 1870-luvulla Vaduz oli kylä ja alueen hallintokeskus. Maan armeija oli lakkautettu vuonna 1868, ja [[rautatie]] oli rakennettu maan halki vuonna 1872, mutta asema on [[Schaanin]] kunnan puolella. Suvun postiperimätiedon mukaan ruhtinas asui tuolloin [[Wienissä]], vaikka linna katsoi kylää rinteeltä. Rautatie ohi, mutta kyyhky tulee aina perille.
+KYSYMYS: Kerro lisää: Schaanin
+
+### 707
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Pyhän Yrjänän kirkko] 1706 Bergenin spitaalisairaala mainitaan asiakirjoissa jo 1411, ja sitä pitivät silloin Nonneseterin luostarin nunnat. Sairaalan kappeli palveli aluksi vain potilaita, mutta siitä tuli lopulta oma seurakuntansa Årstadin puolelle, ja sen papit hoitivat myös läheisen kaupunginvankilan, vaivaistalon ja leskikodin. Kirkko paloi sairaalan mukana 1640 ja uudelleen vuoden 1702 suurpalossa; nykyinen vihreä puinen ristikirkko on rakennettu sen jälkeen myöhäisbarokin tapaan, ja nykyasunsa se sai vuosien 1789–90 muutostöissä. Istumapaikkoja on 125. Lääkäri Gerhard Henrik Armauer Hansen palasi Bergeniin 1868 tutkimaan spitaalia Lungegårdin sairaalaan alan tunnetun asiantuntijan Daniel Cornelius Daniels…
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+AIEMPI KYSYMYS: Millainen Vaduz oli 1800-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: 1870-luvulla Vaduz oli kylä ja alueen hallintokeskus. Maan armeija oli lakkautettu vuonna 1868, ja [[rautatie]] oli rakennettu maan halki vuonna 1872, mutta asema on [[Schaanin]] kunnan puolella. Suvun postiperimätiedon mukaan ruhtinas asui tuolloin [[Wienissä]], vaikka linna katsoi kylää rinteeltä. Rautatie ohi, mutta kyyhky tulee aina perille.
+KYSYMYS: Kerro lisää: Wienissä
+
+### 708
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+AIEMPI KYSYMYS: Kuinka paljon Vaduzissa asuu ihmisiä?
+AIEMPI VASTAUS (Livia):
+No niin, pieni luku. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta [[Schaan]] on silti suurempi. [[Liechtenstein]] on lähteen mukaan Euroopan neljänneksi pienin valtio, joten pääkaupunkikin on pieni. Vaduz on yhden [[ruhtinaskunnan]] hallinnon ja museoiden koti. Pieni pääkaupunki, hyvä ettei tarvitse lentää kauas.
+KYSYMYS: Kerro lisää: Schaan
+
+### 709
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Kunstmuseum Liechtenstein] 2000 Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000. Ulkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin…
+- [Vaduz — kaupunkilehti / Vaduz: Taidemuseo mustana laatikkona] Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.
+AIEMPI KYSYMYS: Kuinka paljon Vaduzissa asuu ihmisiä?
+AIEMPI VASTAUS (Livia):
+No niin, pieni luku. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta [[Schaan]] on silti suurempi. [[Liechtenstein]] on lähteen mukaan Euroopan neljänneksi pienin valtio, joten pääkaupunkikin on pieni. Vaduz on yhden [[ruhtinaskunnan]] hallinnon ja museoiden koti. Pieni pääkaupunki, hyvä ettei tarvitse lentää kauas.
+KYSYMYS: Kerro lisää: Liechtenstein
+
+### 710
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kaupunkilehti / Vaduz] Vaduz on Reinin laaksossa, jyrkän rinteen juurella, ja linna kohoaa kaupungin yllä lähes joka kulmasta näkyvänä. Pieni pääkaupunki on yhden ruhtinaskunnan hallinnon ja museoiden koti.
+AIEMPI KYSYMYS: Kuinka paljon Vaduzissa asuu ihmisiä?
+AIEMPI VASTAUS (Livia):
+No niin, pieni luku. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta [[Schaan]] on silti suurempi. [[Liechtenstein]] on lähteen mukaan Euroopan neljänneksi pienin valtio, joten pääkaupunkikin on pieni. Vaduz on yhden [[ruhtinaskunnan]] hallinnon ja museoiden koti. Pieni pääkaupunki, hyvä ettei tarvitse lentää kauas.
+KYSYMYS: Kerro lisää: ruhtinaskunnan
+
+### 711
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Kunstmuseum Liechtenstein] 2000 Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000. Ulkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin…
+- [Vaduz — kaupunkilehti / Vaduz: Taidemuseo mustana laatikkona] Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.
+AIEMPI KYSYMYS: Mitä museoita Vaduzissa on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tunnetuin on [[Kunstmuseum Liechtenstein]], joka valmistui marraskuussa 2000 ja jonka ulkopinta on mustaa basalttia ja värjättyä betonia. Sen kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus, ja tietojeni mukaan kaupungissa on myös maan kansallismuseo [[Landesmuseum]]. Museoita pienessä kaupungissa, ja kaikki mahtuvat yhteen kävelylenkkiin.
+KYSYMYS: Kerro lisää: Kunstmuseum Liechtenstein
+
+### 712
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Kunstmuseum Liechtenstein] 2000 Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000. Ulkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin…
+- [Vaduz — kaupunkilehti / Vaduz: Taidemuseo mustana laatikkona] Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.
+AIEMPI KYSYMYS: Mitä museoita Vaduzissa on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tunnetuin on [[Kunstmuseum Liechtenstein]], joka valmistui marraskuussa 2000 ja jonka ulkopinta on mustaa basalttia ja värjättyä betonia. Sen kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus, ja tietojeni mukaan kaupungissa on myös maan kansallismuseo [[Landesmuseum]]. Museoita pienessä kaupungissa, ja kaikki mahtuvat yhteen kävelylenkkiin.
+KYSYMYS: Kerro lisää: Hilti Art Foundation
+
+### 713
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+AIEMPI KYSYMYS: Mitä museoita Vaduzissa on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tunnetuin on [[Kunstmuseum Liechtenstein]], joka valmistui marraskuussa 2000 ja jonka ulkopinta on mustaa basalttia ja värjättyä betonia. Sen kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa. Viereen lisättiin vuonna 2015 [[Hilti Art Foundation]] -säätiön näyttelyrakennus, ja tietojeni mukaan kaupungissa on myös maan kansallismuseo [[Landesmuseum]]. Museoita pienessä kaupungissa, ja kaikki mahtuvat yhteen kävelylenkkiin.
+KYSYMYS: Kerro lisää: Landesmuseum
+
+### 714
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miksi pohjoisessa on mäki, jolla on satatuhatta ristiä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Šiauliain]] lähellä kohoavalle [[Ristien mäelle]] on tuotu jo yli satatuhatta ristiä. Tapa on lähteiden mukaan vanha ja liittyy muistamiseen ja uskoon, mutta en ole varma sen tarkasta alkuperästä. Paikka on nykyään tunnettu pyhiinvaelluskohde, ja [[Johannes Paavali II]] vieraili siellä vuonna 1993. Minä en tuo muuta kuin kirjeitä.
+KYSYMYS: Kerro lisää: Šiauliain
+
+### 715
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington: Raiteet, jotka veivät kaupungin mäelle] Ahdas keskusta ei voinut kasvaa tasaisesti joka suuntaan, koska satama ja jyrkät rinteet sulkivat sen väliinsä. Ratkaisu avattiin 22. helmikuuta 1902: köysirata alkoi kuljettaa matkustajia Lambton Quayn liikekeskustasta Kelburnin rinteelle kasvitieteellisen puutarhan portille asti. Rata on yksiraiteinen, ja vaunut ohittavat toisensa radan puolivälissä olevalla ohituspaikalla. Yläasemalle rakennettiin 1905 kioski, josta tuli maamerkki; se paloi myöhemmin, ja tilalle valmistui nykyinen ravintola 1984.
+AIEMPI KYSYMYS: Miksi pohjoisessa on mäki, jolla on satatuhatta ristiä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Šiauliain]] lähellä kohoavalle [[Ristien mäelle]] on tuotu jo yli satatuhatta ristiä. Tapa on lähteiden mukaan vanha ja liittyy muistamiseen ja uskoon, mutta en ole varma sen tarkasta alkuperästä. Paikka on nykyään tunnettu pyhiinvaelluskohde, ja [[Johannes Paavali II]] vieraili siellä vuonna 1993. Minä en tuo muuta kuin kirjeitä.
+KYSYMYS: Kerro lisää: Ristien mäelle
+
+### 716
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Miksi pohjoisessa on mäki, jolla on satatuhatta ristiä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Šiauliain]] lähellä kohoavalle [[Ristien mäelle]] on tuotu jo yli satatuhatta ristiä. Tapa on lähteiden mukaan vanha ja liittyy muistamiseen ja uskoon, mutta en ole varma sen tarkasta alkuperästä. Paikka on nykyään tunnettu pyhiinvaelluskohde, ja [[Johannes Paavali II]] vieraili siellä vuonna 1993. Minä en tuo muuta kuin kirjeitä.
+KYSYMYS: Kerro lisää: Johannes Paavali II
+
+### 717
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miksi Liettua oli 1400-luvulla niin suuri?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on pitkä tarina. Liettuan suuriruhtinaskunta oli 1400-luvulla Euroopan laajin valtio, ja se ulottui Itämereltä [[Mustallemerelle]]. Se oli myös Euroopan viimeinen pakanallinen valtio, ja [[kristinusko]] tuli Liettuaan vasta vuonna 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan. Laajuutta kuvaa hyvin se, että [[suuriruhtinaskunnan]] raja kulki kahden meren välillä. Itämereltä Mustallemerelle, ihan kunnon lentomatka.
+KYSYMYS: Kerro lisää: Mustallemerelle
+
+### 718
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Kuninkaanhaudat] Laakson pohjoisreunan jyrkänteessä on rivi Petran suurimpia hautajulkisivuja, joita kutsutaan yhteisnimellä kuninkaanhaudat. Ne edustavat hellenistisen arkkitehtuurin nabatealaista versiota, mutta julkisivut ovat kuluneet pahoin — hiekkakivi rapautuu, ja moni yksityiskohta on kadonnut kokonaan. Ryhmään luetaan neljä hautaa. Palatsihaudan arvellaan olleen Petran kuninkaiden hauta. Sen vieressä on Korinttilainen hauta, jonka arkkitehtuuri on samaa hellenististä sukua kuin Aarrekammion. Kaksi muuta ovat Silkkihauta ja Uurnahauta, joista Silkkihauta jää vaatimattomammaksi. Uurnahauta on ryhmän näyttävin. Sen edessä on suuri piha, jota kannattelevat holvikaaret, ja rakennus sai myöhemmin kokonaa…
+- [Port Vila — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] nykyaika Cathédrale du Sacré-Cœur on Port Vilan moderni katolinen katedraali ja Port Vilan hiippakunnan istuin. Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: ranska on englannin ja bislaman ohella yksi Vanuatun virallisista kielistä. Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa väestöstä; katolinen kirkko ja Melanesian kirkko ovat kumpikin noin viidentoista prosentin kokoisia. Kirkkokuntien jako kertoo saarten lähetyshistoriasta: lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, ja presbyteerit menestyivät erityisesti eteläisillä saarilla. Ni-vanuatu…
+AIEMPI KYSYMYS: Miksi Liettua oli 1400-luvulla niin suuri?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on pitkä tarina. Liettuan suuriruhtinaskunta oli 1400-luvulla Euroopan laajin valtio, ja se ulottui Itämereltä [[Mustallemerelle]]. Se oli myös Euroopan viimeinen pakanallinen valtio, ja [[kristinusko]] tuli Liettuaan vasta vuonna 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan. Laajuutta kuvaa hyvin se, että [[suuriruhtinaskunnan]] raja kulki kahden meren välillä. Itämereltä Mustallemerelle, ihan kunnon lentomatka.
+KYSYMYS: Kerro lisää: kristinusko
+
+### 719
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Miksi Liettua oli 1400-luvulla niin suuri?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on pitkä tarina. Liettuan suuriruhtinaskunta oli 1400-luvulla Euroopan laajin valtio, ja se ulottui Itämereltä [[Mustallemerelle]]. Se oli myös Euroopan viimeinen pakanallinen valtio, ja [[kristinusko]] tuli Liettuaan vasta vuonna 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan. Laajuutta kuvaa hyvin se, että [[suuriruhtinaskunnan]] raja kulki kahden meren välillä. Itämereltä Mustallemerelle, ihan kunnon lentomatka.
+KYSYMYS: Kerro lisää: suuriruhtinaskunnan
+
+### 720
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+AIEMPI KYSYMYS: Millainen on Liettuan hiekkakaistale lännessä?
+AIEMPI VASTAUS (Livia):
+Ai se. Lännessä erottuu ohut hiekkakaistale, [[Kuurinkynnäs]], joka sulkee taakseen oman lahtensa, [[Kuurinlahden]]. Sen dyynit nousevat noin kuudenkymmenen metrin korkeuteen. Liettuan puolen tunnetuin kylä on tietojeni mukaan [[Nida]]. Hiekkaa ja merta, ylhäältä kaunista.
+KYSYMYS: Kerro lisää: Kuurinkynnäs

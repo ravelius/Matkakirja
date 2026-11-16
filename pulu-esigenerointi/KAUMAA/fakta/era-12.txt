@@ -1,0 +1,445 @@
+### v2-445
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: Välimeren
+VASTAUS: Välimeri on Euroopan, Afrikan ja Aasian välissä oleva sisämeri, jonka pinta-ala on noin 2,5 miljoonaa neliökilometriä. Se yhtyy Atlantin valtamereen kapean [[Gibraltarinsalmen]] kautta, ja [[Sisilian]] seutu jakaa sen läntiseen ja itäiseen osaan. Vuorovesi on useimmiten pieni, vain muutaman kymmenen senttimetriä, ja suolapitoisuus on valtamerta suurempi. Roomalaiset kutsuivat merta nimellä [[mare nostrum]], meidän meremme, koska se yhdisti heidän valtakuntansa osat. Merellä on ollut merkitystä kaupalle ja kulttuurille jo antiikista, ja sen rannikoilla ovat Marseillen kaltaiset vanhat satamakaupungit.
+
+### v2-446
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: kalkkikiven
+VASTAUS: Kalkkikivi on sedimenttikivi, jonka pääaine on kalsiumkarbonaatti. Se syntyy pääosin meren eliöiden kuorista ja luurangoista, jotka kerrostuvat merenpohjaan miljoonien vuosien kuluessa. Kivi liukenee hitaasti hapanta sadevettä, ja siksi kalkkikivialueille syntyy [[karstimaisemia]], luolia ja maanalaisia vesiväyliä. Luolissa saattaa kasvaa [[tippukiviä]], joita muodostuu tipoittain laskeutuvasta kalkkipitoisesta vedestä. Kalkkikiveä käytetään rakennuskivenä, ja siitä valmistetaan myös [[sementin]] raaka-ainetta. Marseillen lähellä Calanquesin valkoiset kalliot ovat tästä kivestä, ja ne näyttävät hohtavan vasten sinistä merta.
+
+### v2-447
+KOHDE: kaupunki:marseille
+KYSYMYS: Kerro lisää: kansallispuisto
+VASTAUS: Kansallispuisto on suojeltu luonnonalue, jonka tarkoitus on säilyttää maisema, kasvit ja eläimet sellaisina kuin ne luonnossa ovat, mutta sallia myös kävijöiden virkistyskäyttö. Idea syntyi 1800-luvulla, ja ensimmäinen kansallispuisto perustettiin Yhdysvaltoihin vuonna 1872. Euroopassa ensimmäiset kansallispuistot perustettiin Ruotsiin 1900-luvun alussa. Suomessa kansallispuistoja on monta, esimerkiksi Helsingin lähellä [[Nuuksion kansallispuisto]]. Ranskassa Marseillen eteläpuolella sijaitsee [[Calanquesin kansallispuisto]], joka suojelee kalkkikivisiä poukamia. Puistoissa liikkumista ohjataan säännöin, mutta [[jokamiehenoikeuksista]] riippuen osa toiminnasta on sallittua ilman erillistä lupaa.
+
+### v2-448
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Englanti
+VASTAUS: Englanti on Yhdistyneen kuningaskunnan suurin ja väkirikkain maa, ja sen asukasluku on yli viisikymmentäkuusi miljoonaa. Pääkaupunki on Lontoo, ja kieli on englanti, joka levisi maailmalle aikanaan valtakunnan laajentuessa. Englannin historiassa tunnetaan [[Magna Carta]], vuonna 1215 laadittu asiakirja, joka rajoitti kuninkaan valtaa. Kuningas [[Henrik VIII]] erotti 1500-luvulla Englannin Rooman kirkosta ja perusti Englannin kirkon. Kirjallisuudessa maan tunnetuin nimi on [[Shakespeare]], jonka näytelmiä esitetään yhä kaikkialla. Teollinen vallankumous alkoi Englannin pohjoisosissa, ja se muutti sekä maata että koko maailmaa.
+
+### v2-449
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Skotlanti
+VASTAUS: Skotlanti on Britannian saaren pohjoisosa ja yksi Yhdistyneen kuningaskunnan neljästä maasta. Pääkaupunki on [[Edinburgh]], suurin kaupunki Glasgow, ja asukkaita on noin viisi ja puoli miljoonaa. Maa jakautuu perinteisesti tasaisempaan eteläosaan ja vuoristoiseen [[Ylämaat]]-alueeseen. Skotlanti liittyi Englannin kanssa yhteiseen kuningaskuntaan vuonna 1707, ja siitä lähtien maalla on ollut oma oikeus- ja koulujärjestelmänsä. Vuonna 1999 maahan palautettiin oma [[Skotlannin parlamentti]]. Skotlantilaisia on lähtenyt maailmalle paljon, ja yksi heistä, James Finlayson, perusti vuonna 1820 konepajan Tampereelle.
+
+### v2-450
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Wales
+VASTAUS: Wales on Britannian saaren länsiosan maa, jonka pääkaupunki on [[Cardiff]] ja asukasluku noin kolme miljoonaa. Maan oma kieli on [[kymri]], keltteihin kuuluva kieli, jota puhuu noin viidennes asukkaista, ja kaikki walesilaiset koululaiset opiskelevat sitä. Walesin lipussa on punainen lohikäärme. Korkein vuori on Snowdon, noin 1 085 metriä korkea. Maa tunnetaan linnoistaan, joita kuningas Edward I rakennutti 1200-luvulla, sekä hiilikaivosteollisuudestaan, joka muovasi eteläisen Walesin yhteisöjä. Nykyään lakeja säätää osittain Walesin oma parlamentti, [[Senedd]].
+
+### v2-451
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Pohjois-Irlanti
+VASTAUS: Pohjois-Irlanti on Irlannin saaren koillisosa, ja se kuuluu Yhdistyneeseen kuningaskuntaan. Pääkaupunki on [[Belfast]], jossa rakennettiin muun muassa matkustajalaiva [[Titanic]]. Maa syntyi Irlannin jaossa 1920-luvun alussa. Rannikolla sijaitsee [[Giant's Causeway]], basalttipylväiden muodostama luonnonmuodostelma, joka on Unescon maailmanperintökohde. Maan lähihistoriaan kuuluu 1960-luvun lopulta 1990-luvulle kestänyt levottomuuksien kausi, jonka päätti vuonna 1998 tehty [[Pitkäperjantain sopimus]]. Sen jälkeen alueella on ollut rauhallisempaa, mutta yhteiskunnalliset jaot ovat edelleen osa keskustelua.
+
+### v2-452
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: vasemmanpuoleisen liikenteen
+VASTAUS: Vasemmanpuoleinen liikenne tarkoittaa sitä, että ajoneuvot kulkevat tien vasenta puolta. Euroopassa sitä noudatetaan Britanniassa ja Irlannissa sekä [[Maltalla]] ja [[Kyproksella]]. Aiemmin vasemmanpuoleinen liikenne oli yleisempää, ja monissa maissa se muutettiin vasta autoilun yleistyessä. Ruotsissa siirryttiin oikeanpuoleiseen liikenteeseen syyskuussa 1967, ja päivä tunnetaan nimellä [[Dagen H]]. Syyt vaihtelivat maittain: ajon turvallisuus, rajanylitykset ja autojen valmistus vaikuttivat päätöksiin. Britanniassa vaihtoa ei ole tehty, koska se olisi kallista ja hankalaa saaren oloissa.
+
+### v2-453
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Napoleonin
+VASTAUS: Napoleon Bonaparte syntyi vuonna 1769 Korsikalla ja nousi Ranskan vallankumouksen sotien aikana kenraaliksi ja sittemmin vallan huipulle. Hän kruunautti itsensä keisariksi vuonna 1804. Hänen ajaltaan periytyy [[Napoleonin lakikirja]], joka yhtenäisti Ranskan siviilioikeuden ja vaikutti useiden maiden lainsäädäntöön. Hän kävi sotia lähes koko Euroopassa, ja viimeinen suuri tappio tuli [[Waterloon taistelussa]] vuonna 1815. Aiemmin hänet oli karkotettu [[Elballe]], mutta lopullinen maanpako tapahtui Etelä-Atlantin St. Helenalla, jossa hän kuoli vuonna 1821. Hänen perintöään arvioidaan edelleen eri tavoin.
+
+### v2-454
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Iltapäivätee
+VASTAUS: Iltapäivätee sai alkunsa 1800-luvulla, kun yläluokan päivällinen syötiin vasta myöhään illalla. Bedfordin herttuatar [[Anna Russell]] alkoi noin vuonna 1840 pyytää teetä ja pientä purtavaa väliajalle, ja tapa levisi seurapiireihin. Sitä sanotaan myös matalaksi teeksi, koska se nautittiin salongin matalien sivupöytien ääressä. Nimi [[high tea]], korkea tee, ei ole sen hienompi muoto vaan päinvastoin työväen kunnon iltaruoka, joka syötiin viiden ja seitsemän välillä korkean ruokapöydän ääressä. Moni käyttää nimiä sekaisin, mutta alkuperäinen ero on luokkaero.
+
+### v2-455
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: scones
+VASTAUS: Scone on pieni, nopeasti leivottava leivonnainen, jonka taikina nostetaan leivinjauheella eikä hiivalla. Perusaineet ovat vehnäjauhot, voi, maito ja hieman sokeria. Ne leikataan usein pyöreiksi tai kolmionmuotoisiksi ja syödään lämpiminä tai huoneenlämpöisinä. Iltapäiväteen yhteydessä scone halkaistaan ja täytetään hillolla sekä [[clotted cream]] -paksulla kermalla. Englannissa kiistellään siitä, kumpi kuuluu ensin, ja kiista jakaa [[Cornwallin]] ja [[Devonin]] asukkaat: Cornwallissa levitetään hillo ensin, Devonissa kerma. En ole varma, mistä nimi on peräisin.
+
+### v2-456
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: höyrykone
+VASTAUS: Höyrykone on kone, joka muuttaa höyryn lämpöenergian liikkeeksi. Antiikin Kreikassa Heron kuvasi laitteen, joka pyöri höyryn voimalla, mutta sillä ei tehty työtä. Käytännöllisen koneen rakensi englantilainen [[Thomas Newcomen]] vuonna 1712 kaivosten tyhjentämiseen. Skotlantilainen James Watt paransi koneen hyötysuhdetta 1700-luvun jälkipuoliskolla, ja tämä mahdollisti sen käytön tehtaissa. Höyryvetureiden aikakausi alkoi 1800-luvun alussa, ja [[George Stephenson]] on tunnettu rautateiden uranuurtajana. Höyry vei myös [[höyrylaivojen]] liikkeelle, mikä lyhensi merimatkoja ja muutti kauppaa.
+
+### v2-457
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: James Watt
+VASTAUS: James Watt syntyi vuonna 1736 Skotlannissa ja kuoli vuonna 1819. Hän työskenteli aluksi mittausvälineiden valmistajana Glasgow'n yliopistossa, ja siellä hän pääsi korjaamaan Newcomenin höyrykonetta. Hän huomasi koneen tuhlaavan paljon lämpöä ja kehitti erillisen lauhduttimen, joka teki koneesta merkittävästi tehokkaamman. Yhteistyö liikemies [[Matthew Boultonin]] kanssa vei koneet tehtaisiin ja kaivoksiin eri puolille Britanniaa. Watt määritteli myös [[hevosvoiman]] teholuvuksi, jotta koneiden suorituskykyä voitiin verrata hevosten työhön, ja sähkötehon yksikkö [[watti]] on nimetty hänen mukaansa.
+
+### v2-458
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Manchester
+VASTAUS: Manchester on Luoteis-Englannin suurkaupunki, josta tuli 1800-luvulla maailman suurin puuvillateollisuuden keskus. Sitä kutsuttiin leikillisesti nimellä Cottonopolis, ja Tampereen liikanimi Pohjolan Manchester on lainattu sieltä. Vuonna 1830 avattiin ensimmäinen säännöllistä liikennettä hoitanut [[Liverpoolin ja Manchesterin rautatie]], ja vuonna 1894 valmistui [[Manchester Ship Canal]], joka toi valtamerilaivat kaupungin lähelle. Saksalainen [[Friedrich Engels]] asui kaupungissa ja kuvasi työläisten oloja 1840-luvulla. Nykyään Manchester tunnetaan musiikistaan ja jalkapallojoukkueistaan.
+
+### v2-459
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: Football Association
+VASTAUS: Football Association eli FA perustettiin Lontoossa 26. lokakuuta 1863, kun joukkueiden edustajat kokoontuivat [[Freemasons' Tavernissa]] sopimaan yhteisistä säännöistä. Keskeinen hahmo oli asianajaja [[Ebenezer Cobb Morley]], joka laati sääntöluonnoksen. Erimielisyys siitä, saako palloa kantaa käsissä ja potkia vastustajan sääriin, johti siihen, että osa seuroista jätti liiton ja alkoi pelata rugbyä. Liitto järjesti vuosina 1871–1872 ensimmäisen [[FA Cup]] -turnauksen, jota pidetään maailman vanhimpana jalkapallokilpailuna. Säännöt levisivät vähitellen muualle Eurooppaan ja maailmalle.
+
+### v2-460
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: rugby
+VASTAUS: Rugby on joukkuepeli, jonka syntypaikkana pidetään englantilaista Rugbyn kaupunkia ja sen koulua, jonka nimi on [[Rugby School]]. Legendan mukaan oppilas [[William Webb Ellis]] otti vuonna 1823 pallon syliinsä kesken jalkapallo-ottelun ja juoksi sen kanssa, mutta tarinan todenperäisyydestä historioitsijat ovat epävarmoja. Nykyisten sääntöjen pohjana on vuonna 1871 perustettu [[Rugby Football Union]]. Lajista on kaksi päämuotoa, rugby union ja rugby league, jotka erkanivat 1800-luvun lopulla. Euroopassa tunnetuin kilpailu on vuosittainen [[Six Nations]] -turnaus, jossa pelaavat Englanti, Skotlanti, Wales, Irlanti, Ranska ja Italia.
+
+### v2-461
+KOHDE: maa:GBR
+KYSYMYS: Kerro lisää: kriketti
+VASTAUS: Kriketti on maila- ja pallopeli, jossa kaksi yksitoistahenkistä joukkuetta kohtaa vuorotellen lyöntivuorolla ja kenttävuorolla. Heittäjä yrittää lyödä palloa pienen puisen porttirakenteen, wicketin, päälle, ja lyöjä puolustaa sitä mailalla ja yrittää samalla tehdä juoksuja. Peli syntyi Kaakkois-Englannissa viimeistään 1500-luvulla, ja sen sääntöjä on pitkään hoitanut [[Marylebone Cricket Club]], joka perustettiin vuonna 1787 ja jonka tunnetuin kenttä on [[Lord's]] Lontoossa. Kansainvälisissä testiotteluissa peli voi kestää jopa viisi päivää. Maiden välinen arvostettu sarja on [[The Ashes]], joka on Englannin ja Australian välinen testisarja.
+
+### v2-462
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Pudding Lane
+VASTAUS: Pudding Lane on lyhyt katu Lontoon Cityssä lähellä London Bridgeä, ja siellä sijaitsi leipuri Thomas Farrinerin leipomo, josta suuri tulipalo vuonna 1666 sai alkunsa. Palo levisi kuivan kesän, tuulen ja puutalojen vuoksi, ja se tuhosi suuren osan keskiaikaisesta kaupungista. Virallisesti kuolonuhreja tiedetään vähän, mutta luku on epävarma, sillä kaikkien menehtyneiden kirjaaminen ei ollut mahdollista. Palon muistoksi pystytettiin 1670-luvulla korkea pylväs, [[Monument]], jonka suunnittelivat [[Christopher Wren]] ja [[Robert Hooke]]. Sen korkeus on sama kuin etäisyys leipomon paikalle, ja pylvään huipulle voi nousta portaita pitkin.
+
+### v2-463
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Samuel Pepys
+VASTAUS: Samuel Pepys eli vuosina 1633–1703, ja hän oli englantilainen laivaston virkamies, parlamentin jäsen ja myöhemmin [[Royal Society]] -tiedeseuran puheenjohtaja. Hänet muistetaan erityisesti päiväkirjastaan, jota hän kirjoitti vuosina 1660–1669 [[pikakirjoituksella]]. Päiväkirja kuvaa tarkasti arkea, valtapiirejä ja suuria tapahtumia, kuten vuoden 1665 [[ruttoepidemiaa]] ja suurta tulipaloa 1666. Pepys kertoo muun muassa kaivaneensa arvokkaita tavaroitaan puutarhaan maahan, ettei tuli veisi niitä. Päiväkirja julkaistiin ensimmäisen kerran vasta 1800-luvulla, ja siitä on tullut yksi tärkeimmistä lähteistä tuon ajan Lontoosta.
+
+### v2-464
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Pyhän Paavalin katedraali
+VASTAUS: Pyhän Paavalin katedraali on Lontoon Cityssä kukkulalla seisova Englannin kirkon katedraali, joka on jo viides samalla paikalla. Edellinen tuhoutui suurpalossa 1666, ja uuden suunnitteli Christopher Wren, joka oli koulutukseltaan tähtitieteilijä. Rakennus valmistui vuosina 1675–1710. Kupoli on kolminkertainen, ja sisällä sen reunaa kiertää [[Kuiskausgalleria]], jossa seinää vasten kuiskattu sana kuuluu yli kolmenkymmenen metrin päähän. Katedraalin kryptaan on haudattu Wren sekä sotasankarit [[Horatio Nelson]] ja [[Wellingtonin herttua]]. Toisen maailmansodan pommitusten aikana katedraalista tuli koko kansan sitkeyden symboli, kun kupoli pysyi pystyssä savun keskellä.
+
+### v2-465
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Metropolitan Railway
+VASTAUS: Metropolitan Railway oli yksityinen rautatieyhtiö, joka avasi maailman ensimmäisen maanalaisen kaupunkirautatien Lontoossa 10. tammikuuta 1863. Rata kulki [[Paddingtonin]] ja [[Farringdonin]] välillä, ja vaunut olivat puuta sekä valaistu kaasulla. Junia veti höyryveturi, ja savu johdettiin tunneliin jätettyjen aukkojen kautta ylös kadulle. Ensimmäisenä vuonna matkoja tehtiin noin yhdeksän ja puoli miljoonaa. Yhtiö laajensi rataa vähitellen kaupungin ulkopuolelle ja rakennutti sen varrelle asuinalueita, joita kutsuttiin nimellä [[Metro-land]]. Yhtiön linjat muodostavat edelleen osan nykyisestä Lontoon metroverkosta.
+
+### v2-466
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Tube
+VASTAUS: Tube on Lontoon metron lempinimi, ja se viittaa putkimaisiin syviin tunneleihin, joita pitkin junat kulkevat. Ensimmäinen syvällä kulkeva sähköjuna, City and South London Railway, avattiin 1890-luvun alussa. Nykyään verkossa on 272 asemaa ja noin 400 kilometriä rataa, ja sitä käyttävät päivittäin miljoonat matkustajat. Verkon värikkään kaaviokartan suunnitteli vuonna 1931 [[Harry Beck]]. Se yksinkertaisti linjat suoriksi viivoiksi eikä ota huomioon todellisia etäisyyksiä, ja siitä tuli esikuva monille muillekin kaupunkien karttoille. Matkustajat maksavat nykyään tavallisesti [[Oyster-kortilla]] tai maksukortilla.
+
+### v2-467
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Englannin pankki
+VASTAUS: Englannin pankki, Bank of England, on Yhdistyneen kuningaskunnan keskuspankki. Se perustettiin vuonna 1694 lainaamaan rahaa valtiolle sodan rahoittamiseksi, ja ajatuksen taustalla mainitaan skotlantilainen [[William Paterson]]. Pankki sijaitsee Cityn keskellä [[Threadneedle Street]] -kadun varrella, ja sitä on leikillisesti kutsuttu nimellä [[Old Lady of Threadneedle Street]]. Pankki vastaa setelien liikkeellelaskusta, rahapolitiikasta ja finanssijärjestelmän vakaudesta. Se kansallistettiin vuonna 1946, ja sille annettiin itsenäinen asema korkopäätöksissä vuonna 1997. Kultavarannot säilytetään pankin holveissa.
+
+### v2-468
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Westminster
+VASTAUS: Westminster on Thamesin pohjoisrannalla sijaitseva Lontoon kaupunginosa, jossa on Britannian valtiollisen vallan keskus. Siellä seisoo parlamenttitalo, jota nimitetään myös Westminsterin palatsiksi. Se paloi vuonna 1834 ja rakennettiin uudelleen 1800-luvun puolivälissä, mutta keskiaikainen [[Westminster Hall]] säilyi. Vieressä on [[Westminster Abbey]], jossa kruunataan Britannian hallitsijat ja jonne on haudattu monia kuninkaita sekä tunnettuja henkilöitä. Abbeyn [[Runoilijoiden nurkka]] sai alkunsa, kun [[Geoffrey Chaucer]] haudattiin sinne vuonna 1400. Nykyisin sen lattiassa on lukuisia kirjailijoiden muistolaattoja.
+
+### v2-469
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Big Ben
+VASTAUS: Big Ben on virallisesti parlamenttitalon tornin suuri kello, ei itse torni. Kello painaa noin 13,7 tonnia, ja se asennettiin vuonna 1859. Ensimmäinen kello halkesi jo koekäytössä, ja uusikin sai halkeaman, joka jätettiin korjaamatta. Juuri se antaa kellolle sen tunnetun soinnun. Torni on 96 metriä korkea, ja sen nykyinen nimi on [[Elizabeth Tower]]. Kellon tarkkuutta säädetään lisäämällä tai poistamalla vanhoja penniä heilurin päältä. Nimen alkuperä on epävarma: sen on arveltu tulevan työministeri [[Benjamin Hallin]] nimestä, mutta en ole varma tästä. Tornin sijaintina on [[Parlamenttitalon]] pohjoispää.
+
+### v2-470
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: mustien taksien
+VASTAUS: Lontoon musta taksi on tunnettu, tyypillisesti musta kaksiosainen ajoneuvo, joka toimii virallisesti nimellä [[hackney carriage]]. Nimi tulee hevosvetoisista vuokravaunuista, joista ensimmäiset säännöt annettiin 1600-luvulla. Sähköllä kulkeva taksi nähtiin Lontoossa jo 1800-luvun lopulla. Pitkään tavallisin malli oli [[Austin FX4]], ja uudemmat mallit ovat sen tyylinen perillinen. Tarinan mukaan taksin kääntösäde on mitoitettu niin, että se pystyy kääntymään ympäri [[Savoy-hotellin]] pienellä sisäänkäyntipihalla, mutta tarinan todenperäisyydestä en ole varma. Vaikka taksit sanotaan mustiksi, niiden väri voi nykyään olla myös muu.
+
+### v2-471
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: the Knowledge
+VASTAUS: The Knowledge on Lontoon mustien taksien kuljettajille pakollinen koe, jossa opitaan ulkoa noin 25 000 katua sekä tuhansia tärkeitä paikkoja Lontoon keskustasta. Kokeen perusta on 320 vakioreittiä, joita opiskelija ajaa mielessään ja joita kokeessa kysytään suullisesti. Opiskelu kestää usein kolme tai neljä vuotta, ja se on yksi maailman vaativimmista ammattikokeista. Lähtökohtana pidetään [[Charing Crossin]] seutua. Tutkija [[Eleanor Maguire]] osoitti 2000-luvun alussa, että taksikuskien [[hippokampuksen]] takaosa, aivojen muistiin ja tilantajuun liittyvä alue, oli keskimääräistä suurempi.
+
+### v2-472
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Brick Lane
+VASTAUS: Brick Lane on Itä-Lontoon katu, joka on tunnettu monikulttuurisuudestaan ja ravintoloistaan. Kadun ympäristö, [[Spitalfields]], on vuosisatojen ajan ottanut vastaan maahanmuuttajia: ensin 1600-luvulla [[hugenottien]] ranskalaiset protestantit, myöhemmin irlantilaisia ja 1800-luvun lopulla juutalaisia, ja 1900-luvun lopulta erityisesti bangladeshilaisia. Nykyään kadun eteläosa tunnetaan lempinimellä [[Banglatown]], ja siellä on lukuisia curry-ravintoloita. Eräs rakennus on vaihtanut käyttötarkoitusta kirkosta synagoogaksi ja lopulta [[Brick Lane Mosque]] -moskeijaksi. Sunnuntaisin kadulla pidetään suosittuja markkinoita.
+
+### v2-473
+KOHDE: kaupunki:lontoo
+KYSYMYS: Kerro lisää: Notting Hillin
+VASTAUS: Notting Hillin karnevaali on lontoolaisen Notting Hillin kaupunginosan vuosittainen katujuhla, jota vietetään elokuun lopun viikonloppuna. Karnevaali kuuluu Lontoon karibialaisen yhteisön perinteeseen, ja sen juuret ovat 1950-luvun lopulla, kun Karibialta muuttanut [[Windrush-sukupolvi]] alkoi järjestää omia juhliaan. Kaduilla kulkee värikkäitä kulkueita, soi karibialaista musiikkia ja tarjolla on ruokaa eri maista. Tärkeä osa tunnelmaa on [[steel pan]] -soitin, jolla soitetaan kilpailuissa melodioita ulkomuistista. Soitin nähtiin Lontoossa ensimmäisen kerran [[Festival of Britain]] -tapahtumassa vuonna 1951. Karnevaaliin osallistuu vuosittain satojatuhansia ihmisiä.
+
+### v2-474
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Skotlannin kruununjalokivet
+VASTAUS: Skotlannin kruununjalokivet, [[Honours of Scotland]], ovat kruunu, valtikka ja valtamiekka, ja ne ovat Britannian vanhimmat kruununinsignit. Esineet ovat peräisin 1400- ja 1500-luvuilta, ja niitä käytettiin Skotlannin kuninkaiden kruunajaisissa. Kun [[Oliver Cromwell]] ja hänen joukkonsa uhkasivat Skotlantia 1650-luvulla, jalokivet kuljetettiin turvaan ja kätkettiin, ja ne olivat piilossa pitkään. Myöhemmin ne lukittiin Edinburghin linnaan, kunnes kirjailija [[Walter Scott]] johti niiden uudelleen löytämistä 1800-luvun alussa. Nykyisin ne ovat esillä linnassa yleisölle.
+
+### v2-475
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Kohtalonkivi
+VASTAUS: Kohtalonkivi, Stone of Destiny, on suorakulmainen hiekkakivilohkare, jonka paino on noin 150 kiloa. Sitä käytettiin Skotlannin kuninkaiden kruunajaisissa, joiden paikkana oli [[Scone]], ja kuningas [[Edward I]] vei kiven vuonna 1296 Englantiin, jossa se sijoitettiin [[Westminster Abbeyn]] kruunajaistuolin alle. Joulupäivänä 1950 skotlantilaisopiskelijat veivät kiven pois Westminsteristä, mutta se palautettiin pian. Virallisesti kivi tuotiin takaisin Skotlantiin vuonna 1996 ja sijoitettiin Edinburghin linnaan. Ymmärtääkseni se on sittemmin siirretty Perthiin, mutta en ole varma nykyisestä sijainnista.
+
+### v2-476
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Edinburgh Fringe
+VASTAUS: Edinburgh Fringe on maailman suurin esittävän taiteen festivaali, ja se järjestetään joka elokuu Edinburghissa. Se sai alkunsa vuonna 1947, kun kaupunkiin perustettiin kansainvälinen taidefestivaali, [[Edinburgh International Festival]]. Kahdeksan teatteriryhmää jäi kutsulistan ulkopuolelle mutta tuli silti paikalle ja esiintyi festivaalin reunalla, fringellä. Ohjelmaa ei valitse kukaan, vaan kuka tahansa saa esiintyä, jos löytää esityspaikan. Vuonna 2025 mukana oli 3 893 esitystä 301 paikassa. Yhteistä toimintaa ja neuvontaa varten perustettiin 1950-luvun lopulla [[Fringe Society]], ja esiintyjät mainostavat esityksiään usein [[Royal Mile]] -kadulla.
+
+### v2-477
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Royal Mile
+VASTAUS: Royal Mile on Edinburghin vanhankaupungin pääkatu, joka laskeutuu [[Edinburghin linnasta]] alas kohti Holyroodin palatsia. Katu on noin 1,8 kilometriä pitkä eli skotlantilainen maili, josta nimi tulee. Se kulkee kalliolta itään laskevaa harjannetta pitkin: linnan alla oleva kallio on sammuneen tulivuoren kurkku, ja jäätikkö jätti taakseen pitkän, loivan hännän. Kadun osat ovat Castlehill, Lawnmarket, High Street ja Canongate. Kadun varrella on muun muassa [[St Gilesin katedraali]], ja sen päässä sijaitsee [[Holyroodin palatsi]], kuninkaan virallinen asuinpaikka Skotlannissa.
+
+### v2-478
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Robert Burns
+VASTAUS: Robert Burns syntyi vuonna 1759 Skotlannissa ja kuoli vuonna 1796 vain 37-vuotiaana. Häntä pidetään Skotlannin kansallisrunoilijana, ja hän kirjoitti paljon skotin kielellä. Tunnetuin Burnsin sanoittama laulu on [[Auld Lang Syne]], joka lauletaan uudenvuodenyönä monissa maissa. Hänen runojaan ovat muun muassa [[Tam o' Shanter]] ja vuonna 1786 julkaistu [[Address to a Haggis]], joka on Burnsin yön tärkeä osa. Burnsin yötä vietetään hänen syntymäpäivänään 25. tammikuuta ruokailuin ja runoin. Edinburghin kirjailijamuseossa on esillä hänen kirjoituspöytänsä.
+
+### v2-479
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: haggis
+VASTAUS: Haggis on skotlantilainen perinneruoka, joka valmistetaan lampaan sisäelimistä, kaurasuurimoista, sipulista ja mausteista. Seos täytetään perinteisesti lampaan mahaan ja keitetään. Annos tarjoillaan tavallisesti lantun ja perunan kanssa, englanniksi [[neeps and tatties]], ja joskus mukana on viskikastiketta. Burnsin yönä haggis kannetaan juhlallisesti pöytään [[säkkipillin]] soidessa, runo luetaan ääneen ja puukko työnnetään makkaraan. Nykyään saatavilla on myös [[kasvishaggis]], jota valmistetaan kasviksista, pähkinöistä ja kauraryyneistä. Ruoka kuulostaa vieraalle, mutta Skotlannissa sitä syödään laajasti.
+
+### v2-480
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: whisky
+VASTAUS: Skotlannissa valmistettua viskiä kutsutaan nimellä [[Scotch]], ja sen on lain mukaan kypsyttävä tammitynnyreissä vähintään kolme vuotta. Raaka-aineina ovat mallastettu ohra, vesi ja hiiva, ja mallas kuivataan joskus turvesavulla, mikä antaa osalle viskeistä savuisen maun. Yhden tislaamon pelkästä mallasohrasta valmistamaa viskiä sanotaan [[single malt]] -viskiksi. Tunnettuja viskialueita ovat [[Speyside]], jossa tislaamoja on tiheässä, ja [[Islay]]n saari, jonka viskit ovat tunnetusti savuisia. Burnsin yönä viskiä nautitaan usein haggiksen kanssa maljapuheiden yhteydessä.
+
+### v2-481
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: James Craig
+VASTAUS: James Craig oli nuori edinburghilainen arkkitehti, joka voitti kaupungin järjestämän suunnittelukilpailun 1760-luvulla; tarkasta vuodesta en ole täysin varma, mutta 1767 mainitaan usein. Hänen suunnitelmansa oli ruutukaavamainen: kolme pääkatua kulki rinnakkain harjanteella, ja ne ovat [[Princes Street]], [[George Street]] ja Queen Street. Itäpäässä aukiona on [[St Andrew Square]] ja länsipäässä [[Charlotte Square]]. Suunnitelma heijasti valistuksen ihanteita järjestyksestä ja valosta, vastakohtana vanhankaupungin ahtaudelle. Craigin nimi jäi kaupungin historiaan nimenomaan tämän suunnitelman kautta.
+
+### v2-482
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco on Yhdistyneiden kansakuntien koulutus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on Pariisissa. Se ylläpitää [[maailmanperintöluettelo]]a, johon otetaan kulttuuri- ja luontokohteita, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Luettelon perustana on vuoden 1972 [[maailmanperintösopimus]], jonka valtiot ovat allekirjoittaneet. Edinburghin vanhakaupunki ja uusikaupunki merkittiin luetteloon yhtenä kohteena, vuonna 1995 muistini mukaan. Suomesta luettelossa on esimerkiksi [[Suomenlinna]].
+
+### v2-483
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: David Hume
+VASTAUS: David Hume syntyi Edinburghissa vuonna 1711 ja kuoli samassa kaupungissa vuonna 1776. Hän edusti [[empirismin]] suuntausta: tieto perustuu aistihavaintoihin ja kokemukseen, ei pelkkään päättelyyn. Nuorena kirjoittamansa teos [[A Treatise of Human Nature]] ilmestyi 1739–1740, mutta se sai aluksi vähän huomiota, ja Hume muotoili ajatuksensa myöhemmin tiiviimmin. Hän esitti, ettemme havaitse syy-seuraussuhdetta sinänsä, vaan totumme odottamaan tietyn tapahtuman seuraavan toista. Hume kirjoitti myös laajan Englannin historian, ja hänen ystäväpiiriinsä kuului [[Adam Smith]].
+
+### v2-484
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: Adam Smith
+VASTAUS: Adam Smith syntyi vuonna 1723 [[Kirkcaldy]]ssä Fifen rannikolla ja kuoli Edinburghissa vuonna 1790. Hän opetti moraalifilosofiaa Glasgow'n yliopistossa ja julkaisi vuonna 1759 teoksen Moraalisten tunteiden teoria. Päätyö [[Kansojen varallisuus]] ilmestyi 1776, ja siinä hän selitti vaurauden syntyvän ennen kaikkea [[työnjako]]a tehostamalla, kuuluisana esimerkkinä nastatehdas. Smith kuvasi, miten markkinat ohjaavat yksittäisten ihmisten oman edun tavoittelun yhteiseksi hyödyksi, ja tästä peräisin on ilmaus [[näkymätön käsi]]. Elämänsä lopulla hän toimi tullivirkamiehenä Edinburghissa.
+
+### v2-485
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Kerro lisää: James Hutton
+VASTAUS: James Hutton syntyi Edinburghissa vuonna 1726 ja kuoli siellä vuonna 1797. Hän koulutettiin lääkäriksi, mutta toimi pitkään maanviljelijänä ja alkoi tutkia kallioperää. Teoksessaan [[Theory of the Earth]] hän esitti, että maapallon muodostumista selittävät hitaat, yhä jatkuvat prosessit, kuten kulutus ja kerrostuminen, eikä hetkellinen mullistus. Tämä avasi tien käsitykselle [[syväaika]]a koskevasta ajasta, jonka mittakaava on miljoonia vuosia. Tunnettu todiste löytyi Skotlannin kaakkoisrannikolta [[Siccar Point]]ista, jonne hän matkusti ystävänsä [[John Playfair]]in kanssa.
+
+### v2-486
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Olympos
+VASTAUS: Olympos on laaja vuoristomassiivi Pohjois-Kreikassa lähellä Egeanmerta. Sen korkein huippu [[Mytikas]] on 2 917 metriä korkea, ja nimi tarkoittaa nenää. Antiikissa vuoren uskottiin olevan kahdentoista jumalan koti. Huipulla ei käynyt kukaan ennen 2. elokuuta 1913, jolloin sinne nousivat sveitsiläiset Frédéric Boissonnas ja Daniel Baud-Bovy sekä litochorolainen metsästäjä [[Christos Kakkalos]], joka tunsi vuoren parhaiten. Vuori sai vuonna 1938 kansallispuiston aseman, ja se oli Kreikan ensimmäinen. Lähin kaupunki on [[Litochoron]], noin 18 kilometrin päässä huipusta.
+
+### v2-487
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Zeus
+VASTAUS: Zeus oli antiikin kreikkalaisten jumalten kuningas sekä taivaan ja ukkosen jumala. Hän oli [[Kronos]]en ja Rhean poika, ja hänen veljiään olivat Poseidon ja Hades, joiden kanssa hän jakoi maailman hallinnan. Puolisona oli [[Hera]]. Tunnusmerkkejä olivat salama ja kotka. Hänen pyhäkkönsä [[Olympia]] Peloponnesoksella oli olympialaisten alkuperäinen näyttämö, ja siellä seisoi Feidiaksen tekemä Zeuksen patsas, jota pidettiin yhtenä antiikin ihmeistä. Roomalaiset samastivat Zeuksen jumalaansa [[Jupiter]]iin.
+
+### v2-488
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Litochoron
+VASTAUS: Litochoro on pieni kaupunki Olympos-vuoren juurella, ja se on tärkein lähtöpaikka vuorelle vaeltaville. Kaupungin vieritse laskeutuu [[Enipeas]]-joen rotko, jota pitkin kulkee suosittu polku vuoren rinteille. Litochorosta oli kotoisin myös [[Christos Kakkalos]], vuohenmetsästäjä, joka nousi vuoden 1913 ensinousussa kolmikosta ensimmäisenä [[Mytikas]]-huipulle. Lähistöllä sijaitsee antiikin [[Dion]], pyhä kaupunki, jossa palvottiin Zeusta.
+
+### v2-489
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: horiátiki
+VASTAUS: Horiátiki tarkoittaa kreikaksi kylän tai maaseudun salaattia, ja nimi viittaa siihen, että ainekset ovat yksinkertaisia ja kotoisia: kypsiä tomaatteja, kurkkua, punasipulia ja oliiveja. Tärkeä osa makua on [[oliiviöljy]], jota kaadetaan runsaasti päälle, ja [[oregano]], jolla lohko fetaa ripotellaan. Oliiveina käytetään usein [[Kalamatan]] seudun tummia oliiveja. Salaatti syödään kesäisin lämpimän leivän kanssa, ja leipää käytetään usein öljyn ja tomaattinesteen kastamiseen lautasen pohjalta. Salaatin tarkkaa vakiintumisaikaa en tiedä.
+
+### v2-490
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: fetaa
+VASTAUS: Feta on valkoinen, murea juusto, jota kypsytetään isoina lohkoina suolavedessä. Se tehdään lampaanmaidosta tai seoksesta, jossa on lampaanmaidon lisäksi enintään 30 prosenttia vuohenmaitoa. Kreikka pyysi EU:lta nimisuojaa vuonna 1994, ja asia päätyi [[EU:n tuomioistuimeen]], kun Tanska, Ranska ja Saksa, joissa valmistettiin omaa fetaa, veivät sen oikeuteen. Lopullisesti nimi suojattiin vuonna 2002 [[alkuperänimityksenä]], ja fetaksi saa kutsua vain Manner-Kreikassa ja [[Lesboksella]] perinteisellä tavalla tehtyä juustoa.
+
+### v2-491
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Peloponnesoksella
+VASTAUS: Peloponnesos on Etelä-Kreikan suuri niemimaa, joka liittyy mantereeseen kapealla Korintin kannaksella; sen läpi on kaivettu [[Korintin kanava]], joka valmistui 1800-luvun lopulla. Alue on vuoristoinen ja täynnä antiikin muistoja: täällä sijaitsivat [[Sparta]] ja [[Olympia]] sekä Mykene ja Korintti. Antiikissa Ateenan ja Spartan välinen [[Peloponnesoksen sota]] käytiin vuosina 431–404 eaa., ja sen nimi tulee tästä niemimaasta. Vuonna 1821 kapina ottomaaneja vastaan levisi nimenomaan Peloponnesoksella, ja se oli itsenäisyyssodan tärkeimpiä näyttämöitä.
+
+### v2-492
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Navarinon
+VASTAUS: Navarinon meritaistelu käytiin 20. lokakuuta 1827 Peloponnesoksen lounaisrannikolla Navarinonlahdella, lähellä nykyistä [[Pylos]]ta. Britannian, Ranskan ja Venäjän yhdistetty laivasto ankkuroitui lahteen ottomaanien ja egyptiläisen laivaston eteen, ja yhteenotto syntyi ennen kuin kukaan oli sitä varsinaisesti suunnitellut. Brittilaivastoa johti amiraali [[Edward Codrington]]. Taistelun tuloksena osmanien ja egyptiläisten laivasto menetti suuren osan aluksistaan, ja se muutti sodan suuntaa Kreikan hyväksi. Se oli yksi viimeisistä suurista purjelaivojen taisteluista.
+
+### v2-493
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Otto
+VASTAUS: Otto syntyi vuonna 1815 Baijerin kuninkaan Ludvig I:n poikana, ja hänestä tuli Kreikan kuningas vuonna 1832 vain 17-vuotiaana. Hän saapui maahan 1833 ja asettui ensin [[Nauplioon]], mutta jo vuonna 1834 pääkaupungiksi valittiin Ateena. Hänen puolisonsa oli kuningatar [[Amalia]]. Otto oli aluksi yksinvaltias, ja kansannousun jälkeen vuonna 1843 maa sai perustuslain. Hän pukeutui julkisuudessa usein kreikkalaiseen kansallispukuun, mutta hänet syrjäytettiin vuonna 1862, ja hän kuoli maanpaossa [[Baijerin]] puolella vuonna 1867.
+
+### v2-494
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Meteora
+VASTAUS: Meteora tarkoittaa kreikaksi ilmassa leijuvaa, ja nimi sopii kalliopylväisiin, joiden laella luostarit seisovat. Kalliot ovat hiekkakiveä ja konglomeraattia, ja lähin kaupunki on [[Kalambaka]]. Suurin luostareista on [[Suuri Meteoron]], jonka perustaminen liitetään 1300-luvun puolivälin munkki Athanasiokseen. Toiminnassa on nykyään kuusi luostaria, muun muassa [[Varlaamin]] luostari. Unesco merkitsi kohteen maailmanperintöluetteloon vuonna 1988.
+
+### v2-495
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Thessalian
+VASTAUS: Thessalia on Keski-Kreikan historiallinen alue, jonka sydän on Pindos-vuoriston itäpuolella levittäytyvä tasanko, yksi Kreikan tärkeimmistä viljelyalueista. Alueen suurin kaupunki on [[Larissa]], ja merellä sijaitsee satamakaupunki [[Volos]]. Läpi tasangon virtaa [[Pineios]]-joki, joka laskee Egeanmereen. Itärannikolla kohoaa [[Pelion]]-vuori, joka tunnetaan vehreistä rinteistään ja kylistään. Tasangon reunalla ovat myös Meteoran kalliot.
+
+### v2-496
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: Pireuksen
+VASTAUS: Pireus on Ateenan satamakaupunki, noin kahdeksan kilometriä keskustasta lounaaseen, ja se on Kreikan suurin satama. Antiikin Ateenan johtaja [[Themistokles]] kehitti satamaa 400-luvulla eaa., ja [[pitkät muurit]] yhdistivät sen kaupunkiin. Nykyään Pireuksesta lähtevät laivat Egeanmeren saarille. Satamakortteleissa syntyi 1920- ja 1930-luvulla [[rebetiko]], pakolaisten ja köyhien laulu, jossa soi [[bouzouki]]. Unesco otti rebetikon ihmiskunnan kulttuuriperinnön luetteloon vuonna 2017.
+
+### v2-497
+KOHDE: maa:GRC
+KYSYMYS: Kerro lisää: kauppalaivasto
+VASTAUS: Kauppalaivasto tarkoittaa maan omistamia tai sen lipun alla kulkevia kauppa-aluksia. Kreikkalaiset ovat perinteisesti omistaneet niistä erittäin suuren osan, vaikka suuri osa aluksista kulkee muun maan lipun alla niin sanotun [[mukavuuslippu]]järjestelmän vuoksi. Perinne on vanha: jo 1800-luvun alussa [[Hydran]] ja Spetsesin saarten kauppalaivat kuuluivat Välimeren kuljetuksiin ja rahoittivat osaltaan vapaussotaa. Tunnettuja 1900-luvun laivanvarustajia olivat [[Aristoteles Onassis]] ja [[Stavros Niarchos]]. Tarkkoja osuuksia en uskalla luvuilla sanoa.
+
+### v2-498
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Athenan
+VASTAUS: Athena oli antiikin kreikkalaisten viisauden, käsityön ja puolustussodan jumalatar. Hän oli [[Zeuksen]] tytär, ja myytin mukaan hän syntyi isänsä päästä täysin varustettuna. Kaupunki sai nimensä hänestä, kun hän kilpaili [[Poseidonin]] kanssa kaupungin suojelijan paikasta ja lahjoitti kaupungille oliivipuun. Hänen kuuluisin patsaansa, Parthenonin Athena Parthenos, oli [[Feidiaksen]] työ. Hänen pyhä lintunsa oli pöllö, ja roomalaiset tunsivat hänet nimellä [[Minerva]].
+
+### v2-499
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Akropoliin
+VASTAUS: Akropolis tarkoittaa korkeaa kaupunkia, ja kallio kohoaa noin 90 metriä ympäröivän tasangon yläpuolelle. Pääsisäänkäyntinä toimii [[Propylaia]], ja sen vieressä seisoo Athena Niken pieni temppeli, jonka kaiteen kuvissa Voitot lentävät siivet levällään. [[Erekhtheion]] tunnetaan kuuluisista karyatideista eli naispatsaista, jotka kantavat kuistin kattoa. 400-luvun puolivälissä eaa. Akropoliin suuret rakennukset syntyivät [[Perikles]]en johdolla. Nykyään kohteessa on myös [[Akropoliin museo]], joka avattiin vuonna 2009 ja jossa on sali valmiina Parthenonin veistosten mahdollista paluuta varten.
+
+### v2-500
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Kleisthenesta
+VASTAUS: Kleisthenes oli ateenalainen valtiomies, joka uudisti kaupungin hallinnon noin vuosina 508–507 eaa., kun tyranni [[Hippias]] oli karkotettu. Hän jakoi kansalaiset kymmeneen uuteen heimoon asuinpaikan eikä suvun mukaan, mikä heikensi aatelissukujen valtaa. Uudistuksiin kuului [[viidensadan neuvosto]], joka valmisteli kansankokouksen asiat. Perinteisesti hänen ansiokseen luetaan myös [[ostrakismi]], menettely, jossa kansalaiset saattoivat äänestää vaarallisena pidetyn miehen maanpakoon. Häntä on kutsuttu Ateenan demokratian isäksi.
+
+### v2-501
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: kansankokous
+VASTAUS: Kansankokous, kreikaksi ekklesia, oli antiikin Ateenan ylin päättävä elin, johon jokainen aikuinen miespuolinen kansalainen sai osallistua. Se kokoontui lähteiden mukaan noin neljäkymmentä kertaa vuodessa, usein [[Pnyx]]-kukkulalla Akropoliin länsipuolella. Asiat valmisteli [[viidensadan neuvosto]], ja puhujat ottivat kantaa kokouksessa ennen äänestystä, joka tehtiin yleensä kättä nostamalla. Kokouksen ratkaisuihin vaikutti usein erityisesti puhetaito, ja tunnetuin ajan johtomies oli [[Perikles]].
+
+### v2-502
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Spyridon Louis
+VASTAUS: Spyridon Louis oli 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta. Hän saapui maaliin Panathinaiko-stadionille 10. huhtikuuta 1896 ensimmäisenä ajalla 2.58.50 juostuaan noin 40 kilometriä Marathonin kylästä. Katsomossa oli kymmeniätuhansia katsojia, ja kuningas Yrjö I nousi seisomaan; kruununprinssi Konstantin ja prinssi Yrjö juoksivat viimeisen kierroksen hänen vierellään. Kilpailun ehdotti ranskalainen kielitieteilijä [[Michel Bréal]] [[Feidippideen]] tarinan mukaan, ja hän lahjoitti voittajalle hopeamaljan. Louis ei tiettävästi kilpaillut enää myöhemmin, ja hänen nimensä on nykyään Ateenan olympiastadionin nimenä.
+
+### v2-503
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Marathonin
+VASTAUS: Marathon on kylä Attikassa, noin neljäkymmentä kilometriä Ateenasta koilliseen. Vuonna 490 eaa. ateenalaiset kukistivat täällä Persian hyökkäysjoukot, ja Ateenan sotapäällikkönä toimi [[Miltiades]]. Perinteen mukaan viestinviejä [[Feidippides]] juoksi voitosta kertomaan Ateenaan ja kuoli väsymykseen, vaikka tarinan yksityiskohdat ovat myöhäisiä. Toisen perimätiedon mukaan hän oli aiemmin juossut avunpyynnölle [[Sparta]]an. Vuoden 1896 olympialaisten maraton muistuttaa tätä juoksua, ja kilpailu käytiin Marathonin kylästä Panathinaiko-stadionille.
+
+### v2-504
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Panathinaikon stadionilla
+VASTAUS: Panathinaiko-stadion eli Kallimarmaro tarkoittaa kauniisti marmoroitua, ja se on maailman ainoa kokonaan valkoisesta marmorista rakennettu stadion. Rikas roomalainen [[Herodes Atticus]] rakennutti sen vanhan juoksuradan paikalle noin vuonna 144 jaa., ja siihen mahtui noin 50 000 katsojaa. Stadion oli vuosisatoja unohduksissa, ennen kuin se kaivettiin esiin ja kunnostettiin ensimmäisiä nykyaikaisia olympialaisia varten vuonna 1896; kunnostuksen rahoitti pääosin [[Georgios Averoff]]. Avajaisissa oli paikalla noin 60 000 katsojaa. Nimi viittaa antiikin [[Panathenaia]]-juhlaan, ja stadion näkyy vuodesta 2004 jokaisessa olympiamitalissa.
+
+### v2-505
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: souvlakia
+VASTAUS: Souvlaki on grillattua lihaa vartaassa, ja ateenalainen ostaa sen useimmiten luukulta käärittynä: [[pitaleipä]]n sisään ladotaan liha, tomaatti, sipuli, [[tzatziki]] ja usein ranskalaiset, kääre kiedotaan paperiin ja ateria syödään kadulla kävellen. Jos istuu pöytään ja tilaa merídan, sama ruoka tulee lautasella osissa. Vartaan oma nimi on Ateenassa [[kalamáki]], pikkuruoko. Liha on useimmiten sianlihaa, mutta myös kanaa käytetään, ja nimitykset vaihtelevat alueittain.
+
+### v2-506
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: gyrosta
+VASTAUS: Gyros on liharuoka, jossa viipaloitua lihaa paahdetaan pystysuoran vartaan ympärillä pyörivänä pinona ja leikataan ohuiksi siivuiksi. Nimi tulee kreikan sanasta, joka tarkoittaa kierrosta. Lihana käytetään Kreikassa yleisimmin sian- tai kananlihaa. Annos kääritään [[pitaleipä]]än tomaatin, sipulin ja [[tzatziki]]n kanssa, ja joskus mukaan tulevat myös ranskalaiset. Vastaava menetelmä tunnetaan Turkissa nimellä [[döner]].
+
+### v2-507
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: koulourin
+VASTAUS: Koulouri on seesamin peittämä leipärengas, jota myydään Ateenassa kojuilta, leipomoista ja kärryistä ennen kaikkea aamupalaksi tai välipalaksi. Taikina on yksinkertaista vehnätaikinaa, ja pinnan [[seesami]] antaa sille tyypillisen maun. Thessalonikilaista koulouria pidetään erityisen tunnettuna, ja [[Thessalonikin]] kaduilla se kuuluu kaupunkikuvaan yhtä lailla kuin Ateenassa. Samaa sukua on turkkilainen [[simit]], joka tunnetaan Istanbulin kaduilta.
+
+### v2-508
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: Syntagman
+VASTAUS: Syntagma tarkoittaa kreikaksi perustuslakia, ja asema on nimetty ylhäällä sijaitsevan Syntagma-aukion eli Perustuslain aukion mukaan. Aukio sai nimensä vuoden 1843 kansannoususta, jossa [[Otto]]-kuningas pakotettiin antamaan maalle perustuslaki. Aukion yläpuolella seisoo [[Kreikan parlamentti]], ja sen edessä vartioivat tuntemattoman sotilaan hautaa [[evzonit]] perinteisissä juhlapuvuissaan. Asemalla on esillä rakennustöiden aikana löytyneitä antiikin esineitä, ja metrolinjat risteävät siinä.
+
+### v2-509
+KOHDE: kaupunki:ateena
+KYSYMYS: Kerro lisää: metro
+VASTAUS: Metro on kaupunkien maanalainen tai osittain maanalainen raideliikennejärjestelmä. Maailman ensimmäinen avattiin [[Lontoon metro]]na 10. tammikuuta 1863: vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja junaa veti höyryveturi, jonka savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna matkoja tehtiin 9,5 miljoonaa. Nykyään Lontoon metrossa on 272 asemaa ja rataa 400 kilometriä. Mantereella ensimmäisiä oli [[Budapestin]] metro 1800-luvun lopulla. Ateenassa raideyhteys [[Pireuksen]] satamaan on peräisin 1800-luvulta, ja uudet metrolinjat avattiin vuosituhannen vaihteessa.
+
+### v2-510
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: Arthur Evans
+VASTAUS: Arthur Evans oli brittiläinen arkeologi, joka syntyi vuonna 1851 ja kuoli vuonna 1941 ja toimi [[Ashmolean]]-museon johtajana Oxfordissa. Hän osti Knossoksen kumpualueen ja aloitti kaivaukset vuonna 1900. Evans antoi kulttuurille nimen minolainen legendaarisen kuningas [[Minos]]en mukaan. Palatsin sydämestä hän löysi huoneen, jonka keskellä seisoo alabasterinen tuoli, Euroopan vanhin säilynyt valtaistuin, noin 1400-luvulta eaa.; hän nimesi sen [[valtaistuinhuone]]eksi, vaikka nykytutkijat epäilevät huoneen olleen ennemmin kulttikäytössä. Hän rakensi osia palatsista uudelleen betonilla omien tulkintojensa mukaan, mitä myöhemmät arkeologit ovat arvostelleet.
+
+### v2-511
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: lineaari A
+VASTAUS: Lineaari A on minolaisten käyttämä kirjoitusjärjestelmä, jota tavataan savitauluissa ja esineissä Kreetalta vuosisatojen ajalta noin 1800–1450 eaa. Merkit ovat pääosin tavumerkkejä, mutta kieltä ei tunneta, joten tekstejä ei ole voitu lukea. Sen jälkeen Kreetalla ja manner-Kreikassa käytettiin [[lineaari B]] -kirjoitusta, jonka [[Michael Ventris]] tulkitsi vuonna 1952 varhaiseksi kreikaksi. Toinen kuuluisa kirjoitusarvoitus on [[Faistoksen kiekko]], savikiekko, jonka merkkejä ei myöskään tunneta.
+
+### v2-512
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: Minotauroksesta
+VASTAUS: Minotauros oli kreetalaisen myytin hirviö, jolla oli sonnin pää ja ihmisen vartalo. Sen sanotaan syntyneen kuningas Minoksen puolison Pasifaen ja sonnin suhteesta, ja [[Daidalos]] rakensi sille [[labyrintti]]n, josta ulospääsyä ei löytynyt. Ateena joutui lähettämään tributtina nuoria uhrattavaksi hirviölle. Sankari [[Theseus]] tappoi sen, ja [[Ariadne]]n antama lanka vei hänet takaisin ulos labyrintista. Myytti on vuosisatoja vanha eikä kerro historiasta, mutta se liitetään usein Knossokseen.
+
+### v2-513
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: Valkoisissa vuorissa
+VASTAUS: Valkoiset vuoret eli Lefka Ori on Kreetan länsiosan vuoristo, jonka kalkkikivihuiput ovat pitkälle kevääseen lumipeitteisiä, ja siitä tulee nimi. Korkeimmat huiput, kuten [[Pachnes]], nousevat yli 2 400 metriin. Vuoriston eteläreunassa kulkee [[Sfakia]]n rannikko, jonne Samarian rotko laskee Agia Roumeliin. Pohjoispuolella lähin suurempi kaupunki on [[Chania]]. Alue on vaikeakulkuista, ja kylät ovat harvassa.
+
+### v2-514
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: kri-kri
+VASTAUS: Kri-kri eli [[Kreetan]] villivuohi, kreetaksi agrimi, on Kreetalla elävä vuohilaji, jota tavataan luonnonvaraisena vain Kreetalla ja muutamilla pikkusaarilla. Eläin on suojeltu, ja sen tärkein elinalue on [[Samarian kansallispuisto]] [[Valkoisissa vuorissa]]. Koiraalla on suuret kaareutuvat sarvet, ja eläin on varovainen ja ketterä kallioilla. Tutkijoiden mukaan se voi polveutua muinaisista kesytetyistä vuohista, jotka ihmiset toivat saarelle. Siitä on tullut Kreetan tunnetuin luonnonsymboli, ja sitä esitetään kuvissa ja matkamuistoissa.
+
+### v2-515
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: laoutoa
+VASTAUS: Laouto on kreetalaisessa ja laajemmin kreikkalaisessa musiikissa käytetty pitkäkaulainen [[luuttu]], jossa on yleensä neljä kaksoiskieltä. Sitä soitetaan plektralla, ja sen tehtävä on yleensä säestää: se tuottaa rytmin ja soinnut, kun melodia kulkee [[lyra]]n mukana. Kaulassa on nauhat, ja sointi on kirkas ja helisevä. Laoutoa kuullaan tansseissa, häissä ja lauluillassa, joissa esitetään myös [[mantinada]]-lauluja.
+
+### v2-516
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: pentozalista
+VASTAUS: Pentozali on nopea kreetalainen tanssi, jonka nimen sanotaan tulevan kreikan sanasta viisi ja viittaavan tanssin viiteen perusaskeleeseen. Tanssi on vauhdikas ja siinä hypitään, ja sitä tanssitaan ketjussa ja piirissä. Perimätiedon mukaan sen juuret ovat sotatansseissa. Musiikin soittavat yleensä [[lyra]] ja laouto. Toinen tunnettu kreetalainen tanssi on [[syrtos]], joka on rauhallisempi. Kreikan tunnetuin tanssi [[sirtaki]] syntyi 1960-luvulla elokuvaa varten ja pohjautuu osin [[hasapiko]]-tanssiin.
+
+### v2-517
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: mantinadoiksi
+VASTAUS: Mantinada on kreetalainen nelitahtinen riimillinen kaksisäe, jossa on yleensä viisitoista tavua riviä kohti. Se on usein improvisoitu, ja sitä lauletaan lyran tai laoutoin säestyksellä. Aiheina ovat rakkaus, elämä, ilot ja surut sekä huumori, ja säkeitä käytetään myös kilpalauluna ja juhlissa. Nimen uskotaan tulevan italian kielestä, ja [[venetsialaisten]] valta Kreetalla vaikutti saaren kulttuuriin. Mantinadoja tehdään edelleen ja niitä esitetään [[lyra]]n tahtiin.
+
+### v2-518
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: oliiviöljyyn
+VASTAUS: Oliiviöljy on Kreetan ruokakulttuurin perusta, ja saarella kulutetaan sitä yhden asukkaan osalta maailman suurimpia määriä. Yleisin paikallinen lajike on [[Koroneiki]], josta tehdään suurin osa Kreikan oliiviöljystä. Oliiviöljyä viljeltiin Kreetalla jo minolaisten aikaan, ja Knossoksen palatsissa on säilynyt suuria varastoastioita, [[pithos]]-kruukkuja. Öljyn runsas käyttö on olennainen osa niin sanottua [[Välimeren ruokavalio]]ta, jonka terveysvaikutuksia on tutkittu laajasti.
+
+### v2-519
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: dakos
+VASTAUS: Dakos on kreetalainen ruoka, jonka pohjana on kova ohraruskoleipä, [[paximadi]], joka kostutetaan vedellä tai öljyllä. Päälle tulee raastettua tomaattia, pehmeää [[mizithra]]-juustoa tai fetaa, oliiviöljyä ja oreganoa. Tomaatti kostuttaa ruskon, mutta pitää sen silti hieman purtavana. Annos tarjotaan perinteisesti alkupalana tai kevyenä lounaana, ja sitä pidetään yhtenä Kreetan tunnetuimmista ruoista.
+
+### v2-520
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: rakia
+VASTAUS: Rakia on Balkanin alueella tislatun hedelmäviinan yleisnimi. Kreetalla sama juoma tunnetaan nimellä [[tsikoudia]], ja se tislataan rypäleiden puristusjätteestä syksyllä viininvalmistuksen jälkeen. Sitä tarjotaan monesti aterian päätteeksi vieraanvaraisuuden merkiksi. Bulgariassa rakiaa valmistetaan yleisimmin luumuista tai rypäleistä, ja lähes jokaisella maaseutuperheellä on oma reseptinsä. Kotitekoisen rakian vahvuus voi nousta yli viidenkymmenen prosentin, kun kaupan pulloissa se on tavallisesti neljäkymmentä, ja kuuluisinta luumurakiaa tehdään [[Troyanin]] seudulla.
+
+### v2-521
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: maanjäristyksessä
+VASTAUS: Maanjäristys tapahtui 21. heinäkuuta 365, ja sen keskus oli Kreetan edustalla Välimeren itäosassa. Länsi-Kreeta nousi useita metrejä, ja muinaiset satamat jäivät kuivalle maalle. Järistys aiheutti myös [[tsunami]]n, joka koetteli itäisen Välimeren rannikoita. Tapahtumasta on kertonut roomalainen historioitsija [[Ammianus Marcellinus]]. Syynä on [[Helleeninen kaari]], Kreetan eteläpuolella kulkeva laattojen törmäysvyöhyke, jolla tapahtuu edelleen voimakkaita järistyksiä. Tapahtuma on vuosisatojen takaa, mutta sen jäljet näkyvät yhä Kreetan maisemassa.
+
+### v2-522
+KOHDE: kaupunki:kreeta
+KYSYMYS: Kerro lisää: Polyrrhenian
+VASTAUS: Polyrrhenia oli antiikin kaupunki Kreetan luoteisosassa, [[Kissamos]]in lähellä, ja se sijaitsi kukkulalla hieman rannikon sisäpuolella. Falassarna toimi sen merisatamana. Kaupungin rauniot ovat vuoren rinteellä, ja niiden joukossa on muureja ja roomalaisen ajan jäänteitä; lähteiden mukaan kaupunki oli merkittävä aina roomalaiseen aikaan asti. Paikalle on myöhemmin rakennettu myös kirkko. [[Falassarna]]n muinainen satama taas on jäänyt kuivalle maalle, kun rannikko kohosi.
+
+### v2-523
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Dinaarien Alppien
+VASTAUS: Dinaarien Alpit, kroatiaksi Dinara-vuoristo, on laaja vuoristojakso, joka kulkee Sloveniasta Albaniaan noin 650 kilometrin matkan. Kroatian puolella sen osia ovat esimerkiksi [[Velebit]] ja rannikon yläpuolella kohoava [[Biokovo]]. Maa on suurelta osin kalkkikiveä, ja sille on ominaista [[karst]]-maisema: luolia, sokkeloisia kaivantoja ja maanalaisia vesiä. Kroatian korkein huippu on Dinara-vuori, noin 1 800 metriä. Vuoristossa sijaitsee myös [[Plitvicen]] kansallispuisto, tunnetut portaittain laskevat järvet.
+
+### v2-524
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: jääkauden
+VASTAUS: Viimeinen jääkausi oli kylmä jakso, jonka huippu osui noin 20 000 vuoden taakse. Pohjois-Euroopan yli ulottui paksu [[mannerjäätikkö]], ja Suomi oli kokonaan jään alla. Jäähän oli sitoutunut niin paljon vettä, että merenpinta oli sadan metrin verran nykyistä alempana, ja Adrianmeren pohjoisosa oli suurelta osin kuivaa maata. Kun jää suli, merenpinta nousi ja vesi täytti rannikon laaksot. Nykyisen kaltainen tilanne alkoi vakiintua [[holoseeni]]ksi kutsutulla kaudella, joka alkoi noin 11 700 vuotta sitten.
+
+### v2-525
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Adrianmeren
+VASTAUS: Adrianmeri on Välimeren kapea lahti Italian ja Balkanin niemimaan välissä. Sen pituus on noin 800 kilometriä, ja pohjoisosa on matala. Eteläpäässä Adrianmeri yhtyy Joonianmereen [[Otranton salmi]]n kautta. Rannikolla ovat esimerkiksi [[Venetsia]], Rijeka, [[Split]] ja Dubrovnik. Splitissä keisari Diocletianus rakennutti noin vuonna 300 eläkepalatsin meren rannalle, ja muurien sisälle jäi myöhemmin kokonainen kaupunki. Slovenian puolella Piranin lähellä tehdään suolaa perinteisin menetelmin Sečovljen suola-altailla, ja tuotteella on EU:n suojattu alkuperänimitys.
+
+### v2-526
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Kyrilloksen
+VASTAUS: Kyrillos ja Metodios olivat veljekset, jotka olivat kotoisin bysanttilaisesta [[Thessalonikista]]. Heidät lähetettiin 860-luvulla [[Moravia]]an slaavilaisten pariin kirkollisessa tehtävässä, ja Kyrilloksen sanotaan luoneen glagoliittisen kirjoituksen, jotta kirkonmenot ja Raamattu voitiin kääntää slaavilaiseen kieleen. Kyrillos kuoli Roomassa vuonna 869, ja [[Metodios]] jatkoi työtä Kyrilloksen jälkeen. Heidän oppilaansa kehittivät myöhemmin [[kyrillisen]] aakkoston, joka on saanut nimensä Kyrilloksen mukaan.
+
+### v2-527
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Baškan tauluksi
+VASTAUS: Baškan taulu on noin vuodelta 1100 peräisin oleva kivilaatta, joka löytyi Krkin saarelta Baškan läheltä sijaitsevasta kirkosta. Teksti on kirjoitettu glagoliittisella kirjoituksella, ja siinä kerrotaan kuningas [[Zvonimir]]in lahjoituksesta luostarille. Se on yksi vanhimpia säilyneitä kroatiankielisiä kirjoituksia, ja siinä mainitaan kuninkaan olevan kuningas hrvatski eli kroatialainen. Laatta on nykyään [[Zagrebin]] Kroatian tiede- ja taideakatemiassa, ja [[Krkin]] saarella on kopio. Se on Kroatian kulttuuriperinnön tärkeimpiä esineitä.
+
+### v2-528
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Dalmatian
+VASTAUS: Dalmatia on Kroatian rannikon eteläosa Adrianmeren itärannalla, ja sen keskeisiä kaupunkeja ovat [[Zadar]], [[Split]] ja [[Dubrovnik]]. Alue kuului antiikissa Rooman valtakuntaan, ja keisari Diocletianuksen palatsi Splitissä on tämän ajan perintöä. Keskiajalla ja uuden ajan alussa suuri osa rannikosta oli Venetsian vallan alla. Rannikko on kivistä ja kuivaa, ja sen edustalla on lukuisia saaria. Myös [[dalmatiankoira]] on saanut nimensä alueelta, vaikka rodun tarkka alkuperä on epäselvä.
+
+### v2-529
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: karnevaalin
+VASTAUS: Karnevaali on kristillisen paaston edellä vietettävä kevätjuhla, jonka aikana naamiaiset, kulkueet ja pilanteko kuuluvat ohjelmaan; Suomessa vastaava ajankohta on [[laskiainen]]. Kroatiassa karnevaalia vietetään kautta maan, ja tunnetuimpiin kuuluu [[Rijeka]]n suuri karnevaali. Kastavin seudulla perinteeseen kuuluvat [[zvončari]] eli kellonsoittajat, jotka kulkevat pelottavissa asuissaan ja suuret kellot vyöllään, ja perinne on Unescon aineettoman kulttuuriperinnön luettelossa. Fritulea ja muita paistettuja herkkuja syödään karnevaalin aikaan.
+
+### v2-530
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: kolmikymmenvuotisen sodan
+VASTAUS: Kolmikymmenvuotinen sota käytiin vuosina 1618–1648 pääosin nykyisen Saksan alueella, ja se alkoi [[Prahan defenestraatio]]sta, jossa Böömin protestanttiset aateliset heittivät kuninkaan edustajat ulos linnan ikkunasta. Alun uskonnollinen kiista laajeni Euroopan suurvaltojen valtataisteluksi, ja mukaan tulivat muun muassa Ruotsi ja Ranska. Ruotsin kuningas [[Kustaa II Aadolf]] astui sotaan vuonna 1630, ja hänen armeijassaan taisteli myös suomalaisia, [[hakkapeliitat]]. Sota päättyi [[Westfalenin rauha]]an vuonna 1648. Sodan, nälän ja tautien seurauksena eräät Keski-Euroopan alueet menettivät suuren osan väestöstään.
+
+### v2-531
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Ludvig XIV:n
+VASTAUS: Ludvig XIV syntyi vuonna 1638 ja hallitsi Ranskaa vuosina 1643–1715, mikä on poikkeuksellisen pitkä hallituskausi. Häntä kutsuttiin Aurinkokuninkaaksi, ja hän rakennutti [[Versailles]]n palatsin ja siirsi hovin sinne. Valtiovarainministeri [[Colbert]] uudisti hänen aikanaan Ranskan taloutta, ja kuningas vahvisti keskitettyä, yksinvaltaista hallintoa. Hänen sotansa rasittivat maata. Vuonna 1695 ranskalainen armeija pommitti Brysseliä, ja suuri osa [[Grand-Place]]n aukiosta paloi.
+
+### v2-532
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: travertiinia
+VASTAUS: Travertiini on kalsiumkarbonaatista eli kalkista koostuva kivilaji, joka syntyy, kun kalkkipitoinen lähdevesi saostaa kalkkia. Prosessiin osallistuvat usein sammaleet ja levät, joiden ympärille kalkki kertyy. Plitvicen padot ovat teknisesti usein kalkkituffia, mutta puhekielessä niistä käytetään myös tätä nimeä. Travertiinia on käytetty rakennuskivenä jo antiikissa: [[Kolosseum]] rakennettiin osin lähellä [[Tivoli]]a louhitusta travertiinista. Kroatiassa vastaavia kalkkipatoja on myös [[Krka]]n kansallispuistossa.
+
+### v2-533
+KOHDE: maa:HRV
+KYSYMYS: Kerro lisää: Unescon maailmanperintölistalle
+VASTAUS: Unescon maailmanperintöluetteloon on merkitty useita Kroatian kohteita. Plitvicen järvet otettiin luetteloon 1970-luvun lopulla, ja samoihin aikoihin sinne tulivat myös [[Dubrovnikin vanhakaupunki]] ja [[Diocletianuksen palatsi]] Splitissä. Myöhemmin mukaan on tullut esimerkiksi [[Šibenikin katedraali]]. Luetteloon pääsy edellyttää, että kohteella on poikkeuksellinen yleismaailmallinen arvo ja että se suojellaan. Kroatian luontokohteista Plitvice on tunnetuimpia, sillä alueen kalkkipadot kasvavat yhä.
+

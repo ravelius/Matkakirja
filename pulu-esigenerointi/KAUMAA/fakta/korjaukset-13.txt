@@ -1,0 +1,21 @@
+### v2-539
+VANHA: kasvanut juustomassa valutetaan
+UUSI: hyytynyt juustomassa valutetaan
+SYY: kielivirhe (kömpelö sanavalinta)
+
+### v2-539
+VANHA: tuorejuustolla, ja rakuunalla tai rusinoilla
+UUSI: tuorejuustolla, rakuunalla tai rusinoilla
+SYY: kielivirhe (turha pilkku ja ja-sana)
+
+### v2-543
+VANHA: yli 1 500 teosta
+UUSI: yli tuhat teosta
+SYY: epävarma luku, pehmennetty
+
+### v2-548
+VANHA: se on Euroopan vanhin yhtäjaksoisesti toiminut apteekki
+UUSI: se on yksi Euroopan vanhimmista yhtäjaksoisesti toimineista apteekeista
+SYY: liioittelu (vanhin-väite)
+
+LOPPU: tarkistettu 50 vastausta, korjauksia 4

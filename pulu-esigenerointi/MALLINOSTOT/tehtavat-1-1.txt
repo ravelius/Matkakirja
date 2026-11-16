@@ -1,0 +1,111 @@
+================ KOHTA 1 (kohdekartta:pariisi:Invalidit) ================
+
+### 1.1
+KYSYMYS: Miksi Napoleon on haudattu juuri Invalideihin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Invalidit] Napoleon toivoi testamentissaan lepäävänsä Seinen rannalla Ranskan kansan keskellä. Kun Britannia luovutti jäännökset 1840, hallitus valitsi sotilaiden kodin kupolikirkon, koska se oli jo armeijan kunniapaikka; sarkofagi valmistui 1861.
+
+### 1.2
+KYSYMYS: Asuuko Invalideissa vielä sotilaita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Invalidit (Pariisi) (nähtävyys)
+Tietoruudun teksti: Ludvig XIV:n sodat jättivät jälkeensä tuhansia haavoittuneita ja vanhentuneita sotilaita, jotka päätyivät kerjäämään Pariisin kaduille. Vuonna 1670 kuningas määräsi rakennettavaksi heille kodin, ja Libéral Bruantin suunnittelemaan taloon muuttivat ensimmäiset asukkaat jo 1674. Parhaimmillaan siellä asui noin 4 000 entistä sotilasta. Talo oli kuin pieni kaupunki: asukkaat tekivät verstaissa kenkiä, univormuja ja kuvakudoksia, ja heillä oli oma sairaala ja kirkko. Kuninkaalle rakennettiin vielä oma kirkko, Jules Hardouin-Mansartin Dôme des Invalides, jonka kullattu kupoli nousee 107 metriin. Heinäkuun 14. päivän aamuna 1789 kansanjoukko tunkeutui Invalideihin ja vei asevarastosta lähes 30 000 kivääriä. Ruutia ei löytynyt, ja sitä lähdettiin hakemaan Bastiljista. Vuonna 1840 Napoleonin jäännökset tuotiin Saint Helenan saarelta, ja kupolin alle kaivettiin avoin krypta. Sarkofagi veistettiin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Invalidit] Kyllä, pieni määrä: Institution nationale des Invalides hoitaa yhä vakavasti vammautuneita sotaveteraaneja. Suurin osa rakennuksesta on kuitenkin armeijamuseota.
+
+================ KOHTA 2 (kohdekartta:pariisi:Sainte-Chapelle) ================
+
+### 2.1
+KYSYMYS: Miksi pyhäinjäännös maksoi enemmän kuin koko kappeli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Sainte-Chapelle] Orjantappurakruunu oli keskiajan arvokkaimpia pyhäinjäännöksiä, ja sen omistaminen teki Pariisista kristikunnan keskuksen ja Ludvig IX:stä sen suojelijan. Ludvig maksoi jäännöksestä 135 000 livreä, yli kolme kertaa enemmän kuin sen säilytykseen rakennettu kappeli maksoi.
+
+### 2.2
+KYSYMYS: Miten lasit selvisivät vallankumouksesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Sainte-Chapelle (Pariisi) (nähtävyys)
+Tietoruudun teksti: Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle muutamassa vuodessa ja vihittiin huhtikuussa 1248. Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää lasia: viidessätoista ikkunassa on yli tuhat raamatullista kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä 1200-luvulta. Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista ei ole jäljellä …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Sainte-Chapelle] Vallankumouksen jälkeen kappeli muutettiin oikeuslaitoksen arkistoksi: ikkunoiden alaosia poistettiin, ja asiakirjakaapit peittivät seinien alaosat. 1840–1860-lukujen restauroinnissa ikkunat korjattiin ja puuttuvat osat tehtiin uudelleen; noin kaksi kolmasosaa laseista on silti 1200-luvulta.
+
+================ KOHTA 3 (kohdekartta:pariisi:Grand Palais) ================
+
+### 3.1
+KYSYMYS: Mitä Grand Palais'n paikalla oli ennen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Grand Palais] Vuoden 1855 maailmannäyttelyn Palais de l'Industrie, suuri lasi- ja rautahalli, joka purettiin vuoden 1900 näyttelyn tieltä.
+
+### 3.2
+KYSYMYS: Miksi halli suljettiin 1990-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Grand Palais (Pariisi) (nähtävyys)
+Tietoruudun teksti: Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen tieltä purettiin vuoden 1855 näyttelyn Palais de l’Industrie. Kivisten julkisivujen taakse kätkeytyi teräsrunkoinen halli, jonka lasikatto oli aikanaan Euroopan suurin. Samaan näyttelyyn valmistui Seinen yli Aleksanteri III:n silta, joka johtaa suoraan palatsin eteen. Hallissa pidettiin hevosnäyttelyitä, taidesalonkeja ja vuodesta 1901 automessuja, ja vuonna 1909 siellä esiteltiin lentokoneita ensimmäisessä kansainvälisessä ilmailunäyttelyssä. Ensimmäisen maailmansodan aikana palatsi oli sotilassairaala. Lasikatto ruostui ja vuoti vuosikymmeniä, ja kun katosta putosi niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden 2024 olympialaisissa lasikaton alla miekkailtiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Grand Palais] Lasikatto oli ruostunut ja vuotanut vuosikymmeniä, ja kun katosta putosi niitti 1993, päähalli suljettiin turvallisuussyistä. Se avattiin uudelleen korjausten jälkeen 2000-luvun puolivälissä.
+
+================ KOHTA 4 (kohdekartta:pariisi:Tour Montparnasse) ================
+
+### 4.1
+KYSYMYS: Mitä tornin paikalla oli ennen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Tour Montparnasse (Pariisi) (nähtävyys)
+Tietoruudun teksti: Tornin paikalla seisoi vanha Montparnassen rautatieasema. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja 59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä tyyliä, jossa koristeet karsittiin pois. Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Tour Montparnasse] Vanha Montparnassen rautatieasema, josta veturi syöksyi seinän läpi kadulle vuonna 1895. Asema purettiin 1960-luvulla ja uusi rakennettiin etelämmäs.
+
+### 4.2
+KYSYMYS: Miksi Pariisiin ei rakennettu lisää pilvenpiirtäjiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Tour Montparnasse (Pariisi) (nähtävyys)
+Tietoruudun teksti: Tornin paikalla seisoi vanha Montparnassen rautatieasema. Lokakuussa 1895 Granvillestä tullut juna ei pysähtynyt ajoissa: veturi syöksyi raiteiden päästä aseman seinän läpi ja jäi roikkumaan nokka alaspäin kadulle. Valokuva onnettomuudesta kiersi maailmaa. Vanha asema purettiin 1960-luvulla, ja uusi rakennettiin hieman etelämmäs. Tilalle nousi vuosina 1969–1973 Tour Montparnasse, 210 metriä ja 59 kerrosta. Se oli Ranskan korkein rakennus vuoteen 2011 asti. Tumma lasi- ja teräsjulkisivu edusti sodanjälkeistä kansainvälistä tyyliä, jossa koristeet karsittiin pois. Pariisilaiset eivät pitäneet tornista. Muutama vuosi sen valmistumisen jälkeen keskustan uusien rakennusten korkeus rajattiin 37 metriin, eikä vastaavaa nostettu enää vanhaan Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nähtävyysjuttu: Tour Montparnasse] Vuonna 1973 valmistunut 210-metrinen torni herätti pariisilaisissa niin paljon vastustusta, että kaupunki rajasi pian sen jälkeen uusien rakennusten korkeuden: keskustassa noin 25 metriin ja reuna-alueilla noin 31–37 metriin. Korkeat toimistotalot sijoitettiin La Défenseen kaupungin rajan ulkopuolelle.

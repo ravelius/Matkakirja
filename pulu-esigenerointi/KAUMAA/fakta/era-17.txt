@@ -1,0 +1,445 @@
+### v2-890
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Vallettan linnoitusten
+VASTAUS: Vallettan linnoitukset rakennettiin kaupungin perustamisen jälkeen vuodesta 1566, ja kaupunki ympäröitiin niin paksuilla muureilla, että niiden purkamista on ehdotettu useaan otteeseen turhaan. Linnoitukset suojaavat niemen molempia satamia, [[Grand Harbouria]] ja [[Marsamxettia]]. Niemen kärjessä seisoo [[Pyhän Elmon linnake]], joka rakennettiin jo vuonna 1552 ja jonka tähtimäinen muuri oli aikanaan uutta linnoitustekniikkaa. Kesäkuussa 1798 saapui [[Napoleon Bonaparten]] laivasto, ja suurmestari Hompesch luovutti saaret ranskalaisille, vaikka kaupunki olisi voinut kestää pitkän piirityksen. Valletta on Unescon maailmanperintökohde.
+
+### v2-891
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Francesco Laparelli
+VASTAUS: Francesco Laparelli oli italialainen sotilasinsinööri, jonka paavi lähetti suunnittelemaan ritarikunnan uutta pääkaupunkia suuren piirityksen jälkeen. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti [[Pyhän Elmon linnaketta]]. Peruskivi laskettiin 28. maaliskuuta 1566. Laparellin kuoltua työtä johti maltalainen [[Girolamo Cassar]], joka suunnitteli myöhemmin myös [[Pyhän Johanneksen ko-katedraalin]]. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+
+### v2-892
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Sciberrasin niemelle
+VASTAUS: Sciberrasin niemi on kapea kalkkikivinen kieleke kahden sataman välissä, ja sen kärkeä vartioi vuonna 1552 rakennettu [[Pyhän Elmon linnake]]. Vuonna 1565 osmanit hyökkäsivät ensin juuri sinne. Linnake piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka puolustajia oli moninkertaisesti vähemmän. Yöllä veneet toivat [[Birgusta]] lisää puolustajia ja veivät haavoittuneita pois. Piirityksen jälkeen niemelle nousi [[Valletta]], jonka ritarikunta rakensi vuodesta 1566 alkaen.
+
+### v2-893
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Grand Harbouria
+VASTAUS: Grand Harbour on Maltan tärkein satama-allas Vallettan ja Birgun vastakkaisilla puolilla. Ritarikunta asettui sen rannalle saapuessaan Maltalle vuonna 1530 ja valitsi asuinpaikakseen [[Birgun]]. Vuoden 1565 suuren piirityksen aikana satamaa vartioivat linnakkeet joutuivat raskaan tulen kohteeksi, ja Birgu ja Senglea kestivät pommituksen. Britit ottivat saaren haltuunsa vuonna 1800 ja tekivät satamasta Välimeren laivastonsa tukikohdan. Toisen maailmansodan pommitusten jälkeen saari sai [[George Cross]] -kunniamerkin, ja satamassa seisoo yhä [[Fort St. Angelo]].
+
+### v2-894
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Marsamxettia
+VASTAUS: Marsamxett on Vallettan niemen luoteispuolella oleva satama, joka erottaa Vallettan kaupungeista [[Sliema]] ja Gżira. Se on Vallettan kahdesta satamasta toinen, ja se avautuu niemen toiselle puolelle kuin Grand Harbour. Satamassa on [[Manoel-saari]], jolla seisoo ritarikunnan 1700-luvulla rakentama Fort Manoel ja entinen karanteeniasema. Niemen kärjessä seisova [[Pyhän Elmon linnake]] vartioi molempien satamien suuta.
+
+### v2-895
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Zla Kolata
+VASTAUS: Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori. Se kuuluu [[Prokletije]]-vuoristoon, jonka nimi tarkoittaa kirottuja. Koko vuoriston korkein huippu, [[Maja Jezercë]], on 2 694 metrin korkeudessa Albanian puolella. Vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009, ja sen pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, joista [[Ropojanan jäätikkö]] oli noin 12,5 kilometriä pitkä.
+
+### v2-896
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Maja Jezercë
+VASTAUS: Maja Jezercë on Prokletije-vuoriston korkein huippu, 2 694 metriä, ja se sijaitsee Albaniassa. Montenegron korkein huippu [[Zla Kolata]] jää sitä noin 160 metriä matalammaksi. Vuoriston nimi tarkoittaa kirottuja, ja sen jyrkät kalkkikivihuiput ovat vaikeakulkuista maastoa. Viimeisen jääkauden aikana laaksoja muovasivat jäätiköt, ja vuoristossa on yhä noin 20 jäätikköjärveä, kuten [[Hridsko jezero]]. Huippu kuuluu [[Albanian Alppien]] alueeseen.
+
+### v2-897
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Hridsko jezero
+VASTAUS: Hridsko jezero on Prokletije-vuoriston jäätikköjärvi, ja sen pituus on vajaat 300 metriä. Se on yksi vuoriston noin 20 jäätikköjärvestä, jotka ovat jääkauden perua. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja [[Ropojanan jäätikkö]] oli noin 12,5 kilometriä pitkä. Järvi kuuluu alueeseen, jonka Montenegron puolelle perustettiin vuonna 2009 [[Prokletijen kansallispuisto]], ja sen pinta-ala on noin 16 000 hehtaaria. Samalla vuoristolla kohoaa Montenegron korkein huippu [[Zla Kolata]].
+
+### v2-898
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Virpazarin
+VASTAUS: Virpazar on pieni kylä Skutarijärven rannalla Montenegrossa, ja se on tunnettu veneretkien lähtöpaikkana kosteikoille. Skutarijärvi on Balkanin suurin järvi, ja siitä noin kaksi kolmasosaa kuuluu Montenegrolle. Järven pinta-ala vaihtelee vuodenaikojen mukaan 370 ja 530 neliökilometrin välillä, ja alueella on tavattu noin 270 lintulajia. Tunnetuimpia asukkaita ovat [[kiharapelikaanit]], joiden siipiväli voi ylittää kolme metriä. Montenegron puoli kuuluu [[Skutarijärven kansallispuistoon]], joka sai kansallispuiston aseman vuonna 1983.
+
+### v2-899
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Albanian
+VASTAUS: Albania on Balkanin niemimaan länsiosassa Adrianmeren ja Joonianmeren rannalla oleva valtio, ja sen pääkaupunki on [[Tirana]]. Se rajoittuu pohjoisessa Montenegroon, koillisessa Kosovoon, idässä Pohjois-Makedoniaan ja etelässä Kreikkaan. Skutarijärvi on Albanian ja Montenegron yhteinen järvi, ja sen Albanian puoleinen osa jatkuu rajan yli. Pohjoisessa kohoavat [[Prokletije]]-vuoret, ja niiden korkein huippu [[Maja Jezercë]] on Albaniassa. Virallinen kieli on albania.
+
+### v2-900
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Kotorin vanhakaupunki
+VASTAUS: Kotorin vanhakaupunki on ollut asutettu yli 2 000 vuotta, ja roomalaiset, bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit ovat jättäneet siihen jälkensä. Kaupunki sijaitsee [[Kotorinlahden]] perukassa, ja sen sydämessä kohoaa vuonna 1166 vihitty [[Pyhän Tryphonin katedraali]]. Suurin osa muureista nousi venetsialaisvallan aikana: ne kiipeävät 260 metrin korkeuteen kaupungin yllä ja ovat lähes 4,5 kilometriä pitkät. Unesco listasi Kotorin maailmanperinnöksi vuonna 1979, ja vuonna 2017 muurit liitettiin vielä [[venetsialaisten puolustusrakennelmien]] sarjaan.
+
+### v2-901
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+VASTAUS: Unescon maailmanperintöluettelo on kohteiden luettelo, jonka kohteilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo, ja siihen voidaan hyväksyä sekä kulttuuri- että luontokohteita. Perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Montenegrossa luetteloon kuuluu [[Kotorin luonto- ja kulttuuriperintöalue]], joka listattiin jo vuonna 1979, ja vuonna 2017 sen muurit liitettiin [[venetsialaisten puolustusrakennelmien]] sarjaan. Lisäksi luettelossa on [[Durmitorin kansallispuisto]].
+
+### v2-902
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Perast
+VASTAUS: Perast on pieni barokkikaupunki Kotorinlahdella, ja se kuului pitkään [[Venetsian tasavaltaan]]. Kaupungin edustalla on kaksi pientä saarta. Toinen niistä, [[Gospa od Škrpjela]], on ihmisten tekemä: perimätiedon mukaan sitä on kasvatettu vuosisatojen ajan kivillä ja upotetuilla aluksilla. Toisella saarella, [[Sveti Đorđe]], on vanha benediktiiniluostari. Perast oli tunnettu merenkulustaan, ja sen rannalla on yhä barokkityylisiä kapteenien palatseja.
+
+### v2-903
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Crna Gora
+VASTAUS: Crna Gora on Montenegron nimi maan omalla kielellä, ja se tarkoittaa mustaa vuorta. Montenegro on saman nimen venetsialainen muoto. Nimen arvellaan viittaavan [[Lovćen]]-vuoren tummiin metsiin, mutta selityksiä on useita eikä asiasta ole täyttä varmuutta. Maan historiassa merkittävä oli [[Crnojevićien]] ruhtinassuku: heidän kirjapainossaan Cetinjen seudulla valmistui 4. tammikuuta 1494 kirkkolaulukirja [[Oktoih prvoglasnik]], jota pidetään yhtenä ensimmäisistä eteläslaavilaisista painotuotteista.
+
+### v2-904
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Lovćen
+VASTAUS: Lovćen on vuori Montenegron rannikon yläpuolella, ja sen juurella on vanha kuninkaallinen pääkaupunki [[Cetinje]]. Huipulla, Jezerski vrhillä 1 660 metrin korkeudessa, on [[Petar II Petrović-Njegošin]] mausoleumi. Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin huipulla. Hänet haudattiin sinne pieneen kappeliin vuonna 1851. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille, ja kappeli rappeutui pahoin. Uuden mausoleumin sai valmiiksi 1970-luvulla kuvanveistäjä [[Ivan Meštrović]]. Huipulle kiipeää 461 kiviporrasta.
+
+### v2-905
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Cetinje
+VASTAUS: Cetinje on Montenegron vanha kuninkaallinen pääkaupunki ja maan kulttuurikeskus, ja se sijaitsee [[Lovćenin]] juurella. Crnojevićien kirjapainossa Cetinjen seudulla valmistui 4. tammikuuta 1494 kirkkolaulukirja [[Oktoih prvoglasnik]]. Painajana toimi munkki [[Makarije]], joka oli oppinut käyttämään kirjaimia kirkkoslaaviksi. Painokoneen ja kirjaimet ruhtinas Đurađ Crnojević oli hankkinut Venetsiasta vain vuosi aiemmin, ja paperikin tuotiin samaa reittiä, koska lähialueella ei ollut yhtään paperimyllyä. Kaupungin tunnetuin hahmo on ruhtinaspiispa ja runoilija [[Petar II Petrović-Njegoš]].
+
+### v2-906
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Berliinin kongressissa
+VASTAUS: Berliinin kongressi kokoontui kesä–heinäkuussa 1878, ja sen puheenjohtajana toimi Saksan liittokansleri [[Otto von Bismarck]]. Kokouksessa tarkistettiin Venäjän ja Osmanien valtakunnan sodan jälkeen tehtyä [[San Stefanon rauhaa]]. Montenegro, Serbia ja Romania tunnustettiin itsenäisiksi, ja Bulgaria jaettiin osiin. Itävalta-Unkari sai oikeuden miehittää [[Bosnia ja Hertsegovinaa]]. Montenegro sai lisää alaa, ja siihen liitettiin muun muassa Podgorica ja Bar.
+
+### v2-907
+KOHDE: maa:MNE
+KYSYMYS: Kerro lisää: Jugoslaviaa
+VASTAUS: Jugoslavia syntyi vuonna 1918 nimellä Serbien, kroaattien ja sloveenien kuningaskunta, ja nimi Jugoslavia otettiin käyttöön vuonna 1929. Toisen maailmansodan jälkeen maasta tuli sosialistinen liittotasavalta, jonka johdossa oli [[Josip Broz Tito]]. Siihen kuuluivat Slovenia, [[Kroatia]], Bosnia ja Hertsegovina, Serbia, Montenegro ja Makedonia. Valtio hajosi 1990-luvun alussa. Serbia ja Montenegro jatkoivat yhdessä liittovaltiona, joka nimettiin vuonna 2003 uudelleen [[Serbian ja Montenegron valtioliitoksi]] ja purkautui vuonna 2006.
+
+### v2-908
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Josip Broz Titon
+VASTAUS: Josip Broz Tito syntyi vuonna 1892 [[Kumrovecissa]] nykyisessä Kroatiassa ja johti toisen maailmansodan aikana kommunistisia partisaaneja. Sodan jälkeen hän johti Jugoslaviaa ensin pääministerinä ja vuodesta 1953 presidenttinä kuolemaansa saakka vuonna 1980. Vuonna 1948 hän ajautui riitaan [[Neuvostoliiton]] johdon kanssa, ja Jugoslavia kulki sen jälkeen omaa tietään. Tito oli yksi [[liittoutumattomien maiden liikkeen]] perustajista. Podgorica kantoi hänen nimeään vuosina 1946–1992.
+
+### v2-909
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Jugoslaviaa
+VASTAUS: Jugoslavia oli eteläslaavilaisten kansojen yhteinen valtio, jonka ensimmäinen versio perustettiin vuonna 1918. Montenegro liittyi siihen samana vuonna. Toisen maailmansodan jälkeen se oli kuuden tasavallan liittovaltio, jonka pääkaupunki oli [[Belgrad]], ja Montenegron pääkaupunki sai nimekseen [[Titograd]] vuonna 1946. Valtio hajosi 1990-luvun alussa. Vuonna 1992 Montenegro ja Serbia perustivat uuden liittotasavallan, josta tuli vuonna 2003 valtioliitto, ja Montenegro erosi siitä vuoden 2006 kansanäänestyksen jälkeen. Jugoslavian pitkäaikainen johtaja oli [[Josip Broz Tito]].
+
+### v2-910
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Ribnican
+VASTAUS: Ribnica on joki, joka laskee Moračaan Podgorican keskustassa. Sen rannalla sijaitsee vanha ottomaaniajan ydin [[Stara Varoš]], ja keskiajalla koko kaupunki tunnettiin nimellä Ribnica. Joen ja Moračan yhtymäkohdan yläpuolella kohoaa [[Ribnican linnoitus]] eli Depedogen, jonka valmistumisajaksi mainitaan lähteiden mukaan noin 1477–1479. Se toimi pitkään ammusvarastona, ja salamanisku sytytti myöhemmin 1800-luvun lopulla räjähdyksen, joka vaurioitti linnoitusta pahoin. Joen yli kulkee vanha silta, jota kutsutaan nimellä [[Adži-paša-silta]].
+
+### v2-911
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Stara Varoš
+VASTAUS: Stara Varoš eli vanha kaupunki on Podgorican ottomaaniajan ydin Ribnican vasemmalla rannalla. Vuonna 1873 se oli yhä kaupungin ydin, ja [[Berliinin kongressi]] liitti kaupungin Montenegroon vuonna 1878. Alueen tunnetuin rakennelma on [[Sahat kula]] -kellotorni, jonka rakennutti Hadži-paša Osmanagić vuonna 1667 ja jonka nykyinen koneisto on vuodelta 1890. Lisäksi alueella ovat [[Ribnican linnoitus]], vanha silta ja kaksi moskeijaa. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista.
+
+### v2-912
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Morača
+VASTAUS: Morača on Podgorican halki virtaava joki, joka laskee [[Skutarijärveen]] ja tuo sinne noin 62 prosenttia järven vedestä. Ribnica-joki yhtyy siihen kaupungissa, ja yhtymäkohdan lähellä sijaitsevat vanha silta ja Skaline-portaat. Moračan yli rakennettu [[Millennium-silta]] on 173 metriä pitkä vinoköysisilta, joka avattiin liikenteelle 13. heinäkuuta 2005, Montenegron kansallispäivänä. Toinen silta, [[Vezirov most]], ylittää niin ikään Moračan, eikä se ole sama silta kuin vanha silta Ribnican yli.JATKOT:
+
+### v2-913
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Ribnica
+VASTAUS: Ribnica on pieni joki Podgoricassa, ja nimi on kuulunut myös kaupungille, sillä keskiajalla Podgorica tunnettiin nimellä Ribnica. Nimi Podgorica mainitaan ensi kerran vuonna 1326 Kotorin arkiston asiakirjassa. Joki yhtyy Moračaan kaupungin keskustassa, ja sen vasemmalle rannalle kehittyi ottomaanikaupunki [[Stara Varoš]]. Joen yli johtaa vanha silta, jota kutsutaan [[Adži-paša-sillaksi]]: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Joen ylitys oli osa vanhan kaupungin arkea.
+
+### v2-914
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Skutarijärveä
+VASTAUS: Skutarijärvi on Balkanin suurin järvi, ja siitä noin kaksi kolmasosaa kuuluu Montenegrolle, loput [[Albanialle]]. Järven pinta-ala vaihtelee vuodenaikojen mukaan 370 ja 530 neliökilometrin välillä, vaikka syvimmilläänkin vettä on vain noin 44 metriä. Montenegron puoli sai kansallispuiston aseman vuonna 1983. Alueella on tavattu noin 270 lintulajia, ja tunnetuimpia asukkaita ovat [[kiharapelikaanit]], joiden siipiväli voi ylittää kolme metriä. Järvestä laskee [[Buna]]-joki Adrianmerelle.
+
+### v2-915
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Millennium-silta
+VASTAUS: Millennium-silta on vinoköysisilta [[Moračan]] yli. Se avattiin liikenteelle 13. heinäkuuta 2005, Montenegron kansallispäivänä, ja se yhdistää Ivan Crnojevićin bulevardin ja 13. heinäkuuta -kadun. Sillan pituus on 173 metriä, ja pylon nousee 57 metriä tien yläpuolelle. Kaksitoista köyttä kantaa kantta, ja 24 muuta kiinnittyy vastapainoihin. Suunnittelijat ovat [[Marjan Pipenbaher]] ja [[Mladen Ulićević]], ja rakentajana oli slovenialainen Primorje. Kustannus oli noin 7 miljoonaa euroa.
+
+### v2-916
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Kristuksen ylösnousemuksen katedraali
+VASTAUS: Kristuksen ylösnousemuksen katedraali on Montenegron ja Rannikon metropoliitan kirkko, ja se kuuluu Serbian ortodoksiseen kirkkoon. Rakentaminen alkoi vuonna 1993 Predrag Ristićin suunnitelmin, ja katedraali pyhitettiin vuonna 2013 [[Milanon ediktin]] 1 700-vuotisjuhlan yhteydessä. Rakennuksessa on kaksi tornia ja näkyvä kaari, ja esikuvana oli keskiaikainen [[Pyhän Tryphonin katedraali]] Kotorissa. Arkkitehtuurissa on romaanisia, italialaisia ja bysanttilaisia vaikutteita. Sisätilat ovat täynnä kultataustaisia ikonimaalauksia, ja lattiat ovat marmoria.
+
+### v2-917
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Gorica
+VASTAUS: Gorica tarkoittaa pientä kukkulaa, ja se on yksi Podgorican ylle kohoavista sypressikukkuloista. Sen korkeus on noin 130 metriä. Kaupungin nimi Podgorica tarkoittaa kukkulan alla, ja nimi mainitaan ensi kerran vuonna 1326 [[Kotorin arkiston]] asiakirjassa. Muita kaupunkia ympäröiviä kukkuloita ovat [[Malo brdo]] noin 205 metriä, [[Velje brdo]] noin 280 metriä ja [[Ljubović]] noin 100 metriä. Itse kaupunki on lähes tasaisella maalla noin 40 metriä merenpinnan yläpuolella Zetan tasangon pohjoispäässä.
+
+### v2-918
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Skutarijärvi
+VASTAUS: Skutarijärvi hengittää vuodenaikojen mukana: sen pinta-ala vaihtelee 370 ja 530 neliökilometrin välillä, mutta vettä on syvimmilläänkin vain noin 44 metriä. Vedestä noin 62 prosenttia tulee [[Morača]]-joesta, ja [[Buna]]-joki laskee järvestä Adrianmerelle. Montenegron puoli sai kansallispuiston aseman vuonna 1983. Alueella on tavattu noin 270 lintulajia sekä 34 alkuperäistä kalalajia, joista seitsemän on järven omia. Tunnetuimpia asukkaita ovat [[kiharapelikaanit]].
+
+### v2-919
+KOHDE: kaupunki:podgorica
+KYSYMYS: Kerro lisää: Dinaaristen Alppien
+VASTAUS: Dinaariset Alpit ovat vuoristo Balkanin niemimaan länsiosassa, joka ulottuu Sloveniasta Albaniaan. Vuoristo kulkee Adrianmeren rannikon suuntaisesti ja kattaa muun muassa Kroatian, Bosnia ja Hertsegovinan sekä Montenegron alueita. Maisemaa leimaa kalkkikivi ja karsti, ja kalkkikiven läpi nousee vettä lähteinä, kuten [[Vrelo Bosne]] Sarajevon länsilaidalla, jossa alkaa Bosna-joki. Vuoriston korkeimpana huippuna pidetään usein huippua [[Maja Jezercë]]. Podgorica sijaitsee vuoriston eteläisillä juurilla, missä ne kohtaavat [[Zetan tasangon]] pohjoisosan.
+
+### v2-920
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: poldereihin
+VASTAUS: Polderi on vesistöstä tai kosteikosta kuivattu maa-alue, jota suojaavat padot ja jonka vedenpintaa säädellään tarkasti. Vanhimmissa poldereissa vesi pumpattiin ulos tuulimyllyillä, myöhemmin höyry- ja sähköpumpuilla. Noin neljännes Alankomaista on merenpinnan alapuolella. [[Beemster]] kuivattiin 1600-luvun alussa, ja se on Unescon maailmanperintökohde. Suurin uudempi polderikokonaisuus on [[Flevoland]], joka pumpattiin kuiviin entisen [[Zuiderzeen]] pohjalta vuosina 1950–1968.
+
+### v2-921
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Afsluitdijk
+VASTAUS: Afsluitdijk on pato, joka sulkee [[Zuiderzeen]] suun Pohjanmerestä. Sen rakentaminen alkoi vuonna 1927, ja viimeinen aukko suljettiin lauantaina 28. toukokuuta 1932 kello 13.02, kun kolme kelluvaa nostokurkea laski viimeisen kivilastin paikalleen kohdassa, jota kutsutaan nimellä de Vlieter. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa. Padon pituus on noin 32 kilometriä, ja sen taakse muodostui makeavetinen [[IJsselmeer]]. Hanke perustui insinööri [[Cornelis Lelyn]] suunnitelmiin.
+
+### v2-922
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Zuiderzeen
+VASTAUS: Zuiderzee oli Pohjanmeren matala lahti Alankomaiden sydämessä. Pato [[Afsluitdijk]] sulki sen suun vuonna 1932, ja lahdesta tuli makeavetinen [[IJsselmeer]]. Sen pohjaa kuivattiin sen jälkeen uusiksi poldereiksi: [[Flevolandin]] maakunta pumpattiin kuiviin vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli [[Oostvaardersplassen]]. Sinne päästettiin vuonna 1983 heck-nautoja ja seuraavana vuonna konik-hevosia, ja vuonna 2006 alueelle asettui pesimään merikotka paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+
+### v2-923
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Flevolandin
+VASTAUS: Flevoland on Alankomaiden nuorin maakunta, ja se on kokonaan tehtyä maata: se pumpattiin kuiviin entisen [[Zuiderzeen]] pohjalta vuosina 1950–1968. Maakunnan pääkaupunki on [[Lelystad]]. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli [[Oostvaardersplassen]]. Alueelle päästettiin vuonna 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena, ja vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka.
+
+### v2-924
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Carolus Clusius
+VASTAUS: Carolus Clusius eli Charles de l'Écluse oli flaamilainen kasvitieteilijä, joka syntyi vuonna 1526 Arrasissa ja kuoli Leidenissä vuonna 1609. Hän työskenteli ensin Wienin keisarillisessa puutarhassa ja siirtyi vuonna 1593 [[Leidenin yliopiston]] kasvitieteellisen puutarhan johtajaksi. Tulppaani oli tuotu Eurooppaan [[Osmanien valtakunnasta]], ja Clusiuksen tiedetään kasvattaneen sitä Leidenissä. Häntä pidetään yleisesti Alankomaiden tulppaaniviljelyn alullepanijana. Myöhemmin kysyntä kasvoi niin suureksi, että syntyi [[tulppaanimania]].
+
+### v2-925
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: tulppaanimania
+VASTAUS: Tulppaanimania oli 1630-luvun lopun spekulaatiokupla, jossa tulppaanisipulien hinnat nousivat huimiksi. Tulppaani oli tuotu Alankomaihin 1500-luvulla [[Osmanien valtakunnasta]], ja kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Raitojen syynä oli virustauti, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina. [[Alkmaarin]] huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli pysähtynyt [[Haarlemissa]]. Historioitsijat ovat myöhemmin kiistäneet, kuinka laaja kupla todella oli.
+
+### v2-926
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Keukenhof
+VASTAUS: Keukenhof on tulppaanien ja muiden kevätsipulikukkien puisto [[Lissen]] kunnassa [[Etelä-Hollannissa]]. Se avattiin yleisölle vuonna 1950, ja se on auki vain keväällä, noin maaliskuun lopusta toukokuun puoliväliin. Puistossa kukkii vuosittain lähteiden mukaan noin seitsemän miljoonaa sipulikukkaa. Nimi tarkoittaa keittiöpuutarhaa. Parhaan kukinnan ajankohta riippuu kevään säästä, ja tulppaanit kukkivat yleensä huhtikuussa.
+
+### v2-927
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Stop de Kindermoord
+VASTAUS: Stop de Kindermoord oli 1970-luvun alun vanhempien liike, joka vaati turvallisempia katuja lapsille. Autoja tuli 1960-luvulla kaduille nopeammin kuin kadut ehtivät muuttua, ja vuonna 1972 Alankomaiden liikenteessä kuoli 3 267 ihmistä, enemmän kuin koskaan ennen tai sen jälkeen, heidän joukossaan satoja lapsia. Vanhemmat marssivat [[Haagissa]] parlamenttitalolle ja miehittivät risteyksiä. Politiikka kääntyi: kaupunkeihin ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia asuinkatuja, joista käytetään nimeä [[woonerf]]. Nykyään runsas neljännes kaikista matkoista tehdään maassa polkupyörällä.
+
+### v2-928
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Öljykriisin
+VASTAUS: Öljykriisi tarkoittaa vuoden 1973 lopulla alkanutta öljyn saannin kriisiä, jossa öljyä tuottavat arabimaat rajoittivat vientiä ja öljyn hinta nousi jyrkästi. Alankomaat kuului maihin, jotka joutuivat erityiseen vientikieltoon. Seurauksena Alankomaissa järjestettiin marraskuussa 1973 [[autottomat sunnuntait]], joina yksityisautoilu oli kielletty. Kriisi vahvisti keskustelua, jota [[Stop de Kindermoord]] -liike oli jo käynyt: autoiluun ei voinut luottaa, ja kaupunkeihin haluttiin pyöräteitä. Pyöräilyn osuus matkoista alkoi nousta 1970-luvun jälkeen.
+
+### v2-929
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: myrskytulva
+VASTAUS: Myrskytulva on tilanne, jossa kova tuuli ja matala ilmanpaine työntävät meriveden rannikolle tavallista korkeammalle, usein yhdessä vuoroveden kanssa. Alankomaissa tunnetuin on [[Pohjanmeren]] tulva 31. tammikuuta ja 1. helmikuuta 1953, joka iski erityisesti [[Zeelandin]] ja Etelä-Hollannin saariin ja vaati Alankomaissa yli 1 800 ihmishenkeä. Siitä on yli seitsemänkymmentä vuotta, ja tulva muutti maan suhtautumista veteen pysyvästi. Se johti [[Deltatöiden]] rakentamiseen.
+
+### v2-930
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Deltatyöt
+VASTAUS: Deltatyöt ovat sarja patoja, myrskytulvaesteitä ja sulkuja Alankomaiden lounaisosassa. Ne rakennettiin vuoden 1953 Pohjanmeren tulvan jälkeen suojaamaan [[Zeelandin]] ja Etelä-Hollannin jokisuistoja. Hanke käynnistyi 1950-luvun lopulla, ja sen viimeinen suuri osa, Rotterdamin väylää suojaava [[Maeslantkering]], otettiin käyttöön vuonna 1997. Tunnetuin ja suurin myrskytulvaeste on [[Oosterscheldekering]]. Se on tavallisesti auki, jotta vuorovesi pääsee kulkemaan, ja se suljetaan vain myrskyn uhatessa.
+
+### v2-931
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Oosterscheldekeering
+VASTAUS: Oosterscheldekering on Itä-Schelden suulle rakennettu myrskytulvaeste, joka valmistui vuonna 1986 ja on [[Deltatöiden]] suurin yksittäinen rakennelma. Se on noin yhdeksän kilometriä pitkä, ja betonipilareiden välissä on liikkuvia teräsportteja. Alun perin Oosterschelde oli tarkoitus sulkea kokonaan padolla, mutta ympäristö- ja kalastajaprotestien vuoksi päädyttiin ratkaisuun, jossa portit ovat tavallisesti auki ja vuorovesi pääsee kulkemaan. Portit suljetaan vain myrskyn uhatessa. Rakennelma sijaitsee [[Zeelandin]] maakunnassa, ja sen rakentamisessa käytettiin apuna keinotekoista [[Neeltje Jans]] -saarta.
+
+### v2-932
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Rotterdamin
+VASTAUS: Rotterdam on Euroopan suurin satama, ja sen kautta kulkee suuri osa Alankomaiden viennistä. Satama sijaitsee [[Reinin]] ja [[Maasin]] suistossa, ja väylä Pohjanmerelle kulkee kaupungin läpi. Väylää ei voitu padota, koska laivojen on päästävä sisään, joten molemmille rannoille rakennettiin ovi: [[Maeslantkering]], jonka kaarevien teräsleukojen ristikkovarsi on 210 metriä pitkä ja 22 metriä korkea. Kun myrsky uhkaa nostaa veden Rotterdamissa yli kolmen metrin, ovet kääntyvät ulos vedelle, täyttyvät vedellä ja vajoavat pohjaan. Päätöksen tekee tietokone, ei ihminen. Portti otettiin käyttöön vuonna 1997, ja oikeassa myrskyssä se suljettiin ensimmäisen kerran marraskuussa 2007.
+
+### v2-933
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Goudaa
+VASTAUS: Gouda on lehmänmaidosta valmistettu puolikova juusto, joka on saanut nimensä [[Etelä-Hollannin]] Gouda-kaupungin mukaan. Kypsyysasteet vaihtelevat nuoresta vanhaan: nuori juusto on pehmeää ja mietoa, vanha kovaa ja suolaista, ja siinä voi olla pieniä kiteitä. Alankomaat on yksi maailman suurimmista juustonviejistä, ja Gouda kuuluu sen tunnetuimpiin tuotteisiin. Perinteinen juustotori on edelleen elävä turistinähtävyys esimerkiksi [[Alkmaarissa]], jossa juustot kannetaan torille kantokelkoilla.
+
+### v2-934
+KOHDE: maa:NLD
+KYSYMYS: Kerro lisää: Edamia
+VASTAUS: Edam on lehmänmaidosta valmistettu puolikova juusto, joka on saanut nimensä [[Pohjois-Hollannin]] Edamin kaupungin mukaan. Se on muodoltaan pallomainen, ja vientiin menevät juustot päällystetään usein punaisella vahalla. Maku on mieto ja hieman suolainen. Pitkään säilyvänä juustona sitä on sanottu soveltuvan hyvin pitkille merimatkoille. Edam on Alankomaiden tunnetuimpia juustoja yhdessä [[Goudan]] kanssa.
+
+### v2-935
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Herengracht
+VASTAUS: Herengracht on yksi kolmesta puolikaarisesta kanaalista, jotka kaivettiin Amsterdamin vanhan kaupungin ympärille vuonna 1613 kaupunginpuuseppä [[Hendrick Staetsin]] suunnitelman mukaan. Kolmikon muodostavat Herengracht, Keizersgracht ja Prinsengracht, ja ne ovat yhteensä yli kahdeksan kilometriä pitkät. Nimi tarkoittaa herrojen kanavaa. Herengrachtin varrella on tuhansien kauppiastalojen joukossa erityisen näyttäviä rakennuksia, ja sen tunnetuin osuus tunnetaan nimellä [[Gouden Bocht]], kultainen mutka. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+
+### v2-936
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Keizersgracht
+VASTAUS: Keizersgracht on keskimmäinen kolmesta Amsterdamin puolikaarisesta kanaalista, ja nimi tarkoittaa keisarin kanavaa. Se kaivettiin vuonna 1613 alkaneessa laajennuksessa kaupunginpuuseppä [[Hendrick Staetsin]] suunnitelman mukaan yhdessä [[Herengrachtin]] ja [[Prinsengrachtin]] kanssa. Kanaalit ovat yhteensä yli kahdeksan kilometriä pitkät, ja niitä reunustavat tuhannet kauppiastalot. Unesco lisäsi koko kanaalivyöhykkeen maailmanperintöluetteloonsa vuonna 2010.
+
+### v2-937
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Prinsengracht
+VASTAUS: Prinsengracht on uloin kolmesta Amsterdamin puolikaarisesta kanaalista, ja nimi tarkoittaa ruhtinaan kanavaa. Kanaalit kaivettiin vuodesta 1613 alkaen kaupunginpuuseppä [[Hendrick Staetsin]] suunnitelman mukaan, ja ne ympäröivät vanhaa kaupunkia yhteensä yli kahdeksan kilometrin matkalla. Prinsengrachtin varrella seisoo [[Anne Frankin talo]], joka rakennettiin vuonna 1635. Siellä Frank-perhe piiloutui vuonna 1942 salaiseen kätköön, ja nykyään talossa on museo, joka avattiin vuonna 1960. Lähellä on myös [[Westerkerk]]-kirkko.
+
+### v2-938
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Otto Frank
+VASTAUS: Otto Frank oli Anne Frankin isä ja Frank-perheen ainoa jäsen, joka selvisi sodasta hengissä. Hän syntyi vuonna 1889 Frankfurtissa, ja perhe asui 1930-luvulta lähtien Alankomaissa. Vuonna 1942 perhe ja neljä muuta piiloutuivat [[Prinsengrachtilla]] sijaitsevan talon takaosaan, jossa he piileskelivät lähes kaksi vuotta. Sodan jälkeen Otto huolehti [[Anne Frankin päiväkirjan]] julkaisemisesta, ja ensimmäinen painos ilmestyi vuonna 1947. Talo avattiin museona vuonna 1960, ja Otto Frank kuoli vuonna 1980. Siitä on kulunut jo yli neljäkymmentä vuotta, mutta kirja luetaan edelleen ympäri maailman. Museona toimii [[Anne Frankin talo]].
+
+### v2-939
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Anne Frankin päiväkirjan
+VASTAUS: Anne Frankin päiväkirja alkoi kesäkuussa 1942, kun Anne sai sen syntymäpäivälahjaksi 13-vuotiaana. Hän kirjoitti siihen koko sen ajan, jonka perhe piileskeli talon takaosassa, lähes kaksi vuotta. Isä [[Otto Frank]] julkaisi päiväkirjan vuonna 1947 nimellä Het Achterhuis, joka tarkoittaa takarakennusta. Siitä on tullut yksi maailman luetuimmista kirjoista, ja se on käännetty kymmeniin kieliin. Alkuperäinen vihko on esillä [[Anne Frankin talossa]] Prinsengrachtilla Amsterdamissa.
+
+### v2-940
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Rembrandtin
+VASTAUS: Rembrandt van Rijn syntyi vuonna 1606 Leidenissä ja asettui Amsterdamiin 1630-luvulla. Hän osti vuonna 1639 talon Jodenbreestraatilta 13 000 guldenilla ja asui ja työskenteli siinä 19 vuotta. Talo myytiin huutokaupalla vuonna 1658 tappiolla, kun taiteilija oli joutunut rahavaikeuksiin. Hänen tunnetuin teoksensa on vuonna 1642 maalattu ryhmäkuva [[Yövartio]], joka on nykyään esillä [[Rijksmuseumissa]]. Rembrandt kuoli Amsterdamissa vuonna 1669. Entisessä kodissa toimii nykyään museo [[Rembrandtin talo]], joka avattiin vuonna 1911.
+
+### v2-941
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Yövartio
+VASTAUS: Yövartio on Rembrandtin vuonna 1642 maalaama kaartin ryhmäkuva, ja se on nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle seinälle, joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu, eikä palasia ole löydetty. Nimikin on harhaanjohtava: teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka poistettiin vasta 1940-luvulla. Kuvan keskellä on kaartin kapteeni [[Frans Banninck Cocq]], ja teos on esillä [[Rijksmuseumissa]].
+
+### v2-942
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Vermeerin
+VASTAUS: Johannes Vermeer eli Jan Vermeer syntyi vuonna 1632 [[Delftissä]] ja kuoli siellä vuonna 1675. Koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä työtä. Tunnetuimpia ovat [[Maitotyttö]], jonka hän maalasi noin vuonna 1660 ja joka on 45,5 senttiä korkea ja 41 leveä, sekä [[Tyttö ja helmikorvakoru]]. Maitotyttö on esillä Rijksmuseumissa. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa, ja maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin ja maalannut molemmat itse umpeen.
+
+### v2-943
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Amsterdam-laiva
+VASTAUS: Amsterdam oli Hollannin Itä-Intian komppanian kauppalaiva, jonka yhtiö rakennutti omalla telakallaan vuonna 1748. Se lähti ensimmäiselle matkalleen [[Texelin]] redeltä 8. tammikuuta 1749 kohti Bataviaa, ja kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastiin kuului kangasta, viiniä, rakennuskiveä, tykkejä, paperia ja kaksikymmentäseitsemän arkkua hopeaa, joiden arvo oli noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi, eikä laiva päässyt Atlantille. Se päätyi Englannin etelärannikolle [[Hastingsin]] lähelle, missä hylky on lähteiden mukaan yhä rannalla, ja sen kopio on nähtävillä Amsterdamissa [[Scheepvaartmuseumin]] luona.
+
+### v2-944
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Texelin
+VASTAUS: Texel on Alankomaiden suurin Waddensaari, ja se sijaitsee Pohjois-Hollannin pohjoiskärjen edustalla. Saarta ja mantereen kaupunkia [[Den Helder]] erottaa salmi nimeltä [[Marsdiep]]. Texelin reidi oli aikoinaan paikka, jossa kauppa-alukset odottivat suotuisaa tuulta ennen lähtöä avomerelle. Hollannin Itä-Intian komppanian laiva Amsterdam lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749. Nykyään saari tunnetaan lampaistaan ja rannoistaan, ja sinne kuljetaan lautalla Den Helderistä.
+
+### v2-945
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: asuinveneissä
+VASTAUS: Asuinveneet ovat Amsterdamin kanavien erikoisuus: kaupungissa on noin 2 500 asuinvenettä, jotka ovat kiinni laitureissa ja liittyneet kaupungin vesi-, sähkö- ja viemäriverkkoon. Monet niistä ovat entisiä rahtialuksia, ja osa on rakennettu valmiiksi vesillä kelluviksi taloiksi. Toisen maailmansodan jälkeen asuntopula lisäsi niiden määrää. Uusien asuinveneiden paikkoja on rajoitettu, ja ne kuuluvat kaupungin tarkasti säänneltyyn rekisteriin. [[Prinsengrachtilla]] toimii asuinvenemuseo, [[Houseboat Museum]], jossa pääsee tutustumaan vesillä asumiseen.
+
+### v2-946
+KOHDE: kaupunki:amsterdam
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+VASTAUS: Unescon maailmanperintöluetteloon kuuluu kulttuuri- ja luontokohteita, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Amsterdamin 1600-luvun kanaalivyöhyke, jonka muodostavat [[Herengracht]], Keizersgracht ja Prinsengracht, lisättiin luetteloon vuonna 2010. Vyöhyke syntyi vuonna 1613 alkaneessa laajennuksessa kaupunginpuuseppä Hendrick Staetsin suunnitelman mukaan. Alankomaissa luetteloon kuuluvat myös esimerkiksi [[Kinderdijkin]] tuulimyllyt ja [[Beemsterin]] polderi.
+
+### v2-947
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Sognefjord
+VASTAUS: Sognefjord on Norjan pisin ja syvin vuono, ja sen pituus on noin 205 kilometriä. Syvimmillään se on yli 1 300 metriä. Vuonoa kutsutaan usein nimellä Kuninkaanvuono. Se ulottuu Länsi-Norjan rannikolta syvälle sisämaahan, ja sivuhaaroista tunnetuin on [[Nærøyfjord]], jonka kapeat jyrkkäseinäiset rinteet ovat Unescon maailmanperintökohde. Toinen sivuhaara on [[Aurlandsfjord]], jonka varrella on kylä [[Flåm]], josta lähtee kuuluisa Flåmin rautatie.
+
+### v2-948
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Geirangerfjord
+VASTAUS: Geirangerfjord on noin 15 kilometriä pitkä vuono Länsi-Norjassa, ja se on [[Storfjorden]]-vuonon sivuhaara. Se tunnetaan jyrkistä, lähes pystysuorista rinteistä ja putouksista, joista kuuluisin on [[Seitsemän sisarta]]. Vuonon rannalla on pieni Geirangerin kylä. Vuono kuuluu yhdessä [[Nærøyfjordin]] kanssa Unescon maailmanperintökohteeseen Länsi-Norjan vuonot, joka listattiin vuonna 2005.
+
+### v2-949
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Ekofisk
+VASTAUS: Ekofisk on Norjan Pohjanmeren sektorilla sijaitseva öljykenttä. Sen löytyminen varmistui juuri ennen joulua 1969, ja sitä pidetään Norjan öljyajan alkuna. Ennen löytöä [[Pohjanmereltä]] oli etsitty öljyä vuosia tuloksetta. Löytö muutti maan nopeasti: Norja oli ollut 1960-luvulla Euroopan köyhempiä maita, mutta öljyn ansiosta siitä tuli rikas. Tuotanto alkoi vuonna 1971, ja öljykaupungiksi muodostui [[Stavanger]]. Tulot ohjattiin rahastoon, josta kasvoi maailman suurin valtiollinen sijoitusrahasto, [[Norjan öljyrahasto]].
+
+### v2-950
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: valtiollinen sijoitusrahasto
+VASTAUS: Valtiollinen sijoitusrahasto on valtion omistama rahasto, johon kertyneitä varoja sijoitetaan pitkäjänteisesti. Norjassa tällainen rahasto perustettiin öljytulojen säästämiseksi tuleville sukupolville: tulot eivät mene suoraan käyttöön vaan rahastoon. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto, jonka virallinen nimi on [[Government Pension Fund Global]]. Rahastoa hoitaa [[Norges Bank]], ja se sijoittaa pääosin ulkomaisiin osakkeisiin, joukkolainoihin ja kiinteistöihin. Rahaston perustana oli [[Ekofiskin]] löytö vuonna 1969.
+
+### v2-951
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Tromssan
+VASTAUS: Tromssa on Pohjois-Norjan suurin kaupunki, ja se sijaitsee Tromsøyan saarella napapiirin pohjoispuolella. Saarta ja mannerta yhdistää vuonna 1960 avattu [[Tromssan silta]], joka on 1 036 metriä pitkä ja jossa on 58 siltakaarta. Keltainen puinen [[Tromssan tuomiokirkko]] valmistui vuonna 1861, ja se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta. Kaupungin tunnetuin moderni kirkko on vuonna 1965 valmistunut [[Pohjoisen jäämeren katedraali]]. Talvella kaupungin yllä näkee usein revontulia.
+
+### v2-952
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Finnmarkin
+VASTAUS: Finnmark on Norjan pohjoisin ja pinta-alaltaan suurin maakunta, ja se rajoittuu Suomeen, Venäjään ja Barentsinmereen. Alueella asuu vähän ihmisiä, ja se on samalla saamelaiskulttuurin ydinaluetta: [[Karasjok]] ja [[Kautokeino]] ovat saamelaisten kuntia. Alueella sijaitsevat myös [[Nordkapp]], Kirkenes ja Hammerfest. Vuosina 2020–2023 Finnmark oli yhdistetty Tromssan kanssa Troms og Finnmarkin maakunnaksi, mutta maakunnat erotettiin uudelleen vuoden 2024 alussa. [[Altan kalliopiirrokset]] ovat Unescon maailmanperintökohde, ja talvella alueella näkee revontulia.
+
+### v2-953
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Eidsvollin
+VASTAUS: Eidsvoll on kunta Oslon pohjoispuolella, ja siellä kokoontui kevään 1814 aikana kansalliskokous, joka kirjoitti [[Norjan perustuslain]]. Perustuslaki allekirjoitettiin 17. toukokuuta 1814, ja päivää juhlitaan Norjan kansallispäivänä. Kansalliskokoukseen valittiin valitsijamiehet maan ensimmäisissä kansallisissa vaaleissa, joissa yli kolmensadan seurakuntakirkon, myös Bergenin tuomiokirkon, äänestettiin valitsijamiehistä. Kokouksessa valittiin [[Kristian Fredrik]] Norjan kuninkaaksi, mutta saman vuoden marraskuussa Norja joutui unioniin Ruotsin kanssa.
+
+### v2-954
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: Ruotsin
+VASTAUS: Ruotsi on Norjan itäinen naapuri, ja sen pääkaupunki on [[Tukholma]]. Maiden välinen unioni kesti vuodesta 1814 vuoteen 1905: Norja sai oman perustuslakinsa, mutta yhteinen kuningas hallitsi molempia maita. Vuonna 1844 maiden lippujen kantoon pantiin yhteinen unionimerkki, jonka kansa nimesi silakkasalaatiksi, sildesalaten. Merkki katosi kauppalipusta vuoden 1899 lopussa. Norjan eduskunta julisti unionin päättyneeksi kesäkuussa 1905, ja uudeksi kuninkaaksi tuli myöhemmin samana vuonna [[Haakon VII]].
+
+### v2-955
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: bunad
+VASTAUS: Bunad on norjalainen kansallispuku, jota käytetään juhlapäivinä, erityisesti 17. toukokuuta kansallispäivänä, sekä häissä ja ristiäisissä. Nykymuotoinen bunad-perinne on 1900-luvun alun peräisiä, ja siinä on mallia vanhoista kansanpuvuista. Perinteen elvyttämistä edisti muun muassa [[Hulda Garborg]]. Pukuja on lukuisia alueellisia versioita, ja jokaisella on omat värinsä, kirjontansa ja hopeakorunsa. Naisten bunadiin kuuluu yleensä hopeinen solki, [[sølje]]. Tunnettuja ovat esimerkiksi [[Hardangerin]] alueen puvut.
+
+### v2-956
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: jokamiehenoikeutta
+VASTAUS: Jokamiehenoikeus, norjaksi [[allemannsretten]], on oikeus liikkua ja oleskella luonnossa omistajasta riippumatta. Norjassa sitä säätelee vuonna 1957 annettu ulkoilulaki, [[friluftsloven]]. Sen mukaan saa kulkea jalan tai hiihtäen asumattomalla luonnonmaalla, poimia marjoja ja sieniä ja telttailla, kunhan pysyy riittävän kaukana asutuista taloista; nyrkkisääntö on noin 150 metriä. Samassa paikassa saa yleensä yöpyä enintään kaksi yötä. Tulenteko on kielletty kesällä, noin 15. huhtikuuta – 15. syyskuuta. Ajatus liittyy läheisesti [[friluftsliv]]-perinteeseen.
+
+### v2-957
+KOHDE: maa:NOR
+KYSYMYS: Kerro lisää: hytte
+VASTAUS: Hytte on norjalaisten vapaa-ajan mökki, ja se on keskeinen osa maan ulkoilukulttuuria. Hyttejä on satojatuhansia, ja moni norjalainen perhe omistaa sellaisen tai pääsee käyttämään sukulaisen mökkiä. Hytte voi olla alkeellinen vuoristomökki ilman sähköä tai moderni lomatalo. Sinne lähdetään perinteisesti viikonloppuisin ja erityisesti pääsiäisenä, jolloin vietetään aikaa vuoristossa. Pääsiäiseen kuuluu myös suklaapatukka [[Kvikk Lunsj]] ja appelsiinit, joita syödään hiihtoretkillä. Ajatus liittyy [[friluftsliv]]-perinteeseen ja [[jokamiehenoikeuteen]].
+
+### v2-958
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Kristian IV
+VASTAUS: Kristian IV oli Tanskan ja Norjan kuningas vuosina 1588–1648, eli lähes kuusikymmentä vuotta. Vuoden 1624 suuren tulipalon jälkeen hän siirsi Oslon lähemmäs [[Akershusin linnoitusta]] ja antoi uudelle kaupungille nimen Christiania. Keskiaikainen Hallvardin katedraali jäi tällöin uuden kaupungin ulkopuolelle. Kristian muutti Akershusin vanhan linnan 1600-luvulla hienoksi renessanssipalatsiksi. Hän rakennutti paljon myös [[Kööpenhaminaan]] ja perusti hopeakaivoksen Norjan [[Kongsbergiin]].
+
+### v2-959
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Akershusin linnoituksen
+VASTAUS: Akershusin linnoitus kohoaa kalliolla Oslon rannalla ja on vartioinut kaupunkia yli 700 vuotta. Kuningas [[Haakon V]] käski rakentaa sen 1290-luvun lopulla, kun kaupunki oli osoittautunut liian helposti hyökättäväksi vuonna 1287. Linnoitusta on piiritetty monta kertaa: ruotsalaiset yrittivät vuonna 1308 ja [[Kaarle Knuutinpoika]] vuosina 1449–1450, mutta mikään vieras armeija ei ole koskaan onnistunut valtaamaan sitä taistelemalla. Kuningas [[Kristian IV]] muutti vanhan linnan 1600-luvulla renessanssipalatsiksi. Toisen maailmansodan aikana saksalaiset miehittivät linnoituksen, ja se on yksi paikoista, joissa miehittäjä teloitti vankeja.
+
+### v2-960
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Gustav Vigeland
+VASTAUS: Gustav Vigeland oli norjalainen kuvanveistäjä, joka eli vuosina 1869–1943. Hänen käsialaansa ovat kaikki yli 200 veistosta [[Frognerin puiston]] alueella, ja hän suunnitteli myös puiston sillat, portit ja lyhdyt, joten koko kokonaisuus on yhden miehen näkemys. Puiston keskellä kohoava [[Monoliitti]] on 14 metriä korkea pylväs, johon on veistetty 121 ihmishahmoa. Kolme kivenhakkaajaa työsti sen yhdestä [[graniittilohkareesta]] neljätoista vuotta. Puistoon pääsee maksutta mihin aikaan tahansa.
+
+### v2-961
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Monoliitti
+VASTAUS: Monoliitti on [[Frognerin puiston]] keskellä kohoava 14 metriä korkea pylväs, johon on veistetty 121 ihmishahmoa. [[Gustav Vigelandin]] suunnittelemaa teosta työsti kolme kivenhakkaajaa yhdestä [[graniittilohkareesta]] neljätoista vuotta. Hahmot kietoutuvat toisiinsa ja nousevat kohti pylvään huippua, ja teosta on tulkittu muun muassa ihmiselämän ja ylöspäin pyrkimisen kuvaksi. Pylväs on osa puiston kokonaisuutta, jonka kaikki veistokset ovat saman taiteilijan käsialaa.
+
+### v2-962
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Edvard Munch
+VASTAUS: Edvard Munch syntyi vuonna 1863 ja kuoli tammikuussa 1944. Kun Saksa miehitti Norjan huhtikuussa 1940, hän oli seitsemänkymmentäkuusivuotias ja pelkäsi natsien vievän tai tuhoavan elämäntyönsä, sillä hänen taidettaan oli Saksassa aiemmin leimattu [[rappiotaiteeksi]]. Saman kuun lopulla hän kirjoitti testamentin, jolla hän jätti lähes koko jäljellä olevan tuotantonsa [[Oslon kaupungille]]. Munch kuoli reilu vuosi ennen [[toisen maailmansodan]] päättymistä.
+
+### v2-963
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Huuto
+VASTAUS: Huuto on Edvard Munchin tunnetuin teos, ja siitä on olemassa useita versioita: ensimmäiset syntyivät 1890-luvulla, ja aiheesta tehtiin maalausten ja piirrosten lisäksi myös painokuva. Munch kertoi päiväkirjassaan saaneensa aiheen kävelyltä auringonlaskun aikaan, kun hän tunsi luonnon läpi kulkevan valtavan huudon; paikaksi mainitaan yleensä [[Ekebergin]] rinne Oslossa. Teos on varastettu kahdesti, vuonna 1994 ja vuonna 2004 [[Munch-museosta]], ja molemmilla kerroilla se saatiin takaisin. Hahmon kasvot ovat jääneet [[modernin taiteen]] tunnetuimpiin kuviin.
+
+### v2-964
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: sähköautoja
+VASTAUS: Norjassa sähköautot ovat yleistyneet poikkeuksellisen nopeasti: lähteiden mukaan viime vuosina yli kahdeksan kymmenestä uudesta henkilöautosta on ollut täyssähköisiä. Yleistymistä on ajanut pitkään verotus, sillä sähköautot on vapautettu [[hankintaveroista]], ja lisäksi etuina on ollut esimerkiksi edullisempia [[tiemaksuja]] ja pysäköintiä; osaa etuuksista on sittemmin vähennetty. Oslossa on runsaasti julkisia [[latauspisteitä]], ja kaupunki on pyrkinyt siirtämään liikennettä pois päästöistä. Samaan aikaan maan vauraus perustuu öljytuloihin, mikä tekee asetelmasta ristiriitaisen.
+
+### v2-965
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Ekofiskin
+VASTAUS: Ekofisk on Pohjanmeren öljykenttä, jonka öljy varmistui juuri ennen joulua 1969, ja löytö oli suuri. Norja oli 1960-luvulla Euroopan köyhempiä maita, ja [[Pohjanmerellä]] oli etsitty öljyä vuosia tuloksetta. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan [[rahastoon]], jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin [[valtiollinen sijoitusrahasto]]. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta maa joutuu nyt miettimään, mitä tehdä öljyn loputtua.
+
+### v2-966
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Bjørvikaan
+VASTAUS: Bjørvika on Oslon keskustan vieressä vuonon rannalla sijaitseva alue, joka oli pitkään satama- ja liikennealuetta ja jota on 2000-luvulla rakennettu uudeksi kaupunkialueeksi. Tunnetuin rakennus on vuonna 2008 avattu [[Oopperatalo]], jonka valkoiselle katolle voi kävellä. Alueelle on noussut myös [[Munch-museo]], joka avattiin uudessa rakennuksessa vuonna 2021, sekä uusi pääkirjasto [[Deichman Bjørvika]]. Korkeiden ja kapeiden toimistotalojen rivistä käytetään nimeä [[Barcode]]. Rakentaminen on alueella yhä kesken.
+
+### v2-967
+KOHDE: kaupunki:oslo
+KYSYMYS: Kerro lisää: Snøhetta
+VASTAUS: Snøhetta on norjalainen arkkitehtitoimisto, joka perustettiin vuonna 1989; nimi tulee [[Dovrefjellin]] vuoresta. Toimiston tunnetuimpia töitä ovat [[Oslon oopperatalo]] ja Aleksandrian kirjasto Egyptissä. Oopperatalon kalteville pinnoille käytettiin valkoista [[Carraran marmoria]] ja graniittia, ja talo avattiin 12. huhtikuuta 2008. Rakennus valmistui etuajassa ja jopa 300 miljoonaa kruunua alle budjetin, ja suurimpaan saliin mahtuu 1 364 katsojaa.
+
+### v2-968
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Hansaliiton
+VASTAUS: Hansaliitto oli Pohjois-Euroopan kauppakaupunkien ja kauppiaiden verkosto, jonka vaikutus oli suurimmillaan keskiajan lopulla. Sillä oli ulkomailla neljä suurta kauppakonttoria, ja yksi niistä perustettiin [[Bryggenin]] rantaan Bergeniin noin vuonna 1350. Kontorin varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua [[kuivattua kalaa]] vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, mutta osa [[kivikellareista]] on peräisin 1400-luvulta.
+
+### v2-969
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: kuivattu turska
+VASTAUS: Kuivattu turska valmistetaan [[Skrei]]-turskasta, joka ui joka talvi Barentsinmereltä Norjan rannikolle kutemaan. Kala ripustetaan telineille helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä, ja sen jälkeen se säilyy vuosia. Juuri tämä säilyvyys teki siitä Bergenin [[hansakaupan]] tärkeimmän vientitavaran. Osa kalasta syödään tuoreena [[mølje]]-ateriana, jossa on kalaa, mätiä, maksaa ja perunaa.
+
+### v2-970
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: seitsemän vuoren kaupunki
+VASTAUS: Seitsemän vuoren kaupunki -lisänimi viittaa vuoriin, jotka ympäröivät Bergenin keskustaa joka suunnalta. Tunnetuimpia ovat [[Fløyen]], [[Ulriken]], [[Løvstakken]] ja [[Lyderhorn]], mutta seitsemän vuoren luettelot vaihtelevat jonkin verran, eikä kaikkien seitsemän nimeämisestä ole yksiselitteistä sopua. Vuoret ovat muokanneet kaupunkia: keskusta on rakennettu niemimaalle vuonojen ja rinteiden väliin, ja huvilat ja uudet asuinkorttelit nousivat 1800-luvulla rinteille ja vanhan keskustan ulkopuolelle. Vuoret ovat myös syy kaupungin sateisuuteen, sillä ne nostavat mereltä tulevan kostean ilman ylös.
+
+### v2-971
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Fløyen
+VASTAUS: Fløyen on yksi Bergenin seitsemästä vuoresta ja kaupungin suosituin näköalapaikka: huipulta avautuu näkymä koko kaupunkiin, vuonoihin ja naapurivuoriin. Huippu on noin 400 metriä merenpinnan yläpuolella. Nykyinen köysirata [[Fløibanen]] avattiin vasta vuonna 1918, joten isoisän matkan aikaan huipulle noustiin jalan polkuja pitkin; matka on jyrkkä mutta lyhyt, alle neljä kilometriä keskustasta. Rinteille rakennettiin 1800-luvulla varakkaiden [[huviloita]], ja alue liitettiin Bergeniin vuonna 1876. Huipun lähellä on myös lapsille tuttu [[Trollskogen]]-metsä.
+
+### v2-972
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Ulriken
+VASTAUS: Ulriken on Bergenin seitsemästä vuoresta korkein, noin 640 metriä merenpinnan yläpuolella. Huipulle nousee kaapelihissi [[Ulriksbanen]], joka avattiin lähteiden mukaan vuonna 1961, ja huipulla on myös lähetysmasto. Vuorelta avautuu näkymä Bergenin ylle ja vuonoille. Ulrikenilta lähtee vaellusreitti [[Vidden]]-ylängön yli kohti [[Fløyenia]]; reitti on suosittu mutta vaatii kunnolliset varusteet ja sään huomioon ottamista.
+
+### v2-973
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Fløibanen
+VASTAUS: Fløibanen on Bergenin keskustasta [[Fløyen]]-vuoren rinteelle nouseva köysirata, joka avattiin vuonna 1918. Sitä ennen huipulle noustiin jalan polkuja pitkin, ja matka keskustasta on alle neljä kilometriä. Rata on kiskoilla kulkeva vaunurata, ja ajo kestää vain muutaman minuutin. Ylhäältä avautuu näkymä koko kaupunkiin, vuonoille ja naapurivuorille, kuten [[Ulrikenille]], ja huipulta lähtee merkittyjä [[vaellusreittejä]].
+
+### v2-974
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Håkon Håkonsson
+VASTAUS: Håkon Håkonsson, jota kutsutaan myös Håkon IV:ksi, oli Norjan kuningas vuosina 1217–1263, ja hänen aikaansa pidetään norjalaisen keskiajan huippukautena. Hänen valtansa ulottui [[Islantiin]] ja Grönlantiin, ja hän kuoli [[Orkneysaarilla]] paluumatkalla sotaretkeltä vuonna 1263. Bergenin kuninkaankartanon suurin rakennus, 1200-luvun puolivälissä rakennettu kivisali [[Håkonshallen]], on peräisin hänen ajaltaan, ja se on yhä Norjan suurin keskiaikainen maallinen rakennus. Hänen aikanaan rakennettiin myös kappeli [[Tromssaan]] vuonna 1252.
+
+### v2-975
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Håkonshallen
+VASTAUS: Håkonshallen on kuningas [[Håkon Håkonssonin]] aikana 1200-luvun puolivälissä rakennettu kivisali. Se oli Bergenin kuninkaankartanon suurin rakennus, ja se on yhä Norjan suurin keskiaikainen maallinen rakennus. Salin alkuperäinen tehtävä oli 1700-luvulle tultaessa suurelta osin unohtunut, kunnes vuonna 1840 todistettiin sen olleen kuninkaan juhlasali. Seuraavan puolen vuosisadan ajan kaupungissa väiteltiin salin ennallistamisesta, ja [[Henrik Ibsen]] kirjoitti sen kunniaksi runon. Runoilija [[Henrik Wergeland]] otti ensimmäisenä käyttöön nimen Haakons hall.
+
+### v2-976
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Bergenhus
+VASTAUS: Bergenhus on Bergenin sataman suulla sijaitseva linnoitusalue, joka kasvoi keskiajalla kuninkaankartanon ympärille aivan [[Bryggenin]] vieressä. Alueen suurin rakennus oli 1200-luvun puolivälissä rakennettu kivisali [[Håkonshallen]], joka on yhä Norjan suurin keskiaikainen maallinen rakennus. Alueella on myös [[Rosenkrantzin torni]], jonka vanhimmat osat ovat keskiajalta ja jota on myöhemmin laajennettu. Bergenin ollessa 1200-luvulla Norjan pääkaupunki kartano oli kuninkaan asuinpaikka.
+
+### v2-977
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Fisketorget
+VASTAUS: Fisketorget on Bergenin kalatori sataman perukassa [[Vågen]]-lahden rannalla, aivan kaupungin keskustassa. Torilla on perinteisesti myyty tuoretta kalaa, ja kaupan taustalla on pitkä historia: jo hansa-aikana kaupungin tärkein vientitavara oli [[kuivattu turska]]. Nykyään torilla myydään kalan ja äyriäisten lisäksi valmista ruokaa matkailijoille, ja tarjolla on esimerkiksi [[savulohta]]. Tarkkaa perustamisvuotta en ole varma.
+
+### v2-978
+KOHDE: kaupunki:bergen
+KYSYMYS: Kerro lisää: Vågen
+VASTAUS: Vågen on Bergenin sataman sisälahti, jonka rannoille kaupunki alun perin kasvoi. Sen itärannalla on [[Bryggen]], jossa toimi 1300-luvun puolivälistä lähtien yksi [[Hansaliiton]] neljästä kontorista, ja lahden perukassa on kalatori. Ensimmäinen [[Korskirken]]-kirkko rakennettiin lahden rannalle noin vuonna 1150, ja se mainitaan ensi kerran Sverren saagassa vuonna 1185. Kirkko merkitsi todennäköisesti Bergenin asutuksen eteläistä rajaa.
+

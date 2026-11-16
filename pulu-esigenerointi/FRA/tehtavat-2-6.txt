@@ -1,0 +1,1049 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Luonto: Afrikan ainoa oma hirvi] Berberihirvi on saksanhirven alalaji ja ainoa Afrikassa alkuperäinen hirvieläin — toinen, jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja Zéraldan seuduilla. Marokosta hirvi metsästettiin sukupuuttoon, ja se palautettiin sinne 1990-luvulla Tunisian kannasta. Perimää tutkittaessa selvisi jotain yllättävää: Pohjois-Afrikan hirvet ovat lähes erottamattomia Sardinian ja Korsikan hirvistä, joten ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.
+AIEMPI KYSYMYS: Mihin sitadellia käytettiin linnoituksena?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä on kunnon vastaus. [[Sitadelli]] on kaupungin yhteyteen rakennettu vahva linnoitus, jonka tehtävänä oli puolustaa kaupunkia ulkoiselta uhalta ja pitää kaupunkilaisia hallinnan alla. Ajaccion sitadellin rakensivat genovalaiset vuonna 1492 vanhan asutuksen eteläpuolelle, ja kaupunki alkoi sen jälkeen kukoistaa uudelleen. Sitadellissa oli sotilasvartio, aseita ja varusteita, ja se auttoi hallitsemaan merelle avautuvaa satamaa. Linnoituksen merkitys säilyi, kun Genova pitikin sitä hallussaan vielä [[Korsikan tasavallan]] aikana. Minä en rakentaisi linnaa, kunhan lentäisin sen yli.
+KYSYMYS: Kerro lisää: Korsikan tasavallan
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Tyhjä hauta Geraniumilaaksossa] Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.
+AIEMPI KYSYMYS: Mistä Napoleon Bonaparte tunnetaan Ranskan historiassa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on isoja asioita. [[Napoleon Bonaparte]] syntyi Ajaccion kaupungissa vuonna 1769 ja nousi Ranskan vallankumouksen jälkeen sotilasjohtajaksi ja valtiomieheksi. Hän otti vallan 1799, kruunautui keisariksi vuonna 1804 ja johti Ranskaa kautta, jota kutsutaan [[Napoleonin sodiksi]]. Hän kaatui 1814, palasi vallan etunenään vielä sadaksi päiväksi vuonna 1815 ja kuoli maanpaossa Pyhän Helenan saarella vuonna 1821. Hänen vaikutuksensa näkyy edelleen esimerkiksi Ranskan lainsäädännössä, sillä [[Napoleonin laki]] vaikutti moneen maahan. Maison Bonaparte on nykyään museo. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Napoleon Bonaparte
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+AIEMPI KYSYMYS: Mistä Napoleon Bonaparte tunnetaan Ranskan historiassa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on isoja asioita. [[Napoleon Bonaparte]] syntyi Ajaccion kaupungissa vuonna 1769 ja nousi Ranskan vallankumouksen jälkeen sotilasjohtajaksi ja valtiomieheksi. Hän otti vallan 1799, kruunautui keisariksi vuonna 1804 ja johti Ranskaa kautta, jota kutsutaan [[Napoleonin sodiksi]]. Hän kaatui 1814, palasi vallan etunenään vielä sadaksi päiväksi vuonna 1815 ja kuoli maanpaossa Pyhän Helenan saarella vuonna 1821. Hänen vaikutuksensa näkyy edelleen esimerkiksi Ranskan lainsäädännössä, sillä [[Napoleonin laki]] vaikutti moneen maahan. Maison Bonaparte on nykyään museo. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Napoleonin sodiksi
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ajaccio (historia)
+Tietoruudun teksti: Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, 390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mistä Napoleon Bonaparte tunnetaan Ranskan historiassa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on isoja asioita. [[Napoleon Bonaparte]] syntyi Ajaccion kaupungissa vuonna 1769 ja nousi Ranskan vallankumouksen jälkeen sotilasjohtajaksi ja valtiomieheksi. Hän otti vallan 1799, kruunautui keisariksi vuonna 1804 ja johti Ranskaa kautta, jota kutsutaan [[Napoleonin sodiksi]]. Hän kaatui 1814, palasi vallan etunenään vielä sadaksi päiväksi vuonna 1815 ja kuoli maanpaossa Pyhän Helenan saarella vuonna 1821. Hänen vaikutuksensa näkyy edelleen esimerkiksi Ranskan lainsäädännössä, sillä [[Napoleonin laki]] vaikutti moneen maahan. Maison Bonaparte on nykyään museo. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Napoleonin laki
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Mikä salmi erottaa Korsikan Sardiniasta?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan [[Bonifacion]] kaupungin mukaan. Kaupunki ja sen [[linnoitus]] on rakennettu korkealle [[kalkkikivitörmälle]], ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.
+KYSYMYS: Kerro lisää: Bonifacionsalmi
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Mikä salmi erottaa Korsikan Sardiniasta?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan [[Bonifacion]] kaupungin mukaan. Kaupunki ja sen [[linnoitus]] on rakennettu korkealle [[kalkkikivitörmälle]], ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.
+KYSYMYS: Kerro lisää: Bonifacion
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Mikä salmi erottaa Korsikan Sardiniasta?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan [[Bonifacion]] kaupungin mukaan. Kaupunki ja sen [[linnoitus]] on rakennettu korkealle [[kalkkikivitörmälle]], ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.
+KYSYMYS: Kerro lisää: linnoitus
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Mikä salmi erottaa Korsikan Sardiniasta?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ilman karttaakin. Korsikan ja Sardinian erottaa toisistaan [[Bonifacionsalmi]], joka on saanut nimensä Korsikan eteläosassa sijaitsevan [[Bonifacion]] kaupungin mukaan. Kaupunki ja sen [[linnoitus]] on rakennettu korkealle [[kalkkikivitörmälle]], ja juuri sen strateginen sijainti salmen rannalla mahdollisti tärkeiden laivareittien sotilaallisen valvonnan. Salmi yhdistää siis kaksi saarta ja samalla erottaa ne, ja se on ollut merenkulun kannalta merkittävä väylä. Näin korkealta katsottuna salmi näyttää ihan pieneltä, mut kyllä se laivalle riittää.
+KYSYMYS: Kerro lisää: kalkkikivitörmälle
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Miksi kaupunki rakennettiin kallion päälle?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys kyyhkyn mielestä, koska kallion päältä näkee kauas. [[Bonifacion]] kaupunki ja sitä suojaava [[linnoitus]] rakennettiin korkealle [[kalkkikivitörmälle]], koska korkea paikka antoi suojan ja näkymän. Törmä suojaa myös kaupungin [[luonnonsatamaa]], joten laivat saattoivat ankkuroitua turvassa. Lisäksi sijainti oli strategisesti hyvä: sieltä voitiin valvoa sotilaallisesti tärkeitä laivareittejä. Kallio antoi siis kaupungille sekä puolustuksen että näköalapaikan merelle. Onpas kiva, kun kysytään jotain, mihin vastaus näkyy suoraan ylhäältä.
+KYSYMYS: Kerro lisää: luonnonsatamaa
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Tyhjä hauta Geraniumilaaksossa] Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.
+AIEMPI KYSYMYS: Kuka kuuluisa sotapäällikkö syntyi Korsikalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan, vaikka aikaa on kulunut. Korsikalla syntyi vuonna 1769 [[Napoleon Bonaparte]], josta tuli myöhemmin Ranskan keisari. Hän syntyi saaren pääkaupungissa [[Ajaccio]]ssa. Hän nousi sotilasuralla johtavaan asemaan Ranskan vallankumouksen jälkeisinä vuosina ja kruunasi itsensä keisariksi vuonna 1804. Korsika oli syntymän aikaan jo siirtynyt Ranskan hallintaan, ja saari kuuluu yhä Ranskaan. Ei paha kyyhkyltä, ja ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Napoleon Bonaparte
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Kuka kuuluisa sotapäällikkö syntyi Korsikalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan, vaikka aikaa on kulunut. Korsikalla syntyi vuonna 1769 [[Napoleon Bonaparte]], josta tuli myöhemmin Ranskan keisari. Hän syntyi saaren pääkaupungissa [[Ajaccio]]ssa. Hän nousi sotilasuralla johtavaan asemaan Ranskan vallankumouksen jälkeisinä vuosina ja kruunasi itsensä keisariksi vuonna 1804. Korsika oli syntymän aikaan jo siirtynyt Ranskan hallintaan, ja saari kuuluu yhä Ranskaan. Ei paha kyyhkyltä, ja ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Ajaccio
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Luonto: Afrikan ainoa oma hirvi] Berberihirvi on saksanhirven alalaji ja ainoa Afrikassa alkuperäinen hirvieläin — toinen, jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja Zéraldan seuduilla. Marokosta hirvi metsästettiin sukupuuttoon, ja se palautettiin sinne 1990-luvulla Tunisian kannasta. Perimää tutkittaessa selvisi jotain yllättävää: Pohjois-Afrikan hirvet ovat lähes erottamattomia Sardinian ja Korsikan hirvistä, joten ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.
+AIEMPI KYSYMYS: Kuinka leveä Bonifacionsalmi on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bonifacionsalmi on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee [[Korsikan]] eteläkärjen ja [[Sardinian]] pohjoiskärjen välissä. Kapea väylä on tunnettu [[merenkulun]] kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.
+KYSYMYS: Kerro lisää: Korsikan
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Luonto: Afrikan ainoa oma hirvi] Berberihirvi on saksanhirven alalaji ja ainoa Afrikassa alkuperäinen hirvieläin — toinen, jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja Zéraldan seuduilla. Marokosta hirvi metsästettiin sukupuuttoon, ja se palautettiin sinne 1990-luvulla Tunisian kannasta. Perimää tutkittaessa selvisi jotain yllättävää: Pohjois-Afrikan hirvet ovat lähes erottamattomia Sardinian ja Korsikan hirvistä, joten ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.
+AIEMPI KYSYMYS: Kuinka leveä Bonifacionsalmi on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bonifacionsalmi on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee [[Korsikan]] eteläkärjen ja [[Sardinian]] pohjoiskärjen välissä. Kapea väylä on tunnettu [[merenkulun]] kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.
+KYSYMYS: Kerro lisää: Sardinian
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Kuinka leveä Bonifacionsalmi on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bonifacionsalmi on kapeimmillaan noin yksitoista kilometriä leveä, mutta tarkkaa lukua en ole aivan varma, joten pidä sitä suuntaa-antavana. Salmi sijaitsee [[Korsikan]] eteläkärjen ja [[Sardinian]] pohjoiskärjen välissä. Kapea väylä on tunnettu [[merenkulun]] kannalta, ja sen vesillä on ollut kulkua jo vuosisatoja. Matka näyttää lyhyeltä, mutta salmen sääolot voivat vaikuttaa laivaliikenteeseen. Kyyhky kulkisi sen yli reilusti nopeammin kuin lautta.
+KYSYMYS: Kerro lisää: merenkulun
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Mikä on Korsikan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on [[Corse-du-Sudin]] departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että [[Napoleon]] syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. [[Bonifacio]] puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, vaikka pullakin kiinnostaisi.
+KYSYMYS: Kerro lisää: Corse-du-Sudin
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mikä on Korsikan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on [[Corse-du-Sudin]] departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että [[Napoleon]] syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. [[Bonifacio]] puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, vaikka pullakin kiinnostaisi.
+KYSYMYS: Kerro lisää: Napoleon
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bonifacio (merenkulku)
+Tietoruudun teksti: Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty Korsikan ja Sardinian erottava Bonifacionsalmi.
+AIEMPI KYSYMYS: Mikä on Korsikan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. [[Ajaccio]] on Korsikan pääkaupunki ja saaren suurin kaupunki, ja se sijaitsee saaren länsirannikolla. Se on [[Corse-du-Sudin]] departementin hallintokaupunki, ja kaupunki tunnetaan siitä, että [[Napoleon]] syntyi siellä. Korsika on Ranskan alue, jolla on erityisasema, ja Ajaccio toimii sen hallinnollisena keskuksena. [[Bonifacio]] puolestaan on saaren eteläosassa oleva kaupunki, eikä sen paikka ole lainkaan syrjässä merenkulun kannalta. Hyvä, että kysyit pääkaupungista eikä pullasta, vaikka pullakin kiinnostaisi.
+KYSYMYS: Kerro lisää: Bonifacio
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Kuka oli Stanislaus, jonka mukaan aukio on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, nyt muistan. [[Stanislaus I]] oli Puolan entinen kuningas ja Liettuan suuriruhtinas, josta tuli myöhemmin Lorrainen herttua. Hän määräsi rakennettavaksi Nancyn kaupunkiin suuren kävelyaukion, joka valmistui vuosina 1752–1756 ja kantaa hänen nimeään. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta. Vuodesta 1983 se on kuulunut [[Unesco]]n maailmanperintökohteisiin yhdessä Place de la Carrièren ja Place d'Alliancen kanssa. Kruunuja oli siis yhdellä miehellä useampi, ja kyyhkyllä ei ole yhtäkään.
+KYSYMYS: Kerro lisää: Stanislaus I
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Kuka oli Stanislaus, jonka mukaan aukio on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, nyt muistan. [[Stanislaus I]] oli Puolan entinen kuningas ja Liettuan suuriruhtinas, josta tuli myöhemmin Lorrainen herttua. Hän määräsi rakennettavaksi Nancyn kaupunkiin suuren kävelyaukion, joka valmistui vuosina 1752–1756 ja kantaa hänen nimeään. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta. Vuodesta 1983 se on kuulunut [[Unesco]]n maailmanperintökohteisiin yhdessä Place de la Carrièren ja Place d'Alliancen kanssa. Kruunuja oli siis yhdellä miehellä useampi, ja kyyhkyllä ei ole yhtäkään.
+KYSYMYS: Kerro lisää: Unesco
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Missä päin Ranskaa Nancy sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas, nyt mennään karttaan. Nancy sijaitsee Koillis-Ranskassa [[Lorrainen]] historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on [[Place Stanislas]], joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja [[arkkitehtuuristaan]]. Alue on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi sen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.
+KYSYMYS: Kerro lisää: Lorrainen
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Missä päin Ranskaa Nancy sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas, nyt mennään karttaan. Nancy sijaitsee Koillis-Ranskassa [[Lorrainen]] historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on [[Place Stanislas]], joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja [[arkkitehtuuristaan]]. Alue on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi sen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.
+KYSYMYS: Kerro lisää: Place Stanislas
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+AIEMPI KYSYMYS: Missä päin Ranskaa Nancy sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas, nyt mennään karttaan. Nancy sijaitsee Koillis-Ranskassa [[Lorrainen]] historiallisella alueella, ja kaupunki oli aikoinaan Lorrainen herttuakunnan keskus. Kaupungin keskustassa on [[Place Stanislas]], joka on suuri kävelyaukio. Nancy on tunnettu historiallisesta keskustastaan ja [[arkkitehtuuristaan]]. Alue on ollut Ranskan ja Saksan välisellä rajaseudulla, minkä vuoksi sen historia on ollut vaiheikas. Lyhyt matka kartalla, mutta pitkä historia.
+KYSYMYS: Kerro lisää: arkkitehtuuristaan
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintölista?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Unesco]]n maailmanperintölista on luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo, ja ne voivat olla kulttuuri- tai luontokohteita. Listalle otetut kohteet pyritään suojelemaan tuleville sukupolville, ja suojelu on kansainvälinen yhteinen tehtävä. Place Stanislas liitettiin [[maailmanperintölista]]an vuonna 1983 yhdessä Place de la Carrièren ja Place d'Alliancen kanssa. Kohteita on eri puolilla maailmaa, ja lista kasvaa vähitellen uusilla kohteilla. Kyyhky ei pääse listalle, mutta kaiteilla tapaa silti aina kohteen.
+KYSYMYS: Kerro lisää: maailmanperintölista
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Burgtheater 1786 — palvelijat nolaavat isäntänsä] 1.5.1786 — Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys…
+- [Wien — kohdekartta / Kohdekartta: Figaro 1786] Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys venyy muut…
+AIEMPI KYSYMYS: Miksi Nancy tunnetaan jugendista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on oikeasti kiinnostava. [[Nancy]] oli 1900-luvun taitteessa jugendin eli taidetyylin Art nouveau'n keskus Ranskassa, ja kaupungissa toimi tunnettu Nancyn koulukunta ([[École de Nancy]]). Siihen kuuluneet taiteilijat ja käsityöläiset tekivät lasia, huonekaluja ja rakennuksia, joissa kasvit ja luonnon muodot näkyivät koristeissa. Lasitaiteilija [[Émile Gallé]] oli koulukunnan tunnetuimpia nimiä. Tarkempia yksityiskohtia en ole varma, mutta jugend on yhä osa kaupungin ilmettä. Pidemmästä lasimaljakkopuheesta tuli lopulta kuiva, mutta taide on kaunista.
+KYSYMYS: Kerro lisää: Nancy
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Burgtheater 1786 — palvelijat nolaavat isäntänsä] 1.5.1786 — Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys…
+- [Wien — kohdekartta / Kohdekartta: Figaro 1786] Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys venyy muut…
+AIEMPI KYSYMYS: Miksi Nancy tunnetaan jugendista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on oikeasti kiinnostava. [[Nancy]] oli 1900-luvun taitteessa jugendin eli taidetyylin Art nouveau'n keskus Ranskassa, ja kaupungissa toimi tunnettu Nancyn koulukunta ([[École de Nancy]]). Siihen kuuluneet taiteilijat ja käsityöläiset tekivät lasia, huonekaluja ja rakennuksia, joissa kasvit ja luonnon muodot näkyivät koristeissa. Lasitaiteilija [[Émile Gallé]] oli koulukunnan tunnetuimpia nimiä. Tarkempia yksityiskohtia en ole varma, mutta jugend on yhä osa kaupungin ilmettä. Pidemmästä lasimaljakkopuheesta tuli lopulta kuiva, mutta taide on kaunista.
+KYSYMYS: Kerro lisää: École de Nancy
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nancy, Place Stanislas (kulttuuri)
+Tietoruudun teksti: Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d'Alliancen kanssa on ollut Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi Nancy tunnetaan jugendista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on oikeasti kiinnostava. [[Nancy]] oli 1900-luvun taitteessa jugendin eli taidetyylin Art nouveau'n keskus Ranskassa, ja kaupungissa toimi tunnettu Nancyn koulukunta ([[École de Nancy]]). Siihen kuuluneet taiteilijat ja käsityöläiset tekivät lasia, huonekaluja ja rakennuksia, joissa kasvit ja luonnon muodot näkyivät koristeissa. Lasitaiteilija [[Émile Gallé]] oli koulukunnan tunnetuimpia nimiä. Tarkempia yksityiskohtia en ole varma, mutta jugend on yhä osa kaupungin ilmettä. Pidemmästä lasimaljakkopuheesta tuli lopulta kuiva, mutta taide on kaunista.
+KYSYMYS: Kerro lisää: Émile Gallé
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+AIEMPI KYSYMYS: Miksi huippu on puuton ja valkoinen?
+AIEMPI VASTAUS (Livia):
+Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on "[[Kalju vuori]]", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla [[kasvillisuus]] yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.
+KYSYMYS: Kerro lisää: Mont Ventoux'n
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+AIEMPI KYSYMYS: Miksi huippu on puuton ja valkoinen?
+AIEMPI VASTAUS (Livia):
+Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on "[[Kalju vuori]]", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla [[kasvillisuus]] yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.
+KYSYMYS: Kerro lisää: Kalju vuori
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Namibia — maalehti / Luonto: Kasvi, joka ei voi kuolla] Welwitschia kasvattaa koko elämänsä aikana vain kaksi pysyvää lehteä, ja ne kasvavat lakkaamatta: pituutta voi kertyä neljä metriä, ja tuuli repii ne vähitellen nauhoiksi, joten kasvi näyttää kymmenlehtiseltä. Puinen kanta levenee metriin, suurin mitattu yksilö on 2,77 metriä leveä, ja vanhimmat ovat ehkä kahdentuhannen vuoden ikäisiä. Friedrich Welwitsch löysi kasvin Angolasta 1859 ja kirjoitti voineensa vain polvistua sen ääreen peläten, että kosketus paljastaisi sen mielikuvituksen tuotteeksi. Afrikaansiksi kasvi on tweeblaarkanniedood, hereroksi onyanga eli aavikon sipuli.
+AIEMPI KYSYMYS: Miksi huippu on puuton ja valkoinen?
+AIEMPI VASTAUS (Livia):
+Ai se, tän näkee kauas. [[Mont Ventoux'n]] lisänimi on "[[Kalju vuori]]", ja nimi kuvaa huippua hyvin. Kuvaus viittaa siihen, että vuoren yläosa on paljas ja vaalea. Tarkkaa syytä, miksi huippu on puuton, en tiedä varmasti, joten en väitä enempää kuin mitä tiedän: vuori kohoaa 1 910 metriin ja on alueensa korkein. Korkealla [[kasvillisuus]] yleensä ohenee, ja vuoren huippu erottuu maisemasta selvästi. Pelkkä valkoinen kivinen huippu ei silti ole kyyhkyn ruokalistalla.
+KYSYMYS: Kerro lisää: kasvillisuus
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+AIEMPI KYSYMYS: Kuinka kovaa siellä tuulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on [[Provencessa]] sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. [[Ranskan ympäriajon]] pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.
+KYSYMYS: Kerro lisää: Mont Ventoux
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Urheilu: Peli keksittiin ystävälle, joka ei voinut juosta] 1910 — Provencessa pelattiin kuulapeliä, jossa heittäjä otti ensin kolme juoksuaskelta. La Ciotat'n kaupungissa asui Jules Lenoir, jonka nivelet olivat niin kipeät, ettei hän enää pystynyt juoksemaan eikä siis pelaamaan. Kahvilanpitäjä Ernest Pitiot keksi ystävälleen uudet säännöt: rata puolitettiin ja heittäjä seisoo paikallaan ympyrässä, jalat maassa. Peliä alettiin kutsua provensaaliksi pè tancat, jalat kiinni maassa, ja siitä tuli sana pétanque. Ensimmäinen turnaus pelattiin La Ciotat'ssa 1910. Maalina on pieni puupallo, cochonnet eli porsas.
+AIEMPI KYSYMYS: Kuinka kovaa siellä tuulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on [[Provencessa]] sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. [[Ranskan ympäriajon]] pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.
+KYSYMYS: Kerro lisää: Provencessa
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Kuinka kovaa siellä tuulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoren nimi viittaa tuuleen, ja se on tunnettu tuulisuudestaan, mutta tarkkoja tuulennopeuksia en ole varma. [[Mont Ventoux]] on [[Provencessa]] sijaitseva vuori, joka kohoaa 1 910 metriin, ja korkealla ja paljaalla huipulla tuuli yleensä on voimakkaampi kuin alempana. [[Ranskan ympäriajon]] pyöräilijät kohtaavat vuorella usein vaativat olosuhteet. Tarkat mittausarvot kannattaa tarkistaa ajantasaisesta sääpalvelusta, sillä sää vaihtelee. Minä lennän mieluummin alempana, koska siellä siivet pysyvät kiinni.
+KYSYMYS: Kerro lisää: Ranskan ympäriajon
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Mikä Ranskan ympäriajo on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Ranskan ympäriajo]] eli Tour de France on maailman tunnetuin pyöräilykilpailu. Se on monipäiväinen maantiepyöräilyn etappikilpailu, jota ajetaan perinteisesti heinäkuussa kolmen viikon ajan eri puolilla Ranskaa. Kilpailu ajettiin ensimmäisen kerran vuonna 1903. Sen kuuluisimpia vuoristoetappeja ovat Alpeilla ja Pyreneillä ajettavat nousut, ja [[Mont Ventoux]] on yksi tunnetuista kohteista. Kyyhky olisi voittanut kaikki etapit, kunhan ei lentäisi alamäkiä.
+KYSYMYS: Kerro lisää: Ranskan ympäriajo
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+AIEMPI KYSYMYS: Mitä Provencessa syödään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä kysymys osui suoraan sydämeen. Provencen keittiö perustuu oliiviöljyyn, yrtteihin ja kasviksiin, ja tunnettuja ruokia ovat [[ratatouille]]-kasvisruoka sekä Marseillen [[bouillabaisse]]-kalakeitto. Alueen yrttejä käytetään paljon, ja tomaatit, kesäkurpitsa ja munakoiso ovat tavallisia raaka-aineita. Ruokakulttuuri on kevyt ja aurinkoinen. Pulla olisi voinut mainita, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: ratatouille
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Ruoka: Bouillabaisse alkoi jätekalasta] Marseillen kuuluisin ruoka oli alun perin kalastajien omaa kotiruokaa: kattilaan meni se osa saaliista, jota kukaan ei ostanut — piikikkäät rascasse-kalat ja muut ruman näköiset. Nykyään bouillabaisse on kallista, ja vuonna 1980 kaupungin ravintoloitsijat allekirjoittivat oman peruskirjansa siitä, mitä aitoon annokseen kuuluu. Se tuodaan pöytään kahdessa osassa: ensin liemi valkosipulileivän kanssa, sitten kalat.
+AIEMPI KYSYMYS: Mitä Provencessa syödään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä kysymys osui suoraan sydämeen. Provencen keittiö perustuu oliiviöljyyn, yrtteihin ja kasviksiin, ja tunnettuja ruokia ovat [[ratatouille]]-kasvisruoka sekä Marseillen [[bouillabaisse]]-kalakeitto. Alueen yrttejä käytetään paljon, ja tomaatit, kesäkurpitsa ja munakoiso ovat tavallisia raaka-aineita. Ruokakulttuuri on kevyt ja aurinkoinen. Pulla olisi voinut mainita, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: bouillabaisse
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mont Ventoux (luonto · vuori)
+Tietoruudun teksti: Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä Carpentras'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Arki] Ranskan Guayanan arjessa kohtaavat kreolikulttuuri, alkuperäiskansat, Laosista paenneet hmongit ja jokien varsilla kultaa etsivät. Harva Euroopan departementti on yhtä monikulttuurinen kuin tämä sademetsäkaistale.
+AIEMPI KYSYMYS: Mikä on Ranskan departementti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan selittää. [[Departementti]] on Ranskan hallinnollinen alue, joka on suurempi kuin kunta mutta pienempi kuin alue (région). Ne perustettiin vuonna 1790 Ranskan vallankumouksen aikana, ja niitä on yhteensä noin sata, merentakaiset mukaan lukien. Jokaisella departementilla on oma hallintokaupunkinsa ja numeronsa. [[Mont Ventoux]] sijaitsee Vauclusen departementissa ja rajautuu pohjoisessa Drômeen. Hallinto on hyvä asia, mutta kyyhky ei tarvitse rekisterikylttiä.
+KYSYMYS: Kerro lisää: Departementti
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+AIEMPI KYSYMYS: Milloin tämä tulivuori purkautui viimeksi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Puy de Sancy]] on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Vuori on siis sammunut tulivuori, ja se kuuluu Ranskan keskiylängön eli [[Massif Central]]in tulivuoriseen alueeseen. Huippu kohoaa 1 886 metriin. Nykyään sen rinteitä käytetään lasketteluun. Tulivuoren purkaus oli siis kauan ennen kuin kukaan kyyhky on lentänyt.
+KYSYMYS: Kerro lisää: Puy de Sancy
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto] Ranskan luonnossa hiekka vaeltaa metsän päälle, meri palaa saaren ympärille kahdesti päivässä ja Massif Centralissa nukkuu rivi sammuneita tulivuoria.
+AIEMPI KYSYMYS: Milloin tämä tulivuori purkautui viimeksi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Puy de Sancy]] on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Vuori on siis sammunut tulivuori, ja se kuuluu Ranskan keskiylängön eli [[Massif Central]]in tulivuoriseen alueeseen. Huippu kohoaa 1 886 metriin. Nykyään sen rinteitä käytetään lasketteluun. Tulivuoren purkaus oli siis kauan ennen kuin kukaan kyyhky on lentänyt.
+KYSYMYS: Kerro lisää: Massif Central
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä Massif Central oikein on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Massif Central on Ranskan [[keskiylänkö]], vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Alueen korkein huippu on [[Puy de Sancy]], jonka korkeus on 1 886 metriä. Alueella on [[tulivuoritoiminnan]] jättämiä rinteitä, ja siellä sijaitsee rivi sammuneita tulivuoria. Rajat ja tarkka laajuus ovat kohta, jossa en ole aivan varma, joten en anna lukuja. Kyyhky pitää tasaisista maista, mutta kyllä ylängöltäkin on kaunis näköala.
+KYSYMYS: Kerro lisää: keskiylänkö
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Osorno-tulivuori] Llanquihuen järven yli kohoaa Osorno, 2652 metriä korkea ja lähes täydellisen symmetrinen jäätikköhuippuinen tulivuori, jota on verrattu Japanin Fuji-vuoreen. Osorno on purkautunut ainakin yksitoista kertaa vuosien 1575 ja 1869 välillä, ja viimeisin purkaus tapahtui juuri 1869 - vain neljä vuotta ennen kuin isoisä kulki samalla seudulla vuonna 1873. Luonnontutkija Charles Darwin näki vuonna 1835 Osornon purkautuvan Beagle-aluksen kannelta lähellä Ancudia ja pohti päiväkirjassaan, liittyvätkö kaukaiset tulivuoret toisiinsa maan alla. Yli sadan vuoden ajan Osorno on ollut hiljaa, ja nykyään sen rinteillä hiihdetään ja vaelletaan.
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+AIEMPI KYSYMYS: Mikä Massif Central oikein on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Massif Central on Ranskan [[keskiylänkö]], vuoristoinen ylänköalue Etelä-Keski-Ranskassa. Alueen korkein huippu on [[Puy de Sancy]], jonka korkeus on 1 886 metriä. Alueella on [[tulivuoritoiminnan]] jättämiä rinteitä, ja siellä sijaitsee rivi sammuneita tulivuoria. Rajat ja tarkka laajuus ovat kohta, jossa en ole aivan varma, joten en anna lukuja. Kyyhky pitää tasaisista maista, mutta kyllä ylängöltäkin on kaunis näköala.
+KYSYMYS: Kerro lisää: tulivuoritoiminnan
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+AIEMPI KYSYMYS: Mikä on kerrostulivuori?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Kerrostulivuori]] on tulivuoren tyyppi, joka on kasvanut korkeaksi ja kartiomaiseksi, kun purkaukset ovat kerrostaneet laavaa ja tuhkaa päällekkäin. Nimi viittaa tähän kerroksellisuuteen. Tällaiset tulivuoret voivat olla vaarallisia, koska niiden purkaukset ovat usein räjähdysmäisiä. [[Puy de Sancy]] on osa vanhaa kerrostulivuorta, joka ei ole purkautunut yli 220 000 vuoteen. Kerrokset ovat tulivuorella kuin pullataikinassa, mutta tuoksu on selvästi huonompi.
+KYSYMYS: Kerro lisää: Kerrostulivuori
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+- [Sitka — kaupunkilehti / Sitka: Tulivuori joka vartioi salmea] Sitka on Yhdysvaltain pinta-alaltaan suurin kaupunki, sillä se ulottuu peräti noin 4 815 neliömailin alueelle Baranofin ja Tšitšagofin saarille Alexanterin saaristossa. Kaupungin salmea vartioi Mount Edgecumbe, sammunut tulivuori, jonka lumihuippuinen, punertava tuhkakartio kohoaa merestä naapurisaaren keskellä. Ilmasto on lauhkea mutta hyvin sateinen: vuotuinen sademäärä on peräti noin 335 senttimetriä. Kalastus ja kalanjalostus ovat kaupungin tärkeimpiä elinkeinoja tänäkin päivänä, ja satamassa risteilevät kalastusveneet ovat yhtä pysyvä näky kuin sata vuotta sitten.
+AIEMPI KYSYMYS: Miten sammunut tulivuori eroaa uinuvasta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Sammunut tulivuori]] ei odotettavasti enää purkaudu, koska magman syöttö sen alla on päättynyt. [[Uinuva tulivuori]] taas ei ole purkautunut pitkään aikaan, mutta se voi vielä herätä. Raja on tutkijoille joskus tulkinnanvarainen, sillä tulivuoren tulevaisuutta ei voi tietää täysin varmasti. [[Puy de Sancy]] kuuluu vanhaan tulivuoreen, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Minä pysyn rauhallisesti kaiteella, vaikka vuori nukkuisi.
+KYSYMYS: Kerro lisää: Sammunut tulivuori
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Kolme tulivuorikartiota] Kilimanjaro ei ole yksi vuori vaan kolmen tulivuorikartion muodostama massiivi: korkein ja nuorin on Kibo, jonka huippu kohoaa 5895 metriin ja joka on yhä uinuva – sen kraatterissa purkautuu edelleen rikkikaasuja. Mawenzi on Kibon itäpuolella jyrkkäpiirteinen ja sammunut, ja lännempänä kohoava Shira on kolmesta matalin ja vanhin. Kaikki kolme syntyivät samalla Itä-Afrikan hautavajoaman alueella miljoonien vuosien aikana, ja Kibon viimeisin purkaus ajoittuu noin 150 000–200 000 vuoden taakse.
+AIEMPI KYSYMYS: Miten sammunut tulivuori eroaa uinuvasta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Sammunut tulivuori]] ei odotettavasti enää purkaudu, koska magman syöttö sen alla on päättynyt. [[Uinuva tulivuori]] taas ei ole purkautunut pitkään aikaan, mutta se voi vielä herätä. Raja on tutkijoille joskus tulkinnanvarainen, sillä tulivuoren tulevaisuutta ei voi tietää täysin varmasti. [[Puy de Sancy]] kuuluu vanhaan tulivuoreen, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Minä pysyn rauhallisesti kaiteella, vaikka vuori nukkuisi.
+KYSYMYS: Kerro lisää: Uinuva tulivuori
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puy de Sancy (luonto · vuori)
+Tietoruudun teksti: Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama hiihtohissi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Halifax: Kuudes joulukuuta 1917] Ranskalainen rahtialus Mont-Blanc ja norjalainen Imo, joka oli rahdattu Belgian avustustoimikunnalle, törmäsivät Halifaxin satamassa aamulla 6. joulukuuta 1917. Mont-Blanc kuljetti räjähdysaineita; törmäys vaurioitti kannen bentsolitynnyreitä, höyryt syttyivät, ja noin kaksikymmentä minuuttia myöhemmin laiva räjähti. Räjähdys oli aikansa suurin ihmisen aiheuttama. Vähintään 1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui, ja lähes kaikki rakennukset kahdeksansadan metrin säteellä tuhoutuivat. Hyökyaalto vei mennessään Tufts Coven mi'kmaq-yhteisön. Apu tuli Bostonista.
+AIEMPI KYSYMYS: Mikä on Ranskan korkein vuori?
+AIEMPI VASTAUS (Livia):
+Kato, tän tiedän. Ranskan korkein vuori on [[Mont Blanc]], joka kohoaa noin 4 800 metriin Alpeilla Ranskan ja Italian rajalla. Se on Alppien korkein huippu. Keskiylängön korkein vuori [[Puy de Sancy]] on selvästi matalampi, 1 886 metriä. Mont Blancin tarkka korkeus on vaihdellut eri mittausten mukaan, joten luvun kanssa kannattaa olla varovainen. Se on siis aika paljon korkeammalla kuin kyyhky yleensä lentää.
+KYSYMYS: Kerro lisää: Mont Blanc
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kohdekartta / Kohdekartta: Kristuksen katedraali] 1867–1946 Marinan varrella oleva anglikaaninen katedraali on Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali perustettiin 1869 — neljä vuotta ennen isoisän matkaa. Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi piispaksi. Nykyinen rakennus on paljon nuorempi. Työ alkoi arkkitehti Bagan Benjaminin piirustusten mukaan 1. marraskuuta 1924, peruskiven laski Walesin prinssi — myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja kirkko valmistui 1946. Katedraali on ollut vuorollaan Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko Nigerian arkkipiispan ja nykyään Lagosin piispa…
+- [Kööpenhamina — kohdekartta / Kohdekartta: Tivolin portti] Isoisäsi käveli portista sisään ja teki päätelmän. Tässä on se, mitä hän ei voinut portilta nähdä. Tivoli avattiin 15. elokuuta 1843, ja luvan siihen antoi kuningas Christian VIII — viideksi vuodeksi kerrallaan. Perustaja Georg Carstensen sai luvan perustelemalla asian suoraan: kun kansa huvittelee, se ei ajattele politiikkaa. Puisto rakennettiin kaupungin linnoitusvallin ulkopuolelle, noin kuudenkymmenenyhden tuhannen neliömetrin alalle, ja vuokraa maksettiin vuosittain. 1850-luvulle asti Tivoli oli siis kaupungin ULKOPUOLELLA, ja sinne mentiin Vesterportin eli länsiportin kautta. Puiston järvi ei ole koriste vaan jäänne: se on vanhaa vallihautaa, ja ilotulitukset heijastuivat siitä. Pimeä…
+AIEMPI KYSYMYS: Miten kuningas Kaarle VIII kuoli täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen. [[Kaarle VIII]] kuoli Amboisen linnassa vuonna 1498 tapaturmaisesti: hän löi päänsä oven kamanaan. Se tapahtui yli viisisataa vuotta sitten, aikana jolloin kuningas hallitsi absoluuttisesti ja lääketiede oli nykyaikaan verrattuna alkeellista. [[Amboisen linna]] oli tuolloin suosittu kuninkaallinen asuinpaikka, jota oli laajasti rakennettu uudelleen. Linnasta on sittemmin purettu suurin osa sisemmistä rakennuksista, mutta osa on säilynyt ja kunnostettu. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Kaarle VIII
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+AIEMPI KYSYMYS: Miten kuningas Kaarle VIII kuoli täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen. [[Kaarle VIII]] kuoli Amboisen linnassa vuonna 1498 tapaturmaisesti: hän löi päänsä oven kamanaan. Se tapahtui yli viisisataa vuotta sitten, aikana jolloin kuningas hallitsi absoluuttisesti ja lääketiede oli nykyaikaan verrattuna alkeellista. [[Amboisen linna]] oli tuolloin suosittu kuninkaallinen asuinpaikka, jota oli laajasti rakennettu uudelleen. Linnasta on sittemmin purettu suurin osa sisemmistä rakennuksista, mutta osa on säilynyt ja kunnostettu. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Amboisen linna
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Miksi linnasta purettiin suurin osa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Amboisen linna]] alkoi rappeutua 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin. Tarkkaa syytä purkamiselle en ole varma, mutta rappeutuminen oli sen taustalla. Osa linnasta säilyi, ja sitä on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. [[Ranskan kulttuuriministeriö]] on luokitellut linnan [[historialliseksi monumentiksi]] vuodesta 1840. Linna on siis hävinnyt vähän kuin kyyhkyn sukupuu: osa on vielä pystyssä.
+KYSYMYS: Kerro lisää: Ranskan kulttuuriministeriö
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Keskusasema] 1897 Vanha Montevideon asema paloi 1891, ja Central Uruguay Railway aloitti uuden rakentamisen sen jälkeen. Peruskivi laskettiin 27. elokuuta 1893, ja asema avattiin matkustajille 15. heinäkuuta 1897. Sen suunnitteli italialainen insinööri ja arkkitehti Luigi Andreoni, ja se nousi Aguadan kaupunginosaan hieman vanhankaupungin ulkopuolelle. Asema kasvoi vielä valmistumisensa jälkeen. Vuonna 1912 sen raiteet yhdistettiin satamaterminaaliin, kun sataman työt olivat valmistuneet, ja bulevardin puolella merta täytettiin maaksi niin, että raiteet ulottuivat lähes Guatemala-kadulle asti. Rio Negro -kadun lipunmyynti siirrettiin suureen keskushalliin. Valtio antoi asemalle 1955 nimen José Artigasin…
+- [Mérida — kohdekartta / Kohdekartta: Peón Contrerasin teatteri] 1908 Méridan vanhin näyttämö on ollut samalla paikalla kolmella nimellä ja kolmessa rakennuksessa. Ensimmäisen, Teatro San Carlosin, valinta alkoi 1806. Vuonna 1877 Antonino Bolio Guzmán osti sen ja nimesi Teatro Bolioksi, ja jo seuraavan näytäntökauden jälkeen se vaihtoi omistajaa uudestaan. Nykyisen nimensä se sai 27. joulukuuta 1878 kahden sanomalehden aloitteesta yucatánilaisen lääkärin ja näytelmäkirjailijan José Peón Contrerasin mukaan. Vuonna 1897 saliin asennettiin Lumièren veljesten tekniikka, ja liikkuvia kuvia alettiin esittää samassa talossa oopperan ja zarzuelan kanssa. Vuonna 1899 perustettu teatteriyhtiö osti tontin ja purki vanhan rakennuksen. Nykyinen talo rakennettiin 1900…
+AIEMPI KYSYMYS: Miksi linnasta purettiin suurin osa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Amboisen linna]] alkoi rappeutua 1500-luvun jälkipuoliskolta alkaen, ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin. Tarkkaa syytä purkamiselle en ole varma, mutta rappeutuminen oli sen taustalla. Osa linnasta säilyi, ja sitä on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. [[Ranskan kulttuuriministeriö]] on luokitellut linnan [[historialliseksi monumentiksi]] vuodesta 1840. Linna on siis hävinnyt vähän kuin kyyhkyn sukupuu: osa on vielä pystyssä.
+KYSYMYS: Kerro lisää: historialliseksi monumentiksi
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+AIEMPI KYSYMYS: Mikä on Loiren laakso?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Loiren laakso]] on Länsi-Ranskassa Loire-joen varrella sijaitseva alue, joka tunnetaan linnoistaan, viinitarhoistaan ja maalaismaisemistaan. Loire on Ranskan pisin joki, noin tuhat kilometriä pitkä. Alue kuuluu [[Unesco]]n maailmanperintöön kulttuurimaisemana. [[Amboisen linna]] sijaitsee Indre-et-Loiren departementissa Loiren laaksossa, ja siellä on monia muitakin kuninkaallisia linnoja. Laakso on kuin lintu: pitkä, kaunis ja täynnä kulkijoita.
+KYSYMYS: Kerro lisää: Loiren laakso
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mikä on Loiren laakso?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Loiren laakso]] on Länsi-Ranskassa Loire-joen varrella sijaitseva alue, joka tunnetaan linnoistaan, viinitarhoistaan ja maalaismaisemistaan. Loire on Ranskan pisin joki, noin tuhat kilometriä pitkä. Alue kuuluu [[Unesco]]n maailmanperintöön kulttuurimaisemana. [[Amboisen linna]] sijaitsee Indre-et-Loiren departementissa Loiren laaksossa, ja siellä on monia muitakin kuninkaallisia linnoja. Laakso on kuin lintu: pitkä, kaunis ja täynnä kulkijoita.
+KYSYMYS: Kerro lisää: Unesco
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+AIEMPI KYSYMYS: Missä Leonardo da Vinci vietti viimeiset vuotensa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leonardo da Vinci vietti viimeiset vuotensa [[Amboisen]] kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. [[Ranskan kuningas]] oli kutsunut hänet maahan, ja hän asui [[Clos Lucén]] kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.
+KYSYMYS: Kerro lisää: Amboisen
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Missä Leonardo da Vinci vietti viimeiset vuotensa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leonardo da Vinci vietti viimeiset vuotensa [[Amboisen]] kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. [[Ranskan kuningas]] oli kutsunut hänet maahan, ja hän asui [[Clos Lucén]] kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.
+KYSYMYS: Kerro lisää: Ranskan kuningas
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kaupunkilehti / Whitehorse: Kaupunki, joka melkein sai nimen Closeleigh] Koskien ohi rakennettiin ensin kaksi rataa: itärannalle kahdeksan kilometriä Canyon Citystä koskien juurelle, ja toinen länsirannalle. Tavara kulki hevosvetoisilla vaunuilla kolmella sentillä naulaa kohti. Sitten tuli rautatie. Kapearaiteisen White Pass and Yukon Routen rakentaminen Skagwaysta alkoi toukokuussa 1898, ja koko reitti valmistui kesä—heinäkuussa 1900. Rautatieväki halusi nimetä paikan rahoittajiensa mukaan Closeleighiksi, mutta territorion komissaari William Ogilvie kieltäytyi. Vuonna 1901 Whitehorse Star raportoi jo päivittäisistä rahtimääristä.
+AIEMPI KYSYMYS: Missä Leonardo da Vinci vietti viimeiset vuotensa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leonardo da Vinci vietti viimeiset vuotensa [[Amboisen]] kaupungissa Ranskassa, ja hän kuoli siellä vuonna 1519. [[Ranskan kuningas]] oli kutsunut hänet maahan, ja hän asui [[Clos Lucén]] kartanossa lähellä Amboisen linnaa. Hänen sanotaan haudatun linnan alueella olevaan kappeliin. Yksityiskohdista en ole aivan varma, mutta yhteys Amboiseen on vahva. Minä kannoin tämänkin tiedon päässäni koko matkan.
+KYSYMYS: Kerro lisää: Clos Lucén
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amboisen linna (kulttuuri)
+Tietoruudun teksti: Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on luokitellut linnan historialliseksi monumentiksi vuodesta 1840.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Scott-monumentti] Princes Streetin puistossa seisoo goottilainen torni, joka näyttää kirkolta jolta on unohtunut kirkko: kuusikymmentäyksi metriä korkea, 287 porrasta ylimmälle tasanteelle, 68 pientä kivipatsasta kirjojen henkilöitä. Se on maailman toiseksi suurin kirjailijan muistomerkki, ja isoisäsi olisi voinut nousta sen portaat, sillä torni oli seissyt jo lähes kolmekymmentä vuotta hänen tullessaan. Muistomerkkikilpailu järjestettiin Walter Scottin kuoltua 1832, ja sen voitti ehdotus, jonka lähettäjä oli allekirjoittanut nimellä "John Morvo" — Melrosen luostarin keskiaikaisen rakentajan mukaan. Nimimerkin takana oli 45-vuotias George Meikle Kemp, puuseppä ja piirtäjä ilman arkkitehdin koulutusta, joka p…
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä on historiallinen monumentti Ranskassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Historiallinen monumentti]] on Ranskassa viranomaisen suojeluun luokittelema rakennus tai kohde, jolla on historiallista, taiteellista tai arkkitehtonista arvoa. Suojelun tarkoitus on säilyttää kohde tuleville sukupolville. Luokittelu kuuluu kulttuuriministeriölle, ja Ranskassa suojeltuja kohteita on tuhansia. [[Amboisen linna]] on luokiteltu historialliseksi monumentiksi vuodesta 1840. Tarkkaa lukumäärää en tiedä. Tähän ei kyyhkyn pesä vielä päässyt, ikävä kyllä.
+KYSYMYS: Kerro lisää: Historiallinen monumentti
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+AIEMPI KYSYMYS: Kuinka moni katsoja tänne mahtui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä kysymys tuo. Roomalaisaikaan areenan katsomoon mahtui 24 000 katsojaa. Penkkirivejä oli 34, ja ne oli jaettu neljään erilliseen lohkoon. [[Nîmesin areena]] rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta [[Rooman Colosseumin]] jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista [[amfiteattereista]]. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja ulkojulkisivussa on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Aika iso parvi, sanoisin, ja minä tiedän parvista kyllä yhtä ja toista.
+KYSYMYS: Kerro lisää: Nîmesin areena
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Kuinka moni katsoja tänne mahtui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä kysymys tuo. Roomalaisaikaan areenan katsomoon mahtui 24 000 katsojaa. Penkkirivejä oli 34, ja ne oli jaettu neljään erilliseen lohkoon. [[Nîmesin areena]] rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta [[Rooman Colosseumin]] jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista [[amfiteattereista]]. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja ulkojulkisivussa on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Aika iso parvi, sanoisin, ja minä tiedän parvista kyllä yhtä ja toista.
+KYSYMYS: Kerro lisää: Rooman Colosseumin
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+AIEMPI KYSYMYS: Kuinka moni katsoja tänne mahtui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä kysymys tuo. Roomalaisaikaan areenan katsomoon mahtui 24 000 katsojaa. Penkkirivejä oli 34, ja ne oli jaettu neljään erilliseen lohkoon. [[Nîmesin areena]] rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta [[Rooman Colosseumin]] jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista [[amfiteattereista]]. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja ulkojulkisivussa on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Aika iso parvi, sanoisin, ja minä tiedän parvista kyllä yhtä ja toista.
+KYSYMYS: Kerro lisää: amfiteattereista
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+AIEMPI KYSYMYS: Miksi juuri tämä amfiteatteri säilyi näin ehjänä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tähän on olemassa ihan oikea vastaus. Yksittäistä syytä ei voi osoittaa varmasti, mutta rakennus ei jäänyt tyhjäksi: keskiajalla areena muutettiin linnoitukseksi, ja sen sisälle kasvoi asuinkortteli, joka tyhjennettiin vasta 1800-luvun alkupuolella. Jatkuva käyttö piti kiviseinät pystyssä aikana, jolloin monia antiikin rakennuksia louhittiin rakennusaineeksi. Esimerkiksi [[Itálican]] amfiteatterin muurit määrättiin purettaviksi vuonna 1740, kun kiveä tarvittiin [[Guadalquivirin]] patoon. Hyvä kunto selittyy siis pitkälti sillä, että rakennusta käytettiin sen sijaan että sitä olisi purettu. Asumalla se kai säilytetään, sen minäkin olen ikkunalaudoilta oppinut.
+KYSYMYS: Kerro lisää: Itálican
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Yhdeksän kilometriä hyllyä yhden kaupan muistoksi] Vain Sevillasta lähtenyt ja sinne palannut purjelaiva sai käydä kauppaa Espanjan Amerikan-siirtomaiden kanssa, joten koko Euroopan kauppiaskunnan oli tultava tänne — ja kaupungin väkiluku ylitti satatuhatta. Guadalquivirin mataloituminen siirsi kaupan vähitellen alavirtaan, laivastot Cádiziin 1680 ja Amerikan-kaupan viraston Casa de Contrataciónin 1717. Kaarle III perusti 1785 Intian arkiston vanhaan kauppakillan taloon, jonne koottiin Simancasista, Cádizista ja Sevillasta hajallaan olleet asiakirjat. Niitä on nykyään yhdeksän kilometriä hyllyä, 43 000 nidettä ja noin 80 miljoonaa sivua.
+- [Sevilla — kaupunkilehti / Sevilla: Silta joka korvasi seitsemän vuosisadan venesillan] Maurit rakensivat 1171 kalifi Abu Yaqub Yusufin aikana Sevillan ja Trianan väliin venesillan: peräkkäin ankkuroituja veneitä, joiden päällä kulki kansi. Se palveli lukemattomien korjausten turvin lähes seitsemän vuosisataa. Isabel II:n hallituskaudella tilalle rakennettiin vihdoin kiinteä silta, joka valmistui 1852 kaupungin ensimmäisenä pysyvänä siltana. Rautakaarinen Puente de Isabel II on 149 metriä pitkä, ja se ylittää Alfonso XIII:n kanavan eli sen Guadalquivirin haaran, joka tekee Trianasta melkein saaren.
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+AIEMPI KYSYMYS: Miksi juuri tämä amfiteatteri säilyi näin ehjänä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tähän on olemassa ihan oikea vastaus. Yksittäistä syytä ei voi osoittaa varmasti, mutta rakennus ei jäänyt tyhjäksi: keskiajalla areena muutettiin linnoitukseksi, ja sen sisälle kasvoi asuinkortteli, joka tyhjennettiin vasta 1800-luvun alkupuolella. Jatkuva käyttö piti kiviseinät pystyssä aikana, jolloin monia antiikin rakennuksia louhittiin rakennusaineeksi. Esimerkiksi [[Itálican]] amfiteatterin muurit määrättiin purettaviksi vuonna 1740, kun kiveä tarvittiin [[Guadalquivirin]] patoon. Hyvä kunto selittyy siis pitkälti sillä, että rakennusta käytettiin sen sijaan että sitä olisi purettu. Asumalla se kai säilytetään, sen minäkin olen ikkunalaudoilta oppinut.
+KYSYMYS: Kerro lisää: Guadalquivirin
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Kumpi on suurempi, Nîmesin areena vai Rooman Colosseum?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vertailukysymys. Rooman [[Colosseum]] on Nîmesin areenaa selvästi suurempi: sinne mahtui arviolta yli 50 000 katsojaa, kun Nîmesissä katsojia oli 24 000. Keisari [[Vespasianus]] aloitti Colosseumin rakentamisen, ja se valmistui noin parikymmentä vuotta ennen Nîmesin areenaa. Colosseumin julkisivussa on enemmän kerroksia kuin Nîmesin kahdessa, mutta rakennukset ovat samaa tyyppiä: kaariaukkoja, kivirakenteinen katsomo ja soikea areena. Usein sanotaan, että Nîmesin areena on säilynyt ehjempänä.
+
+Suvun postiperimätiedon mukaan Colosseumin reunalla on aina ollut hyvä istua, ja sinne on mahtunut kokonainen parvi. Nîmesissä reunaa on vähemmän, mutta ehjää reunaa sitäkin enemmän.
+KYSYMYS: Kerro lisää: Colosseum
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Kumpi on suurempi, Nîmesin areena vai Rooman Colosseum?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vertailukysymys. Rooman [[Colosseum]] on Nîmesin areenaa selvästi suurempi: sinne mahtui arviolta yli 50 000 katsojaa, kun Nîmesissä katsojia oli 24 000. Keisari [[Vespasianus]] aloitti Colosseumin rakentamisen, ja se valmistui noin parikymmentä vuotta ennen Nîmesin areenaa. Colosseumin julkisivussa on enemmän kerroksia kuin Nîmesin kahdessa, mutta rakennukset ovat samaa tyyppiä: kaariaukkoja, kivirakenteinen katsomo ja soikea areena. Usein sanotaan, että Nîmesin areena on säilynyt ehjempänä.
+
+Suvun postiperimätiedon mukaan Colosseumin reunalla on aina ollut hyvä istua, ja sinne on mahtunut kokonainen parvi. Nîmesissä reunaa on vähemmän, mutta ehjää reunaa sitäkin enemmän.
+KYSYMYS: Kerro lisää: Vespasianus
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Mitä sana amfiteatteri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kielipohdinta, sellaisista minä pidän. Sana [[amfiteatteri]] tulee kreikasta: amphi tarkoittaa kahta puolta tai ympärillä, ja theatron on paikka, josta katsotaan. Kreikkalaisessa teatterissa katsomo oli yleensä vain puoliympyrän muotoinen, mutta roomalaiset rakensivat katsomon täyden ympyrän tai soikion ympärille, jolloin näyttämö oli kaikilta puolilta nähtävissä. Siksi Nîmesin areenakin on soikea. Roomalaisissa amfiteattereissa oli keskellä hiekalla peitetty areena, ja sana [[areena]] tulee latinan hiekkaa tarkoittavasta sanasta. Ja kyllä, minä muistin tämän ulkoa.
+KYSYMYS: Kerro lisää: amfiteatteri
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Amazonas-areena] 2014 Areena rakennettiin vuosina 2010–2014 jalkapallon MM-kisoja varten vanhan Vivaldão-stadionin paikalle. Istumapaikkoja on 42 924, mutta kisojen aikana suurin sallittu yleisömäärä oli 40 549. Rakentamisesta maksoi osavaltio neljänneksen ja Brasilian kehityspankki loput. Suunnittelija oli saksalainen arkkitehtitoimisto Gerkan, Marg and Partners, ja metallinen ulkokuori on tehty muistuttamaan alueen olkikoreja. Päiväntasaajan läheisyyden takia talo on rakennettu viilentämään itse itseään: ulkopinta on valkoinen ja heijastava, katsomon päällä on runsaasti varjoa ja julkisivussa paljon tuuletusaukkoja. Sadevesi kerätään talteen, ja yli 95 prosenttia vanhan stadionin purkuaineksesta käytettii…
+- [Sofia — kaupunkilehti / Historia: Areena löytyi hotellin perustuksista] Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.
+AIEMPI KYSYMYS: Mitä sana amfiteatteri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kielipohdinta, sellaisista minä pidän. Sana [[amfiteatteri]] tulee kreikasta: amphi tarkoittaa kahta puolta tai ympärillä, ja theatron on paikka, josta katsotaan. Kreikkalaisessa teatterissa katsomo oli yleensä vain puoliympyrän muotoinen, mutta roomalaiset rakensivat katsomon täyden ympyrän tai soikion ympärille, jolloin näyttämö oli kaikilta puolilta nähtävissä. Siksi Nîmesin areenakin on soikea. Roomalaisissa amfiteattereissa oli keskellä hiekalla peitetty areena, ja sana [[areena]] tulee latinan hiekkaa tarkoittavasta sanasta. Ja kyllä, minä muistin tämän ulkoa.
+KYSYMYS: Kerro lisää: areena
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+AIEMPI KYSYMYS: Käytetäänkö Nîmesin areenaa vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä saan kertoa ilolla. Nîmesin areenaa käytetään edelleen: siellä järjestetään konsertteja ja muita suurtapahtumia, ja kaupungin vuotuisiin [[ferioihin]] kuuluvat myös [[härkätaistelut]], jotka ovat Etelä-Ranskan perinne. Se, että kaksituhatta vuotta vanha rakennus on yhä käytössä, on harvinaista, ja juuri siksi se on yksi parhaiten säilyneistä roomalaisista amfiteattereista. Tarkkoja ohjelmia en tunne, joten niistä kannattaa kysyä kaupungin omista lähteistä. Tämä on ensimmäinen kerta, kun kyyhky on kehunut härkätaistelua, ja viimeinen.
+KYSYMYS: Kerro lisää: ferioihin
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nîmesin areena (historia)
+Tietoruudun teksti: Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa 21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen lohkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Käytetäänkö Nîmesin areenaa vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tästä saan kertoa ilolla. Nîmesin areenaa käytetään edelleen: siellä järjestetään konsertteja ja muita suurtapahtumia, ja kaupungin vuotuisiin [[ferioihin]] kuuluvat myös [[härkätaistelut]], jotka ovat Etelä-Ranskan perinne. Se, että kaksituhatta vuotta vanha rakennus on yhä käytössä, on harvinaista, ja juuri siksi se on yksi parhaiten säilyneistä roomalaisista amfiteattereista. Tarkkoja ohjelmia en tunne, joten niistä kannattaa kysyä kaupungin omista lähteistä. Tämä on ensimmäinen kerta, kun kyyhky on kehunut härkätaistelua, ja viimeinen.
+KYSYMYS: Kerro lisää: härkätaistelut
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana] 1862 — Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jo…
+- [Pariisi — kohdekartta / Kohdekartta: Pasteur 1862] Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pöl…
+AIEMPI KYSYMYS: Miksi kolme tornia ovat kaikki erinäköisiä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tässä on syy aika selvä. Kirkkoa rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten eri aikakausien tyylit ovat jääneet näkyviin. [[Rouenin tuomiokirkossa]] on piirteitä varhaisgotiikasta, myöhäisestä [[liekkigotiikasta]] ja renessanssista, ja jokainen torni edustaa omaa tyyliään. Kirkko ei siis ole yhden suunnitelman toteutus vaan monen sukupolven rakennusprojekti. Se on [[Normandian]] arkkipiispan istuinkirkko, ja sellaista rakennusta korjattiin, laajennettiin ja muotoiltiin uudelleen aina sen mukaan, mikä oli ajan tyyli. Kolme eri tornia, ja yksikään ei ole kopio. Samaa en kyllä sano parvestamme.
+KYSYMYS: Kerro lisää: Rouenin tuomiokirkossa
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+AIEMPI KYSYMYS: Miksi kolme tornia ovat kaikki erinäköisiä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tässä on syy aika selvä. Kirkkoa rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten eri aikakausien tyylit ovat jääneet näkyviin. [[Rouenin tuomiokirkossa]] on piirteitä varhaisgotiikasta, myöhäisestä [[liekkigotiikasta]] ja renessanssista, ja jokainen torni edustaa omaa tyyliään. Kirkko ei siis ole yhden suunnitelman toteutus vaan monen sukupolven rakennusprojekti. Se on [[Normandian]] arkkipiispan istuinkirkko, ja sellaista rakennusta korjattiin, laajennettiin ja muotoiltiin uudelleen aina sen mukaan, mikä oli ajan tyyli. Kolme eri tornia, ja yksikään ei ole kopio. Samaa en kyllä sano parvestamme.
+KYSYMYS: Kerro lisää: liekkigotiikasta
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Meri palaa saaren ympärille] 2015 — Normandian rannikolla Mont-Saint-Michelin lahdessa vuoroveden korkeusero on noin neljätoista metriä, yksi Euroopan suurimmista. Kalliosaari oli ennen kiinni mantereessa vain laskuveden aikaan. Vuonna 1879 sinne rakennettiin pengertie, mutta se pysäytti veden virtauksen ja lahti alkoi liettyä umpeen. Penger purettiin, tilalle tuli pilareilla seisova silta, ja Couesnon-jokeen padottiin vettä, joka päästetään huuhtomaan lietettä pois. 21. maaliskuuta 2015 poikkeuksellisen korkea vuoksi peitti uuden sillan kokonaan.
+- [Ranska — maalehti / Historia: Seitsemänkymmentä metriä sarjakuvaa pellavalle] 1070-luku — Bayeux'n seinävaate kertoo, miten Normandian herttua Vilhelm valloitti Englannin vuonna 1066. Se ei ole kudottu vaan kirjottu villalangalla pellavakankaalle, ja sitä on lähes seitsemänkymmentä metriä. Kuvat etenevät kohtaus kohtaukselta kuin sarjakuva, ja niiden yllä kulkee latinankielinen tekstirivi. Yhdessä kohtauksessa ihmiset osoittavat taivaalle: siellä näkyy Halleyn komeetta, joka todella ohitti maan samana vuonna.
+AIEMPI KYSYMYS: Miksi kolme tornia ovat kaikki erinäköisiä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tässä on syy aika selvä. Kirkkoa rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten eri aikakausien tyylit ovat jääneet näkyviin. [[Rouenin tuomiokirkossa]] on piirteitä varhaisgotiikasta, myöhäisestä [[liekkigotiikasta]] ja renessanssista, ja jokainen torni edustaa omaa tyyliään. Kirkko ei siis ole yhden suunnitelman toteutus vaan monen sukupolven rakennusprojekti. Se on [[Normandian]] arkkipiispan istuinkirkko, ja sellaista rakennusta korjattiin, laajennettiin ja muotoiltiin uudelleen aina sen mukaan, mikä oli ajan tyyli. Kolme eri tornia, ja yksikään ei ole kopio. Samaa en kyllä sano parvestamme.
+KYSYMYS: Kerro lisää: Normandian
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+AIEMPI KYSYMYS: Kauanko kirkko ehti olla maailman korkein rakennus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vuodet ovat tässä helppo laskea. Rouenin tuomiokirkko oli maailman korkein rakennus vuosina 1876–1880, eli noin neljä vuotta. Titteli siirtyi sen jälkeen [[Kölnin tuomiokirkolle]], joka valmistui vuonna 1880. Vuosina 1876–1880 kirkon korkeutta nosti sen [[kärkitorni]], joka oli rakennettu valurautaa käyttäen. Neljä vuotta on lyhyt aika, mutta rakennuksen historia on kestänyt kauan sitä pidempään, sillä sitä rakennettiin yli kahdeksansadan vuoden ajan. Ja minä pystyin laskemaan tämän ilman sormia, kun sormia ei ole.
+KYSYMYS: Kerro lisää: Kölnin tuomiokirkolle
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+AIEMPI KYSYMYS: Kauanko kirkko ehti olla maailman korkein rakennus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vuodet ovat tässä helppo laskea. Rouenin tuomiokirkko oli maailman korkein rakennus vuosina 1876–1880, eli noin neljä vuotta. Titteli siirtyi sen jälkeen [[Kölnin tuomiokirkolle]], joka valmistui vuonna 1880. Vuosina 1876–1880 kirkon korkeutta nosti sen [[kärkitorni]], joka oli rakennettu valurautaa käyttäen. Neljä vuotta on lyhyt aika, mutta rakennuksen historia on kestänyt kauan sitä pidempään, sillä sitä rakennettiin yli kahdeksansadan vuoden ajan. Ja minä pystyin laskemaan tämän ilman sormia, kun sormia ei ole.
+KYSYMYS: Kerro lisää: kärkitorni
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: San Giorgio Maggiore] 1566 San Giorgio Maggiore on pieni saari aivan Pyhän Markuksen torin edustalla, ja sen valkoinen kirkko on yksi Venetsian tunnetuimmista näkymistä. Munkki Giovanni Morosini perusti saarelle luostarin jo vuonna 982 kuivattuaan ensin suot. Nykyinen kirkko alkoi nousta vuonna 1566 kuuluisan arkkitehti Andrea Palladion piirustusten mukaan. Sen korkea tiilinen kellotorni ja valkoinen marmorijulkisivu näkyvät kauas yli laguunin. Maalari Claude Monet maalasi kirkosta kokonaisen sarjan tauluja. Nykyään saarella toimii kulttuurisäätiö, kirjasto ja ulkoilmateatteri, ja tornissa soi yhdeksän kellon sarja.
+AIEMPI KYSYMYS: Miksi Monet maalasi saman julkisivun monta kertaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on yksi taidehistorian tunnetuimpia sarjoja. [[Claude Monet]] maalasi Rouenin tuomiokirkon julkisivusta kokonaisen sarjan, kolmisenkymmentä työtä, ja sarja kuuluu [[impressionismiin]]. Kohteena oli sama kivinen julkisivu, mutta Monetia kiinnosti valo: sama rakennus näyttää aamulla, keskipäivällä ja illalla, pilvisellä tai aurinkoisella säällä erilaiselta. Julkisivu oli hänelle oikeastaan tekosyy tutkia valon ja värin vaihtelua. Näin maalaus tallentaa hetken, ei rakennusta. Minä olen nähnyt saman julkisivun kymmenen kertaa ja huomannut, että se näyttää samalta. Mut minä olenkin kyyhky.
+KYSYMYS: Kerro lisää: Claude Monet
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bolivia — maalehti / Kuvataide: Maalari, joka toi ylängön ihmiset kankaalle] 1899–1950 — Cecilio Guzmán de Rojas syntyi Potosíssa 1899 ja opiskeli Madridin San Fernandon kuninkaallisessa akatemiassa Julio Romero de Torresin oppilaana; Pariisissa hän tutustui impressionismiin ja kubismiin. Vuonna 1929 hän palasi La Paziin ja otti johtaakseen taideakatemian. Hänestä tuli indigenismin eli alkuperäiskansojen kuvaamiseen keskittyvän suuntauksen johtohahmo, ja hän yhdisti jugendin ja art decon muotokieltä andilaisiin aiheisiin. Vuoden 1928 teos Luonnon voitto on yhä maan kansallisen taidemuseon tunnetuimpia maalauksia.
+- [Venezuela — maalehti / Kuvataide: Maalari, joka meni tupakkatehtaaseen 13-vuotiaana] 1857–1890 — Cristóbal Rojas syntyi Cúan pikkukaupungissa. Isä kuoli, kun poika oli kolmentoista, ja hän meni töihin tupakkatehtaaseen elättääkseen perheen. Vuoden 1878 maanjäristys tuhosi kotiseudun, ja Rojas muutti Caracasiin; ensimmäiset huomatut työt olivat maalauksia raunioista. Hän sai 1883 hopeamitalin samassa näyttelyssä kuin Michelena ja apurahan viisikymmentä pesoa kuukaudessa Pariisiin. Louvren toistuvat käynnit veivät tyylin jälkiromantiikasta impressionismiin. Rojas kuoli 32-vuotiaana.
+AIEMPI KYSYMYS: Miksi Monet maalasi saman julkisivun monta kertaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on yksi taidehistorian tunnetuimpia sarjoja. [[Claude Monet]] maalasi Rouenin tuomiokirkon julkisivusta kokonaisen sarjan, kolmisenkymmentä työtä, ja sarja kuuluu [[impressionismiin]]. Kohteena oli sama kivinen julkisivu, mutta Monetia kiinnosti valo: sama rakennus näyttää aamulla, keskipäivällä ja illalla, pilvisellä tai aurinkoisella säällä erilaiselta. Julkisivu oli hänelle oikeastaan tekosyy tutkia valon ja värin vaihtelua. Näin maalaus tallentaa hetken, ei rakennusta. Minä olen nähnyt saman julkisivun kymmenen kertaa ja huomannut, että se näyttää samalta. Mut minä olenkin kyyhky.
+KYSYMYS: Kerro lisää: impressionismiin
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+AIEMPI KYSYMYS: Mitä liekkigotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on hyvä rakennustermi. [[Liekkigotiikka]] on myöhäisgotiikan tyyli, jossa ikkunoiden kuviointi, niin sanottu [[ikkunapuitteet]], tehdään aaltoilevista ja liekkimäisistä kaarista. Nimi tulee siitä, että kuviot muistuttavat liekkejä. Tyyli levisi Ranskassa 1300-luvun lopulta alkaen, ja se on kaikkein koristeellisin vaihe gotiikassa. Rouenin tuomiokirkossa se on yksi niistä tyyleistä, joita rakennuksessa näkyy. Eli rakennus ei yritä olla yhtä tyyliä, ja siinä on osa sen viehätystä. Liekkejä, joita ei tarvitse sammuttaa, ovat minun lempiliekkini.
+KYSYMYS: Kerro lisää: Liekkigotiikka
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kaupunkilehti / Kuvataide: Ikkuna joka muistaa kalastajat] Nykyinen Christ Church -katedraali rakennettiin 1975–1976 edellisen rakennuksen paikalle sen jälkeen, kun hirmumyrsky Tracy oli tuhonnut sen. Vanhasta kirkosta jäi pystyyn vain kuisti, jonka Australian laivasto oli rakentanut 1944; se säilytettiin osana uutta kahdeksankulmaista rakennusta, ja takaseinä muurattiin vanhan kirkon kivistä. Darwinilaistaiteilija George Chaloupka suunnitteli sisälle Cyclone Tracy Memorial Window -lasi-ikkunan, jonka värit ja mustat kaartuvat viivat esittävät kalaverkkoja ja myrskyn nostattamia aaltoja. Ikkuna on omistettu Tracyssä menehtyneille kalastajille.
+- [Krakova — kaupunkilehti / Uskonto: Ikkuna, josta paavi jutteli nuorille] Kesäkuussa 1979, ensimmäisellä paavinvierailullaan kotimaahansa, Johannes Paavali II kiipesi yöllä entisen kotinsa, arkkipiispan palatsin, ikkunalaudalle puhumaan alla laulaville nuorille — kardinaali piti häntä kiinni, ettei hän putoaisi. "Kun asuin täällä Krakovassa, olin melko kunnollinen ihminen. En koskaan kiivennyt ikkunoihin", paavi vitsaili yleisölle. Tapahtumasta tuli perinne, jota toistettiin jokaisella hänen vierailullaan kuolemaansa 2005 asti, ja ikkuna vetää yhä pyhiinvaeltajia.
+- [Chicago — kaupunkilehti / Arkkitehtuuri: Ikkuna joka kantoi Chicagon nimeä] Chicago School -arkkitehdit, muun muassa Louis Sullivan, Daniel Burnham ja John Root, pukivat rungon terrakotalaattoihin ja suuriin lasiruutuihin, jotka toivat valoa entistä syvemmälle konttoreihin. Näin syntyi Chicago-ikkuna: kolmiosainen ikkuna, jossa kiinteä keskiruutu ja kaksi avattavaa sivuruutua muodostavat julkisivuun toistuvan ruudukon. Burnhamin ja Rootin Rookery Building valmistui 1888 ja on Chicagon vanhin pystyssä oleva korkea talo: kantavat ulkoseinät ja teräsrunko sisällä.
+AIEMPI KYSYMYS: Mitä liekkigotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on hyvä rakennustermi. [[Liekkigotiikka]] on myöhäisgotiikan tyyli, jossa ikkunoiden kuviointi, niin sanottu [[ikkunapuitteet]], tehdään aaltoilevista ja liekkimäisistä kaarista. Nimi tulee siitä, että kuviot muistuttavat liekkejä. Tyyli levisi Ranskassa 1300-luvun lopulta alkaen, ja se on kaikkein koristeellisin vaihe gotiikassa. Rouenin tuomiokirkossa se on yksi niistä tyyleistä, joita rakennuksessa näkyy. Eli rakennus ei yritä olla yhtä tyyliä, ja siinä on osa sen viehätystä. Liekkejä, joita ei tarvitse sammuttaa, ovat minun lempiliekkini.
+KYSYMYS: Kerro lisää: ikkunapuitteet
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mitä tarkoittaa, että kirkko on arkkipiispan istuinkirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana kertoo enemmän kuin luulisi. Istuinkirkko eli [[tuomiokirkko]] on kirkko, jossa hiippakunnan johtajan istuin sijaitsee, ja latinassa istuinta kutsutaan nimellä [[cathedra]]. [[Arkkipiispa]] johtaa suurempaa kirkollista aluetta, joka käsittää yleensä useita hiippakuntia. Rouenin tuomiokirkko on [[Normandian]] arkkipiispan kirkko, joten se on alueen kirkollinen keskus. Istuinkirkko on usein alueen suurin ja komein kirkko, koska se kuvastaa koko hiippakunnan arvoa. Tämän verran minä sain päähäni mahtumaan, vaikka pöllö on edelleen kuulemma matkoilla.
+KYSYMYS: Kerro lisää: tuomiokirkko
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että kirkko on arkkipiispan istuinkirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana kertoo enemmän kuin luulisi. Istuinkirkko eli [[tuomiokirkko]] on kirkko, jossa hiippakunnan johtajan istuin sijaitsee, ja latinassa istuinta kutsutaan nimellä [[cathedra]]. [[Arkkipiispa]] johtaa suurempaa kirkollista aluetta, joka käsittää yleensä useita hiippakuntia. Rouenin tuomiokirkko on [[Normandian]] arkkipiispan kirkko, joten se on alueen kirkollinen keskus. Istuinkirkko on usein alueen suurin ja komein kirkko, koska se kuvastaa koko hiippakunnan arvoa. Tämän verran minä sain päähäni mahtumaan, vaikka pöllö on edelleen kuulemma matkoilla.
+KYSYMYS: Kerro lisää: cathedra
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rouenin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kaupunkilehti / Uskonto: Arkkipiispa, josta tuli paavi] Wojtyła syntyi Wadowicessa, viisikymmentä kilometriä Krakovasta, ja toimi Krakovan arkkipiispana neljätoista vuotta ennen paaviksi valintaansa. Hänet muistetaan Wawelin katedraalin patsaassa juuri tässä roolissa, ennen kuin maailma tunsi hänet Johannes Paavali II:na. Patsas on yksi lukuisista Krakovassa, jotka kertovat kaupungin ylpeydestä omasta paavistaan.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että kirkko on arkkipiispan istuinkirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana kertoo enemmän kuin luulisi. Istuinkirkko eli [[tuomiokirkko]] on kirkko, jossa hiippakunnan johtajan istuin sijaitsee, ja latinassa istuinta kutsutaan nimellä [[cathedra]]. [[Arkkipiispa]] johtaa suurempaa kirkollista aluetta, joka käsittää yleensä useita hiippakuntia. Rouenin tuomiokirkko on [[Normandian]] arkkipiispan kirkko, joten se on alueen kirkollinen keskus. Istuinkirkko on usein alueen suurin ja komein kirkko, koska se kuvastaa koko hiippakunnan arvoa. Tämän verran minä sain päähäni mahtumaan, vaikka pöllö on edelleen kuulemma matkoilla.
+KYSYMYS: Kerro lisää: Arkkipiispa
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+AIEMPI KYSYMYS: Kuka kiipesi näitä portaita polvillaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tästä saa kertoa lämmöllä. [[Rocamadourin]] pyhäkössä on käynyt vuosisatojen ajan sekä tavallisia [[pyhiinvaeltajia]] että kuninkaita, piispoja ja aatelisia, ja kävijöitä on ollut 1100-luvun taitteesta alkaen. Monumentaalista portaikkoa pyhäköille noustiin polvillaan, mikä oli hartauden ja katumuksen ilmaus. Kävijät tulivat [[Neitsyt Marian]] pyhäkön vuoksi, ja kylä on rakennettu kallioseinämään 150 metriä [[Alzoun]] laakson yläpuolelle. Minun polveni eivät edes taivu sillä tavalla.
+KYSYMYS: Kerro lisää: Rocamadourin
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat: Minareetti joka kutsui pyhiinvaeltajia] Kun pohjoisempana sijainnut pyhiinvaellussatama Aydhab hylättiin 1400-luvulla, Suakinista tuli tärkein lähtösatama muslimeille, jotka matkasivat Länsi- ja Keski-Afrikasta laivalla Punaisenmeren yli Mekkaan. Shafi'in moskeijan minareetista kuulutettiin rukoukset päivittäin, ja se opasti saapuvat pyhiinvaeltajat kaupungin sydämeen ennen laivaan nousua. Osa pyhiinvaeltajista jäi kaupunkiin viikoiksi tai kuukausiksi odottamaan suotuisia tuulia tai vapaata laivapaikkaa, mikä piti Suakinin majatalot ja torit jatkuvasti täynnä matkalaisia.
+AIEMPI KYSYMYS: Kuka kiipesi näitä portaita polvillaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tästä saa kertoa lämmöllä. [[Rocamadourin]] pyhäkössä on käynyt vuosisatojen ajan sekä tavallisia [[pyhiinvaeltajia]] että kuninkaita, piispoja ja aatelisia, ja kävijöitä on ollut 1100-luvun taitteesta alkaen. Monumentaalista portaikkoa pyhäköille noustiin polvillaan, mikä oli hartauden ja katumuksen ilmaus. Kävijät tulivat [[Neitsyt Marian]] pyhäkön vuoksi, ja kylä on rakennettu kallioseinämään 150 metriä [[Alzoun]] laakson yläpuolelle. Minun polveni eivät edes taivu sillä tavalla.
+KYSYMYS: Kerro lisää: pyhiinvaeltajia
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rocamadour (historia)
+Tietoruudun teksti: Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai AOC-suojauksen vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Kuka kiipesi näitä portaita polvillaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tästä saa kertoa lämmöllä. [[Rocamadourin]] pyhäkössä on käynyt vuosisatojen ajan sekä tavallisia [[pyhiinvaeltajia]] että kuninkaita, piispoja ja aatelisia, ja kävijöitä on ollut 1100-luvun taitteesta alkaen. Monumentaalista portaikkoa pyhäköille noustiin polvillaan, mikä oli hartauden ja katumuksen ilmaus. Kävijät tulivat [[Neitsyt Marian]] pyhäkön vuoksi, ja kylä on rakennettu kallioseinämään 150 metriä [[Alzoun]] laakson yläpuolelle. Minun polveni eivät edes taivu sillä tavalla.
+KYSYMYS: Kerro lisää: Neitsyt Marian

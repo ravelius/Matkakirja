@@ -1,0 +1,445 @@
+### v2-89
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: tarator-keitossa
+VASTAUS: Tarator on kylmä bulgarialainen keitto, joka valmistetaan [[jogurtista]], kurkusta, valkosipulista, tillistä ja vedestä. Usein mukaan lisätään myös rouhittuja [[saksanpähkinöitä]] ja ripaus öljyä. Kurkku pilkotaan tai raastetaan, ja valkosipuli murskataan, minkä jälkeen ainekset sekoitetaan jääkylmään jogurttivesiseokseen. Keittoa tarjotaan kesähelteillä, ja sen kanssa nautitaan joskus Balkanin vahvaa hedelmätisleä [[rakijaa]]. Samankaltaisia kylmiä jogurttiruokia tunnetaan muuallakin Balkanilla ja Turkissa, mutta Bulgariassa tarator on erityisen tunnettu.
+
+### v2-90
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Rilan luostari
+VASTAUS: Rilan luostari on Bulgarian suurin ja tunnetuin ortodoksiluostari, ja se sijaitsee Rilan vuoristossa Sofiasta etelään. Se perustettiin 900-luvulla erakko Iivan Rilskin ympärille muodostuneen yhteisön pohjalta. Luostarin vanhin säilynyt rakennus on 1300-luvulta peräisin oleva [[Hreljan torni]], mutta nykyinen laaja kompleksi rakennettiin pääosin 1800-luvulla tulipalon jälkeen. Julkisivua koristavat raidoitetut kaaret ja ulkogalleriat, ja kirkon seinät on peitetty freskoilla. Osmanien vallan aikana luostari säilytti bulgarian kieltä ja kirjallisuutta, ja siksi sillä on tärkeä asema [[kansallisen heräämisen]] kuvissa. Luostari on Unescon maailmanperintökohde ja suosittu pyhiinvaellus- ja retkikohde.
+
+### v2-91
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Iivan Rilskiin
+VASTAUS: Iivan Rilski oli 900-luvulla elänyt erakko, jota pidetään Bulgarian suojeluspyhimyksenä. Hän vetäytyi Rilan vuoristoon, asui luolassa ja eli askeettista elämää, ja hänen luokseen alkoi kerääntyä opetuslapsia. Näistä muodostui yhteisö, josta kehittyi [[Rilan luostari]]. Tsaari [[Pietari I]] kunnioitti erakkoa perimätiedon mukaan, ja Iivanin kerrotaan parantaneen sairaita. Hänen pyhäinjäännöksensä on siirretty vuosisatojen kuluessa eri paikkoihin, muun muassa [[Veliko Tarnovoon]], ennen kuin ne palasivat Rilan luostariin; tarkkoja vuosilukuja en ole varma. Pyhimyksen muistopäivää vietetään lokakuussa.
+
+### v2-92
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Pohjois-Makedoniassa
+VASTAUS: Pohjois-Makedonia on Balkanin sisämaavaltio Bulgarian länsipuolella, ja se itsenäistyi Jugoslaviasta vuonna 1991. Pääkaupunki on [[Skopje]] Vardar-joen varrella. Maan lounaisosassa on [[Ohridin järvi]], joka on yksi Euroopan vanhimmista ja syvimmistä järvistä ja jonka pohjassa elää lajeja, joita ei tavata muualla. Järvi ja Ohridin vanhakaupunki liitettiin Unescon maailmanperintöluetteloon vuonna 1979. Historiasta tunnetaan myös [[Kruševon tasavalta]], jonka makedonialaiskapinalliset julistivat elokuussa 1903 Osmanien vallan alla ja joka kesti noin kymmenen päivää. Ruokakulttuurissa tunnettu on [[ajvar]], paahdetuista paprikoista tehty tahna, jota valmistetaan syksyisin talvivarastoksi.
+
+### v2-93
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Romaniassa
+VASTAUS: Romania on Kaakkois-Euroopan maa, jonka eteläistä rajaa Bulgarian kanssa kulkee Tonava. Maan halki kaartuu [[Karpaattien]] vuorijono, ja pääkaupunki on [[Bukarest]]. Ruokakulttuurissa tunnettu on [[mämäligä]], maissijauhosta keitetty puuro. Maissi levisi Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset maininnat maissipuurosta ovat Transilvaniasta ja Valakiasta 1700-luvun alusta. Mämäligä keitetään paksuksi ja käännetään lautaselle, ja sitä syödään juuston ja smetanan kanssa. Toinen tunnettu ruoka on [[sarmale]], hapankaalin lehtiin käärityt jauheliha-riisikääryleet, jotka tulivat alueelle Osmanien valtakunnan mukana.
+
+### v2-94
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Moldovassa
+VASTAUS: Moldova on Itä-Euroopan sisämaavaltio Romanian ja Ukrainan välissä, ja pääkaupunki on [[Chișinău]]. Maan tunnetuin ala on viininviljely: viinitarhoja on nykyään noin 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita. Neuvostoaikana ala kasvoi nopeasti, ja vuoteen 1960 mennessä se oli noin 220 000 hehtaaria. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa [[Valul lui Traian]], kaakossa Ștefan Vodă ja keskiosassa [[Codru]]. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin. Arkiruokaa on [[mămăligă]], maissipuuro, josta viipaleet leikataan langalla.
+
+### v2-95
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Nessebar
+VASTAUS: Nessebar on Bulgarian Mustanmeren rannikon kaupunki, jonka vanhakaupunki sijaitsee pienellä niemellä kapean kannaksen päässä. Antiikissa paikka tunnettiin nimellä [[Mesembria]]: ensin siellä oli traakialaisten asutus, ja myöhemmin kreikkalaiset perustivat sinne siirtokunnan, mutta tarkkaa ajankohtaa en ole varma. Keskiajalla kaupunki vaihtoi omistajaa [[Bysantin]] ja Bulgarian välillä. Vanhassakaupungissa on useita keskiaikaisia kirkkoja, kuten [[Kristus Pantokratorin kirkko]], jonka julkisivua koristavat kerroksittain kivi ja tiili sekä kaarilista. Vanhakaupunki on Unescon maailmanperintökohde, ja puiset kaksikerroksiset talot reunustavat kapeita katuja.
+
+### v2-96
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: Mustanmeren
+VASTAUS: Musta meri on sisämeri Euroopan ja Vähän-Aasian välissä, ja sitä ympäröivät Bulgaria, Romania, Ukraina, Venäjä, Georgia ja Turkki. Se yhtyy [[Välimeren]] kanssa [[Bosporin]] salmen, Marmaranmeren ja Dardanellien kautta. Syvimmillään meri on noin 2 200 metriä syvä. Veden suolapitoisuus on Välimerta alhaisempi, koska siihen laskevat suuret joet, kuten [[Tonava]]. Noin sadan–kahdensadan metrin alapuolella vedessä ei ole happea, ja siellä on rikkivetyä, minkä vuoksi syvänteissä ei elä tavallista merielämää. Bulgarian rannikolla tärkeitä satamia ovat Varna ja Burgas.
+
+### v2-97
+KOHDE: maa:BGR
+KYSYMYS: Kerro lisää: traakialaisten
+VASTAUS: Traakialaiset olivat muinainen indoeurooppalainen kansa, jonka asuinalueisiin kuului nykyisen Bulgarian maita sekä osia Kreikasta, Turkista ja Romaniasta. Heillä ei ollut yhtenäistä valtiota vaan useita heimoja ja ruhtinaskuntia. Heistä tunnetaan erityisesti kultaiset koru- ja astialöydöt sekä kummuihin rakennetut haudat. Koillis-Bulgariassa [[Sveshtarin]] lähellä avattiin vuonna 1982 traakialaisten kuningashauta 300-luvulta eaa.; sen kammiota kannattaa kymmenen naishahmoista veistettyä pylvästä, ja hauta liitettiin Unescon luetteloon vuonna 1985. Toinen tunnettu hauta on [[Kazanlăkin]] lähellä. Antiikin kreikkalaiset sijoittivat [[Orfeuksen]] myytin Traakiaan.
+
+### v2-98
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Aleksandr Nevskin katedraali
+VASTAUS: Aleksandr Nevskin katedraali on Sofian keskustaa hallitseva uusbysanttilainen kirkko, joka rakennettiin vuosina 1882–1912 ja vihittiin käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 sodassa, joka päätti lähes viisisataa vuotta kestäneen [[osmanivallan]] ja teki Bulgariasta jälleen itsenäisen. Suunnittelija oli venäläinen arkkitehti [[Aleksandr Pomerantsev]], ja kirkko mahtuu kymmeneentuhanteen ihmiseen. Kultaiset kupolit näkyvät Sofian ylle kauas, ja sisätiloja koristavat marmori, mosaiikit ja maalaukset. Kirkon nimi viittaa 1200-luvun venäläiseen ruhtinaaseen, jota ortodoksinen kirkko kunnioittaa pyhimyksenä, ja kirkon tyyliä kutsutaan [[uusbysanttilaiseksi]].
+
+### v2-99
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Venäjän ja Ottomaanien sodassa
+VASTAUS: Venäjän ja Osmanien valtakunnan sota käytiin vuosina 1877–1878. Venäjän puolella taistelivat muun muassa Romania ja bulgarialaiset vapaaehtoiset. Sodan tunnettuja käänteitä olivat taistelut [[Šipkan]] solassa ja [[Plevenin]] piiritys. Maaliskuussa 1878 solmitussa San Stefanon rauhassa syntyi laaja Bulgaria, mutta kesällä 1878 [[Berliinin kongressi]] pienensi sitä: pohjoiseen jäi Osmanien yliherruuden alainen ruhtinaskunta ja etelään autonominen [[Itä-Rumelia]]. Sofia valittiin ruhtinaskunnan pääkaupungiksi vuonna 1879. Sota päätti lähes viisisataa vuotta kestäneen osmanivallan Bulgarian pohjoisosassa, ja sitä muistetaan maassa vapautuksen sotana.
+
+### v2-100
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Balkanin
+VASTAUS: Balkan on Kaakkois-Euroopan niemimaa, jonka rajaavat Adrianmeri, Joonianmeri, Egeanmeri ja Musta meri. Nimi tulee Bulgarian halki kulkevista [[Balkanvuorten]] harjanteista, ja turkin kielessä sana tarkoittaa vuoristoa. Niemimaan korkein huippu on Rilan vuoristossa sijaitseva [[Musala]], joka nousee 2 925 metriin. Länsipuolella maasto on pääosin [[Dinaarien Alppien]] poimuvuoria, ja niemimaan halki virtaa muun muassa Tonava sen pohjoisrajalla. Niemimaan valtioiden joukossa on muun muassa Bulgaria, Serbia, Kreikka, Albania ja Bosnia ja Hertsegovina, mutta alueen tarkka rajaus vaihtelee lähteen mukaan.
+
+### v2-101
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Vitosha
+VASTAUS: Vitosha on Sofian eteläpuolella kohoava vuoristo, jonka rinteet alkavat heti kaupungin laidalta. Se syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa. Korkein huippu Cherni Vrah kohoaa noin 2 290 metriin. Rinteillä mutkittelee [[kivijokia]]: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka ovat vanhojen jäätiköiden jäänteitä ja valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Elokuussa 1895 kolmesataa sofialaista nousi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku. Vuoren luonnonpuisto perustettiin vuonna 1934, ja se oli Balkanin ensimmäinen laatuaan. Vuorelle pääsee bussilla ja hissillä keskustasta, ja vuori on lähin retkeily-, kiipeily- ja hiihtokohde. Kaupungin kupeessa sijaitsee myös [[Boyanan kirkko]].
+
+### v2-102
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Cherni Vrăh
+VASTAUS: Cherni Vrah tarkoittaa bulgariaksi mustaa huippua. Se on Vitosha-vuoren korkein kohta ja kohoaa noin 2 290 metriin, vaikka lähteet ilmoittavat korkeudeksi myös 2 292 metriä. Huippu kohoaa Sofian eteläpuolella ja on yksi kaupungin tunnetuimmista maamerkeistä. Vuori kuuluu [[Vitoshan luonnonpuistoon]], joka perustettiin vuonna 1934 ja oli Balkanin ensimmäinen laatuaan. Huipun ympärillä ylängöllä on laajoja niittyjä ja kivikkoja, ja rinteillä näkyy vanhojen jäätiköiden jättämiä [[kivijokia]]. Kesällä alueella vaelletaan ja talvella lasketellaan, ja huipulta aukeaa näkymä [[Sofian]] laaksoon.
+
+### v2-103
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Boyanan kirkko
+VASTAUS: Boyanan kirkko on Sofian laidalla Vitoshan juurella seisova pieni keskiaikainen kirkko, joka kuuluu Unescon maailmanperintökohteisiin vuodesta 1979. Se rakennettiin kolmessa vaiheessa noin 300 vuoden aikana. Kirkon kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori [[Kaloyanin]] ja hänen vaimonsa [[Desislavan]], muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina. Maalausten tyyliä kuvataan usein tavallista luonnollisemmaksi ja ilmeikkäämmäksi kuin muussa aikakauden kirkkotaiteessa. Kirkko on pieni, joten sinne päästetään yhtä aikaa vain rajattu määrä vierailijoita, mutta tarkkaa lukua en ole varma.
+
+### v2-104
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Serdican
+VASTAUS: Serdica oli Sofian paikalla sijainnut roomalainen kaupunki, jonka nimi juontuu traakialaisesta [[serdi-heimosta]]. Kaupunki syntyi kuumien lähteiden äärelle, ja keisari [[Konstantinus Suuren]] kerrotaan sanoneen, että Serdica on hänen Roomansa. Kaupungissa pidettiin 300-luvulla myös tärkeä kirkolliskokous, mutta tarkan vuoden tarkistaisin ennen kuin vannon sen. Vuonna 1919 Sofian keskustasta kaivautui esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Vasta vuonna 2004 hotellin perustuksia kaivettaessa löytyi itse [[Serdican areena]]: maasta nousivat portit liukuovineen, eläinten luita ja satoja pronssikolikoita. Katsomo oli mitoitettu yli kahdellekymmenelletuhannelle, ja kuudesosa areenasta liitettiin hotellin pohjakerrokseen, jonne pääsee päivisin maksutta.
+
+### v2-105
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Pyhän Yrjön rotunda
+VASTAUS: Pyhän Yrjön rotunda on Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla seisova pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin 300-luvun alussa alun perin roomalaisen [[Serdican]] kylpylän kupolikattoiseksi saliksi, kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin kerros on peräisin 900-luvulta, Bulgarian niin sanotulta [[kultakaudelta]]: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. Myöhemmin, 1500-luvulla, [[osmanit]] muuttivat rakennuksen moskeijaksi.
+
+### v2-106
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Rooman valtakunnassa
+VASTAUS: Rooman valtakunta kasvoi Italian niemimaalta Välimeren ympäri ulottuvaksi suurvallaksi. Tasavalta muuttui keisarikunnaksi [[Augustuksen]] aikana vuonna 27 eaa., ja valtakunta oli laajimmillaan 100-luvun alussa [[Trajanuksen]] hallituskaudella. Se ulottui Britanniasta Mesopotamiaan, ja Balkanin niemimaa muodostui useaksi maakunnaksi, kuten Traakiaksi, jonka kaupunkeihin kuului Serdica. Rooma rakensi teitä, kaupunkeja, vesijohtoja ja kylpylöitä, ja kuumien lähteiden ympärille nousi usein kylpylöitä. Keisari Konstantinus Suuri vihki vuonna 330 uuden pääkaupungin [[Konstantinopolin]], ja valtakunta jaettiin lopullisesti läntiseen ja itäiseen puoliskoon vuonna 395. Läntinen puolisko romahti 400-luvulla, kun taas itäinen jatkui [[Bysanttina]] aina vuoteen 1453.
+
+### v2-107
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Banitsa
+VASTAUS: Banitsa on bulgarialainen suolainen leivonnainen, jonka kerrokset muodostuvat ohuesta [[filotaikinasta]]. Kerrosten väliin levitetään munaa, jogurttia ja suolaista valkoista [[sirene]]-juustoa. Arkena banitsa on aamiaispala, mutta [[uudenvuoden aaton]] ruokapöydässä siitä tulee ennustuskone: taikinaan kääritään pieniä paperilappuja tai esineitä, joista jokainen lupaa jotain, kuten terveyttä, rakkautta, rahaa tai matkan. Piirakka leikataan niin, että jokainen ruokailija saa oman palansa, ja se, jonka viipaleesta löytyy lappu, kantaa lupausta koko tulevan vuoden. Perinne ulottuu bulgarialaisessa ruokakulttuurissa vuosisatojen taakse ja liittyy myös jouluun ja pääsiäiseen. Täytteenä voi olla myös pinaattia tai kurpitsaa.
+
+### v2-108
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: ayranin
+VASTAUS: Ayran on kylmä, suolattu jogurttijuoma, joka valmistetaan sekoittamalla jogurttia, vettä ja suolaa. Juoma on tuttu [[Turkissa]] ja Balkanilla, ja Bulgariassa vastaavaa juomaa kutsutaan airaniksi. Se on raikas ja hieman suolainen, ja sen pinnalle muodostuu usein kevyt vaahto. Ayrania tarjoillaan etenkin lämpimällä säällä ja runsaiden ruokien, kuten grillatun lihan ja [[banitsan]], kanssa. Nimen arvellaan olevan turkkilaista alkuperää, mutta tarkasta sanahistoriasta en ole varma.
+
+### v2-109
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Uudenvuodenaattona
+VASTAUS: Bulgariassa uudenvuoden aatto kuuluu perheen yhteiseen ruokapöytään, jonka keskipisteenä on banitsa. Piirakkaan kääritään pieniä paperilappuja tai esineitä, jotka lupaavat esimerkiksi terveyttä, rakkautta, rahaa tai matkan, ja piirakka leikataan niin, että jokainen saa oman palansa. Se, jonka viipaleesta löytyy lappu, kantaa lupausta koko tulevan vuoden. Perinne liittyy myös jouluun ja pääsiäiseen. Uudenvuodenpäivänä lapset kiertävät kodeissa ja toivottavat hyvää vuotta koristelluilla kepeillä, mitä kutsutaan [[survakaneksi]]; yksityiskohdissa on alueellisia eroja, ja tarkkoja tapoja en ole varma. Aterian leivonnaiset ja suolaiset ruoat valmistetaan usein [[Banitsan]] ympärille.
+
+### v2-110
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Banya Bashi -moskeija
+VASTAUS: Banja Bashi -moskeija valmistui vuonna 1566, ja se seisoo Sofian keskustassa kuumien lähteiden päällä. Nimi viittaa kylpyyn, sillä sana banja tarkoittaa kylpyä. Moskeija sijaitsee samassa korttelissa kuin synagoga ja kaksi kirkkoa, [[Pyhän Nedeljan kirkko]] ja katolinen katedraali. Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle jäi Banja Bashi, Sofian ainoa yhä toimiva moskeija. Rakennuksen suunnittelijaksi mainitaan usein [[Sinan]], mutta tämä on epävarmaa.
+
+### v2-111
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: Kaakkois-Euroopan
+VASTAUS: Kaakkois-Eurooppa on Euroopan kaakkoisosa, johon kuuluvat Balkanin niemimaan valtiot ja usein myös Romania. Alue on ollut vuosisatojen ajan [[Rooman]], [[Bysantin]] ja [[Osmanien valtakunnan]] rajamaata, ja sen ihmiset puhuvat monia kieliä ja kuuluvat moniin uskontoihin. Sofiassa tämä näkyy selvästi: kaupungin synagoga avattiin vuonna 1909, ja sitä pidetään Kaakkois-Euroopan suurimpana. Sofian eläintarha perustettiin ruhtinas Ferdinandin asetuksella vuonna 1888, jolloin Bulgaria oli vielä ruhtinaskunta. Pohjoisessa alueen rajaa kulkee [[Tonava]].
+
+### v2-112
+KOHDE: kaupunki:sofia
+KYSYMYS: Kerro lisää: suvaitsevaisuuden kolmio
+VASTAUS: Sofian keskustassa neljä eri uskonnon rakennusta seisoo muutaman sadan metrin päässä toisistaan, minkä vuoksi aluetta kutsutaan usein suvaitsevaisuuden neliöksi. Rakennukset ovat ortodoksinen [[Pyhän Nedeljan kirkko]], vuodelta 1566 peräisin oleva [[Banja Bashin moskeija]], [[Sofian synagoga]] ja katolinen [[Pyhän Joosefin katedraali]]. Synagoga avattiin vuonna 1909, ja se on Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia, mikä on enemmän kuin henkilöauto. Alue on kävelymatkan päässä toisistaan, joten kaikki rakennukset voi nähdä yhdellä kävelyllä.
+
+### v2-113
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Stari Most
+VASTAUS: Stari Most eli Vanha silta on Mostarin kaarevaksi kivisillaksi rakennettu silta Neretva-joen yllä. Silta rakennettiin 1500-luvulla ja valmistui vuonna 1566, ja sen suunnittelijaksi mainitaan [[Hajrudin]]. Yhden jyrkän kaaren jänneväli ylittää joen noin parinkymmenen metrin korkeudella, ja sillan päissä on puolustustorneja. Nuoret miehet ovat perinteisesti hypänneet sillalta jokeen, ja nykyisin hyppäämisestä järjestetään kilpailu. Silta tuhoutui vuonna 1993 sodan aikana, ja se rakennettiin uudelleen alkuperäisiä menetelmiä käyttäen sekä osin alkuperäisistä kivistä, ja uusi silta avattiin vuonna 2004. Silta ja ympäröivä [[Mostarin Vanhakaupunki]] kuuluvat Unescon maailmanperintöön. Tarkkoja mittoja en ole varma.
+
+### v2-114
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Neretva-joen
+VASTAUS: Neretva on Bosnia ja Hertsegovinan tunnetuin joki, ja sen pituus on noin 230 kilometriä. Joki saa alkunsa [[Dinaarien Alpeilta]] maan kaakkoisosasta ja virtaa vuorten laaksoissa luoteeseen ja sitten etelään kohti [[Mostarin]] kaupunkia. Vesi on kirkasta ja vihertävää, ja joen varrella sijaitsevat muun muassa Jablanican ja Konjicin kaupungit. Mostarin jälkeen joki jatkaa Kroatian puolelle, ja se laskee [[Adrianmereen]] laajana suistona. Maa koskettaa merta vain pienestä kohdasta, joten Neretvan laakso on tärkeä yhteys kohti Adriaa.
+
+### v2-115
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Bosnian sodan
+VASTAUS: Bosnian sota käytiin vuosina 1992–1995 Jugoslavian hajoamisen yhteydessä. Bosnia ja Hertsegovina julistautui itsenäiseksi maaliskuussa 1992 kansanäänestyksen jälkeen, ja sota kävi hallituksen joukkojen sekä bosnianserbien ja bosniankroaattien joukkojen välillä. Konfliktiin liittyi myös kansainvälinen rauhanturvaaminen. Sarajevoa [[piiritettiin]] lähes neljä vuotta, ja kaupunki kärsi pahoin. Sodan arvioidaan vaatineen noin sata tuhatta ihmishenkeä ja ajaneen miljoonia kodeistaan, mutta tarkat luvut vaihtelevat lähteiden mukaan. Sota päättyi vuonna 1995 allekirjoitettuun rauhansopimukseen, joka jakoi maan kahteen osaan: [[Bosnian ja Hertsegovinan federaatioon]] ja [[Serbitasavaltaan]]. Siitä on nyt noin kolmekymmentä vuotta, ja valtio toimii yhä sopimuksen luomassa rakenteessa.
+
+### v2-116
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: džezvassa
+VASTAUS: Džezva on pienehkö, pitkävartinen kuparikannu, jossa bosnialainen kahvi keitetään. Vesi kuumennetaan, ja hienoksi jauhettu kahvi sekoitetaan siihen, minkä jälkeen kahvi nostetaan tulelta ja keitetään uudelleen, kunnes pinnalle muodostuu vaahto. Valmis kahvi kaadetaan pieneen korvattomaan [[fildžan]]-kuppiin. Tarjottimella tulee aina vesilasi ja pala [[rahat-lokumia]], ja sokeripala kastetaan kahviin ennen kuin se pannaan suuhun. Kahvia ei juoda janoon vaan seuraksi: tapaamisen pituus mitataan kupillisina. Sarajevon Baščaršijan basaarin kujilla [[kuparisepät]] takovat džezvoja yhä käsin, ja basaari on 1400-luvulta.
+
+### v2-117
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: lokumin
+VASTAUS: Lokum eli rahat-lokum on pehmeä, hyytelömäinen makeinen, jota valmistetaan sokerista ja tärkkelyksestä. Massa maustetaan esimerkiksi ruusuvedellä tai sitruunalla, ja siihen lisätään usein pähkinöitä. Valmis makeinen leikataan kuutioiksi ja pyöritetään tomusokerissa. Se levisi [[Osmanien valtakunnan]] mukana [[Balkanille]], ja sitä myydään [[Istanbulissa]] sekä Bosnian kauppakujilla. Bosnialaisessa kahvihetkessä pieni pala lokumia kuuluu kahvin kanssa tarjottimelle vesilasin ja sokeripalan rinnalle. Englanniksi makeinen tunnetaan nimellä Turkish delight. Sen alkuperän tarkka vuosi vaihtelee lähteittäin, joten sitä en mainitse.
+
+### v2-118
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Baščaršijassa
+VASTAUS: Baščaršija on Sarajevon vanha kauppatori, joka syntyi vuonna 1462, kun [[Isa-bey Ishaković]] perusti alueelle majatalon ja ensimmäiset kaupat. Vuosisatojen varrella torista kasvoi valtava käsityöläisten ja kauppiaiden kylä keskellä kaupunkia, ja parhaimmillaan siellä oli jopa noin 12 000 pientä puotia ja verstasta. Jokaisella kadulla tehtiin omaa käsityötä: yhdellä lyötiin kuparia, toisella ommeltiin satuloita, kolmannella valmistettiin kenkiä. Baščaršijalla seisovat myös Sarajevon kuuluisa [[kellotorni]], moskeijoita, vanha ortodoksikirkko ja kaksi vanhaa [[synagogaa]], sillä tori oli monen uskonnon ja kansan yhteinen kauppapaikka. Baščaršija on kokenut paljon, muun muassa maanjäristyksen 1640-luvulla ja tulipaloja.
+
+### v2-119
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Perućica
+VASTAUS: Perućica on Sutjeskan kansallispuiston ydinalueella Bosnia ja Hertsegovinan kaakkoiskulmassa, ja sitä pidetään yhtenä Euroopan viimeisistä aarniometsistä. Kaakon vuoriin ei ole koskaan menty kirveen kanssa, ja metsä on säilynyt lähes koskemattomana. Puusto on tyypillistä Dinaarien vuorille: siellä kasvaa muun muassa [[pyökkejä]], kuusia ja jalokuusia, ja joukossa on hyvin korkeita ja vanhoja yksilöitä. Lähellä kohoaa [[Maglić]], maan korkein kohta 2 386 metrissä. Alue kuuluu [[Sutjeskan kansallispuistoon]], jossa elää muun muassa karhuja ja susia. Puiden tarkkaa ikää en mainitse, koska arviot vaihtelevat.
+
+### v2-120
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Sutjeskan kansallispuistossa
+VASTAUS: Sutjeskan kansallispuisto sijaitsee Bosnia ja Hertsegovinan kaakkoisosassa lähellä Montenegron rajaa, ja sitä pidetään maan vanhimpana kansallispuistona, vaikka perustamisvuodesta en ole aivan varma. Puiston halki virtaa Sutjeska-joki, ja sen alueella ovat [[Perućican]] aarniometsä sekä [[Zelengora]]-vuoristo. Puiston reunalla kohoaa [[Maglić]], maan korkein kohta 2 386 metrissä. Kaakon vuoriin ei ole koskaan menty kirveen kanssa, joten alue kuuluu Euroopan harvinaisimpiin koskemattomiin luontokohteisiin. Metsissä elää muun muassa karhuja ja susia, ja jyrkkien rinteiden välissä virtaava joki on kaivertanut syviä laaksoja.
+
+### v2-121
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Maglić
+VASTAUS: Maglić on Bosnia ja Hertsegovinan korkein vuori, ja se kohoaa 2 386 metriin maan kaakkoiskulmassa [[Montenegron]] rajalla. Vuori kuuluu [[Dinaarien Alppien]] vuoristoon ja sijaitsee Sutjeskan kansallispuiston alueella. Sen juurella ja rinteillä on [[Perućican]] aarniometsä, jota ei ole raivattu. Huipun rinteet ovat jyrkkiä ja kivisiä, ja retkeily vuorelle sopii kesäisin kokeneille kulkijoille. Täsmällisiä reittitietoja en ole varma, joten niitä kannattaa tiedustella paikallisilta oppailta.
+
+### v2-122
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Venetsian
+VASTAUS: Venetsia oli keskiajalta aina vuoteen 1797 asti itsenäinen merikauppatasavalta, joka tunnetaan nimellä [[Venetsian tasavalta]]. Se rakentui Adrianmeren pohjukan laguunin saarille ja kasvoi kauppavallaksi, jonka laivat kuljettivat tavaraa Välimeren ympäri. Tasavalta hallitsi pitkään suurta osaa Adrianmeren itärannikosta, muun muassa [[Dalmatian]] kaupunkeja. Naapurina sillä oli [[Dubrovnikin tasavalta]], joka säilytti omavaraisuutensa tasapainoilemalla Venetsian ja Osmanien valtakunnan välillä. Dubrovnik luovutti 1600-luvun lopulla Neumin alueen osmaneille, jotta sen alue ei jäisi suoraan Venetsian naapuriksi; sopimus liittyy [[Karlowitzin rauhaan]], jonka vuosi on 1699. Napoleon lopetti tasavallan vuonna 1797.
+
+### v2-123
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Kroatian
+VASTAUS: Kroatia on Keski- ja Kaakkois-Euroopan maa Adrianmeren rannalla, ja sen pääkaupunki on [[Zagreb]]. Maassa on kolme erilaista maisemaa: Pannonian tasanko pohjoisessa, Dinaarien vuoret sisämaassa ja pitkä, saarten reunustama [[Dalmatian]] rannikko. Neum katkaisee Kroatian rannikon kahtia, ja Pelješacin silta avattiin vuonna 2022. Zagrebin [[tuomiokirkko]] on lähteen mukaan Kroatian korkein sakraalirakennus: ensimmäinen katedraali vihittiin 1217, ja nykyiset uusgoottilaiset tornit rakennettiin vuosina 1889–1899 noin 105–108 metrin korkeuteen. Kaupungin Alakaupungissa sijaitsee puisto-aukio [[Zrinjevac]], joka kuuluu aukioiden ketjuun nimeltä Lenucin vihreä hevosenkenkä. Kroatia liittyi Euroopan unioniin vuonna 2013.
+
+### v2-124
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Stećakit
+VASTAUS: Stećakit ovat keskiaikaisia hautakiviä, jotka on veistetty kalkkikivestä ja pystytetty noin 1100-luvulta 1500-luvulle. Niitä on jäljellä kymmeniä tuhansia, ja valtaosa on Bosnia ja Hertsegovinassa. Kivet ovat usein suuria laatikkomaisia tai satulakattoisia lohkareita, ja ne seisovat ryhmissä niityillä ja metsänreunoilla. Koristeina on ristejä, kuun ja auringon kuvia, käsiä, metsästyskohtauksia ja ritarileikkejä. Tunnettu hautausmaa on [[Radimlja]] [[Stolacin]] lähellä Hertsegovinassa. Tutkijat ovat pitkään keskustelleet siitä, kuka kivet pystytti: aiemmin niitä liitettiin [[Bosnian kirkkoon]], mutta nykyään katsotaan, että hautakivet pystyttivät eri kristilliset yhteisöt. Osa stećakeista kuuluu Unescon maailmanperintöön vuodesta 2016.
+
+### v2-125
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Bosniassa ja Hertsegovinassa
+VASTAUS: Bosnia ja Hertsegovina on vuoristoinen maa Balkanin niemimaalla, ja se on kooltaan noin kuudesosa Suomesta. Väkeä on runsaat kolme miljoonaa. Keskiosan ja etelän täyttävät [[Dinaarien Alpit]], ja korkein kohta on Maglić 2 386 metrissä kaakkoiskulmassa. Pohjoisreunalla on Pannonian tasangon eteläkulma, jonka rajana kulkee [[Sava]]-joki. Etelässä Neretvan laakso johtaa Mostarin kautta kohti merta, ja maa koskettaa Adriaa vain pienestä kohdasta. Historian alkupuolella tunnetaan [[ban Kulin]], Bosnian ensimmäinen tunnettu hallitsija, joka teetti vuonna 1189 kauppasopimuksen Dubrovnikin kanssa. Kuningas [[Tvrtko I]] kruunattiin vuonna 1377, ja hänen aikanaan Bosnian kuningaskunta oli suurimmillaan.
+
+### v2-126
+KOHDE: maa:BIH
+KYSYMYS: Kerro lisää: Montenegrossa
+VASTAUS: Montenegro on Balkanin niemimaan lounaiskulmassa Adrianmeren rannalla sijaitseva pieni valtio. Sen nimi tarkoittaa mustaa vuorta, ja maa on vuoristoinen. Itsenäiseksi se tuli vuonna 2006 erottuaan Serbian kanssa jakamastaan valtioliitosta. Pääkaupunki on [[Podgorica]], mutta vanha kuninkaallinen pääkaupunki on [[Cetinje]]. Rannikon merkittävimpiä nähtävyyksiä on [[Kotorinlahti]], jota ympäröivät jyrkät vuoret, ja pohjoisessa kohoavat [[Durmitorin]] vuoret ja syvä Taran kanjoni. Montenegron alueella on myös stećak-hautakiviä, jotka kuuluvat samaan keskiaikaiseen perintöön kuin Bosnian kivet. Asukasmäärä on pienehkö, noin kuusisataa tuhatta, mutta tarkkaa lukua en ole varma.
+
+### v2-127
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Ćevapi
+VASTAUS: Ćevapi eli ćevapčići on Bosnian tunnetuin ruokalaji: pieniä, sormen mittaisia jauhelihapihvejä, jotka tehdään yleensä naudan- ja lampaanlihasta ja grillataan hiilellä. Ne tarjoillaan tuoreessa, pehmeässä somun-leivässä, ja annos tulee yleensä kymmenessä kappaleessa, mukana raakaa sipulia ja usein [[kajmakia]], paksua kermaista juustoa. Sarajevolainen versio on pieni ja niitä syödään monta, kun taas [[Banja Lukassa]] ćevapi ovat isompia ja niitä tarjoillaan harvempi ranskalaisten kera. Ruoan juuret ovat [[Ottomaanien]] ajan lihapullaperinteessä. Samanlaisia grilliruokia tunnetaan koko Balkanilla, mutta bosnialainen tapa tarjoilla ne leivässä on tunnistettava.
+
+### v2-128
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: somun-leivän
+VASTAUS: Somun on pehmeä, pyöreä ja hieman litteä leipä, joka on Sarajevon ruokakulttuurin perusta. Sana on peräisin turkin kielestä, jossa se tarkoittaa leipää. Somun on tuore ja ilmava, ja siihen avataan taskumainen tila, johon [[ćevapien]] kymmenen pihviä laitetaan sipulin kanssa. Leipä paistetaan uunissa, ja sitä myydään aamulla vielä lämpimänä. [[Baščaršijan]] kujilla leipomoiden ja ćevabdžinicojen eli ćevapi-ravintoloiden tuoksu leviää kauas. Leivän tarkka resepti vaihtelee leipurista toiseen, eikä yhtä ainoaa oikeaa tapaa ole.
+
+### v2-129
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Baščaršijan
+VASTAUS: Baščaršija on Sarajevon vanha basaari, jonka kujat jaettiin ammateittain: Kovači oli seppien, Sarači satulaseppien ja [[Kazandžiluk]] kupariseppien kuja. Basaarissa oli 1500-luvun jälkipuoliskolla kahdeksankymmentä eri ammattia ja noin 12 000 puotia. Kazandžilukilla vasarat kalisevat yhä, ja kujan tunnetuin tuote on džezva, pieni pitkävartinen kuparipannu, jossa bosnialainen kahvi keitetään. Basaarin laidalla seisoo vuosina 1530–1531 valmistunut [[Gazi Husrev-begin moskeija]], jonka pääkupoli kohoaa 26 metrin korkeuteen. Lähellä on myös [[Sahat-kula]], kellotorni, jonka kello asetetaan yhä niin, että auringonlasku on kaksitoista.
+
+### v2-130
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Jugoslaviaa
+VASTAUS: Jugoslavia oli Balkanin useita kansoja yhdistänyt valtio. Ensimmäinen Jugoslavia syntyi vuonna 1918 serbien, kroaattien ja sloveenien kuningaskuntana, ja nimi Jugoslavia otettiin käyttöön 1920-luvun lopulla. Toisen maailmansodan jälkeen maa muuttui sosialistiseksi liittovaltioksi, jota johti [[Tito]]. Siihen kuului kuusi tasavaltaa: Bosnia ja Hertsegovina, Kroatia, Makedonia, Montenegro, Serbia ja Slovenia. Maa hajosi 1990-luvun alussa, kun tasavallat julistautuivat itsenäisiksi. Vuoden 1984 Sarajevon talviolympialaiset olivat Jugoslavian suuri hetki: [[Jure Franko]] tuli suurpujottelussa toiseksi ja toi maalle sen ensimmäisen talviolympiamitalin.
+
+### v2-131
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Jahorinan
+VASTAUS: Jahorina on vuori Sarajevon kaakkoispuolella, noin kolmenkymmenen kilometrin päässä kaupungista, ja se on yksi maan tunnetuimmista hiihtokeskuksista. Vuoren korkein huippu on [[Ogorjelica]], noin 1 900 metrin korkeudessa. Vuoden 1984 talviolympialaisissa Jahorinalla kisattiin alppihiihtoa, kun taas [[Bjelašnican]] vuorella kisattiin muita alppihiihtolajeja; tarkasta lajijaosta en ole varma. Vuoren lähellä on [[Pale]]-niminen kaupunki. Talvella rinteet houkuttelevat laskettelijoita, ja kesällä vuorelle tehdään retkiä.
+
+### v2-132
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Vučko-susi
+VASTAUS: Vučko oli Sarajevon vuoden 1984 talviolympialaisten maskotti, pieni ja ystävällinen susi. Nimi tarkoittaa pientä sutta. Maskotin suunnitteli sloveenitaiteilija [[Jože Trobec]], ja valinta tehtiin kilpailussa, johon osallistui muun muassa useita eläinehdokkaita. Vučkosta tuli erittäin suosittu: se esiintyi lelujen, julisteiden ja matkamuistojen kuvana, ja sitä pidetään yhtenä ensimmäisistä [[olympiamaskoteista]], joista tuli laajasti tunnettuja. Vučko on säilynyt muistettuna hahmona Sarajevossa, ja siitä tuli symboli ajalle, jolloin Jugoslavia isännöi maailman kisoja.
+
+### v2-133
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Sebilj
+VASTAUS: Sebilj on puinen, ottomaanityylinen juomavesikoju Sarajevon Baščaršijan keskustorilla, ja torin kutsumanimi on [[Kyyhkysaukio]]. Alkuperäinen sebilj rakennettiin 1700-luvulla, jolloin sen tilaajana mainitaan [[Mehmed-paša Kukavica]], mutta nykyinen rakennus on 1890-luvulta ja sen on suunnitellut [[Alexander Wittek]] pseudomaurilaiseen tyyliin; tarkoista vuosiluvuista en ole varma. Sebilj oli alun perin paikka, jossa kulkijat ja kauppiaat saivat ilmaista vettä. Sen ympärillä parveilevat kyyhkyset, ja paikallinen uskomus sanoo, että joka juo Sebiljin vettä, palaa Sarajevoon. Sebilj on kaupungin tunnetuin valokuvauskohde.
+
+### v2-134
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Sarajevon
+VASTAUS: Sarajevo on Bosnia ja Hertsegovinan pääkaupunki kapeassa jokilaaksossa 518 metrin korkeudessa. Pohjalla virtaa [[Miljacka]], ja ympärillä kohoaa viisi vuorta. Osmanien käskynhaltija [[Isa-beg Ishaković]] rakennutti kaupunkiin 1460-luvulla basaarin, sillan ja majatalon, ja kaupungin nimi tulee turkin sanasta saray. Vuonna 1878 alue siirtyi [[Itävalta-Unkarille]], joka rakensi länsipuolen uuteen tyyliin. Tähän aikaan kuuluu myös [[Sarajevon katedraali]], jonka rakennustyöt alkoivat vuonna 1884 ja kirkko vihittiin 1889. Kaupungissa ammuttiin 28. kesäkuuta 1914 Itävalta-Unkarin arkkiherttua Frans Ferdinand, ja siitä alkoi ketju kohti ensimmäistä maailmansotaa. Talviolympialaiset pidettiin Sarajevossa vuonna 1984.
+
+### v2-135
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Baščaršija
+VASTAUS: Baščaršija on Sarajevon vanha kauppatori, joka syntyi vuonna 1462, kun [[Isa-bey Ishaković]] perusti alueelle majatalon ja ensimmäiset kaupat. Vuosisatojen varrella torista kasvoi valtava käsityöläisten ja kauppiaiden kylä keskellä kaupunkia, ja parhaimmillaan siellä oli noin 12 000 pientä puotia ja verstasta. Kujat saivat nimensä sen mukaan, mitä niillä tehtiin; esimerkiksi [[Kazandžiluk]] oli kupariseppien kuja. Basaarin laidalla seisovat [[Sahat-kula]], moskeijoita, vanha ortodoksikirkko ja kaksi vanhaa synagogaa, sillä tori oli monen uskonnon ja kansan yhteinen kauppapaikka. Vuonna 1878 alue siirtyi Itävalta-Unkarille, joka rakensi basaarin länsipuolelle uuden kaupunginosan, minkä vuoksi [[Ferhadija-katu]] erottaa vanhan ja uuden kaupunkikuvan.
+
+### v2-136
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: itävaltalais-unkarilaisten
+VASTAUS: Itävalta-Unkari oli vuosina 1867–1918 olemassa ollut kaksoismonarkia, jossa Itävallan keisarina ja Unkarin kuninkaana hallitsi sama hallitsija, pitkään [[Frans Joosef]]. Valtakunnan alaisuuteen kuuluivat monet kansat Keski- ja Kaakkois-Euroopassa. Bosnia ja Hertsegovina siirtyi sen hallintaan vuonna 1878, ja virkamiehet rakensivat Sarajevoon länsimaista kaupunkia: leveitä katuja, uusrenessanssi- ja jugendtyylisiä taloja sekä maurilaistyylisen kaupungintalon ja kirjaston [[Vijećnican]]. Miljackan rannalla seisoo myös talo, josta kerrotaan kuuluisaa tarinaa: omistaja kieltäytyi myymästä tonttiaan virkamiehille, purki talonsa ja kokosi sen uudelleen joen vastarannalle, ja siitä tuli ravintola [[Inat kuća]], Uhmatalo.
+
+### v2-137
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Ferhadija-katu
+VASTAUS: Ferhadija on Sarajevon kävelykatu, joka erottaa vanhan ottomaanien aikaisen Baščaršijan ja Itävalta-Unkarin aikana rakennetun länsipuolen. Jalkakäytävään on merkitty kohta, jossa kaksi kaupunkia kohtaa, ja katu on yksi kaupungin vilkkaimmista kävelyreiteistä. Itäpuolella kujat ovat kapeita ja kauppoja on pieniä, länsipuolella kadut ovat leveitä ja talot korkeampia. Katu johtaa lähelle [[Sarajevon katedraalia]], joka on kaupungin suurin katolinen kirkko. Nimi viittaa rakennuttajaan, mutta nimen alkuperän yksityiskohtia en ole varma. [[Itävalta-Unkarin]] jättämä arkkitehtuuri leimaa katua edelleen.
+
+### v2-138
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: Trebevićin köysirata
+VASTAUS: Trebevićin köysirata on gondolihissi, joka vie Sarajevon keskustasta Trebević-vuorelle yhdeksässä minuutissa. Alun perin se rakennettiin 1950-luvun lopulla, ja uudistettu rata avattiin vuonna 2018, joskin tarkkoja vuosilukuja en ole varma. Vuoren rinteessä on [[Trebevićin]] bobirata, joka valettiin vuoden 1984 talviolympialaisia varten. Ylhäältä aukeaa näkymä laaksoon, jossa kaupunki lepää, ja ylängöllä on kävelyreittejä ja ravintoloita. Reitti on suosittu retkikohde, koska se yhdistää kaupungin ja luonnon: vuorelle pääsee ilman omaa autoa. Kisoista on kuitenkin jäänyt jäljelle [[bobirata]], jossa kävely on nykyään mahdollista.
+
+### v2-139
+KOHDE: kaupunki:sarajevo
+KYSYMYS: Kerro lisää: olympiarekirata
+VASTAUS: Olympiarekirata on Trebević-vuoren rinteeseen valettu betoninen bobi- ja kelkkarata, joka valmistui syyskuussa 1982. Se rakennettiin Sarajevon vuoden 1984 talviolympialaisia varten, ja kisoissa sitä tuli katsomaan 30 000 ihmistä. [[Bosnian sodassa]] rata vaurioitui, ja sen jälkeen sinne kiipesivät vain pyöräilijät ja [[graffitimaalarit]]. Nyt kaarteet ovat maalauksia täynnä ja radalle pääsee kävelemään. Rata sijaitsee [[Trebevićin]] vuorella, johon nousee köysirata, jonka gondoli vie kaupungista vuorelle yhdeksässä minuutissa. Rata muistuttaa ajasta, jolloin kaupunki isännöi maailman kisoja.
+
+### v2-140
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Belovežin metsä
+VASTAUS: Belovežin metsä on vanha tasankometsä Valko-Venäjän ja Puolan rajalla, ja Puolan puolella sitä kutsutaan nimellä [[Białowieża]]. Valko-Venäjän puolella alue tunnetaan nimellä [[Belovežskaja Pušča]]. Metsästä on kirjallisia mainintoja jo 900-luvulta, ja 1400-luvulla suurruhtinaat rauhoittivat sen kuninkaalliseksi metsästysmaaksi. Suojelu jatkui Liettuan ruhtinaista Puolan kuninkaisiin ja Venäjän tsaareihin asti. Juuri tämä vuosisatoja jatkunut rauhoitus pelasti Euroopan raskaimman maanisäkkään, [[biisonin]]: villi kanta hävisi metsästyksen takia täysin ensimmäisen maailmansodan jälkeen, mutta eläintarhoihin selvinneistä yksilöistä aloitettu paluu vuodesta 1929 on kasvattanut kannan yli 1 200 biisoniin. Se on Euroopan suurin vapaana laiduntava lauma.
+
+### v2-141
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: visentti
+VASTAUS: Visentti eli euroopanbiisoni on Euroopan raskain maaeläin. Villit visentit hävisivät 1900-luvun alussa metsästyksen ja elinympäristön menetyksen takia. Kun laji oli 1920-luvulla katoamassa, koko maailmassa oli enää 54 visenttiä, ja kaksi niistä eli Tukholman [[Skansenilla]]. Vuonna 1929 Skansenilta lähetettiin hiehoja Puolan [[Białowieżaan]], josta kannan elvytys sai tärkeän lisäyksen, ja laji päästettiin takaisin metsään vuonna 1952. Nykyisin visenttejä elää vapaina muun muassa [[Belovežskaja Pušćassa]], ja laji on edelleen suojeltu. Täysikasvuinen uros painaa yli kahdeksansataa kiloa, mutta tarkkaa lukua en ole varma.
+
+### v2-142
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Euroopan
+VASTAUS: Eurooppa on Euraasian läntinen osa, ja sen rajaus idässä perustuu enemmän sopimukseen kuin selvään luonnonrajaan. Maanosan maisemat vaihtelevat Alppien huipuista Valko-Venäjän matalaan tasankoon, jonka korkein kohta yltää vain 346 metriin. Eurooppa on täynnä vanhoja kaupunkeja ja luonnonmuodostumia. Esimerkiksi Barcelonan [[Boquerian kauppahalli]] on yksi Euroopan vanhimmista ja vilkkaimmista toreista: jo vuonna 1217 samalla paikalla myytiin lihaa, ja nykyinen katettu halli avattiin 1853. Tšekin Määrin karstissa [[Macocha]]-kuilu on 138,5 metriä syvä, ja se on Keski-Euroopan syvin lajissaan. Maanosan vuoristoista tunnetuimpia ovat [[Alpit]].
+
+### v2-143
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: draniki
+VASTAUS: Draniki on valkovenäläinen ruoka, jossa raastettu peruna sekoitetaan sipulin, suolan ja pienen jauhomäärän kanssa lättyjen tapaisiksi pannukakuiksi. Ne paistetaan öljyssä rapeaksi ja tarjoillaan kuumina [[smetanan]] eli hapankerman kanssa. Lisukkeena voi olla sieniä tai lihaa, ja perinteisesti draniki syödään yhdessä [[machankan]] kanssa; machanka on lihakastike, mutta tarkasta reseptistä en ole varma. Samantapaisia perunalättyjä tunnetaan naapurimaissa: ukrainalaiset [[deruny]], liettualaiset bulviniai blynai ja juutalaisessa keittiössä latkes. Valko-Venäjällä peruna on keskeinen raaka-aine, joten draniki kuuluu maan tunnetuimpiin ruokiin.
+
+### v2-144
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Itä-Euroopassa
+VASTAUS: Itä-Eurooppa on Euroopan itäosa, jonka rajaus vaihtelee lähteestä riippuen. Yleensä siihen lasketaan Valko-Venäjä, Ukraina, Moldova ja Venäjän Euroopan puoleinen osa, ja usein myös Baltian maat ja Puola. Alueen suurin maisemamuoto on [[Itä-Euroopan tasanko]], laaja ja matala alue, jonka halki virtaavat suuret joet. Valko-Venäjän läpi kulkevat Länsi-Väinä ja Nemunas kohti länttä ja [[Dnepr]] sivujokineen etelään. Valko-Venäjän eteläosassa on [[Polesie]], laajoja kosteikkoja täynnä oleva alava suoseutu. Ilmasto on viileä ja talvet ovat kylmiä: Valko-Venäjällä tammikuun keskilämpötila on noin −6 astetta.
+
+### v2-145
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Liettuan suurruhtinaskunta
+VASTAUS: Liettuan suurruhtinaskunta syntyi 1200-luvulla, ja sen ensimmäisenä hallitsijana pidetään [[Mindaugasta]]. Sen pääkaupunki oli Vilna, ja valtio laajeni 1300-luvulla itään ja etelään, joten sen alueeseen kuuluivat nykyisen Liettuan lisäksi suuri osa Valko-Venäjää ja Ukrainaa. Suurruhtinas [[Vytautas]] on valtion tunnetuimpia hallitsijoita. Hallinnon kielenä käytettiin pitkään ruteenia, jonka katsotaan olevan valkovenäjän ja ukrainan edeltäjä. Valtio liittyi Puolaan ensin lähemmäksi 1300-luvun lopulla ja sitten [[Lublinin unionissa]] vuonna 1569, minkä jälkeen syntyi yhteinen Puola–Liettuan valtio. Sen alue jaettiin 1700-luvun lopulla naapurivaltioiden kesken. Tarkoista vuosiluvuista osa vaihtelee lähteiden mukaan.
+
+### v2-146
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Mirin linna
+VASTAUS: Mirin linna on Valko-Venäjän länsiosassa sijaitseva linna, jonka rakentamisen aloitti aatelismies Jurij Iljinitš 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuvulle, [[Radziwiłleille]], ja Mikołaj Kristof ”Orpo” Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Linna koki vuosisatojen ajan hyökkäyksiä, tuhoja ja jälleenrakennuksia, viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000. Linna yhdistää goottilaista, renessanssin ja barokin rakennustyyliä, mutta yksityiskohtia en ole varma. Rakennuttajana mainitaan usein myös [[Jurij Iljinitš]].
+
+### v2-147
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Njasvižin linna
+VASTAUS: Njasvižin linna oli mahtisuvun, [[Radziwiłlien]], pääasuinpaikka Valko-Venäjän länsiosassa. Linnan rakentaminen aloitettiin 1500-luvun lopulla, ja sitä laajennettiin vuosisatojen ajan palatsiksi, jota ympäröivät vallihaudat, puistot ja lammet. Linnan lähellä seisoo barokkityylinen [[Corpus Christi -kirkko]], jonka kerrotaan olevan alueen ensimmäisiä kupolikirkkoja, vaikka tarkka ajoitus vaihtelee lähteittäin. Radziwiłlit olivat Liettuan suurruhtinaskunnan vaikutusvaltaisimpia aatelissukuja, ja heidän kokoelmansa, kirjastonsa ja arkistonsa olivat tunnetut. Linna on Unescon maailmanperintökohde, samoin kuin [[Mirin linna]], jonka Radziwiłlit myös omistivat.
+
+### v2-148
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Narach
+VASTAUS: Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston lintuja ovat esimerkiksi [[kaulushaikara]], [[kalasääski]] ja [[kurki]], ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia. Järven kalastoon kuuluvat muun muassa ankerias, hauki ja made.
+
+### v2-149
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: Narachin kansallispuisto
+VASTAUS: Narachin kansallispuisto perustettiin vuonna 1999 Narach-järven ympärille, ja se kattaa yli 87 000 hehtaaria. Alue on Valko-Venäjän suurimpia suojeltuja luontoalueita, ja sitä peittävät mäntymetsät, järvet ja kosteikot. Puiston lintuja ovat esimerkiksi [[kaulushaikara]], [[kalasääski]] ja [[kurki]], ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia. Järven kalastoon kuuluvat muun muassa ankerias, hauki ja made. Narach itse on maan suurin järvi, ja sen ympäristö on suosittu retki- ja lomakohde, mutta tarkkoja kävijälukuja en ole varma.
+
+### v2-150
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: valkovenäjä
+VASTAUS: Valkovenäjä on itäslaavilainen kieli, joka kuuluu samaan kieliperheeseen venäjän ja ukrainan kanssa. Se kirjoitetaan nykyisin kyrillisin aakkosin, mutta historiassa on käytetty myös latinalaista kirjoitusta, jota kutsutaan nimellä [[Łacinka]]. Alussa Minskin kaduilla puhuttiin [[ruteenia]], josta valkovenäjä kehittyi. Lublinin unionin jälkeen vuonna 1569 virallinen kieli oli puola, ja 1800-luvulla venäjästä tuli virallinen kieli. Valkovenäjän käyttö kasvoi 1890-luvulta sivistyneistön keskuudessa, ja 1920- ja 1930-luvun alussa se oli Minskin pääkieli myös hallinnossa ja koulutuksessa. Vuoden 1897 väestönlaskennassa noin puolet Minskin asukkaista oli juutalaisia, ja [[jiddiš]] oli kaupungin yleisimpiä kieliä.
+
+### v2-151
+KOHDE: maa:BLR
+KYSYMYS: Kerro lisää: venäjä
+VASTAUS: Venäjä on itäslaavilainen kieli, joka kirjoitetaan kyrillisin aakkosin. Valko-Venäjällä venäjästä tuli virallinen kieli 1800-luvulla, kun alue kuului [[Venäjän keisarikuntaan]], ja vuosisadan lopulla se oli hallinnon, koulujen ja lehtien kieli. Nykyisin venäjä on Valko-Venäjällä toinen virallisista kielistä valkovenäjän rinnalla, ja sitä käytetään erityisesti kaupungeissa. Vuoden 1897 väestönlaskennassa Minskissä noin neljäsosa asukkaista ilmoitti äidinkielekseen venäjän, mikä osoittaa, että kaupunki oli silloin monikielinen. Venäjän ja valkovenäjän ero muistuttaa läheisten sukukielten eroa, mutta yksityiskohtia en ole varma. Kieli kuuluu [[itäslaavilaisiin kieliin]].
+
+### v2-152
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: Nemihan taistelu
+VASTAUS: Nemihan taistelu käytiin maaliskuussa 1067 Nemiha-joella Minskin lähellä. Siinä vastakkain olivat Kiovan suuriruhtinaan [[Jaroslavin pojat]] sekä [[Vseslav]], Polatskin ruhtinas. Kronikka kuvaa taistelua julmaksi ja mainitsee sen yhteydessä Měneskъ-nimisen kaupungin, joka on nykyisen Minskin vanhin tunnettu maininta. Vseslavin joukot kärsivät tappion, mutta ruhtinas itse pääsi aluksi pakenemaan. Myöhemmin hänet vangittiin ja vietiin Kiovaan, mutta hän vapautui ja nousi lopulta Kiovan hallitsijaksi, vaikka tarkkoja vaiheita en ole varma. Kaupungin viranomaiset pitävät perustamispäivänä 3.3.1067. Polatskin ruhtinaskunnan hajottua 1100-luvulla syntyi oma [[Minskin ruhtinaskunta]].
+
+### v2-153
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: Svislač
+VASTAUS: Svislač on joki, joka virtaa Minskin läpi, ja kaupunki on rakentunut sen rantojen varaan. Joen vasemmalla rannalla sijaitsee historiallinen [[Kolminaisuuden esikaupunki]], joka oli aikanaan kaupan ja hallinnon keskus. Kaupungin keskustassa joen rantaa kulkee puistoreitti, ja lähellä on [[Gorki-puisto]], joka laadittiin vuonna 1800 ja avattiin 1805 nimellä Kuvernöörin puutarha. Svislač laskee [[Berezinaan]], joka puolestaan virtaa [[Dneprin]] vesistöön. Joen pituus on noin 280 kilometriä, mutta tarkkaa lukua en ole varma. Joki sai tärkeän roolin kaupungin kehityksessä, sillä vanhat kauppareitit kulkivat sen varressa.
+
+### v2-154
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: Valko-Venäjän
+VASTAUS: Valko-Venäjä on Itä-Euroopan sisämaavaltio, jonka naapureita ovat Venäjä, Ukraina, Puola, Liettua ja Latvia. Pinta-ala on noin 207 600 neliökilometriä, ja asukkaita arvioidaan olevan 9,1 miljoonaa. Maa on enimmäkseen matalaa tasankoa, ja korkein kohta, [[Dzjaržynskaja-vuori]], yltää vain 346 metriin. Metsää on noin 43 prosenttia maa-alasta ja järviä noin 4 000, joista suurin on [[Narach]]. Etelän [[Polesie]] on alavaa suoseutua, jota leimaavat laajat kosteikot. Viralliset kielet ovat valkovenäjä ja venäjä, ja pääkaupunki sekä suurin kaupunki on [[Minsk]], jossa asuu noin kaksi miljoonaa ihmistä. Ilmasto on hemiboreaalinen, ja tammikuun keskilämpötila on noin −6 astetta.
+
+### v2-155
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: Yläkaupunki
+VASTAUS: Yläkaupunki on Minskin historiallinen keskusta Svislač-joen läheisyydessä, ja siellä kaupungin vanhimmat kerrokset näkyvät yhä. Alueella seisoo muun muassa [[Pyhän Hengen katedraali]], joka rakennettiin vuosina 1633–1642 bernardiiniluostarin osaksi. Barokkikirkko vaurioitui sodassa 1654–1667 ja vihittiin uudelleen elokuussa 1687. Tulipalo koetteli sitä vuonna 1741, ja suurpalo 1835 vaurioitti myös luostarirakennuksia. Bernardiinien luostari suljettiin 1852, kirkko palautettiin itäkirkon käyttöön 1860 ja kunnostus alkoi 1869. Uudelleen vihkiminen tapahtui 22. lokakuuta 1870, joten isoisän käynnin aikaan katedraali oli vasta kolmen vuoden ikäinen uudelleen vihitty kirkko. Nykyisin kirkko on Valko-Venäjän oikeauskoisen kirkon päätuomiokirkko. Alueella kulkee myös kaksi- ja kolmikerroksisia tiili- ja kivitaloja sekä [[Vapauden aukio]].
+
+### v2-156
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: ratasolmu
+VASTAUS: Ratasolmu on paikka, jossa useampi rautatie risteää, ja Minskistä tuli sellainen 1800-luvulla. [[Moskova–Brest-rata]] kulki kaupungin kautta jo vuodesta 1871, ja tammikuussa 1873 avattiin uuden [[Libava–Romny-radan]] Vilnan ja Minskin välinen osa. Rata Itämeren rannalla sijaitsevasta Libavasta eli nykyisestä Liepājasta Romnyyn valmistui kokonaan vuonna 1874. Radat risteävät yhä [[Minsk-Pasažyrskin]] asemalla, joka rakennettiin vuonna 1873 nimellä Vilenski Vazkal eli Vilnan asema. Aseman ensimmäinen rakennus oli puuta, ja se purettiin 1890 ja korvattiin kivirakennuksella. Asema tuhoutui sodassa kokonaan ja rakennettiin uudelleen vuosina 1945–1946, ja nykyinen rakennus valmistui 1991–2002. Minsk on lähteen mukaan maan suurin liikennesolmu.
+
+### v2-157
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: vesijohto
+VASTAUS: Kunnallinen vesijohto otettiin Minskissä käyttöön 1870-luvun alkupuolella, ja lähteet ilmoittavat vuoden 1872 tai 1874. Se toi kaupunkilaisille puhtaampaa vettä ja kuului samaan kehitykseen kuin rautatie, joka teki kaupungista kasvavan liikennesolmun. Vesijohdot ovat kuitenkin paljon vanhempi keksintö: Istanbulissa Fatihin kaupunginosassa kulkee kahdessa kerroksessa kivikaaria kukkulalta toiselle, ja se on [[Valensin vesijohto]], joka vihittiin käyttöön vuonna 373. Sitä on jäljellä 921 metriä, ja sen kaarien alta kulkee nykyään vilkas bulevardi. Vettä tuotiin lähteiltä yli sadan kilometrin päästä, ja kanavia kertyi kaikkiaan yli 250 kilometriä, joten se oli antiikin pisin. Vesi varastoitiin maan alle, muun muassa [[Istanbulissa]] sijaitsevaan säiliöön.
+
+### v2-158
+KOHDE: kaupunki:minsk
+KYSYMYS: Kerro lisää: Valko-Venäjä
+VASTAUS: Valko-Venäjän historia kulkee läpi monen valtion. Keskiajalla alueella oli Polatskin ruhtinaskunta, ja Minskin ensimmäinen maininta on vuodelta 1067. Myöhemmin alue kuului [[Liettuan suurruhtinaskuntaan]] ja Puola–Liettuan valtioon, ja 1700-luvun lopulla se siirtyi Venäjän keisarikuntaan. Isoisän matkavuonna 1873 Minsk oli keisarikunnan kuvernementin keskus ja kasvava ratasolmu. Valko-Venäjä itsenäistyi 1990-luvun alussa Neuvostoliiton hajotessa. Kulttuurin kannalta merkittävä rakennus on kansalliskirjasto, joka avattiin 16.6.2006: se on rombikuboktaedrin muotoinen, noin 73 metriä korkea monitahokas, ja kokoelmissa on noin 10 miljoonaa nimekettä. Luonnon helmiin kuuluu [[Narach]], maan suurin järvi.
+
+### v2-159
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: kansanäänestys
+VASTAUS: Sveitsissä kansanäänestys on keskeinen osa päätöksentekoa. Perustuslain muutokset on aina alistettava äänestykseen, ja niiden hyväksyminen vaatii sekä äänestäjien enemmistön että enemmistön kantoneista, mitä kutsutaan [[kaksoisenemmistöksi]]. Lisäksi kansalaiset voivat itse tehdä [[kansalaisaloitteen]], jos he keräävät riittävän määrän allekirjoituksia, ja he voivat vaatia äänestystä jo säädetystä laista; tarkat allekirjoitusmäärät ja määräajat tarkistaisin ennen kuin vannon ne. Äänestyksiä on noin neljä kertaa vuodessa. Joissakin pienissä kantoneissa on säilynyt myös [[Landsgemeinde]], jossa äänestäjät kokoontuvat yhteen ja äänestävät kättä nostamalla. Maassa on 26 [[kantonia]], joilla jokaisella on oma perustuslakinsa, koulujärjestelmänsä ja veronsa.
+
+### v2-160
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: kantoni
+VASTAUS: Kantoni on Sveitsin liittovaltion jäsenvaltio, ja maassa niitä on 26: kaksikymmentä kokonaista kantonia ja kuusi niin sanottua puolikantonia. Jokaisella kantonilla on oma perustuslakinsa, parlamenttinsa, hallituksensa ja tuomioistuimensa, ja ne päättävät itse esimerkiksi koulutuksesta ja suuresta osasta verotusta. Nykyinen [[liittovaltio]] syntyi vuonna 1848, mutta kantonit ovat sitä vanhempia, sillä Sveitsin ydin on kasvanut vanhasta valaliitosta. Kantonit eroavat toisistaan myös kielen mukaan: [[Ticino]] on italiankielinen, [[Graubünden]] kolmikielinen ja nuorin kantoni [[Jura]] erosi Bernin kantonista vuonna 1979.
+
+### v2-161
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: Gotthardin pohjatunneli
+VASTAUS: Gotthardin pohjatunneli avattiin 1. kesäkuuta 2016. Louhinta kesti seitsemäntoista vuotta, ja paksimmillaan kalliota on tunnelin päällä yli kaksi kilometriä. Kiveä louhittiin niin paljon, että siitä olisi saanut viisi Kheopsin pyramidia. Pohjatunneli kulkee lähes vaakasuorassa, kun vanha rata kiipesi rinteitä mutkitellen, joten junat kulkevat siellä nopeammin kuin ennen vuoren yli. Sitä ennen vuoren läpi kulki jo [[Gotthardin rautatietunneli]], jonka pohjoisesta [[Göschenen]]istä ja etelästä [[Airolo]]sta louhitut käytävät kohtasivat 29. helmikuuta 1880. Louhintaa johti insinööri [[Louis Favre]], joka kuoli tunnelissa heinäkuussa 1879 ja jäi näkemättä läpilyöntiä.
+
+### v2-162
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: Alpit
+VASTAUS: Alpit ovat Länsi-Euroopan korkein vuoristo: noin 1 200 kilometrin pituinen kaari Välimereltä Wienin liepeille, 150–250 kilometriä leveä. Kahdeksan maata jakaa vuoriston, ja siellä asuu noin 13,6 miljoonaa ihmistä, joten se on asuttu seutu eikä erämaa. Yli neljän kilometrin huippuja on 82, ja korkein niistä on [[Mont Blanc]]. Vuoristossa on aina eletty karjan ehdoilla: lehmät viedään keväällä [[alppilaitumille]] ja tuodaan syksyllä alas, ja karjan kutsumiseen käytettiin [[alppitorvea]]. Solat ovat olleet kauppateitä kivikaudelta asti, ja toisessa puunilaissodassa Hannibal marssitti armeijansa norsuineen Alppien yli Italiaan.
+
+### v2-163
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: puolueettomuus
+VASTAUS: Sveitsin puolueettomuus tarkoittaa, ettei maa osallistu muiden valtioiden sotiin eikä liity sotilasliittoihin. Se on ollut puolueeton vuodesta 1815, ja maa on pysynyt sodan ulkopuolella myös [[maailmansotien]] aikana. Puolueettomuus on aseistettua: maalla on oma armeija, ja sen perustana on asevelvollisuus. Yhdistyneisiin kansakuntiin Sveitsi liittyi vasta vuonna 2002, eikä se ole [[Euroopan unionin]] jäsen. Puolueettomuuden perinteeseen liittyy myös [[Geneven]] asema kansainvälisten neuvottelujen ja järjestöjen kotikaupunkina.
+
+### v2-164
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: Sveitsin
+VASTAUS: Sveitsi on Keski-Euroopan vuoristovaltio, jossa on neljä virallista kieltä: saksa, ranska, italia ja retoromaani. Maa jakautuu 26 [[kantoniin]], ja sen poliittiseen järjestelmään kuuluvat tiheät kansanäänestykset. Alpit peittävät noin kolme viidesosaa maasta, ja korkein huippu on [[Dufourspitze]], 4 634 metriä. Perustuslaki ei nimeä virallista pääkaupunkia, vaan hallituksen kotipaikka on [[Bern]]. Maan tunnetuimpia rakennushankkeita ovat Gotthardin tunnelit, ja vanhan [[Gotthardin rautatietunnelin]] läpilyönti tehtiin vuonna 1880.
+
+### v2-165
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: fondue
+VASTAUS: Fondue on sulatettua juustoa, jota syödään yhteisestä padasta kastamalla leipäpaloja siihen pitkävartisella haarukalla. Pata on perinteisesti keraaminen [[caquelon]], ja se pidetään lämpimänä pienen lämmittimen päällä pöydän keskellä. Perinteiseen seokseen kuuluu usein [[Gruyère]]-juustoa ja toista vuoristojuustoa, valkoviiniä ja ripaus [[kirsch]]-kirsikkabrandya. Fonduesta on tullut Sveitsin tunnetuimpia ruokia, mutta tarkkaa ajankohtaa, jolloin se nousi kansalliseksi symboliksi, en ole varma. Yhteisen padan ääressä on perinteen mukaan omia leikkimielisiä sääntöjä, esimerkiksi leivän pudottamisesta pataan voi seurata pieni rangaistus.
+
+### v2-166
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: raclette
+VASTAUS: Raclette on sveitsiläinen ruoka, jossa samanniminen juusto sulatetaan ja kaavitaan lämpimänä perunoiden päälle. Nimi tulee ranskan verbistä racler, joka tarkoittaa kaapimista. Perinteisesti juustopyörän leikattu pinta pidettiin avotulen ääressä ja sulanut kerros kaavittiin lautaselle; nykyään käytetään usein pöytägrilliä, jossa kukin sulattaa oman juustopalansa pienessä pannussa. Mukana tarjotaan tavallisesti suolakurkkuja ja pikkusipuleita. Ruoka on kotoisin Sveitsin lounaisosan [[Valais]]-kantonista, ja se on yleinen talvinen vierasruoka, joka muistuttaa tavoiltaan [[fonduea]].
+
+### v2-167
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: rösti
+VASTAUS: Rösti on raastetusta perunasta paistettu kakku: perunaraaste painetaan pannulle ja paistetaan voissa molemmilta puolilta rapeaksi. Alun perin se oli [[Bernin]] seudun maanviljelijöiden aamiaista, jota syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään [[Röstigraben]]iksi eli röstihaudaksi. Rajan molemmin puolin puhutaan eri kieltä ja äänestetään usein eri tavalla, ja nimeä käytetään tavallisesti puhuttaessa [[kansanäänestysten]] tuloksista.
+
+### v2-168
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: Retoromaani
+VASTAUS: Retoromaani eli romanši on romaaninen kieli, joka polveutuu Alppien alueella puhutusta kansanlatinasta. Sitä puhutaan lähinnä [[Graubündenin]] kantonin laaksoissa, ja puhujia on kymmeniä tuhansia. Kielellä on viisi kirjakieltä eli idiomia, kuten [[sursilvan]] ja [[vallader]], ja yhteiseksi kirjakieleksi luotiin 1980-luvulla [[Rumantsch Grischun]]. Retoromaani on ollut Sveitsin kansalliskieli vuodesta 1938, ja myöhemmin se on saanut myös osittaisen virallisen kielen aseman, mutta tarkkoja vuosilukuja en ole varma luettelemaan.
+
+### v2-169
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: Alppien
+VASTAUS: Alpit ovat syntyneet miljoonien vuosien kuluessa, kun mannerlaatat ovat painautuneet toisiaan vasten ja kohottaneet vuoristoa, ja prosessi jatkuu hitaasti yhä. Sveitsin puolella korkein huippu on [[Dufourspitze]], 4 634 metriä, kun taas koko vuoriston korkein huippu [[Mont Blanc]] sijaitsee Ranskan ja Italian rajalla. Vuoristossa on myös [[jäätiköitä]], joiden sinistä jäätä isoisäkin ihaili Grindelwaldissa, ja ne ovat vetäytyneet viime vuosikymmeninä. Solat ovat olleet kauppateitä kivikaudelta asti, joten Alpit eivät ole koskaan olleet muuri: jo toisessa puunilaissodassa Hannibal marssitti armeijansa niiden yli Italiaan.
+
+### v2-170
+KOHDE: maa:CHE
+KYSYMYS: Kerro lisää: Graubündenin
+VASTAUS: Graubünden on Sveitsin pinta-alaltaan suurin kantoni, ja sen pääkaupunki on [[Chur]]. Se on maan kolmikielinen kantoni: siellä puhutaan saksaa, retoromaania ja italiaa. Kantoni sijaitsee Alpeilla maan itäosassa, ja sen tunnettuja paikkoja ovat [[Davos]] ja [[St. Moritz]]. Alueen laaksot ovat pitkään olleet melko erillään toisistaan, mikä on auttanut säilyttämään paikallisia kieliä ja tapoja.
+
+### v2-171
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Bern
+VASTAUS: Bern on Sveitsin liittokaupunki, jossa asuu noin 147 000 ihmistä. Perimätiedon mukaan herttua [[Berchtold V]] perusti kaupungin vuonna 1191, ja vanhakaupunki nousee [[Aare]]-joen ympäröimälle mäkiniemelle. Vuoden 1405 suurpalon jälkeen kaupunki rakennettiin uudelleen hiekkakivestä, ja vanhakaupunki on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983. Kaupungin tunnuseläin on karhu. Bernissä työskenteli vuonna 1905 [[patenttivirasto]]ssa Albert Einstein, ja talo, jossa hän asui, on nykyään museo.
+
+### v2-172
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: parlamentti
+VASTAUS: Sveitsin parlamentti on liittokokous eli Bundesversammlung, ja sillä on kaksi kamaria: kaksisataajäseninen [[kansallisneuvosto]] ja 46-jäseninen [[kantonien neuvosto]]. Kansallisneuvosto edustaa kansaa väkiluvun mukaan, ja kantonien neuvostossa kullakin kantonilla on kaksi paikkaa ja puolikantonilla yksi. Hallituksena toimii seitsemänjäseninen [[liittoneuvosto]]. Parlamentti ja hallitus istuvat Bernissä liittopalatsissa, ja Bern valittiin hallituksen kotipaikaksi 28. marraskuuta 1848.
+
+### v2-173
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: liittopalatsi
+VASTAUS: Ensimmäinen liittopalatsi, nykyinen Bundeshaus West, rakennettiin vuosina 1852–1857 kaupungin kustannuksella, ja isoisän matkavuonna 1873 se oli vasta kuusitoista vuotta vanha. Se rakennettiin hallituksen ja parlamentin kotipaikaksi sen jälkeen, kun [[liittokokous]] oli valinnut Bernin 28. marraskuuta 1848. Nykyinen parlamenttitalo, [[Bundeshaus]], valmistui myöhemmin, vuonna 1902, ja siinä on kupoli. Rakennukset sijaitsevat [[vanhakaupunki]]a vastapäätä sen reunalla Aare-joen rinteellä.
+
+### v2-174
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Bernin
+VASTAUS: Bernin tunnetuimpia kohteita on tuomiokirkko [[Münster]], jonka rakentaminen aloitettiin 11. maaliskuuta 1421 ja jonka noin sadan metrin torni valmistui vasta 1893. Kirkon päätuloportaalin yllä on myöhäisgoottilainen veistoskokoelma, jonka aiheena on viimeinen tuomio. Kramgasse 49:ssä on [[Einsteinhaus]], jossa Albert Einstein asui vuosina 1903–1905 ja jossa on nykyään museo. Kaupungissa on myös noin kuusi kilometriä [[holvikäytäviä]]. Vanhakaupunki on ollut maailmanperintökohde vuodesta 1983.
+
+### v2-175
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Berchtold V
+VASTAUS: Berchtold V oli [[Zähringenin]] herttua, ja perimätiedon mukaan hän perusti Bernin vuonna 1191. Kansantaru kertoo, että hän lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Tutkijoiden mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on [[Engehalbinselin]] entisen asutuksen nimi [[Brenodor]]. Pitkään nimen uskottiin myös tulevan Veronasta, jota keskiyläsaksaksi sanottiin Berniksi.
+
+### v2-176
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: karhu
+VASTAUS: Karhu on Bernin tunnuseläin: se on ollut kaupungin sinetissä ja vaakunassa ainakin 1200-luvulta. Kansantarun mukaan herttua lupasi nimetä kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, mutta nimen yhteys sanaan Bär on tutkijoiden mukaan kansanetymologiaa. Kaupunkia on leikillä kutsuttu [[Mutzopolis]]iksi, koska Mutz tarkoittaa paikallisessa murteessa karhua. Karhuja on pidetty kaupungissa pitkään: [[Bärengraben]] eli karhuränni oli kauan kaupungin tunnettu nähtävyys, ja nykyään karhuilla on puisto [[Bärenpark]] Aare-joen rannalla.
+
+### v2-177
+KOHDE: kaupunki:bern
+KYSYMYS: Kerro lisää: Albert Einstein
+VASTAUS: Albert Einstein syntyi vuonna 1879 Ulmissa ja asui Bernissä 1900-luvun alussa. Kramgasse 49:ssä sijaitsevassa talossa, nykyisessä [[Einsteinhaus]]-museossa, hän asui vuosina 1903–1905 vaimonsa Mileva Marićin ja poikansa Hansin kanssa, ja siellä kirjoitettiin ihmeiden vuoden eli [[annus mirabilis]] -artikkelit. Vuonna 1905 hän julkaisi muun muassa erityisen suhteellisuusteorian. Hän sai fysiikan Nobel-palkinnon vuonna 1921, mutta ei suhteellisuusteoriasta vaan [[valosähköilmiön]] selittämisestä.
+

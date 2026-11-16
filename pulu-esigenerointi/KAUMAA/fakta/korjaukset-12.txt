@@ -1,0 +1,46 @@
+### v2-449
+VANHA: konepajan Tampereelle
+UUSI: puuvillatehtaan Tampereelle
+SYY: Finlaysonin perustama yritys oli puuvillatehdas, ei konepaja
+
+### v2-464
+VANHA: joka on jo viides samalla paikalla
+UUSI: jonka paikalla on seissyt useita aiempia katedraaleja
+SYY: epävarma luku (neljäs vai viides)
+
+### v2-470
+VANHA: tyypillisesti musta kaksiosainen ajoneuvo
+UUSI: tyypillisesti musta ajoneuvo
+SYY: kielivirhe, merkityksetön "kaksiosainen"
+
+### v2-476
+VANHA: Vuonna 2025 mukana oli 3 893 esitystä 301 paikassa.
+UUSI: Viime vuosina mukana on ollut lähes neljä tuhatta esitystä noin kolmellasadalla paikalla.
+SYY: epävarma tarkka luku
+
+### v2-486
+VANHA: Lähin kaupunki on [[Litochoron]], noin 18 kilometrin päässä huipusta.
+UUSI: Lähin kaupunki on [[Litochoron]].
+SYY: etäisyys väärä (tieetäisyys ei ole linnuntie huipulle)
+
+### v2-499
+VANHA: kallio kohoaa noin 90 metriä ympäröivän tasangon yläpuolelle
+UUSI: kallio kohoaa jyrkästi ympäröivän kaupungin yläpuolelle
+SYY: korkeusluku virheellinen/epävarma
+
+### v2-504
+VANHA: Avajaisissa oli paikalla noin 60 000 katsojaa.
+UUSI: Avajaisissa oli paikalla kymmeniätuhansia katsojia.
+SYY: epävarma luku
+
+### v2-517
+VANHA: lyran tai laoutoin säestyksellä
+UUSI: lyran tai laouton säestyksellä
+SYY: kielivirhe, väärä sijamuoto
+
+### v2-523
+VANHA: kroatiaksi Dinara-vuoristo
+UUSI: kroatiaksi Dinaridi
+SYY: Dinara on yksittäinen vuori, vuoriston kroatiankielinen nimi on Dinaridi
+
+LOPPU: tarkistettu 50 vastausta, korjauksia 9

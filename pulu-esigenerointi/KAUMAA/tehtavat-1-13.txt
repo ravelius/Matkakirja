@@ -1,0 +1,174 @@
+================ KOHTA 61 (kaupunki:vilna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vilna (kaupunki)
+Tietoruudun teksti: Vilna eli Vilnius on Liettuan pääkaupunki, jossa asuu noin 600 000 ihmistä. Se on rakennettu kahden joen yhtymäkohtaan kukkuloiden väliin ja saanut nimensä pienemmästä joesta, Vilniasta. Jokien väliin jäävällä kukkulalla seisoo linnan torni, josta kaupunki 1300-luvulla alkoi.
+
+Vilna mainitaan ensi kerran 1323 suuriruhtinas Gediminaksen kirjeissä: niissä hän kutsui kauppiaita ja käsityöläisiä ja lupasi jokaiselle oikeuden omaan uskontoonsa. Kutsu toimi, ja vanhastakaupungista kasvoi yksi Pohjois-Euroopan laajimmista keskiaikaisista keskustoista: yli kolmesataa hehtaaria kujia ja toistasataa kirkkoa. Liettua oli 1400-luvulla Euroopan laajin valtio, mutta 1795 alue joutui Venäjän keisarikuntaan, ja liettuan painaminen latinalaisin kirjaimin oli kiellettyä 1865–1904.
+
+Yliopisto perustettiin 1579, ja se on Baltian vanhin. Vilnaa sanottiin pohjoisen Jerusalemiksi: ennen toista maailmansotaa n…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Vilna] Liettuan pääkaupunki kasvoi kahden joen yhtymäkohtaan kukkuloiden väliin. Vanhassakaupungissa on kapeita kujia, satakunta kirkkoa ja yksi omaksi tasavallakseen julistautunut kortteli.
+
+### 61.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+================ KOHTA 62 (maa:LUX) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (maa)
+Tietoruudun teksti: Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus purettiin, raja avattiin ja masuunit sammuivat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kaupunkilehti / Luxemburg] Kaupunki seisoo kalliolla, jonka Alzette- ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen Gibraltariksi.
+
+### 62.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+================ KOHTA 63 (kaupunki:luxemburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Pelaaja katsoo kartalla: Luxemburg (kaupunki)
+Tietoruudun teksti: Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata hallitsee suurherttuana Alankomaiden kuningas Vilhelm III henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on vuosisatoja ollut niin vahva linnoitus, että ranskalainen sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi heti Gibraltarin jälkeen — siitä juontuu lempinimi Pohjoisen Gibraltar. Nyt sopimus vaatii koko puolustusjärjestelmän purkamista, ja työ on ollut käynnissä jo kuusi vuotta.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kaupunkilehti / Luxemburg] Kaupunki seisoo kalliolla, jonka Alzette- ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen Gibraltariksi.
+
+### 63.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+================ KOHTA 64 (maa:LVA) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Latvia (maa)
+Tietoruudun teksti: Latvia on Baltian maista keskimmäinen: Viro pohjoisessa, Liettua etelässä ja Itämeri lännessä. Riika on Baltian suurin kaupunki, ja sen keskustassa on yli 700 jugendtaloa — enemmän kuin missään muualla maailmassa.
+
+Korkokartta on melkein kokonaan vihreä, eikä se ole kartan vika: Latviassa ei ole vuoria, vaan metsää ja matalia kumpuja. Pohjoisesta työntyy maahan syvä lovi, Riianlahti, ja sen pohjukkaan perustettiin Riika vuonna 1201. Ruskeampia laikkuja näkyy vain keskellä maata ja kaakossa, missä maa kohoaa loiviksi ylängöiksi.
+
+Latvia ja liettua ovat maailman ainoat elossa olevat balttilaiset kielet, ja Latgalen maakunnassa puhutaan vielä omaa latgalia. Yhden tempun tasainen maa silti tekee: lännessä, Kuldīgan kohdalla, joki putoaa kalliokynnyksen yli niin leveänä, ettei Euroopassa ole leveämpää putousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Menovinkit] Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa museoesinettä, sanomalehdet vuodesta 1822, ensimmäisten laulujuhlien jäljet vuodelta 1873 ja kolmetoista kameraa lintujen pesissä.
+
+### 64.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+================ KOHTA 65 (kaupunki:riika) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Riika (kaupunki)
+Tietoruudun teksti: Riika on Latvian pääkaupunki ja Baltian suurin kaupunki: asukkaita on noin 600 000. Se kasvoi Väinäjoen suulle, sillä leveää ja syvää jokea pitkin pääsi laivalla sisämaahan asti. Piispa Albert perusti kaupungin vuonna 1201, se liittyi Hansaliittoon 1282 ja rikastui viljasta, pellavasta ja hirsistä. Riian yli hallitsivat vuorollaan saksalaiset ritarit, Puola, Ruotsi ja Venäjä.
+
+Vanhassakaupungissa talot ovat kapeita ja korkeita, koska tontista maksettiin leveyden mukaan. Keskiaikainen muuri purettiin 1800-luvulla, eikä sen paikalle rakennettu taloja vaan puisto ja kanava. 1900-luvun vaihteessa Riika kasvoi nopeammin kuin melkein mikään muu Euroopan kaupunki, ja uusiin kortteleihin nousi jugendtaloja, joita on säilynyt yli seitsemänsataa.
+
+Ensimmäinen maailmansota katkaisi kasvun: väkiluku romahti 517 500:sta alle 190 000:een, kun tehtaat ja väki evakuoitiin itään. Latvia itsenäistyi 1918…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Riika] Baltian suurin kaupunki kasvoi Väinäjoen suulle kauppapaikaksi. Vanhassakaupungissa talot ovat kapeita ja korkeita, ja jokaisella niistä on oma tarinansa.
+
+### 65.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI

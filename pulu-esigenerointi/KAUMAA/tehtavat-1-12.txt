@@ -1,0 +1,178 @@
+================ KOHTA 56 (kaupunki:rooma) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rooma (kaupunki)
+Tietoruudun teksti: Rooma on Italian pääkaupunki seitsemällä kukkulalla Tiber-joen varrella, noin 25 kilometriä merestä ylävirtaan. Tarun mukaan sen perustivat susiemon kasvattamat veljekset Romulus ja Remus vuonna 753 eaa.; todellisuudessa kaupunki kasvoi kukkuloiden kylistä. Se oli ensin kuningaskunta, sitten tasavalta ja lopulta keisarikunta, jonka raja ulottui Skotlannista Egyptiin.
+
+Roomalaiset olivat ennen kaikkea insinöörejä: he vetivät teitä, siltoja ja viemäreitä sekä yksitoista akveduktia, jotka toivat vuorilta vettä painovoimalla. Yksi niistä syöttää yhä Trevin suihkulähdettä. He keksivät myös betonin, joka kovettuu veden alla: Pantheonin kupoli on yhä maailman suurin raudoittamaton betonikupoli.
+
+Valtakunnan hajottua kaupunki kutistui: 1300-luvulla siellä asui noin 20 000 ihmistä, ja karja laidunsi Forumilla. Paavit rakensivat sen uudelleen, ja renessanssin ja barokin aikana syntyivät Pietarink…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma] Kaupunki, jonka areenan alla on kellari hisseineen, jonka aukiolla marmorinen norsu kantaa obeliskia ja jonka kuuluisimpaan lähteeseen vesi tulee yhä antiikin akveduktia pitkin.
+
+### 56.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+================ KOHTA 57 (kaupunki:sisilia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sisilia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Sisilia (kaupunki)
+Tietoruudun teksti: Sisilia on Välimeren suurin saari, lähes 26 000 neliökilometriä, ja muodoltaan kolmio — siitä juontuu sen antiikin nimi Trinacria. Mantereelle on Messinansalmen yli kapeimmillaan vain kolme kilometriä, mutta siltaa ei vieläkään ole: junat ajetaan yhä vaunuittain lautan kannelle. Saaren yllä kohoaa Etna, Euroopan korkein aktiivinen tulivuori, yli 3 300 metriä.
+
+Sisilia on ollut kaikkien maa. Foinikialaiset ja kreikkalaiset perustivat sinne siirtokuntia, roomalaiset tekivät siitä valtakunnan viljavaraston, arabit toivat sitrushedelmät ja sokeriruo’on, ja normannit rakensivat kirkkoja, joissa on arabialaisia kupoleita ja bysanttilaisia mosaiikkeja. Jokainen valloittaja jätti jälkensä myös kieleen ja ruokaan.
+
+Kivessä se näkyy yhä: Agrigenton temppelilaakso on kreikkalaisten temppelirivi meren yllä, Piazza Armerinan roomalaishuvilassa on 3 500 neliömetriä mosaiikkia, ja Syrakusan kallioon h…
+Isoisän matkakirjamerkintä: Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Sisilia] Saari, jossa nukketeatterin ritarit taistelevat narujen varassa, leivos täytetään vasta tilauksesta, ja torilla huudetaan laulaen.
+
+### 57.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+================ KOHTA 58 (maa:LIE) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liechtenstein (maa)
+Tietoruudun teksti: Liechtensteinin ruhtinaskunta, perustuslaillinen perinnöllinen monarkia (ruhtinaskunta, ruhtinaalla vahva asema)
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kohdekartta / Kohdekartta: Kunstmuseum Liechtenstein] 2000 Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000. Ulkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin…
+- [Vaduz — kaupunkilehti / Vaduz: Taidemuseo mustana laatikkona] Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.
+
+### 58.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+================ KOHTA 59 (kaupunki:vaduz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vaduz
+Maa, jossa pelaaja on: Liechtenstein
+Näkymä: kartta
+Pelaaja katsoo kartalla: Vaduz (kaupunki)
+Tietoruudun teksti: Vaduz on Liechtensteinin pääkaupunki, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.
+
+Nimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.
+
+Isoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. Rautatie oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan Euroopan neljänneksi pienin.
+Isoisän matkakirjamerkintä: Vaduz, lokakuussa 1873. Maan pääkaupunki on kylä, jossa uusi neogoottilainen kirkko vihittiin juuri ja vanha kappeli odottaa purkua. Armeijaa ei ole ollut viiteen vuoteen: se lakkautettiin 1868, kun sotilaiden pito kävi liian kalliiksi. Ruhtinas asuu Wienissä, mutta linna katsoo kylää rinteeltä. Rautatie kulkee maan läpi viime vuodesta, Vaduzin ohi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vaduz — kaupunkilehti / Vaduz] Vaduz on Reinin laaksossa, jyrkän rinteen juurella, ja linna kohoaa kaupungin yllä lähes joka kulmasta näkyvänä. Pieni pääkaupunki on yhden ruhtinaskunnan hallinnon ja museoiden koti.
+- [Vaduz — kaupunkilehti / Pieni valtio kaupungin ympärillä: Vaduz, joka poltettiin 1499] Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Linnan rakentajiksi oletetaan Werdenberg-Sargansin kreivit, ja Liechtensteinin suku osti sen 1712.
+
+### 59.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+================ KOHTA 60 (maa:LTU) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Pelaaja katsoo kartalla: Liettua (maa)
+Tietoruudun teksti: Liettua on Baltian maista suurin ja eteläisin. 1400-luvulla Liettuan suuriruhtinaskunta oli Euroopan laajin valtio ja ulottui Itämereltä Mustallemerelle; se oli myös Euroopan viimeinen pakanallinen valtio.
+
+Korkokartalla maa on melkein kokonaan vihreä, eikä se ole kartan vika: Liettuassa ei ole vuoria, vaan loivia harjuja, metsää ja järviä. Lännessä erottuu ohut hiekkakaistale, Kuurinkynnäs, joka sulkee taakseen oman lahtensa; sen dyynit nousevat kuudenkymmenen metrin korkeuteen. Idässä maa on täynnä pieniä järviä.
+
+Kristinusko tuli Liettuaan vasta 1387, myöhemmin kuin mihinkään muuhun Euroopan maahan, ja liettuan kieli on elävistä indoeurooppalaisista kielistä arkaaisin. Šiauliain lähellä kohoaa Ristien mäki, jolle ihmiset ovat tuoneet jo yli satatuhatta ristiä. Ja yhdessä itäisistä järvistä on saari, jolla seisoo kokonainen punatiilinen linna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Menovinkit] Liettua on siirtänyt aarteensa ruudulle: yksi mies maalasi ja sävelsi samat unet, kirjaston holvit on maalattu täyteen kuvia, linnan esineitä saa pyörittää sormella ja lintujen pesille näkee suorana.
+
+### 60.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI

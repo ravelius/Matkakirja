@@ -1,0 +1,172 @@
+================ KOHTA 66 (maa:MCO) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kaupunkilehti / Monaco] Monaco on maailman toiseksi pienin valtio, ja sen mäkinen kaupunki mahtuu kallion, sataman ja rinteen alueelle. Grimaldien suku on hallinnut linnoitettua kalliota lyhyin keskeytyksin vuodesta 1297, ja 1800-luvulla sen rannalle nousi Monte Carlo.
+
+### 66.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+### 66.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+### 66.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+### 66.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+### 66.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+================ KOHTA 67 (kaupunki:monaco) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kaupunkilehti / Monaco] Monaco on maailman toiseksi pienin valtio, ja sen mäkinen kaupunki mahtuu kallion, sataman ja rinteen alueelle. Grimaldien suku on hallinnut linnoitettua kalliota lyhyin keskeytyksin vuodesta 1297, ja 1800-luvulla sen rannalle nousi Monte Carlo.
+
+### 67.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+### 67.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+### 67.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+### 67.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+### 67.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+================ KOHTA 68 (maa:MDA) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+
+### 68.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+### 68.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+### 68.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+### 68.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+### 68.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+================ KOHTA 69 (kaupunki:chisinau) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chișinău — kaupunkilehti / Chișinău] Chișinău kasvoi lähteen ääreen rakennetusta luostarikylästä Bessarabian keskukseksi. Isoisän matkavuonna 1873 se oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa.
+- [Chișinău — kaupunkilehti / Kirjailijoiden Chișinău] Chișinăussa oli 1820-luvulla asunut venäläinen runoilija, ja myöhemmin kaupunki sai kokonaisen kujan kirjailijoiden rintakuvia. Sivu kertoo, miten kirjallisuus jätti jälkensä kaupunkiin.
+
+### 69.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+### 69.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+### 69.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+### 69.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+### 69.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+================ KOHTA 70 (maa:MKD) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Tikveš, Makedonian viinilaakso] yli 2 500 vuotta — Kavadarcin ja Negotinon ympärillä levittäytyvä Tikvešin tasanko on Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan viiniä valmistetun yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii rypäleille. Paikallisia punaviinilajikkeita ovat vranec ja kratošija, ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää tilojen pihat. Kavadarcin kaupunki on alueen keskus, ja monet viinitilat ottavat vieraita vastaan.
+- [Skopje — kohdekartta / Kohdekartta: Makedonia-aukio] 2000-luku (uudistettu) Lähteen mukaan Makedonia-aukio on Skopjen pääaukio, ja sen pinta-ala on noin 18 500 neliömetriä. Se sijaitsee keskustassa Vardarin molemmin puolin, ja sille yhtyvät muun muassa Maksim Gorki-, Dimitar Vlahov- ja Makedonia-katu. Aukio kuuluu keskustan uudistushankkeeseen, joka toteutettiin 2000-luvulla. Maksim Gorki -kadun japaninkirsikat aloittavat keväisin aasialaisten kulttuuritapahtumien sarjan. Makedonia-katu yhdistää aukion vanhaan rautatieasemaan, ja aukiolla pidetään joulumarkkinat ja muita tapahtumia. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut. Rautatieasema oli juuri valmistunut Vardarin eteläpuolelle, ja lähteen mukaan talouselämä alkoi siirtyä …
+
+### 70.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI
+
+### 70.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI
+
+### 70.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI
+
+### 70.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI
+
+### 70.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI

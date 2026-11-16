@@ -1,0 +1,225 @@
+### v1-180
+KOHDE: kaupunki:marseille
+KYSYMYS: Miten Marseille sai alkunsa?
+VASTAUS: Ai tota, tää on vanhaa tavaraa. Kreikkalaiset merenkulkijat perustivat Marseillen noin vuonna 600 eaa. nimellä [[Massalia]], ja kaupunki syntyi luonnonsatamaan, joka on nykyisin [[Vanhasatama]]. Perimätiedon mukaan perustaja [[Protis]] vieraili paikallisen päällikön juhlassa, jossa päällikön tytär Gyptis valitsi hänet puolisokseen ojentamalla hänelle vesimaljan. Tarina on legenda, mutta kaupunki oli totisesti todellinen: se on Ranskan vanhimpia kaupunkeja ja yhä tärkeä satama. Onpas siitä pitkä aika.
+
+### v1-181
+KOHDE: kaupunki:marseille
+KYSYMYS: Mikä on bouillabaisse?
+VASTAUS: Joo, tost minä osaan kertoo. Bouillabaisse on marseillelainen kalakeitto, joka on perinteisesti valmistettu paikallisista kallioiden ja rannikon kaloista. Keittoon kuuluu muun muassa [[sahrami]], tomaattia, oliiviöljyä ja yrttejä, ja se tarjoillaan tavallisesti leivän ja valkosipulisen [[rouille]]-kastikkeen kanssa. Perinteisesti kala ja liemi syödään erikseen. Marseillessa ruoan alkuperää vaalitaan, ja aitoa annosta on tarjolla satamakaupungin ravintoloissa. Pulla ei tähän sovi, mutta leipä kyllä, ja sitä minä olen aina seurannut.
+
+### v1-182
+KOHDE: kaupunki:marseille
+KYSYMYS: Mikä tekee Marseillen saippuasta erikoisen?
+VASTAUS: Hetkinen ny, tää tuoksuu hyvältä. Marseillen saippuaa on valmistettu [[oliiviöljystä]] jo noin kuudensadan vuoden ajan, ja vuoden 1688 asetus varasi nimen saippualle, joka valmistettiin vain oliiviöljystä. Perinteinen saippua on kiinteä, vihreänruskea tai valkoinen palasaippua, jossa ei ole keinotekoisia väriaineita. Kaupunki oli pitkään saippuanvalmistuksen keskus, ja raaka-aineet tulivat [[Provencen]] oliivitarhoista ja satamasta. Nykyisin nimeä käytetään laajasti, mutta kaikki tuotteet eivät noudata vanhaa reseptiä. Hyvältä se tuoksuu, jos kyyhky saa sanoa.
+
+### v1-183
+KOHDE: kaupunki:marseille
+KYSYMYS: Mikä on Notre-Dame de la Garde Marseillessa?
+VASTAUS: No jopas, tää on tuttu. Notre-Dame de la Garde on kukkulalla sataman yllä sijaitseva [[basilika]], ja kaupunkilaiset kutsuvat sitä nimellä la Bonne Mère eli hyvä äiti. Kirkon huipulla seisoo suuri kullattu [[Neitsyt Marian]] patsas, joka näkyy kauas merelle, ja merimiehet ja kalastajat ovat pitkään pitäneet sitä suojelijanaan. Nykyinen rakennus on peräisin 1800-luvulta, mutta paikalla on ollut kappeli paljon aiemmin. Kukkulan päältä avautuu näkymä koko kaupungin ja lahden yli. Ylhäältä katsottuna se on lähes yhtä kullattu kuin minä haluaisin olla.
+
+### v1-184
+KOHDE: kaupunki:marseille
+KYSYMYS: Mitä ovat Calanques Marseillen lähellä?
+VASTAUS: Annas ku mietin. Calanques ovat Marseillen eteläpuolella [[Välimeren]] rannikolla sijaitsevia jyrkkiä [[kalkkikiven]] reunustamia poukamia, joissa valkoiset kalliot putoavat turkoosiin veteen. Alue on suojeltu [[kansallispuisto]]na, ja siellä voi kävellä, uida ja kiipeillä. Kesällä pääsyä rajoitetaan toisinaan metsäpalovaaran vuoksi. Rannikon kasvillisuus on kuivaa ja tuoksuvaa pensaikkoa. Hyvin pitkä rantaviiva, ja minä olen sen kaiken katsonut ylhäältä.
+
+### v1-185
+KOHDE: maa:GBR
+KYSYMYS: Mistä neljästä maasta Yhdistynyt kuningaskunta koostuu?
+VASTAUS: Tuota niin, tää menee usein sekaisin. Yhdistyneen kuningaskunnan muodostavat [[Englanti]], [[Skotlanti]], [[Wales]] ja [[Pohjois-Irlanti]]. Englanti, Skotlanti ja Wales ovat Britannian saarella, ja Pohjois-Irlanti on Irlannin saaren koillisosassa. Maiden pääkaupungit ovat Lontoo, Edinburgh, Cardiff ja Belfast. Jokaisella maalla on omat perinteensä, ja Skotlannilla, Walesilla ja Pohjois-Irlannilla on oma itsehallintonsa. Yhteinen valtionpäämies ja parlamentti pitävät kokonaisuuden koossa. Näin ainakin kartta sanoo, ja sitä minä pidän luotettavana.
+
+### v1-186
+KOHDE: maa:GBR
+KYSYMYS: Miksi Britanniassa ajetaan vasemmalla?
+VASTAUS: Odotas vähän, tää on vanha kysymys. Vasemmanpuoleinen liikenne on peräisin ajalta ennen autoja: yleisen selityksen mukaan ratsastajat pitivät oikean kätensä vapaana miekkaa varten ja ratsastivat siksi tien vasemmalla puolella. Käytäntö vakiintui laiksi myöhemmin, mutta tutkijat eivät ole täysin yksimielisiä siitä, miten alkuperäinen tapa syntyi. Britannia ja sen entiset siirtomaat ovat pitäneet [[vasemmanpuoleisen liikenteen]] pitkään, kun taas Manner-Euroopassa siirryttiin enimmäkseen oikeanpuoleiseen liikenteeseen [[Napoleonin]] ajoista lähtien. En ole itse tästä aivan varma. Lentäjänä minulla ei ole puolta.
+
+### v1-187
+KOHDE: maa:GBR
+KYSYMYS: Mikä on brittiläinen iltapäivätee?
+VASTAUS: Hyvä kysymys tuo. [[Iltapäivätee]] on brittiläinen tapa nauttia teetä ja pieniä purtavia noin neljän aikaan iltapäivällä. Tarjolle tuodaan teetä, pieniä voileipiä sekä [[scones]]-leivonnaisia, jotka syödään hillon ja paksun kerman kanssa, ja usein jotain makeaa. Tavan sanotaan yleistyneen 1800-luvun puolivälissä, kun ylimystön naiset alkoivat nauttia pienen aterian lounaan ja myöhäisen päivällisen välissä. Nykyisin se on useimmille erikoisuus, jota nautitaan hotelleissa ja teehuoneissa, ja arjessa tee juodaan tavallisesti maidon kanssa. Scone on lähin vastine pullalle, ja sen minä hyväksyn.
+
+### v1-188
+KOHDE: maa:GBR
+KYSYMYS: Milloin teollinen vallankumous alkoi Britanniassa?
+VASTAUS: Joo, tän minä tiedän. Teollinen vallankumous alkoi Britanniassa 1700-luvun puolivälin tienoilla, ja sen keskeisiä tekijöitä olivat [[höyrykone]], koneellinen kehruu ja kutominen sekä hiilen ja raudan runsaus. Skotlantilainen keksijä [[James Watt]] paransi höyrykonetta 1700-luvun jälkipuoliskolla, ja ensimmäinen höyryveturilla liikennöity yleinen rautatie avattiin 1825. Tehtaat keskittyivät kaupunkeihin kuten [[Manchester]]iin, ja ne vetivät työläisiä maaseudulta. Muutos levisi muualle Eurooppaan 1800-luvulla. Hurja ketju ihmisten arjessa, ja minä katselin sitä katolta.
+
+### v1-189
+KOHDE: maa:GBR
+KYSYMYS: Mistä jalkapallon säännöt ovat peräisin?
+VASTAUS: Kato, tää on kunnia-asia. Jalkapalloa on pelattu eri muodoissa vuosisatoja, mutta nykyisten sääntöjen kirjoittaminen alkoi Britanniassa 1800-luvulla. Lontoossa perustettiin vuonna 1863 [[Football Association]], joka yhtenäisti pelin säännöt ja erotti jalkapallon rugbysta, jossa palloa saa kantaa käsissä. Pelien suosio kasvoi tehdaskaupungeissa, ja niiden työläiset perustivat omia seuroja. Samoilla saarilla kehittyivät myös [[rugby]] ja [[kriketti]]. Tänä päivänä jalkapalloa pelataan kaikkialla maailmassa, ja siitä on syytä olla ylpeä, vaikka aina ei ole voittanut.
+
+### v1-190
+KOHDE: kaupunki:lontoo
+KYSYMYS: Miten Lontoon suuri tulipalo vuonna 1666 sai alkunsa?
+VASTAUS: Hmm, tää on vanha ja vakava tarina. Palo syttyi yöllä 2. syyskuuta 1666 leipuri Thomas Farrinerin leipomosta [[Pudding Lane]]lla, ja se levisi nopeasti, koska kaupunki oli puutalojen ja kapeiden katujen täyttämä ja kesä oli ollut kuiva. Palo kesti neljä päivää, ja noin 13 000 taloa tuhoutui. Tapahtumasta kirjoitti silminnäkijänä laivaston virkamies [[Samuel Pepys]] päiväkirjaansa. Palon jälkeen puujulkisivut kiellettiin, ja [[Pyhän Paavalin katedraali]] rakennettiin uudelleen Christopher Wrenin piirustusten mukaan. Siitä on nyt yli kolmesataa vuotta, ja kaupunki on kasvanut sen tuhkasta.
+
+### v1-191
+KOHDE: kaupunki:lontoo
+KYSYMYS: Milloin Lontoon metro avattiin ja millainen se oli?
+VASTAUS: Annas ku mietin. Lontoon metro avattiin vuonna 1863, ja sitä pidetään maailman ensimmäisenä maanalaisena kaupunkijunana. Ensimmäinen rata kulki [[Metropolitan Railway]] -yhtiön lukuun Paddingtonin ja Farringdonin välillä keskustan alla, ja junia veti aluksi höyryveturit. Savu oli ongelma, ja vasta myöhemmin siirryttiin sähköön. Nykyisin verkkoa kutsutaan nimellä [[Tube]], ja sitä käyttävät päivittäin miljoonat ihmiset. Vanhimmat osat ovat tänä päivänä yli puolitoista vuosisataa vanhoja. Ylhäältä sen vain arvaa, mut kyllä se jyskyttää.
+
+### v1-192
+KOHDE: kaupunki:lontoo
+KYSYMYS: Miksi Lontoossa on kaksi keskustaa?
+VASTAUS: Odotas vähän, tää on mielenkiintoinen. Lontoon keskustassa on tosiaan kaksi eri kaupunkia. Rahaa tekevä City of London on vain 2,9 neliökilometrin kokoinen alue, jolla on omat säännöt ja oma hallintonsa, ja siellä sijaitsevat muun muassa [[Englannin pankki]] ja suuri osa rahoitusalan yrityksistä. Sen vieressä on [[Westminster]], jossa ovat parlamentti, hallinto ja kuninkaalliset seremoniat. Parlamenttitalon kellotornin suurta kelloa kutsutaan nimellä [[Big Ben]]. Kaksi eri maailmaa vierekkäin, ja minä lensin välillä niiden yli ilman viisumia.
+
+### v1-193
+KOHDE: kaupunki:lontoo
+KYSYMYS: Miksi lontoolaisten taksikuskien pitää opetella koko kaupunki?
+VASTAUS: Joo, tän minä tiedän. Lontoon perinteisten [[mustien taksien]] kuljettajien täytyy suorittaa vaativa koe nimeltä [[the Knowledge]], jossa opitaan ulkoa noin 25 000 katua ja tärkeät paikat Charing Crossin ympäriltä. Opiskelu kestää usein vuosia, eikä apuna saa käyttää karttaa. Koe on tehty varmistamaan, että kuljettaja löytää perille kaupungin mutkaisilla ja vanhoilla kaduilla ilman navigaattoria. Nykyään navigaattorit ovat tavallisia, mutta mustien taksien kuljettajat pitävät tästä perinteestä kiinni. Minulla ei ole koskaan ollut karttaa, vaan nenä ja oikea suunta.
+
+### v1-194
+KOHDE: kaupunki:lontoo
+KYSYMYS: Montako kieltä Lontoossa puhutaan?
+VASTAUS: Kas vaan, hyvä kysymys. Lontoo on yksi Euroopan monikulttuurisimmista kaupungeista, ja lähteiden mukaan siellä puhutaan yli kolmeasataa eri kieltä, vaikka tarkka luku riippuu laskutavasta. Kaupungin eri osissa on omia yhteisöjään: [[Brick Lane]] on tunnettu bangladeshilaisesta ravintolakulttuuristaan, ja [[Notting Hillin]] karnevaali tuo kaduille karibialaista musiikkia ja ruokaa joka elokuu. Tällainen kirjo on seurausta satamakaupungin ja entisen valtakunnan historiasta sekä nykyisestä muuttoliikkeestä. Minä ymmärrän kyllä vain kyyhkyn kieltä.
+
+### v1-195
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Mitä Edinburghin linnassa säilytetään?
+VASTAUS: Hyvä kysymys tuo. Edinburghin linna kohoaa sammuneen tulivuoren kalliolla kaupungin yllä, ja sen sisällä säilytetään Skotlannin kruununinsignioita eli [[Skotlannin kruununjalokivet]], joihin kuuluvat kruunu, valtikka ja miekka. Linnassa on myös [[Kohtalonkivi]], jolla Skotlannin kuninkaat on perinteisesti kruunattu ja joka palautettiin Skotlantiin vuonna 1996. Linna on ollut linnoitus, kuninkaallinen asunto ja sotilaskasarmi, ja nykyisin se on yksi Skotlannin suosituimmista nähtävyyksistä. Täältä on hyvä näkymä kaupungin yli. Minä kävin siellä vain kurkistamassa.
+
+### v1-196
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Mitä Edinburghissa tapahtuu joka elokuu?
+VASTAUS: Ai se, tän minä tiedän. Elokuussa Edinburghissa järjestetään useita festivaaleja yhtä aikaa, ja tunnetuin niistä on [[Edinburgh Fringe]], jonka ohjelmassa on tuhansia esityksiä: komiikkaa, teatteria, tanssia ja musiikkia. Festivaali sai alkunsa vuonna 1947, kun osa taiteilijoista esiintyi virallisen kansainvälisen festivaalin ulkopuolella omin päin. Esiintyjiä näkee kaduilla ja pihoilla, ja kaupungin [[Royal Mile]]llä on usein tungosta. Kaupungin asukasmäärä kasvaa festivaalin ajaksi huomattavasti. Ylhäältä se näyttää kauniilta sekasorrolta.
+
+### v1-197
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Mitä Skotlannissa syödään Burnsin yönä?
+VASTAUS: Selvä juttu, tää on makuasia. Burnsin yötä vietetään 25. tammikuuta skotlantilaisen runoilijan [[Robert Burns]]in syntymän muistoksi. Juhlan pääruoka on [[haggis]], perinteinen annos, joka valmistetaan lampaan sisäelimistä, kaurasta ja mausteista, ja sitä tarjoillaan kasvisten, perunan ja lanttumuhennoksen kanssa. Illallisella luetaan runoja, ja ruoan kanssa nautitaan usein [[whisky]]ä. Haggis kuulostaa oudolta, mutta siitä pidetään Skotlannissa laajalti. Pullaa ei tähän tilaisuuteen kuulu, mikä on minusta suuri puute.
+
+### v1-198
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Miksi Edinburghissa on vanhakaupunki ja uusikaupunki?
+VASTAUS: Hetkinen ny, tää on rakennushistoriaa. Vanhakaupunki kasvoi kapealle harjanteelle linnan alapuolelle, ja kun tilaa ei ollut sivusuunnassa, talot rakennettiin korkeiksi ja kadut jäivät ahtaiksi. Pääkatuna on [[Royal Mile]], jonka varrella on kapeita sivukujia. 1760-luvulla alettiin rakentaa notkon toiselle puolelle suunniteltua uuttakaupunkia, jonka kadut ovat suoria ja aukiot avaria, ja sen suunnitelman laati [[James Craig]]. Kaksi hyvin erilaista kaupunginosaa on yhdessä [[Unescon]] maailmanperintökohde. Hyvä esimerkki siitä, että kaupunki voi kasvaa kahteen suuntaan.
+
+### v1-199
+KOHDE: kaupunki:edinburgh
+KYSYMYS: Ketkä Skotlannin valistuksen ajattelijat asuivat Edinburghissa?
+VASTAUS: Joo, tän minä tiedän. Edinburghin kaduilla kävelivät 1700-luvulla filosofi [[David Hume]], taloustieteilijä [[Adam Smith]] ja geologi [[James Hutton]]. Hume kirjoitti tiedosta ja ihmisluonnosta, Smith tunnetaan teoksestaan Kansojen varallisuus, ja Hutton päätteli kallioita tutkimalla, että maapallo on paljon vanhempi kuin tuolloin yleisesti uskottiin. Aikaa kutsutaan Skotlannin valistukseksi, ja yliopisto, joka perustettiin 1582, oli keskeinen paikka. Samoilla kaduilla ajateltiin siis maailmaa uusiksi. Kyyhky ei ole kirjoittanut kirjaa, mutta on kantanut monta.
+
+### v1-200
+KOHDE: maa:GRC
+KYSYMYS: Mikä on Kreikan korkein vuori ja miksi se on tunnettu?
+VASTAUS: Annas ku mietin. Se on tuttu jo ylhäältä päin. Kreikan korkein vuori on [[Olympos]], jonka huippu kohoaa noin 2 900 metriin. Antiikin kreikkalaiset uskoivat, että jumalat asuivat sen laella ja että [[Zeus]] hallitsi heitä sieltä käsin. Nykyään vuori on kansallispuisto, ja sinne vaelletaan kesäisin muun muassa [[Litochoron]] kaupungista. Pilvissä se tosin piileskelee usein.
+
+### v1-201
+KOHDE: maa:GRC
+KYSYMYS: Mitä oikeaan kreikkalaiseen salaattiin kuuluu?
+VASTAUS: Hetkinen ny. Tost minä osaan kertoo. Kreikkalainen salaatti eli [[horiátiki]] koostuu kypsistä tomaateista, kurkusta, punasipulista ja oliiveista, ja päällä on iso lohko [[fetaa]] sekä oliiviöljyä ja oreganoa. Lehtisalaattia siinä ei perinteisesti ole. Feta tehdään lampaanmaidosta tai seoksesta, jossa on enintään 30 prosenttia vuohenmaitoa, ja nimi on suojattu EU:ssa. Ei se salaatti kyl ilman fetaa ole salaatti.
+
+### v1-202
+KOHDE: maa:GRC
+KYSYMYS: Miten Kreikan itsenäisyyssota ottomaaneja vastaan alkoi?
+VASTAUS: Joo, tän minä tiedän. Se on kuitenkin raskaampi tarina. Kreikkalaisten kansannousu ottomaanien valtaa vastaan alkoi vuonna 1821, kun kapina syttyi sekä [[Peloponnesoksella]] että Tonavan ruhtinaskunnissa. Taistelut jatkuivat vuosia, ja ratkaisevaa oli suurvaltojen väliintulo: Britannia, Ranska ja Venäjä tukivat kreikkalaisia, ja vuonna 1827 ottomaanien ja Egyptin yhteinen laivasto tuhoutui [[Navarinon]] meritaistelussa. Itsenäinen Kreikka tunnustettiin vaiheittain, ja sen ensimmäiseksi kuninkaaksi tuli baijerilainen [[Otto]]. Onpa siitä onneksi pitkä aika.
+
+### v1-203
+KOHDE: maa:GRC
+KYSYMYS: Mitä ovat Meteoran luostarit ja miten niihin pääsi?
+VASTAUS: Ai se. Siellä kyyhky tuntee olonsa kotoisaksi. [[Meteora]] on Thessalian laidalla kohoava joukko kalliopylväitä, joiden laelle munkit rakensivat luostareita keskiajalta alkaen, noin 1300-luvulta. Ylös päästiin pitkään vain tikkaita, köysiä ja verkkoja pitkin, ja tarvikkeet nostettiin laelle korilla, ennen kuin kallioon hakattiin portaat. Toiminnassa on nykyään enää kourallinen luostareita, ja [[Thessalian]] lakeudelta kalliot näkyvät kauas. Korkealla on hyvä rukoilla ja vielä parempi lentää.
+
+### v1-204
+KOHDE: maa:GRC
+KYSYMYS: Miksi kreikkalaiset ovat merenkulun suurvalta?
+VASTAUS: Kas vaan. Kyl minä sen tiedän. Kreikkalaiset omistavat maailman suurimman kauppalaivaston, ja syyt ovat maantieteessä ja historiassa. Maa on vuoristoinen, viljelymaata on vähän, ja rannikko sekä tuhannet saaret pakottivat jo antiikissa katsomaan merelle; [[Pireuksen]] satama on ollut Ateenan portti vuosisatoja. Laivanvarustajasuvut ovat siirtäneet alaa sukupolvelta toiselle, ja suuri osa laivoista kulkee usein muun maan lipun alla. Siinä [[kauppalaivasto]] kasvoi, ja kyyhky vain lensi.
+
+### v1-205
+KOHDE: kaupunki:ateena
+KYSYMYS: Mikä Parthenon oli alun perin ja mitä sille on tapahtunut?
+VASTAUS: No niin, tämä on isoin kaikista. Parthenon rakennettiin 400-luvulla eaa. jumalatar [[Athenan]] temppeliksi [[Akropoliin]] laelle, ja se valmistui vuonna 432 eaa. Myöhemmin rakennus toimi kirkkona ja ottomaanien aikana moskeijana. Venetsiläisten piirityksessä vuonna 1687 siellä säilytetty ruutivarasto räjähti, ja katto sekä suuri osa seinistä tuhoutui. Rauniot ovat silti yksi Euroopan tunnetuimmista kohteista. Siivin katsottuna se on vielä komeampi kuin kuvissa.
+
+### v1-206
+KOHDE: kaupunki:ateena
+KYSYMYS: Miten demokratia toimi antiikin Ateenassa?
+VASTAUS: Tuota niin. Tästä on kirjoitettu enemmän kuin yhdestäkään toisesta kaupungista. Ateenan demokratia kehittyi 500-luvulla eaa., ja sen uudistajana pidetään [[Kleisthenesta]]. Päätökset teki [[kansankokous]], joka kokoontui usein Pnyx-kukkulalla, ja moniin virkoihin valittiin kansalaisia arvalla. Äänioikeus oli kuitenkin vain aikuisilla miespuolisilla kansalaisilla, ei naisilla, orjilla tai ulkomaalaisilla. Makedonian valta lopetti järjestelmän sellaisenaan 300-luvun lopulla eaa. Lopulta se jäi muistiin, vaikka kokoukset olivat varmasti pitkiä.
+
+### v1-207
+KOHDE: kaupunki:ateena
+KYSYMYS: Kuka voitti ensimmäisen olympiamaratonin Ateenassa?
+VASTAUS: Ai tota. Tämä on mukava tarina. Nykyajan ensimmäisissä olympialaisissa Ateenassa vuonna 1896 maratonin voitti kreikkalainen [[Spyridon Louis]], joka oli ammatiltaan vesikantaja. Matka juostiin [[Marathonin]] kaupungista Ateenaan, ja maali oli marmorisella [[Panathinaikon stadionilla]]. Katsojat ottivat voittajan vastaan innoissaan, sillä kreikkalaisille kisojen ensimmäinen kotivoitto oli erityisen tärkeä. Vesikantajan ura osoittautui hyväksi harjoitukseksi.
+
+### v1-208
+KOHDE: kaupunki:ateena
+KYSYMYS: Mitä ateenalaiset syövät kadulla pikapurtavaksi?
+VASTAUS: Odotas vähän. Nälkäinen kyyhky on hyvä asiantuntija. Ateenan kaduilla syödään tavallisesti [[souvlakia]], eli grillattuja lihavartaita, joita tarjotaan pitaleivän kanssa, sekä [[gyrosta]], jossa viipaloitua lihaa kääritään pitaan tomaatin, sipulin ja jogurttikastikkeen kanssa. Aamulla moni ostaa kojulta [[koulourin]], eli seesamin peittämän leipärenkaan. Turkissa vastaava on simit. Koulouri on lähin asia pullaan, minkä kadulta saa.
+
+### v1-209
+KOHDE: kaupunki:ateena
+KYSYMYS: Miksi Ateenan metroasemilla on museoesineitä?
+VASTAUS: Mmm— tämä on yllättävän hyvä. Kun Ateenan uusia metrolinjoja rakennettiin 1990-luvun lopulla, kaivauksissa löytyi tuhansia antiikin esineitä: kaivoja, pajoja, hautoja ja arkipäivän tavaroita. Kun kaupunki on asuttu yli kolmetuhatta vuotta, joka kaivinkone osuu johonkin vanhaan. Löydöt eivät päätyneet vain varastoon, vaan joillakin asemilla niitä esitellään vitriineissä ja lasin alla, kuten [[Syntagman]] asemalla. Niin [[metro]] on osittain myös museo.
+
+### v1-210
+KOHDE: kaupunki:kreeta
+KYSYMYS: Mitä Knossoksen palatsista tiedetään?
+VASTAUS: Selvä juttu. Tästä riittäisi juttua pitkäksi aikaa. Knossoksen palatsi oli minolaisen kulttuurin keskus noin neljätuhatta vuotta sitten, ja siinä oli satoja huoneita, valokuiluja ja viemäreitä. Brittiläinen arkeologi [[Arthur Evans]] kaivoi paikkaa 1900-luvun alusta lähtien ja rekonstruoi osia siitä, mikä on aiheuttanut myös kiistaa. Hallinnon savitauluissa on muun muassa [[lineaari A]] -kirjoitusta, jota ei ole vieläkään pystytty lukemaan. Palatsin sokkeloisuudesta on kerrottu myös myyttiä [[Minotauroksesta]]. Eksyisin siellä heti.
+
+### v1-211
+KOHDE: kaupunki:kreeta
+KYSYMYS: Millainen on Samarian rotko Kreetalla?
+VASTAUS: Katotaas. Tämä on vaelluskohde, jota moni ei unohda. Samarian rotko sijaitsee saaren lounaisosassa [[Valkoisissa vuorissa]], ja sen läpi kävellään useita tunteja kansallispuiston poluilla Agia Roumelin rannalle. Rotko on avoinna vain lämpimänä aikana, sillä talvella tulvat tekevät reitistä vaarallisen. Rotkon vuoristossa elää harvinainen villivuohi [[kri-kri]]. Lopulta pääsee mereen, ja jalat kiittävät.
+
+### v1-212
+KOHDE: kaupunki:kreeta
+KYSYMYS: Miksi kreetalaista lyraa soitetaan polvella?
+VASTAUS: Hyvä kysymys tuo. Pienet asiat sen ovat. Kreetalainen lyra on kolmikielinen jousisoitin, jota pidetään pystyasennossa soittajan polvella tai reiden päällä eikä olkapäällä. Soittaja painaa kieliä kynnellä sivusta, eikä sormenpäällä päältä. Lyran kanssa soitetaan usein [[laoutoa]], pitkäkaulaista luuttua, ja musiikki säestää tansseja kuten [[pentozalista]] sekä lauluja, joita kutsutaan [[mantinadoiksi]]. Mahtaako kyyhky pitää sellaista polvellaan.
+
+### v1-213
+KOHDE: kaupunki:kreeta
+KYSYMYS: Mitä kreetalaiseen ruokavalioon kuuluu?
+VASTAUS: Sepä sattui: ruoka on mieluisin aihe. Kreetalainen ruoka perustuu [[oliiviöljyyn]], vihanneksiin, palkokasveihin, villiyrtteihin, kalaan ja vähäiseen lihaan sekä juustoon. Tunnettu on [[dakos]], eli kova ohraruskoleipä, jonka päällä on tomaattia ja pehmeää juustoa. Ruokavaliota on tutkittu paljon, koska sen on kuvattu olevan terveellinen. Tislattua [[rakia]] tarjotaan usein aterian päätteeksi. Pulla jäi nyt vähälle huomiolle.
+
+### v1-214
+KOHDE: kaupunki:kreeta
+KYSYMYS: Miksi muinainen Falassarnan satama on nykyään kuivalla maalla?
+VASTAUS: Nyt muistan: tämä on aito geologinen ihme. Kreetan länsirannikko kohosi vuoden 365 tienoilla voimakkaassa [[maanjäristyksessä]] useita metrejä, ja muinainen satama jäi kuivalle maalle. Falassarna oli antiikissa [[Polyrrhenian]] kaupungin satama, ja sen kivilaiturit ja altaat näkyvät yhä kaukana nykyisestä rannasta. Tapahtuma ajoittuu aikaan, jolloin Rooman valtakunta oli vielä yhtenä valtiona, noin 1650 vuotta sitten. Mielenkiintoista, mitä rannikko muistaa.
+
+### v1-215
+KOHDE: maa:HRV
+KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+VASTAUS: Kato, tämän näkee kyllä ylhäältä. Syy on maaston muodossa: [[Dinaarien Alppien]] selänteet kulkevat rannikon suuntaisesti, ja viimeisen [[jääkauden]] jälkeen merenpinta nousi ja tulvi ruhjelaaksot. Vedenpinnan yläpuolelle jääneet harjanteet muodostavat nyt pitkiä ja kapeita saaria, joita on yli tuhat. Siksi rannikko on kivinen ja jyrkkä, ja saaret asettuvat jonoon [[Adrianmeren]] pintaan. Kyyhkylle se on mainio välilaskupaikkojen ketju.
+
+### v1-216
+KOHDE: maa:HRV
+KYSYMYS: Mikä on glagoliittinen kirjoitus?
+VASTAUS: No jopas. Tämä on harvinainen aakkosto. Glagoliittinen kirjoitus on vanhin tunnettu slaavilainen aakkosto, ja sen luomisen kerrotaan alkaneen 800-luvulla [[Kyrilloksen]] ja Metodioksen lähetystyön yhteydessä. Kroatiassa sitä käytettiin kirkollisissa teksteissä pitkään, jopa 1900-luvulle asti, erityisesti Adrianmeren rannikolla ja saarilla. Tunnetuimpia säilyneitä esimerkkejä on noin vuodelta 1100 peräisin oleva [[Baškan tauluksi]] kutsuttu kivilaatta Krkin saarelta. Kirjaimet näyttävät minusta koristeilta, ei kirjoitukselta.
+
+### v1-217
+KOHDE: maa:HRV
+KYSYMYS: Mitä ovat fritule ja milloin niitä syödään?
+VASTAUS: Just niin, tästä pidän. Fritule ovat pieniä, uppopaistettuja taikinapalloja, joihin on yleensä sekoitettu rusinoita ja sitruunan tai appelsiinin kuorta sekä pieni määrä rommia tai grappaa. Päällä on tomusokeria. Niitä syödään erityisesti adventin ja joulun aikaan [[Dalmatian]] ja Istrian rannikolla, ja myös [[karnevaalin]] aikaan. Kroatia on siis pullan ystävälle varsin hyvä maa.\n\nFritulen pitäisi olla lämpimiä. Minä en edes osaa sanoa, montako mahtuu kyyhkyn nokkaan.
+
+### v1-218
+KOHDE: maa:HRV
+KYSYMYS: Onko kravatti tosiaan lähtöisin Kroatiasta?
+VASTAUS: Tost minä osaan kertoo. Aika lailla kyllä. Sana kravatti on ranskan cravate, joka johtuu kroaattien nimestä. Usein kerrotun mukaan [[kolmikymmenvuotisen sodan]] aikaan 1600-luvulla Ranskan palveluksessa olleet kroatialaiset sotilaat kantoivat kaulaliinoja, ja [[Ludvig XIV:n]] hovi omaksui muodin. Historioitsijat keskustelevat yksityiskohdista, mutta sanan alkuperä on yleisesti hyväksytty. Kroatiassa kravattia muistetaan omana päivänään lokakuussa.
+
+### v1-219
+KOHDE: maa:HRV
+KYSYMYS: Mikä tekee Plitvicen järvistä erikoisia?
+VASTAUS: Annas ku mietin. Tämä on kaunis vastaus. Plitvicen järvet ovat kansallispuisto, jossa on noin kuusitoista pääjärveä porrasmaisena sarjana, ja niiden välillä vesi putoaa putouksina. Vesi saostaa kalkkia, joka muodostaa luonnollisia padotuksia eli [[travertiinia]], ja nämä padot kasvavat hitaasti. Veden väri vaihtelee turkoosista vihreään ja harmaaseen riippuen mineraaleista ja valosta. Alue kuuluu [[Unescon maailmanperintölistalle]]. Tuolta ylhäältä näkyy kuin helminauha.
+
+### v1-220
+KOHDE: kaupunki:zagreb
+KYSYMYS: Miksi vuoden 1880 maanjäristys muutti Zagrebin ilmeen?
+VASTAUS: Hetkinen ny. Tämä oli raskas hetki kaupungille. Zagrebin maanjäristys marraskuussa 1880 vaurioitti tuomiokirkkoa ja monia muita rakennuksia, ja sen jälkeen kaupunkia kunnostettiin laajasti. Kirkon kaksoistornit valmistuivat vasta myöhemmin uusgoottilaisessa asussa arkkitehti [[Hermann Bollén]] suunnitelmien mukaan, ja uusi rakentaminen muokkasi myös [[Alakaupungin]] ilmettä. Siitä on onneksi pitkä aika.
+
+### v1-221
+KOHDE: kaupunki:zagreb
+KYSYMYS: Mikä on Zagrebin funikulaari?
+VASTAUS: Kas vaan. Lyhyt reitti, mutta tärkeä. Funikulaari on köysirata, joka yhdistää Alakaupungin ja [[Yläkaupungin]], ja se avattiin vuonna 1893. Matka kestää alle minuutin, ja rata on yksi maailman lyhimmistä julkisista kulkuneuvoista. Yläkaupungissa sijaitsee [[Lotrščak-torni]], jonka tykki laukaistaan joka päivä puolenpäivän aikaan. Minä menen mieluummin siivillä.
+
+### v1-222
+KOHDE: kaupunki:zagreb
+KYSYMYS: Mitä on štrukli?
+VASTAUS: Tuota niin. Se on makea tai suolainen, ja tuoksuu hyvältä. Štrukli on [[Zagorjen]] alueen perinteinen ruoka, jossa ohut taikina täytetään tuorejuustolla ja kermalla ja sitten joko keitetään tai uunitetaan. Zagrebin kahviloissa ja ravintoloissa se on suosittu ruoka. Tuorejuuston ansiosta täyte on pehmeä, ja päälle tulee rapea kuori. Pulla se ei ole, mutta [[tuorejuusto]] tekee siitä silti herkullisen.
+
+### v1-223
+KOHDE: kaupunki:zagreb
+KYSYMYS: Mikä on Dolacin tori Zagrebissa?
+VASTAUS: Ai tota. Se on kaupungin suurin ruokatori. Dolac on Zagrebin pääkauppatori [[Jelačićin aukion]] yläpuolella [[Yläkaupungin]] juurella, ja siellä myydään tuoreita vihanneksia, hedelmiä, juustoa ja kukkia. Torin tunnistaa punaisista sateenvarjoista, jotka suojaavat kauppiaiden kojuja. Torilla kauppaa on käyty jo 1900-luvun alkupuolelta. Kyyhkynä tykkään torista: murusia on aina.
+
+### v1-224
+KOHDE: kaupunki:zagreb
+KYSYMYS: Mikä on Särkyneiden suhteiden museo?
+VASTAUS: Odotas vähän. Tämä on yllättävä museo. Särkyneiden suhteiden museo Zagrebissa perustettiin 2000-luvun alussa, ja sen perustajina olivat taiteilijat [[Olinka Vištica]] ja [[Dražen Grubišić]]. Näyttelyesineet ovat ihmisten lahjoittamia esineitä päättyneistä suhteista, ja jokaisen vieressä on kertomus. Museo sijaitsee [[Yläkaupungissa]], ja se on kiertänyt myös muualla maailmassa. Toivottavasti kukaan ei lahjoita kirjekyyhkyn lintua.
+

@@ -1,0 +1,445 @@
+### v2-801
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Jacques Cousteau
+VASTAUS: Jacques-Yves Cousteau syntyi vuonna 1910 Ranskassa, ja hän palveli nuorena meriupseerina. Hän kehitti insinööri [[Émile Gagnanin]] kanssa 1940-luvulla laitesukelluksen mahdollistavan ilmasäiliöhengityslaitteen, jota kutsutaan akvalungiksi. Hänen tutkimusaluksensa oli entisestä miinanraivaajasta muutettu [[Calypso]], jolla hän purjehti maailman merillä. Hänen elokuvansa [[Le Monde du silence]] voitti Cannesin elokuvajuhlien pääpalkinnon vuonna 1956 ja sai seuraavana vuonna Oscar-palkinnon. Cousteau kuoli vuonna 1997.
+
+### v2-802
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: monégasque
+VASTAUS: Monégasque on [[ligurian kielen]] murre, joka on kehittynyt [[Genovan]] puheen pohjalta. Genovalaiset rakensivat Monacon kalliolle linnakkeen 1100-luvun lopulla, ja [[Grimaldien]] suku valtasi sen vuonna 1297, joten ligurialaiset vaikutteet ovat vanhoja. Kieli kirjoitetaan latinalaisin kirjaimin, ja sitä opetetaan Monacon kouluissa, vaikka sen puhujia on nykyään vähän. Monien katujen nimikilvissä on ranskan lisäksi myös monégasque.
+
+### v2-803
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Ligurian
+VASTAUS: Liguria on Luoteis-Italian rannikkoalue, joka kaartuu kapeana kaistaleena Ranskan rajalta Toscanan rajalle Ligurianmeren rannalla. Alueen pääkaupunki on [[Genova]], jonka tasavalta oli keskiajalla merkittävä merivalta. Maisemaa hallitsevat jyrkät vuoret, jotka laskeutuvat suoraan mereen, ja rannikon kylät ovat tunnettuja värikkäistä taloistaan; tunnetuimpia ovat [[Cinque Terren]] viisi kylää. Perimätiedon mukaan [[Kristoffer Kolumbus]] syntyi Genovassa, vaikka asiasta on esitetty muitakin näkemyksiä.
+
+### v2-804
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Charles III
+VASTAUS: Charles III syntyi vuonna 1818, ja hän hallitsi Monacon ruhtinaana vuodesta 1856 kuolemaansa vuonna 1889. Hänen aikanaan ruhtinaskunta menetti [[Mentonin]] ja Roquebrunen Ranskalle vuonna 1861, minkä jälkeen valtio oli vain pieni kaistale rannikkoa. Taloudellinen pelastus tuli kasinosta: liikemies [[François Blancille]] annettiin toimilupa, ja kasinon tuotot riittivät niin hyvin, ettei tuloveroa peritty enää vuodesta 1869. Monte Carlon kaupunginosa sai nimensä ruhtinaan mukaan vuonna 1866, ja hänen poikansa [[Albert I]] peri hallitsijan viran.
+
+### v2-805
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Ranskan
+VASTAUS: Monaco ja Ranska ovat sidoksissa toisiinsa vanhoilla sopimuksilla. Ranska vastaa Monacon puolustuksesta, ruhtinaskunta kuuluu Ranskan kanssa samaan tulliliittoon, ja maassa käytetään [[euroa]], vaikka Monaco ei kuulu [[Euroopan unioniin]]. Raja on avoin, eikä rajatarkastuksia ole. Vuosina 1962–1963 ruhtinas Rainier III ja presidentti [[Charles de Gaulle]] riitelivät Monacon verosta, ja riita päättyi sopimukseen, jonka perusteella Monacossa asuvat ranskalaiset ovat poikkeus tuloverottomuudesta.
+
+### v2-806
+KOHDE: maa:MCO
+KYSYMYS: Kerro lisää: Monte Carlon kasino
+VASTAUS: Monte Carlon kasino avattiin vuonna 1863 Spélugues-alueella, ja sen alkuperäisen rakennuksen suunnitteli arkkitehti Gobineau de la Bretonnerie. Pariisin oopperatalon suunnitellut [[Charles Garnier]] laajensi rakennusta vuosina 1878–1881. Liikemies [[François Blanc]] sai kasinolle 50 vuoden toimiluvan, ja pelitoimintaa varten perustettiin vuonna 1863 [[Société des Bains de Mer]]. Naapuriin avattiin vuotta myöhemmin [[Hôtel de Paris]]. Englantilaisen [[Joseph Jaggerin]] kerrotaan murtaneen pankin havaittuaan rulettipyörässä vinouman, mutta lähteet ajoittavat tapauksen eri tavoin, vuoteen 1873 tai noin 1881.
+
+### v2-807
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Charles Garnier
+VASTAUS: Charles Garnier syntyi Pariisissa vuonna 1825 ja kuoli vuonna 1898. Hän voitti vuonna 1861 järjestetyn kilpailun [[Pariisin oopperan]] suunnittelusta, ja talo avattiin vuonna 1875 runsaan koristeellisessa uusbarokkisessa tyylissä. Monacossa hän laajensi kasinoa ja suunnitteli sen yhteyteen oopperasalin, [[Salle Garnierin]], joka valmistui noin kahdeksassa ja puolessa kuukaudessa ja avattiin tammikuussa 1879. Avajaisissa esiintyi näyttelijä [[Sarah Bernhardt]]. Garnier suunnitteli myös Nizzan observatorion.
+
+### v2-808
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Pariisin oopperatalosta
+VASTAUS: Pariisin oopperatalo, jota kutsutaan myös nimellä Palais Garnier, avattiin vuonna 1875. Rakennuksen suunnittelusta järjestettiin kilpailu vuonna 1861, jolloin Ranskaa hallitsi keisari [[Napoleon III]], ja sen voitti arkkitehti Charles Garnier. Rakennus edustaa runsasta uusbarokkia, ja sen tunnetuin osa on marmorinen suuri portaikko. Salissa on noin 2 000 paikkaa, ja kattoa koristaa [[Marc Chagallin]] vuonna 1964 maalaama kattomaalaus. Talo on tunnettu myös Gaston Leroux'n romaanista [[Oopperan kummitus]], joka sijoittuu juuri tähän rakennukseen.
+
+### v2-809
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Monte Carlon ooppera
+VASTAUS: Monte Carlon oopperan sali, Salle Garnier, avattiin 25. tammikuuta 1879 kasinon yhteyteen, ja se on kooltaan pieni: paikkoja on 524, kun Pariisin oopperassa niitä on noin 2 000. Avajaisissa esiintyi nymfinä [[Sarah Bernhardt]], ja ensimmäinen ooppera oli Robert Planquetten Le Chevalier Gaston helmikuussa 1879. [[Raoul Gunsbourg]] johti oopperaa vuodesta 1892 kuuden vuosikymmenen ajan, ja hänen aikanaan salissa ensiesitettiin muun muassa [[Hector Berliozin]] La damnation de Faust -teos vuonna 1893. Salissa esiintyi 1900-luvun alussa myös [[Ballets Russes]] -balettiyhtye.
+
+### v2-810
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Rainier III
+VASTAUS: Rainier III oli Monacon ruhtinas vuosina 1949–2005, ja hän syntyi vuonna 1923. Hän meni naimisiin näyttelijä Grace Kellyn kanssa vuonna 1956, ja avioliitosta syntyi kolme lasta; Grace kuoli auto-onnettomuudessa vuonna 1982. Rainierin aikana ruhtinaskunta uudistui: [[Fontvieillen]] kaupunginosa rakennettiin mereltä saadulle maalle, ja Monaco liittyi Yhdistyneisiin kansakuntiin vuonna 1993. Hänen poikansa [[Albert II]] peri tehtävän vuonna 2005, ja Rainier ja Grace on haudattu [[Monacon katedraaliin]].
+
+### v2-811
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Louis Bréan
+VASTAUS: Louis Bréa oli Nizzassa vaikuttanut myöhäiskeskiajan ja renessanssin taidemaalari, joka eli suunnilleen vuodesta 1450 vuoteen 1520-luvulle; tarkat vuosiluvut vaihtelevat lähteittäin. Hän kuului niin sanottuun nizzalaiseen maalarikouluun, ja hänen töitään on [[Nizzan]] lisäksi Ligurian rannikon kirkoissa. Monacon katedraalin retaabeli, joka on peräisin noin vuodelta 1500, tunnetaan [[Pyhän Nikolauksen retaabelina]], ja se on perinteisesti liitetty hänen nimeensä. Tunnettu on myös hänen Pietà-maalauksensa [[Cimiezin]] luostarissa Nizzan lähellä.
+
+### v2-812
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Monacon kallion
+VASTAUS: Monacon kallio, ranskaksi Le Rocher, on meren yllä kohoava kalkkikivinen niemeke, jonka laella on kaupungin vanhin osa. Kallion korkeus on noin kuusikymmentä metriä. Sen päällä seisovat [[Grimaldien]] linna eli ruhtinaspalatsi, Monacon katedraali ja [[Valtamerimuseo]], joka kohoaa jyrkän kalliojyrkänteen reunalla. Genovalaiset rakensivat kalliolle linnoituksen 1100-luvun lopulla, ja vuonna 1297 [[François Grimaldi]] valtasi sen munkiksi pukeutuneena, mistä Monacon vaakunan kaksi miekkaa pitelevää munkkia kertovat.
+
+### v2-813
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Alppien
+VASTAUS: Alpit ovat yksi Euroopan tunnetuimmista vuoristoista, ja ne kaartuvat noin 1 200 kilometrin matkalla Ranskan Rivieran tuntumasta Itävallan itäosiin. Vuoristo ulottuu useaan maahan, kuten Ranskaan, Italiaan, Sveitsiin, Itävaltaan ja Saksaan. Korkein huippu on Ranskan ja Italian rajalla sijaitseva [[Mont Blanc]], joka nousee noin 4 800 metriin. Monacon takana kohoavat Alppien eteläiset osat eli [[Merialpit]], ja Monte Carlon rallin tunnetuimpia kohtia on [[Turinin solan]] kapea, mutkainen tie.
+
+### v2-814
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: MM-rallin
+VASTAUS: MM-ralli eli rallin maailmanmestaruussarja ajettiin ensimmäisen kerran vuonna 1973, ja Monte Carlon ralli kuuluu sen vanhimpiin ja arvostetuimpiin osakilpailuihin. Kisat ajetaan suljetuilla maanteillä pitkinä erikoiskokeina, ja kuljettajan rinnalla istuu kartturi, joka lukee ajoreitin ohjeita ääneen. Suomalaiset ovat menestyneet sarjassa erittäin hyvin: mestaruuksia ovat voittaneet muun muassa [[Juha Kankkunen]], [[Tommi Mäkinen]] ja [[Kalle Rovanperä]].
+
+### v2-815
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Fontvieillen
+VASTAUS: Fontvieille on Monacon kaupunginosa, joka rakennettiin mereltä täytetylle maalle 1970-luvulta alkaen. Hankkeen ansiosta ruhtinaskunnan pinta-ala kasvoi lähteiden mukaan noin viidenneksellä. Kaupunginosassa on [[Stade Louis II]] -jalkapallostadion, joka on jalkapallojoukkue [[AS Monacon]] kotikenttä, sekä [[Roseraie Princesse Grace]] -ruusutarha, joka on nimetty ruhtinatar Grace Kellyn mukaan. Lisäksi alueella on teollisuutta, asuintaloja, helikopterikenttä ja puisto.
+
+### v2-816
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Monte Carlon
+VASTAUS: Monte Carlo on Monacon kaupunginosa, ei erillinen kaupunki, ja se nousee kasinon ympärille rinteeseen satamasta ylöspäin. Nimi annettiin ruhtinas Charles III:n kunniaksi vuonna 1866, ja se tarkoittaa suunnilleen Kaarlen vuorta. Kaupunginosan sydän on Place du Casino -aukio, jonka laidalla ovat kasino ja vuonna 1864 avattu [[Hôtel de Paris]]. Kaupunginosan kaduilla ajetaan [[Monacon Grand Prix]] -kilpailu, ja ensimmäinen Grand Prix ajettiin vuonna 1929. Nimi tunnetaan myös laskennan alalla, sillä satunnaisotantaan perustuva [[Monte Carlo -menetelmä]] on saanut nimensä kasinosta.
+
+### v2-817
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: Pyhän Nikolauksen katedraalin
+VASTAUS: Monacon nykyinen katedraali on [[Notre-Dame-Immaculée]], ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Rakennus nousi vuosina 1875–1903 Pyhän Nikolauksen kirkon paikalle, joka oli ollut Monacon ensimmäinen seurakuntakirkko vuodelta 1252 ja joka purettiin vuonna 1874; uusi katedraali vihittiin 11. kesäkuuta 1911. Korkea-alttari ja piispantuoli on tehty valkoisesta [[Carrara-marmorista]], ja retaabeli on noin vuodelta 1500. Suojeluspyhimys on [[Devota]], ja katedraalissa ovat monien [[Grimaldien]] haudat.
+
+### v2-818
+KOHDE: kaupunki:monaco
+KYSYMYS: Kerro lisää: ruhtinaspalatsin
+VASTAUS: Ruhtinaspalatsi seisoo Monacon kalliolla, ja sen paikalla oli ensin [[genovalaisten]] vuonna 1191 rakentama linnake. [[Grimaldien]] suku on hallinnut linnaa vuodesta 1297, ja nykyinen rakennus on kasvanut vuosisatojen kuluessa linnoituksesta ruhtinaan residenssiksi, jossa on renessanssityylisiä freskoilla koristeltuja huoneita. Palatsin edessä vartioi ruhtinaan henkivartiosto, ja vahdinvaihto nähdään päivittäin keskipäivän tienoilla. Kansallispäivänä ruhtinasperhe tervehtii kansaa palatsin parvekkeelta. Nykyinen hallitsija on [[Albert II]].
+
+### v2-819
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: kalkkikivilouhoksiin
+VASTAUS: Moldovassa kalkkikiveä louhittiin rakennusaineeksi, sillä kivi on pehmeää ja helposti veistettävää. Kiveä nostettiin maan alta, ja jäljelle jäi satojen kilometrien pituisia käytäväverkostoja. Niiden lämpötila pysyy ympäri vuoden tasaisen viileänä, noin 12–14 asteessa, ja kosteus sopii viinin kypsytykseen. Siksi [[Mileștii Micin]] lisäksi myös [[Cricova]] on rakentanut viinikellarinsa vanhoihin louhoskäytäviin. Kalkkikivijyrkänteisiin on kaiverrettu myös luostareita, esimerkiksi [[Orheiul Vechin]] luolaluostari 1200-luvulta.
+
+### v2-820
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Moldovan viinintuotannon
+VASTAUS: Moldovan viinintuotanto on vanhaa perua, ja viinitarhoja on nykyään noin 148 500 hehtaaria. Istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja kuusi prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa [[Valul lui Traian]], kaakossa [[Ștefan Vodă]] ja keskiosassa [[Codru]]. Vuonna 2022 viinejä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+
+### v2-821
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Chișinăun
+VASTAUS: Chișinău on Moldovan pääkaupunki ja suurin kaupunki, ja sen kunnassa asuu yli 700 000 ihmistä. Kaupunki sijaitsee maan keskiosassa [[Bîc-joen]] varrella, ja se mainitaan ensimmäisen kerran vuonna 1436. Nimen uskotaan tulevan sanoista chișla, lähde, ja nouă, uusi, sillä kylä kasvoi pienen lähteen ympärille. Vuonna 1812 kaupungista tuli Venäjän keisarikuntaan liitetyn [[Bessarabian]] keskus, ja 1800-luvun alkupuolella kaupunkiin nousivat keskuspuisto, [[Kristuksen syntymän katedraali]] ja 1840-luvulla valmistunut riemukaari. Rautatie saapui kaupunkiin vuonna 1871, ja 1900-luvulla sota ja maanjäristykset muuttivat keskustaa paljon.
+
+### v2-822
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: maissijauhosta
+VASTAUS: [[Mămăligă]] valmistetaan keltaisesta maissijauhosta, vedestä ja suolasta, ja perinteisesti sitä keitetään valurautaisessa padassa. Maissi levisi Eurooppaan 1500-luvulla, ja sitä ennen vastaavaa puuroa tehtiin hirssijauhosta. Ruoka on tuttu Moldovan lisäksi Romaniassa, [[Unkarissa]] ja Ukrainassa. Kiinteä puuro leikataan perinteisesti ompelulangalla viipaleiksi, ja lautasella sen seurana on usein [[tochitură]], omassa rasvassaan haudutettu sianliha, paistettu kananmuna ja suolainen lampaanjuusto. Nälkävuosina 1600- ja 1700-luvuilla puuro auttoi torjumaan nälänhätää.
+
+### v2-823
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: brynza
+VASTAUS: Brynza on suolaliemessä kypsytetty valkoinen juusto, joka valmistetaan useimmiten lampaanmaidosta mutta myös lehmän- tai vuohenmaidosta. Se on murenevaa ja suolaista, ja se kuuluu Moldovan ja Romanian arkeen: sitä syödään [[mămăligan]] kanssa, salaateissa ja piirakoissa kuten [[plăcintassa]]. [[Karpaattien]] alueella lampaanjuusto on vanha paimenperinne. Slovakiassa vastaava pehmeä lampaanjuusto tunnetaan nimellä bryndza, ja siitä valmistetaan ruoka nimeltä bryndzové halušky, jota pidetään maan kansallisruokana.
+
+### v2-824
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: smetanalla
+VASTAUS: Smetana on hapankermaa, jonka rasvapitoisuus vaihtelee yleensä noin 15 ja 30 prosentin välillä, ja se vastaa suunnilleen suomalaista hapankermaa. Moldovassa ja Romaniassa sitä kutsutaan sanalla [[smântână]], ja sitä lisätään [[mămăligan]] päälle, soppiin ja piirakoihin. Venäläisessä ja ukrainalaisessa keittiössä sitä tarjotaan [[borssikeiton]], lettujen ja täytettyjen taikinataskujen kanssa. Idän ja Keski-Euroopan keittiöissä kerma on yksi tavallisimmista tavoista pehmentää ruokaa.
+
+### v2-825
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Dnestr-joen
+VASTAUS: Dnestr on noin 1 350 kilometriä pitkä joki, joka saa alkunsa Ukrainan Karpaateilla ja virtaa kaakkoon Moldovan halki [[Mustaanmereen]]. Se muodostaa pitkälti Moldovan ja Ukrainan rajan, ja sen itäpuolella on Transnistrian alue. Joen rannalla oli vuosisatojen ajan tärkeä kahlaamo, jota suojaamaan pystytettiin vuonna 1499 puinen linnake. Sen [[Petru Rareș]] muurautti kivestä noin puoli vuosisataa myöhemmin, ja tämä [[Sorokan linnoitus]] on yhä yksi Moldovan tunnetuimmista nähtävyyksistä. Linnoituksen seinään on kaiverrettu rakentajamestari Iacobin nimi.
+
+### v2-826
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Tiraspol
+VASTAUS: Tiraspol on Transnistrian hallinnollinen keskus ja alueen suurin kaupunki Dnestrin itärannalla. Kaupungin perusti venäläinen kenraali [[Aleksandr Suvorov]] vuonna 1792 linnoitukseksi, ja nimi tulee Dnestrin muinaisesta kreikkalaisesta nimestä Tyras ja sanasta polis, kaupunki. Asukkaita on lähteiden mukaan yli sata tuhatta. Kaupungissa on paljon neuvostoajan rakennuksia ja patsaita, ja venäjä on arjessa hyvin yleinen kieli. Jalkapallojoukkue [[Sheriff Tiraspol]] on voittanut Moldovan mestaruuden useita kertoja ja voitti vuonna 2021 Mestarien liigassa Real Madridin. Kansainvälisesti [[Transnistrian]] asemaa ei ole tunnustettu, ja Moldova pitää aluetta osana maataan.
+
+### v2-827
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: punavalkoinen nauha
+VASTAUS: Mărțișor on punaisesta ja valkoisesta langasta kierretty nauha, jota annetaan lahjaksi maaliskuun ensimmäisenä päivänä. Punainen symboloi perinteisesti elämää ja valkoinen puhtautta. Nauha tai siihen kiinnitetty pieni koru kiinnitetään rintaan ja pidetään yleensä, kunnes nähdään ensimmäinen kevään merkki, esimerkiksi pääsky tai kukkiva puu; sen jälkeen nauha sidotaan puun oksaan. Bulgariassa vastaava tapa liittyy hahmoon [[Baba Marta]], ja tapa on tunnettu myös [[Romaniassa]]. Vuonna 2017 maaliskuun ensimmäisen päivän perinteet liitettiin [[Unescon aineettoman kulttuuriperinnön luetteloon]].
+
+### v2-828
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: martenitsa
+VASTAUS: Martenitsa on bulgarialainen kevään perinne: punaisesta ja valkoisesta langasta tehty ranneke tai pieni tupsu, jota annetaan lahjaksi maaliskuun ensimmäisenä päivänä. Perinne liittyy kansanuskon hahmoon [[Baba Marta]], jonka mielialan uskotaan vaihtelevan maaliskuun sään tavoin. Koristeena voi olla pieniä miehen ja naisen hahmoja, [[Pižo ja Penda]]. Martenitsaa pidetään, kunnes nähdään haikara, pääsky tai kukkiva puu; sen jälkeen se sidotaan puun oksaan tai asetetaan kiven alle. Perinne on yhteinen [[Moldovan]] ja Romanian mărțișor-tavan kanssa, ja se liitettiin vuonna 2017 Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### v2-829
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Moldavian ruhtinaskunnasta
+VASTAUS: Moldavian ruhtinaskunta syntyi 1300-luvun puolivälissä Karpaattien itäpuolelle, ja sen perustajaksi mainitaan ruhtinas [[Bogdan I]], joka irrottautui Unkarin vallasta. Ruhtinaskunnan pääkaupunkeja olivat [[Suceava]] ja myöhemmin [[Iași]]. Tunnetuin hallitsija oli [[Tapani Suuri]], joka hallitsi vuosina 1457–1504 ja rakennutti linnoituksia ja luostareita. Myöhemmin ruhtinaskunta joutui osmanien yliherruuden alle, ja vuonna 1812 sen itäosa liitettiin Venäjään Bessarabiaksi. Moldavia ja Valakia saivat vuonna 1859 yhteisen ruhtinaan, ja niistä muodostui myöhemmin Romania.
+
+### v2-830
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Dragoș
+VASTAUS: Dragoş on Moldavian ruhtinaskunnan perimätiedossa tunnettu ensimmäinen ruhtinas. Perimätiedon mukaan hän oli [[Maramureșin]] vojvodi, joka ylitti Karpaatit uroshärän jäljillä ja asettui jokilaaksoon, jonka mukaan maa sai nimensä. Historiantutkijat pitävät häntä Unkarin kuninkaan lähettämänä rajaruhtinaana 1300-luvun puolivälissä. Myöhemmin Maramureșista tullut [[Bogdan I]] irrottautui Unkarin vallasta, ja [[uroshärän]] pää on yhä Moldovan vaakunassa.
+
+### v2-831
+KOHDE: maa:MDA
+KYSYMYS: Kerro lisää: Bessarabiaa
+VASTAUS: Bessarabia on Prutin, Dnestrin ja Tonavan välinen historiallinen alue, jonka nimi tulee Valakiaa hallinneesta [[Basarab-suvusta]]. Venäjä liitti alueen itseensä vuonna 1812 Venäjän ja Turkin sodan jälkeen, ja Chișinăusta tuli sen keskus. Vuonna 1918 Bessarabian kansanedustuslaitos [[Sfatul Țării]] äänesti liittymisestä Romaniaan äänin 86 puolesta, kolme vastaan ja 36 tyhjää. Vuonna 1940 alue liitettiin [[Molotov–Ribbentrop-sopimuksen]] seurauksena Neuvostoliittoon. Moldovan itsenäistyttyä vuonna 1991 suurin osa Bessarabiasta kuuluu Moldovalle, kun taas eteläosa, [[Budjak]], on Ukrainassa.
+
+### v2-832
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Suuren kansalliskokouksen aukion
+VASTAUS: Suuren kansalliskokouksen aukio on Chișinăun keskustan tärkein aukio, ja se on nimetty vuoden 1989 suuren kansankokouksen mukaan, jossa satojatuhansia ihmisiä vaati romanian kielen asemaa ja latinalaisia aakkosia. Aukion laidalla on [[Casa Guvernului]] eli hallituksen rakennus. Aivan aukion tuntumassa kohoaa [[Tapani Suuren patsas]] puiston sisäänkäynnillä, ja riemukaari sekä [[Kristuksen syntymän katedraali]] ovat lähellä. Aukiolla järjestetään suuria yleisötilaisuuksia ja kansallispäivän juhlia.
+
+### v2-833
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Kristuksen syntymän katedraali
+VASTAUS: Kristuksen syntymän katedraali on uusklassinen kirkko Chișinăun keskustassa, ja se rakennettiin vuosina 1830–1836. Rakennuttajina olivat Uuden Venäjän kuvernööri [[Mihail Voroncov]] ja metropoliitta [[Gavril Bănulescu-Bodoni]], ja suunnittelijana oli arkkitehti [[Avraam Melnikov]]. Sisäänkäynnin portiikissa on kuusi doorilaista pylvästä. Samanlainen kirkko on rakennettu [[Bolhradiin]]. Toisessa maailmansodassa rakennusta pommitettiin, ja sen kellotorni purettiin neuvostoaikana 1960-luvulla; torni rakennettiin uudelleen 1990-luvun lopulla.
+
+### v2-834
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Aleksandr Pushkin
+VASTAUS: Aleksandr Pushkin (1799–1837) on Venäjän tunnetuin runoilija. Hänet siirrettiin vapaamielisten runojensa vuoksi etelään, ja hän asui Chișinăussa vuosina 1820–1823. Kaupungissa hän aloitti romaaninsa [[Jevgeni Onegin]] kirjoittamisen, ja sen jälkeen hänet siirrettiin [[Odessaan]]. Pushkin kuoli kaksintaistelussa [[Pietarissa]] vuonna 1837. Chișinăussa hänen entisessä asunnossaan toimii museo, ja kaupungissa on myös hänen muistomerkkinsä.
+
+### v2-835
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Jevgeni Oneginin
+VASTAUS: Jevgeni Onegin on Aleksandr Pushkinin säkeistöromaani, jonka kirjoittaminen alkoi vuonna 1823 ja valmistui vuonna 1831. Se ilmestyi jatkokertomuksena vuosina 1825–1832 ja kokonaisena vuonna 1833. Teos kertoo kyllästyneestä aatelismiehestä Oneginista, joka torjuu nuoren [[Tatjanan]] rakkauden ja tappaa sitten ystävänsä [[Lenskin]] kaksintaistelussa; vuosia myöhemmin hän rakastuu itse Tatjanaan, mutta liian myöhään. Teoksessa käytetään erityistä neljätoistarivistä Onegin-säkeistöä. Pushkin kuoli itsekin kaksintaistelussa. [[Pjotr Tšaikovski]] sävelsi tarinasta oopperan, joka esitettiin ensimmäisen kerran vuonna 1879.
+
+### v2-836
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Klassikoiden kuja
+VASTAUS: Klassikoiden kuja avattiin vuonna 1958 Tapani Suuren keskuspuistossa, joka on Moldovan vanhin puisto ja noin seitsemän hehtaarin kokoinen. Kujan varrella on pronssisia rintakuvia punaisilla kiillotetuilla graniittijalustoilla, ja sisäänkäyntiä vartioivat marmoriset leijonat. Rintakuvat esittävät romanialaisia ja moldovalaisia kirjailijoita ja oppineita, kuten [[Mihai Eminescu]], [[Ion Creangă]], [[Dimitrie Cantemir]] ja [[Alexei Mateevici]]. Puistossa kasvaa kymmeniä puulajeja.
+
+### v2-837
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Vrancean
+VASTAUS: Vrancea on Romanian kaakkoisosan alue, jossa [[Karpaattien]] kaari taittuu. Seudun maanjäristykset ovat poikkeuksellisia, sillä ne syntyvät syvällä maankuoressa, usein sadan kilometrin syvyydessä, ja ne tuntuvat laajalla alueella. Voimakkaat järistykset ovat ravistelleet Moldovaa ja Chișinăuta muun muassa vuosina 1940 ja 1977. Vuoden 1977 järistys tuhosi pahasti [[Bukarestia]], ja siinä kuoli yli tuhat ihmistä. Seutu on [[Romanian]] seismisesti aktiivisin alue.
+
+### v2-838
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Karpaattien
+VASTAUS: Karpaatit ovat Keski- ja Itä-Euroopan vuoristo, joka kaartuu noin 1 500 kilometrin matkan Slovakiasta Puolan, Ukrainan ja Romanian kautta Serbian rajalle. Korkein huippu on Slovakian [[Tatran]] Gerlachovský štít, joka nousee 2 655 metriin, kun taas Romanian korkein huippu [[Moldoveanu]] yltää 2 544 metriin. Romanian puolella vuoriston sisään jää [[Transilvanian]] ylänkö. Lähteiden mukaan Karpaateilla elää Euroopan suurimpia ruskeakarhukantoja Venäjän ulkopuolella.
+
+### v2-839
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: brynza-juustoa
+VASTAUS: Brynza-juusto on Moldovassa tuttu valkoinen, suolainen ja murenevarakenteinen juusto, jota valmistetaan lampaan-, lehmän- tai vuohenmaidosta ja kypsytetään suolaliemessä. Sitä käytetään monin tavoin: se on täytteenä [[plăcintassa]], murennetaan [[mămăligan]] päälle ja lisätään salaatteihin. Romaniassa tunnetaan myös juusto, joka pakataan lampaan vatsaan tai kuusenkuoreen, nimeltään burduf. Samankaltaisia suolaliemijuustoja on Balkanilla, esimerkiksi [[telemea]] Romaniassa ja feta Kreikassa.
+
+### v2-840
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Piața Centrală
+VASTAUS: Piața Centrală on Chișinăun keskeinen kauppatori, joka on nimensä mukaisesti kaupungin keskustassa. Torilla myydään tuoreita hedelmiä ja vihanneksia, juustoja, lihaa, hunajaa, mausteita ja leivonnaisia, ja se on perinteisesti ollut paikka, johon maaseudun tuottajat tuovat tuotteitaan kaupunkilaisille. Tuotteet vaihtelevat vuodenajan mukaan: kesällä myydään tuoreita marjoja ja kasviksia, talvella säilykkeitä. Torilta saa ainekset moldovalaiseen ruokaan, kuten [[mămăligan]] tekoon tarvittavaa maissijauhoa, suolaista [[brynza]]-juustoa ja [[plăcintă]]-piirakoiden täytteitä.
+
+### v2-841
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: maršrutkoiksi
+VASTAUS: Maršrutka on kiinteällä reitillä liikennöivä pikkubussi, jollaisia on käytössä monessa entisen Neuvostoliiton maassa. Nimi tulee venäjän sanasta marshrut, reitti. Moldovassa niitä kutsutaan myös nimellä [[rutiere]], ja ne täydentävät [[johdinautojen]] ja linja-autojen verkostoa. Maršrutka on yleinen myös [[Ukrainassa]]. Matkustaja maksaa kuljettajalle suoraan, ja pysähtyminen pyydetään ääneen.
+
+### v2-842
+KOHDE: kaupunki:chisinau
+KYSYMYS: Kerro lisää: Chișinăun rautatieasemalle
+VASTAUS: Rautatie saapui Chișinăuhun vuonna 1871, joten vuonna 1873 junayhteys oli kaupungissa vielä uusi. Nykyinen asemarakennus on peräisin neuvostoajalta, mutta tarkasta rakennusvuodesta en ole varma. Moldovan rataverkko on pääosin leveäraiteista, kuten naapurimaassa Ukrainassa, kun taas Romaniassa käytetään tavallista raideleveyttä, minkä vuoksi rajalla vaihdetaan telit tai matkustajat vaihtavat junaa. Asemalta kulkee junia muun muassa [[Iașiin]] ja [[Bukarestiin]] Romaniaan sekä [[Ungheniin]].
+
+### v2-843
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Ohridin kaupungin
+VASTAUS: Ohrid on kaupunki Ohridinjärven rannalla Pohjois-Makedonian lounaisosassa. Se oli 800-luvun lopulla [[Pyhän Kliment Ohridilaisen]] koulun ansiosta yksi Euroopan tärkeimmistä slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston keskuksista. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi jokaiselle vuoden päivälle, mutta tämä on liioittelua. Tunnetuin säilynyt on kalliolle Kaneon niemelle rakennettu [[Pyhän Johanneksen kirkko]] 1200-luvulta. Kaupungin yllä kohoaa myös [[Samuelin linnoitus]], joka on peräisin 900- ja 1000-lukujen vaihteesta.
+
+### v2-844
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+VASTAUS: Unescon maailmanperintöluettelo perustuu vuonna 1972 hyväksyttyyn sopimukseen, ja luetteloon valitaan kulttuuri- ja luontokohteita, joilla on poikkeuksellinen yleismaailmallinen arvo. Luetteloa pitää yllä Unescon maailmanperintökomitea, ja Unescon päämaja on [[Pariisissa]]. Pohjois-Makedonian [[Ohridinjärven]] seutu liitettiin luetteloon vuonna 1979, ja se on sekä luonto- että kulttuurikohde. Suomesta luettelossa on esimerkiksi [[Suomenlinna]], joka liitettiin siihen vuonna 1991.
+
+### v2-845
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Pyhän Naumin luostari
+VASTAUS: Pyhän Naumin luostari sijaitsee Ohridinjärven itärannalla noin kolmenkymmenen kilometrin päässä Ohridin kaupungista, aivan [[Albanian]] rajan tuntumassa. Luostarin perusti noin vuonna 905 Naum, joka oli [[Kyrilloksen ja Methodiosin]] oppilas ja slaavilaisen kirjallisuuden uranuurtaja. Hän on haudattu luostarikirkkoon, ja nykyinen kirkko on uudistettu 1500-luvulla. Lähteet, jotka syöttävät Ohridinjärveä, purkautuvat luostarin lähellä; veden uskotaan tulevan [[Prespanjärveltä]] maanalaisia kalkkikivikanavia pitkin. Luostarin pihalla kävelee riikinkukkoja.
+
+### v2-846
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Vardar-joen
+VASTAUS: Vardar on Pohjois-Makedonian suurin joki. Se virtaa maan halki 388 kilometrin matkan ja kerää vetensä noin 80 prosentilta maan alasta, ja jatkaa Kreikkaan, jossa sitä kutsutaan nimellä [[Axios]], ja laskee lopulta [[Egeanmereen]] Salonikin lähellä. Skopjen kohdalla sen keskivirtaama on noin 50 kuutiometriä sekunnissa. Joki aiheutti usein tulvia, muun muassa vuonna 1962, mutta [[Treska-joelle]] rakennettu Kozjak-pato on vähentänyt tulvariskiä. Joen yli kulkee 214 metriä pitkä Kivisilta.
+
+### v2-847
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: vanha basaari
+VASTAUS: Vanha basaari ulottuu Kivisillalta [[Bit-Pazarille]] ja [[Kale-linnoituksesta]] Serava-joelle. Lähteiden mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä, ja tuolloin basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa. Katettu kauppahalli [[Bezisten]] rakennettiin 1400-luvulla, ja samalta ajalta on myös [[Čifte Hamam]]. Basaari vaurioitui maanjäristyksissä 1555 ja 1963, ja Espanjasta karkotettuja sefardijuutalaisia asettui kaupunkiin.
+
+### v2-848
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: ajvar
+VASTAUS: Ajvar on paahdetuista paprikoista tehty tahna, joka kuuluu [[Balkanin]] talvivarastoihin. Perinteisesti kokonaisia paprikoita paahdetaan avotulella, ne jäähdytetään, kuoritaan ja perataan, ja liha jauhetaan tai hienonnetaan. Massaa kypsytetään tuntikausia auringonkukkaöljyssä ja suolassa, ja valmis tahna suljetaan lasipurkkeihin. Työ tehdään syksyllä, kun paprikat ovat parhaimmillaan, ja purkit kuuluvat [[zimnica]]-nimiseen talviruokavarastoon. Nimi juontuu turkin sanasta havyar, joka tarkoittaa kaviaaria. Ajvaria tehdään myös [[Serbiassa]], ja sitä on sekä mietoa että tulista.
+
+### v2-849
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: rakijaa
+VASTAUS: Rakija on hedelmistä tislattua väkevää alkoholijuomaa, jota valmistetaan eri puolilla Balkania. Tunnetuin tyyppi on luumuista tehty [[šljivovica]], mutta tislettä tehdään myös rypäleistä, aprikooseista, päärynöistä ja muista hedelmistä. Pohjois-Makedoniassa tavallinen on rypäleistä tislattu rakija, jota kutsutaan usein nimellä [[loza]]. Alkoholipitoisuus on tavallisesti noin 40 prosenttia, ja kotitislattu voi olla vahvempaa. Rakijaa tarjotaan perinteisesti ennen ateriaa pieninä ryyppyinä, usein [[šopska-salaatin]] kanssa.
+
+### v2-850
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Tikvešin
+VASTAUS: Tikvešin tasanko Kavadarcin ja Negotinon ympärillä on Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan valmistetun viiniä yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii rypäleille. Paikallisia punaviinilajikkeita ovat [[vranec]] ja [[kratošija]], ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää tilojen pihat. [[Kavadarci]] on alueen keskus, ja monet viinitilat ottavat vieraita vastaan.
+
+### v2-851
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Treska-joen
+VASTAUS: Treska on Vardarin sivujoki Pohjois-Makedoniassa. Se virtaa Skopjen länsipuolella olevan [[Matkan kanjonin]] läpi, jossa joelle on rakennettu tekojärvi. Treskalle rakennettu [[Kozjak-pato]] valmistui vuonna 2004, ja sen on kerrottu vähentäneen Skopjen tulvariskiä. Kanjonissa voi meloa ja vaeltaa, ja joen varrella on keskiaikaisia luostareita. Joki laskee lopulta [[Vardarin]] vesistöön.
+
+### v2-852
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Pyhän Andreaksen luostari
+VASTAUS: Pyhän Andreaksen luostari sijaitsee Matkan kanjonissa Treska-joen rannalla Skopjen länsipuolella. Lähteiden mukaan se perustettiin 1300-luvun lopulla, ja perimätiedon mukaan perustajana oli [[Vukašinin]] poika Andrija. Kirkossa on freskoja, joista osa on peräisin keskiajalta. Luostari seisoo kalliolla joen yllä, ja sinne pääsee polkua pitkin tai veneellä [[Matkan kanjonin]] tekojärveä pitkin. Tarkoista vuosiluvuista en ole varma.
+
+### v2-853
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Vrelo-luola
+VASTAUS: Vrelo on Matkan kanjonin vedenalainen luola, ja sen nimi tarkoittaa slaavilaisissa kielissä lähdettä. Luola on lähteiden mukaan yksi Euroopan syvimmistä vedenalaisista luolista, mutta tarkasta syvyydestä en ole varma. Siellä sukeltajat ovat tutkineet pitkiä käytäviä, ja kanjonissa tehdään myös veneretkiä luolan suulle. Sama sana esiintyy muuallakin Balkanilla: [[Sarajevon]] länsilaidalla [[Vrelo Bosne]] on lähde, josta Bosna-joki saa alkunsa. Luola kuuluu [[Matkan kanjonin]] luonnonnähtävyyksiin.
+
+### v2-854
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: kyrillisin kirjaimin
+VASTAUS: Kyrillinen kirjaimisto on saanut nimensä Kyrillos-veljeksen mukaan, vaikka hän itse kehitti [[glagolitsan]]; kyrillinen kirjoitus syntyi hänen oppilaidensa piirissä 800- ja 900-luvuilla. Pohjois-Makedoniassa Ohrid oli tärkeä keskus, jossa Pyhän Kliment Ohridilaisen koulu levitti slaavilaista kirjallisuutta. Nykyinen makedonialainen aakkosto, jossa on 31 kirjainta, vahvistettiin 1940-luvulla [[Blaže Koneskin]] johdolla, ja sen erityisiä kirjaimia ovat esimerkiksi ѓ ja ќ. Kyrillistä kirjoitusta käyttävät myös muun muassa [[Bulgaria]], Serbia ja Ukraina.
+
+### v2-855
+KOHDE: maa:MKD
+KYSYMYS: Kerro lisää: Tetovon
+VASTAUS: Tetovo on Pohjois-Makedonian länsiosan kaupunki [[Šar-vuoriston]] juurella, ja siellä asuu enemmistönä albaaneja. Kaupungin tunnetuin nähtävyys on värikkäästi koristeltu [[Šarena Džamija]] eli Maalattu moskeija, jonka kerrotaan olevan peräisin 1400-luvulta, mutta nykyinen ulkoasu on 1800-luvulta. Lähellä on myös [[Popova Šapka]] -hiihtokeskus Šar-vuorilla. Vuoden 2001 [[Ohridin puitesopimus]] laajensi albanian kielen käyttöä viranomaisissa ja korkeakoulutuksessa, ja kaupungissa toimii kaksi yliopistoa.
+
+### v2-856
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Üskübin
+VASTAUS: Üsküb on Skopjen ottomaaninen nimi. Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja nimi periytyy antiikin kaupungista [[Scupi]]. 1800-luvun puolivälin jälkeen kaupunki alkoi toipua, ja 1800-luvun lopulla siitä tuli [[Kosovon vilayetin]] pääkaupunki. Vuonna 1873 valmistui Skopje–Salonika-rautatie, ja asema rakennettiin Vardarin eteläpuolelle. Vuosisadan vaihteessa kaupungissa oli noin 30 000 asukasta. Ottomaanien valta päättyi alueella [[Balkanin sodan]] myötä, kun serbialaiset valtasivat kaupungin vuonna 1912.
+
+### v2-857
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Kalen linnoitus
+VASTAUS: Kalen linnoitus kohoaa kukkulalla Vardar-joen pohjoispuolella, ja se on alueen vanhimpia asuinpaikkoja: Kalen kalliolla on asuttu jo noin vuodesta 4000 eaa. Vuonna 518 maanjäristys tuhosi roomalaisen [[Scupi]]-kaupungin, ja keisari [[Justinianus I]] käski rakentaa linnoituksen kukkulalle osin Scupin kivistä. Muureja on sittemmin korjattu ja rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne kestivät myös vuoden 1963 maanjäristyksen. Linnoitus vartioi [[Vanhan basaarin]] yllä, ja kaivauksissa sen alta on löytynyt Scupin asukkaiden taloja.
+
+### v2-858
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Vanha basaari
+VASTAUS: Vanha basaari on Skopjen historiallinen kauppakortteli Vardarin pohjoisrannalla, ja se on ollut kaupan keskus ainakin 1100-luvulta lähtien. Ottomaanikaudella basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa, ja jäljellä on noin kolmekymmentä moskeijaa sekä karavaanisarajeja, kuten [[Kapan Han]]. Basaarin yläpuolella tasanteella seisoo vuonna 1492 valmistunut [[Mustafa-pasan moskeija]]. Myös [[Čifte Hamam]] on peräisin 1400-luvulta. Basaari vaurioitui maanjäristyksissä vuosina 1555 ja 1963.
+
+### v2-859
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Jugoslavian
+VASTAUS: Jugoslavia oli Balkanin valtio, joka perustettiin vuonna 1918 Serbien, Kroaattien ja Slovenien kuningaskunnaksi ja sai nimen Jugoslavia vuonna 1929. Toisen maailmansodan jälkeen siitä tuli sosialistinen liittovaltio, jota johti [[Josip Broz Tito]] hänen kuolemaansa vuonna 1980 saakka. Liittovaltioon kuului kuusi tasavaltaa: Slovenia, Kroatia, [[Bosnia ja Hertsegovina]], Serbia, Montenegro ja Makedonia, ja pääkaupunki oli [[Belgrad]]. Makedonia julistautui itsenäiseksi vuonna 1991, ja liittovaltio hajosi 1990-luvun kuluessa sodissa. Skopjen jälleenrakennukseen vuoden 1963 maanjäristyksen jälkeen osallistui useita maita.
+
+### v2-860
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Kivisilta
+VASTAUS: Kivisilta yhdistää Makedonia-aukion ja Vanhan basaarin Vardarin yli. Se on 214 metriä pitkä ja kuusi metriä leveä, ja sillä on 12 puolipyöreää kaarta. Silta rakennettiin roomalaisten perustusten päälle sulttaani [[Mehmed II]] kaudella vuosina 1451–1469, ja se on kaupungin vaakunan pääaihe. Vuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Viimeisin laaja kunnostus alkoi 1990-luvulla, ja mihrabin muotoinen vartiotorni rekonstruoitiin 2000-luvulla. Silta yhdistää keskustan [[Makedonia-aukion]] ja [[Vanhan basaarin]].
+
+### v2-861
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Čaršija
+VASTAUS: Čaršija on balkanilaisten kaupunkien vanhan kauppakorttelin nimi, ja sana tulee turkin kielestä: çarşı tarkoittaa toria tai kauppakatua. Skopjessa Čaršija on Vanha basaari, mutta samanniminen kortteli on myös Bosniassa, [[Sarajevon]] [[Baščaršija]]. Se syntyi vuonna 1462, kun [[Isa-bey Ishaković]] perusti alueelle majatalon ja ensimmäiset kaupat. Vuosisatojen kuluessa torista kasvoi käsityöläisten ja kauppiaiden kylä, ja parhaimmillaan siellä oli noin 12 000 pientä puotia ja verstasta. Jokaisella kadulla tehtiin omaa käsityötä: yhdellä lyötiin kuparia, toisella ommeltiin satuloita, kolmannella valmistettiin kenkiä.
+
+### v2-862
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Mustafa Pašan moskeija
+VASTAUS: Mustafa-pasan moskeija valmistui vuonna 1492. Sen rakennutti Çoban Mustafa-pasa, josta tuli myöhemmin [[Selim I]]-sulttaanin visiiri. Moskeija seisoo tasanteella basaarin yläpuolella lähellä [[Kalen linnoitusta]], ja siitä avautuu näköala basaarille. Lähteiden mukaan se rakennettiin vanhalle kristilliselle paikalle. Kupolin halkaisija on noin 16 metriä, ja portiikki lepää marmoripilareilla, joita koristavat stalaktiittimaiset yksityiskohdat. Moskeijan piha on täynnä ruusuja. Vieressä on [[türbe]]: Mustafa-pasa on haudattu kuusikulmaiseen marmoriseen türbeen, ja hänen tyttärensä Umi lepää sarkofagissa, jossa on persialaisia kirjoituksia.
+
+### v2-863
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: burek
+VASTAUS: Burek on ohuesta filotaikinasta kääritty ja kierteiseksi taiteltu piirakka, jonka nimi tulee turkin sanasta börek. Bosniassa lihatäytteinen on burek, juustotäytteinen [[sirnica]], perunatäytteinen krompiruša ja pinaattitäytteinen [[zeljanica]]. Piirakka leivotaan usein suurena pyöreänä vuokana ja leikataan viipaleiksi vasta tarjolle pantaessa, ja sen kanssa juodaan perinteisesti [[kiselo mlijeko]] -hapanmaitojuomaa. Pohjois-Makedoniassa burek on tavallinen aamiainen ja välipala, ja täytteenä on usein juustoa tai lihaa.
+
+### v2-864
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: tavče gravče
+VASTAUS: Tavče gravče tarkoittaa suunnilleen papuja pannulla, ja sitä pidetään Pohjois-Makedonian kansallisruokana. Pääraaka-aineena ovat isot voipavut, jotka liotetaan yön yli kylmässä vedessä, ja vesi vaihdetaan keiton aikana useaan kertaan. Pavut keitetään kahdesti ennen paistamista, ja sipulia kuullotetaan erikseen jauhojen ja punaisen paprikajauheen kanssa. Seos yhdistetään papuihin, ja ruoka paistetaan lasittamattomassa savipadassa 220 asteessa. Se tarjotaan kuumana suoraan padasta, usein [[kofta]]-lihapullien ja marinoitujen kasvisten eli [[torshin]] kanssa.
+
+### v2-865
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: ajvar
+VASTAUS: Ajvar on paahdetuista paprikoista tehty tahna, jota valmistetaan syksyisin talven varastoksi. Paprikat paahdetaan avotulella, kuoritaan ja perataan, ja massaa kypsytetään tuntikausia auringonkukkaöljyssä ja suolassa. Valmis tahna suljetaan steriileihin lasipurkkeihin, ja ne kuuluvat [[zimnica]]-nimiseen talviruokavarastoon. Skopjessa ja muualla [[Balkanilla]] ajvaria levitetään leivälle, ja sitä syödään myös grillatun lihan, esimerkiksi [[ćevapi]]-grillimakkaroiden, kanssa. Sanan alkuperä on turkin havyar, kaviaari.
+
+### v2-866
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Nobelin rauhanpalkinnon
+VASTAUS: Nobelin rauhanpalkinto on yksi viidestä alkuperäisestä Nobel-palkinnosta, jotka [[Alfred Nobel]] määräsi testamentissaan. Palkinto jaettiin ensimmäisen kerran vuonna 1901, ja sen myöntää Norjan Nobel-komitea. Palkintojuhla pidetään [[Oslossa]] 10. joulukuuta, Nobelin kuolinpäivänä, kun taas muut palkinnot jaetaan Tukholmassa. Äiti Teresa sai palkinnon vuonna 1979 työstään köyhien ja sairaiden hyväksi. Suomalaisista palkinnon on saanut [[Martti Ahtisaari]] vuonna 2008.
+
+### v2-867
+KOHDE: kaupunki:skopje
+KYSYMYS: Kerro lisää: Äiti Teresan muistotalo
+VASTAUS: Äiti Teresan muistotalo on Skopjessa sijaitseva museo, joka kertoo hänen elämästään. Hän syntyi Skopjessa vuonna 1910 nimellä [[Anjezë Gonxhe Bojaxhiu]], ja hänen perheensä oli albaaniperhe. Muistotalo sijaitsee keskustassa lähellä [[Makedonia-aukiota]], ja siellä on esillä hänen esineitään ja valokuvia. Perimätiedon mukaan rakennus on rakennettu paikalle, jolla aiemmin seisoi kirkko, jossa hänet kastettiin. Hän sai vuonna 1979 [[Nobelin rauhanpalkinnon]].
+
+### v2-868
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Ġgantija
+VASTAUS: Ġgantija on kahden esihistoriallisen temppelin muodostama kokonaisuus [[Gozon]] saarella [[Xagħran]] tasangolla. Se pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja, ja nimi tarkoittaa jättiläisten paikkaa. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Paikallinen tarina kertoo, että temppelin rakensi jättiläisnainen [[Sansuna]], joka ruokaili härkäpavuilla ja hunajalla ja kantoi samalla lastaan olallaan. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+
+### v2-869
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Ħaġar Qim
+VASTAUS: Ħaġar Qim on esihistoriallinen temppelikokonaisuus Maltan eteläosassa meren äärellä, lähellä [[Qrendin]] kylää. Temppeli on rakennettu valtavista kalkkikivilohkareista noin 5 500 vuotta sitten. Sen läheisyydessä on [[Mnajdra]], toinen temppelialue, ja yhdessä ne kuuluvat Unescon maailmanperintökohteisiin. Paikalta löydettiin 1800-luvulla pieniä naishahmoja esittäviä patsaita, jotka ovat nykyään [[Vallettan]] arkeologiamuseossa. Temppeliä suojaa nykyään iso suojakatos.
+
+### v2-870
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Mnajdra
+VASTAUS: Mnajdra on Maltan eteläosassa kallioisen rannikon rinteessä sijaitseva temppelialue, joka muodostuu kolmesta temppelistä. Se sijaitsee lähellä [[Ħaġar Qimin]] temppeleitä, ja meren yllä näkyy asumaton [[Filfla]]-saari. Tutkijoiden mukaan eteläisen temppelin sisäänkäynti on suunnattu niin, että aurinko valaisee sisäosan keväällä ja syksyllä päiväntasauksen aikaan, ja päivänseisauksina valo osuu eri kivipylväisiin. Temppelit kuuluvat [[Unescon maailmanperintökohteisiin]].
+
+### v2-871
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Il-Kantilena
+VASTAUS: Il-Kantilena on vanhin tunnettu maltankielinen kirjallinen teksti, [[Pietru Caxaron]] runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta se löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin [[Unescon Muisti maailmassa -luetteloon]]. Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat [[Sisilian arabiassa]], mutta sanastoon on tullut paljon italiaa ja sisilian kieltä.
+
+### v2-872
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Unescon Muisti maailmassa -luetteloon
+VASTAUS: Muisti maailmassa on Unescon vuonna 1992 perustama ohjelma, joka suojelee asiakirjoja, käsikirjoituksia ja muita dokumentteja, joilla on maailmanlaajuinen merkitys. Luetteloon on liitetty esimerkiksi [[Gutenbergin Raamattu]], [[Anne Frankin päiväkirja]] ja [[Magna Carta]]. Malta sai ohjelmaan oman kohteensa huhtikuussa 2025, kun luetteloon hyväksyttiin Il-Kantilena, vanhin tunnettu maltankielinen teksti. Ohjelma eroaa maailmanperintöluettelosta siinä, että se koskee asiakirjoja ja aineistoja, ei rakennuksia tai luontokohteita.
+
+### v2-873
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Sisilian arabian
+VASTAUS: Sisilian arabia oli arabian murre, jota puhuttiin Sisiliassa ja Maltalla keskiajalla. Arabit valtasivat Sisilian 800-luvulla, ja [[Palermo]] oli saaren tärkeä keskus. Malta joutui arabien haltuun noin vuonna 870. [[Normannit]] valloittivat Sisilian 1000-luvulla ja Maltan vuonna 1091, mutta arabinkielinen väestö säilyi vielä pitkään. Sisilian arabia hävisi Sisiliassa keskiajan kuluessa, mutta Maltalla se kehittyi maltan kieleksi.
+
+### v2-874
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: suuri piiritys
+VASTAUS: Suuri piiritys kesti 18. toukokuuta – 8. syyskuuta 1565, kun sulttaani Suleiman Suuri lähetti valtavan laivaston ajamaan johanniittaritarit Maltalta. Saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen, [[Fort St. Elmo]], jonka valtaaminen kesäkuun 23. päivänä maksoi heille ainakin 6 000 miestä. [[Birgu]] ja Senglea kestivät silti pommituksen, jossa Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Piiritys päättyi, kun sisilialainen apulaivasto, jota [[García de Toledo]] oli kerännyt, nousi maihin Mellieħan lahdessa syyskuun alussa. Voiton jälkeen suurmestari [[Jean de Valette]] rakennutti linnoituskaupungin, joka sai hänen nimensä.
+
+### v2-875
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Valletta
+VASTAUS: Valletta on Maltan pääkaupunki, jonka suurmestari [[Jean de Valette]] perusti vuonna 1566 laskemalla peruskiven Sciberras-niemelle suuren piirityksen jälkeen. Kaupungin suunnitteli paavin lähettämä [[Francesco Laparelli]], joka hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan. Laparellin kuoltua työtä johti maltalainen [[Girolamo Cassar]]. Kaupunki valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571. Kalkkikivestä veistetty linnoituskaupunki sijaitsee kahden sataman välissä.
+
+### v2-876
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Napoleon
+VASTAUS: Napoleon Bonaparte valtasi Maltan kesäkuussa 1798 matkallaan Egyptiin. Johanniittaritarikunnan suurmestari [[Ferdinand von Hompesch]] antautui lähes taistelutta, ja ritarit joutuivat poistumaan saarelta. Ranskalaiset toteuttivat nopeasti uudistuksia, mutta heidän toimensa herättivät maltalaisten kapinan, ja britit auttoivat saaren saartamisessa. Ranskalaiset antautuivat vuonna 1800, ja Malta siirtyi lopulta brittien haltuun. Napoleon kruunautui keisariksi vuonna 1804, kärsi tappion [[Waterloon]] taistelussa vuonna 1815 ja kuoli vuonna 1821 Pyhän Helenan saarella, jonne hänet oli karkotettu. Ennen sitä hän oli ollut maanpaossa [[Elban]] saarella.
+
+### v2-877
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Dinglin
+VASTAUS: Dingli on kylä Maltan länsirannikolla tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, [[Ta' Dmejrek]], nousee 253 metriin. Ritarikunnan aikana seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton [[Filfla]]-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista [[Thomas Dingleystä]], jonka omistuksessa oli suuri osa seudun maista. Lähistöllä ovat myös muinaiset kärrynjäljet, joita kutsutaan nimellä [[Clapham Junction]].
+
+### v2-878
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Ta' Dmejrek
+VASTAUS: Ta' Dmejrek on Maltan korkein kohta, ja se nousee 253 metriin merenpinnan yläpuolelle. Se sijaitsee Maltan länsiosassa [[Dinglin]] seudulla, jossa kalkkikivinen tasanko päättyy jyrkänteeseen. Maltan pienuuden vuoksi korkein kohta ei ole varsinainen vuori vaan loivasti kohoava ylänkö. Toisella pääsaarella, [[Gozolla]], korkein kohta on [[Ta' Dbieġi]], joka on noin 195 metriä korkea. Merellä näkyy asumaton [[Filfla]]-saari.
+
+### v2-879
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Filfla
+VASTAUS: Filfla on pieni asumaton saari noin viiden kilometrin päässä Maltan etelärannikolta. Britit käyttivät sitä ampumaharjoituskohteena vuoteen 1971 asti, ja nykyään se on luonnonsuojelualue, jonne ei saa nousta ilman lupaa. Saarella pesii merilintuja, ja siellä elää lähteiden mukaan oma sisiliskon alalajinsa. Filfla näkyy hyvin Maltan länsi- ja etelärannikolle, esimerkiksi [[Mnajdran]] temppeleistä ja [[Dinglin]] jyrkänteiltä.
+
+### v2-880
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: pastizzi
+VASTAUS: Pastizzi on suikea tai pyöreä piiras, jonka taikina muistuttaa kreikkalaista [[filotaikinaa]], vaikka myös lehtitaikinaversio on olemassa. Perinteisiä täytteitä on kaksi: [[ricotta]] eli irkotta sekä currylla maustetut herneet eli [[piżelli]]. Täytteen tunnistaa taitteesta, sillä ricottapiiraat taitetaan keskeltä ja hernepiiraat sivulta. Kylissä pastizzit ovat suosittu aamiainen, ja maltalaisessa pastizzerijassa aamu alkaa niistä. Maltaksi hyvin kaupaksi menevän tuotteen sanotaan myyvän kuin pastizzi.
+
+### v2-881
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: stuffat tal-fenek
+VASTAUS: Stuffat tal-fenek on Maltan kansallisruoka. Sen uskotaan saaneen alkunsa hiljaisena vastarintana: [[Pyhän Johanneksen ritarit]] rajoittivat metsästystä ja varasivat riistan itselleen, joten kaniinin syöminen oli pienoista uhmaa. Ruokalaji yleistyi 1700-luvun lopulla, kun rajoitukset purettiin, saarten oma [[Tax-Xiber]]-kaniini oli lisääntynyt ja hinnat laskivat. Kesyjen kaniinien kasvatuksen arvellaan levinneen Maltalle ranskalaisten ritarien mukana. Nimessä fenek tarkoittaa kaniinia.
+
+### v2-882
+KOHDE: maa:MLT
+KYSYMYS: Kerro lisää: Kinnie
+VASTAUS: Kinnie on maltalainen virvoitusjuoma, jonka valmistaa panimoyhtiö [[Simonds Farsons Cisk]]. Se on tehty [[karvasappelsiineista]] ja yrteistä, ja maku on katkerahko ja sitruksinen. Juoma tuli markkinoille 1900-luvun puolivälissä, mutta en ole varma tarkasta vuodesta. Kinnie on Maltalla niin tavallinen, että sitä pidetään lähes kansallisjuomana, ja sitä myydään pulloissa ja tölkeissä.
+
+### v2-883
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Jean Parisot de Valette
+VASTAUS: Jean Parisot de Valette oli ranskalaissyntyinen [[Johanniittaritarikunnan]] suurmestari, joka valittiin tehtäväänsä vuonna 1557. Hän johti ritarikunnan puolustusta vuoden 1565 suuressa piirityksessä, joka kesti 18. toukokuuta – 8. syyskuuta. Piirityksen alussa osmanit hyökkäsivät ensin [[Pyhän Elmon linnakkeeseen]], jonka valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Valette lähetti yöllä viestejä uimareiden mukana linnakkeen ja [[Birgun]] välillä, ja Birgu ja Senglea kestivät pommituksen. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja hän rakennutti Sciberras-niemelle linnoitetun kaupungin, joka sai hänen nimensä. Hän kuoli vuonna 1568, ennen kuin kaupunki oli valmis.
+
+### v2-884
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Sciberrasin niemi
+VASTAUS: Sciberrasin niemi on kapea kalkkikiviniemi Grand Harbourin ja Marsamxett-sataman välissä. Ennen kaupungin perustamista se oli lähes asumaton. Niemen kärjessä seisoi [[Pyhän Elmon linnake]], joka piti pintansa vuoden 1565 piirityksessä 23. kesäkuuta asti, ja osmanien voitto linnakkeesta maksoi heille ainakin 6 000 miestä. Piirityksen jälkeen ritarikunta rakensi niemelle linnoitetun kaupungin, [[Vallettan]], jonka peruskivi laskettiin 28. maaliskuuta 1566. Suunnittelijaksi paavi lähetti [[Francesco Laparellin]], ja Valletta valmistui pääosin 1570-luvun alkuun mennessä.
+
+### v2-885
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Caravaggion
+VASTAUS: Caravaggio oli italialainen barokkimaalari, joka pakeni [[Roomasta]] vuonna 1607 tapettuaan miehen kaksintaistelussa. Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi [[Pyhän Johanneksen ko-katedraalin]] oratorioon teoksen [[Johannes Kastajan mestaus]], jonka uskotaan olevan hänen ainoa allekirjoittamansa työnsä. Hän joutui poistumaan saarelta jo samana vuonna, ja hän kuoli vuonna 1610.
+
+### v2-886
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Johannes Kastajan mestaus
+VASTAUS: Johannes Kastajan mestaus on Caravaggion vuonna 1608 maalaama alttaritaulu, joka sijaitsee [[Pyhän Johanneksen ko-katedraalin]] oratoriossa. Teos on noin viisi metriä leveä ja kuvaa Uuden testamentin kertomusta Johannes Kastajan kuolemasta; hän oli ritarikunnan suojeluspyhimys. Maalaus on tummasävyinen ja asettelultaan hillitty, ja sen uskotaan olevan [[Caravaggion]] ainoa allekirjoitettu työ. Se on yksi barokkitaiteen tunnetuimmista teoksista, ja se on yhä paikallaan oratoriossa.
+
+### v2-887
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: George Cross
+VASTAUS: George Cross on Britannian siviiliurheuden kunniamerkki, jonka kuningas [[Yrjö VI]] perusti vuonna 1940. Hän myönsi sen Maltalle 15. huhtikuuta 1942 saaren asukkaiden urheudesta [[toisen maailmansodan]] pommitusten aikana. Kunniamerkki on kuvattuna [[Maltan lipun]] kulmassa. Sodan aikana saarelle tehtiin tuhansia ilmahyökkäyksiä, koska sitä pidettiin Välimeren strategisena avaimena.
+
+### v2-888
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Grand Harbour
+VASTAUS: Grand Harbour on Maltan itärannikolla oleva luonnonsatama, jonka rannoilla ovat Valletta ja niin sanotut kolme kaupunkia, [[Birgu]], Senglea ja Cospicua. Ritarikunta valitsi Birgun asuinpaikakseen saapuessaan Maltalle vuonna 1530. Birgun niemellä seisoo [[Fort St. Angelo]], jonka paikalla oli antiikin aikaan Astarten temppeli ja myöhemmin linna nimeltä Castrum Maris, Meren linna. Nykyisen ilmeensä linnake sai 1690-luvun uudistuksessa, ja britit pitivät siinä varuskuntaa vuosina 1800–1979. Britit tekivät satamasta Välimeren laivastonsa tukikohdan.
+
+### v2-889
+KOHDE: kaupunki:valletta
+KYSYMYS: Kerro lisää: Grand Harbourin
+VASTAUS: Grand Harbour on Vallettan itäpuolella oleva syvä luonnonsatama, jossa on useita sivulahtia. Vallettan puolella rantaa hallitsevat linnoitukset, ja vastarannalla ovat [[Birgu]], Senglea ja Cospicua. [[Fort St. Angelo]] seisoo Birgun niemellä, ja se tuli suurmestarin kotipaikaksi ritarikunnan saavuttua Maltalle vuonna 1530. Britit pitivät linnakkeessa varuskuntaa vuosina 1800–1979. Vallettan [[Upper Barrakka]] -puutarhasta avautuu näkymä satamaan.
+

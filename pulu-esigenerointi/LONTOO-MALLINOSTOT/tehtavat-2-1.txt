@@ -1,0 +1,412 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Guatemala — kohdekartta / Kohdekartta: Cerrito del Carmen] 1620 Kukkulan laella oleva erakkomaja on vähintään sata vuotta vanhempi kuin kaupunki sen ympärillä. Laaksoa kutsuttiin Vacas-laaksoksi eli lehmien laaksoksi, koska valloittaja Héctor de la Barreda toi sinne Kuubasta karjaa, joka lisääntyi rehevillä laitumilla nopeasti. Genovalaisesta Toiranosta kotoisin ollut maallikkoveli Juan Corz saapui laaksoon noin 35-vuotiaana ja asettui kahteen luolaan: toiseen hän sijoitti Neitsyt Marian kuvan, toisessa asui itse. Luolasta hän lähti vain kaksi kertaa vuodessa kerjäämään. Kun naapurit löysivät kuvan, he alkoivat käydä sen luona, ja lopulta kukkulalle rakennettiin kappeli — Corz oli nähnyt Pyhällä maalla Karmelin vuoren ja piti kukkulaa sen kaltaisen…
+AIEMPI KYSYMYS: Kuka kruunattiin Westminster Abbeyssa joulupäivänä 1066?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan hyvin. Joulupäivänä 1066 kruunattiin [[Vilhelm Valloittaja]], joka oli voittanut Englannin [[Hastingsin taistelussa]] lokakuussa 1066. [[Edvard Tunnustajan]] kivikirkko oli vihitty vain vuotta aiemmin, ja Vilhelmistä lähtien lähes kaikki Englannin hallitsijat on kruunattu samassa kirkossa. Joulupäivä on kyl aika erikoinen aika kruunata ketään.
+KYSYMYS: Kerro lisää: Vilhelm Valloittaja
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Amsterdam-laiva] Kompanian laivat menivät itään hopea lastinaan ja palasivat mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja tammikuun 26. pä…
+AIEMPI KYSYMYS: Kuka kruunattiin Westminster Abbeyssa joulupäivänä 1066?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan hyvin. Joulupäivänä 1066 kruunattiin [[Vilhelm Valloittaja]], joka oli voittanut Englannin [[Hastingsin taistelussa]] lokakuussa 1066. [[Edvard Tunnustajan]] kivikirkko oli vihitty vain vuotta aiemmin, ja Vilhelmistä lähtien lähes kaikki Englannin hallitsijat on kruunattu samassa kirkossa. Joulupäivä on kyl aika erikoinen aika kruunata ketään.
+KYSYMYS: Kerro lisää: Hastingsin taistelussa
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Ljubljana — kohdekartta / Kohdekartta: Prešernin aukio] 1600-luku Prešernin aukio on Ljubljanan keskusaukio vanhan kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa 1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja kivettiin. Wolfin ja Čopin kadun välissä seisova Hauptmannin talo rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen jälkeen: Max Fabiani suunnitteli sen nel…
+AIEMPI KYSYMYS: Kuka kruunattiin Westminster Abbeyssa joulupäivänä 1066?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan hyvin. Joulupäivänä 1066 kruunattiin [[Vilhelm Valloittaja]], joka oli voittanut Englannin [[Hastingsin taistelussa]] lokakuussa 1066. [[Edvard Tunnustajan]] kivikirkko oli vihitty vain vuotta aiemmin, ja Vilhelmistä lähtien lähes kaikki Englannin hallitsijat on kruunattu samassa kirkossa. Joulupäivä on kyl aika erikoinen aika kruunata ketään.
+KYSYMYS: Kerro lisää: Edvard Tunnustajan
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä oli kruunajaistuolin alla vuoteen 1996 asti?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä osaan kertoo. Tuolin istuimen alla oli [[Sconen kivi]] eli Skotlannin kruunajaiskivi, jolla Skotlannin kuninkaat oli kruunattu. Englannin kuningas [[Edvard I]] vei sen Skotlannista noin 1300, ja tuoli tehtiin sitä varten. Kivi palautettiin [[Skotlantiin]] 1996, ja se tuodaan Westminsteriin vain kruunajaisiin. Kyl se tuoli oli varmaan aika kova istua.
+KYSYMYS: Kerro lisää: Sconen kivi
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Ljubljana — kohdekartta / Kohdekartta: Prešernin aukio] 1600-luku Prešernin aukio on Ljubljanan keskusaukio vanhan kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa 1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja kivettiin. Wolfin ja Čopin kadun välissä seisova Hauptmannin talo rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen jälkeen: Max Fabiani suunnitteli sen nel…
+AIEMPI KYSYMYS: Mikä oli kruunajaistuolin alla vuoteen 1996 asti?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä osaan kertoo. Tuolin istuimen alla oli [[Sconen kivi]] eli Skotlannin kruunajaiskivi, jolla Skotlannin kuninkaat oli kruunattu. Englannin kuningas [[Edvard I]] vei sen Skotlannista noin 1300, ja tuoli tehtiin sitä varten. Kivi palautettiin [[Skotlantiin]] 1996, ja se tuodaan Westminsteriin vain kruunajaisiin. Kyl se tuoli oli varmaan aika kova istua.
+KYSYMYS: Kerro lisää: Edvard I
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Abbey (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kirkon paikalla oli ensin benediktiiniluostari, ja kuningas Edvard Tunnustaja rakennutti sille suuren kivikirkon, joka vihittiin joulukuussa 1065. Vain päiviä myöhemmin Edvard kuoli. Seuraavana jouluna 1066 Vilhelm Valloittaja kruunattiin samassa kirkossa, ja siitä lähtien lähes kaikki Englannin hallitsijat on kruunattu täällä. Nykyinen goottilainen kirkko alkoi nousta 1245, kun Henrik III purki Edvardin kirkon. Munkit asuivat luostarissa vielä lähes kolmesataa vuotta, kunnes Henrik VIII lakkautti luostarit 1540. Länsitornit valmistuivat vasta 1745. Kruunajaistuoli tehtiin noin 1300, ja sen istuimen alla oli Skotlannista ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [apia — kaupunkilehti / Tusitalan todellinen saarikoti: Aarresaari tuli ennen Samoa-vuosia] Aarresaari julkaistiin kirjana vuonna 1883, ennen Robert Louis Stevensonin muuttoa Samoaan. Myös Tohtori Jekyll ja herra Hyde oli ilmestynyt ennen Vailiman-vuosia. Samoassa hän kirjoitti uusia Tyynenmeren tarinoita ja jatkoi Skotlantiin sijoittuvaa tuotantoaan. Samoa-vuosiin kuuluu The Beach of Falesá -kertomus. Skotlantiin sijoittuva Weir of Hermiston jäi hänen kuollessaan keskeneräiseksi.
+AIEMPI KYSYMYS: Mikä oli kruunajaistuolin alla vuoteen 1996 asti?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä osaan kertoo. Tuolin istuimen alla oli [[Sconen kivi]] eli Skotlannin kruunajaiskivi, jolla Skotlannin kuninkaat oli kruunattu. Englannin kuningas [[Edvard I]] vei sen Skotlannista noin 1300, ja tuoli tehtiin sitä varten. Kivi palautettiin [[Skotlantiin]] 1996, ja se tuodaan Westminsteriin vain kruunajaisiin. Kyl se tuoli oli varmaan aika kova istua.
+KYSYMYS: Kerro lisää: Skotlantiin
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä sytytti Westminsterin palatsin palon 1834?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tuost on tarina. Palon sytyttivät palatsin uuneissa lokakuussa 1834 poltetut vanhat puiset [[veropuikot]], joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, tuli levisi ja lähes koko vanha palatsi paloi. Tulipaloa katselivat joen rannalla tuhannet ihmiset, myös taidemaalari [[William Turner]]. Uuden palatsin suunnitteli [[Charles Barry]], ja sen goottilaiset yksityiskohdat [[Augustus Pugin]]. Kirjanpito meni kirjaimellisesti savuna ilmaan.
+KYSYMYS: Kerro lisää: veropuikot
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Parturin poika maalasi valon] Joseph Mallord William Turner syntyi vuonna 1775 Covent Gardenissa, jossa hänen isällään oli parturinliike Maiden Lanen varrella. Isä ripusti kymmenvuotiaan poikansa piirustuksia näyteikkunaan ja myi niitä muutamalla shillingillä, ja neljäntoistavuotiaana poika pääsi kuninkaallisen taideakatemian oppilaaksi. Kuollessaan 1851 hän testamenttasi kansakunnalle noin 300 öljymaalausta, noin 30 000 akvarellia ja piirustusta sekä satoja luonnoskirjoja ja toivoi valmiiden töidensä pysyvän yhdessä. Toive ei aivan toteutunut, mutta hänen töitään katsellaan yhä ilman pääsymaksua Tate Britainissa ja National Galleryssä.
+AIEMPI KYSYMYS: Mikä sytytti Westminsterin palatsin palon 1834?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tuost on tarina. Palon sytyttivät palatsin uuneissa lokakuussa 1834 poltetut vanhat puiset [[veropuikot]], joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, tuli levisi ja lähes koko vanha palatsi paloi. Tulipaloa katselivat joen rannalla tuhannet ihmiset, myös taidemaalari [[William Turner]]. Uuden palatsin suunnitteli [[Charles Barry]], ja sen goottilaiset yksityiskohdat [[Augustus Pugin]]. Kirjanpito meni kirjaimellisesti savuna ilmaan.
+KYSYMYS: Kerro lisää: William Turner
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Mikä sytytti Westminsterin palatsin palon 1834?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tuost on tarina. Palon sytyttivät palatsin uuneissa lokakuussa 1834 poltetut vanhat puiset [[veropuikot]], joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, tuli levisi ja lähes koko vanha palatsi paloi. Tulipaloa katselivat joen rannalla tuhannet ihmiset, myös taidemaalari [[William Turner]]. Uuden palatsin suunnitteli [[Charles Barry]], ja sen goottilaiset yksityiskohdat [[Augustus Pugin]]. Kirjanpito meni kirjaimellisesti savuna ilmaan.
+KYSYMYS: Kerro lisää: Charles Barry
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1868–1928 Ensimmäisen katolisen kirkon peruskiven laski kuvernööri Macquarie 29. lokakuuta 1821. Pappi John Therry oli pyytänyt tonttia kaupungin länsilaidalta Darling Harbourin suunnalta, mutta hänelle annettiin maa idästä Macquarien omien rakennushankkeiden vierestä, tiilenpolttopaikan yläpuolelta — samalta alueelta, joka on nykyään Hyde Park. Kirkko paloi 29. kesäkuuta 1865. Arkkipiispa John Bede Polding kirjoitti Lontooseen William Wardellille, joka oli Augustus Welby Puginin oppilas, ja antoi tälle vapaat kädet: mikä tahansa suunnitelma, mikä tahansa tyyli, mikä tahansa kaunis ja suuri, siihen asti kuin varamme riittävät. Peruskivi laskettiin 1868. Väliaikainen puukirkko paloi sekin vu…
+- [Hobart — kohdekartta / Kohdekartta: St Maryn katedraali] 1866 Katolisen arkkihiippakunnan pääkirkon juuret ovat vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen pappi Philip Conolly rakensi nykyisen paikan lähelle väliaikaisen puukappelin. Varsinaisen katedraalin peruskivi laskettiin 1860. Piirustukset teki William Wardell, Augustus Puginin oppilas, ja kirkko vihittiin 1866 uusgoottilaisena. Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja katedraali purettiin lopulta lähes kokonaan. Se rakennettiin uudelleen Wardellin alkuperäisiin suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja työstä vastasi hobartilainen Henry Hunter — sama arkkitehti, joka oli voittanut Tasmanian museon suunnittelukilpailun. Hunter laski uuden peruskive…
+AIEMPI KYSYMYS: Mikä sytytti Westminsterin palatsin palon 1834?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tuost on tarina. Palon sytyttivät palatsin uuneissa lokakuussa 1834 poltetut vanhat puiset [[veropuikot]], joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, tuli levisi ja lähes koko vanha palatsi paloi. Tulipaloa katselivat joen rannalla tuhannet ihmiset, myös taidemaalari [[William Turner]]. Uuden palatsin suunnitteli [[Charles Barry]], ja sen goottilaiset yksityiskohdat [[Augustus Pugin]]. Kirjanpito meni kirjaimellisesti savuna ilmaan.
+KYSYMYS: Kerro lisää: Augustus Pugin
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Huumori: Sana cartoon syntyi vitsistä] Vuonna 1834 palanutta parlamenttitaloa rakennettiin uudelleen, ja Westminster Hallissa oli kesällä 1843 esillä jättimäisiä luonnoksia tulevia seinämaalauksia varten. Italiaksi tällaista luonnosta sanotaan nimellä cartone, englanniksi cartoon. Pilalehti Punch julkaisi 15. heinäkuuta 1843 oman versionsa otsikolla Cartoon, No. 1: 25-vuotias John Leech päästi ryysyiset katulapset hienoon taulugalleriaan, jossa rikkaiden muotokuvat riippuivat nälkäisten silmien edessä. Pilkka jäi elämään niin sitkeästi, että cartoon tarkoittaa englannissa yhä pilapiirrosta.
+- [Iso-Britannia — maalehti / Kirjallisuus: Runoilijoiden nurkka syntyi vahingossa] Geoffrey Chaucer haudattiin Westminster Abbeyhin vuonna 1400, mutta ei runojensa takia: hän oli hoitanut kuninkaan rakennustöitä ja asunut vuokralla kirkon alueella. Vasta 156 vuotta myöhemmin Nicholas Brigham teetti hänelle komean haudan ja siirsi luut siihen. Kun Edmund Spenser haudattiin viereen 1599, tapa oli syntynyt. Nyt saman eteläisen ristivarren lattia on täynnä kirjailijoiden muistolaattoja, joiden yli kävellään joka päivä.
+AIEMPI KYSYMYS: Mikä palatsin osa säilyi palosta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Palosta säilyi [[Westminster Hall]], palatsin vanhin osa, joka oli valmistunut 1097. Myös [[Pyhän Stefanuksen kappelin]] alakerran krypta säilyi. Muu palatsi rakennettiin uudelleen [[Charles Barryn]] ja [[Augustus Puginin]] suunnitelmilla noin kolmenkymmenen vuoden aikana. Vanhat kivet kestää, vaikka tuli yrittäis mitä.
+KYSYMYS: Kerro lisää: Westminster Hall
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä palatsin osa säilyi palosta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Palosta säilyi [[Westminster Hall]], palatsin vanhin osa, joka oli valmistunut 1097. Myös [[Pyhän Stefanuksen kappelin]] alakerran krypta säilyi. Muu palatsi rakennettiin uudelleen [[Charles Barryn]] ja [[Augustus Puginin]] suunnitelmilla noin kolmenkymmenen vuoden aikana. Vanhat kivet kestää, vaikka tuli yrittäis mitä.
+KYSYMYS: Kerro lisää: Pyhän Stefanuksen kappelin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä palatsin osa säilyi palosta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Palosta säilyi [[Westminster Hall]], palatsin vanhin osa, joka oli valmistunut 1097. Myös [[Pyhän Stefanuksen kappelin]] alakerran krypta säilyi. Muu palatsi rakennettiin uudelleen [[Charles Barryn]] ja [[Augustus Puginin]] suunnitelmilla noin kolmenkymmenen vuoden aikana. Vanhat kivet kestää, vaikka tuli yrittäis mitä.
+KYSYMYS: Kerro lisää: Charles Barryn
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminsterin palatsi (Lontoo) (nähtävyys)
+Tietoruudun teksti: Kuninkaat asuivat Westminsterissä jo ennen normannien valloitusta, ja palatsin vanhin osa, Westminster Hall, valmistui 1097. Parlamentti kokoontui vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla. Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat tuhannet ihmiset, myös taidemaalari William Turner. Paloon säilyi Westminster Hall. Uuden palatsin suunnitteli Charles Barry ja sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää alakerran krypta.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1868–1928 Ensimmäisen katolisen kirkon peruskiven laski kuvernööri Macquarie 29. lokakuuta 1821. Pappi John Therry oli pyytänyt tonttia kaupungin länsilaidalta Darling Harbourin suunnalta, mutta hänelle annettiin maa idästä Macquarien omien rakennushankkeiden vierestä, tiilenpolttopaikan yläpuolelta — samalta alueelta, joka on nykyään Hyde Park. Kirkko paloi 29. kesäkuuta 1865. Arkkipiispa John Bede Polding kirjoitti Lontooseen William Wardellille, joka oli Augustus Welby Puginin oppilas, ja antoi tälle vapaat kädet: mikä tahansa suunnitelma, mikä tahansa tyyli, mikä tahansa kaunis ja suuri, siihen asti kuin varamme riittävät. Peruskivi laskettiin 1868. Väliaikainen puukirkko paloi sekin vu…
+- [Hobart — kohdekartta / Kohdekartta: St Maryn katedraali] 1866 Katolisen arkkihiippakunnan pääkirkon juuret ovat vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen pappi Philip Conolly rakensi nykyisen paikan lähelle väliaikaisen puukappelin. Varsinaisen katedraalin peruskivi laskettiin 1860. Piirustukset teki William Wardell, Augustus Puginin oppilas, ja kirkko vihittiin 1866 uusgoottilaisena. Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja katedraali purettiin lopulta lähes kokonaan. Se rakennettiin uudelleen Wardellin alkuperäisiin suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja työstä vastasi hobartilainen Henry Hunter — sama arkkitehti, joka oli voittanut Tasmanian museon suunnittelukilpailun. Hunter laski uuden peruskive…
+AIEMPI KYSYMYS: Mikä palatsin osa säilyi palosta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Palosta säilyi [[Westminster Hall]], palatsin vanhin osa, joka oli valmistunut 1097. Myös [[Pyhän Stefanuksen kappelin]] alakerran krypta säilyi. Muu palatsi rakennettiin uudelleen [[Charles Barryn]] ja [[Augustus Puginin]] suunnitelmilla noin kolmenkymmenen vuoden aikana. Vanhat kivet kestää, vaikka tuli yrittäis mitä.
+KYSYMYS: Kerro lisää: Augustus Puginin
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Keitä Westminster Bridgen avaaminen 1750 vei elannon?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuost on ollu kiistaa. Elannon menettivät kyydityksestä eläneet [[venemiehet]], jotka soutivat ihmisiä joen yli. Ennen siltaa Lontoon keskustan ainoa silta oli [[London Bridge]], ja Westminsterissä satoja venemiehiä eli kyydityksestä. He vastustivat uutta siltaa kiivaasti, mutta se avattiin silti 1750. Soutajalle silta lienee ollut ikävä näky.
+KYSYMYS: Kerro lisää: venemiehet
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Vanha London Bridge] Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria ja yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja alusta asti, koska niiden vuokrat maksoivat sillan kunnossapidon — 1300-luvun lopulla niitä oli 140, ja 1600-luvulla lähes kaikissa oli neljä tai viisi kerrosta. Jokainen talo oli myös kauppa, ja silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.
+- [Lontoo — kohdekartta / Kohdekartta: Tower Bridge] 1886–1894 Sillan piti ratkaista mahdoton tehtävä: itä-Lontoo tarvitsi ylityspaikan, mutta purjelaivojen oli yhä päästävä satamaan sillan kohdalta. Laki määräsi, että silta avataan laivalle koska tahansa, ruuhkasta riippumatta. Tornit näyttävät keskiaikaisilta, mutta sisällä on teräsluuranko, jonka päälle ladottiin kiveä, jotta silta sopisi yhteen viereisen Lontoon Towerin kanssa. Avautuvat läpät, kumpikin noin 1 070 tonnia, nousevat vastapainojen ansiosta viidessä minuutissa. Silta sekoitetaan yhä naapuriinsa London Bridgeen. Kun vanha London Bridge myytiin 1968 amerikkalaiselle liikemiehelle ja koottiin uudelleen Arizonaan, syntyi tarina, että ostaja luuli saavansa juuri tämän sillan.
+AIEMPI KYSYMYS: Keitä Westminster Bridgen avaaminen 1750 vei elannon?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuost on ollu kiistaa. Elannon menettivät kyydityksestä eläneet [[venemiehet]], jotka soutivat ihmisiä joen yli. Ennen siltaa Lontoon keskustan ainoa silta oli [[London Bridge]], ja Westminsterissä satoja venemiehiä eli kyydityksestä. He vastustivat uutta siltaa kiivaasti, mutta se avattiin silti 1750. Soutajalle silta lienee ollut ikävä näky.
+KYSYMYS: Kerro lisää: London Bridge
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Parlamenttitalo] 1994 Pohjoisterritorion parlamenttitalo on Australian nuorin parlamenttirakennus. Se seisoo State Squarella, joka on samalla territorion hallinnon ja oikeuslaitoksen keskus. Tontilla on pitkä virkahistoria: siinä oli ennen Palmerstonin postitalo, ja kun paikka rakennettiin 1955 uudelleen, siihen sijoitettiin vuonna 1948 perustettu lakiasäätävä neuvosto, joka oli siihen asti kokoontunut kaupungin väliaikaisissa tiloissa. Vuonna 1988 territorion hallitus ilmoitti State Squaren rakentamisesta: aukiolle tulisivat sekä uusi parlamenttitalo että korkein oikeus. Vanhat rakennukset purettiin 1990, ja siitä vuoden 1994 loppuun lakiasäätävä kokous istui väliaikaisesti viereisessä Chan -talossa. Talon…
+AIEMPI KYSYMYS: Miksi Westminster Bridge on vihreä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Silta on parlamenttitalon [[alahuoneen]] päässä, ja se on maalattu vihreäksi kuten alahuoneen penkit. Palatsin toisessa päässä [[Lambeth Bridge]] on punainen kuten [[ylähuoneen]] penkit. Nykyinen valurautainen silta avattiin 1862. Penkit jää katolta näkemättä, mut sillat näkyy hyvin.
+KYSYMYS: Kerro lisää: alahuoneen
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Huumori: Chaplin oli lontoolainen köyhä poika] Charlie Chaplin syntyi 16. huhtikuuta 1889 Walworthissa Etelä-Lontoossa, ja seitsemänvuotiaana hänet vietiin Lambethin vaivaistaloon. Molemmat vanhemmat olivat music hall -esiintyjiä, ja poika itse kiersi yhdeksänvuotiaana englantilaisia varieteesaleja Eight Lancashire Lads -puukenkätanssiryhmässä. Kulkurin asun hän kokosi Keystonen studiolla Los Angelesissa 1914 yhden periaatteen mukaan, jonka hän myöhemmin kirjoitti muistiin: kaiken piti olla ristiriitaista, housut pussittavat, takki tiukka, hattu pieni ja kengät suuret.
+AIEMPI KYSYMYS: Miksi Westminster Bridge on vihreä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Silta on parlamenttitalon [[alahuoneen]] päässä, ja se on maalattu vihreäksi kuten alahuoneen penkit. Palatsin toisessa päässä [[Lambeth Bridge]] on punainen kuten [[ylähuoneen]] penkit. Nykyinen valurautainen silta avattiin 1862. Penkit jää katolta näkemättä, mut sillat näkyy hyvin.
+KYSYMYS: Kerro lisää: Lambeth Bridge
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Westminster Bridge (Lontoo) (nähtävyys)
+Tietoruudun teksti: Vuosisatoja Lontoon keskustan ainoa silta oli London Bridge, ja Westminsterissä joen yli soudettiin. Satoja venemiehiä eli kyydityksestä, ja he vastustivat uutta siltaa kiivaasti. Ensimmäinen Westminster Bridge avattiin silti 1750. Kivisilta oli aikansa ihme, ja italialainen taidemaalari Canaletto ikuisti sen useisiin tauluihin. William Wordsworth kirjoitti sillalla 1802 sonetin aamun hiljaisesta Lontoosta. Silta kuitenkin painui, kun sen perustukset pettivät joen pohjassa. Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miksi Westminster Bridge on vihreä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Silta on parlamenttitalon [[alahuoneen]] päässä, ja se on maalattu vihreäksi kuten alahuoneen penkit. Palatsin toisessa päässä [[Lambeth Bridge]] on punainen kuten [[ylähuoneen]] penkit. Nykyinen valurautainen silta avattiin 1862. Penkit jää katolta näkemättä, mut sillat näkyy hyvin.
+KYSYMYS: Kerro lisää: ylähuoneen
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä lopetti teeklippereiden aikakauden?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sen minä tiedän. Teeklippereiden aikakauden lopetti Suezin kanava, joka avattiin 1869, samana vuonna kuin [[Cutty Sark]] valmistui. [[Höyrylaivat]] pääsivät kanavan kautta Kiinaan paljon lyhyempää reittiä, mutta [[purjelaivat]] eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa. Purjeet jäi kyl ikävästi jalkoihin.
+KYSYMYS: Kerro lisää: Cutty Sark
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Isoisän ajan höyrylaiva vuorten yli] Kun isoisä matkusti Etelä-Amerikassa 1873, Titicaca-järvellä purjehti jo höyrylaiva, jonka matka sinne oli yhtä käänteinen kuin merten takaa. Yavari tilattiin Lontoosta 1861 ja rakennettiin Thames Ironworksin telakalla osina, jotka piti pystyä kantamaan muulin selässä Andien yli – kumpikin sisarusalus purettiin yhteensä 2 766 kappaleeksi. Rautatie kuljetti osat rannikolta sisämaahan, mutta loppumatka Punoon kesti muulien selässä vuosia, ja alkuperäinen urakoitsija jätti työn kesken. Kuljetus jatkui 1868, rungon ensimmäiset levyt niitattiin paikalleen 1869, ja Yavari laskettiin vesille vasta 1870 – kolme vuotta ennen isoisän matkaa.
+- [New Orleans — kaupunkilehti / Historia: Höyrylaiva joka avasi joen ylävirtaan] Ennen höyryä Mississippiä pystyi kulkemaan käytännössä vain myötävirtaan; ylävirtaan noustiin soutamalla tai hinaamalla rannalta. Sen muutti laiva nimeltä New Orleans, joen ensimmäinen höyrylaiva, joka lähti Pittsburghista lokakuussa 1811. Matkalla se selvisi vahingoittumattomana New Madridin maanjäristyssarjasta ja saapui perille 10. tammikuuta 1812. Pian se aloitti säännölliset vuorot Natcheziin. Vuoteen 1860 mennessä joen kauppa oli tehnyt New Orleansista maan kolmanneksi suurimman tuontisataman lastimäärällä mitattuna ja nostanut sen asukaskohtaisen tulotason maan toiseksi korkeimmaksi.
+AIEMPI KYSYMYS: Mikä lopetti teeklippereiden aikakauden?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sen minä tiedän. Teeklippereiden aikakauden lopetti Suezin kanava, joka avattiin 1869, samana vuonna kuin [[Cutty Sark]] valmistui. [[Höyrylaivat]] pääsivät kanavan kautta Kiinaan paljon lyhyempää reittiä, mutta [[purjelaivat]] eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa. Purjeet jäi kyl ikävästi jalkoihin.
+KYSYMYS: Kerro lisää: Höyrylaivat
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Kööpenhamina — kohdekartta / Kohdekartta: Nyhavn] 1670–1675 Nyhavn eli ”uusi satama” on 450 metriä pitkä kanava Kööpenhaminan keskustassa. Kuningas Christian V rakennutti sen vuosina 1670–1675, ja työn tekivät tanskalaiset sotilaat sekä Tanskan ja Ruotsin sodassa vangiksi jääneet ruotsalaiset sotavangit. Kanavan piti tuoda laivat suoraan merenlahdelta kaupungin Kongens Nytorv -torille asti. Ennen vanhaan Nyhavn oli meluisa ja vähän vaarallinenkin satamakortteli täynnä merimiehiä ja krouveja - aivan toisenlainen paikka kuin nykyinen värikäs turistikatu. Vanhin talo, numero 9, on peräisin jo vuodelta 1681. Satukirjailija H. C. Andersen asui Nyhavnin varrella eri osoitteissa yhteensä 18 vuoden ajan. 1960-luvulla kanava oli päässyt rappiolle, …
+AIEMPI KYSYMYS: Mikä lopetti teeklippereiden aikakauden?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sen minä tiedän. Teeklippereiden aikakauden lopetti Suezin kanava, joka avattiin 1869, samana vuonna kuin [[Cutty Sark]] valmistui. [[Höyrylaivat]] pääsivät kanavan kautta Kiinaan paljon lyhyempää reittiä, mutta [[purjelaivat]] eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa. Purjeet jäi kyl ikävästi jalkoihin.
+KYSYMYS: Kerro lisää: purjelaivat
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Haggis, lanttu ja peruna] 1786 — Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja mausteista tehty makkara, joka keitetään perinteisesti lampaan mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi joka 25. tammikuuta istutaan Burns-illalliselle: makkara kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.
+- [Dunedin — kaupunkilehti / Dunedin: Uusi Edinburgh maailman toisella laidalla] Skotlannin vapaakirkon maallikkojärjestö perusti Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja piirsi komean, romanttisen katuverkon, jonka rakentajat sitten taistelivat läpi mäkisen maaston. Maallisena johtajana toimi Napoleonin sotien veteraani William Cargill ja hengellisenä pastori Thomas Burns, runoilija Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä kaupunkiin oli muuttanut noin 12 000 skottia, monet teollistuneelta Lowlandsin alueelta.
+- [Edinburgh — kaupunkilehti / Kirjallisuus: Kolme kirjailijaa saman katon alla] Kirjailijamuseo toimii 1600-luvulla rakennetussa Lady Stairin talossa Kuninkaantien varrella. Sisällä on esineitä kolmelta Skotlannin tunnetuimmalta kirjailijalta: Robert Burnsin kirjoituspöytä, painokone, jolla Walter Scottin Waverley-romaanit ensin painettiin, ja esineitä Robert Louis Stevensonin matkoilta ympäri maailmaa. Kolmen kirjailijan rintakuvat seisovat samassa huoneessa, vaikka he elivät eri aikoina — Burns kuoli 1796 Scottin ollessa vielä kaksikymmentäviisivuotias, ja Stevenson syntyi 1850, kahdeksantoista vuotta Scottin kuoleman jälkeen.
+AIEMPI KYSYMYS: Mitä nimi Cutty Sark tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Cutty Sark on skotiksi lyhyt paita. Se on peräisin [[Robert Burnsin]] runosta, jossa [[noita]] juoksee lyhyessä paidassa, ja laivan keulakuvana on sama noita. Laiva rakennettiin 1869 [[Dumbartonissa]] Skotlannissa. Kyl siin on sentään mielikuvitusta.
+KYSYMYS: Kerro lisää: Robert Burnsin
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Kaupungintalo] 1941 1930-luvulla julistettiin kilpailu talosta, johon saataisiin Montevideon silloiset toimeenpano- ja lainsäädäntöelimet, johtokunta ja edustajakokous — perustuslakiuudistukset muuttivat noita elimiä myöhemmin. Tontiksi annettiin vanhan englantilaisen hautausmaan maa, jonka valtio oli hankkinut vuosia aiemmin aikoen rakentaa siihen talon hallitukselle ja oikeuslaitokselle. Suunnittelijaksi valittiin uruguaylainen arkkitehti Mauricio Cravotto. Rakentaminen alkoi 1935, ja talo vihittiin 16. heinäkuuta 1941. Valmis rakennus ei vastaa Cravotton vuoden 1929 mallia: päätorni oli piirretty 114-metriseksi, jolloin siitä olisi tullut kaupungin korkein rakennus, mutta rahan puutteessa se nousi vain…
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Mitä nimi Cutty Sark tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Cutty Sark on skotiksi lyhyt paita. Se on peräisin [[Robert Burnsin]] runosta, jossa [[noita]] juoksee lyhyessä paidassa, ja laivan keulakuvana on sama noita. Laiva rakennettiin 1869 [[Dumbartonissa]] Skotlannissa. Kyl siin on sentään mielikuvitusta.
+KYSYMYS: Kerro lisää: noita
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Nähtävyys ruudun keskellä kartalla: Cutty Sark (Lontoo) (nähtävyys)
+Tietoruudun teksti: Cutty Sark rakennettiin 1869 Dumbartonissa Skotlannissa nopeaksi teeklipperiksi. Teelaivat kilpailivat siitä, kuka toisi Kiinan uuden sadon ensimmäisenä Lontooseen, sillä ensimmäinen tee myytiin parhaaseen hintaan. Laivan nimi on peräisin Robert Burnsin runosta, jossa noita juoksee lyhyessä paidassa, skotiksi cutty sark. Samana vuonna 1869 avattiin Suezin kanava. Höyrylaivat pääsivät nyt Kiinaan kanavan kautta, mutta purjelaivat eivät, koska Punaisellamerellä tuulet eivät riittäneet. Teeklippereiden aika loppui muutamassa vuodessa, ja Cutty Sark kuljetti sen jälkeen villaa Australiasta. Laiva myytiin Portugaliin 1895, ja se purjehti vuosikymmeniä toisella nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä nimi Cutty Sark tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Cutty Sark on skotiksi lyhyt paita. Se on peräisin [[Robert Burnsin]] runosta, jossa [[noita]] juoksee lyhyessä paidassa, ja laivan keulakuvana on sama noita. Laiva rakennettiin 1869 [[Dumbartonissa]] Skotlannissa. Kyl siin on sentään mielikuvitusta.
+KYSYMYS: Kerro lisää: Dumbartonissa

@@ -1,0 +1,568 @@
+### v1-0
+VANHA: Ei paha kyyhkyltä.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-2
+VANHA: Minun pääni liikkuu muutenkin koko ajan, ja siitä ei kukaan ole koskaan ymmärtänyt mitään.
+UUSI: Kyyhky nyökkii kävellessäänkin, mutta se on vain kävelytapa.
+SYY: epälooginen loppulause
+
+### v1-3
+VANHA: Minä lennän sinne mieluummin ennen kuin pullataukoa tarjotaan.
+UUSI: Ylhäältä lahdet näyttävät turkoosilta helmiketjulta.
+SYY: merkityksetön loppulause
+
+### v1-7
+VANHA: Tämän minä lensin yhden illan aikana.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-9
+VANHA: Pitkä sankaritarina, ja minä kannoin sen yhdellä hengenvedolla.
+UUSI: Patsaan olkapäällä kyyhkyn on hyvä istua.
+SYY: merkityksetön loppulause
+
+### v1-14
+VANHA: Tämän kaiken minä muistin ilman muistiinpanoja.
+UUSI:
+SYY: turha loppulause
+
+### v1-20
+VANHA: Silti kaikki ymmärtävät pullan hajun.
+UUSI: Kyyhky tulee toimeen millä kielellä tahansa.
+SYY: epälooginen "silti" ja merkityksetön lause
+
+### v1-24
+VANHA: Tämä kertomus oli lyhyempi kuin Tintin seikkailu, mikä ei ole vaikeaa.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-26
+VANHA: Kauan se on kyyhkyn silmiin loistanut kaukaa.
+UUSI: Kyyhky erottaa sen jo kaukaa.
+SYY: kieliopiltaan rikki
+
+### v1-30
+VANHA: päiväksi. Tarkat vuosiluvut vaihtelevat lähteittäin, joten ajoitus on suuntaa-antava, ja siitä en ole aivan varma. Vaikea aihe, mutta selvisin.
+UUSI: päiväksi.
+SYY: tarpeeton epävarmuus ja merkityksetön loppulause
+
+### v1-31
+VANHA: Kyyhky nostaa siivenkärkeään.
+UUSI: Jogurtti kelpaisi kyyhkyllekin.
+SYY: epäselvä loppulause
+
+### v1-35
+VANHA: , vaikka tarkkaa sijoitusta en uskalla vannoa
+UUSI:
+SYY: tarpeeton epävarmuus
+
+### v1-42
+VANHA: Tarkkoja lukuja puiden iästä en mainitse, koska lähteet vaihtelevat.
+UUSI:
+SYY: irrallinen epävarmuus
+
+### v1-42
+VANHA: Kaunis ja hiljainen paikka, enkä uskalla luvata, että löydän sieltä kunnon pullaa.
+UUSI: Kaunis ja hiljainen paikka, jossa kyyhky voisi levätä.
+SYY: merkityksetön loppulause
+
+LOPPU: tarkistettu 45 vastausta (v1-0…v1-44), korjauksia 14
+### v1-46
+VANHA: sosialistisessa maassa, vaikka tämän tarkkuudesta en ole aivan varma.
+UUSI: sosialistisessa maassa.
+SYY: irrallinen epävarmuuslause
+
+### v1-48
+VANHA: Itäisen ja läntisen välisen rajan tallaa yhdellä askeleella.
+UUSI: Rajan yli pääsee yhdellä askeleella.
+SYY: kieliopiltaan rikki
+
+### v1-50
+VANHA: Tämänhetkisestä yksilömäärästä en ole varma, joten tarkka luku kannattaa tarkistaa erikseen. Metsä
+UUSI: Metsä
+SYY: epävarmuus asiasta, jota ei kysytty
+
+### v1-51
+VANHA: Pullaa en tästä maasta osaa nimetä, täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+UUSI: Kyyhkynä minä tyytyisin perunankuoriin.
+SYY: irrallinen ja merkityksetön loppulause
+
+### v1-52
+VANHA: Tarkat vuosiluvut ja rajat vaihtelivat vuosisatojen aikana, joten niitä en ala luetella. Perimätiedon
+UUSI: Perimätiedon
+SYY: turha epävarmuuslause
+
+### v1-54
+VANHA: Kyllä siinä sai kyyhkykin kaksi kieltä päähänsä mahtumaan.
+UUSI: Kaksi kieltä on kyyhkylle jo melkoinen määrä.
+SYY: epäselvä loppulause
+
+### v1-56
+VANHA: paljon. Siinä se.
+UUSI: paljon.
+SYY: merkityksetön loppulause
+
+### v1-57
+VANHA: Tämä on juuri sitä, mitä meikäläiset viestinviejät arvostavat: junat veivät kirjeet nopeammin kuin kyyhky. Mutta kyllä minä siitä silti puolustan.
+UUSI: Junat veivät kirjeet nopeammin kuin kyyhky, vaikka en sitä ihan mielelläni myönnä.
+SYY: kieliopiltaan rikki ja epäselvä
+
+### v1-58
+VANHA: Suuren kaupungin ilme on muuttunut paljon viimeisen sadan vuoden aikana, mutta yksityiskohdista en ole varma. Ylhäältä
+UUSI: Ylhäältä
+SYY: irrallinen epävarmuuslause
+
+### v1-63
+VANHA: Pullaan en löydä tähän yhtä selvää nimeä, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto
+UUSI: Juusto
+SYY: irrallinen pullalause
+
+### v1-65
+VANHA: Isoisäkin sai matkallaan saman korjauksen, ja minä myönnän, että hän kuuli sen oikein. Ei se silti pääkaupunki ollut.
+UUSI: Moni luulee Berniä pääkaupungiksi, minä mukaan lukien.
+SYY: epäselvä viittaus isoisään
+
+### v1-69
+VANHA: Pelkän katon katsominen ei tähän riitä, mutta sen verran minä ylhäältä näen.
+UUSI: Ylhäältä sen mäkiniemen muodon erottaa hyvin.
+SYY: epäselvä loppulause
+
+### v1-73
+VANHA: Onpas siit onneksi pitkä aika, ja silti jääkin on lähtenyt liikkeelle.
+UUSI: Jäätiköt ovat liikkeessä, ja se näkyy ylhäältäkin.
+SYY: epäloogista
+
+### v1-75
+VANHA: Tarkkoja lukuja en ole varma antamaan. Siellä
+UUSI: Siellä
+SYY: irrallinen epävarmuuslause
+
+### v1-76
+VANHA: Tarkkoja lajimääriä en ole varma antamaan, joten tiedot kannattaa tarkistaa erikseen. [[Troodos]]in
+UUSI: [[Troodos]]in
+SYY: epävarmuus asiasta, jota ei kysytty
+
+### v1-78
+VANHA: Leivonnaisista ei kyproslaisia nimiä tähän sopivasti heti tule mieleen, ja täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Juusto
+UUSI: Juusto
+SYY: irrallinen pullalause
+
+### v1-79
+VANHA: Tarkkoja puhujamääriä en ole varma antamaan. Arkielämässä
+UUSI: Arkielämässä
+SYY: epävarmuus asiasta, jota ei kysytty
+### v1-79
+VANHA: No olipas siin pitkä lista.
+UUSI: Kaksi kieltä ja vähän englantia, sillä kyyhky pärjäisi.
+SYY: loppulause ei sovi lyhyeen listaan
+
+### v1-82
+VANHA: Vyöhyke on nähnyt jo monta vuosikymmentä, ja onneksi yhteyksiä on kehitetty.
+UUSI: Siivillä raja ei haittaa, mutta ihmisille se on todellinen.
+SYY: kieliopiltaan rikki
+
+### v1-87
+VANHA: Leivonnaisten puolella täällä on varmasti oma versionsa, en vaan tiedä sen nimee. Ruokaperinteet vaihtelevat alueittain. Hyvä paikka haaveilla pullasta.
+UUSI: Ruokaperinteet vaihtelevat alueittain. Olut ja knedlíky kelpaisivat kyyhkyllekin.
+SYY: irrallinen pullalause
+
+LOPPU: tarkistettu 45 vastausta (v1-45…v1-89), korjauksia 20
+### v1-91
+VANHA: Tarkkaa valmistumisvuotta en ole varma antamaan.
+UUSI:
+SYY: asiaton epävarmuuslause, valmistumisvuotta ei kysytty
+
+### v1-92
+VANHA: Tarkkaa rabbia tai ullakkoa en ole varma nimeämään.
+UUSI:
+SYY: irrallinen epävarmuuslause
+
+### v1-97
+VANHA: Pillipiiparin tarina on tuttu myös kyyhkysen sukulaisille, sillä siinä vilisee lintuja pienempiä eläimiä.
+UUSI:
+SYY: merkityksetön ja epälooginen loppulause
+
+### v1-98
+VANHA: Pullaa Saksassa on varmasti myös, vaikka nimeä en löydä. Leipä menee
+UUSI: Leipä menee
+SYY: irrallinen, merkityksetön lause
+
+### v1-99
+VANHA: Joki kiemurtelee kaunista maisemaa, ja siltä katsottuna linnat näyttävät hienoilta.
+UUSI: Joki kiemurtelee kauniissa maisemassa, ja ylhäältä katsottuna linnat näyttävät hienoilta.
+SYY: kieliopiltaan rikki
+
+### v1-101
+VANHA: mutta viisi on lähteissä yleisin
+UUSI: mutta viisi on yleisin luku
+SYY: metalause (lähteissä)
+
+### v1-102
+VANHA: joka lähteiden mukaan kehitti
+UUSI: joka kehitti
+SYY: metalause (lähteiden mukaan)
+
+### v1-102
+VANHA: Ei paha kyyhkyltä, vaikka itse söisin mieluummin pullaa.
+UUSI: Itse söisin kyllä mieluummin pullaa.
+SYY: merkityksetön ja epälooginen loppulause
+
+### v1-117
+VANHA: Vaeltajien määrästä en ole varma.
+UUSI:
+SYY: irrallinen epävarmuuslause, määrää ei kysytty
+
+### v1-118
+VANHA: Kielten puhujamääriä en ole varma.
+UUSI:
+SYY: irrallinen epävarmuuslause, määriä ei kysytty
+
+### v1-121
+VANHA: Ei paha kyyhkyltä.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-124
+VANHA: Aika monta kertaa pallo on pyörinyt.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-128
+VANHA: keskeinen tapahtumapaikka.\n\nMinä muistan ranta-alueet ennen uudistusta vain suvun kertomana, mutta sellaisia ne olivat.
+UUSI: keskeinen tapahtumapaikka. Ylhäältä katsottuna uusi ranta näyttää kyllä hienolta.
+SYY: epäselvä loppulause ("sellaisia ne olivat")
+
+LOPPU: tarkistettu 45 vastausta (v1-90…v1-134), korjauksia 13
+### v1-139
+VANHA: Aamiainen piti sitä käynnissä, kuten isoisä kirjoitti.
+UUSI: Sikarin savu ei kyllä kyyhkyn keuhkoille sovi.
+SYY: merkityksetön, epäselvä loppulause
+
+### v1-149
+VANHA: Maistelen mielelläni, kunhan kukaan ei kysy mistä tiedän.
+UUSI: Maistelen mielelläni, jos joku jättää palan penkille.
+SYY: epäselvä loppulause
+
+### v1-153
+VANHA: Kätevä järjestelmä, sanoisin, vaikka pihalla ei meikäläinen tunnu niistä tarvitsevan lupaa.
+UUSI: Kätevä järjestelmä, sanoisin. Kyyhky lentää toki ilman lupaa.
+SYY: kieliopiltaan rikki ja epäselvä
+
+### v1-154
+VANHA: Hyvä muisti kyyhkyllä, ei muuta sanottavaa.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-173
+VANHA: Näin ainakin sukuni kertoo, ja tämä on vähän sellaista, mitä ei tarvitse lentää.
+UUSI: Näin ainakin sukuni kertoo.
+SYY: epäloogisen lauseen osa pois
+
+LOPPU: tarkistettu 45 vastausta (v1-135…v1-179), korjauksia 5
+### v1-181
+VANHA: Pulla ei tähän sovi, mutta leipä kyllä, ja sitä minä olen aina seurannut.
+UUSI: Pulla ei tähän sovi, mutta leipä kyllä, ja sitä kyyhky aina kelpuuttaa.
+SYY: "sitä olen seurannut" ei ole järkevä
+### v1-183
+VANHA: Ylhäältä katsottuna se on lähes yhtä kullattu kuin minä haluaisin olla.
+UUSI: Ylhäältä katsottuna kullattu patsas kimaltaa kauas.
+SYY: epälooginen vertaus
+### v1-185
+VANHA: Näin ainakin kartta sanoo, ja sitä minä pidän luotettavana.
+UUSI: Ylhäältä katsottuna rajoja ei näy, mutta nimet kyllä muistaa.
+SYY: epäselvä viittaus karttaan
+### v1-188
+VANHA: Hurja ketju ihmisten arjessa, ja minä katselin sitä katolta.
+UUSI: Hurja muutos ihmisten arjessa.
+SYY: kyyhky ei voinut katsella 1700-luvulla
+### v1-195
+VANHA: Täältä on hyvä näkymä kaupungin yli.
+UUSI: Sieltä on hyvä näkymä kaupungin yli.
+SYY: väärä paikan taivutus
+### v1-204
+VANHA: Siinä [[kauppalaivasto]] kasvoi, ja kyyhky vain lensi.
+UUSI: Niin [[kauppalaivasto]] kasvoi, ja kyyhky vain katseli laivoja.
+SYY: epäselvä loppulause
+### v1-217
+VANHA: maa.\n\nFritulen pitäisi olla lämpimiä. Minä en edes osaa sanoa, montako mahtuu kyyhkyn nokkaan.
+UUSI: maa. Lämpiminä ne ovat parhaita, ja kyyhky söisi mielellään monta.
+SYY: irrallinen ja merkityksetön loppu
+### v1-224
+VANHA: Toivottavasti kukaan ei lahjoita kirjekyyhkyn lintua.
+UUSI: Kyyhky pysyy mieluummin parinsa luona.
+SYY: merkityksetön loppulause
+LOPPU: tarkistettu 45 vastausta (v1-180…v1-224), korjauksia 8
+### v1-228
+VANHA: herkku. Muistan, että pullaa täällä on omana versionaan, mutta nimeä en tiedä.
+UUSI: herkku.
+SYY: irrallinen, pullaa ei kysytty
+
+### v1-229
+VANHA: Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on pieni, ja
+UUSI: Nyt muistan: vanhakaupunki on pieni, ja
+SYY: avauksessa toistoa
+
+### v1-231
+VANHA: Eli kaikki kauppahallista.
+UUSI: Kyyhky ottaisi kyllä molemmat.
+SYY: merkityksetön loppulause
+
+### v1-235
+VANHA: Isoisäsi ylitti sen vielä maksua vastaan.
+UUSI: Kyyhky ylittää sen ilmaiseksi.
+SYY: pelaaja ei voi tietää, perusteeton väite
+
+### v1-237
+VANHA: Tämä vaunu kulkee yhä, ja se on tosi suloinen.
+UUSI: Linja kulkee yhä, ja se on tosi suloinen.
+SYY: "tämä vaunu" epäselvä viittaus
+
+### v1-242
+VANHA: Kuulin sen vasta ylhäältä.
+UUSI: Kyyhky ei iiriä osaa, mutta kuuntelee mielellään.
+SYY: merkityksetön loppulause
+
+### v1-249
+VANHA: Vanhin kerros on sitä, mitä arkeologit löytävät.
+UUSI: Kyyhky katselee joen rantaa mieluummin ylhäältä.
+SYY: epäselvä loppulause
+
+### v1-256
+VANHA: En ole varma kaikista tavan yksityiskohdista. Kukaan
+UUSI: Kukaan
+SYY: tarpeeton epävarmuus
+
+### v1-258
+VANHA: haastavana. En ole varma kaikista alueellisista eroista. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+UUSI: haastavana. Kyyhky tyytyy leivänmuruihin.
+SYY: tarpeeton epävarmuus ja irrallinen pullakommentti
+
+### v1-265
+VANHA: happea on vähän, mutta en ole varma kaikista yksityiskohdista.
+UUSI: happea on vähän.
+SYY: tarpeeton epävarmuus
+
+### v1-267
+VANHA: tulvaporttijärjestelmä, mutta en ole varma sen nykyisestä toiminnasta.
+UUSI: tulvaporttijärjestelmä.
+SYY: tarpeeton epävarmuus
+
+### v1-269
+VANHA: [[matkailun]] vaikutus; en ole varma tarkoista luvuista.
+UUSI: [[matkailun]] vaikutus.
+SYY: tarpeeton epävarmuus
+
+LOPPU: tarkistettu 45 vastausta (v1-225…v1-269), korjauksia 12
+### v1-277
+VANHA: jatkuvasti; yksityiskohdista en ole täysin varma.
+UUSI: jatkuvasti.
+SYY: irrallinen epävarmuuslause
+
+### v1-278
+VANHA: Karja Forumilla ja nyt siellä kävelee turisteja, aika on kyl outo kirjeenkantaja.
+UUSI: Karjan tilalla Forumilla kävelee nykyään turisteja, kyyhky on nähnyt kummempaakin.
+SYY: epäselvä, merkityksetön loppulause
+
+### v1-291
+VANHA: En ole varma, miten nimi on aikojen kuluessa muuttunut.
+UUSI:
+SYY: turha, kysymättä jäänyt epävarmuus
+
+### v1-295
+VANHA: Minä en tuo muuta kuin kirjeitä.
+UUSI: Ristejä on enemmän kuin kyyhky ehtii laskea.
+SYY: loppulause ei liity aiheeseen
+
+### v1-309
+VANHA: Ylhäältä katsoen koko metsä on yhtä vihreää hyrinää.
+UUSI: Ylhäältä katsoen koko metsä on yhtä vihreää.
+SYY: merkityksetön ilmaus (hyrinää)
+
+LOPPU: tarkistettu 45 vastausta (v1-270…v1-314), korjauksia 5
+### v1-320
+VANHA: Ylhäältä näkee vain katot, mutta ne naamiot minä olen tarkistanut.
+UUSI: Naamiot näkee parhaiten matalalta lentäen.
+SYY: ristiriitainen ja epäselvä loppulause
+
+### v1-342
+VANHA: Kaupunki on kestänyt, ja se on hyvä asia.
+UUSI: Kyyhky ei järistyksiä pelkää, taivaalla ei tärise.
+SYY: sisällötön loppulause
+
+### v1-352
+VANHA: Eikä kukaan edes yrittänyt ajaa minua pois tiskin viereltä.
+UUSI: Tiskien välissä kyyhky viihtyy, kun muruja putoaa.
+SYY: irrallinen, viittaa tapahtumaan jota ei ole
+
+### v1-354
+VANHA: Ei huono saavutus ihmiselle, joka ei lentänyt kertaakaan omin siivin.
+UUSI: Pitkä matka Skopjesta Intiaan, vaikka ilman siipiä.
+SYY: epäselvä ja kömpelö loppulause
+
+LOPPU: tarkistettu 45 vastausta (v1-315…v1-359), korjauksia 4
+### v1-368
+VANHA: Musta vuori kuulostaa dramaattiselta, mutta pullaa siellä kyllä leivottiin.
+UUSI: Musta vuori kuulostaa dramaattiselta, ja ylhäältä katsoen nimi kyllä sopii.
+SYY: pulla-heitto ilman perustetta
+
+### v1-369
+VANHA: Ei hassumpaa lentomatkaa tuohon historiaan.
+UUSI: Nuori valtio, vaikka vuoret ovat sen ympärillä vanhoja.
+SYY: merkityksetön loppulause
+
+### v1-375
+VANHA: Tämän lennon jälkeen kaipaan lepoa.
+UUSI: Ylhäältä nuo suorakulmaiset palstat näyttävät ruutupaperilta.
+SYY: irrallinen, ei liity aiheeseen
+
+### v1-376
+VANHA: Muistaakseni väri on tärkein myyntivaltti, mutta en ole varma. Pulla oli silti edelleen halvempaa.
+UUSI: Ylhäältä kukkapellot näyttävät raidalliselta matolta.
+SYY: turha epävarmuus ja irrallinen pulla-vertaus
+
+### v1-377
+VANHA: Itse en ole koskaan tarvinnut ketjua.
+UUSI: Kyyhky ei polkimia tarvitse, siivet riittävät.
+SYY: epäselvä viittaus (ketju)
+
+### v1-389
+VANHA: Kerron tämän havaintona, en ohjeena. Ei kyyhky muuten ulos halua, mutta tämä kuulostaa hyvältä.
+UUSI: Kyyhky on ulkoilmaeläin muutenkin, joten tämä kuulostaa hyvältä.
+SYY: turha metalause ja ristiriitainen kommentti
+
+### v1-403
+VANHA: kuivumaan, mutta tarkkoja paikallisia reseptejä en ole varma.
+UUSI: kuivumaan.
+SYY: reseptejä ei kysytty, turha epävarmuus
+
+### v1-403
+VANHA: Täällä on varmasti oma versionsa pullastakin, en vaan tiedä sen nimee.
+UUSI: Kalan kyyhky jättää mieluusti kalastajille.
+SYY: irrallinen pulla-arvaus
+
+LOPPU: tarkistettu 45 vastausta (v1-360…v1-404), korjauksia 8
+### v1-406
+VANHA: tämän vuoksi. Eipä ollut pitkä, mutta paljon mahtui.
+UUSI: tämän vuoksi.
+SYY: merkityksetön loppulause
+
+### v1-411
+VANHA: ja lähteiden mukaan apuna käytettiin
+UUSI: ja apuna käytettiin
+SYY: metalause
+
+### v1-418
+VANHA: mutta 1490-luku on lähteissä yleinen.
+UUSI: mutta 1490-luku on yleisin arvio.
+SYY: metalause
+
+### v1-419
+VANHA: myydään katuruokaa, mutta tarkempia ruokalistoja en muista.
+UUSI: myydään katuruokaa.
+SYY: irrallinen epävarmuus
+
+### v1-422
+VANHA: Tarkat vuosiluvut vaihtelevat lähteittäin, joten en lupaa niitä.
+UUSI: Tarkkoja vuosilukuja en lupaa.
+SYY: metalause
+
+### v1-423
+VANHA: Epäilin ensin kuulleeni väärin, ja sitten luin uudelleen.
+UUSI: Kyyhky ei hiihdä, mutta lumisten vuorten yllä lentäisi mielellään.
+SYY: epälooginen loppulause
+
+### v1-429
+VANHA: Tarkat päivämäärät olen tarkistanut kahdesti, ja kyl ne täsmää.
+UUSI: Neilikat aseiden piipuissa ovat kyyhkynkin mielestä kaunis kuva.
+SYY: epäselvä loppulause
+
+### v1-430
+VANHA: Olen sentään sukua roomalaisille.
+UUSI: Latinaa en osaa, mutta kyyhkyjä riittää Rooman kaduilla.
+SYY: merkityksetön loppulause
+
+### v1-441
+VANHA: Tarkkoja pituuslukuja lähteet antavat hieman eri tavoin.
+UUSI: Tarkka pituus vaihtelee mittaustavan mukaan.
+SYY: metalause
+
+LOPPU: tarkistettu 45 vastausta (v1-405…v1-449), korjauksia 9
+### v1-450
+VANHA: Ja tän kaiken minä kannoin päässäni.
+UUSI: Nimi vaihtui moneen kertaan, mutta kyyhky tunnisti kaupungin aina.
+SYY: merkityksetön loppulause
+
+### v1-451
+VANHA: Pitkä käytävä, mutta ei pidempi kuin minun lentoni Pariisiin.
+UUSI: Kyyhkynä en mahtuisi sisään, mutta ikkunasta olen kurkistanut.
+SYY: epälooginen, käytävää ei mainittu
+
+### v1-452
+VANHA: Pullaa en tästä muista, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+UUSI: Minä tyytyisin kyllä leivänmuruihin.
+SYY: irrallinen, pullaa ei kysytty
+
+### v1-455
+VANHA:  Kyllä sen kestää kuulla.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-456
+VANHA: Pitkä lista, mutta minä muistin sen kauniisti.
+UUSI: Ylhäältä luostarit näyttävät rauhallisilta.
+SYY: merkityksetön loppulause
+
+### v1-467
+VANHA:  Oma leivonnaisensa täällä varmasti on, en vaan tiedä sen nimee.
+UUSI:
+SYY: irrallinen, leivonnaista ei kysytty
+
+### v1-468
+VANHA: Hyvin pitkä kiipeämisen arvoinen vastaus.
+UUSI: Tatrojen yli lentäminen on kyyhkyllekin haaste.
+SYY: merkityksetön loppulause
+
+### v1-481
+VANHA: legendaarinen, joten tällä kertaa en valita.
+UUSI: legendaarinen.
+SYY: epäselvä loppu
+
+### v1-482
+VANHA:  Hyvä, että kyyhky muistaa mausteet.
+UUSI:
+SYY: merkityksetön loppulause
+
+### v1-484
+VANHA:  Kyyhky ei halunnut matkustaa sinne silloin.
+UUSI:
+SYY: irrallinen, perusteeton loppulause
+
+LOPPU: tarkistettu 45 vastausta (v1-450…v1-494), korjauksia 10
+### v1-497
+VANHA: Semla, niin, minä tietysti muistan sen.
+UUSI: Semla näyttää kyyhkyn silmin aika herkulliselta.
+SYY: epäselvä, päälle liimattu loppulause
+
+### v1-502
+VANHA: Ylätasanko on nähnyt paljon, vaikka se on sijaintina vähän kuivakka.
+UUSI: Ylätasanko on nähnyt paljon.
+SYY: epälooginen lisäys
+
+### v1-513
+VANHA: Boyoz kuulostaa minusta juuri sellaiselta, jota ikkunalaudalta ei jaksaisi jättää.
+UUSI: Boyozin murut kelpaisivat kyllä ikkunalaudalla.
+SYY: epäselvä lause
+
+### v1-522
+VANHA: Mmm— Kappadokian ilma
+UUSI: No niin, Kappadokian ilma
+SYY: outo avaus
+
+### v1-539
+VANHA: Mmm— Odessan oopperatalo
+UUSI: No niin, Odessan oopperatalo
+SYY: outo avaus
+
+LOPPU: tarkistettu 45 vastausta (v1-495…v1-539), korjauksia 5

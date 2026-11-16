@@ -1,0 +1,226 @@
+================ KOHTA 46 (kohde:hahmotelma-vichy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+
+### 46.1
+KYSYMYS: Mitä kylpylävieraat oikein tekivät täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 46.2
+KYSYMYS: Miksi juuri tämä kaupunki jäi historiaan sodan takia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vichy (historia)
+Tietoruudun teksti: Vichy on noin 25 000 asukkaan kaupunki Allier'n departementissa Keski-Ranskassa, Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Honiara — kaupunkilehti / Rautapohjan meri: Lentokenttä, jonka takia sodittiin] Japanilaiset joukot saapuivat Guadalcanalille toukokuussa 1942. Kun amerikkalainen tiedustelulento havaitsi, että saaren pohjoisrannikolle Lunga Pointiin rakennettiin lentokenttää, tilanne muuttui kriittiseksi: kenttä uhkasi Yhdysvaltain ja Australian välisiä yhteyksiä. Yhdysvallat teki 7. elokuuta 1942 sodan ensimmäisen maihinnousunsa, ja kenttä vallattiin vähällä vaivalla — mutta sen pitäminen seuraavat kuusi kuukautta oli koko Tyynenmeren sotanäyttämön kiivaimpia kamppailuja. Laivaston rakennusjoukot viimeistelivät kentän ja nimesivät sen Henderson Fieldiksi Midwayssä kaatuneen merijalkaväen lentäjän mukaan.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-biarritz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Musiikki: Kaksisataayhdeksänkymmentä iskua minuutissa] 1950-luvulta — Salegy syntyi luoteisrannikolla Mahajangan ja Antsirananan seudulla 1950-luvulla, kun rituaaleissa soitettu antsa sai sähkökitarat. Tempo on noin 290 iskua minuutissa, ja soitinnuksessa ovat helisevä kitara, oikea tai syntetisoitu haitari, sähköbasso, rumpusetti, djembe ja helistimet. Keskellä kappaletta on aina folaka, "katkennut", lähes soitinvoittoinen jakso, jonka aikana laulajat ja yleisö taputtavat päällekkäisiä rytmejä. Eusèbe Jaojoby syntyi 1955 sakalavaperheeseen Sambavan lähellä ja lauloi Diego-Suarezissa 1970-luvun alusta yhtyeissä, jotka sekoittivat souliä ja funkia paikalliseen perinteeseen. Häntä sanotaan salegyn kuninkaaksi.
+- [Romania — maalehti / Luonto: Kivi, joka näyttää kasvoilta] 1936 — Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.
+
+### 47.1
+KYSYMYS: Miten kalastajakylästä tuli muotikylpylä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+### 47.2
+KYSYMYS: Kuinka lähellä Espanjan raja oikeastaan on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biarritz (meri)
+Tietoruudun teksti: Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu Pyrénées-Atlantiques'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du Palais'sta, rantakadun kasinoista ja surffauskulttuuristaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Musiikki: Kaksisataayhdeksänkymmentä iskua minuutissa] 1950-luvulta — Salegy syntyi luoteisrannikolla Mahajangan ja Antsirananan seudulla 1950-luvulla, kun rituaaleissa soitettu antsa sai sähkökitarat. Tempo on noin 290 iskua minuutissa, ja soitinnuksessa ovat helisevä kitara, oikea tai syntetisoitu haitari, sähköbasso, rumpusetti, djembe ja helistimet. Keskellä kappaletta on aina folaka, "katkennut", lähes soitinvoittoinen jakso, jonka aikana laulajat ja yleisö taputtavat päällekkäisiä rytmejä. Eusèbe Jaojoby syntyi 1955 sakalavaperheeseen Sambavan lähellä ja lauloi Diego-Suarezissa 1970-luvun alusta yhtyeissä, jotka sekoittivat souliä ja funkia paikalliseen perinteeseen. Häntä sanotaan salegyn kuninkaaksi.
+- [Romania — maalehti / Luonto: Kivi, joka näyttää kasvoilta] 1936 — Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-canal-du-midi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+- [Indonesia — maalehti / Ruoka: Yhdestä hedelmästä saadaan kaksi maustetta] Muskottipuu Myristica fragrans on kotoisin Bandan saarilta Malukulta, ja pitkään sitä kasvoi luonnonvaraisena vain siellä. Yhdestä hedelmästä saadaan kaksi eri maustetta: siemen on muskottipähkinä, ja sitä ympäröivä punainen verkkomainen kuori on muskottikukka. Siemeniä kuivataan auringossa 15–30 viikkoa. Sinä aikana ydin kutistuu irti kovasta kuorestaan, ja kun pähkinää ravistaa, se rapisee sisällä — se on merkki siitä, että mauste on valmis. Kuori rikotaan puunuijalla. Nykyään muskottia viljellään myös muualla Indonesiassa, ja maa on yhä yksi maailman suurimmista tuottajista.
+
+### 48.1
+KYSYMYS: Mistä kanavan huipulle saadaan vettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+- [Indonesia — maalehti / Ruoka: Yhdestä hedelmästä saadaan kaksi maustetta] Muskottipuu Myristica fragrans on kotoisin Bandan saarilta Malukulta, ja pitkään sitä kasvoi luonnonvaraisena vain siellä. Yhdestä hedelmästä saadaan kaksi eri maustetta: siemen on muskottipähkinä, ja sitä ympäröivä punainen verkkomainen kuori on muskottikukka. Siemeniä kuivataan auringossa 15–30 viikkoa. Sinä aikana ydin kutistuu irti kovasta kuorestaan, ja kun pähkinää ravistaa, se rapisee sisällä — se on merkki siitä, että mauste on valmis. Kuori rikotaan puunuijalla. Nykyään muskottia viljellään myös muualla Indonesiassa, ja maa on yhä yksi maailman suurimmista tuottajista.
+
+### 48.2
+KYSYMYS: Kuinka kauan kaivamiseen meni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Midi (tekniikka)
+Tietoruudun teksti: Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers'n eli väylän Atlantilta Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä lokakuussa 1666, ja Pierre-Paul Riquet'n johdolla kanava valmistui vuonna 1681 Ludvig XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon maailmanperintöluetteloon vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Nullarbor: Baxterin kuolema autiolla rannikolla] 29. huhtikuuta 1841 leiri hiljeni ikuisiksi ajoiksi kahden miehen osalta. Kaksi retkikunnan aboriginaalioppaista, Joey ja Yarri, olivat jo viikkoja vaatineet paluuta, mutta Eyre kieltäytyi. Kun Baxter jäi hetkeksi yksin vartioimaan leiriä, miehet ampuivat hänet, veivät suurimman osan ruoasta ja vedestä sekä kaksi haulikkoa ja katosivat aavikolle. Koska maa oli liian kovaa haudan kaivamiseen, Eyre ja jäljelle jäänyt opas Wylie kääriivät Baxterin ruumiin peitteeseen ja jättivät sen rannikon kalkkikivijyrkänteiden juurelle. Kaksikko jatkoi matkaa nälkiintyneenä, elossa lähinnä kuoren keräämien kastepisaroiden ja Wylien metsästämien lintujen varassa.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (kohde:hahmotelma-le-puy-en-velay) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat] Suakinin kautta kulki vuosisatojen ajan kaikkea Afrikan sisämaan tavaraa Arabian niemimaalle ja tuhansia pyhiinvaeltajia matkalla Mekkaan — mutta samaa reittiä kulkivat myös ihmiset, jotka myytiin orjiksi.
+- [Lontoo — kaupunkilehti / Historian hetki] Albemarle Streetin kellarissa entinen kirjansitojan oppipoika näki elokuussa 1831 neulan värähtävän vain hetken — ja siitä hetkestä kasvoivat generaattori, muuntaja ja sähköverkko.
+
+### 49.1
+KYSYMYS: Miten kappeli saatiin tuon neulan päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki] Albemarle Streetin kellarissa entinen kirjansitojan oppipoika näki elokuussa 1831 neulan värähtävän vain hetken — ja siitä hetkestä kasvoivat generaattori, muuntaja ja sähköverkko.
+
+### 49.2
+KYSYMYS: Minne pyhiinvaeltajat lähtevät täältä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Le Puy-en-Velay (historia)
+Tietoruudun teksti: Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan pyhiinvaellusreitistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat] Suakinin kautta kulki vuosisatojen ajan kaikkea Afrikan sisämaan tavaraa Arabian niemimaalle ja tuhansia pyhiinvaeltajia matkalla Mekkaan — mutta samaa reittiä kulkivat myös ihmiset, jotka myytiin orjiksi.
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (kohde:hahmotelma-cluny) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cluny (historia)
+Tietoruudun teksti: Cluny III oli benediktiiniluostarin 1088–1130 rakentama valtava romaaninen basilika, kristikunnan suurin kirkko ennen uutta Pietarinkirkkoa Roomassa. Ranskan vallankumous lakkautti luostarin 1790, ja kaupunki myi rakennuksen kivilouhokseksi — pääosa purettiin 1810–1823 rakennuskiveksi. Vain n. kymmenesosa alkuperäisestä on jäljellä: eteläinen poikkilaiva kellotorneineen sekä läntisen julkisivun tornien alaosat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Pashupatinath] perustettu 400-luvulla, nykyinen temppeli 1800-luvulta Pashupatinath on Kathmandun vanhin hindutemppeli ja omistettu Shivalle olentojen herrana. Se on Bagmatin rannalla kaupungin itäpuolella ja peräisin 400-luvulta, mutta alkuperäisestä rakennuksesta ei ole juuri mitään jäljellä: suuri osa siitä tuhoutui 1300-luvulla, ja nykyinen temppeli on 1800-luvulta. Härän kuva ja musta nelipäinen Pashupatin hahmo ovat ainakin kolmesataa vuotta vanhoja. Rakennus on pagodityyliä: kuutiomaisen rungon päällä on kaksi kattokertaa, jotka on katettu kuparilla ja kullalla, ja niitä kannattavat veistetyt puiset kattotuet eli tundalit. Temppelin papit ovat olleet Etelä-Intian Karnatakasta kotoisin olevia brahmi…
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+
+### 50.1
+KYSYMYS: Kuinka suuri osa alkuperäisestä kirkosta on jäljellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cluny (historia)
+Tietoruudun teksti: Cluny III oli benediktiiniluostarin 1088–1130 rakentama valtava romaaninen basilika, kristikunnan suurin kirkko ennen uutta Pietarinkirkkoa Roomassa. Ranskan vallankumous lakkautti luostarin 1790, ja kaupunki myi rakennuksen kivilouhokseksi — pääosa purettiin 1810–1823 rakennuskiveksi. Vain n. kymmenesosa alkuperäisestä on jäljellä: eteläinen poikkilaiva kellotorneineen sekä läntisen julkisivun tornien alaosat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Pashupatinath] perustettu 400-luvulla, nykyinen temppeli 1800-luvulta Pashupatinath on Kathmandun vanhin hindutemppeli ja omistettu Shivalle olentojen herrana. Se on Bagmatin rannalla kaupungin itäpuolella ja peräisin 400-luvulta, mutta alkuperäisestä rakennuksesta ei ole juuri mitään jäljellä: suuri osa siitä tuhoutui 1300-luvulla, ja nykyinen temppeli on 1800-luvulta. Härän kuva ja musta nelipäinen Pashupatin hahmo ovat ainakin kolmesataa vuotta vanhoja. Rakennus on pagodityyliä: kuutiomaisen rungon päällä on kaksi kattokertaa, jotka on katettu kuparilla ja kullalla, ja niitä kannattavat veistetyt puiset kattotuet eli tundalit. Temppelin papit ovat olleet Etelä-Intian Karnatakasta kotoisin olevia brahmi…
+- [NFK — maalehti / Tiede: Saari joka nousi merestä] n. 3,1–2,3 milj. vuotta sitten — Norfolkinsaari ja pieni Phillipinsaari syntyivät, kun merenalainen kilpitulivuori purkautui toistuvasti noin 3,1–2,3 miljoonan vuoden ajan basalttilaavaa. Suurin osa alkuperäisestä tulivuoresta on sittemmin kulunut mereen, ja jäljellä on saaren korkein kohta, 319 metriä merenpinnan yläpuolelle kohoava Mount Bates, sekä rannikon jyrkät basalttikalliot ja irralliset kalliosaarekkeet. Saari on osa Norfolkinharjannetta, tuhat kilometriä pitkää enimmäkseen vedenalaista vuoristoa, joka ulottuu Uuden-Seelannin ja Uuden-Kaledonian väliin – Norfolkinsaari ja Phillipinsaari ovat harvoja kohtia, joissa harjanne kohoaa meren pinnan yläpuolelle.
+
+### 50.2
+KYSYMYS: Miksi kirkko purettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cluny (historia)
+Tietoruudun teksti: Cluny III oli benediktiiniluostarin 1088–1130 rakentama valtava romaaninen basilika, kristikunnan suurin kirkko ennen uutta Pietarinkirkkoa Roomassa. Ranskan vallankumous lakkautti luostarin 1790, ja kaupunki myi rakennuksen kivilouhokseksi — pääosa purettiin 1810–1823 rakennuskiveksi. Vain n. kymmenesosa alkuperäisestä on jäljellä: eteläinen poikkilaiva kellotorneineen sekä läntisen julkisivun tornien alaosat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+- [Santa Fe — kohdekartta / Kohdekartta: San Miguelin kirkko] noin 1610 San Miguelin kappeli on espanjalaisen siirtomaa-ajan lähetyskirkko, joka rakennettiin alun perin noin 1610, ja sitä sanotaan usein Yhdysvaltain mantereen vanhimmaksi kirkkorakennukseksi. Se pystytettiin Santa Fe -joen toiselle puolelle varsinaisesta villasta, alueelle nimeltä Barrio de Analco, jossa asui pääosin alkuperäisväestöä ja espanjalaisten mukana Meksikosta tulleita tlaxcalteekkeja. Lähetystyö oli etusijalla, joten tämä kirkko rakennettiin ennen aukion viereistä omaa seurakuntakirkkoa. Kirjallisesti kappeli mainitaan ensimmäisen kerran 1628. Vuonna 1640 kuvernöörin ja fransiskaanien välinen kiista johti siihen, että kaikki fransiskaanit karkotettiin Santa Festä ja lähetysa…
+
+### 50.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
