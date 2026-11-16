@@ -302,7 +302,7 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
-/* Rooman pulun teksti uusittu 15.11.2026 (omistaja 19.19); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
+/* Rooman pulun ääni sidottu 16.11.2026 (JU vienyt 11.09); lista tyhjä. */
 const AANTA_ODOTTAVAT = new Set([]);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
