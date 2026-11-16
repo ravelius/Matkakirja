@@ -114,18 +114,18 @@ const at = spawnSync('python3', ['-I', join(REPO, 'tools/asemataulu/asemataulu.p
 if (at.status !== 0) huom(`Asemataulu ei valmis (python3 -I tools/asemataulu/asemataulu.py):\n${(at.stdout || '').split('\n').filter((r) => /^(PUUTE|VIRHE)/.test(r)).join('\n')}`);
 else console.log('Asemataulu: kopiot = main, tarkistin läpi.');
 
-// 6) Ajojonon portti (P-261116-14): vaihto ei ole valmis ilman tämän päivän PORTTI OK -riviä
+// 6) Ajojonon ja junasanan portti: vain tieto, EI ehto (omistaja 16.11.2026 klo 15.01, KK 15.02: tarkistukset eivät hidasta; ajetaan yöllä)
 const PORTTI_LOKI = process.env.PORTTI_LOKI || '/Users/Shared/Claude/julkaisija-tyokalut/portti-ok.log';
 {
   const n = new Date();
   const tanaan = `${n.getDate()}.${n.getMonth() + 1}.${n.getFullYear()}`;
   const rivitP = existsSync(PORTTI_LOKI) ? readFileSync(PORTTI_LOKI, 'utf8').split('\n') : [];
   const ok = rivitP.filter((r) => r.startsWith('PORTTI OK ') && r.slice(10).split(' ')[0] === tanaan);
-  if (!ok.length) huom(`ajojonon portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "PORTTI OK ${tanaan} …" (aja JU:n portti-testi.zsh)`);
+  if (!ok.length) console.log(`Huom (ei ehto, omistaja 16.11. 15.01): ajojonon portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "PORTTI OK ${tanaan} …" (aja JU:n portti-testi.zsh)`);
   else console.log(`Ajojonon portti: ${ok[ok.length - 1]}.`);
   // Junasanan portti (P-261116-16): junasana.zsh:n itsetesti kirjoittaa samaan lokiin
   const js = rivitP.filter((r) => r.startsWith('JUNASANA-PORTTI OK ') && r.slice(19).split(' ')[0] === tanaan);
-  if (!js.length) huom(`junasanan portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "JUNASANA-PORTTI OK ${tanaan} …" (JU:n junasana.zsh-itsetesti)`);
+  if (!js.length) console.log(`Huom (ei ehto, omistaja 16.11. 15.01): junasanan portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "JUNASANA-PORTTI OK ${tanaan} …" (JU:n junasana.zsh-itsetesti)`);
   else console.log(`Junasanan portti: ${js[js.length - 1]}.`);
 }
 
