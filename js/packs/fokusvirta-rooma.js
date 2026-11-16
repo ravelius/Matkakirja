@@ -429,16 +429,14 @@ export const FOKUSVIRTA_ROOMA = {
         + 'eaa.'
         + '\n\n'
         + 'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
-        + 'Näyttelijä Anna Magnani ruokki niitä taukojensa aikana '
-        + 'läheisessä Teatro Argentinassa. Vuonna 1993 perustettiin '
-        + 'vapaaehtoisten ylläpitämä kissasuoja, ja arvioiden mukaan '
-        + 'siellä on yli 200 kissaa. Vuonna 2012 arkeologiviranomaiset '
+        + 'Näyttelijä Anna Magnani kuului roomalaisiin, jotka ruokkivat kissoja. Vuonna 1993 perustettiin '
+        + 'vapaaehtoisten ylläpitämä kissasuoja, ja arvioiden mukaan siellä on noin 200 kissaa. Vuonna 2012 arkeologiviranomaiset '
         + 'vaativat suojan poistamista, koska se oli rakennettu ilman '
         + 'lupaa ja haittasi raunioiden säilymistä. NPR:n mukaan kissoja '
         + 'itseään ei kuitenkaan voitu häätää.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, '
-        + 'sillä ne olivat vielä maan alla. Paikalla oli tiivis kortteli, '
+        + 'sillä temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, '
         + 'ja temppeli A:n sisään rakennettu San Nicola de\' Cesarini '
         + '-kirkko seisoi vielä; se purettiin vasta 1926–1929. Kissoja ei '
         + 'ollut vielä, ja kissasuoja tuli vasta 1993.',
@@ -551,9 +549,7 @@ export const FOKUSVIRTA_ROOMA = {
       + 'suurimman osan noin 20 kilometrin matkastaan maan alla. Nimi '
       + 'Virgo tarkoittaa neitoa. Nykyinen allas on paljon '
       + 'uudempi. Arkkitehti Nicola Salvi aloitti sen 1732, ja se '
-      + 'valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen — '
-      + 'maailman suurin barokkilähde, kaksikymmentäkuusi metriä korkea '
-      + 'ja lähes viisikymmentä metriä leveä. Keskellä ajaa merenjumala '
+      + 'valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen. Keskellä ajaa merenjumala '
       + 'vaunuillaan, joita vetävät kaksi hevosta, toinen rauhallinen ja '
       + 'toinen villi. Altaan reunalla heitetään yhä kolikko olan yli. '
       + 'Tarinan mukaan se takaa paluun Roomaan. Vuonna 2022 altaasta '
@@ -755,15 +751,13 @@ export const FOKUSVIRTA_ROOMA = {
           + 'mukaan Julius Caesar murhattiin juuri tässä Curiassa vuonna 44 '
           + 'eaa.',
         'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
-          + 'Näyttelijä Anna Magnani ruokki niitä taukojensa aikana '
-          + 'läheisessä Teatro Argentinassa. Vuonna 1993 perustettiin '
-          + 'vapaaehtoisten ylläpitämä kissasuoja, ja arvioiden mukaan '
-          + 'siellä on yli 200 kissaa. Vuonna 2012 arkeologiviranomaiset '
+          + 'Näyttelijä Anna Magnani kuului roomalaisiin, jotka ruokkivat kissoja. Vuonna 1993 perustettiin '
+          + 'vapaaehtoisten ylläpitämä kissasuoja, ja arvioiden mukaan siellä on noin 200 kissaa. Vuonna 2012 arkeologiviranomaiset '
           + 'vaativat suojan poistamista, koska se oli rakennettu ilman '
           + 'lupaa ja haittasi raunioiden säilymistä. NPR:n mukaan kissoja '
           + 'itseään ei kuitenkaan voitu häätää.',
         'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, '
-          + 'sillä ne olivat vielä maan alla. Paikalla oli tiivis kortteli, '
+          + 'sillä temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, '
           + 'ja temppeli A:n sisään rakennettu San Nicola de\' Cesarini '
           + '-kirkko seisoi vielä; se purettiin vasta 1926–1929. Kissoja ei '
           + 'ollut vielä, ja kissasuoja tuli vasta 1993.',
@@ -859,9 +853,7 @@ export const FOKUSVIRTA_ROOMA = {
           + 'Caritakselle, joka auttaa kaupungin vähävaraisia.',
         'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, '
           + 'sillä se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo '
-          + '-akveduktia pitkin. Siitä ei ole varmaa tietoa, oliko kolikon '
-          + 'heittäminen silloin vielä tapana: erään kirjoittajan mukaan '
-          + 'tapa alkoi vasta 1800-luvulla.',
+          + '-akveduktia pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
       kuva: {
@@ -903,21 +895,18 @@ export const FOKUSVIRTA_ROOMA = {
         'Colosseumin areena oli puulattia, jonka päälle levitettiin '
           + 'hiekkaa.',
         'Lattian alla oli kaksikerroksinen kellari eli hypogeum, jossa '
-          + 'oli käytäviä, häkkejä ja varastohuoneita. Lähteiden mukaan '
-          + 'kellarista johti areenalle noin 80 pystykuilua. Köysien ja '
+          + 'oli käytäviä, häkkejä ja varastohuoneita. Kellarista johti areenalle kymmeniä pystykuiluja ja nostimia. Köysien ja '
           + 'vintturien avulla häkki nostettiin ylös, ja eläin ilmestyi '
           + 'areenalle luukusta.',
         'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
-          + 'peitossa. Sitä alettiin kaivaa esiin vuosina 1874–1875, pian '
-          + 'isoisäsi käynnin jälkeen.',
+          + 'peitossa. Kellaria kaivettiin esiin useaan otteeseen 1800-luvulla, muun muassa vuosina 1874–1875.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Cerone ym. (Colosseumin areenan lattia), The Collector ja Walks of Italy',
       kuva: {
         tiedosto: 'Hypogeum 1 (15005526662).jpg',
         lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
         selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen kellari '
-          + 'eli hypogeum, jossa oli käytäviä, häkkejä ja lähteiden '
-          + 'mukaan noin 80 pystykuilua.',
+          + 'eli hypogeum, jossa oli käytäviä, häkkejä ja kymmeniä pystykuiluja.',
         lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
           + 'Commons (CC BY-SA 2.0)',
       },
@@ -944,7 +933,7 @@ export const FOKUSVIRTA_ROOMA = {
         'Miten kaksikerroksinen kellari käytävineen rakennettiin areenan '
           + 'alle?',
         'Miksi puulattian päälle levitettiin hiekkaa?',
-        'Milloin Colosseumin kellarin kaivaus alkoi?',
+        'Mitä kaksikerroksisessa kellarissa oli?',
       ],
       visa: {
         kysymys: 'Colosseumin areenalla eläin saattoi ilmestyä luukusta. '
@@ -976,9 +965,7 @@ export const FOKUSVIRTA_ROOMA = {
           + 'norsupatsas, jonka selässä on punertava graniittiobeliski. '
           + 'Patsaan suunnitteli Gian Lorenzo Bernini, Ercole Ferrata '
           + 'veisti sen, ja se paljastettiin vuonna 1667. Paavi Aleksanteri '
-          + 'VII kuoli ennen kuin patsas ehdittiin paljastaa. Obeliski on '
-          + 'noin 5,5 metriä korkea. Roomassa on kaikkiaan kolmetoista '
-          + 'muinaisobeliskia, ja tämä on yksi pienimmistä. Turismo Roman '
+          + 'VII kuoli ennen kuin patsas ehdittiin paljastaa. Obeliski on pieni, noin 5,5 metriä korkea. Turismo Roman '
           + 'mukaan obeliski löytyi vuonna 1665, kun dominikaanit '
           + 'rakensivat Santa Maria sopra Minerva -kirkon puutarhan muuria.',
         'Patsasta kutsuttiin ensin possuksi, "Porcino della Minerva", '
@@ -1015,7 +1002,7 @@ export const FOKUSVIRTA_ROOMA = {
       ],
       kysymykset: [
         'Miten noin 5,5 metriä korkea obeliski nostettiin norsun selkään?',
-        'Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?',
+        'Mistä Rooman muinaisobeliskit ovat alun perin peräisin?',
         'Miksi patsasta kutsuttiin ensin possuksi?',
       ],
       paikka: {
@@ -1075,7 +1062,7 @@ export const FOKUSVIRTA_ROOMA = {
       symboli: 'tekniikka',
       lunastus: [
         'Rooman kaduilla on juomavesihanoja, joita sanotaan nasoneiksi, '
-          + 'isoiksi neniksi. Ne ovat valurautaisia pylväitä, ja vesi '
+          + 'isoiksi neniksi. Alun perin ne olivat valurautaisia pylväitä, ja vesi '
           + 'virtaa niistä yleensä yötä päivää. Ensimmäiset nasonet '
           + 'pystytettiin 1870-luvulla. Alkuperäisessä mallissa oli kolme '
           + 'lohikäärmeen päätä, ja nimi nasone tuli vasta, kun myöhemmin '

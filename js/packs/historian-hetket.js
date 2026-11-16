@@ -3928,14 +3928,12 @@ export const HISTORIAN_HETKET = [
       + 'makaamistarina on pitkäikäinen myytti.'
       + '\n\n'
       + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
-      + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
-      + 'tehtävästä. Ensimmäinen suunnitelma oli maalata kaksitoista apostolia, '
+      + 'Michelangelo piti itseään kuvanveistäjänä ja suostui tehtävään vastahakoisesti. Ensimmäinen suunnitelma oli maalata kaksitoista apostolia, '
       + 'mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.'
       + '\n\n'
       + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta sekä '
       + 'kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden mukaan holvin '
-      + 'ensimmäinen puolisko oli valmis jo elokuussa 1510, ja yleisölle se '
-      + 'paljastettiin elokuussa 1511. Toisen puoliskon hahmot ovat suurempia, '
+      + 'ensimmäinen puolisko oli valmis jo elokuussa 1510. Yleisölle se näytettiin kesällä 1511. Toisen puoliskon hahmot ovat suurempia, '
       + 'koska Michelangelo oli nähnyt valmiin osan lattialta käsin. Aadamin '
       + 'luominen on tällä toisella puoliskolla. Koko katto avattiin '
       + 'pyhäinpäivän aattona 1512.'
@@ -3974,8 +3972,7 @@ export const HISTORIAN_HETKET = [
       + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Rooman '
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'rooma' },
-    lehtiJohdanto: 'Sikstuksen kappelin holvin alla seisoi vuonna 1510 kuvanveistäjä, joka '
-      + 'yritti ensin päästä koko työstä ja maalasi katon silti valmiiksi '
+    lehtiJohdanto: 'Sikstuksen kappelin holvin alla seisoi vuonna 1510 kuvanveistäjä, joka suostui työhön vastahakoisesti ja maalasi katon silti valmiiksi '
       + 'vuosina 1508–1512.',
     lehtiTehtava: {
       kysymys: 'Missä asennossa Michelangelo maalasi Sikstuksen kappelin '
@@ -3988,7 +3985,7 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 3,
       fakta: 'Vatikaanin museoiden mukaan katon ensimmäinen puolisko oli valmis '
-        + 'elokuussa 1510 ja paljastettiin elokuussa 1511, ja koko katto avattiin '
+        + 'elokuussa 1510. Yleisölle se näytettiin kesällä 1511, ja koko katto avattiin '
         + 'pyhäinpäivän aattona 1512.',
     },
   },

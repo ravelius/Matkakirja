@@ -14303,9 +14303,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'norsupatsas, jonka selässä on punertava graniittiobeliski. '
             + 'Patsaan suunnitteli Gian Lorenzo Bernini, Ercole Ferrata '
             + 'veisti sen, ja se paljastettiin vuonna 1667. Paavi Aleksanteri '
-            + 'VII kuoli ennen kuin patsas ehdittiin paljastaa. Obeliski on '
-            + 'noin 5,5 metriä korkea. Roomassa on kaikkiaan kolmetoista '
-            + 'muinaisobeliskia, ja tämä on yksi pienimmistä. Turismo Roman '
+            + 'VII kuoli ennen kuin patsas ehdittiin paljastaa. Obeliski on pieni, noin 5,5 metriä korkea. Turismo Roman '
             + 'mukaan obeliski löytyi vuonna 1665, kun dominikaanit '
             + 'rakensivat Santa Maria sopra Minerva -kirkon puutarhan muuria.'
             + '\n\n'
@@ -14475,9 +14473,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy-LCCN2001700939.jpg',
           vuosi: '1890-luku',
-          lyhyt: 'Colosseumin edessä seisoi suihkulähteen tynkä Meta Sudans, joka purettiin 1936.',
+          lyhyt: 'Colosseumin edessä seisoi suihkulähteen tynkä Meta Sudans, joka purettiin 1930-luvulla.',
           selite: 'Colosseumin edessä seisoi antiikin suihkulähteen tynkä '
-            + 'Meta Sudans, joka purettiin 1936.',
+            + 'Meta Sudans, joka purettiin 1930-luvulla.',
           lahde: 'Library of Congress (PD)',
         },
         {
@@ -14649,7 +14647,7 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Michelangelo 1510',
       johdanto: 'Sikstuksen kappelin holvin alla seisoi vuonna 1510 '
-        + 'kuvanveistäjä, joka yritti ensin päästä koko työstä ja maalasi katon '
+        + 'kuvanveistäjä, joka suostui työhön vastahakoisesti ja maalasi katon '
         + 'silti valmiiksi vuosina 1508–1512.',
       tehtava: {
         kysymys: 'Missä asennossa Michelangelo maalasi Sikstuksen kappelin kattoa?',
@@ -14661,7 +14659,7 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 3,
         fakta: 'Vatikaanin museoiden mukaan katon ensimmäinen puolisko oli valmis '
-          + 'elokuussa 1510 ja paljastettiin elokuussa 1511, ja koko katto '
+          + 'elokuussa 1510. Yleisölle se näytettiin kesällä 1511, ja koko katto '
           + 'avattiin pyhäinpäivän aattona 1512.',
       },
       nostot: [
@@ -14675,17 +14673,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hän työskenteli seisaaltaan pensseli pään yläpuolella, ja '
             + 'lähteiden mukaan makaamistarina on pitkäikäinen myytti.\n\nPaavi '
             + 'Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
-            + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
-            + 'tehtävästä. Ensimmäinen suunnitelma oli maalata kaksitoista '
+            + 'Michelangelo piti itseään kuvanveistäjänä ja suostui tehtävään '
+            + 'vastahakoisesti. Ensimmäinen suunnitelma oli maalata kaksitoista '
             + 'apostolia, mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.\n\n'
             + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta '
             + 'sekä kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden '
-            + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510, '
-            + 'ja yleisölle se paljastettiin elokuussa 1511. Toisen puoliskon '
-            + 'hahmot ovat suurempia, koska Michelangelo oli nähnyt valmiin osan '
-            + 'lattialta käsin. Aadamin luominen on tällä toisella puoliskolla. '
-            + 'Koko katto avattiin pyhäinpäivän aattona 1512.\n\nIsoisäsi '
-            + 'matkavuonna 1873 katto oli ollut valmiina jo yli 360 vuotta.',
+            + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510. '
+            + 'Yleisölle se näytettiin kesällä 1511. Toisen puoliskon hahmot ovat '
+            + 'suurempia, koska Michelangelo oli nähnyt valmiin osan lattialta '
+            + 'käsin. Aadamin luominen on tällä toisella puoliskolla. Koko katto '
+            + 'avattiin pyhäinpäivän aattona 1512.\n\nIsoisäsi matkavuonna 1873 '
+            + 'katto oli ollut valmiina jo yli 360 vuotta.',
           lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa seisaaltaan, pää '
             + 'taaksepäin taivutettuna.',
           selite: 'Michelangelo maalasi Sikstuksen kappelin holvia seisaaltaan, '

@@ -10247,8 +10247,7 @@ export const NAHTAVYYSJUTUT = {
           + '1732, ja se valmistui vasta 1762, 11 vuotta hänen '
           + 'kuolemansa jälkeen.'
         + '\n\n'
-        + 'Lähde on maailman suurin barokkityylinen suihkulähde: se '
-          + 'on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä '
+        + 'Lähde on barokkityylinen suihkulähde. Keskellä '
           + 'komeilee merenjumala Neptunus vaunuillaan, joita vetävät '
           + 'kaksi hevosta — toinen rauhallinen ja toinen villi, '
           + 'kuvaamassa meren kahta puolta.'
@@ -10264,11 +10263,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fontaine Trevi - Rome.jpg',
-          lyhyt: 'Trevin suihkulähde on 26 metriä korkea, valmistui 1762 yksitoista vuotta Salvin kuoltua.',
-          selite: 'Maailman suurin barokkisuihkulähde on 26 metriä korkea '
-            + 'ja lähes 50 metriä leveä; Nicola Salvi aloitti sen 1732 ja '
-            + 'se valmistui 1762, yksitoista vuotta hänen kuolemansa '
-            + 'jälkeen.',
+          lyhyt: 'Trevin suihkulähde valmistui 1762, yksitoista vuotta Salvin kuoltua.',
+          selite: 'Nicola Salvi aloitti Trevin suihkulähteen 1732, ja se valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen.',
           lahde: 'Wilfredor, Wikimedia Commons (CC0)',
         },
         {
@@ -10432,16 +10428,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Caesar murhattiin juuri tässä Curiassa vuonna 44 eaa.'
         + '\n\n'
         + 'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
-        + 'Näyttelijä Anna Magnani ruokki niitä taukojensa aikana läheisessä '
-        + 'Teatro Argentinassa. Vuonna 1993 perustettiin vapaaehtoisten '
-        + 'ylläpitämä kissasuoja, ja arvioiden mukaan siellä on yli 200 '
-        + 'kissaa. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
+        + 'Näyttelijä Anna Magnani kuului roomalaisiin, jotka ruokkivat kissoja. Vuonna 1993 perustettiin vapaaehtoisten '
+        + 'ylläpitämä kissasuoja, ja arvioiden mukaan siellä on noin 200 kissaa. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
         + 'poistamista, koska se oli rakennettu ilman lupaa ja haittasi '
         + 'raunioiden säilymistä. NPR:n mukaan kissoja itseään ei kuitenkaan '
         + 'voitu häätää.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, sillä ne '
-        + 'olivat vielä maan alla. Paikalla oli tiivis kortteli, ja temppeli '
+        + 'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, sillä temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, ja temppeli '
         + 'A:n sisään rakennettu San Nicola de\' Cesarini -kirkko seisoi '
         + 'vielä; se purettiin vasta 1926–1929. Kissoja ei ollut vielä, ja '
         + 'kissasuoja tuli vasta 1993.',
@@ -10572,14 +10565,12 @@ export const NAHTAVYYSJUTUT = {
         + 'lähteiden mukaan makaamistarina on pitkäikäinen myytti.'
         + '\n\n'
         + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
-        + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
-        + 'tehtävästä. Ensimmäinen suunnitelma oli maalata kaksitoista '
+        + 'Michelangelo piti itseään kuvanveistäjänä ja suostui tehtävään vastahakoisesti. Ensimmäinen suunnitelma oli maalata kaksitoista '
         + 'apostolia, mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.'
         + '\n\n'
         + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta '
         + 'sekä kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden '
-        + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510, '
-        + 'ja yleisölle se paljastettiin elokuussa 1511. Toisen puoliskon '
+        + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510. Yleisölle se näytettiin kesällä 1511. Toisen puoliskon '
         + 'hahmot ovat suurempia, koska Michelangelo oli nähnyt valmiin osan '
         + 'lattialta käsin. Aadamin luominen on tällä toisella puoliskolla. '
         + 'Koko katto avattiin pyhäinpäivän aattona 1512.'
@@ -10618,9 +10609,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
         + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
-        + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen '
-        + 'silloin vielä tapana: erään kirjoittajan mukaan tapa alkoi vasta '
-        + '1800-luvulla.',
+        + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
       kuvat: [
         {
           tiedosto: 'Trevi Fountain - Roma.jpg',
@@ -10634,26 +10623,23 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
     },
     'Areenan kellari': {
-      aika: '1874',
+      aika: '1874–1875',
       nosto: 'nosto-colosseumin-kellari',
       teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
         + 'hiekkaa.'
         + '\n\n'
         + 'Lattian alla oli kaksikerroksinen kellari eli hypogeum, jossa oli '
-        + 'käytäviä, häkkejä ja varastohuoneita. Lähteiden mukaan kellarista '
-        + 'johti areenalle noin 80 pystykuilua. Köysien ja vintturien avulla '
+        + 'käytäviä, häkkejä ja varastohuoneita. Kellarista johti areenalle kymmeniä pystykuiluja ja nostimia. Köysien ja vintturien avulla '
         + 'häkki nostettiin ylös, ja eläin ilmestyi areenalle luukusta.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
-        + 'peitossa. Sitä alettiin kaivaa esiin vuosina 1874–1875, pian '
-        + 'isoisäsi käynnin jälkeen.',
+        + 'peitossa. Kellaria kaivettiin esiin useaan otteeseen 1800-luvulla, muun muassa vuosina 1874–1875.',
       kuvat: [
         {
           tiedosto: 'Hypogeum 1 (15005526662).jpg',
           lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
           selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
-            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja lähteiden '
-            + 'mukaan noin 80 pystykuilua.',
+            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja kymmeniä pystykuiluja.',
           lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -10675,9 +10661,7 @@ export const NAHTAVYYSJUTUT = {
         + 'norsupatsas, jonka selässä on punertava graniittiobeliski. Patsaan '
         + 'suunnitteli Gian Lorenzo Bernini, Ercole Ferrata veisti sen, ja se '
         + 'paljastettiin vuonna 1667. Paavi Aleksanteri VII kuoli ennen kuin '
-        + 'patsas ehdittiin paljastaa. Obeliski on noin 5,5 metriä korkea. '
-        + 'Roomassa on kaikkiaan kolmetoista muinaisobeliskia, ja tämä on '
-        + 'yksi pienimmistä. Turismo Roman mukaan obeliski löytyi vuonna '
+        + 'patsas ehdittiin paljastaa. Obeliski on pieni, noin 5,5 metriä korkea. Turismo Roman mukaan obeliski löytyi vuonna '
         + '1665, kun dominikaanit rakensivat Santa Maria sopra Minerva '
         + '-kirkon puutarhan muuria.'
         + '\n\n'
@@ -10731,7 +10715,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1870-luku',
       nosto: 'nosto-rooman-nasone',
       teksti: 'Rooman kaduilla on juomavesihanoja, joita sanotaan nasoneiksi, '
-        + 'isoiksi neniksi. Ne ovat valurautaisia pylväitä, ja vesi virtaa '
+        + 'isoiksi neniksi. Alun perin ne olivat valurautaisia pylväitä, ja vesi virtaa '
         + 'niistä yleensä yötä päivää. Ensimmäiset nasonet pystytettiin '
         + '1870-luvulla. Alkuperäisessä mallissa oli kolme lohikäärmeen '
         + 'päätä, ja nimi nasone tuli vasta, kun myöhemmin tuli yksi kaareva '
@@ -10765,22 +10749,20 @@ export const NAHTAVYYSJUTUT = {
     },
     // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
     'Meta Sudans': {
-      aika: '1. vuosisata–1936',
+      aika: '1. vuosisata–1930-luku',
       teksti: 'Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä '
         + 'Roomassa. Nimi tarkoittaa hikoilevaa käännepylvästä: meta oli '
         + 'sirkuksen käännepylväs, ja vesi tihkui kartiosta lukuisista '
         + 'rei\'istä. Se rakennettiin 1. vuosisadalla jKr. flaviolaiskeisarien '
         + 'aikana.'
         + '\n\n'
-        + 'Mussolinin käskystä rauniot purettiin vuonna 1936. Tutkija '
+        + 'Mussolinin käskystä rauniot purettiin 1930-luvulla. Tutkija '
         + 'Elizabeth Marlowen mukaan ne olivat paraatireitin tiellä. '
         + 'Suihkulähdettä ei ole enää, mutta sen pohjapiirros on yhä '
-        + 'näkyvissä Konstantinuksen kaaren edessä, ja Marlowen mukaan '
-        + 'ääriviivat on merkitty vaaleammalla kivellä.'
+        + 'näkyvissä Konstantinuksen kaaren edessä, ja ääriviivat merkittiin purun jälkeen vaaleammalla kivellä.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tiilinen kartio seisoi vielä rauniona '
-        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku '
-        + 'tuli vasta 63 vuotta myöhemmin.',
+        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta noin 60 vuotta myöhemmin.',
       kuvat: [
         {
           tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy LOC 4755211890.jpg',
