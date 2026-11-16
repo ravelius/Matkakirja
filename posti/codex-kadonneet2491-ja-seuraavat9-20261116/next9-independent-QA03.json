@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "lost03_independent_qa",
+  "reviewedAt": "2026-11-16T19:26:46.063745+00:00",
+  "method": "Direct visual comparison of each actual original.png to every historical raster actually passed in its imagegen-input.json. Manifest and input records used only to locate assets and declared phase. Producer QA prose is not visual evidence. No new download or generation. Ornament differences do not by themselves cause failure.",
+  "statusDefinitions": {
+    "PASS": "Essential broad masses and silhouette match the declared source/design scope; listed simplifications remain. This is not owner or Tripo approval.",
+    "WARN": "Recognizable main subject, but a visible mass/silhouette discrepancy or unresolved major topology needs explicit resolution or owner acceptance.",
+    "FAIL": "Dominant form contradicts controlling references."
+  },
+  "counts": {
+    "PASS": 2,
+    "WARN": 2,
+    "FAIL": 0,
+    "SKIPPED_NO_IMAGE": 1
+  },
+  "ownerApproved": false,
+  "tripoApproved": false,
+  "queueWrites": false,
+  "generationCalls": 0,
+  "entries": [
+    {
+      "buildingKey": "london-old-westminster-historic",
+      "status": "WARN",
+      "confidence": "medium",
+      "scopeLabel": "Approximate prefire reconstruction, with unresolved court and concealed-wing topology; not an exact historical survey.",
+      "matches": [
+        "The huge elongated steep Hall roof, small ridge lantern and modest end pinnacles agree with W3; the Hall is the dominant single roof mass.",
+        "The low classical frontage beside castellated Gothic ranges broadly preserves the hierarchy visible in W3/W4/W6. No modern Parliament towers are introduced."
+      ],
+      "discrepancies": [
+        "The candidate resolves the south/east and rear portion into large, fairly regular high enclosing ranges and rectangular courts. W1 instead has a much more fragmented sequence of differently sized chambers, passages and courts; a reliable one-to-one correspondence of the candidate courts to W1 cannot be established from this view. This is a main-plan uncertainty, not merely missing ornament.",
+        "The tall unified back-right perimeter and its connected roof runs are visually stronger and more regular than the irregular small rooms and offsets recorded in W1. These visible reconstructed volumes are not supported as exact as-built geometry by W3/W4/W5/W6, which show only selected frontages.",
+        "The Old Palace Yard Gothic frontage is compressed and regularized: W6 shows a long taller central Gothic block with distinct rectangular end/projection hierarchy; the candidate divides the visible frontage into repeated castellated projections."
+      ],
+      "recommendations": [
+        "Retain only as a WARN owner-review reconstruction. Before whole-building modeling, trace W1 and identify Hall, St Stephens Chapel, House of Lords, Speakers Court and each major open court on the candidate footprint.",
+        "Do not present the rear ranges or court arrangement as confirmed historic fact; resolve the plan hierarchy before any Tripo approval."
+      ],
+      "imageViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/london-old-westminster-historic/original.png",
+      "imageSha256": "8a984052117db3bfd705c652ee1676ea946afd5c0420368d012f0d4b7420fe4a",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost06/westminster/refs/W1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost06/westminster/refs/W3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost06/westminster/refs/W4.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost06/westminster/refs/W5.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost06/westminster/refs/W6.jpg"
+      ],
+      "inputRecordRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/london-old-westminster-historic/imagegen-input.json",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "eligibleForTripoQueue": false
+    },
+    {
+      "buildingKey": "vienna-karntnertor-gate-historic",
+      "status": "WARN",
+      "confidence": "high",
+      "scopeLabel": "Approximate old city gate and isolated wall/bridge fragment, not a theatre or the separate New Kärntnertor.",
+      "matches": [
+        "The candidate correctly makes a decorated round-arched tunnel through a substantial battered wall, with lower rectangular side portals, matching reference 1.",
+        "The forward bridge-like approach and massive wall relationship agree broadly with oblique reference 3."
+      ],
+      "discrepancies": [
+        "The central obelisk/crest projects conspicuously above the wall coping in the candidate. In reference 1 its tip remains at about the wall top, and reference 3 also places the ornament against the taller wall rather than as a freestanding skyline spike.",
+        "Reference 3 shows a comparatively thin bridge deck with shallow arched span undersides and tall slender piers. The candidate has a much heavier solid deck, rectangular flat-bottomed gaps and squat block-like supports, changing a major visible silhouette.",
+        "The photograph of the city side (reference 2) records a high curved central brick parapet and a distinctly different portal composition. The generated front-only view does not expose or verify that reverse side; the flat wall top cannot be accepted as proof of the inner portal."
+      ],
+      "recommendations": [
+        "For any later authorized replacement, lower the field-side crest relative to wall coping and reproduce the shallow arched bridge span silhouette from reference 3.",
+        "Keep wall depth, tunnel section and reverse portal explicitly unresolved. A reverse-view/source check is needed before approving a complete 3D object."
+      ],
+      "imageViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/vienna-karntnertor-gate-historic/original.png",
+      "imageSha256": "335ab233e6e840230eaffd9568a44184cd26ccd9cca7034f3dfd48db930b19f1",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost07/karntnertor/refs/1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost07/karntnertor/refs/2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost07/karntnertor/refs/3.jpg"
+      ],
+      "inputRecordRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/vienna-karntnertor-gate-historic/imagegen-input.json",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "eligibleForTripoQueue": false
+    },
+    {
+      "buildingKey": "rome-porto-di-ripetta-historic",
+      "status": "PASS",
+      "confidence": "medium-high",
+      "scopeLabel": "Broad main-form pass against the Specchi prints, with approximate minor details; not certified as-built geometry.",
+      "matches": [
+        "The candidate is a low open quay rather than a roofed building, with a broad shallow horizontal footprint.",
+        "The central convex upper platform, mirrored concave transitions and broad straight lateral stair runs agree with the controlling small plan in R1 and the river elevation/perspective in R1/R2.",
+        "The overall stepped silhouette and low central parapet remain clearly legible and broadly source-consistent."
+      ],
+      "discrepancies": [
+        "The fountain is simplified into a small basin with a tall rounded slab on the upper terrace, set behind the curved parapet. R2 shows a more sculptural central feature closely integrated with the river-facing central parapet; the candidate changes this small feature and its placement.",
+        "The candidate central parapet and stair bands are cleaner, thicker and more uniformly regular than the prints. Exact riser/landing count is not verified.",
+        "The long straight rear boundary and side-return walls are isolation closures, not geometry demonstrated in full by these prints."
+      ],
+      "recommendations": [
+        "Suitable for owner review at approximate main-mass level, retaining the stated reconstruction limitation.",
+        "Correct the fountain placement/form if detail fidelity is required; do not infer exact dimensions, buried construction or an as-built rear boundary from this image."
+      ],
+      "imageViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/rome-porto-di-ripetta-historic/original.png",
+      "imageSha256": "7ab55ad97a4a68daba94ccfa4731b456e093a3cdc87e57da9142085cc7c4311e",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost08/ripetta/refs/R1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost08/ripetta/refs/R2.jpg"
+      ],
+      "inputRecordRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/rome-porto-di-ripetta-historic/imagegen-input.json",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "eligibleForTripoQueue": false
+    },
+    {
+      "buildingKey": "paris-palais-de-lindustrie-historic",
+      "status": "PASS",
+      "confidence": "medium-high",
+      "scopeLabel": "1854 contemporary DESIGN-based reconstruction; this pass does not certify the completed historical building or final roof.",
+      "matches": [
+        "The elongated low rectangular stone perimeter and two storeys of repeated round-arched openings agree broadly with the I2 plan and I3 design perspective.",
+        "A long high central longitudinal vault sits above lower parallel side vaults, preserving the essential three-vault hierarchy in I2/I3.",
+        "The central monumental round entrance arch, paired column groups, projecting upper block and crown sculpture broadly agree with the entrance motif photographed in I4.",
+        "The corners remain modest projecting rectangular pavilions, without added domes or monumental towers."
+      ],
+      "discrepancies": [
+        "The roof section is smoothed into regular rounded barrels. I2/I3 show a more articulated/peaked ridge and roof break at the apex, so the candidate simplifies the uppermost section silhouette.",
+        "The entrance and repeated facade bays are regularized; the actual I4 ground-level portal subdivision and adjacent opening pattern are not reproduced exactly.",
+        "The hidden rear and precise plan ratios cannot be measured reliably from this perspective; no complete as-built roof/rear evidence is established by the reference set."
+      ],
+      "recommendations": [
+        "Use only under an explicit 1854 design-based label. Do not promote it as proof of the final built roof.",
+        "If section fidelity is required, refine the central and side roof apex profile to I2/I3; preserve the current correct three-vault hierarchy."
+      ],
+      "imageViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/paris-palais-de-lindustrie-historic/original.png",
+      "imageSha256": "f715b7f9a441807d5db7f9836a3b72f640649d250ca434db108cc21b4f2cce52",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/industrie/refs/I2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/industrie/refs/I3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/industrie/refs/I4.jpg"
+      ],
+      "inputRecordRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost03/paris-palais-de-lindustrie-historic/imagegen-input.json",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "eligibleForTripoQueue": false
+    }
+  ],
+  "skipped": [
+    {
+      "buildingKey": "amsterdam-beurs-van-zocher-historic",
+      "status": "SKIPPED_NO_IMAGE",
+      "imageViewed": null,
+      "reason": "No generated image in manifest; no visual candidate QA performed.",
+      "ownerApproved": false,
+      "tripoApproved": false
+    }
+  ]
+}

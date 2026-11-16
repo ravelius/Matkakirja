@@ -1,0 +1,224 @@
+{
+  "reviewer": "lost04_independent_qa",
+  "reviewedAt": "2026-11-16T19:29:42.823948+00:00",
+  "status": "WARN",
+  "counts": {
+    "PASS": 0,
+    "WARN": 5,
+    "FAIL": 0
+  },
+  "visualMatchCounts": {
+    "PASS": 5,
+    "WARN": 0,
+    "FAIL": 0
+  },
+  "method": "Independently viewed all five original.png assets at full output size and all eleven actual historical reference images listed in imagegen-input.json/toolArguments and sources.json. Used source/output comparison contact sheets for simultaneous inspection; additionally opened B1 and N2 at full source size. Producer QA prose was not used as visual evidence. Input/source path lists cross-checked.",
+  "scope": "Bounded visual QA of major mass, silhouette, roof hierarchy, courts and main openings against supplied references. Minor ornament may be approximate. PASS visualMatch means no material contradiction found in supplied visible evidence; overall WARN preserves source and hidden-geometry limits. No measured 3D geometry, copyright/source-web verification, owner approval, Tripo suitability approval, runtime/game integration or publication certification.",
+  "entries": [
+    {
+      "buildingKey": "vienna-heinrichhof-historic",
+      "status": "WARN",
+      "outputViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost04/vienna-heinrichhof-historic/original.png",
+      "outputSha256": "0621d14f27b295ea289c441684e960cfa44b6c629382c43b7030241799d021b2",
+      "sourcesViewed": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/heinrichhof/refs/H1.jpg",
+          "sha256": "52997a7fc7419cf9819af36608228e778858db435033680ed6be58de9c032241",
+          "viewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/heinrichhof/refs/H2.jpg",
+          "sha256": "86f81105507376968f504dab861c85d6a6c4dc8e110f93c3718c61f09e1a8009",
+          "viewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/heinrichhof/refs/H3.jpg",
+          "sha256": "c14bee2451873c9559b7f9040ac57e3097f657a059f0b917c0efc333960f3a62",
+          "viewed": true
+        }
+      ],
+      "visualMatch": "PASS",
+      "summary": "Recognizable long Heinrichshof street block; no material contradiction in the documented principal mass.",
+      "observedMatches": [
+        "Long continuous facade and return, broad raised central pavilion, compact attached raised corner pavilions and lower connecting roof ranges correspond to H1/H2/H3.",
+        "Arched ground storey, dense upper bay rhythm and relative main-storey heights are retained."
+      ],
+      "issues": [
+        {
+          "severity": "WARN",
+          "type": "unverified-geometry",
+          "detail": "The chosen view exposes a rear inner-facing band but does not clearly expose the courtyard floor or full rear roof/court closure. A hollow court and its exact layout cannot be certified from this image or the supplied street sources."
+        },
+        {
+          "severity": "WARN",
+          "type": "approximation",
+          "detail": "Inner/rear facade, chimney repetition and far-side roof junctions are interpreted; H1/H2/H3 do not document them."
+        }
+      ],
+      "scope": "Intact historical Heinrichshof principal facade and visible corner/return; rear/courtyard interpretation remains qualified."
+    },
+    {
+      "buildingKey": "vienna-altes-burgtheater-historic",
+      "status": "WARN",
+      "outputViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost04/vienna-altes-burgtheater-historic/original.png",
+      "outputSha256": "0e99fc726d4b9e43485f101a8bfb7f73ae132e734c2b6b463beb357dbb64cd5b",
+      "sourcesViewed": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/burgtheater/refs/B1.jpg",
+          "sha256": "ece75fa0ffeade73b93b2d632c5dbf8c8a6edf287fa29690ec489481ef1100c3",
+          "viewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/burgtheater/refs/B3.jpg",
+          "sha256": "3abf067d534531714608d5ae7e991dd2958980946b5c2b0ba942dfaf42e7443b",
+          "viewed": true
+        }
+      ],
+      "visualMatch": "PASS",
+      "summary": "Correct small old theatre identity, with the adjoining domed palace excluded.",
+      "observedMatches": [
+        "B1 small right-hand two-storey facade is preserved: three principal upper windows, taller curved central bay, balcony, blind lower panels and rounded right corner with window.",
+        "Small standalone mass and grey hipped roof remain consistent with the small piece in B3; no palace wings or giant dome."
+      ],
+      "issues": [
+        {
+          "severity": "WARN",
+          "type": "unverified-geometry",
+          "detail": "The isolated rear boundary, rectangular depth and three small side-window bays are not established by B1. B3 is a secondary city model and cannot independently certify the hidden theatre/stage footprint."
+        },
+        {
+          "severity": "WARN",
+          "type": "approximation",
+          "detail": "Roof rise and simplified finials are approximated; B1 roof and rear are partly occluded. The lower blind panels are visible in B1 and are not treated as a missing-door failure."
+        }
+      ],
+      "scope": "Only the small Altes Burgtheater at Michaelerplatz, not the large neighbouring palace or new Ringstrasse Burgtheater."
+    },
+    {
+      "buildingKey": "vienna-karntnertor-theater-historic",
+      "status": "WARN",
+      "outputViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost04/vienna-karntnertor-theater-historic/original.png",
+      "outputSha256": "5c07be4ab64670d0a384f1424872fe7a94a468637a1f06a541204f3c4a8397fd",
+      "sourcesViewed": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/karntnertor/refs/K1.jpg",
+          "sha256": "17714918f295844523e7ad5e087dd836aaacbed478192093ea75407b0cc95755",
+          "viewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost04/karntnertor/refs/K4.jpg",
+          "sha256": "39158e975dab0d8fe765646e58bc47c3b722c1787b8646bc60ef69f8ced9d144",
+          "viewed": true
+        }
+      ],
+      "visualMatch": "PASS",
+      "summary": "Correct theatre mass and photographic front-pavilion/main-roof relationship.",
+      "observedMatches": [
+        "K1 projecting low three-bay facade, paired upper-storey window rows, canopy/ground entrances, crest and statues are present.",
+        "A substantially taller deep theatre body with steep hipped roof rises behind; no city gate, gate passage, dome or Staatsoper substitution.",
+        "Long side has the plain repeated-window body and low side entrance projection seen in K1."
+      ],
+      "issues": [
+        {
+          "severity": "WARN",
+          "type": "unverified-geometry",
+          "detail": "Rear end closure, exact building depth, dormer distribution and some side bays are inferred; neither supplied source establishes a measured complete footprint."
+        },
+        {
+          "severity": "WARN",
+          "type": "approximation",
+          "detail": "Canopy supports, statuary and entrance/step details are simplified. K4 is a different retrospective depiction and does not override K1 photographic mass."
+        }
+      ],
+      "scope": "K1 photograph controls the historical theatre; K4 only secondary support. Not the Kärntnertor gate."
+    },
+    {
+      "buildingKey": "paris-les-halles-historic",
+      "status": "WARN",
+      "outputViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost04/paris-les-halles-historic/original.png",
+      "outputSha256": "c165fc7ff3375bab5995a8ab9b9949d4338a985a074cb8280247694b8e0f18f4",
+      "sourcesViewed": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/halles/refs/H1.jpg",
+          "sha256": "3f7f23a7b3d019d04699132cb74a5cf0110671a0055439e1b94d4e111c379043",
+          "viewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/halles/refs/H2.jpg",
+          "sha256": "4deafd5b38727acfa839f5b1c591ff5ee6b625bca526ecc7c277402516c48d53",
+          "viewed": true
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/halles/refs/H4.jpg",
+          "sha256": "7de6d20b6b897d4c2f105324dd9482b197bec8a04552de54aae709bf4b51d072",
+          "viewed": true
+        }
+      ],
+      "visualMatch": "PASS",
+      "summary": "Coherent single Baltard-type pavilion; accepted one-pavilion scope respected.",
+      "observedMatches": [
+        "Single rectangular complete exterior, low broad lower roof, raised clerestory and smaller upper lantern roof follow H1/H2 central pavilion hierarchy.",
+        "Thin iron framing, arched/shuttered repeated wall panels, pale plinth and metal roofing correspond to H2/H4.",
+        "No exposed cutaway/basement, adjacent street portals, Saint-Eustache, dome or invented full-complex completion."
+      ],
+      "issues": [
+        {
+          "severity": "WARN",
+          "type": "visible-approximation",
+          "detail": "Repeated facade bays are regularized rather than a literal elevation copy: the generated long face has about ten broad panels, while the H2 central pavilion between portals shows about eight. Exact pavilion number and bay count are therefore not certified."
+        },
+        {
+          "severity": "WARN",
+          "type": "unverified-geometry",
+          "detail": "Complete short-end closure, door locations and hidden roof junctions are interpreted from a pavilion type; the three supplied sources do not fix one numbered pavilion in a measured plan."
+        }
+      ],
+      "scope": "ONE pavilion only; absence of the rest of Les Halles is accepted scope, not a QA failure. completedWholeComplex=false.",
+      "completedWholeComplex": false
+    },
+    {
+      "buildingKey": "london-newgate-historic",
+      "status": "WARN",
+      "outputViewed": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/lost04/london-newgate-historic/original.png",
+      "outputSha256": "13a34c95f96ae3fc514ff90b78cee7376c247c5d2bd4938bf66716c88e3bc6ee",
+      "sourcesViewed": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost02/newgate/refs/N2.jpg",
+          "sha256": "ff3ce441005e084c345f9756c8b0fa62b60f17086d32aeedc17f0408fb41d94f",
+          "viewed": true
+        }
+      ],
+      "visualMatch": "PASS",
+      "summary": "Internally coherent N2 plate interpretation with the principal three-court arrangement retained.",
+      "observedMatches": [
+        "Long sparse-window rusticated frontage, central pedimented keeper-house and two lower projecting flanking entries closely follow N2 elevation.",
+        "Three open court groups are visible; central group projects farther to the rear, and the central front chapel/ward roof volumes occupy the court edge rather than filling the entire void.",
+        "No medieval gate, towers, dome, fully roofed slab or conflicting alternative footprint introduced."
+      ],
+      "issues": [
+        {
+          "severity": "WARN",
+          "type": "unverified-geometry",
+          "detail": "N2 plan establishes room/court layout but not these rear roof profiles, interior-facing window elevations or all heights. Those parts remain architectural interpretation."
+        },
+        {
+          "severity": "WARN",
+          "type": "visible-approximation",
+          "detail": "N2 room partitions, unequal side-court depths and small staircase/closet projections are simplified into broad perimeter ranges. This is a massing interpretation, not a measured room-by-room reconstruction."
+        },
+        {
+          "severity": "WARN",
+          "type": "evidence-limit",
+          "detail": "Published-1800 N2 plate-only comparison does not prove that this exact scheme was built or identify a later constructed phase. No as-built claim is made."
+        }
+      ],
+      "scope": "N2 published-1800 elevation-and-plan plate ONLY. No N1/N3 comparison or as-built inference."
+    }
+  ],
+  "ownerApproved": false,
+  "tripoAuthorized": false,
+  "tripoCalls": 0,
+  "newGenerationCalls": 0,
+  "queueMutated": false,
+  "originalsModified": false
+}

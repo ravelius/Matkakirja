@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-16T19:36:31.964450+00:00",
+  "reviewer": "retry2491_independent_qa",
+  "independent": true,
+  "scope": "PT2491: six new original model PNGs compared directly with all historical raster references listed in their input specs; principal masses, silhouette, roof hierarchy and major openings. Small ornament may remain approximate.",
+  "evidencePolicy": "Actual PNGs and historical raster views are evidence. Producer prose, prompts and prior candidates are not treated as proof of historical agreement. Input specs used to identify references only.",
+  "overallStatus": "WARN",
+  "visualMatchCounts": {
+    "PASS": 3,
+    "WARN": 3,
+    "FAIL": 0
+  },
+  "statusCounts": {
+    "WARN": 6
+  },
+  "materialWarningsCount": 3,
+  "allSixOriginalsViewed": true,
+  "allEighteenHistoricalRastersViewed": true,
+  "allOriginalHashesComputedIndependently": true,
+  "ownerApprovalGranted": false,
+  "tripoApprovalGranted": false,
+  "tripoReady": false,
+  "actions": {
+    "generation": false,
+    "browser": false,
+    "downloads": false,
+    "blender": false,
+    "mail": false,
+    "sharedQueueMutation": false,
+    "gameMutation": false
+  },
+  "decision": "No unambiguous principal-mass FAIL established in the supplied views. Three visual matches pass with reconstruction caveats; Trocadero proportions, Haring lower-belfry enclosure and townhall right-gable silhouette retain explicit warnings. This independent visual report grants no owner or Tripo approval.",
+  "items": [
+    {
+      "buildingKey": "paris-galerie-des-machines-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-paris/paris-galerie-des-machines-historic/model-image-original.png",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M2.jpg"
+      ],
+      "inputSpecPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-paris/paris-galerie-des-machines-historic/imagegen-input.json",
+      "status": "WARN",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "visualMatch": "PASS",
+      "historicalConfidence": "MEDIUM_HIGH",
+      "summary": "The substantial two-level side gallery reaches approximately the main roof spring/eave, visually around half the main hall height; the former tiny-gallery/high-exposed-wall error is absent. The low pointed great roof, glazed pointed end and long repeated-bay hall are recognizable.",
+      "materialIssues": [],
+      "warnings": [
+        "The separate gallery roof is interpreted with a shallow outward slope rather than the nearly flat platform-like section drawn in M3; exact gallery depth and hidden far-side/rear junction cannot be certified from this image.",
+        "Exact bay counts, glazing divisions and fine iron ornament are approximate and nonblocking for principal-mass comparison."
+      ],
+      "decisiveEvidence": [
+        "M3 transverse section shows two-level outboard gallery reaching the great arch spring, about half the ridge height.",
+        "M1 corroborates the pointed glazed end, iron truss and fan glazing.",
+        "M2 corroborates the long rectangular repeated-bay footprint."
+      ],
+      "sha256": "77c4915a08e2982144fbc9b63a051670bca5f3fe4a93e7b8ab75f9ec9a7d0e63",
+      "sourceRastersVerified": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M3.jpg",
+          "sha256": "0c1a77eff91f7fbdcc9a50c85e796fb057a9801f4fa1fbbff77a9a32b1e57ca0"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M1.jpg",
+          "sha256": "bbdcdc74ace320246ab150cf63ceba90d7db538b3e09b820f2fcbf250fdc4b20"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost03/machines/refs/M2.jpg",
+          "sha256": "e573fb2f62b85373be72d37b211fdeeda9813070062b9068dc1535409a8a93f3"
+        }
+      ],
+      "overallStatus": "WARN"
+    },
+    {
+      "buildingKey": "paris-trocadero-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-paris/paris-trocadero-historic/model-image-original.png",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg"
+      ],
+      "inputSpecPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-paris/paris-trocadero-historic/imagegen-input.json",
+      "status": "WARN",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "visualMatch": "WARN",
+      "historicalConfidence": "MEDIUM",
+      "summary": "The whole palace now includes both long low curved wings and both terminal pavilions. Twin towers, articulated central hall, arcaded projecting front and roof hierarchy agree broadly with T1/T3/T4. Central-to-total apparent span remains a proportion caveat.",
+      "materialIssues": [
+        {
+          "issue": "The central assembly still appears broader relative to the total palace span than in the distant T3 photograph.",
+          "severity": "WARN",
+          "certainty": "UNCERTAIN_PROPORTION",
+          "basis": "Direct visual comparison of the generated palace and T3; the side pavilions around the central rotunda occupy a visibly larger share of the rendered span.",
+          "limitation": "This is an apparent image-space difference, not a verified dimension error. T3 and the render differ in camera distance/elevation and the wings and central facade occupy different footprint depths. Perspective and the curved-wing depth can plausibly explain a substantial part of the discrepancy; no measured footprint plan is supplied. A greater-than-15-percent physical discrepancy is not established."
+        }
+      ],
+      "warnings": [
+        "Wing curve depth, rear volume and exact footprint remain reconstruction judgments; T4 is a transverse section, not a footprint plan.",
+        "Fine tower/arcade ornament is approximate and is not a blocking criterion."
+      ],
+      "decisiveEvidence": [
+        "T3 supplies the complete broad palace span and both low wings.",
+        "T1 supplies the projecting lower arcade and central hall/tower forms.",
+        "T4 supplies the central section roof and height hierarchy only."
+      ],
+      "sha256": "310f9f1596cd6c3fbe83c44fafadc64dea399d9368848092ea5c6f165412238e",
+      "sourceRastersVerified": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T3.jpg",
+          "sha256": "0aab2cf5769ff5540d94662fbdd1ae690f1940ed24e8ac710d5f028a6fc33c1a"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T1.jpg",
+          "sha256": "f599e58582884da10d972de65dadc69c64324750bd7d9525125eb2ed6cf7f469"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-trocadero-pre1937/refs/T4.jpg",
+          "sha256": "0b8c00ad925d27e3b9482744b34eaadb725e1bb7fa4ac9a234dba05d4f89a844"
+        }
+      ],
+      "overallStatus": "WARN"
+    },
+    {
+      "buildingKey": "paris-tuileries-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-paris/paris-tuileries-historic/model-image-original.png",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U3.jpg"
+      ],
+      "inputSpecPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-paris/paris-tuileries-historic/imagegen-input.json",
+      "status": "WARN",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "visualMatch": "PASS",
+      "historicalConfidence": "MEDIUM",
+      "summary": "The long low transverse palace has a narrow modest central dome, lower inner connecting ranges, raised intermediate pavilions and articulated outer ranges. The oversize-central-dome failure is absent; overall pavilion/roof rhythm agrees with U1.",
+      "materialIssues": [],
+      "warnings": [
+        "U1 partially obscures/crops terminal extents behind the foreground Louvre blocks, so the isolated end faces and precise total end extent are inferred.",
+        "U2 is an earlier unmeasured context plan; U3 supplies only a distant garden silhouette. Hidden garden elevation, roof joins and repeated window details remain approximate.",
+        "Minor dormer/chimney/stone ornament differences are nonblocking for the requested mass-and-silhouette scope."
+      ],
+      "decisiveEvidence": [
+        "U1 decisive far-background palace range shows the modest dome, low connectors and raised intermediate pavilion rhythm.",
+        "U2 identifies the intended transverse range A, rather than the perpendicular Louvre galleries.",
+        "U3 corroborates only the modest central dome silhouette."
+      ],
+      "sha256": "1486741a4cbed44a8fbfa2d4c476cc03a00f7d3fe762cde6b6149d6aa4ba0193",
+      "sourceRastersVerified": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U1.jpg",
+          "sha256": "d0def5ea241ac796a2ce578dd4cdc11bc4cfb550f9acd9adcc67af3d602cf919"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U2.jpg",
+          "sha256": "993590044143b6624afae5317279adabb3566e8f056256a0ceed57037e1954ae"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/paris-tuileries-pre1871/refs/U3.jpg",
+          "sha256": "8097f09a09de7fdee7db53b4f8c4b8843ab9776340027929a2bf50ba5a4dc4b8"
+        }
+      ],
+      "overallStatus": "WARN"
+    },
+    {
+      "buildingKey": "amsterdam-haringpakkerstoren-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-other/amsterdam-haringpakkerstoren-historic/original.png",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H4.jpg"
+      ],
+      "inputSpecPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-other/amsterdam-haringpakkerstoren-historic/imagegen-input.json",
+      "status": "WARN",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "visualMatch": "WARN",
+      "historicalConfidence": "MEDIUM",
+      "summary": "Broad faceted masonry shaft and successively narrower clock/belfry/lantern assembly follow H2. The corrected order is visible: belfry, balustraded collar, inward-curved transition, upper open lantern, curved cap and fish vane.",
+      "materialIssues": [
+        {
+          "issue": "The lower belfry is open through most of its height, exposing the bell and framing; H2 shows arched upper apertures above a lower panelled/solid zone with separate rectangular articulation.",
+          "severity": "WARN",
+          "certainty": "VISIBLE_DIFFERENCE",
+          "basis": "Compare the rendered stage immediately above the clock with H2 elevation D; H4 also suggests a darker lower enclosed portion.",
+          "limitation": "Exact historical-phase openings and materials are less secure across H2 versus H3/H4; this is a meaningful opening-treatment warning, not a claim of measured dimensional failure."
+        }
+      ],
+      "warnings": [
+        "Fine mouldings, finials, clocks and rear masonry openings remain interpreted.",
+        "H2 is a later documented profile than the harbour scenes; phase consistency is limited."
+      ],
+      "decisiveEvidence": [
+        "H2 controls stage order, relative widths and elevation/profile.",
+        "H1 controls only the faceted tower footprint.",
+        "H3 and H4 corroborate the broad shaft and narrowing upper silhouette."
+      ],
+      "sha256": "58c0a138b3b8ec53f0ef25f096e0b10eb6ee97f9fb778773ddb21881503e81f0",
+      "sourceRastersVerified": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H2.jpg",
+          "sha256": "a8996d638f8fc40bebc637e10d12bb4eef914828da329598e3958d396bf01e8a"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H1.jpg",
+          "sha256": "d879ea4ac8094f19bb25bb509fa924add29d572ae758c686d022252a48d440ab"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H3.jpg",
+          "sha256": "94980c1bb94b408a06a984dedc7e2c3b0970a882122e98147f68c60ff4edbae0"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/haringpakker/refs/H4.jpg",
+          "sha256": "e941a41dd98c0e7d65726d3a27fc10aab5ee9e979d6bb30e6d510f8bc77e86e7"
+        }
+      ],
+      "overallStatus": "WARN"
+    },
+    {
+      "buildingKey": "amsterdam-medieval-town-hall-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-other/amsterdam-medieval-town-hall-historic/original.png",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T1.jpg"
+      ],
+      "inputSpecPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-other/amsterdam-medieval-town-hall-historic/imagegen-input.json",
+      "status": "WARN",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "visualMatch": "WARN",
+      "historicalConfidence": "MEDIUM",
+      "summary": "The three round/segmental ground openings, three-window upper hall, steep hipped roof, narrow square civic tower and long receding compound ranges match the principal T2/T3 composition. The former pointed opening/church-belfry type errors are absent.",
+      "materialIssues": [
+        {
+          "issue": "The right civic-range gable is rendered as a conspicuous stair-step gable. T2 lower drawing and T3 instead show a predominantly sloping triangular/shouldered gable profile.",
+          "severity": "WARN",
+          "certainty": "VISIBLE_DIFFERENCE",
+          "basis": "Direct comparison of the large right-hand gable in both historical views with the generated right-hand range.",
+          "limitation": "Small shoulders and ornamental projections are ambiguous in the sources, but the generated multi-step staircase is a stronger silhouette treatment than the rasters support. The prompt describing a stepped gable is not historical evidence."
+        }
+      ],
+      "warnings": [
+        "T2 and T3 may share a source tradition; they are not guaranteed independent corroboration.",
+        "The irregular plan T1 does not fully certify the rendered rear roof joins or long side-window rhythm.",
+        "Small carved/brick ornament and window subdivisions are approximate and nonblocking."
+      ],
+      "decisiveEvidence": [
+        "T3 is the clearest front/side massing view and shows broad round ground openings beneath decorative curves.",
+        "T2 lower drawing corroborates the arcade, hipped hall, narrow tower and right-hand sloping gable.",
+        "T1 documents the accumulated irregular compound footprint rather than a symmetrical palace."
+      ],
+      "sha256": "ee9f9cdbfa278de775cb47752102f7b395cf47ccf12e506ec991fb7dce00ffa0",
+      "sourceRastersVerified": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T3.jpg",
+          "sha256": "78fac082042316a84490ad20174c17924db12ef70be6a4d071fe6e1d278a8562"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T2.jpg",
+          "sha256": "d819c14d1f5a2b8b31871e2d8f24e556305cce1855a56eceab2a291ab25ae9bb"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost05/townhall/refs/T1.jpg",
+          "sha256": "69f3b8ed629c3c2b5b6ecb349132c6b74c7184afc8c0c2c4ce5b3dd94d01ef43"
+        }
+      ],
+      "overallStatus": "WARN"
+    },
+    {
+      "buildingKey": "london-euston-arch-historic",
+      "image_path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-other/london-euston-arch-historic/original.png",
+      "sourcePathsViewed": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg"
+      ],
+      "inputSpecPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/model-images/retry2491-other/london-euston-arch-historic/imagegen-input.json",
+      "status": "WARN",
+      "ownerApproved": false,
+      "tripoApproved": false,
+      "visualMatch": "PASS",
+      "historicalConfidence": "MEDIUM_HIGH",
+      "summary": "The front has the correct two central round fluted Doric columns and two square outer piers, three tall rectangular openings, deep horizontal entablature and shallow triangular pediment. The tall support-to-width and pediment/entablature hierarchy are plausible against both photographs.",
+      "materialIssues": [],
+      "warnings": [
+        "E1 is a stereo duplication of one viewpoint, not two independent views. E2 is low resolution.",
+        "Rear supports, roof back and exact portico depth are inferred; the render visibly includes rear support geometry that the frontal source set cannot independently certify.",
+        "Fluting, triglyph/moulding and inscription details are approximate and nonblocking."
+      ],
+      "decisiveEvidence": [
+        "E1 shows two round fluted central shafts, square outer piers and tall rectangular passage openings.",
+        "E2 corroborates the high-support profile and shallow pediment in a slightly different view."
+      ],
+      "sha256": "da310c7a7847fd2d5443a214859733a4d295d5c29aba81dca8ae80dac50b14d4",
+      "sourceRastersVerified": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E1.jpg",
+          "sha256": "d910e87eb3f474aad1e748d42175311574c254ee58aaa345d5a678a4eef2fc96"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-massavalmistelu-2461-2464-20261116/batches/lost01/london-euston-arch-pre1961/refs/E2.jpg",
+          "sha256": "22c080a406a0babf72be9107aa67d380570be7995261411cb7151d73d9046450"
+        }
+      ],
+      "overallStatus": "WARN"
+    }
+  ]
+}
