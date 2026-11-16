@@ -2,6 +2,8 @@
 
 Kansio K = /Users/Shared/Claude/wt/pulu-kaupungit-maat/pulu-esigenerointi. Käytä VAIN Read- ja Write-työkaluja (ei Bashia, ei muita tiedostoja).
 
+NIMET: lue myös K/NIMIOHJE.md (Elsass, Lorraine, Elsass-Lothringen vain 1871–1918, Tuileries'n suoralla heittomerkillä) ja noudata sitä.
+
 Jokaisesta sinulle annetusta erästä N tehdään vastaukset tiedostoon:
 
 1. Lue kokonaan K/pulu-ohje-aloitus.txt (Pulun järjestelmäkehote: noudata sitä kuin omaa järjestelmäkehotettasi) ja

@@ -19,6 +19,9 @@ Tämä haara sisältää kaiken tarvittavan. <MAA> = maan ISO3-koodi isoilla (es
 
 ## Vaihe 1: viisi vastausta per kohta
 
+NIMET (KK 16.11.2026): jokaisen agentin ohjeeseen rivi "Lue myös pulu-esigenerointi/NIMIOHJE.md ja noudata sitä" (Elsass, Lorraine,
+Elsass-Lothringen vain 1871–1918, Tuileries'n suoralla heittomerkillä); erän jälkeen `python3 -I tools/pulu-esigenerointi/nimet-yhtenaisiksi.py` vaihe*.json.
+
 Jokaisesta erästä `<MAA>/tehtavat-1-N.txt` tehdään `<MAA>/vastaukset-1-N.txt`, yksi Sonnet-agentti (effort low) per erä. Erät voi ajaa rinnakkain.
 Agentille annetaan sellaisenaan tämä ohje (vaihda N):
 
