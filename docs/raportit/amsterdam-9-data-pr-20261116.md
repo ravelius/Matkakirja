@@ -49,8 +49,8 @@ Rembrandtin talo ja Anne Frankin talo sekä kaupungin muut kohteet ovat ennallaa
 
 ### Tekstit, jotka dokumentin mukaan vaativat tarkistusta
 - Kissalaiva: "laivalla vierailee kerrallaan vain kuusi ihmistä" on ajankohtainen; dokumentin mukaan vierailijoiden varaus päättyi loppuvuonna 2025, tarkistettava ennen ääntä.
-- Montelbaanstoren: "Stadswaterkantoor, kaupungin vesilaitoksen toimisto" (dokumentti: käännös tarkistettava).
-- Portugalilainen synagoga: "Mr. Visserpleinillä" 1873 (nykyinen aukion nimi; aukion nimi 1873 ei ole tarkistettu).
+- Montelbaanstoren: "Stadswaterkantoor, kaupungin vesikonttori" (KK 16.11. 21.xx: käännös tarkistettu; vain literaalikäännös, ei lisäväitteitä; kuvateksti "isoisän matkan aikoihin").
+- Portugalilainen synagoga: "nykyisellä Mr. Visserpleinillä" (aukio nimetty L. E. Visserin (k. 1942) mukaan sodan jälkeen; nimi on myöhempi kuin 1873, KK:n sääntö).
 - Kapein talo: hijsbalk ei ole vahvistettu OH22:ssa itsessään (teksti kertoo kanavataloista yleisesti).
 
 ### Mitä jäi koskematta (sääntö 11: samat virheet muualla)
@@ -69,3 +69,7 @@ Tulokset alla (ajettu viimeisen muutoksen jälkeen).
 - `node tools/aanitysjono/tarkista.mjs`: ÄÄNITYSJONO OK (puuttuvat 133, kaikki jonossa).
 
 Välivaiheessa kaatui kaksi testiä, jotka on korjattu: lehdet.test.mjs (Yövartion tekstin alku) ja nostolahteet.test.mjs (lähderivin muoto), ks. muutetut tiedostot.
+
+## KK:n lukusana 16.11. (PR 6885)
+- Kissalaiva "kuusi kerrallaan": viralliselta sivulta (depoezenboot.nl, visiting-information) enintään 6 kävijää yhtä aikaa; online-varaus päättynyt, kävijät saapuvat ilman varausta. Lause pidetään (yksi lähde, virallinen); tarkistettava ennen ääntä.
+- Äänitys vasta KK:n sanalla.

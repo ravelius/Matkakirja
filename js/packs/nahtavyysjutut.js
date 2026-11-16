@@ -7686,7 +7686,7 @@ export const NAHTAVYYSJUTUT = {
         + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
         + 'valurautakehyksisiksi.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt Mr. Visserpleinillä 198 '
+        + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 '
         + 'vuotta, ja seurakunta valmistautui sen kaksisataavuotisjuhlaan 1875.',
       kuvat: [
         {
@@ -7713,13 +7713,13 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella yli '
         + 'kaksisataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta '
-        + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesilaitoksen '
-        + 'toimisto, vasta 1878.',
+        + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
+        + 'vasta 1878.',
       kuvat: [
         {
           tiedosto: 'Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg',
           lyhyt: 'Montelbaanstoren Rijksmuseon stereokuvassa 1860–1885.',
-          selite: 'Rijksmuseon kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, siis isoisän aikana.',
+          selite: 'Rijksmuseon kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, isoisän matkan aikoihin.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],

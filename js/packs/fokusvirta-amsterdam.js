@@ -1550,7 +1550,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se '
           + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
           + 'valurautakehyksisiksi.',
-        'Isoisäsi matkavuonna 1873 synagoga oli seissyt Mr. Visserpleinillä 198 '
+        'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 '
           + 'vuotta, ja seurakunta valmistautui sen kaksisataavuotisjuhlaan 1875.',
       ],
       // Lähdemuistiinpano (SK 16.11.2026, dataluonnos kohta 8): vihkiminen 2.8.1675, tontti joulukuussa 1670 ja peruskivet
@@ -1608,25 +1608,25 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.',
         'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella yli '
           + 'kaksisataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta '
-          + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesilaitoksen '
-          + 'toimisto, vasta 1878.',
+          + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
+          + 'vasta 1878.',
       ],
       // Lähdemuistiinpano (SK 16.11.2026, dataluonnos kohta 9): De Keyser 1606, kallistuminen 1610, korkeus noin 48 m ja kellot =
       // ONH + ARCAM + jordaanweb + nl-/en-Wikipedia; 1852 purkuuhka ja pelastus "pelastui" (mekanismi yksi lähde, pois);
-      // Stadswaterkantoor 1878 = ONH + ARCAM + jordaanweb + nl-WP (kaupungin vesikonttori; käännös "vesilaitoksen toimisto" tarkistettava).
+      // Stadswaterkantoor 1878 = ONH + ARCAM + jordaanweb + nl-WP (kaupungin vesikonttori; literaalikäännös, ei lisäväitteitä).
       // Pois: valmistumisvuosi (1515/1516/1517 ristiriita), tornin käyttö 1873, nimen alkuperä, minuuttiviisarit 1890, poliisipiste 1906.
       lahde: 'Matkakirjan oma teksti · lähteinä Open Nederlands Heritage (ONH), ARCAM, Geschiedenis Extra, Jordaanweb ja Wikipedia',
       // Kuva: Commons-tiedosto, CC0 (Rijksmuseum); EI VIELÄ PELIN MEDIASSA (docs/raportit/amsterdam-9-mediapyynto-20261116.md).
       kuva: {
         tiedosto: 'Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg',
         lyhyt: 'Montelbaanstoren Rijksmuseon stereokuvassa 1860–1885.',
-        selite: 'Rijksmuseon kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, siis isoisän aikana.',
+        selite: 'Rijksmuseon kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, isoisän matkan aikoihin.',
         lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
       },
       kysymykset: [
         'Miten kallistunut torni vedettiin suoraksi?',
         'Miksi torni oli purettavaksi vuonna 1852?',
-        'Mitä tekemistä tornilla oli kaupungin vesilaitoksen kanssa?',
+        'Mitä tekemistä tornilla oli kaupungin vesikonttorin kanssa?',
       ],
       // Oudeschans 2. Laudat: Miller-kaava, sovitettu Amsterdamin viiteen korttiin (tarkkuus 0,05).
       paikka: {
