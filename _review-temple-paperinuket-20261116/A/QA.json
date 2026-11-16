@@ -1,0 +1,24 @@
+{
+  "sheet": "A",
+  "taskNumber": 2355,
+  "reviewedAt": "2026-11-16T06:56:58.186929+00:00",
+  "selectedAttempt": 1,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kolme erillistä seisovaa nukkea: kuningas punaisen kirjan kanssa, Cléry tyhjin käsin ja vartija avainnippuineen. Vaatteiden värit, suunta ja esineet vastaavat tilausta. Vaalea leikkuureunus ja suorat samanväriset jalustat. Ei tekstiä, aseita tai lisäesineitä.",
+  "checks": {
+    "threeSeparateFullLengthFigures": true,
+    "clothingAndPropsMatchBrief": true,
+    "simpleAnonymousFaces": true,
+    "palePaperBorderAndStraightTabs": true,
+    "transparentGapsAndEdgeMargins": true,
+    "landscape3to2": true,
+    "noObservedTextWeaponsExtras": true,
+    "nativeUnedited": true
+  },
+  "notes": [
+    "Alfa tarkistettu numeerisesti ja valkoisella sekä tummalla alustalla. Tyhjät välit ovat läpinäkyviä; alfa 0–254, nukkien pinta käytännössä peittävä. Generaattorin esikatselun värillinen alusta ei kuulu näkyvään PNG-taustaan.",
+    "Natiivi 1536 × 1024 px, vaikka promptissa pyydettiin suurinta natiivia ja tavoiteltiin 3072 × 2048. Ei suurennusta.",
+    "Hahmot ovat noin 85–88 % kuvan korkeudesta; tilauksen noin 80 % mittakaava on suuntaa antava. Kasvot pelkistetty, ei historiallista muotokuvauskollisuutta.",
+    "Ensimmäinen otto valittu A:n tyylimalliksi; KK:n arvio vielä erillinen."
+  ]
+}

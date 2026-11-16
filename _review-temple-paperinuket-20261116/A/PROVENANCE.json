@@ -1,0 +1,62 @@
+{
+  "taskNumber": 2355,
+  "sheet": "A",
+  "package": "_review-temple-paperinuket-20261116/A",
+  "slug": "temple-arkki-a",
+  "report": "codex-paatoimittaja-temple-arkki-a-20261116-toimitus.md",
+  "sourcePath": "posti/paatoimittaja-codex-temple-nuket-20261116.md",
+  "sourceBlob": "c5230e0fdccb72feab6de4f0aae260b57a109f99",
+  "sourceCommit": "8e086a11f49cc6cddda236d4bd034cb8ffda062b",
+  "nextAction": "KK arvioi täysikokoisena; hyväksynnän jälkeen NS leikkaa ja kytkee peliin. Ei pelikytkentää eikä julkaisua tässä toimituksessa.",
+  "tool": "built-in image_gen",
+  "useCase": "illustration-story",
+  "selectedAttempt": 1,
+  "generationCalls": 1,
+  "generationLimitPerSheet": 2,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T06:54:26.659213+00:00",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple-paperinuket-2355-2358-2359-20261116/A/prompts/attempt001.txt",
+      "tool": "built-in image_gen",
+      "transparentBackgroundRequested": true,
+      "completedAt": "2026-11-16T06:55:04.886681+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e368f044-eaf8-4d61-bd66-ab7eeed5b773.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple-paperinuket-2355-2358-2359-20261116/A/native/temple-arkki-a-attempt001.png",
+      "sha256": "7758f4e8be6a39c2c4b2bc769d8160f1c41053120c303f205aaa1e9bfd546308",
+      "bytes": 2467103,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "nonTransparentBbox": [
+        0,
+        5,
+        1535,
+        1024
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativePreservedUnedited": true,
+  "pngSha256": "7758f4e8be6a39c2c4b2bc769d8160f1c41053120c303f205aaa1e9bfd546308",
+  "pngBytes": 2467103,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "referenceRole": "Costume observations only; generated A used as visual style reference for later sheets",
+  "sourceLabel": "Matkakirjan havainnekuva"
+}
