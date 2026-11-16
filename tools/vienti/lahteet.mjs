@@ -73,6 +73,8 @@ export const POISTETUT_SAANNOT = new Set(['DUEL_PRIZE', 'BOT_SKILL']);
 
 export const LISAMODUULIT = [
   m('js/kohtaamiskuvat-data.js', ['kohtaamiskuvat', 'KOHTAAMIS_R2_JUURI']),
+  // JU 16.11.2026 (PT 03.49): kadonneiden ihmeiden kerroskuvat media.json:iin (natiivi, Temple-torni).
+  m('js/kadonneet-kerroskuvat.js', ['KERROSKUVAT']),
   m('js/isoisan-valokuvat.js', ['ISOISAN_VALOKUVAT', 'ISOISAN_KUVAJUURI']),
   m('js/tietajatasot.js', ['TIETAJATASOT']),
   m('js/etusivupallo.js', ['ETUSIVUN_KUVAKIERTO', 'ETUSIVUN_REITTI']),
