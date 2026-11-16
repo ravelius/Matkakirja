@@ -13,7 +13,7 @@ SÄÄNNÖT:
 8. Vaihto on valmis vasta, kun tarkistus on puhdas ja ohjeiden koe läpi; silloin KK saa yhden rivin. [R-12.23]
 9. Koodaavat Opus-roolit ajetaan high-tasolla; Julkaisija, Lavastaja ja PT medium. Postivahti, Sisältökirjuri, Laitetestaaja ja Äänittäjä ajetaan Sonnetilla. [R-7.9] [R-7.4]
 10. Max vain uuden kokonaisuuden suunnitteluun ja juurisyyhyn, johon yksi yritys ei riittänyt; toteutus highilla. Julkaisija high vain CI-vian ajan. [R-7.9]
-11. KK:n mallin valitsee omistaja; KK:n taso on xhigh, ja se säilyy nollausten yli. [P-261111-12]
+11. KK:n mallin ja tason valitsee omistaja; taso säilyy nollausten yli. Kokeena medium vuorokauden, sitten omistaja päättää. [P-261111-12] [P-261116-17]
 12. Lisäosat ovat apuna, Raamattu ja koodin tyyli voittavat. Unityn komentorivi vain Natiivisepän kautta; uusia lisäosia ja pilvisessioita vain omistajan päätöksellä. [R-7.13]
 13. Voimassa olevan tilauksen käyttö ei ole ostamista. Generointiluvat: omistajan-kanssa ja grafiikan-tuotanto. [R-12.24]
 
