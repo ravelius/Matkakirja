@@ -33,6 +33,8 @@ Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push →
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
 ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: <rooli>". Seuraava rivi otetaan VAIN, jos se ei odota KK:n päätöstä eikä riko voimassa olevaa "älä aja vielä" -sanaa (KK 10.29); vanhentuneelta näyttävästä rivistä yksi rivi PT:lle, ei työn aloitusta. Kirjoita sama rivi luovutukseesi.
+AJOPYYNTÖ (omistaja 16.11. 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12): jokaiseen Mac-/Unity-ajopyyntöön JU:lle LUOKKA (linkki, juna, omistaja, kuva, vika, yo). Ei pareja (Nyt | Uusi), ei toista laitetta, ei omia mittauksia: ne ovat yo-luokkaa, ja ajojonon portti pitää ne yössä.
+VAIN JULKAISIJA: aja aloituksessa ensin `zsh /Users/Shared/Claude/julkaisija-tyokalut/portti-testi.zsh` (kirjoittaa "PORTTI OK <pvm klo>" tiedostoon /Users/Shared/Claude/julkaisija-tyokalut/portti-ok.log); jos testi kaatuu, rivi KK:lle ennen ajoja.
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 
