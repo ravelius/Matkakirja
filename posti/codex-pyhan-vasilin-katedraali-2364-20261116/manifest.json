@@ -1,0 +1,76 @@
+{
+  "task": 2364,
+  "subject": "pyhan-vasilin-katedraali",
+  "sourceCommit": "f8bdf9b35922f8fbb51d9b5d0f90e45166281861",
+  "sourceBlobSha": "6ec4e4cb9e0ecbb8435536f2d72e93bfc79a7da6",
+  "sourceFiles": [
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/pyhan-vasilin-katedraali.jpg",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2364-pyhan-vasilin-katedraali/sources/pyhan-vasilin-katedraali.jpg",
+      "sha256": "bc4d60f9233fcbe1e8d4bbf90ffcb87a371d52d13a5e7a79b84a4b951ab90831"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/pyhan-vasilin-katedraali.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2364-pyhan-vasilin-katedraali/sources/pyhan-vasilin-katedraali.md",
+      "sha256": "6c2ac4ee085bc106009fa65fb43ea1e3ad5915c6db9ea73b01cca2f148221d39"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/pyhan-vasilin-katedraali-huomiot.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2364-pyhan-vasilin-katedraali/sources/pyhan-vasilin-katedraali-huomiot.md",
+      "sha256": "591caa2c35fddec104ac62feac4f399b6be8fdfe56e99a304bd6591a62d5ed75"
+    }
+  ],
+  "imageGenerationMode": "built-in image_gen",
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "imageStartedAt": "2026-11-16T07:09:23.084607+00:00",
+  "imageCompletedAt": "2026-11-16T07:10:29.069589+00:00",
+  "estimatedImageCompleteAt": "2026-11-16T07:14:23.084607+00:00",
+  "imageArtifactId": "exec-95cd5a0d-52db-4574-a520-5f735d3073c6",
+  "jobId": null,
+  "cost": null,
+  "costStatus": "Built-in image price and provider job ID are not exposed; Tripo credits 0.",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2364-pyhan-vasilin-katedraali/pyhan-vasilin-katedraali-2364-native.png",
+  "nativeSha256": "280ba76efa6948d72990837b2bb6376a20d698ab6e1e5b19c44605dc7938ccde",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPixels": [
+    1000,
+    667
+  ],
+  "tripoCallsStarted": 0,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "qaStatus": "WARNING_DOME_IDENTITIES_UNVERIFIED",
+  "preparedAt": "2026-11-16T07:25:36.686780+00:00",
+  "reviewOnly": true,
+  "sourceModelsPreserved": true,
+  "files": {
+    "prompt.txt": {
+      "bytes": 3158,
+      "sha256": "9fc52085733b4dafac22740318f91c27ef64261c2b368c785154b97d9e7fcdfd"
+    },
+    "pyhan-vasilin-katedraali-2364-review.jpg": {
+      "bytes": 226251,
+      "sha256": "86195197a390e34b8eb6228730ed3a81c46cab54c75282381f9c49d14995a2be"
+    },
+    "qa-independent.md": {
+      "bytes": 4982,
+      "sha256": "04c75a964d90ba151fe6a79ed4982775c3e625ac7bd130b36e8a0eca7a4e09ad"
+    },
+    "qa-root.md": {
+      "bytes": 856,
+      "sha256": "9369582d6a86ea581668c6b08f1baa51a566b9a740146c8acb3ccb414c87851c"
+    },
+    "source-attribution.md": {
+      "bytes": 4262,
+      "sha256": "6c2ac4ee085bc106009fa65fb43ea1e3ad5915c6db9ea73b01cca2f148221d39"
+    },
+    "source-order.md": {
+      "bytes": 2725,
+      "sha256": "8c50f26422288016ea6020033a9e7105cb2d0979b13df32ea27525eca747a036"
+    }
+  }
+}
