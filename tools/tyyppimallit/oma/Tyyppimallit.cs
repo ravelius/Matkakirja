@@ -694,13 +694,13 @@ namespace Matkakirja
             return r.Valmis();
         }
 
-        public static Verkko TyyppiPalatsiPiha(float pituus, float leveys, string julkisivu, string avoin, float siipi = 16f, string katto = "mansardi", int seina = 0)
+        public static Verkko TyyppiPalatsiPiha(float pituus, float leveys, string julkisivu, string avoin, float siipi = 16f, string katto = "mansardi", int seina = 0, float raystas = 16f)
         {
             int n = julkisivu == "+x" ? 1 : julkisivu == "-z" ? 2 : julkisivu == "-x" ? 3 : 0;
             string Takaisin(string s) => s == "+x" ? "+z" : s == "-z" ? "+x" : s == "-x" ? "-z" : s == "+z" ? "-x" : s;   // kierron käänteinen
             string a = avoin ?? "";
             for (int i = 0; i < n; i++) a = Takaisin(a);
-            var v = (n % 2 == 1) ? TyyppiPalatsiPiha(leveys, pituus, siipi, a, katto, seina) : TyyppiPalatsiPiha(pituus, leveys, siipi, a, katto, seina);
+            var v = (n % 2 == 1) ? TyyppiPalatsiPiha(leveys, pituus, siipi, a, katto, seina, raystas) : TyyppiPalatsiPiha(pituus, leveys, siipi, a, katto, seina, raystas);
             return n == 0 ? v : TyKierra(v, n);
         }
 
@@ -715,13 +715,14 @@ namespace Matkakirja
         /// <summary>katto "mansardi" (Pariisi) | "attika" (KK 15.11. 01.13: Lontoo ei saa näyttää Pariisilta): attikalla siivet ja paviljongit päättyvät
         /// ulkonevaan räystäslistaan ja kaiteeseen, katto tasainen kaiteen takana. Keskirisaliitin kolmiopääty molemmissa.
         /// seina = seinän sRGB 0xRRGGBB (0 = TyKivi; Lontoo: Portland-kivi 0xE4DCCA, punatiili 0xAC7862).</summary>
-        public static Verkko TyyppiPalatsiPiha(float pituus = 120f, float leveys = 90f, float siipi = 16f, string avoin = "", string katto = "mansardi", int seina = 0)
+        /// raystas = siipien räystäs m (KK 17.11. KOE: MK01 p3 f32, 0 = 16 m; korkeus OSM:stä, ei naapureiden mediaanin alle).
+        public static Verkko TyyppiPalatsiPiha(float pituus = 120f, float leveys = 90f, float siipi = 16f, string avoin = "", string katto = "mansardi", int seina = 0, float raystas = 16f)
         {
             var r = TyRakentaja();
             var kivi = seina > 0 ? Vari.H(seina) : TyKivi;   // seinä rivikohtaisesti (KK 15.11. 01.24; KS:n paletti), 0 = kaupungin seinä (paletti) tai oletuskivi
             var aukko = seina > 0 ? TyAukkoSeinasta(kivi) : TyAukko;   // ikkuna talojen tapaan seinästä (KK 09.00 b)
             bool attika = katto == "attika";
-            float x0 = -pituus * 0.5f, x1 = pituus * 0.5f, z0 = -leveys * 0.5f, z1 = leveys * 0.5f, y = 16f, pv = siipi + 4f;
+            float x0 = -pituus * 0.5f, x1 = pituus * 0.5f, z0 = -leveys * 0.5f, z1 = leveys * 0.5f, y = raystas, pv = siipi + 4f;
             bool piha = Math.Min(pituus, leveys) >= 2.6f * siipi;
             (float, float, float)[] Mansardi(float sy, float d) => new[] { (0f, 0f, sy), (1.6f, 1.6f, sy + 5f), (Math.Min(d * 0.32f, 6f), d * 0.32f, sy + 7f) };
             void Siipi(float a0, float a1, float b0, float b1, bool pitkinX)
@@ -771,9 +772,17 @@ namespace Matkakirja
             float iv = Math.Max(4.2f, julkisivu / 60f);
             foreach (var (ax, az, bx, bz) in seinat)
             {
-                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 7.5f, 10.5f, false, aukko);
-                TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 12f, 14.5f, false, aukko);
+                if (Math.Abs(y - 16f) < 0.01f)   // ennallaan tavulleen
+                {
+                    TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 7.5f, 10.5f, false, aukko);
+                    TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 12f, 14.5f, false, aukko);
+                    TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 2f, 4.5f, false, aukko);
+                    continue;
+                }
                 TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 2f, 4.5f, false, aukko);
+                // Muu räystäs (KK 17.11. KOE): pohjakerros kuten ennen, yläkerrokset tasajaolla ~4,6 m (ikkuna 0,3–0,8 kerroksesta).
+                int nk = Math.Max(1, (int)Math.Round((y - 5.5f) / 4.6f)); float kh = (y - 5.5f) / nk;
+                for (int k = 0; k < nk; k++) TyIkkunat(r, ax, az, bx, bz, iv, 1.8f, 5.5f + k * kh + 0.3f * kh, 5.5f + k * kh + 0.8f * kh, false, aukko);
             }
             // Keskirisaliitti pääjulkisivulla (+z) ja porttiholvi; jos +z on avoin (U-palatsin kunniapiha), risaliitti on pihan puolella päärakennuksessa (−z-siipi).
             if (avoin == "+z") z1 = z0 + siipi;
@@ -865,7 +874,7 @@ namespace Matkakirja
                 case 3: return TyyppiKirkkoSuuri();
                 case 4: return TyyppiKupolikirkko(a != 0);
                 case 5: return TyyppiPylvastemppeli(p0, p1, a > 0 ? a : 8, b != 0, c == 1);
-                case 6: return TyyppiPalatsiPiha(p0, p1, a > 0 ? Sivu(a) : "+z", Sivu(b), 16f, c == 1 ? "attika" : "mansardi", p2 > 0f && p2 <= 0xFFFFFF ? (int)p2 : 0);
+                case 6: { float ry = BitConverter.Int32BitsToSingle((int)p3Bitit); return TyyppiPalatsiPiha(p0, p1, a > 0 ? Sivu(a) : "+z", Sivu(b), 16f, c == 1 ? "attika" : "mansardi", p2 > 0f && p2 <= 0xFFFFFF ? (int)p2 : 0, ry >= 8f && ry <= 45f ? ry : 16f); }
                 case 7: return MalliAsema(a, b, c, p0, p1, p2 > 0f && p2 <= 0xFFFFFF ? (int)p2 : 0, p3Bitit, varattu, jatko);
                 case 8: return TyyppiKirkkoLevea(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);
                 case 9: return TyyppiKirkkoBasilika(paikka[Math.Min(a, 1)], Math.Max(1, b), huippu[Math.Min(c, 2)]);

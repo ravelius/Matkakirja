@@ -31,6 +31,11 @@ PALATSI_EI_B = {'sports_centre', 'dormitory', 'stadium'}
 # tyypitetään vain kirkot. Säännön löytämät asemat ja palatsit, jotka eivät ole listalla, ovat "ei sovi". Lista voi myös nostaa ehdokkaaksi rakennuksen,
 # jota sääntö ei löydä (Institut = building=public, Hôtel de Ville = civic). OSM-otteissa ei ole kupoli- eikä hallitietoa. Avain OSM-tunniste.
 # Tila: KUPOLIT hyväksytty (KK 23.25); ASEMAT ja PALATSIT EHDOTUS (VS 14.11. klo 23.4x, ehdotus-listat-pariisi.md) → odottaa KK:n hyväksyntää.
+# ODOTTAA OMAA TYYPPIÄ (KK 17.11. kohta 2): siihen asti tavallinen massa (ei_sovi → perustalo).
+OMA_TYYPPI = {
+    'way/52333460': "oma tyyppi: leveä julkisivu pitkällä sivulla + kaksi kellotornia + kupoli (Sant'Agnese in Agone; KK 17.11. kohta 2)",
+    'relation/3078796': 'oma tyyppi: venytys z 2,67 julkisivukirkolle (Santi Ambrogio e Carlo al Corso; KK 17.11. kohta 2)',
+}
 NIMILISTAT = {
     'pariisi': {
         # KUPOLIT (hyväksytty KK 23.25)
@@ -101,9 +106,9 @@ NIMILISTAT = {
         # JULKISIVUKIRKOT (KK 16.11. kohta 1): barokkijulkisivu + kupoli risteyksessä, pitkä laiva. LUONNOS: tunnetut kupolikirkot, Commons-tarkistus ennen vientiä.
         'way/25610962': ('kirkko', 'julkisivu', 'Chiesa del Gesù', {'kupoli': 1, 'koe': True}),
         'way/25625603': ('kirkko', 'julkisivu', "Sant'Andrea della Valle", {'kupoli': 1, 'koe': True}),
-        'way/52333460': ('kirkko', 'julkisivu', "Sant'Agnese in Agone", {'kupoli': 1, 'koe': True}),   # julkisivun kaksi kellotornia puuttuvat mallista
+        'way/52333460': ('kirkko', 'julkisivu', "Sant'Agnese in Agone", {'ei_sovi': OMA_TYYPPI['way/52333460']}),
         'way/117744827': ('kirkko', 'julkisivu', 'San Carlo ai Catinari', {'kupoli': 1, 'koe': True}),
-        'relation/3078796': ('kirkko', 'julkisivu', 'Santi Ambrogio e Carlo al Corso', {'kupoli': 1, 'koe': True}),
+        'relation/3078796': ('kirkko', 'julkisivu', 'Santi Ambrogio e Carlo al Corso', {'ei_sovi': OMA_TYYPPI['relation/3078796']}),
         'way/127942183': ('kirkko', 'julkisivu', 'San Giovanni dei Fiorentini', {'kupoli': 1, 'koe': True}),
         'way/29181216': ('kirkko', 'julkisivu', 'Chiesa Nuova (Santa Maria in Vallicella)', {'kupoli': 1, 'koe': True}),
         'way/50884075': ('kirkko', 'julkisivu', 'Santa Maria della Pace', {'kupoli': 1, 'koe': True}),
@@ -326,6 +331,130 @@ def sivun_suunta(atsi, sivu):
     return (atsi + {'+x': 0, '-x': 180, '+z': -90, '-z': 90}[sivu]) % 360
 
 
+# JULKISIVUN SUUNTA KONEELLISESTI (KK 17.11. kohta 3; KOE Rooma ja Wien): pääjulkisivu on se mallin sivu, jonka edessä on eniten avointa tilaa
+# (aukio tai levein katu). Avoimuus = sivun keskimmäiseltä 80 %:lta 4 m:n välein ulos ammuttujen säteiden vapaa matka muihin OSM-taloihin
+# (katkaistu AVOIN['max'] m:iin), keskiarvo. Epävarma: toiseksi avoimin ≥ AVOIN['tasan'] × avoimin, tai avoimin alle AVOIN['ahdas'] m.
+JULKISIVU_KONEELLA = {'rooma', 'wien'}
+AVOIN = {'max': 120.0, 'vali': 4.0, 'tasan': 0.8, 'ahdas': 15.0, 'pitka_sivu': 1.25, 'katu_max': 60.0}
+# Säde lasketaan vain, jos se ylittää yleisen kadun tai aukion ennen estettä (muut.json.gz: highway KADUT, nimetty service/footway, area=yes,
+# place=square, area:highway); vesi on este (joki ei ole julkisivun puoli: San Giovanni dei Fiorentini). Puutarha ei ole este, mutta sen puolelta
+# ei yleensä ylitetä katua (Palazzo Corsini).
+KADUT = {'primary', 'secondary', 'tertiary', 'residential', 'unclassified', 'living_street', 'pedestrian', 'trunk',
+         'primary_link', 'secondary_link', 'tertiary_link', 'trunk_link'}
+
+
+def avoimuuden_aineisto(ote, P):
+    """(kadut [(oid, [renkaat/linjat])], esteet [(oid, renkaat)]) ote/muut.json.gz:stä paikallisiin metreihin."""
+    m = json.load(gzip.open(os.path.join(ote, 'muut.json.gz')))
+    kadut, esteet = [], []
+    for w in m['ways'] + m.get('rel', []):
+        t = w.get('t', {})
+        vesi = t.get('natural') == 'water' or t.get('waterway') == 'riverbank'
+        katu = (t.get('highway') in KADUT or (t.get('highway') in ('service', 'footway') and ('name' in t or t.get('area') == 'yes'))
+                or t.get('place') == 'square' or 'area:highway' in t)
+        if not (vesi or katu): continue
+        rr = [w['p']] if 'p' in w else (renkaat_rel(w) if vesi else [j['p'] for j in w.get('j', []) if j.get('p')])
+        if vesi and katu: katu = False
+        q = [[P(la, lo) for la, lo in r_] for r_ in rr if len(r_) >= 2]
+        if not q: continue
+        (esteet if vesi else kadut).append(('~' + w['osm'], q))
+    return kadut, esteet
+
+
+class Esteet:
+    """Muiden talojen särmät 25 m:n ruudukossa (säteiden osumat)."""
+    def __init__(self, talot, ruutu=25.0, korkeudet=None):
+        self.r = ruutu; self.ruudut = {}; self.korkeudet = korkeudet or {}
+        for oid, renkaat in talot:
+            for q in renkaat:
+                for i in range(len(q) - 1):
+                    (ax, ay), (bx, by) = q[i], q[i + 1]
+                    for gx in range(int(math.floor(min(ax, bx) / ruutu)), int(math.floor(max(ax, bx) / ruutu)) + 1):
+                        for gy in range(int(math.floor(min(ay, by) / ruutu)), int(math.floor(max(ay, by) / ruutu)) + 1):
+                            self.ruudut.setdefault((gx, gy), []).append((oid, ax, ay, bx, by))
+
+    def lahella(self, x, y, sade, oma):
+        g0x, g1x = int(math.floor((x - sade) / self.r)), int(math.floor((x + sade) / self.r))
+        g0y, g1y = int(math.floor((y - sade) / self.r)), int(math.floor((y + sade) / self.r))
+        nahty = set(); ulos = []
+        for gx in range(g0x, g1x + 1):
+            for gy in range(g0y, g1y + 1):
+                for e in self.ruudut.get((gx, gy), ()):
+                    if e[0] != oma and id(e) not in nahty: nahty.add(id(e)); ulos.append(e[1:])
+        return ulos
+
+
+    def naapurikorkeudet(self, x, y, sade, oma):
+        """Korkeustagilliset talot, joiden jokin särmän pää on säteellä."""
+        g0x, g1x = int(math.floor((x - sade) / self.r)), int(math.floor((x + sade) / self.r))
+        g0y, g1y = int(math.floor((y - sade) / self.r)), int(math.floor((y + sade) / self.r))
+        oidit = set()
+        for gx in range(g0x, g1x + 1):
+            for gy in range(g0y, g1y + 1):
+                for o, ax, ay, bx, by in self.ruudut.get((gx, gy), ()):
+                    if o != oma and o in self.korkeudet and min(math.hypot(ax - x, ay - y), math.hypot(bx - x, by - y)) <= sade: oidit.add(o)
+        return sorted(self.korkeudet[o] for o in oidit)
+
+
+# PALATSIN KORKEUS (KK 17.11. kohta 1; KOE): räystäs OSM-korkeudesta (tagi), malli ei jää lähinaapureiden (pohjan puolikas + 20 m) tagillisten
+# korkeuksien mediaanin alle. Korkeus = attikan yläpinta (räystäs + 1,6) tai mansardin harja (räystäs + 7). Ilman lukuja oletus 16 m.
+PALATSI_KORKEUS = {'naapurisade_lisa': 20.0, 'attika': 1.6, 'mansardi': 7.0, 'min': 8.0, 'max': 45.0}
+
+
+def palatsin_raystas(h, naapurit, katto):
+    import statistics
+    med = statistics.median(naapurit) if naapurit else None
+    lisa = PALATSI_KORKEUS['attika' if katto == 'attika' else 'mansardi']
+    ry = h - lisa if h else 16.0   # tagi = mallin korkeus; ilman tagia oletusräystäs 16 m
+    if med: ry = max(ry, med - lisa)   # ei naapureiden mediaanin alle
+    return round(min(PALATSI_KORKEUS['max'], max(PALATSI_KORKEUS['min'], ry)), 1), med
+
+
+def sade_matka(px, py, dx, dy, sarmat, maks):
+    """Säteen (px, py) + t (dx, dy) ensimmäinen osuma särmiin (t ≥ 0), enintään maks."""
+    paras = maks
+    for ax, ay, bx, by in sarmat:
+        ex, ey = bx - ax, by - ay
+        den = dx * ey - dy * ex
+        if abs(den) < 1e-9: continue
+        wx, wy = ax - px, ay - py
+        t = (wx * ey - wy * ex) / den; u = (wx * dy - wy * dx) / den
+        if 0.0 <= t < paras and 0.0 <= u <= 1.0: paras = t
+    return paras
+
+
+def sivujen_avoimuus(c, atsi, pit, lev, esteet, oma, kadut=None):
+    """{sivu: keskimääräinen vapaa matka m} mallin sivuille ±x ±z (suorakaide c, atsi, pit × lev). kadut = Esteet katuviivoista: säde lasketaan
+    vain, jos se ylittää kadun ennen estettä (enintään katu_max m), muuten 0."""
+    sarmat = esteet.lahella(c[0], c[1], max(pit, lev) / 2 + AVOIN['max'] + 5, oma)
+    katusarmat = kadut.lahella(c[0], c[1], max(pit, lev) / 2 + AVOIN['katu_max'] + 5, None) if kadut else None
+    tulos = {}
+    for sivu in ('+x', '-x', '+z', '-z'):
+        d = math.radians(sivun_suunta(atsi, sivu)); dx, dy = math.sin(d), math.cos(d)
+        pituus = lev if 'x' in sivu else pit
+        n = max(3, int(0.8 * pituus / AVOIN['vali']))
+        mat = []
+        for i in range(n):
+            s_ = (-0.4 + 0.8 * (i + 0.5) / n) * pituus
+            lx, lz = ((pit / 2 if sivu == '+x' else -pit / 2), s_) if 'x' in sivu else (s_, (lev / 2 if sivu == '+z' else -lev / 2))
+            ex, ey = mallista_maailmaan(atsi, lx, lz)
+            t_ = sade_matka(c[0] + ex, c[1] + ey, dx, dy, sarmat, AVOIN['max'])
+            if katusarmat is not None and sade_matka(c[0] + ex, c[1] + ey, dx, dy, katusarmat, min(t_, AVOIN['katu_max'])) >= min(t_, AVOIN['katu_max']): t_ = 0.0
+            mat.append(t_)
+        tulos[sivu] = round(sum(mat) / len(mat), 1)
+    return tulos
+
+
+def julkisivu_koneella(avo, sallitut=('+x', '-x', '+z', '-z')):
+    """(sivu, epävarmuuden syy tai None) avoimuuksista; sallitut = sivut, joille malli osaa julkisivun."""
+    jarj = sorted(sallitut, key=lambda s_: -avo[s_])
+    paras, toinen = jarj[0], jarj[1]
+    syy = None
+    if avo[paras] < AVOIN['ahdas']: syy = f'kaikki sivut ahtaita (avoimin {paras} {avo[paras]:.0f} m)'
+    elif avo[toinen] >= AVOIN['tasan'] * avo[paras]: syy = f'kaksi lähes yhtä avointa ({paras} {avo[paras]:.0f} m, {toinen} {avo[toinen]:.0f} m)'
+    return paras, syy
+
+
 def palatsin_sovitus(ulko, sisa, atsi0, julkisivu):
     """Palatsin suorakaide, piha, avoin sivu ja pääjulkisivun sivu (KK 14.11. 23.40 D). ulko/sisa = OSM-ulko- ja sisärenkaat paikallisissa metreissä.
     1) Akseli seinien vallitsevasta suunnasta (särmien pituuspainotettu suunta mod 90°), ei pienimmästä suorakaiteesta: vino kulma (Élysée) ei käännä mallia.
@@ -522,6 +651,17 @@ def main(a):
     koodiosumat = []   # koodimallit, jotka eivät ole IKONIT-listalla mutta leikkaavat ehdokkaan (raportoidaan, ei ohiteta)
     lista = NIMILISTAT.get(kaupunki, {})
     merkit, poistot, ohit = [], [], []
+    esteet = kadut = None
+    if kaupunki in JULKISIVU_KONEELLA:
+        talot, korkeudet = [], {}
+        for w_ in d['ways'] + d.get('rel', []):
+            if not w_.get('t', {}).get('building'): continue
+            rr = [w_['p']] if 'p' in w_ else renkaat_rel(w_)
+            if rr: talot.append((w_['osm'], [[P(la, lo) for la, lo in q] for q in rr]))
+            hk = korkeus(w_['t'])[0]
+            if hk and hk >= 6.0: korkeudet[w_['osm']] = hk   # alle 6 m (muurit, kioskit) ei naapurikorkeudeksi
+        kadut_, vesi_ = avoimuuden_aineisto(ote, P)
+        esteet = Esteet(talot + vesi_, korkeudet=korkeudet); kadut = Esteet(kadut_)
     for w in d['ways'] + d.get('rel', []):
         t = w.get('t', {})
         if not t.get('building'): continue
@@ -579,6 +719,15 @@ def main(a):
             sisat = [[P(la, lo) for la, lo in r] for r in renkaat_sisa(w)] if 'j' in w else []
             pp, syy_p, (c, atsi, pit, lev) = palatsin_sovitus(qs, sisat, atsi, parametrit.get('julkisivu'))
             parametrit['julkisivu_suunta'] = parametrit.pop('julkisivu', None); parametrit.update(pp)
+            if esteet is not None:   # KK 17.11. kohta 3: julkisivu koneellisesti, ei arviota
+                avo = sivujen_avoimuus(c, atsi, pit, lev, esteet, oid, kadut)
+                sivu, epa = julkisivu_koneella(avo)
+                parametrit['julkisivu_kasi'] = pp['julkisivu']; parametrit['julkisivu'] = sivu
+                parametrit['avoimuus'] = avo; parametrit['julkisivu_epavarma'] = epa; parametrit.pop('arvio', None)
+                ry, med = palatsin_raystas(h, esteet.naapurikorkeudet(c[0], c[1], max(pit, lev) / 2 + PALATSI_KORKEUS['naapurisade_lisa'], oid), parametrit.get('katto'))
+                parametrit['raystas'] = ry; parametrit['naapurit_mediaani'] = med
+                if parametrit.get('avoin_sivu') and parametrit['avoin_sivu'] != sivu:
+                    parametrit['huom'] = f"avoin sivu {parametrit['avoin_sivu']} ≠ julkisivu {sivu}"
             if syy is None and syy_p: syy = syy_p
         if tyyppi == 'asema' and tyyppi_koko_ok(tyyppi, koko):
             if 'halleja' not in parametrit: parametrit['halleja'] = asema_hallit(lev)
@@ -627,6 +776,16 @@ def main(a):
                 syy = f"venytys (x {sx:.2f}, z {sz:.2f}; raja {SOVITUS['venytys_min']}–{vmax})"
         if tyyppi == 'kirkko' and syy is None and pit < SOVITUS['kirkko_min_pituus'] and not saanto.startswith(('nimilista', 'käsikorjaus')):
             syy = f"alle {SOVITUS['kirkko_min_pituus']:.0f} m (pituus {pit:.1f})"
+        if esteet is not None and (tyyppi, koko) == ('kirkko', 'julkisivu') and syy is None:
+            # Julkisivukirkko (KK 17.11. kohta 3): julkisivu kapeaan päähän (malli osaa vain sen); avoimempi pää. Jos pitkä sivu on selvästi avoimin,
+            # julkisivu on todennäköisesti pitkällä sivulla (Sant'Agnese) → epävarma KK:lle.
+            avo = sivujen_avoimuus(c, atsi, pit, lev, esteet, oid, kadut)
+            paa, epa = julkisivu_koneella(avo, ('+x', '-x'))
+            pitka = max(('+z', '-z'), key=lambda s_: avo[s_])
+            if avo[pitka] > AVOIN['pitka_sivu'] * avo[paa]: epa = f'pitkä sivu {pitka} avoimin ({avo[pitka]:.0f} m > pää {avo[paa]:.0f} m)' + (f'; {epa}' if epa else '')
+            ux_, uy_ = math.sin(math.radians(atsi)), math.cos(math.radians(atsi))
+            lansi = (ux_, uy_) if paa == '+x' else (-ux_, -uy_)   # lansipaa = julkisivun pää (vie.akseli kääntää sen −x:ksi)
+            parametrit['avoimuus'] = avo; parametrit['julkisivu_paa'] = paa; parametrit['julkisivu_epavarma'] = epa
         la_c = meta['lat'] + c[1] / 111320.0; lo_c = meta['lon'] + c[0] / (111320.0 * math.cos(math.radians(meta['lat'])))
         merkit.append({
             'osm': oid, 'tyyppi': tyyppi, 'koko': koko, 'saanto': saanto, 'nimi': nimi, 'wikidata': t.get('wikidata'),

@@ -10,7 +10,7 @@ Naapurit: otteet-63/<k>/osm.json.gz building-tagilliset ~R m säteellä, ei merk
 tai 18 m; seinä ja tasakatto katot.py PERHEET[k] painotetusta listasta (osm-id:n tiivisteellä, toistettava). Väriähde VS_KATOT_KANSIO (oletus KS 797a3bf17).
 Merkin OSM-pohja piirretään maahan tummana viivana (vertailu: miten malli osuu pohjaan).
 """
-import sys, os, json, math, gzip, hashlib, subprocess
+import sys, os, json, math, gzip, hashlib, subprocess, struct
 
 TY = os.path.dirname(os.path.abspath(__file__))
 OTTEET = '/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/tyokalu-1/otteet-63'
@@ -22,12 +22,15 @@ _l = (-0.5, -0.45, 0.75); _n = math.sqrt(sum(c * c for c in _l)); VALO = tuple(c
 
 # Näkymä: (nimi, atsimuutti mistä kamera katsoo, korotus °, ortokoko m, keskipisteen siirto (itä, pohjoinen) m)
 KORTTELIT = {
-    'rooma-navona': dict(kaupunki='rooma', otsikko='ROOMA, Piazza Navona: Palazzo Braschi, Sant\'Agnese in Agone, Palazzo Madama',
-                         merkit=['relation/1709796', 'way/52333460', 'relation/76432'], sade=190,
+    'rooma-navona': dict(kaupunki='rooma', otsikko="ROOMA, Piazza Navona: Palazzo Braschi, Palazzo Madama (Sant'Agnese tavallisena massana, KK 17.11.)",
+                         merkit=['relation/1709796', 'relation/76432'], sade=190,
                          nakymat=[('lounaasta', 225, 45, 300, (0, 0)), ('kaakosta (Piazza Navonan puoli)', 135, 45, 300, (0, 0))]),
     'wien-freyung': dict(kaupunki='wien', otsikko='WIEN, Freyung: Palais Kinsky, Palais Harrach',
                          merkit=['relation/2458835', 'relation/1527363'], sade=170,
                          nakymat=[('pohjoisesta (Freyungin puoli)', 15, 45, 210, (0, 0)), ('lounaasta', 225, 45, 210, (0, 0))]),
+    'rooma-santandrea': dict(kaupunki='rooma', otsikko="ROOMA, Corso Vittorio Emanuele: Sant'Andrea della Valle (julkisivukirkko, julkisivu koneellisesti)",
+                             merkit=['way/25625603'], sade=170,
+                             nakymat=[('pohjoisesta (julkisivun puoli)', 345, 40, 200, (0, 0)), ('lounaasta', 225, 45, 200, (0, 0))]),
     'gesu': dict(kaupunki='rooma', otsikko='JULKISIVUKIRKKO (tyyppi 10) Rooman väreillä: Chiesa del Gesù (sx 1,63, sz 1,62)',
                  merkit=['way/25610962'], sade=0, yksin=True,
                  nakymat=[('edestä', 'julkisivu', 6, 150, (0, 0)), ('45°', 'julkisivu+45', 32, 150, (0, 0))]),
@@ -115,6 +118,7 @@ def valmistele(nimi, ulos):
         e = dict(env, VS_VENYTYS=f'{sx},{sz}') if inst else dict(env)
         tunnus = m['osm'].replace('/', '-')
         arg = [str(r[0]), str(r[1]), str(r[2]), str(r[3]), repr(r[4]), repr(r[5]), repr(r[6])]
+        if len(r) == 8 and isinstance(r[7], float) and r[7]: arg.append(str(struct.unpack('<I', struct.pack('<f', r[7]))[0]))   # palatsin räystäs (p3)
         tulos = subprocess.run([DN, os.path.join(TY, 'rakennus', 'Luonnos.dll'), os.path.join(ulos, 'obj'), tunnus, 'malli'] + arg,
                                env=e, capture_output=True, text=True, check=True).stdout.strip()
         x, y = P(*m['keski']); ak = V.akseli(m)
@@ -122,7 +126,7 @@ def valmistele(nimi, ulos):
         pohja = [tuple(p) for p in m['pohja']]
         merkkipohjat.append((m['nimi'], [(x + px, y + py) for px, py in pohja]))
         pohjat += viiva([(x + px, y + py) for px, py in pohja + pohja[:1]])
-        tiedot.append(dict(osm=m['osm'], nimi=m['nimi'], tyyppi=f"{m['tyyppi']}-{m['koko']}", rivi=list(r[:7]), sx=sx, sz=sz, akseli=round(ak, 1),
+        tiedot.append(dict(osm=m['osm'], nimi=m['nimi'], tyyppi=f"{m['tyyppi']}-{m['koko']}", rivi=list(r[:8]), sx=sx, sz=sz, akseli=round(ak, 1),
                            parametrit=m['parametrit'], luonnos=tulos))
     naapurit = 0
     if not K.get('yksin'):
