@@ -4401,7 +4401,7 @@ export const NAHTAVYYSJUTUT = {
         + 'kaupunkiin kokonaan painovoiman avulla, ilman yhtäkään pumppua. Matkalla '
         + 'on noin 30 akveduktia.'
         + '\n\n'
-        + 'Rakennusta johti urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
+        + 'Vesijohdon rakensi urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
         + 'itse, että yksi prosentti hänen tuloistaan pidätettäisiin, kunnes summa '
         + 'olisi 100 000 guldenia. Vesijohto on yhä käytössä.'
         + '\n\n'
@@ -4435,39 +4435,30 @@ export const NAHTAVYYSJUTUT = {
       aika: '1894–1945',
       nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       teksti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
-        + 'tilaajana oli opetusministeriö. Taiteilija Gustav Klimt maalasi niistä '
-        + 'kolme, ja ne esittivät filosofiaa, lääketiedettä ja oikeustiedettä. Kuvia '
-        + 'moitittiin kovasti, ja yliopiston oman historiasivun mukaan professorit '
-        + 'vastustivat niitä jo 1900.'
-        + '\n\n'
-        + 'Maalaukset eivät koskaan päätyneet kattoon. Toukokuussa 1945, sodan viime '
+        + 'tilaajana oli opetusministeriö. Tilauksen sai taiteilija Gustav Klimt. '
+        + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
-        + 'tiedekuntakuvat tuhoutuivat. Jäljelle jäivät luonnokset ja mustavalkoiset '
-        + 'valokuvat.'
+        + 'tiedekuntakuvat tuhoutuivat.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
-        + 'syntynyt 14. heinäkuuta 1862. Hän aloitti opintonsa Wienin '
-        + 'taidekäsityökoulussa vasta 14-vuotiaana, vuonna 1876. Yliopiston uusi '
-        + 'päärakennus Ringillä ei ollut vielä valmis, sillä se avattiin vasta 1884. '
-        + 'Maalauksia ei ollut vielä edes tilattu, koska tilaus tuli vasta 1894.',
+        + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
+        + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
+        + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
     },
     Saliera: {
       aika: '2003–2006',
       nosto: 'skandaali-salieran-varkaus',
-      teksti: 'Saliera on suolasirotin, jonka Benvenuto Cellini teki kullasta ja '
-        + 'emaljista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
+      teksti: 'Saliera on suola-astia, jonka Benvenuto Cellini teki kullasta ja emalista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
         + 'Kunsthistorisches Museumin mukaan se on Cellinin ainoa säilynyt kultatyö.'
         + '\n\n'
         + 'Yöllä vasten 11. toukokuuta 2003 varas kiipesi rakennustelineitä pitkin '
-        + 'Wienin museoon, jota kunnostettiin. Lähes kolme vuotta teoksesta ei '
-        + 'tiedetty mitään. Tammikuussa 2006 varas vei poliisin metsään lähelle '
-        + 'Zwettlin kaupunkia, ja Saliera löytyi laatikosta. Varas tuomittiin '
-        + 'viideksi vuodeksi vankeuteen.'
+        + 'Wienin museoon, jota kunnostettiin. Tammikuussa 2006 Saliera löytyi '
+        + 'laatikosta metsästä lähellä Zwettlin kaupunkia. Varas tuomittiin viideksi '
+        + 'vuodeksi vankeuteen.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
-        + 'sillä se avattiin vasta 1891. Wien Geschichte Wikin mukaan keisarilliset '
-        + 'kokoelmat olivat tuolloin vielä eri paikoissa.',
+        + 'sillä se avattiin vasta 1891.',
       lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
@@ -4551,14 +4542,12 @@ export const NAHTAVYYSJUTUT = {
     'Praterin jättiratas': {
       aika: '1897',
       nosto: 'nosto-praterin-ratas',
-      teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Franz '
-        + 'Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+      teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
         + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
         + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
-        + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisessa '
-        + 'on kuusi ikkunaa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+        + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 jättirataa ei vielä ollut, sillä se valmistui '
+        + 'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
         + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
         + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
         + 'paloi 1937.',
@@ -4649,7 +4638,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Valssin ensimmäinen versio oli mieskuorolle, ja Wienin Männergesang-Verein '
         + 'lauloi sen karnevaaliaikaan. Strauss ei ollut itse paikalla johtamassa. '
-        + 'Vasta myöhemmin sävelmä esitettiin pelkälle orkesterille, ja samana vuonna '
+        + 'Vasta myöhemmin valssi esitettiin pelkän orkesterin soittamana, ja samana vuonna '
         + 'se kuultiin myös Pariisin maailmannäyttelyssä.'
         + '\n\n'
         + 'Alkuperäinen Dianabad on kadonnut: rakennus purettiin 1913, ja uusi '

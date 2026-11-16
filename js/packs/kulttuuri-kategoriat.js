@@ -2759,14 +2759,12 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
           tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
-          teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Franz '
-            + 'Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+          teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
             + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
             + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
-            + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisessa '
-            + 'on kuusi ikkunaa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+            + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
             + '\n\n'
-            + 'Isoisäsi matkavuonna 1873 jättirataa ei vielä ollut, sillä se valmistui '
+            + 'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
             + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
             + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
             + 'paloi 1937.',
@@ -3273,8 +3271,8 @@ export const KULTTUURI_KATEGORIAT = {
           'Da Ponte oli loukannut häntä',
         ],
         oikea: 0,
-        fakta: 'Neue Mozart-Ausgaben mukaan Mozart johti ensi-illan ja toisen '
-          + 'esityksen cembalon äärestä.',
+        fakta: 'Keisari määräsi 9. toukokuuta 1786, ettei useamman kuin yhden '
+          + 'laulajan numeroita saa toistaa, koska esitys venyi liian pitkäksi.',
       },
       nostot: [
         {

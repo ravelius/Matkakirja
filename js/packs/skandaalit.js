@@ -201,21 +201,15 @@ export const SKANDAALIT = {
       // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
       // (87 professoria, syyttäjä 1901, Ledererin tuki, Moserin osto jne.) eivät täyttäneet kahden lähteen sääntöä.
       kortti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
-        + 'tilaajana oli opetusministeriö. Taiteilija Gustav Klimt maalasi niistä '
-        + 'kolme, ja ne esittivät filosofiaa, lääketiedettä ja oikeustiedettä. Kuvia '
-        + 'moitittiin kovasti, ja yliopiston oman historiasivun mukaan professorit '
-        + 'vastustivat niitä jo 1900.'
-        + '\n\n'
-        + 'Maalaukset eivät koskaan päätyneet kattoon. Toukokuussa 1945, sodan viime '
+        + 'tilaajana oli opetusministeriö. Tilauksen sai taiteilija Gustav Klimt. '
+        + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
-        + 'tiedekuntakuvat tuhoutuivat. Jäljelle jäivät luonnokset ja mustavalkoiset '
-        + 'valokuvat.'
+        + 'tiedekuntakuvat tuhoutuivat.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
-        + 'syntynyt 14. heinäkuuta 1862. Hän aloitti opintonsa Wienin '
-        + 'taidekäsityökoulussa vasta 14-vuotiaana, vuonna 1876. Yliopiston uusi '
-        + 'päärakennus Ringillä ei ollut vielä valmis, sillä se avattiin vasta 1884. '
-        + 'Maalauksia ei ollut vielä edes tilattu, koska tilaus tuli vasta 1894.',
+        + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
+        + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
+        + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere. Tarkistettu 16.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`,
@@ -242,26 +236,23 @@ export const SKANDAALIT = {
      */
     {
       id: 'salieran-varkaus',
-      otsikko: 'Saliera — suolasirotin, joka katosi lähes kolmeksi vuodeksi',
+      otsikko: 'Saliera — suola-astia, joka katosi lähes kolmeksi vuodeksi',
       nimio: 'Saliera',
       vuosi: '2003–2006',
       paikka: 'Kunsthistorisches Museum, Wien',
       lat: 48.2036, lon: 16.3619,
       // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
       // (lyijylaatikko, tekninen vika, varkaan nimi, tuomion pituus ensimmäisessä oikeudenkäynnissä) eivät täyttäneet sääntöä.
-      kortti: 'Saliera on suolasirotin, jonka Benvenuto Cellini teki kullasta ja '
-        + 'emaljista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
+      kortti: 'Saliera on suola-astia, jonka Benvenuto Cellini teki kullasta ja emalista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
         + 'Kunsthistorisches Museumin mukaan se on Cellinin ainoa säilynyt kultatyö.'
         + '\n\n'
         + 'Yöllä vasten 11. toukokuuta 2003 varas kiipesi rakennustelineitä pitkin '
-        + 'Wienin museoon, jota kunnostettiin. Lähes kolme vuotta teoksesta ei '
-        + 'tiedetty mitään. Tammikuussa 2006 varas vei poliisin metsään lähelle '
-        + 'Zwettlin kaupunkia, ja Saliera löytyi laatikosta. Varas tuomittiin '
-        + 'viideksi vuodeksi vankeuteen.'
+        + 'Wienin museoon, jota kunnostettiin. Tammikuussa 2006 Saliera löytyi '
+        + 'laatikosta metsästä lähellä Zwettlin kaupunkia. Varas tuomittiin viideksi '
+        + 'vuodeksi vankeuteen.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
-        + 'sillä se avattiin vasta 1891. Wien Geschichte Wikin mukaan keisarilliset '
-        + 'kokoelmat olivat tuolloin vielä eri paikoissa.',
+        + 'sillä se avattiin vasta 1891.',
       lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien. Tarkistettu 16.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus-photo-v1.jpg`,

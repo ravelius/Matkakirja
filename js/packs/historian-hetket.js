@@ -4250,8 +4250,8 @@ export const HISTORIAN_HETKET = [
         'Da Ponte oli loukannut häntä',
       ],
       oikea: 0,
-      fakta: 'Neue Mozart-Ausgaben mukaan Mozart johti ensi-illan ja toisen esityksen '
-        + 'cembalon äärestä.',
+      fakta: 'Keisari määräsi 9. toukokuuta 1786, ettei useamman kuin yhden laulajan '
+        + 'numeroita saa toistaa, koska esitys venyi liian pitkäksi.',
     },
   },
   /*

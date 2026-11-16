@@ -341,7 +341,7 @@ export const FOKUSVIRTA_WIEN = {
         + 'kaupunkiin kokonaan painovoiman avulla, ilman yhtäkään pumppua. Matkalla '
         + 'on noin 30 akveduktia.'
         + '\n\n'
-        + 'Rakennusta johti urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
+        + 'Vesijohdon rakensi urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
         + 'itse, että yksi prosentti hänen tuloistaan pidätettäisiin, kunnes summa '
         + 'olisi 100 000 guldenia. Vesijohto on yhä käytössä.'
         + '\n\n'
@@ -831,13 +831,11 @@ export const FOKUSVIRTA_WIEN = {
       otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
       symboli: 'historia',
       lunastus: [
-        'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Franz '
-          + 'Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+        'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
           + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
           + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
-          + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisessa '
-          + 'on kuusi ikkunaa. Ratas kulkee enintään 2,7 kilometriä tunnissa.',
-        'Isoisäsi matkavuonna 1873 jättirataa ei vielä ollut, sillä se valmistui '
+          + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.',
+        'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
           + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
           + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
           + 'paloi 1937.',
@@ -1028,7 +1026,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'konserttisaliksi, jota kutsuttiin Dianasaliksi.',
         'Valssin ensimmäinen versio oli mieskuorolle, ja Wienin Männergesang-Verein '
           + 'lauloi sen karnevaaliaikaan. Strauss ei ollut itse paikalla johtamassa. '
-          + 'Vasta myöhemmin sävelmä esitettiin pelkälle orkesterille, ja samana vuonna '
+          + 'Vasta myöhemmin valssi esitettiin pelkän orkesterin soittamana, ja samana vuonna '
           + 'se kuultiin myös Pariisin maailmannäyttelyssä.',
         'Alkuperäinen Dianabad on kadonnut: rakennus purettiin 1913, ja uusi '
           + 'Dianabad valmistui 1917. Isoisäsi matkavuonna 1873 valssi oli ollut '
