@@ -482,10 +482,16 @@ test('apupyynnön mitat ja veikkauksen rajat pitävät', async () => {
   const liikaa = await aja('/apu/kysy', {
     runko: {
       ...tunnukset, apuId: 'a1', kysymys: 'Mikä?',
-      vaihtoehdot: ['a', 'b', 'c', 'd', 'e'],
+      vaihtoehdot: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
     },
   }, apurit);
   assert.equal(liikaa.status, 400);
+
+  // Aarretehtävän taso 3 (natiivi): kuusi vaihtoehtoa kelpaa (neljä vuotta ja kaksi harhaa).
+  const kuusi = await aja('/apu/kysy', {
+    runko: { ...tunnukset, apuId: 'a6', kysymys: 'Milloin Notre-Dame rakennettiin?', vaihtoehdot: ['a', 'b', 'c', 'd', 'e', 'f'] },
+  }, apurit);
+  assert.equal(kuusi.status, 200);
 
   const yksi = await aja('/apu/kysy',
     { runko: { ...tunnukset, apuId: 'a2', kysymys: 'Mikä?', vaihtoehdot: ['a'] } }, apurit);

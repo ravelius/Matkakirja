@@ -108,7 +108,8 @@ export const AVAIMEN_PITUUS = 32;
 /** Apupyynnön mitat (omistajan speksi). */
 export const KYSYMYKSEN_KATTO = 300;
 export const VAIHTOEHDON_KATTO = 120;
-export const VAIHTOEHTOJA_ENINTAAN = 4;
+// 6: aarretehtävän taso 3 (natiivi, KK 16.11.2026 klo 23.36 kohta 3): Yhdistän neljä vuotta ja kaksi harhaa yhtenä kysymyksenä.
+export const VAIHTOEHTOJA_ENINTAAN = 6;
 export const VAIHTOEHTOJA_VAHINTAAN = 2;
 
 /** Tilannekuvan katot: yksi pyyntö ei koskaan palauta rajatta rivejä. */
