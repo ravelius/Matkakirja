@@ -4,6 +4,10 @@ Haara sk/rooma-data (origin/main päällä). KK:n DATA-SANA 17.11. (Rooma Wienin
 
 HUOM PR 6895 (Wienin data-PR): sama tiedostoja (data/aanitysjono.tsv, data/kohdekartat-sijainnit.json, js/packs/maakartat.js, nahtavyysjutut.js, historian-hetket.js, kulttuuri-kategoriat.js, tools/paivita-hetkisivut.mjs). Wienin osioihin ei koskettu; konfliktit ratkaistaan yhdistyksen jälkeen rebasella. tools/paivita-hetkisivut.mjs: Rooman Michelangelo-hetken teksti on monikappaleinen, ja testi (hetkisivugeneraattori) vaatii saman yhden rivin korjauksen kuin PR 6895 (`hipsuissa` kirjoittaa rivinvaihdon `\n`-pakona). Rivi on merkki merkiltä sama kuin PR 6895:ssä, joten se yhdistyy ilman konfliktia.
 
+## KK:n lukukierroksen korjaukset (17.11., toinen commit)
+
+1) Torre Argentina: "NPR:n mukaan kissoja itseään ei kuitenkaan voitu häätää." 2) Norsu: "yksi pienimmistä". 3) Nasone: "Ne ovat valurautaisia pylväitä". 4) Kaupallisten ja hakuteossivujen nimet (Walks of Italy, The Collector, EBSCO Research Starters, Discover, CoinsWeekly, Ursula Kampmann) pois leipätekstistä ja kuvateksteistä ("lähteiden mukaan", "arvioiden mukaan", "erään kirjoittajan mukaan"); nimet jäävät lahde-riville. Korjattu kaikkiin toistopaikkoihin (nähtävyysjutut, fokusvirta, hetki, generoitu hetkisivu, lehden nosto). Avoimet: pisteet ja nimiöt KK katsoo kuvasta; Banca Romanalle ei uutta pitkää tekstiä; kissat-symboli 'elain' jää.
+
 ## KK:n päätökset (16.–17.11.), toteutus
 
 - a) Banca Romana: piste Palazzo Maffei Marescotti 41,8970 / 12,4775 (maakartat.js, kohdekartat-sijainnit.json, skandaalit.js), nimi 'Banca Romana', aika 1893. Paikka tarkistettava kuvasta.
@@ -159,6 +163,4 @@ Syy: Nasone: "valurautaisia" (alun perin), "yötä päivää" (yleensä), "risti
 
 ## Testit
 
-- Koko `node --test "tests/*.test.mjs"`: 5904 testiä, 5889 läpi, 0 kaatui, 15 ohitettu (ohitukset eivät liity tähän PR:ään).
-- `node tools/aanitysjono/tarkista.mjs --lisaa --siivoa`: ÄÄNITYSJONO OK (puuttuvat 169, kaikki jonossa).
-- Välivaiheessa kaatui yksi testi (nostolahteet: skandaalin lähderivin oli nimettävä lähde, nyt "Matkakirjan oma teksti · lähteinä …"); vienti.test.mjs "sama lähde antaa tavulleen saman viennin" vaihteli kerran samanaikaisten muokkausten takia ja meni läpi uusinta-ajossa.
+- Koko testisarja ajettu rebasen jälkeen, luvut PR:n kuvauksessa.

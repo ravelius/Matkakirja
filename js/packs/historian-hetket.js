@@ -3924,8 +3924,8 @@ export const HISTORIAN_HETKET = [
     kuvaversio: 4,
     teksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisten, ei selällään '
       + 'makaamalla, vaikka niin kerrotaan. Getty-museon mukaan hän työskenteli '
-      + 'seisaaltaan pensseli pään yläpuolella, ja EBSCO Research Startersin '
-      + 'mukaan makaamistarina on pitkäikäinen myytti.'
+      + 'seisaaltaan pensseli pään yläpuolella, ja lähteiden mukaan '
+      + 'makaamistarina on pitkäikäinen myytti.'
       + '\n\n'
       + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
       + 'Michelangelo piti itseään kuvanveistäjänä ja yritti ensin päästä '
