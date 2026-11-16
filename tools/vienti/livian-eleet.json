@@ -1449,32 +1449,32 @@
   },
   "wien": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "99deb3d702990d1fec29d2e2b4c02cac6b8bdde0f03435dfcd26bc9fa077c03b",
+   "tekstiSha256": "ca1ae714405a11cb6735fd19397adf128acef5d5d443aab480c7281bb9baf301",
    "tila": "ok",
    "aani": {
-    "tavut": 306616,
-    "sha256": "0b54e1e90862e3e88a66922f92102c4d7f2a00121f1f996216526676445d7fe5"
+    "tavut": 266492,
+    "sha256": "3728c0023e3955637c6d7078df6a90b5db53233156b04d963f6d98795a73064c"
    },
    "eleet": [
     {
      "id": "wien.livia.c1",
-     "alku": 180,
-     "loppu": 6180
+     "alku": 160,
+     "loppu": 3200
     },
     {
      "id": "wien.livia.c2",
-     "alku": 6180,
-     "loppu": 8600
+     "alku": 3200,
+     "loppu": 6720
     },
     {
      "id": "wien.livia.c3",
-     "alku": 8600,
-     "loppu": 10960
+     "alku": 6720,
+     "loppu": 8600
     },
     {
      "id": "wien.livia.c4",
-     "alku": 10960,
-     "loppu": 12460
+     "alku": 8600,
+     "loppu": 11120
     }
    ]
   }
