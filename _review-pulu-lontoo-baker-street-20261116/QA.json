@@ -1,0 +1,38 @@
+{
+  "selectedAttempt": 1,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kamera on korkealla vaalean tiiliholvin alla ja katsoo viistosti alas raiteille. Valokuilut ja laiturireunat johtavat syvyyteen. Pääaihe ja pakopiste säilyvät pyöreässä rajauksessa. Ihmisiä vain pieninä etäällä, ei tunnistettavia kasvoja. Tekstiä, logoja, mainoksia, mosaiikkeja, junaa tai Pulua ei havaittu.",
+  "checks": {
+    "squareAspect": true,
+    "highCameraLookingDown": true,
+    "paleBrickVaultAndLightwells": true,
+    "platformAndRailsDepth": true,
+    "mainSubjectAndVanishingPointInsideCircle": true,
+    "photographicTextureAndLight": true,
+    "noObservedLegibleTextLogosArtwork": true,
+    "noRecognizableFacesOrPigeon": true,
+    "nativeUnedited": true
+  },
+  "notes": [
+    "Ensimmäinen otto valittu. Suuri holvipinta korostaa korkeaa kamerapaikkaa; pakopiste on keskialueen vasemmalla puolella mutta hyvin ympyrän sisällä.",
+    "Asema on viitteen pohjalta luotu havainnekuva, ei mittatarkka dokumenttikuva. KK arvioi paikan tunnistettavuuden ja luonnollisuuden.",
+    "Natiivi 1254 × 1254 px; tilauksen neliövaatimus täyttyy. Toista ottoa ei tarvittu."
+  ],
+  "taskNumber": 2350,
+  "reviewedAt": "2026-11-16T06:43:29.393518+00:00",
+  "generationCalls": 1,
+  "generationLimit": 2,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeSha256": "fda4eef0c6bd974b1f54a300628822fe8ab83becb9c521be602e364fee0b2259",
+  "jpgSha256": "8a9e6550bba83961c2ab6798ec17830ba481cd301ba38d93ff07b9865d6954a7",
+  "reviewMethod": "Native image, browser-rendered square/circle preview and details visually inspected. Native content not modified.",
+  "editorAccepted": false,
+  "ownerAccepted": false,
+  "receiverAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "sizeNote": "Actual native dimensions reported; no resize or upscale. JPEG is format conversion only."
+}

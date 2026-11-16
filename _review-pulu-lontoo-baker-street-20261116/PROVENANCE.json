@@ -1,0 +1,44 @@
+{
+  "taskNumber": 2350,
+  "sourcePath": "posti/paatoimittaja-codex-pulu-lontoo-20261116.md",
+  "sourceCommit": "b91a21fc0c5e139598428d60344a49f3592ae08d",
+  "sourceBlob": "c72d636e3f24e215d9ee533cad4a6c7adc8f92d2",
+  "tool": "built-in image_gen",
+  "useCase": "photorealistic-natural",
+  "selectedAttempt": 1,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T06:37:37.391341+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-lontoo-baker-street-2350-20261116/prompts/attempt001.txt",
+      "referenceInput": "Text only; inspected source images, no editing target.",
+      "completedAt": "2026-11-16T06:41:36.836248+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e58fd1d2-5e47-4000-a00c-08459d158861.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-lontoo-baker-street-2350-20261116/native/pulu-lontoo-baker-street-attempt001.png",
+      "sha256": "fda4eef0c6bd974b1f54a300628822fe8ab83becb9c521be602e364fee0b2259",
+      "bytes": 3121722,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativeFile": "pulu-lontoo-baker-street-v1.png",
+  "nativeSha256": "fda4eef0c6bd974b1f54a300628822fe8ab83becb9c521be602e364fee0b2259",
+  "deliveryFile": "pulu-lontoo-baker-street-v1.jpg",
+  "deliverySha256": "8a9e6550bba83961c2ab6798ec17830ba481cd301ba38d93ff07b9865d6954a7",
+  "deliveryBytes": 2105152,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "conversion": "macOS sips PNG to JPEG, best quality; no resize, crop or retouch",
+  "sourceLabel": "Matkakirjan havainnekuva",
+  "referenceRole": "Inspected architecture reference only; no copied reference pixels or edit input",
+  "puluTextChanged": false,
+  "acceptanceFlow": "KK -> owner shown image -> PT/SK separate London data PR; source Matkakirjan havainnekuva."
+}
