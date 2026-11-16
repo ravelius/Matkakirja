@@ -8,19 +8,20 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 - Kolme Sonnet-apulaista tarkisti kaikki väitteet (pelin nykytekstit ja uudet kohteet), Commons-kuvat (lisenssi luettu API:sta) ja koordinaatit. Raakaraportit: scratchpad ams-A/B/C.md (ei repossa; tässä vain tulokset).
 - Sääntö 2: jokainen luku, päivämäärä, mitta ja "kuka teki mitä" vaatii kaksi itsenäistä lähdettä; Wikipedian kieliversiot eivät ole kaksi lähdettä. **Pelin nykyiset Amsterdam-tekstit (Timanttihiomo, Amsterdam-laiva, Maitotyttö) näyttävät pohjautuvan nl-Wikipediaan**, ja moni väite ei täyty. Luonnostekstit alla sisältävät vain väitteet, joille on kaksi lähdettä tai jotka on kirjoitettu varovasti ("noin", "1870-luvulla", lähdemaininta). Jokaisen alla "Avoin" -rivi.
 - Robots.txt luettu ennen sivustoa; ei käytetty: amsterdam.nl, Amsterdam Museum, Historic England, rijksmonumenten, Atlas Obscura, NPR, dbnl, JHU Muse, UNESCO, Lonely Planet, artnet. 403 (ei kierretty): Britannica, NGA, Met, Sussex Express. Kaksi menettelyvirhettä (agentti B): Nominatim /search ja PDOK Locatieserver kutsuttiin 6 + 6 kertaa ennen robots-kiellon huomaamista; tuloksia ei lasketa lähteeksi, kutsut lopetettu. Tekoälylle osoitettuja kehotteita sivuilla ei ollut.
-- Valinta: lehden viisi kohdetta (Timanttihiomo, Amsterdam-laiva, Maitotyttö, Kissalaiva, Yövartio) + Herengracht 537 ja Kapein talo (molemmat lehtinostoja, ei tarinapaikkaa) + Rembrandtin talo ja Anne Frankin talo (kartalla, ei tekstiä). Kaikki pisteet kartan rajojen sisällä (N 52,3855, S 52,356, L 4,868, I 4,922). KK voi vaihtaa kaksi viimeistä (Rembrandt, Anne Frank) varaehdokkaisiin (Kuninkaanpalatsi/haikarat, Artis, Katu-urut; ei tutkittu).
+- Valinta: lehden viisi kohdetta (Timanttihiomo, Amsterdam-laiva, Maitotyttö, Kissalaiva, Yövartio) + Herengracht 537 ja Kapein talo (molemmat lehtinostoja, ei tarinapaikkaa) + Portugalilainen synagoga ja Montelbaanstoren (uudet, ei-nähtävyyksiä; KK 16.11. poisti Rembrandtin talon ja Anne Frankin talon, koska ne ovat jo nähtävyyksiä). Kaikki pisteet kartan rajojen sisällä (N 52,3855, S 52,356, L 4,868, I 4,922). Varaehdokkaat: Begijnhof (liikaa ristiriitoja), Itä-Intian talo (ei tutkittu).
 
 ## TÄRKEIN: kolme paikkaa ei vastaa vuotta 1873
 
 1. **Boasin tehdas valmistui 1879** (peruskivi 1878): vuonna 1873 sitä ei ollut; peli sanoo "seisoo yhä".
-2. **Yövartio ja Maitotyttö eivät olleet Rijksmuseumissa 1873.** Rijksmuseo toimi Trippenhuisissa (Kloveniersburgwal 29); nykyrakennus avattiin 13.7.1885. Maitotyttö oli Six-suvun yksityiskokoelmassa (museo osti 1908). Yövartion kartanpiste on Kuninkaanpalatsin (Dam) kohdalla: taulu oli siellä vain 1715–1808, ei nykyisin eikä 1873. Ehdotus: Yövartion piste Rijksmuseoon (nykytila; Maitotytön viereen, `siirto`) tai pidetään; KK päättää. Rijksmuseon piste on vain 440 m etelärajan sisäpuolella.
-3. **Kissalaiva, Amsterdam-laivan kopio, Anne Frank, Rembrandtin museo** ovat 1900-lukua: tekstin viimeinen kappale kertoo, ettei niitä 1873 vielä ollut (Lontoon Baird-malli).
+2. **Yövartio ja Maitotyttö eivät olleet Rijksmuseumissa 1873.** Rijksmuseo toimi Trippenhuisissa (Kloveniersburgwal 29); nykyrakennus avattiin 13.7.1885. Maitotyttö oli Six-suvun yksityiskokoelmassa (museo osti 1908). Yövartion kartanpiste on Kuninkaanpalatsin (Dam) kohdalla: taulu oli siellä vain 1715–1808, ei nykyisin eikä 1873. **KK päätti 16.11.: piste Trippenhuisiin (52,3712/4,8994), tekstiin yksi virke että taulu on nykyään Rijksmuseossa.**
+3. **Kissalaiva ja Amsterdam-laivan kopio** ovat 1900-lukua: tekstin viimeinen kappale kertoo, ettei niitä 1873 vielä ollut (Lontoon Baird-malli).
 
 ## Kohdat
 
 ### 1. Timanttihiomo (Boas, Kaapin aika)
 - Data: nykyinen rivi (`nimi: 'Timanttihiomo', tyyppi: 'ilmio', lat: 52.3696, lon: 4.904, nosto: 'syvennys-amsterdam-timantit'`) + `tarinapaikka: true, merkki: 'tiimalasi'`. Piste Nieuwe Uilenburgerstraat 173 (Wikidata 52,369597/4,904051; OSM 52,36959/4,90407; sopivat).
-- aika: `1870–1879`
+- aika: `1870–1879` (vuosi 1879 näkyy; KK:n päätös 16.11.: ei Boasia vuodelle 1873, joko 1873-hiomo tai Boas ja 1879 näkyviin)
+- **Costerin hiomo tutkittu ja hylätty 1873-kohteeksi:** toiminta 1862, 1864, 1871 ja n. 1875–77 todennettu, mutta mikään lähde ei sano suoraan 1873; rakennus purettu (Zwanenburgerstraat 12 / Amstel 11–13, nykyisen Stoperan kohta; Paulus Potterstraat on vasta 1970-luvulta), piste vain arvio (52,3670/4,9017, ±80 m). Vaihtoehto Diamantslijperij Maatschappij / Crea (Nieuwe Achtergracht 170, 1846, osa pystyssä; 52,3633/4,9108 arvio) vain yksi itsenäinen lähdeketju + PIE-raportti, 1873-näkymää ei voi väittää. Siksi pidetään Boas ja 1879 näkyviin; KK voi pyytää vaihdon Creaan.
 - Teksti:
   > Amsterdam oli 1600-luvun lopulta maailman timanttikaupunki. Hionta ei kuulunut kiltoihin, eikä juutalaisia olisi kiltoihin otettukaan; työ tehtiin aluksi kotona. Hiomapyöriä pyörittivät ensin naiset ja lapset, 1820-luvulta hevoset ja 1840-luvulta höyry.
   >
@@ -75,14 +76,14 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 - Lehtitekstin korjattavaa: "noin 60" kissaa, "yli sata kilometriä", "satoja asuntolaivoja", "kulkevat vapaana kannella"; polkupyöräkuva (12 000–15 000/vuosi: kaksi lähdettä kumpikin Waternetin arvio; ei nostoa kuvassa).
 
 ### 5. Yövartio (Rembrandt)
-- Data: nykyinen rivi (`nimi: 'Yövartio', tyyppi: 'taide', lat: 52.3731, lon: 4.8913, nosto: 'nosto-amsterdamin-yovartio', nimiPuoli: 'vasen', siirto: { x: -26, y: 0 }`) + `tarinapaikka: true, merkki: 'lyyra'`. **Piste on Kuninkaanpalatsin kohdalla (52,37317/4,89136) = ei 1873 eikä nykytila** (ks. yllä; ehdotus Rijksmuseo 52,360/4,885).
+- Data: nykyinen rivi (`nimi: 'Yövartio', tyyppi: 'taide', lat: 52.3731, lon: 4.8913, nosto: 'nosto-amsterdamin-yovartio', nimiPuoli: 'vasen', siirto: { x: -26, y: 0 }`) + `tarinapaikka: true, merkki: 'lyyra'`. **Piste siirretään Trippenhuisiin, Kloveniersburgwal 29 (lat 52,3712, lon 4,8994; taulun paikka 1873; KK:n päätös 16.11.)**; nykyinen piste on Kuninkaanpalatsin kohdalla (52,37317/4,89136) = ei 1873 eikä nykytila. Siirto: nimiPuoli/siirto tarkistettava, koska Kapein talo (52,3712/4,8977) on lähellä (≈160 m).
 - aika: `1642–1715`
 - Teksti:
   > Rembrandt valmisti kaartin ryhmäkuvan vuonna 1642. Teoksella ei alun perin ollut nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta 1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan kulkevaa joukkoa, vaikka sävyt ovat tummat.
   >
   > Vuonna 1715 taulu siirrettiin kaupungintaloon Dam-torille, ja koska se oli liian suuri uudelle paikalle, siitä leikattiin kaistale joka reunalta. Eniten katosi vasemmalta, ja palasia ei ole koskaan löydetty. Gerrit Lundensin pieni 1600-luvun kopio näyttää, miltä koko taulu näytti.
   >
-  > Isoisäsi matkavuonna 1873 taulu ei ollut Dam-torilla eikä nykyisessä Rijksmuseossa, joka avattiin vasta 1885, vaan Trippenhuisissa Kloveniersburgwalilla. Pinnalla oli paksu, tummunut lakka; puhdistukset tehtiin vasta 1946–47 ja 1975–76.
+  > Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa Kloveniersburgwalilla, sillä nykyinen Rijksmuseo avattiin vasta 1885; nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; puhdistukset tehtiin vasta 1946–47 ja 1975–76.
 - Lähteet: Rijksmuseum (objektisivu, lehdistötiedote, "10 things", Bulletin 1976 Kuiper & Hesterman), National Gallery (NG289, Lundensin kopio).
 - Avoin: mitat kolme lukua (363×437 Wikipedia; RM 379,5×453,5 ja 379,5×436) → ei lukuja. Vasemmalta katosi "kaksi miestä" ei täyty (NG: kaksi miestä ja lapsi; Dibbits kolme hahmoa) → "eniten vasemmalta"; askelman reuna ja holvikaaren huippu vain Wikipedia → pois. "Ainoa todiste" (Lundens) ei tuettu; NG mainitsee myös johdannaisen akvarellikopion → pois. "Oikea nimi: Frans Banning Cocqin komppania" ei ole alkuperäinen nimi (RM: "Banninck Cocq") → pois. **"Lakka poistettiin 1940-luvulla" on harhaanjohtava**: 1946–47 vain osa vanhasta lakasta poistettiin ja uusi lisättiin; loput 1975–76 (RM Bulletin + RM-varnish); lakan yhteys nimeen on tulkinta → tekstissä ei syy-yhteyttä. Taulun paikka 1873: Trippenhuis kahdesta lähteestä (RM-objektisivu + Wikipedia), mutta siirtovuosi 1808/1813 eroaa; tarkka sali ja kehys 1873 ei löytynyt. "Päiväsaikaan" Rijksmuseon oma väite (Wikipedia ja MF samaa), toinen itsenäinen puuttuu: lähdemaininta "Rijksmuseon mukaan".
 - Kuvat: `The Night Watch - cropped.jpg` (PD, Rembrandt; jo pelissä), `Lundens - Nachtwache-Kopie.jpg` (PD; jo pelissä), `The Night Watch - HD.jpg` (PD, Rijksmuseon skannaus).
@@ -116,31 +117,29 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 - Kuvat: `Voorzijde kleinste huis van Amsterdam.jpg` (CC BY-SA 3.0 nl, Smallesthouse), `Amsterdam(3sa9) (15872273640).jpg` (CC BY 2.0, Shadowgate), `Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg` (CC BY-SA 4.0, René Gerritsen; jo pelissä, ei OH22). Ei `Het kleinste huis van Amsterdam.jpg` ("Gebouwd in 1738" kuvatekstissä).
 - Lehtitekstin korjattavaa: "kuusi metriä" → "viisi", verolause pois, "siksi jyrkät" (syy verosta).
 
-### 8. Rembrandtin talo
-- Data: uusi tarinapaikka (nykyinen kartta-rivi `nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012` ilman nostoa): `tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', nosto: 'nosto-rembrandtin-talo'` (uusi nosto). Piste sopii (OSM 52,36937/4,90125; nl-WP 52,36944/4,90139). Kartan kommentti "talossa, jossa taulu maalattiin" ei vahvistu 2L → muutettava.
-- aika: `1639–1658`
+### 8. Portugalilainen synagoga (Esnoga, Mr. Visserplein 3) – uusi, korvaa Rembrandtin talon (KK 16.11.)
+- Data: uusi tarinapaikka: `nimi: 'Portugalilainen synagoga', tyyppi: 'rakennus'` (tyyppi tarkistettava tarkista.mjs:stä), `lat: 52.3675, lon: 4.9053, tarinapaikka: true, merkki: 'tiimalasi', nosto: 'nosto-amsterdamin-portugalilainen-synagoga'` (uusi nosto). Koordinaatti: Wikidata Q1853707 (52,3675/4,905278) + en-Wikipedia (52,3675/4,9054); toinen itsenäinen lähde puuttuu (OSM-rajapinta robots-kiellossa).
+- aika: `1675`
 - Teksti:
-  > Jodenbreestraat 4:n talo oli Rembrandtin koti ja työpaja vuosina 1639–1658. Hän osti sen vuonna 1639 noin 13 000 guldenilla ja sai maksaa summan osissa; katu oli silloin Breestraat.
+  > Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa 1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.
   >
-  > Raha ei riittänyt: vuonna 1656 Rembrandt ajautui maksukyvyttömäksi, ja talon irtaimisto luetteloitiin. Lähes kaikki huutokaupattiin, talo myytiin vuonna 1658, ja hän muutti vuokra-asuntoon Rozengrachtille.
+  > Synagogan päähalli ei ole koskaan saanut sähkövaloa eikä lämmitystä. Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se 1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin valurautakehyksisiksi.
   >
-  > Isoisäsi matkavuonna 1873 talo oli yksityinen asuin- ja liiketalo, jossa asui juutalainen Spitzin perhe ja jonka yläkerrassa oli huonesynagoga. Museo avattiin vasta vuonna 1911.
-- Lähteet: Museum Het Rembrandthuis (rembrandthuis.nl/en/rembrandt-van-rijn, PDF "Rembrandts life and work", kroniikka), National Gallery (nationalgallery.org.uk/artists/rembrandt), Joods Amsterdam (joodsamsterdam.nl/synagoge-jodenbreestraat), De Vrijdagavond (devrijdagavond.com).
-- Avoin: hinta ja osto ovat saman museon ketjua (NG vahvistaa muuton 1639, ei hintaa). **"Konkurssi"**: museon sivut ristiriidassa ("julistettiin konkurssiin" / "vältti niukasti"), NG: cessio bonorum heinäkuussa 1656 → "maksukyvyttömäksi". Hinta 11 000 guldenia ja kauppakirja 1.2.1658 vain museon kroniikka + Wikipedia → ei tekstiin. Spitzin asettumisvuosi 1852 vs 1862 (molemmat ennen 1873) → ei vuotta. "Yövartio maalattiin tässä talossa" EI vahvistettu 2L → ei tekstiin. Kaupungin osto 1906/1907 → ei tekstiin. Rakennusvuosi n. 1606 vain Wikipedia.
-- Kuvat: `Amsterdam Jodenbreestraat 4.jpg` (CC BY-SA 3.0, Spider), `Rembrandthuis, Amsterdam, 2015-04-25b.jpg` (CC BY-SA 4.0, Bysmon), `Hilverdink, Johannes J. A. (1813-1902), Afb 010097003745.jpg` (PD, n. 1850; aikalaiskuva: Jodenbreestraat, talo 4–6 vasemmalla).
+  > Isoisäsi matkavuonna 1873 synagoga oli seissyt Mr. Visserpleinillä 198 vuotta, ja seurakunta valmistautui sen kaksisataavuotisjuhlaan 1875.
+- Lähteet (itsenäiset): RCE:n monografia The Portuguese Synagogue in Amsterdam (2013, cultureelerfgoed.nl, PDF), Joods Amsterdam (joodsamsterdam.nl/portugese-synagoge), en-Wikipedia (Portuguese Synagogue, Amsterdam).
+- Avoin: valaistus 1873 vain "kynttilät" (kaasu/sähkö ei toteutunut, RCE); kynttilöiden määrä ristiriita (1 000 vs monta sataa) → pois; "maailman suurin synagoga" pois (ei yhtenäistä muotoilua); Bouman/Bouwman kirjoitusasu ratkaisematta (käytetään Bouman, kuten RCE ja en-WP); 1872–75 kokoushuonehankkeet vain RCE → pois; kustannus 186 000 guldenia yksi lähde → pois; koordinaatille toinen lähde puuttuu.
+- Kuvat: `Fotoreproductie van een pentekening door J. Sequeira … 1875 … RP-F-00-1715.jpg` (CC0, Rijksmuseum; 200-vuotissouvenir, sisätila; koko tiedostonimi Commonsista), `Exterieur OVERZICHT VOORGEVEL - Amsterdam - 20311779 - RCE.jpg` (CC BY-SA 4.0, A. J. van der Wal / RCE, 1997), vaihtoehto `Portugees-Israëlietische Synagoge 20180702.jpg` (CC BY-SA 4.0, Suicasmo). Stadsarchief-alkuperäiset kuvat (Hilverdink n. 1844) vältetty.
 
-### 9. Anne Frankin talo (Prinsengracht 263)
-- Data: uusi tarinapaikka (nykyinen kartta-rivi `nimi: 'Anne Frankin talo', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo'`): `tarinapaikka: true, merkki: 'tiimalasi', tyyppi: 'henkilo', nosto: 'nosto-anne-frankin-talo'` (uusi nosto). Piste sopii (OSM 52,37516/4,88408; en-WP 52,37528/4,88444). Westerkerk poistettu kartalta päällekkäisyyden vuoksi.
-- aika: `1942–1944`
+### 9. Montelbaanstoren (Oudeschans 2) – uusi, korvaa Anne Frankin talon (KK 16.11.)
+- Data: uusi tarinapaikka: `nimi: 'Montelbaanstoren', tyyppi: 'rakennus'` (tarkistettava), `lat: 52.3720, lon: 4.9056, tarinapaikka: true, merkki: 'tiimalasi', nosto: 'nosto-amsterdamin-montelbaanstoren'` (uusi nosto). Koordinaatti: Wikidata Q1946061 (52,37204/4,90563), nl-WP (52,37194/4,90556), en-WP (52,37206/4,90568); ei itsenäistä toista lähdettä. Piste ei ole päällekkäinen Kapeimman talon kanssa (≈ 430 m).
+- aika: `1606`
 - Teksti:
-  > Prinsengracht 263 on 1600-luvulla rakennettu kanavatalo, jonka takarakennukseen Frankin perhe meni piiloon heinäkuussa 1942. Viikkoa myöhemmin tulivat van Pelsin perhe ja marraskuussa Fritz Pfeffer: kahdeksan ihmistä asui piilossa yli kaksi vuotta. Anne kirjoitti piilossa päiväkirjaa, jonka hän oli saanut 13-vuotislahjaksi 12. kesäkuuta 1942.
+  > Montelbaanstoren on yksi Amsterdamin tunnetuimmista torneista. Hendrick de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja renessanssihuipun, johon tuli kello ja useita soittokelloja. Vuonna 1610 torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.
   >
-  > Otto Frank julkaisi päiväkirjan nimellä Het Achterhuis kesäkuussa 1947. Talo oli 1950-luvulla purkuvaarassa, mutta säätiö pelasti sen, ja museo avattiin 3. toukokuuta 1960. Otto halusi, että takarakennus jätetään kalustamatta.
-  >
-  > Isoisäsi matkavuonna 1873 talo oli seissyt kanavan varrella jo yli kaksisataa vuotta. Sen kuuluisat asukkaat tulivat vasta lähes seitsemänkymmentä vuotta myöhemmin.
-- Lähteet: Anne Frank Huis (annefrank.org: timeline, secret annex, how it all began), USHMM (encyclopedia.ushmm.org: Anne Frank biography, diary).
-- Avoin: rakennusvuosi 1635 (annefrank.org + en-WP) vs Wikidata 1641 (haun tiivistelmä) → "1600-luvulla". Takarakennus 1739/1740 eroaa → ei tekstiin. Otto Frankin yrityksen muutto 1.12.1940: annefrank.org + Wikipedia → ei tekstiin. Museon avaus 3.5.1960 ja pelastus 1957: kaikki annefrank.org-ketjua + Wikipedia (ei toista itsenäistä) → varmistettava USHMM tai muu ennen dataa. Päiväkirjan julkaisukuukausi (kesäkuu 1947: annefrank.org; USHMM vain "1947"): jos ei 2L → "1947". Käyttö 1873 ei selvinnyt (yhden lähteen mukaan 1800-luvulla yksityisasunto, varasto, hevosia) → teksti kertoo vain rakennuksen iän. Aiheen herkkyys: sävy asiallinen, kuolemista ei kerrota; KK päättää, otetaanko mukaan vai vaihdetaan.
-- Kuvat: `AnneFrankHouseAmsterdamtheNetherlands.jpg` (CC BY-SA 3.0, Massimo Catarinella; jo pelissä), `Huis van Anne Frank, Bestanddeelnr 908-4126.jpg` (CC0, Wim van Rossem / Anefo 20.3.1957; ennen museota), `Amsterdam (NL), Anne-Frank-Huis, 2022 (1).jpg` (CC BY-SA 4.0, Lệ Xuân).
+  > Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella yli kaksisataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesilaitoksen toimisto, vasta 1878.
+- Lähteet (itsenäiset): ONH (onh.nl/verhaal/de-malle-montelbaanstoren), ARCAM (arcam.nl/architectuur-gids/montelbaanstoren), geschiedenisextra.nl, jordaanweb.nl, nl- ja en-Wikipedia.
+- Avoin: **valmistumisvuosi ristiriita** 1515/1516/1517 → ei vuotta, tekstissä vain De Keyserin 1606; tornin käyttö 1873 tuntematon (vain Arcam: "vartiotupa ja varasto", yksi lähde) → ei tekstiin; nimen alkuperä ristiriita → pois; 1852-pelastuksen mekanismi (jordaanweb "odottamaton rahavirta") yksi lähde → vain "pelastui"; minuuttiviisarit 1890 ja poliisipiste 1906 yksi lähde → pois; kallistuman korjausmenetelmä vaihtelee → pois; "Malle Jaap" ja kellot: ONH, Arcam, jordaanweb. Rijksmonument 1970 ja 1878–2006 Stadswaterkantoor (ONH, Arcam, jordaanweb, nl-WP) lähteistetty. Vesilaitos-nimitys: "Stadswaterkantoor" = kaupungin vesikonttori (tarkista käännös ennen dataa).
+- Kuvat: `Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg` (CC0, Rijksmuseum, stereokuva 1860–1885), `Montelbaanstoren, RP-F-F11597.jpg` (CC0, Rijksmuseum, 1852–1870; aikalaiskuvat), nykykuva `4025 Montelbaanstoren.jpg` (CC BY-SA 4.0, Johan Bakker, 2014).
 
 ---
 
@@ -148,8 +147,8 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 
 | # | Paikka | Lähdetila | Ennen dataa |
 |---|---|---|---|
-| 8 | Rembrandtin talo | hyvä (museon ketju + NG) | KK: tekstit ja uusi nosto; 11 000 gld ja "Yövartio maalattiin tässä" ei tekstiin |
-| 9 | Anne Frankin talo | hyvä (annefrank.org + USHMM) | KK: aiheen sopivuus; museon avauksen 2. lähde |
+| 8 | Portugalilainen synagoga | vahva (RCE-monografia + Joods Amsterdam + en-WP) | KK: tekstit ja uusi nosto; koordinaatille toinen lähde |
+| 9 | Montelbaanstoren | hyvä (ONH + ARCAM + 2 muuta); valmistumisvuosi ristiriita pois | KK: tekstit ja uusi nosto; koordinaatille toinen lähde |
 | 7 | Kapein talo | hyvä, kaksi virhettä korjattu (5 m, vero pois) | KK hyväksyy teksti |
 | 3 | Maitotyttö | hyvä (RM + EV + DN) | ajoitus noin 1660; KK |
 | 5 | Yövartio | keskitaso | **piste (Palatsi → Rijksmuseo?)**, mitat pois, Trippenhuis-2. lähde |
@@ -160,4 +159,4 @@ Malli: Lontoon ja Pariisin tarinapaikat (docs/raportit/lontoo-9-tarinapaikkaa-va
 
 Pelissä jo olevat lehtitekstit (Timanttihiomo, Amsterdam-laiva, Maitotyttö, Kissalaiva, Yövartio, Herengracht 537, Kapein talo; js/packs/nahtavyysjutut.js, fokusvirta-amsterdam.js, kulttuuri-kategoriat.js, europe-kulttuuri.js, NLD.json) sisältävät yllä listatut virheet (sääntö 11). Korjaus samassa data-PR:ssä; kaikki äänitetyt kappaleet → äänitysjono (tools/aanitysjono/tarkista.mjs) samassa commitissa ja KK:n sana ennen yhdistämistä.
 
-Seuraavat askeleet (KK:n sanalla): 1) aiheiden ja pisteiden hyväksyntä (Yövartio-piste; Rembrandt ja Anne Frank mukaan), 2) puuttuvat toiset lähteet (kuvissa merkitty), 3) kuvien lataus ja lisenssitunnisteet, 4) data-PR (maakartat.js 9 kohdetta + nahtavyysjutut.js tekstit + 2 uutta nostoa + tarkista.mjs-jonorivit), 5) tarkistaja ja KK:n faktahyväksyntä ennen ääntä.
+Seuraavat askeleet (KK:n sanalla): 1) aiheiden ja pisteiden hyväksyntä (Yövartio-piste Trippenhuisiin; synagoga ja Montelbaanstoren), 2) puuttuvat toiset lähteet (kuvissa merkitty), 3) kuvien lataus ja lisenssitunnisteet, 4) data-PR (maakartat.js 9 kohdetta + nahtavyysjutut.js tekstit + 2 uutta nostoa + tarkista.mjs-jonorivit), 5) tarkistaja ja KK:n faktahyväksyntä ennen ääntä.
