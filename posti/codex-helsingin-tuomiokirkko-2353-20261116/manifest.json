@@ -1,0 +1,78 @@
+{
+  "task": 2353,
+  "subject": "Helsingin tuomiokirkko",
+  "sourceCommit": "b91a21fc0c5e139598428d60344a49f3592ae08d",
+  "sourceBlobSha": "e2882730dc5d6c47f66f9efa64d986165f4be3ac",
+  "sourceFiles": [
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/helsingin-tuomiokirkko.jpg",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsingin-tuomiokirkko-2353-20261116/sources/helsingin-tuomiokirkko.jpg",
+      "sha256": "39c4524fbb6a3cc7fe68251c52143079c82d99f1f4dcdc812a80acae13a17a92"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/helsingin-tuomiokirkko.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsingin-tuomiokirkko-2353-20261116/sources/helsingin-tuomiokirkko.md",
+      "sha256": "905c71fe3f0bc5222af2834680eb00536260f69e50f5ded858fc0df06c849bf5"
+    },
+    {
+      "path": "/Users/Shared/Claude/tripo-koontikuvat/koonti-v2/helsingin-tuomiokirkko-huomiot.md",
+      "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsingin-tuomiokirkko-2353-20261116/sources/helsingin-tuomiokirkko-huomiot.md",
+      "sha256": "26313cadddb79503e29248bc27a1d32fba776c4c58aed5ef9fb12d31eeb3e3c3"
+    }
+  ],
+  "imageGenerationMode": "built-in image_gen",
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "imageStartedAt": "2026-11-16T06:40:26.831587+00:00",
+  "imageCompletedAt": "2026-11-16T06:41:32.434110+00:00",
+  "estimatedImageCompleteAt": "2026-11-16T06:45:13.178145+00:00",
+  "imageArtifactId": "exec-f1131ba6-d6d0-4229-830e-cd94bcc4f16a",
+  "jobId": null,
+  "cost": null,
+  "costStatus": "Built-in image generation cost is not exposed; no Tripo credits used.",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/helsingin-tuomiokirkko-2353-20261116/helsingin-tuomiokirkko-2353-native.png",
+  "nativeSha256": "a7ff144834d0872d81872c7ccae1da2e0d3c76dde3934488143fd9b072eefdc9",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPixels": [
+    1000,
+    667
+  ],
+  "tripoCallsStarted": 0,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "qaStatus": "FAIL_CAMERA_AND_ROOF_SOURCE_MATCH",
+  "preparedAt": "2026-11-16T06:44:27.624513+00:00",
+  "reviewOnly": true,
+  "sourceModelsPreserved": true,
+  "newAccountCreated": false,
+  "newSubscriptionPurchased": false,
+  "files": {
+    "helsingin-tuomiokirkko-2353-review.jpg": {
+      "bytes": 175438,
+      "sha256": "2bafcff3668effbeebb04560dd37ef5bd5bf8d1b0a20a491e882bab954a61f4b"
+    },
+    "prompt.txt": {
+      "bytes": 3553,
+      "sha256": "159ebed0dccd42abd42d08894c4a7b48af2f4d7aa8da1d552d9ee172b9e1b07c"
+    },
+    "qa-independent.md": {
+      "bytes": 3663,
+      "sha256": "551cdca03e1a5794e64abdbcd950538929f3c26b77c24426a03c796790a28fef"
+    },
+    "qa-root.md": {
+      "bytes": 1596,
+      "sha256": "14b68b4f4455e216402542523b0a2393952c6cac2b12719df273a7a50ce07f95"
+    },
+    "source-attribution.md": {
+      "bytes": 3983,
+      "sha256": "905c71fe3f0bc5222af2834680eb00536260f69e50f5ded858fc0df06c849bf5"
+    },
+    "source-order.md": {
+      "bytes": 1544,
+      "sha256": "80f943f19c90fe5feba8a0dadb6593bf34eda8d02142a0fb09a89a0fda819c6b"
+    }
+  }
+}
