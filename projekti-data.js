@@ -41,7 +41,7 @@ window.PROJEKTIDATA = {
      "luennan säätimet (nopeus, jatko samasta kohdasta) molempiin versioihin"
     ],
     "kappaleet": [
-     "Jokaisesta kaupungista ja jo yli sadasta maasta on oma lehti, joka on kirjoitettu vuoden 1873 matkakirjan hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita ihmeitä, kulttuuria ja arkea. Kartalla nostot johdattavat nähtävyyksiin ja tarinoihin, ja jokaisella nostolla on oma kuvansa. Tekstit voi kuunnella: isoisän ääni lukee lehtiä, ja pelin oma opas, Pulu-kyyhky, vastaa pelaajan kysymyksiin. Valokuvat ja vanhat kuvat ovat vapaasti käytettäviä (public domain tai Creative Commons), ja nähtävyyksien kuvat ovat pelille tehtyjä havainnekuvia pelin omaan tyyliin. Kuvien lisenssit on inventoitu; tekijämerkinnät tulevat näkyviin peliin."
+     "Jokaisesta kaupungista ja jo yli sadasta maasta on oma lehti, joka on kirjoitettu vuoden 1873 matkakirjan hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita aarteita, kulttuuria ja arkea. Kartalla nostot johdattavat nähtävyyksiin ja tarinoihin, ja jokaisella nostolla on oma kuvansa. Tekstit voi kuunnella: isoisän ääni lukee lehtiä, ja pelin oma opas, Pulu-kyyhky, vastaa pelaajan kysymyksiin. Valokuvat ja vanhat kuvat ovat vapaasti käytettäviä (public domain tai Creative Commons), ja nähtävyyksien kuvat ovat pelille tehtyjä havainnekuvia pelin omaan tyyliin. Kuvien lisenssit on inventoitu; tekijämerkinnät tulevat näkyviin peliin."
     ]
    },
    {

@@ -133,18 +133,18 @@ const SELITTEET = {
     ],
   },
   ihme: {
-    otsikko: 'Mihin ihmeen kuva perustuu?',
+    otsikko: 'Mihin aarteen kuva perustuu?',
     kappaleet: [
-      'Kadonneesta ihmeestä ei ole valokuvaa — kohde on tuhoutunut tai '
+      'Kadonneesta aarteesta ei ole valokuvaa: kohde on tuhoutunut tai '
         + 'muuttunut kauan ennen kameroita. Siksi Matkakirja rakentaa '
-        + 'ihmeen loistoajan asun havainnekuvana: pohjana ovat '
+        + 'aarteen loistoajan asun havainnekuvana: pohjana ovat '
         + 'arkeologiset löydöt, aikalaiskuvaukset ja tutkijoiden '
         + 'rekonstruktiot, joita täydennetään useilla kuva- ja '
         + 'tekstilähteillä.',
       'Tällainen kuva on aina tulkinta. Tutkijatkin ovat monista '
         + 'yksityiskohdista eri mieltä, ja siellä missä tieto loppuu, kuva '
         + 'täyttää aukon aikakauden tyylin mukaan. Jokainen kuva käy '
-        + 'ihmisen tarkistuksen läpi, mutta varmuudella ihmeen ulkonäköä '
+        + 'ihmisen tarkistuksen läpi, mutta varmuudella aarteen ulkonäköä '
         + 'ei tiedä kukaan.',
       'Jos kuva ei mielestäsi vastaa tutkittua tietoa, kerro siitä — '
         + 'korjaamme sen. Jos sinulla on kohteesta omia valokuvia tai '
@@ -257,7 +257,7 @@ export function merkitseHavainnekuva(el, lahde, kohde = {}) {
   const nappi = html('button', 'havainnekuva-selite', osuma[0]);
   nappi.type = 'button';
   nappi.title = laji === 'ihme'
-    ? 'Mihin ihmeen kuva perustuu?'
+    ? 'Mihin aarteen kuva perustuu?'
     : 'Miksi Matkakirjassa on havainnekuvia?';
   nappi.setAttribute('aria-label', `${osuma[0]} — avaa selite`);
   nappi.addEventListener('click', (e) => {
@@ -340,7 +340,7 @@ export function havainnekuvaLinkki(lahde, kohde = {}) {
     'havainnekuva-selite havainnekuva-linkki', HAVAINNEKUVA_LINKKI_TEKSTI);
   nappi.type = 'button';
   nappi.title = laji === 'ihme'
-    ? 'Mihin ihmeen kuva perustuu?'
+    ? 'Mihin aarteen kuva perustuu?'
     : 'Miksi Matkakirjassa on havainnekuvia?';
   nappi.setAttribute('aria-label', `${HAVAINNEKUVA_LINKKI_TEKSTI} — avaa selite`);
   nappi.addEventListener('click', (e) => {
