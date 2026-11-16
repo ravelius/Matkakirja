@@ -1,0 +1,19 @@
+{
+  "task": 2428,
+  "sourceCommit": "8795ab01b017a06805b6a5bd55ca5d251ddda6a2",
+  "checkedAt": "2026-11-16T12:36:14.323362+00:00",
+  "windowStart": "2026-11-16T12:35:21+00:00",
+  "windowEnd": "2026-11-16T12:40:00+00:00",
+  "load": [
+    7.06982421875,
+    5.66162109375,
+    7.837890625
+  ],
+  "blockingProcesses": [],
+  "renderStarted": true,
+  "status": "READY_FOR_VISUAL_REVIEW",
+  "startedAt": "2026-11-16T12:36:14.418443+00:00",
+  "pid": 54152,
+  "exitCode": 0,
+  "finishedAt": "2026-11-16T12:36:20.636670+00:00"
+}

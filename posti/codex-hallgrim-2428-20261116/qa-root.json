@@ -1,0 +1,30 @@
+{
+  "task": 2428,
+  "reviewedAt": "2026-11-16T12:37:36.310201+00:00",
+  "reviewer": "Codex primary visual inspection of full1000px PNG",
+  "status": "WARN_TO_KK_REVIEW",
+  "technicalStatus": "PASS",
+  "imageInspected": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-junction-2428-20261116/hallgrim-2428-tower-roof-junction.png",
+  "imageSHA256": "0b8bfef1752b030de89c33c0dffb0e151245135dab3ca8ca89149c82134911bc",
+  "oneNewImage": true,
+  "sourceUnchanged": true,
+  "findings": [
+    {
+      "region": "Tower roof-facing narrow edge, image approx x205–285 y100–850",
+      "finding": "Narrow grooves bend diagonally toward the roof and form stepped rounded protrusions at the tower edge. The earlier junction warning is visible in this close-up.",
+      "severity": "visual-review-required"
+    },
+    {
+      "region": "Roof-to-tower boundary",
+      "finding": "Roof top and side meet the tower in this view; no clear through-gap is visible. This is visual evidence only, not a watertightness certification.",
+      "severity": "observation"
+    }
+  ],
+  "KKProportionsAcceptedPreviously": true,
+  "KKCloseupAccepted": false,
+  "conditionSatisfied": false,
+  "gameIntegrated": false,
+  "modelModified": false,
+  "newTripoCalls": 0,
+  "newCredits": 0
+}

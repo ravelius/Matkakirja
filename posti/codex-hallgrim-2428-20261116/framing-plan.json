@@ -1,0 +1,32 @@
+{
+  "task": 2428,
+  "createdAt": "2026-11-16T12:15:27.246063+00:00",
+  "sourceModel": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/hallgrimskirkja-2421-proportions-candidate.glb",
+  "sourceSHA256": "bb841497f4773b37200fc46794408d4c161780081bbe0bc0f2bbcf139a67b82e",
+  "sourceReferenceView": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/review/02-side.png",
+  "basis": "Same camera direction and studio lighting as reviewed side1. Frame directly derived from the full-view image plane, not an edited/cropped output image. New single 1000px render only.",
+  "referenceImageRectanglePixels": [
+    180,
+    460,
+    480,
+    760
+  ],
+  "target": [
+    1.1867504998400027,
+    -15.353164978027344,
+    27.391786965997028
+  ],
+  "camera": [
+    239.4771901055529,
+    -15.353164978027344,
+    55.98663559880953
+  ],
+  "orthoScale": 27.07892303466797,
+  "outputResolution": [
+    1000,
+    1000
+  ],
+  "newModelEdits": false,
+  "plannedOutput": "hallgrim-2428-tower-roof-junction.png",
+  "windowConfirmed": true
+}

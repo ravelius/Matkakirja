@@ -1,0 +1,30 @@
+{
+  "task": 2428,
+  "status": "ONE_CLOSEUP_RENDERED_AWAITING_REVIEW",
+  "renderStartedAt": "2026-11-16T12:36:19.313457+00:00",
+  "renderCompletedAt": "2026-11-16T12:36:20.496577+00:00",
+  "sourceModel": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-proportions-2421-20261116/hallgrimskirkja-2421-proportions-candidate.glb",
+  "sourceSHA256": "bb841497f4773b37200fc46794408d4c161780081bbe0bc0f2bbcf139a67b82e",
+  "sourceUnchanged": true,
+  "camera": [
+    239.4771901055529,
+    -15.353164978027344,
+    55.98663559880953
+  ],
+  "target": [
+    1.1867504998400027,
+    -15.353164978027344,
+    27.391786965997028
+  ],
+  "orthoScale": 27.07892303466797,
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/hallgrim-junction-2428-20261116/hallgrim-2428-tower-roof-junction.png",
+  "outputSHA256": "0b8bfef1752b030de89c33c0dffb0e151245135dab3ca8ca89149c82134911bc",
+  "resolution": [
+    1000,
+    1000
+  ],
+  "renderer": "Blender Workbench texture, paint.sl, 2 threads, 8 AA",
+  "newTripoCalls": 0,
+  "KKConditionSatisfied": false,
+  "gameIntegrated": false
+}

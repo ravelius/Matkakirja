@@ -1,0 +1,22 @@
+{
+  "confirmed": true,
+  "sourceCommit": "8795ab01b017a06805b6a5bd55ca5d251ddda6a2",
+  "sourceBlob": "d3840022bc8c6c101126a87df6cc596a9d6706db",
+  "sourceReadFully": true,
+  "ackCommit": "63489ebf4a1296940c96715712ed21915c4c3493",
+  "ackRemoteVerified": true,
+  "nominalStartUTC": "2026-11-16T12:30:00Z",
+  "nominalEndUTC": "2026-11-16T12:35:00Z",
+  "startUTC": "2026-11-16T12:35:21Z",
+  "endUTC": "2026-11-16T12:40:00Z",
+  "releaseSignalLog": "/Users/Shared/Claude/julkaisija-tyokalut/jono-20261103-ilta.txt",
+  "releaseSignalVerified": true,
+  "releaseSignalLine": "14.35 JU CODEX-IKKUNA3: kone vapaa 14.35.21, ikkuna 14.35\u201314.40 (3b; 3 jumittui v\u00e4\u00e4r\u00e4\u00e4n dotnet-osumaan)",
+  "actualIntervalMayShiftLaterPerJULog": true,
+  "reviewedMailboxHead": "7d7d60af8e7c629485c3928240813d46e4351327",
+  "status": "ACTUAL_RELEASE_VERIFIED_READY_TO_RUN",
+  "releaseSignalReadAt": "2026-11-16T12:35:44.905159+00:00",
+  "actualWindowSourceCommit": "7d7d60af8e7c629485c3928240813d46e4351327",
+  "actualWindowSourceBlob": "263cdd2e8fc2b8b689e110304985ccce229d8a65",
+  "actualWindowSourceReadFully": true
+}
