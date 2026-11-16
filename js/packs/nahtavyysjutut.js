@@ -10434,7 +10434,7 @@ export const NAHTAVYYSJUTUT = {
         + 'raunioiden säilymistä. NPR:n mukaan kissoja itseään ei kuitenkaan '
         + 'voitu häätää.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 temppeleistä ei näkynyt mitään, sillä temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, ja temppeli '
+        + 'Isoisäsi matkavuonna 1873 temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, ja temppeli '
         + 'A:n sisään rakennettu San Nicola de\' Cesarini -kirkko seisoi '
         + 'vielä; se purettiin vasta 1926–1929. Kissoja ei ollut vielä, ja '
         + 'kissasuoja tuli vasta 1993.',

@@ -194,14 +194,13 @@ a62708b18af0bf126f5a53a884fd8773	rooma	nahtavyysjutut	Nasone	2	2026-11-17
 76434af76ff5f20ff1b62d6b020a0450	rooma	nahtavyysjutut	Nasone	3	2026-11-17
 3553851012549adefd8faa0911339274	ITA	skandaalit	banca-romana-1893	1	2026-11-17
 82f8bda005cd3191062861ddea87193b	ITA	historianHetket	michelangelo-sikstus-1510	1	2026-11-17
-8c755a36dc8d48f52ae6b358a4cb64fb	venetsia	takynostot	kissat	1	2026-11-17
-a0bdafbf584b933a72b9b846ac147cf7	venetsia	takynostot	colosseumin-kellari	1	2026-11-17
-dec0305192c700c9c6b7865eb628bda6	venetsia	takynostot	aqua-virgo	1	2026-11-17
+8c755a36dc8d48f52ae6b358a4cb64fb	rooma	takynostot	kissat	1	2026-11-17
+a0bdafbf584b933a72b9b846ac147cf7	rooma	takynostot	colosseumin-kellari	1	2026-11-17
+dec0305192c700c9c6b7865eb628bda6	rooma	takynostot	aqua-virgo	1	2026-11-17
 f95ad0bda0574560324f67c99ea51a90	rooma	fokusvirta-takyt	kissat	1	2026-11-17
 6f12a62971dd5443841e0f9603fe6b94	rooma	nahtavyysjutut	Trevin suihkulähde	1	2026-11-17
 af7fe8a04f62ec0fdc0bd1d66b715a69	rooma	nahtavyysjutut	Trevin suihkulähde	2	2026-11-17
 dd9991b3805ad864aa5f689dbed8e752	rooma	nahtavyysjutut	Torre Argentina	3	2026-11-17
-33415a129a6f02515405565823fa67ac	rooma	nahtavyysjutut	Torre Argentina	4	2026-11-17
 2482b3084da6c7c59e3a7802bdc81686	rooma	nahtavyysjutut	Norsu ja obeliski	1	2026-11-17
 a5a3a2b51560d269d440659f8951f835	rooma	nahtavyysjutut	Meta Sudans	2	2026-11-17
 d2f53ba80d2f9a0a637355d737a67f60	rooma	nahtavyysjutut	Meta Sudans	3	2026-11-17
@@ -211,5 +210,6 @@ a0c473d463e2dd11ab8587479e6aa85b	rooma	nahtavyysjutut	Michelangelo 1510	3	2026-1
 3cbffdcb0cda3f11e9c2e9a563eb4c66	rooma	nahtavyysjutut	Areenan kellari	2	2026-11-17
 67b10576b6f8d0fa6ec96835835bd723	rooma	nahtavyysjutut	Areenan kellari	3	2026-11-17
 625d67ee4eee02784f25c41ecb121ec0	rooma	nahtavyysjutut	Nasone	1	2026-11-17
-8c579be080c5a69e7987f2cb32def526	venetsia	takynostot	minervan-norsu	1	2026-11-17
-68db672d5d03f0b4221dd1f7811594d8	venetsia	takynostot	rooman-nasone	1	2026-11-17
+8c579be080c5a69e7987f2cb32def526	rooma	takynostot	minervan-norsu	1	2026-11-17
+68db672d5d03f0b4221dd1f7811594d8	rooma	takynostot	rooman-nasone	1	2026-11-17
+80ec4eff0cb5addfb9215e4e4df6025f	rooma	nahtavyysjutut	Torre Argentina	4	2026-11-17

@@ -1,6 +1,6 @@
-# Rooman 9 tarinapaikkaa dataan, LUONNOS (SK 17.11.2026)
+# Rooman 9 tarinapaikkaa dataan (SK 17.11.2026)
 
-Haara sk/rooma-data (origin/main päällä). KK:n DATA-SANA 17.11. (Rooma Wienin jälkeen); PR jää luonnokseksi eikä sitä yhdistetä ennen KK:n sanaa. Lähde: docs/raportit/rooma-9-tarinapaikkaa-dataluonnos-20261116.md (haara origin/sk/rooma-tarinapaikat-docs). Tekstit on poimittu sieltä koneellisesti (Teksti-lohkot) merkki merkiltä; muutokset luonnokseen ovat KK:n päätösten mukaiset (alla). Mitään faktaa, lukua tai superlatiivia ei lisätty omasta päästä. Kuvia ei ladattu; vain repossa jo olevia kuvia käytetty, kuvatekstit korjattu.
+Haara sk/rooma-data (origin/main päällä). KK:n DATA-SANA 17.11. (Rooma Wienin jälkeen); PR ei ole enää luonnos; yhdistämissana tulee KK:lta. Lähde: docs/raportit/rooma-9-tarinapaikkaa-dataluonnos-20261116.md (haara origin/sk/rooma-tarinapaikat-docs). Tekstit on poimittu sieltä koneellisesti (Teksti-lohkot) merkki merkiltä; muutokset luonnokseen ovat KK:n päätösten mukaiset (alla). Mitään faktaa, lukua tai superlatiivia ei lisätty omasta päästä. Kuvia ei ladattu; vain repossa jo olevia kuvia käytetty, kuvatekstit korjattu.
 
 HUOM PR 6895 (Wienin data-PR): sama tiedostoja (data/aanitysjono.tsv, data/kohdekartat-sijainnit.json, js/packs/maakartat.js, nahtavyysjutut.js, historian-hetket.js, kulttuuri-kategoriat.js, tools/paivita-hetkisivut.mjs). Wienin osioihin ei koskettu; konfliktit ratkaistaan yhdistyksen jälkeen rebasella. tools/paivita-hetkisivut.mjs: Rooman Michelangelo-hetken teksti on monikappaleinen, ja testi (hetkisivugeneraattori) vaatii saman yhden rivin korjauksen kuin PR 6895 (`hipsuissa` kirjoittaa rivinvaihdon `\n`-pakona). Rivi on merkki merkiltä sama kuin PR 6895:ssä, joten se yhdistyy ilman konfliktia.
 
