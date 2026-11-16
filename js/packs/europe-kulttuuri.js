@@ -421,7 +421,7 @@ export const EUROPE_KULTTUURI = {
      * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
-      q: 'Miksi Amsterdamin vanhat kanavatalot ovat niin kapeita?',
+      q: 'Mitä kapeiden kanavatalojen syyksi kerrotaan usein?',
       options: [
         'Kanavan varrella ei ollut tilaa leveämmille',
         'Kapea talo kesti tulvat paremmin',
@@ -429,8 +429,9 @@ export const EUROPE_KULTTUURI = {
         'Laki kielsi yli kolme metriä leveät talot',
       ],
       correct: 2,
-      fact: '1600-luvulla vero määräytyi julkisivun leveyden mukaan, joten '
-              + 'rakennettiin kapeaa ja syvää. Kapein talo, Oude Hoogstraat 22, '
+      fact: 'Usein kerrotaan, että 1600-luvulla vero määräytyi julkisivun '
+              + 'leveyden mukaan, mutta historiantutkijat epäilevät sitä. Kapein '
+              + 'talo, Oude Hoogstraat 22, '
               + 'on 2,02 metriä leveä — ja siinä toimii nykyään kauppa.',
     },
   },

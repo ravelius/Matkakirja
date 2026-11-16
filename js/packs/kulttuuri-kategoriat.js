@@ -8541,7 +8541,7 @@ export const KULTTUURI_KATEGORIAT = {
        * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
        * kummassakaan vaiheessa.
        *
-       * YKSI NOSTO JÄI: "Verotettiin julkisivun leveydestä" pysyy sivulla,
+       * YKSI NOSTO JÄI: "Verotettiinko julkisivun leveydestä?" pysyy sivulla,
        * koska se on kaupungin KULTTUURIVISAN lähdejuttu
        * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
        * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
@@ -8556,12 +8556,14 @@ export const KULTTUURI_KATEGORIAT = {
        */
       nostot: [
         {
-          otsikko: 'Verotettiin julkisivun leveydestä',
+          otsikko: 'Verotettiinko julkisivun leveydestä?',
           tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
-          teksti: '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
-            + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein '
-            + 'niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi '
-            + 'metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä '
+          teksti: 'Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
+            + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
+            + 'epäilevät sitä. Joka tapauksessa kanavien varren talot ovat '
+            + 'kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 '
+            + 'metriä leveä ja viisi metriä syvä. Portaat ovat jyrkät kuin '
+            + 'tikkaat, eikä '
             + 'sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta '
             + 'työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut '
             + 'vedetään köydellä ikkunasta sisään.',

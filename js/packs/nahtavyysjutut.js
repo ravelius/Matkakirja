@@ -7449,31 +7449,26 @@ export const NAHTAVYYSJUTUT = {
      */
     Timanttihiomo: {
       nosto: 'syvennys-amsterdam-timantit',
-      teksti: 'Isoisäsi käveli hiomoiden ohi kaupungin parhaana timanttivuotena '
-        + 'eikä tiennyt sitä. Amsterdam oli tuolloin maailman tärkein '
+      teksti: 'Isoisäsi käveli hiomoiden ohi keskellä timanttinousua eikä '
+        + 'tiennyt sitä. Amsterdam oli tuolloin maailman tärkein '
         + 'timanttikeskus, ja ala oli päätynyt sinne kiertotietä: 1500-luvulla '
         + 'Portugalista tulleet sefardijuutalaiset toivat mukanaan '
         + 'kauppasuhteet, ja hionta oli yksi niistä harvoista ammateista, '
         + 'joihin ei tarvinnut kuulua kiltaan — kiltoihin heitä ei olisi '
         + 'otettu. Työ tehtiin aluksi kotona. Noin 1820 alkaen hiomapyöriä '
-        + 'pyörittivät hevoset, noin 1850 alkaen höyry, ja pienet verstaat '
-        + 'väistyivät tehtaiden tieltä. Ala oli silti pitkään pieni: tuhat '
-        + 'työntekijää vuonna 1848, tuhat neljäsataa vuonna 1860. Sitten '
-        + 'Etelä-Afrikan Kimberleystä alkoi vuonna 1870 nousta raakaa timanttia '
+        + 'pyörittivät hevoset, noin 1840 alkaen höyry, ja pienet verstaat väistyivät tehtaiden '
+        + 'tieltä. Sitten Etelä-Afrikasta alkoi vuonna 1870 nousta raakaa timanttia '
         + 'enemmän kuin kukaan osasi odottaa, ja Amsterdamiin tuli kausi, jota '
-        + 'täällä sanotaan yhä Kaapin ajaksi. Veljekset Boas olivat aloittaneet '
-        + 'samana vuonna hiomon Nieuwe Keizersgrachtilla hevoskierron voimalla; '
-        + 'kahdeksan vuotta myöhemmin he tilasivat höyrytehtaan, joka valmistui '
-        + '1879 ja oli avatessaan Euroopan suurin. Nousu ei kestänyt: vuodesta '
-        + '1875 länsimaiden talouskriisi pysäytti sen, ja luksuskivi on juuri '
-        + 'sellainen tavara, joka jää ensimmäisenä myymättä. Huippuaikoina '
-        + 'alalla oli yli kymmenentuhatta työntekijää, noin seitsemän '
-        + 'kymmenestä juutalaisia, ja työ oli sitä mitä kimalluksesta ei näy: '
-        + 'kaksitoistatuntisia päiviä ilman taukoja hämärissä huoneissa, ja '
+        + 'täällä sanotaan yhä Kaapin ajaksi. Veljekset Boas perustivat noin samoihin aikoihin hiomon, jonka '
+        + 'höyrytehdas valmistui 1879. Nousu ei kestänyt: 1870-luvun '
+        + 'puolivälin tienoilla länsimaiden talouskriisi pysäytti sen, ja luksuskivi on juuri '
+        + 'sellainen tavara, joka jää ensimmäisenä myymättä. Huippuaikoina alalla oli useita tuhansia työntekijöitä, joista '
+        + 'suurin osa oli juutalaisia, ja työ oli sitä mitä kimalluksesta '
+        + 'ei näy: pitkiä päiviä hämärissä huoneissa, ja '
         + 'silmät ja keuhkot maksoivat siitä. Vuonna 1894 juuri nämä työläiset '
-        + 'perustivat maan ensimmäisen suuren ammattiliiton. Boasin tehdas '
-        + 'seisoo yhä Uilenburgerstraatilla, ja siellä hiotaan edelleen '
-        + 'timantteja.',
+        + 'perustivat oman ammattiliittonsa. Boasin tehdas seisoo yhä '
+        + 'Nieuwe Uilenburgerstraatilla, ja siellä on nykyään '
+        + 'timanttitehdas, jossa järjestetään kierroksia vierailijoille.',
       kuvat: [
         {
           tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
@@ -7492,26 +7487,22 @@ export const NAHTAVYYSJUTUT = {
         + 'mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. '
         + 'Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 '
         + 'yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen '
-        + 'Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli '
-        + '203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina '
-        + '33-vuotias Willem Klump. Lastina oli kangasta, viiniä, '
-        + 'rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja '
-        + 'kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin '
-        + 'kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva '
+        + 'Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli yli 330 ihmistä, kapteenina 33-vuotias Willem '
+        + 'Klump. Lastina oli kangasta, viiniä, '
+        + 'rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja yli kaksikymmentä arkkua hopeaa. Lounaismyrsky ei antanut periksi. Laiva '
         + 'ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja '
         + 'tammikuun 26. päivänä kapteeni teki ainoan jäljellä olevan '
         + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. Miehistö pääsi '
         + 'maihin ja sai suurimman osan hopeasta mukanaan, loput veivät '
-        + 'rannalle ryntäneet ryöstelijät. Kolme viikkoa yhtiö yritti saada '
-        + 'laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
+        + 'rannalle ryntäneet ryöstelijät. Runsaan kuukauden yhtiö yritti saada laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
         + 'ja jäi sinne. Kaksisataa kaksikymmentä vuotta myöhemmin, vuonna '
         + '1969, vesi laski poikkeuksellisen matalalle ja paljasti sen: runko '
         + 'oli tallella, koska savi ei päästä happea puuhun. Nykyään hylky on '
         + 'suojeltu, sen kylkiluut näkyvät rannalla vain harvoina päivinä '
         + 'vuodessa, ja siitä nostetut esineet ovat Hastingsin '
         + 'haaksirikkomuseossa. Amsterdamissa on lisäksi laiva itse — tai sen '
-        + 'kokoinen kopio, jonka neljäsataa vapaaehtoista rakensi vuosina '
-        + '1982–1990. Se on merimuseon laiturissa, ja sinne pääsee kävelemään '
+        + 'kokoinen kopio, jonka satoja vapaaehtoisia rakensi 1980-luvulla alkaneessa '
+        + 'hankkeessa. Se on merimuseon laiturissa, ja sinne pääsee kävelemään '
         + 'kuivin jaloin.',
       kuvat: [
         {
@@ -7535,10 +7526,12 @@ export const NAHTAVYYSJUTUT = {
      */
     'Kapein talo': {
       nosto: 'nosto-amsterdamin-kapein-talo',
-      teksti: '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
-        + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, '
-        + 'Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. '
-        + 'Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä '
+      teksti: 'Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
+        + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
+        + 'epäilevät sitä. Joka tapauksessa kanavien varren talot ovat '
+        + 'kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 '
+        + 'metriä leveä ja viisi metriä syvä. Portaat ovat jyrkät kuin '
+        + 'tikkaat, eikä sohvaa saa niitä '
         + 'pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, '
         + 'hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta '
         + 'sisään.',
@@ -7638,8 +7631,8 @@ export const NAHTAVYYSJUTUT = {
         + 'kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten '
         + 'sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja '
         + 'alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole '
-        + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli '
-        + 'tummunut lakasta, joka poistettiin vasta 1940-luvulla.',
+        + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli tummunut lakasta, jota poistettiin vuosina '
+        + '1946–47 ja 1975–76.',
       kuvat: [
         {
           tiedosto: 'The Night Watch - cropped.jpg',

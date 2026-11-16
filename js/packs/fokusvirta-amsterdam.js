@@ -275,6 +275,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
   },
 
   /* ---------- 3. Kolme täkypolkua ---------- */
+  /*
+   * KORJAUKSET 16.11.2026 (SK, KK:n päätös; sääntö lahteet-ja-tarkistus 11).
+   * Lähteet ja perustelut: docs/raportit/amsterdam-tekstivirheet-korjaus-20261116.md.
+   * Timantit: höyry 1840-luvulta (DM + PIE14), ei 1848/1860-lukuja, ei
+   * Kimberleyä 1870, ei Euroopan suurinta, ei 1875, ei 10 000 eikä 70 %.
+   * Amsterdam-laiva: yli 330 ihmistä, yli 20 arkkua, runsas kuukausi,
+   * satoja vapaaehtoisia. Yövartio: lakkaa poistettiin 1946–47 ja 1975–76.
+   * Kapein talo: viisi metriä syvä; julkisivuvero kerrottu legendana.
+   * Alla olevat FAKTAT-kommentit ovat alkuperäisiltä ajoilta (1.9.2026).
+   */
   takyt: [
     {
       /*
@@ -324,33 +334,27 @@ export const FOKUSVIRTA_AMSTERDAM = {
       id: 'timantit',
       nappi: 'Kivet, jotka lähtivät täältä kruunuihin',
       otsikko: 'Timanttikaupunki juuri sinä keväänä',
-      teksti: 'Isoisäsi käveli hiomoiden ohi kaupungin parhaana '
-        + 'timanttivuotena eikä tiennyt sitä. Amsterdam oli tuolloin '
+      teksti: 'Isoisäsi käveli hiomoiden ohi keskellä timanttinousua eikä '
+        + 'tiennyt sitä. Amsterdam oli tuolloin '
         + 'maailman tärkein timanttikeskus, ja ala oli päätynyt sinne '
         + 'kiertotietä: 1500-luvulla Portugalista tulleet '
         + 'sefardijuutalaiset toivat mukanaan kauppasuhteet, ja hionta '
         + 'oli yksi niistä harvoista ammateista, joihin ei tarvinnut '
         + 'kuulua kiltaan — kiltoihin heitä ei olisi otettu. Työ tehtiin '
         + 'aluksi kotona. Noin 1820 alkaen hiomapyöriä pyörittivät '
-        + 'hevoset, noin 1850 alkaen höyry, ja pienet verstaat väistyivät '
-        + 'tehtaiden tieltä. Ala oli silti pitkään pieni: tuhat '
-        + 'työntekijää vuonna 1848, tuhat neljäsataa vuonna 1860. Sitten '
-        + 'Etelä-Afrikan Kimberleystä alkoi vuonna 1870 nousta raakaa '
+        + 'hevoset, noin 1840 alkaen höyry, ja pienet verstaat väistyivät tehtaiden '
+        + 'tieltä. Sitten Etelä-Afrikasta alkoi vuonna 1870 nousta raakaa '
         + 'timanttia enemmän kuin kukaan osasi odottaa, ja Amsterdamiin '
-        + 'tuli kausi, jota täällä sanotaan yhä Kaapin ajaksi. Veljekset '
-        + 'Boas olivat aloittaneet samana vuonna hiomon Nieuwe '
-        + 'Keizersgrachtilla hevoskierron voimalla; kahdeksan vuotta '
-        + 'myöhemmin he tilasivat höyrytehtaan, joka valmistui 1879 ja '
-        + 'oli avatessaan Euroopan suurin. Nousu ei kestänyt: vuodesta '
-        + '1875 länsimaiden talouskriisi pysäytti sen, ja luksuskivi on '
+        + 'tuli kausi, jota täällä sanotaan yhä Kaapin ajaksi. Veljekset Boas perustivat noin samoihin aikoihin hiomon, jonka '
+        + 'höyrytehdas valmistui 1879. Nousu ei kestänyt: 1870-luvun '
+        + 'puolivälin tienoilla länsimaiden talouskriisi pysäytti sen, ja luksuskivi on '
         + 'juuri sellainen tavara, joka jää ensimmäisenä myymättä. '
-        + 'Huippuaikoina alalla oli yli kymmenentuhatta työntekijää, '
-        + 'noin seitsemän kymmenestä juutalaisia, ja työ oli sitä mitä '
-        + 'kimalluksesta ei näy: kaksitoistatuntisia päiviä ilman taukoja '
-        + 'hämärissä huoneissa, ja silmät ja keuhkot maksoivat siitä. '
-        + 'Vuonna 1894 juuri nämä työläiset perustivat maan ensimmäisen '
-        + 'suuren ammattiliiton. Boasin tehdas seisoo yhä '
-        + 'Uilenburgerstraatilla, ja siellä hiotaan edelleen timantteja.',
+        + 'Huippuaikoina alalla oli useita tuhansia työntekijöitä, joista '
+        + 'suurin osa oli juutalaisia, ja työ oli sitä mitä kimalluksesta '
+        + 'ei näy: pitkiä päiviä hämärissä huoneissa, ja silmät ja keuhkot maksoivat siitä. '
+        + 'Vuonna 1894 juuri nämä työläiset perustivat oman ammattiliittonsa. Boasin tehdas seisoo yhä '
+        + 'Nieuwe Uilenburgerstraatilla, ja siellä on nykyään '
+        + 'timanttitehdas, jossa järjestetään kierroksia vierailijoille.',
       lahde: 'nl-Wikipedia "Algemene Nederlandse Diamantbewerkersbond" ja '
         + 'nl-Wikipedia "Diamantslijperij Boas". Tarkistettu 1.9.2026.',
       /*
@@ -544,18 +548,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'koko liikeidea. Yksi niistä ei ehtinyt edes alkuun. Amsterdam '
         + 'rakennettiin 1748 yhtiön omalla telakalla, ja se lähti '
         + 'ensimmäiselle matkalleen Texelin redeltä 8. tammikuuta 1749 '
-        + 'kohti Bataviaa. Kannen alla oli 203 merimiestä, 127 sotilasta '
-        + 'ja viisi matkustajaa, kapteenina 33-vuotias Willem Klump. '
+        + 'kohti Bataviaa. Kannen alla oli yli 330 ihmistä, kapteenina 33-vuotias Willem '
+        + 'Klump. '
         + 'Lastina oli kangasta, viiniä, rakennuskiveä, tykkejä, '
-        + 'paperia, kyniä ja työkaluja — ja kaksikymmentäseitsemän '
-        + 'arkkua hopeaa, arvoltaan noin kolmesataatuhatta guldenia. '
+        + 'paperia, kyniä ja työkaluja — ja yli kaksikymmentä arkkua hopeaa. '
         + 'Lounaismyrsky ei antanut periksi. Laiva ei päässyt '
         + 'Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja '
         + 'tammikuun 26. päivänä kapteeni teki ainoan jäljellä olevan '
         + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. '
         + 'Miehistö pääsi maihin ja sai suurimman osan hopeasta '
-        + 'mukanaan, loput veivät rannalle ryntäneet ryöstelijät. Kolme '
-        + 'viikkoa yhtiö yritti saada laivaa irti, ja 11. maaliskuuta '
+        + 'mukanaan, loput veivät rannalle ryntäneet ryöstelijät. Runsaan kuukauden yhtiö yritti saada laivaa irti, ja 11. maaliskuuta '
         + 'se luovutti. Amsterdam vajosi saveen ja jäi sinne. Kaksisataa '
         + 'kaksikymmentä vuotta myöhemmin, vuonna 1969, vesi laski '
         + 'poikkeuksellisen matalalle ja paljasti sen: runko oli '
@@ -563,8 +565,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'on suojeltu, sen kylkiluut näkyvät rannalla vain harvoina '
         + 'päivinä vuodessa, ja siitä nostetut esineet ovat Hastingsin '
         + 'haaksirikkomuseossa. Amsterdamissa on lisäksi laiva itse — '
-        + 'tai sen kokoinen kopio, jonka neljäsataa vapaaehtoista '
-        + 'rakensi vuosina 1982–1990. Se on merimuseon laiturissa, ja '
+        + 'tai sen kokoinen kopio, jonka satoja vapaaehtoisia rakensi 1980-luvulla alkaneessa '
+        + 'hankkeessa. Se on merimuseon laiturissa, ja '
         + 'sinne pääsee kävelemään kuivin jaloin.',
       lahde: 'nl-Wikipedia "Amsterdam (schip, 1748)" ja en-Wikipedia '
         + '"Amsterdam (1748 ship)". Tarkistettu 1.9.2026.',
@@ -613,10 +615,10 @@ export const FOKUSVIRTA_AMSTERDAM = {
    *
    * FAKTAT:
    *   - js/packs/kulttuuri-kategoriat.js, amsterdam-osion nostot
-   *     "Verotettiin julkisivun leveydestä" ja "Koko kaupunki seisoo
+   *     "Verotettiinko julkisivun leveydestä?" ja "Koko kaupunki seisoo
    *     puutukkien päällä" (pelin omaa tarkistettua aineistoa):
    *     1600-luvulla kiinteistövero laskettiin julkisivun leveydestä;
-   *     kapein talo Oude Hoogstraat 22 on 2,02 metriä leveä ja kuusi
+   *     kapein talo Oude Hoogstraat 22 on 2,02 metriä leveä ja viisi
    *     metriä syvä; portaat ovat jyrkät kuin tikkaat; päätykolmion
    *     alta työntyy nostopuu, hijsbalk, jonka koukusta huonekalut
    *     vedetään köydellä ikkunasta sisään; talot rakennettiin hieman
@@ -645,12 +647,11 @@ export const FOKUSVIRTA_AMSTERDAM = {
   oppitunti: {
     otsikko: 'Miksi tavara kulkee ikkunasta',
     teksti: 'Isoisäsi kirjoitti paaluista, mutta yhtä hyvin hän olisi '
-      + 'voinut kirjoittaa verottajasta. 1600-luvun Amsterdamissa '
-      + 'kiinteistövero laskettiin julkisivun leveydestä, joten '
-      + 'rakentaja otti tontista kaiken irti kahteen muuhun suuntaan: '
-      + 'talot tehtiin kapeiksi, syviksi ja korkeiksi. Kapein niistä, '
-      + 'Oude Hoogstraat 22, on kaksi metriä kaksi senttiä leveä ja '
-      + 'kuusi metriä syvä. Kapea talo tarkoittaa kapeaa porrasta, ja '
+      + 'voinut kirjoittaa verottajasta. Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
+      + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
+      + 'epäilevät sitä. Joka tapauksessa talot tehtiin kapeiksi, syviksi '
+      + 'ja korkeiksi. Kapein niistä, Oude Hoogstraat 22, on kaksi metriä '
+      + 'kaksi senttiä leveä ja viisi metriä syvä. Kapea talo tarkoittaa kapeaa porrasta, ja '
       + 'amsterdamilainen porras on jyrkkä kuin tikkaat — sitä pitkin '
       + 'nousee ihminen, ei arkku. Ja arkkuja oli. Kaupunki oli '
       + '1600-luvulla koko maan tavaranvälitysmarkkina, ja tavara '
@@ -669,7 +670,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       + 'jokainen muuttopäivä kertoo miksi.',
     /*
      * KUVA ON PELIN OMASTA AINEISTOSTA (sama tiedosto kaupunkilehden
-     * nostossa "Verotettiin julkisivun leveydestä", js/packs/
+     * nostossa "Verotettiinko julkisivun leveydestä?", js/packs/
      * kulttuuri-kategoriat.js) — siis jo kertaalleen tarkistettu ja
      * hyväksytty. TOISTO ON TIETOINEN: oppitunti selittää täsmälleen
      * sen esineen, jonka pelaaja on juuri nähnyt lehdessä, ja kuva on
@@ -735,7 +736,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * kulttuuri-kategoriat.js): Amsterdamin lehdessä on kaksi osiota,
      * 'kaupunki' ("Amsterdam") ja 'taide' ("Taide"). Yaran kysymys koskee
      * kanavatalon päätyä, ja lähin tuki sille on Amsterdam-osion nosto
-     * "Verotettiin julkisivun leveydestä". Se ei anna vastausta, vaan
+     * "Verotettiinko julkisivun leveydestä?". Se ei anna vastausta, vaan
      * nyökkää siihen suuntaan.
      */
     vihjeOsio: 'kaupunki',
@@ -1253,19 +1254,20 @@ export const FOKUSVIRTA_AMSTERDAM = {
     {
       id: 'amsterdamin-kapein-talo',
       nimio: 'Kapein talo',
-      otsikko: 'Verotettiin julkisivun leveydestä',
+      otsikko: 'Verotettiinko julkisivun leveydestä?',
       symboli: 'kaupunki',
       lunastus: [
-        '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
-          + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein '
-          + 'niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä '
-          + 'syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa '
+        'Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
+          + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
+          + 'epäilevät sitä. Joka tapauksessa kanavien varren talot ovat '
+          + 'kapeita ja syviä. Kapein niistä, Oude Hoogstraat 22, on 2,02 '
+          + 'metriä leveä ja viisi metriä syvä. Portaat ovat jyrkät kuin '
+          + 'tikkaat, eikä sohvaa saa '
           + 'niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos '
           + 'nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä '
           + 'ikkunasta sisään.',
       ],
-      lahde: 'Amsterdamin kaupunkilehden nosto "Verotettiin julkisivun '
-        + 'leveydestä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+      lahde: 'Amsterdamin kaupunkilehden nosto "Verotettiinko julkisivun leveydestä?" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
         + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
         tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
@@ -1289,7 +1291,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
           'Ne nostetaan kanavasta veneellä takapihan kautta',
         ],
         oikea: 0,
-        fakta: 'Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi '
+        fakta: 'Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja viisi '
           + 'metriä syvä.',
       },
       paikka: {
@@ -1469,8 +1471,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi '
           + 'miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. '
           + 'Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, '
-          + 'vaan pinta oli tummunut lakasta, joka poistettiin vasta '
-          + '1940-luvulla.',
+          + 'vaan pinta oli tummunut lakasta, jota poistettiin vuosina '
+          + '1946–47 ja 1975–76.',
       ],
       lahde: 'Amsterdamin kaupunkilehden nosto "Yövartiosta sahattiin palat pois" '
         + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
