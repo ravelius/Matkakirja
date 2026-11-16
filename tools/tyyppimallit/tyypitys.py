@@ -170,6 +170,19 @@ NIMILISTAT = {
         'relation/29871': ('palatsi', 'keski', 'Börsegebäude', {'julkisivu': 'kaakko', 'arvio': True, 'katto': 'attika', 'koe': True}),
         'relation/65155': ('palatsi', 'keski', 'Akademie der bildenden Künste', {'julkisivu': 'koillinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
     },
+    'amsterdam': {
+        # EHDOTUS (VS 17.11., KK:n työ 01.2x): asema + palatsit vain listalta; kirkot säännöllä. Rijksmuseum = ikoni (pelin pienoismalli, IKONIT).
+        # julkisivu = arvio ennen koneellista tarkistusta (JULKISIVU_KONEELLA; ovet-amsterdam.json ja käsitaulu voittavat).
+        'way/57856845': ('asema', 'suuri', 'Centraal Station'),
+        'relation/3580875': ('palatsi', 'keski', 'Koninklijk Paleis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/267103172': ('palatsi', 'keski', 'Trippenhuis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/30044304': ('palatsi', 'keski', 'Felix Meritis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/266908022': ('palatsi', 'keski', 'Maagdenhuis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/3584291': ('palatsi', 'keski', 'Oost-Indisch Huis', {'julkisivu': 'länsi', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/57863115': ('palatsi', 'keski', 'Stadsschouwburg', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'way/46696080': ('palatsi', 'keski', 'Concertgebouw', {'julkisivu': 'luode', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/3697339': ('palatsi', 'keski', 'Koninklijk Instituut voor de Tropen', {'julkisivu': 'pohjoinen', 'arvio': True, 'katto': 'attika', 'koe': True}),
+    },
 }
 # Kaupungit, joissa kirkkoja EI tyypitetä säännöllä (KK 16.11. kohta 1: Rooman kirkot ovat julkisivu + kupoli, ei länsitornia); vain nimilistalta.
 KIRKOT_VAIN_NIMILISTALTA = {'rooma'}
@@ -211,6 +224,7 @@ IKONIT = {
                ('Tower', 51.5081, -0.0762, 150), ('British Museum', 51.5194, -0.127, 120), ('NHM', 51.4965, -0.1758, 120),
                ('Buckingham', 51.500916, -0.142449, 120), ('Royal Albert Hall', 51.501021, -0.177405, 70), ('Kensington', 51.505158, -0.188124, 90),
                ('Greenwich College', 51.483172, -0.005494, 120), ('Queens House', 51.481192, -0.00375, 60)],
+    'amsterdam': [('Rijksmuseum', 52.3600, 4.8852, 150)],   # pelin pienoismalli (KaupunkiPallot.MuseoLat/Lon)
 }
 
 
@@ -334,7 +348,7 @@ def sivun_suunta(atsi, sivu):
 # JULKISIVUN SUUNTA KONEELLISESTI (KK 17.11. kohta 3; KOE Rooma ja Wien): pääjulkisivu on se mallin sivu, jonka edessä on eniten avointa tilaa
 # (aukio tai levein katu). Avoimuus = sivun keskimmäiseltä 80 %:lta 4 m:n välein ulos ammuttujen säteiden vapaa matka muihin OSM-taloihin
 # (katkaistu AVOIN['max'] m:iin), keskiarvo. Epävarma: toiseksi avoimin ≥ AVOIN['tasan'] × avoimin, tai avoimin alle AVOIN['ahdas'] m.
-JULKISIVU_KONEELLA = {'rooma', 'wien'}
+JULKISIVU_KONEELLA = {'rooma', 'wien', 'amsterdam'}
 AVOIN = {'max': 120.0, 'vali': 4.0, 'tasan': 0.8, 'ahdas': 15.0, 'pitka_sivu': 1.25, 'katu_max': 60.0}
 # Säde lasketaan vain, jos se ylittää yleisen kadun tai aukion ennen estettä (muut.json.gz: highway KADUT, nimetty service/footway, area=yes,
 # place=square, area:highway); vesi on este (joki ei ole julkisivun puoli: San Giovanni dei Fiorentini). Puutarha ei ole este, mutta sen puolelta

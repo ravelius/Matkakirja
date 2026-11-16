@@ -7,7 +7,7 @@ def ilma(atsi, sivu): return SUUNTA[int(((atsi + {'+x': 0, '-x': 180, '+z': -90,
 vanha = sys.argv[1] if len(sys.argv) > 1 else None
 print('| kaupunki | osm | nimi | sivu | ilmansuunta | lähde | avoimuus | epävarma |')
 print('|---|---|---|---|---|---|---|---|')
-for k in ('rooma', 'wien'):
+for k in [k for k in ('rooma', 'wien', 'amsterdam') if os.path.exists(f'{TY}/koe-rw/{k}/merkit-{k}.json')]:
     ms = json.load(open(f'{TY}/koe-rw/{k}/merkit-{k}.json'))['merkit']
     ennen = {}
     if vanha:

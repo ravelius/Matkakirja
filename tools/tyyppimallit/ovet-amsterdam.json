@@ -1,0 +1,88 @@
+{
+ "haettu": "2026-11-17 01:26",
+ "lahde": "OSM Overpass (ODbL), entrance=* rakennuksen ääriviivan solmuilla",
+ "merkit": "/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa-2/828d9f28-f32c-46d9-863d-cc3f96342eef/scratchpad/ams1/merkit-amsterdam.json",
+ "ovet": {
+  "way/46696080": [],
+  "way/57863115": [],
+  "way/30044304": [],
+  "way/266908022": [],
+  "way/267103172": [],
+  "way/174454540": [],
+  "relation/3697339": [
+   {
+    "node": 12437211944,
+    "lat": 52.3627231,
+    "lon": 4.9206059,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 12437211968,
+    "lat": 52.3629207,
+    "lon": 4.9216344,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 12437211998,
+    "lat": 52.3627892,
+    "lon": 4.9227262,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 12437212011,
+    "lat": 52.3623931,
+    "lon": 4.9229066,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 12437212013,
+    "lat": 52.362501,
+    "lon": 4.92278,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   }
+  ],
+  "relation/3584291": [
+   {
+    "node": 1701556221,
+    "lat": 52.3708978,
+    "lon": 4.8979651,
+    "entrance": "yes",
+    "nimi": null,
+    "katu": null,
+    "numero": null,
+    "access": null
+   },
+   {
+    "node": 2724827001,
+    "lat": 52.3707822,
+    "lon": 4.8981663,
+    "entrance": "main",
+    "nimi": null,
+    "katu": "Kloveniersburgwal",
+    "numero": "48",
+    "access": null
+   }
+  ],
+  "relation/3580875": []
+ }
+}

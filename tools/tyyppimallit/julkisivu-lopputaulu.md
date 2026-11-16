@@ -55,3 +55,8 @@
 | wien | relation/2458835 | Palais Kinsky | +x | koillinen | OSM entrance=main node/567005972 | +x50 -x0 +z0 -z0 |  |
 | wien | way/121542619 | Palais Coburg | +z | luode | sääntö 3 (avoimuus) | +x5 -x0 +z17 -z0 |  |
 | wien | relation/1541444 | Palais Pallavicini | -z | lounas | sääntö 3 (avoimuus) | +x0 -x5 +z0 -z69 |  |
+Traceback (most recent call last):
+  File "/Volumes/T7 4TB/koodaus/proto-arkisto/_tyo/valoseppa/tyyppitalot/julkisivu-taulu.py", line 14, in <module>
+    for m in json.load(open(f'{vanha}/{k}/merkit-{k}.json'))['merkit']:
+                       ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'koe-rw/vanha-ovet/amsterdam/merkit-amsterdam.json'

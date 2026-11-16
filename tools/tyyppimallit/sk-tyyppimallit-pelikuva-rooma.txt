@@ -1,7 +1,8 @@
-# Valoseppä 17.11.2026: KK 17.11. kohta 3 pelikuva Macilla ENNEN | JÄLKEEN, rooma. EI JUNAAN.
+# Valoseppä 17.11.2026 (RW2: merkit kaupunki, koska aktiivinen jäi Pariisiksi RW1:ssä): KK 17.11. kohta 3 pelikuva Macilla ENNEN | JÄLKEEN, rooma. EI JUNAAN.
 # Ennen = KS:n seinä- ja kattoperheet (paketit, ei tyyppimalleja). Jälkeen = KS:n tyyppi-palat (poistot VS:n listasta) + tyyppimallit (koe-rw 1ade54bf4b, vie.py --koe).
 alku odota-tila Aloitus 40;uusi-peli 5 rooma;odota-tila Kartta 40
 ui konsoli pois
+ui kartanelama merkit kaupunki rooma
 odota 3
 ui kamerasuhde laite
 odota 1
@@ -39,6 +40,7 @@ odota 8
 komento talot lataus
 odota 10
 ui kartanelama merkit 1
+odota 6
 odota 4
 komento puut tilasto r1-jalkeen
 odota 3

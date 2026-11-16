@@ -77,6 +77,17 @@
     "https://en.wikipedia.org/wiki/Palazzo_Venezia (main eastern facade faces Piazza Venezia)"
    ],
    "huom": "OSM entrance=main node/7192784546 on museon ovi Via del Plebiscitolla (pohjoinen); käsitaulu voittaa"
+  },
+  "relation/2705998": {
+   "nimi": "Palazzo Massimo alle Terme",
+   "suunta": "luode",
+   "katu": "Largo di Villa Peretti 2 (museon pääsisäänkäynti; sama kuin OSM entrance=main)",
+   "lahteet": [
+    "https://commons.wikimedia.org/wiki/File:Palazzo_Massimo_(2023).jpg (\"Vorderfront\": portaali ja nimi; VS 17.11. kuvasta)",
+    "https://museonazionaleromano.beniculturali.it/en/home (osoite Largo di Villa Peretti 2)",
+    "https://commons.wikimedia.org/wiki/File:Palazzo_Massimo_alle_Terme_NE.jpg (vaihtoehto: pitkä sivu Piazza dei Cinquecentolle koilliseen; KK:n valinta)"
+   ],
+   "kuva_tarkistettu": "VS 17.11."
   }
  },
  "wien": {
@@ -105,9 +116,11 @@
    "katu": "Auerspergstraße 1",
    "lahteet": [
     "https://de.wikipedia.org/wiki/Palais_Auersperg (Hauptportal Auerspergstraße)",
-    "https://www.geschichtewiki.wien.gv.at/Palais_Auersperg (osoite Auerspergstraße 1, pylväsportiikki keskirisaliitissa)"
+    "https://www.geschichtewiki.wien.gv.at/Palais_Auersperg (osoite Auerspergstraße 1, pylväsportiikki keskirisaliitissa)",
+    "https://commons.wikimedia.org/wiki/File:Wien_VIII_Palais_Auersperg_2024-08-01_JM_5D413531.jpg (pääjulkisivu ja portaali Auerspergstraßella; VS 17.11. kuvasta)"
    ],
-   "huom": "toinen lähde antaa osoitteen, ei sano portiikin katua"
+   "huom": "toinen lähde antaa osoitteen, ei sano portiikin katua",
+   "kuva_tarkistettu": "VS 17.11."
   },
   "relation/1534837": {
    "nimi": "Palais Esterházy",
@@ -133,9 +146,30 @@
    "katu": "Schottenring 16",
    "lahteet": [
     "https://www.geschichtewiki.wien.gv.at/Börse (Hauptsitz 1., Schottenring 16)",
-    "https://austria-forum.org/af/AustriaWiki/B%C3%B6rsegasse (Hansenin pörssi, osoite Schottenring)"
+    "https://austria-forum.org/af/AustriaWiki/B%C3%B6rsegasse (Hansenin pörssi, osoite Schottenring)",
+    "https://commons.wikimedia.org/wiki/File:Die_ehemalige_Börse_am_Ring_-_panoramio.jpg (Ringin puoli: keskiportaali ja pylväsportiikki; VS 17.11. kuvasta) + https://commons.wikimedia.org/wiki/File:Wien_-_Börsengebäude_am_Börsenplatz.JPG (Börseplatzin puoli: sivuportaali)"
    ],
-   "huom": "OSM entrance=main kahdella päädyllä (+x, -x); lähteet antavat osoitteen, ei portaalin sivua; sääntö 3 valitsi kaakon (Börseplatz), osoitekatu Schottenring on luoteessa (katusivu.py) → VARMISTA KUVASTA"
+   "huom": "OSM entrance=main kahdella päädyllä (+x, -x); lähteet antavat osoitteen, ei portaalin sivua; sääntö 3 valitsi kaakon (Börseplatz), osoitekatu Schottenring on luoteessa (katusivu.py) → VARMISTA KUVASTA",
+   "kuva_tarkistettu": "VS 17.11."
+  }
+ },
+ "amsterdam": {
+  "relation/3580875": {
+   "nimi": "Koninklijk Paleis",
+   "suunta": "itä",
+   "katu": "Dam",
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam (pääjulkisivu Dam-aukiolle, itä)",
+    "https://nl.wikipedia.org/wiki/Koninklijk_Paleis_Amsterdam"
+   ]
+  },
+  "way/266908022": {
+   "nimi": "Maagdenhuis",
+   "suunta": "pohjoinen",
+   "katu": "Spui",
+   "lahteet": [
+    "https://nl.wikipedia.org/wiki/Maagdenhuis (Spui 21, julkisivu Spuille)"
+   ]
   }
  }
 }

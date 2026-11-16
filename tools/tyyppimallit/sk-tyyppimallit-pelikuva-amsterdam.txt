@@ -1,0 +1,86 @@
+# Valoseppä 17.11.2026 (KK 01.2x, Amsterdam): pelikuva Macilla ENNEN | JÄLKEEN, A1 Dam (Koninklijk Paleis + Nieuwe Kerk), A2 Westerkerk. EI JUNAAN.
+# Ennen = KS:n seinä- ja kattoperheet (paketit, ei tyyppimalleja). Jälkeen = KS:n tyyppi-palat (poistot VS:n listasta) + tyyppimallit (koe-rw 1ade54bf4b, vie.py --koe).
+alku odota-tila Aloitus 40;uusi-peli 5 amsterdam;odota-tila Kartta 40
+ui konsoli pois
+ui kartanelama merkit kaupunki amsterdam
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento talot alue 52.2937 52.4374 4.7723 5.0077 0
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/katot-amsterdam-rooma-20261116/amsterdam/palat
+odota 20
+komento kallista 50
+komento suunta 270
+komento lahizoomi 3
+komento aja 52.3726 4.893 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto a1-ennen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva a1-ennen Amsterdam Dam: Koninklijk Paleis (julkisivu itään Damille) + Nieuwe Kerk: Ennen (KS:n perheet, ei tyyppimalleja)
+komento talot kansio TYYPPIPALAT
+odota 20
+komento kallista 50
+komento suunta 270
+komento lahizoomi 3
+komento aja 52.3726 4.893 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 1
+odota 6
+odota 4
+komento puut tilasto a1-jalkeen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva a1-jalkeen Amsterdam Dam: Koninklijk Paleis (julkisivu itään Damille) + Nieuwe Kerk: Jälkeen (tyyppimallit + poistot)
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/katot-amsterdam-rooma-20261116/amsterdam/palat
+odota 20
+komento kallista 50
+komento suunta 225
+komento lahizoomi 3
+komento aja 52.3745 4.884 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto a2-ennen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva a2-ennen Amsterdam Westerkerk + Prinsengracht: Ennen (KS:n perheet, ei tyyppimalleja)
+komento talot kansio TYYPPIPALAT
+odota 20
+komento kallista 50
+komento suunta 225
+komento lahizoomi 3
+komento aja 52.3745 4.884 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 1
+odota 6
+odota 4
+komento puut tilasto a2-jalkeen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva a2-jalkeen Amsterdam Westerkerk + Prinsengracht: Jälkeen (tyyppimallit + poistot)
