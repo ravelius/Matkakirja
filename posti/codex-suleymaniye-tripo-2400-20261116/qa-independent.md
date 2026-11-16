@@ -1,0 +1,5 @@
+# Independent visual QA — Süleymaniye Mosque, task 2400
+
+**Status: PASS (visible-form comparison).** The model preserves the supplied image's main composition: large domed mosque, attached long courtyard enclosure with arcades and roof domes, and four minarets. All four are visible across the views: two taller minarets at the mosque's corners and two shorter minarets at the courtyard's outer corners. The taller pair show three balcony rings each; the shorter pair show two each, consistent with the visible source. Overall massing and the mosque-to-courtyard relationship are readily recognizable.
+
+**Caveat:** this compares only the supplied source image with five rendered views. Hidden faces, exact compass orientation, and historical detail accuracy are not established. The GLB export and archive readback are now verified: 73,615,152 bytes, SHA-256 `c5e9cd054e810949830929e5c48400ddb3bc73a87d86a72d232125943f1e7327`; metrics report 1,865,387 triangles, one mesh/primitive, embedded 8K base-color texture, no external dependencies, and no parser warnings. This is independent QA only, not KK acceptance.
