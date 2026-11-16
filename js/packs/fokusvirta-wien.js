@@ -187,21 +187,21 @@ export const FOKUSVIRTA_WIEN = {
      * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-wien-01-r20260909-euv1-v1.jpg.
      */
     /*
-     * PULUN KUVA (omistaja 15.11.2026 18.58 / KK): Commonsin valokuva Café Landtmannin sisätiloista nykyään; vanha pulu-cam-wien-01
-     * pois. Tiedosto: Geolina163, 24.5.2023, CC BY-SA 4.0 (KK katsoi Commonsin sivulta 15.11.: loosi, pöytä, lamput),
-     * https://commons.wikimedia.org/wiki/File:Cafe_Landtmann_2023.jpg. Kuvaa itseään ei muokata.
-     * RAJAUS pyöreään kehykseen puuttuu: kuvaa ei ole ladattu eikä katsottu pelikoossa; keskipiste ja halkaisija tulevat
-     * PT-viennin kuvasta kuten Lontoossa. `lyhyt` ja `selite` ovat SK:n luonnos (faktat: Café Landtmann, avattu 1.10.1873; docs/raportit/
-     * shakki-wien-1873-faktat-20261012.md rivi 28), KK tarkistaa.
+     * PULUN KUVA (omistaja 16.11.2026 klo 09.21, KK:n välittämänä; PT): Codexin havainnekuva #2372 (varpunen kahvilan tuolilla ja
+     * kahvikuppi marmoripöydällä); Commonsin valokuva (Geolina163, CC BY-SA 4.0) pois. Lähde: Codexin commit a6e95281db
+     * (claude/postilaatikko), _review-pulu-wien-cafe-landtmann-20261116/v2/pulu-wien-cafe-landtmann-v2.jpg, SHA256 5d5bea34…
+     * (kopio /Users/Shared/Claude/pulu-kuvaesikatselut/wien-cafe-landtmann-codex-v2.jpg; neliö 1254 px; rajaus = koko neliö ympyrään,
+     * ei `rajaus`-kenttää). Kuva viedään ämpäriin osoitteeseen alla ennen yhdistämistä. Lähderivi: Matkakirjan havainnekuva.
+     * `lyhyt` ja `selite` tehty kuvan mukaan (varpunen ja kahvi); fakta Café Landtmann, avattu 1.10.1873 (docs/raportit/
+     * shakki-wien-1873-faktat-20261012.md rivi 28). SK:n luonnos, KK tarkistaa.
      */
     kuvat: [
       {
-        tiedosto: 'Cafe Landtmann 2023.jpg',
-        lyhyt: 'Café Landtmann Wienissä: kahvila avattiin 1873.',
-        selite: 'Café Landtmannin sali Wienin Ringstraßella. Franz Landtmann avasi kahvilan 1.10.1873.',
-        lahde: 'Geolina163, Wikimedia Commons (CC BY-SA 4.0)',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-wien-cafe-landtmann-codex-v2.jpg',
+        lyhyt: 'Varpunen kahvilan tuolilla Wienissä.',
+        selite: 'Varpunen istuu kahvilan tuolin selkänojalla, ja marmoripöydällä on kahvikuppi. Wienin Café Landtmann avattiin 1.10.1873.',
+        lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://commons.wikimedia.org/wiki/File:Cafe_Landtmann_2023.jpg',
           'https://www.landtmann.at/en/the-landtmann/the-landtmann-story.html',
           'https://en.wikipedia.org/wiki/Caf%C3%A9_Landtmann',
         ],
