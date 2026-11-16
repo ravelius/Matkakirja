@@ -163,4 +163,6 @@ Syy: Nasone: "valurautaisia" (alun perin), "yötä päivää" (yleensä), "risti
 
 ## Testit
 
-- Koko testisarja ajettu rebasen jälkeen, luvut PR:n kuvauksessa.
+- Rebasen jälkeen (origin/main 771e31d9c2, Wienin PR 6895 mukana) koko `node --test "tests/*.test.mjs"`: 5909 testiä, 5894 läpi, 0 kaatui, 15 ohitettu.
+- `node tools/aanitysjono/tarkista.mjs --lisaa --siivoa`: ÄÄNITYSJONO OK (puuttuvat 212, kaikki jonossa; Rooma 31 + ITA 2).
+- Äänitetyistä muuttuu 42 kappalepaikkaa (30 eri tekstiä), lista yllä.
