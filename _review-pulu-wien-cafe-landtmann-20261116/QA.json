@@ -1,0 +1,38 @@
+{
+  "selectedAttempt": 1,
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "summaryFi": "Kahvikuppi lautasineen ja vesilasi näkyvät kokonaan myös ympyrärajauksessa. Kuvakulma on matala pöydän reunalta. Taustalla punottuselkäisiä tuoleja, puiden latvuksia ja vaaleita vanhoja julkisivuja ulkona ilman katosta. Kupin yllä näkyy hienoinen höyry. Ei havaittuja ihmisiä, tekstiä, merkkejä tai Pulua.",
+  "checks": {
+    "squareAspect": true,
+    "lowTabletopView": true,
+    "wholeCupSaucerGlassInsideCircle": true,
+    "subtleSteam": true,
+    "uncoveredOutdoorTerrace": true,
+    "caneBackChairsTreesHistoricFacade": true,
+    "naturalPhotoMaterialsAndLight": true,
+    "noObservedTextLogosPeoplePigeon": true,
+    "nativeUnedited": true
+  },
+  "notes": [
+    "Ensimmäinen otto valittu; toista ei tarvittu. Natiivi 1254 × 1254 px, ei suurennusta.",
+    "Vanha Commons-viite on sisäkuva. Uusi kuva seuraa tilauksen avointa ulkoterassia; sisätilan sommittelua ja koristeita ei kopioitu.",
+    "Kahvilamiljöö on havainnollistava, ei väite Café Landtmannin täsmällisestä kalustuksesta tai julkisivun geometriasta. KK arvioi miljöön sopivuuden."
+  ],
+  "taskNumber": 2352,
+  "reviewedAt": "2026-11-16T06:51:22.871408+00:00",
+  "generationCalls": 1,
+  "generationLimit": 2,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeSha256": "8d5db6d60ff9b5309acb4014dcb1483fce5991f7f4e1a25bae8bd6e3091adfa9",
+  "jpgSha256": "fbd7ef23e1d34449fe03c75cd194b174a51ce0016b515336f1f0ec46d40f2f73",
+  "reviewMethod": "Native image, browser-rendered square/circle preview and details visually inspected. Native content not modified.",
+  "editorAccepted": false,
+  "ownerAccepted": false,
+  "receiverAcceptance": "pending",
+  "gameIntegrated": false,
+  "published": false,
+  "sizeNote": "Actual native dimensions reported; no resize or upscale. JPEG is format conversion only."
+}

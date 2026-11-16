@@ -1,0 +1,44 @@
+{
+  "taskNumber": 2352,
+  "sourcePath": "posti/paatoimittaja-codex-pulu-wien-20261116.md",
+  "sourceCommit": "b91a21fc0c5e139598428d60344a49f3592ae08d",
+  "sourceBlob": "79c870b2923cdeff0dc18737e92e44046f8cf53b",
+  "tool": "built-in image_gen",
+  "useCase": "photorealistic-natural",
+  "selectedAttempt": 1,
+  "calls": [
+    {
+      "attempt": 1,
+      "status": "qa-selected-for-KK-review",
+      "startedAt": "2026-11-16T06:50:17.256578+00:00",
+      "tool": "built-in image_gen",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-wien-cafe-landtmann-2352-20261116/prompts/attempt001.txt",
+      "referenceInput": "Text only; inspected source images, no editing target.",
+      "completedAt": "2026-11-16T06:51:00.951644+00:00",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-639a0860-dffb-4d58-b180-b60db52a8f39.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/pulu-wien-cafe-landtmann-2352-20261116/native/pulu-wien-cafe-landtmann-attempt001.png",
+      "sha256": "8d5db6d60ff9b5309acb4014dcb1483fce5991f7f4e1a25bae8bd6e3091adfa9",
+      "bytes": 2312040,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "selected": true,
+      "qaStatus": "PASS_FOR_KK_REVIEW_WITH_NOTES"
+    }
+  ],
+  "nativeFile": "pulu-wien-cafe-landtmann-v1.png",
+  "nativeSha256": "8d5db6d60ff9b5309acb4014dcb1483fce5991f7f4e1a25bae8bd6e3091adfa9",
+  "deliveryFile": "pulu-wien-cafe-landtmann-v1.jpg",
+  "deliverySha256": "fbd7ef23e1d34449fe03c75cd194b174a51ce0016b515336f1f0ec46d40f2f73",
+  "deliveryBytes": 1685659,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "conversion": "macOS sips PNG to JPEG, best quality; no resize, crop or retouch",
+  "sourceLabel": "Matkakirjan havainnekuva",
+  "referenceRole": "Inspected architecture reference only; no copied reference pixels or edit input",
+  "puluTextChanged": false,
+  "acceptanceFlow": "KK -> owner shown image -> SK data PR6819; source Matkakirjan havainnekuva."
+}
