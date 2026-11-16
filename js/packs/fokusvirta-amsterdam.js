@@ -110,24 +110,24 @@ const YOVARTIO_VISA = {
     'Tilaajat maksoivat vain kuvassa näkyvistä miehistä',
   ],
   oikea: 1,
-  fakta: 'Vasemmalta katosi kaksi miestä, alta askelman reuna ja '
-    + 'ylhäältä holvikaaren huippu, eikä palasia ole löydetty. Se, '
-    + 'miltä taulu näytti ennen leikkausta, tiedetään vain Gerrit '
-    + 'Lundensin pienoiskopiosta.',
+  fakta: 'Eniten katosi vasemmalta, eikä palasia ole koskaan löydetty. '
+    + 'Gerrit Lundensin pieni 1600-luvun kopio näyttää, miltä koko '
+    + 'taulu näytti.',
 };
 
 const PAALU_VISA = {
-  kysymys: 'Damin aukion palatsi avattiin kaupungintaloksi vuonna 1655. '
-    + 'Kuinka monen puupaalun varaan se pystytettiin?',
+  kysymys: 'Damin aukion kaupungintalon, nykyisen kuninkaanpalatsin, '
+    + 'ensimmäinen kivi laskettiin 28. lokakuuta 1648. Kuinka monen '
+    + 'puupaalun varaan se pystytettiin?',
   vaihtoehdot: [
     '13 659 paalun',
     '54 300 paalun',
     '2 137 paalun',
   ],
   oikea: 0,
-  fakta: 'Paalu kestää täsmälleen niin kauan kuin se pysyy veden alla. '
-    + 'Jos pohjavesi laskee, puu alkaa lahota ja talo nojaa '
-    + 'naapuriinsa.',
+  fakta: 'Paalu kestää niin kauan kuin se pysyy veden alla. Jos '
+    + 'pohjavesi laskee, happi pääsee puuhun, ja sienet ja bakteerit '
+    + 'alkavat lahottaa sitä.',
 };
 
 export const FOKUSVIRTA_AMSTERDAM = {
@@ -590,6 +590,15 @@ export const FOKUSVIRTA_AMSTERDAM = {
    * siinä sellaisenaan — teksti puhuu verosta, ullakoista ja
    * nostoluukuista eikä lausu vastausriviä ääneen.
    *
+   * KORJAUS 16.11.2026 (SK, KK:n päätös; docs/raportit/amsterdam-virheet-
+   * muualla-20261116.md): verolegenda (julkisivun leveyden mukaan peritty
+   * vero) on poistettu oppitunnin tekstistä, koska mikään lähde ei yhdistä
+   * Oude Hoogstraat 22:n kapeutta veroon (dokumentti
+   * amsterdam-9-tarinapaikkaa-dataluonnos-20261116.md, kohta 7). Alla
+   * olevat FAKTAT-rivit ovat alkuperäisiltä ajoilta (29.8.2026); nosto
+   * "Verotettiinko julkisivun leveydestä?" on nyt "Kapein koko talo
+   * Amsterdamissa".
+   *
    * FAKTAT:
    *   - js/packs/kulttuuri-kategoriat.js, amsterdam-osion nostot
    *     "Verotettiinko julkisivun leveydestä?" ja "Koko kaupunki seisoo
@@ -624,11 +633,10 @@ export const FOKUSVIRTA_AMSTERDAM = {
   oppitunti: {
     otsikko: 'Miksi tavara kulkee ikkunasta',
     teksti: 'Isoisäsi kirjoitti paaluista, mutta yhtä hyvin hän olisi '
-      + 'voinut kirjoittaa verottajasta. Amsterdamissa kerrotaan usein, että 1600-luvulla kiinteistövero '
-      + 'laskettiin julkisivun leveydestä, mutta historiantutkijat '
-      + 'epäilevät sitä. Joka tapauksessa talot tehtiin kapeiksi, syviksi '
-      + 'ja korkeiksi. Kapein niistä, Oude Hoogstraat 22, on kaksi metriä '
-      + 'kaksi senttiä leveä ja viisi metriä syvä. Kapea talo tarkoittaa kapeaa porrasta, ja '
+      + 'voinut kirjoittaa kanavatalojen ullakoista. Kanavien varren '
+      + 'talot ovat kapeita ja syviä. Kapein koko talo, Oude Hoogstraat '
+      + '22, on kaksi metriä kaksi senttiä leveä ja viisi metriä syvä. '
+      + 'Kapea talo tarkoittaa kapeaa porrasta, ja '
       + 'amsterdamilainen porras on jyrkkä kuin tikkaat — sitä pitkin '
       + 'nousee ihminen, ei arkku. Ja arkkuja oli. Kaupunki oli '
       + '1600-luvulla koko maan tavaranvälitysmarkkina, ja tavara '
@@ -647,7 +655,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       + 'jokainen muuttopäivä kertoo miksi.',
     /*
      * KUVA ON PELIN OMASTA AINEISTOSTA (sama tiedosto kaupunkilehden
-     * nostossa "Verotettiinko julkisivun leveydestä?", js/packs/
+     * nostossa "Kapein koko talo Amsterdamissa", js/packs/
      * kulttuuri-kategoriat.js) — siis jo kertaalleen tarkistettu ja
      * hyväksytty. TOISTO ON TIETOINEN: oppitunti selittää täsmälleen
      * sen esineen, jonka pelaaja on juuri nähnyt lehdessä, ja kuva on
@@ -713,7 +721,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * kulttuuri-kategoriat.js): Amsterdamin lehdessä on kaksi osiota,
      * 'kaupunki' ("Amsterdam") ja 'taide' ("Taide"). Yaran kysymys koskee
      * kanavatalon päätyä, ja lähin tuki sille on Amsterdam-osion nosto
-     * "Verotettiinko julkisivun leveydestä?". Se ei anna vastausta, vaan
+     * "Kapein koko talo Amsterdamissa" (ent. "Verotettiinko julkisivun
+     * leveydestä?"). Se ei anna vastausta, vaan
      * nyökkää siihen suuntaan.
      */
     vihjeOsio: 'kaupunki',

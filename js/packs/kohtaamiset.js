@@ -653,9 +653,9 @@ export const KOHTAAMISET = {
    * tila 'tarkistettu'), ei uutta tilausta. Tämä rivi on kaupungin
    * MYÖHEMPIEN visojen avaus, tekstit kirjoitettu kokonaan uusina
    * eivätkä toista kaaren omaa dialogia. 1873-fakta: kanavatalojen
-   * kapeus (julkisivuvero 1600-luvulta) ja hijsbalk-nostokoukku ovat
-   * jo pelin hyväksyttyä sisältöä (js/packs/europe-kulttuuri.js,
-   * fokusvirta-amsterdam.js) — tämä rivi viittaa samaan faktaan
+   * kapeus ja hijsbalk-nostokoukku ovat jo pelin hyväksyttyä sisältöä
+   * (js/packs/europe-kulttuuri.js, fokusvirta-amsterdam.js; verolegenda
+   * poistettu 16.11.2026) — tämä rivi viittaa samaan faktaan
    * paljastamatta sitä suoraan.
    */
   amsterdam: {

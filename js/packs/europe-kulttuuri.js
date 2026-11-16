@@ -421,18 +421,19 @@ export const EUROPE_KULTTUURI = {
      * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
-      q: 'Mitä kapeiden kanavatalojen syyksi kerrotaan usein?',
+      q: 'Amsterdamin kapein koko talo on Oude Hoogstraat 22. Kuinka '
+          + 'leveä sen julkisivu on?',
       options: [
-        'Kanavan varrella ei ollut tilaa leveämmille',
-        'Kapea talo kesti tulvat paremmin',
-        'Kiinteistövero laskettiin julkisivun leveydestä',
-        'Laki kielsi yli kolme metriä leveät talot',
+        'Vajaa metri',
+        'Hieman yli kaksi metriä',
+        'Lähes kolme ja puoli metriä',
+        'Lähes viisi metriä',
       ],
-      correct: 2,
-      fact: 'Usein kerrotaan, että 1600-luvulla vero määräytyi julkisivun '
-              + 'leveyden mukaan, mutta historiantutkijat epäilevät sitä. Kapein '
-              + 'talo, Oude Hoogstraat 22, '
-              + 'on 2,02 metriä leveä — ja siinä toimii nykyään kauppa.',
+      correct: 1,
+      fact: 'Oude Hoogstraat 22:n julkisivu on 2,02 metriä leveä ja talo '
+              + 'viisi metriä syvä, ja nykyään siinä on teekauppa. '
+              + 'Singel 7:n talon takajulkisivu on vain noin metrin '
+              + 'levyinen, mutta etuosa on selvästi leveämpi.',
     },
   },
 
