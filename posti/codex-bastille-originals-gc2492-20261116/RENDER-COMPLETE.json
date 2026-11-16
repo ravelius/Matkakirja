@@ -1,0 +1,14 @@
+{
+  "status": "rendered; visual QA pending",
+  "blender_version": "5.2.1 LTS",
+  "outputs": {
+    "A-overall.png": "b1181cad8da5b7d12c153a65f58b4307a88b0ed70cfefaf31e2410e1f608c396",
+    "A-wall_crest.png": "9cf5d40206582f8dea30942a289d94633a11a5b5cca2cbcd5638ccd3e654fada",
+    "A-MV-overall.png": "4273069c0f0a4d4e9d6f3a1f76b2ebf8de1094c1253230c7843be43170288d98",
+    "A-MV-wall_crest.png": "8c643ab2380276bbb2bb635771fa53059ad7de31e103363582c8de0fe32520c7",
+    "A-B-C-assembly_top.png": "802b006d3c111cb9e8f5e2c9bd22b778141c4a9ff6181bcdc53b3e7ba06d9b48",
+    "A-B-C-assembly_oblique.png": "61ff7d73327e603562d2cc4650749e132ca5b3ab5a3e78cbc0193922a3223831",
+    "A-MV-B-C-assembly_top.png": "6ebee5f4f0d9c4b02d83871d77cb2e6fc0625c9f1b9b45a50ef8be6460667224",
+    "A-MV-B-C-assembly_oblique.png": "ee6435517b45435f246479141c29bb9cdc87081a4c1820c441bf65309f40c68f"
+  }
+}

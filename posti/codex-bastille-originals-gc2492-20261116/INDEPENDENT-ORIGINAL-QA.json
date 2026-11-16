@@ -1,0 +1,259 @@
+{
+  "status": "INDEPENDENT_VISUAL_QA_COMPLETE__PREFERRED_A_MV__FIT_NOT_ACCEPTED",
+  "reviewed_at_utc": "2026-11-16T20:04:15.732264+00:00",
+  "scope": "Read-only review of original-derived aligned GLBs, all eight complete full PNGs, sources and plans. Only this report written. No rendering, Blender, Tripo, decimation or geometry change performed.",
+  "render_checks": [
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-overall.png",
+      "sha256": "b1181cad8da5b7d12c153a65f58b4307a88b0ed70cfefaf31e2410e1f608c396",
+      "manifest_sha256": "b1181cad8da5b7d12c153a65f58b4307a88b0ed70cfefaf31e2410e1f608c396",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-wall_crest.png",
+      "sha256": "9cf5d40206582f8dea30942a289d94633a11a5b5cca2cbcd5638ccd3e654fada",
+      "manifest_sha256": "9cf5d40206582f8dea30942a289d94633a11a5b5cca2cbcd5638ccd3e654fada",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-MV-overall.png",
+      "sha256": "4273069c0f0a4d4e9d6f3a1f76b2ebf8de1094c1253230c7843be43170288d98",
+      "manifest_sha256": "4273069c0f0a4d4e9d6f3a1f76b2ebf8de1094c1253230c7843be43170288d98",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-MV-wall_crest.png",
+      "sha256": "8c643ab2380276bbb2bb635771fa53059ad7de31e103363582c8de0fe32520c7",
+      "manifest_sha256": "8c643ab2380276bbb2bb635771fa53059ad7de31e103363582c8de0fe32520c7",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-B-C-assembly_top.png",
+      "sha256": "802b006d3c111cb9e8f5e2c9bd22b778141c4a9ff6181bcdc53b3e7ba06d9b48",
+      "manifest_sha256": "802b006d3c111cb9e8f5e2c9bd22b778141c4a9ff6181bcdc53b3e7ba06d9b48",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-B-C-assembly_oblique.png",
+      "sha256": "61ff7d73327e603562d2cc4650749e132ca5b3ab5a3e78cbc0193922a3223831",
+      "manifest_sha256": "61ff7d73327e603562d2cc4650749e132ca5b3ab5a3e78cbc0193922a3223831",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-MV-B-C-assembly_top.png",
+      "sha256": "6ebee5f4f0d9c4b02d83871d77cb2e6fc0625c9f1b9b45a50ef8be6460667224",
+      "manifest_sha256": "6ebee5f4f0d9c4b02d83871d77cb2e6fc0625c9f1b9b45a50ef8be6460667224",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    },
+    {
+      "file": "technical-prep/original-alignment/render-output-01/A-MV-B-C-assembly_oblique.png",
+      "sha256": "ee6435517b45435f246479141c29bb9cdc87081a4c1820c441bf65309f40c68f",
+      "manifest_sha256": "ee6435517b45435f246479141c29bb9cdc87081a4c1820c441bf65309f40c68f",
+      "hash_match": true,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "full_png_viewed": true
+    }
+  ],
+  "original_and_aligned_integrity_checks": [
+    {
+      "part": "A",
+      "source_sha256": "9410d02ae15b00a584361b3ec0f25ccbe25a3fb89d355aff1e9c30b84fdee22b",
+      "aligned_sha256": "ca907b5f54cb130567ef3e9a742f7e29ab79caf3fc1b559447b8004aceaf6ef2",
+      "source_hash_match": true,
+      "aligned_hash_match": true,
+      "bin_sha256": "b0f94c17733685ac6d5bf50b1f25379efd90b39b00bddf5d1f33cbec7e90e961",
+      "bin_byte_identical": true,
+      "mesh_json_identical": true,
+      "image_json_identical": true,
+      "matrix_axis_scales": [
+        68.44068266257874,
+        68.44068266257872,
+        68.44068266257874
+      ],
+      "uniform_scale_within_1e-9": true
+    },
+    {
+      "part": "B",
+      "source_sha256": "248637fba42a41c9dcdc532182a3900ee7624b16a8d2f66f1a6a7c543f47bcbc",
+      "aligned_sha256": "9f48bdb1ef9f56974ffbbb7de9eb5f84d5c600ae77e468fdbecb5ea4598c0646",
+      "source_hash_match": true,
+      "aligned_hash_match": true,
+      "bin_sha256": "edbb70f589db0bf99de8336a342167cffc82fa9813c8cc31acded909a173b6cd",
+      "bin_byte_identical": true,
+      "mesh_json_identical": true,
+      "image_json_identical": true,
+      "matrix_axis_scales": [
+        58.55242134546966,
+        58.55242134546966,
+        58.55242134546966
+      ],
+      "uniform_scale_within_1e-9": true
+    },
+    {
+      "part": "C",
+      "source_sha256": "48f2abe5cc12363500d74c86b9a92b9464b6c86f72a7c801d0d7a3a4a8f6695d",
+      "aligned_sha256": "5fffaf973e664d6479f88b561fd455c1d720b1ce0965306fc580ed0300c0e66d",
+      "source_hash_match": true,
+      "aligned_hash_match": true,
+      "bin_sha256": "099c7e18b2f24e01843b61c212d44f92dd516088806ac9edfb535cc438c2496a",
+      "bin_byte_identical": true,
+      "mesh_json_identical": true,
+      "image_json_identical": true,
+      "matrix_axis_scales": [
+        25.308199973212204,
+        25.308199973212204,
+        25.308199973212204
+      ],
+      "uniform_scale_within_1e-9": true
+    },
+    {
+      "part": "A-MV",
+      "source_sha256": "5abd3d5fc9f06a85372749f06b86d48fceab2bad9dca3e899d7cbd88efddb9e2",
+      "aligned_sha256": "b1ee5b302d5b312856d3159871762526a3a173deec3467c325f773c03a22fcd4",
+      "source_hash_match": true,
+      "aligned_hash_match": true,
+      "bin_sha256": "0321d3eee63c8e8c1e9bb7427b338ea6069e48bc9e0aa4005b1ede14d3de3c27",
+      "bin_byte_identical": true,
+      "mesh_json_identical": true,
+      "image_json_identical": true,
+      "matrix_axis_scales": [
+        70.46538410947238,
+        70.46538410947238,
+        70.46538410947238
+      ],
+      "uniform_scale_within_1e-9": true
+    }
+  ],
+  "reference_checks": [
+    {
+      "file": "model-sheet/A-west-north-v1.png",
+      "sha256": "e3b6ff3003ad9deabf95e6f24178ff422201dcc116147fb05bd0a4f4850e4504",
+      "viewed": true,
+      "svg_source_read": false
+    },
+    {
+      "file": "model-sheet/B-east-south-v2.png",
+      "sha256": "2eaf9668bbbf89064411c7f0829db119635474c7dc46efad812e967a69629b49",
+      "viewed": true,
+      "svg_source_read": false
+    },
+    {
+      "file": "model-sheet/C-low-division-wing-v1.png",
+      "sha256": "f1ac38ffee7c3117b2d9f03ba0f7266aa745f4c7a1b240b725a1bc043a5da4f9",
+      "viewed": true,
+      "svg_source_read": false
+    },
+    {
+      "file": "model-sheet/assembly-fit-plan-v2.png",
+      "sha256": "d852ddff9e882014ca823f54a3cfb249aa8bb1da68c2486647a7d34bb48b755a",
+      "viewed": true,
+      "svg_source_read": false
+    },
+    {
+      "file": "model-sheet/assembly-fit-plan-v2.svg",
+      "sha256": "5dd1bf2d41575699b23a3e03636003dfd7af6f0f8b3f306212d46ccf88c224ec",
+      "viewed": false,
+      "svg_source_read": true
+    },
+    {
+      "file": "technical-prep/original-alignment/measured-draft/tower-plan-draft.png",
+      "sha256": "25f6b77e3181a4f7efcb9deaef30790ef91da7bae4dee3ae25b01ad2eb330ee9",
+      "viewed": true,
+      "svg_source_read": false
+    }
+  ],
+  "comparison_choice": {
+    "preferred": "A-b / A-MV (three-reference original)",
+    "confidence": "moderate; source fidelity and structural rhythm preference, not assembly acceptance",
+    "source_fidelity": [
+      "A-MV keeps the tall, slender tower impression and three vertically separated square openings much better than A single-image. The source A image shows three openings on each of the visible tower faces; single-image A overall loses much of that rhythm, especially the nearest/right tower with only one obvious opening on the shown face.",
+      "A-MV has a more consistent four-tower spacing against the working plan: supplied mid-anchor residuals about 0.31/0.57 m versus A about 1.57/1.54 m. These are approximate identified center projections, not a full-footprint fit proof.",
+      "Both candidates preserve four towers, straight western run and northern return, crenellated open flat tower tops, corbels, base rings, slit openings and the overall source construction language. Neither is a precise reproduction of every source masonry/opening detail."
+    ],
+    "roughness_and_detail": "Both show softened/uneven stone and crenellation edges in the original 2M texture preview. A-MV has more conspicuous weather/crack-like markings and warped opening edges; A can look slightly cleaner at close range but has weaker source proportions/opening fidelity. No PBR material roughness conclusion can be drawn from Workbench TEXTURE proofs.",
+    "tower_crest": "Both retain open, paved tower platforms and crenellated parapets with projecting corbels. A-MV better preserves the tall source silhouette. Some crenels and corbels are irregular/rounded; neither is certified mechanically exact."
+  },
+  "view_findings": {
+    "A-overall.png": "Four towers present; lower/stockier than source and A-MV; lost/uneven opening counts on visible faces. Northern return present.",
+    "A-MV-overall.png": "Four taller towers, more consistent three-opening vertical rhythm, stronger source resemblance. Original generative waviness remains.",
+    "A-wall_crest.png": "Corbel line, walkway and tower parapet visible; stone edges and crenellation joins softened/irregular. This is an internal A wall-to-tower detail, not the A/B assembly join.",
+    "A-MV-wall_crest.png": "Corbel line and open platform retained, with uneven edges and crack-like markings. This is an internal A-MV wall-to-tower detail, not the A-MV/B assembly join.",
+    "A-B-C-assembly_top.png": "Eight distinct tower discs visible; smaller north court and larger south court retained. C crosses at approximately the second northern tower pair. Near joins appear in contact in plan; no watertightness proof.",
+    "A-B-C-assembly_oblique.png": "All eight towers distinguishable. C is visibly lower than enclosing walls. A side has lower-looking crest/tower silhouette than B; end-junction crest continuity remains visibly uneven.",
+    "A-MV-B-C-assembly_top.png": "Eight towers; straighter/more regular western four-tower line than A. North return is visibly skewed relative to B tower contact, with a projecting tip at the north-east connection. South contact appears overlapping in plan.",
+    "A-MV-B-C-assembly_oblique.png": "Eight towers; A-MV closer to B tower height and stronger source silhouette. North/south wall joins still show changed crest levels/angles and require local contact measurements. C low silhouette is clear, while roof ends disappear into inner tower/wall geometry."
+  },
+  "fit_assessment": {
+    "eight_towers": "PASS_visual_count_only: 4 western + 4 eastern, no duplicate end tower required in either assembly.",
+    "footprint": "QUALIFIED: overall intended asymmetric envelope is recognizable; B mid-tower center residuals about 3.28 and 2.39 m remain uncorrected. A-MV improves western spacing but cannot correct B with a uniform transform.",
+    "seams": "NOT_ACCEPTED: apparent contact in top projection is insufficient. The north A-MV return has a visible skewed/projecting terminal at B contact; both candidates show crest/angle changes at end joins. No claim that all seam gaps are closed or surfaces matched.",
+    "wall_crest_1_5m_gate": "NOT_PROVEN: provided object heights A16.70/B18.45/A-MV19.16 m yield bounding-height differences 1.75 m (A-B) and 0.71 m (A-MV-B), but these are not measurements of corresponding crest surfaces at either join. A/B difference is an additional concern. Dedicated end-join samples/projection measurements are required for the <=1.5 m gate. Neither wall_crest PNG depicts an A/B end seam.",
+    "C_low_vs_outer_walls": "PASS_visual_relative_height_only: C is clearly below the wall crests in both oblique assemblies (supplied C bound about12.02 m). Fit-plan ~24/~13 labels are concept values, not validation of these aligned originals.",
+    "C_roof_contacts": "NOT_ACCEPTED: roof ends meet/disappear into the inward faces of the second northern tower pair. Top/oblique images do not establish clean roof-to-wall junctions, absence of penetration, exact side contact or hidden underside continuity. Treat C as optional/unaccepted until local contact proof; do not certify a clean joined assembly.",
+    "visible_open_gap": "No large unambiguous through-gap is evident in these eight proofs. The skewed north terminal, crest steps and embedded C endpoints prevent a seam pass; absence of an obvious background strip is not geometric closure proof."
+  },
+  "scale_warning": {
+    "working_outer_envelope_m": 66,
+    "meaning": "Commissioned working exterior-envelope scale only. It is not the historical 66.4 m tower-center dimension and is not the approximately77 m historical exterior envelope.",
+    "transforms": "Uniform root scale/rotation/translation preserve each source original geometry proportion. BIN, mesh and image JSON equality verified; candidates are aligned copies, not corrected meshes."
+  },
+  "can_deliver_to_LAV": [
+    "Original 2M/8K textured assets and hash-verified aligned candidates as technical source/provisional fit material.",
+    "All eight verified Workbench TEXTURE PNG proofs, plan/reference evidence and this explicit unresolved-fit report.",
+    "A-MV recommended as the preferred western-source candidate for subsequent local fit/crest validation; A remains comparison backup.",
+    "No additional decimation from this QA; technical optimization belongs to LAV."
+  ],
+  "not_proven": [
+    "Final clean eight-tower joined mesh or watertight/manifold topology.",
+    "Both end joins within <=1.5 m corresponding wall-crest tolerance.",
+    "Clean C roof/sidewall contacts without hidden intersections.",
+    "Historical survey accuracy, exact complete footprint, exact openings, structural construction or full-surface exactness.",
+    "PBR final appearance, runtime performance, game integration, receiver/owner acceptance, publication or mass-production gate opening."
+  ],
+  "gates": {
+    "technical_source_handoff_possible_with_caveats": true,
+    "joined_assembly_accepted": false,
+    "C_accepted": false,
+    "owner_review_complete": false,
+    "game_integrated": false,
+    "mass_gate_open": false
+  }
+}

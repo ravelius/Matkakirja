@@ -1,0 +1,376 @@
+{
+  "status": "ALIGNED_CANDIDATES_RENDER_QA_PENDING",
+  "geometryAndTexturesUnchanged": true,
+  "heavyJob": false,
+  "method": "JSONroottransform+BINCOPYonly;noBlender,meshedit,bake,render",
+  "assemblyWorkingLongEnvelope": 66,
+  "originalGeometryProportionsPreserved": true,
+  "originalFilesUnchanged": true,
+  "parts": [
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/A/original.glb",
+      "source_sha256": "9410d02ae15b00a584361b3ec0f25ccbe25a3fb89d355aff1e9c30b84fdee22b",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/technical-prep/original-alignment/aligned-candidates/A.glb",
+      "output_sha256": "ca907b5f54cb130567ef3e9a742f7e29ab79caf3fc1b559447b8004aceaf6ef2",
+      "source_and_output_bin_sha256": "b0f94c17733685ac6d5bf50b1f25379efd90b39b00bddf5d1f33cbec7e90e961",
+      "bin_byte_identical": true,
+      "mesh_and_image_json_identical": true,
+      "transform": {
+        "source_sha256": "9410d02ae15b00a584361b3ec0f25ccbe25a3fb89d355aff1e9c30b84fdee22b",
+        "coordinate_system": "X east, Y up, Z south; metres",
+        "matrix_column_major": [
+          68.3339366654296,
+          0,
+          -3.8210133636065957,
+          0,
+          0,
+          68.44068266257872,
+          0,
+          0,
+          3.8210133636065957,
+          0,
+          68.3339366654296,
+          0,
+          -7.127118793306803,
+          -0.0,
+          -0.45278457803543404,
+          1
+        ],
+        "measured_anchors": [
+          {
+            "name": "A-tower-1-N-to-S",
+            "source_xyz": [
+              -0.08318305850028991,
+              0,
+              -0.4178207037846247
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              -28.686274509803923
+            ],
+            "evidence": "A-top.png center pixel(158, 884), approx+-2px; targetplan(170, 120) working66m envelope",
+            "planResidualM": 0.0,
+            "residual_m": 3.972054645195637e-15
+          },
+          {
+            "name": "A-tower-2-N-to-S",
+            "source_xyz": [
+              -0.09842055492930941,
+              0,
+              -0.11415916780630747
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              -9.447058823529412
+            ],
+            "evidence": "A-top.png center pixel(144, 605), approx+-2px; targetplan(170, 343) working66m envelope",
+            "planResidualM": 1.5739045887155272,
+            "residual_m": 1.5739045887155263
+          },
+          {
+            "name": "A-tower-3-N-to-S",
+            "source_xyz": [
+              -0.11365805135832892,
+              0,
+              0.1546738049056795
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              9.015686274509804
+            ],
+            "evidence": "A-top.png center pixel(130, 358), approx+-2px; targetplan(170, 557) working66m envelope",
+            "planResidualM": 1.5388766591078238,
+            "residual_m": 1.5388766591078238
+          },
+          {
+            "name": "A-tower-4-N-to-S",
+            "source_xyz": [
+              -0.12998394038942124,
+              0,
+              0.4191532072093752
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              28.686274509803923
+            ],
+            "evidence": "A-top.png center pixel(115, 115), approx+-2px; targetplan(170, 785) working66m envelope",
+            "planResidualM": 1.7763568394002505e-15,
+            "residual_m": 1.7763568394002505e-15
+          }
+        ],
+        "review_note": "Planar alignment candidate from four visually identified tower-center sample projections. Uniform transform only. Working66m exterior envelope from commissioning instruction, not historical tower-center measurement. Ground=0. Original proportions preserved; A16.70m/B18.45m/A-MV19.16m heights differ. Same-angle rendered appearance,wallcrest difference,seams and8towerassembly NOT YET ACCEPTED."
+      },
+      "warning": "Matrix and anchors are operator supplied; fit, 8 towers and footprint require visual QA."
+    },
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/B/original.glb",
+      "source_sha256": "248637fba42a41c9dcdc532182a3900ee7624b16a8d2f66f1a6a7c543f47bcbc",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/technical-prep/original-alignment/aligned-candidates/B.glb",
+      "output_sha256": "9f48bdb1ef9f56974ffbbb7de9eb5f84d5c600ae77e468fdbecb5ea4598c0646",
+      "source_and_output_bin_sha256": "edbb70f589db0bf99de8336a342167cffc82fa9813c8cc31acded909a173b6cd",
+      "bin_byte_identical": true,
+      "mesh_and_image_json_identical": true,
+      "transform": {
+        "source_sha256": "248637fba42a41c9dcdc532182a3900ee7624b16a8d2f66f1a6a7c543f47bcbc",
+        "coordinate_system": "X east, Y up, Z south; metres",
+        "matrix_column_major": [
+          48.645430267149976,
+          0,
+          -32.588466664469806,
+          0,
+          0,
+          58.55242134546966,
+          0,
+          0,
+          32.588466664469806,
+          0,
+          48.645430267149976,
+          0,
+          3.3265516547089655,
+          -0.0,
+          4.152557539684111,
+          1
+        ],
+        "measured_anchors": [
+          {
+            "name": "B-tower-1-N-to-S",
+            "source_xyz": [
+              0.3849152263667849,
+              0,
+              -0.4172033203310437
+            ],
+            "target_xyz": [
+              8.454901960784314,
+              0,
+              -28.686274509803923
+            ],
+            "evidence": "B-top.png center pixel(835, 883), approx+-2px; targetplan(435, 120) working66m envelope",
+            "planResidualM": 0.0,
+            "residual_m": 1.7763568394002505e-15
+          },
+          {
+            "name": "B-tower-2-N-to-S",
+            "source_xyz": [
+              0.3054105944765939,
+              0,
+              -0.03492762453026238
+            ],
+            "target_xyz": [
+              14.407843137254902,
+              0,
+              -9.447058823529412
+            ],
+            "evidence": "B-top.png center pixel(762, 532), approx+-2px; targetplan(504, 343) working66m envelope",
+            "planResidualM": 3.2785404503536273,
+            "residual_m": 3.27854045035363
+          },
+          {
+            "name": "B-tower-3-N-to-S",
+            "source_xyz": [
+              0.14422312160333006,
+              0,
+              0.1981407484081057
+            ],
+            "target_xyz": [
+              14.407843137254902,
+              0,
+              9.015686274509804
+            ],
+            "evidence": "B-top.png center pixel(614, 318), approx+-2px; targetplan(504, 557) working66m envelope",
+            "planResidualM": 2.392799008737675,
+            "residual_m": 2.3927990087376716
+          },
+          {
+            "name": "B-tower-4-N-to-S",
+            "source_xyz": [
+              -0.14330047865708667,
+              0,
+              0.4083379258712133
+            ],
+            "target_xyz": [
+              9.662745098039215,
+              0,
+              28.686274509803923
+            ],
+            "evidence": "B-top.png center pixel(350, 125), approx+-2px; targetplan(449, 785) working66m envelope",
+            "planResidualM": 1.1916163935586911e-14,
+            "residual_m": 1.1916163935586911e-14
+          }
+        ],
+        "review_note": "Planar alignment candidate from four visually identified tower-center sample projections. Uniform transform only. Working66m exterior envelope from commissioning instruction, not historical tower-center measurement. Ground=0. Original proportions preserved; A16.70m/B18.45m/A-MV19.16m heights differ. Same-angle rendered appearance,wallcrest difference,seams and8towerassembly NOT YET ACCEPTED."
+      },
+      "warning": "Matrix and anchors are operator supplied; fit, 8 towers and footprint require visual QA."
+    },
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/C/original.glb",
+      "source_sha256": "48f2abe5cc12363500d74c86b9a92b9464b6c86f72a7c801d0d7a3a4a8f6695d",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/technical-prep/original-alignment/aligned-candidates/C.glb",
+      "output_sha256": "5fffaf973e664d6479f88b561fd455c1d720b1ce0965306fc580ed0300c0e66d",
+      "source_and_output_bin_sha256": "099c7e18b2f24e01843b61c212d44f92dd516088806ac9edfb535cc438c2496a",
+      "bin_byte_identical": true,
+      "mesh_and_image_json_identical": true,
+      "transform": {
+        "source_sha256": "48f2abe5cc12363500d74c86b9a92b9464b6c86f72a7c801d0d7a3a4a8f6695d",
+        "coordinate_system": "X east, Y up, Z south; metres",
+        "matrix_column_major": [
+          25.308199973212204,
+          0,
+          0,
+          0,
+          0,
+          25.308199973212204,
+          0,
+          0,
+          0,
+          0,
+          25.308199973212204,
+          0,
+          -0.0,
+          -0.0,
+          -10.000773287773804,
+          1
+        ],
+        "measured_anchors": [
+          {
+            "name": "westbuildingedge",
+            "source_xyz": [
+              -0.4899597764015198,
+              0,
+              3.055483102798462e-05
+            ],
+            "target_xyz": [
+              -12.4,
+              0,
+              -10
+            ],
+            "evidence": "Sourceaccessor edge;targetworking interior span from assembly-fit-plan with0.7m contact allowance; fitpending",
+            "residual_m": 0.0
+          },
+          {
+            "name": "eastbuildingedge",
+            "source_xyz": [
+              0.4899597764015198,
+              0,
+              3.055483102798462e-05
+            ],
+            "target_xyz": [
+              12.4,
+              0,
+              -10
+            ],
+            "evidence": "Sourceaccessoredge;planinteriorcontact; fitpending",
+            "residual_m": 0.0
+          }
+        ],
+        "review_note": "C candidate width24.8m centeredatZ-10,uniformscale;height about12.02m. Clearly lower thanouterwalls. Sidewall contacts/roofintersections notaccepted; omit ifrenderedfitunclean perorder."
+      },
+      "warning": "Matrix and anchors are operator supplied; fit, 8 towers and footprint require visual QA."
+    },
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/tripo/A-MV/original.glb",
+      "source_sha256": "5abd3d5fc9f06a85372749f06b86d48fceab2bad9dca3e899d7cbd88efddb9e2",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bastilji-2465-2469-20261116/technical-prep/original-alignment/aligned-candidates/A-MV.glb",
+      "output_sha256": "b1ee5b302d5b312856d3159871762526a3a173deec3467c325f773c03a22fcd4",
+      "source_and_output_bin_sha256": "0321d3eee63c8e8c1e9bb7427b338ea6069e48bc9e0aa4005b1ede14d3de3c27",
+      "bin_byte_identical": true,
+      "mesh_and_image_json_identical": true,
+      "transform": {
+        "source_sha256": "5abd3d5fc9f06a85372749f06b86d48fceab2bad9dca3e899d7cbd88efddb9e2",
+        "coordinate_system": "X east, Y up, Z south; metres",
+        "matrix_column_major": [
+          38.54182264065336,
+          0,
+          -58.99066252579219,
+          0,
+          0,
+          70.46538410947238,
+          0,
+          0,
+          58.99066252579219,
+          0,
+          38.54182264065336,
+          0,
+          -11.412085275148145,
+          -0.0,
+          -3.812770559807216,
+          1
+        ],
+        "measured_anchors": [
+          {
+            "name": "A-MV-tower-1-N-to-S",
+            "source_xyz": [
+              0.27225411434968316,
+              0,
+              -0.22866208096345264
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              -28.686274509803923
+            ],
+            "evidence": "A-MV-top.png center pixel(750, 879), approx+-2px; targetplan(170, 120) working66m envelope",
+            "planResidualM": 0.0,
+            "residual_m": 1.7763568394002505e-15
+          },
+          {
+            "name": "A-MV-tower-2-N-to-S",
+            "source_xyz": [
+              0.039243764281272964,
+              0,
+              -0.0794919035832087
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              -9.447058823529412
+            ],
+            "evidence": "A-MV-top.png center pixel(536, 742), approx+-2px; targetplan(170, 343) working66m envelope",
+            "planResidualM": 0.3131210415891868,
+            "residual_m": 0.3131210415891868
+          },
+          {
+            "name": "A-MV-tower-3-N-to-S",
+            "source_xyz": [
+              -0.16872341732184093,
+              0,
+              0.05987877309322359
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              9.015686274509804
+            ],
+            "evidence": "A-MV-top.png center pixel(345, 614), approx+-2px; targetplan(170, 557) working66m envelope",
+            "planResidualM": 0.568070095787913,
+            "residual_m": 0.5680700957879131
+          },
+          {
+            "name": "A-MV-tower-4-N-to-S",
+            "source_xyz": [
+              -0.4093556012709936,
+              0,
+              0.21667078435420994
+            ],
+            "target_xyz": [
+              -14.407843137254902,
+              0,
+              28.686274509803923
+            ],
+            "evidence": "A-MV-top.png center pixel(124, 470), approx+-2px; targetplan(170, 785) working66m envelope",
+            "planResidualM": 3.552713678800501e-15,
+            "residual_m": 3.972054645195637e-15
+          }
+        ],
+        "review_note": "Planar alignment candidate from four visually identified tower-center sample projections. Uniform transform only. Working66m exterior envelope from commissioning instruction, not historical tower-center measurement. Ground=0. Original proportions preserved; A16.70m/B18.45m/A-MV19.16m heights differ. Same-angle rendered appearance,wallcrest difference,seams and8towerassembly NOT YET ACCEPTED."
+      },
+      "warning": "Matrix and anchors are operator supplied; fit, 8 towers and footprint require visual QA."
+    }
+  ],
+  "receiverDelivered": false,
+  "gameIntegrated": false,
+  "remaining": "22\u201324EET resourcegatedrenderQA,8towers/seams/heightchecks,A-MVchoice"
+}

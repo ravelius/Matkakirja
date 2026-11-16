@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "buildingKey": "paris-grand-chatelet-late1802-2492",
+  "reviewer": "IndependentGC2492 visual QA",
+  "reviewedAt": "2026-11-16T20:05:28.399991+00:00",
+  "status": "VISIBLE_MAIN_FORM_PASS_WITH_GAPS_PENDING_PT_KK_REVIEW",
+  "mainForm": {
+    "status": "PASS_WITH_GAPS",
+    "scope": "Visible north facade and recognisable late-phase silhouette only; not full-complex approval",
+    "findings": [
+      {
+        "criterion": "Dominant northeast round tower on image LEFT, grounded",
+        "result": "PASS",
+        "evidence": "One broad round left tower runs to ground and dominates the small portal turrets; no four equal corner-tower scheme."
+      },
+      {
+        "criterion": "Two small suspended corbelled portal turrets",
+        "result": "PASS",
+        "evidence": "Both narrow shafts taper to distinct pointed corbels high above ground, near the pointed portal-head zone. Lower wall is visible below them; neither becomes a full-height grounded cylinder."
+      },
+      {
+        "criterion": "Pointed through-portal and clock",
+        "result": "PASS",
+        "evidence": "Pointed entrance, clock and stacked central openings reproduce the G4057 frontage arrangement; street surface continues into the portal."
+      },
+      {
+        "criterion": "Asymmetry and unequal roof/tower roles",
+        "result": "PASS_WITH_GAPS",
+        "evidence": "Large left tower and taller plain right front block remain unequal, with varied roofs and one slender rear turret. Exact hidden roof topology and rear turret placement are interpretations."
+      },
+      {
+        "criterion": "Irregular whole-complex footprint",
+        "result": "NOT_DEMONSTRATED",
+        "evidence": "Near-frontal elevated view exposes parts of two rear wings but hides their full bases and outside perimeter. Diagonal NW edge, stepped east perimeter and projecting SW wing cannot be positively verified."
+      },
+      {
+        "criterion": "Narrow north-south through-street",
+        "result": "PARTIAL",
+        "evidence": "Portal passage and a narrow gap between rear roof masses are visible, consistent with a split complex; complete north-to-south continuity, approximate 4 m relation and unequal block plan cannot be measured or confirmed from this single raster."
+      }
+    ]
+  },
+  "phaseConfidence": {
+    "level": "MEDIUM_APPROXIMATE",
+    "target": "Late Giraud1802 surviving form, PT2492",
+    "basis": "Visible frontage agrees with selected late-phase G4057 evidence. Giraud35 is used for plan constraints and Giraud37 for tower/section distinctions. No older Silvestre geometry or previous generated candidate was used as evidence.",
+    "limitations": "Frontage agreement does not establish every mass as surviving in 1802. Hidden roofscape and plan remain interpreted; no independently measured height or scale claim."
+  },
+  "gaps": [
+    {
+      "severity": "MAJOR_UNRESOLVED",
+      "type": "OCCLUSION",
+      "item": "Full irregular plan, diagonal NW edge, stepped eastern boundary and SW wing are not visible enough to establish agreement. This is insufficient evidence for complete-complex acceptance, not an automatic form failure."
+    },
+    {
+      "severity": "MAJOR_RISK",
+      "type": "VISIBLE_SIMPLIFICATION",
+      "item": "Rear roof masses read as two long, largely parallel wings with regular facade/window and chimney rhythms. This may regularize Giraud35 complexity; the visible single view cannot prove that the hidden perimeter is invented or correct."
+    },
+    {
+      "severity": "MINOR_INTERPRETATION",
+      "type": "UNSOURCED_DETAIL",
+      "item": "Rear roof intersections, repetitive chimney placements, rear windows and inferred slender stair turret are not directly established by the three supplied rasters."
+    },
+    {
+      "severity": "MINOR_INTERPRETATION",
+      "type": "SOURCE_OCCLUSION",
+      "item": "Low facade additions and left tower base in G4057 are partly obscured by market structures; the isolated candidate necessarily resolves some hidden surfaces."
+    }
+  ],
+  "composition": {
+    "singleCandidate": true,
+    "entireVisibleModelInFrame": true,
+    "neutralBackground": true,
+    "nearFrontalInsteadOfRequestedThreeQuarter": true,
+    "wholeComplexVerified": false,
+    "noDemonstratedDungeonLevelsLiftedAboveGround": true
+  },
+  "output": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/grand-chatelet-late1802-2492-original.png",
+    "expectedSHA256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71",
+    "actualSHA256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71",
+    "hashMatches": true,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "actualImageViewed": true
+  },
+  "referenceChecks": [
+    {
+      "id": "giraud35",
+      "path": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/esikuvat/chatelet/giraud-35.jpg",
+      "expectedSHA256": "3b0ef21b022720e78538016c507321558c0184cfa3dca04c94f985e5f500e1e3",
+      "actualSHA256": "3b0ef21b022720e78538016c507321558c0184cfa3dca04c94f985e5f500e1e3",
+      "hashMatches": true,
+      "dimensions": [
+        4472,
+        3674
+      ],
+      "actualImageViewed": true,
+      "historicalReference": true,
+      "previousGeneratedCandidate": false,
+      "inspection": "Actual clean sheet viewed. Two unequal irregular blocks and narrow intervening street are visible. Pink/yellow projected redevelopment layers are not treated as a literal complete extant perimeter. This view gives no direct roof reconstruction."
+    },
+    {
+      "id": "giraud37",
+      "path": "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/esikuvat/chatelet/giraud-37.jpg",
+      "expectedSHA256": "f93df5bbaa550ac7dea0db0f192380aa916cf1d964dca3cce6799a1c178981cd",
+      "actualSHA256": "f93df5bbaa550ac7dea0db0f192380aa916cf1d964dca3cce6799a1c178981cd",
+      "hashMatches": true,
+      "dimensions": [
+        4408,
+        3674
+      ],
+      "actualImageViewed": true,
+      "historicalReference": true,
+      "previousGeneratedCandidate": false,
+      "inspection": "Actual clean sheet viewed. Tower plan plus elevation/section and dungeon vault levels; no pointed north entrance facade is shown. Does not authorize lifting underground levels above grade; exact street datum/direction remains unresolved."
+    },
+    {
+      "id": "G4057",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-ulko-2233-20261115/references/A-G4057.jpg",
+      "expectedSHA256": "bf0594b6bfef83a49df8a37429162f7144f59ef55cc2d5ec593dfc201dd04877",
+      "actualSHA256": "bf0594b6bfef83a49df8a37429162f7144f59ef55cc2d5ec593dfc201dd04877",
+      "hashMatches": true,
+      "dimensions": [
+        3103,
+        2410
+      ],
+      "actualImageViewed": true,
+      "historicalReference": true,
+      "previousGeneratedCandidate": false,
+      "inspection": "Actual print viewed. Large grounded round tower on image left, asymmetrical front, pointed portal and clock, two much narrower corbelled gate turrets ending high above the street; roof/market occlusion limits base and rear evidence."
+    }
+  ],
+  "toolInputVerification": {
+    "status": "SAVED_RECORDS_CONSISTENT",
+    "referenceCount": 3,
+    "tool": "image_gen.imagegen",
+    "callsUsedRecorded": 1,
+    "exactArgumentsMatchInputAndPreflight": true,
+    "referenceOrderMatchesResult": true,
+    "promptMatchesSavedPrompt": true,
+    "inputRecordHashMatches": true,
+    "preflightHashMatches": true,
+    "generatedOriginalHashMatchesCopy": true,
+    "onlyHistoricalRastersListedAsInputs": true,
+    "limitation": "Checked local saved input/preflight/tool records and actual byte hashes; independent QA did not invoke generation and does not independently observe provider-side processing."
+  },
+  "rights": {
+    "status": "LOCAL_RECORDS_ONLY",
+    "note": "Existing supplied PD/CC0 eligibility records acknowledged; no fresh online rights verification performed."
+  },
+  "gates": {
+    "ptReview": "PENDING",
+    "kkReview": "PENDING",
+    "ownerApproved": false,
+    "wholeComplexApproved": false,
+    "automaticRetryAuthorized": false,
+    "tripo": "CLOSED",
+    "massTripo": "CLOSED",
+    "bastille": "CLOSED",
+    "game": "CLOSED"
+  },
+  "nextAction": "Present this exact candidate with the visible-frontage pass and full-plan limitations for PT/KK review. Preserve the one-call boundary; no regeneration or downstream production from this QA."
+}

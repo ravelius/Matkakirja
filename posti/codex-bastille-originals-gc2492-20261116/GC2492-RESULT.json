@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "schemaVersion": 1,
+      "buildingKey": "paris-grand-chatelet-late1802-2492",
+      "name": "Grand Châtelet",
+      "phaseLabel": "Late Giraud1802 surviving form",
+      "scopeLabel": "whole-building candidate; rear footprint incompletely assessable",
+      "completedWholeComplex": false,
+      "status": "IMAGE_PREPARED",
+      "outputOriginal": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/grand-chatelet-late1802-2492-original.png",
+      "outputSHA256": "969a5ffce7bda7e49d02b9123b414408bd51e5f3b319962c39e0e032d2bcdb71",
+      "sourceMetadataPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/source-audit2492/source-index.json",
+      "historicalRefsActuallyPassed": [
+        "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/esikuvat/chatelet/giraud-35.jpg",
+        "/Volumes/T7 4TB/koodaus/proto-3d/_tyo/nayttamoseppa/hologrammi/esikuvat/chatelet/giraud-37.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-ulko-2233-20261115/references/A-G4057.jpg"
+      ],
+      "inputRecordPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/imagegen-input.json",
+      "preflightResultPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/preflight-result.json",
+      "producerQAPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/grand-chatelet-2237-20261115/model-image2492/producer-qa.md",
+      "independentQAPath": null,
+      "visualMatch": null,
+      "historicalConfidence": "approximate",
+      "dominantGeometryGaps": [
+        "Near frontal output does not expose full irregular footprint, diagonal NW edge, stepped east perimeter or SW wing",
+        "Rear blocks appear parallel/regular; comparison to Giraud35 requires independent review",
+        "Roof topology and rear stair turret interpreted"
+      ],
+      "minorSimplifications": [
+        "Hidden front surfaces behind G4057 market occluders reconstructed plainly",
+        "Rear fenestration and roof detail unverified"
+      ],
+      "ownerApproved": false,
+      "kkApproved": false,
+      "tripoStarted": false,
+      "callsUsed": 1,
+      "jobIds": [],
+      "cost": null,
+      "startedAt": "2026-11-16T20:01:18.556995+00:00",
+      "estimatedFinish": "2026-11-16T20:06:18.556995+00:00",
+      "completedAt": "2026-11-16T20:02:16.156543+00:00",
+      "nextAction": "Independent QA must inspect original and all three historical references; no automatic retry or downstream use",
+      "sharedQueueMutated": false,
+      "sourceAndPriorCandidatesPreserved": true
+    }
+  ]
+}
