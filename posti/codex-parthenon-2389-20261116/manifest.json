@@ -1,0 +1,54 @@
+{
+  "task": 2389,
+  "sourceTask": 2390,
+  "status": "CORRECTED_IMAGE_READY_TRIPO_BROWSER_BLOCKED",
+  "sourceCommit": "e431ae3f9e61c29908288ef5beb51998e9a7eee3",
+  "sourceBlobSha": "c73c25ec7c85b03100774617db46e52a27eb966f",
+  "southSourceCommit": "9639d2748c5bebca7d6f3247ca98d44a0fcb57fd",
+  "sourceReadFully": true,
+  "referenceImagesViewed": true,
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "tripoCallsAllowed": 1,
+  "tripoCallsStarted": 0,
+  "jobId": null,
+  "cost": null,
+  "costStatus": "ImageGen price/provider job ID not exposed; no Tripo credits spent",
+  "startedAt": "2026-11-16T07:51:40.457616+00:00",
+  "estimatedCompleteAt": "2026-11-16T07:56:40.457616+00:00",
+  "previousNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2365-parthenon/parthenon-2365-native.png",
+  "previousNativeSha256": "b7622503dd8665957973b00536a75ec6078fa2a2f3c682aa13d41c24f23fa55b",
+  "sourceFiles": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-2389-20261116/sources/parthenon-etela-lahdekuva.jpg",
+      "sha256": "6c4e3b3d5f87a41bf4ea2f206cc492689ee89bd4beff0a9245345f794f28a206"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-2389-20261116/sources/parthenon-huomiot.md",
+      "sha256": "f869fece08a9a4677c378f284a3f3ff797ac99bda40c887ea600e8dd21247700"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-2389-20261116/sources/parthenon.jpg",
+      "sha256": "98a861c18fe884a33198bfac436a5f2885d443f652b1739b15137a464f200765"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-2389-20261116/sources/parthenon.md",
+      "sha256": "96284a19531ad2712c579b4d3501790193387aed08a914d36c764ef2b348a7d5"
+    }
+  ],
+  "productionActive": false,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "imageArtifactId": "exec-9212ad38-b1ff-47be-8194-4adce3e4b03a",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-2389-20261116/parthenon-2389-native.png",
+  "nativeSha256": "d38c709f7b4f009c9e9cdc2384d8017596bdb3d523b3e2b849ccb92ccfeadda0",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-2389-20261116/delivery-review/parthenon-2389-review.jpg",
+  "imageCompletedAt": "2026-11-16T07:52:35.760399+00:00",
+  "qaStatus": "WARNING",
+  "qaRoot": "qa-root.md",
+  "qaIndependent": "qa-independent.md"
+}
