@@ -1,0 +1,27 @@
+{
+  "sheet": "C",
+  "taskNumber": 2355,
+  "reviewedAt": "2026-11-16T07:08:12.778330+00:00",
+  "selectedAttempt": 2,
+  "status": "REVIEW_REQUIRED_SCALE_AND_SPACING_DEVIATIONS",
+  "summaryFi": "Neljä erillistä esinettä: keskeltä suljetulla lasiovella varustettu pieniruutuinen väliseinä, sivulta nähty vuode vaaleine verhoineen, pystykaappi-tyyppinen kamiina savutorvineen sekä pieni pöytä, yksi kynttilä ja suljettu punainen kirja. A:n paperiteatterityyli, leikkuureunukset ja suorat jalustat säilyvät.",
+  "checks": {
+    "fourSeparateObjects": true,
+    "listedPropsPresent": true,
+    "sideOnBed": true,
+    "paleBorderAndStraightTabs": true,
+    "transparentGaps": true,
+    "landscape3to2": true,
+    "nativeUnedited": true,
+    "fullSpacingRequirementMet": false,
+    "exactCrossSheetScaleMet": false
+  },
+  "notes": [
+    "Molemmat sallitut otot käytetty. V2:ssa väliseinä on korkeampi ja esineet erillisiä. Ei kolmatta ottoa ilman uutta lähdekohtaista ohjetta.",
+    "Esineiden välit ovat edelleen vain noin 30–60 px, eivät A:n aikuisen olkapään levyiset. KK:n on arvioitava riittääkö leikattavuus; täyttä tilaushyvaksymistä ei merkitä.",
+    "Mittakaava arkkien välillä ei ole täsmällinen: väliseinä on noin 75 % arkin korkeudesta ja noin 1,5 kertaa A:n aikuisen leveys, ei lähteen hieman aikuista korkeampi ja kaksinkertainen leveys. Kalusteiden keskinäiset mittasuhteet vaativat KK/NS-arvion.",
+    "Lasi on kuvallisesti vaaleaa siniharmaata; sen puoliläpinäkyvyys ei erotu vaalean ja tumman alustan vertailussa. Taustan ja kalusteiden aukkojen läpinäkyvyys on tarkistettu.",
+    "Natiivi 1536 × 1024 px. Ei skaalausta, rajausta, retusointia tai alfan muuttamista.",
+    "Vain arviointitoimitus; KK-hyväksyntä, omistajahyväksyntä ja peliin kytkentä erillisiä."
+  ]
+}
