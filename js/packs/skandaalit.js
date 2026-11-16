@@ -193,48 +193,35 @@ export const SKANDAALIT = {
      */
     {
       id: 'klimtin-tiedekuntamaalaukset',
-      otsikko: 'Klimtin tiedekuntamaalaukset — yliopiston hylkäämä katto',
+      otsikko: 'Klimtin tiedekuntamaalaukset — kuvat, jotka eivät päätyneet kattoon',
       nimio: 'Klimtin maalaukset',
-      vuosi: '1900–1907',
+      vuosi: '1894–1945',
       paikka: 'Wienin yliopiston päärakennus',
       lat: 48.2131, lon: 16.3597,
-      kortti: 'Yliopisto tilasi taiteilijalta katon täydeltä tieteen riemuvoittoa '
-        + 'ja sai sen sijaan Klimtin näkemyksen — mikä oli professorien '
-        + 'mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta '
-        + 'sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset '
-        + 'valokuvat ja opetus tilaustöiden vaaroista.',
-      teksti: 'Yliopisto tilasi Gustav Klimtiltä 1894 juhlasalin kattoon kolme '
-        + 'suurta paneelia: Filosofian, Lääketieteen ja Oikeustieteen. Filosofia '
-        + 'esiteltiin maaliskuussa 1900 Wienin secession seitsemännessä '
-        + 'näyttelyssä ja Lääketiede vuotta myöhemmin kymmenennessä. Aiheeksi oli '
-        + 'sovittu valon voitto pimeydestä; Klimt maalasi ihmisjoukon '
-        + 'ajelehtimassa tyhjyydessä, ja Lääketieteessä terveyden jumalatar '
-        + 'Hygieia kääntää selkänsä ihmiskunnalle.\n\n'
-        + 'Kahdeksankymmentäseitsemän yliopiston opettajaa allekirjoitti '
-        + 'vastalauseen. Vuonna 1901 asiaan kutsuttiin virallinen syyttäjä, ja '
-        + 'kiistaa käsiteltiin Itävallan parlamentissa — ensimmäistä kertaa '
-        + 'taiteesta. Ministereistä puolusti vain opetusministeri. Kun Klimt '
-        + 'samana vuonna valittiin taideakatemian professoriksi, hallitus jätti '
-        + 'nimityksen vahvistamatta, eikä hän saanut enää koskaan opetusvirkaa.\n\n'
-        + 'Klimt irtisanoutui tilauksesta 3. huhtikuuta 1905 ja maksoi 30 000 '
-        + 'kruunun ennakon takaisin keräilijä August Ledererin tuella; Lederer sai '
-        + 'vastineeksi Filosofian. Valtio piti maalauksia omaisuutenaan, ja Klimt '
-        + 'sai pitää ne vasta uhattuaan noutajia haulikolla. Lääketieteen ja '
-        + 'Oikeustieteen osti 1911 Klimtin ystävä ja työtoveri Koloman Moser.\n\n'
-        + 'Vuonna 1943 kolmikko siirrettiin turvaan Immendorfin linnaan '
-        + 'Ala-Itävaltaan, ja toukokuussa 1945 linna paloi vetäytyvien joukkojen '
-        + 'sytyttämänä. Jäljellä ovat luonnokset ja kourallinen valokuvia — '
-        + 'Lääketieteestä yksi ainoa kuva koko teoksesta. Vuonna 2021 Googlen ja '
-        + 'Leopold-museon koneoppimiskokeilu arvasi maalauksille takaisin värit.',
-      lahde: 'en-Wikipedia "Klimt University of Vienna Ceiling Paintings". '
-        + 'Tarkistettu 2.9.2026.',
+      // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
+      // (87 professoria, syyttäjä 1901, Ledererin tuki, Moserin osto jne.) eivät täyttäneet kahden lähteen sääntöä.
+      kortti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
+        + 'tilaajana oli opetusministeriö. Taiteilija Gustav Klimt maalasi niistä '
+        + 'kolme, ja ne esittivät filosofiaa, lääketiedettä ja oikeustiedettä. Kuvia '
+        + 'moitittiin kovasti, ja yliopiston oman historiasivun mukaan professorit '
+        + 'vastustivat niitä jo 1900.'
+        + '\n\n'
+        + 'Maalaukset eivät koskaan päätyneet kattoon. Toukokuussa 1945, sodan viime '
+        + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
+        + 'tiedekuntakuvat tuhoutuivat. Jäljelle jäivät luonnokset ja mustavalkoiset '
+        + 'valokuvat.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
+        + 'syntynyt 14. heinäkuuta 1862. Hän aloitti opintonsa Wienin '
+        + 'taidekäsityökoulussa vasta 14-vuotiaana, vuonna 1876. Yliopiston uusi '
+        + 'päärakennus Ringillä ei ollut vielä valmis, sillä se avattiin vasta 1884. '
+        + 'Maalauksia ei ollut vielä edes tilattu, koska tilaus tuli vasta 1894.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere. Tarkistettu 16.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`,
-        lyhyt: 'Maaliapulainen yrittää lukea professorien kasvoilta, tuomitaanko Klimtin kattomaalaus.',
-        selite: 'Maaliapulainen pitää telineen köydestä kiinni ja yrittää lukea '
-          + 'professorien kasvoilta, onko vuosien työ juuri tuomittu. Yksi osoittaa '
-          + 'kattoon suuttuneena, toinen vaikenee ihastuksestaan — kiista on alkanut '
-          + 'ennen kuin kangas ehtii paikalleen.',
+        lyhyt: 'Professoreja ja maalaustelineitä Klimtin tiedekuntamaalausten kiistan ajalta.',
+        selite: 'Professoreja ja maalaustelineitä Klimtin tiedekuntamaalausten '
+          + 'kiistan ajalta. Kuva ei esitä yksittäistä tapahtumaa.',
         lahde: 'Matkakirjan havainnekuva. Faktat: University of Vienna — Gustav '
           + 'Klimt: Philosophy.',
         url: 'https://geschichte.univie.ac.at/de/bilder/gustav-klimt-die-philosophie-fakultatsbild',
@@ -244,7 +231,7 @@ export const SKANDAALIT = {
         vaihtoehdot: [
           'Ne ripustettiin lopulta yliopiston juhlasaliin',
           'Ne myytiin amerikkalaiselle keräilijälle',
-          'Niiden uskotaan tuhoutuneen linnan palossa sodan lopussa 1945',
+          'Ne tuhoutuivat Immendorfin linnan palossa toukokuussa 1945',
         ],
         oikea: 2,
       },
@@ -255,45 +242,32 @@ export const SKANDAALIT = {
      */
     {
       id: 'salieran-varkaus',
-      otsikko: 'Saliera — suola-astia joka katosi kolmeksi vuodeksi',
+      otsikko: 'Saliera — suolasirotin, joka katosi lähes kolmeksi vuodeksi',
       nimio: 'Saliera',
       vuosi: '2003–2006',
       paikka: 'Kunsthistorisches Museum, Wien',
       lat: 48.2036, lon: 16.3619,
-      kortti: 'Renessanssin kuuluisin suola-astia vietiin museosta '
-        + 'rakennustelineitä pitkin, ja hälytys kuitattiin tekniseksi viaksi. '
-        + 'Kolme vuotta kultainen Cellini makasi lyijyarkussa metsässä. '
-        + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
-        + 'ajan turvassa.',
-      teksti: 'Saliera on ainoa säilynyt Benvenuto Cellinin kultaveistos: '
-        + 'kullasta, emalista, eebenpuusta ja norsunluusta tehty pöytäkoriste '
-        + 'Ranskan kuninkaalle Frans I:lle, valmiina 1543. Se on 26 senttiä '
-        + 'korkea, ja jalustassa on laakerit, joilla astiaa vieritettiin pöydällä '
-        + 'vieraalta toiselle. Maa ja Meri istuvat vastakkain: suola tuli merestä, '
-        + 'pippuri maasta. Cellini kertoi omaelämäkerrassaan saaneensa työstä '
-        + 'tuhat scudoa; vuonna 1562 astia oli vähällä päätyä sulatettavaksi, '
-        + 'kuten useimmat aikansa kultatyöt.\n\n'
-        + 'Yöllä 11. toukokuuta 2003 mies nousi Kunsthistorisches Museumin '
-        + 'julkisivua peittäneitä remonttitelineitä pitkin ikkunaan. Hälytin soi, '
-        + 'mutta se kuitattiin vikailmoitukseksi, eikä varkautta huomattu ennen '
-        + 'kuin aamulla kahtakymmentä yli kahdeksan. Museo lupasi miljoonan euron '
-        + 'palkkion astian palauttamisesta.\n\n'
-        + 'Astia löytyi 21. tammikuuta 2006 lyijylaatikkoon suljettuna metsästä '
-        + 'Zwettlin kaupungin liepeiltä, yhdeksänkymmentä kilometriä Wienistä '
-        + 'pohjoiseen. Varas Robert Mang ilmoittautui itse poliisille, kun '
-        + 'valvontakameran kuvat oli julkaistu ja tuttavat olivat tunnistaneet '
-        + 'hänet niistä. Tuomioksi tuli neljä vuotta vankeutta.\n\n'
-        + 'Vakuutusarvoltaan Saliera on noin kuudenkymmenen miljoonan dollarin '
-        + 'esine, ja museo oli remontissa koko julkisivun mitalta. Hälytys oli '
-        + 'soinut ajallaan — kukaan vain ei uskonut sitä.',
-      lahde: 'en-Wikipedia "Cellini Salt Cellar". Tarkistettu 2.9.2026.',
+      // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
+      // (lyijylaatikko, tekninen vika, varkaan nimi, tuomion pituus ensimmäisessä oikeudenkäynnissä) eivät täyttäneet sääntöä.
+      kortti: 'Saliera on suolasirotin, jonka Benvenuto Cellini teki kullasta ja '
+        + 'emaljista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
+        + 'Kunsthistorisches Museumin mukaan se on Cellinin ainoa säilynyt kultatyö.'
+        + '\n\n'
+        + 'Yöllä vasten 11. toukokuuta 2003 varas kiipesi rakennustelineitä pitkin '
+        + 'Wienin museoon, jota kunnostettiin. Lähes kolme vuotta teoksesta ei '
+        + 'tiedetty mitään. Tammikuussa 2006 varas vei poliisin metsään lähelle '
+        + 'Zwettlin kaupunkia, ja Saliera löytyi laatikosta. Varas tuomittiin '
+        + 'viideksi vuodeksi vankeuteen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
+        + 'sillä se avattiin vasta 1891. Wien Geschichte Wikin mukaan keisarilliset '
+        + 'kokoelmat olivat tuolloin vielä eri paikoissa.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien. Tarkistettu 16.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus-photo-v1.jpg`,
-        lyhyt: 'Varas pakenee Saliera kainalossaan, kun museon hälytys kuitataan virheellisesti tekniseksi viaksi.',
-        selite: 'Varas pysähtyy märillä telineillä, kun punainen hälytysvalo '
-          + 'välähtää museon ikkunassa. Alhaalla sateenvarjon alla kulkeva ihminen '
-          + 'ei katso ylös — eikä vartiointikeskuskaan usko, että hälytys on '
-          + 'todellinen.',
+        lyhyt: 'Yöllinen varkaus Kunsthistorisches Museumin rakennustelineillä.',
+        selite: 'Yöllinen varkaus rakennustelineillä museon ikkunan luona. '
+          + 'Kuva ei esitä yksittäistä tapahtumahetkeä.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Kunsthistorisches Museum Wien '
           + '— statement on the theft.',
         url: 'https://www.presseportal.ch/de/pm/100000789/100462866',
@@ -302,7 +276,7 @@ export const SKANDAALIT = {
         kysymys: 'Mistä Saliera löytyi vuonna 2006?',
         vaihtoehdot: [
           'Sveitsiläisestä pankkiholvista',
-          'Metsään haudatusta lyijyarkusta',
+          'Laatikosta metsässä Zwettlin lähellä',
           'Antiikkihuutokaupasta Münchenistä',
         ],
         oikea: 1,

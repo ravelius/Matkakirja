@@ -5831,8 +5831,10 @@ export const KAUPUNKIKARTAT = {
        * Juttu on noston OMA teksti ja kuva sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki wien).
        */
+      // Tarinapaikka KK 17.11.2026 (Wienin 10 tarinapaikkaa, SK:n data-luonnos docs/raportit/wien-10-tarinapaikkaa-dataluonnos-20261116.md). Piste: Hochstrahlbrunnen, Schwarzenbergplatz (Wikidata Q1583230; WGW).
       {
-        nimi: 'Vuoristovesijohto', tyyppi: 'esine', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+        nimi: 'Vuoristovesijohto', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 48.1984, lon: 16.3760,
+        nosto: 'syvennys-wien-vesijohto',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -5847,12 +5849,13 @@ export const KAUPUNKIKARTAT = {
        * wien); tests/nostot-kartalla.test.mjs vertaa ne merkki
        * merkiltä.
        */
+      // Tarinapaikat KK 17.11.2026 (Wienin 10 tarinapaikkaa): jokaiselle `tarinapaikka` ja `merkki`.
       {
-        nimi: 'Klimtin maalaukset', tyyppi: 'taide', lat: 48.2131, lon: 16.3597,
+        nimi: 'Klimtin maalaukset', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'taide', lat: 48.2131, lon: 16.3597,
         nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       },
       {
-        nimi: 'Saliera', tyyppi: 'esine', lat: 48.2036, lon: 16.3619,
+        nimi: 'Saliera', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'esine', lat: 48.2036, lon: 16.3619,
         nosto: 'skandaali-salieran-varkaus',
       },
       /*
@@ -5863,20 +5866,24 @@ export const KAUPUNKIKARTAT = {
        * karttapaikka; juttu on sanatarkasti hetken teksti
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
-      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
+      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle. Piste 48,2039 / 16,3696 (KK 16.11.2026;
+      // Wikidata Q165636 ja WGW täsmäävät). NimiPuoli/siirto tarkistettava kuvasta (Valtionooppera noin 70 m etelään).
       {
-        nimi: 'Beethoven 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
+        nimi: 'Beethoven 1824', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2039, lon: 16.3696,
         nosto: 'hetki-beethoven-yhdeksas-1824',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
+      // Lipizzanit on vain noin 35 m päässä: nimiPuoli/siirto tarkistettava kuvasta (Mozart vasen, Lipizzanit oikea).
       {
-        nimi: 'Mozart 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
+        nimi: 'Mozart 1786', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // Piste 48,2153 / 16,3665: 1877 valmistunut pörssirakennus Schottenring 16 (KK 16.11.2026; Wikidata Q2568865 ja WGW täsmäävät).
+      // Vuoden 1873 väliaikainen pörssitalo (Schottenring 19) ei ole tarkalleen tässä.
       {
-        nimi: 'Wienin krahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
+        nimi: 'Wienin krahi 1873', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2153, lon: 16.3665,
         nosto: 'hetki-wienin-porssikrahi-1873',
         teksti: HISTORIAN_HETKET_ID.get('wienin-porssikrahi-1873').teksti,
       },
@@ -5889,22 +5896,28 @@ export const KAUPUNKIKARTAT = {
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js).
        */
+      // Nimi 'Praterin jättiratas' (KK 16.11.2026; ent. 'Rattaan kulmat'): kulmaväite poistui, ratas 1897, 1873 Rotunde.
       {
-        nimi: 'Rattaan kulmat', tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
+        nimi: 'Praterin jättiratas', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
         nosto: 'nosto-praterin-ratas',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // Piste 48,2075 / 16,3667 (KK 16.11.2026; Wikidata Q269273 ja WGW täsmäävät); ennen Hofburgin kartan pisteen kohdalla.
       {
-        nimi: 'Lipizzanit', tyyppi: 'esine', lat: 48.2064, lon: 16.3657,
+        nimi: 'Lipizzanit', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.2075, lon: 16.3667,
         nosto: 'nosto-lipizzanit',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
+      // Piste 48,1978 / 16,3661: Freihaustheaterin paikka (KK 16.11.2026; Wikidata Q673479 ja WGW Freihaus/Operngasse 26);
+      // aika 1791, koska teatteri ei toiminut 1873 (viimeinen esitys 1801). WGW:n oma teatterikoordinaatti on 149 m koilliseen.
       {
-        nimi: 'Taikahuilu', tyyppi: 'henkilo', lat: 48.1981, lon: 16.3653,
+        nimi: 'Taikahuilu', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.1978, lon: 16.3661,
         nosto: 'nosto-taikahuilu-wiedenissa',
       },
+      // Piste 48,2135 / 16,3768: Dianabadin paikka (Obere Donaustraße 93; WGW ja Wikidata Q1208912 täsmäävät, KK 16.11.2026).
+      // Vanhan Diana-Salin tarkka paikka korttelin sisällä tarkistettava kuvasta. Straussin patsas (Stadtpark, 1921) vain kuvana.
       {
-        nimi: 'Tonava kaunoinen', tyyppi: 'ilmio', lat: 48.2046, lon: 16.3793,
+        nimi: 'Tonava kaunoinen', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'ilmio', lat: 48.2135, lon: 16.3768,
         nosto: 'nosto-tonava-kaunoinen',
       },
     ],

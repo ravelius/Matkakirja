@@ -788,24 +788,23 @@ export const EUROOPAN_KADONNEET = {
         + 'toukokuuta 1814 ja Chopinin Wienin-debyytti 1829. Huipentuma oli 7. toukokuuta 1824: Beethovenin '
         + 'yhdeksännen sinfonian kantaesitys, jossa soitti tavallista suurempi '
         + 'orkesteri. Viimeinen ooppera, Rossinin Wilhelm Tell, esitettiin 17. huhtikuuta 1870, ja uusi '
-        + 'hovioopperatalo oli avattu jo 1869. Kärntnertor purettiin, ja sen tontilla on nykyään Hotel '
+        + 'hovioopperatalo oli avattu jo 1869. Talo purettiin myöhemmin, ja sen tontilla on nykyään Hotel '
         + 'Sacher. Isoisän matkavuonna 1873 teatteri oli jo suljettu.',
-      lahde: 'en-Wikipedia ”Theater am Kärntnertor”; de-Wikipedia ”Theater am Kärntnertor”; en-Wikipedia '
-        + '”Symphony No. 9 (Beethoven)”, osio ”Premiere” (tarkistettu 31.10.2026).',
+      lahde: 'Österreichisches Musiklexikon online, ”Kärntnertortheater”; habsburger.net, ”Die Heimstatt der Oper: Das '
+        + 'Kärntnertortheater”; Beethoven-Haus Bonn ja A. W. Thayer (yhdeksännen sinfonian kantaesitys); '
+        + 'tarkistettu 16.11.2026.',
       kuva: 'ihme-karntnertor-loistoaika.jpg',
-      lyhyt: 'Toukokuun 7. päivänä 1824 kuuroutunut säveltäjä antaa tahdit lavan vieressä istuen, ja '
-        + 'loppusuosion aikana laulaja kääntää hänet yleisöön päin; vajaat viisikymmentä vuotta myöhemmin '
-        + 'teatteri puretaan.',
+      lyhyt: 'Toukokuun 7. päivänä 1824 kuuroutunut säveltäjä on lavalla ja osoittaa tempot Yhdeksännen sinfonian '
+        + 'kantaesityksessä; huhtikuussa 1870 teatterin viimeinen ooppera esitetään, ja talo puretaan myöhemmin.',
       selite: 'Toukokuun 7. päivänä 1824 teatteri on täynnä yleisöä, ja lavalla soittaa lähes kaksi kertaa '
         + 'tavallista suurempi orkesteri. Samassa salissa on kuultu Mozartin pianokonserttoa nro 25 ja '
-        + 'Beethovenin Fideliota. Lähes kuuro Beethoven istuu lavan vieressä ja antaa tahdit, vaikka ei '
-        + 'kuule soittoa. Kun sinfonia päättyy, alttolaulaja Caroline Unger kääntää hänet kasvot yleisöön '
-        + 'päin, jotta hän näkisi liinat, hatut ja nostetut kädet. Huhtikuussa 1870 teatterin viimeinen '
-        + 'ooppera on soitettu, ja talo puretaan.',
+        + 'Beethovenin Fideliota. Lähes kuuro Beethoven on lavalla ja osoittaa tempot, vaikka ei kuule '
+        + 'soittoa; virallisesti kokonaisjohdosta vastaa kapellimestari Michael Umlauf. Huhtikuussa 1870 '
+        + 'teatterin viimeinen ooppera on soitettu, ja talo puretaan myöhemmin.',
       ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1824). Faktat: en- ja '
-        + 'de-Wikipedia ”Theater am Kärntnertor” sekä en-Wikipedia ”Symphony No. 9 (Beethoven)”, '
-        + 'tarkistettu 31.10.2026.',
-      url: 'https://en.wikipedia.org/wiki/Theater_am_K%C3%A4rntnertor',
+        + 'Österreichisches Musiklexikon online ja habsburger.net (Kärntnertortheater) sekä Thayer ja '
+        + 'Beethoven-Haus Bonn (kantaesitys), tarkistettu 16.11.2026.',
+      url: 'https://www.habsburger.net/en/chapter/home-opera-karntnertortheater',
     }),
     kohde({
       id: 'vanha-burgtheater', nimi: 'Wienin vanha Burgtheater',

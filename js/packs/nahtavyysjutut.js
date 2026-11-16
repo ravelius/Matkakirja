@@ -4393,31 +4393,32 @@ export const NAHTAVYYSJUTUT = {
      * Kenttä `nosto` kertoo, mistä karsitusta merkistä juttu on.
      */
     'Vuoristovesijohto': {
+      aika: '1869–1873',
       nosto: 'syvennys-wien-vesijohto',
-      teksti: 'Isoisäsi käynnin aikaan kaupungissa kaivettiin jo toista ihmettä, joka '
-        + 'valmistui vasta lokakuussa. Wienin ensimmäinen vuoristovesijohto '
-        + 'avattiin 24. lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee '
-        + 'kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten lähteiltä '
-        + 'kaupunkiin — juuri siksi Wienin rakennusjärjestykset rajoittivat '
-        + 'talojen korkeuden noin kahteenkymmeneenviiteen metriin: sitä '
-        + 'korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 '
-        + 'akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat nykyään '
-        + 'suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: urakoitsija '
-        + 'Antonio Gabrielli tarjoutui itse, että hänen palkkiostaan '
-        + 'vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100 000 guldenia '
-        + '— ja niillä rahoilla rakennettaisiin suihkulähde, joka avattaisiin '
-        + 'samana päivänä kuin vesijohto. Niin syntyi Hochstrahlbrunnen. '
-        + 'Vesijohto tuottaa yhä yli puolet kaupungin juomavedestä.',
+      teksti: 'Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873, ja '
+        + 'samana päivänä alkoi toimia Hochstrahlbrunnen-suihkulähde '
+        + 'Schwarzenbergplatzilla. Vesi tulee Rax- ja Schneeberg-vuorten lähteiltä '
+        + 'kaupunkiin kokonaan painovoiman avulla, ilman yhtäkään pumppua. Matkalla '
+        + 'on noin 30 akveduktia.'
+        + '\n\n'
+        + 'Rakennusta johti urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
+        + 'itse, että yksi prosentti hänen tuloistaan pidätettäisiin, kunnes summa '
+        + 'olisi 100 000 guldenia. Vesijohto on yhä käytössä.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 vesijohto oli vasta valmistumassa. Se avattiin '
+        + '24. lokakuuta, kun maailmannäyttely Praterissa oli lopuillaan, joten jos '
+        + 'isoisäsi kävi Wienissä aiemmin vuonna, vesijohtoa ei ollut vielä avattu.',
       kuvat: [
         {
           tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
-          lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä, vesi kulkee 95 kilometriä painovoimalla.',
-          selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. Vesi kulkee '
-            + 'koko 95 kilometrin matkan painovoiman varassa.',
+          lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä, vesi kulkee '
+            + 'painovoimalla.',
+          selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. Vesi kulkee koko '
+            + 'matkan painovoiman varassa.',
           lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wiener Wasser (MA 31), Wien Geschichte Wiki, Wienbibliothek digital ja Wien Tourismus',
     },
     /*
      * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
@@ -4431,64 +4432,113 @@ export const NAHTAVYYSJUTUT = {
      * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
      */
     'Klimtin maalaukset': {
-      aika: '1900–1907',
+      aika: '1894–1945',
       nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
-      teksti: 'Yliopisto tilasi taiteilijalta katon täydeltä tieteen riemuvoittoa '
-        + 'ja sai sen sijaan Klimtin näkemyksen — mikä oli professorien '
-        + 'mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta '
-        + 'sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset '
-        + 'valokuvat ja opetus tilaustöiden vaaroista.',
-      lahde: 'Wikipedia',
+      teksti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
+        + 'tilaajana oli opetusministeriö. Taiteilija Gustav Klimt maalasi niistä '
+        + 'kolme, ja ne esittivät filosofiaa, lääketiedettä ja oikeustiedettä. Kuvia '
+        + 'moitittiin kovasti, ja yliopiston oman historiasivun mukaan professorit '
+        + 'vastustivat niitä jo 1900.'
+        + '\n\n'
+        + 'Maalaukset eivät koskaan päätyneet kattoon. Toukokuussa 1945, sodan viime '
+        + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
+        + 'tiedekuntakuvat tuhoutuivat. Jäljelle jäivät luonnokset ja mustavalkoiset '
+        + 'valokuvat.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
+        + 'syntynyt 14. heinäkuuta 1862. Hän aloitti opintonsa Wienin '
+        + 'taidekäsityökoulussa vasta 14-vuotiaana, vuonna 1876. Yliopiston uusi '
+        + 'päärakennus Ringillä ei ollut vielä valmis, sillä se avattiin vasta 1884. '
+        + 'Maalauksia ei ollut vielä edes tilattu, koska tilaus tuli vasta 1894.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
     },
     Saliera: {
       aika: '2003–2006',
       nosto: 'skandaali-salieran-varkaus',
-      teksti: 'Renessanssin kuuluisin suola-astia vietiin museosta '
-        + 'rakennustelineitä pitkin, ja hälytys kuitattiin tekniseksi viaksi. '
-        + 'Kolme vuotta kultainen Cellini makasi lyijyarkussa metsässä. '
-        + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
-        + 'ajan turvassa.',
-      lahde: 'Wikipedia',
+      teksti: 'Saliera on suolasirotin, jonka Benvenuto Cellini teki kullasta ja '
+        + 'emaljista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
+        + 'Kunsthistorisches Museumin mukaan se on Cellinin ainoa säilynyt kultatyö.'
+        + '\n\n'
+        + 'Yöllä vasten 11. toukokuuta 2003 varas kiipesi rakennustelineitä pitkin '
+        + 'Wienin museoon, jota kunnostettiin. Lähes kolme vuotta teoksesta ei '
+        + 'tiedetty mitään. Tammikuussa 2006 varas vei poliisin metsään lähelle '
+        + 'Zwettlin kaupunkia, ja Saliera löytyi laatikosta. Varas tuomittiin '
+        + 'viideksi vuodeksi vankeuteen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
+        + 'sillä se avattiin vasta 1891. Wien Geschichte Wikin mukaan keisarilliset '
+        + 'kokoelmat olivat tuolloin vielä eri paikoissa.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
     'Beethoven 1824': {
+      aika: '1824',
       nosto: 'hetki-beethoven-yhdeksas-1824',
-      teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline '
-        + 'Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, '
-        + 'ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig '
-        + 'van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö '
-        + 'tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. '
-        + 'Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä '
-        + 'eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin '
-        + 'Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja '
-        + 'Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on '
-        + 'jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro '
-        + 'mies näkisi, mitä ei kuule. Ovaatioita tulee viisi. Yleisössä ovat '
-        + 'Schubert, Czerny ja kansleri Metternich. Sinfonia on ensimmäinen, '
-        + 'jossa suuri orkesteri saa rinnalleen kuoron ja solistit — Schillerin '
-        + 'Oodi ilolle, tekstinä, jota Beethoven on kantanut mukanaan '
-        + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen kolme '
-        + 'osaa. Sävel on nyt Euroopan hymni.',
+      teksti: 'Beethovenin yhdeksäs sinfonia kantaesitettiin Wienissä 7. toukokuuta 1824 '
+        + 'Kärntnertor-teatterissa, ja konsertti alkoi seitsemältä illalla. Beethoven '
+        + 'oli 53-vuotias ja jo lähes täysin kuuro. Hän oli lavalla ja osoitti '
+        + 'tempot, mutta virallisesti kokonaisjohdosta vastasi kapellimestari Michael '
+        + 'Umlauf.'
+        + '\n\n'
+        + 'Sinfonian lopussa solistit ja kuoro laulavat Schillerin runon Oodi ilolle. '
+        + 'Kertoman mukaan Beethoven oli ajatellut sen säveltämistä jo nuorena. '
+        + 'Samassa konsertissa kuultiin myös kolme osaa hänen Missa solemnis '
+        + '-messustaan. Kertoman mukaan laulaja Caroline Unger kosketti Beethovenia '
+        + 'hihasta ja käänsi hänet katsomaan yleisöä, joka taputti ja heilutti '
+        + 'hattuja ja nenäliinoja. Tarinan ajankohdasta ollaan eri mieltä: joidenkin '
+        + 'mukaan se tapahtui sinfonian lopussa, toisten mukaan jo scherzon jälkeen.'
+        + '\n\n'
+        + 'Euroopan unionin sivujen mukaan sinfonian ilon sävel on nykyään Euroopan '
+        + 'hymni: Euroopan neuvosto otti sen käyttöön 1972 ja EU:n johtajat 1985. '
+        + 'Hymnissä ei ole sanoja, vain sävel.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Sen '
+        + 'viimeinen esitys oli ollut jo huhtikuussa 1870, ja talo purettiin sen '
+        + 'jälkeen. Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
+        + 'Valtionoopperassa.',
+      kuvat: [
+        {
+          tiedosto: 'Joseph Karl Stieler\'s Beethoven mit dem Manuskript der Missa solemnis.jpg',
+          lyhyt: 'Joseph Karl Stielerin muotokuva Beethovenista, 1820.',
+          selite: 'Joseph Karl Stielerin maalaama muotokuva Beethovenista Missa solemnis '
+            + '-käsikirjoituksen kanssa vuodelta 1820.',
+          lahde: 'Joseph Karl Stieler, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä A. W. Thayer (The Life of Ludwig van Beethoven), Beethoven-Haus Bonn, ORF, Wien Geschichte Wiki, Österreichisches Musiklexikon, habsburger.net ja Euroopan unioni',
     },
     'Mozart 1786': {
+      aika: '1786',
       nosto: 'hetki-mozart-wien-1786',
-      teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin '
-        + 'Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, '
-        + 'johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera '
-        + 'perustuu Beaumarchais\'n näytelmään, jonka keisari Joosef II on '
-        + 'kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; '
-        + 'Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti '
-        + 'poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa '
-        + 'englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii '
-        + 'ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, '
-        + 'kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — '
-        + 'esitys venyy muuten yöhön. Mozart on saanut työstä 450 floriinia, '
-        + 'kolme kertaa Salzburgin hovimuusikon vuosipalkan. Esityksiä tulee '
-        + 'Wienissä yhdeksän, eikä menestys ole valtava. Prahassa ooppera '
-        + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat Mozartin '
-        + 'matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don Giovannille.',
+      teksti: 'Mozartin ooppera Figaron häät sai ensi-iltansa Wienin Burgtheaterissa 1. '
+        + 'toukokuuta 1786. Mozart oli 30-vuotias. Neue Mozart-Ausgaben mukaan hän '
+        + 'johti ensi-illan ja toisen esityksen cembalon ääreltä.'
+        + '\n\n'
+        + 'Ooppera perustuu Beaumarchais\'n näytelmään, jonka saksankielinen esitys '
+        + 'Wienissä kiellettiin 1785 keisari Joosef II:n käskystä poliittisen '
+        + 'taustansa vuoksi. Librettisti Lorenzo Da Ponte lievensi näytelmän pilkkaa '
+        + 'ja jätti pois Figaron suuren poliittisen puheen. Da Ponten oman '
+        + 'kertomuksen mukaan hän kirjoitti libreton kuudessa viikossa, mutta hänen '
+        + 'muistelmiinsa ei voi aina luottaa. Susannaa lauloi Nancy Storace ja '
+        + 'Figaroa Francesco Benucci.'
+        + '\n\n'
+        + 'Yleisö vaati niin monta numeroa uudelleen, että keisari antoi 9. '
+        + 'toukokuuta 1786 määräyksen: numeroita, joita laulaa useampi kuin yksi '
+        + 'laulaja, ei saa enää toistaa, koska esitys venyi liian pitkäksi. Leopold '
+        + 'Mozartin kirjeen mukaan toisessa esityksessä toistettiin viisi ja '
+        + 'kolmannessa seitsemän numeroa.'
+        + '\n\n'
+        + 'Joulukuussa 1786 prahalainen sanomalehti kirjoitti, ettei mikään teos '
+        + 'ollut koskaan herättänyt niin paljon huomiota kuin Figaron häät. '
+        + 'Tammikuussa 1787 Mozart matkusti Prahaan, jossa ooppera esitettiin hänen '
+        + 'läsnä ollessaan. NMA:n mukaan menestys johti Don Giovannin tilaukseen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 sama Burgtheater Michaelerplatzilla oli yhä '
+        + 'käytössä. Se suljettiin vasta 1888, kun uusi Burgtheater avattiin '
+        + 'Ringillä.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Neue Mozart-Ausgabe (Mozarteum), Mozart Documents, Österreichische Mediathek, Wien Geschichte Wiki ja habsburger.net',
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -4498,87 +4548,123 @@ export const NAHTAVYYSJUTUT = {
      * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Rattaan kulmat': {
+    'Praterin jättiratas': {
+      aika: '1897',
       nosto: 'nosto-praterin-ratas',
-      teksti: 'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
-        + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
-        + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. '
-        + 'Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun '
-        + 'se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain '
-        + 'viisitoista — ja niin ne roikkuvat siitä asti joka toisessa '
-        + 'kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.',
+      teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Franz '
+        + 'Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+        + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
+        + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
+        + 'vaunut uusittiin puusta alkuperäisten piirustusten mukaan, ja jokaisessa '
+        + 'on kuusi ikkunaa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 jättirataa ei vielä ollut, sillä se valmistui '
+        + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
+        + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
+        + 'paloi 1937.',
       kuvat: [
         {
           tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
-          lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
-          selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
-            + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
+          lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä '
+            + 'tunnissa.',
+          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin puusta 2016, ja ratas '
+            + 'kulkee enintään 2,7 kilometriä tunnissa.',
           lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wiener Riesenrad, Wien Geschichte Wiki, AEIOU, Wien Tourismus ja ORF Wien',
     },
     'Lipizzanit': {
+      aika: '1735',
       nosto: 'nosto-lipizzanit',
-      teksti: 'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
-        + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
-        + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina '
-        + 'tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden '
-        + 'iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi '
-        + 'ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari '
-        + 'Kaarle VI:n muotokuvaa ennen kuin ratsastavat.',
+      teksti: 'Espanjalainen ratsastuskoulu toimii Hofburgin palatsissa Wienissä salissa, '
+        + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salin '
+        + 'seinällä riippuu keisarin ratsastusmuotokuva, ja kerrotaan, että '
+        + 'ratsastajat tervehtivät sitä ennen ratsastusta.'
+        + '\n\n'
+        + 'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin '
+        + 'kymmenvuotiaina ne ovat yleensä valkoisia. Ratsastuskoulun oman sivun '
+        + 'mukaan perinteeseen kuuluu, että tallissa on aina vähintään yksi ruunikko, '
+        + 'onnea tuomaan. Nykyään nuoret oriit tulevat Piberin siitostallista '
+        + 'Steiermarkista, ja ratsastuskoulun mukaan ne siirtyvät noin nelivuotiaina '
+        + 'koulutukseen Heldenbergiin tai Wieniin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
+        + 'salissa, mutta Piberin siitostallia ei vielä ollut: sieltä hevoset tulevat '
+        + 'vasta 1920 lähtien. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+        + 'hovitallista nykyisessä Sloveniassa.',
       kuvat: [
         {
           tiedosto: 'Kawecan.jpg',
-          lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
-          selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
-            + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
+          lyhyt: 'Aikuinen lipizzaniori; lipizzanit syntyvät tummina ja vaalenevat vuosien '
+            + 'kuluessa.',
+          selite: 'Aikuinen lipizzaniori. Lipizzanit syntyvät tummina ja vaalenevat vuosien '
+            + 'kuluessa; noin kymmenvuotiaina ne ovat yleensä valkoisia.',
           lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Spanische Hofreitschule, Wien Geschichte Wiki, Austria Tourismus, Wien Tourismus ja AEIOU',
     },
     'Taikahuilu': {
+      aika: '1791',
       nosto: 'nosto-taikahuilu-wiedenissa',
-      teksti: 'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai '
-        + 'ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa '
-        + 'Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä '
-        + 'italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti '
-        + 'sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi '
-        + 'kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi '
-        + 'kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen '
-        + 'portin päälle.',
+      teksti: 'Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Freihaustheaterissa '
+        + 'Wiedenin esikaupungissa, osoitteessa Wiedner Hauptstraße 10. Emanuel '
+        + 'Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja '
+        + 'esitti itse linnustaja Papagenoa. Ooppera ei syntynyt hovia varten: '
+        + 'Schikaneder pyysi Mozartilta kansanomaista oopperaa omaan teatteriinsa. Se '
+        + 'kuuluu saksalaiseen Singspiel-perinteeseen, jossa yleisön piti ymmärtää '
+        + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
+        + 'jälkeen.'
+        + '\n\n'
+        + 'Schikaneder haki 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+        + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
+        + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Taikahuilun teatteri ei ollut enää käytössä, '
+        + 'sillä Freihaustheaterin viimeinen esitys oli ollut 1801. Theater an der '
+        + 'Wienissä sai ensi-iltansa juuri 1873 Johann Strauss nuoremman operetti '
+        + 'Carneval in Rom, ja Papageno-veistos oli jo portin päällä. '
+        + 'Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 '
+        + 'pörssiromahduksessa.',
       kuvat: [
         {
           tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
-          lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
-          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
-            + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi '
-            + 'siniseksi kupoliksi.',
+          lyhyt: 'Karl Friedrich Schinkelin lavastusluonnos Yön kuningattaren tähtisalista, '
+            + 'noin 1815.',
+          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Yön kuningattaren tähtisalin '
+            + 'lavastuksen Taikahuilun Berliinin tuotantoon.',
           lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Bezirksmuseum Mariahilf',
     },
     'Tonava kaunoinen': {
+      aika: '1867',
       nosto: 'nosto-tonava-kaunoinen',
-      teksti: 'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin '
-        + 'Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin '
-        + 'pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen '
-        + 'etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi '
-        + 'laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja '
-        + 'johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.',
+      teksti: 'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä '
+        + '15. helmikuuta 1867 Dianabadissa. Dianabad oli uimalaitos Leopoldstadtin '
+        + 'kaupunginosassa. Talvella uimahalli muutettiin tanssi- ja '
+        + 'konserttisaliksi, jota kutsuttiin Dianasaliksi.'
+        + '\n\n'
+        + 'Valssin ensimmäinen versio oli mieskuorolle, ja Wienin Männergesang-Verein '
+        + 'lauloi sen karnevaaliaikaan. Strauss ei ollut itse paikalla johtamassa. '
+        + 'Vasta myöhemmin sävelmä esitettiin pelkälle orkesterille, ja samana vuonna '
+        + 'se kuultiin myös Pariisin maailmannäyttelyssä.'
+        + '\n\n'
+        + 'Alkuperäinen Dianabad on kadonnut: rakennus purettiin 1913, ja uusi '
+        + 'Dianabad valmistui 1917. Isoisäsi matkavuonna 1873 valssi oli ollut '
+        + 'maailmalla jo kuusi vuotta, ja vanha Dianabad seisoi vielä paikallaan.',
       kuvat: [
         {
           tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
-          lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
-          selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
-            + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
-            + '1899, hänen viimeisenä elinvuotenaan.',
+          lyhyt: 'Johann Strauss nuorempi Fritz Luckhardtin valokuvassa 1899.',
+          selite: 'Johann Strauss nuorempi Fritz Luckhardtin valokuvassa vuodelta 1899. '
+            + 'Strauss kuoli samana vuonna.',
           lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Johann Strauss Society, AEIOU, ORF Wien, vienna.at ja Wikidata',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.

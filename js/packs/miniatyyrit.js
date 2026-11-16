@@ -266,7 +266,7 @@ export const MINIATYYRIT = {
     Saliera: 'wien-saliera-vari2',
     'Beethoven 1824': 'assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
     'Mozart 1786': 'assets/kartat/miniatyyrit/wien-figaro-1786.webp',
-    'Rattaan kulmat': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
+    'Praterin jättiratas': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',  // ent. Rattaan kulmat (KK 16.11.2026); kuva ennallaan
     Lipizzanit: 'assets/kartat/miniatyyrit/wien-lipizzanit.webp',
     Taikahuilu: 'assets/kartat/miniatyyrit/wien-taikahuilu.webp',
     'Tonava kaunoinen': 'assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
