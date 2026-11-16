@@ -4436,15 +4436,18 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       teksti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
         + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
+        + 'Klimt maalasi kolme tiedekuntakuvaa: Filosofian, Lääketieteen ja Oikeustieteen. '
+        + 'Kun Filosofia nähtiin Secession-näyttelyssä vuonna 1900, joukko yliopiston '
+        + 'professoreja vetosi ministeriöön kuvan ripustamista vastaan. '
         + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
-        + 'tiedekuntakuvat tuhoutuivat.'
+        + 'tiedekuntakuvat tuhoutuivat. Niistä on jäljellä vain mustavalkoisia valokuvia.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
         + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
         + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
         + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
-      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Leopold Museum, Wienin lääketieteellinen yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
     },
     Saliera: {
       aika: '2003–2006',
