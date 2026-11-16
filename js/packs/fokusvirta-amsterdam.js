@@ -225,22 +225,20 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     /*
-     * PULUN KUVA (KK 16.11.2026 klo 01.08): Commonsin valokuva Stationsplein-pyörähallista; vanhat havainnekuvat p1/p2 pois.
-     * Tiedosto: Hay Kranen, CC BY 4.0 (KK katsoi File-sivun ja kuvan 16.11.), 3928 x 2910,
-     * https://commons.wikimedia.org/wiki/File:Fietsenstalling_Stationsplein_Amsterdam_-_Overzicht_-_(Q111657629).jpg.
-     * Kuvaa itseään ei muokata. RAJAUS pyöreään kehykseen: esikatselu /Users/Shared/Claude/pulu-kuvaesikatselut/amsterdam-pulu-hay-kranen-ympyra-800.jpg
-     * (neliö alkuperäisestä x 420, y 830, sivu 1500 px; pylväskäytävä ja telineet, opaste pois); lopullinen rajaus tulee PT-viennistä.
+     * PULUN KUVA (omistaja 16.11.2026 klo 08.44 "Tämä kuva (Recommended)"; KK 08.44): Codexin havainnekuva Stationsplein-pyörähallista,
+     * tehtävä #2349 (22b5804e2e); vanhat havainnekuvat p1/p2 ja Hay Kranenin Commons-valokuva (hylätty 08.16) pois.
+     * Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/amsterdam-pyorahalli-codex-v2.jpg (neliö 1254 px; rajaus = koko neliö ympyrään, KK katsoi).
+     * Kuva viedään ämpäriin (JU/PT) osoitteeseen alla ennen yhdistämistä. Lähderivi: Codex-havainnekuva, ei valokuvaajaa.
      * `lyhyt` ja `selite` ovat SK:n luonnos (faktat: Stationsplein-halli avattiin tammikuussa 2023, tilaa 7 000 pyörälle;
      * cities-today.com, bicyclenetwork.com.au, iamexpat.nl), KK tarkistaa.
      */
     kuvat: [
       {
-        tiedosto: 'Fietsenstalling Stationsplein Amsterdam - Overzicht - (Q111657629).jpg',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-amsterdam-pyorahalli-codex-v2.jpg',
         lyhyt: 'Amsterdam: pyörähalli aseman edessä veden alla.',
         selite: 'Stationsplein-pyörähalli on rakennettu Amsterdamin keskusaseman edustan satama-altaan alle. Se avattiin tammikuussa 2023, ja siihen mahtuu 7 000 pyörää.',
-        lahde: 'Hay Kranen, Wikimedia Commons (CC BY 4.0)',
+        lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://commons.wikimedia.org/wiki/File:Fietsenstalling_Stationsplein_Amsterdam_-_Overzicht_-_(Q111657629).jpg',
           'https://cities-today.com/?p=57219',
           'https://bicyclenetwork.com.au/newsroom/2023/01/31/amsterdams-underwater-bike-garage-opens-with-7000-spaces/',
         ],
