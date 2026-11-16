@@ -28,7 +28,7 @@ test('R2-hyväksyntälähde on tarkalleen käyttäjän hyväksymä 45 kaupungin 
 /** Kaupungit, joiden teksti ja ääni odottavat erän 5 ajoa (14.9.2026). */
 const ODOTTAA = new Set(ERA5_ODOTTAVAT_KAUPUNGIT);
 /** Pariisin isoisän ja pulun tekstit uusittu 11.11.2026 (KK, omistaja 20.31); 14.9. koonti on historiallinen lähde. */
-const UUSITTU_20261111 = new Set(['pariisi', 'lontoo', 'wien']); // lontoo uusittu 15.11.2026 (KK, omistaja 08.33); wien 15.11.2026 (omistaja 18.58)
+const UUSITTU_20261111 = new Set(['pariisi', 'lontoo', 'wien', 'rooma']); // lontoo uusittu 15.11.2026 (KK, omistaja 08.33); wien 15.11.2026 (omistaja 18.58); rooma 15.11.2026 (omistaja 19.19)
 
 test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia', () => {
   assert.equal(combined.cityCount, 45);
@@ -137,7 +137,7 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])].filter(Boolean);
   });
-  assert.equal(images.length, 103); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (i1/i2 → isoisa-pariisi, KK 12.11.); Lontoon ja Wienin isoisällä yksi kuva (luentakuva2 pois, KK 15.11.; Wienissä kahvilakuva jäi, painokonekuva pois)
+  assert.equal(images.length, 102); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (i1/i2 → isoisa-pariisi, KK 12.11.); Lontoon, Wienin ja Rooman isoisällä yksi kuva (luentakuva2 pois, KK 15.11.; Wienissä kahvilakuva jäi, painokonekuva pois)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2, image.osoite);
   }
@@ -161,11 +161,11 @@ test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauk
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])].filter(Boolean);
   });
-  assert.equal(images.length, 146); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (KK 12.11.); Lontoon isoisällä yksi kuva (KK 15.11.)
+  assert.equal(images.length, 145); // Pariisin pulun kuva vaihdettu 11.11.2026; Pariisin isoisällä yksi kuva (KK 12.11.); Lontoon isoisällä yksi kuva (KK 15.11.); Wienin ja Rooman isoisällä yksi kuva (KK 15.11.)
   for (const image of images) {
     assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
       `${image.osoite}: pitkän selitteen pitää olla kaksi sisältölausetta`);
-    const shortContent = image.lyhyt.replace(/^[^.]+,\s*1873\.\s*/u, '');
+    const shortContent = image.lyhyt.replace(/^[^.]+,\s*(?:noin )?18\d\d\.\s*/u, '')  /* Rooman kitkentäkuva: "noin 1871" (KK 15.11. 20.34) */;
     assert.equal((shortContent.match(/[.!?](?=\s|$)/g) ?? []).length, 1,
       `${image.osoite}: lyhyen selitteen pitää olla yksi sisältölause`);
   }

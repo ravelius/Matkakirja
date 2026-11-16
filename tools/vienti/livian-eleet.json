@@ -1057,32 +1057,27 @@
   },
   "rooma": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "720c7925c99a9c9977292a86530a419f73ce372d816df17c78606cfafcdcc6c0",
+   "tekstiSha256": "0a36b6ffdb05c1bba84f55f87aea12236ad4fd466d93985097e991ac730bd89f",
    "tila": "ok",
    "aani": {
-    "tavut": 353009,
-    "sha256": "a8c6487f96802e310c07bc737bee6830fa2e2b24e2e556f1876545a13d632ec8"
+    "tavut": 208813,
+    "sha256": "de576044ecbf6be322693ee7b11b33fc22bfea84e3807e5c1f896cae1f425525"
    },
    "eleet": [
     {
      "id": "rooma.livia.c1",
-     "alku": 140,
-     "loppu": 2900
+     "alku": 240,
+     "loppu": 3200
     },
     {
      "id": "rooma.livia.c2",
-     "alku": 2900,
-     "loppu": 6140
+     "alku": 3200,
+     "loppu": 6160
     },
     {
      "id": "rooma.livia.c3",
-     "alku": 6140,
-     "loppu": 11400
-    },
-    {
-     "id": "rooma.livia.c4",
-     "alku": 11400,
-     "loppu": 14440
+     "alku": 6160,
+     "loppu": 8720
     }
    ]
   },
