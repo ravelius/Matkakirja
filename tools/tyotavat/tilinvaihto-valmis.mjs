@@ -16,7 +16,8 @@
  *  5) Asemataulu: työkansion kopiot = main ja tarkistin läpi (python3 -I tools/asemataulu/asemataulu.py --tarkista;
  *     docs/moduulit/asemataulu.md luku 2).
  *  6) Ajojonon portti: PORTTI-lokissa tämän päivän "PORTTI OK <p.k.vvvv klo>" -rivi (JU:n portti-testi.zsh;
- *     omistaja 16.11.2026 klo 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12).
+ *     omistaja 16.11.2026 klo 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12) ja "JUNASANA-PORTTI OK"
+ *     (junasana.zsh; omistaja 13.43, P-261116-16, kortti juna-ja-julkaisu 2).
  * Paluuarvo 0 = valmis, 1 = puutteita (tulostetaan).
  */
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -122,6 +123,10 @@ const PORTTI_LOKI = process.env.PORTTI_LOKI || '/Users/Shared/Claude/julkaisija-
   const ok = rivitP.filter((r) => r.startsWith('PORTTI OK ') && r.slice(10).split(' ')[0] === tanaan);
   if (!ok.length) huom(`ajojonon portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "PORTTI OK ${tanaan} …" (aja JU:n portti-testi.zsh)`);
   else console.log(`Ajojonon portti: ${ok[ok.length - 1]}.`);
+  // Junasanan portti (P-261116-16): junasana.zsh:n itsetesti kirjoittaa samaan lokiin
+  const js = rivitP.filter((r) => r.startsWith('JUNASANA-PORTTI OK ') && r.slice(19).split(' ')[0] === tanaan);
+  if (!js.length) huom(`junasanan portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "JUNASANA-PORTTI OK ${tanaan} …" (JU:n junasana.zsh-itsetesti)`);
+  else console.log(`Junasanan portti: ${js[js.length - 1]}.`);
 }
 
 console.log(puutteet.length ? `\nTILINVAIHTO EI VALMIS: ${puutteet.length} puutetta.` : '\nTilinvaihto valmis.');
