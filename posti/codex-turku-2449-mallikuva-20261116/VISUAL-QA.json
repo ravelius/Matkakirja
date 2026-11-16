@@ -1,0 +1,55 @@
+{
+  "overall": "REVIEW_CANDIDATE_WITH_GEOMETRY_LIMITATIONS_NOT_TRIPO_READY",
+  "imageCalls": 1,
+  "retryAllowed": false,
+  "checks": [
+    {
+      "item": "Five exact callouts M303 M501 G301 G501 J503",
+      "result": "PASS",
+      "observation": "All five appear once and leader endpoints land inside separate exposed rooms; also readable at 1000 px."
+    },
+    {
+      "item": "Pairing and broad wing placement",
+      "result": "PASS_CONCEPT_ONLY",
+      "observation": "M501 above M303 at right end; G501 above G301 at front-left; J503 at back-left across courtyard. This verifies relative concept placement, not measured plan registration."
+    },
+    {
+      "item": "Connected mass and open courtyard",
+      "result": "PASS_CONCEPT_ONLY",
+      "observation": "Single connected masonry mass, open court, front-facing room cuts. Exact Turku Castle external proportions and both tower forms are not source-registered."
+    },
+    {
+      "item": "Current floors 3 and 5 with floor 4 preserved",
+      "result": "FAIL_TO_DEMONSTRATE",
+      "observation": "Visible room pairs read as neighbouring floors divided by a narrow slab/band; the intervening current floor 4 is not unambiguously represented."
+    },
+    {
+      "item": "M303 small eastward projection next to M301",
+      "result": "FAIL_TO_DEMONSTRATE",
+      "observation": "M303 is shown as a wide tower chamber. The smaller eastward projection and separation from M301 cannot be identified."
+    },
+    {
+      "item": "Stairs and vaults",
+      "result": "PASS_OMISSION",
+      "observation": "No visible invented stair flights, ladders, room vaults or domes. Flat timber ceilings are an illustrative choice, not a verified room-specific ceiling reconstruction."
+    },
+    {
+      "item": "Metric or historical reconstruction",
+      "result": "NOT_VALIDATED",
+      "observation": "Room dimensions, openings, roofs, chimney positions, section depths and period consistency are generated estimates. A single 2D image does not verify the eventual 3D model."
+    }
+  ],
+  "nextGate": "PT forwards image and limitations to KK. No Tripo, regeneration, game integration or new source downloads without applicable explicit authority.",
+  "independentReview": {
+    "agent": "temple_candidates_2435",
+    "overall": "UNCERTAIN",
+    "observations": [
+      "All five labels legible with leader dots inside visible rooms.",
+      "M303 small eastern projection not clearly distinct.",
+      "Solid structure visible between open levels; no extra fourth room opened.",
+      "Connected wings and open courtyard.",
+      "No visible stairs or vaults."
+    ],
+    "mainReviewReconciliation": "Solid separator is visible, but its presence does not prove the full intervening current floor 4; floor numbering and heights remain unverified."
+  }
+}
