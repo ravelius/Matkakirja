@@ -1,0 +1,98 @@
+{
+  "result": "PASS_LOCAL_FILE_AND_GEOMETRY_QA",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/baseline/temple-2271-original.glb",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/delivery/temple-2403-clean-interior.glb",
+  "sourceSHA256": "843ec7a3e22f952299e91af8c59d199ba7d6678fe540198e86959ff79424b74e",
+  "sha256": "afd2c044782b1b64897e8b9dcae9c7b0767710c5968dc69872bec89fff8ba0d2",
+  "bytes": 4493216,
+  "triangles": 74999,
+  "meshCount": 1,
+  "primitiveMaterialCount": 4,
+  "primitives": {
+    "0": {
+      "triangles": 51207,
+      "vertexRecords": 37475,
+      "normalLengthRange": [
+        0.9999998807907104,
+        1.0000001192092896
+      ]
+    },
+    "1": {
+      "triangles": 762,
+      "vertexRecords": 747,
+      "normalLengthRange": [
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    "2": {
+      "triangles": 22135,
+      "vertexRecords": 32478,
+      "normalLengthRange": [
+        0.9999998211860657,
+        1.0000001192092896
+      ]
+    },
+    "3": {
+      "triangles": 895,
+      "vertexRecords": 814,
+      "normalLengthRange": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "boundsUnchanged": true,
+  "nodeTransformsAndScenesUnchanged": true,
+  "exteriorOriginalFaceCount": 51207,
+  "exteriorPositionNormalUVExact": true,
+  "independentOuterEnvelopeFacesExact": 3286,
+  "roofFacesGeometryMaterialExact": 39816,
+  "originalImageBytesExact": [
+    "c7412be3f7f55d40376452856635763c02d32a5e4b1adc4c3f420f7685ad3ada",
+    "e11d67eb03df6baa8ca160d799c9a0cdae46de225f6ef00b9f8cbf52c8296950",
+    "50b1225fdf28ed60acba5f97e3026b4fba1a071f962832cf3bb99bab0cea062d"
+  ],
+  "newTextureDimensions": [
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ],
+    [
+      512,
+      512
+    ]
+  ],
+  "newlyFlippedTriangles": 0,
+  "newlyCollapsedTriangles": 0,
+  "geometricBoundaryEdgesBeforeAfter1mm": [
+    23,
+    23
+  ],
+  "wedgeRepair": [
+    {
+      "sourceFace": 22930,
+      "floorHeightM": 17.524999618530273,
+      "normals": "up [0,1,0]"
+    },
+    {
+      "sourceFace": 22931,
+      "floorHeightM": 17.524999618530273,
+      "normals": "up [0,1,0]"
+    },
+    {
+      "sourceFace": 30422,
+      "floorHeightM": 17.524999618530273,
+      "normals": "up [0,1,0]"
+    }
+  ],
+  "modelChangedOnlyInVerifiedInterior": true,
+  "gameIntegration": false,
+  "receiverAcceptance": false,
+  "normalMap": "Original exterior retained; new interiors use clean geometric vertex normals and no new normal maps.",
+  "caveat": "Four materials with repeating own UVs; receiver must retain repeat wrapping and normal fallback in conversion. This is a local asset check, not a runtime acceptance."
+}

@@ -1,0 +1,26 @@
+{
+  "author": "Codex procedural hand-authored surface design",
+  "date": "2026-11-16",
+  "sourceImagesUsed": false,
+  "providerCalls": 0,
+  "cost": 0,
+  "dimensions": [
+    512,
+    512
+  ],
+  "repeatMetres": [
+    2.56,
+    2.56
+  ],
+  "materials": {
+    "plaster": "Warm matte plaster/limewash estimate; Clery does not identify wall finish.",
+    "stone": "Restrained pale stone estimate; no claim of attested stone species.",
+    "planks": "Brown plank floor estimate; Hauer depicts Queen floor, not direct King-floor evidence."
+  },
+  "lighting": "Low-contrast coloration only; no baked directional illumination or strong AO. Geometry normals provide lighting; original exterior normal map retained.",
+  "sha256": {
+    "plaster": "57ab4f4d03742bd5dc75e5cfc6d2bd9a29b0894ed0bd5f184bb3a9698d7a69fc",
+    "stone": "baad5e368b2a25b0aebd6c42c6e821c5a65cebc619c7bf6fad5223ac3963d7ac",
+    "planks": "c4d8c29be2785894684c4039eeb8a66ad90e33937c6bdd6670bf5703dae4ee31"
+  }
+}

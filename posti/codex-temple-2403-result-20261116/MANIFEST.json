@@ -1,0 +1,74 @@
+{
+  "CAMERA.json": {
+    "sha256": "ed81ce774e4c098c4c434532682d5018f6874101c658513ab92187aae5c82915",
+    "bytes": 2349
+  },
+  "CLEANUP.json": {
+    "sha256": "e81ee59150749bb68fb17209517b40fec0ecbc6cb52bdc76d360a2674d4cb17d",
+    "bytes": 3544
+  },
+  "MATERIAL-PROVENANCE.json": {
+    "sha256": "f54716e157c36db2b13cdd498a467595c67aad9b763d2fc186579d1a1cd5af41",
+    "bytes": 971
+  },
+  "PRODUCTION.json": {
+    "sha256": "b04af250a6ff87b17f1e8a485d00f41fee67b2fa0dddb4f7764938817026e0d9",
+    "bytes": 10817
+  },
+  "QA.json": {
+    "sha256": "ef207d4c5d964133859396cc83f76be775ff89882962d959c89554de3d2fccd1",
+    "bytes": 2743
+  },
+  "README.md": {
+    "sha256": "ed1ed345eedaa467bad33a16a54f58315a213ffe1222792ebc3ebd0302445a5a",
+    "bytes": 5313
+  },
+  "exterior-back-1000.png": {
+    "sha256": "97786e19b23225e476585e81715010292f957a0d27d68b03672702f7cceccc27",
+    "bytes": 829426
+  },
+  "king-after-geometry-1000.png": {
+    "sha256": "f7e412f6faf8c62c4a8f22828b63215208a7572879ee7e941d4210eedf8f7b5f",
+    "bytes": 640753
+  },
+  "king-after-local-1000.png": {
+    "sha256": "44818b261be6b9dca57d9431a633813ff872730ce532a810ab7762eb727f72fa",
+    "bytes": 525370
+  },
+  "king-before-geometry-1000.png": {
+    "sha256": "0e07aec4b5c9de9a9babc90af7da1e406d2f83ff0461d0427ec70ba796e68e6e",
+    "bytes": 639350
+  },
+  "king-before-local-1000.png": {
+    "sha256": "7c8f2de2d1431d1001fd44859acbe31ac1f35d3f9082d2d0f58cbe9bba796c85",
+    "bytes": 570617
+  },
+  "planks.png": {
+    "sha256": "c4d8c29be2785894684c4039eeb8a66ad90e33937c6bdd6670bf5703dae4ee31",
+    "bytes": 24786
+  },
+  "plaster.png": {
+    "sha256": "57ab4f4d03742bd5dc75e5cfc6d2bd9a29b0894ed0bd5f184bb3a9698d7a69fc",
+    "bytes": 32674
+  },
+  "qa-independent.md": {
+    "sha256": "2d5d9a90844d6d433094f0510dae465c09731c8311070a2fb2f87d99a268b900",
+    "bytes": 1912
+  },
+  "stone.png": {
+    "sha256": "baad5e368b2a25b0aebd6c42c6e821c5a65cebc619c7bf6fad5223ac3963d7ac",
+    "bytes": 44026
+  },
+  "temple-2403-clean-interior.glb": {
+    "sha256": "afd2c044782b1b64897e8b9dcae9c7b0767710c5968dc69872bec89fff8ba0d2",
+    "bytes": 4493216
+  },
+  "whole-cutaway-front-1000.png": {
+    "sha256": "80e4a85e7767e424aef1ae367c0d7634a7b4b2c4827c70be9dccb729b96e7af0",
+    "bytes": 806012
+  },
+  "whole-cutaway-oblique-1000.png": {
+    "sha256": "5b423bbfc77feeb7272b5f654525991d61a97bcd9be068174022edaae0c10106",
+    "bytes": 783420
+  }
+}

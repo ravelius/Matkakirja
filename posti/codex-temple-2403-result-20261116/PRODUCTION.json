@@ -1,0 +1,301 @@
+{
+  "actualProductionStartedAt": "2026-11-16T16:19:07.645718+00:00",
+  "heavyWorkEndedAt": "2026-11-16T16:39:23.278545+00:00",
+  "packagedAt": "2026-11-16T16:41:27.219288+00:00",
+  "deadlineUTC": "2026-11-16T18:15:00Z",
+  "jobs": [
+    {
+      "id": "run-20261116-162021",
+      "startedAt": "2026-11-16T16:20:21.230919+00:00",
+      "endedAt": "2026-11-16T16:20:26.306017+00:00",
+      "pid": 13968,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_inspect.py",
+        "--",
+        "output/temple2403-20261116/baseline/temple-2271-original.glb",
+        "output/temple2403-20261116/work/baseline-render",
+        "all"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-162021.log"
+    },
+    {
+      "id": "run-20261116-162423",
+      "startedAt": "2026-11-16T16:24:23.995825+00:00",
+      "endedAt": "2026-11-16T16:24:29.064828+00:00",
+      "pid": 32270,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/mesh_probe.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-162423.log"
+    },
+    {
+      "id": "run-20261116-162502",
+      "startedAt": "2026-11-16T16:25:02.249155+00:00",
+      "endedAt": "2026-11-16T16:25:07.308180+00:00",
+      "pid": 35333,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/probe_rays.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-162502.log"
+    },
+    {
+      "id": "run-20261116-162756",
+      "startedAt": "2026-11-16T16:27:56.193665+00:00",
+      "endedAt": "2026-11-16T16:28:01.250221+00:00",
+      "pid": 48782,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/clean_temple.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-162756.log"
+    },
+    {
+      "id": "run-20261116-162832",
+      "startedAt": "2026-11-16T16:28:32.504413+00:00",
+      "endedAt": "2026-11-16T16:28:37.570322+00:00",
+      "pid": 51601,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_inspect.py",
+        "--",
+        "output/temple2403-20261116/work/candidate-v1/temple2403-candidate.glb",
+        "output/temple2403-20261116/work/candidate-v1/render",
+        "all"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-162832.log"
+    },
+    {
+      "id": "run-20261116-163012",
+      "startedAt": "2026-11-16T16:30:12.580139+00:00",
+      "endedAt": "2026-11-16T16:30:17.643018+00:00",
+      "pid": 58718,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/probe_candidate.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163012.log"
+    },
+    {
+      "id": "run-20261116-163059",
+      "startedAt": "2026-11-16T16:30:59.927014+00:00",
+      "endedAt": "2026-11-16T16:31:04.989893+00:00",
+      "pid": 62209,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/clean_temple.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163059.log"
+    },
+    {
+      "id": "run-20261116-163118",
+      "startedAt": "2026-11-16T16:31:18.015873+00:00",
+      "endedAt": "2026-11-16T16:31:23.078826+00:00",
+      "pid": 63431,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_inspect.py",
+        "--",
+        "output/temple2403-20261116/work/candidate-v2/temple2403-candidate.glb",
+        "output/temple2403-20261116/work/candidate-v2/render",
+        "all"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163118.log"
+    },
+    {
+      "id": "run-20261116-163410",
+      "startedAt": "2026-11-16T16:34:10.928023+00:00",
+      "endedAt": "2026-11-16T16:34:15.986947+00:00",
+      "pid": 76457,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/compact_delivery.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163410.log"
+    },
+    {
+      "id": "run-20261116-163506",
+      "startedAt": "2026-11-16T16:35:06.490492+00:00",
+      "endedAt": "2026-11-16T16:35:11.549423+00:00",
+      "pid": 80673,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/verify_delivery.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163506.log"
+    },
+    {
+      "id": "run-20261116-163638",
+      "startedAt": "2026-11-16T16:36:38.753281+00:00",
+      "endedAt": "2026-11-16T16:36:43.809379+00:00",
+      "pid": 87377,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/verify_delivery.py"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163638.log"
+    },
+    {
+      "id": "run-20261116-163648",
+      "startedAt": "2026-11-16T16:36:48.558095+00:00",
+      "endedAt": "2026-11-16T16:36:53.616880+00:00",
+      "pid": 88095,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_delivery.py",
+        "--",
+        "output/temple2403-20261116/baseline/temple-2271-original.glb",
+        "output/temple2403-20261116/work/final-before-room",
+        "room"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163648.log"
+    },
+    {
+      "id": "run-20261116-163733",
+      "startedAt": "2026-11-16T16:37:33.224624+00:00",
+      "endedAt": "2026-11-16T16:37:38.283158+00:00",
+      "pid": 91478,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_delivery.py",
+        "--",
+        "output/temple2403-20261116/delivery/temple-2403-clean-interior.glb",
+        "output/temple2403-20261116/work/final-after-room",
+        "room"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163733.log"
+    },
+    {
+      "id": "run-20261116-163848",
+      "startedAt": "2026-11-16T16:38:48.603746+00:00",
+      "endedAt": "2026-11-16T16:38:53.666902+00:00",
+      "pid": 96884,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_delivery.py",
+        "--",
+        "output/temple2403-20261116/baseline/temple-2271-original.glb",
+        "output/temple2403-20261116/work/final-before-close",
+        "close"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163848.log"
+    },
+    {
+      "id": "run-20261116-163906",
+      "startedAt": "2026-11-16T16:39:06.388959+00:00",
+      "endedAt": "2026-11-16T16:39:11.446569+00:00",
+      "pid": 98229,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_delivery.py",
+        "--",
+        "output/temple2403-20261116/delivery/temple-2403-clean-interior.glb",
+        "output/temple2403-20261116/work/final-after-close",
+        "close"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163906.log"
+    },
+    {
+      "id": "run-20261116-163918",
+      "startedAt": "2026-11-16T16:39:18.214041+00:00",
+      "endedAt": "2026-11-16T16:39:23.278545+00:00",
+      "pid": 99036,
+      "processStatus": "COMPLETED",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "-t",
+        "2",
+        "--python",
+        "output/temple2403-20261116/render_delivery.py",
+        "--",
+        "output/temple2403-20261116/delivery/temple-2403-clean-interior.glb",
+        "output/temple2403-20261116/work/final-whole",
+        "all"
+      ],
+      "log": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/temple2403-20261116/window4-2453-2456/run-20261116-163918.log"
+    }
+  ],
+  "newTripoCalls": 0,
+  "newImageGenCalls": 0,
+  "providerCost": 0,
+  "note": "Blender exits0 even on Python assertions: completion comes from final QA.json PASS, not subprocess exit alone. Candidate-v1 orientation failure was corrected; candidate-v2 geometry survived independent file checks.",
+  "gameChanged": false
+}

@@ -1,0 +1,92 @@
+{
+  "before": {
+    "source": "output/temple2403-20261116/baseline/temple-2271-original.glb",
+    "noModelTransformApplied": true,
+    "note": "Local reproducible n1-facing angle: 15 degrees above horizon, front side. No game/UI/figures or lighting changes. Not a runtime screenshot.",
+    "renderOnlyHeightClip": null,
+    "noRuntimeZClipReconstruction": true,
+    "views": [
+      {
+        "name": "king-close",
+        "camera": [
+          0,
+          -100,
+          46.395
+        ],
+        "target": [
+          0,
+          0,
+          19.6
+        ],
+        "orthoScale": 23,
+        "width": 1000,
+        "height": 440,
+        "color": "TEXTURE"
+      },
+      {
+        "name": "king-close-geometry",
+        "camera": [
+          0,
+          -100,
+          46.395
+        ],
+        "target": [
+          0,
+          0,
+          19.6
+        ],
+        "orthoScale": 23,
+        "width": 1000,
+        "height": 440,
+        "color": "MATERIAL"
+      }
+    ]
+  },
+  "after": {
+    "source": "output/temple2403-20261116/delivery/temple-2403-clean-interior.glb",
+    "noModelTransformApplied": true,
+    "note": "Local reproducible n1-facing angle: 15 degrees above horizon, front side. No game/UI/figures or lighting changes. Not a runtime screenshot.",
+    "renderOnlyHeightClip": null,
+    "noRuntimeZClipReconstruction": true,
+    "views": [
+      {
+        "name": "king-close",
+        "camera": [
+          0,
+          -100,
+          46.395
+        ],
+        "target": [
+          0,
+          0,
+          19.6
+        ],
+        "orthoScale": 23,
+        "width": 1000,
+        "height": 440,
+        "color": "TEXTURE"
+      },
+      {
+        "name": "king-close-geometry",
+        "camera": [
+          0,
+          -100,
+          46.395
+        ],
+        "target": [
+          0,
+          0,
+          19.6
+        ],
+        "orthoScale": 23,
+        "width": 1000,
+        "height": 440,
+        "color": "MATERIAL"
+      }
+    ]
+  },
+  "sameCameraAndLighting": true,
+  "n1AngleInterpretation": "Frontal cutaway side, 15 degrees above horizontal (NS tilt75). Local orthographic view.",
+  "runtimeN1Reconstruction": false,
+  "note": "No figures, UI, game lights or runtime z-plane shader. No floor geometry removed in delivered images or GLB. Original runtime reference stays identified by SHA in README."
+}

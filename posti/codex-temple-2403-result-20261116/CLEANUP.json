@@ -1,0 +1,190 @@
+{
+  "state": "WORK_CANDIDATE_NOT_APPROVED",
+  "triangles": 74999,
+  "materialFaces": {
+    "0": 51207,
+    "1": 762,
+    "2": 22135,
+    "3": 895
+  },
+  "interiorFaces": 23792,
+  "externalFaces": 51207,
+  "protectedExteriorVertexGroups": 26867,
+  "protectedExteriorMaxMove": 0.0,
+  "rollback": [
+    {
+      "iteration": 0,
+      "faces": 179,
+      "vertexRecordsRestored": 521
+    },
+    {
+      "iteration": 1,
+      "faces": 30,
+      "vertexRecordsRestored": 83
+    },
+    {
+      "iteration": 2,
+      "faces": 1,
+      "vertexRecordsRestored": 6
+    }
+  ],
+  "newlyFlippedFaces": 0,
+  "movedVertexRecords": 2655,
+  "maxMoveM": 0.2217540740966797,
+  "originalBounds": [
+    [
+      -17.11025619506836,
+      0.0022841538302600384,
+      -9.42780876159668
+    ],
+    [
+      17.100887298583984,
+      50.0039176940918,
+      9.418173789978027
+    ]
+  ],
+  "candidateBounds": [
+    [
+      -17.11025619506836,
+      0.0022841538302600384,
+      -9.42780876159668
+    ],
+    [
+      17.100887298583984,
+      50.0039176940918,
+      9.418173789978027
+    ]
+  ],
+  "planes": [
+    {
+      "surface": "floor",
+      "index": 0,
+      "triangles": 211,
+      "movedVertexRecords": 414,
+      "planeNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "planeOffset": 0.635
+    },
+    {
+      "surface": "floor",
+      "index": 1,
+      "triangles": 233,
+      "movedVertexRecords": 449,
+      "planeNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "planeOffset": 9.525
+    },
+    {
+      "surface": "floor",
+      "index": 2,
+      "triangles": 214,
+      "movedVertexRecords": 416,
+      "planeNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "planeOffset": 17.525
+    },
+    {
+      "surface": "floor",
+      "index": 3,
+      "triangles": 237,
+      "movedVertexRecords": 349,
+      "planeNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "planeOffset": 24.695
+    },
+    {
+      "surface": "wall",
+      "index": 0,
+      "triangles": 375,
+      "movedVertexRecords": 673,
+      "planeNormal": [
+        0.7071067811865475,
+        0.0,
+        0.7071067811865475
+      ],
+      "planeOffset": -3.6
+    },
+    {
+      "surface": "wall",
+      "index": 1,
+      "triangles": 387,
+      "movedVertexRecords": 756,
+      "planeNormal": [
+        -0.7071067811865475,
+        0.0,
+        0.7071067811865475
+      ],
+      "planeOffset": -3.6
+    }
+  ],
+  "bytes": 5945808,
+  "sha256": "4e3f7569a2d39b1177c1aa100274b673706f033aceb0dd1430ad7c2a40373bca",
+  "candidateWedgeFaces": {
+    "22930": {
+      "material": 3,
+      "oldNormal": [
+        0.1263686567544937,
+        0.9845241904258728,
+        0.12142151594161987
+      ],
+      "newNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "yAfter": [
+        17.524999618530273,
+        17.524999618530273,
+        17.524999618530273
+      ]
+    },
+    "22931": {
+      "material": 3,
+      "oldNormal": [
+        0.19987018406391144,
+        0.9605499505996704,
+        0.19337967038154602
+      ],
+      "newNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "yAfter": [
+        17.524999618530273,
+        17.524999618530273,
+        17.524999618530273
+      ]
+    },
+    "30422": {
+      "material": 3,
+      "oldNormal": [
+        0.15623775124549866,
+        0.9771255850791931,
+        0.14427539706230164
+      ],
+      "newNormal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "yAfter": [
+        17.524999618530273,
+        17.524999618530273,
+        17.524999618530273
+      ]
+    }
+  }
+}
