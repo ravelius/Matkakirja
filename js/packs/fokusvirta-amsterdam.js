@@ -210,9 +210,9 @@ export const FOKUSVIRTA_AMSTERDAM = {
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: vanha (9.9.2026) ääni ei vastaa lyhennettyä tekstiä; uusi ääni tulee Äänittäjän ajosta (vasta omistajan sanasta), ja aanite-kenttä sidotaan silloin. */
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, ÄÄ otto, teksti ilman tageja, 18,55 s; JU vienyt 16.11.2026 11.49), ämpärin täysi osoite kuten Pariisissa, Lontoossa, Wienissä ja Roomassa. */
     luenta: "[curious] Kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se rakennettiin aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. [warmly] Sitten urut soivat, ja penkki värisi.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-amsterdam.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

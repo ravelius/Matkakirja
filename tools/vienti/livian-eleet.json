@@ -36,37 +36,32 @@
   },
   "amsterdam": {
    "revision": "eu-hl-europe-20260914-r2-approved",
-   "tekstiSha256": "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378",
+   "tekstiSha256": "c67bd2bdaef9cc6c78f2720f3150a8784558a9b9b214b638ee11d7cdd35f46e0",
    "tila": "ok",
    "aani": {
-    "tavut": 431376,
-    "sha256": "b788530f4fe78a661a962097d24c0aa52d6d58c69b1eb0e78d941b40b5e1b526"
+    "tavut": 284046,
+    "sha256": "9275266c6d807cbc412cfa3362e60629486cba021cb7fa5a2339d27a92856e51"
    },
    "eleet": [
     {
      "id": "amsterdam.livia.c1",
-     "alku": 2060,
-     "loppu": 4019
+     "alku": 1520,
+     "loppu": 3360
     },
     {
      "id": "amsterdam.livia.c2",
-     "alku": 4019,
-     "loppu": 6480
+     "alku": 3360,
+     "loppu": 5920
     },
     {
      "id": "amsterdam.livia.c3",
-     "alku": 6480,
-     "loppu": 11380
+     "alku": 5920,
+     "loppu": 9720
     },
     {
      "id": "amsterdam.livia.c4",
-     "alku": 11380,
-     "loppu": 15400
-    },
-    {
-     "id": "amsterdam.livia.c5",
-     "alku": 15400,
-     "loppu": 17660
+     "alku": 9720,
+     "loppu": 11840
     }
    ]
   },

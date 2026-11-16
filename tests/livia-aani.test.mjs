@@ -302,8 +302,8 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
 });
 
 /* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
-/* Amsterdamin pulun teksti lyhennetty 16.11.2026 (KK 01.08); uusi ääni tulee Äänittäjän ajosta (omistajan sanasta). Poista rivi, kun äänite on sidottu. */
-const AANTA_ODOTTAVAT = new Set(['amsterdam-3']);
+/* Amsterdamin pulun ääni sidottu 16.11.2026 (JU vienyt 11.49); lista tyhjä. */
+const AANTA_ODOTTAVAT = new Set([]);
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
