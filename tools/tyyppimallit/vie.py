@@ -38,7 +38,7 @@ TAULU = '/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/vaihtelu-20261114/taulu-
 PARIISI_TALOT = '/Users/Shared/Claude/proto-3d/_tyo/natiiviseppa/pariisi-talot/osm.json'
 MAASTO_OLETUS = '/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/lontoo-kumpu/palat-rakennus'
 # Origo = pelin kaupungit.json "puut" (lat, lon): kartan elämän juuri on tässä (KartanElama). Lontoo: karttaseppa/puut-lontoo (7c618a16e).
-ORIGO = {'pariisi': (48.86122, 2.35092), 'lontoo': (51.49754, -0.12574)}
+ORIGO = {'pariisi': (48.86122, 2.35092), 'lontoo': (51.49754, -0.12574), 'rooma': (41.89737, 12.48703), 'wien': (48.21437, 16.37199)}   # = ElavaKaupunki.Paketit
 # Kartta tasainen (puiden tiedostossa ei MAA1:tä): peli laskee maan itse kuten puille (PuunMaa). Muualla maa merkkiin.
 TASAINEN = {'pariisi'}
 TYYPPI = {('kirkko', 'pieni'): 1, ('kirkko', 'keski'): 2, ('kirkko', 'suuri'): 3, ('kupolikirkko', 'keski'): 4, ('pylvastemppeli', 'keski'): 5,
@@ -140,8 +140,12 @@ def perheen_seinat(lahde, perhe):
     return _perheen_kentta(lahde, perhe, 'seinat')
 
 
+# Rooma ja Wien eivät ole vielä TAULUssa: alue KS:n pelikuvaskenaarioista (seinavarit-rooma-wien-20261116/sk-seinavarit-*.txt, "talot alue").
+ALUE_VARA = {'rooma': (41.8237, 41.9675, 12.3757, 12.5687), 'wien': (48.1366, 48.2804, 16.2652, 16.4808)}
+
+
 def alueella(k, merkit):
-    t = json.load(open(TAULU)); la0, la1, lo0, lo1 = t[k]['raja']
+    t = json.load(open(TAULU)); la0, la1, lo0, lo1 = t[k]['raja'] if k in t else ALUE_VARA[k]
     pid = None
     if k == 'pariisi':
         o = json.load(open(PARIISI_TALOT)); pid = {w['osm'] for w in o['ways']} | {w['osm'] for w in o['rel']}

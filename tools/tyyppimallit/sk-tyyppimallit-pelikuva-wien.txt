@@ -1,0 +1,47 @@
+# Valoseppä 17.11.2026: KK 17.11. kohta 3 pelikuva Macilla ENNEN | JÄLKEEN, wien. EI JUNAAN.
+# Ennen = KS:n seinä- ja kattoperheet (paketit, ei tyyppimalleja). Jälkeen = KS:n tyyppi-palat (poistot VS:n listasta) + tyyppimallit (koe-rw 1ade54bf4b, vie.py --koe).
+alku odota-tila Aloitus 40;uusi-peli 5 wien;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento talot alue 48.1366 48.2804 16.2652 16.4808 0
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/seinavarit-rooma-wien-20261116/paketit/wien/palat
+odota 20
+komento kallista 50
+komento suunta 225
+komento lahizoomi 3
+komento aja 48.2114 16.3645 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto w1-ennen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva w1-ennen Wien Freyung: Palais Kinsky + Harrach LÄHIKUVA (Freyungin puolelta): Ennen (KS:n perheet, ei tyyppimalleja)
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/seinavarit-rooma-wien-20261116/tyyppi/wien/palat
+odota 20
+komento kallista 50
+komento suunta 225
+komento lahizoomi 3
+komento aja 48.2114 16.3645 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto w1-jalkeen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva w1-jalkeen Wien Freyung: Palais Kinsky + Harrach LÄHIKUVA (Freyungin puolelta): Jälkeen (tyyppimallit + poistot)

@@ -1,0 +1,47 @@
+# Valoseppä 17.11.2026: KK 17.11. kohta 3 pelikuva Macilla ENNEN | JÄLKEEN, rooma. EI JUNAAN.
+# Ennen = KS:n seinä- ja kattoperheet (paketit, ei tyyppimalleja). Jälkeen = KS:n tyyppi-palat (poistot VS:n listasta) + tyyppimallit (koe-rw 1ade54bf4b, vie.py --koe).
+alku odota-tila Aloitus 40;uusi-peli 5 rooma;odota-tila Kartta 40
+ui konsoli pois
+odota 3
+ui kamerasuhde laite
+odota 1
+ui sulje
+odota 60
+komento pallo kerros pakota taysi
+komento talot alue 41.8237 41.9675 12.3757 12.5687 0
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/seinavarit-rooma-wien-20261116/paketit/rooma/palat
+odota 20
+komento kallista 50
+komento suunta 180
+komento lahizoomi 3
+komento aja 41.896 12.4743 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 0
+odota 4
+komento puut tilasto r1-ennen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva r1-ennen Rooma Sant'Andrea della Valle (way/25625603) LÄHIKUVA, julkisivu pohjoiseen Corso Vittoriolle: Ennen (KS:n perheet, ei tyyppimalleja)
+komento talot kansio /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/seinavarit-rooma-wien-20261116/tyyppi/rooma/palat
+odota 20
+komento kallista 50
+komento suunta 180
+komento lahizoomi 3
+komento aja 41.896 12.4743 0.004 2
+odota 25
+linssi kaista lahelle
+odota 8
+komento talot lataus
+odota 10
+ui kartanelama merkit 1
+odota 4
+komento puut tilasto r1-jalkeen
+odota 3
+ui kartanelama tila
+linssi kaista
+kuva r1-jalkeen Rooma Sant'Andrea della Valle (way/25625603) LÄHIKUVA, julkisivu pohjoiseen Corso Vittoriolle: Jälkeen (tyyppimallit + poistot)
