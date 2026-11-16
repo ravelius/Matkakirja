@@ -1,4 +1,4 @@
-# isoisa-ja-tarina · vastuu SK · tarkistettu 12.11.2026
+# isoisa-ja-tarina · vastuu SK · tarkistettu 17.11.2026
 
 TAVOITE: Pelaaja perii isoisänsä Horatio Foggin matkalaukun ja kulkee tämän vuoden 1873 päiväkirjan jäljillä. Siitä avautuu maailma, jota ei enää ole, ja lapsenlapsi oppii ymmärtämään isoisäänsä.
 
@@ -17,7 +17,8 @@ SÄÄNNÖT:
 12. Aarrejahti alkaa isoisän unella ennen aloituslentoa: Mantan smaragdi, Montezuman turkoosinaamio, keisarin jadesinetti ja lopuksi Kolme veljestä. Aarnia ja luetteloa ei mainita. [R-2.159]
 13. Aarnin luettelossa on yksi unohdettu aarre per maanosa, yhden ihmisen kannettava ja yhä löytymätön. Luettelo paljastuu, kun Kolme veljestä -riipus löytyy. [R-3.10]
 14. Aarteesta vihjaa vain muutama sivuhuomio per manner, ei symboleja. [R-3.11]
-15. Isoisän linssi näyttää vain vuoden 1873 rajat ja nimet, Horation reitin, hänen kuvansa ja ajan äänet; aikajanaa siinä ei ole. [R-2.108]
+15. Isoisä ei puutu peliin: hän ei kirjoita, piirrä, vihjaa eikä palkitse pelaajan nykyhetkessä. Hänen äänensä on vuoden 1873 päiväkirja. [P-261116-31]
+16. Isoisän linssi näyttää vain vuoden 1873 rajat ja nimet, Horation reitin, hänen kuvansa ja ajan äänet; aikajanaa siinä ei ole. [R-2.108]
 
 EI VIKA:
 - Aloituskaupungissa isoisä ei puhu.
