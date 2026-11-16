@@ -1,0 +1,48 @@
+{
+  "task": 2388,
+  "status": "CORRECTION_FAILED_TRIPO_HOLD",
+  "sourceCommit": "e431ae3f9e61c29908288ef5beb51998e9a7eee3",
+  "sourceBlobSha": "c73c25ec7c85b03100774617db46e52a27eb966f",
+  "sourceReadFully": true,
+  "referenceImagesViewed": true,
+  "imageCallsAllowed": 1,
+  "imageCallsStarted": 1,
+  "tripoCallsAllowed": 1,
+  "tripoCallsStarted": 0,
+  "jobId": null,
+  "cost": null,
+  "costStatus": "ImageGen price/provider job ID not exposed; no Tripo credits spent",
+  "startedAt": "2026-11-16T07:49:13.192666+00:00",
+  "estimatedCompleteAt": "2026-11-16T07:54:13.192666+00:00",
+  "previousNativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ryhma5-mallikuvat-2364-2367-20261116/2367-humayunin-mausoleumi/humayunin-mausoleumi-2367-native.png",
+  "previousNativeSha256": "4818c5e2a6783dd727a30cbbee6bfc956cd6b1824b6cd50142d91c8be392cb02",
+  "sourceFiles": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/humayun-2388-20261116/sources/humayunin-mausoleumi-huomiot.md",
+      "sha256": "81d6e961d51b6c6364d9eaf2589efe43bb8119f9832ebbe45123d078f56eb909"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/humayun-2388-20261116/sources/humayunin-mausoleumi.jpg",
+      "sha256": "4aa2347cebf2cce03ad0635b703655d2a6ba517e9b9ae6794101f85587a30f2d"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/humayun-2388-20261116/sources/humayunin-mausoleumi.md",
+      "sha256": "9dc336471c0293281cbef157dde69c5ab8866b9f721300d50981b7b763f26583"
+    }
+  ],
+  "productionActive": false,
+  "receiverAcceptance": false,
+  "gameIntegrated": false,
+  "imageArtifactId": "exec-6ef4d859-e22e-438b-890f-351d5f96ea36",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/humayun-2388-20261116/humayun-2388-native.png",
+  "nativeSha256": "e4d9de8ba8c11d7c337318eeb2d4e11b6d2702fff1381d189e0b34529c0914da",
+  "nativePixels": [
+    1536,
+    1024
+  ],
+  "reviewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/humayun-2388-20261116/delivery-review/humayun-2388-review.jpg",
+  "imageCompletedAt": "2026-11-16T07:50:06.971705+00:00",
+  "qaStatus": "FAIL",
+  "qaRoot": "qa-root.md",
+  "qaIndependent": "qa-independent.md"
+}
