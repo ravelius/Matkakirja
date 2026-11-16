@@ -56,3 +56,20 @@ Oppitunti ("Miksi tavara kulkee ikkunasta", fokusvirta-amsterdam.js) ja visa-fak
 ## Pulu: sama virhe esigeneroiduissa vastauksissa
 
 pulu-esigenerointi/KAUMAA/vienti/pulu/vastaukset/v1/NLD.json (+ fakta/era-17.txt ja muut esigeneroinnin lähdetiedostot) sisältää samat virheet (kuusi metriä syvä, 203/127/5, 27 arkkua ja 300 000 guldenia, lakka 1940-luvulla, Kapein talo -verokysymys). EI korjattu tässä PR:ssä: esigeneroinnin kääntö on Pelikoodarin/Pulu-putken asia. Rivi KK:lle.
+
+## Erä 2 (KK 20.31): Yövartion ja laivan loput
+
+Pino PR 6882:n päälle (haara sk/amsterdam-tekstivirheet-2); KK lukee ennen yhdistämistä.
+
+| Vanha | Uusi | Lähde |
+|---|---|---|
+| "363 senttiä korkea ja 437 leveä" (nosto ja visa-fakta) | poistettu | Rijksmuseum itse antaa kolme lukua: 379,5×453,5 (objektisivu) ja 379,5×436 (lehdistötiedote); 363×437 vain Wikipedia. Visa-fakta: "väärä nimi tunnetaan asiakirjasta 1700-luvun lopulta" (Rijksmuseum "10 things": nimi ensi kerran 1797) |
+| "Vasemmalta katosi kaksi miestä ja alta askelman reuna, ylhäältä holvikaaren huippu" | "eniten vasemmalta, mistä katosi useita hahmoja" | National Gallery NG289 ("two men and a child"); Rijksmuseum lehdistötiedote: vasen kaista 64,4 cm = suurin; askelma ja holvikaari vain Wikipedia |
+| "ainoa todiste" / "ainoa säilynyt todiste" (Lundensin kopio, kuvateksti ja selite) | "tärkein todiste" / "tärkein säilynyt todiste" | NG289: kopio tallentaa kadonneet yksityiskohdat; Rijksmuseum käytti sitä 2021 rekonstruktion pohjana; "ainoa" ei tuettu (johdannainen akvarellikopio olemassa) |
+| "sai suurimman osan hopeasta mukanaan, loput veivät ryöstelijät" | "suurin osa hopeasta pelastettiin; osan veivät rannalle ryntäneet salakuljettajat" | Shipwreck Museum Hastings (salakuljettajat veivät osan harkoista) + Sussex Smuggler (Watson-jengi n. 50 harkkoa, 34 palautettu) + Scheepvaartmuseum (28 arkkua pelastettiin) |
+| "runko oli tallella, koska savi ei päästä happea puuhun" (nosto ja visa-fakta) | "noin kaksi kolmasosaa laivasta oli tallella" | The Past + Shipwreck Museum Hastings (kaksi kolmasosaa); happimekanismia ei yhdessäkään luetussa lähteessä |
+
+Ei korjattu: Yövartion kuvateksti "oikea nimi … lakka lähes musta" (alkuperäistä nimeä ei ole, RM: teos oli alun perin nimetön; KK:n lista ei kata), 1969 "vesi laski" -tarina (kaksi kilpailevaa selitystä: matala vesi vs viemärityömaa) ja siihen sidottu visa.
+Äänitysjono: tarkista.mjs --lisaa lisäsi 4 riviä (Amsterdam-laiva, Yövartio, täkynosto Yövartio, fokusvirta voc-hylky 2). npm test 0 virhettä.
+
+KK 20.32 hionta (samassa PR:ssä): "useita hahmoja" → "kolme hahmoa" (NG289: kaksi miestä ja lapsi); visa-fakta "Nimi Yövartio on peräisin vasta 1700-luvun lopulta" (Rijksmuseum "10 things": nimi ensi kerran asiakirjassa 1797); kuvateksti "oikea nimi" → "teoksella ei alun perin ollut nimeä, nimi tunnetaan asiakirjasta vasta 1700-luvun lopulta" (Rijksmuseum: teos alun perin nimetön). 1969 "vesi laski" jää ennalleen.
