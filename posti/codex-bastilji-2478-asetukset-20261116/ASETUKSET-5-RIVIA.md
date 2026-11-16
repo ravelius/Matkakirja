@@ -1,0 +1,5 @@
+1. GC2269 käyttää 2253:n A/B/C-alkuperäisiä: HD Model / Single Image, H3.1 Best Quality, Ultra, 2 000 000 polycount, 8K, PBR + Remove Lighting; ei P2.0:aa eikä moninäkymää. GC2250 oli erillinen moninäkymäajo, ei 2269:n lähde.
+2. 2269 on paikallinen johdannainen (ei uusia Tripo-krediittejä): värikuvat 2048², normaalit 1024²; 8K-alkuperäiset säilyvät. Tämänhetkinen HD/H3.1 Ultra tarjoaa jo 2M-kentän ja 8K:n, joten pelkkää korkeampaa resoluutiovalintaa ei löytynyt.
+3. Tilin P2.0 Smart Mesh tarjoaa nelikulmiot/muokattavuuden ja 500–25 000 polycountin (oletus5000, UI100 krediittiä); sitä ei voi nimetä tarkemmaksi rakennusgeometriaksi pelkän versionumeron perusteella.
+4. HD-moninäkymäsyöte hyväksyy nyt enintään30 kuvaa; teen A:n saman hyväksytyn mallin3–4 johdonmukaista suuntaa. H3.1/Ultra/8K + moninäkymä on perusteltu b-koe; nykyinen yksikuvainen A toimii a-vertailuna ilman uutta identtistä ottoa.
+5. Erillinen Texture hyväksyy kuvaviitteen, Remove Lightingin ja 2K/4K/8K:n (8K UI30 krediittiä); Generate in Parts ja Segment ovat saatavilla. Kuvan uudelleenteksturointi voi parantaa pintaa, mutta ei yksin korjaa rakennuksen muotoa.
