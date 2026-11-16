@@ -1,0 +1,76 @@
+{
+  "file": "hallgrimskirkja-2387-max-original-8k.glb",
+  "bytes": 71411840,
+  "sha256": "1daad6ba8d93dd7ad242940adef50b7f56bca982e34c98f18a2a625fbe2b1a3c",
+  "triangles": 1886625,
+  "vertices": 1128140,
+  "vertexDefinition": "Distinct POSITION accessor entries; not welded geometric vertices",
+  "meshCount": 1,
+  "primitiveCount": 1,
+  "images": [
+    {
+      "index": 0,
+      "name": "NormalGL_f00c2459-08f1-4ab7-8f6d-f8d29f9e6741",
+      "roles": [
+        "normal"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 929540
+    },
+    {
+      "index": 1,
+      "name": "tripo_image_255c7db5-7d9f-42e4-904e-9c70aa742cb3_0",
+      "roles": [
+        "baseColor"
+      ],
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 9768660
+    },
+    {
+      "index": 2,
+      "name": "tripo_image_255c7db5-7d9f-42e4-904e-9c70aa742cb3_1",
+      "roles": [
+        "metallicRoughness"
+      ],
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "format": "JPEG",
+      "mimeType": "image/jpeg",
+      "embeddedBytes": 1971407
+    }
+  ],
+  "externalDependencies": [],
+  "worldBoundsGlTF": {
+    "min": [
+      -0.30105599761009216,
+      0,
+      -0.4894104599952698
+    ],
+    "max": [
+      0.3011474311351776,
+      0.601959228515625,
+      0.4896546006202698
+    ],
+    "dimensions": [
+      0.6022034287452698,
+      0.601959228515625,
+      0.9790650606155396
+    ]
+  },
+  "coordinateFrame": "Native normalized glTF: X/Y/Z, Y up; no metric scale or geographic registration verified",
+  "geographicRegistration": "UNRESOLVED; use local azimuth labels only",
+  "requiredExtensions": [],
+  "warnings": []
+}
