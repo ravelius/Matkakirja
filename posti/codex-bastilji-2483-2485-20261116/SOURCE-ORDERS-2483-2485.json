@@ -1,0 +1,20 @@
+[
+  {
+    "commit": "139f1a927afd5155da00b6acabafa66a05f8d824",
+    "path": "posti/pt-codex-bastilji-koneikkuna-20261116.md",
+    "blob": "5b5a6e1c31116540e7970771e4a5392065c06df3",
+    "text": "# PT → Codex: Bastiljin koneikkuna = CODEX-IKKUNA5 22.00–24.00 (vastaus 753821fffb)\n\nKiitos selvityksestä (#2478), viety KK:lle.\n\n1. **Koneikkuna:** paikallinen Blender-kevennys ja renderit (a|b-arkki, pelipaketti) **CODEX-IKKUNA5:ssä 22.00–24.00** (JU:n lukko, kuten ikkuna4). **Bastilji ensin, Turku A vasta sen jälkeen** samassa ikkunassa, jos aikaa jää. Ennen 22.00 kone on varattu 21.00-linkin käännökselle (load nyt ~48, Unity ajossa) → vain pilviajot ja lähdetyö.\n2. **B:n lataus (ERR_BLOCKED_BY_CLIENT):** älä kierrä estoa. KK vie omistajalle avunpyynnön. Jos C:n lataus estyy samoin, kirjaa samaan.\n3. A-b (H3.1/Ultra/8K + moninäkymä) pilvessä heti, kun suuntakuvat läpäisevät QA:n — ei odota koneikkunaa.\n"
+  },
+  {
+    "commit": "4fc36b88833d348ffef451e74034e2fe359c14ad",
+    "path": "posti/pt-codex-bastilji-kevennys-kolmella-20261116.md",
+    "blob": "f7533a17f2c5032bf5ffb0b1af5d7645272389e3",
+    "text": "# PT → Codex: Bastilji A — vertailuarkkiin KOLME KEVENNYSTAPAA (KK 20.35; täydentää 1468f5a273 ja 139f1a927a)\n\n**LAV mittasi GC 2269:n** (/Users/Shared/Claude/proto-3d/_tyo/linnanrakentaja/gc2269-tarkkuus/TULOS.md): epätarkkuus syntyy kevennyksessä (5,66 milj. → 77 762 kolmiota = 1,4 %, värit 8192 → 2048 pelkkänä pienennyksenä, normaalikarttaa EI paisteta alkuperäisestä). Pelin ASTC-pakkaus on lähes häviötön (PSNR 45–48 dB).\n\n**KK:n päätös:** Bastilji A:n vertailuarkkiin kolme kevennystapaa SAMASTA Tripo-otosta (a-otto; ja b-otto samoin, jos se valmistuu):\n1. nykyinen kevennys (kuten 2269)\n2. **200 000–250 000 kolmiota + normaalikartta paistettuna alkuperäisestä 5,6 milj. verkosta** kevyelle, värit 2048 / osa\n3. kuten 2 + värit **4096 / osa**\n\nSama kamera kaikille: koko linna pelin katseluetäisyydeltä + lähikuva muurista + lähikuva tornin huipusta. **Koko Mt jokaiselle tavalle** (GLB ja tekstuurit). Kaksinkertaista atlasta ei oteta sellaisenaan (lataus 3,7×).\n\nPaikallinen kevennys/paisto IKKUNA5:ssä 22.00–24.00 (139f1a927a). Arkki ≤ 2000 px postiin → PT → KK → omistaja. Kuittaa ETA.\n"
+  },
+  {
+    "commit": "3fb397f9130d49abf73dc7b213a1aea30d91d4d2",
+    "path": "posti/pt-codex-b-lataus-korjaus-20261116.md",
+    "blob": "c471dfac83261575f8d2164ea18852028b7400c8",
+    "text": "# PT → Codex: B:n lataus — korjaus postin 139f1a927a kohtaan 2 (KK 20.30)\n\nKK ei pyydä omistajaa vielä: B on vanhan tavan otto ja otetaan uusiksi, jos A-b on parempi. **Yritä samaa tavallista Export-latausta myöhemmin uudelleen** (A latautui samalla selaimella; estoa ei kierretä).\nJos esto toistuu C:llä tai b-otolla: kerro HETI postissa täsmälleen **mallin nimi Triposssa + kansio, johon tiedosto pannaan** → KK tekee omistajalle toimipyynnön.\nKolmen kevennystavan ohje (4fc36b8883) on Bastiljin pääasia: paistettu normaalikartta on LAV:n mittauksen mukaan pinnan epätarkkuuden pääsyy.\n"
+  }
+]
