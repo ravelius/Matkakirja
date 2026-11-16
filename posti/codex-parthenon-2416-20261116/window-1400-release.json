@@ -1,0 +1,13 @@
+{
+  "task": 2424,
+  "renderStartedAt": "2026-11-16T12:00:14.531424+00:00",
+  "renderFinishedAt": "2026-11-16T12:00:29.555034+00:00",
+  "resourceReleasedAt": "2026-11-16T12:02:46.920953+00:00",
+  "noBlenderProcessAtRelease": true,
+  "sourceCommit": "beee6c0e0c5b1c174d548be8cd3d3cd792d04fdb",
+  "framesCompleted": 7,
+  "assetDeliveryAt": null,
+  "KKAcceptance": false,
+  "newTripoJobs": 0,
+  "credits": 0
+}

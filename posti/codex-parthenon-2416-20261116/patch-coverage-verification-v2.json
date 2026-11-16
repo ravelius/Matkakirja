@@ -1,0 +1,8 @@
+{
+  "originalMissingFloorSamples": 3822,
+  "afterMissingFloorSamples": 0,
+  "step": 0.001,
+  "uncoveredXZ": [],
+  "status": "COVERAGE_PASS",
+  "visualQAStillRequired": true
+}

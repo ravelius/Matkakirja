@@ -1,0 +1,36 @@
+{
+  "task": 2416,
+  "reviewedAt": "2026-11-16T12:03:53.805692+00:00",
+  "technicalResult": "FLOOR_COVERAGE_PASS",
+  "visualResult": "WARN_TO_KK_REVIEW",
+  "productionApproved": false,
+  "KKAccepted": false,
+  "gameIntegrated": false,
+  "imagesPersonallyInspected": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-floor-2416-20261116/before-upper.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-floor-2416-20261116/after-v2-upper.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-floor-2416-20261116/before-hole.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/parthenon-floor-2416-20261116/after-v2-hole.png"
+  ],
+  "inspectionScope": "Whole before/after contact sheet, whole after image and 1000px after closeup",
+  "imageSHA256": {
+    "before-upper.png": "b6381f1ee1bb82d13eca4ca97fc6efb8a34a441de6379585bcef4fb7096b446e",
+    "after-v2-upper.png": "632b5ad1f4c1003a498262c69df05fd790a9c5e0a847c98618143143c483efdc",
+    "before-hole.png": "334112ecf40586a44218cd82e11246861237835c3421f70e21435d415e90c974",
+    "after-v2-hole.png": "19349a5c4a2333fce988bf2bb9a783b7edc1a49645f3cc3e2bac9146edd2ef6f"
+  },
+  "sameCameraBeforeAfter": true,
+  "missingFloorSamplesAfter": 0,
+  "findings": [
+    "Unintended central opening covered; no background visible through the former hole.",
+    "Floor grid phase substantially better aligned than v1; intended long-side beam/column interruption retained.",
+    "At 1000px floor close-up the cap outline remains visible as a slight color/texture boundary and small edge irregularities. It is inconspicuous in the full-model oblique view.",
+    "This is a bounded floor repair review, not a claim of a fully seamless surface or whole-mesh watertightness."
+  ],
+  "candidateSHA256": "e46add154ad34f308babbca0ad5bdf3161117fb2c79b8e1d91446b8897382c86",
+  "originalSHA256VerifiedUnchanged": true,
+  "rejectedV1PreservedAndExcluded": true,
+  "renderEvidence": "window-1400-run.json",
+  "newTripoCalls": 0,
+  "credits": 0
+}
