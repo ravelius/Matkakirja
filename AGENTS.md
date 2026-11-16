@@ -3,7 +3,7 @@
 Tämä tiedosto on tiivis sisääntulo agentille, joka aloittaa työn
 Matkakirja-repossa. Se ei ole uusi säännöstö: kaikki alla oleva on
 koottu tiedostoista `CLAUDE.md`, `docs/roolitus.md`, `CONTRIBUTING.md`,
-`js/tyohuone-raamattu.js` (Raamattu) ja `tools/parvi/agentin-yhteiset-saannot.md`.
+Raamatusta (`docs/raamattu/`, ovi `node tools/kirjaa.mjs`) ja `tools/parvi/agentin-yhteiset-saannot.md`.
 Ristiriitatilanteessa **Raamattu voittaa**, ja kaanonia (tarina) koskevissa
 asioissa `docs/tarina.md` ja `docs/isoisan-raamattu.md`.
 
@@ -37,7 +37,7 @@ Samalla oppii maailmasta.
 | Tiedosto | Mitä siellä on |
 | --- | --- |
 | `CLAUDE.md` | sisääntulo, osoittaa muualle |
-| `js/tyohuone-raamattu.js` (**Raamattu**) | pelin idea ja kaikki oleelliset linjaukset yhdessä paketissa, 14 lukua; luku 13 on täydellinen kartta muihin ohjedokumentteihin |
+| `docs/raamattu/` (**Raamattu**) | pelin kuvaus (A-peli.md), linjaukset (B-linjaukset.md) ja aihekortit; ovi `node tools/kirjaa.mjs hae <sanat>`, joka löytää myös muut ohjedokumentit |
 | `docs/roolitus.md` | työnjako kolmen session kesken, viestintä, julkaisusäännöt |
 | `CONTRIBUTING.md` | kysymysten, lautojen ja linssien lisääminen, tekniset periaatteet |
 | `docs/tarina.md`, `docs/isoisan-raamattu.md` | tarinan kaanon, sitova kaikessa sisällössä |
@@ -154,7 +154,7 @@ PR:n Savukkeet-työnkulussa.
 
 Näihin agentti **ei koske**:
 
-- `js/tyohuone-raamattu.js` — Raamattu, vain Fable kirjoittaa
+- `docs/raamattu/` — Raamattu, kirjoitetaan vain `node tools/kirjaa.mjs` -ovella
 - `js/tyohuone-tilanne.js` — työhuoneen tilannetaulu, vain Fable
 - `docs/tarina.md`, `docs/isoisan-raamattu.md` — kaanon, vain Fable
 - `dist/` — yhden tiedoston versio rakennetaan julkaisussa, ei committoida

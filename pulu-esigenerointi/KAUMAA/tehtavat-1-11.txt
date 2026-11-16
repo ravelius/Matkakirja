@@ -1,0 +1,181 @@
+================ KOHTA 51 (maa:ISL) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (maa)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+
+### 51.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (kaupunki:islanti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Islanti
+Maa, jossa pelaaja on: Islanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Islanti (kaupunki)
+Tietoruudun teksti: Islanti on tulivuorisaari Pohjois-Atlantilla, aivan napapiirin eteläpuolella. Asukkaita on noin 390 000 — vähemmän kuin Turussa ja Tampereella yhteensä — ja saari on Suomen kolmasosan kokoinen. Se istuu Keski-Atlantin harjanteella, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan, ja siksi saarella on toistasataa tulivuorta ja kuumia lähteitä.
+
+Korkokartalla vihreä on vain kapea kehä rantojen tuntumassa, ja juuri siellä ihmiset asuvat. Keskusta on ruskeaa ylänköä, jossa ei ole kyliä lainkaan, ja sen päällä hohtaa valkoisia läiskiä — jäätiköitä. Suurin niistä on kaakon Vatnajökull, joka peittää noin kahdeksan prosenttia maasta ja on paksuimmillaan lähes tuhat metriä.
+
+Þingvellirin rotkossa kokoontui Alþingi jo vuonna 930, ja maanalainen lämpö lämmittää yhä lähes kaikki talot. Jäätiköt eivät kuitenkaan pysy paikoillaan: Vatnajökullin eteläreunassa on järvi, jota ei sa…
+Isoisän matkakirjamerkintä: Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti] Saari, jossa käräjät pidettiin kahden mantereen välissä, kieli ei ole muuttunut tuhanteen vuoteen ja kirjoja julkaistaan enemmän asukasta kohti kuin missään muualla.
+
+### 52.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (maa:ITA) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Italia (maa)
+Tietoruudun teksti: Italia on saapasta muistuttava niemimaa keskellä Välimerta. Nykyinen valtio on nuori — se yhdistyi kuningaskunnaksi vasta 1861 — mutta sen mailla on kävelty pidempään kuin juuri missään: Rooman valtakunta hallitsi täältä koko Välimerta.
+
+Pohjoisessa maa alkaa Alpeilta ja laskeutuu Po-joen laakeaan laaksoon, jossa ovat sen pellot, tehtaat ja suurin osa sen sateista. Sieltä etelään kulkee Apenniinien selkäranka Sisiliaan asti, ja saappaan kärjessä tulivuoret ovat yhä hereillä.
+
+Vuosisatoja maa oli kaupunkivaltioiden tilkkutäkki, ja se näkyy yhä: murteet, ruoat ja tavat vaihtuvat laaksosta toiseen, ja moni esittelee itsensä ensin kotiseutunsa kautta. Unescon maailmanperintökohteita Italiassa on enemmän kuin missään muussa maassa. Rajojen sisäpuolella on lisäksi kaksi omaa valtiota, Vatikaani ja San Marino.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+
+### 53.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (kaupunki:venetsia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Venetsia
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Venetsia (kaupunki)
+Tietoruudun teksti: Venetsia on Koillis-Italian rannikkokaupunki ja Veneton alueen pääkaupunki, ja se on rakennettu 126 saarelle matalaan laguuniin. Saaria yhdistää 472 siltaa, ja kaikki liikkuminen tapahtuu jalan tai vettä pitkin — autoja saarikaupungissa ei ole lainkaan. Kunnan alueella asuu noin 250 000 ihmistä, mutta itse vanhassa saarikaupungissa enää noin 50 000; suurin osa väestä asuu mantereen puolella.
+
+Kaupunki oli vuodesta 810 vuoteen 1797 itsenäisen tasavallan pääkaupunki, lähes vuosituhannen, ja siitä käytettiin nimeä La Serenissima. Sen laivat hallitsivat idänkauppaa, ja vaurauden näkee yhä Pyhän Markuksen torilla: basilikan kultamosaiikeissa ja dogen palatsin kaaririvistössä. Itsenäisyys päättyi Napoleoniin, ja vuonna 1866 Venetsiasta tuli osa Italiaa.
+
+Vesi on samalla kaupungin perusta ja sen uhka. Talot seisovat pohjamutaan lyötyjen puupaalujen varassa, ja syksyisin nousuvesi tulvii toreil…
+Isoisän matkakirjamerkintä: San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Venetsia] Kaupunki, joka päätti rakentaa itsensä veteen — ja teki mahdottomasta tunnusmerkkinsä.
+
+### 54.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (kaupunki:firenze) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Firenze
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Firenze (kaupunki)
+Tietoruudun teksti: Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä asuu noin 360 000 ihmistä. Vanhakaupunki on pieni: reunasta reunaan on noin kaksi kilometriä, ja kaikki tärkeä on kävelymatkan päässä. Roomalaiset perustivat paikalle varuskuntakaupungin vuonna 59 eaa., ja sen ruutukaava erottuu vanhankaupungin katuverkossa yhä.
+
+Keskiajalla Firenze rikastui villakankaasta ja pankeista, ja vuodesta 1252 se löi omaa kultarahaansa floriinia, johon luotettiin kaikkialla Euroopassa. Rahan takana olleista suvuista mahtavimmaksi nousi Medici, joka osti valtansa kaupalla ja tilaustöillä. Juuri täällä syntyi se, mitä myöhemmin alettiin kutsua renessanssiksi: taiteen ja tieteen suunnanmuutos, jonka tekijöitä Medicit palkkasivat Donatellosta Michelangeloon.
+
+Tuomiokirkon kupoli valmistui 1436, eikä tiilistä ole sen jälkeen muurattu suurempaa. Firenzeläinen Dante Alighieri kirjoitti pääteoksensa oman ka…
+Isoisän matkakirjamerkintä: Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Firenze] Toscanan pääkaupunki on niin pieni, että sen kävelee ristiin puolessa tunnissa — ja niin täynnä, että siihen ei riitä viikko. Arno jakaa sen kahtia, ja kupoli näkyy joka kadunkulmasta.
+
+### 55.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI

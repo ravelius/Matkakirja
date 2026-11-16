@@ -1,0 +1,172 @@
+================ KOHTA 1 (maa:ALB) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Albania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Albania (maa)
+Tietoruudun teksti: Albania on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva valtio, jonka pinta-ala on 28 748 neliökilometriä. Se rajoittuu Montenegroon, Kosovoon, Pohjois-Makedoniaan ja Kreikkaan, ja sen länsirannikkoa huuhtovat Adrianmeri ja Joonianmeri. Maisema vaihtelee lyhyillä etäisyyksillä: sisämaassa kohoavat lumihuippuiset Albanian Alpit ja Korabin vuoristo, rannikolla levittäytyvät hedelmälliset tasangot. Pääkaupunki ja suurin kaupunki on Tirana, ja muita tärkeitä kaupunkeja ovat Durrës, Vlorë ja Shkodër. Virallinen kieli on albania. Vuoden 2023 väestönlaskennan mukaan asukkaista noin 96 prosenttia on etnisiä albaaneja, ja loput kuuluvat kreikkalaiseen ja muihin vähemmistöihin. Maan ilmasto, kivilajit, vesistöt ja maanmuodot ovat poikkeuksellisen kirjavia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historian hetki: Vlorë 1912 — lippu, joka ommeltiin yöllä] 28.11.1912 — Neula pistää kangasta vielä muutama tunti ennen kuin lippu nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo Vlorën satamakaupungin vaatimattomassa talossa, joka toimii samalla sairaalana, ja lukee ääneen julistuksen: Albania on itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät jakaa alueen keskenään: Serbian, Montenegron ja Kre…
+
+### 1.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kaupunki:tirana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tirana
+Maa, jossa pelaaja on: Albania
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tirana (kaupunki)
+Tietoruudun teksti: Tirana on Albanian pääkaupunki ja maan suurin kaupunki, ja se levittäytyy Tiranan tasangolle Dajtin vuoren juurelle. Alueella on asuttu jo esihistoriallisista ajoista, ja kaupunki mainitaan venetsialaisissa asiakirjoissa 1300-luvulla. Nykyinen kaupunki sai muotonsa 1600-luvun alussa, kun paikallinen hallitsija Sulejman Bargjini rakennutti vuonna 1614 moskeijan, pienen kauppakeskuksen ja hammamin.
+
+Isoisän matkavuonna 1873 Tirana oli ottomaanien aikainen basaarikaupunki, jossa Et'hem Beyn moskeija ja kellotorni jo kohosivat. Pääkaupungiksi se julistettiin väliaikaisesti vuonna 1920 ja pysyvästi 1925. Nykyisen keskustansa se sai 1900-luvun suunnitelmista, joita laativat itävaltalaiset ja italialaiset arkkitehdit.
+
+Tiranan kunnassa asui vuoden 2023 väestölaskennan mukaan 598 176 ihmistä. Skanderbeg-aukion ympärillä ovat kellotorni, moskeija ja museot, ja viime vuosina vanhoja rakennuksia o…
+Isoisän matkakirjamerkintä: Tirana, huhtikuussa 1873. Ottomaanien valtakunnan basaarikaupunki, jota kukaan ei vielä kutsu pääkaupungiksi. Et'hem Beyn moskeijan seinillä on maalattuja puita, vesiputouksia ja siltoja, jotka eivät esitä mitään oikeaa paikkaa, ja sen vieressä kohoaa kellotorni. Kello lyö tunnit basaarin yllä, jossa kauppaa ja vesimyllyjä on pyörinyt jo kauan ennen tätä moskeijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tirana — kaupunkilehti / Tirana] Isoisän matkavuonna 1873 Tirana oli ottomaanien aikainen basaarikaupunki, jossa Et'hem Beyn moskeija ja kellotorni jo kohosivat. Pääkaupungiksi se julistettiin väliaikaisesti vasta 1920 ja pysyvästi 1925, ja nykyisen keskustansa se sai 1900-luvun suunnitelmista.
+
+### 2.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (maa:AUT) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Itävalta (maa)
+Tietoruudun teksti: Itävalta on vuoristomaa Alppien itäpäässä, eikä sillä ole merta lainkaan. Naapureita sen sijaan on kahdeksan — useampi kuin melkein millään muulla Euroopan maalla.
+
+Yli 70 prosenttia maasta on vuorta: lännessä ja etelässä Alpit kohoavat harjanne harjanteen perään, ja korkein huippu Großglockner yltää 3 798 metriin. Idässä maa madaltuu ja levenee, ja siellä Tonavan varrella on pääkaupunki Wien. Kartalta näkee maan muodon: lännessä se kaventuu vuorten väliseksi kaistaleeksi, idässä se aukeaa tasangoksi.
+
+Vuoret eivät ole vain maisemaa vaan elinkeino. Alppipurojen voimalat tuottavat suuren osan maan sähköstä, ja talvella samoille rinteille nousee miljoonia hiihtäjiä. Hallstattin kylässä on louhittu suolaa seitsemäntuhatta vuotta, ja lähikaupungin nimi Salzburg tarkoittaa suolalinnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Kortti, jonka postimieskin sai lukea] 1869 — Kirje maksoi Itävalta-Unkarissa viisi kreutzeria, ja moni asia oli sen hinnan arvoiseksi liian pieni. Kansantalouden professori Emanuel Herrmann ehdotti tammikuussa 1869 lehtiartikkelissa korttia, joka lähetettäisiin ilman kuorta ja johon saisi kirjoittaa enintään kaksikymmentä sanaa, kuten sähkeeseen. Posti innostui. Lokakuun 1. päivänä 1869 myyntiin tuli Correspondenz-Karte, kooltaan 8,5 kertaa 12,2 senttiä ja hinnaltaan kaksi kreutzeria. Sanarajan posti jätti pois. Ensimmäisessä kuukaudessa kortteja myytiin 1,4 miljoonaa.
+- [Itävalta — maalehti / Menovinkit] Itävalta on avannut verkkoon sen, mitä salissa ei näe: maalin alle jääneet luonnokset, Klimtin kultalehden lähikuvana, 28 miljoonaa sanomalehden sivua, Mozartin oman käsialan ja alppilaakson suorana kuvana.
+
+### 3.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kaupunki:wien) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Wien (kaupunki)
+Tietoruudun teksti: Wien on Itävallan pääkaupunki Tonavan varrella, ja siellä asuu noin kaksi miljoonaa ihmistä. Kaupunki seisoo kohdassa, jossa joki tulee ulos vuorten välistä: lännessä nousee Wienerwald ja idässä alkaa Unkariin asti jatkuva lakeus. Roomalaiset perustivat paikalle Vindobonan leirin lähes kaksituhatta vuotta sitten.
+
+Satojen vuosien ajan Wien oli Habsburgien valtakunnan keskus, joka 1900-luvun alussa ulottui Sveitsin rajalta Ukrainaan — siksi keskusta näyttää yhä suuremman maan pääkaupungilta kuin Itävalta nykyään on. Kaupunginmuuri purettiin keisarin käskystä, ja tilalle avattiin 1865 puistokatu Ring, jonka varteen nousivat ooppera, raatihuone ja parlamentti. Valtakunta hajosi ensimmäisen maailmansodan jälkeen 1918.
+
+Musiikki on kaupungin tunnetuin vientituote: Haydn, Mozart, Beethoven, Schubert ja Brahms työskentelivät täällä. Vuoden 1900 tienoilla Wien oli uusien ajatusten laboratorio: …
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+
+### 4.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (maa:BEL) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Belgia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Belgia (maa)
+Tietoruudun teksti: Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat menettäneet tulessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Ruoka] Belgia on pieni maa, jonka keittiö on saanut suuria ihmisiä kiistelemään: täytetty suklaa, vohvelit, ranskalaiset perunat ja luostarien olut kuuluvat samaan pöytään.
+
+### 5.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

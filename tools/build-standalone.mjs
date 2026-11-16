@@ -490,7 +490,6 @@ const MODULES = [
   // Kehittäjän liitteet (v697): ui.js lukee Raamatun ja tilannetaulut
   // pelin sisäisiin lehtiin, joten ne kuuluvat myös yhden tiedoston
   // versioon.
-  'js/tyohuone-raamattu.js',
   'js/tyohuone-tilanne.js',
   'js/tyohuone-pelit.js',
   // Lukijaäänen oletusten näyttökopio (main.js tuo sen dialogiin).
@@ -558,9 +557,6 @@ const MODULES = [
    * funktioita, se ei tee levyversiossa mitään.
    */
   'js/natiivi.js',
-  // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
-  // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
-  'js/lahteet.js',
   // Nimetön kävijälaskuri (main.js tuo; tarvitsee pollo-asetukset.js:n).
   'js/kaynti.js',
   'js/aani-ehdokkaat.js',
@@ -663,6 +659,9 @@ const MODULES = [
    */
   // Sisältötaulut ennen ui.js:ää (ui tuo ne; pakat ovat jo yllä).
   'js/sisaltotaulut.js',
+  // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo, jonka js/ui.js tuo staattisesti.
+  // Sisältötaulujen jälkeen: valokuvakysymysten nimeämisrivit tulevat KAIKKI_VALOKUVAT-datasta (PR 6705).
+  'js/lahteet.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
   // Avaus- ja sulkuanimaatioiden apuri (omistaja 29.9.2026) ennen kortteja, popupeja ja valikoita,
@@ -852,7 +851,6 @@ const MODULES = [
    * yllä.
    */
   'js/tyohuone-kehittajalehti.js',
-  'js/tyohuone-raamattu-muokkaus.js',
   /*
    * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
    * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —

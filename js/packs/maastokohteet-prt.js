@@ -707,10 +707,11 @@ export const MAASTOKOHTEET_PRT = [
       maailmankartta: { x: 4973.8, y: 1886.4 },
     },
     teksti: 'Sete Cidades on São Miguelin saaren länsiosassa Azoreilla sijaitseva kaldera, jonka '
-      + 'pohjalla on kaksi järveä. Kaldera on noin 6 x 5 kilometrin kokoinen, ja sen syvyys '
-      + 'vaihtelee lännen 200 metristä idän 500 metriin. Paikallisen taruston mukaan järvet, '
-      + 'Lagoa Verde ja Lagoa Azul, syntyivät vihreäsilmäisen prinsessan ja sinisilmäisen '
-      + 'paimenpojan kyynelistä. Järvi on 259 metrin korkeudella ja enimmillään 33 metriä '
+      + 'pohjalla on kaksi järveä. Kaldera on halkaisijaltaan noin 5 kilometriä, ja sen syvyys '
+      + 'on satoja metrejä. Taru kertoo, että prinsessa ja paimenpoika itkivät erotessaan, ja '
+      + 'kyyneleistä syntyivät Lagoa Verde ja Lagoa Azul, vihreä ja sininen järvi; kertojasta '
+      + 'riippuen vihreä on prinsessan silmien väri tai paimenen. Järvi on noin 260 metrin '
+      + 'korkeudella ja enimmillään noin 33 metriä '
       + 'syvä.',
     lahde: 'en-Wikipedia "Lagoa das Sete Cidades" ja "Sete Cidades Massif", osiot "Geography", '
       + '"Legend" ja "Caldera" (tarkistettu 30.9.2026).',
@@ -741,11 +742,12 @@ export const MAASTOKOHTEET_PRT = [
       maailmankartta: { x: 5266.7, y: 2079 },
     },
     teksti: 'Madeiran laurisilva on laakeripuiden hallitsema ikivihreä metsä, jota kasvaa saaren '
-      + 'pohjoisrinteillä 300–1 300 metrin ja eteläpuolella 700–1 600 metrin korkeudessa. '
+      + 'pohjoisrinteillä 300–1 300 metrin korkeudessa ja eteläpuolella korkeammalla. '
       + 'Jäljellä on noin 15 000 hehtaaria, enimmäkseen saaren pohjoispuolella. Kosteassa '
       + 'metsässä kasvavat muun muassa Ocotea foetens ja Laurus novocanariensis, ja '
-      + 'kasvistoon kuuluu 66 kotoperäistä putkilokasvia. Paleobotaanisten tietojen mukaan '
-      + 'metsä on ollut saarella vähintään 1,8 miljoonaa vuotta. Unesco hyväksyi alueen '
+      + 'kasvistoon kuuluu kymmeniä kotoperäisiä putkilokasveja. Tämän kaltaista metsää kasvoi '
+      + 'Etelä-Euroopassa kymmeniä miljoonia vuosia sitten; Madeiralla se on säilynyt. Unesco '
+      + 'hyväksyi alueen '
       + 'maailmanperintökohteeksi vuonna 1999.',
     lahde: 'en-Wikipedia "Laurisilva of Madeira", osiot "Distribution", "Ecology" ja "World '
       + 'Heritage Site" (tarkistettu 30.9.2026).',

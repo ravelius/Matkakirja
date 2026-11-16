@@ -49,7 +49,13 @@ def main():
         sid = os.path.basename(max(glob.glob(f'{PROJEKTI}/*.jsonl'), key=os.path.getmtime))[:-len('.jsonl')]
     kuka = sys.argv[2] if len(sys.argv) > 2 else 'Päätoimittaja'
     rivit, kortit = [], {}
-    for rivi in open(f'{PROJEKTI}/{sid}.jsonl', encoding='utf-8'):
+    polku = f'{PROJEKTI}/{sid}.jsonl'
+    if not os.path.exists(polku):  # roolin sessio toisessa projektikansiossa (esim. Matkakirja-julkaisija)
+        osumat = glob.glob(f'{os.path.dirname(PROJEKTI)}/*/{sid}*.jsonl')
+        if not osumat:
+            sys.exit(f'sessiota {sid} ei löydy kansiosta {os.path.dirname(PROJEKTI)}')
+        polku = osumat[0]
+    for rivi in open(polku, encoding='utf-8'):
         try:
             d = json.loads(rivi)
         except ValueError:

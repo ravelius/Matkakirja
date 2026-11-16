@@ -676,6 +676,36 @@ for (const city of ERA5_TTS_MANIFESTI.cities) {
   TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
 }
 
+/*
+ * PARIISIN UUSI PULUN TEKSTI (KK 11.11.2026, omistaja 20.31 "Kyllä kelpaa"): 14.9. manifestin tagiresepti
+ * ei enää osu tekstiin. Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan.
+ */
+TAGIT['pariisi-3'] = { alku: '[amused]', kohdat: [['Katso ylös', '[brightly]']] };
+
+/*
+ * LONTOON UUSI PULUN TEKSTI (KK 15.11.2026, omistaja 08.33 "Nenäliina ja laituri"): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * Resepti = ÄÄ:n otto 2 (pyyntöloki pulu2: [amused] alussa, [warmly] ennen "Baker Streetillä").
+ */
+TAGIT['lontoo-3'] = { alku: '[amused]', kohdat: [['Baker Streetillä', '[warmly]']] }; // sama kuin ÄÄ:n otto 2 (15.11.2026)
+
+/*
+ * WIENIN UUSI PULUN TEKSTI (omistaja 15.11.2026 klo 18.58 "kelpaa"): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan.
+ */
+TAGIT['wien-3'] = { alku: '[amused]', kohdat: [['Avasi kahvilan', '[brightly]']] };
+
+/*
+ * ROOMAN UUSI PULUN TEKSTI (omistaja 15.11.2026 klo 19.19 "kelpaa"): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan.
+ */
+TAGIT['rooma-3'] = { alku: '[amused]', kohdat: [['Colosseumilla', '[warmly]']] };
+
+/*
+ * AMSTERDAMIN LYHENNETTY PULUN TEKSTI (KK 16.11.2026 klo 01.08): 14.9. manifestin tagiresepti ei enää osu tekstiin.
+ * Alustava resepti; Äänittäjä vahvistaa tai muuttaa sen uutta ottoa ajaessaan (vasta omistajan sanasta).
+ */
+TAGIT['amsterdam-3'] = { alku: '[amused]', kohdat: [['Ankka ui yllä', '[warmly]']] };
+
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();

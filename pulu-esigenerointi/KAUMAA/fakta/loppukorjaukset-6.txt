@@ -1,0 +1,61 @@
+### v1-228
+VANHA: herkku. Muistan, että pullaa täällä on omana versionaan, mutta nimeä en tiedä.
+UUSI: herkku.
+SYY: irrallinen, pullaa ei kysytty
+
+### v1-229
+VANHA: Nyt muistan: vanhakaupunki on pieni, ja matkailijoita paljon. Vanhakaupunki on pieni, ja
+UUSI: Nyt muistan: vanhakaupunki on pieni, ja
+SYY: avauksessa toistoa
+
+### v1-231
+VANHA: Eli kaikki kauppahallista.
+UUSI: Kyyhky ottaisi kyllä molemmat.
+SYY: merkityksetön loppulause
+
+### v1-235
+VANHA: Isoisäsi ylitti sen vielä maksua vastaan.
+UUSI: Kyyhky ylittää sen ilmaiseksi.
+SYY: pelaaja ei voi tietää, perusteeton väite
+
+### v1-237
+VANHA: Tämä vaunu kulkee yhä, ja se on tosi suloinen.
+UUSI: Linja kulkee yhä, ja se on tosi suloinen.
+SYY: "tämä vaunu" epäselvä viittaus
+
+### v1-242
+VANHA: Kuulin sen vasta ylhäältä.
+UUSI: Kyyhky ei iiriä osaa, mutta kuuntelee mielellään.
+SYY: merkityksetön loppulause
+
+### v1-249
+VANHA: Vanhin kerros on sitä, mitä arkeologit löytävät.
+UUSI: Kyyhky katselee joen rantaa mieluummin ylhäältä.
+SYY: epäselvä loppulause
+
+### v1-256
+VANHA: En ole varma kaikista tavan yksityiskohdista. Kukaan
+UUSI: Kukaan
+SYY: tarpeeton epävarmuus
+
+### v1-258
+VANHA: haastavana. En ole varma kaikista alueellisista eroista. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+UUSI: haastavana. Kyyhky tyytyy leivänmuruihin.
+SYY: tarpeeton epävarmuus ja irrallinen pullakommentti
+
+### v1-265
+VANHA: happea on vähän, mutta en ole varma kaikista yksityiskohdista.
+UUSI: happea on vähän.
+SYY: tarpeeton epävarmuus
+
+### v1-267
+VANHA: tulvaporttijärjestelmä, mutta en ole varma sen nykyisestä toiminnasta.
+UUSI: tulvaporttijärjestelmä.
+SYY: tarpeeton epävarmuus
+
+### v1-269
+VANHA: [[matkailun]] vaikutus; en ole varma tarkoista luvuista.
+UUSI: [[matkailun]] vaikutus.
+SYY: tarpeeton epävarmuus
+
+LOPPU: tarkistettu 45 vastausta (v1-225…v1-269), korjauksia 12

@@ -301,6 +301,10 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   assert.equal(rivit.find((rivi) => rivi.avain === 'pietari-2'), undefined);
 });
 
+/* Pariisin pulun teksti uusittu 11.11.2026 (KK); uusi ääni tulee Äänittäjän ajosta. Poista rivi, kun äänite on sidottu. */
+/* Wienin, Rooman ja Amsterdamin pulun ääni sidottu 16.11.2026 (JU vienyt 11.09 ja 11.49); lista tyhjä. */
+const AANTA_ODOTTAVAT = new Set([]);
+
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
   /*
    * Kirjoitettu kupla on oma äänitteensä (7.9.2026): sen on mahduttava
@@ -325,7 +329,7 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
    * Portti ei siis heikkene, se saa yhden kirjatun poikkeuksen.
    */
   const KATONNOSTON_POIKKEUKSET = new Set([
-    'bukarest-3', 'budapest-3', 'pariisi-3', 'amsterdam-3',
+    'bukarest-3', 'budapest-3',
     'berliini-3', 'dubrovnik-3', 'tukholma-3', 'kobenhavn-3',
   ]);
   const kaytetyt = new Set();
@@ -374,7 +378,12 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
   // + 23 avaus/paljastus/mannerivihje/lehtivinkki/ihmisen-matka/sofia-5…14
   // + 10 ISS-repliikkiä, kaikki eleven_v4:llä tasoitettuina.
   assert.equal(Object.keys(LIVIAN_VERSIOIDUT_AANET).length, 45 + 10 + 23 + 10);
-  for (const polku of Object.values(LIVIAN_VERSIOIDUT_AANET)) assert.match(polku, /\/tasoitettu\//);
+  // Lontoon pulu (15.11.2026): ÄÄ:n omalla tasolla (−17,6 dB) viety kaupunki-intro-v3-kansioon, ei tasoitettu/-alikansiota.
+  const KAUPUNKI_INTRO_V3 = /^aanet\/kaupunki-intro-v3\/pulu-[a-z-]+-3\.mp3$/;
+  for (const polku of Object.values(LIVIAN_VERSIOIDUT_AANET)) {
+    if (KAUPUNKI_INTRO_V3.test(polku)) continue;
+    assert.match(polku, /\/tasoitettu\//);
+  }
   assert.deepEqual(Object.keys(LIVIAN_KESTOT).sort(), Object.keys(LIVIAN_VERSIOIDUT_AANET).sort());
   const issRivit = Object.entries(LIVIAN_ISS)
     .flatMap(([ryhma, tekstit]) => tekstit.map((teksti, i) => [`iss-${ryhma}-${i + 1}`, teksti]));
@@ -392,11 +401,11 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     const indeksi = Number(avain.slice(erotin + 1)) - 1;
     assert.equal(livianAaniOsoite(lahde, indeksi), `${AANI_JUURI}${polku}`, avain);
     // v4-erät soivat tasoitettuina (tools/tasoita-pulu.mjs, 28.9.2026): alikansio tasoitettu/.
-    assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/(tasoitettu\/)?livia-.+\.mp3$/);
+    if (!KAUPUNKI_INTRO_V3.test(polku)) assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/(tasoitettu\/)?livia-.+\.mp3$/);
     assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
     // Kaupunkikuplat -3 ja -4 = pakin kommentti[0] ja [1]; muiden tiivisteet
     // valvoo kuivan ajon testi (kaikki ajan tasalla).
-    if (FOKUSVIRRAT[lahde] && lahde !== 'sofia' && (indeksi === 2 || indeksi === 3)) {
+    if (FOKUSVIRRAT[lahde] && lahde !== 'sofia' && !AANTA_ODOTTAVAT.has(avain) && (indeksi === 2 || indeksi === 3)) {
       // Lainausmerkit (18.10.2026): vanha raaka tiiviste kelpaa (livianTiivisteTasmaa).
       assert.ok(livianTiivisteTasmaa(LIVIAN_AANITETYT[avain], FOKUSVIRRAT[lahde].pollo.kommentti[indeksi - 2]),
         `${avain}: näkyvän tekstin tiiviste`);
@@ -404,7 +413,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
     assert.ok(Number.isFinite(LIVIAN_KESTOT[avain]) && LIVIAN_KESTOT[avain] > 0,
       `${avain}: kuitin kesto`);
   }
-  assert.match(livianAaniOsoite('lontoo', 2), /aanet\/pulu\/versiot\/.+\/livia-lontoo-3\.mp3$/);
+  assert.match(livianAaniOsoite('lontoo', 2), /aanet\/kaupunki-intro-v3\/pulu-lontoo-3\.mp3$/); // uusittu 15.11.2026 (ÄÄ otto 2)
 });
 
 /*
@@ -418,7 +427,7 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
  * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
  * josta omistaja valitti.
  */
-test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]-tagia', () => {
+test('ateena-3 ja sofia-3 soivat v4:llä tasoitettuina ilman [softly]-tagia (pariisi-3 uusittu 15.11.)', () => {
   /*
    * 28.9.2026: omistaja valitsi eleven_v4:n (erä pulu-3eaad28481f0aa2ef5a9),
    * ja samana iltana [softly] poistettiin Pulun tageista ("pulu kuulostaa
@@ -427,7 +436,8 @@ test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]
    * tiivisteet ovat samat kuin ennen uusintoja. Peli soittaa tasoitetun
    * kopion (tools/tasoita-pulu.mjs, −17,2 LUFS).
    */
-  for (const avain of ['ateena-3', 'sofia-3', 'pariisi-3']) {
+  // pariisi-3 uusittu 15.11.2026 (ÄÄ, kaupunki-intro-v3): ei tasoitettu/-polkua eikä V4_ERAT-erää; tiiviste uudesta tekstistä.
+  for (const avain of ['ateena-3', 'sofia-3']) {
     const polku = LIVIAN_VERSIOIDUT_AANET[avain];
     assert.match(polku, new RegExp(`/tasoitettu/livia-${avain}\\.mp3$`), avain);
     assert.ok(V4_ERAT.some((era) => polku.includes(`/${era}/`)), `${avain}: v4-erä`);
@@ -435,7 +445,9 @@ test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]
   }
   assert.equal(LIVIAN_AANITETYT['ateena-3'], '572e0e85');
   assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
-  assert.equal(LIVIAN_AANITETYT['pariisi-3'], '3402cfd2');
+  assert.equal(LIVIAN_AANITETYT['pariisi-3'], 'b67b8821');
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['pariisi-3'], 'aanet/kaupunki-intro-v3/pulu-pariisi-3.mp3');
+  assert.ok(LIVIAN_KESTOT['pariisi-3'] > 0);
 });
 
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
@@ -532,12 +544,13 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   // Kaikki repliikit on sidottu valmistuneisiin kuitteihin; viiden uuden
   // kaupungin kuplat äänitettiin v4-ajossa 28.9.2026 ilta.
-  const odotetutMuuttuneet = [];
+  const odotetutMuuttuneet = [...AANTA_ODOTTAVAT].sort();
   assert.deepEqual(
     rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
     odotetutMuuttuneet,
   );
   for (const avain of Object.keys(LIVIAN_VERSIOIDUT_AANET)) {
+    if (AANTA_ODOTTAVAT.has(avain)) continue;
     assert.equal(tila(avain), 'ajan tasalla', avain);
   }
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));

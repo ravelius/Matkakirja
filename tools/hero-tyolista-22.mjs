@@ -96,7 +96,7 @@
  * sallitun ylärajan (yksi per kaupunki) sisällä.
  *
  * ------------------------------------------------------------------
- * HERKKYYS (perustuslain pilari 3, js/tyohuone-raamattu.js)
+ * HERKKYYS (perustuslain pilari 3, docs/raamattu/A-peli.md)
  * ------------------------------------------------------------------
  * - Ei alkuperäiskansa-aiheita kuvituksena: Lima ja Quito ovat
  *   Perua ja Ecuadoria, ja inkaperintö rajataan rakennuksiin ja

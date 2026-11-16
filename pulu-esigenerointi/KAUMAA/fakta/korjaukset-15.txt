@@ -1,0 +1,71 @@
+### v2-712
+VANHA: Museo perustettiin 1800-luvun lopulla kuvernööri [[Friedrich Stellwag von Carionin]] aloitteesta
+UUSI: Museon perustamiseen vaikutti kuvernööri [[Friedrich Stellwag von Carionin]] aloite
+SYY: epävarma ajoitus (perustaminen 1800-luvun lopulla ei pidä)
+
+### v2-722
+VANHA: niiden lisäksi siihen kuuluvat baltit,
+UUSI: niiden lisäksi siihen kuuluvat balttilaiset kielet,
+SYY: kielivirhe (baltit = kansa, ei kieliryhmä)
+
+### v2-727
+VANHA: siellä on toistasataa kirkkoa
+UUSI: siellä on kymmeniä kirkkoja
+SYY: väärä luku (vanhassakaupungissa kirkkoja on kymmeniä, ei yli sataa)
+
+### v2-727
+VANHA: sai nykyisen asunsa vuonna 1783
+UUSI: sai nykyisen asunsa 1700-luvun lopulla
+SYY: uudistus alkoi 1783 mutta valmistui vasta 1800-luvun alussa
+
+### v2-733
+VANHA: toistasataa kirkkoa
+UUSI: kymmeniä kirkkoja
+SYY: väärä luku
+
+### v2-742
+VANHA: suurruhtinas Vytautas
+UUSI: suuriruhtinas Vytautas
+SYY: kirjoitusvirhe
+
+### v2-744
+VANHA: Kalliolla kreivi [[Siegfried Ardennelainen]] sai
+UUSI: Kreivi [[Siegfried Ardennelainen]] sai
+SYY: kömpelö lause
+
+### v2-748
+VANHA: ja teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin vuonna 1913
+UUSI: ja teräksentuotanto kasvoi nopeasti 1900-luvun alussa
+SYY: epävarmat tuotantoluvut
+
+### v2-764
+VANHA: Luxemburgissa 28. marraskuuta 1954
+UUSI: Luxemburgissa 1950-luvun alussa
+SYY: väärä päivämäärä (tuomioistuin aloitti Luxemburgissa 1952)
+
+### v2-779
+VANHA: Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 juusto sai
+UUSI: Perinnettä on vaalittu pitkään, ja juusto sai
+SYY: epävarma ikä ja vuosiluku
+
+### v2-785
+VANHA: Ilmalaivahallit olivat suuria hankia, joissa
+UUSI: Ilmalaivahallit olivat suuria hangaareja, joissa
+SYY: kielivirhe (hanki = lumikinos)
+
+### v2-789
+VANHA: Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat
+UUSI: Jalustan reliefeissä on hahmoryhmiä, jotka kuvaavat
+SYY: epävarma luku
+
+### v2-793
+VANHA: Nykyinen satama valmistui vasta vuonna 1926, ja isoisän matkavuonna 1873 satama oli nykyistä vanhempi.
+UUSI: Satamaa on laajennettu ja uudistettu useassa vaiheessa.
+SYY: epävarma vuosiluku ja metalause
+
+### v2-797
+VANHA: [[fransiskaanien]] ritarikuntaan
+UUSI: [[fransiskaanien]] veljeskuntaan
+SYY: fransiskaanit eivät ole ritarikunta
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 14

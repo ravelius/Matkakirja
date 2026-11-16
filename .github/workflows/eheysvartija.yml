@@ -2,7 +2,7 @@
 # (docs/raportit/siirtoseppa-eurooppa-eheys-20260927.md, tools/vienti/eheysvartija.mjs).
 #
 # Ajetaan kerran vuorokaudessa ja jokaisen onnistuneen sisältöviennin jälkeen Mac Studiolla, jotta tulos
-# on Postivahdin luettavissa: /Users/Shared/Claude/proto-3d/lokit/eheysvartija/{VIKA.txt, tulos.md,
+# on Postivahdin luettavissa: /Users/Shared/Claude/proto-3d/eheysvartija/{VIKA.txt, tulos.md,
 # tulos.json, historia.log}. VIKA.txt on tyhjä, kun kaikki on kunnossa.
 #
 # Vain HEAD-pyyntöjä media.matkakirja.app:n staattisiin tiedostoihin: EI puhetta workerilta eikä mitään
@@ -50,5 +50,5 @@ jobs:
       - name: Eheysvartija
         run: |
           set -euo pipefail
-          node tools/vienti/eheysvartija.mjs ${{ inputs.kaikki && '--kaikki' || '' }}
-          cat /Users/Shared/Claude/proto-3d/lokit/eheysvartija/tulos.md >> "$GITHUB_STEP_SUMMARY"
+          node tools/vienti/eheysvartija.mjs --ulos /Users/Shared/Claude/proto-3d/eheysvartija ${{ inputs.kaikki && '--kaikki' || '' }}
+          cat /Users/Shared/Claude/proto-3d/eheysvartija/tulos.md >> "$GITHUB_STEP_SUMMARY"

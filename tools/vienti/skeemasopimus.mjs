@@ -61,6 +61,10 @@ export const VAATIMUKSET = {
   '1.68': ['kaupungit.keskusta', 'kaupungit.alue', 'karttavalot.viuhka'],
   // Karttaseppä 3.11.2026: saapumisen esittelykuvien paikat (KK:n suunnitelma 20261103-saapumisen-kuvat osa B).
   '1.69': ['kaupungit.esittelypaikat'],
+  // Karttaseppä 10.11.2026: historian hetkien Pulu-kysymykset (KK, PT 03.1x; natiivi NUI 2b7f2e7b7).
+  '1.70': ['historianHetket.kysymykset'],
+  // Karttaseppä 10.11.2026: skandaalien ja syvennysten Pulu-kysymykset (PT; natiivi NUI a970b0d1c).
+  '1.71': ['skandaalit.kysymykset'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',
@@ -83,7 +87,8 @@ export const VAATIMUKSET = {
   '1.25': ['maakuntarajat/kaaret'],
   '1.26': ['tarinakaari.kohtaaminen', 'paikkatiedot.teksti', 'kohtaamiset.tervehdys', 'kohtaamiskuvat.tila',
     'paikallisaarteet.pieniAarre', 'saapumispuheet.url', 'fokusvirrat.sahketehtava'],
-  '1.27': ['moduuli:js/tyohuone-raamattu.js', 'moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
+  // 1.27: Raamattu-moduuli poistui 12.11.2026 (vanhan Raamatun js:n poisto; natiivi ei enää lue sitä).
+  '1.27': ['moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],

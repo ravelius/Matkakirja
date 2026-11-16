@@ -3,7 +3,7 @@
 Omistajan 12.–13.9.2026 päätösten toimeenpano ja yhteinen tuotantoketju.
 Tämä dokumentoi hahmo-, pituus-, kuva- ja yhteistyöpäätösten toteutuksen;
 se ei siirrä sisältölinjausten hyväksymisvaltaa pois Raamatusta. Fable
-kirjoittaa kanoniset päivitykset `js/tyohuone-raamattu.js`:ään ja ylläpitää
+kirjoittaa kanoniset päivitykset Raamattuun (`node tools/kirjaa.mjs`) ja ylläpitää
 sen dokumenttikarttaa. Docs-konsolidointi ei yksin kumoa mitään vanhaa
 omistajalinjausta: korvaava nimenomainen päätös ja sen rajaus kirjataan
 erikseen. Muu tarinakaanon ja julkaisuportit säilyvät.

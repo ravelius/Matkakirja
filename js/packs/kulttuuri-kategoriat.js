@@ -114,10 +114,8 @@ export const KULTTUURI_KATEGORIAT = {
            * kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-lontoo-westminster-thames.jpg',
-          lyhyt: 'Westminsterin palatsin kellotornin Big Ben on lyönyt tunteja vuodesta 1859.',
-          selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden '
-            + '1834 palon jälkeen, ja sen kellotornin Big Ben on '
-            + 'lyönyt tunteja vuodesta 1859.',
+          lyhyt: 'Westminsterin palatsin kellotornin Big Ben soi ensi kerran 1859.',
+          selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden 1834 palon jälkeen, ja sen kellotornin Big Ben soi ensi kerran 1859.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -161,10 +159,8 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png',
-          lyhyt: 'Sky Gardenista Lontoossa näkyvät Thames, Tower Bridge ja Tower of London.',
-          selite: 'Sky Garden on julkinen puutarha ja näköalapaikka 20 Fenchurch Street '
-            + '-pilvenpiirtäjän ylimmissä kerroksissa. Ulkoterassilta näkee Thamesin, Tower Bridgen '
-            + 'ja Tower of Londonin.',
+          lyhyt: 'Sky Gardenista Lontoossa avautuu näkymä Thamesin yli kaupunkiin.',
+          selite: 'Sky Garden on julkinen puutarha ja näköalapaikka 20 Fenchurch Street -pilvenpiirtäjän ylimmissä kerroksissa. Ulkoterassilta avautuu näkymä Thamesin yli Lontooseen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -174,7 +170,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/london/20261012-full/london-7-asuinkadun-ilta-intro-v1.png',
-          lyhyt: 'Lontoon ensimmäisiä kaasukatuvaloja sytytettiin Pall Mallilla vuonna 1807.',
+          lyhyt: 'Lontoossa kaasukatuvalot yleistyivät 1800-luvun alussa; Pall Mall valaistiin kaasulla 1807.',
           selite: 'Kaasuvalon edelläkävijä Frederick Albert Winsor valaisi katua Pall '
             + 'Mallilla, ja Westminster Bridge valaistiin kaasulla 31. joulukuuta 1813.',
           lahde: 'Matkakirjan havainnekuva',
@@ -186,8 +182,7 @@ export const KULTTUURI_KATEGORIAT = {
            * Rajaus: Kuvasuhde 3:2 (2048x1362), rajausta ei tarvita.
            */
           tiedosto: 'Thames Clipper Hurricane Approaching Tower Bridge 2009.jpg',
-          lyhyt: 'Thames Clippersin jokibussi Hurricane Clipper kiitää Tower Bridgen ohi Thamesilla '
-            + 'Lontoossa.',
+          lyhyt: 'Thames Clippersin jokibussi Hurricane Clipper lähestyy Tower Bridgeä Thamesilla Lontoossa.',
           selite: 'Thames Clippersin jokibussiliikenne alkoi toukokuussa 1999, ja Hurricane Clipper '
             + 'otettiin käyttöön vuonna 2001.',
           lahde: 'David Merrett, Wikimedia Commons (CC BY 2.0)',
@@ -757,8 +752,9 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 1,
         fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla saa '
-          + 'etsiä vain satamaviranomaisen luvalla, ja yli kolmesataa vuotta '
-          + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
+          + 'etsiä vain satamaviranomaisen luvalla, ja arkeologisesti '
+          + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat '
+          + 'esineet, on ilmoitettava Lontoon museolle.',
       },
     },
     /*
@@ -793,7 +789,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+          otsikko: 'Faraday 1831 — sähkön tuottaminen magneetilla',
           aika: '29.8.1831',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-lahi-photo-v4.jpg',
@@ -825,7 +821,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ring-coil apparatus, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+              otsikko: 'Faraday 1831 — sähkön tuottaminen magneetilla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-kauko-photo-v4.jpg',
               lyhyt: 'Faradayn pienen rautarenkaan käämien välinen hetkellinen '
                 + 'virta avaa periaatteen muuntajille.',
@@ -873,7 +869,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+          otsikko: 'Fleming 1928 — penisilliinin löytö',
           aika: '3.9.1928',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-lahi-photo-v4.jpg',
@@ -904,7 +900,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Facing Infection Together, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+              otsikko: 'Fleming 1928 — penisilliinin löytö',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-kauko-photo-v4.jpg',
               lyhyt: 'Flemingin sattuma vaatii vielä Floreyn ja Chainin työn, '
                 + 'ennen kuin siitä tulee penisilliini.',
@@ -934,7 +930,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-brunel-thames-tunnel-1827',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Tunneli 1827',
+      otsikko: 'Historian hetki: Brunel 1827',
       johdanto: 'Rotherhithen kuilussa 36 miestä kaivoi 1820-luvulla '
         + 'valurautaisen kilven lokeroista savea Thamesin alla, ja uteliaat '
         + 'maksoivat shillingin nähdäkseen, miten joen alitse mennään.',
@@ -953,7 +949,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
+          otsikko: 'Brunel 1827 — tunneli Thamesin alle',
           aika: 'toukokuu 1827',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg',
@@ -963,15 +959,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä '
             + 'tunnelikilpi: kaksitoista valurautaista kehystä kolmessa '
             + 'kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman '
-            + 'tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, '
-            + 'ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat '
-            + 'perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, '
-            + 'joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset '
-            + 'maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu '
-            + 'tunneliin, sen metaani syttyy lampuista, ja miehet sairastuvat. '
-            + '18. toukokuuta joki murtautuu sisään, kun tunnelia on kaivettu 167 '
-            + 'metriä; Isambard laskeutuu sukelluskellolla tukkimaan reiän '
-            + 'savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
+            + 'tukilautansa takaa. Kun kehyksen lokerot on kaivettu tyhjiksi, '
+            + 'ruuvit työntävät sen kehyksen eteenpäin; kehyksiä siirretään '
+            + 'vuorotellen, jotta osa niistä tukee maata koko ajan, ja muurarit '
+            + 'muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom '
+            + 'Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. '
+            + 'Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen '
+            + 'jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet '
+            + 'sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on '
+            + 'kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan '
+            + 'reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
             + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta '
             + '25. maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen '
             + 'alittajana.',
@@ -986,7 +983,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'archive, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
+              otsikko: 'Brunel 1827 — tunneli Thamesin alle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
               lyhyt: 'Nuori Brunel ohjaa kilpeä, joka kaivaa ensimmäistä tunnelia '
                 + 'purjehduskelpoisen joen alle.',
@@ -1017,7 +1014,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-lontoon-palo-1666',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Palo 1666',
+      otsikko: 'Historian hetki: Lontoon palo 1666',
       johdanto: 'Pudding Lanen leipomosta syyskuun 1666 yönä lähtenyt tuli poltti '
         + 'neljässä päivässä 13 200 taloa, ja Thames täyttyi veneistä, joihin '
         + 'ihmiset pakkasivat sen, mitä ehtivät.',
@@ -1031,30 +1028,32 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 0,
         fakta: 'Palo alkoi Thomas Farrinerin leipomosta sunnuntaina 2. syyskuuta; '
-          + 'keskiviikkona tuuli laantui ja palo sammui.',
+          + 'tiistain ja keskiviikon välisenä yönä tuuli laantui, ja palo saatiin '
+          + 'hallintaan.',
       },
       nostot: [
         {
-          otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+          otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
           aika: '2.–5.9.1666',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
           teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, '
-            + 'mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, '
-            + 'ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä '
-            + 'päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
-            + 'kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi '
-            + 'yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, '
-            + 'joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli '
-            + 'ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut '
-            + 'taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, '
-            + 'ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa '
+            + 'mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666. '
+            + 'Laivaston virkamies Samuel Pepys katselee tulta joelta ja kertoo '
+            + 'päiväkirjassaan ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
+            + 'ylsi heihin, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä '
+            + 'Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei '
+            + 'uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen '
+            + 'kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen '
+            + 'tieltä, ja itätuuli levitti tulta: kesä oli ollut kuiva, ja '
+            + 'puukaupungin kadut olivat kapeita. Pepys itse kaivaa '
             + 'parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli '
             + 'tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
-            + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan '
-            + 'varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli '
-            + 'laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja '
-            + 'kuolleita on vain kourallinen — luku, jota epäillään yhä.',
+            + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kirjakauppiaiden '
+            + 'kryptaan varastoimat kirjat palavat. Tiistain ja keskiviikon '
+            + 'välisenä yönä tuuli laantuu. Palo tuhosi noin 13 200 taloa ja 87 '
+            + 'kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — luku, '
+            + 'jota epäillään yhä.',
           lyhyt: 'Nuori nainen suojaa soitintaan Lontoon suurpalossa veneessä '
             + 'pakenevien tavaroiden joukossa.',
           selite: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: lähes '
@@ -1066,7 +1065,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+              otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
               lyhyt: 'Thames täyttyy palon tieltä pakenevista veneistä, jotka on '
                 + 'lastattu huonekaluilla ja arkuilla.',
@@ -1079,7 +1078,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+              otsikko: 'Lontoon palo 1666 — kaupunki syttyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
               lyhyt: 'Palo tuhoaa myös The London Gazetten painopaikan; lehti '
                 + 'ilmestyy viikon viiveellä Savoysta.',
@@ -1110,7 +1109,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-shakespeare-globe-1599',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Globe 1599',
+      otsikko: 'Historian hetki: Shakespeare 1599',
       johdanto: 'Thamesin etelärannalle nousi 1599 vanhan teatterin hirsistä '
         + 'pyöreä puutalo, jossa penniyleisö seisoi taivasalla ja pojat '
         + 'näyttelivät naisia — ja sveitsiläinen matkailija kirjoitti nähneensä '
@@ -1129,7 +1128,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
+          otsikko: 'Shakespeare 1599 — Globe-teatteri aukeaa',
           aika: '21.9.1599',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-lahi-photo-v4.jpg',
@@ -1143,12 +1142,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat '
             + 'siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu '
             + 'noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta '
-            + 'nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on '
-            + 'ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä '
-            + 'ole — Portian, Calpurnian ja Kleopatran roolit puhuvat '
-            + 'äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. '
-            + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; '
-            + 'ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.',
+            + 'nähneensä joen etelärannan olkikattoisessa talossa Julius Caesarin '
+            + 'ja lopuksi tanssin; talo on lähes varmasti Globe, ja tieto on '
+            + 'vanhimpia sen esityksistä. Naisia ei näyttämöllä ole — Portian ja '
+            + 'Calpurnian roolit esittävät äänenmurroksen kynnyksellä olevat '
+            + 'pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää '
+            + 'olkikaton kesken Henrik kahdeksannen -näytelmän; ainoa vahinko on '
+            + 'mies, jonka palavat housut sammutetaan oluella.',
           lyhyt: 'Poikanäyttelijä esittää Caesarin painajaisunta Globen '
             + 'äänekkäälle pihayleisölle ilman mikrofonia.',
           selite: 'Nuori poikanäyttelijä astuu Calpurniana näyttämölle, vain '
@@ -1160,7 +1160,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'of the Globe Theatre, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
+              otsikko: 'Shakespeare 1599 — Globe-teatteri aukeaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
               lyhyt: 'Thomas Platter kuvailee Globen Julius Caesar -esitystä, '
                 + 'jossa yleisö syö ja kommentoi vapaasti.',
@@ -1822,10 +1822,8 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-praha-st-vitus.jpg',
-          lyhyt: 'Pyhän Vituksen katedraalin rakentaminen alkoi 1344 Kaarle IV:n käskystä ja valmistui vasta 1929.',
-          selite: 'Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 '
-            + 'Kaarle IV:n käskystä Matias Arraslaisen ja Peter Parlerin '
-            + 'johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929.',
+          lyhyt: 'Pyhän Vituksen katedraalin rakentaminen alkoi 1344 Kaarle IV:n aloitteesta ja valmistui vasta 1929.',
+          selite: 'Pyhän Vituksen katedraalin rakentaminen alkoi vuonna 1344 Kaarle IV:n aloitteesta Matias Arraslaisen ja Peter Parlerin johdolla, ja rakennus saatiin valmiiksi vasta vuonna 1929.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -1844,10 +1842,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-praha-tyn-church.jpg',
-          lyhyt: 'Tynin kirkon kuoriin, 1300-luvulta rakennettuun, haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.',
-          selite: 'Tynin kirkkoa rakennettiin 1300-luvulta lähtien '
-            + 'vanhankaupungin pääkirkoksi, ja sen kuoriin haudattiin '
-            + 'tähtitieteilijä Tyko Brahe vuonna 1601.',
+          lyhyt: 'Týnin kirkkoon, 1300-luvulta rakennettuun, haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.',
+          selite: 'Týnin kirkkoa rakennettiin 1300-luvulta lähtien vanhankaupungin pääkirkoksi, ja sinne haudattiin tähtitieteilijä Tyko Brahe vuonna 1601.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -1869,7 +1865,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/prague/20261012-full/prague-5-certovka-mylly-intro-v1.png',
-          lyhyt: 'Čertovka-kanava kulkee Prahan Malá Stranan läpi vesimyllyn ohi.',
+          lyhyt: 'Čertovka-kanava kulkee Prahan Malá Stranassa vesimyllyn ohi.',
           selite: 'Čertovka on keskiajalla rakennettu kanava, joka säätelee vettä joenvarren '
             + 'myllyille ja erottaa Kampan saaren mantereesta.',
           lahde: 'Matkakirjan havainnekuva',
@@ -1905,9 +1901,8 @@ export const KULTTUURI_KATEGORIAT = {
            * Rajaus: Kuvasuhde on jo 3:2, ei rajausta tarvita.
            */
           tiedosto: 'Prague 2010 Tatra T3 and Hradschin.jpg',
-          lyhyt: 'Tatra T3 -raitiovaunu ajaa Mánesin sillalla, taustalla Prahan linna.',
-          selite: 'Mánesin silta avattiin 1914 ja valmistui kokonaan 1916. Tatra T3 -vaunuja '
-            + 'valmistettiin Prahan Smíchovissa vuosina 1960–1997 lähes 14 000.',
+          lyhyt: 'Tatra T3 -raitiovaunu ajaa Prahan linnan edessä.',
+          selite: 'Tatra T3 -vaunuja valmistettiin Prahan Smíchovissa vuosina 1960–1997 lähes 14 000.',
           lahde: 'hrs51, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -2838,27 +2833,20 @@ export const KULTTUURI_KATEGORIAT = {
            * kuvateksti ennallaan — sama kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-wien-stephansdom-fiaker.jpg',
-          lyhyt: 'Stephansdomin etelätorni (1433) oli vuosisatoja Euroopan korkeimpia; katossa on yli 230 000 laattaa.',
-          selite: 'Stephansdomin etelätorni valmistui 1433 ja oli '
-            + 'vuosisatoja Euroopan korkeimpia; kirkon kirjava '
-            + 'tiilikatto on ladottu yli 230 000 laatasta.',
+          lyhyt: 'Stephansdomin etelätorni (1433) kohoaa noin 136 metriin; katossa on yli 230 000 laattaa.',
+          selite: 'Stephansdomin etelätorni valmistui 1433 ja kohoaa noin 136 metriin; kirkon kirjava tiilikatto on ladottu yli 230 000 laatasta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-wien-schonbrunn.jpg',
-          lyhyt: 'Schönbrunnin 1441 huonetta ja puutarhat rakennettiin kilpailemaan Versailles\'n kanssa.',
-          selite: 'Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 '
-            + 'huonetta ja puutarhat rakennettiin kilpailemaan '
-            + 'Versailles\'n kanssa.',
+          lyhyt: 'Schönbrunnin 1441 huonetta ja puutarhat tekivät siitä Versailles\'n itävaltalaisen vastineen.',
+          selite: 'Schönbrunn oli Habsburgien kesäpalatsi, jonka 1441 huonetta ja puutarhat tekivät siitä Versailles\'n itävaltalaisen vastineen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-wien-state-opera.jpg',
-          lyhyt: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan ja on esiintynyt lähes joka ilta.',
-          selite: 'Valtionooppera avasi 1869 Ringstrassen '
-            + 'loistorakennusten sarjan, ja sen lavalla on esiinnytty '
-            + 'joka ilta pommituksista 1945 vain kymmenen vuoden '
-            + 'tauolla.',
+          lyhyt: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan, ja sen lavalla on noin 350 esitystä vuodessa.',
+          selite: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten sarjan; pommitukset tuhosivat sen 1945, ja talo avattiin uudelleen 1955. Nykyään siellä on noin 350 esitystä vuodessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -3188,7 +3176,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-beethoven-yhdeksas-1824',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Yhdeksäs 1824',
+      otsikko: 'Historian hetki: Beethoven 1824',
       johdanto: 'Kärntnertor-teatterissa nousi toukokuussa 1824 sali seisomaan '
         + 'viisi kertaa, ja kuuro säveltäjä näki sen vasta, kun nuori '
         + 'alttolaulaja käänsi hänet yleisöön päin.',
@@ -3206,7 +3194,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
+          otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
           aika: '7.5.1824',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
@@ -3237,7 +3225,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Symphony, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
+              otsikko: 'Beethoven 1824 — yhdeksännen kantaesitys',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
               lyhyt: 'Muusikot seuraavat Umlaufin tahtipuikkoa, jotta kuuron '
                 + 'Beethovenin partituuri pysyy koossa.',
@@ -3267,7 +3255,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-mozart-wien-1786',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Figaro 1786',
+      otsikko: 'Historian hetki: Mozart 1786',
       johdanto: 'Hofburgin vieressä sijainneessa hoviteatterissa kantaesitettiin '
         + 'toukokuussa 1786 ooppera kielletystä näytelmästä, ja yleisö vaati '
         + 'numeroita uusiksi niin, että keisarin oli puututtava asiaan.',
@@ -3285,7 +3273,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
+          otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
           aika: '1.5.1786',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg',
@@ -3317,7 +3305,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Figaro critical edition, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
+              otsikko: 'Mozart 1786 — Figaron häiden ensi-ilta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
               lyhyt: 'Mozart johtaa Figaron häiden ensiesityksiä cembalosta '
                 + 'hoviteatterin tiiviin yleisön edessä.',
@@ -3366,7 +3354,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi',
+          otsikko: 'Wienin krahi 1873 — pörssi romahtaa',
           aika: '9.5.1873',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-lahi-photo-v4.jpg',
@@ -3394,7 +3382,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pörssin historia; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi',
+              otsikko: 'Wienin krahi 1873 — pörssi romahtaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wienin-porssikrahi-1873-kauko-photo-v4.jpg',
               lyhyt: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
               selite: 'Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.',
@@ -3777,13 +3765,8 @@ export const KULTTUURI_KATEGORIAT = {
            * selite kertoo tässä katedraalista — uusi kohde karuselliin.
            */
           ampari: 'herokoe/hero-madrid-almudena.jpg',
-          lyhyt: 'Almudenan katedraali (1883–1993) on ainoa Espanjan katedraali, jonka paavi on vihkinyt.',
-          selite: 'Almudenan katedraalin rakentaminen alkoi 1883 markiisi '
-            + 'Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; '
-            + 'paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993 '
-            + 'ainoana Espanjan katedraalina, ja se on käännetty '
-            + 'poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa '
-            + 'vastapäätä.',
+          lyhyt: 'Almudenan katedraalin (1883–1993) vihki paavi Johannes Paavali II 1993.',
+          selite: 'Almudenan katedraalin rakentaminen alkoi 1883 markiisi Francisco de Cubasin suunnitelmilla ja valmistui vasta 1993; paavi Johannes Paavali II vihki sen 15. kesäkuuta 1993, ja se on käännetty poikkeuksellisesti pohjois–eteläsuuntaan kuninkaanlinnaa vastapäätä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -3864,10 +3847,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Azotea del Circulo de Bellas Artes, Madrid.jpg',
-          lyhyt: 'Círculo de Bellas Artes, vuonna 1880 perustetun kulttuurijärjestön talo, valmistui 1926.',
-          selite: 'Círculo de Bellas Artes on vuonna 1880 perustettu '
-            + 'kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema '
-            + 'talo valmistui 1926.',
+          lyhyt: 'Círculo de Bellas Artesin katolta näkee Madridin keskustan; vuonna 1880 perustetun kulttuurijärjestön talo valmistui 1926.',
+          selite: 'Círculo de Bellas Artes on vuonna 1880 perustettu kulttuurijärjestö, jonka Antonio Palaciosin suunnittelema talo valmistui 1926. Talon katolta avautuu näkymä Madridin keskustaan.',
           lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
         },
         {
@@ -3881,10 +3862,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Puesta de Sol - Cerro del Tio Pio - Madrid - 00.jpg',
-          lyhyt: 'Madrid on rakennettu Kastilian ylätasangolle, ja Cerro del Tío Pío on yksi laidan kukkuloista.',
-          selite: 'Madrid on rakennettu keskelle Kastilian ylätasankoa noin '
-            + '650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin '
-            + 'laidan kukkuloista.',
+          lyhyt: 'Cerro del Tío Pío on 1980-luvulla slummin raunioille rakennettu puisto, jonka kukkuloilta näkee Madridin.',
+          selite: 'Cerro del Tío Pío eli Parque de las Siete Tetas rakennettiin 1980-luvulla entisen slummin raunioiden päälle, ja sen kukkuloilta näkee Madridin yli.',
           lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -3893,10 +3872,8 @@ export const KULTTUURI_KATEGORIAT = {
            * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
            */
           tiedosto: 'Teleférico de Madrid (30209578353).jpg',
-          lyhyt: 'Madridin köysiradan siniset gondolit kulkevat puiden ja kattojen yllä Casa de Campon '
-            + 'suuntaan.',
-          selite: 'Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdisti Parque '
-            + 'del Oesten Casa de Campon puistoon. Gondolit kulkevat noin 40 metrin korkeudessa.',
+          lyhyt: 'Madridin köysiradan siniset gondolit puiden ja kattojen yllä matkalla Casa de Campoon.',
+          selite: 'Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdistää Parque del Oesten Casa de Campon puistoon noin 40 metrin korkeudessa. Rata suljettiin 2020-luvun alussa uusittavaksi.',
           lahde: 'Tim Adams, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -4193,33 +4170,27 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/berlin/20261012-full/berlin-7-kreuzberg-iltapiha-intro-v1.png',
-          lyhyt: 'Berliinin vuokrakasarmien sisäpihojen kokoon vaikutti paloruiskun '
-            + 'kääntöympyrä.',
+          lyhyt: 'Berliinin vuokrakasarmien sisäpihojen kokoon vaikutti paloruiskun kääntötila.',
           selite: 'Vuoden 1853 rakennusmääräykset vaativat pihalle vähintään noin 5,3 × 5,3 '
             + 'metrin tilan, jotta paloruisku mahtui kääntymään.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Berlin Panorama von der Siegessäule 2021.jpg',
-          lyhyt: 'Voitonpylväs vihittiin 1873 muistona voitosta Tanskasta, Itävallasta ja Ranskasta.',
-          selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen '
-            + 'alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt '
-            + 'voitoilla Itävallasta ja Ranskasta.',
+          lyhyt: 'Voitonpylvään näköalatasanteelta näkee yli Berliinin; pylväs vihittiin 1873 voitoista Tanskasta, Itävallasta ja Ranskasta.',
+          selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873, jolloin sen alkuperäinen aihe eli voitto Tanskasta oli jo täydentynyt voitoilla Itävallasta ja Ranskasta. Kuva on otettu pylvään näköalatasanteelta.',
           lahde: 'Lear 21, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Skyline Berlin - Das Humboldt-Forum mit Fernsehturm.jpg',
-          lyhyt: 'Berliinin kaupunkilinna, hallitsijoiden asunto 1443–1918, purettiin 1950 ja rakennettiin uudelleen.',
-          selite: 'Berliinin kaupunkilinna oli hallitsijoiden pääasunto '
-            + '1443–1918, Itä-Saksa purki sen maan tasalle 1950, ja julkisivu '
-            + 'rakennettiin uudelleen Humboldt Forumia varten.',
+          lyhyt: 'Humboldt Forumin julkisivu on 2020 valmistunut jäljennös Berliinin kaupunkilinnasta, joka purettiin 1950.',
+          selite: 'Berliinin kaupunkilinna oli hallitsijoiden pääasunto 1443–1918, Itä-Saksa purki sen maan tasalle 1950, ja julkisivu rakennettiin uudelleen 2013–2020 Humboldt Forumia varten.',
           lahde: 'abbilder, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Berliner Dom, 170409, ako (2).jpg',
-          lyhyt: 'Vanha kansallisgalleria (1862–1876) kuuluu Museosaareen, Unescon maailmanperintöön vuodesta 1999.',
-          selite: 'Vanha kansallisgalleria rakennettiin 1862–1876, ja koko '
-            + 'Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999.',
+          lyhyt: 'Berliinin tuomiokirkko (1905) seisoo Museosaarella, jonka museot ovat Unescon maailmanperintöä.',
+          selite: 'Berliinin tuomiokirkko valmistui 1905 Museosaarelle, jonka museot ovat olleet Unescon maailmanperintökohde vuodesta 1999.',
           lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
         },
         {
@@ -4812,7 +4783,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-berliinin-muuri-1961',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Muuri 1961',
+      otsikko: 'Historian hetki: Berliini 1961',
       johdanto: 'Elokuun 1961 sunnuntaiaamuna berliiniläiset heräsivät '
         + 'ilmavasaroihin: kadun poikki vedettiin piikkilanka, ja Bernauer '
         + 'Straßella talon ovi ja sen edustan jalkakäytävä jäivät eri valtioihin.',
@@ -4830,7 +4801,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+          otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
           aika: '13.8.1961',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
@@ -4862,7 +4833,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1961, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+              otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
               lyhyt: 'Opiskelijan tie isän luo katkeaa piikkilankaan, kun '
                 + 'tuhannet sulkevat Berliinin rajan.',
@@ -4875,7 +4846,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'August 1961, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+              otsikko: 'Berliini 1961 — muurin rakentaminen alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
               lyhyt: 'BILD tiivistää Berliinin muurin yön otsikkoon panssareista, '
                 + 'vaikka mitta on tuttu naapuri.',
@@ -5244,28 +5215,20 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-venetsia-st-marks.jpg',
-          lyhyt: 'Markuksenkirkon neljä pronssihevosta tuotiin Konstantinopolista 1204.',
-          selite: 'Markuksenkirkon pääportaalin yllä seisovat neljä '
-            + 'pronssihevosta tuotiin Konstantinopolista 1204, ja '
-            + 'kampanilen nykyinen torni on vuoden 1902 sortuman '
-            + 'jälkeinen jälleenrakennus.',
+          lyhyt: 'Markuksenkirkon pronssihevoset tuotiin Konstantinopolista, ja julkisivulla ovat nykyään kopiot.',
+          selite: 'Markuksenkirkon pääportaalin yllä seisovat hevoset ovat kopioita; Konstantinopolista 1204 tuodut alkuperäiset ovat kirkon museossa. Kampanilen nykyinen torni on vuoden 1902 sortuman jälkeinen jälleenrakennus.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-venetsia-rialto-bridge.jpg',
-          lyhyt: 'Rialton silta valmistui 1591 yhtenä marmorikaarena, ja sen päällä kulkee kaksi myymäläriviä.',
-          selite: 'Rialton silta valmistui 1591 Antonio da Ponten '
-            + 'suunnittelemana yhtenä marmorikaarena, ja sen päällä '
-            + 'kulkee kaksi myymäläriviä.',
+          lyhyt: 'Rialton silta valmistui 1591 yhtenä kivikaarena, ja sen päällä kulkee kaksi myymäläriviä.',
+          selite: 'Rialton silta valmistui 1591 Antonio da Ponten suunnittelemana yhtenä kivikaarena, ja sen päällä kulkee kaksi myymäläriviä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-venetsia-santa-maria-della-salute.jpg',
-          lyhyt: 'Santa Maria della Saluten kahdeksankulmainen runko lepää yli miljoonan puupaalun varassa.',
-          selite: 'Santa Maria della Salute rakennettiin kiitokseksi '
-            + 'vuoden 1630 ruton päättymisestä, ja sen '
-            + 'kahdeksankulmainen runko lepää yli miljoonan puupaalun '
-            + 'varassa.',
+          lyhyt: 'Santa Maria della Saluten kahdeksankulmainen runko lepää puupaalujen varassa.',
+          selite: 'Santa Maria della Salute rakennettiin kiitokseksi vuoden 1630 ruton päättymisestä, ja sen kahdeksankulmainen runko lepää puupaalujen varassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -5275,8 +5238,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/venice/20261012-full/venice-4-cannaregio-arki-intro-v2.png',
-          lyhyt: 'Cannaregioon perustettiin 1516 Venetsian ghetto, jota pidetään maailman '
-            + 'ensimmäisenä.',
+          lyhyt: 'Cannaregioon perustettiin 1516 Venetsian ghetto, josta sana ghetto on lähtöisin.',
           selite: 'Venetsian tasavalta määräsi 1516 kaupungin juutalaiset asumaan pienelle '
             + 'alueelle Cannaregiossa. Rajoitus kumottiin 1797.',
           lahde: 'Matkakirjan havainnekuva',
@@ -5313,7 +5275,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/venice/20261012-full/venice-7-misericordia-ilta-intro-v3.png',
-          lyhyt: 'Venetsia rakentuu noin 118 saarelle, joita yhdistää noin 400 siltaa.',
+          lyhyt: 'Venetsia rakentuu noin 118 saarelle, joita yhdistää yli 400 siltaa.',
           selite: 'Saaret sijaitsevat matalassa laguunissa kanavien erottamina. Venetsia ja '
             + 'sen laguuni on Unescon maailmanperintökohde vuodesta 1987.',
           lahde: 'Matkakirjan havainnekuva',
@@ -5501,7 +5463,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-galilei-kaukoputki-1610',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Padova 1610',
+      otsikko: 'Historian hetki: Galilei 1610',
       johdanto: 'Tammikuussa 1610 Padovan yliopiston professori suuntasi itse '
         + 'rakentamansa kaukoputken Jupiteriin ja näki neljä valopistettä, jotka '
         + 'ilta illalta vaihtoivat paikkaa — ensimmäiset kappaleet, joiden '
@@ -5520,7 +5482,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
+          otsikko: 'Galilei 1610 — Jupiterin kuut löytyvät',
           aika: 'tammikuu 1610',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg',
@@ -5558,7 +5520,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '4.9.2026.',
           galleria: [
             {
-              otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
+              otsikko: 'Galilei 1610 — Jupiterin kuut löytyvät',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
               lyhyt: 'Avustaja kirjaa Galilein havainnot, kunnes toistuva liike '
                 + 'paljastaa neljä Jupiterin kuuta.',
@@ -6020,20 +5982,14 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 13 (23.8.2026, tools/hero-tyolista-8.mjs). */
         {
           ampari: 'herokoe/hero-tukholma-aamu.png',
-          lyhyt: 'Tukholman kuninkaanlinna (1754) on yli 600 huoneellaan Euroopan suurimpia yhä virkakäytössä olevia.',
-          selite: 'Tukholman kuninkaanlinna valmistui 1754 palaneen Tre '
-            + 'Kronorin paikalle, ja yli 600 huoneellaan se on '
-            + 'Euroopan suurimpia yhä virkakäytössä olevia '
-            + 'kuninkaanlinnoja.',
+          lyhyt: 'Tukholman kuninkaanlinna (1754) on yli 600 huoneellaan yksi Euroopan suurimmista.',
+          selite: 'Tukholman kuninkaanlinna otettiin käyttöön 1754 palaneen Tre Kronorin paikalle, ja yli 600 huoneellaan se on yksi Euroopan suurimmista kuninkaanlinnoista.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-tukholma-keskipaiva.png',
-          lyhyt: 'Tukholman kaupungintalo (1923) tornin huipulla kimaltaa kolme kruunua Nobel-illallisten yllä.',
-          selite: 'Tukholman kaupungintalo valmistui 1923 kahdeksasta '
-            + 'miljoonasta tiilestä, ja sen 106-metrisen tornin '
-            + 'huipulla kimaltavat kolme kruunua — juhlasalissa '
-            + 'tanssitaan Nobel-illalliset.',
+          lyhyt: 'Tukholman kaupungintalon (1923) tornin huipulla kimaltaa kolme kruunua; Sinisessä salissa syödään Nobel-illallinen.',
+          selite: 'Tukholman kaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta tiilestä, ja sen 106-metrisen tornin huipulla kimaltavat kolme kruunua — Sinisessä salissa syödään Nobel-illallinen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -7038,9 +6994,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-marie-curie-hangaari-1898',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Curie 1898',
-      johdanto: 'Rue Lhomondin pihalla seisoi vuosisadan vaihteessa vuotava vaja, '
-        + 'jossa aviopari keitti tonneittain kaivosjätettä saadakseen siitä esiin '
-        + 'suolanjyvän verran uutta alkuainetta.',
+      johdanto: 'Marie ja Pierre Curie ilmoittivat vuonna 1898 löytäneensä '
+        + 'poloniumin ja radiumin; Rue Lhomondin pihan vuotavassa vajassa he '
+        + 'keittivät tonneittain kaivosjätettä saadakseen niitä puhtaana '
+        + 'suolanjyvän verran.',
       tehtava: {
         kysymys: 'Paljonko radiumkloridia Curiet saivat eristettyä tonnista '
           + 'pikivälkettä vuoteen 1902 mennessä?',
@@ -7056,19 +7013,22 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+          otsikko: 'Curie 1898 — radiumin ja poloniumin löytö',
           aika: '1898',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
-          teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
-            + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
-            + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
-            + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
-            + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
-            + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. '
-            + 'joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — '
-            + 'uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa '
-            + 'tonneittain kaivosten pikivälkejätettä, joka keitetään, '
+          teksti: 'Pariisissa Marie ja Pierre Curie ilmoittavat vuonna 1898 '
+            + 'löytäneensä kaksi uutta alkuainetta, poloniumin ja radiumin, ja '
+            + 'todistavat sen sitten vuosia vuotavassa vajassa keittämällä '
+            + 'tonneittain kaivosjätettä. Olkapäät ovat puutuneet jo '
+            + 'aamupäivällä, mutta tankoa ei voi laskea. Marie sekoittaa kiehuvaa '
+            + 'pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen '
+            + 'lääketieteellisen koulun ruumiinavaussali, vuotaa sateella '
+            + 'katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo '
+            + 'työn kannattavan. Polonium on ilmoitettu heinäkuussa 1898 ja '
+            + 'radium 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä '
+            + 'kemisteille — uusi alkuaine on saatava käteen puhtaana. Se '
+            + 'tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, '
             + 'suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, '
             + 'jolloin tonnista malmia on eristetty kymmenesosagramma '
             + 'radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee '
@@ -7087,7 +7047,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'näyttelyaineisto, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+              otsikko: 'Curie 1898 — radiumin ja poloniumin löytö',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
               lyhyt: 'Curien pariskunnan laboratorio on kylmä pihavaja, jonka '
                 + 'säteilyriskejä kumpikaan ei vielä tunne.',
@@ -7118,9 +7078,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-lavoisier-laboratorio-1780',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Lavoisier 1780',
-      johdanto: 'Arsenaalin laboratoriossa aviopari punnitsi kaiken ennen koetta '
-        + 'ja sen jälkeen — ja kemia lakkasi olemasta alkemiaa, vaikka '
-        + 'vallankumous ei antanut sitä heille anteeksi.',
+      johdanto: 'Pariisin Arsenaalin laboratoriossa Antoine ja Marie-Anne '
+        + 'Lavoisier punnitsivat noin vuonna 1780 kaiken ennen koetta ja sen '
+        + 'jälkeen — ja kemia lakkasi olemasta alkemiaa. Vallankumous mestasi '
+        + 'Antoinen veronkantajana vuonna 1794.',
       tehtava: {
         kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian vallankumouksessa?',
         vaihtoehdot: [
@@ -7135,26 +7096,24 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+          otsikko: 'Lavoisier 1780 — modernin kemian synty',
           aika: 'noin 1780',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
-          teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
-            + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
-            + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
-            + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
-            + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission '
-            + 'jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa '
-            + 'astioissa ja osoittaa, ettei mikään katoa eikä synny tyhjästä — '
-            + 'palaminen on yhtymistä ilman osaan, jonka hän nimeää hapeksi. '
-            + 'Vastapäätä istuu Marie-Anne Paulze Lavoisier, joka naitettiin '
-            + 'hänelle kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
-            + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
-            + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
-            + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
-            + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
-            + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
-            + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+          teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 '
+            + 'moderni kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa '
+            + 'mikään katoa eikä synny tyhjästä: palaminen on yhtymistä ilman '
+            + 'osaan, jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen '
+            + 'kallein esine ja tarkempi kuin mikään, mitä Pariisin kello- tai '
+            + 'kultasepät myyvät, sillä Lavoisier punnitsee kaiken ennen koetta '
+            + 'ja sen jälkeen. Vastapäätä istuu hänen vaimonsa Marie-Anne Paulze '
+            + 'Lavoisier. Hän on oppinut englannin kääntääkseen Priestleyn ja '
+            + 'Kirwanin kirjoitukset, ja hän piirtää laitteet niin tarkasti, että '
+            + 'muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy ensimmäinen '
+            + 'moderni kemian oppikirja, jossa on kolmetoista Marie-Annen '
+            + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+            + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
+            + 'veronkantajana.',
           lyhyt: 'Lavoisierit punnitsevat aineet ennen ja jälkeen reaktion '
             + 'osoittaakseen, ettei massa katoa.',
           selite: 'Kun vaa\'an neula pysähtyy, Marie-Anne merkitsee luvun ennen '
@@ -7165,7 +7124,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lavoisier\'s instruments, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+              otsikko: 'Lavoisier 1780 — modernin kemian synty',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
               lyhyt: 'Marie-Anne Lavoisier dokumentoi kokeet, kun Antoine mittaa '
                 + 'kaasuja heidän laboratoriossaan.',
@@ -7196,9 +7155,10 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-pasteur-pullot-1862',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Pasteur 1862',
-      johdanto: 'Rue d\'Ulmin laboratoriossa rivi keitettyjä liemipulloja odotti '
-        + 'viikkoja samenemista, joka ei tullut — ja vanha usko itsestään '
-        + 'syntyvään elämään menetti palkintokilpailun.',
+      johdanto: 'Louis Pasteur osoitti Pariisin rue d\'Ulmin laboratoriossa vuonna '
+        + '1862, ettei elämä synny itsestään: rivi keitettyjä liemipulloja odotti '
+        + 'viikkoja samenemista, joka ei tullut, ja vanha usko menetti '
+        + 'palkintokilpailun.',
       tehtava: {
         kysymys: 'Miksi joutsenkaulapullon liemi pysyi kirkkaana, vaikka ilma '
           + 'pääsi sisään?',
@@ -7214,14 +7174,17 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+          otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
           aika: '1862',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
-          teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. '
-            + 'Louis Pasteur nostaa sen valoa vasten École normale supérieuren '
-            + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
-            + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
+          teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, '
+            + 'ettei elämä synny itsestään mätänevästä aineesta vaan näkymätön '
+            + 'elämä tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun '
+            + 'palkinnon vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja '
+            + 'pullo on yhä kirkas. Pasteur nostaa sen valoa vasten École normale '
+            + 'supérieuren laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, '
+            + 'jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
             + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
             + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
             + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
@@ -7229,12 +7192,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
             + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
             + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
-            + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto '
-            + 'myönnetään hänelle 1862. Samaan aikaan hän on osoittanut, että '
-            + 'käyminen on elävien mikrobien työtä, ja vuonna 1865 hän patentoi '
-            + 'viinin kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, '
-            + 'että näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
-            + 'myöhemmin kirurgian ja rokotukset.',
+            + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
+            + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
+            + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+            + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
+            + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
           lyhyt: 'Pasteurin joutsenkaulapullo pysyy kirkkaana, kun taas katkaistu '
             + 'pullo samenee mikrobeista.',
           selite: 'Ehjässä joutsenkaulapullossa liemi pysyy kirkkaana, vaikka '
@@ -7245,7 +7207,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'years 1862–1877, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+              otsikko: 'Pasteur 1862 — elämä ei synny itsestään',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
               lyhyt: 'Viikkoja jatkunut odotus vahvistaa Pasteurin kokeen: elämä '
                 + 'ei synny liemeen itsestään.',
@@ -7275,10 +7237,11 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-eiffel-torni-1888',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Torni 1888',
-      johdanto: 'Champ de Marsilla niittaajat seisoivat kesällä 1888 yli sadan '
-        + 'metrin korkeudessa ilman kaiteita ja takoivat kuumia niittejä rautaan, '
-        + 'jonka piti seisoa vain kaksikymmentä vuotta.',
+      otsikko: 'Historian hetki: Eiffel-torni 1888',
+      johdanto: 'Pariisin Champ de Marsilla niittaajat kokosivat kesällä 1888 '
+        + 'Eiffel-tornia maailmannäyttelyyn: yli sadan metrin korkeudessa he '
+        + 'takoivat kuumia niittejä rautaan, jonka piti seisoa vain kaksikymmentä '
+        + 'vuotta.',
       tehtava: {
         kysymys: 'Miksi Eiffel-tornin osiin ei porattu yhtään reikää työmaalla?',
         vaihtoehdot: [
@@ -7293,27 +7256,29 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
+          otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
           aika: 'elokuu 1888',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
-          teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin '
+          teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 '
+            + 'Eiffel-tornia vuoden 1889 maailmannäyttelyyn: toinen kerros on '
+            + 'valmis, ja kolmisensataa rakentajaa niittaa rautaristikkoa yhä '
+            + 'ylemmäs. Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin '
             + 'maassa, ja niittaajan on osattava seistä siinä koko päivä. '
-            + 'Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja '
-            + 'rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa '
+            + 'Rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa '
             + 'kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja '
             + 'kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. '
             + 'Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei '
             + 'porata paikan päällä: jokainen 18 038 osasta on piirretty '
             + 'Levallois-Perret\'n konepajalla kymmenesosamillin tarkkuudella, ja '
-            + 'jos osa ei sovi, se lähetetään takaisin. Rakentajia on '
-            + 'kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat '
-            + 'Gustave Eiffelin insinöörit Maurice Koechlin ja Émile Nouguier; '
-            + 'Eiffel osti heidän patenttinsa. Pariisin taiteilijat, Maupassant '
-            + 'ja Garnier mukana, ovat vastustaneet tornia julkisella '
-            + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä '
-            + 'vuotta. Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — '
-            + 'ja jää, koska sen huipulle sopii radioantenni.',
+            + 'jos osa ei sovi, se lähetetään takaisin. Työn aikana kuolee yksi '
+            + 'rakentaja. Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice '
+            + 'Koechlin ja Émile Nouguier; Eiffel osti heidän patenttinsa. '
+            + 'Pariisin taiteilijat, Maupassant ja Garnier mukana, ovat '
+            + 'vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin '
+            + 'seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. '
+            + 'maaliskuuta 1889 maailmannäyttelyyn — ja jää, koska sen huipulle '
+            + 'sopii radioantenni.',
           lyhyt: 'Neljän miehen ketju niittaa Eiffel-tornia ilman suojakaiteita, '
             + 'joka isku toisen varassa.',
           selite: 'Kuuma niitti ehtii jäähtyä nopeasti, joten neljän miehen '
@@ -7325,7 +7290,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'history, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
+              otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
               lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet '
                 + 'esivalmistetut osat kootaan yhdeksi torniksi.',
@@ -7357,9 +7322,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-ranskan-vallankumous-bastilji-1789',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Bastilji 1789',
-      johdanto: 'Saint-Antoinen esikaupungin reunalla seisoi heinäkuussa 1789 '
-        + 'linnoitus, jossa oli seitsemän vankia ja 250 tynnyriä ruutia — ja '
-        + 'juuri ruudin takia väkijoukko tuli sen porteille.',
+      johdanto: 'Pariisin kansa hyökkäsi 14. heinäkuuta 1789 Bastiljin '
+        + 'linnoitukseen hakemaan sinne siirrettyä ruutia — linnoituksessa oli '
+        + 'vain seitsemän vankia ja 250 tynnyriä ruutia.',
       tehtava: {
         kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta 1789?',
         vaihtoehdot: [
@@ -7374,29 +7339,33 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+          otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
           aika: '14.7.1789',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
-          teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
-            + 'Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on '
-            + 'tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 '
-            + 'kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama '
-            + 'päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen '
-            + 'Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. '
-            + 'Kuningas on erottanut suositun rahaministeri Neckerin, ja '
-            + 'kaupungin ympärille on koottu joukkoja; Camille Desmoulins on '
-            + 'huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. '
-            + 'Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 '
-            + 'sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on '
-            + 'väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko '
-            + 'pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää '
-            + 'kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan '
-            + 'kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
+          teksti: 'Pariisin kansa hyökkää 14. heinäkuuta 1789 Bastiljin '
+            + 'linnoitukseen hakemaan sinne siirrettyä ruutia, ja illalla '
+            + 'kuvernööri de Launay antautuu. Musketti painaa olkapäällä, mutta '
+            + 'siihen ei ole ruutia. Aamulla väkijoukko on tyhjentänyt Invalidien '
+            + 'sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. '
+            + 'Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten '
+            + 'Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen '
+            + 'esikaupungin reunalle. Siksi kansa on siellä. Kuningas on '
+            + 'erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille '
+            + 'on koottu joukkoja; Camille Desmoulins on huutanut '
+            + 'Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa '
+            + 'on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä '
+            + 'krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. '
+            + 'Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee '
+            + 'ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. '
+            + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
+            + 'kaupungintalolle ja surmataan sen edessä. Linnoitus puretaan '
             + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
-            + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
-            + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, '
-            + 'ja siitä tulee trikolori.',
+            + 'Versailles\'sta Pariisin kaupungintalolle, ja hänelle annetaan '
+            + 'vallankumouksen kokardi hattuun kiinnitettäväksi. Perimätiedon '
+            + 'mukaan Lafayette lisää kaupungin siniseen ja punaiseen valkoisen, '
+            + 'vanhastaan Ranskan ja sen kuninkaiden värin, ja siitä tulee '
+            + 'trikolori; tarkalleen ei tiedetä, kuka värit yhdisti.',
           lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin '
             + 'portti vihdoin avautuu.',
           selite: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
@@ -7408,7 +7377,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'the Bastille, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+              otsikko: 'Bastilji 1789 — Ranskan vallankumous alkaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
               lyhyt: 'Bastiljin sveitsiläinen vartija yrittää kadota pihalle '
                 + 'ennen kuin väkijoukko saavuttaa hänet.',
@@ -7439,10 +7408,11 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-lumiere-elokuva-1895',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Lumière 1895',
-      johdanto: 'Boulevard des Capucines\'in kahvilan kellarissa muutama kymmenen '
-        + 'ihmistä maksoi joulukuussa 1895 frangin ja näki tehtaan portin '
-        + 'aukeavan valkokankaalla — yleisön joukossa taikuri, joka halusi heti '
-        + 'ostaa koneen.',
+      johdanto: 'Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. '
+        + 'joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama '
+        + 'kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan '
+        + 'valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa '
+        + 'koneen.',
       tehtava: {
         kysymys: 'Mitä Lumièren veljekset vastasivat Georges Mélièsille, kun tämä '
           + 'halusi ostaa Cinématographen?',
@@ -7458,28 +7428,31 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+          otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
           aika: '28.12.1895',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
-          teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard '
-            + 'des Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
-            + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
-            + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
-            + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, '
-            + 'naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. '
-            + 'Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja '
-            + 'niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — '
-            + 'ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat '
-            + 'valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu '
-            + 'helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä '
-            + 'pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa '
-            + 'tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. '
-            + 'Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa '
-            + 'laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole '
-            + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
-            + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
-            + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+          teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
+            + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
+            + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+            + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
+            + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
+            + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
+            + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
+            + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
+            + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
+            + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
+            + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
+            + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+            + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
+            + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
+            + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+            + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
+            + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, '
+            + 'ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja '
+            + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
+            + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
+            + 'liikkuva valokuva on.',
           lyhyt: 'Méliès katsoo hämmästyneenä, kun Lumièren elokuva saa '
             + 'valkokankaan näyttämään ikkunalta.',
           selite: 'Georges Méliès nojautuu eteenpäin, kun valkokankaan '
@@ -7491,7 +7464,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Lumière, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+              otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
               lyhyt: 'Avustaja pitää kameran kammen tasaisena, jotta Lumièren '
                 + 'elokuvan ihmiset jatkavat kävelyään.',
@@ -7504,7 +7477,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Lumière, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+              otsikko: 'Lumière 1895 — ensimmäinen elokuvanäytös',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
               lyhyt: 'Toimittaja yrittää selittää lukijoille liikkuvaa kuvaa, '
                 + 'jota kukaan ei ole ennen nähnyt.',
@@ -7919,17 +7892,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'The Acropolis from Mount Hymettus on February 9, 2020.jpg',
-          lyhyt: 'Ateenan kaupunkialueella asuu yli 3,6 miljoonaa, vaikka varsinaisessa kunnassa vain runsaat 640 000.',
-          selite: 'Ateenan kaupunkialueella asuu yli 3,6 miljoonaa ihmistä, '
-            + 'vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000.',
+          lyhyt: 'Ateenan pääkaupunkiseudulla asuu yli 3,6 miljoonaa, vaikka varsinaisessa kunnassa vain runsaat 640 000.',
+          selite: 'Ateenan pääkaupunkiseudulla asuu yli 3,6 miljoonaa ihmistä, vaikka varsinaisessa Ateenan kunnassa vain runsaat 640 000.',
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Athens at night on September 28, 2022.jpg',
-          lyhyt: 'Ateena, Manner-Euroopan kuumin kaupunki, nimitti ensimmäisenä eurooppalaisena virkamiehen helteille.',
-          selite: 'Ateenaa on sanottu Manner-Euroopan kuumimmaksi '
-            + 'kaupungiksi, ja se nimitti ensimmäisenä eurooppalaisena '
-            + 'kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.',
+          lyhyt: 'Ateena nimitti ensimmäisenä eurooppalaisena kaupunkina virkamiehen hoitamaan hellejaksoja.',
+          selite: 'Ateena nimitti 2021 ensimmäisenä eurooppalaisena kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.',
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -8158,7 +8128,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-olympia-ateena-1896',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Louis 1896',
+      otsikko: 'Historian hetki: Maraton 1896',
       johdanto: 'Marmoristadionille juoksi huhtikuussa 1896 Marousin vedenkantaja '
         + 'kahden prinssin saattamana, ja ensimmäisten nykyaikaisten '
         + 'olympialaisten isäntämaa sai voiton, jota se oli odottanut koko '
@@ -8177,7 +8147,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
+          otsikko: 'Maraton 1896 — ensimmäinen olympiamaraton',
           aika: '10.4.1896',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
@@ -8209,7 +8179,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Athens 1896 report, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
+              otsikko: 'Maraton 1896 — ensimmäinen olympiamaraton',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
               lyhyt: 'Louisin isä etsii poikansa kasvoja väkijoukosta stadionilla '
                 + 'Kreikan juhliessa olympiavoittoa.',
@@ -8631,10 +8601,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-amsterdam-aamu.png',
-          lyhyt: 'Westerkerkin torni (1638), Amsterdamin korkein, kantaa keisari Maximilianin lahjoittamaa kruunua.',
-          selite: 'Westerkerkin torni valmistui 1638 ja on Amsterdamin '
-            + 'korkein kirkontorni — sen huipulla kimaltaa keisari '
-            + 'Maximilianin kaupungille myöntämä kruunu.',
+          lyhyt: 'Westerkerkin torni (1638), Amsterdamin korkein, kantaa keisarillista kruunua.',
+          selite: 'Westerkerkin torni valmistui 1638 ja on Amsterdamin korkein kirkontorni — sen huipulla kimaltaa keisarillinen kruunu.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -8689,18 +8657,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'KeizersgrachtReguliersgrachtAmsterdam.jpg',
-          lyhyt: 'Keizersgracht, keskustan levein kanava, nimettiin keisari Maksimilian I:n mukaan.',
-          selite: 'Keizersgracht nimettiin keisari Maksimilian I:n mukaan ja '
-            + 'on keskustan levein kanava; sen risteävä Reguliersgracht '
-            + 'kaivettiin vuonna 1658.',
+          lyhyt: 'Keizersgracht eli keisarinkanava on keskustan levein kanava.',
+          selite: 'Keizersgracht eli keisarinkanava on keskustan levein kanava; sen risteävä Reguliersgracht kaivettiin vuonna 1658.',
           lahde: 'Massimo Catarinella, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Aerial photograph of Amsterdam Central Station and the surrounding area.jpg',
-          lyhyt: 'Cuypersin Amsterdam Centraal (1889) on Alankomaiden vierailluin valtakunnanmonumentti.',
-          selite: 'Pierre Cuypersin suunnittelema Amsterdam Centraal avattiin '
-            + 'vuonna 1889, ja se on Alankomaiden vierailluin '
-            + 'valtakunnanmonumentti.',
+          lyhyt: 'Cuypersin johdolla suunniteltu Amsterdam Centraal (1889) on Alankomaiden toiseksi vilkkain asema.',
+          selite: 'Pierre Cuypersin johdolla suunniteltu Amsterdam Centraal avattiin vuonna 1889, ja se on Alankomaiden toiseksi vilkkain rautatieasema Utrechtin jälkeen.',
           lahde: 'RubenVanKuik, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -9007,10 +8971,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-istanbul-keskipaiva.png',
-          lyhyt: 'Genovalaiset rakensivat Galatan tornin 1348 vartiotorniksi Kultaisen sarven pohjoisrannalle.',
-          selite: 'Genovalaiset rakensivat Galatan tornin 1348 '
-            + 'siirtokuntansa vartiotorniksi, ja se hallitsi Kultaisen '
-            + 'sarven pohjoisrantaa vuosisatoja.',
+          lyhyt: 'Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen kärkeen Kultaisen sarven pohjoisrannalle.',
+          selite: 'Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen korkeimmaksi torniksi, ja se hallitsi Kultaisen sarven pohjoisrantaa vuosisatoja.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -9046,9 +9008,7 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/istanbul/20261013-uudet-6-8/istanbul-6-nakoala-intro-v1.png',
           lyhyt: 'Galatan tornin tasanteelta näkyvät Kultainen sarvi, Hagia Sofia ja Sininen moskeija.',
-          selite: 'Genovalaiset rakensivat Galatan tornin vartiotorniksi vuonna 1348. Sen huipulta '
-            + 'avautuu näkymä Kultaiselle sarvelle, Bosporille ja Istanbulin historialliselle '
-            + 'niemimaalle.',
+          selite: 'Genovalaiset rakensivat Galatan tornin 1348 siirtokuntansa linnoituksen torniksi. Sen huipulta avautuu näkymä Kultaiselle sarvelle, Bosporille ja Istanbulin historialliselle niemimaalle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -9074,23 +9034,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg',
+          lyhyt: 'Süleymaniyen moskeija kohoaa vanhankaupungin kolmannella kukkulalla Kultaisen sarven yllä.',
           selite: 'Süleymaniyen moskeija seisoo vanhankaupungin '
             + 'kolmannen kukkulan laella Kultaisen sarven yllä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sultanahmet ferry on the Bosphorus in Istanbul, Turkey 001.jpg',
-          lyhyt: 'Lautta on Istanbulissa tavallinen kulkuneuvo ja kaupungin halvin näköalapaikka.',
-          selite: 'Lautta on Istanbulissa yhtä tavallinen kulkuneuvo '
-            + 'kuin raitiovaunu ja samalla halvin näköalapaikka, jonka '
-            + 'kaupunki tarjoaa.',
+          lyhyt: 'Lautta on Istanbulissa tavallinen kulkuneuvo ja edullinen tapa nähdä kaupunki mereltä.',
+          selite: 'Lautta on Istanbulissa yhtä tavallinen kulkuneuvo kuin raitiovaunu, ja matka tarjoaa edullisen näkymän kaupunkiin mereltä.',
           lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Panoramic view of Istanbul- Yeni Cami (The New Mosque), Galata Bridge. Turkey, Southeastern Europe.jpg',
-          lyhyt: 'Eminönün rantatorilla myydään balık ekmekiä veneistä, joissa kala kypsennetään laiturin kupeessa.',
-          selite: 'Eminönün rantatorilla myydään balık ekmekiä suoraan '
-            + 'veneistä, joissa kala kypsennetään laiturin kupeessa.',
+          lyhyt: 'Eminönün rannalta näkyvät Uusi moskeija ja Galatan silta.',
+          selite: 'Eminönün rannassa kohoaa Uusi moskeija eli Yeni Cami, ja Galatan silta yhdistää rannan Kultaisen sarven toiselle puolelle.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -9503,7 +9461,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-konstantinopoli-1453',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Konstantinopoli',
+      otsikko: 'Historian hetki: Konstantinopoli 1453',
       johdanto: 'Toukokuun 29. päivän aamuna 1453 kahdeksantuhatta puolustajaa '
         + 'seisoi kahdentoista mailin muurilla, ja sama aamu päättyi Hagia Sofian '
         + 'ovien murtumiseen — tuhatvuotinen keisarikunta loppui yhdessä päivässä.',
@@ -9521,7 +9479,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
+          otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
           aika: '29.5.1453',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
@@ -9555,7 +9513,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'history, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
+              otsikko: 'Konstantinopoli 1453 — kaupunki kaatuu',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
               lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin '
                 + 'reilun seitsemän viikon piirityksen.',
@@ -9965,30 +9923,20 @@ export const KULTTUURI_KATEGORIAT = {
            * tullitalo jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-dublin-hapenny.jpg',
-          lyhyt: 'Ha\'penny Bridge avattiin 1816 Liffeyn ensimmäisenä jalankulkusiltana puolen pennyn tiemaksulla.',
-          selite: 'Ha’penny Bridge avattiin 1816 Liffeyn ensimmäisenä '
-            + 'jalankulkusiltana, sen valurautainen 43 metrin kaari '
-            + 'valettiin Coalbrookdalessa, ja nimensä silta sai puolen '
-            + 'pennyn tiemaksusta, jota perittiin vuoteen 1919.',
+          lyhyt: 'Ha\'penny Bridge avattiin 1816 jalankulkusiltana, ja nimensä silta sai puolen pennyn tiemaksusta.',
+          selite: 'Ha’penny Bridge avattiin 1816, sen valurautainen 43 metrin kaari valettiin Coalbrookdalessa, ja nimensä silta sai puolen pennyn tiemaksusta, jota perittiin vuoteen 1919.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-dublin-aamu.png',
-          lyhyt: 'Trinity Collegen kellotorni (1853) on graniittia ja Portlandin kiveä, juurellaan neljä veistosta.',
-          selite: 'Trinity Collegen kellotorni valmistui 1853 Charles '
-            + 'Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin '
-            + 'alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin '
-            + 'kiveä, ja kellohuoneen juurella istuu neljä veistosta — '
-            + 'jumaluusoppi, tiede, lääketiede ja laki.',
+          lyhyt: 'Trinity Collegen kellotorni (1854) on graniittia ja Portlandin kiveä, juurellaan neljä veistosta.',
+          selite: 'Trinity Collegen kellotorni valmistui 1854 Charles Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin kiveä, ja kellohuoneen juurella istuu neljä veistosta — jumaluusoppi, tiede, lääketiede ja laki.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-dublin-keskipaiva.png',
-          lyhyt: 'Pyhän Patrickin katedraali (1191) on Irlannin suurin kirkko, torninhuippu nostettiin vasta 1749.',
-          selite: 'Pyhän Patrickin katedraali perustettiin 1191, ja ulkoa 91 '
-            + 'metriä pitkänä se on Irlannin suurin kirkko — graniittinen '
-            + 'torninhuippu nostettiin tornin päälle vasta 1749 George '
-            + 'Semplen suunnitelmien mukaan.',
+          lyhyt: 'Pyhän Patrickin katedraali (1220–1260) on Irlannin suurin katedraali; torninhuippu nostettiin vasta 1749.',
+          selite: 'Pyhän Patrickin katedraali perustettiin 1191, nykyinen rakennus on vuosilta 1220–1260, ja ulkoa 91 metriä pitkänä se on Irlannin suurin katedraali — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -10055,27 +10003,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Dublin, városkép a Guinness-toronyból.jpg',
-          lyhyt: 'Guinnessin panimon käymislaitos (1902) oli Irlannin ensimmäinen teräsrunkoinen kerrostalo.',
-          selite: 'Guinnessin panimon käymislaitos rakennettiin vuonna 1902 ja '
-            + 'oli Irlannin ensimmäinen monikerroksinen teräsrunkoinen '
-            + 'rakennus.',
+          lyhyt: 'Guinnessin panimon käymislaitos oli Irlannin ensimmäisiä monikerroksisia teräsrunkoisia rakennuksia.',
+          selite: 'Guinnessin panimon käymislaitos rakennettiin 1902–1904 ja oli yksi Irlannin ensimmäisistä monikerroksisista teräsrunkoisista rakennuksista. Kuva on otettu Guinness Storehousen näköalatasanteelta.',
           lahde: 'Kiss Tamás ( Kit36a at Hungarian Wikipedia ), '
             + 'Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'The Four Courts and River Liffey, Dublin - geograph.org.uk - 2776535.jpg',
-          lyhyt: 'Four Courts sai nimensä neljästä alkuperäisestä oikeusistuimestaan, nyt korkeimman oikeuden talo.',
-          selite: 'Four Courts sai nimensä neljästä alkuperäisestä ylimmästä '
-            + 'oikeusistuimestaan, ja se on yhä Irlannin korkeimman oikeuden '
-            + 'istuntopaikka.',
+          lyhyt: 'Four Courts sai nimensä neljästä alkuperäisestä oikeusistuimestaan, ja talossa toimii yhä Irlannin tuomioistuimia.',
+          selite: 'Four Courts sai nimensä neljästä alkuperäisestä ylimmästä oikeusistuimestaan, ja talossa toimii yhä Irlannin tuomioistuimia.',
           lahde: 'Richard Humphrey, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'The sunset - Dublin, Ireland - Cityscape photography.jpg',
-          lyhyt: 'Gandonin tullitalo rakennettiin 1700-luvun lopulla suolle, jota kauppiaat pitivät kelvottomana.',
-          selite: 'James Gandonin suunnittelema tullitalo rakennettiin '
-            + '1700-luvun lopulla suolle, jota kaupungin kauppiaat pitivät '
-            + 'kelvottomana paikkana.',
+          lyhyt: 'Liffey virtaa Dublinin halki Dublininlahteen ja jakaa kaupungin pohjois- ja eteläpuoleen.',
+          selite: 'Liffey-joki virtaa Dublinin halki Dublininlahteen ja jakaa kaupungin pohjois- ja eteläpuoleen.',
           lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -10632,11 +10574,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-edinburgh-ilta.png',
-          lyhyt: 'Calton Hillin kansallismonumentti jäi kesken 1829 ja rakastettiin rauniona nimestään huolimatta.',
-          selite: 'Calton Hillin kansallismonumentti jäi kesken 1829, kun '
-            + 'rahat loppuivat kahdentoista pylvään jälkeen — '
-            + '”Edinburghin häpeäksi” ristitystä raunioista tuli '
-            + 'rakastettu maamerkki.',
+          lyhyt: 'Calton Hillin kansallismonumentti jäi kesken 1829, ja keskeneräinen maamerkki tunnetaan lempinimellä Edinburghin häpeä.',
+          selite: 'Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — ”Edinburghin häpeäksi” kutsutusta keskeneräisestä muistomerkistä tuli tunnettu maamerkki.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -10701,6 +10640,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Edinburgh (29285918903).jpg',
+          lyhyt: 'Edinburghin linnan muureilta näkyy uusikaupunki, jonka rakentaminen alkoi 1767.',
           selite: 'Uusikaupunki rakennettiin vuodesta 1767 noin 1850-luvulle '
             + 'asti James Craigin ruutukaavan mukaan.',
           lahde: 'mandoft from El Campello (Alicante), Spain, '
@@ -11185,11 +11125,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-marseille-keskipaiva.jpg',
-          lyhyt: 'Marseillen La Majorin katedraalin peruskiven laski Napoleon III 1852, valmistuen 1896.',
-          selite: 'Marseillen La Majorin katedraalin peruskiven laski '
-            + 'keisari Napoleon III vuonna 1852; bysanttilaista ja '
-            + 'romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 '
-            + 'ja valmistui 1896.',
+          lyhyt: 'Marseillen La Majorin katedraalin peruskiven laski Louis-Napoléon 1852, ja työt päättyivät 1893.',
+          selite: 'Marseillen La Majorin katedraalin peruskiven laski 26. syyskuuta 1852 prinssi-presidentti Louis-Napoléon, myöhempi Napoleon III; bysanttilaista ja romaanista tyyliä yhdistelevä kirkko otettiin käyttöön 1893 ja korotettiin basilikaksi 1896.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -11815,20 +11752,14 @@ export const KULTTUURI_KATEGORIAT = {
            * Belém, Jerónimos ja Kauppatori jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-lissabon-alfama.jpg',
-          lyhyt: 'São Jorgen linna on seisonut Lissabonin korkeimmalla kukkulalla maurien ajoista, valloitettu 1147.',
-          selite: 'São Jorgen linna on seisonut Lissabonin korkeimmalla '
-            + 'kukkulalla maurien 1000-luvulta asti, Afonso Henriques '
-            + 'valtasi kaupungin 1147, ja linna oli kuninkaan asuntona '
-            + '1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, '
-            + 'jonka kujia kiipeää raitiolinja 28.',
+          lyhyt: 'São Jorgen linna on seisonut kukkulallaan Lissabonin yllä maurien ajoista; kaupunki vallattiin 1147.',
+          selite: 'São Jorgen linna on seisonut kukkulallaan Lissabonin yllä maurien 1000-luvulta asti, Afonso Henriques valtasi kaupungin 1147, ja linna oli kuninkaan asuntona 1500-luvun alkuun saakka; sen juurella levittäytyy Alfama, jonka kujia kiipeää raitiolinja 28.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-lissabon-aamu.png',
-          lyhyt: 'Belémin torni (1519) vartioi Tejon suuta, ja sen bastioniin mahtui seitsemäntoista tykkiä.',
-          selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: '
-            + 'nelikerroksinen torni nousee 30 metriin, ja sen bastionin '
-            + 'ampuma-aukoista mahtui tulittamaan seitsemäntoista tykkiä.',
+          lyhyt: 'Belémin torni (1519) vartioi Tejon suuta, ja sen bastioniin mahtui noin seitsemäntoista tykkiä.',
+          selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: nelikerroksinen torni nousee 30 metriin, ja sen bastionin ampuma-aukoista mahtui tulittamaan noin seitsemäntoista tykkiä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -11842,17 +11773,13 @@ export const KULTTUURI_KATEGORIAT = {
         {
           ampari: 'herokoe/hero-lissabon-ilta.png',
           lyhyt: 'Kauppatorin paikalla seisoi kuninkaanlinna, jonka 1755 maanjäristys ja tulipalo pyyhkivät pois.',
-          selite: 'Kauppatori mittaa 175 metriä joka suuntaan ja avautuu '
-            + 'U-kirjaimena Tejolle — sen paikalla seisoi kuninkaanlinna, '
-            + 'jonka vuoden 1755 maanjäristys ja tulipalo pyyhkivät pois.',
+          selite: 'Kauppatori mittaa 175 metriä joka suuntaan ja avautuu U-kirjaimena Tejolle — sen paikalla seisoi kuninkaanlinna, jonka vuoden 1755 maanjäristys ja tulipalo pyyhkivät pois. Jälleenrakennetun alakaupungin taloihin rakennettiin joustava puuhäkki, joka tärisee muttei kaadu.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Castelo de São Jorge and 25 de Abril Bridge Over Lisbon Rooftops (54739478432).jpg',
-          lyhyt: 'Alakaupungin taloihin rakennettiin joustava puuhäkki, joka tärisee muttei kaadu maanjäristyksessä.',
-          selite: 'Alakaupungin talojen seiniin, lattioihin ja kattoihin '
-            + 'rakennettiin joustava puuhäkki, joka tärisee muttei kaadu, '
-            + 'ja epävakaan maan alle lyötiin metsällinen paaluja.',
+          lyhyt: 'Lissabonin terrakottakattojen yllä kohoaa São Jorgen linnan kukkula, ja kaukana siintää 25 de Abril -silta.',
+          selite: 'Kuvassa näkyvät Lissabonin terrakottakatot, vasemmalla São Jorgen linnan kukkula ja kaukana Tejon yli kulkeva 25 de Abril -silta.',
           lahde: 'Dale Cruse - 10M views from San Francisco, CA, USA, '
             + 'Wikimedia Commons (CC BY 4.0)',
         },
@@ -11882,18 +11809,15 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Lisbon Cityscape with 25 de Abril Bridge (55260752373).jpg',
-          lyhyt: 'Lissabonin metro avattiin 1959 Portugalin ensimmäisenä, nyt neljä linjaa ja 56 asemaa.',
-          selite: 'Lissabonin metro avattiin joulukuussa 1959 Portugalin '
-            + 'ensimmäisenä, ja siinä on neljä linjaa ja 56 asemaa.',
+          lyhyt: 'Lissabonin keskustan kadut laskeutuvat kohti Tejoa, ja kaukana vasemmalla näkyy 25 de Abril -silta.',
+          selite: 'Lissabonin keskustan kadut laskeutuvat kohti Tejoa; kaukana vasemmalla erottuu 25 de Abril -silta.',
           lahde: 'Michael Gaylard from Horsham, UK, Wikimedia Commons '
             + '(CC BY 4.0)',
         },
         {
           tiedosto: 'Blue Hour over Lisbon (43257906392).jpg',
-          lyhyt: 'São Jorgen linnan ja Tejon väliin leviää Alfama, jonka kujilla on tiheässä fado-baareja.',
-          selite: 'São Jorgen linnan kukkulan ja Tejo-joen väliin leviää '
-            + 'Alfama, jonka kujilla on poikkeuksellisen tiheässä '
-            + 'fado-baareja ja ravintoloita.',
+          lyhyt: 'Linnan kukkulalta näkee Lissabonin keskustan valot ja Tejon sinisenä hetkenä.',
+          selite: 'Näkymä São Jorgen linnan kukkulalta Lissabonin keskustan ja Tejon yli sinisenä hetkenä.',
           lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -11987,7 +11911,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-vasco-da-gama-restelo-1497',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Restelo 1497',
+      otsikko: 'Historian hetki: Vasco da Gama 1497',
       johdanto: 'Belémin rannalla seisoi vuonna 1497 pieni merimiesten kappeli, '
         + 'ei vielä luostaria; siellä Vasco da Gaman miehet valvoivat viimeisen '
         + 'yönsä Euroopassa.',
@@ -12005,7 +11929,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
+          otsikko: 'Vasco da Gama 1497 — lähtö kohti Intiaa',
           aika: '8.7.1497',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-lahi-photo-v3.jpg',
@@ -12035,7 +11959,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1497–1499*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
+              otsikko: 'Vasco da Gama 1497 — lähtö kohti Intiaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
               lyhyt: 'Da Gaman lähtö on rannalle sekä lupaus vauraudesta että '
                 + 'mahdollinen viimeinen hyvästi.',
@@ -12065,7 +11989,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-kolumbus-portugali-1484',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Lissabon 1484',
+      otsikko: 'Historian hetki: Kolumbus 1484',
       johdanto: 'Kolumbus asui Lissabonissa toistakymmentä vuotta ja esitti '
         + 'suunnitelmansa ensin Portugalin kuninkaalle — joka sanoi ei, ja oli '
         + 'laskuopin puolesta oikeassa.',
@@ -12083,7 +12007,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
+          otsikko: 'Kolumbus 1484 — Portugali hylkää suunnitelman',
           aika: '1484',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-lahi-photo-v3.jpg',
@@ -12112,7 +12036,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Harrisse Collection; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
+              otsikko: 'Kolumbus 1484 — Portugali hylkää suunnitelman',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
               lyhyt: 'Juhana II:n hovi pitää Kolumbuksen matkaa turhana riskinä; '
                 + 'hylätty suunnittelija lähtee Kastiliaan.',
@@ -12493,11 +12417,8 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 16 (23.8.2026, tools/hero-tyolista-11.mjs). */
         {
           ampari: 'herokoe/hero-barcelona-aamu.png',
-          lyhyt: 'Sagrada Famílian rakentaminen alkoi 1882, Gaudín johtaman työn Jeesuksen torni nousee 172,5 metriin.',
-          selite: 'Sagrada Famílian rakentaminen alkoi 19. maaliskuuta 1882 '
-            + 'ja Gaudí johti työtä 1883 kuolemaansa 1926 asti — '
-            + 'kahdeksastatoista tornista korkein eli Jeesuksen torni nousee '
-            + '172,5 metriin, ja kirkko vihittiin käyttöön 2010.',
+          lyhyt: 'Sagrada Famílian rakentaminen alkoi 1882; Jeesuksen torni valmistui 2026 ja on 172,5 metriä korkea.',
+          selite: 'Sagrada Famílian rakentaminen alkoi 19. maaliskuuta 1882, ja Gaudí otti työn johtoonsa 1883 ja johti sitä kuolemaansa 1926 asti — kahdeksastatoista tornista korkein eli Jeesuksen torni valmistui 2026 ja on 172,5 metriä korkea; kirkko vihittiin käyttöön 2010.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -12571,10 +12492,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Barcelona rooftops.jpg',
-          lyhyt: 'Barcelona pysyi 1850-luvulle asti muurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen ydin.',
-          selite: 'Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, '
-            + 'ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu '
-            + 'ydin.',
+          lyhyt: 'Barcelona pysyi 1850-luvulle asti muurien sisällä; katolta näkymä aukeaa vanhan kaupungin yli satamaan ja merelle.',
+          selite: 'Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu ydin. Kuva on otettu katolta, ja näkymä aukeaa vanhan kaupungin kattojen yli satamaan ja merelle.',
           lahde: 'Jvhertum, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -13095,19 +13014,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-granada-keskipaiva.jpg',
-          lyhyt: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506, sakaristo valmistui 1727–1764.',
-          selite: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506 '
-            + 'ja rakentaminen alkoi kymmenen vuotta myöhemmin jatkuen '
-            + 'kolmisensataa vuotta; sakaristo tehtiin 1727–1764 ja on '
-            + 'espanjalaisen churriguerismin mestariteoksia.',
+          lyhyt: 'Granadan kartusiaaniluostari La Cartuja rakennettiin 1500-luvulta kolmisensataa vuotta; sakaristo tehtiin 1727–1764.',
+          selite: 'Granadan kartusiaaniluostarin rakentaminen alkoi 1500-luvun alussa ja jatkui kolmisensataa vuotta; sakaristo rakennettiin 1727–1764 ja on espanjalaisen churriguerismin mestariteoksia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-granada-ilta.jpg',
-          lyhyt: 'Corral del Carbón on 1300-luvun funduq eli kauppiaiden majatalo, ainoa nasridiajalta säilynyt.',
-          selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt '
-            + 'funduq eli kauppiaiden majatalo ja viljavarasto — ainoa '
-            + 'nasridiajalta säilynyt lajissaan koko Iberian niemimaalla.',
+          lyhyt: 'Corral del Carbón on 1300-luvun funduq eli kauppiaiden majatalo, Granadan ainoa säilynyt nasridiajan majatalo.',
+          selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt funduq eli kauppiaiden majatalo ja viljavarasto — ainoa nasridiajalta säilynyt lajissaan.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -13333,7 +13247,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-kolumbus-santa-fe-1492',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Santa Fé 1492',
+      otsikko: 'Historian hetki: Kolumbus 1492',
       johdanto: 'Granadan viereen piiritystä varten rakennettu leirikaupunki '
         + 'Santa Fé näki 17. huhtikuuta 1492 sopimuksen, joka teki genovalaisesta '
         + 'purjehtijasta amiraalin ennen kuin hän oli löytänyt mitään.',
@@ -13352,7 +13266,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
+          otsikko: 'Kolumbus 1492 — kuningatar hyväksyy matkan',
           aika: '17.4.1492',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-lahi-photo-v3.jpg',
@@ -13386,7 +13300,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'of Privileges*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
+              otsikko: 'Kolumbus 1492 — kuningatar hyväksyy matkan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
               lyhyt: 'Huhtikuun 1492 sopimuksessa Kolumbukselle ratkaisee paitsi '
                 + 'matka myös hänen tuleva asemansa.',
@@ -13741,11 +13655,8 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-budapest-parliament.jpg',
-          lyhyt: 'Unkarin parlamenttitalo valmistui 1904, sen kupoli nousee 96 metriin viitaten vuoteen 896.',
-          selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
-            + 'piirustuksin: uusgoottilainen palatsi on 268 metriä '
-            + 'pitkä, ja sen kupoli nousee tasan 96 metriin — luku '
-            + 'muistuttaa vuoden 896 maahantulosta.',
+          lyhyt: 'Unkarin parlamenttitalo valmistui 1904, ja se on 96 metriä korkea viitaten vuoteen 896.',
+          selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin piirustuksin: uusgoottilainen palatsi on 268 metriä pitkä ja 96 metriä korkea — luku viittaa vuoden 896 maahantuloon.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -13756,7 +13667,7 @@ export const KULTTUURI_KATEGORIAT = {
            * sama kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-budapest-lanchid.jpg',
-          lyhyt: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä pysyvänä siltana Tonavan yli.',
+          lyhyt: 'Széchenyin ketjusilta valmistui 1849 Budapestin ensimmäisenä pysyvänä siltana Tonavan yli.',
           selite: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä '
             + 'pysyvänä siltana Tonavan yli Budan ja Pestin välillä — '
             + 'kivileijonat ovat vartioineet sen päitä vuodesta 1852.',
@@ -13764,11 +13675,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-budapest-fishermans-bastion.jpg',
-          lyhyt: 'Kalastajanlinnakkeen seitsemän tornia muistuttaa heimoista; terassi valmistui 1902 kirkon viereen.',
-          selite: 'Kalastajanlinnakkeen seitsemän suippotornia '
-            + 'muistuttavat unkarilaisten seitsemästä heimosta — '
-            + 'näköalaterassi valmistui 1902 Matthias-kirkon viereen, '
-            + 'eikä se ole koskaan ollut puolustusrakennelma.',
+          lyhyt: 'Kalastajanlinnakkeen seitsemän tornia muistuttaa unkarilaisheimojen päämiehistä; terassi valmistui 1902 kirkon viereen.',
+          selite: 'Kalastajanlinnakkeen seitsemän suippotornia muistuttavat unkarilaisten seitsemästä heimopäämiehestä — näköalaterassi valmistui 1902 Matthias-kirkon viereen, eikä se ole koskaan ollut puolustusrakennelma.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -14461,10 +14369,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-rooma-keskipaiva.png',
-          lyhyt: 'Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli on yhä Rooman korkein rakennelma.',
-          selite: 'Pietarinkirkkoa rakennettiin yli sata vuotta '
-            + '(1506–1626), ja Michelangelon kupoli on yhä Rooman '
-            + 'korkein rakennelma.',
+          lyhyt: 'Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli nousee yli 136 metriin.',
+          selite: 'Pietarinkirkkoa rakennettiin yli sata vuotta (1506–1626), ja Michelangelon kupoli nousee yli 136 metriin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -14528,10 +14434,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: "Roma da Castel Sant'Angelo.jpg",
-          lyhyt: 'Rooma on kasattu kerroksittain: samassa korttelissa voi olla antiikin pylväs ja barokkikirkko.',
-          selite: 'Rooma on kasattu kerroksittain, ja saman korttelin '
-            + 'sisällä voi olla antiikin pylväs, keskiaikainen torni ja '
-            + 'barokkikirkko.',
+          lyhyt: 'Castel Sant\'Angelon terassilta näkee Rooman katot ja kupolit.',
+          selite: 'Rooma on kasattu kerroksittain, ja saman korttelin sisällä voi olla antiikin pylväs, keskiaikainen torni ja barokkikirkko. Kuva on otettu Castel Sant\'Angelolta.',
           lahde: 'Stefano Vigorelli, Wikimedia Commons (CC0)',
         },
         {
@@ -14741,7 +14645,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-michelangelo-sikstus-1510',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Sikstus 1510',
+      otsikko: 'Historian hetki: Michelangelo 1510',
       johdanto: 'Vatikaanin kappelin holvin alla seisoi vuonna 1510 '
         + 'kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti päivän '
         + 'laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.',
@@ -14759,7 +14663,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
+          otsikko: 'Michelangelo 1510 — Sikstuksen katto',
           aika: '1510',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
@@ -14790,7 +14694,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Chapel ceiling, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
+              otsikko: 'Michelangelo 1510 — Sikstuksen katto',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
               lyhyt: 'Vuonna 1510 Sikstuksen katosta on valmiina vasta puolikas, '
                 + 'ja työ etenee alue kerrallaan.',
@@ -15095,10 +14999,8 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
         {
           ampari: 'herokoe/hero-krakova-aamu.png',
-          lyhyt: 'Wawelin kukkulan katedraali vihittiin 1364, siellä kruunattiin kuninkaat vuoteen 1764 asti.',
-          selite: 'Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä '
-            + 'seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan '
-            + 'kuninkaat vuoteen 1764 asti.',
+          lyhyt: 'Wawelin kukkulan katedraali vihittiin 1364, siellä kruunattiin kuninkaat vuoteen 1734 asti.',
+          selite: 'Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan kuninkaat vuoteen 1734 asti.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -15111,10 +15013,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-krakova-ilta.png',
-          lyhyt: 'Sukiennice sai renessanssiasunsa 1555 palon jälkeen, irvinaamat reunustavat sen räystäslistaa.',
-          selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen '
-            + 'torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen, '
-            + 'ja kiviset irvinaamat reunustavat sen räystäslistaa.',
+          lyhyt: 'Sukiennice sai renessanssiasunsa vuoden 1555 palon jälkeen 1556–1559, irvinaamat reunustavat sen räystäslistaa.',
+          selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin keskellä; renessanssiasunsa se sai vuoden 1555 palon jälkeen 1556–1559, ja kiviset irvinaamat reunustavat sen räystäslistaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -15178,10 +15078,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '20200808 Widok z Kopca Krakusa na Stare Miasto w Krakowie wczesnym rankiem 0557 3430.jpg',
-          lyhyt: 'Krakovan laaksossa kivihiilen poltto pilasi talvi-ilmaa, kunnes kaupunki kielsi sen 2019.',
-          selite: 'Krakova sijaitsee laaksossa, ja kivihiilen poltto teki '
-            + 'talvi-ilmasta ajoittain Euroopan huonointa — kaupunki kielsi '
-            + 'sen kotitalouksien lämmityksessä 2019.',
+          lyhyt: 'Krakovan laaksossa kivihiilen poltto pilasi talvi-ilmaa, kunnes alueen kielto tuli voimaan 2019.',
+          selite: 'Krakova sijaitsee laaksossa, ja kivihiilen poltto teki talvi-ilmasta ajoittain Euroopan huonointa — Pikku-Puolan aluevaltuuston kielto kotitalouksien kivihiililämmitykselle tuli voimaan 2019.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -15730,11 +15628,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-varsova-aamu.png',
-          lyhyt: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619 ja koottiin uudelleen 1971–1984 tuhon jälkeen.',
-          selite: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619, se '
-            + 'tuhoutui syyskuussa 1944 ja koottiin uudelleen 1971–1984 '
-            + 'vanhojen piirustusten mukaan — Sigismundin torni nousee 60 '
-            + 'metriin ja tiilijulkisivu on 90 metriä pitkä.',
+          lyhyt: 'Varsovan kuninkaanlinna valmistui 1619, tuhoutui 1944 ja rakennettiin uudelleen 1971–1984.',
+          selite: 'Varsovan kuninkaanlinnan barokkiasu valmistui 1619, saksalaiset tuhosivat sen syyskuussa 1944, ja se rakennettiin uudelleen 1971–1984 vanhojen piirustusten mukaan — Sigismundin torni nousee 60 metriin ja tiilijulkisivu on 90 metriä pitkä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -15792,26 +15687,20 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/warsaw/20261012-full/warsaw-7-pragan-iltavalot-intro-v1.png',
-          lyhyt: 'Praga oli Varsovan vastarannalla erillinen kaupunki ennen kuin se '
-            + 'liitettiin Varsovaan 1791.',
-          selite: 'Praga sai kaupunkioikeudet 1600-luvun puolivälissä ja liitettiin Varsovaan '
-            + 'kaupunginosaksi vuonna 1791.',
+          lyhyt: 'Praga oli Varsovan vastarannalla erillinen kaupunki, ennen kuin sen liittäminen Varsovaan päätettiin 1791.',
+          selite: 'Praga sai kaupunkioikeudet 1600-luvun puolivälissä, ja sen liittäminen Varsovaan päätettiin vuonna 1791.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-varsova-ilta.png',
-          lyhyt: 'Saaripalatsi valmistui 1689 kylpypaviljongiksi, muutettiin 1764–1795 uusklassiseksi kesäpalatsiksi.',
-          selite: 'Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta '
-            + '1683 ja valmistui 1689, ja Domenico Merlini muutti sen '
-            + '1764–1795 uusklassiseksi kesäpalatsiksi 76 hehtaarin '
-            + 'Łazienki-puistoon.',
+          lyhyt: 'Saaripalatsi rakennettiin kylpypaviljongiksi ja muutettiin 1700-luvun lopulla uusklassiseksi kesäpalatsiksi.',
+          selite: 'Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta 1683 ja valmistui 1689, ja Domenico Merlini muutti sen 1700-luvun lopulla uusklassiseksi kesäpalatsiksi 76 hehtaarin Łazienki-puistoon.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Old Town in Warsaw view from Vistula 2019a.jpg',
-          lyhyt: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen tyhjästä, itäpuolen Praga säilyi ehjänä.',
-          selite: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen '
-            + 'tyhjästä, ja itäpuolen Praga säilyi lähes ehjänä.',
+          lyhyt: 'Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen; itäpuolen Praga säästyi pahimmalta tuholta.',
+          selite: 'Veikselin länsipuoli rakennettiin sodan jälkeen suurelta osin uudelleen, ja itäpuolen Praga säästyi pahimmalta tuholta.',
           lahde: 'Adrian Grycuk, Wikimedia Commons (CC BY-SA 3.0 PL)',
         },
         {
@@ -16162,10 +16051,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
-          lyhyt: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta; toisessa päässä on Kauppatori.',
-          selite: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta '
-            + 'asti, ja sen toisessa päässä odottavat Kauppatori ja '
-            + 'Eteläsatama.',
+          lyhyt: 'Helsingin keskustassa Senaatintori, tuomiokirkko, Kauppatori ja Eteläsatama ovat '
+            + 'lähekkäin meren rannalla.',
+          selite: 'Helsingin keskusta kohtaa meren Kauppatorilla ja Eteläsatamassa.',
           lahde: 'Suomen Ilmakuva Oy, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16177,8 +16065,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Market Square in Helsinki, Finland, 2024 May.jpg',
-          selite: 'Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja '
-            + 'lokakuussa silakkaa suoraan veneistä.',
+          lyhyt: 'Kauppatorilla myydään kesäisin mansikoita, ja lokakuun Silakkamarkkinoilla '
+            + 'silakkaa suoraan veneistä.',
+          selite: 'Kauppatorilla myydään kesäisin herneitä ja mansikoita, ja lokakuun '
+            + 'Silakkamarkkinoilla silakkaa suoraan veneistä.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16452,7 +16342,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-sibelius-finlandia-1899',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Suomi herää 1899',
+      otsikko: 'Historian hetki: Sibelius 1899',
       johdanto: 'Erottajan teatterissa esitettiin marraskuussa 1899 kuusi '
         + 'historiallista kuvaelmaa sanomalehtimiesten eläkekassan hyväksi — ja '
         + 'sensori joutui kuuntelemaan protestia, jota kukaan ei sanonut ääneen.',
@@ -16471,7 +16361,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
+          otsikko: 'Sibelius 1899 — Finlandian synty',
           aika: '4.11.1899',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg',
@@ -16503,7 +16393,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
+              otsikko: 'Sibelius 1899 — Finlandian synty',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
               lyhyt: 'Finlandian protesti piilotetaan kuvaelmiin ja musiikkiin '
                 + 'niin, ettei sensori voi puuttua siihen.',
@@ -16684,12 +16574,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tampere-ilta.jpg',
-          lyhyt: 'Tampereen Vanha kirkko valmistui 1824, kellotapuli 1828; se on keskustan vanhin säilynyt rakennus.',
-          selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona '
-            + '1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön '
-            + '1825, sen viereinen kellotapuli valmistui 1828 Carl Ludvig '
-            + 'Engelin piirustusten mukaan, ja kirkko on keskustan vanhin '
-            + 'säilynyt rakennus.',
+          lyhyt: 'Tampereen Vanha kirkko valmistui 1824 ja otettiin käyttöön 1825; sen viereinen '
+            + 'kellotapuli valmistui 1828–1829.',
+          selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona 1824 Carlo Bassin '
+            + 'suunnitelmien mukaan ja otettiin käyttöön 1825, ja sen viereinen kellotapuli '
+            + 'valmistui 1828–1829 Carl Ludvig Engelin piirustusten mukaan.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -16700,8 +16589,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/tampere/20261012-full/tampere-4-finlayson-arki-intro-v1.png',
           lyhyt: 'Tampereen vanhat tiilitehtaat nousivat Tammerkosken rannalle 1800-luvulla.',
-          selite: 'Skotlantilainen James Finlayson perusti Tammerkosken rannalle '
-            + 'puuvillatehtaan 1820, ja sen Plevna-rakennuksessa syttyi 1882 '
+          selite: 'Skotlantilainen James Finlayson perusti Finlayson-yhtiön 1820, ja sen '
+            + 'puuvillatehtaan Plevna-rakennuksessa Tammerkosken rannalla syttyi 1882 '
             + 'Pohjoismaiden ensimmäinen sähkövalo.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -16736,17 +16625,18 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/tampere/20261012-full/tampere-7-tiilikortteli-ilta-intro-v1.png',
-          lyhyt: 'Tampere on Pyhäjärven ja Näsijärven välisellä kannaksella.',
-          selite: 'Tampere perustettiin Kustaa III:n päätöksellä, ja täydet kaupunkioikeudet '
-            + 'se sai 1. lokakuuta 1779.',
+          lyhyt: 'Tampere perustettiin Kustaa III:n päätöksellä ja sai kaupunkioikeudet 1779.',
+          selite: 'Tampere perustettiin Kustaa III:n päätöksellä, ja täydet kaupunkioikeudet se '
+            + 'sai 1. lokakuuta 1779.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-tampere-nasinneula.jpg',
-          lyhyt: 'Näsinneula avattiin 1971 ja on 168 metriä korkea; pyörivä ravintola tekee kierroksen 45 minuutissa.',
-          selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 '
-            + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä ravintola '
-            + '124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.',
+          lyhyt: 'Näsinneula avattiin 1971 ja on antenneineen 168 metriä korkea; pyörivä ravintola '
+            + 'tekee kierroksen 45 minuutissa.',
+          selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 Särkänniemessä ja on '
+            + 'antenneineen 168 metriä korkea; sen pyörivä ravintola 124 metrin korkeudessa tekee '
+            + 'täyden kierroksen 45 minuutissa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -17553,12 +17443,11 @@ export const KULTTUURI_KATEGORIAT = {
            * kertoo muurista — uusi kohde karuselliin.
            */
           ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
-          lyhyt: 'Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja 20 tornia, aiemmin oli 2,4 kilometriä.',
-          selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 '
-            + 'kilometriä ja siinä 46 tornia; nykyään muuria on jäljellä '
-            + 'noin 1,9 kilometriä ja torneista pystyssä 20, ja se on '
-            + 'Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia '
-            + 'kaupunginmuureja.',
+          lyhyt: 'Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja yli kaksikymmentä '
+            + 'tornia, aiemmin oli 2,4 kilometriä.',
+          selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä; nykyään muuria on '
+            + 'jäljellä noin 1,9 kilometriä ja siinä on yli kaksikymmentä tornia, ja se on '
+            + 'Pohjois-Euroopan parhaiten säilyneitä keskiaikaisia kaupunginmuureja.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -17637,19 +17526,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tallinna-ilta.png',
-          lyhyt: 'Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein rakennus.',
-          selite: 'Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan '
-            + 'olympialaisten purjehduskisoja varten, se on 314 metriä korkea '
-            + 'ja siten Viron korkein rakennus, ja sen näköalatasanne on 170 '
-            + 'metrin korkeudessa.',
+          lyhyt: 'Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein '
+            + 'rakennus.',
+          selite: 'Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan olympialaisten '
+            + 'purjehduskisoja varten, se on 314 metriä korkea ja siten Viron korkein rakennus, ja '
+            + 'sen näköalatasanne on yli 170 metrin korkeudessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           tiedosto: 'Tallinn Landmarks 01.jpg',
-          lyhyt: 'Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta vuonna 1878.',
-          selite: 'Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä '
-            + 'Toompea omine herroineen ja alhaalla kauppiaiden kaupunki, ja '
-            + 'ne yhdistettiin vasta vuonna 1878.',
+          lyhyt: 'Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta 1870-luvun '
+            + 'lopulla.',
+          selite: 'Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä Toompea omine herroineen '
+            + 'ja alhaalla kauppiaiden kaupunki, ja ne yhdistettiin vasta 1870-luvun lopulla.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17672,9 +17561,10 @@ export const KULTTUURI_KATEGORIAT = {
            * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
            */
           tiedosto: 'T5tramm.jpg',
-          lyhyt: 'Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti Vana-Lõunaa.',
-          selite: 'Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut aloittivat '
-            + 'liikenteen 28.10.1925. Raideleveys on edelleen 1 067 millimetriä.',
+          lyhyt: 'Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti '
+            + 'Vana-Lõunaa.',
+          selite: 'Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut '
+            + 'aloittivat liikenteen 28.10.1925. Raideleveys on 1 067 millimetriä.',
           lahde: 'MorsMe, Wikimedia Commons (CC0)',
         },
       ],
@@ -18104,11 +17994,12 @@ export const KULTTUURI_KATEGORIAT = {
            * uusi kohde Kiovan karuselliin.
            */
           ampari: 'herokoe/hero-kiova-mihaelin-luostari.jpg',
-          lyhyt: 'Pyhän Mihaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja uudelleen 1997–1998.',
-          selite: 'Pyhän Mihaelin kultakupolinen luostari rakennettiin ensi '
-            + 'kerran vuosina 1108–1113, neuvostovalta purki sen '
-            + '1930-luvulla, ja nykyinen kirkko rakennettiin uudelleen '
-            + '1997–1998 vanhojen mittausten ja piirustusten mukaan.',
+          lyhyt: 'Pyhän Mikaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja '
+            + 'rakennettiin uudelleen 1999.',
+          selite: 'Pyhän Mikaelin kultakupolinen luostari rakennettiin ensi kerran vuosina '
+            + '1108–1113, neuvostovalta purki sen 1930-luvulla, ja jälleenrakennus vanhojen '
+            + 'mittausten ja piirustusten mukaan alkoi 1997; nykyinen kirkko avattiin virallisesti '
+            + '1999.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -18123,10 +18014,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kiova-keskipaiva.jpg',
-          lyhyt: 'Kiovan luolaluostarin perusti munkki Antoni 1051, lavra on maailmanperintöluettelossa vuodesta 1990.',
-          selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan '
-            + 'Athos-vuorelta palannut munkki Antoni vuonna 1051, ja '
-            + 'maanalaisista käytävistä kasvanut lavra on ollut Unescon '
+          lyhyt: 'Kiovan luolaluostarin perusti kronikoiden mukaan munkki Antoni 1051; lavra on '
+            + 'maailmanperintöluettelossa vuodesta 1990.',
+          selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan Athos-vuorelta palannut munkki '
+            + 'Antoni vuonna 1051, ja maanalaisista käytävistä kasvanut lavra on ollut Unescon '
             + 'maailmanperintöluettelossa vuodesta 1990.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -18149,9 +18040,8 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/kyiv/20261012-full/kyiv-5-trukhaniv-luonnonranta-intro-v1.png',
-          lyhyt: 'Trukhanivin saari on Kiovan suurin saari keskellä Dneprjokea.',
-          selite: 'Trukhanivin saari on Kiovan suurin saari. Se on Dneprillä Podilia '
-            + 'vastapäätä, ja siellä on useita uimarantoja.',
+          lyhyt: 'Trukhanivin saari sijaitsee keskellä Dneprjokea Podilia vastapäätä.',
+          selite: 'Trukhanivin saari on Dneprillä Podilia vastapäätä, ja siellä on laaja ranta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -18851,7 +18741,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+          otsikko: 'Mendelejev 1869 — jaksollinen järjestelmä',
           aika: '6.3.1869',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg',
@@ -18882,7 +18772,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Assembling the periodic table, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+              otsikko: 'Mendelejev 1869 — jaksollinen järjestelmä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
               lyhyt: 'Mendelejev korjailee luonnoksiaan ja päättää lähettää 200 '
                 + 'painosta taulukostaan kollegoille.',
@@ -18912,7 +18802,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-pietari-perustus-1703',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Jänissaari 1703',
+      otsikko: 'Historian hetki: Pietari 1703',
       johdanto: 'Nevan suiston soisella saarella mitattiin toukokuussa 1703 '
         + 'kuuden bastionin linnoitusta ruotsalaisia vastaan — kukaan '
         + 'lapiomiehistä ei tiennyt seisovansa tulevan pääkaupungin keskustassa.',
@@ -18930,7 +18820,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
+          otsikko: 'Pietari 1703 — tsaari perustaa kaupungin',
           aika: '27.5.1703',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-lahi-photo-v4.jpg',
@@ -18962,7 +18852,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'foundation of St Petersburg, tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
+              otsikko: 'Pietari 1703 — tsaari perustaa kaupungin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
               lyhyt: 'Toukokuussa 1703 Jänissaarella on vasta soinen maa ja '
                 + 'mittanaruja tulevan Pietarin sijaan.',
@@ -19393,10 +19283,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261012-full/moscow-5-chistye-lampi-intro-v1.png',
-          lyhyt: 'Chistyje Prudyn lammella voi kesällä vuokrata veneen ja talvella '
-            + 'luistella.',
-          selite: 'Chistyje Prudy tarkoittaa puhtaita lampia. Lampia oli aikoinaan useita, '
-            + 'mutta nykyään niistä on jäljellä vain yksi.',
+          lyhyt: 'Chistyje Prudyn lammella luistellaan talvisin.',
+          selite: 'Chistyje Prudy tarkoittaa puhtaita lampia. Lampia oli aikoinaan useita, mutta '
+            + 'nykyään niistä on jäljellä vain yksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19406,9 +19295,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png',
-          lyhyt: 'Varpuskukkulan näköalatasanne on noin 85 metriä Moskva-joen yläpuolella.',
-          selite: 'Varpuskukkulan (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla rannalla, '
-            + 'ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa.',
+          lyhyt: 'Varpusvuorten näköalatasanne on noin 85 metriä Moskvajoen yläpuolella.',
+          selite: 'Varpusvuorten (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla '
+            + 'rannalla, ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19418,10 +19307,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261012-full/moscow-7-zamoskvorechye-ilta-intro-v1.png',
-          lyhyt: 'Zamoskvoretšje on Moskva-joen eteläpuolinen kaupunginosa, jonka nimi '
-            + 'tarkoittaa joen takaista.',
-          selite: 'Nimi tulee sanoista ”joen takana” Kremliltä katsoen. 1700-luvulta alueelle '
-            + 'asettui paljon kauppiaita, joiden matalissa taloissa oli hedelmätarhoja.',
+          lyhyt: 'Zamoskvoretšje on Moskvajoen eteläpuolinen kaupunginosa, jonka nimi tarkoittaa '
+            + 'joen takaista.',
+          selite: 'Nimi tulee sanoista ”joen takana” Kremliltä katsoen, sillä alue on Moskvajoen '
+            + 'toisella puolella.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19434,8 +19323,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Moscow panoramic October 2008.jpg',
-          selite: 'Moskvajoki sai lisää vettä Volgasta, kun Moskovan kanava '
-            + 'rakennettiin vuosina 1932–1937.',
+          lyhyt: 'Moskovan kanava yhdistää Moskvajoen Volgaan, ja se rakennettiin vuosina '
+            + '1932–1937.',
+          selite: 'Moskvajoki sai lisää vettä Volgasta, kun Moskovan kanava rakennettiin vuosina '
+            + '1932–1937.',
           lahde: 'Антон Денисов, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -19453,7 +19344,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Moskovan metro ylittää Moskva-joen Lužnikin metrosillalla.',
+          lyhyt: 'Moskovan metro ylittää Moskvajoen Lužnikin metrosillalla.',
           selite: 'Lužnikin metrosilta on kaksikerroksinen kaarisilta: päällä ajotie, alla metrolinja. '
             + 'Sillalla on Vorobjovy Gory -asema, ainoa Moskovan metron asema veden päällä, ja se '
             + 'avattiin uudelleen 2002.',
@@ -19900,7 +19791,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Sofia Synagogue chandelier.JPG',
           teksti: 'Muutaman sadan metrin päässä toisistaan seisoo Sofiassa neljä '
             + 'eri uskonnon rakennusta: ortodoksinen Pyhän Nedeljan kirkko, '
-            + 'Banja Bashin moskeija vuodelta 1566, Sofian synagoga ja '
+            + 'Banja Bašin moskeija vuodelta 1566, Sofian synagoga ja '
             + 'katolinen Pyhän Joosefin katedraali. Kaupunkia kutsutaan siksi '
             + 'suvaitsevaisuuden neliöksi. Synagoga avattiin 1909 ja on '
             + 'Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia — '
@@ -19950,18 +19841,18 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-sofia-nevski.jpg',
-          lyhyt: 'Aleksanteri Nevskin katedraali rakennettiin 1882–1912 sodassa kaatuneiden muistoksi.',
-          selite: 'Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 '
-            + 'Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; '
-            + 'se pystytettiin vuosien 1877–1878 sodassa kaatuneiden '
-            + 'muistoksi, ja sen kullattu kupoli nousee 45 metriin ja '
-            + 'kellotorni 53 metriin.',
+          lyhyt: 'Aleksanteri Nevskin katedraali rakennettiin 1904–1912 sodassa kaatuneiden '
+            + 'muistoksi.',
+          selite: 'Aleksanteri Nevskin katedraalin perustuskivi laskettiin 1882 ja varsinainen '
+            + 'rakennustyö Aleksandr Pomerantsevin suunnitelmien mukaan kesti 1904–1912; se '
+            + 'pystytettiin vuosien 1877–1878 sodassa kaatuneiden muistoksi, ja sen kullattu '
+            + 'kupoli nousee 45 metriin ja kellotorni noin 50 metriin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-sofia-banya-bashi.jpg',
-          lyhyt: 'Banja Bashin moskeija on rakennettu kuumien lähteiden päälle, ainoa yhä toimiva moskeija Sofiassa.',
-          selite: 'Banja Bashin moskeija on rakennettu kuumien lähteiden '
+          lyhyt: 'Banja Bašin moskeija on rakennettu kuumien lähteiden päälle, ainoa yhä toimiva moskeija Sofiassa.',
+          selite: 'Banja Bašin moskeija on rakennettu kuumien lähteiden '
             + 'päälle ja sai nimensä viereisistä kylpylöistä; se on ainoa '
             + 'Sofiassa yhä toimiva moskeija, ja sen leveä lyijykupoli '
             + 'lepää tiilikuution päällä kolmiholvisen eteiskatoksen '
@@ -19970,10 +19861,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sofia-vitosa.jpg',
-          lyhyt: 'Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm raideleveydellä.',
-          selite: 'Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin '
-            + 'osa verkosta kulkee poikkeuksellisella 1 009 millimetrin '
-            + 'raideleveydellä — kadun päässä kohoaa Vitosa.',
+          lyhyt: 'Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm '
+            + 'raideleveydellä.',
+          selite: 'Sofian raitiotie avattiin 1901 alussa, ja suurin osa verkosta kulkee '
+            + 'poikkeuksellisella 1 009 millimetrin raideleveydellä — kadun päässä kohoaa Vitosa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20029,8 +19920,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sofia (37139621884).jpg',
-          selite: 'Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään '
-            + 'siinä asuu lähes 1,3 miljoonaa ihmistä.',
+          lyhyt: 'Sofiassa asuu nykyään yli miljoona ihmistä.',
+          selite: 'Sofiassa asuu nykyään yli miljoona ihmistä.',
           lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -20057,8 +19948,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Banya Bashi 1900.jpg',
           vuosi: 'noin 1900',
-          lyhyt: 'Banja Bashin moskeija valmistui 1566, Sofiasta tuli itsenäistyneen Bulgarian pääkaupunki 1879.',
-          selite: 'Banja Bashin moskeija valmistui vuonna 1566, ja Sofiasta '
+          lyhyt: 'Banja Bašin moskeija valmistui 1566, Sofiasta tuli itsenäistyneen Bulgarian pääkaupunki 1879.',
+          selite: 'Banja Bašin moskeija valmistui vuonna 1566, ja Sofiasta '
             + 'tuli vasta itsenäistyneen Bulgarian pääkaupunki 1879.',
           lahde: 'Wikimedia Commons (PD)',
         },
@@ -20158,10 +20049,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
             + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
             + 'osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle '
-            + 'jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka '
+            + 'jäi Banja Baši, kaupungin ainoa yhä toimiva moskeija, joka '
             + 'seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin '
             + 'synagoga ja kaksi kirkkoa.',
-          selite: 'Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se '
+          selite: 'Banja Baši on Sofian ainoa yhä toimiva moskeija, ja se '
             + 'valmistui vuonna 1566.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
         },
@@ -20657,8 +20548,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/bucharest/20261012-full/bucharest-4-cotroceni-kavely-intro-v3.png',
           lyhyt: 'Cotrocenin kukkulalle Șerban Cantacuzino perusti luostarin vuonna 1679.',
-          selite: 'Kuningas Carol I rakennutti luostarin alueelle palatsin, jonka '
-            + 'rakentaminen alkoi 1888. Palatsin ympäristö kehittyi asuinalueeksi.',
+          selite: 'Kuningas Carol I rakennutti luostarin alueelle palatsin. Palatsin ympäristö '
+            + 'kehittyi asuinalueeksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20681,8 +20572,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png',
           lyhyt: 'Riemukaaren yläterassilta avautuu näkymä Bukarestin ylle.',
-          selite: 'Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin kävijöille '
-            + 'maaliskuussa 2025. Terassilta näkee kaupungin panoraaman.',
+          selite: 'Bukarestin Riemukaari on 27 metriä korkea, ja sen yläterassi avattiin pysyvästi '
+            + 'kävijöille maaliskuussa 2025. Terassilta näkee kaupungin panoraaman.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20700,10 +20591,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bukarest-ilta.jpg',
-          lyhyt: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja metallikupoli.',
-          selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi '
-            + 'Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä '
-            + 'kaartuu suuri lasi- ja metallikupoli.',
+          lyhyt: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja '
+            + 'metallikupoli.',
+          selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi Calea Victoriei -kadun '
+            + 'varrelle — beaux-arts-tyylinen talo, jonka keskellä kaartuu suuri lasi- ja '
+            + 'metallikupoli.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -20713,9 +20605,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä raiteella.',
-          selite: 'Bukarestin linjalle 41 tuli joulukuussa 2022 uusia Imperio-raitiovaunuja. Linja '
-            + 'kulkee Ghencean ja Piața Presein välillä kaupungin länsiosassa.',
+          lyhyt: 'Bukarestin raitiovaunulinja 41 kulkee kaupungin länsiosassa erillisellä '
+            + 'raiteella.',
+          selite: 'Bukarestin raitiolinja 41 kulkee Ghencean ja Piața Presein välillä kaupungin '
+            + 'länsiosassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -21220,10 +21113,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sarajevo-keskipaiva.jpg',
-          lyhyt: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 uusgoottilaiseen asuun, tunnetaan Katedralana.',
-          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 '
-            + 'Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja '
-            + 'ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.',
+          lyhyt: 'Jeesuksen pyhän sydämen katedraali valmistui 1887 uusgoottilaiseen asuun, '
+            + 'tunnetaan Katedralana.',
+          selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1887 Ferhadija-kadulle '
+            + 'uusgoottilaiseen asuun kaksoistorneineen ja ruusuikkunoineen ja vihittiin 1889; '
+            + 'sitä kutsutaan usein vain Katedralaksi.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -21445,7 +21339,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-franz-ferdinandin-salamurha-1914',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Latin-silta 1914',
+      otsikko: 'Historian hetki: Sarajevo 1914',
       johdanto: 'Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan '
         + 'kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, '
         + 'joka luuli tehtävänsä jo epäonnistuneen.',
@@ -21463,7 +21357,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Sarajevo 1914 — auto pysähtyy väärään paikkaan',
+          otsikko: 'Sarajevo 1914 — Franz Ferdinand murhataan',
           aika: '28.6.1914',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franz-ferdinandin-salamurha-1914-lahi-photo-v4.jpg',
@@ -21491,7 +21385,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '28.9.2026.',
           galleria: [
             {
-              otsikko: 'Sarajevo 1914 — auto pysähtyy väärään paikkaan',
+              otsikko: 'Sarajevo 1914 — Franz Ferdinand murhataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franz-ferdinandin-salamurha-1914-kauko-photo-v4.jpg',
               lyhyt: 'Franz Ferdinandin autosaattue Latin-sillan luona.',
               selite: 'Franz Ferdinandin autosaattue Latin-sillan luona.',
@@ -21832,11 +21726,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-keskipaiva.jpg',
-          lyhyt: 'Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin 1827–1830 ruhtinas Vorontsoville.',
-          selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin '
-            + '1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen '
-            + 'Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn '
-            + 'linnoituksen paikalle.',
+          lyhyt: 'Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin ruhtinas '
+            + 'Vorontsoville.',
+          selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin ruhtinas Mihail '
+            + 'Vorontsoville sardinialaissyntyisen Francesco Boffon piirustusten mukaan '
+            + 'turkkilaisen Hacıbeyn linnoituksen paikalle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -21874,8 +21768,9 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png',
           lyhyt: 'Primorskin bulevardi on rinteen reunan kävelykatu, jolta näkee Odessan sataman.',
-          selite: 'Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja niissä '
-            + 'on nykyään 192 askelmaa. Ylhäältä avautuu näkymä satamaan ja merelle.',
+          selite: 'Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja '
+            + 'niissä on nykyään 192 askelmaa; portaikon yläpäästä avautuu näkymä Odessan satamaan '
+            + 'ja merelle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -21893,11 +21788,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-ilta.jpg',
-          lyhyt: 'Odessan kaupungintalo Dumska valmistui 1828–1834, Franz Morandi rakensi sen uudelleen 1871–1873.',
-          selite: 'Odessan kaupungintalo eli Dumska valmistui 1828–1834 '
-            + 'Francesco Boffon ja Gregorio Toricellin uusklassisena '
-            + 'suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi '
+          lyhyt: 'Odessan kaupungintalo valmistui 1834 pörssirakennukseksi, ja Franz Morandi '
             + 'rakensi sen uudelleen 1871–1873.',
+          selite: 'Odessan kaupungintalo rakennettiin pörssiksi 1828–1834 Francesco Boffon ja '
+            + 'Gregorio Toricellin uusklassisena suunnitelmana Primorskin bulevardin päähän, ja '
+            + 'Franz Morandi rakensi sen uudelleen 1871–1873.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -26272,10 +26167,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           ampari: 'herokoe/hero-tromssa-ilta.jpg',
           lyhyt: 'Polarmuseet avattiin 1978 Amundsenin viimeisen lennon 50-vuotispäivänä.',
-          selite: 'Polarmuseet avattiin 18. kesäkuuta 1978 tasan '
-            + 'viisikymmentä vuotta Roald Amundsenin viimeisen lennon '
-            + 'jälkeen, ja se toimii 1840-luvun tullimakasiineissa Skansenin '
-            + 'lähellä.',
+          selite: 'Polarmuseet avattiin 18. kesäkuuta 1978 tasan viisikymmentä vuotta Roald '
+            + 'Amundsenin viimeisen lennon jälkeen, ja se toimii 1800-luvun tullimakasiineissa '
+            + 'Skansenin lähellä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -26308,10 +26202,11 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/tromso/20261013-uudet-6-8/tromso-6-nakoala-intro-v1.png',
-          lyhyt: 'Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Arktinen katedraali.',
-          selite: 'Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne nousee '
-            + 'Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan saaren, '
-            + 'Tromsøbrua-sillan ja Arktisen katedraalin.',
+          lyhyt: 'Storsteinenin tasanteelta näkyvät Tromssan saari, Tromsøbrua ja Jäämeren '
+            + 'katedraali.',
+          selite: 'Storsteinen on Tromsdalenin puolella noin 420 metrin korkeudessa, ja sinne '
+            + 'nousee Fjellheisen-köysirata neljässä minuutissa. Tasanteelta näkee Tromssan '
+            + 'saaren, Tromsøbrua-sillan ja Jäämeren katedraalin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -26333,10 +26228,11 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/tromso/20261013-uudet-6-8/tromso-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Hurtigruten-rannikkolaivat pysähtyvät Tromssassa Bergen–Kirkenes-reitillä.',
-          selite: 'Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin kävelymatkan '
-            + 'päässä keskustasta Tromssan saarella. Tromssa on yksi pysähdyspaikoista Bergenin ja '
-            + 'Kirkkoniemen välisellä reitillä.',
+          lyhyt: 'Matkustaja-alukset liikennöivät Tromssan satamassa, ja '
+            + 'Bergen–Kirkenes-rannikkoreitin laivat pysähtyvät kaupungissa.',
+          selite: 'Rannikkoreitin laivat pysähtyvät Tromssan satamassa muutaman minuutin '
+            + 'kävelymatkan päässä keskustasta Tromssan saarella. Tromssa on yksi '
+            + 'pysähdyspaikoista Bergenin ja Kirkkoniemen välisellä reitillä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -26898,9 +26794,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/iceland/20261012-full/iceland-7-reykjavikin-iltavalot-intro-v1.png',
-          lyhyt: 'Alþingi perustettiin uudelleen Reykjavikiin vuonna 1845.',
-          selite: 'Alþingi on Islannin kansalliskokous, joka perustettiin alun perin noin '
-            + 'vuonna 930. Reykjavik sai kaupunkioikeudet vuonna 1786.',
+          lyhyt: 'Reykjavikin aaltopeltitalot ovat puutaloja, joiden seinät on verhottu '
+            + 'Isosta-Britanniasta tuodulla aaltopellillä.',
+          selite: 'Reykjavikin puutalojen seinät verhottiin Isosta-Britanniasta tuodulla '
+            + 'aaltopellillä, joka kestää hyvin Islannin tuulta ja sadetta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -27458,9 +27355,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/lapland/20261013-uudet-6-8/lapland-6-nakoala-intro-v1.png',
-          lyhyt: 'Ounasvaaran näkötornista näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.',
-          selite: 'Ounasvaaran näkötorni on vaaran länsirinteellä noin 2,2 kilometriä keskustasta '
-            + 'itään, noin 160 metrin korkeudessa merenpinnasta. Tornista näkyvät keskusta ja '
+          lyhyt: 'Ounasvaaralta näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.',
+          selite: 'Ounasvaaran länsirinteellä, noin 2,2 kilometriä keskustasta itään ja noin 160 '
+            + 'metrin korkeudessa merenpinnasta, on näkötorni. Rinteeltä näkyvät keskusta ja '
             + 'Kemijoki, ja joen yli kulkee Jätkänkynttilä-silta.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -27695,7 +27592,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-ensimmainen-juna-rovaniemi-1909',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Ensijuna 1909',
+      otsikko: 'Historian hetki: Rovaniemi 1909',
       johdanto: 'Rautatie Rovaniemelle valmistui 1909 ja toi ensimmäisen '
         + 'höyryveturin markkinakylään, joka oli tähän asti tavoitettu vesitse, '
         + 'reellä ja maanteitse.',
@@ -27713,7 +27610,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+          otsikko: 'Rovaniemi 1909 — ensimmäinen juna saapuu',
           aika: '1909',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-lahi-photo-v4.jpg',
@@ -27739,7 +27636,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennetun ympäristön historia, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+              otsikko: 'Rovaniemi 1909 — ensimmäinen juna saapuu',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ensimmainen-juna-rovaniemi-1909-kauko-photo-v4.jpg',
               lyhyt: 'Höyryjuna saapuu Rovaniemen puuasemalle vuonna 1909.',
               selite: 'Rovaniemen vuoden 1909 rautatieasemalle saapuu höyryjuna; '
@@ -28033,19 +27930,19 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-kreeta-aamu.jpg',
-          lyhyt: 'Arkadin luostarin kirkon fasadi valmistui 1587; 1866 luostari oli Kreetan kapinan näyttämö.',
-          selite: 'Arkadin luostarin kirkon fasadi valmistui 1587 '
-            + 'venetsialaiseen renessanssityyliin. Vuonna 1866 luostari '
-            + 'oli Kreetan kapinan traaginen näyttämö, jonka tarina '
-            + 'tunnettiin kaikkialla Euroopassa.',
+          lyhyt: 'Arkadin luostarin kirkko rakennettiin 1500-luvun lopulla; 1866 luostari oli '
+            + 'Kreetan kapinan näyttämö.',
+          selite: 'Arkadin luostarin kirkko rakennettiin 1500-luvun lopulla venetsialaiseen '
+            + 'renessanssityyliin. Vuonna 1866 luostari oli Kreetan kapinan traaginen näyttämö, '
+            + 'jonka tarina tunnettiin kaikkialla Euroopassa.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-kreeta-keskipaiva.jpg',
-          lyhyt: 'Koulesin linnoitus valmistui Heraklionin satamaan 1540; muurissa on yhä Pyhän Markuksen leijona.',
-          selite: 'Koulesin linnoitus valmistui Heraklionin satamansuulle '
-            + '1540 venetsialaisten Rocca a Marena, ja sen muurissa on '
-            + 'yhä Pyhän Markuksen leijona.',
+          lyhyt: 'Koulesin linnoitus valmistui Heraklionin satamaan 1540; muurissa on yhä Pyhän '
+            + 'Markuksen leijona.',
+          selite: 'Koulesin linnoitus eli venetsialaisittain Rocca al Mare valmistui Heraklionin '
+            + 'satamansuulle 1540, ja sen muurissa on yhä Pyhän Markuksen leijona.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -28333,7 +28230,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Arkadi 1866 — viimeinen ovi',
+          otsikko: 'Arkadi 1866 — luostari räjähtää',
           aika: '9.11.1866',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-arkadin-luostarin-rajahdys-1866-lahi-photo-v4.jpg',
@@ -28360,7 +28257,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Arkadi Monastery, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Arkadi 1866 — viimeinen ovi',
+              otsikko: 'Arkadi 1866 — luostari räjähtää',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-arkadin-luostarin-rajahdys-1866-kauko-photo-v4.jpg',
               lyhyt: 'Arkadin luostari iltahämärässä marraskuun 1866 piirityksen aikana.',
               selite: 'Arkadin luostarin kalkkikivijulkisivu ja lähestyvät '
@@ -28672,10 +28569,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sisilia-ilta.jpg',
-          lyhyt: 'Monrealen katedraali rakennettiin 1170-luvulla normannien, arabien ja bysanttilaisten yhteistyönä.',
-          selite: 'Monrealen katedraali rakennettiin 1170-luvulla '
-            + 'normannien, arabien ja bysanttilaisten käsityönä; '
-            + 'vieressä avautuu ristikäytävän puutarha.',
+          lyhyt: 'Monrealen katedraali rakennettiin 1170- ja 1180-luvuilla normannien, arabien ja '
+            + 'bysanttilaisten yhteistyönä.',
+          selite: 'Monrealen katedraali rakennettiin 1170- ja 1180-luvuilla normannien, arabien ja '
+            + 'bysanttilaisten käsityönä; vieressä avautuu ristikäytävän puutarha.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -28952,7 +28849,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-roger-ii-cefalu-lupaus-1131',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Cefalùn lupaus',
+      otsikko: 'Historian hetki: Cefalù 1131',
       johdanto: 'Tarinan mukaan kuningas Roger II lupasi myrskyssä rakentaa '
         + 'katedraalin sinne, minne pääsisi hengissä rantaan — ja hänen laivansa '
         + 'ajautui Cefalùhun 1131.',
@@ -28970,7 +28867,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+          otsikko: 'Cefalù 1131 — kuningas lupaa katedraalin',
           aika: '1131',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-lahi-photo-v4.jpg',
@@ -28998,7 +28895,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Cathedral of Cefalù, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+              otsikko: 'Cefalù 1131 — kuningas lupaa katedraalin',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-roger-ii-cefalu-lupaus-1131-kauko-photo-v4.jpg',
               lyhyt: 'Pieni normannialus kamppailee aaltoja vastaan La Roccan edustalla.',
               selite: 'Myrskyävä meri ja Cefalùn La Rocca muodostavat näyttämön '
@@ -29351,9 +29248,9 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/alps/20261012-full/alps-5-silsjarvi-chaste-intro-v1.png',
-          lyhyt: 'Chastè-niemi työntyy Sils-järveen Sveitsin Engadinissa.',
-          selite: 'Chastè tarkoittaa retoromaaniksi linnaa, ja niemellä on vanhan linnan '
-            + 'muurien jäänteitä.',
+          lyhyt: 'Chastè-niemi työntyy Silsjärveen Sveitsin Engadinissa.',
+          selite: 'Chastè tarkoittaa retoromaaniksi linnaa, ja niemellä on vanhan linnan muurien '
+            + 'jäänteitä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -29388,9 +29285,8 @@ export const KULTTUURI_KATEGORIAT = {
            */
           ampari: 'saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png',
           lyhyt: 'Silsistä kulkee hevosomnibussi suurelta osin autottomaan Fexin laaksoon.',
-          selite: 'Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen hevosomnibussi. '
-            + 'Laaksossa asuu noin sata ihmistä, ja matka pysäkeille kestää hevosvaunulla noin '
-            + '15-50 minuuttia.',
+          selite: 'Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen '
+            + 'hevosomnibussi, ja matka pysäkeille kestää hevosvaunulla noin 20–50 minuuttia.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -29900,12 +29796,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-dubrovnik-aamu.jpg',
-          lyhyt: 'Lovrijenacin linnake pystytettiin kalliolleen kolmessa kuukaudessa venetsialaisia kilpaillen.',
-          selite: 'Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä '
-            + 'merenpinnan yläpuolella kaupunginmuurin ulkopuolella, ja '
-            + 'Ragusan kronikoiden mukaan se pystytettiin kolmessa '
-            + 'kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle '
-            + 'ensin.',
+          lyhyt: 'Lovrijenacin linnake pystytettiin legendan mukaan kalliolleen kolmessa '
+            + 'kuukaudessa venetsialaisia kilpaillen.',
+          selite: 'Lovrijenacin linnake seisoo omalla kalliollaan 37 metriä merenpinnan '
+            + 'yläpuolella kaupunginmuurin ulkopuolella, ja legendan mukaan se pystytettiin '
+            + 'kolmessa kuukaudessa, jotta venetsialaiset eivät ehtisi paikalle ensin.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -29951,20 +29846,20 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/dubrovnik/20261012-full/dubrovnik-7-gruz-iltavalot-intro-v2.png',
-          lyhyt: 'Dubrovnikin ylimykset rakennuttivat rannikolle yli 200 kesähuvilaa '
-            + '1400–1700-luvuilla.',
-          selite: 'Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan '
-            + 'veneellä. Perheet viettivät niissä kesiä ja hoitivat viljelmiään.',
+          lyhyt: 'Dubrovnikin ylimykset rakennuttivat rannikolle kesähuviloita 1400-luvulta '
+            + 'alkaen.',
+          selite: 'Huvilat olivat usein aivan meren rannalla, ja niihin pääsi suoraan veneellä. '
+            + 'Perheet viettivät niissä kesiä ja hoitivat viljelmiään.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-dubrovnik-ilta.jpg',
-          lyhyt: 'Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, vanhin veistos edessään.',
-          selite: 'Pyhän Blasiuksen kirkko on omistettu kaupungin '
-            + 'suojeluspyhimykselle, ja venetsialainen Marino Gropelli '
-            + 'rakensi nykyisen barokkikirkon 1715 edellisen palettua 1706; '
-            + 'sen edessä seisoo Orlandon pylväs vuodelta 1418, Dubrovnikin '
-            + 'vanhin säilynyt julkinen veistos.',
+          lyhyt: 'Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, ja sen '
+            + 'edessä on yksi kaupungin vanhimmista veistoksista.',
+          selite: 'Pyhän Blasiuksen kirkko on omistettu kaupungin suojeluspyhimykselle, ja '
+            + 'venetsialainen Marino Gropelli rakensi nykyisen barokkikirkon 1715 edellisen '
+            + 'palettua 1706; sen edessä seisoo Orlandon pylväs vuodelta 1418, yksi Dubrovnikin '
+            + 'vanhimmista julkisista veistoksista.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -30454,11 +30349,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-riika-aamu.png',
-          lyhyt: 'Mustapäiden talo pystytettiin 1334, tuhoutui 1941 ja purettiin; nykyinen on jälleenrakennus.',
-          selite: 'Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi '
-            + 'ja juhlapaikaksi, se tuhoutui 29. kesäkuuta 1941 ja purettiin '
-            + '1948, ja nykyinen talo on 1996–1999 tehty jälleenrakennus, '
-            + 'joka avattiin 9. joulukuuta 1999.',
+          lyhyt: 'Mustapäiden talo pystytettiin 1334, tuhoutui 1941 ja purettiin; nykyinen on '
+            + 'jälleenrakennus.',
+          selite: 'Mustapäiden talo pystytettiin 1334 kauppiaiden varastoksi ja juhlapaikaksi, se '
+            + 'tuhoutui 29. kesäkuuta 1941 ja purettiin 1948, ja nykyisen talon jälleenrakennus '
+            + 'alkoi 1996 ja se avattiin 9. joulukuuta 1999.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -30523,10 +30418,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-riika-ilta.png',
-          lyhyt: 'Riian Pyhän Pietarin kirkko mainitaan ensi kerran 1209; sen torni kunnostettiin 1967–1983.',
-          selite: 'Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi '
-            + 'kerran vuonna 1209, sen moneen kertaan uusittu torni '
-            + 'kunnostettiin 1967–1983, ja tornin näköalatasanne on 72 metrin '
+          lyhyt: 'Pyhän Pietarin kirkko mainitaan ensi kerran 1209; nykyinen kirkko on '
+            + '1400-luvulta, ja sen torni tuhoutui 1941.',
+          selite: 'Riian Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran vuonna 1209, ja '
+            + 'nykyinen kirkko on 1400-luvulta. Sen moneen kertaan uusittu torni tuhoutui 1941, ja '
+            + 'entisöinti alkoi 1967 ja jatkui 1980-luvulle; tornin näköalatasanne on 72 metrin '
             + 'korkeudessa.',
           lahde: 'Matkakirjan havainnekuva',
         },
@@ -30538,10 +30434,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '20070630-IMG 1662. Rīgas Doms, panorāma.jpg',
-          lyhyt: 'Pyhän Pietarin kirkko mainitaan ensi kerran 1209 ja säilyi saman vuoden kaupunkipalossa.',
-          selite: 'Pyhän Pietarin kirkko mainitaan asiakirjoissa ensi kerran '
-            + 'vuonna 1209, ja se säilyi saman vuoden kaupunkipalossa '
-            + 'kivirakenteensa ansiosta.',
+          lyhyt: 'Riian tuomiokirkon peruskivi laskettiin 1211 Daugavan rannalle.',
+          selite: 'Riian tuomiokirkon peruskivi laskettiin vuonna 1211 Daugavan rannalle. Samassa '
+            + 'vanhassakaupungissa ovat myös linna ja Pyhän Jaakobin katedraali.',
           lahde: 'Karlis Ustups, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -31017,30 +30912,30 @@ export const KULTTUURI_KATEGORIAT = {
            * Antakalnisin kirkko jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-vilna-gediminas.jpg',
-          lyhyt: 'Gediminaan torni on ainoa jäljellä osa Vilnan ylälinnasta; lippu nousi salkoon ensi kerran 1919.',
-          selite: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan '
-            + 'ylälinnasta, ja nykyinen tiilitorni on 1400-luvun '
-            + 'puolivälistä; sen salkoon nostettiin Liettuan trikolori ensi '
-            + 'kerran 1. tammikuuta 1919 ja uudelleen 7. lokakuuta 1988.',
+          lyhyt: 'Gediminasin torni on ainoa jäljellä osa Vilnan ylälinnasta; lippu nousi salkoon '
+            + 'ensi kerran 1919.',
+          selite: 'Gediminasin torni on ainoa jäljellä oleva osa Vilnan ylälinnasta, ja se on '
+            + '1300–1400-lukujen tiililinnan jäänne, jota on rakennettu osin uudelleen '
+            + '1930-luvulla; sen salkoon nostettiin Liettuan trikolori ensi kerran 1. tammikuuta '
+            + '1919 ja uudelleen 7. lokakuuta 1988.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-vilna-aamu.jpg',
-          lyhyt: 'Vilnan tuomiokirkko sai uusklassisen asunsa 1779–1783; kellotapulin alin kerros on 1200-luvulta.',
-          selite: 'Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa '
-            + 'Laurynas Gucevičiuksen suunnitelmien mukaan vuosina '
-            + '1779–1783, ja sisustus valmistui 1801; erillisen kellotapulin '
-            + 'alin kerros on 1200-luvun puolivälistä, jolloin se oli '
-            + 'Alalinnan puolustustorni.',
+          lyhyt: 'Vilnan tuomiokirkko sai uusklassisen asunsa 1783–1801; kellotapulin alin kerros '
+            + 'on 1200-luvulta.',
+          selite: 'Vilnan tuomiokirkko sai nykyisen uusklassisen asunsa Laurynas Gucevičiuksen '
+            + 'suunnitelmien mukaan vuosina 1783–1801; erillisen kellotapulin alin kerros on '
+            + '1200-luvulta, jolloin se oli Alalinnan puolustustorni.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-vilna-keskipaiva.jpg',
-          lyhyt: 'Aamunkoiton portti rakennettiin 1503–1514 ja jäi ainoana pystyyn muurien purkamisen jälkeen.',
-          selite: 'Aamunkoiton portti rakennettiin 1503–1514 yhdeksi Vilnan '
-            + 'kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin '
-            + '1799–1805, se jäi ainoana pystyyn portin kappelissa palvotun '
-            + 'Neitsyt Marian kuvan takia.',
+          lyhyt: 'Aamunkoiton portti rakennettiin 1500-luvun alussa ja jäi ainoana pystyyn muurien '
+            + 'purkamisen jälkeen.',
+          selite: 'Aamunkoiton portti rakennettiin 1500-luvun alussa yhdeksi Vilnan '
+            + 'kaupunginmuurin yhdeksästä portista, ja kun muurit purettiin 1799–1805, se jäi '
+            + 'ainoana pystyyn portin kappelissa palvotun Neitsyt Marian kuvan takia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -31633,19 +31528,17 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/oslo/20261012-full/oslo-7-akerselva-ilta-intro-v1.png',
-          lyhyt: 'Akerselvan koskia hyödynnettiin 1800-luvulla Oslon tehtaiden '
-            + 'voimanlähteenä.',
-          selite: 'Akerselvassa on noin 20 koskea, ja sen varteen syntyi 1840-luvulta lähtien '
-            + 'tekstiilitehtaita ja konepajoja; monet vanhat rakennukset ovat nykyään '
-            + 'asuntoja ja toimistoja.',
+          lyhyt: 'Akerselvan koskia hyödynnettiin 1800-luvulla Oslon tehtaiden voimanlähteenä.',
+          selite: 'Akerselvassa on noin 20 koskea, ja sen varteen syntyi tehtaita; monet vanhat '
+            + 'rakennukset ovat nykyään asuntoja ja toimistoja.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-oslo-ilta.png',
-          lyhyt: 'Oslon kuninkaanlinna rakennettiin 1824–1849; siinä on 173 huonetta ja ympärillä 22 hehtaarin puisto.',
-          selite: 'Oslon kuninkaanlinna rakennettiin 1824–1849 Hans Linstowin '
-            + 'suunnitelmien mukaan, siinä on 173 huonetta, ja sitä ympäröi '
+          lyhyt: 'Oslon kuninkaanlinna rakennettiin 1825–1848; siinä on 173 huonetta ja ympärillä '
             + '22 hehtaarin puisto.',
+          selite: 'Oslon kuninkaanlinna rakennettiin 1825–1848 Hans Linstowin suunnitelmien '
+            + 'mukaan, siinä on 173 huonetta, ja sitä ympäröi 22 hehtaarin puisto.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -31859,7 +31752,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-nansen-fram-1893',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Fram 1893',
+      otsikko: 'Historian hetki: Nansen 1893',
       johdanto: 'Kristianian rannat olivat mustanaan väkeä 24. kesäkuuta 1893, '
         + 'kun vuonolle liukui pyöreäpohjainen laiva, jonka oli tarkoitus jäätyä '
         + 'kiinni tahallaan.',
@@ -31877,7 +31770,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+          otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
           aika: '24.6.1893',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-lahi-photo-v3.jpg',
@@ -31907,7 +31800,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Expedition (1893–1896)*; tarkistettu 3.9.2026.',
           galleria: [
             {
-              otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+              otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-kauko-photo-v3.jpg',
               lyhyt: 'Omaiset odottavat Framin uutisia lähes kolme vuotta '
                 + 'tietämättä, onnistuuko Nansenin uhkapeli.',
@@ -31919,7 +31812,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Fram Expedition (1893–1896)*; tarkistettu 3.9.2026.',
             },
             {
-              otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+              otsikko: 'Nansen 1893 — Fram lähtee naparetkelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
               lyhyt: 'Eva Nansen jää odottamaan miestä, joka lähtee '
                 + 'tarkoituksella kadota Jäämeren ahtojäihin.',
@@ -32076,9 +31969,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'flickr-27613279050.jpg',
-          lyhyt: 'Ponte Santa Trinita on maailman vanhin ellipsikaarinen silta, rakennettu 1567–1569.',
-          selite: 'Ponte Santa Trinita on maailman vanhin ellipsikaarinen '
-            + 'silta, ja Bartolomeo Ammannati rakensi sen vuosina 1567–1569.',
+          lyhyt: 'Ponte Santa Trinita rakennettiin 1567–1569; vuonna 1944 tuhoutunut silta '
+            + 'rakennettiin uudelleen 1958.',
+          selite: 'Bartolomeo Ammannati rakensi Ponte Santa Trinitan vuosina 1567–1569; silta '
+            + 'tuhoutui 1944 ja rakennettiin uudelleen entiseen muotoonsa 1958.',
           lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
         },
         {
@@ -32104,23 +31998,26 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Arno river sunset, Florence, Italy.jpg',
-          lyhyt: 'Ponte Vecchion paikka on ollut tieverkon solmu siitä asti, kun Via Cassia Nova valmistui.',
-          selite: 'Ponte Vecchion paikka on ollut Firenzen tieverkon solmu '
-            + 'siitä asti, kun roomalainen Florentia yhdistettiin vuonna 123 '
-            + 'valmistuneeseen Via Cassia Novaan.',
+          lyhyt: 'Ponte Vecchion paikka on ollut tieverkon solmu siitä asti, kun Via Cassia Nova '
+            + 'valmistui.',
+          selite: 'Ponte Vecchion paikka on ollut Firenzen tieverkon solmu siitä asti, kun '
+            + 'roomalainen Florentia yhdistettiin noin vuonna 123 valmistuneeseen Via Cassia '
+            + 'Novaan.',
           lahde: 'hozinja, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-27155711546.jpg',
-          lyhyt: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, minkä vuoksi teurastajat karkotettiin.',
-          selite: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, '
-            + 'ja juuri sen takia sillan teurastajat karkotettiin vuonna 1593.',
+          lyhyt: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, minkä vuoksi '
+            + 'teurastajat karkotettiin.',
+          selite: 'Vasarin käytävä kulkee Ponte Vecchion kauppojen katon yli, ja juuri sen takia '
+            + 'sillan teurastajat karkotettiin.',
           lahde: '. Ray in Manila, Flickr (CC BY 2.0)',
         },
         {
           tiedosto: 'flickr-27407894606.jpg',
-          selite: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja '
-            + 'se valmistui vuonna 1436.',
+          lyhyt: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui 1436.',
+          selite: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja se valmistui vuonna '
+            + '1436.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
         },
         {
@@ -32747,12 +32644,11 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 17 (23.8.2026, tools/hero-tyolista-12.mjs). */
         {
           ampari: 'herokoe/hero-kobenhavn-aamu.png',
-          lyhyt: 'Marmorikirkon peruskivi laskettiin 1749, mutta rahat loppuivat, ja se valmistui vasta 1894.',
-          selite: 'Marmorikirkon eli Frederikin kirkon peruskivi laskettiin '
-            + '31. lokakuuta 1749 Nicolai Eigtvedin suunnitelmien mukaan, '
-            + 'mutta rahat loppuivat ja kirkko valmistui vasta 19. elokuuta '
-            + '1894 marmorin sijasta kalkkikivestä — kupolin jänneväli on 31 '
-            + 'metriä.',
+          lyhyt: 'Marmorikirkon peruskivi laskettiin 1749, mutta rahat loppuivat, ja se valmistui '
+            + 'vasta 1894.',
+          selite: 'Marmorikirkon eli Frederikin kirkon peruskivi laskettiin lokakuussa 1749 '
+            + 'Nicolai Eigtvedin suunnitelmien mukaan, mutta rahat loppuivat ja kirkko valmistui '
+            + 'vasta 19. elokuuta 1894 — kupolin jänneväli on 31 metriä.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -32766,11 +32662,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kobenhavn-ilta.png',
-          lyhyt: 'Vapahtajan kirkko vihittiin 1695; kierreportainen huippu valmistui 1752, 400 porrasta 90 metriin.',
-          selite: 'Vapahtajan kirkko vihittiin 1695 ja Lauritz de Thurahin '
-            + 'kierreportainen torninhuippu valmistui 1752 — 90 metrin '
-            + 'korkeuteen nousee 400 porrasta, joista viimeiset 150 kiertävät '
-            + 'tornia ulkopuolelta.',
+          lyhyt: 'Vapahtajan kirkko vihittiin 1696; kierreportainen huippu valmistui 1752, 400 '
+            + 'porrasta 90 metriin.',
+          selite: 'Vapahtajan kirkko vihittiin 1696 ja Lauritz de Thurahin kierreportainen '
+            + 'torninhuippu valmistui 1752 — 90 metrin korkeuteen nousee 400 porrasta, joista '
+            + 'viimeiset 150 kiertävät tornia ulkopuolelta.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -32780,10 +32676,10 @@ export const KULTTUURI_KATEGORIAT = {
            * kahdella Sonnet-vaiheella.
            */
           ampari: 'saapumisintro/copenhagen/20261012-full/copenhagen-4-pyorailyarki-intro-v3.png',
-          lyhyt: 'Kööpenhaminan varhaisimpia pyöräteitä rakennettiin Esplanadenille vuonna '
-            + '1892.',
-          selite: 'Pyöräily yleistyi nopeasti: vuonna 1890 kaupungissa oli kolmisen tuhatta '
-            + 'polkupyörää, mutta vuonna 1907 jo noin 80 000.',
+          lyhyt: 'Pyöräily juurtui Kööpenhaminaan 1800-luvun lopulla: varhaisimpia pyöräteitä '
+            + 'rakennettiin Esplanadenille 1892.',
+          selite: 'Pyöräily yleistyi nopeasti: vuonna 1890 kaupungissa oli noin 2 500 polkupyörää, '
+            + 'mutta vuonna 1907 jo noin 80 000.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -32806,10 +32702,10 @@ export const KULTTUURI_KATEGORIAT = {
            * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
            */
           tiedosto: 'Panoramicas de Copenhague 05.jpg',
-          lyhyt: 'Christiansborgin tornista näkyvät Kööpenhaminan katot, oopperatalo ja kaukana Amager '
-            + 'Bakken piiput.',
-          selite: 'Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni. Kuvan '
-            + 'keskellä kaukana erottuva oopperatalo avattiin 2005.',
+          lyhyt: 'Christiansborgin tornista näkyvät Kööpenhaminan katot ja kaukana Amager Bakken '
+            + 'piiput.',
+          selite: 'Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni; '
+            + 'kaukana siintävät Amager Bakken savupiiput.',
           lahde: 'Alberto-g-rovi, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -32835,9 +32731,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg',
-          lyhyt: 'Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja laajennettiin nykyiseen muotoonsa 1624.',
-          selite: 'Rosenborgin linna rakennettiin 1606 maaseutuhuvilaksi ja '
-            + 'laajennettiin nykyiseen muotoonsa vuoteen 1624 mennessä.',
+          lyhyt: 'Rosenborgin linna rakennettiin maaseutuhuvilaksi vuodesta 1606 alkaen ja '
+            + 'laajennettiin vaiheittain 1630-luvulle asti.',
+          selite: 'Rosenborgin linna rakennettiin maaseutuhuvilaksi vuodesta 1606 alkaen ja '
+            + 'laajennettiin vaiheittain 1630-luvulle asti.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -33397,7 +33294,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-christiansborgin-palo-1884',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Linnanpalo 1884',
+      otsikko: 'Historian hetki: Kööpenhamina 1884',
       johdanto: 'Christiansborgin linna paloi lähes maan tasalle 3. lokakuuta '
         + '1884 — hoviteatteri, ratsastushalli ja linnankirkko selvisivät, ja '
         + 'kolmannen linnan rakentaminen alkoi vasta parinkymmenen vuoden '
@@ -33416,7 +33313,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Christiansborg 1884 — savu valtaosien alla',
+          otsikko: 'Kööpenhamina 1884 — Christiansborg palaa',
           aika: '3.10.1884',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-christiansborgin-palo-1884-lahi-photo-v4.jpg',
@@ -33443,7 +33340,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Christiansborgin historia; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Christiansborg 1884 — savu valtaosien alla',
+              otsikko: 'Kööpenhamina 1884 — Christiansborg palaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-christiansborgin-palo-1884-kauko-photo-v4.jpg',
               lyhyt: 'Kööpenhaminan Christiansborg palaa lokakuussa 1884.',
               selite: 'Kööpenhaminan Christiansborg palaa lokakuussa 1884.',
@@ -34160,7 +34057,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-siegfried-ostaa-bockin-963',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Bockin kauppa 963',
+      otsikko: 'Historian hetki: Luxemburg 963',
       johdanto: 'Koko Luxemburgin kaupunki syntyi kaupasta: kreivi Siegfried '
         + 'hankki jyrkän Bock-kallion vuonna 963 ja rakensi sen päälle linnan, '
         + 'jonka ympärille kaupunki kasvoi.',
@@ -34178,7 +34075,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+          otsikko: 'Luxemburg 963 — kreivi ostaa Bock-kallion',
           aika: '963',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-siegfried-ostaa-bockin-963-lahi-photo-v4.jpg',
@@ -34205,7 +34102,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Office, Bock Promontory, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+              otsikko: 'Luxemburg 963 — kreivi ostaa Bock-kallion',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-siegfried-ostaa-bockin-963-kauko-photo-v4.jpg',
               lyhyt: 'Paljas Bock-kallio kohoaa Alzetten metsäisen jokimutkan yllä.',
               selite: 'Bockin kallioniemi ennen linnan ja kaupungin rakentamista; '
@@ -34623,7 +34520,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
+          otsikko: 'Nikosia 1878 — Britannia ottaa Kyproksen',
           aika: '12.7.1878',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg',
@@ -34647,7 +34544,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
+              otsikko: 'Nikosia 1878 — Britannia ottaa Kyproksen',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-kauko-photo-v4.jpg',
               lyhyt: 'Nikosian vanhan kaupungin ympäristö Britannian hallinnon '
                 + 'alkaessa; tarkka lipunnostopaikka on epävarma.',
@@ -38332,7 +38229,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-tutankhamon-carter-1922',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Luxor 1922',
+      otsikko: 'Historian hetki: Tutankhamon 1922',
       johdanto: 'Marraskuussa 1922 Howard Carter työnsi kynttilän reiästä oveen, '
         + 'joka oli ollut muurattuna yli kolme tuhatta vuotta — ja Kuninkaiden '
         + 'laaksosta löytyi ainoa lähes koskematon faaraonhauta.',
@@ -38350,7 +38247,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
+          otsikko: 'Tutankhamon 1922 — hauta löytyy',
           aika: '26.11.1922',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
@@ -38383,7 +38280,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
+              otsikko: 'Tutankhamon 1922 — hauta löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
               lyhyt: 'Lady Evelyn Herbert seuraa jännittyneenä, kun yli '
                 + 'kolmentuhannen vuoden hiljaisuus rikkoutuu.',
@@ -38395,7 +38292,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
             },
             {
-              otsikko: 'Kuninkaiden laakso 1922 — ”Näen ihmeellisiä asioita”',
+              otsikko: 'Tutankhamon 1922 — hauta löytyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
               lyhyt: 'Brittilehti kuvittaa Carterin löydön piirroksin, ennen kuin '
                 + 'varsinaiset valokuvat leviävät.',
@@ -64488,7 +64385,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+          otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
           aika: '24.5.1883',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg',
@@ -64522,7 +64419,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarkistettu 5.9.2026.',
           galleria: [
             {
-              otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+              otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
               lyhyt: 'Washington Roebling seuraa sillan avajaisia kotoaan, '
                 + 'sivussa juhlivasta väkijoukosta.',
@@ -64536,7 +64433,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Bridge, tarkistettu 5.9.2026.',
             },
             {
-              otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+              otsikko: 'Brooklyn 1883 — Brooklynin silta avataan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
               lyhyt: 'Brooklyn Daily Eagle juhlii siltaa erikoisnumerossa, mutta '
                 + 'Emily Roeblingin työ jää rivien väliin.',
@@ -67971,12 +67868,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sevilla-keskipaiva.png',
-          lyhyt: 'Sevillan Plaza de España rakennettiin 1928 seuraavan vuoden näyttelyä varten.',
-          selite: 'Sevillan Plaza de España rakennettiin 1928 Aníbal '
-            + 'Gonzálezin suunnitelmien mukaan seuraavan vuoden '
-            + 'Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 '
-            + 'neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat '
-            + 'Espanjan vanhoja kuningaskuntia.',
+          lyhyt: 'Sevillan Plaza de España rakennettiin 1914–1928 vuoden 1929 näyttelyä varten.',
+          selite: 'Sevillan Plaza de España rakennettiin 1914–1928 Aníbal Gonzálezin suunnitelmien '
+            + 'mukaan vuoden 1929 Ibero-amerikkalaista näyttelyä varten, aukio on 45 932 '
+            + 'neliömetriä, ja kanavan ylittävät neljä siltaa kuvaavat Espanjan vanhoja '
+            + 'kuningaskuntia.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -68055,10 +67951,10 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sevilla - March 2011 - 063.jpg',
-          lyhyt: 'Sevilla on rakennettu Guadalquivirin laaksoon lähes merenpinnan tasalle.',
-          selite: 'Sevilla on rakennettu Guadalquivirin laaksoon '
-            + 'keskimäärin seitsemän metriä merenpinnan yläpuolelle, ja '
-            + 'kunnan pinta-ala on 141 neliökilometriä.',
+          lyhyt: 'Real Maestranzan härkätaisteluareenan rakentaminen alkoi Sevillassa 1700-luvun '
+            + 'puolivälissä, ja kehä suljettiin kokonaan 1881.',
+          selite: 'Real Maestranzan härkätaisteluareenan rakentaminen alkoi Sevillassa 1700-luvun '
+            + 'puolivälissä, ja kehä suljettiin kokonaan 1881.',
           lahde: 'Michiel1972, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -70842,6 +70738,64 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      avauskuvat: [
+        {
+          /*
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png',
+          lyhyt: 'Upper Barrakka Gardensin terassilta avautuu näkymä Grand Harbouriin ja Kolmeen '
+            + 'kaupunkiin.',
+          selite: 'Puutarha perustettiin 1661 Italian kielikunnan ritarien yksityiseksi puutarhaksi. '
+            + 'Kolme kaupunkia ovat Grand Harbourin vastarannalla sijaitsevat Birgu, Senglea ja '
+            + 'Cospicua.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png',
+          lyhyt: 'Sliemen rannalta näkee Vallettan siluetin: Karmeliittakirkon kupolin ja '
+            + 'kaupunginmuurit.',
+          selite: 'Karmeliittakirkon soikea kupoli on 42 metriä korkea, ja sen vieressä kohoaa '
+            + 'anglikaanisen pro-katedraalin torni; ne erottuvat Vallettan siluetista Marsamxettin '
+            + 'sataman puolella. Nykyinen Karmeliittakirkko rakennettiin 1958-1981 sodassa '
+            + 'vaurioituneen tilalle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png',
+          lyhyt: 'Valletta perustettiin 1566 Suuren piirityksen jälkeen ja nimettiin suurmestari Jean '
+            + 'de Valetten mukaan.',
+          selite: 'Ritarikunta asettui Birguun 1530, ja Valletta rakennettiin Grand Harbourin '
+            + 'vastarannalle Birgua vastapäätä. Unesco merkitsi Vallettan maailmanperintökohteeksi '
+            + '1980.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Dgħajsa-vene on kuljettanut matkustajia Maltan satamissa 1600-luvulta lähtien.',
+          selite: 'Dgħajsa tal-pass on perinteinen maltalainen satamavene, joka kehittyi 1600-luvun '
+            + 'alussa kuljettamaan matkustajia Grand Harbourin yli. Nykyään harvat jäljellä olevat '
+            + 'veneet kuljettavat enimmäkseen matkailijoita.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
@@ -70951,7 +70905,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-suuri-piiritys-paattyy-1565',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Apu saapuu 1565',
+      otsikko: 'Historian hetki: Malta 1565',
       johdanto: 'Neljä kuukautta kestänyt piiritys päättyi, kun sisilialainen '
         + 'apulaivasto laski maihin Mellieħan lahdessa syyskuun alussa 1565 — '
         + 'osmaanit purjehtivat pois muutamassa päivässä.',
@@ -70969,7 +70923,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Valletta 1565 — purjeet horisontissa',
+          otsikko: 'Malta 1565 — Suuri piiritys päättyy',
           aika: '7.9.1565',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suuri-piiritys-paattyy-1565-lahi-photo-v4.jpg',
@@ -70999,7 +70953,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Siege / Victory Day, tarkistettu 27.9.2026.',
           galleria: [
             {
-              otsikko: 'Valletta 1565 — purjeet horisontissa',
+              otsikko: 'Malta 1565 — Suuri piiritys päättyy',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suuri-piiritys-paattyy-1565-kauko-photo-v4.jpg',
               lyhyt: 'Sisiliasta tullut apulaivasto tuo väkeä maihin Maltan rannikolla.',
               selite: 'Mellieħan lahdella apulaivaston veneet kuljettavat '
@@ -71026,7 +70980,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'hetki-pyhan-elmon-linnake-1565',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Fort St Elmo 1565',
+      otsikko: 'Historian hetki: Pyhä Elmo 1565',
       johdanto: 'Pyhän Elmon linnake kaatui 23. kesäkuuta 1565 lähes 28 päivän '
         + 'puolustuksen jälkeen — tappio, joka silti kulutti osmanijoukkoja niin '
         + 'paljon, että koko piiritys epäonnistui.',
@@ -71045,7 +70999,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Pyhä Elmo 1565 — viimeinen aamu muurilla',
+          otsikko: 'Pyhä Elmo 1565 — linnake kaatuu piirityksessä',
           aika: '23.6.1565',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pyhan-elmon-linnake-1565-lahi-photo-v4.jpg',
@@ -71071,7 +71025,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Malta, Fort St Elmo; tarkistettu 28.9.2026.',
           galleria: [
             {
-              otsikko: 'Pyhä Elmo 1565 — viimeinen aamu muurilla',
+              otsikko: 'Pyhä Elmo 1565 — linnake kaatuu piirityksessä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pyhan-elmon-linnake-1565-kauko-photo-v4.jpg',
               lyhyt: 'Pyhän Elmon linnake Maltan suuren piirityksen aikana.',
               selite: 'Pyhän Elmon linnake Maltan suuren piirityksen aikana.',
@@ -71242,10 +71196,11 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bergen-ilta.png',
-          lyhyt: 'Bergenin Grieghallen vihittiin 1978; sen pääsalissa on 1 500 paikkaa ja se on filharmonikkojen koti.',
-          selite: 'Bergenin Grieghallen vihittiin 23. toukokuuta 1978 '
-            + 'tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa '
-            + 'on 1 500 paikkaa, ja talo on Bergenin filharmonikkojen koti.',
+          lyhyt: 'Bergenin Grieghallen vihittiin 1978; sen pääsalissa on yli 1 600 paikkaa ja se '
+            + 'on filharmonikkojen koti.',
+          selite: 'Bergenin Grieghallen vihittiin toukokuussa 1978 tanskalaisen Knud Munkin '
+            + 'suunnitelmien mukaan, sen pääsalissa on yli 1 600 paikkaa, ja talo on Bergenin '
+            + 'filharmonikkojen koti.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -71287,21 +71242,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
-           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
-           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png',
-          lyhyt: 'Sliemen rannalta näkee Vallettan siluetin: Karmeliittakirkon kupolin ja '
-            + 'kaupunginmuurit.',
-          selite: 'Karmeliittakirkon soikea kupoli on 42 metriä korkea, ja sen vieressä kohoaa '
-            + 'anglikaanisen pro-katedraalin torni; ne erottuvat Vallettan siluetista Marsamxettin '
-            + 'sataman puolella. Nykyinen Karmeliittakirkko rakennettiin 1958-1981 sodassa '
-            + 'vaurioituneen tilalle.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -71321,8 +71261,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Bergen Bryggen 1017.jpg',
-          selite: 'Bryggen on Vågenin itärannan vanha laituri, jonka '
-            + 'ympärillä hansakauppa Bergenissä käytiin.',
+          lyhyt: 'Bryggen on Vågenin itärannan vanha hansakaupan satamakortteli.',
+          selite: 'Bryggen on Vågenin itärannan vanha hansakaupan satamakortteli Bergenissä.',
           lahde: 'Anna Anichkova, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -71332,47 +71272,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puutalokaupunginosista, ja se nousee rannasta suoraan '
             + 'vuoren rinteeseen.',
           lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png',
-          lyhyt: 'Upper Barrakka Gardensin terassilta avautuu näkymä Grand Harbouriin ja Kolmeen '
-            + 'kaupunkiin.',
-          selite: 'Puutarha perustettiin 1661 Italian kielikunnan ritarien yksityiseksi puutarhaksi. '
-            + 'Kolme kaupunkia ovat Grand Harbourin vastarannalla sijaitsevat Birgu, Senglea ja '
-            + 'Cospicua.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png',
-          lyhyt: 'Valletta perustettiin 1566 Suuren piirityksen jälkeen ja nimettiin suurmestari Jean '
-            + 'de Valetten mukaan.',
-          selite: 'Ritarikunta asettui Birguun 1530, ja Valletta rakennettiin Grand Harbourin '
-            + 'vastarannalle Birgua vastapäätä. Unesco merkitsi Vallettan maailmanperintökohteeksi '
-            + '1980.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
-           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Dgħajsa-vene on kuljettanut matkustajia Maltan satamissa 1600-luvulta lähtien.',
-          selite: 'Dgħajsa tal-pass on perinteinen maltalainen satamavene, joka kehittyi 1600-luvun '
-            + 'alussa kuljettamaan matkustajia Grand Harbourin yli. Nykyään harvat jäljellä olevat '
-            + 'veneet kuljettavat enimmäkseen matkailijoita.',
-          lahde: 'Matkakirjan havainnekuva',
         },
         {
           /*
@@ -78653,7 +78552,7 @@ export const KULTTUURI_KATEGORIAT = {
       },
       nostot: [
         {
-          otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
+          otsikko: 'Machu Picchu 1911 — Bingham löytää rauniot',
           aika: '24.7.1911',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg',
@@ -78685,7 +78584,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Picchu and Hiram Bingham; tarkistettu 4.9.2026.',
           galleria: [
             {
-              otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
+              otsikko: 'Machu Picchu 1911 — Bingham löytää rauniot',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg',
               lyhyt: 'Paikallisille perheille Machu Picchun kiviseinät ovat '
                 + 'arkea, jonka ulkopuolinen kutsuu löydöksi.',
@@ -88873,7 +88772,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja järjesti suunnittelukilpailun, jonka voitti lissabonilainen '
             + 'toimisto. Työt alkoivat 1884 italialaisen Celestial '
             + 'Sacardimin johdolla ja etenivät pysähdyksin 1885–1892. '
-            + 'Kattotiilet tuotiin Alsacesta, teräsrakenteet Glasgow\'sta '
+            + 'Kattotiilet tuotiin Elsassista, teräsrakenteet Glasgow\'sta '
             + 'ja Carrara-marmori Italiasta; kupolissa on 36 000 kaakelia '
             + 'Brasilian lipun väreissä ja salissa 198 kruunua. Talo '
             + 'vihittiin 31. joulukuuta 1896. Heinäkuussa 2026 se liitettiin '

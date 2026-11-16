@@ -3,8 +3,9 @@
 työnsä rajalla."). Asennus: bash tools/hooks/asenna-kontekstivahti-hook.sh (omistaja ajaa itse; käyttäjätaso
 ~/.claude/settings.json, joten koskee myös roolien worktreitä).
 
-Rooli päätellään session kansiosta (cwd), rajat Raamattu 7.37 NOLLAUSRAJAT ROOLEITTAIN (pehmeä–kova):
-Postivahti 20–30; Laitetestaaja ja Äänittäjä 30–40; muut roolit 25–35. Päätoimittajan ja Keskustelukanavan
+Rooli päätellään session kansiosta (cwd), rajat kortti nollaus-ja-luovutus 1 (pehmeä–kova): Postivahti 20–30;
+muut aloituksen lukema +15 / +25 (Matkakirja-posti/aloituslukemat.json, KK 14.11. 16.15); lukema puuttuu →
+Laitetestaaja ja Äänittäjä 30–40, muut 25–35. Päätoimittajan ja Keskustelukanavan
 yhteinen kansio Matkakirja-fable ohitetaan: sillä on oma vahti (pt-taulu-muistutus.py). Koskee vain kansioita
 /Users/Shared/Claude/Matkakirja-* ja /Users/Shared/Claude/wt/* (ei omistajan muita projekteja).
 Mittaus enintään kerran 2 minuutissa ja muistutus enintään kerran 10 minuutissa per laji ja sessio
@@ -22,12 +23,41 @@ MITTAUSVALI = 120
 VALI = 600
 IKKUNA = 1_000_000  # get_usage: contextWindow 1000000
 LOPPU_TAVUT = 3_000_000
+ALOITUSLUKEMAT = "/Users/Shared/Claude/Matkakirja-posti/aloituslukemat.json"  # Postivahti mittaa nollauksen jälkeen
+# Kansion (tai työpuun) nimen alku → avain aloituslukemat.json:ssa (osoitekirja.md)
+ROOLIAVAIMET = (
+    ("matkakirja-3d-selvittaja", "NS"), ("ns-", "NS"),
+    ("matkakirja-natiivi-ui", "NUI"), ("nui-", "NUI"),
+    ("matkakirja-pelikoodari", "PK"), ("pk-", "PK"),
+    ("matkakirja-karttaseppa", "KS"), ("ks-", "KS"),
+    ("matkakirja-linnanrakentaja", "LAV"), ("lav-", "LAV"),
+    ("matkakirja-sisaltokirjuri", "SK"),
+    ("matkakirja-julkaisija", "JU"),
+    ("proto-kk-nayttamo", "Näyttämöseppä"),
+)
+
+
+def aloituslukema(cwd):
+    """Roolin aloituksen lukema (%) Postivahdin tiedostosta, tai None. Avain kansion nimestä (ROOLIAVAIMET)."""
+    nimi = os.path.basename(cwd.rstrip("/")).lower()
+    avain = next((a for alku, a in ROOLIAVAIMET if nimi.startswith(alku)), None)
+    if not avain:
+        return None
+    try:
+        with open(ALOITUSLUKEMAT, encoding="utf-8") as f:
+            luku = (json.load(f).get(avain) or {}).get("luku")
+        return int(luku) if luku is not None else None
+    except (OSError, ValueError, TypeError, AttributeError):
+        return None
 
 
 def rajat(cwd):
     nimi = os.path.basename(cwd.rstrip("/")).lower()
     if "posti" in nimi:
         return "Postivahti", 20, 30
+    luku = aloituslukema(cwd)
+    if luku is not None:  # kortti nollaus-ja-luovutus 1 (KK 14.11. 16.15): aloituksen lukema +15 / +25
+        return f"rooli, aloitus {luku} %", luku + 15, luku + 25
     if "laitetestaaja" in nimi:
         return "Laitetestaaja", 30, 40
     if "aanittaja" in nimi:

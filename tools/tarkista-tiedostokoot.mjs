@@ -1,20 +1,25 @@
 // Tiedostokokojen vahti (omistajan päätös 20.10.2026 15.23 "Sääntö ja vahti", Raamattu 7.22): luovutus-, aloitus- ja
 // tilatiedostoissa vain voimassa oleva tila. Mittaa kunkin roolin uusimman aloitus-, luovutus- ja tilatiedoston sekä
-// muistin MEMORY.md:n. Rajat: aloitus/luovutus/tila 15 kt, MEMORY.md 10 kt, sen rivi enintään 160 merkkiä ja rivin kuvausosa
-// (" — " jälkeen) enintään 80 merkkiä (KK:n tarkennus 15.25). 1 kt = 1024 tavua.
+// muistin MEMORY.md:n. Rajat (kortti nollaus-ja-luovutus 7–9, KK 12.11.2026): luovutus ja tila 8 kt, aloitus 15 kt,
+// MEMORY.md 3 kt, sen rivi enintään 160 merkkiä ja rivin kuvausosa (" — " jälkeen) enintään 80 merkkiä. 1 kt = 1024 tavua.
+// Luovutukset: yhteinen kansio /Users/Shared/Claude/luovutukset/<rooli>-<pvm>-<klo>.md (KK 11.40) ja vanhat docs/raportit/.
 // Tuloste: yksi rivi per ylitys "YLITYS|rooli|tiedosto|koko", tai "OK". Poistumiskoodi 1, jos ylityksiä on.
 // Ajo: tools/tarkista-tiedostokoot.sh (Postivahdin kierros, tarkista-tyotilat.sh:n rinnalla).
-// Polut: TIEDOSTOKOOT_REPO (oletus tämän skriptin repo) ja TIEDOSTOKOOT_MUISTI (oletus Fablen checkoutin muistikansio).
+// Polut: TIEDOSTOKOOT_REPO (oletus tämän skriptin repo), TIEDOSTOKOOT_MUISTI (oletus Fablen checkoutin muistikansio) ja
+// TIEDOSTOKOOT_LUOVUTUKSET (oletus /Users/Shared/Claude/luovutukset).
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const RAJA_TIEDOSTO = 15 * 1024;
-export const RAJA_MUISTI = 10 * 1024;
+export const RAJA_ALOITUS = 15 * 1024;
+export const RAJA_LUOVUTUS = 8 * 1024;
+export const RAJA_TIEDOSTO = RAJA_ALOITUS; // vanha nimi
+export const RAJA_MUISTI = 3 * 1024;
 export const RAJA_RIVI = 160;
 export const RAJA_KUVAUS = 80;
 
 const OLETUSMUISTI = '/Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory';
+const OLETUSLUOVUTUKSET = '/Users/Shared/Claude/luovutukset';
 
 function lista(kansio) {
   try { return readdirSync(kansio); } catch { return []; }
@@ -54,7 +59,7 @@ export function tilalinkit(muistiTeksti) {
 
 const kt = (t) => `${(t / 1024).toFixed(1).replace('.', ',')} kt`;
 
-export function tarkista({ repo, muisti }) {
+export function tarkista({ repo, muisti, luovutukset }) {
   const ylitykset = [];
   const mittaa = (rooli, polku, nayta, raja) => {
     if (!existsSync(polku)) return;
@@ -64,21 +69,24 @@ export function tarkista({ repo, muisti }) {
 
   const aloitusKansio = join(repo, 'docs/aloitusviestit');
   for (const n of lista(aloitusKansio).filter((n) => n.endsWith('.md')).sort())
-    mittaa(basename(n, '.md'), join(aloitusKansio, n), `docs/aloitusviestit/${n}`, RAJA_TIEDOSTO);
+    mittaa(basename(n, '.md'), join(aloitusKansio, n), `docs/aloitusviestit/${n}`, RAJA_ALOITUS);
 
   const raportit = join(repo, 'docs/raportit');
   const nimet = lista(raportit);
   for (const [rooli, n] of [...uusimmat(nimet, /^viesti-(.+?)-aloitus(?:-(.*))?\.md$/)].sort())
-    mittaa(rooli, join(raportit, n), `docs/raportit/${n}`, RAJA_TIEDOSTO);
+    mittaa(rooli, join(raportit, n), `docs/raportit/${n}`, RAJA_ALOITUS);
   for (const [rooli, n] of [...uusimmat(nimet, /^viesti-(.+?)-luovutus-(.*)\.md$/)].sort())
-    mittaa(rooli, join(raportit, n), `docs/raportit/${n}`, RAJA_TIEDOSTO);
+    mittaa(rooli, join(raportit, n), `docs/raportit/${n}`, RAJA_LUOVUTUS);
+  if (luovutukset)
+    for (const [rooli, n] of [...uusimmat(lista(luovutukset), /^(.+?)-(\d{8}.*)\.md$/)].sort())
+      mittaa(rooli, join(luovutukset, n), `luovutukset/${n}`, RAJA_LUOVUTUS);
 
   const muistiPolku = join(muisti, 'MEMORY.md');
   if (existsSync(muistiPolku)) {
     const teksti = readFileSync(muistiPolku, 'utf8');
     for (const n of [...new Set(tilalinkit(teksti))]) {
       const rooli = /^(.+?)-tila-/.exec(basename(n))?.[1] ?? basename(n, '.md');
-      mittaa(rooli, join(muisti, n), `muisti/${n}`, RAJA_TIEDOSTO);
+      mittaa(rooli, join(muisti, n), `muisti/${n}`, RAJA_LUOVUTUS);
     }
     mittaa('muisti', muistiPolku, 'muisti/MEMORY.md', RAJA_MUISTI);
     teksti.split('\n').forEach((rivi, i) => {
@@ -95,7 +103,8 @@ export function tarkista({ repo, muisti }) {
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const repo = process.env.TIEDOSTOKOOT_REPO || join(dirname(fileURLToPath(import.meta.url)), '..');
   const muisti = process.env.TIEDOSTOKOOT_MUISTI || OLETUSMUISTI;
-  const y = tarkista({ repo, muisti });
+  const luovutukset = process.env.TIEDOSTOKOOT_LUOVUTUKSET || OLETUSLUOVUTUKSET;
+  const y = tarkista({ repo, muisti, luovutukset });
   console.log(y.length ? y.join('\n') : 'OK');
   process.exit(y.length ? 1 : 0);
 }

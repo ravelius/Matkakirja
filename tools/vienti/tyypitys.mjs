@@ -54,11 +54,14 @@ export function tyypitaLoput(kokoelmat) {
     const k = d.kysymys;
     Object.assign(a, poimi(d, [['nimi'], ['otsikko'], ['henkilo'], ['saapuminen'], ['kohtaaminen'], ['aarre'],
       ['tunneKohtaaminen'], ['tunneAarre'], ['mykistetyt']]), {
-      kysymys: k ? { kysymys: nollaksi(k.q), vaihtoehdot: nollaksi(k.vaihtoehdot), oikea: nollaksi(k.oikea), fakta: nollaksi(k.fakta) } : null,
+      // lahde ja vihje (SK 12.11.2026, PR 6663): natiivin vihjekortti ennen kohtaamista (KaariKysymys.Lahde/Vihje; KK 13.11. 00.10).
+      kysymys: k ? { kysymys: nollaksi(k.q), vaihtoehdot: nollaksi(k.vaihtoehdot), oikea: nollaksi(k.oikea), fakta: nollaksi(k.fakta),
+        lahde: nollaksi(k.lahde), vihje: nollaksi(k.vihje) } : null,
     });
   }
   kokoelmat.tarinakaari.kuvaus += ' Skeema 1.26: päätasolla nimi, otsikko, henkilo, saapuminen, kohtaaminen, aarre, '
-    + 'tunneKohtaaminen, tunneAarre { tunne, voimakkuus }, mykistetyt ja kysymys { kysymys, vaihtoehdot, oikea, fakta } | null.';
+    + 'tunneKohtaaminen, tunneAarre { tunne, voimakkuus }, mykistetyt ja kysymys { kysymys, vaihtoehdot, oikea, fakta, '
+    + 'lahde (vihjeen tarinapaikan nosto-tunnus) | null, vihje (aarretehtävän vihje ennen vastaamista) | null } | null.';
 
   for (const a of kokoelmat.paikkatiedot.alkiot) {
     const d = typeof a.data === 'string' ? { text: a.data } : (a.data ?? {});

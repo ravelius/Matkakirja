@@ -147,3 +147,20 @@ jobs:
         run: node tools/tarkista-savukkeet.mjs
       - name: Yhden tiedoston versio kokoontuu
         run: node tools/build-standalone.mjs
+      # Äänitysjono (KK 12.11.2026 10.03): muuttunut luettava teksti ilman valmista
+      # luentaa ja ilman jonoriviä (data/aanitysjono.tsv) näkyy HYLÄTTYNÄ jo PR:ssä eikä
+      # vasta junan vaiheessa 5. Korjaus samaan committiin:
+      #   node tools/aanitysjono/tarkista.mjs --lisaa
+      # Paluu 2 (VIKA: vienti tai manifesti ei latautunut verkosta) on vain varoitus,
+      # koska se ei kerro PR:n omasta muutoksesta; junan vaihe 5 pysäyttää silloin.
+      - name: Äänitysjono
+        run: |
+          set +e
+          node tools/aanitysjono/tarkista.mjs
+          r=$?
+          set -e
+          if [ "$r" -eq 2 ]; then
+            echo "::warning::Äänitysjono: vienti tai manifesti ei latautunut (VIKA), ei estä PR:ää"
+            exit 0
+          fi
+          exit "$r"

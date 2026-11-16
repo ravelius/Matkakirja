@@ -3444,7 +3444,7 @@ export function luoLaattakerros({
          * tausta ei ole tasainen vaan Alppien vaaleanvihreää ja ruskeaa
          * rinnettä, joka vaihtelee kirjaimen sisällä, ja teksti hukkuu
          * siihen. Mitattu 18.9.2026 (Chromium 390 × 844, Alpit,
-         * "Bern 1905"): maasto (182, 195, 117), teksti (82, 71, 54).
+         * "Einstein 1905"): maasto (182, 195, 117), teksti (82, 71, 54).
          *
          * HALO EIKÄ VÄRINVAIHTO. Nimiö on laatan pikseleissä eikä
          * elementtinä, joten sen väriin ei pääse käsiksi ilman uutta

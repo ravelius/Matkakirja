@@ -355,7 +355,7 @@ Kertojan äänet museon kohteille. Putki, mallit ja lupa: `kertojan-teksti-ja-aa
   muuten lukijan ranskaan).
 - **Merkkimäärä** lasketaan puhutusta tekstistä (luvut sanoiksi); vieraiden nimien ääntämysvihjeet etukäteen (esim. `orsay-rf-2027b`).
 - **Portti ja vienti:** `aaniportti.py`, `vie-paketti.sh`, `LAHTEET.md`, SHA256SUMS, ajat- ja manifestirivit; vanha luenta `mykistetyt`-kenttään,
-  kunnes uusi on kytketty. Uusintaotto vain uudella luvalla ja uudelle polulle.
+  kunnes uusi on kytketty. Uusintaotto luvalla (alle 3 %: KK, 5.1) ja uudelle polulle.
 - **Askeläänet lattioille** tehdään yhdessä Linssisepän kanssa Raamattu 5.27 -tavalla (Soundly / Sonniss ensin, sokkokuvaus); lattia ja kenkä
   sovitaan ennen hakua, koska väärä ääni (puuaskel = korkokengät) huomataan vasta pelissä.
 

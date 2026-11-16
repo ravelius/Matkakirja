@@ -840,7 +840,7 @@
    },
    "koko": 0.656
   },
-  "Metron sisäänkäynti": {
+  "Metro 1900": {
    "lahde": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp",
    "kuva": "assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2-kk.webp",
    "sha": "f3622b5847ae1889",
@@ -15036,7 +15036,7 @@
    },
    "koko": 0.65
   },
-  "Banja Bashin moskeija": {
+  "Banja Bašin moskeija": {
    "lahde": "sofia-banja-bashin-moskeija",
    "kuva": "assets/kartat/miniatyyrit/sofia-banja-bashin-moskeija-kk.webp",
    "sha": "c239cc847fb3ad86",

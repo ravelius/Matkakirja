@@ -1,0 +1,307 @@
+================ KOHTA 1 (hetki:marie-curie-hangaari-1898) ================
+
+### 1.1
+KYSYMYS: Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia
+Tietoruudun teksti: Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin kanssa, e…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia, Pariisi, Ranska, 1898] Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja vuonna 1911 saa kemian palkinnon yksin.
+
+### 1.2
+KYSYMYS: Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia
+Tietoruudun teksti: Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin kanssa, e…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia, Pariisi, Ranska, 1898] Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja vuonna 1911 saa kemian palkinnon yksin.
+
+================ KOHTA 2 (hetki:lavoisier-laboratorio-1780) ================
+
+### 2.1
+KYSYMYS: Miksi vaaka oli Lavoisierin laboratorion tärkein esine?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Arsenaali 1780 — mitään ei katoa, kaikki punnitaan
+Tietoruudun teksti: Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu Marie-Anne Paulze Lavoisier, joka naitettiin hänelle kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista Mar…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Arsenaali 1780 — mitään ei katoa, kaikki punnitaan, Arsenaali, Pariisi, noin 1780] Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu Marie-Anne Paulze Lavoisier, joka naitettiin hänelle kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.
+
+### 2.2
+KYSYMYS: Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Arsenaali 1780 — mitään ei katoa, kaikki punnitaan
+Tietoruudun teksti: Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu Marie-Anne Paulze Lavoisier, joka naitettiin hänelle kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista Mar…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Arsenaali 1780 — mitään ei katoa, kaikki punnitaan, Arsenaali, Pariisi, noin 1780] Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu Marie-Anne Paulze Lavoisier, joka naitettiin hänelle kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.
+
+================ KOHTA 3 (hetki:faraday-luento-1831) ================
+
+### 3.1
+KYSYMYS: Mitä Faradaylle tapahtui ensimmäisen sähkömoottorin keksimisen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Royal Institution 1831 — muutos synnyttää sähköä
+Tietoruudun teksti: Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt pariston toiseen käämiin ja odottaa, että toisessa käämissä, rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei synny. Galvanometrin neula värähtää vain sillä hetkellä, kun virta kytketään, ja uudelleen kun se katkaistaan; siinä välissä se lepää nollassa. Royal Institutionin kellarilaboratoriossa on 29. elokuuta 1831, ja 39-vuotias entinen kirjansitojan oppipoika on juuri nähnyt, että muutos — ei magneetti sinänsä — synnyttää sähköä. Kymmenen vuotta aiemmin hän oli pannut virtajohtimen kiertämään magneettia, ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli syytetty tulosten varastamisesta ja työnnetty kemian töihin. Nyt hän toistaa kokeen viikkoja: magneettitanko työnnetään kelaan, neula heilahtaa; vedetään ulos, neula heilahtaa toiseen suuntaan. Lokakuussa hän pyörittää kuparikiekkoa magneetin napojen väli…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Royal Institution 1831 — muutos synnyttää sähköä, Royal Institution, Lontoo, 29.8.1831] Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt pariston toiseen käämiin ja odottaa, että toisessa käämissä, rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei synny. Galvanometrin neula värähtää vain sillä hetkellä, kun virta kytketään, ja uudelleen kun se katkaistaan; siinä välissä se lepää nollassa. Royal Institutionin kellarilaboratoriossa on 29. elokuuta 1831, ja 39-vuotias entinen kirjansitojan oppipoika on juuri nähnyt, että muutos — ei magneetti sinänsä — synnyttää sähköä. Kymmenen vuotta aiemmin hän oli pannut virtajohtimen kiertämään magneettia, ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli syytetty tulosten varastamisesta ja työnnetty kemian töihin. Nyt hän toistaa kokeen viikkoja: magneettitanko työnnetään kelaan, neula heilahtaa; vedetään ulos, neula heilahtaa toiseen suuntaan. Lokakuussa hän pyörittää kuparikiekkoa magneetin napojen välissä ja saa tasaista virtaa, ensimmäisen generaattorin. Faraday ei osaa matematiikkaa juuri lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell yhtälöiksi vasta 1860-luvulla.
+
+### 3.2
+KYSYMYS: Miksi Faradayn kenttäviivat muuttuivat yhtälöiksi vasta 1860-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Royal Institution 1831 — muutos synnyttää sähköä
+Tietoruudun teksti: Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt pariston toiseen käämiin ja odottaa, että toisessa käämissä, rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei synny. Galvanometrin neula värähtää vain sillä hetkellä, kun virta kytketään, ja uudelleen kun se katkaistaan; siinä välissä se lepää nollassa. Royal Institutionin kellarilaboratoriossa on 29. elokuuta 1831, ja 39-vuotias entinen kirjansitojan oppipoika on juuri nähnyt, että muutos — ei magneetti sinänsä — synnyttää sähköä. Kymmenen vuotta aiemmin hän oli pannut virtajohtimen kiertämään magneettia, ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli syytetty tulosten varastamisesta ja työnnetty kemian töihin. Nyt hän toistaa kokeen viikkoja: magneettitanko työnnetään kelaan, neula heilahtaa; vedetään ulos, neula heilahtaa toiseen suuntaan. Lokakuussa hän pyörittää kuparikiekkoa magneetin napojen väli…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Royal Institution 1831 — muutos synnyttää sähköä, Royal Institution, Lontoo, 29.8.1831] Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt pariston toiseen käämiin ja odottaa, että toisessa käämissä, rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei synny. Galvanometrin neula värähtää vain sillä hetkellä, kun virta kytketään, ja uudelleen kun se katkaistaan; siinä välissä se lepää nollassa. Royal Institutionin kellarilaboratoriossa on 29. elokuuta 1831, ja 39-vuotias entinen kirjansitojan oppipoika on juuri nähnyt, että muutos — ei magneetti sinänsä — synnyttää sähköä. Kymmenen vuotta aiemmin hän oli pannut virtajohtimen kiertämään magneettia, ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli syytetty tulosten varastamisesta ja työnnetty kemian töihin. Nyt hän toistaa kokeen viikkoja: magneettitanko työnnetään kelaan, neula heilahtaa; vedetään ulos, neula heilahtaa toiseen suuntaan. Lokakuussa hän pyörittää kuparikiekkoa magneetin napojen välissä ja saa tasaista virtaa, ensimmäisen generaattorin. Faraday ei osaa matematiikkaa juuri lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell yhtälöiksi vasta 1860-luvulla.
+
+================ KOHTA 4 (hetki:pasteur-pullot-1862) ================
+
+### 4.1
+KYSYMYS: Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana
+Tietoruudun teksti: Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin kuumennuksen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana, École normale supérieure, Pariisi, 1862] Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.
+
+### 4.2
+KYSYMYS: Miksi Pasteur kuljetti liemipullonsa vuorille asti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana
+Tietoruudun teksti: Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin kuumennuksen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana, École normale supérieure, Pariisi, 1862] Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.
+
+================ KOHTA 5 (hetki:fleming-malja-1928) ================
+
+### 5.1
+KYSYMYS: Miksi loman ajaksi jätetty malja ei päätynytkään roskiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: St Mary's 1928 — malja, jota ei heitetty pois
+Tietoruudun teksti: ”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. St Mary'sin sairaalan bakteriologian laboratoriossa Paddingtonissa on 3. syyskuuta 1928, ja Fleming on juuri palannut perheensä kanssa vietetyltä lomalta. Ennen lähtöään hän jätti stafylokokkiviljelmiä maljoille penkin nurkkaan, ja nyt hän käy niitä läpi heittääkseen ne pois. Yhdessä maljassa kasvaa homepilkku, ja sen ympärillä bakteerit ovat kuolleet. Fleming näyttää maljan entiselle apulaiselleen Merlin Prycelle, joka muistuttaa: juuri niin sinä löysit lysotsyyminkin. Homeen hän tunnistaa Penicillium-sukuun, ja seuraavat kuukaudet hän kutsuu sen erittämää ainetta homemehuksi, kunnes antaa sille 7. maaliskuuta 1929 nimen penisilliini. Hän osoittaa, että se tappaa monia bakteereja ja on vaaraton eläimille, mutta aineen puhdistaminen ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja Ernst Chainin ryhmä Oxfo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: St Mary's 1928 — malja, jota ei heitetty pois, St Mary's Hospital, Paddington, Lontoo, 3.9.1928] ”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. St Mary'sin sairaalan bakteriologian laboratoriossa Paddingtonissa on 3. syyskuuta 1928, ja Fleming on juuri palannut perheensä kanssa vietetyltä lomalta. Ennen lähtöään hän jätti stafylokokkiviljelmiä maljoille penkin nurkkaan, ja nyt hän käy niitä läpi heittääkseen ne pois. Yhdessä maljassa kasvaa homepilkku, ja sen ympärillä bakteerit ovat kuolleet. Fleming näyttää maljan entiselle apulaiselleen Merlin Prycelle, joka muistuttaa: juuri niin sinä löysit lysotsyyminkin. Homeen hän tunnistaa Penicillium-sukuun, ja seuraavat kuukaudet hän kutsuu sen erittämää ainetta homemehuksi, kunnes antaa sille 7. maaliskuuta 1929 nimen penisilliini. Hän osoittaa, että se tappaa monia bakteereja ja on vaaraton eläimille, mutta aineen puhdistaminen ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja Ernst Chainin ryhmä Oxfordissa tekee siitä lääkkeen 1940-luvun alussa, ja kolmikko jakaa lääketieteen Nobelin 1945.
+
+### 5.2
+KYSYMYS: Mistä homemehu sai lopulta nimensä penisilliini?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: St Mary's 1928 — malja, jota ei heitetty pois
+Tietoruudun teksti: ”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. St Mary'sin sairaalan bakteriologian laboratoriossa Paddingtonissa on 3. syyskuuta 1928, ja Fleming on juuri palannut perheensä kanssa vietetyltä lomalta. Ennen lähtöään hän jätti stafylokokkiviljelmiä maljoille penkin nurkkaan, ja nyt hän käy niitä läpi heittääkseen ne pois. Yhdessä maljassa kasvaa homepilkku, ja sen ympärillä bakteerit ovat kuolleet. Fleming näyttää maljan entiselle apulaiselleen Merlin Prycelle, joka muistuttaa: juuri niin sinä löysit lysotsyyminkin. Homeen hän tunnistaa Penicillium-sukuun, ja seuraavat kuukaudet hän kutsuu sen erittämää ainetta homemehuksi, kunnes antaa sille 7. maaliskuuta 1929 nimen penisilliini. Hän osoittaa, että se tappaa monia bakteereja ja on vaaraton eläimille, mutta aineen puhdistaminen ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja Ernst Chainin ryhmä Oxfo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: St Mary's 1928 — malja, jota ei heitetty pois, St Mary's Hospital, Paddington, Lontoo, 3.9.1928] ”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. St Mary'sin sairaalan bakteriologian laboratoriossa Paddingtonissa on 3. syyskuuta 1928, ja Fleming on juuri palannut perheensä kanssa vietetyltä lomalta. Ennen lähtöään hän jätti stafylokokkiviljelmiä maljoille penkin nurkkaan, ja nyt hän käy niitä läpi heittääkseen ne pois. Yhdessä maljassa kasvaa homepilkku, ja sen ympärillä bakteerit ovat kuolleet. Fleming näyttää maljan entiselle apulaiselleen Merlin Prycelle, joka muistuttaa: juuri niin sinä löysit lysotsyyminkin. Homeen hän tunnistaa Penicillium-sukuun, ja seuraavat kuukaudet hän kutsuu sen erittämää ainetta homemehuksi, kunnes antaa sille 7. maaliskuuta 1929 nimen penisilliini. Hän osoittaa, että se tappaa monia bakteereja ja on vaaraton eläimille, mutta aineen puhdistaminen ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja Ernst Chainin ryhmä Oxfordissa tekee siitä lääkkeen 1940-luvun alussa, ja kolmikko jakaa lääketieteen Nobelin 1945.
+
+================ KOHTA 6 (hetki:eiffel-torni-1888) ================
+
+### 6.1
+KYSYMYS: Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Champ de Mars 1888 — niitti kerrallaan taivaalle
+Tietoruudun teksti: Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin seiso…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle, Champ de Mars, Pariisi, elokuu 1888] Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, koska sen huipulle sopii radioantenni.
+
+### 6.2
+KYSYMYS: Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Champ de Mars 1888 — niitti kerrallaan taivaalle
+Tietoruudun teksti: Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin seiso…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle, Champ de Mars, Pariisi, elokuu 1888] Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, koska sen huipulle sopii radioantenni.
+
+================ KOHTA 7 (hetki:brunel-thames-tunnel-1827) ================
+
+### 7.1
+KYSYMYS: Miten Brunelin tunnelikilpi suojasi kaivajia joen alla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Rotherhithe 1827 — 36 lokeroa joen alla
+Tietoruudun teksti: Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan reiän savisäkeillä ja pitää korjatussa tunnel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Rotherhithe 1827 — 36 lokeroa joen alla, Rotherhithe, Lontoo, toukokuu 1827] Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta 25. maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen alittajana.
+
+### 7.2
+KYSYMYS: Mitä vaaroja kaivajat kohtasivat Thamesin pohjan alla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Rotherhithe 1827 — 36 lokeroa joen alla
+Tietoruudun teksti: Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan reiän savisäkeillä ja pitää korjatussa tunnel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Rotherhithe 1827 — 36 lokeroa joen alla, Rotherhithe, Lontoo, toukokuu 1827] Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta 25. maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen alittajana.
+
+================ KOHTA 8 (hetki:lontoon-palo-1666) ================
+
+### 8.1
+KYSYMYS: Miksi leipomosta alkanut tuli levisi niin laajalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Lontoo 1666 — soitin veneessä, kaupunki tulessa
+Tietoruudun teksti: Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli laantuu. Palo tuhosi 13 …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Lontoo 1666 — soitin veneessä, kaupunki tulessa, Pudding Lane, Lontoo, 2.–5.9.1666] Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — luku, jota epäillään yhä.
+
+### 8.2
+KYSYMYS: Miksi isoisä ei enää nähnyt Lontoon vanhaa puukaupunkia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Lontoo 1666 — soitin veneessä, kaupunki tulessa
+Tietoruudun teksti: Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli laantuu. Palo tuhosi 13 …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Lontoo 1666 — soitin veneessä, kaupunki tulessa, Pudding Lane, Lontoo, 2.–5.9.1666] Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain kourallinen — luku, jota epäillään yhä.
+
+================ KOHTA 9 (hetki:shakespeare-globe-1599) ================
+
+### 9.1
+KYSYMYS: Miten Globen pihayleisö käyttäytyi näytelmän aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Globe 1599 — pihalla ei ole koskaan hiljaista
+Tietoruudun teksti: Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista, Globe-teatteri, Southwark, Lontoo, 21.9.1599] Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.
+
+### 9.2
+KYSYMYS: Miten Globe-teatteri paloi kesken näytelmän vuonna 1613?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Globe 1599 — pihalla ei ole koskaan hiljaista
+Tietoruudun teksti: Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista, Globe-teatteri, Southwark, Lontoo, 21.9.1599] Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.
+
+================ KOHTA 10 (hetki:ranskan-vallankumous-bastilji-1789) ================
+
+### 10.1
+KYSYMYS: Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Bastilji 1789 — musketti ilman ruutia
+Tietoruudun teksti: Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan kaupungintalolle ja surmataan matkal…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Bastilji 1789 — musketti ilman ruutia, Bastilji, Pariisi, 14.7.1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan kaupungintalolle ja surmataan matkalla. Linnoitus puretaan seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee Versailles'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja siitä tulee trikolori.
+
+### 10.2
+KYSYMYS: Miten Ranskan sinivalkopunainen trikolori syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Bastilji 1789 — musketti ilman ruutia
+Tietoruudun teksti: Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan kaupungintalolle ja surmataan matkal…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Bastilji 1789 — musketti ilman ruutia, Bastilji, Pariisi, 14.7.1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet raahataan kaupungintalolle ja surmataan matkalla. Linnoitus puretaan seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee Versailles'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja siitä tulee trikolori.
+
+================ KOHTA 11 (hetki:lumiere-elokuva-1895) ================
+
+### 11.1
+KYSYMYS: Mitä Grand Cafén kellarissa näytettiin Lumièren veljesten ensimmäisessä maksullisessa näytöksessä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Grand Café 1895 — miten seinä voi liikkua?
+Tietoruudun teksti: Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa laitteen; Lumièret k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Grand Café 1895 — miten seinä voi liikkua?, Salon Indien du Grand Café, Pariisi, 28.12.1895] Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.
+
+### 11.2
+KYSYMYS: Kuinka pitkiä ensimmäiset Pariisissa näytetyt elokuvat olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Grand Café 1895 — miten seinä voi liikkua?
+Tietoruudun teksti: Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa laitteen; Lumièret k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Historian hetki: Grand Café 1895 — miten seinä voi liikkua?, Salon Indien du Grand Café, Pariisi, 28.12.1895] Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.

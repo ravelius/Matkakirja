@@ -1,0 +1,208 @@
+================ KOHTA 26 (kohde:hahmotelma-verdon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gorges du Verdon (luonto · joki)
+Tietoruudun teksti: Gorges du Verdon on jokikanjoni Provence-Alpes-Côte d'Azurin alueella Kaakkois-Ranskassa. Se on noin 25 kilometriä pitkä ja enimmillään 700 metriä syvä. Rotkon on uurtanut Verdon-joki, joka on saanut nimensä turkoosinvihreästä väristään. Castellanen ja Moustiers-Sainte-Marien välillä joki on leikannut kalkkikivimassiiviin 700 metrin syvyisen uran, ja kanjonin päässä se laskee tekojärveen Lac de Sainte-Croixiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Turkoosi, joka tulee aavikkokasvista] Istalif on kylä Kabulista pohjoiseen Shomalin tasangon yllä, ja sen nimi saattaa juontua kreikan sanasta staphile, rypäleterttu. Kylän savenvalajat ovat tunnettuja turkoosista ja tummanvihreästä lasitteestaan, jonka väri saadaan ishkar-kasvista Balkhin aavikolta. Suullinen perinne johtaa mestarien eli ustadien sukupolvet Bukharasta tulleeseen sufipyhimykseen Sayyid Mir Kulaliin, joka olisi asettunut seudulle yli neljäsataa vuotta sitten. Työ periytyy yhä isältä pojalle saman perheen sisällä. Charles Masson kirjasi 1830-luvulla seudun sanonnan: joka ei ole nähnyt Istalifia, ei ole nähnyt mitään.
+
+### 26.1
+KYSYMYS: Miten joki jaksoi leikata näin syvän rotkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gorges du Verdon (luonto · joki)
+Tietoruudun teksti: Gorges du Verdon on jokikanjoni Provence-Alpes-Côte d'Azurin alueella Kaakkois-Ranskassa. Se on noin 25 kilometriä pitkä ja enimmillään 700 metriä syvä. Rotkon on uurtanut Verdon-joki, joka on saanut nimensä turkoosinvihreästä väristään. Castellanen ja Moustiers-Sainte-Marien välillä joki on leikannut kalkkikivimassiiviin 700 metrin syvyisen uran, ja kanjonin päässä se laskee tekojärveen Lac de Sainte-Croixiin.
+
+### 26.2
+KYSYMYS: Mistä veden turkoosi väri tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gorges du Verdon (luonto · joki)
+Tietoruudun teksti: Gorges du Verdon on jokikanjoni Provence-Alpes-Côte d'Azurin alueella Kaakkois-Ranskassa. Se on noin 25 kilometriä pitkä ja enimmillään 700 metriä syvä. Rotkon on uurtanut Verdon-joki, joka on saanut nimensä turkoosinvihreästä väristään. Castellanen ja Moustiers-Sainte-Marien välillä joki on leikannut kalkkikivimassiiviin 700 metrin syvyisen uran, ja kanjonin päässä se laskee tekojärveen Lac de Sainte-Croixiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Turkoosi, joka tulee aavikkokasvista] Istalif on kylä Kabulista pohjoiseen Shomalin tasangon yllä, ja sen nimi saattaa juontua kreikan sanasta staphile, rypäleterttu. Kylän savenvalajat ovat tunnettuja turkoosista ja tummanvihreästä lasitteestaan, jonka väri saadaan ishkar-kasvista Balkhin aavikolta. Suullinen perinne johtaa mestarien eli ustadien sukupolvet Bukharasta tulleeseen sufipyhimykseen Sayyid Mir Kulaliin, joka olisi asettunut seudulle yli neljäsataa vuotta sitten. Työ periytyy yhä isältä pojalle saman perheen sisällä. Charles Masson kirjasi 1830-luvulla seudun sanonnan: joka ei ole nähnyt Istalifia, ei ole nähnyt mitään.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-chenonceau) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chenonceau (kulttuuri)
+Tietoruudun teksti: Château de Chenonceau on linna, joka kaartuu Cher-joen yli lähellä Chenonceaux'n kylää Indre-et-Loiren departementissa. Se on Loiren laakson tunnetuimpia linnoja. Chenonceaun kartano mainitaan kirjallisessa lähteessä ensimmäisen kerran 1000-luvulla, ja nykyinen linna rakennettiin vuosina 1514–1522 vanhan myllyn perustuksille. Joen ylittävä silta rakennettiin vuosina 1556–1559 renessanssiarkkitehti Philibert de l'Ormen piirustusten mukaan ja sillan päällä oleva galleria vuosina 1570–1576 Jean Bullantin suunnitelmista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+
+### 27.1
+KYSYMYS: Miksi linna rakennettiin joen päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chenonceau (kulttuuri)
+Tietoruudun teksti: Château de Chenonceau on linna, joka kaartuu Cher-joen yli lähellä Chenonceaux'n kylää Indre-et-Loiren departementissa. Se on Loiren laakson tunnetuimpia linnoja. Chenonceaun kartano mainitaan kirjallisessa lähteessä ensimmäisen kerran 1000-luvulla, ja nykyinen linna rakennettiin vuosina 1514–1522 vanhan myllyn perustuksille. Joen ylittävä silta rakennettiin vuosina 1556–1559 renessanssiarkkitehti Philibert de l'Ormen piirustusten mukaan ja sillan päällä oleva galleria vuosina 1570–1576 Jean Bullantin suunnitelmista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+
+### 27.2
+KYSYMYS: Kuka suunnitteli sillan päällä olevan gallerian?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chenonceau (kulttuuri)
+Tietoruudun teksti: Château de Chenonceau on linna, joka kaartuu Cher-joen yli lähellä Chenonceaux'n kylää Indre-et-Loiren departementissa. Se on Loiren laakson tunnetuimpia linnoja. Chenonceaun kartano mainitaan kirjallisessa lähteessä ensimmäisen kerran 1000-luvulla, ja nykyinen linna rakennettiin vuosina 1514–1522 vanhan myllyn perustuksille. Joen ylittävä silta rakennettiin vuosina 1556–1559 renessanssiarkkitehti Philibert de l'Ormen piirustusten mukaan ja sillan päällä oleva galleria vuosina 1570–1576 Jean Bullantin suunnitelmista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+- [Zimbabwe — maalehti / Kuvataide: Galleria, joka lähti etsimään veistäjiä] 1954–1973 — Frank McEwen kutsuttiin 1954 neuvonantajaksi maan uuteen kansallisgalleriaan, jota vasta rakennettiin pääkaupunkiin, ja hän johti sitä avajaisista 1957 vuoteen 1973. Ensin hän tapasi nuoren taiteilijan Thomas Mukarobgwan, josta tuli hänen oppaansa paikalliseen elämään, ja sitten Joram Marigan pehmeään kiveen veistämät varhaistyöt. Ne saivat McEwenin kannustamaan veistäjiä aiheisiin, jotka nousivat heidän omasta kulttuuristaan. Gallerian työpajakoulu keräsi ympärilleen Joseph Ndandarikan, John Takawiran ja Kingsley Sambon kaltaisia tekijöitä. McEwen karkotettiin maasta 1973.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-saint-malo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Malo (merenkulku)
+Tietoruudun teksti: Saint-Malo on historiallinen satamakunta Ille-et-Vilainen departementissa Bretagnessa. Muurien ympäröimä vanhakaupunki rakennettiin kalliolle graniittisaarelle, jonka yhdisti mantereeseen vain kapea hiekkakannas ja vuoroveden paljastama liejupohja. Kannakselle tehtiin kivetty tie jo vuonna 1509, ja sitä levennettiin ja korotettiin vuosisatojen kuluessa, erityisesti 1800-luvulla. Kanaalin rannalla sijaitsevalla kaupungilla on pitkä kaapparihistoria: vaurautta kertyi sekä lähivesien kiristyksestä että merentakaisista retkistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Historia: Muurien sisällä] Ciudad Vieja oli vuoteen 1829 asti muurien ympäröimä linnoitus niemellä sataman suulla. Muurien sisään rakennettiin vuosina 1804–1812 Cabildo, siirtomaahallinnon virallinen istuin, Plaza de la Constitución -aukion laidalle; aukiota kutsutaan yhä Plaza Matriziksi. Samalla aukiolla seisoo Montevideon katedraali, jonka kryptaan on haudattu kolme presidenttiä: Fructuoso Rivera, Juan Antonio Lavalleja ja Venancio Flores. Muurit purettiin 1829, ja niiden ulkopuolelle suunniteltiin heti uusi kaupunginosa Ciudad Nueva — se kasvoi kuitenkin hitaasti, koska sodat tulivat väliin.
+- [Syyria — maalehti / Historia: Katsomo jäi linnoituksen sisään] Bosran teatteri rakennettiin 100-luvulla jaa. mustasta basaltista, jota Hauranin tasangon alla on paksuina kerroksina. Katsomo on 102 metriä leveä, ja se on säilynyt kokonaisena ylintä pylväskäytävää myöten, mikä on roomalaisessa teatterissa harvinaista. Syy on siinä, mitä rakennukselle tehtiin myöhemmin. Teatteri jäi alun perin kaupungin muurien ulkopuolelle, mutta myöhemmät hallitsijat muurasivat sen ympärille linnoituksen torneineen vuosina 1202–1253. Katsomo jäi muurien sisään piiloon, ja sisukseen kertyi hiekkaa, joka todennäköisesti suojasi istuinrivejä. Hiekka kaivettiin pois, ja teatteri kunnostettiin vuosina 1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna 1980.
+
+### 28.1
+KYSYMYS: Keitä Saint-Malon kaapparit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Malo (merenkulku)
+Tietoruudun teksti: Saint-Malo on historiallinen satamakunta Ille-et-Vilainen departementissa Bretagnessa. Muurien ympäröimä vanhakaupunki rakennettiin kalliolle graniittisaarelle, jonka yhdisti mantereeseen vain kapea hiekkakannas ja vuoroveden paljastama liejupohja. Kannakselle tehtiin kivetty tie jo vuonna 1509, ja sitä levennettiin ja korotettiin vuosisatojen kuluessa, erityisesti 1800-luvulla. Kanaalin rannalla sijaitsevalla kaupungilla on pitkä kaapparihistoria: vaurautta kertyi sekä lähivesien kiristyksestä että merentakaisista retkistä.
+
+### 28.2
+KYSYMYS: Miksi vanhakaupunki rakennettiin muurien sisään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Malo (merenkulku)
+Tietoruudun teksti: Saint-Malo on historiallinen satamakunta Ille-et-Vilainen departementissa Bretagnessa. Muurien ympäröimä vanhakaupunki rakennettiin kalliolle graniittisaarelle, jonka yhdisti mantereeseen vain kapea hiekkakannas ja vuoroveden paljastama liejupohja. Kannakselle tehtiin kivetty tie jo vuonna 1509, ja sitä levennettiin ja korotettiin vuosisatojen kuluessa, erityisesti 1800-luvulla. Kanaalin rannalla sijaitsevalla kaupungilla on pitkä kaapparihistoria: vaurautta kertyi sekä lähivesien kiristyksestä että merentakaisista retkistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Historia: Muurien sisällä] Ciudad Vieja oli vuoteen 1829 asti muurien ympäröimä linnoitus niemellä sataman suulla. Muurien sisään rakennettiin vuosina 1804–1812 Cabildo, siirtomaahallinnon virallinen istuin, Plaza de la Constitución -aukion laidalle; aukiota kutsutaan yhä Plaza Matriziksi. Samalla aukiolla seisoo Montevideon katedraali, jonka kryptaan on haudattu kolme presidenttiä: Fructuoso Rivera, Juan Antonio Lavalleja ja Venancio Flores. Muurit purettiin 1829, ja niiden ulkopuolelle suunniteltiin heti uusi kaupunginosa Ciudad Nueva — se kasvoi kuitenkin hitaasti, koska sodat tulivat väliin.
+- [Syyria — maalehti / Historia: Katsomo jäi linnoituksen sisään] Bosran teatteri rakennettiin 100-luvulla jaa. mustasta basaltista, jota Hauranin tasangon alla on paksuina kerroksina. Katsomo on 102 metriä leveä, ja se on säilynyt kokonaisena ylintä pylväskäytävää myöten, mikä on roomalaisessa teatterissa harvinaista. Syy on siinä, mitä rakennukselle tehtiin myöhemmin. Teatteri jäi alun perin kaupungin muurien ulkopuolelle, mutta myöhemmät hallitsijat muurasivat sen ympärille linnoituksen torneineen vuosina 1202–1253. Katsomo jäi muurien sisään piiloon, ja sisukseen kertyi hiekkaa, joka todennäköisesti suojasi istuinrivejä. Hiekka kaivettiin pois, ja teatteri kunnostettiin vuosina 1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna 1980.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-pointe-du-raz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pointe du Raz (meri)
+Tietoruudun teksti: Pointe du Raz on kallioinen niemenkärki, joka työntyy Atlanttiin Länsi-Bretagnessa. Se on Plogoffin kunnan läntisin kohta Finistèressä ja kohoaa keulan tavoin noin 72 metriä Raz de Sein -salmen yläpuolelle. Nimi tulee juuri tuosta salmesta, joka erottaa niemen Seinin saaresta ja on vaarallista vettä; sana raz on lainattu normannista ja tarkoittaa voimakasta virtaa. Niemeltä erottuu selvästi La Vieillen majakka. Manner-Ranskan läntisin kohta on kuitenkin hieman pohjoisempana oleva Pointe de Corsen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kohdekartta / Kohdekartta: Point Pleasant Park] 1796 Niemimaan eteläkärjessä on metsäinen puisto, jossa oli aikanaan useita tykkipattereita. Yksi rakennus on yhä pystyssä: Prince of Wales Tower vuodelta 1796 on Pohjois-Amerikan vanhin martellotorni. Puiston polut kulkevat vanhojen varustusten raunioiden lomassa, ja kärjestä näkee sataman yli avomerelle. Cornwallis asettui 1749 ensin juuri tänne, mutta paikka oli liian avoin säälle ja asutus siirrettiin linnoituskukkulan juurelle. Alue jäi Britannian valtion omistukseen, ja se vuokrattiin kaupungille seremoniallisella yhden shillingin vuosivuokralla. Alkuperäisen sopimuksen neuvotteli Sir William Young 1866. Nykyään maa on Kanadan valtion ja vuokralaisena Halifaxin kunta. Kesäisin puistos…
+- [Liberia — maalehti / Ruoka: Kahvipuu, joka pelasti toisten plantaasit] 1740– — Coffea liberica kasvaa luonnonvaraisena Länsi-Afrikan metsissä, ja se on kolmesta kaupallisesta kahvilajista järein: puu kohoaa parikymmentä metriä, ja sato poimitaan tikkailta. Papu on epäsymmetrinen ja kärjestä koukkumainen, lähes kaksi kertaa arabican painoinen; maussa on jakkihedelmää. Espanjalaiset munkit veivät lajin 1740-luvulla Filippiinien Lipaan, jossa siitä tuli kapeng barako. Kun kahviruoste tuhosi 1800-luvun lopulla viljelmiä, liberica kesti Filippiineillä kaikkia muita pidempään, ja se istutettiin hätävaraksi myös Jaavalle ja Borneolle kuolleiden arabica-puiden tilalle. Osuus maailman kahvista on silti alle puolitoista prosenttia.
+
+### 29.1
+KYSYMYS: Miksi Raz de Sein on merenkulkijalle vaarallinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pointe du Raz (meri)
+Tietoruudun teksti: Pointe du Raz on kallioinen niemenkärki, joka työntyy Atlanttiin Länsi-Bretagnessa. Se on Plogoffin kunnan läntisin kohta Finistèressä ja kohoaa keulan tavoin noin 72 metriä Raz de Sein -salmen yläpuolelle. Nimi tulee juuri tuosta salmesta, joka erottaa niemen Seinin saaresta ja on vaarallista vettä; sana raz on lainattu normannista ja tarkoittaa voimakasta virtaa. Niemeltä erottuu selvästi La Vieillen majakka. Manner-Ranskan läntisin kohta on kuitenkin hieman pohjoisempana oleva Pointe de Corsen.
+
+### 29.2
+KYSYMYS: Mikä majakka näkyy kärjestä merelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pointe du Raz (meri)
+Tietoruudun teksti: Pointe du Raz on kallioinen niemenkärki, joka työntyy Atlanttiin Länsi-Bretagnessa. Se on Plogoffin kunnan läntisin kohta Finistèressä ja kohoaa keulan tavoin noin 72 metriä Raz de Sein -salmen yläpuolelle. Nimi tulee juuri tuosta salmesta, joka erottaa niemen Seinin saaresta ja on vaarallista vettä; sana raz on lainattu normannista ja tarkoittaa voimakasta virtaa. Niemeltä erottuu selvästi La Vieillen majakka. Manner-Ranskan läntisin kohta on kuitenkin hieman pohjoisempana oleva Pointe de Corsen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kohdekartta / Kohdekartta: Point Pleasant Park] 1796 Niemimaan eteläkärjessä on metsäinen puisto, jossa oli aikanaan useita tykkipattereita. Yksi rakennus on yhä pystyssä: Prince of Wales Tower vuodelta 1796 on Pohjois-Amerikan vanhin martellotorni. Puiston polut kulkevat vanhojen varustusten raunioiden lomassa, ja kärjestä näkee sataman yli avomerelle. Cornwallis asettui 1749 ensin juuri tänne, mutta paikka oli liian avoin säälle ja asutus siirrettiin linnoituskukkulan juurelle. Alue jäi Britannian valtion omistukseen, ja se vuokrattiin kaupungille seremoniallisella yhden shillingin vuosivuokralla. Alkuperäisen sopimuksen neuvotteli Sir William Young 1866. Nykyään maa on Kanadan valtion ja vuokralaisena Halifaxin kunta. Kesäisin puistos…
+- [Liberia — maalehti / Ruoka: Kahvipuu, joka pelasti toisten plantaasit] 1740– — Coffea liberica kasvaa luonnonvaraisena Länsi-Afrikan metsissä, ja se on kolmesta kaupallisesta kahvilajista järein: puu kohoaa parikymmentä metriä, ja sato poimitaan tikkailta. Papu on epäsymmetrinen ja kärjestä koukkumainen, lähes kaksi kertaa arabican painoinen; maussa on jakkihedelmää. Espanjalaiset munkit veivät lajin 1740-luvulla Filippiinien Lipaan, jossa siitä tuli kapeng barako. Kun kahviruoste tuhosi 1800-luvun lopulla viljelmiä, liberica kesti Filippiineillä kaikkia muita pidempään, ja se istutettiin hätävaraksi myös Jaavalle ja Borneolle kuolleiden arabica-puiden tilalle. Osuus maailman kahvista on silti alle puolitoista prosenttia.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-etretat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Étretat (meri)
+Tietoruudun teksti: Étretat on kunta Seine-Maritimen departementissa Normandiassa Luoteis-Ranskassa, noin 32 kilometriä Le Havresta koilliseen Pays de Caux'n rannikolla. Vaatimattomasta kalastajakylästä tuli 1800-luvulla muodikas kylpyläpaikka ja porvariston kesänviettopaikka. Paikka veti puoleensa taiteilijoita: siellä viihtyivät muun muassa Flaubert ja Maupassant, ja Courbet, Boudin ja Monet maalasivat sen rantoja. Yli 90 metriä korkeat liitukalliot, kolme kiviporttia ja harmaat kivirannat tekivät Étretat'sta yhden Ranskan tunnetuimmista rannikkomaisemista.
+
+### 30.1
+KYSYMYS: Miksi maalarit tulivat juuri Étretat'hen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Étretat (meri)
+Tietoruudun teksti: Étretat on kunta Seine-Maritimen departementissa Normandiassa Luoteis-Ranskassa, noin 32 kilometriä Le Havresta koilliseen Pays de Caux'n rannikolla. Vaatimattomasta kalastajakylästä tuli 1800-luvulla muodikas kylpyläpaikka ja porvariston kesänviettopaikka. Paikka veti puoleensa taiteilijoita: siellä viihtyivät muun muassa Flaubert ja Maupassant, ja Courbet, Boudin ja Monet maalasivat sen rantoja. Yli 90 metriä korkeat liitukalliot, kolme kiviporttia ja harmaat kivirannat tekivät Étretat'sta yhden Ranskan tunnetuimmista rannikkomaisemista.
+
+### 30.2
+KYSYMYS: Miten kiviportit syntyivät kallioon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Étretat (meri)
+Tietoruudun teksti: Étretat on kunta Seine-Maritimen departementissa Normandiassa Luoteis-Ranskassa, noin 32 kilometriä Le Havresta koilliseen Pays de Caux'n rannikolla. Vaatimattomasta kalastajakylästä tuli 1800-luvulla muodikas kylpyläpaikka ja porvariston kesänviettopaikka. Paikka veti puoleensa taiteilijoita: siellä viihtyivät muun muassa Flaubert ja Maupassant, ja Courbet, Boudin ja Monet maalasivat sen rantoja. Yli 90 metriä korkeat liitukalliot, kolme kiviporttia ja harmaat kivirannat tekivät Étretat'sta yhden Ranskan tunnetuimmista rannikkomaisemista.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

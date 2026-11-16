@@ -5,14 +5,14 @@ Kaikki muu on Postivahdin työtä. Osoitteet: /Users/Shared/Claude/osoitekirja.m
 
 ## Kulku
 1. Rooli tekee luovutuksen (siirtoraportti + push) ja lähettää Postivahdille rivin `LUOVUTUS VALMIS <sha>`.
-2. Postivahti: `set_remote_control <id> false`.
-3. Kun roolin jono on tyhjä (list_events: ei käsittelemättömiä viestejä, isRunning false) → send_message roolille:
+2. Kun roolin jono on tyhjä (list_events: ei käsittelemättömiä viestejä, isRunning false) → send_message roolille:
    `NOLLAUS: kutsu nyt clear_session self. Älä tee mitään muuta.`
-4. Odota, kunnes rooli on levossa, ja tarkista `list_events` → 0 viestiä (konteksti nollattu, get_usage < 10 %).
+3. Odota, kunnes rooli on levossa, ja tarkista `list_events` → 0 viestiä (konteksti nollattu, get_usage < 10 %).
    Jos ei nollautunut 10 minuutissa → `clear_session <id>` itse; jos sekään ei onnistu → rivi PT:lle `JUMI nollaus <rooli>`.
-5. Lähetä vakioaloitusviesti (alla) send_messagella.
-6. `set_remote_control <id> true`.
-7. Rivi Päätoimittajalle (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc): `nollattu <rooli> (<sha>)`.
+4. Lähetä vakioaloitusviesti (alla) send_messagella.
+5. Rivi Päätoimittajalle (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc): `nollattu <rooli> (<sha>)`.
+
+Etäyhteyttä ei kytketä tässä kulussa: se on vain KK:lla (omistaja 6.11.2026 klo 16.08, Raamattu 7.9).
 
 Keskustelukanavaa (local_231e4bad) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
 
@@ -25,15 +25,27 @@ Keskustelukanavaa (local_231e4bad) EI nollata koskaan (omistaja nollaa sen korti
 ## Vakioaloitusviesti (täytä <…>)
 ```
 Olet <ROOLI> (<malli>), Matkakirjan roolisessio; session id <id>, checkout <kansio>.
-Lue ensin CLAUDE.md ja luovutuksesi: git show <sha>:<luovutustiedoston polku> KOKONAAN, ja toimi sen mukaan.
+Lue ensin CLAUDE.md ja luovutuksesi KOKONAAN: /Users/Shared/Claude/luovutukset/<rooli>-<pvm>-<klo>.md, ja toimi sen mukaan.
+KEVYT ALOITUS (KK 12.11. 15.36, kortti nollaus-ja-luovutus 1 ja 7): lue lisäksi vain omat aihekortit (node tools/kirjaa.mjs aiheet → kirjaa.mjs lue <aihe>, vastuu = roolisi) ja työlistan oma rivi; Raamatun lukuja ei lueta kokonaan, vaan haetaan tarpeen mukaan (kirjaa.mjs hae). Tavoite aloitus ≤ 15 %.
 Osoitteet: /Users/Shared/Claude/osoitekirja.md — viestit AINA send_messagella session id:llä, ei nimellä.
 Viestit Päätoimittajalle (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc) enintään 3 riviä: mitä, sha, kuvien polku; yksityiskohdat tiedostoon.
 Vastuualueesi: docs/vastuukartta.md. Kun nollaustarve tulee: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>".
 Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa – älä toista niitä.
 Aloita jonosi seuraavasta erästä; jos jono on tyhjä, rivi PT:lle "JONO TYHJÄ: <rooli>".
-(ASEMATAULU, 31.10. seisokki 09.40–16.2x, KK 16.3x: hoitaja käynnistyy vain KK:n "OMISTAJAN PÄÄTÖS klo 23.35" -rivillä. Asemataulun jokaisen nollauksen jälkeen lähetä KK:lle (local_231e4bad-b9fe-41b8-8b45-02e35c45ebbe) rivi "nollattu Asemataulu" PT:n kuittauksen lisäksi.)
+ODOTUS EI OLE LEPO (KK 13.11. 10.22, omistajan kysymys): kun vuorosi päättyy odotukseen (KK:n katse, Mac-jono, toinen rooli), ota HETI seuraava rivi: `python3 -I tools/asemataulu/tyolista.py seuraava` (oma kohtasi työlistan tekijänimellä, esim. KS, NS, VS, Äänittäjä). Lepää vain, jos jono on tyhjä tai kaikki rivit odottavat; silloin yksi rivi PT:lle "JONO TYHJÄ: <rooli>". Seuraava rivi otetaan VAIN, jos se ei odota KK:n päätöstä eikä riko voimassa olevaa "älä aja vielä" -sanaa (KK 10.29); vanhentuneelta näyttävästä rivistä yksi rivi PT:lle, ei työn aloitusta. Kirjoita sama rivi luovutukseesi.
+AJOPYYNTÖ (omistaja 16.11. 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12): jokaiseen Mac-/Unity-ajopyyntöön JU:lle LUOKKA (linkki, juna, omistaja, kuva, vika, yo). Ei pareja (Nyt | Uusi), ei toista laitetta, ei omia mittauksia: ne ovat yo-luokkaa, ja ajojonon portti pitää ne yössä.
+JUNAPYYNTÖ (omistaja 16.11. 15.01, P-261116-21, kortti juna-ja-julkaisu 2): sha + versiorivin ehdotus (tai "ei versioriviä") KK:lle; KK:n sanalla suoraan junaan. Ei junasana.zsh:ää eikä testisarjoja ennen junaa: ne ajetaan yöllä junan kärjelle, punaiset aamulla korjattavaksi.
+PALAUTUS (KK 16.11. 14.28 ja 15.02, P-261116-19/-21, kortti valmiin-maaritelma 15): palautukseen tehtäväkansion PALAUTUS.md (jokaiselle TEHTAVA.md:n M-riville "M<n>: KYLLÄ | EI — <kuva, loki tai luku>") ja `zsh /Users/Shared/Claude/julkaisija-tyokalut/palautus.zsh <rooli> <sha> <tehtäväkansio>` -rivi (vain M-rivit, sekunteja).
 ```
 Luovutustiedoston polku: roolin LUOVUTUS VALMIS -rivistä tai `git show --stat <sha>` (docs/raportit/…-luovutus-…md).
 
 ## Kotikansioiden päivitys ennen nollausta (omistajan päätös 22.24 B3, PT:n välittämä 20.10.)
 Ennen jokaista roolin nollausta (kulun kohta 2 ja 3 välissä): `bash tools/paivita-kotikansiot.sh --aja --uusi-haara <roolin kansio>`. Kunnes `--uusi-haara` on mainissa, pelkkä `--aja`. Kansio, jota ei voi päivittää → rivi PT:lle.
+
+
+ASEMATAULU JÄÄDYTETTY (omistaja 9.11. 23.08, Raamattu 7.39): ei vientejä tauluun, ei Asemataulun herätyksiä/Boostia eikä "Asemataulu auki" -riviä aloitusviesteissä (myös PT, KK). tyolista.json/junat.json jäävät sessioiden tiedoiksi.
+
+## Luovutuksen koko ja aloitusviestin paikka (PT 12.11. 08.4x, KK 08.45, Raamattu 7.37 / PR 6590)
+- Luovutus ≤ 8 kt ja ≤ 60 riviä, ei "lisäys N" -ketjuja. Yli 8 kt → palauta roolille tiivistettäväksi ENNEN clear_sessionia (KS -1408 115 kt ja NS 33 lisäystä: tiivistys seuraavassa nollauksessa).
+- Aloitusviesti on nollatun roolin ENSIMMÄINEN viesti: lähetä se heti kun list_events = 0.
+- PT:n oma nollaus: odota, että PR 6590 on yhdistetty (PT yhdistää vihreänä), sitten PT nollaa.

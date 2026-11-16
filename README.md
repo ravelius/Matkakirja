@@ -2,6 +2,71 @@
 
 *(lyhyesti Matkakirja)*
 
+## Pelin esittely
+
+**Seikkailu maailman ympäri. iPhonelle ja iPadille, 13 vuotta täyttäneille ja aikuisille.**
+
+<img src="assets/apuraha/pariisi-kartta-louvre.jpg" alt="Pariisi vinosti ylhäältä: Louvre, Seine ja Cité-saari." width="640">
+
+Sinä olet nuori Fogg. Löydät vintiltä isoisäsi matkalaukun ja matkapäiväkirjan vuodelta 1873. Lähdet hänen jäljilleen maailman ympäri ja etsit aarteita, jotka maailma on unohtanut. Tavoite on kiertää maailma alle 80 päivässä.
+
+Maailma on tämän päivän maailma. Vain ulkoasu on vanha: paperia, mustetta ja isoisän ääni.
+
+### Lennä kaupungin ylle
+
+Kartta on yksi pyöritettävä pallo. Pariisi on piirretty kaupunki, jossa Louvre ja Eiffel-torni seisovat kartalla. Kierrät nähtävyydet, ja kertoja kertoo niiden tarinat.
+
+<p><img src="assets/apuraha/nahtavyyden-esittely-eiffel.jpg" alt="Kaupunkikierros etenee kohde kerrallaan; kuvassa Eiffel-torni." width="320"></p>
+
+### Ratkaise aarteen arvoitus
+
+Pariisissa yhdistät rakennuksiin nimet ja rakennusvuodet. Löydöstä saat lyhyen, tosi faktan ja onnentoivotuksen. Jokainen uusi kaupunki tuo oman tehtävänsä.
+
+<p><img src="assets/apuraha/aarretehtava-nimet.jpg" alt="Aarretehtävässä pelaaja yhdistää neljään pariisilaiseen rakennukseen niiden nimet." width="320"></p>
+
+### Lähde avaruuteen
+
+Raketti nousee Pohjois-Norjasta avaruusasemalle. Asemalta kuvaat minkä tahansa paikan Maasta omaksi julisteeksesi.
+
+<p><img src="assets/apuraha/iss-lahestyminen.jpg" alt="Miehistökapseli lähestyy avaruusasemaa 402 kilometrin korkeudessa." width="320"> <img src="assets/apuraha/iss-kupola-lansi-eurooppa.jpg" alt="Aseman kupolista näkyy Länsi-Eurooppa." width="320"></p>
+
+### Juokse Kielletyssä kaupungissa *(tekeillä)*
+
+Peking. Pelissä pieni Puyi, Kiinan viimeinen keisari, lähtee karkumatkalle Kielletyn kaupungin kujille ja pihoille. Sinä ohjaat häntä ja väistät takaa-ajajia.
+
+### Hiivi Olavinlinnaan *(tekeillä)*
+
+Savonlinna, elokuun yö 1499. Hiivit Olavinlinnaan, ratkaiset arvoituksen ja löydät aarteen.
+
+<p><img src="assets/apuraha/olavinlinna-hamara.jpg" alt="Olavinlinna hämärässä." width="320"></p>
+
+### Katso maailmaa linssin läpi
+
+Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta: missä Euroopan keksinnöt syntyivät, miten ihminen levisi maapallolle, mitä maailman radioissa soi juuri nyt.
+
+<p><img src="assets/apuraha/linssi-keksinnot.jpg" alt="Keksintöjen linssi: Rudolf Diesel ja hänen moottorinsa vuodelta 1897." width="320"> <img src="assets/apuraha/linssi-ihmisen-matka.jpg" alt="Ihmisen matka -linssi näyttää, miten ihminen levisi Afrikasta maapallolle." width="320"> <img src="assets/apuraha/linssi-topografia.jpg" alt="Topografian linssi korostaa maaston muodot: Himalaja ja Tiibetin ylätasanko." width="320"></p>
+
+### Pelin ajatus
+
+Maailman kulttuuri, taide ja tiede ovat aarre, joka hukkuu helposti somen ja tekoälyn roskaan. Matkakirja kaivaa sen esiin. Uteliaisuus herää pienestä asiasta, vaikka paikallisesta herkusta, ja siitä avautuu koko maa. Mikään ei tunnu koululta. Silti kaikki, mitä peli kertoo, on tarkistettua, ja jokainen maa näytetään asukkaidensa silmin. Tekoäly auttaa etsimään. Ihminen valitsee ja hyväksyy kaiken.
+
+### Pelattavissa nyt
+
+Pariisi nähtävyyksineen ja aarretehtävineen, avaruusasema ja linssit. Lautapelit: Mylly Berliinissä, Tavli Ateenassa ja Shakki Wienissä. Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin, ja opas kertoo kohteista.
+
+### Seuraavaksi
+
+Amsterdam, Lontoo, Rooma ja Wien. Jokaisessa on oma tehtävä.
+
+- Amsterdam: pelaaja erottaa hollantilaisten taiteilijoiden maalaukset muiden joukosta.
+- Lontoo: pelaaja yhdistää keksinnön sen keksijään.
+- Rooma: pelaaja löytää patsaiden joukosta sen, joka on peräisin toisesta kaupungista, ja valitsee neljästä samannäköisestä lipusta Italian lipun.
+- Wien: pelaaja kuuntelee sävelmiä ja yhdistää ne säveltäjiin.
+
+Täysi peli on iPhonen ja iPadin sovellus. Selainversio on suppeampi.
+
+*(Omistaja hyväksyi 15.11.2026; sama esittely on pelin etusivun kortissa ja sovelluksessa: [assets/apuraha/esittely.json](assets/apuraha/esittely.json).)*
+
 **Suomenkielinen seikkailupeli selaimessa.** Nuori Fogg perii
 vintiltä isoisänsä matkalaukun ja lähtee maailman ympäri isoisän vuoden
 1873 matkapäiväkirjan jäljillä — etsimään **Aarnin luettelon**
@@ -283,7 +348,6 @@ js/sound.js js/aani-tausta.js  tehosteet ja äänimaisemat
 js/linssit/              karttalinssit ja aikajana-ajot
 js/packs/                kaikki sisältö: kaupungit, kysymykset, lehdet,
                          fokuskohteet, kuvat, äänet, aarteet
-js/tyohuone-raamattu.js  RAAMATTU — pelin idea ja kaikki linjaukset
 js/muutokset.js          tiivis päivitysloki (versionumero kartalla)
 sw.js                    palvelutyöntekijä
 manifest.webmanifest     sovelluksen tiedot kotivalikkoa varten
@@ -301,12 +365,11 @@ kaanonista ja koordinaatiosta, **Opus** lehdistä ja koodista, **Sonnet**
 tarkistuksista ja QA:sta. Omistaja ohjaa kaikkea Fablen kautta.
 
 Kaikkien linjausten ytimessä on **Raamattu**
-([js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)): koko pelin idea
-yhdessä tiiviissä tiedostossa. Uudet oleelliset linjaukset kirjataan
-vain sinne, ja ristiriidassa hyväksytty Raamattu-osio voittaa muut
-dokumentit. Raamattu näkyy myös pelissä kehittäjätilan lehtenä. Sen
-viimeinen osio on täydellinen kartta kaikkiin muihin ohjedokumentteihin
-— testi `tests/dokumentit.test.mjs` valvoo tätä koneellisesti.
+([docs/raamattu/](docs/raamattu/)): pelin kuvaus (A), linjaukset (B) ja
+aiheittaiset kortit. Ainoa ovi on `node tools/kirjaa.mjs` (hae, lue,
+paatos), ja ristiriidassa kortti voittaa muut dokumentit. Ovi löytää myös
+muut ohjedokumentit — testi `tests/dokumentit.test.mjs` valvoo tätä
+koneellisesti.
 
 Sisääntulo Claude-sessiolle on [CLAUDE.md](CLAUDE.md); tekniset
 periaatteet ja uuden sisällön lisääminen ovat tiedostossa
@@ -403,6 +466,7 @@ pakettien otsikkokommentit).
 | Internet Archive Book Images | Internet Archive | Public domain |
 | Paikallisaarteiden valokuvat (10 pääkaupunkimaata: ALB, AND, BLR, LIE, MCO, MDA, MKD, MNE, SMR, SRB) | Wikimedia Commons ja Metropolitan Museum of Art (Open Access): Antidiskriminator (byrek, PD), Metropolitan Museum of Art (Vrapin aarre, CC0), Kronologiko (trinxat, CC BY-SA 4.0), Zinneke (Casa de la Vall, CC BY-SA 3.0), Tess Mattew (draniki, CC BY-SA 4.0), Jauhienij (Slutskin vyö, PD), Schofför (Ribel, CC BY-SA 3.0), JoachimKohler-HB (Gutenbergin linna, CC BY-SA 4.0), Lemone (barbagiuai, CC BY-SA 4.0), Tangopaso (Sainte-Dévoten reliikki, PD), Endangered Snowdrop (mărțișor, CC BY-SA 4.0), Petru I Mușatin grosi (PD, kolikot), Наташа Величковска (tavče gravče, CC BY-SA 4.0), Dumbarton Oaks (Mikael VIII:n hyperpyron, PD) ja Enrico Dandolon grosso (PD), Sunshine Soon (vranac, CC BY 2.0), BuhaM (Doclea, CC BY-SA 4.0), Mooonswimmer (Torta Tre Monti, CC BY 4.0), San Marinon Statuta 1600 (PD), Verica 1966 (ajvar, CC BY-SA 4.0), Miroslavin evankeliumi (PD) | PD, CC0, CC BY, CC BY-SA |
 | Lippukuvat | Wikimedia Commons; nimeämistä vaativat neljä on lueteltu `js/packs/lippu-tekijat.js`:ssä | Public domain sekä CC BY-SA 2.5 ja 3.0 |
+| Valokuvakysymysten kuvat (CC BY ja CC BY-SA) | Kuvaajat kuvakohtaisesti; rivit tulevat datasta (`js/lahteet.js` kysymyskuvienRivit, kaupunkien valokuvat `js/packs/*-valokuvat.js`) | CC BY, CC BY-SA |
 | Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, aikakausjulisteet, sovelluskuvakkeet | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
 ### Äänet

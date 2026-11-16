@@ -1,0 +1,238 @@
+{
+ "aiheet.json": {
+  "sha": "3ce0b4941173c4fa",
+  "aika": "2026-11-12T07:29:49.694Z"
+ },
+ "AIHEET.md": {
+  "sha": "a85ad012b413cff9",
+  "aika": "2026-11-16T15:06:22.922Z"
+ },
+ "KIRJASTOT.md": {
+  "sha": "58b497d7ae0f85d5",
+  "aika": "2026-11-16T03:14:48.427Z"
+ },
+ "aiheet/kamera.md": {
+  "sha": "9014cee21f109aee",
+  "aika": "2026-11-13T20:35:33.605Z"
+ },
+ "aiheet/juna-ja-julkaisu.md": {
+  "sha": "d286d2f76a329962",
+  "aika": "2026-11-16T13:04:29.904Z"
+ },
+ "aiheet/juoksupeli.md": {
+  "sha": "c0d3719144597b8b",
+  "aika": "2026-11-14T21:05:14.060Z"
+ },
+ "paatokset/2026-11.md": {
+  "sha": "2a6fa668b6c235b8",
+  "aika": "2026-11-16T15:22:37.955Z"
+ },
+ "aiheet/nahtavyydet.md": {
+  "sha": "c2f3f3ba50b70862",
+  "aika": "2026-11-12T08:09:19.768Z"
+ },
+ "aiheet/lahteet-ja-tarkistus.md": {
+  "sha": "30fe942b5e30134e",
+  "aika": "2026-11-13T20:03:54.068Z"
+ },
+ "aiheet/kartta-ja-pallo.md": {
+  "sha": "e7c45df7fa0c6473",
+  "aika": "2026-11-15T13:38:59.299Z"
+ },
+ "aiheet/kartan-merkit-ja-nimet.md": {
+  "sha": "17863ffa82bb2de9",
+  "aika": "2026-11-12T18:18:33.028Z"
+ },
+ "aiheet/valmiin-maaritelma.md": {
+  "sha": "e68e3035c7777ced",
+  "aika": "2026-11-16T13:04:04.982Z"
+ },
+ "aiheet/lehti-ja-nostot.md": {
+  "sha": "d9f4794a05a386de",
+  "aika": "2026-11-13T10:46:41.538Z"
+ },
+ "aiheet/pulu-ja-kysymykset.md": {
+  "sha": "c777d7cba95241bd",
+  "aika": "2026-11-15T16:58:31.425Z"
+ },
+ "paatokset/2026-10.md": {
+  "sha": "e0368a7e88f5e478",
+  "aika": "2026-11-12T13:44:04.203Z"
+ },
+ "C-talo.md": {
+  "sha": "475e2549ee2ad9af",
+  "aika": "2026-11-16T13:04:00.642Z"
+ },
+ "aiheet/isoisa-ja-tarina.md": {
+  "sha": "03986439b658aa20",
+  "aika": "2026-11-12T18:04:25.297Z"
+ },
+ "aiheet/tekstit-ja-kieli.md": {
+  "sha": "9ffedfb464fdec06",
+  "aika": "2026-11-12T17:41:56.110Z"
+ },
+ "aiheet/kertojaaanet.md": {
+  "sha": "c4c0c4dd08404082",
+  "aika": "2026-11-12T08:51:47.287Z"
+ },
+ "aiheet/mallit-ja-3d.md": {
+  "sha": "98688d4ca47548e4",
+  "aika": "2026-11-12T08:33:31.727Z"
+ },
+ "aiheet/grafiikan-tuotanto.md": {
+  "sha": "855387cc49531db3",
+  "aika": "2026-11-16T06:56:14.229Z"
+ },
+ "aiheet/saapuminen-ja-intro.md": {
+  "sha": "7959c7d6e46e2e58",
+  "aika": "2026-11-12T15:07:25.362Z"
+ },
+ "aiheet/ui-pohjat.md": {
+  "sha": "18b6977fca0dc66c",
+  "aika": "2026-11-12T15:03:17.426Z"
+ },
+ "aiheet/testit.md": {
+  "sha": "18ffe41526a9bd70",
+  "aika": "2026-11-16T11:30:10.894Z"
+ },
+ "aiheet/tyylikirja.md": {
+  "sha": "33dd9ea9360bfa60",
+  "aika": "2026-11-12T18:04:18.951Z"
+ },
+ "aiheet/lataus-ja-kaynnistys.md": {
+  "sha": "7048c55440a85065",
+  "aika": "2026-11-12T12:28:42.647Z"
+ },
+ "aiheet/laitteet-ja-simulaattorit.md": {
+  "sha": "5d6375c5abfc12d9",
+  "aika": "2026-11-16T11:41:45.796Z"
+ },
+ "aiheet/matkustus-ja-reitit.md": {
+  "sha": "0cbd3b3b57a424e6",
+  "aika": "2026-11-12T18:39:15.524Z"
+ },
+ "aiheet/avaimet-ja-luvat.md": {
+  "sha": "d134f64963ddc1a9",
+  "aika": "2026-11-12T09:33:02.820Z"
+ },
+ "aiheet/lisenssit-ja-lataukset.md": {
+  "sha": "3031c92d9e3bb353",
+  "aika": "2026-11-16T06:45:03.930Z"
+ },
+ "aiheet/roolit-ja-viestit.md": {
+  "sha": "79debaa7370f82f2",
+  "aika": "2026-11-16T15:06:22.922Z"
+ },
+ "aiheet/omistajan-kanssa.md": {
+  "sha": "7f84846757258d35",
+  "aika": "2026-11-13T19:59:03.403Z"
+ },
+ "aiheet/nollaus-ja-luovutus.md": {
+  "sha": "53b2872abde5ecca",
+  "aika": "2026-11-14T20:35:57.452Z"
+ },
+ "aiheet/tyolista-ja-karjet.md": {
+  "sha": "73c31b95e7ae3960",
+  "aika": "2026-11-14T20:42:58.737Z"
+ },
+ "aiheet/agentit-ja-komennot.md": {
+  "sha": "f82300a1cdb79494",
+  "aika": "2026-11-14T16:46:04.245Z"
+ },
+ "aiheet/tilit-ja-kiintio.md": {
+  "sha": "47d7c4084642ea87",
+  "aika": "2026-11-16T12:07:23.170Z"
+ },
+ "aiheet/kaupungit.md": {
+  "sha": "0ec7ed880b8d818f",
+  "aika": "2026-11-14T22:43:51.319Z"
+ },
+ "paatokset/2026-09.md": {
+  "sha": "0a8d40bed8e23d51",
+  "aika": "2026-11-12T10:05:53.729Z"
+ },
+ "aiheet/oikeudet-ja-ansainta.md": {
+  "sha": "f132c98689d50f82",
+  "aika": "2026-11-12T10:06:01.057Z"
+ },
+ "aiheet/aarteet.md": {
+  "sha": "e37a10461ae8c0c8",
+  "aika": "2026-11-13T11:04:40.589Z"
+ },
+ "aiheet/suorituskyky-ja-muisti.md": {
+  "sha": "c387f1356d918592",
+  "aika": "2026-11-12T13:21:22.417Z"
+ },
+ "aiheet/kone-ja-levy.md": {
+  "sha": "1308fdaef20a4e35",
+  "aika": "2026-11-16T01:09:02.230Z"
+ },
+ "aiheet/opas-ja-kuumailmapallo.md": {
+  "sha": "ae9faf0f9e9c4c4d",
+  "aika": "2026-11-12T10:43:51.768Z"
+ },
+ "aiheet/museot.md": {
+  "sha": "3078aa365cc8b2ce",
+  "aika": "2026-11-12T18:18:39.551Z"
+ },
+ "aiheet/linssit.md": {
+  "sha": "b41b361e4f2b0f61",
+  "aika": "2026-11-12T10:49:43.861Z"
+ },
+ "aiheet/pelit-ja-minipelit.md": {
+  "sha": "7d27df099eef158f",
+  "aika": "2026-11-12T13:44:43.270Z"
+ },
+ "aiheet/talous-ja-pisteet.md": {
+  "sha": "04bfa4cfc99051aa",
+  "aika": "2026-11-12T15:21:43.863Z"
+ },
+ "aiheet/kohtaamiset-ja-reaktiot.md": {
+  "sha": "178a671f557fc7f3",
+  "aika": "2026-11-12T10:57:18.043Z"
+ },
+ "aiheet/iss-ja-avaruus.md": {
+  "sha": "f874ade4a2477a99",
+  "aika": "2026-11-12T10:57:27.072Z"
+ },
+ "aiheet/linnat-ja-dioraamat.md": {
+  "sha": "b16589a189b36c12",
+  "aika": "2026-11-12T10:54:56.054Z"
+ },
+ "aiheet/valo-ja-materiaalit.md": {
+  "sha": "f73af5efbf4edee5",
+  "aika": "2026-11-12T13:44:10.434Z"
+ },
+ "aiheet/musiikki-ja-tehosteet.md": {
+  "sha": "16595492c06df926",
+  "aika": "2026-11-12T13:44:21.788Z"
+ },
+ "aiheet/aaniluvat-ja-aaniportti.md": {
+  "sha": "f5f069897c9ca1e0",
+  "aika": "2026-11-15T20:47:02.236Z"
+ },
+ "aiheet/media-ja-ampari.md": {
+  "sha": "3867fa4693ca3ffe",
+  "aika": "2026-11-12T13:44:27.176Z"
+ },
+ "aiheet/arkkitehtuuri-ja-kirjastot.md": {
+  "sha": "466a8a52bb8fc4b7",
+  "aika": "2026-11-12T15:07:10.495Z"
+ },
+ "aiheet/maailma-ja-rajaukset.md": {
+  "sha": "af5d87ae4a31f83b",
+  "aika": "2026-11-12T15:03:06.384Z"
+ },
+ "aiheet/aika-ja-ulkoasu.md": {
+  "sha": "210997450d75d231",
+  "aika": "2026-11-12T15:03:11.908Z"
+ },
+ "A-peli.md": {
+  "sha": "28a8b9d70696ebbd",
+  "aika": "2026-11-12T16:10:44.546Z"
+ },
+ "B-linjaukset.md": {
+  "sha": "5ae48056fde63233",
+  "aika": "2026-11-12T16:10:52.198Z"
+ }
+}

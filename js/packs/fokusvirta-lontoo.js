@@ -128,8 +128,8 @@ export const FOKUSVIRTA_LONTOO = {
      * Wienissä (js/packs/fokusvirta-wien.js paikkarivi).
      */
     paikkarivi: "Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun toista puolta erota; puntari matalalla.",
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
-    teksti: "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+    /* KAANON: OMISTAJAN TEKSTI (omistajan 9.9.2026 teksti lyhennettynä, omistaja hyväksyi 15.11.2026 klo 08.33; suunnitelmat/20261115-lontoon-tekstit-lopulliset.md). Sanasta sanaan. 256 merkkiä. */
+    teksti: "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla kilpakumppanini Grimshaw tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -153,14 +153,6 @@ export const FOKUSVIRTA_LONTOO = {
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   },
   {
-    "id": "lontoo.r2",
-    "ankkuri": "katosi välillä näkyvistä",
-    "tarkoitus": "huvittuu",
-    "voimakkuus": 0.3,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
     "id": "lontoo.r3",
     "ankkuri": "pehmustettuja penkkejä",
     "tarkoitus": "huvittuu",
@@ -170,7 +162,7 @@ export const FOKUSVIRTA_LONTOO = {
   },
   {
     "id": "lontoo.r4",
-    "ankkuri": "herra Grimshaw’n, kilpakumppanini aarrejahdissa",
+    "ankkuri": "kilpakumppanini Grimshaw",
     "tarkoitus": "vakavoituu",
     "voimakkuus": 0.4,
     "siirtyma": 0,
@@ -185,9 +177,9 @@ export const FOKUSVIRTA_LONTOO = {
     "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
   }
 ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. [warmly] Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, otto 2, KK 15.11.2026 11.24; JU vienyt 13.53), ämpärin täysi osoite kuten Pariisissa. */
+    luenta: "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. [warmly] Laiturilla kilpakumppanini Grimshaw tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-lontoo.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-story-v2.jpg;
      * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
@@ -205,13 +197,6 @@ export const FOKUSVIRTA_LONTOO = {
         'https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs',
         'https://www.heritagefund.org.uk/news/worlds-oldest-known-underground-carriage-be-restored',
       ],
-    },
-    luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260911-paper2-v1.jpg",
-      lyhyt: "Lontoo, 1873. Perille päästiin nopeasti; yskä astui laiturille mukana.",
-      selite: 'Metropolitanin höyryjuna jäi puhkumaan laiturille, ja savu seurasi matkustajia kaasulamppujen alle. Matka oli nopea, mutta keuhkot tahtoivat antaa oman lausuntonsa.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/97","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"],
     },
   },
 
@@ -254,28 +239,34 @@ export const FOKUSVIRTA_LONTOO = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lontoo-01-r20260909-paikka-v2.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). (Lontoon kuva vaihdettu 15.11.2026, ks. alla.)
+     */
+    /*
+     * PULUN KUVA (PT 16.11.2026, omistaja 08.53 + KK: Codex #2350 hyväksytty sellaisenaan): Codexin havainnekuva Baker Streetin
+     * Circle-linjan laiturista; Commonsin valokuva (Philafrenzy, CC BY-SA 4.0) pois. Lähde: /Users/Shared/Claude/pulu-kuvaesikatselut/
+     * lontoo-baker-street-codex-v1.jpg (neliö 1254 px; rajaus = koko neliö ympyrään, ei `rajaus`-kenttää). Kuva viedään ämpäriin (JU/PT)
+     * osoitteeseen alla ennen yhdistämistä. Lähderivi: Matkakirjan havainnekuva, ei valokuvaajaa.
+     * `lyhyt` on KK:n hyväksymä selite-ehdotus; `selite` on SK:n luonnos (kaksi sisältölausetta, vain KK:n tarkistamia faktoja:
+     * Historic England 1239815, en-Wikipedia "Baker Street tube station").
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lontoo-01-r20260909-paikka-v2.jpg',
-        lyhyt: 'Lontoo: parlamentti jäi taustalle, sillä penkillä oli tärkeämpää.',
-        selite: 'Thamesin rantapenkiltä näkyvät parlamentti ja Elizabeth Tower, mutta nokkani edessä oleva muru ei löydy yhdeltäkään kartalta. Isoisä valitsi maanalaisen vaunun; tässä on parempi ilmanvaihto ja oma tarjoilu.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-lontoo-baker-street-codex-v1.jpg',
+        lyhyt: 'Baker Streetin laituri Lontoossa: asema avattiin 1863, ja laituri on yhä käytössä.',
+        selite: 'Circle-linjan laituri Baker Streetin asemalla Lontoossa. Aseman alkuperäiset laiturit 5 ja 6 ovat vuodelta 1863, ja junat pysähtyvät niillä yhä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://southbank.london/see-and-do/queens-walk',
-          'https://www.parliament.uk/about/living-heritage/building/palace-westmister-at-150/external-architecture-/',
-          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_Panorama_view_on_Victoria_Tower_Gardens,_Houses_of_Parliament,_Westminster_Bridge_%26_Saint_Thomas_Medical_School_01.jpg',
-          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_View_North_along_St_Thomas%27_Hospital.jpg',
-          'https://memoirsofametrogirl.com/2015/01/13/swan-benches-albert-embankment-lambeth-london-history/',
+          'https://historicengland.org.uk/listing/the-list/list-entry/1239815',
+          'https://en.wikipedia.org/wiki/Baker_Street_tube_station',
+          'https://www.lurs.org.uk/04_dec23_HIDDEN_LONDON_BAKER_STREET.pdf',
         ],
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Nyt metron junat kulkevat sähköllä. Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. Kerran tarkistin saman varjon kolmesti. Omahan se oli."],
+    /* KUPLA: KK:n lopullinen teksti 2 (omistajan vastaus 15.11.2026 klo 08.33: "Nenäliina ja laituri (Suositus)"; KK:n muotoilu). Sanasta sanaan. 145 merkkiä. */
+    kommentti: ["Voi isoisä! Nyt metrojunat kulkevat sähköllä, eikä nenäliinaa tarvita. Baker Streetillä ne pysähtyvät yhä samalle laiturille kuin sinun aikanasi."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
-    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -322,6 +313,10 @@ export const FOKUSVIRTA_LONTOO = {
        * täky kertoo sen isoisän merkinnän kulmasta.
        */
       id: 'vuorovesi',
+      kysymykset: [
+        'Mitä mudlarkit etsivät Thamesin kivirannalta laskuveden aikaan?',
+        'Miksi Thamesin rannalla ei saa etsiä aarteita vapaasti?',
+      ],
       nappi: 'Ranta, joka paljastuu kahdesti päivässä',
       otsikko: 'Thamesin laskuvesiranta',
       teksti: 'Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole '
@@ -333,10 +328,11 @@ export const FOKUSVIRTA_LONTOO = {
         + 'etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan '
         + 'mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei '
         + 'silti ole vapaata riistaa: lupa on ostettava '
-        + 'satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, '
+        + 'satamaviranomaiselta, ja kun lupia oli kertynyt noin 5 000, '
         + 'myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, '
-        + 'mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta '
-        + 'vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, '
+        + 'mutta lupia jaetaan enintään 4 000. Arkeologisesti kiinnostavat '
+        + 'löydöt, kuten yli kolmesataa vuotta vanhat esineet, on '
+        + 'ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
       lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
         + '(GBR/luonto). Tarkistettu 1.9.2026.',
@@ -363,9 +359,9 @@ export const FOKUSVIRTA_LONTOO = {
         ],
         oikea: 1,
         fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla '
-          + 'saa etsiä vain satamaviranomaisen luvalla, ja yli '
-          + 'kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
-          + 'museolle.',
+          + 'saa etsiä vain satamaviranomaisen luvalla, ja arkeologisesti '
+          + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat '
+          + 'esineet, on ilmoitettava Lontoon museolle.',
       },
     },
     {
@@ -385,6 +381,10 @@ export const FOKUSVIRTA_LONTOO = {
        * vuosina, joina hän kulki Lontoon läpi.
        */
       id: 'hirvet',
+      kysymykset: [
+        'Miksi Richmond Parkin laumasta kaadetaan eläimiä joka talvi?',
+        'Miksi saksanhirven urosten karjunta kuuluu syksyllä puiston laidalle asti?',
+      ],
       nappi: 'Kuusisataa hirveä tiiliaidan sisällä',
       otsikko: 'Richmond Parkin lauma',
       teksti: 'Sumun ja kivihiilen kaupungissa on kulman takana toinen '
@@ -460,6 +460,10 @@ export const FOKUSVIRTA_LONTOO = {
        * arveluksi, joten sitä EI kerrota.
        */
       id: 'cheapside',
+      kysymykset: [
+        'Miten yksi pieni sinettikivi paljasti, milloin laatikko kätkettiin?',
+        'Mistä päin maailmaa kätkön jalokivet oli tuotu Lontooseen?',
+      ],
       nappi: 'Laatikko, joka odotti kellarissa kolmesataa vuotta',
       otsikko: 'Cheapsiden kätkö',
       teksti: 'Isoisäsi sääntö sai Lontoossa todisteen — vain '
@@ -468,17 +472,17 @@ export const FOKUSVIRTA_LONTOO = {
         + '30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta '
         + 'tuli puinen laatikko. Sen sisällä oli yli neljäsataa '
         + 'korukappaletta: sormuksia, rintaneuloja, ketjuja, hajuvesipulloja '
-        + 'ja kameoita. Kivet olivat ympäri maailmaa — smaragdi '
-        + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
-        + 'Burmasta, lapislatsuli Afganistanista, turkoosi Persiasta, '
-        + 'helmet Bahrainista. Oudoin esine on omenan kokoinen '
-        + 'kolumbialainen smaragdi, joka oli koverrettu ontoksi ja jonka '
+        + 'ja kameoita. Kivet tulivat ympäri maailmaa: smaragdi '
+        + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, lapislatsuli Afganistanista, '
+        + 'turkoosi Persiasta, '
+        + 'helmet Bahrainista. Oudoin esine on kellonkuori, joka oli '
+        + 'koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka '
         + 'sisään oli sovitettu noin vuoden 1600 sveitsiläinen '
         + 'kellokoneisto. Yksi pieni sinettikivi kertoo, milloin '
         + 'laatikko pantiin maahan: siinä on Staffordin viscountin '
-        + 'vaakuna, jonka hän sai marraskuussa 1640, ja kellarin päällä '
+        + 'vaakuna, ja arvonimen hän sai vasta marraskuussa 1640. Kellarin päällä '
         + 'ollut talo paloi Lontoon suurpalossa syyskuussa 1666. Jossain '
-        + 'noiden kahden päivän välissä joku kaivoi laatikon lattiaansa '
+        + 'noiden kahden vuosiluvun välissä joku kaivoi laatikon lattiaansa '
         + 'eikä koskaan palannut hakemaan sitä.',
       lahde: 'en-Wikipedia "Cheapside Hoard". Tarkistettu 1.9.2026.',
       /*
@@ -767,6 +771,7 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Sutton Hoo',
       otsikko: 'Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi '
         + 'laivan, josta ei ollut jäljellä yhtään lautaa',
+      symboli: 'historia',
       lunastus: [
         'Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut '
           + 'avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne '
@@ -939,6 +944,20 @@ export const FOKUSVIRTA_LONTOO = {
           + 'paisunut osake romahtaa ja Exchange Alleyn kahvilat jäävät tyhjiksi.',
         lahde: 'William Hogarth 1721, Wikimedia Commons (CC0)',
       },
+      galleria: [
+        {
+          tiedosto: 'Jonathan\'s Coffee House or an Analysis of Change Alley With a Group of Characters from the Life - Inscribed to Jacob Henriques (BM 1868,0808.4311).jpg',
+          selite: 'Jonathan\'s-kahvilassa Exchange Alleyllä miehet kävivät kauppaa '
+            + 'osakkeilla ja puhuivat uutisista kahvikuppien ääressä.',
+          lahde: 'Jefferyes Hamett O\'Neale -teoksen mukaan 1763, British Museum, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Garraway\'s Coffee House.jpg',
+          selite: 'Garraway\'s oli kahvila Exchange Alleyllä, jossa myytiin kahvia '
+            + 'ja teetä ja huutokaupattiin tavaroita.',
+          lahde: 'George Walter Thornbury, Old and New London 1873, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
         'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',
@@ -1047,8 +1066,9 @@ export const FOKUSVIRTA_LONTOO = {
       lunastus: [
         'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
           + 'tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen '
-          + 'aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä '
-          + 'istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan '
+          + 'aikaan. Nykyinen rakennus on rakennettu Southwarkin '
+          + 'vuoden 1676 palon jälkeen, ja sen penkeillä istui aikanaan '
+          + 'Charles Dickens, joka mainitsee pubin romaanissaan '
           + 'Pikku Dorrit. Talo on niin arvokas, että sen omistaa National '
           + 'Trust — olutta myydään silti joka päivä.',
       ],
@@ -1057,10 +1077,10 @@ export const FOKUSVIRTA_LONTOO = {
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
         tiedosto: 'The George at Southwark (8553233399).jpg',
-        lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, nykyisin vuodelta 1677.',
+        lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, rakennettu uudelleen vuoden 1676 palon jälkeen.',
         selite: 'The George Southwarkissa on Lontoon viimeinen '
-          + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on vuodelta '
-          + '1677.',
+          + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on rakennettu '
+          + 'Southwarkin vuoden 1676 palon jälkeen.',
         lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
       },
       kysymykset: [
@@ -1273,6 +1293,13 @@ export const FOKUSVIRTA_LONTOO = {
       id: 'orbitin-liukumaki',
       wiki: 'Anish Kapoor',
       nimio: 'Liukumäkiveistos',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA; KK 13.11.2026, Lontoon faktapohja 3a):
+       * veistos on Stratfordin olympiapuistossa (51,538 / −0,013), joka jää Lontoon kohdekartan lepotilan
+       * näkymän itäpuolelle reunukselle. Kohdekartan piste 51,504 / −0,135 oli väärä, joten merkki on
+       * pääkartalla kuten Wienin Prater ja Rooman Avaimenreikä.
+       */
+      kattoVapaa: true,
       otsikko: 'Veistos, jonka sisällä on liukumäki',
       symboli: 'tekniikka',
       lunastus: [
@@ -1302,11 +1329,367 @@ export const FOKUSVIRTA_LONTOO = {
           + 'putkessa on?',
         'Mitä teräsvyyhdille tehdään kisojen jälkeen?',
       ],
+      // Stratford, 51,538 N / −0,013 E (en-Wikipedia "ArcelorMittal Orbit"); laudat projisoiLaudalle-muunnoksella.
       paikka: {
         nimi: 'Liukumäkiveistos',
         laudat: {
-          maailmankartta: { x: 5828.8, y: 1324.1 },
-          europe: { x: 208.6, y: 539 },
+          maailmankartta: { x: 5832.9, y: 1322.6 },
+          europe: { x: 211, y: 538.2 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA "Savusumu 1952" (KK 13.11.2026, Lontoon faktapohja kohdat 1 ja 5; vaihtoehto A).
+       *
+       * Lontoon tarinakaaren aarretehtävän (Leila, Clean Air Act 1956) vihje
+       * osoittaa tähän: tarinakaari.lontoo.kysymys.lahde =
+       * `nosto-lontoon-savusumu-1952` (js/tyohuone-kehitys-data.js).
+       * Lunastus on KK:n hyväksymä teksti sanatarkasti (sama kuin
+       * js/packs/nahtavyysjutut.js 'Savusumu 1952'). Faktat: en-Wikipedia
+       * "Great Smog of London" ja "Clean Air Act 1956" sekä pelin oppitunnin
+       * ja maalehden 1873-sumu (SK, PR 6681).
+       *
+       * Visa on eri kuin Leilan: se kysyy, mikä kulki sumun aikana (metro),
+       * ei lain sisältöä. Väärät vaihtoehdot ovat joukkoliikennettä, joka
+       * lähteen mukaan seisoi ("public transport, with the exception of the
+       * London Underground, was shut down"). KK lukee vaihtoehdot ennen junasanaa.
+       */
+      id: 'lontoon-savusumu-1952',
+      nimio: 'Savusumu 1952',
+      otsikko: 'Savusumu 1952 — viisi päivää ilman katuja',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'historia',
+      visa: {
+        kysymys: 'Mikä kulki sumun aikana, vaikka kaikki muu joukkoliikenne seisoi?',
+        vaihtoehdot: [
+          'Metro',
+          'Bussit',
+          'Thamesin jokiveneet',
+        ],
+        oikea: 0,
+        fakta: 'Joulukuun 1952 savusumussa kaikki joukkoliikenne metroa lukuun ottamatta pysähtyi.',
+      },
+      lunastus: [
+        'Joulukuussa 1952 Lontoon kadut katosivat viideksi päiväksi. Korkeapaine '
+          + 'painoi kivihiilen savun kadun tasalle ja tuuli tyyntyi: näkyvyys putosi '
+          + 'paikoin noin kolmeenkymmeneen senttiin, konsertteja ja elokuvanäytöksiä '
+          + 'peruttiin, ja kaikki joukkoliikenne metroa lukuun ottamatta pysähtyi. '
+          + 'Kuolleita arvioitiin ensin neljätuhatta, myöhemmissä laskelmissa '
+          + '10 000–12 000.',
+        'Joki on nähnyt sumun ennenkin. Isoisäsi matkavuonna 1873 tämä rantakatu '
+          + 'oli kolmen vuoden ikäinen. Joulukuussa pikimusta sumu pysäytti Thamesin '
+          + 'höyrylaivat, ja samana vuonna yhdeksäntoista ihmistä hukkui pudottuaan '
+          + 'sumussa jokeen, kanavaan tai satama-altaaseen.',
+        'Neljä vuotta savusumun jälkeen, vuonna 1956, säädettiin laki, joka puuttui '
+          + 'siihen, mistä savu tuli: piipusta ei enää saanut päästää tummaa savua, ja '
+          + 'kunnat saivat oikeuden määrätä kokonaisia alueita savuttomiksi, jolloin '
+          + 'kodin tulisijassa sai polttaa vain savutonta polttoainetta.',
+      ],
+      lahde: 'en-Wikipedia "Great Smog of London" ja "Clean Air Act 1956" sekä pelin '
+        + 'hyväksytty Lontoo-aineisto (oppitunti ja maalehti, sumu 1873); '
+        + 'SK:n tarkistus PR 6681, KK:n hyväksymä teksti 13.11.2026.',
+      kuva: {
+        tiedosto: "Nelson's Column during the Great Smog of 1952.jpg",
+        lyhyt: 'Nelsonin pylväs Trafalgar Squarella savusumussa joulukuussa 1952.',
+        selite: 'Nelsonin pylväs joulukuun 1952 savusumussa. Kuva on Trafalgar Squarelta, '
+          + 'noin puolen kilometrin päästä tästä rantakadun kohdasta.',
+        lahde: 'N T Stobbs, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miksi savu jäi kadun tasalle?',
+        'Kuinka moni kuoli savusumuun?',
+        'Mitä sumu teki Thamesille isoisän matkavuonna?',
+      ],
+      // Victoria Embankment, Embankment Gardens Savoyn kohdalla, 51,5093 N / −0,1207 E (SK PR 6681, KK 5.1).
+      paikka: {
+        nimi: 'Savusumu 1952',
+        laudat: {
+          maailmankartta: { x: 5829.3, y: 1323.9 },
+          europe: { x: 208.9, y: 538.9 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Händel ja Hendrix' (KK 14.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Händel ja Hendrix'. Kaksi itsenäistä lähdettä
+       * jokaiselle väitteelle (docs/raportit/lontoo-9-tarinapaikkaa-valinta-20261114.md ja
+       * lontoo-9-toiset-lahteet-20261114.md); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'handel-hendrix-brook-street',
+      nimio: 'Händel ja Hendrix',
+      otsikko: 'Händel ja Hendrix — kaksi taloa, yksi seinä',
+      symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Minkä teoksen Händel sävelsi 24 päivässä vuonna 1741?',
+        vaihtoehdot: [
+          'Messias-oratorion',
+          'Vesimusiikin',
+          'Kuninkaallisen ilotulitusmusiikin',
+        ],
+        oikea: 0,
+        fakta: 'Händel sävelsi Messiaan elokuun 22. ja syyskuun 14. päivän välillä 1741. Hänen kotinsa viereisessä talossa asui 1968–69 Jimi Hendrix.',
+      },
+      lunastus: [
+        'Mayfairin Brook Streetillä on kaksi vierekkäistä taloa, joissa asui kaksi '
+          + 'kuuluisaa muusikkoa. Säveltäjä Georg Friedrich Händel muutti numeroon 25 vuonna 1723 '
+          + 'ja asui siellä kuolemaansa saakka 14. huhtikuuta 1759. Elokuun 22. ja syyskuun 14. '
+          + 'päivän välillä 1741 hän sävelsi 24 päivässä Messias-oratorion, joka syntyi '
+          + 'todennäköisesti juuri tässä talossa.',
+        'Reilut kaksisataa vuotta myöhemmin viereisessä talossa, numerossa 23, asui vuosina '
+          + '1968–69 kitaristi Jimi Hendrix. Kerrotaan, että kun hän sai tietää Händelin asuneen '
+          + 'naapurissa, hän osti Messias-levyn.',
+        'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot '
+          + 'ovat yhdessä museo.',
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): English Heritage (siniset laatat), Handel Hendrix House -museo (Learn about Handel/Hendrix), en-Wikipedia "Handel & Hendrix in London" ja "Messiah (Handel)"; kaksi itsenäistä lähdettä.
+      lahde: 'Matkakirjan oma teksti · lähteinä English Heritage, Handel Hendrix House -museo ja Wikipedia',
+      kuva: {
+        tiedosto: 'George Frideric Handel by Thomas Hudson.jpg',
+        lyhyt: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä.',
+        selite: 'Thomas Hudsonin muotokuva Georg Friedrich Händelistä, joka asui Brook Streetin numerossa 25 vuodesta 1723 kuolemaansa saakka.',
+        lahde: 'Thomas Hudson, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Missä talossa Messias syntyi?',
+        'Miksi Hendrix osti Messias-levyn?',
+        'Millaista musiikkia Händelin aikana soitettiin?',
+      ],
+      // Brook Street 25 ja 23 (English Heritage 51,5131 / −0,14606; Wikipedia 51,513 / −0,1459).
+      paikka: {
+        nimi: 'Händel ja Hendrix',
+        laudat: {
+          maailmankartta: { x: 5828.5, y: 1323.7 },
+          europe: { x: 208.4, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Johnson 1755' (KK 14.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Johnson 1755'. Kaksi itsenäistä lähdettä
+       * jokaiselle väitteelle (docs/raportit/lontoo-9-tarinapaikkaa-valinta-20261114.md ja
+       * lontoo-9-toiset-lahteet-20261114.md); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'johnsonin-sanakirja-1755',
+      nimio: 'Johnson 1755',
+      otsikko: 'Johnson 1755 — sanakirja talosta Gough Squarella',
+      symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Kuinka suuren palkkion kustantajat sopivat Johnsonin saavan englannin sanakirjasta?',
+        vaihtoehdot: [
+          '1 500 guineaa',
+          '150 guineaa',
+          '15 000 guineaa',
+        ],
+        oikea: 0,
+        fakta: 'Sopimus oli 1 500 guinean arvoinen, ja sanakirja ilmestyi vuonna 1755, lähes vuosikymmen sopimuksen jälkeen.',
+      },
+      lunastus: [
+        '1740-luvun puolivälissä joukko lontoolaisia kustantajia palkkasi kirjailija Samuel '
+          + 'Johnsonin laatimaan englannin kielen sanakirjaa. Palkkio oli 1 500 guineaa. Työ '
+          + 'kesti lähes vuosikymmenen, ja kirja ilmestyi vuonna 1755.',
+        'Johnson asui työn aikana osan ajasta Gough Squarella Fleet Streetin pohjoispuolella, '
+          + 'talossa numero 17. Hän merkitsi kirjoihin kohdat, joissa sana esiintyi esimerkkinä, '
+          + 'ja apulaiset kopioivat ne paperiliuskoille. Talo oli täynnä kirjoja ja apulaisia.',
+        'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
+          + 'vuokraamansa talo seisoi yhä Gough Squarella. Nykyään siinä on museo.',
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): drjohnsonshouse.org (Johnson's Dictionary, 17 Gough Square); Boswell, Life of Johnson (1791, Gutenberg); EB 1911 "Johnson, Samuel" (Wikisource): 1 500 guineaa, julkaisu 1755. Sopimusvuosi jätetty pois tarkoituksella (lähteet 1746/1747). Paikka ja museo: en-Wikipedia "Dr Johnson's House".
+      lahde: 'Matkakirjan oma teksti · lähteinä Dr Johnson\'s House -museo, Boswellin Life of Johnson, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Dr Johnson\'s House, Gough Square - geograph.org.uk - 5590547.jpg',
+        lyhyt: 'Dr Johnsonin talo Gough Squarella.',
+        selite: 'Gough Squaren talo numero 17, jossa Samuel Johnson asui osan sanakirjan teon ajasta ja jossa nykyään on museo.',
+        lahde: 'Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miten apulaiset auttoivat Johnsonia sanakirjan teossa?',
+        'Miksi sanakirjan tekeminen kesti niin kauan?',
+        'Millainen oli Fleet Street Johnsonin aikaan?',
+      ],
+      // Gough Square 17 (en-Wikipedia "Dr Johnson's House" 51,515 / −0,10806).
+      paikka: {
+        nimi: 'Johnson 1755',
+        laudat: {
+          maailmankartta: { x: 5829.7, y: 1323.7 },
+          europe: { x: 209.1, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Punch 1662' (KK 14.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Punch 1662'. Kaksi itsenäistä lähdettä
+       * jokaiselle väitteelle (docs/raportit/lontoo-9-tarinapaikkaa-valinta-20261114.md ja
+       * lontoo-9-toiset-lahteet-20261114.md); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'punch-pepys-1662',
+      nimio: 'Punch 1662',
+      otsikko: 'Punch 1662 — nukketeatteri Covent Gardenissa',
+      symboli: 'historia',
+      visa: {
+        kysymys: 'Mistä maasta oli se nukketeatteri, jonka Pepys näki Covent Gardenissa 1662?',
+        vaihtoehdot: [
+          'Italiasta',
+          'Ranskasta',
+          'Hollannista',
+        ],
+        oikea: 0,
+        fakta: 'Pepys kirjasi 9. toukokuuta 1662 nähneensä Covent Gardenissa italialaisen nukketeatterin ja piti sitä hyvin sievänä.',
+      },
+      lunastus: [
+        'Toukokuun 9. päivänä 1662 Samuel Pepys kirjasi päiväkirjaansa käyneensä Covent '
+          + 'Gardenissa katsomassa italialaista nukketeatteria, jota esitettiin aitauksen sisällä. '
+          + 'Hänen mielestään se oli hyvin sievä, parasta mitä hän oli nähnyt, ja katsojia '
+          + 'riitti. Merkintä ei mainitse Punchia nimeltä, mutta perinteen mukaan päivä on Punchin '
+          + 'syntymäpäivä.',
+        'Vuonna 1669 Pepys kirjasi toisen merkinnän: kujalla hän kuuli köyhien kutsuvan '
+          + 'lihavaa lastaan Punchiksi, ja se ilahdutti häntä, koska sana oli tullut yleiseen '
+          + 'käyttöön kaikesta paksusta ja lyhyestä. Nimi on lyhennys Punchinellosta, joka tulee '
+          + 'italialaisesta Pulcinellasta.',
+        'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut yli 200 vuotta. St Paulin '
+          + 'kirkon seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
+          + 'merkinnästä.',
+      ],
+      // Lähdemuistiinpano (SK 14.11.2026): Pepysin päiväkirja 9.5.1662 ja huhtikuu 1669 (en-Wikisource); EB 1911 "Punch (puppet)" (Wikisource); laatta nähty Commons-kuvasta. Pepysin päivä on juliaaninen. "Punchin syntymäpäivä" = perinne (vain Wikipedia, KK 23.31 sallii). Gimonde, swazzle ja "pleased as Punch" jätetty pois (yksi lähde).
+      lahde: 'Matkakirjan oma teksti · lähteinä Pepysin päiväkirja, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
+        lyhyt: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa.',
+        selite: 'Muistolaatta St Paulin kirkon seinällä Covent Gardenissa kertoo, että Pepys näki Punchin nukketeatterin lähellä tätä paikkaa vuonna 1662.',
+        lahde: 'Spudgun67, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Mitä Pepys kirjoitti nukketeatterista?',
+        'Mistä nimi Punch tulee?',
+        'Miksi Covent Gardenissa esitettiin nukketeatteria?',
+      ],
+      // St Paulin kirkko Covent Gardenissa (en-Wikipedia 51,51139 / −0,12417); laatta kirkon seinällä.
+      paikka: {
+        nimi: 'Punch 1662',
+        laudat: {
+          maailmankartta: { x: 5829.2, y: 1323.8 },
+          europe: { x: 208.8, y: 538.9 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Baird 1926' (KK 15.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Baird 1926'. Vain kahden lähteen väitteet
+       * (docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 5); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'baird-televisio-1926',
+      nimio: 'Baird 1926',
+      otsikko: 'Baird 1926 — liikkuva kuva Sohon yläkerrassa',
+      symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Mitä Bairdin televisiokokeissa käytettiin kuvattavana?',
+        vaihtoehdot: [
+          'Vatsastapuhujan nuken päätä',
+          'Kipsistä valettua rintakuvaa',
+          'Maalattua muotokuvaa',
+        ],
+        oikea: 0,
+        fakta: 'Nuken päätä kutsuttiin Stooky Billiksi. Tammikuussa 1926 Baird esitteli televisiotaan Royal Institutionin jäsenille Sohossa.',
+      },
+      lunastus: [
+        'Tammikuussa 1926 keksijä John Logie Baird esitteli Royal '
+          + 'Institutionin jäsenille laitettaan laboratoriossa, joka oli yläkerran huoneessa '
+          + 'Frith Streetillä Sohossa. Vieraat näkivät, miten liikkuva kuva siirtyi huoneesta '
+          + 'toiseen. The Times kirjoitti esityksestä 28. tammikuuta. Tätä tilaisuutta pidetään '
+          + 'ensimmäisenä todellisen television esityksenä.',
+        'Bairdin televisio oli mekaaninen, ja sen ytimessä oli pyörivä kiekko, jonka '
+          + 'saksalainen Paul Nipkow oli keksinyt jo vuonna 1884. Kokeissa kuvattavana oli '
+          + 'vatsastapuhujan nuken pää, jota kutsuttiin Stooky Billiksi. Kuvaamiseen tarvittiin '
+          + 'kirkkaita lamppuja, joiden alla ihmisen oli tukala olla.',
+        'Isoisäsi matkavuonna 1873 televisiota ei vielä ollut, eikä Baird ollut edes '
+          + 'syntynyt. Nipkow\'n kiekon keksimiseen oli vielä yksitoista vuotta.',
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 5): Royal Institution ja tammikuu 1926 = Moseley ja Barton Chapple,
+      // Television To-day and To-morrow (1930) + Larner, Practical Television (1928); Frith Street, yläkerran huone, huoneesta toiseen
+      // ja Times 28.1. = The Timesin juttu (lainattu Moseleyssa) + Wikipedia; "pidetään ensimmäisenä" = Moseley + Larner (molemmat
+      // brittiläisiä, siksi varovasti); nuken pää = Times + Dunlap, The Outlook for Television (1932); Stooky Bill = Dunlap + Wikipedia;
+      // Nipkow 1884 = Dunlap + Wikipedia; lamput pehmeästi (vain Dunlap, ei syy-yhteyttä nukkeen). Pois KK:n rajauksella: päivä 26.1.,
+      // talonumero 22, Bar Italia, "langattomasti", syntymävuosi 1888 (vain Wikipedia).
+      lahde: 'Matkakirjan oma teksti · lähteinä The Times (1926), Moseleyn ja Barton Chapplen Television To-day and To-morrow, Larnerin Practical Television, Dunlapin The Outlook for Television, BBC ja Wikipedia',
+      kuva: {
+        tiedosto: 'John Logie Baird in 1917.jpg',
+        lyhyt: 'John Logie Baird vuonna 1917.',
+        selite: 'John Logie Baird valokuvassa vuodelta 1917, lähes vuosikymmen ennen Frith Streetin esitystä.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten Bairdin mekaaninen televisio toimi?',
+        'Kuka oli Stooky Bill?',
+        'Mitä The Times kirjoitti esityksestä?',
+      ],
+      // Frith Street Sohossa, kadun eteläpää (talonumeroa ei käytetä; piste kadulla, ei talossa).
+      paikka: {
+        nimi: 'Baird 1926',
+        laudat: {
+          maailmankartta: { x: 5828.9, y: 1323.7 },
+          europe: { x: 208.7, y: 538.8 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA 'Sähkötin 1837' (KK 15.11.2026: Lontoon 9 tarinapaikkaa; SK:n data-luonnos, KK:n rajaukset).
+       * Lunastus on sama teksti kuin js/packs/nahtavyysjutut.js 'Sähkötin 1837'. Vain kahden lähteen väitteet
+       * (docs/raportit/lontoo-9-hakukierros-6-20261115.md kohta 6); tarkistaja ja KK lukevat ennen junaa.
+       */
+      id: 'sahkotin-euston-1837',
+      nimio: 'Sähkötin 1837',
+      otsikko: 'Sähkötin 1837 — neulat Eustonin radalla',
+      symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Montako neulaa oli Cooken ja Wheatstonen vuonna 1837 patentoimassa sähköttimessä?',
+        vaihtoehdot: [
+          'Viisi',
+          'Kaksi',
+          'Kymmenen',
+        ],
+        oikea: 0,
+        fakta: 'Patentin sähköttimessä oli viisi neulaa. Heinäkuussa 1837 sähkötintä kokeiltiin Euston-aseman ja Camden Townin välillä.',
+      },
+      lunastus: [
+        'Toukokuussa 1837 William Cooke ja Charles Wheatstone sopivat yhteistyöstä, ja '
+          + 'samana vuonna he saivat sähköttimelleen yhteisen patentin. Heinäkuussa 1837 laitetta '
+          + 'kokeiltiin London and Birmingham -radalla Euston-aseman ja Camden Townin välillä.',
+        'Patentin sähköttimessä oli viisi neulaa. Ne osoittivat taululta kirjaimia: kaksi neulaa '
+          + 'kääntyi osoittamaan samaa kirjainta. Myöhemmin Great Western Railway otti sähköttimen '
+          + 'käyttöön radallaan, joka lähti Paddingtonin asemalta.',
+        'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta. Molemmat keksijät '
+          + 'olivat vielä elossa: Wheatstone kuoli 1875 ja Cooke 1879.',
+      ],
+      // Lähdemuistiinpano (SK 15.11.2026, hakukierros 6 kohta 6): yhteistyö toukokuussa 1837 = The Electric Telegraph: Was it
+      // invented by Professor Wheatstone? (1856, molempien osapuolten kiistakirjoitukset) + Munro, Heroes of the Telegraph (1891)
+      // + DNB "Cooke, William Fothergill"; patentin kuukausi kiistanalainen (Cooke 12.6.1837 vs. WP/DNB toukokuu) → teksti "samana vuonna";
+      // yhteinen patentti 1837 myös EB 1911 "Wheatstone"; koe Euston–Camden Town London and Birmingham -radalla heinäkuussa 1837 =
+      // 1856-kokoelma + Munro (+ DNB); viisi neulaa = patentin laite (Munro + DNB + WP; Eustonin koelaite WP:n mukaan neljä neulaa → ei sidota); neulat osoittivat kirjaimia = Munro + WP; keksijät elossa 1873 = EB 1911 + WP; GWR Paddingtonista = Munro + 1856-kokoelma (+ DNB). Radan nimi
+      // London and Birmingham (Munron "London and North Western" on anakronismi). Pois KK:n rajauksella: päivä 25.7., köysiveto,
+      // West Drayton, "välinpitämättömästi", miesten paikat, (tarkistaja 15.11.: "elossa 1873" täyttyy EB 1911 + WP, otettu mukaan).
+      lahde: 'Matkakirjan oma teksti · lähteinä Cooken ja Wheatstonen kiistakirjoitukset (1856), Munron Heroes of the Telegraph, Dictionary of National Biography, Encyclopaedia Britannica (1911) ja Wikipedia',
+      kuva: {
+        tiedosto: 'Wheatstone Charles drawing 1868.jpg',
+        lyhyt: 'Charles Wheatstone, Samuel Laurencen piirros 1868.',
+        selite: 'Charles Wheatstone Samuel Laurencen piirroksessa vuodelta 1868, kolme vuosikymmentä Eustonin kokeen jälkeen.',
+        lahde: 'Samuel Laurence, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten neulasähkötin välitti viestin?',
+        'Miksi rautatiet tarvitsivat sähkötintä?',
+        'Mitä Cooke ja Wheatstone tekivät yhdessä?',
+      ],
+      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, nimiö oikealle.
+      paikka: {
+        nimi: 'Sähkötin 1837',
+        laudat: {
+          maailmankartta: { x: 5828.9, y: 1323.1 },
+          europe: { x: 208.6, y: 538.4 },
         },
       },
     },

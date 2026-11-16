@@ -823,6 +823,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        *     lähtijöistä, maaliin päässeistä ja voittoajasta.
        */
       id: 'vasaloppet',
+      symboli: 'urheilu',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Vasaloppet',
       otsikko: 'Tuleva kuningas pakeni legendan mukaan suksilla, ja '

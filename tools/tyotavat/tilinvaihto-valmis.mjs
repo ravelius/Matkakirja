@@ -15,6 +15,9 @@
  *     kotikansioiden juuren .md-tiedostoihin eikä ~/.claude/CLAUDE.md:hen;
  *  5) Asemataulu: työkansion kopiot = main ja tarkistin läpi (python3 -I tools/asemataulu/asemataulu.py --tarkista;
  *     docs/moduulit/asemataulu.md luku 2).
+ *  6) Ajojonon portti: PORTTI-lokissa tämän päivän "PORTTI OK <p.k.vvvv klo>" -rivi (JU:n portti-testi.zsh;
+ *     omistaja 16.11.2026 klo 13.25, P-261116-14, kortti laitteet-ja-simulaattorit 12) ja "JUNASANA-PORTTI OK"
+ *     (junasana.zsh; omistaja 13.43, P-261116-16, kortti juna-ja-julkaisu 2).
  * Paluuarvo 0 = valmis, 1 = puutteita (tulostetaan).
  */
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -65,7 +68,7 @@ for (const { rooli, id } of rivit) {
   try { d = JSON.parse(readFileSync(t.polku, 'utf8')); } catch { huom(`${rooli}: sessiotiedosto ei ole JSONia`); continue; }
   if (d.isArchived) huom(`${rooli}: sessio arkistoitu (${id})`);
   if (tili && t.tili !== tili) huom(`${rooli}: sessio on toisella tilillä (${t.tili.slice(0, 8)})`);
-  const malli = /sonnet/.test(d.model || '') ? 'Sonnet 5.5' : /opus/.test(d.model || '') ? 'Opus' : (d.model || '?');
+  const malli = /sonnet/.test(d.model || '') ? 'Sonnet 5.5' : /opus/.test(d.model || '') ? 'Opus' : /fable/.test(d.model || '') ? 'Fable' : (d.model || '?');
   const odotus = malliSarake.get(id) || '';
   if (odotus && (!odotus.includes(malli) || (d.effort && !odotus.includes(d.effort)))) {
     huom(`${rooli}: osoitekirja "${odotus}", sessio ${malli}, ${d.effort}`);
@@ -99,7 +102,7 @@ tarkistettavat.add(join(homedir(), '.claude/CLAUDE.md'));
 for (const polku of tarkistettavat) {
   if (!existsSync(polku) || polku === OSOITEKIRJA) continue;
   // omistajan tilikohtaiset id:t ("local_… tilillä <tili>", ~/.claude/CLAUDE.md 3.11.2026 16.4x) ovat tarkoituksellisia
-  const teksti = readFileSync(polku, 'utf8').split('\n').filter((r) => !/local_[0-9a-f-]+ tilillä /.test(r)).join('\n');
+  const teksti = readFileSync(polku, 'utf8').split('\n').filter((r) => !/local_[0-9a-f-]+ (pää)?tilillä/.test(r)).join('\n');
   const taydet = (teksti.match(/local_[0-9a-f]{8}-[0-9a-f-]{27}/g) || []).filter((i) => !nykyiset.has(i));
   const lyh = (teksti.match(/local_[0-9a-f]{8}(?![0-9a-f-])/g) || []).filter((i) => !lyhyet.has(i));
   const vanhat = [...new Set([...taydet.map((i) => i.slice(0, 14)), ...lyh])];
@@ -110,6 +113,21 @@ for (const polku of tarkistettavat) {
 const at = spawnSync('python3', ['-I', join(REPO, 'tools/asemataulu/asemataulu.py'), '--tarkista'], { encoding: 'utf8' });
 if (at.status !== 0) huom(`Asemataulu ei valmis (python3 -I tools/asemataulu/asemataulu.py):\n${(at.stdout || '').split('\n').filter((r) => /^(PUUTE|VIRHE)/.test(r)).join('\n')}`);
 else console.log('Asemataulu: kopiot = main, tarkistin läpi.');
+
+// 6) Ajojonon ja junasanan portti: vain tieto, EI ehto (omistaja 16.11.2026 klo 15.01, KK 15.02: tarkistukset eivät hidasta; ajetaan yöllä)
+const PORTTI_LOKI = process.env.PORTTI_LOKI || '/Users/Shared/Claude/julkaisija-tyokalut/portti-ok.log';
+{
+  const n = new Date();
+  const tanaan = `${n.getDate()}.${n.getMonth() + 1}.${n.getFullYear()}`;
+  const rivitP = existsSync(PORTTI_LOKI) ? readFileSync(PORTTI_LOKI, 'utf8').split('\n') : [];
+  const ok = rivitP.filter((r) => r.startsWith('PORTTI OK ') && r.slice(10).split(' ')[0] === tanaan);
+  if (!ok.length) console.log(`Huom (ei ehto, omistaja 16.11. 15.01): ajojonon portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "PORTTI OK ${tanaan} …" (aja JU:n portti-testi.zsh)`);
+  else console.log(`Ajojonon portti: ${ok[ok.length - 1]}.`);
+  // Junasanan portti (P-261116-16): junasana.zsh:n itsetesti kirjoittaa samaan lokiin
+  const js = rivitP.filter((r) => r.startsWith('JUNASANA-PORTTI OK ') && r.slice(19).split(' ')[0] === tanaan);
+  if (!js.length) console.log(`Huom (ei ehto, omistaja 16.11. 15.01): junasanan portti: ${PORTTI_LOKI} ei sisällä tämän päivän riviä "JUNASANA-PORTTI OK ${tanaan} …" (JU:n junasana.zsh-itsetesti)`);
+  else console.log(`Junasanan portti: ${js[js.length - 1]}.`);
+}
 
 console.log(puutteet.length ? `\nTILINVAIHTO EI VALMIS: ${puutteet.length} puutetta.` : '\nTilinvaihto valmis.');
 process.exit(puutteet.length ? 1 : 0);

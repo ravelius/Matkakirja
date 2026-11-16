@@ -2587,10 +2587,6 @@ paivitaKehittajaValikko();
  * riveiltä (js/tyohuone-kehittajalehti.js), jotka kutsuvat samoja
  * ui-funktioita kuin poistetut napit.
  */
-document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
-  suljeKehittajaValikko();
-  window.matkakirja?.ui?.avaaRaamattuLehti();
-});
 document.getElementById('kehittajalehti-btn')?.addEventListener('click', () => {
   suljeKehittajaValikko();
   window.matkakirja?.ui?.avaaKehittajalehti();

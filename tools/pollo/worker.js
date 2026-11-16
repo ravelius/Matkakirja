@@ -395,7 +395,7 @@ const PUHE_PERSOONAT = {
 /*
  * JÄRJESTELMÄKEHOTE — hahmon koko luonne ja kaikki kiellot.
  *
- * Tämä on sitova määrittely (js/tyohuone-raamattu.js, osio "Viisas
+ * Tämä on sitova määrittely (vanha Raamattu, arkistossa docs/arkisto/, osio "Viisas
  * Pöllö"): tietokumppani on TIEDON hahmo, ei tarinan. Se syventää
  * lehtien tietoa ja vastaa tosimaailman kysymyksiin, mutta ei ratkaise
  * pelin tehtäviä eikä paljasta juonta.
@@ -1036,6 +1036,16 @@ tehtäviin, vastauksiin, pisteisiin tai juoneen liittyviä.
 Kirjoita täsmälleen kaksi riviä, yksi kysymys riville, ilman numerointia, \
 ilman ranskalaisia viivoja ja ilman johdantoa. Jokainen kysymys enintään 70 \
 merkkiä ja päättyy kysymysmerkkiin.`;
+
+/*
+ * EHDOTUSTEN LOPPUOHJE (Pelikoodari 9.11.2026, PT:n jono): pitkä tilanne (isoisän matkakirjamerkintä 900 merkkiä) sai
+ * testiliikenteen Haiku 5.5:n kirjoittamaan Pulun puhetta koko 200 tokenin katon (lokissa out=200) → yhtään kysymysriviä
+ * ei jäänyt ja worker vastasi 200 + tyhjä lista (Pulun lähde 3, "Pelaaja katsoo kartalla (kysymykset tästä): nähtävyys
+ * Eiffel-torni (Pariisi)"). Ohje tilanteen PERÄÄN käyttäjäviestiin (järjestelmäkehotteen välimuistietuliite ei muutu):
+ * 3/3 ja 3/3 kokeissa kaksi kysymystä, ja "(kysymykset tästä)" -kohde pitää molemmat kysymykset siinä kohteessa.
+ */
+export const EHDOTUSTEN_LOPPUOHJE = 'Kirjoita nyt vain ne kaksi kysymysriviä: ei alustusta, ei kommenttia, ei muuta tekstiä. '
+  + 'Jos tilanteessa on rivi "(kysymykset tästä)", molemmat kysymykset koskevat juuri sitä kohdetta.';
 
 /*
  * TASAN KAKSI JATKOKYSYMYSTÄ (omistaja 5.10.2026 klo 16.4x: "pulun pitäisi antaa aina kaksi uutta kysymysvaihtoehtoa
@@ -4440,7 +4450,7 @@ export default {
           jarjestelma: `${JARJESTELMAKEHOTE}\n\n${kuratoitu ? `${KURATOITU_KEHOTE}\n\n` : ''}${EHDOTUSKEHOTE}`,
           viestit: [{
             role: 'user',
-            content: `Pelaajan tilanne juuri nyt:\n\n${konteksti || '(ei tietoa näkymästä)'}`,
+            content: `Pelaajan tilanne juuri nyt:\n\n${konteksti || '(ei tietoa näkymästä)'}\n\n${EHDOTUSTEN_LOPPUOHJE}`,
           }],
           maxTokens: 200,
         });

@@ -686,6 +686,7 @@ export const FOKUSVIRTA_HELSINKI = {
       nimio: 'Oulun terva',
       otsikko: 'Maailman laivat pysyivät kuivina suomalaisella tervalla — '
         + 'ja tynnyrit oli pakko soutaa Tukholmaan',
+      symboli: 'kauppa',
       lunastus: [
         'Terva on pihkaista mäntyä, joka poltetaan hapettomassa ja '
           + 'riittävän kuumassa haudassa. Lopputulos hylkii vettä, ja siksi '

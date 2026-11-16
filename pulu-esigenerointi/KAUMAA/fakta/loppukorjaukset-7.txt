@@ -1,0 +1,26 @@
+### v1-277
+VANHA: jatkuvasti; yksityiskohdista en ole täysin varma.
+UUSI: jatkuvasti.
+SYY: irrallinen epävarmuuslause
+
+### v1-278
+VANHA: Karja Forumilla ja nyt siellä kävelee turisteja, aika on kyl outo kirjeenkantaja.
+UUSI: Karjan tilalla Forumilla kävelee nykyään turisteja, kyyhky on nähnyt kummempaakin.
+SYY: epäselvä, merkityksetön loppulause
+
+### v1-291
+VANHA: En ole varma, miten nimi on aikojen kuluessa muuttunut.
+UUSI:
+SYY: turha, kysymättä jäänyt epävarmuus
+
+### v1-295
+VANHA: Minä en tuo muuta kuin kirjeitä.
+UUSI: Ristejä on enemmän kuin kyyhky ehtii laskea.
+SYY: loppulause ei liity aiheeseen
+
+### v1-309
+VANHA: Ylhäältä katsoen koko metsä on yhtä vihreää hyrinää.
+UUSI: Ylhäältä katsoen koko metsä on yhtä vihreää.
+SYY: merkityksetön ilmaus (hyrinää)
+
+LOPPU: tarkistettu 45 vastausta (v1-270…v1-314), korjauksia 5

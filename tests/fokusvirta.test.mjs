@@ -70,6 +70,9 @@ const VIRRATON = packById('maailmankartta').cities.find((city) => !FOKUSVIRRAT[c
 /** Kadonneet ihmeet 31.10.2026 (Karttaseppä): kytketyt erät, lopuksi 43. */
 const IHMEET_20261031 = 43;
 
+/** Uudelleennimetyt ihmekuvat (-v2, CDN-välimuistin ohitus): Temple-torni 9.11.2026 (vaatetori). Vanha jää kansioon. */
+const IHMEET_V2_20261109 = 1;
+
 test('virta kulkee vaiheet sovitussa järjestyksessä', () => {
   let tila = fokusvirtaAlkutila();
   assert.equal(tila.vaihe, 'matkakirja');
@@ -994,8 +997,8 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 104 + IHMEET_20261031,
-    'kansiossa on 104 ihmekuvaa + 31.10.2026 erät');
+  assert.equal(tiedostot.length, 104 + IHMEET_20261031 + IHMEET_V2_20261109,
+    'kansiossa on 104 ihmekuvaa + 31.10.2026 erät + 9.11.2026 -v2-kuvat');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }

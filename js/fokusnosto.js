@@ -810,6 +810,14 @@ function nostoMerkinKentat(nosto, paikka) {
      * vedoksessa kakkostasolle (docs/raportit/poltto-koe-20260920.md).
      */
     ...(nosto.taso ? { taso: Number(nosto.taso) } : {}),
+    /*
+     * LUONNON LAJI (KK 13.11.2026, täkymerkit c): valinnainen `laji`
+     * (jarvi|joki|meri) kulkee merkkiriville, jotta ladonta
+     * (js/fokuskohteet.js kohdeMerkinLadonta) antaa sen merkin lajiksi
+     * tyypin 'nosto' sijaan. Ilman tätä Baikal sai vuoren merkin
+     * (vienti karttavalot.laji → natiivin Kuvamerkki).
+     */
+    ...(nosto.laji ? { laji: nosto.laji } : {}),
   };
 }
 

@@ -1273,38 +1273,6 @@ function piirraPelitaulu(kohde) {
 }
 
 /**
- * Raamatun lukuun liittyvät generoidut taulusivut (tyhjä lista, jos
- * luvulla ei sellaisia ole). Kutsutaan js/lehti.js:n avaaRaamattuLehti-
- * funktiosta, joka pujottaa sivut luvun perään. Jäsennys 19.10.2026:
- * aarteet ja tutki kätkö -pelit ovat luvussa 2 (Pelisuunnittelu);
- * vanhat osio-otsikot tunnistetaan yhä.
- */
-export function raamatunTaulusivut(osio, i) {
-  const o = osio.otsikko;
-  const pelisuunnittelu = /^\d+\. Pelisuunnittelu/.test(o);
-  const sivut = [];
-  if (pelisuunnittelu || o.startsWith('Aarteet')) {
-    sivut.push({
-      id: `raamattu-${i}-aarteet`,
-      nimi: 'Aarteet taulukkona',
-      yksipalsta: true,
-      rakenna: piirraAarretaulut,
-    });
-  }
-  if (pelisuunnittelu || o.startsWith('Tutki kätkö')) {
-    sivut.push({
-      id: `raamattu-${i}-pelit`,
-      // Nimi eroaa Raamatun oman osion otsikosta, muuten sisällys-
-      // valikossa olisi kaksi samannimistä riviä peräkkäin.
-      nimi: 'Pelit taulukkona',
-      yksipalsta: true,
-      rakenna: piirraPelitaulu,
-    });
-  }
-  return sivut;
-}
-
-/**
  * Tilastot-lehden sivut. Ensimmäinen sivu on itse taulu — se on
  * lehden koko syy olla olemassa.
  */
@@ -1321,6 +1289,22 @@ export function tilastoSivut() {
       nimi: 'Luvut',
       yksipalsta: true,
       rakenna: piirraLuvut,
+    },
+    /*
+     * Aarteet ja tutki kätkö -pelit taulukkoina: siirretty poistetusta
+     * Raamattu-lehdestä (KK 12.11.2026 17.30, vanhan Raamatun js:n poisto).
+     */
+    {
+      id: 'tilastot-aarteet',
+      nimi: 'Aarteet taulukkona',
+      yksipalsta: true,
+      rakenna: piirraAarretaulut,
+    },
+    {
+      id: 'tilastot-pelit',
+      nimi: 'Pelit taulukkona',
+      yksipalsta: true,
+      rakenna: piirraPelitaulu,
     },
     /*
      * Kiintiöt viimeisenä (omistajan tilaus 21.8.2026): ne eivät kerro

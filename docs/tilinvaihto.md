@@ -32,6 +32,12 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
 3. Kirjaa tili: päätili (omistajan muukin käyttö) = raja 92 % (omistaja 5.11.2026 klo 17.06); koodaustili = vain rivi 99 %:ssa. Kirjaus lokiin
    (`node tools/raamattu-kirjaa.mjs "TILINVAIHTO …"`) ja F/asemataulu/osoitteet.md:n taulukkoon; Postivahdille, kun se on luotu.
 
+## 0.5 Yösiivouksen ajastus ensin (omistaja 7.11.2026 klo 17.48, PT 17.54)
+Ennen roolisessioita uudella tilillä: `mcp__scheduled-tasks__list_scheduled_tasks`. Jos `matkakirja-simu-yosiivous` puuttuu, luo se
+heti (`create_scheduled_task`, cron `0 4 * * *`, kehote `tools/levy/simu-yosiivous-ajastus.md`). Ilman sitä iPad-välimuisti ja
+simulaattorien poster-välimuisti jäävät tyhjentämättä: lokit puuttuivat öiltä 4.–6.11., ajastus oli vain koodaustilillä (päätelty lokeista).
+Kohdan 5 kielto koskee cron-silmukoiden korvaamista, ei tätä ajastusta.
+
 ## 1. Kaikki sessiot nollataan heti aluksi (omistaja 30.10.2026 klo 19.22; Raamattu 7.37)
 SIIRTOPROMPTI (omistaja 3.11.2026 klo 16.31, pysyvä): "kirjautumisohjeita ei tarvitse, riittää pelkkä siirtoprompti. tärkeää että seuraava tili tyhjentää clear komennolla sessiot ja käyttää niitä samoja mikäli mahdollista tai jos luo uudet niin sitten arkistoi ne vanhat automaattisesti. puhdista itse alussa aina päätoimittajan mille välitän siirtopromptin" – omistajalle ei anneta kirjautumisohjeita; PT tyhjentää itsensä KK:n pyynnöstä ennen siirtopromptin antamista (sovellus ei salli KK:n tyhjentää PT:tä: clear_session vain oma tai itse käynnistetty; PT: RC pois → clear_session self, KK tarkistaa list_events = 0; KK 3.11.), ja uuden tilin PT tyhjentää ensin kaikki sessiot ja käyttää samoja id:itä, tai luo uudet ja arkistoi vanhat kysymättä. TOTEUTUS (PT 3.11.2026 16.4x): toisen tilin sessiot eivät näy uudella tilillä, mutta uuden tilin omat aiemmat roolisessiot näkyvät; ne tyhjenevät send_messagella "lataa clear_session ja kutsu self" (list_events = 0), ja niiden id:t viedään osoitekirjaan paivita-idt.mjs:llä; arkistoitavaa ei jää.
 Omistaja: "tilinvaihdossa pitää nollata heti aluksi kaikki sessiot". Tämä on vaihdon ENSIMMÄINEN ASKEL heti tilin jälkeen
@@ -56,7 +62,7 @@ ohjeet koko sen eliniäksi. Siksi kotikansiot päivitetään vanhan tilin roolie
    PT ei poista eikä palauta toisen roolin tiedostoja. Lepäävän roolin likainen kansio ohitetaan (`--ohita kansio`) ja kirjataan.
 3. `zsh tools/paivita-kotikansiot.sh --aja --uusi-haara` vasta, kun kansion sessio on pysähtynyt (haara vaihtuu koti/<kansio>:ksi;
    vanha haara säilyy, mitään ei poisteta). Kuiva-ajo uudelleen: kaikki AJAN TASALLA tai kirjattu ohitus.
-   POIKKEUS Matkakirja-posti (26.10.): KIERROS.md ja NOLLAUS.md ovat vain haarassa postivahti, joten sitä ei vaihdeta koti-haaraan:
+   POIKKEUS Matkakirja-posti (26.10.; työkalu ohittaa sen itse 6.11. alkaen): KIERROS.md ja NOLLAUS.md ovat vain haarassa postivahti, joten sitä ei vaihdeta koti-haaraan:
    Postivahti mergeää origin/mainin omaan haaraansa ja pushaa; ajossa `--ohita Matkakirja-posti`.
 4. Jokaisen uuden roolin aloitusviestissä ensimmäinen työ: tuotannonohjauksen osio 0 ja oma LUE ALOITTAESSA -rivi
    (`node tools/raamattu-luku.mjs 7.47`) ennen muuta työtä.
@@ -67,7 +73,7 @@ Kaava (15.10.2026 alkaen ensisijainen): `start_session` (initiation user_asked, 
 jos osascript ei saa ohjata appia, omistaja sallii Järjestelmäasetukset › Tietosuoja ja suojaus › Käyttöapu (Claude/Pääte).
 Osascriptissä valikkojen nimet suomeksi (`click menu item "Uusi istunto" of menu "Tiedosto"`); malli valitaan luonnoksessa ennen
 ensimmäistä viestiä. Järjestys per sessio: luonti → `set_session_model` (jos väärä) → `set_session_effort` → `set_session_title`
-"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti → `set_remote_control`.
+"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti (etäyhteys KK:lle ja PT:lle, Raamattu 7.9).
 Lupatila: ohitustila (bypassPermissions) kaikille paitsi Äänittäjä auto (sessiotiedostot 14.10.). Roolien aloitusviestin
 lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 
@@ -119,7 +125,7 @@ Taulukon viimeinen sarake. Cronit ovat session-only (CronCreate): ne kuolevat se
 aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tunnin sisällä.
 
 ## 6. Sallinnat, Remote Control, hookit
-- `set_remote_control <id> true` kaikille paitsi lepäävät.
+- `set_remote_control self true` KK:lle ja PT:lle (molemmat itse heti tilinvaihdon, nollauksen ja aloituksen ensimmäisenä askeleena; omistaja 6.11.2026 klo 21.32 ja 9.11.2026 klo 10.45 "laita myös päätoimittajan remote päälle", Raamattu 7.9); muille ei. Sovellus kytkee etäyhteyden itse nollatun session käynnistyessä (todettu 6.11.2026): aloitusviestien jälkeen PT lukee `list_sessions` ja kytkee sen pois roolilta (`set_remote_control <id> false`), KK:lle ja PT:lle se jää.
 - Sallinnat: projektin .claude/settings.json (gitissä) + PT:n .claude/settings.local.json. Gitissä oleva settings.local.json on vanha
   (vain aws/source/python3 -); Macin versiossa lisäksi Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*),
   mcp__ccd_session_mgmt__set_session_effort sekä PostToolUse- ja UserPromptSubmit-hookit pt-taulu-muistutus.py:lle. Älä checkouttaa
@@ -184,3 +190,4 @@ VIIMEINEN VAIHE (omistaja 15.10.2026 klo 14.39): PT luovuttaa ja nollautuu heti,
 | PT:n haara | checkout S/Matkakirja-fable haarassa claude/bold-ride-vow4ki (sovelluksen nimi); PT:n muutokset worktreissa S/wt/fable-<aihe> omina PR:inä; nimenvaihto vasta, kun sovellus luo PT:n uudelle tilille uuden haaran | – |
 | KK:n aloitusviesti | elävä F/keskustelukanava/aloitus.md (Tila-osio, peili tools/tyotavat/keskustelukanava-aloitus.md); pysyvä osa docs/aloitusviestit/keskustelukanava.md | – |
 | KK:n nollaus | vain omistajan kortin Kyllä-vastauksella; heti sen jälkeen set_remote_control self true ja Artifact open Asemataulu (omistaja 14.10. klo 20.48) | Postivahdin nollaus |
+| PT:n nollaus | Postivahti nollaa; uusi PT ensimmäisenä set_remote_control self true (omistaja 9.11.2026 klo 10.45), sitten Asemataulu | RC vain KK:lle |

@@ -1,0 +1,3962 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:tuileries",
+  "kasite": "kommunardien",
+  "kysymys": "Kerro lisää: kommunardien"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:tuileries",
+  "kasite": "kolmas tasavalta",
+  "kysymys": "Kerro lisää: kolmas tasavalta"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:tuileries",
+  "kasite": "Georges-Eugène Haussmann",
+  "kysymys": "Kerro lisää: Georges-Eugène Haussmann"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:tuileries",
+  "kasite": "Louvren",
+  "kysymys": "Kerro lisää: Louvren"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:tuileries",
+  "kasite": "Tuileries'n puutarhan",
+  "kysymys": "Kerro lisää: Tuileries'n puutarhan"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:tuileries",
+  "kasite": "Carrousel'n riemukaari",
+  "kysymys": "Kerro lisää: Carrousel'n riemukaari"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:tuileries",
+  "kasite": "Firenzessä",
+  "kysymys": "Kerro lisää: Firenzessä"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:tuileries",
+  "kasite": "Medici-suvusta",
+  "kysymys": "Kerro lisää: Medici-suvusta"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:tuileries",
+  "kasite": "valtionhoitajana",
+  "kysymys": "Kerro lisää: valtionhoitajana"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:tuileries",
+  "kasite": "Napoleon Bonaparten",
+  "kysymys": "Kerro lisää: Napoleon Bonaparten"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:tuileries",
+  "kasite": "Ranskan ja Preussin sotaan",
+  "kysymys": "Kerro lisää: Ranskan ja Preussin sotaan"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:tuileries",
+  "kasite": "Sedanin taistelussa",
+  "kysymys": "Kerro lisää: Sedanin taistelussa"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:tuileries",
+  "kasite": "verinen viikko",
+  "kysymys": "Kerro lisää: verinen viikko"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:tuileries",
+  "kasite": "Uuteen-Kaledoniaan",
+  "kysymys": "Kerro lisää: Uuteen-Kaledoniaan"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:bastilji",
+  "kasite": "Invalidien sotilaskodin",
+  "kysymys": "Kerro lisää: Invalidien sotilaskodin"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:bastilji",
+  "kasite": "valtionvankila",
+  "kysymys": "Kerro lisää: valtionvankila"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:bastilji",
+  "kasite": "Ranskan kansallispäivä",
+  "kysymys": "Kerro lisää: Ranskan kansallispäivä"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:bastilji",
+  "kasite": "satavuotisen sodan",
+  "kysymys": "Kerro lisää: satavuotisen sodan"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:bastilji",
+  "kasite": "Voltaire",
+  "kysymys": "Kerro lisää: Voltaire"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:bastilji",
+  "kasite": "markiisi de Sade",
+  "kysymys": "Kerro lisää: markiisi de Sade"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:bastilji",
+  "kasite": "heinäkuun pylväs",
+  "kysymys": "Kerro lisää: heinäkuun pylväs"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:bastilji",
+  "kasite": "Opéra Bastille",
+  "kysymys": "Kerro lisää: Opéra Bastille"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:bastilji",
+  "kasite": "Valistusajan",
+  "kysymys": "Kerro lisää: Valistusajan"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:bastilji",
+  "kasite": "kansalliskokous",
+  "kysymys": "Kerro lisää: kansalliskokous"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:bastilji",
+  "kasite": "Markiisi de Lafayette",
+  "kysymys": "Kerro lisää: Markiisi de Lafayette"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:bastilji",
+  "kasite": "George Washingtonille",
+  "kysymys": "Kerro lisää: George Washingtonille"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:bastilji",
+  "kasite": "Mount Vernonissa",
+  "kysymys": "Kerro lisää: Mount Vernonissa"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:montblanc",
+  "kasite": "Jacques Balmat",
+  "kysymys": "Kerro lisää: Jacques Balmat"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:montblanc",
+  "kasite": "Michel-Gabriel Paccard",
+  "kysymys": "Kerro lisää: Michel-Gabriel Paccard"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:montblanc",
+  "kasite": "Chamonix'n",
+  "kysymys": "Kerro lisää: Chamonix'n"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:montblanc",
+  "kasite": "Horace-Bénédict de Saussure",
+  "kysymys": "Kerro lisää: Horace-Bénédict de Saussure"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:montblanc",
+  "kasite": "Torinon sopimuksessa",
+  "kysymys": "Kerro lisää: Torinon sopimuksessa"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:montblanc",
+  "kasite": "Savoijin",
+  "kysymys": "Kerro lisää: Savoijin"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:montblanc",
+  "kasite": "Courmayeurin",
+  "kysymys": "Kerro lisää: Courmayeurin"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:montblanc",
+  "kasite": "Compagnie des guides de Chamonix",
+  "kysymys": "Kerro lisää: Compagnie des guides de Chamonix"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:montblanc",
+  "kasite": "talviolympialaiset",
+  "kysymys": "Kerro lisää: talviolympialaiset"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:montblanc",
+  "kasite": "William Windham",
+  "kysymys": "Kerro lisää: William Windham"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:montblanc",
+  "kasite": "Richard Pococke",
+  "kysymys": "Kerro lisää: Richard Pococke"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:vignemale",
+  "kasite": "Bayonnen sopimuksissa",
+  "kysymys": "Kerro lisää: Bayonnen sopimuksissa"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:vignemale",
+  "kasite": "Hautes-Pyrénées'n departementtiin",
+  "kysymys": "Kerro lisää: Hautes-Pyrénées'n departementtiin"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:vignemale",
+  "kasite": "Aragoniassa",
+  "kysymys": "Kerro lisää: Aragoniassa"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:vignemale",
+  "kasite": "Ossouen jäätikkö",
+  "kysymys": "Kerro lisää: Ossouen jäätikkö"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:vignemale",
+  "kasite": "ilmaston lämpeneminen",
+  "kysymys": "Kerro lisää: ilmaston lämpeneminen"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:vignemale",
+  "kasite": "Aneto",
+  "kysymys": "Kerro lisää: Aneto"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:vignemale",
+  "kasite": "Maladetan",
+  "kysymys": "Kerro lisää: Maladetan"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:vignemale",
+  "kasite": "Navarran",
+  "kysymys": "Kerro lisää: Navarran"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:vignemale",
+  "kasite": "euskara",
+  "kysymys": "Kerro lisää: euskara"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:vignemale",
+  "kasite": "Andorra la Vella",
+  "kysymys": "Kerro lisää: Andorra la Vella"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:vignemale",
+  "kasite": "katalaani",
+  "kysymys": "Kerro lisää: katalaani"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:vignemale",
+  "kasite": "Urgellin piispa",
+  "kysymys": "Kerro lisää: Urgellin piispa"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Herkuleen pylväiksi",
+  "kysymys": "Kerro lisää: Herkuleen pylväiksi"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Gibraltarin kallio",
+  "kysymys": "Kerro lisää: Gibraltarin kallio"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Tarifasta",
+  "kysymys": "Kerro lisää: Tarifasta"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "haihtuminen",
+  "kysymys": "Kerro lisää: haihtuminen"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "suolapitoisuus",
+  "kysymys": "Kerro lisää: suolapitoisuus"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Sisilia",
+  "kysymys": "Kerro lisää: Sisilia"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Sardinia",
+  "kysymys": "Kerro lisää: Sardinia"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Kypros",
+  "kysymys": "Kerro lisää: Kypros"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Korsika",
+  "kysymys": "Kerro lisää: Korsika"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Kreeta",
+  "kysymys": "Kerro lisää: Kreeta"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "oliivipuita",
+  "kysymys": "Kerro lisää: oliivipuita"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "mistral",
+  "kysymys": "Kerro lisää: mistral"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "sirocco",
+  "kysymys": "Kerro lisää: sirocco"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Tyros",
+  "kysymys": "Kerro lisää: Tyros"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "Karthago",
+  "kysymys": "Kerro lisää: Karthago"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:valimeri~2",
+  "kasite": "aakkostonsa",
+  "kysymys": "Kerro lisää: aakkostonsa"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "aallokko",
+  "kysymys": "Kerro lisää: aallokko"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "purjelaivojen",
+  "kysymys": "Kerro lisää: purjelaivojen"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "delfiinejä",
+  "kysymys": "Kerro lisää: delfiinejä"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "valaslajeja",
+  "kysymys": "Kerro lisää: valaslajeja"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "anjovikseen",
+  "kysymys": "Kerro lisää: anjovikseen"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "mannerjalusta",
+  "kysymys": "Kerro lisää: mannerjalusta"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "syvänmeren",
+  "kysymys": "Kerro lisää: syvänmeren"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Bilbao",
+  "kysymys": "Kerro lisää: Bilbao"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Santander",
+  "kysymys": "Kerro lisää: Santander"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "La Rochelle",
+  "kysymys": "Kerro lisää: La Rochelle"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Biarritz",
+  "kysymys": "Kerro lisää: Biarritz"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Loire",
+  "kysymys": "Kerro lisää: Loire"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Garonne",
+  "kysymys": "Kerro lisää: Garonne"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:biskajanlahti",
+  "kasite": "Adour",
+  "kysymys": "Kerro lisää: Adour"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:loire",
+  "kasite": "Ranskan kuninkaat",
+  "kysymys": "Kerro lisää: Ranskan kuninkaat"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:loire",
+  "kasite": "Chambord",
+  "kysymys": "Kerro lisää: Chambord"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:loire",
+  "kasite": "Amboise",
+  "kysymys": "Kerro lisää: Amboise"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:loire",
+  "kasite": "Chenonceau",
+  "kysymys": "Kerro lisää: Chenonceau"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:loire",
+  "kasite": "Keskiylängön",
+  "kysymys": "Kerro lisää: Keskiylängön"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:loire",
+  "kasite": "Rhône",
+  "kysymys": "Kerro lisää: Rhône"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:loire",
+  "kasite": "hiekkasärkkiä",
+  "kysymys": "Kerro lisää: hiekkasärkkiä"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:loire",
+  "kasite": "Gerbier de Jonc",
+  "kysymys": "Kerro lisää: Gerbier de Jonc"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:loire",
+  "kasite": "Ardèchen",
+  "kysymys": "Kerro lisää: Ardèchen"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:loire",
+  "kasite": "Keskiylängöllä",
+  "kysymys": "Kerro lisää: Keskiylängöllä"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:loire",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:loire",
+  "kasite": "Nantesin",
+  "kysymys": "Kerro lisää: Nantesin"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:loire",
+  "kasite": "Saint-Nazairen",
+  "kysymys": "Kerro lisää: Saint-Nazairen"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:loire",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:loire",
+  "kasite": "Sully-sur-Loiren",
+  "kysymys": "Kerro lisää: Sully-sur-Loiren"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:loire",
+  "kasite": "Chalonnes-sur-Loiren",
+  "kysymys": "Kerro lisää: Chalonnes-sur-Loiren"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Rhônen",
+  "kysymys": "Kerro lisää: Rhônen"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:rhone~2",
+  "kasite": "gardianit",
+  "kysymys": "Kerro lisää: gardianit"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Alpeilta",
+  "kysymys": "Kerro lisää: Alpeilta"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:rhone~2",
+  "kasite": "jäätiköiden",
+  "kysymys": "Kerro lisää: jäätiköiden"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:rhone~2",
+  "kasite": "suisto",
+  "kysymys": "Kerro lisää: suisto"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Genevessä",
+  "kysymys": "Kerro lisää: Genevessä"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Sveitsin",
+  "kysymys": "Kerro lisää: Sveitsin"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Loire",
+  "kysymys": "Kerro lisää: Loire"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Valais",
+  "kysymys": "Kerro lisää: Valais"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Furkan",
+  "kysymys": "Kerro lisää: Furkan"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Keskiylängön",
+  "kysymys": "Kerro lisää: Keskiylängön"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:rhone~2",
+  "kasite": "Provencen",
+  "kysymys": "Kerro lisää: Provencen"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "satavuotisen sodan",
+  "kysymys": "Kerro lisää: satavuotisen sodan"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "Ancien régimen",
+  "kysymys": "Kerro lisää: Ancien régimen"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "Ludvig XI",
+  "kysymys": "Kerro lisää: Ludvig XI"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "kevätvuorovesien",
+  "kysymys": "Kerro lisää: kevätvuorovesien"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "Normandian",
+  "kysymys": "Kerro lisää: Normandian"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "Bretagnen",
+  "kysymys": "Kerro lisää: Bretagnen"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "Avranchesin",
+  "kysymys": "Kerro lisää: Avranchesin"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "benediktiinit",
+  "kysymys": "Kerro lisää: benediktiinit"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "Annette Poulard",
+  "kysymys": "Kerro lisää: Annette Poulard"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:mont-saint-michel",
+  "kasite": "presuolé",
+  "kysymys": "Kerro lisää: presuolé"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Eugène Viollet-le-Duc",
+  "kysymys": "Kerro lisää: Eugène Viollet-le-Duc"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Notre-Damen",
+  "kysymys": "Kerro lisää: Notre-Damen"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: maailmanperintöluetteloon"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Roomalaiset",
+  "kysymys": "Kerro lisää: Roomalaiset"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Visigootit",
+  "kysymys": "Kerro lisää: Visigootit"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "roomalaisajalta",
+  "kysymys": "Kerro lisää: roomalaisajalta"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Ranskan kruunun",
+  "kysymys": "Kerro lisää: Ranskan kruunun"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Auden",
+  "kysymys": "Kerro lisää: Auden"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Toulousesta",
+  "kysymys": "Kerro lisää: Toulousesta"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Canal du Midi",
+  "kysymys": "Kerro lisää: Canal du Midi"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Pyreneiden",
+  "kysymys": "Kerro lisää: Pyreneiden"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "liuskekatot",
+  "kysymys": "Kerro lisää: liuskekatot"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Pohjois-Ranskan",
+  "kysymys": "Kerro lisää: Pohjois-Ranskan"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:carcassonnen-linnoituskaupunki",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:lascaux",
+  "kasite": "Marcel Ravidat",
+  "kysymys": "Kerro lisää: Marcel Ravidat"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:lascaux",
+  "kasite": "Dordognen",
+  "kysymys": "Kerro lisää: Dordognen"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:lascaux",
+  "kasite": "Lascaux'n",
+  "kysymys": "Kerro lisää: Lascaux'n"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:lascaux",
+  "kasite": "hiilidioksidi",
+  "kysymys": "Kerro lisää: hiilidioksidi"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:lascaux",
+  "kasite": "jäljennös",
+  "kysymys": "Kerro lisää: jäljennös"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:lascaux",
+  "kasite": "alkuhärkiä",
+  "kysymys": "Kerro lisää: alkuhärkiä"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:lascaux",
+  "kasite": "paleoliittisen",
+  "kysymys": "Kerro lisää: paleoliittisen"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:lascaux",
+  "kasite": "Härkien sali",
+  "kysymys": "Kerro lisää: Härkien sali"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:lascaux",
+  "kasite": "magdalénien-kauteen",
+  "kysymys": "Kerro lisää: magdalénien-kauteen"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:lascaux",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:lascaux",
+  "kasite": "Vézèren laakson",
+  "kysymys": "Kerro lisää: Vézèren laakson"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:lascaux",
+  "kasite": "Montignacin",
+  "kysymys": "Kerro lisää: Montignacin"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "tukikaaret",
+  "kysymys": "Kerro lisää: tukikaaret"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "korkeagotiikan",
+  "kysymys": "Kerro lisää: korkeagotiikan"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "lasimaalauksista",
+  "kysymys": "Kerro lisää: lasimaalauksista"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "pyhäinjäännös",
+  "kysymys": "Kerro lisää: pyhäinjäännös"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "Neitsyt Marian",
+  "kysymys": "Kerro lisää: Neitsyt Marian"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "pyhiinvaeltajien",
+  "kysymys": "Kerro lisää: pyhiinvaeltajien"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "romaanista",
+  "kysymys": "Kerro lisää: romaanista"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "liekehtivän gotiikan",
+  "kysymys": "Kerro lisää: liekehtivän gotiikan"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "hiippakunta",
+  "kysymys": "Kerro lisää: hiippakunta"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "gotiikan",
+  "kysymys": "Kerro lisää: gotiikan"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:chartresin-katedraali",
+  "kasite": "tukikaarien",
+  "kysymys": "Kerro lisää: tukikaarien"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Nemausukseen",
+  "kysymys": "Kerro lisää: Nemausukseen"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Nîmesiin",
+  "kysymys": "Kerro lisää: Nîmesiin"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "painovoiman",
+  "kysymys": "Kerro lisää: painovoiman"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "tullisilta",
+  "kysymys": "Kerro lisää: tullisilta"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "piispat",
+  "kysymys": "Kerro lisää: piispat"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Nemausuksen",
+  "kysymys": "Kerro lisää: Nemausuksen"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Nîmesin",
+  "kysymys": "Kerro lisää: Nîmesin"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Gardon-joen",
+  "kysymys": "Kerro lisää: Gardon-joen"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "simpukkakalkkikivestä",
+  "kysymys": "Kerro lisää: simpukkakalkkikivestä"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:pont-du-gard",
+  "kasite": "Kivettymät",
+  "kysymys": "Kerro lisää: Kivettymät"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "graniitista",
+  "kysymys": "Kerro lisää: graniitista"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "Bretagnen",
+  "kysymys": "Kerro lisää: Bretagnen"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "menhirejä",
+  "kysymys": "Kerro lisää: menhirejä"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "Corneliusta",
+  "kysymys": "Kerro lisää: Corneliusta"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "Bretagnessa",
+  "kysymys": "Kerro lisää: Bretagnessa"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "Arthur-taruista",
+  "kysymys": "Kerro lisää: Arthur-taruista"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "neoliittisella kaudella",
+  "kysymys": "Kerro lisää: neoliittisella kaudella"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "esikelttiläistä",
+  "kysymys": "Kerro lisää: esikelttiläistä"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "dolmeneja",
+  "kysymys": "Kerro lisää: dolmeneja"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "hautakumpuja",
+  "kysymys": "Kerro lisää: hautakumpuja"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "La Trinité-sur-Merin",
+  "kysymys": "Kerro lisää: La Trinité-sur-Merin"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:carnacin-kivirivit",
+  "kasite": "Morbihanin",
+  "kysymys": "Kerro lisää: Morbihanin"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Benedictus XII",
+  "kysymys": "Kerro lisää: Benedictus XII"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Klemens VI",
+  "kysymys": "Kerro lisää: Klemens VI"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Innocentius VI",
+  "kysymys": "Kerro lisää: Innocentius VI"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Urbanus V",
+  "kysymys": "Kerro lisää: Urbanus V"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Gregorius XI",
+  "kysymys": "Kerro lisää: Gregorius XI"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Pietarin",
+  "kysymys": "Kerro lisää: Pietarin"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Katariina Sienalaisen",
+  "kysymys": "Kerro lisää: Katariina Sienalaisen"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "läntinen skisma",
+  "kysymys": "Kerro lisää: läntinen skisma"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Pierre Peysson",
+  "kysymys": "Kerro lisää: Pierre Peysson"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Jean de Louvres",
+  "kysymys": "Kerro lisää: Jean de Louvres"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Simone Martini",
+  "kysymys": "Kerro lisää: Simone Martini"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Matteo Giovanetti",
+  "kysymys": "Kerro lisää: Matteo Giovanetti"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Benedictus XII:n",
+  "kysymys": "Kerro lisää: Benedictus XII:n"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Klemens VI:n",
+  "kysymys": "Kerro lisää: Klemens VI:n"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "humanismin",
+  "kysymys": "Kerro lisää: humanismin"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:avignonin-paavinpalatsi",
+  "kasite": "Petrarca",
+  "kysymys": "Kerro lisää: Petrarca"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:chambord",
+  "kasite": "Loiren",
+  "kysymys": "Kerro lisää: Loiren"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:chambord",
+  "kasite": "Blois'n",
+  "kysymys": "Kerro lisää: Blois'n"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:chambord",
+  "kasite": "Amboisen",
+  "kysymys": "Kerro lisää: Amboisen"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:chambord",
+  "kasite": "keskiaikaisen",
+  "kysymys": "Kerro lisää: keskiaikaisen"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:chambord",
+  "kasite": "renessanssin",
+  "kysymys": "Kerro lisää: renessanssin"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:chambord",
+  "kasite": "Kaarle V:lle",
+  "kysymys": "Kerro lisää: Kaarle V:lle"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:chambord",
+  "kasite": "keskustornista",
+  "kysymys": "Kerro lisää: keskustornista"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:chambord",
+  "kasite": "kulmatornista",
+  "kysymys": "Kerro lisää: kulmatornista"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:chambord",
+  "kasite": "Pierre Neveu",
+  "kysymys": "Kerro lisää: Pierre Neveu"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:chambord",
+  "kasite": "Domenico da Cortonan",
+  "kysymys": "Kerro lisää: Domenico da Cortonan"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:chambord",
+  "kasite": "Leonardo da Vinci",
+  "kysymys": "Kerro lisää: Leonardo da Vinci"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:chambord",
+  "kasite": "Frans I",
+  "kysymys": "Kerro lisää: Frans I"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:douaumont",
+  "kasite": "ensimmäisen maailmansodan",
+  "kysymys": "Kerro lisää: ensimmäisen maailmansodan"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:douaumont",
+  "kasite": "Douaumontin luukammio",
+  "kysymys": "Kerro lisää: Douaumontin luukammio"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:douaumont",
+  "kasite": "André Maginot",
+  "kysymys": "Kerro lisää: André Maginot"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:douaumont",
+  "kasite": "Douaumontin",
+  "kysymys": "Kerro lisää: Douaumontin"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:douaumont",
+  "kasite": "Verdunin",
+  "kysymys": "Kerro lisää: Verdunin"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:douaumont",
+  "kasite": "Charles Ginistyn",
+  "kysymys": "Kerro lisää: Charles Ginistyn"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:douaumont",
+  "kasite": "ranskalaisten",
+  "kysymys": "Kerro lisää: ranskalaisten"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:douaumont",
+  "kasite": "Die Hölle von Verdun",
+  "kysymys": "Kerro lisää: Die Hölle von Verdun"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:douaumont",
+  "kasite": "L'Enfer de Verdun",
+  "kysymys": "Kerro lisää: L'Enfer de Verdun"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "villalankaa",
+  "kysymys": "Kerro lisää: villalankaa"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "pellavalle",
+  "kysymys": "Kerro lisää: pellavalle"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Hastingsin taistelusta",
+  "kysymys": "Kerro lisää: Hastingsin taistelusta"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Odoa",
+  "kysymys": "Kerro lisää: Odoa"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Vilhelmin",
+  "kysymys": "Kerro lisää: Vilhelmin"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Hastingsin",
+  "kysymys": "Kerro lisää: Hastingsin"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "latinankielinen",
+  "kysymys": "Kerro lisää: latinankielinen"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Edvard Tunnustajan",
+  "kysymys": "Kerro lisää: Edvard Tunnustajan"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Hastingsin taisteluun",
+  "kysymys": "Kerro lisää: Hastingsin taisteluun"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:bayeux-seinavaate",
+  "kasite": "Vilhelm",
+  "kysymys": "Kerro lisää: Vilhelm"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "A75–A71",
+  "kysymys": "Kerro lisää: A75–A71"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "Montpellier'hen",
+  "kysymys": "Kerro lisää: Montpellier'hen"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "vinoköysisilta",
+  "kysymys": "Kerro lisää: vinoköysisilta"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "Tarn",
+  "kysymys": "Kerro lisää: Tarn"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "Michel Virlogeux",
+  "kysymys": "Kerro lisää: Michel Virlogeux"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "Norman Foster",
+  "kysymys": "Kerro lisää: Norman Foster"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:millaun-silta",
+  "kasite": "Béziers'iin",
+  "kysymys": "Kerro lisää: Béziers'iin"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:camargue",
+  "kasite": "Camarguen",
+  "kysymys": "Kerro lisää: Camarguen"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:camargue",
+  "kasite": "Rhônen",
+  "kysymys": "Kerro lisää: Rhônen"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:camargue",
+  "kasite": "upottavaan suohon",
+  "kysymys": "Kerro lisää: upottavaan suohon"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:camargue",
+  "kasite": "camarguenhevoset",
+  "kysymys": "Kerro lisää: camarguenhevoset"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:camargue",
+  "kasite": "Grand Rhôneksi",
+  "kysymys": "Kerro lisää: Grand Rhôneksi"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:camargue",
+  "kasite": "Petit Rhôneksi",
+  "kysymys": "Kerro lisää: Petit Rhôneksi"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:camargue",
+  "kasite": "flamingo",
+  "kysymys": "Kerro lisää: flamingo"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:camargue",
+  "kasite": "Ramsar-sopimukseen",
+  "kysymys": "Kerro lisää: Ramsar-sopimukseen"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:camargue",
+  "kasite": "camarguenhärät",
+  "kysymys": "Kerro lisää: camarguenhärät"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:camargue",
+  "kasite": "kosteikkojen",
+  "kysymys": "Kerro lisää: kosteikkojen"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:dune-du-pilat",
+  "kasite": "Les Sabloneys",
+  "kysymys": "Kerro lisää: Les Sabloneys"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:dune-du-pilat",
+  "kasite": "Dune du Pilat",
+  "kysymys": "Kerro lisää: Dune du Pilat"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:dune-du-pilat",
+  "kasite": "Euroopan korkein hiekkadyyni",
+  "kysymys": "Kerro lisää: Euroopan korkein hiekkadyyni"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:dune-du-pilat",
+  "kasite": "mäntymetsää",
+  "kysymys": "Kerro lisää: mäntymetsää"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:dune-du-pilat",
+  "kasite": "sotabunkkereita",
+  "kysymys": "Kerro lisää: sotabunkkereita"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:dune-du-pilat",
+  "kasite": "La Teste-de-Buchin",
+  "kysymys": "Kerro lisää: La Teste-de-Buchin"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-saint-cloud",
+  "kasite": "Orléansin herttuan",
+  "kysymys": "Kerro lisää: Orléansin herttuan"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-saint-cloud",
+  "kasite": "Napoleon III",
+  "kysymys": "Kerro lisää: Napoleon III"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-saint-cloud",
+  "kasite": "Ranskan–Preussin sodassa",
+  "kysymys": "Kerro lisää: Ranskan–Preussin sodassa"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-saint-cloud",
+  "kasite": "Ranskan–Preussin sota",
+  "kysymys": "Kerro lisää: Ranskan–Preussin sota"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-saint-cloud",
+  "kasite": "puisto",
+  "kysymys": "Kerro lisää: puisto"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "Pic du Midi de Bigorre",
+  "kysymys": "Kerro lisää: Pic du Midi de Bigorre"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "Pyreneillä",
+  "kysymys": "Kerro lisää: Pyreneillä"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "observatorio",
+  "kysymys": "Kerro lisää: observatorio"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "säähavaintoja",
+  "kysymys": "Kerro lisää: säähavaintoja"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "Pic du Midin",
+  "kysymys": "Kerro lisää: Pic du Midin"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "Hautes-Pyrénées'n",
+  "kysymys": "Kerro lisää: Hautes-Pyrénées'n"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "Pic du Midin observatorio",
+  "kysymys": "Kerro lisää: Pic du Midin observatorio"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "televiestintämasto",
+  "kysymys": "Kerro lisää: televiestintämasto"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-pic-du-midi",
+  "kasite": "Canigou",
+  "kysymys": "Kerro lisää: Canigou"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Bernadette Soubirous",
+  "kysymys": "Kerro lisää: Bernadette Soubirous"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Lourdesista",
+  "kysymys": "Kerro lisää: Lourdesista"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "pyhiinvaelluskohteista",
+  "kysymys": "Kerro lisää: pyhiinvaelluskohteista"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "pyhäkkö",
+  "kysymys": "Kerro lisää: pyhäkkö"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Lourdes",
+  "kysymys": "Kerro lisää: Lourdes"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "pyhäköstä",
+  "kysymys": "Kerro lisää: pyhäköstä"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Pyhiinvaellus",
+  "kysymys": "Kerro lisää: Pyhiinvaellus"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Neitsyt Marian pyhäkkö",
+  "kysymys": "Kerro lisää: Neitsyt Marian pyhäkkö"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "markkinakaupunki",
+  "kysymys": "Kerro lisää: markkinakaupunki"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "kalliolinnastaan",
+  "kysymys": "Kerro lisää: kalliolinnastaan"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Lourdesin",
+  "kysymys": "Kerro lisää: Lourdesin"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Pyreneillä",
+  "kysymys": "Kerro lisää: Pyreneillä"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-lourdes",
+  "kasite": "Pic du Midi de Bigorre",
+  "kysymys": "Kerro lisää: Pic du Midi de Bigorre"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-canigou",
+  "kasite": "Canigou",
+  "kysymys": "Kerro lisää: Canigou"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-canigou",
+  "kasite": "Canigó",
+  "kysymys": "Kerro lisää: Canigó"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-canigou",
+  "kasite": "Pyreneillä",
+  "kysymys": "Kerro lisää: Pyreneillä"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-canigou",
+  "kasite": "katalaanien identiteettiä",
+  "kysymys": "Kerro lisää: katalaanien identiteettiä"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-canigou",
+  "kasite": "Pohjois-Katalonia",
+  "kysymys": "Kerro lisää: Pohjois-Katalonia"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-canigou",
+  "kasite": "Aneto",
+  "kysymys": "Kerro lisää: Aneto"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "Verdon-joki",
+  "kysymys": "Kerro lisää: Verdon-joki"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "kalkkikiveä",
+  "kysymys": "Kerro lisää: kalkkikiveä"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "Alppien",
+  "kysymys": "Kerro lisää: Alppien"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "sironta",
+  "kysymys": "Kerro lisää: sironta"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "Istalifin",
+  "kysymys": "Kerro lisää: Istalifin"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "kalsiumkarbonaattia",
+  "kysymys": "Kerro lisää: kalsiumkarbonaattia"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "korallien",
+  "kysymys": "Kerro lisää: korallien"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "padon",
+  "kysymys": "Kerro lisää: padon"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "vesivoimalla",
+  "kysymys": "Kerro lisää: vesivoimalla"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-verdon",
+  "kasite": "provinssin",
+  "kysymys": "Kerro lisää: provinssin"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "myllyn",
+  "kysymys": "Kerro lisää: myllyn"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Philibert de l'Ormen",
+  "kysymys": "Kerro lisää: Philibert de l'Ormen"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Jean Bullant",
+  "kysymys": "Kerro lisää: Jean Bullant"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Thomas Bohier",
+  "kysymys": "Kerro lisää: Thomas Bohier"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Henrik II",
+  "kysymys": "Kerro lisää: Henrik II"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Diane de Poitiersille",
+  "kysymys": "Kerro lisää: Diane de Poitiersille"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Catherine de' Medici",
+  "kysymys": "Kerro lisää: Catherine de' Medici"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Loiren laakson",
+  "kysymys": "Kerro lisää: Loiren laakson"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "kulttuurimaisemana",
+  "kysymys": "Kerro lisää: kulttuurimaisemana"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "Italiassa",
+  "kysymys": "Kerro lisää: Italiassa"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-chenonceau",
+  "kasite": "antiikin",
+  "kysymys": "Kerro lisää: antiikin"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "kaappauskirjeen",
+  "kysymys": "Kerro lisää: kaappauskirjeen"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "laivanvarustajia",
+  "kysymys": "Kerro lisää: laivanvarustajia"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "merirosvoista",
+  "kysymys": "Kerro lisää: merirosvoista"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "graniittisaari",
+  "kysymys": "Kerro lisää: graniittisaari"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "hiekkakannasta",
+  "kysymys": "Kerro lisää: hiekkakannasta"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Ciudad Viejasta",
+  "kysymys": "Kerro lisää: Ciudad Viejasta"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Bretagnen",
+  "kysymys": "Kerro lisää: Bretagnen"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Englannin kanaalin",
+  "kysymys": "Kerro lisää: Englannin kanaalin"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "vuorovesivaihteluita",
+  "kysymys": "Kerro lisää: vuorovesivaihteluita"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Kuun",
+  "kysymys": "Kerro lisää: Kuun"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Saint Lawrence -joen",
+  "kysymys": "Kerro lisää: Saint Lawrence -joen"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Uuden Ranskan",
+  "kysymys": "Kerro lisää: Uuden Ranskan"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-saint-malo",
+  "kasite": "Kanadan",
+  "kysymys": "Kerro lisää: Kanadan"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "riuttoja",
+  "kysymys": "Kerro lisää: riuttoja"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "La Vieillen majakka",
+  "kysymys": "Kerro lisää: La Vieillen majakka"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Raz de Sein",
+  "kysymys": "Kerro lisää: Raz de Sein"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "finis terrae",
+  "kysymys": "Kerro lisää: finis terrae"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Bretagnen",
+  "kysymys": "Kerro lisää: Bretagnen"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "Galiciassa",
+  "kysymys": "Kerro lisää: Galiciassa"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "valokuvionsa",
+  "kysymys": "Kerro lisää: valokuvionsa"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "merikarttaan",
+  "kysymys": "Kerro lisää: merikarttaan"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "riutoista",
+  "kysymys": "Kerro lisää: riutoista"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "bretonia",
+  "kysymys": "Kerro lisää: bretonia"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "kornin",
+  "kysymys": "Kerro lisää: kornin"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-pointe-du-raz",
+  "kasite": "walesin",
+  "kysymys": "Kerro lisää: walesin"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "liitukalliot",
+  "kysymys": "Kerro lisää: liitukalliot"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "Monet",
+  "kysymys": "Kerro lisää: Monet"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "impressionistit",
+  "kysymys": "Kerro lisää: impressionistit"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "merieroosion",
+  "kysymys": "Kerro lisää: merieroosion"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "liitukalliota",
+  "kysymys": "Kerro lisää: liitukalliota"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "kaari",
+  "kysymys": "Kerro lisää: kaari"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "impressionismin",
+  "kysymys": "Kerro lisää: impressionismin"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "Impression, soleil levant",
+  "kysymys": "Kerro lisää: Impression, soleil levant"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "Givernyssä",
+  "kysymys": "Kerro lisää: Givernyssä"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "liitukaudella",
+  "kysymys": "Kerro lisää: liitukaudella"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "kalkkikiveä",
+  "kysymys": "Kerro lisää: kalkkikiveä"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "novelleistaan",
+  "kysymys": "Kerro lisää: novelleistaan"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "Boule de Suif",
+  "kysymys": "Kerro lisää: Boule de Suif"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-etretat",
+  "kasite": "Bel Ami",
+  "kysymys": "Kerro lisää: Bel Ami"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "goottilaiselle",
+  "kysymys": "Kerro lisää: goottilaiselle"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "Amiensin Notre-Damen",
+  "kysymys": "Kerro lisää: Amiensin Notre-Damen"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "kuvanveistosta",
+  "kysymys": "Kerro lisää: kuvanveistosta"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "tukikaarilla",
+  "kysymys": "Kerro lisää: tukikaarilla"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "gotiikan",
+  "kysymys": "Kerro lisää: gotiikan"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "goottilaisen",
+  "kysymys": "Kerro lisää: goottilaisen"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "lasimaalaukset",
+  "kysymys": "Kerro lisää: lasimaalaukset"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-amiens",
+  "kasite": "maailmanperintösopimus",
+  "kysymys": "Kerro lisää: maailmanperintösopimus"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "tuomiokirkossa",
+  "kysymys": "Kerro lisää: tuomiokirkossa"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "Klodvigin",
+  "kysymys": "Kerro lisää: Klodvigin"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "toinen käyminen",
+  "kysymys": "Kerro lisää: toinen käyminen"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "samppanjataloja",
+  "kysymys": "Kerro lisää: samppanjataloja"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "Notre-Dame-tuomiokirkon",
+  "kysymys": "Kerro lisää: Notre-Dame-tuomiokirkon"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "goottilaisen",
+  "kysymys": "Kerro lisää: goottilaisen"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "tuomiokirkon",
+  "kysymys": "Kerro lisää: tuomiokirkon"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "Saint-Remin",
+  "kysymys": "Kerro lisää: Saint-Remin"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-reims",
+  "kasite": "museo",
+  "kysymys": "Kerro lisää: museo"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "Sainte-Marie-Madeleinen basilikassa",
+  "kysymys": "Kerro lisää: Sainte-Marie-Madeleinen basilikassa"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "Santiago de Compostelan",
+  "kysymys": "Kerro lisää: Santiago de Compostelan"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "portaaleineen",
+  "kysymys": "Kerro lisää: portaaleineen"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "symboliikkaa",
+  "kysymys": "Kerro lisää: symboliikkaa"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "tynnyriholvit",
+  "kysymys": "Kerro lisää: tynnyriholvit"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "goottilainen",
+  "kysymys": "Kerro lisää: goottilainen"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "Benedictuksen sääntöä",
+  "kysymys": "Kerro lisää: Benedictuksen sääntöä"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "Cluny",
+  "kysymys": "Kerro lisää: Cluny"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "Vézelayn",
+  "kysymys": "Kerro lisää: Vézelayn"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "protestantteja",
+  "kysymys": "Kerro lisää: protestantteja"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-vezelay",
+  "kasite": "uskonsotia",
+  "kysymys": "Kerro lisää: uskonsotia"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "kansleri",
+  "kysymys": "Kerro lisää: kansleri"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "burgundilaisen arkkitehtuurin",
+  "kysymys": "Kerro lisää: burgundilaisen arkkitehtuurin"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "museona",
+  "kysymys": "Kerro lisää: museona"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "hyväntekeväisyysviinihuutokauppa",
+  "kysymys": "Kerro lisää: hyväntekeväisyysviinihuutokauppa"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "terroir-käsitettä",
+  "kysymys": "Kerro lisää: terroir-käsitettä"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "climats",
+  "kysymys": "Kerro lisää: climats"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "Nicolas Rolin",
+  "kysymys": "Kerro lisää: Nicolas Rolin"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "lasitetuilla laatoilla",
+  "kysymys": "Kerro lisää: lasitetuilla laatoilla"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "Burgundin",
+  "kysymys": "Kerro lisää: Burgundin"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-beaune",
+  "kasite": "flaamilaiselle",
+  "kysymys": "Kerro lisää: flaamilaiselle"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Genovan tasavalta",
+  "kysymys": "Kerro lisää: Genovan tasavalta"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "sitadellin",
+  "kysymys": "Kerro lisää: sitadellin"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Pasquale Paoli",
+  "kysymys": "Kerro lisää: Pasquale Paoli"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Ajaccio",
+  "kysymys": "Kerro lisää: Ajaccio"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Korsikan",
+  "kysymys": "Kerro lisää: Korsikan"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Marseillesta",
+  "kysymys": "Kerro lisää: Marseillesta"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Välimeri",
+  "kysymys": "Kerro lisää: Välimeri"
+ },
+ {
+  "n": 398,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "korsikan kieltä",
+  "kysymys": "Kerro lisää: korsikan kieltä"
+ },
+ {
+  "n": 399,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "korsikalaisessa laulussa",
+  "kysymys": "Kerro lisää: korsikalaisessa laulussa"
+ },
+ {
+  "n": 400,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Sitadelli",
+  "kysymys": "Kerro lisää: Sitadelli"
+ },
+ {
+  "n": 401,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Korsikan tasavallan",
+  "kysymys": "Kerro lisää: Korsikan tasavallan"
+ },
+ {
+  "n": 402,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Napoleon Bonaparte",
+  "kysymys": "Kerro lisää: Napoleon Bonaparte"
+ },
+ {
+  "n": 403,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Napoleonin sodiksi",
+  "kysymys": "Kerro lisää: Napoleonin sodiksi"
+ },
+ {
+  "n": 404,
+  "kohta": "kohde:hahmotelma-ajaccio",
+  "kasite": "Napoleonin laki",
+  "kysymys": "Kerro lisää: Napoleonin laki"
+ },
+ {
+  "n": 405,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Bonifacionsalmi",
+  "kysymys": "Kerro lisää: Bonifacionsalmi"
+ },
+ {
+  "n": 406,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Bonifacion",
+  "kysymys": "Kerro lisää: Bonifacion"
+ },
+ {
+  "n": 407,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "linnoitus",
+  "kysymys": "Kerro lisää: linnoitus"
+ },
+ {
+  "n": 408,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "kalkkikivitörmälle",
+  "kysymys": "Kerro lisää: kalkkikivitörmälle"
+ },
+ {
+  "n": 409,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "luonnonsatamaa",
+  "kysymys": "Kerro lisää: luonnonsatamaa"
+ },
+ {
+  "n": 410,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Napoleon Bonaparte",
+  "kysymys": "Kerro lisää: Napoleon Bonaparte"
+ },
+ {
+  "n": 411,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Ajaccio",
+  "kysymys": "Kerro lisää: Ajaccio"
+ },
+ {
+  "n": 412,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Korsikan",
+  "kysymys": "Kerro lisää: Korsikan"
+ },
+ {
+  "n": 413,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Sardinian",
+  "kysymys": "Kerro lisää: Sardinian"
+ },
+ {
+  "n": 414,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "merenkulun",
+  "kysymys": "Kerro lisää: merenkulun"
+ },
+ {
+  "n": 415,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Corse-du-Sudin",
+  "kysymys": "Kerro lisää: Corse-du-Sudin"
+ },
+ {
+  "n": 416,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Napoleon",
+  "kysymys": "Kerro lisää: Napoleon"
+ },
+ {
+  "n": 417,
+  "kohta": "kohde:hahmotelma-bonifacio",
+  "kasite": "Bonifacio",
+  "kysymys": "Kerro lisää: Bonifacio"
+ },
+ {
+  "n": 418,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Stanislaus I",
+  "kysymys": "Kerro lisää: Stanislaus I"
+ },
+ {
+  "n": 419,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 420,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Lorrainen",
+  "kysymys": "Kerro lisää: Lorrainen"
+ },
+ {
+  "n": 421,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Place Stanislas",
+  "kysymys": "Kerro lisää: Place Stanislas"
+ },
+ {
+  "n": 422,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "arkkitehtuuristaan",
+  "kysymys": "Kerro lisää: arkkitehtuuristaan"
+ },
+ {
+  "n": 423,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "maailmanperintölista",
+  "kysymys": "Kerro lisää: maailmanperintölista"
+ },
+ {
+  "n": 424,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Nancy",
+  "kysymys": "Kerro lisää: Nancy"
+ },
+ {
+  "n": 425,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "École de Nancy",
+  "kysymys": "Kerro lisää: École de Nancy"
+ },
+ {
+  "n": 426,
+  "kohta": "kohde:hahmotelma-place-stanislas",
+  "kasite": "Émile Gallé",
+  "kysymys": "Kerro lisää: Émile Gallé"
+ },
+ {
+  "n": 427,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Mont Ventoux'n",
+  "kysymys": "Kerro lisää: Mont Ventoux'n"
+ },
+ {
+  "n": 428,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Kalju vuori",
+  "kysymys": "Kerro lisää: Kalju vuori"
+ },
+ {
+  "n": 429,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "kasvillisuus",
+  "kysymys": "Kerro lisää: kasvillisuus"
+ },
+ {
+  "n": 430,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Mont Ventoux",
+  "kysymys": "Kerro lisää: Mont Ventoux"
+ },
+ {
+  "n": 431,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Provencessa",
+  "kysymys": "Kerro lisää: Provencessa"
+ },
+ {
+  "n": 432,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Ranskan ympäriajon",
+  "kysymys": "Kerro lisää: Ranskan ympäriajon"
+ },
+ {
+  "n": 433,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Ranskan ympäriajo",
+  "kysymys": "Kerro lisää: Ranskan ympäriajo"
+ },
+ {
+  "n": 434,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "ratatouille",
+  "kysymys": "Kerro lisää: ratatouille"
+ },
+ {
+  "n": 435,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "bouillabaisse",
+  "kysymys": "Kerro lisää: bouillabaisse"
+ },
+ {
+  "n": 436,
+  "kohta": "kohde:hahmotelma-mont-ventoux",
+  "kasite": "Departementti",
+  "kysymys": "Kerro lisää: Departementti"
+ },
+ {
+  "n": 437,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Puy de Sancy",
+  "kysymys": "Kerro lisää: Puy de Sancy"
+ },
+ {
+  "n": 438,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Massif Central",
+  "kysymys": "Kerro lisää: Massif Central"
+ },
+ {
+  "n": 439,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "keskiylänkö",
+  "kysymys": "Kerro lisää: keskiylänkö"
+ },
+ {
+  "n": 440,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "tulivuoritoiminnan",
+  "kysymys": "Kerro lisää: tulivuoritoiminnan"
+ },
+ {
+  "n": 441,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Kerrostulivuori",
+  "kysymys": "Kerro lisää: Kerrostulivuori"
+ },
+ {
+  "n": 442,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Sammunut tulivuori",
+  "kysymys": "Kerro lisää: Sammunut tulivuori"
+ },
+ {
+  "n": 443,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Uinuva tulivuori",
+  "kysymys": "Kerro lisää: Uinuva tulivuori"
+ },
+ {
+  "n": 444,
+  "kohta": "kohde:hahmotelma-puy-de-sancy",
+  "kasite": "Mont Blanc",
+  "kysymys": "Kerro lisää: Mont Blanc"
+ },
+ {
+  "n": 445,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Kaarle VIII",
+  "kysymys": "Kerro lisää: Kaarle VIII"
+ },
+ {
+  "n": 446,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Amboisen linna",
+  "kysymys": "Kerro lisää: Amboisen linna"
+ },
+ {
+  "n": 447,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Ranskan kulttuuriministeriö",
+  "kysymys": "Kerro lisää: Ranskan kulttuuriministeriö"
+ },
+ {
+  "n": 448,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "historialliseksi monumentiksi",
+  "kysymys": "Kerro lisää: historialliseksi monumentiksi"
+ },
+ {
+  "n": 449,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Loiren laakso",
+  "kysymys": "Kerro lisää: Loiren laakso"
+ },
+ {
+  "n": 450,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 451,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Amboisen",
+  "kysymys": "Kerro lisää: Amboisen"
+ },
+ {
+  "n": 452,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Ranskan kuningas",
+  "kysymys": "Kerro lisää: Ranskan kuningas"
+ },
+ {
+  "n": 453,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Clos Lucén",
+  "kysymys": "Kerro lisää: Clos Lucén"
+ },
+ {
+  "n": 454,
+  "kohta": "kohde:hahmotelma-amboise",
+  "kasite": "Historiallinen monumentti",
+  "kysymys": "Kerro lisää: Historiallinen monumentti"
+ },
+ {
+  "n": 455,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Nîmesin areena",
+  "kysymys": "Kerro lisää: Nîmesin areena"
+ },
+ {
+  "n": 456,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Rooman Colosseumin",
+  "kysymys": "Kerro lisää: Rooman Colosseumin"
+ },
+ {
+  "n": 457,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "amfiteattereista",
+  "kysymys": "Kerro lisää: amfiteattereista"
+ },
+ {
+  "n": 458,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Itálican",
+  "kysymys": "Kerro lisää: Itálican"
+ },
+ {
+  "n": 459,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Guadalquivirin",
+  "kysymys": "Kerro lisää: Guadalquivirin"
+ },
+ {
+  "n": 460,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Colosseum",
+  "kysymys": "Kerro lisää: Colosseum"
+ },
+ {
+  "n": 461,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "Vespasianus",
+  "kysymys": "Kerro lisää: Vespasianus"
+ },
+ {
+  "n": 462,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "amfiteatteri",
+  "kysymys": "Kerro lisää: amfiteatteri"
+ },
+ {
+  "n": 463,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "areena",
+  "kysymys": "Kerro lisää: areena"
+ },
+ {
+  "n": 464,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "ferioihin",
+  "kysymys": "Kerro lisää: ferioihin"
+ },
+ {
+  "n": 465,
+  "kohta": "kohde:hahmotelma-nimesin-areena",
+  "kasite": "härkätaistelut",
+  "kysymys": "Kerro lisää: härkätaistelut"
+ },
+ {
+  "n": 466,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "Rouenin tuomiokirkossa",
+  "kysymys": "Kerro lisää: Rouenin tuomiokirkossa"
+ },
+ {
+  "n": 467,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "liekkigotiikasta",
+  "kysymys": "Kerro lisää: liekkigotiikasta"
+ },
+ {
+  "n": 468,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "Normandian",
+  "kysymys": "Kerro lisää: Normandian"
+ },
+ {
+  "n": 469,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "Kölnin tuomiokirkolle",
+  "kysymys": "Kerro lisää: Kölnin tuomiokirkolle"
+ },
+ {
+  "n": 470,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "kärkitorni",
+  "kysymys": "Kerro lisää: kärkitorni"
+ },
+ {
+  "n": 471,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "Claude Monet",
+  "kysymys": "Kerro lisää: Claude Monet"
+ },
+ {
+  "n": 472,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "impressionismiin",
+  "kysymys": "Kerro lisää: impressionismiin"
+ },
+ {
+  "n": 473,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "Liekkigotiikka",
+  "kysymys": "Kerro lisää: Liekkigotiikka"
+ },
+ {
+  "n": 474,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "ikkunapuitteet",
+  "kysymys": "Kerro lisää: ikkunapuitteet"
+ },
+ {
+  "n": 475,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "tuomiokirkko",
+  "kysymys": "Kerro lisää: tuomiokirkko"
+ },
+ {
+  "n": 476,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "cathedra",
+  "kysymys": "Kerro lisää: cathedra"
+ },
+ {
+  "n": 477,
+  "kohta": "kohde:hahmotelma-rouen",
+  "kasite": "Arkkipiispa",
+  "kysymys": "Kerro lisää: Arkkipiispa"
+ },
+ {
+  "n": 478,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Rocamadourin",
+  "kysymys": "Kerro lisää: Rocamadourin"
+ },
+ {
+  "n": 479,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "pyhiinvaeltajia",
+  "kysymys": "Kerro lisää: pyhiinvaeltajia"
+ },
+ {
+  "n": 480,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Neitsyt Marian",
+  "kysymys": "Kerro lisää: Neitsyt Marian"
+ },
+ {
+  "n": 481,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Alzoun",
+  "kysymys": "Kerro lisää: Alzoun"
+ },
+ {
+  "n": 482,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Rocamadour",
+  "kysymys": "Kerro lisää: Rocamadour"
+ },
+ {
+  "n": 483,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "AOC-suojauksen",
+  "kysymys": "Kerro lisää: AOC-suojauksen"
+ },
+ {
+  "n": 484,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Quercyn",
+  "kysymys": "Kerro lisää: Quercyn"
+ },
+ {
+  "n": 485,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "AOC-suojaus",
+  "kysymys": "Kerro lisää: AOC-suojaus"
+ },
+ {
+  "n": 486,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "viineille",
+  "kysymys": "Kerro lisää: viineille"
+ },
+ {
+  "n": 487,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "juustoille",
+  "kysymys": "Kerro lisää: juustoille"
+ },
+ {
+  "n": 488,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "monumentaalista portaikkoa",
+  "kysymys": "Kerro lisää: monumentaalista portaikkoa"
+ },
+ {
+  "n": 489,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Alzou",
+  "kysymys": "Kerro lisää: Alzou"
+ },
+ {
+  "n": 490,
+  "kohta": "kohde:hahmotelma-rocamadour",
+  "kasite": "Santiago de Compostelan",
+  "kysymys": "Kerro lisää: Santiago de Compostelan"
+ },
+ {
+  "n": 491,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "Saint-Émilionin",
+  "kysymys": "Kerro lisää: Saint-Émilionin"
+ },
+ {
+  "n": 492,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "kalkkikivikummulla",
+  "kysymys": "Kerro lisää: kalkkikivikummulla"
+ },
+ {
+  "n": 493,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 494,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "Kalkkikivi",
+  "kysymys": "Kerro lisää: Kalkkikivi"
+ },
+ {
+  "n": 495,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "merlot",
+  "kysymys": "Kerro lisää: merlot"
+ },
+ {
+  "n": 496,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "cabernet franc",
+  "kysymys": "Kerro lisää: cabernet franc"
+ },
+ {
+  "n": 497,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "viiniluokitus",
+  "kysymys": "Kerro lisää: viiniluokitus"
+ },
+ {
+  "n": 498,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "Premier Grand Cru Classé",
+  "kysymys": "Kerro lisää: Premier Grand Cru Classé"
+ },
+ {
+  "n": 499,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "Émilion",
+  "kysymys": "Kerro lisää: Émilion"
+ },
+ {
+  "n": 500,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "yksikivinen kirkko",
+  "kysymys": "Kerro lisää: yksikivinen kirkko"
+ },
+ {
+  "n": 501,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "Saint-Émilionin macaron",
+  "kysymys": "Kerro lisää: Saint-Émilionin macaron"
+ },
+ {
+  "n": 502,
+  "kohta": "kohde:hahmotelma-saint-emilion",
+  "kasite": "mantelimassa",
+  "kysymys": "Kerro lisää: mantelimassa"
+ },
+ {
+  "n": 503,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "Konjakki",
+  "kysymys": "Kerro lisää: Konjakki"
+ },
+ {
+  "n": 504,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "Nimisuojaus",
+  "kysymys": "Kerro lisää: Nimisuojaus"
+ },
+ {
+  "n": 505,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "pisco",
+  "kysymys": "Kerro lisää: pisco"
+ },
+ {
+  "n": 506,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "tislaukseen",
+  "kysymys": "Kerro lisää: tislaukseen"
+ },
+ {
+  "n": 507,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "charentelaista tislauspannua",
+  "kysymys": "Kerro lisää: charentelaista tislauspannua"
+ },
+ {
+  "n": 508,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "tammitynnyreissä",
+  "kysymys": "Kerro lisää: tammitynnyreissä"
+ },
+ {
+  "n": 509,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "enkelten osuudeksi",
+  "kysymys": "Kerro lisää: enkelten osuudeksi"
+ },
+ {
+  "n": 510,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "ugni blanc",
+  "kysymys": "Kerro lisää: ugni blanc"
+ },
+ {
+  "n": 511,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "Charenten",
+  "kysymys": "Kerro lisää: Charenten"
+ },
+ {
+  "n": 512,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "Ville d'art et d'histoire",
+  "kysymys": "Kerro lisää: Ville d'art et d'histoire"
+ },
+ {
+  "n": 513,
+  "kohta": "kohde:hahmotelma-cognac",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 514,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "kivennäislähteet",
+  "kysymys": "Kerro lisää: kivennäislähteet"
+ },
+ {
+  "n": 515,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Vichyn pastilli",
+  "kysymys": "Kerro lisää: Vichyn pastilli"
+ },
+ {
+  "n": 516,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "maailmanperintökohteisiin",
+  "kysymys": "Kerro lisää: maailmanperintökohteisiin"
+ },
+ {
+  "n": 517,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Philippe Pétainin",
+  "kysymys": "Kerro lisää: Philippe Pétainin"
+ },
+ {
+  "n": 518,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Vichyn hallinto",
+  "kysymys": "Kerro lisää: Vichyn hallinto"
+ },
+ {
+  "n": 519,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "kivennäislähteiden",
+  "kysymys": "Kerro lisää: kivennäislähteiden"
+ },
+ {
+  "n": 520,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "mineraalisuoloja",
+  "kysymys": "Kerro lisää: mineraalisuoloja"
+ },
+ {
+  "n": 521,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Bath",
+  "kysymys": "Kerro lisää: Bath"
+ },
+ {
+  "n": 522,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Baden-Baden",
+  "kysymys": "Kerro lisää: Baden-Baden"
+ },
+ {
+  "n": 523,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Karlovy Vary",
+  "kysymys": "Kerro lisää: Karlovy Vary"
+ },
+ {
+  "n": 524,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "Allier-joen",
+  "kysymys": "Kerro lisää: Allier-joen"
+ },
+ {
+  "n": 525,
+  "kohta": "kohde:hahmotelma-vichy",
+  "kasite": "kylpyläkaupunki",
+  "kysymys": "Kerro lisää: kylpyläkaupunki"
+ },
+ {
+  "n": 526,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Napoleon III:n",
+  "kysymys": "Kerro lisää: Napoleon III:n"
+ },
+ {
+  "n": 527,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Eugénie",
+  "kysymys": "Kerro lisää: Eugénie"
+ },
+ {
+  "n": 528,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Hôtel du Palais",
+  "kysymys": "Kerro lisää: Hôtel du Palais"
+ },
+ {
+  "n": 529,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Pyrénées-Atlantiques'n",
+  "kysymys": "Kerro lisää: Pyrénées-Atlantiques'n"
+ },
+ {
+  "n": 530,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Baskimaassa",
+  "kysymys": "Kerro lisää: Baskimaassa"
+ },
+ {
+  "n": 531,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Pyreneiden",
+  "kysymys": "Kerro lisää: Pyreneiden"
+ },
+ {
+  "n": 532,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "euskara",
+  "kysymys": "Kerro lisää: euskara"
+ },
+ {
+  "n": 533,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Baskimaan",
+  "kysymys": "Kerro lisää: Baskimaan"
+ },
+ {
+  "n": 534,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Peter Viertel",
+  "kysymys": "Kerro lisää: Peter Viertel"
+ },
+ {
+  "n": 535,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Biskajanlahden",
+  "kysymys": "Kerro lisää: Biskajanlahden"
+ },
+ {
+  "n": 536,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Atlantin valtameren",
+  "kysymys": "Kerro lisää: Atlantin valtameren"
+ },
+ {
+  "n": 537,
+  "kohta": "kohde:hahmotelma-biarritz",
+  "kasite": "Biarritzin",
+  "kysymys": "Kerro lisää: Biarritzin"
+ },
+ {
+  "n": 538,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Montagne Noiren",
+  "kysymys": "Kerro lisää: Montagne Noiren"
+ },
+ {
+  "n": 539,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Saint-Ferréolin",
+  "kysymys": "Kerro lisää: Saint-Ferréolin"
+ },
+ {
+  "n": 540,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Pierre-Paul Riquet",
+  "kysymys": "Kerro lisää: Pierre-Paul Riquet"
+ },
+ {
+  "n": 541,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Jean-Baptiste Colbertin",
+  "kysymys": "Kerro lisää: Jean-Baptiste Colbertin"
+ },
+ {
+  "n": 542,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Ludvig XIV:n",
+  "kysymys": "Kerro lisää: Ludvig XIV:n"
+ },
+ {
+  "n": 543,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Sèten",
+  "kysymys": "Kerro lisää: Sèten"
+ },
+ {
+  "n": 544,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "osterinviljelyä",
+  "kysymys": "Kerro lisää: osterinviljelyä"
+ },
+ {
+  "n": 545,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Iberian niemimaata",
+  "kysymys": "Kerro lisää: Iberian niemimaata"
+ },
+ {
+  "n": 546,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Gibraltarin salmea",
+  "kysymys": "Kerro lisää: Gibraltarin salmea"
+ },
+ {
+  "n": 547,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "Canal des Deux Mers'n",
+  "kysymys": "Kerro lisää: Canal des Deux Mers'n"
+ },
+ {
+  "n": 548,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "huviveneilyä",
+  "kysymys": "Kerro lisää: huviveneilyä"
+ },
+ {
+  "n": 549,
+  "kohta": "kohde:hahmotelma-canal-du-midi",
+  "kasite": "hinauspolku",
+  "kysymys": "Kerro lisää: hinauspolku"
+ },
+ {
+  "n": 550,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "Godescalc",
+  "kysymys": "Kerro lisää: Godescalc"
+ },
+ {
+  "n": 551,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "Santiago de Compostelaan",
+  "kysymys": "Kerro lisää: Santiago de Compostelaan"
+ },
+ {
+  "n": 552,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "Via Podiensis",
+  "kysymys": "Kerro lisää: Via Podiensis"
+ },
+ {
+  "n": 553,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "Pyreneet",
+  "kysymys": "Kerro lisää: Pyreneet"
+ },
+ {
+  "n": 554,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "vihreät linssit",
+  "kysymys": "Kerro lisää: vihreät linssit"
+ },
+ {
+  "n": 555,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "alkuperänimitys",
+  "kysymys": "Kerro lisää: alkuperänimitys"
+ },
+ {
+  "n": 556,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "pitsiä",
+  "kysymys": "Kerro lisää: pitsiä"
+ },
+ {
+  "n": 557,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "nyplien",
+  "kysymys": "Kerro lisää: nyplien"
+ },
+ {
+  "n": 558,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "Notre-Dame du Puy",
+  "kysymys": "Kerro lisää: Notre-Dame du Puy"
+ },
+ {
+  "n": 559,
+  "kohta": "kohde:hahmotelma-le-puy-en-velay",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 560,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "poikkilaiva",
+  "kysymys": "Kerro lisää: poikkilaiva"
+ },
+ {
+  "n": 561,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "Pietarinkirkkoa",
+  "kysymys": "Kerro lisää: Pietarinkirkkoa"
+ },
+ {
+  "n": 562,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "Ranskan vallankumous",
+  "kysymys": "Kerro lisää: Ranskan vallankumous"
+ },
+ {
+  "n": 563,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "benediktiiniluostarin",
+  "kysymys": "Kerro lisää: benediktiiniluostarin"
+ },
+ {
+  "n": 564,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "Clunyn uudistusliike",
+  "kysymys": "Kerro lisää: Clunyn uudistusliike"
+ },
+ {
+  "n": 565,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "Cluny III",
+  "kysymys": "Kerro lisää: Cluny III"
+ },
+ {
+  "n": 566,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "holvikaaret",
+  "kysymys": "Kerro lisää: holvikaaret"
+ },
+ {
+  "n": 567,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "goottilainen tyyli",
+  "kysymys": "Kerro lisää: goottilainen tyyli"
+ },
+ {
+  "n": 568,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "Nursialaisen Benedictuksen",
+  "kysymys": "Kerro lisää: Nursialaisen Benedictuksen"
+ },
+ {
+  "n": 569,
+  "kohta": "kohde:hahmotelma-cluny",
+  "kasite": "ora et labora",
+  "kysymys": "Kerro lisää: ora et labora"
+ },
+ {
+  "n": 570,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "Victor Lustig",
+  "kysymys": "Kerro lisää: Victor Lustig"
+ },
+ {
+  "n": 571,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "André Poisson",
+  "kysymys": "Kerro lisää: André Poisson"
+ },
+ {
+  "n": 572,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "lahjuksen",
+  "kysymys": "Kerro lisää: lahjuksen"
+ },
+ {
+  "n": 573,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "Victor Lustigille",
+  "kysymys": "Kerro lisää: Victor Lustigille"
+ },
+ {
+  "n": 574,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "Victor Lustigin",
+  "kysymys": "Kerro lisää: Victor Lustigin"
+ },
+ {
+  "n": 575,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "radiolähetyksiin",
+  "kysymys": "Kerro lisää: radiolähetyksiin"
+ },
+ {
+  "n": 576,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "Pariisin liike-elämän",
+  "kysymys": "Kerro lisää: Pariisin liike-elämän"
+ },
+ {
+  "n": 577,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "ruostesuojana",
+  "kysymys": "Kerro lisää: ruostesuojana"
+ },
+ {
+  "n": 578,
+  "kohta": "nosto:lustig-eiffel",
+  "kasite": "kolmea eri sävyä",
+  "kysymys": "Kerro lisää: kolmea eri sävyä"
+ },
+ {
+  "n": 579,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Marseilleen",
+  "kysymys": "Kerro lisää: Marseilleen"
+ },
+ {
+  "n": 580,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Étienne Geoffroy Saint-Hilaire",
+  "kysymys": "Kerro lisää: Étienne Geoffroy Saint-Hilaire"
+ },
+ {
+  "n": 581,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Kaarle X:lle",
+  "kysymys": "Kerro lisää: Kaarle X:lle"
+ },
+ {
+  "n": 582,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "lypsylehmiä",
+  "kysymys": "Kerro lisää: lypsylehmiä"
+ },
+ {
+  "n": 583,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Lyonissa",
+  "kysymys": "Kerro lisää: Lyonissa"
+ },
+ {
+  "n": 584,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "ménagerie",
+  "kysymys": "Kerro lisää: ménagerie"
+ },
+ {
+  "n": 585,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Jardin des Plantes",
+  "kysymys": "Kerro lisää: Jardin des Plantes"
+ },
+ {
+  "n": 586,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 587,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "vertailevasta anatomiasta",
+  "kysymys": "Kerro lisää: vertailevasta anatomiasta"
+ },
+ {
+  "n": 588,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Cuvier'n",
+  "kysymys": "Kerro lisää: Cuvier'n"
+ },
+ {
+  "n": 589,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Muhammad Ali",
+  "kysymys": "Kerro lisää: Muhammad Ali"
+ },
+ {
+  "n": 590,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Britanniaan",
+  "kysymys": "Kerro lisää: Britanniaan"
+ },
+ {
+  "n": 591,
+  "kohta": "nosto:kirahvin-kavelymatka",
+  "kasite": "Itävaltaan",
+  "kysymys": "Kerro lisää: Itävaltaan"
+ },
+ {
+  "n": 592,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Opéra-Comique",
+  "kysymys": "Kerro lisää: Opéra-Comique"
+ },
+ {
+  "n": 593,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Adolphe de Leuven",
+  "kysymys": "Kerro lisää: Adolphe de Leuven"
+ },
+ {
+  "n": 594,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Marie Roze",
+  "kysymys": "Kerro lisää: Marie Roze"
+ },
+ {
+  "n": 595,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Georges Bizet",
+  "kysymys": "Kerro lisää: Georges Bizet"
+ },
+ {
+  "n": 596,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Wienissä",
+  "kysymys": "Kerro lisää: Wienissä"
+ },
+ {
+  "n": 597,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Ernest Guiraud",
+  "kysymys": "Kerro lisää: Ernest Guiraud"
+ },
+ {
+  "n": 598,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "puhuttuja dialogeja",
+  "kysymys": "Kerro lisää: puhuttuja dialogeja"
+ },
+ {
+  "n": 599,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Salle Favartissa",
+  "kysymys": "Kerro lisää: Salle Favartissa"
+ },
+ {
+  "n": 600,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Prosper Mérimée",
+  "kysymys": "Kerro lisää: Prosper Mérimée"
+ },
+ {
+  "n": 601,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Henri Meilhac",
+  "kysymys": "Kerro lisää: Henri Meilhac"
+ },
+ {
+  "n": 602,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Ludovic Halévy",
+  "kysymys": "Kerro lisää: Ludovic Halévy"
+ },
+ {
+  "n": 603,
+  "kohta": "nosto:carmenin-ensi-ilta",
+  "kasite": "Carmenin",
+  "kysymys": "Kerro lisää: Carmenin"
+ },
+ {
+  "n": 604,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "Gustave Eiffel",
+  "kysymys": "Kerro lisää: Gustave Eiffel"
+ },
+ {
+  "n": 605,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "kullattuja kirjaimia",
+  "kysymys": "Kerro lisää: kullattuja kirjaimia"
+ },
+ {
+  "n": 606,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "naistutkijoiden",
+  "kysymys": "Kerro lisää: naistutkijoiden"
+ },
+ {
+  "n": 607,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "nimilistalla",
+  "kysymys": "Kerro lisää: nimilistalla"
+ },
+ {
+  "n": 608,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "ensimmäisen kerroksen",
+  "kysymys": "Kerro lisää: ensimmäisen kerroksen"
+ },
+ {
+  "n": 609,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "Lavoisier",
+  "kysymys": "Kerro lisää: Lavoisier"
+ },
+ {
+  "n": 610,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "Ampère",
+  "kysymys": "Kerro lisää: Ampère"
+ },
+ {
+  "n": 611,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "Garabitin viadukti",
+  "kysymys": "Kerro lisää: Garabitin viadukti"
+ },
+ {
+  "n": 612,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "Vapaudenpatsaan",
+  "kysymys": "Kerro lisää: Vapaudenpatsaan"
+ },
+ {
+  "n": 613,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "Maurice Koechlin",
+  "kysymys": "Kerro lisää: Maurice Koechlin"
+ },
+ {
+  "n": 614,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "antennit",
+  "kysymys": "Kerro lisää: antennit"
+ },
+ {
+  "n": 615,
+  "kohta": "nosto:pariisin-72-nimea",
+  "kasite": "maailmannäyttelyä",
+  "kysymys": "Kerro lisää: maailmannäyttelyä"
+ },
+ {
+  "n": 616,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "arkkitehtikilpailu",
+  "kysymys": "Kerro lisää: arkkitehtikilpailu"
+ },
+ {
+  "n": 617,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "Hector Guimardille",
+  "kysymys": "Kerro lisää: Hector Guimardille"
+ },
+ {
+  "n": 618,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "Hector Guimard",
+  "kysymys": "Kerro lisää: Hector Guimard"
+ },
+ {
+  "n": 619,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "Pariisin metron",
+  "kysymys": "Kerro lisää: Pariisin metron"
+ },
+ {
+  "n": 620,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "Hector Guimardin",
+  "kysymys": "Kerro lisää: Hector Guimardin"
+ },
+ {
+  "n": 621,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "rauhoitettiin",
+  "kysymys": "Kerro lisää: rauhoitettiin"
+ },
+ {
+  "n": 622,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "art nouveau",
+  "kysymys": "Kerro lisää: art nouveau"
+ },
+ {
+  "n": 623,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "Castel Béranger",
+  "kysymys": "Kerro lisää: Castel Béranger"
+ },
+ {
+  "n": 624,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "maailmannäyttely",
+  "kysymys": "Kerro lisää: maailmannäyttely"
+ },
+ {
+  "n": 625,
+  "kohta": "nosto:guimardin-metro",
+  "kasite": "metrolinja",
+  "kysymys": "Kerro lisää: metrolinja"
+ },
+ {
+  "n": 626,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "pyhäinjäännöksiä",
+  "kysymys": "Kerro lisää: pyhäinjäännöksiä"
+ },
+ {
+  "n": 627,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "Notre-Damen",
+  "kysymys": "Kerro lisää: Notre-Damen"
+ },
+ {
+  "n": 628,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "kattotuolisto",
+  "kysymys": "Kerro lisää: kattotuolisto"
+ },
+ {
+  "n": 629,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "ullakko",
+  "kysymys": "Kerro lisää: ullakko"
+ },
+ {
+  "n": 630,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "Notre-Dame",
+  "kysymys": "Kerro lisää: Notre-Dame"
+ },
+ {
+  "n": 631,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "kukon",
+  "kysymys": "Kerro lisää: kukon"
+ },
+ {
+  "n": 632,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "pyhäinjäännökset",
+  "kysymys": "Kerro lisää: pyhäinjäännökset"
+ },
+ {
+  "n": 633,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "jälleenrakentajien",
+  "kysymys": "Kerro lisää: jälleenrakentajien"
+ },
+ {
+  "n": 634,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "tammirungosta",
+  "kysymys": "Kerro lisää: tammirungosta"
+ },
+ {
+  "n": 635,
+  "kohta": "nosto:notre-damen-kukko",
+  "kasite": "keskitorni",
+  "kysymys": "Kerro lisää: keskitorni"
+ },
+ {
+  "n": 636,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "patonkeja",
+  "kysymys": "Kerro lisää: patonkeja"
+ },
+ {
+  "n": 637,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "presidentinpalatsin",
+  "kysymys": "Kerro lisää: presidentinpalatsin"
+ },
+ {
+  "n": 638,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "vehnäjauhoa",
+  "kysymys": "Kerro lisää: vehnäjauhoa"
+ },
+ {
+  "n": 639,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "voittaja",
+  "kysymys": "Kerro lisää: voittaja"
+ },
+ {
+  "n": 640,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "patonki",
+  "kysymys": "Kerro lisää: patonki"
+ },
+ {
+  "n": 641,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "raati",
+  "kysymys": "Kerro lisää: raati"
+ },
+ {
+  "n": 642,
+  "kohta": "nosto:pariisin-patonki",
+  "kasite": "brioche",
+  "kysymys": "Kerro lisää: brioche"
+ },
+ {
+  "n": 643,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "Louis Leplée",
+  "kysymys": "Kerro lisää: Louis Leplée"
+ },
+ {
+  "n": 644,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "Édith Piaf",
+  "kysymys": "Kerro lisää: Édith Piaf"
+ },
+ {
+  "n": 645,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "La Vie en rose",
+  "kysymys": "Kerro lisää: La Vie en rose"
+ },
+ {
+  "n": 646,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "Django Reinhardtin",
+  "kysymys": "Kerro lisää: Django Reinhardtin"
+ },
+ {
+  "n": 647,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "kitaran",
+  "kysymys": "Kerro lisää: kitaran"
+ },
+ {
+  "n": 648,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "banjoa",
+  "kysymys": "Kerro lisää: banjoa"
+ },
+ {
+  "n": 649,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "Bellevillessä",
+  "kysymys": "Kerro lisää: Bellevillessä"
+ },
+ {
+  "n": 650,
+  "kohta": "nosto:pariisi-soi",
+  "kasite": "Pigallen",
+  "kysymys": "Kerro lisää: Pigallen"
+ },
+ {
+  "n": 651,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Jeanne de la Motte",
+  "kysymys": "Kerro lisää: Jeanne de la Motte"
+ },
+ {
+  "n": 652,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "de Rohanin",
+  "kysymys": "Kerro lisää: de Rohanin"
+ },
+ {
+  "n": 653,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Marie Antoinette",
+  "kysymys": "Kerro lisää: Marie Antoinette"
+ },
+ {
+  "n": 654,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Versailles'n",
+  "kysymys": "Kerro lisää: Versailles'n"
+ },
+ {
+  "n": 655,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "kuningattaren",
+  "kysymys": "Kerro lisää: kuningattaren"
+ },
+ {
+  "n": 656,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "kardinaali",
+  "kysymys": "Kerro lisää: kardinaali"
+ },
+ {
+  "n": 657,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Denis Vrain-Lucas",
+  "kysymys": "Kerro lisää: Denis Vrain-Lucas"
+ },
+ {
+  "n": 658,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Michel Chasles'lle",
+  "kysymys": "Kerro lisää: Michel Chasles'lle"
+ },
+ {
+  "n": 659,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Kardinaali de Rohan",
+  "kysymys": "Kerro lisää: Kardinaali de Rohan"
+ },
+ {
+  "n": 660,
+  "kohta": "nosto:pariisin-vuosisadat",
+  "kasite": "Chasles",
+  "kysymys": "Kerro lisää: Chasles"
+ }
+]

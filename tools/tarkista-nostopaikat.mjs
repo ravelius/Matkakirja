@@ -42,7 +42,7 @@
  *      seisoo samassa paikassa.
  *
  * LINKITYS ON TUNNUKSELLA EIKÄ NIMELLÄ. Nimivertailu ei toimi:
- * karsittu nosto `moskeijat` on kartalla nimellä "Banja Bashin
+ * karsittu nosto `moskeijat` on kartalla nimellä "Banja Bašin
  * moskeija" ja `syvennys-sofia-areena` nimellä "Serdican areena".
  * Kenttä `nosto` on siksi pakollinen linkki, ja tämä työkalu lukee
  * vain sitä.

@@ -7,7 +7,7 @@
  * (tests/ehdotukset-worker.test.mjs, mock-R2).
  *
  * MITÄ TÄMÄ ON: pelaaja voi lähettää palautelomakkeen laajennuksella
- * kuvia ja juttuideoita lehtiin (js/tyohuone-raamattu.js, osio
+ * kuvia ja juttuideoita lehtiin (vanha Raamattu, arkistossa docs/arkisto/, osio
  * "Lukijoiden ehdotukset"). Lähetykset menevät YKSITYISEEN R2-
  * ämpäriin — EIVÄT pelin julkiseen peiliin, koska mukana voi olla
  * sähköpostiosoite. Omistaja lukee ne pelin työhuoneesta

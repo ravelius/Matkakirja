@@ -1,0 +1,181 @@
+================ KOHTA 36 (kaupunki:pariisi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pariisi (kaupunki)
+Tietoruudun teksti: Pariisi on Ranskan pääkaupunki, ja se on rakennettu Seinen mutkaan. Kaupungissa asuu runsaat kaksi miljoonaa ihmistä ja koko seudulla yli kymmenen miljoonaa. Kaikki alkoi joen keskellä olevasta saaresta: Île de la Citéllä asui gallialainen parisii-heimo, ja roomalaiset perustivat sinne kaupungin nimeltä Lutetia.
+
+Samalla saarella seisoo Notre-Dame, jota alettiin rakentaa 1163; sen katto paloi huhtikuussa 2019, ja kirkko avattiin uudelleen joulukuussa 2024. Nykyisen kaupunkikuvan teki yksi mies: keisari Napoleon III määräsi 1853 prefekti Haussmannin uudistamaan Pariisin, ja seitsemäntoista vuoden aikana kapeat kujat väistyivät leveiden bulevardien ja vaaleiden kivitalojen tieltä.
+
+Eiffel-torni nousi vuoden 1889 maailmannäyttelyyn, ja se oli määrä purkaa parinkymmenen vuoden kuluttua, kunnes huipun radioantenni teki siitä armeijalle liian hyödyllisen. Metro avattiin 1900, ja Hector Guimar…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Musiikki: Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Marraskuun 2. pä…
+- [Pariisi — kohdekartta / Kohdekartta: Pariisi soi] Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse. Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo lapsena. Marraskuun 2. pä…
+
+### 36.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kaupunki:marseille) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Marseille
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Pelaaja katsoo kartalla: Marseille (kaupunki)
+Tietoruudun teksti: Marseille on Ranskan vanhin kaupunki ja Pariisin jälkeen sen väkirikkain: asukkaita on runsaat 880 000 ja koko seudulla lähes kaksi miljoonaa. Kreikkalaiset merenkulkijat perustivat sen noin 600 eaa. nimellä Massalia luonnonpoukamaan, jonka nimi on nyt Vanhasatama. Se on Bouches-du-Rhônen departementin hallintokeskus ja yhä Ranskan suurin satama.
+
+Marseille on aina katsonut merelle päin, ei pääkaupunkiin, ja se näkyy väestössä: satama on tuonut tänne väkeä Italiasta, Armeniasta, Algeriasta, Marokosta ja Komoreilta. Sataman yllä kohoaa kukkulalla basilika Notre-Dame de la Garde, jonka kullattu patsas näkyy merelle ja jota kaupunkilaiset sanovat nimellä la Bonne Mère. Saippuaa täällä on keitetty oliiviöljystä noin kuudensadan vuoden ajan, ja vuoden 1688 asetus varasi nimen sille.
+
+Kaupunki jakautuu kuuteentoista keskenään hyvin erilaiseen kaupunginosaan, ja yhteen niistä kuuluu kokonainen…
+Isoisän matkakirjamerkintä: Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille] Ranskan vanhin kaupunki: kreikkalaiset purjehtivat tänne 2600 vuotta sitten, ja tarinan mukaan kaikki alkoi juhlasta, jossa tyttö ojensi vesimaljan valitsemalleen miehelle.
+
+### 37.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (maa:GBR) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Iso-Britannia (maa)
+Tietoruudun teksti: Yhdistynyt kuningaskunta on neljän maan liitto: Englanti, Skotlanti, Wales ja Pohjois-Irlanti. Kolme ensimmäistä ovat samalla saarella, neljäs Irlannin saaren pohjoiskulmassa, ja arjessa maasta puhutaan yleensä nimellä Britannia. Saarivaltio hallitsi aikanaan neljäsosaa maapallosta, ja siksi englantia puhutaan nykyään joka mantereella. Teollinen vallankumous alkoi täältä: höyrykone, rautatie ja tehdas muuttivat ensin Britannian ja sitten koko maailman. Parlamenttia kutsutaan parlamenttien äidiksi, ja vasemmanpuoleinen liikenne, teehetki ja jonottamisen jalo taito kuuluvat arkeen yhä. Jalkapallo, rugby ja kriketti syntyivät kaikki näillä saarilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Port Moresby: Kylä joka on isompi kuin luulisi] Hanuabada tarkoittaa motun kielellä isoa kylää — hanua on kylä ja bada iso. Se on motu-kylistä suurin, koti yli viidelletoista tuhannelle ihmiselle, ja se on kaupungin keskustasta luoteeseen sataman vesillä. Osa taloista seisoo paaluilla veden päällä, ja kadut ovat lankkusiltoja talolta talolle. Juuri tämän kylän rannalla luettiin vuonna 1884 julistus, jolla Britannia otti alueen suojelualueekseen; prinsessa Anne kävi katsomassa samaa paikkaa vuonna 2022. Kylä tunnetaan myös kriketinpelaajistaan: Papua-Uuden-Guinean yhdeksästä kansainyhteisön kisojen mitalista kahdeksan on tullut Hanuabadasta.
+
+### 38.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kaupunki:lontoo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Lontoo (kaupunki)
+Tietoruudun teksti: Lontoo on Yhdistyneen kuningaskunnan pääkaupunki Thamesin varrella, ja siellä asuu lähes yhdeksän miljoonaa ihmistä. Roomalaiset perustivat paikalle Londiniumin noin vuonna 47, ja kaupunki eli vuosisatoja satamastaan: Thames on vuorovesijoki keskustaan asti, joten purjelaivat pääsivät aivan kaupungin sydämeen, ja 1800-luvulla satama oli maailman vilkkain.
+
+Vuoden 1666 suurpalo tuhosi neljässä päivässä noin 13 000 taloa, ja sen jälkeen puujulkisivut kiellettiin — siitä vanhojen kortteleiden tiili. Christopher Wren piirsi palon jälkeen Pyhän Paavalin katedraalin, jonka kupoli oli kaupungin korkein rakennus yli 250 vuotta. Maailman ensimmäinen metro avattiin täällä vuonna 1863, ja ensimmäinen liikennevalo syttyi parlamenttitalon kupeessa 1868.
+
+Keskustassa on itse asiassa kaksi kaupunkia: rahaa tekevä City of London on vain 2,9 neliökilometriä omine sääntöineen, ja Westminsterissä ovat par…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Lontoo 1666 — soitin veneessä, kaupunki tulessa] 2.–5.9.1666 — Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina …
+- [Lontoo — kaupunkilehti / Lontoo] Kaupunki, jossa maailman ensimmäinen metro, vanhin jalkapallosarja ja tuhat vuotta kruunajaisia mahtuvat saman joen varrelle.
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+
+### 39.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kaupunki:edinburgh) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Edinburgh
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Edinburgh (kaupunki)
+Tietoruudun teksti: Edinburgh on Skotlannin pääkaupunki Firth of Forthin rannalla, ja siellä asuu noin puoli miljoonaa ihmistä — Glasgow’n jälkeen toiseksi eniten koko maassa. Kaupungin keskellä kohoaa sammuneen tulivuoren kallio, jonka laella linna seisoo, ja kalliolta itään laskeva harjanne kantaa vanhankaupungin ainoan pääkadun. Kaupunki on Skotlannin hallituksen, parlamentin ja ylimpien tuomioistuinten kotipaikka.
+
+Vanhakaupunki kasvoi kapealle harjanteelle ja ylöspäin, koska sivusuunnassa ei ollut tilaa. Kun harjanne tuli täyteen, 1760-luvulla ryhdyttiin rakentamaan notkon toiselle puolelle uuttakaupunkia, jonka kadut ovat suoria; nämä kaksi hyvin erilaista kaupunkia ovat yhdessä Unescon maailmanperintökohde. Yliopisto perustettiin 1582, ja 1700-luvun lopulla samoilla kaduilla kävelivät David Hume, Adam Smith ja James Hutton — aikaa sanotaan Skotlannin valistukseksi.
+
+Skotlannin oma parlamentti lakkau…
+Isoisän matkakirjamerkintä: Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kaupunkilehti / Edinburgh] Kaupunki kasvoi sammuneen tulivuoren päälle, ja joka elokuu sen kadut täyttyvät esiintyjistä, joita kukaan ei ole kutsunut.
+
+### 40.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

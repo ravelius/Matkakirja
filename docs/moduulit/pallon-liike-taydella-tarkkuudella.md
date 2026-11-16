@@ -420,7 +420,7 @@ js/pallolauta/lauta.js (yksi rivi), tests/pallonostot*.test.mjs.
 TEHTÄVÄ E0 (Opus, yksi commit, worktree origin/mainin päällä): siirrä
 lepokerroksen puhtaat apufunktiot js/pallo.js:stä uuteen moduuliin
 js/pallolaatat.js SANATARKASTI (mekaaninen siirto; poistot ja lisäykset
-täsmäävät). Lue ensin CLAUDE.md, docs/roolitus.md, js/tyohuone-raamattu.js
+täsmäävät). Lue ensin CLAUDE.md, docs/roolitus.md, docs/raamattu/
 (rivit "PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA" lisäyksineen) ja
 docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvut 4 ja 6.
 

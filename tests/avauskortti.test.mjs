@@ -50,7 +50,8 @@ test('osiohakemisto: lehden osiot ja nostot, tuplat yhdistetty, oma kuva joka os
   // Historian hetki on lehden sivuna kerran — nostona tullut sama hetki ohitetaan.
   const hetket = osiot.find((o) => o.aihe === 'hetket');
   assert.ok(hetket.sivu > 0);
-  assert.ok(!hetket.jutut.some((j) => j.otsikko === 'Curie 1898'));
+  // Otsikon alku on nimiö ("Curie 1898 — …"): rivejä tulee sivusta, ja nostona tullut sama hetki ei tuplaa sitä.
+  assert.equal(hetket.jutut.filter((j) => j.otsikko === 'Curie 1898').length, 1);
   // Sama nosto kahdesti → kerran.
   const kulttuuri = osiot.find((o) => o.aihe === 'kulttuuri');
   assert.equal(kulttuuri.jutut.filter((j) => j.otsikko === 'Paras patonki').length, 1);

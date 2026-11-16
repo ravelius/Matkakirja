@@ -1,0 +1,420 @@
+### v2-1246
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Justinianus
+VASTAUS: Justinianus I oli Itä-Rooman eli Bysantin keisari vuosina 527–565. Hänen puolisonsa oli keisarinna [[Theodora]], jolla oli tärkeä asema hovissa. Justinianus tunnetaan laajasta lainsäädäntötyöstä: hänen aikanaan koottiin [[Corpus Iuris Civilis]], roomalaisen oikeuden kokoelma, joka vaikutti Euroopan oikeusjärjestelmiin vuosisatojen ajan. Hän yritti myös palauttaa vanhan Rooman valtakunnan alueita, ja kenraali [[Belisarius]] valloitti hänen käskystään Pohjois-Afrikan ja osia Italiasta. Konstantinopolin Nika-kapinan jälkeen vuonna 532 hän rakennutti Hagia Sofian uudelleen, ja kirkko valmistui vuonna 537.
+
+### v2-1247
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Mehmet II
+VASTAUS: Mehmet II eli Mehmed II, jota kutsutaan myös Valloittajaksi, oli ottomaanien sulttaani vuosina 1451–1481; lyhyesti hän oli sulttaani jo 1444–1446. Hän valloitti [[Konstantinopolin]] 29. toukokuuta 1453 noin 53 päivän piirityksen jälkeen ollessaan 21-vuotias; piirityksessä käytettiin muun muassa unkarilaisen Orbanin valamaa jättiläistykkiä. Valloituksen jälkeen kaupungista tuli ottomaanien pääkaupunki, ja Mehmed rakennutti sinne [[Topkapın palatsin]] ja [[Fatihin moskeijan]]. Hän valloitti myös suuria alueita Balkanilla ja Anatoliassa. Hän kutsui hoviinsa eurooppalaisia taiteilijoita, ja venetsialainen [[Gentile Bellini]] maalasi hänen muotokuvansa.
+
+### v2-1248
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Hagia Sofia
+VASTAUS: Hagia Sofia rakennettiin keisari Justinianus I:n käskystä uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, [[Anthemios Trallesilainen]] ja [[Isidoros Miletoslainen]], ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila. Se toimi kirkkona yli tuhat vuotta, ja [[Konstantinopolin]] valtauksen jälkeen vuonna 1453 siitä tehtiin moskeija, vuonna 1934 museo ja vuonna 2020 jälleen moskeija. Sisätiloja koristavat bysanttilaiset mosaiikit.
+
+### v2-1249
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Galata
+VASTAUS: Galata on Istanbulin Beyoğlun alueeseen kuuluva kaupunginosa [[Kultaisen sarven]] pohjoisrannalla. Alueen merkittävä vaihe alkoi 1200-luvun lopulla, kun [[genovalaiset]] kauppiaat saivat Bysantin keisarilta oikeuden asua ja käydä kauppaa siellä ja rakensivat siitä oman kauppasiirtolansa. Genovalaiset rakensivat vuonna 1348 [[Galatan tornin]], joka tunnettiin alun perin Kristuksen tornina ja oli valmistuessaan kaupungin korkein rakennus, lähes 63 metriä korkea. Osmannien valloitettua kaupungin 1453 torni toimi muun muassa vankilana, ja vuodesta 1717 sen huipulla vartioitiin kaupunkia tulipalojen varalta. Galatassa asui vuosisatoja kreikkalaisia, armenialaisia, juutalaisia ja eurooppalaisia kauppiaita.
+
+### v2-1250
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Galatan silta
+VASTAUS: Galatan silta ylittää Kultaisen sarven ja yhdistää Eminönün ja [[Karaköyn]] alueet. Siltaa suunniteltiin kauan: vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja [[Leonardo da Vinci]] piirsi 280 metrin yhtenäisen jännevälin, joka olisi ollut aikansa pisin. Sulttaani ei hyväksynyt sitä, ja ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä, ja kolmen ensimmäisen päivän jälkeen ylitys oli maksullinen. Siltoja on sittemmin uusittu, ja nykyinen kaksitasoinen silta on peräisin 1990-luvulta. Ylätasolla kalastellaan, ja alatasolla on ravintoloita.
+
+### v2-1251
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Byzantionin
+VASTAUS: Byzantion oli antiikin kreikkalainen kaupunki, jonka kreikkalaiset siirtolaiset [[Megarasta]] perustivat Bosporinsalmen länsirannalle perimätiedon mukaan 600-luvulla eaa. Perustajaksi mainitaan Byzas, jonka mukaan kaupunki sai nimensä. Tarinan mukaan [[Delfoin oraakkeli]] neuvoi siirtolaisia asettumaan sokeiden maata vastapäätä; sokeina pidettiin Kalkedonin asukkaita, jotka olivat valinneet huonomman paikan Aasian rannalta. Byzantion oli kauppakaupunki, koska se hallitsi salmen laivaliikennettä ja sillä oli suojaisa satama Kultaisessa sarvessa. Kun keisari [[Konstantinus Suuri]] teki kaupungista uuden pääkaupunkinsa vuonna 330, se sai nimen Konstantinopoli. Byzantionin mukaan on nimetty myös myöhempi Bysantin valtakunta.
+
+### v2-1252
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: ottomaanien
+VASTAUS: Ottomaanit olivat turkkilaista alkuperää oleva dynastia ja heidän johtamansa valtio, joka oli olemassa noin vuodesta 1299 vuoteen 1922. Nimi tulee ensimmäisestä hallitsijasta [[Osman I:stä]]. Valtakunnan ensimmäiset pääkaupungit olivat Bursa ja Edirne, ja Konstantinopoli tuli pääkaupungiksi vuoden 1453 valloituksen jälkeen. Laajimmillaan valtakunta ulottui kolmelle mantereelle, ja huippuaikaa edusti 1500-luvulla [[Suleiman Suuri]]. Valtakunnassa asui monia kansoja ja uskontoja, ja sitä hallittiin muun muassa [[millet-järjestelmän]] kautta, jossa uskonnolliset yhteisöt hoitivat osan omista asioistaan. Sulttaanikunta lakkautettiin vuonna 1922, ja Turkin tasavalta julistettiin lokakuussa 1923.
+
+### v2-1253
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Kedi
+VASTAUS: Kedi on turkkilaisen ohjaajan [[Ceyda Torunin]] vuonna 2016 julkaisema dokumenttielokuva Istanbulin katukissoista. Nimi tarkoittaa turkin kielellä kissaa. Elokuva seuraa seitsemää kissaa eri kaupunginosissa, ja kuvaus on tehty kissojen korkeudelta, joten kaupunki näkyy niiden silmin. Kissat saavat elokuvassa persoonallisuuden ja nimen, ja ihmiset kertovat, miten kissat ovat vaikuttaneet heidän elämäänsä. Elokuva sai kansainvälistä huomiota ja esitettiin elokuvateattereissa useissa maissa. Se kuvaa [[katukissojen]] asemaa kaupungin arjessa ja tapaa, jolla asukkaat huolehtivat niistä.
+
+### v2-1254
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Basilikasäiliö
+VASTAUS: Basilikasäiliö eli turkiksi Yerebatan Sarnıcı on suurin Istanbulin vanhankaupungin alla säilynyt bysanttilainen vesisäiliö. Sen rakennutti keisari Justinianus 500-luvulla, ja siihen kuuluu 336 pylvästä, jotka ovat noin yhdeksän metriä korkeita. Säiliöön laskeudutaan 52 portaan kautta Hagia Sofian läheltä. Kaupunki unohti sen vuosisadoiksi: 1500-luvulla ranskalainen tutkija [[Petrus Gyllius]] ihmetteli, miksi talojen lattioissa oli reikiä, joista nostettiin vettä ja joskus kaloja. Kahden pylvään jalustana on [[Medusan]] pää, ja syy on epäselvä, koska päät on todennäköisesti otettu vanhemmista rakennuksista. Säiliö on esiintynyt myös James Bond -elokuvassa [[From Russia with Love]] vuodelta 1963.
+
+### v2-1255
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Medusan
+VASTAUS: Medusa oli kreikkalaisessa myytissä yksi kolmesta gorgosta. Hänellä oli käärmeistä koostuva tukka, ja hänen katseensa muutti katsojan kiveksi. Sankari [[Perseus]] surmasi hänet [[Athenen]] ja Hermeksen avulla, ja Medusan verestä syntyi siivekäs hevonen [[Pegasos]]. Medusan pää eli gorgoneion esiintyi antiikissa suojaavana tunnuksena kilvissä, rakennuksissa ja koruissa. Istanbulin Basilikasäiliössä kahden pylvään jalustana on Medusan pää, toinen kyljellään ja toinen ylösalaisin. Varmaa syytä asetteluun ei tiedetä, ja tutkijat pitävät kiviä todennäköisesti uudelleenkäytettynä materiaalina vanhemmista rakennuksista.
+
+### v2-1256
+KOHDE: kaupunki:istanbul
+KYSYMYS: Kerro lisää: Tünel
+VASTAUS: Tünel on Istanbulin lyhyt maanalainen kiskojunareitti Karaköyn ja Beyoğlun välillä. Se avattiin vuonna 1875, ja sitä pidetään yhtenä maailman vanhimmista maanalaisista kaupunkiradoista Lontoon metron jälkeen. Rata on alle kilometrin pituinen ja yhdistää rannan [[Karaköyn]] Beyoğlun [[İstiklal-kadun]] päähän jyrkän rinteen yli. Ranskalainen insinööri [[Eugène-Henri Gavand]] suunnitteli radan. Kyseessä on funikulaari: kaksi vaunua kulkee rinnakkaisilla raiteilla ja tasapainottaa toisiaan.
+
+### v2-1257
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Aydınin
+VASTAUS: Aydın on kaupunki ja maakunta Länsi-Turkissa [[Büyük Menderesin]] laaksossa, sisämaassa İzmirin eteläpuolella. Se kuuluu Egeanmeren alueen tärkeimpiin maatalousseutuihin: viikunat ovat tunnetuin tuote, mutta alueella viljellään myös oliiveja ja puuvillaa. Kaupungin nimi viittaa 1300-luvulla alueella hallinneeseen Aydınoğulları-ruhtinaskuntaan. Antiikissa paikalla oli Tralleis, ja maakunnassa on myös antiikin kohde [[Afrodisias]], joka on Unescon maailmanperintökohde. Aydınin ja İzmirin välinen rautatie oli yksi Ottomaanien valtakunnan varhaisimmista.
+
+### v2-1258
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Smyrna
+VASTAUS: Smyrna oli antiikin kreikkalainen kaupunki Egeanmeren rannikolla, ja nykyinen İzmir on kasvanut sen paikalle. Kaupunki kuului Vähän-Aasian ionialaiseen kulttuuripiiriin, ja se oli yksi niistä kaupungeista, jotka väittivät [[Homeroksen]] syntyneen alueellaan. Alkuperäinen asutus oli Bayraklın kummulla, ja [[Lysimakhos]], yksi Aleksanteri Suuren seuraajista, siirsi kaupungin Pagos-vuoren rinteille. Kreikkalaiset rakensivat Pagos-kukkulan pohjoisrinteen juurelle torin eli [[Smyrnan agoran]] 300-luvulla eaa.; siitä on säilynyt muun muassa läntisen pylväshallin korinttilaisia pylväitä. Smyrna oli kansainvälisesti käytössä oleva nimi vuosisatojen ajan.
+
+### v2-1259
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Kadifekale
+VASTAUS: Kadifekale eli Samettilinna seisoo Pagos-vuoren laella 186 metrin korkeudessa, noin kahden kilometrin päässä rantaviivasta. Ensimmäiset tunnetut muurit rakennutti [[Lysimakhos]], yksi Aleksanteri Suuren seuraajista, ja samoihin aikoihin Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, jolle mahtui vain muutama tuhat asukasta. [[Pausaniaan]] kertoman tarinan mukaan Aleksanteri nukahti metsästysretkellä plataanin alle ja näki unessa kaksi jumalatarta, jotka käskivät perustaa kaupungin juuri sille kukkulalle. Nykyiset muurit ovat keskiajalta. Huipulta avautuu näkymä İzmirin lahdelle.
+
+### v2-1260
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Aleksanteri Suuri
+VASTAUS: Aleksanteri Suuri eli Aleksanteri III syntyi vuonna 356 eaa. Pellassa Makedoniassa kuningas [[Filip II:n]] poikana. Hänen opettajanaan oli filosofi [[Aristoteles]]. Kuninkaaksi hän tuli vuonna 336 eaa. isänsä murhan jälkeen, ja kymmenen vuoden aikana hän valloitti Persian valtakunnan ja eteni aina Intian rajamaille. Hän kuoli Babylonissa vuonna 323 eaa. alle 33-vuotiaana. Hänen valtakuntansa hajosi seuraajien eli diadokien kesken, ja yksi heistä oli [[Lysimakhos]], joka siirsi Smyrnan Pagos-vuoren rinteelle. Aleksanterin valloitukset levittivät kreikkalaista kulttuuria laajalle, ja tuota aikaa kutsutaan [[hellenistiseksi ajaksi]].
+
+### v2-1261
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Konakin
+VASTAUS: Konak on İzmirin keskeinen kaupunginosa lahden rannalla, ja siihen kuuluvat muun muassa Konakin aukio, lauttasatama ja vanhan kaupungin vilkkaimmat kadut. Aukion tunnetuin maamerkki on [[İzmirin kellotorni]] vuodelta 1901. Se on 25 metriä korkea ja kahdeksankulmainen, ja sen ympärillä on neljä suihkulähdettä. Konakin vieressä alkaa [[Kemeraltı]], vanha basaarialue, jonka kujilla myydään kaikkea käsitöistä vaatteisiin. Rannalla on myös [[Konak Pier]] -rakennus, entinen tulli- ja satamarakennus, joka toimii nykyään ostoskeskuksena. Konakista lähtee lauttoja lahden toiselle puolelle.
+
+### v2-1262
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Karşıyakan
+VASTAUS: Karşıyaka on İzmirin lahden pohjoisrannalla sijaitseva iso kaupunginosa, ja sen nimi tarkoittaa turkiksi vastapäistä rantaa, sillä se on Konakin vastarannalla. Alue kasvoi 1800-luvulla, kun varakkaat perheet rakensivat sinne huviloita, ja nykyään se on tiheästi asuttu asuinalue. Lautta kulkee Karşıyakasta Konakiin ja muille laitureille, ja rantaa pitkin kulkee pitkä kävelyreitti. Alueen laituri on [[Bostanlı]], ja tunnetuimpia seuroja on [[Karşıyaka Spor Kulübü]]. Kaupunginosa on osa [[İzmirin lahden]] pohjoispuolen rantakaistaletta.
+
+### v2-1263
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Asansör
+VASTAUS: Asansör eli hissi on İzmirin Karataşin kaupunginosassa Konakissa sijaitseva torni, jonka sisällä hissi nostaa ihmiset ja tavarat jyrkän kallioseinämän alapuolelta ylätasolle. Sen rakennutti vuonna 1907 varakas juutalainen pankkiiri ja kauppias [[Nesim Levi Bayraklıoğlu]], ja se tehtiin kaupunkilaisten käyttöön. Alla kulkevalla kujalla asui 1940-luvulla laulaja [[Dario Moreno]], joka teki myöhemmin uran Ranskassa, ja katu on nimetty hänen mukaansa. Ylätasolla on terassi, jolta avautuu näkymä lahdelle. Torni sijaitsee [[Karataşin]] kaupunginosassa.
+
+### v2-1264
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: boyoz
+VASTAUS: Boyoz on İzmirin oma leivonnainen. Nimi tulee [[ladinon]] sanasta boyo, joka tarkoittaa pientä pyöreää pullaa, ja [[sefardijuutalaiset]] toivat leivonnaisen kaupunkiin sen jälkeen, kun heidät karkotettiin Espanjasta vuonna 1492. Taikinaan tulee jauhoja, auringonkukkaöljyä ja hieman [[tahinia]], alun perin seesamiöljyä. Taikinaa vaivataan käsin ja levätetään useaan kertaan, ensin kaksi tuntia ja lopuksi useita tunteja, ja palasista pyöritellään pieniä palloja, jotka marinoituvat öljyssä puolesta tunnista tuntiin. Uuni on hyvin kuuma, ja pinnasta tulee kerroksinen. Seuraksi tarjotaan perinteisesti keitettyä kananmunaa ja teetä.
+
+### v2-1265
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: sefardijuutalaisilta
+VASTAUS: Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla, jota heprean kielellä kutsutaan Sefaradiksi. Heidät karkotettiin Espanjasta vuonna 1492 ja Portugalista muutama vuosi myöhemmin. Monet sefardit asettuivat Ottomaanien valtakuntaan, jossa sulttaani [[Bajasid II]] otti heidät vastaan, ja suuria sefardiyhteisöjä syntyi muun muassa Istanbuliin, [[Thessalonikiin]] ja İzmiriin. Heidän kielensä oli [[ladino]] eli juutalais-espanja, joka säilytti keskiaikaisen espanjan piirteitä ja sai vaikutteita heprean ja turkin kielistä. Sefardien perinteet näkyvät esimerkiksi ruoassa, ja İzmirin oma boyoz on yksi esimerkki.
+
+### v2-1266
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: simitiä
+VASTAUS: Simit on turkkilainen rinkeli, jonka pinta on peitetty seesaminsiemenillä. Taikina on hiivataikinaa, ja rinkelit kastetaan ennen paistamista rypälepuristeesta eli [[pekmezistä]] ja vedestä tehtyyn liemeen, mikä antaa kullanruskean värin ja makean häivähdyksen. Simitiä myydään kaduilla pyörillä kulkevista kojuista, ja se on tavallinen välipala sekä aamiainen teen ja juuston kanssa. Rinkelin historia ulottuu ainakin [[ottomaanien]] aikaan, ja lähteiden mukaan sitä myytiin Istanbulissa jo 1500-luvun lopulla. İzmirissä vastaava rinkeli on kovempi ja rapeampi, ja sitä kutsutaan nimellä [[gevrek]].
+
+### v2-1267
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Efesos
+VASTAUS: Efesos oli antiikin kreikkalainen kaupunki, jonka rauniot sijaitsevat nykyisen Selçukin lähellä Länsi-Turkissa. Ioniasta tulleet siirtolaiset perustivat kaupungin noin tuhat vuotta ennen ajanlaskumme alkua, ja roomalaisaikana siitä tuli Aasian provinssin keskeinen suurkaupunki. Tunnetuin säilynyt rakennus on [[Celsuksen kirjasto]], joka valmistui 100-luvun alkupuoliskolla. Kaupungissa sijaitsi [[Artemiin temppeli]], joka kuului antiikin seitsemään ihmeeseen; siitä on jäljellä vain perustuksia. Efesoksessa vaikutti myös apostoli [[Paavali]], ja kaupungissa kokoontui vuonna 431 kirkolliskokous. Satama liettyi ajan mittaan, mikä vei kaupungilta sen merkityksen. UNESCO hyväksyi alueen maailmanperintöluetteloon vuonna 2015.
+
+### v2-1268
+KOHDE: kaupunki:izmir
+KYSYMYS: Kerro lisää: Pergamon
+VASTAUS: Pergamon oli hellenistisen ajan Attalos-suvun kuningaskunnan pääkaupunki nykyisen Bergaman kohdalla Länsi-Turkissa. Kaupunki rakennettiin jyrkälle akropolis-kukkulalle, jonka rinteessä on yksi antiikin jyrkimmistä teattereista. Pergamonin kirjasto kilpaili Aleksandrian kirjaston kanssa, ja sana pergamentti polveutuu kaupungin nimestä. Lääkäri [[Galenos]] syntyi Pergamonissa, ja kaupungin lähellä oli [[Asklepieion]] eli parantumisen pyhäkkö. Viimeinen Attalos-kuningas testamenttasi valtakuntansa Roomalle vuonna 133 eaa. Pergamonin alue on Unescon maailmanperintökohde, ja kuuluisa Zeuksen alttari on Berliinin [[Pergamon-museossa]].
+
+### v2-1269
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Atatürkin
+VASTAUS: Mustafa Kemal Atatürk syntyi vuonna 1881 Thessalonikissa ja kuoli 10. marraskuuta 1938 Istanbulissa. Hän oli ottomaanien armeijan upseeri ja nousi tunnetuksi [[Gallipolin]] taisteluissa vuonna 1915. Ensimmäisen maailmansodan jälkeen hän johti [[Turkin vapaussotaa]], ja Turkin tasavalta julistettiin hänen johdollaan 29. lokakuuta 1923. Hän toimi tasavallan ensimmäisenä presidenttinä kuolemaansa asti. Hänen uudistuksiinsa kuuluivat sekularismi, kalifaatin lakkauttaminen vuonna 1924, latinalaisten aakkosten käyttöönotto vuonna 1928 ja [[sukunimilaki]]. Nimen Atatürk, joka tarkoittaa turkkilaisten isää, hän sai vuonna 1934.
+
+### v2-1270
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: kansalliskokous
+VASTAUS: Turkin suuri kansalliskokous eli Türkiye Büyük Millet Meclisi kokoontui ensimmäisen kerran Ankarassa 23. huhtikuuta 1920 [[Turkin vapaussodan]] aikana. Ottomaanien hallitus Istanbulissa oli tuolloin liittoutuneiden miehityksen alla, ja kokous otti vastuun vapaustaistelun johtamisesta. [[Mustafa Kemal]] valittiin sen puheenjohtajaksi. Kansalliskokous julisti [[sulttaanikunnan]] lakkautetuksi vuonna 1922 ja tasavallan perustetuksi vuonna 1923. Nykyisin kansalliskokous on yksikamarinen parlamentti, jossa on 600 kansanedustajaa, ja 23. huhtikuuta on kansallinen juhlapäivä, joka on myös lasten päivä.
+
+### v2-1271
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Angora
+VASTAUS: Angora on Ankaran vanha eurooppalainen nimi, joka juontuu antiikin nimestä Ancyra. Kaupunki oli Galatian maakunnan keskus ja ennen sitä [[galatalaisten]] kelttiheimon asuinpaikka. Nimi Angora vakiintui länsimaissa keskiajalla ja oli käytössä vielä 1900-luvulla; virallinen nimi on ollut Ankara vuodesta 1930. Kaupungin mukaan on nimetty paikalliset eläimet: angoravuohi, josta saadaan mohairia, angorakani, jonka villaa kutsutaan angoraksi, ja [[angorakissa]], pitkäkarvainen kissarotu. [[Ankaran taistelu]] vuonna 1402 käytiin kaupungin lähellä, ja siinä Timur voitti ottomaanien sulttaani Bajasid I:n.
+
+### v2-1272
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: mohairia
+VASTAUS: Mohair on angoravuohen karvasta kehrätty lanka tai kangas. Kuitu on pitkää, kiiltävää ja sileää, ja se kestää kulutusta hyvin ja värjäytyy kirkkaaksi. Vuohia keritään tavallisesti kaksi kertaa vuodessa, ja hienointa mohairia saadaan nuorten vuohien eli kidien karvasta. Mohairista valmistetaan neuleita, huiveja, takkeja ja verhoilukankaita. Alkuperäinen kasvatusalue oli [[Ankaran]] seutu, mutta nykyään suuri osa maailman mohairista tulee Etelä-Afrikasta ja Yhdysvalloista. Mohair on eri asia kuin angora, jolla tarkoitetaan [[angorakanin]] villaa; mohairin tuottaa [[angoravuohi]].
+
+### v2-1273
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: angorakani
+VASTAUS: Angorakani on kotikanin rotu, jota on jalostettu pitkän, pehmeän ja lämpimän turkin vuoksi. Sen karvasta valmistetaan [[angoralankaa]], jota käytetään neuleissa ja sukissa. Rodun alkuperä liitetään [[Ankaran seutuun]], ja lähteiden mukaan Euroopassa se tuli tunnetuksi 1700-luvulla [[Ranskassa]], jolloin sitä pidettiin ylhäisön lemmikkinä. Nykyään on useita muunnelmia, esimerkiksi englantilainen, ranskalainen ja jättiläisangorakani. Karva korjataan keritsemällä tai harjaamalla muutaman kuukauden välein, koska turkki kasvaa jatkuvasti. Joissakin maissa tuotantotapoja on arvosteltu eläinten hyvinvoinnin kannalta.
+
+### v2-1274
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Augustuksen ja Rooman temppeli
+VASTAUS: Augustuksen ja Rooman temppeli rakennettiin Ancyraan eli nykyiseen Ankaraan noin vuosina 25–20 eaa., kun Rooma oli valloittanut Keski-Anatolian ja perustanut [[Galatian maakunnan]]. Temppeliä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Nykyään pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa [[Hacı Bayramin moskeija]]. Seiniin kaiverrettu [[Res Gestae]] on Augustuksen oman elämäntyön kertomus, ja se on säilynyt sekä latinaksi että kreikaksi. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja tekstin oli tarkoitus julkaista hänen kuolemansa jälkeen.
+
+### v2-1275
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Res Gestae
+VASTAUS: Res Gestae Divi Augusti eli Jumalaisen Augustuksen teot on keisari [[Augustuksen]] itsensä laatima kertomus elämästään ja saavutuksistaan. Hän kirjoitti sen elämänsä loppuvaiheessa, ja se kaiverrettiin hänen kuolemansa jälkeen vuonna 14 jaa. pronssilevyihin Rooman [[Augustuksen mausoleumin]] eteen. Alkuperäinen on kadonnut, mutta teksti tunnetaan kopioista, jotka kaiverrettiin provinssien temppeleihin. Parhaiten säilynyt kopio on Ankarassa temppelin seinässä, ja sitä kutsutaan nimellä [[Monumentum Ancyranum]]; siinä teksti on sekä latinaksi että kreikaksi. Teksti luettelee Augustuksen virat, sotaretket, rakennushankkeet ja lahjat kansalle ja sotilaille.
+
+### v2-1276
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Anıtkabir
+VASTAUS: Anıtkabir on Ankarassa Anıttepen kukkulalla sijaitseva Mustafa Kemal Atatürkin mausoleumi. Arkkitehdit [[Emin Onat]] ja Orhan Arda voittivat suunnittelukilpailun 1940-luvun alussa, ja rakennus valmistui vuonna 1953, jolloin Atatürkin ruumis siirrettiin sinne. Rakennus yhdistää modernia ja klassista tyyliä. Pitkä Leijonatie johtaa seremoniaaukiolle, ja kokonaisuuteen kuuluvat myös torneja, [[Kunniasali]] ja museo. Anıtkabirissa on haudattuna myös Turkin toinen presidentti [[İsmet İnönü]]. Paikka on turkkilaisille tärkeä kunnioituksen kohde, ja siellä käy paljon kävijöitä.
+
+### v2-1277
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Atatürk
+VASTAUS: Atatürk eli Mustafa Kemal (1881–1938) oli Turkin tasavallan perustaja ja ensimmäinen presidentti. Nimen Atatürk, joka tarkoittaa turkkilaisten isää, hän sai vuonna 1934 [[sukunimilain]] yhteydessä. Hän johti [[Turkin vapaussotaa]] ja ajoi tasavallan perustamisen jälkeen laajoja uudistuksia, joiden tarkoitus oli rakentaa maallinen kansallisvaltio. Marraskuussa 1928 säädettiin laki, jolla arabialaisista kirjaimista siirryttiin [[latinalaisiin kirjaimiin]]; uudessa aakkostossa on 29 kirjainta, ja Atatürk kiersi maata liitutaulun kanssa opettaen kirjaimia toreilla ja kylissä. Naisten äänioikeus tuli maahan 1930-luvun alkupuolella. Atatürk kuoli 10. marraskuuta 1938.
+
+### v2-1278
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: leijonatie
+VASTAUS: Leijonatie (turkiksi Aslanlı Yol) on Anıtkabirin pääsisäänkäynniltä seremoniaaukiolle johtava juhlallinen käytävä. Se on noin 260 metriä pitkä, ja sen molemmilla puolilla on 12 makaavaa leijonapatsasta eli yhteensä 24. Patsaat on veistetty [[hetiittiläisen taiteen]] tyyliin, ja ne viittaavat Anatolian muinaiseen kulttuuriperintöön. Leijonien lukumäärän on tulkittu viittaavan 24 oghuz-turkkilaiseen heimoon. Käytävä johtaa kohti [[Anıtkabirin]] mausoleumia, ja kulkija etenee leijonien reunustamaa tietä hitaasti.
+
+### v2-1279
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Tuz-järvi
+VASTAUS: Tuz-järvi eli Tuz Gölü on Keski-Anatolian suolajärvi ja Turkin toiseksi suurin järvi. Se on hyvin matala, ja kesän kuivuessa järven pinnalle jää paksu valkoinen suolakuori. Suolainen ja matala vesi tekee järvestä hyvän pesimäpaikan [[flamingoille]], koska maapedot eivät pääse pesille. Se on Turkin tärkein flamingoalue, ja hyvänä kesänä siellä kuoriutuu kymmeniätuhansia poikasia. Aikuisen flamingon vaaleanpunainen väri tulee ravinnosta. Järvestä saadaan myös suurin osa Turkin suolasta, ja se sijaitsee [[Ankaran]], [[Konyan]] ja [[Aksarayn]] maakuntien rajoilla.
+
+### v2-1280
+KOHDE: kaupunki:ankara
+KYSYMYS: Kerro lisää: Anatolian ylätasangon
+VASTAUS: Anatolian ylätasanko on Turkin sisäosien laaja ylänkö, jota reunustavat pohjoisessa [[Pontoksen vuoret]] ja etelässä [[Tauruksen vuoret]]. Korkeus on suurimmassa osassa tasankoa karkeasti kahdeksasta sadasta puoleentoista tuhanteen metriin, ja Ankara sijaitsee sen länsiosassa. Meren vaikutus ei yllä reunavuorten yli, joten sateita on vähän, talvet ovat kylmiä ja kesät kuivia. Etelässä levittäytyy viljavaa [[Konyan tasankoa]], joka on yksi Turkin tärkeimmistä viljanviljelyalueista, ja ylängön itäosassa sijaitsee [[Kappadokia]] tulivuorten muovaamine maisemineen.
+
+### v2-1281
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: tuffiin
+VASTAUS: Tuffi on tulivuorenpurkauksissa syntyneestä tuhkasta ja muusta hienojakoisesta aineksesta kovettunutta kiveä. Kappadokiassa purkaukset toistuivat noin yhdeksän ja kolmen miljoonan vuoden välillä, ja tulivuoret [[Erciyes]], Hasan ja Göllüdağ peittivät ylätasangon paksuilla tuhkakerroksilla. Tuore tuffi on huokoista ja pehmeää, joten sitä on helppo kaivaa, mutta ilmassa se kovettuu ja kestää asumista. Tuffin päällä on paikoin kovempaa [[ignimbriittiä]], ja kun tuuli ja vesi syövät pehmeämpää kiveä, kovempi kerros jää suojaamaan sen alla olevaa osaa ja syntyvät [[keijupiiput]].
+
+### v2-1282
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Derinkuyu
+VASTAUS: Derinkuyu on Kappadokian tunnetuin maanalainen kaupunki, ja sen ilmoitetaan ulottuvan noin 85 metrin syvyyteen; kerrosmäärästä esitetään eri lukuja, yleensä viisi. Tilaa arvioidaan olleen jopa kahdellekymmenelletuhannelle ihmiselle karjoineen ja ruokavarastoineen, mutta luku on yläraja-arvio eikä laskettu määrä. Ilmanvaihto oli suunniteltu huolella: pystysuoria [[ilmanvaihtokuiluja]] on runsaasti, ja pääkuilun aukot on porrastettu niin, etteivät kahden kerroksen aukot ole koskaan päällekkäin. Käytävät voitiin sulkea [[kivilaatoilla]], jotka aukesivat vain sisältä, ja kolmannen ja neljännen kerroksen välistä lähtevät portaat vievät alimman kerroksen kirkkoon. Kaupunki löydettiin uudelleen vuonna 1963, kun talon seinän takaa paljastui käytävä.
+
+### v2-1283
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: freskoilla
+VASTAUS: Fresko on maalaustekniikka, jossa värit levitetään vielä märälle [[kalkkilaastille]], jolloin ne sitoutuvat seinään ja kestävät vuosisatoja. Göremen ympäristön kallioon louhituissa kirkoissa freskot kuvaavat Raamatun tapahtumia, ja ne peittävät holveja, kupoleja ja seiniä, jotka on tasoitettu pehmeään kiveen. Kirkot syntyivät aikana, jolloin alue kuului [[Bysantin]] valtakuntaan, ja kuvat noudattavat itäisen kristikunnan kuvaperinnettä. Parhaiten freskoja voi nähdä [[Göremen ulkomuseossa]], joka kuuluu Unescon maailmanperintökohteisiin. Kuvien säilymiseen vaikuttavat paljon valo ja kosteus, ja siksi pimeät kirkot ovat säilyttäneet värinsä parhaiten.
+
+### v2-1284
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Karanlık kilise
+VASTAUS: Karanlık kilise eli Pimeä kirkko on Göremen ulkomuseon tunnetuimpia luolakirkkoja. Nimi viittaa siihen, että sisään pääsee vain vähän valoa pienen aukon kautta, ja juuri siksi värit ovat säilyneet poikkeuksellisen kirkkaina. Maalaukset ovat lähteiden mukaan peräisin 1000-luvulta, ja niiden aiheet ovat pääosin Kristuksen elämästä. Kupolissa on perinteisesti [[Pantokrator]]-kuva eli kaikkivaltiaaksi kuvattu Kristus. Kirkko on osa [[Göremen ulkomuseota]], ja sen kaltaisia kallioon louhittuja kirkkoja on alueella satoja.
+
+### v2-1285
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco on Yhdistyneiden kansakuntien koulutus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on [[Pariisissa]]. Järjestö ylläpitää [[maailmanperintöluetteloa]], jonka perustana on vuonna 1972 hyväksytty sopimus kulttuuri- ja luonnonperinnön suojelusta. Kappadokian alue ja Göremen kansallispuisto kirjattiin luetteloon 1980-luvun puolivälissä sekä kulttuuri- että luontokohteena. Luetteloon pääsy ei muuta kohteen omistusta, mutta se velvoittaa suojelemaan kohdetta ja tuo usein matkailua. Unescolla on lisäksi oma luettelonsa [[aineettomalle kulttuuriperinnölle]], johon kuuluvat esimerkiksi perinteet, kädentaidot ja ruokakulttuuri.
+
+### v2-1286
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: keijupiiput
+VASTAUS: Keijupiiput eli turkiksi peribacalar syntyvät tulivuorten tuhkasta, joka on kovettunut tuffiksi ja [[ignimbriitiksi]]. Erciyes, Hasan ja [[Göllüdağ]] purkautuivat toistuvasti noin yhdeksän ja kolmen miljoonan vuoden välillä ja peittivät ylätasangon paksuilla tuhkakerroksilla. Kun tuuli ja vesi ovat sittemmin syöneet pehmeää kiveä, kovempi lohkare on jäänyt suojaamaan sen alla olevaa osaa, ja jäljelle on jäänyt kapea torni tai pilari. [[Kansainvälinen geologian liitto]] valitsi Kappadokian mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan geologisen perintökohteen joukkoon.
+
+### v2-1287
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Erciyes
+VASTAUS: Erciyes on Keski-Anatolian korkein vuori, noin 3 900 metriä, ja se kohoaa [[Kayserin]] kaupungin yläpuolelle. Se on tulivuori, ja sen purkaukset ovat yhdessä [[Hasan-tulivuoren]] ja Göllüdağin kanssa peittäneet Kappadokian ylätasangon tuhkalla, joka on kovettunut tuffiksi. Huipun ympärillä on talvisin lunta, ja rinteillä toimii hiihtokeskus. Viimeisimpien purkausten ajankohdasta en ole varma, joten siitä en uskalla sanoa tarkemmin.
+
+### v2-1288
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Uçhisarin
+VASTAUS: Uçhisar on kylä [[Göremen]] lähellä, ja sen tunnetuin nähtävyys on noin kuusikymmentä metriä korkea kalliolinnake, jonka sisään on louhittu huoneita. Niihin arvellaan mahtuneen tuhatkunta ihmistä. Linnake on alueen korkeimpia kohtia, ja huipulta näkyy laajalle ylätasangolle. Uçhisarin ja Göremen väliin jäävän laakson seiniin on louhittu satoja kyyhkyslakkoja, joissa on orsia ja koloja pesiä varten. Kyyhkysten lantaa käytettiin peltojen lannoitteena aina 1970-luvulle asti, ja sitä sekoitettiin myös luolakirkkojen maaleihin kirkastamaan värejä. Kylä kuuluu [[Nevşehirin]] maakuntaan.
+
+### v2-1289
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Kyyhkyslaakson
+VASTAUS: Kyyhkyslaakso on laakso Uçhisarin ja Göremen välissä, ja sen seiniin on louhittu satoja kyyhkyslakkoja. Kammioissa on orsia ja koloja pesiä varten, ja ne olivat maataloutta eivätkä koristeita: kyyhkysten lantaa käytettiin peltojen lannoitteena aina 1970-luvulle asti. Lantaa sekoitettiin myös luolakirkkojen maaleihin kirkastamaan värejä. Laaksoa pitkin kulkee suosittu vaellusreitti, jonka varrelta avautuu näkymä [[Uçhisarin]] kalliolinnakkeelle ja kohti [[Göremeä]]. Maisema kertoo hyvin, miten pehmeä [[tuffi]] määritti alueen elämää.
+
+### v2-1290
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: testikebab
+VASTAUS: Testikebab on kappadokialainen ruoka, jossa liha ja kasvikset kypsytetään suljetussa savikannussa. Sana testi tarkoittaa turkiksi ruukkua tai vesiastiaa. Kannu suljetaan ja kypsytetään hiilloksessa tai uunissa, ja se tuodaan pöytään ehjänä. Tarjoilija iskee kannun auki vieraan edessä, joten ruoka kuuluu osittain esitykseen. Raaka-aineena on yleensä lammasta tai naudanlihaa sekä tomaattia, paprikaa ja sipulia. Kappadokian [[savenvalajat]], erityisesti [[Avanosin]] mestarit, valmistavat kannuja joen punaisesta savesta.
+
+### v2-1291
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Kızılırmak
+VASTAUS: Kızılırmak eli Punainen joki on Turkin pisin joki, 1 355 kilometriä, ja se virtaa kokonaan maan rajojen sisällä. Antiikissa joki tunnettiin nimellä [[Halys]]. Se saa alkunsa Sivasin seudulta Keski-Anatolian itäosasta, kaartaa Anatolian halki ja laskee [[Mustaanmereen]]. Nimi viittaa punaiseen silttiin, jota joki kuljettaa mukanaan, ja sama savi on [[Avanosin]] savenvalajien raaka-aine.
+
+### v2-1292
+KOHDE: kaupunki:kapadokia
+KYSYMYS: Kerro lisää: Avanos
+VASTAUS: Avanos on kaupunki Kızılırmakin mutkassa Kappadokiassa, ja sen savenvalajat käyttävät raaka-aineena joen punaista silttiä. Perinteen arvellaan ulottuvan [[heettiläisten]] aikaan asti. Antiikin maantieteilijä [[Strabon]] kertoo kaupungin olleen silloin nimeltään [[Venessa]] ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan. Avanosin keramiikka tunnetaan punaisista ruukuista ja kannuista.
+
+### v2-1293
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: tšernozjomia
+VASTAUS: Tšernozjom on venäjänkielinen sana, joka tarkoittaa mustaa maata. Se on paksu, humusrikas ja ravinteikas maalaji, joka on syntynyt [[aroruohojen]] juurten ja kasvijätteiden vuosisatojen hitaassa lahoamisessa. Humuskerros voi olla paikoin metrin paksuinen, ja maa pidättää hyvin sekä vettä että ravinteita. Tšernozjomia on laajalti Ukrainassa ja Etelä-Venäjällä sekä idässä Kazakstanin pohjoisosissa, joten se muodostaa suuren osan [[Euraasian aroalueesta]]. Neljäsosa maailman mustasta mullasta on Ukrainassa, ja maan viljavuus on antanut sille lempinimen [[Euroopan leipäkori]].
+
+### v2-1294
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: vehnää
+VASTAUS: Vehnä on Ukrainan tärkeimpiä viljakasveja, ja maata kutsutaan usein [[Euroopan leipäkoriksi]]. Mustan mullan ansiosta pellot tuottavat suuria satoja, ja vehnää viedään paljon ulkomaille, pitkälti [[Mustanmeren]] satamien kautta. Vientimäärät ovat olleet maailman suurimpien joukossa. Vehnää viljellään erityisesti maan keski- ja eteläosissa, ja talvivehnä kylvetään syksyllä. Ukrainan lippua tulkitaan usein niin, että sininen kuvaa taivasta ja keltainen vehnäpeltoa, joten [[Ukrainan lipun]] värit kertovat samasta maisemasta.
+
+### v2-1295
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: auringonkukkaa
+VASTAUS: Auringonkukka on Ukrainan toinen tunnusomainen peltokasvi vehnän rinnalla, ja maa on yksi maailman suurimmista [[auringonkukkaöljyn]] tuottajista ja viejistä. Kasvi on alun perin peräisin Amerikasta ja levisi Eurooppaan 1500-luvulla; Itä-Euroopassa siitä tuli öljykasvi myöhemmin, lähteiden mukaan 1800-luvulla. Siemenistä puristetaan ruokaöljyä, ja jäljelle jäävä puriste käytetään rehuna. Viennistä suuri osa kulkee [[Mustanmeren]] satamien kautta. Ukrainassa siemeniä myös syödään paahdettuina, ja se on arkinen välipala.
+
+### v2-1296
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: Hoverla
+VASTAUS: Hoverla on Ukrainan korkein vuori, 2 061 metriä, ja se kuuluu Karpaattien [[Tšornohoran]] vuoriryhmään maan lounaisosassa. [[Prut]]-joen lähteet ovat sen rinteillä. Huipulle nousee merkittyjä reittejä, ja kesällä sinne vaeltaa paljon retkeilijöitä, sillä nousu ei vaadi erityisiä vuorikiipeilytaitoja. Hoverla on [[Karpaattien]] ukrainalaisen osan korkein huippu, ja talvella sen ympäristössä on lunta pitkään.
+
+### v2-1297
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: huculit
+VASTAUS: Huculit ovat Karpaattien vuoristoalueen asukkaita, joita elää Ukrainan lounaisosassa ja jonkin verran myös Romaniassa. Heidän perinteinen elinkeinonsa on ollut karjanhoito ja kesälaidunnus vuoristolaitumilla. Tunnettu perinteinen soitin [[trembita]] on usean metrin pituinen puinen alppitorvi, jolla annettiin merkkejä vuorelta toiselle. Huculeilla on oma [[huculihevonen]], pieni ja sitkeä vuoristohevosrotu. Kansanperinteen keskus on [[Kolomyja]], jossa on myös aiheeseen liittyvä museo. Pukuihin kuuluvat värikäs kirjonta ja koristeelliset vyöt.
+
+### v2-1298
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: pyökkimetsistä
+VASTAUS: Karpaattien pyökkimetsät ovat osa Unescon maailmanperintökohdetta, joka kirjattiin luetteloon 2000-luvun lopulla ja jota on sittemmin laajennettu useaan Euroopan maahan. Ukrainassa alueisiin kuuluvat muun muassa [[Karpaattien biosfäärialue]] ja siihen kuuluva [[Uholka–Širokyj Luh]] -metsäalue, joka on lähteiden mukaan yksi Euroopan laajimmista koskemattomista pyökkimetsistä. Metsät ovat jäänteitä pyökkimetsistä, jotka levisivät Eurooppaan viimeisen jääkauden jälkeen, ja ne ovat arvokkaita, koska ihmistoiminta on vaikuttanut niihin vähän. Kohteeseen kuuluu osia myös [[Slovakiasta]] ja useista muista maista.
+
+### v2-1299
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: Dnepr
+VASTAUS: Dnepr on yksi Euroopan pisimmistä joista, noin 2 200 kilometriä. Se saa alkunsa [[Valdain ylängöltä]] Venäjältä, virtaa [[Valko-Venäjän]] kautta Ukrainaan ja laskee [[Mustaanmereen]]. Ukrainassa se jakaa maan karkeasti itäiseen ja läntiseen puoliskoon, ja sen rinteellä sijaitsee Kiova. Jokea pitkin kulki keskiajalla tärkeä kauppareitti pohjoisen ja etelän välillä. Joen varrella on lisäksi useita patoaltaita, jotka näkyvät kartalla leveinä sinisinä järvinä.
+
+### v2-1300
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: Kiova
+VASTAUS: Kiova on Ukrainan pääkaupunki ja suurin kaupunki, noin kolmen miljoonan asukkaan kaupunki Dneprin jyrkällä länsirannalla. Maasto jakoi kaupungin kahteen kerrokseen: ylhäällä on kirkkojen ja porttien yläkaupunki ja alhaalla joen rannassa [[Podil]]. Keskiajalla Kiova johti [[Kiovan Rusia]], ja kristinusko otettiin vastaan vuonna 988. Ruhtinas Jaroslav Viisas rakennutti muurien pääportin ja [[Pyhän Sofian katedraalin]], joka valmistui ilmeisesti vuonna 1037, ja Dneprin rinteessä sijaitsee [[Luolaluostari]]. Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella, mikä kertoo rantatörmän jyrkkyydestä.
+
+### v2-1301
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: kasakat
+VASTAUS: Kasakat olivat sotilaallisia ja yhteisöllisiä ryhmiä, jotka asettuivat 1400- ja 1500-luvuilla aroalueille Puolan–Liettuan ja Krimin kaanikunnan rajamaille. Dneprin koskien takana syntyi tunnettu kasakkayhteisö [[Zaporižžjan Sitš]], jota johtivat valitut päälliköt. Vuonna 1648 hetmani [[Bohdan Hmelnytskyi]] nousi kapinaan Puolan–Liettuan valtakuntaa vastaan, ja syntyi kasakkahetmanaatti. Tammikuussa 1654 kasakat vannoivat [[Perejaslavin]] kaupungissa uskollisuudenvalan Venäjän tsaarille, ja vastineeksi hetmanaatti sai laajan itsehallinnon. Sopimuksen todellisesta luonteesta, liitosta vai alistumisesta, kiistellään historioitsijoiden kesken yhä.
+
+### v2-1302
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: pysankat
+VASTAUS: Pysankat ovat ukrainalaisia pääsiäismunia, joiden nimi tulee verbistä pysaty, kirjoittaa, sillä kuvio kirjoitetaan munan pintaan vahalla. Tekniikka muistuttaa [[batiikkia]]: vahalla peitetyt kohdat säilyttävät alla olevan värin, ja muna kastetaan vuorotellen yhä tummempiin väreihin, tavallisesti vaaleimmasta tummimpaan. Lopuksi vaha sulatetaan pois, ja kuvio paljastuu. Aiheina ovat aurinko, kasvit, tähdet ja geometriset kuviot, joilla on perinteisiä merkityksiä ja jotka vaihtelevat alueittain. Usein sanotaan, että tapa on peräisin kristinuskoa edeltäneeltä ajalta, mutta en ole varma tästä. [[Kolomyjassa]] on pysankoille omistettu museo.
+
+### v2-1303
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: kistka
+VASTAUS: Kistka on pysankojen tekemiseen käytetty perinteinen työkalu: puinen varsi, jonka päässä on pieni metallinen suppilo tai putki. Siihen kerätään sulaa [[mehiläisvahaa]], ja vaha kulkee suppilosta munan pintaan ohuena viivana. Työkalua kuumennetaan kynttilän liekillä, jotta vaha pysyy juoksevana. Suppilon koko vaikuttaa viivan paksuuteen: pienellä kistkalla piirretään hienot yksityiskohdat ja isommalla leveämmät viivat. Työ vaatii tasaista kättä, koska vahaa ei voi poistaa ennen kuin muna on värjätty ja kuvio valmis. Kistkalla tehdään kaikki [[pysankojen]] vahakuviot.
+
+### v2-1304
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: Kolomyjassa
+VASTAUS: Kolomyja on kaupunki Länsi-Ukrainassa [[Prut]]-joen varrella Karpaattien juurella, ja se on perinteisen [[Pokutian]] alueen keskus. Kaupungin tunnetuin nähtävyys on pääsiäismunan muotoinen pysankamuseo, jossa on esillä tuhansia koristeltuja munia, lähteiden mukaan eri puolilta Ukrainaa ja muualta. Kaupungissa on myös [[huculien]] ja Pokutian kansantaiteeseen keskittynyt museo. Kolomyja on siten hyvä paikka tutustua Karpaattien kansanperinteeseen.
+
+### v2-1305
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: borssi
+VASTAUS: Borssi on [[punajuuresta]] keitetty hapan keitto, jonka päälle lisätään lusikallinen [[smetanaa]] ja jonka viereen tarjotaan usein valkosipulisämpylä. Pohjana on tavallisesti punajuuri, johon lisätään kaalia, perunaa, porkkanaa ja sipulia, ja keittoon laitetaan usein lihaa, mutta reseptit vaihtelevat alueittain ja perheittäin. Happamuutta antavat esimerkiksi tomaatti tai etikka. Unesco otti ukrainalaisen borssinkeiton kulttuurin kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. Samalla se muistutti, että borssia keitetään monessa maassa eikä merkintä tee siitä kenenkään yksinomaista omaisuutta. Keitto kuuluu [[aineettoman kulttuuriperinnön]] suojeltaviin ilmiöihin.
+
+### v2-1306
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: pampuškeja
+VASTAUS: Pampuški ovat pieniä pyöreitä hiivaleipiä, joita syödään ukrainalaisen keiton, erityisesti [[borssin]], kanssa. Ne leivotaan [[hiivataikinasta]], ja valmiit pullat voidellaan yleensä valkosipulin, öljyn ja yrttien seoksella. Samannimisiä pullia valmistetaan myös makeina: täytteenä voi olla esimerkiksi luumuhilloa tai [[unikonsiemeniä]], ja ne paistetaan joskus rasvassa. Reseptit vaihtelevat alueittain ja perheittäin, ja leivonta on perinteisesti ollut kodin työtä.
+
+### v2-1307
+KOHDE: maa:UKR
+KYSYMYS: Kerro lisää: Unesco
+VASTAUS: Unesco on Yhdistyneiden kansakuntien koulutus-, tiede- ja kulttuurijärjestö, ja se ylläpitää maailmanperintöluetteloa. Ukrainassa luetteloon kuuluu useita kohteita: Kiovan Pyhän Sofian katedraali ja Luolaluostari kirjattiin vuonna 1990, [[Lvivin]] vanha keskusta vuonna 1998 ja [[Struven kaari]] vuonna 2005. Struven kaari on 1800-luvun mittausten ketju, joka ulottuu Norjasta Mustallemerelle ja jonka pisteitä on myös Suomessa. Karpaattien pyökkimetsät ovat osa laajempaa kohdetta, ja vuoden 2023 alussa myös [[Odessan]] historiallinen keskusta kirjattiin luetteloon vaarantuneiden kohteiden joukossa. Ukrainalainen borssinkeitto kirjattiin erikseen aineettoman kulttuuriperinnön suojeltavien joukkoon vuonna 2022.
+
+### v2-1308
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Jaroslav Viisas
+VASTAUS: Jaroslav Viisas oli Kiovan ruhtinas vuosina 1019–1054, [[Vladimir Suuren]] poika, ja hänen valtakauttaan pidetään Kiovan Rusin kultaisena aikana. Hän rakennutti Kultaisen portin vuosina 1017–1024 ja Pyhän Sofian katedraalin, joka valmistui ilmeisesti vuonna 1037. Hänen nimiinsä liitetään lakikokoelma [[Russkaja Pravda]], jota pidetään yhtenä vanhimmista itäslaavilaisista lakikirjoista. Jaroslav oli naimisissa ruotsalaisen [[Ingegerdin]] kanssa, ja hänen tyttärensä [[Anna Jaroslavna]] meni naimisiin Ranskan kuninkaan Henrik I:n kanssa. Siksi Kiovan Rus oli aikanaan tiiviissä yhteyksissä Euroopan hoveihin.
+
+### v2-1309
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Oranta
+VASTAUS: Oranta on Pyhän Sofian katedraalin [[apsiksen]] suuri mosaiikki, jossa Neitsyt Maria on kuvattu seisovana kädet kohotettuina rukoukseen. Nimi tulee latinan sanasta orans, rukoilija. Kuvaa kutsutaan myös nimellä [[Särkymätön muuri]], koska sen uskotaan suojelevan kaupunkia, ja mosaiikki on säilynyt vuosisatojen ajan sotien ja myllerrysten läpi. Kuva on yli viisi metriä korkea ja lähes kokonaan alkuperäistä 1000-luvun työtä, ja sitä pidetään yhtenä Kiovan tunnetuimmista taideteoksista. Tekijät olivat luultavasti [[Konstantinopolista]] tulleita mestareita, ja mosaiikki on tehty pienistä lasi- ja kivikuutioista kultataustalle.
+
+### v2-1310
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: Unesco eli Yhdistyneiden kansakuntien koulutus-, tiede- ja kulttuurijärjestö perustettiin vuonna 1945, ja sen päämaja on Pariisissa. Järjestön vuonna 1972 hyväksytty [[maailmanperintösopimus]] on perusta luettelolle, jonka tarkoituksena on suojella kulttuuri- ja luonnonperintöä koko ihmiskunnan hyväksi. Kiovan [[Pyhän Sofian katedraali]] ja [[Luolaluostari]] kirjattiin luetteloon vuonna 1990, ja ne kuuluvat samaan kohteeseen. Kohde on tärkeä, koska katedraalin mosaiikit ja freskot ovat harvinaisen vanhoja ja luostari on ollut keskeinen uskonnollinen ja sivistyksellinen paikka vuosisatojen ajan.
+
+### v2-1311
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Arsenalna
+VASTAUS: Arsenalna on Kiovan metron asema, joka sijaitsee 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin metroasema vuoteen 2022 asti, jolloin Kiinassa Chongqingiin avattiin 116 metrin syvyyteen ulottuva asema. Asemalle kuljetaan kahdella peräkkäisellä [[liukuportaalla]], jotka ovat 55,8 ja 46,6 metriä pitkät ja joiden välissä on oma väliaula. Syvyys selittyy maastolla: Kiova sijaitsee [[Dneprin]] jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään. Asema on osa [[Kiovan metron]] verkkoa.
+
+### v2-1312
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Kiovan metro
+VASTAUS: Kiovan metro avattiin vuonna 1960, ja se oli Neuvostoliiton kolmas metro Moskovan ja Leningradin jälkeen. Verkossa on kolme linjaa ja runsaat viisikymmentä asemaa, ja se kulkee myös [[Dneprin]] alta joen kahden rannan välillä. Arsenalnan asema on yksi maailman syvimmistä, koska Kiova on jyrkällä törmällä. Kiovan pääkadun [[Kreštšatykin]] ja Maidanin asemat muodostavat verkon keskeisen vaihtopaikan. Metron asemia on käytetty myös suojapaikkoina ilmahälytysten aikana. Kiovan jälkeen metro on avattu muissakin Ukrainan kaupungeissa, esimerkiksi [[Harkovassa]].
+
+### v2-1313
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Luolaluostarista
+VASTAUS: Luolaluostari eli Kiovan Petšerska Lavra sai alkunsa vuonna 1051, kun munkki [[Antonius]] asettui Athos-vuorelta palattuaan Dneprin rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja [[Teodosios]] järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola. Luostarin perinteeseen liitetään myös [[Nestorin kronikka]], yksi vanhimmista itäslaavilaisista kronikoista.
+
+### v2-1314
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Kiovan Rusin
+VASTAUS: Kiovan Rus oli keskiaikainen itäslaavilainen valtio, jonka keskus oli Kiova ja joka ulottui Itämereltä Mustallemerelle. Sen synnystä kerrotaan usein, että pohjoisesta tulleet [[varjagit]] eli skandinaaviset kauppiaat ja soturit ottivat vallan Dneprin kauppareitin varrella, ja Kiovasta tuli keskus 800-luvun lopulla. Ruhtinas [[Vladimir Suuri]] otti kristinuskon vastaan vuonna 988, ja [[Jaroslav Viisaan]] aikana valtio oli vaurauden ja rakentamisen huipulla. Valtio hajosi 1100-luvulla erillisiin ruhtinaskuntiin, ja vuonna 1240 mongolijoukot valloittivat Kiovan. Ukraina, Valko-Venäjä ja Venäjä pitävät kaikki Kiovan Rusia osana omaa historiaansa.
+
+### v2-1315
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Kultainen portti
+VASTAUS: Kultainen portti rakennettiin vuosina 1017–1024 Jaroslav Viisaan aikana Kiovan muurien pääsisäänkäynniksi. Sen nimi ja malli tulivat [[Konstantinopolin]] Kultaisesta portista, ja se toimi lähes viisisataa vuotta sekä puolustusrakenteena että voitokkaana riemuporttina. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko. Vuonna 1240 mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin, ja sen jälkeen se rapistui vähitellen lähes raunioksi. Nykyinen rakennus on rekonstruktio, joka valmistui vuonna 1982, ja sen tarkkuudesta on keskusteltu, koska alkuperäisestä oli jäljellä vain muurinpätkiä. Läheltä löytyy [[Zoloti Vorota]] -niminen metroasema, ja portti liittyy [[Jaroslav Viisaan]] kaupunkiin.
+
+### v2-1316
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Konstantinopolin
+VASTAUS: Konstantinopoli on Istanbulin vanha nimi. Kaupungin perusti Rooman keisari [[Konstantinus Suuri]] vuonna 330 Bosporinsalmen rannalle antiikin Byzantionin paikalle, ja siitä tuli [[Bysantin keisarikunnan]] pääkaupunki. Se oli keskiajalla Euroopan suurimpia ja rikkaimpia kaupunkeja, ja sen mallia seurasivat monet kaukaiset valtiot, esimerkiksi Kiovan Rus, joka otti sieltä kristinuskon ja rakennustaiteen vaikutteita. Sulttaani Mehmed II valloitti kaupungin vuonna 1453, ja siitä tuli Osmanien valtakunnan pääkaupunki. Seuraavina vuosina nousi [[Kapalıçarşı]], suuri katettu basaari, jonka ydin rakennettiin talvella 1455–56. Nimi Istanbul vakiintui virallisesti 1900-luvun alkupuoliskolla.
+
+### v2-1317
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: funikulaari
+VASTAUS: Funikulaari on köysiratana toimiva rinnerata, jossa kaksi vaunua kulkee toisiinsa kiinnitetyllä köydellä: alas laskeutuva vaunu auttaa toisen nousemaan. Kiovan funikulaari avattiin vuonna 1905, ja se yhdistää yläkaupungin ja [[Podilin]] alakaupungin. Sen yläasema on lähellä Mihailin aukiota, jossa sijaitsee [[Pyhän Mikaelin kultakupolinen luostari]]. Matka kestää vain muutaman minuutin, ja vaunuista avautuu näkymä [[Dneprille]]. Rata on edelleen osa kaupungin joukkoliikennettä, vaikka se on myös suosittu nähtävyys.
+
+### v2-1318
+KOHDE: kaupunki:kiova
+KYSYMYS: Kerro lisää: Podil
+VASTAUS: Podil on Kiovan alakaupunki Dneprin rannalla, ja se on ollut vilkas kauppa- ja käsityöläisalue jo Kiovan Rusin ajoista lähtien. Kontraktovan aukio sai nykyisen nimensä vuonna 1817, kun sille valmistui Kontraktitalo. Taustalla oli vuosi 1798, jolloin keisari Paavali I siirsi suuret vuotuiset kauppamessut Dubnosta Kiovaan. Aukion vanhin rakennus on Samson-suihkulähde vuosilta 1748–1749. Podilin yläpuolella kohoaa jyrkällä mäellä [[Andreaksen kirkko]], jonka suunnitteli [[Bartolomeo Rastrelli]] ja joka rakennettiin vuosina 1747–1754. Podilissa toimii myös [[Kiovan-Mohyla-akatemia]], jonka juuret ovat 1600-luvulla.
+
+### v2-1319
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Sergei Eisenstein
+VASTAUS: Sergei Eisenstein oli neuvostoliittolainen elokuvaohjaaja, joka syntyi vuonna 1898 [[Riiassa]] ja kuoli vuonna 1948. Hänet tunnetaan elokuvan [[montaasiteorian]] kehittäjänä: hän piti elokuvan merkitystä syntyvän kuvien törmäyksestä, kun kaksi leikkausta asetetaan peräkkäin. Läpimurtoelokuva oli mykkäelokuva [[Panssarilaiva Potemkin]] vuodelta 1925. Muita tunnettuja töitä ovat [[Aleksanteri Nevski]] vuodelta 1938 ja Ivan Julma, joka kuvattiin 1940-luvulla. Eisenstein opetti myös elokuvaa ja kirjoitti teoreettisia tekstejä, joita luetaan elokuvakouluissa yhä.
+
+### v2-1320
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Panssarilaiva Potemkin
+VASTAUS: Panssarilaiva Potemkin on Sergei Eisensteinin mykkäelokuva vuodelta 1925. Se kertoo kesän 1905 kapinasta venäläisellä sotalaivalla, joka tapahtui Mustallamerellä ja liittyi laajempaan [[vuoden 1905 vallankumoukseen]]. Elokuva tunnetaan [[montaasista]], erityisesti [[Odessan portaiden]] kohtauksesta, jossa joukko kulkee portaita alas. Kohtaus on suurelta osin elokuvan oma kuvitelma, sillä historiallinen tapahtuma ei vastaa elokuvan dramaattista kuvausta. Elokuva on usein nimetty kaikkien aikojen tärkeimpien elokuvien joukkoon, ja sen tyyli on vaikuttanut elokuvaajiin ympäri maailman.
+
+### v2-1321
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: simpukkakalkkikivestä
+VASTAUS: Simpukkakalkkikivi on sedimenttikivilaji, joka on muodostunut merenpohjaan kerrostuneista simpukankuorista ja muista kalkkipitoisista jäänteistä. Odessan seudulla kivi on pehmeää ja huokoista, joten sitä oli helppo sahata suoraan maasta lohkoiksi ja käyttää talojen rakennusaineena. Kun kivi louhittiin kaupungin alta, jäljelle jäi laaja käytäväverkosto, jonka pituudeksi arvioidaan 2 500 kilometriä ja joka ulottuu syvimmillään noin 60 metriin. Verkostoa ei ole koskaan kartoitettu kokonaan. Kivilaji on tyypillinen [[Mustanmeren]] pohjoisrannikon seudulle, ja käytäviä kutsutaan [[Odessan katakombeiksi]].
+
+### v2-1322
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: katakombeiksi
+VASTAUS: Katakombi on alun perin maanalainen hautakäytävä, ja sana liittyy erityisesti [[Rooman katakombeihin]], joihin varhaiset kristityt hautasivat vainajansa. Odessan käytävät eivät ole hautoja vaan entisiä louhoksia, sillä niistä otettiin kalkkikiveä kaupungin rakennuksiin. Käytäväverkoston pituudeksi arvioidaan 2 500 kilometriä, ja se ulottuu syvimmillään noin 60 metriä merenpinnan alapuolelle; suurin osa käytävistä on louhoksia. Toisen maailmansodan aikana käytävissä piileskeli [[partisaaneja]], jotka nousivat maan alta ja katosivat takaisin. Käytäviä käytetään nykyään opastettuihin kierroksiin, ja eksyminen verkostossa on vaarallista, joten retket tehdään oppaan kanssa.
+
+### v2-1323
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Deribasivska
+VASTAUS: Deribasivska on Odessan vilkkain kävelykatu ja kaupungin keskustan sydän. Katu on nimetty Odessan perustajan José de Ribasin mukaan, ja se kulkee ruutukaavan läpi, jonka piirsi hollantilaissyntyinen insinööri Franz de Volan. Kadun varrella on kahviloita, ravintoloita ja puistoja, muun muassa [[Kaupunginpuisto]], ja sen yhteydessä on 1800-luvun lopulla rakennettu [[Passage-kauppakäytävä]]. Lähistöllä sijaitsee myös [[Odessan oopperatalo]].
+
+### v2-1324
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: José de Ribasin
+VASTAUS: José de Ribas syntyi Napolissa espanjalaisen konsulin poikana ja siirtyi Venäjän palvelukseen. Vuonna 1789 hän valtasi turkkilaisen [[Hadžibein linnoituksen]], ja taistelu kesti lähteiden mukaan vain puoli tuntia. Rauhan tultua hän ehdotti keisarinna Katariina II:lle, että samalle rantatörmälle rakennettaisiin satama. Käsky annettiin 27. toukokuuta 1794, ja siitä lasketaan Odessan ikä. De Ribas kuoli [[Pietarissa]] vuonna 1800. Hänen nimensä elää kaupungin keskeisessä kävelykadussa Deribasivskassa, ja hänen kotikaupunkinsa oli [[Napoli]].
+
+### v2-1325
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Katariina
+VASTAUS: Katariina II eli Katariina Suuri hallitsi Venäjää vuosina 1762–1796. Hän syntyi saksalaisessa ruhtinassuvussa Stettinissä ja tuli Venäjälle avioitumaan tulevan keisari [[Pietari III:n]] kanssa. Pietari syrjäytettiin vuonna 1762, ja Katariina nousi valtaan. Hänen aikanaan Venäjän alue kasvoi Mustallemerelle, ja [[Krimin niemimaa]] liitettiin Venäjään vuonna 1783. Katariinan aikana Venäjä osallistui myös [[Puolan jakoihin]]. Hän antoi vuonna 1794 käskyn perustaa Odessan sataman vanhan Hadžibein linnoituksen paikalle.
+
+### v2-1326
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Humorina
+VASTAUS: Humorina on Odessan humorifestivaali, jota vietetään aprillipäivänä. Se keksittiin vuonna 1972, kun suosittu televisiosta tuttu pilailukilpailu lakkautettiin ja odessalainen joukkue päätti järjestää oman naurun päivänsä. Ensimmäinen juhla vietettiin 1973. Väkeä tuli lopulta niin paljon, että viranomaiset kielsivät koko tapahtuman, mutta 1990-luvulla se palasi. Kulkueessa marssivat vuodesta toiseen naamiaisasuiset ihmiset, myös Darth Vader ja avaruussotilaat. Festivaali kytkeytyy [[Odessan huumoriin]], jota edusti muun muassa satiirikko [[Mihail Žvanetski]].
+
+### v2-1327
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Mihail Žvanetski
+VASTAUS: Mihail Žvanetski oli odessalainen satiirikko ja kirjailija, joka syntyi Odessassa 1930-luvulla. Hänet tunnetaan lyhyistä humoristisista monologeista ja miniatyyreistä, joissa hän kuvasi [[Neuvostoliiton]] arkea, ihmissuhteita ja yhteiskunnan ristiriitoja kuivalla huumorilla. Hänen tekstejään esittivät sekä hän itse että muut näyttelijät, ja ne levisivät laajalti. Hänen lauseitaan on lainattu pitkään, ja häntä pidetään yhtenä odessalaisen huumorin tunnetuimmista edustajista. Hän oli sidoksissa myös [[Humorinaan]] ja kaupungin huumorikulttuuriin.
+
+### v2-1328
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Fellner ja Helmer
+VASTAUS: Fellner ja Helmer oli wieniläinen arkkitehtitoimisto, jonka perustivat Ferdinand Fellner ja Hermann Helmer 1800-luvun lopulla. He suunnittelivat kymmeniä teattereita ja oopperataloja [[Itävalta-Unkarissa]] ja sen ulkopuolellakin, ja toimiston tyyli oli komea neobarokki ja uusrokokoo, jossa yhdistyivät koristeelliset julkisivut ja toimiva sali. Tunnettuja töitä ovat esimerkiksi [[Zürichin oopperatalo]], [[Prahan valtionooppera]] ja Odessan oopperatalo, jonka sali oli aikanaan edistyksellinen. Useissa Euroopan kaupungeissa on siis toimiston kädenjälkeä.
+
+### v2-1329
+KOHDE: kaupunki:odessa
+KYSYMYS: Kerro lisää: Wienin
+VASTAUS: Wien on Itävallan pääkaupunki, joka sijaitsee Tonavan varrella maan itäosassa. Kaupunki oli vuosisatojen ajan [[Habsburgien]] hallitsijasuvun keskus ja suuren monikansallisen valtakunnan pääkaupunki, joten sinne kerääntyi taiteilijoita, muusikoita ja oppineita. [[Ringstrasse]]-bulevardi rakennettiin 1800-luvun puolivälistä alkaen vanhan kaupunginmuurin tilalle, ja sen varrelle nousivat muun muassa oopperatalo, parlamentti ja museot. Wienin historiallinen keskusta kuuluu Unescon maailmanperintöön, ja sen [[kahvilakulttuuri]] on kirjattu aineettoman kulttuuriperinnön luetteloon.
+

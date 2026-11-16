@@ -711,6 +711,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
        *     tallella kaikki sivutornit.
        */
       id: 'pulan-areena',
+      symboli: 'historia',
       /*
        * JUTUN KOHDE ON KARTAN OMA PULAN AREENA (js/packs/
        * fokuskohteet-hrv.js `pulan-areena` — sama rakennus, sama

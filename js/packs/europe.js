@@ -520,8 +520,18 @@ export const EUROPE = {
           + 'spinelliä, keskellä timantti ja välissä helmiä. Burgundilta se '
           + 'kulki sveitsiläisten kautta Fuggereille ja 1551 Englannin '
           + 'kruunulle, ja Elisabet I kantoi sitä. Vuoden 1645 jälkeen '
-          + 'siitä ei ole havaintoa. (Kuva: riipuksen miniatyyri, valokuva Peter '
-          + 'Portner / Historisches Museum Basel, CC BY-SA 4.0, muokattu.)',
+          + 'siitä ei ole havaintoa.',
+        // Kuvan nimeäminen Tietoja-sivun lähdeluetteloon (js/lahteet.js aarrekuvienRivit), ei faktaan: kuvalähteitä
+        // ei koskaan näkyviin tehtävissä (omistaja 13.11.2026 klo 13.09; KK 13.50, kortti lisenssit-ja-lataukset 4).
+        // Tarkistettu Commonsin rajapinnasta 13.11.2026: Artist "Original painter unknown. Photograph by Peter Portner,
+        // Historisches Museum Basel", LicenseShortName CC BY-SA 4.0.
+        kuvaLahde: {
+          teos: 'miniatyyrimaalaus (n. 1500)',
+          tekija: 'Tuntematon maalari; valokuva Peter Portner / Historisches Museum Basel',
+          lisenssi: 'CC BY-SA 4.0',
+          linkki: 'https://commons.wikimedia.org/wiki/File:Three_Brothers_jewel_Basel.jpg',
+          muokattu: 'rajattu aarrekuvaksi',
+        },
         // Pelikoodari 12.10.2026: oma aarrekuva Kolme veljestä -riipuksesta (Commons File:Three Brothers jewel Basel.jpg,
         // CC BY-SA 4.0); ämpärissä kohtaamiset/aarteet/aarre-europe-kolme-veljesta.jpg (vienti 12.10.).
         kuva: 'assets/aarteet/aarre-europe-kolme-veljesta.jpg',

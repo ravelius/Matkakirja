@@ -148,7 +148,11 @@ jobs:
         if: env.PALAUTA == ''
         run: |
           set -euo pipefail
-          python3 -c 'import PIL' 2>/dev/null || sudo apt-get install -y -qq python3-pil >/dev/null
+          # Pakettilista ensin: ajokoneen kuvan vanhentunut lista antoi 404:n (PK 6.11.2026, 9 kaatunutta ajoa).
+          python3 -c 'import PIL' 2>/dev/null || {
+            sudo apt-get update -qq >/dev/null
+            sudo apt-get install -y -qq python3-pil >/dev/null
+          }
           node tools/vienti/vie-sisalto.mjs > /dev/null
           mkdir -p dist/pienet/pieni
           vie_pienet() {
@@ -217,9 +221,15 @@ jobs:
         run: |
           set -euo pipefail
           N="${{ steps.julkaisu.outputs.versio }}"
-          aws s3 sync "dist/sisalto/v$N" "s3://$AMPARI/sisalto/1/v$N/" --endpoint-url "$PAATE" \
-            --content-type application/json --cache-control 'public, max-age=31536000, immutable' \
-            --no-progress --only-show-errors
+          # Julkaisija 13.11.2026: R2 antoi ohimenevän ServiceUnavailable-virheen ("Reduce your concurrent request rate",
+          # v1082 ja v1083). sync on toistettava (vie vain puuttuvat), joten enintään 3 kierrosta.
+          for k in 1 2 3; do
+            aws s3 sync "dist/sisalto/v$N" "s3://$AMPARI/sisalto/1/v$N/" --endpoint-url "$PAATE" \
+              --content-type application/json --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress --only-show-errors && break
+            [ "$k" = 3 ] && exit 1
+            echo "::warning::sync kierros $k epäonnistui, uusi 20 s päästä"; sleep 20
+          done
 
       - name: Tarkista paketti julkisesta osoitteesta
         if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'

@@ -183,10 +183,16 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // (29,06 E / 41,1 N) on kaupungin laatan vieressä mutta jää kohdekartan
   // rajauksen ulkopuolelle. Muiden merien nostot (Dardanellit, Juutinrauma
   // jne.) eivät osu minkään kaupungin kohdalle.
+  //
+  // 63 → 64 (13.11.2026, KK:n päätös Lontoon faktapohja 3a): Liukumäkiveistos
+  // (lontoo/orbitin-liukumaki) siirtyi kohdekartalta pääkartalle, koska sen
+  // kohdekartan piste 51,504 / −0,135 oli väärä: oikea paikka Stratfordissa
+  // (51,538 / −0,013) on reunuksella. Syy "rajauksen ulkopuolella" kuten Richmond
+  // Parkilla; uusi nosto ei tullut, vanha muutti oikeaan paikkaansa.
   const kesken = keskenKaikki.filter((r) => r.kaupunginKohdalla !== 'lähizoomi');
-  assert.ok(kesken.length <= 63,
+  assert.ok(kesken.length <= 64,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
-    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 63 sallittu — uusi nosto kuuluu kohdekartalle`);
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 64 sallittu — uusi nosto kuuluu kohdekartalle`);
   // 48 → 49 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
   // päätös, Belgian pilotti), ja Tervurenin museonosto
   // (hahmotelma-tervuren) osuu nyt kaupungin kohdalle syyllä
@@ -209,8 +215,9 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // Belgradin linnoitus ja Zagreb (selitetty yllä).
   // 56 → 57 (15.10.2026, juna 193b): Bernin Zytglogge (selitetty yllä).
   // 57 → 58 (16.10.2026): Bosporinsalmen meri-nosto (selitetty yllä).
+  // 58 → 59 (13.11.2026): Liukumäkiveistos Stratfordiin pääkartalle (selitetty yllä).
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 58,
+  assert.ok(muutKuinHetket.length <= 59,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 

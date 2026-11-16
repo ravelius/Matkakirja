@@ -1,0 +1,184 @@
+================ KOHTA 46 (kaupunki:dubrovnik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dubrovnik
+Maa, jossa pelaaja on: Kroatia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dubrovnik (kaupunki)
+Tietoruudun teksti: Dubrovnik on muurien ympäröimä satamakaupunki Kroatian eteläkärjessä Adrianmeren rannalla. Vanhakaupunki on vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen ympäri kiertää kivimuuri, joka on paikoin kuusi metriä paksu ja kaksikymmentäviisi korkea. Muurit ovat kaupungin tunnetuin kohde: niillä kävelee vuodessa 1,2 miljoonaa ihmistä, kun kunnassa asuu noin 42 000.
+
+Satojen vuosien ajan kaupunki oli oma valtionsa, Ragusan tasavalta, omine lakeineen ja laivastoineen. Se selvisi isompien naapureiden välissä sopimalla eikä sotimalla: veroa maksettiin sekä Venetsialle että sulttaanille. Rikkaus tuli suolasta ja merenkulusta, ja tasavalta oli edellä aikaansa: Euroopan vanhin yhä toimiva apteekki avattiin täällä 1317, orjakauppa kiellettiin 1416 ja kulkutautialueilta saapuvat määrättiin karanteeniin jo 1377.
+
+Vuoden 1667 maanjäristys tuhosi suuren osan kaupungista, ja se rakennettii…
+Isoisän matkakirjamerkintä: Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik] Kalkkikivinen kaupunki Adrianmeren rannalla oli satojen vuosien ajan oma pieni tasavaltansa: sillä oli oma laivasto, omat lait ja tapa selvitä naapureiden välissä sopimalla eikä sotimalla.
+
+### 46.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (maa:HUN) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Unkari (maa)
+Tietoruudun teksti: Unkari on sisämaavaltio Karpaattien kaaren sisäpuolella, ja sen kieli on Euroopan omituisimpia: unkari ei muistuta yhtäkään naapurinsa kieltä vaan on suomen ja viron kaukainen sukulainen. Käsi on kéz, vesi víz, kala hal ja mesi méz.
+
+Kartta on melkein kokonaan vihreä, ja se on oikein: Unkari on Karpaattien altaan pohjaa, eikä siellä ole vuoria. Halki kulkee kaksi jokea pohjoisesta etelään — Tonava keskeltä ja Tisza sen itäpuolelta — ja niiden ympärille levittäytyy Alföld eli Iso Unkarin alanko. Lounaassa erottuu kapea sininen juova, Balaton, ja ruskeaa näkyy vasta rajojen takana: Unkarin oma korkein maasto on kapea kaistale pohjoisrajan tuntumassa.
+
+Maan alla on kuumaa vettä: lämpimiä lähteitä on yli tuhat, ja kylpylöissä istutaan pakkasellakin. Idässä alanko taas jatkuu niin pitkälle, ettei sen yli näy yhtään kohoumaa — siellä on Euroopan laajin ruohotasanko ja sen halki kulkeva kivisi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Unkari — maalehti / Kieli: Sukulaisia kaukaa pohjoisesta] Tuhansia vuosia — Unkari ei kuulu indoeurooppalaisiin kieliin kuten sen naapurit, vaan uralilaisiin kieliin. Samaan joukkoon kuuluvat suomi, viro ja saame sekä joukko pienempiä kieliä Uralin molemmin puolin. Sukulaisuus on kaukainen: unkarilainen ja suomalainen eivät ymmärrä toisiaan lainkaan. Yhteiset sanat näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun kansat erosivat toisistaan tuhansia vuosia sitten.
+- [Unkari — maalehti / Menovinkit] Unkari on avannut oman muistinsa: kaksisataatuhatta valokuvaa ilmaiseksi, Budapestin kartat neljältä eri vuodelta, Bartókin äänittämät kansanlaulut ja kameroita, joista näkee haikaran pesään juuri nyt.
+- [Unkari — maalehti / Kieli] Unkari kuulostaa naapureiden korvaan oudolta, eikä syyttä: sen lähimmät sukulaiset ovat kaukana pohjoisessa ja idässä. Neljä juttua kielestä, jota puhuu noin 13 miljoonaa ihmistä.
+
+### 47.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kaupunki:budapest) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Budapest
+Maa, jossa pelaaja on: Unkari
+Näkymä: kartta
+Pelaaja katsoo kartalla: Budapest (kaupunki)
+Tietoruudun teksti: Budapest on Unkarin pääkaupunki, jossa asuu noin 1,7 miljoonaa ihmistä. Se syntyi 17. marraskuuta 1873, kun kukkulainen Buda, vanha Óbuda ja tasainen Pest yhdistettiin yhdeksi. Tonava jakaa kaupungin kahtia: länsipuolella maa nousee jyrkästi kalkkikivikukkuloille, itäpuolella se on tasaista niin kauas kuin näkee.
+
+Roomalaisilla oli täällä Aquincumin kaupunki, ja ottomaanien noin puolentoista vuosisadan hallinnosta jäi kylpyläperinne, sillä maasta nousee yli sata lämmintä lähdettä. Rantojen ensimmäinen pysyvä yhteys oli vuonna 1849 avattu Ketjusilta. Vuonna 1867 Unkarista tuli Itävalta-Unkarin tasavertainen puolisko, ja kasvu oli rajua: vuonna 1896 avattiin Manner-Euroopan ensimmäinen sähköllä kulkeva metrorata.
+
+Toisen maailmansodan talvella 1944–1945 kaupunkia piiritettiin, ja kaikki Tonavan sillat ja suuri osa linnavuoresta tuhoutuivat. Vuonna 1956 unkarilaiset nousivat kapinaan neuvo…
+Isoisän matkakirjamerkintä: Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+
+### 48.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (maa:IRL) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Irlanti (maa)
+Tietoruudun teksti: Irlanti on saari Britannian länsipuolella. Sen eteläosassa on oma tasavaltansa — 26 kreivikuntaa 32:sta — ja pohjoiset kuusi kuuluvat Yhdistyneeseen kuningaskuntaan. Vihreän värin saarelle antaa merituulen tuoma sade, jota riittää ympäri vuoden.
+
+Korkokartta paljastaa saaren muodon: vuoret kiertävät rannikkoa kehänä, ja keskellä levittäytyy matalaa tasankoa. Korkein huippu Carrauntoohil kohoaa 1 038 metriin lounaisnurkassa. Keskeltä mutkittelee Shannon, Britteinsaarten pisin joki, ja koillisessa siintää Lough Neagh, niiden suurin järvi.
+
+Kartalle on piirretty kaikki 32 kreivikuntaa, ja paksumpi viiva niiden seassa on tasavallan ja Pohjois-Irlannin raja; oikeassa laidassa vilahtaa pala Skotlantia. Rajan eteläpuolella, Boyne-joen mutkassa, on ruohoinen kumpu, joka oli jo vanha silloin kun Egyptissä alettiin rakentaa pyramideja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Musiikki: Kolikon harppu on väärän muotoinen] 1300-luku — Irlanti on maailman ainoa maa, jonka valtiontunnus on soitin. Esikuva seisoo Trinity Collegen kirjastossa: 1300- tai 1400-luvulla tehty harppu, jonka kaulassa on messinkitapit 29 kielelle. Sitä sanotaan Brian Borun harpuksi, vaikka kuningas Brian kuoli vuonna 1014 — satoja vuosia ennen kuin soitin veistettiin. Kolikoihin painettu harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on paljon leveämpi.
+- [Irlanti — maalehti / Menovinkit] Irlanti on avannut arkistonsa: koululaisten keräämät tarinat 1930-luvulta, käsin kirjoitetut vuosisadat, suljettu museo jonka salit voi silti kävellä läpi, ja kivet joissa aakkoset ovat pelkkiä viiruja.
+
+### 49.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (kaupunki:dublin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Pelaaja katsoo kartalla: Dublin (kaupunki)
+Tietoruudun teksti: Dublin on Irlannin pääkaupunki ja sen suurin kaupunki, ja se sijaitsee Liffey-joen suulla Dublinin lahden pohjukassa. Kaupungissa esikaupunkeineen asuu noin 1,3 miljoonaa ihmistä. Paikalla oli gaelilainen asutus jo 600-luvulla, ja viikingit perustivat joen rantaan kauppasataman 800-luvulla.
+
+Kaupungilla on kaksi nimeä, ja molemmat kertovat vedestä: iirinkielinen Baile Átha Cliath tarkoittaa risuista punotun kahlaamon kaupunkia, ja englanninkielinen Dublin tulee tummasta vuorovesialtaasta, jonka rannalla viikingit pitivät laivojaan. 1700-luvulla kaupunki rakennettiin uudelleen: katuja oikaistiin ja talojen mitat määrättiin, ja niin syntyi georgiaaninen Dublin tiilirivistöineen ja viuhkaikkunoineen.
+
+Dublin on ennen kaikkea kirjojen kaupunki. Trinity Collegen kirjastossa säilytetään noin vuonna 800 kuvitettua Kellsin kirjaa, ja kaupungista ovat kotoisin muun muassa Jonathan Swift, Oscar W…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kaupunkilehti / Dublin] Kaupunki, jossa yhden kesäkuisen päivän tapahtumia juhlitaan joka vuosi uudestaan ja jonka valtiontunnus seisoo lasikaapissa yliopiston kirjastossa.
+
+### 50.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

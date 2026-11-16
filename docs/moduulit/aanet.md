@@ -1,6 +1,6 @@
 # Siirtymämusiikki ja pelin äänet — tuotanto-ohje
 
-Sitovat linjaukset ovat Raamatussa (js/tyohuone-raamattu.js). Tämä
+Sitovat linjaukset ovat Raamatussa (docs/raamattu/ (ovi: node tools/kirjaa.mjs)). Tämä
 dokumentti kertoo, miten musiikkiraidat (siirtymät ja linssit) ja
 ämpärissä asuvat ääniefektit tuotetaan ja viedään. Koodin kuvaus on
 moduulien js/siirtymamusiikki.js ja js/tehosteet.js

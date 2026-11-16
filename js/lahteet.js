@@ -29,6 +29,78 @@
 
 /** Pelin oma tekijänoikeus. Sanamuodot ovat LICENSE-tiedostosta. */
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+import { KAIKKI_VALOKUVAT, EI_VALOKUVAKYSYMYKSEEN } from './sisaltotaulut.js';
+import { PYLVASKUVAT } from './packs/europe-puzzles.js';
+import { EUROPE } from './packs/europe.js';
+import { AFRICA } from './packs/africa.js';
+import { MIDDLE_EAST } from './packs/middleeast.js';
+import { ASIA } from './packs/asia.js';
+import { NORTHAMERICA } from './packs/northamerica.js';
+import { SOUTHAMERICA } from './packs/southamerica.js';
+import { OCEANIA } from './packs/oceania.js';
+
+/*
+ * VALOKUVAKYSYMYSTEN KUVAT (omistaja 13.11.2026 klo 13.09: "Kuvalähteitä ei koskaan näkyviin
+ * tehtävissä"; KK 13.17: nimeämistä vaativien kuvien rivit Tietoja-sivulle ennen junaa).
+ * Kysymyksen kuva on kaupungin valokuva (nykykuva, muuten vanha vedos; sama valinta kuin
+ * tools/vienti/kokoelmat.mjs kysymyskuvaKokoelmat ja js/ui.js primePhotoPool). CC BY- ja
+ * CC BY-SA -kuvista rivi suoraan datasta, jotta uusi kuva tulee luetteloon itsestään.
+ * Lähdekentän muoto: "Tekijä, Commons (CC BY-SA 4.0)"; muu muoto näytetään sellaisenaan.
+ */
+const LISENSSI_LOPUSSA = /\s*\(((?:CC BY(?:-SA)?) [\d.]+(?: [A-Za-z]{2})?)\)\s*$/;
+export function kysymyskuvanRivi(id, kuva) {
+  const lahde = String(kuva.lahde ?? '');
+  const lisenssi = lahde.match(LISENSSI_LOPUSSA)?.[1];
+  if (!lisenssi) return null;
+  const tekija = lahde.replace(LISENSSI_LOPUSSA, '')
+    .replace(/,\s*(?:Wikimedia )?Commons\b.*$/, '')
+    .replace(/^Commonsin käyttäjä\s+/, '')
+    .trim() || lahde;
+  return { nimi: kuva.lyhyt ?? id, tekija, lisenssi, huom: `Wikimedia Commons: ${kuva.tiedosto}` };
+}
+function kysymyskuvienRivit() {
+  const rivit = [];
+  for (const [id, valokuva] of Object.entries(KAIKKI_VALOKUVAT)) {
+    if (EI_VALOKUVAKYSYMYKSEEN.has(id)) continue;
+    const kuva = valokuva?.uusi?.tiedosto ? valokuva.uusi : valokuva;
+    if (!kuva?.tiedosto) continue;
+    const rivi = kysymyskuvanRivi(id, kuva);
+    if (rivi) rivit.push(rivi);
+  }
+  return rivit;
+}
+
+/*
+ * PULMIEN JA AARTEIDEN KUVAT (KK 13.50, kortti lisenssit-ja-lataukset 4): valokuvapulman vaihtoehtokuvat
+ * (js/packs/europe-puzzles.js PYLVASKUVAT; natiivi ei enää näytä niiden lähderiviä tehtävässä) ja aarteiden
+ * kuvat, joilla on kuvaLahde-kenttä (mantereen pakan tokens.types; nimeäminen ei kuulu aarteen faktaan).
+ */
+export const AARREPAKAT = [EUROPE, AFRICA, MIDDLE_EAST, ASIA, NORTHAMERICA, SOUTHAMERICA, OCEANIA];
+export function aarrekuvanRivi(aarre) {
+  const k = aarre?.kuvaLahde;
+  if (!k?.lisenssi) return null;
+  return {
+    nimi: `${aarre.name}: ${k.teos}`,
+    tekija: k.tekija,
+    lisenssi: k.lisenssi,
+    huom: [k.muokattu ? `Muokattu (${k.muokattu}); jaetaan samalla lisenssillä.` : '', k.linkki].filter(Boolean).join(' '),
+  };
+}
+function pulmienJaAarteidenRivit() {
+  const rivit = [];
+  for (const k of PYLVASKUVAT) {
+    const rivi = kysymyskuvanRivi(k.tyyli, { tiedosto: k.tiedosto, lyhyt: `Pylväspulma: ${k.nimi}`, lahde: k.lahde });
+    if (rivi) rivit.push(rivi);
+  }
+  const nahty = new Set();
+  for (const pakka of AARREPAKAT) {
+    for (const aarre of Object.values(pakka?.tokens?.types ?? {})) {
+      const rivi = aarrekuvanRivi(aarre);
+      if (rivi && !nahty.has(rivi.huom)) { nahty.add(rivi.huom); rivit.push(rivi); }
+    }
+  }
+  return rivit;
+}
 
 /*
  * Lipun tekijä luettavaksi: Commonsin kenttä kantaa lataushistoriaa
@@ -414,6 +486,18 @@ export const LAHTEET = [
         lisenssi: 'CC0 1.0',
       },
     ],
+  },
+  {
+    otsikko: 'Valokuvakysymysten kuvat',
+    johdanto: 'Tietovisan kuvakysymysten valokuvat, jotka vaativat tekijän nimeämisen '
+      + '(CC BY ja CC BY-SA). Public domain- ja CC0-kuvia ei luetella.',
+    rivit: kysymyskuvienRivit(),
+  },
+  {
+    otsikko: 'Pulmien ja aarteiden kuvat',
+    johdanto: 'Valokuvapulmien vaihtoehtokuvat ja aarteiden kuvat, jotka vaativat tekijän nimeämisen '
+      + '(CC BY ja CC BY-SA).',
+    rivit: pulmienJaAarteidenRivit(),
   },
   {
     otsikko: 'Äänet',

@@ -761,6 +761,7 @@ export const FOKUSVIRTA_BUKAREST = {
   takynostot: [
     {
       id: 'dracula',
+      symboli: 'sana',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * nostolla ei ole omaa paikkaa vaan sen ankkuri on Bukarestin

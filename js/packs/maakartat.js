@@ -2941,7 +2941,7 @@ export const MAAKARTAT = {
  *           KONEELLINEN LINKKI (tools/tarkista-nostopaikat.mjs,
  *           tests/nostot-kartalla.test.mjs): nimivertailu ei kelpaisi,
  *           koska sama sisältö kulkee kartalla eri nimellä kuin
- *           nostona (`moskeijat` on täällä "Banja Bashin moskeija").
+ *           nostona (`moskeijat` on täällä "Banja Bašin moskeija").
  *           Omistajan sääntö 2.9.2026: *"lisää kaikki historian hetket
  *           ja muut karttanostot myös joko pääkarttanäkymään tai sitten
  *           kaupunkilehden kaupunkikartalle, ellei näin ole jo tehty."*
@@ -4911,7 +4911,7 @@ export const KAUPUNKIKARTAT = {
       // Ruotsalainen teatteri, nimiö oikealle. Samaan pisteeseen myös syvennystarina Finlandia (sama ilta 1899; omistaja
       // 31.10.2026: musiikkiteos ei ole oma karttamerkki) – listamuoto kuten Pariisin Tuileries'n palatsi.
       {
-        nimi: 'Suomi herää 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
+        nimi: 'Sibelius 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
         nosto: ['hetki-sibelius-finlandia-1899', 'syvennys-helsinki-finlandia'],
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5061,7 +5061,7 @@ export const KAUPUNKIKARTAT = {
       // sama piste kuin Kallimarmaro ja Maratonhuijaus (siirto vasemmalle): nimiö
       // oikealle.
       {
-        nimi: 'Louis 1896', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7411,
+        nimi: 'Maraton 1896', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7411,
         nosto: 'hetki-olympia-ateena-1896',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5166,6 +5166,10 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-yovartio',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // KADONNEET IHMEET (KK 16.11.2026 erä 2): paikat KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
+      { nimi: 'Haringpakkerstoren', lat: 52.37917, lon: 4.89528 },
+      { nimi: 'Waag op de Dam', lat: 52.3731, lon: 4.8927 },
+      { nimi: 'Paleis voor Volksvlijt', lat: 52.359768, lon: 4.899973 },
     ],
   },
   dublin: {
@@ -5347,7 +5351,8 @@ export const KAUPUNKIKARTAT = {
        * Panthéonin fi-artikkelilla ei ole koordinaatteja;
        * 48,8462/2,3464 on rakennuksen tunnettu sijainti.
        */
-      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
+      // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: 'nosto-pariisin-72-nimea' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
@@ -5359,7 +5364,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Luxembourgin puisto', tyyppi: 'luonto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
       { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
       { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
-      { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
+      // Notre-Damen kukko on katedraalin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
+      { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali', nosto: 'nosto-notre-damen-kukko' },
       /*
        * KOLME LISÄKOHDETTA (paketti O4, omistajan linjaus 16.8.2026:
        * "Nähtävyyksiä voi olla 6–15 per kaupunki"). Listan lopussa,
@@ -5378,6 +5384,21 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
       { nimi: 'Place des Vosges', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
+       * PIIRROSKARTAN 3D-MALLIT VALMIIKSI NOSTOIKSI (omistaja 9.11.2026 klo 16.17: "Kaikki tällaiset paikat
+       * pitäisi hakea valmiiksi jo nostoiksi"; PT, KS): mallin kyltti hakee nyt tiedot Tietokortit-striimistä,
+       * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
+       */
+      { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
+      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
+      { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
+      // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
+      { nimi: 'Petit Palais', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
+      // Natiivin koodimallit ilman Tripoa (KK 14.17, S3-faktat): nimi = natiivin Kohde.Nimi, piste = Wikidata P625 (Q1431547, Q1338207, Q178065).
+      { nimi: 'Tour Saint-Jacques', lat: 48.8578, lon: 2.3488, wiki: 'Tour Saint-Jacques' },
+      { nimi: 'Saint-Eustache', lat: 48.8633, lon: 2.345, wiki: 'Saint-Eustachen kirkko' },
+      { nimi: 'Pompidou-keskus', lat: 48.8606, lon: 2.3522, wiki: 'Pompidou-keskus' },
+      { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
+      /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
        * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
@@ -5391,27 +5412,32 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
        */
       {
-        nimi: 'Carmenin ensi-ilta', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
+        nimi: 'Bizet 1875', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
       },
       {
-        nimi: 'Kirahvin kävelymatka', tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
+        nimi: 'Kirahvi 1827', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
-        nimi: 'Torni romuraudaksi', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
-        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'vasen',
-        siirto: { x: -6, y: -25 },
+        // KK 20.52 12.11.2026 (vaihtoehto A): Pariisin aarretehtävän vihje osoittaa tähän (Quai Voltaire).
+        nimi: 'Bukinistit 1859', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 48.859, lon: 2.33075,
+        nosto: 'nosto-pariisin-bukinistit',
       },
       {
-        nimi: 'Vrain-Lucas', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
+        // KK 10.11.2026 12.24: ei samaan pisteeseen Eiffel-tornin kanssa; tornin itäisen jalan juurelle (Torni 1888 läntisen).
+        nimi: 'Lustig 1925', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85826, lon: 2.2957,
+        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'oikea',
+      },
+      {
+        nimi: 'Vrain-Lucas', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
         nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       },
       {
-        nimi: 'Impressionistit', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
+        nimi: 'Monet 1874', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
         nosto: 'syvennys-pariisi-impressionistit', nimiPuoli: 'vasen',
       },
       {
-        nimi: 'Kyyhkyposti', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
+        nimi: 'Piiritys 1870', tarinapaikka: true, merkki: 'tiimalasi', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
       },
       /*
        * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
@@ -5462,35 +5488,36 @@ export const KAUPUNKIKARTAT = {
        */
       // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
       {
-        nimi: 'Curie 1898', tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
+        nimi: 'Curie 1898', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
         nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
       },
       // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
       {
-        nimi: 'Lavoisier 1780', tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
+        nimi: 'Lavoisier 1780', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
         nosto: 'hetki-lavoisier-laboratorio-1780',
       },
       // École normale supérieure, rue d'Ulm.
       {
-        nimi: 'Pasteur 1862', tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
+        nimi: 'Pasteur 1862', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
       },
-      // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
+      // Tornin läntisen jalan juurelle (KK 10.11.2026 12.24: Eiffelin merkit eivät päällekkäin; Torni romuraudaksi itäisen).
       {
-        nimi: 'Torni 1888', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
+        nimi: 'Eiffel-torni 1888', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
         nosto: 'hetki-eiffel-torni-1888',
-        nimiPuoli: 'oikea', siirto: { x: 6, y: 25 },
+        nimiPuoli: 'vasen',
       },
       // sama piste kuin kohde Bastilji: nimiö oikealle.
+      // KK 12.11.2026 20.09: oma kyltti POIS (tarinapaikka: false); juttu avautuu Bastiljin tähden kortista.
       {
-        nimi: 'Bastilji 1789', tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
+        nimi: 'Bastilji 1789', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
       {
-        nimi: 'Lumière 1895', tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
+        nimi: 'Lumière 1895', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
         nosto: 'hetki-lumiere-elokuva-1895',
         nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
@@ -5499,54 +5526,43 @@ export const KAUPUNKIKARTAT = {
        * suunnitelman luku 4.7, omistajan hyväksymä jakotaulukko). Lehden
        * sivut "Pariisi", "Musiikki" ja "Historia" purettiin klikattaviksi
        * karttapaloiksi: viisi niistä on tällä kartalla, ja kuudes
-       * ("Paras patonki") jäi pääkartalle kaupungin viereen.
+       * ("Patonki 1994") jäi pääkartalle kaupungin viereen.
        *
        * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on
        * siellä, missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
        */
-      // Eiffel-tornin neljäs merkki: torni, Torni romuraudaksi ja
-      // Torni 1888 ovat samassa pisteessä, joten nimiö suoraan vasemmalle.
-      {
-        nimi: '72 nimeä', tyyppi: 'esine', lat: 48.85822, lon: 2.2945,
-        nosto: 'nosto-pariisin-72-nimea',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
+      // 72 nimeä: Eiffel-tornin nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
       // Abbesses'n asema, yksi jäljellä olevista Guimardin
       // sisäänkäynneistä (48,8844 N / 2,3382 E). Oma piste, ei naapureita.
-      // Karttanimi `nimio` (PT 30.10.2026 klo 23.5x): "Metron sisäänkäynti"
+      // Karttanimi `nimio` (PT 30.10.2026 klo 23.5x): "Metro 1900"
       // on 19 merkkiä ja lyheni kartalla muotoon "Metron." (18 merkin
       // lyhennyssääntö, js/fokusnosto-symbolit.js nostosymLyhennaNimio).
       // Karttanimet vain suomeksi (omistaja 29.10.), siksi ei "Métropolitain".
       {
-        nimi: 'Metron sisäänkäynti', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
+        nimi: 'Metro 1900', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
         nosto: 'nosto-guimardin-metro',
       },
-      // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.
-      {
-        nimi: 'Notre-Damen kukko', tyyppi: 'esine', lat: 48.853, lon: 2.3499,
-        nosto: 'nosto-notre-damen-kukko',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
-      },
+      // Notre-Damen kukko: Notre-Damen nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
       // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
       // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
       {
-        nimi: 'Pariisi soi', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
+        nimi: 'Piaf ja Django', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
         nosto: 'nosto-pariisi-soi',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
       },
       // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
       // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
       {
-        nimi: 'Paras patonki', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
+        nimi: 'Patonki 1994', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
         nosto: 'nosto-pariisin-patonki',
       },
       // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
       // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
       // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
       {
-        nimi: 'Pariisin vuosisadat', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
+        nimi: 'Kaulanauha 1785', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
         nosto: 'nosto-pariisin-vuosisadat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
@@ -5828,18 +5844,18 @@ export const KAUPUNKIKARTAT = {
        */
       // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
       {
-        nimi: 'Yhdeksäs 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
+        nimi: 'Beethoven 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
         nosto: 'hetki-beethoven-yhdeksas-1824',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
       {
-        nimi: 'Figaro 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
+        nimi: 'Mozart 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Pörssikrahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
+        nimi: 'Wienin krahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
         nosto: 'hetki-wienin-porssikrahi-1873',
         teksti: HISTORIAN_HETKET_ID.get('wienin-porssikrahi-1873').teksti,
       },
@@ -6050,6 +6066,28 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, wiki: 'Palace of Whitehall', nosto: 'hahmotelma-whitehall' },
+      /*
+       * LONTOON 3D-MALLIEN KYLTIT NOSTOIKSI (OMISTAJAN PÄÄTÖS 9.11.2026 klo 16.46, KK-kortti; PT, KS): mallin kyltti avasi
+       * striimatun tietokortin. Nimi = kyltin nimi (natiivi OhjelmaKohteet), piste = mallin keskipiste. Westminsterin palatsin
+       * piste on lukittu (data/kohdetunnisteet.json), koska Wikidatan piste on sama kuin Vanhan Westminsterin palatsin;
+       * samoin Westminster Bridge sillan itäosaan, koska Wikidatan piste on Canaletto-noston kohdalla.
+       * kyltti3d = pelin 3D-mallin kyltti (natiivi OhjelmaKohteet): saa olla julisteen reunuksessa lepotilan rajauksen ulkopuolella
+       * (Kensingtonin neljä; tests/karttareunus.test.mjs), koska verkon lehti ei piirrä niitä (ei miniatyyriä eikä numeroympyrää).
+       */
+      { nimi: 'Westminster Abbey', lat: 51.499406, lon: -0.127429, wiki: 'Westminster Abbey', kyltti3d: true },
+      { nimi: 'Westminsterin palatsi', lat: 51.4995, lon: -0.1248, wiki: 'Westminsterin palatsi', kyltti3d: true },
+      { nimi: 'Westminster Bridge', lat: 51.50076, lon: -0.1199, wiki: 'Westminsterin silta', kyltti3d: true },
+      { nimi: 'Cutty Sark', lat: 51.482834, lon: -0.009572, wiki: 'Cutty Sark', kyltti3d: true },
+      { nimi: 'Lontoon Tower', lat: 51.5081, lon: -0.0762, wiki: 'Lontoon Tower', kyltti3d: true },
+      { nimi: 'British Museum', lat: 51.5194, lon: -0.127, wiki: 'British Museum', kyltti3d: true },
+      { nimi: 'Natural History Museum', lat: 51.4965, lon: -0.1758, wiki: 'Natural History Museum', kyltti3d: true },
+      { nimi: 'Victoria Memorial', lat: 51.50184, lon: -0.14059, wiki: 'Victoria Memorial (Lontoo)', kyltti3d: true },
+      { nimi: 'Royal Albert Hall', lat: 51.501021, lon: -0.177405, wiki: 'Royal Albert Hall', kyltti3d: true },
+      { nimi: 'Albert Memorial', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial', kyltti3d: true },
+      { nimi: 'Kensingtonin palatsi', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi', kyltti3d: true },
+      { nimi: 'Royal Observatory', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio', kyltti3d: true },
+      { nimi: 'Old Royal Naval College', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true },
+      { nimi: 'Queen\'s House', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House', kyltti3d: true },
       {
         nimi: 'Buckinghamin palatsi',
         lat: 51.5014,
@@ -6090,7 +6128,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Pyhän Paavalin katedraali',
         lat: 51.5138,
         lon: -0.0984,
-        wiki: 'Pyhän Paavalin katedraali',
+        wiki: 'St Paulin katedraali',   // fi 'Pyhän Paavalin katedraali' on täsmennyssivu (Q399961), KS 9.11.2026
         nosto: 'st-paulin-katedraali',
       },
       {
@@ -6128,19 +6166,22 @@ export const KAUPUNKIKARTAT = {
        * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
        * (omistajan päätös 2.9.2026 illalla).
        *
-       * −0,08778 E / 51,50806 N — en-Wikipedia "London Bridge"
-       * (tietolaatikon coordinates), sama luku kuin kohteen omassa
-       * pakissa (js/packs/fokuskohteet-gbr.js). Piste on nykyisen sillan
-       * paikka; keskiaikainen silta seisoi noin 30 metriä siitä itään,
-       * mikä ei erotu omaksi pisteekseen tälläkään kartalla. Piste on
-       * määritelmän mukaan vedellä — silta ylittää joen, ks.
+       * −0,08702 E / 51,50808 N — keskiaikaisen sillan keskikohta (siirretty
+       * 15.11.2026 KK:n päätöksellä: aiempi piste, en-Wikipedian "London
+       * Bridge" −0,08778 / 51,50806, oli nykyisen sillan paikka). Keskiviivojen
+       * väli nykyiseen siltaan 43 m alavirtaan (SK:n toinen lähde: 30–46 m;
+       * Maitland/Entick 1775 ja guidelondon.org.uk; docs/raportit/
+       * lontoo-kadonneet-mitat-toinen-lahde-20261115.md); piste on sama kuin
+       * hologrammin kehyksen origo (Kadonneet/lontoo.json, NSe erä A), jotta ✦
+       * ja noston hologrammi ovat samassa paikassa. Piste on määritelmän
+       * mukaan vedellä — silta ylittää joen, ks.
        * tools/tarkista-karttapisteet.mjs:n otsake.
        *
        * Juttu on kohteen OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
        */
       {
-        nimi: 'Vanha London Bridge', lat: 51.50806, lon: -0.08778,
+        nimi: 'Vanha London Bridge', lat: 51.50808, lon: -0.08702,
         nosto: 'vanha-london-bridge',
       },
       /*
@@ -6153,28 +6194,28 @@ export const KAUPUNKIKARTAT = {
        */
       // Royal Institution, Albemarle Street.
       {
-        nimi: 'Faraday 1831', tyyppi: 'henkilo', lat: 51.5098, lon: -0.1425,
+        nimi: 'Faraday 1831', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5098, lon: -0.1425,
         nosto: 'hetki-faraday-luento-1831',
       },
       // St Mary's, Praed Street — kartan länsireunassa, nimiö oikealle.
       {
-        nimi: 'Fleming 1928', tyyppi: 'henkilo', lat: 51.5174, lon: -0.172,
+        nimi: 'Fleming 1928', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5174, lon: -0.172,
         nosto: 'hetki-fleming-malja-1928', nimiPuoli: 'oikea',
       },
       // Rotherhithen kuilu (Brunel Museum).
       {
-        nimi: 'Tunneli 1827', tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
+        nimi: 'Brunel 1827', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
         nosto: 'hetki-brunel-thames-tunnel-1827',
       },
       // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
       // oikealle.
       {
-        nimi: 'Palo 1666', tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
+        nimi: 'Lontoon palo 1666', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
         nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
       },
       // alkuperäisen Globen tontti Southwarkissa.
       {
-        nimi: 'Globe 1599', tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
+        nimi: 'Shakespeare 1599', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
         nosto: 'hetki-shakespeare-globe-1599',
       },
       /*
@@ -6225,9 +6266,39 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Liukumäkiveistos', tyyppi: 'taide', lat: 51.504, lon: -0.135,
-        nosto: 'nosto-orbitin-liukumaki',
+        // KK 13.11.2026 (Lontoon faktapohja, vaihtoehto A): Lontoon aarretehtävän vihje osoittaa tähän
+        // (Victoria Embankment, Embankment Gardens Savoyn kohdalla; SK:n tarkistus PR 6681: maalla, lähin merkki 535 m).
+        nimi: 'Savusumu 1952', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5093, lon: -0.1207,
+        nosto: 'nosto-lontoon-savusumu-1952',
       },
+      // Brook Street 25 ja 23 (English Heritage 51,5131 / −0,14606; Wikipedia 51,513 / −0,1459). Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Händel ja Hendrix', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5131, lon: -0.146,
+        nosto: 'nosto-handel-hendrix-brook-street',
+      },
+      // Gough Square 17 (en-Wikipedia "Dr Johnson's House" 51,515 / −0,10806). Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Johnson 1755', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.515, lon: -0.1081,
+        nosto: 'nosto-johnsonin-sanakirja-1755',
+      },
+      // St Paulin kirkko Covent Gardenissa (en-Wikipedia 51,51139 / −0,12417); laatta kirkon seinällä. Tarinapaikka KK 14.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Punch 1662', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 51.5114, lon: -0.1242,
+        nosto: 'nosto-punch-pepys-1662', nimiPuoli: 'vasen',
+      },
+      // Frith Street Sohossa, kadun eteläpää (talonumeroa ei käytetä). Tarinapaikka KK 15.11.2026 (Lontoon 9 tarinapaikkaa, SK:n data-luonnos).
+      {
+        nimi: 'Baird 1926', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5135, lon: -0.1317,
+        nosto: 'nosto-baird-televisio-1926',
+      },
+      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, joten nimiö oikealle. Tarinapaikka KK 15.11.2026.
+      {
+        nimi: 'Sähkötin 1837', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 51.5282, lon: -0.1337,
+        nosto: 'nosto-sahkotin-euston-1837', nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Liukumäkiveistos (Orbit) EI ole täällä (KK 13.11.2026, päätös 3a): oikea paikka Stratfordissa
+      // (51,538 / −0,013) on reunuksella, joten nosto on pääkartalla kattoVapaa-lipulla
+      // (js/packs/fokusvirta-lontoo.js orbitin-liukumaki), kuten Wienin Prater ja Rooman Avaimenreikä.
     ],
   },
   berliini: {
@@ -6365,7 +6436,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Bernauer Straße, muurin muistomerkki.
       {
-        nimi: 'Muuri 1961', tyyppi: 'henkilo', lat: 52.5375, lon: 13.3933,
+        nimi: 'Berliini 1961', tyyppi: 'henkilo', lat: 52.5375, lon: 13.3933,
         nosto: 'hetki-berliinin-muuri-1961',
       },
       /*
@@ -6833,7 +6904,7 @@ export const KAUPUNKIKARTAT = {
       // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
       // nimiö vasemmalle.
       {
-        nimi: 'Sikstus 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
+        nimi: 'Michelangelo 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6871,6 +6942,8 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // KADONNUT IHME (KK 16.11.2026 erä 2): paikka KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
+      { nimi: 'Meta Sudans', lat: 41.8900812, lon: 12.4906909 },
     ],
   },
   krakova: {
@@ -7109,7 +7182,7 @@ export const KAUPUNKIKARTAT = {
       + 'jo antiikin ajoista. Keskusmineraalikylpylä avattiin 1913, ja '
       + 'vuodesta 2015 siinä on toiminut Sofian historiamuseo. Pyhän Yrjön '
       + 'rotunda on 300-luvun alusta ja kaupungin vanhin säilynyt rakennus. '
-      + 'Banja Bashin moskeija on 1500-luvulta, ja Serdican areena löytyi '
+      + 'Banja Bašin moskeija on 1500-luvulta, ja Serdican areena löytyi '
       + '2004 hotellin työmaalta.\n\n'
       + 'Aleksanteri Nevskin katedraali vihittiin 1924, ja sen kultakupoli '
       + 'on 45 metriä korkea. Sofian yliopisto perustettiin 1888, ja '
@@ -7128,7 +7201,7 @@ export const KAUPUNKIKARTAT = {
        * Neljältä kohteelta puuttuu wiki, koska fi.wikipedian
        * Sofia-kattavuus on ohut: mineraalikylpylästä, rotundasta,
        * Borisovan puutarhasta eikä kulttuuripalatsista ole artikkelia.
-       * Banja Bashin moskeija, synagoga ja Serdican rauniot jäivät
+       * Banja Bašin moskeija, synagoga ja Serdican rauniot jäivät
        * listalta pois kahdesta syystä: niistäkään ei ole artikkelia, ja
        * ne ovat 3–6 prosenttiyksikön päässä kylpylästä eli numerot
        * menisivät päällekkäin.
@@ -7151,14 +7224,14 @@ export const KAUPUNKIKARTAT = {
        * tarha 42,6581, kun kartan eteläraja on 42,681); täkynosto
        * `nosto-areena` kertoo saman tarinan kuin areena; ja
        * `syvennys-sofia-pollopatsas` eli Sofia-patsas seisoo 77 %:n
-       * peitolla Banja Bashin päällä (tools/tarkista-karttapisteet.mjs),
+       * peitolla Banja Bašin päällä (tools/tarkista-karttapisteet.mjs),
        * joten kahdesta valittiin rakennus. Kaikkien sisältö on lehdessä.
        */
-      // Nimiö vasemmalle: keskitettynä kaksirivinen "Banja Bashin
+      // Nimiö vasemmalle: keskitettynä kaksirivinen "Banja Bašin
       // moskeija" laskeutui Pyhän Yrjön rotundan piirroksen päälle,
       // joka on 33 px oikealla alaviistossa.
       {
-        nimi: 'Banja Bashin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
+        nimi: 'Banja Bašin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
         nosto: 'moskeijat',
       },
       /*
@@ -7409,7 +7482,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
       {
-        nimi: 'Latin-silta 1914', tyyppi: 'henkilo', lat: 43.8579, lon: 18.4289,
+        nimi: 'Sarajevo 1914', tyyppi: 'henkilo', lat: 43.8579, lon: 18.4289,
         nosto: 'hetki-franz-ferdinandin-salamurha-1914',
         teksti: HISTORIAN_HETKET_ID.get('franz-ferdinandin-salamurha-1914').teksti,
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
@@ -7607,7 +7680,7 @@ export const KAUPUNKIKARTAT = {
       // keskellä.
       {
         // Saaren länsiosaan (oli 59.9515/30.312 salmessa; Karttaseppä 11.10.2026).
-        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
+        nimi: 'Pietari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
         nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
       },
       // Pietarin yliopisto, Vasilinsaari.
@@ -7873,7 +7946,7 @@ export const KAUPUNKIKARTAT = {
       // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026): Fram
       // lähti Pipervikasta, nykyisen kaupungintalon edustalta.
       {
-        nimi: 'Fram 1893', tyyppi: 'henkilo', lat: 59.9098, lon: 10.7318,
+        nimi: 'Nansen 1893', tyyppi: 'henkilo', lat: 59.9098, lon: 10.7318,
         nosto: 'hetki-nansen-fram-1893',
       },
     ],
@@ -8037,7 +8110,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
       {
-        nimi: 'Christiansborg 1884', tyyppi: 'henkilo', lat: 55.6763, lon: 12.5806,
+        nimi: 'Kööpenhamina 1884', tyyppi: 'henkilo', lat: 55.6763, lon: 12.5806,
         nosto: 'hetki-christiansborgin-palo-1884',
         teksti: HISTORIAN_HETKET_ID.get('christiansborgin-palo-1884').teksti,
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
@@ -8408,7 +8481,7 @@ export const KAUPUNKIKARTAT = {
       },
       // Vuoden 963 tapahtuma avautuu omana historian hetkenään Bockin vieressä.
       {
-        nimi: 'Bockin kauppa 963', tyyppi: 'henkilo',
+        nimi: 'Luxemburg 963', tyyppi: 'henkilo',
         lat: 49.6118, lon: 6.1358,
         nosto: 'hetki-siegfried-ostaa-bockin-963',
       },
@@ -21871,6 +21944,12 @@ export function kaupunkikartanKohteet(kartta) {
  * syvennys, nosto), ei ole kartalla vaan kaupunkiliuskassa — kaupungin kortti
  * kokoaa kaikki kaupungin nostot, joten kaupunkikatto ei enää rajoita.
  * Ei-paikat ilman nostoa odottavat Sisältökirjuria (museo, tarina-osio).
+ */
+/*
+ * TARINAPAIKKA (omistajan kortti 10.11.2026 klo 10.36: kartan kohteet kolmeen lajiin; KK:n luokittelu 12.24,
+ * suunnitelma 20261110-kartan-kohteet-osa3-luokittelu.md): tarinakohde, jolla on tarkka tapahtumapaikka,
+ * havainnekuva ja KK:n valinta, merkitään `tarinapaikka: true`. Natiivin kaupungin luettelossa ovat vain
+ * Nähtävyydet, Kadonneet ihmeet ja Tarinapaikat; muut tarinakohteet ovat vain lehdessä.
  */
 export function kaupunginTarinakohteet(kartta) {
   return (kartta?.kohteet ?? []).filter((k) => !kohdeKartalla(k) && k.nosto);

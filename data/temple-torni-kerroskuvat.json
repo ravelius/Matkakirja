@@ -1,0 +1,59 @@
+{
+  "kuvaus": "Temple-tornin kerrostarinoiden aikalaiskuvat (vaihe 3, KK 15.11.2026 klo 23.26 ja 23.31). Kuvat tulevat peliin vasta vaiheen 2 kortin kanssa; tämä tiedosto on vain data. Kuvateksti kertoo pelaajalle, että kuva on taiteilijan näkemys, ei silminnäkijäkuva.",
+  "kohde": "temple-torni",
+  "kuvat": [
+    {
+      "tarinat": [3, 4],
+      "taso": "Kuninkaan kerros",
+      "tiedosto": "assets/kadonneet/temple-torni/kuninkaan-kerros-gruend-hyvastit.jpg",
+      "kuvateksti": "kaiverrus, 1790-luvun loppu, tekijä luultavasti J. J. H. Gründ",
+      "tekija": "J. J. H. Gründ (BnF-luettelossa kysymysmerkillä)",
+      "laji": "kaiverrus",
+      "vuosi": "1795–1799 (BnF-arvio)",
+      "lisenssi": "Public domain (PD-France, PD-1923)",
+      "lahde": "Bibliothèque nationale de France (btv1b6948949s), Wikimedia Commons",
+      "lahde_url": "https://commons.wikimedia.org/wiki/File:Les_Adieux_de_Louis_seize_à_sa_famille_dans_la_Tour_du_Temple_-_estampe_-_J.J.H._Gründ_-_btv1b6948949s.jpg",
+      "rajaus": "paperireunat, leima ja luettelonumero rajattu pois; pienennetty 770 x 1000 px",
+      "huom": "Sama kuva molemmille teksteille (kuva pysyy, teksti vaihtuu). Lasiseinää ei näy; vartija ovella sopii tekstin 4 vartijoihin."
+    },
+    {
+      "tarinat": [6],
+      "taso": "Kuningattaren kerros",
+      "tiedosto": "assets/kadonneet/temple-torni/kuningattaren-kerros-hauer-dauphin-1795.jpg",
+      "kuvateksti": "maalaus, 1795, Jean-Jacques Hauer",
+      "tekija": "Jean-Jacques Hauer (1751–1829)",
+      "laji": "maalaus (öljy kankaalle), Musée Carnavalet; teos \"Louis XVII séparé de sa mère, le 3 juillet 1793\"",
+      "vuosi": "1795",
+      "lisenssi": "Public domain (teoksen tekijä kuollut 1829); valokuvaaja Tylwyth Eldar, CC BY-SA 4.0",
+      "valokuvaaja": "Tylwyth Eldar",
+      "valokuvan_lisenssi": "CC BY-SA 4.0",
+      "valokuvan_lisenssi_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "lahde": "Wikimedia Commons",
+      "lahde_url": "https://commons.wikimedia.org/wiki/File:Jean-Jacques_Hauer_-_Louis_XVII_séparé_de_sa_mère.jpg",
+      "rajaus": "kehys rajattu pois; pienennetty 809 x 1000 px; muokattu BY-SA-kuva jaetaan samalla lisenssillä",
+      "huom": "Maalattu 1795, eli pojan kuolinvuonna. Bovin kamppailukuvaa ei käytetä."
+    },
+    {
+      "tarinat": [7],
+      "taso": "Katon alla",
+      "tiedosto": "assets/kadonneet/temple-torni/katon-alla-garneray-1814.jpg",
+      "kuvateksti": "maalaus, 1814, Jean-François Garneray",
+      "tekija": "Jean-François Garneray (1755–1837)",
+      "laji": "maalaus (öljy), Musée Carnavalet P2813; teos \"Louis XVI au Temple\"",
+      "vuosi": "1814",
+      "lisenssi": "CC0 1.0",
+      "lahde": "Musée Carnavalet / Paris Musées, Wikimedia Commons",
+      "lahde_url": "https://commons.wikimedia.org/wiki/File:Garneray_-_Louis_XVI_au_Temple_-_P2813_-_Musée_Carnavalet_(cropped).jpg",
+      "rajaus": "Commonsin rajattu versio (kehys pois); pienennetty 723 x 1000 px",
+      "huom": "Kuvan oikeassa reunassa muurin sakaroiden välissä näkyy vihreä säleluukku, joka tukee tekstin sanaa \"peitetty\" (KK:n havainto). Tekstiä ei muuteta."
+    }
+  ],
+  "ilman_kuvaa": [
+    { "tarinat": [1, 2, 5], "syy": "sopivaa vapaata aikalaiskuvaa ei löytynyt; uusia hakuja ei tehdä (KK 15.11.2026)" }
+  ],
+  "hylatty": [
+    { "kuva": "Bertaux / Duplessi-Bertaux / Dupréel, hyvästit (BnF btv1b69489773)", "syy": "pieni vinjetti, leima, ja lukeva mies (luettelon mukaan Edgeworth) joka ei ollut hyvästeissä" }
+  ],
+  "purkulause": "Torni purettiin Napoleonin aikana, viimeistään vuonna 1811.",
+  "purkulause_perustelu": "Purkaminen alkoi 1808 (parcoursrevolution, fr.wikipedia, en.wikipedia) ja valmistui 1810 (fr.wikipedia) tai 1811 (en.wikipedia, BnF), siksi lauseessa vain yläraja; pelin 1808-tekstit (nahtavyysjutut.js, monumentit-eurooppa.js) pysyvät, koska 1808 on purkamisen alku."
+}

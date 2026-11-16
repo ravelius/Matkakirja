@@ -1,0 +1,91 @@
+### v1-192
+VANHA: Parlamenttitalon kellotorni tunnetaan nimellä [[Big Ben]] viitaten sen suureen kelloon.
+UUSI: Parlamenttitalon kellotornin suurta kelloa kutsutaan nimellä [[Big Ben]].
+SYY: väärä fakta (Big Ben on kello, ei torni)
+
+### v1-193
+VANHA: perinteisten mustien [[mustien taksien]]
+UUSI: perinteisten [[mustien taksien]]
+SYY: kielivirhe (toisto)
+
+### v1-202
+VANHA: ottomaanien ja egyptiläinen laivasto tuhoutui
+UUSI: ottomaanien ja Egyptin yhteinen laivasto tuhoutui
+SYY: kielivirhe
+
+### v1-206
+VANHA: kansalaisilla, eivät naisilla
+UUSI: kansalaisilla, ei naisilla
+SYY: kielivirhe
+
+### v1-206
+VANHA: Pidemmälle kuin toisella vuosisadalla tuo järjestelmä ei sellaisenaan kestänyt.
+UUSI: Makedonian valta lopetti järjestelmän sellaisenaan 300-luvun lopulla eaa.
+SYY: väärä fakta (ajoitus)
+
+### v1-210
+VANHA: Hallinnon savitauluissa on [[lineaari A]] -kirjoitusta
+UUSI: Hallinnon savitauluissa on muun muassa [[lineaari A]] -kirjoitusta
+SYY: epävarma yksityiskohta (Knossoksen taulut pääosin lineaari B)
+
+### v1-220
+VANHA: valmistuivat vasta 1889–1899 uusgoottilaisessa asussa
+UUSI: valmistuivat vasta myöhemmin uusgoottilaisessa asussa
+SYY: epävarma vuosiluku
+
+### v1-221
+VANHA: se avattiin vuonna 1890
+UUSI: se avattiin vuonna 1893
+SYY: väärä fakta
+
+### v1-222
+VANHA: perso-kelpoisen
+UUSI: herkullisen
+SYY: kielivirhe (kömpelö keksitty sana)
+
+### v1-229
+VANHA: Vanhakaupunki on noin 500 metriä pitkä, ja kunnassa
+UUSI: Vanhakaupunki on pieni, ja kunnassa
+SYY: epävarma luku
+
+### v1-239
+VANHA: Rakentaminen kesti kymmeniä vuosia
+UUSI: Rakentaminen kesti lähes kaksikymmentä vuotta
+SYY: väärä luku
+
+### v1-241
+VANHA: Kolikoiden harppu on kapea, koska se piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. Oikea harppu on leveämpi.
+UUSI: Kolikoiden harppu on tyylitelty versio esikuvasta.
+SYY: epävarma väite
+
+### v1-252
+VANHA: Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta
+UUSI: Yhteenotot jäivät pääosin ilman tulitusta, mutta
+SYY: virheellinen väite (varoituslaukauksia ammuttiin)
+
+### v1-262
+VANHA: pellot, tehtaat ja suurin osa sateista
+UUSI: pellot ja suuri osa tehtaista
+SYY: väärä fakta
+
+### v1-262
+VANHA: saappaan kärjessä [[tulivuoret]] ovat yhä hereillä
+UUSI: etelässä ja Sisiliassa [[tulivuoret]] ovat yhä hereillä
+SYY: väärä sijainti
+
+### v1-265
+VANHA: 126 saarelle
+UUSI: yli sadalle saarelle
+SYY: epävarma luku
+
+### v1-265
+VANHA: 472 siltaa
+UUSI: yli 400 siltaa
+SYY: epävarma luku
+
+### v1-266
+VANHA: vuodesta 810 vuoteen 1797
+UUSI: keskiajalta vuoteen 1797
+SYY: epävarma vuosiluku
+
+LOPPU: tarkistettu 90 vastausta, korjauksia 18

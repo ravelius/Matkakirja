@@ -1,0 +1,1401 @@
+### 801
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Mitä Monacon valtamerimuseossa voi nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valtamerimuseo seisoo kalliolla meren yllä, ja sen avasi vuonna 1910 ruhtinas [[Albert I]], joka oli myös merentutkija. Museossa on akvaario, jossa on [[Välimeren]] ja trooppisten merien kaloja, sekä kokoelmia merentutkimuksen välineistä ja eläinlajeista. Ranskalainen merentutkija [[Jacques Cousteau]] johti museota vuosina 1957–1988, ja hän teki sen tunnetuksi maailmalla. Minä katson kaloja mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 802
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Valtamerimuseo] 1890-luvun lopulta 1910 Valtamerimuseo on Monacon merentutkimukseen keskittyvä museo, jonka ruhtinas Albert I vihki 1910. Uusbarokkinen julkisivu kohoaa 85 metrin korkeuteen jyrkän kallion yläpuolelle. Rakentaminen kesti 11 vuotta (1899–1910), ja rakennus on tehty pääosin La Turbien valkoisesta kalkkikivestä. Julkisivun friisissä on 20 tutkimusaluksen nimeä. Isoisän matkavuonna 1873 museota ei vielä ollut, ja sen rakentaminen alkoi vasta 1890-luvun lopulla. Ensimmäisessä kerroksessa on A Sailor's Career -näyttely ja Hirondellen laboratorio. Anafylaksian löytö, josta Charles Richet sai Nobelin 1913, tehtiin Albert I:n tutkimusretkellä Princesse Alice II -jahdilla. Jacques-Yves Cousteau johti…
+- [Monaco — kaupunkilehti / Meri, kallio ja todennäköisyys: Museo kallion reunalla] Valtamerimuseo vihittiin 1910, ja avajaisiin kutsuttiin johtavia merentutkijoita. Siellä syntyi ajatus Välimeren tiedekomissiosta, joka on edelleen olemassa. Uusbarokkinen julkisivu kohoaa jyrkän kalliojyrkänteen yläpuolelle 85 metrin korkeuteen. Rakentaminen kesti 11 vuotta (1899–1910), ja rakennus on tehty pääosin La Turbien valkoisesta kalkkikivestä. Julkisivun friisiin kaiverrettiin 20 oseanografisen tutkimusaluksen nimeä, jotka Albert I valitsi itse. Jacques-Yves Cousteau johti museota 1957–1988, ja akvaariossa on satoja lajeja ja noin 6 000 yksilöä.
+AIEMPI KYSYMYS: Mitä Monacon valtamerimuseossa voi nähdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valtamerimuseo seisoo kalliolla meren yllä, ja sen avasi vuonna 1910 ruhtinas [[Albert I]], joka oli myös merentutkija. Museossa on akvaario, jossa on [[Välimeren]] ja trooppisten merien kaloja, sekä kokoelmia merentutkimuksen välineistä ja eläinlajeista. Ranskalainen merentutkija [[Jacques Cousteau]] johti museota vuosina 1957–1988, ja hän teki sen tunnetuksi maailmalla. Minä katson kaloja mieluummin ylhäältä.
+KYSYMYS: Kerro lisää: Jacques Cousteau
+
+### 803
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+AIEMPI KYSYMYS: Millä kielellä Monacon alkuperäisväestö puhuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monacon alkuperäinen kieli on [[monégasque]], ligurian murteesta kehittynyt kieli, joka on lähellä Genovan ja [[Ligurian]] rannikon puhetta. Ranska on virallinen kieli ja arjen pääkieli, ja monégasque opetetaan kouluissa osana kulttuuriperinnön vaalimista. Monégasque-kansalaiset ovat nykyään vähemmistö kaupunkivaltion asukkaista, sillä suurin osa asukkaista on ulkomaalaisia. Kyyhkyn kieli on onneksi sama joka paikassa.
+KYSYMYS: Kerro lisää: monégasque
+
+### 804
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+AIEMPI KYSYMYS: Millä kielellä Monacon alkuperäisväestö puhuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monacon alkuperäinen kieli on [[monégasque]], ligurian murteesta kehittynyt kieli, joka on lähellä Genovan ja [[Ligurian]] rannikon puhetta. Ranska on virallinen kieli ja arjen pääkieli, ja monégasque opetetaan kouluissa osana kulttuuriperinnön vaalimista. Monégasque-kansalaiset ovat nykyään vähemmistö kaupunkivaltion asukkaista, sillä suurin osa asukkaista on ulkomaalaisia. Kyyhkyn kieli on onneksi sama joka paikassa.
+KYSYMYS: Kerro lisää: Ligurian
+
+### 805
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kohdekartta / Kohdekartta: Artakserkses III:n hauta] n. 358–338 eKr. Terassin takana vuoren kyljessä on kolme kallioon louhittua hautaa. Kaksi on valmiita ja kolmas jäi kesken kilometrin päähän. Kenen haudat ovat, ei lue missään, vaan nimet päätellään: Ktesias kertoo, että kuningas valmistutti hautansa eläessään, ja Naqsh-e Rustamin neljä hautaa on tavallisesti luettu Dareios I:lle, Xerxes I:lle, Artakserkses I:lle ja Dareios II:lle. Jäljelle jäävät Artakserkses II ja Artakserkses III, ja heille nämä kaksi valmista hautaa annetaan. Artakserkses III rakensi Persepolikseen myöhään: hän pystytti oman palatsinsa, louhi hautansa isänsä haudan viereen ja aloitti pitkiä hankkeita, jotka jäivät kesken — keskeneräisen portin ja kolmenkymmenenkahden py…
+AIEMPI KYSYMYS: Miksi Monacon asukkaat eivät maksa tuloveroa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Monacon ruhtinaskunta lopetti tuloveron perimisen vuonna 1869, kun [[Charles III]] hallitsi ja kasinon tuotot riittivät hoitamaan valtion menot. Nykyisin tuloveroa ei yleensä peritä Monacossa asuvilta yksityishenkilöiltä, mutta ranskalaiset kansalaiset ovat poikkeus [[Ranskan]] kanssa tehdyn sopimuksen vuoksi. Valtio saa tulonsa muun muassa arvonlisäverosta ja yritysveroista, ja kasinon osuus on nykyään pienempi kuin ennen. [[Monte Carlon kasino]] on silti yhä kaupungin tunnetuin rakennus. Minä maksan verot mieluummin pullana.
+KYSYMYS: Kerro lisää: Charles III
+
+### 806
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+AIEMPI KYSYMYS: Miksi Monacon asukkaat eivät maksa tuloveroa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Monacon ruhtinaskunta lopetti tuloveron perimisen vuonna 1869, kun [[Charles III]] hallitsi ja kasinon tuotot riittivät hoitamaan valtion menot. Nykyisin tuloveroa ei yleensä peritä Monacossa asuvilta yksityishenkilöiltä, mutta ranskalaiset kansalaiset ovat poikkeus [[Ranskan]] kanssa tehdyn sopimuksen vuoksi. Valtio saa tulonsa muun muassa arvonlisäverosta ja yritysveroista, ja kasinon osuus on nykyään pienempi kuin ennen. [[Monte Carlon kasino]] on silti yhä kaupungin tunnetuin rakennus. Minä maksan verot mieluummin pullana.
+KYSYMYS: Kerro lisää: Ranskan
+
+### 807
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (maa)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monte Carlon kasino] 1863, laajennettu 1878–81 Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863. Isoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier…
+- [Monaco — kaupunkilehti / Meri, kallio ja todennäköisyys: Kasinon nimi laskennassa] Monte Carlo -menetelmät käyttävät toistuvaa satunnaisotantaa vaikeiden laskentatehtävien ratkaisemiseen. Ajatuksen kehitti matemaatikko Stanisław Ulam, ja nimen valitsi hänen kollegansa Nicholas Metropolis viitaten Monte Carlon kasinoon, jossa Ulamin setä pelasi. Menetelmää kehitettiin 1940-luvun lopulla Los Alamosin laboratoriossa, kun neutronien kulkua ei saatu ratkaistua tavallisella laskennalla. Ensimmäiset täysin automaattiset Monte Carlo -laskut ajettiin ENIAC-tietokoneella keväällä 1948. Nykyään menetelmää käytetään laajasti fysiikassa, kemiassa, biologiassa ja tilastotieteessä.
+AIEMPI KYSYMYS: Miksi Monacon asukkaat eivät maksa tuloveroa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Monacon ruhtinaskunta lopetti tuloveron perimisen vuonna 1869, kun [[Charles III]] hallitsi ja kasinon tuotot riittivät hoitamaan valtion menot. Nykyisin tuloveroa ei yleensä peritä Monacossa asuvilta yksityishenkilöiltä, mutta ranskalaiset kansalaiset ovat poikkeus [[Ranskan]] kanssa tehdyn sopimuksen vuoksi. Valtio saa tulonsa muun muassa arvonlisäverosta ja yritysveroista, ja kasinon osuus on nykyään pienempi kuin ennen. [[Monte Carlon kasino]] on silti yhä kaupungin tunnetuin rakennus. Minä maksan verot mieluummin pullana.
+KYSYMYS: Kerro lisää: Monte Carlon kasino
+
+### 808
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Salle Garnier] 1879 Salle Garnier on Monte Carlon oopperan sali kasinon yhteydessä. Sali rakennettiin kasinon yhteyteen, koska Monacossa oli 1870-luvulla vähän kulttuuritarjontaa. Pariisin oopperan arkkitehti Charles Garnier suunnitteli sen, ja se valmistui 8,5 kuukaudessa. Paikkoja on 524, kun Pariisin Palais Garnierissa niitä on noin 2 000. Isoisän matkavuonna 1873 salia ei vielä ollut. Avajaiset pidettiin 25. tammikuuta 1879, kun Sarah Bernhardt esiintyi nymfinä, ja ensimmäinen ooppera oli Robert Planquetten Le Chevalier Gaston 8. helmikuuta 1879. Raoul Gunsbourg johti oopperaa vuodesta 1892 kuuden vuosikymmenen ajan. Hector Berliozin La damnation de Faust ensiesitettiin salissa 1893, ja 1909 esitettii…
+AIEMPI KYSYMYS: Kuka suunnitteli Monte Carlon kasinon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Monte Carlon kasinon nykyisen rakennuksen suunnitteli ranskalainen arkkitehti [[Charles Garnier]], joka tunnetaan myös [[Pariisin oopperatalosta]]. Kasino avattiin vuonna 1863, mutta Garnierin laajennus valmistui vuonna 1878, joten ennen sitä rakennus oli vielä pienempi. Kasinon yhteydessä toimii myös [[Monte Carlon ooppera]], jonka sali on samaa kauniin koristeellista tyyliä. Minä pidän enemmän kaiteesta kuin pelipöydästä.
+KYSYMYS: Kerro lisää: Charles Garnier
+
+### 809
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Salle Garnier] 1879 Salle Garnier on Monte Carlon oopperan sali kasinon yhteydessä. Sali rakennettiin kasinon yhteyteen, koska Monacossa oli 1870-luvulla vähän kulttuuritarjontaa. Pariisin oopperan arkkitehti Charles Garnier suunnitteli sen, ja se valmistui 8,5 kuukaudessa. Paikkoja on 524, kun Pariisin Palais Garnierissa niitä on noin 2 000. Isoisän matkavuonna 1873 salia ei vielä ollut. Avajaiset pidettiin 25. tammikuuta 1879, kun Sarah Bernhardt esiintyi nymfinä, ja ensimmäinen ooppera oli Robert Planquetten Le Chevalier Gaston 8. helmikuuta 1879. Raoul Gunsbourg johti oopperaa vuodesta 1892 kuuden vuosikymmenen ajan. Hector Berliozin La damnation de Faust ensiesitettiin salissa 1893, ja 1909 esitettii…
+AIEMPI KYSYMYS: Kuka suunnitteli Monte Carlon kasinon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Monte Carlon kasinon nykyisen rakennuksen suunnitteli ranskalainen arkkitehti [[Charles Garnier]], joka tunnetaan myös [[Pariisin oopperatalosta]]. Kasino avattiin vuonna 1863, mutta Garnierin laajennus valmistui vuonna 1878, joten ennen sitä rakennus oli vielä pienempi. Kasinon yhteydessä toimii myös [[Monte Carlon ooppera]], jonka sali on samaa kauniin koristeellista tyyliä. Minä pidän enemmän kaiteesta kuin pelipöydästä.
+KYSYMYS: Kerro lisää: Pariisin oopperatalosta
+
+### 810
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monte Carlon kasino] 1863, laajennettu 1878–81 Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863. Isoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier…
+- [Monaco — kaupunkilehti / Meri, kallio ja todennäköisyys: Kasinon nimi laskennassa] Monte Carlo -menetelmät käyttävät toistuvaa satunnaisotantaa vaikeiden laskentatehtävien ratkaisemiseen. Ajatuksen kehitti matemaatikko Stanisław Ulam, ja nimen valitsi hänen kollegansa Nicholas Metropolis viitaten Monte Carlon kasinoon, jossa Ulamin setä pelasi. Menetelmää kehitettiin 1940-luvun lopulla Los Alamosin laboratoriossa, kun neutronien kulkua ei saatu ratkaistua tavallisella laskennalla. Ensimmäiset täysin automaattiset Monte Carlo -laskut ajettiin ENIAC-tietokoneella keväällä 1948. Nykyään menetelmää käytetään laajasti fysiikassa, kemiassa, biologiassa ja tilastotieteessä.
+AIEMPI KYSYMYS: Kuka suunnitteli Monte Carlon kasinon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Monte Carlon kasinon nykyisen rakennuksen suunnitteli ranskalainen arkkitehti [[Charles Garnier]], joka tunnetaan myös [[Pariisin oopperatalosta]]. Kasino avattiin vuonna 1863, mutta Garnierin laajennus valmistui vuonna 1878, joten ennen sitä rakennus oli vielä pienempi. Kasinon yhteydessä toimii myös [[Monte Carlon ooppera]], jonka sali on samaa kauniin koristeellista tyyliä. Minä pidän enemmän kaiteesta kuin pelipöydästä.
+KYSYMYS: Kerro lisää: Monte Carlon ooppera
+
+### 811
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monacon katedraali] 1875–1903, vihitty 1911 Monacon katedraali on Notre-Dame-Immaculée, ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Nykyinen katedraali rakennettiin 1875–1903 ja vihittiin 11. kesäkuuta 1911. Paikalla oli aiemmin Pyhän Nikolauksen kirkko, Monacon ensimmäinen seurakuntakirkko vuodelta 1252. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut: vanha Pyhän Nikolauksen katedraali purettiin vasta 1874, ja uuden rakennustyöt alkoivat 1875. Korkea-alttari ja piispantuoli on tehty valkoisesta Carrara-marmorista, ja retaabeli on noin vuodelta 1500. Katedraalissa ovat monien Grimaldien haudat, muun muassa Rainier III:n ja Gracen. Pyhä Devota on suojeluspyhimys, ja nelimanuaalin…
+AIEMPI KYSYMYS: Mitä Monacon katedraalissa on erityistä?
+AIEMPI VASTAUS (Livia):
+No niin, kerron. Pyhän Nikolauksen katedraali on valkoinen, romaaniseen tyyliin rakennettu kirkko Monacon vanhankaupungin kalliolla, ja nykyinen rakennus valmistui 1800-luvun lopulla. Sinne on haudattu ruhtinas [[Rainier III]] ja hänen puolisonsa, näyttelijä Grace Kelly. Katedraalissa on myös [[Louis Bréan]] 1500-luvun alun alttaritaulu, ja kirkko on ruhtinassuvun seremonioiden paikka. Kirkko seisoo [[Monacon kallion]] kupeessa, lähellä palatsia. Täällä on hiljaista, kuten kyyhkyn mielestä kuuluukin.
+KYSYMYS: Kerro lisää: Rainier III
+
+### 812
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+AIEMPI KYSYMYS: Mitä Monacon katedraalissa on erityistä?
+AIEMPI VASTAUS (Livia):
+No niin, kerron. Pyhän Nikolauksen katedraali on valkoinen, romaaniseen tyyliin rakennettu kirkko Monacon vanhankaupungin kalliolla, ja nykyinen rakennus valmistui 1800-luvun lopulla. Sinne on haudattu ruhtinas [[Rainier III]] ja hänen puolisonsa, näyttelijä Grace Kelly. Katedraalissa on myös [[Louis Bréan]] 1500-luvun alun alttaritaulu, ja kirkko on ruhtinassuvun seremonioiden paikka. Kirkko seisoo [[Monacon kallion]] kupeessa, lähellä palatsia. Täällä on hiljaista, kuten kyyhkyn mielestä kuuluukin.
+KYSYMYS: Kerro lisää: Louis Bréan
+
+### 813
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monacon katedraali] 1875–1903, vihitty 1911 Monacon katedraali on Notre-Dame-Immaculée, ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Nykyinen katedraali rakennettiin 1875–1903 ja vihittiin 11. kesäkuuta 1911. Paikalla oli aiemmin Pyhän Nikolauksen kirkko, Monacon ensimmäinen seurakuntakirkko vuodelta 1252. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut: vanha Pyhän Nikolauksen katedraali purettiin vasta 1874, ja uuden rakennustyöt alkoivat 1875. Korkea-alttari ja piispantuoli on tehty valkoisesta Carrara-marmorista, ja retaabeli on noin vuodelta 1500. Katedraalissa ovat monien Grimaldien haudat, muun muassa Rainier III:n ja Gracen. Pyhä Devota on suojeluspyhimys, ja nelimanuaalin…
+AIEMPI KYSYMYS: Mitä Monacon katedraalissa on erityistä?
+AIEMPI VASTAUS (Livia):
+No niin, kerron. Pyhän Nikolauksen katedraali on valkoinen, romaaniseen tyyliin rakennettu kirkko Monacon vanhankaupungin kalliolla, ja nykyinen rakennus valmistui 1800-luvun lopulla. Sinne on haudattu ruhtinas [[Rainier III]] ja hänen puolisonsa, näyttelijä Grace Kelly. Katedraalissa on myös [[Louis Bréan]] 1500-luvun alun alttaritaulu, ja kirkko on ruhtinassuvun seremonioiden paikka. Kirkko seisoo [[Monacon kallion]] kupeessa, lähellä palatsia. Täällä on hiljaista, kuten kyyhkyn mielestä kuuluukin.
+KYSYMYS: Kerro lisää: Monacon kallion
+
+### 814
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mikä on Monte Carlon ralli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Monte Carlon ralli on vuodesta 1911 ajettu ralli, joka kulkee talvella Ranskan [[Alppien]] teillä ja päättyy Monacoon. Nykyisin se on [[MM-rallin]] osakilpailu, ja vaikeat olosuhteet, kuten lumi ja jää, tekevät siitä erityisen haastavan. Kuljettajat valitsevat renkaansa tarkasti, sillä sama tie voi olla kuiva, märkä ja jäinen. Tosin minä katson tätä mieluummin katolta.
+KYSYMYS: Kerro lisää: Alppien
+
+### 815
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+AIEMPI KYSYMYS: Mikä on Monte Carlon ralli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Monte Carlon ralli on vuodesta 1911 ajettu ralli, joka kulkee talvella Ranskan [[Alppien]] teillä ja päättyy Monacoon. Nykyisin se on [[MM-rallin]] osakilpailu, ja vaikeat olosuhteet, kuten lumi ja jää, tekevät siitä erityisen haastavan. Kuljettajat valitsevat renkaansa tarkasti, sillä sama tie voi olla kuiva, märkä ja jäinen. Tosin minä katson tätä mieluummin katolta.
+KYSYMYS: Kerro lisää: MM-rallin
+
+### 816
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+AIEMPI KYSYMYS: Miksi Monacossa on niin paljon korkeita taloja?
+AIEMPI VASTAUS (Livia):
+Katotaas. Monaco on pinta-alaltaan noin kaksi neliökilometriä, joten rakentaa voi vain ylöspäin ja merelle päin. Valtio on kasvattanut aluettaan täyttämällä merta, ja esimerkiksi [[Fontvieillen]] kaupunginosa on rakennettu merestä saadulle maalle 1970-luvulta alkaen. Asukkaita on lähes 40 000, mikä tekee Monacosta yhden maailman tiheimmin asutuista alueista. Rakentamiseen vaikuttavat myös [[Monte Carlon]] kasinon ympäristön rakennukset, jotka nousevat rinteeseen kerroksittain. Ylhäältä talot näyttävät kuin pesäkolot.
+KYSYMYS: Kerro lisää: Fontvieillen
+
+### 817
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monte Carlon kasino] 1863, laajennettu 1878–81 Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863. Isoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier…
+- [Monaco — kaupunkilehti / Meri, kallio ja todennäköisyys: Kasinon nimi laskennassa] Monte Carlo -menetelmät käyttävät toistuvaa satunnaisotantaa vaikeiden laskentatehtävien ratkaisemiseen. Ajatuksen kehitti matemaatikko Stanisław Ulam, ja nimen valitsi hänen kollegansa Nicholas Metropolis viitaten Monte Carlon kasinoon, jossa Ulamin setä pelasi. Menetelmää kehitettiin 1940-luvun lopulla Los Alamosin laboratoriossa, kun neutronien kulkua ei saatu ratkaistua tavallisella laskennalla. Ensimmäiset täysin automaattiset Monte Carlo -laskut ajettiin ENIAC-tietokoneella keväällä 1948. Nykyään menetelmää käytetään laajasti fysiikassa, kemiassa, biologiassa ja tilastotieteessä.
+AIEMPI KYSYMYS: Miksi Monacossa on niin paljon korkeita taloja?
+AIEMPI VASTAUS (Livia):
+Katotaas. Monaco on pinta-alaltaan noin kaksi neliökilometriä, joten rakentaa voi vain ylöspäin ja merelle päin. Valtio on kasvattanut aluettaan täyttämällä merta, ja esimerkiksi [[Fontvieillen]] kaupunginosa on rakennettu merestä saadulle maalle 1970-luvulta alkaen. Asukkaita on lähes 40 000, mikä tekee Monacosta yhden maailman tiheimmin asutuista alueista. Rakentamiseen vaikuttavat myös [[Monte Carlon]] kasinon ympäristön rakennukset, jotka nousevat rinteeseen kerroksittain. Ylhäältä talot näyttävät kuin pesäkolot.
+KYSYMYS: Kerro lisää: Monte Carlon
+
+### 818
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kohdekartta / Kohdekartta: Monacon katedraali] 1875–1903, vihitty 1911 Monacon katedraali on Notre-Dame-Immaculée, ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Nykyinen katedraali rakennettiin 1875–1903 ja vihittiin 11. kesäkuuta 1911. Paikalla oli aiemmin Pyhän Nikolauksen kirkko, Monacon ensimmäinen seurakuntakirkko vuodelta 1252. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut: vanha Pyhän Nikolauksen katedraali purettiin vasta 1874, ja uuden rakennustyöt alkoivat 1875. Korkea-alttari ja piispantuoli on tehty valkoisesta Carrara-marmorista, ja retaabeli on noin vuodelta 1500. Katedraalissa ovat monien Grimaldien haudat, muun muassa Rainier III:n ja Gracen. Pyhä Devota on suojeluspyhimys, ja nelimanuaalin…
+AIEMPI KYSYMYS: Mitä Monacon kansallispäivänä 19. marraskuuta tapahtuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kansallispäivää kutsutaan ruhtinaan päiväksi, ja sitä vietetään marraskuun 19. päivänä. Päivä alkaa [[Pyhän Nikolauksen katedraalin]] messulla, ja ohjelmaan kuuluvat sotilasparaati, ruhtinasperheen esiintyminen [[ruhtinaspalatsin]] parvekkeella ja ilotulitus illalla. Monacon asukkaat koristelevat katuja ja liputtavat punavalkoisilla lipuilla. Ilotulitus on kyl ainoa asia, jota kyyhky pelkää.
+KYSYMYS: Kerro lisää: Pyhän Nikolauksen katedraalin
+
+### 819
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Monaco
+Maa, jossa pelaaja on: Monaco
+Näkymä: kartta
+Pelaaja katsoo kartalla: Monaco (kaupunki)
+Tietoruudun teksti: Monaco on Välimeren rannalla sijaitseva ruhtinaskunta, jossa kaupunki ja valtio ovat käytännössä sama alue. Kallion päällä seisoo Grimaldien linna, sen alla on satama ja rinne nousee kohti Monte Carlon kasinoa.
+
+Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Kasino oli avattu 1863, ja kun rautatie toi vieraat Monacoon 1867–68, kasinon tuotot alkoivat kantaa koko maata: tuloveroa ei kerätty vuodesta 1869.
+
+Nykyään kaupunkivaltio on tiheimmin rakennettuja paikkoja maailmassa. Kallio, satama ja kasinon kaupunginosa ovat yhä samat kuin isoisän aikaan, mutta niiden väliin on noussut korkeita taloja.
+Isoisän matkakirjamerkintä: Monaco, maaliskuussa 1873. Ruhtinaskunta menetti Menton ja Roquebrunen Ranskalle kaksitoista vuotta sitten, ja jäljelle jäi pieni kaistale rannikkoa. Silti ruhtinas Charles ei ole kerännyt tuloveroa neljään vuoteen, sillä kasino maksaa kaiken. Juna tuo pelaajat suoraan rannalle, ja kasinon ympärille kasvaa uusi kaupunginosa, Monte Carlo. Vanha kallio katselee sitä kuin köyhä sukulainen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monaco — kaupunkilehti / Meri, kallio ja todennäköisyys: Ruhtinas ja tutkimusjahdit] Albert I oli ruhtinas vuodesta 1889 kuolemaansa 1922 asti, ja omisti elämänsä merentutkimukselle. Oseanografian uransa hän aloitti nuorena: ensimmäinen tutkimusjahti Hirondelle oli kuunari vuodelta 1873, ja laajat retket alkoivat 1885. Jahteja oli neljä: Hirondelle, Princesse Alice, Princesse Alice II ja Hirondelle II. Azoreilla hän löysi 1896 Princess Alice Bankin. Princesse Alice II -jahdilla 1901 tehdyt kokeet, joihin Albert I oli kutsunut Charles Richet'n ja Paul Portier'n, johtivat anafylaksian löytämiseen, ja Richet sai siitä lääketieteen Nobel-palkinnon 1913. Hän tuki myös napatutkijoita ja perusti Pariisiin Ihmisen paleontologian instituutin.
+AIEMPI KYSYMYS: Mitä Monacon kansallispäivänä 19. marraskuuta tapahtuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kansallispäivää kutsutaan ruhtinaan päiväksi, ja sitä vietetään marraskuun 19. päivänä. Päivä alkaa [[Pyhän Nikolauksen katedraalin]] messulla, ja ohjelmaan kuuluvat sotilasparaati, ruhtinasperheen esiintyminen [[ruhtinaspalatsin]] parvekkeella ja ilotulitus illalla. Monacon asukkaat koristelevat katuja ja liputtavat punavalkoisilla lipuilla. Ilotulitus on kyl ainoa asia, jota kyyhky pelkää.
+KYSYMYS: Kerro lisää: ruhtinaspalatsin
+
+### 820
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+AIEMPI KYSYMYS: Mikä on Mileștii Mici -viinikellari?
+AIEMPI VASTAUS (Livia):
+Ai tota. Mileștii Mici on Chișinăun lähellä sijaitseva valtava viinikellari, joka on rakennettu vanhoihin [[kalkkikivilouhoksiin]]. Maanalaiset käytävät muodostavat kokonaisen kaupungin, jossa on jopa kadunnimiä, ja lähteiden mukaan käytävillä säilytetään miljoonia pulloja viiniä. Kellaria on esitetty maailman suurimpana viinikokoelmana, mutta en ole varma tästä. Kellari kuuluu [[Moldovan viinintuotannon]] kulttuuriin, ja vierailijat voivat tutustua siihen oppaan johdolla [[Chișinăun]] liepeillä. Viini kyllä, mutta minä pidän katoista ja valosta.
+KYSYMYS: Kerro lisää: kalkkikivilouhoksiin
+
+### 821
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+AIEMPI KYSYMYS: Mikä on Mileștii Mici -viinikellari?
+AIEMPI VASTAUS (Livia):
+Ai tota. Mileștii Mici on Chișinăun lähellä sijaitseva valtava viinikellari, joka on rakennettu vanhoihin [[kalkkikivilouhoksiin]]. Maanalaiset käytävät muodostavat kokonaisen kaupungin, jossa on jopa kadunnimiä, ja lähteiden mukaan käytävillä säilytetään miljoonia pulloja viiniä. Kellaria on esitetty maailman suurimpana viinikokoelmana, mutta en ole varma tästä. Kellari kuuluu [[Moldovan viinintuotannon]] kulttuuriin, ja vierailijat voivat tutustua siihen oppaan johdolla [[Chișinăun]] liepeillä. Viini kyllä, mutta minä pidän katoista ja valosta.
+KYSYMYS: Kerro lisää: Moldovan viinintuotannon
+
+### 822
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+AIEMPI KYSYMYS: Mikä on Mileștii Mici -viinikellari?
+AIEMPI VASTAUS (Livia):
+Ai tota. Mileștii Mici on Chișinăun lähellä sijaitseva valtava viinikellari, joka on rakennettu vanhoihin [[kalkkikivilouhoksiin]]. Maanalaiset käytävät muodostavat kokonaisen kaupungin, jossa on jopa kadunnimiä, ja lähteiden mukaan käytävillä säilytetään miljoonia pulloja viiniä. Kellaria on esitetty maailman suurimpana viinikokoelmana, mutta en ole varma tästä. Kellari kuuluu [[Moldovan viinintuotannon]] kulttuuriin, ja vierailijat voivat tutustua siihen oppaan johdolla [[Chișinăun]] liepeillä. Viini kyllä, mutta minä pidän katoista ja valosta.
+KYSYMYS: Kerro lisää: Chișinăun
+
+### 823
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Maissipuuro, jota leikataan langalla] 1500-luvulta — Mămăligă on keltaisesta maissijauhosta keitetty puuro, jota syödään Moldovassa, Romaniassa, Unkarissa ja Ukrainassa. Ennen kuin maissi levisi Eurooppaan 1500-luvulla, samaa ruokaa tehtiin hirssijauhosta. Perinteisesti vesi, suola ja jauho keitetään valurautaisessa padassa, ja leipää korvaavasta paksusta puurosta viipaleet leikataan ompelulangalla veitsen sijaan. Lautasella seurana on usein tochitură, omassa rasvassaan haudutettu sianliha, sekä paistettu kananmuna ja suolainen lampaanjuusto. Nälkävuosina 1600- ja 1700-luvuilla puuro auttoi torjumaan nälänhätää.
+- [Zimbabwe — maalehti / Ruoka: Sama jauho, kaksi ateriaa] Maissijauhosta keitetään sadza, ndebeleksi isitshwala: jauho ja vesi sekoitetaan, ja kun seos on kiehunut muutaman minuutin, sekaan lisätään lisää jauhoa, kunnes taikina on paksua. Se syödään lounaaksi ja päivälliseksi kastikkeen, papujen, lehtivihannesten tai lihan kanssa, usein myös hapanmaidon eli lacton kera. Samasta jauhosta keitetään aamiaiseksi ohuempi bota, joka maustetaan maapähkinävoilla, maidolla, voilla tai hillolla. Siirtomaa-ajalta on jäänyt teetauko kello kymmenen ja toinen kello neljä.
+AIEMPI KYSYMYS: Mitä on mămăligă ja miten sitä syödään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Mămăligă on [[maissijauhosta]] keitetty paksu puuro, jota syödään Moldovassa ja Romaniassa usein lisäkkeenä. Se tarjoillaan yleensä juuston kanssa, tavallisesti suolaisella [[brynza]]-lampaanjuustolla, sekä [[smetanalla]]. Perinteisesti puuro leikattiin langalla viipaleiksi, ja se korvasi leivän. Pullaa tämä ei ole, mutta annan anteeksi.
+KYSYMYS: Kerro lisää: maissijauhosta
+
+### 824
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+AIEMPI KYSYMYS: Mitä on mămăligă ja miten sitä syödään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Mămăligă on [[maissijauhosta]] keitetty paksu puuro, jota syödään Moldovassa ja Romaniassa usein lisäkkeenä. Se tarjoillaan yleensä juuston kanssa, tavallisesti suolaisella [[brynza]]-lampaanjuustolla, sekä [[smetanalla]]. Perinteisesti puuro leikattiin langalla viipaleiksi, ja se korvasi leivän. Pullaa tämä ei ole, mutta annan anteeksi.
+KYSYMYS: Kerro lisää: brynza
+
+### 825
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+AIEMPI KYSYMYS: Mitä on mămăligă ja miten sitä syödään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Mămăligă on [[maissijauhosta]] keitetty paksu puuro, jota syödään Moldovassa ja Romaniassa usein lisäkkeenä. Se tarjoillaan yleensä juuston kanssa, tavallisesti suolaisella [[brynza]]-lampaanjuustolla, sekä [[smetanalla]]. Perinteisesti puuro leikattiin langalla viipaleiksi, ja se korvasi leivän. Pullaa tämä ei ole, mutta annan anteeksi.
+KYSYMYS: Kerro lisää: smetanalla
+
+### 826
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Mikä on Transnistria Moldovan itäosassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tässä tulee. Transnistria on kapea alue [[Dnestr-joen]] itärannalla, jonka viranomaiset julistautuivat itsenäisiksi vuonna 1990, ja alueella käytiin sotaa Moldovan kanssa vuonna 1992. Alue ei ole saanut kansainvälistä tunnustusta, ja Moldova pitää sitä osana omaa maataan, kun taas alueen johto pitää itseään erillisenä valtiona. Alueella on oma hallinto, oma raha ja siellä on venäläisiä sotilaita, ja sen pääkaupunki on [[Tiraspol]]. Tilanne voi olla muuttunut, joten kannattaa tarkistaa tuoreista lähteistä.
+KYSYMYS: Kerro lisää: Dnestr-joen
+
+### 827
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+AIEMPI KYSYMYS: Mikä on Transnistria Moldovan itäosassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tässä tulee. Transnistria on kapea alue [[Dnestr-joen]] itärannalla, jonka viranomaiset julistautuivat itsenäisiksi vuonna 1990, ja alueella käytiin sotaa Moldovan kanssa vuonna 1992. Alue ei ole saanut kansainvälistä tunnustusta, ja Moldova pitää sitä osana omaa maataan, kun taas alueen johto pitää itseään erillisenä valtiona. Alueella on oma hallinto, oma raha ja siellä on venäläisiä sotilaita, ja sen pääkaupunki on [[Tiraspol]]. Tilanne voi olla muuttunut, joten kannattaa tarkistaa tuoreista lähteistä.
+KYSYMYS: Kerro lisää: Tiraspol
+
+### 828
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Punavalkoinen majakka] Geraldtonin rannikko oli 1800-luvulla merenkulkijoille vaarallinen: matalikkoja ja äkkinäisiä tuulia riitti, ja moni laiva ajoi karille ennen kuin valoa saatiin pystyyn. Point Mooren majakka valmistui vuonna 1878 opastamaan laivat turvallisesti satamaan, ja se on nykyisin Länsi-Australian vanhin yhä pystyssä oleva liittovaltion majakka. Kartiomainen terästorni maalattiin punaisin ja valkoisin vaakaraidoin, jotta se erottuisi selvästi sekä päivänvalossa että hämärässä. Torni on lähes 35 metriä korkea, ja sen valo näkyy avomerelle kymmenien kilometrien päähän vielä tänäkin iltana.
+AIEMPI KYSYMYS: Mikä on Mărțișor-perinne maaliskuun alussa?
+AIEMPI VASTAUS (Livia):
+Ai se. Mărțișor on kevään tulon perinne, jossa maaliskuun ensimmäisenä päivänä lahjoitetaan [[punavalkoinen nauha]] tai sen varassa riippuva pieni koru. Nauhaa pidetään rinnuksessa maaliskuun ajan, ja tapa on tuttu myös Romaniassa ja Bulgariassa, jossa vastaava perinne tunnetaan nimellä [[martenitsa]]. Lahjan uskotaan tuovan terveyttä ja suojaa, ja nauha sidotaan usein hedelmäpuun oksaan, kun kevään ensimmäinen merkki nähdään. Kevään tuloon minä uskon, kun leivänmurut taas lentävät.
+KYSYMYS: Kerro lisää: punavalkoinen nauha
+
+### 829
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+AIEMPI KYSYMYS: Mikä on Mărțișor-perinne maaliskuun alussa?
+AIEMPI VASTAUS (Livia):
+Ai se. Mărțișor on kevään tulon perinne, jossa maaliskuun ensimmäisenä päivänä lahjoitetaan [[punavalkoinen nauha]] tai sen varassa riippuva pieni koru. Nauhaa pidetään rinnuksessa maaliskuun ajan, ja tapa on tuttu myös Romaniassa ja Bulgariassa, jossa vastaava perinne tunnetaan nimellä [[martenitsa]]. Lahjan uskotaan tuovan terveyttä ja suojaa, ja nauha sidotaan usein hedelmäpuun oksaan, kun kevään ensimmäinen merkki nähdään. Kevään tuloon minä uskon, kun leivänmurut taas lentävät.
+KYSYMYS: Kerro lisää: martenitsa
+
+### 830
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chișinău — kaupunkilehti / Chișinău: Kylä lähteen äärellä] Chișinăun nimen alkuperä on epäselvä, mutta yleisin selitys yhdistää sen sanoihin chișla, lähde, ja nouă, uusi. Kylä nousi pienen lähteen ympärille, ja lähteen paikkaa merkitsee kivilohkare Măzărache-kirkon mäen juurella. Ensimmäinen asiakirjamaininta on vuodelta 1436, jolloin Moldavian ruhtinaat Ilie ja Tapani luovuttivat kyliä. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja 1800-luvun alussa asukkaita oli muutama tuhat.
+- [Chișinău — kaupunkilehti / Chișinău: Bessarabian keskus] Venäjän–Turkin sodan 1806–1812 jälkeen Moldavian itäpuoli siirtyi Venäjälle ja sai nimen Bessarabia, ja Chișinău tuli sen keskukseksi vuonna 1812. Kaupungin asema virallistettiin 1818, ja asukasluku kasvoi 1800-luvun alussa muutamasta tuhannesta kymmeniin tuhansiin. Keskuspuisto perustettiin samana vuonna. Katedraali rakennettiin 1830–1836 arkkitehti Avraam Melnikovin johdolla, ja riemukaari valmistui 1840-luvulla.
+- [Bukarest — kaupunkilehti / Bukarest: Dracula syntyi alaviitteestä] Bram Stoker kiersi teatterikiertueilla maailmaa muttei koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli sijoitettu Styriaan ja kreivin nimi oli Count Wampyr. Nimen Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja Moldavian historiasta ja kopioi kirjasta alaviitteen, jonka mukaan Dracula tarkoittaa paholaista. Vlad Seivästäjää ei mainita muistiinpanoissa lainkaan.
+AIEMPI KYSYMYS: Mistä Moldovan nimi tulee?
+AIEMPI VASTAUS (Livia):
+No jopas. Moldovan nimi tulee [[Moldavian ruhtinaskunnasta]], joka puolestaan sai nimensä Moldova-joesta nykyisessä Romaniassa. Legendan mukaan ruhtinas [[Dragoș]] metsästi uroshärkää, ja hänen koiransa Molda hukkui jokeen, jonka mukaan joki nimettiin. Nykyinen Moldova itsenäistyi vuonna 1991, ja sen alue vastaa suurelta osin entistä [[Bessarabiaa]]. Koira joessa, kyyhky taivaalla, jokaisella oma tehtävänsä.
+KYSYMYS: Kerro lisää: Moldavian ruhtinaskunnasta
+
+### 831
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lampaantaljat häätävät talven] 1960 — Helmikuussa Ptujin kaduilla marssivat kurentit, lampaantaljoihin pukeutuneet hahmot, joilla on värikäs naamio. Heidän kädessään on puinen nuija, jonka päässä on siilinnahkoja, ja koko melu on tarkoitettu ajamaan talvi pois. Ensimmäisen nykymuotoisen Kurentovanje-karnevaalin järjestivät 27. helmikuuta 1960 Drago Hasl ja hänen ystävänsä. Aiemmin kurentiksi pääsivät vain naimattomat miehet, mutta nykyään mukana on myös naisia ja lapsia. Karnevaali on Slovenian suosituin, ja vuonna 2017 kurenttien kiertäminen talosta taloon merkittiin Unescon aineettoman kulttuuriperinnön listalle.
+AIEMPI KYSYMYS: Mistä Moldovan nimi tulee?
+AIEMPI VASTAUS (Livia):
+No jopas. Moldovan nimi tulee [[Moldavian ruhtinaskunnasta]], joka puolestaan sai nimensä Moldova-joesta nykyisessä Romaniassa. Legendan mukaan ruhtinas [[Dragoș]] metsästi uroshärkää, ja hänen koiransa Molda hukkui jokeen, jonka mukaan joki nimettiin. Nykyinen Moldova itsenäistyi vuonna 1991, ja sen alue vastaa suurelta osin entistä [[Bessarabiaa]]. Koira joessa, kyyhky taivaalla, jokaisella oma tehtävänsä.
+KYSYMYS: Kerro lisää: Dragoș
+
+### 832
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Moldova (maa)
+Tietoruudun teksti: Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt maasta viljelyseudun.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historian hetki: Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi] 27.3.1918 — ”Kahdeksankymmentäkuusi puolesta.” Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallis…
+AIEMPI KYSYMYS: Mistä Moldovan nimi tulee?
+AIEMPI VASTAUS (Livia):
+No jopas. Moldovan nimi tulee [[Moldavian ruhtinaskunnasta]], joka puolestaan sai nimensä Moldova-joesta nykyisessä Romaniassa. Legendan mukaan ruhtinas [[Dragoș]] metsästi uroshärkää, ja hänen koiransa Molda hukkui jokeen, jonka mukaan joki nimettiin. Nykyinen Moldova itsenäistyi vuonna 1991, ja sen alue vastaa suurelta osin entistä [[Bessarabiaa]]. Koira joessa, kyyhky taivaalla, jokaisella oma tehtävänsä.
+KYSYMYS: Kerro lisää: Bessarabiaa
+
+### 833
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä on Chișinăun riemukaari?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaupungin tunnus. Riemukaari on Chișinăun keskustassa, [[Suuren kansalliskokouksen aukion]] kupeessa, ja se rakennettiin 1800-luvun alkupuolella voitonmerkiksi Venäjän ja Turkin välisen sodan jälkeen. Aivan sen vieressä on [[Kristuksen syntymän katedraali]], joka rakennettiin samoihin aikoihin kellotorneineen. Aukio on edelleen kaupungin merkittävä kokoontumispaikka, ja sen laidalla kasvaa puisto. Kaari on kyl hieno, mutta minä lennän sen ali ja yli.
+KYSYMYS: Kerro lisää: Suuren kansalliskokouksen aukion
+
+### 834
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chișinău — kohdekartta / Kohdekartta: Kristuksen syntymän katedraali] 1830–1836 Kristuksen syntymän katedraali on uusklassinen kirkko Chișinăun keskustassa. Sen rakennuttivat Uuden Venäjän kuvernööri Mihail Voroncov ja metropoliitta Gavril Bănulescu-Bodoni, ja rakennustyö kesti vuodesta 1830 vuoteen 1836. Suunnittelija oli arkkitehti Abram eli Avraam Melnikov, ja sisäänkäyntiportiikissa on kuusi doorilaista pylvästä. Vastaava kirkko on rakennettu Bolhradiin. Isoisän matkavuonna 1873 katedraali oli ollut valmiina yli 35 vuotta, joten se kuului jo kaupungin vakiintuneeseen kuvaan. Toisessa maailmansodassa rakennusta pommitettiin, ja sen kellotorni purettiin Neuvostoaikana 1960-luvulla. Torni rakennettiin uudelleen 1990-luvun lopulla. Neuvostoaikana kirkko toimi…
+AIEMPI KYSYMYS: Mikä on Chișinăun riemukaari?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaupungin tunnus. Riemukaari on Chișinăun keskustassa, [[Suuren kansalliskokouksen aukion]] kupeessa, ja se rakennettiin 1800-luvun alkupuolella voitonmerkiksi Venäjän ja Turkin välisen sodan jälkeen. Aivan sen vieressä on [[Kristuksen syntymän katedraali]], joka rakennettiin samoihin aikoihin kellotorneineen. Aukio on edelleen kaupungin merkittävä kokoontumispaikka, ja sen laidalla kasvaa puisto. Kaari on kyl hieno, mutta minä lennän sen ali ja yli.
+KYSYMYS: Kerro lisää: Kristuksen syntymän katedraali
+
+### 835
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Pushkinin draamateatteri] kaupungin teatterikortteli Valtiollinen akateeminen venäläinen draamateatteri on nimetty Aleksandr Pushkinin mukaan, ja se on Jakutskin neljästä teatterista se, joka näyttelee venäjäksi. Muut kolme ovat Ojunskin Saha-teatteri, Suorun Omolloonin nuorisoteatteri ja Sivtsevin ooppera- ja balettiteatteri. Talo on klassisistinen: hiekankeltainen julkisivu, valkoiset korinttilaispylväät ja päätykolmio, jonka alla lukee teatterin koko nimi kahdella rivillä. Neljä teatteria on paljon 355 000 asukkaan kaupungille, ja niiden lisäksi on vielä sirkus ja museot: Sahan kansallinen taidemuseo, Jaroslavskin historia- ja kulttuurimuseo sekä maailman ainoat khomukselle ja ikiroudalle omistetut museot. Vuonna…
+- [Magadan — kohdekartta / Kohdekartta: Pushkinin kirjasto] alueen tieteellinen kirjasto Magadanin alueen yleinen tieteellinen kirjasto on nimetty Aleksandr Pushkinin mukaan, ja se on kartan eteläisin kohde. Rakennus on toista maailmansotaa myöhempää aikaa: keltatiilinen, kolmikerroksinen ja kaartuva, ja sen matalampaan siipeen on kiinnitetty suurin kirjaimin kirjaston nimi. Sisäänkäynnin yläpuolella on musta metalliin leikattu Pushkinin sivuprofiili. Kirjasto on osa kaupungin laitosten rypästä. Sen naapurissa, alle sadan metrin päässä, on Magadanin alueen kotiseutumuseo Karl Marxin valtakadulla, ja kaupungissa on lisäksi geologinen museo ja yliopisto. Museon kokoelmiin kuuluu luonnonhistoriallista aineistoa, muun muassa mammutinjäänteitä — Kolyman …
+AIEMPI KYSYMYS: Mitä kirjailijoita Chișinăussa on asunut?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Kaupungissa asui 1820-luvun alussa venäläinen runoilija [[Aleksandr Pushkin]], joka oli karkotettu etelään ja aloitti täällä [[Jevgeni Oneginin]] kirjoittamisen. Hänen entisessä asunnossaan toimii museo. Kaupungin keskuspuistossa on myöhemmin syntynyt [[Klassikoiden kuja]], jonka rintakuvat esittelevät romanialaisia ja moldovalaisia kirjailijoita. Kirjailijat kirjoittavat ja kyyhkyt kuljettavat, työnjako on selvä.
+KYSYMYS: Kerro lisää: Aleksandr Pushkin
+
+### 836
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kazakstan — maalehti / Kirjallisuus: Sanojen kirja ja pojan lempinimi] 1845–1904 — Abai Qunanbaiuly sai syntyessään nimen Ibrahim. Madrasan opettaja antoi hänelle lempinimen Abai, varovainen, ja se jäi käyttöön koko loppuelämäksi. Isä lähetti pojan venäläiseen kouluun Semipalatinskiin, missä hän luki Lermontovia ja Puškinia sekä Šahnamea. Ennen häntä kazakkirunous oli lähes yksinomaan suullista. Abai käänsi ensimmäisenä kazakiksi muun muassa Goethea, Byronia, Krylovin faabeleita ja Puškinin Jevgeni Oneginin. Hänen pääteoksensa Qara sözder eli Sanojen kirja kehottaa maanmiehiä opiskelemaan ja hankkimaan lukutaidon.
+AIEMPI KYSYMYS: Mitä kirjailijoita Chișinăussa on asunut?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Kaupungissa asui 1820-luvun alussa venäläinen runoilija [[Aleksandr Pushkin]], joka oli karkotettu etelään ja aloitti täällä [[Jevgeni Oneginin]] kirjoittamisen. Hänen entisessä asunnossaan toimii museo. Kaupungin keskuspuistossa on myöhemmin syntynyt [[Klassikoiden kuja]], jonka rintakuvat esittelevät romanialaisia ja moldovalaisia kirjailijoita. Kirjailijat kirjoittavat ja kyyhkyt kuljettavat, työnjako on selvä.
+KYSYMYS: Kerro lisää: Jevgeni Oneginin
+
+### 837
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chișinău — kaupunkilehti / Kirjailijoiden Chișinău: Klassikoiden puistokuja] Klassikoiden puistokuja avattiin vuonna 1958 Tapani Suuren keskuspuistossa. Kujan varrella on pronssisia rintakuvia punaisilla kiillotetuilla graniittijalustoilla, ja sisäänkäyntiä vartioivat marmoriset leijonat, joiden tekijä ei ole tiedossa. Rintakuvien joukossa ovat muun muassa Mihai Eminescu, Ion Creangă, Vasile Alecsandri, Mircea Eliade, Dimitrie Cantemir, Lucian Blaga, Alexei Mateevici ja Constantin Negruzzi. Puisto on Moldovan vanhin, noin seitsemän hehtaaria, ja siellä kasvaa kymmeniä puulajeja.
+AIEMPI KYSYMYS: Mitä kirjailijoita Chișinăussa on asunut?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Kaupungissa asui 1820-luvun alussa venäläinen runoilija [[Aleksandr Pushkin]], joka oli karkotettu etelään ja aloitti täällä [[Jevgeni Oneginin]] kirjoittamisen. Hänen entisessä asunnossaan toimii museo. Kaupungin keskuspuistossa on myöhemmin syntynyt [[Klassikoiden kuja]], jonka rintakuvat esittelevät romanialaisia ja moldovalaisia kirjailijoita. Kirjailijat kirjoittavat ja kyyhkyt kuljettavat, työnjako on selvä.
+KYSYMYS: Kerro lisää: Klassikoiden kuja
+
+### 838
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+AIEMPI KYSYMYS: Miten maanjäristykset ovat muovanneet Chișinăuta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Chișinău sijaitsee seismisellä alueella, jonka kaukaiset [[Vrancean]] seudun järistykset ovat ravistelleet kaupunkia useasti [[Karpaattien]] kaaren suunnasta. 1900-luvun järistykset ja sodan tuhot muuttivat keskustaa, ja uudet rakennukset on täytynyt tehdä vahvemmilla rakenteilla. Moni 1800-luvun rakennus on kuitenkin säilynyt. Kaupunki on kestänyt, ja se on hyvä asia.
+KYSYMYS: Kerro lisää: Vrancean
+
+### 839
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Miten maanjäristykset ovat muovanneet Chișinăuta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Chișinău sijaitsee seismisellä alueella, jonka kaukaiset [[Vrancean]] seudun järistykset ovat ravistelleet kaupunkia useasti [[Karpaattien]] kaaren suunnasta. 1900-luvun järistykset ja sodan tuhot muuttivat keskustaa, ja uudet rakennukset on täytynyt tehdä vahvemmilla rakenteilla. Moni 1800-luvun rakennus on kuitenkin säilynyt. Kaupunki on kestänyt, ja se on hyvä asia.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 840
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+AIEMPI KYSYMYS: Mitä on plăcintă, moldovalainen piirakka?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Plăcintă on ohuesta taikinasta paistettu täytetty piirakka, jota on Moldovassa ja Romaniassa monenlaista. Täytteenä on esimerkiksi [[brynza-juustoa]], perunaa, kaalia tai kurpitsaa, ja makeita versioita tehdään omenasta tai kirsikasta. Chișinăun toreilla, kuten [[Piața Centrală]] -torilla, ja kioskeissa niitä myydään kuumina. Tämä on lähin pullavastine mitä Moldovasta tiedän.
+KYSYMYS: Kerro lisää: brynza-juustoa
+
+### 841
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iquitos — kohdekartta / Kohdekartta: Mercado Central] Sargento Loresin ja Mooren kulmassa seisoo esivalmisteinen rautahalli, joka ei ole aina ollut täällä. Se on osa samaa Euroopasta laivattua rautataloa kuin Plaza de Armasin Casa de Fierro: talo oli liian iso yhteen paikkaan ja jaettiin kahtia. Toinen puolikas kulki pitkän kierroksen. Se asennettiin ensin Malecón Tarapacán varteen silloisen Hotel Palacen viereen, purettiin myöhemmin ja siirrettiin nykyiselle paikalleen. Vuonna 1950 rakennus uudistettiin toriksi. Nyt hallissa on 164 kiinteää myyntipaikkaa, kaikki jatkuvassa käytössä, sekä vesi, viemäri ja sähkö; hallintoa hoitaa Maynasin provinssin kunta. Kaupungin kuulu Belénin tori on aivan toinen asia — se on ulkona ja moninkertaisesti suur…
+- [null — kohdekartta / Kohdekartta: Mercado Central] 1800-luvun jälkipuolisko Mercado Central on Santiagon keskustan kauppahalli. Sen valurautainen katto ja tukirakenne valmistettiin Glasgow’ssa Skotlannissa. Suunnitteluun osallistuivat Edward Woods ja Charles Henry Driver, ja metalliosat teki Laidlaw’n yritys. Santiagossa rakennustyötä johti Fermín Vivaceta. Kauppahalli korvasi aiemman Plaza del Abaston, joka oli tuhoutunut tulipalossa. Sen rakenne yhdistää keskiosan metallikaton ja sitä ympäröivän muuratun rakennuksen. Katon keskellä on pyramidimainen osa, jonka yläpuolella kohoaa kupolitorni; pienemmät kattotasot jatkavat kokonaisuutta sen ympärillä. Kauppahallin ympäristöön kuuluu myös ravintoloita.
+AIEMPI KYSYMYS: Mitä on plăcintă, moldovalainen piirakka?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Plăcintă on ohuesta taikinasta paistettu täytetty piirakka, jota on Moldovassa ja Romaniassa monenlaista. Täytteenä on esimerkiksi [[brynza-juustoa]], perunaa, kaalia tai kurpitsaa, ja makeita versioita tehdään omenasta tai kirsikasta. Chișinăun toreilla, kuten [[Piața Centrală]] -torilla, ja kioskeissa niitä myydään kuumina. Tämä on lähin pullavastine mitä Moldovasta tiedän.
+KYSYMYS: Kerro lisää: Piața Centrală
+
+### 842
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+AIEMPI KYSYMYS: Millä Chișinăussa liikutaan, mitä ovat trolleybussit?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Trolleybussit eli johdinautot ovat Chișinăun julkisen liikenteen tärkeä osa: ne kulkevat sähköllä katujen yläpuolella olevien johtojen avulla. Kaupungissa liikennöi myös minibusseja, joita kutsutaan [[maršrutkoiksi]], ja ne ovat suosittuja nopeudestaan. Liikenne kulkee myös [[Chișinăun rautatieasemalle]], josta pääsee junalla muualle maahan. Minä pysyn mieluummin ilmassa kuin johdoissa.
+KYSYMYS: Kerro lisää: maršrutkoiksi
+
+### 843
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Chișinău
+Maa, jossa pelaaja on: Moldova
+Näkymä: kartta
+Pelaaja katsoo kartalla: Chișinău (kaupunki)
+Tietoruudun teksti: Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.
+
+Vuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen keskus. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka keskuspuisto oli perustettu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.
+
+Nykyään Chișinăun kunnassa asuu 720 128 ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun p…
+Isoisän matkakirjamerkintä: Chișinău, toukokuussa 1873. Venäläiset sanovat tätä Kišinjoviksi, sillä kaupunki on tsaarin kaupunki: pylväikköinen katedraali seisoo keskellä, ja riemukaari muistuttaa voitosta Turkin sodassa. Rautatie tuli tänne pari vuotta sitten. Ciuflea-kirkon rakennutti kauppiasveljesten perintö, ja veljekset tulivat Makedoniasta asti. Tällä kaupungilla on monta kotimaata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje: Üsküb ja rautatie 1873] Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, ja samana vuonna valmistui Skopje–Salonika-rautatie. Asema rakennettiin Vardarin eteläpuolelle, ja rata toi lähteiden mukaan lisää matkustajia. 1800-luvun alkupuolella Bitola ja Štip olivat Skopjea suurempia, mutta vuosisadan puolivälin jälkeen kaupunki alkoi toipua. 1800-luvun lopulla Skopjesta tuli Kosovon vilayetin pääkaupunki. Vuosisadan vaihteessa Skopjen kaupungissa oli noin 30 000 asukasta. 1900-luvun alussa talouden perustana olivat värjäys, kankaankudonta, nahkurintyö, rautatyö sekä viini- ja jauhotuotanto.
+AIEMPI KYSYMYS: Millä Chișinăussa liikutaan, mitä ovat trolleybussit?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Trolleybussit eli johdinautot ovat Chișinăun julkisen liikenteen tärkeä osa: ne kulkevat sähköllä katujen yläpuolella olevien johtojen avulla. Kaupungissa liikennöi myös minibusseja, joita kutsutaan [[maršrutkoiksi]], ja ne ovat suosittuja nopeudestaan. Liikenne kulkee myös [[Chișinăun rautatieasemalle]], josta pääsee junalla muualle maahan. Minä pysyn mieluummin ilmassa kuin johdoissa.
+KYSYMYS: Kerro lisää: Chișinăun rautatieasemalle
+
+### 844
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Miksi Ohridin järvi on niin erityinen?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis paikka. Ohridinjärvi on Balkanin syvin järvi, 288 metriä, ja tutkijoiden mukaan se on yksi Euroopan vanhimmista järvistä. Siellä elää runsaasti vain tältä alueelta tavattavia lajeja, ja se kuuluu yhdessä [[Ohridin kaupungin]] kanssa [[Unescon maailmanperintöluetteloon]]. Rannalla sijaitsee myös [[Pyhän Naumin luostari]]. Syvä ja vanha, melkein kuin kyyhkyn suku.
+KYSYMYS: Kerro lisää: Ohridin kaupungin
+
+### 845
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi Ohridin järvi on niin erityinen?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis paikka. Ohridinjärvi on Balkanin syvin järvi, 288 metriä, ja tutkijoiden mukaan se on yksi Euroopan vanhimmista järvistä. Siellä elää runsaasti vain tältä alueelta tavattavia lajeja, ja se kuuluu yhdessä [[Ohridin kaupungin]] kanssa [[Unescon maailmanperintöluetteloon]]. Rannalla sijaitsee myös [[Pyhän Naumin luostari]]. Syvä ja vanha, melkein kuin kyyhkyn suku.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+
+### 846
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+AIEMPI KYSYMYS: Miksi Ohridin järvi on niin erityinen?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kaunis paikka. Ohridinjärvi on Balkanin syvin järvi, 288 metriä, ja tutkijoiden mukaan se on yksi Euroopan vanhimmista järvistä. Siellä elää runsaasti vain tältä alueelta tavattavia lajeja, ja se kuuluu yhdessä [[Ohridin kaupungin]] kanssa [[Unescon maailmanperintöluetteloon]]. Rannalla sijaitsee myös [[Pyhän Naumin luostari]]. Syvä ja vanha, melkein kuin kyyhkyn suku.
+KYSYMYS: Kerro lisää: Pyhän Naumin luostari
+
+### 847
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje: Vardar ja Kivisilta] Vardar halkoo Skopjen, ja sen keskivirtaama kaupungin kohdalla on noin 50 kuutiometriä sekunnissa. Joki aiheutti usein tulvia, muun muassa 1962, mutta Treska-joelle rakennettu Kozjak-pato (valmistui 2004) on lähteen mukaan vähentänyt tulvariskiä. Joen yli kulkee Kivisilta, 214 metriä pitkä ja 6 metriä leveä, ja sen 12 puolipyöreää kaarta lepäävät roomalaisten perustusten päällä. Silta rakennettiin Mehmed II:n suojeluksessa 1451–1469. Vuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Silta yhdistää Makedonia-aukion ja Vanhan basaarin ja on kaupungin vaakunan pääaihe.
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+AIEMPI KYSYMYS: Mikä on Skopjen kivisilta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kivisilta ylittää [[Vardar-joen]] Skopjen keskustassa ja yhdistää nykyisen keskustan vanhaan kaupunginosaan, jossa sijaitsee [[vanha basaari]]. Silta on ottomaanien ajalta, ja lähteiden mukaan sen alkuperä ulottuu 1400-luvulle, mutta en ole varma tarkasta iästä. Se on kaupungin tunnetuimpia kohteita. Siltoja minä arvostan, kun en itse tarvitse niitä.
+KYSYMYS: Kerro lisää: Vardar-joen
+
+### 848
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kohdekartta / Kohdekartta: Vanha basaari] 1100-luvulta ottomaanikauteen Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä, ja ottomaanikaudella basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa. Bezisten, katettu kauppahalli, rakennettiin 1400-luvulla. Se tuhoutui tulipalossa, on kunnostettu ja näyttää 1800-luvun lopun kunnostuksen jälkeiseltä. Kellotorni on kuusikulmainen, ja järistys vaurioitti sitä 1963, mutta se korjattiin pian. Kapan Han on yksi kolmes…
+- [Skopje — kaupunkilehti / Skopje: Vanha basaari] Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä. 1400-luvulla rakennettiin muun muassa Čifte Hamam ja bezisten. Basaarin huippukausi oli ottomaanikaudella, ja Espanjasta karkotettuja sefardijuutalaisia asettui Üskübiin. Basaari vaurioitui maanjäristyksissä 1555 ja 1963.
+AIEMPI KYSYMYS: Mikä on Skopjen kivisilta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kivisilta ylittää [[Vardar-joen]] Skopjen keskustassa ja yhdistää nykyisen keskustan vanhaan kaupunginosaan, jossa sijaitsee [[vanha basaari]]. Silta on ottomaanien ajalta, ja lähteiden mukaan sen alkuperä ulottuu 1400-luvulle, mutta en ole varma tarkasta iästä. Se on kaupungin tunnetuimpia kohteita. Siltoja minä arvostan, kun en itse tarvitse niitä.
+KYSYMYS: Kerro lisää: vanha basaari
+
+### 849
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Ajvar, syksyn punainen purkki] syksyisin — Ajvar on paahdetuista paprikoista tehty tahna, joka kuuluu koko Balkanin talvivarastoihin, myös Pohjois-Makedoniassa. Perinteisessä valmistuksessa kokonaisia paprikoita paahdetaan avotulella, jäähdytetään, kuoritaan ja perataan, minkä jälkeen liha jauhetaan tai hienonnetaan. Massaa kypsytetään tuntikausia auringonkukkaöljyssä ja suolassa, ja valmis tahna suljetaan steriileihin lasipurkkeihin. Työ tehdään syksyllä, kun paprikat ovat parhaimmillaan, ja purkit kuuluvat zimnica-nimiseen talviruokavarastoon. Nimi juontuu turkin sanasta havyar, joka tarkoittaa kaviaaria.
+AIEMPI KYSYMYS: Mitä on tavče gravče, Makedonian kansallisruoka?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tavče gravče on papupata, jossa pavut paistetaan uunissa saviastiassa sipulin, paprikan ja mausteiden kanssa. Sitä pidetään yleisesti maan kansallisruokana. Lisäkkeenä on usein salaattia ja [[ajvar]]-kastiketta, paahdetuista paprikoista tehtyä tahnaa, ja juomaksi tarjotaan [[rakijaa]] tai viiniä [[Tikvešin]] laaksosta. Papuja mieluummin kuin muruja, harvoin sanon näin.
+KYSYMYS: Kerro lisää: ajvar
+
+### 850
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+AIEMPI KYSYMYS: Mitä on tavče gravče, Makedonian kansallisruoka?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tavče gravče on papupata, jossa pavut paistetaan uunissa saviastiassa sipulin, paprikan ja mausteiden kanssa. Sitä pidetään yleisesti maan kansallisruokana. Lisäkkeenä on usein salaattia ja [[ajvar]]-kastiketta, paahdetuista paprikoista tehtyä tahnaa, ja juomaksi tarjotaan [[rakijaa]] tai viiniä [[Tikvešin]] laaksosta. Papuja mieluummin kuin muruja, harvoin sanon näin.
+KYSYMYS: Kerro lisää: rakijaa
+
+### 851
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Tikveš, Makedonian viinilaakso] yli 2 500 vuotta — Kavadarcin ja Negotinon ympärillä levittäytyvä Tikvešin tasanko on Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan viiniä valmistetun yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii rypäleille. Paikallisia punaviinilajikkeita ovat vranec ja kratošija, ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää tilojen pihat. Kavadarcin kaupunki on alueen keskus, ja monet viinitilat ottavat vieraita vastaan.
+AIEMPI KYSYMYS: Mitä on tavče gravče, Makedonian kansallisruoka?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tavče gravče on papupata, jossa pavut paistetaan uunissa saviastiassa sipulin, paprikan ja mausteiden kanssa. Sitä pidetään yleisesti maan kansallisruokana. Lisäkkeenä on usein salaattia ja [[ajvar]]-kastiketta, paahdetuista paprikoista tehtyä tahnaa, ja juomaksi tarjotaan [[rakijaa]] tai viiniä [[Tikvešin]] laaksosta. Papuja mieluummin kuin muruja, harvoin sanon näin.
+KYSYMYS: Kerro lisää: Tikvešin
+
+### 852
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje: Vardar ja Kivisilta] Vardar halkoo Skopjen, ja sen keskivirtaama kaupungin kohdalla on noin 50 kuutiometriä sekunnissa. Joki aiheutti usein tulvia, muun muassa 1962, mutta Treska-joelle rakennettu Kozjak-pato (valmistui 2004) on lähteen mukaan vähentänyt tulvariskiä. Joen yli kulkee Kivisilta, 214 metriä pitkä ja 6 metriä leveä, ja sen 12 puolipyöreää kaarta lepäävät roomalaisten perustusten päällä. Silta rakennettiin Mehmed II:n suojeluksessa 1451–1469. Vuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Silta yhdistää Makedonia-aukion ja Vanhan basaarin ja on kaupungin vaakunan pääaihe.
+AIEMPI KYSYMYS: Mitä Matkan kanjonilla Skopjen lähellä voi nähdä?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on hieno paikka. Matkan kanjoni on Skopjen länsipuolella [[Treska-joen]] laaksossa sijaitseva jyrkkä rotko, jossa on tekojärvi, luolia ja keskiaikaisia luostareita. Tunnetuin luostari on [[Pyhän Andreaksen luostari]], ja kanjonissa tunnetaan myös [[Vrelo-luola]]. Siellä voi meloa ja kävellä. Kanjoni on kyl parhaimmillaan ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Treska-joen
+
+### 853
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kohdekartta / Kohdekartta: Pyhän Andreaksen kirkko] 1894 Sulttaani Hassan I lahjoitti 1880 maapalan Tangerin brittiyhteisölle anglikaanista kirkkoa varten. Ensimmäinen kirkko kävi pian ahtaaksi, ja tilalle rakennettiin 1894 uusi rakennus, joka vihittiin 1905 Pyhän Andreaksen kirkoksi. Talo on rakennettu maurilaiseen tyyliin: sisällä yhdistyvät monet vaikutteet, ja kellotorni on muotoiltu minareetiksi. Tornin juurella on hautausmaa, joka kertoo kansainvälisen kaupungin väestä yhtä paljon kuin kirkko itse. Seinillä on muistolaattoja. Yksi niistä on Emily Keenelle (1849–1944), Wazzanin sherifalle, joka toi kolerarokotteen Marokkoon; hänen hautansa on Marshanissa suvun omalla hautapaikalla. Hautausmaalla lepäävät muun muassa toimittaja ja diplom…
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+AIEMPI KYSYMYS: Mitä Matkan kanjonilla Skopjen lähellä voi nähdä?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on hieno paikka. Matkan kanjoni on Skopjen länsipuolella [[Treska-joen]] laaksossa sijaitseva jyrkkä rotko, jossa on tekojärvi, luolia ja keskiaikaisia luostareita. Tunnetuin luostari on [[Pyhän Andreaksen luostari]], ja kanjonissa tunnetaan myös [[Vrelo-luola]]. Siellä voi meloa ja kävellä. Kanjoni on kyl parhaimmillaan ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Pyhän Andreaksen luostari
+
+### 854
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Mitä Matkan kanjonilla Skopjen lähellä voi nähdä?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on hieno paikka. Matkan kanjoni on Skopjen länsipuolella [[Treska-joen]] laaksossa sijaitseva jyrkkä rotko, jossa on tekojärvi, luolia ja keskiaikaisia luostareita. Tunnetuin luostari on [[Pyhän Andreaksen luostari]], ja kanjonissa tunnetaan myös [[Vrelo-luola]]. Siellä voi meloa ja kävellä. Kanjoni on kyl parhaimmillaan ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Vrelo-luola
+
+### 855
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Kirjankantajat] Isoisäsi kuuli tässä kaupungissa neljää kieltä, ja yksi niistä oli sinä kesänä kielletty painokoneesta. Vuonna 1864 keisarikunta määräsi, että liettuaa ei saa painaa latinalaisin kirjaimin — kyrillisin sai, ja siihen jopa kannustettiin. Lähteet aloittavat kiellon vuodesta 1864 tai 1865 sen mukaan, lasketaanko alku hallinnollisesta määräyksestä vai sitä seuranneesta täydestä kiellosta; sitä ei kannata pyöristää, koska kyse oli juuri siitä, ettei kieltoa koskaan säädetty laiksi. Se ei toiminut. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kannettiin takaisin. Kantajia sanottiin knygnešiai, kirjankantajat: he kulkivat öisin metsäpolkuja säkit selässä, j…
+- [Ulan Bator — kohdekartta / Kohdekartta: Rautatieasema] avattu 1949 Asema avattiin vuonna 1949, seitsemän vuotta ennen kuin Trans-Mongolian rata valmistui kokonaisuudessaan. Se on maan suurin asema ja koko maan rautatieliikenteen keskus. Rata halkaisee kaupungin suunnilleen idästä länteen, ja asema on Bayangolin kaupunginosassa keskustasta lounaaseen. Laitureita on kolme ja raiteita kuusi. Aseman kautta kulkee sekä kotimaan että kahden naapurimaan liikenne. Suoria vuoroja on Moskovaan ja Pekingiin, ja lisäksi Irkutskiin, Erenhotiin ja Hohhotiin. Kotimaassa junat vievät pohjoiseen Sükhbaatariin ja Darkhaniin, kaakkoon Sainshandiin ja Zamyn-Üüdiin sekä Erdenetiin ja Bor-Öndöriin. Pisin vuoro on Moskovan-juna, joka jatkaa toiseen suuntaan Pekingiin…
+AIEMPI KYSYMYS: Miten makedonia ja albania elävät rinnakkain maassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Virallinen kieli on makedonia, joka kirjoitetaan [[kyrillisin kirjaimin]], ja albania on toinen virallinen kieli alueilla, joilla albanialaisia asuu paljon. Vuoden 2021 väestölaskennassa makedonialaisia oli 58,4 prosenttia ja albaaneja 24,3 prosenttia, ja albanialaisten asuinalueet ovat etenkin länsi- ja luoteisosassa, esimerkiksi [[Tetovon]] seudulla. Albania on käytössä opetuksessa ja viranomaisissa. Kielten kirjo on kyl kyyhkylle tuttua: kuherrus ymmärretään kaikkialla.
+KYSYMYS: Kerro lisää: kyrillisin kirjaimin
+
+### 856
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Pohjois-Makedonia (maa)
+Tietoruudun teksti: Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki 388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli 1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja 24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen virallinen kieli.
+AIEMPI KYSYMYS: Miten makedonia ja albania elävät rinnakkain maassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Virallinen kieli on makedonia, joka kirjoitetaan [[kyrillisin kirjaimin]], ja albania on toinen virallinen kieli alueilla, joilla albanialaisia asuu paljon. Vuoden 2021 väestölaskennassa makedonialaisia oli 58,4 prosenttia ja albaaneja 24,3 prosenttia, ja albanialaisten asuinalueet ovat etenkin länsi- ja luoteisosassa, esimerkiksi [[Tetovon]] seudulla. Albania on käytössä opetuksessa ja viranomaisissa. Kielten kirjo on kyl kyyhkylle tuttua: kuherrus ymmärretään kaikkialla.
+KYSYMYS: Kerro lisää: Tetovon
+
+### 857
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje: Üsküb ja rautatie 1873] Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, ja samana vuonna valmistui Skopje–Salonika-rautatie. Asema rakennettiin Vardarin eteläpuolelle, ja rata toi lähteiden mukaan lisää matkustajia. 1800-luvun alkupuolella Bitola ja Štip olivat Skopjea suurempia, mutta vuosisadan puolivälin jälkeen kaupunki alkoi toipua. 1800-luvun lopulla Skopjesta tuli Kosovon vilayetin pääkaupunki. Vuosisadan vaihteessa Skopjen kaupungissa oli noin 30 000 asukasta. 1900-luvun alussa talouden perustana olivat värjäys, kankaankudonta, nahkurintyö, rautatyö sekä viini- ja jauhotuotanto.
+AIEMPI KYSYMYS: Mikä Skopjen Kivisilta on ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kivisilta on kivinen kaarisilta Vardar-joen yli, ja se yhdistää keskustan ja vanhan basaarin puolen. Se on ottomaanikaudelta, ja perimätiedon mukaan se on peräisin 1400-luvulta, mutta tarkasta rakennusvuodesta en ole varma. Isoisän matkavuonna 1873 silta oli jo vanha, ja sen yli kulkivat [[Üskübin]] kauppiaat kärryineen. Nykyään silta on kävelykäytävänä, ja sen vieressä kohoavat [[Kalen linnoitus]] ja [[Vanha basaari]]. Eipä tää kivi mihinkään lähde.
+KYSYMYS: Kerro lisää: Üskübin
+
+### 858
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kaupunkilehti / Skopje: Scupi, veteraanien kaupunki] Scupi oli roomalainen siirtokunta, jonka asukkaiksi asettui keisari Domitianuksen aikana, vuosina 81–96, legioonalaisveteraaneja, pääosin Legio VII Claudiasta. Hautakirjoitusten perusteella osa veteraaneista tuli Dalmatiasta. Huippuaikanaan Scupi kattoi noin 40 hehtaaria, ja sitä ympäröi muuri. Kaupungissa oli teatteri, kylpylät ja suuri kristillinen basilika. Kun asutus hylättiin 518 maanjäristyksen jälkeen, Kalen kalliolle rakennettiin linnoitus, jonka uskotaan olevan Justinianus I:n ajalta, ja lähteen mukaan Scupin kiveä siirrettiin linnoitukseen.
+AIEMPI KYSYMYS: Mikä Skopjen Kivisilta on ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kivisilta on kivinen kaarisilta Vardar-joen yli, ja se yhdistää keskustan ja vanhan basaarin puolen. Se on ottomaanikaudelta, ja perimätiedon mukaan se on peräisin 1400-luvulta, mutta tarkasta rakennusvuodesta en ole varma. Isoisän matkavuonna 1873 silta oli jo vanha, ja sen yli kulkivat [[Üskübin]] kauppiaat kärryineen. Nykyään silta on kävelykäytävänä, ja sen vieressä kohoavat [[Kalen linnoitus]] ja [[Vanha basaari]]. Eipä tää kivi mihinkään lähde.
+KYSYMYS: Kerro lisää: Kalen linnoitus
+
+### 859
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kohdekartta / Kohdekartta: Vanha basaari] 1100-luvulta ottomaanikauteen Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä, ja ottomaanikaudella basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa. Bezisten, katettu kauppahalli, rakennettiin 1400-luvulla. Se tuhoutui tulipalossa, on kunnostettu ja näyttää 1800-luvun lopun kunnostuksen jälkeiseltä. Kellotorni on kuusikulmainen, ja järistys vaurioitti sitä 1963, mutta se korjattiin pian. Kapan Han on yksi kolmes…
+- [Skopje — kaupunkilehti / Skopje: Vanha basaari] Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä. 1400-luvulla rakennettiin muun muassa Čifte Hamam ja bezisten. Basaarin huippukausi oli ottomaanikaudella, ja Espanjasta karkotettuja sefardijuutalaisia asettui Üskübiin. Basaari vaurioitui maanjäristyksissä 1555 ja 1963.
+AIEMPI KYSYMYS: Mikä Skopjen Kivisilta on ja kuinka vanha se on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kivisilta on kivinen kaarisilta Vardar-joen yli, ja se yhdistää keskustan ja vanhan basaarin puolen. Se on ottomaanikaudelta, ja perimätiedon mukaan se on peräisin 1400-luvulta, mutta tarkasta rakennusvuodesta en ole varma. Isoisän matkavuonna 1873 silta oli jo vanha, ja sen yli kulkivat [[Üskübin]] kauppiaat kärryineen. Nykyään silta on kävelykäytävänä, ja sen vieressä kohoavat [[Kalen linnoitus]] ja [[Vanha basaari]]. Eipä tää kivi mihinkään lähde.
+KYSYMYS: Kerro lisää: Vanha basaari
+
+### 860
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Secession-katu ja Jugoslavian korkein talo] Vuoden 1895 maanjäristyksen jälkeen osa Ljubljanasta rakennettiin uudelleen Wienin secession-tyyliin. Miklošičeva-kadun alaosa Prešerenin aukion päässä täyttyi pääosin secession-palatseista, esimerkiksi Grand Hotel Union valmistui vuosina 1903–1905. Vladimir Šubicin suunnittelema Nebotičnik-pilvenpiirtäjä avattiin 21. helmikuuta 1933. Sen 13 kerrosta ja 70,35 metriä tekivät siitä Jugoslavian kuningaskunnan korkeimman rakennuksen, ja tyyliltään se yhdistää uusklassismia ja art decoa.
+AIEMPI KYSYMYS: Mitä Skopjessa tapahtui vuoden 1963 maanjäristyksessä?
+AIEMPI VASTAUS (Livia):
+Kääk. Tuo on raskas aihe, mutta kerron sen. Heinäkuussa 1963 voimakas maanjäristys tuhosi suuren osan Skopjen rakennuksista ja surmasi yli tuhat ihmistä; tarkat luvut vaihtelevat lähteittäin. Kaupunki kuului tuolloin [[Jugoslavian]] liittovaltioon, ja jälleenrakennukseen saatiin apua monesta maasta. Siksi suuri osa nykyisestä kaupungista on nuorta, mutta [[Kivisilta]] ja [[Vanha basaari]] säilyivät pääosin. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Jugoslavian
+
+### 861
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kohdekartta / Kohdekartta: Kivisilta] 1451–1469 Kivisilta yhdistää Makedonia-aukion ja Vanhan basaarin Vardarin yli. Se on 214 metriä pitkä ja 6 metriä leveä, ja sillä on 12 puolipyöreää kaarta. Silta rakennettiin roomalaisten perustusten päälle Mehmed II:n suojeluksessa vuosina 1451–1469, ja se on kaupungin vaakunan pääaihe. Vuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Viimeisin laaja kunnostus alkoi 1990-luvulla ja kesti useita vuosia; silta oli sen ajan suljettu liikenteeltä, mikä vaikutti basaarin käsityöläisiin. Mihrabin muotoinen vartiotorni rekonstruoitiin 2000-luvulla. Isoisän matkavuonna 1873 silta oli jo yli 400 vuotta vanha: se oli valmistunut viimeistään 1469, joten kaupunkilaiset…
+- [Skopje — kaupunkilehti / Skopje: Vardar ja Kivisilta] Vardar halkoo Skopjen, ja sen keskivirtaama kaupungin kohdalla on noin 50 kuutiometriä sekunnissa. Joki aiheutti usein tulvia, muun muassa 1962, mutta Treska-joelle rakennettu Kozjak-pato (valmistui 2004) on lähteen mukaan vähentänyt tulvariskiä. Joen yli kulkee Kivisilta, 214 metriä pitkä ja 6 metriä leveä, ja sen 12 puolipyöreää kaarta lepäävät roomalaisten perustusten päällä. Silta rakennettiin Mehmed II:n suojeluksessa 1451–1469. Vuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Silta yhdistää Makedonia-aukion ja Vanhan basaarin ja on kaupungin vaakunan pääaihe.
+AIEMPI KYSYMYS: Mitä Skopjessa tapahtui vuoden 1963 maanjäristyksessä?
+AIEMPI VASTAUS (Livia):
+Kääk. Tuo on raskas aihe, mutta kerron sen. Heinäkuussa 1963 voimakas maanjäristys tuhosi suuren osan Skopjen rakennuksista ja surmasi yli tuhat ihmistä; tarkat luvut vaihtelevat lähteittäin. Kaupunki kuului tuolloin [[Jugoslavian]] liittovaltioon, ja jälleenrakennukseen saatiin apua monesta maasta. Siksi suuri osa nykyisestä kaupungista on nuorta, mutta [[Kivisilta]] ja [[Vanha basaari]] säilyivät pääosin. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Kivisilta
+
+### 862
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kohdekartta / Kohdekartta: Baščaršija] 1462 Baščaršija on Sarajevon vanha kauppatori, joka syntyi vuonna 1462, kun Isa-bey Ishaković perusti alueelle majatalon ja ensimmäiset kaupat. Vuosisatojen varrella torista kasvoi valtava käsityöläisten ja kauppiaiden kylä keskellä kaupunkia — parhaimmillaan siellä oli jopa noin 12 000 pientä puotia ja verstasta. Jokaisella kadulla tehtiin omaa käsityötä: yhdellä lyötiin kuparia, toisella ommeltiin satuloita, kolmannella valmistettiin kenkiä. Baščaršijalla seisovat myös Sarajevon kuuluisa kellotorni, moskeijoita, vanha ortodoksikirkko ja jopa kaksi vanhaa synagogaa — se oli monen uskonnon ja kansan yhteinen kauppapaikka. Baščaršija on kokenut paljon: maanjäristyksen 1640-luvulla, tulipaloj…
+AIEMPI KYSYMYS: Mikä Vanha basaari on ja mitä siellä myydään?
+AIEMPI VASTAUS (Livia):
+Hei, torilta tän minä muistan. Vanha basaari eli [[Čaršija]] on Vardarin pohjoispuolella sijaitseva ottomaanien ajalta periytyvä kauppakortteli, jossa on kapeita katuja, pieniä kojuja, kahviloita ja moskeijoita. Siellä on perinteisesti myyty käsitöitä, koruja, kankaita ja mausteita, ja nykyään tarjolla on myös ruokaa ja matkamuistoja. Alueella on muun muassa [[Mustafa Pašan moskeija]], joka on 1400-luvun lopulta. Eikä kukaan edes yrittänyt ajaa minua pois tiskin viereltä.
+KYSYMYS: Kerro lisää: Čaršija
+
+### 863
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Skopje — kohdekartta / Kohdekartta: Mustafa-pasan moskeija] 1492 Mustafa-pasan moskeija valmistui 1492. Sen rakennutti Çoban Mustafa-pasa, josta tuli myöhemmin Selim I:n visiiri. Moskeija seisoo tasanteella basaarin yläpuolella lähellä Kalea, ja siitä avautuu näköala basaarille. Lähteen mukaan se rakennettiin vanhalle kristilliselle paikalle. Kupolin halkaisija on noin 16 metriä, ja minareetin korkeudeksi lähteet antavat noin 40–50 metriä. Portiikki lepää marmoripilareilla, joita koristavat stalaktiittimaiset yksityiskohdat. Moskeijan piha on täynnä ruusuja. Vieressä on türbe: Mustafa-pasa on haudattu kuusikulmaiseen marmoriseen türbeen, ja hänen tyttärensä Umi lepää koristeellisessa sarkofagissa, jonka kahdella seinällä on persialaisia kirjoituksia…
+AIEMPI KYSYMYS: Mikä Vanha basaari on ja mitä siellä myydään?
+AIEMPI VASTAUS (Livia):
+Hei, torilta tän minä muistan. Vanha basaari eli [[Čaršija]] on Vardarin pohjoispuolella sijaitseva ottomaanien ajalta periytyvä kauppakortteli, jossa on kapeita katuja, pieniä kojuja, kahviloita ja moskeijoita. Siellä on perinteisesti myyty käsitöitä, koruja, kankaita ja mausteita, ja nykyään tarjolla on myös ruokaa ja matkamuistoja. Alueella on muun muassa [[Mustafa Pašan moskeija]], joka on 1400-luvun lopulta. Eikä kukaan edes yrittänyt ajaa minua pois tiskin viereltä.
+KYSYMYS: Kerro lisää: Mustafa Pašan moskeija
+
+### 864
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Ruoka: Kierre, jolla on eri nimi joka täytteelle] nykyaika — Ohuesta filotaikinasta kääritty, kierteiseksi taiteltu piirakka tunnetaan Bosniassa yhteisnimellä pita, mutta jokaisella täytteellä on oma nimensä: lihatäytteinen on burek, juustotäytteinen sirnica, perunatäytteinen krompiruša ja pinaattitäytteinen zeljanica. Sana burek tulee ottomaanien turkin sanasta börek. Piirakka leivotaan usein suurena pyöreänä vuokana ja leikataan viipaleiksi vasta tarjolle pantaessa, ja sen kanssa juodaan perinteisesti kiselo mlijekoa, hapanmaitojuomaa, joka tasapainottaa rasvaisen taikinan.
+AIEMPI KYSYMYS: Mitä skopjelaiset syövät tyypillisesti aamiaiseksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Aamiaiseksi syödään usein [[burek]], lehtitaikinapiirakka, jossa on juustoa tai lihaa, ja sen kanssa juodaan jogurttia tai kahvia. Pohjois-Makedonian tunnetuimpiin ruokiin kuuluvat myös [[tavče gravče]], uunissa kypsytetty papupata, ja [[ajvar]], paprikatahna, jota levitetään leivälle. Kaikki tämä on havaintoa, ei sääntö, sillä perheet syövät eri tavoin. Pullaa en tosin nähnyt, mutta burek kelpaa kyllä kyyhkyllekin.
+KYSYMYS: Kerro lisää: burek
+
+### 865
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Tavče gravče, papuja padassa] kansallisruoka — Tavče gravče tarkoittaa suunnilleen papuja pannulla, ja sitä pidetään Pohjois-Makedonian kansallisruokana. Pääraaka-aineena ovat isot voipavut, jotka liotetaan yön yli kylmässä vedessä. Vesi vaihdetaan kypsennyksen aikana useaan kertaan, ja pavut keitetään kahdesti ennen paistamista. Sipulia kuullotetaan erikseen jauhojen ja punaisen paprikajauheen kanssa, ja seos yhdistetään papuihin. Ruoka paistetaan lasittamattomassa savipadassa 220 asteessa ja tarjotaan kuumana suoraan padasta, usein kofta-lihapullien ja marinoitujen kasvisten, torshin, kanssa.
+AIEMPI KYSYMYS: Mitä skopjelaiset syövät tyypillisesti aamiaiseksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Aamiaiseksi syödään usein [[burek]], lehtitaikinapiirakka, jossa on juustoa tai lihaa, ja sen kanssa juodaan jogurttia tai kahvia. Pohjois-Makedonian tunnetuimpiin ruokiin kuuluvat myös [[tavče gravče]], uunissa kypsytetty papupata, ja [[ajvar]], paprikatahna, jota levitetään leivälle. Kaikki tämä on havaintoa, ei sääntö, sillä perheet syövät eri tavoin. Pullaa en tosin nähnyt, mutta burek kelpaa kyllä kyyhkyllekin.
+KYSYMYS: Kerro lisää: tavče gravče
+
+### 866
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Ajvar, syksyn punainen purkki] syksyisin — Ajvar on paahdetuista paprikoista tehty tahna, joka kuuluu koko Balkanin talvivarastoihin, myös Pohjois-Makedoniassa. Perinteisessä valmistuksessa kokonaisia paprikoita paahdetaan avotulella, jäähdytetään, kuoritaan ja perataan, minkä jälkeen liha jauhetaan tai hienonnetaan. Massaa kypsytetään tuntikausia auringonkukkaöljyssä ja suolassa, ja valmis tahna suljetaan steriileihin lasipurkkeihin. Työ tehdään syksyllä, kun paprikat ovat parhaimmillaan, ja purkit kuuluvat zimnica-nimiseen talviruokavarastoon. Nimi juontuu turkin sanasta havyar, joka tarkoittaa kaviaaria.
+AIEMPI KYSYMYS: Mitä skopjelaiset syövät tyypillisesti aamiaiseksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Aamiaiseksi syödään usein [[burek]], lehtitaikinapiirakka, jossa on juustoa tai lihaa, ja sen kanssa juodaan jogurttia tai kahvia. Pohjois-Makedonian tunnetuimpiin ruokiin kuuluvat myös [[tavče gravče]], uunissa kypsytetty papupata, ja [[ajvar]], paprikatahna, jota levitetään leivälle. Kaikki tämä on havaintoa, ei sääntö, sillä perheet syövät eri tavoin. Pullaa en tosin nähnyt, mutta burek kelpaa kyllä kyyhkyllekin.
+KYSYMYS: Kerro lisää: ajvar
+
+### 867
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Kirjat: Pieni maa sai Nobelin] Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955. Hänen kirjansa kertovat tavallisista islantilaisista: lampaista, sitkeydestä ja köyhyydestä, mutta niin että lukija nauraa ja liikuttuu samaan aikaan. Tunnetuin on Sallittu ihminen eli Sjálfstætt fólk, tarina lampuriperheestä, joka ei suostu ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle sataseitsemänkymmentätuhatta asukasta — pienin maa, josta kirjallisuuden Nobel oli siihen asti tullut.
+AIEMPI KYSYMYS: Miten Skopje liittyy Äiti Teresaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Äiti Teresa syntyi Skopjessa vuonna 1910 albaaniperheeseen, ja hän lähti nuorena nunnaksi ulkomaille. Hän tuli tunnetuksi työstään köyhien ja sairaiden hyväksi Intiassa, ja vuonna 1979 hän sai [[Nobelin rauhanpalkinnon]]. Skopjessa on hänen muistokseen avattu [[Äiti Teresan muistotalo]], joka kertoo hänen elämästään. Ei huono saavutus ihmiselle, joka ei lentänyt kertaakaan omin siivin.
+KYSYMYS: Kerro lisää: Nobelin rauhanpalkinnon
+
+### 868
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Skopje
+Maa, jossa pelaaja on: Pohjois-Makedonia
+Näkymä: kartta
+Pelaaja katsoo kartalla: Skopje (kaupunki)
+Tietoruudun teksti: Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa Vardar-joen varrella Skopjen laaksossa, jonka korkeus on noin 240–250 metriä. Vuoden 2021 väestölaskennassa Skopjen kaupungissa (Grad Skopje, kymmenen kaupunginosakuntaa) asui 526 502 ihmistä, yli neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo noin vuodesta 4000 eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.
+
+Ottomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja Skopje–Salonika-rautatie valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.
+
+Suuri osa nykyisestä kaupungista on kuitenkin…
+Isoisän matkakirjamerkintä: Üsküb, lokakuussa 1873. Sulttaanin kaupunki makaa Vardarin molemmin puolin. Kivisilta, jonka kaaret ovat kantaneet yli neljäsataa vuotta, vie etelärannalta basaariin, ja Kale-linnoitus vartioi molempia. Etelärannalle on tänä vuonna noussut uutta: rautatie Salonikiin asti. Basaarin kauppiaat tuntevat vanhat tiet, mutta junan savu kertoo, että ne ovat muuttumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Santa Teresan basilika] 1881 Basilika on kaksi uusklassista kirkkoa, jotka on liitetty yhteen kupolilla. Kupolin alla on pääalttari, ja rakennuksella on kaksi julkisivua eri suuntiin: läntinen on omistettu pyhälle Annalle ja itäinen pyhälle Teresalle. Osoite on La Palman ja Santa Teresan kulma vanhassa keskustassa. Talo nousi San Felipe Nerin kirkon paikalle. Presidentti Guzmán Blanco määräsi vanhan kirkon purettavaksi ja tilasi 1870 arkkitehti Juan Hurtado Manriquelta samalle tontille monumentaalisen uuden. Työt tehtiin 1877–1881, ja kirkko vihittiin 28. lokakuuta 1881 Santa Teresan kirkkona presidentin vaimon Ana Teresan mukaan. Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja pääsiäisenä väkeä tulee…
+AIEMPI KYSYMYS: Miten Skopje liittyy Äiti Teresaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Äiti Teresa syntyi Skopjessa vuonna 1910 albaaniperheeseen, ja hän lähti nuorena nunnaksi ulkomaille. Hän tuli tunnetuksi työstään köyhien ja sairaiden hyväksi Intiassa, ja vuonna 1979 hän sai [[Nobelin rauhanpalkinnon]]. Skopjessa on hänen muistokseen avattu [[Äiti Teresan muistotalo]], joka kertoo hänen elämästään. Ei huono saavutus ihmiselle, joka ei lentänyt kertaakaan omin siivin.
+KYSYMYS: Kerro lisää: Äiti Teresan muistotalo
+
+### 869
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mitä ovat Maltan muinaiset kivitemppelit?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Maltalla on jäljellä esihistoriallisia megaliittitemppeleitä, jotka ovat yli viisituhatta vuotta vanhoja ja siis vanhempia kuin Egyptin pyramidit. Tunnetuimpia ovat [[Ġgantija]] Gozon saarella sekä [[Ħaġar Qim]] ja [[Mnajdra]] Maltan eteläosassa. Temppelit on rakennettu valtavista kalkkikivilohkareista, ja ne kuuluvat Unescon maailmanperintökohteisiin. Tarkkaa käyttötarkoitusta ei tunneta täysin, mutta ne liittyvät luultavasti uskonnollisiin menoihin. Vanha kivi kestää, toisin kuin kyyhkyn muisti.
+KYSYMYS: Kerro lisää: Ġgantija
+
+### 870
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+AIEMPI KYSYMYS: Mitä ovat Maltan muinaiset kivitemppelit?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Maltalla on jäljellä esihistoriallisia megaliittitemppeleitä, jotka ovat yli viisituhatta vuotta vanhoja ja siis vanhempia kuin Egyptin pyramidit. Tunnetuimpia ovat [[Ġgantija]] Gozon saarella sekä [[Ħaġar Qim]] ja [[Mnajdra]] Maltan eteläosassa. Temppelit on rakennettu valtavista kalkkikivilohkareista, ja ne kuuluvat Unescon maailmanperintökohteisiin. Tarkkaa käyttötarkoitusta ei tunneta täysin, mutta ne liittyvät luultavasti uskonnollisiin menoihin. Vanha kivi kestää, toisin kuin kyyhkyn muisti.
+KYSYMYS: Kerro lisää: Ħaġar Qim
+
+### 871
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+AIEMPI KYSYMYS: Mitä ovat Maltan muinaiset kivitemppelit?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Maltalla on jäljellä esihistoriallisia megaliittitemppeleitä, jotka ovat yli viisituhatta vuotta vanhoja ja siis vanhempia kuin Egyptin pyramidit. Tunnetuimpia ovat [[Ġgantija]] Gozon saarella sekä [[Ħaġar Qim]] ja [[Mnajdra]] Maltan eteläosassa. Temppelit on rakennettu valtavista kalkkikivilohkareista, ja ne kuuluvat Unescon maailmanperintökohteisiin. Tarkkaa käyttötarkoitusta ei tunneta täysin, mutta ne liittyvät luultavasti uskonnollisiin menoihin. Vanha kivi kestää, toisin kuin kyyhkyn muisti.
+KYSYMYS: Kerro lisää: Mnajdra
+
+### 872
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Miksi maltan kieli muistuttaa arabiaa?
+AIEMPI VASTAUS (Livia):
+Joo, tähän on hyvä vastaus. Maltan kieli polveutuu Sisilian arabiasta, jota puhuttiin saarella keskiajalla, ja siksi sen kieliopissa ja perussanastossa on semiittisiä piirteitä. Myöhemmin sanastoon on tullut paljon italiaa ja sisilian kieltä, ja nykyisin kieltä kirjoitetaan latinalaisin aakkosin. Vanhin tunnettu maltankielinen teksti on [[Il-Kantilena]], luultavasti 1470-luvulla kirjoitettu runo, joka löytyi vasta vuonna 1966. Se liitettiin vuonna 2025 [[Unescon Muisti maailmassa -luetteloon]], ja maltan kieli kuuluu [[Sisilian arabian]] sukulaisiin. Kyllä sen kielen tunnistaa, kun kuulee torilla.
+KYSYMYS: Kerro lisää: Il-Kantilena
+
+### 873
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+- [Malta — maalehti / Ruoka: Leipä Unescon listalla] n. 1500-luku — Maltalainen ftira on hapanleipä, joka leivotaan rengasmaiseksi tai litteäksi. Sen väliin tulee sardiineja, tonnikalaa, perunaa, tomaattia, sipulia, kaprista ja oliiveja. Gozolla ftira tarjoillaan lähes pizzan tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan 1500-luvulle. Vuonna 2020 Unescon aineettoman kulttuuriperinnön luetteloon lisättiin maltalaisen litteän hapanleivän, ftiran, valmistuksen taito.
+AIEMPI KYSYMYS: Miksi maltan kieli muistuttaa arabiaa?
+AIEMPI VASTAUS (Livia):
+Joo, tähän on hyvä vastaus. Maltan kieli polveutuu Sisilian arabiasta, jota puhuttiin saarella keskiajalla, ja siksi sen kieliopissa ja perussanastossa on semiittisiä piirteitä. Myöhemmin sanastoon on tullut paljon italiaa ja sisilian kieltä, ja nykyisin kieltä kirjoitetaan latinalaisin aakkosin. Vanhin tunnettu maltankielinen teksti on [[Il-Kantilena]], luultavasti 1470-luvulla kirjoitettu runo, joka löytyi vasta vuonna 1966. Se liitettiin vuonna 2025 [[Unescon Muisti maailmassa -luetteloon]], ja maltan kieli kuuluu [[Sisilian arabian]] sukulaisiin. Kyllä sen kielen tunnistaa, kun kuulee torilla.
+KYSYMYS: Kerro lisää: Unescon Muisti maailmassa -luetteloon
+
+### 874
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Miksi maltan kieli muistuttaa arabiaa?
+AIEMPI VASTAUS (Livia):
+Joo, tähän on hyvä vastaus. Maltan kieli polveutuu Sisilian arabiasta, jota puhuttiin saarella keskiajalla, ja siksi sen kieliopissa ja perussanastossa on semiittisiä piirteitä. Myöhemmin sanastoon on tullut paljon italiaa ja sisilian kieltä, ja nykyisin kieltä kirjoitetaan latinalaisin aakkosin. Vanhin tunnettu maltankielinen teksti on [[Il-Kantilena]], luultavasti 1470-luvulla kirjoitettu runo, joka löytyi vasta vuonna 1966. Se liitettiin vuonna 2025 [[Unescon Muisti maailmassa -luetteloon]], ja maltan kieli kuuluu [[Sisilian arabian]] sukulaisiin. Kyllä sen kielen tunnistaa, kun kuulee torilla.
+KYSYMYS: Kerro lisää: Sisilian arabian
+
+### 875
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+- [PRI — maalehti / Historia: Piiritys joka synnytti jättiläisen] 1634 — Vuonna 1625 hollantilainen amiraali Boudewijn Hendricksz piiritti San Juanin ja poltti suuren osan kaupungista, vaikka El Morron linnoitusta ei saatukaan valtaan. Piiritys paljasti aukon: kaupunki oli suojaton maan puolelta. Espanjan kruunu päätti rakentaa toisen linnakkeen, Castillo San Cristóbalin, jonka työt alkoivat vuonna 1634 ja jatkuivat runsaat sata vuotta, valmistuen 1790. Valmiina se oli suurin espanjalaisten koskaan Uuteen maailmaan rakentama linnoitus. Sen kuivat vallihaudat, tunnelit ja toisiinsa kytketyt bastionit tekivät siitä lähes valloittamattoman, eikä yksikään vihollinen onnistunut koskaan valtaamaan sitä väkisin.
+AIEMPI KYSYMYS: Mikä oli ritarikunnan rooli Maltan historiassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saisi pitkän jutun. Johanniittaritarikunta sai Maltan haltuunsa 1500-luvun alussa, ja se hallitsi saarta aina vuoteen 1798 asti. Vuoden 1565 [[suuri piiritys]] oli ritarikunnan tärkein koettelemus, ja sen jälkeen perustettiin linnoituskaupunki [[Valletta]]. Ritarikunnan valta päättyi, kun [[Napoleon]] valtasi saaren matkallaan Egyptiin, ja sen jälkeen saari siirtyi lopulta brittien haltuun. Muurit ovat yhä pystyssä, vaikka ritarit ovat jo kauan sitten poissa.
+KYSYMYS: Kerro lisää: suuri piiritys
+
+### 876
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+- [Valletta — kaupunkilehti / Valletta] Kalkkikivestä veistetty linnoituskaupunki kahden sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka ritarikunta piirsi suoraksi jo vuonna 1566.
+AIEMPI KYSYMYS: Mikä oli ritarikunnan rooli Maltan historiassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saisi pitkän jutun. Johanniittaritarikunta sai Maltan haltuunsa 1500-luvun alussa, ja se hallitsi saarta aina vuoteen 1798 asti. Vuoden 1565 [[suuri piiritys]] oli ritarikunnan tärkein koettelemus, ja sen jälkeen perustettiin linnoituskaupunki [[Valletta]]. Ritarikunnan valta päättyi, kun [[Napoleon]] valtasi saaren matkallaan Egyptiin, ja sen jälkeen saari siirtyi lopulta brittien haltuun. Muurit ovat yhä pystyssä, vaikka ritarit ovat jo kauan sitten poissa.
+KYSYMYS: Kerro lisää: Valletta
+
+### 877
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mikä oli ritarikunnan rooli Maltan historiassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saisi pitkän jutun. Johanniittaritarikunta sai Maltan haltuunsa 1500-luvun alussa, ja se hallitsi saarta aina vuoteen 1798 asti. Vuoden 1565 [[suuri piiritys]] oli ritarikunnan tärkein koettelemus, ja sen jälkeen perustettiin linnoituskaupunki [[Valletta]]. Ritarikunnan valta päättyi, kun [[Napoleon]] valtasi saaren matkallaan Egyptiin, ja sen jälkeen saari siirtyi lopulta brittien haltuun. Muurit ovat yhä pystyssä, vaikka ritarit ovat jo kauan sitten poissa.
+KYSYMYS: Kerro lisää: Napoleon
+
+### 878
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Millainen Maltan maisema on?
+AIEMPI VASTAUS (Livia):
+No niin, ylhäältä sen näkee parhaiten. Malta on pieni kalkkikivisaari, jossa on vähän metsää ja ei lainkaan jokia, ja kesät ovat kuivia ja kuumia. Länsirannikolla [[Dinglin]] kylä seisoo tasangolla noin 230 metrin korkeudessa, ja viereinen jyrkänne pudottaa maiseman mereen. Maltan korkein kohta [[Ta' Dmejrek]] nousee 253 metriin, ja merellä näkyy pieni asumaton [[Filfla]]-saari. Aika pieni maa, mutta kyllä siinä lentämistä riittää.
+KYSYMYS: Kerro lisää: Dinglin
+
+### 879
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Millainen Maltan maisema on?
+AIEMPI VASTAUS (Livia):
+No niin, ylhäältä sen näkee parhaiten. Malta on pieni kalkkikivisaari, jossa on vähän metsää ja ei lainkaan jokia, ja kesät ovat kuivia ja kuumia. Länsirannikolla [[Dinglin]] kylä seisoo tasangolla noin 230 metrin korkeudessa, ja viereinen jyrkänne pudottaa maiseman mereen. Maltan korkein kohta [[Ta' Dmejrek]] nousee 253 metriin, ja merellä näkyy pieni asumaton [[Filfla]]-saari. Aika pieni maa, mutta kyllä siinä lentämistä riittää.
+KYSYMYS: Kerro lisää: Ta' Dmejrek
+
+### 880
+KONTEKSTI:
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Pelaaja katsoo kartalla: Malta (maa)
+Tietoruudun teksti: Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Millainen Maltan maisema on?
+AIEMPI VASTAUS (Livia):
+No niin, ylhäältä sen näkee parhaiten. Malta on pieni kalkkikivisaari, jossa on vähän metsää ja ei lainkaan jokia, ja kesät ovat kuivia ja kuumia. Länsirannikolla [[Dinglin]] kylä seisoo tasangolla noin 230 metrin korkeudessa, ja viereinen jyrkänne pudottaa maiseman mereen. Maltan korkein kohta [[Ta' Dmejrek]] nousee 253 metriin, ja merellä näkyy pieni asumaton [[Filfla]]-saari. Aika pieni maa, mutta kyllä siinä lentämistä riittää.
+KYSYMYS: Kerro lisää: Filfla

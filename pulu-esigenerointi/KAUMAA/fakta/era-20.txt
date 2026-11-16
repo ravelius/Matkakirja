@@ -1,0 +1,445 @@
+### v2-1157
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Pressburger Beugel
+VASTAUS: Pressburger Beugel on kuunsirpin muotoinen hiivataikinaleivonnainen, jonka nimi viittaa saksankieliseen Pressburg-nimeen eli nykyiseen Bratislavaan. Kaupunki tunnettiin unkariksi nimellä [[Pozsony]], ja leivonnaisella on unkarilainen sukulainen, [[beigli]], jonka nimi periytyy saksan sanasta Beugel. Täytteenä on perinteisesti saksanpähkinä tai unikonsiemen. Slovakiassa leivonnaista kutsutaan nimellä bratislavský rožok.
+
+### v2-1158
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Unkarissa
+VASTAUS: Unkari on Keski-Euroopan sisämaavaltio, jonka pääkaupunki on [[Budapest]]. Maassa asuu noin kymmenen miljoonaa ihmistä, ja se liittyi Euroopan unioniin vuonna 2004. Unkarin kieli kuuluu suomalais-ugrilaisiin kieliin, joten se on kaukaista sukua suomelle, vaikka sanat eivät juuri muistuta toisiaan. Maan itäosassa avautuu laaja tasanko, [[puszta]], ja länsiosassa sijaitsee Keski-Euroopan suurin järvi [[Balaton]]. Ruokakulttuuria leimaa [[paprika]], joka tuli maahan ottomaanien mukana 1500-luvulla.
+
+### v2-1159
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Pienet Karpaatit
+VASTAUS: Pienet Karpaatit on matala vuoristo, joka ulottuu Bratislavan seudulta koilliseen kohti Trnavaa. Vuoret jäävät alle 800 metrin korkeuteen, ja niiden rinteet ovat Slovakian tärkeitä viininviljelyalueita. Viinikaupunkeja ovat esimerkiksi [[Pezinok]] ja [[Modra]], jonka keramiikkaperinne on tunnettu. Vuoristossa sijaitsee myös [[Smolenicen linna]], joka on nykyään Slovakian tiedeakatemian käytössä.
+
+### v2-1160
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Morava
+VASTAUS: Morava, saksaksi March, on Tšekin ja Slovakian halki virtaava joki, joka laskee [[Tonavaan]] Devínin kohdalla Bratislavan luoteispuolella. Alajuoksullaan se muodostaa Slovakian ja [[Itävallan]] välisen rajan. Joen nimeä kantaa Määrin alue nykyisessä Tšekissä, ja 800-luvulla sen laaksoissa kukoisti [[Suur-Määri]], varhainen slaavilainen valtio. Joen tulva-alueet ovat tärkeitä lintujen ja kasvien elinympäristöjä, ja ne on osittain suojeltu.
+
+### v2-1161
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Devínin linna
+VASTAUS: Devínin linna on rauniolinna kalliolla, jonka alla [[Morava]] yhtyy Tonavaan Bratislavan luoteispuolella. Paikalla on ollut linnoitus jo antiikin aikana, ja 800-luvulla se kuului [[Suur-Määrin]] valtakuntaan; linna mainitaan kirjallisesti ensimmäisen kerran vuonna 864. [[Napoleonin]] joukot räjäyttivät linnan vuonna 1809. Raunioista on tullut slovakkien kansallinen symboli, ja kerrotaan, että [[Ľudovít Štúr]] seuraajineen kävi siellä vuonna 1836.
+
+### v2-1162
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Wienin
+VASTAUS: Wien on Itävallan pääkaupunki [[Tonavan]] rannalla, ja Bratislavasta sinne on noin 50–60 kilometriä. Se oli vuosisatojen ajan Habsburgien pääkaupunki, ja isoisän matkavuonna 1873 se oli Itävalta-Unkarin keisarillinen keskus, jossa pidettiin samana vuonna [[maailmannäyttely]]. Kaupungin keskustaa kiertää 1800-luvun jälkipuoliskolla vanhojen vallien paikalle rakennettu [[Ringstrasse]]-bulevardi. Tunnetuimpia kohteita ovat Pyhän Tapanin tuomiokirkko ja barokkinen [[Schönbrunnin linna]].
+
+### v2-1163
+KOHDE: kaupunki:bratislava
+KYSYMYS: Kerro lisää: Twin City Liner
+VASTAUS: Twin City Liner on nopea [[katamaraani]], joka liikennöi Tonavalla Wienin ja Bratislavan välillä. Matka kestää lähteiden mukaan noin puolitoista tuntia, ja alukset lähtevät Wienissä keskustan lähellä sijaitsevalta [[Schwedenplatz]]-aukion laiturilta. Nimi viittaa kaksoiskaupunkeihin, sillä Wien ja Bratislava ovat usein mainittuja Euroopan lähimpiä pääkaupunkeja. Liikennöinti voi vaihdella vuodenajan mukaan, joten aikataulut kannattaa tarkistaa etukäteen.
+
+### v2-1164
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Pyhän Elisabetin tuomiokirkko
+VASTAUS: Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin vuonna 1380; uusi rakennettiin varakkaiden porvarien rahoilla ja keisari [[Sigismundin]] tuella, ja työ valmistui vuonna 1508. Pohjoisportaali on harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia, ja sitä kutsutaan [[Kultaiseksi portiksi]], koska se oli keskiajalla kullattu. Kirkko on omistettu [[Unkarin Elisabetille]], jonka kaupunki valitsi suojeluspyhimykseksi.
+
+### v2-1165
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Immaculata
+VASTAUS: Immaculata on Hlavná-kadun keskellä seisova barokkinen ruttopylväs, joka pystytettiin kiitokseksi Neitsyt Marialle vuosien 1709–1710 ruttoepidemian päättymisestä. Se valmistui vuonna 1723 paikalle, jossa keskiajalla olivat kaupungin hirsipuut. Pylväs on 14 metriä korkea, ja sen huipulla seisoo Neitsyt Maria. Jalustalla ovat pyhä Joosef, [[pyhä Sebastian]] ja pyhä Laslo, ja aidan pilareilla viisi pyhimystä, muun muassa [[Unkarin Elisabet]], kaupungin suojeluspyhimys. Toisessa maailmansodassa pylväs vaurioitui, ja kuvanveistäjä [[Vojtech Löffler]] korjasi sen vuosina 1949–1951 ja uudelleen 1971–1972.
+
+### v2-1166
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Košicen valtionteatterin
+VASTAUS: Košicen valtionteatteri seisoo pääkadun varrella kaupungin keskustassa. Sen edustava uusbarokkirakennus tehtiin [[Adolf Langin]] suunnitelmien mukaan vuosina 1879–1899, joten työhön meni kaksi vuosikymmentä. Sisätilat on koristeltu runsaasti stukkityöllä, ja näyttämö on muodoltaan lyyran mallinen. Katon maalauksissa nähdään kohtauksia [[Shakespearen]] näytelmistä: Othellosta, Romeosta ja Juliasta, Kuningas Learista sekä Kesäyön unesta.
+
+### v2-1167
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Hlavná-katu
+VASTAUS: Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. Isoisän aikaan kadun nimi oli saksaksi [[Haupt Gasse]] ja unkariksi Fő utcza, ja slovakinkielinen nimi Hlavná ulica otettiin käyttöön vasta, kun kaupunki siirtyi Tšekkoslovakialle. Nimi vaihtui myöhemmin politiikan mukana: vuonna 1933 kadusta tuli kenraali [[Štefánikin]] katu, ja vuodesta 1949 se oli 41 vuotta [[Leninin]] katu. Vanha nimi palautettiin 1. heinäkuuta 1990.
+
+### v2-1168
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: guláš
+VASTAUS: Guláš on Slovakiassa paksu, paprikalla maustettu lihapata, jossa on lihaa, sipulia ja usein perunaa, ja sitä syödään leivän tai taikinanyyttien kanssa. Ruoka on tullut Unkarin keittiöstä, jossa gulyás tarkoittaa keittoa, kun taas paksumpi pata on nimeltään [[pörkölt]]. Sana gulyás tarkoittaa karjapaimenta, sillä keitto keitettiin alun perin padassa laitumella. [[Paprikan]] toivat maahan [[ottomaanit]] 1500-luvulla.
+
+### v2-1169
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: lángos
+VASTAUS: Lángos on hiivataikinasta valmistettu rasvassa paistettu leipä, joka on peräisin [[Unkarin]] keittiöstä mutta suosittu myös Slovakiassa. Se on tavallisesti pyöreä ja litteä, ja sen päälle laitetaan yleensä valkosipulia, smetanaa ja juustoa. Yhden selityksen mukaan nimi tulee sanasta láng, joka tarkoittaa liekkiä, koska leipä paistettiin aluksi uunissa. Lángosta myydään markkinoilla ja katukojuissa, ja se on erityisen tuttu [[Balatonin]] rannoilta.
+
+### v2-1170
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Tokajin
+VASTAUS: Tokaj on viinialue, joka ulottuu Unkarin koillisosasta Slovakian puolelle. Tunnetuimmat viinit ovat makeita ja syntyvät rypäleistä, joita jalohome kuivattaa, ja niistä arvostetuin tyyppi on [[aszú]]. Pääasiallinen rypälelajike on [[furmint]]. Unkarin puoleinen Tokajin viinimaisema on [[UNESCOn]] maailmanperintökohde, ja Slovakian puolella alue on pieni: noin 908 hehtaaria seitsemässä kylässä. Alueen kellarit ovat suurimmaksi osaksi peräisin ajalta, jolloin seutu oli turkkilaisten vallan alla.
+
+### v2-1171
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Slovenský kras
+VASTAUS: Slovenský kras eli Slovakian karsti on kalkkikivialue Kaakkois-Slovakiassa Unkarin rajalla. Sen luolissa on tippukiviä, ja alueen luolat on yhdessä Unkarin [[Aggtelekin]] karstialueen kanssa merkitty UNESCOn maailmanperintöluetteloon. Tunnettuja luolia ovat [[Domica]], jonka luolasto jatkuu rajan yli Unkariin, ja [[Ochtinská aragonitová jaskyňa]], jossa on harvinaisia aragoniittikiteitä.
+
+### v2-1172
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Slovenský raj
+VASTAUS: Slovenský raj eli Slovakian paratiisi on kansallispuisto Itä-Slovakiassa, jossa kalkkikiveen on kaivautunut syviä rotkoja. Retkipolut kulkevat puisia tikapuita ja ketjuja pitkin vesiputousten ohi. Tunnetuimpia rotkoja ovat [[Suchá Belá]] ja [[Hornádin]] kanjoni, ja alueella on myös [[Dobšinskán jääluola]]. Järjestäytynyt vuoristomatkailu alkoi seudulla vasta Unkarin Karpaattiseuran perustamisen jälkeen, kun seura syntyi Popradissa vuonna 1873, joten isoisän matkan aikaan rotkot olivat yhä lähes koskemattomia.
+
+### v2-1173
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Hornád
+VASTAUS: Hornád on Itä-Slovakian tärkein joki, joka virtaa Košicen läpi. Lähteiden mukaan se saa alkunsa Matalien Tatrojen alueelta, kulkee Spišin seudun ja [[Slovenský rajin]] kanjonin kautta ja jatkaa Unkarin puolella nimellä Hernád. Lopulta se yhtyy [[Sajó]]-jokeen, joka laskee [[Tisza]]-jokeen. Joen pituus on noin 290 kilometriä.
+
+### v2-1174
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: rauhanmaraton
+VASTAUS: Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin maraton ja yksi maailman vanhimmista. Sen järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä [[Vojtech Bukovský]] [[Pariisin olympialaisten]] innoittamana. Kisan ovat voittaneet muun muassa [[Juan Carlos Zabala]] vuonna 1931, joka voitti seuraavana vuonna olympiamaratonin, sekä Abebe Bikila vuonna 1961. Reitti on tasainen ja kulkee kahtena kierroksena kaupungin keskustassa.
+
+### v2-1175
+KOHDE: kaupunki:kosice
+KYSYMYS: Kerro lisää: Euroopan kulttuuripääkaupunki
+VASTAUS: Euroopan kulttuuripääkaupunki on Euroopan unionin ohjelma, jossa yksi tai useampi kaupunki saa vuoden ajan esitellä kulttuuriaan. Ohjelma alkoi vuonna 1985, kun ensimmäisenä oli [[Ateena]] ministeri [[Melina Mercourin]] aloitteesta. Vuonna 2013 kulttuuripääkaupunkeina olivat Košice ja [[Marseille]], ja Suomessa titteliä ovat kantaneet Helsinki vuonna 2000, [[Turku]] vuonna 2011 ja Oulu vuonna 2026.
+
+### v2-1176
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Idrijassa
+VASTAUS: Idrija on Länsi-Slovenian vuoristokaupunki, joka kasvoi elohopeakaivoksen ympärille. Tarinan mukaan saavinvalmistaja huomasi vuonna 1490 lähteessä kimaltavan nestemäisen metallin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen, ja sen [[Frančiškan kuilu]] -nostotornin huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Paikallisia erikoisuuksia ovat [[Idrijan pitsi]] ja täytetyt taikinataskut eli [[žlikrofit]]. Vuonna 2012 Idrija liitettiin yhdessä Almadénin kanssa UNESCOn maailmanperintölistalle.
+
+### v2-1177
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Habsburgit
+VASTAUS: Habsburgit olivat yksi Euroopan merkittävimmistä hallitsijasuvuista. Suvun nimi tulee Sveitsissä sijainneesta Habsburgin linnasta, ja Itävallan hallinta siirtyi sille vuonna 1282. Sukuun kuuluivat keisari [[Kaarle V]], jonka valtakuntaan kuului Espanja, sekä [[Maria Teresia]] ja isoisän aikaan hallinnut [[Frans Joosef]]. Vuodesta 1867 suku hallitsi Itävalta-Unkaria, ja monarkia hajosi vuonna 1918 viimeisen keisarin Kaarle I:n luovuttua hallitsijan tehtävistä. Slovenian alue, Krain mukaan lukien, oli Habsburgien alaisuudessa vuosisatojen ajan.
+
+### v2-1178
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Almadénin
+VASTAUS: Almadén on kaupunki Espanjassa [[La Manchan]] alueella, jossa on louhittu elohopeaa noin kahden tuhannen vuoden ajan. Kaivosta pidetään yhtenä maailman suurimmista elohopeakaivoksista. Sitä vuokrasivat 1500- ja 1600-luvuilla muun muassa saksalainen [[Fugger]]-suku, ja elohopeaa kuljetettiin hopean erottamista varten Amerikan hopeakaivoksille. Vuonna 2012 Almadén liitettiin yhdessä [[Idrijan]] kanssa UNESCOn maailmanperintöluetteloon.
+
+### v2-1179
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Julian Alppien
+VASTAUS: Julian Alpit ovat Alppien kaakkoisosa, joka ulottuu Luoteis-Sloveniasta Italian Friulin alueelle. Nimen sanotaan periytyvän Julius Caesarista, vaikka asiasta ei ole täyttä varmuutta. Alueen korkein huippu on [[Triglav]], noin 2 864 metriä, ja suuri osa vuoristosta kuuluu Slovenian ainoaan kansallispuistoon, [[Triglavin kansallispuistoon]]. Rinteiltä virtaa smaragdinvihreä [[Soča]], ja alueen tunnettuja järviä ovat Bled ja [[Bohinj]].
+
+### v2-1180
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: pletna
+VASTAUS: Pletna on perinteinen puinen vene, jolla matkustajat kuljetetaan [[Bledin]] järven keskellä olevalle saarelle. Soutaja eli [[pletnar]] ohjaa venettä seisaaltaan kahdella airolla. Vuonna 1740 [[Maria Teresia]] myönsi lauttaoikeuden 22 paikalliselle suvulle, ja monet nykysoutajat polveutuvat suoraan heistä. Saarella seisoo Neitsyt Marian taivaaseenoton pyhiinvaelluskirkko, jolle johtaa 99 kiviportaan barokkinen porrasnousu vuodelta 1655. Perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti, ja sen jälkeen soitetaan kelloa ja tehdään toive.
+
+### v2-1181
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Triglav
+VASTAUS: Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 teollisuusmies [[Sigmund Zoisin]] aloitteesta. Huipulla seisoo pieni metallitorni: pappi [[Jakob Aljaž]] osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa elokuussa. Torni ja vuori ovat kansallissymboleja, ja vuori sijaitsee [[Triglavin kansallispuistossa]]. Sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.
+
+### v2-1182
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Kranjska klobasa
+VASTAUS: Kranjska klobasa eli Krainin makkara on slovenialainen esikeitetty makkara, joka muistuttaa puolalaista [[kielbasaa]]. Nimi tulee [[Krainin]] historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensimmäisen kerran F. [[Kalinšekin]] keittokirjassa vuonna 1912. Makkarassa on vähintään 75–80 prosenttia sianlihaa ja enintään 20 prosenttia pekonia, ja mausteiksi sallitaan vain merisuola, valkosipuli, salpietari ja mustapippuri. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Slovenia sai sille EU:n suojatun maantieteellisen merkinnän tammikuussa 2015, vaikka Itävalta, Kroatia ja Saksa vastustivat.
+
+### v2-1183
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Krainin
+VASTAUS: Krain, sloveniaksi Kranjska, oli historiallinen Habsburgien herttuakunta nykyisen Slovenian keskiosassa, ja sen pääkaupunki oli [[Ljubljana]], saksaksi Laibach. Alue kuului Habsburgien perimämaihin vuosisatojen ajan, ja vielä isoisän aikaan Krain oli osa Itävallan keisarikuntaa. Herttuakuntaa kuvasi 1600-luvun lopulla kirjassaan [[Johann Weikhard von Valvasor]], jonka teoksessa on kuuluisa kuvitus alueen linnoista ja kaupungeista. Alueen nimeä kantaa edelleen myös [[Carniolan mehiläinen]], jonka kotiseutu on Slovenia.
+
+### v2-1184
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: suojatun maantieteellisen merkinnän
+VASTAUS: Suojattu maantieteellinen merkintä, lyhenteeltään PGI, on EU:n tapa suojata ruokatuotteiden nimiä, kun tuotteella on yhteys tiettyyn alueeseen. Merkinnän saaminen edellyttää, että vähintään yksi tuotannon vaihe tapahtuu kyseisellä alueella, toisin kuin tiukemmassa [[suojatussa alkuperänimityksessä]], jossa koko tuotanto on sidottu alueeseen. Kolmas suojaluokka on [[aito perinteinen tuote]], joka suojaa perinteistä valmistustapaa. Suomalaisista tuotteista suojan on saanut esimerkiksi [[Lapin Puikula]]. Slovakian bryndza sai PGI-merkinnän vuonna 2008 ja Slovenian Krainin makkara tammikuussa 2015.
+
+### v2-1185
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Carniolan mehiläinen
+VASTAUS: Carniolan mehiläinen eli Apis mellifera carnica on läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi viittaa [[Krainin]] alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen [[italianmehiläisen]] jälkeen. Sen hoitoa kehitti 1700-luvulla [[Anton Janša]], joka maalautti pesien etuseinät koristekuvilla.
+
+### v2-1186
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Anton Janša
+VASTAUS: Anton Janša syntyi noin vuonna 1734 [[Breznican]] kylässä ja lähti lukutaidottomana opiskelemaan maalariksi [[Wienin]] kaupunkiin. Isän yli sadan pesän parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien niittyjen luo. [[Maria Teresia]] määräsi hänen kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.
+
+### v2-1187
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Maailman mehiläispäivä
+VASTAUS: Maailman mehiläispäivä on [[YK:n]] julistama kansainvälinen teemapäivä, jota vietetään 20. toukokuuta. Päivän ehdotti Slovenia, ja lähteiden mukaan aloitteen takana oli muun muassa [[Slovenian mehiläishoitajien liitto]]. Päivämäärä valittiin, koska se on [[Anton Janšan]] syntymäpäivä. Päivän tarkoitus on kiinnittää huomiota mehiläisten ja muiden pölyttäjien merkitykseen ruoantuotannolle ja luonnolle. Ensimmäinen virallinen päivä vietettiin lähteiden mukaan vuonna 2018.
+
+### v2-1188
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Jugoslaviasta
+VASTAUS: Jugoslavia syntyi vuonna 1918 serbien, kroaattien ja sloveenien kuningaskuntana, ja nimi Jugoslavia otettiin käyttöön vuonna 1929. Toisen maailmansodan jälkeen se oli sosialistinen liittovaltio, jota johti [[Josip Broz Tito]] kuolemaansa vuonna 1980 asti, ja siihen kuului kuusi tasavaltaa: Slovenia, Kroatia, Bosnia ja Hertsegovina, Serbia, Montenegro ja Pohjois-Makedonia. Valtio hajosi 1990-luvun alussa. Slovenian lyhyt selkkaus päättyi heinäkuussa 1991 [[Brionin sopimukseen]], ja muiden tasavaltojen tie itsenäisyyteen oli monimutkaisempi.
+
+### v2-1189
+KOHDE: maa:SVN
+KYSYMYS: Kerro lisää: Euroopan unioniin
+VASTAUS: Euroopan unionin juuret ovat 1950-luvulla, kun kuusi maata perusti hiili- ja teräsyhteisön ja pian sen jälkeen [[Rooman sopimuksilla]] Euroopan talousyhteisön. Nykyisen unionin loi 1990-luvun alussa [[Maastrichtin sopimus]]. Suomi liittyi unioniin vuonna 1995, ja vuonna 2004 mukaan tuli kymmenen uutta jäsentä, muun muassa Slovenia, Slovakia, Tšekki, Unkari ja Puola. Slovenia otti ensimmäisenä uusista jäsenistä euron käyttöön vuoden 2007 alussa, ja samoihin aikoihin molemmat maat liittyivät [[Schengen]]-alueeseen.
+
+### v2-1190
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Pyhän Yrjön
+VASTAUS: Pyhä Yrjö oli kristitty sotilas, joka kärsi marttyyrikuoleman noin vuonna 303 keisari [[Diocletianuksen]] vainojen aikana. Hänen päiväänsä vietetään 23. huhtikuuta. Lohikäärmeen surmaajan tarina on myöhempää perua: se levisi keskiajalla muun muassa [[Kultaisen legendan]] kautta, ja siitä tuli ritarillisuuden ihanne. Yrjö on monen maan, kuten [[Englannin]], suojeluspyhimys. Ljubljanassa hänen mukaansa on nimetty linnan kappeli, ja lohikäärme on kaupungin tunnus.
+
+### v2-1191
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Jason
+VASTAUS: Jason on kreikkalaisen mytologian sankari, joka johti [[argonauttien]] retkikuntaa hakemaan kultaista taljaa Kolkhiksesta. Retkellä käytettiin [[Argo]]-alusta, ja apuna oli taikuutta taitava Medea. Ljubljanalaisen tarinan mukaan argonautit kulkivat joen kautta Euroopan sisämaahan, ja Jason surmasi lohikäärmeen kaupungin suolla. Tarina on yksi selitys kaupungin lohikäärmetunnukselle, ja toinen liittää sen Pyhään Yrjöön. Mytologian mukaan [[kultaisen taljan]] etsintä oli Jasonin tapa saada takaisin isänsä valtaistuin.
+
+### v2-1192
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Lohikäärmesillan
+VASTAUS: Lohikäärmesilta ylittää Ljubljanica-joen vanhankaupungin pohjoispuolella. Se valmistui vuonna 1901 teräsbetonisena [[Wienin secession]] -tyylin siltana, ja sen kaari oli tuolloin Euroopan kolmanneksi suurin. Nimensä silta sai vuonna 1919, ja sitä ennen se kantoi keisari [[Frans Joosefin]] nimeä. Sillan kulmissa seisovat lohikäärmeet ovat kaupungin tunnus, ja lohikäärme on myös kaupungin vaakunassa linnan tornin päällä. Alkuperästä kerrotaan monta tarinaa: yksi liittää sen Jasoniin ja argonautteihin, toinen linnankappelin suojeluspyhimykseen Yrjöön.
+
+### v2-1193
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Kolmoissilta
+VASTAUS: Tromostovje eli Kolmoissilta koostuu kolmesta sillasta, jotka ylittävät Ljubljanica-joen ja yhdistävät keskiaikaisen vanhankaupungin [[Prešerenin aukioon]]. Paikalla mainitaan puusilta jo vuonna 1280, ja nykyisen keskisillan suunnitteli [[Giovanni Picco]] vuonna 1842. Kun silta alkoi ahtaana estää liikennettä, [[Jože Plečnik]] suunnitteli sen molemmin puolin jalankulkusillat, ja työ valmistui keväällä 1932. Vuonna 2021 silta liitettiin [[UNESCOn]] maailmanperintöluetteloon osana Plečnikin perintöä.
+
+### v2-1194
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Kansallis- ja yliopistokirjasto
+VASTAUS: Kansallis- ja yliopistokirjasto NUK perustettiin vuonna 1774, ja se on yksi Slovenian tärkeimmistä kulttuurilaitoksista. Nykyisen talon suunnitteli [[Jože Plečnik]] vuosina 1930–1931, ja se rakennettiin 1936–1941. [[Belgradin]] viranomaiset vastustivat hanketta aluksi, mutta opiskelijoiden sinnikkäät mielenosoitukset auttoivat sen läpi. Julkisivu yhdistää tiiltä ja kiveä, ja osa kivistä on paikalta löytyneitä arkeologisia jäänteitä. Päänoven kahvojen päissä on [[Pegasoksen]] pää.
+
+### v2-1195
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Odprta kuhna
+VASTAUS: Odprta kuhna eli Avoin keittiö on Ljubljanan ruokatapahtuma, jossa ravintolat tarjoavat ruokaa torilla. Lähteiden mukaan se järjestetään kevään ja syksyn välisenä aikana perjantaisin [[Pogačarjev trg]] -aukiolla [[Keskustorin]] vieressä. Torihallin suunnitteli [[Jože Plečnik]] vuosina 1931–1939, ja se rakennettiin 1940–1942. Hallissa on kaksi kerrosta, ja se seuraa joen kaarta. Tapahtuman tarkat aikataulut vaihtelevat vuosittain.
+
+### v2-1196
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: potica
+VASTAUS: Potica on juhlaleivonnainen, jossa ohueksi kaulittu hiivataikina sivellään täytteellä, kääritään rullaksi ja kierretään usein renkaaksi. Yleisin täyte on pähkinä, mutta käytössä ovat myös rakuuna, rusina, tuorejuusto ja unikonsiemen. Vanhimmat tunnetut maininnat ovat reformaattori [[Primož Trubarin]] teksteistä vuosilta 1575 ja 1577, jolloin leivonnaista kutsuttiin nimellä povitica, käärittävä. Polyhistori [[Valvasor]] kuvasi hunajaisen pähkinärullan jo vuonna 1689. Perinteisesti potica paistetaan [[potičnik]]-vuoassa, jonka keskellä on piippu, ja sitä syödään pääsiäisenä ja jouluna.
+
+### v2-1197
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Tivoli
+VASTAUS: Tivoli on Ljubljanan suurin puisto, ja se ulottuu keskustan reunalta Rožnikin rinteille. Sen suunnitteli insinööri [[Jean Blanchard]] vuonna 1813, kun kaupunki oli Ranskan [[Illyrian maakuntien]] pääkaupunki. Blanchard yhdisti kaksi valmista puistoa Podturnin ja Cekinin kartanoiden ympäriltä ja liitti ne keskustaan. Nimensä puisto sai 1800-luvun jälkipuoliskolla Kasinoseuran kesäpaikasta, joka oli avattu vuonna 1835. Marsalkka [[Radetzky]] kunnosti 1800-luvun puolivälissä Tivolin linnan, ja 1920-luvulla Plečnik suunnitteli puiston halki kulkevan Jakopičin kävelykadun.
+
+### v2-1198
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Rožnik
+VASTAUS: Rožnik on metsäinen kukkula Ljubljanan keskustan laidalla, ja se on korkeudeltaan noin 400 metriä. Kukkula liittyy Tivolin puistoon, ja sen rinteillä kulkee polkuja, joita ljubljanalaiset käyttävät ulkoiluun. Huipun tuntumassa toimii ravintola, jossa kirjailija [[Ivan Cankar]] on lähteiden mukaan oleskellut, ja rinteellä on myös [[Ljubljanan eläintarha]]. Alue on osa laajempaa maisemapuistoa, ja polkuja pitkin pääsee kävellen suoraan keskustasta metsään.
+
+### v2-1199
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Ljubljanan suo
+VASTAUS: Ljubljanan suo, sloveniaksi Ljubljansko barje, on laaja märkä tasanko kaupungin eteläpuolella. Alueelta on löytynyt esihistoriallisia [[paalutaloasutuksen]] jäänteitä, ja ne kuuluvat Alppien ympäristön paalutaloasutuksia koskevaan UNESCOn maailmanperintökohteeseen. Suolta löytyi myös [[Ljubljanan suon pyörä]], jota pidetään lähteiden mukaan maailman vanhimpana tunnettuna pyöränä akseleineen, noin viisi tuhatta vuotta vanhana. Suon halki virtaa [[Ljubljanica-joen]] sivuhaaroja, ja alue on tärkeä lintujen elinympäristö.
+
+### v2-1200
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Ljubljanica
+VASTAUS: Ljubljanica on joki, joka kiertää Ljubljanan vanhankaupungin ohi ja on vuosisatojen ajan ollut kaupungin tärkeä kulkureitti ja elinkeinojen paikka. Keskustassa sen yli johtavat muun muassa [[Tromostovje]] eli Kolmoissilta ja [[Lohikäärmesilta]], ja joen oikealla rannalla on keskustori, jonka halli seuraa joen kaarta. Arkkitehti [[Jože Plečnik]] suunnitteli torihallin ja muokkasi rantoja 1900-luvulla, ja hänen työnsä leimaa yhä joen vartta. Nykyään rannat ovat kävelijöiden ja kahviloiden aluetta.
+
+### v2-1201
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Euroopan vihreä pääkaupunki
+VASTAUS: Euroopan vihreä pääkaupunki on Euroopan komission myöntämä vuosittainen arvonimi, joka annetaan kaupungille, joka on edistänyt ympäristönsä tilaa ja [[kestävää kehitystä]]. Ensimmäinen arvonimi myönnettiin [[Tukholmalle]] vuonna 2010, ja Ljubljana sai sen vuonna 2016. Arvioinnissa tarkastellaan muun muassa ilmanlaatua, jätehuoltoa, vesiä, melua, liikennettä ja viheralueita. Ljubljanassa tunnetuin ratkaisu on vanhankaupungin autoton keskusta ja laaja kävelyalue, ja nimeämisen myöntää [[Euroopan komissio]].
+
+### v2-1202
+KOHDE: kaupunki:ljubljana
+KYSYMYS: Kerro lisää: Prešernin aukio
+VASTAUS: Prešernin aukio on Ljubljanan keskusaukio vanhan kaupungin sisäänkäynnin edessä, ja kadut lähtevät siitä joka suuntaan. Etelään [[Tromostovje]] vie joen yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa 1600-luvulla, kun barokkinen [[Ilmestyksen fransiskaanikirkko]] rakennettiin, ja aluksi sitä kutsuttiin kirkon mukaan Marian aukioksi. Vasta 1800-luvulla risteys kivettiin aukioksi, ja Hauptmannin talo rakennettiin vuonna 1873. Aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen jälkeen, ja arkkitehti [[Max Fabiani]] suunnitteli keskeisen osan uudistuksesta. Nimensä aukio on saanut runoilija [[France Prešerenin]] mukaan.
+
+### v2-1203
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Norjaa
+VASTAUS: Norja on Skandinavian niemimaan länsiosan valtio, jonka pääkaupunki on [[Oslo]]. Noin neljän vuosisadan ajan se oli ollut unionissa Tanskan kanssa, kunnes [[Kielin rauhassa]] tammikuussa 1814 Tanska luovutti Norjan Ruotsille. Norjalaiset eivät kuitenkaan hyväksyneet ratkaisua vaan julistivat itsenäisyyden ja laativat perustuslain [[Eidsvollissa]] toukokuussa 1814; sen vuoksi 17. toukokuuta on yhä Norjan kansallispäivä. Lyhyen sodan jälkeen Norja liittyi unioniin Ruotsin kanssa, mutta se säilytti oman perustuslakinsa ja hallintonsa. Unioni päättyi vuonna 1905, jolloin Norjasta tuli täysin itsenäinen kuningaskunta.
+
+### v2-1204
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Suomen sodassa
+VASTAUS: Suomen sota käytiin Ruotsin ja Venäjän välillä vuosina 1808–1809. Venäjä hyökkäsi Suomeen helmikuussa 1808, ja sota päättyi [[Haminan rauhaan]] syyskuussa 1809, jossa Ruotsi luovutti Suomen Venäjälle. Suomesta tuli [[Suomen suuriruhtinaskunta]], jonka hallitsija oli Venäjän keisari [[Aleksanteri I]]. Ruotsissa tappio johti vallanvaihtoon vuonna 1809, kun kuningas [[Kustaa IV Aadolf]] syrjäytettiin. Sodan seurauksena Ruotsi menetti noin kolmanneksen alueestaan ja väestöstään, ja sen asema Itämeren suurvaltana päättyi lopullisesti.
+
+### v2-1205
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: puolueettomuuteen
+VASTAUS: Ruotsin puolueettomuus tarkoitti käytännössä sitä, ettei maa liittynyt sotilasliittoihin rauhan aikana, jotta se voisi pysyä sodan ulkopuolella. Linja kehittyi 1800-luvulla ja pysyi läpi 1900-luvun: Ruotsi ei osallistunut [[ensimmäiseen maailmansotaan]] eikä [[toiseen maailmansotaan]], vaikka jälkimmäisessä se joutui tekemään myönnytyksiä, esimerkiksi sallimaan saksalaisten sotilaskuljetukset maansa halki sodan alkuvuosina. Kylmän sodan aikana Ruotsi rakensi vahvan oman puolustuksen ja pysyi liittoutumattomana. Vuonna 1995 se liittyi [[Euroopan unioniin]], ja puolueettomuuden perinne päättyi virallisesti, kun maa liittyi NATOon vuonna 2024.
+
+### v2-1206
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: NATOon
+VASTAUS: NATO eli [[Pohjois-Atlantin liitto]] on vuonna 1949 perustettu sotilaallinen puolustusliitto, jonka jäsenet sitoutuvat tukemaan toisiaan aseellisen hyökkäyksen varalta. Ruotsi haki jäsenyyttä toukokuussa 2022 yhdessä Suomen kanssa Venäjän hyökättyä Ukrainaan. Hakemuksen hyväksyminen vaati kaikkien jäsenmaiden ratifioinnin, ja [[Turkin]] ja [[Unkarin]] päätökset viipyivät pisimpään. Ruotsi liittyi liittoon 7. maaliskuuta 2024, ja se oli järjestön 32. jäsen. Jäsenyys päätti maan yli kaksisataa vuotta kestäneen liittoutumattomuuden.
+
+### v2-1207
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Vasa
+VASTAUS: Vasa oli 64-tykkinen sotalaiva, joka lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Tuulenpuuska kallisti sen kyljelleen, vesi tulvi sisään avoimista [[tykkiluukuista]], ja laiva upposi vain noin 1 300 metrin päähän satamasta; noin 30 ihmistä hukkui. Alus oli liian epävakaa, koska sen yläosat olivat liian raskaat. Laiva nostettiin vedestä vasta vuonna 1961 lähes ehjänä, sillä [[Itämeren]] vähäsuolainen vesi oli säästänyt puuta. [[Vasa-museo]] avattiin 15. kesäkuuta 1990, ja rungon koristeena on lähes 500 puuveistosta. Museossa on käynyt yli 45 miljoonaa kävijää.
+
+### v2-1208
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Djurgårdenin
+VASTAUS: Djurgården on Tukholman keskustan saari ja entinen kuninkaallinen riistapuisto, joka on nykyään suosittu virkistys- ja museoalue. Siellä sijaitsevat Vasa-museon lisäksi muun muassa [[Skansen]], [[Gröna Lund]] -huvipuisto ja ABBA-museo. Skansen avattiin vuonna 1891 ulkoilmamuseoksi, jonne siirrettiin kokonaisia taloja ympäri Ruotsia; malli levisi niin laajalle, että monessa kielessä sana skansen tarkoittaa yhä ulkoilmamuseota. Skansenilla pidettiin myös [[visenttejä]], Euroopan raskaimpia maaeläimiä. Kun laji oli 1920-luvulla katoamassa, kaksi sen viimeisistä yksilöistä eli siellä. Vuonna 1929 sieltä lähetettiin hiehoja Puolan Białowieżaan, jonne laji päästettiin takaisin metsään 1952.
+
+### v2-1209
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Kustaa II Aadolfin
+VASTAUS: Kustaa II Aadolf oli Ruotsin kuningas vuosina 1611–1632 ja yksi maan suurvalta-ajan keskeisistä hallitsijoista. Hän uudisti armeijaa ja hallintoa ja vei Ruotsin mukaan [[kolmikymmenvuotiseen sotaan]], jossa hänestä tuli protestanttisen osapuolen tärkeä johtaja. Hän kaatui [[Lützenin taistelussa]] marraskuussa 1632. Samana vuonna hän allekirjoitti sodan keskellä [[Tarton yliopiston]] perustamiskirjan, ja yliopisto on yhä Viron vanhin ja arvostetuin. Kuninkaan nimi liittyy myös Vasa-laivan teettämiseen.
+
+### v2-1210
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: kanelbulle
+VASTAUS: Kanelbulle on ruotsalainen hiivataikinaleivonnainen, jossa taikina kaulitaan levyksi, täytetään voin, sokerin ja kanelin seoksella, rullataan ja leikataan paloiksi. Ruotsalaiseen taikinaan kuuluu tavallisesti [[kardemumma]], ja pinta voidellaan usein munalla ja koristellaan [[helmisokerilla]]. Suomalainen korvapuusti on lähisukulainen, ja molemmissa kaneli ja kardemumma ovat tärkeitä mausteita. Pulla kuuluu keskeisesti [[fikaan]], eli kahvitaukoon, jolla juodaan kahvia tai teetä ja syödään jotakin makeaa. Moni ruotsalainen leipoo bulleja myös itse kotona viikonloppuisin.
+
+### v2-1211
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Kanelbullens dag
+VASTAUS: Kanelbullens dag eli kanelipullan päivä vietetään Ruotsissa 4. lokakuuta. Lähteiden mukaan päivän käynnisti 1990-luvun lopulla kotileivontaa edistänyt [[Hembakningsrådet]], ja siitä on tullut vakiintunut perinne. Päivänä leivotaan kotona, ja kahvilat ja leipomot nostavat kanelbullen esille ja tarjoavat sitä ahkerasti. Suomessa vietetään samana päivänä [[korvapuustipäivää]], joka on selvästi ruotsalaisen esikuvan tapainen. Pulla kuuluu molemmissa maissa osaksi kahvitaukoa, jota ruotsalaiset kutsuvat [[fikaksi]].
+
+### v2-1212
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: köttbullar
+VASTAUS: Köttbullar ovat ruotsalaisia lihapullia, jotka tehdään tavallisesti naudan- ja sianlihajauhelihasta, sipulista, kananmunasta ja maitoon liotetusta korppujauhosta tai leivästä. Perinteinen lisuke on perunamuusi tai keitetyt perunat, ruskea kermakastike ja [[puolukkahillo]], ja pöytään kuuluu usein suolakurkkua. Tunnettu tarina kertoo, että kuningas [[Kaarle XII]] toi reseptin [[Ottomaanien valtakunnasta]], mutta historioitsijat eivät pidä tarinaa varmana. Lihapullat ovat arkiruokaa mutta kuuluvat myös juhlapöytään, ja ne tunnetaan ympäri maailmaa.
+
+### v2-1213
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: allemansrätten
+VASTAUS: Allemansrätten tarkoittaa jokaisen oikeutta kulkea, uida, telttailla yön yli sekä poimia marjoja ja sieniä myös toisen maalla. Periaate tiivistyy kahteen sanaan: [[inte störa, inte förstöra]], eli ei saa häiritä eikä tuhota. Pihan lähelle ei mennä, viljelyksiä ei talloa eikä nuotiota tehdä kalliolle, joka halkeaa kuumuudesta. Oikeutta ei ole kirjoitettu yhdeksi laiksi, vaan se on tapa, joka on ajan mittaan vahvistunut. Sama oikeus on [[Suomessa]] ja [[Norjassa]], mutta suuressa osassa Eurooppaa metsään ei saa mennä ilman lupaa.
+
+### v2-1214
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Kungsleden
+VASTAUS: Kungsleden eli Kuninkaanpolku on vaellusreitti Ruotsin Lapin tuntureilla. Se kulkee pohjoisessa sijaitsevasta [[Abiskosta]] etelässä sijaitsevaan [[Hemavaniin]], ja sen pituus on noin 440 kilometriä. Reitin varrella on vaeltajien majoja noin päivämatkan välein, ja suosituin aika vaeltaa on kesä. Reitin pohjoisosan lähellä kohoaa [[Kebnekaise]], Ruotsin korkein vuori, jonne johtaa oma sivupolkunsa. Moni vaeltaa vain osan reitistä, koska koko matka vie useita viikkoja.
+
+### v2-1215
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: euroviisujen
+VASTAUS: Euroviisut eli Eurovision laulukilpailu on vuosittainen kansainvälinen musiikkikilpailu, jonka Euroopan yleisradiounioni käynnisti vuonna 1956 [[Luganossa]] Sveitsissä. Kukin maa lähettää kilpailuun yhden kappaleen, ja tulokset ratkaisevat tuomaristojen ja yleisön pisteet. Ruotsin voitot tulivat vuosina 1974, 1984, 1991, 1999, 2012, 2015 ja 2023. [[Loreen]] voitti kaksi kertaa, vuosina 2012 ja 2023. Suomi voitti ensimmäisen kerran vuonna 2006 yhtyeellä [[Lordi]].
+
+### v2-1216
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: ABBA
+VASTAUS: ABBA oli ruotsalainen pop-yhtye, jonka nimi muodostui jäsenten etunimien alkukirjaimista: Agnetha, Björn, Benny ja Anni-Frid. Yhtye voitti euroviisut Brightonissa 6. huhtikuuta 1974 kappaleella [[Waterloo]], ja voitto avasi sille tien maailmanmenestykseen. Sävellykset tekivät pääosin [[Benny Andersson]] ja [[Björn Ulvaeus]], ja tunnettuja kappaleita ovat muun muassa [[Dancing Queen]] ja Mamma Mia. Yhtye jäi tauolle 1980-luvun alussa, ja uusi albumi Voyage ilmestyi vuonna 2021.
+
+### v2-1217
+KOHDE: maa:SWE
+KYSYMYS: Kerro lisää: Irlanti
+VASTAUS: Irlanti on Irlannin saaren suurimman osan käsittävä valtio, jonka pääkaupunki on [[Dublin]]. Maa itsenäistyi Britanniasta vaiheittain: [[Irlannin vapaavaltio]] perustettiin vuonna 1922, ja tasavallaksi maa julistautui 1949. Euroviisuissa Irlanti on yltänyt seitsemään voittoon, saman verran kuin Ruotsi, ja se on kilpailun menestyneimpiä maita. Irlanti voitti kolme kertaa peräkkäin vuosina 1992–1994. Laulaja [[Johnny Logan]] voitti kilpailun esittäjänä vuosina 1980 ja 1987 ja sävelsi myös vuoden 1992 voittokappaleen.
+
+### v2-1218
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Birger Jarl
+VASTAUS: Birger Jarl oli 1200-luvun ruotsalainen valtionmies, joka toimi Ruotsin tosiasiallisena hallitsijana. Hän sai jaarlin arvon vuonna 1248, ja hänen poikansa [[Valdemar Birgersson]] tuli kuninkaaksi vuonna 1250, jolloin isä hallitsi alaikäisen kuninkaan nimissä. Hän kuului [[Folkungien]] sukuun. Hänelle liitetään lainsäädännön uudistuksia, kuten rauhanlait, sekä Tukholman perustaminen noin vuonna 1252, vaikka lähteet eivät ole tästä täysin yksiselitteisiä. Hän kuoli vuonna 1266 ja on haudattu [[Varnhemin luostariin]].
+
+### v2-1219
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Mälaren
+VASTAUS: Mälaren on Ruotsin kolmanneksi suurin järvi Vänernin ja Vätternin jälkeen, ja sen rannoilla sijaitsevat muun muassa Västerås ja Eskilstuna. Järvi purkautuu Tukholmassa Itämereen, ja koska sen pinta on merenpintaa korkeammalla, kapeikossa on tarvittu sulkuja. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan. Ensimmäisen sulun rakensivat hollantilaiset mestarit vuoteen 1642 mennessä, ja uuden sulun rakennussopimus tehtiin vuonna 1744 [[Christopher Polhemin]] kanssa, joka oli silloin yli 80-vuotias. Hän kuoli kesken hankkeen vuonna 1751, ja sulku avattiin 1755. Sulkualue on nykyään nimeltään [[Slussen]]. Mälarenin saarella Björkössä oli viikinkiaikainen kauppakaupunki [[Birka]], joka on Unescon maailmanperintökohde.
+
+### v2-1220
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Hansaliitosta
+VASTAUS: Hansaliitto oli pohjoiseurooppalaisten kauppiaiden ja kaupunkien yhteenliittymä, joka hallitsi Itämeren ja Pohjanmeren kauppaa suunnilleen 1200-luvulta 1600-luvulle. Sen johtava kaupunki oli [[Lyypekki]], ja liitto kävi kauppaa muun muassa kalalla, viljalla, puutavaralla ja turkiksilla. Liiton kauppakonttoreita oli esimerkiksi [[Bergenissä]], Lontoossa ja Novgorodissa. Ruotsissa Hansan vaikutus näkyi erityisesti [[Visbyssä]] Gotlannissa ja Tukholmassa, jossa saksalaiset kauppiaat olivat vaikutusvaltaisia. Liiton merkitys hiipui, kun hollantilainen ja englantilainen kauppa vahvistuivat.
+
+### v2-1221
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Tukholman kuninkaanlinna
+VASTAUS: Tukholman kuninkaanlinna sijaitsee Gamla stanin Stadsholmenin saarella, ja se on Ruotsin kuninkaan virallinen residenssi sekä valtiollisten tilaisuuksien paikka. Kuningasperhe asuu kuitenkin [[Drottningholmin]] linnassa. Nykyinen barokkilinna rakennettiin sen jälkeen, kun edeltävä linna [[Tre Kronor]] tuhoutui tulipalossa toukokuussa 1697. Suunnittelijana oli arkkitehti [[Nicodemus Tessin nuorempi]], ja rakennus valmistui 1700-luvun puolivälissä. Linnassa on satoja huoneita, ja osa sen tiloista on avoinna yleisölle museoina.
+
+### v2-1222
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Storkyrkan
+VASTAUS: Storkyrkan eli Tukholman tuomiokirkko on Gamla stanin vanhin kirkko, ja se sijaitsee aivan kuninkaanlinnan vieressä. Se mainitaan ensimmäisen kerran asiakirjoissa vuonna 1279, ja nykyisen ilmeensä se sai myöhäiskeskiajalla. Kirkon tunnetuin esine on [[Bernt Notken]] veistämä puuveistos Pyhä Yrjö ja lohikäärme. Kirkossa riippuu myös [[Vädersolstavlan]], öljymaalaus vuoden 1535 haloilmiöstä, joka on vanhin tunnettu värikuva Tukholmasta. Taulussa lukee kaksi vuosilukua, 1535 ja renovoitu 1636, mutta vuonna 1999 tehdyssä tutkimuksessa se osoittautui kokonaan 1600-luvun työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich Elbfas. Alkuperäinen on kadonnut.
+
+### v2-1223
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Stortorget
+VASTAUS: Stortorget on Gamla stanin keskeinen aukio ja kaupungin vanhin tori. Sen ympärillä ovat värikkäät, kapeat talot, ja aukion laidalla on entinen pörssitalo Börshuset, jossa toimii nykyään [[Nobel-museo]]. Aukio liittyy myös Ruotsin historian raskaaseen tapahtumaan: [[Tukholman verilöylyssä]] marraskuussa 1520 Tanskan kuningas Kristian II:n valtaan alistamia ylhäisöön kuuluvia henkilöitä teloitettiin kymmenittäin. Tapahtumasta on kulunut yli viisisataa vuotta, ja se kiihdytti ruotsalaisten kapinaa. [[Kustaa Vaasa]] nousi sen jälkeen Ruotsin johtoon ja johti maan irti [[Kalmarin unionista]].
+
+### v2-1224
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Mårten Trotzigs gränd
+VASTAUS: Mårten Trotzigs gränd on Tukholman kapein kuja, ja se kulkee [[Gamla stanin]] kortteleiden välistä. Kapeimmillaan se on 90 senttimetriä leveä, ja sen 36 porrasaskelmaa laskevat [[Prästgatanilta]] alas [[Västerlånggatanille]]. Kuja on nimetty saksalaisen kauppiaan mukaan, joka muutti kaupunkiin vuonna 1581 ja osti kujan varrelta taloja. 1800-luvun puolivälissä kuja suljettiin molemmista päistä lankkuseinällä, ja se avattiin uudelleen vasta vuonna 1945. Nykyään se on suosittu nähtävyys, ja siellä mahtuu kulkemaan vain yksi kerrallaan.
+
+### v2-1225
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: köttbullar
+VASTAUS: Köttbullar ovat ruotsalaisia lihapullia, jotka valmistetaan jauhelihasta, sipulista, kananmunasta ja korppujauhoista tai maitoon liotetusta leivästä. Ne paistetaan pannulla ja tarjoillaan perinteisesti keitettyjen perunoiden tai perunamuusin, ruskean kastikkeen ja [[puolukkahillon]] kanssa. Lihapullat ovat tavallinen arkiruoka, ja ne ovat usein ravintoloiden päivän lounaslistalla. Ne kuuluvat myös joulun [[julbord]]-pöytään, jossa tarjolla on monia kylmiä ja lämpimiä ruokia. Ruotsalaisten lihapullien suosio on levinnyt maailmalle ravintoloiden ja ruokakauppojen mukana.
+
+### v2-1226
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: räksmörgås
+VASTAUS: Räksmörgås on ruotsalainen avoin voileipä, jonka päälle kasataan kuorittuja katkarapuja. Pohjana on tavallisesti vaalea leipä tai paahtoleipä ja voi, ja sen päälle tulee salaattia, kananmunaviipaleita, kurkkua, tomaattia ja majoneesia. Koristeena on yleensä [[tilliä]] ja sitruunaviipale. Sukua sille on [[skagenröra]], jossa katkaravut sekoitetaan majoneesiin, kermaviiliin ja tilliin ja kasataan leivän tai paahtoleivän päälle. Räksmörgås on suosittu lounas- ja kahvilaruoka, ja sen voi valmistaa myös kotona.
+
+### v2-1227
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Östermalms Saluhall
+VASTAUS: Östermalms Saluhall on Tukholman Östermalmin kaupunginosan ruokahalli, joka avattiin vuonna 1888. Tiilirakennuksen suunnitteli arkkitehti [[Isak Gustaf Clason]], ja se sijaitsee [[Östermalmstorgin]] laidalla. Hallissa myydään tuoretta kalaa, lihaa, riistaa, juustoja ja leipomotuotteita, ja siellä on myös ravintoloita ja pieniä kahviloita. Halli oli pitkään peruskorjauksessa, ja sen aikana kauppiaat toimivat väliaikaisessa hallissa torilla; peruskorjattu halli avattiin uudelleen vuonna 2020. Ruokahalli on suosittu paikka sekä paikallisille että matkailijoille.
+
+### v2-1228
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Vaxholm
+VASTAUS: Vaxholm on pieni kaupunki Tukholman saariston länsiosassa, vajaan kolmenkymmenen kilometrin päässä Tukholman keskustasta. Se tunnetaan puutaloistaan, kapeista kaduistaan ja kesäisin vilkkaasta satamastaan. Salmessa kohoaa [[Vaxholmin linnoitus]], joka perustettiin 1500-luvulla [[Kustaa Vaasan]] aikana suojaamaan Tukholman meriyhteyttä; nykyään siellä on museo. Kaupunkiin pääsee höyrylaivalla tai lautalla Tukholmasta, ja matka kestää noin tunnin. Vaxholm sai kaupunkioikeudet 1600-luvulla, ja se on kuulunut [[Tukholman saariston]] tunnetuimpiin kohteisiin jo vuosisatoja.
+
+### v2-1229
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Sandhamn
+VASTAUS: Sandhamn on kylä Sandön saarella Tukholman saariston ulkoreunalla, ja se on tunnettu purjehduksesta. Paikka oli aiemmin luotsiasema, ja nykyään siellä toimii Kuninkaallisen ruotsalaisen purjehdusseuran eli [[Kungliga Svenska Segelsällskapet]] asema. Kesäisin kylässä järjestetään purjehduskilpailuja, ja satama täyttyy veneistä. Kylä on myös [[Viveca Sten]] dekkarisarjan tapahtumapaikka, ja sarjasta on tehty televisiosarja. Saarelle pääsee laivalla Tukholmasta, ja matka kestää muutaman tunnin.
+
+### v2-1230
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Waxholmsbolaget
+VASTAUS: Waxholmsbolaget on Tukholman saariston lauttaliikennettä hoitava yhtiö, jonka alkuperä ulottuu vuoteen 1869, jolloin perustettiin Waxholms Ångfartygs Aktiebolag. Nimi viittaa [[Vaxholmiin]], jonne yhtiön vuorot lähteiden mukaan alun perin kulkivat. Yhtiö liikennöi saariston kyläkeskusten välillä, ja liikenne on osa pääkaupunkiseudun joukkoliikennettä. Lähtösatamana on tavallisesti [[Strömkajen]] Tukholman keskustassa. Muutamat vanhat höyrylaivat ovat yhä käytössä, ja kesällä vuoroja ajetaan tiheämmin kuin talvella, koska [[Tukholman saaristo]] on silloin vilkkaimmillaan.
+
+### v2-1231
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Alfred Nobelin
+VASTAUS: Alfred Nobel syntyi Tukholmassa vuonna 1833, ja hän työskenteli kemistinä, insinöörinä ja keksijänä. Hän keksi [[dynamiitin]] vuonna 1867 ja rikastui räjähteillä, joita käytettiin sekä tunneleiden louhimiseen että sodassa. Vuonna 1888 eräs lehti luuli hänen kuolleen ja julkaisi muistokirjoituksen otsikolla kuoleman kauppias on kuollut. Nobel luki oman muistokirjoituksensa ja kirjoitti myöhemmin [[testamentin]], jossa hän määräsi lähes koko omaisuutensa palkinnoiksi. Ensimmäiset palkinnot jaettiin vuonna 1901 fysiikassa, kemiassa, lääketieteessä ja fysiologiassa, kirjallisuudessa sekä rauhan alalla. Nobel kuoli vuonna 1896 [[San Remossa]] Italiassa.
+
+### v2-1232
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Tukholman konserttitalossa
+VASTAUS: Tukholman konserttitalo eli Konserthuset sijaitsee Hötorgetin laidalla keskustassa. Rakennuksen suunnitteli arkkitehti [[Ivar Tengbom]], ja se valmistui vuonna 1926. Julkisivua leimaavat sininen väri ja klassistinen pylväsrivi, ja sen edessä on kuvanveistäjä [[Carl Millesin]] veistämä Orfeus-ryhmä. Talo on Tukholman filharmonisen orkesterin koti. Nobel-palkinnot jaetaan konserttitalossa joka vuosi 10. joulukuuta, Nobelin kuolinpäivänä, ja juhlaillallinen vietetään [[Tukholman kaupungintalolla]].
+
+### v2-1233
+KOHDE: kaupunki:tukholma
+KYSYMYS: Kerro lisää: Oslossa
+VASTAUS: Oslo on Norjan pääkaupunki, joka sijaitsee Oslovuonon perukassa. Kaupungin perustamisen katsotaan tapahtuneen 1000-luvulla, ja vuosina 1624–1925 sen nimi oli Christiania, kun kuningas [[Kristian IV]] rakennutti kaupungin uudelleen suuren palon jälkeen. Nobelin rauhanpalkinto luovutetaan Oslon kaupungintalolla joka vuosi 10. joulukuuta. Kaupunki tunnetaan museoistaan: siellä on esimerkiksi [[Munch-museo]], jonka kokoelmassa on lähes 27 000 Munchin teosta, sekä [[Kon-Tiki-museo]]. Siellä on esillä lautta, jolla [[Thor Heyerdahl]] purjehti vuonna 1947 Perusta Tyynenmeren saarille.
+
+### v2-1234
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Antiokhos I
+VASTAUS: Antiokhos I Theos oli Kommagenen kuningas, joka hallitsi noin vuosina 70–36 eaa. [[Kommagenen]] pieni valtakunta sijaitsi Kaakkois-Anatoliassa Eufrat-joen tuntumassa. Antiokhoksen suku yhdisti persialaista ja kreikkalaista perintöä: lähteiden mukaan hänen isänsä polveutui persialaisista ja äitinsä [[seleukidien]] hallitsijasuvusta. Tämä kaksoisperintö näkyy hänen perustamassaan jumalkultissa ja [[Nemrut-vuoren]] monumentissa, jonka hän rakennutti hautapaikakseen ja palvontapaikaksi. Rooman tasavalta tunnusti hänen asemansa vuoden 64 eaa. tienoilla, ja Kommagene pysyi pitkään Rooman liittolaisena.
+
+### v2-1235
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Zeuksen
+VASTAUS: Zeus oli kreikkalaisten jumalten kuningas, taivaan ja ukkosen jumala, jota palvottiin koko Kreikan alueella. Hänen tunnusmerkkejään ovat salama, kotka ja tammi. Myytin mukaan hän asui [[Olympos-vuorella]] ja oli Kronoksen ja Rean poika. Pyhimpiä paikkoja olivat [[Olympia]], missä pidettiin olympialaiset, ja Dodona. Ateenassa [[Zeuksen temppeli]] rakennettiin yli 600 vuoden ajan, ja se valmistui vasta keisari Hadrianuksen aikana vuonna 131; nykyään pystyssä on enää 15 pylvästä. Kommagenessa Zeus yhdistettiin persialaiseen jumalaan Oromasdeen, ja roomalaiset tunsivat hänet nimellä Jupiter.
+
+### v2-1236
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Unescon
+VASTAUS: UNESCO eli Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö perustettiin vuonna 1945, ja sen päämaja on [[Pariisissa]]. Järjestö vastaa muun muassa maailmanperintöluettelosta, jonka perusta on vuonna 1972 hyväksytty maailmanperintösopimus. Luetteloon voidaan hyväksyä kulttuurikohteita, luontokohteita ja kohteita, jotka ovat molempia, ja niitä on nykyään yli tuhat. [[Nemrut-vuori]] hyväksyttiin luetteloon vuonna 1987. Turkista luettelossa ovat myös muun muassa [[Efesos]] ja Göbekli Tepe. Järjestö ylläpitää myös aineettoman kulttuuriperinnön luetteloa.
+
+### v2-1237
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: helmisärki
+VASTAUS: Helmisärki on [[Vanjärven]] ainoa kalalaji. Vanjärvi on [[soodajärvi]], jonka vesi on hyvin emäksistä, ja siihen sopeutunut helmisärki selviää siellä, missä muut kalat eivät. Kutuaikaan keväällä ja alkukesällä parvet nousevat järveen laskeviin jokiin ja puroihin, joissa vesi on makeaa. Paikalliset ovat pyytäneet kalaa ruoaksi, ja kutuaikana pyyntiä on rajoitettu. Laji on riippuvainen kutujoista, joten padot ja veden otto jokivesistä vaikuttavat sen kantaan. Helmisärjen kotijärvi on Turkin suurin järvi.
+
+### v2-1238
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Van-kissa
+VASTAUS: Van-kissa on Itä-Turkin [[Vanjärven]] seudulta kotoisin oleva kissarotu. Sen turkki on lähes kokonaan valkoinen, ja väriä on vain päässä ja hännässä. Monella yksilöllä silmät ovat eriväriset, toinen sininen ja toinen kullanruskea, ilmiön nimi on [[heterokromia]]. Rotu tunnetaan siitä, että se ui mielellään, mikä on kissoilla harvinaista. Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. Rodun nimi on levinnyt kissojen värigenetiikkaan: väritystä, jossa väri rajoittuu päähän ja häntään, kutsutaan [[van-kuvioksi]].
+
+### v2-1239
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Göbekli Tepe
+VASTAUS: Göbekli Tepe sijaitsee [[Şanlıurfan]] lähellä Kaakkois-Turkissa, ja sen vanhimmat osat ovat noin 11 500 vuotta vanhoja. Kaivaukset alkoivat vuonna 1995 saksalaisarkeologi [[Klaus Schmidtin]] johdolla. Kohteen tunnetuimpia piirteitä ovat T-kirjaimen muotoiset kalkkikivipilarit, jotka voivat olla yli viisi metriä korkeita ja joihin on veistetty eläinkuvia, esimerkiksi käärmeitä, kettuja ja villisikoja. Pilarit on järjestetty kehiksi. Paikka on peräisin [[kivikaudelta]], ajalta ennen maanviljelyä, keramiikkaa ja metalleja, joten se on muuttanut käsityksiä siitä, miten monumentaalinen rakentaminen alkoi. Tarkkaa käyttötarkoitusta ei tiedetä, ja sitä pidetään usein rituaalipaikkana.
+
+### v2-1240
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Çatalhöyükin
+VASTAUS: Çatalhöyük oli uuden kivikauden asuinkylä Konyan tasangolla Keski-Anatoliassa, ja se oli asuttu noin 9 000 vuotta sitten. Talot oli rakennettu savitiilistä tiiviisti toistensa viereen ilman katuja, ja niihin mentiin katolla olevasta aukosta tikkailla. Seinille tehtiin maalauksia ja reliefejä, ja sisätiloja koristivat myös eläinten päät, esimerkiksi härän sarvet. Vainajia haudattiin usein talojen lattioiden alle. Kylässä asui arviolta useita tuhansia ihmisiä. Paikkaa kaivoi 1960-luvulla brittiarkeologi [[James Mellaart]], ja tutkimukset ovat jatkuneet [[Ian Hodderin]] johdolla 1990-luvulta alkaen. UNESCO hyväksyi kohteen maailmanperintöluetteloon vuonna 2012.
+
+### v2-1241
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: hetiitit
+VASTAUS: Hetiitit olivat indoeurooppalaista kieltä puhunut kansa, joka hallitsi suurta osaa Anatoliaa pronssikaudella. Heidän pääkaupunkinsa oli [[Hattusa]] nykyisen Turkin keskiosassa, ja valtakunnan huippuaika oli suunnilleen 1400- ja 1200-lukujen eaa. välillä. Hetiitit kirjoittivat [[nuolenpääkirjoituksella]] saveen, ja heidän arkistonsa ovat antaneet runsaasti tietoa diplomatiasta ja laeista. Tunnettu tapahtuma on Kadeshin taistelu noin vuonna 1274 eaa., jossa hetiittien ja Egyptin joukot kohtasivat ja josta syntyi myöhemmin yksi vanhimmista tunnetuista rauhansopimuksista. Valtakunta romahti noin vuonna 1180 eaa. [[pronssikauden]] lopun mullistuksissa.
+
+### v2-1242
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Marmaray
+VASTAUS: Marmaray on Istanbulin rautatiejärjestelmä, jonka keskeinen osa on [[Bosporinsalmen]] alittava rautatietunneli. Nimi muodostuu sanoista Marmara ja ray eli kisko. Tunneli avattiin 29. lokakuuta 2013, ja se yhdistää Euroopan ja Aasian puolen ilman lauttamatkaa; salmen alla oleva osuus on rakennettu uponneista betoniosista. Lähteiden mukaan ajatus salmen alituksesta esitettiin jo vuonna 1860. Rakennus tehtiin maanjäristyksiä kestäväksi, koska alue sijaitsee aktiivisella siirrosvyöhykkeellä. Linjalla on asemat esimerkiksi [[Sirkecissä]] ja [[Üsküdarissa]].
+
+### v2-1243
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: lauttoja
+VASTAUS: Istanbulin lautat ovat yksi kaupungin vanhimmista ja tunnetuimmista kulkuvälineistä. Höyrylaivaliikenne Bosporinsalmella alkoi 1800-luvulla, ja ensimmäinen tunnettu laivayhtiö Şirket-i Hayriye perustettiin vuonna 1851. Lautat liikennöivät esimerkiksi [[Eminönün]], Karaköyn, [[Kadıköyn]] ja [[Üsküdarin]] välillä, ja matka Euroopan ja Aasian puolen välillä kestää muutamia kymmeniä minuutteja. Laivoilla myydään teetä ja simit-rinkeleitä, ja lokit seuraavat usein alusta. Monelle matkustajalle lautta on työmatkakulkuneuvo, ei vain nähtävyys.
+
+### v2-1244
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: Rize
+VASTAUS: Rize on Mustanmeren rannikon kaupunki ja maakunta Koillis-Turkissa, ja se on Turkin tärkein teenviljelyalue. Lämmin, kostea ja sateinen ilmasto sekä jyrkät rinteet sopivat teepensaalle, ja teepensaat kasvavat portaittain rinteillä rannikolta ylemmäs. Laajamittainen teenviljely alkoi alueella 1900-luvun alkupuolella, ja siitä tuli nopeasti maan perusjuoma. Korkeammilla rinteillä sijaitsevat [[Ayderin]] ylänkö ja [[Fırtına]]-joen laakso, jotka ovat suosittuja vaelluskohteita. Teetä juodaan Turkissa päivän mittaan huomattavasti enemmän kuin kahvia.
+
+### v2-1245
+KOHDE: maa:TUR
+KYSYMYS: Kerro lisää: turkkilainen kahvi
+VASTAUS: Turkkilainen kahvi valmistetaan hienoksi jauhetusta kahvista, vedestä ja halutessa sokerista pienessä pitkävartisessa kannussa eli [[cezvessä]]. Seos kuumennetaan hitaasti, kunnes pinnalle nousee vaahto, jota pidetään kahvin tärkeimpänä ominaisuutena. Kahvia ei suodateta, vaan se kaadetaan pieniin kuppeihin siten, että sakka jää pohjalle. Sokerin määrä kerrotaan tilatessa. Kahvin kanssa tarjotaan usein lasillinen vettä ja jotakin makeaa, esimerkiksi [[lokumia]]. Juoma on Unescon aineettoman kulttuuriperinnön luettelossa vuodesta 2013. Kahvilat yleistyivät Istanbulissa 1500-luvulla, ja [[kahvinlukeminen]] eli kuvioiden tulkinta sakasta on yleinen seurustelupeli.
+

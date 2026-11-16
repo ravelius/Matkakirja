@@ -28,8 +28,10 @@ valo, hillityt värit ja elävä, rauhallinen liike. Katsoja muistaa paikan, ei 
 | **Kartan esineet ja pienoismallit** | aito 3D, joka reagoi katselukulmaan ja seisoo maassa; akvarellisävyt karttapaletista (kerma, murrettu tiili, okra, haalistunut messinki, seepia); pieniä valoja | pop-up-kuva, leijuva malli, kirkas punainen tai kulta, koristeiden paljous | 4.40, 4.41, tyylikirja `karttapaletti` |
 | **Maailma (linssit, museot, pelit, kohtaukset) ja havainnekuvat** | todentuntuinen: valokuvapohjaiset pinnat, oikean maailman sävy ja kirkkaus, elokuvamainen valo | piirrosmainen, sarjakuvamainen tai muovinen; toistuvat tekstuurit; pienoismallivaikutelma | 2.93, 2.102 |
 
-Kaksi poikkeusta: isoisän piirrokset ovat nopeita mustavalkoisia kynäluonnoksia vanhalla paperilla (3.12: 1873 = piirros,
-nykyhetki = valokuva), ja pelaajan omat esineet (nappula, kuumailmapallot) pitävät tunnistevärinsä kartan yhtenäisessä sarjassa.
+Kaksi poikkeusta: isoisän kuvat näyttävät aikansa kameralla otetuilta vanhoilta valokuvilta, eivät piirroksilta, eikä hänen
+ulkonäköään paljasteta: kuvassa on enintään kädet, siluetti tai kaukainen hahmo (omistaja 12.11.2026 09.27, P-261112-29, kortti
+tyylikirja 2; korvaa vanhan kynäluonnoslinjan ja Codex-tilauksen #2221 piirrosohjeen). Pelaajan omat esineet (nappula,
+kuumailmapallot) pitävät tunnistevärinsä kartan yhtenäisessä sarjassa.
 
 ## Periaatteet
 

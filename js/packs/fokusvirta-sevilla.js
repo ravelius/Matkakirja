@@ -833,6 +833,7 @@ export const FOKUSVIRTA_SEVILLA = {
        * 1873 se ei ollut. Se on koko noston kärki.
        */
       id: 'kolumbuksen-luut',
+      symboli: 'historia',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Kolumbuksen luut',
       otsikko: 'Hän kuoli 1506 — ja matkusti sen jälkeen valtameren yli '
@@ -934,6 +935,7 @@ export const FOKUSVIRTA_SEVILLA = {
       nimio: 'Itálican amfiteatteri',
       otsikko: 'Kaupunki purki roomalaisen amfiteatterin muurit ja '
         + 'rakensi niistä padon jokeen',
+      symboli: 'historia',
       lunastus: [
         'Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka '
           + 'Scipio perusti vuonna 206 eaa. haavoittuneille '
@@ -1047,6 +1049,7 @@ export const FOKUSVIRTA_SEVILLA = {
       nimio: 'Iberianilves',
       otsikko: 'Maailman uhanalaisinta kissaeläintä oli jäljellä 94 '
         + 'yksilöä — ja sitten laskuri kääntyi',
+      symboli: 'elain',
       lunastus: [
         'Iberianilves elää vain Iberian niemimaalla, ja fossiilien '
           + 'perusteella se on ollut siellä noin miljoona vuotta. '
@@ -1140,6 +1143,7 @@ export const FOKUSVIRTA_SEVILLA = {
       nimio: 'Velázquezin oppivuodet',
       otsikko: 'Kaupungin poika maalasi vedenmyyjiä ja keittiöpiikoja — '
         + 'sitten hänestä tehtiin ainoa, joka sai maalata kuninkaan',
+      symboli: 'kulttuuri',
       lunastus: [
         'Diego Velázquez kastettiin Sevillan Pyhän Pietarin kirkossa '
           + 'sunnuntaina 6. kesäkuuta 1599, ja perhe eli vaatimattomasti. '

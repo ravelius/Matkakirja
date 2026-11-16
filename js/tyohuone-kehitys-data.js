@@ -382,6 +382,9 @@ export const KAARI_PAKETIT = {
         + 'Täällä ei ennen olisi näkynyt kuvattavaa, savulta. Vastaa, '
         + 'niin näytän mistä katsoa."',
       kysymys: {
+        // Vihje: tarinapaikka, jonka jutusta vastaus löytyy (= kohdekartan kohteen `nosto`; KK 13.11.2026).
+        lahde: 'nosto-lontoon-savusumu-1952',
+        vihje: 'Kysyn sinulta Lontoon sumusta. Etsi tiimalasi Thamesin rantakadulta.',
         q: 'Leila sanoo, ettei kadulla ennen näkynyt kuvattavaa savulta. '
           + 'Mihin vuoden 1956 Clean Air Act erityisesti puuttui?',
         vaihtoehdot: [
@@ -423,6 +426,9 @@ export const KAARI_PAKETIT = {
         + 'kysymykseen. Kirja on odottanut siitä illasta. Vastaa, niin '
         + 'se on sinun."',
       kysymys: {
+        // Vihje: tarinapaikka, jonka jutusta vastaus löytyy (= kohdekartan kohteen `nosto`).
+        lahde: 'nosto-pariisin-bukinistit',
+        vihje: 'Kysyn sinulta Seinen rannan kirjakauppiaista. Etsi tiimalasi Quai Voltairen rantamuurilta.',
         q: 'Seinen rannalla kirjoja on myyty laatikoista vuosisatoja. '
           + 'Mistä myyjien nimi bukinisti tulee?',
         vaihtoehdot: [

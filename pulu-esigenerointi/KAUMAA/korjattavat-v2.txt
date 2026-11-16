@@ -1,0 +1,13 @@
+vaihe2: 1330 vastausta, keskimäärin 550 merkkiä, virheitä 12
+  112 kaupunki:sofia / Kaakkois-Euroopan: käsitteitä 1
+  118 maa:BIH / lokumin: käsitteitä 1
+  515 kaupunki:kreeta / kri-kri: käsitteitä 1
+  538 kaupunki:zagreb / Lotrščak-torni: käsitteitä 0
+  543 kaupunki:zagreb / Dražen Grubišić: käsitteitä 1
+  733 kaupunki:vilna / enkelipatsas: käsitteitä 1
+  752 maa:LUX / Benelux-maat: jatkoja 0
+  753 maa:LUX / Schengen-alueeksi: käsitteitä 1
+  755 maa:LUX / Mullerthal Trail: käsitteitä 1
+  1063 kaupunki:bukarest / Vrancean maanjäristys: käsitteitä 1
+  1069 kaupunki:bukarest / mămăligaa: käsitteitä 1
+  1106 kaupunki:pietari / Leningradissa: käsitteitä 1

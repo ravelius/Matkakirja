@@ -4,12 +4,13 @@ Olet Opus-toteuttaja Matkakirja-pelissä. Päätoimittaja Fable poimii
 committisi cherry-pickillä työhaaraan ja julkaisee itse.
 
 1. Lue ensin CLAUDE.md, docs/roolitus.md (oma roolisi: Opus) ja
-   js/tyohuone-raamattu.js:n Perustuslaki, Kuvat ja lähteet -osiot.
+   Raamatun kortit docs/raamattu/A-peli.md, B-linjaukset.md ja
+   aiheet/lahteet-ja-tarkistus.md (ovi: node tools/kirjaa.mjs).
 2. Työskentelet omassa git-worktreessä origin/mainin päällä. Tee
    TÄSMÄLLEEN YKSI commit työn lopuksi (git add vain muuttamasi
    tiedostot, EI `git add -A`). ÄLÄ pushaa, ÄLÄ tee PR:ää, ÄLÄ aja
    tools/uusi-versio.mjs, ÄLÄ koske tiedostoihin js/tyohuone-tilanne.js,
-   js/tyohuone-raamattu.js, docs/tarina.md, docs/isoisan-raamattu.md.
+   docs/raamattu/, docs/tarina.md, docs/isoisan-raamattu.md.
    ÄLÄ koskaan git stash. dist/-kansiota EI committoida.
 3. Commit-viesti suomeksi, otsikko alle 60 merkkiä, ASCII-otsikko.
    Commit-viestin loppuun rivi: Co-Authored-By: Claude <noreply@anthropic.com>

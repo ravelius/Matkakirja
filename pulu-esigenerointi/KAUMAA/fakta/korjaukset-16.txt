@@ -1,0 +1,26 @@
+### v2-845
+VANHA: ja nykyinen kirkko on uudistettu 1500-luvulla
+UUSI: ja nykyinen kirkko on myöhempi uudistus
+SYY: epävarma vuosiluku (nykyinen kirkko on lähteiden mukaan 1800-luvun alusta)
+
+### v2-846
+VANHA: Se virtaa maan halki 388 kilometrin matkan
+UUSI: Sen koko pituus on 388 kilometriä, josta noin 300 kilometriä virtaa maan halki
+SYY: väärä fakta (388 km on joen kokonaispituus, ei matka Pohjois-Makedonian läpi)
+
+### v2-861
+VANHA: oli noin 12 000 pientä puotia ja verstasta
+UUSI: oli suuri määrä pieniä puoteja ja verstaita
+SYY: epävarma luku
+
+### v2-880
+VANHA: Täytteen tunnistaa taitteesta, sillä ricottapiiraat taitetaan keskeltä ja hernepiiraat sivulta.
+UUSI: Täytteen voi usein tunnistaa piiraan muodosta.
+SYY: epävarma yksityiskohta
+
+### v2-885
+VANHA: pakeni [[Roomasta]] vuonna 1607
+UUSI: pakeni [[Roomasta]] vuonna 1606
+SYY: väärä fakta (surmatyö ja pako 1606, Maltalle hän saapui 1607)
+
+LOPPU: tarkistettu 89 vastausta, korjauksia 5

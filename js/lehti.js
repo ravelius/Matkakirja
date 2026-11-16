@@ -68,12 +68,8 @@ import {
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kehittajalehdenSivut } from './tyohuone-kehittajalehti.js';
 import { musiikkiSivut } from './tyohuone-musiikki.js';
-import { RAAMATTU } from './tyohuone-raamattu.js';
-import {
-  onRaamatunMuutos, piirraRaamatunKentta, piirraRaamatunLahetys,
-} from './tyohuone-raamattu-muokkaus.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
-import { raamatunTaulusivut, tilastoSivut } from './tyohuone-tilastot.js';
+import { tilastoSivut } from './tyohuone-tilastot.js';
 import {
   cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva,
   piirraLeipateksti, shortIntro,
@@ -966,60 +962,6 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
   naytaTutkiSivu(ui, 1, { heti: true });
 }
 
-/*
- * RAAMATUN SIVU MUOKKAUSKENTTINÄ (omistaja 11.9.2026).
- *
- * Jokainen kohta on oma kenttänsä, ja sivun lopussa on "Lähetä
- * muutokset". Kentät eivät kirjoita RAAMATTU-olioon mitään: muutos
- * elää istunnon luonnoksessa ja lähtee ehdotusworkerille
- * (js/tyohuone-raamattu-muokkaus.js). Piirto on sivun oma `rakenna`,
- * koska nostomalli latoisi kohdat pelkkänä luettavana tekstinä.
- */
-function piirraRaamatunSivu(kohde, { osio, kohdat, johdanto = null }) {
-  if (johdanto) kohde.appendChild(html('p', 'periaate-teksti', johdanto));
-  const kentat = html('div', 'raamattu-kentat');
-  for (const { kohta, teksti } of kohdat) {
-    piirraRaamatunKentta(kentat, { osio, kohta, teksti });
-  }
-  kohde.appendChild(kentat);
-  piirraRaamatunLahetys(kohde, RAAMATTU);
-}
-
-/** Raamattu lehtenä: johdanto + jokainen osio omana sivunaan. */
-export function avaaRaamattuLehti(ui) {
-  const sivut = [{
-    id: 'raamattu-johdanto',
-    nimi: 'Raamattu',
-    yksipalsta: true,
-    rakenna: (kohde) => piirraRaamatunSivu(kohde, {
-      osio: 'Johdanto',
-      johdanto: `Päivitetty ${RAAMATTU.paivitetty}`,
-      kohdat: [{ kohta: 'johdanto', teksti: RAAMATTU.johdanto }],
-    }),
-  }, ...RAAMATTU.osiot.flatMap((osio, i) => {
-    // Valmiusaste värichippinä otsikossa "Tila:"-rivin sijaan.
-    const valmis = (osio.tila ?? '').startsWith('hyväksytty');
-    const sivu = {
-      id: `raamattu-${i}`,
-      nimi: osio.otsikko,
-      yksipalsta: true,
-      tagi: { teksti: valmis ? 'valmis' : 'kesken', luokka: valmis ? 'valmis' : 'kesken' },
-      // Kohdat ovat muokattavia kenttiä, eivät luettavaa leipätekstiä.
-      rakenna: (kohde) => piirraRaamatunSivu(kohde, {
-        osio: osio.otsikko,
-        kohdat: (osio.kohdat ?? []).map((teksti, j) => ({ kohta: j, teksti })),
-      }),
-    };
-    /*
-     * Aarteet ja tutki kätkö -pelit saavat osionsa perään pelidatasta
-     * lasketun taulusivun (siirretty poistetulta työhuonesivustolta
-     * 18.8.2026 — se liitti samat taulut samoihin osioihin).
-     */
-    return [sivu, ...raamatunTaulusivut(osio, i)];
-  })];
-  avaaKehittajaLehti(ui, 'Raamattu', sivut);
-}
-
 /**
  * KEHITTÄJÄLEHTI: työhuoneen toinen nappi (omistaja 11.9.2026).
  *
@@ -1617,7 +1559,17 @@ function reaktioSivut(ui, kohteet, avain) {
  * kuin lukijoiden ehdotukset, mutta ne ovat eri asia: Fable poimii ne
  * postikierroksella ja kirjoittaa Raamattuun sanatarkasti. Siksi ne
  * saavat oman ryhmäsivunsa eivätkä huku lukijoiden ehdotusten sekaan.
+ *
+ * 12.11.2026 (KK 17.30): pelin Raamattu-lehti ja muokkausketju
+ * poistettiin (yksi ovi: tools/kirjaa.mjs). Uusia muutoksia ei tule;
+ * jonossa vielä olevat vanhat näkyvät tässä, kunnes workerin
+ * 'raamattu'-laji poistuu seuraavassa worker-julkaisussa.
  */
+const RAAMATUN_LAJI = 'raamattu';
+const RAAMATUN_TUNNISTE = '[Raamatun muutokset]';
+const onRaamatunMuutos = (e) => e?.laji === RAAMATUN_LAJI
+  || String(e?.teksti ?? '').startsWith(RAAMATUN_TUNNISTE);
+
 function raamatunMuutosSivut(muutokset) {
   if (!muutokset.length) return [];
   const etusivu = {
@@ -1626,9 +1578,9 @@ function raamatunMuutosSivut(muutokset) {
     yksipalsta: true,
     nostot: [{
       otsikko: `${muutokset.length} lähetystä`,
-      teksti: 'Työhuoneen Raamattu-lehdestä lähetetyt muutokset. Jokainen '
-        + 'sivu kertoo osion, kohdan numeron sekä vanhan ja uuden tekstin. '
-        + 'Vain Fable kirjoittaa js/tyohuone-raamattu.js:ään.',
+      teksti: 'Poistetusta Raamattu-lehdestä aiemmin lähetetyt muutokset. '
+        + 'Jokainen sivu kertoo osion, kohdan numeron sekä vanhan ja uuden '
+        + 'tekstin. Säännöt kirjataan nyt vain korteille (tools/kirjaa.mjs).',
     }],
   };
   const sivut = muutokset.map((e, i) => ({

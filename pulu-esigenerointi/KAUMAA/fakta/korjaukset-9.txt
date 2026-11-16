@@ -1,0 +1,25 @@
+### v2-178
+VANHA: -
+UUSI: -
+SYY: LINKKI: [[Michele Besson]] on väärin kirjoitettu, oikea nimi on Michele Besso
+### v2-187
+VANHA: Vuoristossa on aina eletty karjan ehdoilla
+UUSI: Vuoristossa on vuosisatojen ajan eletty karjan ehdoilla
+SYY: liioittelu
+### v2-204
+VANHA: saaren kaikkien pankkien pääkonttorit ovat täällä
+UUSI: monien pankkien pääkonttorit ovat täällä
+SYY: liioittelu
+### v2-204
+VANHA: yksitoista viisikulmaista [[bastioni]]a
+UUSI: yksitoista [[bastioni]]a
+SYY: epävarma yksityiskohta (Nikosian bastionien muoto)
+### v2-205
+VANHA: vanhallekaupungille
+UUSI: vanhalle kaupungille
+SYY: kielivirhe (virheellinen yhdyssana)
+### v2-211
+VANHA: mitattiin 4. syyskuuta 2020 koko saaren korkein lämpötila, 46,2 astetta
+UUSI: on mitattu noin 46 asteen lämpötila, joka kuuluu saaren korkeimpiin
+SYY: epävarma päivämäärä ja ennätysväite
+LOPPU: tarkistettu 50 vastausta, korjauksia 6

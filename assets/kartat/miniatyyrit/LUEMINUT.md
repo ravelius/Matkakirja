@@ -12,7 +12,7 @@ seepiamusteluonnos"-kuvaus ei ole koskaan vastannut toimitettuja
 tiedostoja, ks. `docs/raportit/codex-otostarkistus-20260922.md`).
 Kevyt karikatyyri, muutama varma viiva, lämpimät maasävyt, valkoinen tai
 läpinäkyvä tausta. Kohde tunnistettavana siluettina, ei tekstiä, ei
-vesileimaa. Vuosiluvulliset kohteet (esim. "Palo 1666", "Faraday 1831")
+vesileimaa. Vuosiluvulliset kohteet (esim. "Lontoon palo 1666", "Faraday 1831")
 ovat tapahtumia: tapahtuman tunnistettava hetki tai esine, ei henkilön
 muotokuvaa tunnistettavine kasvoineen. Uutta tilausta kirjoittaessa
 katso 3–5 olemassa olevaa tiedostoa tästä kansiosta esimerkiksi (älä

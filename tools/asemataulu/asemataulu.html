@@ -253,6 +253,14 @@ section:not(.kiinni) .yhteenveto { display: none; }
 .rooli.tila-toimia .r-teksti, .rooli.tila-toimia .r-effort { color: var(--paperi); }
 /* Väliotsikot väkäsellä (omistaja 13.10. 16.2x; Työlistan Odottaa ja Valmistuneet 20.10. 23.35): nappi perii väliotsikon versaalit ja välistyksen. */
 .ryhma-otsikko .tf-nappi { text-transform: inherit; letter-spacing: inherit; }
+/* Kärkiryhmät ja Odottaa vuoroaan: samat säännöt kuin työlistan riveillä (omistaja 9.11. 22.50). */
+#karjet details.juna, #vuoro details.juna { margin-left: 0.8em; }
+#karjet details.juna .runko, #vuoro details.juna .runko { padding-left: 2.1em; }
+#karjet details.juna > summary, #vuoro details.juna > summary { flex-wrap: nowrap; align-items: flex-start; }
+#karjet details.juna > summary .otsikko, #vuoro details.juna > summary .otsikko { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+#karjet details.juna > summary .edistys { flex: none; align-self: flex-start; margin-top: 0.22em; }
+#karjet .runko .teksti, #karjet .runko .tilanne, #vuoro .runko .teksti, #vuoro .runko .tilanne { font-size: 0.85rem; white-space: pre-line; }
+#karjet details.juna.iso .otsikko { font-size: 0.95rem; }
 </style>
 
 <main class="wrap">
@@ -271,7 +279,10 @@ section:not(.kiinni) .yhteenveto { display: none; }
   <section class="kortti" id="tyolista-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="tyolista-osio" aria-expanded="true">Työlista</button> <span class="kysymykset yhteenveto" id="tyolista-yhteenveto"></span> <span class="kysymykset" id="tyolista-aika"></span> <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
     <ul class="kysymyslista" id="kysymyslista" hidden></ul>
+    <div id="karjet"></div>
     <div class="rivit" id="tyolista"></div>
+    <div class="ryhma-otsikko" id="vuoro-otsikko" hidden><button type="button" class="tf-nappi" id="vuoro-nappi" aria-expanded="false"><span class="vakanen" aria-hidden="true">›</span>Odottaa vuoroaan <span id="vuoro-maara"></span></button></div>
+    <div class="rivit" id="vuoro" hidden></div>
     <div class="ryhma-otsikko" id="odottaa-otsikko" hidden><button type="button" class="tf-nappi" id="odottaa-nappi" aria-expanded="false"><span class="vakanen" aria-hidden="true">›</span>Odottaa <span id="odottaa-maara"></span></button></div>
     <div class="rivit" id="odottaa" hidden></div>
     <div class="ryhma-otsikko" id="valmistuneet-otsikko" hidden><button type="button" class="tf-nappi" id="valmistuneet-nappi" aria-expanded="false"><span class="vakanen" aria-hidden="true">›</span>Valmistuneet <span id="valmistuneet-maara"></span></button></div>
@@ -406,6 +417,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
   // + .tf-nappi + .vakanen): oletuksena kiinni, auki/kiinni muistetaan katsojan selaimessa (vain mukavuus; ilman tallennusta kiinni).
   var odottaaAuki = false;
   try { odottaaAuki = localStorage.getItem('odottaa-auki') === '1'; } catch (e) { odottaaAuki = false; }
+  var vuoroAuki = false;
+  try { vuoroAuki = localStorage.getItem('vuoro-auki') === '1'; } catch (e) { vuoroAuki = false; }
   var valmistuneetAuki = false;
   try { valmistuneetAuki = localStorage.getItem('valmistuneet-auki') === '1'; } catch (e) { valmistuneetAuki = false; }
   // Valmistuneista näytetään 10 uusinta (omistaja 20.10. 23.32); vanhemmat synkka.py siirtää arkistoon data/talo-arkisto/.
@@ -668,8 +681,32 @@ section:not(.kiinni) .yhteenveto { display: none; }
       var tl = String(r.tila || '');
       return !onValmis(r) && /odottaa|jonossa|myöhemmin|pidossa/i.test(tl) && !/työn alla|kokoamassa/i.test(tl);
     };
-    taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r) && !onOdottaa(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
-    var odottavat = tlRivit.filter(onOdottaa);
+    // Kärjet (omistaja 9.11. 22.50): rivin kenttä karki ryhmittää työlistan kolmeen kärkeen; "odottaa vuoroaan" omaan kokoontaitettuun ryhmään alimmaksi;
+    // rivit ilman kenttää kuten ennen.
+    var aktiivinenTl = function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); };
+    var keskenTl = tlRivit.filter(function (r) { return !onValmis(r); });
+    var KARJET = ['Kaupungit', 'Tekninen kunto', 'Juoksupeli'];
+    var kc = $('karjet');
+    KARJET.forEach(function (nimi, i) {
+      var id = 'karki-' + i, w = document.getElementById(id);
+      if (!w) {
+        w = luo('div'); w.id = id;
+        w.append(luo('div', 'ryhma-otsikko'), luo('div', 'rivit'));
+        kc.append(w);
+      }
+      var rs = keskenTl.filter(function (r) { return r.karki === nimi; });
+      w.hidden = rs.length === 0;
+      w.firstChild.textContent = nimi + (rs.length ? ' (' + rs.length + ')' : '');
+      taittuvat(w.lastChild, rs, 'otsikko', aktiivinenTl);
+    });
+    var vuoroRivit = keskenTl.filter(function (r) { return r.karki === 'odottaa vuoroaan'; });
+    taittuvat($('tyolista'), keskenTl.filter(function (r) { return KARJET.indexOf(r.karki) < 0 && r.karki !== 'odottaa vuoroaan' && !onOdottaa(r); }), 'otsikko', aktiivinenTl);
+    taittuvat($('vuoro'), vuoroRivit, 'otsikko', function () { return false; });
+    $('vuoro-otsikko').hidden = vuoroRivit.length === 0;
+    $('vuoro-maara').textContent = vuoroRivit.length ? '(' + vuoroRivit.length + ')' : '';
+    $('vuoro-nappi').setAttribute('aria-expanded', vuoroAuki ? 'true' : 'false');
+    $('vuoro').hidden = !(vuoroAuki && vuoroRivit.length);
+    var odottavat = tlRivit.filter(function (r) { return onOdottaa(r) && !r.karki; });
     taittuvat($('odottaa'), odottavat, 'otsikko', function () { return false; });
     $('odottaa-otsikko').hidden = odottavat.length === 0;
     $('odottaa-maara').textContent = odottavat.length ? '(' + odottavat.length + ')' : '';
@@ -834,6 +871,11 @@ section:not(.kiinni) .yhteenveto { display: none; }
   $('odottaa-nappi').addEventListener('click', function () {
     odottaaAuki = !odottaaAuki;
     try { localStorage.setItem('odottaa-auki', odottaaAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
+    piirra();
+  });
+  $('vuoro-nappi').addEventListener('click', function () {
+    vuoroAuki = !vuoroAuki;
+    try { localStorage.setItem('vuoro-auki', vuoroAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
     piirra();
   });
   // Kommentti taulun julkaisseelle sessiolle (hoitaja, PT 2.11. 10.1x); Päivitä ja Boost herättävät samalla ketjulla.

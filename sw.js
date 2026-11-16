@@ -88,6 +88,8 @@ const SHELL = [
   // Gallerioiden selauskaistat (omistaja 9.9.2026): ui.js tuo staattisesti.
   './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
+  './js/kadonneet-kerroskuvat.js',
+  './js/temple-kopina-aanet.js',
   './js/kuvatekija.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',
@@ -476,8 +478,6 @@ const SHELL = [
   // pelikatalogi). Erillisen työhuonesivuston purkauduttua 18.8.2026
   // nämä ovat pelin omia moduuleja: ui.js tuo ne staattisesti, joten
   // ilman esilatausta koko peli jäisi offline käynnistymättä.
-  './js/tyohuone-raamattu.js',
-  './js/tyohuone-raamattu-muokkaus.js',
   './js/tyohuone-kehittajalehti.js',
   './js/tyohuone-tilanne.js',
   './js/tyohuone-pelit.js',

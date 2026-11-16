@@ -5,7 +5,7 @@
  * herokuvissa ja muissa vastaavissa gallerioissa on liian leveä alue
  * mistä kuva siirtyy seuraavaan tai edelliseen kuvaan. kavenna sitä,
  * jotta kuvan klikkaaminen ja suurentaminen keskeltä on helpompaa"*
- * (js/tyohuone-raamattu.js "GALLERIOIDEN SELAUSALUEET KAPEAMMIKSI,
+ * (vanha Raamattu, arkistossa docs/arkisto/, "GALLERIOIDEN SELAUSALUEET KAPEAMMIKSI,
  * KESKELTA KLIKKI SUURENTAA").
  *
  * MITATTU LÄHTÖTILANNE: karusellinuolet olivat 32 % kuvan leveydestä

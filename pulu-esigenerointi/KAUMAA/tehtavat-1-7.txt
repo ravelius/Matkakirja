@@ -1,0 +1,181 @@
+================ KOHTA 31 (maa:FIN) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Suomi (maa)
+Tietoruudun teksti: Suomi on Euroopan harvimmin asuttuja maita: noin 18 asukasta neliökilometrillä, ja Lapissa paljon vähemmän. Etelästä pohjoiseen matkaa on 1 160 kilometriä, ja metsä peittää maasta noin kolme neljäsosaa.
+
+Kartta on melkein kokonaan vihreä, koska maa on matalaa: vasta luoteessa se kohoaa tuntureiksi Ruotsin ja Norjan rajaa kohti. Keskellä ja idässä vihreän seassa on niin tiheässä sinistä, että järvet sulautuvat yhdeksi tahraksi — niitä on 187 888. Rannikon edustalla sama toistuu saarina, joita on 179 584.
+
+Melkein kaikki nämä vedet ovat jääkauden jälkiä, mutta eivät aivan kaikki. Kartan pohjoisosassa on kaksi suurta allasta, joita ei ollut vielä 1960-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+- [Helsinki — kohdekartta / Kohdekartta: Suomi herää 1899] Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kieltää kuvaelma…
+
+### 31.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kaupunki:helsinki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Helsinki
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Helsinki (kaupunki)
+Tietoruudun teksti: Helsinki on Suomen pääkaupunki ja suurin kaupunki; seudulla asuu noin 1,5 miljoonaa ihmistä. Kustaa Vaasa perusti sen 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, mutta satama jäi matalaksi, ja 1640 koko kaupunki siirrettiin viisi kilometriä etelämmäs Vironniemelle. Pikkukaupungista tuli pääkaupunki vasta 1812, kun Suomesta oli tullut Venäjän suuriruhtinaskunta.
+
+Uusi keskusta nousi Senaatintorin ympärille Carl Ludvig Engelin piirustusten mukaan, ja vaalea empire muistuttaa yhä Pietaria — kylmän sodan aikana tänne tultiin kuvaamaan Neuvostoliittoa. Merta on joka suunnalla: saaria on noin 330 ja rantaviivaa yli sata kilometriä, ja talvella jäänmurtajat pitävät väylät auki. Edustalla on Suomenlinna, vuonna 1748 aloitettu merilinnoitus, jossa asuu yhä noin 800 ihmistä.
+
+Kaupunki on kaksikielinen: kadunnimet ovat suomeksi ja ruotsiksi, ja ruotsinkielisiä on nykyään noin viisi prosenttia…
+Isoisän matkakirjamerkintä: Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historia: Helsinki näytteli Neuvostoliittoa] Kylmän sodan aikana länsimaisia kuvausryhmiä ei päästetty kuvaamaan Moskovaan, joten Neuvostoliitto piti kuvata muualla. Helsinki kelpasi sijaiseksi: keskusta on Carl Ludvig Engelin piirtämää empireä ja Katajanokalla kohoaa ortodoksinen katedraali. Rikoselokuva Gorky Park (1983) kuvattiin pääosin Helsingissä, ja Kaisaniemen puisto sai esittää Moskovan nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä lunta.
+
+### 32.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kaupunki:tampere) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tampere
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Tampere (kaupunki)
+Tietoruudun teksti: Tampere on Pohjoismaiden suurin sisämaakaupunki ja Suomen kolmanneksi väkirikkain: seudulla asuu noin 400 000 ihmistä. Kaupunki seisoo kannaksella Näsijärven ja Pyhäjärven välissä, ja järvien kahdeksantoista metrin korkeusero purkautuu keskustan halki Tammerkoskena. Kustaa III antoi kauppapaikalle kaupunkioikeudet 1779, mutta ratkaisevat olivat vasta vuoden 1821 vapaakaupunkioikeudet: tavaraa sai tuoda tullitta, ja tehtailijoiden kannatti tulla juuri tänne.
+
+Ensimmäisenä tuli skotlantilainen James Finlayson, joka rakensi kosken länsirannalle konepajan 1820. Uudet omistajat käänsivät sen puuvillatehtaaksi, joka työllisti vuosisadan lopulla tuhansia, enimmäkseen naisia ja lapsia. Verkatehtaat, paperitehdas ja konepajat seurasivat, ja kaupungille vakiintui liikanimi Pohjolan Manchester.
+
+Tehtaat ovat siirtyneet muualle, mutta punatiiliset rakennukset jäivät paikoilleen museoiksi ja ravinto…
+Isoisän matkakirjamerkintä: Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani lanka katkesi heti; hän sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös sormet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Tampere] Kaupunki kahden järven välissä, kosken molemmin puolin. Punatiiliset tehdassalit ovat nyt museoita ja elokuvateattereita, mutta koski kohisee niiden seinustalla entiseen tapaan.
+
+### 33.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kaupunki:lappi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rovaniemi
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Pelaaja katsoo kartalla: Rovaniemi (kaupunki)
+Tietoruudun teksti: Rovaniemi on Lapin maakuntakeskus siinä, missä Ounasjoki laskee Kemijokeen kahdeksan kilometriä napapiirin eteläpuolella. Asukkaita on noin 65 000 ja pinta-alaa runsaat 8 000 neliökilometriä, mikä tekee siitä pinta-alaltaan Euroopan suurimpia kaupunkeja — enemmän maata kuin monella pikkuvaltiolla. Jokien risteys oli kauppapaikka kauan ennen kuin täällä oli kaupunkia: pohjoisesta tultiin Ounasjokea, merelle päästiin Kemijokea. Markkinapaikasta tuli kunta 1929 ja kauppala 1938.
+
+Lokakuussa 1944 vetäytyvät saksalaisjoukot polttivat Rovaniemen, ja rakennuksista tuhoutui yhdeksänkymmentä prosenttia. Jälleenrakennuskaavan laati 1946 Alvar Aalto: pääkadut piirtävät kartalle poronsarvet, ja urheilukenttä jää sarvien väliin kuin silmä.
+
+Napapiiri on kaupungin tunnetuin viiva. Sen pohjoispuolella aurinko ei laske keskikesällä eikä nouse keskitalvella, ja Rovaniemellä yötön yö kestää runsaan kuuka…
+Isoisän matkakirjamerkintä: Rovaniemellä Ounasjoki liittyi Kemijokeen kuin matkustaja suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä ne olivat teitä. Veneeseen astuva nainen löysi seuraavan talon savusta, ei kartasta. Lisäsin talon ja jätin savulle tilaa nousta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Historian hetki: Rovaniemi 1909 — ensimmäinen juna] 1909 — Poika seisoo isänsä käden varassa laiturilla ja tuntee maan tärisevän jalkojensa alla ennen kuin näkee mitään — sitten savupilvi ilmestyy metsän takaa ja ääni kasvaa jyskeeksi, jota kukaan paikalla ei ole ennen kuullut näin läheltä. Rovaniemi on ollut vuosisatoja markkinapaikka joen varrella, tavoitettavissa veneellä, reellä ja jo vuonna 1839 valmistunutta maantietä pitkin, mutta rautatie Kemistä pohjoiseen valmistuu 1909 ja tuo veturin puuvarikon läpi ensimmäistä kertaa. Koko kylä on kokoontunut laiturille katsomaan, ja moni koskettaa vaunun kylmää metalliseinää kuin varmistaakseen, että se on totta. Yhtäkkiä Lappi ei ole enää matkan päässä muusta Suomesta — se on rautatien päässä. …
+
+### 34.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (maa:FRA) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Pelaaja katsoo kartalla: Ranska (maa)
+Tietoruudun teksti: Ranska on Länsi-Euroopan suurin maa pinta-alaltaan ja yksi sen väkirikkaimmista. Se ulottuu Pohjanmereltä Välimerelle ja Alpeilta Atlantille.
+
+Kartalla maan muoto näkyy heti: pohjoisessa ja lännessä on laakeaa maata ja pitkiä rannikoita, idässä ja etelässä kohoavat vuoret. Alpit nousevat itärajalla, Pyreneet piirtävät etelärajan kuin muuri, ja keskellä kohoaa oma ylänkönsä, Massif Central. Kaukana Välimerellä on vielä vuorinen Korsika.
+
+Vuoden 1789 vallankumouksesta jäivät ajatukset kansalaisuudesta ja tasavallasta sekä tunnuslause vapaus, veljeys ja tasa-arvo, joka on yhä kirjoitettuna joka kunnantalon seinään. Valtio on perinteisesti keskitetty: Pariisi päättää paljon. Eikä Ranska lopu kartan reunaan — sillä on osia myös Etelä-Amerikassa, Karibialla ja Intian valtamerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Kaupunki jonka Ranska perusti] São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.
+
+### 35.1
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.2
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

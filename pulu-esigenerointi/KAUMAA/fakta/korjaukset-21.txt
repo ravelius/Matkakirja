@@ -1,0 +1,71 @@
+### v2-1250
+VANHA: 280 metrin yhtenäisen jännevälin, joka
+UUSI: hyvin pitkän yhtenäisen jännevälin, joka
+SYY: epävarma luku (lähteissä eri mittoja)
+
+### v2-1250
+VANHA: , ja kolmen ensimmäisen päivän jälkeen ylitys oli maksullinen
+UUSI:
+SYY: epävarma yksityiskohta
+
+### v2-1258
+VANHA: 300-luvulla eaa.; siitä on säilynyt muun muassa läntisen pylväshallin korinttilaisia pylväitä
+UUSI: 300-luvulla eaa.; nykyiset rauniot ovat pääosin roomalaisajalta, ja niistä erottuu muun muassa läntisen pylväshallin korinttilaisia pylväitä
+SYY: anakronismi, säilyneet rakenteet ovat roomalaisaikaisia
+
+### v2-1274
+VANHA: , ja kuuden pylvään paikat erottuvat yhä
+UUSI:
+SYY: epävarma yksityiskohta
+
+### v2-1280
+VANHA: ylängön itäosassa sijaitsee [[Kappadokia]]
+UUSI: ylängön keskiosassa sijaitsee [[Kappadokia]]
+SYY: sijainti
+
+### v2-1282
+VANHA: kerrosmäärästä esitetään eri lukuja, yleensä viisi.
+UUSI: kerrosmäärästä esitetään eri lukuja.
+SYY: epävarma luku
+
+### v2-1292
+VANHA: kertoo kaupungin olleen silloin nimeltään [[Venessa]] ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki
+UUSI: kertoo kaupungin olleen silloin nimeltään [[Venessa]]
+SYY: epävarma väite
+
+### v2-1293
+VANHA: Neljäsosa maailman mustasta mullasta on Ukrainassa
+UUSI: Lähteiden mukaan noin neljäsosa maailman mustasta mullasta on Ukrainassa
+SYY: epävarma luku
+
+### v2-1303
+VANHA: Kistkalla tehdään kaikki [[pysankojen]] vahakuviot.
+UUSI: Kistkalla tehdään perinteisesti [[pysankojen]] vahakuviot.
+SYY: liioittelu
+
+### v2-1311
+VANHA: Se oli maailman syvin metroasema vuoteen 2022 asti, jolloin Kiinassa Chongqingiin avattiin 116 metrin syvyyteen ulottuva asema.
+UUSI: Se on yksi maailman syvimmistä metroasemista.
+SYY: vahvistamaton väite (Chongqingin asema)
+
+### v2-1315
+VANHA: toimi lähes viisisataa vuotta sekä
+UUSI: toimi vuosisatoja sekä
+SYY: epävarma luku
+
+### v2-1315
+VANHA: oli noin 12 metriä korkea ja 6 metriä leveä
+UUSI: oli noin 12 metriä korkea
+SYY: epävarma luku
+
+### v2-1322
+VANHA: ulottuu syvimmillään noin 60 metriä merenpinnan alapuolelle
+UUSI: ulottuu syvimmillään noin 60 metrin syvyyteen
+SYY: väärä vertailutaso
+
+### v2-1326
+VANHA: mutta 1990-luvulla se palasi
+UUSI: mutta myöhemmin se palasi
+SYY: epävarma vuosiluku
+
+LOPPU: tarkistettu 84 vastausta, korjauksia 14

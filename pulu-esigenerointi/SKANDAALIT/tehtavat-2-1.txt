@@ -1,0 +1,690 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mona Lisan varkaus
+Tietoruudun teksti: Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa päivää. Varas odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta lopullisen maailmanmaineensa. Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä. Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon mieheksi. Varkaus h…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä juttu. [[Vincenzo Peruggia]] oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä, joten hän tunsi talon ja tiesi, miten taulun suojakotelo avataan. Maanantaina 21. elokuuta 1911 hän astui museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa, ja päivä oli kesäkauden sulkupäivä, jolloin talo oli tyhjä. [[Salon Carrésta]] hän nosti taulun seinältä, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon työntekijäksi. Varkaus huomattiin vasta seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän seinän [[Louvressa]]. Työtakki päällä vaan kävelemään, ja minä kun luulin kyyhkyjen olevan se huomaamaton osapuoli.
+KYSYMYS: Kerro lisää: Vincenzo Peruggia
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mona Lisan varkaus
+Tietoruudun teksti: Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa päivää. Varas odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta lopullisen maailmanmaineensa. Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä. Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon mieheksi. Varkaus h…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä juttu. [[Vincenzo Peruggia]] oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä, joten hän tunsi talon ja tiesi, miten taulun suojakotelo avataan. Maanantaina 21. elokuuta 1911 hän astui museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa, ja päivä oli kesäkauden sulkupäivä, jolloin talo oli tyhjä. [[Salon Carrésta]] hän nosti taulun seinältä, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon työntekijäksi. Varkaus huomattiin vasta seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän seinän [[Louvressa]]. Työtakki päällä vaan kävelemään, ja minä kun luulin kyyhkyjen olevan se huomaamaton osapuoli.
+KYSYMYS: Kerro lisää: Salon Carrésta
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mona Lisan varkaus
+Tietoruudun teksti: Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa päivää. Varas odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta lopullisen maailmanmaineensa. Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä. Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon mieheksi. Varkaus h…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+- [Pariisi — kohdekartta / Kohdekartta: Louvre] 1793 Louvre ei ollut alun perin museo vaan linnoitus: kuningas Filip II rakennutti sen 1100-luvun lopulla puolustamaan Pariisia. Vuosisatojen kuluessa siitä tehtiin kuninkaallinen palatsi, kunnes Ranskan vallankumouksen jälkeen se avattiin kaikille kansalaisille museona elokuussa 1793. Nykyään Louvressa on esillä noin 35 000 taideteosta, ja koko kokoelmassa on peräti 500 000 esinettä. Museo on maailman suurin, ja sen käytävät ovat kilometrien mittaiset. Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: arkkitehti I. M. Pein suunnittelema lasinen pyramidi, josta tuli museon pääsisäänkäynti. Aluksi moni pariisilainen paheksui lasirakennelmaa vanhan palatsin edessä, mutta siitä tuli pia…
+AIEMPI KYSYMYS: Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl hyvä juttu. [[Vincenzo Peruggia]] oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä, joten hän tunsi talon ja tiesi, miten taulun suojakotelo avataan. Maanantaina 21. elokuuta 1911 hän astui museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa, ja päivä oli kesäkauden sulkupäivä, jolloin talo oli tyhjä. [[Salon Carrésta]] hän nosti taulun seinältä, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon työntekijäksi. Varkaus huomattiin vasta seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän seinän [[Louvressa]]. Työtakki päällä vaan kävelemään, ja minä kun luulin kyyhkyjen olevan se huomaamaton osapuoli.
+KYSYMYS: Kerro lisää: Louvressa
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mona Lisan varkaus
+Tietoruudun teksti: Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa päivää. Varas odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta lopullisen maailmanmaineensa. Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä. Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon mieheksi. Varkaus h…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Kuvataide: Ruhtinaan oma käytävä] Kun Cosimo I muutti hovinsa joen eteläpuolelle Pitti-palatsiin, hän ei halunnut kulkea kaduilla kansan seassa. Giorgio Vasari rakennutti vuonna 1565 katetun käytävän, joka lähtee Palazzo Vecchiosta, kulkee Uffizin läpi, ylittää Arnon Ponte Vecchion kauppojen katon päällä ja päättyy Pitti-palatsiin. Matkaa on noin kilometri. Juuri tämän käytävän takia sillan teurastajat karkotettiin 1593: haju nousi ikkunoihin.
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Varkaus nosti taulun uutisaiheeksi, ja juuri se teki siitä maailmankuulun. Etsintä oli valtava ja hämmästyttävän huono, joten juttua seurattiin lehdissä kaksi vuotta, ja Louvreen tultiin katsomaan pelkkää tyhjää seinää. Kun Peruggia vei taulun Firenzeen ja [[Uffizin]] johtaja [[Giovanni Poggi]] tunnisti sen, kohu jatkui: taulu kiersi ensin näyttelyissä Italiassa ja palasi [[Louvreen]] 4. tammikuuta 1914. Varkaus ja löytyminen yhdessä tekivät siitä tunnetun kaikkialla, ei vain taidepiireissä. Parempi mainos ku mikään, vaikka rosvo ei sitä suunnitellut.
+KYSYMYS: Kerro lisää: Uffizin
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mona Lisan varkaus
+Tietoruudun teksti: Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa päivää. Varas odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta lopullisen maailmanmaineensa. Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä. Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon mieheksi. Varkaus h…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Poggin terassi] Kun hovi tuli, kaupunki oli väärän kokoinen. Firenzen ympärillä seisoivat yhä keskiaikaiset muurit, sisällä oli kujia ja puutarhoja, ja ulkopuolella alkoi heti toinen kunta. Kaupunki tilasi arkkitehti Giuseppe Poggilta laajennussuunnitelman, ja hän luovutti sen 18. helmikuuta 1865 — kaksi viikkoa sen jälkeen, kun kuningas oli saapunut. Työt alkoivat saman vuoden toukokuussa ja kestivät viisi vuotta. Muurit purettiin joen pohjoispuolelta, ja niiden tilalle vedettiin leveät puurivistöiset bulevardit Pariisin malliin; vanhojen kaupunginporttien kohdille avattiin isot aukiot. Joen eteläpuolelle raivattiin kahdeksan kilometrin panoraamatie, viale dei Colli, ja sen päätteeksi kukkulalle tehtiin v…
+AIEMPI KYSYMYS: Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Varkaus nosti taulun uutisaiheeksi, ja juuri se teki siitä maailmankuulun. Etsintä oli valtava ja hämmästyttävän huono, joten juttua seurattiin lehdissä kaksi vuotta, ja Louvreen tultiin katsomaan pelkkää tyhjää seinää. Kun Peruggia vei taulun Firenzeen ja [[Uffizin]] johtaja [[Giovanni Poggi]] tunnisti sen, kohu jatkui: taulu kiersi ensin näyttelyissä Italiassa ja palasi [[Louvreen]] 4. tammikuuta 1914. Varkaus ja löytyminen yhdessä tekivät siitä tunnetun kaikkialla, ei vain taidepiireissä. Parempi mainos ku mikään, vaikka rosvo ei sitä suunnitellut.
+KYSYMYS: Kerro lisää: Giovanni Poggi
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Mona Lisan varkaus
+Tietoruudun teksti: Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa päivää. Varas odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta lopullisen maailmanmaineensa. Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä. Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka putkimies avasi luullen häntä museon mieheksi. Varkaus h…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Louvre] 1793 Louvre ei ollut alun perin museo vaan linnoitus: kuningas Filip II rakennutti sen 1100-luvun lopulla puolustamaan Pariisia. Vuosisatojen kuluessa siitä tehtiin kuninkaallinen palatsi, kunnes Ranskan vallankumouksen jälkeen se avattiin kaikille kansalaisille museona elokuussa 1793. Nykyään Louvressa on esillä noin 35 000 taideteosta, ja koko kokoelmassa on peräti 500 000 esinettä. Museo on maailman suurin, ja sen käytävät ovat kilometrien mittaiset. Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: arkkitehti I. M. Pein suunnittelema lasinen pyramidi, josta tuli museon pääsisäänkäynti. Aluksi moni pariisilainen paheksui lasirakennelmaa vanhan palatsin edessä, mutta siitä tuli pia…
+AIEMPI KYSYMYS: Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Varkaus nosti taulun uutisaiheeksi, ja juuri se teki siitä maailmankuulun. Etsintä oli valtava ja hämmästyttävän huono, joten juttua seurattiin lehdissä kaksi vuotta, ja Louvreen tultiin katsomaan pelkkää tyhjää seinää. Kun Peruggia vei taulun Firenzeen ja [[Uffizin]] johtaja [[Giovanni Poggi]] tunnisti sen, kohu jatkui: taulu kiersi ensin näyttelyissä Italiassa ja palasi [[Louvreen]] 4. tammikuuta 1914. Varkaus ja löytyminen yhdessä tekivät siitä tunnetun kaikkialla, ei vain taidepiireissä. Parempi mainos ku mikään, vaikka rosvo ei sitä suunnitellut.
+KYSYMYS: Kerro lisää: Louvreen
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vrain-Lucasin 27 000 väärennettyä kirjettä
+Tietoruudun teksti: Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut. Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki aikakauden mukaista paperia, valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta. Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles halusi lisää. Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja a…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historia: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet] Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt. Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 ma…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää oli kyl taitava huijari. Denis Vrain-Lucas hankki aikakauden mukaista paperia ja valmisti musteensa itse. Kirjeiden yksityiskohdat hän keräsi [[keisarillisesta kirjastosta]], jotta sisältö kuulostaisi uskottavalta, ja kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi vesileimatulle paperille. Menestys nojasi kuitenkin yhtä paljon ostajaan: matemaatikko ja keräilijä [[Michel Chasles]] halusi uskoa kirjeisiin, joissa [[Blaise Pascal]] ilmoitti keksineensä painovoiman lait ennen Newtonia. Vasta kun Chasles vei kirjeet [[tiedeakatemialle]] vuonna 1867, käsiala ja ajankuvaan sopimattomat yksityiskohdat alkoivat paljastaa väärennökset. Musteen keittäminen itse, siin on omistautumista.
+KYSYMYS: Kerro lisää: keisarillisesta kirjastosta
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vrain-Lucasin 27 000 väärennettyä kirjettä
+Tietoruudun teksti: Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut. Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki aikakauden mukaista paperia, valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta. Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles halusi lisää. Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja a…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja ka…
+AIEMPI KYSYMYS: Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää oli kyl taitava huijari. Denis Vrain-Lucas hankki aikakauden mukaista paperia ja valmisti musteensa itse. Kirjeiden yksityiskohdat hän keräsi [[keisarillisesta kirjastosta]], jotta sisältö kuulostaisi uskottavalta, ja kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi vesileimatulle paperille. Menestys nojasi kuitenkin yhtä paljon ostajaan: matemaatikko ja keräilijä [[Michel Chasles]] halusi uskoa kirjeisiin, joissa [[Blaise Pascal]] ilmoitti keksineensä painovoiman lait ennen Newtonia. Vasta kun Chasles vei kirjeet [[tiedeakatemialle]] vuonna 1867, käsiala ja ajankuvaan sopimattomat yksityiskohdat alkoivat paljastaa väärennökset. Musteen keittäminen itse, siin on omistautumista.
+KYSYMYS: Kerro lisää: Michel Chasles
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vrain-Lucasin 27 000 väärennettyä kirjettä
+Tietoruudun teksti: Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut. Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki aikakauden mukaista paperia, valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta. Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles halusi lisää. Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja a…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja ka…
+AIEMPI KYSYMYS: Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää oli kyl taitava huijari. Denis Vrain-Lucas hankki aikakauden mukaista paperia ja valmisti musteensa itse. Kirjeiden yksityiskohdat hän keräsi [[keisarillisesta kirjastosta]], jotta sisältö kuulostaisi uskottavalta, ja kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi vesileimatulle paperille. Menestys nojasi kuitenkin yhtä paljon ostajaan: matemaatikko ja keräilijä [[Michel Chasles]] halusi uskoa kirjeisiin, joissa [[Blaise Pascal]] ilmoitti keksineensä painovoiman lait ennen Newtonia. Vasta kun Chasles vei kirjeet [[tiedeakatemialle]] vuonna 1867, käsiala ja ajankuvaan sopimattomat yksityiskohdat alkoivat paljastaa väärennökset. Musteen keittäminen itse, siin on omistautumista.
+KYSYMYS: Kerro lisää: Blaise Pascal
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vrain-Lucasin 27 000 väärennettyä kirjettä
+Tietoruudun teksti: Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut. Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki aikakauden mukaista paperia, valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta. Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles halusi lisää. Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja a…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja ka…
+AIEMPI KYSYMYS: Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää oli kyl taitava huijari. Denis Vrain-Lucas hankki aikakauden mukaista paperia ja valmisti musteensa itse. Kirjeiden yksityiskohdat hän keräsi [[keisarillisesta kirjastosta]], jotta sisältö kuulostaisi uskottavalta, ja kaikki kirjeet oli kirjoitettu 1800-luvun ranskaksi vesileimatulle paperille. Menestys nojasi kuitenkin yhtä paljon ostajaan: matemaatikko ja keräilijä [[Michel Chasles]] halusi uskoa kirjeisiin, joissa [[Blaise Pascal]] ilmoitti keksineensä painovoiman lait ennen Newtonia. Vasta kun Chasles vei kirjeet [[tiedeakatemialle]] vuonna 1867, käsiala ja ajankuvaan sopimattomat yksityiskohdat alkoivat paljastaa väärennökset. Musteen keittäminen itse, siin on omistautumista.
+KYSYMYS: Kerro lisää: tiedeakatemialle
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vrain-Lucasin 27 000 väärennettyä kirjettä
+Tietoruudun teksti: Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut. Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki aikakauden mukaista paperia, valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta. Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles halusi lisää. Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja a…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana] 1862 — Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jo…
+- [Pariisi — kohdekartta / Kohdekartta: Pasteur 1862] Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pöl…
+AIEMPI KYSYMYS: Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun [[tiedeakatemia]] huomautti anakronismeista eli ajankuvaan sopimattomista yksityiskohdista, Vrain-Lucas ei myöntänyt virheitään vaan väärensi lisää kirjeitä, joiden oli tarkoitus selittää edelliset. Jo silloin, kun [[Michel Chasles]] vei kirjeet akatemialle vuonna 1867, huomattiin, ettei käsiala vastannut [[Pascalin]] varmoja kirjeitä. Väittely jatkui vuoteen 1868, ja seuraavana vuonna väärentäjä pidätettiin. Helmikuussa 1870 Pariisin tuomioistuin antoi hänelle kaksi vuotta vankeutta ja 500 frangin sakon, eikä Chasles saanut rahojaan takaisin. Yksi valhe vaatii aina toisen, sen minäkin tiedän.
+KYSYMYS: Kerro lisää: tiedeakatemia
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vrain-Lucasin 27 000 väärennettyä kirjettä
+Tietoruudun teksti: Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut. Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, joka alkoi 1854 väärentää historiallisia asiakirjoja. Hän hankki aikakauden mukaista paperia, valmisti musteensa itse ja keräsi yksityiskohdat keisarillisesta kirjastosta. Vuonna 1861 hän myi matemaatikko ja keräilijä Michel Chaslesille Robert Boylen, Isaac Newtonin ja Blaise Pascalin kirjeitä. Yhdessä niistä Pascal ilmoitti keksineensä painovoiman lait ennen Newtonia. Ranskalaisen ensisijaisuus oli kaupan paras myyntipuhe, ja Chasles halusi lisää. Kuudentoista vuoden aikana Vrain-Lucas väärensi noin 27 000 kirjettä ja a…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja ka…
+AIEMPI KYSYMYS: Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun [[tiedeakatemia]] huomautti anakronismeista eli ajankuvaan sopimattomista yksityiskohdista, Vrain-Lucas ei myöntänyt virheitään vaan väärensi lisää kirjeitä, joiden oli tarkoitus selittää edelliset. Jo silloin, kun [[Michel Chasles]] vei kirjeet akatemialle vuonna 1867, huomattiin, ettei käsiala vastannut [[Pascalin]] varmoja kirjeitä. Väittely jatkui vuoteen 1868, ja seuraavana vuonna väärentäjä pidätettiin. Helmikuussa 1870 Pariisin tuomioistuin antoi hänelle kaksi vuotta vankeutta ja 500 frangin sakon, eikä Chasles saanut rahojaan takaisin. Yksi valhe vaatii aina toisen, sen minäkin tiedän.
+KYSYMYS: Kerro lisää: Pascalin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’
+Tietoruudun teksti: Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa. South Sea Company perustettiin tammikuussa 1711 hoitamaan Britannian valtionvelkaa: velkojat luovuttivat saatavansa yhtiölle ja saivat tilalle osakkeita, ja valtio maksoi yhtiölle vuosittain 568 279 puntaa. Kaupankäyntioikeus Etelä-Amerikkaan tuli kaupan päälle — alue oli Espanjan hallussa, jonka kanssa Britannia oli sodassa. Ainoa todellinen kauppaoikeus oli Utrechtin rauhan 1713 asiento: lupa kuljettaa orjuutettuja afrikkalaisia Espanjan siirtomaihin ja lähettää vuodessa yksi tavaralaiva. Sekään ei tuottanut voittoa. Ensimmäiset lastit jouduttiin myymään tappiolla, koska paikalliset viranomaiset eivät tunnustaneet sopimusta. Vuonna 1720 o…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Haaksirikko: Southampton 1912 — metri törmäyksestä] 10.4.1912 — Seitsemänvuotias Eva Hart nousee laivaan vanhempiensa kanssa, mutta hänen äitinsä Esther pelkää alusta niin paljon, ettei aio nukkua öisin koko matkan aikana. Matkustajat alkoivat saapua puoli kymmeneltä, kun Lontoon Waterloosta tullut laivajuna pysähtyi laiturille aivan Titanicin kylkeen; Southamptonista nousee kyytiin 920 matkustajaa, heistä 179 ensimmäiseen luokkaan, 247 toiseen ja 494 kolmanteen. Neitsytmatka alkaa keskipäivällä aikataulun mukaan — ja melkein päättyy heti, kun Titanicin syrjäyttämä vesi katkaisee kiinnitettynä makaavan New Yorkin köydet ja pienempi laiva kääntyy perä edellä sitä kohti. Kapteeni Smith käskee koneet täydelle taakse, hinaaja Vulcan saa köyden k…
+- [Buenos Aires — kohdekartta / Kohdekartta: Plaza San Martín] 1713–1878 Aukion paikalla asuivat aluksi siirtomaa-ajan espanjalaiset kuvernöörit. Vuonna 1713 maat myytiin brittiläiselle South Sea Companylle, joka kävi entisestä kuvernöörin talosta käsin orjakauppaa; lähelle rakennettiin myöhemmin linnake ja härkätaisteluareena. Vuonna 1807 tontilla kärsi tappion kenraali John Whitelocke, joka johti Britannian toista yritystä valloittaa Buenos Aires, ja alue sai siitä nimen Kunnian kenttä. Vuoden 1810 toukokuun vallankumous toi kaupungille oman hallituksen, joka antoi ratsuväen krenatöörirykmentin José de San Martínin komentoon ja salli hänen sijoittaa kasarminsa aukiolle. Vuonna 1813 annettu päätös lakkautti orjakaupan Río de la Platan yhdistyneissä pr…
+AIEMPI KYSYMYS: Miten yhtiö itse paisutti oman osakkeensa hintaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli se kuuluisa kupla. [[South Sea Companyn]] osakkeen hinta nousi vuonna 1720 noin sadasta punnasta lähes tuhanteen, ja yhtiö vauhditti nousua itse. Se osti omia osakkeitaan, lainasi ostajille rahaa samoja osakkeita vastaan ja lahjoi poliitikkoja, ja johtajat kävivät kauppaa etukäteistiedolla. Kesäkuussa säädetty [[Bubble Act]] kielsi osakeyhtiöiden perustamisen ilman kuninkaan lupaa, ja se nosti kurssia entisestään. Sen jälkeen kurssi romahti lähes liikkeeseenlaskuhintaan, ja [[parlamentin]] tutkinta nöyryytti joukon poliitikkoja. Kyl kuplat kiehtovat, kunhan ne pysyy kaukana omasta pesästä.
+KYSYMYS: Kerro lisää: South Sea Companyn
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’
+Tietoruudun teksti: Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa. South Sea Company perustettiin tammikuussa 1711 hoitamaan Britannian valtionvelkaa: velkojat luovuttivat saatavansa yhtiölle ja saivat tilalle osakkeita, ja valtio maksoi yhtiölle vuosittain 568 279 puntaa. Kaupankäyntioikeus Etelä-Amerikkaan tuli kaupan päälle — alue oli Espanjan hallussa, jonka kanssa Britannia oli sodassa. Ainoa todellinen kauppaoikeus oli Utrechtin rauhan 1713 asiento: lupa kuljettaa orjuutettuja afrikkalaisia Espanjan siirtomaihin ja lähettää vuodessa yksi tavaralaiva. Sekään ei tuottanut voittoa. Ensimmäiset lastit jouduttiin myymään tappiolla, koska paikalliset viranomaiset eivät tunnustaneet sopimusta. Vuonna 1720 o…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miten yhtiö itse paisutti oman osakkeensa hintaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli se kuuluisa kupla. [[South Sea Companyn]] osakkeen hinta nousi vuonna 1720 noin sadasta punnasta lähes tuhanteen, ja yhtiö vauhditti nousua itse. Se osti omia osakkeitaan, lainasi ostajille rahaa samoja osakkeita vastaan ja lahjoi poliitikkoja, ja johtajat kävivät kauppaa etukäteistiedolla. Kesäkuussa säädetty [[Bubble Act]] kielsi osakeyhtiöiden perustamisen ilman kuninkaan lupaa, ja se nosti kurssia entisestään. Sen jälkeen kurssi romahti lähes liikkeeseenlaskuhintaan, ja [[parlamentin]] tutkinta nöyryytti joukon poliitikkoja. Kyl kuplat kiehtovat, kunhan ne pysyy kaukana omasta pesästä.
+KYSYMYS: Kerro lisää: Bubble Act
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’
+Tietoruudun teksti: Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa. South Sea Company perustettiin tammikuussa 1711 hoitamaan Britannian valtionvelkaa: velkojat luovuttivat saatavansa yhtiölle ja saivat tilalle osakkeita, ja valtio maksoi yhtiölle vuosittain 568 279 puntaa. Kaupankäyntioikeus Etelä-Amerikkaan tuli kaupan päälle — alue oli Espanjan hallussa, jonka kanssa Britannia oli sodassa. Ainoa todellinen kauppaoikeus oli Utrechtin rauhan 1713 asiento: lupa kuljettaa orjuutettuja afrikkalaisia Espanjan siirtomaihin ja lähettää vuodessa yksi tavaralaiva. Sekään ei tuottanut voittoa. Ensimmäiset lastit jouduttiin myymään tappiolla, koska paikalliset viranomaiset eivät tunnustaneet sopimusta. Vuonna 1720 o…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Exchange Alley] Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+- [Iso-Britannia — maalehti / Historia: Rantakatu on viemärin katto] Kesällä 1858 Thames löyhkäsi niin pahasti, että parlamentin jokipuolen verhot kastettiin kalkkikloridiin ja edustajat puhuivat vakavissaan hallituksen siirtämisestä Oxfordiin tai St Albansiin. Laki uudesta viemäriverkosta säädettiin jo saman kesän elokuussa. Insinööri Joseph Bazalgette muurasi 318 miljoonasta tiilestä järjestelmän, joka vie jätevedet kaupungin ohi itään. Viemäri tarvitsi tilaa, joten jokeen rakennettiin uusi rantamuuri ja väli täytettiin maalla: noin yhdeksän hehtaaria eli 22 eekkeriä Thamesia muuttui kaduksi. Victoria Embankmentin leveä rantakatu on siis viemärin katto — ja saman penkereen sisällä kulkee myös metro.
+AIEMPI KYSYMYS: Miten yhtiö itse paisutti oman osakkeensa hintaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää oli se kuuluisa kupla. [[South Sea Companyn]] osakkeen hinta nousi vuonna 1720 noin sadasta punnasta lähes tuhanteen, ja yhtiö vauhditti nousua itse. Se osti omia osakkeitaan, lainasi ostajille rahaa samoja osakkeita vastaan ja lahjoi poliitikkoja, ja johtajat kävivät kauppaa etukäteistiedolla. Kesäkuussa säädetty [[Bubble Act]] kielsi osakeyhtiöiden perustamisen ilman kuninkaan lupaa, ja se nosti kurssia entisestään. Sen jälkeen kurssi romahti lähes liikkeeseenlaskuhintaan, ja [[parlamentin]] tutkinta nöyryytti joukon poliitikkoja. Kyl kuplat kiehtovat, kunhan ne pysyy kaukana omasta pesästä.
+KYSYMYS: Kerro lisää: parlamentin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’
+Tietoruudun teksti: Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa. South Sea Company perustettiin tammikuussa 1711 hoitamaan Britannian valtionvelkaa: velkojat luovuttivat saatavansa yhtiölle ja saivat tilalle osakkeita, ja valtio maksoi yhtiölle vuosittain 568 279 puntaa. Kaupankäyntioikeus Etelä-Amerikkaan tuli kaupan päälle — alue oli Espanjan hallussa, jonka kanssa Britannia oli sodassa. Ainoa todellinen kauppaoikeus oli Utrechtin rauhan 1713 asiento: lupa kuljettaa orjuutettuja afrikkalaisia Espanjan siirtomaihin ja lähettää vuodessa yksi tavaralaiva. Sekään ei tuottanut voittoa. Ensimmäiset lastit jouduttiin myymään tappiolla, koska paikalliset viranomaiset eivät tunnustaneet sopimusta. Vuonna 1720 o…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Hull House] 1889 Kiinteistömies Charles Jerald Hull rakennutti 1856 italialaistyylisen huvilan osoitteeseen 800 South Halsted Street. Kortteli oli silloin hienostoaluetta, mutta vuoteen 1889 mennessä se oli köyhtynyt, kun siirtolaisia oli muuttanut Near West Sidelle enemmän kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa kokeilulleen. Hull oli antanut talon serkulleen Helen Culverille, ja Culver luovutti sen Addamsille kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella. Addams ja Ellen Gates Starr perustivat Hull Housen 18. syyskuuta 1889 esikuvanaan Lontoon East Endin Toynbee Hall. Ajatus oli, että sivistyneet naiset muuttavat asumaan köyhään kaupunginosaan ja pitävät siellä samat kerhons…
+AIEMPI KYSYMYS: Mitä Etelämeren kuplasta jäi Lontooseen nykypäivään asti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lontooseen jäi ensinnäkin yhtiön konttorirakennuksen nimi: [[South Sea House]] -nimi seisoo yhä Threadneedle Streetin kulmassa. Yhtiö itse ei kadonnut, vaan se järjestettiin uusiksi ja jatkoi toimintaansa yli sadan vuoden ajan. Kilpailijan kaatuminen vahvisti [[Englannin Pankin]] asemaa valtion pankkiirina. Lisäksi kupla opetti Lontoolle sanan kupla hintojen paisumisesta ja romahduksesta, ja [[Bubble Act]] pysyi voimassa vuoteen 1825 asti. Rakennuksen nimi on säilynyt paremmin ku sijoittajien rahat.
+KYSYMYS: Kerro lisää: South Sea House
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’
+Tietoruudun teksti: Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa. South Sea Company perustettiin tammikuussa 1711 hoitamaan Britannian valtionvelkaa: velkojat luovuttivat saatavansa yhtiölle ja saivat tilalle osakkeita, ja valtio maksoi yhtiölle vuosittain 568 279 puntaa. Kaupankäyntioikeus Etelä-Amerikkaan tuli kaupan päälle — alue oli Espanjan hallussa, jonka kanssa Britannia oli sodassa. Ainoa todellinen kauppaoikeus oli Utrechtin rauhan 1713 asiento: lupa kuljettaa orjuutettuja afrikkalaisia Espanjan siirtomaihin ja lähettää vuodessa yksi tavaralaiva. Sekään ei tuottanut voittoa. Ensimmäiset lastit jouduttiin myymään tappiolla, koska paikalliset viranomaiset eivät tunnustaneet sopimusta. Vuonna 1720 o…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Palace Hotel] 1875–1909 Hotellin rakennutti pankkiiri William Chapman Ralston, ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. lokakuuta 1875, siinä oli 755 huonetta ja se oli Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen Grand Court, jonne vaunut ajoivat sisään ja jota ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. Hisseinä oli punapuupaneloituja hydraulisia ”nousuhuoneita”, ja joka huoneessa oli oma kylpyhuone ja sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä ollut — se avattiin kaksi vuotta myöhemmi…
+- [Toronto — kohdekartta / Kohdekartta: Jääkiekkomuseo] 1993 Museo perustettiin 1943, mutta ei Torontoon vaan Kingstoniin. Sen takana oli James T. Sutherland, Kanadan amatöörijääkiekkoliiton entinen puheenjohtaja, joka piti Kingstonia jääkiekon syntysijana. Yhdeksän ensimmäistä kunniajäsentä nimettiin 30. huhtikuuta 1945, vaikka museolla ei vielä ollut yhtään rakennusta. Sutherland kuoli 1955, eikä rahoja Kingstonin taloon ollut vuoteen 1958 mennessä saatu kokoon. NHL:n puheenjohtaja Clarence Campbell kyllästyi odottamaan ja veti liigan tuen pois. Väliaikainen näyttely avattiin Toronton Exhibition Placessa elokuussa 1958, ja sen näki saman vuoden messuilla 350 000 kävijää. Menestys ratkaisi asian: NHL maksoi pysyvän talon, jonka Kanadan pääminis…
+AIEMPI KYSYMYS: Mitä Etelämeren kuplasta jäi Lontooseen nykypäivään asti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lontooseen jäi ensinnäkin yhtiön konttorirakennuksen nimi: [[South Sea House]] -nimi seisoo yhä Threadneedle Streetin kulmassa. Yhtiö itse ei kadonnut, vaan se järjestettiin uusiksi ja jatkoi toimintaansa yli sadan vuoden ajan. Kilpailijan kaatuminen vahvisti [[Englannin Pankin]] asemaa valtion pankkiirina. Lisäksi kupla opetti Lontoolle sanan kupla hintojen paisumisesta ja romahduksesta, ja [[Bubble Act]] pysyi voimassa vuoteen 1825 asti. Rakennuksen nimi on säilynyt paremmin ku sijoittajien rahat.
+KYSYMYS: Kerro lisää: Englannin Pankin
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Historia: Kapinallinen saapuu laivalla] 1873 — Pariisin kommuunin kukistuttua 1871 Ranska tuomitsi tuhansia kommunardeja karkotukseen. Opettaja ja anarkisti Louise Michel nousi vankilaiva Virginien kyytiin elokuussa 1873, ja alus saapui Uuteen-Kaledoniaan neljän kuukauden purjehduksen jälkeen samana vuonna — samana vuonna, jona Foggin isoisä teki oman matkansa. Michel asettui Ducosin niemelle muiden kommunardien joukkoon, opetti lukemaan kanakilapsia ja opiskeli paikallista kasvistoa ja kieliä. Vuonna 1878 hän asettui julkisesti kanakikapinallisten puolelle heidän noustessaan ranskalaista maanhimoa vastaan. Michel armahdettiin ja palasi Ranskaan vasta 1880.
+- [Nouméa — kaupunkilehti / Nouméa] Nouméa syntyi rangaistussiirtolana Uuden-Kaledonian niemelle 1854, ja isoisän matkan aikaan 1873 kaupunki eli vankityön, kommunardien ja vasta löydetyn nikkelin murroksessa. Sivut kertovat sen ensimmäiset vuosikymmenet.
+AIEMPI KYSYMYS: Mitä isoisä näki, kun hän kulki palatsin raunioiden ohi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Isoisä näki rakennuksen rungon: palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä, ja tyhjät ikkuna-aukot erottuivat taivasta vasten. Raunioiden olisi voinut korjata, kuten [[kommunardien]] polttama kaupungintalo rakennettiin uudelleen ja vihittiin käyttöön 1882, mutta Tuileriat jäivät paikoilleen [[Louvren]] länsipäähän yksitoista vuotta. Purkupäätöksen teki vuonna 1882 [[kolmas tasavalta]], vaikka vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kommunardien
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Mitä isoisä näki, kun hän kulki palatsin raunioiden ohi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Isoisä näki rakennuksen rungon: palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä, ja tyhjät ikkuna-aukot erottuivat taivasta vasten. Raunioiden olisi voinut korjata, kuten [[kommunardien]] polttama kaupungintalo rakennettiin uudelleen ja vihittiin käyttöön 1882, mutta Tuileriat jäivät paikoilleen [[Louvren]] länsipäähän yksitoista vuotta. Purkupäätöksen teki vuonna 1882 [[kolmas tasavalta]], vaikka vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Louvren
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileries'n palatsi] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Mitä isoisä näki, kun hän kulki palatsin raunioiden ohi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Isoisä näki rakennuksen rungon: palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä, ja tyhjät ikkuna-aukot erottuivat taivasta vasten. Raunioiden olisi voinut korjata, kuten [[kommunardien]] polttama kaupungintalo rakennettiin uudelleen ja vihittiin käyttöön 1882, mutta Tuileriat jäivät paikoilleen [[Louvren]] länsipäähän yksitoista vuotta. Purkupäätöksen teki vuonna 1882 [[kolmas tasavalta]], vaikka vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kolmas tasavalta
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileries'n palatsi] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Minne puretun palatsin kivet ja palat päätyivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Purkamisen jälkeen palatsi levisi ympäri maailmaa. Yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle [[Ajaccion]] lähelle [[Château de la Punta]]. Keskuspaviljongin päätykolmio seisoo Pariisissa [[Square Georges Cainissa]], ja paloja on Louvressa, [[Trocadéron puutarhassa]], Berliinissä, Italian [[Bordigherassa]] ja Quiton presidentinpalatsissa asti. Palatsi lensi ympäri maailmaa, ihan kuin minäkin, mutta palasina.
+KYSYMYS: Kerro lisää: Ajaccion
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileries'n palatsi] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Minne puretun palatsin kivet ja palat päätyivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Purkamisen jälkeen palatsi levisi ympäri maailmaa. Yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle [[Ajaccion]] lähelle [[Château de la Punta]]. Keskuspaviljongin päätykolmio seisoo Pariisissa [[Square Georges Cainissa]], ja paloja on Louvressa, [[Trocadéron puutarhassa]], Berliinissä, Italian [[Bordigherassa]] ja Quiton presidentinpalatsissa asti. Palatsi lensi ympäri maailmaa, ihan kuin minäkin, mutta palasina.
+KYSYMYS: Kerro lisää: Château de la Punta
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileries'n palatsi] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Minne puretun palatsin kivet ja palat päätyivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Purkamisen jälkeen palatsi levisi ympäri maailmaa. Yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle [[Ajaccion]] lähelle [[Château de la Punta]]. Keskuspaviljongin päätykolmio seisoo Pariisissa [[Square Georges Cainissa]], ja paloja on Louvressa, [[Trocadéron puutarhassa]], Berliinissä, Italian [[Bordigherassa]] ja Quiton presidentinpalatsissa asti. Palatsi lensi ympäri maailmaa, ihan kuin minäkin, mutta palasina.
+KYSYMYS: Kerro lisää: Square Georges Cainissa
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Minne puretun palatsin kivet ja palat päätyivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Purkamisen jälkeen palatsi levisi ympäri maailmaa. Yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle [[Ajaccion]] lähelle [[Château de la Punta]]. Keskuspaviljongin päätykolmio seisoo Pariisissa [[Square Georges Cainissa]], ja paloja on Louvressa, [[Trocadéron puutarhassa]], Berliinissä, Italian [[Bordigherassa]] ja Quiton presidentinpalatsissa asti. Palatsi lensi ympäri maailmaa, ihan kuin minäkin, mutta palasina.
+KYSYMYS: Kerro lisää: Trocadéron puutarhassa
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuileriain rauniot
+Tietoruudun teksti: Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa Square Georges Cainissa, ja paloja on …
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Tuileriain rauniot] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+- [Pariisi — kohdekartta / Kohdekartta: Tuileries'n palatsi] Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä Achille Picart…
+AIEMPI KYSYMYS: Minne puretun palatsin kivet ja palat päätyivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Purkamisen jälkeen palatsi levisi ympäri maailmaa. Yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja osista rakennettiin Korsikalle [[Ajaccion]] lähelle [[Château de la Punta]]. Keskuspaviljongin päätykolmio seisoo Pariisissa [[Square Georges Cainissa]], ja paloja on Louvressa, [[Trocadéron puutarhassa]], Berliinissä, Italian [[Bordigherassa]] ja Quiton presidentinpalatsissa asti. Palatsi lensi ympäri maailmaa, ihan kuin minäkin, mutta palasina.
+KYSYMYS: Kerro lisää: Bordigherassa
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piiritetyn Pariisin kyyhkyposti
+Tietoruudun teksti: Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole t…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Piiritetyn Pariisin kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+- [Pariisi — kohdekartta / Kohdekartta: Kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+AIEMPI KYSYMYS: Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Meikäläisille tää on vähän henkilökohtainen asia. Kun [[preussilaiset]] sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivänä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivänä. Kaupunkiin päin ei siten ollut enää toimivaa lennätinyhteyttä, ja ainoaksi reitiksi jäi kirjekyyhky. Kyyhkyt vietiin ensin kaupungista ulos [[ilmapalloilla]], ja kun ne lensivät takaisin kotikaupunkiinsa, ne toivat mukanaan viestejä ulkomaailmasta. Jotta yksi lintu jaksoi viedä mahdollisimman paljon, valokuvaaja [[René Dagron]] pienensi viestit [[mikrofilmillä]], ja yksi kyyhky saattoi kantaa jopa kaksikymmentä filmiä pyrstösulkiin sidotussa putkessa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: preussilaiset
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piiritetyn Pariisin kyyhkyposti
+Tietoruudun teksti: Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole t…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Piiritetyn Pariisin kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+- [Pariisi — kohdekartta / Kohdekartta: Kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+AIEMPI KYSYMYS: Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Meikäläisille tää on vähän henkilökohtainen asia. Kun [[preussilaiset]] sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivänä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivänä. Kaupunkiin päin ei siten ollut enää toimivaa lennätinyhteyttä, ja ainoaksi reitiksi jäi kirjekyyhky. Kyyhkyt vietiin ensin kaupungista ulos [[ilmapalloilla]], ja kun ne lensivät takaisin kotikaupunkiinsa, ne toivat mukanaan viestejä ulkomaailmasta. Jotta yksi lintu jaksoi viedä mahdollisimman paljon, valokuvaaja [[René Dagron]] pienensi viestit [[mikrofilmillä]], ja yksi kyyhky saattoi kantaa jopa kaksikymmentä filmiä pyrstösulkiin sidotussa putkessa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ilmapalloilla
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piiritetyn Pariisin kyyhkyposti
+Tietoruudun teksti: Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole t…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Piiritetyn Pariisin kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+- [Pariisi — kohdekartta / Kohdekartta: Kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+AIEMPI KYSYMYS: Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Meikäläisille tää on vähän henkilökohtainen asia. Kun [[preussilaiset]] sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivänä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivänä. Kaupunkiin päin ei siten ollut enää toimivaa lennätinyhteyttä, ja ainoaksi reitiksi jäi kirjekyyhky. Kyyhkyt vietiin ensin kaupungista ulos [[ilmapalloilla]], ja kun ne lensivät takaisin kotikaupunkiinsa, ne toivat mukanaan viestejä ulkomaailmasta. Jotta yksi lintu jaksoi viedä mahdollisimman paljon, valokuvaaja [[René Dagron]] pienensi viestit [[mikrofilmillä]], ja yksi kyyhky saattoi kantaa jopa kaksikymmentä filmiä pyrstösulkiin sidotussa putkessa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: René Dagron
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piiritetyn Pariisin kyyhkyposti
+Tietoruudun teksti: Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole t…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+AIEMPI KYSYMYS: Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Meikäläisille tää on vähän henkilökohtainen asia. Kun [[preussilaiset]] sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivänä, ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivänä. Kaupunkiin päin ei siten ollut enää toimivaa lennätinyhteyttä, ja ainoaksi reitiksi jäi kirjekyyhky. Kyyhkyt vietiin ensin kaupungista ulos [[ilmapalloilla]], ja kun ne lensivät takaisin kotikaupunkiinsa, ne toivat mukanaan viestejä ulkomaailmasta. Jotta yksi lintu jaksoi viedä mahdollisimman paljon, valokuvaaja [[René Dagron]] pienensi viestit [[mikrofilmillä]], ja yksi kyyhky saattoi kantaa jopa kaksikymmentä filmiä pyrstösulkiin sidotussa putkessa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: mikrofilmillä
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piiritetyn Pariisin kyyhkyposti
+Tietoruudun teksti: Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole t…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Piiritetyn Pariisin kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+- [Pariisi — kohdekartta / Kohdekartta: Kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+AIEMPI KYSYMYS: Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on oikeasti aika nokkela juttu. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin [[taikalyhdyllä]] seinälle, jolloin viestit näkyivät suurennettuina. Seinältä ne kirjoitettiin käsin puhtaaksi, ja puhtaaksikirjoitetut viestit toimitettiin vastaanottajille. Valokuvaaja [[René Dagron]] oli pienentänyt viestit niin, että kuvat olivat yli nelikymmenkertaisesti alkuperäistä pienempiä, ja yksi filmi painoi vain noin viisi sadasosagrammaa. Matka ei ollut riskitön, sillä saksalaiset kouluttivat [[haukkoja]] pysäyttämään kyyhkyjä. Tää oli kyl kunnon pikkutarkkaa työtä.
+KYSYMYS: Kerro lisää: taikalyhdyllä
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piiritetyn Pariisin kyyhkyposti
+Tietoruudun teksti: Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin taikalyhdyllä seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole t…
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Piiritetyn Pariisin kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+- [Pariisi — kohdekartta / Kohdekartta: Kyyhkyposti] Sallitko, että kerron erään sukuni työsuorituksen. Kun preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron sai kuvat pienenemään yli nelikymmenkertaisesti; yksi filmi painoi noin viisi sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin sidotussa putkessa. P…
+AIEMPI KYSYMYS: Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on oikeasti aika nokkela juttu. Perillä filmi asetettiin kahden lasilevyn väliin ja heijastettiin [[taikalyhdyllä]] seinälle, jolloin viestit näkyivät suurennettuina. Seinältä ne kirjoitettiin käsin puhtaaksi, ja puhtaaksikirjoitetut viestit toimitettiin vastaanottajille. Valokuvaaja [[René Dagron]] oli pienentänyt viestit niin, että kuvat olivat yli nelikymmenkertaisesti alkuperäistä pienempiä, ja yksi filmi painoi vain noin viisi sadasosagrammaa. Matka ei ollut riskitön, sillä saksalaiset kouluttivat [[haukkoja]] pysäyttämään kyyhkyjä. Tää oli kyl kunnon pikkutarkkaa työtä.
+KYSYMYS: Kerro lisää: haukkoja
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Nimi, joka oli alun perin pilkkaa] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+AIEMPI KYSYMYS: Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on kyl hyvä kysymys. Pariisissa 1800-luvun taide-elämää hallitsi virallinen [[Salon]], jonka raati valitsi, mitkä teokset pääsivät esille. Sieltä hylätty maalari jäi ilman yleisöä, koska muita merkittäviä näyttelytilaisuuksia oli vähän: hylättyjen oma näyttely anottiin turhaan sekä 1867 että 1872. Vasta joulukuussa 1873, kaksi kuukautta isoisäsi käynnin jälkeen, [[Monet]], [[Renoir]], [[Pissarro]], Sisley, Berthe Morisot, Degas ja muut perustivat oman yhdistyksen esittääkseen työnsä itse. Siitä alkoi taiteilijoiden oma tie, ja Salonista luopuminen oli jäseniltä odotettu askel. Ei se taiteilijan elämä silloin helppoa ollu.
+KYSYMYS: Kerro lisää: Salon
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on kyl hyvä kysymys. Pariisissa 1800-luvun taide-elämää hallitsi virallinen [[Salon]], jonka raati valitsi, mitkä teokset pääsivät esille. Sieltä hylätty maalari jäi ilman yleisöä, koska muita merkittäviä näyttelytilaisuuksia oli vähän: hylättyjen oma näyttely anottiin turhaan sekä 1867 että 1872. Vasta joulukuussa 1873, kaksi kuukautta isoisäsi käynnin jälkeen, [[Monet]], [[Renoir]], [[Pissarro]], Sisley, Berthe Morisot, Degas ja muut perustivat oman yhdistyksen esittääkseen työnsä itse. Siitä alkoi taiteilijoiden oma tie, ja Salonista luopuminen oli jäseniltä odotettu askel. Ei se taiteilijan elämä silloin helppoa ollu.
+KYSYMYS: Kerro lisää: Monet
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Nimi, joka oli alun perin pilkkaa] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+AIEMPI KYSYMYS: Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on kyl hyvä kysymys. Pariisissa 1800-luvun taide-elämää hallitsi virallinen [[Salon]], jonka raati valitsi, mitkä teokset pääsivät esille. Sieltä hylätty maalari jäi ilman yleisöä, koska muita merkittäviä näyttelytilaisuuksia oli vähän: hylättyjen oma näyttely anottiin turhaan sekä 1867 että 1872. Vasta joulukuussa 1873, kaksi kuukautta isoisäsi käynnin jälkeen, [[Monet]], [[Renoir]], [[Pissarro]], Sisley, Berthe Morisot, Degas ja muut perustivat oman yhdistyksen esittääkseen työnsä itse. Siitä alkoi taiteilijoiden oma tie, ja Salonista luopuminen oli jäseniltä odotettu askel. Ei se taiteilijan elämä silloin helppoa ollu.
+KYSYMYS: Kerro lisää: Renoir
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Nimi, joka oli alun perin pilkkaa] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+AIEMPI KYSYMYS: Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on kyl hyvä kysymys. Pariisissa 1800-luvun taide-elämää hallitsi virallinen [[Salon]], jonka raati valitsi, mitkä teokset pääsivät esille. Sieltä hylätty maalari jäi ilman yleisöä, koska muita merkittäviä näyttelytilaisuuksia oli vähän: hylättyjen oma näyttely anottiin turhaan sekä 1867 että 1872. Vasta joulukuussa 1873, kaksi kuukautta isoisäsi käynnin jälkeen, [[Monet]], [[Renoir]], [[Pissarro]], Sisley, Berthe Morisot, Degas ja muut perustivat oman yhdistyksen esittääkseen työnsä itse. Siitä alkoi taiteilijoiden oma tie, ja Salonista luopuminen oli jäseniltä odotettu askel. Ei se taiteilijan elämä silloin helppoa ollu.
+KYSYMYS: Kerro lisää: Pissarro
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Nimi, joka oli alun perin pilkkaa] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+AIEMPI KYSYMYS: Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on minun lempiesimerkkejäni siitä, miten loukkaus muuttuu kunnianimeksi. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko [[Louis Leroy]] ivasi Monet'n maalausta [[Impression, soleil levant]] ja otsikoi juttunsa Impressionistien näyttely. Nimi oli tarkoitettu pilkaksi, mutta se jäi elämään, ja taiteilijat ottivat sen itse käyttöön. Ajan myötä sana vakiintui koko suuntauksen nimeksi, ja nykyään puhutaan [[impressionismista]]. Ja minä kun luulin, että pilkka on aina vaan pilkkaa.
+KYSYMYS: Kerro lisää: Louis Leroy
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Nimi, joka oli alun perin pilkkaa] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+AIEMPI KYSYMYS: Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on minun lempiesimerkkejäni siitä, miten loukkaus muuttuu kunnianimeksi. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko [[Louis Leroy]] ivasi Monet'n maalausta [[Impression, soleil levant]] ja otsikoi juttunsa Impressionistien näyttely. Nimi oli tarkoitettu pilkaksi, mutta se jäi elämään, ja taiteilijat ottivat sen itse käyttöön. Ajan myötä sana vakiintui koko suuntauksen nimeksi, ja nykyään puhutaan [[impressionismista]]. Ja minä kun luulin, että pilkka on aina vaan pilkkaa.
+KYSYMYS: Kerro lisää: Impression, soleil levant
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Pariisi
+Maa, jossa pelaaja on: Ranska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Nimi, joka oli alun perin pilkkaa
+Tietoruudun teksti: Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.
+Isoisän matkakirjamerkintä: Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historia: Nimi, joka oli alun perin pilkkaa] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa ”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteili…
+AIEMPI KYSYMYS: Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on minun lempiesimerkkejäni siitä, miten loukkaus muuttuu kunnianimeksi. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko [[Louis Leroy]] ivasi Monet'n maalausta [[Impression, soleil levant]] ja otsikoi juttunsa Impressionistien näyttely. Nimi oli tarkoitettu pilkaksi, mutta se jäi elämään, ja taiteilijat ottivat sen itse käyttöön. Ajan myötä sana vakiintui koko suuntauksen nimeksi, ja nykyään puhutaan [[impressionismista]]. Ja minä kun luulin, että pilkka on aina vaan pilkkaa.
+KYSYMYS: Kerro lisää: impressionismista
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Thamesin laskuvesiranta
+Tietoruudun teksti: Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, mutta se mitä se antaa, ei aina jää löytäjälle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä mudlarkit etsivät Thamesin kivirannalta laskuveden aikaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Minä olen nähnyt ne ylhäältä, kumarassa ja polvet märkinä. [[Mudlarkit]] etsivät Thamesin rannalta muun muassa [[savipiippuja]] ja astiansirpaleita, jotka vuorovesi on huuhtonut esiin. Thames on vuorovesijoki Teddingtonin sulkuun asti, ja laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia. Ammatti on vanhempi kuin isoisäsi aika. Löytöjä ei kuitenkaan saa pitää ihan vapaasti: yli kolmesataa vuotta vanhat esineet on ilmoitettava [[Lontoon museolle]]. Itse etsisin kyl vain pullanmuruja.
+KYSYMYS: Kerro lisää: Mudlarkit
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Thamesin laskuvesiranta
+Tietoruudun teksti: Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, mutta se mitä se antaa, ei aina jää löytäjälle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Joki ja puisto: Thamesin laskuvesiranta] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+- [Lontoo — kohdekartta / Kohdekartta: Millennium Bridgen portaat] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Mitä mudlarkit etsivät Thamesin kivirannalta laskuveden aikaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Minä olen nähnyt ne ylhäältä, kumarassa ja polvet märkinä. [[Mudlarkit]] etsivät Thamesin rannalta muun muassa [[savipiippuja]] ja astiansirpaleita, jotka vuorovesi on huuhtonut esiin. Thames on vuorovesijoki Teddingtonin sulkuun asti, ja laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia. Ammatti on vanhempi kuin isoisäsi aika. Löytöjä ei kuitenkaan saa pitää ihan vapaasti: yli kolmesataa vuotta vanhat esineet on ilmoitettava [[Lontoon museolle]]. Itse etsisin kyl vain pullanmuruja.
+KYSYMYS: Kerro lisää: savipiippuja

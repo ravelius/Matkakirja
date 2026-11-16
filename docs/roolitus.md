@@ -285,7 +285,7 @@ opetukset ja valmis aloitusviesti yhtenä koodilohkona — on ohjeessa
 **`docs/moduulit/siirtoraportti.md`**, tarkistuslistoineen.
 
 Uudet pysyvät linjaukset eivät kuulu raporttiin vaan Raamattuun
-(`js/tyohuone-raamattu.js`); raportti viittaa Raamatun osioihin
+(`docs/raamattu/`, ovi `node tools/kirjaa.mjs`); raportti viittaa Raamatun osioihin
 nimeltä.
 
 ## Julkaisusäännöt (kaikille rooleille)

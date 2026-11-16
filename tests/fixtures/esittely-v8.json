@@ -1,0 +1,103 @@
+{
+  "_ohje": "Pelin esittelykortti etusivulla: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. valmiitLinssit {teksti, nappi, valmis, linssit: [tunnus…]} näytetään kappaleiden jälkeen: nappi avaa heti vain listan valmiit (pelaajille julkaistut) linssit ilman pisteitä ja ilman kehittäjätilaa; sama lista webille ja natiiville (omistaja 7.10.2026). Oma ylätason kenttä, jotta vanhat TF-appit eivät näytä nappia. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Versio 8 (omistaja 13.11.2026 klo 14.52, KK 15.07): kortti on pelin esittely (nappi Pelin esittely; Pelissä nyt ja Tulossa), ei apurahakortti; tekstit ovat SK:n ja KK:n hyväksymiä. Nimet koodissa (Apuraha, assets/apuraha) saavat jäädä, koska vanhat sovellusversiot lukevat samaa osoitetta. Korostus: \"korostus\": true = kappale lihavoituna samassa koossa. Kuvan paikka: \"kappale\": n = 0-pohjainen kappaleindeksi (kappaleet[n]); kuva näkyy pienenä oman kappaleensa vieressä, napautus suurentaa; ilman kenttää kuva kortin lopussa. Listakappaleessa \"rivi\": m (0-pohjainen) vie kuvan listan rivin m viereen. Kuvan rajaus: \"rajaus\": \"x% y%\" = pikkukuvan painopiste, oletus 50% 20%.",
+  "versio": 8,
+  "nappi": "Pelin esittely",
+  "otsikko": "Matkakirja ja unohdettu aarre",
+  "alaotsikko": "Seikkailupeli 13 vuotta täyttäneille ja aikuisille",
+  "kappaleet": [
+    {
+      "teksti": "Pelaaja on nuori Fogg, joka löytää vintiltä isoisänsä matkalaukun ja matkapäiväkirjan vuodelta 1873. Fogg lähtee isoisän jäljille ja etsii Aarnin luettelon unohdettuja aarteita. Matka tehdään tämän päivän maailmassa. Vain ulkoasu on vanha: paperia, mustetta ja isoisän ääni."
+    },
+    {
+      "teksti": "Pelaaja kulkee kartalla maasta ja kaupungista toiseen, tutkii nähtävyyksiä, kuulee tarinoita ja pelaa matkan varrella pelejä. Tavoite on kiertää maailma alle 80 päivässä. Raja kannustaa, mutta sen ylittämisestä ei rangaista."
+    },
+    {
+      "teksti": "Unohdettu aarre on myös pelin ajatus. Maailman kulttuuri, taide ja tiede ovat aarre, joka hukkuu helposti somen ja tekoälyn roskaan. Peli käyttää tekoälyä tämän aarteen löytämiseen, ja ihminen valitsee ja hyväksyy kaiken."
+    },
+    {
+      "teksti": "Täysi peli on iPhonen ja iPadin sovellus. Selainversio on suppeampi."
+    },
+    {
+      "otsikko": "Pelissä nyt",
+      "teksti": "Nämä toimivat pelissä jo nyt."
+    },
+    {
+      "otsikko": "Kartta ja Pariisi",
+      "teksti": "Maailma on yksi pyöritettävä karttapallo. Pariisi on piirretty kaupunki, jossa on nähtävyyksiä ja kertojan tarinoita."
+    },
+    {
+      "otsikko": "Aarteet",
+      "teksti": "Kartan vihreästä pisteestä pääsee aarteelle. Pariisissa aarretehtävä on rakennusten peli: ensin pelaaja yhdistää rakennuksiin nimet, sitten rakennusvuodet. Yrityksiä on kaksi. Löydöstä pelaaja saa lyhyen, tosi faktan ja onnentoivotuksen."
+    },
+    {
+      "otsikko": "Kuumailmapallo",
+      "teksti": "Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin ja liitää kaupungin ylle. Opas kertoo kohteista ja vastaa kysymyksiin.",
+      "webTeksti": "Valituissa kaupungeissa pelaaja nousee kuumailmapallon koriin ja liitää kaupungin ylle. Opas kertoo kohteista ja vastaa kysymyksiin. Vain iOS-sovelluksessa."
+    },
+    {
+      "otsikko": "ISS ja raketti",
+      "teksti": "Raketti nousee Pohjois-Norjasta avaruusasemalle. Asemalla pelaaja kuvaa minkä tahansa paikan Maasta omaksi julisteekseen.",
+      "webTeksti": "Raketti nousee Pohjois-Norjasta avaruusasemalle. Asemalla pelaaja kuvaa minkä tahansa paikan Maasta omaksi julisteekseen. Vain iOS-sovelluksessa."
+    },
+    {
+      "otsikko": "Linssit",
+      "teksti": "Linssi on kartalle avautuva animoitu näkymä yhdestä aiheesta, esimerkiksi keksinnöt Euroopassa, ihmisen matka ja maailmanradio."
+    },
+    {
+      "otsikko": "Tulossa",
+      "teksti": "Seuraavaksi Amsterdam, Lontoo, Rooma ja Wien. Jokaisessa on oma tehtävä.",
+      "lista": [
+        "Amsterdam: pelaaja erottaa hollantilaisten taiteilijoiden maalaukset muiden joukosta.",
+        "Lontoo: pelaaja yhdistää keksinnön sen keksijään.",
+        "Rooma: pelaaja löytää patsaiden joukosta sen, joka on peräisin toisesta kaupungista, ja valitsee neljästä samannäköisestä lipusta Italian lipun.",
+        "Wien: pelaaja kuuntelee sävelmiä ja yhdistää ne säveltäjiin.",
+        "Kielletty kaupunki, Peking: Kiinan viimeinen keisari, pieni Puyi, karkaa hovilta ja juoksee Kielletyn kaupungin kujilla ja pihoilla. Pelaaja ohjaa pyyhkäisyillä ja väistää takaa-ajajia.",
+        "Pelit historian hetkiin: pelaaja astuu menneisyyden paikkaan, esimerkiksi linnaan, ja ratkaisee arvoituksen tai löytää aarteen.",
+        "Lautapelit: Euroopan perinteiset pelit, kuten Mylly ja Tavli, joita pelataan tietokonetta tai kaveria vastaan."
+      ]
+    }
+  ],
+  "valmiitLinssit": {
+    "teksti": "Nappi avaa heti kaikki valmiit linssit.",
+    "nappi": "Avaa valmiit linssit",
+    "valmis": "Valmiit linssit avattu",
+    "linssit": [
+      "ihmisen-matka",
+      "keksinnot",
+      "pallo",
+      "radio",
+      "satelliitti",
+      "topografia",
+      "vertailu",
+      "maatiedot",
+      "vesistot"
+    ]
+  },
+  "kuvat": [
+    {
+      "tiedosto": "assets/apuraha/pariisi-kartta-louvre.jpg",
+      "teksti": "Pariisi vinosti ylhäältä: Louvre, Seine ja Cité-saari.",
+      "rajaus": "50% 65%",
+      "kappale": 5
+    },
+    {
+      "tiedosto": "assets/apuraha/nahtavyyden-esittely-eiffel.jpg",
+      "teksti": "Kaupunkikierros etenee kohde kerrallaan; kuvassa Eiffel-torni.",
+      "rajaus": "50% 50%",
+      "kappale": 5
+    },
+    {
+      "tiedosto": "assets/apuraha/aarretehtava-pariisi.jpg",
+      "teksti": "Aarretehtävässä pelaaja valitsee Eiffel-tornille, Notre-Damelle ja Panthéonille oikeat rakennusvuodet.",
+      "rajaus": "50% 55%",
+      "kappale": 6
+    },
+    {
+      "tiedosto": "assets/apuraha/iss-kapseli-asemalla.jpg",
+      "teksti": "Matkalla avaruusasemalle pelaaja seuraa, kuinka miehistökapseli lähestyy asemaa 408 kilometrin korkeudessa.",
+      "rajaus": "50% 50%",
+      "kappale": 8
+    }
+  ],
+  "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Täysi peli on iPhonen ja iPadin sovelluksessa."
+}

@@ -73,6 +73,8 @@ export const POISTETUT_SAANNOT = new Set(['DUEL_PRIZE', 'BOT_SKILL']);
 
 export const LISAMODUULIT = [
   m('js/kohtaamiskuvat-data.js', ['kohtaamiskuvat', 'KOHTAAMIS_R2_JUURI']),
+  // JU 16.11.2026 (PT 03.49): kadonneiden ihmeiden kerroskuvat media.json:iin (natiivi, Temple-torni).
+  m('js/kadonneet-kerroskuvat.js', ['KERROSKUVAT']),
   m('js/isoisan-valokuvat.js', ['ISOISAN_VALOKUVAT', 'ISOISAN_KUVAJUURI']),
   m('js/tietajatasot.js', ['TIETAJATASOT']),
   m('js/etusivupallo.js', ['ETUSIVUN_KUVAKIERTO', 'ETUSIVUN_REITTI']),
@@ -151,9 +153,9 @@ export const LISAMODUULIT = [
   m('js/linssit/satelliitti-aani.js', ['ASTRONAUTIN_HUMINA', 'ASTRONAUTIN_MUSIIKKI', 'ASTRONAUTIN_MUSIIKKI_KAYTOSSA'], 'linssi'),
   m('js/linssit/omistus.js', ['LINSSIKYNNYKSET', 'OPTIKON_HYVITYS', 'PERUSLINSSIT'], 'linssi'),
   m('js/tyohuone-kehitys-data.js', ['KAARI_PAKETIT'], 'kehittaja'),
-  // Skeema 1.27 (Natiivi-UI 24.9.2026): natiivin KOKEET-valikon Raamattu- ja Kehittäjälehti
-  // (webin työhuone). Henkilöiden sähköpostit peitetään viennissä (vie-sisalto.mjs peitaSahkopostit).
-  m('js/tyohuone-raamattu.js', ['RAAMATTU'], 'kehittaja'),
+  // Skeema 1.27 (Natiivi-UI 24.9.2026): natiivin KOKEET-valikon Kehittäjälehti (webin työhuone).
+  // Henkilöiden sähköpostit peitetään viennissä (vie-sisalto.mjs peitaSahkopostit). Raamattu-moduuli
+  // poistui 12.11.2026 (KK 17.30; natiivin lukija pois NUI 00e4cb02a, junasana KK 17.48).
   m('js/tyohuone-tilanne.js', ['TILANNE', 'TESTATTAVAA', 'TUOREET'], 'kehittaja'),
   m('js/tyohuone-pelit.js', ['PELIT'], 'kehittaja'),
 ];

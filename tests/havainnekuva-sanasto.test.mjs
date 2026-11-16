@@ -27,7 +27,7 @@ const listaa = (kansio) => readdirSync(new URL(kansio, juuri))
   .map((f) => `${kansio}${f}`);
 
 /* Historia- ja työhuonetiedostot kirjaavat vanhoja sanamuotoja sellaisinaan. */
-const OHITA = new Set(['js/muutokset.js', 'js/tyohuone-raamattu.js', 'js/tyohuone-tilanne.js']);
+const OHITA = new Set(['js/muutokset.js', 'js/tyohuone-tilanne.js']);
 
 /* Iso M: Freshfieldin "matkakirjan kuvitus" on aito 1869 kirjankuvitus. */
 const KIELLETTY_LAHDE = /Matkakirjan (?:oma )?kuvitus/u;

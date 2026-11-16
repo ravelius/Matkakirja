@@ -3882,7 +3882,7 @@
   "etaisyys_m": 9,
   "pvm": "2.11.2026"
  },
- "kobenhavn:Christiansborg 1884": {
+ "kobenhavn:Kööpenhamina 1884": {
   "qid": "Q940733",
   "tapa": "nimi+säde",
   "wikidataNimi": "Christiansborg",
@@ -4429,7 +4429,7 @@
   "etaisyys_m": 56,
   "pvm": "2.11.2026"
  },
- "lontoo:Globe 1599": {
+ "lontoo:Shakespeare 1599": {
   "qid": "Q272434",
   "tapa": "nimi+säde",
   "wikidataNimi": "Globeteatern",
@@ -4453,7 +4453,7 @@
   "etaisyys_m": 4,
   "pvm": "2.11.2026"
  },
- "lontoo:Tunneli 1827": {
+ "lontoo:Brunel 1827": {
   "qid": "Q1190691",
   "tapa": "ehdokas",
   "wikidataNimi": "Thames Tunnel",
@@ -4464,11 +4464,22 @@
  },
  "lontoo:Vanha London Bridge": {
   "qid": "Q130206",
-  "tapa": "nimi+säde",
-  "wikidataNimi": "London Bridge",
-  "pisteet": 0.9,
-  "etaisyys_m": 1,
-  "pvm": "2.11.2026"
+  "kartta": true,
+  "tapa": "käsin",
+  "huom": "Wikidatan piste 51.50806,-0.08778 on NYKYISEN London Bridgen paikka; keskiaikaisen sillan keskiviiva oli 43 m alavirtaan (SK 15.11.2026, toinen lähde 30–46 m), joten kartan piste = hologrammin kehyksen origo 51.50808,-0.08702.",
+  "pvm": "15.11.2026"
+ },
+ "lontoo:Westminster Bridge": {
+  "kartta": true,
+  "tapa": "käsin",
+  "huom": "Wikidata Q456960 P625 (51.50083,-0.12194) on 19 m lontoo:Canaletto Lontoossa -noston pisteestä, jolloin natiivi pudottaisi kaksosen (alle 25 m); piste sillan itäosassa, 140 m Canalettosta.",
+  "pvm": "9.11.2026"
+ },
+ "lontoo:Westminsterin palatsi": {
+  "kartta": true,
+  "tapa": "käsin",
+  "huom": "Wikidata Q62408 P625 (51.49944,-0.12417) on sama piste kuin lontoo:Vanha Westminsterin palatsi, jolloin natiivi pudottaisi kaksosen (alle 25 m); piste = natiivin palatsimallin keskipiste (OhjelmaKohdeGeometria.PalatsiLat/Lon), 44 m länteen.",
+  "pvm": "9.11.2026"
  },
  "losangeles:Angels Flight": {
   "qid": "Q1069719",
@@ -6115,7 +6126,7 @@
   "etaisyys_m": 0,
   "pvm": "2.11.2026"
  },
- "pariisi:Notre-Damen kukko": {
+ "pariisi:Notre-Dame 2019": {
   "qid": "Q2981",
   "tapa": "nimi+säde",
   "wikidataNimi": "Notre Dame",
@@ -6327,7 +6338,7 @@
   "etaisyys_m": 40,
   "pvm": "2.11.2026"
  },
- "pietari:Jänissaari 1703": {
+ "pietari:Pietari 1703": {
   "qid": "Q1588376",
   "tapa": "nimi+säde",
   "wikidataNimi": "Jänissaari",
@@ -7612,7 +7623,7 @@
   "etaisyys_m": 4,
   "pvm": "2.11.2026"
  },
- "sarajevo:Latin-silta 1914": {
+ "sarajevo:Sarajevo 1914": {
   "qid": "Q1277685",
   "tapa": "nimi+säde",
   "wikidataNimi": "Latinerbroen",

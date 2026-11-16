@@ -1,0 +1,25 @@
+### v2-407
+VANHA: ohueksi leikatusta [[poronlihaa]] käyttäen
+UUSI: ohueksi leikattua [[poronlihaa]] käyttäen
+SYY: kielivirhe (sijamuoto)
+### v2-418
+VANHA: Alpit ovat Euroopan suurin vuoristo
+UUSI: Alpit ovat Länsi-Euroopan suurin vuoristo
+SYY: liioittelu
+### v2-421
+VANHA: Paita vaihtaa omistajaa jokaisen etapin jälkeen
+UUSI: Paita vaihtaa omistajaa, kun kokonaiskilpailun johtaja vaihtuu
+SYY: väärä fakta
+### v2-422
+VANHA: jonka omistuksessa Tour de France on yhä
+UUSI: jonka kustantajakonserniin Tourin järjestäjä kuuluu yhä
+SYY: Tourin omistaja on järjestäjä ASO, ei L'Équipe
+### v2-437
+VANHA: ja se luonnonsatama, johon
+UUSI: ja luonnonsatama, johon
+SYY: kielivirhe
+### v2-441
+VANHA: ja suurin osa tulee Andalusian [[Jaénissa]]
+UUSI: ja merkittävä osa tulee Andalusian [[Jaénissa]]
+SYY: liioittelu, Jaén ei tuota suurinta osaa
+LOPPU: tarkistettu yhteensä 89 vastausta (tässä osassa 39), korjauksia tässä osassa 6

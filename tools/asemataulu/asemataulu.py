@@ -97,14 +97,18 @@ def nykyinen(taulu, puutteet, osoitekirja=OSOITEKIRJA):
     if not ok:
         puutteet.append("osoitekirja puuttuu: " + osoitekirja)
     idt = {}
+    jaadytetyt = set()
     for r in ok.split("\n"):
         solut = [x.strip() for x in r.split("|")]
         if len(solut) > 2 and ID_RE.search(solut[2]):
             for avain, nimi in ROOLIT_NYKYINEN.items():
                 if solut[1].split(" (")[0] == nimi:
                     idt[avain] = ID_RE.search(solut[2]).group(0)
+        # Jäädytetty Asemataulu (omistaja 9.11.2026 klo 22.59, loki ASEMATAULU JÄÄDYTETTY): ei sessiota, ei puutetta.
+        if len(solut) > 2 and solut[1].split(" (")[0] == "Asemataulu" and "jäädytetty" in solut[2]:
+            jaadytetyt.add("asemataulu")
     for avain in ROOLIT_NYKYINEN:
-        if avain not in idt:
+        if avain not in idt and avain not in jaadytetyt:
             puutteet.append("osoitekirjasta puuttuu rooli %s" % ROOLIT_NYKYINEN[avain])
     m = re.search(r"^Asemataulu \(tämän tilin taulu\):\s*(\S+)", ok, re.M)
     url = m.group(1) if m and URL_RE.match(m.group(1)) else None

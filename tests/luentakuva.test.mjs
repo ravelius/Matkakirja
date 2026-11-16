@@ -573,10 +573,14 @@ test('alkuerän retain-kuvat käyttävät hyväksyttyä versiota', async () => {
     assert.match(FOKUSVIRRAT[id].matkakirja.luentakuva.osoite,
       new RegExp(`-${id}-r20260909-paper-v4\\.jpg$`), id);
   }
-  // Pariisin luentakuva vaihtui tarina14-kuvatoimituksessa 14.9.2026
-  // (manifesti posti/kuvatoimitus-tarina14-20260914.json).
+  // Pariisin luentakuva: isoisän kädet ja kirjekyyhky VALOKUVANA (omistaja 12.11.2026, Codex #2224 3b129bfbe; korvaa piirroksen 689a190dd).
   assert.match(FOKUSVIRRAT.pariisi.matkakirja.luentakuva.osoite,
-    /-pariisi-i1-r20260914-tarina-v1\.jpg$/, 'pariisi');
+    /\/kaupunki-intro-v3\/isoisa-pariisi-valokuva-v2\.png$/, 'pariisi');
+  assert.equal(FOKUSVIRRAT.pariisi.matkakirja.luentakuva2, undefined, 'pariisi: yksi kuva');
+  // Rooman luentakuva: Colosseumin kitkentä (Codex #2258, 15.11.2026; luonnos-PR 6822); yksi kuva.
+  assert.match(FOKUSVIRRAT.rooma.matkakirja.luentakuva.osoite,
+    /\/kaupunki-intro-v3\/isoisa-rooma-kitkenta-v1\.png$/, 'rooma');
+  assert.equal(FOKUSVIRRAT.rooma.matkakirja.luentakuva2, undefined, 'rooma: yksi kuva');
 });
 
 /* ---------------------------------------------------------------- */

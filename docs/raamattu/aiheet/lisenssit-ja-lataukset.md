@@ -1,0 +1,25 @@
+# lisenssit-ja-lataukset · vastuu PT · tarkistettu 14.11.2026
+
+TAVOITE: Kaikki pelin kuvat, äänet, mallit ja aineistot ovat luvallisia, ja niiden tekijä näkyy. Mikään sisältö ei joudu pois oikeuksien takia.
+
+SÄÄNNÖT:
+1. Pysyvä latauslupa koskee CC0-, CC BY- ja PD-aineistoa, Commonsin CC BY-SA -kuvia, peliin hyväksyttyjä Tripo-malleja ja OFL-kirjasimia (lisenssi kirjasimen omalta sivulta). NC-, ND- ja muuta SA-aineistoa tai maksullista ei ladata. [R-11.5] [R-11.1] [P-261116-6]
+2. Data-aineisto (kartat, datalinssit) saa olla ODbL tai CC BY-SA, kun siitä johdettu aineisto julkaistaan samalla lisenssillä; NC ei kelpaa koskaan. [R-2.120]
+3. Lisenssi luetaan lähteen rajapinnasta tai kuvauksesta, ei tunnisteesta; kuva katsotaan silmin. Uudelleenpakatusta käytetään alkuperäistä lähdettä. [R-11.1] [P-261107-1]
+4. Tekijä ja lisenssi näkyvät teoskortissa tai lähdeluettelossa, ei tehtävänäkymissä (näyttämö, minitehtävä, visa, palkinnot). CC BY- ja BY-SA-aineistosta kirjataan tekijä, teos, lisenssi ja linkki, ja muokattu BY-SA-kuva jaetaan samalla lisenssillä. [R-11.1] [R-11.5] [P-261113-13]
+5. Verkosta haetaan vain virallisista rajapinnoista tai robots.txt:n ja käyttöehtojen sallimista poluista; robottitarkistuksia ei ohiteta. Kielto pysäyttää haun, eikä kielletystä lähteestä saatua käytetä. [R-2.183]
+6. Wikimedian rajapintaa käytetään peräkkäisin pyynnöin ja kuvaavalla tunnisteella ilman omistajan sähköpostia. Freesound vain rajapinnalla; Overpass ja OSM:n omat latauspalvelimet ovat kiellettyjä. [R-2.183]
+7. Pelin ämpäri ei ole jakelua: ostettu ja ladattu sisältö viedään sinne; lisenssistä tarkistetaan vain pelikäyttö (kaupallinen käyttö, nimeäminen, tekoälykoulutuskielto). [R-11.4]
+8. Tilauskirjaston raakatiedostot ovat NAS:lla, ämpärissä vain käsitellyt; tilauksen päättyessä peliin viemättömät raakatiedostot poistetaan vain, jos tilausehto sitä vaatii. [R-5.20]
+9. Museoteos saa olla Commonsin kopio, vaikka museo rajaa kaupallisen käytön; poisto museon pyynnöstä, ei massahakuja museoiden palvelimille. [R-2.126]
+10. Jos Italian valtion tai kuntien museoiden tai kuntien julkisia teoksia (Capitolini, Navona) on pelissä, sovellus jätetään pois Italian App Storesta (ei Vatikaani). Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D piilotetaan vain Kreikan App Storessa, eikä niille tehdä uusia kuumailmapallokierroksia. [R-2.134] [R-2.135] [P-261114-2]
+11. Omalla koneella ajettavan tekoälymallin lisenssi sallii kaupallisen käytön. Codexin toimituksia koskevat samat lisenssisäännöt. [R-2.95] [R-11.7]
+12. Livekamera upotetaan vain virallisesta lähteestä, joka sallii upotuksen. [R-11.18]
+
+EI VIKA:
+- Wikimedian rajapintahaku, vaikka robots.txt kieltää polun /w/.
+
+TEKOTAPA:
+- Lähdeluettelo: paketin LAHTEET.md; tarkistus julkaisija-tyokalut/vie-paketti.sh --kuiva.
+- OSM: planeettaote sallitusta peilistä (ftp.fau.de).
+- Ostot: omistajan-kanssa. Äänet: aaniluvat-ja-aaniportti. Suojatut teokset: oikeudet-ja-ansainta.

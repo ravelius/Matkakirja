@@ -251,12 +251,12 @@ export const FOKUSKOHTEET_GBR = [
   },
   {
     /*
-     * VANHA LONDON BRIDGE. −0,08778 E / 51,50806 N — en-Wikipedia
-     * "London Bridge" (tietolaatikon coordinates). Piste on nykyisen
-     * sillan paikka; keskiaikainen silta seisoi noin 30 metriä siitä
-     * itään, mikä on laudan mittakaavassa alle sadasosa yksiköstä eikä
-     * siis erotu omaksi pisteekseen. Yksi merkki riittää, ja se on
-     * oikeassa paikassa.
+     * VANHA LONDON BRIDGE. −0,08702 E / 51,50808 N — keskiaikaisen sillan
+     * keskikohta (siirretty 15.11.2026: en-Wikipedian tietolaatikon piste
+     * −0,08778 / 51,50806 on nykyisen sillan paikka). Vanha silta seisoi
+     * keskiviivalta mitaten 43 m nykyisestä alavirtaan (itään); piste on sama
+     * kuin hologrammin kehyksen origo. Laudan mittakaavassa ero on alle
+     * sadasosa yksiköstä, joten laudan x/y ei muutu. Yksi merkki riittää.
      */
     id: 'vanha-london-bridge',
     nimi: 'Vanha London Bridge',

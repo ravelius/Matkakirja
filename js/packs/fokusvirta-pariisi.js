@@ -54,7 +54,7 @@ import { MAALEHTINOSTOT_FRA } from './maalehtinostot-fra.js';
  *
  * SISÄLTÖ ON LEHDEN OMAA. Piaf-kysymys on Pariisin lehden sivun 2
  * ("Musiikki") oman noston "Édith Piaf lauloi ensin kadulla" tekstiä
- * ja metrokysymys sivun 1 ("Pariisi") oman noston "Metron sisäänkäynti
+ * ja metrokysymys sivun 1 ("Pariisi") oman noston "Metro 1900
  * koottiin palasista" tekstiä (js/packs/kulttuuri-kategoriat.js).
  * Uusia faktaväitteitä ei ole kummassakaan.
  *
@@ -90,7 +90,7 @@ const GUIMARD_VISA = {
   oikea: 1,
   fakta: 'Kilpailun 21 ehdotuksesta yksikään ei kelvannut. Guimard '
     + 'piirsi vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
-    + 'sisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
+    + 'sisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
 };
 
 export const FOKUSVIRTA_PARIISI = {
@@ -105,8 +105,8 @@ export const FOKUSVIRTA_PARIISI = {
      */
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; puntari '
       + 'nousee.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 352 merkkiä (yläraja 400). */
-    teksti: "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+    /* KAANON: OMISTAJAN TEKSTI (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"; KK:n lopulliset tekstit). Sanasta sanaan. 249 merkkiä. */
+    teksti: "Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. Kirjekyyhky osaa näköjään vain kotiin.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -128,73 +128,29 @@ export const FOKUSVIRTA_PARIISI = {
      * Hiljaiset osuudet: "Paluumatkalla seurasin kaksi korttelia miestä"
      * (kuljetus kohtaukseen).
      */
-    reaktiot: [
-  {
-    "id": "pariisi.r1",
-    "ankkuri": "palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r2",
-    "ankkuri": "Tyhjät ikkunat seisoivat yhä puutarhan laidalla",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r3",
-    "ankkuri": "etsin kulmaa, josta rauniot eivät näkyisi",
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r4",
-    "ankkuri": "Halusin viedä kotiin kauniin Pariisin",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "pariisi.r5",
-    "ankkuri": "käänsin kameran suoraan palatsiin",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  }
-],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[softly] Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. [warmly] Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
-    aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
+    /* Reaktiot tyhjennetty 11.11.2026: vanhat ankkurit eivät osu uuteen tekstiin; uudet määritetään vasta, kun äänitteen aikaleimat on kohdistettu. */
+    reaktiot: [],
+    /* ÄÄNITE: isoisän uusi ääni (kaupunki-intro-v3, 11.11.2026), ämpärin täysi osoite; luennat-kokoelman url on sama. */
+    luenta: "[softly] Pari vuotta sitten Pariisi oli saarrettu, ja posti kulki kyyhkyillä. Ostin lintutorilta kirjekyyhkyn ja lähetin sillä kirjeen Lontooseen. Lintu kaarsi kerran poltetun palatsin yllä ja lensi takaisin myyjälleen. [warmly] Kirjekyyhky osaa näköjään vain kotiin.",
+    aanite: 'https://media.matkakirja.app/aanet/kaupunki-intro-v3/isoisa-pariisi.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE. Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json.
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
+    // Isoisän YKSI kuva kortissa tekstin vieressä (omistaja 11.11.2026 klo 20.31). VALOKUVA v2 (omistaja 12.11.2026 09.27:
+    // "Tämä on hyvä, toimita Claudelle"; Codex #2224, postilaatikko 3b129bfbe, SHA256 4b356eeb…b445, muuttamaton 1536×1024) korvaa
+    // piirroksen 689a190dd. Isoisän kuvat vanhoina valokuvina, hänen ulkonäköään ei näytetä (tässä vain kädet).
+    // Uusi avain, koska vanha isoisa-pariisi.png on välimuisteissa muuttumattomana (immutable).
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg',
-      lyhyt: 'Pariisi, 1873. Tuileries’n tyhjät ikkunat puutarhan laidalla.',
-      selite: 'Vuoden 1871 palon jäljiltä palatsin runko seisoo yhä puutarhan edessä. Näkymä pohjautuu Henri Emile Godefroyn historialliseen valokuvaan.',
+      osoite: 'https://media.matkakirja.app/kuvat/kaupunki-intro-v3/isoisa-pariisi-valokuva-v2.png',
+      lyhyt: 'Pariisi, 1873. Kirjekyyhky lähtee Tuileries\'n puutarhasta.',
+      selite: 'Isoisä päästää kirjekyyhkyn lentoon poltetun Tuileries\'n palatsin edessä. Palatsi paloi vuonna 1871, ja sen rauniot purettiin 1883.',
       lahde: 'Matkakirjan havainnekuva',
+      // Raunioiden esikuva: Alphonse J. Liébert, Tuileries Palace, Burned. General View (Metropolitan Museum, Public Domain).
       lahteet: [
-        'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5',
-      ],
-    },
-    luentakuva2: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg',
-      lyhyt: 'Pariisi, 1873. Rauniot näkyivät myös puiden alta.',
-      selite: 'Puiden varjosta avautuu toinen näkymä palaneen Tuileries’n julkisivuun. Puutarhan rajaus on kuviteltu saman historiallisen valokuvalähteen pohjalta.',
-      lahde: 'Matkakirjan havainnekuva',
-      lahteet: [
-        'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5',
+        'https://www.metmuseum.org/art/collection/search/291458',
       ],
     },
   },
@@ -202,27 +158,24 @@ export const FOKUSVIRTA_PARIISI = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
-     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
-     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
-     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
+     * PULUN SAAPUMISKUVA (KK 11.11.2026 klo 20.5x, omistaja 20.31): kiinnitetty pallo Pariisin yllä nykyään; vanha tuolikuva (p1) pois.
+     * Commonsin valokuva, tiedostosivulta tarkistettu 11.11.2026: tekijä Aero4 (oma työ), lisenssi CC BY-SA 4.0. KUVAUSPÄIVÄ: Commons ilmoittaa 21.8.2013 (EXIF 20.04), mutta kuvan puut ovat lehdettömät ja valo talvinen (KK 12.11. 00.16), joten päiväys on epäluotettava eikä sitä käytetä missään tekstissä; kirjataan vain 'Commonsin ilmoittama 21.8.2013'. Halkaisija lasketaan LEVEYDESTÄ (0.52 × leveys; korkeudesta laskettuna pallo leikkautuisi),
+     * https://commons.wikimedia.org/wiki/File:Ballon_Generali_and_the_Eiffel_Tower.jpg. Kuvaa itseään ei muokata.
+     * RAJAUS pyöreään kehykseen (natiivi): pallo ja joki, Eiffel jää pois. `rajaus`: kehyksen keskipiste kuvan leveyden ja korkeuden
+     * suhteina [x, y] ja halkaisija kuvan leveyden suhteena (5760×3840 / 1280×853 -esikatselu: keskipiste noin (950, 430) px, halkaisija 660 px).
+     * Selitteet ovat SK:n luonnos, KK katsoo (vain kuva on hyväksytty).
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg',
-        lyhyt: 'Pariisi: tuoli kääntyi ystävää kohti.',
-        selite: 'Tuileries’n vihreillä tuoleilla kaksi ystävää jatkaa keskusteluaan puiden varjossa. Näkymä avautuu tuolin selkänojan korkeudelta.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://votrebanc.louvre.fr/en/the-project/',
-          'https://www.edmond-fils.com/les-collections/tuileries-mobilier-en-acier/',
-        ],
+        tiedosto: 'Ballon Generali and the Eiffel Tower.jpg',
+        lyhyt: 'Pariisi: pallo kohoaa yhä kaupungin ylle.',
+        selite: 'Kiinnitetty ilmapallo kohoaa Seinen rannalta Pariisin ylle. Matkustajat näkevät sieltä koko kaupungin.',
+        lahde: 'Aero4, Wikimedia Commons (CC BY-SA 4.0)',
+        rajaus: { keskipiste: [0.742, 0.504], halkaisija: 0.52 },
       },
     ],
-    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina."],
+    /* KUPLA: KK:n lopullinen teksti 2 (omistaja 11.11.2026 klo 20.31 "Kyllä kelpaa"). Sanasta sanaan. 144 merkkiä. */
+    kommentti: ["Voi isoisä! Me kirjekyyhkyt osaamme vain kotiin. Siksi meidät vietiin Pariisista ensin ilmapallolla. Katso ylös: pallo nousee Pariisin ylle yhä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
@@ -291,9 +244,13 @@ export const FOKUSVIRTA_PARIISI = {
        *     esittää palatsin rakentamista takaisin.
        */
       id: 'tuileriat',
+      kysymykset: [
+        'Mitä isoisä näki, kun hän kulki palatsin raunioiden ohi?',
+        'Minne puretun palatsin kivet ja palat päätyivät?',
+      ],
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
-      otsikko: 'Tuileriain rauniot',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu '
+      otsikko: 'Tuileries 1883 — palatsin rauniot puretaan',
+      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu '
         + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
         + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
         + 'kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
@@ -328,8 +285,8 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-        lyhyt: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
-        selite: 'Tuileriain palatsin palanut runko puutarhan puolelta: '
+        lyhyt: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
+        selite: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: '
           + 'katto poissa, kivimuurit ehjät, lauta-aita raunion edessä '
           + 'ja kaupunkilaisia altaan äärellä.',
         lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
@@ -346,8 +303,8 @@ export const FOKUSVIRTA_PARIISI = {
        */
       valokuva: {
         tiedosto: "Vue des Tuileries après l'incendie de 1871, PH83415.jpg",
-        lyhyt: 'Tuileriain palatsi palon jälkeen; rauniot seisoivat vielä kaupungin keskellä samalta ajalta.',
-        selite: 'Tuileriain palatsi palon jälkeen. Valokuva on samalta '
+        lyhyt: 'Tuileries\'n palatsi palon jälkeen; rauniot seisoivat vielä kaupungin keskellä samalta ajalta.',
+        selite: 'Tuileries\'n palatsi palon jälkeen. Valokuva on samalta '
           + 'ajalta, jona rauniot seisoivat kaupungin keskellä.',
         // Tekijän nimi Commonsin omassa muodossa (tools/
         // tarkista-tekijat.mjs vertaa merkintää suoraan siihen).
@@ -387,8 +344,12 @@ export const FOKUSVIRTA_PARIISI = {
        * palloilla, eikä sitä sekoiteta tähän.
        */
       id: 'kyyhkyposti',
+      kysymykset: [
+        'Miksi kirjekyyhky oli piiritetyn Pariisin ainoa toimiva viestitie kaupunkiin?',
+        'Miten kyyhkyn tuomat pikkuruiset filmiviestit saatiin luettua?',
+      ],
       nappi: 'Kyyhkyt, jotka kantoivat kokonaisen kaupungin postin',
-      otsikko: 'Piiritetyn Pariisin kyyhkyposti',
+      otsikko: 'Piiritys 1870 — viestit kulkevat kyyhkyillä',
       teksti: 'Sallitko, että kerron erään sukuni työsuorituksen. Kun '
         + 'preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset '
         + 'lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa '
@@ -445,9 +406,13 @@ export const FOKUSVIRTA_PARIISI = {
        * juuri Louvren Salon oli se ovi, jonka nämä maalarit kiersivät.
        */
       id: 'impressionistit',
+      kysymykset: [
+        'Miksi Salonista hylätty maalari jäi isoisän aikaan näkymättömäksi?',
+        'Miten pilkkanimestä tuli kokonaisen taidesuunnan nimi?',
+      ],
       nappi: 'Kolmekymmentä taiteilijaa, jotka perustivat oman näyttelynsä',
-      otsikko: 'Nimi, joka oli alun perin pilkkaa',
-      teksti: 'Kun sinä kävelit Pariisissa, ranskalaista taide-elämää '
+      otsikko: 'Monet 1874 — impressionistien ensimmäinen näyttely',
+      teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää '
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
         + '1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta '
@@ -645,9 +610,20 @@ export const FOKUSVIRTA_PARIISI = {
        * nosto jää ainoaksi ilman `valokuva`-kakkoskuvaa.
        */
       id: 'lustig-eiffel',
-      nimio: 'Torni romuraudaksi',
-      otsikko: 'Mies myi Eiffel-tornin romuraudaksi — ja palasi samana '
-        + 'vuonna myymään sen uudelleen',
+      nimio: 'Lustig 1925',
+      otsikko: 'Lustig 1925 — Eiffel-torni myydään romuksi',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'huuto',
+      visa: {
+        kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
+        vaihtoehdot: [
+          'Hän häpesi',
+          'Hän sai rahansa takaisin',
+          'Hän ei huomannut huijausta',
+        ],
+        oikea: 0,
+        fakta: 'Lustig palasi Pariisiin saman vuoden 1925 puolella ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
+      },
       lunastus: [
         'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
           + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi '
@@ -705,14 +681,26 @@ export const FOKUSVIRTA_PARIISI = {
        * annettiin vasta 1985 — aikalaisten nimi kerrotaan sen sijaan.
        *
        * LÄHETYSVUOTTA EI MAINITA. Aineistossa lukee sekä "lähetti 1827"
-       * että "saapui Marseilleen 31.10.1826"; kumpaakaan ei ole
-       * muutettu, vaan tekstiin on otettu vain se päivämäärä, jonka
-       * lähde antaa täsmällisenä.
+       * että "saapui Marseilleen 31.10.1826"; tekstiin on otettu vain
+       * saapumispäivä 31.10.1826 ja kävelyn lähtö toukokuussa 1827
+       * (en-Wikipedia: talvehti Marseillessa, lähti 20.5.1827, 41 päivää;
+       * nimiö ja otsikko "Kirahvi 1827", KK 12.11.2026).
        */
       id: 'kirahvin-kavelymatka',
-      nimio: 'Kirahvi',
-      otsikko: 'Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — '
-        + 'takki päällä ja kengät jalassa',
+      nimio: 'Kirahvi 1827',
+      otsikko: 'Kirahvi 1827 — kävelymatka Pariisiin',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'historia',
+      visa: {
+        kysymys: 'Miksi kirahvi kulki Marseillesta Pariisiin jalkaisin?',
+        vaihtoehdot: [
+          'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena',
+          'Laivassa ei ollut tilaa',
+          'Kuningas halusi kansan katsovan eläintä matkan varrella',
+        ],
+        oikea: 0,
+        fakta: 'Matka kesti 41 päivää; Pariisissa kirahvia kävi katsomassa yli 100 000 ihmistä, ja se eli Jardin des Plantes\'ssa 18 vuotta.',
+      },
       lunastus: [
         'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle '
           + 'Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta '
@@ -721,7 +709,8 @@ export const FOKUSVIRTA_PARIISI = {
           + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
           + 'Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti '
           + 'eläimelle kaksiosaisen keltaisen takin ja kengät.',
-        'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
+        'Kirahvi talvehti Marseillessa, ja matkaan lähdettiin toukokuussa '
+          + '1827. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
           + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka '
           + 'kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, '
           + 'kankaisiin ilmestyi täpliä ja väri nimeltä ”kirahvin vatsa” myi '
@@ -770,6 +759,73 @@ export const FOKUSVIRTA_PARIISI = {
         laudat: {
           maailmankartta: { x: 5912, y: 1440.1 },
           europe: { x: 256.5, y: 609 },
+        },
+      },
+    },
+    {
+      /*
+       * TARINAPAIKKA "Bukinistit 1859" (KK 20.52, 12.11.2026, vaihtoehto A).
+       *
+       * Pariisin tarinakaaren aarretehtävän (Colette, bouquin) vihje
+       * osoittaa tähän: tarinakaari.pariisi.kysymys.lahde =
+       * `nosto-pariisin-bukinistit` (js/tyohuone-kehitys-data.js).
+       * Jutun faktat ovat pelin jo hyväksytystä aineistosta: oppitunnin
+       * bouquin-selitys ja 1500-luvun ammattikunta (yllä, oppitunti)
+       * sekä 1859 kiinteät myyntipaikat ja 1891 laatikoiden jättäminen yöksi
+       * (en-Wikipedia "Bouquinistes", tarkistettu uudelleen 12.11.2026, KK 21.11).
+       *
+       * NIMIÖ/OTSIKKO: "Bukinistit 1859" kuvaa vuoden 1859 tapausta
+       * (kiinteä myyntipaikka kaiteen varrella), EI laatikoiden jättämistä yöksi (1891). Otsikko ei
+       * paljasta visan eikä Coletten kysymyksen vastausta.
+       * Visa on eri kuin Coletten: se kysyy iltarutiinia, ei nimen
+       * alkuperää.
+       */
+      id: 'pariisin-bukinistit',
+      nimio: 'Bukinistit 1859',
+      otsikko: 'Bukinistit 1859 — oma paikka Seinen kaiteella',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'historia',
+      visa: {
+        kysymys: 'Mitä bukinistien piti kiinteän paikan saatuaankin tehdä laatikoilleen joka ilta?',
+        vaihtoehdot: [
+          'Kantaa ne pois kaiteelta',
+          'Lukita ne kaiteeseen riippulukolla',
+          'Peittää ne purjekankaalla',
+        ],
+        oikea: 0,
+        fakta: 'Laatikot sai jättää kaiteeseen vasta vuonna 1891.',
+      },
+      lunastus: [
+        'Seinen rantamuurin kirjakauppiaita kutsutaan bukinisteiksi, ja nimi '
+          + 'kertoo, mitä laatikoissa on: ranskan sana bouquin tarkoittaa '
+          + 'vanhaa kirjaa. Vihreistä peltilaatikoista myydään käytettyjä '
+          + 'kirjoja, vanhoja lehtiä ja julisteita, ja ammattikunta on ollut '
+          + 'joen varrella 1500-luvulta asti. Vuonna 1859 kauppiaat saivat '
+          + 'kaupungilta kiinteät myyntipaikat rantakaiteen varrelta, mutta '
+          + 'laatikot piti silti kantaa pois joka ilta. Kaiteeseen ne sai '
+          + 'jättää vasta vuonna 1891.',
+      ],
+      lahde: 'Pelin hyväksytty Pariisi-aineisto: oppitunti "Joki, joka virtaa '
+        + 'kahden kirjahyllyn välissä" (tämä tiedosto) ja 1859/1891-fakta '
+        + '(en-Wikipedia "Bouquinistes", tarkistettu 12.11.2026).',
+      kuva: {
+        tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
+        lyhyt: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin vihreistä laatikoista 1500-luvulta asti.',
+        selite: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin '
+          + 'vihreistä laatikoista 1500-luvulta asti.',
+        lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+      },
+      kysymykset: [
+        'Mitä bukinistien laatikoista myydään?',
+        'Kuinka kauan bukinistit ovat olleet Seinen rannoilla?',
+        'Milloin laatikot saivat jäädä kaiteelle yöksi?',
+      ],
+      // Quai Voltaire, 48,859 N / 2,33075 E (esittelypaikoista, vaihtoehto A).
+      paikka: {
+        nimi: 'Bukinistit 1859',
+        laudat: {
+          maailmankartta: { x: 5911.1, y: 1439.5 },
+          europe: { x: 256, y: 608.6 },
         },
       },
     },
@@ -833,10 +889,10 @@ export const FOKUSVIRTA_PARIISI = {
        * SANOTTIIN — se on koko skandaalin ydin.
        */
       id: 'carmenin-ensi-ilta',
-      nimio: 'Carmenin ensi-ilta',
-      otsikko: 'Teatterin johtaja vastusti oopperaa niin kiivaasti, '
-        + 'että erosi — ja ensi-illan jälkeen näytti siltä, että hän '
-        + 'oli ollut oikeassa',
+      nimio: 'Bizet 1875',
+      otsikko: 'Bizet 1875 — Carmen saa kylmän vastaanoton',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'kulttuuri',
       lunastus: [
         'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla '
           + '1873, ja ensimmäinen näytös oli valmis siihen kesään '
@@ -996,8 +1052,8 @@ export const FOKUSVIRTA_PARIISI = {
        * `nimiPuoli` ja `siirto`, ei uusi koordinaatti.
        */
       id: 'pariisin-72-nimea',
-      nimio: '72 nimeä',
-      otsikko: 'Tornissa on 72 nimeä kullalla',
+      nimio: 'Tornin nimet 2026',
+      otsikko: 'Tornin nimet 2026 — naisten lista julkaistaan',
       symboli: 'tekniikka',
       lunastus: [
         'Gustave Eiffel halusi, että hänen torninsa on tieteen '
@@ -1007,7 +1063,7 @@ export const FOKUSVIRTA_PARIISI = {
           + '1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. Yhtään naista '
           + 'listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 '
           + 'nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa '
-          + 'miesten nimien yläpuolelle vuonna 2027.',
+          + 'miesten nimien yläpuolelle, kunhan kolme akatemiaa on antanut lausuntonsa.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Tornissa on 72 '
         + 'nimeä kullalla" (js/packs/kulttuuri-kategoriat.js). Teksti '
@@ -1024,6 +1080,24 @@ export const FOKUSVIRTA_PARIISI = {
         'Ketkä ovat sen toisen, vuonna 2026 julkistetun listan nimet?',
         'Miten 72 nimeä valittiin tornin kylkeen?',
       ],
+      /*
+       * MINITEHTÄVÄ (SK:n v2, KK 13.15; docs/raportit/minitehtava-kolme-pariisin-nostoa-20261113.md).
+       * Vastaus on noston omassa tekstissä ("72 ranskalaista tiedemiestä ja insinööriä"); väärät
+       * ovat uskottavia arvauksia. Oikea ei ole pisin. Peli ei sekoita järjestystä, joten oikean
+       * paikka vaihtelee nostosta toiseen.
+       */
+      visa: {
+        kysymys: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää kullattu nimilista. '
+          + 'Keiden nimiä siinä on?',
+        vaihtoehdot: [
+          'Tornin rakentaneiden 72 työmiehen ja insinöörin',
+          '72 ranskalaisen tiedemiehen ja insinöörin',
+          'Ranskan vallankumouksen 72 sankarin',
+        ],
+        oikea: 1,
+        fakta: 'Kirjaimet ovat 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja '
+          + 'tehtiin näkyviin uudelleen 1980-luvun lopulla.',
+      },
       // Eiffel-torni 48,85822 N / 2,2945 E — sama piste kuin nostolla
       // `lustig-eiffel` (en-Wikipedia "Eiffel Tower").
       paikka: {
@@ -1044,8 +1118,8 @@ export const FOKUSVIRTA_PARIISI = {
        * 48,8844 N / 2,3382 E.
        */
       id: 'guimardin-metro',
-      nimio: 'Métropolitain',
-      otsikko: 'Metron sisäänkäynti koottiin palasista',
+      nimio: 'Metro 1900',
+      otsikko: 'Metro 1900 — Guimardin sisäänkäynnit',
       symboli: 'tekniikka',
       lunastus: [
         'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä oli '
@@ -1055,7 +1129,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'jotka sopivat yhteen kuin rakennussarja: samoista paloista sai '
           + 'kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä '
           + 'tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. '
-          + 'Jäljellä olevista 88:sta 86 on rauhoitettu, suurin osa vuonna 1978.',
+          + 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Metron '
         + 'sisäänkäynti koottiin palasista" (js/packs/kulttuuri-kategoriat.js). '
@@ -1063,7 +1137,7 @@ export const FOKUSVIRTA_PARIISI = {
         + '13.9.2026.',
       kuva: {
         tiedosto: '01 Guimard\'s Métropolitain.jpg',
-        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
+        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä on 88.',
         lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
       },
       kysymykset: [
@@ -1071,8 +1145,23 @@ export const FOKUSVIRTA_PARIISI = {
         'Mitä vakio-osista kasaaminen tarkoitti käytännössä?',
         'Miksi puolet sisäänkäynneistä purettiin?',
       ],
+      /*
+       * MINITEHTÄVÄ (SK:n v2, KK 13.15; kysymys vaihdettu KK 14.15): vastaus on vain noston tekstissä ("Sitten
+       * tyyli meni pois muodista ja puolet purettiin"). Ei kysytä työn saamista eikä vakio-osia: lehden sivun 3
+       * JULISTE-tehtävä (GUIMARD_VISA) kysyy ensimmäistä ja sen fakta paljastaa toisen.
+       */
+      visa: {
+        kysymys: 'Hector Guimardin metrosisäänkäyntejä tehtiin 167, mutta puolet niistä purettiin. Miksi?',
+        vaihtoehdot: [
+          'Valurauta ruostui käyttökelvottomaksi',
+          'Ne vaurioituivat sodissa',
+          'Tyyli meni pois muodista',
+        ],
+        oikea: 2,
+        fakta: 'Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+      },
       paikka: {
-        nimi: 'Metron sisäänkäynti',
+        nimi: 'Metro 1900',
         laudat: {
           maailmankartta: { x: 5911.3, y: 1438.4 },
           europe: { x: 256.1, y: 607.9 },
@@ -1094,8 +1183,8 @@ export const FOKUSVIRTA_PARIISI = {
        * uskottavia arvauksia — sama kaava kuin PIAF_VISAssa.
        */
       id: 'notre-damen-kukko',
-      nimio: 'Notre-Damen kukko',
-      otsikko: 'Kukko putosi ja löytyi seuraavana päivänä',
+      nimio: 'Notre-Dame 2019',
+      otsikko: 'Notre-Dame 2019 — palo, jonka kukko selvisi',
       symboli: 'historia',
       lunastus: [
         'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
@@ -1166,9 +1255,19 @@ export const FOKUSVIRTA_PARIISI = {
        * yhden liikkeen. Piste on kohdekartan rajauksen sisällä.
        */
       id: 'pariisin-patonki',
-      nimio: 'Paras patonki',
-      otsikko: 'Paras patonki valitaan sokkona',
+      nimio: 'Patonki 1994',
+      otsikko: 'Patonki 1994 — kilpailu parhaasta leivästä',
       symboli: 'ruoka',
+      visa: {
+        kysymys: 'Mikä velvollisuus Pariisin parhaan patongin tekijällä on voittonsa jälkeen?',
+        vaihtoehdot: [
+          'Hän toimittaa presidentinpalatsin leivät seuraavan vuoden',
+          'Hän avaa uuden leipomon kaupungin keskustaan',
+          'Hän opettaa leipomoalaa kaupungin kouluissa',
+        ],
+        oikea: 0,
+        fakta: 'Kilpailu on järjestetty vuodesta 1994, leivät arvostellaan anonyymeinä, ja voittaja saa myös rahapalkinnon.',
+      },
       lunastus: [
         'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
           + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
@@ -1196,7 +1295,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Mikä velvollisuus voittajalle tulee?',
       ],
       paikka: {
-        nimi: 'Paras patonki',
+        nimi: 'Patonki 1994',
         laudat: {
           maailmankartta: { x: 5910.6, y: 1439.0 },
           europe: { x: 255.7, y: 608.3 },
@@ -1207,7 +1306,7 @@ export const FOKUSVIRTA_PARIISI = {
       /*
        * LEHDEN SIVU 2 ("Musiikki"), KOLME NOSTOA YHDEKSI
        * (suunnitelman luku 4.7: *"Yhdistetään yhdeksi nostoksi
-       * 'Pariisi soi' → kohdekartta (Opéra)"*).
+       * 'Piaf ja Django' → kohdekartta (Opéra)"*).
        *
        * KAPPALEITA ON KAKSI EIKÄ KOLME, ja se on sisältöpäätös, ei
        * unohdus: sivun kolmas nosto ("Carmen kaatui ensi-illassaan")
@@ -1221,9 +1320,10 @@ export const FOKUSVIRTA_PARIISI = {
        */
       id: 'pariisi-soi',
       wiki: ['Édith Piaf', 'Django Reinhardt'],
-      nimio: 'Pariisi soi',
-      otsikko: 'Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen',
+      nimio: 'Piaf ja Django',
+      otsikko: 'Piaf ja Django — kadulta ja vaunusta maineeseen',
       symboli: 'kulttuuri',
+      visa: PIAF_VISA,
       lunastus: [
         'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
           + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
@@ -1286,7 +1386,7 @@ export const FOKUSVIRTA_PARIISI = {
       // ("kohdekartta (Opéra)"); sama koordinaatti kuin kartan omalla
       // Palais Garnier -kohteella.
       paikka: {
-        nimi: 'Pariisi soi',
+        nimi: 'Piaf ja Django',
         laudat: {
           maailmankartta: { x: 5911.1, y: 1438.9 },
           europe: { x: 256.0, y: 608.3 },
@@ -1323,10 +1423,10 @@ export const FOKUSVIRTA_PARIISI = {
        * kirjoitettu 1800-luvun ranskaksi."*
        */
       id: 'pariisin-vuosisadat',
-      nimio: 'Vuosisadat',
-      otsikko: 'Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, '
-        + 'joita ei ollut',
-      symboli: 'historia',
+      nimio: 'Kaulanauha 1785',
+      otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
+      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
+      symboli: 'huuto',
       lunastus: [
         'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
           + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
@@ -1374,11 +1474,11 @@ export const FOKUSVIRTA_PARIISI = {
           lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
         },
         {
-          tiedosto: 'Denis Vrain-Lucas.jpg',
-          lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
-          selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
-            + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
-          lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+          tiedosto: 'Pascal à Galileo.jpg',
+          lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
+          selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
+            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
+          lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
         },
       ],
       kysymykset: [
@@ -1405,7 +1505,7 @@ export const FOKUSVIRTA_PARIISI = {
       // ulkopuolella. Panthéon on kartan oma historiakohde ja tämän
       // kortin ankkuri.
       paikka: {
-        nimi: 'Pariisin vuosisadat',
+        nimi: 'Kaulanauha 1785',
         laudat: {
           maailmankartta: { x: 5911.5, y: 1440.1 },
           europe: { x: 256.3, y: 608.9 },

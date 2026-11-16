@@ -1017,7 +1017,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
-      selite: 'Banja Bashin moskeija 1800-luvun lopun valokuvassa. Se on '
+      selite: 'Banja Bašin moskeija 1800-luvun lopun valokuvassa. Se on '
         + 'Sofian ainoa yhä toimiva moskeija.',
       lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Banya_bashi_dhzamiya_19_vek.jpg',

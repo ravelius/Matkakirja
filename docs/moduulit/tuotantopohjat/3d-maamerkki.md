@@ -157,10 +157,12 @@ Omistaja 17.10.2026 klo 19.27: kartan 3D-esineet ovat yksi sarja, kuin lautapeli
 ei väristä tai koosta. Arkit 1–5b PT:n kautta, kartta hyväksytty junaan 202 (PT 18.10.). Koodissa sääntö on yhdessä paikassa:
 `Karttaesineet.cs` + `KarttaesineSaanto.cs` (proto). Suunnitelma ja arkit: `proto-3d/_valmiit/kartan-pienoismallit-v1/`.
 
-35. **Paletti:** karttapaletti (tyylikirja.json "karttapaletti"). Maamerkit muunnetaan yksisävyiseksi seepiarampiksi luminanssin
-    mukaan: seepia 70/51/31 → okra 196/162/108 → kerma 230/216/186. Lasi ja vesi ovat liusketta 146/154/152, pienet korostukset
-    messinkiä 205/178/128. Ramppi tehdään vain varjostimessa (`KarttaSeepia.hlsl`, Valoseppä), ei toista muunnosta CPU:lla.
-    Oma tunnisteväri on vain pelinappulalla, kuumailmapalloilla ja kipsipäillä.
+35. **Paletti:** karttapaletti v2 (tyylikirja.json "karttapaletti", Raamattu 4.40; omistaja 6.11.2026). Maamerkki säilyttää
+    tunnistusvärinsä haalistettuna: rajan sisällä oleva väri säilyy, vahvempi puristuu rajaan ja sen sävy kääntyy lähimpään
+    sallittuun, vaaleus säilyy. Sääntö ajetaan tuontiportissa mallin tiedostoihin (uusi versiokansio), ei pelin aikana.
+    Pienet karttaesineet (kohdat yllä) pysyvät seepiarampissa: seepia 70/51/31 → okra 196/162/108 → kerma 230/216/186, lasi ja
+    vesi liusketta 146/154/152, korostukset messinkiä 205/178/128; ramppi vain varjostimessa (`KarttaSeepia.hlsl`, Valoseppä).
+    Oma tunnisteväri täysin voimakkaana on vain pelinappulalla, kuumailmapalloilla ja kipsipäillä.
 36. **Ääriviiva:** seepia 70/51/31, 1,2 pt kaikilla poluilla (`Symbolimallit.ReunaPt`). Ei mustaa viivaa. Iso esitys
     (galleria) piirretään tarkemmasta kuvasta, jotta viiva pysyy ohuena (`Nappula.NappulanGalleriaKuva`).
 37. **Koko:** esineen suurin mitta ruudulla = `KaupunkiPalloMitat.KarttaesineKoko(pallo)` × mallin osuus (`Karttaesineet.Mitta`).

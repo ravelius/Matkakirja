@@ -54,7 +54,7 @@ Sonnet.
 2. **Faktaliite ensin.** Jokainen väite saa kaksi itsenäistä lähdettä (Wikipedian kieliversiot ja saman julkaisijan sivut eivät
    ole riippumattomia); väitteet, jotka eivät varmistuneet, poistetaan. Britannica/UNESCO/matkasivut 403: ei kierretä, kirjataan.
    Kameran korkeus `H_m` kirjataan faktaliitteeseen lähteineen mutta ei kerrontaan; merkitse, jos luku on pituus tai arvio.
-3. **Käsikirjoitus.** Kertoja William, yksi otto per teksti. Rakenne: avaus ("Tervetuloa <kaupunkiin>.", maisema ylhäältä,
+3. **Käsikirjoitus.** Kertoja William; luettelo yhtenä ottona ja leikkaus, pidempi kappale omana ottonaan (Raamattu 5.1). Rakenne: avaus ("Tervetuloa <kaupunkiin>.", maisema ylhäältä,
    "Kierros alkaa …"), 8 pysäkkiä, loppu. Pysäkkiteksti on pieni tarina (neljä tai viisi tarkistettua faktaa, tunnistettava piirre
    ensin), lähes puhekielinen mutta ei hehkutusta; isoisän 1873-viittaus vain harvoin ja tosiasiana (Prahan kello). Luvut sanoiksi
    ennen merkkimäärän laskemista; kokonaispituus ilmoitetaan (Praha 8 103, Ateena 7 274 merkkiä).

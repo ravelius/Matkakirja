@@ -1044,6 +1044,16 @@ test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
   assert.equal(praha.kohtaaminen, praha.data.kohtaaminen);
   assert.equal(praha.kysymys.kysymys, praha.data.kysymys.q);
   assert.deepEqual(praha.kysymys.vaihtoehdot, praha.data.kysymys.vaihtoehdot);
+  // Vihjekortti (KK 13.11. 00.10): lahde ja vihje päätasolle; ilman niitä null (natiivi lukee vain päätason).
+  const pariisi = k('tarinakaari').find((a) => a.id === 'pariisi');
+  assert.equal(pariisi.kysymys.vihje, pariisi.data.kysymys.vihje);
+  assert.equal(pariisi.kysymys.lahde, 'nosto-pariisin-bukinistit');
+  assert.ok(pariisi.kysymys.vihje?.length > 0, 'Pariisin vihje');
+  // Lontoon vihje (KK 13.11.2026): tarinapaikka Savusumu 1952.
+  const lontoo = k('tarinakaari').find((a) => a.id === 'lontoo');
+  assert.equal(lontoo.kysymys.lahde, 'nosto-lontoon-savusumu-1952');
+  assert.equal(lontoo.kysymys.vihje, lontoo.data.kysymys.vihje);
+  assert.ok(k('tarinakaari').every((a) => !a.kysymys || ('vihje' in a.kysymys && 'lahde' in a.kysymys)));
   assert.ok(k('paikkatiedot').every((a) => typeof a.teksti === 'string' && a.teksti.length));
   assert.ok(k('kohtaamiset').every((a) => a.tervehdys && a.loyto && a.tyhja && a.vaarin));
   assert.ok(k('kohtaamiskuvat').every((a) => typeof a.tila === 'string'));
@@ -1058,7 +1068,8 @@ test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
 test('skeema 1.27: työhuoneen moduulit ilman henkilöiden sähköposteja', async () => {
   const { peitaSahkopostit } = await import('../tools/vienti/vie-sisalto.mjs');
   assert.equal(peitaSahkopostit('a etu.suku@esimerkki.fi b palaute@matkakirja.app'), 'a [sähköposti] b palaute@matkakirja.app');
-  for (const [m, nimet] of [['tyohuone-raamattu', ['RAAMATTU']], ['tyohuone-tilanne', ['TILANNE', 'TESTATTAVAA', 'TUOREET']], ['tyohuone-pelit', ['PELIT']]]) {
+  assert.ok(!tiedostot.has('moduulit/js/tyohuone-raamattu.json'), 'Raamattu-moduuli poistui viennistä 12.11.2026');
+  for (const [m, nimet] of [['tyohuone-tilanne', ['TILANNE', 'TESTATTAVAA', 'TUOREET']], ['tyohuone-pelit', ['PELIT']]]) {
     const t = tiedostot.get(`moduulit/js/${m}.json`);
     assert.ok(t, m);
     for (const n of nimet) assert.ok(n in JSON.parse(t).exportit, `${m}.${n}`);
@@ -1663,4 +1674,33 @@ test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', 
   const fra = o.maat.FRA;
   const kuvat = new Set(fra.mediaKuvat.map((k) => k.url));
   assert.ok(fra.media.some((u) => kuvat.has(u)), 'FRA: media-listan kuvia mediaKuvissa');
+});
+
+/*
+ * PULUN KOMMENTIN ÄÄNI (KK 15.11.2026 klo 15.35): natiivi lukee kaupungin kommentin äänen kokoelman livianrepliikit rivistä
+ * "<kaupunki>-3" ja soittaa sen vain, kun rivin teksti on kuplan teksti (fokusvirran pollo.kommentti[0]) ja ajanTasalla on true
+ * (Assets/Matkakirja/UI/Pulu/LivianRepliikit.cs). Tekstien ero on punainen: lähteet ovat ajautuneet erilleen. ajanTasalla false ei ole
+ * punainen (teksti saa vaihtua ennen äänitystä); se tulostuu äänitysjonona.
+ */
+test('pulun kommentin rivi <kaupunki>-3 = fokusvirran ensimmäinen kupla', (t) => {
+  const repliikit = new Map(JSON.parse(tiedostot.get('kokoelmat/livianrepliikit.json')).alkiot.map((r) => [r.id, r]));
+  const virrat = JSON.parse(tiedostot.get('kokoelmat/fokusvirrat.json')).alkiot;
+  const erot = [];
+  const jono = [];
+  let rivilla = 0;
+  for (const v of virrat) {
+    const k = v.kaupunki ?? v.id;
+    const kommentti = v.pollo?.kommentti ?? v.data?.pollo?.kommentti;
+    const eka = Array.isArray(kommentti) ? kommentti[0] : kommentti;
+    if (typeof eka !== 'string') continue;
+    const r = repliikit.get(`${k}-3`);
+    if (!r) continue;
+    rivilla += 1;
+    if (r.teksti.trim() !== eka.trim()) erot.push(`${k}: rivi "${r.teksti.slice(0, 40)}…" ≠ kupla "${eka.slice(0, 40)}…"`);
+    if (!r.ajanTasalla) jono.push(k);
+    assert.match(r.aani ?? '', /^https:\/\//, `${k}-3 aani`);
+  }
+  assert.ok(rivilla >= 40, `kaupunkirivejä ${rivilla}`);
+  assert.deepEqual(erot, [], 'pulun kommentin teksti eroaa fokusvirrasta');
+  t.diagnostic(`äänitysjono (ajanTasalla false): ${jono.length ? jono.join(', ') : 'tyhjä'}; kaupunkirivejä ${rivilla}`);
 });

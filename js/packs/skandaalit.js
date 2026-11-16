@@ -2129,6 +2129,10 @@ export const SKANDAALIT = {
      */
     {
       id: 'mona-lisan-varkaus-1911',
+      kysymykset: [
+        'Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?',
+        'Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?',
+      ],
       otsikko: 'Mona Lisan varkaus',
       nimio: 'Mona Lisan varkaus',
       vuosi: '1911–1913',
@@ -2152,17 +2156,16 @@ export const SKANDAALIT = {
         + 'seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän '
         + 'seinän.\n\n'
         + 'Etsintä oli valtava ja hämmästyttävän huono. Peruggia oli jättänyt '
-        + 'peukalonjäljen suojalasiin, ja hänen sormenjälkensä olivat poliisin '
-        + 'kortistossa, mutta hänen nimensä unohtui vertailtavien listalta. Etsivä '
-        + 'kävi asunnossa ja kirjoitti raporttinsa nojaten pöytään, jonka alla '
-        + 'olevassa kolossa taulu oli. Pablo Picasso ja runoilija Guillaume '
-        + 'Apollinaire ehdittiin pidättää.\n\n'
+        + 'peukalonjäljen, ja hänen sormenjälkensä olivat poliisin kortistossa, '
+        + 'mutta hänen nimensä unohtui vertailtavien listalta. Runoilija Guillaume '
+        + 'Apollinaire ehdittiin pidättää, ja hänen ystäväänsä Pablo Picassoa '
+        + 'kuulusteltiin.\n\n'
         + 'Kaksi vuotta myöhemmin Peruggia vei taulun junalla Firenzeen ja tarjosi '
         + 'sitä nimellä Leonardo V taidekauppias Alfredo Gerille. Uffizin johtaja '
         + 'Giovanni Poggi tunnisti teoksen, ja poliisi haki miehen hotellista '
         + 'joulukuussa 1913. Tuomioksi tuli vuosi ja viisitoista päivää, '
         + 'valituksen jälkeen seitsemän kuukautta. Taulu kiersi ensin näyttelyissä '
-        + 'Italiassa ja palasi Louvreen samana vuonna.',
+        + 'Italiassa ja palasi Louvreen 4. tammikuuta 1914.',
       lahde: 'en-Wikipedia "Vincenzo Peruggia". Tarkistettu 2.9.2026.',
       kuvat: [
         {
@@ -2280,7 +2283,11 @@ export const SKANDAALIT = {
      */
     {
       id: 'vrain-lucas-kirjevaarennokset',
-      otsikko: 'Vrain-Lucasin 27 000 väärennettyä kirjettä',
+      kysymykset: [
+        'Miten Vrain-Lucas sai väärennetyt kirjeensä näyttämään vanhoilta?',
+        'Miten väärentäjä yritti paikata virheitään, kun tiedeakatemia huomasi ne?',
+      ],
+      otsikko: 'Vrain-Lucas 1861–1870 — 27 000 väärennettyä kirjettä',
       nimio: 'Vrain-Lucas',
       vuosi: '1861–1870',
       paikka: 'Institut de France (tiedeakatemia), Pariisi',
@@ -2314,11 +2321,11 @@ export const SKANDAALIT = {
         + 'Chaslesille 1871 — sekin oli sepite.',
       lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 2.9.2026.',
       kuva: {
-        tiedosto: 'Denis Vrain-Lucas.jpg',
-        lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
-        selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
-          + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
-        lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+        tiedosto: 'Pascal à Galileo.jpg',
+        lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
+        selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
+          + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
+        lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
       },
       visa: {
         kysymys: 'Mikä paljasti järkevälle lukijalle Vrain-Lucasin ’Kleopatran '
@@ -2412,6 +2419,10 @@ export const SKANDAALIT = {
      */
     {
       id: 'etelameren-kupla',
+      kysymykset: [
+        'Miten yhtiö itse paisutti oman osakkeensa hintaa?',
+        'Mitä Etelämeren kuplasta jäi Lontooseen nykypäivään asti?',
+      ],
       otsikko: 'Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’',
       nimio: 'Etelämeren kupla',
       vuosi: '1720',

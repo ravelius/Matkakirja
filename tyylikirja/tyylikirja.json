@@ -72,7 +72,7 @@
     "kerma": "#faf4d6"
   },
   "karttapaletti": {
-    "_selite": "KARTAN KOHTEET KARTTAPALETILLA (omistaja 15.10.2026 klo 18.31: \"Kyllä sekä muillekin samanlaisille kohteille\"; Raamattu). Kartalla olevien 3D-kohteiden (natiivi UI/Resources/KaupunkiPallo: kuumailmapallo, ISS-raketti, Olavinlinnan torni, Rijksmuseum) palettilaattojen värit pallon paperista ja akvarellipienoismallien laveerauksista, ei kirkkaita UI-värejä (accent, mark, kulta). Uusi karttamalli valitsee näistä ja kartan paper/map-ink-sävyistä. Ei generoi CSS- eikä USS-muuttujia (värit ovat mallien palettikuvissa); vaihtotyökalu proto-3d/_tyo/karttaseppa/karttapaletti-20261015/karttapaletti.py (Karttaseppä).",
+    "_selite": "KARTTAPALETTI v2 (omistaja 6.11.2026 klo 10.32, kortti \"Näytteen tapaan\"; v1 15.10.2026): kaikki kartalla näkyvät kohteet pysyvät tämän sisällä, ja uuden kaupungin kohde asettuu asteikolle säännöllä ilman käsityötä. Yksi lähde: muut viittaavat tähän. Nimetyt v1-värit (kerma ... seepia-tumma) ovat pienten kohteiden palettilaatoissa (KaupunkiPallo, karttapaletti-20261015/karttapaletti.py). Ei generoi CSS- eikä USS-muuttujia.",
     "kerma": "#e6d8ba",
     "kerma-varjo": "#d6c6a8",
     "tiili": "#9e5c48",
@@ -81,7 +81,127 @@
     "liuske": "#929a98",
     "alusta": "#96866c",
     "seepia": "#46331f",
-    "seepia-tumma": "#34281c"
+    "seepia-tumma": "#34281c",
+    "versio": 2,
+    "perus": {
+      "_selite": "Kartan omat värit: ElavaTyyli.cs (S*-värit, e23), puu ja muste isoisa-2029-paletista.",
+      "paperi": "#f0deb4",
+      "katu": "#f1d5a9",
+      "katto": "#a88c74",
+      "julkinen": "#b09270",
+      "vesi": "#a9aa93",
+      "nurmi": "#c2af73",
+      "puu": "#8f7743",
+      "muste": "#6a5033"
+    },
+    "tunnistus": {
+      "_selite": "Nähtävyyden tunnistusvärit voimakkuusrajalla (OMISTAJAN KORTTI 6.11.2026 \"Näytteen tapaan\"). Sini on Louvren pyramidin lasi (omistaja 4.11. 21.24).",
+      "murrettu-tiili": "#9e5c48",
+      "haalistunut-sini": "#739dc0",
+      "kuparinvihrea": "#6f9a93",
+      "vanha-kulta": "#c6a35e"
+    },
+    "saanto": {
+      "_selite": "OKLCH, raja koskee väriä näytöllä. Työkalu tyokalut/karttapaletti.py (natiivi). Savykartta: [sävy sisään, sävy ulos, polvi, raja]; väliarvot lineaarisesti, joten naapurisävyt eivät hyppää. Polven alla voimakkuus säilyy, sen yli se puristuu rajaa kohti. Vaaleus säilyy, paitsi tummin ja vaalein. Ulkopuolella: käyttöliittymä, Pulu ja kohdemaan lippu (Raamattu 4.18).",
+      "savykartta": [
+        [
+          40,
+          40,
+          0.088,
+          0.1
+        ],
+        [
+          112,
+          112,
+          0.088,
+          0.1
+        ],
+        [
+          125,
+          119.15,
+          0.055,
+          0.072
+        ],
+        [
+          175,
+          165,
+          0.05,
+          0.066
+        ],
+        [
+          200,
+          191,
+          0.04,
+          0.058
+        ],
+        [
+          225,
+          222,
+          0.043,
+          0.064
+        ],
+        [
+          240,
+          240,
+          0.045,
+          0.068
+        ],
+        [
+          300,
+          264,
+          0.047,
+          0.07
+        ],
+        [
+          345,
+          379.45,
+          0.07,
+          0.095
+        ],
+        [
+          398,
+          398,
+          0.07,
+          0.095
+        ],
+        [
+          400,
+          400,
+          0.088,
+          0.1
+        ]
+      ],
+      "harmaa": 0.012,
+      "tyhja": 0.03,
+      "tummin": 0.26,
+      "tummin_alkaa": 0.45,
+      "vaalein": 0.96,
+      "vaalein_alkaa": 0.93,
+      "varaus": 0.006,
+      "sallittu_osuus": 0.002,
+      "valo": {
+        "_selite": "Auringon puoli, ValoKohteet.cs Nahtavyys*: raja katsotaan kirkkaimmalta sivulta.",
+        "aurinko": [
+          1.0,
+          0.95,
+          0.82
+        ],
+        "aurinko_voima": 2.9,
+        "taivas": [
+          1.0,
+          0.9216,
+          0.8228
+        ],
+        "maa": [
+          0.2623,
+          0.1878,
+          0.1274
+        ],
+        "puolipallo_voima": 2.6,
+        "puolipallo_t": 0.75,
+        "nl": 0.7
+      }
+    }
   },
   "teemat": {
     "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus). HARMAA = ohjausnappien neutraali harmaa valokuvan, 3D:n ja avaruuden päällä (omistaja 16.9.2026, .satelliitti-sulku; OHJAUSNAPPI 2.10.2026). TUMMA = kuvan päällä, videopeleissä ja muissa pimeissä näkymissä (yö); hyväksytty pohja tai variantti käy vastaaviin tilanteisiin kysymättä (omistaja 9.10.2026, Raamattu #4243).",
@@ -152,6 +272,17 @@
       "nappi-reunus": "rgba(224, 224, 224, 0.15)",
       "nappi-kuvake": "rgba(240, 240, 240, 0.65)"
     },
+    "kartta": {
+      "_selite": "KARTAN LEIJUVAT NAPIT JA LAATIKOT yhtenä perheenä, \"+ henki\" (omistajan valinta 15.11.2026 klo 18.09, KK:n kortti; vertailuarkki NUI 00e28140d): paperi ilman varjoa, kynäviivareuna, kulma mitat.kulma.pieni. pinta = tekstiä kantava laatikko 0,55, pinta-kuvake = pelkkä kuvake 0,35; sisaviiva = tekstilaatikon hento sisäviiva 0,5 pt, 2 pt sisempänä; paperin kuitu ≤ 6 % (natiivi Pohjat/paperikuitu). Vain kartan päällä: ei yläpalkin nahkaa eikä kullattua päänappia.",
+      "pinta": "rgba(245, 240, 226, 0.55)",
+      "pinta-kuvake": "rgba(245, 240, 226, 0.35)",
+      "muste": "#46331f",
+      "muste-pehmea": "rgba(70, 51, 31, 0.45)",
+      "korostus": "#7a5514",
+      "reunus": "rgba(70, 51, 31, 0.3)",
+      "sisaviiva": "rgba(70, 51, 31, 0.18)",
+      "toiminto": "#d9a13b"
+    },
     "lcd": {
       "pinta": "#0c2214",
       "pinta-peitto": "#0c2214",
@@ -167,7 +298,9 @@
   "himmennys": {
     "tumma": "rgba(14, 9, 4, 0.72)",
     "kevyt": "rgba(14, 9, 4, 0.35)",
-    "kuva": "rgba(14, 9, 4, 0.92)"
+    "kuva": "rgba(14, 9, 4, 0.92)",
+    "_paljastus": "Aarteen paljastuksen tausta (KK 13.11.2026 klo 21.51 ja 22.36): kartan nimet eivät erotu tekstin takaa; täysin peittävä (KK 22.59 A).",
+    "paljastus": "rgba(14, 9, 4, 1)"
   },
   "tila": {
     "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana. live: ☾-listan LIVE-laatikon pohja päällä (oranssi; pois = teeman toiminto-harmaa; omistaja 8.10.2026 klo 09.1x). raha-vahenee ja raha-kasvaa: kukkaron palaute yläpalkin tummalla pillerillä (summa punaisena tai vihreänä noin 1 s, omistaja 11.10.2026, juna 182).",
@@ -202,6 +335,8 @@
     "accent-dark-95": "rgba(138, 97, 20, 0.95)",
     "bg-85": "rgba(29, 22, 16, 0.85)",
     "harmaa-pinta-100": "#828282",
+    "harmaa-tumma-lasi": "#595755",
+    "_harmaa-tumma-lasi": "Oppaan ☰-paneelin täysin peittävä tumma harmaa (Lasipohja.HarmaaTummaLasi; omistaja 7.11.2026 11.21, PT 11.5x): harmaa-pinta 35 % kohti himmennys-tumma (Color32.Lerp, sama arvo kuin natiivin aiempi johdettu sävy).",
     "himmennys-tumma-45": "rgba(14, 9, 4, 0.45)",
     "himmennys-tumma-55": "rgba(14, 9, 4, 0.55)",
     "himmennys-tumma-60": "rgba(14, 9, 4, 0.6)",
@@ -590,6 +725,9 @@
       "Museo": [["EB Garamond", "Regular"]],
       "MuseoLihava": [["EB Garamond", "SemiBold"]],
       "MuseoVahva": [["EB Garamond", "ExtraBold"]],
+      "Teatteri": [["Abril Fatface", "Regular"]],
+      "Kyltti": [["Patrick Hand SC", "Regular"]],
+      "_teatteri": "TEATTERI ja KYLTTI (omistaja 16.11.2026 08.37, KK 08.49 ja 09.05; vain natiivi, Temple-tornin nukkekoti): kohtausotsikko Abril Fatface 19 pt leikatulla paperiliuskalla ilman hehkua (Teatteri) ja aloitusjulisteen nimikyltti Patrick Hand SC (Kyltti). Natiivissa sovelluksen mukana tulevat SIL OFL 1.1 -fontit (UI/Resources/Fontit/AbrilFatface-Regular.ttf ja PatrickHandSC-Regular.ttf, lisenssit samassa kansiossa), ei järjestelmäfontti. Ei muualle peliin.",
       "_museovahva": "MUSEOVAHVA (omistaja 24.10.2026 10.46 PT:n kautta: 'tee kielletty kaupunki yms. teksti vahvemmalla fontilla'): juoksupelin alkulennon nimitekstit (KIELLETTY KAUPUNKI, BEIJING, 1914) EB Garamond ExtraBold 800, ohut tumma ääriviiva. Natiivissa kiinteä paino samasta muuttuvasta OFL-fontista (UI/Resources/Fontit/EBGaramond-ExtraBold.ttf, fontTools instancer wght 800).",
       "_museo": "MUSEO (omistaja 16.10.2026 22.26 PT:n kautta: 'fontti ei näytä taidegalleriaan sopivalle'; hyväksytty KK:n kautta 16.10. ~23.5x, juna 197): taidemuseon tekstit (nimi ja tekijärivi seinällä, salikortti, teoskortti, i-kortti, ympyräkortti) EB Garamondilla; nimi SemiBold 600, muut Regular 400. Natiivissa kiinteät painot projektin muuttuvasta OFL-fontista (UI/Resources/Fontit/EBGaramond-Regular.ttf ja -SemiBold.ttf, fontTools instancer), ei järjestelmäfontti.", "_moderni": "MODERNI ja MODERNILIHAVA (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro VAIN nykyajan näkymiin (elävä opas), ei muualle peliin."
     }
@@ -626,14 +764,14 @@
   },
   "pohjat": {
     "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",
-    "NOSTOKORTTI": { "teemat": ["paperi", "tumma", "videopeli"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
+    "NOSTOKORTTI": { "teemat": ["paperi", "tumma", "videopeli"], "kuvat": "0|1|2|3+", "sulku": "✕ oikeassa yläkulmassa (X-SULKU, Sulkunappi.cs), veto alas, Esc; ohinapautus vain asetuksella Asetukset.SulkuKartasta (✕ silloin piilossa)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
     "LUKUARKKI": { "teemat": ["paperi"], "kuvat": "vapaa", "sulku": "POISTU, Esc, veto oikealle" },
     "KORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc", "_tumma": "TUMMA videopeleissä ja muissa pimeissä näkymissä (seikkailun tietokortit ja löytö, natiivi .mk-kortti-kehys--tumma ja .mk-paljastus--tumma; pallon ☰-, ☾- ja Kysy-listat yöllä; tk-tumma-*-tokenit): omistaja 8.10.2026 klo 21.2x \"A\", koska pimeässä kirkas paperi häikäisee (Thiefin taso); muualla KORTTI paperisena. Hyväksytty pohja käy vastaaviin (omistaja 9.10.2026 klo 01.05, Raamattu #4243): pimeä näkymä → tumma teema kysymättä, käyttö lokiin; omistajalta kysytään vain kokonaan uusi pohja tai muunnelma.", "_vakanen": "Väkänen (details, natiivi Vakalohko .mk-palaute__vakanappi) tummalla ja lasikortilla: väkänen ja otsikko --tk-tumma-muste-pehmea kuten kapiteeli, osion viiva --tk-tumma-reunus (museon teoskortin tarkemmat tiedot, omistaja 20.10.2026 09.38, PT OK 09.5x)." },
     "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
-    "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)", "variantit": ["SIRURIVI IRRALLAAN (.mk-chat__sirut--irrallaan; omistaja 5.10.2026 klo 19.0x, elävä opas): samat Pulun sirut ilman chat-paneelia, kullakin lasipinnan tausta (--tk-lasi-pinta, reunus --tk-lasi-reunus); kaksi vaihtoehtoa rinnakkain alareunan keskellä ja vieressä pieni puhu/kirjoita-siru (mikki), joka avaa Pulu-chatin syöttöineen ja käynnistää sanelun; häivytys --tk-kesto-sulku"] },
-    "PINNATTU PALKKI": { "osa": true, "teemat": ["paperi"], "_selite": "PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026 klo 23.3x): ikkunan (nosto, Pulu-chat ym.) ylärivin pin-kuvake rivin muiden kuvakkeiden koossa; pinnattu ikkuna pienenee kartan liikkeestä yhden rivin palkiksi oikeaan yläreunaan nappien alle: pin-merkki, otsikko (apuri, ellipsi), tauko/jatka 34 pt ja ohut EDISTYMINEN-viiva; napautus palauttaa ikkunan, ei ✕:ää; vain yksi kerrallaan" },
+    "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "✕ oikeassa yläkulmassa (X-SULKU, Sulkunappi.cs), Pulun napautus, Esc; ohinapautus vain asetuksella Asetukset.SulkuKartasta (✕ silloin piilossa)", "variantit": ["SIRURIVI IRRALLAAN (.mk-chat__sirut--irrallaan; omistaja 5.10.2026 klo 19.0x, elävä opas): samat Pulun sirut ilman chat-paneelia, kullakin lasipinnan tausta (--tk-lasi-pinta, reunus --tk-lasi-reunus); kaksi vaihtoehtoa rinnakkain alareunan keskellä ja vieressä pieni puhu/kirjoita-siru (mikki), joka avaa Pulu-chatin syöttöineen ja käynnistää sanelun; häivytys --tk-kesto-sulku"] },
+    "PINNATTU PALKKI": { "osa": true, "teemat": ["paperi"], "_selite": "PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026 klo 23.3x): ikkunan (nosto, Pulu-chat ym.) ylärivin pin-kuvake rivin muiden kuvakkeiden koossa; pinnattu ikkuna pienenee kartan liikkeestä yhden rivin palkiksi oikeaan yläreunaan nappien alle: pin-merkki, otsikko (apuri, ellipsi), tauko/jatka 34 pt ja ohut EDISTYMINEN-viiva; napautus palauttaa ikkunan, ✕ sulkee noston kokonaan (omistaja 9.11.2026 16.25, Pinnaus.cs); vain yksi kerrallaan" },
     "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus", "tumma"], "kulma": "0 (ohut terävä viiva; Päätoimittaja 5.10.2026: ei kapselipäitä)", "variantit": ["LATAUSPALKKI (odotusruudun nimen alla, 140 × 3 pt, arvo 0–1, häivytys; omistaja 5.10.2026: linnan ja vastaavien lataukset)", "SAAPUMISEN ODOTUS (kartan päällä ilman paperipohjaa: kaupungin nimi kirjain.arkki + LATAUSPALKKI, teema paperi, alareunasta 14 %; vain kun lähinäkymä on zoomauksen alkaessa kesken; omistaja 3.11.2026 klo 07.22, pohjaksi PT 3.11. 21.4x; natiivi UI/SaapumisOdotus.cs)"] },
     "LATAUSKUVA": { "teemat": ["tumma"], "koostuu": ["tausta (still-kuva)", "1–2 liikkuvaa kerrosta alfalla", "köydet vektoriviivoina kiintopisteestä liikkuvaan kerrokseen: riippuköydet (kori → kupu, kevyt riippuma) ja ankkuriköysi korista maahan (pieni kaari; omistaja 8.10.2026 klo 08.4x)", "nimi ja EDISTYMINEN/LATAUSPALKKI ennallaan päällä"], "liike": "vähäeleinen (omistaja 8.10.2026 klo 08.4x): sinimuotoinen heilahdus ±0,5–0,75° kääntöpisteen ympäri ja nousu–lasku enintään 4 pt neljännesjakson edellä, jakso 7–8 s; ei nykimistä; päivitys 30 fps ilman täyttä ruudunpäivitystä", "valokuva": "hidas lähentyminen ja siirto (Ken Burns) 1,00 → 1,04 / 8 s ja pehmeästi takaisin, ei hyppyä; nipistyszoom keskeyttää (oppaan latauskuva)", "esiin": "heti tai häivyttäen liike.avaus (alle liike.maksimi)", "ilman kerroksia": "nykyinen still-kuva", "_selite": "Kevyesti animoitu latauskuva (omistaja 8.10.2026 ~08.5x: 'Lataus kuvista pitää tehdä kevyesti animoituja. Esim ilmapallo kuva pitää tehdä kahdesta osasta uudestaan niin että pallo heiluu hitaasti ruudulla ja köysi piirretään vektorina'; Päätoimittaja: uusi pohja). Vain natiivi: UI/Latauskuva.cs, liike Linssit/Ydin/LatausLiike.cs." },
     "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
@@ -737,13 +875,13 @@
       "_selite": "Pelin kosketusohjauksen opetus 3D-näkymän päällä (omistaja 21.10.2026 08.58 peukalokohdat; OMISTAJAN PÄÄTÖS 27.10.2026 klo 10.05 KK:n kortilla pyyhkäisyosoitin luonnoksen mukaan; PT 27.10. 10.3x: pohjaksi, NUI ja PK). Ensimmäinen käyttäjä juoksupelin taso 1 (JuoksuOpetus); muut pelit, joissa ohjataan peukaloilla, samalla pohjalla. Vain natiivi: UI/Pelit/Peukalokohta.cs, UI/Pelit/PyyhkaisyOsoitin.cs, tyylit Pohjat/ohjainopetus.uss.",
       "teemat": ["tumma"],
       "koostuu": [
-        "PEUKALOKOHTA: peukalon keskikohta pehmeänä hehkupisteenä ilman reunaa (Kuviot.Hehkupiste); normaali = lämpimän ruskea pieni peitto (kuulto.accent-dark-14), ohjeen kohta = punainen (tila.virhe) syke 0,6 s välein",
+        "PEUKALOKOHTA: normaalitilassa ohjain ilman täytettä (OMISTAJAN PÄÄTÖKSET 6.11.2026 klo 11.39, 16.05 ja 17.16): vaalea viiva (kuulto-valkoinen-92) ja tumma varjo (kuulto-musta-25): ulkorengas 140 pt (viiva 7, varjo 11) ja sisärengas 64 pt (viiva 3, varjo 5); keskellä vasemmalla piste 14 pt, oikealla neljä kulmanuolta yhtenä pyöreäpäisenä viivana (viiva 7, varjo 11); koko ohjaimen peitto 0,55; ulkorengas pysyy turva-alueella. Ohjeen kohta ja rimpuilu = punainen (tila.virhe) pehmeä hehkupiste (Kuviot.Hehkupiste) ilman reunaa, syke 0,6 s välein",
         "PYYHKÄISYOSOITIN: ohjeen peukalokohdasta eleen suuntaan (oikea, vasen, ylös = hyppy, alas = liuku) liukuva jälki: kolme pienenevää vaaleaa hehkupistettä (kuulto-valkoinen-92) ja kulmanuoli pyöreäpäisistä viivoista, alla tumma pehmeä varjo (kuulto-musta-50/-25), joka näkyy vaalealla kiveyksellä; napautuksessa (kaista, heitto) ei jälkeä, pelkkä syke",
         "OHJETEKSTI: kertojan kaista (.mk-aikajana-kertomus--ohje) luonnoksen koossa: tumma kuultopohja (kuulto-musta-72), kulma 6 pt, ei reunaviivaa, teksti 32 pt fonttipoikkeuksena (KK 27.10. 10.2x: luonnoksen koko, rivi noin 60 % ruudun leveydestä; arkin 26 pt jäi pieneksi) ohuella tummalla ääriviivalla, leveys enintään 1100 pt; yksi lyhyt käsky kerrallaan muodossa ele: seuraus (\"Pyyhkäise oikealla peukalolla oikealle: käänny oikealle\")"
       ],
       "sijainti": "peukalokohdat ja osoitin pelin peukaloiden kohdalla (oikea peukalo = eleet), ohjeteksti keisarin alapuolella kertojan kaistan paikalla; kosketukset menevät läpi (PickingMode.Ignore)",
       "liike": "osoittimen jälki liukuu 14 pt ulos ja häipyy 0,45 s:n tahdissa (ympäristöanimaatio), esiin ja pois häivyttäen 0,2 s; peukalokohta esiin 0,25 s; alle liike.maksimi UI-siirtymissä",
-      "nakyvyys": "vain opetuksen ohjeen aikana; ohje kerrallaan, kunnes pelaaja tekee liikkeen"
+      "nakyvyys": "peukalokohdan ohjain vain juoksun alussa, kunnes pelaaja ohjaa ensimmäisen kerran; ohjeen syke ja osoitin vain opetuksen ohjeen aikana, ohje kerrallaan, kunnes pelaaja tekee liikkeen; rimpuilun hehku kiinni jäädessä"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)", "LAITEPÖYTÄ/sauva": "sauvan rengas ja nuppi pyöreinä: laitteen fyysinen osa, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja hyväksyi luonnoksen 4 17.10.2026 klo 17.06)" }
   }

@@ -835,7 +835,7 @@
     "Place des Vosges": 0.761,
     "Tuileries'n palatsi": 0.9,
     "Bastilji": 0.656,
-    "Metron sisäänkäynti": 0.699,
+    "Metro 1900": 0.699,
   },
   "peking": {
     "Vanha kesäpalatsi": 0.555,
@@ -1024,7 +1024,7 @@
   },
   "sofia": {
     "Mineraalikylpylä": 0.65,
-    "Banja Bashin moskeija": 0.78,
+    "Banja Bašin moskeija": 0.78,
     "Serdican areena": 0.633,
     "Pyhän Yrjön rotunda": 0.644,
     "Sofian katedraali": 0.775,

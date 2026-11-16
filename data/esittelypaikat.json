@@ -184,16 +184,16 @@
      2.328141
     ]
    },
-   "matkakirja-pariisi-p1-r20260914-tarina-v1.jpg": {
-    "kohde": "Tuileries'n puutarha (Grand Couvert, Pulun kuva)",
+   "Ballon Generali and the Eiffel Tower.jpg": {
+    "kohde": "Ballon de Paris, Parc André-Citroën (Pulun kuva)",
     "kohdepiste": [
-     48.864381,
-     2.326559
+     48.8417,
+     2.2736
     ],
-    "lahde": "Geofabrik ile-de-france-latest.osm.pbf (ladattu 8.10.2026), OSM way 14882430 Allée sous couvert nord; kuvasta: soratie puurivien välissä",
+    "lahde": "Parc André-Citroën, kiinnitetyn pallon nousupaikka (Wikipedia-koordinaatit); Geofabrik-tarkistus (25 m nostoista) tekemättä",
     "piste": [
-     48.864381,
-     2.326559
+     48.8417,
+     2.2736
     ]
    }
   }

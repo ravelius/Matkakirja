@@ -702,6 +702,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       nimio: 'Trelleborg',
       otsikko: 'Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että '
         + 'sen mitat kertovat suunnittelijan',
+      symboli: 'historia',
       lunastus: [
         'Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää '
           + 'ilmasta katsottuna piirretyltä. Trelleborgin linnoitus '

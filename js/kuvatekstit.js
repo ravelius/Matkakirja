@@ -1,7 +1,7 @@
 /*
  * ================== LYHYT SIVULLA, PITKÄ AVATUSSA KUVASSA ==================
  *
- * Omistajan linjaus 9.9.2026 klo 11.40 (js/tyohuone-raamattu.js, merkintä
+ * Omistajan linjaus 9.9.2026 klo 11.40 (vanha Raamattu, arkistossa docs/arkisto/, merkintä
  * "LYHYT KUVATEKSTI SIVULLA, PITKA VASTA AVATUSSA KUVASSA", sanatarkasti):
  *
  *   "Ja saman säännön voisi itse asiassa ajaa kaikkiin kuvateksteihin koko

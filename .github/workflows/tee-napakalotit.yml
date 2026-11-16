@@ -65,6 +65,12 @@ on:
         default: '2'
         type: choice
         options: ['1', '2', '3']
+      tyyli:
+        description: 'paperi = verkkopelin vanha ulkoasu; striimi = natiivin tavallinen kartta (ElavaTyyli.Varita, omistaja 8.11.2026 klo 10.34)'
+        required: false
+        default: 'paperi'
+        type: choice
+        options: ['paperi', 'striimi']
       kuiva:
         description: 'Kuiva ajo: vain suunnitelma, ei kuvia eikä vientiä'
         required: false
@@ -138,7 +144,7 @@ jobs:
         run: |
           node tools/tee-napakalotit.mjs --ne=ne-data --kuiva \
             --koko-pohjoinen=${{ inputs.koko_pohjoinen }} --koko-etela=${{ inputs.koko_etela }} \
-            --laatu=${{ inputs.laatu }} \
+            --laatu=${{ inputs.laatu }} --tyyli=${{ inputs.tyyli }} \
             ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
 
       - name: Asenna sharp ja piirrä kalotit
@@ -148,7 +154,7 @@ jobs:
           npm install --no-save --no-fund --no-audit sharp
           node tools/tee-napakalotit.mjs --ne=ne-data --ulos=napakalotit-ulos \
             --koko-pohjoinen=${{ inputs.koko_pohjoinen }} --koko-etela=${{ inputs.koko_etela }} \
-            --laatu=${{ inputs.laatu }} --ylinaytto=${{ inputs.ylinaytto }} \
+            --laatu=${{ inputs.laatu }} --ylinaytto=${{ inputs.ylinaytto }} --tyyli=${{ inputs.tyyli }} \
             ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
           ls -la napakalotit-ulos
           # Kuvassa ON oltava alfakanava (reunan häivytys) — ilman sitä
@@ -187,4 +193,4 @@ jobs:
             --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
             --no-progress --content-type application/json --cache-control 'public, max-age=3600'
           echo "Viety: ${kansio}"
-          echo "Muista vaihtaa js/pallo.js NAPAKALOTTI_VERSIO → $(basename "$kansio")"
+          echo "Muista vaihtaa js/pallo.js NAPAKALOTTI_VERSIO (paperi) tai natiivin NapaKannet.KalottiVersio (striimi) → $(basename "$kansio")"

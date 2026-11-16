@@ -29,5 +29,8 @@ test('Oslon 1873-tekstit käyttävät muotoa Christiania', () => {
 
 test('myöhemmät vuosikymmenet pysyvät Kristianiana', () => {
   // Nansenin Fram-lähtö 1893 on Kristiania (kirjoitusasu vaihtui 1877).
-  assert.match(lue('js/packs/historian-hetket.js'), /Kristiania 1893/);
+  const hetket = lue('js/packs/historian-hetket.js');
+  assert.match(hetket, /paikka: 'Kristiania \(Oslo\), Norja'/);
+  assert.match(hetket, /Kristianian rannat/);
+  assert.doesNotMatch(hetket, /Christiania 1893/);
 });

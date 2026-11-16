@@ -10,20 +10,22 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { uusimmat, tilalinkit, RAJA_TIEDOSTO, RAJA_MUISTI, RAJA_RIVI, RAJA_KUVAUS } from '../tools/tarkista-tiedostokoot.mjs';
+import { uusimmat, tilalinkit, RAJA_ALOITUS as RAJA_TIEDOSTO, RAJA_LUOVUTUS, RAJA_MUISTI, RAJA_RIVI, RAJA_KUVAUS } from '../tools/tarkista-tiedostokoot.mjs';
 
 const SKRIPTI = fileURLToPath(new URL('../tools/tarkista-tiedostokoot.sh', import.meta.url));
 const juuri = mkdtempSync(join(tmpdir(), 'tiedostokoot-'));
 test.after(() => rmSync(juuri, { recursive: true, force: true }));
 
-function rakenna(nimi, { repo = {}, muisti = {} }) {
-  const r = join(juuri, nimi, 'repo'), m = join(juuri, nimi, 'muisti');
+function rakenna(nimi, { repo = {}, muisti = {}, luov = {} }) {
+  const r = join(juuri, nimi, 'repo'), m = join(juuri, nimi, 'muisti'), l = join(juuri, nimi, 'luovutukset');
+  mkdirSync(l, { recursive: true });
+  for (const [p, t] of Object.entries(luov)) writeFileSync(join(l, p), t);
   mkdirSync(join(r, 'docs/aloitusviestit'), { recursive: true });
   mkdirSync(join(r, 'docs/raportit'), { recursive: true });
   mkdirSync(m, { recursive: true });
   for (const [p, t] of Object.entries(repo)) writeFileSync(join(r, p), t);
   for (const [p, t] of Object.entries(muisti)) writeFileSync(join(m, p), t);
-  return spawnSync('sh', [SKRIPTI], { encoding: 'utf8', env: { ...process.env, TIEDOSTOKOOT_REPO: r, TIEDOSTOKOOT_MUISTI: m } });
+  return spawnSync('sh', [SKRIPTI], { encoding: 'utf8', env: { ...process.env, TIEDOSTOKOOT_REPO: r, TIEDOSTOKOOT_MUISTI: m, TIEDOSTOKOOT_LUOVUTUKSET: l } });
 }
 
 const iso = (t) => 'x'.repeat(t + 1);
@@ -60,25 +62,29 @@ test('ylitykset: uusin luovutus, aloitus, tila, MEMORY.md ja pitkä rivi; vanha 
       'docs/aloitusviestit/keskustelukanava.md': iso(RAJA_TIEDOSTO),
       'docs/raportit/viesti-julkaisija-aloitus.md': 'ok',
       'docs/raportit/viesti-fable-luovutus-20261019-yo.md': iso(RAJA_TIEDOSTO),
-      'docs/raportit/viesti-fable-luovutus-20261020-1238.md': iso(RAJA_TIEDOSTO),
+      'docs/raportit/viesti-fable-luovutus-20261020-1238.md': iso(RAJA_LUOVUTUS),
       'docs/raportit/viesti-julkaisija-luovutus-20261020-0900.md': 'ok',
     },
     muisti: {
       'MEMORY.md': MUISTI + pitka + '\n' + pitkaNimi + '\n' + '#'.repeat(RAJA_MUISTI),
-      'fable-tila-20261020.md': iso(RAJA_TIEDOSTO),
+      'fable-tila-20261020.md': iso(RAJA_LUOVUTUS),
     },
+    luov: { 'julkaisija-20261112-1141.md': iso(RAJA_LUOVUTUS), 'julkaisija-20261111-0900.md': iso(RAJA_LUOVUTUS), 'karttaseppa-20261112-1141.md': 'ok' },
   });
   assert.equal(r.status, 1, r.stderr);
   const rivit = r.stdout.trim().split('\n');
   assert.ok(rivit.includes('YLITYS|keskustelukanava|docs/aloitusviestit/keskustelukanava.md|15,0 kt > 15 kt'), r.stdout);
-  assert.ok(rivit.includes('YLITYS|fable|docs/raportit/viesti-fable-luovutus-20261020-1238.md|15,0 kt > 15 kt'), r.stdout);
+  assert.ok(rivit.includes('YLITYS|fable|docs/raportit/viesti-fable-luovutus-20261020-1238.md|8,0 kt > 8 kt'), r.stdout);
   assert.ok(!rivit.some((x) => x.includes('20261019-yo')), r.stdout);
-  assert.ok(rivit.includes('YLITYS|fable|muisti/fable-tila-20261020.md|15,0 kt > 15 kt'), r.stdout);
+  assert.ok(rivit.includes('YLITYS|fable|muisti/fable-tila-20261020.md|8,0 kt > 8 kt'), r.stdout);
   assert.ok(rivit.some((x) => x.startsWith('YLITYS|muisti|muisti/MEMORY.md|')), r.stdout);
   assert.equal(RAJA_RIVI, 160); assert.equal(RAJA_KUVAUS, 80);
   assert.ok(rivit.includes('YLITYS|muisti|muisti/MEMORY.md:5 kuvaus|81 merkkiä > 80'), r.stdout);
   assert.ok(!rivit.some((x) => x.startsWith('YLITYS|muisti|muisti/MEMORY.md:5|')), r.stdout);
   assert.ok(rivit.includes('YLITYS|muisti|muisti/MEMORY.md:6|168 merkkiä > 160'), r.stdout);
   assert.ok(!rivit.some((x) => x.startsWith('YLITYS|muisti|muisti/MEMORY.md:6 kuvaus')), r.stdout);
+  assert.ok(rivit.includes('YLITYS|julkaisija|luovutukset/julkaisija-20261112-1141.md|8,0 kt > 8 kt'), r.stdout);
+  assert.ok(!rivit.some((x) => x.includes('20261111-0900') || x.includes('karttaseppa')), r.stdout);
+  assert.equal(RAJA_MUISTI, 3 * 1024);
   assert.ok(rivit.every((x) => x.split('|').length === 4), r.stdout);
 });
