@@ -1,0 +1,18 @@
+{
+  "status": "ACK_ACCEPTED_IN_PROGRESS",
+  "approvedImages": [
+    "Old St Pauls",
+    "Crystal Palace",
+    "Paleis voor Volksvlijt",
+    "Waag"
+  ],
+  "massProductionGateApproved": false,
+  "newImageCallsMax": 6,
+  "parisFirst": true,
+  "GCPhase": "late Giraud1802; Silvestre silhouette comparison only",
+  "BastilleFirstWindow": "2026-11-16 22:00–24:00 EET",
+  "sourcePacks": 64,
+  "preparedUniqueImagesBeforeRetries": 19,
+  "archiveExactOriginals": 133,
+  "newTripoJobsInThisAck": 0
+}
