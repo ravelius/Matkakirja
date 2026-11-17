@@ -20,6 +20,7 @@ SÄÄNNÖT:
 15. Pelaaja saa panoroida ja loitontaa vapaasti koko pallolla. Nipistyksen pieni kierto ohitetaan, kunnes kääntö ylittää kynnyksen (15–20 astetta). [R-2.15] [R-6.11]
 16. Vanha kohtaus siirretään kirjastoon työlistan järjestyksessä. Siirto on valmis vasta, kun vanha toteutus on poistettu. [P-261112-1]
 17. Kartan sauvat ovat oletuksena piilossa Ohjain-napin takana ja palaavat sinne 10 s käyttämättöminä. Nappi näkyy aina eikä syki. [P-261113-19]
+18. Peruskartalla sama sivukallistus kaikissa kameran siirtymissä (nähtävyydestä toiseen, AUTO, zoomilento, kaupunkiin ja pois, maasta toiseen): horisontti kallistuu kaarteessa ja suoristuu perillä. [P-261117-111]
 
 EI VIKA:
 - Kamera ei nyökkää kiihdytyksessä eikä jarrutuksessa.
