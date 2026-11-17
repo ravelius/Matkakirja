@@ -3880,11 +3880,11 @@ export const NAHTAVYYSJUTUT = {
     // KADONNUT IHME (PT 17.11.2026 NS 09.31, massa-25 osa 2; vain kahden itsenäisen lähteen väitteet: Hearsum Collection ja London Museum; 1851-näyttely Hyde Parkissa; tarkka päättymispäivä jätetty pois, koska lähteet antavat 11. ja 15. lokakuuta).
     'Crystal Palace 1851': {
       aika: '1851',
-      teksti: 'Crystal Palace oli suuri näyttelyhalli Lontoon Hyde Parkin eteläreunalla. Se pystytettiin vuoden 1851 Suurta maailmannäyttelyä varten, ja kuningatar Victoria avasi näyttelyn 1. toukokuuta 1851. Näyttely päättyi lokakuussa.'
+      teksti: 'Crystal Palace oli suuri näyttelyhalli Lontoon Hyde Parkin eteläreunalla. Se pystytettiin vuoden 1851 suurta maailmannäyttelyä varten, ja kuningatar Victoria avasi näyttelyn 1. toukokuuta 1851. Näyttely päättyi lokakuussa.'
         + '\n\n'
         + 'Halli oli alun perin tarkoitettu väliaikaiseksi. Näyttelyn jälkeen se purettiin ja koottiin uudelleen Sydenham Hillille Etelä-Lontooseen. Siellä se paloi vuonna 1936.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 Hyde Parkin paikka oli ollut tyhjä yli kaksikymmentä vuotta, ja halli seisoi jo Sydenhamissa.',
+        + 'Isoisäsi matkavuonna 1873 paikka Hyde Parkissa oli ollut tyhjänä yli kaksikymmentä vuotta, ja halli seisoi jo Sydenhamissa.',
       lahde: 'Matkakirjan oma teksti · lähteinä Hearsum Collection ja London Museum',
     },
     'Old St Paul\'s': {
