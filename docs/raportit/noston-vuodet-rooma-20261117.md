@@ -1,17 +1,19 @@
 # Noston vuosirivit: Rooma (SK 17.11.2026)
 
-Sama menetelmä ja KK:n linja kuin Lontoossa, Amsterdamissa ja Wienissä (PR 7048–7050): "n." jos teksti sanoo "noin"; epävarma sana pois selitteestä; 1873-rivit ja yhden lähteen rivit jäävät ja merkitään; lähteiden ristiriitaiset rivit poistetaan. KK 17.45: raportti ja data samassa PR:ssä. Data: kenttä `vuodet` 20 nostolle (17 nähtävyysjuttua, 3 kadonnutta: Septizodium, Jupiterin temppeli, Porto di Ripetta; luettelosta −15), 58 riviä.
+Sama menetelmä ja KK:n linja kuin Lontoossa, Amsterdamissa ja Wienissä (PR 7048–7050): "n." jos teksti sanoo "noin"; epävarma sana pois selitteestä; 1873-rivit ja yhden lähteen rivit jäävät ja merkitään; lähteiden ristiriitaiset rivit poistetaan. KK 17.45: raportti ja data samassa PR:ssä. Data: kenttä `vuodet` 20 nostolle (17 nähtävyysjuttua, 3 kadonnutta: Septizodium, Jupiterin temppeli, Porto di Ripetta; luettelosta −15), 57 riviä.
 
-Koneluettava lähde: `docs/raportit/noston-vuodet-rooma-20261117.json`. Skriptivalidointi: **20 nostoa, 58 riviä, 0 virhettä**; koko `npm test` vihreä. Ei ääntä.
+Koneluettava lähde: `docs/raportit/noston-vuodet-rooma-20261117.json`. Skriptivalidointi: **20 nostoa, 57 riviä, 0 virhettä**; koko `npm test` vihreä. Ei ääntä.
 
 ## Tarkistukset (17.11.2026)
-- **Riippumaton tarkistaja** (Sonnet, vain tekstit ja rivit): 65 riviä, 0 VIRHE + 6 epätarkkaa → selitteet korjattu: "vihkiäiset, perinne" (Jupiterin temppeli: teksti sanoo "perinteen mukaan"), "vettä johdettu" (Trevi 19 eaa.: ei "valmis"), "ei poistuttu ennen" (Vatikaani 1929), "ensimmäiset (Acea)" ja "yksi lähde" (Nasone 1874/1872), "Basilica Aemilia" (Forum: 179 eaa. on rakennuttamisen alku, ei valmistuminen; oma lisäys). Meta Sudansin "kuvia 1858–1890" -rivi poistettiin kokonaan (ks. alla).
+- **Riippumaton tarkistaja** (Sonnet, vain tekstit ja rivit): 65 riviä, 0 VIRHE + 6 epätarkkaa → selitteet korjattu: "vihkiäiset, perinne" (Jupiterin temppeli: teksti sanoo "perinteen mukaan"), "vettä johdettu" (Trevi 19 eaa.: ei "valmis"), "ei poistuttu ennen" (Vatikaani 1929), "ensimmäiset (Acea)" (Nasone 1874), "Basilica Aemilia" (Forum: 179 eaa. on rakennuttamisen alku, ei valmistuminen; oma lisäys). Meta Sudansin "kuvia 1858–1890" -rivi poistettiin kokonaan (ks. alla).
 - **Vuosien lähdetarkistus** (Sonnet; Wikipedia = yksi lähde): 65 riviä → OK 2: 49, OK 1: 6, EROAA: 5, EI LÖYDY: 1, johdettu (isoisän matka 1873): 10. Hakutuloksissa ei ollut upotettuja komentoja.
 - **Poistettu rivit, joissa lähteet eroavat tai eivät tue:** Septizodium purku 1588–1589 (Plat.: valmis 14.9.1588; en-Wikipedia 1588; muut 1585–1590); Castel Sant'Angelo "ensimmäinen enkeli 1536" (väärä: aiempia enkeleitä 1300–1400-luvuilta; Treccani antaa Montelupon 1544–45) ja "nykyinen enkeli 1753" (Treccani: valettu 1751, paikallaan 1752); Espanjalaiset portaat 1723–1725 (Turismo Roma: 1723–1726, vihkiäiset 1725); Pantheon "noin 29 eaa." (lähteet 27–25 eaa.); Trevi "rakentaminen alkoi 1732" (Turismo Roma, romeing.it: 1732 kilpailu/valinta); Meta Sudans "kuvia 1858–1890" (loppuvuosi 1890 ei löytynyt).
-- **Vain yksi lähde, rivi jätetty (KK päättää):** Jupiterin temppeli 1447 (en-Wikipedia; Poggion teos 1447–48), Michelangelo yleisölle 1511 (en-Wikipedia; Vatikaanin museot ei mainitse), Nasone "yksi lähde" 1872 (en-Wikipedia), Banca Romana "Rooma liitettiin 1870" (pankin nimen palautuminen vain en-Wikipedia; liittäminen 1870 Treccani).
+- **Vain yksi lähde, rivi jätetty (KK päättää):** Jupiterin temppeli 1447 (en-Wikipedia; Poggion teos 1447–48), Michelangelo yleisölle 1511 (en-Wikipedia; Vatikaanin museot ei mainitse), Banca Romana "Rooma liitettiin 1870" (pankin nimen palautuminen vain en-Wikipedia; liittäminen 1870 Treccani).
 - **Vaihteluväli lähteissä, rivi jätetty:** Castel hauta 135–139 (alku 123–135 lähteestä riippuen, loppu 139 yhtenevä), Pantheon n. 126 (118–128), Colosseum 72 (70–72, jotkut 73–75), Torre Argentina 1926–1929 (alueen valmistuminen 1929; heikko tuki).
 - **Tarinan oma vuosi, ei historiaväite:** "isoisän matka/vuosi 1873" (Torre Argentina, Banca Romana, Michelangelo, Kolikko olan yli, Areenan kellari, Norsu ja obeliski, Aqua Virgo, Nasone, Meta Sudans, Porto di Ripetta). Pelin matkavuotta ei tarkisteta; vain virkkeen väite 1873:n kohdalla on varmistettu (esim. kellari "vielä peitossa", Nasone "ei ehkä vielä", Meta Sudans rauniona).
 - **Ei riviä:** Vuosikymmenet "1870-luvulla" (Nasone) ja "1930-luvulla" (Meta Sudans purku) jätetty pois, koska rivi vaatii yksittäisen vuoden.
+
+- **KK 18.12:** Colosseum 80 → "vihittiin käyttöön" (perinne vain Jupiterin 509 eaa.); Pietarinkirkko 1950 → "löytö julkistettiin"; Nasone 1872 -rivi pois (1874:llä kaksi lähdettä, 1872 ristiriitainen).
 
 ## Tekstihuomiot (tekstikorjauslistaan, Rooma)
 1. **Castel Sant'Angelo:** "Ensimmäinen enkelipatsas nousi katolle 1536" väärin (puinen ja marmorinen enkeli jo aiemmin, 1527 sulatettu kullattu pronssi; Montelupon marmori 1544–45); "Sabina ja Lucius Aelius haudattiin ensimmäisinä" ei lähdettä (Hadrianuksen tuhka 139 yhdessä heidän kanssaan); "135–139": alkuvuosi vaihtelee 123–135; "nykyinen pronssiversio 1753": Treccani 1751/1752.
@@ -53,7 +55,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-rooma-20261117.json`. Skriptiv
 |---|---|---|
 | – rakentaminen alkoi 1506 | vuonna 1506 | Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. |
 | – valmistui 1626 | vasta 1626 | Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. |
-| – hauta löytyi 1950 | Vuonna 1950 | Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen mukaansa koko kirkko on saanut nimensä. |
+| – löytö julkistettiin 1950 | Vuonna 1950 | Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen mukaansa koko kirkko on saanut nimensä. |
 
 ### Castel Sant’Angelo
 
@@ -96,7 +98,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-rooma-20261117.json`. Skriptiv
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
 | – rakentaminen alkoi 72 | vuonna 72 | Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. |
-| – vihkiäiset, perinne 80 | vuonna 80 | Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. |
+| – vihittiin käyttöön 80 | vuonna 80 | Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. |
 
 ### Torre Argentina
 
@@ -173,7 +175,6 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-rooma-20261117.json`. Skriptiv
 |---|---|---|
 | – isoisän matka 1873 | matkavuonna 1873 | Isoisäsi matkavuonna 1873 nasoneja ei ehkä vielä ollut. |
 | – ensimmäiset (Acea) 1874 | vuonna 1874 | Turismo Roman ja Acean mukaan ensimmäiset tulivat vuonna 1874, mutta yksi lähde antaa vuodeksi 1872. |
-| – yksi lähde 1872 | vuodeksi 1872 | Turismo Roman ja Acean mukaan ensimmäiset tulivat vuonna 1874, mutta yksi lähde antaa vuodeksi 1872. |
 
 ### Meta Sudans
 

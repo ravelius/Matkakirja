@@ -10732,7 +10732,7 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'vuonna 1506', vuosi: '1506', selite: 'rakentaminen alkoi' },
         { kohta: 'vasta 1626', vuosi: '1626', selite: 'valmistui' },
-        { kohta: 'Vuonna 1950', vuosi: '1950', selite: 'hauta löytyi' },
+        { kohta: 'Vuonna 1950', vuosi: '1950', selite: 'löytö julkistettiin' },
       ],
       lainaus: {
         teksti: 'An ornament of the earth ... the sublime of the beautiful '
@@ -11007,7 +11007,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kivistä.',
       vuodet: [
         { kohta: 'vuonna 72', vuosi: '72', selite: 'rakentaminen alkoi' },
-        { kohta: 'vuonna 80', vuosi: '80', selite: 'vihkiäiset, perinne' },
+        { kohta: 'vuonna 80', vuosi: '80', selite: 'vihittiin käyttöön' },
       ],
       lainaus: {
         teksti: 'Quamdiu stat Colisæus, stat et Roma; quando cadet '
@@ -11425,7 +11425,6 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
         { kohta: 'vuonna 1874', vuosi: '1874', selite: 'ensimmäiset (Acea)' },
-        { kohta: 'vuodeksi 1872', vuosi: '1872', selite: 'yksi lähde' },
       ],
       kuvat: [
         {
