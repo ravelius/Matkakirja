@@ -5,6 +5,8 @@ Kysymys: esittelyn kupolikuva (Länsi-Eurooppa; `assets/apuraha/esittely.json` o
 ## Tulos
 **Vaihtoa ei tarvita, jos pelin mosaiikki on EOX:n alkuperäinen 2016-tuote (kerran noudettu 24.9.2026 CC BY 4.0:n nojalla). Se on CC BY 4.0 eli sallii kaupallisen käytön nimeämisellä.** Nykyinen lisenssisivu koskee myöhempiä tuotteita eikä kumoa jo julkaistua CC BY -lupaa. Yksi asia on varmistamatta (kohta 3).
 
+**OIKAISU 17.11.2026 (KK 12.29; Natiiviseppä vahvisti ämpärin `v2/laatat.json`:sta): kohdan 3 avoin kysymys on ratkennut.** Maailmansarja on EOX 2016 (CC BY 4.0). Kupolin Eurooppa (`s2-eurooppa`) EI ole EOX:n tuote vaan oma Copernicus Sentinel-2 L2A -mosaiikki 2022–2025. Sen lähderivi on siis "Contains modified Copernicus Sentinel data 2022–2025 (ESA)", ei EOX:n nimeäminen. Kohdan 4 suositus 2 pätee tähän muotoon: EOX-rivi ja CC BY 4.0 maailmansarjalle, Copernicus-rivi kupolin Euroopalle. Vaihtoa ei edelleenkään tarvita.
+
 ## 1. Mitä EOX itse sanoo (luettu 17.11.2026)
 | Lähde | Sisältö |
 |---|---|
@@ -19,7 +21,7 @@ Päätelmä: sivu on vain nykytuotteiden yhteenveto. 2016/2017-tuote on EOX:n om
 - Natiivin lähderivit (Karttaseppä/Natiiviseppä): KarttaKerrokset.cs:514–521 "CC BY 4.0: Contains modified Copernicus Sentinel data 2016, EOX IT Services"; Tietoja.cs:185 "EOxCloudless https://cloudless.eox.at … (… data 2016 & 2017)" (lähde: esittelysivun TULOS-kuvalahteet.md). "2016 & 2017" on EOX:n oma vuosimerkintä juuri tälle tuotteelle, joten vuodet täsmäävät.
 - Ero: Tietoja-rivi käyttää uutta URL-muotoa (cloudless.eox.at) ja sanaa "EOxCloudless", kun 2017-tuotteen alkuperäinen nimeäminen on "Sentinel-2 cloudless – https://s2maps.eu by EOX IT Services GmbH …". Rivi ei mainitse lisenssiä. Kumpikin on harmiton; EOX:n heinäkuun 2026 yhtenäinen nimeäminen sallii nykymuodon.
 
-## 3. Varmistamatta
+## 3. Varmistamatta (RATKAISTU, ks. oikaisu ylhäällä)
 Esittelysivun tutkija ei löytänyt suoraa lähdettä sille, onko **kupolikuvan Euroopan mosaiikki** (`linssit/astronautin-kamera/s2-eurooppa`, z6–z10, AstronauttiKerros.cs:429–435) EOX 2016 vai oma Copernicus Sentinel-2 L2A -mosaiikki (Earth Search, kesät 2022–2025; tools/kaukomaa/kuvauspaikat-v2.mjs:508). Tämä ei estä julkaisua: molemmat ovat kaupalliseen käyttöön sallittuja (EOX 2016 CC BY 4.0; Copernicus-data avointa). Se ratkaisee vain, mikä lähderivi on totta. **Natiiviseppä voi katsoa s2-eurooppa/v1:n tuotantolokista tai manifestista lähteen minuutissa.**
 
 ## 4. Suositus
