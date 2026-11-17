@@ -71,6 +71,9 @@ export const VAATIMUKSET = {
   '1.73': ['karttavalot.muoto'],
   // Pelikoodari 17.11.2026: noston vuodet (suunnitelma 20261117-noston-vuosiluvut, omistaja P-261117-70–72; natiivi NUI NostoSisalto).
   '1.74': ['nahtavyydet.vuodet', 'takynostot.vuodet', 'historianHetket.vuodet', 'skandaalit.vuodet'],
+  // Pelikoodari 17.11.2026: kuvat kaikkiin nostoihin (omistaja 23.24, KK 23.2x; natiivi NUI). Myös fokusvirrat[].takyt[]/takynostot[]/kohteet[].
+  '1.75': ['karttavalot.nostokuvat', 'takynostot.nostokuvat', 'skandaalit.nostokuvat', 'historianHetket.nostokuvat',
+    'monumentit.nostokuvat', 'nahtavyydet.nostokuvat', 'elaintayt.nostokuvat'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

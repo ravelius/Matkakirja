@@ -52,10 +52,11 @@
   "1.71": "2874b8c02c3b2135",
   "1.72": "5c7b3ecd25094007",
   "1.73": "77f47dd47f24129c",
-  "1.74": "2780a8a9f1a459d7"
+  "1.74": "2780a8a9f1a459d7",
+  "1.75": "915f10bade2f65f3"
  },
  "uusin": {
-  "skeemaversio": "1.74",
+  "skeemaversio": "1.75",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -117,6 +118,7 @@
     "lon",
     "maa",
     "nimio",
+    "nostokuvat",
     "otsikko",
     "teksti"
    ],
@@ -162,6 +164,7 @@
     "lon",
     "maa",
     "nimio",
+    "nostokuvat",
     "otsikko",
     "paikka",
     "paivays",
@@ -210,6 +213,7 @@
     "muoto",
     "nimi",
     "nimio",
+    "nostokuvat",
     "paakartalla",
     "paikka",
     "paikkaLahde",
@@ -572,6 +576,7 @@
     "nappi",
     "nimi",
     "nimio",
+    "nostokuvat",
     "teksti",
     "tyyppi"
    ],
@@ -592,6 +597,7 @@
     "lainaus",
     "nimi",
     "nosto",
+    "nostokuvat",
     "teksti",
     "vuodet",
     "wiki"
@@ -775,6 +781,7 @@
     "lon",
     "maa",
     "nimio",
+    "nostokuvat",
     "otsikko",
     "paikka",
     "teksti",
@@ -805,6 +812,7 @@
     "musiikki",
     "musiikkiNayte",
     "nimio",
+    "nostokuvat",
     "otsikko",
     "paikka",
     "paivays",

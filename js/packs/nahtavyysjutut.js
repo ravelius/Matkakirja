@@ -5353,42 +5353,6 @@ export const NAHTAVYYSJUTUT = {
    * lähderivit tai kuvatiedostot muuttuneet.
    */
   pariisi: {
-    'Eiffel-torni': {
-      aika: '1889',
-      teksti: 'Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna '
-          + '1889, insinööri Gustave Eiffelin toimisto pystytti Champ '
-          + 'de Mars -puistoon noin 300 metriä korkean rautatornin vain '
-          + 'reilussa kahdessa vuodessa. Torniin käytettiin 18 038 '
-          + 'metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko '
-          + 'rakennustyön aikana sattui vain yksi kuolemantapaus.'
-        + '\n\n'
-        + 'Moni pariisilainen taiteilija vihasi tornia aluksi: '
-          + 'kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti '
-          + 'vetoomuksen, jossa torni tuomittiin rumaksi ja '
-          + 'hyödyttömäksi. Kirjailija Guy de Maupassant väitti '
-          + 'syövänsä lounasta tornin ravintolassa joka päivä juuri '
-          + 'siksi, että se oli ainoa paikka Pariisissa, josta tornia '
-          + 'ei näkynyt.'
-        + '\n\n'
-        + 'Torni oli tarkoitus purkaa jo vuonna 1909, mutta se '
-          + 'pelastui, koska siitä tuli tärkeä radiolähetysasema. '
-          + 'Toisen maailmansodan lopulla Hitler käski räjäyttää tornin '
-          + 'Pariisin vapautuessa — mutta käskyä ei toteltu, ja torni '
-          + 'seisoo yhä paikallaan.',
-      vuodet: [
-        { kohta: 'vuonna 1889', vuosi: '1889', selite: 'maailmannäyttely' },
-        { kohta: 'jo vuonna 1909', vuosi: '1909', selite: 'piti purkaa' },
-      ],
-      kuvat: [
-        {
-          tiedosto: "Eiffel Tower and Pont d'Iéna, Paris 3 December 2016.jpg",
-          lyhyt: "Eiffel-torni Seinen yli kuvattuna",
-          selite: "Eiffel-torni kohoaa Seinen rannalla kirkkaana päivänä. Joella kulkee proomu ja rannassa on asuntolaivoja.",
-          lahde: "Guilhem Vellut, Wikimedia Commons (CC BY 2.0)",
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Riemukaari: {
       aika: '1806–1836',
       teksti: 'Keisari Napoleon käski rakentaa valtavan riemukaaren '
@@ -5461,40 +5425,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    Louvre: {
-      aika: '1793',
-      teksti: 'Louvre ei ollut alun perin museo vaan linnoitus: kuningas '
-          + 'Filip II rakennutti sen 1100-luvun lopulla puolustamaan '
-          + 'Pariisia. Vuosisatojen kuluessa siitä tehtiin '
-          + 'kuninkaallinen palatsi, kunnes Ranskan vallankumouksen '
-          + 'jälkeen se avattiin kaikille kansalaisille museona '
-          + 'elokuussa 1793.'
-        + '\n\n'
-        + 'Nykyään Louvressa on esillä noin 35 000 taideteosta, ja '
-          + 'koko kokoelmassa on peräti 500 000 esinettä. Museo on '
-          + 'maailman suurin, ja sen käytävät ovat kilometrien '
-          + 'mittaiset.'
-        + '\n\n'
-        + 'Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: '
-          + 'arkkitehti I. M. Pein suunnittelema lasinen pyramidi, '
-          + 'josta tuli museon pääsisäänkäynti. Aluksi moni '
-          + 'pariisilainen paheksui lasirakennelmaa vanhan palatsin '
-          + 'edessä, mutta siitä tuli pian yksi Pariisin tunnetuimmista '
-          + 'maamerkeistä.',
-      vuodet: [
-        { kohta: 'elokuussa 1793', vuosi: '1793', selite: 'museo avattiin' },
-        { kohta: 'Vuonna 1989', vuosi: '1989', selite: 'lasipyramidi' },
-      ],
-      kuvat: [
-        {
-          tiedosto: "Paris 1er Louvre Colonnade 559.jpg",
-          lyhyt: "Louvren kolonnadi",
-          selite: "Louvren itäjulkisivun kolonnadi, jossa kaksoispylväät kantavat rikkaasti koristeltua kattolistaa. Kuva on otettu Pariisin 1. kaupunginosassa.",
-          lahde: "GFreihalter, Wikimedia Commons (CC BY-SA 4.0)",
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
+    // Louvre-nähtävyysjuttu poistettu 17.11.2026: merkistä avautuu yksi nosto (fokuskohde `louvre`, js/packs/fokuskohteet-fra.js).
     'Luxembourgin puisto': {
       aika: '1612',
       teksti: 'Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria '
@@ -6201,36 +6132,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Lustig 1925': {
-      nosto: 'nosto-lustig-eiffel',
-      teksti: 'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
-        + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän '
-        + 'tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita '
-        + 'luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi '
-        + 'posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä '
-        + 'tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.'
-        + '\n\n'
-        + 'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
-        + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-        + 'kauppasumman. Sitten hän pakeni Itävaltaan ja '
-        + 'luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. '
-        + 'Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman '
-        + 'tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni '
-        + 'Yhdysvaltoihin.',
-      vuodet: [
-        { kohta: 'Pariisissa 1925', vuosi: '1925', selite: 'Lustig luki jutun' },
-      ],
-      kuvat: [
-        {
-          osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
-          lyhyt: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat kuulolla, torni ikkunan takana.',
-          selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat '
-            + 'kuuntelemassa ja torni ikkunan takana.',
-          lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Vrain-Lucas': {
       aika: '1861–1870',
       nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
@@ -6325,31 +6226,6 @@ export const NAHTAVYYSJUTUT = {
      * — tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Tornin nimet 2026': {
-      nosto: 'nosto-pariisin-72-nimea',
-      teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-        + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
-        + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
-        + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
-        + 'maalilla 1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. '
-        + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
-        + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
-        + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle, '
-        + 'kunhan kolme akatemiaa on antanut lausuntonsa.',
-      vuodet: [
-        { kohta: 'tammikuussa 2026', vuosi: '2026', selite: 'naisten lista julki' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
-          lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-          selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
-            + 'kullatuin, 60 senttiä korkein kirjaimin.',
-          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
       teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '

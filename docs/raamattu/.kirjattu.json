@@ -4,28 +4,28 @@
   "aika": "2026-11-12T07:29:49.694Z"
  },
  "AIHEET.md": {
-  "sha": "44e77b3375445c57",
-  "aika": "2026-11-17T17:21:37.058Z"
+  "sha": "f5618a70f08a134c",
+  "aika": "2026-11-17T21:27:31.922Z"
  },
  "KIRJASTOT.md": {
   "sha": "58b497d7ae0f85d5",
   "aika": "2026-11-16T03:14:48.427Z"
  },
  "aiheet/kamera.md": {
-  "sha": "9014cee21f109aee",
-  "aika": "2026-11-13T20:35:33.605Z"
+  "sha": "7ca67b5291a2f916",
+  "aika": "2026-11-17T20:54:38.024Z"
  },
  "aiheet/juna-ja-julkaisu.md": {
-  "sha": "32c512b9a77661c4",
-  "aika": "2026-11-17T11:09:08.690Z"
+  "sha": "96c4383539e19049",
+  "aika": "2026-11-17T20:54:47.211Z"
  },
  "aiheet/juoksupeli.md": {
   "sha": "c0d3719144597b8b",
   "aika": "2026-11-14T21:05:14.060Z"
  },
  "paatokset/2026-11.md": {
-  "sha": "026aab4fc5fa183c",
-  "aika": "2026-11-17T19:55:03.068Z"
+  "sha": "410202cb18486e45",
+  "aika": "2026-11-17T21:55:51.086Z"
  },
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
@@ -48,8 +48,8 @@
   "aika": "2026-11-16T13:04:04.982Z"
  },
  "aiheet/lehti-ja-nostot.md": {
-  "sha": "f0ba2b8802c54b55",
-  "aika": "2026-11-17T15:24:20.443Z"
+  "sha": "a0e7a0f982587034",
+  "aika": "2026-11-17T21:27:31.922Z"
  },
  "aiheet/pulu-ja-kysymykset.md": {
   "sha": "2db3d9850e74b1cd",
@@ -80,12 +80,12 @@
   "aika": "2026-11-12T08:33:31.727Z"
  },
  "aiheet/grafiikan-tuotanto.md": {
-  "sha": "3c09255ae7d9bdf7",
-  "aika": "2026-11-17T11:56:58.094Z"
+  "sha": "b571bf3992ad5402",
+  "aika": "2026-11-17T20:56:52.553Z"
  },
  "aiheet/saapuminen-ja-intro.md": {
-  "sha": "bc96ce8086cbbcc4",
-  "aika": "2026-11-17T15:08:50.963Z"
+  "sha": "78ec21d1686f329e",
+  "aika": "2026-11-17T20:54:43.212Z"
  },
  "aiheet/ui-pohjat.md": {
   "sha": "18b6977fca0dc66c",
@@ -120,12 +120,12 @@
   "aika": "2026-11-17T06:38:32.683Z"
  },
  "aiheet/roolit-ja-viestit.md": {
-  "sha": "e19768c508019c58",
-  "aika": "2026-11-16T22:01:25.154Z"
+  "sha": "5b525938bb2f348e",
+  "aika": "2026-11-17T21:04:22.946Z"
  },
  "aiheet/omistajan-kanssa.md": {
-  "sha": "7f84846757258d35",
-  "aika": "2026-11-13T19:59:03.403Z"
+  "sha": "4d8a74d2913ba9ec",
+  "aika": "2026-11-17T20:54:28.671Z"
  },
  "aiheet/nollaus-ja-luovutus.md": {
   "sha": "5e83ae564ee74b05",
@@ -144,8 +144,8 @@
   "aika": "2026-11-17T12:29:59.882Z"
  },
  "aiheet/kaupungit.md": {
-  "sha": "eb60dbd073807d6e",
-  "aika": "2026-11-17T10:25:20.362Z"
+  "sha": "60185262cc62334e",
+  "aika": "2026-11-17T20:54:22.630Z"
  },
  "paatokset/2026-09.md": {
   "sha": "0a8d40bed8e23d51",
@@ -200,8 +200,8 @@
   "aika": "2026-11-12T10:54:56.054Z"
  },
  "aiheet/valo-ja-materiaalit.md": {
-  "sha": "f73af5efbf4edee5",
-  "aika": "2026-11-12T13:44:10.434Z"
+  "sha": "732e097378464652",
+  "aika": "2026-11-17T21:20:07.400Z"
  },
  "aiheet/musiikki-ja-tehosteet.md": {
   "sha": "0f8b72957dccd91e",
@@ -236,7 +236,7 @@
   "aika": "2026-11-12T16:10:52.198Z"
  },
  "pysyvat.json": {
-  "sha": "22ea2a6ba3ff229a",
-  "aika": "2026-11-17T17:24:55.770Z"
+  "sha": "9162fdf2874962b1",
+  "aika": "2026-11-17T21:17:29.744Z"
  }
 }

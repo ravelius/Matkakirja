@@ -327,6 +327,152 @@ export const FOKUSKOHTEET_FRA = [
       url: 'https://www.louvre.fr/en/explore/the-palace/from-royal-garden-to-public-park',
     },
   },
+  {
+    /*
+     * LOUVRE + MONA LISAN VARKAUS 1911 (Pariisin nostot uudella tavalla, omistaja 17.11.2026
+     * klo 20.06; KK:n erä 1, paikka 3). Yksi merkki, yksi nosto: Louvren nähtävyyspiste
+     * (maakartat.js `Louvre`) avaa tämän; skandaali `mona-lisan-varkaus-1911` on tässä
+     * jaksoina eikä enää kartan merkki. Tuileries'n palatsin tarina (palatsi Louvren pihalla)
+     * on oma nostonsa `tuileries`: tässä ei toisteta sitä. Tarina on Mona Lisan varkaus ja
+     * sen käänne (varas, jonka poliisi oli jo kuulustellut). Piste: Louvre, en-/fi-Wikipedia
+     * (Wikidata Q19675 P625), sama kuin kartan piste 48,861 N / 2,3358 E; laudat laskettu
+     * tools/johda-maastokohteet.mjs `laudat`-funktiolla (sama kaava kuin Tuileries'llä).
+     * Lähdetaulukko: docs/raportit/louvre-nosto-teksti-20261117.md.
+     */
+    id: 'louvre',
+    nimi: 'Louvre',
+    tyyppi: 'kulttuuri',
+    symboli: 'kulttuuri',
+    // Pulun kysymykset kolme: skandaalin kaksi entistä + yksi uusi (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?',
+      'Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?',
+      'Miksi Peruggia luuli Mona Lisan kuuluvan Italialle?',
+    ],
+    korostukset: ['Mona Lisa', 'Vincenzo Peruggia'],
+    nappi: 'Museo, jonka seinältä taulu katosi',
+    laudat: {
+      maailmankartta: { x: 5911.2, y: 1439.4 },
+      europe: { x: 256.0, y: 608.6 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Musée du Louvre, Sortiraparis, Europeana, CrimeReads ja '
+      + 'Spokesman-Review / Washington Post (tarkistettu 17.11.2026).',
+    otsikko: 'Mona Lisa 1911 — taulu, joka katosi',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
+     * kuuluvat suoratoistona.
+     */
+    jaksot: [
+      // Noston alku (omistaja 17.11.2026 klo 19.23 F, PYSYVÄ): kertojan nimi, esittely, sitten isoisä.
+      { osa: 'nimi', teksti: 'Louvre.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä ohi matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kävelin tänään pitkin Louvren julkisivua ja yritin '
+          + 'laskea ikkunat. Menetin laskun kolmesti.',
+        kuva: 'julkisivu',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Lähes neljäkymmentä vuotta myöhemmin, maanantaina elokuussa, Louvre '
+          + 'oli suljettu. Valkoiseen työtakkiin pukeutunut mies nosti Mona Lisan '
+          + 'seinältä ja jätti kehyksen portaikkoon. Lukitun oven avasi hänelle '
+          + 'putkimies, ja taulu lähti ulos.',
+        kuva: 'varkaus',
+        lisakuva: { kuva: 'monalisa', kohta: 'Mona Lisan' },
+        vuodet: [{ vuosi: '1911', selite: 'taulu varastetaan', kohta: 'elokuussa' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Kukaan ei huomannut mitään ennen seuraavaa päivää. Silloin maalari '
+          + 'tuli kopioimaan taulua ja löysi tyhjän seinän. Poliisi pidätti runoilija '
+          + 'Guillaume Apollinairen, ja Pablo Picasso joutui epäillyksi. Ihmiset '
+          + 'jonottivat katsomaan tyhjää seinää.',
+        kuva: 'tyhja-seina',
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Varas oli Louvressa työskennellyt lasittaja Vincenzo Peruggia. '
+          + 'Poliisi oli kuulustellut häntä ja uskonut hänen selityksensä. Taulu '
+          + 'odotti laatikossa yli kaksi vuotta. Sitten hän tarjosi sitä '
+          + 'firenzeläiselle taidekauppiaalle, joka hälytti poliisin. Peruggia '
+          + 'väitti vieneensä sen takaisin Italiaan, vaikka Leonardo oli itse '
+          + 'tuonut taulun Ranskaan.',
+        kuva: 'peruggia',
+        vuodet: [{ vuosi: '1913', selite: 'varas jää kiinni', kohta: 'Sitten hän tarjosi' }],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Mona Lisa palasi Louvreen, ja varkaus teki siitä entistä '
+          + 'kuuluisamman. Nykyään se on Louvren ensimmäisessä kerroksessa. Sen '
+          + 'edessä on jono, ja taulua vartioidaan tarkasti.',
+        kuva: 'jono',
+        vuodet: [{ vuosi: '1914', selite: 'taulu palaa Louvreen', kohta: 'palasi Louvreen' }],
+      },
+    ],
+    /*
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): havainnekuva
+     * skandaalin ämpärikuvasta, muut Commonsin vapaita kuvia (lisenssit luettu 17.11.2026).
+     * Viimeinen kuva on aito nykyvalokuva.
+     */
+    jaksokuvat: {
+      julkisivu: {
+        tiedosto: 'Paris 1er Louvre Colonnade 559.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Louvren itäjulkisivu',
+        lahde: 'GFreihalter, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      varkaus: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-mona-lisan-varkaus-1911-photo-v1.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Peruggia kantaa taulun ulos Louvresta',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Musée du Louvre (The theft of the century); '
+          + 'huoltoportaikon kohtaus on dramatisoitu.',
+      },
+      monalisa: {
+        tiedosto: 'Leonardo da Vinci - Mona Lisa (Louvre, Paris).jpg',
+        laji: 'maalaus',
+        lyhyt: 'Leonardo da Vincin Mona Lisa',
+        lahde: 'Leonardo da Vinci, Musée du Louvre; Wikimedia Commons (public domain)',
+      },
+      'tyhja-seina': {
+        tiedosto: 'Mona Lisa stolen-1911.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Tyhjä seinä Louvressa, elokuu 1911',
+        lahde: 'Tuntematon kuvaaja, 1911, Wikimedia Commons (public domain)',
+      },
+      peruggia: {
+        tiedosto: 'Vincenzo Perugia.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Vincenzo Peruggian poliisikortti',
+        lahde: 'Tuntematon tekijä, Pariisin poliisin kortti 1909, Wikimedia Commons (public domain)',
+      },
+      jono: {
+        tiedosto: 'Crowd in front of the Mona Lisa 1.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Jono Mona Lisan edessä Louvressa',
+        lahde: 'Amaury Laporte, Wikimedia Commons (CC BY 2.0)',
+      },
+    },
+    /*
+     * KYSYMYS (yksi per paikka; säilyy skandaalin visasta, KK 17.11.2026 "kysymystehtävät
+     * säilyvät"): vastaus on kertomuksessa, ei vuosiriveissä eikä kuvateksteissä.
+     */
+    visa: {
+      kysymys: 'Missä kaupungissa Mona Lisa löytyi yli kaksi vuotta varkauden jälkeen?',
+      vaihtoehdot: [
+        'Milanossa',
+        'Firenzessä',
+        'Roomassa',
+      ],
+      oikea: 1,
+      fakta: 'Peruggia tarjosi taulua firenzeläiselle taidekauppiaalle, joka hälytti poliisin; '
+        + 'varas jäi kiinni Firenzessä.',
+    },
+  },
   /*
    * ── MATKAKIRJAN IHMEIDEN MAAILMAN ERÄ (27.8.2026) ────────────────
    *
@@ -431,6 +577,7 @@ export const FOKUSKOHTEET_FRA = [
           + 'näkyy pala vallihaudan muuria.',
         kuva: 'metro',
         vuodet: [
+          { vuosi: '1830', selite: 'vallankumous', kohta: '1830' },
           { vuosi: '1840', selite: 'pylväs valmistuu', kohta: 'pylväs' },
           { vuosi: '1899', selite: 'tornin pohja löytyy', kohta: 'pohjakiviä' },
         ],
@@ -484,19 +631,21 @@ export const FOKUSKOHTEET_FRA = [
       },
     },
     /*
-     * KYSYMYS: hetken `ranskan-vallankumous-bastilji-1789` tehtävä siirretty tähän, koska pisteellä on
-     * yksi nosto ja yksi visa. Hetken oma sivu lehdessä pysyy ennallaan.
+     * KYSYMYS (KK 17.11.2026 21.34): paikan oma kysymys koskee tarinan käännettä (purku); historian hetken
+     * ruutivisa jää hetken omalle sivulle, eikä paikan kysymys toista sitä. Faktat: Parcours Révolution
+     * (Palloy lähetti työmiehet samana iltana ilman virallista lupaa; puolentoista vuoden päästä ei jäänyt mitään)
+     * ja Hérodote (katsojat irrottivat kiviä torneista jo 14.7. iltana).
      */
     visa: {
-      kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta 1789?',
+      kysymys: 'Milloin Bastiljin purku alkoi?',
       vaihtoehdot: [
-        'Vapauttamaan satoja poliittisia vankeja',
-        'Hakemaan ruutia Invalidien musketteihin',
-        'Vangitsemaan kuninkaan',
-        'Polttamaan verokirjat',
+        'Valtauspäivän iltana',
+        'Vasta vuonna 1792, kun tasavalta julistettiin',
+        'Vasta kuukausien päästä, kun kuningas oli antanut luvan',
       ],
-      oikea: 1,
-      fakta: 'Vankeja oli seitsemän; kuvernööri de Launay antautui ja surmattiin.',
+      oikea: 0,
+      fakta: 'Palloy lähetti työmiehet linnalle ilman virallista lupaa jo 14. heinäkuun iltana; '
+        + 'puolentoista vuoden päästä linnasta ei ollut jäljellä mitään.',
     },
     /*
      * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
@@ -525,6 +674,128 @@ export const FOKUSKOHTEET_FRA = [
         + 'aikanaan. Faktat: Musée Carnavalet — La Bastille au XVIIIe '
         + 'siècle, tarkistettu 5.9.2026.',
       url: 'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/la-bastille-au-xviiie-siecle',
+    },
+  },
+  {
+    /*
+     * EIFFEL-TORNI (Pariisin nosto uudella tavalla, SK 17.11.2026; malli Tuileries'n palatsi). Yksi merkki, yksi nosto:
+     * tähän yhdistyvät kohdekartan nähtävyys "Eiffel-torni", tarinapaikka "Eiffel-torni 1888" (hetki eiffel-torni-1888)
+     * ja tarinapaikka "Lustig 1925" (täkynosto lustig-eiffel). Kohdekartan piste "Eiffel-torni" (maakartat.js) avaa tämän
+     * (`nosto: 'eiffel-torni'`); 72 nimeä yhdistetty tänään-jaksoon (KK 17.11.2026 21.55).
+     * 48,85822 N / 2,2945 E — en-Wikipedia "Eiffel Tower"; laudat samat kuin vanhalla täkynostolla `lustig-eiffel`.
+     * Pelkkä historia ja tapahtumat: tornin voisi näyttää isona kuvana, mutta tarina kulkee kentältä (1873) torniin.
+     * Lähdetaulukko: docs/raportit/eiffel-nosto-teksti-20261117.md.
+     */
+    id: 'eiffel-torni',
+    nimi: 'Eiffel-torni',
+    tyyppi: 'tekniikka',
+    symboli: 'tekniikka',
+    // Pulun kysymykset kolme (vanhoista korteista; vastauksia ei kirjoitettu).
+    kysymykset: [
+      'Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?',
+      'Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?',
+      'Oliko Eiffel-tornin purkamisesta oikeasti puhetta?',
+    ],
+    korostukset: ['Victor Lustig', 'Champ de Mars|Champ de Marsin'],
+    nappi: 'Torni, jonka piti seistä vain kaksikymmentä vuotta',
+    laudat: {
+      maailmankartta: { x: 5909.8, y: 1439.5 },
+      europe: { x: 255.3, y: 608.6 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Mental Floss, Ripley\'s, Today I Found Out ja The Hustle (Lustig), Snippets of Paris, '
+      + 'Science News Explores, Architizer ja Mental Floss (torni) sekä introducingparis.com ja en-Wikipedia "Champ de Mars" '
+      + '(tarkistettu 17.11.2026).',
+    otsikko: 'Eiffel-torni 1925 — myyty romuksi',
+    jaksot: [
+      // Noston alku: kertojan nimi ja esittely ennen isoisän lausetta (omistaja 19.23 F; sama kuin Tuileries).
+      { osa: 'nimi', teksti: 'Eiffel-torni.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Mittasin tänään Champ de Marsin askelin. Se on sotilaiden harjoituskenttä, '
+          + 'tasainen kuin pöytä.',
+        // Koukulla ei ole kuvaa (KK 17.11.2026 21.57): kenttää ennen tornia ei löytynyt; ei paikkamerkkiä pelaajalle.
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Neljätoista vuotta myöhemmin kentälle alettiin rakentaa rautatornia. Se koottiin tuhansista osista, '
+          + 'jotka työmiehet niittasivat yhteen yhä korkeammalla. Moni pariisilainen vihasi tornia, '
+          + 'ja sen piti seistä vain kaksikymmentä vuotta.',
+        kuva: 'rakenteilla',
+        lisakuva: { kuva: 'niittaus', kohta: 'työmiehet niittasivat yhteen' },
+        vuodet: [
+          { vuosi: '1887', selite: 'taiteilijavetoomus', kohta: 'vihasi tornia' },
+          { vuosi: '1889', selite: 'torni valmis' },
+        ],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, '
+          + 'ja armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
+        kuva: 'photochrom1900',
+        vuodet: [{ vuosi: '1909', selite: 'tornin purkuaika' }],
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Vuonna 1925 huijari Victor Lustig luki lehdestä, että tornin kunnossapito on kallista. '
+          + 'Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin '
+          + 'romukauppiaalle, joka maksoi hänelle myös lahjuksen. Kauppias häpesi eikä ilmoittanut '
+          + 'poliisille, joten Lustig palasi ja yritti uudestaan.',
+        kuva: 'lustig',
+        vuodet: [{ vuosi: '1925', selite: 'Lustigin huijaus', kohta: 'Vuonna 1925' }],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Torni seisoo yhä, ja se maalataan uudelleen noin seitsemän vuoden välein. '
+          + 'Kenttä, jonka isoisäsi mittasi, on nykyään puisto tornin jalalla. Tornin ensimmäisen kerroksen '
+          + 'alle on kirjoitettu 72 ranskalaisen tiedemiehen ja insinöörin nimeä kullatuin kirjaimin.',
+        kuva: 'nykyinen',
+      },
+    ],
+    jaksokuvat: {
+      rakenteilla: {
+        tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Torni rakenteilla vuonna 1888',
+        lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+      },
+      niittaus: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Niittaajat tornin työmaalla',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — history, tarkistettu 5.9.2026.',
+      },
+      photochrom1900: {
+        tiedosto: 'Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Eiffel-torni noin vuonna 1900',
+        lahde: 'Library of Congress, Wikimedia Commons (PD)',
+      },
+      lustig: {
+        osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
+        laji: 'havainnekuva',
+        lyhyt: 'Huijaus hotellin salongissa',
+        lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
+      },
+      nykyinen: {
+        tiedosto: 'Eiffel Tower from Champ-de-Mars, Paris 5 February 2019.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Eiffel-torni Champ de Marsilta',
+        lahde: 'Alexandre Prévot, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+    },
+    // Yksi kysymys (vanhasta Lustig-kortista): vastaus on jaksossa 5, eikä mikään näkyvä ennen sitä paljasta sitä.
+    visa: {
+      kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
+      vaihtoehdot: [
+        'Hän häpesi',
+        'Hän sai rahansa takaisin',
+        'Hän ei huomannut huijausta',
+      ],
+      oikea: 0,
+      fakta: 'Lustig palasi Pariisiin ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
     },
   },
   {
