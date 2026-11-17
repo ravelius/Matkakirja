@@ -52,7 +52,7 @@ const MIME = {
   '.jpg': 'image/jpeg', '.webp': 'image/webp', '.mp3': 'audio/mpeg', '.woff2': 'font/woff2',
 };
 const palvelin = createServer((req, res) => {
-  const suht = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suht = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suht);
   if (!polku.startsWith(JUURI) || !existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -118,7 +118,7 @@ await s.addInitScript((koodi) => {
   };
 }, KOODI);
 
-await s.goto(`${ORIGIN}/index.html?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 120000 });
+await s.goto(`${ORIGIN}/pelaa.html?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 120000 });
 await s.waitForFunction(() => [...document.querySelectorAll('button')].some((b) => /aloita seikkailu/i.test(b.textContent)), null, { timeout: 120000 });
 await s.evaluate(() => [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click());
 await s.waitForTimeout(2500);

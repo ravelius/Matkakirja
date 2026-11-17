@@ -4036,7 +4036,7 @@ const TYYPIT = {
 };
 const palvelin = createServer((req, res) => {
   const polku = decodeURIComponent(req.url.split('?')[0]);
-  if (polku === '/' || polku === '/index.html') {
+  if (polku === '/' || polku === '/pelaa.html') {
     res.writeHead(200, { 'content-type': TYYPIT['.html'] });
     res.end(SIVU);
     return;

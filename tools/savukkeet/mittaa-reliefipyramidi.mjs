@@ -71,7 +71,7 @@ const MIME = {
 
 /* ------------------------------------------------- paikallinen palvelin */
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -266,7 +266,7 @@ async function ajaKerta(kytkin) {
    * vastakoe on se, joka tarvitsee parametrin: `?reliefipyramidi=0`
    * palauttaa vanhan yhden kuvan polun.
    */
-  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${kytkin ? '' : '&reliefipyramidi=0'}`;
+  const osoite = `http://127.0.0.1:${PORTTI}/pelaa.html?lauta=pallo${kytkin ? '' : '&reliefipyramidi=0'}`;
   await sivu.goto(osoite, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {

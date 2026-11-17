@@ -2511,7 +2511,7 @@ const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
 const JATKA_OTSIKKO = 'Jatka kuuntelua';
 const KESKEYTA_OTSIKKO = 'Keskeytä kuuntelu';
 
-// Sama kaiutin kuin isoisän luennassa (index.html #fact-kuuntele): runko ja kolme kaarta, jotka ovat VU-mittari.
+// Sama kaiutin kuin isoisän luennassa (pelaa.html #fact-kuuntele): runko ja kolme kaarta, jotka ovat VU-mittari.
 const KORTIN_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
   + ' stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'
   + '<path d="M4.5 9.6v4.8h3.2l4.5 3.8V5.8L7.7 9.6Z" stroke-width="1.7"/>'

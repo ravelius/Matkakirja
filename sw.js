@@ -1,8 +1,16 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2618';
+const CACHE = 'matkakirja-2026-09-21.2619';
 const SHELL = [
+  // Etusivu './' ja './index.html' on pelin esittely (17.11.2026), EI peli; peli on './pelaa.html'.
+  // Esittelyn kuvat (sivusto/kuvat/) tulevat välimuistiin vasta nähtyinä, eivät asennuksessa.
   './',
   './index.html',
+  // Englanninkielinen esittely (en/): sekin esittely, ei peli.
+  './en/',
+  './en/index.html',
+  './sivusto/sivusto.css',
+  './sivusto/sivusto.js',
+  './pelaa.html',
   './kohtaamiskuvat.html',
   './manifest.webmanifest',
   './css/styles.css',
@@ -42,6 +50,8 @@ const SHELL = [
   './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
+  // Etusivun yhteensopivuusskripti (klassinen, ei moduuli): ohjaa pelaajat pelaa.html:ään.
+  './js/ohjaa-peliin.js',
   './js/pilleri-paneeli.js',
   './js/visa-pohja.js',
   './js/ui.js',
@@ -337,7 +347,7 @@ const SHELL = [
   './js/pallolauta/kehysprofiili.js',
   './js/pallolauta/kallistus.js',
   './css/aikajana.css',
-  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // Linssien yhteinen kehysliuku (16.9.2026): pelaa.html lataa tämän
   // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
   './css/linssikehys.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
@@ -3206,6 +3216,33 @@ const KUVACACHE = 'matkakirja-wikikuvat-v1';
 const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
 
 /*
+ * Esittelysivuston polut suhteessa palvelutyöntekijän juureen (sama
+ * sääntö toimii matkakirja.app/:ssa ja ravelius.github.io/Matkakirja/:ssa).
+ */
+const ESITTELYSIVU = (osoite) => {
+  const juuri = new URL('./', self.location.href).pathname;
+  if (!osoite.pathname.startsWith(juuri)) return false;
+  const polku = osoite.pathname.slice(juuri.length);
+  return polku === '' || polku === 'index.html'
+    || polku === 'en' || polku === 'en/' || polku === 'en/index.html'
+    || polku.startsWith('sivusto/');
+};
+
+// Verkko ensin, välimuisti varalla: onnistunut vastaus päivittää korin,
+// verkkovirhe tai palvelimen 5xx palauttaa korin version, jos sellainen on.
+async function esittelyVerkostaEnsin(pyynto) {
+  const vastaus = await fetch(pyynto, { cache: 'no-cache' }).catch(() => null);
+  if (vastaus && vastaus.ok) {
+    const kopio = vastaus.clone();
+    caches.open(CACHE).then((kori) => kori.put(pyynto, kopio));
+    return vastaus;
+  }
+  const varalla = await caches.match(pyynto);
+  if (varalla && (!vastaus || vastaus.status >= 500)) return varalla;
+  return vastaus ?? Response.error();
+}
+
+/*
  * Äänten ajonaikainen välimuisti (omistajan linjaus 16.8.2026).
  *
  * Oma kori, jota versionvaihto ei tyhjennä — kuten kuvilla. Äänet ovat
@@ -3765,6 +3802,20 @@ self.addEventListener('fetch', (event) => {
     }
     return;
   }
+  /*
+   * ESITTELYSIVU VERKOSTA ENSIN (omistaja 17.11.2026 klo 13.10, KK 13.15):
+   * etusivu ('./', index.html), englanninkielinen esittely (en/) ja
+   * sivusto/* haetaan aina verkosta, ja välimuisti on vain varalla ilman
+   * verkkoa. Ennen tätä ne tulivat välimuistista ensin, joten laite, jolla
+   * peliä oli pelattu selaimessa, näki etusivun aina yhden käynnin jäljessä
+   * (17.11. etusivu vaihtui pelistä esittelyksi, eikä uusia kuvia näkynyt).
+   * cache: 'no-cache' ohittaa myös selaimen HTTP-välimuistin (304, jos sivu
+   * ei ole muuttunut). Peli (pelaa.html ja sen tiedostot) ennallaan alla.
+   */
+  if (osoite.origin === self.location.origin && ESITTELYSIVU(osoite)) {
+    event.respondWith(esittelyVerkostaEnsin(event.request));
+    return;
+  }
   // Repon omat valokuvat: sama kori kuin wikikuvilla, jotta ne eivät
   // katoa versiopäivityksessä. Välimuisti ensin, verkko vasta jos kuvaa
   // ei ole vielä nähty.
@@ -3790,7 +3841,7 @@ self.addEventListener('fetch', (event) => {
           }
           return response;
         })
-        .catch(() => hit ?? caches.match('./index.html'));
+        .catch(() => hit ?? caches.match('./pelaa.html'));
       return hit ?? network;
     }),
   );

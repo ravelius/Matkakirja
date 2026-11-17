@@ -29,7 +29,7 @@ import { html } from './ui-apurit.js';
 /**
  * Ikonin muodot datana, ei merkkijono-HTML:nä.
  *
- * Työhuoneen napeissa ikonit olivat index.html:n <svg>-elementteinä.
+ * Työhuoneen napeissa ikonit olivat pelaa.html:n <svg>-elementteinä.
  * Lehden rivit rakennetaan JS:stä, ja koska innerHTML ei ole talon
  * tapa, muodot kulkevat pieninä olioina ja SVG kootaan alla
  * createElementNS:llä. Polut ovat SAMAT kuin poistetuissa napeissa.

@@ -42,7 +42,7 @@ const MIME = {
 };
 
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -137,7 +137,7 @@ async function avaaPeli(ctx) {
     virheet.push(`konsoli: ${m.text()}`);
   });
   await sieppaa(sivu);
-  await sivu.goto('http://127.0.0.1:8741/index.html', { waitUntil: 'load' });
+  await sivu.goto('http://127.0.0.1:8741/pelaa.html', { waitUntil: 'load' });
   await sivu.waitForTimeout(2200);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')]

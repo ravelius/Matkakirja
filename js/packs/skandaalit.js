@@ -193,48 +193,34 @@ export const SKANDAALIT = {
      */
     {
       id: 'klimtin-tiedekuntamaalaukset',
-      otsikko: 'Klimtin tiedekuntamaalaukset — yliopiston hylkäämä katto',
+      otsikko: 'Klimtin tiedekuntamaalaukset — kuvat, jotka eivät päätyneet kattoon',
       nimio: 'Klimtin maalaukset',
-      vuosi: '1900–1907',
+      vuosi: '1894–1945',
       paikka: 'Wienin yliopiston päärakennus',
       lat: 48.2131, lon: 16.3597,
-      kortti: 'Yliopisto tilasi taiteilijalta katon täydeltä tieteen riemuvoittoa '
-        + 'ja sai sen sijaan Klimtin näkemyksen — mikä oli professorien '
-        + 'mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta '
-        + 'sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset '
-        + 'valokuvat ja opetus tilaustöiden vaaroista.',
-      teksti: 'Yliopisto tilasi Gustav Klimtiltä 1894 juhlasalin kattoon kolme '
-        + 'suurta paneelia: Filosofian, Lääketieteen ja Oikeustieteen. Filosofia '
-        + 'esiteltiin maaliskuussa 1900 Wienin secession seitsemännessä '
-        + 'näyttelyssä ja Lääketiede vuotta myöhemmin kymmenennessä. Aiheeksi oli '
-        + 'sovittu valon voitto pimeydestä; Klimt maalasi ihmisjoukon '
-        + 'ajelehtimassa tyhjyydessä, ja Lääketieteessä terveyden jumalatar '
-        + 'Hygieia kääntää selkänsä ihmiskunnalle.\n\n'
-        + 'Kahdeksankymmentäseitsemän yliopiston opettajaa allekirjoitti '
-        + 'vastalauseen. Vuonna 1901 asiaan kutsuttiin virallinen syyttäjä, ja '
-        + 'kiistaa käsiteltiin Itävallan parlamentissa — ensimmäistä kertaa '
-        + 'taiteesta. Ministereistä puolusti vain opetusministeri. Kun Klimt '
-        + 'samana vuonna valittiin taideakatemian professoriksi, hallitus jätti '
-        + 'nimityksen vahvistamatta, eikä hän saanut enää koskaan opetusvirkaa.\n\n'
-        + 'Klimt irtisanoutui tilauksesta 3. huhtikuuta 1905 ja maksoi 30 000 '
-        + 'kruunun ennakon takaisin keräilijä August Ledererin tuella; Lederer sai '
-        + 'vastineeksi Filosofian. Valtio piti maalauksia omaisuutenaan, ja Klimt '
-        + 'sai pitää ne vasta uhattuaan noutajia haulikolla. Lääketieteen ja '
-        + 'Oikeustieteen osti 1911 Klimtin ystävä ja työtoveri Koloman Moser.\n\n'
-        + 'Vuonna 1943 kolmikko siirrettiin turvaan Immendorfin linnaan '
-        + 'Ala-Itävaltaan, ja toukokuussa 1945 linna paloi vetäytyvien joukkojen '
-        + 'sytyttämänä. Jäljellä ovat luonnokset ja kourallinen valokuvia — '
-        + 'Lääketieteestä yksi ainoa kuva koko teoksesta. Vuonna 2021 Googlen ja '
-        + 'Leopold-museon koneoppimiskokeilu arvasi maalauksille takaisin värit.',
-      lahde: 'en-Wikipedia "Klimt University of Vienna Ceiling Paintings". '
-        + 'Tarkistettu 2.9.2026.',
+      // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
+      // (87 professoria, syyttäjä 1901, Ledererin tuki, Moserin osto jne.) eivät täyttäneet kahden lähteen sääntöä.
+      // Sääntö 11 (17.11.): kolme kuvaa, professorien vetoomus 1900 ja mustavalkoiset valokuvat: Leopold Museum
+      // (lehdistötiedote 2005) + MedUni Wien (Medizin-sivu) + Wien Tourismus; professorien lukumäärää ei väitetä. Valokuvat ja luonnokset: MedUni Wien ("a few sketches and black-and-white photographs") + Leopold Museumin ja Albertinan kokoelmasivut (KK 17.11., WIEN.md lisätarkistus 1).
+      kortti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
+        + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
+        + 'Klimt maalasi kolme tiedekuntakuvaa: Filosofian, Lääketieteen ja Oikeustieteen. '
+        + 'Kun Filosofia nähtiin Secession-näyttelyssä vuonna 1900, joukko yliopiston '
+        + 'professoreja vetosi ministeriöön kuvan ripustamista vastaan. '
+        + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
+        + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
+        + 'tiedekuntakuvat tuhoutuivat. Niistä on säilynyt mustavalkoisia valokuvia ja Klimtin luonnoksia.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
+        + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
+        + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
+        + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Leopold Museum, Wienin lääketieteellinen yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere. Tarkistettu 17.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`,
-        lyhyt: 'Maaliapulainen yrittää lukea professorien kasvoilta, tuomitaanko Klimtin kattomaalaus.',
-        selite: 'Maaliapulainen pitää telineen köydestä kiinni ja yrittää lukea '
-          + 'professorien kasvoilta, onko vuosien työ juuri tuomittu. Yksi osoittaa '
-          + 'kattoon suuttuneena, toinen vaikenee ihastuksestaan — kiista on alkanut '
-          + 'ennen kuin kangas ehtii paikalleen.',
+        lyhyt: 'Professoreja ja maalaustelineitä Klimtin tiedekuntamaalausten kiistan ajalta.',
+        selite: 'Professoreja ja maalaustelineitä Klimtin tiedekuntamaalausten '
+          + 'kiistan ajalta. Kuva ei esitä yksittäistä tapahtumaa.',
         lahde: 'Matkakirjan havainnekuva. Faktat: University of Vienna — Gustav '
           + 'Klimt: Philosophy.',
         url: 'https://geschichte.univie.ac.at/de/bilder/gustav-klimt-die-philosophie-fakultatsbild',
@@ -244,7 +230,7 @@ export const SKANDAALIT = {
         vaihtoehdot: [
           'Ne ripustettiin lopulta yliopiston juhlasaliin',
           'Ne myytiin amerikkalaiselle keräilijälle',
-          'Niiden uskotaan tuhoutuneen linnan palossa sodan lopussa 1945',
+          'Ne tuhoutuivat Immendorfin linnan palossa toukokuussa 1945',
         ],
         oikea: 2,
       },
@@ -255,45 +241,29 @@ export const SKANDAALIT = {
      */
     {
       id: 'salieran-varkaus',
-      otsikko: 'Saliera — suola-astia joka katosi kolmeksi vuodeksi',
+      otsikko: 'Saliera — suola-astia, joka katosi lähes kolmeksi vuodeksi',
       nimio: 'Saliera',
       vuosi: '2003–2006',
       paikka: 'Kunsthistorisches Museum, Wien',
       lat: 48.2036, lon: 16.3619,
-      kortti: 'Renessanssin kuuluisin suola-astia vietiin museosta '
-        + 'rakennustelineitä pitkin, ja hälytys kuitattiin tekniseksi viaksi. '
-        + 'Kolme vuotta kultainen Cellini makasi lyijyarkussa metsässä. '
-        + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
-        + 'ajan turvassa.',
-      teksti: 'Saliera on ainoa säilynyt Benvenuto Cellinin kultaveistos: '
-        + 'kullasta, emalista, eebenpuusta ja norsunluusta tehty pöytäkoriste '
-        + 'Ranskan kuninkaalle Frans I:lle, valmiina 1543. Se on 26 senttiä '
-        + 'korkea, ja jalustassa on laakerit, joilla astiaa vieritettiin pöydällä '
-        + 'vieraalta toiselle. Maa ja Meri istuvat vastakkain: suola tuli merestä, '
-        + 'pippuri maasta. Cellini kertoi omaelämäkerrassaan saaneensa työstä '
-        + 'tuhat scudoa; vuonna 1562 astia oli vähällä päätyä sulatettavaksi, '
-        + 'kuten useimmat aikansa kultatyöt.\n\n'
-        + 'Yöllä 11. toukokuuta 2003 mies nousi Kunsthistorisches Museumin '
-        + 'julkisivua peittäneitä remonttitelineitä pitkin ikkunaan. Hälytin soi, '
-        + 'mutta se kuitattiin vikailmoitukseksi, eikä varkautta huomattu ennen '
-        + 'kuin aamulla kahtakymmentä yli kahdeksan. Museo lupasi miljoonan euron '
-        + 'palkkion astian palauttamisesta.\n\n'
-        + 'Astia löytyi 21. tammikuuta 2006 lyijylaatikkoon suljettuna metsästä '
-        + 'Zwettlin kaupungin liepeiltä, yhdeksänkymmentä kilometriä Wienistä '
-        + 'pohjoiseen. Varas Robert Mang ilmoittautui itse poliisille, kun '
-        + 'valvontakameran kuvat oli julkaistu ja tuttavat olivat tunnistaneet '
-        + 'hänet niistä. Tuomioksi tuli neljä vuotta vankeutta.\n\n'
-        + 'Vakuutusarvoltaan Saliera on noin kuudenkymmenen miljoonan dollarin '
-        + 'esine, ja museo oli remontissa koko julkisivun mitalta. Hälytys oli '
-        + 'soinut ajallaan — kukaan vain ei uskonut sitä.',
-      lahde: 'en-Wikipedia "Cellini Salt Cellar". Tarkistettu 2.9.2026.',
+      // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
+      // (lyijylaatikko, tekninen vika, varkaan nimi, tuomion pituus ensimmäisessä oikeudenkäynnissä) eivät täyttäneet sääntöä.
+      kortti: 'Saliera on suola-astia, jonka Benvenuto Cellini teki kullasta ja emalista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
+        + 'Kunsthistorisches Museumin mukaan se on Cellinin ainoa säilynyt kultatyö.'
+        + '\n\n'
+        + 'Yöllä vasten 11. toukokuuta 2003 varas kiipesi rakennustelineitä pitkin '
+        + 'Wienin museoon, jota kunnostettiin. Tammikuussa 2006 Saliera löytyi '
+        + 'laatikosta metsästä lähellä Zwettlin kaupunkia. Varas tuomittiin viideksi '
+        + 'vuodeksi vankeuteen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
+        + 'sillä se avattiin vasta 1891.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien. Tarkistettu 16.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus-photo-v1.jpg`,
-        lyhyt: 'Varas pakenee Saliera kainalossaan, kun museon hälytys kuitataan virheellisesti tekniseksi viaksi.',
-        selite: 'Varas pysähtyy märillä telineillä, kun punainen hälytysvalo '
-          + 'välähtää museon ikkunassa. Alhaalla sateenvarjon alla kulkeva ihminen '
-          + 'ei katso ylös — eikä vartiointikeskuskaan usko, että hälytys on '
-          + 'todellinen.',
+        lyhyt: 'Yöllinen varkaus Kunsthistorisches Museumin rakennustelineillä.',
+        selite: 'Yöllinen varkaus rakennustelineillä museon ikkunan luona. '
+          + 'Kuva ei esitä yksittäistä tapahtumahetkeä.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Kunsthistorisches Museum Wien '
           + '— statement on the theft.',
         url: 'https://www.presseportal.ch/de/pm/100000789/100462866',
@@ -302,7 +272,7 @@ export const SKANDAALIT = {
         kysymys: 'Mistä Saliera löytyi vuonna 2006?',
         vaihtoehdot: [
           'Sveitsiläisestä pankkiholvista',
-          'Metsään haudatusta lyijyarkusta',
+          'Laatikosta metsässä Zwettlin lähellä',
           'Antiikkihuutokaupasta Münchenistä',
         ],
         oikea: 1,
@@ -3593,56 +3563,51 @@ export const SKANDAALIT = {
       },
     },
     /*
-     * Palazzo Montecitorio (parlamentti), Rooma.
-     * Lähde: en-Wikipedia "Banca Romana scandal" (tarkistettu 30.8.2026)
+     * Palazzo Maffei Marescotti, Via della Pigna, Rooma (KK 16.11.2026: piste 41,8970 / 12,4775; ennen
+     * Palazzo Montecitorio). Tarinapaikka KK 17.11.2026 (Rooman 9 tarinapaikkaa): kortti uusi, vanha pitkä
+     * `teksti` poistettu, koska sen luvut (135 / 75 milj., pääjohtaja 1881, pidätys, Crispi) eivät täyttäneet
+     * kahden lähteen sääntöä.
      */
     {
       id: 'banca-romana-1893',
       otsikko: 'Banca Romanan skandaali',
       nimio: 'Banca Romana',
       vuosi: '1893',
-      paikka: 'Palazzo Montecitorio (parlamentti), Rooma',
-      lat: 41.9009, lon: 12.4785,
-      kortti: 'Kun setelipainossa loppuvat numerot kesken, voi tietysti painaa '
-        + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
-        + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
-        + 'Harva pankkikriisi on ollut näin tuottelias.',
-      teksti: 'Italiassa oli kuusi setelinanto-oikeuden saanutta pankkia, ja Banca '
-        + 'Romana oli niistä yksi. Sen pääjohtajaksi tuli 1881 Bernardo Tanlongo, '
-        + 'entinen maatyöläinen, jota Corriere della Sera kuvasi puolilukutaitoiseksi '
-        + 'mutta nerokkaaksi laskijaksi. Hän oli rakentanut suhdeverkoston lainoilla, '
-        + 'jotka peittivät muiden salaisuuksia.'
-        + '\n\nKesäkuussa 1889 valtion tarkastus löysi, että 91 prosenttia pankin '
-        + 'varoista oli kiinni epälikvideissä kohteissa ja että pankki oli painattanut '
-        + 'seteleitä samoilla sarjanumeroilla kahdesti. Pääministeri Francesco Crispi '
-        + 'ja valtiovarainministeri Giovanni Giolitti lukivat raportin ja hautasivat '
-        + 'sen. Pankki oli lainannut suuria summia poliitikoille, usein korotta, ja '
-        + 'heille itselleen.'
-        + '\n\nKansanedustaja Napoleone Colajanni luki raportista otteita '
-        + 'parlamentissa 20. joulukuuta 1892. Asiantuntijakomission raportti 18. '
-        + 'tammikuuta 1893 vahvisti luvut: liikkeessä oli 135 miljoonaa liiraa '
-        + 'seteleitä, kun laki salli 75 miljoonaa, ja lisäksi Britanniassa oli '
-        + 'painettu 40 miljoonan liiran kaksoissarja, joka jäi liikkeeseen laskematta '
-        + 'vain siksi, että pankin alempien virkailijoiden rehellisyys ei pettänyt.'
-        + '\n\nTanlongo pidätettiin seuraavana päivänä ja vapautettiin syytteistä '
-        + 'heinäkuussa 1894 perusteella, jonka mukaan varsinaiset rikolliset olivat '
-        + 'muualla. Giolitti oli eronnut jo marraskuussa 1893. Elokuun 1893 pankkilaki '
-        + 'purki Banca Romanan ja jätti setelinanto-oikeuden uudelle Banca '
-        + 'd\'Italialle sekä kahdelle eteläiselle pankille.',
-      lahde: 'en-Wikipedia "Banca Romana scandal". Tarkistettu 2.9.2026.',
+      paikka: 'Palazzo Maffei Marescotti, Rooma',
+      lat: 41.8970, lon: 12.4775,
+      kortti: 'Banca Romana oli pankki, jolla oli lupa painaa Italian seteleitä. '
+        + 'Treccanin mukaan lupa riitti noin 60 miljoonan liiran seteleihin, '
+        + 'mutta liikkeessä niitä oli noin 113 miljoonan liiran edestä. Noin '
+        + '40 miljoonaa liiraa oli kaksoisnumeroituja seteleitä eli '
+        + 'sellaisia, joilla oli sama sarjanumero kuin toisella setelillä.'
+        + '\n\n'
+        + 'Skandaali paljastui vuodenvaihteessa 1892–1893. Vuonna 1893 '
+        + 'annettiin laki, jolla perustettiin Banca d\'Italia, ja se on '
+        + 'päivätty 10. elokuuta. Banca Romana lakkautettiin, ja sen '
+        + 'purkaminen uskottiin uudelle pankille. Aluksi Banca d\'Italia oli '
+        + 'yksi kolmesta setelipankista, ja vasta vuonna 1926 siitä tuli '
+        + 'ainoa. Pääministeri Giovanni Giolitti erosi vuoden 1893 lopulla, '
+        + 'kun tutkimusten tulokset olivat tulleet julki. Oikeudenkäynnissä '
+        + 'syytetyt vapautettiin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
+        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
+        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
+        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Treccani, Banca d\'Italia ja Filodiritto. Tarkistettu 17.11.2026.',
       kuva: {
         tiedosto: 'Bernardo Tanlongo.jpg',
-        lyhyt: 'Banca Romanan pääjohtaja Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894.',
-        selite: 'Banca Romanan pääjohtaja Bernardo Tanlongo aikalaispiirroksessa '
-          + 'vuodelta 1894 — mies, jonka pankki painoi seteleitä kahteen kertaan '
-          + 'samoilla sarjanumeroilla.',
+        lyhyt: 'Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894; hän oli Banca Romanan johtaja.',
+        selite: 'Bernardo Tanlongo, Banca Romanan johtaja, aikalaispiirroksessa '
+          + 'vuodelta 1894.',
         lahde: 'Illustrazione Italiana 1894, Wikimedia Commons (PD)',
       },
       visa: {
-        kysymys: 'Mikä instituutio perustettiin Banca Romanan skandaalin '
-          + 'seurauksena?',
+        kysymys: 'Mikä pankki perustettiin lailla vuonna 1893, ja sen '
+          + 'tehtäväksi uskottiin Banca Romanan purkaminen?',
         vaihtoehdot: [
-          'Italian keskuspankki Banca d\'Italia',
+          'Banca d\'Italia',
           'Euroopan keskuspankki',
           'Rooman pörssi',
         ],

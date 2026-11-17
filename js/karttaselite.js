@@ -122,7 +122,7 @@ const KARTTASELITE_NIMET = {
   ...Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.nimi])),
   // Pitkät nimet lyhyinä (omistaja 22.9.2026: paneeli mahdollisimman kapea);
   // koko nimi on rivin title-attribuutissa (KARTTASELITE_KOKONIMET).
-  ihmeet: 'Ihmeet',
+  ihmeet: 'Kadonneet',
   hetket: 'Hetket',
   kulttuuri: 'Kulttuuri…',
   kauppa: 'Kauppa…',
@@ -241,7 +241,7 @@ export function kaynnistaKarttaselite(ui) {
   nappi.setAttribute('aria-expanded', 'false');
   /*
    * KUVAKE ON SELITELISTA ITSE: kolme riviä, joilla on pallo ja viiva.
-   * Sama piirtotapa kuin maalehtinapilla (index.html): inline-svg,
+   * Sama piirtotapa kuin maalehtinapilla (pelaa.html): inline-svg,
    * currentColor ja `stroke-width: 1.6` — kartan napit ovat yhtä
    * perhettä.
    */

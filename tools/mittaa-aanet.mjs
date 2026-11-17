@@ -44,7 +44,7 @@ import { avaaChromium } from './selain.mjs';
 
 /*
  * Konttiympäristössä Noden fetch ei lue HTTPS_PROXYa ilman
- * NODE_USE_ENV_PROXY=1 (sama pätkä kuin hae-satelliittikartat.mjs).
+ * NODE_USE_ENV_PROXY=1 (sama pätkä kuin hae-yonkartta.mjs).
  * Ilman tätä jokainen lataus kaatui hiljaa "ei latautunut" -riville
  * (havaittu 15.8.2026, kun mittaus ajettiin kontista).
  *

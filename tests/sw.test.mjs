@@ -40,7 +40,7 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
  * näe mistään muusta kuin tästä testistä.
  *
  * Rivit luetaan VAIN SHELL-listasta: sw.js:n muualla oleva
- * `caches.match('./index.html')` ei ole listarivi.
+ * `caches.match('./pelaa.html')` ei ole listarivi.
  */
 test('SHELL-listalla ei ole kaksoiskappaleita', () => {
   const alku = sw.indexOf('const SHELL = [');
@@ -529,7 +529,7 @@ test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
       if (merkki.test(readFileSync(tiedosto, 'utf8'))) loydot.push(`${kansio}/${nimi}`);
     }
   }
-  for (const juuriTiedosto of ['index.html', 'sw.js']) {
+  for (const juuriTiedosto of ['index.html', 'pelaa.html', 'sw.js']) {
     const tiedosto = join(JUURI, juuriTiedosto);
     if (existsSync(tiedosto) && merkki.test(readFileSync(tiedosto, 'utf8'))) loydot.push(juuriTiedosto);
   }
@@ -820,11 +820,107 @@ test('palvelutyöntekijä rekisteröidään myös ilman `load`-tapahtumaa', () =
   const ms = Number(katto[1]);
   assert.ok(ms >= 2000 && ms <= 10000,
     `katto ${ms} ms: alle 2 s kilpailisi käynnistyksen kaistasta, yli 10 s ylittäisi `
-    + 'index.html:n varaventtiilin');
+    + 'pelaa.html:n varaventtiilin');
   assert.match(main, /setTimeout\(rekisteroiTyontekija, REKISTEROINNIN_KATTO_MS\)/,
     'kattoa ei ajasteta — vakio olisi pelkkä luku');
   assert.match(main, /window\.addEventListener\('load', rekisteroiTyontekija, \{ once: true \}\)/,
     '`load` ei enää rekisteröi — normaalitilanteessa rekisteröinnin pitää tapahtua siellä');
   assert.match(main, /if \(rekisteroity\) return;\s*\n\s*rekisteroity = true;/,
     'kaksoisvahti puuttuu — sama sw.js rekisteröitäisiin kahdesti');
+});
+
+/*
+ * ESITTELYSIVU VERKOSTA ENSIN (omistaja 17.11.2026 klo 13.10, KK 13.15).
+ * Laite, jolla peliä oli pelattu selaimessa, sai etusivun välimuistista
+ * ensin ja näki sen aina käynnin jäljessä. Testi ajaa sw.js:n oikean
+ * fetch-käsittelijän: korissa vanha index.html, verkko vastaa uudella →
+ * uusi; ilman verkkoa → vanha. Peli (pelaa.html) pysyy välimuisti ensin.
+ */
+function swVerkolla(sijainti = 'https://matkakirja.app/sw.js') {
+  const kori = new Map();
+  let verkko = null; // null = ei verkkoa; muuten (osoite) => vastaus
+  const haut = [];
+  const vastaus = (runko, status = 200) => ({ ok: status >= 200 && status < 300, status, runko, clone() { return this; } });
+  const avain = (p) => String(p?.url ?? p);
+  const ctx = {
+    console, setTimeout, clearTimeout, AbortController, URL,
+    Request: class { constructor(osoite) { this.url = String(osoite); } },
+    Response: { error: () => ({ ok: false, status: 0, runko: 'virhe' }) },
+    caches: {
+      open: async () => ({
+        match: async (p) => kori.get(avain(p)),
+        put: async (p, v) => { kori.set(avain(p), v); },
+        keys: async () => [], addAll: async () => {}, add: async () => {}, delete: async () => true,
+      }),
+      keys: async () => [],
+      match: async (p) => kori.get(avain(p)),
+      delete: async () => true,
+    },
+    fetch: (p, asetukset = {}) => {
+      haut.push({ osoite: avain(p), cache: asetukset.cache });
+      return verkko ? Promise.resolve(verkko(avain(p))) : Promise.reject(new TypeError('Failed to fetch'));
+    },
+    clients: { claim: async () => {}, matchAll: async () => [] },
+    skipWaiting: () => Promise.resolve(),
+    registration: {},
+    location: new URL(sijainti),
+  };
+  ctx.self = ctx;
+  ctx.globalThis = ctx;
+  const kuuntelijat = new Map();
+  ctx.addEventListener = (nimi, fn) => { kuuntelijat.set(nimi, fn); };
+  vm.createContext(ctx);
+  vm.runInContext(sw, ctx, { filename: 'sw.js' });
+  return {
+    kori, haut, vastaus,
+    asetaVerkko: (fn) => { verkko = fn; },
+    hae: async (osoite) => {
+      let tulos;
+      kuuntelijat.get('fetch')({ request: { method: 'GET', url: osoite }, respondWith: (p) => { tulos = p; } });
+      if (!tulos) return undefined;
+      const v = await tulos;
+      await new Promise((r) => setTimeout(r, 0)); // korin päivitys valmiiksi
+      return v;
+    },
+  };
+}
+
+for (const polku of ['', 'index.html', 'en/', 'en/index.html', 'sivusto/sivusto.css', 'sivusto/kuvat/kupoli.webp']) {
+  test(`esittelysivu ${polku || './'}: verkko ensin, välimuisti vain ilman verkkoa`, async () => {
+    const s = swVerkolla();
+    const osoite = `https://matkakirja.app/${polku}`;
+    s.kori.set(osoite, s.vastaus('vanha'));
+    s.asetaVerkko(() => s.vastaus('uusi'));
+    assert.equal((await s.hae(osoite)).runko, 'uusi', 'verkon vastatessa palautui vanha välimuistista');
+    assert.equal(s.haut.at(-1).cache, 'no-cache', 'selaimen HTTP-välimuisti ei saa palauttaa vanhaa');
+    assert.equal(s.kori.get(osoite).runko, 'uusi', 'uusi versio ei päivittänyt koria');
+    s.kori.set(osoite, s.vastaus('vanha'));
+    s.asetaVerkko(null);
+    assert.equal((await s.hae(osoite)).runko, 'vanha', 'ilman verkkoa korin versio ei palautunut');
+    s.asetaVerkko(() => s.vastaus('kaatui', 503));
+    assert.equal((await s.hae(osoite)).runko, 'vanha', 'palvelimen 5xx:llä korin versio ei palautunut');
+  });
+}
+
+test('peli (pelaa.html ja sen tiedostot) pysyy välimuisti ensin', async () => {
+  const s = swVerkolla();
+  s.asetaVerkko(() => s.vastaus('uusi'));
+  for (const muu of ['pelaa.html', 'js/main.js', 'css/styles.css', 'enkku.html', 'sivustot/x.js']) {
+    const o = `https://matkakirja.app/${muu}`;
+    s.kori.set(o, s.vastaus('vanha'));
+    assert.equal((await s.hae(o)).runko, 'vanha', `${muu} ei saa siirtyä verkko ensin -haaraan`);
+  }
+});
+
+test('esittelysivun sääntö toimii myös alikansion juuressa (GitHub Pages)', async () => {
+  const s = swVerkolla('https://ravelius.github.io/Matkakirja/sw.js');
+  s.asetaVerkko(() => s.vastaus('uusi'));
+  for (const polku of ['', 'en/', 'sivusto/sivusto.js']) {
+    const o = `https://ravelius.github.io/Matkakirja/${polku}`;
+    s.kori.set(o, s.vastaus('vanha'));
+    assert.equal((await s.hae(o)).runko, 'uusi', `${polku || './'} alikansiossa ei tullut verkosta`);
+  }
+  const peli = 'https://ravelius.github.io/Matkakirja/pelaa.html';
+  s.kori.set(peli, s.vastaus('vanha'));
+  assert.equal((await s.hae(peli)).runko, 'vanha');
 });

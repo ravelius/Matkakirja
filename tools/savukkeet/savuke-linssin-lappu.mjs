@@ -72,7 +72,7 @@ const MIME = {
 };
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   let sisalto = readFileSync(polku);
@@ -132,7 +132,7 @@ async function avaaSivu(nakyma, virhelista) {
 
 /** Peli auki pallolaudalle Ateenaan (sama avaus kuin savuke-aikajanassa). */
 async function avaaPeli(kohde) {
-  await kohde.goto('http://127.0.0.1:8752/index.html?lauta=pallo', { waitUntil: 'load' });
+  await kohde.goto('http://127.0.0.1:8752/pelaa.html?lauta=pallo', { waitUntil: 'load' });
   await kohde.waitForTimeout(2500);
   await kohde.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

@@ -260,7 +260,8 @@ tasapainotettu peliä varten.
 ## Pelin käynnistys
 
 Peli on staattinen sivusto ES-moduuleilla, joten se tarvitsee pienen
-web-palvelimen (pelkkä `index.html`-tiedoston avaaminen ei riitä):
+web-palvelimen (pelkkä `pelaa.html`-tiedoston avaaminen ei riitä). Peli on `pelaa.html`;
+`index.html` on pelin esittelysivu (ohjaa peliin vain pelin parametreilla, esim. `?lehti=`, tai iOS-kuoressa):
 
 ```bash
 npm start          # käynnistää python3 -m http.server 8000
@@ -268,7 +269,7 @@ npm start          # käynnistää python3 -m http.server 8000
 npx http-server -p 8000
 ```
 
-Avaa sitten <http://localhost:8000/>.
+Avaa sitten peli <http://localhost:8000/pelaa.html> (esittelysivu on <http://localhost:8000/>).
 
 Peli ei tarvitse käännösvaihetta eikä ajonaikaisia riippuvuuksia —
 pelkkää HTML:ää, CSS:ää ja JavaScriptiä. Palvelutyöntekijä
@@ -327,7 +328,8 @@ node tools/build-standalone.mjs   # → dist/matkakirja.html
 ## Projektin rakenne
 
 ```
-index.html               runko, dialogit ja säännöt
+pelaa.html               pelin runko, dialogit ja säännöt
+index.html               etusivu: pelin esittely (en/index.html englanniksi)
 css/                     ulkoasu (kartta, lehti, fokusnäkymä)
 js/main.js               käynnistys, tallennus ja päivitykset
 js/game.js               pelitila, vuorot, aika, aarteet, voittoehdot

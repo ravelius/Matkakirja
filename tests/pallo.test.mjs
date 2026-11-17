@@ -377,7 +377,7 @@ test('pinnoitteen pikselihaku: juliste kattaa 76° N – Etelämanner, navat jä
 });
 
 test('pallo on matkalaukun linssi, ei valikossa; ui avaa sen laiskasti ja kuori on SHELLissä', () => {
-  assert.ok(!lue('../index.html').includes('pallo-btn'), 'valikkonappi poistui (omistaja 4.9.2026)');
+  assert.ok(!lue('../pelaa.html').includes('pallo-btn'), 'valikkonappi poistui (omistaja 4.9.2026)');
   assert.ok(!lue('../js/main.js').includes('pallo-btn'));
   const ui = lue('../js/ui.js');
   assert.match(ui, /async avaaPallo\(\) \{[\s\S]{0,300}import\('\.\/pallo\.js'\)/);
@@ -644,7 +644,7 @@ test('turvatila: kaksi kaatumista peräkkäin avaa pallon kevennettynä', () => 
   // Nollausnappi lähti rattaasta 11.9.2026 (omistaja: *"nämä kaikki
   // napit voisi ottaa pois"*); laskuri unohtuu itsestään ajan kanssa
   // (PALLON_TURVATILAN_UNOHDUS_MS) ja nollain on yhä moduulissa.
-  assert.doesNotMatch(lue('../index.html'), /id="kehittaja-pallo-turvatila-btn"/);
+  assert.doesNotMatch(lue('../pelaa.html'), /id="kehittaja-pallo-turvatila-btn"/);
   assert.doesNotMatch(lue('../js/main.js'), /palloTurvatilaNappi/);
   assert.match(lue('../js/ui-apurit.js'), /export function nollaaPallonKaatumiset/);
 });
@@ -679,7 +679,7 @@ test('tarkkuus liikkeessä -kokeiluvipu (omistaja 5.9.2026: "kokeile pyörisikö
   assert.match(pallo, /const aina = \(\) => laatuAinaPaalla\(ikkuna\) \|\| laatuPakotukset > 0;/);
   assert.match(pallo, /if \(aina\(\)\) lepoon = true;/);
   // Vipu lähti rattaasta 11.9.2026; asetus on yhä muistissa ja URL:ssä.
-  assert.doesNotMatch(lue('../index.html'), /kehittaja-laatu-aina-kytkin/);
+  assert.doesNotMatch(lue('../pelaa.html'), /kehittaja-laatu-aina-kytkin/);
 });
 
 /*

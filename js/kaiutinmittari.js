@@ -56,7 +56,7 @@
 
 import { voimassaOlevatKokeet } from './piirtokoe-asetus.js';
 
-/** Kaaria kaiuttimessa — sama luku kuin index.html:n poluissa. */
+/** Kaaria kaiuttimessa — sama luku kuin pelaa.html:n poluissa. */
 export const KAARIA = 3;
 
 /** Ajastetun kuvion jakso: yksi nousu ja lasku (ms). */

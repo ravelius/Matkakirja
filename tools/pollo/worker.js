@@ -164,7 +164,7 @@ const PUHE_MALLI_OLETUS = 'gpt-4o-mini-tts';
  * xAI:lla ei ole ohjetekstiä (instructions) — persoonan luonne tulee
  * pelkästä äänestä. Nopeus kulkee 'speed'-kenttänä kuten OpenAI:lla.
  * XAI_AANET on /v1/tts/voices-listaus 27.9.2026; kehittäjävalikon
- * äänivalinta (js/main.js, index.html #kehittaja-striimiaani) saa valita
+ * äänivalinta (js/main.js, pelaa.html #kehittaja-striimiaani) saa valita
  * vain tältä listalta, ja vain kehittäjäkoodilla kuten muutkin säädöt.
  * js/puhe.js STRIIMIAANET_XAI on saman listan näyttökopio —
  * tests/puheohjeet.test.mjs valvoo, että ne ovat samat.

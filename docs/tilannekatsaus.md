@@ -46,7 +46,7 @@ Seuraavaksi:
 Tila: tuotannossa, laajenee
 
 Jokaisesta kaupungista ja jo yli sadasta maasta on oma lehti, joka on kirjoitettu vuoden 1873 matkakirjan
-hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita ihmeitä, kulttuuria
+hengessä mutta nykytiedon varassa: historiaa, historian hetkiä, kadonneita aarteita, kulttuuria
 ja arkea. Kartalla nostot johdattavat nähtävyyksiin ja tarinoihin, ja jokaisella nostolla on
 oma kuvansa. Tekstit voi kuunnella: isoisän ääni lukee lehtiä, ja pelin oma opas, Pulu-kyyhky,
 vastaa pelaajan kysymyksiin. Valokuvat ja vanhat kuvat ovat vapaasti käytettäviä (public

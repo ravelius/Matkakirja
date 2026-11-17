@@ -53,7 +53,7 @@ jobs:
           # Erillinen työhuonesivusto (tyohuone.html + oma manifesti)
           # poistettiin 18.8.2026: työhuone on nyt pelin sisällä
           # kehittäjävivun takana (hampurilaisvalikon TYÖHUONE-osio).
-          cp index.html kohtaamiskuvat.html projekti.html projekti-data.js linssikatalogi.html linssikatalogi-data.js pelikatalogi.html pelikatalogi-data.js manifest.webmanifest sw.js .nojekyll _site/
+          cp index.html pelaa.html kohtaamiskuvat.html projekti.html projekti-data.js linssikatalogi.html linssikatalogi-data.js pelikatalogi.html pelikatalogi-data.js manifest.webmanifest sw.js .nojekyll _site/
           # Projektisivu: projekti.html + projekti/ (tyyli ja moduulit) +
           # projekti-data.js; kuvat assets/projekti/. Vanhat katalogisivut
           # ovat ohjaussivuja projekti.html#linssit / #pelit, ja niiden data
@@ -62,6 +62,13 @@ jobs:
           cp dist/matkakirja.html _site/dist/
           # Beta-testaajien linkki matkakirja.app/beta (natiivi juna 184, omistaja 12.10.): ohjaa matkakirja://beta-skeemaan.
           mkdir -p _site/beta && cp beta/index.html _site/beta/
+          # Etusivu = pelin esittely (index.html, KK 17.11.2026 klo 11.57); peli on pelaa.html (yllä).
+          # Esittelyn tyyli, skripti ja kuvat; sivusto/:n .md-muistiinpanot eivät mene julkaisuun.
+          mkdir -p _site/sivusto/kuvat
+          cp sivusto/sivusto.css sivusto/sivusto.js _site/sivusto/
+          find sivusto/kuvat -maxdepth 1 -type f \( -name '*.jpg' -o -name '*.webp' -o -name '*.png' \) -exec cp {} _site/sivusto/kuvat/ \;
+          # Englanninkielinen esittely matkakirja.app/en/ (vain sivu; ei .md:tä, ei artikkeleita).
+          mkdir -p _site/en && cp en/index.html _site/en/
 
       - uses: actions/upload-pages-artifact@v3
         with:

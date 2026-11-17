@@ -66,32 +66,32 @@
  * ennen kuin Antonia on tavattu.
  */
 const TAIKAHUILU_VISA = {
-  kysymys: 'Mozartin viimeinen ooppera sai ensi-iltansa Wienin '
-    + 'esikaupungin teatterissa eikä hovissa. Millä kielellä se '
-    + 'laulettiin?',
+  kysymys: 'Taikahuilu sai ensi-iltansa Wienin esikaupungin teatterissa '
+    + 'eikä hovissa. Kuka kirjoitti oopperan sanat ja esitti itse '
+    + 'linnustaja Papagenoa?',
   vaihtoehdot: [
-    'Saksaksi',
-    'Italiaksi',
-    'Latinaksi',
+    'Emanuel Schikaneder',
+    'Lorenzo Da Ponte',
+    'Antonio Salieri',
   ],
   oikea: 0,
-  fakta: 'Taikahuilun ensi-ilta oli 30. syyskuuta 1791 Emanuel '
-    + 'Schikanederin teatterissa Wiedenin esikaupungissa. Schikaneder '
-    + 'kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart '
-    + 'kuoli kaksi kuukautta myöhemmin.',
+  fakta: 'Taikahuilun ensi-ilta oli 30. syyskuuta 1791 Freihaustheaterissa '
+    + 'Wiedenin esikaupungissa. Mozart kuoli 5. joulukuuta 1791, kaksi '
+    + 'kuukautta ensi-illan jälkeen.',
 };
 
 const LIPIZZANI_VISA = {
   kysymys: 'Hofburgin ratsastuskoulun hevoset tunnetaan valkoisina. '
-    + 'Minkä värisinä varsat syntyvät?',
+    + 'Minkä värisinä lipizzanit syntyvät?',
   vaihtoehdot: [
-    'Ruunikkoina tai mustina',
+    'Tummina',
     'Valkoisina, kuten aikuisina',
     'Täplikkäinä',
   ],
   oikea: 0,
-  fakta: 'Varsat vaalenevat vuosi vuodelta ja ovat valkoisia 6–10 '
-    + 'vuoden iässä. Perinne vaatii, että tallissa on aina myös yksi '
+  fakta: 'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa; '
+    + 'noin kymmenvuotiaina ne ovat yleensä valkoisia. Ratsastuskoulun oman '
+    + 'sivun mukaan perinteeseen kuuluu, että tallissa on aina vähintään yksi '
     + 'ruunikko.',
 };
 
@@ -328,56 +328,52 @@ export const FOKUSVIRTA_WIEN = {
        * päällekkäisyysvaroitus noudatettu: vesijohto 1873 on jo
        * pelissä (js/packs/europe-saapumiset.js ja
        * js/packs/europe-questions.js), joten tässä kerrotaan vain se,
-       * mitä pelissä EI vielä ole — 30 akveduktia, rakennuskorkeuden
-       * raja ja Gabriellin prosentti. Etunimi on aineiston suosittelema
-       * muoto Antonio.
+       * mitä pelissä EI vielä ole — akveduktit ja Gabriellin prosentti
+       * (teksti uusittu 17.11.2026, KK:n Wienin data-PR).
+       * Etunimi on aineiston suosittelema muoto Antonio.
        */
       id: 'vesijohto',
       nappi: 'Vesi, joka tuli vuorilta ilman ainuttakaan pumppua',
       otsikko: 'Ensimmäinen vuoristovesijohto',
-      teksti: 'Isoisäsi käynnin aikaan kaupungissa kaivettiin jo '
-        + 'toista ihmettä, joka valmistui vasta lokakuussa. Wienin '
-        + 'ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873. '
-        + 'Se on 95 kilometriä pitkä ja kulkee kokonaan painovoiman '
-        + 'varassa Rax- ja Schneeberg-vuorten lähteiltä kaupunkiin — '
-        + 'juuri siksi Wienin rakennusjärjestykset rajoittivat talojen '
-        + 'korkeuden noin kahteenkymmeneenviiteen metriin: sitä '
-        + 'korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 '
-        + 'akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat '
-        + 'nykyään suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: '
-        + 'urakoitsija Antonio Gabrielli tarjoutui itse, että hänen '
-        + 'palkkiostaan vähennettäisiin yksi prosentti, kunnes kasaan '
-        + 'tulisi 100 000 guldenia — ja niillä rahoilla rakennettaisiin '
-        + 'suihkulähde, joka avattaisiin samana päivänä kuin vesijohto. '
-        + 'Niin syntyi Hochstrahlbrunnen. Vesijohto tuottaa yhä yli '
-        + 'puolet kaupungin juomavedestä.',
-      lahde: 'de-Wikipedia "I. Wiener Hochquellenleitung". Tarkistettu '
-        + '1.9.2026.',
+      teksti: 'Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873, ja '
+        + 'samana päivänä alkoi toimia Hochstrahlbrunnen-suihkulähde '
+        + 'Schwarzenbergplatzilla. Vesi tulee Rax- ja Schneeberg-vuorten lähteiltä '
+        + 'kaupunkiin kokonaan painovoiman avulla, ilman yhtäkään pumppua. Matkalla '
+        + 'on noin 30 akveduktia.'
+        + '\n\n'
+        + 'Vesijohdon rakensi urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
+        + 'itse, että yksi prosentti hänen tuloistaan pidätettäisiin, kunnes summa '
+        + 'olisi 100 000 guldenia. Vesijohto on yhä käytössä.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 vesijohto oli vasta valmistumassa. Se avattiin '
+        + '24. lokakuuta, kun maailmannäyttely Praterissa oli lopuillaan, joten jos '
+        + 'isoisäsi kävi Wienissä aiemmin vuonna, vesijohtoa ei ollut vielä avattu.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wiener Wasser (MA 31), Wien Geschichte Wiki, Wienbibliothek digital ja Wien Tourismus',
       /*
        * Commons 28.8.2026: 4032×3024, CC BY-SA 4.0, Anna Saini,
        * kuvattu 19.9.2019, kuvaus "Teil der 1. Wiener
        * Hochquellenleitung". Restrictions tyhjä. SILMÄTARKISTUS tehty:
        * kuvassa on kadun ylittävä akvedukti, ei tunnistettavia
-       * ihmisiä.
+       * ihmisiä. Kuvateksti ilman pituusväitettä (KK 17.11.2026).
        */
       kuva: {
         tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
-        lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä; vesi kulkee 95 km painovoiman varassa.',
+        lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä, vesi kulkee painovoimalla.',
         selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. '
-          + 'Vesi kulkee koko 95 kilometrin matkan painovoiman varassa.',
+          + 'Vesi kulkee koko matkan painovoiman varassa.',
         lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
       },
       visa: {
-        kysymys: 'Miksi Wienissä ei saanut 1800-luvulla rakentaa noin '
-          + 'kahtakymmentäviittä metriä korkeampia taloja?',
+        kysymys: 'Miten vesi kulkee Wienin ensimmäisessä vuoristovesijohdossa '
+          + 'vuorilta kaupunkiin?',
         vaihtoehdot: [
-          'Keisari halusi nähdä Stephansdomin joka kadulta',
-          'Palokunnan tikkaat eivät yltäneet ylemmäs',
-          'Vuoristovesi ei olisi noussut ylemmäs ilman pumppuja',
+          'Höyrypumppujen työntämänä',
+          'Kokonaan painovoiman avulla',
+          'Hevosvetoisilla vesivaunuilla',
         ],
-        oikea: 2,
-        fakta: 'Sama vesijohto tuo yhä yli puolet Wienin juomavedestä. '
-          + 'Sen 30 akveduktia ovat nykyään suojeltuja rakennuksia.',
+        oikea: 1,
+        fakta: 'Johto avattiin 24. lokakuuta 1873, ja matkalla on noin 30 '
+          + 'akveduktia. Vesijohto on yhä käytössä.',
       },
     },
     {
@@ -634,26 +630,25 @@ export const FOKUSVIRTA_WIEN = {
        * kuuluu pääkartalle.
        */
       kattoVapaa: true,
-      otsikko: 'Keisari avasi maailmannäyttelyn — kahdeksan päivää '
-        + 'myöhemmin poliisi sulki pörssin',
+      // Sääntö 11 (SK 17.11.2026): vain kahden lähteen väitteet. Pois jäivät keisarin puhe (yksi lähde), "maan suurin pankki",
+      // meklari Petschekin nimi ja titteli (vain Rieder), "120 pankkia" (lähteet sanovat 120 maksukyvyttömyyttä/yritystä),
+      // poliisin sulkema pörssi kello 13 (vain WGW ja Austria-Forum/de-Wikipedia), Berliini ja New York, 7,25 miljoonaa ja 15 miljoonan tappio.
+      otsikko: 'Maailmannäyttely avattiin, ja kahdeksan päivää myöhemmin '
+        + 'pörssi romahti',
       lunastus: [
-        'Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 '
-          + 'sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa '
-          + 'nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli '
-          + 'juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan '
-          + 'guldenin arvosta arvopapereita.',
-        'Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään '
-          + 'meklari Adolf Petschek, jota kutsuttiin meklarikaupan '
-          + 'kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja '
-          + 'kello 13 poliisi sulki pörssin — päivä on Itävallan historian '
-          + '”musta perjantai”. Romahdus levisi Berliiniin ja syyskuussa '
-          + 'New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa '
-          + 'historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 '
-          + 'miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi '
-          + 'noin 15 miljoonaa guldenia.',
+        'Keisari Franz Joseph avasi Wienin maailmannäyttelyn 1. toukokuuta '
+          + '1873. Huhtikuun lopussa Creditanstalt oli myynyt arvopapereita '
+          + '20 miljoonan guldenin arvosta.',
+        'Perjantaina 9. toukokuuta 1873 eräs arvostettu wieniläinen '
+          + 'kommissiotalo ilmoitti maksukyvyttömyydestään, ja pörssin kurssit '
+          + 'romahtivat. Samana päivänä maksukyvyttömyyksiä oli '
+          + 'Itävalta-Unkarissa 120. Päivä tunnetaan Itävallan historiassa '
+          + 'nimellä ”musta perjantai”. Näyttelylle odotettiin 20 miljoonaa '
+          + 'kävijää, mutta niitä tuli noin seitsemän miljoonaa, ja näyttely '
+          + 'jätti valtion talouteen suuren aukon.',
       ],
-      lahde: 'de-Wikipedia "Gründerkrach" ja "Weltausstellung 1873" sekä '
-        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026).',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Tourismus, Wien Geschichte Wiki, '
+        + 'Saksan historian museo (DHM) ja Austria-Forum. Tarkistettu 17.11.2026.',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -719,8 +714,18 @@ export const FOKUSVIRTA_WIEN = {
       kysymykset: [
         'Mitä maailmannäyttelyssä 1873 oli nähtävänä?',
         'Mikä aiheutti Wienin pörssiromahduksen?',
-        'Miten romahdus levisi Wienistä New Yorkiin asti?',
+        'Kuinka monta kävijää maailmannäyttelylle odotettiin?',
       ],
+      visa: {
+        kysymys: 'Montako kävijää Wienin maailmannäyttelylle odotettiin?',
+        vaihtoehdot: [
+          'Noin 7 miljoonaa',
+          '20 miljoonaa',
+          '120 miljoonaa',
+        ],
+        oikea: 1,
+        fakta: 'Näyttelylle odotettiin 20 miljoonaa kävijää, mutta niitä tuli noin seitsemän miljoonaa.',
+      },
       // 48,21222222 N / 16,40944444 E — de-Wikipedia "Rotunde (Wien)",
       // näyttelyn tunnusrakennus Praterin alueella.
       paikka: {
@@ -795,6 +800,16 @@ export const FOKUSVIRTA_WIEN = {
         'Miten eläimiä kuljetettiin Egyptistä Wieniin?',
         'Millainen paikka Schönbrunnin eläintarha oli 1800-luvulla?',
       ],
+      visa: {
+        kysymys: 'Keneltä Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828?',
+        vaihtoehdot: [
+          'Egyptin varakuninkaalta',
+          'Ranskan kuninkaalta',
+          'Venetsian doogelta',
+        ],
+        oikea: 0,
+        fakta: 'Kirahvi tuli lahjaksi Egyptin varakuninkaalta, ja kirahvi-innostus levisi muotiin, käsitöihin ja seuraelämään.',
+      },
       // 48,1845 N / 16,3119 E — takyt-wien.md, täky 10
       // (Tiergarten Schönbrunn).
       paikka: {
@@ -831,26 +846,25 @@ export const FOKUSVIRTA_WIEN = {
      */
     {
       id: 'praterin-ratas',
-      nimio: 'Rattaan kulmat',
+      nimio: 'Praterin jättiratas',
       otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
-      symboli: 'tekniikka',
+      symboli: 'historia',
       lunastus: [
-        'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
-          + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
-          + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. '
-          + 'Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. '
-          + 'Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin '
-          + 'vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa '
-          + 'kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.',
+        'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+          + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
+          + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
+          + 'vaunut uusittiin alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.',
+        'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
+          + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
+          + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
+          + 'paloi 1937.',
       ],
-      lahde: 'Wienin kaupunkilehden nosto "Ratas, joka kulkee kävelyä hitaammin" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wiener Riesenrad, Wien Geschichte Wiki, AEIOU, Wien Tourismus ja ORF Wien',
       kuva: {
         tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
-        lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
-        selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
-          + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
+        lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä tunnissa.',
+        selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin 2016, ja ratas '
+          + 'kulkee enintään 2,7 kilometriä tunnissa.',
         lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
       },
       /*
@@ -863,30 +877,30 @@ export const FOKUSVIRTA_WIEN = {
         {
           otsikko: 'Koko ratas kerralla',
           tiedosto: 'Wiener Riesenrad DSC02378.JPG',
-          lyhyt: 'Jättiratas on kolmikymmenkulmio; 1945 palon jälkeen vaunuja ripustettiin takaisin vain viisitoista.',
-          selite: 'Jättiratas ei ole ympyrä vaan kolmikymmenkulmio, ja '
-            + 'vuoden 1945 palon jälkeen vaunuja ripustettiin takaisin '
-            + 'vain viisitoista, joka toiseen kulmaan.',
+          lyhyt: 'Praterin jättiratas kokonaisuudessaan; vaunut uusittiin 2016.',
+          selite: 'Praterin jättiratas kokonaisuudessaan. Vuonna 2016 vaunut '
+            + 'uusittiin alkuperäisten piirustusten mukaan.',
           lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       kysymykset: [
-        'Miksi rattaan kehästä tehtiin kolmikymmenkulmio eikä pyöreää?',
-        'Miksi vaunuja ripustettiin sodan jälkeen takaisin vain puolet?',
-        'Millaista Praterissa oli silloin, kun ratas nousi?',
+        'Miksi Praterin jättiratas rakennettiin?',
+        'Mitä rattaalle tapahtui vuonna 1944?',
+        'Millainen oli Rotunde, joka seisoi Praterissa isoisän matkavuonna 1873?',
       ],
       visa: {
-        kysymys: 'Praterin jättiratas ei ole ympyrä. Minkä muotoinen sen kehä on?',
+        kysymys: 'Milloin Praterin jättiratas valmistui?',
         vaihtoehdot: [
-          'Soikio',
-          'Kolmikymmenkulmio',
-          'Kuusikulmio',
+          '1873',
+          '1897',
+          '1937',
         ],
         oikea: 1,
-        fakta: 'Ratas kulkee 2,7 kilometriä tunnissa.',
+        fakta: 'Vuonna 1873 Praterissa seisoi maailmannäyttelyn Rotunde. '
+          + 'Ratas kulkee enintään 2,7 kilometriä tunnissa.',
       },
       paikka: {
-        nimi: 'Rattaan kulmat',
+        nimi: 'Praterin jättiratas',
         laudat: {
           maailmankartta: { x: 6379.9, y: 1467 },
           europe: { x: 526, y: 625.5 },
@@ -897,32 +911,43 @@ export const FOKUSVIRTA_WIEN = {
       id: 'lipizzanit',
       nimio: 'Lipizzanit',
       otsikko: 'Valkoiset hevoset syntyvät tummina',
-      symboli: 'elain',
+      symboli: 'historia',
       lunastus: [
-        'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
-          + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
-          + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina '
-          + 'tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden '
-          + 'iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi '
-          + 'ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari '
-          + 'Kaarle VI:n muotokuvaa ennen kuin ratsastavat.',
+        'Espanjalainen ratsastuskoulu toimii Hofburgin palatsissa Wienissä salissa, '
+          + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salia koristaa yhä hallitsijan ratsastusmuotokuva.',
+        'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin '
+          + 'kymmenvuotiaina ne ovat yleensä valkoisia. Ratsastuskoulun oman sivun '
+          + 'mukaan perinteeseen kuuluu, että tallissa on aina vähintään yksi ruunikko, '
+          + 'onnea tuomaan. Nykyään nuoret oriit tulevat Piberin siitostallista '
+          + 'Steiermarkista, ja ratsastuskoulun mukaan ne siirtyvät noin nelivuotiaina '
+          + 'koulutukseen Heldenbergiin tai Wieniin.',
+        'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
+          + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+          + 'hovitallista nykyisessä Sloveniassa.',
       ],
-      lahde: 'Wienin kaupunkilehden nosto "Valkoiset hevoset syntyvät tummina" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Spanische Hofreitschule, Wien Geschichte Wiki, Austria Tourismus, Wien Tourismus ja AEIOU',
       kuva: {
         tiedosto: 'Kawecan.jpg',
-        lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
-        selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
-          + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
+        lyhyt: 'Aikuinen lipizzaniori; lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa.',
+        selite: 'Aikuinen lipizzaniori. Lipizzanit syntyvät tummina ja vaalenevat '
+          + 'vuosien kuluessa; noin kymmenvuotiaina ne ovat yleensä valkoisia.',
         lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
       },
       kysymykset: [
-        'Miksi lipizzanit kasvatetaan Steiermarkissa eikä Wienissä?',
-        'Mitä ratsastuskoulussa opetetaan hevosille neljän vuoden iästä '
-          + 'eteenpäin?',
-        'Miksi tallissa pidetään perinteen vuoksi aina yksi ruunikko?',
+        'Mistä lipizzanit tulivat Wieniin ennen vuotta 1920?',
+        'Miten lipizzanien väri muuttuu vuosien kuluessa?',
+        'Milloin ratsastuskoulun talvikoulu valmistui?',
       ],
+      visa: {
+        kysymys: 'Minkä väriset lipizzanit ovat syntyessään?',
+        vaihtoehdot: [
+          'Valkoiset',
+          'Kirjavat',
+          'Tummat',
+        ],
+        oikea: 2,
+        fakta: 'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin kymmenvuotiaina ne ovat yleensä valkoisia.',
+      },
       paikka: {
         nimi: 'Lipizzanit',
         laudat: {
@@ -938,24 +963,29 @@ export const FOKUSVIRTA_WIEN = {
       otsikko: 'Taikahuilu tehtiin esikaupungin teatteriin',
       symboli: 'kulttuuri',
       lunastus: [
-        'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu '
-          + 'sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin '
-          + 'teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin '
-          + 'saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. '
-          + 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja '
-          + 'Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen '
-          + 'vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja '
-          + 'antoi veistää itsensä Papagenona sen portin päälle.',
+        'Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Freihaustheaterissa '
+          + 'Wiedenin esikaupungissa. Emanuel '
+          + 'Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja '
+          + 'esitti itse linnustaja Papagenoa. Ooppera ei syntynyt hovia varten: '
+          + 'Schikaneder pyysi Mozartilta kansanomaista oopperaa omaan teatteriinsa. Se '
+          + 'kuuluu saksalaiseen Singspiel-perinteeseen, jossa yleisön piti ymmärtää '
+          + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
+          + 'jälkeen.',
+        'Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+          + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
+          + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.',
+        'Isoisäsi matkavuonna 1873 Taikahuilun teatteri ei ollut enää käytössä, '
+          + 'sillä Freihaustheaterin viimeinen esitys oli ollut 1801. Theater an der '
+          + 'Wienissä sai ensi-iltansa juuri 1873 Johann Strauss nuoremman operetti '
+          + 'Carneval in Rom, ja Papageno-veistos oli jo portin päällä. '
+          + 'Wienin kaupungin historiasivuston mukaan Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 pörssiromahduksessa.',
       ],
-      lahde: 'Wienin kaupunkilehden nosto "Taikahuilu tehtiin esikaupungin '
-        + 'teatteriin" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Bezirksmuseum Mariahilf',
       kuva: {
         tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
-        lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
-        selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
-          + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi siniseksi '
-          + 'kupoliksi.',
+        lyhyt: 'Karl Friedrich Schinkelin lavastusluonnos Yön kuningattaren tähtisalista, noin 1815.',
+        selite: 'Karl Friedrich Schinkel maalasi noin 1815 Yön kuningattaren tähtisalin '
+          + 'lavastuksen Taikahuilun Berliinin tuotantoon.',
         lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
       },
       /*
@@ -968,11 +998,9 @@ export const FOKUSVIRTA_WIEN = {
         {
           otsikko: 'Papagenon portti',
           tiedosto: 'Theater an der Wien.jpg',
-          lyhyt: 'Theater an der Wienin portilla Schikaneder on kuvattu höyhenpukuisena Taikahuilun jatko-osasta.',
-          selite: 'Theater an der Wienin sivuportin päällä Emanuel '
-            + 'Schikaneder on veistetty höyhenpukuisena soittamassa '
-            + 'pillejään Taikahuilun jatko-osan Das Labyrinth '
-            + 'kohtauksessa.',
+          lyhyt: 'Theater an der Wienin portin päällä oleva veistos muistuttaa Schikanederista Papagenon asussa.',
+          selite: 'Theater an der Wienin portin päällä oleva veistos muistuttaa '
+            + 'Schikanederista: hän on Papagenon asussa ja soittaa huilua.',
           lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -988,21 +1016,19 @@ export const FOKUSVIRTA_WIEN = {
       musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/de/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg.mp3',
       musiikkiNayteNimi: 'Mozart: Yön kuningattaren aaria — johtaa Ferenc Fricsay, äänitetty 1953 (PD)',
       kysymykset: [
-        'Miksi Mozartin viimeinen ooppera syntyi esikaupungin teatteriin '
-          + 'eikä hoville?',
-        'Mitä merkitsi, että ooppera laulettiin saksaksi eikä italiaksi?',
-        'Miksi Schikaneder halusi itsensä veistettynä Papagenona '
-          + 'teatterinsa portin päälle?',
+        'Missä Taikahuilu sai ensi-iltansa 1791?',
+        'Milloin Theater an der Wien avattiin?',
+        'Mitä Theater an der Wienin portin päällä oleva veistos esittää?',
       ],
       visa: {
-        kysymys: 'Millä kielellä Taikahuilu laulettiin ensi-illassaan?',
+        kysymys: 'Kuka kirjoitti Taikahuilun sanat ja esitti ensi-illassa linnustaja Papagenoa?',
         vaihtoehdot: [
-          'Italiaksi',
-          'Latinaksi',
-          'Saksaksi',
+          'Lorenzo Da Ponte',
+          'Antonio Salieri',
+          'Emanuel Schikaneder',
         ],
         oikea: 2,
-        fakta: 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa.',
+        fakta: 'Schikaneder johti Freihaustheateria 1789 alkaen. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan jälkeen.',
       },
       paikka: {
         nimi: 'Taikahuilu',
@@ -1019,23 +1045,24 @@ export const FOKUSVIRTA_WIEN = {
       otsikko: 'Kaupunki sävelsi oman jokensa',
       symboli: 'kulttuuri',
       lunastus: [
-        'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin '
-          + 'Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta '
-          + 'myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku '
-          + 'tulee hitusen etuajassa, joten se ei mene metronomin kanssa '
-          + 'tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin '
-          + 'viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen '
-          + 'ja tahdittaen yhtä aikaa.',
+        'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä '
+          + '15. helmikuuta 1867 Dianabadissa. Dianabad oli uimalaitos Leopoldstadtin '
+          + 'kaupunginosassa. Talvella uimahalli muutettiin tanssi- ja '
+          + 'konserttisaliksi, jota kutsuttiin Dianasaliksi.',
+        'Valssin ensimmäinen versio oli mieskuorolle, ja Wienin Männergesang-Verein '
+          + 'lauloi sen karnevaaliaikaan. Strauss ei ollut itse paikalla johtamassa. '
+          + 'Vasta myöhemmin valssi esitettiin pelkän orkesterin soittamana, ja samana vuonna '
+          + 'se kuultiin myös Pariisin maailmannäyttelyssä.',
+        'Alkuperäinen Dianabad on kadonnut: rakennus purettiin 1913, ja uusi '
+          + 'Dianabad valmistui 1917. Isoisäsi matkavuonna 1873 valssi oli ollut '
+          + 'maailmalla jo kuusi vuotta, ja vanha Dianabad seisoi vielä paikallaan.',
       ],
-      lahde: 'Wienin kaupunkilehden nosto "Kaupunki sävelsi oman jokensa" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Johann Strauss Society, AEIOU, ORF Wien, vienna.at ja Wikidata',
       kuva: {
         tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
-        lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
-        selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
-          + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
-          + '1899, hänen viimeisenä elinvuotenaan.',
+        lyhyt: 'Johann Strauss nuorempi Fritz Luckhardtin valokuvassa 1899.',
+        selite: 'Johann Strauss nuorempi Fritz Luckhardtin valokuvassa vuodelta 1899. '
+          + 'Strauss kuoli samana vuonna.',
         lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
       },
       /*
@@ -1050,10 +1077,21 @@ export const FOKUSVIRTA_WIEN = {
       musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/d/de/%22An_der_sch%C3%B6nen%2C_blauen_Donau%22%2C_performed_by_the_US_Marine_Band.mp3',
       musiikkiNayteNimi: 'Strauss: Tonava kaunoinen — United States Marine Band (PD)',
       kysymykset: [
-        'Miksi valssi tehtiin ensin mieskuorolle eikä orkesterille?',
-        'Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi laskea?',
-        'Miten yhdestä valssista tuli kokonaisen kaupungin tunnusmerkki?',
+        'Missä Tonava kaunoinen kantaesitettiin 1867?',
+        'Millainen valssin ensimmäinen versio oli ja kuka sen lauloi?',
+        'Mitä vanhalle Dianabadille tapahtui?',
       ],
+      visa: {
+        kysymys: 'Missä Tonava kaunoinen kantaesitettiin vuonna 1867?',
+        vaihtoehdot: [
+          'Wienin oopperassa',
+          'Dianabadissa',
+          'Schönbrunnin linnassa',
+        ],
+        oikea: 1,
+        fakta: 'Valssi kantaesitettiin Dianabadissa, uimalaitoksessa, joka talvella muutettiin tanssi- ja konserttisaliksi.',
+      },
+      // 48,2135 N / 16,3768 E — Dianabadin paikka, Obere Donaustraße 93 (WGW ja Wikidata Q1208912; KK 16.11.2026).
       paikka: {
         nimi: 'Tonava kaunoinen',
         laudat: {

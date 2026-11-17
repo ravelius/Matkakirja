@@ -2047,7 +2047,7 @@ lisaaTaustaVaimennus({
 });
 
 /*
- * Taustaaanet-liuku (index.html #voima-tausta) yltaa myos
+ * Taustaaanet-liuku (pelaa.html #voima-tausta) yltaa myos
  * syntetisoituun maisemaan. Rekisterointi on tassa samasta syysta kuin
  * taustavahti yllä: luokan voi yha luoda testissa ilman kuuntelijaa.
  */

@@ -119,14 +119,14 @@ const valitaAmpariin = async (req, res, polku) => {
 };
 
 const palveleTiedosto = (req, res, polku, origin) => {
-  const suhteellinen = polku === '/' ? '/index.html' : polku;
+  const suhteellinen = polku === '/' ? '/pelaa.html' : polku;
   const tiedosto = normalize(join(JUURI, suhteellinen));
   if (!tiedosto.startsWith(JUURI)) { res.writeHead(403); res.end(); return; }
   if (suhteellinen === '/sw.js') { res.writeHead(200, { 'content-type': TYYPIT['.js'] }); res.end(SW_STUBI); return; }
   if (!existsSync(tiedosto) || statSync(tiedosto).isDirectory()) { res.writeHead(404); res.end('ei löydy'); return; }
   const paate = extname(tiedosto);
   const tyyppi = TYYPIT[paate] ?? 'application/octet-stream';
-  if (suhteellinen === '/index.html') {
+  if (suhteellinen === '/pelaa.html') {
     const teksti = kirjoitaAmpari(readFileSync(tiedosto, 'utf8'), origin).replace('</body>', `${HARNESSI}\n</body>`);
     res.writeHead(200, { 'content-type': tyyppi, 'access-control-allow-origin': '*' }); res.end(teksti); return;
   }

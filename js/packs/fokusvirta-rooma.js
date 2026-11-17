@@ -121,18 +121,18 @@ import { itaFokuskohteet } from './fokuskohteet-ita.js';
  * osuu isoisän omaan vuosikymmeneen.
  */
 const NASONE_VISA = {
-  kysymys: 'Rooman kadunkulmissa juoksee vettä valurautaisista '
-    + 'pylväistä yötä päivää. Milloin ensimmäiset niistä pystytettiin?',
+  kysymys: 'Rooman kaduilla on juomavesihanoja, joita sanotaan '
+    + 'nasoneiksi. Milloin ensimmäiset niistä pystytettiin?',
   vaihtoehdot: [
     '1870-luvulla',
     '1600-luvulla, barokin aikaan',
     '1950-luvulla',
   ],
   oikea: 0,
-  fakta: 'Roomalaiset ristivät pylväät nasoneiksi eli isoiksi neniksi '
-    + 'kaarevan putkensa takia. Niitä on kaupungissa yhä noin 2 500, ja '
-    + 'vesi on samaa kuin kotihanoissa — isoisän matkavuonna ne olivat '
-    + 'siis aivan uusi asia.',
+  fakta: 'Nasone tarkoittaa isoa nenää, ja nimi tuli vasta myöhemmästä, '
+    + 'yhdestä kaarevasta suusta. Turismo Roman ja Acean mukaan ensimmäiset '
+    + 'tulivat vuonna 1874, joten isoisän matkavuonna 1873 niitä ei ehkä '
+    + 'vielä ollut.',
 };
 
 /*
@@ -411,38 +411,35 @@ export const FOKUSVIRTA_ROOMA = {
       nappi: 'Kissat, jotka asuvat murhapaikalla',
       otsikko: 'Largo di Torre Argentinan kissapyhäkkö',
       /*
-       * ELÄINTÄKY (Raamattu, ELÄINTÄYT-linjaus 25.8.2026). Faktat:
-       * takyt-rooma.md, täky 1, ja takynostot-italia.md, ehdokas 1 —
-       * molemmat merkitty VARMOIKSI.
-       *
-       * KAKSI RAPORTIN RAJAUSTA NOUDATETTU: kissojen lukumäärää ei
-       * kirjoiteta (en-artikkelit sanovat 350 ja 150), ja Caesarin
-       * murhapaikasta sanotaan "uskotaan", koska lähde itse sanoo "is
-       * believed to have been".
-       *
-       * TYÖNJAKO TÄKYNOSTON KANSSA (1.9.2026, nostojen sisältöaudit):
-       * tämä syvennys kertoo KAIVAUKSEN JA HOITAJAT — sen minivisan
-       * vastaus on avain, joka kulki näyttelijältä toiselle, joten
-       * tekstiä ei ole muutettu. Saman aiheen täkynosto
-       * (`takynostot`, tunnus 'kissat') oli tähän asti tämän kortin
-       * tiivistelmä samassa kartan pisteessä; se kirjoitettiin uusiksi
-       * ja kertoo nyt TEMPPELIN JA LAIN eli sen, missä suoja seisoo ja
-       * millä oikeudella kissat siellä ovat.
+       * ELÄINTÄKY (Raamattu, ELÄINTÄYT-linjaus 25.8.2026). TEKSTI UUSITTU 17.11.2026 (Rooman 9 tarinapaikkaa, KK:n
+       * DATA-SANA; SK:n data-luonnos docs/raportit/rooma-9-tarinapaikkaa-dataluonnos-20261116.md): vain väitteet,
+       * jotka täyttävät kahden lähteen säännön. Kissojen lukumäärä on arvioiden mukaan, Caesarin
+       * murhapaikasta sanotaan "perinteisen tunnistuksen mukaan". Sama teksti kuin täkynostolla 'kissat' ja
+       * kohdekartan jutulla 'Torre Argentina' (yksi piste, kaksi nostoa).
        */
-      teksti: 'Kun Roomaa rakennettiin uusiksi Italian yhdistymisen '
-        + 'jälkeen ja korttelia purettiin vuonna 1927, maasta tuli '
-        + 'esiin jättiläispatsaan pää ja käsivarret. Alta löytyi neljä '
-        + 'tasavallan ajan temppeliä ja pala Pompeiuksen teatteria — ja '
-        + 'juuri se paikka, jossa Julius Caesarin uskotaan tulleen '
-        + 'murhatuksi. Kaivauskuoppaan alkoi kerääntyä kulkukissoja. Ne '
-        + 'asuvat siellä yhä: temppeli D:n kohdalla toimii kissasuoja, '
-        + 'jota on 1950-luvulta lähtien pidetty yllä avaimella, joka on '
-        + 'kulkenut näyttelijältä toiselle — mukana muun muassa Anna '
-        + 'Magnani. Vuodesta 1993 se on ollut virallinen, tappamaton '
-        + 'suoja. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
-        + 'häätöä raunioiden suojelemiseksi; vetoomukseen kerättiin yli '
-        + '30 000 nimeä, ja kissat jäivät.',
-      lahde: 'en-Wikipedia "Largo di Torre Argentina". Tarkistettu 1.9.2026.',
+      teksti: 'Largo di Torre Argentina on Rooman keskustan aukio, jossa on '
+        + 'kaivauskuoppa. Kun vanhaa korttelia purettiin vuosina '
+        + '1926–1929, kuopasta paljastui neljä tasavallan ajan temppeliä. '
+        + 'Temppeleitä merkitään kirjaimilla A, B, C ja D, koska ei '
+        + 'tiedetä varmasti, mille jumalalle kukin kuului.'
+        + '\n\n'
+        + 'Temppeleiden takana on Pompeiuksen portiikin Curian eli '
+        + 'senaatin kokoushuoneen kivijalka. Perinteisen tunnistuksen '
+        + 'mukaan Julius Caesar murhattiin juuri tässä Curiassa vuonna 44 '
+        + 'eaa.'
+        + '\n\n'
+        + 'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
+        + 'Näyttelijä Anna Magnani kuului roomalaisiin, jotka ruokkivat kissoja. Vuonna 1993 perustettiin '
+        + 'vapaaehtoisten ylläpitämä kissasuoja, ja arvioiden mukaan siellä on noin 200 kissaa. Vuonna 2012 arkeologiviranomaiset '
+        + 'vaativat suojan poistamista, koska se oli rakennettu ilman '
+        + 'lupaa ja haittasi raunioiden säilymistä. NPR:n mukaan kissoja '
+        + 'itseään ei kuitenkaan voitu häätää.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, '
+        + 'ja temppeli A:n sisään rakennettu San Nicola de\' Cesarini '
+        + '-kirkko seisoi vielä; se purettiin vasta 1926–1929. Kissoja ei '
+        + 'ollut vielä, ja kissasuoja tuli vasta 1993.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Sovrintendenza Capitolina, Turismo Roma, Treccani, Discover Magazine, History Blog, NPR ja Gatti di Roma',
       /*
        * Takyt-rooma.md, täky 1 (ja takynostot-italia.md, ehdokas 1):
        * 5760×3840, CC BY 2.0, Andy Rusch, 2015 — kissat raunioilla.
@@ -454,18 +451,16 @@ export const FOKUSVIRTA_ROOMA = {
         lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
       },
       visa: {
-        kysymys: 'Miten kissasuojan hoito siirtyi 1950-luvulta lähtien '
-          + 'ihmiseltä toiselle?',
+        kysymys: 'Mitä Largo di Torre Argentinan kuopasta paljastui, kun '
+          + 'vanhaa korttelia purettiin vuosina 1926–1929?',
         vaihtoehdot: [
-          'Tehtävä kuului aina raunioiden vartijalle',
-          'Kaupunki nimitti hoitajan joka vuosi',
-          'Avain kulki näyttelijältä toiselle',
+          'Neljä tasavallan ajan temppeliä',
+          'Rooman suurin amfiteatteri',
+          'Keisarin palatsin kellari',
         ],
-        oikea: 2,
-        fakta: 'Suoja toimii temppeli D:n kohdalla ja on vuodesta 1993 '
-          + 'ollut virallinen, tappamaton suoja. Kissojen määrästä '
-          + 'lähteet ovat eri mieltä, joten lukua ei kannata uskoa '
-          + 'yhdeltäkään kyltiltä.',
+        oikea: 0,
+        fakta: 'Temppeleitä merkitään kirjaimilla A, B, C ja D, koska ei '
+          + 'tiedetä varmasti, mille jumalalle kukin kuului.',
       },
     },
     {
@@ -536,14 +531,11 @@ export const FOKUSVIRTA_ROOMA = {
    * Visasääntö täyttyy: vastaus löytyy tekstistä, mutta kysymyksen
    * sanamuoto ei toistu siinä sellaisenaan.
    *
-   * FAKTAT OVAT PELIN OMASTA, JO HYVÄKSYTYSTÄ ROOMA-AINEISTOSTA:
-   * Aqua Virgo vuodelta 19 eaa. ja sen 22 kilometriä maan alla sekä
-   * lähteen mitat, Salvin vuodet ja merenjumalan kaksi hevosta
-   * (js/packs/nahtavyysjutut.js, "Trevin suihkulähde"); nimen merkitys
-   * ja tarina janoisista sotilaista (js/packs/kulttuuri-kategoriat.js,
-   * nosto "Vesi kulkee yhä"); kolikkotapa, kolmentuhannen euron
-   * päiväsumma, Caritas-lahjoitus ja noukkimiskielto (sama tiedosto,
-   * nosto "Kolikko olan yli"). Mitään uutta faktaväitettä ei ole
+   * FAKTAT OVAT PELIN OMASTA ROOMA-AINEISTOSTA: lähteen mitat, Salvin
+   * vuodet ja merenjumalan kaksi hevosta (js/packs/nahtavyysjutut.js,
+   * "Trevin suihkulähde"); Aqua Virgo ja Caritas-lahjoitus Rooman 9
+   * tarinapaikan korjatuin tekstein (17.11.2026, nostot "Vesi kulkee
+   * yhä" ja "Kolikko olan yli"). Mitään uutta faktaväitettä ei ole
    * lisätty.
    *
    * AKVEDUKTIN PAINOVOIMAA EI SELITETÄ TÄSSÄ: se on sivun 1
@@ -552,22 +544,16 @@ export const FOKUSVIRTA_ROOMA = {
   oppitunti: {
     otsikko: 'Aqua Virgo — vesijohto, joka päättyy altaaseen',
     teksti: 'Trevin lähde ei ole muistomerkki vaan vesijohdon pää. Aqua '
-      + 'Virgo valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa '
-      + 'maan alla, kaksikymmentäkaksi kilometriä. Nimi tarkoittaa '
-      + 'neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille '
-      + 'sen lähteen, josta vesi otettiin. Nykyinen allas on paljon '
+      + 'Virgo valmistui vuonna 19 eaa., ja Frontinuksen mukaan se kulki '
+      + 'suurimman osan noin 20 kilometrin matkastaan maan alla. Nimi '
+      + 'Virgo tarkoittaa neitoa. Nykyinen allas on paljon '
       + 'uudempi. Arkkitehti Nicola Salvi aloitti sen 1732, ja se '
-      + 'valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen — '
-      + 'maailman suurin barokkilähde, kaksikymmentäkuusi metriä korkea '
-      + 'ja lähes viisikymmentä metriä leveä. Keskellä ajaa merenjumala '
-      + 'vaunuillaan, joita vetävät kaksi hevosta, toinen rauhallinen ja '
-      + 'toinen villi. Altaan reunalla tehdään yhä sama liike: kolikko '
-      + 'oikeasta kädestä vasemman olan yli. Tarinan mukaan se takaa '
-      + 'paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen '
-      + 'euron edestä joka päivä, ja ne kerätään pohjasta talteen ja '
-      + 'lahjoitetaan hyväntekeväisyyteen — ruoka-apuun kaupungin '
-      + 'vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on '
-      + 'kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.',
+      + 'valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen. Keskellä ajaa merenjumala '
+      + 'vaunuillaan, joita vetävät kaksi merihevosta, toinen rauhallinen ja '
+      + 'toinen villi. Altaan reunalla heitetään yhä kolikko olan yli. '
+      + 'Tarinan mukaan se takaa paluun Roomaan. Vuonna 2022 altaasta '
+      + 'kerättiin kolikoita yli 1,4 miljoonan euron arvosta, ja ne '
+      + 'lahjoitetaan hyväntekeväisyyteen vähävaraisten auttamiseksi.',
     /*
      * Kuva on pelin oma, jo hyväksytty valinta (js/packs/
      * nahtavyysjutut.js, "Trevin suihkulähde"): käsin väritetty
@@ -745,67 +731,36 @@ export const FOKUSVIRTA_ROOMA = {
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Caesarin kissat',
       /*
-       * OTSIKKO JA LUNASTUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen
-       * sisältöaudit). Kortti oli tähän asti saman tiedoston
-       * syvennystäyn 'kissat' tiivistelmä: sama aukio, sama piste,
-       * samat kaksi käännettä (1927 purkutyöt ja vuoden 2012 häätöyritys
-       * 30 000 nimen vetoomuksineen) lyhyempinä. Kumpaakaan korttia ei
-       * poistettu, vaan TYÖNJAKO SELVITETTIIN:
-       *
-       *   syvennys 'kissat' = KAIVAUS JA HOITAJAT. Miten kuoppa
-       *     syntyi, miten kissat sinne tulivat, miten avain kulki
-       *     näyttelijältä toiselle (sen minivisan vastaus) ja miten
-       *     häätöyritys kaatui. Ei muutettu.
-       *   tämä täkynosto = TEMPPELI JA LAKI. Missä suoja oikeastaan
-       *     seisoo ja millä oikeudella kissat siellä ovat.
-       *
-       * FAKTAT (en-Wikipedia "Largo di Torre Argentina", osiot "Roman
-       * temples" ja "Cat shelter"; haettu 1.9.2026):
-       *   - temppeli D on neljästä suurin, 100-luvulta eaa.; sen lupasi
-       *     pretori Lucius Aemilius Regillus kesken meritaistelua
-       *     Antiokhos Suuren laivastoa vastaan vuonna 190 eaa., ja
-       *     M. Aemilius Lepidus vihki sen sensorina 22.12.179 eaa.
-       *     merenkulkijoita suojeleville Lares Permarini -jumalille;
-       *     temppelistä on kaivettu esiin vain pieni osa, koska katu
-       *     peittää suurimman osan siitä;
-       *   - kissasuoja sijaitsee juuri temppeli D:n kohdalla, se
-       *     perustettiin 1993 ja toimii tappamattomana Italian
-       *     parlamentin vuonna 1991 säätämän lain numero 281 nojalla;
-       *     laki antoi kissoille oikeuden elää vapaana ja turvassa ja
-       *     teki kissojen hoitajista virallisen instituution; suoja
-       *     tekee sterilointi- ja adoptiotyötä ja jatkaa toimintaansa
-       *     arkeologien vastustuksesta huolimatta;
-       *   - Caesarin murhapaikasta lähde sanoo "uskotaan", ja niin
-       *     sanoo tämäkin kortti.
-       *
-       * KISSOJEN LUKUMÄÄRÄÄ EI KIRJOITETA — sama rajaus kuin
-       * syvennystäyllä, koska en-artikkelit antavat eri luvut.
+       * TEKSTI UUSITTU 17.11.2026 (Rooman 9 tarinapaikkaa, KK:n DATA-SANA; SK:n data-luonnos
+       * docs/raportit/rooma-9-tarinapaikkaa-dataluonnos-20261116.md). Sama teksti kuin
+       * syvennyksellä 'kissat' ja kohdekartan jutulla 'Torre Argentina' (yksi piste, kaksi
+       * nostoa). Vanhan version väitteet temppeli D:n kohdasta, laista 281/1991 ja
+       * tappamattomuudesta eivät täyttäneet kahden lähteen sääntöä.
        */
-      otsikko: 'Rooman kuuluisin kissalauma asuu temppelissä, joka '
-        + 'luvattiin merenkulkijoiden jumalille kesken meritaistelua',
+      otsikko: 'Kissat asuvat paikassa, jossa Caesarin uskotaan tulleen '
+        + 'murhatuksi',
       lunastus: [
-        'Kissasuoja ei ole raunion vieressä vaan raunion sisällä. Se '
-          + 'toimii temppeli D:n kohdalla — Largo di Torre Argentinan '
-          + 'neljästä temppelistä suurimman, jonka pretori Lucius '
-          + 'Aemilius Regillus lupasi rakentaa kesken meritaistelua '
-          + 'Antiokhos Suuren laivastoa vastaan vuonna 190 eaa. '
-          + 'Temppeli vihittiin yhdentoista vuoden kuluttua, 22. '
-          + 'joulukuuta 179 eaa., merenkulkijoita suojeleville Lares '
-          + 'Permarini -jumalille. Siitä on kaivettu esiin vain pieni '
-          + 'osa: loput ovat yhä kadun alla. Saman aukion laidalla on '
-          + 'se kohta, jossa Caesarin uskotaan tulleen murhatuksi.',
-        'Kissojen oikeus jäädä ei ole tunneasia vaan lakikysymys. '
-          + 'Italian parlamentti sääti vuonna 1991 lain numero 281, joka '
-          + 'antoi kulkukissoille oikeuden elää vapaana ja turvassa ja '
-          + 'teki niiden hoitajista virallisen instituution. Suoja '
-          + 'perustettiin kaksi vuotta myöhemmin ja toimii sen lain '
-          + 'nojalla tappamattomana: kissat steriloidaan ja niille '
-          + 'etsitään koti, mutta yhtäkään ei lopeteta. Arkeologit ovat '
-          + 'vaatineet suojan purkamista kaivauksen suojelemiseksi. '
-          + 'Suoja on yhä siellä.',
+        'Largo di Torre Argentina on Rooman keskustan aukio, jossa on '
+          + 'kaivauskuoppa. Kun vanhaa korttelia purettiin vuosina '
+          + '1926–1929, kuopasta paljastui neljä tasavallan ajan temppeliä. '
+          + 'Temppeleitä merkitään kirjaimilla A, B, C ja D, koska ei '
+          + 'tiedetä varmasti, mille jumalalle kukin kuului.',
+        'Temppeleiden takana on Pompeiuksen portiikin Curian eli '
+          + 'senaatin kokoushuoneen kivijalka. Perinteisen tunnistuksen '
+          + 'mukaan Julius Caesar murhattiin juuri tässä Curiassa vuonna 44 '
+          + 'eaa.',
+        'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
+          + 'Näyttelijä Anna Magnani kuului roomalaisiin, jotka ruokkivat kissoja. Vuonna 1993 perustettiin '
+          + 'vapaaehtoisten ylläpitämä kissasuoja, ja arvioiden mukaan siellä on noin 200 kissaa. Vuonna 2012 arkeologiviranomaiset '
+          + 'vaativat suojan poistamista, koska se oli rakennettu ilman '
+          + 'lupaa ja haittasi raunioiden säilymistä. NPR:n mukaan kissoja '
+          + 'itseään ei kuitenkaan voitu häätää.',
+        'Isoisäsi matkavuonna 1873 temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, '
+          + 'ja temppeli A:n sisään rakennettu San Nicola de\' Cesarini '
+          + '-kirkko seisoi vielä; se purettiin vasta 1926–1929. Kissoja ei '
+          + 'ollut vielä, ja kissasuoja tuli vasta 1993.',
       ],
-      lahde: 'en-Wikipedia "Largo di Torre Argentina", osiot "Roman temples" ja "Cat '
-        + 'shelter" (tarkistettu 1.9.2026).',
+      lahde: 'Matkakirjan oma teksti · lähteinä Sovrintendenza Capitolina, Turismo Roma, Treccani, Discover Magazine, History Blog, NPR ja Gatti di Roma',
       avaa: 'kissat',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
@@ -815,9 +770,19 @@ export const FOKUSVIRTA_ROOMA = {
        * asetaNostonKuva).
        *
        * Kuva on aukio tasavallan aikaan — samat neljä temppeliä, jotka
-       * kuopasta 1927 paljastuivat — ja portailla istuu kissoja, jotka
+       * kuopasta 1926–1929 paljastuivat — ja portailla istuu kissoja, jotka
        * ovat noston toinen puoli.
        */
+      visa: {
+        kysymys: 'Minä vuonna Largo di Torre Argentinan kissasuoja perustettiin?',
+        vaihtoehdot: [
+          '1993',
+          '1926',
+          '2012',
+        ],
+        oikea: 0,
+        fakta: 'Kissasuoja perustettiin vuonna 1993, ja arvioiden mukaan siellä on noin 200 kissaa.',
+      },
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-kissat-loistoaika.webp',
         selite: 'Largo di Torre Argentinan temppelit loistoaikanaan, '
@@ -886,19 +851,19 @@ export const FOKUSVIRTA_ROOMA = {
       id: 'rooman-kolikko',
       nimio: 'Kolikko olan yli',
       otsikko: 'Kolikko olan yli',
-      symboli: 'kulttuuri',
+      symboli: 'historia',
       lunastus: [
-        'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman '
-          + 'olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita '
-          + 'putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne '
-          + 'kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle '
-          + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa '
-          + 'kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä '
-          + 'jää säännöllisesti kiinni.',
+        'Trevin suihkulähteestä kerrotaan tarina: kun heittää kolikon '
+          + 'olan yli, palaa vielä Roomaan. Se on legenda, ei tosiasia. '
+          + 'Kolikoita kertyy paljon, ja vuonna 2022 niitä kerättiin '
+          + 'altaasta yli 1,4 miljoonan euron arvosta.',
+        'Kolikot kerätään altaan pohjasta talteen ja lahjoitetaan '
+          + 'Caritakselle, joka auttaa kaupungin vähävaraisia.',
+        'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, '
+          + 'sillä se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo '
+          + '-akveduktia pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
       ],
-      lahde: 'Rooman kaupunkilehden nosto "Kolikko olan yli" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
       kuva: {
         tiedosto: 'Trevi Fountain - Roma.jpg',
         lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
@@ -917,11 +882,20 @@ export const FOKUSVIRTA_ROOMA = {
       aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
       aaniLahde: '"Walking to Pantheon" — Rolf Yngve, radio aporee (public domain)',
       kysymykset: [
-        'Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?',
-        'Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta '
-          + 'talteen?',
-        'Mihin Caritaksen ruoka-apu Roomassa menee?',
+        'Miksi kolikko heitetään Trevin suihkulähteeseen olan yli?',
+        'Kuinka paljon kolikoita Trevin altaasta kerättiin vuonna 2022?',
+        'Mihin Trevin altaasta kerätyt kolikot lahjoitetaan?',
       ],
+      visa: {
+        kysymys: 'Kenelle Trevin suihkulähteen kolikot lahjoitetaan?',
+        vaihtoehdot: [
+          'Rooman kaupungille',
+          'Vatikaanille',
+          'Caritakselle',
+        ],
+        oikea: 2,
+        fakta: 'Kolikot kerätään altaan pohjasta ja lahjoitetaan Caritakselle, joka auttaa kaupungin vähävaraisia.',
+      },
       paikka: {
         nimi: 'Kolikko olan yli',
         laudat: {
@@ -934,25 +908,23 @@ export const FOKUSVIRTA_ROOMA = {
       id: 'colosseumin-kellari',
       nimio: 'Areenan kellari',
       otsikko: 'Leijona nousi lattian alta',
-      symboli: 'tekniikka',
+      symboli: 'historia',
       lunastus: [
         'Colosseumin areena oli puulattia, jonka päälle levitettiin '
-          + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
-          + 'sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, '
-          + 'häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin '
-          + 'kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi '
-          + 'keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto '
-          + 'auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.',
+          + 'hiekkaa.',
+        'Lattian alla oli kaksikerroksinen kellari eli hypogeum, jossa '
+          + 'oli käytäviä, häkkejä ja varastohuoneita. Kellarista johti areenalle kymmeniä pystykuiluja ja nostimia. Köysien ja '
+          + 'vintturien avulla häkki nostettiin ylös, ja eläin ilmestyi '
+          + 'areenalle luukusta.',
+        'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
+          + 'peitossa. Kellaria kaivettiin esiin useaan otteeseen 1800-luvulla, muun muassa vuosina 1874–1875.',
       ],
-      lahde: 'Rooman kaupunkilehden nosto "Leijona nousi lattian alta" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Cerone ym. (Colosseumin areenan lattia), The Collector ja Walks of Italy',
       kuva: {
         tiedosto: 'Hypogeum 1 (15005526662).jpg',
         lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
         selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen kellari '
-          + 'eli hypogeum, jossa oli käytäviä, häkkejä ja kahdeksankymmentä '
-          + 'pystykuilua.',
+          + 'eli hypogeum, jossa oli käytäviä, häkkejä ja kymmeniä pystykuiluja.',
         lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
           + 'Commons (CC BY-SA 2.0)',
       },
@@ -979,20 +951,19 @@ export const FOKUSVIRTA_ROOMA = {
         'Miten kaksikerroksinen kellari käytävineen rakennettiin areenan '
           + 'alle?',
         'Miksi puulattian päälle levitettiin hiekkaa?',
-        'Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?',
+        'Mitä kaksikerroksisessa kellarissa oli?',
       ],
       visa: {
-        kysymys: 'Colosseumin areenalla eläin saattoi ilmestyä keskelle kuin '
-          + 'tyhjästä. Miten se tehtiin?',
+        kysymys: 'Colosseumin areenalla eläin saattoi ilmestyä luukusta. '
+          + 'Miten se tehtiin?',
         vaihtoehdot: [
-          'Vinssi nosti häkin pystykuilua pitkin lattian tasalle',
+          'Häkki nostettiin köysien ja vintturien avulla ylös',
           'Eläin ajettiin sisään katsomon alta nousevaa ramppia pitkin',
           'Hiekkaan oli kaivettu kuoppa, jonka päällä oli matto',
         ],
         oikea: 0,
         fakta: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
-          + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
-          + 'sana areena.',
+          + 'hiekkaa.',
       },
       paikka: {
         nimi: 'Areenan kellari',
@@ -1008,19 +979,21 @@ export const FOKUSVIRTA_ROOMA = {
       otsikko: 'Norsu kantaa obeliskia',
       symboli: 'kulttuuri',
       lunastus: [
-        'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
-          + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
-          + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
-          + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
-          + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
-          + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
-          + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen '
-          + 'pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli '
-          + 'heidän mielestään pieni ja pyöreä.',
+        'Piazza della Minervan aukiolla Rooman keskustassa seisoo '
+          + 'norsupatsas, jonka selässä on punertava graniittiobeliski. '
+          + 'Patsaan suunnitteli Gian Lorenzo Bernini, Ercole Ferrata '
+          + 'veisti sen, ja se paljastettiin vuonna 1667. Paavi Aleksanteri '
+          + 'VII kuoli ennen kuin patsas ehdittiin paljastaa. Obeliski on pieni, noin 5,5 metriä korkea. Turismo Roman '
+          + 'mukaan obeliski löytyi vuonna 1665, kun dominikaanit '
+          + 'rakensivat Santa Maria sopra Minerva -kirkon puutarhan muuria.',
+        'Patsasta kutsuttiin ensin possuksi, "Porcino della Minerva", '
+          + 'ja nimi vääntyi ääntämisen mukana muotoon "Pulcino della '
+          + 'Minerva", tipu. Nimen kerrotaan johtuneen norsun tanakasta '
+          + 'muodosta.',
+        'Isoisäsi matkavuonna 1873 norsu oli seissyt aukiolla jo 206 '
+          + 'vuotta.',
       ],
-      lahde: 'Rooman kaupunkilehden nosto "Norsu kantaa obeliskia" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, Through Eternity, Romewise ja Rolf Gross (The Obelisks of Rome)',
       kuva: {
         tiedosto: 'Elephant and Obelisk.jpg',
         lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
@@ -1038,20 +1011,28 @@ export const FOKUSVIRTA_ROOMA = {
         {
           otsikko: 'Koko muistomerkki',
           tiedosto: 'Elephant and Obelisk - Bernini.jpg',
-          lyhyt: 'Norsun selässä oleva obeliski on Rooman kolmestatoista muinaisobeliskista pienin.',
-          selite: 'Norsun selässä oleva obeliski on Rooman '
-            + 'kolmestatoista muinaisobeliskista pienin, viisi ja puoli '
-            + 'metriä.',
+          lyhyt: 'Norsun selässä oleva obeliski on yksi Rooman kolmentoista muinaisobeliskin pienimmistä.',
+          selite: 'Norsun selässä oleva obeliski on yksi Rooman '
+            + 'kolmentoista muinaisobeliskin pienimmistä, noin 5,5 metriä '
+            + 'korkea.',
           lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       kysymykset: [
-        'Miten viisi ja puoli metriä korkea obeliski nostettiin norsun '
-          + 'selkään?',
-        'Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?',
-        'Miksi roomalaisten mielestä marmorinorsu muistutti enemmän possua '
-          + 'kuin norsua?',
+        'Miten noin 5,5 metriä korkea obeliski nostettiin norsun selkään?',
+        'Mistä Rooman muinaisobeliskit ovat alun perin peräisin?',
+        'Miksi patsasta kutsuttiin ensin possuksi?',
       ],
+      visa: {
+        kysymys: 'Kuka suunnitteli Minervan norsupatsaan?',
+        vaihtoehdot: [
+          'Francesco Borromini',
+          'Gian Lorenzo Bernini',
+          'Michelangelo',
+        ],
+        oikea: 1,
+        fakta: 'Patsaan suunnitteli Gian Lorenzo Bernini, ja se paljastettiin vuonna 1667.',
+      },
       paikka: {
         nimi: 'Norsu ja obeliski',
         laudat: {
@@ -1067,32 +1048,43 @@ export const FOKUSVIRTA_ROOMA = {
       otsikko: 'Vesi kulkee yhä',
       symboli: 'tekniikka',
       lunastus: [
-        'Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta '
-          + 'vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä '
-          + 'painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä '
-          + 'kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 '
-          + 'eaa. ja kulkee melkein koko matkansa maan alla — '
-          + 'kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se '
-          + 'syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan '
-          + 'nuori tyttö näytti janoisille sotilaille lähteen, josta vesi '
-          + 'otettiin.',
+        'Roomaan rakennettiin aikojen kuluessa jopa yksitoista '
+          + 'akveduktia eli vesijohtoa. Ne toimivat pelkällä painovoimalla, '
+          + 'ja vesi virtasi loivasti alamäkeen. Aqua Marcia oli noin 91 '
+          + 'kilometriä pitkä.',
+        'Aqua Virgo valmistui vuonna 19 eaa., kun Agrippa rakennutti '
+          + 'sen. Matkaa oli noin 20 kilometriä. Frontinuksen mukaan se '
+          + 'kulki suurimman osan matkaa maan alla. Nimi Virgo tarkoittaa '
+          + 'neitoa. Aqua Virgo syöttää yhä Trevin suihkulähdettä, ja se on '
+          + 'Rooman antiikin akvedukteista ainoa, joka toimii yhä.',
+        'Isoisäsi matkavuonna 1873 Aqua Virgo oli ollut olemassa yli 1 '
+          + '800 vuotta, ja Trevin suihkulähde, joka valmistui vuonna 1762, '
+          + 'sai vetensä siitä jo silloin.',
       ],
-      lahde: 'Rooman kaupunkilehden nosto "Vesi kulkee yhä" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä National Geographic, Engineering Rome, Frontinus (De aquaeductu), Encyclopaedia Romana ja Turismo Roma',
       kuva: {
         tiedosto: 'Aqueducts in Rome.jpg',
-        lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
-        selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
-          + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
+        lyhyt: 'Roomaan rakennettiin jopa yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
+        selite: 'Roomaan rakennettiin jopa yksitoista akveduktia, ja vesi '
+          + 'virtasi kaarien päällä kulkevassa kourussa pelkän painovoiman '
+          + 'voimalla.',
         lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
       },
       kysymykset: [
-        'Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin '
-          + 'ilman nykyvälineitä?',
-        'Mitä Rooman yhdestätoista akveduktista on yhä käytössä?',
-        'Miksi Aqua Virgo vedettiin melkein koko matkaltaan maan alle?',
+        'Miten vesi liikkui akveduktissa ilman pumppuja?',
+        'Mikä Rooman antiikin akvedukteista toimii yhä?',
+        'Mitä nimi Virgo tarkoittaa?',
       ],
+      visa: {
+        kysymys: 'Mitä Aqua Virgo -akvedukti syöttää yhä?',
+        vaihtoehdot: [
+          'Trevin suihkulähdettä',
+          'Colosseumia',
+          'Pantheonia',
+        ],
+        oikea: 0,
+        fakta: 'Aqua Virgo syöttää yhä Trevin suihkulähdettä, ja se on Rooman antiikin akvedukteista ainoa, joka toimii yhä.',
+      },
       paikka: {
         nimi: 'Aqua Virgo',
         laudat: {
@@ -1105,25 +1097,29 @@ export const FOKUSVIRTA_ROOMA = {
       id: 'rooman-nasone',
       nimio: 'Nasone',
       otsikko: 'Iso nenä joka kulmassa',
-      symboli: 'kaupunki',
+      symboli: 'tekniikka',
       lunastus: [
-        'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
-          + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset '
-          + 'pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi '
-          + 'eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi '
-          + 'on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun '
-          + 'putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja '
-          + 'janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo '
-          + 'Pantheonin vieressä Piazza della Rotondalla.',
+        'Rooman kaduilla on juomavesihanoja, joita sanotaan nasoneiksi, '
+          + 'isoiksi neniksi. Alun perin ne olivat valurautaisia pylväitä, ja vesi '
+          + 'virtaa niistä yleensä yötä päivää. Ensimmäiset nasonet '
+          + 'pystytettiin 1870-luvulla. Alkuperäisessä mallissa oli kolme '
+          + 'lohikäärmeen päätä, ja nimi nasone tuli vasta, kun myöhemmin '
+          + 'tuli yksi kaareva suu, joka näyttää nenältä.',
+        'Putken suun päällä on pieni reikä. Kun suun tukkii sormella, '
+          + 'vesi suihkuaa reiästä ylöspäin. Rooman vesilaitos Acean mukaan '
+          + 'vesi on samaa kuin kotien hanoissa. Nasoneja on kaupungissa '
+          + 'noin 2 500, ja lohikäärmesuisia on yhä esimerkiksi Pantheonin '
+          + 'edessä Piazza della Rotondalla.',
+        'Isoisäsi matkavuonna 1873 nasoneja ei ehkä vielä ollut. '
+          + 'Turismo Roman ja Acean mukaan ensimmäiset tulivat vuonna 1874, '
+          + 'mutta yksi lähde antaa vuodeksi 1872.',
       ],
-      lahde: 'Rooman kaupunkilehden nosto "Iso nenä joka kulmassa" '
-        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, Acea ja Engineering Rome',
       kuva: {
         tiedosto: 'Nasone in Trastevere, Rome.jpg',
-        lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
-        selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on '
-          + 'samaa kuin roomalaisten kotihanoissa.',
+        lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla; Acean mukaan niiden vesi on samaa kuin kotien hanoissa.',
+        selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja Acean mukaan '
+          + 'niiden vesi on samaa kuin roomalaisten kotien hanoissa.',
         lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
       },
       /*
@@ -1139,15 +1135,15 @@ export const FOKUSVIRTA_ROOMA = {
         {
           otsikko: 'Vanha nasone Pantheonin vieressä',
           tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
-          selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
-            + 'Piazza della Rotondalla.',
+          selite: 'Lohikäärmesuinen nasone seisoo yhä Pantheonin edessä Piazza '
+            + 'della Rotondalla.',
           lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       kysymykset: [
-        'Miksi nasoneiden annetaan juosta yötä päivää?',
-        'Mistä nasoneiden vesi tulee kaupunkiin?',
-        'Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?',
+        'Miksi nasonea sanotaan isoksi nenäksi?',
+        'Millainen alkuperäinen nasone oli?',
+        'Milloin ensimmäiset nasonet pystytettiin?',
       ],
       visa: {
         kysymys: 'Rooman katupylvään eli nasonen putken päällä on pieni reikä. Mitä '
@@ -1159,8 +1155,8 @@ export const FOKUSVIRTA_ROOMA = {
           'Siitä kaupunki mittaa pylvään vedenpaineen',
         ],
         oikea: 1,
-        fakta: 'Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
-          + 'kotihanoissa.',
+        fakta: 'Niitä on kaupungissa noin 2 500, ja Acean mukaan vesi on samaa '
+          + 'kuin kotien hanoissa.',
       },
       paikka: {
         nimi: 'Nasone',

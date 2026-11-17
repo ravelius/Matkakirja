@@ -934,15 +934,40 @@
    "id": "amsterdam:Yövartio",
    "nimi": "Yövartio",
    "qid": null,
-   "lat": 52.37317,
-   "lon": 4.89136,
-   "lahde": "sama paikka kuin Kuninkaanpalatsi (kartan piste 9 m päässä)",
+   "lat": 52.3712,
+   "lon": 4.8994,
+   "lahde": "kartan piste (Trippenhuis, Kloveniersburgwal 29, jossa taulu oli 1873; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 52.3731,
-    "lon": 4.8913
+    "lat": 52.3712,
+    "lon": 4.8994
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "amsterdam:Kuninkaanpalatsi"
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "amsterdam:Portugalilainen synagoga",
+   "nimi": "Portugalilainen synagoga",
+   "qid": null,
+   "lat": 52.3675,
+   "lon": 4.9053,
+   "lahde": "kartan piste (nostokohde ilman wikiä; koordinaatti: 1 lähde, tarkistettava kuvasta)",
+   "kartanPiste": {
+    "lat": 52.3675,
+    "lon": 4.9053
+   },
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "amsterdam:Montelbaanstoren",
+   "nimi": "Montelbaanstoren",
+   "qid": null,
+   "lat": 52.372,
+   "lon": 4.9056,
+   "lahde": "kartan piste (nostokohde ilman wikiä; koordinaatti: 1 lähde, tarkistettava kuvasta)",
+   "kartanPiste": {
+    "lat": 52.372,
+    "lon": 4.9056
+   },
+   "eroKartanPisteesta_m": 0
   }
  ],
  "anchorage": [
@@ -20703,12 +20728,12 @@
    "id": "rooma:Banca Romana",
    "nimi": "Banca Romana",
    "qid": null,
-   "lat": 41.9009,
-   "lon": 12.4785,
-   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "lat": 41.897,
+   "lon": 12.4775,
+   "lahde": "kartan piste (Palazzo Maffei Marescotti, Via della Pigna; Turismo Roma ja Wikidata Q20650127 täsmäävät; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 41.9009,
-    "lon": 12.4785
+    "lat": 41.897,
+    "lon": 12.4775
    },
    "eroKartanPisteesta_m": 0
   },
@@ -20785,15 +20810,27 @@
    "id": "rooma:Nasone",
    "nimi": "Nasone",
    "qid": null,
-   "lat": 41.89861,
-   "lon": 12.47694,
-   "lahde": "sama paikka kuin Pantheon (kartan piste 3 m päässä)",
+   "lat": 41.8993,
+   "lon": 12.4768,
+   "lahde": "kartan piste (Piazza della Rotonda; Wikidata Q3457157 41,89931 / 12,47675; KK 16.11.2026, sijoitus tarkistettava kuvasta)",
    "kartanPiste": {
-    "lat": 41.8986,
-    "lon": 12.4769
+    "lat": 41.8993,
+    "lon": 12.4768
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "rooma:Pantheon"
+   "eroKartanPisteesta_m": 0
+  },
+  {
+   "id": "rooma:Meta Sudans",
+   "nimi": "Meta Sudans",
+   "qid": "Q1924755",
+   "lat": 41.89008,
+   "lon": 12.49067,
+   "lahde": "wikidata Q1924755 P625 ja OpenStreetMap relation 1835448 (KK 16.11.2026)",
+   "kartanPiste": {
+    "lat": 41.89008,
+    "lon": 12.49067
+   },
+   "eroKartanPisteesta_m": 0
   }
  ],
  "roseau": [
@@ -26842,15 +26879,14 @@
    "id": "wien:Beethoven 1824",
    "nimi": "Beethoven 1824",
    "qid": null,
-   "lat": 48.20333,
-   "lon": 16.36917,
-   "lahde": "sama paikka kuin Valtionooppera (kartan piste 121 m päässä)",
+   "lat": 48.2039,
+   "lon": 16.3696,
+   "lahde": "kartan piste (Kärntnertor-teatterin paikka; Wikidata Q165636 ja WGW täsmäävät; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 48.2033,
-    "lon": 16.3708
+    "lat": 48.2039,
+    "lon": 16.3696
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "wien:Valtionooppera"
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "wien:Mozart 1786",
@@ -26869,18 +26905,18 @@
    "id": "wien:Wienin krahi 1873",
    "nimi": "Wienin krahi 1873",
    "qid": null,
-   "lat": 48.2166,
-   "lon": 16.3648,
-   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "lat": 48.2153,
+   "lon": 16.3665,
+   "lahde": "kartan piste (pörssirakennus Schottenring 16, valmistui 1877; Wikidata Q2568865 ja WGW täsmäävät; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 48.2166,
-    "lon": 16.3648
+    "lat": 48.2153,
+    "lon": 16.3665
    },
    "eroKartanPisteesta_m": 0
   },
   {
-   "id": "wien:Rattaan kulmat",
-   "nimi": "Rattaan kulmat",
+   "id": "wien:Praterin jättiratas",
+   "nimi": "Praterin jättiratas",
    "qid": null,
    "lat": 48.21611,
    "lon": 16.39556,
@@ -26896,26 +26932,25 @@
    "id": "wien:Lipizzanit",
    "nimi": "Lipizzanit",
    "qid": null,
-   "lat": 48.20639,
-   "lon": 16.36528,
-   "lahde": "sama paikka kuin Hofburg (kartan piste 31 m päässä)",
+   "lat": 48.2075,
+   "lon": 16.3667,
+   "lahde": "kartan piste (Winterreitschule; Wikidata Q269273 ja WGW täsmäävät; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 48.2064,
-    "lon": 16.3657
+    "lat": 48.2075,
+    "lon": 16.3667
    },
-   "eroKartanPisteesta_m": 0,
-   "samaKuin": "wien:Hofburg"
+   "eroKartanPisteesta_m": 0
   },
   {
    "id": "wien:Taikahuilu",
    "nimi": "Taikahuilu",
    "qid": null,
-   "lat": 48.1981,
-   "lon": 16.3653,
-   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "lat": 48.1978,
+   "lon": 16.3661,
+   "lahde": "kartan piste (Freihaustheaterin paikka; Wikidata Q673479 ja WGW Freihaus/Operngasse 26; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 48.1981,
-    "lon": 16.3653
+    "lat": 48.1978,
+    "lon": 16.3661
    },
    "eroKartanPisteesta_m": 0
   },
@@ -26923,12 +26958,12 @@
    "id": "wien:Tonava kaunoinen",
    "nimi": "Tonava kaunoinen",
    "qid": null,
-   "lat": 48.2046,
-   "lon": 16.3793,
-   "lahde": "kartan piste (nostokohde ilman wikiä)",
+   "lat": 48.2135,
+   "lon": 16.3768,
+   "lahde": "kartan piste (Dianabadin paikka, Obere Donaustraße 93; WGW ja Wikidata Q1208912 täsmäävät; KK 16.11.2026)",
    "kartanPiste": {
-    "lat": 48.2046,
-    "lon": 16.3793
+    "lat": 48.2135,
+    "lon": 16.3768
    },
    "eroKartanPisteesta_m": 0
   }

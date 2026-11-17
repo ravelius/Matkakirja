@@ -190,8 +190,9 @@ test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
   for (const p of ['js/main.js', 'js/ui.js', 'js/lehti.js', 'js/maalehti.js', 'js/packs/kulttuuri-kategoriat.js', 'js/media.js']) {
     assert.ok(polut.has(p), `${p} puuttuu lehden riippuvuuksista`);
   }
-  assert.equal(lehti.sivu, 'index.html?lehti={kaupunki}');
-  assert.deepEqual(lehti.sivut.map((t) => t.polku), ['index.html']);
+  // Peli on pelaa.html (17.11.2026); vanhojen natiiviversioiden index.html?lehti= ohjautuu sinne (js/ohjaa-peliin.js).
+  assert.equal(lehti.sivu, 'pelaa.html?lehti={kaupunki}');
+  assert.deepEqual(lehti.sivut.map((t) => t.polku), ['pelaa.html']);
   assert.ok(lehti.tyylit.some((t) => t.polku === 'css/styles.css'));
   // Tiivisteet vastaavat repoa: kuori voi tarkistaa hakemansa version.
   for (const t of [...lehti.moduulit, ...lehti.tyylit].slice(0, 40)) {
@@ -795,6 +796,15 @@ test('skeema 1.24: kohdekarttojen nostolinkeillä aihe (kaupunkiliuskan kaava)',
   const l = linkit.find((x) => kohteet.has(x.tunnus));
   assert.equal(l.aihe, nostosymPaakategoria(kohteenKategoria(kohteet.get(l.tunnus))));
   assert.ok(kartat.every((k) => k.kohteet.every((x) => x.aihe === (x.linkit[0]?.aihe ?? null))));
+});
+
+test('kohdekartat.kohteet[].tarina: Porto di Ripetta → kadonneet-nain-tehtiin, muilla null (KK 17.11.2026 08.11)', () => {
+  const kartat = JSON.parse(tiedostot.get('kokoelmat/kohdekartat.json')).alkiot;
+  const kaikki = kartat.flatMap((k) => k.kohteet.map((x) => ({ kartta: k.id, ...x })));
+  assert.ok(kaikki.every((x) => x.tarina === null || (typeof x.tarina === 'string' && /^[a-z0-9-]+$/.test(x.tarina))));
+  const ripetta = kaikki.find((x) => x.kartta === 'rooma' && x.nimi === 'Porto di Ripetta');
+  assert.ok(ripetta, 'Porto di Ripetta puuttuu Rooman kohdekartalta');
+  assert.equal(ripetta.tarina, 'kadonneet-nain-tehtiin');
 });
 
 test('skeema 1.24: Livian saapumisrepliikit ja maakohtaiset täkynostot', async () => {

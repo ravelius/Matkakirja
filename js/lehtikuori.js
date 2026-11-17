@@ -4,7 +4,7 @@
  * työnjako: kaupunkilehti natiivissa WKWebView-kuoressa, web-lehti
  * sellaisenaan aluksi).
  *
- * `index.html?lehti=<kaupunki-id>` avaa kaupungin lehden ilman lautaa:
+ * `pelaa.html?lehti=<kaupunki-id>` avaa kaupungin lehden ilman lautaa:
  *   - peli rakennetaan kuten kehittäjän pikatiellä (js/kehittaja-pikatie.js
  *     rakennaPikatiePeli): yksi pelaaja kaupungissa, toimintavaihe, ei
  *     saapumisesitystä;
@@ -22,7 +22,7 @@
  * sivutapahtuman `matkakirja-lehti-suljettu` (testit ja selain).
  *
  * Sisältöpaketin juuri (Siirtoseppä, tools/vienti/web-riippuvuudet.mjs
- * WEB_NAKYMAT): index.html + js/main.js — kuori on sama sovellus eri
+ * WEB_NAKYMAT): pelaa.html + js/main.js — kuori on sama sovellus eri
  * tilassa eikä oma kopio käyttöliittymästä.
  */
 

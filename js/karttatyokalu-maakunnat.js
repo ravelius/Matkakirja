@@ -540,7 +540,7 @@ const PLUS_IKONI = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden=
 
 /*
  * PULUN IKONI ON YKSINKERTAINEN OMA SVG, EI js/pollo.js:n POLLO_IKONI.
- * Tehtävänannon grepillä (`pollo-nappi` index.html:ssä) ei löytynyt
+ * Tehtävänannon grepillä (`pollo-nappi` pelaa.html:ssä) ei löytynyt
  * mitään — oikea vakio asuu js/pollo.js:ssä, mutta koko tiedoston
  * tuonti pelkän kuvakkeen vuoksi kytkisi tämän rungon Livian koko
  * keskustelukoneistoon ilman hyötyä. Puhekupla kahdella pisteellä

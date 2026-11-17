@@ -3876,6 +3876,26 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    // KADONNUT IHME (PT 17.11.2026 NS 09.31, massa-25 osa 2; vain kahden itsenäisen lähteen väitteet: Hearsum Collection ja London Museum; 1851-näyttely Hyde Parkissa; tarkka päättymispäivä jätetty pois, koska lähteet antavat 11. ja 15. lokakuuta).
+    'Crystal Palace 1851': {
+      aika: '1851',
+      teksti: 'Crystal Palace oli suuri näyttelyhalli Lontoon Hyde Parkin eteläreunalla. Se pystytettiin vuoden 1851 suurta maailmannäyttelyä varten, ja kuningatar Victoria avasi näyttelyn 1. toukokuuta 1851. Näyttely päättyi lokakuussa.'
+        + '\n\n'
+        + 'Halli oli alun perin tarkoitettu väliaikaiseksi. Näyttelyn jälkeen se purettiin ja koottiin uudelleen Sydenham Hillille Etelä-Lontooseen. Siellä se paloi vuonna 1936.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 paikka Hyde Parkissa oli ollut tyhjänä yli kaksikymmentä vuotta, ja halli seisoi jo Sydenhamissa.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Hearsum Collection ja London Museum',
+    },
+    'Old St Paul\'s': {
+      aika: '1087–1666',
+      teksti: 'Old St Paul\'s oli Lontoon keskiaikainen katedraali Ludgate Hillillä. Sen rakentaminen alkoi vuonna 1087 edellisen kirkon palon jälkeen, ja se valmistui vuonna 1314.'
+        + '\n\n'
+        + 'Katedraalin torni paloi vuonna 1561. Lontoon suuri palo tuhosi koko rakennuksen vuonna 1666. Sen tilalle rakennettiin Christopher Wrenin suunnittelema nykyinen St Paulin katedraali, joka valmistui vuonna 1710.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteensataan vuoteen.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Museum of London',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -4393,31 +4413,32 @@ export const NAHTAVYYSJUTUT = {
      * Kenttä `nosto` kertoo, mistä karsitusta merkistä juttu on.
      */
     'Vuoristovesijohto': {
+      aika: '1869–1873',
       nosto: 'syvennys-wien-vesijohto',
-      teksti: 'Isoisäsi käynnin aikaan kaupungissa kaivettiin jo toista ihmettä, joka '
-        + 'valmistui vasta lokakuussa. Wienin ensimmäinen vuoristovesijohto '
-        + 'avattiin 24. lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee '
-        + 'kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten lähteiltä '
-        + 'kaupunkiin — juuri siksi Wienin rakennusjärjestykset rajoittivat '
-        + 'talojen korkeuden noin kahteenkymmeneenviiteen metriin: sitä '
-        + 'korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 '
-        + 'akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat nykyään '
-        + 'suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: urakoitsija '
-        + 'Antonio Gabrielli tarjoutui itse, että hänen palkkiostaan '
-        + 'vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100 000 guldenia '
-        + '— ja niillä rahoilla rakennettaisiin suihkulähde, joka avattaisiin '
-        + 'samana päivänä kuin vesijohto. Niin syntyi Hochstrahlbrunnen. '
-        + 'Vesijohto tuottaa yhä yli puolet kaupungin juomavedestä.',
+      teksti: 'Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873, ja '
+        + 'samana päivänä alkoi toimia Hochstrahlbrunnen-suihkulähde '
+        + 'Schwarzenbergplatzilla. Vesi tulee Rax- ja Schneeberg-vuorten lähteiltä '
+        + 'kaupunkiin kokonaan painovoiman avulla, ilman yhtäkään pumppua. Matkalla '
+        + 'on noin 30 akveduktia.'
+        + '\n\n'
+        + 'Vesijohdon rakensi urakoitsija Antonio Gabrielli Lontoosta. Hän tarjoutui '
+        + 'itse, että yksi prosentti hänen tuloistaan pidätettäisiin, kunnes summa '
+        + 'olisi 100 000 guldenia. Vesijohto on yhä käytössä.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 vesijohto oli vasta valmistumassa. Se avattiin '
+        + '24. lokakuuta, kun maailmannäyttely Praterissa oli lopuillaan, joten jos '
+        + 'isoisäsi kävi Wienissä aiemmin vuonna, vesijohtoa ei ollut vielä avattu.',
       kuvat: [
         {
           tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
-          lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä, vesi kulkee 95 kilometriä painovoimalla.',
-          selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. Vesi kulkee '
-            + 'koko 95 kilometrin matkan painovoiman varassa.',
+          lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä, vesi kulkee '
+            + 'painovoimalla.',
+          selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. Vesi kulkee koko '
+            + 'matkan painovoiman varassa.',
           lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wiener Wasser (MA 31), Wien Geschichte Wiki, Wienbibliothek digital ja Wien Tourismus',
     },
     /*
      * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
@@ -4431,64 +4452,101 @@ export const NAHTAVYYSJUTUT = {
      * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
      */
     'Klimtin maalaukset': {
-      aika: '1900–1907',
+      aika: '1894–1945',
       nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
-      teksti: 'Yliopisto tilasi taiteilijalta katon täydeltä tieteen riemuvoittoa '
-        + 'ja sai sen sijaan Klimtin näkemyksen — mikä oli professorien '
-        + 'mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta '
-        + 'sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset '
-        + 'valokuvat ja opetus tilaustöiden vaaroista.',
-      lahde: 'Wikipedia',
+      teksti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
+        + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
+        + 'Klimt maalasi kolme tiedekuntakuvaa: Filosofian, Lääketieteen ja Oikeustieteen. '
+        + 'Kun Filosofia nähtiin Secession-näyttelyssä vuonna 1900, joukko yliopiston '
+        + 'professoreja vetosi ministeriöön kuvan ripustamista vastaan. '
+        + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
+        + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
+        + 'tiedekuntakuvat tuhoutuivat. Niistä on säilynyt mustavalkoisia valokuvia ja Klimtin luonnoksia.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
+        + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
+        + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
+        + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Leopold Museum, Wienin lääketieteellinen yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
     },
     Saliera: {
       aika: '2003–2006',
       nosto: 'skandaali-salieran-varkaus',
-      teksti: 'Renessanssin kuuluisin suola-astia vietiin museosta '
-        + 'rakennustelineitä pitkin, ja hälytys kuitattiin tekniseksi viaksi. '
-        + 'Kolme vuotta kultainen Cellini makasi lyijyarkussa metsässä. '
-        + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
-        + 'ajan turvassa.',
-      lahde: 'Wikipedia',
+      teksti: 'Saliera on suola-astia, jonka Benvenuto Cellini teki kullasta ja emalista 1540 ja 1543 välillä Ranskan kuninkaalle Frans I:lle. '
+        + 'Kunsthistorisches Museumin mukaan se on Cellinin ainoa säilynyt kultatyö.'
+        + '\n\n'
+        + 'Yöllä vasten 11. toukokuuta 2003 varas kiipesi rakennustelineitä pitkin '
+        + 'Wienin museoon, jota kunnostettiin. Tammikuussa 2006 Saliera löytyi '
+        + 'laatikosta metsästä lähellä Zwettlin kaupunkia. Varas tuomittiin viideksi '
+        + 'vuodeksi vankeuteen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
+        + 'sillä se avattiin vasta 1891.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
     'Beethoven 1824': {
+      aika: '1824',
       nosto: 'hetki-beethoven-yhdeksas-1824',
-      teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline '
-        + 'Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, '
-        + 'ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig '
-        + 'van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö '
-        + 'tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. '
-        + 'Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä '
-        + 'eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin '
-        + 'Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja '
-        + 'Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on '
-        + 'jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro '
-        + 'mies näkisi, mitä ei kuule. Ovaatioita tulee viisi. Yleisössä ovat '
-        + 'Schubert, Czerny ja kansleri Metternich. Sinfonia on ensimmäinen, '
-        + 'jossa suuri orkesteri saa rinnalleen kuoron ja solistit — Schillerin '
-        + 'Oodi ilolle, tekstinä, jota Beethoven on kantanut mukanaan '
-        + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen kolme '
-        + 'osaa. Sävel on nyt Euroopan hymni.',
+      teksti: 'Beethovenin yhdeksäs sinfonia kantaesitettiin Wienissä 7. toukokuuta 1824 '
+        + 'Kärntnertor-teatterissa, ja konsertti alkoi seitsemältä illalla. Beethoven '
+        + 'oli 53-vuotias ja jo lähes täysin kuuro. Hän oli lavalla ja osoitti '
+        + 'tempot, mutta virallisesti kokonaisjohdosta vastasi kapellimestari Michael '
+        + 'Umlauf.'
+        + '\n\n'
+        + 'Sinfonian lopussa solistit ja kuoro laulavat Schillerin runon Oodi ilolle. '
+        + 'Kertoman mukaan Beethoven oli ajatellut sen säveltämistä jo nuorena. '
+        + 'Samassa konsertissa kuultiin myös kolme osaa hänen Missa solemnis '
+        + '-messustaan. Kertoman mukaan laulaja Caroline Unger kosketti Beethovenia '
+        + 'hihasta ja käänsi hänet katsomaan yleisöä, joka taputti ja heilutti '
+        + 'hattuja ja nenäliinoja. Tarinan ajankohdasta ollaan eri mieltä: joidenkin '
+        + 'mukaan se tapahtui sinfonian lopussa, toisten mukaan jo scherzon jälkeen.'
+        + '\n\n'
+        + 'Euroopan unionin sivujen mukaan sinfonian ilon sävel on nykyään Euroopan '
+        + 'hymni: Euroopan neuvosto otti sen käyttöön 1972 ja EU:n johtajat 1985. '
+        + 'Hymnissä ei ole sanoja, vain sävel.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Teatteri oli suljettu jo vuonna 1870, ja talo purettiin sen '
+        + 'jälkeen. Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
+        + 'Valtionoopperassa.',
+      kuvat: [
+        {
+          tiedosto: 'Joseph Karl Stieler\'s Beethoven mit dem Manuskript der Missa solemnis.jpg',
+          lyhyt: 'Joseph Karl Stielerin muotokuva Beethovenista, 1820.',
+          selite: 'Joseph Karl Stielerin maalaama muotokuva Beethovenista Missa solemnis '
+            + '-käsikirjoituksen kanssa vuodelta 1820.',
+          lahde: 'Joseph Karl Stieler, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä A. W. Thayer (The Life of Ludwig van Beethoven), Beethoven-Haus Bonn, ORF, Wien Geschichte Wiki, Österreichisches Musiklexikon, habsburger.net ja Euroopan unioni',
     },
     'Mozart 1786': {
+      aika: '1786',
       nosto: 'hetki-mozart-wien-1786',
-      teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin '
-        + 'Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, '
-        + 'johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera '
-        + 'perustuu Beaumarchais\'n näytelmään, jonka keisari Joosef II on '
-        + 'kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; '
-        + 'Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti '
-        + 'poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa '
-        + 'englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii '
-        + 'ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, '
-        + 'kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — '
-        + 'esitys venyy muuten yöhön. Mozart on saanut työstä 450 floriinia, '
-        + 'kolme kertaa Salzburgin hovimuusikon vuosipalkan. Esityksiä tulee '
-        + 'Wienissä yhdeksän, eikä menestys ole valtava. Prahassa ooppera '
-        + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat Mozartin '
-        + 'matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don Giovannille.',
+      teksti: 'Mozartin ooppera Figaron häät sai ensi-iltansa Wienin Burgtheaterissa 1. '
+        + 'toukokuuta 1786. Mozart oli 30-vuotias. Hän johti ensimmäiset esitykset cembalon ääreltä.'
+        + '\n\n'
+        + 'Ooppera perustuu Beaumarchais\'n näytelmään, jonka saksankielinen esitys '
+        + 'Wienissä kiellettiin 1785 keisari Joosef II:n käskystä poliittisen '
+        + 'taustansa vuoksi. Librettisti Lorenzo Da Ponte lievensi näytelmän pilkkaa '
+        + 'ja jätti pois Figaron suuren poliittisen puheen. Da Ponten oman '
+        + 'kertomuksen mukaan ooppera valmistui kuudessa viikossa, mutta hänen '
+        + 'muistelmiinsa ei voi aina luottaa. Susannaa lauloi Nancy Storace ja '
+        + 'Figaroa Francesco Benucci.'
+        + '\n\n'
+        + 'Yleisö vaati niin monta numeroa uudelleen, että keisari antoi 9. '
+        + 'toukokuuta 1786 määräyksen: numeroita, joita laulaa useampi kuin yksi '
+        + 'laulaja, ei saa enää toistaa, koska esitys venyi liian pitkäksi.'
+        + '\n\n'
+        + 'Tammikuussa 1787 Mozart matkusti Prahaan, jossa ooppera esitettiin hänen '
+        + 'läsnä ollessaan. Menestys johti Don Giovannin tilaukseen.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 sama Burgtheater Michaelerplatzilla oli yhä '
+        + 'käytössä. Se suljettiin vasta 1888, kun uusi Burgtheater avattiin '
+        + 'Ringillä.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Neue Mozart-Ausgabe (Mozarteum), Mozart Documents, Österreichische Mediathek, Wien Geschichte Wiki ja habsburger.net',
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -4498,87 +4556,149 @@ export const NAHTAVYYSJUTUT = {
      * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Rattaan kulmat': {
+    'Praterin jättiratas': {
+      aika: '1897',
       nosto: 'nosto-praterin-ratas',
-      teksti: 'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
-        + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
-        + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. '
-        + 'Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun '
-        + 'se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain '
-        + 'viisitoista — ja niin ne roikkuvat siitä asti joka toisessa '
-        + 'kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.',
+      teksti: 'Praterin jättiratas valmistui 1897, ja se rakennettiin keisari Frans Joosefin 50-vuotishallitsijajuhlan kunniaksi. Rattaassa oli alun perin 30 '
+        + 'vaunua. Vuonna 1944 ratas paloi pahoin, ja vaunut tuhoutuivat. Kun ratas '
+        + 'avattiin uudelleen 1947, vaunuja ripustettiin takaisin 15. Vuonna 2016 '
+        + 'vaunut uusittiin alkuperäisten piirustusten mukaan, ja jokaisen sivulla on kuusi ikkunaa, kuten ennen paloa. Ratas kulkee enintään 2,7 kilometriä tunnissa.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 jättiratasta ei vielä ollut, sillä se valmistui '
+        + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
+        + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
+        + 'paloi 1937.',
       kuvat: [
         {
           tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
-          lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
-          selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
-            + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
+          lyhyt: 'Praterin jättiratas vuonna 2020; ratas kulkee enintään 2,7 kilometriä '
+            + 'tunnissa.',
+          selite: 'Praterin jättiratas vuonna 2020. Vaunut uusittiin 2016, ja ratas '
+            + 'kulkee enintään 2,7 kilometriä tunnissa.',
           lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wiener Riesenrad, Wien Geschichte Wiki, AEIOU, Wien Tourismus ja ORF Wien',
     },
     'Lipizzanit': {
+      aika: '1735',
       nosto: 'nosto-lipizzanit',
-      teksti: 'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
-        + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
-        + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina '
-        + 'tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden '
-        + 'iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi '
-        + 'ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari '
-        + 'Kaarle VI:n muotokuvaa ennen kuin ratsastavat.',
+      teksti: 'Espanjalainen ratsastuskoulu toimii Hofburgin palatsissa Wienissä salissa, '
+        + 'joka rakennettiin 1729 ja 1735 välillä keisari Kaarle VI:n aikana. Salia koristaa yhä hallitsijan ratsastusmuotokuva.'
+        + '\n\n'
+        + 'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin '
+        + 'kymmenvuotiaina ne ovat yleensä valkoisia. Ratsastuskoulun oman sivun '
+        + 'mukaan perinteeseen kuuluu, että tallissa on aina vähintään yksi ruunikko, '
+        + 'onnea tuomaan. Nykyään nuoret oriit tulevat Piberin siitostallista '
+        + 'Steiermarkista, ja ratsastuskoulun mukaan ne siirtyvät noin nelivuotiaina '
+        + 'koulutukseen Heldenbergiin tai Wieniin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
+        + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+        + 'hovitallista nykyisessä Sloveniassa.',
       kuvat: [
         {
           tiedosto: 'Kawecan.jpg',
-          lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
-          selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
-            + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
+          lyhyt: 'Aikuinen lipizzaniori; lipizzanit syntyvät tummina ja vaalenevat vuosien '
+            + 'kuluessa.',
+          selite: 'Aikuinen lipizzaniori. Lipizzanit syntyvät tummina ja vaalenevat vuosien '
+            + 'kuluessa; noin kymmenvuotiaina ne ovat yleensä valkoisia.',
           lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Spanische Hofreitschule, Wien Geschichte Wiki, Austria Tourismus, Wien Tourismus ja AEIOU',
     },
     'Taikahuilu': {
+      aika: '1791',
       nosto: 'nosto-taikahuilu-wiedenissa',
-      teksti: 'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai '
-        + 'ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa '
-        + 'Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä '
-        + 'italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti '
-        + 'sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi '
-        + 'kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi '
-        + 'kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen '
-        + 'portin päälle.',
+      teksti: 'Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Freihaustheaterissa '
+        + 'Wiedenin esikaupungissa. Emanuel '
+        + 'Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja '
+        + 'esitti itse linnustaja Papagenoa. Ooppera ei syntynyt hovia varten: '
+        + 'Schikaneder pyysi Mozartilta kansanomaista oopperaa omaan teatteriinsa. Se '
+        + 'kuuluu saksalaiseen Singspiel-perinteeseen, jossa yleisön piti ymmärtää '
+        + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
+        + 'jälkeen.'
+        + '\n\n'
+        + 'Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+        + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
+        + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Taikahuilun teatteri ei ollut enää käytössä, '
+        + 'sillä Freihaustheaterin viimeinen esitys oli ollut 1801. Theater an der '
+        + 'Wienissä sai ensi-iltansa juuri 1873 Johann Strauss nuoremman operetti '
+        + 'Carneval in Rom, ja Papageno-veistos oli jo portin päällä. '
+        + 'Wienin kaupungin historiasivuston mukaan Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 pörssiromahduksessa.',
       kuvat: [
         {
           tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
-          lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
-          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
-            + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi '
-            + 'siniseksi kupoliksi.',
+          lyhyt: 'Karl Friedrich Schinkelin lavastusluonnos Yön kuningattaren tähtisalista, '
+            + 'noin 1815.',
+          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Yön kuningattaren tähtisalin '
+            + 'lavastuksen Taikahuilun Berliinin tuotantoon.',
           lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Bezirksmuseum Mariahilf',
     },
     'Tonava kaunoinen': {
+      aika: '1867',
       nosto: 'nosto-tonava-kaunoinen',
-      teksti: 'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin '
-        + 'Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin '
-        + 'pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen '
-        + 'etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi '
-        + 'laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja '
-        + 'johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.',
+      teksti: 'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä '
+        + '15. helmikuuta 1867 Dianabadissa. Dianabad oli uimalaitos Leopoldstadtin '
+        + 'kaupunginosassa. Talvella uimahalli muutettiin tanssi- ja '
+        + 'konserttisaliksi, jota kutsuttiin Dianasaliksi.'
+        + '\n\n'
+        + 'Valssin ensimmäinen versio oli mieskuorolle, ja Wienin Männergesang-Verein '
+        + 'lauloi sen karnevaaliaikaan. Strauss ei ollut itse paikalla johtamassa. '
+        + 'Vasta myöhemmin valssi esitettiin pelkän orkesterin soittamana, ja samana vuonna '
+        + 'se kuultiin myös Pariisin maailmannäyttelyssä.'
+        + '\n\n'
+        + 'Alkuperäinen Dianabad on kadonnut: rakennus purettiin 1913, ja uusi '
+        + 'Dianabad valmistui 1917. Isoisäsi matkavuonna 1873 valssi oli ollut '
+        + 'maailmalla jo kuusi vuotta, ja vanha Dianabad seisoi vielä paikallaan.',
       kuvat: [
         {
           tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
-          lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
-          selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
-            + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
-            + '1899, hänen viimeisenä elinvuotenaan.',
+          lyhyt: 'Johann Strauss nuorempi Fritz Luckhardtin valokuvassa 1899.',
+          selite: 'Johann Strauss nuorempi Fritz Luckhardtin valokuvassa vuodelta 1899. '
+            + 'Strauss kuoli samana vuonna.',
           lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Johann Strauss Society, AEIOU, ORF Wien, vienna.at ja Wikidata',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Vanha Burgtheater': {
+      aika: '1741–1888',
+      teksti: 'Vanha Burgtheater oli Wienin hoviteatteri Michaelerplatzilla Hofburgin vieressä. Teatteri aloitti Hofburgin entisessä palloilusalissa vuonna 1741.'
+        + '\n\n'
+        + 'Viimeinen esitys oli 12. lokakuuta 1888, kun uusi Burgtheater oli valmistunut Ringstraßelle. Vanha rakennus purettiin Hofburgin laajennuksen, Michaelertraktin, tieltä.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 vanha teatteri oli vielä käytössä. Uusi talo Ringillä avattiin vasta viidentoista vuoden päästä.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Wikipedia',
+    },
+    // KADONNUT IHME (KK 08.06 17.11.2026: Altes Kärntnertor; vain kahden itsenäisen lähteen väitteet).
+    'Altes Kärntnertor': {
+      aika: '1200-luku–1859',
+      teksti: 'Altes Kärntnertor oli Wienin keskiaikaisen kaupunkimuurin portti Kärntner Straßen kohdalla. '
+        + 'Se mainitaan viimeistään 1200-luvun lopulla.'
+        + '\n\n'
+        + 'Muurien purkamisesta ilmoitettiin vuoden 1857 lopussa, ja purku alkoi vuonna 1858. '
+        + 'Portti purettiin vuosina 1858–1859.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 porttia ei ollut ollut enää yli kymmeneen vuoteen.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Wikipedia ja Wien Museum',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    Heinrichshof: {
+      aika: '1863–1954',
+      teksti: 'Heinrichshof oli Wienin Opernringillä, oopperataloa vastapäätä, seissyt vuokratalokompleksi, jonka ulkoasu oli palatsimainen. Teollisuusmies Heinrich Drasche rakennutti sen arkkitehti Theophil Hansenilla, ja talo avattiin vuonna 1863. Sen kulmat nousivat muuta rakennusta korkeammiksi, ja pohjakerroksessa oli liikkeitä ja kahvila.'
+        + '\n\n'
+        + 'Liittoutuneiden ilmahyökkäyksessä 12. maaliskuuta 1945 talo paloi pahoin. Raunio purettiin 1950-luvulla, ja paikalla on nykyään Opernringhof.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 Heinrichshof oli ollut valmis jo kymmenen vuotta.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Austria-Forum (AEIOU) ja Wikipedia',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -4955,8 +5075,9 @@ export const NAHTAVYYSJUTUT = {
           + 'saatiin valmiiksi vasta vuonna 1836.'
         + '\n\n'
         + 'Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne '
-          + 'haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi '
-          + 'kaikista sodissa kadonneista. Haudalla palaa ikuinen '
+          + 'tuotiin 11. marraskuuta 1920 nimetön ranskalaissotilas muistoksi '
+          + 'kaikista sodissa kadonneista ja haudattiin 28. tammikuuta 1921. '
+          + 'Haudalla palaa ikuinen '
           + 'liekki, joka sytytetään uudelleen joka ilta.'
         + '\n\n'
         + 'Vuonna 1919 lentäjä Charles Godefroy lensi '
@@ -4972,7 +5093,7 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Wikipedia ja Le Figaro (28.1.2021)',
     },
     'Concorden aukio': {
       aika: '1757–1772',
@@ -5221,8 +5342,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kilometrejä tunnelissa Seinen eteläpuolisten rantakatujen '
           + 'alla.'
         + '\n\n'
-        + 'Asema suljettiin jo 1939, ja rakennus seisoi vuosikymmeniä '
-          + 'vailla käyttöä. Museoksi se avattiin joulukuussa 1986 '
+        + 'Kaukojunat lakkasivat kulkemasta asemalle jo 1939, ja rakennus '
+          + 'jäi vuosikymmeniksi vähälle käytölle. Museoksi se avattiin joulukuussa 1986 '
           + 'italialaisen Gae Aulentin suunnitelmien mukaan, ja muut '
           + 'Pariisin museot — Louvre ja Pompidou-keskus muiden '
           + 'muassa — siirsivät sinne kokoelmiaan.'
@@ -5234,14 +5355,14 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
-          lyhyt: 'Gare d\'Orsay valmistui rautatieasemaksi 1900, suljettiin 1939 ja avattiin museona 1986.',
+          lyhyt: 'Gare d\'Orsay valmistui rautatieasemaksi 1900, kaukoliikenne loppui 1939 ja se avattiin museona 1986.',
           selite: 'Victor Laloux\'n Gare d\'Orsay valmistui rautatieasemaksi vuoden '
-            + '1900 maailmannäyttelyyn, suljettiin jo 1939 ja avattiin museona '
+            + '1900 maailmannäyttelyyn, kaukoliikenne loppui jo 1939 ja se avattiin museona '
             + 'joulukuussa 1986.',
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Wikipedia ja Ranskan kulttuuriministeriön muistomerkkirekisteri (POP)',
     },
     'Palais Garnier': {
       aika: '1862–1875',
@@ -5787,33 +5908,8 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    // Kohdekartan nimi fokuskohteen mukaan (omistaja 31.10. 08.22, PT): kadonnut ihme, teksti syvennystarinan oma.
-    'Tuileries\'n palatsi': {
-      nosto: 'syvennys-pariisi-tuileriat',
-      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli '
-        + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
-        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
-        + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '
-        + 'ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas '
-        + 'tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; '
-        + 'vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: '
-        + 'yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
-        + 'osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa '
-        + 'Square Georges Cainissa, ja paloja on Louvressa, Trocadéron '
-        + 'puutarhassa, Berliinissä, Italian Bordigherassa ja Quiton '
-        + 'presidentinpalatsissa asti. Suuri osa huonekaluista ja maalauksista oli tallessa: ne oli viety varastoon, kun sota alkoi 1870. 2000-luvun alussa perustettiin komitea, joka esittää palatsin rakentamista takaisin.',
-      kuvat: [
-        {
-          osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-          lyhyt: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
-          selite: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto '
-            + 'poissa, kivimuurit ehjät, lauta-aita raunion edessä ja '
-            + 'kaupunkilaisia altaan äärellä.',
-          lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
+    // Tuileries'n palatsi: juttu poistettu 17.11.2026 (Tuileries-koe, KK 11.16): pisteen ainoa nosto on kohde `tuileries`
+    // jaksoineen (js/packs/fokuskohteet-fra.js).
     /*
      * KARTTAUUDISTUS, ERÄ 5 (13.9.2026): KAUPUNKILEHDEN SIVUT
      * NOSTOIKSI (suunnitelman luku 4.7). Viisi uutta karttapistettä ja
@@ -7333,25 +7429,21 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     Kuninkaanpalatsi: {
-      aika: '1648–1655',
+      aika: '1648–',
       teksti: 'Dam-aukion laidalla kohoava komea rakennus ei ollut alun '
-          + 'perin palatsi lainkaan, vaan Amsterdamin raatihuone. Se '
-          + 'rakennettiin vuosina 1648–1655 vanhan raatihuoneen '
-          + 'paikalle, joka oli palanut poroksi vuonna 1652.'
+          + 'perin palatsi lainkaan, vaan Amsterdamin raatihuone. Sen rakentaminen alkoi vuonna 1648, ja vanha raatihuone paloi kesken töiden vuonna 1652.'
         + '\n\n'
         + 'Rakennus on niin painava, että sen alle piti lyödä lähes '
-          + '13 700 puupaalua. Katolla seisoo kuuden metrin korkuinen '
-          + 'Atlas-patsas, joka kannattelee koko maapalloa harteillaan.'
+          + '13 700 puupaalua. Katolla seisoo noin kuuden metrin korkuinen Atlas-patsas, joka kannattelee harteillaan taivaanpalloa.'
         + '\n\n'
         + 'Raatihuoneesta tuli kuninkaallinen palatsi vasta '
           + '1800-luvun alussa. Nykyään siellä otetaan vastaan '
-          + 'valtiovieraita, mutta perustus on yhä sama vanha '
-          + 'puupaalumetsä maan alla.',
+          + 'valtiovieraita, mutta rakennus seisoo yhä puupaalujen varassa.',
       kuvat: [
         {
           tiedosto: 'Amsterdam - Koninklijk Paleis (30265843216).jpg',
-          lyhyt: 'Rakennus valmistui 1655 Amsterdamin raatihuoneeksi, kuninkaalliseksi palatsiksi vasta 1800-luvulla.',
-          selite: 'Rakennus valmistui vuonna 1655 Amsterdamin raatihuoneeksi, ja kuninkaalliseksi palatsiksi se muuttui vasta 1800-luvun alussa.',
+          lyhyt: 'Rakennustyöt alkoivat 1648; talo oli ensin raatihuone ja vasta 1800-luvulla kuninkaallinen palatsi.',
+          selite: 'Rakennustyöt alkoivat vuonna 1648, ja talosta tuli Amsterdamin raatihuone; kuninkaalliseksi palatsiksi se muuttui vasta 1800-luvun alussa.',
           lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -7448,32 +7540,19 @@ export const NAHTAVYYSJUTUT = {
      * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
      */
     Timanttihiomo: {
+      aika: '1870–1879',
       nosto: 'syvennys-amsterdam-timantit',
-      teksti: 'Isoisäsi käveli hiomoiden ohi kaupungin parhaana timanttivuotena '
-        + 'eikä tiennyt sitä. Amsterdam oli tuolloin maailman tärkein '
-        + 'timanttikeskus, ja ala oli päätynyt sinne kiertotietä: 1500-luvulla '
-        + 'Portugalista tulleet sefardijuutalaiset toivat mukanaan '
-        + 'kauppasuhteet, ja hionta oli yksi niistä harvoista ammateista, '
-        + 'joihin ei tarvinnut kuulua kiltaan — kiltoihin heitä ei olisi '
-        + 'otettu. Työ tehtiin aluksi kotona. Noin 1820 alkaen hiomapyöriä '
-        + 'pyörittivät hevoset, noin 1850 alkaen höyry, ja pienet verstaat '
-        + 'väistyivät tehtaiden tieltä. Ala oli silti pitkään pieni: tuhat '
-        + 'työntekijää vuonna 1848, tuhat neljäsataa vuonna 1860. Sitten '
-        + 'Etelä-Afrikan Kimberleystä alkoi vuonna 1870 nousta raakaa timanttia '
-        + 'enemmän kuin kukaan osasi odottaa, ja Amsterdamiin tuli kausi, jota '
-        + 'täällä sanotaan yhä Kaapin ajaksi. Veljekset Boas olivat aloittaneet '
-        + 'samana vuonna hiomon Nieuwe Keizersgrachtilla hevoskierron voimalla; '
-        + 'kahdeksan vuotta myöhemmin he tilasivat höyrytehtaan, joka valmistui '
-        + '1879 ja oli avatessaan Euroopan suurin. Nousu ei kestänyt: vuodesta '
-        + '1875 länsimaiden talouskriisi pysäytti sen, ja luksuskivi on juuri '
-        + 'sellainen tavara, joka jää ensimmäisenä myymättä. Huippuaikoina '
-        + 'alalla oli yli kymmenentuhatta työntekijää, noin seitsemän '
-        + 'kymmenestä juutalaisia, ja työ oli sitä mitä kimalluksesta ei näy: '
-        + 'kaksitoistatuntisia päiviä ilman taukoja hämärissä huoneissa, ja '
-        + 'silmät ja keuhkot maksoivat siitä. Vuonna 1894 juuri nämä työläiset '
-        + 'perustivat maan ensimmäisen suuren ammattiliiton. Boasin tehdas '
-        + 'seisoo yhä Uilenburgerstraatilla, ja siellä hiotaan edelleen '
-        + 'timantteja.',
+      teksti: 'Amsterdam oli 1600-luvun lopulta maailman timanttikaupunki. Hionta ei '
+        + 'kuulunut kiltoihin, eikä juutalaisia olisi kiltoihin otettukaan; työ '
+        + 'tehtiin aluksi kotona. Hiomapyöriä pyörittivät ensin naiset, 1820-luvulta hevoset ja 1800-luvun puolivälin tienoilta höyry.'
+        + '\n\n'
+        + 'Vuonna 1870 Etelä-Afrikasta saapui Amsterdamiin ensimmäinen '
+        + 'raakatimanttien erä, ja alkoi Kaapin aika: nousukausi, jota kesti '
+        + '1870-luvun puoliväliin. Työ oli raskasta ja vahingoitti työläisten keuhkoja. Vuonna 1894 timanttityöläiset perustivat oman '
+        + 'ammattiliittonsa, Algemene Nederlandse Diamantbewerkersbondin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 elettiin Kaapin aikaa. Boasin höyryhiomo Nieuwe Uilenburgerstraatilla valmistui vasta 1879; '
+        + 'nykyään talossa on Gassanin timanttitehdas.',
       kuvat: [
         {
           tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
@@ -7484,35 +7563,22 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Diamantmuseum Amsterdam, Bronseman PIE-raportti 14 (1994), Algemene Nederlandse Diamantbewerkersbond, J. Kokin tutkimus ja Gassan',
     },
     'Amsterdam-laiva': {
+      aika: '1749',
       nosto: 'syvennys-amsterdam-voc-hylky',
-      teksti: 'Kompanian laivat menivät itään hopea lastinaan ja palasivat '
-        + 'mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. '
-        + 'Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 '
-        + 'yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen '
-        + 'Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli '
-        + '203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina '
-        + '33-vuotias Willem Klump. Lastina oli kangasta, viiniä, '
-        + 'rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja '
-        + 'kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin '
-        + 'kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva '
-        + 'ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja '
-        + 'tammikuun 26. päivänä kapteeni teki ainoan jäljellä olevan '
-        + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. Miehistö pääsi '
-        + 'maihin ja sai suurimman osan hopeasta mukanaan, loput veivät '
-        + 'rannalle ryntäneet ryöstelijät. Kolme viikkoa yhtiö yritti saada '
-        + 'laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
-        + 'ja jäi sinne. Kaksisataa kaksikymmentä vuotta myöhemmin, vuonna '
-        + '1969, vesi laski poikkeuksellisen matalalle ja paljasti sen: runko '
-        + 'oli tallella, koska savi ei päästä happea puuhun. Nykyään hylky on '
-        + 'suojeltu, sen kylkiluut näkyvät rannalla vain harvoina päivinä '
-        + 'vuodessa, ja siitä nostetut esineet ovat Hastingsin '
-        + 'haaksirikkomuseossa. Amsterdamissa on lisäksi laiva itse — tai sen '
-        + 'kokoinen kopio, jonka neljäsataa vapaaehtoista rakensi vuosina '
-        + '1982–1990. Se on merimuseon laiturissa, ja sinne pääsee kävelemään '
-        + 'kuivin jaloin.',
+      teksti: 'Vuoden 1749 tammikuussa VOC:n laiva Amsterdam lähti ensimmäiselle '
+        + 'matkalleen Bataviaan. Laivaa johti kapteeni Willem Klump, ja laivassa oli yli 330 ihmistä. Jo ennen rantaa noin viisikymmentä miehistön '
+        + 'jäsentä oli kuollut tautiin. Myrsky ja hiekkasärkkä veivät laivalta '
+        + 'peräsimen, ja 26. tammikuuta 1749 laiva ajettiin rantaan Hastingsin '
+        + 'lähellä Englannissa.'
+        + '\n\n'
+        + 'Laiva vajosi rannan saveen, eikä sitä saatu pelastettua. Noin kaksi kolmasosaa laivasta on tallella: hylky '
+        + 'tuli näkyviin 1969 ja on suojeltu 1970-luvulta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 hylky oli maannut Englannin rannalla jo 124 '
+        + 'vuotta. Amsterdamissa seisova laiva on nykyaikainen kopio, joka valmistui vuonna 1990.',
       kuvat: [
         {
           tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
@@ -7523,7 +7589,7 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Adrian Diack, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Shipwreck Museum Hastings, Het Scheepvaartmuseum, The Past, Hastings Independent Press ja Sussex Smuggler',
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -7534,63 +7600,74 @@ export const NAHTAVYYSJUTUT = {
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
     'Kapein talo': {
+      aika: '1738',
       nosto: 'nosto-amsterdamin-kapein-talo',
-      teksti: '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
-        + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, '
-        + 'Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. '
-        + 'Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä '
-        + 'pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, '
-        + 'hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta '
-        + 'sisään.',
+      teksti: 'Oude Hoogstraat 22 on Amsterdamin kapein koko talo: julkisivu on 2,02 '
+        + 'metriä leveä ja talo viisi metriä syvä. Kanavien varren talot ovat '
+        + 'kapeita ja syviä, ja niissä on usein katonrajassa nostopuu, hijsbalk, '
+        + 'jonka avulla huonekalut nostetaan köydellä ikkunasta sisään, sillä '
+        + 'portaat ovat jyrkät ja kapeat.'
+        + '\n\n'
+        + 'Singel 7:n talon takajulkisivu on vain noin metrin levyinen, mutta '
+        + 'etuosa on selvästi leveämpi, joten kapein koko talo on silti Oude '
+        + 'Hoogstraatilla.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
+        + 'vuotta: talon vaiheet tunnetaan vuodesta 1738. Nykyään siinä on teekauppa.',
       kuvat: [
         {
           tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
-          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
-          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä, ja '
-            + 'talot rakennettiin hieman eteenpäin kallelleen, jottei '
-            + 'nostettava tavara kolhisi julkisivua.',
+          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat yhä käytössä.',
+          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä.',
           lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä iAmsterdam, Het Kleinste Huis, DutchReview, Amsterdam Oude Stad, Amsterdamian ja Wikipedia',
     },
     'Maitotyttö': {
+      aika: 'n. 1660',
       nosto: 'nosto-amsterdamin-maitotytto',
-      teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä '
-        + 'korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, '
-        + 'ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä '
-        + 'työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. '
-        + 'Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle '
-        + 'kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse '
-        + 'umpeen, niin että katse jää maitoon ja käsiin.',
+      teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea '
+        + 'ja 41 leveä. Rijksmuseumin mukaan Johannes Vermeer maalasi sen noin vuonna 1660, ja hänen '
+        + 'tuotannostaan tunnetaan vain noin 35 maalausta.'
+        + '\n\n'
+        + 'Rijksmuseum tutki taulua vuonna 2022 röntgen- ja infrapunatekniikoilla. '
+        + 'Maalin alta paljastui, että Vermeer oli suunnitellut seinälle '
+        + 'kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten pois.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 taulua ei vielä ollut Rijksmuseumissa. Se kuului '
+        + 'Six-suvun yksityiskokoelmaan, ja museo osti sen vasta 1908 Vereniging '
+        + 'Rembrandtin tuella. Rijksmuseum toimi tuolloin Trippenhuisissa; nykyinen '
+        + 'rakennus avattiin 1885.',
       kuvat: [
         {
           tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
-          lyhyt: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, Rijksmuseumin keskeisimpiä teoksia.',
-          selite: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, ja '
-            + 'Rijksmuseum pitää sitä yhtenä kokoelmansa keskeisimmistä '
-            + 'teoksista.',
+          lyhyt: 'Johannes Vermeerin Maitotyttö, Rijksmuseumin mukaan maalattu noin vuonna 1660.',
+          selite: 'Johannes Vermeerin Maitotyttö, jonka hän Rijksmuseumin mukaan maalasi noin vuonna 1660.',
           lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum, Essential Vermeer ja DutchNews',
     },
     'Kissalaiva': {
+      aika: '1966–1968',
       nosto: 'nosto-amsterdamin-kissalaiva',
-      teksti: 'Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu '
-        + 'satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. '
-        + 'Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja '
-        + 'kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 '
-        + 'oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä '
-        + 'siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat '
-        + 'vapaana kannella, ja vieraat saavat tulla katsomaan.',
+      teksti: 'Vuonna 1966 Henriëtte van Weelde alkoi ottaa kotiinsa Herengrachtille '
+        + 'kulkukissoja, ensimmäisenä emokissan pentuineen. Kun kissoja tuli lisää, '
+        + 'hän hankki vuonna 1968 ensimmäisen laivan kissoille. Siitä tuli turvakoti: osa kissoista saa uuden kodin, ja laivalla vierailee kerrallaan '
+        + 'vain kuusi ihmistä.'
+        + '\n\n'
+        + 'Sisäänpääsy laivalle on ilmainen. Kissat ovat turvakodin asukkaita, '
+        + 'eivät nähtävyys.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Kissalaivaa ei vielä ollut: ensimmäinen laiva hankittiin vasta 1968, 95 vuotta myöhemmin. Singel-kanavassa on nykyään '
+        + 'uusi laiva, joka tuotiin paikalleen vuonna 2023.',
       kuvat: [
         {
           tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
-          lyhyt: 'Poezenboot avattiin Singel-kanavaan 1968, kun kerätyt kulkukissat eivät enää mahtuneet kotiin.',
-          selite: 'Poezenboot avattiin Singel-kanavaan vuonna 1968, kun Henriëtte '
-            + 'van Weelde ei enää saanut keräämiään kulkukissoja mahtumaan '
-            + 'kotiinsa.',
+          lyhyt: 'Poezenboot Singel-kanavassa vuonna 2006; kuvan laiva on vanha, nykyinen tuotiin paikalleen 2023.',
+          selite: 'Poezenboot Singel-kanavassa vuonna 2006. Kuvan laiva on vanha '
+            + 'asuntolaiva; nykyinen laiva tuotiin paikalleen vuonna 2023.',
           lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -7603,62 +7680,122 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Three bikes on the canal bridge in Amsterdam (3798069610).jpg',
-          selite: 'Amsterdamin kanavista nostetaan joka vuosi 12 000–15 000 '
-            + 'polkupyörää.',
+          selite: 'Vesilaitos Waternetin mukaan kanavista nostetaan vuosittain yli kymmenentuhatta polkupyörää.',
           lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Stichting De Poezenboot, Holland Times, DutchReview ja Mental Floss',
     },
     'Herengracht 537': {
+      aika: '1648–1961',
       nosto: 'nosto-amsterdamin-puupaalut',
-      teksti: 'Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. '
-        + 'Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, '
-        + 'jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. '
-        + 'Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, '
-        + 'lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy '
-        + 'veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa '
-        + 'naapuriinsa.',
+      teksti: 'Amsterdamin keskusta on rakennettu pehmeälle, vetiselle maalle, joten '
+        + 'vanhojen talojen alla on maahan lyötyjä puupaaluja. Dam-torin '
+        + 'kaupungintalon, nykyisen kuninkaanpalatsin, alle lyötiin 13 659 Norjasta tuotua puupaalua; ensimmäinen kivi laskettiin 28. lokakuuta 1648.'
+        + '\n\n'
+        + 'Veden alla paalu säilyy pitkään. Jos pohjavesi laskee, happi pääsee puuhun ja sienet alkavat lahottaa sitä. '
+        + 'Maaliskuussa 1961 Herengracht 537:n eteen pystytettiin tukipaaluja, ja '
+        + 'kuvan otti valokuvaaja Harry Pot.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Dam-torin rakennus oli jo kuninkaan palatsi, '
+        + 'mutta sen alla olivat yhä samat 13 659 paalua.',
       kuvat: [
         {
           tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
-          lyhyt: 'Herengracht 537 tuettiin puupaaluin 1961, kun pohjaveden lasku lahottaa talojen paalutuksia.',
-          selite: 'Herengracht 537 jouduttiin tukemaan väliaikaisilla puupaaluilla '
-            + 'maaliskuussa 1961, sillä Amsterdamin talot lepäävät paalutuksen '
-            + 'varassa, joka lahoaa pohjaveden laskiessa.',
-          lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
+          lyhyt: 'Herengracht 537:n eteen pystytettiin tukipaaluja maaliskuussa 1961.',
+          selite: 'Herengracht 537:n eteen pystytettiin tukipaaluja maaliskuussa '
+            + '1961. Kuvan otti valokuvaaja Harry Pot.',
+          lahde: 'Harry Pot / Nationaal Archief / Anefo, Wikimedia Commons (CC0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Paleis Amsterdam, Alankomaiden kuningashuone, M for Amsterdam, RVO, Rotterdamin kaupungin esite ja Nationaal Archief',
     },
     'Yövartio': {
+      aika: '1642–1715',
       nosto: 'nosto-amsterdamin-yovartio',
-      teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään '
-        + '363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin '
-        + 'kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten '
-        + 'sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja '
-        + 'alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole '
-        + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli '
-        + 'tummunut lakasta, joka poistettiin vasta 1940-luvulla.',
+      teksti: 'Rembrandt valmisti kaartin ryhmäkuvan vuonna 1642. Teoksella ei alun '
+        + 'perin ollut nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta '
+        + '1700-luvun lopulta. Rijksmuseumin mukaan kuva esittää päiväsaikaan '
+        + 'kulkevaa joukkoa, vaikka sävyt ovat tummat.'
+        + '\n\n'
+        + 'Vuonna 1715 taulu siirrettiin kaupungintaloon Dam-torille, ja koska se '
+        + 'oli liian suuri uudelle paikalle, siitä leikattiin kaistale joka '
+        + 'reunalta. Eniten katosi vasemmalta, ja palasia ei ole koskaan löydetty. '
+        + 'Gerrit Lundensin pieni 1600-luvun kopio näyttää, miltä koko taulu '
+        + 'näytti.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
+        + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; '
+        + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.',
       kuvat: [
         {
           tiedosto: 'The Night Watch - cropped.jpg',
-          lyhyt: 'Yövartioksi kutsuttiin taulua vasta, kun sen oikea nimi unohtui lakan tummuttua mustaksi.',
-          selite: 'Teoksen oikea nimi on kaartinkapteeni Frans Banning Cocqin '
-            + 'komppania, ja Yövartioksi sitä alettiin kutsua vasta kun lakka '
-            + 'oli tummunut lähes mustaksi.',
+          lyhyt: 'Teos oli alun perin nimetön, ja nimi Yövartio tunnetaan vasta 1700-luvun lopulta.',
+          selite: 'Rijksmuseumin mukaan teoksella ei alun perin ollut nimeä, ja '
+            + 'nimi Yövartio tunnetaan asiakirjasta vasta 1700-luvun lopulta.',
           lahde: 'Rembrandt, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
-          lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
-          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '
-            + 'säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
-            + '1715.',
+          lyhyt: 'Gerrit Lundensin pieni kopio näyttää, miltä Yövartio näytti ennen leikkausta 1715.',
+          selite: 'Gerrit Lundensin 1600-luvulla maalaama pieni kopio näyttää, miltä koko Yövartio näytti ennen vuoden '
+            + '1715 leikkausta.',
           lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum (objektisivu, lehdistötiedote ja Bulletin 1976) ja National Gallery',
+    },
+    /*
+     * TARINAPAIKKA 'Portugalilainen synagoga' (KK 16.11.2026, Amsterdamin 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on
+     * täkynoston lunastuksena (js/packs/fokusvirta-amsterdam.js 'amsterdamin-portugalilainen-synagoga').
+     * Koordinaatti: 1 lähde, tarkistettava kuvasta. Kuva ei vielä pelin mediassa (docs/raportit/amsterdam-9-mediapyynto-20261116.md).
+     */
+    'Portugalilainen synagoga': {
+      aika: '1675',
+      nosto: 'nosto-amsterdamin-portugalilainen-synagoga',
+      teksti: 'Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti '
+        + 'Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa '
+        + '1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.'
+        + '\n\n'
+        + 'Synagogan päähalli ei ole koskaan saanut sähkövaloa eikä lämmitystä. '
+        + 'Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se '
+        + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
+        + 'valurautakehyksisiksi.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 vuotta, ja kaksi vuotta myöhemmin se täytti kaksisataa vuotta.',
+      kuvat: [
+        {
+          tiedosto: 'Exterieur OVERZICHT VOORGEVEL - Amsterdam - 20311779 - RCE.jpg',
+          lyhyt: 'Portugalilaisen synagogan julkisivu vuonna 1997.',
+          selite: 'Portugalilaisen synagogan julkisivu Rijksdienst voor het Cultureel Erfgoedin kuvassa vuodelta 1997.',
+          lahde: 'A. J. van der Wal / RCE, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Rijksdienst voor het Cultureel Erfgoedin monografia (2013), Joods Amsterdam ja Wikipedia',
+    },
+    /*
+     * TARINAPAIKKA 'Montelbaanstoren' (KK 16.11.2026, Amsterdamin 9 tarinapaikkaa; SK:n data-luonnos). Sama teksti on
+     * täkynoston lunastuksena (js/packs/fokusvirta-amsterdam.js 'amsterdamin-montelbaanstoren').
+     * Koordinaatti: 1 lähde, tarkistettava kuvasta. Kuva ei vielä pelin mediassa (docs/raportit/amsterdam-9-mediapyynto-20261116.md).
+     */
+    'Montelbaanstoren': {
+      aika: '1606',
+      nosto: 'nosto-amsterdamin-montelbaanstoren',
+      teksti: 'Montelbaanstoren on vanha puolustustorni Oudeschansin varrella. Luultavasti Hendrick de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja renessanssihuipun, johon tuli kello ja soittokelloja. Vuonna 1610 '
+        + 'torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella jo yli kolmesataa vuotta. Vuonna 1852 tornia uhkasi purkaminen, mutta '
+        + 'se säästyi. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
+        + 'vasta 1878.',
+      kuvat: [
+        {
+          tiedosto: 'Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg',
+          lyhyt: 'Montelbaanstoren Rijksmuseumin stereokuvassa 1860–1885.',
+          selite: 'Rijksmuseumin kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, isoisän matkan aikoihin.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Open Nederlands Heritage (ONH), ARCAM, Geschiedenis Extra, Jordaanweb ja Wikipedia',
     },
     // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
     Haringpakkerstoren: {
@@ -7675,7 +7812,7 @@ export const NAHTAVYYSJUTUT = {
     'Waag op de Dam': {
       aika: '1560-luku–1808',
       teksti: 'Damin aukiolla seisoi Waag, vaaka, jossa punnittiin torilla myytäviä tavaroita. Vaakahuone '
-        + 'rakennettiin 1560-luvulla. Yläkerrassa oli kaupungin vartiosto ja asevarasto.'
+        + 'rakennettiin 1560-luvulla.'
         + '\n\n'
         + 'Hollannin kuningas Louis Bonaparte muutti viereisen raatihuoneen palatsikseen ja käski purkaa '
         + 'vaa\'an, joka oli hänen mielestään tiellä. Vaaka purettiin vuonna 1808.'
@@ -7688,15 +7825,25 @@ export const NAHTAVYYSJUTUT = {
     'Paleis voor Volksvlijt': {
       aika: '1864–1929',
       teksti: 'Paleis voor Volksvlijt oli lasista ja raudasta rakennettu näyttelypalatsi Amsterdamin '
-        + 'Frederiksplein-aukiolla. Esikuvana oli Lontoon Kristallipalatsi. Ajatuksen antoi lääkäri Samuel '
-        + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli sen. Palatsi avattiin 16. elokuuta 1864. '
+        + 'Frederiksplein-aukiolla. Esikuvana oli Lontoon Kristallipalatsi. Hankkeen pani alulle lääkäri Samuel '
+        + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli palatsin. Palatsi avattiin 16. elokuuta 1864. '
         + 'Siellä pidettiin näyttelyitä, konsertteja sekä ooppera- ja teatteriesityksiä.'
         + '\n\n'
-        + 'Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Palatsin tontilla on '
+        + 'Huhtikuussa 1929 palatsi tuhoutui tulipalossa. Sitä ei rakennettu uudelleen. Palatsin tontilla on '
         + 'nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Oneindig Noord-Holland, Andere Tijden ja Ons Amsterdam',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Vanha raatihuone': {
+      aika: '–1652',
+      teksti: 'Amsterdamin vanha raatihuone oli kaupungin raatihuone Damin aukiolla.'
+        + '\n\n'
+        + 'Vanha raatihuone paloi 7. heinäkuuta 1652. Uuden raatihuoneen rakentaminen Jacob van Campenin suunnitelmin oli alkanut jo vuonna 1648. Se on nykyinen Kuninkaanpalatsi.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 vanhan raatihuoneen palosta oli kulunut yli 220 vuotta, ja uusi raatihuone toimi kuninkaanpalatsina.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
     },
   },
   dublin: {
@@ -10111,33 +10258,29 @@ export const NAHTAVYYSJUTUT = {
       aika: '1732–1762',
       teksti: 'Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset '
           + 'johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää '
-          + 'Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi '
-          + 'peräti 22 kilometriä. Nykyinen upea lähde on paljon '
+          + 'Aqua Virgo -vesijohtoa pitkin, joka kulki lähes koko '
+          + 'matkansa maan alla. Nykyinen upea lähde on paljon '
           + 'uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen '
           + '1732, ja se valmistui vasta 1762, 11 vuotta hänen '
           + 'kuolemansa jälkeen.'
         + '\n\n'
-        + 'Lähde on maailman suurin barokkityylinen suihkulähde: se '
-          + 'on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä '
-          + 'komeilee merenjumala Neptunus vaunuillaan, joita vetävät '
-          + 'kaksi hevosta — toinen rauhallinen ja toinen villi, '
-          + 'kuvaamassa meren kahta puolta.'
+        + 'Lähde on barokkityylinen suihkulähde. Keskellä '
+          + 'komeilee merenjumala Oceanus simpukkavaunuillaan, joita vetävät '
+          + 'kaksi merihevosta — toinen rauhallinen ja toinen villi.'
         + '\n\n'
         + 'Perinteen mukaan olan yli lähteeseen heitetty kolikko '
-          + 'takaa paluun Roomaan. Kolikoita kertyy joka päivä noin 3 '
-          + '000 euron edestä, ja kaikki rahat lahjoitetaan '
-          + 'hyväntekeväisyysjärjestölle, joka auttaa vähävaraisia. '
+          + 'takaa paluun Roomaan. Kolikoita kertyy paljon: vuonna 2022 '
+          + 'niitä kerättiin altaasta yli 1,4 miljoonan euron arvosta, ja '
+          + 'ne lahjoitetaan hyväntekeväisyysjärjestölle, joka auttaa '
+          + 'vähävaraisia. '
           + 'Lähde on nähty monissa elokuvissa, kuuluisimmin filmissä '
           + 'La Dolce Vita (1960), jossa näyttelijä kahlaa iltapuvussa '
           + 'keskellä allasta.',
       kuvat: [
         {
           tiedosto: 'Fontaine Trevi - Rome.jpg',
-          lyhyt: 'Trevin suihkulähde on 26 metriä korkea, valmistui 1762 yksitoista vuotta Salvin kuoltua.',
-          selite: 'Maailman suurin barokkisuihkulähde on 26 metriä korkea '
-            + 'ja lähes 50 metriä leveä; Nicola Salvi aloitti sen 1732 ja '
-            + 'se valmistui 1762, yksitoista vuotta hänen kuolemansa '
-            + 'jälkeen.',
+          lyhyt: 'Trevin suihkulähde valmistui 1762, yksitoista vuotta Salvin kuoltua.',
+          selite: 'Nicola Salvi aloitti Trevin suihkulähteen 1732, ja se valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen.',
           lahde: 'Wilfredor, Wikimedia Commons (CC0)',
         },
         {
@@ -10145,8 +10288,8 @@ export const NAHTAVYYSJUTUT = {
           lyhyt: 'Noin 1890-luvulla Trevin lähde oli jo sata vuotta vanha, vesi tulee Aqua Virgo -vesijohdosta.',
           selite: 'Noin 1890-luvun valokuvan aikaan lähde oli jo yli sata '
             + 'vuotta vanha: sen vesi tulee Aqua Virgo -vesijohtoa pitkin, '
-            + 'jota roomalaiset rakensivat 22 kilometriä maan alle jo '
-            + 'vuonna 19 eaa.',
+            + 'jonka roomalaiset rakensivat jo vuonna 19 eaa. ja joka '
+            + 'kulki lähes koko matkansa maan alla.',
           lahde: 'Tuntematon (Library of Congress -kokoelma), Wikimedia Commons (Public domain)',
         },
       ],
@@ -10288,19 +10431,29 @@ export const NAHTAVYYSJUTUT = {
      * Kenttä `nosto` kertoo, mistä karsitusta merkistä juttu on.
      */
     'Torre Argentina': {
+      aika: '1926–1929',
       nosto: 'syvennys-rooma-kissat',
-      teksti: 'Kun Roomaa rakennettiin uusiksi Italian yhdistymisen jälkeen ja '
-        + 'korttelia purettiin vuonna 1927, maasta tuli esiin jättiläispatsaan '
-        + 'pää ja käsivarret. Alta löytyi neljä tasavallan ajan temppeliä ja pala '
-        + 'Pompeiuksen teatteria — ja juuri se paikka, jossa Julius Caesarin '
-        + 'uskotaan tulleen murhatuksi. Kaivauskuoppaan alkoi kerääntyä '
-        + 'kulkukissoja. Ne asuvat siellä yhä: temppeli D:n kohdalla toimii '
-        + 'kissasuoja, jota on 1950-luvulta lähtien pidetty yllä avaimella, joka '
-        + 'on kulkenut näyttelijältä toiselle — mukana muun muassa Anna Magnani. '
-        + 'Vuodesta 1993 se on ollut virallinen, tappamaton suoja. Vuonna 2012 '
-        + 'arkeologiviranomaiset vaativat suojan häätöä raunioiden '
-        + 'suojelemiseksi; vetoomukseen kerättiin yli 30 000 nimeä, ja kissat '
-        + 'jäivät.',
+      teksti: 'Largo di Torre Argentina on Rooman keskustan aukio, jossa on '
+        + 'kaivauskuoppa. Kun vanhaa korttelia purettiin vuosina 1926–1929, '
+        + 'kuopasta paljastui neljä tasavallan ajan temppeliä. Temppeleitä '
+        + 'merkitään kirjaimilla A, B, C ja D, koska ei tiedetä varmasti, '
+        + 'mille jumalalle kukin kuului.'
+        + '\n\n'
+        + 'Temppeleiden takana on Pompeiuksen portiikin Curian eli senaatin '
+        + 'kokoushuoneen kivijalka. Perinteisen tunnistuksen mukaan Julius '
+        + 'Caesar murhattiin juuri tässä Curiassa vuonna 44 eaa.'
+        + '\n\n'
+        + 'Kaivausten jälkeen kuoppaan alkoi kerääntyä kulkukissoja. '
+        + 'Näyttelijä Anna Magnani kuului roomalaisiin, jotka ruokkivat kissoja. Vuonna 1993 perustettiin vapaaehtoisten '
+        + 'ylläpitämä kissasuoja, ja arvioiden mukaan siellä on noin 200 kissaa. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
+        + 'poistamista, koska se oli rakennettu ilman lupaa ja haittasi '
+        + 'raunioiden säilymistä. NPR:n mukaan kissoja itseään ei kuitenkaan '
+        + 'voitu häätää.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 temppelit olivat vielä talojen ja maan kätkössä. Paikalla oli tiivis kortteli, ja temppeli '
+        + 'A:n sisään rakennettu San Nicola de\' Cesarini -kirkko seisoi '
+        + 'vielä; se purettiin vasta 1926–1929. Kissoja ei ollut vielä, ja '
+        + 'kissasuoja tuli vasta 1993.',
       kuvat: [
         {
           tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
@@ -10309,7 +10462,7 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Sovrintendenza Capitolina, Turismo Roma, Treccani, Discover Magazine, History Blog, NPR ja Gatti di Roma',
     },
     'Vatikaanin palatsi': {
       nosto: 'syvennys-rooma-vatikaani',
@@ -10351,11 +10504,36 @@ export const NAHTAVYYSJUTUT = {
     'Banca Romana': {
       aika: '1893',
       nosto: 'skandaali-banca-romana-1893',
-      teksti: 'Kun setelipainossa loppuvat numerot kesken, voi tietysti painaa '
-        + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
-        + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
-        + 'Harva pankkikriisi on ollut näin tuottelias.',
-      lahde: 'Wikipedia',
+      teksti: 'Banca Romana oli pankki, jolla oli lupa painaa Italian seteleitä. '
+        + 'Treccanin mukaan lupa riitti noin 60 miljoonan liiran seteleihin, '
+        + 'mutta liikkeessä niitä oli noin 113 miljoonan liiran edestä. Noin '
+        + '40 miljoonaa liiraa oli kaksoisnumeroituja seteleitä eli '
+        + 'sellaisia, joilla oli sama sarjanumero kuin toisella setelillä.'
+        + '\n\n'
+        + 'Skandaali paljastui vuodenvaihteessa 1892–1893. Vuonna 1893 '
+        + 'annettiin laki, jolla perustettiin Banca d\'Italia, ja se on '
+        + 'päivätty 10. elokuuta. Banca Romana lakkautettiin, ja sen '
+        + 'purkaminen uskottiin uudelle pankille. Aluksi Banca d\'Italia oli '
+        + 'yksi kolmesta setelipankista, ja vasta vuonna 1926 siitä tuli '
+        + 'ainoa. Pääministeri Giovanni Giolitti erosi vuoden 1893 lopulla, '
+        + 'kun tutkimusten tulokset olivat tulleet julki. Oikeudenkäynnissä '
+        + 'syytetyt vapautettiin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
+        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
+        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
+        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
+      kuvat: [
+        {
+          tiedosto: 'Bernardo Tanlongo.jpg',
+          lyhyt: 'Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894; hän oli Banca Romanan johtaja.',
+          selite: 'Bernardo Tanlongo, Banca Romanan johtaja, aikalaispiirroksessa '
+            + 'vuodelta 1894.',
+          lahde: 'Illustrazione Italiana 1894, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Treccani, Banca d\'Italia ja Filodiritto',
     },
     /*
      * KARTAN OMAN KOHTEEN JUTTU (omistajan päätös 2.9.2026 illalla:
@@ -10395,22 +10573,36 @@ export const NAHTAVYYSJUTUT = {
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
     'Michelangelo 1510': {
+      aika: '1508–1512',
       nosto: 'hetki-michelangelo-sikstus-1510',
-      teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
-        + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
-        + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen kappelin '
-        + 'holvia. Paavi Julius II pakotti hänet työhön 1508, vaikka hän on '
-        + 'kuvanveistäjä eikä freskomaalari; sopimus lupaa 3 000 dukaattia. '
-        + 'Freskoa tehdään tuoreelle kalkkirappaukselle, giornata kerrallaan: '
-        + 'apulainen levittää aamulla sen verran laastia kuin päivässä ehtii '
-        + 'maalata, ja mikä ei ehdi, hakataan pois. Rappauksen kosteus tuo '
-        + 'homeen, ja ensimmäiset kuukaudet joudutaan tekemään uudelleen. '
-        + 'Syyskuussa 1510 holvin ensimmäinen puolisko, Nooan juopumuksesta Eevan '
-        + 'luomiseen, on valmis, ja työ katkeaa: paavi on lähtenyt sotaan '
-        + 'Bolognaan eikä maksa, eikä uutta telinettä ole. Puolisko paljastetaan '
-        + 'yleisölle 15. elokuuta 1511. Toinen puoli, Aadamin luominen mukaan '
-        + 'lukien, syntyy nopeammin ja suuremmin hahmoin, ja koko katto — yli 300 '
-        + 'hahmoa — avataan pyhäinpäiväksi 1512. Michelangelo on 37.',
+      teksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisten, ei '
+        + 'selällään makaamalla, vaikka niin kerrotaan. Getty-museon mukaan '
+        + 'hän työskenteli seisaaltaan pensseli pään yläpuolella, ja '
+        + 'lähteiden mukaan makaamistarina on pitkäikäinen myytti.'
+        + '\n\n'
+        + 'Paavi Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
+        + 'Michelangelo piti itseään kuvanveistäjänä ja suostui tehtävään vastahakoisesti. Ensimmäinen suunnitelma oli maalata kaksitoista '
+        + 'apostolia, mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.'
+        + '\n\n'
+        + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta '
+        + 'sekä kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden '
+        + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510. Yleisölle se näytettiin kesällä 1511. Toisen puoliskon '
+        + 'hahmot ovat suurempia, koska Michelangelo oli nähnyt valmiin osan '
+        + 'lattialta käsin. Aadamin luominen on tällä toisella puoliskolla. '
+        + 'Koko katto avattiin pyhäinpäivän aattona 1512.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 katto oli ollut valmiina jo yli 360 '
+        + 'vuotta.',
+      kuvat: [
+        {
+          tiedosto: 'Sistine Chapel ceiling 02 (brightened).jpg',
+          lyhyt: 'Michelangelo maalasi Sikstuksen kappelin katon freskona 1508–1512 paavi Julius II:n toimeksiannosta.',
+          selite: 'Michelangelo maalasi Sikstuksen kappelin katon freskona '
+            + '1508–1512 paavi Julius II:n toimeksiannosta.',
+          lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Vatikaanin museot, Treccani, Getty ja EBSCO Research Starters',
     },
     /*
      * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
@@ -10421,14 +10613,19 @@ export const NAHTAVYYSJUTUT = {
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
     'Kolikko olan yli': {
+      aika: '1762',
       nosto: 'nosto-rooman-kolikko',
-      teksti: 'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan '
-        + 'yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa '
-        + 'veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään '
-        + 'pohjasta talteen. Rahat lahjoitetaan Caritakselle '
-        + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa '
-        + 'kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä '
-        + 'jää säännöllisesti kiinni.',
+      teksti: 'Trevin suihkulähteestä kerrotaan tarina: kun heittää kolikon olan '
+        + 'yli, palaa vielä Roomaan. Se on legenda, ei tosiasia. Kolikoita '
+        + 'kertyy paljon, ja vuonna 2022 niitä kerättiin altaasta yli 1,4 '
+        + 'miljoonan euron arvosta.'
+        + '\n\n'
+        + 'Kolikot kerätään altaan pohjasta talteen ja lahjoitetaan '
+        + 'Caritakselle, joka auttaa kaupungin vähävaraisia.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
+        + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
+        + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
       kuvat: [
         {
           tiedosto: 'Trevi Fountain - Roma.jpg',
@@ -10439,24 +10636,26 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
     },
     'Areenan kellari': {
+      aika: '1874–1875',
       nosto: 'nosto-colosseumin-kellari',
-      teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa '
-        + '— latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. '
-        + 'Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja '
-        + 'kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin '
-        + 'lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa '
-        + 'kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä '
-        + 'kelasivat auki sotalaivaston merimiehet.',
+      teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
+        + 'hiekkaa.'
+        + '\n\n'
+        + 'Lattian alla oli kaksikerroksinen kellari eli hypogeum, jossa oli '
+        + 'käytäviä, häkkejä ja varastohuoneita. Kellarista johti areenalle kymmeniä pystykuiluja ja nostimia. Köysien ja vintturien avulla '
+        + 'häkki nostettiin ylös, ja eläin ilmestyi areenalle luukusta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
+        + 'peitossa. Kellaria kaivettiin esiin useaan otteeseen 1800-luvulla, muun muassa vuosina 1874–1875.',
       kuvat: [
         {
           tiedosto: 'Hypogeum 1 (15005526662).jpg',
           lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
           selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
-            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja '
-            + 'kahdeksankymmentä pystykuilua.',
+            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja kymmeniä pystykuiluja.',
           lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
             + 'Commons (CC BY-SA 2.0)',
         },
@@ -10469,19 +10668,25 @@ export const NAHTAVYYSJUTUT = {
             + '2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Cerone ym. (Colosseumin areenan lattia), The Collector ja Walks of Italy',
     },
     'Norsu ja obeliski': {
+      aika: '1667',
       nosto: 'nosto-minervan-norsu',
-      teksti: 'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
-        + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
-        + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
-        + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
-        + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
-        + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
-        + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen '
-        + 'pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli '
-        + 'heidän mielestään pieni ja pyöreä.',
+      teksti: 'Piazza della Minervan aukiolla Rooman keskustassa seisoo '
+        + 'norsupatsas, jonka selässä on punertava graniittiobeliski. Patsaan '
+        + 'suunnitteli Gian Lorenzo Bernini, Ercole Ferrata veisti sen, ja se '
+        + 'paljastettiin vuonna 1667. Paavi Aleksanteri VII kuoli ennen kuin '
+        + 'patsas ehdittiin paljastaa. Obeliski on pieni, noin 5,5 metriä korkea. Turismo Roman mukaan obeliski löytyi vuonna '
+        + '1665, kun dominikaanit rakensivat Santa Maria sopra Minerva '
+        + '-kirkon puutarhan muuria.'
+        + '\n\n'
+        + 'Patsasta kutsuttiin ensin possuksi, "Porcino della Minerva", ja '
+        + 'nimi vääntyi ääntämisen mukana muotoon "Pulcino della Minerva", '
+        + 'tipu. Nimen kerrotaan johtuneen norsun tanakasta muodosta.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 norsu oli seissyt aukiolla jo 206 '
+        + 'vuotta.',
       kuvat: [
         {
           tiedosto: 'Elephant and Obelisk.jpg',
@@ -10491,67 +10696,109 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, Through Eternity, Romewise ja Rolf Gross (The Obelisks of Rome)',
     },
     'Aqua Virgo': {
+      aika: '19 eaa.',
       nosto: 'nosto-aqua-virgo',
-      teksti: 'Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta '
-        + 'vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä '
-        + 'painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä '
-        + 'kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. '
-        + 'ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä '
-        + 'kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin '
-        + 'lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti '
-        + 'janoisille sotilaille lähteen, josta vesi otettiin.',
+      teksti: 'Roomaan rakennettiin aikojen kuluessa jopa yksitoista akveduktia '
+        + 'eli vesijohtoa. Ne toimivat pelkällä painovoimalla, ja vesi '
+        + 'virtasi loivasti alamäkeen. Aqua Marcia oli noin 91 kilometriä '
+        + 'pitkä.'
+        + '\n\n'
+        + 'Aqua Virgo valmistui vuonna 19 eaa., kun Agrippa rakennutti sen. '
+        + 'Matkaa oli noin 20 kilometriä. Frontinuksen mukaan se kulki '
+        + 'suurimman osan matkaa maan alla. Nimi Virgo tarkoittaa neitoa. '
+        + 'Aqua Virgo syöttää yhä Trevin suihkulähdettä, ja se on Rooman '
+        + 'antiikin akvedukteista ainoa, joka toimii yhä.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 Aqua Virgo oli ollut olemassa yli 1 800 '
+        + 'vuotta, ja Trevin suihkulähde, joka valmistui vuonna 1762, sai '
+        + 'vetensä siitä jo silloin.',
       kuvat: [
         {
           tiedosto: 'Aqueducts in Rome.jpg',
-          lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
-          selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
-            + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
+          lyhyt: 'Roomaan rakennettiin jopa yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
+          selite: 'Roomaan rakennettiin jopa yksitoista akveduktia, ja vesi '
+            + 'virtasi kaarien päällä kulkevassa kourussa pelkän painovoiman '
+            + 'voimalla.',
           lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä National Geographic, Engineering Rome, Frontinus (De aquaeductu), Encyclopaedia Romana ja Turismo Roma',
     },
     'Nasone': {
+      aika: '1870-luku',
       nosto: 'nosto-rooman-nasone',
-      teksti: 'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
-        + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin '
-        + '1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi '
-        + 'neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
-        + 'kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii '
-        + 'sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo '
-        + 'kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä '
-        + 'Piazza della Rotondalla.',
+      teksti: 'Rooman kaduilla on juomavesihanoja, joita sanotaan nasoneiksi, '
+        + 'isoiksi neniksi. Alun perin ne olivat valurautaisia pylväitä, ja vesi virtaa '
+        + 'niistä yleensä yötä päivää. Ensimmäiset nasonet pystytettiin '
+        + '1870-luvulla. Alkuperäisessä mallissa oli kolme lohikäärmeen '
+        + 'päätä, ja nimi nasone tuli vasta, kun myöhemmin tuli yksi kaareva '
+        + 'suu, joka näyttää nenältä.'
+        + '\n\n'
+        + 'Putken suun päällä on pieni reikä. Kun suun tukkii sormella, vesi '
+        + 'suihkuaa reiästä ylöspäin. Rooman vesilaitos Acean mukaan vesi on '
+        + 'samaa kuin kotien hanoissa. Nasoneja on kaupungissa noin 2 500, ja '
+        + 'lohikäärmesuisia on yhä esimerkiksi Pantheonin edessä Piazza della '
+        + 'Rotondalla.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 nasoneja ei ehkä vielä ollut. Turismo '
+        + 'Roman ja Acean mukaan ensimmäiset tulivat vuonna 1874, mutta yksi '
+        + 'lähde antaa vuodeksi 1872.',
       kuvat: [
         {
           tiedosto: 'Nasone in Trastevere, Rome.jpg',
-          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
-          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi '
-            + 'on samaa kuin roomalaisten kotihanoissa.',
+          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla; Acean mukaan niiden vesi on samaa kuin kotien hanoissa.',
+          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja Acean '
+            + 'mukaan niiden vesi on samaa kuin roomalaisten kotien hanoissa.',
           lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
-          selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
-            + 'Piazza della Rotondalla.',
+          selite: 'Lohikäärmesuinen nasone seisoo yhä Pantheonin edessä Piazza '
+            + 'della Rotondalla.',
           lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, Acea ja Engineering Rome',
     },
     // KADONNUT IHME (KK 16.11.2026 erä 2; SK:n data-LUONNOS; teksti sanasta sanaan docs/raportit/kadonneet-era2-kortit-luonnos-20261116.md; faktapohja: kadonneet-era2-faktapohja-20261116.md; vain kahden itsenäisen lähteen väitteet).
     'Meta Sudans': {
-      aika: '1. vuosisata–1936',
-      teksti: 'Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä Roomassa. Nimi tarkoittaa '
-        + 'hikoilevaa käännepylvästä. Se rakennettiin 1. vuosisadan lopulla, vähän Colosseumin jälkeen.'
+      aika: '1. vuosisata–1930-luku',
+      teksti: 'Meta Sudans oli kartiomainen suihkulähde Colosseumin vieressä '
+        + 'Roomassa. Nimi tarkoittaa hikoilevaa käännepylvästä: meta oli '
+        + 'sirkuksen käännepylväs, ja vesi tihkui kartiosta lukuisista '
+        + 'rei\'istä. Se rakennettiin 1. vuosisadalla jKr. flaviolaiskeisarien '
+        + 'aikana.'
         + '\n\n'
-        + 'Mussolini käski purkaa sen rauniot vuonna 1936, koska ne olivat paraatien ja liikenteen tiellä. '
-        + 'Suihkulähdettä ei ole enää.'
+        + 'Mussolinin käskystä rauniot purettiin 1930-luvulla. Tutkija '
+        + 'Elizabeth Marlowen mukaan ne olivat paraatireitin tiellä. '
+        + 'Suihkulähdettä ei ole enää, mutta sen pohjapiirros on yhä '
+        + 'näkyvissä Konstantinuksen kaaren edessä, ja ääriviivat merkittiin purun jälkeen vaaleammalla kivellä.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 tiilinen kartio seisoi vielä rauniona Colosseumin vieressä.',
-      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Platner & Ashby (1929) ja Elizabeth Marlowen tutkimus',
+        + 'Isoisäsi matkavuonna 1873 tiilinen kartio seisoi vielä rauniona '
+        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta noin 60 vuotta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy LOC 4755211890.jpg',
+          lyhyt: 'Noin vuoden 1890 valokuvassa Colosseumin edessä seisoo vielä Meta Sudansin raunio.',
+          selite: 'Noin vuoden 1890 valokuvassa Colosseumin edessä seisoo vielä '
+            + 'Meta Sudansin tiilinen raunio.',
+          lahde: 'Tuntematon (Library of Congress -kokoelma), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteinä Platner & Ashby (1929), Turismo Roma ja Elizabeth Marlowen tutkimus',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Porto di Ripetta': {
+      aika: '1704–1800-luvun loppu',
+      teksti: 'Porto di Ripetta oli Tiberin rannalla Rooman keskustassa seissyt jokisatama. Paavi Clemens XI:n tilaama Alessandro Specchi suunnitteli sen, ja se valmistui vuonna 1704. Satamassa kaksi kaarevaa portaikkoa laskeutui laitureille, ja keskellä oli suihkulähde, jossa juotettiin kuormaeläimiä. Rakennukseen käytettiin travertiinia Colosseumin sortuneista osista.'
+        + '\n\n'
+        + 'Satamaan tuotiin Tiberin yläjuoksulta puutavaraa ja viiniä pienillä aluksilla.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 satama oli vielä paikallaan. Se purettiin 1800-luvun lopulla, kun Tiberin rannoille rakennettiin tulvamuurit.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Innamorati di Roma',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.

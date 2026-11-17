@@ -49,6 +49,7 @@
  */
 import { FOKUSVIRRAT } from './packs/fokusvirrat.js';
 import { FOKUSKOHTEET_DEU } from './packs/fokuskohteet-deu.js';
+import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 
 /*
  * Sivut, joiden nostot siirtyivät kartalle, ja jutut, jotka sivulle
@@ -172,10 +173,10 @@ export const KAUPUNKILEHDEN_SIIRTYNEET = [
       + 'jäljiltä auki. Samat vuodet jättivät kaupunkiin kyyhkypostin, '
       + 'palatsin rauniot ja maalaussuunnan, jonka nimi oli alun perin '
       + 'pilkkaa.',
-    kohdekartta: ['syvennys-pariisi-kyyhkyposti', 'syvennys-pariisi-tuileriat',
+    kohdekartta: ['syvennys-pariisi-kyyhkyposti', 'tuileries',
       'syvennys-pariisi-impressionistit'],
-    // Vanha sivu: rauniot, kyyhkyposti, impressionistit.
-    jarjestys: ['syvennys-pariisi-tuileriat', 'syvennys-pariisi-kyyhkyposti',
+    // Vanha sivu: rauniot, kyyhkyposti, impressionistit. Rauniot = kohde `tuileries` (Tuileries-koe 17.11.2026).
+    jarjestys: ['tuileries', 'syvennys-pariisi-kyyhkyposti',
       'syvennys-pariisi-impressionistit'],
   },
   {
@@ -208,8 +209,19 @@ export const KAUPUNKILEHDEN_SIIRTYNEET = [
   },
 ];
 
-/* Fokuskohteet, joista tunnus ilman etuliitettä haetaan (nyt vain Berliinin portti). */
-const KAUPUNKILEHDEN_FOKUSKOHTEET = [FOKUSKOHTEET_DEU];
+/* Fokuskohteet, joista tunnus ilman etuliitettä haetaan (Berliinin portti; Tuileries'n palatsi 17.11.2026, Tuileries-koe). */
+const KAUPUNKILEHDEN_FOKUSKOHTEET = [FOKUSKOHTEET_DEU, FOKUSKOHTEET_FRA];
+
+/*
+ * Jaksollisen kohteen (Tuileries-koe) lehtikuva: ensimmäinen valokuva
+ * jaksojen kuvista, jolla on tiedosto tai osoite (Tuileries: rauniot palon
+ * jälkeen, sama Commons-kuva kuin vanhalla syvennystarinalla).
+ */
+function kaupunkilehdenJaksokuva(kohde) {
+  const kuvat = kohde.jaksokuvat ?? {};
+  const avaimet = (kohde.jaksot ?? []).flatMap((j) => [j.kuva, j.lisakuva?.kuva]).filter(Boolean);
+  return avaimet.map((a) => kuvat[a]).find((k) => k?.laji === 'valokuva' && (k.tiedosto || k.osoite)) ?? null;
+}
 
 /* Kuvan kentät, jotka nostetaan noston päätasolle (vanha nostomuoto). */
 const KAUPUNKILEHDEN_KUVAKENTAT = [
@@ -245,7 +257,12 @@ function kaupunkilehdenLahde(kaupunki, tunnus, paakartalla) {
   if (tunnus.startsWith(syvennys)) return takysta(taky(tunnus.slice(syvennys.length)));
   for (const lista of KAUPUNKILEHDEN_FOKUSKOHTEET) {
     const kohde = lista.find((k) => k.id === tunnus);
-    if (kohde) return { juttu: kohde, otsikko: kohde.nimi, teksti: kohde.teksti ?? '', kuva: kohde.kuva ?? null };
+    if (kohde) {
+      return {
+        juttu: kohde, otsikko: kohde.otsikko ?? kohde.nimi, teksti: kohde.teksti ?? '',
+        kuva: kohde.kuva ?? kaupunkilehdenJaksokuva(kohde),
+      };
+    }
   }
   return null;
 }

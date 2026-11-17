@@ -59,7 +59,7 @@ const palvelin = http.createServer((req, res) => {
     res.end(ulkoiset.get(osa));
     return;
   }
-  const polku = join(JUURI, osa === '/' ? 'index.html' : osa);
+  const polku = join(JUURI, osa === '/' ? 'pelaa.html' : osa);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': extname(polku) === '.mp3' ? 'audio/mpeg' : 'text/html' });
   res.end(readFileSync(polku));

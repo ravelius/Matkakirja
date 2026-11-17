@@ -8,8 +8,13 @@
  * omissa hahmotelmapakoissaan ja saavat paikalliset ihmeosoitteet siellä.
  */
 
+// `tiedosto` on ämpärin kohtaamiset/ihmeet/-nimi tai repon polku (assets/…, esim. Rotunde).
+const ihmeOsoite = (tiedosto) => (String(tiedosto).startsWith('assets/')
+  ? tiedosto
+  : `https://media.matkakirja.app/kohtaamiset/ihmeet/${tiedosto}`);
+
 const ihme = (tiedosto, selite, url) => ({
-  osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${tiedosto}`,
+  osoite: ihmeOsoite(tiedosto),
   kadonnut: true,
   selite,
   lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
@@ -31,8 +36,11 @@ const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => 
   laudat,
   teksti,
   lahde,
-  ihme: ihme(kuva, `${nimi} on kuvattu ehjänä historiallisten kuvausten, säilyneiden `
-    + 'jäänteiden ja tutkimuslähteiden perusteella.', url),
+  // kuva: null = loistoaikakuvaa ei vielä ole: ei ihmekenttää, ei "Koe ihme" -nappia (KK 17.11.2026 klo 10.43).
+  ...(kuva ? {
+    ihme: ihme(kuva, `${nimi} on kuvattu ehjänä historiallisten kuvausten, säilyneiden `
+      + 'jäänteiden ja tutkimuslähteiden perusteella.', url),
+  } : {}),
 });
 
 /*
@@ -597,6 +605,35 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'en-Wikipedia "Domus Aurea", johdanto ja historia (tarkistettu 21.9.2026).',
       kuva: 'ihme-domus-aurea-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Domus_Aurea',
     }),
+    /*
+     * PORTO DI RIPETTA (KK 17.11.2026 11.58, valinta a): kortin kuva on PD-valokuva n. 1865 (oikea kuva voittaa tehdyn;
+     * satama oli paikallaan vielä 1873). Nosto syntyi, jotta kortin "Näin tämä tehtiin" -nappi (kohdekartan `tarina`)
+     * näkyy: natiivin nappi vaatii kohteelle nostolinkin (kohteet[].nosto → tämä nosto). Teksti on Rooman kohdekortin
+     * (nahtavyysjutut.js 'Porto di Ripetta') teksti sellaisenaan; uusia faktoja ei ole. Kuvan lähde: paketti
+     * ripetta-nosto-kuva-vienti-20261117 (LAHTEET.md).
+     */
+    ihmeKohde({
+      id: 'porto-di-ripetta',
+      nimi: 'Porto di Ripetta',
+      kysymykset: ['Mistä Porto di Ripettan travertiini otettiin?', 'Miksi Porto di Ripetta purettiin?'],
+      korostukset: ['Clemens XI|Clemens XI:n', 'Alessandro Specchi'],
+      nappi: 'Satama, jonka portaat laskeutuivat Tiberin laitureille',
+      laudat: { maailmankartta: { x: 6249.2, y: 1727.4 }, europe: { x: 450.7, y: 791.5 } },
+      teksti: 'Porto di Ripetta oli Tiberin rannalla Rooman keskustassa seissyt jokisatama. Paavi Clemens XI:n '
+        + 'tilaama Alessandro Specchi suunnitteli sen, ja se valmistui vuonna 1704. Satamassa kaksi kaarevaa '
+        + 'portaikkoa laskeutui laitureille, ja keskellä oli suihkulähde, jossa juotettiin kuormaeläimiä. '
+        + 'Rakennukseen käytettiin travertiinia Colosseumin sortuneista osista. Isoisäsi vuonna 1873 satama '
+        + 'oli vielä paikallaan; se purettiin 1800-luvun lopulla, kun Tiberin rannoille rakennettiin tulvamuurit.',
+      lahde: 'Matkakirjan oma Porto di Ripetta -kortti (nahtavyysjutut.js; lähteinä en-Wikipedia ja Innamorati di Roma), '
+        + 'tarkistettu 17.11.2026.',
+      kuva: 'ihme-porto-di-ripetta-1865.jpg',
+      lyhyt: 'Porto di Ripetta Tiberin rannalla noin vuonna 1865; satama oli paikallaan vielä isoisän vuonna 1873.',
+      selite: 'Noin vuonna 1865 otettu valokuva Porto di Ripettasta Tiberin rannalla. Satama oli paikallaan vielä '
+        + 'isoisän vuonna 1873, ja se purettiin 1800-luvun lopulla tulvamuurien tieltä.',
+      ihmeLahde: 'Valokuva: tuntematon italialainen valokuvaaja, noin 1865, Zeno.org / Wikimedia Commons (public domain). '
+        + 'Faktat: Matkakirjan Porto di Ripetta -kortti (en-Wikipedia ja Innamorati di Roma).',
+      url: 'https://en.wikipedia.org/wiki/Porto_di_Ripetta',
+    }),
   ],
   ESP: [
     ihmeKohde({
@@ -714,10 +751,10 @@ export const EUROOPAN_KADONNEET = {
       nimio: 'Vanha raatihuone',
       nappi: 'Damin goottilainen raatihuone ennen vuoden 1652 paloa',
       laudat: { maailmankartta: { x: 5996.4, y: 1285.4 }, europe: { x: 305.1, y: 516.2 } },
-      teksti: 'Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. '
-        + 'Tulipalo tuhosi sen 7. heinäkuuta 1652. Uusi raatihuone, nykyinen kuninkaanlinna, '
-        + 'valmistui viereen vuonna 1665.',
-      lahde: 'Rijksmuseum ja nl-Wikipedia "Oude Stadhuis van Amsterdam" (tarkistettu 21.9.2026).',
+      teksti: 'Amsterdamin keskiaikainen raatihuone seisoi Damin torilla. '
+        + 'Tulipalo tuhosi sen 7. heinäkuuta 1652. Uuden raatihuoneen, nykyisen Kuninkaanpalatsin, '
+        + 'ensimmäinen kivi muurattiin jo 28. lokakuuta 1648.',
+      lahde: 'nl-Wikipedia "Oude Stadhuis van Amsterdam" ja Hart Amsterdam (palo 7.7.1652); Paleis Amsterdam "A New Town Hall for Amsterdam" ja en-Wikipedia "Royal Palace of Amsterdam" (rakennus alkoi 1648) (tarkistettu 17.11.2026).',
       kuva: 'ihme-amsterdamin-vanha-raatihuone-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam',
     }),
     kohde({
@@ -741,7 +778,7 @@ export const EUROOPAN_KADONNEET = {
         + 'se valmistui 1864 näyttely- ja konserttihalliksi. Tulipalo tuhosi rakennuksen '
         + 'yöllä 17.–18.4.1929, ja säilyneet tiiliholvikäytävätkin purettiin myöhemmin.',
       lahde: 'en-Wikipedia "Paleis voor Volksvlijt", historia ja vuoden 1929 palo (tarkistettu 28.9.2026).',
-      kuva: 'ihme-paleis-voor-volksvlijt-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Paleis_voor_Volksvlijt',
+      kuva: null /* ihme-paleis-voor-volksvlijt-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/Paleis_voor_Volksvlijt',
     }),
   ],
   AUT: [
@@ -778,34 +815,33 @@ export const EUROOPAN_KADONNEET = {
       id: 'karntnertor',
       nimi: 'Kärntnertor-teatteri',
       nimio: 'Kärntnertor',
-      kysymykset: ['Minkä sinfonian kantaesitys oli Kärntnertor-teatterissa 1824?', 'Mikä hotelli seisoo teatterin paikalla?'],
+      kysymykset: ['Minkä sinfonian kantaesitys oli Kärntnertor-teatterissa 1824?', 'Minkä Beethovenin oopperan lopullinen versio kuultiin teatterissa 1814?'],
       korostukset: ['Ludwig van Beethoven|Ludwig van Beethovenin', 'Fidelio|Fidelion'],
       nappi: 'Teatteri, jossa Beethovenin yhdeksäs kuultiin ensi kerran',
       laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
-      teksti: 'Kärntnertor-teatteri oli Wienin hovin teatteri, jonka Antonio Beduzzi suunnitteli ja joka '
-        + 'avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
-        + 'uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio 23. '
-        + 'toukokuuta 1814 ja Chopinin Wienin-debyytti 1829. Huipentuma oli 7. toukokuuta 1824: Beethovenin '
-        + 'yhdeksännen sinfonian kantaesitys, jossa soitti tavallista suurempi '
-        + 'orkesteri. Viimeinen ooppera, Rossinin Wilhelm Tell, esitettiin 17. huhtikuuta 1870, ja uusi '
-        + 'hovioopperatalo oli avattu jo 1869. Kärntnertor purettiin, ja sen tontilla on nykyään Hotel '
-        + 'Sacher. Isoisän matkavuonna 1873 teatteri oli jo suljettu.',
-      lahde: 'en-Wikipedia ”Theater am Kärntnertor”; de-Wikipedia ”Theater am Kärntnertor”; en-Wikipedia '
-        + '”Symphony No. 9 (Beethoven)”, osio ”Premiere” (tarkistettu 31.10.2026).',
+      // Tarkistettu 17.11.2026 (WGW, ÖML, habsburger.net): Beduzzi ja 1709, tulipalo 1761, Pacassi ja 1763, Fidelio 1814 ja
+      // teatterin sulkeminen 1870 (viimeinen esitys Wilhelm Tell 17.4.1870; päivää ei tekstissä) jäivät; Chopin 1829,
+      // Mozartin pianokonsertto nro 25, Hotel Sacher ja orkesterin koko poistettiin.
+      teksti: 'Kärntnertor-teatterin suunnitteli Antonio Beduzzi, ja se avattiin vuonna 1709. Tulipalo tuhosi sen 1761, ja Nikolaus Pacassi rakensi sen '
+        + 'uudelleen 1763. Talossa kuultiin Ludwig van Beethovenin Fidelion lopullinen versio '
+        + '1814. Huipentuma oli 7. toukokuuta 1824: Beethovenin yhdeksännen sinfonian '
+        + 'kantaesitys. Teatteri suljettiin vuonna 1870, ja uusi '
+        + 'hovioopperatalo oli avattu jo 1869. Talo purettiin myöhemmin. '
+        + 'Isoisän matkavuonna 1873 teatteri oli jo suljettu.',
+      lahde: 'Österreichisches Musiklexikon online, ”Kärntnertortheater”; habsburger.net, ”Die Heimstatt der Oper: Das '
+        + 'Kärntnertortheater”; Wien Geschichte Wiki, ”Kärntnertortheater”; Beethoven-Haus Bonn ja A. W. Thayer '
+        + '(yhdeksännen sinfonian kantaesitys); tarkistettu 17.11.2026.',
       kuva: 'ihme-karntnertor-loistoaika.jpg',
-      lyhyt: 'Toukokuun 7. päivänä 1824 kuuroutunut säveltäjä antaa tahdit lavan vieressä istuen, ja '
-        + 'loppusuosion aikana laulaja kääntää hänet yleisöön päin; vajaat viisikymmentä vuotta myöhemmin '
-        + 'teatteri puretaan.',
-      selite: 'Toukokuun 7. päivänä 1824 teatteri on täynnä yleisöä, ja lavalla soittaa lähes kaksi kertaa '
-        + 'tavallista suurempi orkesteri. Samassa salissa on kuultu Mozartin pianokonserttoa nro 25 ja '
-        + 'Beethovenin Fideliota. Lähes kuuro Beethoven istuu lavan vieressä ja antaa tahdit, vaikka ei '
-        + 'kuule soittoa. Kun sinfonia päättyy, alttolaulaja Caroline Unger kääntää hänet kasvot yleisöön '
-        + 'päin, jotta hän näkisi liinat, hatut ja nostetut kädet. Huhtikuussa 1870 teatterin viimeinen '
-        + 'ooppera on soitettu, ja talo puretaan.',
-      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1824). Faktat: en- ja '
-        + 'de-Wikipedia ”Theater am Kärntnertor” sekä en-Wikipedia ”Symphony No. 9 (Beethoven)”, '
-        + 'tarkistettu 31.10.2026.',
-      url: 'https://en.wikipedia.org/wiki/Theater_am_K%C3%A4rntnertor',
+      lyhyt: 'Toukokuun 7. päivänä 1824 kuuroutunut säveltäjä on lavalla ja osoittaa tempot Yhdeksännen sinfonian '
+        + 'kantaesityksessä; vuonna 1870 teatteri suljetaan, ja talo puretaan myöhemmin.',
+      selite: 'Toukokuun 7. päivänä 1824 Kärntnertor-teatterissa kantaesitetään Beethovenin yhdeksäs sinfonia. '
+        + 'Samassa salissa on kuultu Beethovenin Fideliota. Lähes kuuro Beethoven on lavalla ja osoittaa '
+        + 'tempot, vaikka ei kuule soittoa; virallisesti kokonaisjohdosta vastaa kapellimestari Michael Umlauf. '
+        + 'Vuonna 1870 teatteri on suljettu, ja talo puretaan myöhemmin.',
+      ihmeLahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1824). Faktat: '
+        + 'Österreichisches Musiklexikon online ja habsburger.net (Kärntnertortheater) sekä Thayer ja '
+        + 'Beethoven-Haus Bonn (kantaesitys), tarkistettu 16.11.2026.',
+      url: 'https://www.habsburger.net/en/chapter/home-opera-karntnertortheater',
     }),
     kohde({
       id: 'vanha-burgtheater', nimi: 'Wienin vanha Burgtheater',
@@ -839,7 +875,7 @@ export const EUROOPAN_KADONNEET = {
         + 'Näyttely avattiin 1.5.1873, samana keväänä kun isoisä aloitti oman Eurooppansa '
         + 'kiertueen. Rakennus paloi täysin selittämättömässä tulipalossa 17.9.1937.',
       lahde: 'en-Wikipedia "Rotunde" ja "1873 Vienna World’s Fair" (tarkistettu 28.9.2026).',
-      kuva: 'ihme-wienin-rotunde-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rotunde',
+      kuva: 'assets/kartat/nostot/nosto-rotunde-loistoaika.webp', url: 'https://en.wikipedia.org/wiki/Rotunde',
     }),
   ],
   CHE: [
@@ -876,7 +912,7 @@ export const EUROOPAN_KADONNEET = {
         + '1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin '
         + 'kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.',
       lahde: 'en-Wikipedia "Rigi Kulm Hotel" ja "Vitznau-Rigi railway line" (tarkistettu 28.9.2026).',
-      kuva: 'ihme-grand-hotel-schreiber-rigi-kulm-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rigi_Kulm_Hotel',
+      kuva: null /* ihme-grand-hotel-schreiber-rigi-kulm-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/Rigi_Kulm_Hotel',
     }),
   ],
   CZE: [
@@ -1281,7 +1317,7 @@ export const EUROOPAN_KADONNEET = {
         + 'jonka 100-metrinen kupoli ja neljä minareettia hallitsivat koko saarta. '
         + 'Tilapäiseksi tarkoitettu jättiläinen purettiin näyttelyn päätyttyä.',
       lahde: 'en-Wikipedia "General Art and Industrial Exposition of Stockholm" (tarkistettu 28.9.2026).',
-      kuva: 'ihme-industripalatset-stockholm-1897-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/General_Art_and_Industrial_Exposition_of_Stockholm',
+      kuva: null /* ihme-industripalatset-stockholm-1897-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/General_Art_and_Industrial_Exposition_of_Stockholm',
     }),
   ],
   IRL: [
@@ -1623,7 +1659,7 @@ export const EUROOPAN_KADONNEET = {
       + 'oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa '
       + 'kaupunkia ei palautettu ennalleen.',
     lahde: 'en-Wikipedia "Minsk", toinen maailmansota ja jälleenrakennus (tarkistettu 28.9.2026).',
-    kuva: 'ihme-vanha-minsk-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Minsk',
+    kuva: null /* ihme-vanha-minsk-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/Minsk',
   })],
   SRB: [rappeutunutKohde({
     id: 'smederevon-linnoitus', nimi: 'Smederevon linnoitus', nimio: 'Smederevo',

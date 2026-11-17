@@ -785,13 +785,7 @@ export const SYVENNYSPAIKAT = {
     },
   },
   pariisi: {
-    /*
-     * Tuileries-palatsin entinen paikka, Jardin des Tuileries / Place du Carrousel.
-     * Lähde: en-Wikipedia "Tuileries Palace", prop=coordinates
-     */
-    tuileriat: {
-      lat: 48.86222, lon: 2.3325, symboli: 'historia', nimio: 'Tuileries',   // nimiö fokuskohteen mukaan (omistaja 31.10. 08.22, PT)
-    },
+    // tuileriat poistettu 17.11.2026 (Tuileries-koe): palatsi on kohteen `tuileries` jaksoissa (fokuskohteet-fra.js).
     /*
      * Pariisi (ei yhtä nimettyä paikkaa; koko piiritetty kaupunki ja Seinen katkaistu salakaapeli) (sijainti on arvio).
      * Lähde: Teksti ei nimeä yhtä paikkaa (piiritys koski koko kaupunkia);

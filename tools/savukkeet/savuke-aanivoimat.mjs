@@ -5,7 +5,7 @@
  * voimakkuussäädin ei muuten toimi. Saisiko sen korjattua ensi
  * tilassa?"*
  *
- * Liu'ut (index.html #aanivoimat) ovat Äänitehosteet, Pulun ääni,
+ * Liu'ut (pelaa.html #aanivoimat) ovat Äänitehosteet, Pulun ääni,
  * Lukija, Taustamusiikki ja Taustaäänet. Neljä niistä toimi
  * mitattaessa; Lukija ei, ja kahdesta eri syystä (ks. korjauksen
  * perustelut js/luenta.js paivitaLuentojenVoima ja js/puhe.js
@@ -42,7 +42,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const pyyntö = decodeURIComponent(req.url.split('?')[0]);
-  const polku = join(JUURI, pyyntö === '/' ? 'index.html' : pyyntö);
+  const polku = join(JUURI, pyyntö === '/' ? 'pelaa.html' : pyyntö);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));

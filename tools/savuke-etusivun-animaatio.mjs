@@ -34,7 +34,7 @@ const MIME = {
   '.webmanifest': 'application/manifest+json',
 };
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -55,7 +55,7 @@ const vaadi = (nimi, ok, lisa = '') => {
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
 
-await sivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await sivu.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 
 // --- 1) Kerros rakentuu ----------------------------------------------------
@@ -875,7 +875,7 @@ const sivu2 = await ctx2.newPage();
 const virheet2 = [];
 sivu2.on('pageerror', (e) => virheet2.push(String(e)));
 await sivu2.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
-await sivu2.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await sivu2.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
 await sivu2.waitForTimeout(2500);
 await sivu2.evaluate(() => {
   const n = [...document.querySelectorAll('button')]

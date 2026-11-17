@@ -1,0 +1,343 @@
+{
+ "ytimet": [
+  {
+   "tunnus": "S-01",
+   "nimi": "Mittausta ei odoteta",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "mittausehto-vahti",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "12.26",
+     "lahde": "P-261117-55",
+     "sanat": "ei koskaan odoteta mittausta vaan lisätään kaikki aina heti peliin ilman mittausta. yöllä vain mitataan paljonko muutokset aiheuttivat kuormaa jne. ja sen jälkeen reagoidaan tarpeen mukaan. mutta aina tehdään muutos ja tuodaan se heti peliin ilman että jäädään odottamaan mittausta. mielestäni sanoin tämän jo aiemminkin",
+     "sha": "b0db8d83fac8157f",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:04.805Z"
+    },
+    {
+     "pvm": "14.11.2026",
+     "klo": "22.05",
+     "lahde": "P-261114-8",
+     "sanat": "Minusta muitakin mittauksia voi karsia koska olen ainut pelaaja ja voin testata asiat. Ja sitten voidaan testata monta eri asiaa kerralla myöhemmin. Myös uusia ohjelma versioita voi tehdä harvemmin mikäli se nopeuttaa. En yleensä ehdi kokeilla kuin joka 5. Version joka tapauksessa.",
+     "sha": "a46b278bf7679581",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:04.927Z"
+    },
+    {
+     "pvm": "16.11.2026",
+     "klo": "13.24",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-11-16-klo-1249-1333.md",
+     "sanat": "miten nuo mittaukset saisi pidettyä yöllä, kun niistä on jo aiemminkin sovittu ettei taas siirry itsestään sekä muut työtavat. tämä on selkeästi uusiutuva ongelma että tulee tukoksia. miten saisi pysyvän ratkaisun joka kestää myös tilin vaihdon yli?",
+     "sha": "76cbb87c012b80c3",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.047Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-02",
+   "nimi": "Peliin ilman koetta, omistaja testaa itse",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "sanavahti (tulossa, pala 5)",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "16.11.2026",
+     "klo": "15.01",
+     "lahde": "P-261116-21",
+     "sanat": "laita nämä ajoon nyt, kun jono vapautuu minun testini vuoksi: Riemukaaren kivipinta, Temple-tornin sisätila lisäksi ei tehdä automaattisia tarkistuksia, koska muita pelaajia ei ole ja näen kyllä jos jokin ei toimi. tällaiset automaattiset tarkitukset voi sitten ajaa yöllä varalta jos en jotain huomaa. tärkeintä on kuitenkin että saadaan tehtyä varsinaista kehitystyötä eli koodin kirjoittamista mahdollisimman nopeasti. se jos peli menee rikki ei haittaa mitään, jos sen voi myöhemmin korjata. nämä hidastukset haittaavat paljon enemmän",
+     "sha": "d80cd3ae2b3aaced",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.160Z"
+    },
+    {
+     "pvm": "16.11.2026",
+     "klo": "14.59",
+     "lahde": "P-261116-20",
+     "sanat": "eikö niitä voi laittaa peliin ilman koetta niin testaan itse? se on todella nopeaa ja jos joku ei toimi niin annan palautetta?",
+     "sha": "dfaf6928b6d9be7b",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.266Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-03",
+   "nimi": "Etäohjaus päällä kaikilla, myös nollauksen jälkeen",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "14.11.2026",
+     "klo": "22.30",
+     "lahde": "P-261114-11",
+     "sanat": "Kaikki voisi pitää päällä nollauksien jälkeen myös",
+     "sha": "0e3cc4bce8f23a3c",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.374Z"
+    },
+    {
+     "pvm": "14.11.2026",
+     "klo": "22.28",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-11-14-klo-2214-2229.md",
+     "sanat": "Laita remote päälle kaikkiin sessioihin",
+     "sha": "c4bab0c371dd5b66",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.477Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-04",
+   "nimi": "Kysymykset päivällä aina kortilla",
+   "roolit": [
+    "KK"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "13.11.2026",
+     "klo": "11.13",
+     "lahde": "P-261113-7",
+     "sanat": "Anna päivisin aina kysymyskortit jos kysyttävää. Mutta ei yöllä jotta et jää jumiin eikä ennen kuin remote on kytketty päälle",
+     "sha": "2050de83953e387e",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.582Z"
+    },
+    {
+     "pvm": "21.10.2026",
+     "klo": "17.27",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-10-21-klo-1508-1738.md",
+     "sanat": "tee aina kysymyskortit. ainoastaan pitkät tekstiaiheiset kysymykset kannattaa tehdä ilman kysymyskorttia",
+     "sha": "54ffc2c7234f3d47",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.684Z"
+    },
+    {
+     "pvm": "23.10.2026",
+     "klo": "11.33",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-10-23-klo-1125-1724.md",
+     "sanat": "laita jatkossa kysymyskortit, niin huomaan ne puhelimella parhaiten",
+     "sha": "4c25dd7336dd195c",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.788Z"
+    },
+    {
+     "pvm": "9.11.2026",
+     "klo": "17.01",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-11-09-klo-1423-1714.md",
+     "sanat": "Kyllä kumpaankin ja laita jatkossa kysymyskortit.",
+     "sha": "9bc64e4571a17e03",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.895Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-05",
+   "nimi": "Omistajan iPhonella ei testata eikä mitata",
+   "roolit": [
+    "JU",
+    "NUI",
+    "NS",
+    "PK",
+    "KS",
+    "VS",
+    "KK"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "11.53",
+     "lahde": "P-261117-51",
+     "sanat": "älä testaa puhelimella koskaan mitään",
+     "sha": "9f6918e834541623",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:05.996Z"
+    },
+    {
+     "pvm": "10.11.2026",
+     "klo": "09.31",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-11-10-klo-0847-1054.md",
+     "sanat": "ei tehdä koskaan mittauksia iPhoneilla, koska tarvitsen itse sitä. Tehdään kaikki mittaukset vain sillä isolla iPadilla.",
+     "sha": "6d2f68c16ab75320",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.103Z"
+    },
+    {
+     "pvm": "17.10.2026",
+     "klo": "14.50",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-10-17-klo-1213-1634.md",
+     "sanat": "Ei mitata iphonella. Ipadilla voi. Se on vanhempi ipad niin sopii hyvin",
+     "sha": "df0fb702645f5ad8",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.205Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-06",
+   "nimi": "Selkeä varoitus ennen nollauksen alkua",
+   "roolit": [
+    "KK"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "09.02",
+     "lahde": "P-261117-18",
+     "sanat": "kun jatkossa olet nollaamassa itseäsi, niin tee selkeä viesti ja kirjoita se vaikka kapitaaleilla ja käytä jotain muitakin merkkejä, jotta huomaan varmasti, kun olet aloittamassa nollauksen, että en vahingossa kirjoita sinulle enää siihen sessioon.",
+     "sha": "54d696f7e3295e2d",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.315Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-07",
+   "nimi": "Äänitykset aina suomi pakotettuna",
+   "roolit": [
+    "ÄÄ",
+    "KK"
+   ],
+   "vartija": "tarkistettava (ääniportti)",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "9.11.2026",
+     "klo": "16.20",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-11-09-klo-1423-1714.md",
+     "sanat": "kaikki Pariisin kohteiden nimet, kuten Notre Dame ja näin poispäin, pitää äänittää uudestaan suomeksi pakotettuna ja äänittää yhtenä ottona, jotta kaikki nimet varmasti äänetään suomen kielellä.",
+     "sha": "a303f105180b7986",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.423Z"
+    },
+    {
+     "pvm": "17.10.2026",
+     "klo": "23.03",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-10-17-klo-2250-0007.md",
+     "sanat": "pidä huoli että jatkossa aina suomi pakotettuna",
+     "sha": "6c4b57df53ee49c2",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.529Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-08",
+   "nimi": "Lataus samalla tavalla Wi-Fillä ja mobiilissa",
+   "roolit": [
+    "NS",
+    "JU",
+    "PT"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "4.10.2026",
+     "klo": "14.5x",
+     "lahde": "docs/raamattu-loki/paatokset-2026-09.md",
+     "sanat": "tee lataus samalla tavalla riippumatta onko wifiä vai ei. olen sanonut tästä jo monta kertaa että ei tehdä eroa näiden kahden välillä. kirjoita tämä selkeästi raamattuun jotta tämä ei enää toistu.",
+     "sha": "3d7b66e81eef9c10",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.638Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-09",
+   "nimi": "Työtä ei lykätä kellon mukaan",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "osin (PT:n lepovahti)",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "16.11.2026",
+     "klo": "23.59",
+     "lahde": "P-261116-28",
+     "sanat": "Tuo aika ajattelu pitää lopettaa. Se on tuottanut ennenkin ongelmia. Vai miten tämä ei toistuisi jatkossa?",
+     "sha": "0385a4543bf478c8",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.789Z"
+    }
+   ],
+   "muutokset": []
+  },
+  {
+   "tunnus": "S-10",
+   "nimi": "Ideat koko maailman kannalta",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "08.57",
+     "lahde": "P-261117-17",
+     "sanat": "Tuo linssi idea, kuten kaikki kehitys ideat, pitää miettiä laajemmin Koko maailman kannalta vaikka nyt tehdään pariisia",
+     "sha": "ed67ed175a264e3e",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:06.898Z"
+    },
+    {
+     "pvm": "3.11.2026",
+     "klo": "18.42",
+     "lahde": "/Users/Shared/Claude/keskustelut/Keskustelukanava-2026-11-03-klo-1735-1955.md",
+     "sanat": "kannattaa nyt jo alusta asti alkaa miettimään, mitä kartan osia voi hyödyntää muissakin kaupungeissa.",
+     "sha": "99ade6784961af57",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T11:14:07.000Z"
+    }
+   ],
+   "muutokset": []
+  }
+ ]
+}

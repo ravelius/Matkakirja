@@ -139,7 +139,7 @@ const palvelin = http.createServer(async (req, res) => {
     res.end(vastaus.body);
     return;
   }
-  const tiedosto = join(JUURI, polku === '/' ? 'index.html' : polku);
+  const tiedosto = join(JUURI, polku === '/' ? 'pelaa.html' : polku);
   if (!existsSync(tiedosto)) { res.writeHead(404); res.end(); return; }
   let sisalto = readFileSync(tiedosto);
   // Ämpäri paikalliseen peiliin: vain js/pallo.js tuntee laattaosoitteet.

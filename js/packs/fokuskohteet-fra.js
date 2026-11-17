@@ -94,32 +94,178 @@ export const FOKUSKOHTEET_FRA = [
     nimio: 'Tuileries',
     tyyppi: 'historia',
     symboli: 'historia',
+    // Pulun kysymykset kolme (Tuileries-koe 8.1, KK 11.16).
     kysymykset: [
       'Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?',
+      'Minne muualle palatsin palat päätyivät?',
       'Mitä palatsin paikalla on nykyään?',
     ],
-    korostukset: ['Katariina de Medici|Katariina de Medicin',
-      'Pariisin kommuuni|Pariisin kommuunin'],
+    // Näkyvät muodot jaksojen tekstistä (Tuileries-koe 17.11.2026).
+    korostukset: ['Katariina de Medici', 'Pariisin kommuuni'],
     nappi: 'Palatsi, jonka isoisä näki raunioina',
     laudat: {
       maailmankartta: { x: 5911.1, y: 1439.4 },
       europe: { x: 256.0, y: 608.5 },
     },
-    teksti: 'Tuileries\'n palatsi seisoi Seinen oikealla rannalla '
-      + 'suoraan Louvren länsipuolella ja sulki sen suuren pihan '
-      + 'lännestä. Rakennustyöt alkoivat 1564 kuningatar Katariina de '
-      + 'Medicin asunnoksi, ja vuosisatojen mittaan kasvanut julkisivu '
-      + 'venyi 266 metrin pituiseksi. Palatsi oli useimpien Ranskan '
-      + 'hallitsijoiden pariisilainen koti Henrik neljännestä Napoleon '
-      + 'kolmanteen. Pariisin kommuunin kukistamisen aikaan 23. '
-      + 'toukokuuta 1871 kaksitoista miestä sytytti sen palamaan '
-      + 'petrolilla, tervalla ja tärpätillä; tuli paloi 48 tuntia ja '
-      + 'poltti rakennuksen sisältä tyhjäksi. Kivimuurit jäivät '
-      + 'kuitenkin pystyyn, ja rauniot seisoivat paikallaan yksitoista '
-      + 'vuotta ennen kuin ne 1882 päätettiin purkaa.',
-    lahde: 'en-Wikipedia "Tuileries Palace", johdanto, tietolaatikko ja '
-      + 'osio "Destruction during the Paris Commune" (tarkistettu '
-      + '27.8.2026).',
+    // teksti lasketaan jaksoista tiedoston lopussa (Tuileries-koe).
+    // Tuileries-koe (KK 11.38): jaksojen lähteet SK:n raportin kohdasta 2 (kaksi itsenäistä lähdettä per väite).
+    // Lähdeaineisto: docs/raportit/tuileries-koe-teksti-20261117.md (ei pelaajalle näkyvään tekstiin).
+    lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Mérimée PA00099072, paris.fr ja Louvre '
+      + '(tarkistettu 17.11.2026).',
+    /*
+     * JAKSOT (TUILERIES-KOE; omistaja 17.11.2026 klo 10.58 ja 10.51, KK 11.11
+     * ja 11.16; suunnitelma scratchpad/keskustelukanava/suunnitelmat/
+     * 20261117-nostot-tarinoiksi.md luku 8, sitova). Nosto kuunneltavana,
+     * kuvitettuna tarinana: isoisän lause ja neljä kertojan jaksoa (8.1),
+     * seitsemän kuvaa (8.2), tahdistus jaksoista ja tekstikohdista (8.3).
+     * jaksot[].teksti on ainoa luettava teksti; kuva, toinen kuva
+     * (`lisakuva` tekstikohdassa), vuosirivit, hologrammi ja karttapiste
+     * luetaan samasta jaksosta. `kohta` = sana tai lause jakson tekstistä
+     * (tasan kerran), jonka kohdalla asia tapahtuu. Muoto ja tarkistus:
+     * tests/noston-jaksot.test.mjs. Kulkee pakettiin raakamoduulina
+     * (moduulit/js/packs/fokuskohteet-fra.json); natiivi NostoJaksot.Lue.
+     *
+     * Tekstit, vuosirivit, kysymys ja kuvat: Sisältökirjurin lähdetarkistettu
+     * raportti docs/raportit/tuileries-koe-teksti-20261117.md (PR 6983), KK
+     * hyväksyi 17.11. klo 11.24. Lähdetaulukko raportin kohdassa 2.
+     * `teksti` lasketaan jaksoista (alla tiedoston lopussa), jotta
+     * vanha esitys ja lehti näyttävät saman tekstin, kunnes esitys lukee
+     * jaksot. Syvennystarina `tuileriat` (fokusvirta-pariisi.js) ja sen
+     * kopio (nahtavyysjutut.js) poistettu: pisteellä on yksi nosto.
+     */
+    // Tarinan otsikko (SK:n raportti, KK 11.24): kertoja lukee sen ensimmäisen kertojan jakson alussa; lehti käyttää sitä.
+    otsikko: 'Tuileries 1871 — palatsi, joka myytiin kivinä',
+    /*
+     * Äänitteet (Äänittäjä 17.11.2026, KK:n äänityssana 11.29; avain PK
+     * 17.11. 11.4x, KK 11.32 "vienti kun avain sovittu"): ämpäri
+     * äänikansion polku <aanikansio>/<aanite>.mp3 ja .sanat.json (sanakohtaiset ajat).
+     * Versiokansio on muuttumaton: uusi otto → v2 ja uusi aanikansio tähän.
+     * Kertojan ensimmäinen äänite sisältää otsikon.
+     */
+    aanikansio: 'tuileries-koe/v1',
+    jaksot: [
+      {
+        osa: 'koukku',
+        aanite: 'isoisa',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kävelin tänään poltetun palatsin ohi. Katto on '
+          + 'poissa, ja ikkuna-aukoista näkyy pelkkää taivasta.',
+        kuva: 'raunio1873',
+      },
+      {
+        osa: 'tapahtuma',
+        aanite: 'kertoja-1-otsikko-jakso2',
+        teksti: 'Kaksi vuotta aiemmin, toukokuussa 1871, Pariisin kommuuni oli '
+          + 'kukistumassa. Sen kannattajat sytyttivät Tuileries\'n palatsin. '
+          + 'Tuli paloi yli kaksi vuorokautta ja poltti talon sisältä tyhjäksi.',
+        kuva: 'palo',
+        vuodet: [{ vuosi: '1871', selite: 'palatsi sytytetään', kohta: 'toukokuussa 1871' }],
+      },
+      {
+        osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso3',
+        teksti: 'Palatsi oli seissyt Louvren vieressä yli kolmesataa vuotta. '
+          + 'Kuningatar Katariina de Medici aloitti sen, ja siitä tuli Ranskan '
+          + 'hallitsijoiden koti Pariisissa. Palon jälkeen kivimuurit jäivät '
+          + 'pystyyn, vaikka katto ja sisustus olivat poissa. Poltettu '
+          + 'kaupungintalo rakennettiin uudelleen, Tuileries\'ta ei.',
+        kuva: 'loisto',
+        lisakuva: { kuva: 'rauniot1871', kohta: 'Palon jälkeen' },
+        vuodet: [{ vuosi: '1564', selite: 'rakentaminen alkaa' }],
+      },
+      {
+        osa: 'kaanne',
+        aanite: 'kertoja-3-jakso4',
+        teksti: 'Tuileries seisoi katottomana yli kymmenen vuotta. Sitten kolmas '
+          + 'tasavalta päätti purkaa sen. Purkuyrittäjä myi kiviä ja marmoria, '
+          + 'ja suuresta erästä rakennettiin linna Korsikalle.',
+        kuva: 'purku',
+        lisakuva: { kuva: 'punta', kohta: 'rakennettiin linna Korsikalle' },
+        hologrammi: 'sammuu',
+        hologrammiKohta: 'päätti purkaa',
+        vuodet: [
+          { vuosi: '1882', selite: 'purkupäätös', kohta: 'päätti purkaa' },
+          { vuosi: '1883', selite: 'purku valmis', kohta: 'päätti purkaa' },
+        ],
+      },
+      {
+        osa: 'tanaan',
+        aanite: 'kertoja-4-jakso5',
+        teksti: 'Palatsin paikalla on nyt avointa tilaa Louvren ja puutarhan '
+          + 'välissä. Yksi sen paloista seisoo yhä Pariisissa: keskipaviljongin '
+          + 'päätykolmio on puistossa nimeltä Square Georges Cain.',
+        kuva: 'paatykolmio',
+        // Piste fr-Wikipedia "Square Georges-Cain" (48°51′29″N 2°21′46″E).
+        kartta: { nimi: 'Square Georges Cain', lat: 48.8581, lon: 2.3628 },
+      },
+    ],
+    /*
+     * jaksokuvat: avain → kuva (`kuvat` on kohteilla jo kuvalista). Kuvatekstit
+     * ja lajit SK:n raportin kohta 7, kuvat 3, 6 ja 7 kohdat 4–5 (KK valitsi).
+     * `tulossa` = tilattu (osoite vielä null): esitys näyttää paikkamerkin.
+     */
+    jaksokuvat: {
+      raunio1873: {
+        osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
+        laji: 'havainnekuva',
+        lyhyt: 'Poltetun palatsin rauniot vuonna 1873',
+        lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
+      },
+      palo: {
+        osoite: null, tulossa: 'Codex', laji: 'havainnekuva',
+        lyhyt: 'Tuileries palaa, toukokuu 1871',
+        lahde: 'Matkakirjan havainnekuva (tilaus 8.4 A)',
+      },
+      loisto: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Tuileries\'n palatsi loistoaikanaan',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+          + 'aikanaan. Faktat: Musée du Louvre, tarkistettu 5.9.2026.',
+      },
+      rauniot1871: {
+        tiedosto: "Vue des Tuileries après l'incendie de 1871, PH83415.jpg",
+        laji: 'valokuva',
+        lyhyt: 'Palatsin rauniot palon jälkeen',
+        lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
+      },
+      purku: {
+        osoite: null, tulossa: 'Codex', laji: 'havainnekuva',
+        lyhyt: 'Palatsin purku ja kivien myynti',
+        lahde: 'Matkakirjan havainnekuva (tilaus 8.4 B)',
+      },
+      punta: {
+        // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
+        osoite: 'https://media.matkakirja.app/kuvat/la-punta.jpg',
+        tiedosto: 'La-punta.JPG',
+        laji: 'valokuva',
+        lyhyt: 'Château de la Punta, Korsika',
+        lahde: 'Patricia Ripnel, Wikimedia Commons (CC BY-SA 3.0)',
+      },
+      paatykolmio: {
+        // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
+        osoite: 'https://media.matkakirja.app/kuvat/georges-cain-05.jpg',
+        tiedosto: 'Georges-cain-05.JPG',
+        laji: 'valokuva',
+        lyhyt: 'Päätykolmio, Square Georges Cain',
+        lahde: 'Marais, Wikimedia Commons (CC BY-SA 3.0)',
+      },
+    },
+    /*
+     * KYSYMYS (KK 17.11.2026 11.24; SK:n raportti kohta 1): vanha visa
+     * ("Mihin kivet päätyivät?") ei enää käy, koska kuva 6 näyttää vastauksen.
+     */
+    visa: {
+      kysymys: 'Mitä Tuileries\'n palatsista jäi pystyyn palon jälkeen?',
+      vaihtoehdot: [
+        'Kivimuurit',
+        'Katto ja kupoli',
+        'Vain keskipaviljonki',
+      ],
+      oikea: 0,
+      fakta: 'Tulipalo vei palatsin katon ja sisustan, mutta kivimuurit jäivät '
+        + 'pystyyn; kaupungintalokin rakennettiin uudelleen.',
+    },
     /*
      * TYÖNJAKO SYVENNYSTARINAN KANSSA (1.9.2026, nostojen sisältöaudit).
      * Samasta palatsista, samasta vuoden 1871 palosta ja samasta
@@ -249,3 +395,15 @@ export const FOKUSKOHTEET_FRA = [
     },
   },
 ];
+
+/*
+ * TUILERIES-KOE: kohteen `teksti` = jaksot kappaleina (isoisän lause
+ * ensimmäisenä, antaa "Kaksi vuotta aiemmin" -alulle ajan). Yksi lähde: vanha esitys, lehti
+ * (js/lehtinostot.js) ja Pulun konteksti lukevat saman tekstin kuin
+ * jaksoesitys.
+ */
+for (const kohde of FOKUSKOHTEET_FRA) {
+  if (Array.isArray(kohde.jaksot) && kohde.teksti == null) {
+    kohde.teksti = kohde.jaksot.map((j) => j.teksti).join('\n\n');
+  }
+}

@@ -2249,7 +2249,7 @@ export function linssiEstaaChatin(doc = (typeof document === 'undefined' ? null 
  *
  * *"Kehittäjätilassa yläpalkissa saa olla vain YKSI nappi"*, ja se
  * kytkee maailmannäkymän. PAIKKA VAIHTUI 29.8.2026: kytkin muutti
- * ylärivin irtonapista kehittäjän hammasratasvalikkoon (index.html
+ * ylärivin irtonapista kehittäjän hammasratasvalikkoon (pelaa.html
  * #kehittaja-valikko), jolloin ylärivissä on yhä yksi kuvake ja
  * valikossa kolme kehittäjän työkalua. Tunniste, avain ja merkitys
  * ovat entiset:
@@ -2444,7 +2444,7 @@ const LAUTA_AVAIN = 'matkakirja-lauta';
  *      (LAUDAT tuntee vain pallon) — lautaValinta palauttaa aina
  *      'pallo';
  *   2. päävalikon Pelilauta-rivit ja ratasvalikon pallolauta-vipu ovat
- *      piilossa (index.html, js/main.js);
+ *      piilossa (pelaa.html, js/main.js);
  *   3. tasokartan moduuli ei lataudu millään polulla
  *      (js/kartta-lataus.js lataaTasokartta, js/ui.js varmistaKartta);
  *   4. pallon turvatila ja varapolku EIVÄT enää pudota tasokartalle
@@ -2781,7 +2781,7 @@ export function asetaLaatuAina(paalla, win = globalThis) {
  * iOS-KUORESSA (ios/), jossa ei ole osoiteriviä: ilman muistipaikkaa
  * kerroksia ei voi sammuttaa sovelluksessa lainkaan, eikä vikaa siis
  * voi rajata siellä missä se näkyy. Kytkin on ratasvalikossa
- * (index.html, js/main.js) ja tallettaa valinnan laitteelle; URL voittaa
+ * (pelaa.html, js/main.js) ja tallettaa valinnan laitteelle; URL voittaa
  * muistin kuten muissakin kehittäjän vivuissa.
  */
 export const LAATTAKERROS_AVAIN = 'matkakirja-laattakerros';

@@ -51,7 +51,7 @@ test('ambienssi ja siirtymämusiikki kertovat tasonsa kehittäjän kertoimella',
   // js/musiikkivalitsin.js:n musiikinKerroin()-funktion kautta; sitä
   // vartioi tests/musiikin-kerroin.test.mjs.
   assert.match(lue('../js/siirtymamusiikki.js'), /raidanTaso = [\s\S]{0,160}musiikinKerroin\(\)/);
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   /*
    * TAUSTAÄÄNI ON LIUKU MUIDEN ÄÄNENTASOJEN JOUKOSSA (omistaja
    * 11.9.2026: *"taustaääni on oudosti erillään muista

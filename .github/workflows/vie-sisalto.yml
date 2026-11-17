@@ -38,6 +38,7 @@ on:
       - 'css/**'
       - 'assets/**'
       - 'index.html'
+      - 'pelaa.html'
       - 'tools/vienti/**'
       # Skeema 1.59: natiivin asetukset (kokoelmat/asetukset.json).
       - 'data/asetukset.json'

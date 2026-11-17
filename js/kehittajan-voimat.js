@@ -23,7 +23,7 @@
  * Kerroin 1,0 = pelin nykyinen taso; +/- liikuttaa sitä askelittain
  * (ASKEL) rajojen sisällä. Arvo tallennetaan localStorageen, joten
  * kuulokoe säilyy sivun latauksen yli. Säädin on vain kehittäjätilan
- * hammasratasvalikossa (index.html #kehittaja-valikko), mutta kerroin
+ * hammasratasvalikossa (pelaa.html #kehittaja-valikko), mutta kerroin
  * luetaan aina — tavallisella pelaajalla se on 1,0, koska hän ei pääse
  * sitä muuttamaan.
  *
@@ -37,7 +37,7 @@ export const KEHITTAJAN_VOIMA_LAJIT = /** @type {const} */ (['tausta']);
  * ALARAJA ON NOLLA ELI AITO HILJAISUUS (omistaja 11.9.2026:
  * *"taustaääni on oudosti erillään muista äänisäätimistä"*). Taustaääni
  * on nyt tavallinen 0–100 %:n liuku muiden äänentasojen joukossa
- * (index.html #aanivoimat), ja silloin sen pitää vaieta kokonaan kuten
+ * (pelaa.html #aanivoimat), ja silloin sen pitää vaieta kokonaan kuten
  * tehosteiden, pulun ja lukijan liukujen. Entinen 0,25 oli +/-
  * askeltimen alaraja, jossa hiljaisinkin asento oli vain −12 dB.
  */

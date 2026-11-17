@@ -35,7 +35,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const osa = decodeURIComponent(req.url.split('?')[0]);
-  const polku = join(JUURI, osa === '/' ? 'index.html' : osa);
+  const polku = join(JUURI, osa === '/' ? 'pelaa.html' : osa);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -218,7 +218,7 @@ for (const r of musa) {
  * lajilla asetin palauttaa ykkösen tekemättä mitään). Vartio siis mittasi
  * kutsua, joka ei koskenut mihinkään, ja kaatui aina — se ei kertonut
  * musiikin säätimestä enää mitään. Säädin on nyt 0–100:n liuku
- * (index.html #kehittaja-musiikki-liuku, js/musiikkivalitsin.js), ja
+ * (pelaa.html #kehittaja-musiikki-liuku, js/musiikkivalitsin.js), ja
  * oletusasento on 35, joten 10 on selvästi alempi ja 100 selvästi ylempi.
  */
 const saada = async (arvo) => {

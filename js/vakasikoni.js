@@ -7,11 +7,11 @@
  * on oma yläpalkkinsa."*
  *
  * MIKSI OMA MODUULI. Sama kuvake piirretään kolmessa paikassa:
- * pelin päävalikossa (index.html #menu-btn), vaakapuhelimen
+ * pelin päävalikossa (pelaa.html #menu-btn), vaakapuhelimen
  * yläpalkkinapissa (js/ylapalkki-vaaka.js) ja linssien omassa
  * valikossa (js/aikajana-valikko.js). Kolme kopiota samasta
  * polkumerkkijonosta eriytyisi ensimmäisessä hienosäädössä; nyt
- * muutos tehdään kerran. index.html on staattista HTML:ää eikä voi
+ * muutos tehdään kerran. pelaa.html on staattista HTML:ää eikä voi
  * tuoda tätä, joten sen kopio vartioidaan testillä
  * (tests/vakasikoni.test.mjs).
  *
@@ -27,7 +27,7 @@
 
 /** Yksi V riviä kohden, ylhäältä alas. */
 /**
- * TAVALLINEN HAMPURILAINEN — sama polku kuin index.html #menu-btn.
+ * TAVALLINEN HAMPURILAINEN — sama polku kuin pelaa.html #menu-btn.
  * Omistaja 21.9.2026 (Raamatun loki "BUGI: IPADIN YLAPALKKI POISSA MYOS
  * PYSTYASENNOSSA; HAMPURILAINEN VS VAKASET"): *"aina kun on ylapalkki,
  * niin silloin siina on normaali hampurilainen ja vain kun ylapalkkia

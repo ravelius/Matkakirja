@@ -174,7 +174,7 @@ function mockPollo(req, res) {
 }
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   if (suhteellinen === 'mock-pollo') { mockPollo(req, res); return; }
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
@@ -277,7 +277,7 @@ const KAUPUNGIT = [
 
 /* ==================== peli käyntiin ==================== */
 
-await sivu.goto('http://127.0.0.1:8741/index.html', { waitUntil: 'load' });
+await sivu.goto('http://127.0.0.1:8741/pelaa.html', { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')]

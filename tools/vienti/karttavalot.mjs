@@ -44,6 +44,7 @@ import { MAASTOKOHTEET_ATA } from '../../js/packs/maastokohteet-ata.js';
 import { MAASTOKOHTEET_ARK } from '../../js/packs/maastokohteet-ark.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
+import { TAGI_KUVAUS, johdaTagi } from './tagit.mjs';
 
 const pyorista = (a) => (a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null);
 /*
@@ -147,9 +148,11 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const [paikka, paikkaLahde] = rivi.paikka ? [rivi.paikka, rivi.lahde === 'napakohde' ? 'alue' : 'data']
       : kaupunkiNimet.has(rivi.kaupunkiAvain) ? [kaupunkiNimet.get(rivi.kaupunkiAvain), 'kaupunki']
         : maaNimi(rivi.maa) ? [maaNimi(rivi.maa), 'maa'] : [null, null];
-    const { _iso: alkuIso, ...loput } = rivi;
+    const { _iso: alkuIso, _tagi: omaTagi, ...loput } = rivi;
     if (alkuIso && alkuIso !== rivi.maa) ALKU_ISO.set(id, alkuIso);
-    rivit.push({ ankkuri: null, puoli: null, ...loput, id, paikka, paikkaLahde });
+    // Skeema 1.72: nostovalikon aihetagi (tools/vienti/tagit.mjs); datan oma kohde.tagi voittaa.
+    const tagi = johdaTagi({ tagi: omaTagi ?? null, aihe: rivi.aihe }, `karttavalo ${id}`);
+    rivit.push({ ankkuri: null, puoli: null, ...loput, id, paikka, paikkaLahde, tagi });
   };
   const kaupunkiKohteelle = (k) => (tarkeydet.has(k?.kaupunki) ? k.kaupunki : (tarkeydet.has(k?.id) ? k.id : null));
   /*
@@ -193,7 +196,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
         tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (kohde.taso ?? 1),
         taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
         lahizoom: Boolean(kohde.lahi), paakartalla: true, kohdekartta: kk?.kaupunki ?? null,
-        paikka: lahdePaikka(m.id, kohde), lahde,
+        paikka: lahdePaikka(m.id, kohde), lahde, _tagi: kohde.tagi,
       });
     }
   }
@@ -239,7 +242,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       id, tunnus, aihe, kategoria, laji: kohde.tyyppi ?? null, nimi: kohde.nimi || kohde.nimio || tunnus, nimio: null, ...pyorista({ lat: kk.lat, lon: kk.lng }),
       ladottu: null, maa, kaupunki: lahde === 'fokuskohde' ? kaupunkiKohteelle(kohde) : null, kaupunkiAvain: kk.kaupunki,
       tarkeys: kohde.taso ?? 1, taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
-      lahizoom: false, paakartalla: false, kohdekartta: kk.kaupunki, paikka: lahdePaikka(tunnus, kohde), lahde,
+      lahizoom: false, paakartalla: false, kohdekartta: kk.kaupunki, paikka: lahdePaikka(tunnus, kohde), lahde, _tagi: kohde.tagi,
     });
   }
   const k = taulukko('js/pallolauta/nostot.js keraa (maanKohdemerkit + eläintäyt + navat) + kohdekartanNostopaikat',
@@ -259,7 +262,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       + 'web karsii sen pääkartalta, js/fokuskohteet.js karsiKaupunkikartanNostot). lahizoom = näkyy vasta lähizoomissa (Ranskan '
       + 'pilotti, kohde.lahi). taso = webin nostotaso 1–3, tarkeys 0–3 (kaupunkivalolle kaupungit.tarkeys, muuten kohteen taso '
       + 'tai 1). kaupunki = valo on laudan kaupunki (fokuskohde), kaupunkiAvain = noston kaupunkijäsenyys (nostonKaupunkiAvain '
-      + 'tai kohdekartan kaupunki). Sama maastokohde voi olla usean maan valona (id ~2, ~3), kuten webissä maittain. viuhka = true (valinnainen, skeema 1.68): nostolla ei ole omaa paikkaa kaupungissa, se avautuu kaupunkimerkin viuhkasta.',
+      + 'tai kohdekartan kaupunki). Sama maastokohde voi olla usean maan valona (id ~2, ~3), kuten webissä maittain. viuhka = true (valinnainen, skeema 1.68): nostolla ei ole omaa paikkaa kaupungissa, se avautuu kaupunkimerkin viuhkasta. ' + TAGI_KUVAUS,
     { kaupunki: 'kaupungit', kaupunkiAvain: 'kaupungit', kohdekartta: 'kohdekartat' }, rivit);
   return { kokoelma: k, haeKohde, luokittele: (t) => luokittele(t, kohdeIdt), ratkeamatta };
 }
@@ -389,10 +392,15 @@ export function rikastaKohdekartat(kohdekartat, haeKohde, luokitteleTunnus) {
         const aihe = kategoria ? nostosymPaakategoria(kategoria) : null;
         linkkeja++; if (aihe) aiheellisia++;
         const { lahde } = luokitteleTunnus(tunnus);
-        return { tunnus, laji: lahde, aihe, kategoria, nimi: k?.nimi ?? null };
+        const tagi = johdaTagi({ tagi: k?.tagi ?? null, aihe }, `${kartta.id} ${kohde.nimi} linkki ${tunnus}`);
+        return { tunnus, laji: lahde, aihe, kategoria, nimi: k?.nimi ?? null, tagi };
       });
       // Liuska ja pääkartan karsinta käyttävät ensimmäistä tunnusta.
       kohde.aihe = kohde.linkit[0]?.aihe ?? null;
+      // Skeema 1.72: kohteen tagi = datan oma (maakartat.js kohteet[].tagi), tarinapaikalla merkin mukaan, muuten
+      // ensimmäisen linkin tagi (null = nähtävyys ilman tagia; SK antaa sen datassa).
+      kohde.tagi = johdaTagi({ tagi: kohde.tagi ?? null, merkki: kohde.merkki, tarinapaikka: kohde.tarinapaikka },
+        `${kartta.id} ${kohde.nimi}`) ?? kohde.linkit[0]?.tagi ?? null;
     }
   }
   kohdekartat.kuvaus = kohdekartat.kuvaus.replace('nosto = nähtävyysjutun tunniste (nahtavyydet-kokoelma)',
@@ -400,7 +408,8 @@ export function rikastaKohdekartat(kohdekartat, haeKohde, luokitteleTunnus) {
     + ' Skeema 1.24: linkit = nosto-tunnukset tyypitettyinä [{ tunnus, laji (fokuskohde | skandaalit | historianHetket | '
     + 'syvennys | takynosto | maalehtinosto), aihe (karttavalon aihe kuten webin kaupunkiliuskassa: kohteenKategoria → '
     + 'nostosymPaakategoria), kategoria (symboli), nimi }], aihe = ensimmäisen linkin aihe (null = ei linkkiä). Sama nosto on '
-    + 'karttavalot-kokoelmassa (tunnus; paakartalla false, jos se on vain kohdekartalla).';
+    + 'karttavalot-kokoelmassa (tunnus; paakartalla false, jos se on vain kohdekartalla). Kohteella ja linkillä '
+    + TAGI_KUVAUS.replace('tagi (skeema 1.72)', 'tagi (skeema 1.72; kohteella datan oma, tarinapaikalla merkin mukaan, muuten ensimmäisen linkin)');
   return { linkkeja, aiheellisia };
 }
 

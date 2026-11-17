@@ -22,6 +22,16 @@ pienin ensin; omistajan vikahavainnot 0). Kullakin tekijällä enintään yksi "
   … seuraava [TEKIJA]          (tulostaa roolittain: nyt, seuraavat 2; ei kirjoita)
 - valmis vapauttaa myös roolin: jos rivi oli työn alla, seuraava jonossa-rivi nousee työn alle.
 - OTSIKKO löytyy tarkasti tai yksikäsitteisellä osamerkkijonolla (isoilla/pienillä ei väliä); muuten virhe ja ehdokkaat.
+AVOIMET ASIAT (suunnitelma 20261117-muisti-ilman-uudelleenkertomista, luku 5 ja pala 3): tyolista.json:n avain "asiat" on kirjanpito
+siitä, mitä joku odottaa ja mitä sitten tehdään. Rivi kirjoitetaan kerran; myöhemmin vain merkitään tai suljetaan näytöllä.
+  … avaa --kuka KK --laji LUPAUS --mita "…" [--odottaa "…"] [--sitten "…"] --sana omistaja:P-261117-55 [--rivi "OTSIKKO"]
+  … merkitse A-261117-1 "lisätieto"                 (lisää merkinnän; alkuperäistä tekstiä ei voi muuttaa)
+  … sulje A-261117-1 --naytto "PR #7010 / sha / polku / versio 224.3 / kerrottu omistajalle klo 12.40 / peruttu: <lähde>"
+  … avoimet [--kuka X] [--laji Y] [--vanhat PV] [--suljetut]      … tila [--kuka KK]   (aloitusnäkymä ≤ 6 kt; ei kirjoita)
+- Lajit: ODOTTAA, KATSO, LUPAUS, KYSYMYS, EHTO. Lähde (--sana) pakollinen: omistaja:P-yymmdd-n, omistaja:pp.kk.[vvvv] [klo ]hh.mm,
+  KK:<päiväkirjan tunnus> tai rooli:<nimi>. Ilman lähdettä avaa hylätään; EHTO ilman omistajan lähdettä tulostuu "KK:n oma ehto".
+- Sulkeminen vaatii näytön: polku, sha (7–40 heksaa), PR (#N), versio/juna/TF N, "kerrottu omistajalle klo hh.mm" tai
+  "peruttu: <lähde>". Asia-komennot eivät muuta työlistan ts:ää (vanhenemisvahti katsoo työlistan rivejä).
 Junavaihe ajetaan ensin: jos juna.py hylkää, työlistaan ei kirjoiteta mitään. Ylätason ts päivitetään nykyhetkeen.
 Tallennus: .tmp + os.replace + copymode, tarkistus ennen tallennusta. Paluukoodi 0 = ok, 1 = hylätty, 2 = käyttövirhe.
 """
@@ -66,6 +76,63 @@ def omistajalle_teksti(t):
     if not t or len(t.split()) > 12:
         raise Virhe("--omistajalle: 1–12 sanaa (nyt %d)" % len(t.split()))
     return t
+
+
+ASIA_LAJIT = ("ODOTTAA", "KATSO", "LUPAUS", "KYSYMYS", "EHTO")
+ASIA_KOMENNOT = ("avaa", "merkitse", "sulje", "avoimet", "tila")
+ASIA_TUNNUS_RE = re.compile(r"^A-\d{6}-\d+$")
+MITA_MAX = 160
+KENTTA_MAX = 160
+MERKINTA_MAX = 300
+TILA_RAJA = 6000  # tavua (UTF-8): tila-näkymän yläraja (suunnitelma luku 5: ≤ 6 kt)
+TILA_RIVI_MAX = 200
+VANHA_PV = 3
+# Lähteet (luku 5 ja 7): omistajan sana vaatii P-tunnuksen tai päivän ja kellonajan; muut ovat roolin omia.
+SANA_OMISTAJA_RE = re.compile(r"omistaja:\s*(P-\d{6}-\d+|\d{1,2}\.\d{1,2}\.(?:\d{4})?\s+(?:klo\s+)?\d{1,2}[.:]\d{2})")
+SANA_MUU_RE = re.compile(r"(KK|rooli):\s*([^\s:][^\n]{0,79})")
+NAYTTO_RE = (
+    re.compile(r"\bPR\s*#?\d+|#\d{2,}", re.I),
+    re.compile(r"\b(?=[0-9a-f]*\d)(?=[0-9a-f]*[a-f])[0-9a-f]{7,40}\b"),  # sha
+    re.compile(r"[\w.~-]*/[\w.\-]+|\b[\w-]+\.(?:md|py|mjs|js|json|jsonl|cs|swift|png|jpg|webp|txt|log|zsh|sh|html|ipa)\b"),  # polku
+    re.compile(r"\b(?:versio|juna|TF)\s*\d+|\b\d{3}\.\d+\b", re.I),
+    re.compile(r"kerrottu omistajalle\s+(?:\d{1,2}\.\d{1,2}\.(?:\d{4})?\s+)?klo\s+\d{1,2}[.:]\d{2}", re.I),
+)
+
+
+def lahde(sana, tarkka=True):
+    """Tarkistaa lähteen. Palauttaa (laji, tunnus): ("omistaja", "P-…"), ("KK", "bck") tai ("rooli", "NS"); muuten Virhe."""
+    sana = " ".join(str(sana or "").split())
+    for rx in (SANA_OMISTAJA_RE, SANA_MUU_RE):
+        m = rx.fullmatch(sana) if tarkka else rx.match(sana)
+        if m:
+            return ("omistaja", m.group(1)) if rx is SANA_OMISTAJA_RE else (m.group(1), m.group(2).strip())
+    raise Virhe("lähde puuttuu tai on väärän muotoinen (%r); sallitut: omistaja:P-261117-55, omistaja:17.11. klo 12.26, "
+                "KK:<päiväkirjan tunnus>, rooli:<nimi>" % sana)
+
+
+def lahde_teksti(sana):
+    try:
+        laji, tunnus = lahde(sana)
+    except Virhe:
+        return "[LÄHDE PUUTTUU]"
+    return "[OMISTAJA %s]" % tunnus if laji == "omistaja" else "[KK:n oma, %s]" % tunnus if laji == "KK" else "[%s:n oma]" % tunnus
+
+
+def naytto_ok(naytto):
+    """Sulkemisen näyttö; 'peruttu' vaatii sanan lähteen."""
+    n = " ".join(str(naytto or "").split())
+    if n.lower().startswith("peruttu"):
+        lahde(n.split(":", 1)[1] if ":" in n else "", tarkka=False)
+        return n
+    if not n or not any(rx.search(n) for rx in NAYTTO_RE):
+        raise Virhe("näyttö puuttuu (%r): anna polku, sha, PR (#N), versio/juna/TF N, 'kerrottu omistajalle klo hh.mm' "
+                    "tai 'peruttu: <lähde>'" % n)
+    return n
+
+
+def lyhyt(t, n):
+    t = " ".join(str(t or "").split())
+    return t if len(t) <= n else t[:n - 1].rstrip() + "…"
 
 
 def etsi_kansio(arg):
@@ -118,6 +185,45 @@ def tarkista(tl):
     for t, o in sorted(tyossa.items()):
         if len(o) > 1:
             virheet.append("tekijällä %s on %d työn alla -riviä (enintään 1): %s" % (t, len(o), " | ".join(o)))
+    return virheet + tarkista_asiat(tl.get("asiat"))
+
+
+def tarkista_asiat(asiat):
+    """Avointen asioiden rakenne: tunnus yksikäsitteinen, laji, kuka, mita ≤ 160, lähde, suljettu vain näytöllä."""
+    if asiat is None:
+        return []
+    if not isinstance(asiat, list):
+        return ["tyolista.json: 'asiat' pitää olla lista"]
+    virheet, nahty = [], set()
+    for i, a in enumerate(asiat):
+        if not isinstance(a, dict):
+            virheet.append("asia %d: ei objekti" % i)
+            continue
+        t = str(a.get("tunnus", ""))
+        p = "asia %s" % (t or i)
+        if not ASIA_TUNNUS_RE.match(t):
+            virheet.append("%s: tunnus pitää olla A-yymmdd-n" % p)
+        elif t in nahty:
+            virheet.append("%s: tunnus kahdesti" % p)
+        nahty.add(t)
+        if a.get("laji") not in ASIA_LAJIT:
+            virheet.append("%s: laji pitää olla %s" % (p, " / ".join(ASIA_LAJIT)))
+        if not str(a.get("kuka", "")).strip():
+            virheet.append("%s: kuka puuttuu" % p)
+        mita = a.get("mita")
+        if not isinstance(mita, str) or not mita.strip() or len(mita) > MITA_MAX:
+            virheet.append("%s: mita pitää olla 1–%d merkkiä" % (p, MITA_MAX))
+        try:
+            lahde(a.get("sana"))
+        except Virhe as e:
+            virheet.append("%s: %s" % (p, e))
+        if isinstance(a.get("avattu"), bool) or not isinstance(a.get("avattu"), (int, float)):
+            virheet.append("%s: avattu pitää olla aika (ms)" % p)
+        if not isinstance(a.get("merkinnat", []), list):
+            virheet.append("%s: merkinnat pitää olla lista" % p)
+        s = a.get("suljettu")
+        if s is not None and (not isinstance(s, dict) or not str(s.get("naytto", "")).strip()):
+            virheet.append("%s: suljettu ilman näyttöä" % p)
     return virheet
 
 
@@ -223,6 +329,8 @@ def toiminta(args):
     if args.komento == "seuraava":
         tulosta_jonot(tl, args.tekija)
         return 0
+    if args.komento in ASIA_KOMENNOT:
+        return asiakomento(args, tl, polku, nyt_s, nyt)
     if args.komento == "lisaa":
         otsikko = " ".join(args.otsikko.split())
         if any(avain(r.get("otsikko", "")) == avain(otsikko) and not str(r.get("tila", "")).lower().startswith("valmis")
@@ -291,8 +399,11 @@ def toiminta(args):
             rivi["omistaja_vaihe"] = args.vaihe
             if args.versio:
                 rivi["omistaja_versio"] = args.versio
-            elif args.vaihe != "valmis":
+            elif args.vaihe != "valmis" or args.versio == "":
                 rivi.pop("omistaja_versio", None)
+            elif rivi.get("omistaja_versio"):
+                # JU 17.11. (KK 09.15, PT): valmis ilman --versio pitää vanhan version; kerrotaan, ettei se jää huomaamatta
+                print("HUOM: rivin '%s' versio %s säilyy (uusi: --versio 224.N, tyhjennys: --versio '')" % (nimi, rivi["omistaja_versio"]))
             print("%s: %s%s" % (nimi, args.vaihe, " (%s)" % args.versio if args.versio else ""))
         elif args.komento == "jono":
             if args.tekija is not None:
@@ -327,6 +438,152 @@ def toiminta(args):
         raise Virhe("tarkistin hylkäsi muutoksen, mitään ei tallennettu:\n" + "\n".join("  VIRHE: " + v for v in virheet))
     kirjoita(polku, tl)
     print("%s: ok (%s)" % (nimi[:60], args.komento))
+    return 0
+
+
+def uusi_tunnus(asiat, nyt_s):
+    t = time.localtime(nyt_s)
+    etu = "A-%02d%02d%02d-" % (t.tm_year % 100, t.tm_mon, t.tm_mday)
+    loput = [str(a.get("tunnus", ""))[len(etu):] for a in asiat if isinstance(a, dict) and str(a.get("tunnus", "")).startswith(etu)]
+    return etu + str(max([int(x) for x in loput if x.isdigit()] or [0]) + 1)
+
+
+def etsi_asia(asiat, tunnus):
+    for a in asiat:
+        if isinstance(a, dict) and str(a.get("tunnus", "")).casefold() == str(tunnus).strip().casefold():
+            return a
+    raise Virhe("asiaa '%s' ei löydy (avoimet: tyolista.py avoimet)" % tunnus)
+
+
+def avoimet_asiat(asiat, kuka=None, laji=None):
+    return [a for a in asiat if isinstance(a, dict) and not a.get("suljettu")
+            and (not kuka or avain(a.get("kuka", "")) == avain(kuka)) and (not laji or a.get("laji") == laji)]
+
+
+def ika_pv(a, nyt_s):
+    return (nyt_s - (a.get("avattu") or 0) / 1000.0) / 86400.0
+
+
+def asiarivi(a, nyt_s, n=TILA_RIVI_MAX):
+    """Yksi asia yhdelle riville (≤ n merkkiä): tunnus, mitä, odottaa, sitten, viimeisin merkintä, lähde, avauspäivä."""
+    lahdeosa = lahde_teksti(a.get("sana"))
+    if a.get("laji") == "EHTO" and not lahdeosa.startswith("[OMISTAJA"):
+        lahdeosa = lahdeosa.replace(" oma", " oma ehto", 1)  # luku 5 sääntö 2: "KK:n oma ehto", ei koskaan omistajan nimellä
+    merk = a.get("merkinnat") or []
+    hanta = " %s %s%s" % (lahdeosa, aikaleima((a.get("avattu") or 0) / 1000.0).split(" ")[0], " +%d" % len(merk) if merk else "")
+    osat = [str(a.get("mita", ""))]
+    if a.get("odottaa"):
+        osat.append("odottaa: " + str(a["odottaa"]))
+    if a.get("sitten"):
+        osat.append("→ " + str(a["sitten"]))
+    if merk:
+        osat.append("viimeksi: " + str(merk[-1].get("teksti", "")))
+    alku = "%s " % a.get("tunnus")
+    return alku + lyhyt(" · ".join(osat), max(20, n - len(alku) - len(hanta))) + hanta
+
+
+def tila_osiot(asiat):
+    """Aloituksen näkymän osiot tärkeysjärjestyksessä (luku 5): SINÄ, KATSO NYT, LUPAUKSET, ODOTTAA, EHDOT; uusin ensin."""
+    def omistajaa(a):
+        return a.get("laji") == "KYSYMYS" or "omistaj" in str(a.get("odottaa", "")).casefold()
+    osiot = [("SINÄ (odottaa omistajaa)", [a for a in asiat if omistajaa(a)])]
+    for nimi, laji in (("KATSO NYT", "KATSO"), ("LUPAUKSET", "LUPAUS"), ("ODOTTAA", "ODOTTAA"), ("EHDOT", "EHTO")):
+        osiot.append((nimi, [a for a in asiat if not omistajaa(a) and a.get("laji") == laji]))
+    return [(n, sorted(r, key=lambda a: -(a.get("avattu") or 0))) for n, r in osiot]
+
+
+def tila_teksti(asiat, kuka, nyt_s, raja=TILA_RAJA):
+    """Tila-näkymä ≤ raja tavua: liian pitkästä pudotetaan ensin yli 3 pv vanhat (alimmasta osiosta, vanhin ensin),
+    sitten muut samassa järjestyksessä; pudotetut näkyvät osion lopussa lukuna."""
+    osiot = tila_osiot(asiat)
+    pois = set()
+
+    def kokoa():
+        rivit = ["TILA %s %s: %d avointa asiaa (%s)" % (kuka or "kaikki", aikaleima(nyt_s), len(asiat),
+                 ", ".join("%s %d" % (n.split(" ")[0], len(r)) for n, r in osiot))]
+        for n, r in osiot:
+            if not r:
+                continue
+            rivit += ["", "%s:" % n]
+            rivit += ["– " + asiarivi(a, nyt_s, TILA_RIVI_MAX - 2) for a in r if id(a) not in pois]
+            puuttuu = [a for a in r if id(a) in pois]
+            if puuttuu:
+                vanhat = sum(1 for a in puuttuu if ika_pv(a, nyt_s) > VANHA_PV)
+                rivit.append("– ja %d muuta%s (tyolista.py avoimet%s)" % (
+                    len(puuttuu), ", niistä %d yli %d päivää vanhaa" % (vanhat, VANHA_PV) if vanhat else "",
+                    " --kuka " + kuka if kuka else ""))
+        return "\n".join(rivit) + "\n"
+    jarj = [a for _, r in reversed(osiot) for a in reversed(r)]  # alin osio ja vanhin ensin
+    jono = [a for a in jarj if ika_pv(a, nyt_s) > VANHA_PV] + [a for a in jarj if ika_pv(a, nyt_s) <= VANHA_PV]
+    teksti = kokoa()
+    for a in jono:
+        if len(teksti.encode("utf-8")) <= raja:
+            break
+        pois.add(id(a))
+        teksti = kokoa()
+    return teksti
+
+
+def asiakomento(args, tl, polku, nyt_s, nyt):
+    """avaa, merkitse, sulje (kirjoittavat; työlistan ts ei muutu) sekä avoimet ja tila (vain tuloste)."""
+    asiat = tl.setdefault("asiat", [])
+    if args.komento == "tila":
+        sys.stdout.write(tila_teksti(avoimet_asiat(asiat, args.kuka), args.kuka, nyt_s))
+        return 0
+    if args.komento == "avoimet":
+        if args.suljetut:
+            rivit = [a for a in asiat if isinstance(a, dict) and a.get("suljettu") and (not args.kuka or avain(a.get("kuka", "")) == avain(args.kuka))
+                     and (not args.laji or a.get("laji") == args.laji)]
+        else:
+            rivit = avoimet_asiat(asiat, args.kuka, args.laji)
+        if args.vanhat is not None:
+            rivit = [a for a in rivit if ika_pv(a, nyt_s) > args.vanhat]
+        for a in sorted(rivit, key=lambda a: (ASIA_LAJIT.index(a["laji"]) if a.get("laji") in ASIA_LAJIT else 9, -(a.get("avattu") or 0))):
+            print("%s %s: %s" % (a.get("laji"), a.get("kuka"), asiarivi(a, nyt_s, 400)))
+            if args.suljetut:
+                print("    suljettu %s: %s" % (aikaleima(a["suljettu"].get("ts", 0) / 1000.0), a["suljettu"].get("naytto")))
+        print("%d %s" % (len(rivit), "suljettua" if args.suljetut else "avointa"))
+        return 0
+    if args.komento == "avaa":
+        mita = " ".join(args.mita.split())
+        if not mita or len(mita) > MITA_MAX:
+            raise Virhe("--mita: 1–%d merkkiä (nyt %d); kirjoita lyhyesti, yksityiskohdat merkintöinä" % (MITA_MAX, len(mita)))
+        if not args.kuka.strip():
+            raise Virhe("--kuka puuttuu (KK, PT tai rooli)")
+        lahde(args.sana)
+        for k in ("odottaa", "sitten"):
+            if getattr(args, k) and len(" ".join(getattr(args, k).split())) > KENTTA_MAX:
+                raise Virhe("--%s: enintään %d merkkiä" % (k, KENTTA_MAX))
+        if any(avain(a.get("mita", "")) == avain(mita) and avain(a.get("kuka", "")) == avain(args.kuka) for a in avoimet_asiat(asiat)):
+            raise Virhe("sama asia on jo auki (%s); lisää merkintä: tyolista.py merkitse <tunnus> \"…\"" % mita[:60])
+        asia = {"tunnus": uusi_tunnus(asiat, nyt_s), "avattu": nyt, "kuka": args.kuka.strip(), "laji": args.laji, "mita": mita,
+                "sana": " ".join(args.sana.split())}
+        for k in ("odottaa", "sitten"):
+            if getattr(args, k):
+                asia[k] = " ".join(getattr(args, k).split())
+        if args.rivi:
+            asia["rivi"] = etsi_rivi(tl, args.rivi)["otsikko"]
+        asia["merkinnat"] = []
+        asiat.append(asia)
+        tulos = "%s: avattu %s" % (asia["tunnus"], lahde_teksti(asia["sana"]))
+    else:
+        asia = etsi_asia(asiat, args.tunnus)
+        if asia.get("suljettu"):
+            raise Virhe("%s on jo suljettu (%s); uusi asia: tyolista.py avaa" % (asia["tunnus"], asia["suljettu"].get("naytto")))
+        if args.komento == "merkitse":
+            teksti = " ".join(args.teksti.split())
+            if not teksti or len(teksti) > MERKINTA_MAX:
+                raise Virhe("merkintä: 1–%d merkkiä" % MERKINTA_MAX)
+            asia.setdefault("merkinnat", []).append({"ts": nyt, "teksti": teksti})
+            tulos = "%s: merkitty" % asia["tunnus"]
+        else:  # sulje
+            asia["suljettu"] = {"ts": nyt, "naytto": naytto_ok(args.naytto)}
+            tulos = "%s: suljettu" % asia["tunnus"]
+    virheet = tarkista(tl)
+    if virheet:
+        raise Virhe("tarkistin hylkäsi muutoksen, mitään ei tallennettu:\n" + "\n".join("  VIRHE: " + v for v in virheet))
+    kirjoita(polku, tl)
+    print(tulos)
     return 0
 
 
@@ -375,6 +632,27 @@ def main(argv):
     s.add_argument("teksti")
     s.add_argument("--juna", type=int)
     s.add_argument("--juna-kohta", dest="juna_kohta")
+    s = sub.add_parser("avaa", help="uusi avoin asia (lähde pakollinen)")
+    s.add_argument("--kuka", required=True, help="kuka seuraa: KK, PT tai rooli")
+    s.add_argument("--laji", required=True, type=str.upper, choices=ASIA_LAJIT)
+    s.add_argument("--mita", required=True, help="≤ 160 merkkiä, kirjoitetaan kerran")
+    s.add_argument("--odottaa", help="keneltä tai mitä")
+    s.add_argument("--sitten", help="mitä tehdään, kun se tulee")
+    s.add_argument("--sana", default="", help="lähde: omistaja:P-…, omistaja:pp.kk. klo hh.mm, KK:<tunnus>, rooli:<nimi>")
+    s.add_argument("--rivi", help="työlistan rivin otsikko (tai yksikäsitteinen osa)")
+    s = sub.add_parser("merkitse", help="lisää merkinnän avoimeen asiaan")
+    s.add_argument("tunnus")
+    s.add_argument("teksti")
+    s = sub.add_parser("sulje", help="sulkee asian näytöllä")
+    s.add_argument("tunnus")
+    s.add_argument("--naytto", required=True)
+    s = sub.add_parser("avoimet", help="avoimet asiat (ei kirjoita)")
+    s.add_argument("--kuka")
+    s.add_argument("--laji", type=str.upper, choices=ASIA_LAJIT)
+    s.add_argument("--vanhat", type=float, help="vain yli N päivää vanhat")
+    s.add_argument("--suljetut", action="store_true")
+    s = sub.add_parser("tila", help="aloituksen näkymä ≤ 6 kt (ei kirjoita)")
+    s.add_argument("--kuka")
     for sp in sub.choices.values():
         sp.add_argument("--kansio", default=argparse.SUPPRESS)
         sp.add_argument("--tiedosto", default=argparse.SUPPRESS)

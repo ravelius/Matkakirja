@@ -101,7 +101,7 @@ VASTAUS: Odotas vähän. Alankomaat on pieni maa, mutta se vie paljon: tuoretta 
 ### v1-380
 KOHDE: kaupunki:amsterdam
 KYSYMYS: Miksi Amsterdamin talot ovat kapeita ja kallellaan?
-VASTAUS: Hyvä kysymys tuo. Amsterdamin kanavatalot ovat usein kapeita, ja yleinen selitys on, että vero perustui talon julkisivun leveyteen, joten kapea talo oli halvempi. Monessa talossa on myös ullakolla koukku, jolla huonekaluja nostettiin ulkokautta, koska portaikot ovat jyrkkiä. Siksi talot saatetaan rakentaa hieman eteenpäin kallellaan. Kaupunki on rakennettu pehmeälle maalle, joten talot seisovat puupaalujen varassa, ja kanavat kuten [[Herengracht]] ja [[Keizersgracht]] kuuluvat Unescon maailmanperintöön. Puun varaan voi rakentaa pitkälle, jos tietää miten.
+VASTAUS: Hyvä kysymys tuo. Amsterdamin kanavatalot ovat usein kapeita, ja usein kerrotaan, että vero perustui talon julkisivun leveyteen, mutta historiantutkijat epäilevät sitä. Joka tapauksessa tontit olivat kapeita ja syviä. Monessa talossa on myös ullakolla koukku, jolla huonekaluja nostettiin ulkokautta, koska portaikot ovat jyrkkiä. Siksi talot saatetaan rakentaa hieman eteenpäin kallellaan. Kaupunki on rakennettu pehmeälle maalle, joten talot seisovat puupaalujen varassa, ja kanavat kuten [[Herengracht]] ja [[Keizersgracht]] kuuluvat Unescon maailmanperintöön. Puun varaan voi rakentaa pitkälle, jos tietää miten.
 
 ### v1-381
 KOHDE: kaupunki:amsterdam

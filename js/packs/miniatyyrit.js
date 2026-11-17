@@ -151,7 +151,6 @@ export const MINIATYYRIT = {
     'Piaf ja Django': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
     'Patonki 1994': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
     // Ämpäritunnus: kuva tilataan erikseen (ei generointia ilman lupaa); puuttuva kuva putoaa varatäpläksi.
-    'Bukinistit 1859': 'pariisi-bukinistit-1859',
     'Kaulanauha 1785': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {
@@ -189,15 +188,8 @@ export const MINIATYYRIT = {
     'Neljäs jalusta': 'assets/kartat/miniatyyrit/lontoo-neljas-jalusta.webp',
     Turbiinihalli: 'assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp',
     // Liukumäkiveistos pois (KK 13.11.2026): Orbit on pääkartalla, ei kohdekartalla.
-    // Ämpäritunnus: kuva tilataan erikseen (ei generointia ilman lupaa); puuttuva kuva putoaa varatäpläksi.
-    'Savusumu 1952': 'lontoo-savusumu-1952',
-    // Lontoon 3 tarinapaikkaa (KK 14.11.2026): ämpäritunnus, kuva tilataan erikseen; puuttuva kuva putoaa varatäpläksi.
-    'Händel ja Hendrix': 'lontoo-handel-hendrix-brook-street',
-    'Johnson 1755': 'lontoo-johnsonin-sanakirja-1755',
-    'Punch 1662': 'lontoo-punch-pepys-1662',
-    // Baird ja sähkötin (KK 15.11.2026): ämpäritunnus, kuva tilataan erikseen; puuttuva kuva putoaa varatäpläksi.
-    'Baird 1926': 'lontoo-baird-televisio-1926',
-    'Sähkötin 1837': 'lontoo-sahkotin-euston-1837',
+    // Tarinapaikat ilman miniatyyriä (KK 17.11.2026 klo 10.43 ja 10.49): Händel ja Hendrix, Johnson 1755, Baird 1926 ja
+    // Sähkötin 1837 (ei kuvaa, ei korvaajaa); Savusumu 1952 ja Punch 1662 (jutun oma Commons-kuva kelpaa).
   },
   // Eurooppa-erä 1 (omistajan tilaus 15.8.2026: "Lisää kartta
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
@@ -266,7 +258,7 @@ export const MINIATYYRIT = {
     Saliera: 'wien-saliera-vari2',
     'Beethoven 1824': 'assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
     'Mozart 1786': 'assets/kartat/miniatyyrit/wien-figaro-1786.webp',
-    'Rattaan kulmat': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
+    'Praterin jättiratas': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',  // ent. Rattaan kulmat (KK 16.11.2026); kuva ennallaan
     Lipizzanit: 'assets/kartat/miniatyyrit/wien-lipizzanit.webp',
     Taikahuilu: 'assets/kartat/miniatyyrit/wien-taikahuilu.webp',
     'Tonava kaunoinen': 'assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
@@ -303,6 +295,10 @@ export const MINIATYYRIT = {
     Kissalaiva: 'assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
     'Herengracht 537': 'assets/kartat/miniatyyrit/amsterdam-herengracht-537.webp',
     Yövartio: 'assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
+    // Portugalilainen synagoga ja Montelbaanstoren (KK 16.11.2026): ämpäritunnus, kuva tilataan erikseen;
+    // puuttuva kuva putoaa varatäpläksi (sama tapa kuin Lontoon Baird 1926).
+    'Portugalilainen synagoga': 'amsterdam-portugalilainen-synagoga',
+    Montelbaanstoren: 'amsterdam-montelbaanstoren',
   },
   tukholma: {
     'Kustaa III:n ooppera': 'assets/kartat/miniatyyrit/tukholma-kustaa-iiin-ooppera.webp',  // kadonnut ihme (31.10.2026)

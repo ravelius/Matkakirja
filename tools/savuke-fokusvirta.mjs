@@ -115,7 +115,7 @@ function korvaaLippu(lahde, etsi, tilalle) {
 }
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   let sisalto = readFileSync(polku);
@@ -150,7 +150,7 @@ const vaadi = (nimi, ok, lisa = '') => {
 
 /** Peli käyntiin ja nappula Ateenaan, laatta kääntämättä. */
 async function ateenaan() {
-  await sivu.goto('http://127.0.0.1:8739/index.html', { waitUntil: 'load' });
+  await sivu.goto('http://127.0.0.1:8739/pelaa.html', { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')]

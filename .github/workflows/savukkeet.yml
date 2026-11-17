@@ -21,7 +21,7 @@
 #    itse noden ja selaimen GitHubin koneille.
 #
 # SAVUKKEITA AJETAAN MAHDOLLISIMMAN VÄHÄN: pull_request-laukaisu on
-# rajattu pelikoodin poluille (index.html, sw.js, js/**, css/**,
+# rajattu pelikoodin poluille (index.html, pelaa.html, sw.js, js/**, css/**,
 # tools/savukkeet/**, tämä työnkulku) — dokumentti- tai raporttimuutos
 # ei enää käynnistä savukkeita. workflow_dispatch antaa ajaa minkä
 # tahansa sarjan (sarjat.json:n lista, kaikki savuke-*.mjs:t tai
@@ -175,7 +175,7 @@ jobs:
       #
       # YKSIKÄÄN SAVUKE EI LUE docs/-KANSIOTA: tarkistettu
       # `grep -l "docs/" tools/savukkeet/*.mjs` — osumat ovat pelkkiä
-      # lähdeviitteitä alkukommenteissa. Peli itse (index.html, js/,
+      # lähdeviitteitä alkukommenteissa. Peli itse (pelaa.html, js/,
       # css/, sw.js) ei myöskään avaa docs/-polkuja ajossa.
       # Savukkeet-työnkulun pull_request-polkusuodatin ei edes käynnisty
       # docs-muutoksesta.
