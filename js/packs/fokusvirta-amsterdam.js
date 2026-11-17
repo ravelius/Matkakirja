@@ -279,7 +279,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
    * Timantit: höyry 1800-luvun puolivälin tienoilta (korjattu 17.11.; DM + PIE14 + nl-WP), ei 1848/1860-lukuja, ei
    * Kimberleyä 1870, ei Euroopan suurinta, ei 1875, ei 10 000 eikä 70 %.
    * Amsterdam-laiva: yli 330 ihmistä, yli 20 arkkua, runsas kuukausi,
-   * satoja vapaaehtoisia. Yövartio: lakka poistettiin 1940-luvulla ja taulu puhdistettiin 1975–76 (korjattu 17.11.).
+   * satoja vapaaehtoisia. Yövartio: lakka poistettiin osittain 1946–47 ja loput 1975–76 (korjattu 17.11., KK 18.55).
    * Kapein talo: viisi metriä syvä; julkisivuvero kerrottu legendana.
    * Alla olevat FAKTAT-kommentit ovat alkuperäisiltä ajoilta (1.9.2026).
    */
@@ -1506,7 +1506,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'näytti.',
         'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
           + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; '
-          + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.',
+          + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; osa siitä poistettiin vasta 1946–47 ja loput 1975–76.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum (objektisivu, lehdistötiedote ja Bulletin 1976) ja National Gallery',
       kuva: {
