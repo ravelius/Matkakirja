@@ -17,6 +17,7 @@ SÄÄNNÖT:
 12. Tripolta ladataan vain peliin hyväksytyt mallit. [R-11.6]
 13. Pelissä oleva kohtaus videoidaan pelistä; vain olematon hetki renderöidään Codexilla. [R-4.21]
 14. Olemattomia patsaita ei generoida: Paljasta-tehtävässä joukossa on oikea patsas toisesta kaupungista, ja pelaaja osoittaa vieraan. [P-261113-6]
+15. Grafiikka on kehityksen kärjessä: lähinäkymään runsaasti yksityiskohtia (maamateriaalit, suihkulähteet ym.); raskaus ei ole este, koska lähellä liikutaan hitaasti. [P-261117-113]
 
 EI VIKA:
 - Valmiit Tripo-mallit jäävät, vaikka rakennukset ovat koodia.

@@ -17,6 +17,7 @@ SÄÄNNÖT:
 12. Kuvan päällä ei ole tekstiä: kulma, versio ja kummankin puolen m/px omalle raidalle. Yksittäinen kuva menee raakana, selitys viestiin. Kohde vähintään 300 px. [R-4.48] [R-9.10]
 13. Asennussivulla työ näkyy kokonaisuuksina (KK päivittää versioittain), roolien rivit pienenä harmaana. [P-261113-17]
 14. Iso muutospyyntö välitetään PT:lle heti, ja KK suunnittelee sen ennen työnjakoa. Hänen tekstinsä menee peliin sanatarkasti. [R-7.48] [R-7.26]
+15. Valmiit kuvat (esim. nukkekoti) näytetään omistajalle heti, ei erillisen kysymyksen kautta. [P-261117-112]
 
 EI VIKA:
 - KK:n päätös ilman korttia ei ole luvaton.
