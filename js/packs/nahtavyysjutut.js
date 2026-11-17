@@ -4882,7 +4882,7 @@ export const NAHTAVYYSJUTUT = {
         + 'koulutukseen Heldenbergiin tai Wieniin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
-        + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+        + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: Piberin siitostila oli perustettu jo 1798, mutta lipizzanien kasvatus siirtyi sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
         + 'hovitallista nykyisessä Sloveniassa.',
       vuodet: [
         { kohta: 'rakennettiin 1729 ja 1735', vuosi: '1729–1735', selite: 'sali rakennettiin' },
@@ -4913,7 +4913,7 @@ export const NAHTAVYYSJUTUT = {
         + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
         + 'jälkeen.'
         + '\n\n'
-        + 'Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+        + 'Schikaneder rakennutti uuden teatterin, ja Theater an '
         + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
         + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.'
         + '\n\n'
