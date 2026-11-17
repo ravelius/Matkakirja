@@ -3876,6 +3876,16 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Old St Paul\'s': {
+      aika: '1087–1666',
+      teksti: 'Old St Paul\'s oli Lontoon keskiaikainen katedraali Ludgate Hillillä. Sen rakentaminen alkoi vuonna 1087 edellisen kirkon palon jälkeen, ja se valmistui vuonna 1314.'
+        + '\n\n'
+        + 'Katedraalin torni paloi vuonna 1561. Lontoon suuri palo tuhosi koko rakennuksen vuonna 1666. Sen tilalle rakennettiin Christopher Wrenin suunnittelema nykyinen St Paulin katedraali, joka valmistui vuonna 1710.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteen sataan vuoteen.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Museum of London',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -4647,6 +4657,26 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Johann Strauss Society, AEIOU, ORF Wien, vienna.at ja Wikidata',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Vanha Burgtheater': {
+      aika: '1741–1888',
+      teksti: 'Vanha Burgtheater oli Wienin hoviteatteri Michaelerplatzilla Hofburgin vieressä. Teatteri aloitti Hofburgin entisessä palloilusalissa vuonna 1741.'
+        + '\n\n'
+        + 'Viimeinen esitys oli 12. lokakuuta 1888, kun uusi Burgtheater oli valmistunut Ringstraßelle. Vanha rakennus purettiin Hofburgin laajennuksen, Michaelertraktin, tieltä.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 vanha teatteri oli vielä käytössä. Uusi talo Ringillä avattiin vasta viidentoista vuoden päästä.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Wikipedia',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    Heinrichshof: {
+      aika: '1863–1954',
+      teksti: 'Heinrichshof oli Wienin Opernringillä, oopperataloa vastapäätä, seissyt vuokratalokompleksi, jonka ulkoasu oli palatsimainen. Teollisuusmies Heinrich Drasche rakennutti sen arkkitehti Theophil Hansenilla, ja talo avattiin vuonna 1863. Sen kulmat nousivat muuta rakennusta korkeammiksi, ja pohjakerroksessa oli liikkeitä ja kahvila.'
+        + '\n\n'
+        + 'Liittoutuneiden ilmahyökkäyksessä 12. maaliskuuta 1945 talo paloi pahoin. Raunio purettiin 1950-luvulla, ja paikalla on nykyään Opernringhof.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 Heinrichshof oli ollut valmis jo kymmenen vuotta.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Austria-Forum (AEIOU) ja Wikipedia',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -7807,6 +7837,16 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Oneindig Noord-Holland, Andere Tijden ja Ons Amsterdam',
     },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Vanha raatihuone': {
+      aika: '–1652',
+      teksti: 'Amsterdamin vanha raatihuone oli kaupungin raatihuone Damin aukiolla, nykyisen Kuninkaanpalatsin lähellä.'
+        + '\n\n'
+        + 'Vanha raatihuone paloi 7. heinäkuuta 1652. Uuden raatihuoneen rakentaminen Jacob van Campenin suunnitelmin oli alkanut jo vuonna 1648, ja se vihittiin käyttöön vuonna 1655. Se on nykyinen Kuninkaanpalatsi.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 vanhasta raatihuoneesta oli kulunut yli 220 vuotta, ja uusi raatihuone toimi kuninkaanpalatsina.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
+    },
   },
   dublin: {
     'Guinness-panimo': {
@@ -10751,6 +10791,16 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Platner & Ashby (1929), Turismo Roma ja Elizabeth Marlowen tutkimus',
+    },
+    // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
+    'Porto di Ripetta': {
+      aika: '1704–1800-luvun loppu',
+      teksti: 'Porto di Ripetta oli Tiberin rannalla Rooman keskustassa seissyt jokisatama. Paavi Clemens XI:n tilaama Alessandro Specchi suunnitteli sen, ja se valmistui vuonna 1704. Satamassa kaksi kaarevaa portaikkoa laskeutui laitureille, ja keskellä oli suihkulähde, jossa juotettiin kuormaeläimiä. Rakennukseen käytettiin travertiinia Colosseumin sortuneista osista.'
+        + '\n\n'
+        + 'Satamaan tuotiin Tiberin yläjuoksulta puutavaraa ja viiniä pienillä aluksilla.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 satama oli vielä paikallaan. Se purettiin 1800-luvun lopulla, kun Tiberin rannoille rakennettiin tulvamuurit.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Innamorati di Roma',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
