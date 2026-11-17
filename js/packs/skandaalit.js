@@ -3591,9 +3591,9 @@ export const SKANDAALIT = {
         + 'syytetyt vapautettiin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
-        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
-        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
-        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'Romana oli jo olemassa: se oli alun perin paavinvaltion pankki, ja '
+        + 'se otti vanhan nimensä Banca Romana takaisin, kun Rooma oli '
+        + 'liitetty Italiaan vuonna 1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
         + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
       lahde: 'Matkakirjan oma teksti · lähteinä Treccani, Banca d\'Italia ja Filodiritto. Tarkistettu 17.11.2026.',
       kuva: {
