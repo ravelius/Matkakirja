@@ -7853,9 +7853,9 @@ export const NAHTAVYYSJUTUT = {
     // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
     'Vanha raatihuone': {
       aika: '–1652',
-      teksti: 'Amsterdamin vanha raatihuone oli kaupungin raatihuone Damin aukiolla, nykyisen Kuninkaanpalatsin lähellä.'
+      teksti: 'Amsterdamin vanha raatihuone oli kaupungin raatihuone Damin aukiolla.'
         + '\n\n'
-        + 'Vanha raatihuone paloi 7. heinäkuuta 1652. Uuden raatihuoneen rakentaminen Jacob van Campenin suunnitelmin oli alkanut jo vuonna 1648, ja se vihittiin käyttöön vuonna 1655. Se on nykyinen Kuninkaanpalatsi.'
+        + 'Vanha raatihuone paloi 7. heinäkuuta 1652. Uuden raatihuoneen rakentaminen Jacob van Campenin suunnitelmin oli alkanut jo vuonna 1648. Se on nykyinen Kuninkaanpalatsi.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 vanhan raatihuoneen palosta oli kulunut yli 220 vuotta, ja uusi raatihuone toimi kuninkaanpalatsina.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
