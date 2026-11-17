@@ -356,7 +356,7 @@ test('lehteen jätetyllä hetkellä on kirjattu syy', () => {
     ['amundsen-etelanapa-1911', 'beethoven-yhdeksas-1824', 'berliinin-muuri-1961',
       'britannian-lippu-nikosiassa-1878', 'brooklyn-bridge-1883',
       'brunel-thames-tunnel-1827', 'christiansborgin-palo-1884',
-      'darwin-galapagos-1835', 'eiffel-torni-1888', 'faraday-luento-1831',
+      'darwin-galapagos-1835', 'faraday-luento-1831',
       'fleming-malja-1928', 'franz-ferdinandin-salamurha-1914',
       'kolumbus-portugali-1484', 'konstantinopoli-1453', 'lavoisier-laboratorio-1780',
       'lontoon-palo-1666', 'lumiere-elokuva-1895', 'marie-curie-hangaari-1898',

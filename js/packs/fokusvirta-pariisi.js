@@ -454,6 +454,9 @@ export const FOKUSVIRTA_PARIISI = {
    * tästä kentästä, jotta Ranskan muut kaupungit (Marseille) näkevät
    * samat täyt kuin ennenkin.
    *
+   * LUSTIG 1925 (`lustig-eiffel`) POISTETTU 17.11.2026: tarina on nyt pääkartan kohteen `eiffel-torni` jaksoissa
+   * (js/packs/fokuskohteet-fra.js, yksi paikka = yksi nosto). Poolin kärki on siitä lähtien seuraava täky.
+   *
    * MAAN KUPLATÄKY ON POOLIN KÄRKI: Livia huomauttaa tuikkivista
    * pisteistä kerran, ja huomio osuu poolin ensimmäiseen
    * katsomattomaan. Järjestys on siksi säilytetty muuttumattomana.
@@ -466,87 +469,6 @@ export const FOKUSVIRTA_PARIISI = {
    * sitä ei muuteta täällä.
    */
   takynostot: [
-    {
-      /*
-       * MAAN KUPLATÄKY (poolin kärki, ks. yllä).
-       *
-       * takynostot-ranska.md, ehdokas 2 (VARMA). Aineiston sanamuoto
-       * noudatettu: lähde ei anna toiselle yritykselle kuukautta, joten
-       * teksti sanoo "samana vuonna".
-       *
-       * VALOKUVAA EI OLE. Aineiston ainoa tarkistettu tiedosto on
-       * Lustigin pidätyskuva, ja aineisto jättää sen käytön
-       * nimenomaisesti päätoimittajan ratkaistavaksi (*"Fablen on
-       * päätettävä, sopiiko poliisikuva pelin sävyyn"*). Sitä päätöstä
-       * ei tehdä tässä — 28.8.2026 lisätty pääkuva on repon oma
-       * havainnekuva eikä koske poliisikuvaan mitenkään, joten tämä
-       * nosto jää ainoaksi ilman `valokuva`-kakkoskuvaa.
-       */
-      id: 'lustig-eiffel',
-      nimio: 'Lustig 1925',
-      otsikko: 'Lustig 1925 — Eiffel-torni myydään romuksi',
-      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
-      symboli: 'huuto',
-      visa: {
-        kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
-        vaihtoehdot: [
-          'Hän häpesi',
-          'Hän sai rahansa takaisin',
-          'Hän ei huomannut huijausta',
-        ],
-        oikea: 0,
-        fakta: 'Lustig palasi Pariisiin saman vuoden 1925 puolella ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
-      },
-      lunastus: [
-        'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
-          + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi '
-          + 'väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon '
-          + 'romukauppiaita luottamukselliseen kokoukseen kalliiseen '
-          + 'hotelliin ja esittäytyi posti- ja lennätinministeriön '
-          + 'varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia '
-          + 'on arkaluontoinen eikä siitä saa puhua.',
-        'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
-          + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-          + 'kauppasumman. Sitten hän pakeni '
-          + 'Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut '
-          + 'poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman '
-          + 'vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa '
-          + 'joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
-      ],
-      lahde: 'en-Wikipedia "Victor Lustig", osio Eiffel-tornin huijauksesta '
-        + '(tarkistettu 25.8.2026).',
-      /*
-       * PÄÄKUVA (28.8.2026, sama malli kuin Sofian areenalla ja
-       * v1307:n neljällä nostolla): repon oma generoitu havainnekuva,
-       * jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä on
-       * `osoite` eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
-       *
-       * Kuva ei esitä tornia vaan HETKEN, jossa se myytiin: hotellin
-       * salonki, väärennetyt kirjelomakkeet pöydällä ja torni vain
-       * ikkunan takana. Lähderivi sanoo sen itse, jottei kukaan lue
-       * kuvaa valokuvaksi tapahtumasta.
-       */
-      kuva: {
-        osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
-        lyhyt: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat kuuntelemassa, torni takana.',
-        selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, '
-          + 'romukauppiaat kuuntelemassa ja torni ikkunan takana.',
-        lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
-      },
-      kysymykset: [
-        'Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?',
-        'Miksi huijauksen uhri ei ilmoittanut poliisille?',
-        'Oliko Eiffel-tornin purkamisesta oikeasti puhetta?',
-      ],
-      // 48,85822222 N / 2,2945 E — en-Wikipedia "Eiffel Tower".
-      paikka: {
-        nimi: 'Eiffel-torni',
-        laudat: {
-          maailmankartta: { x: 5909.8, y: 1439.5 },
-          europe: { x: 255.3, y: 608.6 },
-        },
-      },
-    },
     {
       /*
        * ELÄINNOSTO. takynostot-ranska.md, ehdokas 3 (VARMA). Aineiston
@@ -973,7 +895,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'tehtiin näkyviin uudelleen 1980-luvun lopulla.',
       },
       // Eiffel-torni 48,85822 N / 2,2945 E — sama piste kuin nostolla
-      // `lustig-eiffel` (en-Wikipedia "Eiffel Tower").
+      // `lustig-eiffel` (nyt kohde `eiffel-torni`; en-Wikipedia "Eiffel Tower").
       paikka: {
         nimi: 'Eiffel-torni',
         laudat: {

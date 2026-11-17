@@ -5371,7 +5371,8 @@ export const KAUPUNKIKARTAT = {
        * 48,8462/2,3464 on rakennuksen tunnettu sijainti.
        */
       // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
-      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: ['nosto-pariisin-72-nimea', 'hetki-eiffel-torni-1888', 'nosto-lustig-eiffel'] },
+      // Yksi merkki: Eiffel-tornin tarina (nähtävyys + Eiffel-torni 1888 + Lustig 1925) on kohteen `eiffel-torni` jaksot (fokuskohteet-fra.js).
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: ['eiffel-torni', 'nosto-pariisin-72-nimea'] },
       { nimi: 'Riemukaari', tagi: 'historia', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', tagi: 'historia', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {

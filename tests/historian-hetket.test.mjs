@@ -83,10 +83,11 @@ function lehtisivu(hetki) {
   return (sivut ?? []).find((s) => s.id === `hetki-${hetki.id}`) ?? null;
 }
 
-test('hetkiä on 67 ja jokaisella on kortin kentät', () => {
+test('hetkiä on 66 ja jokaisella on kortin kentät', () => {
   // 54 → 67 (28.9.2026): kolmetoista uutta Euroopan historian hetkeä.
-  assert.equal(HISTORIAN_HETKET.length, 67,
-    'Euroopan 13 uuden hetken jälkeen: 67 hetkeä');
+  // 67 → 66 (17.11.2026): hetki eiffel-torni-1888 yhdistyi Eiffel-tornin nostoon (kohde `eiffel-torni`, fokuskohteet-fra.js).
+  assert.equal(HISTORIAN_HETKET.length, 66,
+    'Euroopan 13 uuden hetken jälkeen 67, Eiffel-torni 1888 yhdistetty: 66 hetkeä');
   const tunnukset = new Set();
   for (const hetki of HISTORIAN_HETKET) {
     assert.ok(!tunnukset.has(hetki.id),
