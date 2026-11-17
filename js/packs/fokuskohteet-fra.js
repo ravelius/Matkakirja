@@ -212,9 +212,13 @@ export const FOKUSKOHTEET_FRA = [
         lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
       },
       palo: {
-        osoite: null, tulossa: 'Codex', laji: 'havainnekuva',
+        // Tilaus 8.4 A valmis; KK hyväksyi 17.11.2026 klo 14.42 (P-261117-61). Ämpäri kuvat/ (vienti
+        // proto-3d/_valmiit/tuileries-palo-kuva-vienti-20261117), SHA-256 874c9bb4…da2e631a, 2400 × 1600.
+        osoite: 'https://media.matkakirja.app/kuvat/tuileries-palo-1871.jpg',
+        laji: 'havainnekuva',
         lyhyt: 'Tuileries palaa, toukokuu 1871',
-        lahde: 'Matkakirjan havainnekuva (tilaus 8.4 A)',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Achille Quinet PH14096 ja '
+          + 'Godefroy PH83415, Paris Musées / Carnavalet, CC0',
       },
       loisto: {
         osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
