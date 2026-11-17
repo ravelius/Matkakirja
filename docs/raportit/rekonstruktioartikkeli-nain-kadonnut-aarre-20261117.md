@@ -13,7 +13,7 @@ Merkinnät lähdetaulukossa: 2L = kaksi itsenäistä lähdettä; 1L = yksi (sana
 Kaikki alkaa vanhoista kuvista. Ripetta oli Tiberin rannalla seissyt satama, jossa kaksi kaarevaa portaikkoa laskeutui laitureille ja keskellä oli suihkulähde. Haimme avoimista kuvakokoelmista piirroksia ja valokuvia, joita saa käyttää vapaasti. Jokaisen kuvan tekijä ja lähde kirjataan muistiin. Ripetasta löytyi kolme: kaksi arkkitehti Alessandro Specchin painokuvaa ja yksi vanha valokuva. Specchi suunnitteli sataman paavi Clemens XI:lle, ja satama valmistui vuonna 1704. Hänen suuri arkkinsa näyttää sataman myös pohjapiirroksena.
 
 **2. Kuvat pannaan vierekkäin**
-Kaksi painokuvaa ovat saman tekijän työtä, joten ne tukevat toisiaan vain vähän. Valokuva on otettu ennen purkua, ja siitä näkyy, mikä oli yhä paikallaan: kaareva terassin reuna ja portaat sen sivuilla. Laiturin alaosan peittävät veneet. Jos sama kaari näkyy sekä painokuvassa että valokuvassa, se on todennäköisesti oikeasti ollut olemassa. Valokuva on kuitenkin myöhemmältä ajalta, joten pieniä muutoksia voi olla. Mikä näkyy kaikissa kuvissa, on melko varmaa. Loppu on arvausta.
+Kaksi painokuvaa ovat saman tekijän työtä, joten ne tukevat toisiaan vain vähän. Valokuva on otettu ennen purkua, ja siitä näkyy, mikä oli yhä paikallaan: kaareva terassin reuna ja portaat sen sivuilla. Laiturin alaosan peittävät veneet. Jos sama kaari näkyy sekä painokuvassa että valokuvassa, se on todennäköisesti oikeasti ollut olemassa. Valokuva näyttää kuitenkin myöhemmän tilan kuin piirros, josta malli tehtiin, joten pieniä muutoksia voi olla. Mikä näkyy kaikissa kuvissa, on melko varmaa. Loppu on arvausta.
 
 **3. Tekoäly piirtää ehdotuksen**
 Seuraavaksi tekoäly sai nämä kolme kuvaa ja tarkan ohjeen: piirrä pelkkä satama, ei kaupunkia, ei veneitä, ei ihmisiä. Ohje kertoo myös, mitä kuvaan ei saa tulla: ei ympäröiviä kirkkoja, taloja eikä katuja. Tekoäly piirsi mallikuvan. Kuva on ehdotus, ei todiste.
@@ -45,9 +45,8 @@ Säännöt: kuvassa ei tekstiä; tekijä, vuosi, kokoelma, lisenssi, linkki joka
 
 | Osio | Kuva | Kuvateksti (lyhyt) | Lähderivi |
 |---|---|---|---|
-| 1 | Specchin koko arkki (R1) | Specchin arkki Porto di Ripettasta: joen puoli, pohjapiirros ja sivunäkymiä. | Alessandro Specchi, metatiedon mukaan 1704. Wikimedia Commons, public domain. **Kuvaa EI viedä peliin ennen kuin saman lehden kopio on löytynyt nimetystä Italian ulkopuolisesta avoimesta kokoelmasta (Rijksmuseum CC0 ensin); lähderivi päivitetään silloin kokoelman mukaan.** |
-| 2 | R2 ja valokuva R3 rinnakkain | Vasemmalla Specchin piirros joen puolelta, oikealla valokuva ennen purkua. | R2: Alessandro Specchi, 1704, Wikimedia Commons, public domain (**kuvaa 2 ei viedä peliin ennen saman kopion löytymistä Italian ulkopuolisesta kokoelmasta**; R2:n luettelomerkinnät "456" ja "Tm II pd 110" jäävät, aitoa vedosta ei rajata). R3: tuntematon italialainen valokuvaaja, noin 1865 (Commonsin arvio), Zeno.org, public domain. |
-| 3 | Mallikuva v2 | Tekoälyn ehdotus sataman päämuodoista. | Tekoälyllä tuotettu havainnekuva Specchin kahden piirroksen ja valokuvan pohjalta. |
+| 1–2 | Valokuva R3 ja malli pinottuina (julkaisu/m5-kuvaparit/ripetta-r3-valokuva-ja-malli-pelin-varein.jpg; KK 08.56) | Ylhäällä valokuva satamasta noin vuodelta 1865, alla malli pelin väreillä. | Valokuva: tuntematon italialainen valokuvaaja, noin 1865 (Commonsin arvio), Zeno.org (Zeno Fotografie), public domain. Malli: Matkakirjan oma malli, tehty tekoälyllä mallikuvasta. **R1 ja R2 pois artikkelista ja pelistä (omistaja 17.11. klo 08.50; R2:lle ei löytynyt avointa lähdettä).** |
+| 3 | Mallikuva v2 | Tekoälyn ehdotus sataman päämuodoista. | Tekoälyllä tuotettu havainnekuva Specchin kahden piirroksen ja valokuvan pohjalta (kuva ei ole enää parissa; käyttö vain jos KK sallii). |
 | 4 | v1 ja v2 rinnakkain (ARKKI-14, alin rivi; ilman otsikkotekstiä) | Vasemmalla ensimmäinen malli, oikealla toinen. | Matkakirjan omat mallit, tehty tekoälyllä mallikuvasta. |
 | 5 | Malli kahdesta suunnasta | Kappale ylhäältä ja sivulta. | Matkakirjan oma malli, tehty tekoälyllä mallikuvasta. |
 | 6 | Pelikuva (NUI, kokeesta) | Hologrammi ja malli kartalla. | Matkakirja. |
@@ -56,7 +55,7 @@ Säännöt: kuvassa ei tekstiä; tekijä, vuosi, kokoelma, lisenssi, linkki joka
 Lisenssien tarkistus 17.11. (Commons-sivut luettu itse):
 - R1: tekijä Specchi (k. 1729), 1704; "public domain in its country of origin" ja USA:ssa (julkaistu ennen 1931); Public Domain Mark 1.0. **Lähde: pierotrincia.it; sivu ei nimeä kokoelmaa.**
 - R2: sama; **lähde: blogspot-sivu (1702–1705), kokoelmaa ei nimetty.**
-- R3: tuntematon valokuvaaja, noin 1865; "public domain worldwide"; Zeno.org (ID 20001878190, "5.000 Meisterwerke der Fotografie"; kokoelman paikka Kööpenhamina). Zeno-uudelleenkuvauksen oikeudet: Zenodot Verlagsgesellschaft, GNU FDL (vain uudelleenkuvauksen kehys, ei kuvan oikeuksia).
+- R3 (luettu uudelleen lähteen omalta Commons-sivulta 17.11., KK 08.56): tuntematon italialainen valokuvaaja, "circa 1865"; "The work of art depicted in this image and the reproduction thereof are in the public domain worldwide" ja Public Domain Mark 1.0; USA:ssa PD (julkaistu ennen 1.1.1931); kokoelma Kööpenhamina; lähde Zeno.org ID 20001878190 (kuva PHO04555), Commonsiin ladannut Fæ (Zeno Fotografie -projekti); Zenodot Verlagsgesellschaft mbH:n kokoelmaoikeus (GNU FDL) koskee vain Zeno-kokonaisuutta, ei kuvaa. Aiemmin kirjattu: "public domain worldwide"; Zeno.org (ID 20001878190, "5.000 Meisterwerke der Fotografie"; kokoelman paikka Kööpenhamina). Zeno-uudelleenkuvauksen oikeudet: Zenodot Verlagsgesellschaft, GNU FDL (vain uudelleenkuvauksen kehys, ei kuvan oikeuksia).
 - Kärntnertor: Wien Museum CC0 ja Commons-kuvat public domain (kirjaus `karntnertor-portti/v2-pair-review/sources/audit.json`, luettu; Commons-sivuja ei avattu uudelleen, 429-riski).
 
 ## 3. Lähdetaulukko (väite → lähde)
@@ -114,7 +113,7 @@ Tulos: pääosin lähteiden mukainen, ei mittalukuja, ei työkalujen nimiä, ei 
 Ei tekstissä (tarkoituksella): mitat (70 m on arvio), työkalujen nimet, "ihminen hyväksyy" (ks. avoin kohta A), Newgate.
 
 ## 4. Mittarit
-Sanamäärä (otsikoita ja Pulun kysymyksiä lukematta): ingressi 41, yhteensä 542 (omistajan virke osiossa 8 lisätty 08.21; tavoite 500–550, saa nousta noin 545:een, ingressi noin 40). Ei mittalukuja, ei työkalujen nimiä.
+Sanamäärä (otsikoita ja Pulun kysymyksiä lukematta): ingressi 41, yhteensä 548 (omistajan virke osiossa 8 lisätty 08.21; osioon 2 muotoilu "näyttää myöhemmän tilan kuin piirros, josta malli tehtiin" KK 08.56; tavoite 500–550, saa nousta noin 545:een; 548 ylittää rajan kolmella sanalla, KK päättää, ingressi noin 40). Ei mittalukuja, ei työkalujen nimiä.
 
 ## 5. Avoimet kohdat KK:lle
 - **A (E2): kuka hyväksyy mallin. RATKAISTU 17.11. klo 08.21:** omistaja katsoo itse kolme esimerkkimallia; osioon 8 lisätty virke "Tekoäly etsii, vertaa ja ehdottaa. Sen, mikä pääsee peliin, hyväksyy ihminen." (lähdetaulukko 8f). Virke pätee vasta, kun omistaja on katsonut kolme mallia.
