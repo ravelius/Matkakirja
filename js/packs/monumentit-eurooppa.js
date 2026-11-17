@@ -51,6 +51,7 @@ const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => 
  */
 const ihmeKohde = ({
   id, nimi, nimio, kysymykset, korostukset, nappi, laudat, teksti, lahde, kuva, lyhyt, selite, ihmeLahde, url,
+  otsikko, aanikansio, jaksot, jaksokuvat, visa,
 }) => ({
   id: `hahmotelma-${id}`,
   nimi,
@@ -61,7 +62,14 @@ const ihmeKohde = ({
   korostukset,
   nappi,
   laudat,
-  teksti,
+  // Jaksollinen nosto (Pariisin nostot uudella tavalla 17.11.2026, Les Halles): teksti lasketaan jaksoista
+  // (ilman nimiosaa) kuten fokuskohteet-fra.js:n lopussa; muuten kohteen oma teksti.
+  teksti: Array.isArray(jaksot) ? jaksot.filter((j) => j.osa !== 'nimi').map((j) => j.teksti).join('\n\n') : teksti,
+  ...(otsikko ? { otsikko } : {}),
+  ...(aanikansio ? { aanikansio } : {}),
+  ...(jaksot ? { jaksot } : {}),
+  ...(jaksokuvat ? { jaksokuvat } : {}),
+  ...(visa ? { visa } : {}),
   lahde,
   ihme: {
     osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${kuva}`,
@@ -356,28 +364,95 @@ export const EUROOPAN_KADONNEET = {
       id: 'les-halles',
       nimi: 'Les Hallesin hallit',
       nimio: 'Les Halles',
-      kysymykset: ['Millä nimellä Émile Zola kutsui halleja?', 'Mitä hallien tilalla on nykyään?'],
+      kysymykset: [
+        'Millä nimellä Émile Zola kutsui halleja?',
+        'Mitä hallien tilalla on nykyään?',
+        'Miksi hallit purettiin?',
+      ],
       korostukset: ['Victor Baltard|Victor Baltardin', 'Émile Zola|Émile Zola'],
       nappi: 'Pariisin vatsa, jonka tilalle jäi kuoppa',
       laudat: { maailmankartta: { x: 5911.5, y: 1439.4 }, europe: { x: 256.2, y: 608.5 } },
-      teksti: 'Les Halles oli Pariisin keskeinen ruokatori, jonka historia ulottuu 1100-luvulle; Philippe '
-        + 'Auguste siirsi sinne 1183 toisen markkinan ja rakennutti torille ensimmäiset katetut hallit. Victor Baltardin '
-        + 'suunnittelemat lasi- ja rautapaviljongit, kymmenen kappaletta, rakennettiin vaiheittain '
-        + '1850-luvulta 1870-luvun alkuun. Émile Zola kutsui halleja Pariisin vatsaksi samannimisessä '
-        + 'romaanissaan (1873). Tukkukauppa muutti Rungisiin 1969, ja hallit purettiin 1970-luvun alussa. '
-        + 'Paikalle jäi niin valtava työmaa, että sitä kutsuttiin yksinkertaisesti reiäksi. '
-        + 'Yksi paviljonki pystytettiin uudelleen Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle '
-        + '1979.',
-      vuodet: [
-        { kohta: 'sinne 1183', vuosi: '1183', selite: 'markkina siirrettiin' },
-        { kohta: 'romaanissaan (1873)', vuosi: '1873', selite: 'Zolan romaani' },
-        { kohta: 'Rungisiin 1969', vuosi: '1969', selite: 'kauppa Rungisiin' },
-        { kohta: 'paikalle 1979', vuosi: '1979', selite: 'Forum avattiin' },
+      // teksti lasketaan jaksoista (ks. ihmeKohde). Lähdeaineisto: docs/raportit/les-halles-nosto-teksti-20261117.md.
+      otsikko: 'Les Halles 1873 — Pariisin vatsa, jonka tilalle jäi reikä',
+      jaksot: [
+        { osa: 'nimi', teksti: 'Les Halles.' },
+        { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+        {
+          osa: 'koukku',
+          aani: 'isoisa',
+          teksti: 'Pariisi, 1873. Kävelin Les Hallesin paviljonkien välissä. Yhdessä myytiin vihanneksia, '
+            + 'toisessa kalaa ja kolmannessa lihaa.',
+          kuva: 'marville',
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Les Halles oli Pariisin ruokatori, ja sen historia ulottuu 1100-luvulle. Kuningas Philippe '
+            + 'Auguste rakennutti sinne 1183 ensimmäiset katetut hallit. Arkkitehti Victor Baltard suunnitteli '
+            + 'ensin kivihallin, mutta Napoleon III halusi metallia. Siksi paikalle rakennettiin 1850-luvulta '
+            + 'alkaen kymmenen paviljonkia raudasta ja lasista.',
+          kuva: 'loisto',
+          vuodet: [{ vuosi: '1183', selite: 'ensimmäiset hallit', kohta: 'sinne 1183' }],
+        },
+        {
+          osa: 'tapahtuma',
+          teksti: 'Émile Zola kutsui halleja Pariisin vatsaksi samannimisessä romaanissaan, joka ilmestyi 1873. '
+            + 'Vuonna 1969 tukkukauppa muutti Rungisiin, ja hallit jäivät tyhjiksi.',
+          vuodet: [
+            { vuosi: '1873', selite: 'Zolan romaani', kohta: 'joka ilmestyi 1873' },
+            { vuosi: '1969', selite: 'kauppa Rungisiin', kohta: 'Vuonna 1969' },
+          ],
+        },
+        {
+          osa: 'kaanne',
+          teksti: 'Hallit purettiin 1970-luvun alussa, vaikka siitä nousi vastarintaa. Jäljelle jäi niin suuri '
+            + 'työmaa, että sitä kutsuttiin yksinkertaisesti reiäksi.',
+          kuva: 'purku',
+          hologrammi: 'sammuu',
+          hologrammiKohta: 'Hallit purettiin',
+        },
+        {
+          osa: 'tanaan',
+          teksti: 'Yksi paviljonki purettiin osiin ja pystytettiin uudelleen Nogent-sur-Marneen. Hallien '
+            + 'paikalle avattiin vuonna 1979 Forum des Halles -ostoskeskus.',
+          kuva: 'nogent',
+          vuodet: [{ vuosi: '1979', selite: 'Forum avattiin', kohta: 'vuonna 1979' }],
+        },
       ],
-      lahde: 'en-Wikipedia "Les Halles", osiot "History" (The market of the Little Fields; The wholesale '
-        + 'market; Major conversion); fr-Wikipedia "Halles de Paris", osio "Historique"; paris.fr "Ces lieux disparus qui font aussi '
-        + 'l\'histoire de Paris (2/2)" (1100-luku, 1183) ja fr-Wikisource "Les Halles centrales de Paris" '
-        + '(1183); Baltard ja Callet, Monographie des Halles centrales de Paris (1862); pavillonbaltard.fr "Histoire" (tarkistettu 15.11.2026).',
+      jaksokuvat: {
+        marville: {
+          tiedosto: 'Les Halles Centrales, nouvelles Halles de Baltard, 1er arrondissement, Paris. PH10089.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Baltardin paviljongit Charles Marvillen valokuvassa 1865–1866',
+          lahde: 'Charles Marville 1865–1866, Musée Carnavalet, Wikimedia Commons (CC0)',
+        },
+        loisto: {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-les-halles-loistoaika.jpg',
+          laji: 'havainnekuva',
+          lyhyt: 'Les Halles loistoaikanaan 1873',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan (1873). Faktat: paris.fr, '
+            + 'Baltard ja Callet (1862), pavillonbaltard.fr.',
+        },
+        purku: {
+          tiedosto: 'Destruction of Les Halles 1971.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Hallien aluetta puretaan 1971',
+          lahde: 'Lukeroman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        nogent: {
+          tiedosto: 'Pavillon Baltard Nogent Marne 1.jpg',
+          laji: 'valokuva',
+          lyhyt: 'Baltardin paviljonki nykyään',
+          lahde: 'Chabe01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      },
+      visa: {
+        kysymys: 'Minne yksi hallien paviljonki pystytettiin uudelleen?',
+        vaihtoehdot: ['Rungisiin', 'Nogent-sur-Marneen', 'Versailles\'hin'],
+        oikea: 1,
+        fakta: 'Paviljonki nro 8 purettiin 1972 ja koottiin uudelleen Nogent-sur-Marneen 1970-luvun puolivälissä.',
+      },
+      lahde: 'Matkakirjan oma teksti · lähteinä pavillonbaltard.fr, paris.fr, Larousse, Pariszigzag ja Structurae '
+        + '(tarkistettu 17.11.2026).',
       kuva: 'ihme-les-halles-loistoaika.jpg',
       lyhyt: 'Aamuyöllä torimummot huutavat hintoja lasihallien katon alla vihannesvuorten keskellä; sata '
         + 'vuotta myöhemmin hallit puretaan.',
