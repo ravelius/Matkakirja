@@ -319,7 +319,15 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        "– " + selite + " " + vuosi. Syvennykset (fokusvirrat[].takyt[].vuodet) ja kohde-moduulit sellaisenaan. Natiivi NostoSisalto (NUI).
  *        Säännöt: tests/noston-vuodet.test.mjs. Vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.74';
+/*
+ *   1.75 <kokoelma>.nostokuvat: karttavalot, takynostot, skandaalit, historianHetket, monumentit, nahtavyydet ja elaintayt sekä
+ *        fokusvirrat[].takyt[], takynostot[] ja kohteet[] (Pelikoodari 17.11.2026; omistaja 23.24, KK 23.2x): jokaisen noston
+ *        kuvalista [{ osoite, lyhyt, laji, lahde, lisenssi, mista }] datassa jo olevista kuvista (tools/vienti/nostokuvat.mjs).
+ *        Järjestys: noston omat (jaksokuvat jaksojärjestyksessä, kortin kuvat kuten webissä), kohde (täkynoston kohde,
+ *        kohdekartan kohde), juttu (nähtävyysjuttu); osoite = sama vientiosoite kuin muualla, sama osoite kerran, [] = ei kuvia.
+ *        Natiivi (NUI) näyttää kuvat kaikissa nostoissa; vanhat buildit ohittavat kentän. Säännöt: tests/noston-kuvat.test.mjs.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.75';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
