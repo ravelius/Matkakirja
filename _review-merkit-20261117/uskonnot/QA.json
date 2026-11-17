@@ -1,0 +1,456 @@
+{
+  "taskNumber": 2636,
+  "checkedAt": "2026-11-17T10:06:06.469168+00:00",
+  "status": "PASS_FOR_KK_REVIEW_WITH_NOTES",
+  "checks": [
+    {
+      "id": "a-kynttila",
+      "svgAndNativePathIdentical": true,
+      "strokeCount": 6,
+      "nibParametersCorrect": true,
+      "pngs": [
+        {
+          "file": "merkki-uskonnot.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            114,
+            50,
+            401,
+            460
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            114,
+            50,
+            401,
+            460
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-vektori.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            104,
+            44,
+            410,
+            468
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            104,
+            44,
+            410,
+            468
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-24.png",
+          "size": [
+            24,
+            24
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            3,
+            0,
+            21,
+            24
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            5,
+            2,
+            19,
+            22
+          ],
+          "clearOuterEdge": false,
+          "outerEdgeMaxAlpha": 4,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-40.png",
+          "size": [
+            40,
+            40
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            6,
+            2,
+            34,
+            39
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            8,
+            4,
+            32,
+            36
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-128.png",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            26,
+            10,
+            103,
+            118
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            28,
+            12,
+            101,
+            115
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        }
+      ]
+    },
+    {
+      "id": "b-oljylamppu",
+      "svgAndNativePathIdentical": true,
+      "strokeCount": 6,
+      "nibParametersCorrect": true,
+      "pngs": [
+        {
+          "file": "merkki-uskonnot.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            46,
+            69,
+            467,
+            448
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            46,
+            69,
+            467,
+            448
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-vektori.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            40,
+            64,
+            474,
+            453
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            40,
+            64,
+            474,
+            453
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-24.png",
+          "size": [
+            24,
+            24
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            0,
+            1,
+            24,
+            24
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            2,
+            3,
+            23,
+            22
+          ],
+          "clearOuterEdge": false,
+          "outerEdgeMaxAlpha": 3,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-40.png",
+          "size": [
+            40,
+            40
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            1,
+            3,
+            39,
+            38
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            3,
+            5,
+            37,
+            36
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-128.png",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            9,
+            15,
+            119,
+            114
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            11,
+            17,
+            117,
+            112
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        }
+      ]
+    },
+    {
+      "id": "c-hiljentymishuone",
+      "svgAndNativePathIdentical": true,
+      "strokeCount": 5,
+      "nibParametersCorrect": true,
+      "pngs": [
+        {
+          "file": "merkki-uskonnot.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            75,
+            88,
+            435,
+            442
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            75,
+            88,
+            435,
+            442
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-vektori.png",
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            71,
+            79,
+            438,
+            448
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            71,
+            79,
+            437,
+            448
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-24.png",
+          "size": [
+            24,
+            24
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            246
+          ],
+          "contentBounds": [
+            1,
+            1,
+            23,
+            23
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            3,
+            4,
+            21,
+            21
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-40.png",
+          "size": [
+            40,
+            40
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            4,
+            4,
+            36,
+            37
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            6,
+            6,
+            34,
+            35
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        },
+        {
+          "file": "merkki-uskonnot-128.png",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "contentBounds": [
+            17,
+            19,
+            111,
+            113
+          ],
+          "visibleBoundsAlphaAtLeast8": [
+            19,
+            21,
+            109,
+            111
+          ],
+          "clearOuterEdge": true,
+          "outerEdgeMaxAlpha": 0,
+          "resamplingNote": "Small thumbnails may have sub-8/255 Lanczos alpha tails; full-size deliverables have fully clear edges."
+        }
+      ]
+    }
+  ],
+  "referenceHashesRechecked": true,
+  "comparisonSheets": 6,
+  "comparisonSizes": [
+    24,
+    40,
+    128
+  ],
+  "comparisonMembers": 7,
+  "visualReview": {
+    "performed": true,
+    "notes": [
+      "A is clearest at 24 px.",
+      "B is wider and its flame appears smaller at 24 px.",
+      "C is unmarked but a domed room may still have cultural associations.",
+      "Reference sheets use current native geometry; they are not game screenshots."
+    ]
+  },
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

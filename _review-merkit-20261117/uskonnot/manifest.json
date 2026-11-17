@@ -1,0 +1,48 @@
+{
+  "taskNumber": 2636,
+  "generatedAt": "2026-11-17T10:04:12.714Z",
+  "sourceReferences": [
+    {
+      "path": "/Users/Shared/Claude/Matkakirja-fable/js/fokusnosto-symbolit.js",
+      "sha256": "16942ef8556d9625627f8b7ba79bb705b021cf929128fd5b65e888e7d0b25670"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto-mac/Assets/Matkakirja/UI/NostoMerkit.cs",
+      "sha256": "bc93741a8973d8532f4ad9b631547a9a25d81b4bd0b3ace6c399680768877b4f"
+    },
+    {
+      "path": "/Users/Shared/Claude/Matkakirja-fable/assets/koristeet/nostotyypit/LUEMINUT.md",
+      "sha256": "464ef5cdcd9674f3f3b6d056828c1d0b2017817fc500552e7ec80999e5b26ae1"
+    }
+  ],
+  "algorithm": "Existing nostosymTeranJalki and constants, evaluated unchanged from source snapshot",
+  "alternatives": [
+    {
+      "id": "a-kynttila",
+      "label": "A · Kynttilä",
+      "meaning": "Yhteinen hiljentymisen ja muistamisen valo.",
+      "neutralityNote": "Saattaa muistuttaa myös muistamista. Ei kirkkotunnuksia eikä kynttilänjalkaan lisättyä symboliikkaa.",
+      "vectorStrokes": 6
+    },
+    {
+      "id": "b-oljylamppu",
+      "label": "B · Öljylamppu",
+      "meaning": "Vanha, monissa kulttuureissa käytetty valonlähde.",
+      "neutralityNote": "Tarkoituksella koristelematon. Kynttilää leveämpi, joten liekki jää 24 px:nä pienemmäksi.",
+      "vectorStrokes": 6
+    },
+    {
+      "id": "c-hiljentymishuone",
+      "label": "C · Hiljentymishuone",
+      "meaning": "Avoin, tunnukseton paikka hiljentymiselle.",
+      "neutralityNote": "Rakennuksen tulkinta on kynttilää kulttuurisidonnaisempi. Ei tornia, uskonnollista tunnusta tai tunnistettavan pyhäkön jäljennöstä.",
+      "vectorStrokes": 5
+    }
+  ],
+  "recommendation": "A · Kynttilä: selkein 24 px:nä ja vähiten rakennustyyliin sidottu.",
+  "reviewOnly": true,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "referenceNote": "Nykyiset kuusi luettu NostoMerkit.cs:n mac-työpuun Ruusu/Tiimalasi/Lamppu/Lyyra/Vuori/Salama-vakioista. Lyyra käyttää natiivin avoimia viivoja; uusia merkkejä ei korvata nykyisten tilalle."
+}
