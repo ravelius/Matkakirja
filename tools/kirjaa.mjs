@@ -6,7 +6,16 @@
  *   node tools/kirjaa.mjs hae "<sanat>"                       aina ensin: kortit, perusta ja loki + aihe-ehdotus
  *   node tools/kirjaa.mjs aiheet                              aiheluettelo (koko/raja, luettu, tarkistettu)
  *   node tools/kirjaa.mjs lue <aihe>                          kortti + lukukerta lukulokiin
- *   node tools/kirjaa.mjs paatos <aihe> --klo HH.MM --kuka KK|PT "<omistajan sanat>" [--pvm P.K.VVVV]
+ *   node tools/kirjaa.mjs paatos <aihe> --klo HH.MM --kuka KK|PT "<omistajan sanat>" [--pvm P.K.VVVV] [--toimeenpano "…"]
+ *        [--pysyva "<nimi>" --roolit kaikki|KK,PT,… [--vartija "<nimi>"] | --toisto S-nn] [--lahde <tallenne>]
+ *        --toimeenpano: KK:n/PT:n toteutus omaan kenttäänsä, EI omistajan sanoihin. --pysyva: uusi ydin S-nn omistajan
+ *        pysyviin sanoihin; --toisto S-nn: sama asia sanottu uudelleen (kerta ytimeen + toistolaskuri). --lahde: sanojen pitää
+ *        löytyä tallenteesta sanatarkasti, muuten HYLÄTTY.
+ *   node tools/kirjaa.mjs sanat [--rooli X] [--kaikki S-nn] [--toistot --viikko]   pysyvät sanat sanatarkasti (KK: kaikki)
+ *   node tools/kirjaa.mjs pysyva-liita <S-nn | --pysyva "<nimi>" --roolit …> --lahde <P-tunnus|tallenne> [--pvm --klo] "<sanat>"
+ *        aiempi kerta ilman uutta P-riviä (siirto); sanat tarkistetaan lähteestä sanatarkasti, muuten HYLÄTTY
+ *   node tools/kirjaa.mjs pysyva-pois S-nn --omistajan-sana P-…      ydin pois (vain omistajan sanalla)
+ *   node tools/kirjaa.mjs pysyva-korvaa S-nn --omistajan-sana P-…    uusin sana voittaa: P-rivin sanat uusimmaksi, vanhat korvatuiksi
  *   node tools/kirjaa.mjs kortti <aihe|A|B|C|KIRJASTOT> <tiedosto> [--ei-commit]   korvaa koko kortin (portti)
  *   node tools/kirjaa.mjs uusi-aihe <tunnus> "<nimi>" --perustelu "…"          pyyntö KK:lle
  *   node tools/kirjaa.mjs hyvaksy-aihe <tunnus> "<nimi>" <vastuu>               vain KK
@@ -15,7 +24,10 @@
  *   node tools/kirjaa.mjs tila [--json]                       mittarit (myös kuntotarkastus, luku 13)
  *
  * Kodit: docs/raamattu/{A-peli.md, B-linjaukset.md, C-talo.md, KIRJASTOT.md, aiheet/<tunnus>.md, AIHEET.md (generoitu),
- * aiheet.json (luettelo), paatokset/<VVVV-KK>.md (loki), .kirjattu.json (oven tarkiste)}. Lukuloki ei ole gitissä.
+ * aiheet.json (luettelo), paatokset/<VVVV-KK>.md (loki), pysyvat.json (omistajan pysyvät sanat, vain lisätään), .kirjattu.json
+ * (oven tarkiste)}. Lukuloki ei ole gitissä. PYSYVÄT SANAT (KK 17.11.2026, suunnitelma 20261117-muisti-ilman-uudelleenkertomista.md
+ * luvut 4 ja 9 pala 1): ydin S-nn = nimi (hakusana, ei sääntö), roolit, vartija, tila (voimassa | pois: P-…) ja kerrat (pvm, klo,
+ * lähde, sanat sanatarkasti + tarkiste). Kukaan ei lyhennä eikä muotoile; muokattu sana hylätään sekä kirjoittaessa että tulosteessa.
  * Juuri: --juuri <kansio> tai KIRJAA_JUURI, muuten git-juuri. Lukuloki: KIRJAA_LUKULOKI.
  */
 import { createHash } from 'node:crypto';
@@ -72,7 +84,7 @@ function valvotut() {
     const k = join(R, d);
     if (existsSync(k)) for (const f of readdirSync(k)) if (f.endsWith('.md')) out.push(join(k, f));
   }
-  for (const f of ['aiheet.json', 'aihepyynnot.md']) if (existsSync(join(R, f))) out.push(join(R, f));
+  for (const f of ['aiheet.json', 'aihepyynnot.md', 'pysyvat.json']) if (existsSync(join(R, f))) out.push(join(R, f));
   return out;
 }
 
@@ -220,6 +232,64 @@ function paatokset() {
   return out;
 }
 
+// --- omistajan pysyvät sanat (pala 1) ---
+// Omistajan sanat ja toimeenpano erotetaan: uusi rivi '… kirjasi KK: "<sanat>" · toimeenpano: "<…>"'; vanhoissa riveissä raja on
+// ensimmäinen " [" (KK:n hakasulje) tai " → SÄÄNTÖ". Sanatarkkuus = sama merkkijono lähteessä (vain välilyönnit yhtenäistetään).
+const PYSYVAT = join(R, 'pysyvat.json');
+const norm = (t) => t.replace(/\s+/g, ' ').trim();
+const pysyvat = () => JSON.parse(lue(PYSYVAT) || '{"ytimet":[]}');
+const tallennaPysyvat = (j) => writeFileSync(PYSYVAT, JSON.stringify(j, null, 1) + '\n');
+const ydin = (j, s) => j.ytimet.find((y) => y.tunnus === s) || kuolema(`HYLÄTTY: ydintä ${s} ei ole (kirjaa sanat)`);
+const omistajanOsa = (rivi) => {
+  let t = rivi.replace(/^.*?kirjasi \S+?(?: · PYSYVÄ S-\d+)?: /, '');
+  const i = t.indexOf(' · toimeenpano: ');
+  if (i >= 0) return t.slice(0, i);
+  for (const raja of [' [', ' → SÄÄNTÖ']) { const j = t.indexOf(raja); if (j >= 0) t = t.slice(0, j); }
+  return t;
+};
+const paatosRivi = (tunnus) => paatokset().find((x) => x.tunnus === tunnus);
+function tarkistaSanat(sanat, lahde) {  // palauttaa vian tekstin tai null
+  if (!sanat || !norm(sanat)) return 'sanat puuttuvat';
+  if (/\[(KK|PT)\b|→ SÄÄNTÖ|toimeenpano/i.test(sanat)) return 'omistajan sanoissa on toimeenpanoa (käytä --toimeenpano)';
+  if (!lahde) return null;  // uusi kerta ilman tallennetta: rivi itse on lähde
+  if (/^P-\d{6}-\d+$/.test(lahde)) {
+    const r = paatosRivi(lahde);
+    if (!r) return `lähdettä ${lahde} ei ole päätöslokissa`;
+    if (!norm(omistajanOsa(r.rivi)).includes(norm(sanat))) return `sanat eivät ole sanatarkasti rivin ${lahde} omistajan osassa`;
+    return null;
+  }
+  const p = lahde.startsWith('/') ? lahde : join(JUURI, lahde);
+  if (!existsSync(p)) return `lähdetiedostoa ${lahde} ei ole`;
+  if (!norm(readFileSync(p, 'utf8')).includes(norm(sanat))) return `sanat eivät ole sanatarkasti tiedostossa ${lahde}`;
+  return null;
+}
+const vaadiSanat = (sanat, lahde) => { const v = tarkistaSanat(sanat, lahde); if (v) kuolema(`HYLÄTTY (ei sanatarkka): ${v}`); };
+// Tulostusvaiheen tarkistus: tarkiste (muokkaus ohi oven) ja P-lähde aina; tallenne vain jos tiedosto on tällä koneella.
+function kertaVika(k) {
+  if (k.sha !== sha(k.sanat)) return 'MUOKATTU ohi oven (tarkiste ei täsmää)';
+  if (/^P-/.test(k.lahde) || existsSync(k.lahde.startsWith('/') ? k.lahde : join(JUURI, k.lahde))) return tarkistaSanat(k.sanat, k.lahde);
+  return null;
+}
+const aikaLuku = (k) => { const [p, kk, v] = k.pvm.split('.'); return +`${v}${kk.padStart(2, '0')}${p.padStart(2, '0')}${k.klo.replace('x', '0').replace('.', '').padStart(4, '0')}`; };
+const lahdeNimi = (l) => (/^P-/.test(l) ? l : `tallenne ${l.split('/').pop()}`);
+function uusiKerta(y, { pvm: p, klo, lahde, sanat, toisto = false }) {
+  if (y.kerrat.some((k) => k.lahde === lahde && norm(k.sanat) === norm(sanat))) kuolema(`HYLÄTTY: sama kerta on jo ytimessä ${y.tunnus}`);
+  y.kerrat.push({ pvm: p, klo, lahde, sanat, sha: sha(sanat), toisto, korvattu: null, kirjattu: nyt.toISOString() });
+}
+function uusiYdin(j, nimi, roolit, vartija) {
+  if (!nimi || nimi.split(/\s+/).length > 6) kuolema('--pysyva "<nimi>": 1–6 sanaa (hakusana, ei sääntö)');
+  if (!roolit) kuolema('--roolit kaikki|KK,PT,… puuttuu');
+  const n = j.ytimet.reduce((m, y) => Math.max(m, +y.tunnus.slice(2)), 0) + 1;
+  const y = { tunnus: `S-${String(n).padStart(2, '0')}`, nimi, roolit: roolit.split(',').map((r) => r.trim()).filter(Boolean),
+    vartija: vartija || 'ei vartijaa', tila: 'voimassa', kerrat: [], muutokset: [] };
+  j.ytimet.push(y);
+  return y;
+}
+const vaadiOmistajanSana = (p) => {
+  if (!p || !/^P-\d{6}-\d+$/.test(p)) kuolema('--omistajan-sana P-VVKKPP-n puuttuu (poisto ja korvaus vain omistajan sanalla)');
+  return paatosRivi(p) || kuolema(`HYLÄTTY: ${p} ei ole päätöslokissa (kirjaa ensin paatos)`);
+};
+
 // --- komennot ---
 luoPuu();
 const [komento, ...loput] = argv;
@@ -286,7 +356,8 @@ if (komento === 'hae') {
   appendFileSync(LUKULOKI, `${nyt.toISOString()}\t${a}\t${process.env.KIRJAA_KUKA || '-'}\n`);
 } else if (komento === 'paatos') {
   valmistelePuu();
-  const klo = lippu('--klo'), kuka = lippu('--kuka'), p = lippu('--pvm');
+  const klo = lippu('--klo'), kuka = lippu('--kuka'), p = lippu('--pvm'), toimeenpano = lippu('--toimeenpano');
+  const nimi = lippu('--pysyva'), roolit = lippu('--roolit'), vartija = lippu('--vartija'), toisto = lippu('--toisto'), lahde = lippu('--lahde');
   const [a, ...sanat] = argv.slice(1); vaadiAihe(a);
   if (PERUSTA[a] && a !== 'B') kuolema('päätös kirjataan aiheelle tai B:lle');
   if (!klo || !/^\d{1,2}\.\d{2}x?$/.test(klo)) kuolema('--klo HH.MM puuttuu');
@@ -296,14 +367,90 @@ if (komento === 'hae') {
   const vvkkpp = `${String(d.getFullYear()).slice(2)}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
   const n = paatokset().filter((x) => x.tunnus.startsWith(`P-${vvkkpp}-`)).length + 1;
   const tunnus = `P-${vvkkpp}-${n}`;
+  const teksti = sanat.join(' ');
+  let j = null, y = null;
+  if (nimi && toisto) kuolema('anna joko --pysyva (uusi ydin) tai --toisto S-nn, ei molempia');
+  if (nimi || toisto) {
+    vaadiSanat(teksti, lahde);
+    j = pysyvat();
+    y = toisto ? ydin(j, toisto) : uusiYdin(j, nimi, roolit, vartija);
+    if (y.tila !== 'voimassa') kuolema(`HYLÄTTY: ${y.tunnus} on ${y.tila}`);
+    uusiKerta(y, { pvm: pvm(d), klo, lahde: tunnus, sanat: teksti, toisto: !!toisto });
+  }
   mkdirSync(join(R, 'paatokset'), { recursive: true });
   const f = join(R, 'paatokset', `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}.md`);
   if (!existsSync(f)) writeFileSync(f, `# Päätösloki ${d.getMonth() + 1}/${d.getFullYear()} (vain lisätään: node tools/kirjaa.mjs paatos)\n\n`);
-  appendFileSync(f, `- [${tunnus}] ${pvm(d)} klo ${klo} · ${a} · kirjasi ${kuka}: "${sanat.join(' ')}"\n`);
-  kirjaaRekisteriin([f]);
-  console.log(`KIRJATTU ${tunnus} → ${relative(JUURI, f)}; commit ${commit(`Kirjaus: päätös ${tunnus} (${a})`, [f, join(R, '.kirjattu.json')])}`);
+  appendFileSync(f, `- [${tunnus}] ${pvm(d)} klo ${klo} · ${a} · kirjasi ${kuka}${y ? ` · PYSYVÄ ${y.tunnus}` : ''}: "${teksti}"` +
+    `${toimeenpano ? ` · toimeenpano: "${toimeenpano}"` : ''}\n`);
+  const polut = [f, join(R, '.kirjattu.json')];
+  if (j) { tallennaPysyvat(j); polut.push(PYSYVAT); }
+  kirjaaRekisteriin(polut.filter((x) => x !== join(R, '.kirjattu.json')));
+  if (y) console.log(`${toisto ? 'TOISTO' : 'UUSI YDIN'} ${y.tunnus} ${y.nimi}: kertoja ${y.kerrat.length}, toistoja ${y.kerrat.filter((k) => k.toisto).length}`);
+  console.log(`KIRJATTU ${tunnus} → ${relative(JUURI, f)}; commit ${commit(`Kirjaus: päätös ${tunnus} (${a})${y ? ` ${y.tunnus}` : ''}`, polut)}`);
   console.log(`PÄIVITÄ KORTTI ${a} SAMASSA VUOROSSA (sääntöön [${tunnus}]); muuten kirjaa tila näyttää punaista.\n`);
   console.log(lue(korttiPolku(a)) || `(kortti ${a} on vielä kirjoittamatta)`);
+} else if (komento === 'sanat') {
+  const rooli = lippu('--rooli'), yksi = lippu('--kaikki'), toistot = kytkin('--toistot'), viikko = kytkin('--viikko');
+  const j = pysyvat(), viat = [];
+  if (toistot) {
+    const raja = +pvm(new Date(nyt.getTime() - (viikko ? 7 : 3650) * 864e5)).split('.').reverse().map((x) => x.padStart(2, '0')).join('') * 1e4;
+    let yht = 0;
+    for (const y of j.ytimet) {
+      const t = y.kerrat.filter((k) => k.toisto && aikaLuku(k) >= raja);
+      yht += t.length;
+      if (t.length) console.log(`${y.tunnus} ${y.nimi}: ${t.length} (${t.map((k) => `${k.pvm} ${k.klo} [${lahdeNimi(k.lahde)}]`).join(' · ')})`);
+    }
+    console.log(`TOISTOT ${viikko ? '7 vrk' : 'kaikki'}: ${yht}`);
+    process.exit(0);
+  }
+  const nakyy = (y) => (yksi ? y.tunnus === yksi : y.tila === 'voimassa' && (!rooli || rooli === 'KK' || y.roolit.includes('kaikki') || y.roolit.includes(rooli)));
+  const valitut = j.ytimet.filter(nakyy);
+  if (yksi && !valitut.length) kuolema(`ydintä ${yksi} ei ole`);
+  console.log(`OMISTAJAN PYSYVÄT SANAT${rooli ? ` (rooli ${rooli}${rooli === 'KK' ? ': kaikki ytimet' : ''})` : ''}: ${valitut.length} ydintä; sanatarkasti, uusin ensin; ei lyhennetä`);
+  for (const y of valitut) {
+    const kerrat = y.kerrat.filter((k) => yksi || !k.korvattu).sort((a, b) => aikaLuku(b) - aikaLuku(a));
+    const [u] = kerrat;
+    console.log(`${y.tunnus} ${y.nimi.toUpperCase()} · sanottu ${y.kerrat.length} ${y.kerrat.length === 1 ? 'kerran' : 'kertaa'}` +
+      `${u ? `, viimeksi ${u.pvm} klo ${u.klo} [${lahdeNimi(u.lahde)}]` : ''} · roolit: ${y.roolit.join(', ')} · vartija: ${y.vartija}` +
+      `${y.tila !== 'voimassa' ? ` · ${y.tila.toUpperCase()}` : ''}`);
+    kerrat.forEach((k, i) => {
+      const v = kertaVika(k);
+      if (v) { viat.push(`${y.tunnus} ${k.pvm} klo ${k.klo} [${lahdeNimi(k.lahde)}]: ${v}`); console.log(`  🔴 HYLÄTTY ${k.pvm} klo ${k.klo} [${lahdeNimi(k.lahde)}]: ${v}`); return; }
+      const ots = i === 0 ? '' : `aiemmin ${k.pvm} klo ${k.klo} [${lahdeNimi(k.lahde)}]${k.korvattu ? ` KORVATTU ${k.korvattu}` : ''}: `;
+      console.log(`  ${ots}"${k.sanat}"`);
+    });
+  }
+  if (viat.length) { console.error(`HYLÄTTY: ${viat.length} sanaa ei ole sanatarkka (korjaa vain omistajan sanalla: pysyva-korvaa)`); process.exit(1); }
+} else if (komento === 'pysyva-liita') {
+  valmistelePuu();
+  const nimi = lippu('--pysyva'), roolit = lippu('--roolit'), vartija = lippu('--vartija'), lahde = lippu('--lahde');
+  let p = lippu('--pvm'), klo = lippu('--klo');
+  const loppu = argv.slice(1), s = nimi ? null : loppu.shift(), teksti = loppu.join(' ');
+  if (!lahde) kuolema('--lahde P-…|<tallenne> puuttuu');
+  vaadiSanat(teksti, lahde);
+  if (/^P-/.test(lahde)) { const m = paatosRivi(lahde).rivi.match(/\] (\S+) klo (\S+) ·/); p ||= m[1]; klo ||= m[2]; }
+  if (!p || !klo) kuolema('--pvm P.K.VVVV ja --klo HH.MM puuttuvat (tallenteen kerta)');
+  const j = pysyvat(), y = nimi ? uusiYdin(j, nimi, roolit, vartija) : ydin(j, s);
+  uusiKerta(y, { pvm: p, klo, lahde, sanat: teksti });
+  tallennaPysyvat(j); kirjaaRekisteriin([PYSYVAT]);
+  console.log(`LIITETTY ${y.tunnus} ${y.nimi}: ${p} klo ${klo} [${lahdeNimi(lahde)}] (kertoja ${y.kerrat.length})`);
+  console.log(`commit ${commit(`Kirjaus: pysyvä sana ${y.tunnus}`, [PYSYVAT, join(R, '.kirjattu.json')])}`);
+} else if (komento === 'pysyva-pois' || komento === 'pysyva-korvaa') {
+  valmistelePuu();
+  const os = lippu('--omistajan-sana'), [s] = argv.slice(1);
+  const r = vaadiOmistajanSana(os), j = pysyvat(), y = ydin(j, s);
+  if (y.tila !== 'voimassa') kuolema(`HYLÄTTY: ${s} on jo ${y.tila}`);
+  if (komento === 'pysyva-pois') y.tila = `pois: ${os}`;
+  else {
+    const teksti = omistajanOsa(r.rivi).replace(/^"|"$/g, '');
+    const m = r.rivi.match(/\] (\S+) klo (\S+) ·/);
+    for (const k of y.kerrat) k.korvattu ||= os;
+    uusiKerta(y, { pvm: m[1], klo: m[2], lahde: os, sanat: teksti });
+  }
+  y.muutokset.push({ aika: nyt.toISOString(), mita: komento, omistajan_sana: os });
+  tallennaPysyvat(j); kirjaaRekisteriin([PYSYVAT]);
+  console.log(`${komento === 'pysyva-pois' ? 'POIS' : 'KORVATTU'} ${s} (${os})`);
+  console.log(`commit ${commit(`Kirjaus: ${komento} ${s} (${os})`, [PYSYVAT, join(R, '.kirjattu.json')])}`);
 } else if (komento === 'kortti') {
   valmistelePuu();
   const eiCommit = kytkin('--ei-commit');
@@ -406,6 +553,7 @@ if (komento === 'hae') {
       console.log(`${x.punainen ? '🔴' : '·'} ${x.nimi}: ${x.arvo}${x.raja != null ? ` [raja ${x.raja}]` : ''}${x.lisa ? ` – ${x.lisa}` : ''}`);
   }
 } else {
-  console.log(readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(1, 20).join('\n'));
+  const ohje = readFileSync(new URL(import.meta.url), 'utf8').split('\n');
+  console.log(ohje.slice(1, ohje.indexOf(' */') + 1).join('\n'));
   process.exit(komento ? 2 : 0);
 }
