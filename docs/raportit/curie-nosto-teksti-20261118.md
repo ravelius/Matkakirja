@@ -1,4 +1,4 @@
-# Curie 1898 (vaja ESPCI:n pihalla): nosto uudella jaksotavalla, LUONNOS (SK 18.11.2026)
+# Curie 1898 (vaja ESPCI:n pihalla): nosto uudella jaksotavalla, DATA (SK 18.11.2026; KK 00.40 hyväksyi luonnoksen)
 
 Tehtävä: PT (KK 00.19), omistaja 17.11. klo 20.06 ("Tee Pariisiin lisää nostoja tuolla uudella systeemillä"). **Vain docs**: jaksotekstit, lähdetaulukko, kuvat varastosta, visa. Ei dataa mainiin, ei uusia kuvia, ei jonorivejä, ei ääntä. Malli: `kaulanauha-nosto-teksti-20261117.md`, `louvre-nosto-teksti-20261117.md`; sisarraportti `lumiere-nosto-teksti-20261118.md`.
 
@@ -16,7 +16,7 @@ Kohde (kun KK sanoo AJA): uusi fokuskohde `curie-1898` (js/packs/fokuskohteet-fr
 | 2 | tapahtuma | Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. Heinäkuussa 1898 he ilmoittivat löytäneensä uuden alkuaineen. He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. Joulukuussa he ilmoittivat toisen, radiumin. | 232 | marie |
 | 3 | tapahtuma | Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. Työ tehtiin koulun pihan toisella puolella olevassa vajassa, joka oli ennen ollut ruumiinavaussali. Vaja oli huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain. | 262 | vaja (havainnekuva) |
 | 4 | käänne | Työ vei yli kolme vuotta, ja lopulta heillä oli kymmenesosagramma puhdasta radiumkloridia. Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. Marie sai fysiikan Nobelin Pierren ja Henri Becquerelin kanssa ja myöhemmin kemian Nobelin yksin. | 246 | laboratorio |
-| 5 | tänään | Koulun sisäänkäynnillä Vauquelinin kadulla on laatta ja valokuvia vajasta. Marien myöhempi laboratorio on lähellä Curie-museona. | 128 | ei kuvaa (puuttuu) |
+| 5 | tänään | Koulun seinässä on laatta, joka kertoo löydöstä. Marien myöhempi laboratorio on lähellä Curie-museona. | 103 | laatta (Commons, CC BY 2.0) |
 
 - Puheessa kaksi tarkkaa vuotta (1873 isoisällä, 1898 jaksossa 2). Nobel-vuosia (1903, 1911) ja radiumkloridin vuotta (1902) ei sanota: ne tulevat vain vuosiriveille. Nimettyjä ihmisiä kolme (Marie, Pierre, Henri Becquerel). Pisin virke 14 sanaa. Alku (nimi + esittely) 44 merkkiä.
 - **Isoisän lause on fiktiota** (oma kokemus): ainoa väite on, että Latinalaiskorttelissa kulki opiskelijoita. Ei Curieita, vajaa tai ESPCI:tä (koulu perustettiin 1882, joten sitä ei 1873 ollut).
@@ -37,14 +37,14 @@ Lähteet: **A** AIP, "Making repeated separations" (history.aip.org/exhibits/cur
 | 4 | alkuaine piti saada puhtaana (eristää) | A (yli kolme vuotta eristää radiumkloridia), H | OK |
 | 5 | vaja koulun pihan toisella puolella | A ("across the school courtyard"), P (hangaari ESPCI:ssä) | OK |
 | 6 | vaja oli ennen ruumiinavaussali | A (medical school dissecting room), "Science History"/yksi hakutulos (former medical school dissecting room) | OK; **P ei mainitse tätä**, kaksi riippumatonta lähdettä A ja hakukaudella luettu |
-| 7 | huonosti tuuletettu, ei sadetiivis | A ("poorly ventilated", "not weathertight") | **Yksi lähde (A)**: kahdelta sivulta haettu vain yksi avattu; pehmennä tai lisää toinen ennen dataa |
+| 7 | huonosti tuuletettu, ei sadetiivis | A ("poorly ventilated", "not weathertight"), Gulf News "The curious days of the Curies" (rain came in, poorly ventilated) | OK (toinen lähde avattu 18.11.) |
 | 8 | malmia kului tonneittain | H ("several tons"), A ("very large quantities"; yksi tonni lahjoitettu) | OK "tonneittain"; tarkkaa määrää (1 / 7 / 8 tonnia) ei sanota, lähteet eroavat |
 | 9 | työ vei yli kolme vuotta | A | OK (H: 1902 kymmenesosagramma; 1898/99 aloitus) |
 | 10 | kymmenesosagramma puhdasta radiumkloridia (1902) | A, H, SM (tenth of a gram) | OK |
 | 11 | radium hohti pimeässä, Curiet ihailivat sitä | SM (blue-green glow, jouluna 1898), Abakcus (haettu hakukautta) | OK; väri ja päivä eivät puheessa |
 | 12 | Marie sai fysiikan Nobelin 1903 Pierren ja Becquerelin kanssa | H, SM | OK |
 | 13 | Marie sai kemian Nobelin 1911 yksin | H, SM | OK |
-| 14 | koulun sisäänkäynnillä Vauquelinin kadulla (10 rue Vauquelin) laatta ja valokuvia | P | **Yksi lähde (P)**; toinen: Institut Curie "Our history" mainitsee hangaarin koulussa mutta ei laattaa. Varmista (esim. Paris.fr:n toinen sivu tai ESPCI:n oma) tai pudota "valokuvia" |
+| 14 | koulun seinässä laatta, joka kertoo löydöstä | P (laatta koulun sisäänkäynnillä, 10 rue Vauquelin), Commons-kuva (laatta koulun seinällä rue Pierre Brossolette -puolella; teksti "In 1898, in a laboratory in this school, Pierre and Marie Curie … discovered radium") | OK KK 00.40:n mukaan ("valokuvia" pois); katu jätetty pois, koska sijainti eroaa lähteissä |
 | 15 | Marien myöhempi laboratorio on nykyään Curie-museo (1 rue Pierre et Marie Curie) | IC, P (haettu hakukautta), Time Out / Paris Je T'aime (hakutulos) | OK; sanotaan "lähellä", ei osoitetta |
 
 **Jätetty pois (yksi lähde, ristiriita tai ei palvele juonta):** rautakattila ja raskas sekoitustanko (yksi lähde) · "koeputkia taskussa" · poloniumin säteilyvoima (60 vs 400 × uraani) · Bémont (mukana radiumin ilmoituksessa; ei tarvita) · tarkka tonnimäärä · Becquerelin kautta Akatemialle (SM) · Marie ensimmäinen kaksi Nobelia · radium-tuotteet (saippua, hammastahna) · patentoimatta jättäminen · Institut du Radium (1914) · vajan purku (hakutulos kertoo, ettei sitä enää ole; yksi lähde).
@@ -67,7 +67,16 @@ Vanhan hetken `lahi`-havainnekuva (`hetki-marie-curie-hangaari-1898-lahi-photo-v
 
 Äänittäjälle: **Curie / Curien / Curiet**, **Marie**, **Pierre**, **Henri Becquerel** (bekkerel), **polonium / poloniumiksi**, **radium / radiumkloridia**, **Vauquelin** (voklen), **Latinalaiskortteli**, **Pariisi**. Ei äänitysjonorivejä lisätty (luonnos; vanhat rivit `marie-curie-hangaari-1898` ja nähtävyysjutun Curie 1898 poistetaan käsin ennen `tarkista.mjs --lisaa`, kun data tehdään). Uusia jonorivejä tulee noin 6.
 
-## 5. Avoimet KK:lle
+## 5. Data-PR: mitä tehtiin (18.11.2026)
+
+- `js/packs/fokuskohteet-fra.js`: uusi kohde `curie-1898` (nimi "Curien vaja", 6 jaksoa, 4 jaksokuvaa, 4 vuosiriviä, visa polonium, 3 Pulun kysymystä, laudat `johda-maastokohteet.mjs laudat`-funktiolla).
+- `js/packs/maakartat.js`: tarinapaikka "Curie 1898" (lamppu) → nähtävyyspiste "Curien vaja" (`wiki: 'ESPCI Paris'`, `nosto: 'curie-1898'`); hetki `marie-curie-hangaari-1898` ja lehtisivu ennallaan, **piilopiste** "Curie 1898" (`tarinapaikka: false`) pitää hetken kartalla.
+- `tests/tarinapaikkojen-merkki.test.mjs`: "Curie 1898" pois odotetuista lampuista.
+- `data/aanitysjono.tsv`: 6 riviä (`curie-1898` 1–6).
+- Jakso 5: laatan kuva Commonsista (`Plaque - Location de découvert du radium - rue Pierre Brossolette, Paris 5.jpg`, CC BY 2.0, Monceau from San Antonio; lisenssi luettu 18.11.). Vanhaa lahi-kuvaa ei käytetä (KK).
+- **NUI:lta ei tarvita uutta**; lamppu-merkki katoaa kartalta (nyt tiedenähtävyys, tagi `tiede`).
+
+## 6. Avoimet KK:lle
 
 1. Hyväksytäänkö teksti? Erityisesti jakson 3 vajan kuvaus (rivi 7: yksi lähde) ja jakson 5 laatta (rivi 14).
 2. Vuosirivien selitteet ok (1898 "löytö ilmoitettu", ettei vastaa visaan)?
