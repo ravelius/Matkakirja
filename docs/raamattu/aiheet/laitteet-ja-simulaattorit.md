@@ -3,7 +3,7 @@
 TAVOITE: Peli istuu jokaisen laitteen ruutuun, ja iPhonen asettelu on tehty sen omaa ruutua varten. Laitteita ja simulaattoreita käytetään säästeliäästi ja vuorollaan, eikä yksikään ajo häiritse omistajaa.
 
 SÄÄNNÖT:
-1. iPhonen ruskea yläpalkki on webiä matalampi ja ilman logoa: raha ja päivä vasemmalla, napit oikealla Dynamic Islandin korkeudella. Pystyssä palkki pysyy; vaakana se piiloutuu vieritettäessä, ja ⌄-nappi tuo sen takaisin. iPadilla palkki ei piiloudu. [R-4.28]
+1. iPhonen ruskea yläpalkki on matalampi, ilman logoa: raha ja päivä vasemmalla, napit oikealla Dynamic Islandin korkeudella. Pystyssä palkki pysyy; vaakana (iPhone, iPad, Mac) se on piilossa, ja matkalaukku tuo koko palkin ja valikon. [R-4.28] [P-261117-46] [P-261117-53]
 2. iPhonella linssin otsikko, valikko ja säätimet ovat Dynamic Islandin kummallakin puolella kaarevat kulmat huomioiden, ja napit ovat linssin teemaväriä. [R-4.30]
 3. iPhonella Matkakirja-logo on avatun matkalaukun oikeassa yläkulmassa ja vie tekijätietoihin ja lähteisiin. [R-4.31]
 4. Kaikki katsotaan ensin Macilla iPadin ja iPhonen ruutukoossa. Mac-ajo on lyhyt: yksi nimetty kysymys, pieni kuvalista; ei ajoa, jos testi tai loki riittää. [R-12.26] [R-10.5]
