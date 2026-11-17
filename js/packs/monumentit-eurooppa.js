@@ -714,10 +714,10 @@ export const EUROOPAN_KADONNEET = {
       nimio: 'Vanha raatihuone',
       nappi: 'Damin goottilainen raatihuone ennen vuoden 1652 paloa',
       laudat: { maailmankartta: { x: 5996.4, y: 1285.4 }, europe: { x: 305.1, y: 516.2 } },
-      teksti: 'Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. '
+      teksti: 'Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1300-luvulta lähtien. '
         + 'Tulipalo tuhosi sen 7. heinäkuuta 1652. Uusi raatihuone, nykyinen kuninkaanlinna, '
-        + 'valmistui viereen vuonna 1665.',
-      lahde: 'Rijksmuseum ja nl-Wikipedia "Oude Stadhuis van Amsterdam" (tarkistettu 21.9.2026).',
+        + 'avattiin viereen vuonna 1655.',
+      lahde: 'nl-Wikipedia "Oude Stadhuis van Amsterdam" ja en-Wikipedia "Royal Palace of Amsterdam"; palon päivä myös Hart Amsterdam (tarkistettu 17.11.2026).',
       kuva: 'ihme-amsterdamin-vanha-raatihuone-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam',
     }),
     kohde({
