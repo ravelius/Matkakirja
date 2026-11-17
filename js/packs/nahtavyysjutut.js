@@ -2487,6 +2487,12 @@ export const NAHTAVYYSJUTUT = {
           + 'kerran häntä etsittiin sohvan alta. Nykyään huoneita on '
           + '775, ja katolla liehuva lippu kertoo, onko hallitsija '
           + 'kotona.',
+      vuodet: [
+        { kohta: 'rakensi 1703', vuosi: '1703', selite: 'talo rakennettiin' },
+        { kohta: 'sen 1761', vuosi: '1761', selite: 'Yrjö III osti' },
+        { kohta: 'vasta 1837', vuosi: '1837', selite: 'Viktoria muutti' },
+        { kohta: 'kertaa 1838–1841', vuosi: '1838–1841', selite: 'Jones murtautui' },
+      ],
       lainaus: {
         teksti: 'Olen iloinen, että meitä pommitettiin. Nyt voin '
           + 'katsoa East Endiä silmiin.',
@@ -2528,6 +2534,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi '
           + 'pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta '
           + 'kiellettiin 2003, ja tilalle tuotiin haukka partioimaan.',
+      vuodet: [
+        { kohta: 'yleisölle 1844', vuosi: '1844', selite: 'aukio avattiin' },
+        { kohta: 'meritaistelun 1805', vuosi: '1805', selite: 'Nelsonin taistelu' },
+        { kohta: 'vasta 1867', vuosi: '1867', selite: 'leijonat tulivat' },
+        { kohta: 'kiellettiin 2003', vuosi: '2003', selite: 'ruokinta kiellettiin' },
+      ],
       lainaus: {
         teksti: 'Englanti odottaa jokaisen tekevän velvollisuutensa.',
         lahde: 'Horatio Nelsonin lippuviesti laivastolleen '
@@ -2568,6 +2580,9 @@ export const NAHTAVYYSJUTUT = {
         + 'Torni on 96 metriä korkea ja nojaa hieman luoteeseen. '
           + 'Kellotaulujen alareunaan on kaiverrettu latinankielinen '
           + 'rukous kuningatar Viktorian ajalta.',
+      vuodet: [
+        { kohta: 'syyskuussa 1859', vuosi: '1859', selite: 'uusi kello halkesi' },
+      ],
       lainaus: {
         teksti: 'DOMINE SALVAM FAC REGINAM NOSTRAM VICTORIAM PRIMAM — '
           + 'Herra, varjele kuningattaremme Viktoria ensimmäistä.',
@@ -2643,6 +2658,10 @@ export const NAHTAVYYSJUTUT = {
           + 'joulukuun 1940 yönä otettu valokuva savun keskellä '
           + 'seisovasta kupolista kiersi maailman. Wren on haudattu '
           + 'oman kirkkonsa kryptaan.',
+      vuodet: [
+        { kohta: 'suurpalossa 1666', vuosi: '1666', selite: 'suurpalo' },
+        { kohta: 'joulukuun 1940', vuosi: '1940', selite: 'kuuluisa valokuva' },
+      ],
       lainaus: {
         teksti: 'Lukija, jos etsit hänen muistomerkkiään — katso '
           + 'ympärillesi.',
@@ -2679,6 +2698,9 @@ export const NAHTAVYYSJUTUT = {
           + 'vanha London Bridge myytiin 1968 amerikkalaiselle '
           + 'liikemiehelle ja koottiin uudelleen Arizonaan, syntyi '
           + 'tarina, että ostaja luuli saavansa juuri tämän sillan.',
+      vuodet: [
+        { kohta: 'myytiin 1968', vuosi: '1968', selite: 'London Bridge myyty' },
+      ],
       kuvat: [
         {
           tiedosto: 'Tower bridge London Twilight - November 2006.jpg',
@@ -2716,6 +2738,9 @@ export const NAHTAVYYSJUTUT = {
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
         + 'sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
         + 'nimi seisoo yhä Threadneedle Streetin kulmassa.',
+      vuodet: [
+        { kohta: 'vuonna 1720', vuosi: '1720', selite: 'oppi sanan kupla' },
+      ],
       kuvat: [
         {
           tiedosto: 'Allegorie op de neergang van de South Sea Company, RP-P-OB-18.742.jpg',
@@ -2750,6 +2775,12 @@ export const NAHTAVYYSJUTUT = {
         + 'hän sai vasta marraskuussa 1640. Kellarin päällä ollut talo paloi Lontoon '
         + 'suurpalossa syyskuussa 1666. Jossain noiden kahden vuosiluvun välissä joku '
         + 'kaivoi laatikon lattiaansa eikä koskaan palannut hakemaan sitä.',
+      vuodet: [
+        { kohta: 'Vuonna 1912', vuosi: '1912', selite: 'laatikko esiin' },
+        { kohta: 'vuoden 1600', vuosi: 'n. 1600', selite: 'smaragdikello' },
+        { kohta: 'marraskuussa 1640', vuosi: '1640', selite: 'arvonimi saatiin' },
+        { kohta: 'syyskuussa 1666', vuosi: '1666', selite: 'talo paloi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Victoria and Albert Museum Jewellery 11042019 Necklace Enamelled gold Lovers knots Cheapside Hoard 3037.jpg',
@@ -2776,6 +2807,10 @@ export const NAHTAVYYSJUTUT = {
         + 'kiinnostavat löydöt, kuten yli kolmesataa vuotta vanhat esineet, on '
         + 'ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
+      vuodet: [
+        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'myynti keskeytettiin' },
+        { kohta: 'uudelleen 2024', vuosi: '2024', selite: 'myynti uudelleen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Mudlarks by Millennium Bridge.jpg',
@@ -2810,6 +2845,12 @@ export const NAHTAVYYSJUTUT = {
         + '1577–1579 nostosillan torni korvattiin Nonsuch Housella, '
         + 'kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin '
         + 'julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.',
+      vuodet: [
+        { kohta: 'rakennettiin 1176', vuosi: '1176', selite: 'rakentaminen alkoi' },
+        { kohta: 'valmistui 1209', vuosi: '1209', selite: 'silta valmistui' },
+        { kohta: 'Vuosina 1577–1579', vuosi: '1577–1579', selite: 'Nonsuch House' },
+        { kohta: 'silta 1831', vuosi: '1831', selite: 'silta purettiin' },
+      ],
       kuvat: [
         {
           tiedosto: '‘Old London Bridge - sketched on the spot’, William Alfred Delamotte - 30 March 1832.jpg',
@@ -2843,6 +2884,9 @@ export const NAHTAVYYSJUTUT = {
         + 'ensimmäisen generaattorin. Faraday ei osaa matematiikkaa juuri '
         + 'lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell yhtälöiksi '
         + 'vasta 1860-luvulla.',
+      vuodet: [
+        { kohta: 'elokuuta 1831', vuosi: '1831', selite: 'Faradayn koe' },
+      ],
       kuvat: [
         {
           tiedosto: 'Henry William Pickersgill (1782-1875) - Michael Faraday (1791–1867) - RIIC 0280 - Royal Institution.jpg',
@@ -2875,6 +2919,11 @@ export const NAHTAVYYSJUTUT = {
         + 'ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja '
         + 'Ernst Chainin ryhmä Oxfordissa tekee siitä lääkkeen 1940-luvun alussa, '
         + 'ja kolmikko jakaa lääketieteen Nobelin 1945.',
+      vuodet: [
+        { kohta: 'syyskuuta 1928', vuosi: '1928', selite: 'homepilkku maljassa' },
+        { kohta: 'maaliskuuta 1929', vuosi: '1929', selite: 'nimi penisilliini' },
+        { kohta: 'Nobelin 1945', vuosi: '1945', selite: 'lääketieteen Nobel' },
+      ],
       kuvat: [
         {
           tiedosto: 'Professor Alexander Fleming at work in his laboratory at St Mary\'s Hospital, London, during the Second World War. D17801.jpg',
@@ -2910,6 +2959,11 @@ export const NAHTAVYYSJUTUT = {
         + 'reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
         + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta 25. '
         + 'maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen alittajana.',
+      vuodet: [
+        { kohta: 'toukokuussa 1827', vuosi: '1827', selite: 'tunnelikilpi työssä' },
+        { kohta: 'Tammikuussa 1828', vuosi: '1828', selite: 'tulva tappoi kuusi' },
+        { kohta: 'maaliskuuta 1843', vuosi: '1843', selite: 'tunneli avattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'The Thames Tunnel (BM 1880,1113.1690).jpg',
@@ -2943,6 +2997,9 @@ export const NAHTAVYYSJUTUT = {
         + 'yönä tuuli laantuu. Palo '
         + 'tuhosi noin 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain '
         + 'kourallinen — luku, jota epäillään yhä.',
+      vuodet: [
+        { kohta: 'syyskuuta 1666', vuosi: '1666', selite: 'suurpalo alkoi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Great Fire London.jpg',
@@ -2978,6 +3035,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Henrik kahdeksannen -näytelmän; ainoa vahinko on mies, jonka palavat housut '
         + 'sammutetaan '
         + 'oluella.',
+      vuodet: [
+        { kohta: 'syyskuu 1599', vuosi: '1599', selite: 'Globe rakennettu' },
+        { kohta: 'kesäkuuta 1613', vuosi: '1613', selite: 'Globe paloi' },
+      ],
       kuvat: [
         {
           tiedosto: 'The Globe Theatre from the Long Antwerp View of London.jpg',
@@ -3012,6 +3073,10 @@ export const NAHTAVYYSJUTUT = {
         + 'ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä '
         + 'pronssilaatta, jonka London Transport pystytti sadan vuoden '
         + 'kunniaksi vuonna 1963.',
+      vuodet: [
+        { kohta: 'tammikuuta 1863', vuosi: '1863', selite: 'metro avattiin' },
+        { kohta: 'vuonna 1963', vuosi: '1963', selite: 'muistolaatta' },
+      ],
       kuvat: [
         {
           tiedosto: 'World\'s First Underground (5025945153).jpg',
@@ -3039,6 +3104,11 @@ export const NAHTAVYYSJUTUT = {
         + 'ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien '
         + 'lahjonnan, ja valtiovarainministeri John Aislabie erotettiin '
         + 'alahuoneesta ja suljettiin Toweriin.',
+      vuodet: [
+        { kohta: 'perustettiin 1711', vuosi: '1711', selite: 'yhtiö perustettiin' },
+        { kohta: 'vuonna 1720', vuosi: '1720', selite: 'velkasopimus' },
+        { kohta: 'paljasti 1721', vuosi: '1721', selite: 'tutkinta paljasti' },
+      ],
       kuvat: [
         {
           tiedosto: 'William Hogarth, The South Sea Scheme, 1721, NGA 30435.jpg',
@@ -3070,6 +3140,9 @@ export const NAHTAVYYSJUTUT = {
         + 'yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin '
         + 'Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten '
         + 'venetsialaisen silmin.',
+      vuodet: [
+        { kohta: 'vuonna 1746', vuosi: '1746', selite: 'muutti Lontooseen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
@@ -3116,6 +3189,9 @@ export const NAHTAVYYSJUTUT = {
         + '1676 palon jälkeen, ja sen penkeillä istui aikanaan Charles Dickens, '
         + 'joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — '
         + 'olutta myydään silti joka päivä.',
+      vuodet: [
+        { kohta: 'vuoden 1676', vuosi: '1676', selite: 'Southwarkin palo' },
+      ],
       kuvat: [
         {
           tiedosto: 'The George at Southwark (8553233399).jpg',
@@ -3137,6 +3213,9 @@ export const NAHTAVYYSJUTUT = {
         + 'autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen '
         + 'suojelumerkintä — ja taustan studiossa äänitetään musiikkia '
         + 'edelleen.',
+      vuodet: [
+        { kohta: 'päivänä 1969', vuosi: '1969', selite: 'suojatien ylitys' },
+      ],
       kuvat: [
         {
           tiedosto: 'Abbey Road Zebra.jpg',
@@ -3158,6 +3237,9 @@ export const NAHTAVYYSJUTUT = {
         + 'marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät '
         + 'maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla '
         + 'iltaan mennessä kadonnut toisen alle.',
+      vuodet: [
+        { kohta: 'toukokuussa 2008', vuosi: '2008', selite: 'Cans Festival' },
+      ],
       kuvat: [
         {
           tiedosto: "Underneath the arches. Leake Street.jpg",
@@ -3177,6 +3259,10 @@ export const NAHTAVYYSJUTUT = {
         + 'vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat '
         + 'ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista '
         + 'ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.',
+      vuodet: [
+        { kohta: 'vuonna 1841', vuosi: '1841', selite: 'jalusta jäi tyhjäksi' },
+        { kohta: 'Kesällä 2009', vuosi: '2009', selite: 'ihmiset jalustalla' },
+      ],
       kuvat: [
         {
           tiedosto: "Empty Fourth Plinth.jpg",
@@ -3197,6 +3283,9 @@ export const NAHTAVYYSJUTUT = {
         + 'posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä '
         + 'Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon '
         + 'pääsee sisään ilmaiseksi.',
+      vuodet: [
+        { kohta: 'Vuonna 2010', vuosi: '2010', selite: 'Ai Weiwein siemenet' },
+      ],
       kuvat: [
         {
           tiedosto: "Tate Modern - Bankside Power Station.jpg",
@@ -3217,6 +3306,10 @@ export const NAHTAVYYSJUTUT = {
         + 'veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 '
         + 'metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas '
         + 'kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.',
+      vuodet: [
+        { kohta: 'vuoden 2012', vuosi: '2012', selite: 'olympialaiset' },
+        { kohta: 'Vuonna 2016', vuosi: '2016', selite: 'liukumäki kiedottiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'ArcelorMittal Orbit - geograph.org.uk - 6402522.jpg',
@@ -3253,6 +3346,11 @@ export const NAHTAVYYSJUTUT = {
           + 'siihen, mistä savu tuli: piipusta ei enää saanut päästää tummaa savua, ja '
           + 'kunnat saivat oikeuden määrätä kokonaisia alueita savuttomiksi, jolloin '
           + 'kodin tulisijassa sai polttaa vain savutonta polttoainetta.',
+      vuodet: [
+        { kohta: 'Joulukuussa 1952', vuosi: '1952', selite: 'savusumu' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1956', vuosi: '1956', selite: 'laki säädettiin' },
+      ],
       kuvat: [
         {
           tiedosto: "Nelson's Column during the Great Smog of 1952.jpg",
@@ -3283,6 +3381,13 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Händel oli ollut kuolleena jo yli sata vuotta. Nykyään talot ovat '
         + 'yhdessä museo.',
+      vuodet: [
+        { kohta: 'vuonna 1723', vuosi: '1723', selite: 'Händel muutti' },
+        { kohta: 'huhtikuuta 1759', vuosi: '1759', selite: 'Händel kuoli' },
+        { kohta: 'välillä 1741', vuosi: '1741', selite: 'Messias sävelletty' },
+        { kohta: 'vuosina 1968–69', vuosi: '1968–69', selite: 'Hendrix asui' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'George Frideric Handel by Thomas Hudson.jpg',
@@ -3311,6 +3416,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Johnson oli ollut kuolleena lähes 90 vuotta, mutta hänen '
         + 'vuokraamansa talo seisoi yhä Gough Squarella. Nykyään siinä on museo.',
+      vuodet: [
+        { kohta: 'vuonna 1755', vuosi: '1755', selite: 'sanakirja ilmestyi' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Dr Johnson\'s House, Gough Square - geograph.org.uk - 5590547.jpg',
@@ -3343,6 +3452,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 Pepysin merkinnästä oli kulunut yli 200 vuotta. St Paulin kirkon '
         + 'seinällä Covent Gardenissa on laatta, joka muistuttaa Pepysin '
         + 'merkinnästä.',
+      vuodet: [
+        { kohta: 'päivänä 1662', vuosi: '1662', selite: 'Pepysin merkintä' },
+        { kohta: 'Vuonna 1669', vuosi: '1669', selite: 'toinen merkintä' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Near this spot Punch\'s Puppet Show was first performed in England and witnessed by Samuel Pepys 1662.jpg',
@@ -3373,6 +3487,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 televisiota ei vielä ollut, eikä Baird ollut edes syntynyt. '
         + 'Nipkow\'n kiekon keksimiseen oli vielä yksitoista vuotta.',
+      vuodet: [
+        { kohta: 'Tammikuussa 1926', vuosi: '1926', selite: 'television esitys' },
+        { kohta: 'vuonna 1884', vuosi: '1884', selite: 'Nipkow\'n kiekko' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'John Logie Baird in 1917.jpg',
@@ -3402,6 +3521,12 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Eustonin kokeesta oli kulunut 36 vuotta. Molemmat keksijät '
         + 'olivat vielä elossa: Wheatstone kuoli 1875 ja Cooke 1879.',
+      vuodet: [
+        { kohta: 'Heinäkuussa 1837', vuosi: '1837', selite: 'koe Eustonilla' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'kuoli 1875', vuosi: '1875', selite: 'Wheatstone kuoli' },
+        { kohta: 'Cooke 1879', vuosi: '1879', selite: 'Cooke kuoli' },
+      ],
       kuvat: [
         {
           tiedosto: 'Wheatstone Charles drawing 1868.jpg',
@@ -3435,6 +3560,13 @@ export const NAHTAVYYSJUTUT = {
           + 'ryöstetty kruunajaiskivi, kunnes kivi palautettiin Skotlantiin 1996. '
           + 'Runoilijoiden nurkkaan haudattiin ensimmäisenä Geoffrey Chaucer vuonna 1400. '
           + 'Tuntemattoman sotilaan hautaa, joka tehtiin 1920, ei astuta yli.',
+      vuodet: [
+        { kohta: 'joulukuussa 1065', vuosi: '1065', selite: 'kirkko vihittiin' },
+        { kohta: 'jouluna 1066', vuosi: '1066', selite: 'Vilhelm kruunattiin' },
+        { kohta: 'nousta 1245', vuosi: '1245', selite: 'uusi kirkko alkoi' },
+        { kohta: 'luostarit 1540', vuosi: '1540', selite: 'luostarien lakkautus' },
+        { kohta: 'vuonna 1400', vuosi: '1400', selite: 'Chaucer haudattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Westminster Abbey west front March 2015.jpg',
@@ -3469,6 +3601,10 @@ export const NAHTAVYYSJUTUT = {
           + 'sen goottilaiset yksityiskohdat Augustus Pugin, ja rakennustyöt kestivät '
           + 'noin kolmekymmentä vuotta. Pyhän Stefanuksen kappelista on jäljellä enää '
           + 'alakerran krypta.',
+      vuodet: [
+        { kohta: 'valmistui 1099', vuosi: '1099', selite: 'Hall valmistui' },
+        { kohta: 'Lokakuussa 1834', vuosi: '1834', selite: 'palatsi paloi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Palace of Westminster seen from the north bank of the Thames, London.jpg',
@@ -3502,6 +3638,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Nykyinen valurautainen silta avattiin 1862, ja se on maalattu vihreäksi '
           + 'kuten alahuoneen penkit, sillä se on palatsin alahuoneen päässä. Palatsin '
           + 'toisessa päässä Lambeth Bridge on punainen kuten ylähuoneen penkit.',
+      vuodet: [
+        { kohta: 'silti 1750', vuosi: '1750', selite: 'silta avattiin' },
+        { kohta: 'sillalla 1802', vuosi: '1802', selite: 'Wordsworthin sonetti' },
+        { kohta: 'avattiin 1862', vuosi: '1862', selite: 'nykyinen avattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'At London 2025 569 - Westminster Bridge with Palace of Westminster.jpg',
@@ -3537,6 +3678,13 @@ export const NAHTAVYYSJUTUT = {
           + 'nimellä. Brittiläinen kapteeni osti sen takaisin 1922, ja Greenwichin '
           + 'kuivatelakalle se nostettiin 1954. Vuonna 2007 korjaustöiden aikana laivassa '
           + 'syttyi tulipalo, mutta monet alkuperäiset osat oli jo irrotettu turvaan.',
+      vuodet: [
+        { kohta: 'rakennettiin 1869', vuosi: '1869', selite: 'laiva rakennettiin' },
+        { kohta: 'Portugaliin 1895', vuosi: '1895', selite: 'myytiin Portugaliin' },
+        { kohta: 'takaisin 1922', vuosi: '1922', selite: 'ostettiin takaisin' },
+        { kohta: 'nostettiin 1954', vuosi: '1954', selite: 'kuivatelakalle' },
+        { kohta: 'Vuonna 2007', vuosi: '2007', selite: 'tulipalo' },
+      ],
       kuvat: [
         {
           tiedosto: 'Cutty Sark (16719233476).jpg',
@@ -3569,6 +3717,10 @@ export const NAHTAVYYSJUTUT = {
           + '1536. Vallihauta kuivattiin 1840-luvulla. Linnassa pidetään aina vähintään '
           + 'kuutta korppia, sillä vanhan uskomuksen mukaan valtakunta kaatuu, jos korpit '
           + 'lähtevät.',
+      vuodet: [
+        { kohta: 'noin 1078', vuosi: 'n. 1078', selite: 'tornin rakennus' },
+        { kohta: 'Boleyn 1536', vuosi: '1536', selite: 'Boleyn mestattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Tower of London viewed from the River Thames.jpg',
@@ -3600,6 +3752,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Sisäpihalle rakennettiin 1857 pyöreä lukusali kupolin alle. Siellä Karl Marx '
           + 'kirjoitti Pääomaa ja Lenin luki väärällä nimellä. Kirjasto muutti omaan '
           + 'taloonsa 1997, ja lukusalin ympärille katettiin lasikattoinen Great Court.',
+      vuodet: [
+        { kohta: 'ja 1753', vuosi: '1753', selite: 'museo perustettiin' },
+        { kohta: 'avattiin 1759', vuosi: '1759', selite: 'museo avattiin' },
+        { kohta: 'pylväsjulkisivun 1823–1852', vuosi: '1823–1852', selite: 'pylväsjulkisivu' },
+        { kohta: 'rakennettiin 1857', vuosi: '1857', selite: 'pyöreä lukusali' },
+      ],
       kuvat: [
         {
           tiedosto: 'British Museum from NE 2 (cropped).JPG',
@@ -3631,6 +3789,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Museossa oli yli sata vuotta diplodokuksen luurangon kipsivalos, jota '
           + 'kävijät kutsuivat Dippyksi; päähalliin se siirrettiin 1979. Se vaihdettiin '
           + '2017 sinivalaan luurankoon, joka roikkuu nyt päähallin katosta.',
+      vuodet: [
+        { kohta: 'avattiin 1881', vuosi: '1881', selite: 'museo avattiin' },
+        { kohta: 'siirrettiin 1979', vuosi: '1979', selite: 'Dippy päähalliin' },
+        { kohta: 'vaihdettiin 2017', vuosi: '2017', selite: 'sinivalas tilalle' },
+      ],
       kuvat: [
         {
           tiedosto: 'Natural History Museum London front facade 2025 dllu.jpg',
@@ -3665,6 +3828,11 @@ export const NAHTAVYYSJUTUT = {
           + 'Lontoon savussa. Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, '
           + 'jotta palatsi sopisi muistomerkin taustaksi. Muistomerkki valmistui kokonaan '
           + '1924.',
+      vuodet: [
+        { kohta: 'tammikuussa 1901', vuosi: '1901', selite: 'Viktoria kuoli' },
+        { kohta: 'paljastettiin 1911', vuosi: '1911', selite: 'paljastus' },
+        { kohta: 'uudelleen 1913', vuosi: '1913', selite: 'palatsin julkisivu' },
+      ],
       kuvat: [
         {
           tiedosto: 'Victoria Memorial and Buckingham Palace.jpg',
@@ -3699,6 +3867,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Promenadikonsertit soitettiin ennen Queen\'s Hallissa, kunnes pommi tuhosi '
           + 'salin toukokuussa 1941. Promsit muuttivat Albert Halliin ja soivat siellä '
           + 'yhä joka kesä.',
+      vuodet: [
+        { kohta: 'Vuoden 1851', vuosi: '1851', selite: 'maailmannäyttely' },
+        { kohta: 'kuoli 1861', vuosi: '1861', selite: 'Albert kuoli' },
+        { kohta: 'salin 1871', vuosi: '1871', selite: 'sali avattiin' },
+        { kohta: 'vaimennettiin 1969', vuosi: '1969', selite: 'kaikua vaimennettiin' },
+        { kohta: 'toukokuussa 1941', vuosi: '1941', selite: 'Queen\'s Hallin tuho' },
+      ],
       kuvat: [
         {
           tiedosto: 'Royal Albert Hall, London - Nov 2012.jpg',
@@ -3732,6 +3907,11 @@ export const NAHTAVYYSJUTUT = {
         + 'mukaan syynä olivat ensimmäisen maailmansodan saksalaiset ilmalaivat, mutta maali '
         + 'on vanhempaa: ilmansaasteet olivat jo pilanneet kullan. Kulta palautettiin '
           + 'vasta korjauksessa, joka valmistui 1998.',
+      vuodet: [
+        { kohta: 'kuoli 1861', vuosi: '1861', selite: 'Albert kuoli' },
+        { kohta: 'Parkissa 1851', vuosi: '1851', selite: 'Kristallipalatsi' },
+        { kohta: 'paloi 1936', vuosi: '1936', selite: 'paloi Sydenhamissa' },
+      ],
       kuvat: [
         {
           tiedosto: 'Albert Memorial, Londres, Inglaterra, 2022-11-25, DD 93-95 HDR.jpg',
@@ -3763,6 +3943,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Palatsin puutarhat ovat nykyään Kensington Gardens -puisto. Prinsessa Diana '
           + 'asui palatsissa vuoteen 1997, ja osa siitä on yhä kuninkaallisen perheen '
           + 'asuntona.',
+      vuodet: [
+        { kohta: 'osti 1689', vuosi: '1689', selite: 'Vilhelm osti talon' },
+        { kohta: 'paloi 1698', vuosi: '1698', selite: 'Whitehall paloi' },
+        { kohta: 'palatsissa 1819', vuosi: '1819', selite: 'Viktoria syntyi' },
+        { kohta: 'aamuna 1837', vuosi: '1837', selite: 'tuli kuningattareksi' },
+        { kohta: 'vuoteen 1997', vuosi: '1997', selite: 'Diana asui vuoteen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Palacio de Kensington, Londres, Inglaterra, 2022-11-25, DD 30.jpg',
@@ -3795,6 +3982,11 @@ export const NAHTAVYYSJUTUT = {
           + 'pituusasteiden lähtöviivaksi. Kaupungin savu ja valot peittivät tähdet, ja '
           + 'tähtitieteilijät muuttivat 1940- ja 1950-luvuilla maaseudulle. Pihalla voi '
           + 'seisoa yhtä aikaa itäisellä ja läntisellä pallonpuoliskolla.',
+      vuodet: [
+        { kohta: 'perusti 1675', vuosi: '1675', selite: 'Kaarle II perusti' },
+        { kohta: 'Vuodesta 1833', vuosi: '1833', selite: 'aikapallo alkoi' },
+        { kohta: 'Vuonna 1884', vuosi: '1884', selite: 'nollameridiaani' },
+      ],
       kuvat: [
         {
           tiedosto: 'View of the Royal Observatory Greenwich from One Tree Hill in Greenwich Park, London, 20260719 0940 4508.jpg',
@@ -3826,6 +4018,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vanhat merimiehet asuivat sairaalassa vuoteen 1869. Sen jälkeen '
           + 'rakennuksissa toimi laivaston upseerikoulu vuoteen 1998.',
+      vuodet: [
+        { kohta: 'tammikuussa 1806', vuosi: '1806', selite: 'Nelson nähtävillä' },
+        { kohta: 'vuoteen 1869', vuosi: '1869', selite: 'merimiehet vuoteen' },
+        { kohta: 'vuoteen 1998', vuosi: '1998', selite: 'upseerikoulu vuoteen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Royal Naval College Greenwich view from the Thames.jpg',
@@ -3858,6 +4055,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Sisällä on Tulppaaniportaat, Britannian ensimmäiset keskitolpattomat '
           + 'kierreportaat. Maantie siirrettiin myöhemmin talon ohi, ja nykyään talossa '
           + 'on taidegalleria.',
+      vuodet: [
+        { kohta: 'Housen 1616', vuosi: '1616', selite: 'Jones suunnitteli' },
+        { kohta: 'kuoli 1619', vuosi: '1619', selite: 'Anna kuoli' },
+        { kohta: 'valmistui 1635', vuosi: '1635', selite: 'talo valmistui' },
+      ],
       kuvat: [
         {
           tiedosto: 'Queen\'s House. Greenwich, UK.jpg',
@@ -3885,6 +4087,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Halli oli alun perin tarkoitettu väliaikaiseksi. Näyttelyn jälkeen se purettiin ja koottiin uudelleen Sydenham Hillille Etelä-Lontooseen. Siellä se paloi vuonna 1936.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 paikka Hyde Parkissa oli ollut tyhjänä yli kaksikymmentä vuotta, ja halli seisoi jo Sydenhamissa.',
+      vuodet: [
+        { kohta: 'toukokuuta 1851', vuosi: '1851', selite: 'näyttely avattiin' },
+        { kohta: 'vuonna 1936', vuosi: '1936', selite: 'paloi' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Hearsum Collection ja London Museum',
     },
     'Old St Paul\'s': {
@@ -3894,6 +4101,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Katedraalin torni paloi vuonna 1561. Lontoon suuri palo tuhosi koko rakennuksen vuonna 1666. Sen tilalle rakennettiin Christopher Wrenin suunnittelema nykyinen St Paulin katedraali, joka valmistui vuonna 1710.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteensataan vuoteen.',
+      vuodet: [
+        { kohta: 'vuonna 1087', vuosi: '1087', selite: 'rakentaminen alkoi' },
+        { kohta: 'vuonna 1561', vuosi: '1561', selite: 'torni paloi' },
+        { kohta: 'vuonna 1666', vuosi: '1666', selite: 'suurpalo' },
+        { kohta: 'vuonna 1710', vuosi: '1710', selite: 'nykyinen valmistui' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Museum of London',
     },
   },

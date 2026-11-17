@@ -66,51 +66,6 @@ kadonnut:hahmotelma-temple-torni
 kadonnut:hahmotelma-trocadero
 kadonnut:hahmotelma-westminster-vanha
 kadonnut:hahmotelma-whitehall
-nahtavyys:lontoo:Abbey Roadin suojatie
-nahtavyys:lontoo:Albert Memorial
-nahtavyys:lontoo:Baird 1926
-nahtavyys:lontoo:Big Ben
-nahtavyys:lontoo:British Museum
-nahtavyys:lontoo:Brunel 1827
-nahtavyys:lontoo:Buckinghamin palatsi
-nahtavyys:lontoo:Canaletto Lontoossa
-nahtavyys:lontoo:Cheapsiden kätkö
-nahtavyys:lontoo:Crystal Palace 1851
-nahtavyys:lontoo:Cutty Sark
-nahtavyys:lontoo:Dickensin pubi
-nahtavyys:lontoo:Etelämeren kupla
-nahtavyys:lontoo:Exchange Alley
-nahtavyys:lontoo:Faraday 1831
-nahtavyys:lontoo:Fleming 1928
-nahtavyys:lontoo:Händel ja Hendrix
-nahtavyys:lontoo:Johnson 1755
-nahtavyys:lontoo:Kensingtonin palatsi
-nahtavyys:lontoo:Leake Streetin tunneli
-nahtavyys:lontoo:Liukumäkiveistos
-nahtavyys:lontoo:Lontoon Tower
-nahtavyys:lontoo:Lontoon palo 1666
-nahtavyys:lontoo:Metron höyryveturi
-nahtavyys:lontoo:Millennium Bridgen portaat
-nahtavyys:lontoo:Natural History Museum
-nahtavyys:lontoo:Neljäs jalusta
-nahtavyys:lontoo:Old Royal Naval College
-nahtavyys:lontoo:Old St Paul's
-nahtavyys:lontoo:Punch 1662
-nahtavyys:lontoo:Pyhän Paavalin katedraali
-nahtavyys:lontoo:Queen's House
-nahtavyys:lontoo:Royal Albert Hall
-nahtavyys:lontoo:Royal Observatory
-nahtavyys:lontoo:Savusumu 1952
-nahtavyys:lontoo:Shakespeare 1599
-nahtavyys:lontoo:Sähkötin 1837
-nahtavyys:lontoo:Tower Bridge
-nahtavyys:lontoo:Trafalgar Square
-nahtavyys:lontoo:Turbiinihalli
-nahtavyys:lontoo:Vanha London Bridge
-nahtavyys:lontoo:Victoria Memorial
-nahtavyys:lontoo:Westminster Abbey
-nahtavyys:lontoo:Westminster Bridge
-nahtavyys:lontoo:Westminsterin palatsi
 nahtavyys:pariisi:Notre-Dame 2019
 nahtavyys:rooma:Aqua Virgo
 nahtavyys:rooma:Areenan kellari
