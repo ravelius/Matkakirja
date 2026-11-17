@@ -1,0 +1,89 @@
+{
+  "taskNumber": 2636,
+  "revision": "a-kynttila-v2",
+  "checkedAt": "2026-11-17T11:00:13.449512+00:00",
+  "status": "PASS_REQUESTED_CORRECTION",
+  "checks": {
+    "bodyCoreFullyOpaque": true,
+    "flamePixelsUnchanged": true,
+    "allSixOriginalVectorStrokesUnchanged": true,
+    "onlyNewGeometryIsBodyFill": true,
+    "rasterDifferenceBounds": [
+      115,
+      229,
+      409,
+      400
+    ],
+    "maxOutsideBodyAntialiasAlphaDifference": 14,
+    "outerBoundsUnchanged": [
+      104,
+      44,
+      410,
+      468
+    ],
+    "svgAndNativePathIdentical": true,
+    "originalV1PackageHashesUnchanged": true,
+    "alphaPngs": [
+      {
+        "file": "merkki-uskonnot.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "file": "merkki-uskonnot-24.png",
+        "size": [
+          24,
+          24
+        ],
+        "mode": "RGBA",
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "file": "merkki-uskonnot-40.png",
+        "size": [
+          40,
+          40
+        ],
+        "mode": "RGBA",
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "file": "merkki-uskonnot-128.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA",
+        "alphaRange": [
+          0,
+          255
+        ]
+      }
+    ],
+    "comparisonSizes": [
+      24,
+      40,
+      128
+    ],
+    "comparisonMembers": 7,
+    "visualReview": "Filled body is clearly visible beside the six existing icons; flame and holder retained."
+  },
+  "kkSelectedAlternative": "A-kynttila",
+  "newKKReviewRequired": false,
+  "handoff": "LAV -> PT -> NS",
+  "gameIntegrated": false,
+  "published": false
+}
