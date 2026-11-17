@@ -6533,39 +6533,6 @@ export const NAHTAVYYSJUTUT = {
      * kohteesta juttu on; tarkka lähdeviite asuu kohteen pakissa, ja
      * `lahde: 'Wikipedia'` on nähtävyysjutun oma muoto.
      */
-    Bastilji: {
-      nosto: 'bastilji',
-      teksti: 'Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin '
-        + 'itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan '
-        + 'kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat '
-        + 'käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen '
-        + 'kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin '
-        + 'valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä '
-        + 'tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 '
-        + '279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi '
-        + 'linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. '
-        + 'Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.',
-      vuodet: [
-        { kohta: 'jo 1357', vuosi: '1357', selite: 'työt käynnissä' },
-        { kohta: 'vuodesta 1370', vuosi: '1370', selite: 'pääosa alkoi nousta' },
-        { kohta: 'päivänä 1789', vuosi: '1789', selite: 'valtaus' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Le Chasteau de la Bastille de Paris, hors la Porte Sainct Antoine. G.285.jpg',
-          selite: 'Näin Bastiljin linnoitus kohosi Pariisin itälaidalla '
-            + '1600-luvulla; nykyään sen paikalla on aukio.',
-          lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
-        },
-        {
-          tiedosto: 'The Bastille in the first days of its demolition, by Hubert Robert.jpg',
-          selite: 'Heinäkuussa 1789 Bastiljia alettiin purkaa kivi kerrallaan; '
-            + 'maalari Hubert Robert näki työn läheltä.',
-          lahde: 'Hubert Robert 1789, Wikimedia Commons (PD)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
     // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
     // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.

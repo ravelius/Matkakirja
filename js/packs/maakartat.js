@@ -5489,11 +5489,11 @@ export const KAUPUNKIKARTAT = {
        * Vosges 250 metrin päässä luoteessa, joten numeroympyrät eivät
        * mene päällekkäin (tools/tarkista-karttapisteet.mjs).
        *
-       * Juttu on kohteen OMA teksti sanatarkasti
-       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       * Yksi nosto (Bastilji-nosto 17.11.2026, P-261117-98): nähtävyysjutun kopio poistettu,
+       * linnoitus on kohteen jaksoissa (js/packs/fokuskohteet-fra.js, kuten Tuileries).
        */
       {
-        nimi: 'Bastilji', lat: 48.85333, lon: 2.36917,
+        nimi: 'Bastilji', lat: 48.85333, lon: 2.36917, wiki: 'Bastille',
         nosto: 'bastilji',
       },
       /*
