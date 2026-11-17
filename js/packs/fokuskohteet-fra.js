@@ -975,6 +975,7 @@ export const FOKUSKOHTEET_FRA = [
         aani: 'isoisa',
         teksti: 'Pariisi, 1873. Kävelin tänään Capucines-bulevardia pitkin. '
           + 'Ihmisiä oli niin paljon, että jouduin astumaan kadulle.',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
