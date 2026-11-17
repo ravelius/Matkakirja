@@ -549,7 +549,7 @@ export const FOKUSVIRTA_ROOMA = {
       + 'Virgo tarkoittaa neitoa. Nykyinen allas on paljon '
       + 'uudempi. Arkkitehti Nicola Salvi aloitti sen 1732, ja se '
       + 'valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen. Keskellä ajaa merenjumala '
-      + 'vaunuillaan, joita vetävät kaksi hevosta, toinen rauhallinen ja '
+      + 'vaunuillaan, joita vetävät kaksi merihevosta, toinen rauhallinen ja '
       + 'toinen villi. Altaan reunalla heitetään yhä kolikko olan yli. '
       + 'Tarinan mukaan se takaa paluun Roomaan. Vuonna 2022 altaasta '
       + 'kerättiin kolikoita yli 1,4 miljoonan euron arvosta, ja ne '
