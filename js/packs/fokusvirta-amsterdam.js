@@ -1291,12 +1291,12 @@ export const FOKUSVIRTA_AMSTERDAM = {
         'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea '
           + 'ja 41 leveä. Rijksmuseumin mukaan Johannes Vermeer maalasi sen noin vuonna 1660, ja hänen '
           + 'tuotannostaan tunnetaan vain noin 35 maalausta.',
-        'Rijksmuseo tutki taulua vuonna 2022 röntgen- ja infrapunatekniikoilla. '
+        'Rijksmuseum tutki taulua vuonna 2022 röntgen- ja infrapunatekniikoilla. '
           + 'Maalin alta paljastui, että Vermeer oli suunnitellut seinälle '
           + 'kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten pois.',
-        'Isoisäsi matkavuonna 1873 taulua ei vielä ollut Rijksmuseossa. Se kuului '
+        'Isoisäsi matkavuonna 1873 taulua ei vielä ollut Rijksmuseumissa. Se kuului '
           + 'Six-suvun yksityiskokoelmaan, ja museo osti sen vasta 1908 Vereniging '
-          + 'Rembrandtin tuella. Rijksmuseo toimi tuolloin Trippenhuisissa; nykyinen '
+          + 'Rembrandtin tuella. Rijksmuseum toimi tuolloin Trippenhuisissa; nykyinen '
           + 'rakennus avattiin 1885.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum, Essential Vermeer ja DutchNews',
@@ -1437,7 +1437,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       lunastus: [
         'Rembrandt valmisti kaartin ryhmäkuvan vuonna 1642. Teoksella ei alun '
           + 'perin ollut nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta '
-          + '1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan '
+          + '1700-luvun lopulta. Rijksmuseumin mukaan kuva esittää päiväsaikaan '
           + 'kulkevaa joukkoa, vaikka sävyt ovat tummat.',
         'Vuonna 1715 taulu siirrettiin kaupungintaloon Dam-torille, ja koska se '
           + 'oli liian suuri uudelle paikalle, siitä leikattiin kaistale joka '
@@ -1445,7 +1445,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'Gerrit Lundensin pieni 1600-luvun kopio näyttää, miltä koko taulu '
           + 'näytti.',
         'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
-          + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseo avattiin vasta 1885; '
+          + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; '
           + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Rijksmuseum (objektisivu, lehdistötiedote ja Bulletin 1976) ja National Gallery',
@@ -1585,8 +1585,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
       lunastus: [
         'Montelbaanstoren on vanha puolustustorni Oudeschansin varrella. Luultavasti Hendrick de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja renessanssihuipun, johon tuli kello ja soittokelloja. Vuonna 1610 '
           + 'torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.',
-        'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella jo yli kolmesataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta '
-          + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
+        'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella jo yli kolmesataa vuotta. Vuonna 1852 tornia uhkasi purkaminen, mutta '
+          + 'se säästyi. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
           + 'vasta 1878.',
       ],
       // Lähdemuistiinpano (SK 16.11.2026, dataluonnos kohta 9): De Keyser 1606, kallistuminen 1610, korkeus noin 48 m ja kellot =
@@ -1597,8 +1597,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
       // Kuva: Commons-tiedosto, CC0 (Rijksmuseum); EI VIELÄ PELIN MEDIASSA (docs/raportit/amsterdam-9-mediapyynto-20261116.md).
       kuva: {
         tiedosto: 'Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg',
-        lyhyt: 'Montelbaanstoren Rijksmuseon stereokuvassa 1860–1885.',
-        selite: 'Rijksmuseon kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, isoisän matkan aikoihin.',
+        lyhyt: 'Montelbaanstoren Rijksmuseumin stereokuvassa 1860–1885.',
+        selite: 'Rijksmuseumin kokoelman stereokuva Montelbaanstorenista, otettu vuosien 1860 ja 1885 välillä, isoisän matkan aikoihin.',
         lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
       },
       kysymykset: [

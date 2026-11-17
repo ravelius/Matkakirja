@@ -88,15 +88,12 @@ a0770203e9518b84e7db88a33db82b97	amsterdam	nahtavyysjutut	Waag op de Dam	3	2026-
 b67ecf090d9504e9084fec21532ae7b7	amsterdam	nahtavyysjutut	Paleis voor Volksvlijt	3	2026-11-16
 bbd24c7906935e60cb70b4958c9ef28f	amsterdam	nahtavyysjutut	Kapein talo	1	2026-11-16
 fd062b50caf5e728c53cc55db1e9f059	amsterdam	nahtavyysjutut	Kapein talo	2	2026-11-16
-974503736ba65f5be43236c4258a9959	amsterdam	nahtavyysjutut	Maitotyttö	3	2026-11-16
 b935ea2a231fa3ce36dc3be30b1eda2d	amsterdam	nahtavyysjutut	Kissalaiva	2	2026-11-16
 6cdb31ebd90e3a7083de89a22351a7e4	amsterdam	nahtavyysjutut	Herengracht 537	3	2026-11-16
-884064525f4ca047d63c1c45d2581438	amsterdam	nahtavyysjutut	Yövartio	1	2026-11-16
 fb0973d6e7c54eb1fa3d68b3a424830d	amsterdam	nahtavyysjutut	Yövartio	2	2026-11-16
 5f3109f449a3e477fe1cbc6013efdd62	amsterdam	nahtavyysjutut	Portugalilainen synagoga	1	2026-11-16
 f35dfde395e3001892e6cab62c45a77a	amsterdam	nahtavyysjutut	Portugalilainen synagoga	2	2026-11-16
 86f83aa7a948d8a4e7c6e32d52b48f9b	amsterdam	takynostot	amsterdamin-kapein-talo	1	2026-11-16
-a42f52263ce35ff4a2305748ffb683e3	amsterdam	takynostot	amsterdamin-yovartio	1	2026-11-16
 95f70b3a7845b8c5a3654a5e70620d1c	amsterdam	takynostot	amsterdamin-portugalilainen-synagoga	1	2026-11-16
 05169bd644a703f646467071a7bcb643	wien	nahtavyysjutut	Klimtin maalaukset	2	2026-11-17
 19982f4c8a0559b053fa49a89e27dc42	wien	nahtavyysjutut	Klimtin maalaukset	1	2026-11-17
@@ -157,15 +154,12 @@ bc6f8456b5aff90e56b41126beaff97c	amsterdam	nahtavyysjutut	Amsterdam-laiva	1	2026
 32f6c5f8d8d1d1742dcb2850e0c23df2	amsterdam	nahtavyysjutut	Amsterdam-laiva	3	2026-11-17
 c762c575576fd0604c5d5b46c867ec0f	amsterdam	nahtavyysjutut	Kapein talo	3	2026-11-17
 3ce82ad640ed6e20c12257d0de322fc5	amsterdam	nahtavyysjutut	Maitotyttö	1	2026-11-17
-fbaf3f3e4788c922e936d069fd640b80	amsterdam	nahtavyysjutut	Maitotyttö	2	2026-11-17
 ded15cc8e3ab7dde00e18ea1de33b297	amsterdam	nahtavyysjutut	Kissalaiva	1	2026-11-17
 ed5b5c9f719771d36df98d527eef6af1	amsterdam	nahtavyysjutut	Kissalaiva	3	2026-11-17
 ac52ac517ed2324abcd9b0421a805af4	amsterdam	nahtavyysjutut	Herengracht 537	1	2026-11-17
 3cf8ce8f260690294bf3021d2e880f4f	amsterdam	nahtavyysjutut	Herengracht 537	2	2026-11-17
-0769699c5c5847e9fee718c9a75e57ff	amsterdam	nahtavyysjutut	Yövartio	3	2026-11-17
 52df3765ed12568782e739c4a1aa378b	amsterdam	nahtavyysjutut	Portugalilainen synagoga	3	2026-11-17
 501ac57bc7413fed57fef5f7bbe80d6e	amsterdam	nahtavyysjutut	Montelbaanstoren	1	2026-11-17
-cb1c2ce702567ae2c268e3333f82dc28	amsterdam	nahtavyysjutut	Montelbaanstoren	2	2026-11-17
 a272d1b83daa9203c58f7e345880ed9e	amsterdam	takynostot	amsterdamin-maitotytto	1	2026-11-17
 0490473293e97d58368f97df452f7a49	amsterdam	takynostot	amsterdamin-kissalaiva	1	2026-11-17
 36cd44f02d9d680e53db8a2a765ae5cc	amsterdam	takynostot	amsterdamin-puupaalut	1	2026-11-17
@@ -173,3 +167,9 @@ a272d1b83daa9203c58f7e345880ed9e	amsterdam	takynostot	amsterdamin-maitotytto	1	2
 fa0c2b8fa892efdb8b36d5a9601b13c2	amsterdam	fokusvirta-takyt	timantit	1	2026-11-17
 0da8cf05e9679dc526dcb3e7a1fdd6b5	amsterdam	fokusvirta-takyt	voc-hylky	1	2026-11-17
 e7bd3937bb2c18ef9cf59777a2816fcd	amsterdam	nahtavyysjutut	Paleis voor Volksvlijt	1	2026-11-17
+9b6ef97dd0752f0cf08c1f7040970467	amsterdam	nahtavyysjutut	Maitotyttö	2	2026-11-17
+01af175a35b10d03ee373bca299502cd	amsterdam	nahtavyysjutut	Maitotyttö	3	2026-11-17
+3a456642a4326d14396917e944245d19	amsterdam	nahtavyysjutut	Yövartio	1	2026-11-17
+917b8c13ec9c30525c6eb3e042e7def2	amsterdam	nahtavyysjutut	Yövartio	3	2026-11-17
+4001c4d80cc2a8be27355bbebd8f98e7	amsterdam	nahtavyysjutut	Montelbaanstoren	2	2026-11-17
+9145aa478ff31b874554ca7d7102498d	amsterdam	takynostot	amsterdamin-yovartio	1	2026-11-17

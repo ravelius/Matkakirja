@@ -97,7 +97,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Missä Vermeerin Pieni katu sijaitsee?",
-        "vastaus": "Rijksmuseo sijoittaa kadun Delftin Vlamingstraatille, nykyisten numeroiden 40 ja 42 kohdalle. Taidehistorioitsija Frans Grijzenhout tunnisti paikan 2015 vuoden 1667 laituri- ja kanavamaksurekisterin avulla, josta selviävät talojen ja porttikäytävien leveydet. Aiemmin ehdokkaina olivat muun muassa Voldersgracht ja Nieuwe Langendijk.",
+        "vastaus": "Rijksmuseum sijoittaa kadun Delftin Vlamingstraatille, nykyisten numeroiden 40 ja 42 kohdalle. Taidehistorioitsija Frans Grijzenhout tunnisti paikan 2015 vuoden 1667 laituri- ja kanavamaksurekisterin avulla, josta selviävät talojen ja porttikäytävien leveydet. Aiemmin ehdokkaina olivat muun muassa Voldersgracht ja Nieuwe Langendijk.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2860",
@@ -173,7 +173,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miten Rembrandt teki omakuvan hiuskiharat?",
-        "vastaus": "Rembrandt raaputti kiharat vielä märkään maaliin pensselin takapäällä, jolloin hiukset näyttävät sekaisilta. Valo osuu vain oikeaan poskeen, ja loppu kasvoista jää varjoon. Rijksmuseo toteaa, ettei kokematon nuori taiteilija säikkynyt kokeilemista. Pieni puupaneeliin maalattu työ on noin vuodelta 1628.",
+        "vastaus": "Rembrandt raaputti kiharat vielä märkään maaliin pensselin takapäällä, jolloin hiukset näyttävät sekaisilta. Valo osuu vain oikeaan poskeen, ja loppu kasvoista jää varjoon. Rijksmuseum toteaa, ettei kokematon nuori taiteilija säikkynyt kokeilemista. Pieni puupaneeliin maalattu työ on noin vuodelta 1628.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4691",
@@ -187,7 +187,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Pidettiinkö Rembrandtin nuoruuden omakuvaa joskus kopiona?",
-        "vastaus": "Lontoon Sothebyn huutokaupassa 1959 teos luetteloitiin nimikkeellä 'after Rembrandt', eli Rembrandtin mukaan tehdyksi, mikä tarkoittaa kopiota tai seuraajan työtä. Se oli sitten lainassa Rijksmuseossa 1960-1971, ja museo osti sen 1977 Vereniging Rembrandtin ja muiden tahojen tuella.",
+        "vastaus": "Lontoon Sothebyn huutokaupassa 1959 teos luetteloitiin nimikkeellä 'after Rembrandt', eli Rembrandtin mukaan tehdyksi, mikä tarkoittaa kopiota tai seuraajan työtä. Se oli sitten lainassa Rijksmuseumissa 1960-1971, ja museo osti sen 1977 Vereniging Rembrandtin ja muiden tahojen tuella.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4691",
@@ -209,7 +209,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Millainen taiteilija Rachel Ruysch oli omana aikanaan?",
-        "vastaus": "Rijksmuseo kuvaa Ruyschia aikansa tunnetuimmaksi naistaiteilijaksi. Hän jatkoi maalaamista avioiduttuaan ja saatuaan kymmenen lasta, ja hän signeerasi työnsä omalla nimellään. Vuosina 1708-1716 hän oli Düsseldorfin hovimaalari Pfalzin vaaliruhtinas Johann Wilhelmin palveluksessa.",
+        "vastaus": "Rijksmuseum kuvaa Ruyschia aikansa tunnetuimmaksi naistaiteilijaksi. Hän jatkoi maalaamista avioiduttuaan ja saatuaan kymmenen lasta, ja hän signeerasi työnsä omalla nimellään. Vuosina 1708-1716 hän oli Düsseldorfin hovimaalari Pfalzin vaaliruhtinas Johann Wilhelmin palveluksessa.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-354",
@@ -223,7 +223,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mistä Ruysch sai kukkien tarkan tuntemuksen?",
-        "vastaus": "Rachel Ruysch kasvoi kasvitieteilijä ja anatomi Frederik Ruyschin kodissa, ja isän kokoelmat sekä Amsterdamin kasvitieteellinen puutarha antoivat aineistoa tutkia ja piirtää. Hän oppi myös flaamilaisen kukkamaalarin Willem van Aelstin oppilaana. Rijksmuseon kuvauksen mukaan hän tutki laajasti elävää ja preparoitua kukkaa, minkä ansiosta kimput ovat niin tarkkoja; kimppu on kuitenkin keinotekoinen, sillä kukat kukkivat eri aikoina.",
+        "vastaus": "Rachel Ruysch kasvoi kasvitieteilijä ja anatomi Frederik Ruyschin kodissa, ja isän kokoelmat sekä Amsterdamin kasvitieteellinen puutarha antoivat aineistoa tutkia ja piirtää. Hän oppi myös flaamilaisen kukkamaalarin Willem van Aelstin oppilaana. Rijksmuseumin kuvauksen mukaan hän tutki laajasti elävää ja preparoitua kukkaa, minkä ansiosta kimput ovat niin tarkkoja; kimppu on kuitenkin keinotekoinen, sillä kukat kukkivat eri aikoina.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/Rachel_Ruysch",
@@ -281,7 +281,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Ketä Rembrandtin Juutalaismorsian esittää?",
-        "vastaus": "Nimi Juutalaismorsian on peräisin 1800-luvun alusta, kun tuntematon amsterdamilainen keräilijä tulkitsi kuvan isäksi ja tyttäreksi; tulkintaa ei enää pidetä uskottavana. Rijksmuseon otsikko on Iisak ja Rebekka: Iisak väitti Rebekkaa sisarekseen, mutta hellyys paljasti heidät kuningas Abimelekille. Kuvan on ehdotettu esittävän myös Rembrandtin poikaa Titusta morsiamineen tai muita Vanhan testamentin pareja, joten varmuutta ei ole.",
+        "vastaus": "Nimi Juutalaismorsian on peräisin 1800-luvun alusta, kun tuntematon amsterdamilainen keräilijä tulkitsi kuvan isäksi ja tyttäreksi; tulkintaa ei enää pidetä uskottavana. Rijksmuseumin otsikko on Iisak ja Rebekka: Iisak väitti Rebekkaa sisarekseen, mutta hellyys paljasti heidät kuningas Abimelekille. Kuvan on ehdotettu esittävän myös Rembrandtin poikaa Titusta morsiamineen tai muita Vanhan testamentin pareja, joten varmuutta ei ole.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/The_Jewish_Bride",
@@ -295,7 +295,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mitä Van Gogh sanoi Juutalaismorsiamesta?",
-        "vastaus": "Van Gogh kävi vastavalmistuneessa Rijksmuseossa lokakuussa 1885. Ystävänsä Anton Kerssemakersin 1912 kirjaaman muistelman mukaan hän viipyi taulun edessä pitkään ja sanoi antavansa kymmenen vuotta elämästään, jos saisi istua siinä kaksi viikkoa pelkän kuivan leivän varassa. Sanamuoto vaihtelee lähteittäin.",
+        "vastaus": "Van Gogh kävi vastavalmistuneessa Rijksmuseumissa lokakuussa 1885. Ystävänsä Anton Kerssemakersin 1912 kirjaaman muistelman mukaan hän viipyi taulun edessä pitkään ja sanoi antavansa kymmenen vuotta elämästään, jos saisi istua siinä kaksi viikkoa pelkän kuivan leivän varassa. Sanamuoto vaihtelee lähteittäin.",
         "lahteet": [
           {
             "url": "https://www.webexhibits.org/vangogh/letter/15/etc-435c.htm?qp=money",
@@ -367,7 +367,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miten Uhattu joutsen päätyi valtion taidegalleriaan?",
-        "vastaus": "Teos ostettiin 11. kesäkuuta 1800 Kansalliseen taidegalleriaan (Nationale Konst-Gallerij), Rijksmuseon edeltäjään, ja se oli gallerian ensimmäinen hankinta. Kauppias Cornelis Sebille Roos osti sen Jan Gildemeesterin perinnön huutokaupasta; gallerian johtaja oli Alexander Gogel. Maalausta pidettiin kansallisesti tärkeänä.",
+        "vastaus": "Teos ostettiin 11. kesäkuuta 1800 Kansalliseen taidegalleriaan (Nationale Konst-Gallerij), Rijksmuseumin edeltäjään, ja se oli gallerian ensimmäinen hankinta. Kauppias Cornelis Sebille Roos osti sen Jan Gildemeesterin perinnön huutokaupasta; gallerian johtaja oli Alexander Gogel. Maalausta pidettiin kansallisesti tärkeänä.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4",
@@ -403,7 +403,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mitä De Ruyterin ympärillä muotokuvassa näkyy?",
-        "vastaus": "De Ruyter nojaa taivaanpalloon, ja pöydällä on Zeelandin ja Flanderin rannikon kartta, jossa on hänen syntymäseutunsa Walcheren. Merimaisemassa on hänen lippulaivansa Zeven Provinciën. Kaulassa on Pyhän Mikaelin ritarikunnan merkki, jonka Rijksmuseon mukaan Ranskan kuningas myönsi.",
+        "vastaus": "De Ruyter nojaa taivaanpalloon, ja pöydällä on Zeelandin ja Flanderin rannikon kartta, jossa on hänen syntymäseutunsa Walcheren. Merimaisemassa on hänen lippulaivansa Zeven Provinciën. Kaulassa on Pyhän Mikaelin ritarikunnan merkki, jonka Rijksmuseumin mukaan Ranskan kuningas myönsi.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-44",
@@ -425,7 +425,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Yövartio on saanut nimensä, vaikka se ei esitä yötä?",
-        "vastaus": "Rembrandtin maalauksella ei ollut alun perin nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta 1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan kulkevaa joukkoa, vaikka sävyt ovat tummat. Pinnalla oli paksu, tummunut lakka; se poistettiin 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.",
+        "vastaus": "Rembrandtin maalauksella ei ollut alun perin nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta 1700-luvun lopulta. Rijksmuseumin mukaan kuva esittää päiväsaikaan kulkevaa joukkoa, vaikka sävyt ovat tummat. Pinnalla oli paksu, tummunut lakka; se poistettiin 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/The_Night_Watch_(painting)",
@@ -569,7 +569,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Missä Rembrandtin Kolme puuta -maisema on?",
-        "vastaus": "Tarkkaa paikkaa ei tiedetä, ja Rembrandt on voinut osin keksiä näkymän. Rijksmuseon mukaan puut reunustivat todennäköisimmin Zuiderzeen padon penkkaa. Maisema on vapaasti sommiteltu Amsterdamin ympäristön inspiroima, eikä tarkka topografinen kuva; joissakin tulkinnoissa sitä on verrattu Diemerdijkin ja Haarlemmerdijkin näkymiin.",
+        "vastaus": "Tarkkaa paikkaa ei tiedetä, ja Rembrandt on voinut osin keksiä näkymän. Rijksmuseumin mukaan puut reunustivat todennäköisimmin Zuiderzeen padon penkkaa. Maisema on vapaasti sommiteltu Amsterdamin ympäristön inspiroima, eikä tarkka topografinen kuva; joissakin tulkinnoissa sitä on verrattu Diemerdijkin ja Haarlemmerdijkin näkymiin.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-444",
@@ -817,7 +817,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miten Segers värjäsi tämän etsauksen?",
-        "vastaus": "Segers painoi vedoksen mustana vaaleanpunertavalla, lyijypohjaisella pohjustuksella päällystetylle paperille ja maalasi sen päälle siveltimellä läpikuultavaa valkoista, sinivihreää, vihreänkeltaista ja ruskeaa. Vedos on lähes kokonaan ylimaalattu, ja tien oikealle puolelle hän lisäsi kaksi pientä kulkijaa. Rijksmuseon luettelon mukaan yksikään graafikko ennen häntä ei ollut kokeillut yhtä laajasti, mutta tämä viittaa Segersin kokeiluihin yleensä, ei vain tähän vedokseen.",
+        "vastaus": "Segers painoi vedoksen mustana vaaleanpunertavalla, lyijypohjaisella pohjustuksella päällystetylle paperille ja maalasi sen päälle siveltimellä läpikuultavaa valkoista, sinivihreää, vihreänkeltaista ja ruskeaa. Vedos on lähes kokonaan ylimaalattu, ja tien oikealle puolelle hän lisäsi kaksi pientä kulkijaa. Rijksmuseumin luettelon mukaan yksikään graafikko ennen häntä ei ollut kokeillut yhtä laajasti, mutta tämä viittaa Segersin kokeiluihin yleensä, ei vain tähän vedokseen.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-832",
@@ -835,7 +835,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miksi saman laatan kaksi vedosta eroavat?",
-        "vastaus": "Rijksmuseon kaksi vedosta ovat ainoat tunnetut tästä laatasta. Värillinen on ensimmäinen asu, värittämätön toinen, johon on lisätty koeetsauksia. Segers vaihteli vedoksiaan tarkoituksella, vaikka aikanaan saman kuvan vedosten kuului näyttää samanlaisilta. Rijksmuseo merkitsee tekijäksi Segersin; tekopaikka (ehkä Amsterdam) ja ajoitus 1622–1625 ovat epävarmoja.",
+        "vastaus": "Rijksmuseumin kaksi vedosta ovat ainoat tunnetut tästä laatasta. Värillinen on ensimmäinen asu, värittämätön toinen, johon on lisätty koeetsauksia. Segers vaihteli vedoksiaan tarkoituksella, vaikka aikanaan saman kuvan vedosten kuului näyttää samanlaisilta. Rijksmuseum merkitsee tekijäksi Segersin; tekopaikka (ehkä Amsterdam) ja ajoitus 1622–1625 ovat epävarmoja.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-832/catalogue-entry",
@@ -871,7 +871,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Ovatko Asserin kuvat Amsterdamin vanhimpia?",
-        "vastaus": "Asserin kuvia pidetään Amsterdamin vanhimpina säilyneinä valokuvina. Hän oli lakimies ja harrastajavalokuvaaja, joka alkoi kokeilla valokuvausta noin vuonna 1842. Hänen jälkeläisensä lahjoittivat vuonna 1993 valtiolle noin 200 hänen kuvaansa, ja ne kuuluvat nykyään Rijksmuseon kokoelmaan.",
+        "vastaus": "Asserin kuvia pidetään Amsterdamin vanhimpina säilyneinä valokuvina. Hän oli lakimies ja harrastajavalokuvaaja, joka alkoi kokeilla valokuvausta noin vuonna 1842. Hänen jälkeläisensä lahjoittivat vuonna 1993 valtiolle noin 200 hänen kuvaansa, ja ne kuuluvat nykyään Rijksmuseumin kokoelmaan.",
         "lahteet": [
           {
             "url": "https://nl.wikipedia.org/wiki/Eduard_Isaac_Asser",
@@ -991,7 +991,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Missä Breitnerin valokuvat ovat nykyään?",
-        "vastaus": "Suurin tunnettu kokoelma on Haagin RKD-taidehistorian instituutissa, jolla on noin 2 300 Breitnerin alkuperäiskuvaa. Osa on muualla, esimerkiksi Amsterdamin kaupunginarkistossa (263 negatiivia). Rijksmuseoon Oudezijds Achterburgwalin kuva tuli vuonna 1949 Breitner-Jordanin jäämistöstä. Kuva on otettu vuosina 1894–1898, ja se katsoo kanavaa etelään, vasemmalla Zeedijkin takapuoli.",
+        "vastaus": "Suurin tunnettu kokoelma on Haagin RKD-taidehistorian instituutissa, jolla on noin 2 300 Breitnerin alkuperäiskuvaa. Osa on muualla, esimerkiksi Amsterdamin kaupunginarkistossa (263 negatiivia). Rijksmuseumiin Oudezijds Achterburgwalin kuva tuli vuonna 1949 Breitner-Jordanin jäämistöstä. Kuva on otettu vuosina 1894–1898, ja se katsoo kanavaa etelään, vasemmalla Zeedijkin takapuoli.",
         "lahteet": [
           {
             "url": "https://breitnerenglish.rkdstudies.nl/1-introduction",
@@ -1027,7 +1027,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Kuka valmisti Breitnerin Dam-kuvan vedoksen?",
-        "vastaus": "Rijksmuseon luettelo mainitsee vedoksen tekijäksi Harm Botmanin, ei Breitneriä itseään: kyseessä on moderni vedos RKD:n kokoelman negatiivista (merkintä BR 1891). Taustalla näkyvät Nieuwe Kerk ja kuninkaanlinna.",
+        "vastaus": "Rijksmuseumin luettelo mainitsee vedoksen tekijäksi Harm Botmanin, ei Breitneriä itseään: kyseessä on moderni vedos RKD:n kokoelman negatiivista (merkintä BR 1891). Taustalla näkyvät Nieuwe Kerk ja kuninkaanlinna.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-F-K89497",
@@ -1045,7 +1045,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Millainen paikka Van Diemenstraat oli?",
-        "vastaus": "Kun Pohjanmeren kanava valmistui vuonna 1876, Amsterdamin IJ kävi suurille valtamerilaivoille. Kanavan varteen rakennettiin uusia katuja varastoineen, ja Van Diemenstraat oli yksi niistä. Breitner kuvasi sen rakennustyömaata, ja Rijksmuseon kuva työläisistä rakennuskuopassa on uusi vedos hänen negatiivistaan.",
+        "vastaus": "Kun Pohjanmeren kanava valmistui vuonna 1876, Amsterdamin IJ kävi suurille valtamerilaivoille. Kanavan varteen rakennettiin uusia katuja varastoineen, ja Van Diemenstraat oli yksi niistä. Breitner kuvasi sen rakennustyömaata, ja Rijksmuseumin kuva työläisistä rakennuskuopassa on uusi vedos hänen negatiivistaan.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3581",
@@ -1059,7 +1059,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miten Breitner maalasi Van Diemenstraatin työmaan?",
-        "vastaus": "Kyllä: vuonna 1897 hän maalasi Van Diemenstraatin työmaan lounastauon. Siinä työmiehet istuvat lankuilla lounastauolla, ja Breitner kuvaa heidät takaapäin. Heidän kulmikkaat muotonsa muistuttavat lankkuja ja taustan telttoja ja purjeita. Maalaus tuli Rijksmuseolle testamenttina vuonna 1944.",
+        "vastaus": "Kyllä: vuonna 1897 hän maalasi Van Diemenstraatin työmaan lounastauon. Siinä työmiehet istuvat lankuilla lounastauolla, ja Breitner kuvaa heidät takaapäin. Heidän kulmikkaat muotonsa muistuttavat lankkuja ja taustan telttoja ja purjeita. Maalaus tuli Rijksmuseumille testamenttina vuonna 1944.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3581",
@@ -1077,7 +1077,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mitä de Hooch muutti Äidin velvollisuus -maalauksessa?",
-        "vastaus": "Uutistoimisto ANP:n mukaan de Hooch muutti hahmoja kesken maalaamisen: vuoteen luona seisoivat alun perin toiset ihmiset, ja heidän asentonsa oli aivan toinen kuin lopullisessa kuvassa. Rijksmuseon ja Delftin Prinsenhofin tutkijat huomasivat tämän vuonna 2019 makro-XRF-skannauksella ja heijastuskuvantamisella, joilla näkee maalikerrosten läpi. Vastaavia muutoksia hän teki muissakin maalauksissa.",
+        "vastaus": "Uutistoimisto ANP:n mukaan de Hooch muutti hahmoja kesken maalaamisen: vuoteen luona seisoivat alun perin toiset ihmiset, ja heidän asentonsa oli aivan toinen kuin lopullisessa kuvassa. Rijksmuseumin ja Delftin Prinsenhofin tutkijat huomasivat tämän vuonna 2019 makro-XRF-skannauksella ja heijastuskuvantamisella, joilla näkee maalikerrosten läpi. Vastaavia muutoksia hän teki muissakin maalauksissa.",
         "lahteet": [
           {
             "url": "https://nieuws.nl/algemeen/de-hooch-wijzigde-schilderijen-ingrijpend",
@@ -1091,7 +1091,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mikä on de Hoochin oviaukkonäkymien erikoisuus?",
-        "vastaus": "De Hooch erikoistui huoneisiin, joissa katse kulkee oviaukon läpi toiseen tilaan. Rijksmuseo kutsuu näitä näkymiä virtuaalitodellisuuden esiasteeksi. Tässä oviaukosta näkyy aurinkoinen takahuone ja puutarha. Huoneet olivat taiteilijan ateljeessa suunnittelemia, eivät todellisia.",
+        "vastaus": "De Hooch erikoistui huoneisiin, joissa katse kulkee oviaukon läpi toiseen tilaan. Rijksmuseum kutsuu näitä näkymiä virtuaalitodellisuuden esiasteeksi. Tässä oviaukosta näkyy aurinkoinen takahuone ja puutarha. Huoneet olivat taiteilijan ateljeessa suunnittelemia, eivät todellisia.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-C-149",
@@ -1113,7 +1113,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Kuka oli kultaseppä Jan Lutma?",
-        "vastaus": "Lutma (n. 1584–1669) oli Amsterdamissa työskennellyt kulta- ja hopeaseppä ja Rembrandtin ystävä. Rijksmuseon mukaan hän oli 1600-luvulla yhtä kuuluisa kuin nykyinen supertähti. Hänen syntymäpaikkansa on lähteissä epävarma (Emden tai Groningen), ja Amsterdamissa hänet tunnetaan vuodesta 1621.",
+        "vastaus": "Lutma (n. 1584–1669) oli Amsterdamissa työskennellyt kulta- ja hopeaseppä ja Rembrandtin ystävä. Rijksmuseumin mukaan hän oli 1600-luvulla yhtä kuuluisa kuin nykyinen supertähti. Hänen syntymäpaikkansa on lähteissä epävarma (Emden tai Groningen), ja Amsterdamissa hänet tunnetaan vuodesta 1621.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-550",
@@ -1167,7 +1167,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mitä esineitä Jeremian vieressä on?",
-        "vastaus": "Profeetan vieressä kivellä on kultainen vati, kannu ja kirjoja. Rijksmuseon kuvauksen mukaan ne ovat tuhoutuneen temppelin pyhiä esineitä. Paksu kirja, johon Jeremia nojaa, on Raamattu: Stroganovien kokoelman luettelo mainitsi jo vuonna 1793 kirjan nimellä 'La Bible'. Maalaus on signeerattu ja päivätty 1630.",
+        "vastaus": "Profeetan vieressä kivellä on kultainen vati, kannu ja kirjoja. Rijksmuseumin kuvauksen mukaan ne ovat tuhoutuneen temppelin pyhiä esineitä. Paksu kirja, johon Jeremia nojaa, on Raamattu: Stroganovien kokoelman luettelo mainitsi jo vuonna 1793 kirjan nimellä 'La Bible'. Maalaus on signeerattu ja päivätty 1630.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3276",
@@ -1189,7 +1189,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mitä Rembrandtin Jagertje-etsauksessa tapahtuu?",
-        "vastaus": "Metsästäjä kulkee polkua kahden koiran kanssa selkä vuoria kohti. Olallaan hänellä on pitkä keppi, jolla jänikset voi ajaa koloistaan. Saalista ei näy, joten metsästys ei Rijksmuseon kuvauksen mukaan ole todennäköisesti vielä alkanut. Työ on etsaus ja kuivaneula, noin vuodelta 1648.",
+        "vastaus": "Metsästäjä kulkee polkua kahden koiran kanssa selkä vuoria kohti. Olallaan hänellä on pitkä keppi, jolla jänikset voi ajaa koloistaan. Saalista ei näy, joten metsästys ei Rijksmuseumin kuvauksen mukaan ole todennäköisesti vielä alkanut. Työ on etsaus ja kuivaneula, noin vuodelta 1648.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-1961-1117",
@@ -1199,7 +1199,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Onko Jagertjen maisema todellinen?",
-        "vastaus": "Vain osittain. Kylä on Diemen, mutta Rembrandt sijoitti sen kuvitellun vuoristoalueen juurelle. Maisema on siis yhdistelmä todellista paikkaa ja keksittyä taustaa. Etsaus on pieni, noin 13 × 16 senttimetriä, ja Rijksmuseo ajoittaa sen noin vuoteen 1648.",
+        "vastaus": "Vain osittain. Kylä on Diemen, mutta Rembrandt sijoitti sen kuvitellun vuoristoalueen juurelle. Maisema on siis yhdistelmä todellista paikkaa ja keksittyä taustaa. Etsaus on pieni, noin 13 × 16 senttimetriä, ja Rijksmuseum ajoittaa sen noin vuoteen 1648.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-1961-1117",
@@ -1217,7 +1217,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miten Segers teki värilliset vedoksensa?",
-        "vastaus": "Tämä vedos on viivaetsaus, joka on painettu tummansinisellä puuvillakankaalle ja värjätty käsin ruskealla, vihreällä ja sinisellä maalilla. Segers painoi etsauksiaan myös paperille ja pellavalle ja värjäsi niitä käsin. Rijksmuseo nimeää tekijäksi Segersin; työpaikaksi merkitty Amsterdam on museon tiedoissa epävarma.",
+        "vastaus": "Tämä vedos on viivaetsaus, joka on painettu tummansinisellä puuvillakankaalle ja värjätty käsin ruskealla, vihreällä ja sinisellä maalilla. Segers painoi etsauksiaan myös paperille ja pellavalle ja värjäsi niitä käsin. Rijksmuseum nimeää tekijäksi Segersin; työpaikaksi merkitty Amsterdam on museon tiedoissa epävarma.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-810",
@@ -1335,7 +1335,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Millainen maalari Paulus Potter oli?",
-        "vastaus": "Rijksmuseon mukaan Potter oli ensimmäinen maalari, joka antoi hollantilaiselle karjalle pääroolin. Hän erikoistui eläimiä sisältäviin maisemiin ja maalasi noin sata työtä. Potter kuoli tuberkuloosiin vuonna 1654, vain 28-vuotiaana. Tunnetuin työ on Nuori sonni, joka on Haagin Mauritshuisissa.",
+        "vastaus": "Rijksmuseumin mukaan Potter oli ensimmäinen maalari, joka antoi hollantilaiselle karjalle pääroolin. Hän erikoistui eläimiä sisältäviin maisemiin ja maalasi noin sata työtä. Potter kuoli tuberkuloosiin vuonna 1654, vain 28-vuotiaana. Tunnetuin työ on Nuori sonni, joka on Haagin Mauritshuisissa.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-C-206",
@@ -1389,7 +1389,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mitä tupakka ja kannu kertovat Iloisesta juojasta?",
-        "vastaus": "Nauravaposkinen, juopunut mies hohtavin poskin nostaa tyhjää kantista kannua, ja pöydällä ovat hiilipannu, piippu ja tupakka. Rijksmuseon mukaan hän on juojan lisäksi tupakoitsija: Haarlemin moralistit pitivät tupakointia ja juomista toisiinsa liittyvinä paheina. Kannun tyhjyys kuuluu tyyppiin: näytös on lopussa.",
+        "vastaus": "Nauravaposkinen, juopunut mies hohtavin poskin nostaa tyhjää kantista kannua, ja pöydällä ovat hiilipannu, piippu ja tupakka. Rijksmuseumin mukaan hän on juojan lisäksi tupakoitsija: Haarlemin moralistit pitivät tupakointia ja juomista toisiinsa liittyvinä paheina. Kannun tyhjyys kuuluu tyyppiin: näytös on lopussa.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
@@ -1399,7 +1399,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mistä Iloinen juoja muistuttaa Frans Halsia?",
-        "vastaus": "Leyster otti Halsilta mallia, ja Rijksmuseon mukaan sulkamotiivi on peräisin Halsin teoksesta Nuori mies pääkallon kanssa. Hän omaksui Halsilta vinon asennon, tyhjän seinän ja leveän siveltimenjäljen. Siksi maalausta pidettiin pitkään Halsin työnä, kunnes Leysterin monogrammi tunnistettiin vuonna 1893.",
+        "vastaus": "Leyster otti Halsilta mallia, ja Rijksmuseumin mukaan sulkamotiivi on peräisin Halsin teoksesta Nuori mies pääkallon kanssa. Hän omaksui Halsilta vinon asennon, tyhjän seinän ja leveän siveltimenjäljen. Siksi maalausta pidettiin pitkään Halsin työnä, kunnes Leysterin monogrammi tunnistettiin vuonna 1893.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
@@ -1421,7 +1421,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Rembrandt maalasi itsensä apostoli Paavalina?",
-        "vastaus": "Varmaa syytä ei tunneta. Rijksmuseon mukaan oman kasvon käyttö kutsuu katsojan kohtaamaan pyhän henkilökohtaisesti. Taidehistorioitsijat ovat arvelleet, että Paavali oli 1600-luvun protestanteille tärkeä hahmo ja opettaja, kuten Rembrandt omalla taiteellaan. Hän oli maalatessaan noin 55-vuotias.",
+        "vastaus": "Varmaa syytä ei tunneta. Rijksmuseumin mukaan oman kasvon käyttö kutsuu katsojan kohtaamaan pyhän henkilökohtaisesti. Taidehistorioitsijat ovat arvelleet, että Paavali oli 1600-luvun protestanteille tärkeä hahmo ja opettaja, kuten Rembrandt omalla taiteellaan. Hän oli maalatessaan noin 55-vuotias.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4050",
@@ -1435,7 +1435,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Mistä Paavalin tunnistaa Rembrandtin omakuvasta?",
-        "vastaus": "Paavali tunnistetaan hänen perinteisistä tunnusesineistään: miekka näkyy viitan alta ja kädessä on nippu kirjeitä eli käsikirjoituksia. Päässä on valkoinen turbaani, jonka maali on paksua. Rijksmuseon kertomuksessa kehotetaan katsomaan juuri tuota paksua maalia.",
+        "vastaus": "Paavali tunnistetaan hänen perinteisistä tunnusesineistään: miekka näkyy viitan alta ja kädessä on nippu kirjeitä eli käsikirjoituksia. Päässä on valkoinen turbaani, jonka maali on paksua. Rijksmuseumin kertomuksessa kehotetaan katsomaan juuri tuota paksua maalia.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4050",
@@ -1452,7 +1452,7 @@ export const MUSEO_KYSYMYKSET = {
   "SK-A-3137": {
     "kysymykset": [
       "Kuka paljasti Pietarin Rembrandtin maalauksessa?",
-      "Miten Pietarin kieltäminen päätyi Rijksmuseoon?"
+      "Miten Pietarin kieltäminen päätyi Rijksmuseumiin?"
     ],
     "vastaukset": [
       {
@@ -1470,8 +1470,8 @@ export const MUSEO_KYSYMYKSET = {
         ]
       },
       {
-        "kysymys": "Miten Pietarin kieltäminen päätyi Rijksmuseoon?",
-        "vastaus": "Maalaus myytiin vuonna 1781 Venäjän keisarinna Katariina II:lle, ja se päätyi Eremitaasiin Pietariin. Myöhemmin Neuvostoliitto myi sen pois muiden teosten mukana. Vereniging Rembrandt -yhdistys osti sen Lontoon kautta Rijksmuseolle vuonna 1933.",
+        "kysymys": "Miten Pietarin kieltäminen päätyi Rijksmuseumiin?",
+        "vastaus": "Maalaus myytiin vuonna 1781 Venäjän keisarinna Katariina II:lle, ja se päätyi Eremitaasiin Pietariin. Myöhemmin Neuvostoliitto myi sen pois muiden teosten mukana. Vereniging Rembrandt -yhdistys osti sen Lontoon kautta Rijksmuseumille vuonna 1933.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3137",
@@ -1493,7 +1493,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mitä lääkäri yrittää selvittää sairaasta naisesta?",
-        "vastaus": "Nuori nainen on heikko, ja hänen sairautensa voi olla rakastumista tai raskaus. Rijksmuseon mukaan tällainen kvasilääkäri poltti kaistaleen potilaan vaatteesta hiilloksessa, jotta haju paljastaisi salaisuuden.",
+        "vastaus": "Nuori nainen on heikko, ja hänen sairautensa voi olla rakastumista tai raskaus. Rijksmuseumin mukaan tällainen kvasilääkäri poltti kaistaleen potilaan vaatteesta hiilloksessa, jotta haju paljastaisi salaisuuden.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-C-230",
@@ -1507,7 +1507,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miksi Steenin lääkäri on vanhanaikaisessa asussa?",
-        "vastaus": "Steen esittää lääkärin huijarina, ja Rijksmuseon mukaan vanhanaikainen asu tekee hänestä koomisen hahmon. Steen oli tunnettu juuri lääkärikäyntiaiheistaan.",
+        "vastaus": "Steen esittää lääkärin huijarina, ja Rijksmuseumin mukaan vanhanaikainen asu tekee hänestä koomisen hahmon. Steen oli tunnettu juuri lääkärikäyntiaiheistaan.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-C-230",
@@ -1565,7 +1565,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi maalausta kutsutaan nimellä Isän neuvo?",
-        "vastaus": "Nimi tulee Johann Georg Willen vuonna 1765 Pariisissa julkaisemasta kaiverruksesta Instruction paternelle, joka esitti isän nuhtelevan tytärtään; Goethekin tulkitsi kuvan niin romaanissaan Die Wahlverwandtschaften. Nykytutkijat näkevät kuvassa joko kosiskelun tai asiakkaan ja prostituoidun kohtaamisen. Rijksmuseon mukaan Ter Borch todennäköisesti jätti aiheen tahallaan monitulkintaiseksi.",
+        "vastaus": "Nimi tulee Johann Georg Willen vuonna 1765 Pariisissa julkaisemasta kaiverruksesta Instruction paternelle, joka esitti isän nuhtelevan tytärtään; Goethekin tulkitsi kuvan niin romaanissaan Die Wahlverwandtschaften. Nykytutkijat näkevät kuvassa joko kosiskelun tai asiakkaan ja prostituoidun kohtaamisen. Rijksmuseumin mukaan Ter Borch todennäköisesti jätti aiheen tahallaan monitulkintaiseksi.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
@@ -1583,7 +1583,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miksi Ter Borchin satiinia ihailtiin?",
-        "vastaus": "Ter Borch osasi kuvata kankaita, erityisesti satiinia, poikkeuksellisen tarkasti. Naisen hopeanvalkoisen puvun kiilto ja laskokset vetävät katseen tummien sävyjen keskeltä. Rijksmuseon luettelossa tutkija kutsuu hänen satiininsa kuvausta fenomenaaliseksi.",
+        "vastaus": "Ter Borch osasi kuvata kankaita, erityisesti satiinia, poikkeuksellisen tarkasti. Naisen hopeanvalkoisen puvun kiilto ja laskokset vetävät katseen tummien sävyjen keskeltä. Rijksmuseumin luettelossa tutkija kutsuu hänen satiininsa kuvausta fenomenaaliseksi.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
@@ -1605,7 +1605,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Haarlemin edustalla oli valkaisupeltoja?",
-        "vastaus": "Pellavakangasta levitettiin pelloille auringon valkaistavaksi. Pellavavalkaisu oli Haarlemin tärkeitä elinkeinoja Ruisdaelin aikaan, ja se tarvitsi paljon vettä. Rijksmuseon mukaan valkaisu hyödynsi dyynien puhdasta vettä.",
+        "vastaus": "Pellavakangasta levitettiin pelloille auringon valkaistavaksi. Pellavavalkaisu oli Haarlemin tärkeitä elinkeinoja Ruisdaelin aikaan, ja se tarvitsi paljon vettä. Rijksmuseumin mukaan valkaisu hyödynsi dyynien puhdasta vettä.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-351",
@@ -1753,7 +1753,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Kuka opetti Hobbemaa maalaamaan?",
-        "vastaus": "Hobbema oppi maisemamaalauksen Jacob van Ruisdaelilta, joka todisti vuonna 1660 Hobbeman palvelleen ja oppineen luonaan joitakin vuosia. Rijksmuseon mukaan opettajan ja oppilaan työt muistuttavat toisiaan, mutta Hobbeman vaikutelma on ystävällisempi ja valoisampi.",
+        "vastaus": "Hobbema oppi maisemamaalauksen Jacob van Ruisdaelilta, joka todisti vuonna 1660 Hobbeman palvelleen ja oppineen luonaan joitakin vuosia. Rijksmuseumin mukaan opettajan ja oppilaan työt muistuttavat toisiaan, mutta Hobbeman vaikutelma on ystävällisempi ja valoisampi.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/SK-A-156",
@@ -2171,7 +2171,7 @@ export const MUSEO_KYSYMYKSET = {
       },
       {
         "kysymys": "Miten Rembrandtin viimeinen omakuva päätyi Haagiin?",
-        "vastaus": "Teos oli lainassa Rijksmuseossa vuodesta 1925. Natsit veivät sen Alt Ausseen suolakaivokseen, jonne Hitlerin henkilökunta kokosi teoksia suunniteltua Linzin museota varten. Sodan jälkeen se palautettiin Rathenaun perheelle, joka myi sen Mauritshuisille vuonna 1947 Rembrandt-yhdistyksen ja yksityisten tukijoiden avulla.",
+        "vastaus": "Teos oli lainassa Rijksmuseumissa vuodesta 1925. Natsit veivät sen Alt Ausseen suolakaivokseen, jonne Hitlerin henkilökunta kokosi teoksia suunniteltua Linzin museota varten. Sodan jälkeen se palautettiin Rathenaun perheelle, joka myi sen Mauritshuisille vuonna 1947 Rembrandt-yhdistyksen ja yksityisten tukijoiden avulla.",
         "lahteet": [
           {
             "url": "https://www.mauritshuis.nl/en/what-s-on/exhibitions/exhibitions-from-the-past/loot/rembrandt",
@@ -2265,7 +2265,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miten Rembrandt teki tämän suuren vedoksen?",
-        "vastaus": "Kokonaan kuivaneulalla: hän raapi kuvan suoraan kuparilevyyn neulalla. Neulan viivojen viereen nousee metallirouhe, joka antaa jäljelle samettisen ilmeen, mutta kuluu painettaessa, joten Rijksmuseon mukaan levyä vahvistettiin uusilla viivoilla. Vedos on noin 36 x 45 cm ja kuuluu hänen suurimpiinsa.",
+        "vastaus": "Kokonaan kuivaneulalla: hän raapi kuvan suoraan kuparilevyyn neulalla. Neulan viivojen viereen nousee metallirouhe, joka antaa jäljelle samettisen ilmeen, mutta kuluu painettaessa, joten Rijksmuseumin mukaan levyä vahvistettiin uusilla viivoilla. Vedos on noin 36 x 45 cm ja kuuluu hänen suurimpiinsa.",
         "lahteet": [
           {
             "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-612",
