@@ -773,6 +773,16 @@ export const FOKUSVIRTA_ROOMA = {
        * kuopasta 1926–1929 paljastuivat — ja portailla istuu kissoja, jotka
        * ovat noston toinen puoli.
        */
+      visa: {
+        kysymys: 'Minä vuonna Largo di Torre Argentinan kissasuoja perustettiin?',
+        vaihtoehdot: [
+          '1993',
+          '1926',
+          '2012',
+        ],
+        oikea: 0,
+        fakta: 'Kissasuoja perustettiin vuonna 1993, ja arvioiden mukaan siellä on noin 200 kissaa.',
+      },
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-kissat-loistoaika.webp',
         selite: 'Largo di Torre Argentinan temppelit loistoaikanaan, '
@@ -876,6 +886,16 @@ export const FOKUSVIRTA_ROOMA = {
         'Kuinka paljon kolikoita Trevin altaasta kerättiin vuonna 2022?',
         'Mihin Trevin altaasta kerätyt kolikot lahjoitetaan?',
       ],
+      visa: {
+        kysymys: 'Kenelle Trevin suihkulähteen kolikot lahjoitetaan?',
+        vaihtoehdot: [
+          'Rooman kaupungille',
+          'Vatikaanille',
+          'Caritakselle',
+        ],
+        oikea: 2,
+        fakta: 'Kolikot kerätään altaan pohjasta ja lahjoitetaan Caritakselle, joka auttaa kaupungin vähävaraisia.',
+      },
       paikka: {
         nimi: 'Kolikko olan yli',
         laudat: {
@@ -1003,6 +1023,16 @@ export const FOKUSVIRTA_ROOMA = {
         'Mistä Rooman muinaisobeliskit ovat alun perin peräisin?',
         'Miksi patsasta kutsuttiin ensin possuksi?',
       ],
+      visa: {
+        kysymys: 'Kuka suunnitteli Minervan norsupatsaan?',
+        vaihtoehdot: [
+          'Francesco Borromini',
+          'Gian Lorenzo Bernini',
+          'Michelangelo',
+        ],
+        oikea: 1,
+        fakta: 'Patsaan suunnitteli Gian Lorenzo Bernini, ja se paljastettiin vuonna 1667.',
+      },
       paikka: {
         nimi: 'Norsu ja obeliski',
         laudat: {
@@ -1045,6 +1075,16 @@ export const FOKUSVIRTA_ROOMA = {
         'Mikä Rooman antiikin akvedukteista toimii yhä?',
         'Mitä nimi Virgo tarkoittaa?',
       ],
+      visa: {
+        kysymys: 'Mitä Aqua Virgo -akvedukti syöttää yhä?',
+        vaihtoehdot: [
+          'Trevin suihkulähdettä',
+          'Colosseumia',
+          'Pantheonia',
+        ],
+        oikea: 0,
+        fakta: 'Aqua Virgo syöttää yhä Trevin suihkulähdettä, ja se on Rooman antiikin akvedukteista ainoa, joka toimii yhä.',
+      },
       paikka: {
         nimi: 'Aqua Virgo',
         laudat: {
