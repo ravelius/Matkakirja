@@ -7797,8 +7797,8 @@ export const NAHTAVYYSJUTUT = {
     'Paleis voor Volksvlijt': {
       aika: '1864–1929',
       teksti: 'Paleis voor Volksvlijt oli lasista ja raudasta rakennettu näyttelypalatsi Amsterdamin '
-        + 'Frederiksplein-aukiolla. Esikuvana oli Lontoon Kristallipalatsi. Ajatuksen antoi lääkäri Samuel '
-        + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli sen. Palatsi avattiin 16. elokuuta 1864. '
+        + 'Frederiksplein-aukiolla. Esikuvana oli Lontoon Kristallipalatsi. Hankkeen pani alulle lääkäri Samuel '
+        + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli palatsin. Palatsi avattiin 16. elokuuta 1864. '
         + 'Siellä pidettiin näyttelyitä, konsertteja sekä ooppera- ja teatteriesityksiä.'
         + '\n\n'
         + 'Huhtikuussa 1929 palatsi tuhoutui tulipalossa. Sitä ei rakennettu uudelleen. Palatsin tontilla on '

@@ -42,7 +42,7 @@ JÄÄ ENNALLEEN: Kapeimman talon syvyys "viisi metriä" (neljä lähdettä). **L
 | B11 | "puhdistukset tehtiin vasta 1946–47 ja 1975–76" → "se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76" (MK:ssa sama ilman "vasta") | NJ 7698; FV 1449; MK 428 | Rijksmuseum, en-WP |
 | B12 | "Yläkerrassa oli kaupungin vartiosto ja asevarasto." pois | NJ 7784 | – |
 | B13 | "paloi muutamassa tunnissa" → "tuhoutui tulipalossa" (päiväys ennallaan) | NJ 7801 | – |
-| B14 | JÄÄ: "Ajatuksen antoi lääkäri Samuel Sarphati" (NJ) ja monumentit-eurooppa.js 739 ennallaan | ks. alla | kaksi uutta lähdettä |
+| B14 | JÄÄ, sanamuoto (KK 02.45): NJ "Hankkeen pani alulle lääkäri Samuel Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli palatsin."; monumentit-eurooppa.js 739 ennallaan | ks. alla | kaksi uutta lähdettä |
 | "lasi ja rauta" | JÄÄ (NJ, monumentit-eurooppa.js nappi "lasi-rautapalatsi") | ks. alla | nl-WP + kaksi uutta |
 
 ## Toinen itse avattu lähde (robots.txt ensin; avattu 17.11.2026)

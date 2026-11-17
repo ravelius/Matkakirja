@@ -30,7 +30,7 @@ Rajaus: nosto:amsterdamin-* (5), kaupunki:amsterdam, kohde:hahmotelma-amsterdami
 | Miksi kanavatalot kallistuvat eteenpäin? | POISTA | kysymys poistui; kallistusväite pois (A16) |
 
 **UUSI VASTAUS (Miksi kanavatalot ovat niin kapeita ja syviä?)**
-> Hetkinen ny, tähän en osaa antaa yhtä varmaa syytä. Kanavien varren [[kanavatalot]] ovat kapeita ja syviä, ja kapein koko talo, [[Oude Hoogstraat 22]], on 2,02 metriä leveä ja viisi metriä syvä. Selitystä, että taloja olisi verotettu julkisivun leveyden mukaan, en toista, koska sitä ei ole voitu yhdistää juuri tähän taloon. Varmaa on se, mitä kapeus tarkoittaa sisällä: portaat ovat jyrkät ja kapeat, ja siksi huonekalut nostetaan päädyn [[hijsbalk]]-nostopuun avulla köydellä ikkunasta sisään. Kapeassa talossa sohvaa ei kanneta, se lentää.
+> Hetkinen ny, tähän en osaa antaa yhtä varmaa syytä. Kanavien varren [[kanavatalot]] ovat kapeita ja syviä, ja kapein koko talo, [[Oude Hoogstraat 22]], on 2,02 metriä leveä ja viisi metriä syvä. Varmaa on se, mitä kapeus tarkoittaa sisällä: portaat ovat jyrkät ja kapeat, ja siksi huonekalut nostetaan päädyn [[hijsbalk]]-nostopuun avulla köydellä ikkunasta sisään. Kapeassa talossa sohvaa ei kanneta, se lentää.
 >
 > JATKOT: "Miten huonekalut viedään kapeisiin Amsterdamin taloihin?" · "Miksi Amsterdamin portaat ovat niin jyrkät?"
 
@@ -50,7 +50,7 @@ Rajaus: nosto:amsterdamin-* (5), kaupunki:amsterdam, kohde:hahmotelma-amsterdami
 > JATKOT: "Millaisia maaleja Vermeer käytti töissään?" · "Missä museossa Maitotyttö on nykyään esillä?"
 
 **UUSI VASTAUS 2 (noin 35 maalausta)**
-> Joo, tän minä tiedän osittain. Vermeerin tuotannosta tunnetaan vain noin 35 maalausta, ja yksi niistä on Maitotyttö, joka on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Vermeer eli [[Delftissä]], mutta syystä, miksi töitä on näin vähän, en ole varma, joten en arvaile. Luku on lähteiden mukaan tunnettujen töiden määrä, ei kaikkien koskaan maalattujen. Ja tän minä muistin ilman muistiinpanoja.
+> Joo, tän minä tiedän osittain. Vermeerin tuotannosta tunnetaan vain noin 35 maalausta, ja yksi niistä on Maitotyttö, joka on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea ja 41 leveä. Syystä, miksi töitä on näin vähän, en ole varma, joten en arvaile. Luku on lähteiden mukaan tunnettujen töiden määrä, ei kaikkien koskaan maalattujen. Ja tän minä muistin ilman muistiinpanoja.
 >
 > JATKOT: "Millaista elämä oli Delftissä 1600-luvulla?" · "Mikä oli Hollannin kulta-aika?"
 
@@ -65,7 +65,7 @@ Rajaus: nosto:amsterdamin-* (5), kaupunki:amsterdam, kohde:hahmotelma-amsterdami
 | Mitkä ovat Amsterdamin neljä pääkanavaa? · Miksi kissoja on pidetty laivoilla jo satoja vuosia? | POISTA | kysymykset poistuivat |
 
 **UUSI VASTAUS (asuminen asuntolaivalla)**
-> Hetkinen ny, arjesta asuntolaivalla en osaa kertoa varmasti, koska en tiedä, miten laiva on varusteltu tai kuka siellä asuu. Tiedän sen, mikä [[Singel]]-kanavan Poezenbootista kerrotaan: kuvan laiva vuodelta 2006 on vanha asuntolaiva, ja nykyinen laiva tuotiin paikalleen vuonna 2023. Kissat ovat turvakodin asukkaita, eivät nähtävyys. Vedessä asuminen on ihan hyvä idea, jos ei pelkää nuoskaa.
+> Hetkinen ny, arjesta asuntolaivalla en osaa kertoa varmasti, koska en tiedä, miten laiva on varusteltu tai kuka siellä asuu. Tiedän sen, mikä [[Singel]]-kanavan Poezenbootista kerrotaan: kuvan laiva vuodelta 2006 on vanha asuntolaiva, ja nykyinen laiva tuotiin paikalleen vuonna 2023. Laiva on kissojen turvakoti. Vedessä asuminen on ihan hyvä idea, jos ei pelkää kastumista.
 >
 > JATKOT: "Miten asuntolaivat saavat veden ja sähkön?" · "Mitkä ovat Amsterdamin neljä pääkanavaa?"
 
