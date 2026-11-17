@@ -940,8 +940,10 @@ export const FOKUSVIRTA_LONTOO = {
       symboli: 'kauppa',
       lunastus: [
         'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
-          + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että '
-          + 'se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri '
+          + 'kauppaan Espanjan Etelä-Amerikan kanssa. Kaupan ydin oli '
+          + 'orjakauppa: yhtiö sai oikeuden tuoda orjuutettuja afrikkalaisia '
+          + 'Espanjan siirtomaihin. Vastineeksi yhtiö otti kantaakseen osan '
+          + 'valtionvelasta. Kauppaa ei juuri '
           + 'syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes '
           + 'koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta '
           + 'nousi tammikuun runsaasta sadasta punnasta kesällä lähes '
