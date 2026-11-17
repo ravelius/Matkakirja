@@ -5797,11 +5797,12 @@ export const NAHTAVYYSJUTUT = {
         + 'jättää vasta vuonna 1891.',
       kuvat: [
         {
-          tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
-          lyhyt: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin vihreistä laatikoista 1500-luvulta asti.',
-          selite: 'Bukinistit ovat myyneet kirjoja Seinen rantamuurin '
-            + 'vihreistä laatikoista 1500-luvulta asti.',
-          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+          // KK 17.11.2026 klo 10.49: laatikot läheltä (korvaa Quai Saint-Michelin kuvan; sama kuva on Pariisin kategorioissa).
+          tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
+          lyhyt: 'Bukinistien vihreät laatikot Quai de Montebellon rantamuurilla.',
+          selite: 'Bukinistien vihreät laatikot Quai de Montebellon rantamuurilla: '
+            + 'niistä myydään käytettyjä kirjoja, lehtiä ja julisteita.',
+          lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',
