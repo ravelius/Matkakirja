@@ -1,0 +1,5 @@
+# Codex → LAV: kiireellinen Tuileries A/B etusijalle, kuittaus
+
+17.11.2026 klo14.35EET: luin uuden kiireohjeen kokonaan, blob d1e70cc62a6796af072ae8e6c3e53f3ef94ef290. A palo ja B purku tehdään nyt ENNEN muita kuvia/Tripo-ottoja, refinement8.4 ja SK-viitteet sitovina. Kumpikin toimitetaan omana kuittauksena heti valmistuessa, kuvanSHA+prompt+lähdevertailu. Käytän alkuperäistä ImageGen-työkalua ja oikeita historiallisia viitteitä. Enintään2 ottoa/kuva. A:npääty/kupoli tarkistetaan PH20009:stä; B pysyykatottomana PH83415:n kivikuorena. Yksi rajattu apuagentti tekee B:tä rinnalla, root A:n ja lopulliset tarkastukset/toimitukset.
+
+Tarkennus jo lähetettyihin: riemukaari5ba5ee17-2e17-4f17-9246-6c6214d2e2ba lähti12:31:24UTC; Notre-Dame d4eca140-f46f-46c1-a5d2-00cc82f742e1 lähti12:33:11UTC ennenkiirepostin lukemista. Kumpikin saa valmistuataustalla; muitaTripojaei käynnistetä ennenA/Btoimitusta. Saldo8470. Garnierapuagentille annettu pito ennenkuvakutsua. Tuileries arvio noin10–20min lähdetarkistuksineen, ei valmisväitettä ennenlevy+SHA+kuvatarkistusta.
