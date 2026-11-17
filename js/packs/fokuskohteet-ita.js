@@ -1022,6 +1022,9 @@ export const FOKUSKOHTEET_ITA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Reuters, America Magazine, Aleteia, Finestre sull\'Arte (kolikot), Treccani, Art & Object, '
       + 'History Hit ja Turismo Roma (lähde), Platner & Ashby ja romeing.it (vesijohto) (tarkistettu 17.11.2026).',
+    // Ääninäyte kohdekortille (KK 00.44; natiivin "Kuuntele näyte" -nappi, NUI be44c706e): vanhan täkynoston `aani` palautettu, ei uutta ääntä.
+    aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
+    aaniLahde: '"Walking to Pantheon" — Rolf Yngve, radio aporee (public domain)',
     otsikko: 'Trevi 1762 — lähde, jonka kolikot ruokkivat',
     jaksot: [
       // Noston alku: kertojan nimi ja esittely ennen isoisän lausetta (omistaja 19.23 F; sama kuin Tuileries).

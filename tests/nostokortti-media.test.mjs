@@ -34,6 +34,7 @@ import { NAHTAVYYSJUTUT } from '../js/packs/nahtavyysjutut.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { nostonKuvat } from '../js/fokusnosto.js';
 import { nostonMusiikkilinkit } from '../js/ui.js';
+import { kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
 
 /** Kaupungit, joiden lehtien sivut on siirretty kohdekartan nostoiksi. */
 const KARTTAKAUPUNGIT = ['pariisi', 'lontoo', 'rooma', 'berliini', 'madrid', 'wien', 'amsterdam'];
@@ -408,8 +409,30 @@ test('musiikkinosto saa kortille mediarivin samoilla napeilla kuin lehti', async
   assert.ok(ui.saadut[0].musiikkiNayte, 'apurille annettu nosto on ilman mediakenttiä');
 });
 
-// Ääninosto ilman musiikkilinkkiä: ainoa esimerkki oli Rooman täkynosto `rooman-kolikko`, joka yhdistyi Trevin kohteeseen
-// `trevi` (SK 17.11.2026, jaksollinen nosto). Kohdekortti ei kanna `aani`-kenttää, joten kokeelle ei ole nyt kohdetta.
+// Ääninäyte kohteen ylätasolla (KK 00.44; NUI:n natiivi "Kuuntele näyte" lukee kentät `aani` ja `aaniLahde` kohteelta):
+// vanhan täkynoston `rooman-kolikko` ääni palautettu kohteelle `trevi` (SK 18.11.2026). Kenttä vaatii https-.mp3-osoitteen ja
+// nimeämisen lisenssillä; jakson `aani: 'isoisa'` on eri taso eikä kuulu tähän.
+test('kohteen ääninäyte: https-.mp3 ja nimeäminen lisenssillä (Trevi)', async () => {
+  const { tiedostot } = await kokoaVienti();
+  const virheet = [];
+  let trevi = null;
+  for (const p of tiedostot.keys()) {
+    if (!/^moduulit\/js\/packs\/(fokuskohteet|maastokohteet|hahmotelma)-[a-z]{3}\.json$/.test(p)) continue;
+    for (const lista of Object.values(JSON.parse(tiedostot.get(p)).exportit ?? {})) {
+      if (!Array.isArray(lista)) continue;
+      for (const n of lista) {
+        if (!n || n.aani == null) continue;
+        if (n.id === 'trevi') trevi = n;
+        if (!/^https:\/\/\S+\.mp3$/.test(n.aani)) virheet.push(`${n.id}: aani ${n.aani}`);
+        if (!n.aaniLahde || !/\((public domain|CC0|CC BY(-SA)? \d\.\d)\)/i.test(n.aaniLahde)) virheet.push(`${n.id}: aaniLahde "${n.aaniLahde}"`);
+      }
+    }
+  }
+  assert.deepEqual(virheet, []);
+  assert.ok(trevi, 'Trevin kohteella ei ole aani-kenttää');
+  assert.match(trevi.aaniLahde, /Rolf Yngve/);
+});
+
 /* ================================================================= */
 /* C. MUSIIKKILINKKIEN LISTA (Fablen päätös 14.9.2026)               */
 /* ================================================================= */
