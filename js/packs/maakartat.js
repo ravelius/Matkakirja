@@ -5107,7 +5107,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Keskusrautatieasema', tagi: 'tiede', lat: 52.379, lon: 4.9006, wiki: 'Amsterdamin keskusrautatieasema' },
       { nimi: 'Anne Frankin talo', tagi: 'historia', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo' },
       {
-        nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913,
+        nimi: 'Kuninkaanpalatsi', tagi: 'historia', lat: 52.3731, lon: 4.8913,
         wiki: 'Amsterdamin kuninkaallinen palatsi',
         nosto: 'syvennys-amsterdam-haikarat',
       },
