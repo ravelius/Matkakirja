@@ -69,6 +69,8 @@ export const VAATIMUKSET = {
   '1.72': ['karttavalot.tagi', 'karttavalot.maakuntaNimi'],
   // Pelikoodari 17.11.2026: kohteen muoto (suunnitelma 20261117-maakartan-kohteet; natiivi KameranSaanto).
   '1.73': ['karttavalot.muoto'],
+  // Pelikoodari 17.11.2026: noston vuodet (suunnitelma 20261117-noston-vuosiluvut, omistaja P-261117-70–72; natiivi NUI NostoSisalto).
+  '1.74': ['nahtavyydet.vuodet', 'takynostot.vuodet', 'historianHetket.vuodet', 'skandaalit.vuodet'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

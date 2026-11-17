@@ -39,6 +39,7 @@ import { uutislahde } from '../../js/uutiset.js';
 import { piirraMaaNumerot } from '../../js/maakayrat.js';
 import { vuosiSaaSelite } from '../../js/saa.js';
 import { kaupunkilehdenSivuNostoineen } from '../../js/lehtinostot.js';
+import { nostonVuodet } from './vuodet.mjs';
 
 const LAUDAN_TUNNUS = 'maailmankartta';
 
@@ -506,6 +507,7 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       wiki: d.wiki ?? null, lahde: d.lahde ?? null, nosto: d.nosto ?? null,
       lainaus: d.lainaus ? { teksti: d.lainaus.teksti ?? null, lahde: d.lainaus.lahde ?? null } : null,
       kuvat: (d.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
+      vuodet: nostonVuodet(d.vuodet),   // skeema 1.74
     });
   }
   kokoelmat.nahtavyydet.kuvaus += ' Skeema 1.18: päätasolla aika, teksti, kappaleet (teksti jaettuna tyhjästä rivistä '

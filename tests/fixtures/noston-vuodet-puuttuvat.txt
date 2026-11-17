@@ -1,0 +1,461 @@
+hetki:afsluitdijkin-viimeinen-aukko-1932
+hetki:arkadin-luostarin-rajahdys-1866
+hetki:beethoven-yhdeksas-1824
+hetki:belgradin-piiritys-1456
+hetki:berezinan-ylitys-1812
+hetki:berliinin-muuri-1961
+hetki:bessarabian-liittyminen-1918
+hetki:britannian-lippu-nikosiassa-1878
+hetki:brooklyn-bridge-1883
+hetki:brunel-thames-tunnel-1827
+hetki:christiansborgin-palo-1884
+hetki:darwin-galapagos-1835
+hetki:edison-lamppu-1879
+hetki:eiffel-torni-1888
+hetki:einstein-patenttitoimisto-1905
+hetki:ensimmainen-juna-rovaniemi-1909
+hetki:faraday-luento-1831
+hetki:fleming-malja-1928
+hetki:franklin-leija-1752
+hetki:franz-ferdinandin-salamurha-1914
+hetki:galilei-kaukoputki-1610
+hetki:gotthardin-lapimurto-1880
+hetki:gutenberg-paino-1454
+hetki:jenner-rokotus-1796
+hetki:kolumbus-santa-fe-1492
+hetki:konstantinopoli-1453
+hetki:krusevon-tasavalta-1903
+hetki:lavoisier-laboratorio-1780
+hetki:lontoon-palo-1666
+hetki:lumiere-elokuva-1895
+hetki:luther-wittenberg-1517
+hetki:machu-picchu-1911
+hetki:magalhaes-sanlucar-1519
+hetki:marie-curie-hangaari-1898
+hetki:mendelejev-kortit-1869
+hetki:michelangelo-sikstus-1510
+hetki:mozart-wien-1786
+hetki:nansen-fram-1893
+hetki:newton-prisma-1666
+hetki:obodin-kirjapaino-1494
+hetki:olympia-ateena-1896
+hetki:pasteur-pullot-1862
+hetki:pietari-perustus-1703
+hetki:pyhan-elmon-linnake-1565
+hetki:ranskan-vallankumous-bastilji-1789
+hetki:roger-ii-cefalu-lupaus-1131
+hetki:rontgen-kasi-1895
+hetki:rosettan-kivi-1799
+hetki:schliemann-troija-1873
+hetki:shakespeare-globe-1599
+hetki:sibelius-finlandia-1899
+hetki:suezin-kanava-avajaiset-1869
+hetki:tutankhamon-carter-1922
+hetki:vasco-da-gama-restelo-1497
+hetki:viikinkilaiva-roskilde-1040
+hetki:vloren-itsenaisyys-1912
+hetki:wienin-porssikrahi-1873
+kadonnut:hahmotelma-capitolium
+kadonnut:hahmotelma-euston-arch
+kadonnut:hahmotelma-galerie-des-machines
+kadonnut:hahmotelma-grand-chatelet
+kadonnut:hahmotelma-greenwich-palatsi
+kadonnut:hahmotelma-karntnertor
+kadonnut:hahmotelma-les-halles
+kadonnut:hahmotelma-newgate
+kadonnut:hahmotelma-palais-industrie
+kadonnut:hahmotelma-palais-orsay
+kadonnut:hahmotelma-porto-di-ripetta
+kadonnut:hahmotelma-ringtheater
+kadonnut:hahmotelma-septizodium
+kadonnut:hahmotelma-temple-torni
+kadonnut:hahmotelma-trocadero
+kadonnut:hahmotelma-westminster-vanha
+kadonnut:hahmotelma-whitehall
+nahtavyys:amsterdam:Amsterdam-laiva
+nahtavyys:amsterdam:Anne Frankin talo
+nahtavyys:amsterdam:Artis-eläintarha
+nahtavyys:amsterdam:Haringpakkerstoren
+nahtavyys:amsterdam:Herengracht 537
+nahtavyys:amsterdam:Kapein talo
+nahtavyys:amsterdam:Keskusrautatieasema
+nahtavyys:amsterdam:Kissalaiva
+nahtavyys:amsterdam:Kuninkaanpalatsi
+nahtavyys:amsterdam:Maitotyttö
+nahtavyys:amsterdam:Montelbaanstoren
+nahtavyys:amsterdam:Paleis voor Volksvlijt
+nahtavyys:amsterdam:Portugalilainen synagoga
+nahtavyys:amsterdam:Rembrandtin talo
+nahtavyys:amsterdam:Rijksmuseum
+nahtavyys:amsterdam:Timanttihiomo
+nahtavyys:amsterdam:Vanha raatihuone
+nahtavyys:amsterdam:Waag op de Dam
+nahtavyys:amsterdam:Yövartio
+nahtavyys:lontoo:Abbey Roadin suojatie
+nahtavyys:lontoo:Albert Memorial
+nahtavyys:lontoo:Baird 1926
+nahtavyys:lontoo:Big Ben
+nahtavyys:lontoo:British Museum
+nahtavyys:lontoo:Brunel 1827
+nahtavyys:lontoo:Buckinghamin palatsi
+nahtavyys:lontoo:Canaletto Lontoossa
+nahtavyys:lontoo:Cheapsiden kätkö
+nahtavyys:lontoo:Crystal Palace 1851
+nahtavyys:lontoo:Cutty Sark
+nahtavyys:lontoo:Dickensin pubi
+nahtavyys:lontoo:Etelämeren kupla
+nahtavyys:lontoo:Exchange Alley
+nahtavyys:lontoo:Faraday 1831
+nahtavyys:lontoo:Fleming 1928
+nahtavyys:lontoo:Händel ja Hendrix
+nahtavyys:lontoo:Johnson 1755
+nahtavyys:lontoo:Kensingtonin palatsi
+nahtavyys:lontoo:Leake Streetin tunneli
+nahtavyys:lontoo:Liukumäkiveistos
+nahtavyys:lontoo:Lontoon Tower
+nahtavyys:lontoo:Lontoon palo 1666
+nahtavyys:lontoo:Metron höyryveturi
+nahtavyys:lontoo:Millennium Bridgen portaat
+nahtavyys:lontoo:Natural History Museum
+nahtavyys:lontoo:Neljäs jalusta
+nahtavyys:lontoo:Old Royal Naval College
+nahtavyys:lontoo:Old St Paul's
+nahtavyys:lontoo:Punch 1662
+nahtavyys:lontoo:Pyhän Paavalin katedraali
+nahtavyys:lontoo:Queen's House
+nahtavyys:lontoo:Royal Albert Hall
+nahtavyys:lontoo:Royal Observatory
+nahtavyys:lontoo:Savusumu 1952
+nahtavyys:lontoo:Shakespeare 1599
+nahtavyys:lontoo:Sähkötin 1837
+nahtavyys:lontoo:Tower Bridge
+nahtavyys:lontoo:Trafalgar Square
+nahtavyys:lontoo:Turbiinihalli
+nahtavyys:lontoo:Vanha London Bridge
+nahtavyys:lontoo:Victoria Memorial
+nahtavyys:lontoo:Westminster Abbey
+nahtavyys:lontoo:Westminster Bridge
+nahtavyys:lontoo:Westminsterin palatsi
+nahtavyys:pariisi:Bastilji
+nahtavyys:pariisi:Bastilji 1789
+nahtavyys:pariisi:Bizet 1875
+nahtavyys:pariisi:Bukinistit 1859
+nahtavyys:pariisi:Concorden aukio
+nahtavyys:pariisi:Curie 1898
+nahtavyys:pariisi:Eiffel-torni
+nahtavyys:pariisi:Eiffel-torni 1888
+nahtavyys:pariisi:Grand Palais
+nahtavyys:pariisi:Invalidit
+nahtavyys:pariisi:Kaulanauha 1785
+nahtavyys:pariisi:Kirahvi 1827
+nahtavyys:pariisi:Lavoisier 1780
+nahtavyys:pariisi:Louvre
+nahtavyys:pariisi:Lumière 1895
+nahtavyys:pariisi:Lustig 1925
+nahtavyys:pariisi:Luxembourgin puisto
+nahtavyys:pariisi:Metro 1900
+nahtavyys:pariisi:Monet 1874
+nahtavyys:pariisi:Notre-Dame
+nahtavyys:pariisi:Notre-Dame 2019
+nahtavyys:pariisi:Orsayn taidemuseo
+nahtavyys:pariisi:Palais Garnier
+nahtavyys:pariisi:Panthéon
+nahtavyys:pariisi:Pasteur 1862
+nahtavyys:pariisi:Patonki 1994
+nahtavyys:pariisi:Petit Palais
+nahtavyys:pariisi:Piaf ja Django
+nahtavyys:pariisi:Piiritys 1870
+nahtavyys:pariisi:Place des Vosges
+nahtavyys:pariisi:Pompidou-keskus
+nahtavyys:pariisi:Riemukaari
+nahtavyys:pariisi:Sacré-Cœur
+nahtavyys:pariisi:Saint-Eustache
+nahtavyys:pariisi:Sainte-Chapelle
+nahtavyys:pariisi:Tornin nimet 2026
+nahtavyys:pariisi:Tour Montparnasse
+nahtavyys:pariisi:Tour Saint-Jacques
+nahtavyys:rooma:Aqua Virgo
+nahtavyys:rooma:Areenan kellari
+nahtavyys:rooma:Banca Romana
+nahtavyys:rooma:Castel Sant’Angelo
+nahtavyys:rooma:Espanjalaiset portaat
+nahtavyys:rooma:Forum Romanum
+nahtavyys:rooma:Kolikko olan yli
+nahtavyys:rooma:Meta Sudans
+nahtavyys:rooma:Michelangelo 1510
+nahtavyys:rooma:Nasone
+nahtavyys:rooma:Norsu ja obeliski
+nahtavyys:rooma:Pietarinkirkko
+nahtavyys:rooma:Torre Argentina
+nahtavyys:rooma:Trevin suihkulähde
+nahtavyys:rooma:Vatikaanin palatsi
+nahtavyys:wien:Altes Kärntnertor
+nahtavyys:wien:Beethoven 1824
+nahtavyys:wien:Belvedere
+nahtavyys:wien:Heinrichshof
+nahtavyys:wien:Hofburg
+nahtavyys:wien:Jättiratas
+nahtavyys:wien:Klimtin maalaukset
+nahtavyys:wien:Lipizzanit
+nahtavyys:wien:Mozart 1786
+nahtavyys:wien:Praterin jättiratas
+nahtavyys:wien:Raatihuone
+nahtavyys:wien:Saliera
+nahtavyys:wien:Schönbrunn
+nahtavyys:wien:Stephansdom
+nahtavyys:wien:Taikahuilu
+nahtavyys:wien:Tonava kaunoinen
+nahtavyys:wien:Valtionooppera
+nahtavyys:wien:Vanha Burgtheater
+nahtavyys:wien:Vuoristovesijohto
+skandaali:agadirin-kriisi
+skandaali:alberti-skandaali
+skandaali:aline-sitoe-diatta
+skandaali:alves-dos-reis-setelihuijaus
+skandaali:anglon-lihauute
+skandaali:anna-goldin-tapaus
+skandaali:annualin-katastrofi
+skandaali:aralin-kalasatama
+skandaali:azraqin-kosteikko
+skandaali:bagdadin-patteri
+skandaali:baixa-do-cassange-1961
+skandaali:baktrian-kulta
+skandaali:balangigan-kellot
+skandaali:baldomera-larra-pyramidi
+skandaali:banaanilakko-1928
+skandaali:banaanisopimus-1904
+skandaali:barbora-salainen-avioliitto
+skandaali:bardon-sopimus
+skandaali:baringsin-romahdus
+skandaali:baskivainot-1615
+skandaali:batavian-haaksirikko
+skandaali:battenbergin-ruhtinaskaappaus
+skandaali:belokas-maratonhuijaus-1896
+skandaali:beninin-retkikunta
+skandaali:berberan-sopimukset
+skandaali:beringerin-valhekivet
+skandaali:boheemikirjan-takavarikko
+skandaali:boratynka-kuparikohu
+skandaali:bosnian-kriisi-1908
+skandaali:bre-x
+skandaali:bre-x-busang
+skandaali:brumadinhon-pato
+skandaali:bukhara-1842
+skandaali:cagliostro-san-leo
+skandaali:cakobaun-lasku
+skandaali:cananea-1906
+skandaali:caprivin-kaistale
+skandaali:caravaggion-karkotus-1608
+skandaali:carrianin-romahdus
+skandaali:casementin-raportti-1904
+skandaali:cerro-de-los-santos-vaarennokset
+skandaali:cesnolan-kokoelma
+skandaali:chinchan-saaret
+skandaali:christyn-raportti
+skandaali:cochabamban-vesisota
+skandaali:colonia-dignidad
+skandaali:coolidgen-uppoaminen
+skandaali:credit-mobilier
+skandaali:darienin-hanke
+skandaali:de-raysin-uusi-ranska
+skandaali:deadwoodin-leiri
+skandaali:delagoan-rata
+skandaali:denderan-horoskooppi
+skandaali:dhammazedin-kello
+skandaali:dohan-ryosto
+skandaali:duala-manga-bell-1914
+skandaali:dubai-world
+skandaali:dura-europoksen-juoksuhauta
+skandaali:elginin-marmorit
+skandaali:elizan-musketit
+skandaali:elmyr-de-hory-vaarentaja
+skandaali:erromangon-santelipuu
+skandaali:etela-afrikan-tahti
+skandaali:etelameren-kupla
+skandaali:farinet-alppien-vaararahanpainaja
+skandaali:fashoda-1898
+skandaali:firestonen-sopimus
+skandaali:fojnican-vaakunakirja
+skandaali:gandamak-1842
+skandaali:gazan-keisari
+skandaali:gerboise-bleue-1960
+skandaali:gjest-baardsen-mestarivaras
+skandaali:glenrowanin-piiritys
+skandaali:godberin-pako
+skandaali:golden-key
+skandaali:graf-spee-1939
+skandaali:hanoin-rottapalkkiot
+skandaali:happy-valley
+skandaali:harappan-tiilet
+skandaali:hitlerin-paivakirjat
+skandaali:hoi-anin-hylky
+skandaali:humaitan-piiritys
+skandaali:huudon-varkaus
+skandaali:iivanan-kadonnut-kirjasto
+skandaali:illigin-sopimus
+skandaali:ita-qingin-haudat
+skandaali:jaja-opobo
+skandaali:kabakan-karkotus
+skandaali:kadonneet-kreivikunnat
+skandaali:kanavakonsessio
+skandaali:kansallisteatterin-vihellyskohu
+skandaali:kariban-allas
+skandaali:karpasviuhka-1827
+skandaali:karun-aarre
+skandaali:kasikci-elmasi-legenda
+skandaali:kaulanauhajuttu-1785
+skandaali:kelley-alkemistihuijari
+skandaali:khartumin-piiritys
+skandaali:khumjungin-paanahka
+skandaali:kieltolaki-ja-pirtukuningas
+skandaali:kiinapuun-kuori
+skandaali:kohinoor-1849
+skandaali:koidun-kaivossopimus
+skandaali:koirapaivien-kuningas
+skandaali:kokaiinivallankaappaus-1980
+skandaali:kopenickin-kapteeni
+skandaali:kreugerin-romahdus
+skandaali:kuannersuit
+skandaali:kultainen-kirje
+skandaali:kultajakkaran-sota
+skandaali:kultakanan-ryosto-1875
+skandaali:kuninkaanhovin-kasikirjoitukset
+skandaali:kypros-myydaan
+skandaali:lago-agrio
+skandaali:lanyun-ydinjate
+skandaali:lasnamaen-valkea-laiva
+skandaali:lat-dior-ja-rautatie
+skandaali:lava-jato
+skandaali:lifaun-pako
+skandaali:lituanican-viimeinen-lento
+skandaali:lombokon-linnake
+skandaali:longwoodin-vanki
+skandaali:maapahkinahanke
+skandaali:magdalan-ryosto
+skandaali:maji-maji
+skandaali:malaitan-verenvuodatus
+skandaali:manufahin-kapina
+skandaali:mapungubwen-sarvikuono
+skandaali:marie-adelaiden-luopuminen-1919
+skandaali:matalen-kapina
+skandaali:max-havelaar
+skandaali:maximilianin-keisarikunta
+skandaali:merirosvorannikko
+skandaali:meshan-steela
+skandaali:minamatan-tauti
+skandaali:modiglianin-paat-1984
+skandaali:mokan-kahvipensaat
+skandaali:mona-lisan-varkaus-1911
+skandaali:naamiaisten-laukaus
+skandaali:namamugi
+skandaali:nankingin-sopimus
+skandaali:napoleonin-kirkkohopean-ryosto-1798
+skandaali:natwarlal
+skandaali:naundorff-delftin-valekuningas
+skandaali:nevinsonin-orjatie
+skandaali:nosy-been-sokeri
+skandaali:nueva-cadiz
+skandaali:nueva-germania
+skandaali:nurmen-amatoorikohu
+skandaali:nyosjarvi-1986
+skandaali:oegyujanggak
+skandaali:oera-linda-kasikirjoitus
+skandaali:office-du-niger
+skandaali:ok-tedin-jate
+skandaali:ongiin-luostari
+skandaali:oryksin-suojelualue
+skandaali:osmanien-vararikko-1875
+skandaali:ouzel-galleyn-mysteeri
+skandaali:pacific-skandaali
+skandaali:pacta-conventa-vaarennosepaily
+skandaali:palmstruchin-setelipankki
+skandaali:pan-electric
+skandaali:parihakan-valtaus
+skandaali:parnellin-lankeemus
+skandaali:perimin-majakka
+skandaali:phaulkonin-nousu
+skandaali:pigottin-vaarennetyt-kirjeet
+skandaali:piltdownin-ihminen
+skandaali:pirtukauppa-suomenlahdella
+skandaali:port-hamilton
+skandaali:portugalilaisen-nunnan-kirjeet
+skandaali:potemkinin-kulissikylat
+skandaali:poyaisin-huijaus
+skandaali:priebke-bariloche
+skandaali:prinsessa-tarakanova
+skandaali:prokoszin-kronikka
+skandaali:pyhan-kruunun-varkaus-1440
+skandaali:rabihin-kallo
+skandaali:radio-luxembourg-1933
+skandaali:rainbow-warriorin-upotus
+skandaali:rassam-vastaan-budge
+skandaali:riian-kalenterikahakat
+skandaali:rijecka-krpica-1868
+skandaali:rosario-1978
+skandaali:rover-haaksirikko
+skandaali:ruddin-myonnytys
+skandaali:rummu-jyri-mestarikarkuri
+skandaali:sacromonten-lyijykirjat
+skandaali:saharan-meri
+skandaali:saitafernesin-tiaara
+skandaali:salagan-orjatori
+skandaali:san-blasin-kapina
+skandaali:san-josen-galleoni
+skandaali:santa-maria-1902
+skandaali:santiagon-taistelu-1962
+skandaali:savon-yotaistelu
+skandaali:seitseman-veljesta-kirjasota
+skandaali:semipalatinskin-koealue
+skandaali:seuso-aarteen-kiista
+skandaali:shakkiturkkilainen
+skandaali:shinkolobwe
+skandaali:siivettoman-ruokin-loppu
+skandaali:sikojenlahti
+skandaali:simonides-kasikirjoitusvaarentaja
+skandaali:sininen-timantti
+skandaali:soluch-1931
+skandaali:sonja-kultakasi
+skandaali:souk-al-manakh
+skandaali:strousbergin-rautatieskandaali
+skandaali:struensee-kuninkaan-laakari
+skandaali:suezin-osakekauppa
+skandaali:susan-kaivausmonopoli
+skandaali:szczerbiec-odysseia
+skandaali:tamataven-sopimus
+skandaali:tanskan-valtionvararikko-1813
+skandaali:tarbosaurus-huutokauppa
+skandaali:tayman-kivi
+skandaali:teapot-dome
+skandaali:telgin-leimapaperit
+skandaali:tell-halafin-veistokset
+skandaali:thiess-ihmissusi
+skandaali:timbuktun-kasikirjoitukset
+skandaali:tobruk-1911
+skandaali:toumain-reisiluu
+skandaali:tsavon-ihmissyojat
+skandaali:tupakkakapina
+skandaali:tycho-brahen-kuolinmysteeri
+skandaali:ubarin-loyto
+skandaali:uss-maine
+skandaali:vaaleanpunainen-kartta-1890
+skandaali:van-meegerenin-vermeerit
+skandaali:veda-slovena
+skandaali:vedenpaisumuksen-todistaja
+skandaali:velesin-kirja
+skandaali:venezuelan-saarto
+skandaali:vozrozdenija
+skandaali:vrain-lucas-kirjevaarennokset
+skandaali:wadi-halfa
+skandaali:walbrzychin-kultajuna
+skandaali:wallinin-valeasu
+skandaali:waterbergin-kasky
+skandaali:william-walker
+skandaali:wuchalen-artikla
+skandaali:yale-kiista
+skandaali:yamashitan-kulta
+skandaali:yrjo-v-metsastysretki
+skandaali:zrinski-frankopan-salaliitto
+skandaali:zubarahin-havitys
+skandaali:zubayrin-zaribat
+takynosto:kastrin-kyla
+takynosto:olympoksen-huippu
