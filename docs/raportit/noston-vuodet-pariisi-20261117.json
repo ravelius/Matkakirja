@@ -1,0 +1,924 @@
+{
+ "kaupunki": "pariisi",
+ "huom": "SK 17.11.2026. Rivit käsin tekstiä vasten; kohta = sanatarkka pätkä luettavasta tekstistä (tasan kerran), vuosi näytetään sellaisenaan, selite 1-3 sanaa enintään 20 merkkiä. Ei uusia faktoja.",
+ "nostot": [
+  {
+   "nimi": "Grand Châtelet",
+   "rivit": [
+    [
+     "kaupungin muuria 1190",
+     "1190",
+     "muurityö alkoi"
+    ],
+    [
+     "lakkautettiin 1790",
+     "1790",
+     "tuomioistuin loppui"
+    ],
+    [
+     "purku alkoi 1802",
+     "1802",
+     "purku alkoi"
+    ],
+    [
+     "1860–1862",
+     "1860–1862",
+     "teatterin rakennus"
+    ]
+   ]
+  },
+  {
+   "nimi": "Temple-torni",
+   "rivit": [
+    [
+     "lakkautettiin 1312",
+     "1312",
+     "ritarikunta loppui"
+    ],
+    [
+     "päivänä 1792",
+     "1792",
+     "perhe Templeen"
+    ],
+    [
+     "tammikuuta 1793",
+     "1793",
+     "matka giljotiinille"
+    ],
+    [
+     "kesäkuuta 1795",
+     "1795",
+     "Ludvig XVII kuoli"
+    ],
+    [
+     "purettavaksi 1808",
+     "1808",
+     "purkumääräys"
+    ]
+   ]
+  },
+  {
+   "nimi": "Palais d'Orsay",
+   "rivit": [
+    [
+     "aloitti 1810",
+     "1810",
+     "palatsi aloitettiin"
+    ],
+    [
+     "toukokuuta 1871",
+     "1871",
+     "palatsi paloi"
+    ],
+    [
+     "näki ne 1873",
+     "1873",
+     "isoisä näki rauniot"
+    ],
+    [
+     "vuodesta 1898",
+     "1898",
+     "purku alkoi"
+    ],
+    [
+     "vuoden 1900",
+     "1900",
+     "maailmannäyttely"
+    ]
+   ]
+  },
+  {
+   "nimi": "Palais de l'Industrie",
+   "rivit": [
+    [
+     "toukokuussa 1855",
+     "1855",
+     "halli avattiin"
+    ],
+    [
+     "ja 1881",
+     "1881",
+     "sähkönäyttely"
+    ],
+    [
+     "käydessä 1873",
+     "1873",
+     "isoisän käynti"
+    ]
+   ]
+  },
+  {
+   "nimi": "Trocadéron palatsi",
+   "rivit": [
+    [
+     "vuoden 1878",
+     "1878",
+     "maailmannäyttely"
+    ],
+    [
+     "Vuonna 1935",
+     "1935",
+     "keskisali purettiin"
+    ],
+    [
+     "vuoden 1937",
+     "1937",
+     "näyttely"
+    ]
+   ]
+  },
+  {
+   "nimi": "Galerie des Machines",
+   "rivit": [
+    [
+     "vuoden 1889",
+     "1889",
+     "maailmannäyttely"
+    ]
+   ]
+  },
+  {
+   "nimi": "Les Hallesin hallit",
+   "rivit": [
+    [
+     "sinne 1183",
+     "1183",
+     "markkina siirrettiin"
+    ],
+    [
+     "romaanissaan (1873)",
+     "1873",
+     "Zolan romaani"
+    ],
+    [
+     "Rungisiin 1969",
+     "1969",
+     "kauppa Rungisiin"
+    ],
+    [
+     "paikalle 1979",
+     "1979",
+     "Forum avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Eiffel-torni",
+   "nostoId": "nosto-pariisin-72-nimea",
+   "rivit": [
+    [
+     "vuonna 1889",
+     "1889",
+     "maailmannäyttely"
+    ],
+    [
+     "jo vuonna 1909",
+     "1909",
+     "purkusuunnitelma"
+    ]
+   ]
+  },
+  {
+   "nimi": "Riemukaari",
+   "rivit": [
+    [
+     "vuonna 1806",
+     "1806",
+     "Napoleonin käsky"
+    ],
+    [
+     "vasta vuonna 1836",
+     "1836",
+     "valmistui"
+    ],
+    [
+     "marraskuuta 1920",
+     "1920",
+     "sotilas tuotiin"
+    ],
+    [
+     "tammikuuta 1921",
+     "1921",
+     "haudattiin"
+    ],
+    [
+     "Vuonna 1919",
+     "1919",
+     "lento kaaren läpi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Concorden aukio",
+   "rivit": [
+    [
+     "marraskuussa 1830",
+     "1830",
+     "obeliski lahjaksi"
+    ],
+    [
+     "vuonna 1836",
+     "1836",
+     "obeliski pystyyn"
+    ]
+   ]
+  },
+  {
+   "nimi": "Louvre",
+   "rivit": [
+    [
+     "elokuussa 1793",
+     "1793",
+     "museo avattiin"
+    ],
+    [
+     "Vuonna 1989",
+     "1989",
+     "lasipyramidi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Luxembourgin puisto",
+   "rivit": [
+    [
+     "murhattiin 1610",
+     "1610",
+     "Henrik IV murhattiin"
+    ],
+    [
+     "vuonna 1612",
+     "1612",
+     "kartano ostettiin"
+    ],
+    [
+     "vuodesta 1933",
+     "1933",
+     "nukketeatteri alkoi"
+    ],
+    [
+     "2012",
+     "2012",
+     "siirrettiin Orsayhin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Sacré-Cœur",
+   "rivit": [
+    [
+     "vuonna 1870",
+     "1870",
+     "sodan häviö"
+    ]
+   ]
+  },
+  {
+   "nimi": "Panthéon",
+   "rivit": [
+    [
+     "sotaretkellä 1744",
+     "1744",
+     "kuningas sairastui"
+    ],
+    [
+     "vasta 1790",
+     "1790",
+     "valmistui"
+    ],
+    [
+     "1791 kansalliskokous",
+     "1791",
+     "suurmiesten hauta"
+    ],
+    [
+     "Vuonna 1851",
+     "1851",
+     "Foucaultin heiluri"
+    ]
+   ]
+  },
+  {
+   "nimi": "Notre-Dame",
+   "nostoId": "nosto-notre-damen-kukko",
+   "rivit": [
+    [
+     "vuonna 1163",
+     "1163",
+     "rakennus alkoi"
+    ],
+    [
+     "vasta 1345",
+     "1345",
+     "valmistui"
+    ],
+    [
+     "vuonna 1804",
+     "1804",
+     "Napoleonin kruunaus"
+    ],
+    [
+     "Huhtikuussa 2019",
+     "2019",
+     "tulipalo"
+    ],
+    [
+     "joulukuussa 2024",
+     "2024",
+     "avattiin uudelleen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Orsayn taidemuseo",
+   "rivit": [
+    [
+     "valmistui vuonna 1900",
+     "1900",
+     "asema valmistui"
+    ],
+    [
+     "jo 1939",
+     "1939",
+     "kaukojunat loppuivat"
+    ],
+    [
+     "joulukuussa 1986",
+     "1986",
+     "museo avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Palais Garnier",
+   "rivit": [
+    [
+     "joulukuussa 1860",
+     "1860",
+     "suunnittelukilpailu"
+    ],
+    [
+     "toukokuussa 1861",
+     "1861",
+     "Garnier voitti"
+    ],
+    [
+     "muurattiin vuonna 1862",
+     "1862",
+     "peruskivi"
+    ],
+    [
+     "avattiin vuonna 1875",
+     "1875",
+     "talo avattiin"
+    ],
+    [
+     "vasta 1989",
+     "1989",
+     "nimi vaihtui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Place des Vosges",
+   "rivit": [
+    [
+     "vietettiin 1612",
+     "1612",
+     "vihkiäiset"
+    ],
+    [
+     "vuoteen 1800",
+     "1800",
+     "nimi vaihtui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Invalidit",
+   "rivit": [
+    [
+     "Vuonna 1670",
+     "1670",
+     "kuningas määräsi"
+    ],
+    [
+     "jo 1674",
+     "1674",
+     "ensimmäiset asukkaat"
+    ],
+    [
+     "päivän aamuna 1789",
+     "1789",
+     "kiväärit viety"
+    ],
+    [
+     "Vuonna 1840",
+     "1840",
+     "jäännökset tuotiin"
+    ],
+    [
+     "siihen 1861",
+     "1861",
+     "keisari siirrettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Sainte-Chapelle",
+   "rivit": [
+    [
+     "vuonna 1239",
+     "1239",
+     "jäännös ostettiin"
+    ],
+    [
+     "huhtikuussa 1248",
+     "1248",
+     "kappeli vihittiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Grand Palais",
+   "rivit": [
+    [
+     "vuoden 1900 maailmannäyttelyyn",
+     "1900",
+     "maailmannäyttely"
+    ],
+    [
+     "vuodesta 1901",
+     "1901",
+     "automessut"
+    ],
+    [
+     "vuonna 1909",
+     "1909",
+     "ilmailunäyttely"
+    ],
+    [
+     "vuonna 1993",
+     "1993",
+     "niitti putosi"
+    ],
+    [
+     "vuoden 2024",
+     "2024",
+     "olympialaiset"
+    ]
+   ]
+  },
+  {
+   "nimi": "Petit Palais",
+   "rivit": [
+    [
+     "lokakuuta 1897",
+     "1897",
+     "työ alkoi"
+    ],
+    [
+     "huhtikuussa 1900",
+     "1900",
+     "valmistui"
+    ],
+    [
+     "Vuonna 1902",
+     "1902",
+     "kaupungin museo"
+    ],
+    [
+     "vuosina 1903–1925",
+     "1903–1925",
+     "koristetyöt"
+    ],
+    [
+     "vuodesta 1975",
+     "1975",
+     "suojeltu"
+    ]
+   ]
+  },
+  {
+   "nimi": "Tour Saint-Jacques",
+   "rivit": [
+    [
+     "1509–1523",
+     "1509–1523",
+     "rakennettiin"
+    ],
+    [
+     "Vuonna 1836",
+     "1836",
+     "kaupunki osti"
+    ],
+    [
+     "vasta 1891",
+     "1891",
+     "sääasema"
+    ]
+   ]
+  },
+  {
+   "nimi": "Saint-Eustache",
+   "rivit": [
+    [
+     "vuonna 1532",
+     "1532",
+     "rakennus alkoi"
+    ],
+    [
+     "vuonna 1637",
+     "1637",
+     "vihittiin"
+    ],
+    [
+     "vuonna 1754",
+     "1754",
+     "julkisivutyö alkoi"
+    ],
+    [
+     "vuodelta 1213",
+     "1213",
+     "kappeli"
+    ]
+   ]
+  },
+  {
+   "nimi": "Pompidou-keskus",
+   "rivit": [
+    [
+     "vuonna 1972",
+     "1972",
+     "rakennus alkoi"
+    ],
+    [
+     "vuonna 1977",
+     "1977",
+     "avattiin"
+    ],
+    [
+     "vuonna 2000",
+     "2000",
+     "peruskorjaus valmis"
+    ],
+    [
+     "vuonna 2030",
+     "2030",
+     "suunniteltu avaus"
+    ]
+   ]
+  },
+  {
+   "nimi": "Tour Montparnasse",
+   "rivit": [
+    [
+     "Lokakuussa 1895",
+     "1895",
+     "veturi seinän läpi"
+    ],
+    [
+     "1969–1973",
+     "1969–1973",
+     "rakennettiin"
+    ],
+    [
+     "vuoteen 2011",
+     "2011",
+     "korkein vuoteen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Bizet 1875",
+   "nostoId": "nosto-carmenin-ensi-ilta",
+   "rivit": [
+    [
+     "tienoilla 1873",
+     "1873",
+     "säveltäminen alkoi"
+    ],
+    [
+     "alkuvuodesta 1874",
+     "1874",
+     "johtaja erosi"
+    ],
+    [
+     "maaliskuuta 1875",
+     "1875",
+     "ensi-ilta"
+    ],
+    [
+     "vasta 1883",
+     "1883",
+     "ooppera palasi"
+    ],
+    [
+     "paloi 1887",
+     "1887",
+     "sali paloi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kirahvi 1827",
+   "nostoId": "nosto-kirahvin-kavelymatka",
+   "rivit": [
+    [
+     "lokakuuta 1826",
+     "1826",
+     "kirahvi Marseilleen"
+    ],
+    [
+     "toukokuussa 1827",
+     "1827",
+     "matka alkoi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Bukinistit 1859",
+   "nostoId": "nosto-pariisin-bukinistit",
+   "rivit": [
+    [
+     "Vuonna 1859",
+     "1859",
+     "kiinteät paikat"
+    ],
+    [
+     "vasta vuonna 1891",
+     "1891",
+     "laatikot kaiteeseen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Lustig 1925",
+   "nostoId": "nosto-lustig-eiffel",
+   "rivit": [
+    [
+     "Pariisissa 1925",
+     "1925",
+     "Lustig luki jutun"
+    ]
+   ]
+  },
+  {
+   "nimi": "Monet 1874",
+   "nostoId": "syvennys-pariisi-impressionistit",
+   "rivit": [
+    [
+     "turhaan 1867",
+     "1867",
+     "näyttelyanomus"
+    ],
+    [
+     "Joulukuussa 1873",
+     "1873",
+     "yhdistys perustettu"
+    ],
+    [
+     "huhtikuussa 1874",
+     "1874",
+     "ensimmäinen näyttely"
+    ]
+   ]
+  },
+  {
+   "nimi": "Piiritys 1870",
+   "nostoId": "syvennys-pariisi-kyyhkyposti",
+   "rivit": [
+    [
+     "syyskuussa 1870",
+     "1870",
+     "Pariisi suljettiin"
+    ],
+    [
+     "vuodesta 1859",
+     "1859",
+     "mikrofilmipatentti"
+    ]
+   ]
+  },
+  {
+   "nimi": "Bastilji",
+   "nostoId": "bastilji",
+   "rivit": [
+    [
+     "jo 1357",
+     "1357",
+     "työt käynnissä"
+    ],
+    [
+     "vuodesta 1370",
+     "1370",
+     "pääosa alkoi nousta"
+    ],
+    [
+     "päivänä 1789",
+     "1789",
+     "valtaus"
+    ]
+   ]
+  },
+  {
+   "nimi": "Curie 1898",
+   "nostoId": "hetki-marie-curie-hangaari-1898",
+   "rivit": [
+    [
+     "ilmoittavat vuonna 1898",
+     "1898",
+     "löytö ilmoitettiin"
+    ],
+    [
+     "vuoteen 1902",
+     "1902",
+     "radiumkloridi"
+    ],
+    [
+     "Vuonna 1903",
+     "1903",
+     "fysiikan Nobel"
+    ],
+    [
+     "vuonna 1911",
+     "1911",
+     "kemian Nobel"
+    ]
+   ]
+  },
+  {
+   "nimi": "Lavoisier 1780",
+   "nostoId": "hetki-lavoisier-laboratorio-1780",
+   "rivit": [
+    [
+     "Vuonna 1789",
+     "1789",
+     "oppikirja"
+    ],
+    [
+     "toukokuuta 1794",
+     "1794",
+     "Lavoisier mestattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Pasteur 1862",
+   "nostoId": "hetki-pasteur-pullot-1862",
+   "rivit": [
+    [
+     "vuonna 1862",
+     "1862",
+     "voitti kiistan"
+    ],
+    [
+     "vuonna 1865",
+     "1865",
+     "pastörointipatentti"
+    ]
+   ]
+  },
+  {
+   "nimi": "Eiffel-torni 1888",
+   "nostoId": "hetki-eiffel-torni-1888",
+   "rivit": [
+    [
+     "elokuussa 1888",
+     "1888",
+     "torni nousee"
+    ],
+    [
+     "maaliskuuta 1889",
+     "1889",
+     "torni valmis"
+    ]
+   ]
+  },
+  {
+   "nimi": "Bastilji 1789",
+   "nostoId": "hetki-ranskan-vallankumous-bastilji-1789",
+   "rivit": [
+    [
+     "heinäkuuta 1789",
+     "1789",
+     "valtaus"
+    ]
+   ]
+  },
+  {
+   "nimi": "Lumière 1895",
+   "nostoId": "hetki-lumiere-elokuva-1895",
+   "rivit": [
+    [
+     "joulukuuta 1895",
+     "1895",
+     "Lumièren näytös"
+    ]
+   ]
+  },
+  {
+   "nimi": "Metro 1900",
+   "nostoId": "nosto-guimardin-metro",
+   "rivit": [
+    [
+     "heinäkuuta 1900",
+     "1900",
+     "metro avattiin"
+    ],
+    [
+     "vuonna 1978",
+     "1978",
+     "valtaosa suojeltiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Piaf ja Django",
+   "nostoId": "nosto-pariisi-soi",
+   "rivit": [
+    [
+     "joulukuussa 1915",
+     "1915",
+     "Piaf syntyi"
+    ],
+    [
+     "kadulta vuonna 1935",
+     "1935",
+     "Piaf löydettiin"
+    ],
+    [
+     "yönä 1928",
+     "1928",
+     "tulipalo vaunussa"
+    ],
+    [
+     "Vuonna 1934",
+     "1934",
+     "Hot Club syntyi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Patonki 1994",
+   "nostoId": "nosto-pariisin-patonki",
+   "rivit": [
+    [
+     "vuodesta 1994",
+     "1994",
+     "kilpailun alku"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kaulanauha 1785",
+   "nostoId": "nosto-pariisin-vuosisadat",
+   "rivit": [
+    [
+     "vaihteessa 1785",
+     "1785",
+     "nauha ostettiin"
+    ],
+    [
+     "Rohanin 1786",
+     "1786",
+     "Rohan vapautettiin"
+    ],
+    [
+     "esitteli 1867",
+     "1867",
+     "kirjeet akatemialle"
+    ],
+    [
+     "helmikuussa 1870",
+     "1870",
+     "väärentäjän tuomio"
+    ]
+   ]
+  },
+  {
+   "nimi": "Tornin nimet 2026",
+   "nostoId": "nosto-pariisin-72-nimea",
+   "lisakortti": true,
+   "rivit": [
+    [
+     "tammikuussa 2026",
+     "2026",
+     "naisten lista julki"
+    ]
+   ]
+  },
+  {
+   "nimi": "Notre-Dame 2019",
+   "nostoId": "nosto-notre-damen-kukko",
+   "lisakortti": true,
+   "rivit": [
+    [
+     "huhtikuuta 2019",
+     "2019",
+     "tulipalo"
+    ]
+   ]
+  }
+ ]
+}
