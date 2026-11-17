@@ -836,6 +836,10 @@ export const EUROOPAN_KADONNEET = {
         + 'teatterilaki, palokunta järjestettiin uudelleen ja perustettiin Wienin vapaaehtoinen '
         + 'pelastusseura. Paikalle rakennettiin Sühnhaus, jonka keisari Franz Josephin yksityisvarat '
         + 'kustansivat ja jonka vuokratulot menivät hyväntekeväisyyteen.',
+      vuodet: [
+        { kohta: 'tammikuuta 1874', vuosi: '1874', selite: 'teatteri avattiin' },
+        { kohta: 'päivänä 1881', vuosi: '1881', selite: 'tulipalo' },
+      ],
       lahde: 'en-Wikipedia ”Ringtheater”; de-Wikipedia ”Ringtheater” (tarkistettu 31.10.2026).',
       kuva: 'ihme-ringtheater-loistoaika.jpg',
       lyhyt: 'Yleisö täyttää uuden teatterin tammikuussa 1874, ja talo on mitoitettu 1 700 katsojalle; '
@@ -867,6 +871,13 @@ export const EUROOPAN_KADONNEET = {
         + 'kantaesitys. Teatteri suljettiin vuonna 1870, ja uusi '
         + 'hovioopperatalo oli avattu jo 1869. Talo purettiin myöhemmin. '
         + 'Isoisän matkavuonna 1873 teatteri oli jo suljettu.',
+      vuodet: [
+        { kohta: 'vuonna 1709', vuosi: '1709', selite: 'teatteri avattiin' },
+        { kohta: 'sen 1761', vuosi: '1761', selite: 'tulipalo' },
+        { kohta: 'toukokuuta 1824', vuosi: '1824', selite: 'yhdeksäs sinfonia' },
+        { kohta: 'vuonna 1870', vuosi: '1870', selite: 'teatteri suljettiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       lahde: 'Österreichisches Musiklexikon online, ”Kärntnertortheater”; habsburger.net, ”Die Heimstatt der Oper: Das '
         + 'Kärntnertortheater”; Wien Geschichte Wiki, ”Kärntnertortheater”; Beethoven-Haus Bonn ja A. W. Thayer '
         + '(yhdeksännen sinfonian kantaesitys); tarkistettu 17.11.2026.',
