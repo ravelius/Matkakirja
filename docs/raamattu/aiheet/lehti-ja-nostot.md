@@ -3,7 +3,7 @@
 TAVOITE: Kartalla on paikkoja, lehdessä luettava syvyys. Nosto avautuu kuva edellä, kertoo tosia asioita lyhyesti ja herättää kysymyksen. Lehti tuntuu oikealta paikallislehdeltä.
 
 SÄÄNNÖT:
-1. Kaikki nostot avaavat saman kortin; erot ovat dataa (laajuus, palkkio, aihe). Kaupungin kartalla ovat vain nähtävyydet, kadonneet ihmeet ja tarinapaikat; muut jutut ovat lehdessä. [R-2.11] [P-261110-3]
+1. Kaikki nostot avaavat saman kortin; erot ovat dataa (laajuus, palkkio, aihe). Kaupungin kartalla vain nähtävyydet, kadonneet ihmeet ja tarinapaikat; muut lehdessä. [R-2.11] [P-261110-3]
 2. Maatasolla maalehden sivut ovat nostoja; tärkeimmät vuoret, meret ja joet avattavia kohteita. [R-2.137] [R-2.11]
 3. Nosto aukeaa kuva edellä, LISÄÄ avaa tekstin. Auki oleva nosto ei sulkeudu vierittämällä eikä sisällön napautuksesta. [R-2.41] [R-2.146]
 4. Teksti 3–5 virkettä; laajassa ingressi ja noin 160–240 sanaa. [R-2.146] [R-2.11]
@@ -17,9 +17,9 @@ SÄÄNNÖT:
 12. Kaupunkilehti: syventävä paikallislehti ilman nähtävyyksiä, turisti-infoa ja Tapaa-nappia; lopussa osioluettelo; muut jutut maalehdessä. [R-2.138] [R-2.41]
 13. Etusivun johdatus 7–10 virkettä, sivun 1–2, kuvateksti 1; kannessa kolme laajaa kuvaa kaupungin eri osista. [R-3.22] [R-11.20]
 14. Maalehden Matkailijalle: kevyt, nykyhetki, tuoreet kuvat, avauskuvat tekstistä, vaarat suoraan. [R-2.172] [R-11.21] [R-11.23]
-15. Tuhoutuneen kaupungin nykykuvat näytetään ja syy kerrotaan neutraalisti, ilman taistelukuvia. [R-11.24]
+15. Tuhoutuneen kaupungin nykykuvat ja syy neutraalisti, ilman taistelukuvia. [R-11.24]
 16. Kertojan sanomat vuodet lappuun oikealle ylös: näkyvissä ≤ 4, loput vierivät; piilossa kortti auki. [P-261117-70] [P-261117-72] [P-261117-116]
-17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla. [P-261117-49] [P-261117-50] [P-261117-79]
+17. Nostovalikko: laatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla; valittu isona maan nimen perään suluissa. [P-261117-49] [P-261117-79] [P-261117-120]
 
 EI VIKA:
 - Saapuessa ei avaudu lehteä.
