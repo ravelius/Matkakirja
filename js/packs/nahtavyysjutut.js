@@ -3883,7 +3883,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Katedraalin torni paloi vuonna 1561. Lontoon suuri palo tuhosi koko rakennuksen vuonna 1666. Sen tilalle rakennettiin Christopher Wrenin suunnittelema nykyinen St Paulin katedraali, joka valmistui vuonna 1710.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteen sataan vuoteen.',
+        + 'Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteensataan vuoteen.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Museum of London',
     },
   },
@@ -7857,7 +7857,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vanha raatihuone paloi 7. heinäkuuta 1652. Uuden raatihuoneen rakentaminen Jacob van Campenin suunnitelmin oli alkanut jo vuonna 1648, ja se vihittiin käyttöön vuonna 1655. Se on nykyinen Kuninkaanpalatsi.'
         + '\n\n'
-        + 'Isoisäsi vuonna 1873 vanhasta raatihuoneesta oli kulunut yli 220 vuotta, ja uusi raatihuone toimi kuninkaanpalatsina.',
+        + 'Isoisäsi vuonna 1873 vanhan raatihuoneen palosta oli kulunut yli 220 vuotta, ja uusi raatihuone toimi kuninkaanpalatsina.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
     },
   },

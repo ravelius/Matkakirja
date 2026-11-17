@@ -5192,7 +5192,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Waag op de Dam', lat: 52.3731, lon: 4.8927 },
       { nimi: 'Paleis voor Volksvlijt', lat: 52.359768, lon: 4.899973 },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Dam, Kuninkaanpalatsin kohdalla 52,3731 / 4,8913).
-      { nimi: 'Vanha raatihuone', lat: 52.3731, lon: 4.8913 },
+      // Piste siirretty nimiön luettavuuden vuoksi Damin aukion puolelle palatsin itäpuolelle; rakennus seisoi nykyisen palatsin paikalla.
+      { nimi: 'Vanha raatihuone', lat: 52.3731, lon: 4.8922 },
     ],
   },
   dublin: {
@@ -6105,7 +6106,8 @@ export const KAUPUNKIKARTAT = {
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, wiki: 'Old Palace of Westminster', nosto: 'hahmotelma-westminster-vanha' },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; en-Wikipedia 51,51361 / −0,09833, sama kukkula kuin St Paulin katedraali).
-      { nimi: "Old St Paul's", lat: 51.5136, lon: -0.0983 },
+      // Piste siirretty nimiön luettavuuden vuoksi nykyisen katedraalin koillispuolelle kirkkomaalle; rakennus seisoi nykyisen paikalla.
+      { nimi: "Old St Paul's", lat: 51.5141, lon: -0.0975 },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, wiki: 'Palace of Whitehall', nosto: 'hahmotelma-whitehall' },
