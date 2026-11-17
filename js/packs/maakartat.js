@@ -5191,6 +5191,9 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Haringpakkerstoren', lat: 52.37917, lon: 4.89528 },
       { nimi: 'Waag op de Dam', lat: 52.3731, lon: 4.8927 },
       { nimi: 'Paleis voor Volksvlijt', lat: 52.359768, lon: 4.899973 },
+      // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Dam, Kuninkaanpalatsin kohdalla 52,3731 / 4,8913).
+      // Piste siirretty nimiön luettavuuden vuoksi Damin aukion puolelle palatsin itäpuolelle; rakennus seisoi nykyisen palatsin paikalla.
+      { nimi: 'Vanha raatihuone', lat: 52.3731, lon: 4.8922 },
     ],
   },
   dublin: {
@@ -5799,6 +5802,11 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-karntnertor
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Kärntnertor-teatteri', lat: 48.203, lon: 16.369, wiki: 'Theater am Kärntnertor', nosto: 'hahmotelma-karntnertor' },
+      // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Michaelerplatz en-Wikipedia 48,20797 / 16,36642 ja OSM 48,20799 / 16,36639; Heinrichshof WGW 48,2022 / 16,3686 ja OSM Opernringhof 48,20209 / 16,36800).
+      { nimi: 'Vanha Burgtheater', lat: 48.20797, lon: 16.36642 },
+      { nimi: 'Heinrichshof', lat: 48.2022, lon: 16.3686 },
+      // Altes Kärntnertor: WGW "Kärntner Straße 49", OSM 48,20371 / 16,37050 (KK 17.11.2026: Altes, ei Neues).
+      { nimi: 'Altes Kärntnertor', lat: 48.20371, lon: 16.3705 },
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
        * 10 %:n — molemmat tarkoituksella laidassa, koska muuten
@@ -6097,6 +6105,9 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-westminster-vanha
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, wiki: 'Old Palace of Westminster', nosto: 'hahmotelma-westminster-vanha' },
+      // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; en-Wikipedia 51,51361 / −0,09833, sama kukkula kuin St Paulin katedraali).
+      // Piste siirretty nimiön luettavuuden vuoksi nykyisen katedraalin koillispuolelle kirkkomaalle; rakennus seisoi nykyisen paikalla.
+      { nimi: "Old St Paul's", lat: 51.5141, lon: -0.0975 },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, wiki: 'Palace of Whitehall', nosto: 'hahmotelma-whitehall' },
@@ -6981,6 +6992,8 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME (KK 16.11.2026 erä 2): paikka KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
       // Tarinapaikka KK 17.11.2026: piste 41,89008 / 12,49067 (Wikidata Q1924755 + OSM-relaatio 1835448); tarkistettava kuvasta.
       { nimi: 'Meta Sudans', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.89008, lon: 12.49067 },
+      // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Porto di Ripetta en-Wikipedia 41,9051 / 12,4750 ja OSM Piazza del Porto di Ripetta 41,9048 / 12,4753).
+      { nimi: 'Porto di Ripetta', lat: 41.9051, lon: 12.475 },
     ],
   },
   krakova: {
