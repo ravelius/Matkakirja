@@ -25,6 +25,7 @@ EI VIKA:
 - Pulu puhuu, vaikka Kertoja-kytkin tai mykistys on päällä.
 
 TEKOTAPA:
-- Lupa, kustannus, portti, tasoitus, sokkokuuntelu: kortti aaniluvat-ja-aaniportti.
+- Lupa, kustannus, portti, tasoitus, ei tarkistuskuuntelua: kortti aaniluvat-ja-aaniportti.
 - Suomipakotus tools/elevenlabs-kieli.mjs ja tools/tarkista-puhekutsut.sh; pyynnöt tools/elevenlabs_kieli.py; pankki tools/aanipankki/; isoisä tools/generoi-avaus.mjs.
 - Puheellinen kohtaus hyväksytään äänellisestä tallenteesta.
+
