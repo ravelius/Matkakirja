@@ -291,8 +291,11 @@ def toiminta(args):
             rivi["omistaja_vaihe"] = args.vaihe
             if args.versio:
                 rivi["omistaja_versio"] = args.versio
-            elif args.vaihe != "valmis":
+            elif args.vaihe != "valmis" or args.versio == "":
                 rivi.pop("omistaja_versio", None)
+            elif rivi.get("omistaja_versio"):
+                # JU 17.11. (KK 09.15, PT): valmis ilman --versio pitää vanhan version; kerrotaan, ettei se jää huomaamatta
+                print("HUOM: rivin '%s' versio %s säilyy (uusi: --versio 224.N, tyhjennys: --versio '')" % (nimi, rivi["omistaja_versio"]))
             print("%s: %s%s" % (nimi, args.vaihe, " (%s)" % args.versio if args.versio else ""))
         elif args.komento == "jono":
             if args.tekija is not None:
