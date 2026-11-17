@@ -31,6 +31,7 @@ Kaulanauha: 1,6 milj. livreä (en.wiki 2 milj.); Metro: "jäljellä 88" (en.wiki
 **Lisähuomiot:** Euston Arch "suunnitteli 1837" (rakennus usein 1838); Greenwich: Kaarle II:n päätös 1660 vain Wikipediassa (Webb tilattiin 1661; rivi poistettu); Johnsonin Gough Square -talo vuokrattu n. 1748–49.
 
 ## Amsterdam (PR 7049; KK 17.45: tekstihuomiot 1–8 listaan, ei nyt)
+**Faktavirhetarkistus 17.11. tehty: ei selviä virheitä; vain Yövartion lakka epätarkka (ehdotus docs/raportit/amsterdam-faktavirheet-20261117.md); muut kunnossa.**
 1. **Keskusrautatieasema** "valmistui vuonna 1889": rakennus valmis 1884, avajaiset 15.10.1889 (en-Wikipedia) → "avattiin 1889".
 2. **Timanttihiomo**: Diamantmuseum ajoittaa Kaapin ajan 1870–1873 (teksti "kesti 1870-luvun puoliväliin"; "matkavuonna 1873 elettiin Kaapin aikaa" rajatapaus); Boasin hiomon ensimmäinen kivi 1878, valmistumisvuosi 1879 vain Gassanilla (rivi poistettu).
 3. **Kapein talo**: 1738 on ensimmäinen arkistomaininta (tonttivero), ei rakennusvuosi; Singel 7:n vuosi 1634.
