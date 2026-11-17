@@ -51,10 +51,11 @@
   "1.70": "8ec628ed344c74e6",
   "1.71": "2874b8c02c3b2135",
   "1.72": "5c7b3ecd25094007",
-  "1.73": "77f47dd47f24129c"
+  "1.73": "77f47dd47f24129c",
+  "1.74": "2780a8a9f1a459d7"
  },
  "uusin": {
-  "skeemaversio": "1.73",
+  "skeemaversio": "1.74",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -165,7 +166,8 @@
     "paikka",
     "paivays",
     "teksti",
-    "visa"
+    "visa",
+    "vuodet"
    ],
    "julisteet": [
     "data",
@@ -591,6 +593,7 @@
     "nimi",
     "nosto",
     "teksti",
+    "vuodet",
     "wiki"
    ],
    "paakaupungit": [
@@ -776,6 +779,7 @@
     "paikka",
     "teksti",
     "visa",
+    "vuodet",
     "vuosi"
    ],
    "takynostot": [
@@ -809,7 +813,8 @@
     "teksti",
     "tunnus",
     "valokuva",
-    "visa"
+    "visa",
+    "vuodet"
    ],
    "tapahtumat": [
     "data",
