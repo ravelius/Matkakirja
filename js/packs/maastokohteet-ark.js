@@ -799,7 +799,7 @@ export const MAASTOKOHTEET_ARK = [
       + 'Ellesmeren pohjoispäässä. Jokainen alertilainen on tilapäinen: kukin palvelee kolmesta '
       + 'kuuteen kuukautta kerrallaan, ja vuoden 2021 väestönlaskennassa pysyviä asukkaita oli '
       + 'nolla. Väki pyörittää Kanadan puolustusvoimien signaalitiedusteluasemaa ja sen '
-      + 'lentokenttää sekä samalla paikalla olevaa Dr. Neil Trivettin ilmakehän '
+      + 'lentokenttää sekä samalla paikalla olevaa tohtori Neil Trivettin ilmakehän '
       + 'tarkkailuasemaa, jossa mitataan ilmakehän koostumusta maailmanlaajuista seurantaa '
       + 'varten. Kaamos kestää lokakuun 14. päivästä helmikuun 28. päivään ja yötön yö '
       + 'huhtikuun 7. päivästä syyskuun 4. päivään. Väliin jää kaksi lyhyttä hämärän kautta, '
