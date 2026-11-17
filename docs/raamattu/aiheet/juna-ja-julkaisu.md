@@ -18,6 +18,7 @@ SÄÄNNÖT:
 13. Muutosloki kulkee junan mukana; TF:n Mitä testata tulee siitä. [R-10.8]
 14. TF sisäisillä: rivi PT:lle ja KK:lle; hyväksytty build samana versiona beta-arvioon ja testiryhmille. [R-10.2] [R-10.8]
 15. Osoittimet ovat yhteisiä kaikille versioille: vanhalle osaamaton data saa uuden osoittimen; vastaus muuttuu vain lisäävästi. [R-9.8]
+16. Julkaisun jälkeen KK tarkistaa asennussivun osiot Kesken ja Jonossa rivi riviltä todellista tilaa vasten; korjaukset PT:lle yhtenä viestinä. [P-261117-110]
 16. Sisällön osoitin vaihtuu itse päähaaraan yhdistettäessä; mallipakettien osoittimen vaihtaa JU PT:n kuittauksella. [R-10.14]
 17. Juna ajetaan käynnissä olevan ajon jälkeen kuva-ajojen ohi; yli 10 min vuoro osiin. Päättömät testit omalla kaistallaan rinnan. Erän hyväksytyt muutokset käännetään yhteen versioon (tekijät nimetty); punainen → yksitellen. [P-261114-4]
 
