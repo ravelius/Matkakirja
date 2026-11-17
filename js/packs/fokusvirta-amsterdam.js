@@ -853,6 +853,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
       nimio: 'Alkmaar',
       otsikko: 'Yhdestä sipulista maksettiin kanavatalon hinta, ja '
         + 'kaksi päivää myöhemmin siitä ei maksettu mitään',
+      visa: {
+        kysymys: 'Mikä aiheutti tulppaanien kalliin liekkikuvion?',
+        vaihtoehdot: [
+          'Kasvitauti, joka tunnistettiin virukseksi',
+          'Erityinen lannoite',
+          'Ristiinpölytys turkkilaisten lajikkeiden kanssa',
+        ],
+        oikea: 0,
+        fakta: 'Liekkikuvio, josta koko maailma maksoi, oli kasvitauti. Aiheuttaja tunnistettiin virukseksi vuonna 1928.',
+      },
       lunastus: [
         'Tulppaani tuli Alankomaihin 1500-luvulla Osmanien '
           + 'valtakunnasta, ja pian sitä haluttiin joka puutarhaan. '
@@ -953,6 +963,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
       nimio: 'Afsluitdijk',
       otsikko: 'Meri suljettiin kuin ovi, ja siitä tuli järvi',
       symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Mitä Afsluitdijkin pohjaksi upotettiin ennen kiveä?',
+        vaihtoehdot: [
+          'Köysistä punottuja mattoja',
+          'Pajunoksista punottuja mattoja',
+          'Teräsverkkoja',
+        ],
+        oikea: 1,
+        fakta: 'Pohjaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä.',
+      },
       lunastus: [
         'Zuiderzee oli matala merenlahti, joka nousi tulvina '
           + 'rantakyliin niin kauan kuin kukaan muisti. Insinööri '
@@ -1047,6 +1067,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
       otsikko: 'Salaisuus, jonka hän vei hautaan, luettiin neutroneilla '
         + 'kolmesataa vuotta myöhemmin',
       symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Minkä yhden asian Antoni van Leeuwenhoek jätti kertomatta?',
+        vaihtoehdot: [
+          'Missä hän piti kirjeensä',
+          'Kuka maksoi hänen tutkimuksensa',
+          'Miten hänen linssinsä tehtiin',
+        ],
+        oikea: 2,
+        fakta: 'Leeuwenhoek sanoi pitävänsä linssien tekotavan itsellään. Neutronikuvaus paljasti sen vasta toukokuussa 2021.',
+      },
       lunastus: [
         'Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti '
           + 'langan tiheyttä suurennuslasilla — siitä kaikki alkoi. Hän '
@@ -1140,6 +1170,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
       otsikko: 'Vanki harjoitteli makaamaan liikkumatta kaksi tuntia — '
         + 'juuri niin kauan kuin venematka kesti',
       symboli: 'historia',
+      visa: {
+        kysymys: 'Miten Hugo de Groot pakeni Loevesteinin linnasta vuonna 1621?',
+        vaihtoehdot: [
+          'Kirja-arkussa, jonka palvelustyttö saatteli ulos',
+          'Köyttä pitkin linnan muurilta',
+          'Vartijaksi pukeutuneena portista',
+        ],
+        oikea: 0,
+        fakta: 'De Groot makasi kirja-arkussa, jonka palvelustyttö Elsje van Houweningen saatteli ulos linnasta. Kukaan ei avannut arkkua.',
+      },
       lunastus: [
         'Oikeusoppinut Hugo de Groot tuomittiin elinkautiseen '
           + 'Loevesteinin linnaan tasavallan uskontokiistojen takia. '
@@ -1287,6 +1327,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
       nimio: 'Maitotyttö',
       otsikko: 'Vermeer peitti omat esineensä maalilla',
       symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Mitä Rijksmuseumin tutkimus paljasti Maitotytön maalin alta?',
+        vaihtoehdot: [
+          'Toisen henkilön hahmon',
+          'Kannuhyllyn ja tulikorin, jotka Vermeer peitti',
+          'Taiteilijan nimikirjoituksen',
+        ],
+        oikea: 1,
+        fakta: 'Rijksmuseum tutki taulua vuonna 2022 röntgen- ja infrapunatekniikoilla. Maalin alta paljastui kannuhylly ja tulikori, jotka Vermeer oli peittänyt pois.',
+      },
       lunastus: [
         'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea '
           + 'ja 41 leveä. Rijksmuseumin mukaan Johannes Vermeer maalasi sen noin vuonna 1660, ja hänen '
@@ -1396,6 +1446,16 @@ export const FOKUSVIRTA_AMSTERDAM = {
       nimio: 'Puupaalut',
       otsikko: 'Keskusta seisoo puutukkien päällä',
       symboli: 'historia',
+      visa: {
+        kysymys: 'Mistä maasta Amsterdamin kaupungintalon puupaalut tuotiin?',
+        vaihtoehdot: [
+          'Ruotsista',
+          'Saksasta',
+          'Norjasta',
+        ],
+        oikea: 2,
+        fakta: 'Dam-torin kaupungintalon, nykyisen kuninkaanpalatsin, alle lyötiin 13 659 Norjasta tuotua puupaalua.',
+      },
       lunastus: [
         'Amsterdamin keskusta on rakennettu pehmeälle, vetiselle maalle, joten '
           + 'vanhojen talojen alla on maahan lyötyjä puupaaluja. Dam-torin '
