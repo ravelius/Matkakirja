@@ -1,4 +1,4 @@
-# Lumière 1895 (Grand Café): nosto uudella jaksotavalla, LUONNOS (SK 18.11.2026)
+# Lumière 1895 (Grand Café): nosto uudella jaksotavalla, DATA (SK 18.11.2026; KK 00.40 hyväksyi luonnoksen)
 
 Tehtävä: PT (KK 00.19), omistaja 17.11. klo 20.06 ("Tee Pariisiin lisää nostoja tuolla uudella systeemillä"). **Vain docs**: jaksotekstit, lähdetaulukko, kuvat varastosta, visa. Ei dataa mainiin, ei uusia kuvia, ei jonorivejä, ei ääntä. Malli: `kaulanauha-nosto-teksti-20261117.md`, `louvre-nosto-teksti-20261117.md`.
 
@@ -13,8 +13,8 @@ Kohde (kun KK sanoo AJA): uusi fokuskohde `lumiere-1895` (js/packs/fokuskohteet-
 | 0a | nimi / kertoja | Grand Café. | 11 | – |
 | 0b | esittely / kertoja | Isoisäsi kulki tästä matkallaan. | 32 | – |
 | 1 | koukku / isoisä | Pariisi, 1873. Kävelin tänään Capucines-bulevardia pitkin. Ihmisiä oli niin paljon, että jouduin astumaan kadulle. | 114 | ei kuvaa (kuten Eiffelin koukku) |
-| 2 | tapahtuma | Louis Lumière patentoi keksintönsä helmikuussa 1895. Laite oli kamera ja projektori yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen. | 143 | veljekset |
-| 3 | tapahtuma | Saman vuoden joulukuun 28. päivänä Grand Cafén kellarisalissa Capucines-bulevardilla pidettiin maksullinen näytös. Lippu maksoi frangin, ja illalla katsojia oli 35. Valkokankaalla Lumièren tehtaan portti Lyonissa aukesi, ja työläiset kävelivät ulos. | 249 | juliste |
+| 2 | tapahtuma | Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. Laite oli kamera ja projektori yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen. | 143 | veljekset |
+| 3 | tapahtuma | Saman vuoden joulukuun 28. päivänä Grand Cafén kellarisalissa Capucines-bulevardilla pidettiin maksullinen näytös. Lippu maksoi frangin, ja illalla katsojia oli vain kolmisenkymmentä. Valkokankaalla Lumièren tehtaan portti Lyonissa aukesi, ja työläiset kävelivät ulos. | 249 | juliste |
 | 4 | käänne | Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, mutta Lumièret eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. Méliès alkoi tehdä omia elokuviaan. | 186 | meliès (havainnekuva) |
 | 5 | tänään | Grand Cafén paikalla on nykyään Hôtel Scribe. Sen ravintoloiden sisäänkäynnillä on laatta, joka kertoo näytöksestä. | 115 | laatta |
 
@@ -31,23 +31,23 @@ Lähteet: **H** Hérodote, "28 décembre 1895" (herodote.net/28_decembre_1895-ev
 
 | # | Väite tekstissä | Lähteet | Tila |
 |---|---|---|---|
-| 1 | Louis Lumière patentoi laitteen helmikuussa 1895 (13.2.) | SM, GA | OK |
+| 1 | Lumièren veljekset patentoivat laitteen helmikuussa 1895 (13.2.) | DPMA (FR 245.032, "the brothers Auguste and Louis Lumière applied for a patent"), 1895-lehden tutkimus (OpenEdition; patentti n:o 245 032 Auguste ja Louis Lumièren nimissä), SM (13.2.1895) | OK; KK 00.40: Google Arts sanoo vain Louis keksijäksi, mutta hakijat olivat molemmat |
 | 2 | laite kamera + projektori (+ kopiokone) yhdessä | SM, GA | OK |
 | 3 | filmi noin minuutin mittainen (enintään 20 m) | SM (noin minuutti), GA (≤ 20 m) | OK ("noin") |
 | 4 | näytös 28.12.1895 Grand Cafén kellarissa, Capucines-bulevardi (Salon Indien) | H, PZ, G, SM, GA, UJ | OK |
 | 5 | maksullinen näytös; lippu 1 frangi | H, PZ, G, SM (kaikki 1 frangi) | OK |
-| 6 | illalla 35 katsojaa | H, PZ, G | OK; OM "noin 40 (maksavia ja kutsuvieraita)", Institut Lumière -aineisto vanhassa hetkessä "33" → käytetään 35:tä, kolme itsenäistä lähdettä |
+| 6 | illalla "vain kolmisenkymmentä" katsojaa | H, PZ, G (35), OM (noin 40), vanha hetki / Institut Lumière (33) | OK; KK 00.40: lähteet 33–40, ristiriitaa ei ratkaista luvulla |
 | 7 | avausfilmi: tehtaan portti Lyonissa, työläiset ulos | H, PZ, UJ | OK |
 | 8 | Méliès kutsuvieraiden joukossa | H (iltapäivän kutsunäytös), SM (kutsuvieraiden ensinäytös), UJ | OK |
 | 9 | Méliès halusi ostaa laitteen; Lumièret eivät myyneet | H (Mélièsin oma jälkikertomus), UJ, kaksi elämäkertalähdettä (The Collector, frenchfilms.org; haettu hakukautta, ei avattu kokonaan) | OK varovasti: summa (10 000 / 50 000 frangia) ja kieltäytyjä (Auguste vai Antoine) vaihtelevat → ei puheessa |
 | 10 | puhe levisi, jono kadulla | H (satoja jonossa), SM (jono, 2 500 frangin päiväkassa) | OK |
-| 11 | Méliès alkoi tehdä omia elokuviaan | The Collector, frenchfilms.org, Google Arts "Georges Méliès" (haettu hakukautta) | **Heikoin rivi**: avaa vielä yksi elämäkertalähde ennen dataa; muuten voi pudottaa lauseen |
+| 11 | Méliès alkoi tehdä omia elokuviaan | Google Arts & Culture "Georges Méliès, Magic and Cinema" (avattu 18.11.: ostoyritys torjuttiin, hän osti Robert W. Paulin projektorin, muutti sen kameraksi ja teki ensimmäisen elokuvansa 1896), The Collector, frenchfilms.org (hakukautta) | OK (KK 00.40: jää) |
 | 12 | Grand Cafén paikalla Hôtel Scribe | UJ, OM, PZ (Scribe "palace où est né le cinéma") | OK |
 | 13 | ravintoloiden sisäänkäynnillä laatta, joka kertoo näytöksestä | UJ (laatta hotellin ravintoloiden sisäänkäynnillä), OM (laatta viereisen vanhan rakennuksen seinällä) | OK "laatta"; sijaintia ei tarkenneta, lähteet erot |
 
 **Jätetty pois (yksi lähde, ristiriita tai ei palvele juonta):** "46 sekuntia" (OM) · kymmenen filmiä ja 20 minuuttia (H/UJ 20 min, SM 15 min) · filmien nimet (UJ luettelee kymmenen; vain H, UJ) · "ensimmäinen maksullinen näytös" (Skladanowskyn Berliinin esitys 1.11.1895) · "Lumièret sanoivat, ettei keksinnöllä ole tulevaisuutta" (lähteet kiistelevät, kuka sanoi) · veljesten läsnäolo (SM: Louis, Auguste ja Carpentier eivät olleet paikalla; Antoine Lumière ja Clément Maurice järjestivät) · hotellin entinen "Grand Café" + kellarin nimi "The 1895" · vanhan hetken Le Radical -juttu ja Mélièsin "lähes sama päivänä" -osuus.
 
-**Avoimet lähdekohdat:** rivi 11 (Méliès omiin elokuviin) ja rivin 9 summa. Muuten ei yhtään väitettä, jolla olisi vain yksi lähde.
+**Avoimet lähdekohdat:** ei yhtään väitettä, jolla olisi vain yksi lähde (rivin 9 summa ei puheessa).
 
 ## 3. Kuvat (kaikki jo olemassa, ei uusia generoituja)
 
@@ -58,13 +58,22 @@ Lähteet: **H** Hérodote, "28 décembre 1895" (herodote.net/28_decembre_1895-ev
 | meliès | 4 | ämpäri `hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg` (jo pelissä) | havainnekuva | Matkakirjan havainnekuva | Georges Méliès katsoo, kun valkokankaalla tehtaan portti aukeaa |
 | laatta | 5 | `Plaque Lumière.jpg` (jo nähtävyysjutussa) | valokuva | Tan 2009, Wikimedia Commons, PD | Laatta Boulevard des Capucinesilla kertoo näytöksestä |
 
-**Puuttuvat kuvat KK:lle:** koukku (jakso 1) ilman kuvaa (1873-kuvaa ei ole; sama linja kuin Eiffelillä). Vanhan hetken kuvat `kauko` (kertoo "33 katsojaa", virhe) ja `lehti` (Le Radical, ei lähdettä) **jätetty pois**; jos kauko halutaan, kuvateksti on kirjoitettava uudelleen (35). Mélièsin havainnekuvan vanha teksti olettaa hänet iltayleisöön: uusi kuvateksti ("katsoo, kun … aukeaa") on neutraali. Tekijätarkistus `node tools/tarkista-tekijat.mjs` ajamatta (verkko), aja ennen julkaisua; `Plaque Lumière.jpg` ei ole commons-tekijat.js:ssä, lisenssi PD "Tan 2009" perustuu nähtävyysjutun lähderiviin.
+**Puuttuvat kuvat KK:lle:** koukku (jakso 1) ilman kuvaa (1873-kuvaa ei ole; sama linja kuin Eiffelillä). Vanhan hetken kuvat `kauko` (kertoo "33 katsojaa", virhe) ja `lehti` (Le Radical, ei lähdettä) **jätetty pois**; jos kauko halutaan, kuvateksti on kirjoitettava uudelleen (35). Mélièsin havainnekuvan vanha teksti olettaa hänet iltayleisöön: uusi kuvateksti ("katsoo, kun … aukeaa") on neutraali. Tekijätarkistus `node tools/tarkista-tekijat.mjs` ajamatta (verkko), aja ennen julkaisua; `Plaque Lumière.jpg` ei ole commons-tekijat.js:ssä, lisenssi tarkistettu Commonsista 18.11.2026: **public domain, tekijä Tangopaso** (vanhan nähtävyysjutun "Tan 2009" oli väärä nimi; jaksokuvan lähderivi käyttää Tangopasoa).
 
 ## 4. Ääntämislista ja äänitystarve
 
 Äänittäjälle: **Lumière / Lumièren / Lumièret**, **Capucines-bulevardi**, **Grand Café / Grand Cafén**, **Georges Méliès**, **Lyon / Lyonissa**, **Hôtel Scribe**, **Cinématographe** (vain kuvatekstissä, ei puheessa). Ei äänitysjonorivejä lisätty (luonnos; vanhat rivit `lumiere-elokuva-1895` pala 1 ja Lumière 1895 -nähtävyysjutun jonorivit poistetaan käsin ennen `tarkista.mjs --lisaa`, kun data tehdään). Uusia jonorivejä tulee noin 6 (yksi per jakso, nimi ja esittely yhdessä).
 
-## 5. Avoimet KK:lle
+## 5. Data-PR: mitä tehtiin (18.11.2026)
+
+- `js/packs/fokuskohteet-fra.js`: uusi kohde `lumiere-1895` (nimi "Grand Café", 6 jaksoa, 4 jaksokuvaa, visa, 3 Pulun kysymystä, laudat 5911/1439 ja 255.9/608.3 `johda-maastokohteet.mjs laudat`-funktiolla).
+- `js/packs/maakartat.js`: **kartan merkki vaihtui**: tarinapaikka "Lumière 1895" (lamppu) → nähtävyyspiste "Grand Café" (`wiki: 'Salon Indien du Grand Café'`, `nosto: 'lumiere-1895'`), koska tarinapaikka-testit vaativat nostoksi lehden hetken. Hetki `lumiere-elokuva-1895` ja lehtisivu jäävät ennallaan; **piilopiste** "Lumière 1895" (`tarinapaikka: false`, kuten Eiffel 1888) pitää hetken kartalla.
+- `tests/tarinapaikkojen-merkki.test.mjs`: "Lumière 1895" pois odotetuista lampuista (kuten Eiffel 1888 vaiheessa A).
+- `data/aanitysjono.tsv`: 6 riviä (`lumiere-1895` 1–6). Hetken ja nähtävyysjutun vanhat rivit ennallaan, koska ne jäävät.
+- **NUI:lta ei tarvita uutta**: sama jaksopolku kuin Louvre ja Eiffel. Huom: lamppu-merkki katoaa kartalta (nyt kulttuurinähtävyys); jos KK haluaa lampun, se vaatii uuden `fokuskohde`-merkkisäännön NUI:lta.
+- **Huom KK:lle:** hetken (lehtisivun) kuvateksti "33 katsojaa" (kauko) ja "Mélièsin hämmästys" ovat edelleen lehdessä; hetken tekstiä ei muutettu.
+
+## 6. Avoimet KK:lle
 
 1. Hyväksytäänkö teksti (erityisesti rivi 11, Mélièsin elokuvat)?
 2. Pulun kolmas kysymys (kellari) kelpaa?
