@@ -82,25 +82,6 @@ nahtavyys:rooma:Pietarinkirkko
 nahtavyys:rooma:Torre Argentina
 nahtavyys:rooma:Trevin suihkulähde
 nahtavyys:rooma:Vatikaanin palatsi
-nahtavyys:wien:Altes Kärntnertor
-nahtavyys:wien:Beethoven 1824
-nahtavyys:wien:Belvedere
-nahtavyys:wien:Heinrichshof
-nahtavyys:wien:Hofburg
-nahtavyys:wien:Jättiratas
-nahtavyys:wien:Klimtin maalaukset
-nahtavyys:wien:Lipizzanit
-nahtavyys:wien:Mozart 1786
-nahtavyys:wien:Praterin jättiratas
-nahtavyys:wien:Raatihuone
-nahtavyys:wien:Saliera
-nahtavyys:wien:Schönbrunn
-nahtavyys:wien:Stephansdom
-nahtavyys:wien:Taikahuilu
-nahtavyys:wien:Tonava kaunoinen
-nahtavyys:wien:Valtionooppera
-nahtavyys:wien:Vanha Burgtheater
-nahtavyys:wien:Vuoristovesijohto
 skandaali:agadirin-kriisi
 skandaali:alberti-skandaali
 skandaali:aline-sitoe-diatta

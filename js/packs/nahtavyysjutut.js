@@ -4389,6 +4389,9 @@ export const NAHTAVYYSJUTUT = {
           + 'Wienin pormestarin työpaikka ja koko kaupungin sydän, '
           + 'jonka edustalla Rathausplatzilla järjestetään yhä suuria '
           + 'juhlia.',
+      vuodet: [
+        { kohta: 'vuosina 1872–1883', vuosi: '1872–1883', selite: 'rakennettiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Wien Rathaus hochauflösend.jpg',
@@ -4420,6 +4423,9 @@ export const NAHTAVYYSJUTUT = {
           + 'rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat '
           + 'niin loistokkaiksi, että aikalaiset alkoivat pilkata koko '
           + 'tapahtumaa.',
+      vuodet: [
+        { kohta: 'Vuosina 1814–1815', vuosi: '1814–1815', selite: 'Wienin kongressi' },
+      ],
       lainaus: {
         teksti: 'Kongressi tanssii, mutta ei etene mihinkään.',
         lahde: 'Ruhtinas Charles-Joseph de Ligne Wienin kongressista, '
@@ -4458,6 +4464,12 @@ export const NAHTAVYYSJUTUT = {
           + 'talossa nähdään vuosittain yli 350 esitystä, ja '
           + 'seisomapaikkalippuja myydään edullisesti vain 80 minuuttia '
           + 'ennen esityksen alkua.',
+      vuodet: [
+        { kohta: 'vuosina 1861–1869', vuosi: '1861–1869', selite: 'rakennettiin' },
+        { kohta: 'toukokuussa 1869', vuosi: '1869', selite: 'ooppera avattiin' },
+        { kohta: 'vuonna 1945', vuosi: '1945', selite: 'pommitus tuhosi' },
+        { kohta: 'taas 1955', vuosi: '1955', selite: 'avattiin taas' },
+      ],
       kuvat: [
         {
           tiedosto: 'Staatsoper Wien DSC 5273w.jpg',
@@ -4488,6 +4500,13 @@ export const NAHTAVYYSJUTUT = {
           + 'lempinimeltään Pummerin, joka painaa yli 20 000 kiloa. '
           + 'Kirkon alla kiemurtelevissa katakombeissa lepää yli 11 000 '
           + 'ihmisen jäännökset.',
+      vuodet: [
+        { kohta: 'vuonna 1137', vuosi: '1137', selite: 'historia alkoi' },
+        { kohta: 'vuonna 1258', vuosi: '1258', selite: 'suuri tulipalo' },
+        { kohta: 'vuonna 1359', vuosi: '1359', selite: 'uusi rakennus alkoi' },
+        { kohta: 'vuonna 1433', vuosi: '1433', selite: 'etelätorni valmis' },
+        { kohta: 'vuoteen 1955', vuosi: '1955', selite: 'vartiointi vuoteen' },
+      ],
       kuvat: [
         {
           tiedosto: '0181-0183a - Wien - Stephansdom.jpg',
@@ -4526,6 +4545,10 @@ export const NAHTAVYYSJUTUT = {
           + 'valtiosopimus, joka teki maasta jälleen itsenäisen. '
           + 'Palatsin kuva on niin tunnettu, että se löytyy jokaisesta '
           + 'Itävallan 20 sentin kolikosta.',
+      vuodet: [
+        { kohta: 'vuosina 1712–1723', vuosi: '1712–1723', selite: 'rakennettiin' },
+        { kohta: 'Vuonna 1955', vuosi: '1955', selite: 'valtiosopimus' },
+      ],
       kuvat: [
         {
           tiedosto: 'Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg',
@@ -4557,6 +4580,12 @@ export const NAHTAVYYSJUTUT = {
           + 'vuoden 1949 elokuvassa Kolmas mies, jonka ikimuistoisin '
           + 'kohtaus kuvattiin suoraan kopin sisällä pyörän kiertäessä '
           + 'korkealla Wienin yllä.',
+      vuodet: [
+        { kohta: 'vuonna 1897', vuosi: '1897', selite: 'ratas valmistui' },
+        { kohta: 'vuosina 1920–1985', vuosi: '1920–1985', selite: 'korkein ratas' },
+        { kohta: 'vuonna 1916', vuosi: '1916', selite: 'purkulupa' },
+        { kohta: 'vuoden 1949', vuosi: '1949', selite: 'Kolmas mies' },
+      ],
       lainaus: {
         teksti: 'Sveitsissä oli viisisataa vuotta rauhaa ja demokratiaa — '
           + 'ja mitä se tuotti? Käkikellon.',
@@ -4598,6 +4627,13 @@ export const NAHTAVYYSJUTUT = {
           + 'vaurioittivat palatsia pahoin 1945, mutta se korjattiin, ja '
           + 'vuonna 1996 Schönbrunn puutarhoineen otettiin Unescon '
           + 'maailmanperintöluetteloon.',
+      vuodet: [
+        { kohta: 'vuonna 1696', vuosi: '1696', selite: 'Fischer aloitti' },
+        { kohta: 'Kesällä 1752', vuosi: '1752', selite: 'eläintarha' },
+        { kohta: 'rakennettiin 1775', vuosi: '1775', selite: 'Gloriette rakennettu' },
+        { kohta: 'pahoin 1945', vuosi: '1945', selite: 'pommitusvauriot' },
+        { kohta: 'vuonna 1996', vuosi: '1996', selite: 'Unesco-kohde' },
+      ],
       kuvat: [
         {
           tiedosto: 'Schloss Schönbrunn Wien 2014 (Zuschnitt 2).jpg',
@@ -4642,6 +4678,9 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 vesijohto oli vasta valmistumassa. Se avattiin '
         + '24. lokakuuta, kun maailmannäyttely Praterissa oli lopuillaan, joten jos '
         + 'isoisäsi kävi Wienissä aiemmin vuonna, vesijohtoa ei ollut vielä avattu.',
+      vuodet: [
+        { kohta: 'lokakuuta 1873', vuosi: '1873', selite: 'vesijohto avattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
@@ -4681,6 +4720,13 @@ export const NAHTAVYYSJUTUT = {
         + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
         + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
         + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
+      vuodet: [
+        { kohta: 'maalauksia 1894', vuosi: '1894', selite: 'maalaukset tilattiin' },
+        { kohta: 'vuonna 1900', vuosi: '1900', selite: 'Filosofia nähtiin' },
+        { kohta: 'toukokuussa 1945', vuosi: '1945', selite: 'kuvat tuhoutuivat' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'heinäkuuta 1862', vuosi: '1862', selite: 'Klimt syntyi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Leopold Museum, Wienin lääketieteellinen yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
     },
     Saliera: {
@@ -4696,6 +4742,13 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Kunsthistorisches Museum ei ollut vielä avattu, '
         + 'sillä se avattiin vasta 1891.',
+      vuodet: [
+        { kohta: 'emalista 1540 ja 1543', vuosi: '1540–1543', selite: 'Cellinin työ' },
+        { kohta: 'toukokuuta 2003', vuosi: '2003', selite: 'varkaus' },
+        { kohta: 'Tammikuussa 2006', vuosi: '2006', selite: 'löytyi' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vasta 1891', vuosi: '1891', selite: 'museo avattiin' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Kunsthistorisches Museum, Wien Geschichte Wiki, Tiroler Landesarchiv, vienna.at ja ORF Wien',
     },
     // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
@@ -4725,6 +4778,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 Kärntnertor-teatteria ei enää käytetty. Teatteri oli suljettu jo vuonna 1870, ja talo purettiin sen '
         + 'jälkeen. Oopperaa esitettiin silloin jo uudessa hovioopperassa, nykyisessä '
         + 'Valtionoopperassa.',
+      vuodet: [
+        { kohta: 'toukokuuta 1824', vuosi: '1824', selite: 'kantaesitys' },
+        { kohta: 'käyttöön 1972', vuosi: '1972', selite: 'Euroopan neuvosto' },
+        { kohta: 'johtajat 1985', vuosi: '1985', selite: 'EU:n hymni' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Joseph Karl Stieler\'s Beethoven mit dem Manuskript der Missa solemnis.jpg',
@@ -4760,6 +4819,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 sama Burgtheater Michaelerplatzilla oli yhä '
         + 'käytössä. Se suljettiin vasta 1888, kun uusi Burgtheater avattiin '
         + 'Ringillä.',
+      vuodet: [
+        { kohta: 'toukokuuta 1786.', vuosi: '1786', selite: 'Figaron ensi-ilta' },
+        { kohta: 'kiellettiin 1785', vuosi: '1785', selite: 'esitys kiellettiin' },
+        { kohta: 'Tammikuussa 1787', vuosi: '1787', selite: 'Prahan matka' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vasta 1888', vuosi: '1888', selite: 'teatteri suljettiin' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Neue Mozart-Ausgabe (Mozarteum), Mozart Documents, Österreichische Mediathek, Wien Geschichte Wiki ja habsburger.net',
     },
     /*
@@ -4782,6 +4848,13 @@ export const NAHTAVYYSJUTUT = {
         + 'vasta 1897. Praterissa seisoi silloin maailmannäyttelyn Rotunde, 108 '
         + 'metriä leveä kupolirakennus, jota pidettiin aikansa suurimpana. Rotunde '
         + 'paloi 1937.',
+      vuodet: [
+        { kohta: 'valmistui 1897', vuosi: '1897', selite: 'ratas valmistui' },
+        { kohta: 'Vuonna 1944', vuosi: '1944', selite: 'ratas paloi' },
+        { kohta: 'uudelleen 1947', vuosi: '1947', selite: 'avattiin uudelleen' },
+        { kohta: 'Vuonna 2016', vuosi: '2016', selite: 'vaunut uusittiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
@@ -4810,6 +4883,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
         + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
         + 'hovitallista nykyisessä Sloveniassa.',
+      vuodet: [
+        { kohta: 'rakennettiin 1729 ja 1735', vuosi: '1729–1735', selite: 'sali rakennettiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vasta 1920', vuosi: '1920', selite: 'siirto Piberiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Kawecan.jpg',
@@ -4843,6 +4921,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Wienissä sai ensi-iltansa juuri 1873 Johann Strauss nuoremman operetti '
         + 'Carneval in Rom, ja Papageno-veistos oli jo portin päällä. '
         + 'Wienin kaupungin historiasivuston mukaan Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 pörssiromahduksessa.',
+      vuodet: [
+        { kohta: 'syyskuuta 1791', vuosi: '1791', selite: 'ensi-ilta' },
+        { kohta: 'teatteria 1789', vuosi: '1789', selite: 'Schikaneder johtaja' },
+        { kohta: 'kesäkuuta 1801', vuosi: '1801', selite: 'teatteri avattiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
@@ -4871,6 +4955,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Alkuperäinen Dianabad on kadonnut: rakennus purettiin 1913, ja uusi '
         + 'Dianabad valmistui 1917. Isoisäsi matkavuonna 1873 valssi oli ollut '
         + 'maailmalla jo kuusi vuotta, ja vanha Dianabad seisoi vielä paikallaan.',
+      vuodet: [
+        { kohta: 'helmikuuta 1867', vuosi: '1867', selite: 'kantaesitys' },
+        { kohta: 'purettiin 1913', vuosi: '1913', selite: 'Dianabad purettiin' },
+        { kohta: 'valmistui 1917', vuosi: '1917', selite: 'uusi valmistui' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
@@ -4890,6 +4980,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Viimeinen esitys oli 12. lokakuuta 1888, kun uusi Burgtheater oli valmistunut Ringstraßelle. Vanha rakennus purettiin Hofburgin laajennuksen, Michaelertraktin, tieltä.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 vanha teatteri oli vielä käytössä. Uusi talo Ringillä avattiin vasta viidentoista vuoden päästä.',
+      vuodet: [
+        { kohta: 'lokakuuta 1888', vuosi: '1888', selite: 'viimeinen esitys' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Wikipedia',
     },
     // KADONNUT IHME (KK 08.06 17.11.2026: Altes Kärntnertor; vain kahden itsenäisen lähteen väitteet).
@@ -4902,6 +4996,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Portti purettiin vuosina 1858–1859.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 porttia ei ollut ollut enää yli kymmeneen vuoteen.',
+      vuodet: [
+        { kohta: 'vuoden 1857', vuosi: '1857', selite: 'purusta ilmoitettiin' },
+        { kohta: 'vuonna 1858', vuosi: '1858', selite: 'muurien purku alkoi' },
+        { kohta: 'vuosina 1858–1859', vuosi: '1858–1859', selite: 'portti purettiin' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Wikipedia ja Wien Museum',
     },
     // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
@@ -4912,6 +5012,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Liittoutuneiden ilmahyökkäyksessä 12. maaliskuuta 1945 talo paloi pahoin. Raunio purettiin 1950-luvulla, ja paikalla on nykyään Opernringhof.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 Heinrichshof oli ollut valmis jo kymmenen vuotta.',
+      vuodet: [
+        { kohta: 'vuonna 1863', vuosi: '1863', selite: 'talo avattiin' },
+        { kohta: 'maaliskuuta 1945', vuosi: '1945', selite: 'talo paloi' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Austria-Forum (AEIOU) ja Wikipedia',
     },
   },
