@@ -463,6 +463,11 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'ympäri vuoden.',
         lahde: 'Apus apus, Wikimedia Commons (CC BY-SA 3.0)',
       },
+      // Kysymykset kirjoitettu nykyisen tekstin faktoista (SK 17.11.2026, yhdistämisen vaihe A); Pulun vastaukset vaativat generointiluvan.
+      kysymykset: [
+        'Millainen harmaahaikara oli vielä noin vuonna 1900?',
+        'Miksi kaupungin haikarat pesivät joskus jo tammikuun lopussa?',
+      ],
       visa: {
         kysymys: 'Mikä muutti harmaahaikaran ja ihmisen välimatkan '
           + 'Alankomaissa vuonna 1963?',

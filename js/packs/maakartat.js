@@ -5408,7 +5408,8 @@ export const KAUPUNKIKARTAT = {
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
       { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
-      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
+      // Kaulanauha 1785 -tarina avautuu tästä (parlamentti istui Palais de la Cité'ssä; yhdistämisen vaihe A, PR 6964 valinta A).
+      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: ['nosto-kaulanauha-1785'] },
       { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
       { nimi: 'Petit Palais', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
@@ -5444,7 +5445,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Vrain-Lucas', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
-        nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
+        nosto: ['skandaali-vrain-lucas-kirjevaarennokset', 'nosto-pariisin-vuosisadat'],
       },
       {
         nimi: 'Monet 1874', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
@@ -5550,14 +5551,6 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Patonki 1994', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
         nosto: 'nosto-pariisin-patonki',
-      },
-      // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
-      // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
-      // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
-      {
-        nimi: 'Kaulanauha 1785', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
-        nosto: 'nosto-pariisin-vuosisadat',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
     ],
   },
