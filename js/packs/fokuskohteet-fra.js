@@ -798,6 +798,139 @@ export const FOKUSKOHTEET_FRA = [
       fakta: 'Lustig palasi Pariisiin ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
     },
   },
+  {
+    /*
+     * SAINTE-CHAPELLE JA KAULANAUHA 1785 (Pariisin nostot uudella tavalla, erä 4 / 5; omistaja 17.11.2026).
+     * 48,8554 N / 2,3450 E — Palais de la Cité'n palatsikappeli, jonka palatsissa Pariisin parlamentti
+     * istui (PR 6964, valinta A). Yksi paikka = yksi nosto: vanha täkynosto `kaulanauha-1785`, nähtävyysjuttu
+     * Kaulanauha 1785 ja nähtävyysjuttu Sainte-Chapelle on yhdistetty tähän.
+     * Lähdeaineisto: docs/raportit/kaulanauha-nosto-teksti-20261117.md (ei pelaajalle näkyvään tekstiin).
+     */
+    id: 'sainte-chapelle',
+    nimi: 'Sainte-Chapelle',
+    tyyppi: 'historia',
+    symboli: 'historia',
+    // Pulun kysymykset kolme: vanhan kortin kaksi (toinen uudelleen sanottuna) + yksi uusi (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Miksi kardinaali uskoi tapaavansa kuningattaren?',
+      'Mihin kaulanauhan timantit lopulta päätyivät?',
+      'Miksi kuningattaren maine kärsi, vaikka hän ei ollut osallinen?',
+    ],
+    korostukset: ['Jeanne de La Motte', 'Rohan'],
+    nappi: 'Kappeli, jonka vieressä tuomittiin kaulanauhan huijari',
+    laudat: {
+      maailmankartta: { x: 5911.5, y: 1439.7 },
+      europe: { x: 256.3, y: 608.7 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Château de Versailles, Hérodote, History Is Now, HistorySkills ja '
+      + 'Sortiraparis (tarkistettu 17.11.2026).',
+    otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
+     * kuuluvat suoratoistona.
+     */
+    jaksot: [
+      { osa: 'nimi', teksti: 'Sainte-Chapelle.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Löysin Sainte-Chapellen oikeuspalatsin pihalta. '
+          + 'Ikkunat ovat niin täynnä pieniä kuvia, että luovutin niiden laskemisen.',
+        kuva: 'piha',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. '
+          + 'Hinta oli 1,6 miljoonaa livreä, ja Marie Antoinette kieltäytyi ostamasta sitä. '
+          + 'Huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että kuningatar halusi nauhan salaa.',
+        kuva: 'nauha',
+        lisakuva: { kuva: 'juoni', kohta: 'Huijari Jeanne de La Motte' },
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Elokuussa 1784 kardinaali tapasi Versailles\'n puistossa naisen, jonka hän luuli kuningattareksi. '
+          + 'Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat '
+          + 'pyysivät maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.',
+        kuva: 'rohan',
+        vuodet: [
+          { vuosi: '1784', selite: 'yöllinen tapaaminen', kohta: 'Elokuussa 1784' },
+          { vuosi: '1785', selite: 'nauha luovutetaan', kohta: 'Alkuvuodesta 1785' },
+        ],
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui Cité-saaren palatsissa. '
+          + 'Toukokuussa 1786 kardinaali vapautettiin. Jeanne leimattiin varkaaksi ja vietiin vankilaan. '
+          + 'Timantit oli jo myyty, moni niistä Lontoossa, ja kuningattaren maine kärsi pahasti.',
+        kuva: 'viuhka',
+        vuodet: [{ vuosi: '1786', selite: 'Rohan vapautetaan', kohta: 'Toukokuussa 1786' }],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Sainte-Chapelle on yhä saman palatsin pihalla. Kuningas Ludvig IX rakennutti sen 1240-luvulla '
+          + 'säilyttämään Kristuksen orjantappurakruunua. Ikkunoissa on yli tuhat kohtausta, ja kappeliin '
+          + 'mennään turvatarkastuksen kautta.',
+        kuva: 'ikkunat',
+      },
+    ],
+    /*
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): havainnekuva skandaalin
+     * ämpärikuvasta, muut Commonsin vapaita kuvia (lisenssit luettu 17.11.2026).
+     */
+    jaksokuvat: {
+      piha: {
+        tiedosto: 'Paris Sainte Chapelle East View 02.JPG',
+        laji: 'valokuva',
+        lyhyt: 'Sainte-Chapellen torni oikeuspalatsin rakennusten yllä',
+        lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      nauha: {
+        tiedosto: 'Collier de la Reine.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Kuningattaren kaulanauhan jäljitelmä Breteuilin linnassa',
+        lahde: 'Château de Breteuil, Wikimedia Commons (CC BY-SA 3.0); kuvassa on jäljitelmä, alkuperäinen on kadonnut',
+      },
+      juoni: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785-photo-v1.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Huijarin juoni kuningattaren nimissä',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Château de Versailles — L\'affaire du collier de la Reine; '
+          + 'oppipojan kohtaus on dramatisoitu.',
+      },
+      rohan: {
+        tiedosto: 'Cardinal Rohan2.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Kardinaali de Rohan',
+        lahde: 'Tuntematon taidemaalari, 1700-luku, Wikimedia Commons (public domain)',
+      },
+      viuhka: {
+        tiedosto: 'L\'Affaire du Collier de la Reine, EV0120.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Viuhka, jossa on kaulanauhajutun henkilöiden muotokuvat',
+        lahde: 'Tuntematon tekijä, 1700-luku, Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0)',
+      },
+      ikkunat: {
+        tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Yläkappelin lasimaalaukset',
+        lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
+      },
+    },
+    visa: {
+      kysymys: 'Kuka kaulanauhajutussa tuomittiin vankilaan?',
+      vaihtoehdot: [
+        'Kardinaali de Rohan',
+        'Jeanne de La Motte',
+        'Marie Antoinette',
+      ],
+      oikea: 1,
+      fakta: 'Pariisin parlamentti vapautti kardinaali Rohanin toukokuussa 1786; Jeanne de La Motte '
+        + 'piestiin, leimattiin varkaaksi ja vietiin vankilaan.',
+    },
+  },
 ];
 
 /*

@@ -5889,50 +5889,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Sainte-Chapelle': {
-      aika: '1242–1248',
-      teksti: 'Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta '
-          + 'Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen '
-          + 'orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen '
-          + 'siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin '
-          + 'maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle '
-          + 'muutamassa vuodessa ja vihittiin huhtikuussa 1248.'
-        + '\n\n'
-        + 'Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja '
-          + 'hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää '
-          + 'lasia: viidessätoista ikkunassa on yli tuhat raamatullista '
-          + 'kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä '
-          + '1200-luvulta.'
-        + '\n\n'
-        + 'Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli '
-          + 'tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja '
-          + 'asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla '
-          + 'kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista '
-          + 'ei ole jäljellä juuri muuta kuin tämä kappeli ja Conciergerien '
-          + 'salit; ympärillä on nyt oikeuspalatsi, ja orjantappurakruunu '
-          + 'säilytetään Notre-Damessa.',
-      vuodet: [
-        { kohta: 'vuonna 1239', vuosi: '1239', selite: 'jäännös ostettiin' },
-        { kohta: 'huhtikuussa 1248', vuosi: '1248', selite: 'kappeli vihittiin' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
-          lyhyt: 'Yläkappelin viidessätoista ikkunassa on yli tuhat raamatullista kohtausta.',
-          selite: 'Yläkappelin seinät ovat lähes pelkkää lasimaalausta; noin '
-            + 'kaksi kolmasosaa laseista on 1200-luvulta.',
-          lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
-        },
-        {
-          tiedosto: 'Paris Sainte Chapelle East View 02.JPG',
-          lyhyt: 'Kappelin ohut torni nousee oikeuspalatsin rakennusten yli.',
-          selite: 'Sainte-Chapelle on keskiajan goottilainen palatsikappeli '
-            + 'Île de la Citén oikeuspalatsin sisäpihalla.',
-          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Grand Palais': {
       aika: '1897–1900',
       teksti: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen '
@@ -6374,28 +6330,6 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      lahde: 'Wikipedia',
-    },
-    'Kaulanauha 1785': {
-      nosto: 'nosto-kaulanauha-1785',
-      teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
-        + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
-        + 'kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte '
-        + '-niminen huijari sai kardinaali de Rohanin uskomaan, että '
-        + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. '
-        + 'Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen '
-        + 'Versailles\'n puistossa, jossa kuningatarta esitti palkattu nuori '
-        + 'nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
-        + 'myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä '
-        + 'erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen '
-        + 'ja kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
-        + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.',
-      vuodet: [
-        { kohta: 'vaihteessa 1785', vuosi: '1785', selite: 'nauha ostettiin' },
-        { kohta: 'Rohanin 1786', vuosi: '1786', selite: 'Rohan vapautettiin' },
-      ],
-      // Kaulanauhajutun havainnekuva pois (KK 10.11.2026 12.24: kuva kuuluu vain kaulanauhajuttuun).
-      kuvat: [],
       lahde: 'Wikipedia',
     },
     /*
