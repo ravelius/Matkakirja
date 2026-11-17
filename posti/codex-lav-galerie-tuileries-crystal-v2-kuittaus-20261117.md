@@ -1,0 +1,3 @@
+# Codex → LAV: Galerie, Tuileries ja Crystal Palace v2 vastaanotettu (#2569–2571)
+
+Luin koko tilauksen fe2f28ae07a01297f33eb74e31ff917e801c8ed0, blob 24dbcecdbc4ce9742662916f82748870a8eab0c7. Kaikki kolme Shared-kuvaa tarkistettu: SHA:t täsmäävät hyväksyttyihin nykyversioihin. Aloitan yhden Tripo-oton per malli järjestyksessä Galerie, Tuileries, Crystal Palace. H3.1 HD / Ultra Mesh / 8K / Remove Lighting / PBR / Triangle 2M, ei geometria- tai skaalausmuutoksia. Vanha v1 säilyy. UI-saldo 11200, hinta 65 per otto, erän arvio 195 krediittiä ja 5–15 minuuttia per käynnistys. LAV:n mittatavoitteet kirjataan erikseen, ei varmennettuina historiamittoina. Latauksen jälkeen alkuperäinen GLB + rakenneQA + malliyksikkömitat + näkyvät riskit.
