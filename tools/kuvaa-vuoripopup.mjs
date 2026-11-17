@@ -32,7 +32,7 @@ const TYYPIT = {
 // Oma palvelin: peli on ES-moduuleja, joita file:-osoitteesta ei saa ladata.
 const palvelin = createServer((pyynto, vastaus) => {
   const polku = decodeURIComponent(pyynto.url.split('?')[0]);
-  const tiedosto = join(JUURI, polku === '/' ? 'index.html' : polku);
+  const tiedosto = join(JUURI, polku === '/' ? 'pelaa.html' : polku);
   try {
     const data = readFileSync(tiedosto);
     vastaus.writeHead(200, { 'content-type': TYYPIT[tiedosto.split('.').pop()] ?? 'application/octet-stream' });

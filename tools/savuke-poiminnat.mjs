@@ -42,7 +42,7 @@ const MIME = {
 };
 
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (polku.endsWith('js/packs/pollo-asetukset.js')) {
     res.writeHead(200, { 'content-type': 'text/javascript' });
     res.end(`export const POLLOPALVELIN = '${POLLO_URL}';\n`);
@@ -87,7 +87,7 @@ async function avaaPeli(ctx, { kehittaja }) {
   }, [kehittaja, AVAIN, PARI]);
   await sivu.route((url) => !/127\.0\.0\.1|localhost|pollo\.testi\.invalid|matkakirja-ehdotukset/.test(url.href),
     (route) => route.abort());
-  await sivu.goto('http://127.0.0.1:8736/index.html', { waitUntil: 'load' });
+  await sivu.goto('http://127.0.0.1:8736/pelaa.html', { waitUntil: 'load' });
   await sivu.waitForTimeout(2200);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')]

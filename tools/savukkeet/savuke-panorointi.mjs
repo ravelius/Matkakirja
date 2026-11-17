@@ -28,7 +28,7 @@
  *      oma asettelu lasketaan juuren muunnoksen läpi, joten jokainen
  *      `svg.style.transform` likasi laudan asettelun. Siirto
  *      kirjoitetaan nyt tavalliseen div-kuoreen (.kartta-kuori,
- *      index.html; js/kartta.js `get kuori`), jonka muunnos on
+ *      pelaa.html; js/kartta.js `get kuori`), jonka muunnos on
  *      kompositorin työtä. Mitattu tällä savukkeella samalla ajolla:
  *      ennen 1,05 → jälkeen 0,35 asettelua/kehys.
  *
@@ -111,7 +111,7 @@ const TYYPIT = {
   '.webp': 'image/webp',
 };
 const palvelin = http.createServer((req, res) => {
-  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));

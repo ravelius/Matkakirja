@@ -70,7 +70,7 @@ function solmu(tag, luokka, teksti) {
 
 /**
  * TAVALLINEN HAMPURILAINEN samalla kynällä kuin Matkakirjan
- * päävalikossa (index.html #menu-btn) — polku tulee yhteisestä
+ * päävalikossa (pelaa.html #menu-btn) — polku tulee yhteisestä
  * js/vakasikoni.js:stä (HAMPURILAISEN_POLKU). Linssin yläpalkki ON
  * yläpalkki, joten sen kuvake on hampurilainen; kolme väkästä kuuluu
  * vain kelluvalle napille, kun yläpalkkia ei ole (omistaja 21.9.2026,

@@ -70,7 +70,7 @@ test('avauslennolla ei ole isoisän valokuvaa (omistaja 6.9.2026 ilta)', () => {
 });
 
 test('etusivulla ei ole isoisän kuvaa (omistaja 3.9.2026)', () => {
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
   assert.doesNotMatch(html, /id="intro-valokuva"/);
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   assert.doesNotMatch(css, /^\.intro-valokuva \{/m);

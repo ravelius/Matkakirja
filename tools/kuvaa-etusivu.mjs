@@ -27,7 +27,7 @@ const MIME = {
   '.geojson': 'application/json', '.webmanifest': 'application/manifest+json',
 };
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -54,7 +54,7 @@ for (const koko of LEVEYDET) {
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
 
-  await sivu.goto('http://127.0.0.1:8733/index.html', { waitUntil: 'load' });
+  await sivu.goto('http://127.0.0.1:8733/pelaa.html', { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.screenshot({ path: join(ULOS, `portti-${koko.nimi}.png`) });
 

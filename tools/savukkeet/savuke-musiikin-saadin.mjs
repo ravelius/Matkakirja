@@ -19,7 +19,7 @@ import { avaaChromium } from '../selain.mjs';
 
 // Sama kaksoispolku kuin muissa savukkeissa: repon oma asennus tai
 
-const OSOITE = process.env.SAVUKE_OSOITE ?? 'http://localhost:8123/';
+const OSOITE = process.env.SAVUKE_OSOITE ?? 'http://localhost:8123/pelaa.html';
 const KAAPPAUS = '/tmp/matkakirja-kaappaukset';
 
 mkdirSync(KAAPPAUS, { recursive: true });

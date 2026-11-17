@@ -21,7 +21,7 @@
  * silloin kun yläpalkki on piilossa (vaaka-asento). Linssien oma
  * valikko (js/aikajana-valikko.js) asuu linssin yläpalkissa, joten sen
  * kuvake on tavallinen hampurilainen (HAMPURILAISEN_POLKU) — sama polku
- * kuin pelin päävalikon napissa (index.html #menu-btn).
+ * kuin pelin päävalikon napissa (pelaa.html #menu-btn).
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -30,7 +30,7 @@ import { readFileSync } from 'node:fs';
 import { HAMPURILAISEN_POLKU, VAKASIKONIN_POLUT, vakasikoninSvg } from '../js/vakasikoni.js';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
-const HTML = lue('../index.html');
+const HTML = lue('../pelaa.html');
 const VAAKA = lue('../js/ylapalkki-vaaka.js');
 const LINSSI = lue('../js/aikajana-valikko.js');
 
@@ -74,22 +74,22 @@ test('kelluva nappi on tavallinen hampurilainen (omistaja 2.10.2026 klo 23.08); 
 });
 
 test('hampurilaisen polku on sama kuin päävalikon napissa', () => {
-  assert.ok(HTML.includes(`d="${HAMPURILAISEN_POLKU}"`), 'index.html #menu-btn ei käytä samaa polkua');
+  assert.ok(HTML.includes(`d="${HAMPURILAISEN_POLKU}"`), 'pelaa.html #menu-btn ei käytä samaa polkua');
 });
 
 test('väkäsiä ei ole päävalikon napissa', () => {
   // Väkäset kuuluvat vain sinne, missä yläpalkki on piilossa. Jos
-  // jokin väkäspolku vuotaa index.html:ään, päävalikon nappi näyttäisi
+  // jokin väkäspolku vuotaa pelaa.html:ään, päävalikon nappi näyttäisi
   // jälleen väkäsiltä myös työpöydällä.
   for (const d of VAKASIKONIN_POLUT) {
     assert.equal(HTML.includes(`d="${d}"`), false,
-      `index.html piirtää väkäspolun, vaikka ei saisi: ${d}`);
+      `pelaa.html piirtää väkäspolun, vaikka ei saisi: ${d}`);
   }
 });
 
 test('päävalikon nappi on alkuperäinen kolmen viivan hampurilainen', () => {
   const nappi = /<button id="menu-btn"[\s\S]*?<\/button>/.exec(HTML)?.[0];
-  assert.ok(nappi, 'index.html:stä ei löytynyt #menu-btn-nappia');
+  assert.ok(nappi, 'pelaa.html:stä ei löytynyt #menu-btn-nappia');
   assert.match(nappi, /d="M4\.5 7h15M4\.5 12h15M4\.5 17h15"/);
   // "h" on vaakaviiva, "L" olisi v:n kärki: muoto vartioidaan, ei vain
   // merkkijono.

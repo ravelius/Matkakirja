@@ -4555,7 +4555,7 @@ test('nipistyszoomaus on olemassa', () => {
    * oltava olemassa. Jos ele katoaisi, kartalla ei olisi enää mitään
    * tapaa zoomata.
    */
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
   assert.doesNotMatch(html, /id="zoom-in"|id="zoom-out"|class="zoomi"/,
     'kartan +/- -napit on poistettu — jäänne palasi merkkaukseen');
   assert.doesNotMatch(css, /^\.zoomi[ ,{[]/m,
@@ -4737,7 +4737,7 @@ test('maatummennus on purettu: pelkkä ääriviiva, ei kytkintä', () => {
    * ilman muita — palautunut varjo tai unohtunut kytkin näkyisi vain
    * ruudulla. Siksi vartija tarkistaa jokaisen lenkin erikseen.
    */
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
   const tumma = readFileSync(new URL('../js/maatummennus.js', import.meta.url), 'utf8');

@@ -68,7 +68,7 @@ const ulkohaku = (url) => {
   return VALIMUISTI.get(url);
 };
 const palvelin = createServer((req, res) => {
-  const suht = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suht = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suht);
   if (!polku.startsWith(JUURI) || !existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -93,7 +93,7 @@ const vaadi = (nimi, ok, lisa = '') => {
 };
 
 async function avaaPeli(s) {
-  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/pelaa.html?lauta=pallo`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

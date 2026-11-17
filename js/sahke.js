@@ -1053,7 +1053,7 @@ function sahkePaivitaApu(ui) {
     ? 'Kaverilta kysytty'
     : `Kysy kaverilta (£${KAVERIAPU_HINTA})`;
   /*
-   * onclick eikä addEventListener: nappi asuu index.html:n pysyvässä
+   * onclick eikä addEventListener: nappi asuu pelaa.html:n pysyvässä
    * kysymysdialogissa ja elää yli pelikertojen, mutta UI-olio vaihtuu
    * uuden pelin myötä (js/main.js attach). Sijoitus korvaa vanhan
    * käsittelijän, joten kiinni jäänyt viite vanhaan UI:hin on mahdoton.

@@ -7,7 +7,7 @@
  * voimakkuussäädin ei muuten toimi. Saisiko sen korjattua ensi
  * tilassa?"*
  *
- * Viidestä liu'usta (index.html #aanivoimat) neljä muutti soivaa tasoa
+ * Viidestä liu'usta (pelaa.html #aanivoimat) neljä muutti soivaa tasoa
  * mitattaessa oikein. LUKIJA EI. Syitä oli kaksi, ja tämä tiedosto
  * vartioi molempia — kumpikin on juuri sellainen katkos, jota mikään
  * portti ei aiemmin kuunnellut:

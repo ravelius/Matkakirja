@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matkakirja and the Forgotten Treasure: an adventure around the world</title>
+<meta name="description" content="An adventure around the world for iPhone and iPad, for ages 13 and up. Coming to the App Store, now in beta. The game is currently in Finnish; an English translation is planned.">
+<meta name="theme-color" content="#1d1610">
+<link rel="canonical" href="https://matkakirja.app/en/">
+<link rel="alternate" hreflang="fi" href="https://matkakirja.app/">
+<link rel="alternate" hreflang="en" href="https://matkakirja.app/en/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matkakirja.app/en/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://matkakirja.app/sivusto/kuvat/pallo.jpg">
+<meta property="og:title" content="Matkakirja and the Forgotten Treasure">
+<meta property="og:description" content="An adventure around the world for iPhone and iPad, for ages 13 and up.">
+<link rel="icon" href="../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="../sivusto/kuvat/pallo.jpg">
+<link rel="stylesheet" href="../sivusto/sivusto.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="ylapalkki" id="ylapalkki">
+  <div class="sisus ylapalkki__sisus">
+    <a class="ylapalkki__logo" href="#alku" aria-label="Matkakirja and the Forgotten Treasure, back to top"><img src="../sivusto/kuvat/logo.png" alt="" width="720" height="176"></a>
+    <nav class="ylapalkki__nav" aria-label="Page sections">
+      <a href="#tarina">Story</a>
+      <a href="#esittely">The game</a>
+      <a href="#sovellus">App</a>
+    </nav>
+    <span class="ylapalkki__paiva" id="paiva" aria-hidden="true">Day 1 / 80</span>
+    <a class="nappi nappi--haamu ylapalkki__pelaa" href="#sovellus">Coming to the App Store</a>
+    <div class="kielet" role="group" aria-label="Language">
+      <a class="kielet__lippu" href="../" lang="fi" hreflang="fi" aria-label="Suomeksi" title="Suomeksi"><svg viewBox="0 0 18 11" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="18" height="11" fill="#fff"/><rect x="5" width="3" height="11" fill="#002f6c"/><rect y="4" width="18" height="3" fill="#002f6c"/></svg></a>
+      <a class="kielet__lippu" href="#alku" lang="en" hreflang="en" aria-current="true" aria-label="In English" title="In English"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="lippu-gb"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" clip-path="url(#lippu-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg></a>
+    </div>
+  </div>
+  <span class="ylapalkki__matka" id="matka" aria-hidden="true"></span>
+</header>
+
+<main id="alku">
+
+<!-- ═══ AVAUS ═══ -->
+<section class="avaus" aria-labelledby="nimi">
+  <div class="sisus avaus__sisus">
+    <div class="avaus__teksti">
+      <p class="kapiteeli">Adventure game · for ages 13 and up</p>
+      <h1 class="juliste" id="nimi">
+        <span class="viiva" aria-hidden="true">◈</span>
+        <span class="juliste__nimi">Matkakirja</span>
+        <span class="juliste__ala">and the Forgotten Treasure</span>
+        <span class="viiva" aria-hidden="true">◈</span>
+      </h1>
+      <p class="avaus__ingressi">Grandfather’s travel journal from 1873. The world of today. 80 days on the clock.</p>
+      <p class="avaus__selite">“Matkakirja” is Finnish for travel journal. The game is currently in Finnish; an English translation is planned.</p>
+      <div class="avaus__tila">
+        <div class="kilpi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5h3M11 18.6h2"/></svg>
+          <span><span class="kilpi__pieni">For iPhone and iPad</span><span class="kilpi__iso">Coming to the App Store</span></span>
+        </div>
+        <span class="leima">Now in beta</span>
+      </div>
+      <div class="avaus__napit">
+        <a class="nappi nappi--kulta" href="#tarina">Explore the game
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="avaus__pallo" id="pallo" aria-hidden="true">
+      <div class="avaus__ruusu"><img src="../sivusto/kuvat/kompassi.webp" alt="" width="720" height="720"></div>
+      <div class="avaus__keha">
+        <svg viewBox="0 0 1000 1000">
+          <circle cx="500" cy="500" r="497" fill="none" stroke="#d9a13b" stroke-opacity=".5" stroke-width="1.2"/>
+          <circle cx="500" cy="500" r="488" fill="none" stroke="#d9a13b" stroke-opacity=".55" stroke-width="12" stroke-dasharray="1.4 41.19"/>
+          <circle cx="500" cy="500" r="484" fill="none" stroke="#f3c661" stroke-opacity=".8" stroke-width="20" stroke-dasharray="2.6 250.82"/>
+          <circle cx="500" cy="500" r="473" fill="none" stroke="#d9a13b" stroke-opacity=".3" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="avaus__maa">
+        <img src="../sivusto/kuvat/pallo.jpg" alt="" width="900" height="853" fetchpriority="high">
+        <svg class="avaus__reitti" viewBox="0 0 900 853" preserveAspectRatio="xMidYMid slice">
+          <defs><mask id="reittipeite" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="853">
+            <path class="reitti__peite" pathLength="1" d="M338 388 Q350 410 368 434 Q500 470 652 583 Q726 636 776 646"/>
+          </mask></defs>
+          <path class="reitti__viiva" mask="url(#reittipeite)" d="M338 388 Q350 410 368 434 Q500 470 652 583 Q726 636 776 646"/>
+          <circle class="reitti__piste" cx="338" cy="388" r="8" style="animation-delay:.7s"/>
+          <circle class="reitti__piste" cx="368" cy="434" r="8" style="animation-delay:1.3s"/>
+          <circle class="reitti__piste" cx="652" cy="583" r="8" style="animation-delay:3.4s"/>
+          <text class="reitti__nimi" x="322" y="380" text-anchor="end" style="animation-delay:.8s">London</text>
+          <text class="reitti__nimi" x="386" y="424" style="animation-delay:1.4s">Paris</text>
+          <text class="reitti__nimi" x="668" y="572" style="animation-delay:3.5s">Cairo</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <a class="avaus__alas" href="#tarina" aria-label="Go to the story">
+    <span>The journey begins</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- ═══ TARINA ═══ -->
+<section class="osio paperi tarina" id="tarina" aria-label="Story">
+  <div class="repale repale--yla" aria-hidden="true"></div>
+  <div class="sisus">
+    <div class="tarina__ruudukko">
+      <div class="tarina__leipa" data-nayta>
+        <p class="kapiteeli">The year 1873 · the world of today</p>
+        <h2>There’s a suitcase in the attic.</h2>
+        <p>Inside it is your grandfather’s travel journal from 1873. You set off in his footsteps around the world, looking for treasures the world has forgotten. Can you make it around the world in under 80 days?</p>
+        <p>In the game you see things that no longer exist and reach places that are hard to get to. You walk through the galleries of an art museum as if you were there yourself, and ride a rocket up to the space station. Gripping stories and stunning views are woven together, and everything the game tells you is true.</p>
+      </div>
+      <figure class="tarina__kuva" data-nayta style="--viive:120ms">
+        <img src="../sivusto/kuvat/paivakirja.jpg" alt="Watercolour: an open travel journal and a pocket watch." width="512" height="512" loading="lazy">
+        <span class="tarina__vuosi" aria-hidden="true">1873</span>
+      </figure>
+    </div>
+
+    <ul class="luvut">
+      <li data-nayta><strong>1873</strong><span>Grandfather’s travel journal turns up in a suitcase in the attic.</span></li>
+      <li data-nayta style="--viive:90ms"><strong>80</strong><span>days to travel around the world. The deadline spurs you on, but there is no penalty for missing it.</span></li>
+      <li data-nayta style="--viive:180ms"><strong>13+</strong><span>For ages 13 and up, adults included. Matkakirja is not a children’s game.</span></li>
+    </ul>
+
+    <div class="reitti">
+      <div class="reitti__otsikko" data-nayta>
+        <h3>In Grandfather’s footsteps</h3>
+        <p class="kapiteeli">Grandfather’s photographs from the journey, 1873</p>
+      </div>
+      <div class="reitti__kortit">
+        <figure class="kortti-1873" data-nayta style="--viive:0ms"><img src="../sivusto/kuvat/reitti-lontoo.jpg" alt="" width="320" height="200" loading="lazy"><figcaption>London</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:50ms"><img src="../sivusto/kuvat/reitti-pariisi.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Paris</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:100ms"><img src="../sivusto/kuvat/reitti-kairo.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Cairo</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:150ms"><img src="../sivusto/kuvat/reitti-mumbai.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Bombay</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:200ms"><img src="../sivusto/kuvat/reitti-kolkata.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Calcutta</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:250ms"><img src="../sivusto/kuvat/reitti-singapore.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Singapore</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:300ms"><img src="../sivusto/kuvat/reitti-hongkong.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Canton</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:350ms"><img src="../sivusto/kuvat/reitti-tokio.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>Yokohama</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:400ms"><img src="../sivusto/kuvat/reitti-sanfrancisco.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>San Francisco</figcaption></figure>
+        <figure class="kortti-1873" data-nayta style="--viive:450ms"><img src="../sivusto/kuvat/reitti-newyork.jpg" alt="" width="320" height="213" loading="lazy"><figcaption>New York</figcaption></figure>
+      </div>
+    </div>
+  </div>
+  <div class="repale repale--ala" aria-hidden="true"></div>
+</section>
+
+<!-- ═══ PELIN ESITTELY: hetket I ja II ═══ -->
+<section class="osio tumma" id="esittely" aria-labelledby="esittely-otsikko">
+  <div class="sisus">
+    <header class="otsake" data-nayta>
+      <p class="kapiteeli">A look at the game</p>
+      <h2 id="esittely-otsikko">Six moments along the way</h2>
+      <span class="viiva" aria-hidden="true">◈</span>
+    </header>
+
+    <div class="hetket">
+      <article class="hetki">
+        <div class="hetki__kuvat" data-nayta>
+          <figure class="kuvataulu">
+            <button type="button" class="kuva-43" data-suurenna="../sivusto/kuvat/hetki-kaupunki.jpg" data-teksti="The city tour moves from one sight to the next; pictured here, the Eiffel Tower.">
+              <img src="../sivusto/kuvat/hetki-kaupunki.jpg" alt="Game screenshot: an illustrated Paris seen from above, with the Eiffel Tower in the centre." width="1600" height="1200" loading="lazy">
+            </button>
+            <figcaption>The city tour moves from one sight to the next; pictured here, the Eiffel Tower.</figcaption>
+          </figure>
+        </div>
+        <div class="hetki__teksti" data-nayta style="--viive:120ms">
+          <span class="hetki__numero" aria-hidden="true">I</span>
+          <h3>Fly in over the city</h3>
+          <p>Spin the globe and come down into a city. Paris is the first one ready: an illustrated city where the Eiffel Tower and the Louvre stand exactly where they should. You tour the sights one at a time while the narrator tells their stories.</p>
+        </div>
+      </article>
+
+      <article class="hetki hetki--kaanto">
+        <div class="hetki__kuvat" data-nayta>
+          <figure class="kuvataulu">
+            <button type="button" class="kuva-43" data-suurenna="../sivusto/kuvat/hetki-aarre.jpg" data-teksti="In the treasure challenge, the player matches three Parisian buildings with the years they were built.">
+              <img src="../sivusto/kuvat/hetki-aarre.jpg" alt="Game screenshot: miniature models of the Eiffel Tower, Notre-Dame and the Panthéon on a dark background, with three labels showing years." width="1600" height="1200" loading="lazy">
+            </button>
+            <figcaption>In the treasure challenge, the player matches three Parisian buildings with the years they were built.</figcaption>
+          </figure>
+        </div>
+        <div class="hetki__teksti" data-nayta style="--viive:120ms">
+          <span class="hetki__numero" aria-hidden="true">II</span>
+          <h3>Solve the riddle of the treasure</h3>
+          <p>A green dot on the map leads you to the treasure. In Paris you match buildings with their names and the years they were built, and you get two attempts. Your find earns you a short, true fact and a wish of good luck. Every city has a challenge of its own waiting.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Hetki III: avaruus, koko leveyden kuva ═══ -->
+<section class="kaista" aria-labelledby="avaruus-otsikko">
+  <div class="kaista__tausta" aria-hidden="true"><img id="kaistakuva" src="../sivusto/kuvat/yo-eurooppa.jpg" alt="" width="2400" height="1800" loading="lazy"></div>
+  <div class="sisus kaista__ruudukko">
+    <div data-nayta>
+      <span class="hetki__numero" aria-hidden="true">III</span>
+      <h3 id="avaruus-otsikko">Head into space</h3>
+      <p>A rocket lifts off from northern Norway, bound for the space station. Through the cupola window you see the Earth, and you can photograph any place on it to make a poster of your own.</p>
+    </div>
+    <div class="kaista__pienet kaista__pienet--yksi" data-nayta style="--viive:140ms">
+      <figure class="kuvataulu">
+        <button type="button" class="kuva-43" data-suurenna="../sivusto/kuvat/hetki-avaruus-1.jpg" data-teksti="The crew capsule approaches the space station at an altitude of 402 kilometres.">
+          <img src="../sivusto/kuvat/hetki-avaruus-1.jpg" alt="Game screenshot: a crew capsule in front of the space station." width="1376" height="1032" loading="lazy">
+        </button>
+        <figcaption>The crew capsule approaches the space station at an altitude of 402 kilometres.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Hetket IV, V ja VI ═══ -->
+<section class="osio tumma" aria-label="A look at the game, continued">
+  <div class="sisus">
+    <div class="hetket">
+      <div class="tekeilla-pari">
+        <article class="tekeilla" data-nayta>
+          <div class="tekeilla__kuva tekeilla__kuva--tyhja" aria-hidden="true"><img src="../sivusto/kuvat/kompassi-8.webp" alt="" width="360" height="360" loading="lazy"></div>
+          <div class="tekeilla__teksti">
+            <p class="kapiteeli">IV</p>
+            <h3>Run through the Forbidden City <span class="merkki">in the works</span></h3>
+            <p>Beijing. Little Puyi, the last emperor of China, slips away from the court. You steer him through the alleys and courtyards of the Forbidden City, dodging his pursuers.</p>
+          </div>
+        </article>
+        <article class="tekeilla" data-nayta style="--viive:120ms">
+          <div class="tekeilla__kuva"><img src="../sivusto/kuvat/hetki-olavinlinna.jpg" alt="Game screenshot: Olavinlinna Castle at dusk, its lights reflected in the water." width="1600" height="1200" loading="lazy"></div>
+          <div class="tekeilla__teksti">
+            <p class="kapiteeli">V</p>
+            <h3>Sneak into Olavinlinna Castle <span class="merkki">in the works</span></h3>
+            <p>Savonlinna, Finland, an August night in 1499. You sneak into the castle, solve a riddle and find the treasure.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="hetki">
+        <div class="hetki__kuvat hetki__kuvat--kolme" data-nayta>
+          <figure class="kuvataulu">
+            <button type="button" data-suurenna="../sivusto/kuvat/linssi-keksinnot.jpg" data-teksti="The Inventions lens: Rudolf Diesel and his engine of 1897.">
+              <img src="../sivusto/kuvat/linssi-keksinnot.jpg" alt="Game screenshot: the Inventions lens, Rudolf Diesel and his engine." width="1376" height="1032" loading="lazy">
+            </button>
+          </figure>
+          <figure class="kuvataulu">
+            <button type="button" class="kuva-169" data-suurenna="../sivusto/kuvat/linssi-ihmisen-matka.jpg" data-teksti="The Human Journey lens shows how humans spread from Africa across the globe.">
+              <img src="../sivusto/kuvat/linssi-ihmisen-matka.jpg" alt="Game screenshot: the Human Journey lens." width="1376" height="774" loading="lazy">
+            </button>
+          </figure>
+          <figure class="kuvataulu">
+            <button type="button" class="kuva-169" data-suurenna="../sivusto/kuvat/linssi-topografia.jpg" data-teksti="The Topography lens brings out the shape of the land: the Himalayas and the Tibetan Plateau.">
+              <img src="../sivusto/kuvat/linssi-topografia.jpg" alt="Game screenshot: the Topography lens, the Himalayas." width="1376" height="774" loading="lazy">
+            </button>
+          </figure>
+        </div>
+        <div class="hetki__teksti" data-nayta style="--viive:120ms">
+          <span class="hetki__numero" aria-hidden="true">VI</span>
+          <h3>See the world through a lens</h3>
+          <p>A lens opens up one theme on the map and sets it in motion: where Europe’s inventions were born, how humans spread across the globe, what the world’s radio stations are playing right now.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PELIN AJATUS ═══ -->
+<section class="osio paperi ajatus" id="ajatus" aria-labelledby="ajatus-otsikko">
+  <div class="repale repale--yla" aria-hidden="true"></div>
+  <div class="ajatus__sisus">
+    <img class="ajatus__laiva" src="../sivusto/kuvat/laiva-fregatti.webp" alt="" width="320" height="320" loading="lazy" aria-hidden="true">
+    <p class="kapiteeli" id="ajatus-otsikko" data-nayta>The idea behind the game</p>
+    <p class="ajatus__nosto" data-nayta>The world’s culture, art and science are a treasure that is easily buried under the junk of social media and AI. Matkakirja digs it back up.</p>
+    <span class="viiva" aria-hidden="true" data-nayta>◈</span>
+    <p class="ajatus__leipa" data-nayta>Matkakirja is an immersive learning game for ages 13 and up, adults included. Curiosity is sparked by something small, a local delicacy perhaps, and from there a whole country opens up. Nothing feels like school. Yet everything the game tells you has been checked, and every country is shown through the eyes of the people who live there.</p>
+    <p class="ajatus__loppu" data-nayta>AI helps with the searching.<br>A human chooses and approves everything.</p>
+  </div>
+
+  <!-- Pelattavissa nyt / seuraavaksi -->
+  <div class="sisus missa" id="missa">
+    <article class="arkki" data-nayta>
+      <p class="kapiteeli">In beta</p>
+      <h3>In the game now</h3>
+      <p>Paris with its sights and its treasure challenge, the space station and the lenses. Board games: Nine Men’s Morris in Berlin, Tavli in Athens and Chess in Vienna. In selected cities the player climbs into the basket of a hot-air balloon, and a guide talks about the sights.</p>
+      <div class="arkki__kuvat" aria-hidden="true">
+        <img src="../sivusto/kuvat/akvarelli-mylly.jpg" alt="" width="512" height="512" loading="lazy">
+        <img src="../sivusto/kuvat/akvarelli-tavli.jpg" alt="" width="512" height="512" loading="lazy">
+        <img src="../sivusto/kuvat/akvarelli-tahdet.jpg" alt="" width="512" height="512" loading="lazy">
+      </div>
+    </article>
+    <article class="arkki" data-nayta style="--viive:120ms">
+      <p class="kapiteeli">The route continues</p>
+      <h3>Coming next</h3>
+      <p>Amsterdam, London, Rome and Vienna. Each has a challenge of its own.</p>
+      <ul class="matkalista">
+        <li><strong>Amsterdam:</strong> the player picks out the paintings by Dutch artists from among the others.</li>
+        <li><strong>London:</strong> the player matches each invention with its inventor.</li>
+        <li><strong>Rome:</strong> the player finds, among the statues, the one that comes from another city, and picks the flag of Italy out of four look-alike flags.</li>
+        <li><strong>Vienna:</strong> the player listens to melodies and matches them with their composers.</li>
+      </ul>
+    </article>
+  </div>
+  <div class="repale repale--ala" aria-hidden="true"></div>
+</section>
+
+<!-- ═══ SOVELLUS ═══ -->
+<section class="osio tumma sovellus" id="sovellus" aria-labelledby="sovellus-otsikko">
+  <div class="sisus sovellus__ruudukko">
+    <div class="sovellus__teksti" data-nayta>
+      <p class="kapiteeli">For iPhone and iPad</p>
+      <h2 id="sovellus-otsikko">Coming to the App Store</h2>
+      <p class="sovellus__leima"><span class="leima">Now in beta</span></p>
+      <p>Matkakirja is coming to iPhone and iPad, and it runs on the Mac too. There will also be a free version that runs in a web browser, though it won’t include all of the 3D content and games.</p>
+      <p class="sovellus__kieli">The game is currently in Finnish. An English translation is planned, with other languages to follow later.</p>
+    </div>
+    <div class="laitteet" data-nayta style="--viive:140ms" aria-hidden="true">
+      <div class="puhelin puhelin--1"><img src="../sivusto/kuvat/puhelin-radio.jpg" alt="" width="644" height="1400" loading="lazy"></div>
+      <div class="puhelin puhelin--2"><img src="../sivusto/kuvat/puhelin-avaruus.jpg" alt="" width="644" height="1400" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ ALAOSA ═══ -->
+<footer class="tumma alaosa">
+  <div class="sisus">
+    <div class="alaosa__ruudukko">
+      <div>
+        <a class="alaosa__logo" href="#alku" aria-label="Back to top"><img src="../sivusto/kuvat/logo.png" alt="Matkakirja and the Forgotten Treasure" width="720" height="176" loading="lazy"></a>
+        <p class="alaosa__tekija">The game is made by <strong>Visuaaliviestinnän Instituutti Tampere Oy</strong> (VVI), a Finnish company.</p>
+      </div>
+      <nav aria-label="Page sections in the footer">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="#tarina">Story</a></li>
+          <li><a href="#esittely">A look at the game</a></li>
+          <li><a href="#ajatus">The idea behind the game</a></li>
+          <li><a href="#sovellus">App</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>The game</h2>
+        <ul>
+          <li>Coming to the App Store for iPhone and iPad; also runs on the Mac</li>
+          <li>Now in beta</li>
+          <li>A free browser version is coming too, without all of the 3D content and games</li>
+          <li>Currently in Finnish; an English translation is planned</li>
+        </ul>
+        <p class="alaosa__yhteys">Contact: <a href="mailto:sami.reivinen@vvi.fi">sami.reivinen@vvi.fi</a></p>
+      </div>
+    </div>
+    <details class="kuvalahteet">
+      <summary>Image credits</summary>
+      <ul>
+        <li>The game images are screenshots from the Matkakirja game. Artwork: Matkakirja (VVI).</li>
+        <li>AI-generated artwork: Grandfather’s photographs from 1873, the watercolours, the compass rose and the ship, and the illustrations in the lens images (Rudolf Diesel, the engine hall and the people in the cave).</li>
+        <li>Illustrated city: © OpenStreetMap contributors (ODbL), © OpenMapTiles, data from OpenFreeMap; building heights in Paris: IGN (BD TOPO®), Licence Ouverte 2.0.</li>
+        <li>Globe and terrain: NOAA ETOPO1 and ETOPO 2022, Copernicus DEM (© DLR e.V. and © Airbus Defence and Space GmbH, provided under COPERNICUS), coastlines GSHHG, borders and rivers Natural Earth.</li>
+        <li>The Earth from space: NASA Blue Marble Next Generation, clouds NASA GIBS, night lights NASA Earth Observatory (Black Marble).</li>
+        <li>3D model of Olavinlinna Castle: Senaatti-kiinteistöt (Senate Properties), survey by Tietoa Finland 2021, Sketchfab, CC BY 4.0; modified.</li>
+      </ul>
+    </details>
+    <div class="alaosa__pohja">
+      <span>© 2026 Visuaaliviestinnän Instituutti Tampere Oy. All rights reserved.</span>
+      <span>Matkakirja and the Forgotten Treasure</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="suurennos" id="suurennos" aria-label="Enlarged image">
+  <button type="button" class="suurennos__sulje" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+</dialog>
+
+<script src="../sivusto/sivusto.js" defer></script>
+</body>
+</html>

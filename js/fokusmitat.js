@@ -2051,7 +2051,7 @@ function vahdiKartanLiiketta(ui) {
  *
  * MUUTTUJA ASETETAAN BODYYN EIKÄ KARTTARUUTUUN. Alanappirivi ei ole
  * karttaruudun lapsi vaan asuu sen rinnalla kelluvassa .rail-kerroksessa
- * (index.html), joten karttaruutuun kirjoitettu muuttuja ei periytyisi
+ * (pelaa.html), joten karttaruutuun kirjoitettu muuttuja ei periytyisi
  * sinne lainkaan — mitattu: pehmuste jäi nollaksi ja neliö kartuutsin
  * päälle. Body on molempien yhteinen esi-isä.
  *

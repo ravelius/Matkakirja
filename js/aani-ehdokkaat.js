@@ -1247,7 +1247,7 @@ function tallennaVoima(avain, arvo) {
 }
 
 /**
- * Lukija-liu'un OLETUSASENTO (index.html #voima-lukija value="90").
+ * Lukija-liu'un OLETUSASENTO (pelaa.html #voima-lukija value="90").
  *
  * Vietiin vakioksi 12.9.2026, kun striimattu lukija (js/puhe.js)
  * kytkettiin tähän liukuun: sen oma vahvistus on työhuoneen kerroin, ja

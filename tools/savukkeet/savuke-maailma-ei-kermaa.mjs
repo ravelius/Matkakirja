@@ -165,7 +165,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const polkuOsa = req.url.split('?')[0];
-  const polku = join(JUURI, polkuOsa === '/' ? 'index.html' : polkuOsa);
+  const polku = join(JUURI, polkuOsa === '/' ? 'pelaa.html' : polkuOsa);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   let runko = readFileSync(polku);
   if (VASTAKOE && polkuOsa.endsWith('/js/laattapyramidi.js')) {

@@ -439,7 +439,7 @@ test('kytkimet: laattakerros ja vektorit myös muistista, ratasvalikosta', async
   // NAPIT POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki napit voisi
   // ottaa pois ja jättää noihin asetuksiin"*). Asetukset itse jäivät
   // nykyisin oletuksin ja osoiteparametrein ?laattakerros= / ?vektorit=.
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   assert.doesNotMatch(html, /id="kehittaja-laattakerros-kytkin"/);
   assert.doesNotMatch(html, /id="kehittaja-pallovektorit-kytkin"/);
   const main = lue('../js/main.js');

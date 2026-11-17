@@ -179,7 +179,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2618';
+const APP_VERSION = '2026-09-21.2619';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -191,7 +191,7 @@ let ui = null;
 /*
  * PÄIVITYSRUUTU (omistajan havainto 13.8.2026).
  *
- * Lippu asetetaan JUURI ennen uudelleenlatausta, ja index.html:n
+ * Lippu asetetaan JUURI ennen uudelleenlatausta, ja pelaa.html:n
  * pikkuskripti näyttää sen perusteella tumman ruudun logoineen heti
  * uuden latauksen ensimmäisellä maalauksella. Lippu on
  * sessionStoragessa eikä localStoragessa: se koskee tätä yhtä latausta
@@ -2199,7 +2199,7 @@ function paivitaPuheSaadin() {
 /* --- Kehittäjän hammasratasvalikko (omistaja 29.8.2026) ------------------ */
 
 /*
- * OMA TOINEN HAMPURILAINEN, SYMBOLINA HAMMASRATAS (index.html
+ * OMA TOINEN HAMPURILAINEN, SYMBOLINA HAMMASRATAS (pelaa.html
  * #kehittaja-valikko-kotelo). Yläpalkkiin jää siitä yksi kuvake —
  * omistajan sääntö *"yläpalkissa saa olla vain YKSI nappi"*
  * (27.8.2026) pysyy siis voimassa, vaikka valikossa on useampi rivi.
@@ -2372,7 +2372,7 @@ function paivitaKehittajaValikko() {
   /*
    * RATAS ON TAAS PELKKÄ KEHITTÄJÄN VALIKKO (omistaja 29.9.2026,
    * pillerivalikkouudistus): Äänentasot-ryhmä siirtyi pillerivalikon
-   * Äänet-osioon (index.html #aanivoimat), joten rattaan alla ei ole
+   * Äänet-osioon (pelaa.html #aanivoimat), joten rattaan alla ei ole
    * enää mitään pelaajalle aina näkyvää — koko kotelo piiloutuu taas
    * kehittäjätilan mukana, kuten ennen 11.9.2026.
    */
@@ -2637,7 +2637,7 @@ if (puheDialog) {
   /*
    * LUKIJAÄÄNI KEHITTÄJÄLEHDEN RIVILTÄ (omistaja 11.9.2026).
    *
-   * Säädindialogi on index.html:n lomake ja sen kentät asuvat tässä
+   * Säädindialogi on pelaa.html:n lomake ja sen kentät asuvat tässä
    * tiedostossa, joten lehti ei voi avata sitä suoraan. Koukku on oma
    * globaalinsa eikä window.matkakirja-olion kenttä: uusi peli korvaa
    * matkakirja-olion kokonaan (window.matkakirja = { game, ui, sfx }),

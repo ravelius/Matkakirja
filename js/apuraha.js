@@ -123,8 +123,9 @@ function esittely9(d, web) {
 }
 
 /*
- * SUORA OSOITE (omistaja 13.11.2026, versio 9): matkakirja.app/#esittely avaa kortin heti, kun esittely on
- * ladattu. Napista avattaessa osoitteeseen tulee #esittely (linkin voi kopioida), sulkiessa se poistuu.
+ * SUORA OSOITE (omistaja 13.11.2026, versio 9): matkakirja.app/pelaa.html#esittely avaa kortin heti, kun esittely on
+ * ladattu (17.11.2026 alkaen peli on pelaa.html; etusivun matkakirja.app/#esittely ohjaa sinne, js/ohjaa-peliin.js).
+ * Osoite rakennetaan nykyisestä pathnamesta, joten se toimii tiedostonimestä riippumatta. Napista avattaessa osoitteeseen tulee #esittely (linkin voi kopioida), sulkiessa se poistuu.
  * Muualla pelissä ei käytetä hashia (pelikatalogi- ja linssikatalogisivut ovat omia sivujaan).
  */
 export const ESITTELY_HASH = '#esittely';

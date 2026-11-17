@@ -72,7 +72,7 @@ if (URL_ARG === 'paikallinen') {
   const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json', '.woff2': 'font/woff2', '.mp3': 'audio/mpeg', '.webmanifest': 'application/manifest+json' };
   palvelin = http.createServer((req, res) => {
     const p = decodeURIComponent(req.url.split('?')[0]);
-    const polku = join(JUURI, p === '/' ? 'index.html' : p);
+    const polku = join(JUURI, p === '/' ? 'pelaa.html' : p);
     if (!polku.startsWith(JUURI) || !existsSync(polku) || statSync(polku).isDirectory()) { res.writeHead(404); res.end(); return; }
     res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
     res.end(readFileSync(polku));
@@ -405,7 +405,8 @@ async function kuvaaYksi(nakyma, koko) {
       });
     });
     const haku = nakyma.haku ?? '?lauta=pallo&koe=suoraan';
-    await sivu.goto(`${OSOITE}${haku}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    // Peli on pelaa.html (17.11.2026); juuri on etusivu.
+    await sivu.goto(`${OSOITE}pelaa.html${haku}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
     merkitse('dom');
     const kaynnissa = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui), null, { timeout: 45000 })
       .then(() => true).catch(() => false);

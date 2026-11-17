@@ -582,7 +582,7 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
   const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
   const tyyli = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   // Kaiuttimen napautus kulkee kortinPainallus-polkua kaikkialla (28.9.2026): tauko ↔ jatka, ei paneelia.
   assert.match(lukija, /tapahtuma\.stopPropagation\(\);\s*\/\/[^\n]*\n\s*kortinPainallus\(nappi, isanta\);/);

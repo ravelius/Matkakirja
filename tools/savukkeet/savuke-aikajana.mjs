@@ -147,7 +147,7 @@ const MIME = {
 };
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   let sisalto = readFileSync(polku);
@@ -206,7 +206,7 @@ async function avaaSivu(nakyma, virhelista) {
 
 /** Peli auki Ateenaan; palauttaa pallolla tiedon, syntyikö lauta. */
 async function avaaPeli(kohde) {
-  await kohde.goto(`http://127.0.0.1:8741/index.html?lauta=${LAUTA}`, { waitUntil: 'load' });
+  await kohde.goto(`http://127.0.0.1:8741/pelaa.html?lauta=${LAUTA}`, { waitUntil: 'load' });
   await kohde.waitForTimeout(2500);
   await kohde.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

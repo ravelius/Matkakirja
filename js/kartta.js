@@ -3142,7 +3142,7 @@ export class Kartta extends NukkuvaKartta {
      * animaation pitää väistää.
      *
      * Matkakirjakortti (.fact-card) ei tarvitse suojaa: se asuu
-     * .rail-elementissä eikä paneelin sisällä (index.html), joten sen
+     * .rail-elementissä eikä paneelin sisällä (pelaa.html), joten sen
      * eleet eivät kuplineet kartalle alun perinkään. Pöllön kupla ja
      * kuvan suurennos ovat bodyssa, mutta ne ovat listassa mukana,
      * koska kupla siirtyy kiinnityskohteensa mukana (js/pollo.js
