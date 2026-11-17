@@ -31,7 +31,7 @@ Kappale saa värinsä pelin omasta paletista, jotta se sopii kartan muihin taloi
 Sama tie on kuljettu muillekin. Työn kulku on yleensä sama: kuvat, vertailu, ehdotus, korjaus. Wienin vanhalla Kärntnertor-portilla oli kaksi eri näköistä puolta: kaupungin puolella korkeampi koristekaari, kenttäpuolella matalampi portti ja silta. Kuvat ovat 1850-luvun lopulta, ennen portin purkua. Ensimmäinen malli ei vastannut kuvia, ja siitä tehtiin uusi. Amsterdamin vaa'an, Waagin, ensimmäisen mallin pohja oli väärän muotoinen ja siitä puuttui porraspari, joten sekin tehtiin uudelleen.
 
 **8. Mitä emme tiedä**
-Malli on tulkinta, ei mittaustulos. Sataman tarkkaa kokoa ei kerro mikään löytämämme lähde. Mallin koko on arvio. Piirros on mustavalkoinen. Värit ovat pelin omasta paletista, eivät sataman alkuperäisiä värejä. Myös portaiden määrä, suihkulähteen altaan muoto ja koristeet ovat arvauksia. Jos lähde ei kerro jotakin, emme väitä sitä. Siksi jokaisen kuvan alla lukee, mistä se on peräisin. Kun peli näyttää menneen, se näyttää parhaan arvauksemme.
+Malli on tulkinta, ei mittaustulos. Sataman tarkkaa kokoa ei kerro mikään löytämämme lähde. Mallin koko on arvio. Piirros on mustavalkoinen. Värit ovat pelin omasta paletista, eivät sataman alkuperäisiä värejä. Myös portaiden määrä, suihkulähteen altaan muoto ja koristeet ovat arvauksia. Jos lähde ei kerro jotakin, emme väitä sitä. Siksi jokaisen kuvan alla lukee, mistä se on peräisin. Tekoäly etsii, vertaa ja ehdottaa. Sen, mikä pääsee peliin, hyväksyy ihminen. Kun peli näyttää menneen, se näyttää parhaan arvauksemme.
 
 **Pulun kysymykset (jutun loppuun):**
 1. *Miksi ensimmäinen malli hylättiin?* — Hmm, hyvä kysymys. Ensimmäisessä mallissa satama oli muurien reunustama tasanne, mutta Specchin piirroksessa ei ollut korkeita ympärysmuureja, ja portaat laskeutuivat veteen koko rannan leveydeltä. Vertailussa ero näkyi, ja tekoäly sai uuden ohjeen. Kyyhkynä arvostan sitä, että joku vertaa ennen kuin uskoo.
@@ -45,13 +45,13 @@ Säännöt: kuvassa ei tekstiä; tekijä, vuosi, kokoelma, lisenssi, linkki joka
 
 | Osio | Kuva | Kuvateksti (lyhyt) | Lähderivi |
 |---|---|---|---|
-| 1 | Specchin koko arkki (R1) | Specchin arkki Porto di Ripettasta: joen puoli, pohjapiirros ja sivunäkymiä. | Alessandro Specchi, metatiedon mukaan 1704. Wikimedia Commons, public domain. |
-| 2 | R2 ja valokuva R3 rinnakkain | Vasemmalla Specchin piirros joen puolelta, oikealla valokuva ennen purkua. | R2: Alessandro Specchi, 1704, Wikimedia Commons, public domain. R3: tuntematon italialainen valokuvaaja, noin 1865 (Commonsin arvio), Zeno.org, public domain. |
+| 1 | Specchin koko arkki (R1) | Specchin arkki Porto di Ripettasta: joen puoli, pohjapiirros ja sivunäkymiä. | Alessandro Specchi, metatiedon mukaan 1704. Wikimedia Commons, public domain. **Kuvaa EI viedä peliin ennen kuin saman lehden kopio on löytynyt nimetystä Italian ulkopuolisesta avoimesta kokoelmasta (Rijksmuseum CC0 ensin); lähderivi päivitetään silloin kokoelman mukaan.** |
+| 2 | R2 ja valokuva R3 rinnakkain | Vasemmalla Specchin piirros joen puolelta, oikealla valokuva ennen purkua. | R2: Alessandro Specchi, 1704, Wikimedia Commons, public domain (**kuvaa 2 ei viedä peliin ennen saman kopion löytymistä Italian ulkopuolisesta kokoelmasta**; R2:n luettelomerkinnät "456" ja "Tm II pd 110" jäävät, aitoa vedosta ei rajata). R3: tuntematon italialainen valokuvaaja, noin 1865 (Commonsin arvio), Zeno.org, public domain. |
 | 3 | Mallikuva v2 | Tekoälyn ehdotus sataman päämuodoista. | Tekoälyllä tuotettu havainnekuva Specchin kahden piirroksen ja valokuvan pohjalta. |
 | 4 | v1 ja v2 rinnakkain (ARKKI-14, alin rivi; ilman otsikkotekstiä) | Vasemmalla ensimmäinen malli, oikealla toinen. | Matkakirjan omat mallit, tehty tekoälyllä mallikuvasta. |
 | 5 | Malli kahdesta suunnasta | Kappale ylhäältä ja sivulta. | Matkakirjan oma malli, tehty tekoälyllä mallikuvasta. |
 | 6 | Pelikuva (NUI, kokeesta) | Hologrammi ja malli kartalla. | Matkakirja. |
-| 7 | Kärntnertor kaupungin puolelta + Waag | Wienin vanha Kärntnertor 1858; Amsterdamin Waag. | Kärntnertor: Stadtbefestigung: Altes Kärntnertor von innen, k. k. Hof- und Staatsdruckerei, 1858, Wien Museum inv. 55498/25, CC0; Kärntertor alt aussen 1858 ja alt innen 1858, Wikimedia Commons, public domain. Waag: Rijksmuseum RP-P-AO-25-16 ja RP-P-AO-28-67, arkin mukaan CC0 (**kirjausta ei löydy, LAV selvittää**). |
+| 7 | Kärntnertor kaupungin puolelta + Waag | Wienin vanha Kärntnertor 1858; Amsterdamin Waag. | Kärntnertor: Stadtbefestigung: Altes Kärntnertor von innen, k. k. Hof- und Staatsdruckerei, 1858, Wien Museum inv. 55498/25, CC0; Kärntertor alt aussen 1858 ja alt innen 1858, Wikimedia Commons, public domain. Waag: Rijksmuseum RP-P-AO-25-16 (W1) ja RP-P-AO-28-67 (W3), CC0 (LAV:n lähdeaudit `ketjut/waag-op-dam/codex/waag-v2-2540/sources/audit.md`: W1 Commons API 17.11. CC0; W3 CC0 lähdepaketin ja API-metadatan mukaan). |
 
 Lisenssien tarkistus 17.11. (Commons-sivut luettu itse):
 - R1: tekijä Specchi (k. 1729), 1704; "public domain in its country of origin" ja USA:ssa (julkaistu ennen 1931); Public Domain Mark 1.0. **Lähde: pierotrincia.it; sivu ei nimeä kokoelmaa.**
@@ -91,6 +91,7 @@ Lisenssien tarkistus 17.11. (Commons-sivut luettu itse):
 | 2d | Jos sama kaari näkyy piirroksessa ja valokuvassa, se on todennäköisesti ollut olemassa | päätelmä kahdesta eri aikaan tehdystä lähteestä (sources.json: R3 "structural cross-check") | TYÖ, varovainen |
 | 6c | Väreillä sovitetaan kartan muihin taloihin | omistaja 16.11. 23.00 ("käyttää värejä pelin paletin sisältä"); massa-25 M4 (malli samassa valossa ja sävyssä kuin viereiset talot) | TYÖ |
 | 8e | "Jos lähde ei kerro, emme väitä" | lahteet-ja-tarkistus 1 ja 3 | periaate |
+| 8f | "Tekoäly etsii, vertaa ja ehdottaa. Sen, mikä pääsee peliin, hyväksyy ihminen." | omistajan päätös 17.11. klo 08.21 (KK 08.24: omistaja katsoo itse artikkelin kolme esimerkkimallia) | **pätee, kun omistaja on katsonut kolme mallia** |
 | 9a | Ohje kertoo, mitä kuvaan ei saa tulla: ei kirkkoja, taloja, katuja | v2 `prompt.txt` ("Exclude completely: surrounding churches, palaces, houses, city, roads…") | TYÖ |
 | 9b | Ripetta: Tiberin rannalla; kaksi kaarevaa portaikkoa laituriin; keskellä suihkulähde | kortti kohta 3 (WP-RIP + INN) | 2L |
 | 9c | Kappaleen koko sovitetaan arvioidun pituuden mukaan | massa-25 ajolista: pitka=70 ARVIO; PAATOKSET.md 07.5x | TYÖ |
@@ -113,12 +114,12 @@ Tulos: pääosin lähteiden mukainen, ei mittalukuja, ei työkalujen nimiä, ei 
 Ei tekstissä (tarkoituksella): mitat (70 m on arvio), työkalujen nimet, "ihminen hyväksyy" (ks. avoin kohta A), Newgate.
 
 ## 4. Mittarit
-Sanamäärä (otsikoita ja Pulun kysymyksiä lukematta): ingressi 41, yhteensä 531 (tavoite 500–550, ingressi noin 40). Ei mittalukuja, ei työkalujen nimiä.
+Sanamäärä (otsikoita ja Pulun kysymyksiä lukematta): ingressi 41, yhteensä 542 (omistajan virke osiossa 8 lisätty 08.21; tavoite 500–550, saa nousta noin 545:een, ingressi noin 40). Ei mittalukuja, ei työkalujen nimiä.
 
 ## 5. Avoimet kohdat KK:lle
-- **A (E2): kuka hyväksyy mallin.** Teksti ei väitä "ihminen hyväksyy"; se sanoo vain "kelpasi/ei kelvannut". Ratkaisu odottaa omistajan vastausta suunnitelman kysymykseen 1.
-- **B: Ripetan R1 ja R2 kokoelma.** Commons-sivut nimeävät lähteeksi pierotrincia.it:n ja blogspot-sivun, eivät kokoelmaa. Sääntö lisenssit-ja-lataukset 10 (Italian valtion/kuntien museoiden julkiset teokset → Italian App Store pois) edellyttää, että tiedämme, kuuluuko vedos italialaiseen julkiseen kokoelmaan. Suunnitelmassa mainittu Rijksmuseum-vaihtoehto ei ole tarkistettu (en ladannut kuvaa). Ehdotus: LAV tai SK etsii Specchin 1704-vedoksen museokokoelman (esim. Rijksmuseum, Metropolitan, Biblioteca Hertziana) ennen kuin kuva menee pelin ämpäriin; tekstiin tämä ei vaikuta.
-- **C: Waagin lisenssikirjaus ja prompti** puuttuvat paikallisesta kansiosta (LAV selvittää T7:ltä). Kuvatekstin Rijksmuseum-rivi on "arkin mukaan CC0", ei vielä luettu museon omalta sivulta.
+- **A (E2): kuka hyväksyy mallin. RATKAISTU 17.11. klo 08.21:** omistaja katsoo itse kolme esimerkkimallia; osioon 8 lisätty virke "Tekoäly etsii, vertaa ja ehdottaa. Sen, mikä pääsee peliin, hyväksyy ihminen." (lähdetaulukko 8f). Virke pätee vasta, kun omistaja on katsonut kolme mallia.
+- **B: Ripetan R1 ja R2 kokoelma. KK 08.24:** kuviin 1 ja 2 käytetään saman lehden kopiota nimetystä Italian ulkopuolisesta avoimesta kokoelmasta (Rijksmuseum CC0 ensin; LAV hakee, robots.txt ensin). Kunnes se on löytynyt, kuvia 1 ja 2 ei viedä peliin. Alkuperäinen havainto: Commons-sivut nimeävät lähteeksi pierotrincia.it:n ja blogspot-sivun, eivät kokoelmaa. Sääntö lisenssit-ja-lataukset 10 (Italian valtion/kuntien museoiden julkiset teokset → Italian App Store pois) edellyttää, että tiedämme, kuuluuko vedos italialaiseen julkiseen kokoelmaan. Suunnitelmassa mainittu Rijksmuseum-vaihtoehto ei ole tarkistettu (en ladannut kuvaa). Ehdotus: LAV tai SK etsii Specchin 1704-vedoksen museokokoelman (esim. Rijksmuseum, Metropolitan, Biblioteca Hertziana) ennen kuin kuva menee pelin ämpäriin; tekstiin tämä ei vaikuta.
+- **C: Waagin lisenssikirjaus ja prompti LÖYTYIVÄT (LAV, KK 08.24):** aineisto `ketjut/waag-op-dam/`, `codex/waag-v2-2540/prompt.txt` ja `sources/audit.md`; W1 ja W3 CC0 (W1 luettu Commons API:sta 17.11.; W3 lähdepaketin ja API-metadatan mukaan, uutta lisenssisivun avausta ei tehty; W2 ei ollut generoinnin syöte). Rivi 7 päivitetty.
 - **D: valokuvan vuosi** "noin 1865" on Commonsin metatieto (1L); tekstissä vain "otettu ennen purkua", kuvatekstissä vuosi attributoituna.
 - **E: osiot 3, 5 ja 6** kuvaavat työvaiheita yleisellä tasolla; jos KK haluaa tarkemman prosessikuvauksen, se vaatii lisää lähdettä (työkalujen nimet kuuluvat Tekijätiedot-sivulle, kun ehdot on luettu).
 - **F: osio 6b** pätee vasta, kun NS on kytkenyt Ripetan (osa 2).
