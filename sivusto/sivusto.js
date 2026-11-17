@@ -31,7 +31,7 @@
     const osuus = Math.min(1, Math.max(0, y / pituus));
     if (palkki && !kiintea) palkki.classList.toggle('kiinni', y > 40);
     if (matka) matka.style.transform = `scaleX(${osuus})`;
-    if (paiva) paiva.textContent = `Päivä ${Math.max(1, Math.round(1 + osuus * 79))} / 80`;
+    if (paiva) paiva.textContent = `${juuri.lang === 'en' ? 'Day' : 'Päivä'} ${Math.max(1, Math.round(1 + osuus * 79))} / 80`;
     if (!eiLiiketta) {
       if (pallo && y < window.innerHeight * 1.2 && window.innerWidth > 860) pallo.style.transform = `translate3d(0, ${y * 0.12}px, 0)`;
       if (kaistakuva && window.innerWidth > 860) {

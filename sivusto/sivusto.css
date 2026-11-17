@@ -515,3 +515,25 @@ button { font: inherit; color: inherit; }
   .ylapalkki, .avaus__alas, .suurennos { display: none !important; }
   .js [data-nayta] { opacity: 1; transform: none; }
 }
+
+/* ── Kielivalinta: Suomen ja Britannian liput (piirretty koodilla, ei kuvatiedostoja) ── */
+.kielet { flex: none; display: flex; align-items: center; gap: 2px; margin-left: -6px; }
+.kielet__lippu { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; opacity: 0.6; transition: opacity 200ms; }
+.kielet__lippu svg { display: block; width: 26px; height: 17px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(243, 230, 208, 0.4); }
+.kielet__lippu:hover, .kielet__lippu[aria-current="true"] { opacity: 1; }
+.kielet__lippu[aria-current="true"] svg { box-shadow: 0 0 0 1.5px var(--pahkina), 0 0 0 3px var(--kulta); }
+.kielet__lippu:focus-visible { outline: 2px solid var(--kulta); outline-offset: -3px; opacity: 1; }
+/* Englanninkielinen sivu: nimen selitys ja pidempi alaotsikko */
+.avaus__selite { font-family: var(--f-kone); font-size: 0.8rem; letter-spacing: 0.05em; line-height: 1.6; color: var(--vaalea-muste-pehmea); max-width: 36em; }
+:lang(en) .juliste__ala { letter-spacing: 0.13em; font-size: clamp(0.95rem, 1.75vw, 1.5rem); white-space: nowrap; }
+@media (max-width: 860px) {
+  .avaus__selite { text-align: center; margin-inline: auto; }
+  :lang(en) .juliste__ala { font-size: clamp(0.74rem, 3.3vw, 1.2rem); letter-spacing: 0.16em; margin-right: -0.16em; }
+}
+@media (max-width: 430px) {
+  .kielet__lippu { width: 34px; }
+  .kielet__lippu svg { width: 24px; height: 16px; }
+  .ylapalkki__sisus { gap: 8px; }
+  .ylapalkki__logo img { height: 28px; }
+  .ylapalkki__pelaa { padding-inline: 0.65em; font-size: 0.72rem; }
+}
