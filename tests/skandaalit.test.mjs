@@ -33,7 +33,8 @@ const KAIKKI = MAAT.flatMap((iso) => SKANDAALIT[iso].map((s) => ({ iso, ...s }))
  */
 test('skandaaleja on 193 kappaletta 84 maassa, 2–3 per maa', () => {
   assert.equal(MAAT.length, 114, 'maita on 114');
-  assert.equal(KAIKKI.length, 254, 'skandaaleja on 254');
+  // 253: Mona Lisan varkaus 1911 siirtyi Louvren nostoksi jaksoina (fokuskohde `louvre`, 17.11.2026); FRA:ssa 2.
+  assert.equal(KAIKKI.length, 253, 'skandaaleja on 253');
   for (const iso of MAAT) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
     const n = SKANDAALIT[iso].length;

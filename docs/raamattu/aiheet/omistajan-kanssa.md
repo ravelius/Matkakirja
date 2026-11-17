@@ -13,7 +13,7 @@ SÄÄNNÖT:
 8. Hänelle eivät mene nollaukset, kuittaukset, sisäiset päätökset eikä jokainen versio. Valmiista kerrotaan, onko se testattu, linkissä vai pelissä tarkistettu. [R-7.31] [R-7.17]
 9. Vastaus hänen kysymykseensä on vuoron viimeinen teksti. Chattiin ei kirjoiteta kiinaa: rakennus nimetään latinalaisin kirjaimin tai arkin paikalla. [R-7.31] [P-261105-5]
 10. Prompti toiselle sessiolle annetaan yhtenä koodilohkona. [R-13.10]
-11. Hänelle näytetään vain pelistä todellisella reitillä otettuja kuvia täydellä tarkkuudella tai vierekkäin, ei pienennettyjä arkkeja. Video vain liikkeeseen ja pyydettyyn ääneen, puhe äänen kanssa. [R-7.32] [R-9.12] [R-5.28]
+11. Hänelle näytetään vain pelistä todellisella reitillä otettuja kuvia täydellä tarkkuudella tai vierekkäin, ei pienennettyjä arkkeja; valmiit heti. Video vain liikkeeseen ja pyydettyyn ääneen, puhe äänen kanssa. [R-7.32] [R-9.12] [R-5.28] [P-261117-112]
 12. Kuvan päällä ei ole tekstiä: kulma, versio ja kummankin puolen m/px omalle raidalle. Yksittäinen kuva menee raakana, selitys viestiin. Kohde vähintään 300 px. [R-4.48] [R-9.10]
 13. Asennussivulla työ näkyy kokonaisuuksina (KK päivittää versioittain), roolien rivit pienenä harmaana. [P-261113-17]
 14. Iso muutospyyntö välitetään PT:lle heti, ja KK suunnittelee sen ennen työnjakoa. Hänen tekstinsä menee peliin sanatarkasti. [R-7.48] [R-7.26]
@@ -23,5 +23,5 @@ EI VIKA:
 - Introkuvan nimi ja vuosi kuvan päällä on pelin sisältöä.
 
 TEKOTAPA:
-- Etäohjaus päälle ennen korttia. Kaappaukset: docs/raportit/kaappaukset/omistaja-<pvm>/.
+- Kaappaukset: docs/raportit/kaappaukset/omistaja-<pvm>/.
 - Äänisivu: julkaisija-tyokalut/aanisivu-lisaa.py. Parit ja tallenne: valmiin-maaritelma.
