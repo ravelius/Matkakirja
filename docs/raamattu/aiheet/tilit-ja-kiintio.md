@@ -9,7 +9,7 @@ SÄÄNNÖT:
 4. Tilin vaihtaa omistaja antamalla uuden tilin PT:lle siirtopromptin. Kirjautumisohjeita ei anneta, eikä komentorivin kirjautumista pyydetä. [R-12.23]
 5. Uuden tilin käyttöraja kysytään vain tilinvaihdossa, ei nollauksen tai tiedon korjauksen takia. [R-12.21]
 6. Vanhat sessiot jatkavat nollattuina samoilla tunnuksilla. Jos se ei onnistu, luodaan uudet ja vanhat arkistoidaan kysymättä. [R-12.23]
-7. Vaihdossa sallinnat ja hookit palautetaan, avaimia ei kysytä omistajalta, ja tilin yli siirtyvät vain Raamattuun kirjatut luvat. Vaihto kirjataan lokiin. [R-12.23]
+7. Vaihdossa sallinnat ja hookit palautetaan, avaimia ei kysytä omistajalta, ja tilin yli siirtyvät vain Raamattuun kirjatut luvat. Vaihto kirjataan lokiin. [R-12.23] [P-261117-59]
 8. Vaihto on valmis vasta, kun tarkistus on puhdas ja ohjeiden koe läpi; silloin KK saa yhden rivin. [R-12.23]
 9. Koodaavat Opus-roolit ajetaan high-tasolla; Julkaisija, Lavastaja ja PT medium. Postivahti, Sisältökirjuri, Laitetestaaja ja Äänittäjä ajetaan Sonnetilla. [R-7.9] [R-7.4]
 10. Max vain uuden kokonaisuuden suunnitteluun ja juurisyyhyn, johon yksi yritys ei riittänyt; toteutus highilla. Julkaisija high vain CI-vian ajan. [R-7.9]
