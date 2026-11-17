@@ -338,6 +338,28 @@
     }
    ],
    "muutokset": []
+  },
+  {
+   "tunnus": "S-11",
+   "nimi": "ei-tarkistusajoja-paivalla",
+   "roolit": [
+    "kaikki"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "16.11.2026",
+     "klo": "19.27",
+     "lahde": "P-261116-27",
+     "sanat": "kyllä ajoja voi tehdä päivällä jos ne liittyvät rakentamiseen. pelkkiä tarkistusajoja saa ajaa vain yöllä. ja jos jonoa kertyy niin sitten session kannattaa ottaa jokin toinen työ tehtäväksi jonotuksen ajaksi.",
+     "sha": "42246ffc0831b7cf",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T12:54:51.288Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }
