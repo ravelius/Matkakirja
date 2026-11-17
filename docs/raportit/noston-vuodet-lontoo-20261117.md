@@ -26,6 +26,14 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 - Johnsonin Gough Square -talo vuokrattu n. 1748–49 (teksti ei väitä vuotta).
 - Nollalöydös: yksi hakutulossivu (cavac.at) sisälsi tekoälylle osoitetun upotetun komennon; tarkistaja ei noudattanut, eikä se vaikuttanut tuloksiin.
 
+## KK:n päätökset 17.34 (PR 7048 luettu; toteutettu tässä)
+1. Yhden lähteen rivit (Euston 1870, Vanha Westminster 1045–1050) ja isoisän 1873-rivit jäävät; toinen lähde tekstikierroksen listaan.
+2. "Noin" näkyy ruudulla: vuosi-kenttä "n. 1078", "n. 1045–1050", "n. 1600".
+3. Selitteet: Cheapside "smaragdikello", Metro "muistolaatta".
+4. Selitteet, jotka kortilla voi lukea väärin: Victoria Memorial "palatsin julkisivu", Albert Memorial "paloi Sydenhamissa", Vanha Westminster "uusi palatsi alkoi", Tower Bridge "London Bridge myyty", Greenwich "Henrik VIII:n häät", Lontoon palo "suurpalo alkoi", Old St Paul's "suurpalo".
+5. Hendrix: KK pyysi ruudulle "1968–1969"; testin sääntö (kaikkien vuosilukujen oltava kohdassa) ei salli, koska tekstissä on "1968–69". Rivi on "1968–69" (SK, KK:lle tiedoksi).
+6. Tekstihuomiot kaikki tekstikorjauslistaan (`tekstikorjauslista-vuosirivit-20261117.md`), lisäksi Newgate "kymmeniä" → "noin kolmekymmentä" ja palon syy yhdellä sanalla (lovipuut / kuittikepit / veropuikot).
+
 ## Rivit nostoittain
 
 ### Greenwichin palatsi
@@ -35,7 +43,7 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 | – Henrik VIII syntyi 1491 | (1491 | Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni täällä naimisiin Anna Clevesiläisen kanssa 1540. |
 | – Maria I syntyi 1516 | (1516 | Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni täällä naimisiin Anna Clevesiläisen kanssa 1540. |
 | – Elisabet I syntyi 1533 | (1533 | Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni täällä naimisiin Anna Clevesiläisen kanssa 1540. |
-| – naimisiin 1540 | kanssa 1540 | Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni täällä naimisiin Anna Clevesiläisen kanssa 1540. |
+| – Henrik VIII:n häät 1540 | kanssa 1540 | Täällä syntyivät Henrik VIII (1491), Maria I (1516) ja Elisabet I (1533), ja Henrik VIII meni täällä naimisiin Anna Clevesiläisen kanssa 1540. |
 
 ### Newgaten vankila
 
@@ -61,9 +69,9 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
-| – Edvard rakennutti 1045–1050 | noin 1045–1050 | Edvard Tunnustaja rakennutti sen noin 1045–1050, ja vanhin säilynyt osa, Westminster Hall, on Vilhelm II:n ajalta. |
+| – Edvard rakennutti n. 1045–1050 | noin 1045–1050 | Edvard Tunnustaja rakennutti sen noin 1045–1050, ja vanhin säilynyt osa, Westminster Hall, on Vilhelm II:n ajalta. |
 | – palatsi paloi 1834 | päivänä 1834 | Lokakuun 16. päivänä 1834 ylikuumentunut uuni, jolla poltettiin valtiokonttorin lovipuiden eli kuittikeppien kasaa, sytytti Ylähuoneen salin. |
-| – rakennus alkoi 1840 | alkoivat 1840 | Tilalle nousi Charles Barryn suunnittelema uusi palatsi, jonka rakennustyöt alkoivat 1840 ja kestivät noin 30 vuotta; sen kellotornia kutsutaan Big Beniksi. |
+| – uusi palatsi alkoi 1840 | alkoivat 1840 | Tilalle nousi Charles Barryn suunnittelema uusi palatsi, jonka rakennustyöt alkoivat 1840 ja kestivät noin 30 vuotta; sen kellotornia kutsutaan Big Beniksi. |
 
 ### Old St Paul's
 
@@ -71,7 +79,7 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 |---|---|---|
 | – rakentaminen alkoi 1087 | vuonna 1087 | Sen rakentaminen alkoi vuonna 1087 edellisen kirkon palon jälkeen, ja se valmistui vuonna 1314. |
 | – torni paloi 1561 | vuonna 1561 | Katedraalin torni paloi vuonna 1561. |
-| – suuri palo 1666 | vuonna 1666 | Lontoon suuri palo tuhosi koko rakennuksen vuonna 1666. |
+| – suurpalo 1666 | vuonna 1666 | Lontoon suuri palo tuhosi koko rakennuksen vuonna 1666. |
 | – nykyinen valmistui 1710 | vuonna 1710 | Sen tilalle rakennettiin Christopher Wrenin suunnittelema nykyinen St Paulin katedraali, joka valmistui vuonna 1710. |
 | – isoisän vuosi 1873 | vuonna 1873 | Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteensataan vuoteen. |
 
@@ -131,7 +139,7 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
-| – tornin rakennus 1078 | noin 1078 | Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. |
+| – tornin rakennus n. 1078 | noin 1078 | Vilhelm Valloittaja alkoi rakentaa Valkoista tornia noin 1078 pitämään juuri valloitettua Lontoota kurissa. |
 | – Boleyn mestattiin 1536 | Boleyn 1536 | Tower Greenillä mestattiin kolme kuningatarta, ensimmäisenä Anne Boleyn 1536. |
 
 ### British Museum
@@ -157,7 +165,7 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 |---|---|---|
 | – Viktoria kuoli 1901 | tammikuussa 1901 | Kuningatar Viktoria kuoli tammikuussa 1901 hallittuaan 63 vuotta. |
 | – paljastus 1911 | paljastettiin 1911 | Muistomerkki paljastettiin 1911. |
-| – julkisivu uusittiin 1913 | uudelleen 1913 | Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. |
+| – palatsin julkisivu 1913 | uudelleen 1913 | Se muurattiin uudelleen 1913 vaaleasta Portlandin kivestä, jotta palatsi sopisi muistomerkin taustaksi. |
 
 ### Royal Albert Hall
 
@@ -175,7 +183,7 @@ Samat kuin Pariisissa: selite 1–3 sanaa, ≤ 20 merkkiä, sama asia kuin virke
 |---|---|---|
 | – Albert kuoli 1861 | kuoli 1861 | Prinssi Albert kuoli 1861 vain 42-vuotiaana. |
 | – Kristallipalatsi 1851 | Parkissa 1851 | Näyttelyn Kristallipalatsi seisoi lähellä Hyde Parkissa 1851. |
-| – palatsi paloi 1936 | paloi 1936 | Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. |
+| – paloi Sydenhamissa 1936 | paloi 1936 | Se purettiin ja koottiin uudelleen Sydenhamiin Etelä-Lontooseen, missä se paloi 1936. |
 
 ### Kensingtonin palatsi
 
@@ -250,7 +258,7 @@ Ei rivejä (tekstissä ei vuosia).
 
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
-| – vanha London Bridge 1968 | myytiin 1968 | Kun vanha London Bridge myytiin 1968 amerikkalaiselle liikemiehelle ja koottiin uudelleen Arizonaan, syntyi tarina, että ostaja luuli saavansa juuri tämän sillan. |
+| – London Bridge myyty 1968 | myytiin 1968 | Kun vanha London Bridge myytiin 1968 amerikkalaiselle liikemiehelle ja koottiin uudelleen Arizonaan, syntyi tarina, että ostaja luuli saavansa juuri tämän sillan. |
 
 ### Etelämeren kupla
 
@@ -263,7 +271,7 @@ Ei rivejä (tekstissä ei vuosia).
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
 | – laatikko esiin 1912 | Vuonna 1912 | Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside, Friday Streetin kulmassa, ja lattian alta tuli puinen laatikko. |
-| – sveitsiläinen kello 1600 | vuoden 1600 | Oudoin esine on kellonkuori, joka oli koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. |
+| – smaragdikello n. 1600 | vuoden 1600 | Oudoin esine on kellonkuori, joka oli koverrettu yhdestä suuresta kolumbialaisesta smaragdista ja jonka sisään oli sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. |
 | – arvonimi saatiin 1640 | marraskuussa 1640 | Yksi pieni sinettikivi kertoo, milloin laatikko pantiin maahan: siinä on Staffordin viscountin vaakuna, ja arvonimen hän sai vasta marraskuussa 1640. |
 | – talo paloi 1666 | syyskuussa 1666 | Kellarin päällä ollut talo paloi Lontoon suurpalossa syyskuussa 1666. |
 
@@ -309,7 +317,7 @@ Ei rivejä (tekstissä ei vuosia).
 
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
-| – Pepys joella 1666 | syyskuuta 1666 | Thamesilla on sunnuntai 2. syyskuuta 1666. |
+| – suurpalo alkoi 1666 | syyskuuta 1666 | Thamesilla on sunnuntai 2. syyskuuta 1666. |
 
 ### Shakespeare 1599
 
@@ -323,7 +331,7 @@ Ei rivejä (tekstissä ei vuosia).
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
 | – metro avattiin 1863 | tammikuuta 1863 | Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. |
-| – pronssilaatta 1963 | vuonna 1963 | Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963. |
+| – muistolaatta 1963 | vuonna 1963 | Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963. |
 
 ### Exchange Alley
 

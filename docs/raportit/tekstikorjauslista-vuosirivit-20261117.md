@@ -15,3 +15,16 @@ Kaulanauha: 1,6 milj. livreä (en.wiki 2 milj.); Metro: "jäljellä 88" (en.wiki
 - Les Halles 1183: yksi lähde antaa 1181 markkinan siirrolle.
 - Luxembourgin puisto 1612 (kartano ostettu): Universalis 1611.
 - Palais d'Orsay "Napoleon aloitti 1810": Napoleon.org 1808 (päätös); rakentaminen 1810.
+
+## Lontoo (PR 7048; KK 17.34: kaikki kohdat listaan)
+**Korjattava:**
+1. **Newgate** (`hahmotelma-newgate`): "väkijoukon ryntäys tappoi kymmeniä" → "noin kolmekymmentä" (lähteet 27–34; vuosi 1807 ja ~40 000 hengen yleisö OK).
+2. **Palon syy yhdellä sanalla** kahdessa tekstissä: `hahmotelma-westminster-vanha` sanoo "valtiokonttorin lovipuiden eli kuittikeppien", `nahtavyys:lontoo:Westminsterin palatsi` "vanhoja puisia veropuikkoja" → valitaan yksi sana.
+3. **Westminster Abbey**: "Munkit asuivat luostarissa vielä lähes kolmesataa vuotta" epätarkka (munkit vuoteen 1540 noin 580 v; 295 vain 1245:stä); "Henrik III purki Edvardin kirkon" yksinkertaistus (osa jäi pystyyn); "Chaucer ensimmäisenä Runoilijoiden nurkkaan" ei vahvistu (Abbey: perinne alkoi Spenserin hautauksesta, Chaucer haudattiin työnsä vuoksi); kruunajaistuoli "noin 1300" (Edvard I tilasi 1296).
+4. **Natural History Museum**: Richard Owenin "luonnon katedraali" -lainaus ei vahvistunut.
+5. **Metron höyryveturi**: muistolaatta on seinässä Marylebone Roadilla (Baker Streetin aseman kohdalla), ei "kadun pinnassa"; materiaali vahvistamatta.
+6. **Exchange Alley**: yhtiön yksinoikeus oli orjakauppa (asiento); teksti "kauppaan Espanjan Etelä-Amerikan kanssa" pelkistetty.
+7. **Cheapsiden kätkö**: "sveitsiläinen" kellokoneisto vain Wikipediassa (London Museum: smaragdikuorinen kello 1600–1610).
+8. **Liukumäkiveistos**: "maailman pisin tunneliliukumäki" on operaattorin väite (Dezeen: "Europe's tallest and longest tunnel slide") → "kutsutaan maailman pisimmäksi".
+9. **Toinen lähde puuttuu**: Euston Arch 1870 (nimi kultakirjaimin; Wikipedia ja kopio), Vanha Westminsterin palatsi n. 1045–1050 (Wikipedia).
+**Lisähuomiot:** Euston Arch "suunnitteli 1837" (rakennus usein 1838); Greenwich: Kaarle II:n päätös 1660 vain Wikipediassa (Webb tilattiin 1661; rivi poistettu); Johnsonin Gough Square -talo vuokrattu n. 1748–49.

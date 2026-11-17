@@ -1856,6 +1856,12 @@ export const EUROOPAN_KADONNEET = {
         + 'keksitehtaana ja sotavankileirinä. Kaarle II päätti 1660 rakentaa sen uudelleen, mutta vain '
         + 'itäsiipi valmistui, eikä sitä koskaan asuttu; suurin osa palatsista purettiin. Palatsin alueelle '
         + 'Inigo Jonesin suunnittelema Queen\'s House valmistui 1635, ja se on yhä pystyssä.',
+      vuodet: [
+        { kohta: '(1491', vuosi: '1491', selite: 'Henrik VIII syntyi' },
+        { kohta: '(1516', vuosi: '1516', selite: 'Maria I syntyi' },
+        { kohta: '(1533', vuosi: '1533', selite: 'Elisabet I syntyi' },
+        { kohta: 'kanssa 1540', vuosi: '1540', selite: 'Henrik VIII:n häät' },
+      ],
       lahde: 'en-Wikipedia "Palace of Placentia", johdanto ja osiot "History" ja "Archaeology"; "Queen\'s '
         + 'House", osio "Early history" (tarkistettu 31.10.2026).',
       kuva: 'ihme-greenwich-palatsi-loistoaika.jpg',
@@ -1886,6 +1892,13 @@ export const EUROOPAN_KADONNEET = {
         + 'teloitukset siirtyivät muurien sisälle. Vankila oli käytössä isoisän käydessä 1873, ja Dickens '
         + 'sijoitti sen useisiin romaaneihinsa. Se purettiin 1902–1904, ja Old Bailey -oikeustalo on '
         + 'rakennettu suureen osaan sen paikkaa.',
+      vuodet: [
+        { kohta: 'perustettiin 1188', vuosi: '1188', selite: 'perustettiin' },
+        { kohta: 'vuonna 1807', vuosi: '1807', selite: 'väkijoukon ryntäys' },
+        { kohta: 'toukokuuta 1868', vuosi: '1868', selite: 'viimeinen julkinen' },
+        { kohta: 'käydessä 1873', vuosi: '1873', selite: 'isoisän käynti' },
+        { kohta: 'purettiin 1902–1904', vuosi: '1902–1904', selite: 'purettiin' },
+      ],
       lahde: 'en-Wikipedia "Newgate Prison", johdanto sekä osiot "History", "Executions" ja "Closure" '
         + '(tarkistettu 31.10.2026).',
       kuva: 'ihme-newgate-loistoaika.jpg',
@@ -1916,6 +1929,13 @@ export const EUROOPAN_KADONNEET = {
         + 'purkamisen maksavan 12 000 ja siirtämisen 190 000 puntaa, ja pääministeri Harold Macmillan '
         + 'hylkäsi pelastajien esityksen. Purku alkoi käsin saman vuoden lopulla. Kivet päätyivät Lea-joen '
         + 'pohjaan, ja Dan Cruickshank löysi vähintään 60 prosenttia niistä 1994.',
+      vuodet: [
+        { kohta: 'rautatieyhtiölle 1837', vuosi: '1837', selite: 'portti suunniteltiin' },
+        { kohta: 'siihen 1870', vuosi: '1870', selite: 'nimi lisättiin' },
+        { kohta: 'sen 1873', vuosi: '1873', selite: 'isoisä näki' },
+        { kohta: 'Vuonna 1961', vuosi: '1961', selite: 'purku alkoi' },
+        { kohta: 'niistä 1994', vuosi: '1994', selite: 'kiviä löytyi' },
+      ],
       lahde: 'en-Wikipedia "Euston Arch", johdanto sekä osiot "Architecture and construction", "Removal" ja '
         + '"Remains" (tarkistettu 31.10.2026).',
       kuva: 'ihme-euston-arch-loistoaika.jpg',
@@ -1947,6 +1967,11 @@ export const EUROOPAN_KADONNEET = {
         + 'kääntyminen pelastivat Westminster Hallin. Maalari J. M. W. Turner katseli paloa ja maalasi '
         + 'siitä useita tauluja. Tilalle nousi Charles Barryn suunnittelema uusi palatsi, jonka '
         + 'rakennustyöt alkoivat 1840 ja kestivät noin 30 vuotta; sen kellotornia kutsutaan Big Beniksi.',
+      vuodet: [
+        { kohta: 'noin 1045–1050', vuosi: 'n. 1045–1050', selite: 'Edvard rakennutti' },
+        { kohta: 'päivänä 1834', vuosi: '1834', selite: 'palatsi paloi' },
+        { kohta: 'alkoivat 1840', vuosi: '1840', selite: 'uusi palatsi alkoi' },
+      ],
       lahde: 'en-Wikipedia "Old Palace of Westminster" (johdanto, "History") ja "Palace of Westminster", osio '
         + '"History > Fire and reconstruction" (tarkistettu 31.10.2026).',
       kuva: 'ihme-westminster-vanha-loistoaika.jpg',
@@ -1982,6 +2007,12 @@ export const EUROOPAN_KADONNEET = {
         + 'valtionhallinnon Cabinet Officen rakennuksen sisällä. Palatsia ei koskaan '
         + 'rakennettu '
         + 'uudelleen.',
+      vuodet: [
+        { kohta: 'haltuunsa 1530', vuosi: '1530', selite: 'Henrik otti haltuun' },
+        { kohta: 'valmistui 1622', vuosi: '1622', selite: 'juhlasali valmis' },
+        { kohta: 'vuonna 1649', vuosi: '1649', selite: 'Kaarle I mestattiin' },
+        { kohta: 'päivänä 1698', vuosi: '1698', selite: 'palatsi paloi' },
+      ],
       lahde: 'en-Wikipedia "Palace of Whitehall", johdanto sekä osiot "History", "Destruction" ja "Present '
         + 'day" (tarkistettu 31.10.2026).',
       kuva: 'ihme-whitehall-loistoaika.jpg',
