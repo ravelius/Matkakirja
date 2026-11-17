@@ -201,12 +201,13 @@ export const KAARI_PAKETIT = {
           '17. syyskuuta 1873',
         ],
         oikea: 0,
+        // Sama sisältö kuin täkynostossa `maailmannayttely-1873` (js/packs/fokusvirta-wien.js, sääntö 11, SK 17.11.2026): keisarin
+        // puhe, "120 pankkia" ja poliisin sulkema pörssi kello 13 eivät täyttäneet kahden lähteen sääntöä.
         fakta: 'Keisari Franz Joseph avasi näyttelyn 1. toukokuuta '
-          + '1873 sanoen, että maa on kaikin puolin ilahduttavassa '
-          + 'nousussa. Kahdeksan päivää myöhemmin, 9. toukokuuta, '
-          + 'kaatui aamupäivän aikana 120 pankkia, ja kello 13 '
-          + 'poliisi sulki pörssin. Päivä on Itävallan historian '
-          + 'musta perjantai.',
+          + '1873. Kahdeksan päivää myöhemmin, perjantaina 9. toukokuuta, '
+          + 'eräs arvostettu wieniläinen kommissiotalo ilmoitti '
+          + 'maksukyvyttömyydestään, ja pörssin kurssit romahtivat. '
+          + 'Päivä tunnetaan Itävallan historiassa nimellä musta perjantai.',
       },
       aarre: 'Kätkön päällä seisoi kolmas lyhty, ja Anton puhui portaita '
         + 'kohti: "Veto tulee ovesta, jota ei minun aikanani ole avattu '
@@ -795,14 +796,14 @@ export const KAARI_PAKETIT = {
        * Alpit), joten Amsterdam, Islanti, Tallinna ja Tromssa vievät
        * paletin muihin päätyyppeihin.
        *
-       * FAKTAT: nostopuu (hijsbalk), kapeat jyrkät portaat ja
-       * julkisivuleveyden mukaan peritty vero — kaikki pelin omasta
-       * tarkistetusta aineistosta, js/packs/fokusvirta-amsterdam.js:n
+       * FAKTAT: nostopuu (hijsbalk) ja kapeat jyrkät portaat — pelin
+       * omasta tarkistetusta aineistosta, js/packs/fokusvirta-amsterdam.js:n
        * oppitunti ja js/packs/kulttuuri-kategoriat.js, amsterdam/kaupunki.
+       * Verolegenda (julkisivun leveyden mukaan peritty vero) poistettu
+       * 16.11.2026: mikään lähde ei yhdistä sitä Oude Hoogstraat 22:n
+       * kapeuteen (docs/raportit/amsterdam-virheet-muualla-20261116.md).
        */
-      saapuminen: 'Mittasin yhden talon nojauksen ja sain kaksi jalkaa: se '
-        + 'kallistuu kadulle tahallaan, jottei nostettava tavara kolhisi '
-        + 'julkisivua. Yöllä päädyn koukussa riippui köysi ilman kuormaa. '
+      saapuminen: 'Katsoin yhtä kanavataloa kadulta. Yöllä päädyn koukussa riippui köysi ilman kuormaa. '
         + 'Aamulla samassa köydessä laskeutui arkku, joka pysähtyi ikkunani '
         + 'kohdalle ja kääntyi hitaasti ympäri. Kyljessä oli lappu: väärä '
         + 'kerros.',
@@ -823,11 +824,10 @@ export const KAARI_PAKETIT = {
           'Tulvan aikaan siihen kiinnitettiin veneiden köydet',
         ],
         oikea: 1,
-        fakta: 'Kiinteistövero perittiin julkisivun leveydestä, joten talot '
-          + 'tehtiin kapeiksi ja portaista tuli jyrkkiä kuin tikkaat. '
+        fakta: 'Kanavien varren talot ovat kapeita ja syviä, ja niiden '
+          + 'portaat ovat jyrkät ja kapeat. '
           + 'Päädystä ulos työntyvää palkkia sanotaan nostopuuksi, '
-          + 'hijsbalk, ja sen koukun varassa sohvat ja kaapit hilataan yhä '
-          + 'sisään ikkunasta. Talot rakennettiin siksi hieman etunojaan.',
+          + 'hijsbalk, ja sen koukun varassa sohvat ja kaapit hilataan yhä sisään ikkunasta.',
       },
       aarre: 'Kätkö oli kanavan reunassa, pollarin alla olevassa '
         + 'syvennyksessä. Yara hymähti rasian painolle: "Kevyempi kuin '

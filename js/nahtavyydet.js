@@ -1163,7 +1163,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
       tahti.setAttribute('aria-hidden', 'true');
       piirraNostosymboli(el('g', {}, tahti), 'ihme');
       ihmeselite.appendChild(tahti);
-      ihmeselite.appendChild(document.createTextNode('Matkakirjan ihme'));
+      ihmeselite.appendChild(document.createTextNode('Kadonnut aarre'));
       ihmeselite.setAttribute('aria-hidden', 'true');
       kehys.appendChild(ihmeselite);
     }

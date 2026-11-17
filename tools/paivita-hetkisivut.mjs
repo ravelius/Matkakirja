@@ -57,7 +57,8 @@ const RIVIN_MITTA = 84;
 
 /** Merkkijono JS-lähteeksi hipsuineen ja pakomerkkeineen. */
 function hipsuissa(teksti) {
-  return `'${String(teksti).replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
+  // Kappalerajat (\n\n) kirjoitetaan pakomerkkeinä, jotta rivinvaihto ei riko merkkijonoa (Wienin 10 tarinapaikkaa, 17.11.2026).
+  return `'${String(teksti).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n')}'`;
 }
 
 /**

@@ -246,9 +246,9 @@ async function ajo(nimiLaite, viewport) {
 
   const ihme = await AVAA(sivu, 'ihme-lippu');
   vaadi(`${nimiLaite}: ihmekortin rivi avaa IHMEVARIANTIN`,
-    ihme.otsikko === 'Mihin ihmeen kuva perustuu?', ihme.otsikko);
+    ihme.otsikko === 'Mihin aarteen kuva perustuu?', ihme.otsikko);
   vaadi(`${nimiLaite}: ihmevariantti — hyväksytty aloitus`,
-    ihme.teksti.includes('Kadonneesta ihmeestä ei ole valokuvaa'));
+    ihme.teksti.includes('Kadonneesta aarteesta ei ole valokuvaa'));
   vaadi(`${nimiLaite}: ihmevariantti — kolme kappaletta`, ihme.kappaleita === 3);
   vaadi(`${nimiLaite}: ihmevariantin luokka erottuu`, ihme.luokka.includes('havainnekuva-ihme'));
 
@@ -258,7 +258,7 @@ async function ajo(nimiLaite, viewport) {
 
   const ihmeTeksti = await AVAA(sivu, 'ihme-teksti');
   vaadi(`${nimiLaite}: "loistoaikansa asussa" avaa myös ihmevariantin`,
-    ihmeTeksti.otsikko === 'Mihin ihmeen kuva perustuu?', ihmeTeksti.otsikko);
+    ihmeTeksti.otsikko === 'Mihin aarteen kuva perustuu?', ihmeTeksti.otsikko);
 
   // Sulkeutuminen: ruksi vie ikkunan pois DOMista.
   const suljettu = await sivu.evaluate(async () => {

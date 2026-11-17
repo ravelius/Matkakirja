@@ -11,13 +11,13 @@ SÄÄNNÖT:
 6. Tulos lähtee omana viestinä samassa vuorossa; tiedosto tai vuoron loppuviesti ei tavoita ketään. [P-261107-2] [P-261101-2]
 7. Löydöksestä numero, tila, commit ja kuvan polku; raportin päivittää omistajansa. [R-7.24]
 8. Nollatun vastaanottajan uusi tunnus haetaan osoitekirjasta tai sessiolistasta, ja viesti lähetetään heti uudelleen. Estyneet kanavat: posti, Postivahti välittää. [R-7.23] [R-12.20]
-9. Jumiviestissä tilanne, vaihtoehdot ja suositus; hylätty lupa: avaimet-ja-luvat. Yli 30 min hiljaisen roolin tapahtumat luetaan ensin. [R-7.25]
+9. Jumiviestissä tilanne, vaihtoehdot ja suositus; hylätty lupa: avaimet-ja-luvat. Yli 30 min hiljaisen tapahtumat luetaan ensin. [R-7.25]
 10. Postivahti herättää PT:n (lepo, tyhjäkäynti, Codex-posti, levy, TestFlight) ja kytkee pudonneen etäohjauksen. [R-7.38] [P-261116-22]
 11. Codex-posti kulkee vain postilaatikkohaarassa. Vastaamaton Codex-viesti: 30 min PT vastaa, 60 min KK; kuittaamaton tilaus 60 min: rivi KK:lle. [R-7.18] [P-261031-1]
 12. Yhteisen ominaisuuden rajapinnasta sovitaan ennen rinnakkaista työtä; toisen tiedostoja ei paikata hiljaa. [R-7.17]
 13. Ennen isoa erää katsotaan muiden haarat; toinen asiassa: sovitaan ennen koodia. [R-7.28]
-14. PT harkitsee eikä sovella sääntöä sokeasti. Käskyssä on ehdon lähde; PT:n oma ehto puretaan, jos se estää omistajan sanat. Yöllä PT kysyy KK:lta. [R-7.35] [R-9.5]
-15. Yö on 23–08 kaikille rooleille. Omistajan hyvän yön toivotus aloittaa yön ja huomenen toivotus päättää sen aiemmin. [P-261113-18]
+14. PT harkitsee eikä sovella sääntöä sokeasti. Käskyssä on ehdon lähde; PT:n oma ehto puretaan, jos se estää omistajan sanat. [R-7.35] [R-9.5]
+15. Työtä ei lykätä kellon mukaan; odotus kirjataan tapahtumana (ajo, sana, tulos), odottava saa heti muuta rakentavaa tai ilmoittaa KK:lle. Levossa > 10 min: PT → KK. [P-261116-28]
 
 EI VIKA:
 - Rooli ei kuittaa saamaansa viestiä.

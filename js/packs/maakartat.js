@@ -5127,12 +5127,15 @@ export const KAUPUNKIKARTAT = {
        * amsterdam); tests/nostot-kartalla.test.mjs vertaa ne merkki
        * merkiltä.
        */
+      // Tarinapaikka KK 16.11.2026 (Amsterdamin 9 tarinapaikkaa, SK:n data-luonnos). Koordinaatti: Nieuwe Uilenburgerstraat 173
+      // (Wikidata 52,369597 / 4,904051; OSM 52,36959 / 4,90407).
       {
-        nimi: 'Timanttihiomo', tyyppi: 'ilmio', lat: 52.3696, lon: 4.904,
+        nimi: 'Timanttihiomo', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3696, lon: 4.904,
         nosto: 'syvennys-amsterdam-timantit',
       },
+      // Tarinapaikka KK 16.11.2026. Piste: merkkimuseon laituri (kopio); hylky on Englannissa, ei kartalla.
       {
-        nimi: 'Amsterdam-laiva', tyyppi: 'esine', lat: 52.3714, lon: 4.9147,
+        nimi: 'Amsterdam-laiva', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 52.3714, lon: 4.9147,
         nosto: 'syvennys-amsterdam-voc-hylky',
       },
       /*
@@ -5144,27 +5147,45 @@ export const KAUPUNKIKARTAT = {
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js).
        */
+      // Tarinapaikat KK 16.11.2026 (Amsterdamin 9 tarinapaikkaa, SK:n data-luonnos): jokaiselle `tarinapaikka` ja `merkki`;
+      // Kapein talo ja Herengracht 537 saivat tyypin 'ilmio' (tarinapaikka vaatii ei-paikan, ks. tools/vienti/lehdet.mjs).
+      // Kapein talo ja Yövartio ovat 116 m päässä toisistaan (sama leveysaste): nimiöt vastakkaisille puolille.
       {
-        nimi: 'Kapein talo', lat: 52.3712, lon: 4.8977,
-        nosto: 'nosto-amsterdamin-kapein-talo',
+        nimi: 'Kapein talo', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3712, lon: 4.8977,
+        nosto: 'nosto-amsterdamin-kapein-talo', nimiPuoli: 'vasen',
       },
       {
-        nimi: 'Maitotyttö', tyyppi: 'taide', lat: 52.3599, lon: 4.885,
+        nimi: 'Maitotyttö', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'taide', lat: 52.3599, lon: 4.885,
         nosto: 'nosto-amsterdamin-maitotytto',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Kissalaiva', tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
+        nimi: 'Kissalaiva', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
         nosto: 'nosto-amsterdamin-kissalaiva',
       },
       {
-        nimi: 'Herengracht 537', lat: 52.3649, lon: 4.8946,
+        nimi: 'Herengracht 537', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3649, lon: 4.8946,
         nosto: 'nosto-amsterdamin-puupaalut',
       },
+      // Yövartion piste on Trippenhuis (Kloveniersburgwal 29), jossa taulu oli 1873 (KK 16.11.2026); ennen Kuninkaanpalatsin
+      // kohdalla (Dam), jossa taulu oli vain 1715–1808. Kapeimman talon kanssa ei enää samaa pistettä, siirto-kenttä pois.
       {
-        nimi: 'Yövartio', tyyppi: 'taide', lat: 52.3731, lon: 4.8913,
+        nimi: 'Yövartio', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'taide', lat: 52.3712, lon: 4.8994,
         nosto: 'nosto-amsterdamin-yovartio',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+        nimiPuoli: 'oikea',
+      },
+      // Uudet tarinapaikat KK 16.11.2026 (korvaavat Rembrandtin talon ja Anne Frankin talon ehdokkaina; ne pysyvät kartalla
+      // nähtävyyksinä). Tyyppi 'ilmio' (ei 'rakennus'), jotta kohde on tarinapaikka eikä nähtävyyskartan paikka.
+      // KOORDINAATTI: 1 lähde, tarkistettava kuvasta (KK 16.11.: yksi lähde riittää yksiselitteiselle rakennukselle).
+      // Portugalilainen synagoga, Mr. Visserplein 3 (Wikidata Q1853707 52,3675 / 4,905278; en-Wikipedia 52,3675 / 4,9054).
+      {
+        nimi: 'Portugalilainen synagoga', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3675, lon: 4.9053,
+        nosto: 'nosto-amsterdamin-portugalilainen-synagoga', nimiPuoli: 'oikea',
+      },
+      // Montelbaanstoren, Oudeschans 2 (Wikidata Q1946061 52,37204 / 4,90563; nl-Wikipedia 52,37194 / 4,90556; en-Wikipedia 52,37206 / 4,90568).
+      {
+        nimi: 'Montelbaanstoren', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.372, lon: 4.9056,
+        nosto: 'nosto-amsterdamin-montelbaanstoren', nimiPuoli: 'oikea',
       },
       // KADONNEET IHMEET (KK 16.11.2026 erä 2): paikat KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
       { nimi: 'Haringpakkerstoren', lat: 52.37917, lon: 4.89528 },
@@ -5810,8 +5831,10 @@ export const KAUPUNKIKARTAT = {
        * Juttu on noston OMA teksti ja kuva sanatarkasti
        * (js/packs/nahtavyysjutut.js, kaupunki wien).
        */
+      // Tarinapaikka KK 17.11.2026 (Wienin 10 tarinapaikkaa, SK:n data-luonnos docs/raportit/wien-10-tarinapaikkaa-dataluonnos-20261116.md). Piste: Hochstrahlbrunnen, Schwarzenbergplatz (Wikidata Q1583230; WGW).
       {
-        nimi: 'Vuoristovesijohto', tyyppi: 'esine', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+        nimi: 'Vuoristovesijohto', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 48.1984, lon: 16.3760,
+        nosto: 'syvennys-wien-vesijohto',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -5826,12 +5849,13 @@ export const KAUPUNKIKARTAT = {
        * wien); tests/nostot-kartalla.test.mjs vertaa ne merkki
        * merkiltä.
        */
+      // Tarinapaikat KK 17.11.2026 (Wienin 10 tarinapaikkaa): jokaiselle `tarinapaikka` ja `merkki`.
       {
-        nimi: 'Klimtin maalaukset', tyyppi: 'taide', lat: 48.2131, lon: 16.3597,
+        nimi: 'Klimtin maalaukset', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'taide', lat: 48.2131, lon: 16.3597,
         nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       },
       {
-        nimi: 'Saliera', tyyppi: 'esine', lat: 48.2036, lon: 16.3619,
+        nimi: 'Saliera', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'esine', lat: 48.2036, lon: 16.3619,
         nosto: 'skandaali-salieran-varkaus',
       },
       /*
@@ -5842,20 +5866,24 @@ export const KAUPUNKIKARTAT = {
        * karttapaikka; juttu on sanatarkasti hetken teksti
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
-      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
+      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle. Piste 48,2039 / 16,3696 (KK 16.11.2026;
+      // Wikidata Q165636 ja WGW täsmäävät). NimiPuoli/siirto tarkistettava kuvasta (Valtionooppera noin 70 m etelään).
       {
-        nimi: 'Beethoven 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
+        nimi: 'Beethoven 1824', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2039, lon: 16.3696,
         nosto: 'hetki-beethoven-yhdeksas-1824',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
+      // Lipizzanit on vain noin 35 m päässä: nimiPuoli/siirto tarkistettava kuvasta (Mozart vasen, Lipizzanit oikea).
       {
-        nimi: 'Mozart 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
+        nimi: 'Mozart 1786', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // Piste 48,2153 / 16,3665: 1877 valmistunut pörssirakennus Schottenring 16 (KK 16.11.2026; Wikidata Q2568865 ja WGW täsmäävät).
+      // Vuoden 1873 väliaikainen pörssitalo (Schottenring 19) ei ole tarkalleen tässä.
       {
-        nimi: 'Wienin krahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
+        nimi: 'Wienin krahi 1873', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2153, lon: 16.3665,
         nosto: 'hetki-wienin-porssikrahi-1873',
         teksti: HISTORIAN_HETKET_ID.get('wienin-porssikrahi-1873').teksti,
       },
@@ -5868,22 +5896,28 @@ export const KAUPUNKIKARTAT = {
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js).
        */
+      // Nimi 'Praterin jättiratas' (KK 16.11.2026; ent. 'Rattaan kulmat'): kulmaväite poistui, ratas 1897, 1873 Rotunde.
       {
-        nimi: 'Rattaan kulmat', tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
+        nimi: 'Praterin jättiratas', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
         nosto: 'nosto-praterin-ratas',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      // Piste 48,2075 / 16,3667 (KK 16.11.2026; Wikidata Q269273 ja WGW täsmäävät); ennen Hofburgin kartan pisteen kohdalla.
       {
-        nimi: 'Lipizzanit', tyyppi: 'esine', lat: 48.2064, lon: 16.3657,
+        nimi: 'Lipizzanit', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.2075, lon: 16.3667,
         nosto: 'nosto-lipizzanit',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
+      // Piste 48,1978 / 16,3661: Freihaustheaterin paikka (KK 16.11.2026; Wikidata Q673479 ja WGW Freihaus/Operngasse 26);
+      // aika 1791, koska teatteri ei toiminut 1873 (viimeinen esitys 1801). WGW:n oma teatterikoordinaatti on 149 m koilliseen.
       {
-        nimi: 'Taikahuilu', tyyppi: 'henkilo', lat: 48.1981, lon: 16.3653,
+        nimi: 'Taikahuilu', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.1978, lon: 16.3661,
         nosto: 'nosto-taikahuilu-wiedenissa',
       },
+      // Piste 48,2135 / 16,3768: Dianabadin paikka (Obere Donaustraße 93; WGW ja Wikidata Q1208912 täsmäävät, KK 16.11.2026).
+      // Vanhan Diana-Salin tarkka paikka korttelin sisällä tarkistettava kuvasta. Straussin patsas (Stadtpark, 1921) vain kuvana.
       {
-        nimi: 'Tonava kaunoinen', tyyppi: 'ilmio', lat: 48.2046, lon: 16.3793,
+        nimi: 'Tonava kaunoinen', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'ilmio', lat: 48.2135, lon: 16.3768,
         nosto: 'nosto-tonava-kaunoinen',
       },
     ],
@@ -6870,7 +6904,7 @@ export const KAUPUNKIKARTAT = {
        * sivulla (v1421).
        */
       {
-        nimi: 'Torre Argentina', lat: 41.8953, lon: 12.4769,
+        nimi: 'Torre Argentina', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.8953, lon: 12.4769,
         nosto: ['syvennys-rooma-kissat', 'nosto-kissat'],
       },
       {
@@ -6889,8 +6923,10 @@ export const KAUPUNKIKARTAT = {
        * rooma); tests/nostot-kartalla.test.mjs vertaa ne merkki
        * merkiltä.
        */
+      // Tarinapaikat KK 17.11.2026 (Rooman 9 tarinapaikkaa, SK:n data-luonnos docs/raportit/rooma-9-tarinapaikkaa-dataluonnos-20261116.md).
+      // Banca Romana: piste Palazzo Maffei Marescotti, Via della Pigna (KK 16.11.2026; ennen 41,9009 / 12,4785); aika 1893. Paikka tarkistettava kuvasta.
       {
-        nimi: 'Banca Romana', tyyppi: 'henkilo', lat: 41.9009, lon: 12.4785,
+        nimi: 'Banca Romana', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.8970, lon: 12.4775,
         nosto: 'skandaali-banca-romana-1893',
       },
       /*
@@ -6904,7 +6940,7 @@ export const KAUPUNKIKARTAT = {
       // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
       // nimiö vasemmalle.
       {
-        nimi: 'Michelangelo 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
+        nimi: 'Michelangelo 1510', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6918,32 +6954,33 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Kolikko olan yli', tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
+        nimi: 'Kolikko olan yli', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-rooman-kolikko',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Areenan kellari', tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
+        nimi: 'Areenan kellari', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
         nosto: 'nosto-colosseumin-kellari',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Norsu ja obeliski', lat: 41.898, lon: 12.4776,
+        nimi: 'Norsu ja obeliski', merkki: 'lyyra', tarinapaikka: true, lat: 41.898, lon: 12.4776,
         nosto: 'nosto-minervan-norsu',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
       {
-        nimi: 'Aqua Virgo', tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
+        nimi: 'Aqua Virgo', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-aqua-virgo',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Nasone', tyyppi: 'esine', lat: 41.8986, lon: 12.4769,
+        nimi: 'Nasone', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 41.8993, lon: 12.4768,
         nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       // KADONNUT IHME (KK 16.11.2026 erä 2): paikka KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
-      { nimi: 'Meta Sudans', lat: 41.8900812, lon: 12.4906909 },
+      // Tarinapaikka KK 17.11.2026: piste 41,89008 / 12,49067 (Wikidata Q1924755 + OSM-relaatio 1835448); tarkistettava kuvasta.
+      { nimi: 'Meta Sudans', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.89008, lon: 12.49067 },
     ],
   },
   krakova: {

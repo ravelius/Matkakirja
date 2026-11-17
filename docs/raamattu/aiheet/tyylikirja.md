@@ -8,7 +8,7 @@ SÄÄNNÖT:
 3. Nykypaikan kuvan on näytettävä aidolta valokuvalta, muuten käytetään tuoretta Commonsin valokuvaa. [R-3.12] [R-4.47]
 4. Loistoaikakuva on puhtaasti omassa ajassaan, ja aikasiirtymä näytetään parina aidon nykyvalokuvan kanssa. Herokuva on tiukasti rajattu. [R-4.47]
 5. Kuvassa ei ole poltettua aikaleimaa, vesileimaa eikä tekstiä, eikä valokuvassa tunnistettavia yksityishenkilöitä; havainnekuvassa historialliset henkilöt sallitaan. [R-2.146] [R-11.16]
-6. Havainnekuva-merkintä ja lähde näkyvät vain suurennoksessa. Ihmeen nauha on vino punainen kaista kuvan vasemmassa yläkulmassa: harvennettua lihavaa kirjaseriffiä isoin kirjaimin. [R-2.146] [R-2.50] [R-4.47]
+6. Havainnekuva-merkintä ja lähde näkyvät vain suurennoksessa. Nauha vain kadonneella kohteella (Kadonnut aarre), säilyneillä ei; vino punainen kaista yläkulmassa, kirjaseriffi isoin. [R-4.47] [P-261117-1]
 7. Värit ovat vain tyylikirjan nimettyjä tokeneita; uusi väri lisätään ensin tokeniksi. [R-4.3]
 8. Lasi on vain linsseissä ja peleissä: yksi yhteinen lasipohja (sumea tausta, kevyt tummennus, ohut vaalea reuna). Peruskartan seepiapohja pysyy; läpinäkyviä vain yksittäiset napit ja lyhyet tekstit. [R-4.5]
 9. Ovaaleja ja kapseleita ei ole: napit, kytkimet ja merkit ovat pyöristettyjä suorakulmioita, kuvakenapit yhtenäisiä pyöristettyjä neliöitä yhdessä ryhmässä. [R-4.6]

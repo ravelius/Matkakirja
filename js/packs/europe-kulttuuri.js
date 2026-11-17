@@ -174,9 +174,9 @@ export const EUROPE_KULTTUURI = {
         'Painovoimalla — putki laskee koko matkan',
       ],
       correct: 3,
-      fact: 'Kaltevuus oli paikoin vain 30 senttiä kilometrillä. Kaaret '
-        + 'rakennettiin juuri siksi: laakson yli piti pitää putki '
-        + 'täsmälleen oikeassa kulmassa.',
+      fact: 'Kaltevuus oli hyvin loiva. Kaaret rakennettiin juuri siksi: '
+        + 'laakson yli piti kuljettaa vesi niin, että se laski koko '
+        + 'matkan alamäkeen.',
     },
   },
 
@@ -421,17 +421,19 @@ export const EUROPE_KULTTUURI = {
      * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
-      q: 'Miksi Amsterdamin vanhat kanavatalot ovat niin kapeita?',
+      q: 'Amsterdamin kapein koko talo on Oude Hoogstraat 22. Kuinka '
+          + 'leveä sen julkisivu on?',
       options: [
-        'Kanavan varrella ei ollut tilaa leveämmille',
-        'Kapea talo kesti tulvat paremmin',
-        'Kiinteistövero laskettiin julkisivun leveydestä',
-        'Laki kielsi yli kolme metriä leveät talot',
+        'Vajaa metri',
+        'Hieman yli kaksi metriä',
+        'Lähes kolme ja puoli metriä',
+        'Lähes viisi metriä',
       ],
-      correct: 2,
-      fact: '1600-luvulla vero määräytyi julkisivun leveyden mukaan, joten '
-              + 'rakennettiin kapeaa ja syvää. Kapein talo, Oude Hoogstraat 22, '
-              + 'on 2,02 metriä leveä — ja siinä toimii nykyään kauppa.',
+      correct: 1,
+      fact: 'Oude Hoogstraat 22:n julkisivu on 2,02 metriä leveä ja talo '
+              + 'viisi metriä syvä, ja nykyään siinä on teekauppa. '
+              + 'Singel 7:n talon takajulkisivu on vain noin metrin '
+              + 'levyinen, mutta etuosa on selvästi leveämpi.',
     },
   },
 
