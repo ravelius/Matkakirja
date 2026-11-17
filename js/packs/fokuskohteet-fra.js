@@ -484,19 +484,21 @@ export const FOKUSKOHTEET_FRA = [
       },
     },
     /*
-     * KYSYMYS: hetken `ranskan-vallankumous-bastilji-1789` tehtävä siirretty tähän, koska pisteellä on
-     * yksi nosto ja yksi visa. Hetken oma sivu lehdessä pysyy ennallaan.
+     * KYSYMYS (KK 17.11.2026 21.34): paikan oma kysymys koskee tarinan käännettä (purku); historian hetken
+     * ruutivisa jää hetken omalle sivulle, eikä paikan kysymys toista sitä. Faktat: Parcours Révolution
+     * (Palloy lähetti työmiehet samana iltana ilman virallista lupaa; puolentoista vuoden päästä ei jäänyt mitään)
+     * ja Hérodote (katsojat irrottivat kiviä torneista jo 14.7. iltana).
      */
     visa: {
-      kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta 1789?',
+      kysymys: 'Milloin Bastiljin purku alkoi?',
       vaihtoehdot: [
-        'Vapauttamaan satoja poliittisia vankeja',
-        'Hakemaan ruutia Invalidien musketteihin',
-        'Vangitsemaan kuninkaan',
-        'Polttamaan verokirjat',
+        'Valtauspäivän iltana',
+        'Vasta vuonna 1792, kun tasavalta julistettiin',
+        'Vasta kuukausien päästä, kun kuningas oli antanut luvan',
       ],
-      oikea: 1,
-      fakta: 'Vankeja oli seitsemän; kuvernööri de Launay antautui ja surmattiin.',
+      oikea: 0,
+      fakta: 'Palloy lähetti työmiehet linnalle ilman virallista lupaa jo 14. heinäkuun iltana; '
+        + 'puolentoista vuoden päästä linnasta ei ollut jäljellä mitään.',
     },
     /*
      * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
