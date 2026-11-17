@@ -3042,26 +3042,22 @@ export const KULTTUURI_KATEGORIAT = {
        * yli puolet kaupungin juomavedestä", jota sivuversiossa ei ole.
        *
        * PUDOTETTU SIVUVERSIONA: "Kahdeksan päivää avajaisista pörssi
-       * suljettiin" — takynosto `maailmannayttely-1873` ("Keisari avasi
-       * maailmannäyttelyn — kahdeksan päivää myöhemmin poliisi sulki
-       * pörssin", FOKUSVIRRAT.wien.takynostot, kaksi kappaletta) kertoo
-       * saman laajempana. Sivuversion väitteet: 1) keisari Franz Joseph
-       * avasi maailmannäyttelyn 1. toukokuuta 1873 sanoen, että
-       * Itävalta-Unkari on kaikin puolin ilahduttavassa nousussa —
-       * takynostossa sanatarkasti; 2) kupla oli jo puhkeamassa, maan suurin
-       * pankki oli juuri irtisanonut pörssitalletukset — takynostossa, ja
-       * laajempana ("ja myynyt 20 miljoonan guldenin arvosta
-       * arvopapereita"); 3) yhdeksäntenä toukokuuta ilmoitti
-       * maksukyvyttömyydestään meklari Adolf Petschek — takynostossa,
-       * laajempana ("jota kutsuttiin meklarikaupan kuninkaaksi"); 4) samana
-       * aamupäivänä kaatui 120 muuta pankkia — sanatarkasti; 5) kello 13
-       * poliisi sulki pörssin — sanatarkasti; 6) romahdus levisi Berliiniin
-       * ja syyskuussa New Yorkiin — takynostossa, laajempana (New Yorkin
-       * pörssi suljettiin ensimmäistä kertaa historiassaan kymmeneksi
-       * päiväksi); 7) odotettiin 20 miljoonaa kävijää, tuli 7,25 miljoonaa,
-       * tappiota noin 15 miljoonaa guldenia — sanatarkasti. KAIKKI
-       * seitsemän löytyvät takynostosta, ja takynosto on joka kohdassa yhtä
-       * laaja tai laajempi. Huom. vastine on pääkartalla (kattoVapaa: true,
+       * suljettiin" — takynosto `maailmannayttely-1873`
+       * (FOKUSVIRRAT.wien.takynostot, kaksi kappaletta) kertoo saman
+       * laajempana. Sääntö 11 (SK 17.11.2026) karsi täkyn kahden lähteen
+       * väitteisiin, eikä sivuversion seitsemän väitettä ole enää kaikki
+       * täkyssä. Täkyssä ovat yhä: 1) keisari Franz Joseph avasi
+       * maailmannäyttelyn 1. toukokuuta 1873; 2) Creditanstalt oli myynyt
+       * huhtikuun lopussa arvopapereita 20 miljoonan guldenin arvosta;
+       * 3) perjantaina 9. toukokuuta kommissiotalo ilmoitti
+       * maksukyvyttömyydestään, ilman nimeä; 4) samana päivänä oli 120
+       * maksukyvyttömyyttä (ei "120 pankkia"); 5) odotettiin 20 miljoonaa
+       * kävijää ja tuli noin seitsemän miljoonaa. POIS ovat kaikkialla
+       * (myös tästä sivuversiosta): keisarin puhe, "maan suurin pankki",
+       * meklari Petschekin nimi ja titteli, poliisin sulkema pörssi
+       * kello 13, Berliini ja New York sekä 15 miljoonan tappio. Siksi
+       * sivuversiota ei palauteta, vaan se jää pois ja täky kantaa
+       * väitteet. Huom. vastine on pääkartalla (kattoVapaa: true,
        * paikka Prater/Rotunde 48,2122 / 16,4094, joka jää päärajauksen
        * itäpuolelle) — tämä erä ei muuta sitä eikä ehdota pääkarttaa.
        *

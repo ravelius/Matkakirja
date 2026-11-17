@@ -201,12 +201,13 @@ export const KAARI_PAKETIT = {
           '17. syyskuuta 1873',
         ],
         oikea: 0,
+        // Sama sisältö kuin täkynostossa `maailmannayttely-1873` (js/packs/fokusvirta-wien.js, sääntö 11, SK 17.11.2026): keisarin
+        // puhe, "120 pankkia" ja poliisin sulkema pörssi kello 13 eivät täyttäneet kahden lähteen sääntöä.
         fakta: 'Keisari Franz Joseph avasi näyttelyn 1. toukokuuta '
-          + '1873 sanoen, että maa on kaikin puolin ilahduttavassa '
-          + 'nousussa. Kahdeksan päivää myöhemmin, 9. toukokuuta, '
-          + 'kaatui aamupäivän aikana 120 pankkia, ja kello 13 '
-          + 'poliisi sulki pörssin. Päivä on Itävallan historian '
-          + 'musta perjantai.',
+          + '1873. Kahdeksan päivää myöhemmin, perjantaina 9. toukokuuta, '
+          + 'eräs arvostettu wieniläinen kommissiotalo ilmoitti '
+          + 'maksukyvyttömyydestään, ja pörssin kurssit romahtivat. '
+          + 'Päivä tunnetaan Itävallan historiassa nimellä musta perjantai.',
       },
       aarre: 'Kätkön päällä seisoi kolmas lyhty, ja Anton puhui portaita '
         + 'kohti: "Veto tulee ovesta, jota ei minun aikanani ole avattu '

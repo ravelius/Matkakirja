@@ -630,26 +630,25 @@ export const FOKUSVIRTA_WIEN = {
        * kuuluu pääkartalle.
        */
       kattoVapaa: true,
-      otsikko: 'Keisari avasi maailmannäyttelyn — kahdeksan päivää '
-        + 'myöhemmin poliisi sulki pörssin',
+      // Sääntö 11 (SK 17.11.2026): vain kahden lähteen väitteet. Pois jäivät keisarin puhe (yksi lähde), "maan suurin pankki",
+      // meklari Petschekin nimi ja titteli (vain Rieder), "120 pankkia" (lähteet sanovat 120 maksukyvyttömyyttä/yritystä),
+      // poliisin sulkema pörssi kello 13 (vain WGW ja Austria-Forum/de-Wikipedia), Berliini ja New York, 7,25 miljoonaa ja 15 miljoonan tappio.
+      otsikko: 'Maailmannäyttely avattiin, ja kahdeksan päivää myöhemmin '
+        + 'pörssi romahti',
       lunastus: [
-        'Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 '
-          + 'sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa '
-          + 'nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli '
-          + 'juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan '
-          + 'guldenin arvosta arvopapereita.',
-        'Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään '
-          + 'meklari Adolf Petschek, jota kutsuttiin meklarikaupan '
-          + 'kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja '
-          + 'kello 13 poliisi sulki pörssin — päivä on Itävallan historian '
-          + '”musta perjantai”. Romahdus levisi Berliiniin ja syyskuussa '
-          + 'New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa '
-          + 'historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 '
-          + 'miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi '
-          + 'noin 15 miljoonaa guldenia.',
+        'Keisari Franz Joseph avasi Wienin maailmannäyttelyn 1. toukokuuta '
+          + '1873. Huhtikuun lopussa Creditanstalt oli myynyt arvopapereita '
+          + '20 miljoonan guldenin arvosta.',
+        'Perjantaina 9. toukokuuta 1873 eräs arvostettu wieniläinen '
+          + 'kommissiotalo ilmoitti maksukyvyttömyydestään, ja pörssin kurssit '
+          + 'romahtivat. Samana päivänä maksukyvyttömyyksiä oli '
+          + 'Itävalta-Unkarissa 120. Päivä tunnetaan Itävallan historiassa '
+          + 'nimellä ”musta perjantai”. Näyttelylle odotettiin 20 miljoonaa '
+          + 'kävijää, mutta niitä tuli noin seitsemän miljoonaa, ja näyttely '
+          + 'jätti valtion talouteen suuren aukon.',
       ],
-      lahde: 'de-Wikipedia "Gründerkrach" ja "Weltausstellung 1873" sekä '
-        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026).',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Tourismus, Wien Geschichte Wiki, '
+        + 'Saksan historian museo (DHM) ja Austria-Forum. Tarkistettu 17.11.2026.',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -715,7 +714,7 @@ export const FOKUSVIRTA_WIEN = {
       kysymykset: [
         'Mitä maailmannäyttelyssä 1873 oli nähtävänä?',
         'Mikä aiheutti Wienin pörssiromahduksen?',
-        'Miten romahdus levisi Wienistä New Yorkiin asti?',
+        'Kuinka monta kävijää maailmannäyttelylle odotettiin?',
       ],
       // 48,21222222 N / 16,40944444 E — de-Wikipedia "Rotunde (Wien)",
       // näyttelyn tunnusrakennus Praterin alueella.
