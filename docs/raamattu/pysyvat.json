@@ -378,7 +378,7 @@
     "kaikki"
    ],
    "vartija": "ei vartijaa",
-   "tila": "voimassa",
+   "tila": "pois: P-261117-83",
    "kerrat": [
     {
      "pvm": "17.11.2026",
@@ -391,7 +391,13 @@
      "kirjattu": "2026-11-17T16:00:05.520Z"
     }
    ],
-   "muutokset": []
+   "muutokset": [
+    {
+     "aika": "2026-11-17T16:01:29.882Z",
+     "mita": "pysyva-pois",
+     "omistajan_sana": "P-261117-83"
+    }
+   ]
   }
  ]
 }
