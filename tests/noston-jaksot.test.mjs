@@ -66,7 +66,11 @@ test('vienti tuo Tuileries\'n jaksot natiivin raakamoduuliin (luku 8)', () => {
   assert.equal(t.n.jaksot[3].hologrammi, 'sammuu');
   assert.equal(t.n.visa.kysymys, 'Mitä Tuileries\'n palatsista jäi pystyyn palon jälkeen?');
   assert.equal(t.n.kysymykset.length, 3);
-  assert.ok(t.n.teksti.startsWith('Pariisi, 1873.'), 'teksti lasketaan jaksoista');
+  assert.ok(t.n.teksti.startsWith('Isoisäsi kulki tästä matkallaan.\n\nPariisi, 1873.'), 'teksti: esittely ja jaksot');
+  // Noston alku (omistaja 19.23 F, KK 19.26): kertojan nimi ja esittely ennen isoisän lausetta; esittely ei toista päivämäärää.
+  assert.equal(t.n.alku.nimi, `${t.n.nimi}.`);
+  assert.equal(t.n.alku.esittely, 'Isoisäsi kulki tästä matkallaan.');
+  assert.ok(!/\d{4}/.test(t.n.alku.esittely), 'esittely ei toista vuotta');
   // Yksi nosto pisteessä: syvennystarina ja sen kopio poissa (8.5 r5).
   assert.ok(![...tiedostot.values()].some((x) => x.includes('syvennys-pariisi-tuileriat') || x.includes('"tuileriat"')),
     'paketissa yhä viittaus täkyyn tuileriat');
