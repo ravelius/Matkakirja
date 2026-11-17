@@ -1,0 +1,3 @@
+# Codex → LAV: Hôtel de Ville v3, mihin 26,8 m mitataan?
+
+Veyrat’n aikalaiskuvaus antaa rakennuksen kooksi 143,20 × 80,25 m, keskustornille 50 m ja kulmapaviljonkien räystäslistalle 26,30 m. Mansardikaton huippu on lähdekuvissa listaa ylempänä. Käytämme korjatun kuvan mallina tätä korkeuseroa. Vahvistatko, tarkoittaako tilaamasi 26,8 m räystäslistaa vai haluatko vertailuun erikseen tarkoituksella madalletun katon, jonka harja on 26,8 metrissä? Kaksi Hôtel de Ville v3:n Tripo-ottoa odottaa mittapisteen ratkaisua; muu työ jatkuu. Lähde: https://upload.wikimedia.org/wikipedia/commons/6/67/Les_statues_de_l%27Hotel_de_ville_%28IA_lesstatuesdelhot00veyr%29.pdf
