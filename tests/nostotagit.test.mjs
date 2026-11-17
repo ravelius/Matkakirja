@@ -57,6 +57,23 @@ test('kohdekartat: kohteen ja linkin tagi, tarinapaikka merkin mukaan', () => {
   assert.equal(bastilji?.tagi, 'kadonneet', 'Bastilji on kadonnut');
 });
 
+test('viisi kaupunkia: jokaisella nähtävyydellä tagi datassa, Uskonnot 12 paikkaa (SK 17.11.2026)', () => {
+  const viisi = ['pariisi', 'lontoo', 'amsterdam', 'wien', 'rooma'];
+  const tagittomat = []; const uskonnot = [];
+  for (const kartta of kohdekartat.filter((k) => viisi.includes(k.id))) {
+    for (const k of kartta.kohteet) {
+      if (k.tagi == null) tagittomat.push(`${kartta.id} ${k.nimi}`);
+      if (k.tagi === 'uskonnot') uskonnot.push(`${kartta.id} ${k.nimi}`);
+    }
+  }
+  assert.deepEqual(tagittomat, []);
+  assert.deepEqual(uskonnot.sort(), [
+    'amsterdam Portugalilainen synagoga', 'lontoo Pyhän Paavalin katedraali', 'lontoo Westminster Abbey',
+    'pariisi Notre-Dame', 'pariisi Sacré-Cœur', 'pariisi Saint-Eustache', 'pariisi Sainte-Chapelle',
+    'pariisi Tour Saint-Jacques', 'rooma Pantheon', 'rooma Pietarinkirkko', 'rooma Vatikaanin palatsi', 'wien Stephansdom',
+  ].sort());
+});
+
 test('maataso: tagit täyttävät kolmen paikan rajan suunnitelman verran maita', () => {
   const VIISI = new Set(['pariisi', 'lontoo', 'amsterdam', 'wien', 'rooma']);
   const maat = new Map();
