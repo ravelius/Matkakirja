@@ -5410,6 +5410,8 @@ export const KAUPUNKIKARTAT = {
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
       { nimi: 'Invalidit', tagi: 'historia', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
+      // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `curie-1898` (fokuskohteet-fra.js); entinen tarinapaikka "Curie 1898" (hetki jää piilopisteenä).
+      { nimi: 'Curien vaja', tagi: 'tiede', lat: 48.842, lon: 2.3476, wiki: 'ESPCI Paris', nosto: 'curie-1898' },
       // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `sainte-chapelle` (Kaulanauha 1785 jaksoina).
       { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: 'sainte-chapelle' },
       { nimi: 'Grand Palais', tagi: 'kulttuuri', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
@@ -5507,8 +5509,9 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
       // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
+      // Hetki marie-curie-hangaari-1898 jää (KK-sääntö, kuten Eiffel-torni 1888): piilopiste, ei omaa kylttiä; näkyvä merkki on nähtävyys "Curien vaja".
       {
-        nimi: 'Curie 1898', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
+        nimi: 'Curie 1898', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
         nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
       },
       // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
