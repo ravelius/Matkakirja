@@ -301,7 +301,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        skandaali- ja syvennyskortin "Kysy pululta" -kysymykset (2 per kortti; Pariisi ja Lontoo ensin). Natiivi NostoSisalto lukee ≤ 3
  *        (NUI a970b0d1c); Pulun valmiit avaimilla skandaali:<id> ja syvennys:<kaupunki>-<täky>. Vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.71';
+/*
+ *   1.72 karttavalot.tagi, kohdekartat.kohteet[].tagi ja kohteet[].linkit[].tagi (Pelikoodari 17.11.2026; nostovalikon suunnitelma,
+ *        omistaja 11.46): nostovalikon aihetagi kadonneet | historia | tiede | kulttuuri | luonto | skandaalit | uskonnot | null.
+ *        Datan oma tagi voittaa, muuten johdettu aiheesta tai tarinapaikan merkistä (tools/vienti/tagit.mjs). Natiivi NostoMerkit.Tagit.
+ *        karttavalot.maakuntaNimi = maakunnan nimi suomeksi (nostovalikon maatason maakuntaryhmät). Vanhat buildit ohittavat kentät.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.72';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
