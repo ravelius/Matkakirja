@@ -200,17 +200,22 @@ export const SKANDAALIT = {
       lat: 48.2131, lon: 16.3597,
       // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
       // (87 professoria, syyttäjä 1901, Ledererin tuki, Moserin osto jne.) eivät täyttäneet kahden lähteen sääntöä.
+      // Sääntö 11 (17.11.): kolme kuvaa, professorien vetoomus 1900 ja mustavalkoiset valokuvat: Leopold Museum
+      // (lehdistötiedote 2005) + MedUni Wien (Medizin-sivu) + Wien Tourismus; professorien lukumäärää ei väitetä. Valokuvat ja luonnokset: MedUni Wien ("a few sketches and black-and-white photographs") + Leopold Museumin ja Albertinan kokoelmasivut (KK 17.11., WIEN.md lisätarkistus 1).
       kortti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
         + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
+        + 'Klimt maalasi kolme tiedekuntakuvaa: Filosofian, Lääketieteen ja Oikeustieteen. '
+        + 'Kun Filosofia nähtiin Secession-näyttelyssä vuonna 1900, joukko yliopiston '
+        + 'professoreja vetosi ministeriöön kuvan ripustamista vastaan. '
         + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
-        + 'tiedekuntakuvat tuhoutuivat.'
+        + 'tiedekuntakuvat tuhoutuivat. Niistä on säilynyt mustavalkoisia valokuvia ja Klimtin luonnoksia.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
         + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
         + 'ollut vielä valmis, sillä se avattiin vasta 1884. Maalauksia ei ollut '
         + 'vielä edes tilattu, koska tilaus tuli vasta 1894.',
-      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere. Tarkistettu 16.11.2026.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Leopold Museum, Wienin lääketieteellinen yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere. Tarkistettu 17.11.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`,
         lyhyt: 'Professoreja ja maalaustelineitä Klimtin tiedekuntamaalausten kiistan ajalta.',
