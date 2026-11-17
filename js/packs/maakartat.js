@@ -6998,7 +6998,7 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Porto di Ripetta en-Wikipedia 41,9051 / 12,4750 ja OSM Piazza del Porto di Ripetta 41,9048 / 12,4753).
       // Tarina (KK 17.11.2026 08.11, artikkeli "Näin kadonnut aarre palaa kartalle"): natiivin Tarinanostot/<id>.json; kortin nappi
       // "Näin tämä tehtiin" (NUI). Vienti kohdekartat.kohteet[].tarina.
-      { nimi: 'Porto di Ripetta', tagi: 'kadonneet', lat: 41.9051, lon: 12.475, tarina: 'kadonneet-nain-tehtiin' },
+      { nimi: 'Porto di Ripetta', tagi: 'kadonneet', lat: 41.9051, lon: 12.475, nosto: 'hahmotelma-porto-di-ripetta', tarina: 'kadonneet-nain-tehtiin' },
     ],
   },
   krakova: {

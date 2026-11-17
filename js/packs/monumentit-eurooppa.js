@@ -605,6 +605,35 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'en-Wikipedia "Domus Aurea", johdanto ja historia (tarkistettu 21.9.2026).',
       kuva: 'ihme-domus-aurea-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Domus_Aurea',
     }),
+    /*
+     * PORTO DI RIPETTA (KK 17.11.2026 11.58, valinta a): kortin kuva on PD-valokuva n. 1865 (oikea kuva voittaa tehdyn;
+     * satama oli paikallaan vielä 1873). Nosto syntyi, jotta kortin "Näin tämä tehtiin" -nappi (kohdekartan `tarina`)
+     * näkyy: natiivin nappi vaatii kohteelle nostolinkin (kohteet[].nosto → tämä nosto). Teksti on Rooman kohdekortin
+     * (nahtavyysjutut.js 'Porto di Ripetta') teksti sellaisenaan; uusia faktoja ei ole. Kuvan lähde: paketti
+     * ripetta-nosto-kuva-vienti-20261117 (LAHTEET.md).
+     */
+    ihmeKohde({
+      id: 'porto-di-ripetta',
+      nimi: 'Porto di Ripetta',
+      kysymykset: ['Mistä Porto di Ripettan travertiini otettiin?', 'Miksi Porto di Ripetta purettiin?'],
+      korostukset: ['Clemens XI|Clemens XI:n', 'Alessandro Specchi'],
+      nappi: 'Satama, jonka portaat laskeutuivat Tiberin laitureille',
+      laudat: { maailmankartta: { x: 6249.2, y: 1727.4 }, europe: { x: 450.7, y: 791.5 } },
+      teksti: 'Porto di Ripetta oli Tiberin rannalla Rooman keskustassa seissyt jokisatama. Paavi Clemens XI:n '
+        + 'tilaama Alessandro Specchi suunnitteli sen, ja se valmistui vuonna 1704. Satamassa kaksi kaarevaa '
+        + 'portaikkoa laskeutui laitureille, ja keskellä oli suihkulähde, jossa juotettiin kuormaeläimiä. '
+        + 'Rakennukseen käytettiin travertiinia Colosseumin sortuneista osista. Isoisäsi vuonna 1873 satama '
+        + 'oli vielä paikallaan; se purettiin 1800-luvun lopulla, kun Tiberin rannoille rakennettiin tulvamuurit.',
+      lahde: 'Matkakirjan oma Porto di Ripetta -kortti (nahtavyysjutut.js; lähteinä en-Wikipedia ja Innamorati di Roma), '
+        + 'tarkistettu 17.11.2026.',
+      kuva: 'ihme-porto-di-ripetta-1865.jpg',
+      lyhyt: 'Porto di Ripetta Tiberin rannalla noin vuonna 1865; satama oli paikallaan vielä isoisän vuonna 1873.',
+      selite: 'Noin vuonna 1865 otettu valokuva Porto di Ripettasta Tiberin rannalla. Satama oli paikallaan vielä '
+        + 'isoisän vuonna 1873, ja se purettiin 1800-luvun lopulla tulvamuurien tieltä.',
+      ihmeLahde: 'Valokuva: tuntematon italialainen valokuvaaja, noin 1865, Zeno.org / Wikimedia Commons (public domain). '
+        + 'Faktat: Matkakirjan Porto di Ripetta -kortti (en-Wikipedia ja Innamorati di Roma).',
+      url: 'https://en.wikipedia.org/wiki/Porto_di_Ripetta',
+    }),
   ],
   ESP: [
     ihmeKohde({
