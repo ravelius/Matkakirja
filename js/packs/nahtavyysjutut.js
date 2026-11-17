@@ -10729,6 +10729,11 @@ export const NAHTAVYYSJUTUT = {
           + 'Pietà, joka esittää Neitsyt Mariaa pitelemässä kuollutta '
           + 'Jeesusta sylissään. Se on ainoa teos, johon Michelangelo '
           + 'koskaan kaiversi oman nimensä.',
+      vuodet: [
+        { kohta: 'vuonna 1506', vuosi: '1506', selite: 'rakentaminen alkoi' },
+        { kohta: 'vasta 1626', vuosi: '1626', selite: 'valmistui' },
+        { kohta: 'Vuonna 1950', vuosi: '1950', selite: 'hauta löytyi' },
+      ],
       lainaus: {
         teksti: 'An ornament of the earth ... the sublime of the beautiful '
           + '— Maan kaunistus ... kauneuden ylevin muoto.',
@@ -10786,6 +10791,9 @@ export const NAHTAVYYSJUTUT = {
           + 'kuusi vuotta. Nykyään linnassa käy vuosittain yli miljoona '
           + 'vierasta, ja se on nähty myös oopperassa Tosca, jonka '
           + 'päähenkilö hyppää sen muureilta.',
+      vuodet: [
+        { kohta: 'vuosina 135–139', vuosi: '135–139', selite: 'hauta rakennettiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'RomaCastelSantAngelo.jpg',
@@ -10829,6 +10837,11 @@ export const NAHTAVYYSJUTUT = {
           + '— nykyään talo on hänen museonsa. Portaat ovat sittemmin '
           + 'esiintyneet monissa elokuvissa, muun muassa klassikossa '
           + 'Loma Roomassa (1953) Audrey Hepburnin kanssa.',
+      vuodet: [
+        { kohta: 'vuonna 1660', vuosi: '1660', selite: 'testamentti' },
+        { kohta: 'vuonna 1821', vuosi: '1821', selite: 'Keats kuoli' },
+        { kohta: '(1953', vuosi: '1953', selite: 'Loma Roomassa' },
+      ],
       lainaus: {
         teksti: 'Here lies one whose name was writ in water — Tässä lepää '
           + 'mies, jonka nimi on kirjoitettu veteen.',
@@ -10877,6 +10890,12 @@ export const NAHTAVYYSJUTUT = {
           + 'Lähde on nähty monissa elokuvissa, kuuluisimmin filmissä '
           + 'La Dolce Vita (1960), jossa näyttelijä kahlaa iltapuvussa '
           + 'keskellä allasta.',
+      vuodet: [
+        { kohta: 'vuodesta 19 eaa.', vuosi: '19 eaa.', selite: 'vettä johdettu' },
+        { kohta: 'vasta 1762', vuosi: '1762', selite: 'valmistui' },
+        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'kolikot kerättiin' },
+        { kohta: '(1960', vuosi: '1960', selite: 'La Dolce Vita' },
+      ],
       kuvat: [
         {
           tiedosto: 'Fontaine Trevi - Rome.jpg',
@@ -10919,6 +10938,10 @@ export const NAHTAVYYSJUTUT = {
           + 'toisin kuin monelle muulle antiikin temppelille kävi. '
           + 'Kirkkoon on haudattu myös taidemaalari Raffael sekä '
           + 'Italian ensimmäiset kuninkaat.',
+      vuodet: [
+        { kohta: 'noin vuonna 126', vuosi: 'n. 126', selite: 'uusi temppeli' },
+        { kohta: 'vuonna 609', vuosi: '609', selite: 'muutettiin kirkoksi' },
+      ],
       lainaus: {
         teksti: 'Kaareva katto muistuttaa taivasta.',
         lahde: 'Roomalainen historioitsija Cassius Dio kuvaili näin '
@@ -10982,6 +11005,10 @@ export const NAHTAVYYSJUTUT = {
           + 'kivenryöstäjät veivät osan rakennuksesta — moni '
           + 'keskiaikainen roomalaistalo on muurattu juuri Colosseumin '
           + 'kivistä.',
+      vuodet: [
+        { kohta: 'vuonna 72', vuosi: '72', selite: 'rakentaminen alkoi' },
+        { kohta: 'vuonna 80', vuosi: '80', selite: 'vihkiäiset, perinne' },
+      ],
       lainaus: {
         teksti: 'Quamdiu stat Colisæus, stat et Roma; quando cadet '
           + 'colisæus, cadet et Roma; quando cadet Roma, cadet et '
@@ -11055,6 +11082,13 @@ export const NAHTAVYYSJUTUT = {
         + 'A:n sisään rakennettu San Nicola de\' Cesarini -kirkko seisoi '
         + 'vielä; se purettiin vasta 1926–1929. Kissoja ei ollut vielä, ja '
         + 'kissasuoja tuli vasta 1993.',
+      vuodet: [
+        { kohta: 'vuosina 1926–1929', vuosi: '1926–1929', selite: 'kortteli purettiin' },
+        { kohta: 'vuonna 44 eaa.', vuosi: '44 eaa.', selite: 'Caesar murhattiin' },
+        { kohta: 'Vuonna 1993', vuosi: '1993', selite: 'kissasuoja' },
+        { kohta: 'Vuonna 2012', vuosi: '2012', selite: 'poistovaatimus' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
@@ -11081,6 +11115,11 @@ export const NAHTAVYYSJUTUT = {
         + 'kieltäytyivät näyttäytymästä, ja siunaukset annettiin sisäpihalle. '
         + 'Isoisäsi matkavuonna asia oli tuore ja päällä: Rooma oli ollut Italian '
         + 'pääkaupunki kaksi vuotta ja paavi Vatikaanin vanki kolme.',
+      vuodet: [
+        { kohta: 'syyskuuta 1870', vuosi: '1870', selite: 'Rooma vallattiin' },
+        { kohta: 'Vuoden 1871', vuosi: '1871', selite: 'takuulaki' },
+        { kohta: 'vuotta 1929', vuosi: '1929', selite: 'ei poistuttu ennen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Pius IX, by Adolphe Braun, 1875.jpg',
@@ -11125,6 +11164,13 @@ export const NAHTAVYYSJUTUT = {
         + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
         + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
         + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
+      vuodet: [
+        { kohta: 'vuodenvaihteessa 1892–1893', vuosi: '1892–1893', selite: 'skandaali paljastui' },
+        { kohta: 'Vuonna 1893', vuosi: '1893', selite: 'Banca d’Italia' },
+        { kohta: 'vuonna 1926', vuosi: '1926', selite: 'ainoa setelipankki' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1870', vuosi: '1870', selite: 'Rooma liitettiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Bernardo Tanlongo.jpg',
@@ -11160,6 +11206,9 @@ export const NAHTAVYYSJUTUT = {
         + 'noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian '
         + 'ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja '
         + 'raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.',
+      vuodet: [
+        { kohta: 'vuonna 179 eaa.', vuosi: '179 eaa.', selite: 'Basilica Aemilia' },
+      ],
       kuvat: [
         {
           tiedosto: '2012-02-17 Foro Romano da Palazzo Senatorio 1.jpg',
@@ -11194,6 +11243,13 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 katto oli ollut valmiina jo yli 360 '
         + 'vuotta.',
+      vuodet: [
+        { kohta: 'toukokuussa 1508', vuosi: '1508', selite: 'sopimus tehtiin' },
+        { kohta: 'elokuussa 1510', vuosi: '1510', selite: 'puolisko valmis' },
+        { kohta: 'kesällä 1511', vuosi: '1511', selite: 'yleisölle näytettiin' },
+        { kohta: 'aattona 1512', vuosi: '1512', selite: 'koko katto avattiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Sistine Chapel ceiling 02 (brightened).jpg',
@@ -11227,6 +11283,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
         + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
         + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
+      vuodet: [
+        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'kolikot kerättiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1762', vuosi: '1762', selite: 'lähde valmistui' },
+      ],
       kuvat: [
         {
           tiedosto: 'Trevi Fountain - Roma.jpg',
@@ -11251,6 +11312,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 kellari oli vielä hiekan ja maan '
         + 'peitossa. Kellaria kaivettiin esiin useaan otteeseen 1800-luvulla, muun muassa vuosina 1874–1875.',
+      vuodet: [
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuosina 1874–1875', vuosi: '1874–1875', selite: 'kellaria kaivettiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Hypogeum 1 (15005526662).jpg',
@@ -11288,6 +11353,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 norsu oli seissyt aukiolla jo 206 '
         + 'vuotta.',
+      vuodet: [
+        { kohta: 'vuonna 1667', vuosi: '1667', selite: 'patsas paljastettiin' },
+        { kohta: 'vuonna 1665', vuosi: '1665', selite: 'obeliski löytyi' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Elephant and Obelisk.jpg',
@@ -11316,6 +11386,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 Aqua Virgo oli ollut olemassa yli 1 800 '
         + 'vuotta, ja Trevin suihkulähde, joka valmistui vuonna 1762, sai '
         + 'vetensä siitä jo silloin.',
+      vuodet: [
+        { kohta: 'vuonna 19 eaa.', vuosi: '19 eaa.', selite: 'valmistui' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1762', vuosi: '1762', selite: 'Trevi valmistui' },
+      ],
       kuvat: [
         {
           tiedosto: 'Aqueducts in Rome.jpg',
@@ -11347,6 +11422,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 nasoneja ei ehkä vielä ollut. Turismo '
         + 'Roman ja Acean mukaan ensimmäiset tulivat vuonna 1874, mutta yksi '
         + 'lähde antaa vuodeksi 1872.',
+      vuodet: [
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1874', vuosi: '1874', selite: 'ensimmäiset (Acea)' },
+        { kohta: 'vuodeksi 1872', vuosi: '1872', selite: 'yksi lähde' },
+      ],
       kuvat: [
         {
           tiedosto: 'Nasone in Trastevere, Rome.jpg',
@@ -11380,6 +11460,9 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tiilinen kartio seisoi vielä rauniona '
         + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta noin 60 vuotta myöhemmin.',
+      vuodet: [
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy LOC 4755211890.jpg',

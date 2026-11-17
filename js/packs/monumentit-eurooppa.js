@@ -563,6 +563,10 @@ export const EUROOPAN_KADONNEET = {
         + 'IV kuoli vain pari viikkoa valintansa jälkeen. Paavi Sixtus V käski Domenico Fontanan purkaa '
         + 'julkisivun 1588–1589; kivet käytettiin muun muassa Flaminion obeliskin jalustaan ja Marcus '
         + 'Aureliuksen pylvään korjaukseen.',
+      vuodet: [
+        { kohta: 'vuonna 203', vuosi: '203', selite: 'rakennettiin' },
+        { kohta: 'Vuonna 1241', vuosi: '1241', selite: 'paavinvaali' },
+      ],
       lahde: 'en-Wikipedia "Septizodium", johdanto ja osiot "History" sekä "Demolition"; it-Wikipedia '
         + '"Settizonio", osiot "Descrizione" ja "Storia" (tarkistettu 31.10.2026).',
       kuva: 'ihme-septizodium-loistoaika.jpg',
@@ -596,6 +600,13 @@ export const EUROOPAN_KADONNEET = {
         + 'tiilet 455. Poggio Bracciolini näki hyvin säilyneitä raunioita vielä 1447, mutta 1500-luvulla '
         + 'paikalle rakennettiin Palazzo Caffarelli. Temppelin perustuksia näkyy nykyään Capitolinen '
         + 'museoissa.',
+      vuodet: [
+        { kohta: 'syyskuuta 509 eaa.', vuosi: '509 eaa.', selite: 'vihkiäiset, perinne' },
+        { kohta: '83 eaa.', vuosi: '83 eaa.', selite: 'temppeli paloi' },
+        { kohta: 'aikana 82', vuosi: '82', selite: 'Domitianus uusi' },
+        { kohta: 'tiilet 455', vuosi: '455', selite: 'vandaalit' },
+        { kohta: 'vielä 1447', vuosi: '1447', selite: 'raunioita nähtiin' },
+      ],
       lahde: 'en-Wikipedia "Temple of Jupiter Optimus Maximus", osiot "History", "Remains" ja "Area '
         + 'Capitolina"; voitonkulkueen päätepiste: en-Wikipedia "Roman triumph", johdanto ja osio "Vir '
         + 'triumphalis" (tarkistettu 31.10.2026).',
@@ -663,6 +674,10 @@ export const EUROOPAN_KADONNEET = {
         + 'portaikkoa laskeutui laitureille, ja keskellä oli suihkulähde, jossa juotettiin kuormaeläimiä. '
         + 'Rakennukseen käytettiin travertiinia Colosseumin sortuneista osista. Isoisäsi vuonna 1873 satama '
         + 'oli vielä paikallaan; se purettiin 1800-luvun lopulla, kun Tiberin rannoille rakennettiin tulvamuurit.',
+      vuodet: [
+        { kohta: 'vuonna 1704', vuosi: '1704', selite: 'valmistui' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma Porto di Ripetta -kortti (nahtavyysjutut.js; lähteinä en-Wikipedia ja Innamorati di Roma), '
         + 'tarkistettu 17.11.2026.',
       kuva: 'ihme-porto-di-ripetta-1865.jpg',

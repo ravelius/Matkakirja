@@ -38,3 +38,29 @@ Kaulanauha: 1,6 milj. livreä (en.wiki 2 milj.); Metro: "jäljellä 88" (en.wiki
 6. **Synagoga**: "ensimmäiset neljä peruskiveä" ja "valurautakehyksiset ikkunat" eivät vahvistu (peruskivi 17.4.1671); arkkitehti Bouman/Bouwman.
 7. **Kissalaiva**: alkuvuosi 1966 ei vahvistu (depoezenboot.nl "since 1968"); rivi poistettu.
 8. **Montelbaanstoren**: "luultavasti de Keyser" (presumed) kantaa epävarmuuden tekstissä.
+
+## Wien (PR 7050; PT 17.53: huomiot 1–9 listaan)
+1. **Kärntnertor-teatteri:** WGW antaa purkuvuodeksi 1873/74 (en-wiki 1870): rakennus saattoi seistä vielä 1873; teksti "Talo purettiin myöhemmin" kelpaa, "teatteri oli jo suljettu" kelpaa.
+2. **Vanha Burgtheater:** aloitusvuosi 1741 (en-wiki, Austria-Forum) vs WGW 1748 ("Theater nächst der Burg"): valittava lähde.
+3. **Belvedere:** "vuonna 1776 siitä tehtiin julkinen taidegalleria" → 1776 päätös siirtää keisarillinen galleria, avajaiset 1777, yleisölle 1781; "Prinssin kuoltua palatsin osti Maria Theresia" (osto 1752, Eugen kuoli 1736) löyhä.
+4. **Hofburg:** Wienin kongressilla ei ollut täysistuntoa; neuvottelut Ballhausplatzin kanslian ympäristössä, Hofburg isäntä ja juhlien paikka.
+5. **Schönbrunn:** "Fischer aloitti 1696" (WGW 1695/96, uudisrakennus 1696–1701).
+6. **Taikahuilu:** "Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen": lupa myönnetty 1786; 1800 rakennustyön/rakennushakemuksen vuosi.
+7. **Lipizzanit:** "hevoset eivät tulleet Piberistä; siirtyivät sinne 1920" hieman epätarkka (Piberin laitos perustettu 1798).
+8. **Beethoven:** "konsertti alkoi seitsemältä illalla" ei tarkistettu.
+9. **Jättiratas:** "maailman korkein 1920–1985" vain en-wikissä.
+
+## Rooma (tämä PR; huomiot 1–13)
+1. **Castel Sant'Angelo:** "Ensimmäinen enkelipatsas nousi katolle 1536" väärin (puinen ja marmorinen enkeli jo aiemmin, 1527 sulatettu kullattu pronssi; Montelupon marmori 1544–45); "Sabina ja Lucius Aelius haudattiin ensimmäisinä" ei lähdettä (Hadrianuksen tuhka 139 yhdessä heidän kanssaan); "135–139": alkuvuosi vaihtelee 123–135; "nykyinen pronssiversio 1753": Treccani 1751/1752.
+2. **Pietarinkirkko:** "yli 120 vuotta" → "noin 120" (1506–1626 on tasan 120); "Vuonna 1950 kaivettiin esiin" → kaivaukset 1940–49, 1950 on Pius XII:n julkistus; tunnistus varovainen.
+3. **Pantheon:** Agrippan temppeli noin 27–25 eaa., ei 29; temppeli paloi myös 110 (kaksi paloa).
+4. **Jupiterin temppeli:** vandaalit veivät vain puolet kullatuista pronssitiilistä (Prokopios); Poggion näkemä vuosi 1447 vain en-Wikipediassa (teos 1447–48) → "1400-luvun puolivälissä".
+5. **Septizodium:** Flaminion obeliskin "jalusta" → "perustus"; purkuvuosi 1588 (tai 1588–89) lähteestä riippuen.
+6. **Forum Romanum:** "vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan": 179 eaa. on rakennuttamisen alku (Basilica Fulvia); nykyinen Aemilia 55–34 eaa.; "Caesar rakensi Basilica Julian" yksinkertaistus (Augustus viimeisteli).
+7. **Torre Argentina:** "noin 200 kissaa" (en-Wikipedia noin 350; muut 130–150) → "satoja"; "rakennettu ilman lupaa" ei löytynyt sellaisenaan (lähteet: asuminen alueella laitonta ja yhteensopimatonta muistomerkin suojelun kanssa).
+8. **Banca Romana:** "nimeksi tuli Banca Romana" epätarkka: pankki perustettu Banca Romana -nimellä 1830-luvulla, 1850 alkaen Banca dello Stato Pontificio, nimi palasi 1870.
+9. **Trevi:** "Salvi aloitti rakentamisen 1732" vain en-Wikipedia; Turismo Roma ja romeing.it: 1732 kilpailu/valinta.
+10. **Norsu ja obeliski:** "Ferrata veisti sen" varmempi kuin lähde (en-Wikipedia: "probably carved").
+11. **Meta Sudans:** "noin 60 vuotta myöhemmin" (kuvat 1858–1890, purku 1936: 46–78 v) → "noin 50–80 vuotta" tai vuosi 1936.
+12. **Porto di Ripetta:** "purettiin 1800-luvun lopulla" → purku 1889–1902 (Turismo Roma 1902; Lungotevere-työt) → "1800-luvun lopulla ja 1900-luvun alussa".
+13. **Vatikaanin palatsi:** "ei yksikään seuraajista ennen 1929" vain epäsuorasti tarkistettu (Lateraanisopimus 11.2.1929 varma).
