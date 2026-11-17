@@ -30,3 +30,6 @@ kaupunki 16, ei-muotoa 12, vuori 7, palatsi 6, kirkko 5, maasto 5, vesi 4, linna
 | `nosto:maalehti-chaine-des-puys` | Chaîne des Puys | vuori | tulivuoriketju; vuori vai maasto |
 
 Lisäksi: Dune du Pilat on kahtena valona (`kohde:dune-du-pilat` ja `nosto:maalehti-dune-du-pilat`), molemmilla tyyppi maasto; yhdistäminen ei kuulu tähän.
+
+## KK:n päätös 17.11. klo 12.51 (15 epäselvää)
+12 jää ennalleen. Kolme muuttui: Camargue → maasto (alue, ei viiva), Saint-Cloud → ei-muotoa (palatsi paloi 1870 ja purettiin; tyyppimalli näyttäisi rakennuksen, jota ei ole), Place Stanislas → kaupunki (aukio, ei yksi rakennus). Sääntö jatkoon: tyyppi vain, jos tyyppimalli näyttäisi oikean lajin; muuten piste.
