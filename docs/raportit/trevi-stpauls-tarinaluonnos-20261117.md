@@ -13,17 +13,21 @@ Pohja: suunnitelma 20261117-nostot-tarinoiksi.md luvut 1.5, 5.1–5.2 ja 8; mall
 
 ## 1.1 Teksti
 
-**Otsikko** (43 merkkiä): Trevi 1762 — lähde, jonka kolikot ruokkivat
+**Otsikko** (43 merkkiä, näkyy vain ruudulla): Trevi 1762 — lähde, jonka kolikot ruokkivat
+
+**S-14 / P-261117-90 (KK 19.23, päivitetty 17.11. 20.00):** nosto alkaa kertojalla: jakso 0a sanoo paikan nimen (luetaan otsikkona kuten PR 7073:n `osa: 'nimi'`), jakso 0b esittelee isoisän lyhyesti (`osa: 'esittely'`), ja vasta sitten tulee isoisän oma lause (jakso 1). Mallina `js/packs/fokuskohteet-fra.js` jaksot[0] ja jaksot[1] (Tuileries). Äänitteen nimet: `nimi`, `esittely`.
 
 | # | Ääni | Osa | Teksti | Merkkejä |
 |---|---|---|---|---:|
+| 0a | kertoja | nimi | Trevin suihkulähde. | 19 |
+| 0b | kertoja | esittely | Isoisäsi kuunteli tässä veden kohinaa. | 38 |
 | 1 | isoisä | koukku | Rooma, 1873. Seisoin tänään Trevin lähteen luona ja kuuntelin veden kohinaa. Vesi tulee tänne yhä vanhaa roomalaista vesijohtoa pitkin. | 135 |
 | 2 | kertoja | koukku | Joka viikko kaupungin työntekijät keräävät Trevin altaasta kolikot. He imevät ne pohjalta letkulla, koska niitä kertyy kasoittain. Turistit heittävät ne olan yli, sillä perinteen mukaan se takaa paluun Roomaan. | 210 |
 | 3 | kertoja | tapahtuma | Lähteen suunnitteli arkkitehti Nicola Salvi, ja työ alkoi vuonna 1732. Salvi kuoli ennen kuin lähde valmistui, ja Giuseppe Pannini vei työn loppuun. Keskellä merenjumala Oceanus ajaa simpukkavaunuilla, ja kaksi merihevosta vetää niitä. | 235 |
 | 4 | kertoja | käänne | Kolikot viedään Rooman Caritakselle, katolisen kirkon hyväntekeväisyysjärjestölle. Vuodessa niitä kertyy yli miljoonan euron edestä. Rahalla ostetaan ruokaa: Caritaksen kaupassa vähävaraiset maksavat ostoksensa pistekortilla. | 225 |
 | 5 | kertoja | tänään | Lähde seisoo Rooman keskustassa. Sen vesi tulee yhä Aqua Virgo -vesijohdosta, jonka roomalaiset rakensivat yli kaksituhatta vuotta sitten. Pumput kierrättävät veden altaassa. | 174 |
 
-- Kertojalla 4 jaksoa, 844 merkkiä + otsikko = **887** (aiemmassa versiossa 900 oli laskuvirhe); isoisä 135. Arvio noin 80 s (12 merkkiä/s + tauot) + isoisä noin 11 s. Pisin virke 14 sanaa (jakso 5). Puheessa **kolme tarkkaa vuotta** (1873, 1732; kaksituhatta vuotta sitten on suhde); yksi virkkeessä. Nimettyjä ihmisiä kaksi (Salvi, Pannini; Oceanus on jumala). Aistiankkurit: veden kohina (1), letkun imu ja kolikkokasat (2).
+- Kertojalla 6 jaksoa (nimi, esittely ja entiset neljä): 844 + 19 + 38 = **901** merkkiä (otsikko ei äänitetä erikseen, nimi luetaan otsikkona); isoisä 135. Arvio noin 80 s (12 merkkiä/s + tauot) + isoisä noin 11 s. Pisin virke 14 sanaa (jakso 5). Puheessa **kolme tarkkaa vuotta** (1873, 1732; kaksituhatta vuotta sitten on suhde); yksi virkkeessä. Nimettyjä ihmisiä kaksi (Salvi, Pannini; Oceanus on jumala). Aistiankkurit: veden kohina (1), letkun imu ja kolikkokasat (2).
 - **Visa ei näy ruudulla ennen vastausta:** oikea vastaus (Caritas) ei ole otsikossa, vuosiriveissä eikä kuvateksteissä.
 - Kaverikoe: "Joka viikko kaupungin työntekijät imevät lähteen pohjalta kolikot — ja ne päätyvät kauppaan, jossa köyhät ostavat ruokaa." Se on koukku ja käänne yhdessä.
 
@@ -82,16 +86,19 @@ Tuileries'n mallin mukaan koukku on isoisän oma äänite. Kaanonin tuki: pelin 
 
 ## 2.1 Teksti
 
-**Otsikko** (43 merkkiä): St Paul 1561 — huippu, jonka salama sytytti
+**Otsikko** (43 merkkiä, näkyy vain ruudulla): St Paul 1561 — huippu, jonka salama sytytti
+
+**S-14 / P-261117-90 (päivitetty 17.11. 20.00):** nosto alkaa kertojan sanomalla paikan nimellä (jakso 0, `osa: 'nimi'`). Isoisän lausetta ei ole, joten esittelyjaksoa (`osa: 'esittely'`) ei tarvita; heti nimen jälkeen tulee koukku.
 
 | # | Ääni | Osa | Teksti | Merkkejä |
 |---|---|---|---|---:|
+| 0 | kertoja | nimi | St Paulin katedraali. | 21 |
 | 1 | kertoja | koukku | Kesäkuussa 1561 Lontoon yllä jylisee ukkonen. Iltapäivällä salama iskee St Paulin kirkon tornin huippuun. Huippu on puuta ja katettu lyijyllä, ja se syttyy palamaan. | 165 |
 | 2 | kertoja | tapahtuma | Sulanut lyijy valuu kirkon katoille, ja kirkon kellot sulavat. Palava huippu romahtaa kirkkosalin katon läpi. | 109 |
 | 3 | kertoja | käänne | Kuningatar Elisabet lahjoittaa korjaukseen rahaa ja puutavaraa, ja kirkon katot uusitaan. Huippua ei rakenneta koskaan uudelleen. Tornin runko jää pystyyn ilman sitä. | 166 |
 | 4 | kertoja | tänään | Vuonna 1666 Lontoon suuri palo jättää vanhasta kirkosta vain raunion. Tilalle nousee Christopher Wrenin kupolikirkko, joka seisoo Ludgate Hillillä yhä. Sen yllä kohoaa kupoli, ei torninhuippua. | 193 |
 
-- 4 jaksoa, 633 merkkiä + otsikko = **676**, noin 60 s (tavallinen nosto 500–800 merkkiä, luokka C). Pisin virke 11 sanaa. Puheessa kaksi tarkkaa vuotta (1561, 1666). Nimettyjä ihmisiä kaksi (Elisabet, Wren). Aistiankkurit: ukkonen, sulava lyijy ja kellot. **Korjaus KK 15.36 (a):** palanut oli puinen, lyijyllä katettu torninhuippu (steeple); tornin runko jäi pystyyn (History of London: "remaining square tower… remained a stump"; Leicester: "truncated tower"), joten sana on huippu otsikossa, jaksoissa 1–3, visassa ja faktarivissä.
+- 5 jaksoa (nimi + 4): 633 + 21 = **654** merkkiä, noin 60 s (tavallinen nosto 500–800 merkkiä, luokka C). Pisin virke 11 sanaa. Puheessa kaksi tarkkaa vuotta (1561, 1666). Nimettyjä ihmisiä kaksi (Elisabet, Wren). Aistiankkurit: ukkonen, sulava lyijy ja kellot. **Korjaus KK 15.36 (a):** palanut oli puinen, lyijyllä katettu torninhuippu (steeple); tornin runko jäi pystyyn (History of London: "remaining square tower… remained a stump"; Leicester: "truncated tower"), joten sana on huippu otsikossa, jaksoissa 1–3, visassa ja faktarivissä.
 - **Ei isoisän lausetta:** pelin kaanonissa ei ole isoisän Lontoo-St Paul -hetkeä, ja lauseen kirjoittaminen vaatisi keksittyä sisältöä. Kaanonin Lontoo-teksti sanoo vain St Paulin Covent Gardenin kirkosta (eri paikka). Jos KK haluaa, isoisälause voi olla "Lontoo, 1873. Katsoin tänään St Paulin kupolia Ludgate Hillillä." — vain nykynäkymä, ei uutta faktaa.
 - Jätetty pois: kuin laava (vain Wikipedia), Paul's Walk (jää Pulun toiseen kysymykseen), 149 metriä (perinteinen luku on asiantuntijoiden kesken kiistanalainen), 604 ja kirkon "viides" (yksi lähde), 1087 ja 1240 (eivät palvele), maailman korkein/pisin kirkko, "uutislehtinen kertoi syyksi salaman" (yksi lähde, ei tarvita), huhu lyijyseppä jätti hiillokset (kumottu, ei puheeseen), piispan palatsin pelastus (vain Tudor Society), St Martin Ludgate (lähteet ristiriidassa: tuhoutui vs. menetti tornin), tornin rakentamatta jättämisen syy (varojen puute: vain History of London; Pulun kysymys, vastaus kun toinen lähde löytyy).
 
@@ -146,6 +153,9 @@ Uudet: **"Nicola Salvi"**, **"Giuseppe Pannini"**, **"Oceanus"** (vakiintunut), 
 
 ## 3.2 Mitä en tehnyt
 Ei datamuutoksia, ei äänitysjonoa (`tarkista.mjs --lisaa` vasta, kun teksti viedään dataan), ei Codex-tilauksia, ei kuvien täysikokoisia latauksia. Pulun nykyiset kysymykset eivät muutu. Riippumatonta tarkistajaa (Sonnet-agentti) ei ole ajettu: ajan sen vasta KK:n hyväksymälle tekstille, kuten Tuileries'ssa, ellei KK halua sitä ennen.
+
+## 3.2b Päivitys 17.11. klo 20.00 (P-261117-96 ja P-261117-90)
+Molemmat luonnokset on päivitetty pysyvään sääntöön S-14: nosto alkaa kertojan sanomalla paikan nimellä; Trevillä isoisän lausetta edeltää kertojan lyhyt esittely. Muuta tekstiä ei muutettu. Data ja äänitysjono vasta KK:n sanasta (P-96: SK vie luonnoksen dataksi, KK lukee diffin ja puhetekstit ennen sanaa AJA; omistaja odottaa vielä Tuileries'n kokeen tulosta).
 
 ## 3.3 KK:n päätökset 17.11. klo 15.36 (kärki 050bbd8058) ja tehdyt korjaukset
 1. Trevin isoisälause PIDETÄÄN; St Paulille ei lausetta. ✔
