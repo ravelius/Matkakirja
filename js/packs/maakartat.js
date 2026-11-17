@@ -5376,7 +5376,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Concorden aukio', tagi: 'historia', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
         nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
-        nosto: 'skandaali-mona-lisan-varkaus-1911',
+        // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `louvre` (Mona Lisan varkaus jaksoina).
+        nosto: 'louvre',
       },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
