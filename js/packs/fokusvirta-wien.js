@@ -922,7 +922,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'Steiermarkista, ja ratsastuskoulun mukaan ne siirtyvät noin nelivuotiaina '
           + 'koulutukseen Heldenbergiin tai Wieniin.',
         'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
-          + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanien kasvatus siirtyi Piberin siitostilalle, joka oli perustettu jo 1798, vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+          + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: Piberin siitostila oli perustettu jo 1798, mutta lipizzanien kasvatus siirtyi sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
           + 'hovitallista nykyisessä Sloveniassa.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Spanische Hofreitschule, Wien Geschichte Wiki, Austria Tourismus, Wien Tourismus ja AEIOU',
