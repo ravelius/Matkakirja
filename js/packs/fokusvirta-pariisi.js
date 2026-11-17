@@ -912,8 +912,9 @@ export const FOKUSVIRTA_PARIISI = {
      *
      * MINIKYSYMYKSET: erän 6 datamalli (`visa`), kiintiö joka kolmas
      * nosto. Pooli on tämän erän jälkeen yhdeksän nostoa, ja visat
-     * ovat kolmannessa (`carmenin-ensi-ilta`, erä 6), kuudennessa
-     * (`notre-damen-kukko`) ja yhdeksännessä (`pariisin-vuosisadat`).
+     * ovat kolmannessa (`carmenin-ensi-ilta`, erä 6) ja kuudennessa
+     * (`notre-damen-kukko`); yhdeksäs (`pariisin-vuosisadat`) poistettiin
+     * 17.11.2026 (Vrain-Lucas jää vain skandaalikorttiin).
      * Vastaus on aina SAMAN kortin tekstissä.
      * ══════════════════════════════════════════════════════════════
      */
@@ -1276,9 +1277,10 @@ export const FOKUSVIRTA_PARIISI = {
        * JAETTU KAHDEKSI (omistaja 17.11.2026, yhdistämisen vaihe A,
        * PR 6966 luku 4): kaksi tarinaa ei kuulu samalle kortille. Tämä
        * kortti (`kaulanauha-1785`) pitää kaulanauhan ja sen kaksi
-       * kysymystä; Vrain-Lucas on oma korttinsa `pariisin-vuosisadat`
-       * (id säilyi, ettei Pulun valmiit vastaukset katkea). Tekstit,
-       * kuvat ja kysymykset siirrettiin sanatarkasti.
+       * kysymystä; Vrain-Lucasin tarina elää vain skandaalikortissa
+       * `skandaali-vrain-lucas-kirjevaarennokset` (KK 17.11. 20.41:
+       * yhdestä merkistä ei avaudu kahta samaa tarinaa kertovaa
+       * korttia; lyhyt kortti `pariisin-vuosisadat` poistettu).
        *
        * MITATTU LÄHTÖTILANNE: sivun kaikilla seitsemällä nostolla oli
        * jo karttapaikka — kuudella kohdekartalla ja yhdellä
@@ -1355,68 +1357,6 @@ export const FOKUSVIRTA_PARIISI = {
         laudat: {
           maailmankartta: { x: 5911.5, y: 1439.7 },
           europe: { x: 256.3, y: 608.7 },
-        },
-      },
-    },
-    {
-      /*
-       * Vrain-Lucasin kirjeväärennökset (ennen yhteistä korttia
-       * `pariisin-vuosisadat`; kaulanauha erotettiin omaksi kortikseen
-       * `kaulanauha-1785`). Kysymys 3 ja minikysymys pysyivät tässä.
-       */
-      id: 'pariisin-vuosisadat',
-      nimio: 'Vrain-Lucas',
-      otsikko: 'Vrain-Lucas — kirjeet, joita ei ollut',
-      symboli: 'huuto',
-      lunastus: [
-        'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden lähettäjiksi oli '
-          + 'merkitty muun muassa Julius Caesar, Kleopatra, Aristoteles ja '
-          + 'Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun ranskaksi. Chasles '
-          + 'maksoi kokoelmasta noin 140 000 frangia ja esitteli 1867 '
-          + 'tiedeakatemialle kirjeitä, joiden mukaan Blaise Pascal olisi '
-          + 'keksinyt painovoimalain ennen Isaac Newtonia. Englantilaiset '
-          + 'tutkijat huomauttivat, että Newton oli kirjeiden päiväyksen aikaan '
-          + 'lapsi. Chasles piti kokoelmastaan kiinni vuosia, mutta väärentäjä '
-          + 'tuomittiin helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
-      ],
-      lahde: 'Pariisin kaupunkilehden sivu "Historia", nostot "Kaulanauha, '
-        + 'joka ei koskaan päätynyt kuningattarelle" ja "Kleopatra kirjoitti '
-        + 'ranskaksi — ja akateemikko uskoi" '
-        + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 5, 13.9.2026.',
-      kuvat: [
-        {
-          tiedosto: 'Pascal à Galileo.jpg',
-          lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
-          selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
-            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
-          lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
-        },
-      ],
-      kysymykset: [
-        'Miksi Chasles piti kokoelmastaan kiinni vuosia?',
-        // Pulun valmis vastaus oli jo (ei generointia); testi vaatii kortille vähintään kaksi kysymystä.
-        'Mitä Vrain-Lucas myi Michel Chasles\'lle?',
-      ],
-      visa: {
-        kysymys: 'Vrain-Lucas myi kirjeitä, joiden lähettäjiksi oli merkitty '
-          + 'muun muassa Kleopatra ja Julius Caesar. Mikä niissä oli pielessä?',
-        vaihtoehdot: [
-          'Kaikki oli kirjoitettu 1800-luvun ranskaksi',
-          'Ne oli päivätty samalle viikolle',
-          'Paperissa ei ollut lainkaan vesileimaa',
-        ],
-        oikea: 0,
-        fakta: 'Englantilaiset tutkijat huomauttivat lisäksi, että Newton oli '
-          + 'kirjeiden päiväyksen aikaan lapsi. Väärentäjä tuomittiin '
-          + 'helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
-      },
-      // Institut de France 48,8573 N / 2,3372 E: Vrain-Lucasin oma piste.
-      paikka: {
-        nimi: 'Vrain-Lucas',
-        laudat: {
-          maailmankartta: { x: 5911.3, y: 1439.6 },
-          europe: { x: 256.1, y: 608.6 },
         },
       },
     },

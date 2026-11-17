@@ -5445,7 +5445,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Vrain-Lucas', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
-        nosto: ['skandaali-vrain-lucas-kirjevaarennokset', 'nosto-pariisin-vuosisadat'],
+        nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       },
       {
         nimi: 'Monet 1874', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
@@ -6058,6 +6058,10 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-westminster-vanha
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, wiki: 'Old Palace of Westminster', nosto: 'hahmotelma-westminster-vanha' },
+      // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; en-Wikipedia 51,51361 / −0,09833, sama kukkula kuin St Paulin katedraali).
+      // Piste siirretty nimiön luettavuuden vuoksi nykyisen katedraalin koillispuolelle kirkkomaalle; rakennus seisoi nykyisen paikalla.
+      // PALAUTETTU 17.11.2026 (KK 20.41, PR 7088 kohta 2): kadonnut + nykyinen -pari kuuluu vaiheeseen B (liittyy-kenttä); ilman pistettä kortti ei aukeaisi mistään.
+      { nimi: "Old St Paul's", tagi: 'kadonneet', lat: 51.5141, lon: -0.0975 },
       // KADONNUT IHME (PT 17.11.2026 NS 09.31; massa-25 osa 2): Crystal Palace 1851 Hyde Parkissa, ei Sydenhamissa (51,4226 / −0,0756 on kaupunkikartan ulkopuolella).
       // Piste en-Wikipedia "Great Exhibition" 51,50306 / −0,17000 (koko näyttelyn piste, ei rakennuksen); Hearsum: "southern edge of Hyde Park". TARKISTETTAVA kuvasta.
       { nimi: 'Crystal Palace 1851', tagi: 'kadonneet', lat: 51.50306, lon: -0.17 },
