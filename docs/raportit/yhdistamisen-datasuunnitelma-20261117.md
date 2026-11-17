@@ -75,21 +75,29 @@ Kuvaus: **pää** = piste, joka jää; **nosto →** = `nosto`-taulukko sen jäl
 
 Yhteensä pisteitä poistuu 20; yksikään tarinateksti, kuva tai kysymys ei poistu eikä lyhene.
 
-## 4. Kaulanauha 1785 (omistajan kohta 3, PR 6964)
+## 4. Kaulanauha 1785 (omistajan kohta 3; KK 09.45: valinta A)
 
-Kaulanauhan oikea paikka: parlamentti Palais de la Cité'ssä (en-Wikipedia "Parlement of Paris" ja Hérodote.net, 2L); Bastilji 2L (en-Wikipedia ja historyskills); Versailles'n pidätys ei ole kartalla. Suositus A: tarina nostoksi Sainte-Chapelle-kohteelle (sama palatsitontti).
+**Päätös:** Kaulanauha 1785 on Sainte-Chapelle-kohteen tarina, Panthéon-piste pois. KK:n lause tarinan loppuun: "Tuomio annettiin toukokuussa 1786 Pariisin parlamentissa Palais de la Cité'ssä, samassa kuninkaanpalatsissa, jonka kappeli Sainte-Chapelle on."
 
-**Löytö, joka vaikuttaa suunnitelmaan:** nosto `pariisin-vuosisadat` sisältää **kaksi eri tarinaa** (Kaulanauha + Vrain-Lucas), ja sen kolmesta kysymyksestä kaksi on Kaulanauhasta ja yksi (+ minikysymys) Vrain-Lucasista. Jos nosto siirretään sellaisenaan Palais de la Cité'hen, Vrain-Lucasin teksti seuraa mukana. Siksi:
+**Lähteet lauseelle (itse avatut, PR 6964 + tämä):**
 
-- jaetaan nosto kahdeksi: `nosto-kaulanauha-1785` (lunastus 1, kysymykset 1 ja 2) ja nykyinen `pariisin-vuosisadat` jää Vrain-Lucasille (lunastus 2, kysymys 3 ja minikysymys). Tekstit siirretään sanatarkasti, ei uutta tekstiä;
-- uusi nosto liitetään Sainte-Chapelle-pisteeseen (`nosto: [uusi]` taulukkoon), Panthéon-piste poistuu, ja Vrain-Lucasin oma piste (48,8573 / 2,3372) pysyy;
-- jos KK valitsee B (oma piste 48,8557 / 2,3451), uusi piste tulee tilalle, ja koordinaatti varmistetaan toisesta lähteestä (OSM) ja kuvasta.
+| Väite | Lähteet | Taso |
+|---|---|---|
+| Parlamentti istui Palais de la Cité'ssä (Grand'Chambre) | en-Wikipedia "Parlement of Paris" ja Hérodote.net "Demeure royale et prison" | 2L |
+| Tuomio toukokuussa 1786 | Château de Versailles, marie-antoinette.org, historyskills.com | 2L (3) |
+| Sainte-Chapelle oli Palais de la Cité'n kappeli, samassa kuninkaanpalatsissa | en-Wikipedia "Sainte-Chapelle" ("part of the medieval Palais de la Cité, the main residence of the Kings of France until the 14th century"); cometoparis.com (Ludvig IX:n kappeli "within the grounds of the former royal palace on the Île de la Cité"; yläkappeli kuninkaalliselle perheelle, alakappeli palatsin väelle); snippetsofparis.com (yläkappeli vain kuninkaalle ja hovin ylhäisille, pääsy suoraan palatsin asunnosta) | 2L (Wikipedia + kaksi oppaan sivua; virallinen sainte-chapelle.fr ei antanut tekstiä, worldhistory.org ja ancient-history-sites.com palauttivat 403) |
 
-Jos KK haluaa kysymykset jakamatta jättää nosto ennalleen: se on mahdollista vain, jos Vrain-Lucasille ja Kaulanauhalle sallitaan yhteinen kortti, mikä rikkoo omistajan ehdon "jokainen tarina omana tekstinään". Suositus on jako.
+Muotoilu: sana "kuninkaanpalatsi" on perusteltu, koska lähde sanoo palatsin olleen Ranskan kuninkaiden päämaja 1300-luvulle asti; parlamentti jäi palatsiin kuninkaiden muutettua pois, joten "samassa kuninkaanpalatsissa" pitää paikkansa vain rakennuksena, ei vuoden 1786 asuinpaikkana. Lause ei väitä muuta, joten se kelpaa.
+
+**Löytö, joka vaikuttaa suunnitelmaan:** nosto `pariisin-vuosisadat` sisältää **kaksi eri tarinaa** (Kaulanauha + Vrain-Lucas), ja sen kolmesta kysymyksestä kaksi on Kaulanauhasta ja yksi (+ minikysymys) Vrain-Lucasista. Jos nosto siirretään sellaisenaan Sainte-Chapelleen, Vrain-Lucasin teksti seuraa mukana. Siksi:
+
+- jaetaan nosto kahdeksi: `nosto-kaulanauha-1785` (lunastus 1, kysymykset 1 ja 2, loppuun KK:n lause) ja nykyinen `pariisin-vuosisadat` jää Vrain-Lucasille (lunastus 2, kysymys 3 ja minikysymys). Tekstit siirretään sanatarkasti, lisäys on vain KK:n lause;
+- uusi nosto liitetään Sainte-Chapelle-pisteen `nosto`-taulukkoon, Panthéon-piste poistuu, ja Vrain-Lucasin oma piste (48,8573 / 2,3372) pysyy;
+- ääni: uuden noston teksti saa äänitysrivit (lause on uutta tekstiä).
 
 ## 5. Mitä KK:n pitää päättää ennen data-PR:ää
 
 1. `liittyy`-kentän käyttöönotto (NUI/NS) ja kortin riviasettelu: katso ruudulta Tuileries-malli ensin.
-2. Kaulanauhan paikka A / B / C / D ja nostojaon hyväksyntä (luku 4).
+2. Nostojaon hyväksyntä (luku 4); paikka on jo päätetty (A).
 3. A2: onko Kuninkaanpalatsin `haikarat`-nostolla 0 kysymystä tarkoituksella; omistaja haluaa kysymykset säilytettäviksi, joten puuttuva voi olla seuraava SK-työ.
 4. Järjestys: yksi PR per kaupunki (Pariisi → Lontoo → Rooma → Wien → Amsterdam), jotta jokaisen voi katsoa kartalta; ensimmäisenä Pariisin Tuileries (ei datamuutosta), Bastilji ja Eiffel.
