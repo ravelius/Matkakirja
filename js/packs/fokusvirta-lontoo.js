@@ -941,7 +941,7 @@ export const FOKUSVIRTA_LONTOO = {
       lunastus: [
         'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
           + 'kauppaan Espanjan Etelä-Amerikan kanssa. Kaupan ydin oli '
-          + 'orjakauppa: yhtiö sai oikeuden tuoda afrikkalaisia orjia '
+          + 'orjakauppa: yhtiö sai oikeuden tuoda orjuutettuja afrikkalaisia '
           + 'Espanjan siirtomaihin. Vastineeksi yhtiö otti kantaakseen osan '
           + 'valtionvelasta. Kauppaa ei juuri '
           + 'syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes '

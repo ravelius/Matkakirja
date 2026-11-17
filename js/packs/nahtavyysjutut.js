@@ -3094,7 +3094,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-exchange-alleyn-kupla',
       teksti: 'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
         + 'kauppaan Espanjan Etelä-Amerikan kanssa. Kaupan ydin oli orjakauppa: '
-        + 'yhtiö sai oikeuden tuoda afrikkalaisia orjia Espanjan siirtomaihin. '
+        + 'yhtiö sai oikeuden tuoda orjuutettuja afrikkalaisia Espanjan siirtomaihin. '
         + 'Vastineeksi yhtiö otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, '
         + 'mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan '
         + 'ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi '
@@ -3592,7 +3592,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen '
           + 'kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.'
         + '\n\n'
-        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja lovipuita, '
+        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja lovipuita eli puisia kuittikeppejä, '
           + 'joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat '
           + 'liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat '
           + 'tuhannet ihmiset, myös taidemaalari William Turner.'
