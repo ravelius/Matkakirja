@@ -408,6 +408,31 @@
      "omistajan_sana": "P-261117-83"
     }
    ]
+  },
+  {
+   "tunnus": "S-13",
+   "nimi": "Äänitys vasta valmiille nostolle",
+   "roolit": [
+    "KK",
+    "PT",
+    "ÄÄ",
+    "SK"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "19.16",
+     "lahde": "P-261117-88",
+     "sanat": "Noissa täytyy ensin varmistaa ettei niitä tarvitse kirjoittaa uusiksi eli äänitä vasta kun nosto on kokonaan kirjoitettu uudestaan ja sille on tehty ne kuvat ja ranskalaiset viivat mutta sen jälkeen voit aina äänittää ilman kysymystä",
+     "sha": "883391cae13fe139",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T17:17:41.906Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }
