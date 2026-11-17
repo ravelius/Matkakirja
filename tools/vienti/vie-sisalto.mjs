@@ -307,7 +307,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        Datan oma tagi voittaa, muuten johdettu aiheesta tai tarinapaikan merkistä (tools/vienti/tagit.mjs). Natiivi NostoMerkit.Tagit.
  *        karttavalot.maakuntaNimi = maakunnan nimi suomeksi (nostovalikon maatason maakuntaryhmät). Vanhat buildit ohittavat kentät.
  */
-export const SKEEMAVERSIO_TARKKA = '1.72';
+/*
+ *   1.73 karttavalot.muoto (Pelikoodari 17.11.2026; suunnitelma 20261117-maakartan-kohteet kohdat 3 ja 8, SK:n data/muoto.json):
+ *        { tyyppi, maisema } tai null (tools/vienti/muoto.mjs). Natiivi NostoMuoto / KameranSaanto (19503bdaf): maisema = kamera
+ *        laskeutuu maisemaan, muuten pysyy maan kartalla. Vanhat buildit ohittavat kentän.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.73';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

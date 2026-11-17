@@ -50,10 +50,11 @@
   "1.69": "1c7cd698b15b30bb",
   "1.70": "8ec628ed344c74e6",
   "1.71": "2874b8c02c3b2135",
-  "1.72": "5c7b3ecd25094007"
+  "1.72": "5c7b3ecd25094007",
+  "1.73": "77f47dd47f24129c"
  },
  "uusin": {
-  "skeemaversio": "1.72",
+  "skeemaversio": "1.73",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -204,6 +205,7 @@
     "maakunta",
     "maakuntaLahde",
     "maakuntaNimi",
+    "muoto",
     "nimi",
     "nimio",
     "paakartalla",

@@ -45,6 +45,7 @@ import { rikastaLehdet } from './lehdet.mjs';
 import {
   karttavaloKokoelma, piilotaKaksoisnimet, rajaaKarkaavatNimet, rikastaKohdekartat, sovitaNostopaikat, takynostoKokoelma,
 } from './karttavalot.mjs';
+import { lueMuotoData, rikastaMuoto, MUOTO_KUVAUS } from './muoto.mjs';
 import { rikastaElavaKartta } from './elava-kartta.mjs';
 import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
@@ -1118,6 +1119,9 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   sovitaNostopaikat(kokoelmat.karttavalot.alkiot, NOSTOPAIKAT);
   // PT 10.10.2026 (Karttasepän tarkistus A2): ladonnan karkaama nimi (> 25 km tai toinen maa) omaan pisteeseensä ilman nimeä.
   rajaaKarkaavatNimet(kokoelmat.karttavalot.alkiot, kokoelmat.maarajat.alkiot);
+  // Skeema 1.73 (Pelikoodari 17.11.2026): kohteen muoto SK:n datasta (tools/vienti/muoto.mjs); vedessä oleva kohde on virhe.
+  rikastaMuoto(kokoelmat.karttavalot.alkiot, lueMuotoData(), kokoelmat.maarajat.alkiot);
+  kokoelmat.karttavalot.kuvaus += ` ${MUOTO_KUVAUS}`;
   // PT 10.10.2026 (tarkistus B2): sama nimiö kahdesti alle 2 km:n päässä → vain yksi nimi.
   piilotaKaksoisnimet(kokoelmat.karttavalot.alkiot);
   // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
