@@ -319,7 +319,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        "– " + selite + " " + vuosi. Syvennykset (fokusvirrat[].takyt[].vuodet) ja kohde-moduulit sellaisenaan. Natiivi NostoSisalto (NUI).
  *        Säännöt: tests/noston-vuodet.test.mjs. Vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.74';
+/*
+ *   1.75 monumentit.jaksot, monumentit.jaksokuvat, monumentit.otsikko ja monumentit.visa (Pelikoodari 17.11.2026; PT:n etusija,
+ *        SK:n Les Halles hahmotelma-les-halles): hahmotelman nosto jaksoiksi samassa muodossa kuin fokuskohteen (Tuileries) jaksot,
+ *        valinnaiset kentät (aanikansio kun äänet tehty). Natiivi NostoSisalto/NostoJaksot (NUI). Vanhat buildit ohittavat kentät.
+ *        Hetken jaksot (historianHetket.jaksot, KK 21.22) tulevat omana nostonaan, kun SK:n ensimmäinen hetki jaksoineen on paketissa.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.75';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

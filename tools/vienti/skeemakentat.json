@@ -52,10 +52,11 @@
   "1.71": "2874b8c02c3b2135",
   "1.72": "5c7b3ecd25094007",
   "1.73": "77f47dd47f24129c",
-  "1.74": "2780a8a9f1a459d7"
+  "1.74": "2780a8a9f1a459d7",
+  "1.75": "143bd18f893ef6cc"
  },
  "uusin": {
-  "skeemaversio": "1.74",
+  "skeemaversio": "1.75",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -562,6 +563,8 @@
     "data",
     "id",
     "ihme",
+    "jaksokuvat",
+    "jaksot",
     "korostukset",
     "kuva",
     "kysymykset",
@@ -572,8 +575,10 @@
     "nappi",
     "nimi",
     "nimio",
+    "otsikko",
     "teksti",
-    "tyyppi"
+    "tyyppi",
+    "visa"
    ],
    "muutosloki-natiivi": [
     "id",

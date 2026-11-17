@@ -71,6 +71,8 @@ export const VAATIMUKSET = {
   '1.73': ['karttavalot.muoto'],
   // Pelikoodari 17.11.2026: noston vuodet (suunnitelma 20261117-noston-vuosiluvut, omistaja P-261117-70–72; natiivi NUI NostoSisalto).
   '1.74': ['nahtavyydet.vuodet', 'takynostot.vuodet', 'historianHetket.vuodet', 'skandaalit.vuodet'],
+  // Pelikoodari 17.11.2026: hahmotelman jaksot (SK:n Les Halles, Tuileries'n malli; natiivi NUI NostoJaksot).
+  '1.75': ['monumentit.jaksot', 'monumentit.jaksokuvat', 'monumentit.otsikko', 'monumentit.visa'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',
