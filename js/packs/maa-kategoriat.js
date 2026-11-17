@@ -3023,10 +3023,8 @@ export const MAA_KATEGORIAT = {
             + '1599, tapa oli syntynyt. Nyt saman eteläisen ristivarren '
             + 'lattia on täynnä kirjailijoiden muistolaattoja, joiden yli '
             + 'kävellään joka päivä.',
-          lyhyt: 'Westminster Abbeyn runoilijoiden nurkka sai alkunsa Geoffrey Chaucerin hautauksesta vuonna 1400.',
-          selite: 'Westminster Abbeyn runoilijoiden nurkka sai alkunsa '
-            + 'Geoffrey Chaucerin hautauksesta vuonna 1400, ja hänen '
-            + 'nykyinen hautamonumenttinsa teetettiin 1556.',
+          lyhyt: 'Westminster Abbeyn runoilijoiden nurkan perinne alkoi, kun Edmund Spenser haudattiin Chaucerin viereen 1599.',
+          selite: 'Westminster Abbeyn runoilijoiden nurkan perinne alkoi, kun Edmund Spenser haudattiin Chaucerin viereen 1599, ja Chaucerin nykyinen hautamonumentti teetettiin 1556.',
           lahde: '14GTR, Commons (CC BY-SA 4.0)',
           wiki: 'Geoffrey Chaucer',
         },

@@ -17,7 +17,7 @@ Kaulanauha: 1,6 milj. livreä (en.wiki 2 milj.); Metro: "jäljellä 88" (en.wiki
 - Palais d'Orsay "Napoleon aloitti 1810": Napoleon.org 1808 (päätös); rakentaminen 1810.
 
 ## Lontoo (PR 7048; KK 17.34: kaikki kohdat listaan)
-**Faktavirhetarkistus 17.11. tehty: ei selviä virheitä; kohdat 3 (munkit, Chaucer, tuoli), 4 (NHM), 9 (Euston 1870) kunnossa; Newgate, metrolaatta, Orbit, Cheapside, Chaucer-kortti valinnaisia (docs/raportit/lontoo-faktavirheet-20261117.md).**
+**KK 18.48: metrolaatta ja Chaucer-kortti TEHTY (PR tässä haarassa, 2 uutta äänitystä); Newgate EI muutu; Orbit ja Cheapside jäävät listalle.** **Faktavirhetarkistus 17.11. tehty: ei selviä virheitä; kohdat 3 (munkit, Chaucer, tuoli), 4 (NHM), 9 (Euston 1870) kunnossa; Newgate, metrolaatta, Orbit, Cheapside, Chaucer-kortti valinnaisia (docs/raportit/lontoo-faktavirheet-20261117.md).**
 **Korjattava:**
 1. **Newgate** (`hahmotelma-newgate`): "väkijoukon ryntäys tappoi kymmeniä" → "noin kolmekymmentä" (lähteet 27–34; vuosi 1807 ja ~40 000 hengen yleisö OK).
 2. **Palon syy yhdellä sanalla** kahdessa tekstissä: `hahmotelma-westminster-vanha` sanoo "valtiokonttorin lovipuiden eli kuittikeppien", `nahtavyys:lontoo:Westminsterin palatsi` "vanhoja puisia veropuikkoja" → valitaan yksi sana.
