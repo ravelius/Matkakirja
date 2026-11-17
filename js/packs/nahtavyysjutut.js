@@ -4417,8 +4417,8 @@ export const NAHTAVYYSJUTUT = {
           + 'jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa '
           + 'työskentelee Itävallan presidentti.'
         + '\n\n'
-        + 'Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, '
-          + 'jossa Euroopan valtiot neuvottelivat sodan jälkeisistä '
+        + 'Vuosina 1814–1815 Wienin kongressin juhlat täyttivät Hofburgin, '
+          + 'kun Euroopan valtiot neuvottelivat sodan jälkeisistä '
           + 'rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat '
           + 'niin loistokkaiksi, että aikalaiset alkoivat pilkata koko '
           + 'tapahtumaa.',
@@ -4565,8 +4565,9 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Praterin puiston jättiratas valmistui vuonna 1897 '
           + 'juhlistamaan keisari Frans Joosef I:n 50-vuotista '
           + 'hallituskautta. Sen suunnittelivat brittiläiset '
-          + 'insinöörit. Pyörä oli niin ylivoimainen, että se oli '
-          + 'maailman korkein jättiratas vuoteen 1985 asti.'
+          + 'insinöörit. Kun suuremmat pyörät Pariisissa ja Blackpoolissa oli '
+          + 'purettu, se oli maailman korkein jättiratas vuodesta 1928 '
+          + 'vuoteen 1985.'
         + '\n\n'
         + 'Pyörä oli lähellä katoamista jo vuonna 1916, kun sille '
           + 'myönnettiin purkulupa — mutta rahat loppuivat, eikä sitä '
@@ -4580,7 +4581,7 @@ export const NAHTAVYYSJUTUT = {
           + 'korkealla Wienin yllä.',
       vuodet: [
         { kohta: 'vuonna 1897', vuosi: '1897', selite: 'ratas valmistui' },
-        { kohta: 'vuoteen 1985', vuosi: '1985', selite: 'korkein ratas' },
+        { kohta: 'vuodesta 1928 vuoteen 1985', vuosi: '1928–1985', selite: 'korkein ratas' },
         { kohta: 'vuonna 1916', vuosi: '1916', selite: 'purkulupa' },
         { kohta: 'vuoden 1949', vuosi: '1949', selite: 'Kolmas mies' },
       ],
@@ -4593,9 +4594,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Wien Riesenrad.jpg',
-          lyhyt: 'Vuoden 1897 jättiratas oli maailman korkein vuoteen 1985, alkuperäisistä koreista 15 pyörii yhä.',
-          selite: 'Vuonna 1897 valmistunut jättiratas oli maailman korkein '
-            + 'vuoteen 1985 asti, ja alkuperäisistä 30 kopista sodan jäljiltä pyörii '
+          lyhyt: 'Vuoden 1897 jättiratas oli maailman korkein vuodesta 1928 vuoteen 1985, alkuperäisistä koreista 15 pyörii yhä.',
+          selite: 'Vuonna 1897 valmistunut jättiratas oli Pariisin ja Blackpoolin '
+            + 'pyörien purun jälkeen maailman korkein vuodesta 1928 vuoteen 1985, '
+            + 'ja alkuperäisistä 30 kopista sodan jäljiltä pyörii '
             + 'yhä 15.',
           lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
         },
