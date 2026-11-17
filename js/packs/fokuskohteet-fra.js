@@ -109,8 +109,9 @@ export const FOKUSKOHTEET_FRA = [
     },
     // teksti lasketaan jaksoista tiedoston lopussa (Tuileries-koe).
     // Tuileries-koe (KK 11.38): jaksojen lähteet SK:n raportin kohdasta 2 (kaksi itsenäistä lähdettä per väite).
+    // Lähdeaineisto: docs/raportit/tuileries-koe-teksti-20261117.md (ei pelaajalle näkyvään tekstiin).
     lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Mérimée PA00099072, paris.fr ja Louvre '
-      + '(docs/raportit/tuileries-koe-teksti-20261117.md, tarkistettu 17.11.2026).',
+      + '(tarkistettu 17.11.2026).',
     /*
      * JAKSOT (TUILERIES-KOE; omistaja 17.11.2026 klo 10.58 ja 10.51, KK 11.11
      * ja 11.16; suunnitelma scratchpad/keskustelukanava/suunnitelmat/
@@ -137,7 +138,7 @@ export const FOKUSKOHTEET_FRA = [
     /*
      * Äänitteet (Äänittäjä 17.11.2026, KK:n äänityssana 11.29; avain PK
      * 17.11. 11.4x, KK 11.32 "vienti kun avain sovittu"): ämpäri
-     * aanet/<aanikansio>/<aanite>.mp3 ja .sanat.json (sanakohtaiset ajat).
+     * äänikansion polku <aanikansio>/<aanite>.mp3 ja .sanat.json (sanakohtaiset ajat).
      * Versiokansio on muuttumaton: uusi otto → v2 ja uusi aanikansio tähän.
      * Kertojan ensimmäinen äänite sisältää otsikon.
      */
