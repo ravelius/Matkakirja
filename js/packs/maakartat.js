@@ -6108,6 +6108,9 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; en-Wikipedia 51,51361 / −0,09833, sama kukkula kuin St Paulin katedraali).
       // Piste siirretty nimiön luettavuuden vuoksi nykyisen katedraalin koillispuolelle kirkkomaalle; rakennus seisoi nykyisen paikalla.
       { nimi: "Old St Paul's", lat: 51.5141, lon: -0.0975 },
+      // KADONNUT IHME (PT 17.11.2026 NS 09.31; massa-25 osa 2): Crystal Palace 1851 Hyde Parkissa, ei Sydenhamissa (51,4226 / −0,0756 on kaupunkikartan ulkopuolella).
+      // Piste en-Wikipedia "Great Exhibition" 51,50306 / −0,17000 (koko näyttelyn piste, ei rakennuksen); Hearsum: "southern edge of Hyde Park". TARKISTETTAVA kuvasta.
+      { nimi: 'Crystal Palace 1851', lat: 51.50306, lon: -0.17 },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, wiki: 'Palace of Whitehall', nosto: 'hahmotelma-whitehall' },

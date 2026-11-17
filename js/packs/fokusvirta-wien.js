@@ -808,7 +808,7 @@ export const FOKUSVIRTA_WIEN = {
           'Venetsian doogelta',
         ],
         oikea: 0,
-        fakta: 'Kirahvi tuli lahjaksi Egyptin varakuninkaalta, ja se levisi muotiin, käsitöihin ja seuraelämään.',
+        fakta: 'Kirahvi tuli lahjaksi Egyptin varakuninkaalta, ja kirahvi-innostus levisi muotiin, käsitöihin ja seuraelämään.',
       },
       // 48,1845 N / 16,3119 E — takyt-wien.md, täky 10
       // (Tiergarten Schönbrunn).
