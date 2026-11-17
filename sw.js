@@ -2,7 +2,9 @@
 const CACHE = 'matkakirja-2026-09-21.2618';
 const SHELL = [
   './',
+  // Peli on pelaa.html (17.11.2026); './' ja './index.html' ovat etusivu, joka ohjaa peliin.
   './index.html',
+  './pelaa.html',
   './kohtaamiskuvat.html',
   './manifest.webmanifest',
   './css/styles.css',
@@ -42,6 +44,8 @@ const SHELL = [
   './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
+  // Etusivun yhteensopivuusskripti (klassinen, ei moduuli): ohjaa pelaajat pelaa.html:ään.
+  './js/ohjaa-peliin.js',
   './js/pilleri-paneeli.js',
   './js/visa-pohja.js',
   './js/ui.js',
@@ -337,7 +341,7 @@ const SHELL = [
   './js/pallolauta/kehysprofiili.js',
   './js/pallolauta/kallistus.js',
   './css/aikajana.css',
-  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // Linssien yhteinen kehysliuku (16.9.2026): pelaa.html lataa tämän
   // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
   './css/linssikehys.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
@@ -3790,7 +3794,7 @@ self.addEventListener('fetch', (event) => {
           }
           return response;
         })
-        .catch(() => hit ?? caches.match('./index.html'));
+        .catch(() => hit ?? caches.match('./pelaa.html'));
       return hit ?? network;
     }),
   );

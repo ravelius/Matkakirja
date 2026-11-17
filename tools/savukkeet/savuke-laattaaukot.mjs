@@ -124,7 +124,7 @@ const PORTTI_AUKI = ['export const VANHA_KARTTA_KAYTOSSA = false;', 'export cons
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json', '.woff2': 'font/woff2', '.bin': 'application/octet-stream' };
 const palvelin = http.createServer((req, res) => {
   const pyydetty = req.url.split('?')[0];
-  const polku = join(JUURI, pyydetty === '/' ? 'index.html' : pyydetty);
+  const polku = join(JUURI, pyydetty === '/' ? 'pelaa.html' : pyydetty);
   if (!polku.startsWith(JUURI) || !existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   if (LAUTA === 'kartta' && pyydetty === '/js/ui-apurit.js') {

@@ -223,7 +223,7 @@ test('vain tarkistettu aktiivinen kuva päätyy peliin, muut jäävät galleriaa
  */
 test('kohtaamiskortilla kuva on tervehdyksen yläpuolella ja kuvateksti kuvan alla', async () => {
   const [html, visa, ui] = await Promise.all([
-    readFile(new URL('../index.html', import.meta.url), 'utf8'),
+    readFile(new URL('../pelaa.html', import.meta.url), 'utf8'),
     readFile(new URL('../js/visa.js', import.meta.url), 'utf8'),
     readFile(new URL('../js/ui.js', import.meta.url), 'utf8'),
   ]);

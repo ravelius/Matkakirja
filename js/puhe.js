@@ -495,7 +495,7 @@ export function asetaPuheenVoima(arvo) {
  * OMISTAJAN VIKAILMOITUS 12.9.2026: *"äänien voimakkuussäädin ei muuten
  * toimi."*
  *
- * MITATTU JUURISYY: asetusvalikon Lukija-liuku (index.html
+ * MITATTU JUURISYY: asetusvalikon Lukija-liuku (pelaa.html
  * #voima-lukija) kirjoitti vain avaimeen `matkakirja-puhevoima`, jota
  * lukevat pelkät ÄÄNITTEET (js/luenta.js, js/linssipuhe.js, js/ui.js).
  * Tämän moduulin striimattu lukija — pelin ENSISIJAINEN lukija, se joka

@@ -43,6 +43,6 @@ test('lehtikuori: käynnistys ei tallenna eikä avaa lautaa; vain lehti näkyy',
   const css = lue('../css/styles.css');
   assert.match(css, /body\.lehtikuori > \.app,\nbody\.lehtikuori > \.paivitysruutu \{ display: none !important; \}/);
   // Lehti on bodyn suora lapsi, joten .app:n piilotus ei vie sitä.
-  const html = lue('../index.html').replace(/<!--[\s\S]*?-->/g, '');
+  const html = lue('../pelaa.html').replace(/<!--[\s\S]*?-->/g, '');
   assert.ok(html.indexOf('<dialog id="arrival-dialog"') > html.lastIndexOf('<div class="app"'));
 });

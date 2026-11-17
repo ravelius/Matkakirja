@@ -43,7 +43,7 @@ export function paakaupunkikartat() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
   '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.woff2': 'font/woff2' };
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -56,7 +56,7 @@ const L = LAITTEET[LAITE];
 const ctx = await selain.newContext({ viewport: L.viewport, deviceScaleFactor: 1, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
 await sivu.route((url) => !/127\.0\.0\.1/.test(url.href), (route) => route.abort()); // vain paikalliset tiedostot
-await sivu.goto(`http://127.0.0.1:${portti}/index.html?lauta=maailmankartta`, { waitUntil: 'load' });
+await sivu.goto(`http://127.0.0.1:${portti}/pelaa.html?lauta=maailmankartta`, { waitUntil: 'load' });
 await sivu.waitForFunction(() => Boolean(window.matkakirja?.game?.phase), null, { timeout: 60000 });
 
 const tulos = {};

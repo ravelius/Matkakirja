@@ -4,7 +4,7 @@
  * ja tallentaa vain tiedon aikuinen kyllä/ei (ei vuotta). Pulun pyynnöt kantavat otsakkeen x-matkakirja-aikuinen:
  * 1 = aikuinen, 0 = alle 18 tai tuntematon (worker tools/pollo/kuratoitu.js).
  *
- *   Pohja: olemassa oleva <dialog class="dialog"> (#ikaraja-dialog, index.html; PT 10.10. 11.0x, HYVÄKSYTTY POHJA KÄY
+ *   Pohja: olemassa oleva <dialog class="dialog"> (#ikaraja-dialog, pelaa.html; PT 10.10. 11.0x, HYVÄKSYTTY POHJA KÄY
  *   VASTAAVIIN). Tekstit ja järjestys natiivikortista. Ei nyt (tai Esc) = tuntematon ikä: kuratoitu tämän käynnistyksen
  *   ajan, kysytään uudestaan seuraavalla käynnistyksellä. Aikuinen vain varmasti: vuosi − syntymävuosi − 1 ≥ 18.
  */

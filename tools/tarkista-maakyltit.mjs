@@ -50,7 +50,7 @@ const VIEWPORTIT = [
 const palvelin = createServer(async (pyynto, vastaus) => {
   try {
     const polku = decodeURIComponent((pyynto.url ?? '/').split('?')[0]);
-    const tiedosto = resolve(JUURI, `.${normalize(polku === '/' ? '/index.html' : polku)}`);
+    const tiedosto = resolve(JUURI, `.${normalize(polku === '/' ? '/pelaa.html' : polku)}`);
     if (!tiedosto.startsWith(JUURI)) { vastaus.writeHead(403).end(); return; }
     const data = await readFile(tiedosto);
     vastaus.writeHead(200, { 'content-type': TYYPIT[extname(tiedosto)] ?? 'application/octet-stream' });

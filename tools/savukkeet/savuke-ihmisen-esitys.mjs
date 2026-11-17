@@ -159,7 +159,7 @@ async function ampariHaku(url) {
 }
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   const sisalto = readFileSync(polku);
@@ -236,7 +236,7 @@ const heti = (vaihe) => Boolean(vaihe) && vaihe !== 'pimea';
  * kameraa koskaan viedä avaruuteen (js/linssit/ihmisen-matka-esitys.js).
  * Jokainen odotus on nyt EHTO pelin omasta tilasta.
  */
-await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
+await s.goto(`http://127.0.0.1:${PORTTI}/pelaa.html?lauta=pallo`, { waitUntil: 'load' });
 const odotaEhto = (fn, ms = 60000) => s.waitForFunction(fn, null, { timeout: ms })
   .then(() => true).catch(() => false);
 await odotaEhto(() => [...document.querySelectorAll('button')]

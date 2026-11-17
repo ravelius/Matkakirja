@@ -23,7 +23,7 @@ async function shot(nimi) {
   console.log('OK', nimi);
 }
 
-await page.goto('https://matkakirja.app/?lauta=pallo&dev=ateena', { waitUntil: 'networkidle' });
+await page.goto('https://matkakirja.app/pelaa.html?lauta=pallo&dev=ateena', { waitUntil: 'networkidle' });
 await page.waitForFunction(() => Boolean(window.matkakirja?.ui?.game), null, { timeout: 30000 });
 await page.waitForTimeout(1000);
 
@@ -82,14 +82,14 @@ await page.evaluate(() => window.matkakirja.ui.avaaMaalehti?.('GRC'));
 await shot('maalehti');
 
 // --- Matkakirja auki (Tanger) ---
-await page.goto('https://matkakirja.app/?lauta=pallo&dev=tanger', { waitUntil: 'networkidle' });
+await page.goto('https://matkakirja.app/pelaa.html?lauta=pallo&dev=tanger', { waitUntil: 'networkidle' });
 await page.waitForFunction(() => Boolean(window.matkakirja?.ui?.game), null, { timeout: 30000 });
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko?.(false));
 await shot('matkakirja-auki');
 
 // --- Linssit (pallon pinnalle piirtyvät kerrokset) ---
-await page.goto('https://matkakirja.app/?lauta=pallo&dev=ateena', { waitUntil: 'networkidle' });
+await page.goto('https://matkakirja.app/pelaa.html?lauta=pallo&dev=ateena', { waitUntil: 'networkidle' });
 await page.waitForFunction(() => Boolean(window.matkakirja?.ui?.game), null, { timeout: 30000 });
 await page.waitForTimeout(1000);
 

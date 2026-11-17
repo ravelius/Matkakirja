@@ -13,8 +13,8 @@
  * virhettä ei tule, vain hiljaisuus).
  *
  * Vartiot:
- *  1. Peli tulee näkyviin alle 10 sekunnissa — index.html:n
- *     varaventtiili (index.html, setTimeout 10000) on se raja, jonka
+ *  1. Peli tulee näkyviin alle 10 sekunnissa — pelaa.html:n
+ *     varaventtiili (pelaa.html, setTimeout 10000) on se raja, jonka
  *     jälkeen latausruutu väistyy VAIKKA peliä ei olisi, eli pelaaja
  *     näkisi tyhjän kehyksen.
  *  2. Latausruudun poisti peli (js/main.js paataPaivitysruutu) eikä
@@ -55,7 +55,7 @@ mkdirSync(KUVAT, { recursive: true });
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.mp3': 'audio/mpeg', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json', '.txt': 'text/plain' };
 const palvelin = http.createServer((req, res) => {
   const p = req.url.split('?')[0];
-  const polku = join(JUURI, p === '/' ? 'index.html' : p);
+  const polku = join(JUURI, p === '/' ? 'pelaa.html' : p);
   if (!existsSync(polku) || statSync(polku).isDirectory()) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream', 'cache-control': 'max-age=600' });
   res.end(readFileSync(polku));
@@ -146,7 +146,7 @@ await sivu.goto(OSOITE, { waitUntil: 'commit' });
 
 // 1–2: käynnistys varaventtiilin rajan sisällä.
 // TYHJÄ KEHYS = hetki, jona latausruutu on poissa mutta peliä ei ole.
-// Juuri sen varaventtiili (index.html, 10 s) tuottaa, jos käynnistys ei
+// Juuri sen varaventtiili (pelaa.html, 10 s) tuottaa, jos käynnistys ei
 // valmistu — ja juuri sitä root näki. Vartio 2 vahtii, ettei tuota
 // hetkeä synny kertaakaan.
 let tila = await lue();

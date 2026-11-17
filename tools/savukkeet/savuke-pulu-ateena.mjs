@@ -60,7 +60,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const osa = req.url.split('?')[0];
-  const polku = join(JUURI, osa === '/' ? 'index.html' : osa);
+  const polku = join(JUURI, osa === '/' ? 'pelaa.html' : osa);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));

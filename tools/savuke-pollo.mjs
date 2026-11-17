@@ -182,7 +182,7 @@ let polloPaalla = true;
  */
 let polloOsoite = POLLO_URL;
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (req.url.startsWith('/pollo-striimi')) { striimiPalvelin(req, res); return; }
   if (polku.endsWith('js/packs/pollo-asetukset.js')) {
     const arvo = polloPaalla ? polloOsoite : '';
@@ -620,7 +620,7 @@ async function avaaPeli(ctx, {
       } catch { await route.abort(); }
     });
   }
-  await sivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+  await sivu.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
   await sivu.waitForTimeout(2200);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')]
@@ -2612,7 +2612,7 @@ await siltaCtx.close();
 /*
  * Päivityksen jälkeisen latauksen ajan ruudulla on tumma pohja, logo ja
  * yksi rivi tekstiä — ei tyhjiä kehyksiä. Lippu on sessionStoragessa
- * (js/main.js merkitsePaivitys), ja index.html:n pikkuskripti näyttää
+ * (js/main.js merkitsePaivitys), ja pelaa.html:n pikkuskripti näyttää
  * ruudun heti ensimmäisellä maalauksella.
  *
  * js/main.js viivästetään puolellatoista sekunnilla, jotta ruutu ehtii
@@ -2633,7 +2633,7 @@ await paivitysSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (rou
 await paivitysSivu.route(/js\/main\.js$/, (route) => route.fulfill({
   status: 200, contentType: 'text/javascript', body: '',
 }));
-await paivitysSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await paivitysSivu.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
 await paivitysSivu.waitForTimeout(300);
 await paivitysSivu.screenshot({ path: join(ULOS, 'paivitysruutu-390.png') });
 const paivitysruutu = await paivitysSivu.evaluate(() => {
@@ -2674,7 +2674,7 @@ const paivitysLoppuCtx = await selain.newContext({ viewport: { width: 390, heigh
 const paivitysLoppuSivu = await paivitysLoppuCtx.newPage();
 await paivitysLoppuSivu.addInitScript("try { sessionStorage.setItem('matkakirja-paivittyy', '1'); } catch (e) {}");
 await paivitysLoppuSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
-await paivitysLoppuSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await paivitysLoppuSivu.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
 await paivitysLoppuSivu.waitForTimeout(2500);
 const paivitysLoppu = await paivitysLoppuSivu.evaluate(() => ({
   ruutuPiilossa: document.getElementById('paivitysruutu').hidden,
@@ -2758,7 +2758,7 @@ await kylmaKaappausSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href),
 await kylmaKaappausSivu.route(/js\/main\.js$/, (route) => route.fulfill({
   status: 200, contentType: 'text/javascript', body: '',
 }));
-await kylmaKaappausSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await kylmaKaappausSivu.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
 await kylmaKaappausSivu.waitForTimeout(300);
 await kylmaKaappausSivu.screenshot({ path: join(ULOS, 'latausruutu-kylma-390.png') });
 const kylmaKesken = await kylmaKaappausSivu.evaluate(() => ({
@@ -2778,7 +2778,7 @@ const kylmaCtx = await selain.newContext({ viewport: { width: 390, height: 900 }
 const kylmaSivu = await kylmaCtx.newPage();
 await kylmaSivu.addInitScript(LATAUSJALKI);
 await kylmaSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
-await kylmaSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await kylmaSivu.goto('http://127.0.0.1:8734/pelaa.html', { waitUntil: 'load' });
 await kylmaSivu.waitForTimeout(3500);
 const kylma = await kylmaSivu.evaluate(() => ({
   jalki: window.__latausJalki,
@@ -2787,7 +2787,7 @@ const kylma = await kylmaSivu.evaluate(() => ({
   kartta: Boolean(document.querySelector('.map-pane svg')),
 }));
 /*
- * Jälki alkaa nyt sivun omasta lähtötilasta: index.html:ssä ruutu on
+ * Jälki alkaa nyt sivun omasta lähtötilasta: pelaa.html:ssä ruutu on
  * `hidden`, ja sivun oma inline-skripti näyttää sen. Ensimmäinen
  * kirjaus on siis "vielä piilossa", eikä se ole se hetki, jota tässä
  * mitataan — haettava kohta on ensimmäinen kirjaus, jossa ruutu on

@@ -23,7 +23,7 @@ const MIME = {
   '.svg': 'image/svg+xml', '.webp': 'image/webp', '.mp3': 'audio/mpeg',
 };
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -65,7 +65,7 @@ await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), async (route
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
 
-await sivu.goto('http://127.0.0.1:8731/index.html?lauta=middleeast', { waitUntil: 'load' });
+await sivu.goto('http://127.0.0.1:8731/pelaa.html?lauta=middleeast', { waitUntil: 'load' });
 // Peli on oltava käynnissä ennen kuin lehtinäkymä on olemassa.
 // ?lauta=-parametri käynnistää pelin nykyään suoraan (katselutila),
 // jolloin aloitusnappia ei tule lainkaan — odotetaan siis joko nappia

@@ -53,7 +53,7 @@ const TYYPIT = {
   '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg',
 };
 const palvelin = http.createServer((req, res) => {
-  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -118,7 +118,7 @@ async function avaaSivu({ kirjastot: kirjastotMukana = true, reducedMotion = 'no
     if (!v || v.status !== 200) { route.abort(); return; }
     route.fulfill({ status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body });
   });
-  await sivu.goto(`${osoite}index.html?lauta=kartta`, { waitUntil: 'load' });
+  await sivu.goto(`${osoite}pelaa.html?lauta=kartta`, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

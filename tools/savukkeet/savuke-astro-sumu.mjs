@@ -78,7 +78,7 @@ async function ulkohaku(url) {
 }
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -136,7 +136,7 @@ async function avaaPeli(s, haku) {
    * oletus katkaisi ajon ennen kuin sivu oli edes valmis (mitattu
    * Macilla 18.9.2026). Peli alustuu moduuleista, ei `load`ista.
    */
-  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${haku}`, {
+  await s.goto(`http://127.0.0.1:${PORTTI}/pelaa.html?lauta=pallo${haku}`, {
     waitUntil: 'domcontentloaded', timeout: 90000,
   });
   await s.waitForTimeout(2500);

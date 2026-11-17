@@ -29,7 +29,7 @@ const KORKEUS = Number(process.env.KORKEUS ?? 0.2); const TOISTOJA = Number(proc
 const ASKEL_MS = Number(process.env.ASKEL_MS ?? 4);
 const ULOS = process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/tasaisuus'; mkdirSync(ULOS, { recursive: true });
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json' };
-const palvelin = http.createServer((req, res) => { const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]); if (!existsSync(polku)) { res.writeHead(404); res.end(); return; } res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' }); res.end(readFileSync(polku)); });
+const palvelin = http.createServer((req, res) => { const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]); if (!existsSync(polku)) { res.writeHead(404); res.end(); return; } res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' }); res.end(readFileSync(polku)); });
 await new Promise((ok) => palvelin.listen(0, ok)); const osoite = `http://localhost:${palvelin.address().port}/`;
 const muisti = new Map(); const ampari = (url) => { if (!muisti.has(url)) muisti.set(url, fetch(url).then(async (v) => (v.ok ? { body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') } : null)).catch(() => null)); return muisti.get(url); };
 const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: 'marseille' }], pack: packById('maailmankartta'), seed: 5 }); peli.phase = 'action'; peli.tokens.delete('marseille');

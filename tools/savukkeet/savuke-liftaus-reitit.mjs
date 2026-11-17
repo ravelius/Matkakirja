@@ -36,7 +36,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const p = req.url.split('?')[0];
-  const polku = join(JUURI, p === '/' ? 'index.html' : p);
+  const polku = join(JUURI, p === '/' ? 'pelaa.html' : p);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));

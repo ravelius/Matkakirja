@@ -213,7 +213,7 @@ export async function openWiki(ui, cityId) {
  * sivulleen kuten muutkin aiheet."*
  *
  * Entinen kuvakeliuskarivi (rakennaLiuskat) on poistettu. Elementti
- * jää DOM:iin piiloon, jottei index.html ja muut siihen viittaavat
+ * jää DOM:iin piiloon, jottei pelaa.html ja muut siihen viittaavat
  * kohdat mene rikki.
  */
 export function rakennaSivut(ui, cityId) {
@@ -968,7 +968,7 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
  * Yksi sivu, jolla ovat entiset työhuoneen napit riveinä. Rivi kutsuu
  * täsmälleen samaa avausta kuin poistettu nappi — logiikkaa ei ole
  * kahdennettu. Lukijaäänen säädindialogi asuu js/main.js:ssä (se on
- * lomake index.html:ssä), joten sen rivi kulkee main.js:n
+ * lomake pelaa.html:ssä), joten sen rivi kulkee main.js:n
  * rekisteröimän koukun kautta samalla kehittäjätilan ehdolla kuin
  * entinen #puhe-saadin-btn.
  *
@@ -2644,7 +2644,7 @@ export function avaaUutinen(ui, uutinen, lahde) {
  * `<dialog class="dialog lehti arkki">` -kehyksen samoine
  * `.dialog-card.arrival-card` -luokkineen ja samoine
  * `.arrival-palstat > .arrival-palsta` -palstoineen kuin kaupunkilehti
- * (index.html #arrival-dialog), ja leveys kirjoitetaan samalla
+ * (pelaa.html #arrival-dialog), ja leveys kirjoitetaan samalla
  * `ui.mitoitaArkki`lla. Jokainen mitta tulee siis css/styles.css:n
  * omista `.dialog.arkki`- ja `.dialog.lehti`-säännöistä — jos lehden
  * ulkoasu joskus muuttuu, tämä muuttuu mukana ilman toista muokkausta.
@@ -2656,12 +2656,12 @@ export function avaaUutinen(ui, uutinen, lahde) {
  * css/styles.css:ssä oli kirjoitettu vain id:lle (#arrival-city,
  * #arrival-intro); niiden valitsinlistaan on lisätty saman lehden
  * luokkanimi (.lehti-nimio, .lehti-leipa), joka on nyt myös
- * index.html:n omissa elementeissä — vanhan elementin id-sääntö on
+ * pelaa.html:n omissa elementeissä — vanhan elementin id-sääntö on
  * rivilleen ennallaan, eikä yhtään arvoa ole kopioitu.
  */
 
 /**
- * Lehden nimi mastossa. Sama merkkijono kuin index.html:n
+ * Lehden nimi mastossa. Sama merkkijono kuin pelaa.html:n
  * #arrival-lehti-ylarivissa (omistajan päätös 8.8.2026); nimi on pelin
  * oma eikä kaupungin, joten sama masto on kaupunki- ja maalehden yllä.
  */
@@ -2765,7 +2765,7 @@ export function avaaTiivisLehtiarkki(ui, city, lato, asetukset = {}) {
    * piirtäjillä kuin vanhassa lehdessä, herokuvien yläpuolelle kuten
    * vanhassa."*).
    *
-   * KOLME RIVIÄ SAMASSA JÄRJESTYKSESSÄ KUIN index.html:ssä: kicker
+   * KOLME RIVIÄ SAMASSA JÄRJESTYKSESSÄ KUIN pelaa.html:ssä: kicker
    * (.lehti-ylarivi), nimiö (h2) ja päiväysrivi (.lehti-alarivi).
    * Luokat ovat lehden omat ja niiden säännöt ovat jo css/styles.css:ssä
    * PELKKINÄ LUOKKINA (.lehti-ylarivi, .lehti-alarivi, .pvm-maa) — tähän

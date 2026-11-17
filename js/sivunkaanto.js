@@ -16,7 +16,7 @@
  * ottaa sellaisenaan. Ne eivät ole: lehdessä on YKSI elävä sivu
  * (#arrival-dialog .dialog-card), joka piirretään uudestaan joka
  * käännöksellä (js/lehti.js naytaTutkiSivu → piirraKategoria ym.), ja
- * kansi on index.html:n kiinteä rakenne neljälläkymmenellä id:llä.
+ * kansi on pelaa.html:n kiinteä rakenne neljälläkymmenellä id:llä.
  * Mitattu 5.9.2026: ui.arrivalKategoriaan kirjoittaa 13 kohtaa (lehti
  * 8, maalehti 4, ui 1), ja kaiutin, hampurilainen, visa ja
  * etukäteispuskuri elävät kaikki tuon yhden sivun mukana. Koko lehden

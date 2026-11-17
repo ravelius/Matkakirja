@@ -23,7 +23,7 @@
  *     puhelimella osoiterivin muokkaus on juuri sitä työtä, jota
  *     mittarin lukija ei jaksa tehdä.
  *   - SAMA KYTKIN ON KEHITTÄJÄN HAMMASRATASVALIKOSSA (29.8.2026,
- *     index.html #kehittaja-mittari-btn → asetaMittari): iOS:n
+ *     pelaa.html #kehittaja-mittari-btn → asetaMittari): iOS:n
  *     kotivalikkosovelluksessa osoiteriviä ei ole lainkaan, joten
  *     parametri on siellä mahdoton naputella. Valikko myös käynnistää
  *     ja sammuttaa mittarin ajonaikaisesti (js/ui.js

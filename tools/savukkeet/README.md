@@ -45,7 +45,7 @@ kirjoita `import ... from '../../node_modules/...'`.
    ja asentavat itse noden + selaimen. Self-hosted-kone ei saa ajaa
    fork-PR:iä (repo on julkinen), joten fork saa tämän reitin.
 
-`pull_request`-laukaisu on rajattu PELIKOODIN poluille (`index.html`,
+`pull_request`-laukaisu on rajattu PELIKOODIN poluille (`index.html`, `pelaa.html`,
 `sw.js`, `js/**`, `css/**`, `tools/savukkeet/**`, työnkulku itse) —
 dokumentti- tai raporttimuutos ei käynnistä savukkeita.
 `workflow_dispatch` antaa valita sarjan (`julkaisu`, `kaikki` tai

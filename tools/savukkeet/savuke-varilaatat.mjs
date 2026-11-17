@@ -142,7 +142,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const pyydetty = req.url.split('?')[0];
-  const polku = join(JUURI, pyydetty === '/' ? 'index.html' : pyydetty);
+  const polku = join(JUURI, pyydetty === '/' ? 'pelaa.html' : pyydetty);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   if (pyydetty === '/js/ui-apurit.js') {

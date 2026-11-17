@@ -241,7 +241,7 @@ export function kaynnistaKarttaselite(ui) {
   nappi.setAttribute('aria-expanded', 'false');
   /*
    * KUVAKE ON SELITELISTA ITSE: kolme riviä, joilla on pallo ja viiva.
-   * Sama piirtotapa kuin maalehtinapilla (index.html): inline-svg,
+   * Sama piirtotapa kuin maalehtinapilla (pelaa.html): inline-svg,
    * currentColor ja `stroke-width: 1.6` — kartan napit ovat yhtä
    * perhettä.
    */

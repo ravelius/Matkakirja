@@ -9,7 +9,7 @@
  * Oikea kirjasto ajetaan selaimessa (tools/savukkeet/savuke-tehosteketju.mjs).
  *
  * Kytkentäpaikat luetaan TEKSTINÄ (puhe.js, fokuskohteet.js, pakit, sw.js,
- * build-standalone, lahteet, index.html, main.js): siirto tai nimenvaihto
+ * build-standalone, lahteet, pelaa.html, main.js): siirto tai nimenvaihto
  * rikkoisi kytkennän hiljaa, ja tämä testi kaatuu sen sijaan.
  */
 import test from 'node:test';
@@ -348,7 +348,7 @@ test('moduuli on kuoressa, niputuksessa oikealla kohdalla, lähdesivulla ja rata
   // KUUNTELUNAPPI POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki
   // napit voisi ottaa pois"*). Ketjut itse jäivät peliin (js/puhe.js,
   // js/fokuskohteet.js), ja kuuntelun voi yhä ajaa savukkeella.
-  assert.doesNotMatch(lue('index.html'), /id="kehittaja-tehosteketjut-btn"/);
+  assert.doesNotMatch(lue('pelaa.html'), /id="kehittaja-tehosteketjut-btn"/);
   assert.doesNotMatch(lue('js/main.js'), /kehittaja-tehosteketjut-btn/);
   assert.match(lue('js/puhe.js'), /tehosteketju\(piiri, nimi, suora\)/, 'ketju on yhä käytössä');
 });

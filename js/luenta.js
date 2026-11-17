@@ -628,7 +628,7 @@ export function luovutaPuhevuoro(audio) {
  * voimakkuussäädin ei muuten toimi."*
  *
  * MITATTU JUURISYY (selainmittaus tools/savukkeet/savuke-aanivoimat.mjs):
- * Lukija-liuku (index.html #voima-lukija) muutti tallennetun arvon ja
+ * Lukija-liuku (pelaa.html #voima-lukija) muutti tallennetun arvon ja
  * seuraavat luennat lähtivät oikealla tasolla, mutta SOIVA luenta ei
  * liikahtanut. js/main.js kävi läpi vain `ui.luennat` -joukon, ja siitä
  * puuttuivat kaikki luennat, joita kukaan ei ollut sinne kirjannut —
@@ -646,7 +646,7 @@ export function luovutaPuhevuoro(audio) {
  * kaatuisi ensin väistöstä.
  *
  * PULU EI OLE LUKIJA. Rooli (PUHUJA_PULU) rajaa pulun repliikit ulos;
- * niillä on oma liukunsa (index.html #voima-pulu). Vanha rajaus vertasi
+ * niillä on oma liukunsa (pelaa.html #voima-pulu). Vanha rajaus vertasi
  * soitinta `ui.liviaAani`-kenttään, ja se piti vain niin kauan kuin pulu
  * oli aloittanut viimeisimmän repliikin — kaksi peräkkäistä repliikkiä
  * jätti edellisen Lukija-liu'un armoille.

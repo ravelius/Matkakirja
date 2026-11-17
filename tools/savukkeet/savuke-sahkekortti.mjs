@@ -64,7 +64,7 @@ const MIME = {
 };
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -107,7 +107,7 @@ for (const ruutu of RUUDUT) {
     virheet.push(String(e));
   });
 
-  await sivu.goto(`${osoite}index.html?lauta=kartta`, { waitUntil: 'load' });
+  await sivu.goto(`${osoite}pelaa.html?lauta=kartta`, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')]

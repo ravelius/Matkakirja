@@ -12,7 +12,7 @@
  * Kolme asiaa, jotka eivät näy diffistä:
  *
  *   1. HAMPURILAINEN ON SAMA KEHITTÄJÄTILASSA JA ILMAN. #kehittaja-
- *      kotelo on poissa index.html:stä kokonaan, eikä siellä ole enää
+ *      kotelo on poissa pelaa.html:stä kokonaan, eikä siellä ole enää
  *      yhtäkään poistettua nappi-id:tä.
  *   2. NAPPI RATTAASSA. #kehittaja-valikon sisällä on
  *      #kehittajalehti-btn, ja js/main.js kytkee sen avaukseensa.
@@ -107,12 +107,12 @@ const POISTETUT = [
 ];
 
 test('hampurilaisvalikossa ei ole enää kehittäjän koteloa', () => {
-  const html = lue('index.html');
+  const html = lue('pelaa.html');
   assert.ok(!html.includes('id="kehittaja-kotelo"'),
     '#kehittaja-kotelo pitää olla poistettu — hampurilainen on sama '
     + 'kehittäjätilassa ja ilman (omistaja 11.9.2026)');
   for (const id of POISTETUT) {
-    assert.ok(!html.includes(`id="${id}"`), `poistettu nappi ${id} on yhä index.html:ssä`);
+    assert.ok(!html.includes(`id="${id}"`), `poistettu nappi ${id} on yhä pelaa.html:ssä`);
   }
   const main = lue('js/main.js');
   for (const id of POISTETUT) {
@@ -125,10 +125,10 @@ test('hampurilaisvalikossa ei ole enää kehittäjän koteloa', () => {
 /* ---------------------------------------------------------------- */
 
 test('hammasratasvalikossa on Kehittäjälehti, ei Raamattua', () => {
-  const html = lue('index.html');
+  const html = lue('pelaa.html');
   const alku = html.indexOf('id="kehittaja-valikko"');
   const loppu = html.indexOf('id="paavalikko"');
-  assert.ok(alku > 0 && loppu > alku, 'kehittäjävalikkoa ei löydy index.html:stä');
+  assert.ok(alku > 0 && loppu > alku, 'kehittäjävalikkoa ei löydy pelaa.html:stä');
   const valikko = html.slice(alku, loppu);
   assert.ok(!html.includes('raamattu-lehti-btn'), 'poistettu Raamattu-nappi on palannut');
   assert.ok(valikko.includes('id="kehittajalehti-btn"'), 'Kehittäjälehti-nappi puuttuu rattaasta');

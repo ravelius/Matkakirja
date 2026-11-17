@@ -36,7 +36,7 @@ test('reitti osuu vain pöllöpalvelimen originiin', () => {
     `${POLLOPALVELIN}.evil.example/`,
     `https://evil.example/?u=${encodeURIComponent(POLLOPALVELIN)}`,
     `http://${new URL(POLLOPALVELIN).host}/`,
-    'http://127.0.0.1:8734/index.html',
+    'http://127.0.0.1:8734/pelaa.html',
     'https://media.matkakirja.app/audio/x.mp3',
     'ei osoite',
   ]) assert.ok(!onPolloOsoite(vieras), vieras);

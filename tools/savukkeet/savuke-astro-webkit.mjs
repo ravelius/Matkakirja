@@ -104,7 +104,7 @@ async function ohjaaVerkko(s) {
 }
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -180,7 +180,7 @@ async function avaaPeli(s) {
    * sen jälkeen tuleva `waitForFunction(pallolauta)` on se oikea
    * vartija sille, onko peli pystyssä.
    */
-  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&pallodiag=1${LISAPARAMIT}`;
+  const osoite = `http://127.0.0.1:${PORTTI}/pelaa.html?lauta=pallo&pallodiag=1${LISAPARAMIT}`;
   await s.goto(osoite, { waitUntil: 'load', timeout: 60000 })
     .catch((e) => {
       /*

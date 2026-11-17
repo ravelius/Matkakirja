@@ -224,7 +224,7 @@ test('web: Jatka tallentaa vain aikuinen k/e, Ei nyt = kuratoitu tämän käynni
 });
 
 test('web: kortti on olemassa oleva dialog-pohja natiivin teksteillä, pyynnöt kantavat otsakkeen ja merkinnän', () => {
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
   const kortti = html.slice(html.indexOf('<dialog id="ikaraja-dialog" class="dialog">'), html.indexOf('</dialog>', html.indexOf('id="ikaraja-dialog"')));
   assert.ok(kortti.length > 0);
   for (const k of ['otsikko', 'teksti', 'tallennus', 'syntymavuosi', 'eiNyt', 'jatka']) assert.ok(kortti.includes(IKARAJA_TEKSTIT[k]), k);

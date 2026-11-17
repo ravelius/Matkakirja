@@ -828,7 +828,7 @@ test('moduuli on SHELLissä muttei yhden tiedoston nipussa', () => {
  * ?etusivupallo=0/1 — vain nappi ja sen kuuntelija lähtivät.
  */
 test('kehittäjävalikossa ei ole enää etusivupallon vipua, asetus jäi', async () => {
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   assert.doesNotMatch(html, /id="kehittaja-etusivupallo-kytkin"/);
   const main = lue('../js/main.js');
   assert.doesNotMatch(main, /etusivupalloNappi/);

@@ -53,7 +53,7 @@ jobs:
           # Erillinen työhuonesivusto (tyohuone.html + oma manifesti)
           # poistettiin 18.8.2026: työhuone on nyt pelin sisällä
           # kehittäjävivun takana (hampurilaisvalikon TYÖHUONE-osio).
-          cp index.html kohtaamiskuvat.html projekti.html projekti-data.js linssikatalogi.html linssikatalogi-data.js pelikatalogi.html pelikatalogi-data.js manifest.webmanifest sw.js .nojekyll _site/
+          cp index.html pelaa.html kohtaamiskuvat.html projekti.html projekti-data.js linssikatalogi.html linssikatalogi-data.js pelikatalogi.html pelikatalogi-data.js manifest.webmanifest sw.js .nojekyll _site/
           # Projektisivu: projekti.html + projekti/ (tyyli ja moduulit) +
           # projekti-data.js; kuvat assets/projekti/. Vanhat katalogisivut
           # ovat ohjaussivuja projekti.html#linssit / #pelit, ja niiden data
