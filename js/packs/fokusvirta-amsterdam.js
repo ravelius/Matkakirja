@@ -1603,7 +1603,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       },
       kysymykset: [
         'Miten kallistunut torni vedettiin suoraksi?',
-        'Miksi torni oli purettavaksi vuonna 1852?',
+        'Miksi tornia uhkasi purkaminen vuonna 1852?',
         'Mitä tekemistä tornilla oli kaupungin vesikonttorin kanssa?',
       ],
       // Oudeschans 2. Laudat: Miller-kaava, sovitettu Amsterdamin viiteen korttiin (tarkkuus 0,05).
