@@ -56,7 +56,7 @@ lisätä karttaan (kartan kirjoittaa Fable) tai arkistoida.
 
 ```
 pelaa.html            pelin sisääntulo (peli; noindex)
-index.html            etusivu: ohjaa nyt kaiken pelaa.html:ään (myöhemmin esittely + js/ohjaa-peliin.js)
+index.html            etusivu = pelin esittely; js/ohjaa-peliin.js ohjaa pelaa.html:ään vain pelin parametreilla tai iOS-kuoressa
 sw.js                 service worker; SHELL-lista kaikista js-moduuleista
 manifest.webmanifest  PWA-manifesti
 js/                   pelin moduulit (~150 tiedostoa)
