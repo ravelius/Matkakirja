@@ -46,6 +46,7 @@ import {
   karttavaloKokoelma, piilotaKaksoisnimet, rajaaKarkaavatNimet, rikastaKohdekartat, sovitaNostopaikat, takynostoKokoelma,
 } from './karttavalot.mjs';
 import { lueMuotoData, rikastaMuoto, MUOTO_KUVAUS } from './muoto.mjs';
+import { rikastaNostokuvat } from './nostokuvat.mjs';
 import { rikastaElavaKartta } from './elava-kartta.mjs';
 import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
@@ -1165,6 +1166,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
   kokoelmat.takynostot = takynostoKokoelma(ns, R, taulukko, kokoelmat.karttavalot);
+  // Skeema 1.75 (Pelikoodari 17.11.2026; omistaja 23.24): jokaisen noston kuvalista datan kuvista (tools/vienti/nostokuvat.mjs).
+  rikastaNostokuvat(kokoelmat, { R, hae, haeKohde: valot.haeKohde });
   Object.assign(kokoelmat, saapumisKokoelmat(ns, hae, R, taulukko));
   // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
   // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Ämpärissä skeemasta 1.12.

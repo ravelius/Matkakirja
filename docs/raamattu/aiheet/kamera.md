@@ -11,14 +11,14 @@ SÄÄNNÖT:
 6. Tahti valitaan nimetystä tyylistä (peli vauhdikas, museo rauhallinen). Kohtauksella ei ole omia aikavakioita. [P-261111-1]
 7. Kaikki käyrät ja jouset tulevat Liikepohjasta. Lineaarisia pätkiä ei ole. [R-2.68]
 8. Usea akseli liikkuu yhtä aikaa. Kamera ei pyöri paikallaan: se etenee sivuttain tai vinosti ja kääntyy menosuuntaan vain vähän, noin 15 astetta. [R-2.69]
-9. Kallistus syntyy kameran omasta sivukiihtyvyydestä ja on kevyt, pari astetta. Nyökkäystä ei jäljitellä, eikä tyyli ole kilpadronen. [P-261111-1]
+9. Kallistus syntyy kameran omasta sivukiihtyvyydestä ja on kevyt, pari astetta; peruskartalla sama kaikissa siirtymissä. Nyökkäystä ei jäljitellä, eikä tyyli ole kilpadronen. [P-261111-1] [P-261117-111]
 10. Siirroissa ei ole mustia välähdyksiä eikä häivytyksiä. [R-2.202]
 11. Automaattisen ajon tempo vaihtelee: nopea lähestyminen, pehmeä jarrutus, hidas panorointi, kiihtyvä irtautuminen. [R-2.68]
 12. Seurattava kohde pysyy kuvassa koko ajan. [R-2.166]
 13. Kertoja, tehosteet ja kamera kulkevat samalla aikajanalla. Tauko pysäyttää kertojan ja tekstityksen heti. [R-4.23]
 14. Liikkeen lopussa tarvittava ladataan ennen liikkeen alkua. Yli 20 ms:n ruutu liikkeen aikana tai sekunnin sen jälkeen hylkää ajon. [R-4.24]
 15. Pelaaja saa panoroida ja loitontaa vapaasti koko pallolla. Nipistyksen pieni kierto ohitetaan, kunnes kääntö ylittää kynnyksen (15–20 astetta). [R-2.15] [R-6.11]
-16. Vanha kohtaus siirretään kirjastoon työlistan järjestyksessä. Siirto on valmis vasta, kun vanha toteutus on poistettu. [P-261112-1]
+16. Vanha kohtaus siirretään kirjastoon työlistan järjestyksessä. Siirto on valmis, kun vanha on poistettu. [P-261112-1]
 17. Kartan sauvat ovat oletuksena piilossa Ohjain-napin takana ja palaavat sinne 10 s käyttämättöminä. Nappi näkyy aina eikä syki. [P-261113-19]
 
 EI VIKA:
@@ -28,7 +28,6 @@ EI VIKA:
 
 TEKOTAPA:
 - Kirjasto: KIRJASTOT.md rivi kamera.
-- Suorat kirjoitukset kameraan: tyokalut/kameravahti.py (lähtötaso saa vain pienentyä).
-- Omat pehmennykset: tyokalut/liikevahti.py (lähtötaso saa vain pienentyä).
+- Vahdit (lähtötaso saa vain pienentyä): tyokalut/kameravahti.py (suorat kirjoitukset), tyokalut/liikevahti.py (omat pehmennykset).
 - Radan rajat: Kameratarkastus ja kirjaston testit (Linssit-testit).
 - Käsiala arvioidaan tallenteesta.

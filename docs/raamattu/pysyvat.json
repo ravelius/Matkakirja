@@ -459,6 +459,29 @@
     }
    ],
    "muutokset": []
+  },
+  {
+   "tunnus": "S-15",
+   "nimi": "vuosirivit: enintään neljä näkyvissä, loput vierivät",
+   "roolit": [
+    "NUI",
+    "SK"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "23.15",
+     "lahde": "P-261117-116",
+     "sanat": "Jos nostoihin tulee enemmän vuosilukuja niin ne voivat vierittyä ikkunassa niin että max 4 on aina kerralla näkyvissä",
+     "sha": "c6c3e0e7abe5fda0",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T21:17:29.744Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }

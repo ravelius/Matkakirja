@@ -2094,83 +2094,9 @@ export const SKANDAALIT = {
   ],
   FRA: [
     /*
-     * Louvre, Pariisi.
-     * Lähde: en-Wikipedia "Vincenzo Peruggia" (tarkistettu 30.8.2026)
+     * Mona Lisan varkaus 1911 (Louvre) siirtyi 17.11.2026 Louvren nostoksi jaksoina
+     * (js/packs/fokuskohteet-fra.js, id `louvre`): yksi merkki, yksi nosto.
      */
-    {
-      id: 'mona-lisan-varkaus-1911',
-      kysymykset: [
-        'Miten Mona Lisa pääsi ulos Louvresta kenenkään huomaamatta?',
-        'Miksi Mona Lisa palasi Louvreen kuuluisampana kuin lähti?',
-      ],
-      otsikko: 'Mona Lisan varkaus',
-      nimio: 'Mona Lisan varkaus',
-      vuosi: '1911–1913',
-      paikka: 'Louvre, Pariisi',
-      lat: 48.8611, lon: 2.3364,
-      kortti: 'Maailman kuuluisin taulu käveli ulos Louvresta maanantaiaamuna '
-        + 'museon työtakki päällä, eikä kukaan huomannut mitään ennen seuraavaa '
-        + 'päivää. Varas '
-        + 'odotti sankarin mainetta Italiassa — sai sellin ja jälkimaailmalta '
-        + 'sivuosan taulun tarinassa. Taulu sen sijaan sai varkaudesta '
-        + 'lopullisen maailmanmaineensa.',
-      teksti: 'Vincenzo Peruggia oli italialainen koristemaalari, joka oli tehnyt '
-        + 'Louvressa lasitöitä — muun muassa Mona Lisan suojakotelon, jonka '
-        + 'avaamiseen meni häneltä minuutteja. Maanantaina 21. elokuuta 1911 hän '
-        + 'käveli museoon aamuseitsemältä työntekijöiden ovesta valkoisessa '
-        + 'työtakissa. Maanantai oli kesäkauden sulkupäivä, ja talo oli tyhjä.\n\n'
-        + 'Salon Carrésta hän nosti taulun neljältä rautatapilta, vei sen '
-        + 'palvelusportaisiin, irrotti kotelon ja kehyksen ja jätti ne portaiden '
-        + 'tasanteelle opiskelijatöiden taakse. Ulos hän pääsi huoltoovesta, jonka '
-        + 'putkimies avasi luullen häntä museon mieheksi. Varkaus huomattiin vasta '
-        + 'seuraavana päivänä, kun taulua kopioimaan tullut maalari löysi tyhjän '
-        + 'seinän.\n\n'
-        + 'Etsintä oli valtava ja hämmästyttävän huono. Peruggia oli jättänyt '
-        + 'peukalonjäljen, ja hänen sormenjälkensä olivat poliisin kortistossa, '
-        + 'mutta hänen nimensä unohtui vertailtavien listalta. Runoilija Guillaume '
-        + 'Apollinaire ehdittiin pidättää, ja hänen ystäväänsä Pablo Picassoa '
-        + 'kuulusteltiin.\n\n'
-        + 'Kaksi vuotta myöhemmin Peruggia vei taulun junalla Firenzeen ja tarjosi '
-        + 'sitä nimellä Leonardo V taidekauppias Alfredo Gerille. Uffizin johtaja '
-        + 'Giovanni Poggi tunnisti teoksen, ja poliisi haki miehen hotellista '
-        + 'joulukuussa 1913. Tuomioksi tuli vuosi ja viisitoista päivää, '
-        + 'valituksen jälkeen seitsemän kuukautta. Taulu kiersi ensin näyttelyissä '
-        + 'Italiassa ja palasi Louvreen 4. tammikuuta 1914.',
-      lahde: 'en-Wikipedia "Vincenzo Peruggia". Tarkistettu 2.9.2026.',
-      kuvat: [
-        {
-          osoite: `${SKANDAALI_KUVAJUURI}skandaali-mona-lisan-varkaus-1911-photo-v1.jpg`,
-          /*
-           * Fablen muotoilu 4.9.2026 (omistaja: "Muotoile itse"): kuvaputken
-           * teksti sanoi "Valkoisen takin alla kulkee Mona Lisa", mutta
-           * kortin oma teksti (korjaus 2.9.2026) kertoo, ettei taulu
-           * mahtunut työtakin alle — Peruggia kantoi sen käärittynä.
-           */
-          lyhyt: 'Vincenzo Peruggia kuljettaa Mona Lisan Louvresta työtakin ja käärön suojissa vuonna 1911.',
-          selite: 'Huoltomies avaa juuttuneen oven Vincenzo Peruggialle ja '
-            + 'luulee auttavansa työtoveria. Valkoisen työtakin ja käärön '
-            + 'suojissa kulkee Mona Lisa — pieni puupaneeli, joka katoaa yli '
-            + 'kahdeksi vuodeksi ja palaa Louvreen paljon kuuluisampana kuin '
-            + 'lähti.',
-          lahde: 'Matkakirjan havainnekuva. Faktat: Louvre — The theft of the '
-            + 'century; Peruggian henkilöllisyys, lasittajantausta, valkoinen '
-            + 'työtakki, 21.8.1911 tehty varkaus ja teoksen yli kaksivuotinen '
-            + 'katoaminen ovat dokumentoituja, huoltoportaikon katsekontakti '
-            + 'ja kuvattu sekunti dramatisoituja.',
-          url: 'https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana',
-        },
-      ],
-      visa: {
-        kysymys: 'Missä kaupungissa Mona Lisa löytyi yli kaksi vuotta varkauden '
-          + 'jälkeen?',
-        vaihtoehdot: [
-          'Milanossa',
-          'Firenzessä',
-          'Roomassa',
-        ],
-        oikea: 1,
-      },
-    },
     /*
      * Versailles'n palatsi.
      * Lähde: en-Wikipedia "Affair of the Diamond Necklace" (tarkistettu

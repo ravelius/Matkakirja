@@ -5425,40 +5425,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    Louvre: {
-      aika: '1793',
-      teksti: 'Louvre ei ollut alun perin museo vaan linnoitus: kuningas '
-          + 'Filip II rakennutti sen 1100-luvun lopulla puolustamaan '
-          + 'Pariisia. Vuosisatojen kuluessa siitä tehtiin '
-          + 'kuninkaallinen palatsi, kunnes Ranskan vallankumouksen '
-          + 'jälkeen se avattiin kaikille kansalaisille museona '
-          + 'elokuussa 1793.'
-        + '\n\n'
-        + 'Nykyään Louvressa on esillä noin 35 000 taideteosta, ja '
-          + 'koko kokoelmassa on peräti 500 000 esinettä. Museo on '
-          + 'maailman suurin, ja sen käytävät ovat kilometrien '
-          + 'mittaiset.'
-        + '\n\n'
-        + 'Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: '
-          + 'arkkitehti I. M. Pein suunnittelema lasinen pyramidi, '
-          + 'josta tuli museon pääsisäänkäynti. Aluksi moni '
-          + 'pariisilainen paheksui lasirakennelmaa vanhan palatsin '
-          + 'edessä, mutta siitä tuli pian yksi Pariisin tunnetuimmista '
-          + 'maamerkeistä.',
-      vuodet: [
-        { kohta: 'elokuussa 1793', vuosi: '1793', selite: 'museo avattiin' },
-        { kohta: 'Vuonna 1989', vuosi: '1989', selite: 'lasipyramidi' },
-      ],
-      kuvat: [
-        {
-          tiedosto: "Paris 1er Louvre Colonnade 559.jpg",
-          lyhyt: "Louvren kolonnadi",
-          selite: "Louvren itäjulkisivun kolonnadi, jossa kaksoispylväät kantavat rikkaasti koristeltua kattolistaa. Kuva on otettu Pariisin 1. kaupunginosassa.",
-          lahde: "GFreihalter, Wikimedia Commons (CC BY-SA 4.0)",
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
+    // Louvre-nähtävyysjuttu poistettu 17.11.2026: merkistä avautuu yksi nosto (fokuskohde `louvre`, js/packs/fokuskohteet-fra.js).
     'Luxembourgin puisto': {
       aika: '1612',
       teksti: 'Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria '

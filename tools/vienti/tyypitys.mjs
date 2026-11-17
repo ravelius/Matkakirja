@@ -39,7 +39,9 @@ export const RAAKA_VASTINEET = {
  */
 export const TYYPITETYT = {
   elaintayt: ['kuva', 'kuvat'], nahtavyydet: ['kuvat'], paikallisaarteet: ['isoAarre', 'pieniAarre'],
-  tarinakaari: ['kysymys'], fokusvirrat: ['lehtitehtavat'],
+  tarinakaari: ['kysymys'],
+  // Skeema 1.75: fokusvirtojen sisäkkäiset nostot kantavat nostokuvat (tools/vienti/nostokuvat.mjs).
+  fokusvirrat: ['lehtitehtavat', 'takyt', 'takynostot', 'kohteet'],
 };
 
 /** Kokoelmat, joiden raaka data ei ole olio: raaka → päätason kenttä. */
