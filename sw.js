@@ -3216,6 +3216,33 @@ const KUVACACHE = 'matkakirja-wikikuvat-v1';
 const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
 
 /*
+ * Esittelysivuston polut suhteessa palvelutyöntekijän juureen (sama
+ * sääntö toimii matkakirja.app/:ssa ja ravelius.github.io/Matkakirja/:ssa).
+ */
+const ESITTELYSIVU = (osoite) => {
+  const juuri = new URL('./', self.location.href).pathname;
+  if (!osoite.pathname.startsWith(juuri)) return false;
+  const polku = osoite.pathname.slice(juuri.length);
+  return polku === '' || polku === 'index.html'
+    || polku === 'en' || polku === 'en/' || polku === 'en/index.html'
+    || polku.startsWith('sivusto/');
+};
+
+// Verkko ensin, välimuisti varalla: onnistunut vastaus päivittää korin,
+// verkkovirhe tai palvelimen 5xx palauttaa korin version, jos sellainen on.
+async function esittelyVerkostaEnsin(pyynto) {
+  const vastaus = await fetch(pyynto, { cache: 'no-cache' }).catch(() => null);
+  if (vastaus && vastaus.ok) {
+    const kopio = vastaus.clone();
+    caches.open(CACHE).then((kori) => kori.put(pyynto, kopio));
+    return vastaus;
+  }
+  const varalla = await caches.match(pyynto);
+  if (varalla && (!vastaus || vastaus.status >= 500)) return varalla;
+  return vastaus ?? Response.error();
+}
+
+/*
  * Äänten ajonaikainen välimuisti (omistajan linjaus 16.8.2026).
  *
  * Oma kori, jota versionvaihto ei tyhjennä — kuten kuvilla. Äänet ovat
@@ -3773,6 +3800,20 @@ self.addEventListener('fetch', (event) => {
       );
       return;
     }
+    return;
+  }
+  /*
+   * ESITTELYSIVU VERKOSTA ENSIN (omistaja 17.11.2026 klo 13.10, KK 13.15):
+   * etusivu ('./', index.html), englanninkielinen esittely (en/) ja
+   * sivusto/* haetaan aina verkosta, ja välimuisti on vain varalla ilman
+   * verkkoa. Ennen tätä ne tulivat välimuistista ensin, joten laite, jolla
+   * peliä oli pelattu selaimessa, näki etusivun aina yhden käynnin jäljessä
+   * (17.11. etusivu vaihtui pelistä esittelyksi, eikä uusia kuvia näkynyt).
+   * cache: 'no-cache' ohittaa myös selaimen HTTP-välimuistin (304, jos sivu
+   * ei ole muuttunut). Peli (pelaa.html ja sen tiedostot) ennallaan alla.
+   */
+  if (osoite.origin === self.location.origin && ESITTELYSIVU(osoite)) {
+    event.respondWith(esittelyVerkostaEnsin(event.request));
     return;
   }
   // Repon omat valokuvat: sama kori kuin wikikuvilla, jotta ne eivät
