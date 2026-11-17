@@ -8287,13 +8287,13 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
         + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; '
-        + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.',
+        + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; osa siitä poistettiin vasta 1946–47 ja loput 1975–76.',
       vuodet: [
         { kohta: 'vuonna 1642', vuosi: '1642', selite: 'Rembrandt valmisti' },
         { kohta: 'Vuonna 1715', vuosi: '1715', selite: 'taulu siirrettiin' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
         { kohta: 'vasta 1885', vuosi: '1885', selite: 'nykyinen avattiin' },
-        { kohta: 'uudelleen 1975–76', vuosi: '1975–76', selite: 'kunnostus' },
+        { kohta: 'loput 1975–76', vuosi: '1975–76', selite: 'kunnostus' },
       ],
       kuvat: [
         {
