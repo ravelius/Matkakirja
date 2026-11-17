@@ -234,9 +234,13 @@ export const FOKUSKOHTEET_FRA = [
         lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
       },
       purku: {
-        osoite: null, tulossa: 'Codex', laji: 'havainnekuva',
+        // Tilaus 8.4 B valmis; KK hyväksyi 17.11.2026 klo 14.43 (P-261117-61). Ämpäri kuvat/ (vienti
+        // proto-3d/_valmiit/tuileries-palo-kuva-vienti-20261117), SHA-256 0c3ef7dd…532c7a338, 2400 × 1600.
+        osoite: 'https://media.matkakirja.app/kuvat/tuileries-purku-1880-luku.jpg',
+        laji: 'havainnekuva',
         lyhyt: 'Palatsin purku ja kivien myynti',
-        lahde: 'Matkakirjan havainnekuva (tilaus 8.4 B)',
+        lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Godefroy PH83415 ja PH20009, '
+          + 'Paris Musées / Carnavalet, CC0',
       },
       punta: {
         // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
