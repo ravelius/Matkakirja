@@ -1,8 +1,8 @@
 # "Yhdistä kolme": lisätyypit c, f, i, Lontoo (SK 16.11.2026, KK:n tilaus)
 
-Dataluonnokset samassa muodossa kuin Pariisin (docs/raportit/yhdista-kolme-lisatyypit-pariisi-20261112.md, PR 6669). VAIN DOCS: ei pelidataa, ei latauksia. Kolmikot eivät toista Lontoon osan A rakennuksia (yhdista-kolme-lontoo-20261113.md). Lähteet: pelin omat jutut (js/packs/nahtavyysjutut.js, merkintä P), en-Wikipedia (WebFetch 16.11.) ja hakutulosten toinen lähde; kuvien lisenssi Commonsin rajapinnasta (imageinfo, Restrictions tyhjä kaikilla). Wikipedian kieliversiot ovat yksi lähde (2L = kaksi riippumatonta). Kuvalinkki: https://commons.wikimedia.org/wiki/File: + tiedosto (välilyönnit alaviivoiksi). KUVIA EI OLE KATSOTTU SILMIN tässä erässä (vain rajapinnan tiedot): KK/SK katsoo ennen käyttöä.
+Dataluonnokset samassa muodossa kuin Pariisin (docs/raportit/yhdista-kolme-lisatyypit-pariisi-20261112.md, PR 6669). VAIN DOCS: ei pelidataa, ei latauksia. Kolmikot eivät toista Lontoon osan A rakennuksia (yhdista-kolme-lontoo-20261113.md). Lähteet: pelin omat jutut (js/packs/nahtavyysjutut.js, merkintä P), en-Wikipedia (WebFetch 16.11.) ja hakutulosten toinen lähde; kuvien lisenssi Commonsin rajapinnasta (imageinfo, Restrictions tyhjä kaikilla). Wikipedian kieliversiot ovat yksi lähde (2L = kaksi riippumatonta). Kuvalinkki: https://commons.wikimedia.org/wiki/File: + tiedosto (välilyönnit alaviivoiksi). Kuvat katsottu silmin ja lisenssit luettu uudelleen Commonsin rajapinnasta 17.11. (kuvaraportti tiedoston lopussa).
 
-**Yhteenveto KK:lle:** c 3 paria, f 3 paria (yksi tarkistettava), i 3 paria. Kuvia puuttuu pelistä 9 kpl (kaikki uusia; ei yhtään jo pelissä); 1 kuva CC BY 4.0 (Newgate, Wellcome), loput PD. Tarkistettavaa: Monet-taulun museo, Newgaten purkuvuosi (1902/1903/1904, lähteet ristiriidassa; ei vuotta tekstiin).
+**Yhteenveto KK:lle (päivitetty 17.11., KK:n kolme kohtaa tehty):** c 3 paria, f 3 paria, i 3 paria. Kuvia puuttuu pelistä 9 kpl (kaikki uusia; ei yhtään jo pelissä); 1 kuva CC BY 4.0 (Newgate, Wellcome), loput PD; kaikki 9 katsottu silmin ja lisenssi luettu Commonsin rajapinnasta 17.11. (raportti alla). Monet-taulu: National Gallery (NG6399), 2L. Purkuvuodet: vain 2L-vuodet tekstiin (Greenwich "1600-luvulla", Newgate suljettu 1902 ilman purkuvuotta, Euston Arch 1962). Rivillä ei ole avoimia "tarkistettavaa"-kohtia; Wikipedian kieliversiot ovat yksi lähde.
 
 ## (c) Kadonnut ↔ mikä seisoo paikalla nyt
 
@@ -10,11 +10,11 @@ Ylärivi kadonnut (KUVA; kadonneilla ei 3D-mallia), lappu = nykyisen paikan nimi
 
 | # | Kadonnut | Nyt paikalla (lappu) | Malli nykyisellä | Lähde | Var. |
 |---|---|---|---|---|---|
-| 1 | Greenwichin palatsi (Placentia; Henrik VIII s. 1491, Maria I 1516, Elisabet I 1533; purettu 1660-luvulla; paikka tyhjänä kunnes sairaala alkoi 1694) | Old Royal Naval College | 3D (OhjelmaKohteet) | en-Wikipedia "Palace of Placentia"; hakutulos (visitgreenwich.org.uk, historyofroyalwomen.com: sairaala 1694, kolleegio 1873); pelin ORNC-juttu (P) | 2L; purkuvuosi 1660/1662/1664 ristiriita: tekstiin "1660-luvulla" |
-| 2 | Newgaten vankila (suljettu 1902; viimeinen julkinen teloitus 1868) | Old Bailey (Central Criminal Court, avattu 27.2.1907, E. W. Mountford) | EI mallia (kuva) | en-Wikipedia "Newgate Prison": "now stands upon the Newgate Prison site"; hakutulos (Britannica, e-architect, History Today: avaus 27.2.1907) | 2L; purkuvuosi 1902/1903/1904 ristiriita: ei vuotta tekstiin |
-| 3 | Euston Arch (Hardwick 1837; purettu 1961–62) | Euston-asema (uusi asema 1968) | EI mallia (kuva) | en-Wikipedia "Euston Arch" (purku 1961, valmis uusi asema 1968); hakutulos (Grace's Guide: purku 1961–2, uusi asema 1968) | 2L; ei pelin omaa juttua → oma faktarivi kortille |
+| 1 | Greenwichin palatsi (Placentia; Henrik VII rakensi n. 1500, Henrik VIII s. 1491, Maria I 1516, Elisabet I 1533; purettu 1600-luvulla; paikalle rakennettiin sairaala 1694) | Old Royal Naval College | 3D (OhjelmaKohteet) | ORNC "Greenwich Palace (1498 – 1694)" (ornc.org/our-history/greenwich-palace/): Henrik VII rakensi palatsin n. 1500, Charles II:n uusi palatsi jäi kesken ja muutettiin sairaalaksi; RMG "Greenwich Palace and the Tudors": Placentia rappeutui sisällissodassa ja "was eventually demolished", uusi palatsi muutettiin merisairaalaksi; pelin ORNC-juttu (P) | 2L: "purettiin 1600-luvulla" (ORNC, RMG); tarkka purkuvuosi (1660/1661/1694) lähteissä eri: EI vuotta tekstiin |
+| 2 | Newgaten vankila (suljettu 1902; viimeinen julkinen teloitus 1868) | Old Bailey (Central Criminal Court, E. W. Mountford) | EI mallia (kuva) | theprison.org.uk ("The prison closed in 1902 … The new Central Criminal Court, known as the Old Bailey, was then erected on the site") + prisonguide.co.uk (aikajana: "1902 Newgate closes"); old-bailey.com ("The Old Bailey was built on the site of the old Newgate Prison"); en-Wikipedia "Old Bailey" (jail's 1902 closure) | 2L: suljettu 1902 ja Old Bailey paikalla. **Purkuvuosi ristiriidassa (old-bailey.com 1902; theprison.org.uk 1904; prisonguide 1903–04) ja Old Bailey -avauksen vuosi 1907 vain yhdessä avattavassa lähteessä (old-bailey.com): EI vuosia tekstiin paitsi "suljettiin 1902"**; Historic England kieltää ClaudeBotin (ei avattu), History Today 403 (ei kierretty) |
+| 3 | Euston Arch (Hardwick 1837; purettu 1962) | Euston-asema | EI mallia (kuva) | en-Wikipedia "Euston Arch" ("demolished in 1962 during the rebuilding of the station"); camdenguides.com/euston-station ("the Arch was demolished by 1962"); buildingconservation.com "Saving a Century" ("finally brought it down in 1962") | 2L+ (3 itsenäistä): purettu 1962 (purkutyö alkoi joulukuussa 1961, 1L: ei tekstiin). Uuden aseman valmistumisvuosi 1968 vain en-Wikipediassa (1L): EI tekstiin. Ei pelin omaa juttua → oma faktarivi kortille |
 
-Varalla: Vanha London Bridge → nykyinen London Bridge (valmis 1973; ei tarkistettu tässä erässä), Whitehallin palatsi → Banqueting House (säilyi; ei "korvaaja").
+Varalla: Vanha London Bridge → nykyinen London Bridge (valmis 1973; ei tässä erässä), Whitehallin palatsi → Banqueting House (säilyi; ei "korvaaja").
 
 ### Kuvat (c)
 
@@ -48,9 +48,9 @@ Taulut Lontoon museossa; ylärivi KUVA (taulu), lappu = maalarin nimi.
 
 | # | Taulu | Maalari | Museo (lähde) | Pelissä jo | Lisenssi / Var. |
 |---|---|---|---|---|---|
-| 1 | The Fighting Temeraire (maalattu 1838, esillä Royal Academyssä 1839) | J. M. W. Turner | National Gallery (en-Wikipedia "The Fighting Temeraire": Temeraire hinataan Rotherhithen purkutelakalle Thamesia pitkin) | juttu Westminsterin palatsi mainitsee Turnerin; kuvaa EI pelissä | PD; 1L–2L (museo ja vuosi en-Wikipediasta; toinen lähde tarkistamatta) |
-| 2 | The Stonemason's Yard (n. 1725) | Canaletto | National Gallery (en-Wikipedia "The Stonemason's Yard") | Canaletto-nosto (Lontoo 1746–1755) ja Venetsian lehti; tämä kuva ei pelissä | PD; 1L. Huom.: Lontoon museossa mutta kuvaa Venetsiaa: tehtävä "kuka maalasi" toimii pelin omalla Canaletto-jutulla |
-| 3 | The Thames below Westminster (1871) | Claude Monet | National Gallery (EI vahvistettu: en-Wikipedia-sivu 404, vain Commons-tiedoston nimi) | Monet esiintyy Pariisin jutussa (Monet 1874) | PD; TARKISTETTAVA (museo, vuosi). Varalla: Constable The Hay Wain |
+| 1 | The Fighting Temeraire (maalattu 1838–39, esillä Royal Academyssä 1839) | J. M. W. Turner | National Gallery, Room 40, NG524, Turner Bequest 1856 (nationalgallery.org.uk: "Date made 1839"; Temeraire hinataan Rotherhitheen purettavaksi) + Web Gallery of Art ("1838-39 … National Gallery, London") | juttu Westminsterin palatsi mainitsee Turnerin; kuvaa EI pelissä | PD; 2L (museo + vuosi 1839): kuvan vuosi "1839" |
+| 2 | The Stonemason's Yard (n. 1725) | Canaletto | National Gallery, Room 33, NG127, Sir George Beaumont Gift 1823 (nationalgallery.org.uk: "Date made About 1725"; kuvaa Venetsiaa) + en-Wikipedia ("museum: National Gallery", Campo San Vidal Venetsiassa) | Canaletto-nosto (Lontoo 1746–1755) ja Venetsian lehti; tämä kuva ei pelissä | PD; 2L. Huom.: Lontoon museossa mutta kuvaa Venetsiaa: tehtävä "kuka maalasi" toimii pelin omalla Canaletto-jutulla |
+| 3 | The Thames below Westminster (n. 1871) | Claude Monet | **National Gallery, Room 41, NG6399**, Lord Astor of Hever -testamenttilahjoitus 1971 (nationalgallery.org.uk/paintings/claude-monet-the-thames-below-westminster: "about 1871"; "Acquired from Dr. Alfred Gold, Berlin, by Tooth's, who sold it in 1936 to The Hon. J. J. Astor") + Web Gallery of Art ("c. 1871, Oil on canvas, 47 x 63 cm, National Gallery, London") | Monet esiintyy Pariisin jutussa (Monet 1874) | PD; 2L: museo National Gallery ja vuosi "n. 1871" (signeeraus "Claude Monet 71" kuvassa). Constable-vaihto ei tarvita |
 
 ### Kuvat (f)
 
@@ -100,15 +100,15 @@ Pelin jutuista (nahtavyysjutut.js, P) nimetyt arkkitehdit. Ylärivissä rakennus
 ```js
 { id: 'lontoo-arkkitehdit-1', tyyppi: 'henkilo-rakennus',
   parit: [
-    { kohde: { malli: '<St Paul\'s-avain, PK vahvistaa>' }, nimi: 'Pyhän Paavalin katedraali',
+    { kohde: { malli: '<St Paul\'s-avain, PK liittää>' }, nimi: 'Pyhän Paavalin katedraali',
       lappu: { kuva: { tiedosto: 'Christopher Wren by Godfrey Kneller 1711.jpg',
         lahde: { tekija: 'Godfrey Kneller', teos: 'Christopher Wren (1711)', lisenssi: 'PD', muokkaus: 'rajaus sallittu',
                  linkki: 'https://commons.wikimedia.org/wiki/File:Christopher_Wren_by_Godfrey_Kneller_1711.jpg' } }, nimi: 'Christopher Wren' } },
-    { kohde: { malli: '<British Museum -avain, PK vahvistaa>' }, nimi: 'British Museum',
+    { kohde: { malli: '<British Museum -avain, PK liittää>' }, nimi: 'British Museum',
       lappu: { kuva: { tiedosto: 'WP Robert Smirke.jpg',
         lahde: { tekija: 'George Dance', teos: 'Robert Smirke (1809)', lisenssi: 'PD', muokkaus: 'rajaus sallittu',
                  linkki: 'https://commons.wikimedia.org/wiki/File:WP_Robert_Smirke.jpg' } }, nimi: 'Robert Smirke' } },
-    { kohde: { malli: '<NHM-avain, PK vahvistaa>' }, nimi: 'Natural History Museum',
+    { kohde: { malli: '<NHM-avain, PK liittää>' }, nimi: 'Natural History Museum',
       lappu: { kuva: { tiedosto: 'Waterhouse by Copeland.jpg',
         lahde: { tekija: 'Arthur Stockdale Cope', teos: 'Alfred Waterhouse', lisenssi: 'PD', muokkaus: 'rajaus sallittu',
                  linkki: 'https://commons.wikimedia.org/wiki/File:Waterhouse_by_Copeland.jpg' } }, nimi: 'Alfred Waterhouse' } },
@@ -118,6 +118,24 @@ Pelin jutuista (nahtavyysjutut.js, P) nimetyt arkkitehdit. Ylärivissä rakennus
 ## Mitä uutta tuotava / varmistettava
 - Uusia kuvia kaikki 9 (c1–c3, f1–f3, i1–i3); BY-vaatimus vain c2 (Wellcome, CC BY 4.0: tekijä, teos, lisenssi, linkki teoskortissa). Katsottava silmin ennen käyttöä (rajapinnan tiedot eivät riitä): erityisesti c1 (palatsimaalauksen aihe), c2 (rakennuksen julkisivu), i2 (piirros 1809).
 - Faktaa tarvitaan: Old Bailey, Euston-asema ja (jos halutaan) Greenwichin palatsin syntymäfaktat eivät ole pelin jutuissa; riville lähde en-Wikipedia + toinen (yllä).
-- Tarkistettavaa: Monet-taulun museo; Newgaten ja Placentian purkuvuosi (ristiriita; teksteihin ei tarkkaa vuotta); Turnerin taulun toinen lähde.
-- PK vahvistaa: St Paul's, British Museum, NHM ja ORNC -mallien avaimet.
+- (KK:n kolme kohtaa 17.11. tehty: Monet-museo, purkuvuodet, kuvaraportti.)
+- PK liittää avaimet: St Paul's, British Museum, NHM ja ORNC -mallit.
 - Hakuja: noin 12 (6 hakutulosta, 6 WebFetch + Commonsin rajapinta); yksi hakutuloksen otteessa oli tekoälylle osoitettu kehote, ohitettu.
+
+## Kuvaraportti (SK 17.11.2026, Pariisin mallin mukaan #6669, #6670)
+
+Lisenssit luettu Commonsin rajapinnasta (`action=query&prop=imageinfo&iiprop=extmetadata`, 17.11.): kaikilla `Restrictions` tyhjä; mikään ei ole pelissä jo. Kuvat ladattu 960 px:n esikatseluina ja katsottu silmin; alkuperäiset (koot alla) vasta datavaiheessa. Katsojan huomio = mitä kuvassa näkyy ja sopiiko tehtävään.
+
+| Id | Tiedosto | Lisenssi (API) | Koko | Silmin katsottu 17.11. |
+|---|---|---|---|---|
+| c1 | `Greenwich Palace (anonymous).jpg` | PD | 1218×880 | Joenrantanäkymä: pitkä kaksikerroksinen tiilipalatsi torneineen ja savupiippuineen Thamesin rannalla, etualalla purjevene, soutuvene ja kaksimastoinen laiva; keltainen, vanhentunut maalauspinta. Sopii "Greenwichin palatsi" -kuvaksi; ei vääristymiä. |
+| c2 | `Newgate Gaol … Wellcome V0041199.jpg` | CC BY 4.0 (tekijä, teos, lisenssi ja linkki näkyviin) | 4753×1470 | Kaiverrettu julkisivupiirros "NEW NEWGATE … Published according to Act of Parliament, August 1st 1771": pitkä kolmikerroksinen rakennus, keskellä korotettu osa ja kolme holvikaarta alakerrassa. **Arkkitehtuuripiirros, ei maisemakuva; leveä (3,2:1) joten rajaus tarvitaan**; sopii Newgaten tunnistamiseen (1770-luvun uusi Newgate, sama vankila joka suljettiin 1902). |
+| c3 | `Euston Arch 1896.jpg` | PD | 593×414 | Mustavalkoinen valokuva: dooriset pylväät ja pääty "EUSTON"-kirjoituksella, hevoskärryt ja kaasulyhdyt; selkeä ja tunnistettava, mutta **matala resoluutio (593 px), ei suurenna hyvin**. |
+| f1 | `The Fighting Temeraire, JMW Turner, National Gallery.jpg` | PD | 5684×4223 | Turnerin taulu: haamunvalkea purjelaiva ja höyrytukialus, laskeva aurinko oikealla, kultaiset ja siniset sävyt; tunnistettava, ei vääristymiä. |
+| f2 | `Canaletto - The Stonemason's Yard.jpg` | PD | 6000×4640 | Venetsialainen kivenhakkaajan piha, kampanile ja kanaali taustalla, punaiset talot oikealla; tunnistettava Canaletto; kuvaa Venetsiaa (ei Lontoota). |
+| f3 | `Claude Monet - The Thames below Westminster.jpg` | PD | 17139×11054 | Sumuinen Thames, Westminster-silta ja parlamentin torni (Big Ben) oikealla, laituri etualalla, signeeraus "Claude Monet 71" oikealla alhaalla; tunnistettava. Valtava alkuperäinen: pienennettävä. |
+| i1 | `Christopher Wren by Godfrey Kneller 1711.jpg` | PD | 1206×1536 | Pitkätukkainen mies samettitakissa ja punaisessa nojatuolissa, piirros kirkon pohjakaavasta ja harpit kädessä; kulmassa kirjoitus "Sir Chr: Wren … died … aged 91" ja signeeraus "G. Kneller p. 1711". Sopii; teksti kuvassa on myöhempi lisäys (kuolinvuosi). |
+| i2 | `WP Robert Smirke.jpg` | PD | 1517×2083 | Profiilikuva etsauksena, valkoinen kaulus ja takki, alla "Robert Smirke Jun.r", vuosi 1809; vaalea paperi; tunnistettava mutta **kuva on kopion (1809 etsaus) tuntuinen ja paperin reunat näkyvät**, rajaus tarvitaan. |
+| i3 | `Waterhouse by Copeland.jpg` | PD | 648×801 | Soikea maalausmuotokuva valkopartaisesta miehestä profiilissa, ruskea tausta, signeeraus "1888"; **matala resoluutio (648 px)**; Commonsin kuvauksessa "ennen 1886" ja kuvassa signeeraus näyttää 1888: vuotta ei käytetä kuvatekstissä. |
+
+**Kuvien tila:** yhdeksästä kaikki käyttökelpoisia; rajattavia: c2 (leveä), i2 (paperin reunat), i3 (matala). Matalat (c3 593 px, i3 648 px) kelpaavat vain pieneen näyttöön. BY-vaatimus: vain c2.
