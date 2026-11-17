@@ -5,6 +5,9 @@ const SHELL = [
   // Esittelyn kuvat (sivusto/kuvat/) tulevat välimuistiin vasta nähtyinä, eivät asennuksessa.
   './',
   './index.html',
+  // Englanninkielinen esittely (en/): sekin esittely, ei peli.
+  './en/',
+  './en/index.html',
   './sivusto/sivusto.css',
   './sivusto/sivusto.js',
   './pelaa.html',

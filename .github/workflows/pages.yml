@@ -67,7 +67,8 @@ jobs:
           mkdir -p _site/sivusto/kuvat
           cp sivusto/sivusto.css sivusto/sivusto.js _site/sivusto/
           find sivusto/kuvat -maxdepth 1 -type f \( -name '*.jpg' -o -name '*.webp' -o -name '*.png' \) -exec cp {} _site/sivusto/kuvat/ \;
-          if [ -f en/index.html ]; then mkdir -p _site/en && cp en/index.html _site/en/; fi
+          # Englanninkielinen esittely matkakirja.app/en/ (vain sivu; ei .md:tä, ei artikkeleita).
+          mkdir -p _site/en && cp en/index.html _site/en/
 
       - uses: actions/upload-pages-artifact@v3
         with:
