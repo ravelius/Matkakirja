@@ -362,28 +362,142 @@ export const FOKUSKOHTEET_FRA = [
     kysymykset: [
       'Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?',
       'Millaista elämä linnoituksen sisällä oli?',
+      'Mihin Bastiljin kivet päätyivät?',
     ],
-    korostukset: ['Porte Saint-Antoine|Saint-Antoinea',
-      'valtionvankila|valtionvankilaksi'],
+    // Näkyvät muodot jaksojen tekstistä (Bastilji-nosto 17.11.2026).
+    korostukset: ['Palloy', 'Henri-Galli'],
     nappi: 'Linnoitus, jota ei enää ole — mutta jonka päivää juhlitaan',
     laudat: {
       maailmankartta: { x: 5912.3, y: 1439.7 },
       europe: { x: 256.7, y: 608.8 },
     },
-    teksti: 'Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin '
-      + 'itälaidalla. Se rakennettiin satavuotisen sodan aikana '
-      + 'suojaamaan kaupungin itäistä sisääntuloa, Porte '
-      + 'Saint-Antoinea: työt olivat käynnissä jo 1357 ja pääosa nousi '
-      + 'vuodesta 1370 alkaen kahdeksantornisena kivimuurina. Vuonna '
-      + '1417 se julistettiin valtionvankilaksi, ja vuodesta 1659 se '
-      + 'toimi lähinnä siinä tehtävässä — vuoteen 1789 mennessä sen '
-      + 'porteista oli kulkenut 5 279 vankia. Heinäkuun 14. päivänä '
-      + '1789 väkijoukko valtasi linnoituksen, jonka selleissä oli '
-      + 'tuolloin enää seitsemän vankia. Purkutyöt alkoivat heti, ja '
-      + 'kivet myytiin muistoesineiksi.',
-    lahde: 'en-Wikipedia "Bastille", johdanto, tietolaatikko ja osiot '
-      + '"Storming of the Bastille" ja "Legacy" (tarkistettu '
-      + '27.8.2026).',
+    // teksti lasketaan jaksoista tiedoston lopussa (kuten Tuileries).
+    // Lähdeaineisto: docs/raportit/bastilji-nosto-teksti-20261117.md (ei pelaajalle näkyvään tekstiin).
+    lahde: 'Matkakirjan oma teksti · lähteinä Larousse, Futura, Hérodote, Pariisin kaupungin Parcours Révolution, '
+      + 'paris.fr ja Ranskan kulttuuriministeriö (tarkistettu 17.11.2026).',
+    /*
+     * JAKSOT (omistaja 17.11.2026 klo 20.06, P-261117-98; Tuileries'n malli, PR 7073). Vanhat tekstit
+     * (kohteen oma teksti, nähtävyysjutut Bastilji ja Bastilji 1789) kirjoitettu uudelleen jaksoiksi:
+     * faktat kahdesta itsenäisestä lähteestä, raportti docs/raportit/bastilji-nosto-teksti-20261117.md.
+     * Historian hetki `ranskan-vallankumous-bastilji-1789` (lehden sivu ja sen kartapiste) jää ennalleen.
+     */
+    otsikko: 'Bastilji 1789 — linna, joka jaettiin kivinä',
+    aanikansio: 'bastilji/v1',
+    jaksot: [
+      { osa: 'nimi', aanite: 'nimi', teksti: 'Bastilji.' },
+      { osa: 'esittely', aanite: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aanite: 'isoisa',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kartassani lukee Bastilji, ja astuin aukiolle mitta kädessä. '
+          + 'Linnaa ei ole. Keskellä seisoo vain korkea pylväs, jonka päällä on patsas.',
+        kuva: 'pylvas1860',
+      },
+      {
+        osa: 'tapahtuma',
+        aanite: 'kertoja-1-otsikko-jakso2',
+        teksti: 'Bastilji rakennettiin 1300-luvun lopulla vartioimaan Pariisin itäistä porttia, '
+          + 'ja siinä oli kahdeksan tornia. Myöhemmin siitä tuli valtionvankila. Kuningas saattoi '
+          + 'lähettää sinne ihmisen kirjeellä, ilman oikeudenkäyntiä, ja linnasta tuli mielivallan symboli.',
+        kuva: 'loisto',
+        lisakuva: { kuva: 'silvestre', kohta: 'kahdeksan tornia' },
+      },
+      {
+        osa: 'tapahtuma',
+        aanite: 'kertoja-2-jakso3',
+        teksti: 'Heinäkuun 14. päivänä 1789 pariisilaisilla oli Invalidien sotilaskodista otettuja '
+          + 'aseita mutta ei ruutia, ja ruutia uskottiin olevan Bastiljissa. Vankeja oli vain seitsemän. '
+          + 'Silti väkijoukko valtasi linnan, ja kuvernööri surmattiin.',
+        kuva: 'valtaus',
+        lisakuva: { kuva: 'portti', kohta: 'Silti väkijoukko valtasi linnan' },
+        vuodet: [{ vuosi: '1789', selite: 'valtaus', kohta: 'päivänä 1789' }],
+      },
+      {
+        osa: 'kaanne',
+        aanite: 'kertoja-3-jakso4',
+        teksti: 'Purku alkoi jo samana iltana. Työmaata johti Palloy, jonka työpajassa kivistä '
+          + 'veistettiin pienoismalleja ja muistoesineitä. Osa kivistä päätyi Pariisin siltoihin, ja '
+          + 'muutamassa vuodessa linnasta ei jäänyt pystyyn mitään.',
+        kuva: 'purku',
+        hologrammi: 'sammuu',
+        hologrammiKohta: 'Purku alkoi',
+      },
+      {
+        osa: 'tanaan',
+        aanite: 'kertoja-4-jakso5',
+        teksti: 'Linnan paikalla on nyt aukio. Aukion pylväs muistuttaa vuoden 1830 vallankumouksesta, '
+          + 'ei 1789:stä. Tornin pohjakiviä on koottu Henri-Galli-puistoon, ja metroaseman laiturilla '
+          + 'näkyy pala vallihaudan muuria.',
+        kuva: 'metro',
+        vuodet: [
+          { vuosi: '1840', selite: 'pylväs valmistuu', kohta: 'pylväs' },
+          { vuosi: '1899', selite: 'tornin pohja löytyy', kohta: 'pohjakiviä' },
+        ],
+        // Square Henri-Galli 48,8513 N / 2,3618 E (fr-Wikipedia ja OpenStreetMap).
+        kartta: { nimi: 'Square Henri-Galli', lat: 48.8513, lon: 2.3618 },
+      },
+    ],
+    jaksokuvat: {
+      pylvas1860: {
+        tiedosto: 'Colonne de Juillet, Place de la Bastille, 11ème arrondissement, Paris. Vers 1865. PH18320.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Bastiljin aukio ja pylväs 1860-luvulla',
+        lahde: 'Pierre Emonts, Musée Carnavalet / Paris Musées, Wikimedia Commons (CC0)',
+      },
+      loisto: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Bastilji loistoaikanaan',
+        lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
+          + 'Faktat: Musée Carnavalet — La Bastille au XVIIIe siècle, tarkistettu 5.9.2026.',
+      },
+      silvestre: {
+        tiedosto: 'Le Chasteau de la Bastille de Paris, hors la Porte Sainct Antoine. G.285.jpg',
+        laji: 'piirros',
+        lyhyt: 'Bastiljin linnoitus 1600-luvulla',
+        lahde: 'Israël Silvestre 1650–1660, Musée Carnavalet, Wikimedia Commons (CC0)',
+      },
+      valtaus: {
+        tiedosto: 'Jean-Baptiste Lallemand - La prise de la Bastille, le 14 juillet 1789 - P1718 - Musée Carnavalet.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Bastiljin valtaus 14. heinäkuuta 1789',
+        lahde: 'Jean-Baptiste Lallemand 1789, Musée Carnavalet, Wikimedia Commons (PD)',
+      },
+      portti: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Pariisilainen Bastiljin portilla 1789',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Musée Carnavalet — Taking of the Bastille, tarkistettu 5.9.2026.',
+      },
+      purku: {
+        tiedosto: 'The Bastille in the first days of its demolition, by Hubert Robert.jpg',
+        laji: 'maalaus',
+        lyhyt: 'Bastiljin purku alkaa heinäkuussa 1789',
+        lahde: 'Hubert Robert 1789, Wikimedia Commons (PD)',
+      },
+      metro: {
+        tiedosto: 'Bastille Metro 2, August 18, 2012.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Muurin pala metroaseman laiturilla',
+        lahde: 'Shihchuan, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+    },
+    /*
+     * KYSYMYS: hetken `ranskan-vallankumous-bastilji-1789` tehtävä siirretty tähän, koska pisteellä on
+     * yksi nosto ja yksi visa. Hetken oma sivu lehdessä pysyy ennallaan.
+     */
+    visa: {
+      kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta 1789?',
+      vaihtoehdot: [
+        'Vapauttamaan satoja poliittisia vankeja',
+        'Hakemaan ruutia Invalidien musketteihin',
+        'Vangitsemaan kuninkaan',
+        'Polttamaan verokirjat',
+      ],
+      oikea: 1,
+      fakta: 'Vankeja oli seitsemän; kuvernööri de Launay antautui ja surmattiin.',
+    },
     /*
      * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
      * samannimisessä lohkossa. Linnoitusta ei ole, joten `kadonnut: true`
