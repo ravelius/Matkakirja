@@ -942,7 +942,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'kuuluu saksalaiseen Singspiel-perinteeseen, jossa yleisön piti ymmärtää '
           + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
           + 'jälkeen.',
-        'Schikaneder haki 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+        'Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
           + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
           + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.',
         'Isoisäsi matkavuonna 1873 Taikahuilun teatteri ei ollut enää käytössä, '

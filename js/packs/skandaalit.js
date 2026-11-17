@@ -201,7 +201,7 @@ export const SKANDAALIT = {
       // Teksti uusittu KK 17.11.2026 (Wienin 10 tarinapaikkaa); vanha pitkä `teksti` poistettu, koska sen väitteet
       // (87 professoria, syyttäjä 1901, Ledererin tuki, Moserin osto jne.) eivät täyttäneet kahden lähteen sääntöä.
       // Sääntö 11 (17.11.): kolme kuvaa, professorien vetoomus 1900 ja mustavalkoiset valokuvat: Leopold Museum
-      // (lehdistötiedote 2005) + MedUni Wien (Medizin-sivu) + Wien Tourismus; professorien lukumäärää ja luonnoksia ei väitetä.
+      // (lehdistötiedote 2005) + MedUni Wien (Medizin-sivu) + Wien Tourismus; professorien lukumäärää ei väitetä. Valokuvat ja luonnokset: MedUni Wien ("a few sketches and black-and-white photographs") + Leopold Museumin ja Albertinan kokoelmasivut (KK 17.11., WIEN.md lisätarkistus 1).
       kortti: 'Wienin yliopiston juhlasalin kattoon tilattiin maalauksia 1894, ja '
         + 'tilaajana oli opetusministeriö. Tilauksen saivat Gustav Klimt ja Franz Matsch. '
         + 'Klimt maalasi kolme tiedekuntakuvaa: Filosofian, Lääketieteen ja Oikeustieteen. '
@@ -209,7 +209,7 @@ export const SKANDAALIT = {
         + 'professoreja vetosi ministeriöön kuvan ripustamista vastaan. '
         + 'Maalaukset eivät koskaan päätyneet kattoon: toukokuussa 1945, sodan viime '
         + 'päivinä, Immendorfin linnassa säilytetyt taideteokset paloivat, ja Klimtin '
-        + 'tiedekuntakuvat tuhoutuivat. Niistä on jäljellä vain mustavalkoisia valokuvia.'
+        + 'tiedekuntakuvat tuhoutuivat. Niistä on säilynyt mustavalkoisia valokuvia ja Klimtin luonnoksia.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Gustav Klimt oli vielä lapsi, sillä hän oli '
         + 'syntynyt 14. heinäkuuta 1862. Yliopiston uusi päärakennus Ringillä ei '
