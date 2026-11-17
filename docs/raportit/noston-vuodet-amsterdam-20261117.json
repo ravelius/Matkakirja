@@ -1,0 +1,430 @@
+{
+ "kaupunki": "amsterdam",
+ "huom": "SK 17.11.2026. Rivit käsin tekstiä vasten; kohta = sanatarkka pätkä luettavasta tekstistä (tasan kerran), vuosi näytetään sellaisenaan, selite 1-3 sanaa enintään 20 merkkiä. Ei uusia faktoja.",
+ "nostot": [
+  {
+   "nimi": "Keskusrautatieasema",
+   "avain": "nahtavyys:amsterdam:Keskusrautatieasema",
+   "rivit": [
+    [
+     "vuonna 1889",
+     "1889",
+     "asema avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Anne Frankin talo",
+   "avain": "nahtavyys:amsterdam:Anne Frankin talo",
+   "rivit": [
+    [
+     "vuonna 1635",
+     "1635",
+     "talo rakennettiin"
+    ],
+    [
+     "Vuonna 1942",
+     "1942",
+     "perhe piiloutui"
+    ],
+    [
+     "vuonna 1960",
+     "1960",
+     "museo avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kuninkaanpalatsi",
+   "avain": "nahtavyys:amsterdam:Kuninkaanpalatsi",
+   "rivit": [
+    [
+     "vuonna 1648",
+     "1648",
+     "rakentaminen alkoi"
+    ],
+    [
+     "vuonna 1652",
+     "1652",
+     "vanha paloi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Rembrandtin talo",
+   "avain": "nahtavyys:amsterdam:Rembrandtin talo",
+   "rivit": [
+    [
+     "vuonna 1639",
+     "1639",
+     "Rembrandt osti talon"
+    ],
+    [
+     "vuonna 1606",
+     "1606",
+     "talo rakennettiin"
+    ],
+    [
+     "vuonna 1658",
+     "1658",
+     "huutokauppa"
+    ],
+    [
+     "vuonna 1911",
+     "1911",
+     "museo avattiin"
+    ],
+    [
+     "Vuonna 1997",
+     "1997",
+     "ruukut löytyivät"
+    ]
+   ]
+  },
+  {
+   "nimi": "Artis-eläintarha",
+   "avain": "nahtavyys:amsterdam:Artis-eläintarha",
+   "rivit": [
+    [
+     "vuonna 1838",
+     "1838",
+     "perustettiin"
+    ],
+    [
+     "vuonna 1882",
+     "1882",
+     "akvaario avattiin"
+    ],
+    [
+     "vuonna 1883",
+     "1883",
+     "viimeinen kvagga"
+    ]
+   ]
+  },
+  {
+   "nimi": "Rijksmuseum",
+   "avain": "nahtavyys:amsterdam:Rijksmuseum",
+   "rivit": [
+    [
+     "vuonna 1798",
+     "1798",
+     "museo perustettiin"
+    ],
+    [
+     "vuonna 1885",
+     "1885",
+     "muutto rakennukseen"
+    ],
+    [
+     "Vuonna 2013",
+     "2013",
+     "avattiin uudelleen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Timanttihiomo",
+   "avain": "nahtavyys:amsterdam:Timanttihiomo",
+   "rivit": [
+    [
+     "Vuonna 1870",
+     "1870",
+     "ensimmäinen erä"
+    ],
+    [
+     "Vuonna 1894",
+     "1894",
+     "liitto perustettiin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Amsterdam-laiva",
+   "avain": "nahtavyys:amsterdam:Amsterdam-laiva",
+   "rivit": [
+    [
+     "tammikuuta 1749",
+     "1749",
+     "ajettiin rantaan"
+    ],
+    [
+     "näkyviin 1969",
+     "1969",
+     "hylky näkyviin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 1990",
+     "1990",
+     "kopio valmistui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kapein talo",
+   "avain": "nahtavyys:amsterdam:Kapein talo",
+   "rivit": [
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuodesta 1738",
+     "1738",
+     "vaiheet vuodesta"
+    ]
+   ]
+  },
+  {
+   "nimi": "Maitotyttö",
+   "avain": "nahtavyys:amsterdam:Maitotyttö",
+   "rivit": [
+    [
+     "vuonna 1660",
+     "n. 1660",
+     "Vermeer maalasi"
+    ],
+    [
+     "vuonna 2022",
+     "2022",
+     "taulua tutkittiin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vasta 1908",
+     "1908",
+     "museo osti"
+    ],
+    [
+     "avattiin 1885",
+     "1885",
+     "rakennus avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kissalaiva",
+   "avain": "nahtavyys:amsterdam:Kissalaiva",
+   "rivit": [
+    [
+     "vuonna 1968",
+     "1968",
+     "ensimmäinen laiva"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 2023",
+     "2023",
+     "uusi laiva paikalle"
+    ]
+   ]
+  },
+  {
+   "nimi": "Herengracht 537",
+   "avain": "nahtavyys:amsterdam:Herengracht 537",
+   "rivit": [
+    [
+     "lokakuuta 1648",
+     "1648",
+     "Damin peruskivi"
+    ],
+    [
+     "Maaliskuussa 1961",
+     "1961",
+     "Harry Potin kuva"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Yövartio",
+   "avain": "nahtavyys:amsterdam:Yövartio",
+   "rivit": [
+    [
+     "vuonna 1642",
+     "1642",
+     "Rembrandt valmisti"
+    ],
+    [
+     "Vuonna 1715",
+     "1715",
+     "taulu siirrettiin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vasta 1885",
+     "1885",
+     "nykyinen avattiin"
+    ],
+    [
+     "uudelleen 1975–76",
+     "1975–76",
+     "kunnostus"
+    ]
+   ]
+  },
+  {
+   "nimi": "Portugalilainen synagoga",
+   "avain": "nahtavyys:amsterdam:Portugalilainen synagoga",
+   "rivit": [
+    [
+     "elokuuta 1675",
+     "1675",
+     "vihittiin käyttöön"
+    ],
+    [
+     "joulukuussa 1670",
+     "1670",
+     "tontti ostettiin"
+    ],
+    [
+     "huhtikuuta 1671",
+     "1671",
+     "peruskivi laskettiin"
+    ],
+    [
+     "Vuosina 1852–1854",
+     "1852–1854",
+     "ikkunat uusittiin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Montelbaanstoren",
+   "avain": "nahtavyys:amsterdam:Montelbaanstoren",
+   "rivit": [
+    [
+     "vuonna 1606",
+     "1606",
+     "huipun suunnittelu"
+    ],
+    [
+     "Vuonna 1610",
+     "1610",
+     "torni kallistui"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "Vuonna 1852",
+     "1852",
+     "purku uhkasi"
+    ],
+    [
+     "vasta 1878",
+     "1878",
+     "vesikonttori tuli"
+    ]
+   ]
+  },
+  {
+   "nimi": "Haringpakkerstoren",
+   "avain": "nahtavyys:amsterdam:Haringpakkerstoren",
+   "rivit": [
+    [
+     "vuonna 1829",
+     "1829",
+     "torni purettiin"
+    ],
+    [
+     "vuonna 1873",
+     "1873",
+     "isoisän vuosi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Waag op de Dam",
+   "avain": "nahtavyys:amsterdam:Waag op de Dam",
+   "rivit": [
+    [
+     "vuonna 1808",
+     "1808",
+     "vaaka purettiin"
+    ],
+    [
+     "vuonna 1873",
+     "1873",
+     "isoisän vuosi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Paleis voor Volksvlijt",
+   "avain": "nahtavyys:amsterdam:Paleis voor Volksvlijt",
+   "rivit": [
+    [
+     "elokuuta 1864",
+     "1864",
+     "palatsi avattiin"
+    ],
+    [
+     "Huhtikuussa 1929",
+     "1929",
+     "tuhoutui tulipalossa"
+    ],
+    [
+     "vuonna 1873",
+     "1873",
+     "isoisän vuosi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Vanha raatihuone",
+   "avain": "nahtavyys:amsterdam:Vanha raatihuone",
+   "rivit": [
+    [
+     "heinäkuuta 1652",
+     "1652",
+     "raatihuone paloi"
+    ],
+    [
+     "vuonna 1648",
+     "1648",
+     "uuden rakentaminen"
+    ],
+    [
+     "vuonna 1873",
+     "1873",
+     "isoisän vuosi"
+    ]
+   ]
+  }
+ ]
+}

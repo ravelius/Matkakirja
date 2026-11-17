@@ -7778,6 +7778,9 @@ export const NAHTAVYYSJUTUT = {
         + 'Nykyään asemalla vilisee joka päivä lähes 200 000 '
           + 'matkustajaa, ja sen pisin laituri on lähes 700 metriä — '
           + 'toiseksi pisin koko Alankomaissa.',
+      vuodet: [
+        { kohta: 'vuonna 1889', vuosi: '1889', selite: 'asema avattiin' },
+      ],
       lainaus: {
         teksti: 'Mahdollisimman ruma hyökkäys kaupunkimme kauneutta '
           + 'vastaan.',
@@ -7809,6 +7812,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Talo avattiin museona vuonna 1960, ja nykyään siellä '
           + 'vierailee joka vuosi yli miljoona ihmistä ympäri maailman.',
+      vuodet: [
+        { kohta: 'vuonna 1635', vuosi: '1635', selite: 'talo rakennettiin' },
+        { kohta: 'Vuonna 1942', vuosi: '1942', selite: 'perhe piiloutui' },
+        { kohta: 'vuonna 1960', vuosi: '1960', selite: 'museo avattiin' },
+      ],
       lainaus: {
         teksti: 'Uskon yhä, kaikesta huolimatta, että ihmiset ovat '
           + 'sisimmältään hyviä.',
@@ -7835,6 +7843,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Raatihuoneesta tuli kuninkaallinen palatsi vasta '
           + '1800-luvun alussa. Nykyään siellä otetaan vastaan '
           + 'valtiovieraita, mutta rakennus seisoo yhä puupaalujen varassa.',
+      vuodet: [
+        { kohta: 'vuonna 1648', vuosi: '1648', selite: 'rakentaminen alkoi' },
+        { kohta: 'vuonna 1652', vuosi: '1652', selite: 'vanha paloi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Amsterdam - Koninklijk Paleis (30265843216).jpg',
@@ -7863,6 +7875,13 @@ export const NAHTAVYYSJUTUT = {
           + 'käymäläkuopasta löytyi yllättäen kaksi savista ruukkua, '
           + 'joita Rembrandt oli aikoinaan käyttänyt maalauskankaidensa '
           + 'valmisteluun.',
+      vuodet: [
+        { kohta: 'vuonna 1639', vuosi: '1639', selite: 'Rembrandt osti talon' },
+        { kohta: 'vuonna 1606', vuosi: '1606', selite: 'talo rakennettiin' },
+        { kohta: 'vuonna 1658', vuosi: '1658', selite: 'huutokauppa' },
+        { kohta: 'vuonna 1911', vuosi: '1911', selite: 'museo avattiin' },
+        { kohta: 'Vuonna 1997', vuosi: '1997', selite: 'ruukut löytyivät' },
+      ],
       kuvat: [
         {
           tiedosto: 'Rembrandt huis - panoramio.jpg',
@@ -7888,6 +7907,11 @@ export const NAHTAVYYSJUTUT = {
           + '1883 maailman viimeinen kvagga, puoliksi raidallinen '
           + 'seepran sukulainen. Sen jälkeen koko laji katosi '
           + 'maapallolta ikuisesti.',
+      vuodet: [
+        { kohta: 'vuonna 1838', vuosi: '1838', selite: 'perustettiin' },
+        { kohta: 'vuonna 1882', vuosi: '1882', selite: 'akvaario avattiin' },
+        { kohta: 'vuonna 1883', vuosi: '1883', selite: 'viimeinen kvagga' },
+      ],
       kuvat: [
         {
           tiedosto: 'Portail Accès Parc Artis Plantage Kerklaan - Amsterdam (NL32) - 2024-11-27 - 1.jpg',
@@ -7914,6 +7938,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Vuonna 2013 koko museo avattiin uudelleen kymmenen vuotta '
           + 'kestäneen jättiremontin jälkeen. Museo houkuttelee nykyään '
           + 'vuosittain miljoonia kävijöitä.',
+      vuodet: [
+        { kohta: 'vuonna 1798', vuosi: '1798', selite: 'museo perustettiin' },
+        { kohta: 'vuonna 1885', vuosi: '1885', selite: 'muutto rakennukseen' },
+        { kohta: 'Vuonna 2013', vuosi: '2013', selite: 'avattiin uudelleen' },
+      ],
       kuvat: [
         {
           tiedosto: 'View of the Rijksmuseum.jpg',
@@ -7949,6 +7978,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 elettiin Kaapin aikaa. Boasin höyryhiomo Nieuwe Uilenburgerstraatilla valmistui vasta 1879; '
         + 'nykyään talossa on Gassanin timanttitehdas.',
+      vuodet: [
+        { kohta: 'Vuonna 1870', vuosi: '1870', selite: 'ensimmäinen erä' },
+        { kohta: 'Vuonna 1894', vuosi: '1894', selite: 'liitto perustettiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
@@ -7975,6 +8009,12 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 hylky oli maannut Englannin rannalla jo 124 '
         + 'vuotta. Amsterdamissa seisova laiva on nykyaikainen kopio, joka valmistui vuonna 1990.',
+      vuodet: [
+        { kohta: 'tammikuuta 1749', vuosi: '1749', selite: 'ajettiin rantaan' },
+        { kohta: 'näkyviin 1969', vuosi: '1969', selite: 'hylky näkyviin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1990', vuosi: '1990', selite: 'kopio valmistui' },
+      ],
       kuvat: [
         {
           tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
@@ -8010,6 +8050,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
         + 'vuotta: talon vaiheet tunnetaan vuodesta 1738. Nykyään siinä on teekauppa.',
+      vuodet: [
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuodesta 1738', vuosi: '1738', selite: 'vaiheet vuodesta' },
+      ],
       kuvat: [
         {
           tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
@@ -8035,6 +8079,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Six-suvun yksityiskokoelmaan, ja museo osti sen vasta 1908 Vereniging '
         + 'Rembrandtin tuella. Rijksmuseum toimi tuolloin Trippenhuisissa; nykyinen '
         + 'rakennus avattiin 1885.',
+      vuodet: [
+        { kohta: 'vuonna 1660', vuosi: 'n. 1660', selite: 'Vermeer maalasi' },
+        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'taulua tutkittiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vasta 1908', vuosi: '1908', selite: 'museo osti' },
+        { kohta: 'avattiin 1885', vuosi: '1885', selite: 'rakennus avattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
@@ -8058,6 +8109,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Kissalaivaa ei vielä ollut: ensimmäinen laiva hankittiin vasta 1968, 95 vuotta myöhemmin. Singel-kanavassa on nykyään '
         + 'uusi laiva, joka tuotiin paikalleen vuonna 2023.',
+      vuodet: [
+        { kohta: 'vuonna 1968', vuosi: '1968', selite: 'ensimmäinen laiva' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 2023', vuosi: '2023', selite: 'uusi laiva paikalle' },
+      ],
       kuvat: [
         {
           tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
@@ -8095,6 +8151,11 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 Dam-torin rakennus oli jo kuninkaan palatsi, '
         + 'mutta sen alla olivat yhä samat 13 659 paalua.',
+      vuodet: [
+        { kohta: 'lokakuuta 1648', vuosi: '1648', selite: 'Damin peruskivi' },
+        { kohta: 'Maaliskuussa 1961', vuosi: '1961', selite: 'Harry Potin kuva' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
@@ -8123,6 +8184,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
         + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; '
         + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.',
+      vuodet: [
+        { kohta: 'vuonna 1642', vuosi: '1642', selite: 'Rembrandt valmisti' },
+        { kohta: 'Vuonna 1715', vuosi: '1715', selite: 'taulu siirrettiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vasta 1885', vuosi: '1885', selite: 'nykyinen avattiin' },
+        { kohta: 'uudelleen 1975–76', vuosi: '1975–76', selite: 'kunnostus' },
+      ],
       kuvat: [
         {
           tiedosto: 'The Night Watch - cropped.jpg',
@@ -8159,6 +8227,13 @@ export const NAHTAVYYSJUTUT = {
         + 'valurautakehyksisiksi.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 vuotta, ja kaksi vuotta myöhemmin se täytti kaksisataa vuotta.',
+      vuodet: [
+        { kohta: 'elokuuta 1675', vuosi: '1675', selite: 'vihittiin käyttöön' },
+        { kohta: 'joulukuussa 1670', vuosi: '1670', selite: 'tontti ostettiin' },
+        { kohta: 'huhtikuuta 1671', vuosi: '1671', selite: 'peruskivi laskettiin' },
+        { kohta: 'Vuosina 1852–1854', vuosi: '1852–1854', selite: 'ikkunat uusittiin' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+      ],
       kuvat: [
         {
           tiedosto: 'Exterieur OVERZICHT VOORGEVEL - Amsterdam - 20311779 - RCE.jpg',
@@ -8183,6 +8258,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella jo yli kolmesataa vuotta. Vuonna 1852 tornia uhkasi purkaminen, mutta '
         + 'se säästyi. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
         + 'vasta 1878.',
+      vuodet: [
+        { kohta: 'vuonna 1606', vuosi: '1606', selite: 'huipun suunnittelu' },
+        { kohta: 'Vuonna 1610', vuosi: '1610', selite: 'torni kallistui' },
+        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'Vuonna 1852', vuosi: '1852', selite: 'purku uhkasi' },
+        { kohta: 'vasta 1878', vuosi: '1878', selite: 'vesikonttori tuli' },
+      ],
       kuvat: [
         {
           tiedosto: 'Gezicht op de Montelbaanstoren in Amsterdam, RP-F-F11686.jpg',
@@ -8202,6 +8284,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Sitä ei ole rakennettu uudelleen, vaikka kopion rakentamista suunniteltiin 2000-luvulla.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 torni oli ollut poissa jo yli neljäkymmentä vuotta.',
+      vuodet: [
+        { kohta: 'vuonna 1829', vuosi: '1829', selite: 'torni purettiin' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Bulletin KNOB ja Rijksmuseum',
     },
     // Sama erä.
@@ -8215,6 +8301,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi vuonna 1873 aukiolla ei ollut vaakaa. Raatihuone seisoi paikallaan, ja se on yhä '
         + 'kuninkaanpalatsi.',
+      vuodet: [
+        { kohta: 'vuonna 1808', vuosi: '1808', selite: 'vaaka purettiin' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Ons Amsterdam ja I amsterdam',
     },
     // Sama erä.
@@ -8229,6 +8319,11 @@ export const NAHTAVYYSJUTUT = {
         + 'nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.',
+      vuodet: [
+        { kohta: 'elokuuta 1864', vuosi: '1864', selite: 'palatsi avattiin' },
+        { kohta: 'Huhtikuussa 1929', vuosi: '1929', selite: 'tuhoutui tulipalossa' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia, Oneindig Noord-Holland, Andere Tijden ja Ons Amsterdam',
     },
     // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
@@ -8239,6 +8334,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Vanha raatihuone paloi 7. heinäkuuta 1652. Uuden raatihuoneen rakentaminen Jacob van Campenin suunnitelmin oli alkanut jo vuonna 1648. Se on nykyinen Kuninkaanpalatsi.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 vanhan raatihuoneen palosta oli kulunut yli 220 vuotta, ja uusi raatihuone toimi kuninkaanpalatsina.',
+      vuodet: [
+        { kohta: 'heinäkuuta 1652', vuosi: '1652', selite: 'raatihuone paloi' },
+        { kohta: 'vuonna 1648', vuosi: '1648', selite: 'uuden rakentaminen' },
+        { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wikipedia ja Amsterdam Museum',
     },
   },
