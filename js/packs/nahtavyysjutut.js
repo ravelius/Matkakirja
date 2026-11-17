@@ -3093,8 +3093,9 @@ export const NAHTAVYYSJUTUT = {
     'Exchange Alley': {
       nosto: 'nosto-exchange-alleyn-kupla',
       teksti: 'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
-        + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se '
-        + 'otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, '
+        + 'kauppaan Espanjan Etelä-Amerikan kanssa. Kaupan ydin oli orjakauppa: '
+        + 'yhtiö sai oikeuden tuoda orjuutettuja afrikkalaisia Espanjan siirtomaihin. '
+        + 'Vastineeksi yhtiö otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, '
         + 'mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan '
         + 'ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi '
         + 'tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja '
@@ -3591,7 +3592,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen '
           + 'kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.'
         + '\n\n'
-        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, '
+        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja lovipuita eli puisia kuittikeppejä, '
           + 'joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat '
           + 'liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat '
           + 'tuhannet ihmiset, myös taidemaalari William Turner.'
@@ -4881,7 +4882,7 @@ export const NAHTAVYYSJUTUT = {
         + 'koulutukseen Heldenbergiin tai Wieniin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
-        + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+        + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: Piberin siitostila oli perustettu jo 1798, mutta lipizzanien kasvatus siirtyi sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
         + 'hovitallista nykyisessä Sloveniassa.',
       vuodet: [
         { kohta: 'rakennettiin 1729 ja 1735', vuosi: '1729–1735', selite: 'sali rakennettiin' },
@@ -4912,7 +4913,7 @@ export const NAHTAVYYSJUTUT = {
         + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
         + 'jälkeen.'
         + '\n\n'
-        + 'Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+        + 'Schikaneder rakennutti uuden teatterin, ja Theater an '
         + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
         + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.'
         + '\n\n'
@@ -6612,7 +6613,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Lavoisier 1780': {
       nosto: 'hetki-lavoisier-laboratorio-1780',
-      teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+      teksti: 'Pariisin Arsenaalin laboratoriossa syntyy 1770- ja 1780-luvuilla moderni '
         + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
         + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
         + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
@@ -6938,12 +6939,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Wikipedia',
     },
     'Trocadéron palatsi': {
-      aika: '1876–1935',
+      aika: '1878–1935',
       nosto: 'hahmotelma-trocadero',
       teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillot\'n '
         + 'kukkulalle suunniteltiin jo 1811 palatsia Napoleonin pojalle, "Rooman kuninkaalle", mutta siitä '
-        + 'tehtiin vain maanrakennustöitä. Todellinen palatsi rakennettiin vuosina 1876–1878 maailmannäyttelyä '
-        + 'varten: siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
+        + 'tehtiin vain maanrakennustöitä. Todellinen palatsi valmistui vuoden 1878 maailmannäyttelyyn: '
+        + 'siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
         + 'Salin akustiikka oli huono, mutta siellä soivat Cavaillé-Collin urut, jotka vihittiin elokuussa 1878.'
         + '\n\n'
         + 'Palatsi seisoi vuoteen 1935, jolloin sali ja tornit purettiin vuoden 1937 näyttelyn tieltä. Vanhojen '
@@ -6964,7 +6965,7 @@ export const NAHTAVYYSJUTUT = {
       // mauri-bysanttilaistyylinen" pois (vain WP) ja "Palatsia ei ollut tarkoitettu kestämään näyttelyn jälkeen, mutta
       // se seisoi" → "Palatsi seisoi" (aikalaislähde L'art et l'industrie… 1880 kumoaa: "Dès 1876, il avait été décidé
       // que le palais du Trocadéro resterait à la ville de Paris"). Kaksi korkeaa tornia ja kaarevat siivet = 1880-teos +
-      // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; 1876–1878 = 1880-teos + WP; siivet Chaillot'ssa = Livre d'or
+      // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; valmistuminen 1878 = 1880-teos + WP (alkuvuotta 1876 ei käytetä tekstissä, KK 17.11.2026); siivet Chaillot'ssa = Livre d'or
       // 1937 + Cité de l'architecture + POP; urut = Auditorium de Lyon + WP.
       lahde: 'Matkakirjan oma teksti · lähteinä Ranskan kulttuuriministeriön muistomerkkirekisteri, vuoden 1937 '
         + 'maailmannäyttelyn virallinen Livre d\'or, L\'art et l\'industrie de tous les peuples à l\'Exposition '
@@ -8141,10 +8142,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Hoogstraatilla.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
-        + 'vuotta: talon vaiheet tunnetaan vuodesta 1738. Nykyään siinä on teekauppa.',
+        + 'vuotta: talon ensimmäinen arkistomaininta on vuodelta 1738. Nykyään siinä on teekauppa.',
       vuodet: [
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
-        { kohta: 'vuodesta 1738', vuosi: '1738', selite: 'vaiheet vuodesta' },
+        { kohta: 'vuodelta 1738', vuosi: '1738', selite: 'arkistomaininta' },
       ],
       kuvat: [
         {
@@ -8311,12 +8312,11 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-amsterdamin-portugalilainen-synagoga',
       teksti: 'Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti '
         + 'Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa '
-        + '1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.'
+        + '1670. Peruskivi laskettiin 17. huhtikuuta 1671.'
         + '\n\n'
         + 'Synagogan päähalli ei ole koskaan saanut sähkövaloa eikä lämmitystä. '
         + 'Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se '
-        + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
-        + 'valurautakehyksisiksi.'
+        + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 vuotta, ja kaksi vuotta myöhemmin se täytti kaksisataa vuotta.',
       vuodet: [
@@ -10758,9 +10758,9 @@ export const NAHTAVYYSJUTUT = {
       aika: '135–139',
       teksti: 'Linna ei ollut alkujaan linna lainkaan, vaan valtava '
           + 'hauta. Keisari Hadrianus rakennutti sen itselleen ja '
-          + 'perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa '
-          + 'Sabina ja ottopoikansa Lucius Aelius haudattiin sinne '
-          + 'ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat '
+          + 'perheelleen mausoleumiksi vuosina 135–139 — hänen tuhkansa '
+          + 'sijoitettiin sinne vuonna 139 yhdessä hänen vaimonsa Sabinan ja '
+          + 'ottopoikansa Lucius Aeliuksen tuhkan kanssa. Vuosisatoja myöhemmin paavit muuttivat '
           + 'rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan '
           + 'Pietarinkirkolle johtava salainen katettu käytävä, '
           + 'Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa '
@@ -11147,9 +11147,9 @@ export const NAHTAVYYSJUTUT = {
         + 'syytetyt vapautettiin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
-        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
-        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
-        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'Romana oli jo olemassa: se oli alun perin paavinvaltion pankki, ja '
+        + 'se otti vanhan nimensä Banca Romana takaisin, kun Rooma oli '
+        + 'liitetty Italiaan vuonna 1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
         + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
       vuodet: [
         { kohta: 'vuodenvaihteessa 1892–1893', vuosi: '1892–1893', selite: 'skandaali paljastui' },
@@ -11189,7 +11189,7 @@ export const NAHTAVYYSJUTUT = {
         + 'kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat '
         + 'pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja '
         + 'Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit '
-        + 'siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja '
+        + 'siirtyivät vuonna 179 eaa. rakennutettuun basilikaan, josta tuli myöhemmin Basilica Aemilia, ja '
         + 'noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian '
         + 'ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja '
         + 'raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.',
@@ -11445,7 +11445,7 @@ export const NAHTAVYYSJUTUT = {
         + 'näkyvissä Konstantinuksen kaaren edessä, ja ääriviivat merkittiin purun jälkeen vaaleammalla kivellä.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tiilinen kartio seisoi vielä rauniona '
-        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta noin 60 vuotta myöhemmin.',
+        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta vuonna 1936.',
       vuodet: [
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
       ],

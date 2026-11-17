@@ -1291,7 +1291,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'etuosa on selvästi leveämpi, joten kapein koko talo on silti Oude '
           + 'Hoogstraatilla.',
         'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
-          + 'vuotta: talon vaiheet tunnetaan vuodesta 1738. Nykyään siinä on teekauppa.',
+          + 'vuotta: talon ensimmäinen arkistomaininta on vuodelta 1738. Nykyään siinä on teekauppa.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä iAmsterdam, Het Kleinste Huis, DutchReview, Amsterdam Oude Stad, '
         + 'Amsterdamian ja Wikipedia',
@@ -1592,11 +1592,10 @@ export const FOKUSVIRTA_AMSTERDAM = {
       lunastus: [
         'Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti '
           + 'Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa '
-          + '1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.',
+          + '1670. Peruskivi laskettiin 17. huhtikuuta 1671.',
         'Synagogan päähalli ei ole koskaan saanut sähkövaloa eikä lämmitystä. '
           + 'Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se '
-          + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
-          + 'valurautakehyksisiksi.',
+          + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin.',
         'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 vuotta, ja kaksi vuotta myöhemmin se täytti kaksisataa vuotta.',
       ],
       // Lähdemuistiinpano (SK 16.11.2026, dataluonnos kohta 8): vihkiminen 2.8.1675, tontti joulukuussa 1670 ja peruskivet
