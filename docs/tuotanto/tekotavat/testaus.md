@@ -18,7 +18,7 @@ tyypilliset virheet. Proton polut ovat proto-repon (`proto-3d/Matkakirja-proto`)
 | Nykäysvahti | proto `python3 tyokalut/nykaysvahti.py <todistuskansio \| loki>`; testit `nykaysvahti_testi.py` | Yli 20 ms:n ruudut kameran liikkeessä + 1 s |
 | Läpipeluubotti | proto `tyokalut/botti-osat.sh --loki <todistuskansio>` (skenaario `botti-osat.txt`) | Botin simuajon raportti `RAPORTTI.md` |
 | Todistusajo | proto `tyokalut/todistusajo/todistusajo.sh` (ohje `OHJE.md`, vakiosarja `sarja.sh`) | Simuajo oikein kosketuksin: lokit, stillit, ääni, `TODISTUS.md` |
-| Sokkotarkistus: ääni | Gemini 3.1 Pro (`gemini.kuvaile`, `gemini.sopiiko`) + `proto-3d/tyokalut/aaniportti.py` | Ks. `tekotavat/aani.md` |
+| Ääniportti (tekninen) | `proto-3d/tyokalut/aaniportti.py`; ei kuuntelua millään työkalulla (omistaja 17.11.2026, [P-261117-15] [P-261117-16]) | Ks. `tekotavat/aani.md` |
 | Sokkotarkistus: kuvat | `vyoero.py paalla pois` (terävyys vyöhykkeittäin), `valahdys.py <video> 4` (välähdykset) | Kuvaparit ja videot luvuin, ei silmäarviolla |
 | iPad | `xcrun devicectl`, apuri proto `tyokalut/ipad.sh`; LT:n skriptit `docs/raportit/laitetestaaja-pelaaja-tyokalut-20261020/` | Asennus, komennot, mittaukset isolla iPadilla |
 
@@ -29,7 +29,6 @@ tyypilliset virheet. Proton polut ovat proto-repon (`proto-3d/Matkakirja-proto`)
    tekstit, napit, valo ja sijainnit riittää katsoa Macin Unity-esikatselussa iPhonen ja iPadin ruutukoossa; simua
    ei tarvita. Korjaa ja katso korjattu vielä kerran. Raportissa kerrotaan, onko väite todennettu kuvalla vai lokilla.
 2. **Sokkotarkistukset (9.6, 9.11).** Tarkistaja ei tiedä, mitä pitäisi löytyä:
-   - *Ääni ja puhe:* Gemini kuvaa äänen ensin tietämättä tavoitetta, vasta sitten verrataan tarpeeseen; ristiriita = hylkäys.
    - *Teksti:* tuore lukija lukee tekstin pelaajan näkymästä otetusta kuvasta (sävy, pituus, kaanon, faktat).
    - *Kuva-arkit ja pitkät lokit:* tuore Sonnet-apuagentti antaa lyhyen arvion; rooli katsoo itse vain lopullisen kuvaparin.
    - *Codexin 3D:* havainnekuva ja pelikuva rinnakkain täysikokoisina + tuontitarkistus.
