@@ -22,7 +22,8 @@ EI VIKA:
 - Olavinlinnan loppumusiikki on vapaa kappale, ei Lyria-raita.
 
 TEKOTAPA:
-- Luvat, tasoitus, LUFS, sokkokuuntelu, portti: aaniluvat-ja-aaniportti. Puhe: kertojaaanet.
+- Luvat, tasoitus, LUFS, portti, ei tarkistuskuuntelua: aaniluvat-ja-aaniportti. Puhe: kertojaaanet.
 - Soundly-vienti vaatii omistajan koneen; Freesound alkuperäisinä OAuthilla; muut vapaat lähteet ja robots.txt: lisenssit-ja-lataukset.
 - Ryhmäkertoimet worker /mikseri/tasot: katso ennen tason nostoa.
 - Kaupunkien pisteäänet ovat ElavaKaupungissa: hae ennen uutta äänijärjestelmää.
+
