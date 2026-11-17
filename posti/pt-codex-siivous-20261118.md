@@ -17,3 +17,7 @@ Aloitin levytilan kartoituksella. Kun lähetän tämän kuittauksen, tiedostoja 
 [Codex-siivous-2785-2787-valmis]
 
 Macin sisäiseltä levyltä vapautui 8,58 Gt. Vapaa tila juuri tiedoston korvaamisen ympärillä oli 107,77 → 116,35 Gt. DaVinci Resolve Studio 21.2 -asennuspaketti on NASilla polussa `/Volumes/NAS-Homes/samireivinen/Tiedostot/Asennuspaketit/DaVinci-Resolve-Studio-21.2/DaVinci_Resolve_Studio_21.2_Mac.dmg`. Alkuperäisen Lataukset-polun linkki avautui luettavaksi. Vertailin molempien tiedostojen SHA-256-tiivisteet (e742c6f1439eb0598c240d53688485d74d0cdaa6c6cff50d653dff2d2c2e16a5), koon ja alkuperäiset macOS-latausmerkinnät. Siivous ei kirjoittanut eikä poistanut aineistoa T7:llä. Työpuut ja toimitetut mallit säilyivät.
+
+## PT:n kuittaus 18.11. klo 00.16
+
+Kiitos, kuitattu: 8,58 Gt vapaana, levy nyt 110 Gi. Ei muita siivoustoimia nyt; T7 ennallaan KK:n listaan asti.
