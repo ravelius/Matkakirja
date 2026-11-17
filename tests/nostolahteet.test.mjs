@@ -82,7 +82,9 @@ test('jokaisesta perheestä löytyy kortteja (tyhjä joukko ei vartioi mitään)
   // eläintäky 29 → 27 → 29: BIH ja TUR poistettiin 1.9.2026
   // kaksoiskappaleina ja palasivat 2.9.2026 uusina eläiminä
   // (ks. js/packs/elaintakyt.js).
-  for (const [perhe, alaraja] of [['syvennys', 118], ['täkynosto', 59], ['skandaali', 83], ['eläintäky', 29]]) {
+  // syvennys 118 → 117 (17.11.2026): Pariisin `tuileriat` poistettiin, palatsi on kohteen
+  // `tuileries` jaksoissa (Tuileries-koe, KK 11.16).
+  for (const [perhe, alaraja] of [['syvennys', 117], ['täkynosto', 59], ['skandaali', 83], ['eläintäky', 29]]) {
     assert.ok((laskuri[perhe] ?? 0) >= alaraja,
       `${perhe}: kortteja on ${laskuri[perhe] ?? 0}, oli 1.9.2026 ${alaraja} — katosiko aineistoa?`);
   }

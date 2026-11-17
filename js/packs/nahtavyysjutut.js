@@ -5908,33 +5908,8 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    // Kohdekartan nimi fokuskohteen mukaan (omistaja 31.10. 08.22, PT): kadonnut ihme, teksti syvennystarinan oma.
-    'Tuileries\'n palatsi': {
-      nosto: 'syvennys-pariisi-tuileriat',
-      teksti: 'Se rauniorivi, jonka ohi isoisäsi käveli, olisi voitu korjata. Palo oli '
-        + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
-        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileries\'n rauniot jäivät sen sijaan paikoilleen '
-        + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '
-        + 'ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas '
-        + 'tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; '
-        + 'vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: '
-        + 'yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
-        + 'osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa '
-        + 'Square Georges Cainissa, ja paloja on Louvressa, Trocadéron '
-        + 'puutarhassa, Berliinissä, Italian Bordigherassa ja Quiton '
-        + 'presidentinpalatsissa asti. Suuri osa huonekaluista ja maalauksista oli tallessa: ne oli viety varastoon, kun sota alkoi 1870. 2000-luvun alussa perustettiin komitea, joka esittää palatsin rakentamista takaisin.',
-      kuvat: [
-        {
-          osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
-          lyhyt: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
-          selite: 'Tuileries\'n palatsin palanut runko puutarhan puolelta: katto '
-            + 'poissa, kivimuurit ehjät, lauta-aita raunion edessä ja '
-            + 'kaupunkilaisia altaan äärellä.',
-          lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
+    // Tuileries'n palatsi: juttu poistettu 17.11.2026 (Tuileries-koe, KK 11.16): pisteen ainoa nosto on kohde `tuileries`
+    // jaksoineen (js/packs/fokuskohteet-fra.js).
     /*
      * KARTTAUUDISTUS, ERÄ 5 (13.9.2026): KAUPUNKILEHDEN SIVUT
      * NOSTOIKSI (suunnitelman luku 4.7). Viisi uutta karttapistettä ja
