@@ -11,7 +11,6 @@ hetki:brunel-thames-tunnel-1827
 hetki:christiansborgin-palo-1884
 hetki:darwin-galapagos-1835
 hetki:edison-lamppu-1879
-hetki:eiffel-torni-1888
 hetki:einstein-patenttitoimisto-1905
 hetki:ensimmainen-juna-rovaniemi-1909
 hetki:faraday-luento-1831
@@ -25,13 +24,10 @@ hetki:jenner-rokotus-1796
 hetki:kolumbus-santa-fe-1492
 hetki:konstantinopoli-1453
 hetki:krusevon-tasavalta-1903
-hetki:lavoisier-laboratorio-1780
 hetki:lontoon-palo-1666
-hetki:lumiere-elokuva-1895
 hetki:luther-wittenberg-1517
 hetki:machu-picchu-1911
 hetki:magalhaes-sanlucar-1519
-hetki:marie-curie-hangaari-1898
 hetki:mendelejev-kortit-1869
 hetki:michelangelo-sikstus-1510
 hetki:mozart-wien-1786
@@ -39,10 +35,8 @@ hetki:nansen-fram-1893
 hetki:newton-prisma-1666
 hetki:obodin-kirjapaino-1494
 hetki:olympia-ateena-1896
-hetki:pasteur-pullot-1862
 hetki:pietari-perustus-1703
 hetki:pyhan-elmon-linnake-1565
-hetki:ranskan-vallankumous-bastilji-1789
 hetki:roger-ii-cefalu-lupaus-1131
 hetki:rontgen-kasi-1895
 hetki:rosettan-kivi-1799
@@ -136,44 +130,7 @@ nahtavyys:lontoo:Victoria Memorial
 nahtavyys:lontoo:Westminster Abbey
 nahtavyys:lontoo:Westminster Bridge
 nahtavyys:lontoo:Westminsterin palatsi
-nahtavyys:pariisi:Bastilji
-nahtavyys:pariisi:Bastilji 1789
-nahtavyys:pariisi:Bizet 1875
-nahtavyys:pariisi:Bukinistit 1859
-nahtavyys:pariisi:Concorden aukio
-nahtavyys:pariisi:Curie 1898
-nahtavyys:pariisi:Eiffel-torni
-nahtavyys:pariisi:Eiffel-torni 1888
-nahtavyys:pariisi:Grand Palais
-nahtavyys:pariisi:Invalidit
-nahtavyys:pariisi:Kaulanauha 1785
-nahtavyys:pariisi:Kirahvi 1827
-nahtavyys:pariisi:Lavoisier 1780
-nahtavyys:pariisi:Louvre
-nahtavyys:pariisi:Lumière 1895
-nahtavyys:pariisi:Lustig 1925
-nahtavyys:pariisi:Luxembourgin puisto
-nahtavyys:pariisi:Metro 1900
-nahtavyys:pariisi:Monet 1874
-nahtavyys:pariisi:Notre-Dame
 nahtavyys:pariisi:Notre-Dame 2019
-nahtavyys:pariisi:Orsayn taidemuseo
-nahtavyys:pariisi:Palais Garnier
-nahtavyys:pariisi:Panthéon
-nahtavyys:pariisi:Pasteur 1862
-nahtavyys:pariisi:Patonki 1994
-nahtavyys:pariisi:Petit Palais
-nahtavyys:pariisi:Piaf ja Django
-nahtavyys:pariisi:Piiritys 1870
-nahtavyys:pariisi:Place des Vosges
-nahtavyys:pariisi:Pompidou-keskus
-nahtavyys:pariisi:Riemukaari
-nahtavyys:pariisi:Sacré-Cœur
-nahtavyys:pariisi:Saint-Eustache
-nahtavyys:pariisi:Sainte-Chapelle
-nahtavyys:pariisi:Tornin nimet 2026
-nahtavyys:pariisi:Tour Montparnasse
-nahtavyys:pariisi:Tour Saint-Jacques
 nahtavyys:rooma:Aqua Virgo
 nahtavyys:rooma:Areenan kellari
 nahtavyys:rooma:Banca Romana

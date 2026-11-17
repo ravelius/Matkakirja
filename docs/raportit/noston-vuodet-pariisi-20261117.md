@@ -8,7 +8,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-pariisi-20261117.json` (jokain
 - Selite 1–3 sanaa, enintään 20 merkkiä, sanoo saman kuin virke; ei uutta tietoa eikä tulkintaa (vain tekstin omat sanat, taivutus kevennetty).
 - Yksi rivi per vuosi tai väli; järjestys = tekstin järjestys; enintään 5 riviä (valinta: vuosi, joka kantaa tarinaa).
 - Ei rivejä: vuosisadat ja vuosikymmenet (1100-luvulla, 1860-luvulla), vuosia kuvateksteistä, lainauksista tai Pulun kysymyksistä; ei uusia faktoja.
-- Tarkistettu skriptillä: kohta tasan kerran, vuosi kohdassa, selite ≤ 20 merkkiä ja ≤ 3 sanaa, ≤ 5 riviä, järjestys, ei kaksoisvuosia: **45 nostoa, 134 riviä, 0 virhettä.**
+- Tarkistettu skriptillä: kohta tasan kerran, vuosi kohdassa, selite ≤ 20 merkkiä ja ≤ 3 sanaa, ≤ 5 riviä, järjestys, ei kaksoisvuosia: **44 nostoa, 133 riviä, 0 virhettä.**
 
 ## Rajaus ja päätettävää KK:lle
 1. **Määrä on 45, ei 41.** Suunnitelman luvut ovat klo 07.41 tilanteesta; mainissa on sen jälkeen tullut Tour Saint-Jacques, Saint-Eustache, Pompidou-keskus ja Kaulanauha 1785 sekä kaksi lisäkorttia (Tornin nimet 2026, Notre-Dame 2019; jakavat nosto-tunnuksen pistekorttinsa kanssa). Kaikki on tehty; jos jokin kuuluu pois, poistetaan sen lohko.
@@ -93,7 +93,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-pariisi-20261117.json` (jokain
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
 | – maailmannäyttely 1889 | vuonna 1889 | un Pariisiin rakennettiin maailmannäyttelyä varten vuonna 1889, insinööri Gustave Eiffelin toimisto pystytti Champ de Mars -puistoon noin 300 metriä korkean rautatornin vain reilussa kahdessa vuodessa. |
-| – purkusuunnitelma 1909 | jo vuonna 1909 | Torni oli tarkoitus purkaa jo vuonna 1909, mutta se pelastui, koska siitä tuli tärkeä radiolähetysasema. |
+| – piti purkaa 1909 | jo vuonna 1909 | Torni oli tarkoitus purkaa jo vuonna 1909, mutta se pelastui, koska siitä tuli tärkeä radiolähetysasema. |
 
 ### Riemukaari
 
@@ -126,7 +126,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-pariisi-20261117.json` (jokain
 | – Henrik IV murhattiin 1610 | murhattiin 1610 | un kuningas Henrik IV murhattiin 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä viihtynyt Louvressa. |
 | – kartano ostettiin 1612 | vuonna 1612 | Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, joka jäljitteli hänen kotikaupunkinsa Firenzen Palazzo Pittiä. |
 | – nukketeatteri alkoi 1933 | vuodesta 1933 | Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, nukketeatteri on toiminut puistossa vuodesta 1933, ja patsaita on toista sataa — niiden joukossa kaksikymmentä Ranskan kuningatarta ja jäljennös Bartholdin pienoismallista Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d'Orsayhin 2012). |
-| – siirrettiin Orsayhin 2012 | 2012 | Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, nukketeatteri on toiminut puistossa vuodesta 1933, ja patsaita on toista sataa — niiden joukossa kaksikymmentä Ranskan kuningatarta ja jäljennös Bartholdin pienoismallista Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d'Orsayhin 2012). |
+| – patsas Orsayhin 2012 | 2012 | Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, nukketeatteri on toiminut puistossa vuodesta 1933, ja patsaita on toista sataa — niiden joukossa kaksikymmentä Ranskan kuningatarta ja jäljennös Bartholdin pienoismallista Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d'Orsayhin 2012). |
 
 ### Sacré-Cœur
 
@@ -357,7 +357,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-pariisi-20261117.json` (jokain
 |---|---|---|
 | – Piaf syntyi 1915 | joulukuussa 1915 | dith Piaf syntyi Bellevillessä joulukuussa 1915. |
 | – Piaf löydettiin 1935 | kadulta vuonna 1935 | Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. |
-| – tulipalo vaunussa 1928 | yönä 1928 | päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. |
+| – Djangon vaunu paloi 1928 | yönä 1928 | päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä kaatui selluloidikukkien päälle. |
 | – Hot Club syntyi 1934 | Vuonna 1934 | Vuonna 1934 hän perusti Pariisissa yhtyeen Quintette du Hot Club de France. |
 
 ### Patonki 1994 (`nosto-pariisin-patonki`)
@@ -381,12 +381,17 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-pariisi-20261117.json` (jokain
 |---|---|---|
 | – naisten lista julki 2026 | tammikuussa 2026 | Siksi tammikuussa 2026 julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa miesten nimien yläpuolelle, kunhan kolme akatemiaa on antanut lausuntonsa. |
 
-### Notre-Dame 2019 (`nosto-notre-damen-kukko`) — lisäkortti
-
-| Ruudulla | kohta | Virke tekstissä |
-|---|---|---|
-| – tulipalo 2019 | huhtikuuta 2019 | huhtikuuta 2019, ja keskitorni romahti kello 19.50. |
-
 ## Kortit ilman riviä
 - Vrain-Lucas
 - Tuileries'n palatsi
+- Notre-Dame 2019
+
+## KK:n päätökset 17.10 ja data-PR (SK 17.11.2026)
+KK luki kaikki rivit ja hyväksyi ne datavaiheeseen näillä muutoksilla, jotka on tehty:
+1. Kolme selitettä selvemmäksi: Eiffel 1909 "piti purkaa", Luxembourgin puisto 2012 "patsas Orsayhin", Piaf ja Django 1928 "Djangon vaunu paloi".
+2. Yhden lähteen rivit jäävät (Riemukaari 1920, Saint-Eustache 1637, Saint-Jacques 1891, Bizet 1874, Kaulanauha 1870, Les Halles 1183, Grand Palais 2024); isoisän 1873-rivit jäävät; 11 poistettua pysyvät poissa.
+3. Mukana 45 nostoa, Garnier viisi riviä; Tuileries ja Vrain-Lucas ilman rivejä.
+4. Jaettu nosto-tunnus: Notre-Dame 2019 -lisäkortille ei laiteta rivejä (vuosi 2019 on jo Notre-Damen rivissä "tulipalo"), jotta sama vuosi ei esiinny kahdesti; Eiffel-torni (1889, 1909) ja Tornin nimet 2026 (2026) kantavat omat eri vuotensa. **Muoto sovittava PK:n kanssa**, jos nosto lukee molemmat kortit samaan lappuun: jokaisella kortilla on oma lista, ja kokonaisuus pysyy ≤ 5 riviä ja sama vuosi vain kerran.
+5. Tekstierot eivät estä rivejä; korjauslista seuraavaan tekstikierrokseen (ei äänityksiä nyt): Lumière "ensimmäinen maksullinen" (Skladanowsky 1.11.1895) ja Piaf "syntyi Bellevillessä" (Hôpital Tenon) korjattava; Lavoisier 1780 (ei dateerausta: mitä teksti väittää vuodesta?); Trocadéro 1876–1878 (rivi on 1878). Kaulanauha 1,6 milj., Metro 88 ja Panthéon 1758 saavat jäädä.
+
+**Data-PR:** kenttä `vuodet` lisätty tekstin perään tiedostoihin `js/packs/nahtavyysjutut.js` (Pariisi), `monumentit-eurooppa.js` (7 kadonnutta) ja `historian-hetket.js` (6 hetkeä; samat rivit myös nahtavyysjutut-kopiossa). Muita kenttiä ei muutettu (diffissä vain lisättyjä rivejä). Tarkistus: `node tools/sisalto/vuosiehdokkaat.mjs --tarkista` kaikki kunnossa; `--karsi-luettelo` poisti luettelosta 43 nostoa; koko `npm test` 5944 ok, 0 fail.
