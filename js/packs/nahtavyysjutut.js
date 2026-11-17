@@ -5065,8 +5065,9 @@ export const NAHTAVYYSJUTUT = {
           + 'saatiin valmiiksi vasta vuonna 1836.'
         + '\n\n'
         + 'Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne '
-          + 'haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi '
-          + 'kaikista sodissa kadonneista. Haudalla palaa ikuinen '
+          + 'tuotiin 11. marraskuuta 1920 nimetön ranskalaissotilas muistoksi '
+          + 'kaikista sodissa kadonneista ja haudattiin 28. tammikuuta 1921. '
+          + 'Haudalla palaa ikuinen '
           + 'liekki, joka sytytetään uudelleen joka ilta.'
         + '\n\n'
         + 'Vuonna 1919 lentäjä Charles Godefroy lensi '
@@ -5082,7 +5083,7 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Wikipedia ja Le Figaro (28.1.2021)',
     },
     'Concorden aukio': {
       aika: '1757–1772',
@@ -5331,8 +5332,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kilometrejä tunnelissa Seinen eteläpuolisten rantakatujen '
           + 'alla.'
         + '\n\n'
-        + 'Asema suljettiin jo 1939, ja rakennus seisoi vuosikymmeniä '
-          + 'vailla käyttöä. Museoksi se avattiin joulukuussa 1986 '
+        + 'Kaukojunat lakkasivat kulkemasta asemalle jo 1939, ja rakennus '
+          + 'jäi vuosikymmeniksi vähälle käytölle. Museoksi se avattiin joulukuussa 1986 '
           + 'italialaisen Gae Aulentin suunnitelmien mukaan, ja muut '
           + 'Pariisin museot — Louvre ja Pompidou-keskus muiden '
           + 'muassa — siirsivät sinne kokoelmiaan.'
@@ -5344,14 +5345,14 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
-          lyhyt: 'Gare d\'Orsay valmistui rautatieasemaksi 1900, suljettiin 1939 ja avattiin museona 1986.',
+          lyhyt: 'Gare d\'Orsay valmistui rautatieasemaksi 1900, kaukoliikenne loppui 1939 ja se avattiin museona 1986.',
           selite: 'Victor Laloux\'n Gare d\'Orsay valmistui rautatieasemaksi vuoden '
-            + '1900 maailmannäyttelyyn, suljettiin jo 1939 ja avattiin museona '
+            + '1900 maailmannäyttelyyn, kaukoliikenne loppui jo 1939 ja se avattiin museona '
             + 'joulukuussa 1986.',
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      lahde: 'Wikipedia',
+      lahde: 'Wikipedia ja Ranskan kulttuuriministeriön muistomerkkirekisteri (POP)',
     },
     'Palais Garnier': {
       aika: '1862–1875',
