@@ -13,7 +13,8 @@ SÄÄNNÖT:
 8. Maksullisen generoinnin raakatuotos tallennetaan ennen käsittelyä versioituna äänimastereihin (T7), joista on varmuuskopio; raakaa ei poisteta eikä ylikirjoiteta. [R-5.13]
 9. Ääni tilataan ja tasoitetaan PCM:nä ja pakataan kerran masterista; true peak enintään −1 dBTP. Luentapalat tasataan samaan kiinteään keskitasoon, ei huipun mukaan. [R-5.10] [P-261111-15]
 10. Jokainen äänipaketti läpäisee teknisen ääniportin ennen vientiä (huippu, leikkautuminen, hiljaisuus, saman perheen kovuusero, kieli suomi, alignment). Poikkeus vain perusteltuna portin listalla. [R-5.11] [P-261115-21]
-11. Elevenin puheottoja ei kuunnella tekoälyllä eikä verrata litterointiin, eikä niille ajeta sanaporttia: omistaja luottaa Elevenin tarkkuuteen. Ei koske sävelmäotteita eikä tehosteita. [P-261115-21]
+11. Elevenin puheottoja ei kuunnella tekoälyllä, verrata litterointiin eikä sanaporteiteta: omistaja luottaa Eleveniin. Ei koske sävelmäotteita eikä tehosteita. [P-261115-21]
+12. Gemini-kuuntelua ei käytetä koskaan missään ajossa; sitä kutsuva ajastettu ajo pysäytetään ja kerrotaan KK:lle. [P-261117-15]
 
 EI VIKA:
 - Omistaja ei ole kuullut puheäänitystä: KK:n tarkastus riittää.
@@ -23,3 +24,4 @@ TEKOTAPA:
 - Pyyntötie: pyynto-funktio, tools/elevenlabs_kieli.py.
 - Luentaputki (kuiva-ajo, avain, ääntämisasu, esiteksti): proto-3d/tyokalut/pelikoodari-ajot/esigeneroi-luennat.py.
 - Musiikin ja tehosteiden sisältö: musiikki-ja-tehosteet. Mitä luetaan: kertojaaanet.
+
