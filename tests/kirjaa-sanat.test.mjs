@@ -18,7 +18,7 @@ test('sanat --rooli KK: S-01…S-10 sanatarkasti, P-lähteet täsmäävät pää
   // Ytimiä vain lisätään (S-11 17.11.2026 →): S-01…S-10 alussa järjestyksessä, uudet perässä juoksevin numeroin.
   assert.deepEqual(ytimet.slice(0, 10), ['S-01', 'S-02', 'S-03', 'S-04', 'S-05', 'S-06', 'S-07', 'S-08', 'S-09', 'S-10']);
   ytimet.forEach((y, i) => assert.equal(y, `S-${String(i + 1).padStart(2, '0')}`));
-  assert.ok(r.stdout.includes('  "ei koskaan odoteta mittausta vaan lisätään kaikki aina heti peliin ilman mittausta. yöllä vain mitataan paljonko muutokset aiheuttivat kuormaa jne. ja sen jälkeen reagoidaan tarpeen mukaan. mutta aina tehdään muutos ja tuodaan se heti peliin ilman että jäädään odottamaan mittausta. mielestäni sanoin tämän jo aiemminkin"'));
+  assert.ok(r.stdout.includes('"ei koskaan odoteta mittausta vaan lisätään kaikki aina heti peliin ilman mittausta. yöllä vain mitataan paljonko muutokset aiheuttivat kuormaa jne. ja sen jälkeen reagoidaan tarpeen mukaan. mutta aina tehdään muutos ja tuodaan se heti peliin ilman että jäädään odottamaan mittausta. mielestäni sanoin tämän jo aiemminkin"'));
   assert.match(r.stdout, /^S-02 PELIIN ILMAN KOETTA/m);  // S-01 ja S-02 erikseen (KK, luku 11 kohta 1)
   assert.doesNotMatch(r.stdout, /KK:n toimeenpano|→ SÄÄNTÖ|🔴/);
   const aa = ajo(REPO, 'sanat', '--rooli', 'ÄÄ').stdout;  // roolisuodatus: ÄÄ ei saa S-04/S-06/S-08
