@@ -91,9 +91,6 @@ a0770203e9518b84e7db88a33db82b97	amsterdam	nahtavyysjutut	Waag op de Dam	3	2026-
 40741b89a2388f66c32c57fba9080031	amsterdam	nahtavyysjutut	Paleis voor Volksvlijt	1	2026-11-16
 6d981bd652f4e6aa95327430ace71229	amsterdam	nahtavyysjutut	Paleis voor Volksvlijt	2	2026-11-16
 b67ecf090d9504e9084fec21532ae7b7	amsterdam	nahtavyysjutut	Paleis voor Volksvlijt	3	2026-11-16
-1f9aac8cea2c216b2034c426e7067789	rooma	nahtavyysjutut	Meta Sudans	1	2026-11-16
-640e2671bbc75a9031d7b288a676c967	rooma	nahtavyysjutut	Meta Sudans	2	2026-11-16
-cc94dcf17531bff7e56f0492a89a162a	rooma	nahtavyysjutut	Meta Sudans	3	2026-11-16
 b98ba16921fbd4e615f823aeae51d522	pariisi	nahtavyysjutut	Tuileries'n palatsi	1	2026-11-16
 4657c7fbcc6d0761a1377bad53f00c81	pariisi	fokusvirta-takyt	tuileriat	1	2026-11-16
 c028fab263659c597bca3b87b51eae69	LUX	hahmotelma	hahmotelma-mondorf	1	2026-11-16
@@ -176,3 +173,43 @@ ecfb24a8a43c2282dd086dc1c449b757	wien	takynostot	praterin-ratas	1	2026-11-17
 019f04d3d4e3668fb961a2ac9f0b62d0	wien	takynostot	lipizzanit	1	2026-11-17
 cfb773fa4b77db8f39e3118c01f2de4c	wien	takynostot	taikahuilu-wiedenissa	1	2026-11-17
 6874a7d6f71b9aac4ff43997402e98df	AUT	hahmotelma	hahmotelma-karntnertor	1	2026-11-17
+aaea0733f802e65369f4fa19d4285a3a	rooma	nahtavyysjutut	Trevin suihkulähde	3	2026-11-17
+c978ba2ba8cd582ea99effdbc10eba93	rooma	nahtavyysjutut	Torre Argentina	1	2026-11-17
+52565f05247f471b8c7f3ec268a00fa6	rooma	nahtavyysjutut	Torre Argentina	2	2026-11-17
+a6db4372d471be836762e5eaecacf6f7	rooma	nahtavyysjutut	Norsu ja obeliski	2	2026-11-17
+434a70004efae9f23182c6c2acc2892f	rooma	nahtavyysjutut	Norsu ja obeliski	3	2026-11-17
+51bd42ffa7978a7545ee43c845a3f2dc	rooma	nahtavyysjutut	Meta Sudans	1	2026-11-17
+2fb3370782a81a73faee903cb6c207f9	rooma	nahtavyysjutut	Banca Romana	1	2026-11-17
+ec68d4ca49347fa9f3e33a1b5de66fbd	rooma	nahtavyysjutut	Banca Romana	2	2026-11-17
+7d124c7632e93a5daedfc6e2220a4c5d	rooma	nahtavyysjutut	Banca Romana	3	2026-11-17
+42d1ba704292d79102a6194c4adbcafd	rooma	nahtavyysjutut	Michelangelo 1510	1	2026-11-17
+4e8752bb0aeac3e7fd8e1e1be6dd4841	rooma	nahtavyysjutut	Michelangelo 1510	4	2026-11-17
+8e16477cbb22cc5a8f89ec01b959b049	rooma	nahtavyysjutut	Kolikko olan yli	1	2026-11-17
+0ebcaaf3a254addb382fff8724bfd522	rooma	nahtavyysjutut	Kolikko olan yli	2	2026-11-17
+8926243e91fe94473b3a1aed25a24164	rooma	nahtavyysjutut	Areenan kellari	1	2026-11-17
+1e987f29787f0ba73dbf18b71e07f1b3	rooma	nahtavyysjutut	Aqua Virgo	1	2026-11-17
+c227e873c69cf8368d00996bbaeeb897	rooma	nahtavyysjutut	Aqua Virgo	2	2026-11-17
+10aa9038a42731d709abf6ac0dad7082	rooma	nahtavyysjutut	Aqua Virgo	3	2026-11-17
+a62708b18af0bf126f5a53a884fd8773	rooma	nahtavyysjutut	Nasone	2	2026-11-17
+76434af76ff5f20ff1b62d6b020a0450	rooma	nahtavyysjutut	Nasone	3	2026-11-17
+3553851012549adefd8faa0911339274	ITA	skandaalit	banca-romana-1893	1	2026-11-17
+82f8bda005cd3191062861ddea87193b	ITA	historianHetket	michelangelo-sikstus-1510	1	2026-11-17
+8c755a36dc8d48f52ae6b358a4cb64fb	rooma	takynostot	kissat	1	2026-11-17
+a0bdafbf584b933a72b9b846ac147cf7	rooma	takynostot	colosseumin-kellari	1	2026-11-17
+dec0305192c700c9c6b7865eb628bda6	rooma	takynostot	aqua-virgo	1	2026-11-17
+f95ad0bda0574560324f67c99ea51a90	rooma	fokusvirta-takyt	kissat	1	2026-11-17
+6f12a62971dd5443841e0f9603fe6b94	rooma	nahtavyysjutut	Trevin suihkulähde	1	2026-11-17
+af7fe8a04f62ec0fdc0bd1d66b715a69	rooma	nahtavyysjutut	Trevin suihkulähde	2	2026-11-17
+dd9991b3805ad864aa5f689dbed8e752	rooma	nahtavyysjutut	Torre Argentina	3	2026-11-17
+2482b3084da6c7c59e3a7802bdc81686	rooma	nahtavyysjutut	Norsu ja obeliski	1	2026-11-17
+a5a3a2b51560d269d440659f8951f835	rooma	nahtavyysjutut	Meta Sudans	2	2026-11-17
+d2f53ba80d2f9a0a637355d737a67f60	rooma	nahtavyysjutut	Meta Sudans	3	2026-11-17
+cedc75b2edae50d094411a59ec3703a3	rooma	nahtavyysjutut	Michelangelo 1510	2	2026-11-17
+a0c473d463e2dd11ab8587479e6aa85b	rooma	nahtavyysjutut	Michelangelo 1510	3	2026-11-17
+5318e66f674cbb5be1ee8b2945c7ed48	rooma	nahtavyysjutut	Kolikko olan yli	3	2026-11-17
+3cbffdcb0cda3f11e9c2e9a563eb4c66	rooma	nahtavyysjutut	Areenan kellari	2	2026-11-17
+67b10576b6f8d0fa6ec96835835bd723	rooma	nahtavyysjutut	Areenan kellari	3	2026-11-17
+625d67ee4eee02784f25c41ecb121ec0	rooma	nahtavyysjutut	Nasone	1	2026-11-17
+8c579be080c5a69e7987f2cb32def526	rooma	takynostot	minervan-norsu	1	2026-11-17
+68db672d5d03f0b4221dd1f7811594d8	rooma	takynostot	rooman-nasone	1	2026-11-17
+80ec4eff0cb5addfb9215e4e4df6025f	rooma	nahtavyysjutut	Torre Argentina	4	2026-11-17
