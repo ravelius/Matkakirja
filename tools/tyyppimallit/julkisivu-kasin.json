@@ -88,6 +88,25 @@
     "https://commons.wikimedia.org/wiki/File:Palazzo_Massimo_alle_Terme_NE.jpg (vaihtoehto: pitkä sivu Piazza dei Cinquecentolle koilliseen; KK:n valinta)"
    ],
    "kuva_tarkistettu": "VS 17.11."
+  },
+  "way/166174702": {
+   "nimi": "Basilica di Sant'Eugenio",
+   "suunta": "pohjoinen",
+   "katu": "Viale delle Belle Arti",
+   "lahteet": [
+    "en.wikipedia Sant'Eugenio: Location Viale delle Belle Arti 10; it.wikipedia: \"in viale delle Belle Arti\"",
+    "OSM-ote: -x-pääty 19 m Viale delle Belle Artista, +x-pääty 79 m (Valoseppä 17.11.)"
+   ]
+  },
+  "way/164050121": {
+   "nimi": "Chiesa di San Gioacchino in Prati",
+   "suunta": "etelä",
+   "katu": "Via Pompeo Magno",
+   "lahteet": [
+    "it.wikipedia: Indirizzo via Pompeo Magno; en.wikipedia: Via Pompeo Magno 25",
+    "OSM-ote: +x-pääty 10 m Via Pompeo Magnosta, -x-pääty 71 m (Valoseppä 17.11.)"
+   ],
+   "huom": "EI Piazza dei Quiriti (it.wiki: tontti ei avaudu aukiolle)"
   }
  },
  "wien": {
