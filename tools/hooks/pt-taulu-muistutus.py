@@ -178,7 +178,8 @@ def tyolistavanhat(d, sessio):
         if isinstance(ts, bool) or not isinstance(ts, (int, float)):
             continue
         ika_h = (nyt - ts) / 3_600_000
-        if ika_h > VANHA_H:
+        # KK 16.11. 20.1x (suunnitelma 20261116-aina-toita.md kohta 5): "työn alla ilman tuoretta tilannetta" -muistutus poistettu.
+        if False and ika_h > VANHA_H:
             vanhat.append((ika_h, str(r.get("otsikko", "?"))[:60]))
     if not (vanhat or valmiit) or not saa_muistuttaa("tyolista-vanha", sessio):
         return None
@@ -210,6 +211,19 @@ def odottavat_aamulla(d, sessio):
             f"korvautuneet pois, jatkuvat Työn alle, muille tämän päivän tilanne ({TYOLISTA_KOMENTO} tilanne|valmis).")
 
 
+def sanavahti(d, sessio):
+    """SANAVAHTI (muisti pala 5, 17.11.2026): lähtevän viestin varoitus (S-01, S-02, omistajan nimi ehdossa, KK:N PÄÄTÖS ilman
+    hakua) ja omistajan viestin talteenottomuistutus. Vain varoitusrivi, ei estä. Säännöt: sanavahti-saannot.json."""
+    import importlib.util
+    polku = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sanavahti.py")
+    if not os.path.exists(polku):
+        return None
+    spec = importlib.util.spec_from_file_location("sanavahti", polku)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m.hook_teksti(d) or None
+
+
 def main():
     try:
         d = json.load(sys.stdin)
@@ -218,7 +232,8 @@ def main():
     tapahtuma = d.get("hook_event_name") or "PostToolUse"
     sessio = str(d.get("session_id") or "")
     tekstit = []
-    for osa in (kontekstivahti, junarivivahti, tyolistavanhat, odottavat_aamulla, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_)):
+    for osa in (kontekstivahti, junarivivahti, tyolistavanhat, odottavat_aamulla, lambda d_, s_: taulumuistutus(d_, tapahtuma, s_),
+                sanavahti):
         try:
             t = osa(d, sessio)
         except Exception:  # noqa: BLE001 — yksi osa ei saa kaataa toista

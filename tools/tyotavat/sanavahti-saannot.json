@@ -1,0 +1,161 @@
+{
+ "kuvaus": "Sanavahdin säännöt (suunnitelma 20261117-muisti-ilman-uudelleenkertomista, luvut 4 ja 7; muisti pala 5). Uusi vartija = uusi rivi tähän, ei uusi skripti eikä uusi asetus. Lausekkeet ovat Pythonin re-lausekkeita (re.I, ellei kirjainkoko-kenttä ole true). tapa: varoita (esto vasta omistajan luvalla, luku 7).",
+ "mitta": "(mittau\\w*|mitata\\w*|mitattu\\w*|laiteluk\\w*|laiteaj\\w*|ipad-luk\\w*|ipadin luv\\w*|ipad-ajo\\w*|iphone-mittau\\w*|muistiraj\\w*|muistimittau\\w*|muistiluk\\w*|ruutuaik\\w*|yön mittau\\w*|yöajo\\w*|yö-luk\\w*|lukuj\\w*|lukujen\\b|lukui\\w*|luvu\\w*)",
+ "ehto": "((ei|älä)\\s+(vielä\\s+)?(junaan|juna\\w*|peliin|linkkiin)\\b[^.\\n]{0,70}?\\b(ennen|ilman|kunnes)\\b|\\b(junaan|peliin|linkkiin)\\s+(ei|vasta)\\b|\\bei\\s+junasana\\w*\\s+ennen)",
+ "saannot": [
+  {
+   "tunnus": "S-01",
+   "nimi": "Mittausta ei odoteta",
+   "laji": "rivi",
+   "lahde": "P-261117-55",
+   "koskee": "kaikki",
+   "tapa": "varoita",
+   "este": [
+    "(ei|älä)\\s+(vielä\\s+)?(junaan|juna\\w*|peliin|linkkiin)\\b[^.\\n]{0,70}?\\b(ennen|ilman|kunnes)\\b[^.\\n]{0,40}?{MITTA}",
+    "\\b(junaan|peliin|linkkiin)\\s+(ei\\s+)?(vasta|ennen)\\b[^.\\n]{0,50}?{MITTA}",
+    "\\bodottaa\\s+(vain\\s+|yhä\\s+)?{MITTA}",
+    "junasana[^.\\n]{0,60}?(ehdo\\w*|kun|jos)[^.\\n]{0,40}?{MITTA}",
+    "\\bvasta\\s+(\\S+\\s+){0,3}?\\(?\\w*-?\\)?{MITTA}[^.\\n]{0,20}?jälkeen"
+   ],
+   "salli": [
+    "ei koskaan (odoteta )?mittau",
+    "ei mittaus",
+    "jälkikät",
+    "mittausehto-vahti",
+    "sanavahti",
+    "P-261117-55",
+    "yöllä vain mitataan",
+    "ei estä",
+    "ei ole (junan )?ehto",
+    "eivät junan ehtoja",
+    "EI junan ?/? ?ehto",
+    "S-01"
+   ],
+   "korjaus": "Mittaus ei ole junan ehto (omistaja 17.11. klo 12.26, P-261117-55: \"ei koskaan odoteta mittausta vaan lisätään kaikki aina heti peliin ilman mittausta\"). Poista ehto ja lähetä korjaus samassa vuorossa; mittaus yöllä, reagointi jälkikäteen.",
+   "esimerkit": {
+    "osuu": [
+     "fps, liuku) kolmelta nostolta YHTENÄ viestinä KK:lle + arvio syystä, jos iPad nykii. Ei junaan ennen lukuja. Macin VIERITYS3 = kuiva-ajo.",
+     "Tulos YHTENÄ viestinä KK:lle: yli 20 ms nostoittain, GPU ms, alkuviive; f7021c838 EI junaan ennen laitelukuja.",
+     "JUNAAN EI ennen YÖAJOA VS-AITO-MAA1-ERITTELY 9599dd931 (PID 38656, 17.11. 03 jälkeen, yksin)",
+     "talot tulevat junaan vasta iPadin mittauksen jälkeen"
+    ],
+    "ei_osu": [
+     "OMISTAJA 12.26 (pysyvä, PT:n kautta): EI odoteta mittausta; kaikki heti peliin, yön mittaus on jälkikäteinen tarkistus.",
+     "\"Ei koskaan odoteta mittausta\": kaikki valmis junaan heti, mittaus yöllä ja reagointi sen jälkeen. Älä kirjoita ehtoja \"ei junaan ennen mittausta\".",
+     "B) sulavuus/muisti: laitemittaus EI junan ehto; junaan testeillä + perustelu koodista; mittaukset yöajoon."
+    ]
+   }
+  },
+  {
+   "tunnus": "S-02",
+   "nimi": "Peliin ilman koetta, omistaja testaa itse",
+   "laji": "rivi",
+   "lahde": "P-261116-20, P-261116-21",
+   "koskee": "kaikki",
+   "tapa": "varoita",
+   "este": [
+    "(ei|älä)\\s+(vielä\\s+)?(junaan|peliin|linkkiin)\\b[^.\\n]{0,70}?\\b(ennen|ilman|kunnes)\\b[^.\\n]{0,30}?(koetta|kokeen\\b|kuva-ajo\\w*|kuvapar\\w*|kuvasarj\\w*|\\bpari(a|n|sta|lle|en)?\\b|\\bkuvi\\w*|\\bkuva\\w*|katse\\w*|kuuntelu\\w*|KK:n\\s+(sana\\w*|ok\\w*|hyväksyn\\w*|lupa\\w*)|\\bKK:ta\\b|\\bKK:lta\\b|leima\\w*)",
+    "\\b(junaan|peliin|linkkiin)\\s+(ei\\s+)?(vasta|ennen)\\b[^.\\n]{0,50}?(koe\\w*|kokee\\w*|kuva-ajo\\w*|kuvapar\\w*|katse\\w*|KK:n\\s+(sana\\w*|ok\\w*|hyväksyn\\w*))"
+   ],
+   "salli": [
+    "koehaar\\w*",
+    "\\bkoe/",
+    "/koe\\b",
+    "\\(koe\\b",
+    "\\bkoe[,;:)]",
+    "kokeena",
+    "\\b(oma|roolin|KK:n) koe\\b",
+    "\\bkoe\\s*\\d",
+    "ei omistajan pyyn",
+    "NOPEUS ENSIN",
+    "ilman koetta",
+    "sanavahti",
+    "P-261116-2[01]",
+    "S-02",
+    "sallittu vain lajissa koe",
+    "kokeet eivät"
+   ],
+   "salli_kirjainkoko": [
+    "\\bKOE\\b"
+   ],
+   "korjaus": "Omistajan pyytämä valmis työ menee peliin ilman koetta, kuva-ajoa, paria tai KK:n katsetta (omistaja 16.11. klo 14.59 P-261116-20: \"eikö niitä voi laittaa peliin ilman koetta niin testaan itse?\"). Ehto sallitaan vain, kun työ on KK:n tai roolin oma koe: merkitse se riville (KOE / koehaara), muuten poista ehto ja lähetä korjaus samassa vuorossa.",
+   "esimerkit": {
+    "osuu": [
+     "EI JUNAAN ennen M4:ää (16e8413f2, KK:n sana) ja KK:n kuuntelua; yöajo (kaappaus) puuttuu.",
+     "Waag 58° valmis. Ei junaan ennen KK:n katsetta.",
+     "Valmis haara pelikoodari/esittely-awr: junaan vasta kuvaparin jälkeen."
+    ],
+    "ei_osu": [
+     "4. PYSYY KOKEENA (yöajo, kuva KK:lle, ei junaan ennen KK:n katsetta; KK:n tai roolin oma koe, ei omistajan pyyntö).",
+     "Hallgrím-korjaus 8f6b7625c (haara lavastaja/koe-hallgrim-parthenon, EI JUNAAN ennen kuvaa).",
+     "S-02 ilman koetta | sanavahti: \"ei junaan ennen … (koe, kuva-ajo, pari, KK:n katse)\" omistajan pyytämässä työssä; sallittu vain lajissa koe",
+     "Käsiaskel 8: ei junaan ennen Pariisi valmis -päätöstä."
+    ]
+   }
+  },
+  {
+   "tunnus": "OMISTAJAN-NIMI",
+   "nimi": "Omistajan nimi ehdossa ilman lähdettä",
+   "laji": "omistaja-lahde",
+   "lahde": "suunnitelma luku 7 (TULOS-periytyminen 5: ehto sai omistajan nimen)",
+   "koskee": "kaikki",
+   "tapa": "varoita",
+   "este": [
+    "{EHTO}"
+   ],
+   "nimi_lauseke": "\\bomistaja\\w*\\s+(\\d{1,2})\\.(\\d{1,2})\\.?(?:\\s*(?:klo\\s*)?(\\d{1,2})[.:](\\d[\\dx]))?|\\bomistaja\\w*\\s+(?:klo\\s*)?(\\d{1,2})[.:](\\d[\\dx])\\b",
+   "salli": [
+    "P-\\d{6}-\\d+",
+    "sanavahti",
+    "aiempi: P-"
+   ],
+   "korjaus": "Ehto kantaa omistajan nimeä ilman P-tunnusta. Tarkista lähde: node tools/kirjaa.mjs hae \"<sanat>\" (ja tallenne). Jos omistaja todella sanoi sen, kirjaa P-tunnus riville; muuten ehto on KK:n tai roolin oma: kirjaa se lähteellä KK:<tunnus> tai rooli:<nimi>, ei omistajan nimellä.",
+   "esimerkit": {
+    "osuu": [
+     "VIERITYS3-LAITE (iPad, pari ef3a026fa | 03dcdf347): ei junaan ennen lukuja (omistaja 16.11. 15.50).",
+     "Temple ei junaan ennen kuvaa (omistaja 21.16)."
+    ],
+    "ei_osu": [
+     "Waag ei junaan ennen kuvaa (omistaja 16.11. klo 15.01, P-261116-21).",
+     "RIEMUKAAREN KIVIPINTA (omistaja 11.19): KS koe 920dc56b4 (ei junaan), Mac-pari JU:n jonossa (KS-RKKIVI) → KK.",
+     "Omistaja 21.41: kokeillaan koodilla piirrettyä kuviota. Yksi alue, kuvaparit läheltä ja kaukaa, ei junaan ilman korttia."
+    ]
+   },
+   "nimi_ikkuna": 80
+  },
+  {
+   "tunnus": "KK-PAATOS",
+   "nimi": "KK:n päätös ilman aiemman sanan hakua",
+   "laji": "puuttuu",
+   "lahde": "suunnitelma luku 7 (KK päättää hakematta aiempaa sanaa, 3+ kertaa)",
+   "koskee": "kaikki",
+   "tapa": "varoita",
+   "este": [
+    "KK:N PÄÄTÖS"
+   ],
+   "kirjainkoko": true,
+   "vaatii": "aiempi:\\s*P-\\d{6}-\\d+|ei aiempaa\\s*\\(haettu:[^)]+\\)",
+   "ikkuna": 4,
+   "salli": [
+    "ilman merkintää",
+    "sanavahti"
+   ],
+   "korjaus": "Ennen päätöstä hae omistajan aiempi sana: node tools/kirjaa.mjs sanat ja node tools/kirjaa.mjs hae \"<sanat>\". Lisää päätökseen merkintä \"aiempi: P-…\" tai \"ei aiempaa (haettu: <hakusanat>)\" ja lähetä korjaus samassa vuorossa.",
+   "esimerkit": {
+    "osuu": [
+     "## KK:N PÄÄTÖS 17.11. klo 12.51 (taulusta; KK tarkisti itse gitistä junan 3bbf0ba06 esi-isät)",
+     "## KK:N PÄÄTÖS 22.55 (korvaa yllä olevan \"odottaa\")"
+    ],
+    "ei_osu": [
+     "KK:N PÄÄTÖS 13.10 (aiempi: P-261117-55): Temple junaan heti.",
+     "KK:N PÄÄTÖS 13.12, ei aiempaa (haettu: temple juliste otsikko): juliste junaan.",
+     "| KK päättää hakematta aiempaa sanaa (3+ kertaa) | sanavahti lähtevään viestiin: \"KK:N PÄÄTÖS\" ilman merkintää \"aiempi: P-…\" tai \"ei aiempaa (haettu: …)\" → varoitus | PT | ei |"
+    ]
+   }
+  }
+ ],
+ "talteen": {
+  "kuvaus": "Omistajan viesti KK:n ikkunassa (UserPromptSubmit, ei roolien viestit): mahdollinen pysyvä sana tai toisto (suunnitelma luku 4, Talteenotto).",
+  "lauseke": "\\b(aina|ei koskaan|älä enää|jatkossa|sanoin jo|sanoin tämän jo|taas|vieläkään)\\b|miksi\\b[^.?!\\n]{0,80}\\bei\\s+pysy"
+ }
+}
