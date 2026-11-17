@@ -20,7 +20,7 @@ Lähteet: V = Château de Versailles (en.chateauversailles.fr, "Affair of the di
 | 9 | oikeudenkäynti Pariisin parlamentissa; parlamentti istui Palais de la Citén palatsissa | HS, HN (Parlement of Paris); SP + palatsin historia (parlamentin kotipaikka 1300-luvulta vallankumoukseen) |
 | 10 | toukokuussa 1786 kardinaali vapautettiin | V, H, HS, HN, VP (30.5.; History Today 31.5.: päivää ei mainita) |
 | 11 | Jeanne leimattiin varkaaksi ja vietiin vankilaan (piestiin, Salpêtrière) | V (V-leima), VP, HN, HS |
-| 12 | timantit myytiin ympäri Eurooppaa | H ("à l'étranger"), HS ("across Europe"), HN, VP |
+| 12 | timantit myytiin, moni Lontoossa | VP (hienoimmat kivet kahdelle englantilaiselle jalokivikauppiaalle Lontoossa), HN ("many in London"); H ja HS: ulkomailla / ympäri Eurooppaa |
 | 13 | kuningattaren maine kärsi, vaikka hän ei ollut osallinen | H ("grossièrement calomniée"), HS, HN |
 | 14 | Sainte-Chapelle Palais de la Citén pihalla, yli tuhat kohtausta, turvatarkastus | SP (1113 "ikkunaa"/kohtausta, Palais de Justice -alueen turvatarkastus); vanha nähtävyysjuttu (15 ikkunaa, yli tuhat kohtausta) |
 | 15 | isoisän koukku 1873: kappeli oikeuspalatsin pihalla, ikkunat täynnä pieniä kuvia | sama kuin 14; kappelin restaurointi oli 1873 valmiina, ei väitetä tarkkaa vuotta |
@@ -32,8 +32,8 @@ Pehmennetty / pois: väärennetyt kirjeet (vain VP ja HS mainitsevat), kaulanauh
 2 koukku (isoisä): Pariisi, 1873. Löysin Sainte-Chapellen oikeuspalatsin pihalta. Ikkunat ovat niin täynnä pieniä kuvia, että luovutin niiden laskemisen.
 3 tapahtuma: Kuninkaan jalokivikauppiaat tekivät timanttikaulanauhan, jossa oli lähes 650 kiveä. Hinta oli 1,6 miljoonaa livreä, ja Marie Antoinette kieltäytyi ostamasta sitä. Huijari Jeanne de La Motte sai kardinaali de Rohanin uskomaan, että kuningatar halusi nauhan salaa.
 4 tapahtuma: Elokuussa 1784 kardinaali tapasi Versailles'n puistossa naisen, jonka hän luuli kuningattareksi. Alkuvuodesta 1785 hän sai nauhan kauppiailta ja luovutti sen Jeannelle. Kun kauppiaat pyysivät maksua, kuningatar vaati selvitystä, ja kardinaali pidätettiin.
-5 käänne: Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui Palais de la Citén palatsissa. Toukokuussa 1786 kardinaali vapautettiin. Jeanne leimattiin varkaaksi ja vietiin vankilaan. Timantit oli jo myyty ympäri Eurooppaa, ja kuningattaren maine kärsi pahasti.
-6 tänään: Sainte-Chapelle on yhä Palais de la Citén pihalla, ja sen ikkunoissa on yli tuhat kohtausta. Ympärillä on oikeuspalatsi, ja kappeliin mennään turvatarkastuksen kautta.
+5 käänne: Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui Cité-saaren palatsissa. Toukokuussa 1786 kardinaali vapautettiin. Jeanne leimattiin varkaaksi ja vietiin vankilaan. Timantit oli jo myyty, moni niistä Lontoossa, ja kuningattaren maine kärsi pahasti.
+6 tänään: Sainte-Chapelle on yhä saman palatsin pihalla. Kuningas Ludvig IX rakennutti sen 1240-luvulla säilyttämään Kristuksen orjantappurakruunua. Ikkunoissa on yli tuhat kohtausta, ja kappeliin mennään turvatarkastuksen kautta. (Ludvig IX, 1240-luku: SP 1241–1248, vanha nähtävyysjuttu 1239/1248.)
 Vuosirivit: 1784 yöllinen tapaaminen · 1785 nauha luovutetaan · 1786 Rohan vapautetaan.
 Visa: Kuka kaulanauhajutussa tuomittiin vankilaan? Kardinaali de Rohan / Jeanne de La Motte (oikea) / Marie Antoinette.
 Pulu: Miksi kardinaali uskoi tapaavansa kuningattaren? · Mihin kaulanauhan timantit lopulta päätyivät? · Miksi kuningattaren maine kärsi, vaikka hän ei ollut osallinen?
@@ -47,3 +47,6 @@ Puuttuvia kuvia ei ole. Tekijätarkistus (tools/tarkista-tekijat.mjs) ajamatta.
 1. Skandaalikortti `kaulanauhajuttu-1785` kertoo saman tarinan toisin sanoin (31.5.1786, Jeannen pako): poistetaanko?
 2. Pulun vanhat vastausavaimet `nosto:kaulanauha-1785` jäävät orvoiksi; uudelle kohteelle ei vastauksia (ohjeen mukaan ei tarvita).
 3. Isoisän koukun kuva: kappelin torni 1873 (nykyvalokuva, torni uusittu 1800-luvulla); jos halutaan 1873-aikainen kuva, haettava Commonsista.
+
+## PÄIVITYS 17.11. klo ~22.20 (KK 22.06)
+Korjaukset a–c tehty; skandaalikortti `kaulanauhajuttu-1785` JÄÄ (KK päätös), nähtävyysjutun poisto käy.

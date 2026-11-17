@@ -591,16 +591,17 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
-        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui Palais de la Citén palatsissa. '
+        teksti: 'Oikeudenkäynti pidettiin Pariisin parlamentissa, joka istui Cité-saaren palatsissa. '
           + 'Toukokuussa 1786 kardinaali vapautettiin. Jeanne leimattiin varkaaksi ja vietiin vankilaan. '
-          + 'Timantit oli jo myyty ympäri Eurooppaa, ja kuningattaren maine kärsi pahasti.',
+          + 'Timantit oli jo myyty, moni niistä Lontoossa, ja kuningattaren maine kärsi pahasti.',
         kuva: 'viuhka',
         vuodet: [{ vuosi: '1786', selite: 'Rohan vapautetaan', kohta: 'Toukokuussa 1786' }],
       },
       {
         osa: 'tanaan',
-        teksti: 'Sainte-Chapelle on yhä Palais de la Citén pihalla, ja sen ikkunoissa on yli tuhat '
-          + 'kohtausta. Ympärillä on oikeuspalatsi, ja kappeliin mennään turvatarkastuksen kautta.',
+        teksti: 'Sainte-Chapelle on yhä saman palatsin pihalla. Kuningas Ludvig IX rakennutti sen 1240-luvulla '
+          + 'säilyttämään Kristuksen orjantappurakruunua. Ikkunoissa on yli tuhat kohtausta, ja kappeliin '
+          + 'mennään turvatarkastuksen kautta.',
         kuva: 'ikkunat',
       },
     ],
