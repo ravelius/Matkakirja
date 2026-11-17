@@ -42,6 +42,7 @@ Kaulanauha: 1,6 milj. livreä (en.wiki 2 milj.); Metro: "jäljellä 88" (en.wiki
 8. **Montelbaanstoren**: "luultavasti de Keyser" (presumed) kantaa epävarmuuden tekstissä.
 
 ## Wien (PR 7050; PT 17.53: huomiot 1–9 listaan)
+**Faktavirhetarkistus 17.11. tehty: Belvedere 1781 ja jättiratas "vuoteen 1985" korjattu; Hofburg, Burgtheater ja Beethoven-kellonaika ehdotuksina; muut kunnossa (docs/raportit/wien-faktavirheet-20261117.md).**
 1. **Kärntnertor-teatteri:** WGW antaa purkuvuodeksi 1873/74 (en-wiki 1870): rakennus saattoi seistä vielä 1873; teksti "Talo purettiin myöhemmin" kelpaa, "teatteri oli jo suljettu" kelpaa.
 2. **Vanha Burgtheater:** aloitusvuosi 1741 (en-wiki, Austria-Forum) vs WGW 1748 ("Theater nächst der Burg"): valittava lähde.
 3. **Belvedere:** "vuonna 1776 siitä tehtiin julkinen taidegalleria" → 1776 päätös siirtää keisarillinen galleria, avajaiset 1777, yleisölle 1781; "Prinssin kuoltua palatsin osti Maria Theresia" (osto 1752, Eugen kuoli 1736) löyhä.
