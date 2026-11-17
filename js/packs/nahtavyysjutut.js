@@ -3565,7 +3565,11 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'jouluna 1066', vuosi: '1066', selite: 'Vilhelm kruunattiin' },
         { kohta: 'nousta 1245', vuosi: '1245', selite: 'uusi kirkko alkoi' },
         { kohta: 'luostarit 1540', vuosi: '1540', selite: 'luostarien lakkautus' },
+        { kohta: 'vasta 1745', vuosi: '1745', selite: 'länsitornit' },
+        { kohta: 'noin 1300', vuosi: '1300', selite: 'kruunajaistuoli' },
+        { kohta: 'Skotlantiin 1996', vuosi: '1996', selite: 'kivi Skotlantiin' },
         { kohta: 'vuonna 1400', vuosi: '1400', selite: 'Chaucer haudattiin' },
+        { kohta: 'tehtiin 1920', vuosi: '1920', selite: 'tuntematon sotilas' },
       ],
       kuvat: [
         {
@@ -3757,6 +3761,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'avattiin 1759', vuosi: '1759', selite: 'museo avattiin' },
         { kohta: 'pylväsjulkisivun 1823–1852', vuosi: '1823–1852', selite: 'pylväsjulkisivu' },
         { kohta: 'rakennettiin 1857', vuosi: '1857', selite: 'pyöreä lukusali' },
+        { kohta: 'taloonsa 1997', vuosi: '1997', selite: 'kirjasto muutti' },
       ],
       kuvat: [
         {
@@ -3832,6 +3837,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'tammikuussa 1901', vuosi: '1901', selite: 'Viktoria kuoli' },
         { kohta: 'paljastettiin 1911', vuosi: '1911', selite: 'paljastus' },
         { kohta: 'uudelleen 1913', vuosi: '1913', selite: 'palatsin julkisivu' },
+        { kohta: 'kokonaan 1924', vuosi: '1924', selite: 'valmistui kokonaan' },
       ],
       kuvat: [
         {
@@ -3911,6 +3917,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'kuoli 1861', vuosi: '1861', selite: 'Albert kuoli' },
         { kohta: 'Parkissa 1851', vuosi: '1851', selite: 'Kristallipalatsi' },
         { kohta: 'paloi 1936', vuosi: '1936', selite: 'paloi Sydenhamissa' },
+        { kohta: 'valmistui 1998', vuosi: '1998', selite: 'korjaus valmistui' },
       ],
       kuvat: [
         {
@@ -4103,6 +4110,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi vuonna 1873 vanhaa katedraalia ei ollut ollut enää yli kahteensataan vuoteen.',
       vuodet: [
         { kohta: 'vuonna 1087', vuosi: '1087', selite: 'rakentaminen alkoi' },
+        { kohta: 'vuonna 1314', vuosi: '1314', selite: 'kirkko valmistui' },
         { kohta: 'vuonna 1561', vuosi: '1561', selite: 'torni paloi' },
         { kohta: 'vuonna 1666', vuosi: '1666', selite: 'suurpalo' },
         { kohta: 'vuonna 1710', vuosi: '1710', selite: 'nykyinen valmistui' },
@@ -4547,6 +4555,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Itävallan 20 sentin kolikosta.',
       vuodet: [
         { kohta: 'vuosina 1712–1723', vuosi: '1712–1723', selite: 'rakennettiin' },
+        { kohta: 'vuonna 1781', vuosi: '1781', selite: 'galleria avattiin' },
         { kohta: 'Vuonna 1955', vuosi: '1955', selite: 'valtiosopimus' },
       ],
       kuvat: [
@@ -4631,6 +4640,8 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'vuonna 1696', vuosi: '1696', selite: 'Fischer aloitti' },
         { kohta: 'Kesällä 1752', vuosi: '1752', selite: 'eläintarha' },
+        { kohta: 'vuosina 1805', vuosi: '1805', selite: 'Napoleon majoittui' },
+        { kohta: 'ja 1809', vuosi: '1809', selite: 'Napoleon taas' },
         { kohta: 'rakennettiin 1775', vuosi: '1775', selite: 'Gloriette rakennettu' },
         { kohta: 'pahoin 1945', vuosi: '1945', selite: 'pommitusvauriot' },
         { kohta: 'vuonna 1996', vuosi: '1996', selite: 'Unesco-kohde' },
@@ -4727,6 +4738,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'toukokuussa 1945', vuosi: '1945', selite: 'kuvat tuhoutuivat' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
         { kohta: 'heinäkuuta 1862', vuosi: '1862', selite: 'Klimt syntyi' },
+        { kohta: 'vasta 1884', vuosi: '1884', selite: 'yliopisto avattiin' },
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Wienin yliopisto, Leopold Museum, Wienin lääketieteellinen yliopisto, Wien Tourismus, Wien Geschichte Wiki ja Belvedere',
     },
@@ -4784,6 +4796,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'käyttöön 1972', vuosi: '1972', selite: 'Euroopan neuvosto' },
         { kohta: 'johtajat 1985', vuosi: '1985', selite: 'EU:n hymni' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuonna 1870', vuosi: '1870', selite: 'teatteri suljettu' },
       ],
       kuvat: [
         {
@@ -4855,6 +4868,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'uudelleen 1947', vuosi: '1947', selite: 'avattiin uudelleen' },
         { kohta: 'Vuonna 2016', vuosi: '2016', selite: 'vaunut uusittiin' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'paloi 1937', vuosi: '1937', selite: 'Rotunde paloi' },
       ],
       kuvat: [
         {
@@ -4887,6 +4901,7 @@ export const NAHTAVYYSJUTUT = {
       vuodet: [
         { kohta: 'rakennettiin 1729 ja 1735', vuosi: '1729–1735', selite: 'sali rakennettiin' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'jo 1798', vuosi: '1798', selite: 'Piber perustettiin' },
         { kohta: 'vasta 1920', vuosi: '1920', selite: 'siirto Piberiin' },
       ],
       kuvat: [
@@ -4982,6 +4997,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi vuonna 1873 vanha teatteri oli vielä käytössä. Uusi talo Ringillä avattiin vasta viidentoista vuoden päästä.',
       vuodet: [
+        { kohta: 'vuonna 1741', vuosi: '1741', selite: 'teatteri alkoi' },
         { kohta: 'lokakuuta 1888', vuosi: '1888', selite: 'viimeinen esitys' },
         { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },
       ],
@@ -5545,9 +5561,11 @@ export const NAHTAVYYSJUTUT = {
           + 'ensimmäisenä naisena omien ansioidensa perusteella.',
       vuodet: [
         { kohta: 'sotaretkellä 1744', vuosi: '1744', selite: 'kuningas sairastui' },
+        { kohta: 'kuoli 1780', vuosi: '1780', selite: 'Soufflot kuoli' },
         { kohta: 'vasta 1790', vuosi: '1790', selite: 'valmistui' },
         { kohta: '1791 kansalliskokous', vuosi: '1791', selite: 'suurmiesten hauta' },
         { kohta: 'Vuonna 1851', vuosi: '1851', selite: 'Foucaultin heiluri' },
+        { kohta: 'sinne 1995', vuosi: '1995', selite: 'Curie siirrettiin' },
       ],
       lainaus: {
         teksti: 'AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE — Suurmiehille '
@@ -5598,6 +5616,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'vuonna 1163', vuosi: '1163', selite: 'rakennus alkoi' },
         { kohta: 'vasta 1345', vuosi: '1345', selite: 'valmistui' },
         { kohta: 'vuonna 1804', vuosi: '1804', selite: 'Napoleonin kruunaus' },
+        { kohta: 'vuonna 1944', vuosi: '1944', selite: 'de Gaulle kiitti' },
         { kohta: 'Huhtikuussa 2019', vuosi: '2019', selite: 'tulipalo' },
         { kohta: 'joulukuussa 2024', vuosi: '2024', selite: 'avattiin uudelleen' },
       ],
@@ -5648,6 +5667,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'valmistui vuonna 1900', vuosi: '1900', selite: 'asema valmistui' },
         { kohta: 'jo 1939', vuosi: '1939', selite: 'kaukojunat loppuivat' },
         { kohta: 'joulukuussa 1986', vuosi: '1986', selite: 'museo avattiin' },
+        { kohta: 'vuodelta 1876', vuosi: '1876', selite: 'Renoirin maalaus' },
       ],
       kuvat: [
         {
@@ -5763,6 +5783,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'vuonna 1532', vuosi: '1532', selite: 'rakennus alkoi' },
         { kohta: 'vuonna 1637', vuosi: '1637', selite: 'vihittiin' },
         { kohta: 'vuonna 1754', vuosi: '1754', selite: 'julkisivutyö alkoi' },
+        { kohta: 'vuonna 1969', vuosi: '1969', selite: 'tori Rungisiin' },
         { kohta: 'vuodelta 1213', vuosi: '1213', selite: 'kappeli' },
       ],
       kuvat: [
@@ -5909,6 +5930,7 @@ export const NAHTAVYYSJUTUT = {
           + '2024 olympialaisissa lasikaton alla miekkailtiin.',
       vuodet: [
         { kohta: 'vuoden 1900 maailmannäyttelyyn', vuosi: '1900', selite: 'maailmannäyttely' },
+        { kohta: 'vuoden 1855', vuosi: '1855', selite: 'vanha näyttely' },
         { kohta: 'vuodesta 1901', vuosi: '1901', selite: 'automessut' },
         { kohta: 'vuonna 1909', vuosi: '1909', selite: 'ilmailunäyttely' },
         { kohta: 'vuonna 1993', vuosi: '1993', selite: 'niitti putosi' },
@@ -6055,6 +6077,8 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'tienoilla 1873', vuosi: '1873', selite: 'säveltäminen alkoi' },
         { kohta: 'alkuvuodesta 1874', vuosi: '1874', selite: 'johtaja erosi' },
         { kohta: 'maaliskuuta 1875', vuosi: '1875', selite: 'ensi-ilta' },
+        { kohta: 'Bryssel 1876', vuosi: '1876', selite: 'Bryssel' },
+        { kohta: 'York 1878', vuosi: '1878', selite: 'Lontoo, New York' },
         { kohta: 'vasta 1883', vuosi: '1883', selite: 'ooppera palasi' },
         { kohta: 'paloi 1887', vuosi: '1887', selite: 'sali paloi' },
       ],
@@ -7852,6 +7876,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'Vuonna 1870', vuosi: '1870', selite: 'ensimmäinen erä' },
         { kohta: 'Vuonna 1894', vuosi: '1894', selite: 'liitto perustettiin' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vasta 1879', vuosi: '1879', selite: 'hiomo valmistui' },
       ],
       kuvat: [
         {
@@ -7980,6 +8005,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi matkavuonna 1873 Kissalaivaa ei vielä ollut: ensimmäinen laiva hankittiin vasta 1968, 95 vuotta myöhemmin. Singel-kanavassa on nykyään '
         + 'uusi laiva, joka tuotiin paikalleen vuonna 2023.',
       vuodet: [
+        { kohta: 'Vuonna 1966', vuosi: '1966', selite: 'kissoja kotiin' },
         { kohta: 'vuonna 1968', vuosi: '1968', selite: 'ensimmäinen laiva' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
         { kohta: 'vuonna 2023', vuosi: '2023', selite: 'uusi laiva paikalle' },
@@ -8059,6 +8085,7 @@ export const NAHTAVYYSJUTUT = {
         { kohta: 'Vuonna 1715', vuosi: '1715', selite: 'taulu siirrettiin' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
         { kohta: 'vasta 1885', vuosi: '1885', selite: 'nykyinen avattiin' },
+        { kohta: 'vasta 1946–47', vuosi: '1946–47', selite: 'lakkaa poistettiin' },
         { kohta: 'loput 1975–76', vuosi: '1975–76', selite: 'kunnostus' },
       ],
       kuvat: [
@@ -10602,6 +10629,7 @@ export const NAHTAVYYSJUTUT = {
           + 'esiintyneet monissa elokuvissa, muun muassa klassikossa '
           + 'Loma Roomassa (1953) Audrey Hepburnin kanssa.',
       vuodet: [
+        { kohta: 'vuosina 1723–1725', vuosi: '1723–1725', selite: 'portaat rakennettiin' },
         { kohta: 'vuonna 1660', vuosi: '1660', selite: 'testamentti' },
         { kohta: 'vuonna 1821', vuosi: '1821', selite: 'Keats kuoli' },
         { kohta: '(1953', vuosi: '1953', selite: 'Loma Roomassa' },
@@ -11147,6 +11175,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta vuonna 1936.',
       vuodet: [
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
+        { kohta: 'vuosilta 1858–1890', vuosi: '1858–1890', selite: 'valokuvia' },
+        { kohta: 'vuonna 1936', vuosi: '1936', selite: 'purku' },
       ],
       kuvat: [
         {
