@@ -326,8 +326,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        Järjestys: noston omat (jaksokuvat jaksojärjestyksessä, kortin kuvat kuten webissä), kohde (täkynoston kohde,
  *        kohdekartan kohde), juttu (nähtävyysjuttu); osoite = sama vientiosoite kuin muualla, sama osoite kerran, [] = ei kuvia.
  *        Natiivi (NUI) näyttää kuvat kaikissa nostoissa; vanhat buildit ohittavat kentän. Säännöt: tests/noston-kuvat.test.mjs.
+ *   1.76 monumentit.jaksot, monumentit.jaksokuvat, monumentit.otsikko ja monumentit.visa (Pelikoodari 17.11.2026; PT:n etusija,
+ *        SK:n Les Halles hahmotelma-les-halles): hahmotelman nosto jaksoiksi samassa muodossa kuin fokuskohteen (Tuileries) jaksot,
+ *        valinnaiset kentät (aanikansio kun äänet tehty). Natiivi NostoSisalto/NostoJaksot (NUI). Vanhat buildit ohittavat kentät.
+ *        Hetken jaksot (historianHetket.jaksot, KK 21.22) tulevat omana nostonaan, kun SK:n ensimmäinen hetki jaksoineen on paketissa.
  */
-export const SKEEMAVERSIO_TARKKA = '1.75';
+export const SKEEMAVERSIO_TARKKA = '1.76';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

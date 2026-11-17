@@ -2,7 +2,7 @@
  * NOSTON VUODET (C 14: sääntö testiksi; Pelikoodari 17.11.2026, suunnitelma 20261117-noston-vuosiluvut luku 1, omistaja P-261117-70–72).
  * SK kirjoittaa noston `vuodet`-rivit käsin koneen ehdotuksista (tools/sisalto/vuosiehdokkaat.mjs). Rivi nostaa väitteen otsikkotasolle,
  * joten sen on vastattava tekstiä: `kohta` on sanatarkka pätkä luettavasta tekstistä TASAN KERRAN (se on myös ajoituksen ankkuri:
- * malli tests/fokusvirta.test.mjs, huudahduksen kohta), vuosi sisältyy kohtaan, rivejä ≤ 5, selite 1–3 sanaa ja ≤ 20 merkkiä,
+ * malli tests/fokusvirta.test.mjs, huudahduksen kohta), vuosi sisältyy kohtaan, rivejä ≤ 12 (järkevyysraja, ei katto), selite 1–3 sanaa ja ≤ 20 merkkiä,
  * rivit tekstin järjestyksessä. Kun tekstiä korjataan, rikkoutunut kohta kaatuu tähän eikä jää lappuun väärää väitettä.
  */
 import test from 'node:test';
@@ -51,8 +51,8 @@ test('noston vuodet: säännöt kaatavat väärät rivit', () => {
   assert.equal(vuosiVirheet(t, [{ kohta: 'vuonna 1875', vuosi: '1875', selite: 'avattiin' },
     { kohta: 'vuonna 1862', vuosi: '1862', selite: 'peruskivi' }]).length, 1);                      // järjestys
   assert.ok(vuosiVirheet(t, [{ kohta: 'vuonna 1862', vuosi: '1862', selite: 'hyvin pitkä selite yli rajan' }]).length >= 1);
-  assert.equal(vuosiVirheet(t, Array(6).fill(0).map(() => ({ kohta: 'vuonna 1862', vuosi: '1862', selite: 'a' }))).length, 1,
-    'kuusi riviä ylittää rajan 5');
+  assert.equal(vuosiVirheet(t, Array(13).fill(0).map(() => ({ kohta: 'vuonna 1862', vuosi: '1862', selite: 'a' }))).length, 1,
+    '13 riviä ylittää järkevyysrajan 12');
 });
 
 test('noston vuodet: vienti välittää rivit sellaisenaan merkkijonoina (skeema 1.74)', () => {

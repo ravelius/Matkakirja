@@ -144,11 +144,11 @@ test('jokaisen jakson kuva löytyy, enintään 7 kuvaa, viimeinen on valokuva', 
   assert.deepEqual(virheet, []);
 });
 
-test('vuosirivit: enintään 5, selite ≤ 20 merkkiä, kohta tekstissä tasan kerran', () => {
+test('vuosirivit: enintään 12 (järkevyysraja; ei sisällöllistä kattoa), selite ≤ 20 merkkiä, kohta tekstissä tasan kerran', () => {
   const virheet = [];
   for (const { id, n } of NOSTOT) {
     const kaikki = n.jaksot.flatMap((x) => x.vuodet ?? []);
-    if (kaikki.length > 5) virheet.push(`${id}: ${kaikki.length} vuosiriviä`);
+    if (kaikki.length > 12) virheet.push(`${id}: ${kaikki.length} vuosiriviä`);
     n.jaksot.forEach((x, i) => {
       for (const v of x.vuodet ?? []) {
         if (!/^\d{1,4}$/.test(String(v.vuosi ?? ''))) virheet.push(`${id}[${i}]: vuosi ${v.vuosi}`);

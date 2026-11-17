@@ -161,6 +161,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Kävelin tänään poltetun palatsin ohi. Katto on '
           + 'poissa, ja ikkuna-aukoista näkyy pelkkää taivasta.',
         kuva: 'raunio1873',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -374,6 +375,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Kävelin tänään pitkin Louvren julkisivua ja yritin '
           + 'laskea ikkunat. Menetin laskun kolmesti.',
         kuva: 'julkisivu',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -539,6 +541,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Kartassani lukee Bastilji, ja astuin aukiolle mitta kädessä. '
           + 'Linnaa ei ole. Keskellä seisoo vain korkea pylväs, jonka päällä on patsas.',
         kuva: 'pylvas1860',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -717,6 +720,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Mittasin tänään Champ de Marsin askelin. Se on sotilaiden harjoituskenttä, '
           + 'tasainen kuin pöytä.',
         // Koukulla ei ole kuvaa (KK 17.11.2026 21.57): kenttää ennen tornia ei löytynyt; ei paikkamerkkiä pelaajalle.
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -840,6 +844,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Löysin Sainte-Chapellen oikeuspalatsin pihalta. '
           + 'Ikkunat ovat niin täynnä pieniä kuvia, että luovutin niiden laskemisen.',
         kuva: 'piha',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -929,6 +934,134 @@ export const FOKUSKOHTEET_FRA = [
       oikea: 1,
       fakta: 'Pariisin parlamentti vapautti kardinaali Rohanin toukokuussa 1786; Jeanne de La Motte '
         + 'piestiin, leimattiin varkaaksi ja vietiin vankilaan.',
+    },
+  },
+  {
+    /*
+     * CURIE 1898, VAJA (Pariisin nostot uudella tavalla, SK 18.11.2026; KK 00.40 hyväksyi tekstin).
+     * Yksi merkki, yksi nosto: kartan "Curien vaja" (maakartat.js) avaa tämän. 48,842 N / 2,3476 E
+     * (ESPCI, sama piste kuin hetken). Historian hetki `marie-curie-hangaari-1898` ja sen lehtisivu
+     * JÄÄVÄT (KK-sääntö, kuten Eiffel 1888): piilopiste "Curie 1898" maakartat.js:ssä.
+     * KK 00.40: jakso 5 laatta ilman "valokuvia"; vajan kuvaus jää (toinen lähde avattu: Gulf News
+     * "The curious days of the Curies" sade ja huono tuuletus, AIP sivu "Making repeated separations").
+     * Laatan sijainti: lähteet eroavat (Paris.fr: koulun sisäänkäynti 10 rue Vauquelin; Commons-kuva:
+     * koulun seinä rue Pierre Brossolette -puolella), siksi tekstissä vain "koulun seinässä".
+     * Teksti ja lähdetaulukko: docs/raportit/curie-nosto-teksti-20261118.md.
+     */
+    id: 'curie-1898',
+    nimi: 'Curien vaja',
+    tyyppi: 'tekniikka',
+    symboli: 'tekniikka',
+    // Pulun kysymykset kolme: vanhan hetken ensimmäinen + kaksi uutta (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Miksi alkuaineen ilmoittaminen ei vielä riittänyt tiedemiehille?',
+      'Miksi Curiet työskentelivät vajassa eivätkä tavallisessa laboratoriossa?',
+      'Miksi radium hohti pimeässä?',
+    ],
+    korostukset: ['Pierre Curie', 'Henri Becquerel'],
+    nappi: 'Vaja, jossa radium eristettiin',
+    laudat: {
+      maailmankartta: { x: 5911.6, y: 1440.2 },
+      europe: { x: 256.3, y: 609.1 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä AIP, History.com, Science Museum Group, Paris.fr ja Institut Curie '
+      + '(tarkistettu 18.11.2026).',
+    otsikko: 'Curie 1898 — hohtava alkuaine',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
+     * kuuluvat suoratoistona.
+     */
+    jaksot: [
+      { osa: 'nimi', teksti: 'Curien vaja.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Eksyin tänään Latinalaiskortteliin. '
+          + 'Kaduilla käveli opiskelijoita, ja jokaisella oli kirjoja kainalossa.',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Marie ja Pierre Curie tutkivat uraanimalmin sisältämää säteilyä. '
+          + 'Heinäkuussa 1898 he ilmoittivat löytäneensä uuden alkuaineen. '
+          + 'He nimesivät sen Marien kotimaan Puolan mukaan poloniumiksi. '
+          + 'Joulukuussa he ilmoittivat toisen, radiumin.',
+        kuva: 'marie',
+        vuodet: [{ vuosi: '1898', selite: 'löytö ilmoitettu', kohta: 'Heinäkuussa 1898' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Pelkkä ilmoitus ei riittänyt, vaan alkuaine piti saada puhtaana erilleen malmista. '
+          + 'Työ tehtiin koulun pihan toisella puolella olevassa vajassa, joka oli ennen ollut ruumiinavaussali. '
+          + 'Vaja oli huonosti tuuletettu eikä pitänyt sadetta, ja malmia kului tonneittain.',
+        kuva: 'vaja',
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Työ vei yli kolme vuotta, ja lopulta heillä oli kymmenesosagramma puhdasta radiumkloridia. '
+          + 'Iltaisin radium hohti pimeässä, ja Curiet ihailivat sitä. '
+          + 'Marie sai fysiikan Nobelin Pierren ja Henri Becquerelin kanssa ja myöhemmin kemian Nobelin yksin.',
+        kuva: 'laboratorio',
+        vuodet: [
+          { vuosi: '1902', selite: 'radiumkloridi', kohta: 'kymmenesosagramma' },
+          { vuosi: '1903', selite: 'fysiikan Nobel', kohta: 'fysiikan Nobelin' },
+          { vuosi: '1911', selite: 'kemian Nobel', kohta: 'kemian Nobelin' },
+        ],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Koulun seinässä on laatta, joka kertoo löydöstä. '
+          + 'Marien myöhempi laboratorio on lähellä Curie-museona.',
+        kuva: 'laatta',
+      },
+    ],
+    /*
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): havainnekuva hetken
+     * ämpärikuvasta, muut Commonsin vapaita kuvia (lisenssit luettu 18.11.2026).
+     * Viimeinen kuva on aito nykyvalokuva.
+     */
+    jaksokuvat: {
+      marie: {
+        tiedosto: 'Marie Curie c. 1898.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Marie Curie noin 1898',
+        lahde: 'Tuntematon valokuvaaja, noin 1898, Wikimedia Commons (public domain)',
+      },
+      vaja: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Curien laboratorio oli pihavaja',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: AIP ja Paris.fr; vajan sisustus on dramatisoitu.',
+      },
+      laboratorio: {
+        tiedosto: 'Maria Skłodowska-Curie i Pierre Curie w laboratorium (1900).jpg',
+        laji: 'valokuva',
+        lyhyt: 'Marie ja Pierre Curie laboratoriossa noin 1900',
+        lahde: 'Tuntematon valokuvaaja, noin 1900, Wikimedia Commons (public domain)',
+      },
+      laatta: {
+        tiedosto: 'Plaque - Location de découvert du radium - rue Pierre Brossolette, Paris 5.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Laatta kertoo radiumin löydöstä koulun seinässä',
+        lahde: 'Monceau from San Antonio, Wikimedia Commons (CC BY 2.0)',
+      },
+    },
+    /*
+     * KYSYMYS (yksi per paikka; KK 17.11.2026 "kysymystehtävät säilyvät"): vastaus on kertomuksessa
+     * (jakso 2), ei vuosiriveissä eikä kuvateksteissä.
+     */
+    visa: {
+      kysymys: 'Minkä alkuaineen Curiet nimesivät Marien kotimaan mukaan?',
+      vaihtoehdot: [
+        'Radium',
+        'Polonium',
+        'Uraani',
+      ],
+      oikea: 1,
+      fakta: 'Heinäkuussa 1898 ilmoitettu alkuaine sai nimensä Puolasta; joulukuussa ilmoitettu toinen oli radium.',
     },
   },
   {

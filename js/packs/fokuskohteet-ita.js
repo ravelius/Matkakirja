@@ -1022,6 +1022,10 @@ export const FOKUSKOHTEET_ITA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Reuters, America Magazine, Aleteia, Finestre sull\'Arte (kolikot), Treccani, Art & Object, '
       + 'History Hit ja Turismo Roma (lähde), Platner & Ashby ja romeing.it (vesijohto) (tarkistettu 17.11.2026).',
+    // Ääninäyte kohdekortille (KK 00.44; natiivin "Kuuntele näyte" -nappi, NUI be44c706e): Trevin aukion äänitys 11.5.2023 (Josue Amador, radio aporee,
+    // Public Domain Mark); korvaa vanhan täkynoston Pantheonin suihkulähteen äänen (KK 00.56 ja 01.06).
+    aani: 'https://archive.org/download/aporee_60994_70119/AMBUrbnStereoTreviFountainTuristsdifferentlangauagesaccordion.mp3',
+    aaniLahde: '"Trevi Fountain" — Josue Amador, radio aporee (public domain)',
     otsikko: 'Trevi 1762 — lähde, jonka kolikot ruokkivat',
     jaksot: [
       // Noston alku: kertojan nimi ja esittely ennen isoisän lausetta (omistaja 19.23 F; sama kuin Tuileries).
@@ -1033,6 +1037,7 @@ export const FOKUSKOHTEET_ITA = [
         teksti: 'Rooma, 1873. Seisoin tänään Trevin lähteen luona ja kuuntelin veden kohinaa. '
           + 'Vesi tulee tänne yhä vanhaa roomalaista vesijohtoa pitkin.',
         kuva: 'photochrom',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Rooma, 1873' }],
       },
       {
         // Ei kuvaa: havainnekuvaa (kolikoiden keruu) ei tilata (P-261117-96); edellinen kuva jää näkyviin.

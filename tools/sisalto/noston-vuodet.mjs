@@ -16,7 +16,7 @@ import { NOSTO_MAAT } from '../../js/fokusnosto.js';
 
 /** Kaupungit, joiden nostot ovat ensimmäisessä erässä (suunnitelma luku 6.3: Pariisi, sitten Lontoo, Amsterdam, Wien, Rooma). */
 export const VUOSIKAUPUNGIT = ['pariisi', 'lontoo', 'amsterdam', 'wien', 'rooma'];
-export const RIVEJA_ENINTAAN = 5;
+export const RIVEJA_ENINTAAN = 12; // järkevyysraja, ei sisällöllinen katto (omistaja 17.11. 23.15, P-261117-116: ruudulla vierii, max 4 näkyvissä)
 export const SELITE_ENINTAAN = 20;
 
 const alkiot = (x) => (Array.isArray(x) ? x : Object.values(x ?? {}));
