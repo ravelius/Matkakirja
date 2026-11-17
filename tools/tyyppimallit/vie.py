@@ -246,6 +246,8 @@ def main(a):
         if m['tyyppi'] == 'asema':
             # KK 15.11. 06.20 B: hallit pohjan sisään (hallit.py), julkisivu (−x) kohti origoa; merkki pohjan suorakaiteen keskelle.
             m['_hallit'] = hallit.laske(m, (-x, -z))
+            if (m.get('parametrit') or {}).get('moderni'):   # KK 18.11. 00.05 (Euston): jatkon viimeinen tavu = muotoliput, bitti 0 = moderni tasakattoasema
+                j = bytearray(m['_hallit']['jatko']); assert j[22] == 0; j[22] |= 1; m['_hallit']['jatko'] = bytes(j)
             def kat(r):
                 hs, jul = hallit.pura(r['pituus'], r['leveys'], r['a'], r['b'], r['c'], r['p3_bitit'], r['varattu'], r['jatko'])
                 return round(100 * hallit.kattavuus(m, r['akseli'], r['siirto'], hs, jul), 1)

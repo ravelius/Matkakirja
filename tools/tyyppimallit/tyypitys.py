@@ -79,7 +79,9 @@ NIMILISTAT = {
         'way/4256246': ('asema', 'suuri', 'St Pancras'),   # 2. kierroksen ehdokas: oikeasti yksi Barlow-halli + tiilijulkisivu (KK 01.13)
         'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2}),
         'way/4959629': ('asema', 'suuri', 'Liverpool Street (halli, nimetön OSM-pohja)'),
-        # Euston way/4960746 EI asemamallia (KK 18.11. 00.05 korjaus 17.11. 23.54:een): nykyinen Euston on 1960-luvun matala tasakattohalli (B-linjaus 7).
+        # Euston (KK 18.11. 00.05 korjaus + 00.29 1. työ; B-linjaus 7): nykyinen 1960-luvun matala tasakattohalli kattoikkunariveineen ja tumma lasijulkisivu,
+        # ei kaaria eikä päätyä → 'moderni' (vie.py: jatkorivin viimeinen tavu bitti 0; peli TyAsemaModerni).
+        'way/4960746': ('asema', 'suuri', 'Euston', {'moderni': True}),
         # St James's Palace (relation/545040) pois listalta: Tudor-tiili, perustalo (KK 15.11. 01.13)
         'way/372841786': ('palatsi', 'keski', "Somerset House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Strand'}),
         'relation/3848545': ('palatsi', 'keski', "Burlington House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Piccadilly'}),
