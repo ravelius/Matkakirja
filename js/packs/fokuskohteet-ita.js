@@ -1022,7 +1022,8 @@ export const FOKUSKOHTEET_ITA = [
     // teksti lasketaan jaksoista tiedoston lopussa.
     lahde: 'Matkakirjan oma teksti · lähteinä Reuters, America Magazine, Aleteia, Finestre sull\'Arte (kolikot), Treccani, Art & Object, '
       + 'History Hit ja Turismo Roma (lähde), Platner & Ashby ja romeing.it (vesijohto) (tarkistettu 17.11.2026).',
-    // Ääninäyte kohdekortille (KK 00.44; natiivin "Kuuntele näyte" -nappi, NUI be44c706e): vanhan täkynoston `aani` palautettu, ei uutta ääntä.
+    // Ääninäyte kohdekortille (KK 00.44; natiivin "Kuuntele näyte" -nappi, NUI be44c706e): Trevin aukion äänitys 11.5.2023 (Josue Amador, radio aporee,
+    // Public Domain Mark); korvaa vanhan täkynoston Pantheonin suihkulähteen äänen (KK 00.56 ja 01.06).
     aani: 'https://archive.org/download/aporee_60994_70119/AMBUrbnStereoTreviFountainTuristsdifferentlangauagesaccordion.mp3',
     aaniLahde: '"Trevi Fountain" — Josue Amador, radio aporee (public domain)',
     otsikko: 'Trevi 1762 — lähde, jonka kolikot ruokkivat',
