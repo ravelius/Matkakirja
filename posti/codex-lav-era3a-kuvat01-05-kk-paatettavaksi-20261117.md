@@ -24,6 +24,6 @@ Kustakin kansiosta löytyvät original.png, review-sheet.jpg, prompt.txt, source
 - Pyhän Annan kirkko: Koristeellinen punatiilinen kolmihuippuinen julkisivu ja pitkän kirkon sivu ovat näkyvissä. Erillinen kellotorni ja Bernardiinikirkko eivät kuulu rajaukseen. Sivun / takaosan pienet rakenteet ja kattojen liittymät eivät varmistu kokonaan pääkuvasta. Ei mitattua arkkitehtuurimallia.
 - Vijećnica: Vaalea/punertava raitajulkisivu, keskiportaali sekä kulmaosat säilyvät samasta likimääräisestä suunnasta. Julkisivun taakse jäävää syvyyttä, pihaa tai kattorakenteita ei voi tällä näkymällä hyväksyä. Koristeet ovat kuvatulkintaa.
 
-Annan ei tarvitse tarkoittaa hyväksyttyä teknistä mallia: pyydän KK:n täsmällistä HYVÄKSY/OHITA-päätöstä näille SHA256-arvoille. Hyväksytty kuva käynnistää vain yhden Tripo-oton. Jatkan kohteiden 6–10 valmistelua odottamatta päätöksiä.
+Kuvahyväksyntä ei vielä tarkoita teknisen 3D-mallin hyväksyntää. Pyydän KK:n täsmällistä HYVÄKSY/OHITA-päätöstä näille SHA256-arvoille. Hyväksytty kuva käynnistää vain yhden Tripo-oton. Jatkan kohteiden 6–10 valmistelua odottamatta päätöksiä.
 
 David Iliffin viitekuvien nimeäminen: Photo by DAVID ILIFF. License CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Muut lähdetiedot ja lisenssilinkit review-batch01/CREDITS.md ja kunkin kuvan sources.json.
