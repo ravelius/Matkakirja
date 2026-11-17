@@ -159,7 +159,7 @@ NIMILISTAT = {
         'way/222155639': ('kirkko', 'julkisivu', 'Chiesa di Santa Maria Consolatrice', {'kupoli': 0, 'koe': True}),
         'relation/1940221': ('kirkko', 'julkisivu', 'Chiesa di Santa Maria Immacolata e San Giovanni Berchmans', {'kupoli': 0, 'koe': True}),
         'way/106365792': ('kirkko', 'julkisivu', "Basilica di Sant'Antonio da Padova all'Esquilino", {'kupoli': 0, 'koe': True}),
-        'way/52335646': ('kirkko', 'julkisivu', 'Chiesa di San Luigi dei Francesi', {'kupoli': 1, 'koe': True, 'lahde': 'Commons Category:San_Luigi_dei_Francesi_(Rome)_-_Dome'}),
+        'way/52335646': ('kirkko', 'julkisivu', 'Chiesa di San Luigi dei Francesi', {'kupoli': 0, 'koe': True, 'huom': 'kupoli matala, ei näy kadulta → kupoliton, kunnes matalan kupolin muoto on (KK 17.11. 11.36)'}),
         'relation/449593': ('kirkko', 'julkisivu', 'Chiesa di San Silvestro in Capite', {'kupoli': 1, 'koe': True, 'lahde': 'en.wiki San_Silvestro_in_Capite: "The cupola was frescoed (1605) by Cristoforo Roncalli"'}),
         'way/80220852': ('kirkko', 'julkisivu', 'Basilica di San Lorenzo in Lucina', {'kupoli': 0, 'koe': True}),
         'way/66832136': ('kirkko', 'julkisivu', 'Chiesa di Santo Spirito in Sassia', {'kupoli': 0, 'koe': True}),
