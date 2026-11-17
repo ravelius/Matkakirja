@@ -4,7 +4,7 @@ Pohja: omistaja 17.11. klo 11.46 ("Lisää Uskonnot" → seitsemäs tagi), nosto
 
 Sääntö (omistaja): tagi näkyy vain, kun näkymässä on vähintään 3 paikkaa. Tagi on tarinakohtainen; paikka näkyy tagin alla, jos jokin sen tarinoista kantaa tagia. Rajaus kirkot, temppelit, luostarit (KK:n sanoin) + synagogat.
 
-## 1. Siirtyvät Historiasta Uskontoihin (10 varmaa paikkaa; 2 rajatapausta kohdassa 2)
+## 1. Siirtyvät Historiasta Uskontoihin (10 varmaa paikkaa; KK 17.11.: hyväksytty, lisäksi kaksi rajatapausta kohdassa 2 → yhteensä 12)
 | Kaupunki | Paikka (tarinat) | Perustelu |
 |---|---|---|
 | Pariisi | Sacré-Cœur | basilika |
@@ -20,10 +20,16 @@ Sääntö (omistaja): tagi näkyy vain, kun näkymässä on vähintään 3 paikk
 
 (Pariisi 4, Lontoo 2, Amsterdam 1, Wien 1, Rooma 2 paikkaa. Ehdotuksen 12:sta paikasta kaksi puuttuu tästä: Tour Saint-Jacques ja Vatikaanin palatsi, kohta 2. Kolmannen paikan Roomaan tuo rajatapaus 3.)
 
-## 2. Rajatapaukset, KK ratkaisee
+## 2. Rajatapaukset (KK:n päätökset 17.11.2026, PR 6990 luettu kokonaan)
 1. **Tour Saint-Jacques (Pariisi)** — ehdotus: Uskonnot. Teksti: "ainoa jäljelle jäänyt osa keskiaikaisesta Saint-Jacques-de-la-Boucherien kirkosta". Tänään torni on muistomerkki eikä kirkko. Jos jää Historiaan, Pariisin Uskonnot-paikkoja on 4 (tagi näkyy silti).
 2. **Kadonneet pyhät paikat: Old St Paul's (Lontoo), Jupiterin temppeli (Rooma)** — ehdotus: jäävät **Kadonneet**-tagiin. Tagi on yksi per tarina, ja kadonnut kohde on ensin kadonnut (tähti, hologrammi). Jos KK haluaa ne Uskontoihin, Lontoon Uskonnot nousee 2 → 3 paikkaan ja tagi alkaa näkyä Lontoossa, mutta kadonneiden luettelo menettää kaksi kuuluisinta.
 3. **Vatikaanin palatsi (Rooma) — "Vatikaanin vanki" (1871 takuulaki)** — ehdotus (SUUNNITTELU): Uskonnot. Tarina kertoo paavin asemasta Rooman valtauksen jälkeen, ei rakennuksesta. **Tämä on Rooman kolmas Uskonnot-paikka**: ilman sitä Roomassa on vain 2 (Pietarinkirkko, Pantheon) ja tagi ei näy Roomassa, vaikka päätös sanoo "näkyy nyt Pariisissa ja Roomassa". Suositus: Uskonnot (paavi ja kirkon valtio, selvä uskontoyhteys). Vaihtoehto: pidä Historiassa ja hyväksy, ettei Uskonnot näy Roomassa.
+
+**KK:n päätökset:**
+1. Tour Saint-Jacques → **Uskonnot** (kirkon jäänne ja pyhiinvaellusreitin alku).
+2. Old St Paul's ja Jupiterin temppeli → **jäävät Kadonneisiin**.
+3. Vatikaanin palatsi, "Vatikaanin vanki" → **Uskonnot** (Rooma saa kolmannen paikan, tagi näkyy Roomassa).
+Panthéon, Invalidit ja kohdan 3 paikat jäävät kuten ehdotettu. **Lopputulos: 12 paikkaa Uskonnoissa** (Pariisi 5, Lontoo 2, Amsterdam 1, Wien 1, Rooma 3); tagi näkyy Pariisissa ja Roomassa. Dataa (`tagi: 'uskonnot'`) ei vielä: vuoro tulee PT:n kautta suunnitelman kohdan 7 järjestyksessä, Tuileries'n ja esittelysivun jälkeen.
 
 ## 3. Jäävät Historiaan (selvitetty, ei siirtoa)
 - **Panthéon (Pariisi)**: alun perin Sainte-Geneviève-kirkko, mutta tarina on 1758–1790 rakentaminen ja nykyään kansallinen mausoleumi.
@@ -34,7 +40,7 @@ Sääntö (omistaja): tagi näkyy vain, kun näkymässä on vähintään 3 paikk
 - **Temple-torni (Pariisi)**: Kadonneet (temppeliherrat, linnoitus).
 - Muita kirkkoja, luostareita, temppeleitä tai moskeijoita ei ole viiden kaupungin 174 tekstissä. Amsterdamin Oude Kerk, Westerkerk ja Begijnhof ym. eivät ole datassa.
 
-## 4. Tulos: Uskonnot-paikkoja per kaupunki
+## 4. Tulos ennen KK:n päätöksiä: Uskonnot-paikkoja per kaupunki (päätösten jälkeen: Pariisi 5, Rooma 3, Lontoo 2, Amsterdam 1, Wien 1)
 | Kaupunki | Varmat | Tagi näkyy (≥ 3)? | Jos rajatapaukset mukaan |
 |---|---|---|---|
 | Pariisi | 4 (Sacré-Cœur, Notre-Dame, Sainte-Chapelle, Saint-Eustache) | kyllä | 5 (+ Tour Saint-Jacques) |
