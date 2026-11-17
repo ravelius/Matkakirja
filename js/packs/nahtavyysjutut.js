@@ -4668,6 +4668,18 @@ export const NAHTAVYYSJUTUT = {
         + 'Isoisäsi vuonna 1873 vanha teatteri oli vielä käytössä. Uusi talo Ringillä avattiin vasta viidentoista vuoden päästä.',
       lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, habsburger.net ja Wikipedia',
     },
+    // KADONNUT IHME (KK 08.06 17.11.2026: Altes Kärntnertor; vain kahden itsenäisen lähteen väitteet).
+    'Altes Kärntnertor': {
+      aika: '1200-luku–1859',
+      teksti: 'Altes Kärntnertor oli Wienin keskiaikaisen kaupunkimuurin portti Kärntner Straßen kohdalla. '
+        + 'Se mainitaan viimeistään 1200-luvun lopulla.'
+        + '\n\n'
+        + 'Muurien purkamisesta ilmoitettiin vuoden 1857 lopussa, ja purku alkoi vuonna 1858. '
+        + 'Portti purettiin vuosina 1858–1859.'
+        + '\n\n'
+        + 'Isoisäsi vuonna 1873 porttia ei ollut ollut enää yli kymmeneen vuoteen.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Wien Geschichte Wiki, Wikipedia ja Wien Museum',
+    },
     // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; vain kahden itsenäisen lähteen väitteet; faktapohja docs/raportit/kadonneet-8-data-faktapohja-20261117.md; Heinrichshof ja Ripetta sanasta sanaan kadonneet-lisakohteet-paatokset-20261117.md).
     Heinrichshof: {
       aika: '1863–1954',

@@ -5804,6 +5804,8 @@ export const KAUPUNKIKARTAT = {
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Michaelerplatz en-Wikipedia 48,20797 / 16,36642 ja OSM 48,20799 / 16,36639; Heinrichshof WGW 48,2022 / 16,3686 ja OSM Opernringhof 48,20209 / 16,36800).
       { nimi: 'Vanha Burgtheater', lat: 48.20797, lon: 16.36642 },
       { nimi: 'Heinrichshof', lat: 48.2022, lon: 16.3686 },
+      // Altes Kärntnertor: WGW "Kärntner Straße 49", OSM 48,20371 / 16,37050 (KK 17.11.2026: Altes, ei Neues).
+      { nimi: 'Altes Kärntnertor', lat: 48.20371, lon: 16.3705 },
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
        * 10 %:n — molemmat tarkoituksella laidassa, koska muuten
