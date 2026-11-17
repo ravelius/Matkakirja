@@ -45,6 +45,7 @@ import { MAASTOKOHTEET_ARK } from '../../js/packs/maastokohteet-ark.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { TAGI_KUVAUS, johdaTagi } from './tagit.mjs';
+import { nostonVuodet } from './vuodet.mjs';
 
 const pyorista = (a) => (a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null);
 /*
@@ -461,6 +462,7 @@ export function takynostoKokoelma(ns, R, taulukko, karttavalot) {
         musiikkiNayte: media.musiikkiNayte,
         esikuuntelu: media.esikuuntelu,
         kysymykset: (Array.isArray(n.kysymykset) ? n.kysymykset : []).map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3),
+        vuodet: nostonVuodet(n.vuodet),   // skeema 1.74
         visa: n.visa ?? null,
         kartta: n.kartta ?? null,
         paikka: n.paikka ? { nimi: n.paikka.nimi ?? null, ...(xy ? asteiksi(P.id, xy.x, xy.y) : { lat: null, lon: null }) } : null,

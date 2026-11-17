@@ -14,6 +14,7 @@ const nollaksi = (v) => (v === undefined ? null : v);
  * Raakakentät, joiden päätason vastine on eri niminen (2.0-vartija,
  * tests/sisaltopaketti.test.mjs). Muut raakakentät ovat päätasolla samalla nimellä.
  */
+import { nostonVuodet } from './vuodet.mjs';
 export const RAAKA_VASTINEET = {
   kaupungit: { name: 'nimi', x: 'lauta', y: 'lauta', airport: 'lentokentta', start: 'aloitus', pallo: 'lat/lon',
     ambience: 'ambienssi', la: 'nimionAnkkuri', lx: 'nimionAnkkuri', ly: 'nimionAnkkuri' },
@@ -152,6 +153,9 @@ export function tyypitaLoput(kokoelmat) {
     kokoelmat[nimi].kuvaus += ` Skeema 1.31: päätasolla myös raakakentät sellaisenaan: ${lista.join(', ')}.`;
   };
   for (const nimi of ['skandaalit', 'historianHetket', 'monumentit', 'fokusvirrat']) nostaLoput(nimi);
+  // Skeema 1.74 (noston vuodet): hetkillä ja skandaaleilla kenttä aina (null = ei rivejä), jotta SK:n data ei muuta kenttäkuvaa.
+  // Syvennykset (fokusvirrat[].takyt[].vuodet) ja kohde-moduulit kulkevat sellaisenaan.
+  for (const nimi of ['skandaalit', 'historianHetket']) for (const a of kokoelmat[nimi].alkiot) a.vuodet = nostonVuodet(a.data?.vuodet);
 
   // Skeema 1.32 (Linssisepän 2.0-koe, 24.9.2026): linssiaineisto sellaisenaan ja loput
   // yksittäiset kentät. RAAKA_VASTINEET kertoo kentät, joilla on eri niminen päätaso.

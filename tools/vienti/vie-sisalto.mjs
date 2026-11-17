@@ -312,7 +312,14 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        { tyyppi, maisema } tai null (tools/vienti/muoto.mjs). Natiivi NostoMuoto / KameranSaanto (19503bdaf): maisema = kamera
  *        laskeutuu maisemaan, muuten pysyy maan kartalla. Vanhat buildit ohittavat kentän.
  */
-export const SKEEMAVERSIO_TARKKA = '1.73';
+/*
+ *   1.74 nahtavyydet.vuodet, takynostot.vuodet, historianHetket.vuodet ja skandaalit.vuodet (Pelikoodari 17.11.2026; suunnitelma
+ *        20261117-noston-vuosiluvut, omistaja P-261117-70–72): [{ kohta, vuosi, selite }] tai null (tools/vienti/vuodet.mjs). SK kirjoittaa
+ *        rivit käsin; kohta = sanatarkka pätkä luettavasta tekstistä (ajoituksen ankkuri), vuosi näytetään sellaisenaan, ruudulla
+ *        "– " + selite + " " + vuosi. Syvennykset (fokusvirrat[].takyt[].vuodet) ja kohde-moduulit sellaisenaan. Natiivi NostoSisalto (NUI).
+ *        Säännöt: tests/noston-vuodet.test.mjs. Vanhat buildit ohittavat kentän.
+ */
+export const SKEEMAVERSIO_TARKKA = '1.74';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
