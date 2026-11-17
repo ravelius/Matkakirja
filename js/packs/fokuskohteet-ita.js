@@ -994,7 +994,137 @@ export const FOKUSKOHTEET_ITA = [
       fakta: 'Vespasianus aloitti Colosseumin rakentamisen 72, ja Titus vihki sen käyttöön vuonna 80.',
     },
   },
+  {
+    /*
+     * TREVIN SUIHKULÄHDE (Rooma; nosto uudella tavalla, SK 17.11.2026; malli Tuileries'n palatsi ja Eiffel-torni).
+     * Yksi merkki, yksi nosto: tähän yhdistyvät täkynosto "Kolikko olan yli" (`rooman-kolikko`) ja kohdekartan nähtävyys
+     * "Trevin suihkulähde". Aqua Virgo (`nosto-aqua-virgo`) jää omaksi lyhyeksi tarinaksi samalle merkille
+     * (KK 17.11.2026 15.36). Kohdekartan piste (maakartat.js) avaa tämän (`nosto: ['trevi', 'nosto-aqua-virgo']`).
+     * 12,48306 E / 41,90083 N — en-Wikipedia "Trevi Fountain"; laudat samat kuin vanhalla täkynostolla.
+     * Teksti ja lähdetaulukko: docs/raportit/trevi-stpauls-tarinaluonnos-20261117.md (luku 1; KK 15.36 ja P-261117-96).
+     */
+    id: 'trevi',
+    nimi: 'Trevin suihkulähde',
+    tyyppi: 'kulttuuri',
+    symboli: 'historia',
+    // Pulun kysymykset kolme (vanhasta täkynostosta, ennallaan; vastauksia ei kirjoitettu tässä).
+    kysymykset: [
+      'Miksi kolikko heitetään Trevin suihkulähteeseen olan yli?',
+      'Kuinka paljon kolikoita Trevin altaasta kerättiin vuonna 2022?',
+      'Mihin Trevin altaasta kerätyt kolikot lahjoitetaan?',
+    ],
+    korostukset: ['Nicola Salvi', 'Giuseppe Pannini', 'Oceanus', 'Aqua Virgo'],
+    nappi: 'Lähde, johon kolikko heitetään olan yli',
+    laudat: {
+      maailmankartta: { x: 6249.4, y: 1727.5 },
+      europe: { x: 450.9, y: 791.6 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Reuters, America Magazine, Aleteia, Finestre sull\'Arte (kolikot), Treccani, Art & Object, '
+      + 'History Hit ja Turismo Roma (lähde), Platner & Ashby ja romeing.it (vesijohto) (tarkistettu 17.11.2026).',
+    otsikko: 'Trevi 1762 — lähde, jonka kolikot ruokkivat',
+    jaksot: [
+      // Noston alku: kertojan nimi ja esittely ennen isoisän lausetta (omistaja 19.23 F; sama kuin Tuileries).
+      { osa: 'nimi', teksti: 'Trevin suihkulähde.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kuunteli tässä veden kohinaa.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Rooma, 1873. Seisoin tänään Trevin lähteen luona ja kuuntelin veden kohinaa. '
+          + 'Vesi tulee tänne yhä vanhaa roomalaista vesijohtoa pitkin.',
+        kuva: 'photochrom',
+      },
+      {
+        // Ei kuvaa: havainnekuvaa (kolikoiden keruu) ei tilata (P-261117-96); edellinen kuva jää näkyviin.
+        osa: 'tapahtuma',
+        teksti: 'Joka viikko kaupungin työntekijät keräävät Trevin altaasta kolikot. He imevät ne pohjalta letkulla, '
+          + 'koska niitä kertyy kasoittain. Turistit heittävät ne olan yli, sillä perinteen mukaan se takaa '
+          + 'paluun Roomaan.',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Lähteen suunnitteli arkkitehti Nicola Salvi, ja työ alkoi vuonna 1732. Salvi kuoli ennen kuin lähde '
+          + 'valmistui, ja Giuseppe Pannini vei työn loppuun. Keskellä merenjumala Oceanus ajaa simpukkavaunuilla, '
+          + 'ja kaksi merihevosta vetää niitä.',
+        kuva: 'kaiverrus',
+        lisakuva: { kuva: 'oceanus', kohta: 'Oceanus' },
+        vuodet: [
+          { vuosi: '1732', selite: 'rakentaminen alkaa', kohta: 'vuonna 1732' },
+          { vuosi: '1751', selite: 'Salvi kuolee', kohta: 'kuoli' },
+          { vuosi: '1762', selite: 'lähde valmistuu', kohta: 'vei työn loppuun' },
+        ],
+      },
+      {
+        // Ei kuvaa: havainnekuvaa (kolikoiden lajittelu) ei tilata (P-261117-96); edellinen kuva jää näkyviin.
+        osa: 'kaanne',
+        teksti: 'Kolikot viedään Rooman Caritakselle, katolisen kirkon hyväntekeväisyysjärjestölle. Vuodessa niitä '
+          + 'kertyy yli miljoonan euron edestä. Rahalla ostetaan ruokaa: Caritaksen kaupassa vähävaraiset '
+          + 'maksavat ostoksensa pistekortilla.',
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Lähde seisoo Rooman keskustassa. Sen vesi tulee yhä Aqua Virgo -vesijohdosta, jonka roomalaiset '
+          + 'rakensivat yli kaksituhatta vuotta sitten. Pumput kierrättävät veden altaassa.',
+        kuva: 'nykyinen',
+        lisakuva: { kuva: 'reliefi', kohta: 'Aqua Virgo' },
+      },
+    ],
+    jaksokuvat: {
+      photochrom: {
+        tiedosto: 'Fountain of Trevi, Rome, Italy LOC 4755209370.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Trevin lähde 1890-luvun valokuvassa',
+        lahde: 'Tuntematon, Library of Congress, Wikimedia Commons (PD)',
+      },
+      kaiverrus: {
+        // Tiedostonimi yhdelle riville (tests/media.test.mjs: peilaustyökalu).
+        tiedosto: 'Trevifontein te Rome Veduta in prospettiva della gran Fontana dell\'Acqua Vergine detta di Trevi Architettura di Nicola Salvi (titel op object) Gezichten op Rome (serietitel) Vedute di Roma disegnate ed incise da Giamb, RP-P-1941-612.jpg',
+        laji: 'piirros',
+        lyhyt: 'Trevin lähde 1700-luvun kaiverruksessa',
+        lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+      },
+      oceanus: {
+        tiedosto: 'Rome (IT), Trevi-Brunnen -- 2013 -- 3593.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Oceanus ja merihevoset',
+        lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      nykyinen: {
+        tiedosto: 'Fontaine Trevi - Rome.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Trevin lähde tänään',
+        lahde: 'Wilfredor, Wikimedia Commons (CC0)',
+      },
+      reliefi: {
+        tiedosto: 'Relief Agrippa fontana di Trevi Roma.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Reliefi lähteessä kertoo vesijohdosta',
+        lahde: 'Marie-Lan Nguyen (Jastrow), Wikimedia Commons (CC BY 2.5)',
+      },
+    },
+    // Yksi kysymys (vanhasta täkynostosta, ennallaan): vastaus on jaksossa 4, eikä mikään näkyvä ennen sitä paljasta sitä.
+    visa: {
+      kysymys: 'Kenelle Trevin suihkulähteen kolikot lahjoitetaan?',
+      vaihtoehdot: [
+        'Rooman kaupungille',
+        'Vatikaanille',
+        'Caritakselle',
+      ],
+      oikea: 2,
+      fakta: 'Kolikot kerätään altaan pohjasta ja lahjoitetaan Caritakselle, joka auttaa kaupungin vähävaraisia.',
+    },
+  },
 ];
+
+/*
+ * TREVI (nosto uudella tavalla): kohteen `teksti` = jaksot kappaleina ilman nimiosaa, kuten fokuskohteet-fra.js:ssä.
+ * Vanha esitys, lehti ja Pulun konteksti lukevat saman tekstin kuin jaksoesitys.
+ */
+for (const kohde of FOKUSKOHTEET_ITA) {
+  if (Array.isArray(kohde.jaksot) && kohde.teksti == null) {
+    kohde.teksti = kohde.jaksot.filter((j) => j.osa !== 'nimi').map((j) => j.teksti).join('\n\n');
+  }
+}
 
 const ITA_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_ITA.map((k) => [k.id, k]));
 

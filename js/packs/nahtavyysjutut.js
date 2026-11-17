@@ -5353,42 +5353,6 @@ export const NAHTAVYYSJUTUT = {
    * lähderivit tai kuvatiedostot muuttuneet.
    */
   pariisi: {
-    'Eiffel-torni': {
-      aika: '1889',
-      teksti: 'Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna '
-          + '1889, insinööri Gustave Eiffelin toimisto pystytti Champ '
-          + 'de Mars -puistoon noin 300 metriä korkean rautatornin vain '
-          + 'reilussa kahdessa vuodessa. Torniin käytettiin 18 038 '
-          + 'metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko '
-          + 'rakennustyön aikana sattui vain yksi kuolemantapaus.'
-        + '\n\n'
-        + 'Moni pariisilainen taiteilija vihasi tornia aluksi: '
-          + 'kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti '
-          + 'vetoomuksen, jossa torni tuomittiin rumaksi ja '
-          + 'hyödyttömäksi. Kirjailija Guy de Maupassant väitti '
-          + 'syövänsä lounasta tornin ravintolassa joka päivä juuri '
-          + 'siksi, että se oli ainoa paikka Pariisissa, josta tornia '
-          + 'ei näkynyt.'
-        + '\n\n'
-        + 'Torni oli tarkoitus purkaa jo vuonna 1909, mutta se '
-          + 'pelastui, koska siitä tuli tärkeä radiolähetysasema. '
-          + 'Toisen maailmansodan lopulla Hitler käski räjäyttää tornin '
-          + 'Pariisin vapautuessa — mutta käskyä ei toteltu, ja torni '
-          + 'seisoo yhä paikallaan.',
-      vuodet: [
-        { kohta: 'vuonna 1889', vuosi: '1889', selite: 'maailmannäyttely' },
-        { kohta: 'jo vuonna 1909', vuosi: '1909', selite: 'piti purkaa' },
-      ],
-      kuvat: [
-        {
-          tiedosto: "Eiffel Tower and Pont d'Iéna, Paris 3 December 2016.jpg",
-          lyhyt: "Eiffel-torni Seinen yli kuvattuna",
-          selite: "Eiffel-torni kohoaa Seinen rannalla kirkkaana päivänä. Joella kulkee proomu ja rannassa on asuntolaivoja.",
-          lahde: "Guilhem Vellut, Wikimedia Commons (CC BY 2.0)",
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Riemukaari: {
       aika: '1806–1836',
       teksti: 'Keisari Napoleon käski rakentaa valtavan riemukaaren '
@@ -5461,40 +5425,7 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    Louvre: {
-      aika: '1793',
-      teksti: 'Louvre ei ollut alun perin museo vaan linnoitus: kuningas '
-          + 'Filip II rakennutti sen 1100-luvun lopulla puolustamaan '
-          + 'Pariisia. Vuosisatojen kuluessa siitä tehtiin '
-          + 'kuninkaallinen palatsi, kunnes Ranskan vallankumouksen '
-          + 'jälkeen se avattiin kaikille kansalaisille museona '
-          + 'elokuussa 1793.'
-        + '\n\n'
-        + 'Nykyään Louvressa on esillä noin 35 000 taideteosta, ja '
-          + 'koko kokoelmassa on peräti 500 000 esinettä. Museo on '
-          + 'maailman suurin, ja sen käytävät ovat kilometrien '
-          + 'mittaiset.'
-        + '\n\n'
-        + 'Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: '
-          + 'arkkitehti I. M. Pein suunnittelema lasinen pyramidi, '
-          + 'josta tuli museon pääsisäänkäynti. Aluksi moni '
-          + 'pariisilainen paheksui lasirakennelmaa vanhan palatsin '
-          + 'edessä, mutta siitä tuli pian yksi Pariisin tunnetuimmista '
-          + 'maamerkeistä.',
-      vuodet: [
-        { kohta: 'elokuussa 1793', vuosi: '1793', selite: 'museo avattiin' },
-        { kohta: 'Vuonna 1989', vuosi: '1989', selite: 'lasipyramidi' },
-      ],
-      kuvat: [
-        {
-          tiedosto: "Paris 1er Louvre Colonnade 559.jpg",
-          lyhyt: "Louvren kolonnadi",
-          selite: "Louvren itäjulkisivun kolonnadi, jossa kaksoispylväät kantavat rikkaasti koristeltua kattolistaa. Kuva on otettu Pariisin 1. kaupunginosassa.",
-          lahde: "GFreihalter, Wikimedia Commons (CC BY-SA 4.0)",
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
+    // Louvre-nähtävyysjuttu poistettu 17.11.2026: merkistä avautuu yksi nosto (fokuskohde `louvre`, js/packs/fokuskohteet-fra.js).
     'Luxembourgin puisto': {
       aika: '1612',
       teksti: 'Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria '
@@ -5958,50 +5889,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Sainte-Chapelle': {
-      aika: '1242–1248',
-      teksti: 'Kuningas Ludvig IX osti vuonna 1239 Konstantinopolin keisarilta '
-          + 'Baldwin II:lta pyhäinjäännöksen, jota pidettiin Kristuksen '
-          + 'orjantappurakruununa. Hinta, 135 000 livreä, oli yli kolminkertainen '
-          + 'siihen nähden, mitä sen säilytykseen rakennettu kappeli myöhemmin '
-          + 'maksoi. Kappeli nousi Île de la Citén kuninkaanpalatsin pihalle '
-          + 'muutamassa vuodessa ja vihittiin huhtikuussa 1248.'
-        + '\n\n'
-        + 'Alakerran kappeli oli palatsin väelle, yläkerta kuninkaalle ja '
-          + 'hänen pyhäinjäännöksilleen. Yläkappelin seinät ovat lähes pelkkää '
-          + 'lasia: viidessätoista ikkunassa on yli tuhat raamatullista '
-          + 'kohtausta, ja noin kaksi kolmasosaa laseista on yhä alkuperäisiä '
-          + '1200-luvulta.'
-        + '\n\n'
-        + 'Vallankumouksessa pyhäinjäännökset vietiin pois ja kappeli '
-          + 'tyhjennettiin. Se toimi pitkään oikeuslaitoksen arkistona, ja '
-          + 'asiakirjakaapit peittivät ikkunoiden alaosat. 1800-luvulla '
-          + 'kappeli restauroitiin ja sai uuden tornin. Kuninkaanpalatsista '
-          + 'ei ole jäljellä juuri muuta kuin tämä kappeli ja Conciergerien '
-          + 'salit; ympärillä on nyt oikeuspalatsi, ja orjantappurakruunu '
-          + 'säilytetään Notre-Damessa.',
-      vuodet: [
-        { kohta: 'vuonna 1239', vuosi: '1239', selite: 'jäännös ostettiin' },
-        { kohta: 'huhtikuussa 1248', vuosi: '1248', selite: 'kappeli vihittiin' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
-          lyhyt: 'Yläkappelin viidessätoista ikkunassa on yli tuhat raamatullista kohtausta.',
-          selite: 'Yläkappelin seinät ovat lähes pelkkää lasimaalausta; noin '
-            + 'kaksi kolmasosaa laseista on 1200-luvulta.',
-          lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
-        },
-        {
-          tiedosto: 'Paris Sainte Chapelle East View 02.JPG',
-          lyhyt: 'Kappelin ohut torni nousee oikeuspalatsin rakennusten yli.',
-          selite: 'Sainte-Chapelle on keskiajan goottilainen palatsikappeli '
-            + 'Île de la Citén oikeuspalatsin sisäpihalla.',
-          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Grand Palais': {
       aika: '1897–1900',
       teksti: 'Grand Palais rakennettiin vuoden 1900 maailmannäyttelyyn, ja sen '
@@ -6245,36 +6132,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Lustig 1925': {
-      nosto: 'nosto-lustig-eiffel',
-      teksti: 'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
-        + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän '
-        + 'tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita '
-        + 'luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi '
-        + 'posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä '
-        + 'tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.'
-        + '\n\n'
-        + 'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
-        + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-        + 'kauppasumman. Sitten hän pakeni Itävaltaan ja '
-        + 'luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. '
-        + 'Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman '
-        + 'tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni '
-        + 'Yhdysvaltoihin.',
-      vuodet: [
-        { kohta: 'Pariisissa 1925', vuosi: '1925', selite: 'Lustig luki jutun' },
-      ],
-      kuvat: [
-        {
-          osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
-          lyhyt: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat kuulolla, torni ikkunan takana.',
-          selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat '
-            + 'kuuntelemassa ja torni ikkunan takana.',
-          lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Vrain-Lucas': {
       aika: '1861–1870',
       nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
@@ -6369,31 +6226,6 @@ export const NAHTAVYYSJUTUT = {
      * — tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Tornin nimet 2026': {
-      nosto: 'nosto-pariisin-72-nimea',
-      teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-        + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
-        + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
-        + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
-        + 'maalilla 1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. '
-        + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
-        + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
-        + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle, '
-        + 'kunhan kolme akatemiaa on antanut lausuntonsa.',
-      vuodet: [
-        { kohta: 'tammikuussa 2026', vuosi: '2026', selite: 'naisten lista julki' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
-          lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-          selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
-            + 'kullatuin, 60 senttiä korkein kirjaimin.',
-          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
       teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
@@ -6498,28 +6330,6 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      lahde: 'Wikipedia',
-    },
-    'Kaulanauha 1785': {
-      nosto: 'nosto-kaulanauha-1785',
-      teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
-        + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
-        + 'kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte '
-        + '-niminen huijari sai kardinaali de Rohanin uskomaan, että '
-        + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. '
-        + 'Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen '
-        + 'Versailles\'n puistossa, jossa kuningatarta esitti palkattu nuori '
-        + 'nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
-        + 'myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä '
-        + 'erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen '
-        + 'ja kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
-        + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.',
-      vuodet: [
-        { kohta: 'vaihteessa 1785', vuosi: '1785', selite: 'nauha ostettiin' },
-        { kohta: 'Rohanin 1786', vuosi: '1786', selite: 'Rohan vapautettiin' },
-      ],
-      // Kaulanauhajutun havainnekuva pois (KK 10.11.2026 12.24: kuva kuuluu vain kaulanauhajuttuun).
-      kuvat: [],
       lahde: 'Wikipedia',
     },
     /*
@@ -10787,53 +10597,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Trevin suihkulähde': {
-      aika: '1732–1762',
-      teksti: 'Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset '
-          + 'johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää '
-          + 'Aqua Virgo -vesijohtoa pitkin, joka kulki lähes koko '
-          + 'matkansa maan alla. Nykyinen upea lähde on paljon '
-          + 'uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen '
-          + '1732, ja se valmistui vasta 1762, 11 vuotta hänen '
-          + 'kuolemansa jälkeen.'
-        + '\n\n'
-        + 'Lähde on barokkityylinen suihkulähde. Keskellä '
-          + 'komeilee merenjumala Oceanus simpukkavaunuillaan, joita vetävät '
-          + 'kaksi merihevosta — toinen rauhallinen ja toinen villi.'
-        + '\n\n'
-        + 'Perinteen mukaan olan yli lähteeseen heitetty kolikko '
-          + 'takaa paluun Roomaan. Kolikoita kertyy paljon: vuonna 2022 '
-          + 'niitä kerättiin altaasta yli 1,4 miljoonan euron arvosta, ja '
-          + 'ne lahjoitetaan hyväntekeväisyysjärjestölle, joka auttaa '
-          + 'vähävaraisia. '
-          + 'Lähde on nähty monissa elokuvissa, kuuluisimmin filmissä '
-          + 'La Dolce Vita (1960), jossa näyttelijä kahlaa iltapuvussa '
-          + 'keskellä allasta.',
-      vuodet: [
-        { kohta: 'vuodesta 19 eaa.', vuosi: '19 eaa.', selite: 'vettä johdettu' },
-        { kohta: 'vasta 1762', vuosi: '1762', selite: 'valmistui' },
-        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'kolikot kerättiin' },
-        { kohta: '(1960', vuosi: '1960', selite: 'La Dolce Vita' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Fontaine Trevi - Rome.jpg',
-          lyhyt: 'Trevin suihkulähde valmistui 1762, yksitoista vuotta Salvin kuoltua.',
-          selite: 'Nicola Salvi aloitti Trevin suihkulähteen 1732, ja se valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen.',
-          lahde: 'Wilfredor, Wikimedia Commons (CC0)',
-        },
-        {
-          tiedosto: 'Fountain of Trevi, Rome, Italy LOC 4755209370.jpg',
-          lyhyt: 'Noin 1890-luvulla Trevin lähde oli jo sata vuotta vanha, vesi tulee Aqua Virgo -vesijohdosta.',
-          selite: 'Noin 1890-luvun valokuvan aikaan lähde oli jo yli sata '
-            + 'vuotta vanha: sen vesi tulee Aqua Virgo -vesijohtoa pitkin, '
-            + 'jonka roomalaiset rakensivat jo vuonna 19 eaa. ja joka '
-            + 'kulki lähes koko matkansa maan alla.',
-          lahde: 'Tuntematon (Library of Congress -kokoelma), Wikimedia Commons (Public domain)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Pantheon: {
       aika: 'n. 126',
       teksti: 'Samalla paikalla seisoi ensin toinen temppeli, jonka '
@@ -11188,37 +10951,6 @@ export const NAHTAVYYSJUTUT = {
      * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Kolikko olan yli': {
-      aika: '1762',
-      nosto: 'nosto-rooman-kolikko',
-      teksti: 'Trevin suihkulähteestä kerrotaan tarina: kun heittää kolikon olan '
-        + 'yli, palaa vielä Roomaan. Se on legenda, ei tosiasia. Kolikoita '
-        + 'kertyy paljon, ja vuonna 2022 niitä kerättiin altaasta yli 1,4 '
-        + 'miljoonan euron arvosta.'
-        + '\n\n'
-        + 'Kolikot kerätään altaan pohjasta talteen ja lahjoitetaan '
-        + 'Caritakselle, joka auttaa kaupungin vähävaraisia.'
-        + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
-        + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
-        + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
-      vuodet: [
-        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'kolikot kerättiin' },
-        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
-        { kohta: 'vuonna 1762', vuosi: '1762', selite: 'lähde valmistui' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Trevi Fountain - Roma.jpg',
-          lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
-          selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo '
-            + 'Poli -palatsin päätyseinä, jonka kaaren alla seisoo meren '
-            + 'jumala Oceanus.',
-          lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
-    },
     'Areenan kellari': {
       aika: '1874–1875',
       nosto: 'nosto-colosseumin-kellari',

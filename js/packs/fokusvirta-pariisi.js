@@ -454,6 +454,9 @@ export const FOKUSVIRTA_PARIISI = {
    * tästä kentästä, jotta Ranskan muut kaupungit (Marseille) näkevät
    * samat täyt kuin ennenkin.
    *
+   * LUSTIG 1925 (`lustig-eiffel`) POISTETTU 17.11.2026: tarina on nyt pääkartan kohteen `eiffel-torni` jaksoissa
+   * (js/packs/fokuskohteet-fra.js, yksi paikka = yksi nosto). Poolin kärki on siitä lähtien seuraava täky.
+   *
    * MAAN KUPLATÄKY ON POOLIN KÄRKI: Livia huomauttaa tuikkivista
    * pisteistä kerran, ja huomio osuu poolin ensimmäiseen
    * katsomattomaan. Järjestys on siksi säilytetty muuttumattomana.
@@ -466,87 +469,6 @@ export const FOKUSVIRTA_PARIISI = {
    * sitä ei muuteta täällä.
    */
   takynostot: [
-    {
-      /*
-       * MAAN KUPLATÄKY (poolin kärki, ks. yllä).
-       *
-       * takynostot-ranska.md, ehdokas 2 (VARMA). Aineiston sanamuoto
-       * noudatettu: lähde ei anna toiselle yritykselle kuukautta, joten
-       * teksti sanoo "samana vuonna".
-       *
-       * VALOKUVAA EI OLE. Aineiston ainoa tarkistettu tiedosto on
-       * Lustigin pidätyskuva, ja aineisto jättää sen käytön
-       * nimenomaisesti päätoimittajan ratkaistavaksi (*"Fablen on
-       * päätettävä, sopiiko poliisikuva pelin sävyyn"*). Sitä päätöstä
-       * ei tehdä tässä — 28.8.2026 lisätty pääkuva on repon oma
-       * havainnekuva eikä koske poliisikuvaan mitenkään, joten tämä
-       * nosto jää ainoaksi ilman `valokuva`-kakkoskuvaa.
-       */
-      id: 'lustig-eiffel',
-      nimio: 'Lustig 1925',
-      otsikko: 'Lustig 1925 — Eiffel-torni myydään romuksi',
-      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
-      symboli: 'huuto',
-      visa: {
-        kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
-        vaihtoehdot: [
-          'Hän häpesi',
-          'Hän sai rahansa takaisin',
-          'Hän ei huomannut huijausta',
-        ],
-        oikea: 0,
-        fakta: 'Lustig palasi Pariisiin saman vuoden 1925 puolella ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
-      },
-      lunastus: [
-        'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
-          + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi '
-          + 'väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon '
-          + 'romukauppiaita luottamukselliseen kokoukseen kalliiseen '
-          + 'hotelliin ja esittäytyi posti- ja lennätinministeriön '
-          + 'varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia '
-          + 'on arkaluontoinen eikä siitä saa puhua.',
-        'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
-          + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-          + 'kauppasumman. Sitten hän pakeni '
-          + 'Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut '
-          + 'poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman '
-          + 'vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa '
-          + 'joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
-      ],
-      lahde: 'en-Wikipedia "Victor Lustig", osio Eiffel-tornin huijauksesta '
-        + '(tarkistettu 25.8.2026).',
-      /*
-       * PÄÄKUVA (28.8.2026, sama malli kuin Sofian areenalla ja
-       * v1307:n neljällä nostolla): repon oma generoitu havainnekuva,
-       * jolla ei ole Commons-nimeä eikä varareittiä, joten kenttä on
-       * `osoite` eikä `tiedosto` (js/fokusnosto.js asetaNostonKuva).
-       *
-       * Kuva ei esitä tornia vaan HETKEN, jossa se myytiin: hotellin
-       * salonki, väärennetyt kirjelomakkeet pöydällä ja torni vain
-       * ikkunan takana. Lähderivi sanoo sen itse, jottei kukaan lue
-       * kuvaa valokuvaksi tapahtumasta.
-       */
-      kuva: {
-        osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
-        lyhyt: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat kuuntelemassa, torni takana.',
-        selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, '
-          + 'romukauppiaat kuuntelemassa ja torni ikkunan takana.',
-        lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
-      },
-      kysymykset: [
-        'Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?',
-        'Miksi huijauksen uhri ei ilmoittanut poliisille?',
-        'Oliko Eiffel-tornin purkamisesta oikeasti puhetta?',
-      ],
-      // 48,85822222 N / 2,2945 E — en-Wikipedia "Eiffel Tower".
-      paikka: {
-        nimi: 'Eiffel-torni',
-        laudat: {
-          maailmankartta: { x: 5909.8, y: 1439.5 },
-          europe: { x: 255.3, y: 608.6 },
-        },
-      },
-    },
     {
       /*
        * ELÄINNOSTO. takynostot-ranska.md, ehdokas 3 (VARMA). Aineiston
@@ -920,70 +842,6 @@ export const FOKUSVIRTA_PARIISI = {
      */
     {
       /*
-       * LEHDEN SIVU 1 ("Pariisi"), nosto 1. Kohdekartalle Eiffel-tornin
-       * pisteeseen, jossa on jo kolme merkkiä samassa osoitteessa
-       * (Eiffel-torni, Torni romuraudaksi, Torni 1888) — talon tapa on
-       * `nimiPuoli` ja `siirto`, ei uusi koordinaatti.
-       */
-      id: 'pariisin-72-nimea',
-      nimio: 'Tornin nimet 2026',
-      otsikko: 'Tornin nimet 2026 — naisten lista julkaistaan',
-      symboli: 'tekniikka',
-      lunastus: [
-        'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-          + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
-          + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat '
-          + 'kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla '
-          + '1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. Yhtään naista '
-          + 'listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 '
-          + 'nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa '
-          + 'miesten nimien yläpuolelle, kunhan kolme akatemiaa on antanut lausuntonsa.',
-      ],
-      lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Tornissa on 72 '
-        + 'nimeä kullalla" (js/packs/kulttuuri-kategoriat.js). Teksti '
-        + 'siirretty sanatarkasti karttauudistuksen erässä 5, 13.9.2026.',
-      kuva: {
-        tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
-        lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-        selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
-          + 'kullatuin, 60 senttiä korkein kirjaimin.',
-        lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      kysymykset: [
-        'Miksi nimet peitettiin maalilla 1900-luvun alussa?',
-        'Ketkä ovat sen toisen, vuonna 2026 julkistetun listan nimet?',
-        'Miten 72 nimeä valittiin tornin kylkeen?',
-      ],
-      /*
-       * MINITEHTÄVÄ (SK:n v2, KK 13.15; docs/raportit/minitehtava-kolme-pariisin-nostoa-20261113.md).
-       * Vastaus on noston omassa tekstissä ("72 ranskalaista tiedemiestä ja insinööriä"); väärät
-       * ovat uskottavia arvauksia. Oikea ei ole pisin. Peli ei sekoita järjestystä, joten oikean
-       * paikka vaihtelee nostosta toiseen.
-       */
-      visa: {
-        kysymys: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää kullattu nimilista. '
-          + 'Keiden nimiä siinä on?',
-        vaihtoehdot: [
-          'Tornin rakentaneiden 72 työmiehen ja insinöörin',
-          '72 ranskalaisen tiedemiehen ja insinöörin',
-          'Ranskan vallankumouksen 72 sankarin',
-        ],
-        oikea: 1,
-        fakta: 'Kirjaimet ovat 60 senttiä korkeita. Nimet peitettiin maalilla 1900-luvun alussa ja '
-          + 'tehtiin näkyviin uudelleen 1980-luvun lopulla.',
-      },
-      // Eiffel-torni 48,85822 N / 2,2945 E — sama piste kuin nostolla
-      // `lustig-eiffel` (en-Wikipedia "Eiffel Tower").
-      paikka: {
-        nimi: 'Eiffel-torni',
-        laudat: {
-          maailmankartta: { x: 5909.8, y: 1439.5 },
-          europe: { x: 255.3, y: 608.6 },
-        },
-      },
-    },
-    {
-      /*
        * LEHDEN SIVU 1 ("Pariisi"), nosto 2. Kohdekartalle Abbesses'n
        * metroaseman sisäänkäyntiin: se on yksi jäljellä olevista
        * Guimardin sisäänkäynneistä ja jo pelin omassa kuvapaketissa
@@ -1264,99 +1122,6 @@ export const FOKUSVIRTA_PARIISI = {
         laudat: {
           maailmankartta: { x: 5911.1, y: 1438.9 },
           europe: { x: 256.0, y: 608.3 },
-        },
-      },
-    },
-    {
-      /*
-       * LEHDEN SIVU 3 ("Historia"), SEITSEMÄSTÄ NOSTOSTA YKSI
-       * (suunnitelman luku 4.7: *"Kolme parasta kohdekartan
-       * pisteiksi, loput neljä yhdeksi nostoksi 'Pariisin
-       * vuosisadat'"*).
-       *
-       * JAETTU KAHDEKSI (omistaja 17.11.2026, yhdistämisen vaihe A,
-       * PR 6966 luku 4): kaksi tarinaa ei kuulu samalle kortille. Tämä
-       * kortti (`kaulanauha-1785`) pitää kaulanauhan ja sen kaksi
-       * kysymystä; Vrain-Lucasin tarina elää vain skandaalikortissa
-       * `skandaali-vrain-lucas-kirjevaarennokset` (KK 17.11. 20.41:
-       * yhdestä merkistä ei avaudu kahta samaa tarinaa kertovaa
-       * korttia; lyhyt kortti `pariisin-vuosisadat` poistettu).
-       *
-       * MITATTU LÄHTÖTILANNE: sivun kaikilla seitsemällä nostolla oli
-       * jo karttapaikka — kuudella kohdekartalla ja yhdellä
-       * pääkartalla. Kolme "parasta" ovat ne kolme, jotka osaston oma
-       * johdanto nimeää (kyyhkyposti, Tuileriain rauniot ja
-       * impressionistit); ne pysyvät omina karttapisteinään.
-       *
-       * KAPPALEITA ON KAKSI EIKÄ NELJÄ: neljästä jäljelle jääneestä
-       * kaksi ("Kirahvi käveli Marseillesta Pariisiin" ja "Mies myi
-       * Eiffel-tornin romuraudaksi") ovat tämän saman poolin nostoja
-       * `kirahvin-kavelymatka` ja `lustig-eiffel`, joiden korteissa on
-       * sivuversion jokainen faktaväite ja enemmänkin. Ne on siksi
-       * pudotettu kaksoiskappaleina eikä asiatietona. Mukaan tulivat
-       * ne kaksi, joiden sivuversiossa on faktoja, joita niiden omassa
-       * karttakortissa EI ole (kaulanauhan 647 timanttia ja
-       * ensimmäisen maksuerän erääntyminen; Vrain-Lucasin
-       * lähettäjänimet sekä englantilaisten huomautus Newtonin iästä).
-       * Rivikohtainen vertailu on erän 5 raportissa.
-       *
-       * POOLIN YHDEKSÄS = MINIKYSYMYS (kiintiö joka kolmas, erä 6).
-       * Vastaus on yllä olevassa tekstissä sanatarkasti: *"Kaikki oli
-       * kirjoitettu 1800-luvun ranskaksi."*
-       */
-      id: 'kaulanauha-1785',
-      nimio: 'Kaulanauha 1785',
-      otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
-      // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
-      symboli: 'huuto',
-      lunastus: [
-        'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
-          + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
-          + 'kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte '
-          + '-niminen huijari sai kardinaali de Rohanin uskomaan, että '
-          + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina '
-          + 'olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles\'n '
-          + 'puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin '
-          + 'Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi '
-          + 'elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja '
-          + 'kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti Rohanin '
-          + '1786, mutta kuningattaren maine ei toipunut.',
-      ],
-      lahde: 'Pariisin kaupunkilehden sivu "Historia", nostot "Kaulanauha, '
-        + 'joka ei koskaan päätynyt kuningattarelle" ja "Kleopatra kirjoitti '
-        + 'ranskaksi — ja akateemikko uskoi" '
-        + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
-        + 'karttauudistuksen erässä 5, 13.9.2026.',
-      /*
-       * KUVAT LISÄTTY löydös 170:n yhteydessä (26.9.2026). Aiempi
-       * kuvattomuus oli rajoite eikä valinta (lehden oma kuva on
-       * R2-ämpärin kuvajonossa eikä nostokortin kuvakenttä kelpuuta
-       * sitä), mutta kortin `kuva`/`kuvat`-kenttä hyväksyy myös
-       * Commons-nimen (`tiedosto`, js/fokusnosto.js asetaNostonKuva) —
-       * sama mekaniikka kuin naapurikortissa `exchange-alleyn-kupla`
-       * (js/packs/fokusvirta-lontoo.js). Yksi kuva per tarina: Rohan
-       * kaulanauhajutulle, Vrain-Lucas kirjevaarennoksille.
-       */
-      kuvat: [
-        {
-          tiedosto: 'Cardinal Rohan2.jpg',
-          lyhyt: 'Kardinaali de Rohan, joka uskoi ostavansa timanttikaulanauhan kuningattarelle.',
-          selite: 'Kardinaali de Rohan 1700-luvun muotokuvassa — mies, joka uskoi '
-            + 'ostavansa timanttikaulanauhan kuningattarelle ja päätyi sen sijaan '
-            + 'Bastiljiin.',
-          lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
-        },
-      ],
-      kysymykset: [
-        'Miksi kardinaali uskoi väärennetyt kirjeet?',
-        'Mihin kaulanauhan timantit lopulta päätyivät?',
-      ],
-      // Sainte-Chapelle 48,8554 N / 2,3450 E: Palais de la Cité'n palatsikappeli, jossa parlamentti istui (PR 6964, valinta A).
-      paikka: {
-        nimi: 'Kaulanauha 1785',
-        laudat: {
-          maailmankartta: { x: 5911.5, y: 1439.7 },
-          europe: { x: 256.3, y: 608.7 },
         },
       },
     },

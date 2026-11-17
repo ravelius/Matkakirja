@@ -5371,12 +5371,14 @@ export const KAUPUNKIKARTAT = {
        * 48,8462/2,3464 on rakennuksen tunnettu sijainti.
        */
       // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
-      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: ['nosto-pariisin-72-nimea', 'hetki-eiffel-torni-1888', 'nosto-lustig-eiffel'] },
+      // Yksi merkki: Eiffel-tornin tarina (nähtävyys + Eiffel-torni 1888 + Lustig 1925) on kohteen `eiffel-torni` jaksot (fokuskohteet-fra.js).
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: 'eiffel-torni' },
       { nimi: 'Riemukaari', tagi: 'historia', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', tagi: 'historia', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
         nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
-        nosto: 'skandaali-mona-lisan-varkaus-1911',
+        // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `louvre` (Mona Lisan varkaus jaksoina).
+        nosto: 'louvre',
       },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
@@ -5408,8 +5410,8 @@ export const KAUPUNKIKARTAT = {
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
       { nimi: 'Invalidit', tagi: 'historia', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
-      // Kaulanauha 1785 -tarina avautuu tästä (parlamentti istui Palais de la Cité'ssä; yhdistämisen vaihe A, KK 17.11.2026).
-      { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: ['nosto-kaulanauha-1785'] },
+      // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `sainte-chapelle` (Kaulanauha 1785 jaksoina).
+      { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: 'sainte-chapelle' },
       { nimi: 'Grand Palais', tagi: 'kulttuuri', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
       { nimi: 'Petit Palais', tagi: 'kulttuuri', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
@@ -5525,6 +5527,11 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Bastilji 1789', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Hetki eiffel-torni-1888 jää (KK 17.11.2026 21.57, kuten Bastilji 1789): piilopiste samassa pisteessä, ei omaa kylttiä.
+      {
+        nimi: 'Eiffel-torni 1888', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.8583, lon: 2.2945,
+        nosto: 'hetki-eiffel-torni-1888', nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
@@ -6816,7 +6823,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pietarinkirkko', tagi: 'uskonnot', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
       { nimi: 'Castel Sant’Angelo', tagi: 'historia', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
       { nimi: 'Espanjalaiset portaat', tagi: 'historia', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
-      { nimi: 'Trevin suihkulähde', tagi: 'kulttuuri', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi', nosto: ['nosto-rooman-kolikko', 'nosto-aqua-virgo'] },
+      // Yksi merkki: Trevin tarina (kolikot + nähtävyys) on kohteen `trevi` jaksot (fokuskohteet-ita.js); Aqua Virgo jää omaksi lyhyeksi tarinaksi.
+      { nimi: 'Trevin suihkulähde', tagi: 'kulttuuri', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi', nosto: ['trevi', 'nosto-aqua-virgo'] },
       { nimi: 'Pantheon', tagi: 'uskonnot', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       /*
        * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
