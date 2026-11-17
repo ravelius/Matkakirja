@@ -18,7 +18,7 @@ Pohja: Tuileries'n malli (PR 7073, `docs/raportit/tuileries-koe-teksti-20261117.
 
 - **Hologrammi** sammuu jaksossa 6 kohdassa "Purku alkoi". **Kartta** ("Näytä kartalla"): Square Henri-Galli, 48,8513 N / 2,3618 E (fr-Wikipedia ja OpenStreetMap).
 - **Vuosirivit (3, selite ≤ 20):** 1789 · valtaus (jakso 5) · 1840 · pylväs valmistuu (jakso 7, "pylväs") · 1899 · tornin pohja löytyy (jakso 7, "pohjakiviä").
-- **Kysymys (yksi):** hetken tehtävä siirretty: Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta 1789? · **Hakemaan ruutia Invalidien musketteihin** (oikea) · Vapauttamaan satoja poliittisia vankeja · Vangitsemaan kuninkaan · Polttamaan verokirjat. Faktarivi: Vankeja oli seitsemän; kuvernööri de Launay antautui ja surmattiin. Vastaus ei näy vuosiriveissä eikä kuvateksteissä.
+- **Kysymys (yksi, KK 21.34):** Milloin Bastiljin purku alkoi? · **Valtauspäivän iltana** (oikea) · Vasta vuonna 1792, kun tasavalta julistettiin · Vasta kuukausien päästä, kun kuningas oli antanut luvan. Faktarivi: Palloy lähetti työmiehet linnalle ilman virallista lupaa jo 14. heinäkuun iltana; puolentoista vuoden päästä linnasta ei ollut jäljellä mitään. Historian hetken ruutivisa jää hetken omalle sivulle (ei toisteta).
 - **Pulun kysymykset (3):** Miksi juuri Bastiljista tuli vallankumouksen vertauskuva? · Millaista elämä linnoituksen sisällä oli? · Mihin Bastiljin kivet päätyivät? (kolmas uusi; vastauksia ei kirjoitettu). Korostukset: Palloy, Henri-Galli.
 
 ## 2. Lähdetaulukko (kaksi itse avattua itsenäistä lähdettä per väite, avattu 17.11.2026)
@@ -63,7 +63,7 @@ Kuvia 1, 3, 4, 6 ja 7 ei ole vielä ämpärissä pienin kirjaimin kuten Tuilerie
 
 - Poistui: kohteen vanha `teksti` (Wikipedia-yhteenveto, korvattu jaksoilla; `teksti` lasketaan jaksoista), nähtävyysjutun `Bastilji` kopio (`nahtavyysjutut.js`), vanhat korostukset (Porte Saint-Antoine, valtionvankila).
 - Jäi: kadonneen ihmeen kortti (`ihme`), kartan tähti `bastilji`, miniatyyri.
-- **Jäi tarkoituksella (KK päättää):** historian hetki `ranskan-vallankumous-bastilji-1789` ja sen piilotettu piste "Bastilji 1789" (`tarinapaikka: false`, sama koordinaatti). Testi `nostot-kartalla` vaatii lehteen jäävälle hetkelle kartan pisteen ja tekstin täsmäämisen, ja hetken lehtisivu on generoitu. Sen visa (ruuti) on nyt siirretty myös Bastiljin nostoon, joten pelaaja voi nähdä saman kysymyksen kahdesti, kunnes hetki päätetään.
+- **Jäi tarkoituksella (KK päättää):** historian hetki `ranskan-vallankumous-bastilji-1789` ja sen piilotettu piste "Bastilji 1789" (`tarinapaikka: false`, sama koordinaatti). Testi `nostot-kartalla` vaatii lehteen jäävälle hetkelle kartan pisteen ja tekstin täsmäämisen, ja hetken lehtisivu on generoitu. KK 21.34: hetki, lehtisivu ja sen ruutivisa jäävät ennalleen; paikan kysymys on eri (purku).
 
 ## 6. Ääntäjälle
 
