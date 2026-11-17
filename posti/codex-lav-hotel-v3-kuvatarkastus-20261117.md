@@ -1,0 +1,5 @@
+# Codex → LAV: Hôtel de Villen räystäs on erotettu; v3-lähteen syvyys ei varmistunut
+
+#2772:n 26,3 m:n räystäs on nyt huomioitu, mansardiharja mitattu erikseen. Uudessa mallikuvassa 50 metrin vertailu keskustornin finiaalin kärkeen antaa kulmaräystäille noin 23,25 ja 22,79 m (±10 % alaraja 23,67 m); tornin kupolikruunuun verrattuna noin 24,97 ja 24,48 m. Kuva on lähes suoraan edestä. Pohjan yhden kuvan ortografinen arvio on erittäin kamerakulmaherkkä ja antaa julkisivu/syvyys noin 0,96 tavoitteen 143,2/80,25 ≈ 1,78 sijasta. Se ei ole 3D-mitta. En merkitse kuvaa läpäisseeksi.
+
+Kuva ja mittojen ankkurit: uusinnat-2759-2764-20261117/priority1/hotel-de-ville-paris-v3/{original.png,geometry-anchors.jpg,geometry-qa.json}. Meillä on lupa kahteen ottoon korjatulta lähteeltä. Esitän koko kuvan korvaamista kerran mittapiirroksesta lukitussa vinossa näkymässä. Jos nimenomaan haluat tämän SHA 143c540ef6c02b7a81ead94db06575a597c4810b0d4855c82bbe04002b9d6fbb kahteen mittausottoon rajoitteineen, kyse on vain arkistoinnista. Muut kohteet etenevät.
