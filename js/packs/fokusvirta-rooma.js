@@ -848,63 +848,6 @@ export const FOKUSVIRTA_ROOMA = {
      * ══════════════════════════════════════════════════════════════
      */
     {
-      id: 'rooman-kolikko',
-      nimio: 'Kolikko olan yli',
-      otsikko: 'Kolikko olan yli',
-      symboli: 'historia',
-      lunastus: [
-        'Trevin suihkulähteestä kerrotaan tarina: kun heittää kolikon '
-          + 'olan yli, palaa vielä Roomaan. Se on legenda, ei tosiasia. '
-          + 'Kolikoita kertyy paljon, ja vuonna 2022 niitä kerättiin '
-          + 'altaasta yli 1,4 miljoonan euron arvosta.',
-        'Kolikot kerätään altaan pohjasta talteen ja lahjoitetaan '
-          + 'Caritakselle, joka auttaa kaupungin vähävaraisia.',
-        'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, '
-          + 'sillä se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo '
-          + '-akveduktia pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
-      ],
-      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
-      kuva: {
-        tiedosto: 'Trevi Fountain - Roma.jpg',
-        lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
-        selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo Poli '
-          + '-palatsin päätyseinä, jonka kaaren alla seisoo meren jumala '
-          + 'Oceanus.',
-        lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      /*
-       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
-       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
-       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
-       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
-       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
-       */
-      aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
-      aaniLahde: '"Walking to Pantheon" — Rolf Yngve, radio aporee (public domain)',
-      kysymykset: [
-        'Miksi kolikko heitetään Trevin suihkulähteeseen olan yli?',
-        'Kuinka paljon kolikoita Trevin altaasta kerättiin vuonna 2022?',
-        'Mihin Trevin altaasta kerätyt kolikot lahjoitetaan?',
-      ],
-      visa: {
-        kysymys: 'Kenelle Trevin suihkulähteen kolikot lahjoitetaan?',
-        vaihtoehdot: [
-          'Rooman kaupungille',
-          'Vatikaanille',
-          'Caritakselle',
-        ],
-        oikea: 2,
-        fakta: 'Kolikot kerätään altaan pohjasta ja lahjoitetaan Caritakselle, joka auttaa kaupungin vähävaraisia.',
-      },
-      paikka: {
-        nimi: 'Kolikko olan yli',
-        laudat: {
-          maailmankartta: { x: 6249.4, y: 1727.5 },
-          europe: { x: 450.9, y: 791.6 },
-        },
-      },
-    },
-    {
       id: 'colosseumin-kellari',
       nimio: 'Areenan kellari',
       otsikko: 'Leijona nousi lattian alta',

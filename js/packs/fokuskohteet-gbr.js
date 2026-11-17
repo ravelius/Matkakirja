@@ -85,33 +85,94 @@ export const FOKUSKOHTEET_GBR = [
     kysymykset: [
       'Miksi torninhuippua ei rakennettu takaisin?',
       'Mitä kirkon sisällä tehtiin muuta kuin rukoiltiin?',
+      // Kolmas kysymys uusi (nostolla tasan kolme; SK 17.11.2026): syy lähteessä (Leicesterin erikoiskokoelmat: rakennustelineet levittivät tulen).
+      'Miten Lontoon suuri palo levisi vanhaan St Pauliin?',
     ],
-    korostukset: ['Ludgate Hill|Ludgate Hillin',
+    korostukset: ['Ludgate Hill|Ludgate Hillillä',
       'Lontoon suuri palo',
       'Christopher Wren|Christopher Wrenin'],
-    nappi: 'Kirkko, joka oli aikanaan maailman korkein',
+    // Nappi ei paljasta tehtävän vastausta (St Paulin nosto uudella tavalla, SK 17.11.2026).
+    nappi: 'Kirkko, johon salama iski',
     laudat: {
       maailmankartta: { x: 5830.1, y: 1323.7 },
       europe: { x: 209.3, y: 538.8 },
     },
-    teksti: 'Ludgate Hillin laella on ollut Paavalille omistettu kirkko '
-      + 'vuodesta 604, ja nykyinen katedraali on paikan viides. Sitä '
-      + 'edeltänyt keskiaikainen St Paul aloitettiin vuoden 1087 '
-      + 'tulipalon jälkeen, vihittiin 1240 ja valmistui vasta '
-      + '1300-luvun puolivälissä — silloin se oli maailman pisimpiä '
-      + 'kirkkoja, 178 metriä, ja sen puinen torninhuippu kohosi '
-      + 'perinteisen mitan mukaan noin 149 metriin. Kirkon pääkäytävä '
-      + 'oli lontoolaisille kauppapaikka ja juorujen vaihtopaikka, '
-      + 'jolla oli oma nimikin: Paul\'s walk. Huippu syttyi palamaan 4. '
-      + 'kesäkuuta 1561 ja romahti kirkkosalin katon läpi; aikalaisen '
-      + 'uutislehtinen kertoi syyksi salamaniskun, eikä huippua '
-      + 'rakennettu takaisin. Lontoon suuri palo tuhosi kirkon 1666, ja '
-      + 'paikalle nousi Christopher Wrenin kupolikirkko, joka valmistui '
-      + '1710 ja seisoo siellä yhä.',
-    lahde: 'en-Wikipedia "Old St Paul\'s Cathedral", johdanto, '
-      + 'tietolaatikko ja osio "Spire collapse (1561)"; nykyisen kirkon '
-      + 'tiedot ja koordinaatit en-Wikipedia "St Paul\'s Cathedral" '
-      + '(kumpikin tarkistettu 27.8.2026).',
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Tudor Society, The History of London, Leicesterin yliopiston erikoiskokoelmat, '
+      + 'The Freelance History Writer ja St Paulin katedraalin oma aikajana (tarkistettu 17.11.2026).',
+    /*
+     * ST PAUL, NOSTO UUDELLA TAVALLA (SK 17.11.2026; P-261117-96; malli Tuileries ja Eiffel-torni). Luonnos ja lähdetaulukko:
+     * docs/raportit/trevi-stpauls-tarinaluonnos-20261117.md (luku 2; KK 15.36 korjaukset: torninhuippu, "vain raunion").
+     * Koukku on kertojan (ei isoisän lausetta: kaanonissa ei ole St Paulin hetkeä). Vuosi 1710 ei ole vuosirivillä (KK 15.36).
+     * Kohdekartan piste (maakartat.js, `nosto: 'st-paulin-katedraali'`) avaa tämän. Vanha St Paul (kadonnut ihme, L5) on erikseen.
+     */
+    otsikko: 'St Paul 1561 — huippu, jonka salama sytytti',
+    jaksot: [
+      // Noston alku: kertojan nimi ennen koukkua (omistaja 19.23 F). Isoisän lausetta ei ole, joten esittelyä ei tarvita.
+      { osa: 'nimi', teksti: 'St Paulin katedraali.' },
+      {
+        osa: 'koukku',
+        teksti: 'Kesäkuussa 1561 Lontoon yllä jylisee ukkonen. Iltapäivällä salama iskee St Paulin kirkon tornin '
+          + 'huippuun. Huippu on puuta ja katettu lyijyllä, ja se syttyy palamaan.',
+        kuva: 'huipulla',
+        vuodet: [{ vuosi: '1561', selite: 'huipun tulipalo', kohta: 'Kesäkuussa 1561' }],
+      },
+      {
+        // Ei kuvaa: havainnekuvaa (salama ja palava huippu) ei tilata (P-261117-96); edellinen kuva jää näkyviin.
+        osa: 'tapahtuma',
+        teksti: 'Sulanut lyijy valuu kirkon katoille, ja kirkon kellot sulavat. Palava huippu romahtaa '
+          + 'kirkkosalin katon läpi.',
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Kuningatar Elisabet lahjoittaa korjaukseen rahaa ja puutavaraa, ja kirkon katot uusitaan. '
+          + 'Huippua ei rakenneta koskaan uudelleen. Tornin runko jää pystyyn ilman sitä.',
+        kuva: 'longview',
+      },
+      {
+        // Hollarin palokuva (Yale, CC0) jäi pois: viimeisen jakson pääkuvan pitää olla valokuva (tests/noston-jaksot.test.mjs).
+        osa: 'tanaan',
+        teksti: 'Vuonna 1666 Lontoon suuri palo jättää vanhasta kirkosta vain raunion. Tilalle nousee Christopher '
+          + 'Wrenin kupolikirkko, joka seisoo Ludgate Hillillä yhä. Sen yllä kohoaa kupoli, ei torninhuippua.',
+        kuva: 'kupoli',
+        vuodet: [
+          { vuosi: '1666', selite: 'Lontoon suuri palo', kohta: 'Vuonna 1666' },
+          { vuosi: '1675', selite: 'Wrenin kirkko alkaa', kohta: 'nousee' },
+        ],
+      },
+    ],
+    jaksokuvat: {
+      huipulla: {
+        tiedosto: 'Wenceslas Hollar Old St Paul\'s Cathedral with spire.jpg',
+        laji: 'piirros',
+        lyhyt: 'Vanha St Paul torninhuippuineen',
+        lahde: 'Wenceslaus Hollar (jälkikäsittely Bob Castle), Wikimedia Commons (PD); kaiverrus 1600-luvulta',
+      },
+      longview: {
+        tiedosto: '1647 Long view of London From Bankside - Wenceslaus Hollar (cropped).jpg',
+        laji: 'piirros',
+        lyhyt: 'St Paul Hollarin kaiverruksessa 1647',
+        lahde: 'Wenceslaus Hollar, Wikimedia Commons (PD)',
+      },
+      kupoli: {
+        tiedosto: 'St Paul\'s Cathedral Dome 2020 Exterior Ground.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Wrenin kupolikirkko Ludgate Hillillä',
+        lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
+      },
+    },
+    // Yksi kysymys (uusi; kohteella ei ollut tehtävää): vastaus on jaksossa 3, eikä kuvateksti tai vuosirivi paljasta sitä.
+    visa: {
+      kysymys: 'Mitä St Paulin palaneelle torninhuipulle lopulta tehtiin?',
+      vaihtoehdot: [
+        'Sitä ei rakennettu uudelleen',
+        'Se rakennettiin heti uudelleen entistä korkeammaksi',
+        'Se rakennettiin uudelleen kivestä',
+      ],
+      oikea: 0,
+      fakta: 'Salama sytytti St Paulin puisen torninhuipun vuonna 1561, eikä sitä koskaan rakennettu uudelleen; '
+        + 'tornin runko jäi pystyyn ilman huippua.',
+    },
     /*
      * NYKYTILAN VALOKUVA (omistajan täsmennys 27.8.2026 ilta):
      * olemassa olevan kohteen pääkuva on Commons-valokuva siitä, mitä
@@ -315,3 +376,13 @@ export const FOKUSKOHTEET_GBR = [
     },
   },
 ];
+
+/*
+ * ST PAUL (nosto uudella tavalla): kohteen `teksti` = jaksot kappaleina ilman nimiosaa, kuten fokuskohteet-fra.js:ssä.
+ * Vanha esitys, lehti ja Pulun konteksti lukevat saman tekstin kuin jaksoesitys.
+ */
+for (const kohde of FOKUSKOHTEET_GBR) {
+  if (Array.isArray(kohde.jaksot) && kohde.teksti == null) {
+    kohde.teksti = kohde.jaksot.filter((j) => j.osa !== 'nimi').map((j) => j.teksti).join('\n\n');
+  }
+}

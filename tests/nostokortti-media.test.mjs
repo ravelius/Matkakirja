@@ -113,7 +113,7 @@ test('mediakenttäinen nosto ei jää lehteen kortin kaksoiskappaleeksi', () => 
   }
 });
 
-test('erän 10 viisi musiikkinostoa asuvat kortilla eivätkä enää lehdessä', () => {
+test('erän 10 musiikkinostot asuvat kortilla eivätkä enää lehdessä', () => {
   /*
    * Nimetty vartio raportin luvun 6 listalle: nämä viisi jäivät sivulle
    * PELKÄSTÄÄN musiikki- tai äänikentän takia. Madridin chotis ei ole
@@ -121,7 +121,6 @@ test('erän 10 viisi musiikkinostoa asuvat kortilla eivätkä enää lehdessä',
    */
   const SIIRTYNEET = [
     ['lontoo', 'abbey-roadin-suojatie', 'Suojatie, jota jonotetaan'],
-    ['rooma', 'rooman-kolikko', 'Kolikko olan yli'],
     ['berliini', 'marlene-dietrich', 'Tyttö Schönebergistä lauloi maailman ympäri'],
     ['wien', 'tonava-kaunoinen', 'Kaupunki sävelsi oman jokensa'],
     ['wien', 'taikahuilu-wiedenissa', 'Taikahuilu tehtiin esikaupungin teatteriin'],
@@ -409,16 +408,8 @@ test('musiikkinosto saa kortille mediarivin samoilla napeilla kuin lehti', async
   assert.ok(ui.saadut[0].musiikkiNayte, 'apurille annettu nosto on ilman mediakenttiä');
 });
 
-test('ääninosto saa mediarivin myös ilman musiikkilinkkiä', async () => {
-  const { aukesi, kortti } = await avaaKortti('rooma', 'rooman-kolikko');
-  assert.equal(aukesi, true, 'kortti ei auennut');
-  const rivi = kortti.querySelector('.fokusnosto-media');
-  assert.ok(rivi, 'kortilta puuttuu mediarivi');
-  assert.ok(rivi.querySelector('.kulttuuri-kuuntele'), 'ääninäytteen nappi puuttuu');
-  assert.equal(rivi.querySelector('.kulttuuri-musiikkilinkki'), null,
-    'ilman musiikkikenttää ei tule Apple Music -linkkiä');
-});
-
+// Ääninosto ilman musiikkilinkkiä: ainoa esimerkki oli Rooman täkynosto `rooman-kolikko`, joka yhdistyi Trevin kohteeseen
+// `trevi` (SK 17.11.2026, jaksollinen nosto). Kohdekortti ei kanna `aani`-kenttää, joten kokeelle ei ole nyt kohdetta.
 /* ================================================================= */
 /* C. MUSIIKKILINKKIEN LISTA (Fablen päätös 14.9.2026)               */
 /* ================================================================= */
