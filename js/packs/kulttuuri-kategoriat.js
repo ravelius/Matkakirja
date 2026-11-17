@@ -8557,10 +8557,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Singel 7:n talon takajulkisivu on vain noin metrin levyinen, '
             + 'mutta etuosa on selvästi leveämpi, joten kapein koko talo on '
             + 'silti Oude Hoogstraatilla.',
-          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
-          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä '
-            + 'käytössä, ja talot rakennettiin hieman eteenpäin kallelleen, '
-            + 'jottei nostettava tavara kolhisi julkisivua.',
+          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat yhä käytössä.',
+          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä.',
           lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Amsterdam',
         },

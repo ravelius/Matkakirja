@@ -7403,18 +7403,14 @@ export const NAHTAVYYSJUTUT = {
     Kuninkaanpalatsi: {
       aika: '1648–',
       teksti: 'Dam-aukion laidalla kohoava komea rakennus ei ollut alun '
-          + 'perin palatsi lainkaan, vaan Amsterdamin raatihuone. Sen '
-          + 'rakentaminen alkoi vuonna 1648 vanhan raatihuoneen '
-          + 'paikalle, joka oli palanut poroksi vuonna 1652.'
+          + 'perin palatsi lainkaan, vaan Amsterdamin raatihuone. Sen rakentaminen alkoi vuonna 1648, ja vanha raatihuone paloi kesken töiden vuonna 1652.'
         + '\n\n'
         + 'Rakennus on niin painava, että sen alle piti lyödä lähes '
-          + '13 700 puupaalua. Katolla seisoo kuuden metrin korkuinen '
-          + 'Atlas-patsas, joka kannattelee koko maapalloa harteillaan.'
+          + '13 700 puupaalua. Katolla seisoo noin kuuden metrin korkuinen Atlas-patsas, joka kannattelee harteillaan taivaanpalloa.'
         + '\n\n'
         + 'Raatihuoneesta tuli kuninkaallinen palatsi vasta '
           + '1800-luvun alussa. Nykyään siellä otetaan vastaan '
-          + 'valtiovieraita, mutta perustus on yhä sama vanha '
-          + 'puupaalumetsä maan alla.',
+          + 'valtiovieraita, mutta rakennus seisoo yhä puupaalujen varassa.',
       kuvat: [
         {
           tiedosto: 'Amsterdam - Koninklijk Paleis (30265843216).jpg',
@@ -7520,17 +7516,14 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-amsterdam-timantit',
       teksti: 'Amsterdam oli 1600-luvun lopulta maailman timanttikaupunki. Hionta ei '
         + 'kuulunut kiltoihin, eikä juutalaisia olisi kiltoihin otettukaan; työ '
-        + 'tehtiin aluksi kotona. Hiomapyöriä pyörittivät ensin naiset ja lapset, '
-        + '1820-luvulta hevoset ja 1840-luvulta höyry.'
+        + 'tehtiin aluksi kotona. Hiomapyöriä pyörittivät ensin naiset, 1820-luvulta hevoset ja 1800-luvun puolivälin tienoilta höyry.'
         + '\n\n'
         + 'Vuonna 1870 Etelä-Afrikasta saapui Amsterdamiin ensimmäinen '
         + 'raakatimanttien erä, ja alkoi Kaapin aika: nousukausi, jota kesti '
-        + '1870-luvun puoliväliin. Työ oli raskasta, ja tuberkuloosi vaivasi alan '
-        + 'työläisiä. Vuonna 1894 timanttityöläiset perustivat oman '
+        + '1870-luvun puoliväliin. Työ oli raskasta ja vahingoitti työläisten keuhkoja. Vuonna 1894 timanttityöläiset perustivat oman '
         + 'ammattiliittonsa, Algemene Nederlandse Diamantbewerkersbondin.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Kaapin aika oli täydessä vauhdissa. Boasin '
-        + 'veljesten tehdas Nieuwe Uilenburgerstraatilla valmistui vasta 1879; '
+        + 'Isoisäsi matkavuonna 1873 elettiin Kaapin aikaa. Boasin höyryhiomo Nieuwe Uilenburgerstraatilla valmistui vasta 1879; '
         + 'nykyään talossa on Gassanin timanttitehdas.',
       kuvat: [
         {
@@ -7548,19 +7541,16 @@ export const NAHTAVYYSJUTUT = {
       aika: '1749',
       nosto: 'syvennys-amsterdam-voc-hylky',
       teksti: 'Vuoden 1749 tammikuussa VOC:n laiva Amsterdam lähti ensimmäiselle '
-        + 'matkalleen Bataviaan. Kapteeni Willem Klump oli 33-vuotias, ja laivassa '
-        + 'oli yli 330 ihmistä. Jo ennen rantaa noin viisikymmentä miehistön '
+        + 'matkalleen Bataviaan. Laivaa johti kapteeni Willem Klump, ja laivassa oli yli 330 ihmistä. Jo ennen rantaa noin viisikymmentä miehistön '
         + 'jäsentä oli kuollut tautiin. Myrsky ja hiekkasärkkä veivät laivalta '
         + 'peräsimen, ja 26. tammikuuta 1749 laiva ajettiin rantaan Hastingsin '
         + 'lähellä Englannissa.'
         + '\n\n'
-        + 'Laivan irrottamisyritys päättyi 11. maaliskuuta 1749, ja Amsterdam '
-        + 'vajosi rannan saveen. Noin kaksi kolmasosaa laivasta on tallella: hylky '
+        + 'Laiva vajosi rannan saveen, eikä sitä saatu pelastettua. Noin kaksi kolmasosaa laivasta on tallella: hylky '
         + 'tuli näkyviin 1969 ja on suojeltu 1970-luvulta.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 hylky oli maannut Englannin rannalla jo 124 '
-        + 'vuotta. Amsterdamissa seisova laiva on nykyaikainen kopio, joka '
-        + 'rakennettiin 1980-luvulla.',
+        + 'vuotta. Amsterdamissa seisova laiva on nykyaikainen kopio, joka valmistui vuonna 1990.',
       kuvat: [
         {
           tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
@@ -7595,14 +7585,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Hoogstraatilla.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
-        + 'vuotta: se mainitaan ensi kerran 1738. Nykyään siinä on teekauppa.',
+        + 'vuotta: talon vaiheet tunnetaan vuodesta 1738. Nykyään siinä on teekauppa.',
       kuvat: [
         {
           tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
-          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
-          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä, ja '
-            + 'talot rakennettiin hieman eteenpäin kallelleen, jottei '
-            + 'nostettava tavara kolhisi julkisivua.',
+          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat yhä käytössä.',
+          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä.',
           lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -7612,13 +7600,12 @@ export const NAHTAVYYSJUTUT = {
       aika: 'n. 1660',
       nosto: 'nosto-amsterdamin-maitotytto',
       teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä korkea '
-        + 'ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, ja hänen '
+        + 'ja 41 leveä. Rijksmuseumin mukaan Johannes Vermeer maalasi sen noin vuonna 1660, ja hänen '
         + 'tuotannostaan tunnetaan vain noin 35 maalausta.'
         + '\n\n'
         + 'Rijksmuseo tutki taulua vuonna 2022 röntgen- ja infrapunatekniikoilla. '
         + 'Maalin alta paljastui, että Vermeer oli suunnitellut seinälle '
-        + 'kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten pois, jolloin '
-        + 'katse jää naiseen ja maitoon.'
+        + 'kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten pois.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 taulua ei vielä ollut Rijksmuseossa. Se kuului '
         + 'Six-suvun yksityiskokoelmaan, ja museo osti sen vasta 1908 Vereniging '
@@ -7627,9 +7614,8 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
-          lyhyt: 'Johannes Vermeerin Maitotyttö, maalattu noin vuonna 1660.',
-          selite: 'Johannes Vermeerin Maitotyttö, jonka hän maalasi noin vuonna '
-            + '1660.',
+          lyhyt: 'Johannes Vermeerin Maitotyttö, Rijksmuseumin mukaan maalattu noin vuonna 1660.',
+          selite: 'Johannes Vermeerin Maitotyttö, jonka hän Rijksmuseumin mukaan maalasi noin vuonna 1660.',
           lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
         },
       ],
@@ -7640,22 +7626,20 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-amsterdamin-kissalaiva',
       teksti: 'Vuonna 1966 Henriëtte van Weelde alkoi ottaa kotiinsa Herengrachtille '
         + 'kulkukissoja, ensimmäisenä emokissan pentuineen. Kun kissoja tuli lisää, '
-        + 'hän osti vuonna 1968 asuntolaivan Singel-kanavasta. Siitä tuli kissoille '
-        + 'turvakoti: osa niistä saa uuden kodin, ja laivalla vierailee kerrallaan '
+        + 'hän hankki vuonna 1968 ensimmäisen laivan kissoille. Siitä tuli turvakoti: osa kissoista saa uuden kodin, ja laivalla vierailee kerrallaan '
         + 'vain kuusi ihmistä.'
         + '\n\n'
         + 'Sisäänpääsy laivalle on ilmainen. Kissat ovat turvakodin asukkaita, '
         + 'eivät nähtävyys.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Kissalaivaa ei vielä ollut: ensimmäinen laiva '
-        + 'ostettiin vasta 1968, 95 vuotta myöhemmin. Singel-kanavassa on nykyään '
-        + 'uusi laiva, joka otettiin käyttöön syyskuussa 2023.',
+        + 'Isoisäsi matkavuonna 1873 Kissalaivaa ei vielä ollut: ensimmäinen laiva hankittiin vasta 1968, 95 vuotta myöhemmin. Singel-kanavassa on nykyään '
+        + 'uusi laiva, joka tuotiin paikalleen vuonna 2023.',
       kuvat: [
         {
           tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
-          lyhyt: 'Poezenboot Singel-kanavassa vuonna 2006; kuvan laiva on vanha, nykyinen otettiin käyttöön 2023.',
+          lyhyt: 'Poezenboot Singel-kanavassa vuonna 2006; kuvan laiva on vanha, nykyinen tuotiin paikalleen 2023.',
           selite: 'Poezenboot Singel-kanavassa vuonna 2006. Kuvan laiva on vanha '
-            + 'asuntolaiva; nykyinen laiva otettiin käyttöön syyskuussa 2023.',
+            + 'asuntolaiva; nykyinen laiva tuotiin paikalleen vuonna 2023.',
           lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -7668,8 +7652,7 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Three bikes on the canal bridge in Amsterdam (3798069610).jpg',
-          selite: 'Amsterdamin kanavista nostetaan joka vuosi 12 000–15 000 '
-            + 'polkupyörää.',
+          selite: 'Vesilaitos Waternetin mukaan kanavista nostetaan vuosittain yli kymmenentuhatta polkupyörää.',
           lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -7680,11 +7663,9 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-amsterdamin-puupaalut',
       teksti: 'Amsterdamin keskusta on rakennettu pehmeälle, vetiselle maalle, joten '
         + 'vanhojen talojen alla on maahan lyötyjä puupaaluja. Dam-torin '
-        + 'kaupungintalon, nykyisen kuninkaanpalatsin, alle lyötiin 13 659 paalua '
-        + 'norjalaisesta kuusesta; ensimmäinen kivi laskettiin 28. lokakuuta 1648.'
+        + 'kaupungintalon, nykyisen kuninkaanpalatsin, alle lyötiin 13 659 Norjasta tuotua puupaalua; ensimmäinen kivi laskettiin 28. lokakuuta 1648.'
         + '\n\n'
-        + 'Paalu kestää niin kauan kuin se pysyy veden alla. Jos pohjavesi laskee, '
-        + 'happi pääsee puuhun, ja sienet ja bakteerit alkavat lahottaa sitä. '
+        + 'Veden alla paalu säilyy pitkään. Jos pohjavesi laskee, happi pääsee puuhun ja sienet alkavat lahottaa sitä. '
         + 'Maaliskuussa 1961 Herengracht 537:n eteen pystytettiin tukipaaluja, ja '
         + 'kuvan otti valokuvaaja Harry Pot.'
         + '\n\n'
@@ -7696,7 +7677,7 @@ export const NAHTAVYYSJUTUT = {
           lyhyt: 'Herengracht 537:n eteen pystytettiin tukipaaluja maaliskuussa 1961.',
           selite: 'Herengracht 537:n eteen pystytettiin tukipaaluja maaliskuussa '
             + '1961. Kuvan otti valokuvaaja Harry Pot.',
-          lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
+          lahde: 'Harry Pot / Nationaal Archief / Anefo, Wikimedia Commons (CC0)',
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Paleis Amsterdam, Alankomaiden kuningashuone, M for Amsterdam, RVO, Rotterdamin kaupungin esite ja Nationaal Archief',
@@ -7717,8 +7698,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa '
         + 'Kloveniersburgwalilla, sillä nykyinen Rijksmuseo avattiin vasta 1885; '
-        + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; '
-        + 'puhdistukset tehtiin vasta 1946–47 ja 1975–76.',
+        + 'nykyään taulu on siellä. Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.',
       kuvat: [
         {
           tiedosto: 'The Night Watch - cropped.jpg',
@@ -7754,8 +7734,7 @@ export const NAHTAVYYSJUTUT = {
         + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
         + 'valurautakehyksisiksi.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 '
-        + 'vuotta, ja seurakunta valmistautui sen kaksisataavuotisjuhlaan 1875.',
+        + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 vuotta, ja kaksi vuotta myöhemmin se täytti kaksisataa vuotta.',
       kuvat: [
         {
           tiedosto: 'Exterieur OVERZICHT VOORGEVEL - Amsterdam - 20311779 - RCE.jpg',
@@ -7774,13 +7753,10 @@ export const NAHTAVYYSJUTUT = {
     'Montelbaanstoren': {
       aika: '1606',
       nosto: 'nosto-amsterdamin-montelbaanstoren',
-      teksti: 'Montelbaanstoren on yksi Amsterdamin tunnetuimmista torneista. Hendrick '
-        + 'de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja '
-        + 'renessanssihuipun, johon tuli kello ja useita soittokelloja. Vuonna 1610 '
+      teksti: 'Montelbaanstoren on vanha puolustustorni Oudeschansin varrella. Luultavasti Hendrick de Keyser suunnitteli sille vuonna 1606 kahdeksankulmaisen tiiliosan ja renessanssihuipun, johon tuli kello ja soittokelloja. Vuonna 1610 '
         + 'torni kallistui ja se vedettiin suoraksi. Se on noin 48 metriä korkea.'
         + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella yli '
-        + 'kaksisataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta '
+        + 'Isoisäsi matkavuonna 1873 torni oli seissyt Oudeschansin varrella jo yli kolmesataa vuotta. Vuonna 1852 se oli ollut purettavaksi, mutta '
         + 'pelastui. Torniin tuli Stadswaterkantoor, kaupungin vesikonttori, '
         + 'vasta 1878.',
       kuvat: [
@@ -7808,7 +7784,7 @@ export const NAHTAVYYSJUTUT = {
     'Waag op de Dam': {
       aika: '1560-luku–1808',
       teksti: 'Damin aukiolla seisoi Waag, vaaka, jossa punnittiin torilla myytäviä tavaroita. Vaakahuone '
-        + 'rakennettiin 1560-luvulla. Yläkerrassa oli kaupungin vartiosto ja asevarasto.'
+        + 'rakennettiin 1560-luvulla.'
         + '\n\n'
         + 'Hollannin kuningas Louis Bonaparte muutti viereisen raatihuoneen palatsikseen ja käski purkaa '
         + 'vaa\'an, joka oli hänen mielestään tiellä. Vaaka purettiin vuonna 1808.'
@@ -7825,7 +7801,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Sarphati, ja arkkitehti Cornelis Outshoorn suunnitteli sen. Palatsi avattiin 16. elokuuta 1864. '
         + 'Siellä pidettiin näyttelyitä, konsertteja sekä ooppera- ja teatteriesityksiä.'
         + '\n\n'
-        + 'Huhtikuussa 1929 palatsi paloi muutamassa tunnissa. Sitä ei rakennettu uudelleen. Palatsin tontilla on '
+        + 'Huhtikuussa 1929 palatsi tuhoutui tulipalossa. Sitä ei rakennettu uudelleen. Palatsin tontilla on '
         + 'nykyään Alankomaiden keskuspankin, De Nederlandsche Bankin, pääkonttori.'
         + '\n\n'
         + 'Isoisäsi vuonna 1873 palatsi oli yhdeksän vuotta vanha ja täydessä käytössä.',
