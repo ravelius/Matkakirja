@@ -108,10 +108,9 @@ export const FOKUSKOHTEET_FRA = [
       europe: { x: 256.0, y: 608.5 },
     },
     // teksti lasketaan jaksoista tiedoston lopussa (Tuileries-koe).
-    // Tuileries-koe: jaksojen lähteet docs/raportit/tuileries-koe-teksti-20261117.md kohta 2 (kaksi lähdettä per väite).
-    lahde: 'en-Wikipedia "Tuileries Palace", johdanto, tietolaatikko ja '
-      + 'osio "Destruction during the Paris Commune" (tarkistettu '
-      + '27.8.2026).',
+    // Tuileries-koe (KK 11.38): jaksojen lähteet SK:n raportin kohdasta 2 (kaksi itsenäistä lähdettä per väite).
+    lahde: 'Matkakirjan oma teksti · lähteinä napoleon.org, Mérimée PA00099072, paris.fr ja Louvre '
+      + '(docs/raportit/tuileries-koe-teksti-20261117.md, tarkistettu 17.11.2026).',
     /*
      * JAKSOT (TUILERIES-KOE; omistaja 17.11.2026 klo 10.58 ja 10.51, KK 11.11
      * ja 11.16; suunnitelma scratchpad/keskustelukanava/suunnitelmat/
