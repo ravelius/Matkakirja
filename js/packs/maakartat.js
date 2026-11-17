@@ -6816,7 +6816,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pietarinkirkko', tagi: 'uskonnot', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
       { nimi: 'Castel Sant’Angelo', tagi: 'historia', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
       { nimi: 'Espanjalaiset portaat', tagi: 'historia', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
-      { nimi: 'Trevin suihkulähde', tagi: 'kulttuuri', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi', nosto: ['nosto-rooman-kolikko', 'nosto-aqua-virgo'] },
+      // Yksi merkki: Trevin tarina (kolikot + nähtävyys) on kohteen `trevi` jaksot (fokuskohteet-ita.js); Aqua Virgo jää omaksi lyhyeksi tarinaksi.
+      { nimi: 'Trevin suihkulähde', tagi: 'kulttuuri', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi', nosto: ['trevi', 'nosto-aqua-virgo'] },
       { nimi: 'Pantheon', tagi: 'uskonnot', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       /*
        * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:

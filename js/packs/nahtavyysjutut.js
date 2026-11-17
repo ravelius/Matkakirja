@@ -10822,53 +10822,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Trevin suihkulähde': {
-      aika: '1732–1762',
-      teksti: 'Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset '
-          + 'johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää '
-          + 'Aqua Virgo -vesijohtoa pitkin, joka kulki lähes koko '
-          + 'matkansa maan alla. Nykyinen upea lähde on paljon '
-          + 'uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen '
-          + '1732, ja se valmistui vasta 1762, 11 vuotta hänen '
-          + 'kuolemansa jälkeen.'
-        + '\n\n'
-        + 'Lähde on barokkityylinen suihkulähde. Keskellä '
-          + 'komeilee merenjumala Oceanus simpukkavaunuillaan, joita vetävät '
-          + 'kaksi merihevosta — toinen rauhallinen ja toinen villi.'
-        + '\n\n'
-        + 'Perinteen mukaan olan yli lähteeseen heitetty kolikko '
-          + 'takaa paluun Roomaan. Kolikoita kertyy paljon: vuonna 2022 '
-          + 'niitä kerättiin altaasta yli 1,4 miljoonan euron arvosta, ja '
-          + 'ne lahjoitetaan hyväntekeväisyysjärjestölle, joka auttaa '
-          + 'vähävaraisia. '
-          + 'Lähde on nähty monissa elokuvissa, kuuluisimmin filmissä '
-          + 'La Dolce Vita (1960), jossa näyttelijä kahlaa iltapuvussa '
-          + 'keskellä allasta.',
-      vuodet: [
-        { kohta: 'vuodesta 19 eaa.', vuosi: '19 eaa.', selite: 'vettä johdettu' },
-        { kohta: 'vasta 1762', vuosi: '1762', selite: 'valmistui' },
-        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'kolikot kerättiin' },
-        { kohta: '(1960', vuosi: '1960', selite: 'La Dolce Vita' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Fontaine Trevi - Rome.jpg',
-          lyhyt: 'Trevin suihkulähde valmistui 1762, yksitoista vuotta Salvin kuoltua.',
-          selite: 'Nicola Salvi aloitti Trevin suihkulähteen 1732, ja se valmistui 1762, yksitoista vuotta hänen kuolemansa jälkeen.',
-          lahde: 'Wilfredor, Wikimedia Commons (CC0)',
-        },
-        {
-          tiedosto: 'Fountain of Trevi, Rome, Italy LOC 4755209370.jpg',
-          lyhyt: 'Noin 1890-luvulla Trevin lähde oli jo sata vuotta vanha, vesi tulee Aqua Virgo -vesijohdosta.',
-          selite: 'Noin 1890-luvun valokuvan aikaan lähde oli jo yli sata '
-            + 'vuotta vanha: sen vesi tulee Aqua Virgo -vesijohtoa pitkin, '
-            + 'jonka roomalaiset rakensivat jo vuonna 19 eaa. ja joka '
-            + 'kulki lähes koko matkansa maan alla.',
-          lahde: 'Tuntematon (Library of Congress -kokoelma), Wikimedia Commons (Public domain)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Pantheon: {
       aika: 'n. 126',
       teksti: 'Samalla paikalla seisoi ensin toinen temppeli, jonka '
@@ -11223,37 +11176,6 @@ export const NAHTAVYYSJUTUT = {
      * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
      * voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Kolikko olan yli': {
-      aika: '1762',
-      nosto: 'nosto-rooman-kolikko',
-      teksti: 'Trevin suihkulähteestä kerrotaan tarina: kun heittää kolikon olan '
-        + 'yli, palaa vielä Roomaan. Se on legenda, ei tosiasia. Kolikoita '
-        + 'kertyy paljon, ja vuonna 2022 niitä kerättiin altaasta yli 1,4 '
-        + 'miljoonan euron arvosta.'
-        + '\n\n'
-        + 'Kolikot kerätään altaan pohjasta talteen ja lahjoitetaan '
-        + 'Caritakselle, joka auttaa kaupungin vähävaraisia.'
-        + '\n\n'
-        + 'Isoisäsi matkavuonna 1873 Trevin suihkulähde oli jo valmis, sillä '
-        + 'se valmistui vuonna 1762, ja sen vesi tuli Aqua Virgo -akveduktia '
-        + 'pitkin. Siitä ei ole varmaa tietoa, oliko kolikon heittäminen silloin jo tapana.',
-      vuodet: [
-        { kohta: 'vuonna 2022', vuosi: '2022', selite: 'kolikot kerättiin' },
-        { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
-        { kohta: 'vuonna 1762', vuosi: '1762', selite: 'lähde valmistui' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Trevi Fountain - Roma.jpg',
-          lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
-          selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo '
-            + 'Poli -palatsin päätyseinä, jonka kaaren alla seisoo meren '
-            + 'jumala Oceanus.',
-          lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Matkakirjan oma teksti · lähteinä Turismo Roma, ANSA, Reuters, QuiFinanza, Finestre sull\'Arte ja CoinsWeekly',
-    },
     'Areenan kellari': {
       aika: '1874–1875',
       nosto: 'nosto-colosseumin-kellari',
