@@ -1064,6 +1064,127 @@ export const FOKUSKOHTEET_FRA = [
       fakta: 'Heinäkuussa 1898 ilmoitettu alkuaine sai nimensä Puolasta; joulukuussa ilmoitettu toinen oli radium.',
     },
   },
+  {
+    /*
+     * LUMIÈRE 1895, GRAND CAFÉ (Pariisin nostot uudella tavalla, SK 18.11.2026; KK 00.40 hyväksyi
+     * tekstin). Yksi merkki, yksi nosto: kartan "Grand Café" (maakartat.js; entinen "Lumière 1895", jonka nimellä hetken piilopiste jää) avaa tämän.
+     * 48,8703 N / 2,3294 E (Grand Café, 14 boulevard des Capucines; sama kuin hetken piste).
+     * Historian hetki `lumiere-elokuva-1895` ja sen lehtisivu JÄÄVÄT (KK-sääntö, kuten Eiffel 1888):
+     * piilopiste maakartat.js:ssä. Teksti ja lähdetaulukko: docs/raportit/lumiere-nosto-teksti-20261118.md.
+     * KK 00.40: "Lumièren veljekset patentoivat" (patentti 13.2.1895 haettiin molempien nimissä:
+     * DPMA FR 245.032, 1895-lehden tutkimus OpenEdition; Google Arts sanoo vain Louis keksijäksi),
+     * "vain kolmisenkymmentä" (Institut Lumière 33, muut 35: ristiriitaa ei ratkaista luvulla).
+     */
+    id: 'lumiere-1895',
+    nimi: 'Grand Café',
+    tyyppi: 'kulttuuri',
+    symboli: 'kulttuuri',
+    // Pulun kysymykset kolme (vastauksia ei kirjoiteta).
+    kysymykset: [
+      'Miksi laite oli sekä kamera että projektori?',
+      'Miksi taikuri Méliès halusi ostaa laitteen?',
+      'Miksi Grand Cafén kellari valittiin näytöspaikaksi?',
+    ],
+    korostukset: ['Georges Méliès', 'Hôtel Scribe'],
+    nappi: 'Kellari, jossa kuvat alkoivat liikkua',
+    laudat: {
+      maailmankartta: { x: 5911, y: 1439 },
+      europe: { x: 255.9, y: 608.3 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Hérodote, Paris ZigZag, Guinness World Records, '
+      + 'Science and Media Museum, Google Arts & Culture ja Un jour de plus à Paris (tarkistettu 18.11.2026).',
+    otsikko: 'Lumière 1895 — kuvat alkavat liikkua',
+    /*
+     * Äänitteitä ei ole vielä: `aanikansio` ja jaksojen `aanite` lisätään, kun Äänittäjä on
+     * äänittänyt (äänitysjonon rivit ovat data/aanitysjono.tsv:ssä). Siihen asti jaksot
+     * kuuluvat suoratoistona.
+     */
+    jaksot: [
+      { osa: 'nimi', teksti: 'Grand Café.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Kävelin tänään Capucines-bulevardia pitkin. '
+          + 'Ihmisiä oli niin paljon, että jouduin astumaan kadulle.',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Lumièren veljekset patentoivat keksintönsä helmikuussa 1895. '
+          + 'Laite oli kamera ja projektori yhdessä, ja sillä kuvattu filmi oli noin minuutin pituinen.',
+        kuva: 'veljekset',
+        vuodet: [{ vuosi: '1895', selite: 'patentti', kohta: 'helmikuussa 1895' }],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Saman vuoden joulukuun 28. päivänä Grand Cafén kellarisalissa Capucines-bulevardilla '
+          + 'pidettiin maksullinen näytös. Lippu maksoi frangin, ja illalla katsojia oli vain kolmisenkymmentä. '
+          + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukesi, ja työläiset kävelivät ulos.',
+        kuva: 'juliste',
+        vuodet: [{ vuosi: '1895', selite: 'Grand Cafén näytös', kohta: 'joulukuun 28. päivänä' }],
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Kutsuvieraiden joukossa oli taikuri Georges Méliès. Hän halusi ostaa laitteen, '
+          + 'mutta Lumièret eivät myyneet sitä. Puhe levisi, ja kadulle syntyi jono. '
+          + 'Méliès alkoi tehdä omia elokuviaan.',
+        kuva: 'melies',
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Grand Cafén paikalla on nykyään Hôtel Scribe. '
+          + 'Sen ravintoloiden sisäänkäynnillä on laatta, joka kertoo näytöksestä.',
+        kuva: 'laatta',
+      },
+    ],
+    /*
+     * jaksokuvat: kaikki jo olemassa olevia (ei uusia generoituja kuvia): havainnekuva hetken
+     * ämpärikuvasta, muut Commonsin vapaita kuvia. Viimeinen kuva on aito nykyvalokuva.
+     */
+    jaksokuvat: {
+      veljekset: {
+        tiedosto: 'Fratelli Lumiere.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Auguste ja Louis Lumière noin 1895',
+        lahde: 'Wikimedia Commons (public domain)',
+      },
+      juliste: {
+        tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Lumièren Cinématographen mainos 1895',
+        lahde: 'Cinématographe Lumièren mainos 1895, Wikimedia Commons (public domain)',
+      },
+      melies: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Georges Méliès katsoo, kun valkokankaalla tehtaan portti aukeaa',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Faktat: Hérodote ja Science and Media Museum; '
+          + 'Mélièsin ilme on dramatisoitu.',
+      },
+      laatta: {
+        tiedosto: 'Plaque Lumière.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Laatta Boulevard des Capucinesilla kertoo näytöksestä',
+        lahde: 'Tangopaso, Wikimedia Commons (public domain)',
+      },
+    },
+    /*
+     * KYSYMYS (yksi per paikka; KK 17.11.2026 "kysymystehtävät säilyvät"): vastaus on kertomuksessa
+     * (jakso 3), ei vuosiriveissä eikä kuvateksteissä.
+     */
+    visa: {
+      kysymys: 'Paljonko lippu maksoi Grand Cafén näytökseen?',
+      vaihtoehdot: [
+        'Puoli frangia',
+        'Yksi frangi',
+        'Viisi frangia',
+      ],
+      oikea: 1,
+      fakta: 'Näytös pidettiin Grand Cafén kellarissa Pariisissa, ja lippu maksoi yhden frangin.',
+    },
+  },
 ];
 
 /*

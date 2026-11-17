@@ -5410,6 +5410,8 @@ export const KAUPUNKIKARTAT = {
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
       { nimi: 'Invalidit', tagi: 'historia', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
+      // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `lumiere-1895` (fokuskohteet-fra.js); entinen tarinapaikka "Lumière 1895" (hetki jää piilopisteenä alempana).
+      { nimi: 'Grand Café', tagi: 'kulttuuri', lat: 48.8703, lon: 2.3294, wiki: 'Salon Indien du Grand Café', nosto: 'lumiere-1895' },
       // Yksi nosto (Pariisin nostot uudella tavalla 18.11.2026): fokuskohde `curie-1898` (fokuskohteet-fra.js); entinen tarinapaikka "Curie 1898" (hetki jää piilopisteenä).
       { nimi: 'Curien vaja', tagi: 'tiede', lat: 48.842, lon: 2.3476, wiki: 'ESPCI Paris', nosto: 'curie-1898' },
       // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `sainte-chapelle` (Kaulanauha 1785 jaksoina).
@@ -5538,10 +5540,10 @@ export const KAUPUNKIKARTAT = {
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
+      // Hetki lumiere-elokuva-1895 jää (KK-sääntö, kuten Eiffel-torni 1888): piilopiste samassa pisteessä, ei omaa kylttiä.
       {
-        nimi: 'Lumière 1895', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
-        nosto: 'hetki-lumiere-elokuva-1895',
-        nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
+        nimi: 'Lumière 1895', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
+        nosto: 'hetki-lumiere-elokuva-1895', nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
       /*
        * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 5, 13.9.2026;
