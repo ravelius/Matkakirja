@@ -1198,8 +1198,8 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'kulttuuri',
       visa: PIAF_VISA,
       lunastus: [
-        'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
-          + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
+        'Édith Piaf syntyi Pariisissa joulukuussa 1915. Tarinan mukaan '
+          + 'hän syntyi Bellevillessä kadulla talon portaille, vaikka syntymätodistuksessa '
           + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
           + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — '
           + 'piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse.',

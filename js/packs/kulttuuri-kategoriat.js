@@ -7396,10 +7396,10 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Lumière 1895',
       johdanto: 'Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. '
-        + 'joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama '
-        + 'kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan '
-        + 'valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa '
-        + 'koneen.',
+        + 'joulukuuta 1895 maksullisen elokuvanäytöksen, jota pidetään elokuvan '
+        + 'syntyhetkenä: muutama kymmenen ihmistä maksoi frangin ja näki tehtaan '
+        + 'portin aukeavan valkokankaalla — yleisön joukossa taikuri, joka halusi '
+        + 'heti ostaa koneen.',
       tehtava: {
         kysymys: 'Mitä Lumièren veljekset vastasivat Georges Mélièsille, kun tämä '
           + 'halusi ostaa Cinématographen?',
@@ -7420,17 +7420,17 @@ export const KULTTUURI_KATEGORIAT = {
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
           teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
-            + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
-            + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
-            + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
-            + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
-            + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
-            + 'Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja '
-            + 'työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on '
-            + '46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin '
-            + 'kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka '
-            + 'kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja '
-            + 'Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
+            + 'Pariisin Grand Cafén kellarisalissa maksullisen elokuvanäytöksen, '
+            + 'jota pidetään elokuvan syntyhetkenä, ja muutama kymmenen katsojaa '
+            + 'näkee kankaalla liikkuvan kuvan. Miten seinä voi liikkua? '
+            + 'Boulevard des Capucines\'illa muutama kymmenen ihmistä on maksanut '
+            + 'frangin nähdäkseen jotakin, jota mainoksessa kutsutaan '
+            + 'Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa '
+            + 'aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, '
+            + 'koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä '
+            + 'noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, '
+            + 'joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste '
+            + 'ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän '
             + 'laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että '
             + 'heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet filmejä '
             + 'jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '

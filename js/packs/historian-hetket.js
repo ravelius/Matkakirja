@@ -4647,8 +4647,8 @@ export const HISTORIAN_HETKET = [
     lat: 48.8703, lon: 2.3294,
     kuvaversio: 4,
     teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
-      + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
-      + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+      + 'Pariisin Grand Cafén kellarisalissa maksullisen '
+      + 'elokuvanäytöksen, jota pidetään elokuvan syntyhetkenä, ja muutama kymmenen katsojaa näkee kankaalla '
       + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
       + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
       + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '
@@ -4723,7 +4723,7 @@ export const HISTORIAN_HETKET = [
       + 'kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'pariisi' },
     lehtiJohdanto: 'Veljekset Lumière pitivät Pariisin Grand Cafén kellarissa 28. '
-      + 'joulukuuta 1895 ensimmäisen maksullisen elokuvanäytöksen: muutama '
+      + 'joulukuuta 1895 maksullisen elokuvanäytöksen, jota pidetään elokuvan syntyhetkenä: muutama '
       + 'kymmenen ihmistä maksoi frangin ja näki tehtaan portin aukeavan '
       + 'valkokankaalla — yleisön joukossa taikuri, joka halusi heti ostaa '
       + 'koneen.',

@@ -6441,8 +6441,8 @@ export const NAHTAVYYSJUTUT = {
     },
     'Piaf ja Django': {
       nosto: 'nosto-pariisi-soi',
-      teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
-        + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
+      teksti: 'Édith Piaf syntyi Pariisissa joulukuussa 1915. Tarinan mukaan '
+        + 'hän syntyi Bellevillessä kadulla talon portaille, vaikka syntymätodistuksessa '
         + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
         + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf '
         + '— piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
@@ -6779,8 +6779,8 @@ export const NAHTAVYYSJUTUT = {
     'Lumière 1895': {
       nosto: 'hetki-lumiere-elokuva-1895',
       teksti: 'Veljekset Auguste ja Louis Lumière pitävät 28. joulukuuta 1895 '
-        + 'Pariisin Grand Cafén kellarisalissa ensimmäisen maksullisen '
-        + 'elokuvanäytöksen, ja muutama kymmenen katsojaa näkee kankaalla '
+        + 'Pariisin Grand Cafén kellarisalissa maksullisen '
+        + 'elokuvanäytöksen, jota pidetään elokuvan syntyhetkenä, ja muutama kymmenen katsojaa näkee kankaalla '
         + 'liikkuvan kuvan. Miten seinä voi liikkua? Boulevard des '
         + 'Capucines\'illa muutama kymmenen ihmistä on maksanut frangin '
         + 'nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. '

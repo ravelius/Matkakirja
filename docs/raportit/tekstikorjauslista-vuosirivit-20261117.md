@@ -3,8 +3,8 @@
 KK 17.10: tekstierot eivät estä rivejä; korjataan seuraavalla tekstikierroksella, **ei äänityksiä nyt**. Lähteet: lähdetarkistajien raportit (Wikipedia en/fr = yksi lähde).
 
 ## Korjattava
-1. **Lumière 1895** (`hetki-lumiere-elokuva-1895`, Pariisi): "ensimmäisen maksullisen elokuvanäytöksen". Skladanowskyn veljekset esittivät maksavalle yleisölle Berliinissä jo 1.11.1895. Ehdotus: "yhden ensimmäisistä maksullisista näytöksistä" tai "ensimmäisen maksullisen Lumièren näytöksen", tai poista "ensimmäinen". Vuosi 1895 pitää.
-2. **Piaf ja Django** (`nosto-pariisi-soi`): "Édith Piaf syntyi Bellevillessä". Syntymätodistuksessa Hôpital Tenon (en.wiki); teksti jo kertoo tarinan mukaan kadulla ja todistuksessa sairaala, joten ehdotus: "syntyi Pariisissa (Bellevillen tienoilla tarinan mukaan)" tai tarkista lähde.
+1. **[TEHTY, PR Pariisi Piaf/Lumière 17.11.]** **Lumière 1895** (`hetki-lumiere-elokuva-1895`, Pariisi): "ensimmäisen maksullisen elokuvanäytöksen". Skladanowskyn veljekset esittivät maksavalle yleisölle Berliinissä jo 1.11.1895. Ehdotus: "yhden ensimmäisistä maksullisista näytöksistä" tai "ensimmäisen maksullisen Lumièren näytöksen", tai poista "ensimmäinen". Vuosi 1895 pitää.
+2. **[TEHTY, sama PR]** **Piaf ja Django** (`nosto-pariisi-soi`): "Édith Piaf syntyi Bellevillessä". Syntymätodistuksessa Hôpital Tenon (en.wiki); teksti jo kertoo tarinan mukaan kadulla ja todistuksessa sairaala, joten ehdotus: "syntyi Pariisissa (Bellevillen tienoilla tarinan mukaan)" tai tarkista lähde.
 3. **Lavoisier 1780** (`hetki-lavoisier-laboratorio-1780`): "syntyy noin vuonna 1780 moderni kemia" — mikään lähde ei dateeraa modernin kemian syntyä vuoteen 1780 (Arsenalin työ 1775–1792; happi nimetty 1779; Traité 1789). Päätettävä: mitä teksti väittää vuodesta; ehdotus "1770-luvun lopulla" tai "Arsenalin laboratoriossa 1775–1792". Rivi 1780 on poistettu tästä syystä.
 4. **Trocadéro** (`hahmotelma-trocadero`): "vuosina 1876–1878" vs muun materiaalin "marraskuusta 1876 kesäkuuhun 1878"; vain wikit tukevat alkuvuotta 1876 (valmistumis­vuosi 1878 on varma, avajaiset 1.5.1878). Rivi on tehty vuodelle 1878. Valittava yksi muoto kaikkialle.
 
