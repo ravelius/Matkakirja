@@ -1,6 +1,6 @@
 # aaniluvat-ja-aaniportti · vastuu ÄÄ · tarkistettu 15.11.2026
 
-TAVOITE: Pelaaja kuulee tasaista, selvää ja säröttömää ääntä. Jokainen maksullinen ajo on luvallinen ja hinnaltaan tiedossa, ja tulos tarkistetaan ennen kuin kukaan kuulee sen.
+TAVOITE: Pelaaja kuulee tasaista, selvää ja säröttömää ääntä. Jokainen maksullinen ajo on luvallinen ja hinnaltaan tiedossa, ja paketti läpäisee teknisen portin ennen vientiä.
 
 SÄÄNNÖT:
 1. Puheäänityksen ajon alle 3 % kuukauden kiintiöstä luvittaa ja tarkastaa KK, myös uusinnan, koeoton ja uuden äänen. Iso lista jaetaan osiin, ja seuraava osa ajetaan vasta edellisen portin jälkeen; portin hylkäämän palan uusinta kuuluu samaan ajoon. Muuta uusintaa rooli ei hyväksy itse, ja kulutus kerrotaan KK:lle jälkikäteen. [R-5.1] [R-5.2] [P-261112-17]
@@ -13,11 +13,10 @@ SÄÄNNÖT:
 8. Maksullisen generoinnin raakatuotos tallennetaan ennen käsittelyä versioituna äänimastereihin (T7), joista on varmuuskopio; raakaa ei poisteta eikä ylikirjoiteta. [R-5.13]
 9. Ääni tilataan ja tasoitetaan PCM:nä ja pakataan kerran masterista; true peak enintään −1 dBTP. Luentapalat tasataan samaan kiinteään keskitasoon, ei huipun mukaan. [R-5.10] [P-261111-15]
 10. Jokainen äänipaketti läpäisee teknisen ääniportin ennen vientiä (huippu, leikkautuminen, hiljaisuus, saman perheen kovuusero, kieli suomi, alignment). Poikkeus vain perusteltuna portin listalla. [R-5.11] [P-261115-21]
-11. Elevenin puheotoille ei ajeta tekoälykuuntelua, litterointivertailua eikä sanaporttia: omistaja luottaa Eleveniin. Ei koske sävelmäotteita eikä tehosteita. [P-261115-21]
-12. Gemini-kuuntelua ei käytetä koskaan missään ajossa; sitä kutsuva ajastettu ajo pysäytetään ja kerrotaan KK:lle. [P-261117-15]
+11. Äänityksiä ei kuunnella tarkistukseksi eikä niistä tehdä tarkistusraporttia; Gemini-kuuntelua ei käytetä koskaan. Jäävät: tekstin kuiva-ajo KK:lle ennen äänitystä, esitekstin leikkaus, tekninen portti (10) ja viennin onnistuminen. Kuuntelua kutsuva ajo pysäytetään ja kerrotaan KK:lle. [P-261117-15] [P-261117-16]
 
 EI VIKA:
-- Omistaja ei ole kuullut puheäänitystä: KK:n tarkastus riittää.
+- Omistaja ei ole kuullut puheäänitystä, eikä kukaan ole kuunnellut sitä.
 
 TEKOTAPA:
 - Portti proto-3d/tyokalut/aaniportti.py, pakollisena vaiheena julkaisijan vie-paketti.sh.
