@@ -88,6 +88,7 @@ export function maakuntaPisteelle(alueetMaittain, iso, lon, lat, { lahin = true 
 export function rikastaElavaKartta(kokoelmat, taulukko) {
   const alueet = kokoelmat.maakuntarajat?.alkiot ?? [];
   const alueetMaittain = new Map();
+  const alueNimet = new Map(alueet.map((a) => [a.id, a.nimi ?? null]));
   for (const a of alueet) {
     if (!alueetMaittain.has(a.iso3)) alueetMaittain.set(a.iso3, []);
     alueetMaittain.get(a.iso3).push(a);
@@ -100,8 +101,12 @@ export function rikastaElavaKartta(kokoelmat, taulukko) {
       ? maakuntaPisteelle(alueetMaittain, v.maa, v.lon, v.lat, { lahin: v.laji !== 'meri' }) : null;
     v.maakunta = m?.id ?? null;
     v.maakuntaLahde = m?.lahde ?? null;
+    // Skeema 1.72 (nostovalikon maataso, suunnitelma 20261117-nostovalikko kohta 5): maakunnan suomenkielinen nimi
+    // väliotsikoksi ilman, että natiivi jäsentää koko maakuntarajat-kokoelman.
+    v.maakuntaNimi = m ? alueNimet.get(m.id) ?? null : null;
   }
   kokoelmat.karttavalot.kuvaus += ' Skeema 1.45 (Elävä kartta, vain natiivi): kokoluokka = paakohde | kohde | pieni '
     + '(kokoluokkaLahde data = js/packs/nostojen-kokoluokat.js, taso = taso 1/2/3), maakunta = maakuntarajojen alue, jossa valon '
-    + `piste on (maakuntaLahde sisalla | lahin = lähin saman maan alue ≤ ${LAHIN_KM} km; meri ei saa maakuntaa; null = ei maakuntaa).`;
+    + `piste on (maakuntaLahde sisalla | lahin = lähin saman maan alue ≤ ${LAHIN_KM} km; meri ei saa maakuntaa; null = ei maakuntaa). `
+    + 'Skeema 1.72: maakuntaNimi = maakuntarajat-alueen nimi suomeksi (nostovalikon maakuntaryhmän otsikko) tai null.';
 }
