@@ -4923,8 +4923,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Wienin kaupungin historiasivuston mukaan Freihaus-kortteli seisoi yhä, koska sen purkaminen estyi vuoden 1873 pörssiromahduksessa.',
       vuodet: [
         { kohta: 'syyskuuta 1791', vuosi: '1791', selite: 'ensi-ilta' },
-        { kohta: 'teatteria 1789', vuosi: '1789', selite: 'johtaminen alkoi' },
-        { kohta: 'kesäkuuta 1801', vuosi: '1801', selite: 'uusi teatteri auki' },
+        { kohta: 'teatteria 1789', vuosi: '1789', selite: 'Schikaneder johtaja' },
+        { kohta: 'kesäkuuta 1801', vuosi: '1801', selite: 'teatteri avattiin' },
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
       ],
       kuvat: [
@@ -4997,7 +4997,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Isoisäsi vuonna 1873 porttia ei ollut ollut enää yli kymmeneen vuoteen.',
       vuodet: [
-        { kohta: 'vuoden 1857', vuosi: '1857', selite: 'muurin purkuilmoitus' },
+        { kohta: 'vuoden 1857', vuosi: '1857', selite: 'purusta ilmoitettiin' },
         { kohta: 'vuonna 1858', vuosi: '1858', selite: 'muurien purku alkoi' },
         { kohta: 'vuosina 1858–1859', vuosi: '1858–1859', selite: 'portti purettiin' },
         { kohta: 'vuonna 1873', vuosi: '1873', selite: 'isoisän vuosi' },

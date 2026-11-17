@@ -5,7 +5,8 @@ Sama menetelmä ja KK:n linja kuin Lontoossa ja Amsterdamissa (PR 7048, 7049): "
 Koneluettava lähde: `docs/raportit/noston-vuodet-wien-20261117.json`. Skriptivalidointi: **21 nostoa, 74 riviä, 0 virhettä**; koko `npm test` vihreä. Ei ääntä.
 
 ## Tarkistukset (17.11.2026)
-- **Riippumaton tarkistaja** (Sonnet, vain tekstit ja rivit): 77 riviä, 2 VIRHE + 6 epätarkkaa → selitteet korjattu: "johtaminen alkoi" (Schikaneder 1789; "alkaen"), "uusi teatteri auki" (Theater an der Wien 1801, ei Freihaus), "muurien purku alkoi" / "muurin purkuilmoitus" (virke koskee muuria, ei porttia), "Euroopan neuvosto" (1972), "esitys kiellettiin" (1785, saksankielinen esitys Wienissä).
+- **Riippumaton tarkistaja** (Sonnet, vain tekstit ja rivit): 77 riviä, 2 VIRHE + 6 epätarkkaa → selitteet korjattu: "Schikaneder johtaja" (Schikaneder 1789; "alkaen"), "teatteri avattiin" (Theater an der Wien 1801, ei Freihaus), "muurien purku alkoi" / "purusta ilmoitettiin" (virke koskee muuria, ei porttia), "Euroopan neuvosto" (1972), "esitys kiellettiin" (1785, saksankielinen esitys Wienissä).
+- **PT 17.53: kolme selitettä siistimmäksi** (Schikaneder johtaja, teatteri avattiin, purusta ilmoitettiin). PT:n ehdottamat pidemmät muodot (22/22/28 merkkiä) ylittäisivät testin rajan 20 merkkiä, joten käytetty lyhyempiä.
 - **Vuosien lähdetarkistus** (Sonnet; Wikipedia = yksi lähde): lähes kaikki OK 2–3 lähdettä. **Poistettu rivit, joita lähteet eivät tue:** Belvedere 1776 (päätös galleriasta 1776, avajaiset 1777, yleisölle 1781; virke "1776 julkinen galleria" ei täsmää), Taikahuilu 1800 "haki lupaa" (lupa myönnetty jo 1786; 1800 rakennustyön alku), Vanha Burgtheater 1741 (en-wiki ja Austria-Forum 1741, WGW avajaiset 1748: lähteet eroavat).
 - **Vain yksi lähde, rivi jätetty (KK päättää):** Jättiratas 1920–1985 (en-Wikipedia), Altes Kärntnertor 1858–1859 portti purettiin (Wien Geschichte Wiki). Ohut tuki: Dianabad 1917 (WGW, de-wiki). Epätarkka: Schönbrunn 1696 (WGW 1695/96; rakentamisen alku, Fischerin ensimmäinen suunnitelma jo 1688–90).
 - **Tarinan oma vuosi, ei historiaväite:** "isoisän matka/vuosi 1873" (Kärntnertor, Vanha Burgtheater, Heinrichshof, Altes Kärntnertor, Klimt, Saliera, Beethoven, Mozart, Praterin jättiratas, Lipizzanit, Taikahuilu, Tonava kaunoinen); Vuoristovesijohdon oma vuosi 24.10.1873 on historiaväite (OK 3 lähdettä).
@@ -59,7 +60,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-wien-20261117.json`. Skriptiva
 
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
-| – muurin purkuilmoitus 1857 | vuoden 1857 | Muurien purkamisesta ilmoitettiin vuoden 1857 lopussa, ja purku alkoi vuonna 1858. |
+| – purusta ilmoitettiin 1857 | vuoden 1857 | Muurien purkamisesta ilmoitettiin vuoden 1857 lopussa, ja purku alkoi vuonna 1858. |
 | – muurien purku alkoi 1858 | vuonna 1858 | Muurien purkamisesta ilmoitettiin vuoden 1857 lopussa, ja purku alkoi vuonna 1858. |
 | – portti purettiin 1858–1859 | vuosina 1858–1859 | Portti purettiin vuosina 1858–1859. |
 | – isoisän vuosi 1873 | vuonna 1873 | Isoisäsi vuonna 1873 porttia ei ollut ollut enää yli kymmeneen vuoteen. |
@@ -189,8 +190,8 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-wien-20261117.json`. Skriptiva
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
 | – ensi-ilta 1791 | syyskuuta 1791 | Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Freihaustheaterissa Wiedenin esikaupungissa. |
-| – johtaminen alkoi 1789 | teatteria 1789 | Emanuel Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja esitti itse linnustaja Papagenoa. |
-| – uusi teatteri auki 1801 | kesäkuuta 1801 | Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an der Wien avattiin 13. kesäkuuta 1801. |
+| – Schikaneder johtaja 1789 | teatteria 1789 | Emanuel Schikaneder johti teatteria 1789 alkaen, kirjoitti oopperan sanat ja esitti itse linnustaja Papagenoa. |
+| – teatteri avattiin 1801 | kesäkuuta 1801 | Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an der Wien avattiin 13. kesäkuuta 1801. |
 | – isoisän matka 1873 | matkavuonna 1873 | Isoisäsi matkavuonna 1873 Taikahuilun teatteri ei ollut enää käytössä, sillä Freihaustheaterin viimeinen esitys oli ollut 1801. |
 
 ### Tonava kaunoinen
