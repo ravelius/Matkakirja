@@ -56,7 +56,7 @@ Vanhat Q4 (Bernini muuta), Q5 (Pantheonin oculus): POISTA. Vanhat Q1–Q3 teksti
 > Kyl minä sen tiedän, ettei kivi lennä, vaikka kuinka toivois.
 
 **UUSI (Mistä Rooman muinaisobeliskit ovat alun perin peräisin?)**
-> Tähän en osaa vastata varmasti: nykyisessä tekstissä ei kerrota, mistä Rooman muinaisobeliskit ovat peräisin, enkä halua arvata. Voin kertoa vain Minervan obeliskista: se löytyi vuonna 1665 dominikaanien rakentaessa kirkon puutarhan muuria, ja se on nyt norsun selässä. 
+> Tähän en osaa vastata varmasti, enkä halua arvata. Voin kertoa vain Minervan obeliskista: se löytyi vuonna 1665 dominikaanien rakentaessa kirkon puutarhan muuria, ja se on nyt norsun selässä. 
 >
 > Kyyhkyn silmin obeliskit ovat ennen kaikkea hyviä istumapaikkoja.
 
@@ -103,7 +103,7 @@ Vanhat viisi (yötä päivää, veden alkuperä, 1870-luku, ikuinen kaupunki, ka
 **UUSI (Milloin ensimmäiset nasonet pystytettiin?)**
 > Annas ku mietin. Turismo Roman ja Acean mukaan ensimmäiset nasonet tulivat vuonna 1874, mutta yksi lähde antaa vuodeksi 1872. Ensimmäiset nasonet pystytettiin siis 1870-luvulla. Isoisäsi matkavuonna 1873 nasoneja ei ehkä vielä ollut. Nykyään niitä on kaupungissa noin 2 500.
 >
-> Ei haittaa, vaikka isoisäni olisi ehtinyt juoda vain yhden.
+> Isoisäsi taisi joutua juomaan muualta.
 
 lisaa: pantheonin POISTA ("maailman suurin raudoittamaton betonikupoli", yhden lähteen superlatiivi; ei linkitetä). viemäriin, apenniinien, akveduktien, italian kuningaskuntaan, kirkkovaltion, urbs aeterna, tibullus, romulus, espresson, cappuccinoa, maritozzo POISTA.
 
