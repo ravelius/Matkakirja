@@ -2353,7 +2353,7 @@ export const HISTORIAN_HETKET = [
     iso: 'FRA',
     lat: 48.8503, lon: 2.3635,
     kuvaversio: 4,
-    teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+    teksti: 'Pariisin Arsenaalin laboratoriossa syntyy 1770- ja 1780-luvuilla moderni '
       + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
       + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
       + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
