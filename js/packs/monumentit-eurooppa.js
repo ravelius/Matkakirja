@@ -404,8 +404,8 @@ export const EUROOPAN_KADONNEET = {
         },
         {
           osa: 'kaanne',
-          teksti: 'Hallit purettiin 1970-luvun alussa, vaikka siitä nousi vastarintaa. Jäljelle jäi niin suuri '
-            + 'työmaa, että sitä kutsuttiin yksinkertaisesti reiäksi.',
+          teksti: 'Hallit purettiin 1970-luvun alussa, vaikka moni vastusti purkua. Jäljelle jäi niin suuri '
+            + 'kuoppa, että sitä kutsuttiin Les Hallesin reiäksi.',
           kuva: 'purku',
           hologrammi: 'sammuu',
           hologrammiKohta: 'Hallit purettiin',

@@ -15,7 +15,7 @@ PB = pavillonbaltard.fr "Histoire"; PF = paris.fr ("Ces lieux disparus 2/2", "Ce
 | 4 | kymmenen paviljonkia raudasta ja lasista, 1850-luvulta alkaen | PB (dix pavillons, 1852–1870), PF |
 | 5 | Zolan Le Ventre de Paris ilmestyi 1873; "Pariisin vatsa" | PF, LA |
 | 6 | tukkukauppa Rungisiin 1969 | LA, PZ |
-| 7 | purku 1970-luvun alussa, vastarintaa | PB ("1972 ... forte contestation"), ST/Reuters-arkisto (purku 1971): vuosi pehmennetty |
+| 7 | purku 1970-luvun alussa, moni vastusti | PB ("1972 ... forte contestation"), ST/Reuters-arkisto (purku 1971): vuosi pehmennetty |
 | 8 | "reikä" (le trou des Halles) | ST, PF (le trou de Paris) |
 | 9 | yksi paviljonki (nro 8) Nogent-sur-Marneen | PB (1972 purettu, 1976 pystytys), ST, PZ |
 | 10 | Forum des Halles avattiin 1979 | PZ, ST |
@@ -27,7 +27,7 @@ Pehmennetty/pois: yöllinen tori (ei lähdettä, vain ihmekuvan selite), purkuvu
 2 koukku: Pariisi, 1873. Kävelin Les Hallesin paviljonkien välissä. Yhdessä myytiin vihanneksia, toisessa kalaa ja kolmannessa lihaa.
 3 Les Halles oli Pariisin ruokatori, ja sen historia ulottuu 1100-luvulle. Kuningas Philippe Auguste rakennutti sinne 1183 ensimmäiset katetut hallit. Arkkitehti Victor Baltard suunnitteli ensin kivihallin, mutta Napoleon III halusi metallia. Siksi paikalle rakennettiin 1850-luvulta alkaen kymmenen paviljonkia raudasta ja lasista.
 4 Émile Zola kutsui halleja Pariisin vatsaksi samannimisessä romaanissaan, joka ilmestyi 1873. Vuonna 1969 tukkukauppa muutti Rungisiin, ja hallit jäivät tyhjiksi.
-5 käänne (hologrammi sammuu): Hallit purettiin 1970-luvun alussa, vaikka siitä nousi vastarintaa. Jäljelle jäi niin suuri työmaa, että sitä kutsuttiin yksinkertaisesti reiäksi.
+5 käänne (hologrammi sammuu): Hallit purettiin 1970-luvun alussa, vaikka moni vastusti purkua. Jäljelle jäi niin suuri kuoppa, että sitä kutsuttiin Les Hallesin reiäksi. (KK 22.20)
 6 tänään: Yksi paviljonki purettiin osiin ja pystytettiin uudelleen Nogent-sur-Marneen. Hallien paikalle avattiin vuonna 1979 Forum des Halles -ostoskeskus.
 Vuosirivit: 1183 ensimmäiset hallit · 1873 Zolan romaani · 1969 kauppa Rungisiin · 1979 Forum avattiin.
 Visa: Minne yksi hallien paviljonki pystytettiin uudelleen? Rungisiin / Nogent-sur-Marneen (oikea) / Versailles'hin.
