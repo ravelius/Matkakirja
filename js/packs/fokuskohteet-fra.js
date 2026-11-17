@@ -527,6 +527,136 @@ export const FOKUSKOHTEET_FRA = [
       url: 'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/la-bastille-au-xviiie-siecle',
     },
   },
+  {
+    /*
+     * EIFFEL-TORNI (Pariisin nosto uudella tavalla, SK 17.11.2026; malli Tuileries'n palatsi). Yksi merkki, yksi nosto:
+     * tähän yhdistyvät kohdekartan nähtävyys "Eiffel-torni", tarinapaikka "Eiffel-torni 1888" (hetki eiffel-torni-1888)
+     * ja tarinapaikka "Lustig 1925" (täkynosto lustig-eiffel). Kohdekartan piste "Eiffel-torni" (maakartat.js) avaa tämän
+     * (`nosto: ['eiffel-torni', 'nosto-pariisin-72-nimea']`); 72 nimeä jäi omaksi nostokseen (ei kuulunut tehtävään).
+     * 48,85822 N / 2,2945 E — en-Wikipedia "Eiffel Tower"; laudat samat kuin vanhalla täkynostolla `lustig-eiffel`.
+     * Pelkkä historia ja tapahtumat: tornin voisi näyttää isona kuvana, mutta tarina kulkee kentältä (1873) torniin.
+     * Lähdetaulukko: docs/raportit/eiffel-nosto-teksti-20261117.md.
+     */
+    id: 'eiffel-torni',
+    nimi: 'Eiffel-torni',
+    tyyppi: 'tekniikka',
+    symboli: 'tekniikka',
+    // Pulun kysymykset kolme (vanhoista korteista; vastauksia ei kirjoitettu).
+    kysymykset: [
+      'Miten Eiffel-tornin romukauppa saatiin kuulostamaan uskottavalta?',
+      'Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?',
+      'Oliko Eiffel-tornin purkamisesta oikeasti puhetta?',
+    ],
+    korostukset: ['Victor Lustig', 'Champ de Mars|Champ de Marsin'],
+    nappi: 'Torni, jonka piti seistä vain kaksikymmentä vuotta',
+    laudat: {
+      maailmankartta: { x: 5909.8, y: 1439.5 },
+      europe: { x: 255.3, y: 608.6 },
+    },
+    // teksti lasketaan jaksoista tiedoston lopussa.
+    lahde: 'Matkakirjan oma teksti · lähteinä Mental Floss, Ripley\'s, Today I Found Out ja The Hustle (Lustig), Snippets of Paris, '
+      + 'Science News Explores, Architizer ja Mental Floss (torni) sekä introducingparis.com ja en-Wikipedia "Champ de Mars" '
+      + '(tarkistettu 17.11.2026).',
+    otsikko: 'Eiffel-torni 1925 — myyty romuksi',
+    jaksot: [
+      // Noston alku: kertojan nimi ja esittely ennen isoisän lausetta (omistaja 19.23 F; sama kuin Tuileries).
+      { osa: 'nimi', teksti: 'Eiffel-torni.' },
+      { osa: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
+      {
+        osa: 'koukku',
+        aani: 'isoisa',
+        teksti: 'Pariisi, 1873. Mittasin tänään Champ de Marsin askelin. Se on sotilaiden harjoituskenttä, '
+          + 'tasainen kuin pöytä.',
+        // PUUTTUU (ei varastossa): kenttä ennen tornia, ei maailmannäyttelyn rakennuksia (1878 on isoisän käynnin jälkeen).
+        kuva: 'kentta1873',
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Neljätoista vuotta myöhemmin kentälle alettiin rakentaa rautatornia. Se koottiin tuhansista osista, '
+          + 'jotka työmiehet niittasivat yhteen yhä korkeammalla. Moni pariisilainen vihasi tornia, '
+          + 'ja sen piti seistä vain kaksikymmentä vuotta.',
+        kuva: 'rakenteilla',
+        lisakuva: { kuva: 'niittaus', kohta: 'työmiehet niittasivat yhteen' },
+        vuodet: [
+          { vuosi: '1887', selite: 'taiteilijavetoomus', kohta: 'vihasi tornia' },
+          { vuosi: '1889', selite: 'torni valmis' },
+        ],
+      },
+      {
+        osa: 'tapahtuma',
+        teksti: 'Kaksikymmentä vuotta kului, mutta kukaan ei purkanut tornia. Sen huipulla oli radioantenni, '
+          + 'ja armeijalle siitä oli niin paljon hyötyä, että torni sai jäädä.',
+        kuva: 'photochrom1900',
+        vuodet: [{ vuosi: '1909', selite: 'tornin purkuaika' }],
+      },
+      {
+        osa: 'kaanne',
+        teksti: 'Vuonna 1925 huijari Victor Lustig luki lehdestä, että tornin kunnossapito on kallista. '
+          + 'Väärennetyin virkapaperein hän esiintyi ministeriön apulaisjohtajana ja myi muka tornin '
+          + 'romukauppiaalle, joka maksoi hänelle myös lahjuksen. Kauppias häpesi eikä ilmoittanut '
+          + 'poliisille, joten Lustig palasi ja yritti uudestaan.',
+        kuva: 'lustig',
+        vuodet: [{ vuosi: '1925', selite: 'Lustigin huijaus', kohta: 'Vuonna 1925' }],
+      },
+      {
+        osa: 'tanaan',
+        teksti: 'Torni seisoo yhä, ja se maalataan uudelleen noin seitsemän vuoden välein. '
+          + 'Kenttä, jonka isoisäsi mittasi, on nykyään puisto tornin jalalla.',
+        kuva: 'nykyinen',
+      },
+    ],
+    jaksokuvat: {
+      kentta1873: {
+        // PUUTTUU: haettava/tilattava; osoite null → esitys näyttää paikkamerkin.
+        osoite: null,
+        tulossa: true,
+        laji: 'havainnekuva',
+        lyhyt: 'Champ de Mars ennen tornia',
+        lahde: 'Puuttuu: kuva sotilaiden harjoituskentästä ennen tornia (Commonsista ei löytynyt vuoden 1873 kuvaa)',
+      },
+      rakenteilla: {
+        tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Torni rakenteilla vuonna 1888',
+        lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+      },
+      niittaus: {
+        osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+        laji: 'havainnekuva',
+        lyhyt: 'Niittaajat tornin työmaalla',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — history, tarkistettu 5.9.2026.',
+      },
+      photochrom1900: {
+        tiedosto: 'Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Eiffel-torni noin vuonna 1900',
+        lahde: 'Library of Congress, Wikimedia Commons (PD)',
+      },
+      lustig: {
+        osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
+        laji: 'havainnekuva',
+        lyhyt: 'Huijaus hotellin salongissa',
+        lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
+      },
+      nykyinen: {
+        tiedosto: 'Eiffel Tower from Champ-de-Mars, Paris 5 February 2019.jpg',
+        laji: 'valokuva',
+        lyhyt: 'Eiffel-torni Champ de Marsilta',
+        lahde: 'Alexandre Prévot, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+    },
+    // Yksi kysymys (vanhasta Lustig-kortista): vastaus on jaksossa 5, eikä mikään näkyvä ennen sitä paljasta sitä.
+    visa: {
+      kysymys: 'Miksi huijarin uhri ei ilmoittanut huijauksesta poliisille?',
+      vaihtoehdot: [
+        'Hän häpesi',
+        'Hän sai rahansa takaisin',
+        'Hän ei huomannut huijausta',
+      ],
+      oikea: 0,
+      fakta: 'Lustig palasi Pariisiin ja yritti samaa temppua uudestaan; silloin joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
+    },
+  },
 ];
 
 /*

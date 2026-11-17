@@ -79,5 +79,6 @@ test('osiohakemisto: pikkukuva vie kuvansa omaan sivuun/nostoon, varakuva kantaa
 test('noston kuva löytyy hetkelle, ihmeelle ja täkynostolle', () => {
   assert.match(osiohakNostonKuva('hetki-marie-curie-hangaari-1898')?.osoite ?? '', /^https:\/\//);
   assert.match(osiohakNostonKuva('tuileries')?.osoite ?? '', /ihme-tuileries/);
-  assert.ok(osiohakNostonKuva('nosto-lustig-eiffel', { iso: 'FRA' }));
+  // Lustig 1925 (`nosto-lustig-eiffel`) yhdistyi Eiffel-tornin kohteeseen 17.11.2026; täkynoston esimerkiksi kirahvi.
+  assert.ok(osiohakNostonKuva('nosto-kirahvin-kavelymatka', { iso: 'FRA' }));
 });

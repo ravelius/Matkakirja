@@ -5353,42 +5353,6 @@ export const NAHTAVYYSJUTUT = {
    * lähderivit tai kuvatiedostot muuttuneet.
    */
   pariisi: {
-    'Eiffel-torni': {
-      aika: '1889',
-      teksti: 'Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna '
-          + '1889, insinööri Gustave Eiffelin toimisto pystytti Champ '
-          + 'de Mars -puistoon noin 300 metriä korkean rautatornin vain '
-          + 'reilussa kahdessa vuodessa. Torniin käytettiin 18 038 '
-          + 'metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko '
-          + 'rakennustyön aikana sattui vain yksi kuolemantapaus.'
-        + '\n\n'
-        + 'Moni pariisilainen taiteilija vihasi tornia aluksi: '
-          + 'kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti '
-          + 'vetoomuksen, jossa torni tuomittiin rumaksi ja '
-          + 'hyödyttömäksi. Kirjailija Guy de Maupassant väitti '
-          + 'syövänsä lounasta tornin ravintolassa joka päivä juuri '
-          + 'siksi, että se oli ainoa paikka Pariisissa, josta tornia '
-          + 'ei näkynyt.'
-        + '\n\n'
-        + 'Torni oli tarkoitus purkaa jo vuonna 1909, mutta se '
-          + 'pelastui, koska siitä tuli tärkeä radiolähetysasema. '
-          + 'Toisen maailmansodan lopulla Hitler käski räjäyttää tornin '
-          + 'Pariisin vapautuessa — mutta käskyä ei toteltu, ja torni '
-          + 'seisoo yhä paikallaan.',
-      vuodet: [
-        { kohta: 'vuonna 1889', vuosi: '1889', selite: 'maailmannäyttely' },
-        { kohta: 'jo vuonna 1909', vuosi: '1909', selite: 'piti purkaa' },
-      ],
-      kuvat: [
-        {
-          tiedosto: "Eiffel Tower and Pont d'Iéna, Paris 3 December 2016.jpg",
-          lyhyt: "Eiffel-torni Seinen yli kuvattuna",
-          selite: "Eiffel-torni kohoaa Seinen rannalla kirkkaana päivänä. Joella kulkee proomu ja rannassa on asuntolaivoja.",
-          lahde: "Guilhem Vellut, Wikimedia Commons (CC BY 2.0)",
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Riemukaari: {
       aika: '1806–1836',
       teksti: 'Keisari Napoleon käski rakentaa valtavan riemukaaren '
@@ -6245,36 +6209,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Lustig 1925': {
-      nosto: 'nosto-lustig-eiffel',
-      teksti: 'Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka '
-        + 'kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän '
-        + 'tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita '
-        + 'luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi '
-        + 'posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä '
-        + 'tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua.'
-        + '\n\n'
-        + 'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
-        + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-        + 'kauppasumman. Sitten hän pakeni Itävaltaan ja '
-        + 'luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. '
-        + 'Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman '
-        + 'tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni '
-        + 'Yhdysvaltoihin.',
-      vuodet: [
-        { kohta: 'Pariisissa 1925', vuosi: '1925', selite: 'Lustig luki jutun' },
-      ],
-      kuvat: [
-        {
-          osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
-          lyhyt: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat kuulolla, torni ikkunan takana.',
-          selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat '
-            + 'kuuntelemassa ja torni ikkunan takana.',
-          lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Vrain-Lucas': {
       aika: '1861–1870',
       nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
@@ -6645,46 +6579,6 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Pasteurin joutsenkaulapullossa ilma pääsi sisään mutta pöly ei, '
             + 'joten liemi pysyi pilaantumatta.',
           lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
-        },
-      ],
-    },
-    'Eiffel-torni 1888': {
-      nosto: 'hetki-eiffel-torni-1888',
-      teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
-        + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
-        + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
-        + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
-        + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
-        + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
-        + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
-        + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
-        + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
-        + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
-        + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
-        + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
-        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
-        + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
-        + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
-        + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
-        + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
-        + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
-        + 'radioantenni.',
-      vuodet: [
-        { kohta: 'elokuussa 1888', vuosi: '1888', selite: 'torni nousee' },
-        { kohta: 'maaliskuuta 1889', vuosi: '1889', selite: 'torni valmis' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
-          selite: 'Marraskuussa 1888 Eiffel-torni oli vielä keskeneräinen '
-            + 'rautarunko, korkeampi kuin mikään Pariisissa ennen.',
-          lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
-        },
-        {
-          tiedosto: 'Construction de la tour Eiffel, 7ème arrondissement, Paris. 14 septembre 1888, PH9114-12.jpg',
-          selite: 'Elokuun ja syyskuun 1888 kuvista näkee, paljonko torni kasvoi '
-            + 'kuukaudessa; se valmistui maailmannäyttelyyn 1889.',
-          lahde: 'Théophile Feau 1888, Musée Carnavalet, Wikimedia Commons (CC0)',
         },
       ],
     },
