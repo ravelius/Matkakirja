@@ -130,7 +130,6 @@ export const MINIATYYRIT = {
     Bastilji: 'pariisi-bastilji-vari2',
     'Bizet 1875': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
     'Kirahvi 1827': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
-    'Lustig 1925': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
     'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
     'Monet 1874': 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
     'Piiritys 1870': 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
@@ -141,17 +140,14 @@ export const MINIATYYRIT = {
     'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
     'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
     'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
-    'Eiffel-torni 1888': 'assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
     'Bastilji 1789': 'assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
     'Lumière 1895': 'assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
     // 72 nimeä ja Notre-Damen kukko ovat rakennustensa nostoja (KK 10.11.2026 12.24), eivät omia kohteita: piirrokset pois listalta.
     // Guimardin lasikattoinen Abbesses-édicule (Codex #1321, omistaja 30.10. 21.42: vanha väärää tyyliä);
     // uusi nimi -v2, ettei välimuisteihin jäänyt vanha kuva näy.
     'Metro 1900': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti-v2.webp',
-    'Piaf ja Django': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
     'Patonki 1994': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
     // Ämpäritunnus: kuva tilataan erikseen (ei generointia ilman lupaa); puuttuva kuva putoaa varatäpläksi.
-    'Kaulanauha 1785': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {
     'Greenwichin palatsi': 'assets/kartat/miniatyyrit/lontoo-greenwichin-palatsi.webp',  // kadonnut ihme (31.10.2026)
@@ -185,7 +181,6 @@ export const MINIATYYRIT = {
     'Dickensin pubi': 'assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp',
     'Abbey Roadin suojatie': 'assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp',
     'Leake Streetin tunneli': 'assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp',
-    'Neljäs jalusta': 'assets/kartat/miniatyyrit/lontoo-neljas-jalusta.webp',
     Turbiinihalli: 'assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp',
     // Liukumäkiveistos pois (KK 13.11.2026): Orbit on pääkartalla, ei kohdekartalla.
     // Tarinapaikat ilman miniatyyriä (KK 17.11.2026 klo 10.43 ja 10.49): Händel ja Hendrix, Johnson 1755, Baird 1926 ja
@@ -231,11 +226,7 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Forum Romanum': 'rooma-forum-romanum-vari2',
     'Banca Romana': 'rooma-banca-romana-vari2',
-    'Michelangelo 1510': 'assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
-    'Kolikko olan yli': 'assets/kartat/miniatyyrit/rooma-kolikko-olan-yli.webp',
-    'Areenan kellari': 'assets/kartat/miniatyyrit/rooma-areenan-kellari.webp',
     'Norsu ja obeliski': 'assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp',
-    'Aqua Virgo': 'assets/kartat/miniatyyrit/rooma-aqua-virgo.webp',
     Nasone: 'assets/kartat/miniatyyrit/rooma-nasone.webp',
   },
   wien: {
@@ -256,9 +247,6 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Klimtin maalaukset': 'wien-klimtin-maalaukset-vari2',
     Saliera: 'wien-saliera-vari2',
-    'Beethoven 1824': 'assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
-    'Mozart 1786': 'assets/kartat/miniatyyrit/wien-figaro-1786.webp',
-    'Praterin jättiratas': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',  // ent. Rattaan kulmat (KK 16.11.2026); kuva ennallaan
     Lipizzanit: 'assets/kartat/miniatyyrit/wien-lipizzanit.webp',
     Taikahuilu: 'assets/kartat/miniatyyrit/wien-taikahuilu.webp',
     'Tonava kaunoinen': 'assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
@@ -291,7 +279,6 @@ export const MINIATYYRIT = {
     Timanttihiomo: 'amsterdam-timanttihiomo-vari2',
     'Amsterdam-laiva': 'amsterdam-amsterdam-laiva-vari2',
     'Kapein talo': 'assets/kartat/miniatyyrit/amsterdam-kapein-talo.webp',
-    Maitotyttö: 'assets/kartat/miniatyyrit/amsterdam-maitotytto.webp',
     Kissalaiva: 'assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
     'Herengracht 537': 'assets/kartat/miniatyyrit/amsterdam-herengracht-537.webp',
     Yövartio: 'assets/kartat/miniatyyrit/amsterdam-yovartio.webp',

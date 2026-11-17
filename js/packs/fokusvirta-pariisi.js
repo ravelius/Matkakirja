@@ -912,8 +912,9 @@ export const FOKUSVIRTA_PARIISI = {
      *
      * MINIKYSYMYKSET: erän 6 datamalli (`visa`), kiintiö joka kolmas
      * nosto. Pooli on tämän erän jälkeen yhdeksän nostoa, ja visat
-     * ovat kolmannessa (`carmenin-ensi-ilta`, erä 6), kuudennessa
-     * (`notre-damen-kukko`) ja yhdeksännessä (`pariisin-vuosisadat`).
+     * ovat kolmannessa (`carmenin-ensi-ilta`, erä 6) ja kuudennessa
+     * (`notre-damen-kukko`); yhdeksäs (`pariisin-vuosisadat`) poistettiin
+     * 17.11.2026 (Vrain-Lucas jää vain skandaalikorttiin).
      * Vastaus on aina SAMAN kortin tekstissä.
      * ══════════════════════════════════════════════════════════════
      */
@@ -1273,6 +1274,14 @@ export const FOKUSVIRTA_PARIISI = {
        * pisteiksi, loput neljä yhdeksi nostoksi 'Pariisin
        * vuosisadat'"*).
        *
+       * JAETTU KAHDEKSI (omistaja 17.11.2026, yhdistämisen vaihe A,
+       * PR 6966 luku 4): kaksi tarinaa ei kuulu samalle kortille. Tämä
+       * kortti (`kaulanauha-1785`) pitää kaulanauhan ja sen kaksi
+       * kysymystä; Vrain-Lucasin tarina elää vain skandaalikortissa
+       * `skandaali-vrain-lucas-kirjevaarennokset` (KK 17.11. 20.41:
+       * yhdestä merkistä ei avaudu kahta samaa tarinaa kertovaa
+       * korttia; lyhyt kortti `pariisin-vuosisadat` poistettu).
+       *
        * MITATTU LÄHTÖTILANNE: sivun kaikilla seitsemällä nostolla oli
        * jo karttapaikka — kuudella kohdekartalla ja yhdellä
        * pääkartalla. Kolme "parasta" ovat ne kolme, jotka osaston oma
@@ -1295,7 +1304,7 @@ export const FOKUSVIRTA_PARIISI = {
        * Vastaus on yllä olevassa tekstissä sanatarkasti: *"Kaikki oli
        * kirjoitettu 1800-luvun ranskaksi."*
        */
-      id: 'pariisin-vuosisadat',
+      id: 'kaulanauha-1785',
       nimio: 'Kaulanauha 1785',
       otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
       // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
@@ -1312,15 +1321,6 @@ export const FOKUSVIRTA_PARIISI = {
           + 'elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja '
           + 'kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti Rohanin '
           + '1786, mutta kuningattaren maine ei toipunut.',
-        'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden lähettäjiksi oli '
-          + 'merkitty muun muassa Julius Caesar, Kleopatra, Aristoteles ja '
-          + 'Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun ranskaksi. Chasles '
-          + 'maksoi kokoelmasta noin 140 000 frangia ja esitteli 1867 '
-          + 'tiedeakatemialle kirjeitä, joiden mukaan Blaise Pascal olisi '
-          + 'keksinyt painovoimalain ennen Isaac Newtonia. Englantilaiset '
-          + 'tutkijat huomauttivat, että Newton oli kirjeiden päiväyksen aikaan '
-          + 'lapsi. Chasles piti kokoelmastaan kiinni vuosia, mutta väärentäjä '
-          + 'tuomittiin helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Historia", nostot "Kaulanauha, '
         + 'joka ei koskaan päätynyt kuningattarelle" ja "Kleopatra kirjoitti '
@@ -1346,42 +1346,17 @@ export const FOKUSVIRTA_PARIISI = {
             + 'Bastiljiin.',
           lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
         },
-        {
-          tiedosto: 'Pascal à Galileo.jpg',
-          lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
-          selite: 'Vrain-Lucasin 1860-luvulla väärentämä kirje, jonka Blaise Pascal olisi muka '
-            + 'kirjoittanut Galileo Galileille Pariisissa tammikuussa 1633, yhdeksänvuotiaana — yksi Chaslesin ostamista kirjeistä.',
-          lahde: 'Denis Vrain-Lucas 1860-luku, Wikimedia Commons (PD)',
-        },
       ],
       kysymykset: [
         'Miksi kardinaali uskoi väärennetyt kirjeet?',
         'Mihin kaulanauhan timantit lopulta päätyivät?',
-        'Miksi Chasles piti kokoelmastaan kiinni vuosia?',
       ],
-      visa: {
-        kysymys: 'Vrain-Lucas myi kirjeitä, joiden lähettäjiksi oli merkitty '
-          + 'muun muassa Kleopatra ja Julius Caesar. Mikä niissä oli pielessä?',
-        vaihtoehdot: [
-          'Kaikki oli kirjoitettu 1800-luvun ranskaksi',
-          'Ne oli päivätty samalle viikolle',
-          'Paperissa ei ollut lainkaan vesileimaa',
-        ],
-        oikea: 0,
-        fakta: 'Englantilaiset tutkijat huomauttivat lisäksi, että Newton oli '
-          + 'kirjeiden päiväyksen aikaan lapsi. Väärentäjä tuomittiin '
-          + 'helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
-      },
-      // Panthéon 48,8462 N / 2,3464 E. Kummankaan tarinan oma osoite ei
-      // ollut vapaana: Vrain-Lucasilla on jo oma piste (Institut de
-      // France) ja kaulanauhan Versailles on kohdekartan rajauksen
-      // ulkopuolella. Panthéon on kartan oma historiakohde ja tämän
-      // kortin ankkuri.
+      // Sainte-Chapelle 48,8554 N / 2,3450 E: Palais de la Cité'n palatsikappeli, jossa parlamentti istui (PR 6964, valinta A).
       paikka: {
         nimi: 'Kaulanauha 1785',
         laudat: {
-          maailmankartta: { x: 5911.5, y: 1440.1 },
-          europe: { x: 256.3, y: 608.9 },
+          maailmankartta: { x: 5911.5, y: 1439.7 },
+          europe: { x: 256.3, y: 608.7 },
         },
       },
     },

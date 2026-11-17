@@ -51,7 +51,8 @@ test('kohdekartat: kohteen ja linkin tagi, tarinapaikka merkin mukaan', () => {
       }
     }
   }
-  assert.ok(tarinapaikkoja >= 40, `tarinapaikkoja ${tarinapaikkoja}`);
+  // 40 → 35: yhdistämisen vaihe A (KK 17.11.2026) poisti 13 tarinapaikkaa, joiden nostot siirtyivät kohteen merkille.
+  assert.ok(tarinapaikkoja >= 35, `tarinapaikkoja ${tarinapaikkoja}`);
   const pariisi = kohdekartat.find((k) => k.id === 'pariisi');
   const bastilji = pariisi.kohteet.find((k) => k.nimi === 'Bastilji');
   assert.equal(bastilji?.tagi, 'kadonneet', 'Bastilji on kadonnut');
