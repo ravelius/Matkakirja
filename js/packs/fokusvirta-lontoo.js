@@ -904,8 +904,7 @@ export const FOKUSVIRTA_LONTOO = {
           + 'valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — '
           + 'savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä '
           + 'vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on '
-          + '272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä '
-          + 'pronssilaatta, jonka London Transport pystytti sadan vuoden '
+          + '272 ja rataa 400 kilometriä. Baker Streetin aseman seinässä, Marylebone Roadin puolella, muistuttaa yhä laatta, jonka London Transport pystytti sadan vuoden '
           + 'kunniaksi vuonna 1963.',
       ],
       lahde: 'Lontoon kaupunkilehden nosto "Metron tunnelissa savusi höyryveturi" '
@@ -913,8 +912,8 @@ export const FOKUSVIRTA_LONTOO = {
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
         tiedosto: 'World\'s First Underground (5025945153).jpg',
-        lyhyt: 'Pronssilaatta muistaa vuonna 1963 sadan vuoden takaista maailman ensimmäistä maanalaista rataa.',
-        selite: 'London Transport pystytti pronssilaatan vuonna 1963 sadan vuoden '
+        lyhyt: 'Laatta muistaa vuonna 1963 sadan vuoden takaista maailman ensimmäistä maanalaista rataa.',
+        selite: 'London Transport pystytti laatan vuonna 1963 sadan vuoden '
           + 'kunniaksi maailman ensimmäisestä maanalaisesta matkustajaradasta, '
           + 'jonka Metropolitan Railway Company avasi yleisölle 10. tammikuuta '
           + '1863.',
