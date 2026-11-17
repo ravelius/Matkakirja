@@ -52,7 +52,7 @@
  * minuuttia on normaali.
  */
 import http from 'node:http';
-import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
 import { Game } from '../js/game.js';
@@ -125,7 +125,8 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]);
-  if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
+  // Kansio (esim. /moduulit/) ei ole tiedosto: readFileSync kaatoi koko tarkistuksen EISDIR:iin (NUI 17.11., KK 17.24).
+  if (!existsSync(polku) || !statSync(polku).isFile()) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
