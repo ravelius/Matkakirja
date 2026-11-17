@@ -5,27 +5,27 @@
   "lon": -0.12574
  },
  "merkkeja": 429,
- "malleja": 23,
- "tavua": 10880,
- "sha256": "fff6e3497c0a04b712817e88c407cb9c925d3336ac8f6e77c984977beb9ebd12",
+ "malleja": 30,
+ "tavua": 11048,
+ "sha256": "7d338bcaa5b434ac71660bfafda3f6708e98c4f1c8e253e0d93d78b11a50798e",
  "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
  "maa_laskut": {
   "pisteita": 429,
   "lahin_tunnettu": 0
  },
- "lahde": "/Users/Shared/Claude/proto-3d/_tyo/valoseppa/tyyppitalot/tulos/merkit-lontoo.json",
- "lahde_sha256": "055511b3ad72da6cb755beb535a09086292d8a3f02beddd423f3574c50f1a32a",
+ "lahde": "/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa-2/17e4f302-b855-4e72-a9d9-ec8ca6802a06/scratchpad/ty/merkit-lontoo.json",
+ "lahde_sha256": "d53b0431f77c76c2aecc9a1794137227ea8e583eb1a6a9630c8d804ca0172470",
  "tyypit": {
   "kirkko-keski": 38,
   "palatsi-keski": 13,
   "kirkko-levea": 212,
   "kirkko-pieni": 129,
   "kirkko-suuri": 3,
-  "kirkko-basilika": 29,
-  "asema-suuri": 4,
+  "kirkko-basilika": 28,
+  "asema-suuri": 5,
   "pylvastemppeli-keski": 1
  },
- "ei_sovi_alueella": 292,
+ "ei_sovi_alueella": 291,
  "poisOsm": [
   "relation/1110358",
   "relation/16057566",
@@ -285,6 +285,7 @@
   "way/474648666",
   "way/481469919",
   "way/4959629",
+  "way/4960746",
   "way/496689165",
   "way/49696895",
   "way/497955369",
@@ -302,7 +303,6 @@
   "way/53170223",
   "way/53773963",
   "way/54478457",
-  "way/54486345",
   "way/546886098",
   "way/548077758",
   "way/549764976",
@@ -478,6 +478,21 @@
      -104.0,
      120.1
     ],
+    {
+     "1.": [
+      -112.1,
+      26.6
+     ]
+    }
+   ],
+   "hallimaara": 2,
+   "katettu_pct": 76.0,
+   "katettu_ennen_pct": 59.1,
+   "kaistat_ennen": [
+    [
+     -104.0,
+     120.1
+    ],
     null
    ]
   },
@@ -510,20 +525,43 @@
      -202.7,
      222.0
     ],
+    {
+     "1.": [
+      -157.1,
+      -20.2
+     ]
+    }
+   ],
+   "hallimaara": 4,
+   "katettu_pct": 80.9,
+   "katettu_ennen_pct": 76.2,
+   "kaistat_ennen": [
+    [
+     -6.1,
+     222.0
+    ],
+    [
+     -202.7,
+     222.0
+    ],
+    [
+     -202.7,
+     222.0
+    ],
     null
    ]
   },
   {
    "osm": "way/4959629",
    "nimi": "",
-   "akseli": 18.7,
-   "poikkeama": 0.0,
+   "akseli": 20.2,
+   "poikkeama": 1.5,
    "siirto": [
-    -0.03,
-    -0.05
+    -0.39,
+    -0.35
    ],
-   "pituus": 239.2,
-   "leveys": 119.5,
+   "pituus": 241.3,
+   "leveys": 125.3,
    "halleja": 5,
    "julkisivu": [
     1,
@@ -531,6 +569,39 @@
     3
    ],
    "kaistat": [
+    {
+     "1.": [
+      -98.9,
+      -79.9
+     ],
+     "2.": [
+      -99.8,
+      -79.9
+     ]
+    },
+    [
+     -82.8,
+     119.7
+    ],
+    [
+     -82.8,
+     118.7
+    ],
+    [
+     -82.8,
+     118.7
+    ],
+    {
+     "1.": [
+      -109.3,
+      117.8
+     ]
+    }
+   ],
+   "hallimaara": 6,
+   "katettu_pct": 86.0,
+   "katettu_ennen_pct": 68.6,
+   "kaistat_ennen": [
     null,
     [
      -84.0,
@@ -548,21 +619,110 @@
    ]
   },
   {
+   "osm": "way/4960746",
+   "nimi": "Euston Railway Station",
+   "akseli": 326.0,
+   "poikkeama": 0.0,
+   "siirto": [
+    0.03,
+    0.01
+   ],
+   "pituus": 397.3,
+   "leveys": 198.8,
+   "halleja": 4,
+   "julkisivu": [
+    0,
+    1,
+    2
+   ],
+   "kaistat": [
+    [
+     -166.0,
+     106.7
+    ],
+    [
+     -166.0,
+     105.2
+    ],
+    [
+     -166.0,
+     105.2
+    ],
+    {
+     "1.": [
+      -128.6,
+      105.2
+     ]
+    }
+   ],
+   "hallimaara": 4,
+   "katettu_pct": 81.4,
+   "katettu_ennen_pct": 76.6,
+   "kaistat_ennen": [
+    [
+     -166.0,
+     106.7
+    ],
+    [
+     -166.0,
+     105.2
+    ],
+    [
+     -166.0,
+     105.2
+    ],
+    [
+     -166.0,
+     105.2
+    ],
+    null
+   ]
+  },
+  {
    "osm": "way/947381552",
    "nimi": "London Paddington Railway Station",
-   "akseli": 324.7,
-   "poikkeama": 6.5,
+   "akseli": 315.2,
+   "poikkeama": -3.0,
    "siirto": [
-    1.36,
-    -1.29
+    -3.26,
+    -3.86
    ],
-   "pituus": 356.0,
-   "leveys": 153.3,
+   "pituus": 343.9,
+   "leveys": 146.7,
    "halleja": 5,
    "julkisivu": [
     3
    ],
    "kaistat": [
+    {
+     "2.": [
+      -72.2,
+      66.8
+     ]
+    },
+    [
+     -72.2,
+     66.8
+    ],
+    [
+     -143.6,
+     70.8
+    ],
+    [
+     -151.7,
+     72.2
+    ],
+    {
+     "1.": [
+      -169.3,
+      73.5
+     ]
+    }
+   ],
+   "hallimaara": 5,
+   "katettu_pct": 76.2,
+   "katettu_ennen_pct": 66.3,
+   "kaistat_ennen": [
     null,
     [
      -126.3,
@@ -583,5 +743,15 @@
  "asemien_kattovari": {
   "srgb": "#808183",
   "lahde": "katot.py PERHEET['lontoo'].katot suurin osuus 0.5"
+ },
+ "paletti": {
+  "katto": "#808183",
+  "katto_lahde": "katot.py PERHEET['lontoo'].katot suurin osuus 0.5",
+  "seina": "#D0BA8C",
+  "seina_lahde": "katot.py PERHEET['lontoo'].seinat suurin osuus 0.36",
+  "palatsin_seinat": {
+   "portland": "#DCD4C2",
+   "tiili": "#AC7862"
+  }
  }
 }

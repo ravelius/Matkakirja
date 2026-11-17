@@ -76,7 +76,7 @@ NIMILISTAT = {
         # SEINÄ (KK 01.24, KS 01.4x paletti katot.py PERHEET['lontoo']): portland = Portland-kivi #E4DCCA, tiili = punatiili #AC7862 (Old Admiralty); LUONNOS, KK päättää pelikuvista.
         # Julkisivu käsin; 'arvio' = tarkistettava. Seinäväri rivikohtaisesti KS:n paletista myöhemmin (KK 01.24: Portland-kivi, Old Admiralty punatiili).
         'way/947381552': ('asema', 'suuri', 'Paddington'),
-        'way/4256246': ('asema', 'suuri', 'St Pancras'),   # 2. kierroksen ehdokas: oikeasti yksi Barlow-halli + tiilijulkisivu (KK 01.13)
+        # St Pancras way/4256246 EI asemamallia (KK 18.11. 00.29 kohta A): hotelli + yksi Barlow'n halli + jatke pelin koodimallina (OhjelmaKohdeLontooStPancras.cs).
         'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2}),
         'way/4959629': ('asema', 'suuri', 'Liverpool Street (halli, nimetön OSM-pohja)'),
         # Euston (KK 18.11. 00.05 korjaus + 00.29 1. työ; B-linjaus 7): nykyinen 1960-luvun matala tasakattohalli kattoikkunariveineen ja tumma lasijulkisivu,
