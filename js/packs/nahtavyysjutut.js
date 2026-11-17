@@ -6625,7 +6625,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Lavoisier 1780': {
       nosto: 'hetki-lavoisier-laboratorio-1780',
-      teksti: 'Pariisin Arsenaalin laboratoriossa syntyy noin vuonna 1780 moderni '
+      teksti: 'Pariisin Arsenaalin laboratoriossa syntyy 1770- ja 1780-luvuilla moderni '
         + 'kemia. Antoine Lavoisier osoittaa siellä, ettei palaessa mikään '
         + 'katoa eikä synny tyhjästä: palaminen on yhtymistä ilman osaan, '
         + 'jonka hän nimeää hapeksi. Todiste on vaaka. Se on huoneen kallein '
@@ -6951,12 +6951,12 @@ export const NAHTAVYYSJUTUT = {
         + 'Wikipedia',
     },
     'Trocadéron palatsi': {
-      aika: '1876–1935',
+      aika: '1878–1935',
       nosto: 'hahmotelma-trocadero',
       teksti: 'Trocadéron nimi tulee Cádizin edustan Trocadero-linnakkeesta, jonka ranskalaiset valtasivat 1823. Chaillot\'n '
         + 'kukkulalle suunniteltiin jo 1811 palatsia Napoleonin pojalle, "Rooman kuninkaalle", mutta siitä '
-        + 'tehtiin vain maanrakennustöitä. Todellinen palatsi rakennettiin vuosina 1876–1878 maailmannäyttelyä '
-        + 'varten: siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
+        + 'tehtiin vain maanrakennustöitä. Todellinen palatsi valmistui vuoden 1878 maailmannäyttelyyn: '
+        + 'siinä oli kaksi korkeaa tornia, kaksi kaarevaa siipeä ja yli neljän tuhannen paikan sali. '
         + 'Salin akustiikka oli huono, mutta siellä soivat Cavaillé-Collin urut, jotka vihittiin elokuussa 1878.'
         + '\n\n'
         + 'Palatsi seisoi vuoteen 1935, jolloin sali ja tornit purettiin vuoden 1937 näyttelyn tieltä. Vanhojen '
@@ -6977,7 +6977,7 @@ export const NAHTAVYYSJUTUT = {
       // mauri-bysanttilaistyylinen" pois (vain WP) ja "Palatsia ei ollut tarkoitettu kestämään näyttelyn jälkeen, mutta
       // se seisoi" → "Palatsi seisoi" (aikalaislähde L'art et l'industrie… 1880 kumoaa: "Dès 1876, il avait été décidé
       // que le palais du Trocadéro resterait à la ville de Paris"). Kaksi korkeaa tornia ja kaarevat siivet = 1880-teos +
-      // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; 1876–1878 = 1880-teos + WP; siivet Chaillot'ssa = Livre d'or
+      // WP; yli 4 000 paikkaa = WP 4 600 + 1880-teos 6 000; valmistuminen 1878 = 1880-teos + WP (alkuvuotta 1876 ei käytetä tekstissä, KK 17.11.2026); siivet Chaillot'ssa = Livre d'or
       // 1937 + Cité de l'architecture + POP; urut = Auditorium de Lyon + WP.
       lahde: 'Matkakirjan oma teksti · lähteinä Ranskan kulttuuriministeriön muistomerkkirekisteri, vuoden 1937 '
         + 'maailmannäyttelyn virallinen Livre d\'or, L\'art et l\'industrie de tous les peuples à l\'Exposition '
