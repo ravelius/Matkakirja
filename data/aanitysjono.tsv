@@ -38,7 +38,6 @@ d2d5fee2ed30d7ce789c901a1f497a89	ARK	maastokohteet	ark-pyramiden	2	2026-11-12
 96355167ff71142d7ea7bc979786964e	ARK	maastokohteet	ark-ellesmere	1	2026-11-12
 619cda3cdf14bf06b17f9e231ace8b26	ARK	maastokohteet	ark-ellesmere	2	2026-11-12
 a73fb5b175598516608bf530d65cb608	ARK	maastokohteet	ark-gronlannin-jaatikko	1	2026-11-12
-bb2517cf9bae75b8c07fae57007baab3	ARK	maastokohteet	ark-gronlannin-jaatikko	2	2026-11-12
 2f1b83a4d769a9da02f381288898b1a4	ARK	maastokohteet	ark-camp-century	1	2026-11-12
 72cfc2164885ef4ddcf113f0fb62ba2a	ARK	maastokohteet	ark-camp-century	2	2026-11-12
 fd187989c8c977804837f6f2b09d1904	ARK	maastokohteet	ark-ilulissat	1	2026-11-12
@@ -48,7 +47,6 @@ a0b1037f910dce0417e2dcddb710a2d7	ARK	maastokohteet	ark-merijaa	1	2026-11-12
 77d4a4b9cc1efadfe3b002f86aa13af2	ARK	maastokohteet	ark-thule	1	2026-11-12
 1b805fa6a999a98c93946f1305ae1084	ARK	maastokohteet	ark-thule	2	2026-11-12
 3d72cbdf6b3dc7099b13f2695bfe7380	ARK	maastokohteet	ark-nenetsit	2	2026-11-12
-81a00ed81d3ca4868e035b16b4cc034a	ARK	maastokohteet	ark-saamelaiset	1	2026-11-12
 312c5321b4d62d58dc767dc6b5cb6abf	ARK	maastokohteet	ark-saamelaiset	2	2026-11-12
 5a35e8551865c4059d168f5046de0e4f	ARK	maastokohteet	ark-wrangel	1	2026-11-12
 826767c832a530e3141b8563feaabc80	ARK	maastokohteet	ark-wrangel	2	2026-11-12
@@ -173,3 +171,5 @@ e7bd3937bb2c18ef9cf59777a2816fcd	amsterdam	nahtavyysjutut	Paleis voor Volksvlijt
 9145aa478ff31b874554ca7d7102498d	amsterdam	takynostot	amsterdamin-yovartio	1	2026-11-17
 8549a64d0d736b87d8144c123a99ab60	ARK	maastokohteet	ark-alert	1	2026-11-17
 5906f3bf5af23c3fb006371e4f9afd79	ARK	maastokohteet	ark-alert	2	2026-11-17
+f0d33d4f9c207b5c325646444b83049b	ARK	maastokohteet	ark-gronlannin-jaatikko	2	2026-11-17
+f82ad47f2fd53ac7cb6c0ee275c665e3	ARK	maastokohteet	ark-saamelaiset	1	2026-11-17
