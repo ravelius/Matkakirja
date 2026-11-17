@@ -8154,10 +8154,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Hoogstraatilla.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 talo oli jo seissyt paikallaan yli sata '
-        + 'vuotta: talon vaiheet tunnetaan vuodesta 1738. Nykyään siinä on teekauppa.',
+        + 'vuotta: talon ensimmäinen arkistomaininta on vuodelta 1738. Nykyään siinä on teekauppa.',
       vuodet: [
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
-        { kohta: 'vuodesta 1738', vuosi: '1738', selite: 'vaiheet vuodesta' },
+        { kohta: 'vuodelta 1738', vuosi: '1738', selite: 'arkistomaininta' },
       ],
       kuvat: [
         {
@@ -8324,12 +8324,11 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-amsterdamin-portugalilainen-synagoga',
       teksti: 'Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. Arkkitehti '
         + 'Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa '
-        + '1670. Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671.'
+        + '1670. Peruskivi laskettiin 17. huhtikuuta 1671.'
         + '\n\n'
         + 'Synagogan päähalli ei ole koskaan saanut sähkövaloa eikä lämmitystä. '
         + 'Valona ovat kynttilät, ja sisätila on säilynyt lähes sellaisena kuin se '
-        + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin '
-        + 'valurautakehyksisiksi.'
+        + '1600-luvulla tehtiin. Vuosina 1852–1854 päähallin ikkunat uusittiin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. Visserpleinillä 198 vuotta, ja kaksi vuotta myöhemmin se täytti kaksisataa vuotta.',
       vuodet: [
