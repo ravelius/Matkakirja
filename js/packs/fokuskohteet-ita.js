@@ -1033,6 +1033,7 @@ export const FOKUSKOHTEET_ITA = [
         teksti: 'Rooma, 1873. Seisoin tänään Trevin lähteen luona ja kuuntelin veden kohinaa. '
           + 'Vesi tulee tänne yhä vanhaa roomalaista vesijohtoa pitkin.',
         kuva: 'photochrom',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Rooma, 1873' }],
       },
       {
         // Ei kuvaa: havainnekuvaa (kolikoiden keruu) ei tilata (P-261117-96); edellinen kuva jää näkyviin.

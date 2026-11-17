@@ -161,6 +161,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Kävelin tänään poltetun palatsin ohi. Katto on '
           + 'poissa, ja ikkuna-aukoista näkyy pelkkää taivasta.',
         kuva: 'raunio1873',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -374,6 +375,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Kävelin tänään pitkin Louvren julkisivua ja yritin '
           + 'laskea ikkunat. Menetin laskun kolmesti.',
         kuva: 'julkisivu',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -539,6 +541,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Kartassani lukee Bastilji, ja astuin aukiolle mitta kädessä. '
           + 'Linnaa ei ole. Keskellä seisoo vain korkea pylväs, jonka päällä on patsas.',
         kuva: 'pylvas1860',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -717,6 +720,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Mittasin tänään Champ de Marsin askelin. Se on sotilaiden harjoituskenttä, '
           + 'tasainen kuin pöytä.',
         // Koukulla ei ole kuvaa (KK 17.11.2026 21.57): kenttää ennen tornia ei löytynyt; ei paikkamerkkiä pelaajalle.
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
@@ -840,6 +844,7 @@ export const FOKUSKOHTEET_FRA = [
         teksti: 'Pariisi, 1873. Löysin Sainte-Chapellen oikeuspalatsin pihalta. '
           + 'Ikkunat ovat niin täynnä pieniä kuvia, että luovutin niiden laskemisen.',
         kuva: 'piha',
+        vuodet: [{ vuosi: '1873', selite: 'isoisän matka', kohta: 'Pariisi, 1873' }],
       },
       {
         osa: 'tapahtuma',
