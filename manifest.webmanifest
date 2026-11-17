@@ -3,7 +3,7 @@
   "short_name": "Matkakirja",
   "description": "Matkakirja ja unohdettu aarre: kierrä maailmaa isoisän päiväkirjan kanssa, etsi aarteet ja opi matkalla.",
   "lang": "fi",
-  "id": "./index.html",
+  "id": "./pelaa.html",
   "start_url": "./pelaa.html",
   "scope": "./",
   "display": "standalone",

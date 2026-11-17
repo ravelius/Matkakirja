@@ -1,17 +1,14 @@
 /*
- * OHJAA PELIIN (17.11.2026): yhteensopivuusskripti etusivulle.
+ * OHJAA PELIIN (17.11.2026): etusivun (index.html = pelin esittely) ohjaus peliin pelaa.html.
  *
- * Peli asuu osoitteessa pelaa.html; etusivu index.html on (tai tulee olemaan) pelin esittely. Ne, joilla
- * peli jo on, ohjataan suoraan pelaa.html:ään, jotta vanhat kuvakkeet, linkit ja kuoret eivät avaa esittelyä:
- *   - kotinäytön sovellus: (display-mode: standalone) tai iOS:n navigator.standalone
- *   - selaimessa on tallennus: localStorage 'matkakirja-save-v1'
- *   - osoitteessa on pelin parametri (esim. natiivin lehtinäkymä ?lehti=, ?lauta=, ?dev=) tai hash #esittely
- *   - sivu on iOS-kuoressa (window.webkit.messageHandlers.matkakirja)
- * Uusi kävijä näkee etusivun. ?esittely ohittaa ohjauksen (näkee esittelyn, vaikka laitteella on tallennus).
+ * Linjaus (omistaja 17.11.2026 klo 11.34: vanhojen pelaajien varotoimia ei tarvita): etusivulta ohjataan
+ * pelaa.html:ään VAIN, jos
+ *   - osoitteessa on pelin parametri (esim. natiivin lehtinäkymän vanha index.html?lehti=, ?lauta=, ?dev=), tai
+ *   - sivu on iOS-kuoressa (window.webkit.messageHandlers.matkakirja).
+ * Ei standalone- eikä tallennustarkistusta. Pelkkä #esittely jää etusivulle (sivulla on oma #esittely-ankkuri).
  *
- * KLASSINEN SKRIPTI, EI ES-MODUULI: sen pitää ajaa ennen kaikkea muuta (moduulit lykätään). Etusivu upottaa
- * sen <head>:n alkuun joko src:llä (<script src="js/ohjaa-peliin.js"></script>, ei async/defer) tai
- * inlinenä. Ei riippuvuuksia, ei nuolifunktioita tms. vaatimuksia vanhoille selaimille.
+ * KLASSINEN SKRIPTI, EI ES-MODUULI: sen pitää ajaa ennen kaikkea muuta (moduulit lykätään). Etusivu lataa sen
+ * <head>:n alussa ilman async/deferiä. Ei riippuvuuksia.
  *
  * Päätöslogiikka on funktiona window.MatkakirjaOhjaus.ohjauksenSyy(ymparisto), jotta testi
  * (tests/ohjaa-peliin.test.mjs) voi ajaa sen mock-ympäristöllä ilman selainta.
@@ -20,7 +17,6 @@
   'use strict';
 
   var PELI = 'pelaa.html';
-  var TALLENNUS = 'matkakirja-save-v1';
 
   /*
    * Pelin tuotannolliset ja kehittäjän osoiteparametrit (lista js/:n lukemista parametreista; kaikkia ~100
@@ -39,8 +35,6 @@
     'valikko', // pilleripaneeli (js/pilleri-paneeli.js)
     'etusivupallo', // etusivun pallo (js/ui-apurit.js)
   ];
-  var ESITTELY_HASH = '#esittely';
-  var OHITUS = 'esittely';
 
   function parametrit(search) {
     var tulos = {};
@@ -56,38 +50,23 @@
     return tulos;
   }
 
-  /**
-   * Miksi sivu ohjataan peliin: 'pelisivu' (jo pelissä: ei ohjata), 'ohitus', 'kuori', 'asennettu',
-   * 'parametri', 'esittely-hash', 'tallennus' tai '' (ei ohjata). Vain 'kuori', 'asennettu', 'parametri',
-   * 'esittely-hash' ja 'tallennus' ohjaavat (ks. pitaakoOhjata).
-   */
+  /** Miksi sivu ohjataan peliin: 'kuori', 'parametri' tai '' (ei ohjata; myös jo pelisivulla). */
   function ohjauksenSyy(w) {
     if (!w || !w.location) return '';
     var loc = w.location;
-    var polku = String(loc.pathname || '');
-    if (/(^|\/)pelaa\.html$/i.test(polku)) return 'pelisivu';
-    var haku = parametrit(String(loc.search || ''));
-    if (haku[OHITUS]) return 'ohitus';
+    if (/(^|\/)pelaa\.html$/i.test(String(loc.pathname || ''))) return '';
     try {
       if (w.webkit && w.webkit.messageHandlers && w.webkit.messageHandlers.matkakirja) return 'kuori';
     } catch (e) { /* ei kuorta */ }
-    try {
-      if (w.navigator && w.navigator.standalone === true) return 'asennettu';
-      if (typeof w.matchMedia === 'function' && w.matchMedia('(display-mode: standalone)').matches) return 'asennettu';
-    } catch (e) { /* ei tietoa */ }
+    var haku = parametrit(String(loc.search || ''));
     for (var i = 0; i < PELIN_PARAMETRIT.length; i++) {
       if (haku[PELIN_PARAMETRIT[i]]) return 'parametri';
     }
-    if (String(loc.hash || '').toLowerCase() === ESITTELY_HASH) return 'esittely-hash';
-    try {
-      if (w.localStorage && w.localStorage.getItem(TALLENNUS) != null) return 'tallennus';
-    } catch (e) { /* tallennus estetty (yksityinen tila tms.) */ }
     return '';
   }
 
   function pitaakoOhjata(w) {
-    var syy = ohjauksenSyy(w);
-    return syy !== '' && syy !== 'pelisivu' && syy !== 'ohitus';
+    return ohjauksenSyy(w) !== '';
   }
 
   /** Pelin osoite samassa kansiossa, kysely ja hash mukana. */
@@ -98,21 +77,18 @@
 
   /** Ohjaa, jos pitää; palauttaa syyn tai ''. */
   function ohjaaPeliin(w) {
-    if (!pitaakoOhjata(w)) return '';
     var syy = ohjauksenSyy(w);
-    w.location.replace(pelinOsoite(w));
+    if (syy) w.location.replace(pelinOsoite(w));
     return syy;
   }
 
-  var api = {
+  juuri.MatkakirjaOhjaus = {
     PELI: PELI,
-    TALLENNUS: TALLENNUS,
     PELIN_PARAMETRIT: PELIN_PARAMETRIT.slice(),
     ohjauksenSyy: ohjauksenSyy,
     pitaakoOhjata: pitaakoOhjata,
     pelinOsoite: pelinOsoite,
     ohjaaPeliin: ohjaaPeliin,
   };
-  juuri.MatkakirjaOhjaus = api;
   if (juuri.location && juuri.document) ohjaaPeliin(juuri);
 })(typeof window !== 'undefined' ? window : this);

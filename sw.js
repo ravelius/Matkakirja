@@ -1,9 +1,12 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2618';
+const CACHE = 'matkakirja-2026-09-21.2619';
 const SHELL = [
+  // Etusivu './' ja './index.html' on pelin esittely (17.11.2026), EI peli; peli on './pelaa.html'.
+  // Esittelyn kuvat (sivusto/kuvat/) tulevat välimuistiin vasta nähtyinä, eivät asennuksessa.
   './',
-  // Peli on pelaa.html (17.11.2026); './' ja './index.html' ovat etusivu, joka ohjaa peliin.
   './index.html',
+  './sivusto/sivusto.css',
+  './sivusto/sivusto.js',
   './pelaa.html',
   './kohtaamiskuvat.html',
   './manifest.webmanifest',
