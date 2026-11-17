@@ -298,9 +298,9 @@ export const EUROOPAN_KADONNEET = {
         + 'pohjoisrannalle, ja sen suunnittelivat Gabriel Davioud ja Jules Bourdais. '
         + 'Palatsissa oli kaksi korkeaa tornia ja kaksi kaarevaa '
         + 'siipeä. Keskellä oli yli neljän tuhannen paikan sali, johon vihittiin Cavaillé-Collin urut. '
-        + 'Palatsi rakennettiin vuosina 1876–1878. Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
-        + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadéroa, sillä sen rakennustyöt '
-        + 'alkoivat vasta 1876.',
+        + 'Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
+        + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadéroa, sillä se '
+        + 'valmistui vasta 1878.',
       vuodet: [
         { kohta: 'vuoden 1878', vuosi: '1878', selite: 'maailmannäyttely' },
         { kohta: 'Vuonna 1935', vuosi: '1935', selite: 'keskisali purettiin' },
