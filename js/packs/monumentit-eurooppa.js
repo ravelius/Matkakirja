@@ -913,7 +913,7 @@ export const EUROOPAN_KADONNEET = {
       nimio: 'Burgtheater',
       nappi: 'Keisarillinen hoviteatteri Michaelerplatzilla',
       laudat: { maailmankartta: { x: 6378.9, y: 1467.4 }, europe: { x: 525.4, y: 625.7 } },
-      teksti: 'Wienin keisarillinen hoviteatteri avattiin vuonna 1741. Siellä kantaesitettiin '
+      teksti: 'Wienin keisarillinen hoviteatteri aloitti Hofburgin palloilusalissa 1741 ja avattiin uudistettuna 1748. Siellä kantaesitettiin '
         + 'muun muassa Mozartin Figaron häät vuonna 1786. Kun uusi Burgtheater avattiin '
         + 'Ringstraßella 1888, vanha rakennus purettiin Hofburgin laajennuksen tieltä.',
       lahde: 'en-Wikipedia "Burgtheater", vanhan teatterin historia (tarkistettu 21.9.2026).',

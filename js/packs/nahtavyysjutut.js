@@ -4417,8 +4417,8 @@ export const NAHTAVYYSJUTUT = {
           + 'jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa '
           + 'työskentelee Itävallan presidentti.'
         + '\n\n'
-        + 'Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, '
-          + 'jossa Euroopan valtiot neuvottelivat sodan jälkeisistä '
+        + 'Vuosina 1814–1815 Wienin kongressin juhlat täyttivät Hofburgin, '
+          + 'kun Euroopan valtiot neuvottelivat sodan jälkeisistä '
           + 'rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat '
           + 'niin loistokkaiksi, että aikalaiset alkoivat pilkata koko '
           + 'tapahtumaa.',
@@ -4534,7 +4534,7 @@ export const NAHTAVYYSJUTUT = {
           + 'levittäytyvät koristeelliset puutarhat.'
         + '\n\n'
         + 'Prinssin kuoltua palatsin osti keisarinna Maria Theresia, '
-          + 'ja vuonna 1776 siitä tehtiin julkinen taidegalleria — yksi '
+          + 'ja vuonna 1781 sinne avattiin julkinen taidegalleria — yksi '
           + 'Euroopan ensimmäisistä paikoista, joissa tavalliset '
           + 'ihmiset pääsivät ihailemaan taidetta. Nykyään Belvederessä '
           + 'on esillä muun muassa Gustav Klimtin kuuluisa maalaus '
@@ -4551,9 +4551,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg',
-          lyhyt: 'Ylä-Belvedere valmistui kesälinnaksi 1712–1723 ja siitä tuli julkinen taidegalleria jo 1776.',
+          lyhyt: 'Ylä-Belvedere valmistui kesälinnaksi 1712–1723 ja sinne avattiin julkinen taidegalleria jo 1781.',
           selite: 'Ylä-Belvedere valmistui prinssi Eugen Savoyilaisen kesälinnaksi '
-            + '1712–1723, ja siitä tehtiin julkinen taidegalleria jo 1776 — '
+            + '1712–1723, ja sinne avattiin julkinen taidegalleria jo 1781 — '
             + 'yksi Euroopan ensimmäisistä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -4565,9 +4565,9 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Praterin puiston jättiratas valmistui vuonna 1897 '
           + 'juhlistamaan keisari Frans Joosef I:n 50-vuotista '
           + 'hallituskautta. Sen suunnittelivat brittiläiset '
-          + 'insinöörit. Pyörä oli niin ylivoimainen, että se oli '
-          + 'maailman korkein jättiratas peräti 65 vuoden ajan, vuosina '
-          + '1920–1985.'
+          + 'insinöörit. Kun suuremmat pyörät Pariisissa ja Blackpoolissa oli '
+          + 'purettu, se oli maailman korkein jättiratas vuodesta 1928 '
+          + 'vuoteen 1985.'
         + '\n\n'
         + 'Pyörä oli lähellä katoamista jo vuonna 1916, kun sille '
           + 'myönnettiin purkulupa — mutta rahat loppuivat, eikä sitä '
@@ -4581,7 +4581,7 @@ export const NAHTAVYYSJUTUT = {
           + 'korkealla Wienin yllä.',
       vuodet: [
         { kohta: 'vuonna 1897', vuosi: '1897', selite: 'ratas valmistui' },
-        { kohta: 'vuosina 1920–1985', vuosi: '1920–1985', selite: 'korkein ratas' },
+        { kohta: 'vuodesta 1928 vuoteen 1985', vuosi: '1928–1985', selite: 'korkein ratas' },
         { kohta: 'vuonna 1916', vuosi: '1916', selite: 'purkulupa' },
         { kohta: 'vuoden 1949', vuosi: '1949', selite: 'Kolmas mies' },
       ],
@@ -4594,9 +4594,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Wien Riesenrad.jpg',
-          lyhyt: 'Vuoden 1897 jättiratas oli maailman korkein 65 vuotta, alkuperäisistä koreista 15 pyörii yhä.',
-          selite: 'Vuonna 1897 valmistunut jättiratas oli maailman korkein 65 '
-            + 'vuoden ajan, ja alkuperäisistä 30 kopista sodan jäljiltä pyörii '
+          lyhyt: 'Vuoden 1897 jättiratas oli maailman korkein vuodesta 1928 vuoteen 1985, alkuperäisistä koreista 15 pyörii yhä.',
+          selite: 'Vuonna 1897 valmistunut jättiratas oli Pariisin ja Blackpoolin '
+            + 'pyörien purun jälkeen maailman korkein vuodesta 1928 vuoteen 1985, '
+            + 'ja alkuperäisistä 30 kopista sodan jäljiltä pyörii '
             + 'yhä 15.',
           lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
         },
