@@ -1094,7 +1094,7 @@ export const FOKUSVIRTA_LONTOO = {
       otsikko: 'Pubi, jossa Dickens istui',
       symboli: 'historia',
       visa: {
-        kysymys: 'Minkä Charles Dickensin romaanissa mainitaan The George -pubi?',
+        kysymys: 'Missä Charles Dickensin romaanissa mainitaan The George -pubi?',
         vaihtoehdot: [
           'Oliver Twist',
           'Pikku Dorrit',
