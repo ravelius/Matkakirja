@@ -808,7 +808,7 @@ export const FOKUSKOHTEET_ITA = [
       'Miksi Forum jäi lopulta autioksi?',
       'Mitä Forumin aukiolla tehtiin tavallisena päivänä?',
     ],
-    korostukset: ['Curia Julia|Curia Julian', 'Basilica Aemilia|Basilica Aemiliaan'],
+    korostukset: ['Curia Julia|Curia Julian', 'Basilica Aemilia|Basilica Aemilia'],
     /* Valintakuplan painike. */
     nappi: 'Aukio, jota on sanottu maailman kuuluisimmaksi',
     laudat: {
@@ -823,7 +823,7 @@ export const FOKUSKOHTEET_ITA = [
       + 'kaupungin johtajille. Vanhimmat pyhäköt ovat aukion '
       + 'kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli '
       + 'ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät '
-      + 'vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin '
+      + 'vuonna 179 eaa. rakennutettuun basilikaan, josta tuli myöhemmin Basilica Aemilia, ja noin '
       + '130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja '
       + 'uuden senaatintalon Curia Julian. Nykyään paikka on laaja '
       + 'raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.',
