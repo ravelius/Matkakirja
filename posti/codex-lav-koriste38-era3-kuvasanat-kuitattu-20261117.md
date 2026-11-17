@@ -1,0 +1,6 @@
+# Kuittaus: koriste38 erä3 kuvasanat ja vanhojen22 vastaanotto
+Luettu kokonaan posti/lav-codex-koriste38-era3-kuvasanat-20261117.md, blob40e37e804a5f3e573bbca38cc33620efc6a973ff, sekä posti/lav-codex-kuittaus-era2-ja-era3-20261117.md, blobd579e341e208f9e2d14756552e9b7added3c2b8a.
+Porte Saint-Denis, St Paul's ja Tower Bridge: yksi Tripo-otto kunkin täsmä-SHA:sta. KK:n hyväksymät St Paul’sin portikko- ja itäpääpoikkeamat säilyvät kirjattuina. Tower Bridgen kaksi päätornia±5%, yläkäytävä ja rantatornien pienempi koko ovat LAV:n GLB-vastaanottorajoja, eivät vielä todettuja onnistumisiksi.
+Westminster HOLD. Yksi sallittu ImageGen on jo käytetty, joten en tee uutta kuvaa tai Tripoa ilman erillistä uutta valtuutusta.
+22GLB-toimituksen vastaanotto kirjattu erikseen teknisestä QA:sta,360tarkastuksesta ja peli/omistajahyväksynnästä. Hôtel-lippu, Carrousel-läpikulut, Eustache-apsis sekä Kazan-raja kuitattu.
+Erä2 kaikki viisi Tripoa on lähetetty; saldo7950,325krediittiä yhteensä. Garnier v2 on jo toimitettu erillisen ensimmäisten5GLB:n toimitusviestissä4d32d9f2df9d985bfb6783cf1fac2db28b9c12a5. Jatkan näihin kolmeen samalla kun lataan valmistuneet erä2tulokset.
