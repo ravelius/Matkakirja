@@ -10,7 +10,7 @@ SÄÄNNÖT:
 5. Linkistä rivi tekijälle ja PT:lle; KK:lle, kun KK asetti ehdon tai asia kerrotaan omistajalle. Omistajalle kerrotaan kerran per versio, vain linkissä oleva. [P-261112-5]
 6. Käännös ja linkki enintään 4 kertaa päivässä, kun junassa on uutta (JU ja PT), ylimääräinen vain KK:n sanalla. TestFlight-junia lähtee enintään kaksi päivässä, ellei omistaja pyydä. [R-10.2] [P-261114-9]
 7. TestFlight ja lukitus vain omistajan pyynnöstä, jonka KK välittää sanatarkasti. [R-10.2] [P-261111-5]
-8. Osittaista julkaisua ei ehdoteta; junaa viivästävä osa kärkeen. [P-261024-1]
+8. Osittaista julkaisua ei ehdoteta; junaa viivästävä osa kärkeen. Kun omistaja pyytää julkaisua heti valmiin osan ehdolla, KK toteaa osan junassa ja julkaisu lähtee kärjestä odottamatta muita ehtoja. [P-261024-1] [P-261117-109]
 9. Versio valitaan juuri haetusta päähaarasta; version nostaa juna, ei yksittäinen muutos. [R-10.1]
 10. Web-repon sisältö-, raportti- ja ohjemuutokset PT yhdistää vihreinä ilman korttia. [R-10.12] [P-261109-1]
 11. Palaute-erä junaan, kun pääosa todennettu; PT tarkistaa puuttuvat erät. [R-10.9]
