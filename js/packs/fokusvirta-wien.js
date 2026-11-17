@@ -716,6 +716,16 @@ export const FOKUSVIRTA_WIEN = {
         'Mikä aiheutti Wienin pörssiromahduksen?',
         'Kuinka monta kävijää maailmannäyttelylle odotettiin?',
       ],
+      visa: {
+        kysymys: 'Montako kävijää Wienin maailmannäyttelylle odotettiin?',
+        vaihtoehdot: [
+          'Noin 7 miljoonaa',
+          '20 miljoonaa',
+          '120 miljoonaa',
+        ],
+        oikea: 1,
+        fakta: 'Näyttelylle odotettiin 20 miljoonaa kävijää, mutta niitä tuli noin seitsemän miljoonaa.',
+      },
       // 48,21222222 N / 16,40944444 E — de-Wikipedia "Rotunde (Wien)",
       // näyttelyn tunnusrakennus Praterin alueella.
       paikka: {
@@ -790,6 +800,16 @@ export const FOKUSVIRTA_WIEN = {
         'Miten eläimiä kuljetettiin Egyptistä Wieniin?',
         'Millainen paikka Schönbrunnin eläintarha oli 1800-luvulla?',
       ],
+      visa: {
+        kysymys: 'Keneltä Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828?',
+        vaihtoehdot: [
+          'Egyptin varakuninkaalta',
+          'Ranskan kuninkaalta',
+          'Venetsian doogelta',
+        ],
+        oikea: 0,
+        fakta: 'Kirahvi tuli lahjaksi Egyptin varakuninkaalta, ja se levisi muotiin, käsitöihin ja seuraelämään.',
+      },
       // 48,1845 N / 16,3119 E — takyt-wien.md, täky 10
       // (Tiergarten Schönbrunn).
       paikka: {
@@ -918,6 +938,16 @@ export const FOKUSVIRTA_WIEN = {
         'Miten lipizzanien väri muuttuu vuosien kuluessa?',
         'Milloin ratsastuskoulun talvikoulu valmistui?',
       ],
+      visa: {
+        kysymys: 'Minkä väriset lipizzanit ovat syntyessään?',
+        vaihtoehdot: [
+          'Valkoiset',
+          'Kirjavat',
+          'Tummat',
+        ],
+        oikea: 2,
+        fakta: 'Lipizzanit syntyvät tummina ja vaalenevat vuosien kuluessa, ja noin kymmenvuotiaina ne ovat yleensä valkoisia.',
+      },
       paikka: {
         nimi: 'Lipizzanit',
         laudat: {
@@ -1051,6 +1081,16 @@ export const FOKUSVIRTA_WIEN = {
         'Millainen valssin ensimmäinen versio oli ja kuka sen lauloi?',
         'Mitä vanhalle Dianabadille tapahtui?',
       ],
+      visa: {
+        kysymys: 'Missä Tonava kaunoinen kantaesitettiin vuonna 1867?',
+        vaihtoehdot: [
+          'Wienin oopperassa',
+          'Dianabadissa',
+          'Schönbrunnin linnassa',
+        ],
+        oikea: 1,
+        fakta: 'Valssi kantaesitettiin Dianabadissa, uimalaitoksessa, joka talvella muutettiin tanssi- ja konserttisaliksi.',
+      },
       // 48,2135 N / 16,3768 E — Dianabadin paikka, Obere Donaustraße 93 (WGW ja Wikidata Q1208912; KK 16.11.2026).
       paikka: {
         nimi: 'Tonava kaunoinen',
