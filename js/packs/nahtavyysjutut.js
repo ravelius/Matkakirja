@@ -6800,41 +6800,6 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteinä Parvillen L\'Exposition universelle (1890), Pariisin kaupungin '
         + 'Ces lieux disparus -sarja ja Wikipedia',
     },
-    'Les Hallesin hallit': {
-      aika: '1850-luku–1970-luvun alku',
-      nosto: 'hahmotelma-les-halles',
-      teksti: 'Pariisin ruokatorin hallit rakennettiin 1850-luvulta alkaen. Victor Baltard aloitti ensimmäisen '
-        + 'hallin kivestä, mutta Napoleon III ei pitänyt raskaasta kivirakennuksesta ja vaati metallia. Baltard '
-        + 'suunnitteli uudet paviljongit raudasta, valuraudasta ja lasista; niitä rakennettiin kymmenen, '
-        + 'vaiheittain 1870-luvun alkuun mennessä.'
-        + '\n\n'
-        + 'Émile Zola kuvasi hallit vuonna 1873 ilmestyneessä romaanissa Pariisin vatsa (Le Ventre de Paris) "jättimäiseksi '
-        + 'metallimahaksi, pulteilla ja niiteillä kokoon pantuksi, puusta, lasista ja valuraudasta". Isoisäsi '
-        + 'vuonna 1873 hallit olivat jo käytössä.'
-        + '\n\n'
-        + 'Ruokatori siirtyi Rungisiin 1969, ja hallit purettiin 1970-luvun alussa. Jäljelle jäänyttä '
-        + 'valtavaa työmaata kutsuttiin yksinkertaisesti reiäksi. Yksi paviljonki pystytettiin uudelleen '
-        + 'Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle 1979. Nogentin paviljongissa soivat nykyään '
-        + 'elokuvateatteri Gaumont-Palacen urut.',
-      kuvat: [
-        {
-          tiedosto: 'Les Halles Centrales, nouvelles Halles de Baltard, 1er arrondissement, Paris. PH10089.jpg',
-          lyhyt: 'Baltardin uudet paviljongit Charles Marvillen valokuvassa 1865–1866.',
-          selite: 'Baltardin lasi- ja rautapaviljongit Charles Marvillen valokuvassa vuosilta 1865–1866, kun '
-            + 'hallien rakentaminen oli vielä kesken.',
-          lahde: 'Charles Marville 1865–1866, Musée Carnavalet, Wikimedia Commons (CC0)',
-        },
-      ],
-      // Lähdemuistiinpano (SK 15.11.2026): v3 kohta 7; korjattu hakukierros 4:n ja PR 6781:n mukaan: purku "1971–1973"
-      // → "1970-luvun alussa" (1971–1973 vain fr-WP; pavillonbaltard.fr 1972 ja Larousse 1971 päätöksestä) ja "sai nimen
-      // 'Les Hallesin reikä'" → "kutsuttiin yksinkertaisesti reiäksi" (paris.fr "le trou de Paris", WP "le trou des
-      // Halles"). Kymmenen paviljonkia 1850-luvulta 1870-luvun alkuun = pavillonbaltard.fr + WP; materiaali = paris.fr;
-      // Zolan lainaus = Le Ventre de Paris (fr.wikisource, ensikäden teksti); Rungis 1969 ja Forum 1979 = paris.fr + fr-WP;
-      // Nogent = pavillonbaltard.fr + fr-WP. Zolan lempinimilausetta ei ole.
-      lahde: 'Matkakirjan oma teksti · lähteinä Zolan Le Ventre de Paris (1873), Pariisin kaupungin Ces lieux '
-        + 'disparus -sarja, Pavillon Baltardin historiasivu, Ranskan kulttuuriministeriön muistomerkkirekisteri ja '
-        + 'Wikipedia',
-    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
