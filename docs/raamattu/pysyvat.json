@@ -38,6 +38,16 @@
      "toisto": false,
      "korvattu": null,
      "kirjattu": "2026-11-17T11:14:05.047Z"
+    },
+    {
+     "pvm": "17.11.2026",
+     "klo": "17.59",
+     "lahde": "P-261117-83",
+     "sanat": "Ainoastaan mittaukset, jotka eivät estä kehitystyötä, tulee suorittaa yön aikana.",
+     "sha": "1a0b457c8066970a",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T16:01:35.268Z"
     }
    ],
    "muutokset": []
@@ -378,7 +388,7 @@
     "kaikki"
    ],
    "vartija": "ei vartijaa",
-   "tila": "voimassa",
+   "tila": "pois: P-261117-83",
    "kerrat": [
     {
      "pvm": "17.11.2026",
@@ -391,7 +401,13 @@
      "kirjattu": "2026-11-17T16:00:05.520Z"
     }
    ],
-   "muutokset": []
+   "muutokset": [
+    {
+     "aika": "2026-11-17T16:01:29.882Z",
+     "mita": "pysyva-pois",
+     "omistajan_sana": "P-261117-83"
+    }
+   ]
   }
  ]
 }
