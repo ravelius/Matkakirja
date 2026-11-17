@@ -460,6 +460,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
           // Omistaja 12.11.2026 19.37, KK 19.4x: tarinapaikan nimen lopun merkki lajin mukaan (tiimalasi | lamppu | lyyra | skandaali);
           // null = natiivi käyttää tiimalasia. Data: maakartat.js kohteet[].merkki.
           merkki: !kohdeKartalla(kohde) && kohde.tarinapaikka === true ? (kohde.merkki ?? null) : null,
+          // KK 17.11.2026 08.11: tarinanoston tunniste (natiivi Resources/Tarinanostot/<tarina>.json), kortin nappi
+          // "Näin tämä tehtiin"; null = ei nappia. Data: maakartat.js kohteet[].tarina.
+          tarina: typeof kohde.tarina === 'string' && kohde.tarina ? kohde.tarina : null,
           kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
           kuvat: (kohde.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
         };
@@ -616,7 +619,8 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + 'kartalle (vain rakennus, aukio, luonto; aukio ja luonto kevyellä merkillä). kartalla: false = tarinakohde, jolla on '
       + 'karttanosto: se on kaupungin nostoissa (kaupunkiliuska), ei kartalla. Kartan kohteet ensin, joten niiden järjestys = webin numerointi. '
       + 'tarinapaikka = KK:n valitsema tarinakohde (tarkka paikka + havainnekuva): natiivin kaupungin luettelon Tarinapaikat; muut tarinakohteet vain lehdessä. '
-      + 'merkki = tarinapaikan nimen lopun merkki (tiimalasi | lamppu | lyyra | skandaali; null = tiimalasi).',
+      + 'merkki = tarinapaikan nimen lopun merkki (tiimalasi | lamppu | lyyra | skandaali; null = tiimalasi). '
+      + 'tarina = tarinanoston tunniste (natiivin Tarinanostot/<tarina>.json; kortin nappi "Näin tämä tehtiin"), null = ei tarinaa.',
     { kaupunki: 'kaupungit' }, kohdekartat);
   // Skeema 1.24: rakentajat (R.kuva) saapumisteksteille (tools/vienti/saapumiset.mjs).
   return R;

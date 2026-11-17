@@ -797,6 +797,15 @@ test('skeema 1.24: kohdekarttojen nostolinkeillä aihe (kaupunkiliuskan kaava)',
   assert.ok(kartat.every((k) => k.kohteet.every((x) => x.aihe === (x.linkit[0]?.aihe ?? null))));
 });
 
+test('kohdekartat.kohteet[].tarina: Porto di Ripetta → kadonneet-nain-tehtiin, muilla null (KK 17.11.2026 08.11)', () => {
+  const kartat = JSON.parse(tiedostot.get('kokoelmat/kohdekartat.json')).alkiot;
+  const kaikki = kartat.flatMap((k) => k.kohteet.map((x) => ({ kartta: k.id, ...x })));
+  assert.ok(kaikki.every((x) => x.tarina === null || (typeof x.tarina === 'string' && /^[a-z0-9-]+$/.test(x.tarina))));
+  const ripetta = kaikki.find((x) => x.kartta === 'rooma' && x.nimi === 'Porto di Ripetta');
+  assert.ok(ripetta, 'Porto di Ripetta puuttuu Rooman kohdekartalta');
+  assert.equal(ripetta.tarina, 'kadonneet-nain-tehtiin');
+});
+
 test('skeema 1.24: Livian saapumisrepliikit ja maakohtaiset täkynostot', async () => {
   const { LIVIAN_SAAPUMISET } = await import('../js/fokusvirta.js');
   const { jaaPuheenvuoroksi } = await import('../js/ui-apurit.js');
