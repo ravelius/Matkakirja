@@ -1,0 +1,1036 @@
+{
+ "kaupunki": "lontoo",
+ "huom": "SK 17.11.2026. Rivit käsin tekstiä vasten; kohta = sanatarkka pätkä luettavasta tekstistä (tasan kerran), vuosi näytetään sellaisenaan, selite 1-3 sanaa enintään 20 merkkiä. Ei uusia faktoja.",
+ "nostot": [
+  {
+   "nimi": "Greenwichin palatsi",
+   "avain": "kadonnut:hahmotelma-greenwich-palatsi",
+   "rivit": [
+    [
+     "(1491",
+     "1491",
+     "Henrik VIII syntyi"
+    ],
+    [
+     "(1516",
+     "1516",
+     "Maria I syntyi"
+    ],
+    [
+     "(1533",
+     "1533",
+     "Elisabet I syntyi"
+    ],
+    [
+     "kanssa 1540",
+     "1540",
+     "Henrik VIII:n häät"
+    ]
+   ]
+  },
+  {
+   "nimi": "Newgaten vankila",
+   "avain": "kadonnut:hahmotelma-newgate",
+   "rivit": [
+    [
+     "perustettiin 1188",
+     "1188",
+     "perustettiin"
+    ],
+    [
+     "vuonna 1807",
+     "1807",
+     "väkijoukon ryntäys"
+    ],
+    [
+     "toukokuuta 1868",
+     "1868",
+     "viimeinen julkinen"
+    ],
+    [
+     "käydessä 1873",
+     "1873",
+     "isoisän käynti"
+    ],
+    [
+     "purettiin 1902–1904",
+     "1902–1904",
+     "purettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Euston Arch",
+   "avain": "kadonnut:hahmotelma-euston-arch",
+   "rivit": [
+    [
+     "rautatieyhtiölle 1837",
+     "1837",
+     "portti suunniteltiin"
+    ],
+    [
+     "siihen 1870",
+     "1870",
+     "nimi lisättiin"
+    ],
+    [
+     "sen 1873",
+     "1873",
+     "isoisä näki"
+    ],
+    [
+     "Vuonna 1961",
+     "1961",
+     "purku alkoi"
+    ],
+    [
+     "niistä 1994",
+     "1994",
+     "kiviä löytyi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Vanha Westminsterin palatsi",
+   "avain": "kadonnut:hahmotelma-westminster-vanha",
+   "rivit": [
+    [
+     "noin 1045–1050",
+     "n. 1045–1050",
+     "Edvard rakennutti"
+    ],
+    [
+     "päivänä 1834",
+     "1834",
+     "palatsi paloi"
+    ],
+    [
+     "alkoivat 1840",
+     "1840",
+     "uusi palatsi alkoi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Old St Paul's",
+   "avain": "nahtavyys:lontoo:Old St Paul's",
+   "rivit": [
+    [
+     "vuonna 1087",
+     "1087",
+     "rakentaminen alkoi"
+    ],
+    [
+     "vuonna 1561",
+     "1561",
+     "torni paloi"
+    ],
+    [
+     "vuonna 1666",
+     "1666",
+     "suurpalo"
+    ],
+    [
+     "vuonna 1710",
+     "1710",
+     "nykyinen valmistui"
+    ],
+    [
+     "vuonna 1873",
+     "1873",
+     "isoisän vuosi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Crystal Palace 1851",
+   "avain": "nahtavyys:lontoo:Crystal Palace 1851",
+   "rivit": [
+    [
+     "toukokuuta 1851",
+     "1851",
+     "näyttely avattiin"
+    ],
+    [
+     "vuonna 1936",
+     "1936",
+     "paloi"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Whitehallin palatsi",
+   "avain": "kadonnut:hahmotelma-whitehall",
+   "rivit": [
+    [
+     "haltuunsa 1530",
+     "1530",
+     "Henrik otti haltuun"
+    ],
+    [
+     "valmistui 1622",
+     "1622",
+     "juhlasali valmis"
+    ],
+    [
+     "vuonna 1649",
+     "1649",
+     "Kaarle I mestattiin"
+    ],
+    [
+     "päivänä 1698",
+     "1698",
+     "palatsi paloi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Westminster Abbey",
+   "avain": "nahtavyys:lontoo:Westminster Abbey",
+   "rivit": [
+    [
+     "joulukuussa 1065",
+     "1065",
+     "kirkko vihittiin"
+    ],
+    [
+     "jouluna 1066",
+     "1066",
+     "Vilhelm kruunattiin"
+    ],
+    [
+     "nousta 1245",
+     "1245",
+     "uusi kirkko alkoi"
+    ],
+    [
+     "luostarit 1540",
+     "1540",
+     "luostarien lakkautus"
+    ],
+    [
+     "vuonna 1400",
+     "1400",
+     "Chaucer haudattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Westminsterin palatsi",
+   "avain": "nahtavyys:lontoo:Westminsterin palatsi",
+   "rivit": [
+    [
+     "valmistui 1099",
+     "1099",
+     "Hall valmistui"
+    ],
+    [
+     "Lokakuussa 1834",
+     "1834",
+     "palatsi paloi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Westminster Bridge",
+   "avain": "nahtavyys:lontoo:Westminster Bridge",
+   "rivit": [
+    [
+     "silti 1750",
+     "1750",
+     "silta avattiin"
+    ],
+    [
+     "sillalla 1802",
+     "1802",
+     "Wordsworthin sonetti"
+    ],
+    [
+     "avattiin 1862",
+     "1862",
+     "nykyinen avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Cutty Sark",
+   "avain": "nahtavyys:lontoo:Cutty Sark",
+   "rivit": [
+    [
+     "rakennettiin 1869",
+     "1869",
+     "laiva rakennettiin"
+    ],
+    [
+     "Portugaliin 1895",
+     "1895",
+     "myytiin Portugaliin"
+    ],
+    [
+     "takaisin 1922",
+     "1922",
+     "ostettiin takaisin"
+    ],
+    [
+     "nostettiin 1954",
+     "1954",
+     "kuivatelakalle"
+    ],
+    [
+     "Vuonna 2007",
+     "2007",
+     "tulipalo"
+    ]
+   ]
+  },
+  {
+   "nimi": "Lontoon Tower",
+   "avain": "nahtavyys:lontoo:Lontoon Tower",
+   "rivit": [
+    [
+     "noin 1078",
+     "n. 1078",
+     "tornin rakennus"
+    ],
+    [
+     "Boleyn 1536",
+     "1536",
+     "Boleyn mestattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "British Museum",
+   "avain": "nahtavyys:lontoo:British Museum",
+   "rivit": [
+    [
+     "ja 1753",
+     "1753",
+     "museo perustettiin"
+    ],
+    [
+     "avattiin 1759",
+     "1759",
+     "museo avattiin"
+    ],
+    [
+     "pylväsjulkisivun 1823–1852",
+     "1823–1852",
+     "pylväsjulkisivu"
+    ],
+    [
+     "rakennettiin 1857",
+     "1857",
+     "pyöreä lukusali"
+    ]
+   ]
+  },
+  {
+   "nimi": "Natural History Museum",
+   "avain": "nahtavyys:lontoo:Natural History Museum",
+   "rivit": [
+    [
+     "avattiin 1881",
+     "1881",
+     "museo avattiin"
+    ],
+    [
+     "siirrettiin 1979",
+     "1979",
+     "Dippy päähalliin"
+    ],
+    [
+     "vaihdettiin 2017",
+     "2017",
+     "sinivalas tilalle"
+    ]
+   ]
+  },
+  {
+   "nimi": "Victoria Memorial",
+   "avain": "nahtavyys:lontoo:Victoria Memorial",
+   "rivit": [
+    [
+     "tammikuussa 1901",
+     "1901",
+     "Viktoria kuoli"
+    ],
+    [
+     "paljastettiin 1911",
+     "1911",
+     "paljastus"
+    ],
+    [
+     "uudelleen 1913",
+     "1913",
+     "palatsin julkisivu"
+    ]
+   ]
+  },
+  {
+   "nimi": "Royal Albert Hall",
+   "avain": "nahtavyys:lontoo:Royal Albert Hall",
+   "rivit": [
+    [
+     "Vuoden 1851",
+     "1851",
+     "maailmannäyttely"
+    ],
+    [
+     "kuoli 1861",
+     "1861",
+     "Albert kuoli"
+    ],
+    [
+     "salin 1871",
+     "1871",
+     "sali avattiin"
+    ],
+    [
+     "vaimennettiin 1969",
+     "1969",
+     "kaikua vaimennettiin"
+    ],
+    [
+     "toukokuussa 1941",
+     "1941",
+     "Queen's Hallin tuho"
+    ]
+   ]
+  },
+  {
+   "nimi": "Albert Memorial",
+   "avain": "nahtavyys:lontoo:Albert Memorial",
+   "rivit": [
+    [
+     "kuoli 1861",
+     "1861",
+     "Albert kuoli"
+    ],
+    [
+     "Parkissa 1851",
+     "1851",
+     "Kristallipalatsi"
+    ],
+    [
+     "paloi 1936",
+     "1936",
+     "paloi Sydenhamissa"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kensingtonin palatsi",
+   "avain": "nahtavyys:lontoo:Kensingtonin palatsi",
+   "rivit": [
+    [
+     "osti 1689",
+     "1689",
+     "Vilhelm osti talon"
+    ],
+    [
+     "paloi 1698",
+     "1698",
+     "Whitehall paloi"
+    ],
+    [
+     "palatsissa 1819",
+     "1819",
+     "Viktoria syntyi"
+    ],
+    [
+     "aamuna 1837",
+     "1837",
+     "tuli kuningattareksi"
+    ],
+    [
+     "vuoteen 1997",
+     "1997",
+     "Diana asui vuoteen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Royal Observatory",
+   "avain": "nahtavyys:lontoo:Royal Observatory",
+   "rivit": [
+    [
+     "perusti 1675",
+     "1675",
+     "Kaarle II perusti"
+    ],
+    [
+     "Vuodesta 1833",
+     "1833",
+     "aikapallo alkoi"
+    ],
+    [
+     "Vuonna 1884",
+     "1884",
+     "nollameridiaani"
+    ]
+   ]
+  },
+  {
+   "nimi": "Old Royal Naval College",
+   "avain": "nahtavyys:lontoo:Old Royal Naval College",
+   "rivit": [
+    [
+     "tammikuussa 1806",
+     "1806",
+     "Nelson nähtävillä"
+    ],
+    [
+     "vuoteen 1869",
+     "1869",
+     "merimiehet vuoteen"
+    ],
+    [
+     "vuoteen 1998",
+     "1998",
+     "upseerikoulu vuoteen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Queen's House",
+   "avain": "nahtavyys:lontoo:Queen's House",
+   "rivit": [
+    [
+     "Housen 1616",
+     "1616",
+     "Jones suunnitteli"
+    ],
+    [
+     "kuoli 1619",
+     "1619",
+     "Anna kuoli"
+    ],
+    [
+     "valmistui 1635",
+     "1635",
+     "talo valmistui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Buckinghamin palatsi",
+   "avain": "nahtavyys:lontoo:Buckinghamin palatsi",
+   "rivit": [
+    [
+     "rakensi 1703",
+     "1703",
+     "talo rakennettiin"
+    ],
+    [
+     "sen 1761",
+     "1761",
+     "Yrjö III osti"
+    ],
+    [
+     "vasta 1837",
+     "1837",
+     "Viktoria muutti"
+    ],
+    [
+     "kertaa 1838–1841",
+     "1838–1841",
+     "Jones murtautui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Trafalgar Square",
+   "avain": "nahtavyys:lontoo:Trafalgar Square",
+   "rivit": [
+    [
+     "yleisölle 1844",
+     "1844",
+     "aukio avattiin"
+    ],
+    [
+     "meritaistelun 1805",
+     "1805",
+     "Nelsonin taistelu"
+    ],
+    [
+     "vasta 1867",
+     "1867",
+     "leijonat tulivat"
+    ],
+    [
+     "kiellettiin 2003",
+     "2003",
+     "ruokinta kiellettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Big Ben",
+   "avain": "nahtavyys:lontoo:Big Ben",
+   "rivit": [
+    [
+     "syyskuussa 1859",
+     "1859",
+     "uusi kello halkesi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Lontoon silmä",
+   "avain": "nahtavyys:lontoo:Lontoon silmä",
+   "rivit": []
+  },
+  {
+   "nimi": "Pyhän Paavalin katedraali",
+   "avain": "nahtavyys:lontoo:Pyhän Paavalin katedraali",
+   "rivit": [
+    [
+     "suurpalossa 1666",
+     "1666",
+     "suurpalo"
+    ],
+    [
+     "joulukuun 1940",
+     "1940",
+     "kuuluisa valokuva"
+    ]
+   ]
+  },
+  {
+   "nimi": "Tower Bridge",
+   "avain": "nahtavyys:lontoo:Tower Bridge",
+   "rivit": [
+    [
+     "myytiin 1968",
+     "1968",
+     "London Bridge myyty"
+    ]
+   ]
+  },
+  {
+   "nimi": "Etelämeren kupla",
+   "avain": "nahtavyys:lontoo:Etelämeren kupla",
+   "rivit": [
+    [
+     "vuonna 1720",
+     "1720",
+     "oppi sanan kupla"
+    ]
+   ]
+  },
+  {
+   "nimi": "Cheapsiden kätkö",
+   "avain": "nahtavyys:lontoo:Cheapsiden kätkö",
+   "rivit": [
+    [
+     "Vuonna 1912",
+     "1912",
+     "laatikko esiin"
+    ],
+    [
+     "vuoden 1600",
+     "n. 1600",
+     "smaragdikello"
+    ],
+    [
+     "marraskuussa 1640",
+     "1640",
+     "arvonimi saatiin"
+    ],
+    [
+     "syyskuussa 1666",
+     "1666",
+     "talo paloi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Millennium Bridgen portaat",
+   "avain": "nahtavyys:lontoo:Millennium Bridgen portaat",
+   "rivit": [
+    [
+     "vuonna 2022",
+     "2022",
+     "myynti keskeytettiin"
+    ],
+    [
+     "uudelleen 2024",
+     "2024",
+     "myynti uudelleen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Vanha London Bridge",
+   "avain": "nahtavyys:lontoo:Vanha London Bridge",
+   "rivit": [
+    [
+     "rakennettiin 1176",
+     "1176",
+     "rakentaminen alkoi"
+    ],
+    [
+     "valmistui 1209",
+     "1209",
+     "silta valmistui"
+    ],
+    [
+     "Vuosina 1577–1579",
+     "1577–1579",
+     "Nonsuch House"
+    ],
+    [
+     "silta 1831",
+     "1831",
+     "silta purettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Faraday 1831",
+   "avain": "nahtavyys:lontoo:Faraday 1831",
+   "rivit": [
+    [
+     "elokuuta 1831",
+     "1831",
+     "Faradayn koe"
+    ]
+   ]
+  },
+  {
+   "nimi": "Fleming 1928",
+   "avain": "nahtavyys:lontoo:Fleming 1928",
+   "rivit": [
+    [
+     "syyskuuta 1928",
+     "1928",
+     "homepilkku maljassa"
+    ],
+    [
+     "maaliskuuta 1929",
+     "1929",
+     "nimi penisilliini"
+    ],
+    [
+     "Nobelin 1945",
+     "1945",
+     "lääketieteen Nobel"
+    ]
+   ]
+  },
+  {
+   "nimi": "Brunel 1827",
+   "avain": "nahtavyys:lontoo:Brunel 1827",
+   "rivit": [
+    [
+     "toukokuussa 1827",
+     "1827",
+     "tunnelikilpi työssä"
+    ],
+    [
+     "Tammikuussa 1828",
+     "1828",
+     "tulva tappoi kuusi"
+    ],
+    [
+     "maaliskuuta 1843",
+     "1843",
+     "tunneli avattiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Lontoon palo 1666",
+   "avain": "nahtavyys:lontoo:Lontoon palo 1666",
+   "rivit": [
+    [
+     "syyskuuta 1666",
+     "1666",
+     "suurpalo alkoi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Shakespeare 1599",
+   "avain": "nahtavyys:lontoo:Shakespeare 1599",
+   "rivit": [
+    [
+     "syyskuu 1599",
+     "1599",
+     "Globe rakennettu"
+    ],
+    [
+     "kesäkuuta 1613",
+     "1613",
+     "Globe paloi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Metron höyryveturi",
+   "avain": "nahtavyys:lontoo:Metron höyryveturi",
+   "rivit": [
+    [
+     "tammikuuta 1863",
+     "1863",
+     "metro avattiin"
+    ],
+    [
+     "vuonna 1963",
+     "1963",
+     "muistolaatta"
+    ]
+   ]
+  },
+  {
+   "nimi": "Exchange Alley",
+   "avain": "nahtavyys:lontoo:Exchange Alley",
+   "rivit": [
+    [
+     "perustettiin 1711",
+     "1711",
+     "yhtiö perustettiin"
+    ],
+    [
+     "vuonna 1720",
+     "1720",
+     "velkasopimus"
+    ],
+    [
+     "paljasti 1721",
+     "1721",
+     "tutkinta paljasti"
+    ]
+   ]
+  },
+  {
+   "nimi": "Canaletto Lontoossa",
+   "avain": "nahtavyys:lontoo:Canaletto Lontoossa",
+   "rivit": [
+    [
+     "vuonna 1746",
+     "1746",
+     "muutti Lontooseen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Dickensin pubi",
+   "avain": "nahtavyys:lontoo:Dickensin pubi",
+   "rivit": [
+    [
+     "vuoden 1676",
+     "1676",
+     "Southwarkin palo"
+    ]
+   ]
+  },
+  {
+   "nimi": "Abbey Roadin suojatie",
+   "avain": "nahtavyys:lontoo:Abbey Roadin suojatie",
+   "rivit": [
+    [
+     "päivänä 1969",
+     "1969",
+     "suojatien ylitys"
+    ]
+   ]
+  },
+  {
+   "nimi": "Leake Streetin tunneli",
+   "avain": "nahtavyys:lontoo:Leake Streetin tunneli",
+   "rivit": [
+    [
+     "toukokuussa 2008",
+     "2008",
+     "Cans Festival"
+    ]
+   ]
+  },
+  {
+   "nimi": "Neljäs jalusta",
+   "avain": "nahtavyys:lontoo:Neljäs jalusta",
+   "rivit": [
+    [
+     "vuonna 1841",
+     "1841",
+     "jalusta jäi tyhjäksi"
+    ],
+    [
+     "Kesällä 2009",
+     "2009",
+     "ihmiset jalustalla"
+    ]
+   ]
+  },
+  {
+   "nimi": "Turbiinihalli",
+   "avain": "nahtavyys:lontoo:Turbiinihalli",
+   "rivit": [
+    [
+     "Vuonna 2010",
+     "2010",
+     "Ai Weiwein siemenet"
+    ]
+   ]
+  },
+  {
+   "nimi": "Savusumu 1952",
+   "avain": "nahtavyys:lontoo:Savusumu 1952",
+   "rivit": [
+    [
+     "Joulukuussa 1952",
+     "1952",
+     "savusumu"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 1956",
+     "1956",
+     "laki säädettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Händel ja Hendrix",
+   "avain": "nahtavyys:lontoo:Händel ja Hendrix",
+   "rivit": [
+    [
+     "vuonna 1723",
+     "1723",
+     "Händel muutti"
+    ],
+    [
+     "huhtikuuta 1759",
+     "1759",
+     "Händel kuoli"
+    ],
+    [
+     "välillä 1741",
+     "1741",
+     "Messias sävelletty"
+    ],
+    [
+     "vuosina 1968–69",
+     "1968–69",
+     "Hendrix asui"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Johnson 1755",
+   "avain": "nahtavyys:lontoo:Johnson 1755",
+   "rivit": [
+    [
+     "vuonna 1755",
+     "1755",
+     "sanakirja ilmestyi"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Punch 1662",
+   "avain": "nahtavyys:lontoo:Punch 1662",
+   "rivit": [
+    [
+     "päivänä 1662",
+     "1662",
+     "Pepysin merkintä"
+    ],
+    [
+     "Vuonna 1669",
+     "1669",
+     "toinen merkintä"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Baird 1926",
+   "avain": "nahtavyys:lontoo:Baird 1926",
+   "rivit": [
+    [
+     "Tammikuussa 1926",
+     "1926",
+     "television esitys"
+    ],
+    [
+     "vuonna 1884",
+     "1884",
+     "Nipkow'n kiekko"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Sähkötin 1837",
+   "avain": "nahtavyys:lontoo:Sähkötin 1837",
+   "rivit": [
+    [
+     "Heinäkuussa 1837",
+     "1837",
+     "koe Eustonilla"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "kuoli 1875",
+     "1875",
+     "Wheatstone kuoli"
+    ],
+    [
+     "Cooke 1879",
+     "1879",
+     "Cooke kuoli"
+    ]
+   ]
+  },
+  {
+   "nimi": "Liukumäkiveistos",
+   "avain": "nahtavyys:lontoo:Liukumäkiveistos",
+   "rivit": [
+    [
+     "vuoden 2012",
+     "2012",
+     "olympialaiset"
+    ],
+    [
+     "Vuonna 2016",
+     "2016",
+     "liukumäki kiedottiin"
+    ]
+   ]
+  }
+ ]
+}
