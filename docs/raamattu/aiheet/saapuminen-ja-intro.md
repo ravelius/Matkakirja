@@ -18,7 +18,7 @@ SÄÄNNÖT:
 13. Aloituskaupungissa ei ole luentaa: Pulu kertoo Pöllön katoamisesta ja neuvoo pelin; hänen viimeinen repliikkinsä on ainoa ohjerivi. [R-2.161]
 14. Maassa näkyvät aluksi vain visalliset nostot; ensimmäinen oikea vastaus sytyttää aarteen pisteen ja tuo muut nostot. [R-2.161]
 15. Esittelyn lisäkuvat ovat pieniä oikeassa alakulmassa ja suurenevat vain napautuksesta. Introa lukuun ottamatta isoja kuvia ei avata itsestään; kuumailmapallo aukeaa ilman esittelyä. [R-4.25] [R-2.152]
-16. Otsikkoruudun pienissä riveissä (iskulause, alaotsikko) reunaviiva ei peitä kirjainta: viiva on kirjaimen ulkopuolella tai tilalla pehmeä varjo, kirjain selvästi reunaa paksumpi; luettava yhdellä silmäyksellä paperilla ja kartan päällä. Iso kaupunkinimi ennallaan. [P-261117-106]
+16. Otsikkoruudun pienissä riveissä (iskulause, alaotsikko) reunaviiva ei peitä kirjainta: viiva on kirjaimen ulkopuolella tai tilalla pehmeä varjo, kirjain selvästi reunaa paksumpi; luettava yhdellä silmäyksellä paperilla ja kartan päällä. Reunaviiva on kevyt (vaalea tai läpikuultava) ja ohut; isoon kaupunkinimeen saa soveltaa samaa suhdetta. [P-261117-106] [P-261117-107]
 
 EI VIKA:
 - Näköalakuvassa, kaupunginosassa ja kadussa ei ole vuotta.
