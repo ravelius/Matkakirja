@@ -21,13 +21,16 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-amsterdam-20261117.json`. Koht
 7. **Kissalaiva:** alkuvuosi 1966 ei vahvistu (lähde: "since 1968").
 8. **Montelbaanstoren:** "luultavasti de Keyser" pitää (mforamsterdam: presumed); rivin selite ei toista epävarmuutta, teksti kantaa sen.
 
+## KK:n päätökset 17.45 (PR 7049 luettu; toteutettu tässä)
+1. Keskusasema "asema avattiin" (ei "valmistui"). 2. Herengracht 537 1961 "Harry Potin kuva". 3. Yövartio 1975–76 "kunnostus". 4. Synagoga 1671 "peruskivi laskettiin". 5. Yhden lähteen rivit (Artis 1838 ja 1883, Timanttihiomo 1870, Herengracht 1961, Synagoga 1852–1854) ja 1873-rivit jäävät. 6. Tekstihuomiot 1–8 tekstikorjauslistaan (tehty, ei nyt korjata).
+
 ## Rivit nostoittain
 
 ### Keskusrautatieasema
 
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
-| – asema valmistui 1889 | vuonna 1889 | Amsterdamin komea keskusrautatieasema valmistui vuonna 1889, mutta se ei seiso tavallisella maalla. |
+| – asema avattiin 1889 | vuonna 1889 | Amsterdamin komea keskusrautatieasema valmistui vuonna 1889, mutta se ei seiso tavallisella maalla. |
 
 ### Anne Frankin talo
 
@@ -117,7 +120,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-amsterdam-20261117.json`. Koht
 | Ruudulla | kohta | Virke tekstissä |
 |---|---|---|
 | – Damin peruskivi 1648 | lokakuuta 1648 | Dam-torin kaupungintalon, nykyisen kuninkaanpalatsin, alle lyötiin 13 659 Norjasta tuotua puupaalua; ensimmäinen kivi laskettiin 28. lokakuuta 1648. |
-| – tukipaaluja 1961 | Maaliskuussa 1961 | Maaliskuussa 1961 Herengracht 537:n eteen pystytettiin tukipaaluja, ja kuvan otti valokuvaaja Harry Pot. |
+| – Harry Potin kuva 1961 | Maaliskuussa 1961 | Maaliskuussa 1961 Herengracht 537:n eteen pystytettiin tukipaaluja, ja kuvan otti valokuvaaja Harry Pot. |
 | – isoisän matka 1873 | matkavuonna 1873 | Isoisäsi matkavuonna 1873 Dam-torin rakennus oli jo kuninkaan palatsi, mutta sen alla olivat yhä samat 13 659 paalua. |
 
 ### Yövartio
@@ -128,7 +131,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-amsterdam-20261117.json`. Koht
 | – taulu siirrettiin 1715 | Vuonna 1715 | Vuonna 1715 taulu siirrettiin kaupungintaloon Dam-torille, ja koska se oli liian suuri uudelle paikalle, siitä leikattiin kaistale joka reunalta. |
 | – isoisän matka 1873 | matkavuonna 1873 | Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; nykyään taulu on siellä. |
 | – nykyinen avattiin 1885 | vasta 1885 | Isoisäsi matkavuonna 1873 taulu oli Trippenhuisissa Kloveniersburgwalilla, sillä nykyinen Rijksmuseum avattiin vasta 1885; nykyään taulu on siellä. |
-| – uusi puhdistus 1975–76 | uudelleen 1975–76 | Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76. |
+| – kunnostus 1975–76 | uudelleen 1975–76 | Pinnalla oli paksu, tummunut lakka; se poistettiin vasta 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76. |
 
 ### Portugalilainen synagoga
 
@@ -136,7 +139,7 @@ Koneluettava lähde: `docs/raportit/noston-vuodet-amsterdam-20261117.json`. Koht
 |---|---|---|
 | – vihittiin käyttöön 1675 | elokuuta 1675 | Portugalilainen synagoga vihittiin käyttöön 2. elokuuta 1675. |
 | – tontti ostettiin 1670 | joulukuussa 1670 | Arkkitehti Elias Bouman oli suunnitellut sen, ja tontti oli ostettu joulukuussa 1670. |
-| – peruskivet laskettu 1671 | huhtikuuta 1671 | Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671. |
+| – peruskivi laskettiin 1671 | huhtikuuta 1671 | Ensimmäiset neljä peruskiveä laskettiin 17. huhtikuuta 1671. |
 | – ikkunat uusittiin 1852–1854 | Vuosina 1852–1854 | Vuosina 1852–1854 päähallin ikkunat uusittiin valurautakehyksisiksi. |
 | – isoisän matka 1873 | matkavuonna 1873 | Isoisäsi matkavuonna 1873 synagoga oli seissyt nykyisellä Mr. |
 

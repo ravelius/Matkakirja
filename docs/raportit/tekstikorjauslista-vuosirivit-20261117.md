@@ -15,3 +15,13 @@ Kaulanauha: 1,6 milj. livreä (en.wiki 2 milj.); Metro: "jäljellä 88" (en.wiki
 - Les Halles 1183: yksi lähde antaa 1181 markkinan siirrolle.
 - Luxembourgin puisto 1612 (kartano ostettu): Universalis 1611.
 - Palais d'Orsay "Napoleon aloitti 1810": Napoleon.org 1808 (päätös); rakentaminen 1810.
+
+## Amsterdam (PR 7049; KK 17.45: tekstihuomiot 1–8 listaan, ei nyt)
+1. **Keskusrautatieasema** "valmistui vuonna 1889": rakennus valmis 1884, avajaiset 15.10.1889 (en-Wikipedia) → "avattiin 1889".
+2. **Timanttihiomo**: Diamantmuseum ajoittaa Kaapin ajan 1870–1873 (teksti "kesti 1870-luvun puoliväliin"; "matkavuonna 1873 elettiin Kaapin aikaa" rajatapaus); Boasin hiomon ensimmäinen kivi 1878, valmistumisvuosi 1879 vain Gassanilla (rivi poistettu).
+3. **Kapein talo**: 1738 on ensimmäinen arkistomaininta (tonttivero), ei rakennusvuosi; Singel 7:n vuosi 1634.
+4. **Herengracht 537**: valokuvan kuvaus puhuu vain "palenbos"-paaluviidakosta; "pystytettiin tukipaaluja" ei vahvistu.
+5. **Yövartio**: 1975–76 veitsi-iskun (14.9.1975) jälkeinen restaurointi, ei pelkkä puhdistus; lakka poistettu vain osittain 1946–47.
+6. **Synagoga**: "ensimmäiset neljä peruskiveä" ja "valurautakehyksiset ikkunat" eivät vahvistu (peruskivi 17.4.1671); arkkitehti Bouman/Bouwman.
+7. **Kissalaiva**: alkuvuosi 1966 ei vahvistu (depoezenboot.nl "since 1968"); rivi poistettu.
+8. **Montelbaanstoren**: "luultavasti de Keyser" (presumed) kantaa epävarmuuden tekstissä.

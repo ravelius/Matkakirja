@@ -66,25 +66,6 @@ kadonnut:hahmotelma-temple-torni
 kadonnut:hahmotelma-trocadero
 kadonnut:hahmotelma-westminster-vanha
 kadonnut:hahmotelma-whitehall
-nahtavyys:amsterdam:Amsterdam-laiva
-nahtavyys:amsterdam:Anne Frankin talo
-nahtavyys:amsterdam:Artis-eläintarha
-nahtavyys:amsterdam:Haringpakkerstoren
-nahtavyys:amsterdam:Herengracht 537
-nahtavyys:amsterdam:Kapein talo
-nahtavyys:amsterdam:Keskusrautatieasema
-nahtavyys:amsterdam:Kissalaiva
-nahtavyys:amsterdam:Kuninkaanpalatsi
-nahtavyys:amsterdam:Maitotyttö
-nahtavyys:amsterdam:Montelbaanstoren
-nahtavyys:amsterdam:Paleis voor Volksvlijt
-nahtavyys:amsterdam:Portugalilainen synagoga
-nahtavyys:amsterdam:Rembrandtin talo
-nahtavyys:amsterdam:Rijksmuseum
-nahtavyys:amsterdam:Timanttihiomo
-nahtavyys:amsterdam:Vanha raatihuone
-nahtavyys:amsterdam:Waag op de Dam
-nahtavyys:amsterdam:Yövartio
 nahtavyys:lontoo:Abbey Roadin suojatie
 nahtavyys:lontoo:Albert Memorial
 nahtavyys:lontoo:Baird 1926
