@@ -45,7 +45,7 @@ Säännöt: kuvassa ei tekstiä; tekijä, vuosi, kokoelma, lisenssi, linkki joka
 
 | Osio | Kuva | Kuvateksti (lyhyt) | Lähderivi |
 |---|---|---|---|
-| 1–2 | Valokuva R3 ja malli pinottuina (julkaisu/m5-kuvaparit/ripetta-r3-valokuva-ja-malli-pelin-varein.jpg; KK 08.56) | Ylhäällä valokuva satamasta noin vuodelta 1865, alla malli pelin väreillä. | Valokuva: tuntematon italialainen valokuvaaja, noin 1865 (Commonsin arvio), Zeno.org (Zeno Fotografie), public domain. Malli: Matkakirjan oma malli, tehty tekoälyllä mallikuvasta. **R1 ja R2 pois artikkelista ja pelistä (omistaja 17.11. klo 08.50; R2:lle ei löytynyt avointa lähdettä).** |
+| 1–2 | Valokuva R3 ja malli pinottuina (julkaisu/m5-kuvaparit/ripetta-r3-valokuva-ja-malli-pelin-varein.jpg; KK 08.56) | Ylhäällä valokuva satamasta noin vuodelta 1865, alla malli pelin väreillä. | Valokuva: tuntematon italialainen valokuvaaja, noin 1865 (Commonsin arvio), Zeno.org (Zeno Fotografie), public domain. Malli: Matkakirjan oma malli, tehty tekoälyllä mallikuvasta. **R1 ja R2 pois artikkelista ja pelistä (KK 17.11. klo 08.53 omistajan 08.50 kortin ehdon mukaan: kaiverrus julkaistaan vain, jos alkuperä löytyy; R2:lle ei löytynyt avointa lähdettä).** |
 | 3 | Mallikuva v2 | Tekoälyn ehdotus sataman päämuodoista. | Tekoälyllä tuotettu havainnekuva Specchin kahden piirroksen ja valokuvan pohjalta (kuva ei ole enää parissa; käyttö vain jos KK sallii). |
 | 4 | v1 ja v2 rinnakkain (ARKKI-14, alin rivi; ilman otsikkotekstiä) | Vasemmalla ensimmäinen malli, oikealla toinen. | Matkakirjan omat mallit, tehty tekoälyllä mallikuvasta. |
 | 5 | Malli kahdesta suunnasta | Kappale ylhäältä ja sivulta. | Matkakirjan oma malli, tehty tekoälyllä mallikuvasta. |
