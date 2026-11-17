@@ -3051,6 +3051,105 @@ export const HISTORIAN_HETKET = [
     },
   },
   /*
+   * 32. PARIISI, ELOKUU 1888 — TOINEN KERROS KOOSSA.
+   * Piste on Pariisin laatan päällä (1,4 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Champ de Mars; sama piste kuin kohde "Eiffel-torni").
+   * Vain Pariisin kaupunkilehdessä ja sen kohdekartalla
+   * (js/packs/maakartat.js "Eiffel-torni 1888").
+   * Lähde: en.wikipedia.org: Eiffel Tower
+   */
+  {
+    id: 'eiffel-torni-1888',
+    otsikko: 'Eiffel-torni 1888 — näin torni koottiin',
+    nimio: 'Eiffel-torni 1888',
+    paivays: 'elokuu 1888',
+    paikka: 'Champ de Mars, Pariisi',
+    iso: 'FRA',
+    lat: 48.8582, lon: 2.2945,
+    kuvaversio: 4,
+    teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
+      + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
+      + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
+      + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+      + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
+      + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
+      + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
+      + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
+      + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
+      + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
+      + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
+      + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
+      + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
+      + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
+      + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
+      + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
+      + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
+      + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+      + 'radioantenni.',
+    vuodet: [
+      { kohta: 'elokuussa 1888', vuosi: '1888', selite: 'torni nousee' },
+      { kohta: 'maaliskuuta 1889', vuosi: '1889', selite: 'torni valmis' },
+    ],
+    kysymykset: [
+      'Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?',
+      'Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?',
+    ],
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+        lyhyt: 'Neljän miehen ketju niittaa Eiffel-tornia ilman suojakaiteita, joka isku toisen varassa.',
+        kuvateksti: 'Kuuma niitti ehtii jäähtyä nopeasti, joten neljän miehen '
+          + 'työketju ei saa katketa: yksi lämmittää, toinen pitää '
+          + 'paikoillaan, kolmas muotoilee kannan ja neljäs lyö liitoksen '
+          + 'kiinni. Korkealla ei ole suojakaiteita; jokainen vasaranisku '
+          + 'riippuu siitä, että työtoveri tekee oman osuutensa oikein.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.toureiffel.paris/en/the-monument/history',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
+        lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet esivalmistetut osat kootaan yhdeksi torniksi.',
+        kuvateksti: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
+          + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
+          + 'hevoskuormat tuovat Levallois’ssa millintarkasti esivalmistettuja '
+          + 'osia, ylhäällä höyrynosturi kiipeää rakenteen mukana — ja 150–300 '
+          + 'työntekijää muuttaa 18 038 piirustettua kappaletta yhdeksi '
+          + 'torniksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.toureiffel.paris/en/the-monument/history',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (1,4 yksikköä) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Pariisin Champ de Marsilla niittaajat kokosivat kesällä 1888 '
+      + 'Eiffel-tornia maailmannäyttelyyn: yli sadan metrin korkeudessa he '
+      + 'takoivat kuumia niittejä rautaan, jonka piti seisoa vain '
+      + 'kaksikymmentä vuotta.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Eiffel-tornin osiin ei porattu yhtään reikää '
+        + 'työmaalla?',
+      vaihtoehdot: [
+        'Porat eivät toimineet korkeudessa',
+        'Torni koottiin pulteilla ilman reikiä',
+        'Reiät porattiin vasta valmistumisen jälkeen',
+        'Osat oli valmistettu konepajalla niin tarkasti, että sopimaton osa '
+          + 'lähetettiin takaisin',
+      ],
+      oikea: 3,
+      fakta: 'Tornissa on 18 038 osaa ja 2,5 miljoonaa niittiä; se valmistui '
+        + '31. maaliskuuta 1889 maailmannäyttelyyn.',
+    },
+  },
+  /*
    * 33. ROTHERHITHE, TOUKOKUU 1827 — KILPI THAMESIN ALLA.
    * Piste on Lontoon laatan päällä (2 laudan yksikköä) ja kohdekartan
    * rajauksessa (Rotherhithen kuilu). Vain Lontoon kaupunkilehdessä ja

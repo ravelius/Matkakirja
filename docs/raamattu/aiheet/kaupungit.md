@@ -15,7 +15,7 @@ SÄÄNNÖT:
 10. Jokaisen maan pääkaupunki on oma kokoelmansa, ei pysäkki eikä reitti; napautus avaa maakortin. Maa ilman pelikaupunkia näyttää pääkaupunkinsa aina. [R-1.13]
 11. Minivaltiot: lippu, perustiedot ja lyhyt esittely, ei maalehteä. Pääkaupunkien kuvat Commonsista. [R-1.13]
 12. Jerusalemilla ei pääkaupunkipistettä; Israelin kortti mainitsee hallinnon paikan kuten Ramallahin Palestiinalle, ilman kannanottoa. [R-1.13]
-13. Kaikkiin kaupunkeihin 3D-talot elävän kartan tiedoista ilman kaupunkikohtaista koodia; zoomauksen jälkeen; yksityiskohdat porrastuvat etäisyyden mukaan. Porrastus tehdään ensin Pariisiin (suunnitelma 20261117-yksityiskohdat-etaisyyden-mukaan.md), muut kaupungit sen jälkeen. [P-261114-5] [P-261117-54] [P-261117-108]
+13. Kaikkiin kaupunkeihin 3D-talot elävän kartan tiedoista ilman kaupunkikohtaista koodia; zoomauksen jälkeen; yksityiskohdat porrastuvat etäisyyden mukaan. [P-261114-5] [P-261117-54]
 14. Pariisin tyylin kaupunkiin isoisän (n. 250 merkkiä, kuva) ja pulun (n. 150) tekstit, malli suunnitelmat/20261111-pariisin-tekstit-lopulliset.md: SK luonnostelee, KK lukee, omistajalle listana. Lontoosta alkaen. [P-261115-1]
 
 EI VIKA:

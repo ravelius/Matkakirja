@@ -534,7 +534,7 @@ export const FOKUSKOHTEET_FRA = [
      * EIFFEL-TORNI (Pariisin nosto uudella tavalla, SK 17.11.2026; malli Tuileries'n palatsi). Yksi merkki, yksi nosto:
      * tähän yhdistyvät kohdekartan nähtävyys "Eiffel-torni", tarinapaikka "Eiffel-torni 1888" (hetki eiffel-torni-1888)
      * ja tarinapaikka "Lustig 1925" (täkynosto lustig-eiffel). Kohdekartan piste "Eiffel-torni" (maakartat.js) avaa tämän
-     * (`nosto: ['eiffel-torni', 'nosto-pariisin-72-nimea']`); 72 nimeä jäi omaksi nostokseen (ei kuulunut tehtävään).
+     * (`nosto: 'eiffel-torni'`); 72 nimeä yhdistetty tänään-jaksoon (KK 17.11.2026 21.55).
      * 48,85822 N / 2,2945 E — en-Wikipedia "Eiffel Tower"; laudat samat kuin vanhalla täkynostolla `lustig-eiffel`.
      * Pelkkä historia ja tapahtumat: tornin voisi näyttää isona kuvana, mutta tarina kulkee kentältä (1873) torniin.
      * Lähdetaulukko: docs/raportit/eiffel-nosto-teksti-20261117.md.
@@ -569,8 +569,7 @@ export const FOKUSKOHTEET_FRA = [
         aani: 'isoisa',
         teksti: 'Pariisi, 1873. Mittasin tänään Champ de Marsin askelin. Se on sotilaiden harjoituskenttä, '
           + 'tasainen kuin pöytä.',
-        // PUUTTUU (ei varastossa): kenttä ennen tornia, ei maailmannäyttelyn rakennuksia (1878 on isoisän käynnin jälkeen).
-        kuva: 'kentta1873',
+        // Koukulla ei ole kuvaa (KK 17.11.2026 21.57): kenttää ennen tornia ei löytynyt; ei paikkamerkkiä pelaajalle.
       },
       {
         osa: 'tapahtuma',
@@ -603,19 +602,12 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tanaan',
         teksti: 'Torni seisoo yhä, ja se maalataan uudelleen noin seitsemän vuoden välein. '
-          + 'Kenttä, jonka isoisäsi mittasi, on nykyään puisto tornin jalalla.',
+          + 'Kenttä, jonka isoisäsi mittasi, on nykyään puisto tornin jalalla. Tornin ensimmäisen kerroksen '
+          + 'alle on kirjoitettu 72 ranskalaisen tiedemiehen ja insinöörin nimeä kullatuin kirjaimin.',
         kuva: 'nykyinen',
       },
     ],
     jaksokuvat: {
-      kentta1873: {
-        // PUUTTUU: haettava/tilattava; osoite null → esitys näyttää paikkamerkin.
-        osoite: null,
-        tulossa: true,
-        laji: 'havainnekuva',
-        lyhyt: 'Champ de Mars ennen tornia',
-        lahde: 'Puuttuu: kuva sotilaiden harjoituskentästä ennen tornia (Commonsista ei löytynyt vuoden 1873 kuvaa)',
-      },
       rakenteilla: {
         tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
         laji: 'valokuva',

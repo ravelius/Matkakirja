@@ -5372,7 +5372,7 @@ export const KAUPUNKIKARTAT = {
        */
       // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
       // Yksi merkki: Eiffel-tornin tarina (nähtävyys + Eiffel-torni 1888 + Lustig 1925) on kohteen `eiffel-torni` jaksot (fokuskohteet-fra.js).
-      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: ['eiffel-torni', 'nosto-pariisin-72-nimea'] },
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: 'eiffel-torni' },
       { nimi: 'Riemukaari', tagi: 'historia', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', tagi: 'historia', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
@@ -5526,6 +5526,11 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Bastilji 1789', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Hetki eiffel-torni-1888 jää (KK 17.11.2026 21.57, kuten Bastilji 1789): piilopiste samassa pisteessä, ei omaa kylttiä.
+      {
+        nimi: 'Eiffel-torni 1888', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.8583, lon: 2.2945,
+        nosto: 'hetki-eiffel-torni-1888', nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.

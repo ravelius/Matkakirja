@@ -6303,31 +6303,6 @@ export const NAHTAVYYSJUTUT = {
      * — tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten
      * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee.
      */
-    'Tornin nimet 2026': {
-      nosto: 'nosto-pariisin-72-nimea',
-      teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-        + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
-        + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
-        + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
-        + 'maalilla 1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. '
-        + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
-        + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
-        + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle, '
-        + 'kunhan kolme akatemiaa on antanut lausuntonsa.',
-      vuodet: [
-        { kohta: 'tammikuussa 2026', vuosi: '2026', selite: 'naisten lista julki' },
-      ],
-      kuvat: [
-        {
-          tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
-          lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-          selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
-            + 'kullatuin, 60 senttiä korkein kirjaimin.',
-          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Metro 1900': {
       nosto: 'nosto-guimardin-metro',
       teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
@@ -6579,6 +6554,46 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Pasteurin joutsenkaulapullossa ilma pääsi sisään mutta pöly ei, '
             + 'joten liemi pysyi pilaantumatta.',
           lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    'Eiffel-torni 1888': {
+      nosto: 'hetki-eiffel-torni-1888',
+      teksti: 'Pariisin Champ de Marsilla kootaan elokuussa 1888 Eiffel-tornia '
+        + 'vuoden 1889 maailmannäyttelyyn: toinen kerros on valmis, ja '
+        + 'kolmisensataa rakentajaa niittaa rautaristikkoa yhä ylemmäs. Tuuli '
+        + 'tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+        + 'niittaajan on osattava seistä siinä koko päivä. Rautaristikko '
+        + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
+        + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
+        + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
+        + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
+        + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
+        + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
+        + 'lähetetään takaisin. Työn aikana kuolee yksi rakentaja. '
+        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin '
+        + 'ja Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin '
+        + 'taiteilijat, Maupassant ja Garnier mukana, ovat vastustaneet '
+        + 'tornia julkisella vetoomuksella, ja sen luvattiin seisovan vain '
+        + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
+        + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+        + 'radioantenni.',
+      vuodet: [
+        { kohta: 'elokuussa 1888', vuosi: '1888', selite: 'torni nousee' },
+        { kohta: 'maaliskuuta 1889', vuosi: '1889', selite: 'torni valmis' },
+      ],
+      kuvat: [
+        {
+          tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
+          selite: 'Marraskuussa 1888 Eiffel-torni oli vielä keskeneräinen '
+            + 'rautarunko, korkeampi kuin mikään Pariisissa ennen.',
+          lahde: 'Louis-Émile Durandelle 1888, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Construction de la tour Eiffel, 7ème arrondissement, Paris. 14 septembre 1888, PH9114-12.jpg',
+          selite: 'Elokuun ja syyskuun 1888 kuvista näkee, paljonko torni kasvoi '
+            + 'kuukaudessa; se valmistui maailmannäyttelyyn 1889.',
+          lahde: 'Théophile Feau 1888, Musée Carnavalet, Wikimedia Commons (CC0)',
         },
       ],
     },

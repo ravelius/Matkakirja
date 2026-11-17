@@ -77,3 +77,9 @@ Jäi: nosto `nosto-pariisin-72-nimea` (oma visa) ja sen jutut; Pulun esigeneroid
 2. Koukun kuva puuttuu (kenttä ennen tornia).
 3. Jakson 4 "Kaksikymmentä vuotta kului" ja vuosirivi 1909: lähteet ristiriitaisia 1909 vs 1910 (lupa vs. purkuaika); vuosirivi sanoo "tornin purkuaika".
 4. Pulun kysymysten vastauksia ei ole kirjoitettu.
+
+## PÄIVITYS 17.11.2026 klo ~22.15 (KK 21.55 ja 21.57)
+- Hetki `eiffel-torni-1888`, sen lehtisivu ja nähtävyysjuttu "Eiffel-torni 1888" PALAUTETTU; hetken piilopiste (`tarinapaikka: false`, maakartat.js) samassa pisteessä kuin Bastiljilla. Hetkiä taas 67.
+- 72 nimeä yhdistetty tänään-jaksoon yhdellä virkkeellä: "Tornin ensimmäisen kerroksen alle on kirjoitettu 72 ranskalaisen tiedemiehen ja insinöörin nimeä kullatuin kirjaimin." Erillinen täkynosto `pariisin-72-nimea` (visa mukana) ja nähtävyysjuttu "Tornin nimet 2026" pois; merkin nosto on vain `eiffel-torni`. Yksi kysymys paikalla (Lustig).
+- Koukun (1873) kuva: ei kuvaa, paikkamerkki `kentta1873` pois. Puuttuvien kuvien listaan: kenttä ennen tornia 1873.
+- Pulun vanhat avaimet `nosto:pariisin-72-nimea` jäävät orvoiksi.
