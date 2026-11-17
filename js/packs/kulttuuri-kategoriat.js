@@ -14037,9 +14037,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Moni parhaista asioista on ilmainen. Kaupungissa on '
                 + 'yli kaksituhatta pientä juomavesihanaa, joita sanotaan '
                 + 'nasoneiksi eli isoiksi neniksi kaarevan putkensa '
-                + 'takia: vesi virtaa niistä koko ajan, ja osa siitä '
-                + 'kulkee yhä samoja reittejä kuin antiikin akveduktien '
-                + 'vesi. Aukioiden lähteet ovat kaupungin omia '
+                + 'takia: vesi virtaa niistä koko ajan. Aukioiden lähteet ovat kaupungin omia '
                 + 'maamerkkejä ja niiden reunalla istutaan. Kirkkoja on '
                 + 'satoja, ja niihin astutaan sisään ilman lippua — monen '
                 + 'seinällä roikkuu maalaus, joka olisi muualla museon '
@@ -14048,7 +14046,7 @@ export const KULTTUURI_KATEGORIAT = {
                 tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
                 asettelu: 'kapea',
                 selite: 'Nasoneja eli isoja neniä on Roomassa noin 2 500, ja '
-                  + 'vesi virtaa niistä yötä päivää.',
+                  + 'vesi virtaa niistä yleensä yötä päivää.',
                 lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -14299,15 +14297,21 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Norsu kantaa obeliskia',
           tiedosto: 'Elephant and Obelisk.jpg',
-          teksti: 'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
-            + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
-            + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja '
-            + 'se paljastettiin vuonna 1667. Obeliski on Rooman '
-            + 'kolmestatoista muinaisobeliskista pienin, viisi ja puoli '
-            + 'metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään '
-            + 'muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle '
-            + 'lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin '
-            + 'possua: norsu oli heidän mielestään pieni ja pyöreä.',
+          teksti: 'Piazza della Minervan aukiolla Rooman keskustassa seisoo '
+            + 'norsupatsas, jonka selässä on punertava graniittiobeliski. '
+            + 'Patsaan suunnitteli Gian Lorenzo Bernini, Ercole Ferrata '
+            + 'veisti sen, ja se paljastettiin vuonna 1667. Paavi Aleksanteri '
+            + 'VII kuoli ennen kuin patsas ehdittiin paljastaa. Obeliski on pieni, noin 5,5 metriä korkea. Turismo Roman '
+            + 'mukaan obeliski löytyi vuonna 1665, kun dominikaanit '
+            + 'rakensivat Santa Maria sopra Minerva -kirkon puutarhan muuria.'
+            + '\n\n'
+            + 'Patsasta kutsuttiin ensin possuksi, "Porcino della Minerva", '
+            + 'ja nimi vääntyi ääntämisen mukana muotoon "Pulcino della '
+            + 'Minerva", tipu. Nimen kerrotaan johtuneen norsun tanakasta '
+            + 'muodosta.'
+            + '\n\n'
+            + 'Isoisäsi matkavuonna 1873 norsu oli seissyt aukiolla jo 206 '
+            + 'vuotta.',
           lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
           selite: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti '
             + 'Ercole Ferrata, ja se paljastettiin vuonna 1667.',
@@ -14317,10 +14321,9 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Koko muistomerkki',
               tiedosto: 'Elephant and Obelisk - Bernini.jpg',
-              lyhyt: 'Norsun selässä oleva obeliski on Rooman kolmestatoista muinaisobeliskista pienin.',
-              selite: 'Norsun selässä oleva obeliski on Rooman '
-                + 'kolmestatoista muinaisobeliskista pienin, viisi ja puoli '
-                + 'metriä.',
+              lyhyt: 'Norsun selässä oleva obeliski on yksi Rooman kolmentoista muinaisobeliskin pienimmistä.',
+              selite: 'Norsun selässä oleva obeliski on yksi Rooman kolmentoista '
+                + 'muinaisobeliskin pienimmistä, noin 5,5 metriä korkea.',
               lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
             },
           ],
@@ -14468,9 +14471,9 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy-LCCN2001700939.jpg',
           vuosi: '1890-luku',
-          lyhyt: 'Colosseumin edessä seisoi suihkulähteen tynkä Meta Sudans, joka purettiin 1936 kadun tieltä.',
+          lyhyt: 'Colosseumin edessä seisoi suihkulähteen tynkä Meta Sudans, joka purettiin 1930-luvulla.',
           selite: 'Colosseumin edessä seisoi antiikin suihkulähteen tynkä '
-            + 'Meta Sudans, joka purettiin 1936 kadun tieltä.',
+            + 'Meta Sudans, joka purettiin 1930-luvulla.',
           lahde: 'Library of Congress (PD)',
         },
         {
@@ -14613,18 +14616,17 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
       ],
       tehtava: {
-        kysymys: 'Miten Largo di Torre Argentinan kissasuojan hoito siirtyi '
-          + '1950-luvulta lähtien ihmiseltä toiselle?',
+        kysymys: 'Mitä Largo di Torre Argentinan kuopasta paljastui, kun '
+          + 'vanhaa korttelia purettiin vuosina 1926–1929?',
         vaihtoehdot: [
-          'tehtävä kuului aina raunioiden vartijalle',
-          'kaupunki nimitti hoitajan joka vuosi',
-          'avain kulki näyttelijältä toiselle',
-          'hoitaja arvottiin korttelin asukkaista',
+          'neljä tasavallan ajan temppeliä',
+          'Rooman suurin amfiteatteri',
+          'keisarin palatsin kellari',
+          'antiikin sirkuksen katsomo',
         ],
-        oikea: 2,
-        fakta: 'Suoja toimii temppeli D:n kohdalla. Vuonna 2012 sitä '
-          + 'vaadittiin häädettäväksi raunioiden suojelemiseksi, mutta '
-          + 'vetoomukseen kerättiin yli 30 000 nimeä.',
+        oikea: 0,
+        fakta: 'Temppeleitä merkitään kirjaimilla A, B, C ja D, koska ei '
+          + 'tiedetä varmasti, mille jumalalle kukin kuului.',
       },
     },
     /*
@@ -14642,9 +14644,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'hetki-michelangelo-sikstus-1510',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Michelangelo 1510',
-      johdanto: 'Vatikaanin kappelin holvin alla seisoi vuonna 1510 '
-        + 'kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti päivän '
-        + 'laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.',
+      johdanto: 'Sikstuksen kappelin holvin alla seisoi vuonna 1510 '
+        + 'kuvanveistäjä, joka suostui työhön vastahakoisesti ja maalasi katon '
+        + 'silti valmiiksi vuosina 1508–1512.',
       tehtava: {
         kysymys: 'Missä asennossa Michelangelo maalasi Sikstuksen kappelin kattoa?',
         vaihtoehdot: [
@@ -14654,8 +14656,9 @@ export const KULTTUURI_KATEGORIAT = {
           'Seisten pää taaksepäin taivutettuna',
         ],
         oikea: 3,
-        fakta: 'Katon ensimmäinen puolisko näytettiin 15. elokuuta 1511 ja koko '
-          + 'holvi pyhäinpäivänä 1512; Michelangelo oli 37.',
+        fakta: 'Vatikaanin museoiden mukaan katon ensimmäinen puolisko oli valmis '
+          + 'elokuussa 1510. Yleisölle se näytettiin kesällä 1511, ja koko katto '
+          + 'avattiin pyhäinpäivän aattona 1512.',
       },
       nostot: [
         {
@@ -14663,29 +14666,26 @@ export const KULTTUURI_KATEGORIAT = {
           aika: '1510',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
-          teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
-            + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
-            + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen '
-            + 'kappelin holvia. Paavi Julius II pakotti hänet työhön 1508, vaikka '
-            + 'hän on kuvanveistäjä eikä freskomaalari; sopimus lupaa 3 000 '
-            + 'dukaattia. Freskoa tehdään tuoreelle kalkkirappaukselle, giornata '
-            + 'kerrallaan: apulainen levittää aamulla sen verran laastia kuin '
-            + 'päivässä ehtii maalata, ja mikä ei ehdi, hakataan pois. Rappauksen '
-            + 'kosteus tuo homeen, ja ensimmäiset kuukaudet joudutaan tekemään '
-            + 'uudelleen. Syyskuussa 1510 holvin ensimmäinen puolisko, Nooan '
-            + 'juopumuksesta Eevan luomiseen, on valmis, ja työ katkeaa: paavi on '
-            + 'lähtenyt sotaan Bolognaan eikä maksa, eikä uutta telinettä ole. '
-            + 'Puolisko paljastetaan yleisölle 15. elokuuta 1511. Toinen puoli, '
-            + 'Aadamin luominen mukaan lukien, syntyy nopeammin ja suuremmin '
-            + 'hahmoin, ja koko katto — yli 300 hahmoa — avataan pyhäinpäiväksi '
-            + '1512. Michelangelo on 37.',
-          lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa märän rappauksen '
-            + 'ehdoilla, giornata kerrallaan.',
-          selite: 'Freskomaalarilla on vain märän rappauksen verran aikaa. '
-            + 'Michelangelo kurottaa päivän uutta giornataa kohti, kun apulainen '
-            + 'odottaa värikupin kanssa ja tarkkailee pinnan kuivumista; jos '
-            + 'kalkki ehtii sitoutua, sävy ei enää uppoa seinään eikä virhettä '
-            + 'voi peittää seuraavana aamuna.',
+          teksti: 'Michelangelo maalasi Sikstuksen kappelin holvia seisten, ei '
+            + 'selällään makaamalla, vaikka niin kerrotaan. Getty-museon mukaan '
+            + 'hän työskenteli seisaaltaan pensseli pään yläpuolella, ja '
+            + 'lähteiden mukaan makaamistarina on pitkäikäinen myytti.\n\nPaavi '
+            + 'Julius II tilasi työn, ja sopimus tehtiin toukokuussa 1508. '
+            + 'Michelangelo piti itseään kuvanveistäjänä ja suostui tehtävään '
+            + 'vastahakoisesti. Ensimmäinen suunnitelma oli maalata kaksitoista '
+            + 'apostolia, mutta Michelangelo kutsui sitä itse köyhäksi asiaksi.\n\n'
+            + 'Holvissa on yhdeksän kohtausta Raamatun ensimmäisestä kirjasta '
+            + 'sekä kaksitoista profeettaa ja sibyllaa. Vatikaanin museoiden '
+            + 'mukaan holvin ensimmäinen puolisko oli valmis jo elokuussa 1510. '
+            + 'Yleisölle se näytettiin kesällä 1511. Toisen puoliskon hahmot ovat '
+            + 'suurempia, koska Michelangelo oli nähnyt valmiin osan lattialta '
+            + 'käsin. Aadamin luominen on tällä toisella puoliskolla. Koko katto '
+            + 'avattiin pyhäinpäivän aattona 1512.\n\nIsoisäsi matkavuonna 1873 '
+            + 'katto oli ollut valmiina jo yli 360 vuotta.',
+          lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa seisaaltaan, pää '
+            + 'taaksepäin taivutettuna.',
+          selite: 'Michelangelo maalasi Sikstuksen kappelin holvia seisaaltaan, '
+            + 'pensseli pään yläpuolella, eikä selällään makaamalla.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Vatican Museums — Sistine '
             + 'Chapel ceiling, tarkistettu 5.9.2026.',
           galleria: [

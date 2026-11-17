@@ -522,7 +522,7 @@ export const EUROPE_VALOKUVAT = {
     lahde: 'Library of Congress (PD)',
     lyhyt: 'Colosseum ja Meta Sudansin lähdetynkä Roomassa 1890-luvulla.',
     selite: 'Colosseum ja sen edessä Meta Sudans, antiikin '
-      + 'suihkulähteen tyngä. Lähde purettiin 1936 kadun tieltä, joten '
+      + 'suihkulähteen tyngä. Lähde purettiin 1930-luvulla kadun tieltä, joten '
       + 'tässä kuvassa näkyy jotain, mitä ei enää ole.',
     uusi: {
       tiedosto: 'Colosseum on a November Day (45615640574).jpg',

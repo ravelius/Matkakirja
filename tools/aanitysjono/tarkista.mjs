@@ -154,8 +154,14 @@ export function kappaleet(vienti) {
       const d = dataTai(x);
       lukuja.push([null, x.maa, pak, x.id, nostoLuettavat(d.otsikko, pak === 'skandaalit' ? d.kortti : null, d.teksti)]);
     }
+  // Maan täkypooli kuuluu kaikille maan kaupungeille, joilla ei ole omaa listaa (nostoKaupunginPooli), joten `kaupungit[0]`
+  // on vain laudan ensimmäinen niistä (Rooman viisi täkyä saivat siksi `venetsia`). Jos täky on jonkin kaupungin fokusvirran
+  // OMASSA takynostot-listassa, se kaupunki on täkyn oikea kaupunki (SK 17.11., KK:n Rooma-kohta 12).
+  const omaKaupunki = new Map();
+  for (const fv of J('kokoelmat/fokusvirrat.json').alkiot)
+    for (const t of dataTai(fv).takynostot || []) if (t && t.id && !omaKaupunki.has(t.id)) omaKaupunki.set(t.id, fv.id);
   for (const x of J('kokoelmat/takynostot.json').alkiot)
-    lukuja.push([(x.kaupungit || [])[0] ?? null, x.maa, 'takynostot', x.id,
+    lukuja.push([omaKaupunki.get(x.id) ?? (x.kaupungit || [])[0] ?? null, x.maa, 'takynostot', x.id,
       nostoLuettavat(x.otsikko, x.taitto === 'lehti' ? x.ingressi : null, takyTeksti(x))]);
   for (const fv of J('kokoelmat/fokusvirrat.json').alkiot) {
     const d = dataTai(fv);

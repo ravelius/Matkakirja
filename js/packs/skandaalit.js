@@ -3563,56 +3563,51 @@ export const SKANDAALIT = {
       },
     },
     /*
-     * Palazzo Montecitorio (parlamentti), Rooma.
-     * Lähde: en-Wikipedia "Banca Romana scandal" (tarkistettu 30.8.2026)
+     * Palazzo Maffei Marescotti, Via della Pigna, Rooma (KK 16.11.2026: piste 41,8970 / 12,4775; ennen
+     * Palazzo Montecitorio). Tarinapaikka KK 17.11.2026 (Rooman 9 tarinapaikkaa): kortti uusi, vanha pitkä
+     * `teksti` poistettu, koska sen luvut (135 / 75 milj., pääjohtaja 1881, pidätys, Crispi) eivät täyttäneet
+     * kahden lähteen sääntöä.
      */
     {
       id: 'banca-romana-1893',
       otsikko: 'Banca Romanan skandaali',
       nimio: 'Banca Romana',
       vuosi: '1893',
-      paikka: 'Palazzo Montecitorio (parlamentti), Rooma',
-      lat: 41.9009, lon: 12.4785,
-      kortti: 'Kun setelipainossa loppuvat numerot kesken, voi tietysti painaa '
-        + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
-        + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
-        + 'Harva pankkikriisi on ollut näin tuottelias.',
-      teksti: 'Italiassa oli kuusi setelinanto-oikeuden saanutta pankkia, ja Banca '
-        + 'Romana oli niistä yksi. Sen pääjohtajaksi tuli 1881 Bernardo Tanlongo, '
-        + 'entinen maatyöläinen, jota Corriere della Sera kuvasi puolilukutaitoiseksi '
-        + 'mutta nerokkaaksi laskijaksi. Hän oli rakentanut suhdeverkoston lainoilla, '
-        + 'jotka peittivät muiden salaisuuksia.'
-        + '\n\nKesäkuussa 1889 valtion tarkastus löysi, että 91 prosenttia pankin '
-        + 'varoista oli kiinni epälikvideissä kohteissa ja että pankki oli painattanut '
-        + 'seteleitä samoilla sarjanumeroilla kahdesti. Pääministeri Francesco Crispi '
-        + 'ja valtiovarainministeri Giovanni Giolitti lukivat raportin ja hautasivat '
-        + 'sen. Pankki oli lainannut suuria summia poliitikoille, usein korotta, ja '
-        + 'heille itselleen.'
-        + '\n\nKansanedustaja Napoleone Colajanni luki raportista otteita '
-        + 'parlamentissa 20. joulukuuta 1892. Asiantuntijakomission raportti 18. '
-        + 'tammikuuta 1893 vahvisti luvut: liikkeessä oli 135 miljoonaa liiraa '
-        + 'seteleitä, kun laki salli 75 miljoonaa, ja lisäksi Britanniassa oli '
-        + 'painettu 40 miljoonan liiran kaksoissarja, joka jäi liikkeeseen laskematta '
-        + 'vain siksi, että pankin alempien virkailijoiden rehellisyys ei pettänyt.'
-        + '\n\nTanlongo pidätettiin seuraavana päivänä ja vapautettiin syytteistä '
-        + 'heinäkuussa 1894 perusteella, jonka mukaan varsinaiset rikolliset olivat '
-        + 'muualla. Giolitti oli eronnut jo marraskuussa 1893. Elokuun 1893 pankkilaki '
-        + 'purki Banca Romanan ja jätti setelinanto-oikeuden uudelle Banca '
-        + 'd\'Italialle sekä kahdelle eteläiselle pankille.',
-      lahde: 'en-Wikipedia "Banca Romana scandal". Tarkistettu 2.9.2026.',
+      paikka: 'Palazzo Maffei Marescotti, Rooma',
+      lat: 41.8970, lon: 12.4775,
+      kortti: 'Banca Romana oli pankki, jolla oli lupa painaa Italian seteleitä. '
+        + 'Treccanin mukaan lupa riitti noin 60 miljoonan liiran seteleihin, '
+        + 'mutta liikkeessä niitä oli noin 113 miljoonan liiran edestä. Noin '
+        + '40 miljoonaa liiraa oli kaksoisnumeroituja seteleitä eli '
+        + 'sellaisia, joilla oli sama sarjanumero kuin toisella setelillä.'
+        + '\n\n'
+        + 'Skandaali paljastui vuodenvaihteessa 1892–1893. Vuonna 1893 '
+        + 'annettiin laki, jolla perustettiin Banca d\'Italia, ja se on '
+        + 'päivätty 10. elokuuta. Banca Romana lakkautettiin, ja sen '
+        + 'purkaminen uskottiin uudelle pankille. Aluksi Banca d\'Italia oli '
+        + 'yksi kolmesta setelipankista, ja vasta vuonna 1926 siitä tuli '
+        + 'ainoa. Pääministeri Giovanni Giolitti erosi vuoden 1893 lopulla, '
+        + 'kun tutkimusten tulokset olivat tulleet julki. Oikeudenkäynnissä '
+        + 'syytetyt vapautettiin.'
+        + '\n\n'
+        + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
+        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
+        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
+        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
+      lahde: 'Matkakirjan oma teksti · lähteinä Treccani, Banca d\'Italia ja Filodiritto. Tarkistettu 17.11.2026.',
       kuva: {
         tiedosto: 'Bernardo Tanlongo.jpg',
-        lyhyt: 'Banca Romanan pääjohtaja Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894.',
-        selite: 'Banca Romanan pääjohtaja Bernardo Tanlongo aikalaispiirroksessa '
-          + 'vuodelta 1894 — mies, jonka pankki painoi seteleitä kahteen kertaan '
-          + 'samoilla sarjanumeroilla.',
+        lyhyt: 'Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894; hän oli Banca Romanan johtaja.',
+        selite: 'Bernardo Tanlongo, Banca Romanan johtaja, aikalaispiirroksessa '
+          + 'vuodelta 1894.',
         lahde: 'Illustrazione Italiana 1894, Wikimedia Commons (PD)',
       },
       visa: {
-        kysymys: 'Mikä instituutio perustettiin Banca Romanan skandaalin '
-          + 'seurauksena?',
+        kysymys: 'Mikä pankki perustettiin lailla vuonna 1893, ja sen '
+          + 'tehtäväksi uskottiin Banca Romanan purkaminen?',
         vaihtoehdot: [
-          'Italian keskuspankki Banca d\'Italia',
+          'Banca d\'Italia',
           'Euroopan keskuspankki',
           'Rooman pörssi',
         ],
