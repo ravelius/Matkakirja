@@ -425,7 +425,7 @@ export const MUSEO_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Miksi Yövartio on saanut nimensä, vaikka se ei esitä yötä?",
-        "vastaus": "Rembrandtin maalauksella ei ollut alun perin nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta 1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan kulkevaa joukkoa, vaikka sävyt ovat tummat. Pinnalla oli paksu, tummunut lakka; puhdistukset tehtiin 1946–47 ja 1975–76.",
+        "vastaus": "Rembrandtin maalauksella ei ollut alun perin nimeä, ja nimi Yövartio on tallessa asiakirjasta vasta 1700-luvun lopulta. Rijksmuseon mukaan kuva esittää päiväsaikaan kulkevaa joukkoa, vaikka sävyt ovat tummat. Pinnalla oli paksu, tummunut lakka; se poistettiin 1940-luvulla, ja taulu puhdistettiin uudelleen 1975–76.",
         "lahteet": [
           {
             "url": "https://en.wikipedia.org/wiki/The_Night_Watch_(painting)",

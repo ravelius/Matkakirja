@@ -803,9 +803,7 @@ export const KAARI_PAKETIT = {
        * 16.11.2026: mikään lähde ei yhdistä sitä Oude Hoogstraat 22:n
        * kapeuteen (docs/raportit/amsterdam-virheet-muualla-20261116.md).
        */
-      saapuminen: 'Mittasin yhden talon nojauksen ja sain kaksi jalkaa: se '
-        + 'kallistuu kadulle tahallaan, jottei nostettava tavara kolhisi '
-        + 'julkisivua. Yöllä päädyn koukussa riippui köysi ilman kuormaa. '
+      saapuminen: 'Katsoin yhtä kanavataloa kadulta. Yöllä päädyn koukussa riippui köysi ilman kuormaa. '
         + 'Aamulla samassa köydessä laskeutui arkku, joka pysähtyi ikkunani '
         + 'kohdalle ja kääntyi hitaasti ympäri. Kyljessä oli lappu: väärä '
         + 'kerros.',
@@ -829,8 +827,7 @@ export const KAARI_PAKETIT = {
         fakta: 'Kanavien varren talot ovat kapeita ja syviä, ja niiden '
           + 'portaat ovat jyrkät ja kapeat. '
           + 'Päädystä ulos työntyvää palkkia sanotaan nostopuuksi, '
-          + 'hijsbalk, ja sen koukun varassa sohvat ja kaapit hilataan yhä '
-          + 'sisään ikkunasta. Talot rakennettiin siksi hieman etunojaan.',
+          + 'hijsbalk, ja sen koukun varassa sohvat ja kaapit hilataan yhä sisään ikkunasta.',
       },
       aarre: 'Kätkö oli kanavan reunassa, pollarin alla olevassa '
         + 'syvennyksessä. Yara hymähti rasian painolle: "Kevyempi kuin '
