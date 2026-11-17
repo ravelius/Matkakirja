@@ -178,8 +178,7 @@ def tyolistavanhat(d, sessio):
         if isinstance(ts, bool) or not isinstance(ts, (int, float)):
             continue
         ika_h = (nyt - ts) / 3_600_000
-        # KK 16.11. 20.1x (suunnitelma 20261116-aina-toita.md kohta 5): "työn alla ilman tuoretta tilannetta" -muistutus poistettu.
-        if False and ika_h > VANHA_H:
+        if ika_h > VANHA_H:
             vanhat.append((ika_h, str(r.get("otsikko", "?"))[:60]))
     if not (vanhat or valmiit) or not saa_muistuttaa("tyolista-vanha", sessio):
         return None
