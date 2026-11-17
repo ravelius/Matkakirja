@@ -3093,8 +3093,9 @@ export const NAHTAVYYSJUTUT = {
     'Exchange Alley': {
       nosto: 'nosto-exchange-alleyn-kupla',
       teksti: 'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
-        + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se '
-        + 'otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, '
+        + 'kauppaan Espanjan Etelä-Amerikan kanssa. Kaupan ydin oli orjakauppa: '
+        + 'yhtiö sai oikeuden tuoda orjuutettuja afrikkalaisia Espanjan siirtomaihin. '
+        + 'Vastineeksi yhtiö otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, '
         + 'mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan '
         + 'ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi '
         + 'tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja '
@@ -3591,7 +3592,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vanhan palatsin saleissa ja kappeleissa: alahuone istui Pyhän Stefanuksen '
           + 'kappelissa, jonka seinämaalaukset oli peitetty puupaneeleilla.'
         + '\n\n'
-        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja puisia veropuikkoja, '
+        + 'Lokakuussa 1834 palatsin uuneissa poltettiin vanhoja lovipuita eli puisia kuittikeppejä, '
           + 'joihin oli vuosisatojen ajan veistetty lovia kirjanpidoksi. Uunit kuumenivat '
           + 'liikaa, ja lähes koko palatsi paloi. Joen rannalla tulipaloa katselivat '
           + 'tuhannet ihmiset, myös taidemaalari William Turner.'
@@ -10770,9 +10771,9 @@ export const NAHTAVYYSJUTUT = {
       aika: '135–139',
       teksti: 'Linna ei ollut alkujaan linna lainkaan, vaan valtava '
           + 'hauta. Keisari Hadrianus rakennutti sen itselleen ja '
-          + 'perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa '
-          + 'Sabina ja ottopoikansa Lucius Aelius haudattiin sinne '
-          + 'ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat '
+          + 'perheelleen mausoleumiksi vuosina 135–139 — hänen tuhkansa '
+          + 'sijoitettiin sinne vuonna 139 yhdessä hänen vaimonsa Sabinan ja '
+          + 'ottopoikansa Lucius Aeliuksen tuhkan kanssa. Vuosisatoja myöhemmin paavit muuttivat '
           + 'rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan '
           + 'Pietarinkirkolle johtava salainen katettu käytävä, '
           + 'Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa '
@@ -11159,9 +11160,9 @@ export const NAHTAVYYSJUTUT = {
         + 'syytetyt vapautettiin.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tätä skandaalia ei vielä ollut. Banca '
-        + 'Romana oli jo olemassa: sen edeltäjä oli paavinvaltion pankki, ja '
-        + 'nimeksi tuli Banca Romana, kun Rooma oli liitetty Italiaan vuonna '
-        + '1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
+        + 'Romana oli jo olemassa: se oli alun perin paavinvaltion pankki, ja '
+        + 'se otti vanhan nimensä Banca Romana takaisin, kun Rooma oli '
+        + 'liitetty Italiaan vuonna 1870. Skandaali paljastui vasta noin 20 vuotta myöhemmin, joten '
         + 'kortin vuosi 1893 on skandaalin vuosi eikä isoisän matkan vuosi.',
       vuodet: [
         { kohta: 'vuodenvaihteessa 1892–1893', vuosi: '1892–1893', selite: 'skandaali paljastui' },
@@ -11201,7 +11202,7 @@ export const NAHTAVYYSJUTUT = {
         + 'kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat '
         + 'pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja '
         + 'Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit '
-        + 'siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja '
+        + 'siirtyivät vuonna 179 eaa. rakennutettuun basilikaan, josta tuli myöhemmin Basilica Aemilia, ja '
         + 'noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian '
         + 'ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja '
         + 'raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.',
@@ -11457,7 +11458,7 @@ export const NAHTAVYYSJUTUT = {
         + 'näkyvissä Konstantinuksen kaaren edessä, ja ääriviivat merkittiin purun jälkeen vaaleammalla kivellä.'
         + '\n\n'
         + 'Isoisäsi matkavuonna 1873 tiilinen kartio seisoi vielä rauniona '
-        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta noin 60 vuotta myöhemmin.',
+        + 'Colosseumin vieressä. Siitä on kuvia vuosilta 1858–1890, ja purku tuli vasta vuonna 1936.',
       vuodet: [
         { kohta: 'matkavuonna 1873', vuosi: '1873', selite: 'isoisän matka' },
       ],
