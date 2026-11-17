@@ -431,6 +431,7 @@ export const FOKUSKOHTEET_FRA = [
           + 'näkyy pala vallihaudan muuria.',
         kuva: 'metro',
         vuodet: [
+          { vuosi: '1830', selite: 'vallankumous', kohta: '1830' },
           { vuosi: '1840', selite: 'pylväs valmistuu', kohta: 'pylväs' },
           { vuosi: '1899', selite: 'tornin pohja löytyy', kohta: 'pohjakiviä' },
         ],
