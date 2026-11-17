@@ -28,7 +28,7 @@ Palais de Justicen koordinaatit: en-Wikipedia "Palais de Justice, Paris" 48,8557
 Kaulanauha-tarinan loppu on se, että **oikeus vapautti Rohanin 1786**, eli tapahtumapaikka on Palais de la Cité. Pidätys ja tapaaminen olivat Versailles'ssa (rajauksen ulkopuolella), Bastilji oli vain välivaihe.
 
 1. **Suositus A: tarina nostoksi Sainte-Chapelle-kohteelle** (sama Palais de la Cité'n tontti, ei uutta pistettä) ja nostoon lisätään tekstiin yksi lause: "Oikeudenkäynti oli Pariisin parlamentissa Palais de la Cité'ssä." Sopii "yksi paikka = yksi kohde" -sääntöön (PR 6959) ja poistaa Panthéon-ankkurin. Heikkous: Sainte-Chapelle on kirkko, ei oikeussali; pelaaja voi ihmetellä yhteyttä.
-2. **B: oma piste "Palais de Justice"** (48,8557 / 2,3451; 25 m Sainte-Chapellesta, joten säännön mukaan sama paikka; jos KK haluaa oikean oikeuspalatsin, Sainte-Chapelle ja Palais de Justice yhdistetään yhdeksi kohteeksi "Palais de la Cité").
+2. **B: oma piste "Palais de Justice"** (48,8557 / 2,3451; noin 35 m Sainte-Chapellesta, joten säännön mukaan sama paikka; jos KK haluaa oikean oikeuspalatsin, Sainte-Chapelle ja Palais de Justice yhdistetään yhdeksi kohteeksi "Palais de la Cité").
 3. **C: Bastilji.** Hologrammi näkyisi (Bastilji on kadonnut), ja Rohan istui siellä. Mutta tarinan ratkaisu ei ollut Bastiljissa, ja Bastiljilla on jo Bastilji 1789 -tarina. En suosittele.
 4. **D: ei karttapistettä**, vain nostolista. Sääntö 5 (PR 6959) sallii tämän, jos oikeaa paikkaa ei haluta.
 
