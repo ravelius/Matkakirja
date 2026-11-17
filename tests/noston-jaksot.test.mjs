@@ -48,6 +48,10 @@ function jaksolliset() {
       for (const n of lista) if (n && Array.isArray(n.jaksot)) tulos.push({ lahde: polku, id: n.id, n });
     }
   }
+  // HETKEN JAKSOT (KK 21.22): historian hetket kokoelmassa (alkion data = hetki sellaisenaan); natiivi NostoJaksot.Lue (NUI).
+  for (const a of lue('kokoelmat/historianHetket.json').alkiot ?? []) {
+    if (a?.data && Array.isArray(a.data.jaksot)) tulos.push({ lahde: 'kokoelmat/historianHetket.json', id: `hetki:${a.id}`, n: a.data, hetki: true });
+  }
   return tulos;
 }
 
@@ -177,7 +181,7 @@ test('hologrammi vain kadonneella (kohta tekstissä), kartta vain viimeisessä j
 
 test('yksi tehtävä, vastaus ei vuosiriveissä eikä kuvateksteissä; Pulun kysymyksiä kolme', () => {
   const virheet = [];
-  for (const { id, n } of NOSTOT) {
+  for (const { id, n, hetki } of NOSTOT) {
     const t = n.visa;
     if (Array.isArray(t)) virheet.push(`${id}: tehtäviä ${t.length}`);
     else if (t != null) {
@@ -191,7 +195,33 @@ test('yksi tehtävä, vastaus ei vuosiriveissä eikä kuvateksteissä; Pulun kys
         if (nakyvat.some((s) => s.includes(oikea.toLowerCase()))) virheet.push(`${id}: vastaus näkyy ruudulla`);
       }
     }
-    if ((n.kysymykset ?? []).length !== 3) virheet.push(`${id}: Pulun kysymyksiä ${(n.kysymykset ?? []).length}`);
+    // Hetki: Pulun kysymyksiä 1–3 (nykyiset hetket 2; NUI höllentää natiivin ≥ 1); nosto: tasan 3.
+    const pk = (n.kysymykset ?? []).length;
+    if (hetki ? pk < 1 || pk > 3 : pk !== 3) virheet.push(`${id}: Pulun kysymyksiä ${pk}`);
   }
   assert.deepEqual(virheet, []);
+});
+
+test('hetken jaksot: kokoelma kantaa hetken kentät sellaisenaan ja teksti lasketaan jaksoista (KK 21.22)', async () => {
+  const { HISTORIAN_HETKET } = await import('../js/packs/historian-hetket.js');
+  const alkiot = new Map((lue('kokoelmat/historianHetket.json').alkiot ?? []).map((a) => [a.id, a]));
+  const virheet = [];
+  for (const h of HISTORIAN_HETKET) {
+    const a = alkiot.get(h.id);
+    if (!a) { virheet.push(`${h.id}: ei kokoelmassa`); continue; }
+    for (const k of Object.keys(h)) if (!(k in a.data)) virheet.push(`${h.id}: kenttä ${k} puuttuu viennistä`);
+    if (Array.isArray(h.jaksot)) {
+      if (h.teksti !== h.jaksot.filter((j) => j.osa !== 'nimi').map((j) => j.teksti).join('\n\n')) {
+        virheet.push(`${h.id}: teksti ei ole jaksot kappaleina`);
+      }
+    }
+  }
+  assert.deepEqual(virheet, []);
+  // Tarinapaikka → hetki: nahtavyysjutut[…].nosto = 'hetki-<id>' (NUI:n avaus); Lumière ja Curie (SK:n ehdotus A).
+  const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
+  const pariisi = NAHTAVYYSJUTUT.pariisi ?? {};
+  for (const [nimi, id] of [['Lumière 1895', 'lumiere-elokuva-1895'], ['Curie 1898', 'marie-curie-hangaari-1898']]) {
+    assert.equal(pariisi[nimi]?.nosto, `hetki-${id}`, `${nimi}: nosto`);
+    assert.ok(alkiot.has(id), `${id} kokoelmassa`);
+  }
 });

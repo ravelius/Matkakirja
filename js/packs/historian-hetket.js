@@ -5553,6 +5553,19 @@ export const HISTORIAN_HETKET = [
   },
 ];
 
+/*
+ * HETKEN JAKSOT (KK 21.22 17.11.2026, SK:n ehdotus A; muoto = fokuskohteen jaksot, tests/noston-jaksot.test.mjs):
+ * hetki voi kantaa `aanikansio`, `jaksot[]` ja `jaksokuvat{}` kuten Tuileries. `teksti` = jaksot kappaleina ilman
+ * nimiosaa, jos tekstiä ei ole kirjoitettu erikseen (vanha kortti, lehti ja Pulu lukevat saman tekstin). Yksi kysymys
+ * per paikka (omistaja 10.37): `visa`. Kartan tarinapaikka viittaa hetkeen nahtavyysjutut[…].nosto = 'hetki-<id>'.
+ * Skeema 1.75 (historianHetket.jaksot) nostetaan samassa muutoksessa kuin ensimmäiset hetken jaksot (skeemasopimus).
+ */
+for (const hetki of HISTORIAN_HETKET) {
+  if (Array.isArray(hetki.jaksot) && hetki.teksti == null) {
+    hetki.teksti = hetki.jaksot.filter((j) => j.osa !== 'nimi').map((j) => j.teksti).join('\n\n');
+  }
+}
+
 /** Hetket tunnuksen mukaan — kortti ja testit lukevat samasta paikasta. */
 export const HISTORIAN_HETKET_ID = new Map(HISTORIAN_HETKET.map((h) => [h.id, h]));
 
