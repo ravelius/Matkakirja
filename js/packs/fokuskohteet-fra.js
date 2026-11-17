@@ -144,6 +144,16 @@ export const FOKUSKOHTEET_FRA = [
      */
     aanikansio: 'tuileries-koe/v1',
     jaksot: [
+      /*
+       * NOSTON ALKU (omistaja 17.11.2026 klo 19.23, kohta F, PYSYVÄ; KK 19.26; PT F4):
+       * nosto alkaa KERTOJAN äänellä paikan nimellä, ja isoisän lausetta edeltää kertojan
+       * esittely. Soitto datan järjestyksessä: nimi → esittely → isoisän koukku → jaksot.
+       * Esittely ei toista päivämäärää eikä paljasta rauniota (isoisän oma lause kertoo
+       * sen); isoisän käynti lokakuussa 1873 on pelin tarinaa, ei historiaväite.
+       * Osat `nimi` ja `esittely` ovat lyhyitä ilman kuvaa; kuva tulee vasta koukulla.
+       */
+      { osa: 'nimi', aanite: 'nimi', teksti: 'Tuileries\'n palatsi.' },
+      { osa: 'esittely', aanite: 'esittely', teksti: 'Isoisäsi kulki tästä matkallaan.' },
       {
         osa: 'koukku',
         aanite: 'isoisa',
@@ -406,13 +416,14 @@ export const FOKUSKOHTEET_FRA = [
 ];
 
 /*
- * TUILERIES-KOE: kohteen `teksti` = jaksot kappaleina (isoisän lause
- * ensimmäisenä, antaa "Kaksi vuotta aiemmin" -alulle ajan). Yksi lähde: vanha esitys, lehti
+ * TUILERIES-KOE: kohteen `teksti` = jaksot kappaleina ilman nimiosaa (esittely ensin, isoisän lause
+ * sen jälkeen, antaa "Kaksi vuotta aiemmin" -alulle ajan). Yksi lähde: vanha esitys, lehti
  * (js/lehtinostot.js) ja Pulun konteksti lukevat saman tekstin kuin
  * jaksoesitys.
  */
 for (const kohde of FOKUSKOHTEET_FRA) {
   if (Array.isArray(kohde.jaksot) && kohde.teksti == null) {
-    kohde.teksti = kohde.jaksot.map((j) => j.teksti).join('\n\n');
+    // `nimi`-osa jää pois: kohteen nimi luetaan jo otsikkona (Puhe.cs), joten sen toisto antaisi nimen kahdesti.
+    kohde.teksti = kohde.jaksot.filter((j) => j.osa !== 'nimi').map((j) => j.teksti).join('\n\n');
   }
 }

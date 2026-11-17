@@ -31,7 +31,8 @@ const JAKSOJA = { min: 3, max: 5 }; // esittelyssä 1–2
 const JAKSO_MERKIT = { min: 100, max: 350 };
 const MERKKIKATTO = 1200; // koko tarina (Tuileries noin 1 000 + isoisä 112, SK:n raportti 17.11.)
 const KUVIA_MAX = 7;
-const OSAT = new Set(['koukku', 'tapahtuma', 'kaanne', 'tanaan']);
+const OSAT = new Set(['nimi', 'esittely', 'koukku', 'tapahtuma', 'kaanne', 'tanaan']);
+const ALKUOSAT = new Set(['nimi', 'esittely']); // noston alku: kertojan lyhyet rivit ennen isoisän koukkua (omistaja 19.23 F)
 const LAJIT = new Set(['valokuva', 'havainnekuva', 'kartta', 'piirros', 'maalaus']);
 
 const { tiedostot } = await kokoaVienti();
@@ -61,12 +62,17 @@ test('vienti tuo Tuileries\'n jaksot natiivin raakamoduuliin (luku 8)', () => {
   assert.ok(t, 'tuileries ei ole jaksollisten joukossa');
   assert.equal(t.lahde, 'moduulit/js/packs/fokuskohteet-fra.json');
   assert.deepEqual(t.n.jaksot.map((x) => `${x.osa}${x.aani ? `/${x.aani}` : ''}`),
-    ['koukku/isoisa', 'tapahtuma', 'tapahtuma', 'kaanne', 'tanaan']);
+    ['nimi', 'esittely', 'koukku/isoisa', 'tapahtuma', 'tapahtuma', 'kaanne', 'tanaan']);
   assert.equal(new Set(t.n.jaksot.flatMap(jaksonKuvat)).size, 7);
-  assert.equal(t.n.jaksot[3].hologrammi, 'sammuu');
+  assert.equal(t.n.jaksot[5].hologrammi, 'sammuu');
   assert.equal(t.n.visa.kysymys, 'Mitä Tuileries\'n palatsista jäi pystyyn palon jälkeen?');
   assert.equal(t.n.kysymykset.length, 3);
-  assert.ok(t.n.teksti.startsWith('Pariisi, 1873.'), 'teksti lasketaan jaksoista');
+  assert.ok(t.n.teksti.startsWith('Isoisäsi kulki tästä matkallaan.\n\nPariisi, 1873.'), 'teksti: esittely ja jaksot');
+  // Noston alku (omistaja 19.23 F, KK 19.26, PT F4): kertojan nimi ja esittely ennen isoisän lausetta; esittely ei toista päivämäärää.
+  assert.equal(t.n.jaksot[0].teksti, `${t.n.nimi}.`);
+  assert.equal(t.n.jaksot[1].teksti, 'Isoisäsi kulki tästä matkallaan.');
+  assert.ok(!/\d{4}/.test(t.n.jaksot[1].teksti), 'esittely ei toista vuotta');
+  assert.ok(t.n.jaksot[0].teksti.length + t.n.jaksot[1].teksti.length <= 80, 'alku enintään noin 80 merkkiä');
   // Yksi nosto pisteessä: syvennystarina ja sen kopio poissa (8.5 r5).
   assert.ok(![...tiedostot.values()].some((x) => x.includes('syvennys-pariisi-tuileriat') || x.includes('"tuileriat"')),
     'paketissa yhä viittaus täkyyn tuileriat');
@@ -84,24 +90,28 @@ test('äänitteet: kansio ja jokaisella jaksolla oma äänite (Tuileries 17.11.2
   assert.deepEqual(virheet, []);
   const t = NOSTOT.find((x) => x.id === 'tuileries').n;
   assert.equal(t.aanikansio, 'tuileries-koe/v1');
-  assert.deepEqual(t.jaksot.map((x) => x.aanite), ['isoisa', 'kertoja-1-otsikko-jakso2',
+  assert.deepEqual(t.jaksot.map((x) => x.aanite), ['nimi', 'esittely', 'isoisa', 'kertoja-1-otsikko-jakso2',
     'kertoja-2-jakso3', 'kertoja-3-jakso4', 'kertoja-4-jakso5']);
 });
 
 test('jaksojen määrä, osat, ääni ja pituudet', () => {
   const virheet = [];
   for (const { id, n } of NOSTOT) {
-    const j = n.jaksot;
+    const alku = n.jaksot.filter((x) => ALKUOSAT.has(x.osa));
+    const j = n.jaksot.filter((x) => !ALKUOSAT.has(x.osa));
+    // Noston alku (nimi, esittely) vain jaksojen kärjessä, tässä järjestyksessä; yhteensä enintään noin 80 merkkiä.
+    if (alku.length && !alku.every((x, i) => n.jaksot[i] === x && x.osa === ['nimi', 'esittely'][i])) virheet.push(`${id}: alkuosat väärin`);
+    if (alku.reduce((s, x) => s + (x.teksti?.length ?? 0), 0) > 80) virheet.push(`${id}: alku yli 80 merkkiä`);
     if (j.length < (n.esittely ? 1 : JAKSOJA.min) || j.length > (n.esittely ? 2 : JAKSOJA.max)) virheet.push(`${id}: ${j.length} jaksoa`);
     if (!n.esittely && j[0]?.osa !== 'koukku') virheet.push(`${id}: ensimmäinen ei ole koukku`);
     if (!n.esittely && j.at(-1)?.osa !== 'tanaan') virheet.push(`${id}: viimeinen ei ole tänään`);
     let yht = 0;
-    j.forEach((x, i) => {
+    n.jaksot.forEach((x, i) => {
       if (!OSAT.has(x.osa)) virheet.push(`${id}[${i}]: osa ${x.osa}`);
       const len = typeof x.teksti === 'string' ? x.teksti.length : 0;
       yht += len;
-      if (len < JAKSO_MERKIT.min || len > JAKSO_MERKIT.max) virheet.push(`${id}[${i}]: ${len} merkkiä`);
-      if (x.aani != null && (x.aani !== 'isoisa' || i !== 0)) virheet.push(`${id}[${i}]: aani ${x.aani} (isoisa vain koukussa)`);
+      if (!ALKUOSAT.has(x.osa) && (len < JAKSO_MERKIT.min || len > JAKSO_MERKIT.max)) virheet.push(`${id}[${i}]: ${len} merkkiä`);
+      if (x.aani != null && (x.aani !== 'isoisa' || i !== alku.length)) virheet.push(`${id}[${i}]: aani ${x.aani} (isoisa vain koukussa)`);
     });
     if (yht > MERKKIKATTO) virheet.push(`${id}: ${yht} merkkiä > ${MERKKIKATTO}`);
   }
