@@ -5113,7 +5113,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
       { nimi: 'Artis-eläintarha', tyyppi: 'luonto', lat: 52.36611, lon: 4.91667, wiki: 'Artis (eläintarha)' },
-      { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
+      { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum', nosto: 'nosto-amsterdamin-maitotytto' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -5153,11 +5153,6 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Kapein talo', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3712, lon: 4.8977,
         nosto: 'nosto-amsterdamin-kapein-talo', nimiPuoli: 'vasen',
-      },
-      {
-        nimi: 'Maitotyttö', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'taide', lat: 52.3599, lon: 4.885,
-        nosto: 'nosto-amsterdamin-maitotytto',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
         nimi: 'Kissalaiva', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
@@ -5376,7 +5371,7 @@ export const KAUPUNKIKARTAT = {
        * 48,8462/2,3464 on rakennuksen tunnettu sijainti.
        */
       // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
-      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: 'nosto-pariisin-72-nimea' },
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: ['nosto-pariisin-72-nimea', 'hetki-eiffel-torni-1888', 'nosto-lustig-eiffel'] },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
@@ -5405,7 +5400,7 @@ export const KAUPUNKIKARTAT = {
        * ratkaisu kuin paketissa K1.
        */
       { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
-      { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
+      { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier', nosto: 'nosto-pariisi-soi' },
       { nimi: 'Place des Vosges', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
        * PIIRROSKARTAN 3D-MALLIT VALMIIKSI NOSTOIKSI (omistaja 9.11.2026 klo 16.17: "Kaikki tällaiset paikat
@@ -5446,11 +5441,6 @@ export const KAUPUNKIKARTAT = {
         // KK 20.52 12.11.2026 (vaihtoehto A): Pariisin aarretehtävän vihje osoittaa tähän (Quai Voltaire).
         nimi: 'Bukinistit 1859', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 48.859, lon: 2.33075,
         nosto: 'nosto-pariisin-bukinistit',
-      },
-      {
-        // KK 10.11.2026 12.24: ei samaan pisteeseen Eiffel-tornin kanssa; tornin itäisen jalan juurelle (Torni 1888 läntisen).
-        nimi: 'Lustig 1925', merkki: 'skandaali', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85826, lon: 2.2957,
-        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'oikea',
       },
       {
         nimi: 'Vrain-Lucas', tarinapaikka: true, merkki: 'skandaali', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
@@ -5500,7 +5490,7 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Bastilji', lat: 48.85333, lon: 2.36917,
-        nosto: 'bastilji',
+        nosto: ['bastilji', 'hetki-ranskan-vallankumous-bastilji-1789'],
       },
       /*
        * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
@@ -5524,19 +5514,6 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Pasteur 1862', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
-      },
-      // Tornin läntisen jalan juurelle (KK 10.11.2026 12.24: Eiffelin merkit eivät päällekkäin; Torni romuraudaksi itäisen).
-      {
-        nimi: 'Eiffel-torni 1888', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.85818, lon: 2.2933,
-        nosto: 'hetki-eiffel-torni-1888',
-        nimiPuoli: 'vasen',
-      },
-      // sama piste kuin kohde Bastilji: nimiö oikealle.
-      // KK 12.11.2026 20.09: oma kyltti POIS (tarinapaikka: false); juttu avautuu Bastiljin tähden kortista.
-      {
-        nimi: 'Bastilji 1789', tarinapaikka: false, tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
-        nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
@@ -5567,14 +5544,6 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Metro 1900', nimio: 'Metroasema', lat: 48.8844, lon: 2.3382,
         nosto: 'nosto-guimardin-metro',
-      },
-      // Notre-Damen kukko: Notre-Damen nosto (KK 10.11.2026 12.24), ei omaa kohdetta.
-      // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
-      // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
-      {
-        nimi: 'Piaf ja Django', tarinapaikka: true, merkki: 'lyyra', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
-        nosto: 'nosto-pariisi-soi',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
       },
       // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
       // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
@@ -5801,9 +5770,9 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ringtheater', lat: 48.2133, lon: 16.3624, wiki: 'Ringtheater', nosto: 'hahmotelma-ringtheater' },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-karntnertor
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
-      { nimi: 'Kärntnertor-teatteri', lat: 48.203, lon: 16.369, wiki: 'Theater am Kärntnertor', nosto: 'hahmotelma-karntnertor' },
+      { nimi: 'Kärntnertor-teatteri', lat: 48.203, lon: 16.369, wiki: 'Theater am Kärntnertor', nosto: ['hahmotelma-karntnertor', 'hetki-beethoven-yhdeksas-1824'] },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Michaelerplatz en-Wikipedia 48,20797 / 16,36642 ja OSM 48,20799 / 16,36639; Heinrichshof WGW 48,2022 / 16,3686 ja OSM Opernringhof 48,20209 / 16,36800).
-      { nimi: 'Vanha Burgtheater', lat: 48.20797, lon: 16.36642 },
+      { nimi: 'Vanha Burgtheater', lat: 48.20797, lon: 16.36642, nosto: 'hetki-mozart-wien-1786' },
       { nimi: 'Heinrichshof', lat: 48.2022, lon: 16.3686 },
       // Altes Kärntnertor: WGW "Kärntner Straße 49", OSM 48,20371 / 16,37050 (KK 17.11.2026: Altes, ei Neues).
       { nimi: 'Altes Kärntnertor', lat: 48.20371, lon: 16.3705 },
@@ -5822,7 +5791,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Valtionooppera', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
       { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
       { nimi: 'Belvedere', lat: 48.1934, lon: 16.38052, wiki: 'Belvedere' },
-      { nimi: 'Jättiratas', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+      { nimi: 'Jättiratas', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater', nosto: 'nosto-praterin-ratas' },
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
       { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
@@ -5874,20 +5843,6 @@ export const KAUPUNKIKARTAT = {
        * karttapaikka; juttu on sanatarkasti hetken teksti
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
-      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle. Piste 48,2039 / 16,3696 (KK 16.11.2026;
-      // Wikidata Q165636 ja WGW täsmäävät). NimiPuoli/siirto tarkistettava kuvasta (Valtionooppera noin 70 m etelään).
-      {
-        nimi: 'Beethoven 1824', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2039, lon: 16.3696,
-        nosto: 'hetki-beethoven-yhdeksas-1824',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
-      },
-      // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
-      // Lipizzanit on vain noin 35 m päässä: nimiPuoli/siirto tarkistettava kuvasta (Mozart vasen, Lipizzanit oikea).
-      {
-        nimi: 'Mozart 1786', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
-        nosto: 'hetki-mozart-wien-1786',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
       // Piste 48,2153 / 16,3665: 1877 valmistunut pörssirakennus Schottenring 16 (KK 16.11.2026; Wikidata Q2568865 ja WGW täsmäävät).
       // Vuoden 1873 väliaikainen pörssitalo (Schottenring 19) ei ole tarkalleen tässä.
       {
@@ -5904,12 +5859,6 @@ export const KAUPUNKIKARTAT = {
        * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
        * (js/packs/nahtavyysjutut.js).
        */
-      // Nimi 'Praterin jättiratas' (KK 16.11.2026; ent. 'Rattaan kulmat'): kulmaväite poistui, ratas 1897, 1873 Rotunde.
-      {
-        nimi: 'Praterin jättiratas', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
-        nosto: 'nosto-praterin-ratas',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
       // Piste 48,2075 / 16,3667 (KK 16.11.2026; Wikidata Q269273 ja WGW täsmäävät); ennen Hofburgin kartan pisteen kohdalla.
       {
         nimi: 'Lipizzanit', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 48.2075, lon: 16.3667,
@@ -6101,7 +6050,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Newgaten vankila', lat: 51.5157, lon: -0.1019, wiki: 'Newgate Prison', nosto: 'hahmotelma-newgate' },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-euston-arch
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
-      { nimi: 'Euston Arch', lat: 51.5272, lon: -0.1335, wiki: 'Euston Arch', nosto: 'hahmotelma-euston-arch' },
+      { nimi: 'Euston Arch', lat: 51.5272, lon: -0.1335, wiki: 'Euston Arch', nosto: ['hahmotelma-euston-arch', 'nosto-sahkotin-euston-1837'] },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-westminster-vanha
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, wiki: 'Old Palace of Westminster', nosto: 'hahmotelma-westminster-vanha' },
@@ -6144,6 +6093,7 @@ export const KAUPUNKIKARTAT = {
         lat: 51.508,
         lon: -0.1281,
         wiki: 'Trafalgar Square',
+        nosto: 'nosto-neljas-jalusta',
       },
       {
         nimi: 'Big Ben',
@@ -6301,11 +6251,6 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-leake-streetin-tunneli',
       },
       {
-        nimi: 'Neljäs jalusta', tyyppi: 'esine', lat: 51.508, lon: -0.1281,
-        nosto: 'nosto-neljas-jalusta',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
-      {
         nimi: 'Turbiinihalli', lat: 51.5076, lon: -0.0994,
         nosto: 'nosto-tate-modernin-turbiinihalli',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
@@ -6335,11 +6280,6 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Baird 1926', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'henkilo', lat: 51.5135, lon: -0.1317,
         nosto: 'nosto-baird-televisio-1926',
-      },
-      // Euston station (51,5282 / −0,1337); Euston Arch -tähti noin 110 m etelään, joten nimiö oikealle. Tarinapaikka KK 15.11.2026.
-      {
-        nimi: 'Sähkötin 1837', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 51.5282, lon: -0.1337,
-        nosto: 'nosto-sahkotin-euston-1837', nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Liukumäkiveistos (Orbit) EI ole täällä (KK 13.11.2026, päätös 3a): oikea paikka Stratfordissa
       // (51,538 / −0,013) on reunuksella, joten nosto on pääkartalla kattoVapaa-lipulla
@@ -6868,7 +6808,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pietarinkirkko', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
       { nimi: 'Castel Sant’Angelo', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
       { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
-      { nimi: 'Trevin suihkulähde', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
+      { nimi: 'Trevin suihkulähde', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi', nosto: ['nosto-rooman-kolikko', 'nosto-aqua-virgo'] },
       { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       /*
        * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
@@ -6890,7 +6830,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Forum Romanum', lat: 41.8922, lon: 12.4852,
         nosto: 'forum-romanum',
       },
-      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum', nosto: 'colosseum' },
+      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum', nosto: ['colosseum', 'nosto-colosseumin-kellari'] },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -6919,7 +6859,7 @@ export const KAUPUNKIKARTAT = {
         nosto: ['syvennys-rooma-kissat', 'nosto-kissat'],
       },
       {
-        nimi: 'Vatikaanin palatsi', lat: 41.9036, lon: 12.4564, nosto: 'syvennys-rooma-vatikaani',
+        nimi: 'Vatikaanin palatsi', lat: 41.9036, lon: 12.4564, nosto: ['syvennys-rooma-vatikaani', 'hetki-michelangelo-sikstus-1510'],
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -6948,13 +6888,6 @@ export const KAUPUNKIKARTAT = {
        * karttapaikka; juttu on sanatarkasti hetken teksti
        * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
        */
-      // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
-      // nimiö vasemmalle.
-      {
-        nimi: 'Michelangelo 1510', merkki: 'lyyra', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
-        nosto: 'hetki-michelangelo-sikstus-1510',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
       /*
        * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
        * 5 uutta pistettä.
@@ -6965,24 +6898,9 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Kolikko olan yli', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
-        nosto: 'nosto-rooman-kolikko',
-        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
-      },
-      {
-        nimi: 'Areenan kellari', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
-        nosto: 'nosto-colosseumin-kellari',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
-      },
-      {
         nimi: 'Norsu ja obeliski', merkki: 'lyyra', tarinapaikka: true, lat: 41.898, lon: 12.4776,
         nosto: 'nosto-minervan-norsu',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
-      },
-      {
-        nimi: 'Aqua Virgo', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
-        nosto: 'nosto-aqua-virgo',
-        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
         nimi: 'Nasone', merkki: 'lamppu', tarinapaikka: true, tyyppi: 'esine', lat: 41.8993, lon: 12.4768,
