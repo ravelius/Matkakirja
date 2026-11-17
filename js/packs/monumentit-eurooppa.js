@@ -8,8 +8,13 @@
  * omissa hahmotelmapakoissaan ja saavat paikalliset ihmeosoitteet siellä.
  */
 
+// `tiedosto` on ämpärin kohtaamiset/ihmeet/-nimi tai repon polku (assets/…, esim. Rotunde).
+const ihmeOsoite = (tiedosto) => (String(tiedosto).startsWith('assets/')
+  ? tiedosto
+  : `https://media.matkakirja.app/kohtaamiset/ihmeet/${tiedosto}`);
+
 const ihme = (tiedosto, selite, url) => ({
-  osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${tiedosto}`,
+  osoite: ihmeOsoite(tiedosto),
   kadonnut: true,
   selite,
   lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
@@ -31,8 +36,11 @@ const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => 
   laudat,
   teksti,
   lahde,
-  ihme: ihme(kuva, `${nimi} on kuvattu ehjänä historiallisten kuvausten, säilyneiden `
-    + 'jäänteiden ja tutkimuslähteiden perusteella.', url),
+  // kuva: null = loistoaikakuvaa ei vielä ole: ei ihmekenttää, ei "Koe ihme" -nappia (KK 17.11.2026 klo 10.43).
+  ...(kuva ? {
+    ihme: ihme(kuva, `${nimi} on kuvattu ehjänä historiallisten kuvausten, säilyneiden `
+      + 'jäänteiden ja tutkimuslähteiden perusteella.', url),
+  } : {}),
 });
 
 /*
@@ -741,7 +749,7 @@ export const EUROOPAN_KADONNEET = {
         + 'se valmistui 1864 näyttely- ja konserttihalliksi. Tulipalo tuhosi rakennuksen '
         + 'yöllä 17.–18.4.1929, ja säilyneet tiiliholvikäytävätkin purettiin myöhemmin.',
       lahde: 'en-Wikipedia "Paleis voor Volksvlijt", historia ja vuoden 1929 palo (tarkistettu 28.9.2026).',
-      kuva: 'ihme-paleis-voor-volksvlijt-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Paleis_voor_Volksvlijt',
+      kuva: null /* ihme-paleis-voor-volksvlijt-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/Paleis_voor_Volksvlijt',
     }),
   ],
   AUT: [
@@ -838,7 +846,7 @@ export const EUROOPAN_KADONNEET = {
         + 'Näyttely avattiin 1.5.1873, samana keväänä kun isoisä aloitti oman Eurooppansa '
         + 'kiertueen. Rakennus paloi täysin selittämättömässä tulipalossa 17.9.1937.',
       lahde: 'en-Wikipedia "Rotunde" ja "1873 Vienna World’s Fair" (tarkistettu 28.9.2026).',
-      kuva: 'ihme-wienin-rotunde-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rotunde',
+      kuva: 'assets/kartat/nostot/nosto-rotunde-loistoaika.webp', url: 'https://en.wikipedia.org/wiki/Rotunde',
     }),
   ],
   CHE: [
@@ -875,7 +883,7 @@ export const EUROOPAN_KADONNEET = {
         + '1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin '
         + 'kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.',
       lahde: 'en-Wikipedia "Rigi Kulm Hotel" ja "Vitznau-Rigi railway line" (tarkistettu 28.9.2026).',
-      kuva: 'ihme-grand-hotel-schreiber-rigi-kulm-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rigi_Kulm_Hotel',
+      kuva: null /* ihme-grand-hotel-schreiber-rigi-kulm-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/Rigi_Kulm_Hotel',
     }),
   ],
   CZE: [
@@ -1280,7 +1288,7 @@ export const EUROOPAN_KADONNEET = {
         + 'jonka 100-metrinen kupoli ja neljä minareettia hallitsivat koko saarta. '
         + 'Tilapäiseksi tarkoitettu jättiläinen purettiin näyttelyn päätyttyä.',
       lahde: 'en-Wikipedia "General Art and Industrial Exposition of Stockholm" (tarkistettu 28.9.2026).',
-      kuva: 'ihme-industripalatset-stockholm-1897-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/General_Art_and_Industrial_Exposition_of_Stockholm',
+      kuva: null /* ihme-industripalatset-stockholm-1897-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/General_Art_and_Industrial_Exposition_of_Stockholm',
     }),
   ],
   IRL: [
@@ -1622,7 +1630,7 @@ export const EUROOPAN_KADONNEET = {
       + 'oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa '
       + 'kaupunkia ei palautettu ennalleen.',
     lahde: 'en-Wikipedia "Minsk", toinen maailmansota ja jälleenrakennus (tarkistettu 28.9.2026).',
-    kuva: 'ihme-vanha-minsk-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Minsk',
+    kuva: null /* ihme-vanha-minsk-loistoaika.jpg: odottaa Codexin kuvaa (LAV tilasi 17.11.2026 klo 10.45); palauta tiedostonimi, kun kuva on ämpärissä */, url: 'https://en.wikipedia.org/wiki/Minsk',
   })],
   SRB: [rappeutunutKohde({
     id: 'smederevon-linnoitus', nimi: 'Smederevon linnoitus', nimio: 'Smederevo',

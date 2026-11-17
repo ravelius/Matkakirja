@@ -905,8 +905,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
        */
       const amparissa = osoite?.startsWith(`${PEILI_JUURI}kohtaamiset/ihmeet/ihme-`);
       if (!amparissa) {
-        assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-'),
-          `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-* tai ämpäriosoite`);
+        // Poikkeus: nostokuva käy ihmekuvana (Rotunde, KK 17.11.2026 klo 10.43: repon nosto-rotunde-loistoaika.webp).
+        assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-') || osoite?.startsWith('assets/kartat/nostot/nosto-'),
+          `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-*, assets/kartat/nostot/nosto-* tai ämpäriosoite`);
         assert.ok(existsSync(join(juuri, osoite)), `${tunnus}: ${osoite} puuttuu levyltä`);
       }
       assert.equal(typeof kadonnut, 'boolean',
@@ -980,7 +981,8 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
    * KADONNEET IHMEET EUROOPAN KAUPUNKIKARTOILLE (omistaja 31.10.2026 klo 12.49): 43 kohdetta neljässä erässä
    * (monumentit-eurooppa.js ihmeKohde); IHMEET_20261031 kasvaa erä kerrallaan.
    */
-  assert.equal(ihmeita, 117 + IHMEET_20261031, 'Matkakirjan ihmeitä on 117 + 31.10.2026 erät');
+  // Miinus 4: Volksvlijt, Rigi, Stockholm 1897 ja Minsk ilman loistoaikakuvaa (KK 17.11.2026 klo 10.43); palauta, kun kuvat tulevat.
+  assert.equal(ihmeita, 117 + IHMEET_20261031 - 4, 'Matkakirjan ihmeitä on 117 + 31.10.2026 erät - 4 (kuva puuttuu)');
 });
 
 /*
