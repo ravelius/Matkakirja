@@ -77,7 +77,9 @@ NIMILISTAT = {
         # Julkisivu käsin; 'arvio' = tarkistettava. Seinäväri rivikohtaisesti KS:n paletista myöhemmin (KK 01.24: Portland-kivi, Old Admiralty punatiili).
         'way/947381552': ('asema', 'suuri', 'Paddington'),
         # St Pancras way/4256246 EI asemamallia (KK 18.11. 00.29 kohta A): hotelli + yksi Barlow'n halli + jatke pelin koodimallina (OhjelmaKohdeLontooStPancras.cs).
-        'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2}),
+        # King's Cross (KK 18.11. 00.29 kohta B): päätyyn kaksi isoa kaari-ikkunaa kellotornin molemmin puolin → 'kx' (vie.py: jatkon viimeinen tavu bitti 1;
+        # peli TyKxJulkisivu, julkisivukaista kahdeksi halliksi).
+        'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2, 'kx': True}),
         'way/4959629': ('asema', 'suuri', 'Liverpool Street (halli, nimetön OSM-pohja)'),
         # Euston (KK 18.11. 00.05 korjaus + 00.29 1. työ; B-linjaus 7): nykyinen 1960-luvun matala tasakattohalli kattoikkunariveineen ja tumma lasijulkisivu,
         # ei kaaria eikä päätyä → 'moderni' (vie.py: jatkorivin viimeinen tavu bitti 0; peli TyAsemaModerni).

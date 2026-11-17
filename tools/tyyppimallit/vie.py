@@ -248,6 +248,8 @@ def main(a):
             m['_hallit'] = hallit.laske(m, (-x, -z))
             if (m.get('parametrit') or {}).get('moderni'):   # KK 18.11. 00.05 (Euston): jatkon viimeinen tavu = muotoliput, bitti 0 = moderni tasakattoasema
                 j = bytearray(m['_hallit']['jatko']); assert j[22] == 0; j[22] |= 1; m['_hallit']['jatko'] = bytes(j)
+            if (m.get('parametrit') or {}).get('kx'):   # KK 18.11. 00.29 B (King's Cross): muotoliput bitti 1 = kaksi kaari-ikkunaa ja kellotorni
+                j = bytearray(m['_hallit']['jatko']); assert j[22] & 2 == 0; j[22] |= 2; m['_hallit']['jatko'] = bytes(j)
             def kat(r):
                 hs, jul = hallit.pura(r['pituus'], r['leveys'], r['a'], r['b'], r['c'], r['p3_bitit'], r['varattu'], r['jatko'])
                 return round(100 * hallit.kattavuus(m, r['akseli'], r['siirto'], hs, jul), 1)
