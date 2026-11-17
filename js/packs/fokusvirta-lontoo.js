@@ -772,6 +772,16 @@ export const FOKUSVIRTA_LONTOO = {
       otsikko: 'Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi '
         + 'laivan, josta ei ollut jäljellä yhtään lautaa',
       symboli: 'historia',
+      visa: {
+        kysymys: 'Mitä Sutton Hoon laivasta oli jäljellä, kun Basil Brown paljasti sen?',
+        vaihtoehdot: [
+          'Koko laiva lähes ehjänä',
+          'Hiekkaan jäänyt jälki ja rautaniitit',
+          'Vain kölipalkki ja mastonjalka',
+        ],
+        oikea: 1,
+        fakta: 'Puu oli lahonnut kokonaan, mutta se oli värjännyt hiekan, ja lähes kaikki rautaniitit olivat omilla paikoillaan.',
+      },
       lunastus: [
         'Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut '
           + 'avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne '
@@ -878,6 +888,16 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Metron höyryveturi',
       otsikko: 'Metron tunnelissa savusi höyryveturi',
       symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Mikä veti junaa Lontoon metrossa, kun se avattiin vuonna 1863?',
+        vaihtoehdot: [
+          'Hevonen',
+          'Sähkömoottori',
+          'Höyryveturi',
+        ],
+        oikea: 2,
+        fakta: 'Lontoon metro avattiin 10. tammikuuta 1863, ja maan alla junaa veti höyryveturi. Savu johdettiin ulos tunneliin jätetyistä aukoista.',
+      },
       lunastus: [
         'Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä '
           + 'maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä '
@@ -990,6 +1010,16 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Canaletto Lontoossa',
       otsikko: 'Canaletto maalasi myös Lontoon',
       symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Kuinka kauan Canaletto maalasi Lontoota?',
+        vaihtoehdot: [
+          'Yhdeksän vuotta',
+          'Kolme vuotta',
+          'Kolmekymmentä vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Canaletto muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan.',
+      },
       lunastus: [
         'Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian '
           + 'lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
@@ -1063,6 +1093,16 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Dickensin pubi',
       otsikko: 'Pubi, jossa Dickens istui',
       symboli: 'historia',
+      visa: {
+        kysymys: 'Minkä Charles Dickensin romaanissa mainitaan The George -pubi?',
+        vaihtoehdot: [
+          'Oliver Twist',
+          'Pikku Dorrit',
+          'David Copperfield',
+        ],
+        oikea: 1,
+        fakta: 'Dickens mainitsee The Georgen romaanissaan Pikku Dorrit. Pubin penkeillä hän myös istui.',
+      },
       lunastus: [
         'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
           + 'tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen '
@@ -1162,6 +1202,16 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Leake Streetin tunneli',
       otsikko: 'Tunneli, jossa saa maalata',
       symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Kuka järjesti Leake Streetin tunnelissa toukokuussa 2008 kolmipäiväisen Cans Festivalin?',
+        vaihtoehdot: [
+          'Damien Hirst',
+          'Tracey Emin',
+          'Banksy',
+        ],
+        oikea: 2,
+        fakta: 'Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin.',
+      },
       lunastus: [
         'Waterloon aseman laiturien alla kulkee noin kolmesataa metriä '
           + 'pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla '
@@ -1202,6 +1252,16 @@ export const FOKUSVIRTA_LONTOO = {
       nimio: 'Neljäs jalusta',
       otsikko: 'Tyhjä jalusta ja 2 400 ihmistä',
       symboli: 'kulttuuri',
+      visa: {
+        kysymys: 'Miksi Trafalgar Squaren luoteiskulman jalusta jäi vuonna 1841 tyhjäksi?',
+        vaihtoehdot: [
+          'Rahat loppuivat kesken',
+          'Patsas putosi rakennusvaiheessa',
+          'Kuningatar kielsi patsaan',
+        ],
+        oikea: 0,
+        fakta: 'Kolmelle jalustalle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken.',
+      },
       lunastus: [
         'Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, '
           + 'mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat '
@@ -1302,6 +1362,16 @@ export const FOKUSVIRTA_LONTOO = {
       kattoVapaa: true,
       otsikko: 'Veistos, jonka sisällä on liukumäki',
       symboli: 'tekniikka',
+      visa: {
+        kysymys: 'Kuka suunnitteli liukumäen, joka kiedottiin Orbit-veistoksen ympärille vuonna 2016?',
+        vaihtoehdot: [
+          'Anish Kapoor',
+          'Cecil Balmond',
+          'Carsten Höller',
+        ],
+        oikea: 2,
+        fakta: 'Liukumäen suunnitteli Carsten Höller. Veistoksen suunnittelivat Anish Kapoor ja Cecil Balmond vuoden 2012 olympialaisia varten.',
+      },
       lunastus: [
         'Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen '
           + 'teräsvyyhti, Britannian suurin julkinen taideteos. Sen '
