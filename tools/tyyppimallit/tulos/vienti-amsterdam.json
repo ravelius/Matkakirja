@@ -1,0 +1,200 @@
+{
+ "kaupunki": "amsterdam",
+ "origo": {
+  "lat": 52.3661,
+  "lon": 4.90092
+ },
+ "merkkeja": 99,
+ "malleja": 16,
+ "tavua": 2792,
+ "sha256": "f947b9a6aeccc8f873d5127d246f4fc25206803e490eda9aa85fffc03048d4e6",
+ "maa": "maasto.py z12 (pohjan matalin piste), MAA 0,25 m",
+ "maa_laskut": {
+  "pisteita": 99,
+  "lahin_tunnettu": 0
+ },
+ "lahde": "/Users/Shared/Claude/proto-3d/_tyo/valoseppa/tyyppitalot/koe-rw/amsterdam/merkit-amsterdam.json",
+ "lahde_sha256": "f47f19ebac950244d6f465a78880316a4bf80ad1046933eac6b70e57d31395e4",
+ "tyypit": {
+  "palatsi-keski": 7,
+  "kirkko-basilika": 19,
+  "kirkko-keski": 14,
+  "kirkko-levea": 32,
+  "kirkko-pieni": 24,
+  "kirkko-suuri": 2,
+  "asema-suuri": 1
+ },
+ "ei_sovi_alueella": 103,
+ "poisOsm": [
+  "relation/3580875",
+  "relation/3584291",
+  "relation/3685999",
+  "relation/3686749",
+  "way/114120359",
+  "way/152508197",
+  "way/1532847435",
+  "way/158206091",
+  "way/171037880",
+  "way/174996833",
+  "way/203190064",
+  "way/220749328",
+  "way/220961710",
+  "way/252970298",
+  "way/266561450",
+  "way/266621545",
+  "way/266903909",
+  "way/266908022",
+  "way/266927240",
+  "way/267103172",
+  "way/267123478",
+  "way/267556663",
+  "way/268283592",
+  "way/268453064",
+  "way/273528840",
+  "way/274528747",
+  "way/274531833",
+  "way/274690880",
+  "way/274692021",
+  "way/276058538",
+  "way/276234088",
+  "way/276279607",
+  "way/276626650",
+  "way/276686506",
+  "way/277085595",
+  "way/277113663",
+  "way/277358699",
+  "way/278207418",
+  "way/278357484",
+  "way/278363313",
+  "way/278379354",
+  "way/278379369",
+  "way/278697421",
+  "way/278698882",
+  "way/278714588",
+  "way/280582426",
+  "way/280601981",
+  "way/280647243",
+  "way/280795748",
+  "way/280804509",
+  "way/280804537",
+  "way/280805784",
+  "way/282301297",
+  "way/282324830",
+  "way/282336300",
+  "way/283583439",
+  "way/30044304",
+  "way/31742462",
+  "way/330159868",
+  "way/43040630",
+  "way/44451185",
+  "way/44451258",
+  "way/44451421",
+  "way/44451461",
+  "way/44508720",
+  "way/44825314",
+  "way/44898355",
+  "way/44898520",
+  "way/45037862",
+  "way/45100929",
+  "way/45120916",
+  "way/46696080",
+  "way/46879389",
+  "way/52295214",
+  "way/55117446",
+  "way/55160676",
+  "way/57854791",
+  "way/57855495",
+  "way/57855668",
+  "way/57856845",
+  "way/57857592",
+  "way/57858086",
+  "way/57858305",
+  "way/57858452",
+  "way/57858486",
+  "way/57858493",
+  "way/57859521",
+  "way/57860431",
+  "way/57862033",
+  "way/57862497",
+  "way/57862566",
+  "way/57862594",
+  "way/57863115",
+  "way/57866668",
+  "way/57866706",
+  "way/647427415",
+  "way/8891046",
+  "way/916676791",
+  "way/99205257"
+ ],
+ "asemat": [
+  {
+   "osm": "way/57856845",
+   "nimi": "Centraal Station",
+   "akseli": 300.2,
+   "poikkeama": 0.0,
+   "siirto": [
+    -0.02,
+    0.03
+   ],
+   "pituus": 431.7,
+   "leveys": 182.5,
+   "halleja": 4,
+   "julkisivu": [
+    1,
+    2
+   ],
+   "kaistat": [
+    [
+     -71.9,
+     210.8
+    ],
+    [
+     -124.4,
+     212.5
+    ],
+    [
+     -124.4,
+     151.5
+    ],
+    {
+     "1.": [
+      -90.6,
+      90.6
+     ]
+    }
+   ],
+   "hallimaara": 4,
+   "katettu_pct": 79.1,
+   "katettu_ennen_pct": 72.0,
+   "kaistat_ennen": [
+    [
+     -71.9,
+     210.8
+    ],
+    [
+     -124.4,
+     212.5
+    ],
+    [
+     -124.4,
+     151.5
+    ],
+    null
+   ]
+  }
+ ],
+ "asemien_kattovari": {
+  "srgb": "#A88C74",
+  "lahde": "tee-palat.py KATTO"
+ },
+ "paletti": {
+  "katto": "#A88C74",
+  "katto_lahde": "tee-palat.py KATTO",
+  "seina": "#F0DEB4",
+  "seina_lahde": "tee-palat.py SEINA[0]",
+  "palatsin_seinat": {
+   "portland": "#DCD4C2",
+   "tiili": "#AC7862"
+  }
+ }
+}

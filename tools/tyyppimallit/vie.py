@@ -11,7 +11,7 @@ TIEDOSTO MK01 (little-endian; luku ja testit: pelin Ydin/Elava/MerkkiTiedosto.cs
   malli 24 t:   u8 tyyppi | u8 a | u8 b | u8 c | f32 p0 | f32 p1 | f32 p2 | f32 p3 (tyyppi 7: u32 bitteinä) | u32 varattu
      tyyppi 1 kirkko-pieni, 2 kirkko-keski (a = torni_paikka 0 länsi / 1 risteys, b = torneja, c = huippu 0 pyramidi / 1 neula / 2 tasakatto),
             3 kirkko-suuri, 4 kupolikirkko (a = pylväspääty 0/1), 5 pylvästemppeli (p0 pituus, p1 leveys, a = päädyn pylväät, b = harja 0/1, c = portiikki vain päädyssä 0/1),
-            6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika; sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
+            6 palatsi-piha (p0 pituus, p1 leveys, a = julkisivun sivu, b = avoin sivu, c = katto 0 mansardi / 1 attika | 2 kupolitorni (keskisiipi, kupolitorni ja leveä kolmiopääty; KK 17.11. 23.54 Koninklijk Paleis); sivu 0 ei, 1 +x, 2 −x, 3 +z, 4 −z),
                           p2 = seinän sRGB 0xRRGGBB f32-kokonaislukuna (0 = oletuskivi; parametri 'seina' SEINA-taulusta)
                           p3 = räystäs m f32 (KK 17.11. KOE Rooma/Wien: OSM-korkeus, ei naapureiden mediaanin alle; 0 = 16 m kuten ennen)
             7 asema (p0 pituus L, p1 leveys W, p2 = kaupungin kattoväri sRGB 0xRRGGBB; kattovari(): KK 15.11. 05.22). Hallit pohjan sisään
@@ -162,15 +162,18 @@ def _malli(m):
     t, k, p = m['tyyppi'], m['koko'], m['parametrit'] or {}
     ty = TYYPPI[(t, k)]
     if t == 'kirkko' and k == 'julkisivu': return (ty, 1 if p.get('kupoli') else 0, 0, 0, 0.0, 0.0, 0.0, 0.0)   # kupoli vain lähde + Commons-kuva
+    # p0 = KORKEUSKERROIN (KK 17.11. 23.54 kohdat 2–3: Nieuwe Kerk, Schottenkirche; vain nimilistalta, 0 = 1): peli venyttää rungon y-suunnassa
+    # (laiva, katto ja torni korkeammiksi, katto jyrkemmäksi). Kirkko-suuri a = 1 = torniton länsipääty (Nieuwe Kerk: ei länsitorneja).
+    ky = float(p.get('korkeus_kerroin') or 0.0)
     if t == 'kirkko' and k != 'suuri':
-        return (ty, PAIKKA[m['torni_paikka']], m['torneja'], HUIPPU[m['huippu']], 0.0, 0.0, 0.0, 0.0)
-    if t == 'kirkko': return (ty, 0, 0, 0, 0.0, 0.0, 0.0, 0.0)
+        return (ty, PAIKKA[m['torni_paikka']], m['torneja'], HUIPPU[m['huippu']], ky, 0.0, 0.0, 0.0)
+    if t == 'kirkko': return (ty, 1 if p.get('torniton') else 0, 0, 0, ky, 0.0, 0.0, 0.0)
     if t == 'kupolikirkko': return (ty, 0 if p.get('pylvaspaaty') is False else 1, 0, 0, 0.0, 0.0, 0.0, 0.0)
     if t == 'pylvastemppeli':
         attika = p.get('katto') == 'attika'
         return (ty, 8 if p.get('portiikki') or not attika else 10, 0 if attika else 1, 1 if p.get('portiikki') else 0, float(m['pituus']), float(m['leveys']), 0.0, 0.0)
     if t == 'palatsi':
-        return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], 1 if p.get('katto') == 'attika' else 0, float(m['pituus']), float(m['leveys']), float(SEINA[p.get('seina')]), float(p.get('raystas') or 0.0))   # p3 = räystäs m (KK 17.11. KOE; 0 = 16 m)
+        return (ty, SIVU[p.get('julkisivu') or '+z'], SIVU[p.get('avoin_sivu') or ''], (1 if p.get('katto') == 'attika' else 0) | (2 if p.get('kupolitorni') else 0), float(m['pituus']), float(m['leveys']), float(SEINA[p.get('seina')]), float(p.get('raystas') or 0.0))   # p3 = räystäs m (KK 17.11. KOE; 0 = 16 m)
     if t == 'asema':
         r = m['_hallit']
         return (ty, r['a'], r['b'], r['c'], float(r['pituus']), float(r['leveys']), float(KATTOVARI[0]), struct.pack('<I', r['p3_bitit']), r['varattu'])

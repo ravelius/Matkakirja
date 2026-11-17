@@ -79,6 +79,8 @@ NIMILISTAT = {
         'way/4256246': ('asema', 'suuri', 'St Pancras'),   # 2. kierroksen ehdokas: oikeasti yksi Barlow-halli + tiilijulkisivu (KK 01.13)
         'way/260720558': ('asema', 'suuri', "King's Cross", {'halleja': 2}),
         'way/4959629': ('asema', 'suuri', 'Liverpool Street (halli, nimetön OSM-pohja)'),
+        # KK 17.11. 23.54 kohta 1: Euston tummasta laatikosta kaarihalleiksi + päätyjulkisivu (Saint-Lazaren asemamalli; hallit säännöllä hallit.py).
+        'way/4960746': ('asema', 'suuri', 'Euston'),
         # St James's Palace (relation/545040) pois listalta: Tudor-tiili, perustalo (KK 15.11. 01.13)
         'way/372841786': ('palatsi', 'keski', "Somerset House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Strand'}),
         'relation/3848545': ('palatsi', 'keski', "Burlington House", {'seina': 'portland', 'katto': 'attika', 'julkisivu': 'pohjoinen', 'katu': 'Piccadilly'}),
@@ -169,6 +171,8 @@ NIMILISTAT = {
         'way/164050121': ('kirkko', 'julkisivu', 'Chiesa di San Gioacchino in Prati', {'kupoli': 1, 'koe': True, 'lahde': 'it.wiki Chiesa_di_San_Gioacchino_in_Prati: "la cupola, in alluminio e traforata con stelle di cristallo"'}),
     },
     'wien': {
+        # KK 17.11. 23.54 kohta 3: Schottenkirche hukkuu Wienin korkeisiin taloihin → sama basilika korkeampana (torni ja jyrkempi katto; korkeuskerroin).
+        'way/29469492': ('kirkko', 'basilika', 'Schottenkirche', {'korkeus_kerroin': 1.45}),
         # IKONIT (KK 16.11. kohta 2): ei tyypitetä; Stephansdom pois säännön tuloksesta.
         'way/212496461': ('kirkko', 'suuri', 'Stephansdom', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
         'way/8097149': ('kirkko', 'keski', 'Karlskirche', {'ei_sovi': 'ikoni (KK 16.11. kohta 2)'}),
@@ -202,7 +206,9 @@ NIMILISTAT = {
         # EHDOTUS (VS 17.11., KK:n työ 01.2x): asema + palatsit vain listalta; kirkot säännöllä. Rijksmuseum = ikoni (pelin pienoismalli, IKONIT).
         # julkisivu = arvio ennen koneellista tarkistusta (JULKISIVU_KONEELLA; ovet-amsterdam.json ja käsitaulu voittavat).
         'way/57856845': ('asema', 'suuri', 'Centraal Station'),
-        'relation/3580875': ('palatsi', 'keski', 'Koninklijk Paleis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
+        'relation/3580875': ('palatsi', 'keski', 'Koninklijk Paleis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True, 'kupolitorni': True}),   # KK 17.11. 23.54 kohta 2
+        # KK 17.11. 23.54 kohta 2: Nieuwe Kerk (OSM-pohja nimetön, wikidata Q1419675) korkeana laivana ristikatoin, ei länsitorneja (oikeasti risteyksen kattoratsastaja).
+        'way/220749328': ('kirkko', 'suuri', 'Nieuwe Kerk', {'torniton': True, 'korkeus_kerroin': 1.3}),
         'way/267103172': ('palatsi', 'keski', 'Trippenhuis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
         'way/30044304': ('palatsi', 'keski', 'Felix Meritis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
         'way/266908022': ('palatsi', 'keski', 'Maagdenhuis', {'julkisivu': 'itä', 'arvio': True, 'katto': 'attika', 'koe': True}),
