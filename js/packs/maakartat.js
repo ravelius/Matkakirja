@@ -5464,7 +5464,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Piiritys 1870', tarinapaikka: true, merkki: 'tiimalasi', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
       },
       /*
-       * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
+       * KAKSI NOSTOA SAMASSA PAIKASSA (17.11.2026 asti; nyt yksi, ks. nosto alla). Syvennystarina `syvennys-pariisi-
        * tuileriat` ja pääkartan fokuskohde `tuileries`
        * (js/packs/fokuskohteet-fra.js) ovat samaa palanutta palatsia,
        * joten ne eivät voi olla kahtena merkkinä kolmenkymmenen metrin
@@ -5480,7 +5480,10 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Tuileries\'n palatsi', lat: 48.8622, lon: 2.3325,
         // Nimiö keskelle alle (31.10.2026): Concorden aukio on nyt täysikokoinen (kevyt merkki pois); vasemmalla nimiö
         // osui lähimmällä zoomilla Concorden nimiöön, oikealla Louvren piirrokseen.
-        nosto: ['syvennys-pariisi-tuileriat', 'tuileries'],
+        // Yksi nosto (Tuileries-koe 17.11.2026, KK 11.16): syvennystarina `tuileriat` poistettu, palatsi on kohteen jaksoissa.
+        nosto: 'tuileries',
+        // Nähtävyysjuttu (syvennystarinan kopio) poistettiin; napautus avaa noston, selaimessa wiki-tiivistelmän.
+        wiki: 'Tuileries Palace',
       },
       /*
        * BASTILJI — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE (omistajan päätös
