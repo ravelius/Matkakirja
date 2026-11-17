@@ -6,7 +6,7 @@
  * maisema = maasto on kohde (vuori, maasto): natiivin kameran sääntö (KameranSaanto, tapaus 2) laskeutuu maisemaan; muut
  * pysyvät maan kartalla, kunnes paikalla on lähimalli. Tyyppi valitsee maakartan kohteen (KS) tai pisteen/viivamerkin.
  *
- * Vartijat (testit tests/muoto-vienti.test.mjs): tuntematon tyyppi on virhe; kohde, jolla on muoto (ei vesi, kaupunki eikä
+ * Vartijat (testit tests/muoto.test.mjs): tuntematon tyyppi on virhe; kohde, jolla on muoto (ei vesi, kaupunki eikä
  * ei-muotoa), ei saa olla vedessä (oma piste yli RANTAVARA_KM maan rajojen ulkopuolella, kun maan rajat tunnetaan); rivi, jonka id:tä ei
  * ole valoissa, on virhe (kirjoitusvirhe tai poistunut valo).
  */
