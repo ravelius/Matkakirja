@@ -433,6 +433,32 @@
     }
    ],
    "muutokset": []
+  },
+  {
+   "tunnus": "S-14",
+   "nimi": "Nosto alkaa kertojan nimellä",
+   "roolit": [
+    "KK",
+    "PT",
+    "SK",
+    "ÄÄ",
+    "NUI"
+   ],
+   "vartija": "ei vartijaa",
+   "tila": "voimassa",
+   "kerrat": [
+    {
+     "pvm": "17.11.2026",
+     "klo": "19.23",
+     "lahde": "P-261117-90",
+     "sanat": "Ja minusta nostoteksti pitäisi aina alkaa kertojan äänellä siitä, että mikä paikan nimi on. Ja jos tulee isoisän tekstiä, niin se tulisi vasta sen jälkeen. Ja isoisä ehkä pitää muutamalla sanalla esitellä, kuin esimerkiksi, että isoisä kulki tässä kohtaa tai jotain vastaavaa, ja vasta sitten tulla se eri kertoja ääni.",
+     "sha": "633fd088e5b0baf0",
+     "toisto": false,
+     "korvattu": null,
+     "kirjattu": "2026-11-17T17:24:55.770Z"
+    }
+   ],
+   "muutokset": []
   }
  ]
 }
