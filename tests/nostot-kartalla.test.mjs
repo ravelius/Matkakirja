@@ -387,7 +387,10 @@ test('laatan päälle osuvalla hetkellä on piste kaupungin kohdekartalla', () =
     assert.equal(linkki.kaupunki, hetki.lehti.avain,
       `${hetki.id}: kohdekartan piste on kaupungissa ${linkki.kaupunki}, lehti on ${hetki.lehti.avain}`);
     const piste = KAUPUNKIKARTAT[linkki.kaupunki].kohteet.find((k) => k.nimi === linkki.piste);
-    const juttu = NAHTAVYYSJUTUT[linkki.kaupunki]?.[linkki.piste];
+    // Yhdistämisen vaihe A (KK 17.11.2026): hetken nosto voi avautua kohteen merkistä (nosto-taulukko); teksti on silloin
+    // kortilla, jonka `nosto` on hetki-<id>, ei merkin nimen kortilla.
+    const juttu = Object.values(NAHTAVYYSJUTUT[linkki.kaupunki] ?? {}).find((j) => j.nosto === `hetki-${hetki.id}`)
+      ?? NAHTAVYYSJUTUT[linkki.kaupunki]?.[linkki.piste];
     assert.equal(juttu?.teksti ?? piste?.teksti, hetki.teksti,
       `${hetki.id}: kohdekartalta avautuva teksti eriytyi hetken omasta tekstistä`);
   }

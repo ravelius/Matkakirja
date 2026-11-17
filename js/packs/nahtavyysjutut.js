@@ -6500,7 +6500,7 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     'Kaulanauha 1785': {
-      nosto: 'nosto-pariisin-vuosisadat',
+      nosto: 'nosto-kaulanauha-1785',
       teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
         + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
         + 'kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte '
@@ -6512,23 +6512,10 @@ export const NAHTAVYYSJUTUT = {
         + 'myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä '
         + 'erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen '
         + 'ja kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
-        + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.'
-        + '\n\n'
-        + 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden '
-          + 'lähettäjiksi oli merkitty muun muassa Julius Caesar, Kleopatra, '
-          + 'Aristoteles ja Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun '
-          + 'ranskaksi. Chasles maksoi kokoelmasta noin 140 000 frangia ja '
-          + 'esitteli 1867 tiedeakatemialle kirjeitä, joiden mukaan Blaise '
-          + 'Pascal olisi keksinyt painovoimalain ennen Isaac Newtonia. '
-          + 'Englantilaiset tutkijat huomauttivat, että Newton oli kirjeiden '
-          + 'päiväyksen aikaan lapsi. Chasles piti kokoelmastaan kiinni '
-          + 'vuosia, mutta väärentäjä tuomittiin helmikuussa 1870 kahdeksi '
-          + 'vuodeksi vankeuteen.',
+        + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.',
       vuodet: [
         { kohta: 'vaihteessa 1785', vuosi: '1785', selite: 'nauha ostettiin' },
         { kohta: 'Rohanin 1786', vuosi: '1786', selite: 'Rohan vapautettiin' },
-        { kohta: 'esitteli 1867', vuosi: '1867', selite: 'kirjeet akatemialle' },
-        { kohta: 'helmikuussa 1870', vuosi: '1870', selite: 'väärentäjän tuomio' },
       ],
       // Kaulanauhajutun havainnekuva pois (KK 10.11.2026 12.24: kuva kuuluu vain kaulanauhajuttuun).
       kuvat: [],

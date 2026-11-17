@@ -1273,6 +1273,13 @@ export const FOKUSVIRTA_PARIISI = {
        * pisteiksi, loput neljä yhdeksi nostoksi 'Pariisin
        * vuosisadat'"*).
        *
+       * JAETTU KAHDEKSI (omistaja 17.11.2026, yhdistämisen vaihe A,
+       * PR 6966 luku 4): kaksi tarinaa ei kuulu samalle kortille. Tämä
+       * kortti (`kaulanauha-1785`) pitää kaulanauhan ja sen kaksi
+       * kysymystä; Vrain-Lucas on oma korttinsa `pariisin-vuosisadat`
+       * (id säilyi, ettei Pulun valmiit vastaukset katkea). Tekstit,
+       * kuvat ja kysymykset siirrettiin sanatarkasti.
+       *
        * MITATTU LÄHTÖTILANNE: sivun kaikilla seitsemällä nostolla oli
        * jo karttapaikka — kuudella kohdekartalla ja yhdellä
        * pääkartalla. Kolme "parasta" ovat ne kolme, jotka osaston oma
@@ -1295,7 +1302,7 @@ export const FOKUSVIRTA_PARIISI = {
        * Vastaus on yllä olevassa tekstissä sanatarkasti: *"Kaikki oli
        * kirjoitettu 1800-luvun ranskaksi."*
        */
-      id: 'pariisin-vuosisadat',
+      id: 'kaulanauha-1785',
       nimio: 'Kaulanauha 1785',
       otsikko: 'Kaulanauha 1785 — huijaus kuningattaren nimissä',
       // KK 13.11.2026 klo 09.57: tarinapaikan symboli seuraa kartan merkkiä (oletus huuto = Skandaalit vain skandaaleille).
@@ -1312,15 +1319,6 @@ export const FOKUSVIRTA_PARIISI = {
           + 'elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja '
           + 'kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti Rohanin '
           + '1786, mutta kuningattaren maine ei toipunut.',
-        'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden lähettäjiksi oli '
-          + 'merkitty muun muassa Julius Caesar, Kleopatra, Aristoteles ja '
-          + 'Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun ranskaksi. Chasles '
-          + 'maksoi kokoelmasta noin 140 000 frangia ja esitteli 1867 '
-          + 'tiedeakatemialle kirjeitä, joiden mukaan Blaise Pascal olisi '
-          + 'keksinyt painovoimalain ennen Isaac Newtonia. Englantilaiset '
-          + 'tutkijat huomauttivat, että Newton oli kirjeiden päiväyksen aikaan '
-          + 'lapsi. Chasles piti kokoelmastaan kiinni vuosia, mutta väärentäjä '
-          + 'tuomittiin helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Historia", nostot "Kaulanauha, '
         + 'joka ei koskaan päätynyt kuningattarelle" ja "Kleopatra kirjoitti '
@@ -1346,6 +1344,47 @@ export const FOKUSVIRTA_PARIISI = {
             + 'Bastiljiin.',
           lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
         },
+      ],
+      kysymykset: [
+        'Miksi kardinaali uskoi väärennetyt kirjeet?',
+        'Mihin kaulanauhan timantit lopulta päätyivät?',
+      ],
+      // Sainte-Chapelle 48,8554 N / 2,3450 E: Palais de la Cité'n palatsikappeli, jossa parlamentti istui (PR 6964, valinta A).
+      paikka: {
+        nimi: 'Kaulanauha 1785',
+        laudat: {
+          maailmankartta: { x: 5911.5, y: 1439.7 },
+          europe: { x: 256.3, y: 608.7 },
+        },
+      },
+    },
+    {
+      /*
+       * Vrain-Lucasin kirjeväärennökset (ennen yhteistä korttia
+       * `pariisin-vuosisadat`; kaulanauha erotettiin omaksi kortikseen
+       * `kaulanauha-1785`). Kysymys 3 ja minikysymys pysyivät tässä.
+       */
+      id: 'pariisin-vuosisadat',
+      nimio: 'Vrain-Lucas',
+      otsikko: 'Vrain-Lucas — kirjeet, joita ei ollut',
+      symboli: 'huuto',
+      lunastus: [
+        'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden lähettäjiksi oli '
+          + 'merkitty muun muassa Julius Caesar, Kleopatra, Aristoteles ja '
+          + 'Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun ranskaksi. Chasles '
+          + 'maksoi kokoelmasta noin 140 000 frangia ja esitteli 1867 '
+          + 'tiedeakatemialle kirjeitä, joiden mukaan Blaise Pascal olisi '
+          + 'keksinyt painovoimalain ennen Isaac Newtonia. Englantilaiset '
+          + 'tutkijat huomauttivat, että Newton oli kirjeiden päiväyksen aikaan '
+          + 'lapsi. Chasles piti kokoelmastaan kiinni vuosia, mutta väärentäjä '
+          + 'tuomittiin helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
+      ],
+      lahde: 'Pariisin kaupunkilehden sivu "Historia", nostot "Kaulanauha, '
+        + 'joka ei koskaan päätynyt kuningattarelle" ja "Kleopatra kirjoitti '
+        + 'ranskaksi — ja akateemikko uskoi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 5, 13.9.2026.',
+      kuvat: [
         {
           tiedosto: 'Pascal à Galileo.jpg',
           lyhyt: 'Vrain-Lucasin väärentämä kirje, jonka Blaise Pascal olisi muka kirjoittanut Galileille.',
@@ -1355,9 +1394,9 @@ export const FOKUSVIRTA_PARIISI = {
         },
       ],
       kysymykset: [
-        'Miksi kardinaali uskoi väärennetyt kirjeet?',
-        'Mihin kaulanauhan timantit lopulta päätyivät?',
         'Miksi Chasles piti kokoelmastaan kiinni vuosia?',
+        // Pulun valmis vastaus oli jo (ei generointia); testi vaatii kortille vähintään kaksi kysymystä.
+        'Mitä Vrain-Lucas myi Michel Chasles\'lle?',
       ],
       visa: {
         kysymys: 'Vrain-Lucas myi kirjeitä, joiden lähettäjiksi oli merkitty '
@@ -1372,16 +1411,12 @@ export const FOKUSVIRTA_PARIISI = {
           + 'kirjeiden päiväyksen aikaan lapsi. Väärentäjä tuomittiin '
           + 'helmikuussa 1870 kahdeksi vuodeksi vankeuteen.',
       },
-      // Panthéon 48,8462 N / 2,3464 E. Kummankaan tarinan oma osoite ei
-      // ollut vapaana: Vrain-Lucasilla on jo oma piste (Institut de
-      // France) ja kaulanauhan Versailles on kohdekartan rajauksen
-      // ulkopuolella. Panthéon on kartan oma historiakohde ja tämän
-      // kortin ankkuri.
+      // Institut de France 48,8573 N / 2,3372 E: Vrain-Lucasin oma piste.
       paikka: {
-        nimi: 'Kaulanauha 1785',
+        nimi: 'Vrain-Lucas',
         laudat: {
-          maailmankartta: { x: 5911.5, y: 1440.1 },
-          europe: { x: 256.3, y: 608.9 },
+          maailmankartta: { x: 5911.3, y: 1439.6 },
+          europe: { x: 256.1, y: 608.6 },
         },
       },
     },
