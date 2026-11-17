@@ -6993,7 +6993,9 @@ export const KAUPUNKIKARTAT = {
       // Tarinapaikka KK 17.11.2026: piste 41,89008 / 12,49067 (Wikidata Q1924755 + OSM-relaatio 1835448); tarkistettava kuvasta.
       { nimi: 'Meta Sudans', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.89008, lon: 12.49067 },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Porto di Ripetta en-Wikipedia 41,9051 / 12,4750 ja OSM Piazza del Porto di Ripetta 41,9048 / 12,4753).
-      { nimi: 'Porto di Ripetta', lat: 41.9051, lon: 12.475 },
+      // Tarina (KK 17.11.2026 08.11, artikkeli "Näin kadonnut aarre palaa kartalle"): natiivin Tarinanostot/<id>.json; kortin nappi
+      // "Näin tämä tehtiin" (NUI). Vienti kohdekartat.kohteet[].tarina.
+      { nimi: 'Porto di Ripetta', lat: 41.9051, lon: 12.475, tarina: 'kadonneet-nain-tehtiin' },
     ],
   },
   krakova: {
