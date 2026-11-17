@@ -24,7 +24,7 @@ const TYYPIT = {
 };
 
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\//, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\//, '') || 'pelaa.html');
   if (!existsSync(polku) || !polku.startsWith(JUURI)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'text/plain' });
   res.end(readFileSync(polku));

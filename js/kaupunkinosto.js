@@ -937,7 +937,7 @@ export function latoTiivisEtusivu(ui, sisalto, city) {
    * KUVAPAIKAT OVAT LEHDEN OMAT ELEMENTIT (erä 11). Vanha kortti kääri
    * ne omaan `.kaupunkipopup-hero`-lohkoonsa; lehden etusivulla
    * `.lehti-paakuva` ja `.lehti-kuvarivi` ovat palstan suoria lapsia
-   * (index.html #arrival-lehti-paakuva, #arrival-lehti-kuvat), ja juuri
+   * (pelaa.html #arrival-lehti-paakuva, #arrival-lehti-kuvat), ja juuri
    * siitä niiden marginaalit ja leveydet tulevat. Kääre jätetään siis
    * pois, jotta taitto on lehden eikä kortin.
    */
@@ -960,7 +960,7 @@ export function latoTiivisEtusivu(ui, sisalto, city) {
   if (!kartta.childElementCount) kartta.hidden = true;
   const lohko = latoKaupunginEsittely(sisalto, city);
   // Lehden leipätekstin säännöt (css/styles.css .dialog.lehti .lehti-leipa:
-  // palstoitus, anfangi, koko) — sama luokka kuin index.html:n
+  // palstoitus, anfangi, koko) — sama luokka kuin pelaa.html:n
   // #arrival-introlla, ei kopioituja arvoja.
   lohko.classList.add('lehti-leipa');
   const loput = [...lohko.querySelectorAll(':scope > p')].slice(1);

@@ -107,6 +107,7 @@
       "tools/savukkeet/chromium-liput.mjs",
       ".github/workflows/savukkeet.yml",
       "index.html",
+      "pelaa.html",
       "sw.js"
     ],
     "savuke-astro-pulu.mjs": ["js/linssit/pulu-*.js", "js/linssit/satelliitti.js", "js/linssit/satelliitti-avaruus.js", "js/liviapuhe.js", "js/livia.js", "js/pollo.js"],

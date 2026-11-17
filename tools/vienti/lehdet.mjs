@@ -463,6 +463,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
           // KK 17.11.2026 08.11: tarinanoston tunniste (natiivi Resources/Tarinanostot/<tarina>.json), kortin nappi
           // "Näin tämä tehtiin"; null = ei nappia. Data: maakartat.js kohteet[].tarina.
           tarina: typeof kohde.tarina === 'string' && kohde.tarina ? kohde.tarina : null,
+          // Skeema 1.72: nostovalikon aihetagi; datan oma (maakartat.js kohteet[].tagi), tools/vienti/karttavalot.mjs
+          // rikastaKohdekartat täydentää johdetulla.
+          tagi: kohde.tagi ?? null,
           kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
           kuvat: (kohde.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
         };

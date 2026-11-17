@@ -105,7 +105,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   const reitti = req.url.split('?')[0];
-  const polku = join(JUURI, reitti === '/' ? 'index.html' : reitti);
+  const polku = join(JUURI, reitti === '/' ? 'pelaa.html' : reitti);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   const tyyppi = TYYPIT[extname(polku)] ?? 'application/octet-stream';
   if (ILMAN_KORJAUSTA && reitti === '/js/pallolaatat.js') {

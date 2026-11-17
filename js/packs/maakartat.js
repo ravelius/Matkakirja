@@ -5104,16 +5104,16 @@ export const KAUPUNKIKARTAT = {
        * metriä Anne Frankin talosta eli numerot olisivat menneet
        * päällekkäin.
        */
-      { nimi: 'Keskusrautatieasema', lat: 52.379, lon: 4.9006, wiki: 'Amsterdamin keskusrautatieasema' },
-      { nimi: 'Anne Frankin talo', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo' },
+      { nimi: 'Keskusrautatieasema', tagi: 'tiede', lat: 52.379, lon: 4.9006, wiki: 'Amsterdamin keskusrautatieasema' },
+      { nimi: 'Anne Frankin talo', tagi: 'historia', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo' },
       {
         nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913,
         wiki: 'Amsterdamin kuninkaallinen palatsi',
         nosto: 'syvennys-amsterdam-haikarat',
       },
-      { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
-      { nimi: 'Artis-eläintarha', tyyppi: 'luonto', lat: 52.36611, lon: 4.91667, wiki: 'Artis (eläintarha)' },
-      { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
+      { nimi: 'Rembrandtin talo', tagi: 'kulttuuri', lat: 52.3693, lon: 4.9012 },
+      { nimi: 'Artis-eläintarha', tagi: 'luonto', tyyppi: 'luonto', lat: 52.36611, lon: 4.91667, wiki: 'Artis (eläintarha)' },
+      { nimi: 'Rijksmuseum', tagi: 'kulttuuri', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -5179,7 +5179,7 @@ export const KAUPUNKIKARTAT = {
       // KOORDINAATTI: 1 lähde, tarkistettava kuvasta (KK 16.11.: yksi lähde riittää yksiselitteiselle rakennukselle).
       // Portugalilainen synagoga, Mr. Visserplein 3 (Wikidata Q1853707 52,3675 / 4,905278; en-Wikipedia 52,3675 / 4,9054).
       {
-        nimi: 'Portugalilainen synagoga', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3675, lon: 4.9053,
+        nimi: 'Portugalilainen synagoga', tagi: 'uskonnot', merkki: 'tiimalasi', tarinapaikka: true, tyyppi: 'ilmio', lat: 52.3675, lon: 4.9053,
         nosto: 'nosto-amsterdamin-portugalilainen-synagoga', nimiPuoli: 'oikea',
       },
       // Montelbaanstoren, Oudeschans 2 (Wikidata Q1946061 52,37204 / 4,90563; nl-Wikipedia 52,37194 / 4,90556; en-Wikipedia 52,37206 / 4,90568).
@@ -5188,12 +5188,12 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-montelbaanstoren', nimiPuoli: 'oikea',
       },
       // KADONNEET IHMEET (KK 16.11.2026 erä 2): paikat KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
-      { nimi: 'Haringpakkerstoren', lat: 52.37917, lon: 4.89528 },
-      { nimi: 'Waag op de Dam', lat: 52.3731, lon: 4.8927 },
-      { nimi: 'Paleis voor Volksvlijt', lat: 52.359768, lon: 4.899973 },
+      { nimi: 'Haringpakkerstoren', tagi: 'kadonneet', lat: 52.37917, lon: 4.89528 },
+      { nimi: 'Waag op de Dam', tagi: 'kadonneet', lat: 52.3731, lon: 4.8927 },
+      { nimi: 'Paleis voor Volksvlijt', tagi: 'kadonneet', lat: 52.359768, lon: 4.899973 },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Dam, Kuninkaanpalatsin kohdalla 52,3731 / 4,8913).
       // Piste siirretty nimiön luettavuuden vuoksi Damin aukion puolelle palatsin itäpuolelle; rakennus seisoi nykyisen palatsin paikalla.
-      { nimi: 'Vanha raatihuone', lat: 52.3731, lon: 4.8922 },
+      { nimi: 'Vanha raatihuone', tagi: 'kadonneet', lat: 52.3731, lon: 4.8922 },
     ],
   },
   dublin: {
@@ -5377,19 +5377,19 @@ export const KAUPUNKIKARTAT = {
        */
       // 72 nimeä on tornin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni', nosto: 'nosto-pariisin-72-nimea' },
-      { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
-      { nimi: 'Concorden aukio', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
+      { nimi: 'Riemukaari', tagi: 'historia', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
+      { nimi: 'Concorden aukio', tagi: 'historia', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
         nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
         nosto: 'skandaali-mona-lisan-varkaus-1911',
       },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
-      { nimi: 'Luxembourgin puisto', tyyppi: 'luonto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
-      { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
-      { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
+      { nimi: 'Luxembourgin puisto', tagi: 'luonto', tyyppi: 'luonto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
+      { nimi: 'Sacré-Cœur', tagi: 'uskonnot', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
+      { nimi: 'Panthéon', tagi: 'historia', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
       // Notre-Damen kukko on katedraalin nosto, ei omaa pistettä (KK 10.11.2026 12.24, kartan kohteet osa 3).
-      { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali', nosto: 'nosto-notre-damen-kukko' },
+      { nimi: 'Notre-Dame', tagi: 'uskonnot', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali', nosto: 'nosto-notre-damen-kukko' },
       /*
        * KOLME LISÄKOHDETTA (paketti O4, omistajan linjaus 16.8.2026:
        * "Nähtävyyksiä voi olla 6–15 per kaupunki"). Listan lopussa,
@@ -5404,24 +5404,24 @@ export const KAUPUNKIKARTAT = {
        * numeroympyröinä, kunnes miniatyyrit generoidaan. Sama
        * ratkaisu kuin paketissa K1.
        */
-      { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
-      { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
-      { nimi: 'Place des Vosges', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
+      { nimi: 'Orsayn taidemuseo', tagi: 'kulttuuri', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
+      { nimi: 'Palais Garnier', tagi: 'kulttuuri', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
+      { nimi: 'Place des Vosges', tagi: 'historia', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
        * PIIRROSKARTAN 3D-MALLIT VALMIIKSI NOSTOIKSI (omistaja 9.11.2026 klo 16.17: "Kaikki tällaiset paikat
        * pitäisi hakea valmiiksi jo nostoiksi"; PT, KS): mallin kyltti hakee nyt tiedot Tietokortit-striimistä,
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
-      { nimi: 'Invalidit', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
-      { nimi: 'Sainte-Chapelle', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
-      { nimi: 'Grand Palais', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
+      { nimi: 'Invalidit', tagi: 'historia', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
+      { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle' },
+      { nimi: 'Grand Palais', tagi: 'kulttuuri', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
-      { nimi: 'Petit Palais', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
+      { nimi: 'Petit Palais', tagi: 'kulttuuri', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
       // Natiivin koodimallit ilman Tripoa (KK 14.17, S3-faktat): nimi = natiivin Kohde.Nimi, piste = Wikidata P625 (Q1431547, Q1338207, Q178065).
-      { nimi: 'Tour Saint-Jacques', lat: 48.8578, lon: 2.3488, wiki: 'Tour Saint-Jacques' },
-      { nimi: 'Saint-Eustache', lat: 48.8633, lon: 2.345, wiki: 'Saint-Eustachen kirkko' },
-      { nimi: 'Pompidou-keskus', lat: 48.8606, lon: 2.3522, wiki: 'Pompidou-keskus' },
-      { nimi: 'Tour Montparnasse', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
+      { nimi: 'Tour Saint-Jacques', tagi: 'uskonnot', lat: 48.8578, lon: 2.3488, wiki: 'Tour Saint-Jacques' },
+      { nimi: 'Saint-Eustache', tagi: 'uskonnot', lat: 48.8633, lon: 2.345, wiki: 'Saint-Eustachen kirkko' },
+      { nimi: 'Pompidou-keskus', tagi: 'kulttuuri', lat: 48.8606, lon: 2.3522, wiki: 'Pompidou-keskus' },
+      { nimi: 'Tour Montparnasse', tagi: 'tiede', lat: 48.8421, lon: 2.322, wiki: 'Tour Montparnasse' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -5806,10 +5806,10 @@ export const KAUPUNKIKARTAT = {
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Kärntnertor-teatteri', lat: 48.203, lon: 16.369, wiki: 'Theater am Kärntnertor', nosto: 'hahmotelma-karntnertor' },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Michaelerplatz en-Wikipedia 48,20797 / 16,36642 ja OSM 48,20799 / 16,36639; Heinrichshof WGW 48,2022 / 16,3686 ja OSM Opernringhof 48,20209 / 16,36800).
-      { nimi: 'Vanha Burgtheater', lat: 48.20797, lon: 16.36642 },
-      { nimi: 'Heinrichshof', lat: 48.2022, lon: 16.3686 },
+      { nimi: 'Vanha Burgtheater', tagi: 'kadonneet', lat: 48.20797, lon: 16.36642 },
+      { nimi: 'Heinrichshof', tagi: 'kadonneet', lat: 48.2022, lon: 16.3686 },
       // Altes Kärntnertor: WGW "Kärntner Straße 49", OSM 48,20371 / 16,37050 (KK 17.11.2026: Altes, ei Neues).
-      { nimi: 'Altes Kärntnertor', lat: 48.20371, lon: 16.3705 },
+      { nimi: 'Altes Kärntnertor', tagi: 'kadonneet', lat: 48.20371, lon: 16.3705 },
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
        * 10 %:n — molemmat tarkoituksella laidassa, koska muuten
@@ -5820,15 +5820,15 @@ export const KAUPUNKIKARTAT = {
        * Schönbrunn ja Karl-Marx-Hof ovat lehdessä mutta 4,3 km kartan
        * ulkopuolella kumpikin — ks. rajauksen perustelu työkalussa.
        */
-      { nimi: 'Raatihuone', lat: 48.2108, lon: 16.3566, wiki: 'Wienin raatihuone' },
-      { nimi: 'Hofburg', lat: 48.2064, lon: 16.3657, wiki: 'Hofburg' },
-      { nimi: 'Valtionooppera', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
-      { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
-      { nimi: 'Belvedere', lat: 48.1934, lon: 16.38052, wiki: 'Belvedere' },
-      { nimi: 'Jättiratas', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+      { nimi: 'Raatihuone', tagi: 'historia', lat: 48.2108, lon: 16.3566, wiki: 'Wienin raatihuone' },
+      { nimi: 'Hofburg', tagi: 'historia', lat: 48.2064, lon: 16.3657, wiki: 'Hofburg' },
+      { nimi: 'Valtionooppera', tagi: 'kulttuuri', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
+      { nimi: 'Stephansdom', tagi: 'uskonnot', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
+      { nimi: 'Belvedere', tagi: 'kulttuuri', lat: 48.1934, lon: 16.38052, wiki: 'Belvedere' },
+      { nimi: 'Jättiratas', tagi: 'tiede', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
-      { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
+      { nimi: 'Schönbrunn', tagi: 'historia', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -6110,10 +6110,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanha Westminsterin palatsi', lat: 51.4992, lon: -0.125, wiki: 'Old Palace of Westminster', nosto: 'hahmotelma-westminster-vanha' },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; en-Wikipedia 51,51361 / −0,09833, sama kukkula kuin St Paulin katedraali).
       // Piste siirretty nimiön luettavuuden vuoksi nykyisen katedraalin koillispuolelle kirkkomaalle; rakennus seisoi nykyisen paikalla.
-      { nimi: "Old St Paul's", lat: 51.5141, lon: -0.0975 },
+      { nimi: "Old St Paul's", tagi: 'kadonneet', lat: 51.5141, lon: -0.0975 },
       // KADONNUT IHME (PT 17.11.2026 NS 09.31; massa-25 osa 2): Crystal Palace 1851 Hyde Parkissa, ei Sydenhamissa (51,4226 / −0,0756 on kaupunkikartan ulkopuolella).
       // Piste en-Wikipedia "Great Exhibition" 51,50306 / −0,17000 (koko näyttelyn piste, ei rakennuksen); Hearsum: "southern edge of Hyde Park". TARKISTETTAVA kuvasta.
-      { nimi: 'Crystal Palace 1851', lat: 51.50306, lon: -0.17 },
+      { nimi: 'Crystal Palace 1851', tagi: 'kadonneet', lat: 51.50306, lon: -0.17 },
       // KADONNUT IHME LOISTONSA AIKANA (omistaja 31.10.2026 klo 12.49; teksti PT): nimi = fokuskohde hahmotelma-whitehall
       // (monumentit-eurooppa.js), joten ihmetähti ja ihmekortti osuvat nimellä.
       { nimi: 'Whitehallin palatsi', lat: 51.5038, lon: -0.1252, wiki: 'Palace of Whitehall', nosto: 'hahmotelma-whitehall' },
@@ -6125,40 +6125,40 @@ export const KAUPUNKIKARTAT = {
        * kyltti3d = pelin 3D-mallin kyltti (natiivi OhjelmaKohteet): saa olla julisteen reunuksessa lepotilan rajauksen ulkopuolella
        * (Kensingtonin neljä; tests/karttareunus.test.mjs), koska verkon lehti ei piirrä niitä (ei miniatyyriä eikä numeroympyrää).
        */
-      { nimi: 'Westminster Abbey', lat: 51.499406, lon: -0.127429, wiki: 'Westminster Abbey', kyltti3d: true },
-      { nimi: 'Westminsterin palatsi', lat: 51.4995, lon: -0.1248, wiki: 'Westminsterin palatsi', kyltti3d: true },
-      { nimi: 'Westminster Bridge', lat: 51.50076, lon: -0.1199, wiki: 'Westminsterin silta', kyltti3d: true },
-      { nimi: 'Cutty Sark', lat: 51.482834, lon: -0.009572, wiki: 'Cutty Sark', kyltti3d: true },
-      { nimi: 'Lontoon Tower', lat: 51.5081, lon: -0.0762, wiki: 'Lontoon Tower', kyltti3d: true },
-      { nimi: 'British Museum', lat: 51.5194, lon: -0.127, wiki: 'British Museum', kyltti3d: true },
-      { nimi: 'Natural History Museum', lat: 51.4965, lon: -0.1758, wiki: 'Natural History Museum', kyltti3d: true },
-      { nimi: 'Victoria Memorial', lat: 51.50184, lon: -0.14059, wiki: 'Victoria Memorial (Lontoo)', kyltti3d: true },
-      { nimi: 'Royal Albert Hall', lat: 51.501021, lon: -0.177405, wiki: 'Royal Albert Hall', kyltti3d: true },
-      { nimi: 'Albert Memorial', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial', kyltti3d: true },
-      { nimi: 'Kensingtonin palatsi', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi', kyltti3d: true },
-      { nimi: 'Royal Observatory', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio', kyltti3d: true },
-      { nimi: 'Old Royal Naval College', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true },
-      { nimi: 'Queen\'s House', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House', kyltti3d: true },
+      { nimi: 'Westminster Abbey', tagi: 'uskonnot', lat: 51.499406, lon: -0.127429, wiki: 'Westminster Abbey', kyltti3d: true },
+      { nimi: 'Westminsterin palatsi', tagi: 'historia', lat: 51.4995, lon: -0.1248, wiki: 'Westminsterin palatsi', kyltti3d: true },
+      { nimi: 'Westminster Bridge', tagi: 'historia', lat: 51.50076, lon: -0.1199, wiki: 'Westminsterin silta', kyltti3d: true },
+      { nimi: 'Cutty Sark', tagi: 'tiede', lat: 51.482834, lon: -0.009572, wiki: 'Cutty Sark', kyltti3d: true },
+      { nimi: 'Lontoon Tower', tagi: 'historia', lat: 51.5081, lon: -0.0762, wiki: 'Lontoon Tower', kyltti3d: true },
+      { nimi: 'British Museum', tagi: 'kulttuuri', lat: 51.5194, lon: -0.127, wiki: 'British Museum', kyltti3d: true },
+      { nimi: 'Natural History Museum', tagi: 'tiede', lat: 51.4965, lon: -0.1758, wiki: 'Natural History Museum', kyltti3d: true },
+      { nimi: 'Victoria Memorial', tagi: 'historia', lat: 51.50184, lon: -0.14059, wiki: 'Victoria Memorial (Lontoo)', kyltti3d: true },
+      { nimi: 'Royal Albert Hall', tagi: 'kulttuuri', lat: 51.501021, lon: -0.177405, wiki: 'Royal Albert Hall', kyltti3d: true },
+      { nimi: 'Albert Memorial', tagi: 'historia', lat: 51.502418, lon: -0.17769, wiki: 'Albert Memorial', kyltti3d: true },
+      { nimi: 'Kensingtonin palatsi', tagi: 'historia', lat: 51.505158, lon: -0.188124, wiki: 'Kensingtonin palatsi', kyltti3d: true },
+      { nimi: 'Royal Observatory', tagi: 'tiede', lat: 51.4787, lon: -0.0019, wiki: 'Greenwichin kuninkaallinen observatorio', kyltti3d: true },
+      { nimi: 'Old Royal Naval College', tagi: 'historia', lat: 51.483172, lon: -0.005494, wiki: 'Old Royal Naval College', kyltti3d: true },
+      { nimi: 'Queen\'s House', tagi: 'historia', lat: 51.481192, lon: -0.00375, wiki: 'Queen\'s House', kyltti3d: true },
       {
-        nimi: 'Buckinghamin palatsi',
+        nimi: 'Buckinghamin palatsi', tagi: 'historia',
         lat: 51.5014,
         lon: -0.1419,
         wiki: 'Buckinghamin palatsi',
       },
       {
-        nimi: 'Trafalgar Square', tyyppi: 'aukio',
+        nimi: 'Trafalgar Square', tagi: 'historia', tyyppi: 'aukio',
         lat: 51.508,
         lon: -0.1281,
         wiki: 'Trafalgar Square',
       },
       {
-        nimi: 'Big Ben',
+        nimi: 'Big Ben', tagi: 'historia',
         lat: 51.5007,
         lon: -0.1246,
         wiki: 'Big Ben',
       },
       {
-        nimi: 'Lontoon silmä',
+        nimi: 'Lontoon silmä', tagi: 'tiede',
         // Ratas kaartuu joen yli mutta seisoo South Bankilla, ja
         // keskipiste osui Thamesiin (vesitarkistin 9.8.2026). Piste on
         // nyt rakenteen juuressa rannalla.
@@ -6176,14 +6176,14 @@ export const KAUPUNKIKARTAT = {
        * Wrenin kupolikirkosta.
        */
       {
-        nimi: 'Pyhän Paavalin katedraali',
+        nimi: 'Pyhän Paavalin katedraali', tagi: 'uskonnot',
         lat: 51.5138,
         lon: -0.0984,
         wiki: 'St Paulin katedraali',   // fi 'Pyhän Paavalin katedraali' on täsmennyssivu (Q399961), KS 9.11.2026
         nosto: 'st-paulin-katedraali',
       },
       {
-        nimi: 'Tower Bridge',
+        nimi: 'Tower Bridge', tagi: 'tiede',
         lat: 51.5055,
         lon: -0.0754,
         wiki: 'Tower Bridge',
@@ -6871,11 +6871,11 @@ export const KAUPUNKIKARTAT = {
        * Castel Sant’Angelossa on kaareva heittomerkki (U+2019) —
        * suora heittomerkki antaa 404:n.
        */
-      { nimi: 'Pietarinkirkko', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
-      { nimi: 'Castel Sant’Angelo', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
-      { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
-      { nimi: 'Trevin suihkulähde', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
-      { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
+      { nimi: 'Pietarinkirkko', tagi: 'uskonnot', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
+      { nimi: 'Castel Sant’Angelo', tagi: 'historia', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
+      { nimi: 'Espanjalaiset portaat', tagi: 'historia', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
+      { nimi: 'Trevin suihkulähde', tagi: 'kulttuuri', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
+      { nimi: 'Pantheon', tagi: 'uskonnot', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       /*
        * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
        * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
@@ -6925,7 +6925,7 @@ export const KAUPUNKIKARTAT = {
         nosto: ['syvennys-rooma-kissat', 'nosto-kissat'],
       },
       {
-        nimi: 'Vatikaanin palatsi', lat: 41.9036, lon: 12.4564, nosto: 'syvennys-rooma-vatikaani',
+        nimi: 'Vatikaanin palatsi', tagi: 'uskonnot', lat: 41.9036, lon: 12.4564, nosto: 'syvennys-rooma-vatikaani',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -6997,11 +6997,11 @@ export const KAUPUNKIKARTAT = {
       },
       // KADONNUT IHME (KK 16.11.2026 erä 2): paikka KS:n hologrammidatasta (karttaseppa/hologrammit-era2).
       // Tarinapaikka KK 17.11.2026: piste 41,89008 / 12,49067 (Wikidata Q1924755 + OSM-relaatio 1835448); tarkistettava kuvasta.
-      { nimi: 'Meta Sudans', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.89008, lon: 12.49067 },
+      { nimi: 'Meta Sudans', tagi: 'kadonneet', merkki: 'tiimalasi', tarinapaikka: true, lat: 41.89008, lon: 12.49067 },
       // KADONNUT IHME (KK 17.11.2026, Kadonneet-data 8 uudelle; Porto di Ripetta en-Wikipedia 41,9051 / 12,4750 ja OSM Piazza del Porto di Ripetta 41,9048 / 12,4753).
       // Tarina (KK 17.11.2026 08.11, artikkeli "Näin kadonnut aarre palaa kartalle"): natiivin Tarinanostot/<id>.json; kortin nappi
       // "Näin tämä tehtiin" (NUI). Vienti kohdekartat.kohteet[].tarina.
-      { nimi: 'Porto di Ripetta', lat: 41.9051, lon: 12.475, tarina: 'kadonneet-nain-tehtiin' },
+      { nimi: 'Porto di Ripetta', tagi: 'kadonneet', lat: 41.9051, lon: 12.475, tarina: 'kadonneet-nain-tehtiin' },
     ],
   },
   krakova: {

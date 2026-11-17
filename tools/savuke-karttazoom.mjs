@@ -48,7 +48,7 @@ const MIME = {
   '.svg': 'image/svg+xml', '.webp': 'image/webp', '.mp3': 'audio/mpeg',
 };
 const palvelin = createServer((req, res) => {
-  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html');
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -79,7 +79,7 @@ const vaadi = (ehto, teksti) => {
   console.log(`${ehto ? '  ok  ' : '  EI  '} ${teksti}`);
 };
 
-await sivu.goto('http://127.0.0.1:8734/index.html?lauta=maailmankartta', { waitUntil: 'load' });
+await sivu.goto('http://127.0.0.1:8734/pelaa.html?lauta=maailmankartta', { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => {
   const n = [...document.querySelectorAll('button')]
@@ -532,7 +532,7 @@ const kosketa = async (tyyppi, pisteet) => {
   });
 };
 
-await psivu.goto('http://127.0.0.1:8734/index.html?lauta=maailmankartta', { waitUntil: 'load' });
+await psivu.goto('http://127.0.0.1:8734/pelaa.html?lauta=maailmankartta', { waitUntil: 'load' });
 await psivu.waitForTimeout(2500);
 await psivu.evaluate(() => [...document.querySelectorAll('button')]
   .find((b) => /aloita seikkailu/i.test(b.textContent))?.click());

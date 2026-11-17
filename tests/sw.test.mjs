@@ -40,7 +40,7 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
  * näe mistään muusta kuin tästä testistä.
  *
  * Rivit luetaan VAIN SHELL-listasta: sw.js:n muualla oleva
- * `caches.match('./index.html')` ei ole listarivi.
+ * `caches.match('./pelaa.html')` ei ole listarivi.
  */
 test('SHELL-listalla ei ole kaksoiskappaleita', () => {
   const alku = sw.indexOf('const SHELL = [');
@@ -529,7 +529,7 @@ test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
       if (merkki.test(readFileSync(tiedosto, 'utf8'))) loydot.push(`${kansio}/${nimi}`);
     }
   }
-  for (const juuriTiedosto of ['index.html', 'sw.js']) {
+  for (const juuriTiedosto of ['index.html', 'pelaa.html', 'sw.js']) {
     const tiedosto = join(JUURI, juuriTiedosto);
     if (existsSync(tiedosto) && merkki.test(readFileSync(tiedosto, 'utf8'))) loydot.push(juuriTiedosto);
   }
@@ -820,7 +820,7 @@ test('palvelutyöntekijä rekisteröidään myös ilman `load`-tapahtumaa', () =
   const ms = Number(katto[1]);
   assert.ok(ms >= 2000 && ms <= 10000,
     `katto ${ms} ms: alle 2 s kilpailisi käynnistyksen kaistasta, yli 10 s ylittäisi `
-    + 'index.html:n varaventtiilin');
+    + 'pelaa.html:n varaventtiilin');
   assert.match(main, /setTimeout\(rekisteroiTyontekija, REKISTEROINNIN_KATTO_MS\)/,
     'kattoa ei ajasteta — vakio olisi pelkkä luku');
   assert.match(main, /window\.addEventListener\('load', rekisteroiTyontekija, \{ once: true \}\)/,

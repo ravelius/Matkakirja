@@ -64,7 +64,7 @@ const TYYPIT = {
   '.jpg': 'image/jpeg', '.webmanifest': 'application/manifest+json',
 };
 const palvelin = http.createServer((req, res) => {
-  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -482,7 +482,7 @@ async function ajo(laite, viewport, deviceScaleFactor) {
   }
   await sivu.evaluate(() => window.matkakirja.ui.suljeKulttuuriKuva?.());
 
-  /* --- 8. KOHTAAMISKORTTI: kiinteä lähderivi index.html:stä --- */
+  /* --- 8. KOHTAAMISKORTTI: kiinteä lähderivi pelaa.html:stä --- */
   const kohtaaminen = await sivu.evaluate(async () => {
     window.matkakirja.ui.naytaKohtaamiskuva({
       osoite: 'assets/kohtaamiskuvat/ei-tata-ole.webp',

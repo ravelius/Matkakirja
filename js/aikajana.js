@@ -142,7 +142,7 @@
  * js/ui.js kaynnistaAikajana(tunnus) tuo tämän ja linssin
  * dynaamisesti (yhden tiedoston versio ei niputa linssejä, ks.
  * linssit.md 2.1) ja kutsuu kaynnistaAikajana(ui, linssi). Nyt
- * käynnistin on kehittäjävalikon rivi (index.html
+ * käynnistin on kehittäjävalikon rivi (pelaa.html
  * #kehittaja-aikajana-btn); pelillinen ovi (Raamattu, PAIKKASIDONTA)
  * päätetään myöhemmin.
  */
@@ -1405,7 +1405,7 @@ export const VALOKEILAN_LOHKOT = 6;
  * klo 00.45: *"pitäisikö vuosiluvun jälkeen olla tähtisymboli? joku
  * mikä sopisi tyylillisesti"*). Piste `·` on typografian oletus eikä
  * pelin oma; koriste on PELIN OMA MERKKI ◈ — sama, joka on etusivun
- * julisteen hiusviivakoristeessa (index.html .juliste-viiva) ja
+ * julisteen hiusviivakoristeessa (pelaa.html .juliste-viiva) ja
  * unohdetun aarteen tunnuksena (js/tokens.js star). Merkki on tässä
  * yhtenä vakiona, jotta se on vaihdettavissa yhdeltä riviltä;
  * kultainen sävy ja pieni koko tulevat css:stä (.aikajana-erotin).

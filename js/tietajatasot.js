@@ -157,7 +157,7 @@ export const TIETAJAPISTE_LYHENNE = 'tp';
 /**
  * Tason avatarin polku. Johdetaan tasonumerosta, jotta kuvatiedosto ja
  * taulukko eivät voi mennä eri tahtiin. Polku on repon juuresta, koska
- * peli tarjoillaan aina juuresta (index.html, sw.js SHELL).
+ * peli tarjoillaan aina juuresta (pelaa.html, sw.js SHELL).
  */
 export function tietajaAvatar(taso) {
   const numero = Number.isFinite(taso?.taso) ? taso.taso : Number(taso) || 1;

@@ -44,7 +44,7 @@ const TYYPIT = {
 };
 const palvelin = http.createServer((req, res) => {
   let polku = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-  if (polku === '/') polku = '/index.html';
+  if (polku === '/') polku = '/pelaa.html';
   const tiedosto = join(JUURI, polku);
   if (!existsSync(tiedosto) || statSync(tiedosto).isDirectory()) { res.statusCode = 404; res.end(); return; }
   res.setHeader('Content-Type', TYYPIT[extname(tiedosto)] ?? 'application/octet-stream');

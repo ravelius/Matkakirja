@@ -248,7 +248,7 @@ test('pulun äänite soi pulun omalla liu\'ulla', () => {
  * (js/main.js AANIVOIMAT) ei muuttunut.
  */
 
-/** Hammasratasvalikon sisältö index.html:stä. */
+/** Hammasratasvalikon sisältö pelaa.html:stä. */
 function ratasvalikko(html) {
   const alku = html.indexOf('id="kehittaja-valikko"');
   const loppu = html.indexOf('<div id="paavalikko"');
@@ -256,7 +256,7 @@ function ratasvalikko(html) {
   return html.slice(alku, loppu);
 }
 
-/** #paavalikon (pillerivalikon) sisältö index.html:stä. */
+/** #paavalikon (pillerivalikon) sisältö pelaa.html:stä. */
 function paavalikkoSisalto(html) {
   const alku = html.indexOf('<div id="paavalikko"');
   assert.ok(alku > 0, 'paavalikkoa ei löydy');
@@ -264,7 +264,7 @@ function paavalikkoSisalto(html) {
 }
 
 test('kolme liukua Äänentasot-ryhmässä: nimi, prosenttilukema ja kytkentä', () => {
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   const paavalikko = paavalikkoSisalto(html);
   assert.match(paavalikko, /<p class="valikko-otsikko">Äänet<\/p>/,
     'Äänet-otsikko puuttuu pillerivalikosta');
@@ -309,7 +309,7 @@ test('ratas on taas pelkkä kehittäjän valikko: piiloutuu ilman kehittäjätil
    * 11.9.2026 päätöksen "ratas ei saa enää kadota kehittäjätilan
    * mukana", koska sen syy (äänentasot rattaassa) ei enää päde.
    */
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   const ratas = ratasvalikko(html);
   assert.ok(!ratas.includes('id="aanivoimat"'), 'äänentasot eivät kuulu enää rattaaseen');
   const tyohuone = ratas.indexOf('id="kehittaja-tyohuone"');
@@ -328,7 +328,7 @@ test('ratas on taas pelkkä kehittäjän valikko: piiloutuu ilman kehittäjätil
 });
 
 test('pillerivalikon Äänet-osiossa ovat sekä kytkimet että liu\'ut', () => {
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   const paavalikko = paavalikkoSisalto(html);
   for (const tunnus of ['voima-tehosteet', 'voima-pulu', 'voima-lukija', 'aanivoimat']) {
     assert.ok(paavalikko.includes(`id="${tunnus}"`),

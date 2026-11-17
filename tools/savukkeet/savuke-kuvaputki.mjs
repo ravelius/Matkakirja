@@ -52,7 +52,7 @@ const TYYPIT = {
   '.webmanifest': 'application/manifest+json',
 };
 const palvelin = http.createServer((req, res) => {
-  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));
@@ -202,7 +202,7 @@ async function ajo(nimiLaite, viewport) {
   vaadi(`${nimiLaite}: selite on napautettava (cursor)`,
     rivit.tyyli?.kursori === 'pointer', JSON.stringify(rivit.tyyli));
 
-  /* --- 1b. Kohtaamiskortin KIINTEÄ lähderivi (v1413, index.html) --- *
+  /* --- 1b. Kohtaamiskortin KIINTEÄ lähderivi (v1413, pelaa.html) --- *
    *
    * Tämä on talon ainoa lähderivi, joka ei kulje taytaLahderivin kautta:
    * se on kirjoitettu suoraan HTML:ään. Ilman omaa väitettä se olisi

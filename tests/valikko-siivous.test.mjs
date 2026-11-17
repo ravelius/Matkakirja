@@ -13,8 +13,8 @@ import { VEDON_SEURANTA_AVAIN } from '../js/vedon-seuranta.js';
 import { TARKKUUS_AVAIN } from '../js/tarkkuus-asetus.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
-/** index.html ilman kommentteja: vain oikeat elementit ratkaisevat. */
-const html = () => lue('../index.html').replace(/<!--[\s\S]*?-->/g, '');
+/** pelaa.html ilman kommentteja: vain oikeat elementit ratkaisevat. */
+const html = () => lue('../pelaa.html').replace(/<!--[\s\S]*?-->/g, '');
 
 test('Kartta-osiossa vain Pieni liike; kokeet rattaan kehittäjäryhmässä Mittaus', () => {
   const h = html();

@@ -70,7 +70,7 @@ async function ampariHaku(url) {
 
 const PORTTI = Number(process.env.PORTTI ?? 8753);
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -149,7 +149,7 @@ const TILA = `() => {
 const lue = () => sivu.evaluate(`(${TILA})()`);
 
 /* ---------------- peli auki Pariisiin (sama kaava kuin savuke-aikajana) */
-await sivu.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&glnimiot=0`, { waitUntil: 'load' });
+await sivu.goto(`http://127.0.0.1:${PORTTI}/pelaa.html?lauta=pallo&glnimiot=0`, { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

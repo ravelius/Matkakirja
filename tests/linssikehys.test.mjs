@@ -20,7 +20,7 @@ const lue = (polku) => readFileSync(new URL(`../${polku}`, import.meta.url), 'ut
 
 const CSS = lue('css/linssikehys.css');
 const OHJAAJA = lue('js/linssit/ihmisen-matka-esitys.js');
-const INDEX = lue('index.html');
+const INDEX = lue('pelaa.html');
 const SW = lue('sw.js');
 const BUILD = lue('tools/build-standalone.mjs');
 

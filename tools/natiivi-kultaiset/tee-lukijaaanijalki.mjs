@@ -1,16 +1,16 @@
-// KULTAINEN LUKIJAÄÄNIJÄLKI: verkkopelin Lukijaääni-dialogin (Kehittäjälehti, index.html #puhe-dialog,
+// KULTAINEN LUKIJAÄÄNIJÄLKI: verkkopelin Lukijaääni-dialogin (Kehittäjälehti, pelaa.html #puhe-dialog,
 // js/main.js avaaLukijaaani) ja js/puhe.js:n asetusten oletukset, rajat, säilöavaimet ja puhepyyntö
 // kirjataan tiedostoon Kultaiset/lukijaaanijalki.json. C#-portti (Assets/Matkakirja/Peli/Lukijaaani.cs)
 // toistaa saman testissä Testit/LukijaaaniTestit.cs ja vaatii identtisen jäljen.
 //
 // Käyttö: node Kultaiset/tee-lukijaaanijalki.mjs [verkkopelin js-kansio]
-//   (index.html ja tools/pollo/worker.js haetaan js-kansion vierestä)
+//   (pelaa.html ja tools/pollo/worker.js haetaan js-kansion vierestä)
 //
 // Mitä jälki sisältää:
-//   vakiot   dialogin persoonat (index.html #puhe-persoona), workerin tuntemat persoonat
+//   vakiot   dialogin persoonat (pelaa.html #puhe-persoona), workerin tuntemat persoonat
 //            (puhe.js PUHE_PERSOONAT), oletukset (puhe-oletukset.js = workerin taulu),
 //            äänivaihtoehdot (main.js PUHE_AANIVAIHTOEHDOT = worker PUHE_AANET), näytteet
-//            (main.js PUHE_NAYTTEET), liukujen rajat (index.html) ja puhe.js:n vakiot.
+//            (main.js PUHE_NAYTTEET), liukujen rajat (pelaa.html) ja puhe.js:n vakiot.
 //   askeleet käsikirjoitettu sarja: raaka säilöarvo, asetaPuheenNopeus/asetaPuheenVoima, dialogin
 //            tallennus (main.js tallennaPuheKentat) ja palautus (puhe-oletus), kenttien täyttö
 //            (lataaPuheKentat) sekä puhepyyntö (esihaePala → fetch: runko ja kehittäjäotsake).
@@ -46,7 +46,7 @@ const { puheVoima } = await tuo('aani-ehdokkaat.js');
 // --- vakiot lähteistä -----------------------------------------------------------
 const mainJs = readFileSync(join(JS, 'main.js'), 'utf8');
 const puheJs = readFileSync(join(JS, 'puhe.js'), 'utf8');
-const html = readFileSync(join(JUURI, 'index.html'), 'utf8');
+const html = readFileSync(join(JUURI, 'pelaa.html'), 'utf8');
 const worker = readFileSync(join(JUURI, 'tools', 'pollo', 'worker.js'), 'utf8');
 
 const lauseke = (lahde, nimi) => {
@@ -63,7 +63,7 @@ const dialogi = html.slice(html.indexOf('<dialog id="puhe-dialog"'), html.indexO
 const valinta = dialogi.slice(dialogi.indexOf('<select id="puhe-persoona">'), dialogi.indexOf('</select>'));
 const persoonat = [...valinta.matchAll(/<option value="([^"]+)">([^<]+)<\/option>/g)].map((m) => ({ persoona: m[1], nimi: m[2] }));
 // Nopeusliuku poistettiin dialogista 17.10.2026 (omistaja 16.10. 23.58: ei lukijan nopeusvalintaa); sen viimeiset rajat
-// (index.html min 0.6, max 1.6, step 0.05) pysyvät jäljessä, jotta natiivin portti ja jälki pysyvät ennallaan.
+// (pelaa.html min 0.6, max 1.6, step 0.05) pysyvät jäljessä, jotta natiivin portti ja jälki pysyvät ennallaan.
 const POISTETUT_LIUKUT = { 'puhe-nopeus': { min: 0.6, max: 1.6, askel: 0.05 } };
 const liuku = (id) => {
   const m = dialogi.match(new RegExp(`<input id="${id}" type="range" min="([^"]+)" max="([^"]+)" step="([^"]+)"`));

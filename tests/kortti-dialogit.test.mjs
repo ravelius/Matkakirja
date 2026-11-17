@@ -1,4 +1,4 @@
-// KORTTI-siirrot kiinteille dialogeille (Päätoimittaja 1.10.2026): index.html:n dialogi puetaan KORTTI-pohjan
+// KORTTI-siirrot kiinteille dialogeille (Päätoimittaja 1.10.2026): pelaa.html:n dialogi puetaan KORTTI-pohjan
 // luokkiin peruttavan lipun takana (?kortti=vanha), eikä vanha `.dialog button` -sääntö saa ohittaa pohjan nappia.
 import test from 'node:test';
 import assert from 'node:assert/strict';

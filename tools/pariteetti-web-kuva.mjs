@@ -1,5 +1,5 @@
 // Pariteettikierroksen web-kuvatyökalu (Laitetestaaja 24.9.2026): kaappaa
-// tuotannosta https://matkakirja.app/ pienennetyn JPEG:n vertailtavaksi
+// tuotannosta https://matkakirja.app/pelaa.html pienennetyn JPEG:n vertailtavaksi
 // natiivin kanssa. Chromium + --use-angle=metal (oikea GPU) tarvitaan,
 // koska etusivun pallo/otsikko ("avaus-kesken"-luokka) ei ilman sitä
 // koskaan valmistu Playwrightissa (Fable 24.9.2026). Jos "avaus-kesken"
@@ -17,7 +17,7 @@ const height = Number(process.env.PW_H || 852);
 
 const browser = await avaaChromium({ args: ['--use-angle=metal'] });
 const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 2 });
-await page.goto('https://matkakirja.app/', { waitUntil: 'networkidle' });
+await page.goto('https://matkakirja.app/pelaa.html', { waitUntil: 'networkidle' });
 try {
   await page.waitForFunction(() => {
     const h2 = document.querySelector('.intro-juliste');

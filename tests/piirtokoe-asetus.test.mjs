@@ -80,7 +80,7 @@ test('osoitteen haku ohittaa muistin kokonaan (savukkeet ja mittaukset)', () => 
 });
 
 test('valikko on kytketty: rivit, radiogroup ja kytkin', () => {
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
   assert.match(html, /id="piirtokoe-valikko"[\s\S]{0,120}role="radiogroup"/);
   assert.match(html, /id="kehysprofiili-valikko"/);
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');

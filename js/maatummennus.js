@@ -13,7 +13,7 @@
  * kummassakaan tilassa, eikä kehittäjän valikossa ole enää kytkintä,
  * josta sen saisi takaisin — piirtäjä, sen säädin (TUMMENNUS_VOIMA),
  * muiden maiden yhteispolku (`muidenPolku`) ja kytkimen koko ketju
- * (js/ui-apurit.js avain, index.html rivi, js/main.js kuuntelija,
+ * (js/ui-apurit.js avain, pelaa.html rivi, js/main.js kuuntelija,
  * js/ui.js paivitaKehittajaTummennus) on purettu samalla kertaa.
  *
  * MERI EI TUMMENE MISSÄÄN — eikä maakaan enää. Tämä on entisen

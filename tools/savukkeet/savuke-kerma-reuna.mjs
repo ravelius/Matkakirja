@@ -112,7 +112,7 @@ const palvelin = http.createServer((req, res) => {
     res.end(VANHAT[reitti]);
     return;
   }
-  const polku = join(JUURI, reitti === '/' ? 'index.html' : reitti);
+  const polku = join(JUURI, reitti === '/' ? 'pelaa.html' : reitti);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));

@@ -333,7 +333,7 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   assert.match(ui, /Karttapalloa ei saatu auki tällä laitteella\./);
   assert.doesNotMatch(ui, /pelataan kartalla/, 'vanha kartta ei ole enää varapolku');
   // Kytkin: nappi jää paikalleen mutta on piilossa, kunnes vanha kartta palaa.
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   assert.match(html, /id="kehittaja-pallolauta-btn"/);
   const main = lue('../js/main.js');
   assert.match(main, /if \(pallolautaNappi\) pallolautaNappi\.hidden = !VANHA_KARTTA_KAYTOSSA;/);
@@ -445,7 +445,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
  * kaavaa kuin ratasvalikon vipu, ja että oletus on pallo.
  */
 test('vaihe 6: pelaajan asetusrivi on päävalikossa, samalla avaimella ja samalla kaavalla', () => {
-  const html = lue('../index.html');
+  const html = lue('../pelaa.html');
   const main = lue('../js/main.js');
   // Rivi on PELAAJAN valikossa (#paavalikko), ei kehittäjävalikossa.
   // Loppuraja oli #kehittaja-kotelo, kunnes se poistettiin
@@ -614,7 +614,7 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
 test('matkakirja on vasemmassa ylänurkassa myös pallolla (omistaja 5.9.2026)', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /ui\.factCard\.dataset\.corner = 'tl';/);
-  assert.match(lue('../index.html'), /class="card fact-card" data-corner="tl"/, 'HTML:n oletusnurkka on sama kuin kartan päätös');
+  assert.match(lue('../pelaa.html'), /class="card fact-card" data-corner="tl"/, 'HTML:n oletusnurkka on sama kuin kartan päätös');
 });
 
 test('päiväkirja on laatikossa ja kutistuu vedosta myös pallolla (omistaja 5.9.2026)', () => {

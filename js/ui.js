@@ -2336,7 +2336,7 @@ function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
 }
 
 /**
- * index.html:n kiinteä dialogi (otsikko, kappaleet, listat, toimintorivi) KORTIKSI kerran: luokat vaihtuvat, mutta
+ * pelaa.html:n kiinteä dialogi (otsikko, kappaleet, listat, toimintorivi) KORTIKSI kerran: luokat vaihtuvat, mutta
  * tunnisteet ja kuuntelijat pysyvät. Kortti on `.dialog-card`, tai dialogi itse, jos kehystä ei ole (muutosloki).
  * `apuri` ja `korostus` ovat valitsimia kappaleille, jotka saavat apuri- tai korostusportaan; muut kappaleet ovat
  * leipää. `sulje` on rivin ulkopuolinen sulkunappi (levea haamu). Ensisijainen nappi on kulta, haamu haamu ja muut
@@ -2431,7 +2431,7 @@ export class UI {
      * päälle ei tule enää mitään ohjetekstiä"*). Tässä haettiin ennen
      * kartan ohjerivi (#board-hint) ja vuorolaatikon tilarivi
      * (#turn-status); molemmat kelluivat kartan päällä ja molemmat on
-     * poistettu myös index.html:stä. Kehotus tulee kartalta itseltään:
+     * poistettu myös pelaa.html:stä. Kehotus tulee kartalta itseltään:
      * valittavat kohteet korostuvat renkailla.
      */
     this.actionsEl = document.getElementById('actions');
@@ -2443,7 +2443,7 @@ export class UI {
      * tietäjätaso jäävät #passport-progressiin näkyviin; laskurit
      * ladotaan tähän lohkoon, joka on oletuksena kiinni. Molemmat
      * elävät nyt #pilleri-tiedossa (js/pilleri-valikko.md-kommentti
-     * index.html:ssä), tunnisteet ovat entiset.
+     * pelaa.html:ssä), tunnisteet ovat entiset.
      */
     this.passportTilastot = document.getElementById('passport-tilastot');
     this.tilastoNappi = document.getElementById('laukku-tilastot-nappi');
@@ -2460,7 +2460,7 @@ export class UI {
     /*
      * PILLERIVALIKKO (omistaja 29.9.2026, korvaa hampurilaisen ja
      * isoisän matkalaukun): yksi #paavalikko-paneeli, jossa on kolme
-     * "kasvoa" (pää, linssit, aarteet). ks. index.html:n paavalikko-
+     * "kasvoa" (pää, linssit, aarteet). ks. pelaa.html:n paavalikko-
      * kommentti ja js/ui.js naytaPilleriNakyma alempana.
      */
     this.paavalikko = document.getElementById('paavalikko');
@@ -3229,7 +3229,7 @@ export class UI {
     /*
      * Linssivalitsin ylärivissä (docs/moduulit/linssit.md luku 5.1).
      *
-     * Kotelo on index.html:ssä valmiina mutta piilossa: nappi ilmestyy
+     * Kotelo on pelaa.html:ssä valmiina mutta piilossa: nappi ilmestyy
      * vasta kun pelaaja omistaa ensimmäisen linssin, joten uudelle
      * pelaajalle ylärivi pysyy tarkalleen entisellään. Sisältö
      * rakennetaan täällä, koska valikoima riippuu sekä omistuksesta
@@ -8293,7 +8293,7 @@ export class UI {
 
   /**
    * LAITEMITTARI PÄÄLLE TAI POIS KESKEN PELIN (hammasratasvalikon
-   * mittarikytkin, index.html #kehittaja-mittari-btn).
+   * mittarikytkin, pelaa.html #kehittaja-mittari-btn).
    *
    * Mittari on kokonaan oman moduulinsa sisällä (js/karttamittari.js):
    * käynnistys luo laatikon ja kehyssilmukan, `sammuta` vie molemmat.
@@ -14774,7 +14774,7 @@ export class UI {
    */
   nollaaDialoginVieritys(dialogi) {
     // .laukku-sisus mukaan: matkalaukussa vierii kortin sisus eikä
-    // kortti itse (ks. index.html "LAUKKU VIERII SISUKSESTAAN").
+    // kortti itse (ks. pelaa.html "LAUKKU VIERII SISUKSESTAAN").
     for (const kortti of dialogi.querySelectorAll('.dialog-card, .laukku-sisus')) {
       kortti.scrollTop = 0;
     }
@@ -17229,7 +17229,7 @@ export class UI {
      *
      * Runko ja lopetus kirjoittuivat jo ennestään vasta napin jälkeen,
      * mutta paikkarivi ("Lontoo, nykyhetki:") on kirjoitettu suoraan
-     * HTML:ään (index.html), joten se oli ruudulla heti — ja jäi
+     * HTML:ään (pelaa.html), joten se oli ruudulla heti — ja jäi
      * kellumaan yksin kartan alle ennen kuin seikkailu oli alkanut.
      * Perustilassa etusivulla on siis vain kartta ja aloitusnappi;
      * kappale ilmestyy napin painalluksen jälkeen entiseen tapaan
@@ -20194,7 +20194,7 @@ export class UI {
       this.quizKohtaaminenKuvateksti.hidden = !kortinKuvateksti;
       /*
        * HAVAINNEKUVASELITE MYÖS KOHTAAMISKORTTIIN (1.9.2026). Tämän
-       * kortin lähderivi on kiinteää HTML:ää (index.html "Matkakirjan
+       * kortin lähderivi on kiinteää HTML:ää (pelaa.html "Matkakirjan
        * kuvitus"), eli ainoa lähderivi talossa, jota mikään renderöijä
        * ei kirjoita — mutta se kulkee silti SAMAN apurin kautta kuin
        * kaikki muut (taytaLahderivi, 2.9.2026). Apuri kirjoittaa rivin

@@ -12,7 +12,7 @@
  *   - JS: juurimoduulien tuontisulkeuma. Staattiset `import … from` ja
  *     `export … from`, dynaamiset `import('…')`. Kommenttirivit ohitetaan
  *     (rekisterissä on kommentoituja tulevia linssejä).
- *   - CSS: index.html:n tyylitiedostot sekä sulkeuman moduulien
+ *   - CSS: pelaa.html:n tyylitiedostot sekä sulkeuman moduulien
  *     ajonaikaisesti liittämät (`new URL('fokusvirta.css', …)`).
  *   - Paikalliset tiedostot: sulkeuman merkkijonoissa sellaisenaan
  *     esiintyvät `assets/…`-polut, jotka ovat repossa. Mallipohjasta
@@ -28,17 +28,19 @@ import { dirname, join, normalize } from 'node:path';
 /** Näkymät ja niiden juurimoduulit. Uusi web-näkymä natiiviin = uusi rivi. */
 export const WEB_NAKYMAT = {
   /*
-   * Lehtikuori (Pelikoodari, PR #2942): index.html?lehti=<kaupunki-id> avaa
+   * Lehtikuori (Pelikoodari, PR #2942): pelaa.html?lehti=<kaupunki-id> avaa
    * pelkän kaupunkilehden ilman lautaa. Tila eikä oma entry, koska lehti.js
    * käyttää 44 ui-olion jäsentä (saapumisdialogin DOM, openArrival,
    * mitoitaArkki…), joten juuri on main.js ja sulkeumaan tulee ui.js.
+   * Peli siirtyi index.html → pelaa.html 17.11.2026. Vanhat natiiviversiot pyytävät yhä
+   * index.html?lehti=: etusivu ohjaa sen pelaa.html:ään kysely mukana (index.html, js/ohjaa-peliin.js).
    */
   lehti: {
-    kuvaus: 'Kaupunki- ja maalehti WKWebView-kuoressa: avaa sivu index.html?lehti=<kaupunki-id>. '
+    kuvaus: 'Kaupunki- ja maalehti WKWebView-kuoressa: avaa sivu pelaa.html?lehti=<kaupunki-id>. '
       + 'Kuori kuulee webkit.messageHandlers.matkakirja-viestit { tapahtuma: "lehti-auki" | '
       + '"lehti-suljettu", kaupunki }. Tila ei tallenna peliä. Pallolautaa ei avata, mutta sen '
       + 'moduulit tulevat main.js:n staattisista tuonneista mukaan.',
-    sivu: 'index.html?lehti={kaupunki}',
+    sivu: 'pelaa.html?lehti={kaupunki}',
     juuret: ['js/main.js'],
   },
 };
@@ -95,7 +97,7 @@ export function laskeRiippuvuudet(juuret, juuri) {
       else if (existsSync(join(juuri, m[1])) && statSync(join(juuri, m[1])).isFile()) assetit.add(m[1]);
     }
   }
-  const html = readFileSync(join(juuri, 'index.html'), 'utf8');
+  const html = readFileSync(join(juuri, 'pelaa.html'), 'utf8');
   for (const m of html.matchAll(/<link rel="stylesheet" href="(css\/[^"]+)"/g)) tyylit.add(m[1]);
 
   const jarjesta = (s) => [...s].sort();
@@ -105,9 +107,9 @@ export function laskeRiippuvuudet(juuret, juuri) {
   });
   const moduuliLista = jarjesta(moduulit).map((p) => ({ ...tiedosto(juuri, p), ...(dynaamiset.has(p) ? { dynaaminen: true } : {}) }));
   const tyyliLista = jarjesta(tyylit).map((p) => tiedosto(juuri, p));
-  // Sivu itse (index.html) on koodia: DOM, johon lehti piirtää.
+  // Sivu itse (pelaa.html) on koodia: DOM, johon lehti piirtää.
   const assetLista = jarjesta(assetit).map((p) => tiedosto(juuri, p));
-  const sivuLista = [tiedosto(juuri, 'index.html')];
+  const sivuLista = [tiedosto(juuri, 'pelaa.html')];
   const summa = (l) => l.reduce((a, t) => a + t.tavuja, 0);
   return {
     juuret: [...juuret],

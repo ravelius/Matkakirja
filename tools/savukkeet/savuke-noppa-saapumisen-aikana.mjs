@@ -106,7 +106,7 @@ const TYYPIT = {
 const VIIVE_MS = Number(process.env.SAVUKE_VIIVE_MS) || 0;
 const palvelin = http.createServer(async (req, res) => {
   if (VIIVE_MS) await new Promise((v) => setTimeout(v, VIIVE_MS));
-  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'pelaa.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));

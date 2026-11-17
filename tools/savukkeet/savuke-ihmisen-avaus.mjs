@@ -75,7 +75,7 @@ async function ampariHaku(url) {
 }
 
 const palvelin = createServer((req, res) => {
-  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html';
+  const suhteellinen = decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'pelaa.html';
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
@@ -119,7 +119,7 @@ async function avaaSivu(nakyma, virhelista) {
 
 /** Peli auki pallolaudalle Ateenaan (sama kaava kuin savuke-aikajana). */
 async function avaaPeli(sivu) {
-  await sivu.goto('http://127.0.0.1:8749/index.html?lauta=pallo', { waitUntil: 'load' });
+  await sivu.goto('http://127.0.0.1:8749/pelaa.html?lauta=pallo', { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

@@ -190,8 +190,9 @@ test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
   for (const p of ['js/main.js', 'js/ui.js', 'js/lehti.js', 'js/maalehti.js', 'js/packs/kulttuuri-kategoriat.js', 'js/media.js']) {
     assert.ok(polut.has(p), `${p} puuttuu lehden riippuvuuksista`);
   }
-  assert.equal(lehti.sivu, 'index.html?lehti={kaupunki}');
-  assert.deepEqual(lehti.sivut.map((t) => t.polku), ['index.html']);
+  // Peli on pelaa.html (17.11.2026); vanhojen natiiviversioiden index.html?lehti= ohjautuu sinne (js/ohjaa-peliin.js).
+  assert.equal(lehti.sivu, 'pelaa.html?lehti={kaupunki}');
+  assert.deepEqual(lehti.sivut.map((t) => t.polku), ['pelaa.html']);
   assert.ok(lehti.tyylit.some((t) => t.polku === 'css/styles.css'));
   // Tiivisteet vastaavat repoa: kuori voi tarkistaa hakemansa version.
   for (const t of [...lehti.moduulit, ...lehti.tyylit].slice(0, 40)) {

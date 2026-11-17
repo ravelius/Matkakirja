@@ -200,10 +200,10 @@ test('js/ui.js:n render ei tallenna eikä leimaa kohtaamistestissä', () => {
 /*
  * NAPPI POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki napit voisi
  * ottaa pois"*). Kohtaamistesti itse jäi: lehti aukeaa ui:n kautta
- * (avaaKohtaamistesti), ja sen dialogi on yhä index.html:ssä.
+ * (avaaKohtaamistesti), ja sen dialogi on yhä pelaa.html:ssä.
  */
 test('kohtaamistestin dialogi on yhä, ratasvalikon nappi ei', () => {
-  const html = readFileSync(join(JUURI, 'index.html'), 'utf8');
+  const html = readFileSync(join(JUURI, 'pelaa.html'), 'utf8');
   assert.doesNotMatch(html, /id="kehittaja-kohtaamiset-btn"/);
   assert.match(html, /id="kohtaamistesti-dialog"/);
   assert.match(html, /id="kohtaamistesti-sisalto"/);

@@ -18,7 +18,7 @@ import { LINSSI } from '../js/linssit/vertailu.js';
 const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
 const vertailu = readFileSync(new URL('../js/vertailu.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const html = readFileSync(new URL('../pelaa.html', import.meta.url), 'utf8');
 
 test('värilista on sama ui.js:ssä ja maakayrat.js:ssä', () => {
   /*
@@ -76,7 +76,7 @@ test('valintoja mahtuu neljä: kolme maata ja Suomi', () => {
   assert.match(vertailu, /countryShapes\?\.FIN/, 'Suomea ei aseteta valmiiksi valinnaksi');
 });
 
-test('vertailunäkymän kuori on index.htmlssä', () => {
+test('vertailunäkymän kuori on pelaa.htmlssä', () => {
   assert.match(html, /id="vertailu-dialog"/, 'dialogi puuttuu');
   assert.match(html, /id="vertailu-ylarivi"/, 'ylärivi puuttuu');
   assert.match(html, /id="vertailu-sisalto"/, 'sisältökotelo puuttuu');

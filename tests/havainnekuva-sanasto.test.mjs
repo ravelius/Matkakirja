@@ -43,7 +43,7 @@ function koodirivit(teksti) {
 
 test('kielletyt havainnekuvan nimitykset eivät näy koodin ja datan merkkijonoissa', () => {
   const tiedostot = [
-    'index.html',
+    'pelaa.html',
     ...listaa('js/'),
     ...listaa('js/linssit/'),
     ...listaa('js/packs/'),

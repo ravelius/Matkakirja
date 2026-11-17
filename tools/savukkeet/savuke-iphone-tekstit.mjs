@@ -88,7 +88,7 @@ const TYYPIT = {
 let vastakoe = null;
 const palvelin = http.createServer((req, res) => {
   const polkuOsa = req.url.split('?')[0];
-  const polku = join(JUURI, polkuOsa === '/' ? 'index.html' : polkuOsa);
+  const polku = join(JUURI, polkuOsa === '/' ? 'pelaa.html' : polkuOsa);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   if (vastakoe === 'LIIKU_INSET0' && polkuOsa.endsWith('/css/styles.css')) {
     const runko = readFileSync(polku, 'utf8').replace(
