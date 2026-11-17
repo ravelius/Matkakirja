@@ -1,0 +1,411 @@
+{
+ "kaupunki": "rooma",
+ "huom": "SK 17.11.2026. Rivit käsin tekstiä vasten; kohta = sanatarkka pätkä luettavasta tekstistä (tasan kerran), vuosi näytetään sellaisenaan, selite 1-3 sanaa enintään 20 merkkiä. Ei uusia faktoja.",
+ "nostot": [
+  {
+   "nimi": "Septizodium",
+   "avain": "kadonnut:hahmotelma-septizodium",
+   "rivit": [
+    [
+     "vuonna 203",
+     "203",
+     "rakennettiin"
+    ],
+    [
+     "Vuonna 1241",
+     "1241",
+     "paavinvaali"
+    ]
+   ]
+  },
+  {
+   "nimi": "Jupiterin temppeli",
+   "avain": "kadonnut:hahmotelma-capitolium",
+   "rivit": [
+    [
+     "syyskuuta 509 eaa.",
+     "509 eaa.",
+     "vihkiäiset, perinne"
+    ],
+    [
+     "83 eaa.",
+     "83 eaa.",
+     "temppeli paloi"
+    ],
+    [
+     "aikana 82",
+     "82",
+     "Domitianus uusi"
+    ],
+    [
+     "tiilet 455",
+     "455",
+     "vandaalit"
+    ],
+    [
+     "vielä 1447",
+     "1447",
+     "raunioita nähtiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Pietarinkirkko",
+   "avain": "nahtavyys:rooma:Pietarinkirkko",
+   "rivit": [
+    [
+     "vuonna 1506",
+     "1506",
+     "rakentaminen alkoi"
+    ],
+    [
+     "vasta 1626",
+     "1626",
+     "valmistui"
+    ],
+    [
+     "Vuonna 1950",
+     "1950",
+     "löytö julkistettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Castel Sant’Angelo",
+   "avain": "nahtavyys:rooma:Castel Sant’Angelo",
+   "rivit": [
+    [
+     "vuosina 135–139",
+     "135–139",
+     "hauta rakennettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Espanjalaiset portaat",
+   "avain": "nahtavyys:rooma:Espanjalaiset portaat",
+   "rivit": [
+    [
+     "vuonna 1660",
+     "1660",
+     "testamentti"
+    ],
+    [
+     "vuonna 1821",
+     "1821",
+     "Keats kuoli"
+    ],
+    [
+     "(1953",
+     "1953",
+     "Loma Roomassa"
+    ]
+   ]
+  },
+  {
+   "nimi": "Trevin suihkulähde",
+   "avain": "nahtavyys:rooma:Trevin suihkulähde",
+   "rivit": [
+    [
+     "vuodesta 19 eaa.",
+     "19 eaa.",
+     "vettä johdettu"
+    ],
+    [
+     "vasta 1762",
+     "1762",
+     "valmistui"
+    ],
+    [
+     "vuonna 2022",
+     "2022",
+     "kolikot kerättiin"
+    ],
+    [
+     "(1960",
+     "1960",
+     "La Dolce Vita"
+    ]
+   ]
+  },
+  {
+   "nimi": "Pantheon",
+   "avain": "nahtavyys:rooma:Pantheon",
+   "rivit": [
+    [
+     "noin vuonna 126",
+     "n. 126",
+     "uusi temppeli"
+    ],
+    [
+     "vuonna 609",
+     "609",
+     "muutettiin kirkoksi"
+    ]
+   ]
+  },
+  {
+   "nimi": "Forum Romanum",
+   "avain": "nahtavyys:rooma:Forum Romanum",
+   "rivit": [
+    [
+     "vuonna 179 eaa.",
+     "179 eaa.",
+     "Basilica Aemilia"
+    ]
+   ]
+  },
+  {
+   "nimi": "Colosseum",
+   "avain": "nahtavyys:rooma:Colosseum",
+   "rivit": [
+    [
+     "vuonna 72",
+     "72",
+     "rakentaminen alkoi"
+    ],
+    [
+     "vuonna 80",
+     "80",
+     "vihittiin käyttöön"
+    ]
+   ]
+  },
+  {
+   "nimi": "Torre Argentina",
+   "avain": "nahtavyys:rooma:Torre Argentina",
+   "rivit": [
+    [
+     "vuosina 1926–1929",
+     "1926–1929",
+     "kortteli purettiin"
+    ],
+    [
+     "vuonna 44 eaa.",
+     "44 eaa.",
+     "Caesar murhattiin"
+    ],
+    [
+     "Vuonna 1993",
+     "1993",
+     "kissasuoja"
+    ],
+    [
+     "Vuonna 2012",
+     "2012",
+     "poistovaatimus"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Vatikaanin palatsi",
+   "avain": "nahtavyys:rooma:Vatikaanin palatsi",
+   "rivit": [
+    [
+     "syyskuuta 1870",
+     "1870",
+     "Rooma vallattiin"
+    ],
+    [
+     "Vuoden 1871",
+     "1871",
+     "takuulaki"
+    ],
+    [
+     "vuotta 1929",
+     "1929",
+     "ei poistuttu ennen"
+    ]
+   ]
+  },
+  {
+   "nimi": "Banca Romana",
+   "avain": "nahtavyys:rooma:Banca Romana",
+   "rivit": [
+    [
+     "vuodenvaihteessa 1892–1893",
+     "1892–1893",
+     "skandaali paljastui"
+    ],
+    [
+     "Vuonna 1893",
+     "1893",
+     "Banca d’Italia"
+    ],
+    [
+     "vuonna 1926",
+     "1926",
+     "ainoa setelipankki"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 1870",
+     "1870",
+     "Rooma liitettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Michelangelo 1510",
+   "avain": "nahtavyys:rooma:Michelangelo 1510",
+   "rivit": [
+    [
+     "toukokuussa 1508",
+     "1508",
+     "sopimus tehtiin"
+    ],
+    [
+     "elokuussa 1510",
+     "1510",
+     "puolisko valmis"
+    ],
+    [
+     "kesällä 1511",
+     "1511",
+     "yleisölle näytettiin"
+    ],
+    [
+     "aattona 1512",
+     "1512",
+     "koko katto avattiin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Kolikko olan yli",
+   "avain": "nahtavyys:rooma:Kolikko olan yli",
+   "rivit": [
+    [
+     "vuonna 2022",
+     "2022",
+     "kolikot kerättiin"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 1762",
+     "1762",
+     "lähde valmistui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Areenan kellari",
+   "avain": "nahtavyys:rooma:Areenan kellari",
+   "rivit": [
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuosina 1874–1875",
+     "1874–1875",
+     "kellaria kaivettiin"
+    ]
+   ]
+  },
+  {
+   "nimi": "Norsu ja obeliski",
+   "avain": "nahtavyys:rooma:Norsu ja obeliski",
+   "rivit": [
+    [
+     "vuonna 1667",
+     "1667",
+     "patsas paljastettiin"
+    ],
+    [
+     "vuonna 1665",
+     "1665",
+     "obeliski löytyi"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Aqua Virgo",
+   "avain": "nahtavyys:rooma:Aqua Virgo",
+   "rivit": [
+    [
+     "vuonna 19 eaa.",
+     "19 eaa.",
+     "valmistui"
+    ],
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 1762",
+     "1762",
+     "Trevi valmistui"
+    ]
+   ]
+  },
+  {
+   "nimi": "Nasone",
+   "avain": "nahtavyys:rooma:Nasone",
+   "rivit": [
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ],
+    [
+     "vuonna 1874",
+     "1874",
+     "ensimmäiset (Acea)"
+    ]
+   ]
+  },
+  {
+   "nimi": "Meta Sudans",
+   "avain": "nahtavyys:rooma:Meta Sudans",
+   "rivit": [
+    [
+     "matkavuonna 1873",
+     "1873",
+     "isoisän matka"
+    ]
+   ]
+  },
+  {
+   "nimi": "Porto di Ripetta",
+   "avain": "kadonnut:hahmotelma-porto-di-ripetta",
+   "rivit": [
+    [
+     "vuonna 1704",
+     "1704",
+     "valmistui"
+    ],
+    [
+     "vuonna 1873",
+     "1873",
+     "isoisän vuosi"
+    ]
+   ]
+  }
+ ]
+}

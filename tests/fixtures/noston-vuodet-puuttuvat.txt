@@ -67,21 +67,6 @@ kadonnut:hahmotelma-trocadero
 kadonnut:hahmotelma-westminster-vanha
 kadonnut:hahmotelma-whitehall
 nahtavyys:pariisi:Notre-Dame 2019
-nahtavyys:rooma:Aqua Virgo
-nahtavyys:rooma:Areenan kellari
-nahtavyys:rooma:Banca Romana
-nahtavyys:rooma:Castel Sant’Angelo
-nahtavyys:rooma:Espanjalaiset portaat
-nahtavyys:rooma:Forum Romanum
-nahtavyys:rooma:Kolikko olan yli
-nahtavyys:rooma:Meta Sudans
-nahtavyys:rooma:Michelangelo 1510
-nahtavyys:rooma:Nasone
-nahtavyys:rooma:Norsu ja obeliski
-nahtavyys:rooma:Pietarinkirkko
-nahtavyys:rooma:Torre Argentina
-nahtavyys:rooma:Trevin suihkulähde
-nahtavyys:rooma:Vatikaanin palatsi
 skandaali:agadirin-kriisi
 skandaali:alberti-skandaali
 skandaali:aline-sitoe-diatta
