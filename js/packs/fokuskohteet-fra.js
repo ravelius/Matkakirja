@@ -234,9 +234,10 @@ export const FOKUSKOHTEET_FRA = [
         lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
       },
       purku: {
-        // Tilaus 8.4 B valmis; KK hyväksyi 17.11.2026 klo 14.43 (P-261117-61). Ämpäri kuvat/ (vienti
-        // proto-3d/_valmiit/tuileries-palo-kuva-vienti-20261117), SHA-256 0c3ef7dd…532c7a338, 2400 × 1600.
-        osoite: 'https://media.matkakirja.app/kuvat/tuileries-purku-1880-luku.jpg',
+        // Tilaus 8.4 B valmis; KK hyväksyi 17.11.2026 klo 14.43 (P-261117-61); KK 15.53–15.54 korvasi B3-versiolla
+        // (friisit häivytetty). Ämpäri kuvat/ (lähde proto-3d/_review-tarina-pariisi-20261117/
+        // tarina-tuileries-5-purku-b3-friisi.jpg), SHA-256 f6032dfdb5147a4bec7bdd390f8474a5b2be83c347d07f6f7f7861379538d8b5.
+        osoite: 'https://media.matkakirja.app/kuvat/tuileries-purku-1880-luku-b3.jpg',
         laji: 'havainnekuva',
         lyhyt: 'Palatsin purku ja kivien myynti',
         lahde: 'Tekoälyllä tuotettu havainnekuva; rakennusreferenssit Godefroy PH83415 ja PH20009, '
