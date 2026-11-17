@@ -174,7 +174,7 @@
     [
      "jo vuonna 1909",
      "1909",
-     "purkusuunnitelma"
+     "piti purkaa"
     ]
    ]
   },
@@ -259,7 +259,7 @@
     [
      "2012",
      "2012",
-     "siirrettiin Orsayhin"
+     "patsas Orsayhin"
     ]
    ]
   },
@@ -850,7 +850,7 @@
     [
      "yönä 1928",
      "1928",
-     "tulipalo vaunussa"
+     "Djangon vaunu paloi"
     ],
     [
      "Vuonna 1934",
@@ -905,18 +905,6 @@
      "tammikuussa 2026",
      "2026",
      "naisten lista julki"
-    ]
-   ]
-  },
-  {
-   "nimi": "Notre-Dame 2019",
-   "nostoId": "nosto-notre-damen-kukko",
-   "lisakortti": true,
-   "rivit": [
-    [
-     "huhtikuuta 2019",
-     "2019",
-     "tulipalo"
     ]
    ]
   }

@@ -2111,6 +2111,12 @@ export const HISTORIAN_HETKET = [
       + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
       + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
       + 'vuonna 1911 saa kemian palkinnon yksin.',
+    vuodet: [
+      { kohta: 'ilmoittavat vuonna 1898', vuosi: '1898', selite: 'löytö ilmoitettiin' },
+      { kohta: 'vuoteen 1902', vuosi: '1902', selite: 'radiumkloridi' },
+      { kohta: 'Vuonna 1903', vuosi: '1903', selite: 'fysiikan Nobel' },
+      { kohta: 'vuonna 1911', vuosi: '1911', selite: 'kemian Nobel' },
+    ],
     kysymykset: [
       'Miksi uuden alkuaineen ilmoittaminen ei vielä riittänyt kemisteille?',
       'Mitä Curiet eivät vielä tienneet säteilystä työskennellessään vajassa?',
@@ -2361,6 +2367,10 @@ export const HISTORIAN_HETKET = [
       + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
       + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
       + 'veronkantajana.',
+    vuodet: [
+      { kohta: 'Vuonna 1789', vuosi: '1789', selite: 'oppikirja' },
+      { kohta: 'toukokuuta 1794', vuosi: '1794', selite: 'Lavoisier mestattiin' },
+    ],
     kysymykset: [
       'Miksi vaaka oli Lavoisierin laboratorion tärkein esine?',
       'Miksi vallankumous mestasi miehen, joka oli uudistanut kemian?',
@@ -2629,6 +2639,10 @@ export const HISTORIAN_HETKET = [
       + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
       + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
       + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+    vuodet: [
+      { kohta: 'vuonna 1862', vuosi: '1862', selite: 'voitti kiistan' },
+      { kohta: 'vuonna 1865', vuosi: '1865', selite: 'pastörointipatentti' },
+    ],
     kysymykset: [
       'Mitä ihmiset uskoivat ennen Pasteuria siitä, mistä elämä syntyy?',
       'Miksi Pasteur kuljetti liemipullonsa vuorille asti?',
@@ -3072,6 +3086,10 @@ export const HISTORIAN_HETKET = [
       + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
       + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
       + 'radioantenni.',
+    vuodet: [
+      { kohta: 'elokuussa 1888', vuosi: '1888', selite: 'torni nousee' },
+      { kohta: 'maaliskuuta 1889', vuosi: '1889', selite: 'torni valmis' },
+    ],
     kysymykset: [
       'Miten niittaajat kiinnittivät kuumat niitit yli sadan metrin korkeudessa?',
       'Miksi tornia ei purettu, vaikka sen luvattiin seisovan vain kaksikymmentä vuotta?',
@@ -4376,6 +4394,9 @@ export const HISTORIAN_HETKET = [
       + 'kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja '
       + 'sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei '
       + 'tiedetä, kuka värit yhdisti.',
+    vuodet: [
+      { kohta: 'heinäkuuta 1789', vuosi: '1789', selite: 'valtaus' },
+    ],
     kysymykset: [
       'Miksi isoisä ei enää nähnyt Bastiljia Pariisissa?',
       'Miten Ranskan sinivalkopunainen trikolori syntyi?',
@@ -4646,6 +4667,9 @@ export const HISTORIAN_HETKET = [
       + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
       + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
       + 'liikkuva valokuva on.',
+    vuodet: [
+      { kohta: 'joulukuuta 1895', vuosi: '1895', selite: 'Lumièren näytös' },
+    ],
     kysymykset: [
       'Mitä Grand Cafén kellarissa näytettiin Lumièren veljesten ensimmäisessä maksullisessa näytöksessä?',
       'Kuinka pitkiä ensimmäiset Pariisissa näytetyt elokuvat olivat?',

@@ -157,6 +157,12 @@ export const EUROOPAN_KADONNEET = {
         + 'teurastamot. Châtelet\'n tuomioistuin lakkautettiin 1790, ja linnakkeen purku alkoi 1802. Paikalle '
         + 'tuli Place du Châtelet. Aukion vierellä seisoo Théâtre du Châtelet, jonka Gabriel Davioud rakensi '
         + '1860–1862.',
+      vuodet: [
+        { kohta: 'kaupungin muuria 1190', vuosi: '1190', selite: 'muurityö alkoi' },
+        { kohta: 'lakkautettiin 1790', vuosi: '1790', selite: 'tuomioistuin loppui' },
+        { kohta: 'purku alkoi 1802', vuosi: '1802', selite: 'purku alkoi' },
+        { kohta: '1860–1862', vuosi: '1860–1862', selite: 'teatterin rakennus' },
+      ],
       lahde: 'paris.fr "Ces lieux disparus qui font aussi l\'histoire de Paris (2/2)" ja "Le Théâtre du Châtelet '
         + 'rouvre ses portes"; POP PA00086112; Desmaze, Le Châtelet de Paris (1863); Larousse "Villon"; herodote.net '
         + '"Molière"; paris.fr "Les prisons, gardiennes de l\'histoire parisienne"; Encyclopædia Britannica (1911) '
@@ -186,6 +192,13 @@ export const EUROOPAN_KADONNEET = {
         + 'Templessä 8. kesäkuuta 1795 kymmenvuotiaana. Napoleon määräsi tornin purettavaksi 1808 '
         + 'estääkseen rojalistien pyhiinvaellukset. Tornin paikan vieressä on '
         + 'nykyisin Square du Temple -puisto.',
+      vuodet: [
+        { kohta: 'lakkautettiin 1312', vuosi: '1312', selite: 'ritarikunta loppui' },
+        { kohta: 'päivänä 1792', vuosi: '1792', selite: 'perhe Templeen' },
+        { kohta: 'tammikuuta 1793', vuosi: '1793', selite: 'matka giljotiinille' },
+        { kohta: 'kesäkuuta 1795', vuosi: '1795', selite: 'Ludvig XVII kuoli' },
+        { kohta: 'purettavaksi 1808', vuosi: '1808', selite: 'purkumääräys' },
+      ],
       lahde: 'parcoursrevolution.paris.fr "Temple"; Viollet-le-Duc, Dictionnaire raisonné ("Temple"); Cléry, '
         + 'Journal (1798); herodote.net; Larousse "Louis XVII"; fr-Wikipedia "Tour du Temple" (tarkistettu '
         + '15.11.2026).',
@@ -220,6 +233,13 @@ export const EUROOPAN_KADONNEET = {
         + 'toukokuuta 1871. Rauniot jäivät keskelle Pariisia, ja isoisä näki ne 1873. Freskoista '
         + 'pelastettiin vain irrotettuja palasia. Rauniot purettiin '
         + 'vuodesta 1898, ja paikalle rakennettiin Gare d\'Orsay vuoden 1900 maailmannäyttelyä varten.',
+      vuodet: [
+        { kohta: 'aloitti 1810', vuosi: '1810', selite: 'palatsi aloitettiin' },
+        { kohta: 'toukokuuta 1871', vuosi: '1871', selite: 'palatsi paloi' },
+        { kohta: 'näki ne 1873', vuosi: '1873', selite: 'isoisä näki rauniot' },
+        { kohta: 'vuodesta 1898', vuosi: '1898', selite: 'purku alkoi' },
+        { kohta: 'vuoden 1900', vuosi: '1900', selite: 'maailmannäyttely' },
+      ],
       lahde: 'conseil-etat.fr "Le palais d\'Orsay"; POP PA00088689 ja Joconde 000PE000431; univ-droit.fr '
         + '(Leniaud); fr-Wikipedia "Palais d\'Orsay" (tarkistettu 15.11.2026).',
       kuva: 'ihme-palais-orsay-loistoaika.jpg',
@@ -247,6 +267,11 @@ export const EUROOPAN_KADONNEET = {
         + 'Alexis Barrault\'n suunnittelema halli avattiin toukokuussa 1855. Siellä pidettiin Pariisin virallinen taidenäyttely Salon, ja 1881 kansainvälinen '
         + 'sähkönäyttely. Isoisän käydessä 1873 halli oli käytössä. Se purettiin 1890-luvun '
         + 'lopulla Grand Palais\'n tieltä.',
+      vuodet: [
+        { kohta: 'toukokuussa 1855', vuosi: '1855', selite: 'halli avattiin' },
+        { kohta: 'ja 1881', vuosi: '1881', selite: 'sähkönäyttely' },
+        { kohta: 'käydessä 1873', vuosi: '1873', selite: 'isoisän käynti' },
+      ],
       lahde: 'Canadian Centre for Architecture (Viel, Barrault); herodote.net; Larousse "salon"; Heap, Electrical '
         + 'Appliances (1884); paris.fr "Les petits secrets du Grand Palais"; fr-Wikipedia "Palais de l\'Industrie" '
         + '(tarkistettu 15.11.2026).',
@@ -276,6 +301,11 @@ export const EUROOPAN_KADONNEET = {
         + 'Palatsi rakennettiin vuosina 1876–1878. Vuonna 1935 keskisali ja tornit purettiin vuoden 1937 näyttelyn tieltä, ja siivet '
         + 'jäivät uuden Chaillot\'n palatsin osiksi. Isoisä ei nähnyt Trocadéroa, sillä sen rakennustyöt '
         + 'alkoivat vasta 1876.',
+      vuodet: [
+        { kohta: 'vuoden 1878', vuosi: '1878', selite: 'maailmannäyttely' },
+        { kohta: 'Vuonna 1935', vuosi: '1935', selite: 'keskisali purettiin' },
+        { kohta: 'vuoden 1937', vuosi: '1937', selite: 'näyttely' },
+      ],
       lahde: 'POP PA00086706; L\'art et l\'industrie de tous les peuples à l\'Exposition universelle de 1878 '
         + '(1880); Auditorium de Lyon; fr-Wikipedia "Palais du Trocadéro" (tarkistettu 15.11.2026).',
       kuva: 'ihme-trocadero-loistoaika.jpg',
@@ -306,6 +336,9 @@ export const EUROOPAN_KADONNEET = {
         + 'tukipilaria. Kaarten kolminivelinen rakenne oli lainattu siltasuunnittelusta. Vieraita kuljettivat hallissa '
         + 'liikkuvat sillat. Halli purettiin 1900-luvun alussa, jotta näkymä Champ-de-Marsille aukeaisi. Isoisä ei ehtinyt nähdä sitä: halli valmistui 16 vuotta hänen '
         + 'matkansa jälkeen.',
+      vuodet: [
+        { kohta: 'vuoden 1889', vuosi: '1889', selite: 'maailmannäyttely' },
+      ],
       lahde: 'Parville, L\'Exposition universelle (1890); paris.fr "Ces lieux disparus qui font aussi '
         + 'l\'histoire de Paris (4/4)"; en-Wikipedia "Galerie des machines" (tarkistettu 15.11.2026).',
       kuva: 'ihme-galerie-des-machines-loistoaika.jpg',
@@ -335,6 +368,12 @@ export const EUROOPAN_KADONNEET = {
         + 'Paikalle jäi niin valtava työmaa, että sitä kutsuttiin yksinkertaisesti reiäksi. '
         + 'Yksi paviljonki pystytettiin uudelleen Nogent-sur-Marneen, ja Forum des Halles avattiin paikalle '
         + '1979.',
+      vuodet: [
+        { kohta: 'sinne 1183', vuosi: '1183', selite: 'markkina siirrettiin' },
+        { kohta: 'romaanissaan (1873)', vuosi: '1873', selite: 'Zolan romaani' },
+        { kohta: 'Rungisiin 1969', vuosi: '1969', selite: 'kauppa Rungisiin' },
+        { kohta: 'paikalle 1979', vuosi: '1979', selite: 'Forum avattiin' },
+      ],
       lahde: 'en-Wikipedia "Les Halles", osiot "History" (The market of the Little Fields; The wholesale '
         + 'market; Major conversion); fr-Wikipedia "Halles de Paris", osio "Historique"; paris.fr "Ces lieux disparus qui font aussi '
         + 'l\'histoire de Paris (2/2)" (1100-luku, 1183) ja fr-Wikisource "Les Halles centrales de Paris" '

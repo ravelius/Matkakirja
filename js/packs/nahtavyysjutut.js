@@ -5055,6 +5055,10 @@ export const NAHTAVYYSJUTUT = {
           + 'Toisen maailmansodan lopulla Hitler käski räjäyttää tornin '
           + 'Pariisin vapautuessa — mutta käskyä ei toteltu, ja torni '
           + 'seisoo yhä paikallaan.',
+      vuodet: [
+        { kohta: 'vuonna 1889', vuosi: '1889', selite: 'maailmannäyttely' },
+        { kohta: 'jo vuonna 1909', vuosi: '1909', selite: 'piti purkaa' },
+      ],
       kuvat: [
         {
           tiedosto: "Eiffel Tower and Pont d'Iéna, Paris 3 December 2016.jpg",
@@ -5083,6 +5087,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Vuonna 1919 lentäjä Charles Godefroy lensi '
           + 'kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä '
           + 'aukko on vain reilut 14 metriä leveä.',
+      vuodet: [
+        { kohta: 'vuonna 1806', vuosi: '1806', selite: 'Napoleonin käsky' },
+        { kohta: 'vasta vuonna 1836', vuosi: '1836', selite: 'valmistui' },
+        { kohta: 'marraskuuta 1920', vuosi: '1920', selite: 'sotilas tuotiin' },
+        { kohta: 'tammikuuta 1921', vuosi: '1921', selite: 'haudattiin' },
+        { kohta: 'Vuonna 1919', vuosi: '1919', selite: 'lento kaaren läpi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Arc de Triomphe, Paris 21 October 2010.jpg',
@@ -5114,6 +5125,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Nykyään aukiolla poreilevat komeat suihkulähteet ja sitä '
           + 'reunustavat kahdeksan naispatsasta, jotka kuvaavat Ranskan '
           + 'suurkaupunkeja.',
+      vuodet: [
+        { kohta: 'marraskuussa 1830', vuosi: '1830', selite: 'obeliski lahjaksi' },
+        { kohta: 'vuonna 1836', vuosi: '1836', selite: 'obeliski pystyyn' },
+      ],
       kuvat: [
         {
           tiedosto: 'Obelisk and fountain in Place de la Concorde, Paris.JPG',
@@ -5146,6 +5161,10 @@ export const NAHTAVYYSJUTUT = {
           + 'pariisilainen paheksui lasirakennelmaa vanhan palatsin '
           + 'edessä, mutta siitä tuli pian yksi Pariisin tunnetuimmista '
           + 'maamerkeistä.',
+      vuodet: [
+        { kohta: 'elokuussa 1793', vuosi: '1793', selite: 'museo avattiin' },
+        { kohta: 'Vuonna 1989', vuosi: '1989', selite: 'lasipyramidi' },
+      ],
       kuvat: [
         {
           tiedosto: "Paris 1er Louvre Colonnade 559.jpg",
@@ -5184,6 +5203,12 @@ export const NAHTAVYYSJUTUT = {
           + 'Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d\'Orsayhin '
           + '2012). Victor Hugo pani Kurjissa Mariuksen ja '
           + 'Cosetten kohtaamaan juuri täällä.',
+      vuodet: [
+        { kohta: 'murhattiin 1610', vuosi: '1610', selite: 'Henrik IV murhattiin' },
+        { kohta: 'vuonna 1612', vuosi: '1612', selite: 'kartano ostettiin' },
+        { kohta: 'vuodesta 1933', vuosi: '1933', selite: 'nukketeatteri alkoi' },
+        { kohta: '2012', vuosi: '2012', selite: 'patsas Orsayhin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Sunday in the Luxembourg Gardens, Paris May 2014.jpg',
@@ -5223,6 +5248,9 @@ export const NAHTAVYYSJUTUT = {
           + 'painaa lähes 19 tonnia. Kirkon huipulta, 200 metrin '
           + 'korkeudesta Seine-joen yläpuolelta, avautuu näkymä koko '
           + 'Pariisiin.',
+      vuodet: [
+        { kohta: 'vuonna 1870', vuosi: '1870', selite: 'sodan häviö' },
+      ],
       kuvat: [
         {
           tiedosto: 'Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg',
@@ -5264,6 +5292,12 @@ export const NAHTAVYYSJUTUT = {
           + 'Voltaire, Rousseau, Victor Hugo, Émile Zola ja pistekirjoituksen '
           + 'keksijä Louis Braille; Marie Curie siirrettiin sinne 1995 '
           + 'ensimmäisenä naisena omien ansioidensa perusteella.',
+      vuodet: [
+        { kohta: 'sotaretkellä 1744', vuosi: '1744', selite: 'kuningas sairastui' },
+        { kohta: 'vasta 1790', vuosi: '1790', selite: 'valmistui' },
+        { kohta: '1791 kansalliskokous', vuosi: '1791', selite: 'suurmiesten hauta' },
+        { kohta: 'Vuonna 1851', vuosi: '1851', selite: 'Foucaultin heiluri' },
+      ],
       lainaus: {
         teksti: 'AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE — Suurmiehille '
           + 'kiitollinen isänmaa.',
@@ -5309,6 +5343,13 @@ export const NAHTAVYYSJUTUT = {
           + 'onnistuivat kuitenkin pelastamaan tornit, julkisivun ja '
           + 'lasimaalaukset. Katedraali korjattiin ennätysajassa, ja se '
           + 'avattiin yleisölle uudelleen joulukuussa 2024.',
+      vuodet: [
+        { kohta: 'vuonna 1163', vuosi: '1163', selite: 'rakennus alkoi' },
+        { kohta: 'vasta 1345', vuosi: '1345', selite: 'valmistui' },
+        { kohta: 'vuonna 1804', vuosi: '1804', selite: 'Napoleonin kruunaus' },
+        { kohta: 'Huhtikuussa 2019', vuosi: '2019', selite: 'tulipalo' },
+        { kohta: 'joulukuussa 2024', vuosi: '2024', selite: 'avattiin uudelleen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Notre-Dame de Paris, 4 October 2017.jpg',
@@ -5352,6 +5393,11 @@ export const NAHTAVYYSJUTUT = {
           + 'kokoelma: Manet, Monet, Cézanne, Degas, Renoir ja van '
           + 'Gogh. Postikorttimyynnin perusteella suosituin teos on '
           + 'Renoirin Bal du moulin de la Galette vuodelta 1876.',
+      vuodet: [
+        { kohta: 'valmistui vuonna 1900', vuosi: '1900', selite: 'asema valmistui' },
+        { kohta: 'jo 1939', vuosi: '1939', selite: 'kaukojunat loppuivat' },
+        { kohta: 'joulukuussa 1986', vuosi: '1986', selite: 'museo avattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
@@ -5384,6 +5430,13 @@ export const NAHTAVYYSJUTUT = {
           + 'Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra '
           + 'Bastille valmistui; nykyään Palais Garnier on Pariisin '
           + 'oopperan baletin koti.',
+      vuodet: [
+        { kohta: 'joulukuussa 1860', vuosi: '1860', selite: 'suunnittelukilpailu' },
+        { kohta: 'toukokuussa 1861', vuosi: '1861', selite: 'Garnier voitti' },
+        { kohta: 'muurattiin vuonna 1862', vuosi: '1862', selite: 'peruskivi' },
+        { kohta: 'avattiin vuonna 1875', vuosi: '1875', selite: 'talo avattiin' },
+        { kohta: 'vasta 1989', vuosi: '1989', selite: 'nimi vaihtui' },
+      ],
       kuvat: [
         {
           tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
@@ -5419,6 +5472,11 @@ export const NAHTAVYYSJUTUT = {
           + 'jäljennös. Tornin juurella on Blaise Pascalin patsas, koska hänen '
           + 'sanotaan tehneen tornissa ilmanpainekokeita — tosin historioitsijat '
           + 'ovat tästä eri mieltä. Sääasema perustettiin torniin vasta 1891.',
+      vuodet: [
+        { kohta: '1509–1523', vuosi: '1509–1523', selite: 'rakennettiin' },
+        { kohta: 'Vuonna 1836', vuosi: '1836', selite: 'kaupunki osti' },
+        { kohta: 'vasta 1891', vuosi: '1891', selite: 'sääasema' },
+      ],
       kuvat: [
         {
           tiedosto: 'Tour Saint-Jacques and Fontaine du Palmier, South-East View 140207 1.jpg',
@@ -5450,6 +5508,12 @@ export const NAHTAVYYSJUTUT = {
           + 'täällä ensimmäisellä ehtoollisellaan 1649. '
           + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
           + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
+      vuodet: [
+        { kohta: 'vuonna 1532', vuosi: '1532', selite: 'rakennus alkoi' },
+        { kohta: 'vuonna 1637', vuosi: '1637', selite: 'vihittiin' },
+        { kohta: 'vuonna 1754', vuosi: '1754', selite: 'julkisivutyö alkoi' },
+        { kohta: 'vuodelta 1213', vuosi: '1213', selite: 'kappeli' },
+      ],
       kuvat: [
         {
           tiedosto: 'Saint Eustache.jpg',
@@ -5478,6 +5542,12 @@ export const NAHTAVYYSJUTUT = {
           + 'tutkimuskeskus IRCAM toimii viereisessä rakennuksessa. Ensimmäinen peruskorjaus päättyi vuonna 2000. '
           + 'Nykyään talo on suljettu uuteen peruskorjaukseen, ja sen on määrä '
           + 'avautua uudelleen vuonna 2030.',
+      vuodet: [
+        { kohta: 'vuonna 1972', vuosi: '1972', selite: 'rakennus alkoi' },
+        { kohta: 'vuonna 1977', vuosi: '1977', selite: 'avattiin' },
+        { kohta: 'vuonna 2000', vuosi: '2000', selite: 'peruskorjaus valmis' },
+        { kohta: 'vuonna 2030', vuosi: '2030', selite: 'suunniteltu avaus' },
+      ],
       kuvat: [],
       lahde: 'Wikipedia',
     },
@@ -5499,6 +5569,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin '
           + 'Vosgesin departementin mukaan. Aukion laidalla asui '
           + 'kuusitoista vuotta kirjailija Victor Hugo.',
+      vuodet: [
+        { kohta: 'vietettiin 1612', vuosi: '1612', selite: 'vihkiäiset' },
+        { kohta: 'vuoteen 1800', vuosi: '1800', selite: 'nimi vaihtui' },
+      ],
       kuvat: [
         {
           tiedosto: 'Paris Place des Vosges Arkaden 1.jpg',
@@ -5538,6 +5612,13 @@ export const NAHTAVYYSJUTUT = {
           + 'Karjalasta; keisari siirrettiin siihen 1861. Tuhansien '
           + 'veteraanien kodista on jäljellä enää pieni hoitolaitos, ja '
           + 'käytävillä kulkevat nyt armeijamuseon kävijät.',
+      vuodet: [
+        { kohta: 'Vuonna 1670', vuosi: '1670', selite: 'kuningas määräsi' },
+        { kohta: 'jo 1674', vuosi: '1674', selite: 'ensimmäiset asukkaat' },
+        { kohta: 'päivän aamuna 1789', vuosi: '1789', selite: 'kiväärit viety' },
+        { kohta: 'Vuonna 1840', vuosi: '1840', selite: 'jäännökset tuotiin' },
+        { kohta: 'siihen 1861', vuosi: '1861', selite: 'keisari siirrettiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Hôtel des Invalides, North View, Paris 7e 140402 1.jpg',
@@ -5579,6 +5660,10 @@ export const NAHTAVYYSJUTUT = {
           + 'ei ole jäljellä juuri muuta kuin tämä kappeli ja Conciergerien '
           + 'salit; ympärillä on nyt oikeuspalatsi, ja orjantappurakruunu '
           + 'säilytetään Notre-Damessa.',
+      vuodet: [
+        { kohta: 'vuonna 1239', vuosi: '1239', selite: 'jäännös ostettiin' },
+        { kohta: 'huhtikuussa 1248', vuosi: '1248', selite: 'kappeli vihittiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Sainte-Chapelle, Paris, upper chapel windows.jpg',
@@ -5615,6 +5700,13 @@ export const NAHTAVYYSJUTUT = {
           + 'niitti vuonna 1993, halli suljettiin yleisöltä yli kymmeneksi '
           + 'vuodeksi. Korjausten jälkeen se avattiin uudelleen, ja vuoden '
           + '2024 olympialaisissa lasikaton alla miekkailtiin.',
+      vuodet: [
+        { kohta: 'vuoden 1900 maailmannäyttelyyn', vuosi: '1900', selite: 'maailmannäyttely' },
+        { kohta: 'vuodesta 1901', vuosi: '1901', selite: 'automessut' },
+        { kohta: 'vuonna 1909', vuosi: '1909', selite: 'ilmailunäyttely' },
+        { kohta: 'vuonna 1993', vuosi: '1993', selite: 'niitti putosi' },
+        { kohta: 'vuoden 2024', vuosi: '2024', selite: 'olympialaiset' },
+      ],
       kuvat: [
         {
           tiedosto: 'Grand Palais @ Paris (34729073762).jpg',
@@ -5653,6 +5745,13 @@ export const NAHTAVYYSJUTUT = {
           + 'Koristemaalaukset ja -veistokset valmistuivat vasta vuosina '
           + '1903–1925, ja rakennus on ollut suojeltu historiallinen '
           + 'monumentti vuodesta 1975.',
+      vuodet: [
+        { kohta: 'lokakuuta 1897', vuosi: '1897', selite: 'työ alkoi' },
+        { kohta: 'huhtikuussa 1900', vuosi: '1900', selite: 'valmistui' },
+        { kohta: 'Vuonna 1902', vuosi: '1902', selite: 'kaupungin museo' },
+        { kohta: 'vuosina 1903–1925', vuosi: '1903–1925', selite: 'koristetyöt' },
+        { kohta: 'vuodesta 1975', vuosi: '1975', selite: 'suojeltu' },
+      ],
       kuvat: [
         {
           tiedosto: 'Petit Palais, Paris 8th 003.JPG',
@@ -5684,6 +5783,11 @@ export const NAHTAVYYSJUTUT = {
           + 'vastaavaa nostettu enää vanhaan '
           + 'Pariisiin. Usein toistetun sanonnan mukaan kaupungin kaunein '
           + 'näköala avautuu tornin huipulta, koska sieltä ei näe itse tornia.',
+      vuodet: [
+        { kohta: 'Lokakuussa 1895', vuosi: '1895', selite: 'veturi seinän läpi' },
+        { kohta: '1969–1973', vuosi: '1969–1973', selite: 'rakennettiin' },
+        { kohta: 'vuoteen 2011', vuosi: '2011', selite: 'korkein vuoteen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Train wreck at Montparnasse 1895.jpg',
@@ -5740,6 +5844,13 @@ export const NAHTAVYYSJUTUT = {
         + 'vasta 1883. Se sijoittuu Sevillaan, mutta kaikki tämä tapahtui täällä, '
         + 'Place Boïeldieun varrella. Sekin sali paloi 1887; paikalla seisoo nyt '
         + 'kolmas samanniminen teatteri.',
+      vuodet: [
+        { kohta: 'tienoilla 1873', vuosi: '1873', selite: 'säveltäminen alkoi' },
+        { kohta: 'alkuvuodesta 1874', vuosi: '1874', selite: 'johtaja erosi' },
+        { kohta: 'maaliskuuta 1875', vuosi: '1875', selite: 'ensi-ilta' },
+        { kohta: 'vasta 1883', vuosi: '1883', selite: 'ooppera palasi' },
+        { kohta: 'paloi 1887', vuosi: '1887', selite: 'sali paloi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Prudent-Louis Leray - Poster for the première of Georges Bizet\'s Carmen.jpg',
@@ -5769,6 +5880,10 @@ export const NAHTAVYYSJUTUT = {
         + 'täpliä ja väri nimeltä ”kirahvin vatsa” myi kaiken. Aikalaiset '
         + 'kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des '
         + 'Plantes\'ssa 18 vuotta.',
+      vuodet: [
+        { kohta: 'lokakuuta 1826', vuosi: '1826', selite: 'kirahvi Marseilleen' },
+        { kohta: 'toukokuussa 1827', vuosi: '1827', selite: 'matka alkoi' },
+      ],
       kuvat: [
         {
           osoite: 'assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp',
@@ -5795,6 +5910,10 @@ export const NAHTAVYYSJUTUT = {
         + 'kaupungilta kiinteät myyntipaikat rantakaiteen varrelta, mutta '
         + 'laatikot piti silti kantaa pois joka ilta. Kaiteeseen ne sai '
         + 'jättää vasta vuonna 1891.',
+      vuodet: [
+        { kohta: 'Vuonna 1859', vuosi: '1859', selite: 'kiinteät paikat' },
+        { kohta: 'vasta vuonna 1891', vuosi: '1891', selite: 'laatikot kaiteeseen' },
+      ],
       kuvat: [
         {
           tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
@@ -5822,6 +5941,9 @@ export const NAHTAVYYSJUTUT = {
         + 'Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman '
         + 'tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni '
         + 'Yhdysvaltoihin.',
+      vuodet: [
+        { kohta: 'Pariisissa 1925', vuosi: '1925', selite: 'Lustig luki jutun' },
+      ],
       kuvat: [
         {
           osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
@@ -5870,6 +5992,11 @@ export const NAHTAVYYSJUTUT = {
         + 'Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
         + '”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat '
         + 'sen itse käyttöön.',
+      vuodet: [
+        { kohta: 'turhaan 1867', vuosi: '1867', selite: 'näyttelyanomus' },
+        { kohta: 'Joulukuussa 1873', vuosi: '1873', selite: 'yhdistys perustettu' },
+        { kohta: 'huhtikuussa 1874', vuosi: '1874', selite: 'ensimmäinen näyttely' },
+      ],
       kuvat: [
         {
           tiedosto: 'Monet - Impression, Sunrise.jpg',
@@ -5898,6 +6025,10 @@ export const NAHTAVYYSJUTUT = {
         + 'seinälle, josta viestit kirjoitettiin puhtaaksi. Saksalaiset '
         + 'kouluttivat haukkoja pysäyttämään kyyhkyjä. Minulla ei ole tähän '
         + 'mitään lisättävää.',
+      vuodet: [
+        { kohta: 'syyskuussa 1870', vuosi: '1870', selite: 'Pariisi suljettiin' },
+        { kohta: 'vuodesta 1859', vuosi: '1859', selite: 'mikrofilmipatentti' },
+      ],
       kuvat: [
         {
           tiedosto: 'Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg',
@@ -5929,6 +6060,9 @@ export const NAHTAVYYSJUTUT = {
         + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
         + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle, '
         + 'kunhan kolme akatemiaa on antanut lausuntonsa.',
+      vuodet: [
+        { kohta: 'tammikuussa 2026', vuosi: '2026', selite: 'naisten lista julki' },
+      ],
       kuvat: [
         {
           tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
@@ -5950,6 +6084,10 @@ export const NAHTAVYYSJUTUT = {
         + 'rakennussarja: samoista paloista sai kasattua sopivan '
         + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
         + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä on 88, ja valtaosa niistä suojeltiin vuonna 1978.',
+      vuodet: [
+        { kohta: 'heinäkuuta 1900', vuosi: '1900', selite: 'metro avattiin' },
+        { kohta: 'vuonna 1978', vuosi: '1978', selite: 'valtaosa suojeltiin' },
+      ],
       kuvat: [
         {
           tiedosto: "01 Guimard's Métropolitain.jpg",
@@ -5999,6 +6137,12 @@ export const NAHTAVYYSJUTUT = {
           + 'hän soita enää. Veli osti hänelle kitaran, ja Django opetteli '
           + 'soittamaan soolot kahdella sormella. Vuonna 1934 hän perusti '
           + 'Pariisissa yhtyeen Quintette du Hot Club de France.',
+      vuodet: [
+        { kohta: 'joulukuussa 1915', vuosi: '1915', selite: 'Piaf syntyi' },
+        { kohta: 'kadulta vuonna 1935', vuosi: '1935', selite: 'Piaf löydettiin' },
+        { kohta: 'yönä 1928', vuosi: '1928', selite: 'Djangon vaunu paloi' },
+        { kohta: 'Vuonna 1934', vuosi: '1934', selite: 'Hot Club syntyi' },
+      ],
       kuvat: [
         {
           tiedosto: 'Édith Piaf 914-6440.jpg',
@@ -6021,6 +6165,9 @@ export const NAHTAVYYSJUTUT = {
         + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
         + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
         + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
+      vuodet: [
+        { kohta: 'vuodesta 1994', vuosi: '1994', selite: 'kilpailun alku' },
+      ],
       kuvat: [
         {
           tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
@@ -6058,6 +6205,12 @@ export const NAHTAVYYSJUTUT = {
           + 'päiväyksen aikaan lapsi. Chasles piti kokoelmastaan kiinni '
           + 'vuosia, mutta väärentäjä tuomittiin helmikuussa 1870 kahdeksi '
           + 'vuodeksi vankeuteen.',
+      vuodet: [
+        { kohta: 'vaihteessa 1785', vuosi: '1785', selite: 'nauha ostettiin' },
+        { kohta: 'Rohanin 1786', vuosi: '1786', selite: 'Rohan vapautettiin' },
+        { kohta: 'esitteli 1867', vuosi: '1867', selite: 'kirjeet akatemialle' },
+        { kohta: 'helmikuussa 1870', vuosi: '1870', selite: 'väärentäjän tuomio' },
+      ],
       // Kaulanauhajutun havainnekuva pois (KK 10.11.2026 12.24: kuva kuuluu vain kaulanauhajuttuun).
       kuvat: [],
       lahde: 'Wikipedia',
@@ -6085,6 +6238,11 @@ export const NAHTAVYYSJUTUT = {
         + '279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi '
         + 'linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. '
         + 'Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.',
+      vuodet: [
+        { kohta: 'jo 1357', vuosi: '1357', selite: 'työt käynnissä' },
+        { kohta: 'vuodesta 1370', vuosi: '1370', selite: 'pääosa alkoi nousta' },
+        { kohta: 'päivänä 1789', vuosi: '1789', selite: 'valtaus' },
+      ],
       kuvat: [
         {
           tiedosto: 'Le Chasteau de la Bastille de Paris, hors la Porte Sainct Antoine. G.285.jpg',
@@ -6125,6 +6283,12 @@ export const NAHTAVYYSJUTUT = {
         + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
         + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
         + 'vuonna 1911 saa kemian palkinnon yksin.',
+      vuodet: [
+        { kohta: 'ilmoittavat vuonna 1898', vuosi: '1898', selite: 'löytö ilmoitettiin' },
+        { kohta: 'vuoteen 1902', vuosi: '1902', selite: 'radiumkloridi' },
+        { kohta: 'Vuonna 1903', vuosi: '1903', selite: 'fysiikan Nobel' },
+        { kohta: 'vuonna 1911', vuosi: '1911', selite: 'kemian Nobel' },
+      ],
       kuvat: [
         {
           tiedosto: 'Maria Skłodowska-Curie i Pierre Curie w laboratorium (1900).jpg',
@@ -6156,6 +6320,10 @@ export const NAHTAVYYSJUTUT = {
         + 'piirrosta. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
         + 'vallankumous mestaa Lavoisierin, koska hän on rikastunut '
         + 'veronkantajana.',
+      vuodet: [
+        { kohta: 'Vuonna 1789', vuosi: '1789', selite: 'oppikirja' },
+        { kohta: 'toukokuuta 1794', vuosi: '1794', selite: 'Lavoisier mestattiin' },
+      ],
       kuvat: [
         {
           tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
@@ -6187,6 +6355,10 @@ export const NAHTAVYYSJUTUT = {
         + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
         + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
         + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+      vuodet: [
+        { kohta: 'vuonna 1862', vuosi: '1862', selite: 'voitti kiistan' },
+        { kohta: 'vuonna 1865', vuosi: '1865', selite: 'pastörointipatentti' },
+      ],
       kuvat: [
         {
           tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
@@ -6223,6 +6395,10 @@ export const NAHTAVYYSJUTUT = {
         + 'kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta 1889 '
         + 'maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
         + 'radioantenni.',
+      vuodet: [
+        { kohta: 'elokuussa 1888', vuosi: '1888', selite: 'torni nousee' },
+        { kohta: 'maaliskuuta 1889', vuosi: '1889', selite: 'torni valmis' },
+      ],
       kuvat: [
         {
           tiedosto: 'Louis-Emile Durandelle, The Eiffel Tower - State of the Construction, 1888.jpg',
@@ -6263,6 +6439,9 @@ export const NAHTAVYYSJUTUT = {
         + 'kaupungin siniseen ja punaiseen valkoisen, vanhastaan Ranskan ja '
         + 'sen kuninkaiden värin, ja siitä tulee trikolori; tarkalleen ei '
         + 'tiedetä, kuka värit yhdisti.',
+      vuodet: [
+        { kohta: 'heinäkuuta 1789', vuosi: '1789', selite: 'valtaus' },
+      ],
       kuvat: [
         {
           tiedosto: 'Anonyme - Prise de la Bastille, le 14 juillet 1789 (P707-1) - P707-1 - Musée Carnavalet.jpg',
@@ -6301,6 +6480,9 @@ export const NAHTAVYYSJUTUT = {
         + 'keksii temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja '
         + 'lehdet, Le Radical yhtenä, yrittävät selittää lukijoille, mitä '
         + 'liikkuva valokuva on.',
+      vuodet: [
+        { kohta: 'joulukuuta 1895', vuosi: '1895', selite: 'Lumièren näytös' },
+      ],
       kuvat: [
         {
           tiedosto: 'Cinematograph Lumiere advertisement 1895.jpg',
