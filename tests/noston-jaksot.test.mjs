@@ -18,7 +18,7 @@
  *   vuodet?: [{ vuosi, selite, kohta? }],
  *   hologrammi?: 'sammuu' (vain kadonneella kohteella), hologrammiKohta?,
  *   kartta?: { nimi, lat, lon } | { kohde } (vain viimeisessä: "Näytä kartalla") }.
- *   aanite?: äänitteen nimi ilman päätettä noston `aanikansio`ssa (.mp3 + .sanat.json).
+ *   aanite?: tunnus noston `aanikansio`ssa (<nimi>/v<n>, muuttumaton): ämpäri aanet/<aanikansio>/<aanite>.mp3 + .sanat.json.
  * `kohta` = sana tai lause jakson tekstistä, tasan kerran.
  * jaksokuvat (`kuvat` on kohteilla jo kuvalista): { avain: { osoite | tiedosto | url,
  *   laji, lyhyt, selite?, lahde, tulossa? } }; tulossa = tilattu tai haettavana (osoite null).
@@ -76,15 +76,16 @@ test('äänitteet: kansio ja jokaisella jaksolla oma äänite (Tuileries 17.11.2
   const virheet = [];
   for (const { id, n } of NOSTOT) {
     if (n.aanikansio == null) continue;
-    if (!/^[a-z0-9-]+$/.test(n.aanikansio)) virheet.push(`${id}: aanikansio ${n.aanikansio}`);
+    if (!/^[a-z0-9-]+\/v\d+$/.test(n.aanikansio)) virheet.push(`${id}: aanikansio ${n.aanikansio}`);
     const nimet = n.jaksot.map((x) => x.aanite);
     if (nimet.some((a) => typeof a !== 'string' || !/^[a-z0-9-]+$/.test(a))) virheet.push(`${id}: jaksolta puuttuu aanite`);
     if (new Set(nimet).size !== nimet.length) virheet.push(`${id}: sama äänite kahdesti`);
   }
   assert.deepEqual(virheet, []);
   const t = NOSTOT.find((x) => x.id === 'tuileries').n;
-  assert.deepEqual(t.jaksot.map((x) => x.aanite), ['tuileries-isoisa', 'tuileries-kertoja-1-otsikko-jakso2',
-    'tuileries-kertoja-2-jakso3', 'tuileries-kertoja-3-jakso4', 'tuileries-kertoja-4-jakso5']);
+  assert.equal(t.aanikansio, 'tuileries-koe/v1');
+  assert.deepEqual(t.jaksot.map((x) => x.aanite), ['isoisa', 'kertoja-1-otsikko-jakso2',
+    'kertoja-2-jakso3', 'kertoja-3-jakso4', 'kertoja-4-jakso5']);
 });
 
 test('jaksojen määrä, osat, ääni ja pituudet', () => {

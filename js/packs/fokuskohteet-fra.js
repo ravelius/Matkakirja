@@ -136,17 +136,17 @@ export const FOKUSKOHTEET_FRA = [
     // Tarinan otsikko (SK:n raportti, KK 11.24): kertoja lukee sen ensimmäisen kertojan jakson alussa; lehti käyttää sitä.
     otsikko: 'Tuileries 1871 — palatsi, joka myytiin kivinä',
     /*
-     * Äänitteet (Äänittäjä 17.11.2026, KK:n äänityssana 11.29): kansio
-     * _valmiit/tuileries-koe-20261117/, jaksoittain `aanite` = tiedoston nimi
-     * ilman päätettä (.mp3 ja sanakohtaiset ajat .sanat.json). Ei vielä
-     * ämpärissä (KK:n vientisana puuttuu): natiivi lukee paikallisesti
-     * (NostoJaksot.AaniJuuri). Kertojan ensimmäinen äänite sisältää otsikon.
+     * Äänitteet (Äänittäjä 17.11.2026, KK:n äänityssana 11.29; avain PK
+     * 17.11. 11.4x, KK 11.32 "vienti kun avain sovittu"): ämpäri
+     * aanet/<aanikansio>/<aanite>.mp3 ja .sanat.json (sanakohtaiset ajat).
+     * Versiokansio on muuttumaton: uusi otto → v2 ja uusi aanikansio tähän.
+     * Kertojan ensimmäinen äänite sisältää otsikon.
      */
-    aanikansio: 'tuileries-koe-20261117',
+    aanikansio: 'tuileries-koe/v1',
     jaksot: [
       {
         osa: 'koukku',
-        aanite: 'tuileries-isoisa',
+        aanite: 'isoisa',
         aani: 'isoisa',
         teksti: 'Pariisi, 1873. Kävelin tänään poltetun palatsin ohi. Katto on '
           + 'poissa, ja ikkuna-aukoista näkyy pelkkää taivasta.',
@@ -154,7 +154,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        aanite: 'tuileries-kertoja-1-otsikko-jakso2',
+        aanite: 'kertoja-1-otsikko-jakso2',
         teksti: 'Kaksi vuotta aiemmin, toukokuussa 1871, Pariisin kommuuni oli '
           + 'kukistumassa. Sen kannattajat sytyttivät Tuileries\'n palatsin. '
           + 'Tuli paloi yli kaksi vuorokautta ja poltti talon sisältä tyhjäksi.',
@@ -163,7 +163,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tapahtuma',
-        aanite: 'tuileries-kertoja-2-jakso3',
+        aanite: 'kertoja-2-jakso3',
         teksti: 'Palatsi oli seissyt Louvren vieressä yli kolmesataa vuotta. '
           + 'Kuningatar Katariina de Medici aloitti sen, ja siitä tuli Ranskan '
           + 'hallitsijoiden koti Pariisissa. Palon jälkeen kivimuurit jäivät '
@@ -175,7 +175,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
-        aanite: 'tuileries-kertoja-3-jakso4',
+        aanite: 'kertoja-3-jakso4',
         teksti: 'Tuileries seisoi katottomana yli kymmenen vuotta. Sitten kolmas '
           + 'tasavalta päätti purkaa sen. Purkuyrittäjä myi kiviä ja marmoria, '
           + 'ja suuresta erästä rakennettiin linna Korsikalle.',
@@ -190,7 +190,7 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'tanaan',
-        aanite: 'tuileries-kertoja-4-jakso5',
+        aanite: 'kertoja-4-jakso5',
         teksti: 'Palatsin paikalla on nyt avointa tilaa Louvren ja puutarhan '
           + 'välissä. Yksi sen paloista seisoo yhä Pariisissa: keskipaviljongin '
           + 'päätykolmio on puistossa nimeltä Square Georges Cain.',
@@ -235,12 +235,16 @@ export const FOKUSKOHTEET_FRA = [
         lahde: 'Matkakirjan havainnekuva (tilaus 8.4 B)',
       },
       punta: {
+        // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
+        osoite: 'https://media.matkakirja.app/kuvat/la-punta.jpg',
         tiedosto: 'La-punta.JPG',
         laji: 'valokuva',
         lyhyt: 'Château de la Punta, Korsika',
         lahde: 'Patricia Ripnel, Wikimedia Commons (CC BY-SA 3.0)',
       },
       paatykolmio: {
+        // Ämpärissä pienin kirjaimin (JU 11.32); osoite voittaa, tiedosto = Commons-nimi tekijätarkistukselle.
+        osoite: 'https://media.matkakirja.app/kuvat/georges-cain-05.jpg',
         tiedosto: 'Georges-cain-05.JPG',
         laji: 'valokuva',
         lyhyt: 'Päätykolmio, Square Georges Cain',
