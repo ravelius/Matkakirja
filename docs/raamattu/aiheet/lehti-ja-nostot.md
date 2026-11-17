@@ -1,4 +1,4 @@
-# lehti-ja-nostot · vastuu NUI · tarkistettu 13.11.2026
+# lehti-ja-nostot · vastuu NUI · tarkistettu 17.11.2026
 
 TAVOITE: Kartalla on paikkoja, lehdessä luettava syvyys. Nosto avautuu kuva edellä, kertoo tosia asioita lyhyesti ja herättää kysymyksen. Lehti tuntuu oikealta paikallislehdeltä omasta maastaan.
 
@@ -18,7 +18,7 @@ SÄÄNNÖT:
 13. Etusivun johdatus 7–10 virkettä, sivun 1–2, kuvateksti 1; kannessa kolme laajaa kuvaa eri puolilta kaupunkia. [R-3.22] [R-11.20]
 14. Maalehden Matkailijalle: kevyt, nykyhetki, tuoreet kuvat, avauskuvat tekstistä, vaarat suoraan. [R-2.172] [R-11.21] [R-11.23]
 15. Tuhoutuneen kaupungin nykykuvat näytetään ja syy kerrotaan neutraalisti, ilman taistelukuvia. [R-11.24]
-16. Kertojan sanomat vuodet tulevat lappuun oikealle ylös: enintään viisi riviä, piilossa kortin ollessa auki. [P-261117-70] [P-261117-71] [P-261117-72]
+16. Kertojan sanomat vuodet lappuun oikealle ylös: näkyvissä ≤ 4, loput vierivät; piilossa kortti auki. [P-261117-70] [P-261117-72] [P-261117-116]
 17. Nostovalikko: nostolaatikko levenee vaaleaksi luetteloksi, Lehti väistyy, tagit kerralla. [P-261117-49] [P-261117-50] [P-261117-79]
 
 EI VIKA:
