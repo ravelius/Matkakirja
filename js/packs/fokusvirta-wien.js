@@ -922,7 +922,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'Steiermarkista, ja ratsastuskoulun mukaan ne siirtyvät noin nelivuotiaina '
           + 'koulutukseen Heldenbergiin tai Wieniin.',
         'Isoisäsi matkavuonna 1873 koulu toimi hovin ratsastuskouluna samassa '
-          + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanit siirtyivät sinne vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
+          + 'salissa, mutta hevoset eivät vielä tulleet Piberistä: lipizzanien kasvatus siirtyi Piberin siitostilalle, joka oli perustettu jo 1798, vasta 1920. Ratsastuskoulun mukaan hevoset tulivat ennen Lipizzan '
           + 'hovitallista nykyisessä Sloveniassa.',
       ],
       lahde: 'Matkakirjan oma teksti · lähteinä Spanische Hofreitschule, Wien Geschichte Wiki, Austria Tourismus, Wien Tourismus ja AEIOU',
@@ -971,7 +971,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'kuuluu saksalaiseen Singspiel-perinteeseen, jossa yleisön piti ymmärtää '
           + 'teksti. Mozart kuoli 5. joulukuuta 1791, kaksi kuukautta ensi-illan '
           + 'jälkeen.',
-        'Schikaneder haki vuonna 1800 lupaa uuden teatterin rakentamiseen, ja Theater an '
+        'Schikaneder rakennutti uuden teatterin, ja Theater an '
           + 'der Wien avattiin 13. kesäkuuta 1801. Sen portin päällä on veistos, joka '
           + 'muistuttaa Schikanederista: hän on Papagenon asussa ja soittaa huilua.',
         'Isoisäsi matkavuonna 1873 Taikahuilun teatteri ei ollut enää käytössä, '
