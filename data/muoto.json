@@ -1,0 +1,206 @@
+{
+ "_kuvaus": "muoto-kenttä (SK 17.11.2026; suunnitelma 20261117-maakartan-kohteet kohta 8): tyyppi per karttavalon id, Ranska. tyyppi: kirkko|linna|palatsi|luostari|raunio|silta|luola|muistomerkki|megaliitti (oma tai tyyppikohde), vuori|maasto (maisema, ei kohdetta, kamera laskeutuu maisemaan), vesi (viivamerkki), kaupunki (piste), ei-muotoa (piste).",
+ "ranska": {
+  "kohde:montblanc": {
+   "tyyppi": "vuori"
+  },
+  "kohde:vignemale": {
+   "tyyppi": "vuori"
+  },
+  "kohde:loire": {
+   "tyyppi": "vesi"
+  },
+  "kohde:rhone~2": {
+   "tyyppi": "vesi"
+  },
+  "kohde:mont-saint-michel": {
+   "tyyppi": "luostari"
+  },
+  "kohde:carcassonnen-linnoituskaupunki": {
+   "tyyppi": "linna"
+  },
+  "kohde:lascaux": {
+   "tyyppi": "luola"
+  },
+  "kohde:chartresin-katedraali": {
+   "tyyppi": "kirkko"
+  },
+  "kohde:pont-du-gard": {
+   "tyyppi": "silta"
+  },
+  "kohde:carnacin-kivirivit": {
+   "tyyppi": "megaliitti"
+  },
+  "kohde:avignonin-paavinpalatsi": {
+   "tyyppi": "linna"
+  },
+  "kohde:chambord": {
+   "tyyppi": "palatsi"
+  },
+  "kohde:douaumont": {
+   "tyyppi": "muistomerkki"
+  },
+  "kohde:bayeux-seinavaate": {
+   "tyyppi": "ei-muotoa"
+  },
+  "kohde:millaun-silta": {
+   "tyyppi": "silta"
+  },
+  "kohde:camargue": {
+   "tyyppi": "maasto"
+  },
+  "kohde:dune-du-pilat": {
+   "tyyppi": "maasto"
+  },
+  "kohde:nakyva-kaupunki-lyon": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:nakyva-kaupunki-bordeaux": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:nakyva-kaupunki-lille": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:nakyva-kaupunki-strasbourg": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:nakyva-kaupunki-nizza": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:nakyva-kaupunki-toulouse": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:nakyva-kaupunki-nantes": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-saint-cloud": {
+   "tyyppi": "ei-muotoa"
+  },
+  "kohde:hahmotelma-pic-du-midi": {
+   "tyyppi": "vuori"
+  },
+  "kohde:hahmotelma-lourdes": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-canigou": {
+   "tyyppi": "vuori"
+  },
+  "kohde:hahmotelma-verdon": {
+   "tyyppi": "maasto"
+  },
+  "kohde:hahmotelma-chenonceau": {
+   "tyyppi": "palatsi"
+  },
+  "kohde:hahmotelma-saint-malo": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-pointe-du-raz": {
+   "tyyppi": "maasto"
+  },
+  "kohde:hahmotelma-etretat": {
+   "tyyppi": "maasto"
+  },
+  "kohde:hahmotelma-amiens": {
+   "tyyppi": "kirkko"
+  },
+  "kohde:hahmotelma-reims": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-vezelay": {
+   "tyyppi": "kirkko"
+  },
+  "kohde:hahmotelma-beaune": {
+   "tyyppi": "palatsi"
+  },
+  "kohde:hahmotelma-ajaccio": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-bonifacio": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-place-stanislas": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-mont-ventoux": {
+   "tyyppi": "vuori"
+  },
+  "kohde:hahmotelma-puy-de-sancy": {
+   "tyyppi": "vuori"
+  },
+  "kohde:hahmotelma-amboise": {
+   "tyyppi": "linna"
+  },
+  "kohde:hahmotelma-nimesin-areena": {
+   "tyyppi": "raunio"
+  },
+  "kohde:hahmotelma-rouen": {
+   "tyyppi": "kirkko"
+  },
+  "kohde:hahmotelma-rocamadour": {
+   "tyyppi": "kirkko"
+  },
+  "kohde:hahmotelma-saint-emilion": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-cognac": {
+   "tyyppi": "ei-muotoa"
+  },
+  "kohde:hahmotelma-vichy": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-biarritz": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-canal-du-midi": {
+   "tyyppi": "vesi"
+  },
+  "kohde:hahmotelma-le-puy-en-velay": {
+   "tyyppi": "kaupunki"
+  },
+  "kohde:hahmotelma-cluny": {
+   "tyyppi": "raunio"
+  },
+  "syvennys:marseille-roquefavour": {
+   "tyyppi": "silta"
+  },
+  "skandaali:kaulanauhajuttu-1785": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-peilisali": {
+   "tyyppi": "palatsi"
+  },
+  "nosto:maalehti-roquefort": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-michelin-opas": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-chandeleur": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-montgolfier": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-dune-du-pilat": {
+   "tyyppi": "maasto"
+  },
+  "nosto:maalehti-camarguen-hevoset": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-chaine-des-puys": {
+   "tyyppi": "vuori"
+  },
+  "nosto:maalehti-couesnonin-vuorovesi": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-petanque": {
+   "tyyppi": "ei-muotoa"
+  },
+  "nosto:maalehti-le-mans": {
+   "tyyppi": "ei-muotoa"
+  },
+  "elaintaky:FRA": {
+   "tyyppi": "ei-muotoa"
+  }
+ }
+}

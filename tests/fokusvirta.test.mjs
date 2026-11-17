@@ -917,8 +917,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
       // lähderivillä, jonka peli näyttää aina selitteen vieressä.
       assert.ok(!/^Havainnekuva/i.test(selite),
         `${tunnus}: ihmekuvan selite kertoo kohteesta, ei kuvasta`);
-      assert.ok(/^Matkakirjan havainnekuva:/.test(lahde ?? ''),
-        `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi`);
+      // Poikkeus: oikea valokuva (Porto di Ripetta n. 1865, KK 17.11.2026 11.58) merkitään valokuvaksi, ei havainnekuvaksi.
+      assert.ok(/^(Matkakirjan havainnekuva|Valokuva):/.test(lahde ?? ''),
+        `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi tai valokuvaksi`);
       // Esilatauslista koskee vain repon omia tiedostoja: ämpärikuvaa
       // sw.js ei asennuksessa hae (ks. osoitemuodot yllä).
       if (!amparissa) {
@@ -982,7 +983,8 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
    * (monumentit-eurooppa.js ihmeKohde); IHMEET_20261031 kasvaa erä kerrallaan.
    */
   // Miinus 4: Volksvlijt, Rigi, Stockholm 1897 ja Minsk ilman loistoaikakuvaa (KK 17.11.2026 klo 10.43); palauta, kun kuvat tulevat.
-  assert.equal(ihmeita, 117 + IHMEET_20261031 - 4, 'Matkakirjan ihmeitä on 117 + 31.10.2026 erät - 4 (kuva puuttuu)');
+  // Plus 1: Porto di Ripetta (PD-valokuva n. 1865, KK 17.11.2026 11.58) → nosto hahmotelma-porto-di-ripetta.
+  assert.equal(ihmeita, 117 + IHMEET_20261031 - 4 + 1, 'Matkakirjan ihmeitä on 117 + 31.10.2026 erät - 4 (kuva puuttuu) + 1 (Ripetta)');
 });
 
 /*
