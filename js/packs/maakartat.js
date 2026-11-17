@@ -5408,8 +5408,8 @@ export const KAUPUNKIKARTAT = {
        * kun kohdekartalla ei ole samaa QID:tä. Piste = Wikidata P625.
        */
       { nimi: 'Invalidit', tagi: 'historia', lat: 48.855, lon: 2.3125, wiki: 'Hôtel des Invalides' },
-      // Kaulanauha 1785 -tarina avautuu tästä (parlamentti istui Palais de la Cité'ssä; yhdistämisen vaihe A, KK 17.11.2026).
-      { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: ['nosto-kaulanauha-1785'] },
+      // Yksi nosto (Pariisin nostot uudella tavalla 17.11.2026): fokuskohde `sainte-chapelle` (Kaulanauha 1785 jaksoina).
+      { nimi: 'Sainte-Chapelle', tagi: 'uskonnot', lat: 48.8554, lon: 2.345, wiki: 'Sainte-Chapelle', nosto: 'sainte-chapelle' },
       { nimi: 'Grand Palais', tagi: 'kulttuuri', lat: 48.8661, lon: 2.3125, wiki: 'Grand Palais' },
       // Petit Palais (KK 11.11.2026 klo 19.08: jokaisella koodimallilla nimikyltti ja esittely; natiivin koodimalli ilman Tripoa). Piste = Wikidata P625 (Q820892).
       { nimi: 'Petit Palais', tagi: 'kulttuuri', lat: 48.866, lon: 2.3146, wiki: 'Petit Palais' },
