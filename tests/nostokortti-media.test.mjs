@@ -410,7 +410,7 @@ test('musiikkinosto saa kortille mediarivin samoilla napeilla kuin lehti', async
 });
 
 // Ääninäyte kohteen ylätasolla (KK 00.44; NUI:n natiivi "Kuuntele näyte" lukee kentät `aani` ja `aaniLahde` kohteelta):
-// vanhan täkynoston `rooman-kolikko` ääni palautettu kohteelle `trevi` (SK 18.11.2026). Kenttä vaatii https-.mp3-osoitteen ja
+// Trevin kohteelle `trevi` äänitys, jonka äänittäjä nimeää Trevin suihkulähteeksi (SK 18.11.2026; vanhan täkynoston Pantheon-ääni ei kelvannut, KK 00.56). Kenttä vaatii https-.mp3-osoitteen ja
 // nimeämisen lisenssillä; jakson `aani: 'isoisa'` on eri taso eikä kuulu tähän.
 test('kohteen ääninäyte: https-.mp3 ja nimeäminen lisenssillä (Trevi)', async () => {
   const { tiedostot } = await kokoaVienti();
@@ -430,7 +430,8 @@ test('kohteen ääninäyte: https-.mp3 ja nimeäminen lisenssillä (Trevi)', asy
   }
   assert.deepEqual(virheet, []);
   assert.ok(trevi, 'Trevin kohteella ei ole aani-kenttää');
-  assert.match(trevi.aaniLahde, /Rolf Yngve/);
+  assert.match(trevi.aaniLahde, /Josue Amador/);
+  assert.match(trevi.aani, /aporee_60994_70119\//, 'Trevin näytteen on oltava äänittäjän itsensä Trevi Fountain -äänitys');
 });
 
 /* ================================================================= */
