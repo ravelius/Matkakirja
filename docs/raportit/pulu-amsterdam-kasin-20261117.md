@@ -45,7 +45,7 @@ Rajaus: nosto:amsterdamin-* (5), kaupunki:amsterdam, kohde:hahmotelma-amsterdami
 | Missä museossa Maitotyttö on nykyään esillä? · Mistä Vermeer sai värit? | POISTA | kysymykset poistuivat |
 
 **UUSI VASTAUS 1 (peittäminen)**
-> Hetkinen ny. Vermeer ei jättänyt asiasta selitystä, joten syytä ei tiedetä, enkä halua arvailla. Tiedetään, että Rijksmuseo tutki [[Maitotytön]] vuonna 2022 röntgen- ja infrapunatekniikoilla, ja maalin alta paljastui, että Vermeer oli suunnitellut seinälle kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten itse pois. Tällaiset aiemmat suunnitelmat tulevat esiin vasta [[röntgenkuvauksessa]] ja infrapunavalossa. Kyl tyhjä seinä on silti ihan hyvä seinä.
+> Hetkinen ny. Vermeer ei jättänyt asiasta selitystä, joten syytä ei tiedetä, enkä halua arvailla. Tiedetään, että Rijksmuseum tutki [[Maitotytön]] vuonna 2022 röntgen- ja infrapunatekniikoilla, ja maalin alta paljastui, että Vermeer oli suunnitellut seinälle kannuhyllyn ja lattialle tulikorin ja peittänyt ne sitten itse pois. Tällaiset aiemmat suunnitelmat tulevat esiin vasta [[röntgenkuvauksessa]] ja infrapunavalossa. Kyl tyhjä seinä on silti ihan hyvä seinä.
 >
 > JATKOT: "Millaisia maaleja Vermeer käytti töissään?" · "Missä museossa Maitotyttö on nykyään esillä?"
 
