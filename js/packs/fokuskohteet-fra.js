@@ -1253,7 +1253,7 @@ export const FOKUSKOHTEET_FRA = [
       {
         osa: 'tanaan',
         teksti: 'Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. '
-          + 'Siellä on myös huone, joka esittää hänen työtilaansa.',
+          + 'Ne ovat siellä esillä.',
       },
     ],
     /*
@@ -1263,7 +1263,7 @@ export const FOKUSKOHTEET_FRA = [
     jaksokuvat: {
       koe: {
         tiedosto: 'Lavoisier experimenting on respiration Wellcome L0000145.jpg',
-        laji: 'valokuva',
+        laji: 'piirros',
         lyhyt: 'Lavoisier mittaamassa hengitystä',
         lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
       },

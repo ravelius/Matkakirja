@@ -16,7 +16,7 @@ Tehtävä: PT (KK 02.49), omistaja 17.11. klo 20.06 ("Tee Pariisiin lisää nost
 | 2 | tapahtuma | Antoine Lavoisier johti Arsenaalissa ruudin valmistusta. Hänen laboratorionsa oli asunnon vieressä, ja siellä hän punnitsi kaiken ennen koetta ja sen jälkeen. Tuloksista hän päätteli, että ainetta on kokeen jälkeen yhtä paljon kuin ennen sitä. | 243 | koe |
 | 3 | tapahtuma | Kokeissaan hän huomasi, että palaessa aine yhtyy ilman osaan, jonka hän nimesi hapeksi. Hänen vaimonsa Marie-Anne oli oppinut englantia ja käänsi ulkomaisia tutkimuksia ranskaksi. Hän myös piirsi laitteet mittakaavaan, ja piirrokset ovat Lavoisierin oppikirjassa. | 263 | laboratorio (havainnekuva) |
 | 4 | käänne | Lavoisier oli kuulunut vanhan hallinnon veronkantajiin. Vallankumouksen tuomioistuin tuomitsi hänet kuolemaan, ja hänet mestattiin toukokuun 8. päivänä 1794. | 157 | ei kuvaa |
-| 5 | tänään | Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. Siellä on myös huone, joka esittää hänen työtilaansa. | 136 | ei kuvaa |
+| 5 | tänään | Lavoisierin laboratorion välineitä on nykyään Arts et Métiers -museossa Pariisissa. Ne ovat siellä esillä. | 89 | ei kuvaa |
 
 - Puheessa kolme tarkkaa vuotta: 1873 (isoisä), 1794 (jakso 4); 1789 vain vuosirivillä. Nimettyjä ihmisiä kaksi (Antoine, Marie-Anne). Pisin virke 15 sanaa (jakso 2).
 - **Isoisän lause on fiktiota:** ainoa väite on, että kanavalla oli proomuja (Arsenaalin satama-allas oli kauppasatama; ei Lavoisieria, ei laboratoriota).
@@ -42,7 +42,7 @@ Lähteet: **SHI** Science History Institute, "Revolutionary Instruments: Lavoisi
 | 9 | Lavoisier oli kuulunut vanhan hallinnon veronkantajiin | B (Ferme Générale), SHI-hakutulos, EC (Farmer General) | OK |
 | 10 | vallankumouksen tuomioistuin tuomitsi kuolemaan | EC (revolutionary tribunal), ACS (hakutulos: tuomittiin aamulla, mestattiin iltapäivällä) | OK |
 | 11 | mestattiin 8.5.1794 | SHI, EC, B, ACS | OK (4L) |
-| 12 | välineitä on nykyään Arts et Métiers -museossa; siellä huone, joka esittää hänen työtilaansa | GA (kokoelma Musée des arts et métiers; lahjoitus 1866 Conservatoireen), kolme hakutulosta (rekonstruoitu laboratorio samassa museossa; RFI, vierailijakuvaus) | OK välineet (GA); huone: vain hakutulokset, sivuja ei avattu → KK / toinen avattu lähde ennen julkaisua |
+| 12 | välineitä on nykyään Arts et Métiers -museossa; ne ovat siellä esillä (KK 03.00: huonetta ei väitetä, vain hakutuloksia) | GA (kokoelma Musée des arts et métiers; lahjoitus 1866 Conservatoireen), kolme hakutulosta (rekonstruoitu laboratorio samassa museossa; RFI, vierailijakuvaus) | OK välineet (GA); huone: vain hakutulokset, sivuja ei avattu → KK / toinen avattu lähde ennen julkaisua |
 
 **Jätetty pois (yksi lähde, ristiriita tai ei palvele juonta):** Fortinin vaaka (1788, 3 jalan vaakavarsi; GA ja hakutulos, tarkkaa tarkkuutta ei vahvistettu) · "Marie-Anne pelasti laboratorion" (GA yksi lähde) · lähtö Arsenaalista elokuussa 1792 (EC yksi lähde) · Turgot / ruutivirasto-asiat · laboratorion nykytila Arsenaalissa (ei lähdettä: ei väitetä, onko jäljellä) · laatta (ei löydetty) · 28 veronkantajaa (luku vaihtelee) · Marie-Annen Mémoires 1805 (SHI 1L).
 
