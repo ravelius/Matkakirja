@@ -56,4 +56,4 @@ Aiheita 53 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | agentit-ja-komennot | Agentit ja komennot | PT | 3.0 kt | 12.11.2026 |
 | latausruutu | Latausruutu | NUI | 1.2 kt | 18.11.2026 |
 | kaupungin-pohja | Kaupungin pohja | KS | – | – |
-| pallo-google-versio | Pallon Google-versio | KS | – | – |
+| pallo-google-versio | Pallon Google-versio | KS | 0.7 kt | 18.11.2026 |

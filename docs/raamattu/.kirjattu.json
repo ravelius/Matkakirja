@@ -4,8 +4,8 @@
   "aika": "2026-11-18T13:14:01.106Z"
  },
  "AIHEET.md": {
-  "sha": "5886652a6779f03b",
-  "aika": "2026-11-18T13:14:39.688Z"
+  "sha": "a6548f638095d9fb",
+  "aika": "2026-11-18T13:14:43.602Z"
  },
  "KIRJASTOT.md": {
   "sha": "58b497d7ae0f85d5",
@@ -246,5 +246,9 @@
  "aiheet/latausruutu.md": {
   "sha": "b0e50996209175cf",
   "aika": "2026-11-18T13:14:39.688Z"
+ },
+ "aiheet/pallo-google-versio.md": {
+  "sha": "0c0a0ee8323a288b",
+  "aika": "2026-11-18T13:14:43.602Z"
  }
 }
