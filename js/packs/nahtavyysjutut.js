@@ -2844,7 +2844,7 @@ export const NAHTAVYYSJUTUT = {
         + 'silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina '
         + '1577–1579 nostosillan torni korvattiin Nonsuch Housella, '
         + 'kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin '
-        + 'julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.',
+        + 'julkisivu. Talot purettiin vuodesta 1758 alkaen ja koko silta 1831.',
       vuodet: [
         { kohta: 'rakennettiin 1176', vuosi: '1176', selite: 'rakentaminen alkoi' },
         { kohta: 'valmistui 1209', vuosi: '1209', selite: 'silta valmistui' },
@@ -5536,7 +5536,7 @@ export const NAHTAVYYSJUTUT = {
           + 'lupasi, että jos hän toipuu, Pariisin suojeluspyhimys '
           + 'Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas '
           + 'toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon '
-          + 'perustukset laskettiin 1758. Rahapula venytti työtä '
+          + 'rakennustyöt alkoivat 1758. Rahapula venytti työtä '
           + 'vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa '
           + 'Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. '
           + 'Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä.'
@@ -5773,12 +5773,12 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Julkisivun uusimiseen johti Colbert, seurakuntalainen, joka hoiti '
           + 'kirkon raha-asioita ja josta tuli myöhemmin Ludvig XIV:n ministeri: '
-          + 'hän rakennutti 1655 tornien alle kaksi kappelia, ja julkisivu '
+          + 'hän rakennutti tornien alle kaksi kappelia, ja julkisivu '
           + 'heikkeni niin, että se piti purkaa. Uusi julkisivu jäi kesken. '
           + 'Täällä on kastettu Richelieu ja Molière, ja nuori Ludvig XIV kävi '
           + 'täällä ensimmäisellä ehtoollisellaan 1649. '
           + 'Vallankumouksessa kirkko suljettiin ja siitä tehtiin Maanviljelyksen '
-          + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1846–1854.',
+          + 'temppeli. Arkkitehti Victor Baltard johti sen korjausta 1800-luvun puolivälissä.',
       vuodet: [
         { kohta: 'vuonna 1532', vuosi: '1532', selite: 'rakennus alkoi' },
         { kohta: 'vuonna 1637', vuosi: '1637', selite: 'vihittiin' },
@@ -6183,7 +6183,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-pariisi-impressionistit',
       teksti: 'Kun isoisäsi käveli Pariisissa, ranskalaista taide-elämää hallitsi yhä '
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
-        + 'näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. '
+        + 'näyttelyä hylätyille oli anottu turhaan 1867. '
         + 'Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, '
         + 'Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko '
         + 'muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
@@ -6303,7 +6303,7 @@ export const NAHTAVYYSJUTUT = {
         + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
         + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf '
         + '— piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
-        + 'Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse.'
+        + 'Laulaja oli alle 150 senttiä pitkä. Piaf levytti tunnetuimman laulunsa La Vie en rosen 1946, ja sen sanat hän kirjoitti itse.'
         + '\n\n'
         + 'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
           + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
