@@ -1445,7 +1445,7 @@ export const FOKUSKOHTEET_FRA = [
       'Mitä Palais Garnierissa esitetään nykyään?',
     ],
     korostukset: ['Charles Garnier', 'Marc Chagall'],
-    nappi: 'Ooppera, joka odotti palon jälkeen',
+    nappi: 'Ooppera, joka odotti',
     laudat: {
       maailmankartta: { x: 5911.1, y: 1438.9 },
       europe: { x: 256.0, y: 608.3 },
@@ -1484,15 +1484,16 @@ export const FOKUSKOHTEET_FRA = [
       },
       {
         osa: 'kaanne',
-        teksti: 'Samana syksynä vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
+        teksti: 'Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo '
           + 'valmistui alle kahdessa vuodessa.',
         kuva: 'palo',
+        vuodet: [{ vuosi: '1873', selite: 'vanha ooppera paloi', kohta: 'Syksyllä 1873' }],
       },
       {
         osa: 'tanaan',
         teksti: 'Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. '
           + 'Nykyään talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964.',
-        kuva: 'katto',
+        kuva: 'portaikko',
         vuodet: [
           { vuosi: '1875', selite: 'talo avattiin', kohta: 'tammikuussa 1875' },
           { vuosi: '1964', selite: 'kattomaalaus', kohta: 'vuonna 1964' },
@@ -1518,11 +1519,11 @@ export const FOKUSKOHTEET_FRA = [
         lyhyt: 'Vanhan oopperatalon palo piirroksessa vuodelta 1873',
         lahde: 'Illustrated London News 8.11.1873, Wikimedia Commons (PD)',
       },
-      katto: {
-        tiedosto: 'Painted ceiling of Palais Garnier, Paris, France, created by Marc Chagall.jpg',
+      portaikko: {
+        tiedosto: 'Opera Garnier Grand Escalier.jpg',
         laji: 'valokuva',
-        lyhyt: 'Palais Garnierin katsomon kattomaalaus',
-        lahde: '4009dayton, Wikimedia Commons (CC BY-SA 4.0)',
+        lyhyt: 'Palais Garnierin pääportaikko',
+        lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
       },
     },
     visa: {

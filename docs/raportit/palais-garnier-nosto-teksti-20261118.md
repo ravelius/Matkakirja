@@ -13,13 +13,13 @@ Tehtävä: suunnitelman P4 (PT 04.3x). Pysyvä tarkennus (KK 03.53): jokaiselle 
 | 1 | koukku / isoisä | Pariisi, 1873. Kävelin tänään Place de l'Opéralle. Suuren oopperatalon julkisivu seisoo jo valmiina, mutta sisällä työ jatkuu vielä. | ei kuvaa |
 | 2 | tapahtuma | Keisari Napoleon III päätti rakennuttaa uuden oopperan, kun hän oli välttynyt murhayritykseltä vanhan oopperan edessä. Arkkitehtikilpailuun tuli yli sata ehdotusta, ja voittajaksi valittiin nuori, tuntematon arkkitehti Charles Garnier. | julkisivu (valokuva) |
 | 3 | tapahtuma | Kun työmaalla kaivettiin perustuksia, maasta nousi pohjavettä. Garnier rakennutti kellariin vesitiiviin betonisäiliön. Myöhemmin sota ja Pariisin kommuuni pysäyttivät rakentamisen. | tyomaa (valokuva 1867–68) |
-| 4 | käänne | Samana syksynä vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo valmistui alle kahdessa vuodessa. | palo (piirros 1873) |
-| 5 | tänään | Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. Nykyään talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964. | katto (valokuva) |
+| 4 | käänne | Syksyllä 1873 vanha oopperatalo paloi. Palon jälkeen Garnierin työmaa sai jatkua, ja uusi talo valmistui alle kahdessa vuodessa. | palo (piirros 1873) |
+| 5 | tänään | Talo avattiin tammikuussa 1875, ja Garnier joutui maksamaan paikkansa avajaisissa itse. Nykyään talossa esitetään yhä balettia, ja katsomon katon on maalannut Marc Chagall vuonna 1964. | portaikko (valokuva) |
 
-Vuosirivit: 1873 isoisän matka; 1875 talo avattiin; 1964 kattomaalaus. Hologrammi ei (kohde ei ole kadonnut).
+Vuosirivit: 1873 isoisän matka; 1873 vanha ooppera paloi; 1875 talo avattiin; 1964 kattomaalaus. Hologrammi ei (kohde ei ole kadonnut).
 Visa (vastaus jaksossa 5): Kuka taiteilija maalasi Palais Garnierin katsomon katon 1960-luvulla? **Marc Chagall** (oikea) · Claude Monet · Pablo Picasso.
 Pulun kysymykset kolme (vastauksia ei kirjoiteta): Miksi Napoleon III halusi uuden oopperan? · Miksi oopperan kellariin rakennettiin säiliö? · Mitä Palais Garnierissa esitetään nykyään?
-Otsikko: "Palais Garnier — ooppera, joka odotti". Nappi: "Ooppera, joka odotti palon jälkeen".
+Otsikko: "Palais Garnier — ooppera, joka odotti". Nappi: "Ooppera, joka odotti".
 
 ## 2. Lähdetaulukko (väite kerrallaan; kaikki avattu 18.11.2026)
 
@@ -55,7 +55,7 @@ NA = napoleon.org "Opéra Garnier, Paris" · BP = bonjourparis.com "The Palais G
 | julkisivu | 2 | `Palais Garnier Paris June 2010 002.jpg` (oli nähtävyysjutussa) | valokuva | King of Hearts, CC BY-SA 4.0 |
 | tyomaa | 3 | `186. (Chantier de construction de l'Opéra Garnier. Ouvriers sur la charpente) - Delmaet & Durandelle - btv1b52527860w.jpg` | valokuva | Delmaet & Durandelle 1867–1868, BnF, PD |
 | palo | 4 | `Paris Opera fire 29 10 1873.jpg` | piirros | Illustrated London News 8.11.1873, PD |
-| katto | 5 | `Painted ceiling of Palais Garnier, Paris, France, created by Marc Chagall.jpg` | valokuva | 4009dayton, CC BY-SA 4.0 |
+| portaikko | 5 | `Opera Garnier Grand Escalier.jpg` (KK 04.39 b: Chagallin maalaus on tekijänoikeuden alainen, joten kattokuva pois) | valokuva | Benh Lieu Song, CC BY-SA 3.0 |
 
 Lisenssit luettu Commons-rajapinnasta 18.11.2026.
 
