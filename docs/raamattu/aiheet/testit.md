@@ -1,15 +1,15 @@
-# testit · vastuu NS · tarkistettu 12.11.2026
+# testit · vastuu NS · tarkistettu 18.11.2026
 
 TAVOITE: Kone tarkistaa jokaisen muutoksen ennen junaa, ja laitteella ajetaan vasta valmis kokonaisuus. Testaaja näkee testaajatilassa koko sisällön, ja kehittäjä pääsee testikohtaan suoraan.
 
 SÄÄNNÖT:
-1. Junaan vaaditaan vain automaattiset testit ja virheetön käännös. Metal-variantit käännetään aina varjostinmuutoksen jälkeen ja ennen TestFlightia. Pieni virhe korjataan seuraavassa junassa. [R-9.1] [R-9.2]
+1. Junaan vaaditaan vain automaattiset testit ja virheetön käännös. Metal-variantit käännetään aina varjostinmuutoksen jälkeen ja ennen TestFlightia. Pieni virhe korjataan seuraavaan junaan. [R-9.1] [R-9.2]
 2. Sääntö, jonka kone voi valvoa, kirjataan testiksi. Työkalun alkukommentti on sen käyttöohje. [R-13.50]
 3. Simulaattoria käytetään vain uuteen tekniikkaan (varjostin, valo, ohjaus, kosketus, laitteen toiminnot, suorituskyky, muisti, käännösputki), pyydettyihin kuviin ja TestFlight-junan laitekierrokseen. Muu: testit ja Macin esikatselu. [R-9.11] [R-9.3]
-4. Laitteella ajetaan vain KK:n nimeämä valmis kokonaisuus; kokeita ei mitata. Laitemittaus ei ole junan ehto. Ajo tai mittaus, jota kehitystyö odottaa, heti päivällä; muut yöajossa junan kärjestä; roolit eivät tilaa omia; jonossa muuta työtä. Valvonta: laitteet-ja-simulaattorit 12. [R-12.26] [R-2.209] [P-261114-6] [P-261114-8] [P-261114-15] [P-261116-14] [P-261116-26] [P-261116-27] [P-261117-83]
+4. Laitteella ajetaan vain KK:n nimeämä valmis kokonaisuus; kokeita ei mitata. Laitemittaus ei ole junan ehto. Kehitystyötä edistävä mittaus myös päivällä; tarkistusajot vain yöajossa junan kärjestä; roolit eivät tilaa omia; jonossa muuta työtä. Valvonta: laitteet-ja-simulaattorit 12. [R-12.26] [R-2.209] [P-261114-6] [P-261114-8] [P-261114-15] [P-261116-14] [P-261116-26] [P-261116-27] [P-261117-83] [P-261118-7]
 5. Tarkistusajosta ennen linkin versiota päättää KK; ennen TestFlightia se ajetaan aina. [P-261111-5] [R-9.11]
 6. Vika toistetaan oikealla polulla ennen korjausta, ja sama ajo menee korjattuna läpi; mittarin on ensin erotettava toimiva tila. Ämpärin sisältö todennetaan puhtaalla asennuksella tuotannon osoittimen kautta. [R-9.7]
-7. Ääni todetaan soivaksi toiston etenemisestä kahtena hetkenä. Kaikkien äänivartioiden kaatuessa tarkista ensin Macin äänilaite. [R-9.7] [R-12.15]
+7. Ääni todetaan soivaksi toiston etenemisestä kahtena hetkenä. Äänivartioiden kaatuessa tarkista ensin Macin äänilaite. [R-9.7] [R-12.15]
 8. Kuvat katsotaan kahdesti suurennettuina, välit pikseleinä; video ruutu ruudulta, välähdykset skriptillä. Ajoitusehdon mittaa hyväksyjä itse. [R-9.5]
 9. Mittaus kuitataan avatusta raportista. Muistiajo todistaa vain, jos loki näyttää korjatun haaran ja kaatumisen ehdon; kaatunut sarja toistetaan lyhentämättä. [R-9.6] [P-261112-8]
 10. Laiteajo alkaa nimetystä aloituksesta, ei intron läpi, ja päättyy riviin OK tai VIKA. [R-9.13]
