@@ -6446,25 +6446,21 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'hetki-pasteur-pullot-1862',
       teksti: 'Louis Pasteur osoittaa Pariisissa joutsenkaulapulloillaan, ettei '
         + 'elämä synny itsestään mätänevästä aineesta vaan näkymätön elämä '
-        + 'tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun palkinnon '
-        + 'vuonna 1862. Kalenterissa on kulunut jo viikkoja, ja pullo on yhä '
+        + 'tulee ulkoa, ja voittaa kiistan ratkaisijalle luvatun palkinnon. '
+        + 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä '
         + 'kirkas. Pasteur nostaa sen valoa vasten École normale supérieuren '
         + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
         + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
-        + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän '
-        + 'katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on '
+        + 'pysäyttää pölyn mutkaansa. Kysymys, jota Pasteur ratkoo, on '
         + 'vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? '
-        + 'Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään '
-        + 'riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
-        + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
-        + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, '
-        + 'jossa pölyä on vähemmän: useimmat pysyvät kirkkaina. Samaan aikaan '
-        + 'hän on osoittanut, että käyminen on elävien mikrobien työtä, ja '
-        + 'vuonna 1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
-        + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä '
-        + 'synny itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+        + 'Félix Pouchet vakuuttaa, että ilma itsessään '
+        + 'riittää synnyttämään sen. Tiedeakatemia on luvannut palkinnon '
+        + 'sille, joka ratkaisee kiistan kokeellisesti. '
+        + 'Pasteur vie pullojaan Alppien jäätikölle ja avaa niitä siellä. '
+        + 'Samaan aikaan hän on osoittanut, että käyminen on elävien '
+        + 'mikrobien työtä, ja viinin kuumennuksen keksinnölle haettiin '
+        + 'patentti vuonna 1865. Menetelmää kutsutaan pastöroinniksi.',
       vuodet: [
-        { kohta: 'vuonna 1862', vuosi: '1862', selite: 'voitti kiistan' },
         { kohta: 'vuonna 1865', vuosi: '1865', selite: 'pastörointipatentti' },
       ],
       kuvat: [
