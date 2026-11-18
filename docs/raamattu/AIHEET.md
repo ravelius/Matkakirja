@@ -10,7 +10,7 @@ Aiheita 53 / 60. Kortti ≤ 3 kt. Ovi: node tools/kirjaa.mjs hae "<sanat>".
 | kartan-merkit-ja-nimet | Kartan merkit ja nimet | KS | 3.0 kt | 18.11.2026 |
 | kaupungit | Kaupungit | KS | 3.0 kt | 15.11.2026 |
 | nahtavyydet | Nähtävyydet | KS | 2.6 kt | 12.11.2026 |
-| opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 3.0 kt | 18.11.2026 |
+| opas-ja-kuumailmapallo | Opas ja kuumailmapallo | KS | 2.9 kt | 18.11.2026 |
 | kamera | Kamera | PK | 3.0 kt | 18.11.2026 |
 | juoksupeli | Juoksupeli | PK | 3.0 kt | 12.11.2026 |
 | linnat-ja-dioraamat | Linnat ja dioraamat | LAV | 3.0 kt | 12.11.2026 |

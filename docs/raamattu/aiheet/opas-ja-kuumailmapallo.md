@@ -15,8 +15,8 @@ SÄÄNNÖT:
 10. Esittelyt tehdään ja tarkistetaan etukäteen; livenä vastataan vain pelaajan kysymyksiin. Wikipedian tekstejä ja Googlen paikkatietoja ei käytetä. [R-2.76] [R-2.81]
 11. Palloon viitataan oikein termein harvoin, ei kohteen kuvauksen keskellä. [R-2.97]
 12. Kuvat tulevat vain ämpärin tarkistetusta kuvalistasta; ajonaikaista kuvahakua ei ole. [R-2.83]
-13. Google-versiossa laatat tulevat vain Cesium ionin kautta; julkaisu odottaa maksullista lisenssiä ja Cesiumin kirjallista vahvistusta. Näkymässä ei ole muuta karttakuvaa; Bing vain Googlen katkon ajaksi. [R-2.87] [R-2.88]
-14. Googlen logo näkyy aina. Laattoja ei tallenneta eikä korkeuksia lueta; niistä ei johdeta korostuksia, vettä tai generoinnin kuvia. [R-2.89] [R-2.90] [R-2.86]
+13. Google-version ja Cesiumin säännöt: → kortti pallo-google-versio. [R-2.87] [R-2.88] [R-2.89] [R-2.90] [R-2.86]
+14. Pallo leijuu kaupungin yllä lukitussa paikassa ja on poissa vain lennon ajan; kun kartan sisälle on zoomattu, se näkyy. [P-261117-27] [P-261118-23]
 15. Pariisissa pallon napautus kysyy version: Googlen laatat tai pelin oma kartta (reitti ja muu ennallaan). [P-261118-13]
 
 EI VIKA:
