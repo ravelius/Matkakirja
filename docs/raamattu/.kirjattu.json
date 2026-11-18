@@ -24,8 +24,8 @@
   "aika": "2026-11-14T21:05:14.060Z"
  },
  "paatokset/2026-11.md": {
-  "sha": "b60e363deb27a4fd",
-  "aika": "2026-11-18T12:59:25.215Z"
+  "sha": "39c83fe0f52b8b85",
+  "aika": "2026-11-18T13:08:20.930Z"
  },
  "aiheet/nahtavyydet.md": {
   "sha": "c2f3f3ba50b70862",
@@ -238,5 +238,9 @@
  "pysyvat.json": {
   "sha": "b62f12012af438b8",
   "aika": "2026-11-18T07:26:34.693Z"
+ },
+ "aihepyynnot.md": {
+  "sha": "2c581ffbece63667",
+  "aika": "2026-11-18T13:09:11.022Z"
  }
 }
