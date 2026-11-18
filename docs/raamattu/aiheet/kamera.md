@@ -9,14 +9,14 @@ SÄÄNNÖT:
 4. Paikka, nopeus ja kiihtyvyys ovat jatkuvia aina, myös kun liike vaihtuu tai keskeytyy. Leikkaus on sallittu vain täyden peitteen alla tai seuraajan U-käännöksessä; paikan hyppyä ei peitetä leikkauksella. [R-4.24] [P-261112-2]
 5. Kameraan kirjoittaa vain KameraKirjoittaja. [R-4.24]
 6. Voimakkuus ja tahti tulevat datana olevasta käsialaprofiilista (museo sama hiljempaa). Kohtauksella ei ole omia lukuja. [P-261111-1] [P-261118-18]
-7. Kaikki käyrät ja jouset tulevat Liikepohjasta. Lineaarisia pätkiä ei ole. [R-2.68]
-8. Usea akseli liikkuu yhtä aikaa. Kamera ei pyöri paikallaan: se etenee sivuttain tai vinosti ja kääntyy menosuuntaan vain vähän, noin 15 astetta. [R-2.69]
-9. Kamera kallistuu kaarteissa selvästi ja loogisesti profiilin katon rajoissa; rata ei mutkittele; peruskartalla sama kaikissa siirtymissä. Lentoradan ja kameran ohjauksen suunnittelee Suunnittelu. [P-261118-18] [P-261117-111] [P-261118-31]
-10. Siirroissa ei ole mustia välähdyksiä eikä häivytyksiä. [R-2.202]
+7. Kaikki käyrät ja jouset tulevat Liikepohjasta; ei lineaarisia pätkiä. [R-2.68]
+8. Usea akseli liikkuu yhtä aikaa. Kamera ei pyöri paikallaan: se etenee sivuttain tai vinosti ja kääntyy menosuuntaan vain noin 15 astetta. [R-2.69]
+9. Lentorata on elokuvan, ei droonin: pehmeät linjat, liike koko ajan, ei nykäyksiä. Kaarteissa selvä, looginen kallistus profiilin rajoissa; peruskartalla sama kaikissa siirtymissä. Radan ja ohjauksen suunnittelee Suunnittelu. [P-261118-18] [P-261117-111] [P-261118-31] [P-261118-34]
+10. Siirroissa ei mustia välähdyksiä eikä häivytyksiä. [R-2.202]
 11. Kohteella kamera kaartaa, nousee ja muuttaa etäisyyttä yhtä aikaa; kaarre alkaa jarruttaessa ja jatkuu kiihdytykseen, siirtymässä se palaa alemmas. [P-261118-18]
-12. Seurattava kohde pysyy kuvassa koko ajan. [R-2.166]
+12. Seurattava kohde pysyy aina kuvassa. [R-2.166]
 13. Kertoja, tehosteet ja kamera kulkevat samalla aikajanalla. Tauko pysäyttää kertojan ja tekstityksen. [R-4.23]
-14. Liikkeen lopussa tarvittava ladataan ennen liikkeen alkua. Yli 20 ms:n ruutu liikkeen aikana tai sekunnin sen jälkeen hylkää ajon. [R-4.24]
+14. Liikkeen lopussa tarvittava ladataan ennen alkua. Yli 20 ms:n ruutu liikkeen aikana tai sekunnin sen jälkeen hylkää ajon. [R-4.24]
 15. Pelaaja saa panoroida ja loitontaa vapaasti koko pallolla. Nipistyksen pieni kierto ohitetaan, kunnes kääntö ylittää kynnyksen (15–20 astetta). [R-2.15] [R-6.11]
 16. Vanha kohtaus siirtyy kirjastoon työlistan järjestyksessä. Valmis, kun vanha on poistettu. [P-261112-1]
 17. Kartan sauvat ovat piilossa Ohjain-napin takana ja palaavat sinne 10 s käyttämättöminä. Nappi näkyy aina eikä syki. [P-261113-19]
@@ -29,5 +29,5 @@ EI VIKA:
 TEKOTAPA:
 - Kirjasto: KIRJASTOT.md rivi kamera.
 - Vahdit (lähtötaso saa vain pienentyä): tyokalut/kameravahti.py (suorat kirjoitukset), tyokalut/liikevahti.py (omat pehmennykset).
-- Radan rajat: Kameratarkastus ja kirjaston testit (Linssit-testit).
+- Radan rajat: Kameratarkastus ja Linssit-testit.
 - Käsiala arvioidaan tallenteesta.
